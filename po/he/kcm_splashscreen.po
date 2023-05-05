@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2017-05-16 06:52-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -33,28 +33,6 @@ msgstr ""
 msgid "You cannot delete the currently selected splash screen"
 msgstr ""
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "&Get New…"
-msgstr ""
-
-#: package/contents/ui/main.qml:50
-#, fuzzy, kde-format
-#| msgid "Failed to successfully test the splash screen."
-msgid "Failed to show the splash screen preview."
-msgstr "נכשל בבדיקת מסך הפתיחה."
-
-#: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Test Splashscreen"
-msgid "Preview Splash Screen"
-msgstr "נסה מסך פתיחה"
-
-#: package/contents/ui/main.qml:87
-#, kde-format
-msgid "Uninstall"
-msgstr ""
-
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
 #, kde-format
@@ -65,6 +43,28 @@ msgstr ""
 #: splashscreensettings.kcfg:16
 #, kde-format
 msgid "Name of the current splash theme"
+msgstr ""
+
+#: ui/main.qml:29
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: ui/main.qml:50
+#, fuzzy, kde-format
+#| msgid "Failed to successfully test the splash screen."
+msgid "Failed to show the splash screen preview."
+msgstr "נכשל בבדיקת מסך הפתיחה."
+
+#: ui/main.qml:82
+#, fuzzy, kde-format
+#| msgid "Test Splashscreen"
+msgid "Preview Splash Screen"
+msgstr "נסה מסך פתיחה"
+
+#: ui/main.qml:87
+#, kde-format
+msgid "Uninstall"
 msgstr ""
 
 #, fuzzy

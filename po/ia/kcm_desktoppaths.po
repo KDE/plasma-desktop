@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-23 15:34+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "Public"
 msgid "Templates"
 msgstr "Patronos"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgid "Desktop path:"
 msgstr "Percurso de scriptorio:"
 
-#: package/contents/ui/main.qml:26
+#: ui/main.qml:26
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -73,12 +73,12 @@ msgstr ""
 "cambiar le location de iste dossier si tu vole mover automaticamente ,  e le "
 "contentos movera etiam, al nove location ."
 
-#: package/contents/ui/main.qml:32
+#: ui/main.qml:32
 #, kde-format
 msgid "Documents path:"
 msgstr "Percurso de documentos:"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
@@ -86,36 +86,36 @@ msgstr ""
 "Iste dossier essera usate per definition pro cargar o salveguardar "
 "documentos ex o a."
 
-#: package/contents/ui/main.qml:41
+#: ui/main.qml:41
 #, kde-format
 msgid "Downloads path:"
 msgstr "Percurso de discargamentos:"
 
-#: package/contents/ui/main.qml:44
+#: ui/main.qml:44
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Iste dossier essera usate per definition pro salveguardar tu elementos "
 "discargate."
 
-#: package/contents/ui/main.qml:50
+#: ui/main.qml:50
 #, kde-format
 msgid "Videos path:"
 msgstr "Percurso de pelliculas (videos):"
 
-#: package/contents/ui/main.qml:53 package/contents/ui/main.qml:80
+#: ui/main.qml:53 ui/main.qml:80
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "Iste dossier essera usate per definition pro cargar o salveguardar "
 "pelliculas ex o a."
 
-#: package/contents/ui/main.qml:59
+#: ui/main.qml:59
 #, kde-format
 msgid "Pictures path:"
 msgstr "Percurso a photos:"
 
-#: package/contents/ui/main.qml:62
+#: ui/main.qml:62
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
@@ -123,29 +123,29 @@ msgstr ""
 "Iste dossier essera usate per definition pro cargar o salveguardar photos ex "
 "o a."
 
-#: package/contents/ui/main.qml:68
+#: ui/main.qml:68
 #, kde-format
 msgid "Music path:"
 msgstr "Percurso al musica:"
 
-#: package/contents/ui/main.qml:71
+#: ui/main.qml:71
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Iste dossier essera usate per definition pro cargar o salveguardar musica ex "
 "o a."
 
-#: package/contents/ui/main.qml:77
+#: ui/main.qml:77
 #, kde-format
 msgid "Public path:"
 msgstr "Percurso public:"
 
-#: package/contents/ui/main.qml:86
+#: ui/main.qml:86
 #, kde-format
 msgid "Templates path:"
 msgstr "Percurso de patronos:"
 
-#: package/contents/ui/main.qml:89
+#: ui/main.qml:89
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
@@ -153,7 +153,7 @@ msgstr ""
 "Iste dossier essera usate per definition pro cargar o salveguardar  patronos "
 "ex o a."
 
-#: package/contents/ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

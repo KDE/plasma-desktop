@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-03-03 15:25+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -68,82 +68,82 @@ msgstr "Uzpůsobit výstup v tabletu"
 msgid "Custom size"
 msgstr "Vlastní velikost"
 
-#: package/contents/ui/main.qml:32
+#: ui/main.qml:32
 #, kde-format
 msgid "No drawing tablets found."
 msgstr "Nebyl nalezen žádný kreslicí tablet."
 
-#: package/contents/ui/main.qml:40
+#: ui/main.qml:40
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Zařízení:"
 
-#: package/contents/ui/main.qml:78
+#: ui/main.qml:78
 #, kde-format
 msgid "Target display:"
 msgstr "Cílová obrazovka:"
 
-#: package/contents/ui/main.qml:97
+#: ui/main.qml:97
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientace:"
 
-#: package/contents/ui/main.qml:109
+#: ui/main.qml:109
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Režim pro leváka:"
 
-#: package/contents/ui/main.qml:119
+#: ui/main.qml:119
 #, kde-format
 msgid "Area:"
 msgstr "Oblast:"
 
-#: package/contents/ui/main.qml:207
+#: ui/main.qml:207
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Změnit velikost oblasti tabletu"
 
-#: package/contents/ui/main.qml:231
+#: ui/main.qml:231
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Uzamknout poměr stran"
 
-#: package/contents/ui/main.qml:239
+#: ui/main.qml:239
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: package/contents/ui/main.qml:247
+#: ui/main.qml:247
 #, kde-format
 msgid "Tool Button 1"
 msgstr "Tlačítko nástrojů 1"
 
-#: package/contents/ui/main.qml:248
+#: ui/main.qml:248
 #, kde-format
 msgid "Tool Button 2"
 msgstr "Tlačítko nástrojů 2"
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "Tool Button 3"
 msgstr "Tlačítko nástrojů 3"
 
-#: package/contents/ui/main.qml:292
+#: ui/main.qml:292
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr ""
 
 # žádné parametry funkce v inspektoru funkcí
-#: package/contents/ui/main.qml:303
+#: ui/main.qml:303
 #, kde-format
 msgid "None"
 msgstr "Nic"
 
-#: package/contents/ui/main.qml:325
+#: ui/main.qml:325
 #, kde-format
 msgid "Button %1:"
 msgstr "Tlačítko %1:"

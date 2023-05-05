@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2021-10-11 11:53+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -32,26 +32,6 @@ msgstr "कोई स्प्लैश स्क्रीन नहीं द�
 msgid "You cannot delete the currently selected splash screen"
 msgstr "आप वर्तमान में चयनित स्प्लैश स्क्रीन को मिटा नहीं सकते"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "&Get New…"
-msgstr ""
-
-#: package/contents/ui/main.qml:50
-#, kde-format
-msgid "Failed to show the splash screen preview."
-msgstr "स्प्लैश स्क्रीन पूर्वावलोकन दिखाने में विफल।"
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Preview Splash Screen"
-msgstr "पूर्वावलोकन स्पलैश स्क्रीन"
-
-#: package/contents/ui/main.qml:87
-#, kde-format
-msgid "Uninstall"
-msgstr "स्थापना रद्द करें"
-
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
 #, kde-format
@@ -63,6 +43,26 @@ msgstr "भविष्य के उपयोग के लिए"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "वर्तमान स्प्लैश प्रसंग का नाम"
+
+#: ui/main.qml:29
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "स्प्लैश स्क्रीन पूर्वावलोकन दिखाने में विफल।"
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "पूर्वावलोकन स्पलैश स्क्रीन"
+
+#: ui/main.qml:87
+#, kde-format
+msgid "Uninstall"
+msgstr "स्थापना रद्द करें"
 
 #~ msgid "This module lets you choose the splash screen theme."
 #~ msgstr "यह मॉड्यूल आपको स्प्लैश स्क्रीन थीम चुनने देता है।"

@@ -1,0 +1,579 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Enol P. <enolp@softastur.org>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"PO-Revision-Date: 2023-05-03 21:41+0200\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: \n"
+"Language: ast_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.0\n"
+
+#: kcmaccess.cpp:116
+#, kde-format
+msgid "AltGraph"
+msgstr ""
+
+#: kcmaccess.cpp:118
+#, kde-format
+msgid "Hyper"
+msgstr ""
+
+#: kcmaccess.cpp:120
+#, kde-format
+msgid "Super"
+msgstr ""
+
+#: kcmaccess.cpp:130
+#, kde-format
+msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgstr ""
+
+#: kcmaccess.cpp:131
+#, kde-format
+msgid "Press %1 while CapsLock and ScrollLock are active"
+msgstr ""
+
+#: kcmaccess.cpp:132
+#, kde-format
+msgid "Press %1 while NumLock and ScrollLock are active"
+msgstr ""
+
+#: kcmaccess.cpp:133
+#, kde-format
+msgid "Press %1 while ScrollLock is active"
+msgstr ""
+
+#: kcmaccess.cpp:134
+#, kde-format
+msgid "Press %1 while NumLock and CapsLock are active"
+msgstr ""
+
+#: kcmaccess.cpp:135
+#, kde-format
+msgid "Press %1 while CapsLock is active"
+msgstr ""
+
+#: kcmaccess.cpp:136
+#, kde-format
+msgid "Press %1 while NumLock is active"
+msgstr ""
+
+#: kcmaccess.cpp:137
+#, kde-format
+msgid "Press %1"
+msgstr ""
+
+#: kcmaccess.cpp:182
+#, kde-format
+msgid "Could not set gsettings for Orca: \"%1\" failed"
+msgstr ""
+
+#: kcmaccess.cpp:189
+#, kde-format
+msgid "Error: Could not launch \"orca --setup\""
+msgstr ""
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, kde-format
+msgid "Use System Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, kde-format
+msgid "Customize system bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr ""
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr ""
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, kde-format
+msgid "Use sticky Keys"
+msgstr ""
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, kde-format
+msgid "Lock the sticky keys"
+msgstr ""
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr ""
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, kde-format
+msgid "Beep on a sticky key press"
+msgstr ""
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, kde-format
+msgid "Use slow keypresses"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr ""
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Maximum Velocity"
+msgstr ""
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:29
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr ""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Use Gestures"
+msgstr ""
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:39
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:43
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr ""
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr ""
+
+#: ui/Bell.qml:19
+#, kde-format
+msgid "Please choose an audio file"
+msgstr ""
+
+#: ui/Bell.qml:20
+#, kde-format
+msgctxt "Name filters in a file dialog"
+msgid "Audio Files (*.ogg *.wav)"
+msgstr ""
+
+#: ui/Bell.qml:29
+#, kde-format
+msgid "Audible bell:"
+msgstr ""
+
+#: ui/Bell.qml:30
+#, kde-format
+msgctxt "Enable the system bell"
+msgid "Enable"
+msgstr ""
+
+#: ui/Bell.qml:41
+#, kde-format
+msgctxt "Defines if the system will use a sound system bell"
+msgid "Custom sound:"
+msgstr ""
+
+#: ui/Bell.qml:74
+#, kde-format
+msgid "Search audio file for the system bell"
+msgstr ""
+
+#: ui/Bell.qml:75
+#, kde-format
+msgid "Button search audio file"
+msgstr ""
+
+#: ui/Bell.qml:91
+#, kde-format
+msgid "Visual bell:"
+msgstr ""
+
+#: ui/Bell.qml:92
+#, kde-format
+msgctxt "Enable visual bell"
+msgid "Enable"
+msgstr ""
+
+#: ui/Bell.qml:106
+#, kde-format
+msgctxt "Invert screen on a system bell"
+msgid "Invert Screen"
+msgstr ""
+
+#: ui/Bell.qml:123
+#, kde-format
+msgctxt "Flash screen on a system bell"
+msgid "Flash"
+msgstr ""
+
+#: ui/Bell.qml:134
+#, kde-format
+msgctxt "Color of the system bell"
+msgid "Color"
+msgstr ""
+
+#: ui/Bell.qml:145
+#, kde-format
+msgctxt "Duration of the system bell"
+msgid "Duration:"
+msgstr "Duración:"
+
+#: ui/KeyboardFilters.qml:18
+#, kde-format
+msgid "Slow keys:"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:19
+#, kde-format
+msgctxt "Enable slow keys"
+msgid "Enable"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:22
+#, kde-format
+msgid ""
+"For a key to be accepted, it has to be held until the set amount of time"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:37
+#, kde-format
+msgctxt "Slow keys Delay"
+msgid "Delay:"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:54
+#, kde-format
+msgid "Ring system bell:"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:55
+#, kde-format
+msgctxt "Use system bell when a key is pressed"
+msgid "when any key is &pressed"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:69
+#, kde-format
+msgctxt "Use system bell when a key is accepted"
+msgid "when any key is &accepted"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:83
+#, kde-format
+msgctxt "Use system bell when a key is rejected"
+msgid "when any key is &rejected"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:100
+#, kde-format
+msgid "Bounce keys:"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:101
+#, kde-format
+msgctxt "Bounce keys enable"
+msgid "Enable"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:104
+#, kde-format
+msgid "Ignore rapid, repeated keypresses of the same key"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:119
+#, kde-format
+msgctxt "Bounce keys delay"
+msgid "Delay:"
+msgstr ""
+
+#: ui/KeyboardFilters.qml:134
+#, kde-format
+msgid "Ring system bell when rejected"
+msgstr ""
+
+#: ui/main.qml:23
+#, kde-format
+msgctxt "System Bell"
+msgid "Bell"
+msgstr ""
+
+#: ui/main.qml:28
+#, kde-format
+msgctxt "System Modifier Keys"
+msgid "Modifier Keys"
+msgstr ""
+
+#: ui/main.qml:33
+#, kde-format
+msgctxt "System keyboard filters"
+msgid "Keyboard Filters"
+msgstr ""
+
+#: ui/main.qml:38
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Mouse Navigation"
+msgstr ""
+
+#: ui/main.qml:43
+#, kde-format
+msgctxt "System mouse navigation"
+msgid "Screen Reader"
+msgstr ""
+
+#: ui/ModifierKeys.qml:16
+#, kde-format
+msgid "Sticky keys:"
+msgstr ""
+
+#: ui/ModifierKeys.qml:17
+#, kde-format
+msgctxt "Enable sticky keys"
+msgid "Enable"
+msgstr ""
+
+#: ui/ModifierKeys.qml:28
+#, kde-format
+msgctxt "Lock sticky keys"
+msgid "Lock"
+msgstr ""
+
+#: ui/ModifierKeys.qml:42
+#, kde-format
+msgid "Disable when two keys are held down"
+msgstr ""
+
+#: ui/ModifierKeys.qml:54
+#, kde-format
+msgid "Ring system bell when modifier keys are used"
+msgstr ""
+
+#: ui/ModifierKeys.qml:71
+#, kde-format
+msgid "Feedback:"
+msgstr ""
+
+#: ui/ModifierKeys.qml:72
+#, kde-format
+msgid "Ring system bell when locking keys are toggled"
+msgstr ""
+
+#: ui/ModifierKeys.qml:83
+#, kde-format
+msgid "Show notification when modifier or locking keys are used"
+msgstr ""
+
+#: ui/ModifierKeys.qml:95
+#, kde-format
+msgid "Configure Notifications…"
+msgstr ""
+
+#: ui/MouseNavigation.qml:17
+#, kde-format
+msgid "Use number pad to move cursor:"
+msgstr ""
+
+#: ui/MouseNavigation.qml:18
+#, kde-format
+msgid "Enable"
+msgstr ""
+
+#: ui/MouseNavigation.qml:29
+#, kde-format
+msgid "When a gesture is used:"
+msgstr ""
+
+#: ui/MouseNavigation.qml:30
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr ""
+
+#: ui/MouseNavigation.qml:41
+#, kde-format
+msgid "Ring the System Bell"
+msgstr ""
+
+#: ui/MouseNavigation.qml:52
+#, kde-format
+msgid "Show a notification"
+msgstr ""
+
+#: ui/MouseNavigation.qml:68
+#, kde-format
+msgid "Acceleration delay:"
+msgstr ""
+
+#: ui/MouseNavigation.qml:82
+#, kde-format
+msgid "Repeat interval:"
+msgstr ""
+
+#: ui/MouseNavigation.qml:96
+#, kde-format
+msgid "Acceleration time:"
+msgstr ""
+
+#: ui/MouseNavigation.qml:110
+#, kde-format
+msgid "Maximum speed:"
+msgstr ""
+
+#: ui/MouseNavigation.qml:124
+#, kde-format
+msgid "Acceleration profile:"
+msgstr ""
+
+#: ui/ScreenReader.qml:28
+#, kde-format
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr ""
+
+#: ui/ScreenReader.qml:41
+#, kde-format
+msgid ""
+"Please note that you may have to log out or reboot once to allow the screen "
+"reader to work properly."
+msgstr ""
+
+#: ui/ScreenReader.qml:42
+#, kde-format
+msgid ""
+"It appears that the Orca Screen Reader is not installed. Please install it "
+"before trying to use this feature, and then log out or reboot"
+msgstr ""

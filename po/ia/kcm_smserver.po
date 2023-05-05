@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-23 15:34+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -16,157 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: package/contents/ui/main.qml:30
-#, kde-format
-msgid ""
-"The system must be restarted before manual session saving becomes active."
-msgstr ""
-"Le systema debe esserrestartate ante que le salveguardar de session manual "
-"deveni active."
-
-#: package/contents/ui/main.qml:35
-#, kde-format
-msgid "Restart"
-msgstr "Re-Initia"
-
-#: package/contents/ui/main.qml:57
-#, kde-format
-msgid "Failed to request restart to firmware setup: %1"
-msgstr "Falleva a requirer restartar de configuration de firmware: %1"
-
-#: package/contents/ui/main.qml:58
-#, kde-format
-msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr ""
-"Proxime vice que le computator es restartate, illo insertara le schermo de "
-"configuration de UEFI."
-
-#: package/contents/ui/main.qml:59
-#, kde-format
-msgid ""
-"Next time the computer is restarted, it will enter the firmware setup screen."
-msgstr ""
-"Proxime vice que le computator es restartate, illo insertara le schermo de "
-"configuration de firmware."
-
-#: package/contents/ui/main.qml:64
-#, kde-format
-msgid "Restart Now"
-msgstr "Re-Initia nunc"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr "Schermo de clausura de session"
-
-#: package/contents/ui/main.qml:75
-#, kde-format
-msgid "Show:"
-msgstr "Monstra "
-
-#: package/contents/ui/main.qml:89
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
-msgstr ""
-"Quando iste preferentia es activate, le schermo de confirmation de abandono "
-"de session essera monstrate quando tu abandona, arresta, reinitia, pressa le "
-"button de actionar, o clicca sur buttones o elementos de menu etiquettate "
-"<interface>Abandona ...</interface>. "
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgctxt "@title:group"
-msgid "Session Restore"
-msgstr "Restabili Session"
-
-#: package/contents/ui/main.qml:104
-#, kde-format
-msgid "On login, launch apps that were open:"
-msgstr "Al accesso de identification, lancea apps que esseva aperite:"
-
-#: package/contents/ui/main.qml:105
-#, kde-format
-msgctxt "@option:radio Automatic style of session restoration"
-msgid "On last logout"
-msgstr "Al ultime clausura de session"
-
-#: package/contents/ui/main.qml:118
-#, kde-format
-msgctxt "@option:radio Manual style of session restoration"
-msgid "When session was manually saved"
-msgstr "Quando session esseva salveguardate manualmente"
-
-#: package/contents/ui/main.qml:127
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"A <interface>Save Session</interface> button will appear in the "
-"<interface>Application Launcher</interface> menu. When you click it, Plasma "
-"will remember the apps that are open and restore them on the next login. "
-"Click it again to replace the set of remembered apps."
-msgstr ""
-"Un button de <interface>Salvaguarda Session</interface> appare in le menu de "
-"<interface>Lanceator de Application</interface>. Quando tu lo clicca, Plasma "
-"memorara le apps que es aperite e restabilira illos al proxime accesso. "
-"Clicca illo novemente per reimplaciar le insimul de apps memorate."
-
-#: package/contents/ui/main.qml:132
-#, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Start with an empty session"
-msgstr "Initia con un session vacue"
-
-#: package/contents/ui/main.qml:146
-#, kde-format
-msgid "Ignored applications:"
-msgstr "Applicationes ignorate:"
-
-#: package/contents/ui/main.qml:169
-#, kde-format
-msgid ""
-"Write apps' executable names here (separated by commas or colons, for "
-"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-"autostarting along with other session-restored apps."
-msgstr ""
-"Scribe hic nomines executabile de apps (separate per virgulas e duo punctos, "
-"per exemplo 'xterm:konsole' o 'xternm,konsole' ) per impedir illos ab "
-"autoinitiar con altere apps restabilite de session."
-
-#: package/contents/ui/main.qml:177
-#, kde-format
-msgctxt "@title:group"
-msgid "Firmware"
-msgstr "Firmware:"
-
-#: package/contents/ui/main.qml:183
-#, kde-format
-msgctxt ""
-"@label:check part of a sentence: After next restart enter UEFI/Firmware "
-"setup screen"
-msgid "After next restart:"
-msgstr "Post proxime restartar"
-
-#: package/contents/ui/main.qml:184
-#, kde-format
-msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "Inserta schermo de configuration de UEFI"
-
-#: package/contents/ui/main.qml:185
-#, kde-format
-msgctxt "@option:check"
-msgid "Enter firmware setup screen"
-msgstr "Inserta schermo de configuration de firmware"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -191,6 +40,157 @@ msgstr "Sur Accesso de Identification (Login)"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Applicationes que on debe excluder ab session:"
+
+#: ui/main.qml:30
+#, kde-format
+msgid ""
+"The system must be restarted before manual session saving becomes active."
+msgstr ""
+"Le systema debe esserrestartate ante que le salveguardar de session manual "
+"deveni active."
+
+#: ui/main.qml:35
+#, kde-format
+msgid "Restart"
+msgstr "Re-Initia"
+
+#: ui/main.qml:57
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "Falleva a requirer restartar de configuration de firmware: %1"
+
+#: ui/main.qml:58
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"Proxime vice que le computator es restartate, illo insertara le schermo de "
+"configuration de UEFI."
+
+#: ui/main.qml:59
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"Proxime vice que le computator es restartate, illo insertara le schermo de "
+"configuration de firmware."
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Restart Now"
+msgstr "Re-Initia nunc"
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@title:group"
+msgid "Logout Screen"
+msgstr "Schermo de clausura de session"
+
+#: ui/main.qml:75
+#, kde-format
+msgid "Show:"
+msgstr "Monstra "
+
+#: ui/main.qml:89
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When this setting is turned on, the logout confirmation screen will be shown "
+"when you log out, shut down, restart, press the power button, or click on "
+"buttons or menu items labeled <interface>Leave…</interface>."
+msgstr ""
+"Quando iste preferentia es activate, le schermo de confirmation de abandono "
+"de session essera monstrate quando tu abandona, arresta, reinitia, pressa le "
+"button de actionar, o clicca sur buttones o elementos de menu etiquettate "
+"<interface>Abandona ...</interface>. "
+
+#: ui/main.qml:96
+#, kde-format
+msgctxt "@title:group"
+msgid "Session Restore"
+msgstr "Restabili Session"
+
+#: ui/main.qml:104
+#, kde-format
+msgid "On login, launch apps that were open:"
+msgstr "Al accesso de identification, lancea apps que esseva aperite:"
+
+#: ui/main.qml:105
+#, kde-format
+msgctxt "@option:radio Automatic style of session restoration"
+msgid "On last logout"
+msgstr "Al ultime clausura de session"
+
+#: ui/main.qml:118
+#, kde-format
+msgctxt "@option:radio Manual style of session restoration"
+msgid "When session was manually saved"
+msgstr "Quando session esseva salveguardate manualmente"
+
+#: ui/main.qml:127
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <interface>Save Session</interface> button will appear in the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the apps that are open and restore them on the next login. "
+"Click it again to replace the set of remembered apps."
+msgstr ""
+"Un button de <interface>Salvaguarda Session</interface> appare in le menu de "
+"<interface>Lanceator de Application</interface>. Quando tu lo clicca, Plasma "
+"memorara le apps que es aperite e restabilira illos al proxime accesso. "
+"Clicca illo novemente per reimplaciar le insimul de apps memorate."
+
+#: ui/main.qml:132
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Initia con un session vacue"
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Ignored applications:"
+msgstr "Applicationes ignorate:"
+
+#: ui/main.qml:169
+#, kde-format
+msgid ""
+"Write apps' executable names here (separated by commas or colons, for "
+"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+"autostarting along with other session-restored apps."
+msgstr ""
+"Scribe hic nomines executabile de apps (separate per virgulas e duo punctos, "
+"per exemplo 'xterm:konsole' o 'xternm,konsole' ) per impedir illos ab "
+"autoinitiar con altere apps restabilite de session."
+
+#: ui/main.qml:177
+#, kde-format
+msgctxt "@title:group"
+msgid "Firmware"
+msgstr "Firmware:"
+
+#: ui/main.qml:183
+#, kde-format
+msgctxt ""
+"@label:check part of a sentence: After next restart enter UEFI/Firmware "
+"setup screen"
+msgid "After next restart:"
+msgstr "Post proxime restartar"
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen"
+msgstr "Inserta schermo de configuration de UEFI"
+
+#: ui/main.qml:185
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen"
+msgstr "Inserta schermo de configuration de firmware"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "

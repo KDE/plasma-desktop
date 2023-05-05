@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-15 15:17+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -84,25 +84,25 @@ msgstr "Seleccione o editor de texto predefinido"
 msgid "Select default video player"
 msgstr "Seleccione o leitor de vídeos predefinido"
 
-#: package/contents/ui/ComponentOverlay.qml:22
+#: ui/ComponentOverlay.qml:22
 #, kde-format
 msgid "Details"
 msgstr "Detalhes"
 
-#: package/contents/ui/ComponentOverlay.qml:28
+#: ui/ComponentOverlay.qml:28
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
 msgstr ""
 "Esta aplicação não anuncia o suporte para os seguintes tipos de ficheiros:"
 
-#: package/contents/ui/ComponentOverlay.qml:42
+#: ui/ComponentOverlay.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
 msgstr "Forçar a Abertura à Mesma"
 
-#: package/contents/ui/ComponentOverlay.qml:50
+#: ui/ComponentOverlay.qml:50
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
@@ -110,24 +110,24 @@ msgstr ""
 "Os seguintes tipos de ficheiros ainda continuam associados a uma aplicação "
 "diferente:"
 
-#: package/contents/ui/ComponentOverlay.qml:59
+#: ui/ComponentOverlay.qml:59
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
 msgstr "O %1 está associado com o %2"
 
-#: package/contents/ui/ComponentOverlay.qml:65
+#: ui/ComponentOverlay.qml:65
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
 msgstr "Atribuir de novo ao %1"
 
-#: package/contents/ui/ComponentOverlay.qml:73
+#: ui/ComponentOverlay.qml:73
 #, kde-format
 msgid "Change file type association manually"
 msgstr "Mudar manualmente a associação do tipo de ficheiro"
 
-#: package/contents/ui/main.qml:17
+#: ui/main.qml:17
 #, kde-format
 msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
@@ -136,87 +136,87 @@ msgstr ""
 "O ’%1’ não parece suportar os seguintes tipos MIME associados a este tipo de "
 "aplicação: %2"
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:45
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "Internet"
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:49
 #, kde-format
 msgid "Web browser:"
 msgstr "Navegador Web:"
 
-#: package/contents/ui/main.qml:71
+#: ui/main.qml:71
 #, kde-format
 msgid "Email client:"
 msgstr "Cliente de e-mail:"
 
-#: package/contents/ui/main.qml:93
+#: ui/main.qml:93
 #, kde-format
 msgctxt "Default phone app"
 msgid "Dialer:"
 msgstr "Marcador:"
 
-#: package/contents/ui/main.qml:115
+#: ui/main.qml:115
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "Multimédia"
 
-#: package/contents/ui/main.qml:120
+#: ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
 msgstr "Visualizador de imagens:"
 
-#: package/contents/ui/main.qml:144
+#: ui/main.qml:144
 #, kde-format
 msgid "Music player:"
 msgstr "Leitor de música:"
 
-#: package/contents/ui/main.qml:167
+#: ui/main.qml:167
 #, kde-format
 msgid "Video player:"
 msgstr "Leitor de vídeos:"
 
-#: package/contents/ui/main.qml:189
+#: ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "Documentos"
 
-#: package/contents/ui/main.qml:194
+#: ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
 msgstr "Editor de texto:"
 
-#: package/contents/ui/main.qml:216
+#: ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
 msgstr "Visualizador de PDF's:"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "Utilitários"
 
-#: package/contents/ui/main.qml:243
+#: ui/main.qml:243
 #, kde-format
 msgid "File manager:"
 msgstr "Gestor de ficheiros:"
 
-#: package/contents/ui/main.qml:265
+#: ui/main.qml:265
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "Emulador de terminal:"
 
-#: package/contents/ui/main.qml:278
+#: ui/main.qml:278
 #, kde-format
 msgid "Archive manager:"
 msgstr "Gestor de pacotes:"
 
-#: package/contents/ui/main.qml:300
+#: ui/main.qml:300
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

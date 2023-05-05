@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -42,21 +42,21 @@ msgstr "启动服务失败。"
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr "无法将已保存的更改通知 KDE 服务管理器 (kded5)：%1"
 
-#: package/contents/ui/main.qml:36
+#: ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr "后台服务管理器 (kded5) 当前未在运行。请确保已正确安装了该软件包。"
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr "如果在当前环境无法发挥作用，一些服务会在手动启动后再次将自身禁用。"
 
-#: package/contents/ui/main.qml:54
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -65,54 +65,54 @@ msgstr ""
 "在后台服务管理器 (kded5) 为了应用更改而重新启动时，一些服务已被自动启动/停"
 "止。"
 
-#: package/contents/ui/main.qml:96
+#: ui/main.qml:96
 #, kde-format
 msgid "All Services"
 msgstr "所有服务"
 
-#: package/contents/ui/main.qml:97
+#: ui/main.qml:97
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "正在运行"
 
-#: package/contents/ui/main.qml:98
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "不在运行"
 
-#: package/contents/ui/main.qml:134
+#: ui/main.qml:134
 #, kde-format
 msgid "Startup Services"
 msgstr "启动服务"
 
-#: package/contents/ui/main.qml:135
+#: ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "按需加载服务"
 
-#: package/contents/ui/main.qml:152
+#: ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "切换是否在启动时自动加载服务"
 
-#: package/contents/ui/main.qml:219
+#: ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "不在运行"
 
-#: package/contents/ui/main.qml:220
+#: ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "正在运行"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, kde-format
 msgid "Stop Service"
 msgstr "停止服务"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, kde-format
 msgid "Start Service"
 msgstr "启动服务"

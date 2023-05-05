@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-12-11 12:07+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -70,81 +70,81 @@ msgstr "Ajustar la salida en la tableta"
 msgid "Custom size"
 msgstr "Tamaño personalizado"
 
-#: package/contents/ui/main.qml:32
+#: ui/main.qml:32
 #, kde-format
 msgid "No drawing tablets found."
 msgstr "No se han encontrado tabletas de dibujo."
 
-#: package/contents/ui/main.qml:40
+#: ui/main.qml:40
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Dispositivo:"
 
-#: package/contents/ui/main.qml:78
+#: ui/main.qml:78
 #, kde-format
 msgid "Target display:"
 msgstr "Pantalla de destino:"
 
-#: package/contents/ui/main.qml:97
+#: ui/main.qml:97
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientación:"
 
-#: package/contents/ui/main.qml:109
+#: ui/main.qml:109
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Modo para zurdos:"
 
-#: package/contents/ui/main.qml:119
+#: ui/main.qml:119
 #, kde-format
 msgid "Area:"
 msgstr "Área:"
 
-#: package/contents/ui/main.qml:207
+#: ui/main.qml:207
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Cambiar el tamaño del área de la tableta"
 
-#: package/contents/ui/main.qml:231
+#: ui/main.qml:231
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Bloquear las proporciones"
 
-#: package/contents/ui/main.qml:239
+#: ui/main.qml:239
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: package/contents/ui/main.qml:247
+#: ui/main.qml:247
 #, kde-format
 msgid "Tool Button 1"
 msgstr "Botón de herramienta 1"
 
-#: package/contents/ui/main.qml:248
+#: ui/main.qml:248
 #, kde-format
 msgid "Tool Button 2"
 msgstr "Botón de herramienta 2"
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "Tool Button 3"
 msgstr "Botón de herramienta 3"
 
-#: package/contents/ui/main.qml:292
+#: ui/main.qml:292
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Panel táctil:"
 
-#: package/contents/ui/main.qml:303
+#: ui/main.qml:303
 #, kde-format
 msgid "None"
 msgstr "Ninguno"
 
-#: package/contents/ui/main.qml:325
+#: ui/main.qml:325
 #, kde-format
 msgid "Button %1:"
 msgstr "Botón %1:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-01-12 07:36+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -66,237 +66,6 @@ msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "კონფლიქტი"
 
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Applications"
-msgstr "აპლიკაციები"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Commands"
-msgstr "ბრძანებები"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "System Settings"
-msgstr "სისტემის მორგება"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Common Actions"
-msgstr "ჩვეულებრივი ქმედებები"
-
-#: package/contents/ui/main.qml:51
-#, kde-format
-msgid "Cannot export scheme while there are unsaved changes"
-msgstr ""
-"სქემის გატანა მაშინ, როცა არსებობს ცვლილებები, რომლებიც არ შენახულა, "
-"შეუძლებელია"
-
-#: package/contents/ui/main.qml:63
-#, kde-format
-msgid ""
-"Select the components below that should be included in the exported scheme"
-msgstr "აირჩიეთ კომპონენტები, რომლებიც გატანილ სქემაში იქნება ჩასმული"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Save scheme"
-msgstr "სქემის შენახვა"
-
-#: package/contents/ui/main.qml:169
-#, kde-format
-msgctxt "@tooltip:button %1 is the text of a custom command"
-msgid "Edit command for %1"
-msgstr "%1-სთვის ბრძანების ჩასწორება"
-
-#: package/contents/ui/main.qml:185
-#, kde-format
-msgid "Remove all shortcuts for %1"
-msgstr "%1-ის ყველა მალსახმობის წაშლა"
-
-#: package/contents/ui/main.qml:196
-#, kde-format
-msgid "Undo deletion"
-msgstr "წაშლის გაუქმება"
-
-#: package/contents/ui/main.qml:247
-#, kde-format
-msgid "No items matched the search terms"
-msgstr "თქვენს ძებნას პასუხები არ აქვს"
-
-#: package/contents/ui/main.qml:280
-#, kde-format
-msgid "Select an item from the list to view its shortcuts here"
-msgstr "აირჩიეთ სიის ჩანაწერები, რომლის მალსახმობების ნახვაც აქ გსურთ"
-
-#: package/contents/ui/main.qml:305
-#, kde-format
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Application…"
-msgstr "აპლიკაციის დამატება…"
-
-#: package/contents/ui/main.qml:315
-#, kde-format
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Command…"
-msgstr "ბრძანების დამატება…"
-
-#: package/contents/ui/main.qml:334
-#, kde-format
-msgid "Import Scheme…"
-msgstr "სქემის შემოტანა…"
-
-#: package/contents/ui/main.qml:339
-#, kde-format
-msgid "Cancel Export"
-msgstr "გატანის გაუქმება"
-
-#: package/contents/ui/main.qml:339
-#, kde-format
-msgid "Export Scheme…"
-msgstr "სქემის გატანა…"
-
-#: package/contents/ui/main.qml:359
-#, kde-format
-msgid "Export Shortcut Scheme"
-msgstr "მალსახმობების სქემის გატანა"
-
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
-#, kde-format
-msgid "Import Shortcut Scheme"
-msgstr "მალსახმობების სქემის შემოტანა"
-
-#: package/contents/ui/main.qml:361
-#, kde-format
-msgctxt "Template for file dialog"
-msgid "Shortcut Scheme (*.kksrc)"
-msgstr "მალსახმობების სქემა(*.kksrc)"
-
-#: package/contents/ui/main.qml:389
-#, kde-format
-msgid "Edit Command"
-msgstr "ბრძანების ჩასწორება"
-
-#: package/contents/ui/main.qml:389
-#, kde-format
-msgid "Add Command"
-msgstr "ბრძანების დამატება"
-
-#: package/contents/ui/main.qml:402
-#, kde-format
-msgid "Save"
-msgstr "შენახვა"
-
-#: package/contents/ui/main.qml:402
-#, kde-format
-msgid "Add"
-msgstr "დამატება"
-
-#: package/contents/ui/main.qml:427
-#, kde-format
-msgid "Enter a command or choose a script file:"
-msgstr "შეიყვანეთ ბრძანება ან აირჩიეთ სკრიპტის ფაილი:"
-
-#: package/contents/ui/main.qml:441
-#, kde-format
-msgctxt "@action:button"
-msgid "Choose…"
-msgstr "არჩევა…"
-
-#: package/contents/ui/main.qml:454
-#, kde-format
-msgctxt "@title:window"
-msgid "Choose Script File"
-msgstr "აირჩიეთ სკრიპტის ფაილი"
-
-#: package/contents/ui/main.qml:456
-#, kde-format
-msgctxt "Template for file dialog"
-msgid "Script file (*.*sh)"
-msgstr "სკრიპტის ფაილი (*.*sh)"
-
-#: package/contents/ui/main.qml:477
-#, kde-format
-msgid "Select the scheme to import:"
-msgstr "არჩიეთ შემოსატანი სქემა:"
-
-#: package/contents/ui/main.qml:491
-#, kde-format
-msgid "Custom Scheme"
-msgstr "ხელით მითითებული სქემა"
-
-#: package/contents/ui/main.qml:496
-#, kde-format
-msgid "Select File…"
-msgstr "აირჩიეთ ფაილი…"
-
-#: package/contents/ui/main.qml:496
-#, kde-format
-msgid "Import"
-msgstr "შემოტანა"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:31
-#, kde-format
-msgid "Editing shortcut: %1"
-msgstr "სწორდება მალსახმობი: %1"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:43
-#, kde-format
-msgctxt ""
-"%1 is the name action that is triggered by the key sequences following "
-"after :"
-msgid "%1:"
-msgstr "%1:"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:56
-#, kde-format
-msgid "No active shortcuts"
-msgstr "აქტიური მალსახმობების გარეშე"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:96
-#, kde-format
-msgctxt "%1 decides if singular or plural will be used"
-msgid "Default shortcut"
-msgid_plural "Default shortcuts"
-msgstr[0] "ნაგულისხმები მალსახმობი"
-msgstr[1] "ნაგულისხმები მალსახმობები"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:98
-#, kde-format
-msgid "No default shortcuts"
-msgstr "ნაგულისხმები მალსახმობების გარეშე"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:106
-#, kde-format
-msgid "Default shortcut %1 is enabled."
-msgstr "ნაგულისხმები მალსახმობი %1 ჩართულია."
-
-#: package/contents/ui/ShortcutActionDelegate.qml:106
-#, kde-format
-msgid "Default shortcut %1 is disabled."
-msgstr "ნაგულისხმები მალსახმობი %1 გამორთულია."
-
-#: package/contents/ui/ShortcutActionDelegate.qml:127
-#, kde-format
-msgid "Custom shortcuts"
-msgstr "საკუთარი მალსახმობები"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:152
-#, kde-format
-msgid "Delete this shortcut"
-msgstr "ამ მალსახმობის წაშლა"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:158
-#, kde-format
-msgid "Add custom shortcut"
-msgstr "საკუთარი მალსახმობის დამატება"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:193
-#, kde-format
-msgid "Cancel capturing of new shortcut"
-msgstr "ახალი მალსახმობის ჩაჭერის გაუქმება"
-
 #: standardshortcutsmodel.cpp:34
 #, kde-format
 msgid "File"
@@ -326,3 +95,234 @@ msgstr "მორგება"
 #, kde-format
 msgid "Help"
 msgstr "დახმარება"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Applications"
+msgstr "აპლიკაციები"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Commands"
+msgstr "ბრძანებები"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "System Settings"
+msgstr "სისტემის მორგება"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Common Actions"
+msgstr "ჩვეულებრივი ქმედებები"
+
+#: ui/main.qml:51
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr ""
+"სქემის გატანა მაშინ, როცა არსებობს ცვლილებები, რომლებიც არ შენახულა, "
+"შეუძლებელია"
+
+#: ui/main.qml:63
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr "აირჩიეთ კომპონენტები, რომლებიც გატანილ სქემაში იქნება ჩასმული"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Save scheme"
+msgstr "სქემის შენახვა"
+
+#: ui/main.qml:169
+#, kde-format
+msgctxt "@tooltip:button %1 is the text of a custom command"
+msgid "Edit command for %1"
+msgstr "%1-სთვის ბრძანების ჩასწორება"
+
+#: ui/main.qml:185
+#, kde-format
+msgid "Remove all shortcuts for %1"
+msgstr "%1-ის ყველა მალსახმობის წაშლა"
+
+#: ui/main.qml:196
+#, kde-format
+msgid "Undo deletion"
+msgstr "წაშლის გაუქმება"
+
+#: ui/main.qml:247
+#, kde-format
+msgid "No items matched the search terms"
+msgstr "თქვენს ძებნას პასუხები არ აქვს"
+
+#: ui/main.qml:280
+#, kde-format
+msgid "Select an item from the list to view its shortcuts here"
+msgstr "აირჩიეთ სიის ჩანაწერები, რომლის მალსახმობების ნახვაც აქ გსურთ"
+
+#: ui/main.qml:305
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Application…"
+msgstr "აპლიკაციის დამატება…"
+
+#: ui/main.qml:315
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Command…"
+msgstr "ბრძანების დამატება…"
+
+#: ui/main.qml:334
+#, kde-format
+msgid "Import Scheme…"
+msgstr "სქემის შემოტანა…"
+
+#: ui/main.qml:339
+#, kde-format
+msgid "Cancel Export"
+msgstr "გატანის გაუქმება"
+
+#: ui/main.qml:339
+#, kde-format
+msgid "Export Scheme…"
+msgstr "სქემის გატანა…"
+
+#: ui/main.qml:359
+#, kde-format
+msgid "Export Shortcut Scheme"
+msgstr "მალსახმობების სქემის გატანა"
+
+#: ui/main.qml:359 ui/main.qml:470
+#, kde-format
+msgid "Import Shortcut Scheme"
+msgstr "მალსახმობების სქემის შემოტანა"
+
+#: ui/main.qml:361
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr "მალსახმობების სქემა(*.kksrc)"
+
+#: ui/main.qml:389
+#, kde-format
+msgid "Edit Command"
+msgstr "ბრძანების ჩასწორება"
+
+#: ui/main.qml:389
+#, kde-format
+msgid "Add Command"
+msgstr "ბრძანების დამატება"
+
+#: ui/main.qml:402
+#, kde-format
+msgid "Save"
+msgstr "შენახვა"
+
+#: ui/main.qml:402
+#, kde-format
+msgid "Add"
+msgstr "დამატება"
+
+#: ui/main.qml:427
+#, kde-format
+msgid "Enter a command or choose a script file:"
+msgstr "შეიყვანეთ ბრძანება ან აირჩიეთ სკრიპტის ფაილი:"
+
+#: ui/main.qml:441
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose…"
+msgstr "არჩევა…"
+
+#: ui/main.qml:454
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Script File"
+msgstr "აირჩიეთ სკრიპტის ფაილი"
+
+#: ui/main.qml:456
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Script file (*.*sh)"
+msgstr "სკრიპტის ფაილი (*.*sh)"
+
+#: ui/main.qml:477
+#, kde-format
+msgid "Select the scheme to import:"
+msgstr "არჩიეთ შემოსატანი სქემა:"
+
+#: ui/main.qml:491
+#, kde-format
+msgid "Custom Scheme"
+msgstr "ხელით მითითებული სქემა"
+
+#: ui/main.qml:496
+#, kde-format
+msgid "Select File…"
+msgstr "აირჩიეთ ფაილი…"
+
+#: ui/main.qml:496
+#, kde-format
+msgid "Import"
+msgstr "შემოტანა"
+
+#: ui/ShortcutActionDelegate.qml:31
+#, kde-format
+msgid "Editing shortcut: %1"
+msgstr "სწორდება მალსახმობი: %1"
+
+#: ui/ShortcutActionDelegate.qml:43
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: ui/ShortcutActionDelegate.qml:56
+#, kde-format
+msgid "No active shortcuts"
+msgstr "აქტიური მალსახმობების გარეშე"
+
+#: ui/ShortcutActionDelegate.qml:96
+#, kde-format
+msgctxt "%1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "ნაგულისხმები მალსახმობი"
+msgstr[1] "ნაგულისხმები მალსახმობები"
+
+#: ui/ShortcutActionDelegate.qml:98
+#, kde-format
+msgid "No default shortcuts"
+msgstr "ნაგულისხმები მალსახმობების გარეშე"
+
+#: ui/ShortcutActionDelegate.qml:106
+#, kde-format
+msgid "Default shortcut %1 is enabled."
+msgstr "ნაგულისხმები მალსახმობი %1 ჩართულია."
+
+#: ui/ShortcutActionDelegate.qml:106
+#, kde-format
+msgid "Default shortcut %1 is disabled."
+msgstr "ნაგულისხმები მალსახმობი %1 გამორთულია."
+
+#: ui/ShortcutActionDelegate.qml:127
+#, kde-format
+msgid "Custom shortcuts"
+msgstr "საკუთარი მალსახმობები"
+
+#: ui/ShortcutActionDelegate.qml:152
+#, kde-format
+msgid "Delete this shortcut"
+msgstr "ამ მალსახმობის წაშლა"
+
+#: ui/ShortcutActionDelegate.qml:158
+#, kde-format
+msgid "Add custom shortcut"
+msgstr "საკუთარი მალსახმობის დამატება"
+
+#: ui/ShortcutActionDelegate.qml:193
+#, kde-format
+msgid "Cancel capturing of new shortcut"
+msgstr "ახალი მალსახმობის ჩაჭერის გაუქმება"

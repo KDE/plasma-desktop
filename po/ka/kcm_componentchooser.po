@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-03 06:14+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -89,48 +89,48 @@ msgstr "აირჩიეთ ნაგულისხმები ტექს�
 msgid "Select default video player"
 msgstr "აირჩიეთ ნაგულისხმები ვიდეოს დამკვრელი"
 
-#: package/contents/ui/ComponentOverlay.qml:22
+#: ui/ComponentOverlay.qml:22
 #, kde-format
 msgid "Details"
 msgstr "დეტალები"
 
-#: package/contents/ui/ComponentOverlay.qml:28
+#: ui/ComponentOverlay.qml:28
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
 msgstr ""
 "ამ აპლიკაციას არ აქვს მითითებული, რომ აქვს ფაილის შემდეგი ტიპების მხარდაჭერა:"
 
-#: package/contents/ui/ComponentOverlay.qml:42
+#: ui/ComponentOverlay.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
 msgstr "ძალით, მაინც გახსნა"
 
-#: package/contents/ui/ComponentOverlay.qml:50
+#: ui/ComponentOverlay.qml:50
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
 msgstr "შემდეგი ფაილის ტიპები ჯერ კიდევ სხვა აპლიკაციაზეა მიბმული:"
 
-#: package/contents/ui/ComponentOverlay.qml:59
+#: ui/ComponentOverlay.qml:59
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
 msgstr "%1 ასოცირებულია %2-სთან"
 
-#: package/contents/ui/ComponentOverlay.qml:65
+#: ui/ComponentOverlay.qml:65
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
 msgstr "ყველას %1-ზე მინიჭება"
 
-#: package/contents/ui/ComponentOverlay.qml:73
+#: ui/ComponentOverlay.qml:73
 #, kde-format
 msgid "Change file type association manually"
 msgstr "ფაილის ტიპის ასოცირების ხელით შეცვლა"
 
-#: package/contents/ui/main.qml:17
+#: ui/main.qml:17
 #, kde-format
 msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
@@ -139,87 +139,87 @@ msgstr ""
 "როგორც ჩანს, '%1' -ს შემდეგი MIME ტიპების მხარდაჭერა არ გააჩნია ამ "
 "აპლიკაციით: %2"
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:45
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "ინტერნეტი"
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:49
 #, kde-format
 msgid "Web browser:"
 msgstr "ვებ-ბრაუზერი:"
 
-#: package/contents/ui/main.qml:71
+#: ui/main.qml:71
 #, kde-format
 msgid "Email client:"
 msgstr "ელფოსტის კლიენტი:"
 
-#: package/contents/ui/main.qml:93
+#: ui/main.qml:93
 #, kde-format
 msgctxt "Default phone app"
 msgid "Dialer:"
 msgstr "დამრეკი:"
 
-#: package/contents/ui/main.qml:115
+#: ui/main.qml:115
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "მულტიმედია"
 
-#: package/contents/ui/main.qml:120
+#: ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
 msgstr "სურათების გამხსნელი:"
 
-#: package/contents/ui/main.qml:144
+#: ui/main.qml:144
 #, kde-format
 msgid "Music player:"
 msgstr "მუსკის დამკვრელი:"
 
-#: package/contents/ui/main.qml:167
+#: ui/main.qml:167
 #, kde-format
 msgid "Video player:"
 msgstr "ვიდეო დამკვრელი:"
 
-#: package/contents/ui/main.qml:189
+#: ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "დოკუმენტები"
 
-#: package/contents/ui/main.qml:194
+#: ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
 msgstr "ტექსტური რედაქტორი:"
 
-#: package/contents/ui/main.qml:216
+#: ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
 msgstr "PDF-ების გამხსნელი:"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "ხელსაწყოები"
 
-#: package/contents/ui/main.qml:243
+#: ui/main.qml:243
 #, kde-format
 msgid "File manager:"
 msgstr "ფაილების მმართველი:"
 
-#: package/contents/ui/main.qml:265
+#: ui/main.qml:265
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "ტერმინალის ემულატორი:"
 
-#: package/contents/ui/main.qml:278
+#: ui/main.qml:278
 #, kde-format
 msgid "Archive manager:"
 msgstr "არქივების მმართველი:"
 
-#: package/contents/ui/main.qml:300
+#: ui/main.qml:300
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-12-12 09:41+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -33,26 +33,6 @@ msgstr "არ აჩვენო მისასალმებელი ფა
 msgid "You cannot delete the currently selected splash screen"
 msgstr "ამჟამად არჩეული მისასალმებელი ეკრანის წაშლა შეუძლებელია"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "&Get New…"
-msgstr "&ახლის მიღება…"
-
-#: package/contents/ui/main.qml:50
-#, kde-format
-msgid "Failed to show the splash screen preview."
-msgstr "მისასალმებელი ეკრანის გადახედვის ჩვენების შეცდომა."
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Preview Splash Screen"
-msgstr "მისასალმებელი ეკრანის გადახედვა"
-
-#: package/contents/ui/main.qml:87
-#, kde-format
-msgid "Uninstall"
-msgstr "წაშლა"
-
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
 #, kde-format
@@ -64,6 +44,26 @@ msgstr "მომავლისთვის"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "მისასალმებელი ფანჯრის მიმდინარე თემის სახელი"
+
+#: ui/main.qml:29
+#, kde-format
+msgid "&Get New…"
+msgstr "&ახლის მიღება…"
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "მისასალმებელი ეკრანის გადახედვის ჩვენების შეცდომა."
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "მისასალმებელი ეკრანის გადახედვა"
+
+#: ui/main.qml:87
+#, kde-format
+msgid "Uninstall"
+msgstr "წაშლა"
 
 #~ msgid "This module lets you choose the splash screen theme."
 #~ msgstr "ეს მოდული მისასალმებელი ეკრანის თემის არჩევის საშუალებას გაძლევთ."

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-07 20:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -50,21 +50,21 @@ msgstr "無法啟動服務。"
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr "無法通知 KDE 服務管理員 (kded5) 儲存變更：%1"
 
-#: package/contents/ui/main.qml:36
+#: ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr "背景服務管理員 (kded5) 目前沒有在執行。請確定它已正確安裝。"
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr "某些服務若目前環境下沒用時會在被手動啟動後自己又把自己停用。"
 
-#: package/contents/ui/main.qml:54
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -72,54 +72,54 @@ msgid ""
 msgstr ""
 "某些服務已在背景服務管理員 (kded5) 重新啟動以套用您的變更時被自動啟動或停止。"
 
-#: package/contents/ui/main.qml:96
+#: ui/main.qml:96
 #, kde-format
 msgid "All Services"
 msgstr "所有服務"
 
-#: package/contents/ui/main.qml:97
+#: ui/main.qml:97
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "執行中"
 
-#: package/contents/ui/main.qml:98
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "並非執行中"
 
-#: package/contents/ui/main.qml:134
+#: ui/main.qml:134
 #, kde-format
 msgid "Startup Services"
 msgstr "自動啟動服務"
 
-#: package/contents/ui/main.qml:135
+#: ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "需要時載入的服務"
 
-#: package/contents/ui/main.qml:152
+#: ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "切換系統啟動時是否自動載入此服務"
 
-#: package/contents/ui/main.qml:219
+#: ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "並非執行中"
 
-#: package/contents/ui/main.qml:220
+#: ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "執行中"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, kde-format
 msgid "Stop Service"
 msgstr "停止服務"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, kde-format
 msgid "Start Service"
 msgstr "啟動服務"

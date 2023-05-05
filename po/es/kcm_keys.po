@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-01-11 17:08+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -69,237 +69,6 @@ msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "Se ha encontrado un conflicto"
 
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Applications"
-msgstr "Aplicaciones"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Commands"
-msgstr "Órdenes"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "System Settings"
-msgstr "Preferencias del sistema"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Common Actions"
-msgstr "Acciones comunes"
-
-#: package/contents/ui/main.qml:51
-#, kde-format
-msgid "Cannot export scheme while there are unsaved changes"
-msgstr "No se puede exportar el esquema mientras existan cambios sin guardar"
-
-#: package/contents/ui/main.qml:63
-#, kde-format
-msgid ""
-"Select the components below that should be included in the exported scheme"
-msgstr ""
-"Seleccione los componente inferiores que se deban incluir en el esquema a "
-"exportar"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Save scheme"
-msgstr "Guardar esquema"
-
-#: package/contents/ui/main.qml:169
-#, kde-format
-msgctxt "@tooltip:button %1 is the text of a custom command"
-msgid "Edit command for %1"
-msgstr "Editar orden para %1"
-
-#: package/contents/ui/main.qml:185
-#, kde-format
-msgid "Remove all shortcuts for %1"
-msgstr "Eliminar todos los accesos rápidos para %1"
-
-#: package/contents/ui/main.qml:196
-#, kde-format
-msgid "Undo deletion"
-msgstr "Deshacer borrado"
-
-#: package/contents/ui/main.qml:247
-#, kde-format
-msgid "No items matched the search terms"
-msgstr "Ningún elemento concuerda con los términos buscados"
-
-#: package/contents/ui/main.qml:280
-#, kde-format
-msgid "Select an item from the list to view its shortcuts here"
-msgstr "Seleccione un elemento de la lista para ver sus accesos rápidos"
-
-#: package/contents/ui/main.qml:305
-#, kde-format
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Application…"
-msgstr "Añadir aplicación..."
-
-#: package/contents/ui/main.qml:315
-#, kde-format
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Command…"
-msgstr "Añadir orden..."
-
-#: package/contents/ui/main.qml:334
-#, kde-format
-msgid "Import Scheme…"
-msgstr "Importar esquema..."
-
-#: package/contents/ui/main.qml:339
-#, kde-format
-msgid "Cancel Export"
-msgstr "Cancelar exportación"
-
-#: package/contents/ui/main.qml:339
-#, kde-format
-msgid "Export Scheme…"
-msgstr "Exportar esquema..."
-
-#: package/contents/ui/main.qml:359
-#, kde-format
-msgid "Export Shortcut Scheme"
-msgstr "Exportar esquema de accesos rápidos"
-
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
-#, kde-format
-msgid "Import Shortcut Scheme"
-msgstr "Importar esquema de accesos rápidos"
-
-#: package/contents/ui/main.qml:361
-#, kde-format
-msgctxt "Template for file dialog"
-msgid "Shortcut Scheme (*.kksrc)"
-msgstr "Esquema de accesos rápidos (*.kksrc)"
-
-#: package/contents/ui/main.qml:389
-#, kde-format
-msgid "Edit Command"
-msgstr "Editar orden"
-
-#: package/contents/ui/main.qml:389
-#, kde-format
-msgid "Add Command"
-msgstr "Añadir orden"
-
-#: package/contents/ui/main.qml:402
-#, kde-format
-msgid "Save"
-msgstr "Guardar"
-
-#: package/contents/ui/main.qml:402
-#, kde-format
-msgid "Add"
-msgstr "Añadir"
-
-#: package/contents/ui/main.qml:427
-#, kde-format
-msgid "Enter a command or choose a script file:"
-msgstr "Introduzca una orden o escoja un archivo de guion:"
-
-#: package/contents/ui/main.qml:441
-#, kde-format
-msgctxt "@action:button"
-msgid "Choose…"
-msgstr "Escoger..."
-
-#: package/contents/ui/main.qml:454
-#, kde-format
-msgctxt "@title:window"
-msgid "Choose Script File"
-msgstr "Escoger archivo de guion"
-
-#: package/contents/ui/main.qml:456
-#, kde-format
-msgctxt "Template for file dialog"
-msgid "Script file (*.*sh)"
-msgstr "Archivo de guion (*.*sh)"
-
-#: package/contents/ui/main.qml:477
-#, kde-format
-msgid "Select the scheme to import:"
-msgstr "Seleccione el esquema a importar:"
-
-#: package/contents/ui/main.qml:491
-#, kde-format
-msgid "Custom Scheme"
-msgstr "Esquema personalizado"
-
-#: package/contents/ui/main.qml:496
-#, kde-format
-msgid "Select File…"
-msgstr "Seleccionar archivo..."
-
-#: package/contents/ui/main.qml:496
-#, kde-format
-msgid "Import"
-msgstr "Importar"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:31
-#, kde-format
-msgid "Editing shortcut: %1"
-msgstr "Editando el acceso rápido: %1"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:43
-#, kde-format
-msgctxt ""
-"%1 is the name action that is triggered by the key sequences following "
-"after :"
-msgid "%1:"
-msgstr "%1:"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:56
-#, kde-format
-msgid "No active shortcuts"
-msgstr "No hay accesos rápidos activos"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:96
-#, kde-format
-msgctxt "%1 decides if singular or plural will be used"
-msgid "Default shortcut"
-msgid_plural "Default shortcuts"
-msgstr[0] "Acceso rápido por omisión"
-msgstr[1] "Accesos rápidos por omisión"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:98
-#, kde-format
-msgid "No default shortcuts"
-msgstr "No hay accesos rápidos por omisión"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:106
-#, kde-format
-msgid "Default shortcut %1 is enabled."
-msgstr "El acceso rápido por omisión %1 está activado."
-
-#: package/contents/ui/ShortcutActionDelegate.qml:106
-#, kde-format
-msgid "Default shortcut %1 is disabled."
-msgstr "El acceso rápido por omisión %1 está desactivado."
-
-#: package/contents/ui/ShortcutActionDelegate.qml:127
-#, kde-format
-msgid "Custom shortcuts"
-msgstr "Accesos rápidos personalizados"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:152
-#, kde-format
-msgid "Delete this shortcut"
-msgstr "Borrar este acceso rápido"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:158
-#, kde-format
-msgid "Add custom shortcut"
-msgstr "Añadir acceso rápido personalizado"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:193
-#, kde-format
-msgid "Cancel capturing of new shortcut"
-msgstr "Cancelar la captura del nuevo acceso rápido"
-
 #: standardshortcutsmodel.cpp:34
 #, kde-format
 msgid "File"
@@ -329,6 +98,237 @@ msgstr "Preferencias"
 #, kde-format
 msgid "Help"
 msgstr "Ayuda"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Applications"
+msgstr "Aplicaciones"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Commands"
+msgstr "Órdenes"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "System Settings"
+msgstr "Preferencias del sistema"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Common Actions"
+msgstr "Acciones comunes"
+
+#: ui/main.qml:51
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "No se puede exportar el esquema mientras existan cambios sin guardar"
+
+#: ui/main.qml:63
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr ""
+"Seleccione los componente inferiores que se deban incluir en el esquema a "
+"exportar"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Save scheme"
+msgstr "Guardar esquema"
+
+#: ui/main.qml:169
+#, kde-format
+msgctxt "@tooltip:button %1 is the text of a custom command"
+msgid "Edit command for %1"
+msgstr "Editar orden para %1"
+
+#: ui/main.qml:185
+#, kde-format
+msgid "Remove all shortcuts for %1"
+msgstr "Eliminar todos los accesos rápidos para %1"
+
+#: ui/main.qml:196
+#, kde-format
+msgid "Undo deletion"
+msgstr "Deshacer borrado"
+
+#: ui/main.qml:247
+#, kde-format
+msgid "No items matched the search terms"
+msgstr "Ningún elemento concuerda con los términos buscados"
+
+#: ui/main.qml:280
+#, kde-format
+msgid "Select an item from the list to view its shortcuts here"
+msgstr "Seleccione un elemento de la lista para ver sus accesos rápidos"
+
+#: ui/main.qml:305
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Application…"
+msgstr "Añadir aplicación..."
+
+#: ui/main.qml:315
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Command…"
+msgstr "Añadir orden..."
+
+#: ui/main.qml:334
+#, kde-format
+msgid "Import Scheme…"
+msgstr "Importar esquema..."
+
+#: ui/main.qml:339
+#, kde-format
+msgid "Cancel Export"
+msgstr "Cancelar exportación"
+
+#: ui/main.qml:339
+#, kde-format
+msgid "Export Scheme…"
+msgstr "Exportar esquema..."
+
+#: ui/main.qml:359
+#, kde-format
+msgid "Export Shortcut Scheme"
+msgstr "Exportar esquema de accesos rápidos"
+
+#: ui/main.qml:359 ui/main.qml:470
+#, kde-format
+msgid "Import Shortcut Scheme"
+msgstr "Importar esquema de accesos rápidos"
+
+#: ui/main.qml:361
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr "Esquema de accesos rápidos (*.kksrc)"
+
+#: ui/main.qml:389
+#, kde-format
+msgid "Edit Command"
+msgstr "Editar orden"
+
+#: ui/main.qml:389
+#, kde-format
+msgid "Add Command"
+msgstr "Añadir orden"
+
+#: ui/main.qml:402
+#, kde-format
+msgid "Save"
+msgstr "Guardar"
+
+#: ui/main.qml:402
+#, kde-format
+msgid "Add"
+msgstr "Añadir"
+
+#: ui/main.qml:427
+#, kde-format
+msgid "Enter a command or choose a script file:"
+msgstr "Introduzca una orden o escoja un archivo de guion:"
+
+#: ui/main.qml:441
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose…"
+msgstr "Escoger..."
+
+#: ui/main.qml:454
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Script File"
+msgstr "Escoger archivo de guion"
+
+#: ui/main.qml:456
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Script file (*.*sh)"
+msgstr "Archivo de guion (*.*sh)"
+
+#: ui/main.qml:477
+#, kde-format
+msgid "Select the scheme to import:"
+msgstr "Seleccione el esquema a importar:"
+
+#: ui/main.qml:491
+#, kde-format
+msgid "Custom Scheme"
+msgstr "Esquema personalizado"
+
+#: ui/main.qml:496
+#, kde-format
+msgid "Select File…"
+msgstr "Seleccionar archivo..."
+
+#: ui/main.qml:496
+#, kde-format
+msgid "Import"
+msgstr "Importar"
+
+#: ui/ShortcutActionDelegate.qml:31
+#, kde-format
+msgid "Editing shortcut: %1"
+msgstr "Editando el acceso rápido: %1"
+
+#: ui/ShortcutActionDelegate.qml:43
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: ui/ShortcutActionDelegate.qml:56
+#, kde-format
+msgid "No active shortcuts"
+msgstr "No hay accesos rápidos activos"
+
+#: ui/ShortcutActionDelegate.qml:96
+#, kde-format
+msgctxt "%1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "Acceso rápido por omisión"
+msgstr[1] "Accesos rápidos por omisión"
+
+#: ui/ShortcutActionDelegate.qml:98
+#, kde-format
+msgid "No default shortcuts"
+msgstr "No hay accesos rápidos por omisión"
+
+#: ui/ShortcutActionDelegate.qml:106
+#, kde-format
+msgid "Default shortcut %1 is enabled."
+msgstr "El acceso rápido por omisión %1 está activado."
+
+#: ui/ShortcutActionDelegate.qml:106
+#, kde-format
+msgid "Default shortcut %1 is disabled."
+msgstr "El acceso rápido por omisión %1 está desactivado."
+
+#: ui/ShortcutActionDelegate.qml:127
+#, kde-format
+msgid "Custom shortcuts"
+msgstr "Accesos rápidos personalizados"
+
+#: ui/ShortcutActionDelegate.qml:152
+#, kde-format
+msgid "Delete this shortcut"
+msgstr "Borrar este acceso rápido"
+
+#: ui/ShortcutActionDelegate.qml:158
+#, kde-format
+msgid "Add custom shortcut"
+msgstr "Añadir acceso rápido personalizado"
+
+#: ui/ShortcutActionDelegate.qml:193
+#, kde-format
+msgid "Cancel capturing of new shortcut"
+msgstr "Cancelar la captura del nuevo acceso rápido"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

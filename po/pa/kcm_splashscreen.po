@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2021-10-09 07:55-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -32,26 +32,6 @@ msgstr "ਕੋਈ ਸਵਾਗਤੀ ਸਕਰੀਨ ਦਿਖਾਈ ਨਹੀ�
 msgid "You cannot delete the currently selected splash screen"
 msgstr "ਤੁਸੀਂ ਇਸ ਵੇਲੇ ਚੁਣੀ ਹੋਈ ਸਵਾਗਤੀ ਸਕਰੀਨ ਨੂੰ ਹਟਾ ਨਹੀਂ ਸਕਦੇ ਹੋ"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "&Get New…"
-msgstr ""
-
-#: package/contents/ui/main.qml:50
-#, kde-format
-msgid "Failed to show the splash screen preview."
-msgstr "ਸਵਾਗਤੀ ਸਕਰੀਨ ਦੀ ਝਲਕ ਵਿਖਾਉਣ ਲਈ ਅਸਫ਼ਲ ਹੈ।"
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Preview Splash Screen"
-msgstr "ਸਵਾਗਤੀ ਸਕਰੀਨ ਦੀ ਝਲਕ ਵੇਖੋ"
-
-#: package/contents/ui/main.qml:87
-#, kde-format
-msgid "Uninstall"
-msgstr "ਅਣ-ਇੰਸਟਾਲ ਕਰੋ"
-
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
 #, kde-format
@@ -63,6 +43,26 @@ msgstr "ਭਵਿੱਖ ਵਿੱਚ ਵਰਤਣ ਲਈ"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "ਮੌਜੂਦਾ ਸਵਾਗਤੀ ਸਕਰੀਨ ਦਾ ਨਾਂ"
+
+#: ui/main.qml:29
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "ਸਵਾਗਤੀ ਸਕਰੀਨ ਦੀ ਝਲਕ ਵਿਖਾਉਣ ਲਈ ਅਸਫ਼ਲ ਹੈ।"
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "ਸਵਾਗਤੀ ਸਕਰੀਨ ਦੀ ਝਲਕ ਵੇਖੋ"
+
+#: ui/main.qml:87
+#, kde-format
+msgid "Uninstall"
+msgstr "ਅਣ-ਇੰਸਟਾਲ ਕਰੋ"
 
 #~ msgid "This module lets you choose the splash screen theme."
 #~ msgstr "ਇਹ ਮੋਡੀਊਲ ਤੁਹਾਨੂੰ ਸਵਾਗਤੀ ਸਕਰੀਨ ਚੁਣਨ ਲਈ ਮਦਦ ਕਰਦਾ ਹੈ।"

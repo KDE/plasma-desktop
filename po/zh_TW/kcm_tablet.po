@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-07 20:13+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -71,81 +71,81 @@ msgstr "符合繪圖板輸出"
 msgid "Custom size"
 msgstr "自訂大小"
 
-#: package/contents/ui/main.qml:32
+#: ui/main.qml:32
 #, kde-format
 msgid "No drawing tablets found."
 msgstr "找不到繪圖平板。"
 
-#: package/contents/ui/main.qml:40
+#: ui/main.qml:40
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "裝置："
 
-#: package/contents/ui/main.qml:78
+#: ui/main.qml:78
 #, kde-format
 msgid "Target display:"
 msgstr "目標顯示器："
 
-#: package/contents/ui/main.qml:97
+#: ui/main.qml:97
 #, kde-format
 msgid "Orientation:"
 msgstr "方向："
 
-#: package/contents/ui/main.qml:109
+#: ui/main.qml:109
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "左手模式："
 
-#: package/contents/ui/main.qml:119
+#: ui/main.qml:119
 #, kde-format
 msgid "Area:"
 msgstr "區域："
 
-#: package/contents/ui/main.qml:207
+#: ui/main.qml:207
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "調整繪圖板區域"
 
-#: package/contents/ui/main.qml:231
+#: ui/main.qml:231
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "鎖定寬高比"
 
-#: package/contents/ui/main.qml:239
+#: ui/main.qml:239
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: package/contents/ui/main.qml:247
+#: ui/main.qml:247
 #, kde-format
 msgid "Tool Button 1"
 msgstr "工具按鈕 1"
 
-#: package/contents/ui/main.qml:248
+#: ui/main.qml:248
 #, kde-format
 msgid "Tool Button 2"
 msgstr "工具按鈕 2"
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "Tool Button 3"
 msgstr "工具按鈕 3"
 
-#: package/contents/ui/main.qml:292
+#: ui/main.qml:292
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "繪圖板："
 
-#: package/contents/ui/main.qml:303
+#: ui/main.qml:303
 #, kde-format
 msgid "None"
 msgstr "無"
 
-#: package/contents/ui/main.qml:325
+#: ui/main.qml:325
 #, kde-format
 msgid "Button %1:"
 msgstr "按鈕 %1："

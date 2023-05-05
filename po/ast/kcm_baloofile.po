@@ -1,0 +1,130 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Enol P. <enolp@softastur.org>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"PO-Revision-Date: 2023-05-03 21:41+0200\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: \n"
+"Language: ast_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.0\n"
+
+#: ui/main.qml:57
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+
+#: ui/main.qml:66
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgid "Delete Index Data"
+msgstr ""
+
+#: ui/main.qml:88
+#, kde-format
+msgid "The system must be restarted before these changes will take effect."
+msgstr ""
+
+#: ui/main.qml:92
+#, kde-format
+msgctxt "@action:button"
+msgid "Restart"
+msgstr ""
+
+#: ui/main.qml:99
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+
+#: ui/main.qml:106
+#, kde-format
+msgid "Enable File Search"
+msgstr ""
+
+#: ui/main.qml:121
+#, kde-format
+msgid "Also index file content"
+msgstr ""
+
+#: ui/main.qml:135
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr ""
+
+#: ui/main.qml:159
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr ""
+
+#: ui/main.qml:164
+#, kde-format
+msgid "Pause Indexer"
+msgstr ""
+
+#: ui/main.qml:164
+#, kde-format
+msgid "Resume Indexer"
+msgstr ""
+
+#: ui/main.qml:177
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr ""
+
+#: ui/main.qml:182
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr ""
+
+#: ui/main.qml:209
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr ""
+
+#: ui/main.qml:220
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr ""
+
+#: ui/main.qml:271
+#, kde-format
+msgid "Not indexed"
+msgstr ""
+
+#: ui/main.qml:272
+#, kde-format
+msgid "Indexed"
+msgstr ""
+
+#: ui/main.qml:302
+#, kde-format
+msgid "Delete entry"
+msgstr ""
+
+#: ui/main.qml:317
+#, kde-format
+msgid "Select a folder to include"
+msgstr ""
+
+#: ui/main.qml:317
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr ""

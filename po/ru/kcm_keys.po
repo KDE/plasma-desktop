@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-01-18 10:06+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -68,241 +68,6 @@ msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "Конфликт назначения комбинаций клавиш"
 
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Applications"
-msgstr "Приложения"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Commands"
-msgstr "Команды"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "System Settings"
-msgstr "Параметры системы"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Common Actions"
-msgstr "Основные действия"
-
-#: package/contents/ui/main.qml:51
-#, kde-format
-msgid "Cannot export scheme while there are unsaved changes"
-msgstr "Перед экспортом схемы необходимо сохранить все внесённые изменения"
-
-#: package/contents/ui/main.qml:63
-#, kde-format
-msgid ""
-"Select the components below that should be included in the exported scheme"
-msgstr ""
-"Выберите все объекты, которые должны быть включены в операцию экспорта схемы"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Save scheme"
-msgstr "Сохранить схему"
-
-#: package/contents/ui/main.qml:169
-#, kde-format
-msgctxt "@tooltip:button %1 is the text of a custom command"
-msgid "Edit command for %1"
-msgstr "Изменить команду для %1"
-
-#: package/contents/ui/main.qml:185
-#, kde-format
-msgid "Remove all shortcuts for %1"
-msgstr "Удалить все комбинации клавиш для %1"
-
-#: package/contents/ui/main.qml:196
-#, kde-format
-msgid "Undo deletion"
-msgstr "Отменить удаление"
-
-#: package/contents/ui/main.qml:247
-#, kde-format
-msgid "No items matched the search terms"
-msgstr "Не найдено ни одного объекта, удовлетворяющего критериям поиска"
-
-#: package/contents/ui/main.qml:280
-#, kde-format
-msgid "Select an item from the list to view its shortcuts here"
-msgstr ""
-"Для просмотра назначенных комбинаций \n"
-"клавиш выберите объект из списка слева."
-
-#: package/contents/ui/main.qml:305
-#, kde-format
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Application…"
-msgstr "Добавить приложение…"
-
-#: package/contents/ui/main.qml:315
-#, kde-format
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Command…"
-msgstr "Добавить команду…"
-
-#: package/contents/ui/main.qml:334
-#, kde-format
-msgid "Import Scheme…"
-msgstr "Импортировать схему..."
-
-#: package/contents/ui/main.qml:339
-#, kde-format
-msgid "Cancel Export"
-msgstr "Отменить экспорт"
-
-#: package/contents/ui/main.qml:339
-#, kde-format
-msgid "Export Scheme…"
-msgstr "Экспортировать схему..."
-
-# BUGME: please add 'title:window' context --ayavorsky 20200502
-#: package/contents/ui/main.qml:359
-#, kde-format
-msgid "Export Shortcut Scheme"
-msgstr "Экспорт схемы комбинаций клавиш"
-
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
-#, kde-format
-msgid "Import Shortcut Scheme"
-msgstr "Импорт схемы комбинаций клавиш"
-
-#: package/contents/ui/main.qml:361
-#, kde-format
-msgctxt "Template for file dialog"
-msgid "Shortcut Scheme (*.kksrc)"
-msgstr "Схема комбинаций клавиш (*.kksrc)"
-
-#: package/contents/ui/main.qml:389
-#, kde-format
-msgid "Edit Command"
-msgstr "Изменение команды"
-
-#: package/contents/ui/main.qml:389
-#, kde-format
-msgid "Add Command"
-msgstr "Добавление команды"
-
-#: package/contents/ui/main.qml:402
-#, kde-format
-msgid "Save"
-msgstr "Сохранить"
-
-#: package/contents/ui/main.qml:402
-#, kde-format
-msgid "Add"
-msgstr "Добавить"
-
-#: package/contents/ui/main.qml:427
-#, kde-format
-msgid "Enter a command or choose a script file:"
-msgstr "Введите команду или выберите файл сценария:"
-
-#: package/contents/ui/main.qml:441
-#, kde-format
-msgctxt "@action:button"
-msgid "Choose…"
-msgstr "Выбрать…"
-
-#: package/contents/ui/main.qml:454
-#, kde-format
-msgctxt "@title:window"
-msgid "Choose Script File"
-msgstr "Выбор файла сценария"
-
-#: package/contents/ui/main.qml:456
-#, kde-format
-msgctxt "Template for file dialog"
-msgid "Script file (*.*sh)"
-msgstr "Файл сценария (*.*.sh)"
-
-#: package/contents/ui/main.qml:477
-#, kde-format
-msgid "Select the scheme to import:"
-msgstr "Выберите файл схемы для импорта:"
-
-#: package/contents/ui/main.qml:491
-#, kde-format
-msgid "Custom Scheme"
-msgstr "Пользовательская схема"
-
-#: package/contents/ui/main.qml:496
-#, kde-format
-msgid "Select File…"
-msgstr "Выбрать файл..."
-
-#: package/contents/ui/main.qml:496
-#, kde-format
-msgid "Import"
-msgstr "Импорт"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:31
-#, kde-format
-msgid "Editing shortcut: %1"
-msgstr "Редактирование комбинации: %1"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:43
-#, kde-format
-msgctxt ""
-"%1 is the name action that is triggered by the key sequences following "
-"after :"
-msgid "%1:"
-msgstr "%1:"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:56
-#, kde-format
-msgid "No active shortcuts"
-msgstr "Не назначено"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:96
-#, kde-format
-msgctxt "%1 decides if singular or plural will be used"
-msgid "Default shortcut"
-msgid_plural "Default shortcuts"
-msgstr[0] "Комбинации по умолчанию"
-msgstr[1] "Комбинации по умолчанию"
-msgstr[2] "Комбинации по умолчанию"
-msgstr[3] "Комбинация по умолчанию"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:98
-#, kde-format
-msgid "No default shortcuts"
-msgstr "Отсутствуют комбинации по умолчанию"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:106
-#, kde-format
-msgid "Default shortcut %1 is enabled."
-msgstr "Комбинация клавиш по умолчанию %1 включена."
-
-#: package/contents/ui/ShortcutActionDelegate.qml:106
-#, kde-format
-msgid "Default shortcut %1 is disabled."
-msgstr "Комбинация клавиш по %1 отключена."
-
-#: package/contents/ui/ShortcutActionDelegate.qml:127
-#, kde-format
-msgid "Custom shortcuts"
-msgstr "Пользовательские комбинации"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:152
-#, kde-format
-msgid "Delete this shortcut"
-msgstr "Удалить эту комбинацию клавиш"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:158
-#, kde-format
-msgid "Add custom shortcut"
-msgstr "Назначить свою комбинацию"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:193
-#, kde-format
-msgid "Cancel capturing of new shortcut"
-msgstr "Отменить назначение комбинации клавиш"
-
 #: standardshortcutsmodel.cpp:34
 #, kde-format
 msgid "File"
@@ -332,6 +97,241 @@ msgstr "Настройка"
 #, kde-format
 msgid "Help"
 msgstr "Справка"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Applications"
+msgstr "Приложения"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Commands"
+msgstr "Команды"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "System Settings"
+msgstr "Параметры системы"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Common Actions"
+msgstr "Основные действия"
+
+#: ui/main.qml:51
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "Перед экспортом схемы необходимо сохранить все внесённые изменения"
+
+#: ui/main.qml:63
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr ""
+"Выберите все объекты, которые должны быть включены в операцию экспорта схемы"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Save scheme"
+msgstr "Сохранить схему"
+
+#: ui/main.qml:169
+#, kde-format
+msgctxt "@tooltip:button %1 is the text of a custom command"
+msgid "Edit command for %1"
+msgstr "Изменить команду для %1"
+
+#: ui/main.qml:185
+#, kde-format
+msgid "Remove all shortcuts for %1"
+msgstr "Удалить все комбинации клавиш для %1"
+
+#: ui/main.qml:196
+#, kde-format
+msgid "Undo deletion"
+msgstr "Отменить удаление"
+
+#: ui/main.qml:247
+#, kde-format
+msgid "No items matched the search terms"
+msgstr "Не найдено ни одного объекта, удовлетворяющего критериям поиска"
+
+#: ui/main.qml:280
+#, kde-format
+msgid "Select an item from the list to view its shortcuts here"
+msgstr ""
+"Для просмотра назначенных комбинаций \n"
+"клавиш выберите объект из списка слева."
+
+#: ui/main.qml:305
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Application…"
+msgstr "Добавить приложение…"
+
+#: ui/main.qml:315
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Command…"
+msgstr "Добавить команду…"
+
+#: ui/main.qml:334
+#, kde-format
+msgid "Import Scheme…"
+msgstr "Импортировать схему..."
+
+#: ui/main.qml:339
+#, kde-format
+msgid "Cancel Export"
+msgstr "Отменить экспорт"
+
+#: ui/main.qml:339
+#, kde-format
+msgid "Export Scheme…"
+msgstr "Экспортировать схему..."
+
+# BUGME: please add 'title:window' context --ayavorsky 20200502
+#: ui/main.qml:359
+#, kde-format
+msgid "Export Shortcut Scheme"
+msgstr "Экспорт схемы комбинаций клавиш"
+
+#: ui/main.qml:359 ui/main.qml:470
+#, kde-format
+msgid "Import Shortcut Scheme"
+msgstr "Импорт схемы комбинаций клавиш"
+
+#: ui/main.qml:361
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr "Схема комбинаций клавиш (*.kksrc)"
+
+#: ui/main.qml:389
+#, kde-format
+msgid "Edit Command"
+msgstr "Изменение команды"
+
+#: ui/main.qml:389
+#, kde-format
+msgid "Add Command"
+msgstr "Добавление команды"
+
+#: ui/main.qml:402
+#, kde-format
+msgid "Save"
+msgstr "Сохранить"
+
+#: ui/main.qml:402
+#, kde-format
+msgid "Add"
+msgstr "Добавить"
+
+#: ui/main.qml:427
+#, kde-format
+msgid "Enter a command or choose a script file:"
+msgstr "Введите команду или выберите файл сценария:"
+
+#: ui/main.qml:441
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose…"
+msgstr "Выбрать…"
+
+#: ui/main.qml:454
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Script File"
+msgstr "Выбор файла сценария"
+
+#: ui/main.qml:456
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Script file (*.*sh)"
+msgstr "Файл сценария (*.*.sh)"
+
+#: ui/main.qml:477
+#, kde-format
+msgid "Select the scheme to import:"
+msgstr "Выберите файл схемы для импорта:"
+
+#: ui/main.qml:491
+#, kde-format
+msgid "Custom Scheme"
+msgstr "Пользовательская схема"
+
+#: ui/main.qml:496
+#, kde-format
+msgid "Select File…"
+msgstr "Выбрать файл..."
+
+#: ui/main.qml:496
+#, kde-format
+msgid "Import"
+msgstr "Импорт"
+
+#: ui/ShortcutActionDelegate.qml:31
+#, kde-format
+msgid "Editing shortcut: %1"
+msgstr "Редактирование комбинации: %1"
+
+#: ui/ShortcutActionDelegate.qml:43
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: ui/ShortcutActionDelegate.qml:56
+#, kde-format
+msgid "No active shortcuts"
+msgstr "Не назначено"
+
+#: ui/ShortcutActionDelegate.qml:96
+#, kde-format
+msgctxt "%1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "Комбинации по умолчанию"
+msgstr[1] "Комбинации по умолчанию"
+msgstr[2] "Комбинации по умолчанию"
+msgstr[3] "Комбинация по умолчанию"
+
+#: ui/ShortcutActionDelegate.qml:98
+#, kde-format
+msgid "No default shortcuts"
+msgstr "Отсутствуют комбинации по умолчанию"
+
+#: ui/ShortcutActionDelegate.qml:106
+#, kde-format
+msgid "Default shortcut %1 is enabled."
+msgstr "Комбинация клавиш по умолчанию %1 включена."
+
+#: ui/ShortcutActionDelegate.qml:106
+#, kde-format
+msgid "Default shortcut %1 is disabled."
+msgstr "Комбинация клавиш по %1 отключена."
+
+#: ui/ShortcutActionDelegate.qml:127
+#, kde-format
+msgid "Custom shortcuts"
+msgstr "Пользовательские комбинации"
+
+#: ui/ShortcutActionDelegate.qml:152
+#, kde-format
+msgid "Delete this shortcut"
+msgstr "Удалить эту комбинацию клавиш"
+
+#: ui/ShortcutActionDelegate.qml:158
+#, kde-format
+msgid "Add custom shortcut"
+msgstr "Назначить свою комбинацию"
+
+#: ui/ShortcutActionDelegate.qml:193
+#, kde-format
+msgid "Cancel capturing of new shortcut"
+msgstr "Отменить назначение комбинации клавиш"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

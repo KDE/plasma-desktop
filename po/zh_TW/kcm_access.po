@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:36+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-07 19:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -278,302 +278,302 @@ msgid "Confirm access to the Keyboard"
 msgstr "確認存取鍵盤"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
 msgid "Enable Screen Reader"
 msgstr "啟用螢幕閱讀器"
 
-#: package/contents/ui/Bell.qml:19
+#: ui/Bell.qml:19
 #, kde-format
 msgid "Please choose an audio file"
 msgstr "請選擇一個音效檔"
 
-#: package/contents/ui/Bell.qml:20
+#: ui/Bell.qml:20
 #, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
 msgstr "音效檔 (*.ogg *.wav)"
 
-#: package/contents/ui/Bell.qml:29
+#: ui/Bell.qml:29
 #, kde-format
 msgid "Audible bell:"
 msgstr "有聲響鈴："
 
-#: package/contents/ui/Bell.qml:30
+#: ui/Bell.qml:30
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr "啟用"
 
-#: package/contents/ui/Bell.qml:41
+#: ui/Bell.qml:41
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "自訂音效："
 
-#: package/contents/ui/Bell.qml:74
+#: ui/Bell.qml:74
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "搜尋系統響鈴用的音效檔"
 
-#: package/contents/ui/Bell.qml:75
+#: ui/Bell.qml:75
 #, kde-format
 msgid "Button search audio file"
 msgstr "按鈕搜尋音效檔"
 
-#: package/contents/ui/Bell.qml:91
+#: ui/Bell.qml:91
 #, kde-format
 msgid "Visual bell:"
 msgstr "可視化響鈴："
 
-#: package/contents/ui/Bell.qml:92
+#: ui/Bell.qml:92
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "啟用"
 
-#: package/contents/ui/Bell.qml:106
+#: ui/Bell.qml:106
 #, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
 msgstr "反轉螢幕"
 
-#: package/contents/ui/Bell.qml:123
+#: ui/Bell.qml:123
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
 msgstr "閃光"
 
-#: package/contents/ui/Bell.qml:134
+#: ui/Bell.qml:134
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "色彩"
 
-#: package/contents/ui/Bell.qml:145
+#: ui/Bell.qml:145
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "持續時間："
 
-#: package/contents/ui/KeyboardFilters.qml:18
+#: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
 msgstr "慢速按鍵："
 
-#: package/contents/ui/KeyboardFilters.qml:19
+#: ui/KeyboardFilters.qml:19
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr "啟用"
 
-#: package/contents/ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:22
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr "按鍵要被接受必須要先被持續按著一段時間"
 
-#: package/contents/ui/KeyboardFilters.qml:37
+#: ui/KeyboardFilters.qml:37
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr "延遲："
 
-#: package/contents/ui/KeyboardFilters.qml:54
+#: ui/KeyboardFilters.qml:54
 #, kde-format
 msgid "Ring system bell:"
 msgstr "觸發系統響鈴："
 
-#: package/contents/ui/KeyboardFilters.qml:55
+#: ui/KeyboardFilters.qml:55
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "當任何按鍵被按下時(&P)"
 
-#: package/contents/ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:69
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "當任何按鍵被接受時(&A)"
 
-#: package/contents/ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:83
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "當任何按鍵被拒絕時(&R)"
 
-#: package/contents/ui/KeyboardFilters.qml:100
+#: ui/KeyboardFilters.qml:100
 #, kde-format
 msgid "Bounce keys:"
 msgstr "彈回按鍵："
 
-#: package/contents/ui/KeyboardFilters.qml:101
+#: ui/KeyboardFilters.qml:101
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr "啟用"
 
-#: package/contents/ui/KeyboardFilters.qml:104
+#: ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
 msgstr "忽略快速重複按下同一個按鍵的動作"
 
-#: package/contents/ui/KeyboardFilters.qml:119
+#: ui/KeyboardFilters.qml:119
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr "延遲："
 
-#: package/contents/ui/KeyboardFilters.qml:134
+#: ui/KeyboardFilters.qml:134
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr "拒絕按鍵時觸發系統響鈴"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "響鈴"
 
-#: package/contents/ui/main.qml:28
+#: ui/main.qml:28
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "修飾鍵"
 
-#: package/contents/ui/main.qml:33
+#: ui/main.qml:33
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "鍵盤過濾器"
 
-#: package/contents/ui/main.qml:38
+#: ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "滑鼠導覽"
 
-#: package/contents/ui/main.qml:43
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "螢幕閱讀器"
 
-#: package/contents/ui/ModifierKeys.qml:16
+#: ui/ModifierKeys.qml:16
 #, kde-format
 msgid "Sticky keys:"
 msgstr "相黏鍵："
 
-#: package/contents/ui/ModifierKeys.qml:17
+#: ui/ModifierKeys.qml:17
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
 msgstr "啟用"
 
-#: package/contents/ui/ModifierKeys.qml:28
+#: ui/ModifierKeys.qml:28
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
 msgstr "鎖定"
 
-#: package/contents/ui/ModifierKeys.qml:42
+#: ui/ModifierKeys.qml:42
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr "同時按下兩個按鍵時停用"
 
-#: package/contents/ui/ModifierKeys.qml:54
+#: ui/ModifierKeys.qml:54
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
 msgstr "使用修飾鍵時觸發系統響鈴"
 
-#: package/contents/ui/ModifierKeys.qml:71
+#: ui/ModifierKeys.qml:71
 #, kde-format
 msgid "Feedback:"
 msgstr "回饋："
 
-#: package/contents/ui/ModifierKeys.qml:72
+#: ui/ModifierKeys.qml:72
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
 msgstr "切換鎖定鍵時觸發系統響鈴"
 
-#: package/contents/ui/ModifierKeys.qml:83
+#: ui/ModifierKeys.qml:83
 #, kde-format
 msgid "Show notification when modifier or locking keys are used"
 msgstr "使用修飾鍵或鎖定鍵時顯示通知"
 
-#: package/contents/ui/ModifierKeys.qml:95
+#: ui/ModifierKeys.qml:95
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "設定通知…"
 
-#: package/contents/ui/MouseNavigation.qml:17
+#: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
 msgstr "使用數字鍵盤移動游標："
 
-#: package/contents/ui/MouseNavigation.qml:18
+#: ui/MouseNavigation.qml:18
 #, kde-format
 msgid "Enable"
 msgstr "啟用"
 
-#: package/contents/ui/MouseNavigation.qml:29
+#: ui/MouseNavigation.qml:29
 #, kde-format
 msgid "When a gesture is used:"
 msgstr "手勢被使用時："
 
-#: package/contents/ui/MouseNavigation.qml:30
+#: ui/MouseNavigation.qml:30
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr "顯示確認對話框"
 
-#: package/contents/ui/MouseNavigation.qml:41
+#: ui/MouseNavigation.qml:41
 #, kde-format
 msgid "Ring the System Bell"
 msgstr "觸發系統響鈴"
 
-#: package/contents/ui/MouseNavigation.qml:52
+#: ui/MouseNavigation.qml:52
 #, kde-format
 msgid "Show a notification"
 msgstr "顯示一個通知"
 
-#: package/contents/ui/MouseNavigation.qml:68
+#: ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
 msgstr "加速延遲："
 
-#: package/contents/ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:82
 #, kde-format
 msgid "Repeat interval:"
 msgstr "重複間隔："
 
-#: package/contents/ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:96
 #, kde-format
 msgid "Acceleration time:"
 msgstr "加速時間："
 
-#: package/contents/ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:110
 #, kde-format
 msgid "Maximum speed:"
 msgstr "最快速度："
 
-#: package/contents/ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:124
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "加速設定檔："
 
-#: package/contents/ui/ScreenReader.qml:28
+#: ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "開啟 Orca 螢幕閱讀器設定…"
 
-#: package/contents/ui/ScreenReader.qml:41
+#: ui/ScreenReader.qml:41
 #, kde-format
 msgid ""
 "Please note that you may have to log out or reboot once to allow the screen "
 "reader to work properly."
 msgstr "請注意，您可能需要登出或重新開機一次，才能讓螢幕閱讀器正確運作。"
 
-#: package/contents/ui/ScreenReader.qml:42
+#: ui/ScreenReader.qml:42
 #, kde-format
 msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "

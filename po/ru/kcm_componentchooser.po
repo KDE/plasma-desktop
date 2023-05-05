@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwincompositing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-17 13:22+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -104,47 +104,47 @@ msgid "Select default video player"
 msgstr ""
 "Выберите приложение для воспроизведения видео, используемое по умолчанию"
 
-#: package/contents/ui/ComponentOverlay.qml:22
+#: ui/ComponentOverlay.qml:22
 #, kde-format
 msgid "Details"
 msgstr "Подробные сведения"
 
-#: package/contents/ui/ComponentOverlay.qml:28
+#: ui/ComponentOverlay.qml:28
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
 msgstr "Приложением не декларирована поддержка следующих типов файлов:"
 
-#: package/contents/ui/ComponentOverlay.qml:42
+#: ui/ComponentOverlay.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
 msgstr "Принудительно использовать"
 
-#: package/contents/ui/ComponentOverlay.qml:50
+#: ui/ComponentOverlay.qml:50
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
 msgstr "Следующие типы файлов будут открываться в другом приложении:"
 
-#: package/contents/ui/ComponentOverlay.qml:59
+#: ui/ComponentOverlay.qml:59
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
 msgstr "тип %1 связан с приложением %2"
 
-#: package/contents/ui/ComponentOverlay.qml:65
+#: ui/ComponentOverlay.qml:65
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
 msgstr "Переназначить все на %1"
 
-#: package/contents/ui/ComponentOverlay.qml:73
+#: ui/ComponentOverlay.qml:73
 #, kde-format
 msgid "Change file type association manually"
 msgstr "Изменить привязку типа файла вручную"
 
-#: package/contents/ui/main.qml:17
+#: ui/main.qml:17
 #, kde-format
 msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
@@ -153,87 +153,87 @@ msgstr ""
 "Приложение «%1», скорее всего, не поддерживает следующие MIME-типы, "
 "связанные с этим типом приложения: %2"
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:45
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "Интернет"
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:49
 #, kde-format
 msgid "Web browser:"
 msgstr "Веб-браузер:"
 
-#: package/contents/ui/main.qml:71
+#: ui/main.qml:71
 #, kde-format
 msgid "Email client:"
 msgstr "Почтовый клиент:"
 
-#: package/contents/ui/main.qml:93
+#: ui/main.qml:93
 #, kde-format
 msgctxt "Default phone app"
 msgid "Dialer:"
 msgstr "Номеронабиратель:"
 
-#: package/contents/ui/main.qml:115
+#: ui/main.qml:115
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "Мультимедиа"
 
-#: package/contents/ui/main.qml:120
+#: ui/main.qml:120
 #, kde-format
 msgid "Image viewer:"
 msgstr "Просмотр изображений:"
 
-#: package/contents/ui/main.qml:144
+#: ui/main.qml:144
 #, kde-format
 msgid "Music player:"
 msgstr "Музыкальный проигрыватель:"
 
-#: package/contents/ui/main.qml:167
+#: ui/main.qml:167
 #, kde-format
 msgid "Video player:"
 msgstr "Видеопроигрыватель:"
 
-#: package/contents/ui/main.qml:189
+#: ui/main.qml:189
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "Документы"
 
-#: package/contents/ui/main.qml:194
+#: ui/main.qml:194
 #, kde-format
 msgid "Text editor:"
 msgstr "Текстовый редактор:"
 
-#: package/contents/ui/main.qml:216
+#: ui/main.qml:216
 #, kde-format
 msgid "PDF viewer:"
 msgstr "Просмотр PDF:"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "Служебные приложения"
 
-#: package/contents/ui/main.qml:243
+#: ui/main.qml:243
 #, kde-format
 msgid "File manager:"
 msgstr "Диспетчер файлов:"
 
-#: package/contents/ui/main.qml:265
+#: ui/main.qml:265
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "Эмулятор терминала:"
 
-#: package/contents/ui/main.qml:278
+#: ui/main.qml:278
 #, kde-format
 msgid "Archive manager:"
 msgstr "Архиватор:"
 
-#: package/contents/ui/main.qml:300
+#: ui/main.qml:300
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

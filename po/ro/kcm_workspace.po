@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-12-28 21:16+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,87 +18,87 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
 
-#: package/contents/ui/main.qml:29
+#: ui/main.qml:29
 #, kde-format
 msgid "Restart"
 msgstr ""
 
-#: package/contents/ui/main.qml:46
+#: ui/main.qml:46
 #, kde-format
 msgid "Visual behavior:"
 msgstr "Comportament vizual:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:47 workspaceoptions_plasmasettings.kcfg:9
+#: ui/main.qml:47 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Arată indicii informative la planarea mausului"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:58 workspaceoptions_plasmasettings.kcfg:15
+#: ui/main.qml:58 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Arată reacții vizuale pentru schimbări de stare"
 
-#: package/contents/ui/main.qml:76
+#: ui/main.qml:76
 #, kde-format
 msgid "Animation speed:"
 msgstr "Viteza animației:"
 
-#: package/contents/ui/main.qml:99
+#: ui/main.qml:99
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Lentă"
 
-#: package/contents/ui/main.qml:105
+#: ui/main.qml:105
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Instantanee"
 
-#: package/contents/ui/main.qml:120
+#: ui/main.qml:120
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Apăsarea pe fișiere sau dosare:"
 
-#: package/contents/ui/main.qml:121
+#: ui/main.qml:121
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Le deschide"
 
-#: package/contents/ui/main.qml:133
+#: ui/main.qml:133
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Se alege apăsând pe marcatorul de selecție al elementului"
 
-#: package/contents/ui/main.qml:143
+#: ui/main.qml:143
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Le selectează"
 
-#: package/contents/ui/main.qml:156
+#: ui/main.qml:156
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Deschide prin apăsare dublă în schimb"
 
-#: package/contents/ui/main.qml:171
+#: ui/main.qml:171
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Apăsarea în calea barei de derulare:"
 
-#: package/contents/ui/main.qml:172
+#: ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -106,12 +106,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Derulează cu o pagină în sus sau jos"
 
-#: package/contents/ui/main.qml:184
+#: ui/main.qml:184
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Clic-mijloc pentru derulare la locul ales"
 
-#: package/contents/ui/main.qml:194
+#: ui/main.qml:194
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -119,34 +119,34 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Derulează la locul apăsat"
 
-#: package/contents/ui/main.qml:213
+#: ui/main.qml:213
 #, kde-format
 msgid "Middle Click:"
 msgstr "Clic mijlociu:"
 
-#: package/contents/ui/main.qml:215
+#: ui/main.qml:215
 #, kde-format
 msgid "Paste selected text"
 msgstr "Lipește textul ales"
 
-#: package/contents/ui/main.qml:232
+#: ui/main.qml:232
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Regim tactil:"
 
-#: package/contents/ui/main.qml:234
+#: ui/main.qml:234
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Activează automat după necesitate"
 
-#: package/contents/ui/main.qml:234 package/contents/ui/main.qml:263
+#: ui/main.qml:234 ui/main.qml:263
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Niciodată activ"
 
-#: package/contents/ui/main.qml:246
+#: ui/main.qml:246
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -157,13 +157,13 @@ msgstr ""
 "ecran tactil dar fără maus sau zonă tactilă. De exemplu, când tastatura unui "
 "laptop transformabil e întoarsă invers sau detașată."
 
-#: package/contents/ui/main.qml:251
+#: ui/main.qml:251
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Activat întotdeauna"
 
-#: package/contents/ui/main.qml:276
+#: ui/main.qml:276
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "

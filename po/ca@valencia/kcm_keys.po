@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-01-11 09:21+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -69,238 +69,6 @@ msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "S'ha trobat un conflicte"
 
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Applications"
-msgstr "Aplicacions"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Commands"
-msgstr "Ordres"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "System Settings"
-msgstr "Configuració del sistema"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Common Actions"
-msgstr "Accions comunes"
-
-#: package/contents/ui/main.qml:51
-#, kde-format
-msgid "Cannot export scheme while there are unsaved changes"
-msgstr "No s'ha pogut exportar l'esquema mentre hi ha canvis sense guardar"
-
-#: package/contents/ui/main.qml:63
-#, kde-format
-msgid ""
-"Select the components below that should be included in the exported scheme"
-msgstr ""
-"Seleccioneu els components següents que s'haurien d'incloure en l'esquema "
-"exportat"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Save scheme"
-msgstr "Guarda l'esquema"
-
-#: package/contents/ui/main.qml:169
-#, kde-format
-msgctxt "@tooltip:button %1 is the text of a custom command"
-msgid "Edit command for %1"
-msgstr "Edita l'ordre per a %1"
-
-#: package/contents/ui/main.qml:185
-#, kde-format
-msgid "Remove all shortcuts for %1"
-msgstr "Elimina totes les dreceres per a %1"
-
-#: package/contents/ui/main.qml:196
-#, kde-format
-msgid "Undo deletion"
-msgstr "Desfés la supressió"
-
-#: package/contents/ui/main.qml:247
-#, kde-format
-msgid "No items matched the search terms"
-msgstr "No hi ha cap element que coincidisca amb els termes de la busca"
-
-#: package/contents/ui/main.qml:280
-#, kde-format
-msgid "Select an item from the list to view its shortcuts here"
-msgstr "Seleccioneu un element de la llista per a veure ací les seues dreceres"
-
-#: package/contents/ui/main.qml:305
-#, kde-format
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Application…"
-msgstr "Afig una aplicació…"
-
-#: package/contents/ui/main.qml:315
-#, kde-format
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Command…"
-msgstr "Afig una ordre…"
-
-#: package/contents/ui/main.qml:334
-#, kde-format
-msgid "Import Scheme…"
-msgstr "Importa un esquema…"
-
-#: package/contents/ui/main.qml:339
-#, kde-format
-msgid "Cancel Export"
-msgstr "Cancel·la l'exportació"
-
-#: package/contents/ui/main.qml:339
-#, kde-format
-msgid "Export Scheme…"
-msgstr "Exporta un esquema…"
-
-#: package/contents/ui/main.qml:359
-#, kde-format
-msgid "Export Shortcut Scheme"
-msgstr "Exporta un esquema de dreceres"
-
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
-#, kde-format
-msgid "Import Shortcut Scheme"
-msgstr "Importa un esquema de dreceres"
-
-#: package/contents/ui/main.qml:361
-#, kde-format
-msgctxt "Template for file dialog"
-msgid "Shortcut Scheme (*.kksrc)"
-msgstr "Esquema de dreceres (*.kksrc)"
-
-#: package/contents/ui/main.qml:389
-#, kde-format
-msgid "Edit Command"
-msgstr "Edita una ordre"
-
-#: package/contents/ui/main.qml:389
-#, kde-format
-msgid "Add Command"
-msgstr "Afig una ordre"
-
-#: package/contents/ui/main.qml:402
-#, kde-format
-msgid "Save"
-msgstr "Guarda"
-
-#: package/contents/ui/main.qml:402
-#, kde-format
-msgid "Add"
-msgstr "Afig"
-
-#: package/contents/ui/main.qml:427
-#, kde-format
-msgid "Enter a command or choose a script file:"
-msgstr "Introduïu una ordre o trieu un fitxer de script:"
-
-#: package/contents/ui/main.qml:441
-#, kde-format
-msgctxt "@action:button"
-msgid "Choose…"
-msgstr "Seleccioneu…"
-
-#: package/contents/ui/main.qml:454
-#, kde-format
-msgctxt "@title:window"
-msgid "Choose Script File"
-msgstr "Tria d'un fitxer de script"
-
-# skip-rule: rst-asterisk1
-#: package/contents/ui/main.qml:456
-#, kde-format
-msgctxt "Template for file dialog"
-msgid "Script file (*.*sh)"
-msgstr "Fitxer de script (*.*sh)"
-
-#: package/contents/ui/main.qml:477
-#, kde-format
-msgid "Select the scheme to import:"
-msgstr "Seleccioneu l'esquema que s'ha d'importar:"
-
-#: package/contents/ui/main.qml:491
-#, kde-format
-msgid "Custom Scheme"
-msgstr "Esquema personalitzat"
-
-#: package/contents/ui/main.qml:496
-#, kde-format
-msgid "Select File…"
-msgstr "Selecciona un fitxer…"
-
-#: package/contents/ui/main.qml:496
-#, kde-format
-msgid "Import"
-msgstr "Importa"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:31
-#, kde-format
-msgid "Editing shortcut: %1"
-msgstr "Drecera en edició: %1"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:43
-#, kde-format
-msgctxt ""
-"%1 is the name action that is triggered by the key sequences following "
-"after :"
-msgid "%1:"
-msgstr "%1:"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:56
-#, kde-format
-msgid "No active shortcuts"
-msgstr "Cap drecera activa"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:96
-#, kde-format
-msgctxt "%1 decides if singular or plural will be used"
-msgid "Default shortcut"
-msgid_plural "Default shortcuts"
-msgstr[0] "Drecera predeterminada"
-msgstr[1] "Dreceres predeterminades"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:98
-#, kde-format
-msgid "No default shortcuts"
-msgstr "Sense dreceres predeterminades"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:106
-#, kde-format
-msgid "Default shortcut %1 is enabled."
-msgstr "La drecera predeterminada %1 està activada."
-
-#: package/contents/ui/ShortcutActionDelegate.qml:106
-#, kde-format
-msgid "Default shortcut %1 is disabled."
-msgstr "La drecera predeterminada %1 està desactivada."
-
-#: package/contents/ui/ShortcutActionDelegate.qml:127
-#, kde-format
-msgid "Custom shortcuts"
-msgstr "Dreceres personalitzades"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:152
-#, kde-format
-msgid "Delete this shortcut"
-msgstr "Suprimix esta drecera"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:158
-#, kde-format
-msgid "Add custom shortcut"
-msgstr "Afig una drecera personalitzada"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:193
-#, kde-format
-msgid "Cancel capturing of new shortcut"
-msgstr "Cancel·la la captura d'una drecera nova"
-
 #: standardshortcutsmodel.cpp:34
 #, kde-format
 msgid "File"
@@ -331,3 +99,235 @@ msgstr "Configuració"
 #, kde-format
 msgid "Help"
 msgstr "Ajuda"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Applications"
+msgstr "Aplicacions"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Commands"
+msgstr "Ordres"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "System Settings"
+msgstr "Configuració del sistema"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Common Actions"
+msgstr "Accions comunes"
+
+#: ui/main.qml:51
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "No s'ha pogut exportar l'esquema mentre hi ha canvis sense guardar"
+
+#: ui/main.qml:63
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr ""
+"Seleccioneu els components següents que s'haurien d'incloure en l'esquema "
+"exportat"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Save scheme"
+msgstr "Guarda l'esquema"
+
+#: ui/main.qml:169
+#, kde-format
+msgctxt "@tooltip:button %1 is the text of a custom command"
+msgid "Edit command for %1"
+msgstr "Edita l'ordre per a %1"
+
+#: ui/main.qml:185
+#, kde-format
+msgid "Remove all shortcuts for %1"
+msgstr "Elimina totes les dreceres per a %1"
+
+#: ui/main.qml:196
+#, kde-format
+msgid "Undo deletion"
+msgstr "Desfés la supressió"
+
+#: ui/main.qml:247
+#, kde-format
+msgid "No items matched the search terms"
+msgstr "No hi ha cap element que coincidisca amb els termes de la busca"
+
+#: ui/main.qml:280
+#, kde-format
+msgid "Select an item from the list to view its shortcuts here"
+msgstr "Seleccioneu un element de la llista per a veure ací les seues dreceres"
+
+#: ui/main.qml:305
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Application…"
+msgstr "Afig una aplicació…"
+
+#: ui/main.qml:315
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Command…"
+msgstr "Afig una ordre…"
+
+#: ui/main.qml:334
+#, kde-format
+msgid "Import Scheme…"
+msgstr "Importa un esquema…"
+
+#: ui/main.qml:339
+#, kde-format
+msgid "Cancel Export"
+msgstr "Cancel·la l'exportació"
+
+#: ui/main.qml:339
+#, kde-format
+msgid "Export Scheme…"
+msgstr "Exporta un esquema…"
+
+#: ui/main.qml:359
+#, kde-format
+msgid "Export Shortcut Scheme"
+msgstr "Exporta un esquema de dreceres"
+
+#: ui/main.qml:359 ui/main.qml:470
+#, kde-format
+msgid "Import Shortcut Scheme"
+msgstr "Importa un esquema de dreceres"
+
+#: ui/main.qml:361
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr "Esquema de dreceres (*.kksrc)"
+
+#: ui/main.qml:389
+#, kde-format
+msgid "Edit Command"
+msgstr "Edita una ordre"
+
+#: ui/main.qml:389
+#, kde-format
+msgid "Add Command"
+msgstr "Afig una ordre"
+
+#: ui/main.qml:402
+#, kde-format
+msgid "Save"
+msgstr "Guarda"
+
+#: ui/main.qml:402
+#, kde-format
+msgid "Add"
+msgstr "Afig"
+
+#: ui/main.qml:427
+#, kde-format
+msgid "Enter a command or choose a script file:"
+msgstr "Introduïu una ordre o trieu un fitxer de script:"
+
+#: ui/main.qml:441
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose…"
+msgstr "Seleccioneu…"
+
+#: ui/main.qml:454
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Script File"
+msgstr "Tria d'un fitxer de script"
+
+# skip-rule: rst-asterisk1
+#: ui/main.qml:456
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Script file (*.*sh)"
+msgstr "Fitxer de script (*.*sh)"
+
+#: ui/main.qml:477
+#, kde-format
+msgid "Select the scheme to import:"
+msgstr "Seleccioneu l'esquema que s'ha d'importar:"
+
+#: ui/main.qml:491
+#, kde-format
+msgid "Custom Scheme"
+msgstr "Esquema personalitzat"
+
+#: ui/main.qml:496
+#, kde-format
+msgid "Select File…"
+msgstr "Selecciona un fitxer…"
+
+#: ui/main.qml:496
+#, kde-format
+msgid "Import"
+msgstr "Importa"
+
+#: ui/ShortcutActionDelegate.qml:31
+#, kde-format
+msgid "Editing shortcut: %1"
+msgstr "Drecera en edició: %1"
+
+#: ui/ShortcutActionDelegate.qml:43
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: ui/ShortcutActionDelegate.qml:56
+#, kde-format
+msgid "No active shortcuts"
+msgstr "Cap drecera activa"
+
+#: ui/ShortcutActionDelegate.qml:96
+#, kde-format
+msgctxt "%1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "Drecera predeterminada"
+msgstr[1] "Dreceres predeterminades"
+
+#: ui/ShortcutActionDelegate.qml:98
+#, kde-format
+msgid "No default shortcuts"
+msgstr "Sense dreceres predeterminades"
+
+#: ui/ShortcutActionDelegate.qml:106
+#, kde-format
+msgid "Default shortcut %1 is enabled."
+msgstr "La drecera predeterminada %1 està activada."
+
+#: ui/ShortcutActionDelegate.qml:106
+#, kde-format
+msgid "Default shortcut %1 is disabled."
+msgstr "La drecera predeterminada %1 està desactivada."
+
+#: ui/ShortcutActionDelegate.qml:127
+#, kde-format
+msgid "Custom shortcuts"
+msgstr "Dreceres personalitzades"
+
+#: ui/ShortcutActionDelegate.qml:152
+#, kde-format
+msgid "Delete this shortcut"
+msgstr "Suprimix esta drecera"
+
+#: ui/ShortcutActionDelegate.qml:158
+#, kde-format
+msgid "Add custom shortcut"
+msgstr "Afig una drecera personalitzada"
+
+#: ui/ShortcutActionDelegate.qml:193
+#, kde-format
+msgid "Cancel capturing of new shortcut"
+msgstr "Cancel·la la captura d'una drecera nova"

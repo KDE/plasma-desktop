@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:36+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2008-07-02 15:45+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -285,242 +285,242 @@ msgid "Confirm access to the Keyboard"
 msgstr ""
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
 msgid "Enable Screen Reader"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:19
+#: ui/Bell.qml:19
 #, kde-format
 msgid "Please choose an audio file"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:20
+#: ui/Bell.qml:20
 #, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:29
+#: ui/Bell.qml:29
 #, fuzzy, kde-format
 #| msgid "Audible Bell"
 msgid "Audible bell:"
 msgstr "Hearbere bel"
 
-#: package/contents/ui/Bell.qml:30
+#: ui/Bell.qml:30
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:41
+#: ui/Bell.qml:41
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:74
+#: ui/Bell.qml:74
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:75
+#: ui/Bell.qml:75
 #, kde-format
 msgid "Button search audio file"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:91
+#: ui/Bell.qml:91
 #, fuzzy, kde-format
 #| msgid "Visible Bell"
 msgid "Visual bell:"
 msgstr "Sichtbere bel"
 
-#: package/contents/ui/Bell.qml:92
+#: ui/Bell.qml:92
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:106
+#: ui/Bell.qml:106
 #, fuzzy, kde-format
 #| msgid "I&nvert screen"
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
 msgstr "Skerm omkear&e"
 
-#: package/contents/ui/Bell.qml:123
+#: ui/Bell.qml:123
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:134
+#: ui/Bell.qml:134
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:145
+#: ui/Bell.qml:145
 #, fuzzy, kde-format
 #| msgid "Duration:"
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Tiid:"
 
-#: package/contents/ui/KeyboardFilters.qml:18
+#: ui/KeyboardFilters.qml:18
 #, fuzzy, kde-format
 #| msgid "&Use slow keys"
 msgid "Slow keys:"
 msgstr "Trage toetsen br&ûke"
 
-#: package/contents/ui/KeyboardFilters.qml:19
+#: ui/KeyboardFilters.qml:19
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:22
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:37
+#: ui/KeyboardFilters.qml:37
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:54
+#: ui/KeyboardFilters.qml:54
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Ring system bell:"
 msgstr "&Systeembel brûke"
 
-#: package/contents/ui/KeyboardFilters.qml:55
+#: ui/KeyboardFilters.qml:55
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is pressed"
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "Systeembel b&rûke as in toets yndrukt wurdt"
 
-#: package/contents/ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:69
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is accepted"
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "Systeembel b&rûke as in toets akseptearre wurdt"
 
-#: package/contents/ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:83
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "Systeembel b&rûke as in toets wegere wurdt"
 
-#: package/contents/ui/KeyboardFilters.qml:100
+#: ui/KeyboardFilters.qml:100
 #, fuzzy, kde-format
 #| msgid "Bounce Keys"
 msgid "Bounce keys:"
 msgstr "Grage toetsen"
 
-#: package/contents/ui/KeyboardFilters.qml:101
+#: ui/KeyboardFilters.qml:101
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:104
+#: ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:119
+#: ui/KeyboardFilters.qml:119
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:134
+#: ui/KeyboardFilters.qml:134
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgid "Ring system bell when rejected"
 msgstr "Systeembel b&rûke as in toets wegere wurdt"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, fuzzy, kde-format
 #| msgid "&Bell"
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "&Bel"
 
-#: package/contents/ui/main.qml:28
+#: ui/main.qml:28
 #, fuzzy, kde-format
 #| msgid "&Modifier Keys"
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "&Modifikaasjetoetsen"
 
-#: package/contents/ui/main.qml:33
+#: ui/main.qml:33
 #, fuzzy, kde-format
 #| msgid "&Keyboard Filters"
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "&Toetseboerdfilters"
 
-#: package/contents/ui/main.qml:38
+#: ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr ""
 
-#: package/contents/ui/main.qml:43
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr ""
 
-#: package/contents/ui/ModifierKeys.qml:16
+#: ui/ModifierKeys.qml:16
 #, fuzzy, kde-format
 #| msgid "S&ticky Keys"
 msgid "Sticky keys:"
 msgstr "Fertra&ge toetsen"
 
-#: package/contents/ui/ModifierKeys.qml:17
+#: ui/ModifierKeys.qml:17
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
 msgstr ""
 
-#: package/contents/ui/ModifierKeys.qml:28
+#: ui/ModifierKeys.qml:28
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
 msgstr ""
 
-#: package/contents/ui/ModifierKeys.qml:42
+#: ui/ModifierKeys.qml:42
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr ""
 
-#: package/contents/ui/ModifierKeys.qml:54
+#: ui/ModifierKeys.qml:54
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is pressed"
 msgid "Ring system bell when modifier keys are used"
 msgstr "Systeembel b&rûke as in toets yndrukt wurdt"
 
-#: package/contents/ui/ModifierKeys.qml:71
+#: ui/ModifierKeys.qml:71
 #, kde-format
 msgid "Feedback:"
 msgstr ""
 
-#: package/contents/ui/ModifierKeys.qml:72
+#: ui/ModifierKeys.qml:72
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is accepted"
 msgid "Ring system bell when locking keys are toggled"
 msgstr "Systeembel b&rûke as in toets akseptearre wurdt"
 
-#: package/contents/ui/ModifierKeys.qml:83
+#: ui/ModifierKeys.qml:83
 #, fuzzy, kde-format
 #| msgid ""
 #| "Use KDE's system notification mechanism whenever a modifier or locking "
@@ -530,85 +530,85 @@ msgstr ""
 "KDE's systeemnotifikaasje brûke as de tastân fan in modifikaasje- of "
 "skoatteltoets wizige wurdt"
 
-#: package/contents/ui/ModifierKeys.qml:95
+#: ui/ModifierKeys.qml:95
 #, fuzzy, kde-format
 #| msgid "Configure &Notifications..."
 msgid "Configure Notifications…"
 msgstr "&Notifikaasje ynstelle"
 
-#: package/contents/ui/MouseNavigation.qml:17
+#: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
 msgstr ""
 
-#: package/contents/ui/MouseNavigation.qml:18
+#: ui/MouseNavigation.qml:18
 #, kde-format
 msgid "Enable"
 msgstr ""
 
-#: package/contents/ui/MouseNavigation.qml:29
+#: ui/MouseNavigation.qml:29
 #, kde-format
 msgid "When a gesture is used:"
 msgstr ""
 
-#: package/contents/ui/MouseNavigation.qml:30
+#: ui/MouseNavigation.qml:30
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr ""
 
-#: package/contents/ui/MouseNavigation.qml:41
+#: ui/MouseNavigation.qml:41
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Ring the System Bell"
 msgstr "&Systeembel brûke"
 
-#: package/contents/ui/MouseNavigation.qml:52
+#: ui/MouseNavigation.qml:52
 #, fuzzy, kde-format
 #| msgid "Notification"
 msgid "Show a notification"
 msgstr "Notifikaasje"
 
-#: package/contents/ui/MouseNavigation.qml:68
+#: ui/MouseNavigation.qml:68
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration delay:"
 msgstr "Akseptaasje&fertraging:"
 
-#: package/contents/ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:82
 #, kde-format
 msgid "Repeat interval:"
 msgstr ""
 
-#: package/contents/ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:96
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration time:"
 msgstr "Akseptaasje&fertraging:"
 
-#: package/contents/ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:110
 #, kde-format
 msgid "Maximum speed:"
 msgstr ""
 
-#: package/contents/ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:124
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration profile:"
 msgstr "Akseptaasje&fertraging:"
 
-#: package/contents/ui/ScreenReader.qml:28
+#: ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr ""
 
-#: package/contents/ui/ScreenReader.qml:41
+#: ui/ScreenReader.qml:41
 #, kde-format
 msgid ""
 "Please note that you may have to log out or reboot once to allow the screen "
 "reader to work properly."
 msgstr ""
 
-#: package/contents/ui/ScreenReader.qml:42
+#: ui/ScreenReader.qml:42
 #, kde-format
 msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2020-10-07 22:52+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -66,249 +66,6 @@ msgctxt "@title:window"
 msgid "Found conflict"
 msgstr "Leiti konflikt"
 
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Applications"
-msgstr "Rakendused"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Commands"
-msgstr ""
-
-#: package/contents/ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "System Services"
-msgid "System Settings"
-msgstr "Süsteemi teenused"
-
-#: package/contents/ui/main.qml:27
-#, kde-format
-msgid "Common Actions"
-msgstr "Tüüpilised menüükäsud"
-
-#: package/contents/ui/main.qml:51
-#, kde-format
-msgid "Cannot export scheme while there are unsaved changes"
-msgstr "Skeemi ei saa eksportida, sest selles on salvestamata muutusi"
-
-#: package/contents/ui/main.qml:63
-#, kde-format
-msgid ""
-"Select the components below that should be included in the exported scheme"
-msgstr "Vali allpool komponendid, mis kaasata eksporditavasse skeemi"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Save scheme"
-msgstr "Salvesta skeem"
-
-#: package/contents/ui/main.qml:169
-#, kde-format
-msgctxt "@tooltip:button %1 is the text of a custom command"
-msgid "Edit command for %1"
-msgstr ""
-
-#: package/contents/ui/main.qml:185
-#, kde-format
-msgid "Remove all shortcuts for %1"
-msgstr "Kõigi %1 kiirklahvide eemaldamine"
-
-#: package/contents/ui/main.qml:196
-#, kde-format
-msgid "Undo deletion"
-msgstr "Kustutamise tagasivõtmine"
-
-#: package/contents/ui/main.qml:247
-#, kde-format
-msgid "No items matched the search terms"
-msgstr ""
-
-#: package/contents/ui/main.qml:280
-#, kde-format
-msgid "Select an item from the list to view its shortcuts here"
-msgstr "Vali loendis element selle kiirklahvide nägemiseks"
-
-#: package/contents/ui/main.qml:305
-#, fuzzy, kde-format
-#| msgid "Add Application..."
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Application…"
-msgstr "Lisa rakendus ..."
-
-#: package/contents/ui/main.qml:315
-#, kde-format
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Command…"
-msgstr ""
-
-#: package/contents/ui/main.qml:334
-#, fuzzy, kde-format
-#| msgid "Import Scheme..."
-msgid "Import Scheme…"
-msgstr "Impordi skeem ..."
-
-#: package/contents/ui/main.qml:339
-#, kde-format
-msgid "Cancel Export"
-msgstr "Katkesta eksport"
-
-#: package/contents/ui/main.qml:339
-#, fuzzy, kde-format
-#| msgid "Export Scheme..."
-msgid "Export Scheme…"
-msgstr "Ekspordi skeem ..."
-
-#: package/contents/ui/main.qml:359
-#, kde-format
-msgid "Export Shortcut Scheme"
-msgstr "Kiirklahviskeemi eksport"
-
-#: package/contents/ui/main.qml:359 package/contents/ui/main.qml:470
-#, kde-format
-msgid "Import Shortcut Scheme"
-msgstr "Kiirklahviskeemi import"
-
-#: package/contents/ui/main.qml:361
-#, kde-format
-msgctxt "Template for file dialog"
-msgid "Shortcut Scheme (*.kksrc)"
-msgstr "Kiirklahviskeem (*.kksrc)"
-
-#: package/contents/ui/main.qml:389
-#, kde-format
-msgid "Edit Command"
-msgstr ""
-
-#: package/contents/ui/main.qml:389
-#, kde-format
-msgid "Add Command"
-msgstr ""
-
-#: package/contents/ui/main.qml:402
-#, kde-format
-msgid "Save"
-msgstr ""
-
-#: package/contents/ui/main.qml:402
-#, kde-format
-msgid "Add"
-msgstr ""
-
-#: package/contents/ui/main.qml:427
-#, kde-format
-msgid "Enter a command or choose a script file:"
-msgstr ""
-
-#: package/contents/ui/main.qml:441
-#, kde-format
-msgctxt "@action:button"
-msgid "Choose…"
-msgstr ""
-
-#: package/contents/ui/main.qml:454
-#, kde-format
-msgctxt "@title:window"
-msgid "Choose Script File"
-msgstr ""
-
-#: package/contents/ui/main.qml:456
-#, kde-format
-msgctxt "Template for file dialog"
-msgid "Script file (*.*sh)"
-msgstr ""
-
-#: package/contents/ui/main.qml:477
-#, kde-format
-msgid "Select the scheme to import:"
-msgstr "Imporditav skeem:"
-
-#: package/contents/ui/main.qml:491
-#, kde-format
-msgid "Custom Scheme"
-msgstr "Kohandatud skeem"
-
-#: package/contents/ui/main.qml:496
-#, fuzzy, kde-format
-#| msgid "Select File..."
-msgid "Select File…"
-msgstr "Vali fail ..."
-
-#: package/contents/ui/main.qml:496
-#, kde-format
-msgid "Import"
-msgstr "Impordi"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:31
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is the name of the component, %2 is the action for which saving failed"
-#| msgid "Error while saving shortcut %1: %2"
-msgid "Editing shortcut: %1"
-msgstr "Tõrge kiirklahvi %1 salvestamisel: %2"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:43
-#, kde-format
-msgctxt ""
-"%1 is the name action that is triggered by the key sequences following "
-"after :"
-msgid "%1:"
-msgstr "%1:"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:56
-#, kde-format
-msgid "No active shortcuts"
-msgstr "Aktiivseid kiirklahve pole"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:96
-#, kde-format
-msgctxt "%1 decides if singular or plural will be used"
-msgid "Default shortcut"
-msgid_plural "Default shortcuts"
-msgstr[0] "Vaikimisi kiirklahv"
-msgstr[1] "Vaikimisi kiirklahvid"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:98
-#, kde-format
-msgid "No default shortcuts"
-msgstr "Vaikimisi kiirklahve pole"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:106
-#, fuzzy, kde-format
-#| msgctxt "%1 decides if singular or plural will be used"
-#| msgid "Default shortcut"
-#| msgid_plural "Default shortcuts"
-msgid "Default shortcut %1 is enabled."
-msgstr "Vaikimisi kiirklahv"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:106
-#, fuzzy, kde-format
-#| msgctxt "%1 decides if singular or plural will be used"
-#| msgid "Default shortcut"
-#| msgid_plural "Default shortcuts"
-msgid "Default shortcut %1 is disabled."
-msgstr "Vaikimisi kiirklahv"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:127
-#, kde-format
-msgid "Custom shortcuts"
-msgstr "Kohandatud kiirklahvid"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:152
-#, kde-format
-msgid "Delete this shortcut"
-msgstr "Selle kiirklahvi kustutamine"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:158
-#, kde-format
-msgid "Add custom shortcut"
-msgstr "Lisa kohandatud kiirklahv"
-
-#: package/contents/ui/ShortcutActionDelegate.qml:193
-#, kde-format
-msgid "Cancel capturing of new shortcut"
-msgstr "Uue kiirklahvi määramisest loobumine"
-
 #: standardshortcutsmodel.cpp:34
 #, kde-format
 msgid "File"
@@ -338,6 +95,249 @@ msgstr "Seadistused"
 #, kde-format
 msgid "Help"
 msgstr "Abi"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Applications"
+msgstr "Rakendused"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Commands"
+msgstr ""
+
+#: ui/main.qml:27
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgid "System Settings"
+msgstr "Süsteemi teenused"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Common Actions"
+msgstr "Tüüpilised menüükäsud"
+
+#: ui/main.qml:51
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "Skeemi ei saa eksportida, sest selles on salvestamata muutusi"
+
+#: ui/main.qml:63
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr "Vali allpool komponendid, mis kaasata eksporditavasse skeemi"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Save scheme"
+msgstr "Salvesta skeem"
+
+#: ui/main.qml:169
+#, kde-format
+msgctxt "@tooltip:button %1 is the text of a custom command"
+msgid "Edit command for %1"
+msgstr ""
+
+#: ui/main.qml:185
+#, kde-format
+msgid "Remove all shortcuts for %1"
+msgstr "Kõigi %1 kiirklahvide eemaldamine"
+
+#: ui/main.qml:196
+#, kde-format
+msgid "Undo deletion"
+msgstr "Kustutamise tagasivõtmine"
+
+#: ui/main.qml:247
+#, kde-format
+msgid "No items matched the search terms"
+msgstr ""
+
+#: ui/main.qml:280
+#, kde-format
+msgid "Select an item from the list to view its shortcuts here"
+msgstr "Vali loendis element selle kiirklahvide nägemiseks"
+
+#: ui/main.qml:305
+#, fuzzy, kde-format
+#| msgid "Add Application..."
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Application…"
+msgstr "Lisa rakendus ..."
+
+#: ui/main.qml:315
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Command…"
+msgstr ""
+
+#: ui/main.qml:334
+#, fuzzy, kde-format
+#| msgid "Import Scheme..."
+msgid "Import Scheme…"
+msgstr "Impordi skeem ..."
+
+#: ui/main.qml:339
+#, kde-format
+msgid "Cancel Export"
+msgstr "Katkesta eksport"
+
+#: ui/main.qml:339
+#, fuzzy, kde-format
+#| msgid "Export Scheme..."
+msgid "Export Scheme…"
+msgstr "Ekspordi skeem ..."
+
+#: ui/main.qml:359
+#, kde-format
+msgid "Export Shortcut Scheme"
+msgstr "Kiirklahviskeemi eksport"
+
+#: ui/main.qml:359 ui/main.qml:470
+#, kde-format
+msgid "Import Shortcut Scheme"
+msgstr "Kiirklahviskeemi import"
+
+#: ui/main.qml:361
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr "Kiirklahviskeem (*.kksrc)"
+
+#: ui/main.qml:389
+#, kde-format
+msgid "Edit Command"
+msgstr ""
+
+#: ui/main.qml:389
+#, kde-format
+msgid "Add Command"
+msgstr ""
+
+#: ui/main.qml:402
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: ui/main.qml:402
+#, kde-format
+msgid "Add"
+msgstr ""
+
+#: ui/main.qml:427
+#, kde-format
+msgid "Enter a command or choose a script file:"
+msgstr ""
+
+#: ui/main.qml:441
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose…"
+msgstr ""
+
+#: ui/main.qml:454
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Script File"
+msgstr ""
+
+#: ui/main.qml:456
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Script file (*.*sh)"
+msgstr ""
+
+#: ui/main.qml:477
+#, kde-format
+msgid "Select the scheme to import:"
+msgstr "Imporditav skeem:"
+
+#: ui/main.qml:491
+#, kde-format
+msgid "Custom Scheme"
+msgstr "Kohandatud skeem"
+
+#: ui/main.qml:496
+#, fuzzy, kde-format
+#| msgid "Select File..."
+msgid "Select File…"
+msgstr "Vali fail ..."
+
+#: ui/main.qml:496
+#, kde-format
+msgid "Import"
+msgstr "Impordi"
+
+#: ui/ShortcutActionDelegate.qml:31
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is the name of the component, %2 is the action for which saving failed"
+#| msgid "Error while saving shortcut %1: %2"
+msgid "Editing shortcut: %1"
+msgstr "Tõrge kiirklahvi %1 salvestamisel: %2"
+
+#: ui/ShortcutActionDelegate.qml:43
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: ui/ShortcutActionDelegate.qml:56
+#, kde-format
+msgid "No active shortcuts"
+msgstr "Aktiivseid kiirklahve pole"
+
+#: ui/ShortcutActionDelegate.qml:96
+#, kde-format
+msgctxt "%1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "Vaikimisi kiirklahv"
+msgstr[1] "Vaikimisi kiirklahvid"
+
+#: ui/ShortcutActionDelegate.qml:98
+#, kde-format
+msgid "No default shortcuts"
+msgstr "Vaikimisi kiirklahve pole"
+
+#: ui/ShortcutActionDelegate.qml:106
+#, fuzzy, kde-format
+#| msgctxt "%1 decides if singular or plural will be used"
+#| msgid "Default shortcut"
+#| msgid_plural "Default shortcuts"
+msgid "Default shortcut %1 is enabled."
+msgstr "Vaikimisi kiirklahv"
+
+#: ui/ShortcutActionDelegate.qml:106
+#, fuzzy, kde-format
+#| msgctxt "%1 decides if singular or plural will be used"
+#| msgid "Default shortcut"
+#| msgid_plural "Default shortcuts"
+msgid "Default shortcut %1 is disabled."
+msgstr "Vaikimisi kiirklahv"
+
+#: ui/ShortcutActionDelegate.qml:127
+#, kde-format
+msgid "Custom shortcuts"
+msgstr "Kohandatud kiirklahvid"
+
+#: ui/ShortcutActionDelegate.qml:152
+#, kde-format
+msgid "Delete this shortcut"
+msgstr "Selle kiirklahvi kustutamine"
+
+#: ui/ShortcutActionDelegate.qml:158
+#, kde-format
+msgid "Add custom shortcut"
+msgstr "Lisa kohandatud kiirklahv"
+
+#: ui/ShortcutActionDelegate.qml:193
+#, kde-format
+msgid "Cancel capturing of new shortcut"
+msgstr "Uue kiirklahvi määramisest loobumine"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-12-01 23:51+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -32,26 +32,6 @@ msgstr "Няма да се покаже начален екран"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "Не можете да изтриете на текущо избрания начален екран"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "&Get New…"
-msgstr "Изте&гляне на нови…"
-
-#: package/contents/ui/main.qml:50
-#, kde-format
-msgid "Failed to show the splash screen preview."
-msgstr "Неуспешно показване на предварителен преглед за начален екран."
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Preview Splash Screen"
-msgstr "Преглед на началния екран"
-
-#: package/contents/ui/main.qml:87
-#, kde-format
-msgid "Uninstall"
-msgstr "Деинсталиране"
-
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
 #, kde-format
@@ -63,3 +43,23 @@ msgstr "За бъдеща употреба"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Име на текущата тема за начален екран"
+
+#: ui/main.qml:29
+#, kde-format
+msgid "&Get New…"
+msgstr "Изте&гляне на нови…"
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "Неуспешно показване на предварителен преглед за начален екран."
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "Преглед на началния екран"
+
+#: ui/main.qml:87
+#, kde-format
+msgid "Uninstall"
+msgstr "Деинсталиране"

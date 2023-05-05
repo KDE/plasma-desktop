@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-01-27 17:16+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
-#: package/contents/ui/main.qml:57
+#: ui/main.qml:57
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -29,7 +29,7 @@ msgstr ""
 "Tímto dojde k vypnutí hledání v KRunneru a nabídce spouštěče a odstranění "
 "zobrazení rozšířených metadat ze všech aplikací KDE."
 
-#: package/contents/ui/main.qml:66
+#: ui/main.qml:66
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -40,23 +40,23 @@ msgstr ""
 "indexování později znovu povoleno, data budou muset být znovu vytvořena. To "
 "může nějakou dobu trvat podle toho, kolik souborů máte."
 
-#: package/contents/ui/main.qml:68
+#: ui/main.qml:68
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Smazat indexovaná data"
 
-#: package/contents/ui/main.qml:88
+#: ui/main.qml:88
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr "K provedení změn bude potřeba restartovat počítač."
 
-#: package/contents/ui/main.qml:92
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Restartovat"
 
-#: package/contents/ui/main.qml:99
+#: ui/main.qml:99
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
@@ -64,77 +64,77 @@ msgstr ""
 "Hledání souborů vám pomáhá rychle najít všechny vaše soubory podle jejich "
 "obsahu."
 
-#: package/contents/ui/main.qml:106
+#: ui/main.qml:106
 #, kde-format
 msgid "Enable File Search"
 msgstr "Povolit vyhledávání souborů"
 
-#: package/contents/ui/main.qml:121
+#: ui/main.qml:121
 #, kde-format
 msgid "Also index file content"
 msgstr "Taky indexovat obsah souboru"
 
-#: package/contents/ui/main.qml:135
+#: ui/main.qml:135
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "Indexovat skryté soubory a složky"
 
-#: package/contents/ui/main.qml:159
+#: ui/main.qml:159
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "Stav: %1, %2% dokončeno"
 
-#: package/contents/ui/main.qml:164
+#: ui/main.qml:164
 #, kde-format
 msgid "Pause Indexer"
 msgstr "Pozastavit indexování"
 
-#: package/contents/ui/main.qml:164
+#: ui/main.qml:164
 #, kde-format
 msgid "Resume Indexer"
 msgstr "Pokračovat v indexování"
 
-#: package/contents/ui/main.qml:177
+#: ui/main.qml:177
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "Právě indexuji: %1"
 
-#: package/contents/ui/main.qml:182
+#: ui/main.qml:182
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "Nastavení specifická pro složku:"
 
-#: package/contents/ui/main.qml:209
+#: ui/main.qml:209
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "Spustit indexování složky…"
 
-#: package/contents/ui/main.qml:220
+#: ui/main.qml:220
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "Zastavit indexování složky…"
 
-#: package/contents/ui/main.qml:271
+#: ui/main.qml:271
 #, kde-format
 msgid "Not indexed"
 msgstr "Neindexované"
 
-#: package/contents/ui/main.qml:272
+#: ui/main.qml:272
 #, kde-format
 msgid "Indexed"
 msgstr "Indexovaná"
 
-#: package/contents/ui/main.qml:302
+#: ui/main.qml:302
 #, kde-format
 msgid "Delete entry"
 msgstr "Smazat záznam"
 
-#: package/contents/ui/main.qml:317
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Zvolte složku pro zahrnutí"
 
-#: package/contents/ui/main.qml:317
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Zvolte složku pro vyřazení"

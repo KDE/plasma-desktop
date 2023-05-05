@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-19 16:45+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -32,26 +32,6 @@ msgstr "Açılış ekranı göstərilməyəcək"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "Cari seçilmiş açılış ekranını silə bilməzsiniz"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "&Get New…"
-msgstr "&Yenisini əldə et..."
-
-#: package/contents/ui/main.qml:50
-#, kde-format
-msgid "Failed to show the splash screen preview."
-msgstr "Açılış ekranını önizləməsi göstərilə bilmədi."
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Preview Splash Screen"
-msgstr "Aşılış ekranına öncədən baxış"
-
-#: package/contents/ui/main.qml:87
-#, kde-format
-msgid "Uninstall"
-msgstr "Silin"
-
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
 #, kde-format
@@ -63,6 +43,26 @@ msgstr "Gələcəkdə istifadə üçün"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Cari açılış mövzusunun adı"
+
+#: ui/main.qml:29
+#, kde-format
+msgid "&Get New…"
+msgstr "&Yenisini əldə et..."
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "Açılış ekranını önizləməsi göstərilə bilmədi."
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "Aşılış ekranına öncədən baxış"
+
+#: ui/main.qml:87
+#, kde-format
+msgid "Uninstall"
+msgstr "Silin"
 
 #~ msgid "This module lets you choose the splash screen theme."
 #~ msgstr "Bu modul Açılış ekranı mövzusunu seçməyə imkan verir."

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-12-27 20:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -24,153 +24,6 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#: package/contents/ui/main.qml:30
-#, kde-format
-msgid ""
-"The system must be restarted before manual session saving becomes active."
-msgstr "يجب إعادة تشغيل النظام قبل أن يصبح حفظ الجلسة يدوياً نشطاً."
-
-#: package/contents/ui/main.qml:35
-#, kde-format
-msgid "Restart"
-msgstr "أعد التشغيل"
-
-#: package/contents/ui/main.qml:57
-#, kde-format
-msgid "Failed to request restart to firmware setup: %1"
-msgstr "فشل طلب إعادة التشغيل لإعداد البرنامج الثابت: %1"
-
-#: package/contents/ui/main.qml:58
-#, kde-format
-msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr ""
-"في المرة التالية التي يعاد فيها تشغيل الحاسوب ، سيدخل إلى شاشة إعداد UEFI. "
-
-#: package/contents/ui/main.qml:59
-#, kde-format
-msgid ""
-"Next time the computer is restarted, it will enter the firmware setup screen."
-msgstr ""
-"في المرة التالية التي يعاد فيها تشغيل الحاسوب ، سيدخل إلى شاشة إعداد "
-"البرنامج  الثابت. "
-
-#: package/contents/ui/main.qml:64
-#, kde-format
-msgid "Restart Now"
-msgstr "أعِد التشغيل الآن"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr "شاشة الخروج"
-
-#: package/contents/ui/main.qml:75
-#, kde-format
-msgid "Show:"
-msgstr "أظهر:"
-
-#: package/contents/ui/main.qml:89
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
-msgstr ""
-"عند تفعيل هذا الإعداد، ستُعرض شاشة الخروج عندما تخرج أو تطفئ الجهاز أو تعيد "
-"تشغيله أو عند الضغط على زر الطاقة أو النقر فوق أزرار أو عناصر القائمة "
-"المسماة <interface> اترك ... </interface>."
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgctxt "@title:group"
-msgid "Session Restore"
-msgstr "استعادة الجلسة"
-
-#: package/contents/ui/main.qml:104
-#, kde-format
-msgid "On login, launch apps that were open:"
-msgstr "عند الولوج، شغّل التطبيقات التي كانت مفتوحة:"
-
-#: package/contents/ui/main.qml:105
-#, kde-format
-msgctxt "@option:radio Automatic style of session restoration"
-msgid "On last logout"
-msgstr "عند آخر خروج"
-
-#: package/contents/ui/main.qml:118
-#, kde-format
-msgctxt "@option:radio Manual style of session restoration"
-msgid "When session was manually saved"
-msgstr "عندما تحفظ الجلسة يدوياً"
-
-#: package/contents/ui/main.qml:127
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"A <interface>Save Session</interface> button will appear in the "
-"<interface>Application Launcher</interface> menu. When you click it, Plasma "
-"will remember the apps that are open and restore them on the next login. "
-"Click it again to replace the set of remembered apps."
-msgstr ""
-"سيظهر زر <interface>احفظ الجلسة</interface> في قائمة <interface>مطلق "
-"التطبيقات</interface>. عندما تنقر عليه فإن بلازما ستتذكر البرامج المفتوحة "
-"وستعيد فتحها في الولوج القادم. انقر عليه مرة أخرى لتستبدل مجموعة البرامج "
-"التي ستتذكرها."
-
-#: package/contents/ui/main.qml:132
-#, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Start with an empty session"
-msgstr "ابدأ بجلسة فارغة"
-
-#: package/contents/ui/main.qml:146
-#, kde-format
-msgid "Ignored applications:"
-msgstr "التطبيقات المتجاهلة:"
-
-#: package/contents/ui/main.qml:169
-#, kde-format
-msgid ""
-"Write apps' executable names here (separated by commas or colons, for "
-"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-"autostarting along with other session-restored apps."
-msgstr ""
-"اكتب أسماء التطبيقات القابلة للتنفيذ هنا (مفصولة بفاصلة أو فاصلة منقوطة، على "
-"سبيل المثال \"Xterm: konsole\" أو \"‎Xterm,konsole\") لمنعها من التشغيل "
-"التلقائي مع التطبيقات الأخرى المحفوظة في الجلسة."
-
-#: package/contents/ui/main.qml:177
-#, kde-format
-msgctxt "@title:group"
-msgid "Firmware"
-msgstr "البرامج الثابتة"
-
-#: package/contents/ui/main.qml:183
-#, kde-format
-msgctxt ""
-"@label:check part of a sentence: After next restart enter UEFI/Firmware "
-"setup screen"
-msgid "After next restart:"
-msgstr "بعد إعادة التشغيل التالي:"
-
-#: package/contents/ui/main.qml:184
-#, kde-format
-msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "ادخل شاشة ضبط UEFI"
-
-#: package/contents/ui/main.qml:185
-#, kde-format
-msgctxt "@option:check"
-msgid "Enter firmware setup screen"
-msgstr "ادخل شاشة ضبط البرامج الثابتة"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -195,6 +48,153 @@ msgstr "عند الولوج"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "التطبيقات المستثناة من الجلسات:"
+
+#: ui/main.qml:30
+#, kde-format
+msgid ""
+"The system must be restarted before manual session saving becomes active."
+msgstr "يجب إعادة تشغيل النظام قبل أن يصبح حفظ الجلسة يدوياً نشطاً."
+
+#: ui/main.qml:35
+#, kde-format
+msgid "Restart"
+msgstr "أعد التشغيل"
+
+#: ui/main.qml:57
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "فشل طلب إعادة التشغيل لإعداد البرنامج الثابت: %1"
+
+#: ui/main.qml:58
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"في المرة التالية التي يعاد فيها تشغيل الحاسوب ، سيدخل إلى شاشة إعداد UEFI. "
+
+#: ui/main.qml:59
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"في المرة التالية التي يعاد فيها تشغيل الحاسوب ، سيدخل إلى شاشة إعداد "
+"البرنامج  الثابت. "
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Restart Now"
+msgstr "أعِد التشغيل الآن"
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@title:group"
+msgid "Logout Screen"
+msgstr "شاشة الخروج"
+
+#: ui/main.qml:75
+#, kde-format
+msgid "Show:"
+msgstr "أظهر:"
+
+#: ui/main.qml:89
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When this setting is turned on, the logout confirmation screen will be shown "
+"when you log out, shut down, restart, press the power button, or click on "
+"buttons or menu items labeled <interface>Leave…</interface>."
+msgstr ""
+"عند تفعيل هذا الإعداد، ستُعرض شاشة الخروج عندما تخرج أو تطفئ الجهاز أو تعيد "
+"تشغيله أو عند الضغط على زر الطاقة أو النقر فوق أزرار أو عناصر القائمة "
+"المسماة <interface> اترك ... </interface>."
+
+#: ui/main.qml:96
+#, kde-format
+msgctxt "@title:group"
+msgid "Session Restore"
+msgstr "استعادة الجلسة"
+
+#: ui/main.qml:104
+#, kde-format
+msgid "On login, launch apps that were open:"
+msgstr "عند الولوج، شغّل التطبيقات التي كانت مفتوحة:"
+
+#: ui/main.qml:105
+#, kde-format
+msgctxt "@option:radio Automatic style of session restoration"
+msgid "On last logout"
+msgstr "عند آخر خروج"
+
+#: ui/main.qml:118
+#, kde-format
+msgctxt "@option:radio Manual style of session restoration"
+msgid "When session was manually saved"
+msgstr "عندما تحفظ الجلسة يدوياً"
+
+#: ui/main.qml:127
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <interface>Save Session</interface> button will appear in the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the apps that are open and restore them on the next login. "
+"Click it again to replace the set of remembered apps."
+msgstr ""
+"سيظهر زر <interface>احفظ الجلسة</interface> في قائمة <interface>مطلق "
+"التطبيقات</interface>. عندما تنقر عليه فإن بلازما ستتذكر البرامج المفتوحة "
+"وستعيد فتحها في الولوج القادم. انقر عليه مرة أخرى لتستبدل مجموعة البرامج "
+"التي ستتذكرها."
+
+#: ui/main.qml:132
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "ابدأ بجلسة فارغة"
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Ignored applications:"
+msgstr "التطبيقات المتجاهلة:"
+
+#: ui/main.qml:169
+#, kde-format
+msgid ""
+"Write apps' executable names here (separated by commas or colons, for "
+"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+"autostarting along with other session-restored apps."
+msgstr ""
+"اكتب أسماء التطبيقات القابلة للتنفيذ هنا (مفصولة بفاصلة أو فاصلة منقوطة، على "
+"سبيل المثال \"Xterm: konsole\" أو \"‎Xterm,konsole\") لمنعها من التشغيل "
+"التلقائي مع التطبيقات الأخرى المحفوظة في الجلسة."
+
+#: ui/main.qml:177
+#, kde-format
+msgctxt "@title:group"
+msgid "Firmware"
+msgstr "البرامج الثابتة"
+
+#: ui/main.qml:183
+#, kde-format
+msgctxt ""
+"@label:check part of a sentence: After next restart enter UEFI/Firmware "
+"setup screen"
+msgid "After next restart:"
+msgstr "بعد إعادة التشغيل التالي:"
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen"
+msgstr "ادخل شاشة ضبط UEFI"
+
+#: ui/main.qml:185
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen"
+msgstr "ادخل شاشة ضبط البرامج الثابتة"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:36+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-01-27 17:16+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -280,295 +280,295 @@ msgid "Confirm access to the Keyboard"
 msgstr ""
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
 msgid "Enable Screen Reader"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:19
+#: ui/Bell.qml:19
 #, kde-format
 msgid "Please choose an audio file"
 msgstr "Prosím, vyberte soubor audio"
 
-#: package/contents/ui/Bell.qml:20
+#: ui/Bell.qml:20
 #, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
 msgstr "Audio soubory (*.ogg *.wav)"
 
-#: package/contents/ui/Bell.qml:29
+#: ui/Bell.qml:29
 #, kde-format
 msgid "Audible bell:"
 msgstr "Akustický zvonek:"
 
-#: package/contents/ui/Bell.qml:30
+#: ui/Bell.qml:30
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr "Povolit"
 
-#: package/contents/ui/Bell.qml:41
+#: ui/Bell.qml:41
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Vlastní zvuk:"
 
-#: package/contents/ui/Bell.qml:74
+#: ui/Bell.qml:74
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:75
+#: ui/Bell.qml:75
 #, kde-format
 msgid "Button search audio file"
 msgstr ""
 
-#: package/contents/ui/Bell.qml:91
+#: ui/Bell.qml:91
 #, kde-format
 msgid "Visual bell:"
 msgstr "Vizuální zvonek:"
 
-#: package/contents/ui/Bell.qml:92
+#: ui/Bell.qml:92
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "Povolit"
 
-#: package/contents/ui/Bell.qml:106
+#: ui/Bell.qml:106
 #, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
 msgstr "Invertovat obrazovku"
 
-#: package/contents/ui/Bell.qml:123
+#: ui/Bell.qml:123
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
 msgstr "Blesk"
 
-#: package/contents/ui/Bell.qml:134
+#: ui/Bell.qml:134
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Barva"
 
-#: package/contents/ui/Bell.qml:145
+#: ui/Bell.qml:145
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Doba trvání:"
 
-#: package/contents/ui/KeyboardFilters.qml:18
+#: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
 msgstr "Pomalé klávesy:"
 
-#: package/contents/ui/KeyboardFilters.qml:19
+#: ui/KeyboardFilters.qml:19
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr "Povolit"
 
-#: package/contents/ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:22
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:37
+#: ui/KeyboardFilters.qml:37
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr "Prodleva:"
 
-#: package/contents/ui/KeyboardFilters.qml:54
+#: ui/KeyboardFilters.qml:54
 #, kde-format
 msgid "Ring system bell:"
 msgstr "Zazvonit systémovým zvonkem:"
 
-#: package/contents/ui/KeyboardFilters.qml:55
+#: ui/KeyboardFilters.qml:55
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:69
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:83
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:100
+#: ui/KeyboardFilters.qml:100
 #, kde-format
 msgid "Bounce keys:"
 msgstr "Zabránit vícenásobnému stisku kláves:"
 
-#: package/contents/ui/KeyboardFilters.qml:101
+#: ui/KeyboardFilters.qml:101
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr "Povolit"
 
-#: package/contents/ui/KeyboardFilters.qml:104
+#: ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:119
+#: ui/KeyboardFilters.qml:119
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr "Prodleva:"
 
-#: package/contents/ui/KeyboardFilters.qml:134
+#: ui/KeyboardFilters.qml:134
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr ""
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Zvonek"
 
-#: package/contents/ui/main.qml:28
+#: ui/main.qml:28
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Modifikátory klávesnice"
 
-#: package/contents/ui/main.qml:33
+#: ui/main.qml:33
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Filtrování kláves"
 
-#: package/contents/ui/main.qml:38
+#: ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Navigace pomocí myši"
 
-#: package/contents/ui/main.qml:43
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "Čtečka obrazovky"
 
-#: package/contents/ui/ModifierKeys.qml:16
+#: ui/ModifierKeys.qml:16
 #, kde-format
 msgid "Sticky keys:"
 msgstr "Kombinace kláves jedním prstem:"
 
-#: package/contents/ui/ModifierKeys.qml:17
+#: ui/ModifierKeys.qml:17
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
 msgstr "Povolit"
 
-#: package/contents/ui/ModifierKeys.qml:28
+#: ui/ModifierKeys.qml:28
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
 msgstr "Uzamknout"
 
-#: package/contents/ui/ModifierKeys.qml:42
+#: ui/ModifierKeys.qml:42
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr "Vypnout pokud jsou podrženy dvě klávesy"
 
-#: package/contents/ui/ModifierKeys.qml:54
+#: ui/ModifierKeys.qml:54
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
 msgstr "Zazvonit systémovým zvonkem pokud jsou použity modifikátory klávesnice"
 
-#: package/contents/ui/ModifierKeys.qml:71
+#: ui/ModifierKeys.qml:71
 #, kde-format
 msgid "Feedback:"
 msgstr "Zpětná vazba:"
 
-#: package/contents/ui/ModifierKeys.qml:72
+#: ui/ModifierKeys.qml:72
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
 msgstr ""
 
-#: package/contents/ui/ModifierKeys.qml:83
+#: ui/ModifierKeys.qml:83
 #, kde-format
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 
-#: package/contents/ui/ModifierKeys.qml:95
+#: ui/ModifierKeys.qml:95
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "Nastavit upozornění…"
 
-#: package/contents/ui/MouseNavigation.qml:17
+#: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
 msgstr ""
 
-#: package/contents/ui/MouseNavigation.qml:18
+#: ui/MouseNavigation.qml:18
 #, kde-format
 msgid "Enable"
 msgstr "Povolit"
 
-#: package/contents/ui/MouseNavigation.qml:29
+#: ui/MouseNavigation.qml:29
 #, kde-format
 msgid "When a gesture is used:"
 msgstr "Při použití gesta:"
 
-#: package/contents/ui/MouseNavigation.qml:30
+#: ui/MouseNavigation.qml:30
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr "Zobrazit potvrzovací dialog"
 
-#: package/contents/ui/MouseNavigation.qml:41
+#: ui/MouseNavigation.qml:41
 #, kde-format
 msgid "Ring the System Bell"
 msgstr "Zazvonit systémovým zvonkem"
 
-#: package/contents/ui/MouseNavigation.qml:52
+#: ui/MouseNavigation.qml:52
 #, kde-format
 msgid "Show a notification"
 msgstr "Zobrazit upozornění"
 
-#: package/contents/ui/MouseNavigation.qml:68
+#: ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
 msgstr "Prodleva zrychlení:"
 
-#: package/contents/ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:82
 #, kde-format
 msgid "Repeat interval:"
 msgstr "Interval opakování:"
 
-#: package/contents/ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:96
 #, kde-format
 msgid "Acceleration time:"
 msgstr "Doba zrychlování:"
 
-#: package/contents/ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:110
 #, kde-format
 msgid "Maximum speed:"
 msgstr "Maximální rychlost:"
 
-#: package/contents/ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:124
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "Profil zrychlování:"
 
-#: package/contents/ui/ScreenReader.qml:28
+#: ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Spustit nastavení čtečky obrazovky Orca…"
 
-#: package/contents/ui/ScreenReader.qml:41
+#: ui/ScreenReader.qml:41
 #, kde-format
 msgid ""
 "Please note that you may have to log out or reboot once to allow the screen "
@@ -577,7 +577,7 @@ msgstr ""
 "Prosím, mějte na paměti, že pro správnou funkci čtečky obrazovky je potřeba "
 "abyste se jednou odhlásili nebo restartovali."
 
-#: package/contents/ui/ScreenReader.qml:42
+#: ui/ScreenReader.qml:42
 #, kde-format
 msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-04-08 22:44+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -61,12 +61,12 @@ msgstr "Publika"
 msgid "Templates"
 msgstr "Ŝablonoj"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgid "Desktop path:"
 msgstr "Labortabla vojo:"
 
-#: package/contents/ui/main.qml:26
+#: ui/main.qml:26
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -77,12 +77,12 @@ msgstr ""
 "povas ŝanĝi la lokon de tiu dosierujo se vi volas. La enhavo moviĝos "
 "aŭtomate al la nova loko."
 
-#: package/contents/ui/main.qml:32
+#: ui/main.qml:32
 #, kde-format
 msgid "Documents path:"
 msgstr "Dokumenta vojo:"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
@@ -90,70 +90,70 @@ msgstr ""
 "Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de "
 "dokumentoj."
 
-#: package/contents/ui/main.qml:41
+#: ui/main.qml:41
 #, kde-format
 msgid "Downloads path:"
 msgstr "Elŝuta vojo:"
 
-#: package/contents/ui/main.qml:44
+#: ui/main.qml:44
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de "
 "elŝutaĵoj."
 
-#: package/contents/ui/main.qml:50
+#: ui/main.qml:50
 #, kde-format
 msgid "Videos path:"
 msgstr "Videofilma vojo:"
 
-#: package/contents/ui/main.qml:53 package/contents/ui/main.qml:80
+#: ui/main.qml:53 ui/main.qml:80
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de filmoj."
 
-#: package/contents/ui/main.qml:59
+#: ui/main.qml:59
 #, kde-format
 msgid "Pictures path:"
 msgstr "Bilda vojo:"
 
-#: package/contents/ui/main.qml:62
+#: ui/main.qml:62
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr ""
 "Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de bildoj."
 
-#: package/contents/ui/main.qml:68
+#: ui/main.qml:68
 #, kde-format
 msgid "Music path:"
 msgstr "Muzika vojo:"
 
-#: package/contents/ui/main.qml:71
+#: ui/main.qml:71
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de muzikoj."
 
-#: package/contents/ui/main.qml:77
+#: ui/main.qml:77
 #, kde-format
 msgid "Public path:"
 msgstr "Publika vojo:"
 
-#: package/contents/ui/main.qml:86
+#: ui/main.qml:86
 #, kde-format
 msgid "Templates path:"
 msgstr "Ŝablona vojo:"
 
-#: package/contents/ui/main.qml:89
+#: ui/main.qml:89
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
 "Tiu dosierujo estos la defaŭlta por la ŝargado aŭ konservado de ŝablonoj."
 
-#: package/contents/ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

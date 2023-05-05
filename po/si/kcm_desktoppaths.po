@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2009-12-26 16:58+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -58,12 +58,12 @@ msgstr ""
 msgid "Templates"
 msgstr ""
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgid "Desktop path:"
 msgstr "වැඩතල මාර්ගය:"
 
-#: package/contents/ui/main.qml:26
+#: ui/main.qml:26
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -73,72 +73,72 @@ msgstr ""
 "මෙම බහාලුමේ ඔබට වැඩතලයේ දී දැකීමට අවශ්‍ය සියළුම ගොණු අන්තර්ගතයි, ඔබට අවශ්‍ය නම් මෙම බහාලුමේ "
 "ස්ථානය වෙනස් කල හැක, එවිට පවතින ගොණු ස්වයංක්‍රීයව නව ස්ථානයට පිටපත් වනු ඇත."
 
-#: package/contents/ui/main.qml:32
+#: ui/main.qml:32
 #, kde-format
 msgid "Documents path:"
 msgstr "ලේඛන මාර්ගය:"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr "මෙම බහාලුම, ලේඛන ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
-#: package/contents/ui/main.qml:41
+#: ui/main.qml:41
 #, kde-format
 msgid "Downloads path:"
 msgstr "බාගැනීම් මාර්ගය:"
 
-#: package/contents/ui/main.qml:44
+#: ui/main.qml:44
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "මෙම බහාලුම, බා ගන්නා ගොණු ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
-#: package/contents/ui/main.qml:50
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgid "Videos path:"
 msgstr "විත්‍රපටි මාර්ගය:"
 
-#: package/contents/ui/main.qml:53 package/contents/ui/main.qml:80
+#: ui/main.qml:53 ui/main.qml:80
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "මෙම බහාලුම, චිත්‍රපට ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
-#: package/contents/ui/main.qml:59
+#: ui/main.qml:59
 #, kde-format
 msgid "Pictures path:"
 msgstr "පින්තූර මාර්ගය:"
 
-#: package/contents/ui/main.qml:62
+#: ui/main.qml:62
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr "මෙම බහාලුම, පින්තූර ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
-#: package/contents/ui/main.qml:68
+#: ui/main.qml:68
 #, kde-format
 msgid "Music path:"
 msgstr "ගීත මාර්ගය:"
 
-#: package/contents/ui/main.qml:71
+#: ui/main.qml:71
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr "මෙම බහාලුම, ගීත ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
-#: package/contents/ui/main.qml:77
+#: ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "ගීත මාර්ගය:"
 
-#: package/contents/ui/main.qml:86
+#: ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgid "Templates path:"
 msgstr "පින්තූර මාර්ගය:"
 
-#: package/contents/ui/main.qml:89
+#: ui/main.qml:89
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -146,7 +146,7 @@ msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr "මෙම බහාලුම, පින්තූර ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
-#: package/contents/ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

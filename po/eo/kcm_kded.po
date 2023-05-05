@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-04-08 22:44+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -47,7 +47,7 @@ msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
 "Malsukcesis sciigi KDE Service Manager (kded5) pri konservita ŝanĝita: %1"
 
-#: package/contents/ui/main.qml:36
+#: ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
@@ -56,7 +56,7 @@ msgstr ""
 "La administranto de fonaj servoj (kded5) nuntempe ne funkcias. Certigu, ke "
 "ĝi estas instalita ĝuste."
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -65,7 +65,7 @@ msgstr ""
 "Iuj servoj denove malŝaltas sin kiam mane komencitaj se ili ne estas utilaj "
 "en la nuna medio."
 
-#: package/contents/ui/main.qml:54
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -74,54 +74,54 @@ msgstr ""
 "Iuj servoj estis aŭtomate komencitaj/haltigitaj kiam la fona administranto "
 "de servoj (kded5) estis rekomencita por apliki viajn ŝanĝojn."
 
-#: package/contents/ui/main.qml:96
+#: ui/main.qml:96
 #, kde-format
 msgid "All Services"
 msgstr "Ĉiuj Servoj"
 
-#: package/contents/ui/main.qml:97
+#: ui/main.qml:97
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Rulanta"
 
-#: package/contents/ui/main.qml:98
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Ne Rulanta"
 
-#: package/contents/ui/main.qml:134
+#: ui/main.qml:134
 #, kde-format
 msgid "Startup Services"
 msgstr "Servoj ĉe Startigo"
 
-#: package/contents/ui/main.qml:135
+#: ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Laŭpete lanĉitaj servoj"
 
-#: package/contents/ui/main.qml:152
+#: ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Baskuligi aŭtomatan ŝargon de ĉi servo je starto"
 
-#: package/contents/ui/main.qml:219
+#: ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "Ne rulanta"
 
-#: package/contents/ui/main.qml:220
+#: ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "Rulanta"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, kde-format
 msgid "Stop Service"
 msgstr "Halti Servon"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, kde-format
 msgid "Start Service"
 msgstr "Lanĉi Servon"

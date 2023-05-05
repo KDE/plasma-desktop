@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2009-12-27 10:41+0600\n"
 "Last-Translator: \n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -61,12 +61,12 @@ msgstr ""
 msgid "Templates"
 msgstr ""
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgid "Desktop path:"
 msgstr "Үс&тел қапшығы:"
 
-#: package/contents/ui/main.qml:26
+#: ui/main.qml:26
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -77,75 +77,75 @@ msgstr ""
 "қапшықты таңдай аласыз, сонда барлық үстелдегі файлдар автоматты түрде жаңа "
 "орынға ауысады."
 
-#: package/contents/ui/main.qml:32
+#: ui/main.qml:32
 #, kde-format
 msgid "Documents path:"
 msgstr "Құ&жаттар қапшығы:"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr "Бұл қапшық әдетте құжаттарды жүктеу және сақтауға қолданылады."
 
-#: package/contents/ui/main.qml:41
+#: ui/main.qml:41
 #, kde-format
 msgid "Downloads path:"
 msgstr "Жүктеп &алу қапшығы:"
 
-#: package/contents/ui/main.qml:44
+#: ui/main.qml:44
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "Бұл қапшық әдетте жүктеп алынғандарды сақтауға қолданылады."
 
-#: package/contents/ui/main.qml:50
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgid "Videos path:"
 msgstr "&Фильмдер қапшығы:"
 
-#: package/contents/ui/main.qml:53 package/contents/ui/main.qml:80
+#: ui/main.qml:53 ui/main.qml:80
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "Бұл қапшық әдетте фильмдерді сақтауға және жүктеп алу/беруге қолданылады."
 
-#: package/contents/ui/main.qml:59
+#: ui/main.qml:59
 #, kde-format
 msgid "Pictures path:"
 msgstr "&Суреттер қапшығы:"
 
-#: package/contents/ui/main.qml:62
+#: ui/main.qml:62
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr ""
 "Бұл қапшық әдетте суреттерді сақтауға және жүктеп алу/беруге қолданылады."
 
-#: package/contents/ui/main.qml:68
+#: ui/main.qml:68
 #, kde-format
 msgid "Music path:"
 msgstr "Музыка қапшығы:"
 
-#: package/contents/ui/main.qml:71
+#: ui/main.qml:71
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Бұл қапшық әдетте музыканы сақтауға және жүктеп алу/беруге қолданылады."
 
-#: package/contents/ui/main.qml:77
+#: ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Музыка қапшығы:"
 
-#: package/contents/ui/main.qml:86
+#: ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgid "Templates path:"
 msgstr "&Суреттер қапшығы:"
 
-#: package/contents/ui/main.qml:89
+#: ui/main.qml:89
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -154,7 +154,7 @@ msgid ""
 msgstr ""
 "Бұл қапшық әдетте суреттерді сақтауға және жүктеп алу/беруге қолданылады."
 
-#: package/contents/ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-06 08:11+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -64,12 +64,12 @@ msgstr "Спільне"
 msgid "Templates"
 msgstr "Шаблони"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgid "Desktop path:"
 msgstr "Шлях стільниці:"
 
-#: package/contents/ui/main.qml:26
+#: ui/main.qml:26
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -80,75 +80,75 @@ msgstr ""
 "можете змінити розташування цієї теки — вміст при цьому також буде "
 "автоматично пересунуто."
 
-#: package/contents/ui/main.qml:32
+#: ui/main.qml:32
 #, kde-format
 msgid "Documents path:"
 msgstr "Шлях документів:"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr "Тека буде типовою для завантаження та збереження документів."
 
-#: package/contents/ui/main.qml:41
+#: ui/main.qml:41
 #, kde-format
 msgid "Downloads path:"
 msgstr "Шлях до отримань:"
 
-#: package/contents/ui/main.qml:44
+#: ui/main.qml:44
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "Тека буде типовою для збереження отриманих даних."
 
-#: package/contents/ui/main.qml:50
+#: ui/main.qml:50
 #, kde-format
 msgid "Videos path:"
 msgstr "Шлях до відео:"
 
-#: package/contents/ui/main.qml:53 package/contents/ui/main.qml:80
+#: ui/main.qml:53 ui/main.qml:80
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "Тека буде типовою для завантаження та збереження відео."
 
-#: package/contents/ui/main.qml:59
+#: ui/main.qml:59
 #, kde-format
 msgid "Pictures path:"
 msgstr "Шлях до малюнків:"
 
-#: package/contents/ui/main.qml:62
+#: ui/main.qml:62
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr "Тека буде типовою для завантаження та збереження малюнків."
 
-#: package/contents/ui/main.qml:68
+#: ui/main.qml:68
 #, kde-format
 msgid "Music path:"
 msgstr "Шлях до музики:"
 
-#: package/contents/ui/main.qml:71
+#: ui/main.qml:71
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr "Тека буде типовою для завантаження та збереження музики."
 
-#: package/contents/ui/main.qml:77
+#: ui/main.qml:77
 #, kde-format
 msgid "Public path:"
 msgstr "Шлях до спільного:"
 
-#: package/contents/ui/main.qml:86
+#: ui/main.qml:86
 #, kde-format
 msgid "Templates path:"
 msgstr "Шлях до шаблонів:"
 
-#: package/contents/ui/main.qml:89
+#: ui/main.qml:89
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr "Тека буде типовою для завантаження та збереження шаблонів."
 
-#: package/contents/ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

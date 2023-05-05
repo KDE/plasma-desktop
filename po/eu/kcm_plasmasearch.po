@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-11 00:46+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-07-05 13:24+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Available Plugins"
 msgstr "Plugin erabilgarriak"
 
-#: plasmasearch/package/contents/ui/main.qml:25
+#: plasmasearch/ui/main.qml:25
 #, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
@@ -35,12 +35,12 @@ msgstr ""
 "Gaitu edo ezgaitu pluginak (KRunner, Aplikazio abiarazlea, eta Ikuspegi "
 "orokorra efektuan erabiliak)"
 
-#: plasmasearch/package/contents/ui/main.qml:49
+#: plasmasearch/ui/main.qml:49
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Konfiguratu KRunner…"
 
-#: plasmasearch/package/contents/ui/main.qml:53
+#: plasmasearch/ui/main.qml:53
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Lortu plugin berriak..."

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-11-30 09:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -37,26 +37,6 @@ msgstr "No es mostrarà cap pantalla de presentació"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "No es pot suprimir la pantalla de presentació seleccionada actualment"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "&Get New…"
-msgstr "O&btín nous…"
-
-#: package/contents/ui/main.qml:50
-#, kde-format
-msgid "Failed to show the splash screen preview."
-msgstr "No s'ha pogut mostrar la vista prèvia de la pantalla de presentació."
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Preview Splash Screen"
-msgstr "Vista prèvia de la pantalla de presentació"
-
-#: package/contents/ui/main.qml:87
-#, kde-format
-msgid "Uninstall"
-msgstr "Desinstal·la"
-
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
 #, kde-format
@@ -68,3 +48,23 @@ msgstr "Per a un ús futur"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Nom del tema actual de pantalla de presentació"
+
+#: ui/main.qml:29
+#, kde-format
+msgid "&Get New…"
+msgstr "O&btín nous…"
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "No s'ha pogut mostrar la vista prèvia de la pantalla de presentació."
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "Vista prèvia de la pantalla de presentació"
+
+#: ui/main.qml:87
+#, kde-format
+msgid "Uninstall"
+msgstr "Desinstal·la"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-07 20:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -34,26 +34,6 @@ msgstr "將不會顯示任何的啟動畫面"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "您不能刪除目前已選取的啟動畫面"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "&Get New…"
-msgstr "取得新的(&G)…"
-
-#: package/contents/ui/main.qml:50
-#, kde-format
-msgid "Failed to show the splash screen preview."
-msgstr "啟動畫面預覽失敗。"
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Preview Splash Screen"
-msgstr "預覽啟動畫面"
-
-#: package/contents/ui/main.qml:87
-#, kde-format
-msgid "Uninstall"
-msgstr "解除安裝"
-
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
 #, kde-format
@@ -65,6 +45,26 @@ msgstr ""
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "目前的啟動畫面主題名稱"
+
+#: ui/main.qml:29
+#, kde-format
+msgid "&Get New…"
+msgstr "取得新的(&G)…"
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "啟動畫面預覽失敗。"
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "預覽啟動畫面"
+
+#: ui/main.qml:87
+#, kde-format
+msgid "Uninstall"
+msgstr "解除安裝"
 
 #~ msgid "This module lets you choose the splash screen theme."
 #~ msgstr "此模組能讓您選擇啟動畫面的主題。"

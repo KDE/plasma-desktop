@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:36+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2021-09-04 09:20+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -284,114 +284,114 @@ msgid "Confirm access to the Keyboard"
 msgstr "Hozzáférés megerősítése a billentyűzethez"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
 msgid "Enable Screen Reader"
 msgstr "Képernyőolvasó bekapcsolása"
 
-#: package/contents/ui/Bell.qml:19
+#: ui/Bell.qml:19
 #, kde-format
 msgid "Please choose an audio file"
 msgstr "Válasszon ki egy hangfájlt"
 
-#: package/contents/ui/Bell.qml:20
+#: ui/Bell.qml:20
 #, fuzzy, kde-format
 #| msgid "Audio Files (*.mp3 *.ogg *.wav)"
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
 msgstr "Hangfájlok (*.mp3 *.ogg *.wav)"
 
-#: package/contents/ui/Bell.qml:29
+#: ui/Bell.qml:29
 #, kde-format
 msgid "Audible bell:"
 msgstr "Hallható csengő:"
 
-#: package/contents/ui/Bell.qml:30
+#: ui/Bell.qml:30
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: package/contents/ui/Bell.qml:41
+#: ui/Bell.qml:41
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Egyéni hang:"
 
-#: package/contents/ui/Bell.qml:74
+#: ui/Bell.qml:74
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "Hangfájl keresése a rendszercsengőhöz"
 
-#: package/contents/ui/Bell.qml:75
+#: ui/Bell.qml:75
 #, kde-format
 msgid "Button search audio file"
 msgstr "Hangfájl keresése"
 
-#: package/contents/ui/Bell.qml:91
+#: ui/Bell.qml:91
 #, kde-format
 msgid "Visual bell:"
 msgstr "Vizuális csengő:"
 
-#: package/contents/ui/Bell.qml:92
+#: ui/Bell.qml:92
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: package/contents/ui/Bell.qml:106
+#: ui/Bell.qml:106
 #, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
 msgstr "Képernyő invertálása"
 
-#: package/contents/ui/Bell.qml:123
+#: ui/Bell.qml:123
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
 msgstr "Villogás"
 
-#: package/contents/ui/Bell.qml:134
+#: ui/Bell.qml:134
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Szín"
 
-#: package/contents/ui/Bell.qml:145
+#: ui/Bell.qml:145
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Időtartam:"
 
-#: package/contents/ui/KeyboardFilters.qml:18
+#: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
 msgstr "Lassú billentyűk:"
 
-#: package/contents/ui/KeyboardFilters.qml:19
+#: ui/KeyboardFilters.qml:19
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: package/contents/ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:22
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:37
+#: ui/KeyboardFilters.qml:37
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr "Késleltetés:"
 
-#: package/contents/ui/KeyboardFilters.qml:54
+#: ui/KeyboardFilters.qml:54
 #, kde-format
 msgid "Ring system bell:"
 msgstr "A rendszercsengő megszólaltatása:"
 
-#: package/contents/ui/KeyboardFilters.qml:55
+#: ui/KeyboardFilters.qml:55
 #, fuzzy, kde-format
 #| msgctxt "Use system bell when a key is pressed"
 #| msgid "&when any key is pressed"
@@ -399,7 +399,7 @@ msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "Billentyű megny&omásakor"
 
-#: package/contents/ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:69
 #, fuzzy, kde-format
 #| msgctxt "Use system bell when a key is accepted"
 #| msgid "&when any key is accepted"
@@ -407,7 +407,7 @@ msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "Billentyű &elfogadásakor"
 
-#: package/contents/ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:83
 #, fuzzy, kde-format
 #| msgctxt "Use system bell when a key is rejected"
 #| msgid "&when any key is rejected"
@@ -415,171 +415,171 @@ msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "Billentyű &visszautasításakor"
 
-#: package/contents/ui/KeyboardFilters.qml:100
+#: ui/KeyboardFilters.qml:100
 #, kde-format
 msgid "Bounce keys:"
 msgstr "Visszaugró billentyűk:"
 
-#: package/contents/ui/KeyboardFilters.qml:101
+#: ui/KeyboardFilters.qml:101
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: package/contents/ui/KeyboardFilters.qml:104
+#: ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
 msgstr ""
 
-#: package/contents/ui/KeyboardFilters.qml:119
+#: ui/KeyboardFilters.qml:119
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr "Késleltetés:"
 
-#: package/contents/ui/KeyboardFilters.qml:134
+#: ui/KeyboardFilters.qml:134
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr "Csengetés visszautasításkor"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Csengő"
 
-#: package/contents/ui/main.qml:28
+#: ui/main.qml:28
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Módosítóbillentyűk"
 
-#: package/contents/ui/main.qml:33
+#: ui/main.qml:33
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Billentyűzetszűrők"
 
-#: package/contents/ui/main.qml:38
+#: ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Egeres navigáció"
 
-#: package/contents/ui/main.qml:43
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "Képernyőolvasó"
 
-#: package/contents/ui/ModifierKeys.qml:16
+#: ui/ModifierKeys.qml:16
 #, kde-format
 msgid "Sticky keys:"
 msgstr "Ragadó billentyűk:"
 
-#: package/contents/ui/ModifierKeys.qml:17
+#: ui/ModifierKeys.qml:17
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: package/contents/ui/ModifierKeys.qml:28
+#: ui/ModifierKeys.qml:28
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
 msgstr "Zárolás"
 
-#: package/contents/ui/ModifierKeys.qml:42
+#: ui/ModifierKeys.qml:42
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr "Kikapcsolás, ha két billentyű van lenyomva tartva"
 
-#: package/contents/ui/ModifierKeys.qml:54
+#: ui/ModifierKeys.qml:54
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
 msgstr "Csengetés módosítóbillentyűk használatakor"
 
-#: package/contents/ui/ModifierKeys.qml:71
+#: ui/ModifierKeys.qml:71
 #, kde-format
 msgid "Feedback:"
 msgstr "Visszajelzés:"
 
-#: package/contents/ui/ModifierKeys.qml:72
+#: ui/ModifierKeys.qml:72
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
 msgstr "Csengetés zárolóbillentyűk be- és kikapcsolásakor"
 
-#: package/contents/ui/ModifierKeys.qml:83
+#: ui/ModifierKeys.qml:83
 #, kde-format
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Értesítés megjelenítése módosító- vagy zárolóbillentyű használatakor"
 
-#: package/contents/ui/ModifierKeys.qml:95
+#: ui/ModifierKeys.qml:95
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "Az értesítések beállítása…"
 
-#: package/contents/ui/MouseNavigation.qml:17
+#: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
 msgstr "Kurzor mozgatása a számbillentyűzettel:"
 
-#: package/contents/ui/MouseNavigation.qml:18
+#: ui/MouseNavigation.qml:18
 #, kde-format
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: package/contents/ui/MouseNavigation.qml:29
+#: ui/MouseNavigation.qml:29
 #, kde-format
 msgid "When a gesture is used:"
 msgstr "Kézmozdulat használatakor:"
 
-#: package/contents/ui/MouseNavigation.qml:30
+#: ui/MouseNavigation.qml:30
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr "Megerősítéskérő ablak megjelenítése"
 
-#: package/contents/ui/MouseNavigation.qml:41
+#: ui/MouseNavigation.qml:41
 #, kde-format
 msgid "Ring the System Bell"
 msgstr "A rendszercsengő megszólaltatása"
 
-#: package/contents/ui/MouseNavigation.qml:52
+#: ui/MouseNavigation.qml:52
 #, kde-format
 msgid "Show a notification"
 msgstr "Értesítés megjelenítése"
 
-#: package/contents/ui/MouseNavigation.qml:68
+#: ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
 msgstr "Gyorsítási késleltetés:"
 
-#: package/contents/ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:82
 #, kde-format
 msgid "Repeat interval:"
 msgstr "Ismétlési időköz:"
 
-#: package/contents/ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:96
 #, kde-format
 msgid "Acceleration time:"
 msgstr "Gyorsítási idő:"
 
-#: package/contents/ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:110
 #, kde-format
 msgid "Maximum speed:"
 msgstr "Maximális sebesség:"
 
-#: package/contents/ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:124
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "Gyorsítási profil:"
 
-#: package/contents/ui/ScreenReader.qml:28
+#: ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Az Orca beállításainak betöltése…"
 
-#: package/contents/ui/ScreenReader.qml:41
+#: ui/ScreenReader.qml:41
 #, kde-format
 msgid ""
 "Please note that you may have to log out or reboot once to allow the screen "
@@ -588,7 +588,7 @@ msgstr ""
 "Fontos tudni, hogy a képernyőolvasó megfelelő működéséhez valószínűleg ki- "
 "és bejelentkezés vagy újraindítás szükséges."
 
-#: package/contents/ui/ScreenReader.qml:42
+#: ui/ScreenReader.qml:42
 #, kde-format
 msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "

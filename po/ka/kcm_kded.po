@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-09-02 07:49+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr ""
 "KDE-ის სერვისების მმართველისთვის შენახული ცვლილებების შესახებ შეტყობინების "
 "გაგზავნის შეცდომა: %1"
 
-#: package/contents/ui/main.qml:36
+#: ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
@@ -54,7 +54,7 @@ msgstr ""
 "ფონური სერვისების მმართველი (kded5) გაშვებული არაა. დარწმუნდით, რომ ის "
 "სწორად აყენია."
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -63,7 +63,7 @@ msgstr ""
 "თუ ისინი საჭირო არაა, ზოგიერთი სერვისი, როცა ხელით გაუშვებთ, თვითონ "
 "გათიშავენ თავის თავს."
 
-#: package/contents/ui/main.qml:54
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -72,54 +72,54 @@ msgstr ""
 "თქვენი ცვლილებების გადატარებისას ფონური სერვისების მმართველის (kded5) "
 "გადატვირთვისას ზოგიერთი სხვა სერვისიც ავტომატურად გაჩერდა/ჩაირთო."
 
-#: package/contents/ui/main.qml:96
+#: ui/main.qml:96
 #, kde-format
 msgid "All Services"
 msgstr "ყველა სერვისი"
 
-#: package/contents/ui/main.qml:97
+#: ui/main.qml:97
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "გაშვებული"
 
-#: package/contents/ui/main.qml:98
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "გაშვებული არაა"
 
-#: package/contents/ui/main.qml:134
+#: ui/main.qml:134
 #, kde-format
 msgid "Startup Services"
 msgstr "ჩატვირთვისას გაშვებული სერვისები"
 
-#: package/contents/ui/main.qml:135
+#: ui/main.qml:135
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "საჭიროებისამებრ ჩატვირთვადი სერვისები"
 
-#: package/contents/ui/main.qml:152
+#: ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "სერვისის ჩატვირთვისას გაშვების გადართვა"
 
-#: package/contents/ui/main.qml:219
+#: ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "გაშვებული არაა"
 
-#: package/contents/ui/main.qml:220
+#: ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "გაშვებული"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, kde-format
 msgid "Stop Service"
 msgstr "სერვისის გაჩერება"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, kde-format
 msgid "Start Service"
 msgstr "სერვისის გაშვება"

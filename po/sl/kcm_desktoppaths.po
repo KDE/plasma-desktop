@@ -1,7 +1,7 @@
 # translation of kcmkonq.po to Slovenian
 # Translation of kcmkonq.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMKONQ.
-# $Id: kcm_desktoppaths.po 1649031 2023-04-08 02:32:52Z scripty $
+# $Id: kcm_desktoppaths.po 1651012 2023-05-05 02:31:54Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-07 08:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -66,12 +66,12 @@ msgstr "Javno"
 msgid "Templates"
 msgstr "Predloge"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgid "Desktop path:"
 msgstr "Pot do namizja:"
 
-#: package/contents/ui/main.qml:26
+#: ui/main.qml:26
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -81,75 +81,75 @@ msgstr ""
 "V tej mapi so vse datoteke, ki jih vidite na namizju. Če želite, lahko "
 "spremenite njeno mesto in tja se bo samodejno prestavila tudi vsebina."
 
-#: package/contents/ui/main.qml:32
+#: ui/main.qml:32
 #, kde-format
 msgid "Documents path:"
 msgstr "Pot do dokumentov:"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr "To bo privzeta mapa za nalaganje in shranjevanje dokumentov."
 
-#: package/contents/ui/main.qml:41
+#: ui/main.qml:41
 #, kde-format
 msgid "Downloads path:"
 msgstr "Pot do prejemov:"
 
-#: package/contents/ui/main.qml:44
+#: ui/main.qml:44
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "To bo privzeta mapa za shranjevanje prejetih datotek."
 
-#: package/contents/ui/main.qml:50
+#: ui/main.qml:50
 #, kde-format
 msgid "Videos path:"
 msgstr "Pot do videov:"
 
-#: package/contents/ui/main.qml:53 package/contents/ui/main.qml:80
+#: ui/main.qml:53 ui/main.qml:80
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "To bo privzeta mapa za nalaganje in shranjevanje filmov."
 
-#: package/contents/ui/main.qml:59
+#: ui/main.qml:59
 #, kde-format
 msgid "Pictures path:"
 msgstr "Pot do slik:"
 
-#: package/contents/ui/main.qml:62
+#: ui/main.qml:62
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr "To bo privzeta mapa za nalaganje in shranjevanje slik."
 
-#: package/contents/ui/main.qml:68
+#: ui/main.qml:68
 #, kde-format
 msgid "Music path:"
 msgstr "Pot do glasbe:"
 
-#: package/contents/ui/main.qml:71
+#: ui/main.qml:71
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr "To bo privzeta mapa za nalaganje in shranjevanje glasbe."
 
-#: package/contents/ui/main.qml:77
+#: ui/main.qml:77
 #, kde-format
 msgid "Public path:"
 msgstr "Javna pot:"
 
-#: package/contents/ui/main.qml:86
+#: ui/main.qml:86
 #, kde-format
 msgid "Templates path:"
 msgstr "Pot do predlog:"
 
-#: package/contents/ui/main.qml:89
+#: ui/main.qml:89
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr "To bo privzeta mapa za nalaganje in shranjevanje predlog."
 
-#: package/contents/ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

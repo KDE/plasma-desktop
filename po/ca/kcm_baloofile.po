@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-12-14 09:02+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: package/contents/ui/main.qml:57
+#: ui/main.qml:57
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -32,7 +32,7 @@ msgstr ""
 "llançador, i eliminarà la visualització de metadades ampliades a totes les "
 "aplicacions KDE."
 
-#: package/contents/ui/main.qml:66
+#: ui/main.qml:66
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -44,23 +44,23 @@ msgstr ""
 "zero. Això pot trigar una estona, depenent de la quantitat de fitxers que hi "
 "hagi."
 
-#: package/contents/ui/main.qml:68
+#: ui/main.qml:68
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Suprimeix les dades d'índex"
 
-#: package/contents/ui/main.qml:88
+#: ui/main.qml:88
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr "Cal reiniciar el sistema perquè aquests canvis tinguin efecte."
 
-#: package/contents/ui/main.qml:92
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Reinicia"
 
-#: package/contents/ui/main.qml:99
+#: ui/main.qml:99
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
@@ -68,77 +68,77 @@ msgstr ""
 "La cerca de fitxers us ajuda a localitzar ràpidament tots els fitxers basant-"
 "se en el seu contingut."
 
-#: package/contents/ui/main.qml:106
+#: ui/main.qml:106
 #, kde-format
 msgid "Enable File Search"
 msgstr "Activa la cerca de fitxers"
 
-#: package/contents/ui/main.qml:121
+#: ui/main.qml:121
 #, kde-format
 msgid "Also index file content"
 msgstr "Indexa també el contingut dels fitxers"
 
-#: package/contents/ui/main.qml:135
+#: ui/main.qml:135
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "Indexa els fitxers i carpetes ocults"
 
-#: package/contents/ui/main.qml:159
+#: ui/main.qml:159
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "Estat: %1, %2% complet"
 
-#: package/contents/ui/main.qml:164
+#: ui/main.qml:164
 #, kde-format
 msgid "Pause Indexer"
 msgstr "Posa en pausa l'indexador"
 
-#: package/contents/ui/main.qml:164
+#: ui/main.qml:164
 #, kde-format
 msgid "Resume Indexer"
 msgstr "Reprèn l'indexador"
 
-#: package/contents/ui/main.qml:177
+#: ui/main.qml:177
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "Actualment s'està indexant: %1"
 
-#: package/contents/ui/main.qml:182
+#: ui/main.qml:182
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "Configuració específica de carpeta:"
 
-#: package/contents/ui/main.qml:209
+#: ui/main.qml:209
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "Inicia la indexació d'una carpeta…"
 
-#: package/contents/ui/main.qml:220
+#: ui/main.qml:220
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "Atura la indexació d'una carpeta…"
 
-#: package/contents/ui/main.qml:271
+#: ui/main.qml:271
 #, kde-format
 msgid "Not indexed"
 msgstr "No indexada"
 
-#: package/contents/ui/main.qml:272
+#: ui/main.qml:272
 #, kde-format
 msgid "Indexed"
 msgstr "Indexada"
 
-#: package/contents/ui/main.qml:302
+#: ui/main.qml:302
 #, kde-format
 msgid "Delete entry"
 msgstr "Suprimeix l'entrada"
 
-#: package/contents/ui/main.qml:317
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Seleccioneu una carpeta a incloure"
 
-#: package/contents/ui/main.qml:317
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Seleccioneu una carpeta a excloure"

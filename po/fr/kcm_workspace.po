@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-12-18 19:34+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
@@ -34,80 +34,80 @@ msgstr ""
 "Le système doit être re-démarré afin que les modifications concernant le "
 "paramètre de copie par le clic central soient prises en compte."
 
-#: package/contents/ui/main.qml:29
+#: ui/main.qml:29
 #, kde-format
 msgid "Restart"
 msgstr "Re-démarrer"
 
-#: package/contents/ui/main.qml:46
+#: ui/main.qml:46
 #, kde-format
 msgid "Visual behavior:"
 msgstr "Comportement visuel :"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:47 workspaceoptions_plasmasettings.kcfg:9
+#: ui/main.qml:47 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Affiche des infobulles lors du survol de la souris"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:58 workspaceoptions_plasmasettings.kcfg:15
+#: ui/main.qml:58 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Affiche un retour visuel lors des changements d'état"
 
-#: package/contents/ui/main.qml:76
+#: ui/main.qml:76
 #, kde-format
 msgid "Animation speed:"
 msgstr "Vitesse d'animation :"
 
-#: package/contents/ui/main.qml:99
+#: ui/main.qml:99
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Lente"
 
-#: package/contents/ui/main.qml:105
+#: ui/main.qml:105
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Instantanée"
 
-#: package/contents/ui/main.qml:120
+#: ui/main.qml:120
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Cliquer sur les fichiers et les dossiers :"
 
-#: package/contents/ui/main.qml:121
+#: ui/main.qml:121
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Les ouvre"
 
-#: package/contents/ui/main.qml:133
+#: ui/main.qml:133
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Sélectionner en cliquant sur l'indicateur de sélection de l'élément"
 
-#: package/contents/ui/main.qml:143
+#: ui/main.qml:143
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Les sélectionne"
 
-#: package/contents/ui/main.qml:156
+#: ui/main.qml:156
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Ouvrir à la place par un double-clic"
 
-#: package/contents/ui/main.qml:171
+#: ui/main.qml:171
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Clic dans la barre de défilement :"
 
-#: package/contents/ui/main.qml:172
+#: ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -115,12 +115,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Défile d'une page vers le haut ou vers le bas"
 
-#: package/contents/ui/main.qml:184
+#: ui/main.qml:184
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Clic central pour défiler vers l'emplacement du clic"
 
-#: package/contents/ui/main.qml:194
+#: ui/main.qml:194
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -128,34 +128,34 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Défile vers l'emplacement du clic"
 
-#: package/contents/ui/main.qml:213
+#: ui/main.qml:213
 #, kde-format
 msgid "Middle Click:"
 msgstr "Clic central :"
 
-#: package/contents/ui/main.qml:215
+#: ui/main.qml:215
 #, kde-format
 msgid "Paste selected text"
 msgstr "Coller le texte sélectionné"
 
-#: package/contents/ui/main.qml:232
+#: ui/main.qml:232
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Mode « Tablette » :"
 
-#: package/contents/ui/main.qml:234
+#: ui/main.qml:234
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Activer automatiquement lorsque nécessaire"
 
-#: package/contents/ui/main.qml:234 package/contents/ui/main.qml:263
+#: ui/main.qml:234 ui/main.qml:263
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Jamais activé"
 
-#: package/contents/ui/main.qml:246
+#: ui/main.qml:246
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -166,13 +166,13 @@ msgstr ""
 "système d'un écran tactile mais pas d'une souris ou d'un pavé tactile. Par "
 "exemple : lorsque le clavier d'un portable modulaire est retourné ou détaché."
 
-#: package/contents/ui/main.qml:251
+#: ui/main.qml:251
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Toujours activé"
 
-#: package/contents/ui/main.qml:276
+#: ui/main.qml:276
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "

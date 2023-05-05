@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-11-30 10:41+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -32,26 +32,6 @@ msgstr "Er zal geen opstartscherm getoond worden"
 msgid "You cannot delete the currently selected splash screen"
 msgstr "U kunt het nu geselecteerde opstartscherm niet verwijderen"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "&Get New…"
-msgstr "Nieuwe op&halen…"
-
-#: package/contents/ui/main.qml:50
-#, kde-format
-msgid "Failed to show the splash screen preview."
-msgstr "Voorbeeld van het opstartscherm tonen is mislukt."
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Preview Splash Screen"
-msgstr "Opstartscherm bekijken"
-
-#: package/contents/ui/main.qml:87
-#, kde-format
-msgid "Uninstall"
-msgstr "Deïnstalleren"
-
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
 #, kde-format
@@ -63,6 +43,26 @@ msgstr "Voor toekomstig gebruik"
 #, kde-format
 msgid "Name of the current splash theme"
 msgstr "Naam van het huidige splash-thema"
+
+#: ui/main.qml:29
+#, kde-format
+msgid "&Get New…"
+msgstr "Nieuwe op&halen…"
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "Voorbeeld van het opstartscherm tonen is mislukt."
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "Opstartscherm bekijken"
+
+#: ui/main.qml:87
+#, kde-format
+msgid "Uninstall"
+msgstr "Deïnstalleren"
 
 #~ msgid "This module lets you choose the splash screen theme."
 #~ msgstr "Deze module laat u het thema van het opstartscherm kiezen."

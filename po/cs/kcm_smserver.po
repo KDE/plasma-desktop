@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-01-27 15:33+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -18,140 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 22.12.2\n"
-
-#: package/contents/ui/main.qml:30
-#, kde-format
-msgid ""
-"The system must be restarted before manual session saving becomes active."
-msgstr "K aktivaci ukládání sezení bude potřeba restartovat systém."
-
-#: package/contents/ui/main.qml:35
-#, kde-format
-msgid "Restart"
-msgstr "Restartovat"
-
-#: package/contents/ui/main.qml:57
-#, kde-format
-msgid "Failed to request restart to firmware setup: %1"
-msgstr "Požadavek na restartování do nastavení firmwaru se nezdařil: %1"
-
-#: package/contents/ui/main.qml:58
-#, kde-format
-msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr "Při dalším restartu počítače bude spuštěno nastavení UEFI."
-
-#: package/contents/ui/main.qml:59
-#, kde-format
-msgid ""
-"Next time the computer is restarted, it will enter the firmware setup screen."
-msgstr "Při dalším restartu počítače bude spuštěno nastavení firmwaru."
-
-#: package/contents/ui/main.qml:64
-#, kde-format
-msgid "Restart Now"
-msgstr "Restartovat nyní"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr "Obrazovka pro odhlášení"
-
-#: package/contents/ui/main.qml:75
-#, kde-format
-msgid "Show:"
-msgstr "Zobrazit:"
-
-#: package/contents/ui/main.qml:89
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
-msgstr ""
-
-#: package/contents/ui/main.qml:96
-#, kde-format
-msgctxt "@title:group"
-msgid "Session Restore"
-msgstr "Obnovení sezení"
-
-#: package/contents/ui/main.qml:104
-#, kde-format
-msgid "On login, launch apps that were open:"
-msgstr "Při přihlášení spustit aplikace, které byly otevřeny:"
-
-#: package/contents/ui/main.qml:105
-#, kde-format
-msgctxt "@option:radio Automatic style of session restoration"
-msgid "On last logout"
-msgstr "Při posledním odhlášení"
-
-#: package/contents/ui/main.qml:118
-#, kde-format
-msgctxt "@option:radio Manual style of session restoration"
-msgid "When session was manually saved"
-msgstr "Pokud bylo sezení manuálně uloženo"
-
-#: package/contents/ui/main.qml:127
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"A <interface>Save Session</interface> button will appear in the "
-"<interface>Application Launcher</interface> menu. When you click it, Plasma "
-"will remember the apps that are open and restore them on the next login. "
-"Click it again to replace the set of remembered apps."
-msgstr ""
-
-#: package/contents/ui/main.qml:132
-#, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Start with an empty session"
-msgstr "Spustit s prázdnou relací"
-
-#: package/contents/ui/main.qml:146
-#, kde-format
-msgid "Ignored applications:"
-msgstr "Ignorované aplikace:"
-
-#: package/contents/ui/main.qml:169
-#, kde-format
-msgid ""
-"Write apps' executable names here (separated by commas or colons, for "
-"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-"autostarting along with other session-restored apps."
-msgstr ""
-
-#: package/contents/ui/main.qml:177
-#, kde-format
-msgctxt "@title:group"
-msgid "Firmware"
-msgstr "Firmware"
-
-#: package/contents/ui/main.qml:183
-#, kde-format
-msgctxt ""
-"@label:check part of a sentence: After next restart enter UEFI/Firmware "
-"setup screen"
-msgid "After next restart:"
-msgstr "Po následujícím restartu:"
-
-#: package/contents/ui/main.qml:184
-#, kde-format
-msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "Spustit nastavení UEFI"
-
-#: package/contents/ui/main.qml:185
-#, kde-format
-msgctxt "@option:check"
-msgid "Enter firmware setup screen"
-msgstr "Spustit nastavení firmware"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -176,3 +42,137 @@ msgstr "Při přihlášení"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Vyjmout tyto aplikace ze sezení"
+
+#: ui/main.qml:30
+#, kde-format
+msgid ""
+"The system must be restarted before manual session saving becomes active."
+msgstr "K aktivaci ukládání sezení bude potřeba restartovat systém."
+
+#: ui/main.qml:35
+#, kde-format
+msgid "Restart"
+msgstr "Restartovat"
+
+#: ui/main.qml:57
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "Požadavek na restartování do nastavení firmwaru se nezdařil: %1"
+
+#: ui/main.qml:58
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr "Při dalším restartu počítače bude spuštěno nastavení UEFI."
+
+#: ui/main.qml:59
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr "Při dalším restartu počítače bude spuštěno nastavení firmwaru."
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Restart Now"
+msgstr "Restartovat nyní"
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@title:group"
+msgid "Logout Screen"
+msgstr "Obrazovka pro odhlášení"
+
+#: ui/main.qml:75
+#, kde-format
+msgid "Show:"
+msgstr "Zobrazit:"
+
+#: ui/main.qml:89
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When this setting is turned on, the logout confirmation screen will be shown "
+"when you log out, shut down, restart, press the power button, or click on "
+"buttons or menu items labeled <interface>Leave…</interface>."
+msgstr ""
+
+#: ui/main.qml:96
+#, kde-format
+msgctxt "@title:group"
+msgid "Session Restore"
+msgstr "Obnovení sezení"
+
+#: ui/main.qml:104
+#, kde-format
+msgid "On login, launch apps that were open:"
+msgstr "Při přihlášení spustit aplikace, které byly otevřeny:"
+
+#: ui/main.qml:105
+#, kde-format
+msgctxt "@option:radio Automatic style of session restoration"
+msgid "On last logout"
+msgstr "Při posledním odhlášení"
+
+#: ui/main.qml:118
+#, kde-format
+msgctxt "@option:radio Manual style of session restoration"
+msgid "When session was manually saved"
+msgstr "Pokud bylo sezení manuálně uloženo"
+
+#: ui/main.qml:127
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <interface>Save Session</interface> button will appear in the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the apps that are open and restore them on the next login. "
+"Click it again to replace the set of remembered apps."
+msgstr ""
+
+#: ui/main.qml:132
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Spustit s prázdnou relací"
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Ignored applications:"
+msgstr "Ignorované aplikace:"
+
+#: ui/main.qml:169
+#, kde-format
+msgid ""
+"Write apps' executable names here (separated by commas or colons, for "
+"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+"autostarting along with other session-restored apps."
+msgstr ""
+
+#: ui/main.qml:177
+#, kde-format
+msgctxt "@title:group"
+msgid "Firmware"
+msgstr "Firmware"
+
+#: ui/main.qml:183
+#, kde-format
+msgctxt ""
+"@label:check part of a sentence: After next restart enter UEFI/Firmware "
+"setup screen"
+msgid "After next restart:"
+msgstr "Po následujícím restartu:"
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen"
+msgstr "Spustit nastavení UEFI"
+
+#: ui/main.qml:185
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen"
+msgstr "Spustit nastavení firmware"

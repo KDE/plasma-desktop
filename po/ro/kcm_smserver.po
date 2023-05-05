@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-04-04 09:56+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -17,156 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#: package/contents/ui/main.qml:30
-#, kde-format
-msgid ""
-"The system must be restarted before manual session saving becomes active."
-msgstr ""
-
-#: package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
-msgid "Restart"
-msgstr "Repornește acum"
-
-#: package/contents/ui/main.qml:57
-#, kde-format
-msgid "Failed to request restart to firmware setup: %1"
-msgstr "Cererea de repornire în configurarea firmware a eșuat: %1"
-
-#: package/contents/ui/main.qml:58
-#, kde-format
-msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr ""
-"La următoarea repornire a calculatorului, acesta va intra în ecranul de "
-"configurare UEFI."
-
-#: package/contents/ui/main.qml:59
-#, kde-format
-msgid ""
-"Next time the computer is restarted, it will enter the firmware setup screen."
-msgstr ""
-"La următoarea repornire a calculatorului, acesta va intra în ecranul de "
-"configurare a firmware-ului."
-
-#: package/contents/ui/main.qml:64
-#, kde-format
-msgid "Restart Now"
-msgstr "Repornește acum"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr ""
-
-#: package/contents/ui/main.qml:75
-#, kde-format
-msgid "Show:"
-msgstr ""
-
-#: package/contents/ui/main.qml:89
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
-msgstr ""
-
-#: package/contents/ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Session Manager"
-msgctxt "@title:group"
-msgid "Session Restore"
-msgstr "Administratorul de sesiune"
-
-#: package/contents/ui/main.qml:104
-#, kde-format
-msgid "On login, launch apps that were open:"
-msgstr ""
-
-#: package/contents/ui/main.qml:105
-#, kde-format
-msgctxt "@option:radio Automatic style of session restoration"
-msgid "On last logout"
-msgstr ""
-
-#: package/contents/ui/main.qml:118
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
-msgctxt "@option:radio Manual style of session restoration"
-msgid "When session was manually saved"
-msgstr "Restabilește ultima sesiune salvată manual"
-
-#: package/contents/ui/main.qml:127
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"A <interface>Save Session</interface> button will appear in the "
-"<interface>Application Launcher</interface> menu. When you click it, Plasma "
-"will remember the apps that are open and restore them on the next login. "
-"Click it again to replace the set of remembered apps."
-msgstr ""
-
-#: package/contents/ui/main.qml:132
-#, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Start with an empty session"
-msgstr "Pornește cu o sesiune goală"
-
-#: package/contents/ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
-msgid "Ignored applications:"
-msgstr "Nu restabili aceste aplicații:"
-
-#: package/contents/ui/main.qml:169
-#, kde-format
-msgid ""
-"Write apps' executable names here (separated by commas or colons, for "
-"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-"autostarting along with other session-restored apps."
-msgstr ""
-
-#: package/contents/ui/main.qml:177
-#, fuzzy, kde-format
-#| msgid "Firmware Setup"
-msgctxt "@title:group"
-msgid "Firmware"
-msgstr "Configurare firmware"
-
-#: package/contents/ui/main.qml:183
-#, kde-format
-msgctxt ""
-"@label:check part of a sentence: After next restart enter UEFI/Firmware "
-"setup screen"
-msgid "After next restart:"
-msgstr ""
-
-#: package/contents/ui/main.qml:184
-#, fuzzy, kde-format
-#| msgid "Enter UEFI setup on next restart"
-msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "Intră în configurarea UEFI la următoarea repornire"
-
-#: package/contents/ui/main.qml:185
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
-msgctxt "@option:check"
-msgid "Enter firmware setup screen"
-msgstr "Intră în ecranul de configurare firmware la următoarea repornire"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -191,6 +41,156 @@ msgstr "La autentificare"
 #, kde-format
 msgid "Applications to be excluded from session"
 msgstr "Aplicații de exclus din sesiune"
+
+#: ui/main.qml:30
+#, kde-format
+msgid ""
+"The system must be restarted before manual session saving becomes active."
+msgstr ""
+
+#: ui/main.qml:35
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgid "Restart"
+msgstr "Repornește acum"
+
+#: ui/main.qml:57
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "Cererea de repornire în configurarea firmware a eșuat: %1"
+
+#: ui/main.qml:58
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+"La următoarea repornire a calculatorului, acesta va intra în ecranul de "
+"configurare UEFI."
+
+#: ui/main.qml:59
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr ""
+"La următoarea repornire a calculatorului, acesta va intra în ecranul de "
+"configurare a firmware-ului."
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Restart Now"
+msgstr "Repornește acum"
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@title:group"
+msgid "Logout Screen"
+msgstr ""
+
+#: ui/main.qml:75
+#, kde-format
+msgid "Show:"
+msgstr ""
+
+#: ui/main.qml:89
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When this setting is turned on, the logout confirmation screen will be shown "
+"when you log out, shut down, restart, press the power button, or click on "
+"buttons or menu items labeled <interface>Leave…</interface>."
+msgstr ""
+
+#: ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Session Manager"
+msgctxt "@title:group"
+msgid "Session Restore"
+msgstr "Administratorul de sesiune"
+
+#: ui/main.qml:104
+#, kde-format
+msgid "On login, launch apps that were open:"
+msgstr ""
+
+#: ui/main.qml:105
+#, kde-format
+msgctxt "@option:radio Automatic style of session restoration"
+msgid "On last logout"
+msgstr ""
+
+#: ui/main.qml:118
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@option:radio Here 'session' refers to the technical concept of session "
+#| "restoration, whereby the windows that were open on logout are re-opened "
+#| "on the next login"
+#| msgid "Restore last manually saved session"
+msgctxt "@option:radio Manual style of session restoration"
+msgid "When session was manually saved"
+msgstr "Restabilește ultima sesiune salvată manual"
+
+#: ui/main.qml:127
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <interface>Save Session</interface> button will appear in the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the apps that are open and restore them on the next login. "
+"Click it again to replace the set of remembered apps."
+msgstr ""
+
+#: ui/main.qml:132
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr "Pornește cu o sesiune goală"
+
+#: ui/main.qml:146
+#, fuzzy, kde-format
+#| msgid "Don't restore these applications:"
+msgid "Ignored applications:"
+msgstr "Nu restabili aceste aplicații:"
+
+#: ui/main.qml:169
+#, kde-format
+msgid ""
+"Write apps' executable names here (separated by commas or colons, for "
+"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+"autostarting along with other session-restored apps."
+msgstr ""
+
+#: ui/main.qml:177
+#, fuzzy, kde-format
+#| msgid "Firmware Setup"
+msgctxt "@title:group"
+msgid "Firmware"
+msgstr "Configurare firmware"
+
+#: ui/main.qml:183
+#, kde-format
+msgctxt ""
+"@label:check part of a sentence: After next restart enter UEFI/Firmware "
+"setup screen"
+msgid "After next restart:"
+msgstr ""
+
+#: ui/main.qml:184
+#, fuzzy, kde-format
+#| msgid "Enter UEFI setup on next restart"
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen"
+msgstr "Intră în configurarea UEFI la următoarea repornire"
+
+#: ui/main.qml:185
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen on next restart"
+msgctxt "@option:check"
+msgid "Enter firmware setup screen"
+msgstr "Intră în ecranul de configurare firmware la următoarea repornire"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "

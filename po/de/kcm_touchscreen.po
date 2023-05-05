@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-26 00:58+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -30,23 +30,23 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: package/contents/ui/main.qml:29
+#: ui/main.qml:29
 #, kde-format
 msgid "No touchscreens found"
 msgstr "Keine Touchscreens gefunden"
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:45
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Gerät:"
 
-#: package/contents/ui/main.qml:58
+#: ui/main.qml:58
 #, kde-format
 msgid "Enabled:"
 msgstr "Aktiviert:"
 
-#: package/contents/ui/main.qml:66
+#: ui/main.qml:66
 #, kde-format
 msgid "Target display:"
 msgstr "Zielanzeige:"

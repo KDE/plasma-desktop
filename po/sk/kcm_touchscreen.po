@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 02:19+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-03-11 18:47+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -26,23 +26,23 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: package/contents/ui/main.qml:29
+#: ui/main.qml:29
 #, kde-format
 msgid "No touchscreens found"
 msgstr "Nenašla sa dotyková obrazovka"
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:45
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Zariadenie:"
 
-#: package/contents/ui/main.qml:58
+#: ui/main.qml:58
 #, kde-format
 msgid "Enabled:"
 msgstr "Povolené:"
 
-#: package/contents/ui/main.qml:66
+#: ui/main.qml:66
 #, kde-format
 msgid "Target display:"
 msgstr "Cieľový displej:"

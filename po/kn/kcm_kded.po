@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2007-09-09 13:22+0530\n"
 "Last-Translator: Manu B <iammanu@gmail.com>\n"
 "Language-Team: Kannada\n"
@@ -47,81 +47,81 @@ msgstr "ಪರಿಚಾರಕವನ್ನು ಪ್ರಾರಂಭಿಸಲಾ�
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:36
+#: ui/main.qml:36
 #, kde-format
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:45
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
 
-#: package/contents/ui/main.qml:54
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
 
-#: package/contents/ui/main.qml:96
+#: ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "All Services"
 msgstr "ಸೇವೆ"
 
-#: package/contents/ui/main.qml:97
+#: ui/main.qml:97
 #, fuzzy, kde-format
 #| msgid "Running"
 msgctxt "List running services"
 msgid "Running"
 msgstr "ಚಾಲನೆಯಲ್ಲಿದೆ"
 
-#: package/contents/ui/main.qml:98
+#: ui/main.qml:98
 #, fuzzy, kde-format
 #| msgid "Not running"
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "ಚಾಲನೆಯಲ್ಲಿಲ್ಲ"
 
-#: package/contents/ui/main.qml:134
+#: ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "Startup Services"
 msgid "Startup Services"
 msgstr "ಪ್ರಾರಂಭದ ಸೇವೆಗಳು"
 
-#: package/contents/ui/main.qml:135
+#: ui/main.qml:135
 #, fuzzy, kde-format
 #| msgid "Startup Services"
 msgid "Load-on-Demand Services"
 msgstr "ಪ್ರಾರಂಭದ ಸೇವೆಗಳು"
 
-#: package/contents/ui/main.qml:152
+#: ui/main.qml:152
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
-#: package/contents/ui/main.qml:219
+#: ui/main.qml:219
 #, kde-format
 msgid "Not running"
 msgstr "ಚಾಲನೆಯಲ್ಲಿಲ್ಲ"
 
-#: package/contents/ui/main.qml:220
+#: ui/main.qml:220
 #, kde-format
 msgid "Running"
 msgstr "ಚಾಲನೆಯಲ್ಲಿದೆ"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Stop Service"
 msgstr "ಸೇವೆ"
 
-#: package/contents/ui/main.qml:238
+#: ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Start Service"

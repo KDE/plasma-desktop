@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,87 +17,87 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/plasma-desktop/kcm_workspace.pot\n"
 "X-Crowdin-File-ID: 7177\n"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:23
 #, kde-format
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr "系统必须重启才能更改中键点击粘贴设置。"
 
-#: package/contents/ui/main.qml:29
+#: ui/main.qml:29
 #, kde-format
 msgid "Restart"
 msgstr "重新启动"
 
-#: package/contents/ui/main.qml:46
+#: ui/main.qml:46
 #, kde-format
 msgid "Visual behavior:"
 msgstr "视觉行为："
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:47 workspaceoptions_plasmasettings.kcfg:9
+#: ui/main.qml:47 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "鼠标悬停时显示提示信息"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:58 workspaceoptions_plasmasettings.kcfg:15
+#: ui/main.qml:58 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "状态变化时显示视觉反馈"
 
-#: package/contents/ui/main.qml:76
+#: ui/main.qml:76
 #, kde-format
 msgid "Animation speed:"
 msgstr "动效速度："
 
-#: package/contents/ui/main.qml:99
+#: ui/main.qml:99
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "缓慢"
 
-#: package/contents/ui/main.qml:105
+#: ui/main.qml:105
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "即时"
 
-#: package/contents/ui/main.qml:120
+#: ui/main.qml:120
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "单击文件、文件夹时："
 
-#: package/contents/ui/main.qml:121
+#: ui/main.qml:121
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "打开"
 
-#: package/contents/ui/main.qml:133
+#: ui/main.qml:133
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "提示：单击对象的选择框可以选中"
 
-#: package/contents/ui/main.qml:143
+#: ui/main.qml:143
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "选中"
 
-#: package/contents/ui/main.qml:156
+#: ui/main.qml:156
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "提示：双击可以打开对象"
 
-#: package/contents/ui/main.qml:171
+#: ui/main.qml:171
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "点击滚动条空白位置："
 
-#: package/contents/ui/main.qml:172
+#: ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -105,12 +105,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "向上或向下滚动一页"
 
-#: package/contents/ui/main.qml:184
+#: ui/main.qml:184
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "提示：中间键点击即可直接滚动到点击位置"
 
-#: package/contents/ui/main.qml:194
+#: ui/main.qml:194
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -118,34 +118,34 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "直接滚动到点击位置"
 
-#: package/contents/ui/main.qml:213
+#: ui/main.qml:213
 #, kde-format
 msgid "Middle Click:"
 msgstr "中键点击："
 
-#: package/contents/ui/main.qml:215
+#: ui/main.qml:215
 #, kde-format
 msgid "Paste selected text"
 msgstr "粘贴选中的文本"
 
-#: package/contents/ui/main.qml:232
+#: ui/main.qml:232
 #, kde-format
 msgid "Touch Mode:"
 msgstr "触摸模式："
 
-#: package/contents/ui/main.qml:234
+#: ui/main.qml:234
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "按需自动启动"
 
-#: package/contents/ui/main.qml:234 package/contents/ui/main.qml:263
+#: ui/main.qml:234 ui/main.qml:263
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "永不启用"
 
-#: package/contents/ui/main.qml:246
+#: ui/main.qml:246
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -155,13 +155,13 @@ msgstr ""
 "触摸模式将在系统检测到触摸屏，并且检测不到鼠标和触摸板时自动启用。例如：将变"
 "形本的键盘盖翻转180度或拆除时。"
 
-#: package/contents/ui/main.qml:251
+#: ui/main.qml:251
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "总是启用"
 
-#: package/contents/ui/main.qml:276
+#: ui/main.qml:276
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "

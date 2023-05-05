@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-06-03 10:41+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -18,90 +18,90 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.04.1\n"
 
-#: package/contents/ui/main.qml:29
+#: ui/main.qml:29
 #, kde-format
 msgid "Position on screen:"
 msgstr "Posisi di layar:"
 
-#: package/contents/ui/main.qml:33
+#: ui/main.qml:33
 #, kde-format
 msgid "Top"
 msgstr "Atas"
 
-#: package/contents/ui/main.qml:40
+#: ui/main.qml:40
 #, kde-format
 msgid "Center"
 msgstr "Tengah"
 
-#: package/contents/ui/main.qml:53
+#: ui/main.qml:53
 #, kde-format
 msgid "Activation:"
 msgstr "Aktivasi:"
 
-#: package/contents/ui/main.qml:56
+#: ui/main.qml:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Activate when pressing any key on the desktop"
 msgstr "Aktifkan ketika menekan tuts apapun di desktop"
 
-#: package/contents/ui/main.qml:69
+#: ui/main.qml:69
 #, kde-format
 msgid "History:"
 msgstr "Histori:"
 
-#: package/contents/ui/main.qml:72
+#: ui/main.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Remember past searches"
 msgstr "Ingat pencarian yang lampau"
 
-#: package/contents/ui/main.qml:83
+#: ui/main.qml:83
 #, kde-format
 msgctxt "@option:check"
 msgid "Retain last search when re-opening"
 msgstr "Pertahankan pencarian terakhir ketika pembukaan ulang"
 
-#: package/contents/ui/main.qml:94
+#: ui/main.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Activity-aware (last search and history)"
 msgstr "Sadar aktivitas (pencarian terakhir dan histori)"
 
-#: package/contents/ui/main.qml:109
+#: ui/main.qml:109
 #, kde-format
 msgid "Clear History"
 msgstr "Bersihkan Histori"
 
-#: package/contents/ui/main.qml:110
+#: ui/main.qml:110
 #, kde-format
 msgctxt "@action:button %1 activity name"
 msgid "Clear History for Activity \"%1\""
 msgstr "Bersihkan Histori untuk Aktivitas \"%1\""
 
-#: package/contents/ui/main.qml:111
+#: ui/main.qml:111
 #, kde-format
 msgid "Clear History…"
 msgstr "Bersihkan Histori..."
 
-#: package/contents/ui/main.qml:140
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "Untuk semua aktivitas"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "Untuk aktivitas \"%1\""
 
-#: package/contents/ui/main.qml:170
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
 msgstr "Plugin:"
 
-#: package/contents/ui/main.qml:174
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
