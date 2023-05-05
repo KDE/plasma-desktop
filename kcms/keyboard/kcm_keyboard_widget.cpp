@@ -93,7 +93,7 @@ void KCMKeyboardWidget::handleParameters(const QVariantList &args)
     // TODO: improve parameter handling
     setCurrentIndex(TAB_HARDWARE);
     for (const auto &arg : args) {
-        if (arg.type() == QVariant::String) {
+        if (arg.typeId() == QMetaType::Type::QString) {
             const QString str = arg.toString();
             if (str == QLatin1String("--tab=layouts")) {
                 setCurrentIndex(TAB_LAYOUTS);

@@ -105,7 +105,7 @@ QVariant CustomConfigDialogManager::fixup(QWidget *widget, QVariant v) const
     }
 
     QVariant decimals(widget->property("decimals"));
-    if (decimals.type() != QVariant::Int) {
+    if (decimals.typeId() != QMetaType::Type::Int) {
         CustomSlider *asSlider = qobject_cast<CustomSlider *>(widget);
         if (asSlider) {
             return asSlider->fixup(value);

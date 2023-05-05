@@ -8,9 +8,9 @@
 
 static QVariant negateVariant(const QVariant &value)
 {
-    if (value.type() == QVariant::Double) {
+    if (value.typeId() == QMetaType::Type::Double) {
         return QVariant(-value.toDouble());
-    } else if (value.type() == QVariant::Int) {
+    } else if (value.typeId() == QMetaType::Type::Int) {
         return QVariant(-value.toInt());
     }
     return value;
@@ -202,14 +202,14 @@ bool XlibTouchpad::setParameter(const Parameter *par, const QVariant &value)
     }
 
     QVariant converted(value);
-    QVariant::Type convType = QVariant::Int;
+    QMetaType::Type convType = QMetaType::Type::Int;
     if (p->f) {
-        convType = QVariant::Double;
-    } else if (value.type() == QVariant::Double) {
+        convType = QMetaType::Type::Double;
+    } else if (value.typeId() == QMetaType::Type::Double) {
         converted = QVariant(qRound(static_cast<qreal>(value.toDouble())));
     }
 
-    if (!converted.convert(convType)) {
+    if (!converted.convert(QMetaType(convType))) {
         return false;
     }
 
