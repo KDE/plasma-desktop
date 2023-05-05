@@ -49,6 +49,8 @@ Dependencies:
     'plasma/powerdevil': '@same'
     'plasma/systemsettings': '@same'
     'third-party/packagekit-qt': '@latest'
+    'third-party/wayland': '@latest'
+    'third-party/wayland-protocols': '@latest'
 
 Options:
   require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5']
