@@ -13,7 +13,7 @@ RemoveAction::RemoveAction(KActionCollection *collection, QObject *parent)
     : QAction(parent)
     , m_collection(collection)
 {
-    connect(this, &RemoveAction::triggered, this, [=]() {
+    connect(this, &RemoveAction::triggered, this, [this]() {
         if (m_action) {
             m_action->trigger();
         }

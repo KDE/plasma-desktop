@@ -257,7 +257,7 @@ KeyBehaviour KCMiscKeyboardWidget::defaultValueKeyboardRepeat() const
     }
 
     const auto keys = keybehaviourNames.keys();
-    auto defaultRepeat = std::find_if(keys.constBegin(), keys.constEnd(), [=](const KeyBehaviour &key) {
+    auto defaultRepeat = std::find_if(keys.constBegin(), keys.constEnd(), [=, this](const KeyBehaviour &key) {
         return keybehaviourNames[key] == m_settings->defaultKeyboardRepeatValue();
     });
 

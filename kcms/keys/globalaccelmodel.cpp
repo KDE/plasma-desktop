@@ -293,7 +293,7 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
         return c.type != ComponentType::SystemService && (c.type != type ? c.type < type : collator.compare(c.displayName, name) < 0);
     });
     auto watcher = new QDBusPendingCallWatcher(m_globalAccelInterface->getComponent(desktopName));
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [=] {
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [=, this] {
         QDBusPendingReply<QDBusObjectPath> reply = *watcher;
         watcher->deleteLater();
         if (!reply.isValid()) {
@@ -302,7 +302,7 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
         }
         KGlobalAccelComponentInterface component(m_globalAccelInterface->service(), reply.value().path(), m_globalAccelInterface->connection());
         auto infoWatcher = new QDBusPendingCallWatcher(component.allShortcutInfos());
-        connect(infoWatcher, &QDBusPendingCallWatcher::finished, this, [=] {
+        connect(infoWatcher, &QDBusPendingCallWatcher::finished, this, [=, this] {
             QDBusPendingReply<QList<KGlobalShortcutInfo>> infoReply = *infoWatcher;
             infoWatcher->deleteLater();
             if (!infoReply.isValid()) {
