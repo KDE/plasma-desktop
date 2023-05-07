@@ -52,13 +52,13 @@ class LookAndFeelGroup : public QObject
     Q_OBJECT
     Q_PROPERTY(QString id READ id CONSTANT)
     Q_PROPERTY(QString name READ name CONSTANT)
-    Q_PROPERTY(QString thumbnail READ thumbnail CONSTANT)
+    Q_PROPERTY(QUrl thumbnail READ thumbnail CONSTANT)
 
 public:
     LookAndFeelGroup(QObject *parent = nullptr);
     QString id() const;
     QString name() const;
-    QString thumbnail() const;
+    QUrl thumbnail() const;
 
     KPackage::Package m_package;
 };

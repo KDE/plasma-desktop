@@ -151,10 +151,9 @@ QString LookAndFeelGroup::name() const
     return m_package.metadata().name();
 }
 
-QString LookAndFeelGroup::thumbnail() const
+QUrl LookAndFeelGroup::thumbnail() const
 {
-    return m_package.filePath("preview");
-    ;
+    return m_package.fileUrl("preview");
 }
 
 KCMLandingPage::KCMLandingPage(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
@@ -210,8 +209,7 @@ void KCMLandingPage::save()
     QDBusConnection::sessionBus().send(message);
 
     if (m_lnfDirty) {
-        QProcess::startDetached(QStringLiteral("plasma-apply-lookandfeel"),
-                                QStringList({QStringLiteral("-a"), globalsSettings()->lookAndFeelPackage()}));
+        QProcess::startDetached(QStringLiteral("plasma-apply-lookandfeel"), QStringList({QStringLiteral("-a"), globalsSettings()->lookAndFeelPackage()}));
     }
 }
 
