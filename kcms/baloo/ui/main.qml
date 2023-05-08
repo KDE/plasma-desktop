@@ -4,6 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+import QtCore 6.5
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.11 as QQC2
@@ -313,9 +314,9 @@ KCM.SimpleKCM {
 
         active: false
 
-        sourceComponent: QtDialogs.FileDialog {
+        sourceComponent: QtDialogs.FolderDialog {
             title: fileDialogLoader.included ? i18n("Select a folder to include") : i18n("Select a folder to exclude")
-            folder: shortcuts.home
+            currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
 
             onAccepted: {
                 kcm.filteredModel.addFolder(fileUrls[0], fileDialogLoader.included)
