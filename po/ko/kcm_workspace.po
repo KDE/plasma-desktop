@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2023-03-01 00:31+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -94,12 +94,20 @@ msgstr "선택하기"
 msgid "Open by double-clicking instead"
 msgstr "대신 두 번 클릭하여 열기"
 
-#: ui/main.qml:171
+#: ui/main.qml:170
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "스크롤 바의 빈 공간을 클릭했을 때:"
 
-#: ui/main.qml:172
+#: ui/main.qml:171
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "클릭한 위치로 스크롤"
+
+#: ui/main.qml:189
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -107,18 +115,10 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "한 쪽 위/아래로 스크롤"
 
-#: ui/main.qml:184
+#: ui/main.qml:201
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "가운데 단추를 클릭했을 때 클릭한 위치로 스크롤"
-
-#: ui/main.qml:194
-#, kde-format
-msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
-msgid "Scrolls to the clicked location"
-msgstr "클릭한 위치로 스크롤"
 
 #: ui/main.qml:213
 #, kde-format

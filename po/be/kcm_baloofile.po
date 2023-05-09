@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2023-02-08 13:47\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Crowdin-File: /main/be/plasma-desktop/kcm_baloofile.po\n"
 "X-Crowdin-File-ID: 8631\n"
 
-#: ui/main.qml:57
+#: ui/main.qml:58
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -30,7 +30,7 @@ msgstr ""
 "Гэты параметр адключыць пошук файлаў у KRunner і меню запуску, а таксама і "
 "паказ метаданых з усіх праграм KDE."
 
-#: ui/main.qml:66
+#: ui/main.qml:67
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -42,100 +42,100 @@ msgstr ""
 "стварыць нанова. Гэта можа заняць некаторы час. Залежыць ад таго, колькі ў "
 "вас файлаў."
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Выдаліць даныя індэкса"
 
-#: ui/main.qml:88
+#: ui/main.qml:89
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr "Перш чым змены набудуць моц, трэба перазапусціць сістэму."
 
-#: ui/main.qml:92
+#: ui/main.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Перазапусціць"
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
 msgstr ""
 "Пошук файлаў дапамагае хутка знаходзіць усе вашыя файлы па іх змесціву."
 
-#: ui/main.qml:106
+#: ui/main.qml:107
 #, kde-format
 msgid "Enable File Search"
 msgstr "Уключыць пошук файлаў"
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgid "Also index file content"
 msgstr "Таксама індэксаваць змесціва файлаў"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "Індэксаваць схаваныя файлы і каталогі"
 
-#: ui/main.qml:159
+#: ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "Стан: %1, %2% завершана"
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, kde-format
 msgid "Pause Indexer"
 msgstr "Прыпыніць індэксаванне"
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
 msgstr "Узнавіць індэксаванне"
 
-#: ui/main.qml:177
+#: ui/main.qml:178
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "Бягучае індэксаванне: %1"
 
-#: ui/main.qml:182
+#: ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "Канфігурацыя вызначанага каталога:"
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "Пачаць індэксаванне каталога…"
 
-#: ui/main.qml:220
+#: ui/main.qml:221
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "Спыніць індэксаванне каталога…"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgid "Not indexed"
 msgstr "Не індэксуецца"
 
-#: ui/main.qml:272
+#: ui/main.qml:273
 #, kde-format
 msgid "Indexed"
 msgstr "Індэксаваны"
 
-#: ui/main.qml:302
+#: ui/main.qml:303
 #, kde-format
 msgid "Delete entry"
 msgstr "Выдаліць запіс"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Абярыце каталог для ўключэння"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Абярыце каталог для выключэння"

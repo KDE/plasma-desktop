@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2022-12-26 10:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -98,12 +98,20 @@ msgstr "Абірае іх"
 msgid "Open by double-clicking instead"
 msgstr "Замест гэтага адкрываць падвойным пстрыканнем"
 
-#: ui/main.qml:171
+#: ui/main.qml:170
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Пстрыканне па паласе пракручвання:"
 
-#: ui/main.qml:172
+#: ui/main.qml:171
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "Пракручвае да абранага размяшчэння"
+
+#: ui/main.qml:189
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -111,18 +119,10 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Пракручвае адну старонку ўверх ці ўніз"
 
-#: ui/main.qml:184
+#: ui/main.qml:201
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Пстрыканне сярэдняй кнопкай мышы пракручвае да абранага размяшчэння"
-
-#: ui/main.qml:194
-#, kde-format
-msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
-msgid "Scrolls to the clicked location"
-msgstr "Пракручвае да абранага размяшчэння"
 
 #: ui/main.qml:213
 #, kde-format

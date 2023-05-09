@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2023-02-23 18:20+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -95,12 +95,20 @@ msgstr "選択する"
 msgid "Open by double-clicking instead"
 msgstr "ダブルクリックで開く"
 
-#: ui/main.qml:171
+#: ui/main.qml:170
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "スクロールバーのスクロールエリアをクリックした際の挙動:"
 
-#: ui/main.qml:172
+#: ui/main.qml:171
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "クリックした位置にスクロール"
+
+#: ui/main.qml:189
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -108,18 +116,10 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "1ページ分上下にスクロール"
 
-#: ui/main.qml:184
+#: ui/main.qml:201
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "中クリックでクリックした位置にスクロール"
-
-#: ui/main.qml:194
-#, kde-format
-msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
-msgid "Scrolls to the clicked location"
-msgstr "クリックした位置にスクロール"
 
 #: ui/main.qml:213
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2021-12-31 10:43-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -92,12 +92,20 @@ msgstr "ਉਹਨਾਂ ਨੂੰ ਚੁਣੋ"
 msgid "Open by double-clicking instead"
 msgstr "ਇਸ ਦੀ ਬਜਾਏ ਦੋ ਵਾਰ ਕਲਿੱਕ ਕਰਕੇ ਖੋਲ੍ਹੋ"
 
-#: ui/main.qml:171
+#: ui/main.qml:170
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr ""
 
-#: ui/main.qml:172
+#: ui/main.qml:171
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr ""
+
+#: ui/main.qml:189
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -105,17 +113,9 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr ""
 
-#: ui/main.qml:184
+#: ui/main.qml:201
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr ""
-
-#: ui/main.qml:194
-#, kde-format
-msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
-msgid "Scrolls to the clicked location"
 msgstr ""
 
 #: ui/main.qml:213

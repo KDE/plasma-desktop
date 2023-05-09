@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2023-01-21 07:30+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: ui/main.qml:57
+#: ui/main.qml:58
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -27,7 +27,7 @@ msgstr ""
 "გამორთავს ძებნას KRunner-ის და launcher-ის მენიუებიდან და წაშლის გაფართოებულ "
 "მეტამონაცემებს KDE-ის ყველა აპლიკაციიდან."
 
-#: ui/main.qml:66
+#: ui/main.qml:67
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -39,23 +39,23 @@ msgstr ""
 "ინდექსი თავიდან შეიქმნება. ამას შეიძლება დრო დასჭირდეს, გააჩნია, რამდენი "
 "ფაილი გაქვთ."
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgid "Delete Index Data"
 msgstr "ინდექსის მონაცემების წაშლა"
 
-#: ui/main.qml:88
+#: ui/main.qml:89
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr "ცვლილებს ძალაში შესასვლელად აუცილებელია ჯერ სისტემა გადატვირთოთ."
 
-#: ui/main.qml:92
+#: ui/main.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "გადატვირთვა"
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
@@ -63,77 +63,77 @@ msgstr ""
 "ფაილის ძებნა საშუალებას გაძლევთ მოძებნოთ ყველა ფაილი მათი მნიშვნელობის "
 "მიხედვით."
 
-#: ui/main.qml:106
+#: ui/main.qml:107
 #, kde-format
 msgid "Enable File Search"
 msgstr "ფაილის ძებნის ჩართვა"
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgid "Also index file content"
 msgstr "ფაილის შემცველობის დაინდექსება"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "დამალული ფაილებისა და საქაღალდეების დაინდექსება"
 
-#: ui/main.qml:159
+#: ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "სტატუსი: %1, %2% დასრულდა"
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, kde-format
 msgid "Pause Indexer"
 msgstr "ინდექსერის შეჩერება"
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
 msgstr "ინდექსერის გაგრძელება"
 
-#: ui/main.qml:177
+#: ui/main.qml:178
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "მიმდინარეობს ინდექსირება: %1"
 
-#: ui/main.qml:182
+#: ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "საქაღალდეზე დამოკიდებული კონფიგურაცია:"
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "საქაღალდის დაინდექსების დაწყება…"
 
-#: ui/main.qml:220
+#: ui/main.qml:221
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "საქაღალდის დაინდექსების გაჩერება…"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgid "Not indexed"
 msgstr "დაინდექსებული არაა"
 
-#: ui/main.qml:272
+#: ui/main.qml:273
 #, kde-format
 msgid "Indexed"
 msgstr "დაინდექსებული"
 
-#: ui/main.qml:302
+#: ui/main.qml:303
 #, kde-format
 msgid "Delete entry"
 msgstr "ჩანაწერის წაშლა"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to include"
 msgstr "აირჩიეთ ჩასასმელი საქაღალდე"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "აირჩიეთ ამოსაღები საქაღალდე"

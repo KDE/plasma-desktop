@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2022-12-14 19:03+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#: ui/main.qml:57
+#: ui/main.qml:58
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -28,7 +28,7 @@ msgstr ""
 "e verrà rimossa la visualizzazione dei metadati estesi da tutte le "
 "applicazioni di KDE."
 
-#: ui/main.qml:66
+#: ui/main.qml:67
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -40,25 +40,25 @@ msgstr ""
 "essere ricreato da capo. Ci vorrà un po' di tempo, a seconda del numero di "
 "file."
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Elimina i dati indice"
 
-#: ui/main.qml:88
+#: ui/main.qml:89
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr ""
 "Il sistema deve essere riavviato affinché che queste modifiche abbiano "
 "effetto."
 
-#: ui/main.qml:92
+#: ui/main.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Riavvia"
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
@@ -66,77 +66,77 @@ msgstr ""
 "La ricerca nei file ti aiuta a trovare facilmente tutti i tuoi file in base "
 "al loro contenuto."
 
-#: ui/main.qml:106
+#: ui/main.qml:107
 #, kde-format
 msgid "Enable File Search"
 msgstr "Abilita la ricerca nei file"
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgid "Also index file content"
 msgstr "Indicizza anche il contenuto dei file"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "Indicizza file e cartelle nascosti"
 
-#: ui/main.qml:159
+#: ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "Stato: %1, completo al %2%"
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, kde-format
 msgid "Pause Indexer"
 msgstr "Metti in pausa l'indicizzatore"
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
 msgstr "Riprendi l'indicizzatore"
 
-#: ui/main.qml:177
+#: ui/main.qml:178
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "Sto attualmente indicizzando: %1"
 
-#: ui/main.qml:182
+#: ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "Configurazione specifica per la cartella:"
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "Inizia a indicizzare una cartella…"
 
-#: ui/main.qml:220
+#: ui/main.qml:221
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "Interrompi l'indicizzazione di una cartella…"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgid "Not indexed"
 msgstr "Non indicizzato"
 
-#: ui/main.qml:272
+#: ui/main.qml:273
 #, kde-format
 msgid "Indexed"
 msgstr "Indicizzato"
 
-#: ui/main.qml:302
+#: ui/main.qml:303
 #, kde-format
 msgid "Delete entry"
 msgstr "Elimina voce"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Seleziona una cartella da includere"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Seleziona una cartella da escludere"

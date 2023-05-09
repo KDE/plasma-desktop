@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2023-03-04 18:41+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: ui/main.qml:57
+#: ui/main.qml:58
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -28,7 +28,7 @@ msgstr ""
 "Tämä poistaa KRunnerissa ja käynnistysvalikoissa tiedostohaun käytöstä sekä "
 "poistaa laajennetun metatietonäkymän kaikista KDE-sovelluksista."
 
-#: ui/main.qml:66
+#: ui/main.qml:67
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -39,102 +39,102 @@ msgstr ""
 "indeksointi palautetaan käyttöön tuonnempana, koko indeksi on luotava alusta "
 "uudelleen, mikä tiedostojen määrän mukaan voi kestää kauan."
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Poista indeksitiedot"
 
-#: ui/main.qml:88
+#: ui/main.qml:89
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr ""
 "Järjestelmä on käynnistettävä uudelleen, jotta muutokset tulisivat voimaan."
 
-#: ui/main.qml:92
+#: ui/main.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Käynnistä uudelleen"
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
 msgstr "Tiedostohaulla löydät tiedostosi nopeasti niiden sisällön perusteella."
 
-#: ui/main.qml:106
+#: ui/main.qml:107
 #, kde-format
 msgid "Enable File Search"
 msgstr "Käytä tiedostohakua"
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgid "Also index file content"
 msgstr "Indeksoi myös tiedoston sisältö"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
 msgstr "Indeksoi piilotiedostot ja -kansiot"
 
-#: ui/main.qml:159
+#: ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
 msgstr "Tila: %1, %2 % valmiina"
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, kde-format
 msgid "Pause Indexer"
 msgstr "Keskeytä indeksointi"
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
 msgstr "Jatka indeksointia"
 
-#: ui/main.qml:177
+#: ui/main.qml:178
 #, kde-format
 msgid "Currently indexing: %1"
 msgstr "Nyt indeksoidaan: %1"
 
-#: ui/main.qml:182
+#: ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
 msgstr "Kansiokohtainen määritys:"
 
-#: ui/main.qml:209
+#: ui/main.qml:210
 #, kde-format
 msgid "Start indexing a folder…"
 msgstr "Valitse indeksoitava kansio…"
 
-#: ui/main.qml:220
+#: ui/main.qml:221
 #, kde-format
 msgid "Stop indexing a folder…"
 msgstr "Valitse kansio, jota ei indeksoida…"
 
 # Pudotusvalikko, josta valitaan, indeksoidaanko kansio vai ei
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgid "Not indexed"
 msgstr "Älä indeksoi"
 
 # Pudotusvalikko, josta valitaan, indeksoidaanko kansio vai ei
-#: ui/main.qml:272
+#: ui/main.qml:273
 #, kde-format
 msgid "Indexed"
 msgstr "Indeksoi"
 
-#: ui/main.qml:302
+#: ui/main.qml:303
 #, kde-format
 msgid "Delete entry"
 msgstr "Poista tietue"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Valitse mukaan otettava kansio"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Valitse pois jätettävä kansio"

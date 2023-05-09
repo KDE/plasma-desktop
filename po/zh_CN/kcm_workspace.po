@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -92,12 +92,20 @@ msgstr "选中"
 msgid "Open by double-clicking instead"
 msgstr "提示：双击可以打开对象"
 
-#: ui/main.qml:171
+#: ui/main.qml:170
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "点击滚动条空白位置："
 
-#: ui/main.qml:172
+#: ui/main.qml:171
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "直接滚动到点击位置"
+
+#: ui/main.qml:189
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -105,18 +113,10 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "向上或向下滚动一页"
 
-#: ui/main.qml:184
+#: ui/main.qml:201
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "提示：中间键点击即可直接滚动到点击位置"
-
-#: ui/main.qml:194
-#, kde-format
-msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
-msgid "Scrolls to the clicked location"
-msgstr "直接滚动到点击位置"
 
 #: ui/main.qml:213
 #, kde-format
