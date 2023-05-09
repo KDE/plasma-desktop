@@ -8,8 +8,9 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.3 as QQC2
 import org.kde.kirigami 2.12 as Kirigami
-import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
+import org.kde.kcmutils as KCM
+import org.kde.config as KConfig
 
 Kirigami.OverlaySheet {
 
@@ -75,7 +76,7 @@ Kirigami.OverlaySheet {
             onClicked: {
                 root.close();
 
-                KQuickControlsAddons.KCMShell.openSystemSettings("kcm_filetypes", componenChooser.storageId());
+                KCM.KCMLauncher.openSystemSettings("kcm_filetypes", componenChooser.storageId());
             }
         }
     }

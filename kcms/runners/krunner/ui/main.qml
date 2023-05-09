@@ -9,7 +9,9 @@ import QtQuick.Controls 2.15 as QQC2
 
 import org.kde.kcm 1.3 as KCM
 import org.kde.kirigami 2.19 as Kirigami
-import org.kde.kquickcontrolsaddons 2.0  // For KCMShell
+
+import org.kde.kcmutils as KCM
+import org.kde.config as KConfig
 
 KCM.SimpleKCM {
     id: root
@@ -170,11 +172,11 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18nc("@label", "Plugins:")
 
             sourceComponent: QQC2.Button {
-                enabled: KCMShell.authorize("kcm_krunnersettings.desktop").length > 0
+                enabled: KConfig.KAuthorized.authorizeControlModule("kcm_krunnersettings")
                 text: i18nc("@action:button", "Configure Enabled Search Plugins…")
                 icon.name: "settings-configure"
 
-                onClicked: KCMShell.openSystemSettings("kcm_plasmasearch")
+                onClicked: KCM.KCMLauncher.openSystemSettings("kcm_plasmasearch")
             }
         }
     }

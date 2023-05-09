@@ -12,10 +12,11 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.5
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 import org.kde.iconthemes as KIconThemes
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kcmutils as KCM
+import org.kde.config as KConfig
 
 import "code/tools.js" as Tools
 
@@ -163,10 +164,10 @@ ColumnLayout {
         }
 
         Button {
-            enabled: KQuickAddons.KCMShell.authorize("kcm_plasmasearch.desktop").length > 0
+            enabled: KConfig.KAuthorized.authorizeControlModule("kcm_plasmasearch")
             icon.name: "settings-configure"
             text: i18nc("@action:button", "Configure Enabled Search Plugins…")
-            onClicked: KQuickAddons.KCMShell.openSystemSettings("kcm_plasmasearch")
+            onClicked: KCM.KCMLauncher.openSystemSettings("kcm_plasmasearch")
         }
 
         Item {

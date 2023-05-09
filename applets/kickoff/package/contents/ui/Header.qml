@@ -17,7 +17,8 @@ import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.13 as Kirigami
 import org.kde.coreaddons 1.0 as KCoreAddons
-import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+import org.kde.kcmutils as KCM
+import org.kde.config as KConfig
 
 PlasmaExtras.PlasmoidHeading {
     id: root
@@ -54,7 +55,7 @@ PlasmaExtras.PlasmoidHeading {
 
         PC3.RoundButton {
             id: avatar
-            visible: KQuickAddons.KCMShell.authorize("kcm_users.desktop").length > 0
+            visible: KConfig.KAuthorized.authorizeControlModule("kcm_users")
             hoverEnabled: true
             Layout.fillHeight: true
             Layout.minimumWidth: height
@@ -100,7 +101,7 @@ PlasmaExtras.PlasmoidHeading {
                 plasmoid.rootItem.contentArea.forceActiveFocus(Qt.TabFocusReason)
             }
 
-            onClicked: KQuickAddons.KCMShell.openSystemSettings("kcm_users")
+            onClicked: KCM.KCMLauncher.openSystemSettings("kcm_users")
         }
 
         MouseArea {
