@@ -13,7 +13,7 @@ import QtQml 2.15
 import QtQml.Models 2.3
 
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kcm 1.4 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.private.kcms.keys 2.0 as Private
 
 KCM.AbstractKCM {

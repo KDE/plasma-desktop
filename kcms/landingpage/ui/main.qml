@@ -10,7 +10,7 @@ import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 import QtQuick.Window 2.2
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kcm 1.4 as KCM
+import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
     id: root

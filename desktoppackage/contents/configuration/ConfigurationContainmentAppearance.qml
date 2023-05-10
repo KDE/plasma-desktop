@@ -12,7 +12,7 @@ import QtQml 2.15
 
 import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kcm 1.4
+import org.kde.kcmutils
 import org.kde.plasma.plasmoid 2.0
 
 Item {
