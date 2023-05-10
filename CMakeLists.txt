@@ -80,6 +80,7 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Sonnet
     Package
     IconThemes
+    XmlGui
 )
 if (QT_MAJOR_VERSION EQUAL "5")
     find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS KDELibs4Support) # kcms/dateandtime
