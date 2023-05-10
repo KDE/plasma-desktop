@@ -138,7 +138,7 @@ void KCMSplashScreen::addKPackageToModel(const KPackage::Package &pkg)
     const static QString writableLocation = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
     QStandardItem *row = new QStandardItem(pkg.metadata().name());
     row->setData(pkg.metadata().pluginId(), PluginNameRole);
-    row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenshotRole);
+    row->setData(pkg.fileUrl("previews", QStringLiteral("splash.png")), ScreenshotRole);
     row->setData(pkg.metadata().description(), DescriptionRole);
     row->setData(pkg.path().startsWith(writableLocation), UninstallableRole);
     row->setData(false, PendingDeletionRole);
