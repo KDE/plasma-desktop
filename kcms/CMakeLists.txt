@@ -34,6 +34,7 @@ add_subdirectory(spellchecking)
 add_subdirectory(qtquicksettings)
 add_subdirectory(tablet)
 add_subdirectory(touchscreen)
+add_subdirectory(touchpad2)
 
 add_subdirectory(workspaceoptions)
 if (KF6Baloo_FOUND)
