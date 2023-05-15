@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_deviceautomounter",
-        "Description": "Configure automatic handling of removable storage media",
+        "Description": "Configure automatic mounting of disks and volumes",
         "Description[ar]": "اضبط التّعامل الآليّ من مساحات تخزين الوسائط القابلة للإزالة",
         "Description[az]": "Xarici məlumat daşıyıcılarının avtomatik qoşulmasını ayarlamaq",
         "Description[be]": "Наладжванне аўтамытычнага апрацоўвання медыяфайлаў на рухомых носьбітах",
@@ -46,7 +46,7 @@
         "Description[zh_CN]": "配置移动存储设备的自动处理方式",
         "Description[zh_TW]": "設定可移除儲存裝置的自動處理",
         "Icon": "drive-removable-media",
-        "Name": "Removable Devices",
+        "Name": "Device Auto-Mount",
         "Name[ar]": "الأجهزة القابلة للإزالة",
         "Name[az]": "ÇIxarılabilən Cihazlar",
         "Name[be]": "Рухомыя носьбіты",
@@ -101,7 +101,7 @@
         "Name[zh_TW]": "可移除裝置"
     },
     "X-DocPath": "kcontrol/solid-device-automounter/index.html",
-    "X-KDE-Keywords": "Mount,Removable,Devices,Automatic",
+    "X-KDE-Keywords": "Automount,Mount,Disk,Disks,Removable,Device,Devices,Automatic",
     "X-KDE-Keywords[ar]": "ضم,إزالة,أجهزة,آلي",
     "X-KDE-Keywords[ast]": "Montar,Montaxe,Estrayer,Estraición,Estrayible,Preséu,Preseos",
     "X-KDE-Keywords[az]": "Mount,Removable,Devices,Automatic,Qoşulma,Çıxarılabilən,Cihazlar,Avtomatik",
