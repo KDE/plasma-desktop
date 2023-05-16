@@ -169,37 +169,6 @@ PlasmaCore.Dialog {
                 onClicked: configDialog.visibilityMode = Panel.Global.AutoHide
             }
         }
-        RowLayout {
-            spacing: PlasmaCore.Units.largeSpacing
-            Layout.leftMargin: PlasmaCore.Units.largeSpacing
-            Layout.rightMargin: PlasmaCore.Units.largeSpacing
-
-            Item {
-                Layout.preferredWidth: menuColumn.width / 5
-                Layout.rightMargin: PlasmaCore.Units.largeSpacing
-            }
-
-            PanelRepresentation {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Above")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Like \"Auto-Hide\" but the panel remains visible as long as no windows are covering it up")
-                Layout.alignment: Qt.AlignTop
-                alignment: panel.alignment
-                windowVisible: true
-                windowZ: 1
-                checked: configDialog.visibilityMode === Panel.Global.LetWindowsCover
-                onClicked: configDialog.visibilityMode = Panel.Global.LetWindowsCover
-            }
-
-            PanelRepresentation {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Below")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Like \"Always Visible\", but maximized and tiled windows go under the panel as though it didn't exist")
-                Layout.alignment: Qt.AlignTop
-                alignment: panel.alignment
-                windowVisible: true
-                checked: configDialog.visibilityMode === Panel.Global.WindowsGoBelow
-                onClicked: configDialog.visibilityMode = Panel.Global.WindowsGoBelow
-            }
-        }
         PlasmaCore.SvgItem {
             Layout.fillWidth: true
             elementId: "horizontal-line"
