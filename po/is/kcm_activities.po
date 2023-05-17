@@ -1,0 +1,165 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# gummi <gudmundure@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2023-03-12 22:04+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.3\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "Athafnastillingar"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Búa til nýja athöfn"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "Tákn:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Heiti:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "Lýsing:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "Gagnaleynd:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Ekki fylgjast með virkni í þessari athöfn"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Flýtilyklar til að skipta á milli:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Grunnstilla athöfn %1"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Eyða athöfn %1"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "Búa til nýtt..."
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Eyða athöfn"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "Viltu örugglega eyða '%1'?"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "Eyða athöfn"
+
+#~ msgid "Activities"
+#~ msgstr "Athafnir"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "Villa við að hlaða QML-skrár. Athugaðu uppsetninguna.\n"
+#~ "%1 vantar"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "Búa til"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Í hve marga mánuði á að geyma feril athafnarinnar"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Hvaða gögn á að geyma í ferli athafnar"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "Listi yfir forrit sem á að vista í athafnaferli"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "Listi yfir forrit sem á ekki að vista í athafnaferli"
+
+#~ msgid "Switching"
+#~ msgstr "Skipt á milli"
+
+#~ msgid "Activity switching"
+#~ msgstr "Skipt á milli athafna"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "Fletta í gegnum athafnir"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "Fletta í gegnum athafnir (öfug röð)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Muna fyrir hverja athöfn (krefst endurræsingar)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Núverandi sýndarskjáborð:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Flýtilyklar:"
+
+#~ msgid "General"
+#~ msgstr "Almennt"

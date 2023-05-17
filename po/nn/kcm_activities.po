@@ -1,0 +1,165 @@
+# Translation of kcm_activities5 to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2016, 2018, 2019, 2020.
+# Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2021-12-15 12:28+0100\n"
+"Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "Aktivitetsoppsett"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Legg til ny aktivitet"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "Ikon:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Namn:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "Skildring:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "Personvern:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Ikkje spor bruk i denne aktiviteten"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Snøggtast for byte:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Set opp %1-aktivitet"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Slett %1-aktivitet"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "Lag ny …"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Slett aktivitet"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "Er du sikker på at du vil sletta «%1»?"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "Slett aktivitet"
+
+#~ msgid "Activities"
+#~ msgstr "Aktivitetar"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "Feil ved lasting av QML-filer. Sjå til at alt er rett installert.\n"
+#~ "Manglar %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "Opprett"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Kor mange månadar å lagra i aktivitetsloggen"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Kva data som skal lagrast i aktivitetsloggen"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "Oversikt over program å lagra aktivitetslogg for"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "Oversikt over program aktivitetslogg ikkje skal lagrast for"
+
+#~ msgid "Switching"
+#~ msgstr "Byte"
+
+#~ msgid "Activity switching"
+#~ msgstr "Aktivitetsbyte"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "Bla gjennom aktivitetar"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "Bla gjennom aktivitetar (baklengs)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Hugs for kvar aktivitet (treng omstart)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Gjeldande virtuelle skrivebord:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Snarvegar:"

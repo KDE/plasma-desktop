@@ -1,0 +1,254 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2016.
+# Tommi Nieminen <translator@legisign.org>, 2019, 2020, 2021.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2021-07-22 13:29+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "Aktiviteetin asetukset"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Luo uusi aktiviteetti"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "Kuvake:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Nimi:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "Kuvaus:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "Yksityisyys:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Älä seuraa tämän aktiviteetin käyttöä"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Pikanäppäin vaihtamiseen:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Aktiviteetin %1 asetukset"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Poista aktiviteetti %1"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "Luo uusi…"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Poista aktiviteetti"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "Haluatko varmasti poistaa aktiviteetin ”%1”?"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "Poista aktiviteetti"
+
+#~ msgid "Activities"
+#~ msgstr "Aktiviteetit"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "Virhe ladattaessa QML-tiedostoja. Tarkista asennuksesi.\n"
+#~ "%1 puuttuu"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "Luo"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Montako kuukautta aktiviteetin historiaa säilytetään"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Mitä tietoja aktiviteetin historiassa säilytetään"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "Sovellukset, joiden aktiviteettihistoria tallennetaan"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "Sovellukset, joiden aktiviteettihistoriaa ei tallenneta"
+
+#~ msgid "Switching"
+#~ msgstr "Vaihto"
+
+#~ msgid "Activity switching"
+#~ msgstr "Aktiviteettien vaihto"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "Selaa aktiviteetteja"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "Selaa aktiviteetteja (käänteisessä järjestyksessä)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Muista aktiviteeteittain (vaatii uudelleeenkäynnistyksen)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Nykyinen virtuaalityöpöytä:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Pikanäppäimet:"
+
+#~ msgid "General"
+#~ msgstr "Yleistä"
+
+#~ msgid "Privacy"
+#~ msgstr "Tietosuoja"
+
+#~ msgctxt "unlimited number of months"
+#~ msgid "Forever"
+#~ msgstr "Ikuisesti"
+
+#~ msgid "Forget the last hour"
+#~ msgstr "Unohda viime tunti"
+
+#~ msgid "Forget the last two hours"
+#~ msgstr "Unohda viime kaksi tuntia"
+
+#~ msgid "Forget a day"
+#~ msgstr "Unohda viime päivä"
+
+#~ msgid "Forget everything"
+#~ msgstr "Unohda kaikki"
+
+#~ msgctxt "unit of time. months to keep the history"
+#~ msgid " month"
+#~ msgid_plural " months"
+#~ msgstr[0] " kuukausi"
+#~ msgstr[1] " kuukautta"
+
+# Aiemmin suomennettu ”for” välilyönnillä, koska etuliitettä ei tarvita (for five months → viisi kuukautta), ilmeisesti tässä voi tehdä samoin
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "For "
+#~ msgstr " "
+
+#~ msgid "Cleared the activity history."
+#~ msgstr "Aktiviteetin historia tyhjennetty."
+
+#~ msgid "Keep history:"
+#~ msgstr "Säilytä historia:"
+
+#~ msgid "Clear History"
+#~ msgstr "Tyhjennä historia"
+
+#~ msgid "For a&ll applications"
+#~ msgstr "&Kaikkien sovellusten tiedostot"
+
+#~ msgid "&Do not remember"
+#~ msgstr "&Älä muista tiedostoja"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "&Vain valituille sovelluksille:"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "Muista avatut tiedostot:"
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "Estä sovellukset, joita ei ole luettelossa"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Delete Activity"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete "
+#~ msgstr "Poista aktiviteetti"
+
+#~ msgid "Other"
+#~ msgstr "Muuta"
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply"
+#~ msgstr "Käytä"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "Peru"
+
+#~ msgid "Activity information"
+#~ msgstr "Aktiviteetin tiedot"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Tausta"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change..."
+#~ msgstr "Muuta…"
+
+# Suomennettu yhdeksi välilyönniksi, koska etuliitettä ei tarvita. Esimerkiksi ”Säilytä historia 5 kuukautta”
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "for "
+#~ msgstr " "

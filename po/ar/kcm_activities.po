@@ -1,0 +1,252 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2017.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2021-06-18 23:19+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "إعدادات النّشاط"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "أنشئ نشاطًا جديدًا"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "الأيقونة:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "الاسم:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "الوصف:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "الخصوصية:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr " لا تتعقّب الاستخدام في هذا النّشاط"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "اختصار التّبديل إلى هذا النّشاط:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "اضبط النشاط %1"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "احذف النّشاط %1"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "أنشئ جديد..."
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "احذف النّشاط"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "أمتأكّد من حذف ’%1‘؟"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "احذف النّشاط"
+
+#~ msgid "Activities"
+#~ msgstr "الأنشطة"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "خطأ في تحميل ملفّات QML. تحقّق من التّثبيت.\n"
+#~ "ينقصه %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "أنشئ"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "كم شهر تحتفظ بتاريخ النشاط"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "أي بيانات يحتفظ بها في تاريخ النشاط"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "قائمة التطبيقات التي يحتفظ بها في تاريخ النشاط"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "قائمة التطبيقات التي لا يحتفظ بها في تاريخ النشاط"
+
+#~ msgid "Switching"
+#~ msgstr "التّبديل"
+
+#~ msgid "Activity switching"
+#~ msgstr "مبدل الأنشطة"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "تنقّل بين الأنشطة"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "تنقّل بين الأنشطة (بالعكس)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "تذكّر لكلّ نشاط (يحتاج إعادة تشغيل)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "سطح المكتب الإفتراضي الحالي:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "الاختصارات:"
+
+#~ msgid "General"
+#~ msgstr "عامّ"
+
+#~ msgid "Privacy"
+#~ msgstr "السّياسة"
+
+#~ msgctxt "unlimited number of months"
+#~ msgid "Forever"
+#~ msgstr "للأبد"
+
+#~ msgid "Forget the last hour"
+#~ msgstr "انسَ آخر ساعة"
+
+#~ msgid "Forget the last two hours"
+#~ msgstr "انسَ آخر ساعتين"
+
+#~ msgid "Forget a day"
+#~ msgstr "انسَ يومًا واحدًا"
+
+#~ msgid "Forget everything"
+#~ msgstr "انسَ كلّ شيء"
+
+#~ msgctxt "unit of time. months to keep the history"
+#~ msgid " month"
+#~ msgid_plural " months"
+#~ msgstr[0] " (لا أشهر)"
+#~ msgstr[1] " (شهر واحد)"
+#~ msgstr[2] " (شهران)"
+#~ msgstr[3] " أشهر"
+#~ msgstr[4] " شهرًا"
+#~ msgstr[5] " شهر"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "For "
+#~ msgstr "لمدة"
+
+#~ msgid "Cleared the activity history."
+#~ msgstr "امسح تاريخ النشاط"
+
+#~ msgid "Keep history:"
+#~ msgstr "أبقِ التاريخ:"
+
+#~ msgid "Clear History"
+#~ msgstr "امسح التاريخ "
+
+#~ msgid "For a&ll applications"
+#~ msgstr "ل&كلّ التّطبيقات"
+
+#~ msgid "&Do not remember"
+#~ msgstr "لا تت&ذكّر"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "ف&قط لتطبيقات محدّدة:"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "تذكّر المستندات المفتوحة:"
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "امنع كلّ التّطبيقات التي ليست في هذه القائمة"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Delete Activity"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete "
+#~ msgstr "احذف النّشاط"
+
+#~ msgid "Other"
+#~ msgstr "أخرى"
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply"
+#~ msgstr "طبّق"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "ألغِ"
+
+#~ msgid "Activity information"
+#~ msgstr "معلومات النّشاط"
+
+#~ msgid "Wallpaper"
+#~ msgstr "الخلفيّة"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change..."
+#~ msgstr "غيّر..."

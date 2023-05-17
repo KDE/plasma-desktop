@@ -1,0 +1,253 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2021-06-10 12:26+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "Veiklos nuostatos"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Sukurti naują veiklą"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "Piktograma:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Pavadinimas:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "Aprašas:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "Privatumas:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Nesekti šios veiklos naudojimo"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Spartieji klavišai perjungimui:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Konfigūruoti %1 veiklą"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Ištrinti %1 veiklą"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "Sukurti naują…"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Ištrinti veiklą"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "Ar tikrai norite ištrinti „%1“?"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "Ištrinti veiklą"
+
+#~ msgid "Activities"
+#~ msgstr "Veiklos"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "Klaida įkeliant QML failus. Patikrinkite sistemoje įdiegtus paketus.\n"
+#~ "Trūksta %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "Sukurti"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Kiek mėnesių saugoti veiklos žurnalą"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Kuriuos duomenis laikyti veiklos žurnale"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "Programų, kurių veiklos istoriją įrašyti, sąrašas"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "Programų, kurių veiklos istorijos neįrašyti, sąrašas"
+
+#~ msgid "Switching"
+#~ msgstr "Perjungimas"
+
+#~ msgid "Activity switching"
+#~ msgstr "Persijungimas tarp veiklų"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "Eiti per veiklas"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "Eiti per veiklas (atvirkščiai)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Įsiminti kiekvienai veiklai (reikia paleisti iš naujo)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Dabartinis virtualus darbalaukis:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Spartieji klavišai:"
+
+#~ msgid "General"
+#~ msgstr "Bendra"
+
+#~ msgid "Privacy"
+#~ msgstr "Privatumas"
+
+#~ msgctxt "unlimited number of months"
+#~ msgid "Forever"
+#~ msgstr "Amžinai"
+
+#~ msgid "Forget the last hour"
+#~ msgstr "Pamiršti apie paskutinę valandą"
+
+#~ msgid "Forget the last two hours"
+#~ msgstr "Pamiršti apie paskutines dvi valandas"
+
+#~ msgid "Forget a day"
+#~ msgstr "Pamiršti apie paskutinę dieną"
+
+#~ msgid "Forget everything"
+#~ msgstr "Viską pamiršti"
+
+#~ msgctxt "unit of time. months to keep the history"
+#~ msgid " month"
+#~ msgid_plural " months"
+#~ msgstr[0] " mėnesį"
+#~ msgstr[1] " mėnesius"
+#~ msgstr[2] " mėnesių"
+#~ msgstr[3] " mėnesį"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "For "
+#~ msgstr " "
+
+#~ msgid "Cleared the activity history."
+#~ msgstr "Veiklos žurnalas išvalytas."
+
+#~ msgid "Keep history:"
+#~ msgstr "Laikyti įrašus žurnale:"
+
+#~ msgid "Clear History"
+#~ msgstr "Išvalyti žurnalą"
+
+#~ msgid "For a&ll applications"
+#~ msgstr "&Visų programų"
+
+#~ msgid "&Do not remember"
+#~ msgstr "&Neprisiminti"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "&Tik nurodytų programų:"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "Prisiminti atvertus dokumentus:"
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "Jei programų šiame sąraše nėra, įtraukti jas į juodąjį sąrašą"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Delete Activity"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete "
+#~ msgstr "Ištrinti veiklą"
+
+#~ msgid "Other"
+#~ msgstr "Kita"
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply"
+#~ msgstr "Taikyti"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "Atsisakyti"
+
+#~ msgid "Activity information"
+#~ msgstr "Veiklos informacija"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Darbalaukio fonas"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change..."
+#~ msgstr "Keisti..."
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "for "
+#~ msgstr " "

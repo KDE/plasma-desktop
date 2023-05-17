@@ -1,0 +1,218 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Kishore G <kishore96@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2021-08-05 20:55+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.07.90\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "செயல்பாடு அமைப்புகள்"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "புதிய செயல்பாட்டை உருவாக்குதல்"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "சின்னம்:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "பெயர்:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "விவரணம்:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "தனியுரிமை:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "இந்த செயல்பாட்டில் பயன்படுத்துபவற்றை கண்காணிக்காதே"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "இதற்கு தாவுவதற்கான சுருக்குவழி:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "%1 செயல்பாட்டை அமை"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "%1 செயல்பாட்டை நீக்கு"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "புதியதை உருவாக்கு…"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "செயல்பாட்டை நீக்குதல்"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "\"%1\" என்பதை உறுதியாக நீக்க விரும்புகிறீர்களா?"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "செயல்பாட்டை நீக்குதல்"
+
+#~ msgid "Activities"
+#~ msgstr "செயல்பாடுகள்"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "QML கோப்புகளை ஏற்றுவதில் சிக்கல். உங்கள் நிறுவலை சரிபாருங்கள்.\n"
+#~ "%1 என்பதை காணவில்லை"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "உருவாக்கு"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "எத்தனை மாதங்களுக்கு செயல்பாடு வரலாற்றை வைத்திருக்க வேண்டும்"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "எந்த விவரங்களை செயல்பாடு வரலாற்றில் வைத்திருக்க வேண்டும்"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "எந்த செயலிகளுக்கான செயல்பாடு வரலாற்றை சேமிக்க வேண்டுமோ, அவற்றின் பட்டியல்"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "எந்த செயலிகளுக்கான செயல்பாடு வரலாற்றை சேமிக்க கூடாதோ, அவற்றின் பட்டியல்"
+
+#~ msgid "Switching"
+#~ msgstr "தாவுதல்"
+
+#~ msgid "Activity switching"
+#~ msgstr "செயல்பாடுகளுக்கிடையே தாவுதல்"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "செயல்பாடுகளின் பட்டியலில் முன்னோக்கி செல்"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "செயல்பாடுகளின் பட்டியலில் பின்னோக்கி செல்"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "ஒவ்வொரு செயல்பாட்டிற்கும் நினைவில் கொள்"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "தற்போதைய மெய்நிகர் பணிமேடை:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "சுருக்குவழிகள்:"
+
+#~ msgid "General"
+#~ msgstr "பொது"
+
+#~ msgid "Privacy"
+#~ msgstr "தனியுரிமை"
+
+#~ msgctxt "unlimited number of months"
+#~ msgid "Forever"
+#~ msgstr "என்றென்றும்"
+
+#~ msgid "Forget the last hour"
+#~ msgstr "கடைசி 1 மணிநேரத்தை மறந்துவிடு"
+
+#~ msgid "Forget the last two hours"
+#~ msgstr "கடைசி 2 மணிநேரத்தை மறந்துவிடு"
+
+#~ msgid "Forget a day"
+#~ msgstr "ஒரு நாளை மறந்துவிடு"
+
+#~ msgid "Forget everything"
+#~ msgstr "அனைத்தையும் மறந்துவிடு"
+
+#~ msgctxt "unit of time. months to keep the history"
+#~ msgid " month"
+#~ msgid_plural " months"
+#~ msgstr[0] " மாதத்திற்கு"
+#~ msgstr[1] " மாதங்களுக்கு"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "For "
+#~ msgstr " "
+
+#~ msgid "Cleared the activity history."
+#~ msgstr "செயல்பாடு வரலாறு மறக்கப்பட்டது."
+
+#~ msgid "Keep history:"
+#~ msgstr "வரலாற்றை வைத்திரு:"
+
+#~ msgid "Clear History"
+#~ msgstr "வரலாற்றை மற"
+
+#~ msgid "For a&ll applications"
+#~ msgstr "&அனைத்து செயலிகளுக்கும்"
+
+#~ msgid "&Do not remember"
+#~ msgstr "&நினைவில் கொள்ளாதே"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "குறிப்பிட்ட செயலிகளுக்கு மட்டும்:"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "திறக்கும் ஆவணங்களை நினைவில் கொள்:"
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "பட்டியலில் இல்லாத செயலிகளுக்கு நினைவில் கொள்ளாதே"

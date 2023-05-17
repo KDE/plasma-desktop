@@ -1,0 +1,169 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2022-10-12 04:08\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.1\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-desktop/kcm_activities5.po\n"
+"X-Crowdin-File-ID: 8629\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "Налады пакояў"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Стварыць новы пакой"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "Значок:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Назва:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "Апісанне:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "Прыватнасць:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Не адсочваць выкарыстанне гэтага пакоя"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Спалучэнне клавіш для пераключэння:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Наладзіць пакой \"%1\""
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Выдаліць пакой \"%1\""
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "Стварыць новы…"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Выдаліць пакой"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "Сапраўды хочаце выдаліць \"%1\"?"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "Выдаліць пакой"
+
+#~ msgid "Activities"
+#~ msgstr "Пакоі"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "Не ўдалося загрузіць файлы QML. Праверце, ці ўсё ўсталявана правільна.\n"
+#~ "Няма %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "Стварыць"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Колькасць месяцаў захоўвання гісторыі"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Тыпы даных для захоўвання ў гісторыі"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "Спіс праграм, гісторыя якіх будзе захоўвацца"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "Спіс праграм, гісторыя якіх не будзе захоўвацца"
+
+#~ msgid "Switching"
+#~ msgstr "Пераключэнне"
+
+#~ msgid "Activity switching"
+#~ msgstr "Пераключэнне пакояў"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "Пераход паміж пакоямі"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "Пераход паміж пакоямі (адваротны кірунак)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Запамінаць для кожнага пакоя (спатрэбіцца перазапуск)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Бягучы віртуальны працоўны стол:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Спалучэнні клавіш:"
+
+#~ msgid "General"
+#~ msgstr "Асноўныя"

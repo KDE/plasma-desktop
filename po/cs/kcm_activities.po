@@ -1,0 +1,161 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Vít Pelčák <vit@pelcak.org>, 2016, 2017, 2018, 2019, 2020.
+# Vit Pelcak <vit@pelcak.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2021-06-02 16:01+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "Nastavení aktivity"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Vytvořit novou aktivitu"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Název:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "Popis:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "Soukromí:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Nesledovat použití této aktivity"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Zkratky pro přepínání:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Nastavit aktivitu %1"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Smazat aktivitu %1"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "Vytvořit novou…"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Smazat aktivitu"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "Opravdu si přejete smazat '%1'?"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "Smazat aktivitu"
+
+#~ msgid "Activities"
+#~ msgstr "Aktivity"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr "Chyba při načítání souborů QML. Zkontrolujte si instalaci. Chybí %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "Vytvořit"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Kolik měsíců ponechat v historii aktivit"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Která data ponechat v historii aktivity"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "Seznam aplikací jejichž historii aktivit ukládat"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "Seznam aplikací jejichž historii aktivit neukládat"
+
+#~ msgid "Switching"
+#~ msgstr "Přepínání"
+
+#~ msgid "Activity switching"
+#~ msgstr "Přepínání aktivit"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "Procházet aktivity"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "Procházet aktivity (pozpátku)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Zapamatovat si každou aktivitu (vyžaduje restart)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Současná virtuální plocha:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Zkratky:"

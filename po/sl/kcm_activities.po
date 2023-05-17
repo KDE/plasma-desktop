@@ -1,0 +1,255 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Mernik <andrejm@ubuntu.si>, 2016.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2022-07-21 07:52+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "Nastavitve dejavnosti"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Ustvari novo dejavnost"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Ime:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "Opis:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "Zasebnost:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Ne sledi uporabi te dejavnosti"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Bližnjica za preklop:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Nastavi %1 dejavnost"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Izbriši %1 dejavnost"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "Ustvari novo…"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Izbriši dejavnost"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "Ali ste prepričani, da želite izbrisati '%1'?"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "Izbriši dejavnost"
+
+#~ msgid "Activities"
+#~ msgstr "Dejavnosti"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "Napaka med nalaganjem datotek QML. Preverite vašo namestitev.\n"
+#~ "Manjka: %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "Ustvari"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Koliko mesecev naj se hrani zgodovina dejavnosti"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Katere podatke hraniti v zgodovini dejavnosti"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "Seznam programov z zgodovino dejavnosti za shranjevanje"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "Seznam programov z zgodovino dejavnosti, ki je ne bi shranili"
+
+#~ msgid "Switching"
+#~ msgstr "Preklapljanje"
+
+#~ msgid "Activity switching"
+#~ msgstr "Preklapljanje med dejavnostmi"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "Sprehod med dejavnostmi"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "Sprehod med dejavnostmi (obratno)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Zapomni si vsako dejavnost (zahteva ponovni zagon)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Trenutno virtualno namizje:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Bližnjice:"
+
+#~ msgid "General"
+#~ msgstr "Splošno"
+
+#~ msgid "Privacy"
+#~ msgstr "Zasebnost"
+
+#~ msgctxt "unlimited number of months"
+#~ msgid "Forever"
+#~ msgstr "Trajno"
+
+#~ msgid "Forget the last hour"
+#~ msgstr "Pozabi zadnjo uro"
+
+#~ msgid "Forget the last two hours"
+#~ msgstr "Pozabi zadnji dve uri"
+
+#~ msgid "Forget a day"
+#~ msgstr "Pozabi dan"
+
+#~ msgid "Forget everything"
+#~ msgstr "Pozabi vse"
+
+#~ msgctxt "unit of time. months to keep the history"
+#~ msgid " month"
+#~ msgid_plural " months"
+#~ msgstr[0] " mesec"
+#~ msgstr[1] " meseca"
+#~ msgstr[2] " meseci"
+#~ msgstr[3] " mesecev"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "For "
+#~ msgstr "Za "
+
+#~ msgid "Cleared the activity history."
+#~ msgstr "Zgodovina dejavnosti je počiščena."
+
+#~ msgid "Keep history:"
+#~ msgstr "Ohrani zgodovino:"
+
+#~ msgid "Clear History"
+#~ msgstr "Počisti zgodovino"
+
+#~ msgid "For a&ll applications"
+#~ msgstr "Z&a vse programe"
+
+#~ msgid "&Do not remember"
+#~ msgstr "Ne zapomni si"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "Samo za določene programe:"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "Zapomni si odprte dokumente:"
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "Na črni seznam daj vse programe, ki niso na tem seznamu"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Delete Activity"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete "
+#~ msgstr "Izbriši dejavnost"
+
+#~ msgid "Other"
+#~ msgstr "Drugo"
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply"
+#~ msgstr "Uveljavi"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "Prekliči"
+
+#~ msgid "Activity information"
+#~ msgstr "Podrobnosti o dejavnosti"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Slika ozadja"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change..."
+#~ msgstr "Spremeni ..."
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "for "
+#~ msgstr "za "

@@ -1,0 +1,167 @@
+# 百武 朋大 <tomhioo@outlook.jp>, 2019.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2019, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_activities\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2022-08-20 23:03-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "アクティビティの設定"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "新しいアクティビティの作成"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "アイコン:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "名前:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "説明:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "プライバシー:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "このアクティビティの使用状況を追跡しない"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "切り替えのショートカット:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "%1 アクティビティを設定"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "%1 アクティビティを削除"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "新しいアクティビティを作成..."
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "アクティビティを削除"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "本当に %1 を削除しますか？"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "アクティビティを削除"
+
+#~ msgid "Activities"
+#~ msgstr "アクティビティ"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "QML ファイルの読み込みにエラーが発生しました。インストールを確認してくださ"
+#~ "い。\n"
+#~ "%1 が不足しています"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "作成"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "アクティビティの履歴を残す月数"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "アクティビティの履歴で残すデータ"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "アクティビティの履歴を保存するアプリケーションのリスト"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "アクティビティの履歴を保存しないアプリケーションのリスト"
+
+#~ msgid "Switching"
+#~ msgstr "変更"
+
+#~ msgid "Activity switching"
+#~ msgstr "アクティビティの変更"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "アクティビティ間を移動"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "アクティビティ間を移動 (反転)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "それぞれのアクティビティごとに記憶する (再起動が必要)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "現在の仮想デスクトップ:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "ショートカット:"
+
+#~ msgid "General"
+#~ msgstr "全般"

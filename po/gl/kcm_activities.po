@@ -1,0 +1,250 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2016.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2019-10-19 22:08+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.11.70\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "Configuración da actividade"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "Crear unha actividade"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "Icona:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Nome:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "Descrición:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "Intimidade:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "Non facer seguimento do uso desta actividade."
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "Atallo para cambiar:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "Configurar a actividade %1"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "Eliminar a actividade %1"
+
+#: ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "Create New..."
+msgid "Create New…"
+msgstr "Crear unha nova…"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "Eliminar a actividade"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "Seguro que quere eliminar «%1»?"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "Eliminar a actividade"
+
+#~ msgid "Activities"
+#~ msgstr "Actividades"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "Produciuse un erro ao cargar os ficheiro de QML. Revise a instalación.\n"
+#~ "Falta %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "Crear"
+
+#, fuzzy
+#~| msgid "Cleared the activity history."
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Borrouse o historial de actividade."
+
+#, fuzzy
+#~| msgid "Cleared the activity history."
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Borrouse o historial de actividade."
+
+#~ msgid "Switching"
+#~ msgstr "Cambio"
+
+#~ msgid "Activity switching"
+#~ msgstr "Cambio de actividade"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "Navegar polas actividades"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "Navegar polas actividades (ao revés)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Lembrar para cada actividade (require reiniciar)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Escritorio virtual actual:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Atallos:"
+
+#~ msgid "General"
+#~ msgstr "Xeral"
+
+#~ msgid "Privacy"
+#~ msgstr "Privacidade"
+
+#~ msgctxt "unlimited number of months"
+#~ msgid "Forever"
+#~ msgstr "Para sempre"
+
+#~ msgid "Forget the last hour"
+#~ msgstr "Esquecer a última hora"
+
+#~ msgid "Forget the last two hours"
+#~ msgstr "Esquecer as últimas dúas horas"
+
+#~ msgid "Forget a day"
+#~ msgstr "Esquecer un día"
+
+#~ msgid "Forget everything"
+#~ msgstr "Esquecer todo"
+
+#~ msgctxt "unit of time. months to keep the history"
+#~ msgid " month"
+#~ msgid_plural " months"
+#~ msgstr[0] " mes"
+#~ msgstr[1] " meses"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "For "
+#~ msgstr "Durante "
+
+#~ msgid "Cleared the activity history."
+#~ msgstr "Borrouse o historial de actividade."
+
+#~ msgid "Keep history:"
+#~ msgstr "Manter o historial:"
+
+#~ msgid "Clear History"
+#~ msgstr "Borrar o historial"
+
+#~ msgid "For a&ll applications"
+#~ msgstr "En &calquera aplicación"
+
+#~ msgid "&Do not remember"
+#~ msgstr "&Non lembrar"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "&Só para aplicacións específicas:"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "Lembrar os documentos abertos:"
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "Pór na lista negra as aplicacións que non estean na lista"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Delete Activity"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete "
+#~ msgstr "Eliminar a actividade"
+
+#~ msgid "Other"
+#~ msgstr "Outros"
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply"
+#~ msgstr "Aplicar"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
+
+#~ msgid "Activity information"
+#~ msgstr "Información da actividade"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Fondo de escritorio"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change..."
+#~ msgstr "Cambiar…"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "for "
+#~ msgstr "durante"

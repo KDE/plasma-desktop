@@ -1,0 +1,250 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2016, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2021-10-09 07:48-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.04.3\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "ਸਰਗਰਮੀ ਸੈਟਿੰਗਾਂ"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "ਨਵੀਂ ਸਰਗਰਮੀ ਨੂੰ ਬਣਾਓ"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "ਆਈਕਾਨ:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "ਨਾਂ:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "ਵੇਰਵਾ:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "ਪਰਦੇਦਾਰੀ:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "ਇਸ ਸਰਗਰਮੀ ਲਈ ਵਰਤੋਂ ਨੂੰ ਟਰੈਕ ਨਾ ਕਰੋ"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "%1 ਸਰਗਰਮੀ ਦੀ ਸੰਰਚਨਾ"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "%1 ਸਰਗਰਮੀ ਨੂੰ ਹਟਾਓ"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "…ਨਵੀਂ ਬਣਾਓ"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "ਸਰਗਰਮੀ ਨੂੰ ਹਟਾਓ"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "ਕੀ ਤੁਸੀਂ %1 ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "ਸਰਗਰਮੀ ਨੂੰ ਹਟਾਓ"
+
+#~ msgid "Activities"
+#~ msgstr "ਸਰਗਰਮੀਆਂ"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "QML ਫਾਇਲਾਂ ਲੋਡ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ। ਆਪਣੀ ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।\n"
+#~ "%1 ਗੁੰਮ ਹੈ"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "ਬਣਾਓ"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "ਸਰਗਰਮੀ ਦੇ ਅਤੀਤ ਨੂੰ ਕਿੰਨੇ ਮਹੀਨਿਆ ਤੱਕ ਰੱਖਣਾ ਹੈ"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "ਸਰਗਰਮੀ ਅਤੀਤ ਵਿੱਚ ਕਿਹੜਾ ਡਾਟਾ ਰੱਖਣਾ ਹੈ"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ ਦੀ ਸੂਚੀ, ਜਿਹਨਾਂ ਦੇ ਸਰਗਰਮੀ ਅਤੀਤ ਨੂੰ ਸੰਭਾਲਣਾ ਹੈ"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ ਦੀ ਸੂਚੀ, ਜਿਹਨਾਂ ਦੇ ਸਰਗਰਮੀ ਅਤੀਤ ਨੂੰ ਨਹੀਂ ਸੰਭਾਲਣਾ ਹੈ"
+
+#~ msgid "Switching"
+#~ msgstr "ਬਦਲਣਾ"
+
+#~ msgid "Activity switching"
+#~ msgstr "ਸਰਗਰਮੀ ਨੂੰ ਬਦਲੋ"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "ਸਰਗਰਮੀਆਂ ਨੂੰ ਵੇਖੋ"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "ਸਰਗਰਮੀਆਂ ਨੂੰ ਵੇਖੋ (ਉਲਟ)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "ਹਰ ਸਰਗਰਮੀ ਲਈ ਯਾਦ ਰੱਖੋ (ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੀ ਲੋੜ ਹੈ)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "ਮੌਜੂਦਾ ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "ਸ਼ਾਰਟਕੱਟ:"
+
+#~ msgid "General"
+#~ msgstr "ਆਮ"
+
+#~ msgid "Privacy"
+#~ msgstr "ਪਰਦੇਦਾਰੀ"
+
+#~ msgctxt "unlimited number of months"
+#~ msgid "Forever"
+#~ msgstr "ਹਮੇਸ਼ਾ"
+
+#~ msgid "Forget the last hour"
+#~ msgstr "ਪਿਛਲੇ ਘੰਟੇ ਨੂੰ ਭੁੱਲੋ"
+
+#~ msgid "Forget the last two hours"
+#~ msgstr "ਪਿਛਲੇ ਦੋ ਘੰਟਿਆਂ ਨੂੰ ਭੁੱਲੋ"
+
+#~ msgid "Forget a day"
+#~ msgstr "ਇੱਕ ਦਿਨ ਨੂੰ ਭੁੱਲੋ"
+
+#~ msgid "Forget everything"
+#~ msgstr "ਹਰ ਚੀਜ਼ ਨੂੰ ਭੁਲਾਓ"
+
+#~ msgctxt "unit of time. months to keep the history"
+#~ msgid " month"
+#~ msgid_plural " months"
+#~ msgstr[0] " ਮਹੀਨਾ"
+#~ msgstr[1] " ਮਹੀਨੇ"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "For "
+#~ msgstr "ਲਈ"
+
+#~ msgid "Cleared the activity history."
+#~ msgstr "ਸਰਗਰਮੀ ਅਤੀਤ ਨੂੰ ਮਿਟਾਇਆ।"
+
+#~ msgid "Keep history:"
+#~ msgstr "ਅਤੀਤ ਨੂੰ ਰੱਖੋ:"
+
+#~ msgid "Clear History"
+#~ msgstr "ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
+
+#~ msgid "For a&ll applications"
+#~ msgstr "ਸਾਰੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਲਈ(&l) "
+
+#~ msgid "&Do not remember"
+#~ msgstr "ਯਾਦ ਨਾ ਰੱਖੋ(&D)"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "ਕੇਵਲ ਖਾਸ ਐਪਲੀਕੇਸ਼ਨਾਂ ਹੀ(&n):"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "ਖੁੱਲ੍ਹੇ ਡੌਕੂਮੈਂਟਾਂ ਨੂੰ ਯਾਦ ਰੱਖੋ:"
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "ਇਸ ਸੂਚੀ ਤੋਂ ਬਿਨਾਂ ਸਾਰੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਉੱਤੇ ਪਾਬੰਦੀ ਲਗਾਓ"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Delete Activity"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete "
+#~ msgstr "ਸਰਗਰਮੀ ਨੂੰ ਹਟਾਓ"
+
+#~ msgid "Other"
+#~ msgstr "ਹੋਰ"
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply"
+#~ msgstr "ਲਾਗੂ ਕਰੋ"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "ਰੱਦ ਕਰੋ"
+
+#~ msgid "Activity information"
+#~ msgstr "ਸਰਗਰਮੀ ਦੀ ਜਾਣਕਾਰੀ"
+
+#~ msgid "Wallpaper"
+#~ msgstr "ਵਾਲਪੇਪਰ"
+
+#~ msgctxt "@action:button"
+#~ msgid "Change..."
+#~ msgstr "...ਬਦਲੋ"
+
+#~ msgctxt "for in 'keep history for 5 months'"
+#~ msgid "for "
+#~ msgstr "ਲਈ"

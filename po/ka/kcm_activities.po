@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2022-09-02 07:43+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "აქტივობის მორგება"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "ახალი აქტივობის შექმნა"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "ხატულა:"
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "სახელი:"
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "აღწერა:"
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "პირადულბა:"
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "ამ აქტივობისთვის ყურადღების არ  მიქცევა"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "გადართვის მალსახმობი:"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "%1-ის აქტივობის მორგება"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "%1-ის აქტივობის წაშლა"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "ახლის შექმნა…"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "აქტივობის წაშლა"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ წაშალოთ '%1'?"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "აქტივობის წაშლა"
+
+#~ msgid "Activities"
+#~ msgstr "ქმედებები"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "QML ფაილების ჩატვირთვის შეცდომა. შეამოწმეთ თქვენი ფაილები.\n"
+#~ "აკლია %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "შექმნა"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "რამდენი თვით იქნება შენახული აქტივობის ისტორია"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "რომელი მონაცემები იქნება შენახული აქტივობის ისტორიაში"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "მათი აქტივობის შესანახი აპლიკაციების სია"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "მათი აქტივობის არ-შესანახი აპლიკაციების სია"
+
+#~ msgid "Switching"
+#~ msgstr "გადართვა"
+
+#~ msgid "Activity switching"
+#~ msgstr "აქტივობის გადართვა"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "აქტივობების განხილვა"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "აქტივობების განხილვა (პირიქით)"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "ყველა აქტივობის დამახსოვრება (საჭიროა გადატვირთვა)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "მიმდინარე ვირტუალური სამუშაო მაგიდა:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "მალსახმობები:"
+
+#~ msgid "General"
+#~ msgstr "მთავარი"

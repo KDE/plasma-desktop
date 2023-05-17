@@ -1,0 +1,165 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"PO-Revision-Date: 2023-02-24 12:43\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/plasma-desktop/kcm_activities5.pot\n"
+"X-Crowdin-File-ID: 4343\n"
+
+#: ui/ActivityEditor.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
+msgctxt "@title:window"
+msgid "Activity Settings for %1"
+msgstr "活动设置"
+
+#: ui/ActivityEditor.qml:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a New Activity"
+msgstr "创建新活动"
+
+#: ui/ActivityEditor.qml:26
+#, kde-format
+msgctxt "@action:button as in, 'save changes'"
+msgid "Save"
+msgstr ""
+
+#: ui/ActivityEditor.qml:57
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr "图标："
+
+#: ui/ActivityEditor.qml:68
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "名称："
+
+#: ui/ActivityEditor.qml:74
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label:textbox"
+msgid "Description:"
+msgstr "描述："
+
+#: ui/ActivityEditor.qml:84
+#, fuzzy, kde-format
+#| msgid "Privacy:"
+msgctxt "@option:check"
+msgid "Privacy:"
+msgstr "隐私："
+
+#: ui/ActivityEditor.qml:85
+#, kde-format
+msgid "Do not track usage for this activity"
+msgstr "不跟踪此活动的使用情况"
+
+#: ui/ActivityEditor.qml:91
+#, kde-format
+msgid "Shortcut for switching:"
+msgstr "切换快捷键："
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure %1 activity"
+msgstr "配置 %1 活动"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete %1 activity"
+msgstr "删除 %1 活动"
+
+#: ui/main.qml:76
+#, kde-format
+msgid "Create New…"
+msgstr "新建…"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Activity"
+msgstr "删除活动"
+
+#: ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
+msgctxt "%1 is an activity name"
+msgid "Do you want to delete activity '%1'?"
+msgstr "您确定您想要删除“%1”吗？"
+
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Delete Activity"
+msgid "Delete Activity"
+msgstr "删除活动"
+
+#~ msgid "Activities"
+#~ msgstr "活动"
+
+#~ msgid ""
+#~ "Error loading the QML files. Check your installation.\n"
+#~ "Missing %1"
+#~ msgstr ""
+#~ "加载 QML 错误。请检查软件安装情况。\n"
+#~ "缺少 %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create"
+#~ msgstr "创建"
+
+#~ msgid "How many months keep the activity history"
+#~ msgstr "活动历史记录保留的月数"
+
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "活动历史记录保存的数据"
+
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "保存活动历史记录的应用程序列表"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "不保存活动历史记录的应用程序列表"
+
+#~ msgid "Switching"
+#~ msgstr "切换"
+
+#~ msgid "Activity switching"
+#~ msgstr "切换活动"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities"
+#~ msgstr "遍历活动"
+
+#~ msgctxt "@action"
+#~ msgid "Walk through activities (Reverse)"
+#~ msgstr "反向遍历活动"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "记住每个活动 (需要重启)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "当前虚拟桌面："
+
+#~ msgid "Shortcuts:"
+#~ msgstr "快捷键："
+
+#~ msgid "General"
+#~ msgstr "常规"
