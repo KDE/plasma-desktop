@@ -38,7 +38,7 @@ PlasmaCore.Dialog {
                 anchors.fill: parent
                 PlasmaExtras.Heading {
                     level: 3
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", " Panel Settings")
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Settings")
                 }
 
                 Item { Layout.fillWidth: true }
@@ -75,8 +75,7 @@ PlasmaCore.Dialog {
             PanelRepresentation {
                 id: referenceRepresentation
                 text: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Top") : i18nd("plasma_shell_org.kde.plasma.desktop", "Left")
-                tooltip: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns the panel to the top if the panel is not maximized.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns the panel
-                to the left if the panel is not maximized.")
+                tooltip: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns a non-maximized panel to the top; no effect when panel is maximized") : i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns a non-maximized panel to the left; no effect when panel is maximized")
                 Layout.alignment: Qt.AlignTop
                 alignment: Qt.AlignLeft
                 checked: panel.alignment === Qt.AlignLeft
@@ -85,7 +84,7 @@ PlasmaCore.Dialog {
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Center")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Center aligns the panel if the panel is not maximized.")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns a non-maximized panel to the center; no effect when panel is maximized")
                 Layout.alignment: Qt.AlignTop
                 alignment: Qt.AlignCenter
                 checked: panel.alignment === Qt.AlignCenter
@@ -94,7 +93,7 @@ PlasmaCore.Dialog {
 
             PanelRepresentation {
                 text: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Bottom") : i18nd("plasma_shell_org.kde.plasma.desktop", "Right")
-                tooltip: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns the panel to the bottom if the panel is not maximized.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns the panel to the right if the panel is not maximized.")
+                tooltip: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns a non-maximized panel to the bottom; no effect when panel is maximized") : i18nd("plasma_shell_org.kde.plasma.desktop", "Aligns a non-maximized panel to the right; no effect when panel is maximized")
                 Layout.alignment: Qt.AlignTop
                 alignment: Qt.AlignRight
                 checked: panel.alignment === Qt.AlignRight
@@ -133,7 +132,6 @@ PlasmaCore.Dialog {
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Always Visible")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel remain visible always.")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 checked: configDialog.visibilityMode === Panel.Global.NormalPanel
@@ -141,8 +139,8 @@ PlasmaCore.Dialog {
             }
 
             PanelRepresentation {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Auto Hide")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel hidden always but reveals it when mouse enters the area where the panel would have been if it were not hidden.")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Auto-Hide")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel is hidden, but reveals itself when the cursor touches the panel's screen edge")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 sunkenPanel: true
@@ -162,7 +160,7 @@ PlasmaCore.Dialog {
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows In Front")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel remain visible always but maximized windows shall cover it. It is revealed when mouse enters the area where the panel would have been if it were not covered.")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Like \"Auto-Hide\" but the panel remains visible as long as no windows are covering it up")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 windowVisible: true
@@ -173,7 +171,7 @@ PlasmaCore.Dialog {
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Behind")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel remain visible always but part of the maximized windows shall go below the panel as though the panel did not exist.")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Like \"Always Visible\", but maximized and tiled windows go under the panel as though it didn't exist")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 windowVisible: true
@@ -207,8 +205,7 @@ PlasmaCore.Dialog {
             }
 
             PanelRepresentation {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Fully Opaque")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel opaque always.")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Always Opaque")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 checked: configDialog.opacityMode === Panel.Global.Opaque
@@ -217,7 +214,7 @@ PlasmaCore.Dialog {
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel translucent except when some windows touch it.")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel is opaque when any windows are touching it, and translucent at other times")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 adaptivePanel: true
@@ -226,8 +223,7 @@ PlasmaCore.Dialog {
             }
 
             PanelRepresentation {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translucent")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel translucent always.")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Always Translucent")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 translucentPanel: true
@@ -262,7 +258,7 @@ PlasmaCore.Dialog {
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel float from the edge of the screen.")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel visibly floats away from its screen edge")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 checked: panel.floating
@@ -272,7 +268,7 @@ PlasmaCore.Dialog {
 
             PanelRepresentation {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Attached")
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Makes the panel remain attached to the edge of the screen.")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel is attached to its screen edge")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 checked: !panel.floating
@@ -294,7 +290,7 @@ PlasmaCore.Dialog {
 
                 PlasmaExtras.Heading {
                     level: menuColumn.headingLabel
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus Shortcut")
+                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus Shortcut:")
                     visible: panel.adaptiveOpacityEnabled
 
                     MouseArea {

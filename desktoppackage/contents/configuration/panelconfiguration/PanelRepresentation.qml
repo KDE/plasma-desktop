@@ -11,8 +11,8 @@ Item {
     id: panelRepresentation
 
     required property string text
-    required property string tooltip
     required property int alignment
+    property string tooltip
 
     property bool checked: false
     property bool windowVisible: false
@@ -31,7 +31,7 @@ Item {
 
     PC3.ToolTip {
         text: parent.tooltip
-        visible: mouseArea.containsMouse
+        visible: mouseArea.containsMouse && text.length > 0
     }
 
     PlasmaCore.FrameSvgItem {
@@ -177,6 +177,7 @@ Item {
         PC3.Label {
             text: panelRepresentation.text
             Layout.alignment: Qt.AlignHCenter
+            horizontalAlignment: Text.AlignHCenter
             Layout.maximumWidth: screenRect.implicitWidth
             wrapMode: Text.Wrap
         }
