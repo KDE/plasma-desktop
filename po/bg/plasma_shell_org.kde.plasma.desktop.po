@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"POT-Creation-Date: 2023-05-18 02:05+0000\n"
 "PO-Revision-Date: 2023-05-09 20:41+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -263,7 +263,9 @@ msgid "Input Here"
 msgstr "Въведете тук"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
-msgid " Panel Settings"
+#, fuzzy
+#| msgid " Panel Settings"
+msgid "Panel Settings"
 msgstr "Настройки на панела"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
@@ -284,140 +286,151 @@ msgid "Left"
 msgstr "Наляво"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
-msgid "Aligns the panel to the top if the panel is not maximized."
+#, fuzzy
+#| msgid "Aligns the panel to the top if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr "Изравнява панела в горната част, ако панелът не е максимално увеличен."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
-msgid "Aligns the panel"
-msgstr "Подравняване на панела"
+#, fuzzy
+#| msgid "Aligns the panel to the top if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the left; no effect when panel is maximized"
+msgstr "Изравнява панела в горната част, ако панелът не е максимално увеличен."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:86
 msgid "Center"
 msgstr "Центрирано"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
-msgid "Center aligns the panel if the panel is not maximized."
-msgstr "Подравняване на панела в центъра, ако панелът не е максимализиран."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
+#, fuzzy
+#| msgid "Aligns the panel to the top if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the center; no effect when panel is maximized"
+msgstr "Изравнява панела в горната част, ако панелът не е максимално увеличен."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Bottom"
 msgstr "Отдолу"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Right"
 msgstr "Вдясно"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
-msgid "Aligns the panel to the bottom if the panel is not maximized."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#, fuzzy
+#| msgid "Aligns the panel to the bottom if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr "Подравняване на панела в ляво, ако панелът не е максимализиран."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
-msgid "Aligns the panel to the right if the panel is not maximized."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#, fuzzy
+#| msgid "Aligns the panel to the right if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr "Подравняване на панела в дясно, ако панелът не е максимализиран."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:130
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:129
 msgid "Visibility:"
 msgstr "Видимост:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:135
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:134
 msgid "Always Visible"
 msgstr "Винаги видим"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:136
-msgid "Makes the panel remain visible always."
-msgstr "Панелът е винаги видим."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:144
-msgid "Auto Hide"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
+#, fuzzy
+#| msgid "Auto Hide"
+msgid "Auto-Hide"
 msgstr "Автоматично скриване"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:145
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:143
 msgid ""
-"Makes the panel hidden always but reveals it when mouse enters the area "
-"where the panel would have been if it were not hidden."
+"Panel is hidden, but reveals itself when the cursor touches the panel's "
+"screen edge"
 msgstr ""
-"Панелът е винаги скрит, но се показва, когато мишката влезе в зоната където "
-"панелът би се намирал, ако не е скрит."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:162
 msgid "Windows In Front"
 msgstr "Прозорците отпред"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
 msgid ""
-"Makes the panel remain visible always but maximized windows shall cover it. "
-"It is revealed when mouse enters the area where the panel would have been if "
-"it were not covered."
+"Like \"Auto-Hide\" but the panel remains visible as long as no windows are "
+"covering it up"
 msgstr ""
-"Панелът остава винаги видим, но максимизираните прозорци го покриват. Той се "
-"показва, когато мишката влезе в областта, където панелът би бил, ако не е "
-"покрит."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:175
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:173
 msgid "Windows Behind"
 msgstr "Прозорците отзад"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:174
+#, fuzzy
+#| msgid ""
+#| "Makes the panel remain visible always but part of the maximized windows "
+#| "shall go below the panel as though the panel did not exist."
 msgid ""
-"Makes the panel remain visible always but part of the maximized windows "
-"shall go below the panel as though the panel did not exist."
+"Like \"Always Visible\", but maximized and tiled windows go under the panel "
+"as though it didn't exist"
 msgstr ""
 "Панелът остава винаги видим, но е част от максимизираните прозорци преминава "
 "под панела, сякаш панелът не съществува."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:203
 msgid "Opacity:"
 msgstr "Непрозрачност:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:210
-msgid "Fully Opaque"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:208
+#, fuzzy
+#| msgid "Fully Opaque"
+msgid "Always Opaque"
 msgstr "Напълно непрозрачен"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:211
-msgid "Makes the panel opaque always."
-msgstr "Панелът е винаги непрозрачен."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:219
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 msgid "Adaptive"
 msgstr "Адаптивен"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:220
-msgid "Makes the panel translucent except when some windows touch it."
-msgstr "Прави панела полупрозрачен, освен когато някои прозорци го докосват."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:217
+msgid ""
+"Panel is opaque when any windows are touching it, and translucent at other "
+"times"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
-msgid "Translucent"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:226
+#, fuzzy
+#| msgid "Translucent"
+msgid "Always Translucent"
 msgstr "Полупрозрачен"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:230
-msgid "Makes the panel translucent always."
-msgstr "Панелът е винаги полупрозрачен."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:259
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:255
 msgid "Floating:"
 msgstr "Плаващ панел:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:264
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Floating"
 msgstr "Плаващ панел"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:265
-msgid "Makes the panel float from the edge of the screen."
-msgstr "Плаващ панел от краищата на екрана."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+msgid "Panel visibly floats away from its screen edge"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:274
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
 msgid "Attached"
 msgstr "Прикрепен"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
-msgid "Makes the panel remain attached to the edge of the screen."
-msgstr "Панелът остава прикрепен към краищата на екрана."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
+msgid "Panel is attached to its screen edge"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
-msgid "Focus Shortcut"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
+#, fuzzy
+#| msgid "Focus Shortcut"
+msgid "Focus Shortcut:"
 msgstr "Клавишна комбинация за фокусиране"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:307
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:303
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Натиснете тази клавишна комбинация, за да преместите фокуса към панела"
 
@@ -564,6 +577,47 @@ msgstr "Няма уиджет, съответстващ на въведенот�
 #: contents/explorer/WidgetExplorer.qml:331
 msgid "No widgets available"
 msgstr "Няма наличен уиджет"
+
+#~ msgid "Aligns the panel"
+#~ msgstr "Подравняване на панела"
+
+#~ msgid "Center aligns the panel if the panel is not maximized."
+#~ msgstr "Подравняване на панела в центъра, ако панелът не е максимализиран."
+
+#~ msgid "Makes the panel remain visible always."
+#~ msgstr "Панелът е винаги видим."
+
+#~ msgid ""
+#~ "Makes the panel hidden always but reveals it when mouse enters the area "
+#~ "where the panel would have been if it were not hidden."
+#~ msgstr ""
+#~ "Панелът е винаги скрит, но се показва, когато мишката влезе в зоната "
+#~ "където панелът би се намирал, ако не е скрит."
+
+#~ msgid ""
+#~ "Makes the panel remain visible always but maximized windows shall cover "
+#~ "it. It is revealed when mouse enters the area where the panel would have "
+#~ "been if it were not covered."
+#~ msgstr ""
+#~ "Панелът остава винаги видим, но максимизираните прозорци го покриват. Той "
+#~ "се показва, когато мишката влезе в областта, където панелът би бил, ако "
+#~ "не е покрит."
+
+#~ msgid "Makes the panel opaque always."
+#~ msgstr "Панелът е винаги непрозрачен."
+
+#~ msgid "Makes the panel translucent except when some windows touch it."
+#~ msgstr ""
+#~ "Прави панела полупрозрачен, освен когато някои прозорци го докосват."
+
+#~ msgid "Makes the panel translucent always."
+#~ msgstr "Панелът е винаги полупрозрачен."
+
+#~ msgid "Makes the panel float from the edge of the screen."
+#~ msgstr "Плаващ панел от краищата на екрана."
+
+#~ msgid "Makes the panel remain attached to the edge of the screen."
+#~ msgstr "Панелът остава прикрепен към краищата на екрана."
 
 #~ msgid "Maximize Panel"
 #~ msgstr "Максимизиране на панел"

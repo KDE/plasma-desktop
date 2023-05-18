@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"POT-Creation-Date: 2023-05-18 02:05+0000\n"
 "PO-Revision-Date: 2023-05-02 11:04+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -266,7 +266,9 @@ msgid "Input Here"
 msgstr "Vnesite sem"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
-msgid " Panel Settings"
+#, fuzzy
+#| msgid " Panel Settings"
+msgid "Panel Settings"
 msgstr " Nastavitve plošče"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
@@ -287,140 +289,151 @@ msgid "Left"
 msgstr "Levo"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
-msgid "Aligns the panel to the top if the panel is not maximized."
+#, fuzzy
+#| msgid "Aligns the panel to the top if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr "Poravnaj ploščo na vrh, če plošča ni razpeta."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
-msgid "Aligns the panel"
-msgstr "Poravnaj ploščo"
+#, fuzzy
+#| msgid "Aligns the panel to the top if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the left; no effect when panel is maximized"
+msgstr "Poravnaj ploščo na vrh, če plošča ni razpeta."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:86
 msgid "Center"
 msgstr "V sredini"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
-msgid "Center aligns the panel if the panel is not maximized."
-msgstr "Sredinsko poravnaj ploščo, če plošča ni razpeta."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
+#, fuzzy
+#| msgid "Aligns the panel to the top if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the center; no effect when panel is maximized"
+msgstr "Poravnaj ploščo na vrh, če plošča ni razpeta."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Bottom"
 msgstr "Spodaj"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Right"
 msgstr "Desno"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
-msgid "Aligns the panel to the bottom if the panel is not maximized."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#, fuzzy
+#| msgid "Aligns the panel to the bottom if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr "Poravnaj ploščo na dno, če plošča ni razpeta."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
-msgid "Aligns the panel to the right if the panel is not maximized."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#, fuzzy
+#| msgid "Aligns the panel to the right if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr "Desno poravnaj ploščo, če plošča ni razpeta."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:130
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:129
 msgid "Visibility:"
 msgstr "Vidnost:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:135
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:134
 msgid "Always Visible"
 msgstr "Vedno viden"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:136
-msgid "Makes the panel remain visible always."
-msgstr "Nastavi ploščo, da je vedno vidna."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:144
-msgid "Auto Hide"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
+#, fuzzy
+#| msgid "Auto Hide"
+msgid "Auto-Hide"
 msgstr "Samodejno skrij"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:145
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:143
 msgid ""
-"Makes the panel hidden always but reveals it when mouse enters the area "
-"where the panel would have been if it were not hidden."
+"Panel is hidden, but reveals itself when the cursor touches the panel's "
+"screen edge"
 msgstr ""
-"Nastavi ploščo vedno skrito, a jo razkrijem kadar miška vstopi v področje, "
-"kjer bi bila plošča, če ne bo bila skrita."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:162
 msgid "Windows In Front"
 msgstr "Okna v ospredju"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
 msgid ""
-"Makes the panel remain visible always but maximized windows shall cover it. "
-"It is revealed when mouse enters the area where the panel would have been if "
-"it were not covered."
+"Like \"Auto-Hide\" but the panel remains visible as long as no windows are "
+"covering it up"
 msgstr ""
-"Nastavi ploščo vedno vidno, razen če jo prekrijejo razpeta okna. Je "
-"razkrita, ko miška vstopi v področje, kjer bi bila plošča, če ne bi bila "
-"prekrita."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:175
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:173
 msgid "Windows Behind"
 msgstr "Okna zadaj"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:174
+#, fuzzy
+#| msgid ""
+#| "Makes the panel remain visible always but part of the maximized windows "
+#| "shall go below the panel as though the panel did not exist."
 msgid ""
-"Makes the panel remain visible always but part of the maximized windows "
-"shall go below the panel as though the panel did not exist."
+"Like \"Always Visible\", but maximized and tiled windows go under the panel "
+"as though it didn't exist"
 msgstr ""
 "Nastavi ploščo vedno vidno, razen dela razpetih oken, ki bodo šli pod "
 "ploščo, kot da plošča ne bi obstajala."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:203
 msgid "Opacity:"
 msgstr "Neprosojnost:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:210
-msgid "Fully Opaque"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:208
+#, fuzzy
+#| msgid "Fully Opaque"
+msgid "Always Opaque"
 msgstr "Popolnoma neprosojno"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:211
-msgid "Makes the panel opaque always."
-msgstr "Nastavi ploščo vedno neprosojno."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:219
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 msgid "Adaptive"
 msgstr "Prilagodljivo"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:220
-msgid "Makes the panel translucent except when some windows touch it."
-msgstr "Nastavi ploščo prosojno, razen če se je kakšno okno dotika."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:217
+msgid ""
+"Panel is opaque when any windows are touching it, and translucent at other "
+"times"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
-msgid "Translucent"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:226
+#, fuzzy
+#| msgid "Translucent"
+msgid "Always Translucent"
 msgstr "Prosojno"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:230
-msgid "Makes the panel translucent always."
-msgstr "Nastavi ploščo vedno prosojno."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:259
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:255
 msgid "Floating:"
 msgstr "Plavajoča:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:264
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Floating"
 msgstr "Plavajoča"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:265
-msgid "Makes the panel float from the edge of the screen."
-msgstr "Nastavi ploščo plavajočo od roba zaslona."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+msgid "Panel visibly floats away from its screen edge"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:274
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
 msgid "Attached"
 msgstr "Pripeta"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
-msgid "Makes the panel remain attached to the edge of the screen."
-msgstr "Nastavi ploščo, da ostane pripeta na rob plošče."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
+msgid "Panel is attached to its screen edge"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
-msgid "Focus Shortcut"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
+#, fuzzy
+#| msgid "Focus Shortcut"
+msgid "Focus Shortcut:"
 msgstr "Bližnjica osredotočenosti"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:307
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:303
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Pritisnite to bližnjico na tipkovnici, da prenesete osredotočenja na ploščo"
@@ -567,6 +580,46 @@ msgstr "Noben gradnik se ne ujema z iskalnimi izrazi"
 #: contents/explorer/WidgetExplorer.qml:331
 msgid "No widgets available"
 msgstr "Gradnikov ni na voljo"
+
+#~ msgid "Aligns the panel"
+#~ msgstr "Poravnaj ploščo"
+
+#~ msgid "Center aligns the panel if the panel is not maximized."
+#~ msgstr "Sredinsko poravnaj ploščo, če plošča ni razpeta."
+
+#~ msgid "Makes the panel remain visible always."
+#~ msgstr "Nastavi ploščo, da je vedno vidna."
+
+#~ msgid ""
+#~ "Makes the panel hidden always but reveals it when mouse enters the area "
+#~ "where the panel would have been if it were not hidden."
+#~ msgstr ""
+#~ "Nastavi ploščo vedno skrito, a jo razkrijem kadar miška vstopi v "
+#~ "področje, kjer bi bila plošča, če ne bo bila skrita."
+
+#~ msgid ""
+#~ "Makes the panel remain visible always but maximized windows shall cover "
+#~ "it. It is revealed when mouse enters the area where the panel would have "
+#~ "been if it were not covered."
+#~ msgstr ""
+#~ "Nastavi ploščo vedno vidno, razen če jo prekrijejo razpeta okna. Je "
+#~ "razkrita, ko miška vstopi v področje, kjer bi bila plošča, če ne bi bila "
+#~ "prekrita."
+
+#~ msgid "Makes the panel opaque always."
+#~ msgstr "Nastavi ploščo vedno neprosojno."
+
+#~ msgid "Makes the panel translucent except when some windows touch it."
+#~ msgstr "Nastavi ploščo prosojno, razen če se je kakšno okno dotika."
+
+#~ msgid "Makes the panel translucent always."
+#~ msgstr "Nastavi ploščo vedno prosojno."
+
+#~ msgid "Makes the panel float from the edge of the screen."
+#~ msgstr "Nastavi ploščo plavajočo od roba zaslona."
+
+#~ msgid "Makes the panel remain attached to the edge of the screen."
+#~ msgstr "Nastavi ploščo, da ostane pripeta na rob plošče."
 
 #~ msgid "Maximize Panel"
 #~ msgstr "Razpni pult"

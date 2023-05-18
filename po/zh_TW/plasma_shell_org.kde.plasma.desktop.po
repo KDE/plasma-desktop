@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:04+0000\n"
+"POT-Creation-Date: 2023-05-18 02:05+0000\n"
 "PO-Revision-Date: 2023-05-17 03:46+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -262,7 +262,9 @@ msgid "Input Here"
 msgstr "在此輸入"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
-msgid " Panel Settings"
+#, fuzzy
+#| msgid " Panel Settings"
+msgid "Panel Settings"
 msgstr " 面板設定"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
@@ -283,136 +285,150 @@ msgid "Left"
 msgstr "靠左"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
-msgid "Aligns the panel to the top if the panel is not maximized."
+#, fuzzy
+#| msgid "Aligns the panel to the top if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr "讓面板未最大化時對齊到上方。"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
-msgid "Aligns the panel"
-msgstr "對齊面板"
+#, fuzzy
+#| msgid "Aligns the panel to the top if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the left; no effect when panel is maximized"
+msgstr "讓面板未最大化時對齊到上方。"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:86
 msgid "Center"
 msgstr "置中"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
-msgid "Center aligns the panel if the panel is not maximized."
-msgstr "讓面板未最大化時置中對齊。"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
+#, fuzzy
+#| msgid "Aligns the panel to the top if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the center; no effect when panel is maximized"
+msgstr "讓面板未最大化時對齊到上方。"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Bottom"
 msgstr "下"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Right"
 msgstr "靠右"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
-msgid "Aligns the panel to the bottom if the panel is not maximized."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#, fuzzy
+#| msgid "Aligns the panel to the bottom if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr "讓面板未最大化時對齊到下方。"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:97
-msgid "Aligns the panel to the right if the panel is not maximized."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#, fuzzy
+#| msgid "Aligns the panel to the right if the panel is not maximized."
+msgid ""
+"Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr "讓面板未最大化時對齊到右方。"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:130
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:129
 msgid "Visibility:"
 msgstr "可見度："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:135
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:134
 msgid "Always Visible"
 msgstr "永遠可見"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:136
-msgid "Makes the panel remain visible always."
-msgstr "讓面板總是可見。"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:144
-msgid "Auto Hide"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
+#, fuzzy
+#| msgid "Auto Hide"
+msgid "Auto-Hide"
 msgstr "自動隱藏"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:145
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:143
 msgid ""
-"Makes the panel hidden always but reveals it when mouse enters the area "
-"where the panel would have been if it were not hidden."
-msgstr "讓面板總是隱藏，但在滑鼠進入它原先會在的區域時顯示它。"
+"Panel is hidden, but reveals itself when the cursor touches the panel's "
+"screen edge"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:162
 msgid "Windows In Front"
 msgstr "視窗在前方"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
 msgid ""
-"Makes the panel remain visible always but maximized windows shall cover it. "
-"It is revealed when mouse enters the area where the panel would have been if "
-"it were not covered."
+"Like \"Auto-Hide\" but the panel remains visible as long as no windows are "
+"covering it up"
 msgstr ""
-"讓面板維持可見，但讓最大化視窗覆蓋它。面板被覆蓋時，若滑鼠進入它原先會在的區"
-"域時會顯示它。"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:175
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:173
 msgid "Windows Behind"
 msgstr "視窗在後方"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:174
+#, fuzzy
+#| msgid ""
+#| "Makes the panel remain visible always but part of the maximized windows "
+#| "shall go below the panel as though the panel did not exist."
 msgid ""
-"Makes the panel remain visible always but part of the maximized windows "
-"shall go below the panel as though the panel did not exist."
+"Like \"Always Visible\", but maximized and tiled windows go under the panel "
+"as though it didn't exist"
 msgstr ""
 "讓面板維持可見，但讓最大化視窗的一部分出現在它的後方，如同面板不存在一樣。"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:203
 msgid "Opacity:"
 msgstr "透明度："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:210
-msgid "Fully Opaque"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:208
+#, fuzzy
+#| msgid "Fully Opaque"
+msgid "Always Opaque"
 msgstr "完全不透明"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:211
-msgid "Makes the panel opaque always."
-msgstr "讓面板總是不透明。"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:219
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 msgid "Adaptive"
 msgstr "自動調整"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:220
-msgid "Makes the panel translucent except when some windows touch it."
-msgstr "讓面板維持半透明，除非有視窗碰到它。"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:217
+msgid ""
+"Panel is opaque when any windows are touching it, and translucent at other "
+"times"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
-msgid "Translucent"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:226
+#, fuzzy
+#| msgid "Translucent"
+msgid "Always Translucent"
 msgstr "半透明"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:230
-msgid "Makes the panel translucent always."
-msgstr "讓面板總是半透明。"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:259
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:255
 msgid "Floating:"
 msgstr "浮動："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:264
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Floating"
 msgstr "浮動"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:265
-msgid "Makes the panel float from the edge of the screen."
-msgstr "讓面板與螢幕邊緣維持一個距離，如同浮動一般。"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+msgid "Panel visibly floats away from its screen edge"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:274
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
 msgid "Attached"
 msgstr "接附"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:275
-msgid "Makes the panel remain attached to the edge of the screen."
-msgstr "讓面板接附在螢幕邊緣。"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
+msgid "Panel is attached to its screen edge"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:297
-msgid "Focus Shortcut"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
+#, fuzzy
+#| msgid "Focus Shortcut"
+msgid "Focus Shortcut:"
 msgstr "取得焦點快捷鍵"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:307
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:303
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按這個鍵盤快捷鍵來移動焦點到面板上"
 
@@ -557,6 +573,43 @@ msgstr "沒有元件符合搜尋字詞"
 #: contents/explorer/WidgetExplorer.qml:331
 msgid "No widgets available"
 msgstr "沒有可用元件"
+
+#~ msgid "Aligns the panel"
+#~ msgstr "對齊面板"
+
+#~ msgid "Center aligns the panel if the panel is not maximized."
+#~ msgstr "讓面板未最大化時置中對齊。"
+
+#~ msgid "Makes the panel remain visible always."
+#~ msgstr "讓面板總是可見。"
+
+#~ msgid ""
+#~ "Makes the panel hidden always but reveals it when mouse enters the area "
+#~ "where the panel would have been if it were not hidden."
+#~ msgstr "讓面板總是隱藏，但在滑鼠進入它原先會在的區域時顯示它。"
+
+#~ msgid ""
+#~ "Makes the panel remain visible always but maximized windows shall cover "
+#~ "it. It is revealed when mouse enters the area where the panel would have "
+#~ "been if it were not covered."
+#~ msgstr ""
+#~ "讓面板維持可見，但讓最大化視窗覆蓋它。面板被覆蓋時，若滑鼠進入它原先會在的"
+#~ "區域時會顯示它。"
+
+#~ msgid "Makes the panel opaque always."
+#~ msgstr "讓面板總是不透明。"
+
+#~ msgid "Makes the panel translucent except when some windows touch it."
+#~ msgstr "讓面板維持半透明，除非有視窗碰到它。"
+
+#~ msgid "Makes the panel translucent always."
+#~ msgstr "讓面板總是半透明。"
+
+#~ msgid "Makes the panel float from the edge of the screen."
+#~ msgstr "讓面板與螢幕邊緣維持一個距離，如同浮動一般。"
+
+#~ msgid "Makes the panel remain attached to the edge of the screen."
+#~ msgstr "讓面板接附在螢幕邊緣。"
 
 #~ msgid "Maximize Panel"
 #~ msgstr "將面板最大化"

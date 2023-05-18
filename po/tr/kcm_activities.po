@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-17 02:04+0000\n"
-"PO-Revision-Date: 2023-03-28 17:54+0300\n"
+"PO-Revision-Date: 2023-05-17 11:48+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,15 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: ui/ActivityEditor.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Activity Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings for %1"
-msgstr "Etkinlik Ayarları"
+msgstr "%1 için Etkinlik Ayarları"
 
 #: ui/ActivityEditor.qml:23
 #, kde-format
@@ -36,32 +34,28 @@ msgstr "Yeni Bir Etkinlik Oluştur"
 #, kde-format
 msgctxt "@action:button as in, 'save changes'"
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 #: ui/ActivityEditor.qml:57
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label:chooser"
 msgid "Icon:"
 msgstr "Simge:"
 
 #: ui/ActivityEditor.qml:68
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Ad:"
 
 #: ui/ActivityEditor.qml:74
-#, fuzzy, kde-format
-#| msgid "Description:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Description:"
 msgstr "Açıklama:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Privacy:"
 msgstr "Gizlilik:"
@@ -100,16 +94,13 @@ msgid "Delete Activity"
 msgstr "Etkinliği Sil"
 
 #: ui/main.qml:89
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to delete '%1'?"
+#, kde-format
 msgctxt "%1 is an activity name"
 msgid "Do you want to delete activity '%1'?"
 msgstr "'%1' etkinliğini silmek istediğinizden emin misiniz?"
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete Activity"
+#, kde-format
 msgid "Delete Activity"
 msgstr "Etkinliği Sil"
 
