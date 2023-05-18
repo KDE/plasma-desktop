@@ -74,7 +74,7 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent, KeyboardMiscSettings
     _numlockButtonGroup->addButton(ui.radioButton2, 1);
     _numlockButtonGroup->addButton(ui.radioButton3, 2);
 
-    connect(_numlockButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
+    connect(_numlockButtonGroup, &QButtonGroup::idClicked, this, qOverload<>(&KCMiscKeyboardWidget::changed));
 
     _keyboardRepeatButtonGroup = new QButtonGroup(ui.repeatFormLayout);
     if (hasAccentSupport()) {
@@ -85,8 +85,8 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent, KeyboardMiscSettings
     _keyboardRepeatButtonGroup->addButton(ui.repeatRadioButton, 1);
     _keyboardRepeatButtonGroup->addButton(ui.nothingRadioButton, 2);
 
-    connect(_keyboardRepeatButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
-    connect(_keyboardRepeatButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(keyboardRepeatStateChanged(int)));
+    connect(_keyboardRepeatButtonGroup, &QButtonGroup::idClicked, this, qOverload<>(&KCMiscKeyboardWidget::changed));
+    connect(_keyboardRepeatButtonGroup, &QButtonGroup::idClicked, this, &KCMiscKeyboardWidget::keyboardRepeatStateChanged);
 
     connect(_numlockButtonGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked),
             this, &KCMiscKeyboardWidget::updateUiDefaultIndicator);
