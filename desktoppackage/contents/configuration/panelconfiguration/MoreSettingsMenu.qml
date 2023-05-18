@@ -180,7 +180,7 @@ PlasmaCore.Dialog {
             }
 
             PanelRepresentation {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows In Front")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Above")
                 tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Like \"Auto-Hide\" but the panel remains visible as long as no windows are covering it up")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
@@ -191,7 +191,7 @@ PlasmaCore.Dialog {
             }
 
             PanelRepresentation {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Behind")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Below")
                 tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Like \"Always Visible\", but maximized and tiled windows go under the panel as though it didn't exist")
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
