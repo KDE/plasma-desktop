@@ -62,6 +62,11 @@ PlasmaCore.Dialog {
                 PC3.ToolButton {
                     text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Delete the panel", "Delete")
                     icon.name: "delete"
+
+                    PC3.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove this panel; this action is undo-able")
+                    PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    PC3.ToolTip.visible: hovered
+
                     onClicked: plasmoid.action("remove").trigger();
                 }
 
