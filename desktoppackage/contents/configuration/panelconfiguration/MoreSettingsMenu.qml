@@ -13,6 +13,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.shell.panel 0.1 as Panel
 import org.kde.kquickcontrols 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 
 PlasmaCore.Dialog {
@@ -36,6 +37,8 @@ PlasmaCore.Dialog {
 
             RowLayout {
                 anchors.fill: parent
+                spacing: PlasmaCore.Units.largeSpacing
+
                 PlasmaExtras.Heading {
                     level: 3
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Settings")
@@ -44,7 +47,20 @@ PlasmaCore.Dialog {
                 Item { Layout.fillWidth: true }
 
                 PC3.ToolButton {
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Make the panel as big as it can be", "Maximize")
+                    icon.name: panel.formFactor === PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
+
+                    PC3.ToolTip.text: panel.formFactor === PlasmaCore.Types.Vertical
+                        ? i18nd("plasma_shell_org.kde.plasma.desktop", "Make this panel as tall as possible")
+                        : i18nd("plasma_shell_org.kde.plasma.desktop", "Make this panel as wide as possible")
+                    PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    PC3.ToolTip.visible: hovered
+
+                    onClicked: panel.maximize();
+                }
+
+                PC3.ToolButton {
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Delete the panel", "Delete")
                     icon.name: "delete"
                     onClicked: plasmoid.action("remove").trigger();
                 }
