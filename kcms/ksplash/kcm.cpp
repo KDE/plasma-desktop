@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2014 Marco Martin <mart@kde.org>
     SPDX-FileCopyrightText: 2014 Vishesh Handa <me@vhanda.in>
     SPDX-FileCopyrightText: 2019 Cyril Rossi <cyril.rossi@enioka.com>
+    SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -138,7 +139,7 @@ void KCMSplashScreen::addKPackageToModel(const KPackage::Package &pkg)
     const static QString writableLocation = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
     QStandardItem *row = new QStandardItem(pkg.metadata().name());
     row->setData(pkg.metadata().pluginId(), PluginNameRole);
-    row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenshotRole);
+    row->setData(pkg.fileUrl("previews", QStringLiteral("splash.png")), ScreenshotRole);
     row->setData(pkg.metadata().description(), DescriptionRole);
     row->setData(pkg.path().startsWith(writableLocation), UninstallableRole);
     row->setData(false, PendingDeletionRole);
@@ -159,8 +160,10 @@ void KCMSplashScreen::load()
 
     QStandardItem *row = new QStandardItem(i18n("None"));
     row->setData(s_nonePluginName, PluginNameRole);
+    row->setData(QUrl(), ScreenshotRole);
     row->setData(i18n("No splash screen will be shown"), DescriptionRole);
     row->setData(false, UninstallableRole);
+    row->setData(false, PendingDeletionRole);
     m_model->insertRow(0, row);
 
     if (-1 == pluginIndex(m_data->settings()->theme())) {

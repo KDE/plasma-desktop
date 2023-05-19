@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2014 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -67,10 +68,10 @@ KCM.GridViewKCM {
         text: model.display
         toolTip: model.description
 
-        thumbnailAvailable: !!model.screenshot
+        thumbnailAvailable: model.screenshot.toString() !== ""
         thumbnail: Image {
             anchors.fill: parent
-            source: model.screenshot || ""
+            source: model.screenshot
             sourceSize: Qt.size(delegate.GridView.view.cellWidth * Screen.devicePixelRatio,
                                 delegate.GridView.view.cellHeight * Screen.devicePixelRatio)
             opacity: model.pendingDeletion ? 0.3 : 1
