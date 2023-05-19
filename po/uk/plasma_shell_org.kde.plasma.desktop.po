@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-18 02:05+0000\n"
+"POT-Creation-Date: 2023-05-19 02:02+0000\n"
 "PO-Revision-Date: 2023-04-30 17:06+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -265,111 +265,140 @@ msgstr "Дії для миші"
 msgid "Input Here"
 msgstr "Тут слід ввести дані"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
 #, fuzzy
 #| msgid " Panel Settings"
 msgid "Panel Settings"
 msgstr "Параметри панелі"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
-msgid "Remove Panel"
-msgstr "Вилучити панель"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
+#, fuzzy
+#| msgid "Maximize Panel"
+msgctxt "@action:button Make the panel as big as it can be"
+msgid "Maximize"
+msgstr "Максимізувати панель"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:71
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
+#, fuzzy
+#| msgid "Makes the panel opaque always."
+msgid "Make this panel as tall as possible"
+msgstr "Робить панель завжди непрозорою."
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
+#, fuzzy
+#| msgid "Makes the panel remain visible always."
+msgid "Make this panel as wide as possible"
+msgstr "Робить панель завжди видимою."
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+#, fuzzy
+#| msgid "Delete"
+msgctxt "@action:button Delete the panel"
+msgid "Delete"
+msgstr "Вилучити"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
+msgid "Remove this panel; this action is undo-able"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
 msgstr "Вирівнювання:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Top"
 msgstr "Вгору"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Left"
 msgstr "Ліворуч"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 #, fuzzy
 #| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr "Вирівнює панель вгору, якщо панель не максимізовано."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 #, fuzzy
 #| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
 msgstr "Вирівнює панель вгору, якщо панель не максимізовано."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:86
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Center"
 msgstr "За центром"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
 #, fuzzy
 #| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
 msgstr "Вирівнює панель вгору, якщо панель не максимізовано."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Bottom"
 msgstr "Вниз"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Right"
 msgstr "Праворуч"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 #, fuzzy
 #| msgid "Aligns the panel to the bottom if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr "Вирівнює панель вниз, якщо панель не максимізовано."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 #, fuzzy
 #| msgid "Aligns the panel to the right if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr "Вирівнює панель праворуч, якщо панель не максимізовано."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:129
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
 msgid "Visibility:"
 msgstr "Видимість:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:134
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid "Always Visible"
 msgstr "Показувати завжди"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
 #, fuzzy
 #| msgid "Auto Hide"
 msgid "Auto-Hide"
 msgstr "Автоматично ховати"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:143
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:162
-msgid "Windows In Front"
-msgstr "Вікна спереду"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
+#, fuzzy
+#| msgid "Windows Behind"
+msgid "Windows Above"
+msgstr "Вікна ззаду"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
 msgid ""
 "Like \"Auto-Hide\" but the panel remains visible as long as no windows are "
 "covering it up"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:173
-msgid "Windows Behind"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
+#, fuzzy
+#| msgid "Windows Behind"
+msgid "Windows Below"
 msgstr "Вікна ззаду"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:174
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
 #, fuzzy
 #| msgid ""
 #| "Makes the panel remain visible always but part of the maximized windows "
@@ -381,59 +410,59 @@ msgstr ""
 "Робить панель завжди видимою, але частина максимізованого вікна потраплятиме "
 "під панель так, наче панелі не існувало."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:203
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:224
 msgid "Opacity:"
 msgstr "Непрозорість:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:208
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
 #, fuzzy
 #| msgid "Fully Opaque"
 msgid "Always Opaque"
 msgstr "Повністю непрозора"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
 msgid "Adaptive"
 msgstr "Адаптивна"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:217
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:226
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
 #, fuzzy
 #| msgid "Translucent"
 msgid "Always Translucent"
 msgstr "Прозора"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:255
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:276
 msgid "Floating:"
 msgstr "Рухома:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
 msgid "Floating"
 msgstr "Рухома"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:282
 msgid "Panel visibly floats away from its screen edge"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:291
 msgid "Attached"
 msgstr "Долучено"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:292
 msgid "Panel is attached to its screen edge"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:314
 #, fuzzy
 #| msgid "Focus Shortcut"
 msgid "Focus Shortcut:"
 msgstr "Скорочення фокусування"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:303
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:324
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Натисніть цю комбінацію клавіш, щоб передати фокус панелі"
 
@@ -523,6 +552,10 @@ msgstr "Перемістити на екран %1"
 msgid "Remove Desktop"
 msgstr "Вилучити стільницю"
 
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
+msgid "Remove Panel"
+msgstr "Вилучити панель"
+
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
 msgid "%1 (primary)"
 msgstr "%1 (основний)"
@@ -580,14 +613,14 @@ msgstr "Критерію пошуку не задовольняє жоден в�
 msgid "No widgets available"
 msgstr "Немає доступних віджетів"
 
+#~ msgid "Windows In Front"
+#~ msgstr "Вікна спереду"
+
 #~ msgid "Aligns the panel"
 #~ msgstr "Вирівнює панель"
 
 #~ msgid "Center aligns the panel if the panel is not maximized."
 #~ msgstr "Вирівнює панель за центром, якщо панель не максимізовано."
-
-#~ msgid "Makes the panel remain visible always."
-#~ msgstr "Робить панель завжди видимою."
 
 #~ msgid ""
 #~ "Makes the panel hidden always but reveals it when mouse enters the area "
@@ -605,9 +638,6 @@ msgstr "Немає доступних віджетів"
 #~ "Панель буде показано, коли вказівник миші потраплятиме в область, де мала "
 #~ "бути панель, якби її не було приховано."
 
-#~ msgid "Makes the panel opaque always."
-#~ msgstr "Робить панель завжди непрозорою."
-
 #~ msgid "Makes the panel translucent except when some windows touch it."
 #~ msgstr "Робить панель прозорою, якщо її не перекривають якісь вікна."
 
@@ -619,9 +649,6 @@ msgstr "Немає доступних віджетів"
 
 #~ msgid "Makes the panel remain attached to the edge of the screen."
 #~ msgstr "Робить панель з'єднаною з краєм екрана."
-
-#~ msgid "Maximize Panel"
-#~ msgstr "Максимізувати панель"
 
 #~ msgid "%1 (disabled)"
 #~ msgstr "%1 (вимкнено)"

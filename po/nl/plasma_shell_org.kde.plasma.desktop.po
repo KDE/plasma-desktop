@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-18 02:05+0000\n"
-"PO-Revision-Date: 2023-04-30 13:52+0200\n"
+"POT-Creation-Date: 2023-05-19 02:02+0000\n"
+"PO-Revision-Date: 2023-05-18 10:24+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:209
 msgid "Currently being used"
@@ -262,176 +262,195 @@ msgstr "Muisacties"
 msgid "Input Here"
 msgstr "Invoer hier"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
-#, fuzzy
-#| msgid " Panel Settings"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
 msgid "Panel Settings"
 msgstr "Paneelinstellingen"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
-msgid "Remove Panel"
-msgstr "Paneel verwijderen"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
+#, fuzzy
+#| msgid "Maximize Panel"
+msgctxt "@action:button Make the panel as big as it can be"
+msgid "Maximize"
+msgstr "Paneel maximaliseren"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:71
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
+#, fuzzy
+#| msgid "Makes the panel opaque always."
+msgid "Make this panel as tall as possible"
+msgstr "Maakt het paneel altijd dekkend."
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
+#, fuzzy
+#| msgid "Makes the panel remain visible always."
+msgid "Make this panel as wide as possible"
+msgstr "Maakt dat het paneel altijd zichtbaar blijft."
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+#, fuzzy
+#| msgid "Delete"
+msgctxt "@action:button Delete the panel"
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
+msgid "Remove this panel; this action is undo-able"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
 msgstr "Uitlijning:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Top"
 msgstr "Bovenaan"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Left"
 msgstr "Links"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr "Lijnt het paneel bovenaan uit als het paneel niet gemaximaliseerd is."
+msgstr ""
+"Lijnt een niet gemaximaliseerd paneel bovenaan uit; geen effect wanneer het "
+"paneel gemaximaliseerd is"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr "Lijnt het paneel bovenaan uit als het paneel niet gemaximaliseerd is."
+msgstr ""
+"Lijnt een niet gemaximaliseerd paneel links uit; geen effect wanneer het "
+"paneel gemaximaliseerd is"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:86
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Center"
 msgstr "Midden"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr "Lijnt het paneel bovenaan uit als het paneel niet gemaximaliseerd is."
+msgstr ""
+"Lijnt een niet gemaximaliseerd paneel centraal uit; geen effect wanneer het "
+"paneel gemaximaliseerd is"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Bottom"
 msgstr "Onderaan"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Right"
 msgstr "Rechts"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-#, fuzzy
-#| msgid "Aligns the panel to the bottom if the panel is not maximized."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr "Lijnt het paneel onderaan uit als het paneel niet gemaximaliseerd is."
+msgstr ""
+"Lijnt een niet gemaximaliseerd paneel onderaan uit; geen effect wanneer het "
+"paneel gemaximaliseerd is"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-#, fuzzy
-#| msgid "Aligns the panel to the right if the panel is not maximized."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr "Lijnt het paneel rechts uit als het paneel niet gemaximaliseerd is."
+msgstr ""
+"Lijnt een niet gemaximaliseerd paneel rechts uit; geen effect wanneer het "
+"paneel gemaximaliseerd is"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:129
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
 msgid "Visibility:"
 msgstr "Zichtbaarheid:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:134
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid "Always Visible"
 msgstr "Altijd zichtbaar"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
-#, fuzzy
-#| msgid "Auto Hide"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
 msgid "Auto-Hide"
 msgstr "Automatisch verbergen"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:143
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr ""
+"Paneel is verborgen, maar laat zich zien wanneer de cursor de schermrand van "
+"het paneel raakt"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:162
-msgid "Windows In Front"
-msgstr "Vensters vooraan"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
+#, fuzzy
+#| msgid "Windows Behind"
+msgid "Windows Above"
+msgstr "Vensters er achter"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
 msgid ""
 "Like \"Auto-Hide\" but the panel remains visible as long as no windows are "
 "covering it up"
 msgstr ""
+"Net als \"Automatisch verbergen\" maar het paneel blijft zichtbaar zolang "
+"geen vensters het bedekken"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:173
-msgid "Windows Behind"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
+#, fuzzy
+#| msgid "Windows Behind"
+msgid "Windows Below"
 msgstr "Vensters er achter"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:174
-#, fuzzy
-#| msgid ""
-#| "Makes the panel remain visible always but part of the maximized windows "
-#| "shall go below the panel as though the panel did not exist."
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
 msgid ""
 "Like \"Always Visible\", but maximized and tiled windows go under the panel "
 "as though it didn't exist"
 msgstr ""
-"Maakt dat het paneel altijd zichtbaar blijft een gedeelte van de "
-"gemaximaliseerde vensters zullen onder het paneel gaan alsof het paneel niet "
-"bestaat."
+"Net als \"Altijd zichtbaar\", maar gemaximaliseerd en vensters schuin achter "
+"elkaar gaan onder het paneel alsof ze niet bestaan"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:203
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:224
 msgid "Opacity:"
 msgstr "Dekking:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:208
-#, fuzzy
-#| msgid "Fully Opaque"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
 msgid "Always Opaque"
-msgstr "Volledig dekkend"
+msgstr "Altijd dekkend"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
 msgid "Adaptive"
 msgstr "Past zich aan"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:217
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr ""
+"Panel is dekkend wanneer vensters het raken en transparant op andere momenten"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:226
-#, fuzzy
-#| msgid "Translucent"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
 msgid "Always Translucent"
-msgstr "Transparant"
+msgstr "Altijd transparant"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:255
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:276
 msgid "Floating:"
 msgstr "Zwevend:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
 msgid "Floating"
 msgstr "Zwevend"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:282
 msgid "Panel visibly floats away from its screen edge"
-msgstr ""
+msgstr "Panel visibly floats away from its screen edge"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:291
 msgid "Attached"
 msgstr "Vastgemaakt"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:292
 msgid "Panel is attached to its screen edge"
-msgstr ""
+msgstr "Paneel is vastgezet aan zijn schermrand"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
-#, fuzzy
-#| msgid "Focus Shortcut"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:314
 msgid "Focus Shortcut:"
-msgstr "Sneltoets heeft focus"
+msgstr "Sneltoets voor focus:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:303
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:324
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Deze sneltoets indrukken om focus te verplaatsen naar het paneel"
 
@@ -522,6 +541,10 @@ msgstr "Naar scherm %1 verplaatsen"
 msgid "Remove Desktop"
 msgstr "Bureaublad verwijderen"
 
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
+msgid "Remove Panel"
+msgstr "Paneel verwijderen"
+
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
 msgid "%1 (primary)"
 msgstr "%1 (eerste)"
@@ -579,14 +602,14 @@ msgstr "Geen widgets komen overeen met de zoektermen"
 msgid "No widgets available"
 msgstr "Geen widgets beschikbaar"
 
+#~ msgid "Windows In Front"
+#~ msgstr "Vensters vooraan"
+
 #~ msgid "Aligns the panel"
 #~ msgstr "Lijnt het paneel uit"
 
 #~ msgid "Center aligns the panel if the panel is not maximized."
 #~ msgstr "Centreert het paneel als het paneel niet gemaximaliseerd is."
-
-#~ msgid "Makes the panel remain visible always."
-#~ msgstr "Maakt dat het paneel altijd zichtbaar blijft."
 
 #~ msgid ""
 #~ "Makes the panel hidden always but reveals it when mouse enters the area "
@@ -605,9 +628,6 @@ msgstr "Geen widgets beschikbaar"
 #~ "venster zal het bedekken. Het wordt zichtbaar wanneer de muis het gebied "
 #~ "ingaat waar het paneel zou zijn als het niet was bedekt."
 
-#~ msgid "Makes the panel opaque always."
-#~ msgstr "Maakt het paneel altijd dekkend."
-
 #~ msgid "Makes the panel translucent except when some windows touch it."
 #~ msgstr "Maakt het paneel doorzichtig behalve wanneer een venster het raakt."
 
@@ -619,9 +639,6 @@ msgstr "Geen widgets beschikbaar"
 
 #~ msgid "Makes the panel remain attached to the edge of the screen."
 #~ msgstr "Laat het paneel vastgemaakt aan de rand van het scherm."
-
-#~ msgid "Maximize Panel"
-#~ msgstr "Paneel maximaliseren"
 
 #~ msgid "%1 (disabled)"
 #~ msgstr "%1 (uitgeschakeld)"

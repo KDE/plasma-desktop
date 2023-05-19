@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-17 02:04+0000\n"
-"PO-Revision-Date: 2022-09-02 07:43+0200\n"
+"PO-Revision-Date: 2023-05-18 05:26+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,15 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: ui/ActivityEditor.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Activity Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings for %1"
-msgstr "აქტივობის მორგება"
+msgstr "აქტივობის მორგება %1-სთვის"
 
 #: ui/ActivityEditor.qml:23
 #, kde-format
@@ -36,35 +34,31 @@ msgstr "ახალი აქტივობის შექმნა"
 #, kde-format
 msgctxt "@action:button as in, 'save changes'"
 msgid "Save"
-msgstr ""
+msgstr "შენახვა"
 
 #: ui/ActivityEditor.qml:57
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label:chooser"
 msgid "Icon:"
 msgstr "ხატულა:"
 
 #: ui/ActivityEditor.qml:68
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "სახელი:"
 
 #: ui/ActivityEditor.qml:74
-#, fuzzy, kde-format
-#| msgid "Description:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Description:"
 msgstr "აღწერა:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Privacy:"
-msgstr "პირადულბა:"
+msgstr "კონფიდენციალობა:"
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
@@ -100,16 +94,13 @@ msgid "Delete Activity"
 msgstr "აქტივობის წაშლა"
 
 #: ui/main.qml:89
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to delete '%1'?"
+#, kde-format
 msgctxt "%1 is an activity name"
 msgid "Do you want to delete activity '%1'?"
-msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ წაშალოთ '%1'?"
+msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ წაშალოთ აქტივობა '%1'?"
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete Activity"
+#, kde-format
 msgid "Delete Activity"
 msgstr "აქტივობის წაშლა"
 

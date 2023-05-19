@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-18 02:05+0000\n"
+"POT-Creation-Date: 2023-05-19 02:02+0000\n"
 "PO-Revision-Date: 2022-02-07 11:00+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -270,169 +270,190 @@ msgstr "Egérműveletek"
 msgid "Input Here"
 msgstr "Bemenet itt"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:41
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
 #, fuzzy
 #| msgid "Apply Settings"
 msgid "Panel Settings"
 msgstr "Beállítások alkalmazása"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
-msgid "Remove Panel"
-msgstr "Panel eltávolítása"
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
+#, fuzzy
+#| msgid "Maximize Panel"
+msgctxt "@action:button Make the panel as big as it can be"
+msgid "Maximize"
+msgstr "Panel maximalizálása"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:71
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
+msgid "Make this panel as tall as possible"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
+msgid "Make this panel as wide as possible"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+#, fuzzy
+#| msgid "Delete"
+msgctxt "@action:button Delete the panel"
+msgid "Delete"
+msgstr "Törlés"
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
+msgid "Remove this panel; this action is undo-able"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 #, fuzzy
 #| msgid "Panel Alignment"
 msgid "Alignment:"
 msgstr "Panel igazítása"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Top"
 msgstr "Fentre"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:77
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Left"
 msgstr "Balra"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:78
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:86
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Center"
 msgstr "Középre"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:87
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Bottom"
 msgstr "Lentre"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Right"
 msgstr "Jobbra"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:129
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
 #, fuzzy
 #| msgid "Visibility"
 msgid "Visibility:"
 msgstr "Láthatóság"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:134
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid "Always Visible"
 msgstr "Mindig látható"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
 #, fuzzy
 #| msgid "Auto Hide"
 msgid "Auto-Hide"
 msgstr "Automatikus elrejtés"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:143
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:162
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
 #, fuzzy
-#| msgid "Windows Can Cover"
-msgid "Windows In Front"
-msgstr "Az ablakok eltakarhatják"
+#| msgid "Windows Go Below"
+msgid "Windows Above"
+msgstr "Az ablakok elé kerülhet"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
 msgid ""
 "Like \"Auto-Hide\" but the panel remains visible as long as no windows are "
 "covering it up"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:173
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
 #, fuzzy
 #| msgid "Windows Go Below"
-msgid "Windows Behind"
+msgid "Windows Below"
 msgstr "Az ablakok elé kerülhet"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:174
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
 msgid ""
 "Like \"Always Visible\", but maximized and tiled windows go under the panel "
 "as though it didn't exist"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:203
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:224
 #, fuzzy
 #| msgid "Opacity"
 msgid "Opacity:"
 msgstr "Áttetszőség"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:208
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
 #, fuzzy
 #| msgid "Opaque"
 msgid "Always Opaque"
 msgstr "Nem áttetsző"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
 msgid "Adaptive"
 msgstr "Adaptív"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:217
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:226
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
 #, fuzzy
 #| msgid "Translucent"
 msgid "Always Translucent"
 msgstr "Átlátszó"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:255
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:276
 msgid "Floating:"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
 msgid "Floating"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:282
 msgid "Panel visibly floats away from its screen edge"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:291
 msgid "Attached"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:292
 msgid "Panel is attached to its screen edge"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:314
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus Shortcut:"
 msgstr "Gyorsbillentyű"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:303
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:324
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
@@ -522,6 +543,10 @@ msgstr "Áthelyezés a(z) %1. képernyőre"
 msgid "Remove Desktop"
 msgstr "Üres asztal"
 
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
+msgid "Remove Panel"
+msgstr "Panel eltávolítása"
+
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
 msgid "%1 (primary)"
 msgstr "%1 (elsődleges)"
@@ -579,8 +604,10 @@ msgstr "Nincs a keresési kifejezésekre illő elem"
 msgid "No widgets available"
 msgstr "Nincsenek widgetek"
 
-#~ msgid "Maximize Panel"
-#~ msgstr "Panel maximalizálása"
+#, fuzzy
+#~| msgid "Windows Can Cover"
+#~ msgid "Windows In Front"
+#~ msgstr "Az ablakok eltakarhatják"
 
 #~ msgid "%1 (disabled)"
 #~ msgstr "%1 (letiltva)"
