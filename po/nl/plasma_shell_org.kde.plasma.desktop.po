@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-19 02:02+0000\n"
-"PO-Revision-Date: 2023-05-18 10:24+0200\n"
+"POT-Creation-Date: 2023-05-20 02:04+0000\n"
+"PO-Revision-Date: 2023-05-19 10:21+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -267,34 +267,26 @@ msgid "Panel Settings"
 msgstr "Paneelinstellingen"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
-#, fuzzy
-#| msgid "Maximize Panel"
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
-msgstr "Paneel maximaliseren"
+msgstr "Maximaliseren"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-#, fuzzy
-#| msgid "Makes the panel opaque always."
 msgid "Make this panel as tall as possible"
-msgstr "Maakt het paneel altijd dekkend."
+msgstr "Maakt dit paneel zo hoog als mogelijk is."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
-#, fuzzy
-#| msgid "Makes the panel remain visible always."
 msgid "Make this panel as wide as possible"
-msgstr "Maakt dat het paneel altijd zichtbaar blijft."
+msgstr "Maakt dit paneel zo breed als mogelijk is."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
-#, fuzzy
-#| msgid "Delete"
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "Verwijderen"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "Dit paneel verwijderen; deze actie kan niet ongedaan worden"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
@@ -375,82 +367,54 @@ msgstr ""
 "Paneel is verborgen, maar laat zich zien wanneer de cursor de schermrand van "
 "het paneel raakt"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-#, fuzzy
-#| msgid "Windows Behind"
-msgid "Windows Above"
-msgstr "Vensters er achter"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
-msgid ""
-"Like \"Auto-Hide\" but the panel remains visible as long as no windows are "
-"covering it up"
-msgstr ""
-"Net als \"Automatisch verbergen\" maar het paneel blijft zichtbaar zolang "
-"geen vensters het bedekken"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
-#, fuzzy
-#| msgid "Windows Behind"
-msgid "Windows Below"
-msgstr "Vensters er achter"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
-msgid ""
-"Like \"Always Visible\", but maximized and tiled windows go under the panel "
-"as though it didn't exist"
-msgstr ""
-"Net als \"Altijd zichtbaar\", maar gemaximaliseerd en vensters schuin achter "
-"elkaar gaan onder het paneel alsof ze niet bestaan"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:224
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "Dekking:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
 msgid "Always Opaque"
 msgstr "Altijd dekkend"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
 msgstr "Past zich aan"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr ""
 "Panel is dekkend wanneer vensters het raken en transparant op andere momenten"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 msgid "Always Translucent"
 msgstr "Altijd transparant"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:276
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
 msgstr "Zwevend:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:250
 msgid "Floating"
 msgstr "Zwevend"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:282
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
 msgstr "Panel visibly floats away from its screen edge"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:291
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
 msgstr "Vastgemaakt"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:292
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
 msgstr "Paneel is vastgezet aan zijn schermrand"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:314
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
 msgid "Focus Shortcut:"
 msgstr "Sneltoets voor focus:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:324
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Deze sneltoets indrukken om focus te verplaatsen naar het paneel"
 
@@ -601,6 +565,28 @@ msgstr "Geen widgets komen overeen met de zoektermen"
 #: contents/explorer/WidgetExplorer.qml:331
 msgid "No widgets available"
 msgstr "Geen widgets beschikbaar"
+
+#~| msgid "Windows Behind"
+#~ msgid "Windows Above"
+#~ msgstr "Vensters er boven"
+
+#~ msgid ""
+#~ "Like \"Auto-Hide\" but the panel remains visible as long as no windows "
+#~ "are covering it up"
+#~ msgstr ""
+#~ "Net als \"Automatisch verbergen\" maar het paneel blijft zichtbaar zolang "
+#~ "geen vensters het bedekken"
+
+#~| msgid "Windows Behind"
+#~ msgid "Windows Below"
+#~ msgstr "Vensters er onder"
+
+#~ msgid ""
+#~ "Like \"Always Visible\", but maximized and tiled windows go under the "
+#~ "panel as though it didn't exist"
+#~ msgstr ""
+#~ "Net als \"Altijd zichtbaar\", maar gemaximaliseerd en vensters schuin "
+#~ "achter elkaar gaan onder het paneel alsof ze niet bestaan"
 
 #~ msgid "Windows In Front"
 #~ msgstr "Vensters vooraan"

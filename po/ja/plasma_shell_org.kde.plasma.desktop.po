@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-19 02:02+0000\n"
+"POT-Creation-Date: 2023-05-20 02:04+0000\n"
 "PO-Revision-Date: 2023-02-22 23:19+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -369,89 +369,65 @@ msgid ""
 "screen edge"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-#, fuzzy
-#| msgid "Windows Go Below"
-msgid "Windows Above"
-msgstr "ウィンドウはパネルの下に隠れる"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
-msgid ""
-"Like \"Auto-Hide\" but the panel remains visible as long as no windows are "
-"covering it up"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
-#, fuzzy
-#| msgid "Windows Go Below"
-msgid "Windows Below"
-msgstr "ウィンドウはパネルの下に隠れる"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
-msgid ""
-"Like \"Always Visible\", but maximized and tiled windows go under the panel "
-"as though it didn't exist"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:224
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 #, fuzzy
 #| msgid "Opacity"
 msgid "Opacity:"
 msgstr "透明度"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
 #, fuzzy
 #| msgid "Opaque"
 msgid "Always Opaque"
 msgstr "不透明"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
 msgstr "アダプティブ"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 #, fuzzy
 #| msgid "Translucent"
 msgid "Always Translucent"
 msgstr "透明"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:276
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating:"
 msgstr "フローティングパネル"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:250
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating"
 msgstr "フローティングパネル"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:282
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:291
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:292
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:314
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus Shortcut:"
 msgstr "ショートカット"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:324
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "キーボードショートカットを押してパネルをフォーカス"
 
@@ -602,6 +578,16 @@ msgstr "検索語に一致するウィジェットはありません"
 #: contents/explorer/WidgetExplorer.qml:331
 msgid "No widgets available"
 msgstr "利用可能なウィジェットはありません"
+
+#, fuzzy
+#~| msgid "Windows Go Below"
+#~ msgid "Windows Above"
+#~ msgstr "ウィンドウはパネルの下に隠れる"
+
+#, fuzzy
+#~| msgid "Windows Go Below"
+#~ msgid "Windows Below"
+#~ msgstr "ウィンドウはパネルの下に隠れる"
 
 #, fuzzy
 #~| msgid "Windows Can Cover"

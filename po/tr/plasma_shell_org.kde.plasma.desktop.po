@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-19 02:02+0000\n"
-"PO-Revision-Date: 2023-05-18 12:18+0300\n"
+"POT-Creation-Date: 2023-05-20 02:04+0000\n"
+"PO-Revision-Date: 2023-05-19 06:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -267,34 +267,26 @@ msgid "Panel Settings"
 msgstr "Panel Ayarları"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
-#, fuzzy
-#| msgid "Maximize Panel"
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
-msgstr "Panel Ekranı Kaplasın"
+msgstr "Ekranı Kapla"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-#, fuzzy
-#| msgid "Makes the panel opaque always."
 msgid "Make this panel as tall as possible"
-msgstr "Paneli her zaman mat kılar."
+msgstr "Bu paneli olabildiğince uzun kıl"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
-#, fuzzy
-#| msgid "Makes the panel remain visible always."
 msgid "Make this panel as wide as possible"
-msgstr "Paneli her zaman görünür kılar."
+msgstr "Bu paneli olabildiğince geniş kıl"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
-#, fuzzy
-#| msgid "Delete"
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "Sil"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "Bu paneli kaldır; bu eylem geri alınabilir"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
@@ -375,47 +367,19 @@ msgstr ""
 "Panel gizlidir; ancak imleç panelin ekran kenarına dokunduğunda kendini "
 "gösterir."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-#, fuzzy
-#| msgid "Windows Behind"
-msgid "Windows Above"
-msgstr "Pencereler Arkada"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
-msgid ""
-"Like \"Auto-Hide\" but the panel remains visible as long as no windows are "
-"covering it up"
-msgstr ""
-"\"Otomatik Gizle\" gibi; ancak hiçbir pencere onu kapatmadığı sürece panel "
-"görünür durumda kalır"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
-#, fuzzy
-#| msgid "Windows Behind"
-msgid "Windows Below"
-msgstr "Pencereler Arkada"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
-msgid ""
-"Like \"Always Visible\", but maximized and tiled windows go under the panel "
-"as though it didn't exist"
-msgstr ""
-"\"Her Zaman Görünür\" gibi; ancak ekranı kaplayan ve döşenen pencereler "
-"panel yokmuş gibi panelin altına girer"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:224
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "Matlık:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
 msgid "Always Opaque"
 msgstr "Her Zaman Mat"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
 msgstr "Uyarlanabilir"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
@@ -423,35 +387,35 @@ msgstr ""
 "Panel; herhangi bir pencere ona dokunduğunda mat, diğer durumlarda "
 "yarısaydamdır"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 msgid "Always Translucent"
 msgstr "Har Zaman Yarısaydam"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:276
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
 msgstr "Yüzen Panel:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:250
 msgid "Floating"
 msgstr "Yüzer"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:282
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
 msgstr "Panel, ekran kenarından görünür biçimde uzaklaşır"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:291
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
 msgstr "İlişik"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:292
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
 msgstr "Panel, ekranının kenarına ilişiktir"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:314
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
 msgid "Focus Shortcut:"
 msgstr "Odak Kısayolu:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:324
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Odağı panele taşımak için bu klavye kısayolunu kullan"
 
@@ -600,6 +564,28 @@ msgstr "Aranan terimler ile eşleşen araç takımı bulunamadı"
 #: contents/explorer/WidgetExplorer.qml:331
 msgid "No widgets available"
 msgstr "Kullanılabilir araç takımı yok"
+
+#~| msgid "Windows Behind"
+#~ msgid "Windows Above"
+#~ msgstr "Pencereler Üstünde"
+
+#~ msgid ""
+#~ "Like \"Auto-Hide\" but the panel remains visible as long as no windows "
+#~ "are covering it up"
+#~ msgstr ""
+#~ "\"Otomatik Gizle\" gibi; ancak hiçbir pencere onu kapatmadığı sürece "
+#~ "panel görünür durumda kalır"
+
+#~| msgid "Windows Behind"
+#~ msgid "Windows Below"
+#~ msgstr "Pencereler Altında"
+
+#~ msgid ""
+#~ "Like \"Always Visible\", but maximized and tiled windows go under the "
+#~ "panel as though it didn't exist"
+#~ msgstr ""
+#~ "\"Her Zaman Görünür\" gibi; ancak ekranı kaplayan ve döşenen pencereler "
+#~ "panel yokmuş gibi panelin altına girer"
 
 #~ msgid "Windows In Front"
 #~ msgstr "Pencereler Önde"

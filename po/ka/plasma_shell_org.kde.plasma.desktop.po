@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-19 02:02+0000\n"
+"POT-Creation-Date: 2023-05-20 02:04+0000\n"
 "PO-Revision-Date: 2023-05-18 05:33+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -371,47 +371,19 @@ msgstr ""
 "პანელი დამალულია, მაგრამ გამოჩნდება, როცა კურსორი პანელის ეკრანის წიბოს "
 "შეეხება"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-#, fuzzy
-#| msgid "Windows Behind"
-msgid "Windows Above"
-msgstr "ფანჯრები უკან"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
-msgid ""
-"Like \"Auto-Hide\" but the panel remains visible as long as no windows are "
-"covering it up"
-msgstr ""
-"\"ავტომატური-დამალვის\" მსგავსად, მაგრამ პანელი ხილული დარჩება მანამდე, "
-"სანამ მას ფანჯრები არ ფარავენ"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
-#, fuzzy
-#| msgid "Windows Behind"
-msgid "Windows Below"
-msgstr "ფანჯრები უკან"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
-msgid ""
-"Like \"Always Visible\", but maximized and tiled windows go under the panel "
-"as though it didn't exist"
-msgstr ""
-"'ყოველთვის ხილულის' მსგავსად, მაგრამ მთელ ეკრანზე გაშლილი ფანჯრები მის "
-"ქვემოთაც შეცურდება ისე, თითქოს პანელი არ არსებობს."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:224
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "გაუმჭირვალობა:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
 msgid "Always Opaque"
 msgstr "ყოველთვის გაუმჭვირვალე"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
 msgstr "შეგუებადი"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
@@ -419,35 +391,35 @@ msgstr ""
 "პანელი გაუმჭვირვალეა, როცა მას ნებისმიერი ფანჯარა ეხება და გამჭვირვალე, როცა "
 "არა"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 msgid "Always Translucent"
 msgstr "ყოველთვის გამჭვირვალე"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:276
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
 msgstr "მცურავი:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:250
 msgid "Floating"
 msgstr "მცურავი"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:282
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
 msgstr "პანელი ხილულად დაცურავს მისი ეკრანის წიბოდან"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:291
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
 msgstr "მიმაგრებული"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:292
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
 msgstr "პანელი მიმაგრებულია მისი ეკრანის წიბოზე"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:314
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
 msgid "Focus Shortcut:"
 msgstr "ფოკუსის მალსახმობი:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:324
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "ფოკუსის პანელზე გადასატანად ეს კლავიატურის მალსახმობი შეგიძლიათ, გამოიყენოთ"
@@ -598,6 +570,30 @@ msgstr "ვიჯეტების თქვენს ძებნას პა
 #: contents/explorer/WidgetExplorer.qml:331
 msgid "No widgets available"
 msgstr "ვიჯეტების გარეშე"
+
+#, fuzzy
+#~| msgid "Windows Behind"
+#~ msgid "Windows Above"
+#~ msgstr "ფანჯრები უკან"
+
+#~ msgid ""
+#~ "Like \"Auto-Hide\" but the panel remains visible as long as no windows "
+#~ "are covering it up"
+#~ msgstr ""
+#~ "\"ავტომატური-დამალვის\" მსგავსად, მაგრამ პანელი ხილული დარჩება მანამდე, "
+#~ "სანამ მას ფანჯრები არ ფარავენ"
+
+#, fuzzy
+#~| msgid "Windows Behind"
+#~ msgid "Windows Below"
+#~ msgstr "ფანჯრები უკან"
+
+#~ msgid ""
+#~ "Like \"Always Visible\", but maximized and tiled windows go under the "
+#~ "panel as though it didn't exist"
+#~ msgstr ""
+#~ "'ყოველთვის ხილულის' მსგავსად, მაგრამ მთელ ეკრანზე გაშლილი ფანჯრები მის "
+#~ "ქვემოთაც შეცურდება ისე, თითქოს პანელი არ არსებობს."
 
 #~ msgid "Windows In Front"
 #~ msgstr "ფანჯრები წინ"

@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-19 02:02+0000\n"
-"PO-Revision-Date: 2023-05-18 10:31+0200\n"
+"POT-Creation-Date: 2023-05-20 02:04+0000\n"
+"PO-Revision-Date: 2023-05-19 09:39+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -272,26 +272,24 @@ msgstr "Arranjament del plafó"
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
-msgstr ""
+msgstr "Maximitza"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
 msgid "Make this panel as tall as possible"
-msgstr ""
+msgstr "Fa aquest plafó el més alt possible"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
 msgid "Make this panel as wide as possible"
-msgstr ""
+msgstr "Fa aquest plafó el més ample possible"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
-#, fuzzy
-#| msgid "Delete"
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "Suprimeix"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "Elimina aquest plafó; aquesta acció no es pot desfer"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
@@ -372,47 +370,19 @@ msgstr ""
 "El plafó està ocult, però es mostra quan el cursor toca la vora de la "
 "pantalla del plafó"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-#, fuzzy
-#| msgid "Windows Behind"
-msgid "Windows Above"
-msgstr "Les finestres a darrere"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
-msgid ""
-"Like \"Auto-Hide\" but the panel remains visible as long as no windows are "
-"covering it up"
-msgstr ""
-"Com «Oculta automàticament» però el plafó roman visible mentre no hi hagin "
-"finestres que el cobreixin"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
-#, fuzzy
-#| msgid "Windows Behind"
-msgid "Windows Below"
-msgstr "Les finestres a darrere"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
-msgid ""
-"Like \"Always Visible\", but maximized and tiled windows go under the panel "
-"as though it didn't exist"
-msgstr ""
-"Fa que el plafó estigui sempre visible, però les finestres maximitzades o en "
-"mosaic queden sota el plafó com si no existís."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:224
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "Opacitat:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:229
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
 msgid "Always Opaque"
 msgstr "Sempre opac"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
 msgstr "Adaptativa"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
@@ -420,35 +390,35 @@ msgstr ""
 "El plafó és opac quan el toca qualsevol finestra, i translúcid la resta del "
 "temps"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 msgid "Always Translucent"
 msgstr "Sempre translúcid"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:276
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
 msgstr "Flotant:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:250
 msgid "Floating"
 msgstr "Flotant"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:282
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
 msgstr "El plafó flota visiblement lluny de la vora de la pantalla"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:291
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
 msgstr "Fixat"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:292
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
 msgstr "El plafó està ancorat a la seva vora de la pantalla"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:314
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
 msgid "Focus Shortcut:"
 msgstr "Drecera de focus:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:324
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Premeu aquesta drecera de teclat per moure el focus al plafó"
 
@@ -600,5 +570,24 @@ msgstr "No hi ha cap giny que coincideixi amb els termes de la cerca"
 msgid "No widgets available"
 msgstr "No hi ha cap giny disponible"
 
-#~ msgid "Windows In Front"
-#~ msgstr "Les finestres a davant"
+#~| msgid "Windows Behind"
+#~ msgid "Windows Above"
+#~ msgstr "Les finestres a sobre"
+
+#~ msgid ""
+#~ "Like \"Auto-Hide\" but the panel remains visible as long as no windows "
+#~ "are covering it up"
+#~ msgstr ""
+#~ "Com «Oculta automàticament» però el plafó roman visible mentre no hi "
+#~ "hagin finestres que el cobreixin"
+
+#~| msgid "Windows Behind"
+#~ msgid "Windows Below"
+#~ msgstr "Les finestres a sota"
+
+#~ msgid ""
+#~ "Like \"Always Visible\", but maximized and tiled windows go under the "
+#~ "panel as though it didn't exist"
+#~ msgstr ""
+#~ "Fa que el plafó estigui sempre visible, però les finestres maximitzades o "
+#~ "en mosaic queden sota el plafó com si no existís."

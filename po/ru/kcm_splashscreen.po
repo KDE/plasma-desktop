@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-05-20 02:04+0000\n"
 "PO-Revision-Date: 2022-12-23 11:02+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.08.3\n"
 
-#: kcm.cpp:160
+#: kcm.cpp:161
 #, kde-format
 msgid "None"
 msgstr "Нет"
 
-#: kcm.cpp:162
+#: kcm.cpp:164
 #, kde-format
 msgid "No splash screen will be shown"
 msgstr "Не использовать заставку"
 
-#: kcm.cpp:179
+#: kcm.cpp:182
 #, kde-format
 msgid "You cannot delete the currently selected splash screen"
 msgstr "Активная заставка не может быть удалена"
@@ -46,22 +46,22 @@ msgstr "Для использования в будущем\t"
 msgid "Name of the current splash theme"
 msgstr "Название текущей заставки"
 
-#: ui/main.qml:29
+#: ui/main.qml:30
 #, kde-format
 msgid "&Get New…"
 msgstr "&Загрузить…"
 
-#: ui/main.qml:50
+#: ui/main.qml:51
 #, kde-format
 msgid "Failed to show the splash screen preview."
 msgstr "Не удалось выполнить предварительный просмотр заставки."
 
-#: ui/main.qml:82
+#: ui/main.qml:83
 #, kde-format
 msgid "Preview Splash Screen"
 msgstr "Продемонстрировать заставку"
 
-#: ui/main.qml:87
+#: ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
 msgstr "Удалить"
