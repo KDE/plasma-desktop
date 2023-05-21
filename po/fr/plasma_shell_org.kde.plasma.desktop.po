@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-20 02:04+0000\n"
-"PO-Revision-Date: 2023-05-10 12:10+0200\n"
+"PO-Revision-Date: 2023-05-19 09:47+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -273,8 +273,6 @@ msgid "Input Here"
 msgstr "Saisir ici"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
-#, fuzzy
-#| msgid " Panel Settings"
 msgid "Panel Settings"
 msgstr "Configuration des panneaux"
 
@@ -376,26 +374,24 @@ msgid "Always Visible"
 msgstr "Toujours visible"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
-#, fuzzy
-#| msgid "Auto Hide"
 msgid "Auto-Hide"
-msgstr "Cacher automatiquement"
+msgstr "Masquer automatiquement"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr ""
+"Le panneau est masqué mais ré-apparaît lorsque le curseur touche le bord "
+"d'écran du panneau."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "Opacité :"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
-#, fuzzy
-#| msgid "Fully Opaque"
 msgid "Always Opaque"
-msgstr "Totalement opaque"
+msgstr "Toujours opaque"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
@@ -408,10 +404,8 @@ msgid ""
 msgstr ""
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
-#, fuzzy
-#| msgid "Translucent"
 msgid "Always Translucent"
-msgstr "Translucide"
+msgstr "Toujours translucide"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
@@ -431,13 +425,11 @@ msgstr "Attaché"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
-msgstr ""
+msgstr "Le panneau est attaché à son bord d'écran."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
-#, fuzzy
-#| msgid "Focus Shortcut"
 msgid "Focus Shortcut:"
-msgstr "Raccourci pour le focus"
+msgstr "Raccourci pour le focus :"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-20 02:04+0000\n"
-"PO-Revision-Date: 2023-05-03 08:53+0200\n"
+"PO-Revision-Date: 2023-05-20 08:17+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -261,40 +261,30 @@ msgid "Input Here"
 msgstr "Wpisz tutaj"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
-#, fuzzy
-#| msgid " Panel Settings"
 msgid "Panel Settings"
 msgstr "Ustawienia paska"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
-#, fuzzy
-#| msgid "Maximize Panel"
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
-msgstr "Maksymalizuj panel"
+msgstr "Maksymalizuj"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-#, fuzzy
-#| msgid "Makes the panel opaque always."
 msgid "Make this panel as tall as possible"
-msgstr "Czyni pasek zawsze nieprzezroczystym."
+msgstr "Uczyń ten pasek tak wysokim jak to możliwe"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
-#, fuzzy
-#| msgid "Makes the panel remain visible always."
 msgid "Make this panel as wide as possible"
-msgstr "Czyni pasek zawsze widocznym."
+msgstr "Uczyń ten pasek tak szerokim jak to możliwe"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
-#, fuzzy
-#| msgid "Delete"
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "Usuń"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "Usuń ten pasek; nie będzie można cofnąć tego działania"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
@@ -309,29 +299,29 @@ msgid "Left"
 msgstr "Do lewej"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr "Wyrównuje pasek do góry, jeśli nie jest on zmaksymalizowany."
+msgstr ""
+"Wyrównuje niezmaksymalizowany pasek do góry;bez wpływu, gdy pasek jest "
+"zmaksymalizowany"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr "Wyrównuje pasek do góry, jeśli nie jest on zmaksymalizowany."
+msgstr ""
+"Wyrównuje niezmaksymalizowany pasek do lewej;bez wpływu, gdy pasek jest "
+"zmaksymalizowany"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Center"
 msgstr "Do środka"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr "Wyrównuje pasek do góry, jeśli nie jest on zmaksymalizowany."
+msgstr ""
+"Wyrównuje niezmaksymalizowany pasek do środka;bez wpływu, gdy pasek jest "
+"zmaksymalizowany"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Bottom"
@@ -342,18 +332,18 @@ msgid "Right"
 msgstr "Do prawej"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
-#, fuzzy
-#| msgid "Aligns the panel to the bottom if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr "Wyrównuje pasek do dołu, jeśli nie jest on zmaksymalizowany."
+msgstr ""
+"Wyrównuje niezmaksymalizowany pasek do dołu;bez wpływu, gdy pasek jest "
+"zmaksymalizowany"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
-#, fuzzy
-#| msgid "Aligns the panel to the right if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr "Wyrównuje pasek do prawej, jeśli nie jest on zmaksymalizowany."
+msgstr ""
+"Wyrównuje niezmaksymalizowany pasek do prawej;bez wpływu, gdy pasek jest "
+"zmaksymalizowany"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
 msgid "Visibility:"
@@ -364,8 +354,6 @@ msgid "Always Visible"
 msgstr "Zawsze widoczny"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
-#, fuzzy
-#| msgid "Auto Hide"
 msgid "Auto-Hide"
 msgstr "Samoukrywający się"
 
@@ -374,16 +362,16 @@ msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr ""
+"Pasek jest domyślnie ukryty, lecz odkryje się sam, gdy wskaźnik dotknie jego "
+"krawędzi ekranu."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "Nieprzezroczystość:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
-#, fuzzy
-#| msgid "Fully Opaque"
 msgid "Always Opaque"
-msgstr "Nieprzezroczysty"
+msgstr "Zawsze nieprzezroczysty"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
@@ -394,12 +382,12 @@ msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr ""
+"Pasek będzie nieprzezroczysty, gdy będzie się stykać z dowolnym oknem i "
+"przezroczysty w pozostałych przypadkach"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
-#, fuzzy
-#| msgid "Translucent"
 msgid "Always Translucent"
-msgstr "Przezroczysty"
+msgstr "Zawsze przezroczysty"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
@@ -411,7 +399,7 @@ msgstr "Pływający"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
-msgstr ""
+msgstr "Widoczność panelu odpływa od krawędzi jego ekranu"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
@@ -419,13 +407,11 @@ msgstr "Przytwierdzony"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
-msgstr ""
+msgstr "Pasek jest przytwierdzony do krawędzi jego ekranu"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
-#, fuzzy
-#| msgid "Focus Shortcut"
 msgid "Focus Shortcut:"
-msgstr "Skrót uaktywniający"
+msgstr "Skrót uaktywniający:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"
@@ -550,7 +536,7 @@ msgstr "Adres pocztowy:"
 
 #: contents/explorer/Tooltip.qml:129
 msgid "Uninstall"
-msgstr "Usuń "
+msgstr "Usuń"
 
 #: contents/explorer/WidgetExplorer.qml:129
 #: contents/explorer/WidgetExplorer.qml:240
