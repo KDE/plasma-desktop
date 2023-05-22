@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-20 02:04+0000\n"
-"PO-Revision-Date: 2023-04-30 21:41+0530\n"
+"PO-Revision-Date: 2023-05-21 14:37+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:209
 msgid "Currently being used"
@@ -261,40 +261,30 @@ msgid "Input Here"
 msgstr "இங்கு உள்ளிடவும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
-#, fuzzy
-#| msgid " Panel Settings"
 msgid "Panel Settings"
-msgstr " பலகைக்கான அமைப்புகள்"
+msgstr "பலகைக்கான அமைப்புகள்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
-#, fuzzy
-#| msgid "Maximize Panel"
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
-msgstr "பலகையை அதிகபட்ச பெரிதாக்கு"
+msgstr "அதிகபட்ச பெரிதாக்கு"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-#, fuzzy
-#| msgid "Makes the panel opaque always."
 msgid "Make this panel as tall as possible"
-msgstr "பலகை எப்போதும் ஒளிபுகாத‍தாக இருக்கும்"
+msgstr "பலகையை முடிந்தளவு நீளமாக்கும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
-#, fuzzy
-#| msgid "Makes the panel remain visible always."
 msgid "Make this panel as wide as possible"
-msgstr "பலகையை எப்போதும் காட்ட வேண்டும்."
+msgstr "பலகையை முடிந்தளவு நீளமாக்கும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
-#, fuzzy
-#| msgid "Delete"
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "நீக்கு"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "பலகையை நீக்கும்; இச்செயலை செயல்நீக்கலாம்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
@@ -309,29 +299,23 @@ msgid "Left"
 msgstr "இடதுபுறமாக"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை மேல் ஓரத்திற்கு சீரமைக்கும்"
+msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை மேல் ஓரத்துடன் சீரமைக்கும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை மேல் ஓரத்திற்கு சீரமைக்கும்"
+msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை மேல் ஓரத்துடன் சீரமைக்கும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Center"
 msgstr "நடுவில்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை மேல் ஓரத்திற்கு சீரமைக்கும்"
+msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை நடுப்படுத்தும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Bottom"
@@ -342,18 +326,14 @@ msgid "Right"
 msgstr "வலதுபுறமாக"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
-#, fuzzy
-#| msgid "Aligns the panel to the bottom if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை கீழ் ஓரத்திற்கு சீரமைக்கும்"
+msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை கீழ் ஓரத்துடன் சீரமைக்கும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
-#, fuzzy
-#| msgid "Aligns the panel to the right if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை வலது ஓரத்திற்கு சீரமைக்கும்"
+msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை வலது ஓரத்துடன் சீரமைக்கும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
 msgid "Visibility:"
@@ -364,8 +344,6 @@ msgid "Always Visible"
 msgstr "எப்போது காட்டப்படும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
-#, fuzzy
-#| msgid "Auto Hide"
 msgid "Auto-Hide"
 msgstr "தானாக மறை"
 
@@ -374,16 +352,16 @@ msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr ""
+"பலகை இயல்பாக மறைந்திருக்கும். திரையின் ஓரத்தில் சுட்டிக்குறியை வைக்கும்போது பலகை "
+"காட்டப்படும்."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "ஒளிபுகாமை:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
-#, fuzzy
-#| msgid "Fully Opaque"
 msgid "Always Opaque"
-msgstr "ஒளி புகாத‍து"
+msgstr "எப்போதும் ஒளிபுகாத‍து"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
@@ -394,12 +372,12 @@ msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr ""
+"பலகையை சாளரங்கள் தொடும்போது பலகை ஒளிபுகாத‍தாக இருக்கும். மற்ற நேரங்களில் ஒளிபுகுவதாக "
+"இருக்கும்."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
-#, fuzzy
-#| msgid "Translucent"
 msgid "Always Translucent"
-msgstr "ஒளிபுகக்கூடியது"
+msgstr "எப்போதும் ஒளிபுகக்கூடியது"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
@@ -411,21 +389,19 @@ msgstr "மிதப்பது"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
-msgstr ""
+msgstr "திரையின் ஓரத்ததை தொடாமல் பலகை மிதக்கும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
-msgstr "ஒட்டியுள்ளது"
+msgstr "ஒட்டுவது"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
-msgstr ""
+msgstr "திரையின் ஓரத்துடன் பலகை ஒட்டியிருக்கும்"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
-#, fuzzy
-#| msgid "Focus Shortcut"
 msgid "Focus Shortcut:"
-msgstr "குவியப்படுத்தும் சுருக்குவழி"
+msgstr "குவியப்படுத்தும் சுருக்குவழி:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"

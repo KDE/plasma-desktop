@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-20 02:04+0000\n"
-"PO-Revision-Date: 2023-05-04 11:36+0400\n"
+"PO-Revision-Date: 2023-05-21 10:03+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
@@ -261,40 +261,30 @@ msgid "Input Here"
 msgstr "أدخل هنا"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
-#, fuzzy
-#| msgid " Panel Settings"
 msgid "Panel Settings"
-msgstr " إعدادات اللوحة"
+msgstr "إعدادات اللوحة"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
-#, fuzzy
-#| msgid "Maximize Panel"
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
-msgstr "كبّر اللوحة"
+msgstr "كبّر"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-#, fuzzy
-#| msgid "Makes the panel opaque always."
 msgid "Make this panel as tall as possible"
-msgstr "يجعل اللوحة معتمة دائما."
+msgstr "اجعل هذه اللوحة أطول ما يمكن"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
-#, fuzzy
-#| msgid "Makes the panel remain visible always."
 msgid "Make this panel as wide as possible"
-msgstr "يجعل اللوحة مرئية دائما."
+msgstr "اجعل هذه اللوحة أعرض ما يمكن"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
-#, fuzzy
-#| msgid "Delete"
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "احذف"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "أزِل هذه اللوحة؛ لا يمكن التراجع عن هذا الإجراء"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
@@ -309,29 +299,25 @@ msgid "Left"
 msgstr "اليسار"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr "تحاذي اللوحة إلى الأعلى إذا لم تكن مكبرة."
+msgstr ""
+"تحاذي اللوحة غير المكبرة إلى الأعلى، لن يكون هناك تأثير إذا كانت مكبرة."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr "تحاذي اللوحة إلى الأعلى إذا لم تكن مكبرة."
+msgstr ""
+"تحاذي اللوحة غير المكبرة إلى اليسار، لن يكون هناك تأثير إذا كانت مكبرة."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Center"
 msgstr "الوسط"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr "تحاذي اللوحة إلى الأعلى إذا لم تكن مكبرة."
+msgstr "تحاذي اللوحة غير المكبرة إلى الوسط، لن يكون هناك تأثير إذا كانت مكبرة."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Bottom"
@@ -342,18 +328,16 @@ msgid "Right"
 msgstr "اليمين"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
-#, fuzzy
-#| msgid "Aligns the panel to the bottom if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr "تحاذي اللوحة إلى الأسفل إذا لم تكن مكبرة."
+msgstr ""
+"تحاذي اللوحة غير المكبرة إلى الأسفل، لن يكون هناك تأثير إذا كانت مكبرة."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
-#, fuzzy
-#| msgid "Aligns the panel to the right if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr "تحاذي اللوحة إلى اليمين إذا لم تكن مكبرة."
+msgstr ""
+"تحاذي اللوحة غير المكبرة إلى اليمين، لن يكون هناك تأثير إذا كانت مكبرة."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
 msgid "Visibility:"
@@ -364,8 +348,6 @@ msgid "Always Visible"
 msgstr "أظهر دائمًا"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
-#, fuzzy
-#| msgid "Auto Hide"
 msgid "Auto-Hide"
 msgstr "إخفاء آلي"
 
@@ -373,17 +355,15 @@ msgstr "إخفاء آلي"
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
-msgstr ""
+msgstr "اللوحة مخفية، لكنها تكشف عن نفسها عندما يلمس المؤشر حافة شاشة اللوحة"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "العتمة:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
-#, fuzzy
-#| msgid "Fully Opaque"
 msgid "Always Opaque"
-msgstr "تعتيم كامل"
+msgstr "تعتيم دائم"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
@@ -393,13 +373,11 @@ msgstr "متكيفة"
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
-msgstr ""
+msgstr "تكون اللوحة معتمة عندما تلمسها أي نوافذ، وتكون شفافة في الأوقات الأخرى"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
-#, fuzzy
-#| msgid "Translucent"
 msgid "Always Translucent"
-msgstr "شفافة"
+msgstr "شفافة دائما"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
@@ -411,7 +389,7 @@ msgstr "التعويم"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
-msgstr ""
+msgstr "تطفو اللوحة بشكل واضح بعيدًا عن حافة الشاشة"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
@@ -419,13 +397,11 @@ msgstr "ملحقة"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
-msgstr ""
+msgstr "اللوحة متصلة بحافة الشاشة"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
-#, fuzzy
-#| msgid "Focus Shortcut"
 msgid "Focus Shortcut:"
-msgstr "اختصار التركيز"
+msgstr "اختصار التركيز:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"
