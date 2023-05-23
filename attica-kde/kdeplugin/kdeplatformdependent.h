@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include <attica/platformdependent.h>
+#include <Attica/platformdependent.h>
 
 #include <QHash>
 
@@ -19,7 +19,7 @@
 
 namespace Attica
 {
-class KdePlatformDependent : public QObject, public Attica::PlatformDependent
+class KdePlatformDependent : public Attica::PlatformDependent
 {
     Q_OBJECT
     Q_INTERFACES(Attica::PlatformDependent)
@@ -42,6 +42,19 @@ public:
     bool loadCredentials(const QUrl &baseUrl, QString &user, QString &password) override;
     bool askForCredentials(const QUrl &baseUrl, QString &user, QString &password) override;
     QNetworkAccessManager *nam() override;
+
+    QNetworkReply *put(const QNetworkRequest &request, const QByteArray &data) override
+    {
+        return m_accessManager->put(addOAuthToRequest(removeAuthFromRequest(request)), data);
+    }
+    QNetworkReply *put(const QNetworkRequest &request, QIODevice *data) override
+    {
+        return m_accessManager->put(addOAuthToRequest(removeAuthFromRequest(request)), data);
+    }
+    QNetworkReply *deleteResource(const QNetworkRequest &request) override
+    {
+        return m_accessManager->deleteResource(addOAuthToRequest(removeAuthFromRequest(request)));
+    }
 
 private:
     QNetworkRequest addOAuthToRequest(const QNetworkRequest &request);

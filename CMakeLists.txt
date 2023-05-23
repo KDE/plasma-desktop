@@ -8,7 +8,6 @@ set(PROJECT_VERSION_MAJOR 5)
 set(QT_MIN_VERSION "6.4.0")
 set(KF6_MIN_VERSION "5.240.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.85")
-set(ACCOUNTSQT_DEP_VERSION "1.13")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -66,7 +65,6 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     KIO
     Notifications
     NotifyConfig
-    Attica
     Runner
     GlobalAccel
     CoreAddons # KSharedDataCache required by KImageCache, KStringHandler required by FolderModel
@@ -86,22 +84,12 @@ if (QT_MAJOR_VERSION EQUAL "5")
     find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS KDELibs4Support) # kcms/dateandtime
 endif()
 
-# TODO re-enable once KAccounts is ported to Qt6
-# find_package(AccountsQt${QT_MAJOR_VERSION} ${ACCOUNTSQT_DEP_VERSION} CONFIG)
-#
-# set_package_properties(AccountsQt${QT_MAJOR_VERSION} PROPERTIES
-#     DESCRIPTION "Accounts management library for Qt applications"
-#     URL "https://gitlab.com/accounts-sso/libaccounts-qt"
-#     PURPOSE "Required for building the OpenDesktop integration plugin"
-#     TYPE OPTIONAL
-# )
-#
-# find_package(KAccounts 20.04)
-# set_package_properties(KAccounts PROPERTIES
-#     DESCRIPTION "Accounts management library for KDE applications"
-#     PURPOSE "Required for building the OpenDesktop integration plugin"
-#     TYPE OPTIONAL
-# )
+find_package(KAccounts 20.04)
+set_package_properties(KAccounts PROPERTIES
+    DESCRIPTION "Accounts management library for KDE applications"
+    PURPOSE "Required for building the OpenDesktop integration plugin"
+    TYPE OPTIONAL
+)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SignOnOAuth2 IMPORTED_TARGET signon-oauth2plugin)
@@ -259,7 +247,7 @@ add_subdirectory(toolboxes)
 add_subdirectory(applets)
 add_subdirectory(kcms)
 add_subdirectory(knetattach)
-if(KAccounts_FOUND AND AccountsQt${QT_MAJOR_VERSION}_FOUND)
+if(KAccounts_FOUND)
     add_subdirectory(attica-kde)
 endif()
 add_subdirectory(imports/activitymanager/)
