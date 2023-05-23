@@ -67,10 +67,6 @@ PlasmaCore.ToolTipArea {
     interactive: model.IsWindow || mainItem.hasPlayer
     location: plasmoid.location
     mainItem: model.IsWindow ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
-    // when the mouse leaves the tooltip area, a timer to hide is set for (timeout / 20) ms
-    // see plasma-framework/src/declarativeimports/core/tooltipdialog.cpp function dismiss()
-    // to compensate for that we multiply by 20 here, to get an effective leave timeout of 2s.
-    timeout: (tasks.toolTipOpenedByClick === task) ? 2000 * 20 : 4000
 
     Accessible.name: model.display
     Accessible.description: {
