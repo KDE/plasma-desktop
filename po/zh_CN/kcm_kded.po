@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-05 02:15+0000\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-05-22 13:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-desktop/kcm5_kded.pot\n"
-"X-Crowdin-File-ID: 4347\n"
+"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcm_kded.pot\n"
+"X-Crowdin-File-ID: 43701\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -40,7 +40,7 @@ msgstr "启动服务失败。"
 #: kcmkded.cpp:224
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
-msgstr "无法将已保存的更改通知 KDE 服务管理器 (kded5)：%1"
+msgstr "无法将已保存的更改通知到 KDE 服务管理器 (kded5)：%1"
 
 #: ui/main.qml:36
 #, kde-format
@@ -116,40 +116,3 @@ msgstr "停止服务"
 #, kde-format
 msgid "Start Service"
 msgstr "启动服务"
-
-#~ msgid ""
-#~ "<p>This module allows you to have an overview of all plugins of the KDE "
-#~ "Daemon, also referred to as KDE Services. Generally, there are two types "
-#~ "of service:</p> <ul><li>Services invoked at startup</li><li>Services "
-#~ "called on demand</li></ul> <p>The latter are only listed for convenience. "
-#~ "The startup services can be started and stopped. You can also define "
-#~ "whether services should be loaded at startup.</p> <p><b>Use this with "
-#~ "care: some services are vital for Plasma; do not deactivate services if "
-#~ "you  do not know what you are doing.</b></p>"
-#~ msgstr ""
-#~ "<p>此模块允许您概览全部 KDE 守护程序插件，或称为 KDE 服务。通常情况下，服"
-#~ "务分为两种：</p><ul><li>启动时调用的服务</li><li>按需调用的服务</li></"
-#~ "ul><p>后者仅仅为了方便而列出。启动服务可以被启动和停止。您还可以定义要在启"
-#~ "动时是否加载服务。</p><p><b>请小心使用此功能。某些服务是 Plasma 所必需的。"
-#~ "如果您对某一服务不太了解，请不要禁用该服务。</b></p>"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "KDE 中国, csslayer, Guo Yunhe, Tyson Tan"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr ""
-#~ "kde-china@kde.org, csslayer@kde.org, i@guoyunhe.me, tysontan@tysontan.com"
-
-#~ msgid "Background Services"
-#~ msgstr "后台服务"
-
-#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-#~ msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-
-#~ msgid "Daniel Molkentin"
-#~ msgstr "Daniel Molkentin"
-
-#~ msgid "Kai Uwe Broulik"
-#~ msgstr "Kai Uwe Broulik"

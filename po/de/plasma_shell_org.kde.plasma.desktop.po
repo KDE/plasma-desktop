@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-20 02:04+0000\n"
-"PO-Revision-Date: 2023-04-29 12:11+0200\n"
+"PO-Revision-Date: 2023-05-23 02:41+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: contents/activitymanager/ActivityItem.qml:209
 msgid "Currently being used"
@@ -270,11 +270,9 @@ msgid "Panel Settings"
 msgstr "Einstellungen anwenden"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
-#, fuzzy
-#| msgid "Maximize Panel"
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
-msgstr "Kontrollleiste maximieren"
+msgstr "Maximieren"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
 msgid "Make this panel as tall as possible"
@@ -285,8 +283,6 @@ msgid "Make this panel as wide as possible"
 msgstr ""
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
-#, fuzzy
-#| msgid "Delete"
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "Löschen"
@@ -294,6 +290,7 @@ msgstr "Löschen"
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
+"Diese Kontrollleiste entfernen; diese Aktion kann rückgängig gemacht werden"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
