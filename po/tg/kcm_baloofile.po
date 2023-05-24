@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2019-11-14 11:58+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -17,14 +17,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.04.3\n"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
+#, kde-format
+msgid "Pause Indexer"
+msgstr ""
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Resume Indexer"
+msgstr ""
+
+#: ui/main.qml:77
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
 
-#: ui/main.qml:67
+#: ui/main.qml:86
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -32,103 +42,132 @@ msgid ""
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
 
-#: ui/main.qml:69
+#: ui/main.qml:88
 #, kde-format
 msgid "Delete Index Data"
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:108
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr ""
 
-#: ui/main.qml:93
+#: ui/main.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr ""
 
-#: ui/main.qml:100
+#: ui/main.qml:119
 #, kde-format
 msgid ""
-"File Search helps you quickly locate all your files based on their content."
+"File Search helps you quickly locate your files. You can choose which "
+"folders and what types of file data are indexed."
 msgstr ""
 
-#: ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "File Search"
-msgid "Enable File Search"
-msgstr "Ҷустуҷӯи файлҳо"
-
-#: ui/main.qml:122
+#: ui/main.qml:134
 #, kde-format
-msgid "Also index file content"
+msgctxt "@title:group"
+msgid "File indexing:"
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:135
 #, kde-format
-msgid "Index hidden files and folders"
+msgctxt "@action:check"
+msgid "Enabled"
 msgstr ""
 
-#: ui/main.qml:160
+#: ui/main.qml:149
 #, kde-format
-msgid "Status: %1, %2% complete"
+msgctxt "@label indexing status"
+msgid "Status:"
+msgstr ""
+
+#: ui/main.qml:153
+#, kde-format
+msgid "%1, %2% complete"
+msgstr ""
+
+#: ui/main.qml:162
+#, kde-format
+msgctxt "@label file currently being indexed"
+msgid "Currently Indexing:"
 msgstr ""
 
 #: ui/main.qml:165
-#, kde-format
-msgid "Pause Indexer"
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Currently Indexing: <filename>%1</filename>"
 msgstr ""
 
-#: ui/main.qml:165
+#: ui/main.qml:181
 #, kde-format
-msgid "Resume Indexer"
-msgstr ""
-
-#: ui/main.qml:178
-#, kde-format
-msgid "Currently indexing: %1"
+msgctxt "@title:group"
+msgid "Data to index:"
 msgstr ""
 
 #: ui/main.qml:183
 #, kde-format
-msgid "Folder specific configuration:"
+msgid "File names and contents"
 msgstr ""
 
-#: ui/main.qml:210
+#: ui/main.qml:196
 #, kde-format
-msgid "Start indexing a folder…"
+msgid "File names only"
 msgstr ""
 
-#: ui/main.qml:221
+#: ui/main.qml:215
 #, kde-format
-msgid "Stop indexing a folder…"
+msgid "Hidden files and folders"
 msgstr ""
 
-#: ui/main.qml:272
+#: ui/main.qml:271
+#, kde-format
+msgctxt "@title:table Locations to include or exclude from indexing"
+msgid "Locations"
+msgstr ""
+
+#: ui/main.qml:276
+#, kde-format
+msgctxt "@action:button"
+msgid "Start Indexing a Folder…"
+msgstr ""
+
+#: ui/main.qml:287
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Indexing a Folder…"
+msgstr ""
+
+#: ui/main.qml:349
 #, kde-format
 msgid "Not indexed"
 msgstr ""
 
-#: ui/main.qml:273
+#: ui/main.qml:350
 #, kde-format
 msgid "Indexed"
 msgstr ""
 
-#: ui/main.qml:303
+#: ui/main.qml:380
 #, kde-format
 msgid "Delete entry"
 msgstr ""
 
-#: ui/main.qml:318
+#: ui/main.qml:395
 #, kde-format
 msgid "Select a folder to include"
 msgstr ""
 
-#: ui/main.qml:318
+#: ui/main.qml:395
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr ""
+
+#, fuzzy
+#~| msgid "File Search"
+#~ msgid "Enable File Search"
+#~ msgstr "Ҷустуҷӯи файлҳо"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

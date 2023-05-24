@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2022-12-20 11:19-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -20,7 +20,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Pausar indexador"
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Continuar indexador"
+
+#: ui/main.qml:77
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -29,7 +39,7 @@ msgstr ""
 "Isto irá desabilitar a pesquisa de arquivos no KRunner e menus e removerá os "
 "metadados estendidos exibidos em todos os aplicativos KDE."
 
-#: ui/main.qml:67
+#: ui/main.qml:86
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -41,105 +51,149 @@ msgstr ""
 "recriado do zero. Isto pode levar algum tempo, dependendo de quantos "
 "arquivos você tem."
 
-#: ui/main.qml:69
+#: ui/main.qml:88
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Excluir dados do índice"
 
-#: ui/main.qml:89
+#: ui/main.qml:108
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr ""
 "O sistema deve ser reiniciado antes que estas alterações tenham efeito."
 
-#: ui/main.qml:93
+#: ui/main.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Reiniciar"
 
-#: ui/main.qml:100
-#, kde-format
+#: ui/main.qml:119
+#, fuzzy, kde-format
+#| msgid ""
+#| "File Search helps you quickly locate all your files based on their "
+#| "content."
 msgid ""
-"File Search helps you quickly locate all your files based on their content."
+"File Search helps you quickly locate your files. You can choose which "
+"folders and what types of file data are indexed."
 msgstr ""
 "A Pesquisa de arquivos ajuda-lhe a encontrar todos os seus arquivos com base "
 "no conteúdo."
 
-#: ui/main.qml:107
-#, kde-format
-msgid "Enable File Search"
-msgstr "Habilitar a pesquisa de arquivos"
+#: ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Currently indexing: %1"
+msgctxt "@title:group"
+msgid "File indexing:"
+msgstr "Indexando atualmente: %1"
 
-#: ui/main.qml:122
+#: ui/main.qml:135
 #, kde-format
-msgid "Also index file content"
-msgstr "Também indexar o conteúdo do arquivo"
+msgctxt "@action:check"
+msgid "Enabled"
+msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:149
 #, kde-format
-msgid "Index hidden files and folders"
-msgstr "Indexar os arquivos e pastas ocultas"
+msgctxt "@label indexing status"
+msgid "Status:"
+msgstr ""
 
-#: ui/main.qml:160
-#, kde-format
-msgid "Status: %1, %2% complete"
+#: ui/main.qml:153
+#, fuzzy, kde-format
+#| msgid "Status: %1, %2% complete"
+msgid "%1, %2% complete"
 msgstr "Status: %1, %2% concluído"
 
-#: ui/main.qml:165
-#, kde-format
-msgid "Pause Indexer"
-msgstr "Pausar indexador"
-
-#: ui/main.qml:165
-#, kde-format
-msgid "Resume Indexer"
-msgstr "Continuar indexador"
-
-#: ui/main.qml:178
-#, kde-format
-msgid "Currently indexing: %1"
+#: ui/main.qml:162
+#, fuzzy, kde-format
+#| msgid "Currently indexing: %1"
+msgctxt "@label file currently being indexed"
+msgid "Currently Indexing:"
 msgstr "Indexando atualmente: %1"
+
+#: ui/main.qml:165
+#, fuzzy, kde-kuit-format
+#| msgid "Currently indexing: %1"
+msgctxt "@info"
+msgid "Currently Indexing: <filename>%1</filename>"
+msgstr "Indexando atualmente: %1"
+
+#: ui/main.qml:181
+#, kde-format
+msgctxt "@title:group"
+msgid "Data to index:"
+msgstr ""
 
 #: ui/main.qml:183
 #, kde-format
-msgid "Folder specific configuration:"
-msgstr "Configuração específica da pasta:"
+msgid "File names and contents"
+msgstr ""
 
-#: ui/main.qml:210
+#: ui/main.qml:196
 #, kde-format
-msgid "Start indexing a folder…"
+msgid "File names only"
+msgstr ""
+
+#: ui/main.qml:215
+#, fuzzy, kde-format
+#| msgid "Index hidden files and folders"
+msgid "Hidden files and folders"
+msgstr "Indexar os arquivos e pastas ocultas"
+
+#: ui/main.qml:271
+#, kde-format
+msgctxt "@title:table Locations to include or exclude from indexing"
+msgid "Locations"
+msgstr ""
+
+#: ui/main.qml:276
+#, fuzzy, kde-format
+#| msgid "Start indexing a folder…"
+msgctxt "@action:button"
+msgid "Start Indexing a Folder…"
 msgstr "Iniciar a indexação de uma pasta..."
 
-#: ui/main.qml:221
-#, kde-format
-msgid "Stop indexing a folder…"
+#: ui/main.qml:287
+#, fuzzy, kde-format
+#| msgid "Stop indexing a folder…"
+msgctxt "@action:button"
+msgid "Stop Indexing a Folder…"
 msgstr "Parar a indexação de uma pasta..."
 
-#: ui/main.qml:272
+#: ui/main.qml:349
 #, kde-format
 msgid "Not indexed"
 msgstr "Não indexada"
 
-#: ui/main.qml:273
+#: ui/main.qml:350
 #, kde-format
 msgid "Indexed"
 msgstr "Indexado"
 
-#: ui/main.qml:303
+#: ui/main.qml:380
 #, kde-format
 msgid "Delete entry"
 msgstr "Excluir registro"
 
-#: ui/main.qml:318
+#: ui/main.qml:395
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Selecione uma pasta para incluir"
 
-#: ui/main.qml:318
+#: ui/main.qml:395
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Selecione uma pasta para excluir"
+
+#~ msgid "Enable File Search"
+#~ msgstr "Habilitar a pesquisa de arquivos"
+
+#~ msgid "Also index file content"
+#~ msgstr "Também indexar o conteúdo do arquivo"
+
+#~ msgid "Folder specific configuration:"
+#~ msgstr "Configuração específica da pasta:"
 
 #~ msgid ""
 #~ "This module lets you configure the file indexer and search functionality."

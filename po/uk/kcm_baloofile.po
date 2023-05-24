@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2022-12-14 07:21+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,7 +20,17 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Призупинити індексування"
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Поновити індексування"
+
+#: ui/main.qml:77
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -29,7 +39,7 @@ msgstr ""
 "Вимикає пошук файлів у KRunner та меню запуску і вилучає панель показу "
 "додаткових метаданих з усіх програм KDE."
 
-#: ui/main.qml:67
+#: ui/main.qml:86
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -41,104 +51,148 @@ msgstr ""
 "доведеться створити усі дані покажчика знову. Створення покажчика може бути "
 "досить тривалою справою, якщо на диску багато файлів."
 
-#: ui/main.qml:69
+#: ui/main.qml:88
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Вилучення файлів покажчика"
 
-#: ui/main.qml:89
+#: ui/main.qml:108
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr "Перш ніж зміни набудуть чинності, систему доведеться перезапустити."
 
-#: ui/main.qml:93
+#: ui/main.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Перезапустити"
 
-#: ui/main.qml:100
-#, kde-format
+#: ui/main.qml:119
+#, fuzzy, kde-format
+#| msgid ""
+#| "File Search helps you quickly locate all your files based on their "
+#| "content."
 msgid ""
-"File Search helps you quickly locate all your files based on their content."
+"File Search helps you quickly locate your files. You can choose which "
+"folders and what types of file data are indexed."
 msgstr ""
 "За допомогою засобу пошуку файлів ви можете швидко знайти усі потрібні вам "
 "файли на основі вмісту цих файлів."
 
-#: ui/main.qml:107
-#, kde-format
-msgid "Enable File Search"
-msgstr "Увімкнути пошук файлів"
+#: ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Disable indexing"
+msgctxt "@title:group"
+msgid "File indexing:"
+msgstr "Вимкнути індексування"
 
-#: ui/main.qml:122
+#: ui/main.qml:135
 #, kde-format
-msgid "Also index file content"
-msgstr "Також індексувати вміст файлів"
+msgctxt "@action:check"
+msgid "Enabled"
+msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:149
 #, kde-format
-msgid "Index hidden files and folders"
-msgstr "Індексувати приховані файли і теки"
+msgctxt "@label indexing status"
+msgid "Status:"
+msgstr ""
 
-#: ui/main.qml:160
-#, kde-format
-msgid "Status: %1, %2% complete"
+#: ui/main.qml:153
+#, fuzzy, kde-format
+#| msgid "Status: %1, %2% complete"
+msgid "%1, %2% complete"
 msgstr "Стан: %1, завершено на %2%"
 
-#: ui/main.qml:165
-#, kde-format
-msgid "Pause Indexer"
-msgstr "Призупинити індексування"
-
-#: ui/main.qml:165
-#, kde-format
-msgid "Resume Indexer"
-msgstr "Поновити індексування"
-
-#: ui/main.qml:178
-#, kde-format
-msgid "Currently indexing: %1"
+#: ui/main.qml:162
+#, fuzzy, kde-format
+#| msgid "Currently indexing: %1"
+msgctxt "@label file currently being indexed"
+msgid "Currently Indexing:"
 msgstr "Зараз індексуємо: %1"
+
+#: ui/main.qml:165
+#, fuzzy, kde-kuit-format
+#| msgid "Currently indexing: %1"
+msgctxt "@info"
+msgid "Currently Indexing: <filename>%1</filename>"
+msgstr "Зараз індексуємо: %1"
+
+#: ui/main.qml:181
+#, kde-format
+msgctxt "@title:group"
+msgid "Data to index:"
+msgstr ""
 
 #: ui/main.qml:183
 #, kde-format
-msgid "Folder specific configuration:"
-msgstr "Специфічні для теки налаштування:"
+msgid "File names and contents"
+msgstr ""
 
-#: ui/main.qml:210
+#: ui/main.qml:196
 #, kde-format
-msgid "Start indexing a folder…"
+msgid "File names only"
+msgstr ""
+
+#: ui/main.qml:215
+#, fuzzy, kde-format
+#| msgid "Index hidden files and folders"
+msgid "Hidden files and folders"
+msgstr "Індексувати приховані файли і теки"
+
+#: ui/main.qml:271
+#, kde-format
+msgctxt "@title:table Locations to include or exclude from indexing"
+msgid "Locations"
+msgstr ""
+
+#: ui/main.qml:276
+#, fuzzy, kde-format
+#| msgid "Start indexing a folder…"
+msgctxt "@action:button"
+msgid "Start Indexing a Folder…"
 msgstr "Почати індексування теки…"
 
-#: ui/main.qml:221
-#, kde-format
-msgid "Stop indexing a folder…"
+#: ui/main.qml:287
+#, fuzzy, kde-format
+#| msgid "Stop indexing a folder…"
+msgctxt "@action:button"
+msgid "Stop Indexing a Folder…"
 msgstr "Зупинити індексування теки…"
 
-#: ui/main.qml:272
+#: ui/main.qml:349
 #, kde-format
 msgid "Not indexed"
 msgstr "Не індексовано"
 
-#: ui/main.qml:273
+#: ui/main.qml:350
 #, kde-format
 msgid "Indexed"
 msgstr "Індексовано"
 
-#: ui/main.qml:303
+#: ui/main.qml:380
 #, kde-format
 msgid "Delete entry"
 msgstr "Вилучити запис"
 
-#: ui/main.qml:318
+#: ui/main.qml:395
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Виберіть теку для включення"
 
-#: ui/main.qml:318
+#: ui/main.qml:395
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Виберіть теку для виключення"
+
+#~ msgid "Enable File Search"
+#~ msgstr "Увімкнути пошук файлів"
+
+#~ msgid "Also index file content"
+#~ msgstr "Також індексувати вміст файлів"
+
+#~ msgid "Folder specific configuration:"
+#~ msgstr "Специфічні для теки налаштування:"
 
 #~ msgid ""
 #~ "This module lets you configure the file indexer and search functionality."
@@ -177,9 +231,6 @@ msgstr "Виберіть теку для виключення"
 
 #~ msgid "%1 is excluded."
 #~ msgstr "%1 виключено."
-
-#~ msgid "Disable indexing"
-#~ msgstr "Вимкнути індексування"
 
 #~ msgid "Do not search in these locations:"
 #~ msgstr "Не виконувати пошук у цих місцях:"

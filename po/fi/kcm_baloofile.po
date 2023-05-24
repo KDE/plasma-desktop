@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2023-03-04 18:41+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: ui/main.qml:58
+#: ui/main.qml:50
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Keskeytä indeksointi"
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Jatka indeksointia"
+
+#: ui/main.qml:77
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -28,7 +38,7 @@ msgstr ""
 "Tämä poistaa KRunnerissa ja käynnistysvalikoissa tiedostohaun käytöstä sekä "
 "poistaa laajennetun metatietonäkymän kaikista KDE-sovelluksista."
 
-#: ui/main.qml:67
+#: ui/main.qml:86
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -39,105 +49,149 @@ msgstr ""
 "indeksointi palautetaan käyttöön tuonnempana, koko indeksi on luotava alusta "
 "uudelleen, mikä tiedostojen määrän mukaan voi kestää kauan."
 
-#: ui/main.qml:69
+#: ui/main.qml:88
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Poista indeksitiedot"
 
-#: ui/main.qml:89
+#: ui/main.qml:108
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr ""
 "Järjestelmä on käynnistettävä uudelleen, jotta muutokset tulisivat voimaan."
 
-#: ui/main.qml:93
+#: ui/main.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Käynnistä uudelleen"
 
-#: ui/main.qml:100
-#, kde-format
+#: ui/main.qml:119
+#, fuzzy, kde-format
+#| msgid ""
+#| "File Search helps you quickly locate all your files based on their "
+#| "content."
 msgid ""
-"File Search helps you quickly locate all your files based on their content."
+"File Search helps you quickly locate your files. You can choose which "
+"folders and what types of file data are indexed."
 msgstr "Tiedostohaulla löydät tiedostosi nopeasti niiden sisällön perusteella."
 
-#: ui/main.qml:107
-#, kde-format
-msgid "Enable File Search"
-msgstr "Käytä tiedostohakua"
+#: ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "File Indexing"
+msgctxt "@title:group"
+msgid "File indexing:"
+msgstr "Tiedostojen indeksointi"
 
-#: ui/main.qml:122
+#: ui/main.qml:135
 #, kde-format
-msgid "Also index file content"
-msgstr "Indeksoi myös tiedoston sisältö"
+msgctxt "@action:check"
+msgid "Enabled"
+msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:149
 #, kde-format
-msgid "Index hidden files and folders"
-msgstr "Indeksoi piilotiedostot ja -kansiot"
+msgctxt "@label indexing status"
+msgid "Status:"
+msgstr ""
 
-#: ui/main.qml:160
-#, kde-format
-msgid "Status: %1, %2% complete"
+#: ui/main.qml:153
+#, fuzzy, kde-format
+#| msgid "Status: %1, %2% complete"
+msgid "%1, %2% complete"
 msgstr "Tila: %1, %2 % valmiina"
 
-#: ui/main.qml:165
-#, kde-format
-msgid "Pause Indexer"
-msgstr "Keskeytä indeksointi"
-
-#: ui/main.qml:165
-#, kde-format
-msgid "Resume Indexer"
-msgstr "Jatka indeksointia"
-
-#: ui/main.qml:178
-#, kde-format
-msgid "Currently indexing: %1"
+#: ui/main.qml:162
+#, fuzzy, kde-format
+#| msgid "Currently indexing: %1"
+msgctxt "@label file currently being indexed"
+msgid "Currently Indexing:"
 msgstr "Nyt indeksoidaan: %1"
+
+#: ui/main.qml:165
+#, fuzzy, kde-kuit-format
+#| msgid "Currently indexing: %1"
+msgctxt "@info"
+msgid "Currently Indexing: <filename>%1</filename>"
+msgstr "Nyt indeksoidaan: %1"
+
+#: ui/main.qml:181
+#, kde-format
+msgctxt "@title:group"
+msgid "Data to index:"
+msgstr ""
 
 #: ui/main.qml:183
 #, kde-format
-msgid "Folder specific configuration:"
-msgstr "Kansiokohtainen määritys:"
+msgid "File names and contents"
+msgstr ""
 
-#: ui/main.qml:210
+#: ui/main.qml:196
 #, kde-format
-msgid "Start indexing a folder…"
+msgid "File names only"
+msgstr ""
+
+#: ui/main.qml:215
+#, fuzzy, kde-format
+#| msgid "Index hidden files and folders"
+msgid "Hidden files and folders"
+msgstr "Indeksoi piilotiedostot ja -kansiot"
+
+#: ui/main.qml:271
+#, kde-format
+msgctxt "@title:table Locations to include or exclude from indexing"
+msgid "Locations"
+msgstr ""
+
+#: ui/main.qml:276
+#, fuzzy, kde-format
+#| msgid "Start indexing a folder…"
+msgctxt "@action:button"
+msgid "Start Indexing a Folder…"
 msgstr "Valitse indeksoitava kansio…"
 
-#: ui/main.qml:221
-#, kde-format
-msgid "Stop indexing a folder…"
+#: ui/main.qml:287
+#, fuzzy, kde-format
+#| msgid "Stop indexing a folder…"
+msgctxt "@action:button"
+msgid "Stop Indexing a Folder…"
 msgstr "Valitse kansio, jota ei indeksoida…"
 
 # Pudotusvalikko, josta valitaan, indeksoidaanko kansio vai ei
-#: ui/main.qml:272
+#: ui/main.qml:349
 #, kde-format
 msgid "Not indexed"
 msgstr "Älä indeksoi"
 
 # Pudotusvalikko, josta valitaan, indeksoidaanko kansio vai ei
-#: ui/main.qml:273
+#: ui/main.qml:350
 #, kde-format
 msgid "Indexed"
 msgstr "Indeksoi"
 
-#: ui/main.qml:303
+#: ui/main.qml:380
 #, kde-format
 msgid "Delete entry"
 msgstr "Poista tietue"
 
-#: ui/main.qml:318
+#: ui/main.qml:395
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Valitse mukaan otettava kansio"
 
-#: ui/main.qml:318
+#: ui/main.qml:395
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Valitse pois jätettävä kansio"
+
+#~ msgid "Enable File Search"
+#~ msgstr "Käytä tiedostohakua"
+
+#~ msgid "Also index file content"
+#~ msgstr "Indeksoi myös tiedoston sisältö"
+
+#~ msgid "Folder specific configuration:"
+#~ msgstr "Kansiokohtainen määritys:"
 
 #~ msgid ""
 #~ "This module lets you configure the file indexer and search functionality."
@@ -174,11 +228,6 @@ msgstr "Valitse pois jätettävä kansio"
 #~| msgid "Folder %1 is already excluded"
 #~ msgid "%1 is excluded."
 #~ msgstr "Kansio %1 on jo jätetty pois indeksoinnista"
-
-#, fuzzy
-#~| msgid "File Indexing"
-#~ msgid "Disable indexing"
-#~ msgstr "Tiedostojen indeksointi"
 
 #~ msgid "Do not search in these locations:"
 #~ msgstr "Älä hae seuraavista sijainneista:"

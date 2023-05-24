@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-20 02:04+0000\n"
-"PO-Revision-Date: 2023-05-21 07:34+0200\n"
+"PO-Revision-Date: 2023-05-22 17:27+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -282,16 +282,12 @@ msgid "Maximize"
 msgstr "Maximiser"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-#, fuzzy
-#| msgid "Makes the panel opaque always."
 msgid "Make this panel as tall as possible"
-msgstr "Rend le panneau toujours opaque."
+msgstr "Rendre ce panneau aussi haut que possible."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
-#, fuzzy
-#| msgid "Makes the panel remain visible always."
 msgid "Make this panel as wide as possible"
-msgstr "Rend le panneau toujours visible."
+msgstr "Rendre ce panneau aussi large que possible."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
 msgctxt "@action:button Delete the panel"
@@ -300,7 +296,7 @@ msgstr "Supprimer"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "Supprimer ce panneau. Cette action peut être annulée."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
@@ -315,29 +311,29 @@ msgid "Left"
 msgstr "Gauche"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr "Aligne le panneau sur le haut s'il n'est pas maximisé."
+msgstr ""
+"Aligne le panneau sur le haut s'il n'est pas maximisé. Cela n'a aucun effet "
+"si le panneau est maximisé."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr "Aligne le panneau sur le haut s'il n'est pas maximisé."
+msgstr ""
+"Aligne le panneau sur la gauche s'il n'est pas maximisé. Cela n'a aucun "
+"effet si le panneau est maximisé."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Center"
 msgstr "Centre"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr "Aligne le panneau sur le haut s'il n'est pas maximisé."
+msgstr ""
+"Aligne le panneau sur le centre s'il n'est pas maximisé. Cela n'a aucun "
+"effet si le panneau est maximisé."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Bottom"
@@ -348,18 +344,18 @@ msgid "Right"
 msgstr "Droite"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
-#, fuzzy
-#| msgid "Aligns the panel to the bottom if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr "Aligne le panneau sur le bas s'il n'est pas maximisé."
+msgstr ""
+"Aligne le panneau sur le bas s'il n'est pas maximisé. Cela n'a aucun effet "
+"si le panneau est maximisé."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
-#, fuzzy
-#| msgid "Aligns the panel to the right if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr "Aligne le panneau sur la droite s'il n'est pas maximisé."
+msgstr ""
+"Aligne le panneau sur la droite s'il n'est pas maximisé. Cela n'a aucun "
+"effet si le panneau est maximisé."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
 msgid "Visibility:"
@@ -398,6 +394,8 @@ msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr ""
+"Le panneau est transparent lorsqu'aucune fenêtre ne le touche et translucide "
+"dans le cas contraire."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 msgid "Always Translucent"
@@ -413,7 +411,7 @@ msgstr "Flottant"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
-msgstr ""
+msgstr "Le panneau flotte visiblement loin du bord de son écran."
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
