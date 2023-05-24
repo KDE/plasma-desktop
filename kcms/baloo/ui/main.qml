@@ -397,7 +397,7 @@ KCM.ScrollViewKCM {
             currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
 
             onAccepted: {
-                kcm.filteredModel.addFolder(fileUrls[0], fileDialogLoader.included)
+                kcm.filteredModel.addFolder(selectedFolder, fileDialogLoader.included)
                 fileDialogLoader.active = false
             }
 
