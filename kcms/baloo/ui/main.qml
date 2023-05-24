@@ -311,6 +311,7 @@ KCM.ScrollViewKCM {
             property var indexingModel: model
 
             // There's no need for a list item to ever be selected
+            down: false
             highlighted: false
             hoverEnabled: false
             // ... and because of that, use alternating backgrounds to visually
