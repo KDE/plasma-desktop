@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:48+0000\n"
-"PO-Revision-Date: 2023-03-27 17:13+0300\n"
+"PO-Revision-Date: 2023-05-24 13:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -42,10 +42,10 @@ msgid ""
 "if indexing is re-enabled later, the entire index will have to be re-created "
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
-"Kaydedilen indeks verisini silmek istiyor musunuz? %1 kadar alan "
-"boşaltılacak; ancak indeks oluşturma daha sonra yeniden etkinleştirilirse "
-"indeksin tümünün sıfırdan yeniden oluşturulması gerekecektir. Bu, sahip "
-"olduğunuz dosya sayısına bağlı olarak biraz zaman alabilir."
+"Kayıtlı indeks verisini silmek istiyor musunuz? %1 kadar alan boşaltılacak; "
+"ancak indeksleme daha sonra yeniden etkinleştirilirse tüm indeksin sıfırdan "
+"yeniden oluşturulması gerekecektir. Bu, sahip olduğunuz dosya sayısına bağlı "
+"olarak biraz zaman alabilir."
 
 #: package/contents/ui/main.qml:69
 #, kde-format
@@ -55,9 +55,7 @@ msgstr "İndeks Verisini Sil"
 #: package/contents/ui/main.qml:89
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
-msgstr ""
-"Bu değişikliklerin etkili olması için sistemin yeniden başlatılması "
-"gerekmektedir."
+msgstr "Bu değişikliklerin etkili olması için sistem yeniden başlatılmalıdır."
 
 #: package/contents/ui/main.qml:93
 #, kde-format
@@ -96,12 +94,12 @@ msgstr "Durum: %1, %​%2 tamamlandı"
 #: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Pause Indexer"
-msgstr "İndeks Oluşturucuyu Duraklat"
+msgstr "İndeksleyiciyi Duraklat"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
-msgstr "İndeks Oluşturucuyu Sürdür"
+msgstr "İndeksleyiciyi Sürdür"
 
 #: package/contents/ui/main.qml:178
 #, kde-format
@@ -136,7 +134,7 @@ msgstr "İndekslenmiş"
 #: package/contents/ui/main.qml:306
 #, kde-format
 msgid "Delete entry"
-msgstr "Girdiyi sil"
+msgstr "Girdiyi Sil"
 
 #: package/contents/ui/main.qml:321
 #, kde-format
