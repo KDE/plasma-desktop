@@ -151,6 +151,7 @@ KCM.SimpleKCM {
 
         QQC2.Label {
             Layout.fillWidth: true
+            leftPadding: singleClick.indicator.width
             text: singleClick.Accessible.description
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
@@ -178,6 +179,7 @@ KCM.SimpleKCM {
 
         QQC2.Label {
             Layout.fillWidth: true
+            leftPadding: doubleClick.indicator.width
             text: doubleClick.Accessible.description
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont

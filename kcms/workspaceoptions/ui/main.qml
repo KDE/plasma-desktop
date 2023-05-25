@@ -130,6 +130,7 @@ KCM.SimpleKCM {
         }
         QQC2.Label {
             Layout.fillWidth: true
+            leftPadding: singleClick.indicator.width
             text: i18n("Select by clicking on item's selection marker")
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
@@ -153,6 +154,7 @@ KCM.SimpleKCM {
         }
         QQC2.Label {
             Layout.fillWidth: true
+            leftPadding: singleClick.indicator.width
             text: i18n("Open by double-clicking instead")
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
@@ -198,6 +200,7 @@ KCM.SimpleKCM {
         }
         QQC2.Label {
             Layout.fillWidth: true
+            leftPadding: scrollbarLeftClickNavigatesByPage.indicator.width
             text: i18n("Middle-click to scroll to clicked location")
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
@@ -259,6 +262,7 @@ KCM.SimpleKCM {
             }
         }
         QQC2.RadioButton {
+            id: touchModeAlwaysOffRadioButton
             visible: KWindowSystem.isPlatformWayland
             text: i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
             checked: kcm.kwinSettings.tabletMode === "off"
@@ -273,6 +277,7 @@ KCM.SimpleKCM {
         QQC2.Label {
             Layout.fillWidth: true
             Layout.preferredWidth: Kirigami.Units.gridUnit * 20
+            leftPadding: touchModeAlwaysOffRadioButton.indicator.width
             text: i18n("In Touch Mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
