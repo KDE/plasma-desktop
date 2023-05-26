@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-22 02:30+0000\n"
+"POT-Creation-Date: 2023-05-26 01:59+0000\n"
 "PO-Revision-Date: 2023-03-19 09:04+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -575,38 +575,38 @@ msgstr "全部關閉(&C)"
 msgid "&Close"
 msgstr "關閉(&C)"
 
-#: package/contents/ui/Task.qml:82
+#: package/contents/ui/Task.qml:78
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "啟動 %1"
 
-#: package/contents/ui/Task.qml:87
+#: package/contents/ui/Task.qml:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
 msgstr[0] "有 %1 個新訊息。"
 
-#: package/contents/ui/Task.qml:96
+#: package/contents/ui/Task.qml:92
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "為 %1 顯示工具提示"
 
-#: package/contents/ui/Task.qml:102
+#: package/contents/ui/Task.qml:98
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "為 %1 並排顯示視窗"
 
-#: package/contents/ui/Task.qml:107
+#: package/contents/ui/Task.qml:103
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "為 %1 開啟文字型視窗列表"
 
-#: package/contents/ui/Task.qml:111
+#: package/contents/ui/Task.qml:107
 #, kde-format
 msgid "Activate %1"
 msgstr "將 %1 設為作用中"
