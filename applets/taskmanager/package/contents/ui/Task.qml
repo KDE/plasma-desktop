@@ -400,6 +400,10 @@ PlasmaCore.ToolTipArea {
 
             onActiveChanged: if (active) {
                 icon.grabToImage((result) => {
+                    if (!dragHandler.active) {
+                        // BUG 466675 grabToImage is async, so avoid updating dragSource when active is false
+                        return;
+                    }
                     tasks.dragSource = task;
                     dragHelper.Drag.imageSource = result.url;
                     dragHelper.Drag.mimeData = backend.generateMimeData(model.MimeType, model.MimeData, model.LauncherUrlWithoutIcon);
