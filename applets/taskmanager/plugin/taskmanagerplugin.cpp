@@ -14,7 +14,6 @@
 
 void TaskManagerPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.plasma.private.taskmanager"));
     qmlRegisterType<Backend>(uri, 0, 1, "Backend");
 
     qmlRegisterType<SmartLauncher::Item>(uri, 0, 1, "SmartLauncherItem");
