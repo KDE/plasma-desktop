@@ -190,7 +190,7 @@ bool KNetAttach::validateCurrentPage()
 
         url.setHost(_host->text().trimmed());
         const QString trimmedUser = _user->text().trimmed();
-        if (!trimmedUser.isEmpty()) {
+        if (!trimmedUser.isEmpty() && _type != QLatin1String("WebFolder")) {
             url.setUserName(trimmedUser);
         }
         QString path = _path->text().trimmed();
@@ -289,8 +289,8 @@ bool KNetAttach::updateForProtocol(const QString &protocol)
         _port->show();
         _protocol->hide();
         _protocolText->hide();
-        _userText->show();
-        _user->show();
+        _userText->hide();
+        _user->hide();
         _encodingText->hide();
         _encoding->hide();
     } else if (protocol == QLatin1String("Fish")) {
