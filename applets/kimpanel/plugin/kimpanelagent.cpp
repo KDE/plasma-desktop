@@ -17,6 +17,7 @@
 #include <QVariant>
 
 int PanelAgent::m_connectionIndex = 0;
+static const QString s_interfaceName = QStringLiteral("org.kde.kimpanel.inputmethod");
 
 PanelAgent::PanelAgent(QObject *parent)
     : QObject(parent)
@@ -31,56 +32,28 @@ PanelAgent::PanelAgent(QObject *parent)
     m_connection.registerService(QStringLiteral("org.kde.impanel"));
 
     // directly connect to corresponding signal
-    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"), QStringLiteral("Enable"), this, SIGNAL(enable(bool)));
-    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"), QStringLiteral("ShowPreedit"), this, SIGNAL(showPreedit(bool)));
-    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"), QStringLiteral("ShowAux"), this, SIGNAL(showAux(bool)));
-    m_connection
-        .connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"), QStringLiteral("ShowLookupTable"), this, SIGNAL(showLookupTable(bool)));
-    m_connection.connect(QString(),
-                         QString(),
-                         QStringLiteral("org.kde.kimpanel.inputmethod"),
-                         QStringLiteral("UpdateLookupTableCursor"),
-                         this,
-                         SIGNAL(updateLookupTableCursor(int)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("Enable"), this, SIGNAL(enable(bool)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("ShowPreedit"), this, SIGNAL(showPreedit(bool)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("ShowAux"), this, SIGNAL(showAux(bool)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("ShowLookupTable"), this, SIGNAL(showLookupTable(bool)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("UpdateLookupTableCursor"), this, SIGNAL(updateLookupTableCursor(int)));
 
     // do some serialization
     m_connection.connect(QString(),
                          QString(),
-                         QStringLiteral("org.kde.kimpanel.inputmethod"),
+                         s_interfaceName,
                          QStringLiteral("UpdateLookupTable"),
                          this,
                          SLOT(UpdateLookupTable(QStringList, QStringList, QStringList, bool, bool)));
-    m_connection.connect(QString(),
-                         QString(),
-                         QStringLiteral("org.kde.kimpanel.inputmethod"),
-                         QStringLiteral("UpdatePreeditCaret"),
-                         this,
-                         SIGNAL(updatePreeditCaret(int)));
-    m_connection.connect(QString(),
-                         QString(),
-                         QStringLiteral("org.kde.kimpanel.inputmethod"),
-                         QStringLiteral("UpdatePreeditText"),
-                         this,
-                         SLOT(UpdatePreeditText(QString, QString)));
-    m_connection
-        .connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"), QStringLiteral("UpdateAux"), this, SLOT(UpdateAux(QString, QString)));
-    m_connection.connect(QString(),
-                         QString(),
-                         QStringLiteral("org.kde.kimpanel.inputmethod"),
-                         QStringLiteral("UpdateSpotLocation"),
-                         this,
-                         SIGNAL(updateSpotLocation(int, int)));
-    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"), QStringLiteral("UpdateScreen"), this, SLOT(UpdateScreen(int)));
-    m_connection
-        .connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"), QStringLiteral("UpdateProperty"), this, SLOT(UpdateProperty(QString)));
-    m_connection.connect(QString(),
-                         QString(),
-                         QStringLiteral("org.kde.kimpanel.inputmethod"),
-                         QStringLiteral("RegisterProperties"),
-                         this,
-                         SLOT(RegisterProperties(QStringList)));
-    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"), QStringLiteral("ExecDialog"), this, SLOT(ExecDialog(QString)));
-    m_connection.connect(QString(), QString(), QStringLiteral("org.kde.kimpanel.inputmethod"), QStringLiteral("ExecMenu"), this, SLOT(ExecMenu(QStringList)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("UpdatePreeditCaret"), this, SIGNAL(updatePreeditCaret(int)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("UpdatePreeditText"), this, SLOT(UpdatePreeditText(QString, QString)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("UpdateAux"), this, SLOT(UpdateAux(QString, QString)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("UpdateSpotLocation"), this, SIGNAL(updateSpotLocation(int, int)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("UpdateScreen"), this, SLOT(UpdateScreen(int)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("UpdateProperty"), this, SLOT(UpdateProperty(QString)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("RegisterProperties"), this, SLOT(RegisterProperties(QStringList)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("ExecDialog"), this, SLOT(ExecDialog(QString)));
+    m_connection.connect(QString(), QString(), s_interfaceName, QStringLiteral("ExecMenu"), this, SLOT(ExecMenu(QStringList)));
 
     connect(m_watcher, &QDBusServiceWatcher::serviceUnregistered, this, &PanelAgent::serviceUnregistered);
 }
