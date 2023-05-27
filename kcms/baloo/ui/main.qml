@@ -153,16 +153,27 @@ KCM.ScrollViewKCM {
                     text: i18n("%1, %2\% complete", monitor.stateString, monitor.completionPercentage)
                     elide: Text.ElideLeft
                 }
+            }
 
-                // File being indexed, if indexing
-                Kirigami.SelectableLabel {
-                    readonly property string fileName: monitor.filePath.split('\\').pop().split('/').pop()
+            Item {
+                visible: fileBeingIndexed.visible
+                implicitHeight: Kirigami.Units.smallSpacing
+            }
 
-                    Kirigami.FormData.label: i18nc("@label file currently being indexed", "Currently Indexing:")
-                    Layout.fillWidth: true
-                    visible: fileSearchEnabled.checked && monitor.currentlyIndexing && monitor.completionPercentage !== 100 && fileName.length > 0
-                    text: xi18nc("@info Currently Indexing", "<filename>%1</filename>", fileName)
-                }
+            // Current file being indexed
+            QQC2.Label {
+                Layout.fillWidth: true
+                text: i18nc("@label file currently being indexed", "Currently indexing:")
+                horizontalAlignment: Text.AlignHCenter
+                visible: fileBeingIndexed.visible
+            }
+
+            // File being indexed, if indexing
+            Kirigami.SelectableLabel {
+                id: fileBeingIndexed
+                Layout.fillWidth: true
+                visible: fileSearchEnabled.checked && monitor.completionPercentage !== 100 && monitor.filePath.length > 0
+                text: xi18nc("@info Currently Indexing", "<filename>%1</filename>", monitor.filePath)
             }
 
             Item {
