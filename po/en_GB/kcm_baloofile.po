@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-27 02:03+0000\n"
 "PO-Revision-Date: 2022-12-31 17:00+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -99,18 +99,18 @@ msgstr ""
 msgid "%1, %2% complete"
 msgstr "Status: %1, %2% complete"
 
-#: ui/main.qml:162
+#: ui/main.qml:161
 #, fuzzy, kde-format
 #| msgid "Currently indexing: %1"
 msgctxt "@label file currently being indexed"
 msgid "Currently Indexing:"
 msgstr "Currently indexing: %1"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, fuzzy, kde-kuit-format
 #| msgid "Currently indexing: %1"
-msgctxt "@info"
-msgid "Currently Indexing: <filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "<filename>%1</filename>"
 msgstr "Currently indexing: %1"
 
 #: ui/main.qml:181
@@ -155,27 +155,27 @@ msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stop indexing a folder…"
 
-#: ui/main.qml:349
+#: ui/main.qml:350
 #, kde-format
 msgid "Not indexed"
 msgstr "Not indexed"
 
-#: ui/main.qml:350
+#: ui/main.qml:351
 #, kde-format
 msgid "Indexed"
 msgstr "Indexed"
 
-#: ui/main.qml:380
+#: ui/main.qml:381
 #, kde-format
 msgid "Delete entry"
 msgstr "Delete entry"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Select a folder to include"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Select a folder to exclude"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-27 02:03+0000\n"
 "PO-Revision-Date: 2022-12-14 20:17+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -103,18 +103,18 @@ msgstr ""
 msgid "%1, %2% complete"
 msgstr "Статус: %1, %2% завършено"
 
-#: ui/main.qml:162
+#: ui/main.qml:161
 #, fuzzy, kde-format
 #| msgid "Currently indexing: %1"
 msgctxt "@label file currently being indexed"
 msgid "Currently Indexing:"
 msgstr "Текущо индексиране: %1"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, fuzzy, kde-kuit-format
 #| msgid "Currently indexing: %1"
-msgctxt "@info"
-msgid "Currently Indexing: <filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "<filename>%1</filename>"
 msgstr "Текущо индексиране: %1"
 
 #: ui/main.qml:181
@@ -159,27 +159,27 @@ msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Спиране индексиране на папка…"
 
-#: ui/main.qml:349
+#: ui/main.qml:350
 #, kde-format
 msgid "Not indexed"
 msgstr "Не е индексирано"
 
-#: ui/main.qml:350
+#: ui/main.qml:351
 #, kde-format
 msgid "Indexed"
 msgstr "Индексирано"
 
-#: ui/main.qml:380
+#: ui/main.qml:381
 #, kde-format
 msgid "Delete entry"
 msgstr "Изтриване на записа"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Избиране на папка за включване"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Избиране на папка за изключване"

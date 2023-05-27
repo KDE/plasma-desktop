@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-27 02:03+0000\n"
 "PO-Revision-Date: 2023-05-24 10:42+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -98,16 +98,18 @@ msgstr "Stato:"
 msgid "%1, %2% complete"
 msgstr "%1, %2% complete"
 
-#: ui/main.qml:162
+#: ui/main.qml:161
 #, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently Indexing:"
 msgstr "Indicisante currentemente : "
 
-#: ui/main.qml:165
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Currently Indexing: <filename>%1</filename>"
+#: ui/main.qml:164
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Currently Indexing: <filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "<filename>%1</filename>"
 msgstr "Indicisante currentemente : <filename>%1</filename>"
 
 #: ui/main.qml:181
@@ -149,27 +151,27 @@ msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stoppa indicisar un dossier..."
 
-#: ui/main.qml:349
+#: ui/main.qml:350
 #, kde-format
 msgid "Not indexed"
 msgstr "Non indicisate"
 
-#: ui/main.qml:350
+#: ui/main.qml:351
 #, kde-format
 msgid "Indexed"
 msgstr "Indicisate"
 
-#: ui/main.qml:380
+#: ui/main.qml:381
 #, kde-format
 msgid "Delete entry"
 msgstr "Dele entrata"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Selige un dossier de includer"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Selige un dossier de excluder"

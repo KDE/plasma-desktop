@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-20 02:04+0000\n"
-"PO-Revision-Date: 2023-04-30 18:27+0200\n"
+"PO-Revision-Date: 2023-05-20 10:27+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:209
 msgid "Currently being used"
@@ -267,40 +267,30 @@ msgid "Input Here"
 msgstr "Digita qui"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
-#, fuzzy
-#| msgid " Panel Settings"
 msgid "Panel Settings"
 msgstr "Impostazioni del pannello"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
-#, fuzzy
-#| msgid "Maximize Panel"
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
-msgstr "Massimizza pannello"
+msgstr "Massimizza"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-#, fuzzy
-#| msgid "Makes the panel opaque always."
 msgid "Make this panel as tall as possible"
-msgstr "Rende il pannello sempre opaco."
+msgstr "Rendi questo pannello il più alto possibile"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
-#, fuzzy
-#| msgid "Makes the panel remain visible always."
 msgid "Make this panel as wide as possible"
-msgstr "Fa in modo che il pannello rimanga sempre visibile."
+msgstr "Rendi questo pannello il più largo possibile"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
-#, fuzzy
-#| msgid "Delete"
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "Elimina"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "Rimuovi questo pannello; questa azione è annullabile"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
@@ -315,29 +305,29 @@ msgid "Left"
 msgstr "Sinistra"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr "Allinea il pannello in alto se il pannello non è ingrandito."
+msgstr ""
+"Allinea in alto un pannello non massimizzato; nessun effetto quando il "
+"pannello è massimizzato"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr "Allinea il pannello in alto se il pannello non è ingrandito."
+msgstr ""
+"Allinea a sinistra un pannello non massimizzato; nessun effetto quando il "
+"pannello è massimizzato"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Center"
 msgstr "Centro"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
-#, fuzzy
-#| msgid "Aligns the panel to the top if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr "Allinea il pannello in alto se il pannello non è ingrandito."
+msgstr ""
+"Allinea al centro un pannello non massimizzato; nessun effetto quando il "
+"pannello è massimizzato"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Bottom"
@@ -348,18 +338,18 @@ msgid "Right"
 msgstr "Destra"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
-#, fuzzy
-#| msgid "Aligns the panel to the bottom if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr "Allinea il pannello in basso se il pannello non è ingrandito."
+msgstr ""
+"Allinea un pannello non massimizzato verso il basso; nessun effetto quando "
+"il pannello è massimizzato"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
-#, fuzzy
-#| msgid "Aligns the panel to the right if the panel is not maximized."
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr "Allinea il pannello a destra se il pannello non è ingrandito."
+msgstr ""
+"Allinea a destra un pannello non massimizzato; nessun effetto quando il "
+"pannello è massimizzato"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
 msgid "Visibility:"
@@ -370,8 +360,6 @@ msgid "Always Visible"
 msgstr "Sempre visibile"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
-#, fuzzy
-#| msgid "Auto Hide"
 msgid "Auto-Hide"
 msgstr "Nascondi automaticamente"
 
@@ -380,16 +368,16 @@ msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr ""
+"Il pannello è nascosto, ma si rivela quando il cursore tocca il bordo dello "
+"schermo del pannello"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "Opacità:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
-#, fuzzy
-#| msgid "Fully Opaque"
 msgid "Always Opaque"
-msgstr "Completamente opaco"
+msgstr "Sempre opaco"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
@@ -400,12 +388,12 @@ msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr ""
+"Il pannello è opaco quando le finestre lo toccano e trasparente in altri "
+"momenti"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
-#, fuzzy
-#| msgid "Translucent"
 msgid "Always Translucent"
-msgstr "Trasparente"
+msgstr "Sempre trasparente"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
@@ -417,7 +405,7 @@ msgstr "Flottante"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
-msgstr ""
+msgstr "Il pannello si allontana visibilmente dal bordo dello schermo"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
@@ -425,13 +413,11 @@ msgstr "Attaccato"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
-msgstr ""
+msgstr "Il pannello è attaccato al bordo dello schermo"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
-#, fuzzy
-#| msgid "Focus Shortcut"
 msgid "Focus Shortcut:"
-msgstr "Scorciatoia per messa a fuoco"
+msgstr "Scorciatoia per messa a fuoco:"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"

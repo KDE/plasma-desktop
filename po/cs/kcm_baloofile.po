@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-27 02:03+0000\n"
 "PO-Revision-Date: 2023-01-27 17:16+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -103,18 +103,18 @@ msgstr ""
 msgid "%1, %2% complete"
 msgstr "Stav: %1, %2% dokončeno"
 
-#: ui/main.qml:162
+#: ui/main.qml:161
 #, fuzzy, kde-format
 #| msgid "Currently indexing: %1"
 msgctxt "@label file currently being indexed"
 msgid "Currently Indexing:"
 msgstr "Právě indexuji: %1"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, fuzzy, kde-kuit-format
 #| msgid "Currently indexing: %1"
-msgctxt "@info"
-msgid "Currently Indexing: <filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "<filename>%1</filename>"
 msgstr "Právě indexuji: %1"
 
 #: ui/main.qml:181
@@ -159,27 +159,27 @@ msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Zastavit indexování složky…"
 
-#: ui/main.qml:349
+#: ui/main.qml:350
 #, kde-format
 msgid "Not indexed"
 msgstr "Neindexované"
 
-#: ui/main.qml:350
+#: ui/main.qml:351
 #, kde-format
 msgid "Indexed"
 msgstr "Indexovaná"
 
-#: ui/main.qml:380
+#: ui/main.qml:381
 #, kde-format
 msgid "Delete entry"
 msgstr "Smazat záznam"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Zvolte složku pro zahrnutí"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Zvolte složku pro vyřazení"

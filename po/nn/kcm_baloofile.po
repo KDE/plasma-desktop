@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-27 02:03+0000\n"
 "PO-Revision-Date: 2023-02-20 21:18+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -101,18 +101,18 @@ msgstr ""
 msgid "%1, %2% complete"
 msgstr "Status: %1 – %2 % fullført"
 
-#: ui/main.qml:162
+#: ui/main.qml:161
 #, fuzzy, kde-format
 #| msgid "Currently indexing: %1"
 msgctxt "@label file currently being indexed"
 msgid "Currently Indexing:"
 msgstr "Indekserer no: %1"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, fuzzy, kde-kuit-format
 #| msgid "Currently indexing: %1"
-msgctxt "@info"
-msgid "Currently Indexing: <filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "<filename>%1</filename>"
 msgstr "Indekserer no: %1"
 
 #: ui/main.qml:181
@@ -157,27 +157,27 @@ msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stopp indeksering av mappe …"
 
-#: ui/main.qml:349
+#: ui/main.qml:350
 #, kde-format
 msgid "Not indexed"
 msgstr "Ikkje indeksert"
 
-#: ui/main.qml:350
+#: ui/main.qml:351
 #, kde-format
 msgid "Indexed"
 msgstr "Indeksert"
 
-#: ui/main.qml:380
+#: ui/main.qml:381
 #, kde-format
 msgid "Delete entry"
 msgstr "Slett oppføring"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Vel mappe å inkludera"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Vel mappe å ekskludera"

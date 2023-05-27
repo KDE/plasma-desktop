@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-27 02:03+0000\n"
 "PO-Revision-Date: 2023-05-25 00:56+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -99,16 +99,18 @@ msgstr "Estado:"
 msgid "%1, %2% complete"
 msgstr "%1, %2% completado"
 
-#: ui/main.qml:162
+#: ui/main.qml:161
 #, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently Indexing:"
 msgstr "Indexando actualmente:"
 
-#: ui/main.qml:165
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Currently Indexing: <filename>%1</filename>"
+#: ui/main.qml:164
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Currently Indexing: <filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "<filename>%1</filename>"
 msgstr "Indexando actualmente: <filename>%1</filename>"
 
 #: ui/main.qml:181
@@ -150,27 +152,27 @@ msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Detener la indexación de una carpeta..."
 
-#: ui/main.qml:349
+#: ui/main.qml:350
 #, kde-format
 msgid "Not indexed"
 msgstr "No indexada"
 
-#: ui/main.qml:350
+#: ui/main.qml:351
 #, kde-format
 msgid "Indexed"
 msgstr "Indexada"
 
-#: ui/main.qml:380
+#: ui/main.qml:381
 #, kde-format
 msgid "Delete entry"
 msgstr "Borrar entrada"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Seleccionar una carpeta a incluir"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Seleccionar una carpeta a excluir"

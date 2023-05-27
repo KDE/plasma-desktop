@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-27 02:03+0000\n"
 "PO-Revision-Date: 2020-10-07 22:37+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -95,18 +95,18 @@ msgstr ""
 msgid "%1, %2% complete"
 msgstr ""
 
-#: ui/main.qml:162
+#: ui/main.qml:161
 #, fuzzy, kde-format
 #| msgid "Full content indexing"
 msgctxt "@label file currently being indexed"
 msgid "Currently Indexing:"
 msgstr "Sisu täielik indekseerimine"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, fuzzy, kde-kuit-format
 #| msgid "Full content indexing"
-msgctxt "@info"
-msgid "Currently Indexing: <filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "<filename>%1</filename>"
 msgstr "Sisu täielik indekseerimine"
 
 #: ui/main.qml:181
@@ -151,28 +151,28 @@ msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Kataloogi indekseerimise peatamine ..."
 
-#: ui/main.qml:349
+#: ui/main.qml:350
 #, kde-format
 msgid "Not indexed"
 msgstr "Ei ole indekseeritud"
 
-#: ui/main.qml:350
+#: ui/main.qml:351
 #, kde-format
 msgid "Indexed"
 msgstr "Indekseeritud"
 
-#: ui/main.qml:380
+#: ui/main.qml:381
 #, kde-format
 msgid "Delete entry"
 msgstr "Kustuta kirje"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, fuzzy, kde-format
 #| msgid "Select a folder to filter"
 msgid "Select a folder to include"
 msgstr "Kataloogi valimine filtreerimiseks"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, fuzzy, kde-format
 #| msgid "Select a folder to filter"
 msgid "Select a folder to exclude"

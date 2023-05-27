@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-27 02:03+0000\n"
 "PO-Revision-Date: 2023-05-24 13:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -97,16 +97,18 @@ msgstr "Durum:"
 msgid "%1, %2% complete"
 msgstr "%1, %​%2 tamamlandı"
 
-#: ui/main.qml:162
+#: ui/main.qml:161
 #, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently Indexing:"
 msgstr "Şu Anda İndeksleniyor:"
 
-#: ui/main.qml:165
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Currently Indexing: <filename>%1</filename>"
+#: ui/main.qml:164
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Currently Indexing: <filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "<filename>%1</filename>"
 msgstr "Şu Anda İndeksleniyor: <filename>%1</filename>"
 
 #: ui/main.qml:181
@@ -148,27 +150,27 @@ msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Bir Klasörü İndekslemeyi Durdur…"
 
-#: ui/main.qml:349
+#: ui/main.qml:350
 #, kde-format
 msgid "Not indexed"
 msgstr "İndekslenmemiş"
 
-#: ui/main.qml:350
+#: ui/main.qml:351
 #, kde-format
 msgid "Indexed"
 msgstr "İndekslenmiş"
 
-#: ui/main.qml:380
+#: ui/main.qml:381
 #, kde-format
 msgid "Delete entry"
 msgstr "Girdiyi Sil"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to include"
 msgstr "İçerilecek bir klasör seç"
 
-#: ui/main.qml:395
+#: ui/main.qml:396
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "İçerilmeyecek bir klasör seç"
