@@ -336,9 +336,9 @@ PlasmaCore.ToolTipArea {
     }
 
     TapHandler {
-        acceptedButtons: Qt.MidButton | Qt.BackButton | Qt.ForwardButton
+        acceptedButtons: Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
         onTapped: (eventPoint, button) => {
-            if (button == Qt.MidButton) {
+            if (button === Qt.MiddleButton) {
                 if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
                     tasksModel.requestNewInstance(modelIndex());
                 } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
