@@ -238,6 +238,8 @@ MouseArea {
             tasks.addLauncher(url);
         }
 
+        onWindowViewAvailableChanged: TaskTools.windowViewAvailable = windowViewAvailable;
+
         Component.onCompleted: TaskTools.windowViewAvailable = windowViewAvailable;
     }
 
