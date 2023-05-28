@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2017, 2019, 2020, 2021, 2022.
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2017, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 02:03+0000\n"
-"PO-Revision-Date: 2022-12-31 17:00+0000\n"
+"POT-Creation-Date: 2023-05-28 02:18+0000\n"
+"PO-Revision-Date: 2023-05-27 13:05+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: ui/main.qml:50
 #, kde-format
@@ -64,118 +64,111 @@ msgid "Restart"
 msgstr "Restart"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their "
-#| "content."
+#, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
-"File Search helps you quickly locate all your files based on their content."
+"File Search helps you quickly locate your files. You can choose which "
+"folders and what types of file data are indexed."
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgid "Disable indexing"
+#, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
-msgstr "Disable indexing"
+msgstr "File indexing:"
 
 #: ui/main.qml:135
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
-msgstr ""
+msgstr "Enabled"
 
 #: ui/main.qml:149
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
-msgstr ""
+msgstr "Status:"
 
 #: ui/main.qml:153
-#, fuzzy, kde-format
-#| msgid "Status: %1, %2% complete"
+#, kde-format
 msgid "%1, %2% complete"
-msgstr "Status: %1, %2% complete"
+msgstr "%1, %2% complete"
 
-#: ui/main.qml:161
+#: ui/main.qml:166
 #, fuzzy, kde-format
-#| msgid "Currently indexing: %1"
+#| msgctxt "@label file currently being indexed"
+#| msgid "Currently Indexing:"
 msgctxt "@label file currently being indexed"
-msgid "Currently Indexing:"
-msgstr "Currently indexing: %1"
+msgid "Currently indexing:"
+msgstr "Currently Indexing:"
 
-#: ui/main.qml:164
-#, fuzzy, kde-kuit-format
-#| msgid "Currently indexing: %1"
+#: ui/main.qml:176
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
-msgstr "Currently indexing: %1"
+msgstr "<filename>%1</filename>"
 
-#: ui/main.qml:181
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "Data to index:"
 
-#: ui/main.qml:183
+#: ui/main.qml:194
 #, kde-format
 msgid "File names and contents"
-msgstr ""
+msgstr "File names and contents"
 
-#: ui/main.qml:196
+#: ui/main.qml:207
 #, kde-format
 msgid "File names only"
-msgstr ""
+msgstr "File names only"
 
-#: ui/main.qml:215
-#, fuzzy, kde-format
-#| msgid "Index hidden files and folders"
+#: ui/main.qml:226
+#, kde-format
 msgid "Hidden files and folders"
-msgstr "Index hidden files and folders"
+msgstr "Hidden files and folders"
 
-#: ui/main.qml:271
+#: ui/main.qml:282
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
-
-#: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Start indexing a folder…"
-msgctxt "@action:button"
-msgid "Start Indexing a Folder…"
-msgstr "Start indexing a folder…"
+msgstr "Locations"
 
 #: ui/main.qml:287
-#, fuzzy, kde-format
-#| msgid "Stop indexing a folder…"
+#, kde-format
+msgctxt "@action:button"
+msgid "Start Indexing a Folder…"
+msgstr "Start Indexing a Folder…"
+
+#: ui/main.qml:298
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
-msgstr "Stop indexing a folder…"
+msgstr "Stop Indexing a Folder…"
 
-#: ui/main.qml:350
+#: ui/main.qml:361
 #, kde-format
 msgid "Not indexed"
 msgstr "Not indexed"
 
-#: ui/main.qml:351
+#: ui/main.qml:362
 #, kde-format
 msgid "Indexed"
 msgstr "Indexed"
 
-#: ui/main.qml:381
+#: ui/main.qml:392
 #, kde-format
 msgid "Delete entry"
 msgstr "Delete entry"
 
-#: ui/main.qml:396
+#: ui/main.qml:407
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Select a folder to include"
 
-#: ui/main.qml:396
+#: ui/main.qml:407
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Select a folder to exclude"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 02:03+0000\n"
+"POT-Creation-Date: 2023-05-28 02:18+0000\n"
 "PO-Revision-Date: 2023-02-20 21:18+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -68,9 +68,6 @@ msgstr "Start på nytt"
 
 #: ui/main.qml:119
 #, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their "
-#| "content."
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
@@ -78,7 +75,6 @@ msgstr "Filsøk hjelper deg å raskt finna filer basert på kva dei inneheld."
 
 #: ui/main.qml:134
 #, fuzzy, kde-format
-#| msgid "Currently indexing: %1"
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Indekserer no: %1"
@@ -97,96 +93,81 @@ msgstr ""
 
 #: ui/main.qml:153
 #, fuzzy, kde-format
-#| msgid "Status: %1, %2% complete"
 msgid "%1, %2% complete"
 msgstr "Status: %1 – %2 % fullført"
 
-#: ui/main.qml:161
+#: ui/main.qml:166
 #, fuzzy, kde-format
-#| msgid "Currently indexing: %1"
 msgctxt "@label file currently being indexed"
-msgid "Currently Indexing:"
+msgid "Currently indexing:"
 msgstr "Indekserer no: %1"
 
-#: ui/main.qml:164
+#: ui/main.qml:176
 #, fuzzy, kde-kuit-format
-#| msgid "Currently indexing: %1"
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
 msgstr "Indekserer no: %1"
 
-#: ui/main.qml:181
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr ""
 
-#: ui/main.qml:183
+#: ui/main.qml:194
 #, kde-format
 msgid "File names and contents"
 msgstr ""
 
-#: ui/main.qml:196
+#: ui/main.qml:207
 #, kde-format
 msgid "File names only"
 msgstr ""
 
-#: ui/main.qml:215
+#: ui/main.qml:226
 #, fuzzy, kde-format
-#| msgid "Index hidden files and folders"
 msgid "Hidden files and folders"
 msgstr "Indekser gøymde filer og mapper"
 
-#: ui/main.qml:271
+#: ui/main.qml:282
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr ""
 
-#: ui/main.qml:276
+#: ui/main.qml:287
 #, fuzzy, kde-format
-#| msgid "Start indexing a folder…"
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Start indeksering av mappe …"
 
-#: ui/main.qml:287
+#: ui/main.qml:298
 #, fuzzy, kde-format
-#| msgid "Stop indexing a folder…"
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stopp indeksering av mappe …"
 
-#: ui/main.qml:350
+#: ui/main.qml:361
 #, kde-format
 msgid "Not indexed"
 msgstr "Ikkje indeksert"
 
-#: ui/main.qml:351
+#: ui/main.qml:362
 #, kde-format
 msgid "Indexed"
 msgstr "Indeksert"
 
-#: ui/main.qml:381
+#: ui/main.qml:392
 #, kde-format
 msgid "Delete entry"
 msgstr "Slett oppføring"
 
-#: ui/main.qml:396
+#: ui/main.qml:407
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Vel mappe å inkludera"
 
-#: ui/main.qml:396
+#: ui/main.qml:407
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Vel mappe å ekskludera"
-
-#~ msgid "Enable File Search"
-#~ msgstr "Bruk filsøk"
-
-#~ msgid "Also index file content"
-#~ msgstr "Indekser òg innhaldet"
-
-#~ msgid "Folder specific configuration:"
-#~ msgstr "Mappespesifikt oppsett:"

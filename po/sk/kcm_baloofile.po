@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 02:03+0000\n"
+"POT-Creation-Date: 2023-05-28 02:18+0000\n"
 "PO-Revision-Date: 2023-01-11 11:49+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -99,83 +99,83 @@ msgstr ""
 msgid "%1, %2% complete"
 msgstr "Stav: %1, %2% hotových"
 
-#: ui/main.qml:161
+#: ui/main.qml:166
 #, fuzzy, kde-format
 #| msgid "Currently indexing: %1"
 msgctxt "@label file currently being indexed"
-msgid "Currently Indexing:"
+msgid "Currently indexing:"
 msgstr "Práve sa indexuje: %1"
 
-#: ui/main.qml:164
+#: ui/main.qml:176
 #, fuzzy, kde-kuit-format
 #| msgid "Currently indexing: %1"
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
 msgstr "Práve sa indexuje: %1"
 
-#: ui/main.qml:181
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr ""
 
-#: ui/main.qml:183
+#: ui/main.qml:194
 #, kde-format
 msgid "File names and contents"
 msgstr ""
 
-#: ui/main.qml:196
+#: ui/main.qml:207
 #, kde-format
 msgid "File names only"
 msgstr ""
 
-#: ui/main.qml:215
+#: ui/main.qml:226
 #, fuzzy, kde-format
 #| msgid "Index hidden files and folders"
 msgid "Hidden files and folders"
 msgstr "Indexovať skryté súbory a priečinky"
 
-#: ui/main.qml:271
+#: ui/main.qml:282
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr ""
 
-#: ui/main.qml:276
+#: ui/main.qml:287
 #, fuzzy, kde-format
 #| msgid "Start indexing a folder…"
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Spustiť indexovanie priečinka..."
 
-#: ui/main.qml:287
+#: ui/main.qml:298
 #, fuzzy, kde-format
 #| msgid "Stop indexing a folder…"
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Zastaviť indexovanie priečinka..."
 
-#: ui/main.qml:350
+#: ui/main.qml:361
 #, kde-format
 msgid "Not indexed"
 msgstr "Neindexované"
 
-#: ui/main.qml:351
+#: ui/main.qml:362
 #, kde-format
 msgid "Indexed"
 msgstr "Indexované"
 
-#: ui/main.qml:381
+#: ui/main.qml:392
 #, kde-format
 msgid "Delete entry"
 msgstr "Odstrániť položku"
 
-#: ui/main.qml:396
+#: ui/main.qml:407
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Vyberte priečinok, ktorý chcete zahrnúť"
 
-#: ui/main.qml:396
+#: ui/main.qml:407
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Vyberte priečinok, ktorý chcete vynechať"

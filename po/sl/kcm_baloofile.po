@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 02:03+0000\n"
-"PO-Revision-Date: 2023-05-24 08:45+0200\n"
+"POT-Creation-Date: 2023-05-28 02:18+0000\n"
+"PO-Revision-Date: 2023-05-27 06:57+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: ui/main.qml:50
 #, kde-format
@@ -99,80 +99,80 @@ msgstr "Status:"
 msgid "%1, %2% complete"
 msgstr "%1, %2% končano"
 
-#: ui/main.qml:161
-#, kde-format
+#: ui/main.qml:166
+#, fuzzy, kde-format
+#| msgctxt "@label file currently being indexed"
+#| msgid "Currently Indexing:"
 msgctxt "@label file currently being indexed"
-msgid "Currently Indexing:"
+msgid "Currently indexing:"
 msgstr "Trenutno indeksiranje:"
 
-#: ui/main.qml:164
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Currently Indexing: <filename>%1</filename>"
+#: ui/main.qml:176
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
-msgstr "Trenutno indeksiram: <filename>%1</filename>"
+msgstr "<filename>%1</filename>"
 
-#: ui/main.qml:181
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Podatki za indeksiranje:"
 
-#: ui/main.qml:183
+#: ui/main.qml:194
 #, kde-format
 msgid "File names and contents"
 msgstr "Imena datotek in vsebina"
 
-#: ui/main.qml:196
+#: ui/main.qml:207
 #, kde-format
 msgid "File names only"
 msgstr "Samo imena datotek"
 
-#: ui/main.qml:215
+#: ui/main.qml:226
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "Skrite datoteke in mape"
 
-#: ui/main.qml:271
+#: ui/main.qml:282
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Lokacije"
 
-#: ui/main.qml:276
+#: ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Začni indeksirati mapo…"
 
-#: ui/main.qml:287
+#: ui/main.qml:298
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Zaustavi indeksiranje mape…"
 
-#: ui/main.qml:350
+#: ui/main.qml:361
 #, kde-format
 msgid "Not indexed"
 msgstr "Ni indeksirano"
 
-#: ui/main.qml:351
+#: ui/main.qml:362
 #, kde-format
 msgid "Indexed"
 msgstr "Indeksirano"
 
-#: ui/main.qml:381
+#: ui/main.qml:392
 #, kde-format
 msgid "Delete entry"
 msgstr "Izbriši vnos"
 
-#: ui/main.qml:396
+#: ui/main.qml:407
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Izberite mapo za vključitev"
 
-#: ui/main.qml:396
+#: ui/main.qml:407
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Izberite mapo za izključitev"
