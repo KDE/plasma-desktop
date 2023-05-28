@@ -4,9 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-
-import org.kde.draganddrop 2.0
+import QtQuick
 
 import org.kde.taskmanager 0.1 as TaskManager
 
@@ -79,18 +77,16 @@ Item {
 
         anchors.fill: parent
 
-        preventStealing: true;
-
         property Item hoveredItem
 
         //ignore anything that is neither internal to TaskManager or a URL list
-        onDragEnter: {
-            if (event.mimeData.formats.indexOf("text/x-plasmoidservicename") >= 0) {
-                event.ignore();
+        onEntered: (event) => {
+            if (event.formats.indexOf("text/x-plasmoidservicename") >= 0) {
+                event.accepted = false;
             }
         }
 
-        onDragMove: {
+        onPositionChanged: (event) => {
             if (target.animating) {
                 return;
             }
@@ -152,26 +148,26 @@ Item {
             }
         }
 
-        onDragLeave: {
+        onExited: {
             hoveredItem = null;
             activationTimer.stop();
         }
 
-        onDrop: {
+        onDropped: (event) => {
             // Reject internal drops.
-            if (event.mimeData.formats.indexOf("application/x-orgkdeplasmataskmanager_taskbuttonitem") >= 0) {
-                event.ignore();
+            if (event.formats.indexOf("application/x-orgkdeplasmataskmanager_taskbuttonitem") >= 0) {
+                event.accepted = false;
                 return;
             }
 
             // Reject plasmoid drops.
-            if (event.mimeData.formats.indexOf("text/x-plasmoidservicename") >= 0) {
-                event.ignore();
+            if (event.formats.indexOf("text/x-plasmoidservicename") >= 0) {
+                event.accepted = false;
                 return;
             }
 
-            if (event.mimeData.hasUrls) {
-                parent.urlsDropped(event.mimeData.urls);
+            if (event.hasUrls) {
+                parent.urlsDropped(event.urls);
                 return;
             }
         }

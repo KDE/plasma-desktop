@@ -63,8 +63,6 @@ public:
 
     Q_INVOKABLE bool isApplication(const QUrl &url) const;
 
-    Q_INVOKABLE QList<QUrl> jsonArrayToUrlList(const QJsonArray &array) const;
-
     Q_INVOKABLE void cancelHighlightWindows();
 
     Q_INVOKABLE qint64 parentPid(qint64 pid) const;

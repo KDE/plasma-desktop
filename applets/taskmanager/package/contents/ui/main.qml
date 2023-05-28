@@ -437,7 +437,7 @@ MouseArea {
 
         target: taskList
 
-        onUrlsDropped: {
+        onUrlsDropped: (urls) => {
             // If all dropped URLs point to application desktop files, we'll add a launcher for each of them.
             var createLaunchers = urls.every(function (item) {
                 return backend.isApplication(item)
@@ -454,12 +454,9 @@ MouseArea {
                 return;
             }
 
-            // DeclarativeMimeData urls is a QJsonArray but requestOpenUrls expects a proper QList<QUrl>.
-            var urlsList = backend.jsonArrayToUrlList(urls);
-
             // Otherwise we'll just start a new instance of the application with the URLs as argument,
             // as you probably don't expect some of your files to open in the app and others to spawn launchers.
-            tasksModel.requestOpenUrls(hoveredItem.modelIndex(), urlsList);
+            tasksModel.requestOpenUrls(hoveredItem.modelIndex(), urls);
         }
     }
 

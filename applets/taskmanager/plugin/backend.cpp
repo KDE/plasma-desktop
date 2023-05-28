@@ -583,18 +583,6 @@ bool Backend::isApplication(const QUrl &url) const
     return desktopFile.hasApplicationType();
 }
 
-QList<QUrl> Backend::jsonArrayToUrlList(const QJsonArray &array) const
-{
-    QList<QUrl> urls;
-    urls.reserve(array.count());
-
-    for (auto it = array.constBegin(), end = array.constEnd(); it != end; ++it) {
-        urls << QUrl(it->toString());
-    }
-
-    return urls;
-}
-
 void Backend::cancelHighlightWindows()
 {
     m_windowsToHighlight.clear();
