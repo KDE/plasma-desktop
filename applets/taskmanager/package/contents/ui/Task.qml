@@ -406,7 +406,11 @@ PlasmaCore.ToolTipArea {
                     }
                     tasks.dragSource = task;
                     dragHelper.Drag.imageSource = result.url;
-                    dragHelper.Drag.mimeData = backend.generateMimeData(model.MimeType, model.MimeData, model.LauncherUrlWithoutIcon);
+                    dragHelper.Drag.mimeData = {
+                        "text/x-orgkdeplasmataskmanager_taskurl": backend.tryDecodeApplicationsUrl(model.LauncherUrlWithoutIcon).toString(),
+                        [model.MimeType]: model.MimeData,
+                        "application/x-orgkdeplasmataskmanager_taskbuttonitem": model.MimeData,
+                    };
                     dragHelper.Drag.active = dragHandler.active;
                 });
             } else {
