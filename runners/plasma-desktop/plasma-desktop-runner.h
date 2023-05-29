@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <krunner/abstractrunner.h>
+#include <KRunner/AbstractRunner>
 
 using namespace KRunner;
 
