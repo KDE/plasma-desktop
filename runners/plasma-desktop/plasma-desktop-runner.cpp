@@ -25,7 +25,7 @@ PlasmaDesktopRunner::PlasmaDesktopRunner(QObject *parent, const KPluginMetaData 
     , m_kwinConsoleKeyword(i18nc("Note this is a KRunner keyword", "wm console"))
 {
     setObjectName(QLatin1String("Plasma-Desktop"));
-    addSyntax(RunnerSyntax(m_desktopConsoleKeyword, i18n("Opens the Plasma desktop interactive console with a file path to a script on disk.")));
+    addSyntax(m_desktopConsoleKeyword, i18n("Opens the Plasma desktop interactive console with a file path to a script on disk."));
     addSyntax(i18nc("Note this is a KRunner keyword", "desktop console :q:"),
               i18n("Opens the Plasma desktop interactive console with a file path to a script on disk."));
     addSyntax(m_kwinConsoleKeyword, i18n("Opens the KWin interactive console with a file path to a script on disk."));
