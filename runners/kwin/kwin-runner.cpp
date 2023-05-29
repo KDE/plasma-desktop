@@ -46,7 +46,7 @@ void KWinRunner::match(RunnerContext &context)
 
 void KWinRunner::run(const RunnerContext & /*context*/, const QueryMatch & /*match*/)
 {
-    if (m_enabled && context.query().compare(s_keyword, Qt::CaseInsensitive) == 0) {
+    if (m_enabled) {
         QDBusMessage message = QDBusMessage::createMethodCall(s_kwinService, QStringLiteral("/KWin"), s_kwinService, QStringLiteral("showDebugConsole"));
         QDBusConnection::sessionBus().asyncCall(message);
     }
