@@ -18,8 +18,8 @@ K_PLUGIN_CLASS_WITH_JSON(KWinRunner, "plasma-runner-kwin.json")
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 static const QString s_keyword = QStringLiteral("KWin");
 
-KWinRunner::KWinRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : AbstractRunner(parent, metaData, args)
+KWinRunner::KWinRunner(QObject *parent, const KPluginMetaData &metaData)
+    : AbstractRunner(parent, metaData)
 {
     setObjectName(s_keyword);
     QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_kwinService, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);

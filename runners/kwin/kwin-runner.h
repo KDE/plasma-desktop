@@ -16,7 +16,7 @@ class KWinRunner : public AbstractRunner
     Q_OBJECT
 
 public:
-    explicit KWinRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    explicit KWinRunner(QObject *parent, const KPluginMetaData &metaData);
     ~KWinRunner() override;
 
     void match(RunnerContext &context) override;

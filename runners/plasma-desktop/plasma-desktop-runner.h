@@ -19,7 +19,7 @@ class PlasmaDesktopRunner : public AbstractRunner
     Q_OBJECT
 
 public:
-    PlasmaDesktopRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    explicit PlasmaDesktopRunner(QObject *parent, const KPluginMetaData &metaData);
     ~PlasmaDesktopRunner() override;
 
     void match(RunnerContext &context) override;
