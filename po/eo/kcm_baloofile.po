@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 02:18+0000\n"
-"PO-Revision-Date: 2023-05-25 20:30+0100\n"
+"PO-Revision-Date: 2023-05-28 11:26+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -98,20 +98,16 @@ msgid "%1, %2% complete"
 msgstr "%1, %2% kompleta"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@label file currently being indexed"
-#| msgid "Currently Indexing:"
+#, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "Aktuale indeksante:"
 
 #: ui/main.qml:176
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "Currently Indexing: <filename>%1</filename>"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
-msgstr "Aktuale indeksante: <filename>%1</filename>"
+msgstr "<filename>%1</filename>"
 
 #: ui/main.qml:192
 #, kde-format

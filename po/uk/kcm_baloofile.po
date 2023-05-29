@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 02:18+0000\n"
-"PO-Revision-Date: 2023-05-27 09:10+0300\n"
+"PO-Revision-Date: 2023-05-28 19:56+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -101,9 +101,7 @@ msgid "%1, %2% complete"
 msgstr "%1, завершено на %2%"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@label file currently being indexed"
-#| msgid "Currently Indexing:"
+#, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "Зараз індексуємо:"

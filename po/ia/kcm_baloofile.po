@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 02:18+0000\n"
-"PO-Revision-Date: 2023-05-27 11:30+0200\n"
+"PO-Revision-Date: 2023-05-28 21:18+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -99,12 +99,10 @@ msgid "%1, %2% complete"
 msgstr "%1, %2% complete"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@label file currently being indexed"
-#| msgid "Currently Indexing:"
+#, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
-msgstr "Indicisante currentemente : "
+msgstr "Indicisante currentemente :"
 
 #: ui/main.qml:176
 #, kde-kuit-format

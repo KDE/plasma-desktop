@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 02:18+0000\n"
-"PO-Revision-Date: 2023-05-27 10:37+0200\n"
+"PO-Revision-Date: 2023-05-28 15:52+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -99,9 +99,7 @@ msgid "%1, %2% complete"
 msgstr "%1, %2% voltooid"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@label file currently being indexed"
-#| msgid "Currently Indexing:"
+#, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "Nu indexeren:"
