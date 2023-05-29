@@ -20,7 +20,6 @@ class PlasmaDesktopRunner : public AbstractRunner
 
 public:
     explicit PlasmaDesktopRunner(QObject *parent, const KPluginMetaData &metaData);
-    ~PlasmaDesktopRunner() override;
 
     void match(RunnerContext &context) override;
     void run(const RunnerContext &context, const QueryMatch &action) override;

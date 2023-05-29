@@ -32,10 +32,6 @@ PlasmaDesktopRunner::PlasmaDesktopRunner(QObject *parent, const KPluginMetaData 
     addSyntax(i18nc("Note this is a KRunner keyword", "wm console :q:"), i18n("Opens the KWin interactive console with a file path to a script on disk."));
 }
 
-PlasmaDesktopRunner::~PlasmaDesktopRunner()
-{
-}
-
 void PlasmaDesktopRunner::match(RunnerContext &context)
 {
     if (context.query().startsWith(m_desktopConsoleKeyword, Qt::CaseInsensitive)) {

@@ -27,10 +27,6 @@ KWinRunner::KWinRunner(QObject *parent, const KPluginMetaData &metaData)
     checkAvailability(QString(), QString(), QString());
 }
 
-KWinRunner::~KWinRunner()
-{
-}
-
 void KWinRunner::match(RunnerContext &context)
 {
     if (m_enabled && context.query().compare(s_keyword, Qt::CaseInsensitive) == 0) {

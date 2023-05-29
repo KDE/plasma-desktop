@@ -17,7 +17,6 @@ class KWinRunner : public AbstractRunner
 
 public:
     explicit KWinRunner(QObject *parent, const KPluginMetaData &metaData);
-    ~KWinRunner() override;
 
     void match(RunnerContext &context) override;
     void run(const RunnerContext &context, const QueryMatch &action) override;
