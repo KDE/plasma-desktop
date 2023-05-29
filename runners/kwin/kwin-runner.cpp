@@ -44,20 +44,16 @@ void KWinRunner::match(RunnerContext &context)
     }
 }
 
-void KWinRunner::run(const RunnerContext &context, const QueryMatch &match)
+void KWinRunner::run(const RunnerContext & /*context*/, const QueryMatch & /*match*/)
 {
-    Q_UNUSED(match)
-
     if (m_enabled && context.query().compare(s_keyword, Qt::CaseInsensitive) == 0) {
         QDBusMessage message = QDBusMessage::createMethodCall(s_kwinService, QStringLiteral("/KWin"), s_kwinService, QStringLiteral("showDebugConsole"));
         QDBusConnection::sessionBus().asyncCall(message);
     }
 }
 
-void KWinRunner::checkAvailability(const QString &name, const QString &oldOwner, const QString &newOwner)
+void KWinRunner::checkAvailability(const QString &name, const QString & /*oldOwner*/, const QString &newOwner)
 {
-    Q_UNUSED(oldOwner)
-
     bool enabled = false;
     if (name.isEmpty()) {
         enabled = QDBusConnection::sessionBus().interface()->isServiceRegistered(s_kwinService).value();

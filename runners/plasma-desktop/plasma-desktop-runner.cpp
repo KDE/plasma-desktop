@@ -58,10 +58,8 @@ void PlasmaDesktopRunner::match(RunnerContext &context)
     }
 }
 
-void PlasmaDesktopRunner::run(const RunnerContext &context, const QueryMatch &match)
+void PlasmaDesktopRunner::run(const RunnerContext &context, const QueryMatch & /*match*/)
 {
-    Q_UNUSED(match)
-
     bool showPlasmaConsole = context.query().startsWith(m_desktopConsoleKeyword, Qt::CaseInsensitive);
     QStringList args{showPlasmaConsole ? QStringLiteral("--plasma") : QStringLiteral("--kwin")};
     auto job = new KIO::CommandLauncherJob(QStringLiteral("plasma-interactiveconsole"), args);
