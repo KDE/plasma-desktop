@@ -12,7 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 22.04.1\n"
@@ -117,22 +117,19 @@ msgstr "デスクトップを表示"
 #, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
-msgstr[0] "と他 %1 個のウィンドウ"
-msgstr[1] "…と他 %1 個のウィンドウ"
+msgstr[0] "…と他 %1 個のウィンドウ"
 
 #: package/contents/ui/main.qml:363
 #, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "%1 個のウィンドウ:"
-msgstr[1] "%1 個のウィンドウ:"
 
 #: package/contents/ui/main.qml:375
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "%1 個の最小化されたウィンドウ:"
-msgstr[1] "%1 個の最小化されたウィンドウ:"
 
 #: package/contents/ui/main.qml:450
 #, kde-format
