@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 22.04.1\n"
@@ -590,7 +590,6 @@ msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
 msgstr[0] "%1 件の新しいメッセージがあります。"
-msgstr[1] "%1 件の新しいメッセージがあります。"
 
 #: package/contents/ui/Task.qml:97
 #, kde-format
@@ -681,7 +680,6 @@ msgctxt "Show all user Places"
 msgid "%1 more Place"
 msgid_plural "%1 more Places"
 msgstr[0] "その他の場所(%1件)"
-msgstr[1] "その他の場所(%1件)"
 
 #: plugin/backend.cpp:447
 #, kde-format
