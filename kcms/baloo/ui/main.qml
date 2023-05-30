@@ -150,7 +150,7 @@ KCM.ScrollViewKCM {
                     Layout.fillWidth: true
                     leftPadding: fileSearchEnabled.indicator.width
                     visible: fileSearchEnabled.checked
-                    text: i18n("%1, %2\% complete", monitor.stateString, monitor.completionPercentage)
+                    text: i18n("%1, %2% complete", monitor.stateString, monitor.completionPercentage)
                     elide: Text.ElideLeft
                 }
             }
