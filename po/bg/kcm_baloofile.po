@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Svetoslav Stefanov <svetlisashkov@yahoo.com>, 2014.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-28 02:18+0000\n"
-"PO-Revision-Date: 2022-12-14 20:17+0100\n"
+"POT-Creation-Date: 2023-05-31 03:09+0000\n"
+"PO-Revision-Date: 2023-05-30 23:20+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: ui/main.qml:50
@@ -67,97 +67,89 @@ msgid "Restart"
 msgstr "Рестартиране"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their "
-#| "content."
+#, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
-"Търсене на файлове ви помага бързо да намерите всичките си файлове въз "
-"основа на тяхното съдържание."
+"Търсене на файлове ви помага бързо да откривате файловете си. Можете да "
+"изберете кои папки и какви типове файлови данни да бъдат индексирани."
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgid "Currently indexing: %1"
+#, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
-msgstr "Текущо индексиране: %1"
+msgstr "Индексиране на файлове:"
 
 #: ui/main.qml:135
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
-msgstr ""
+msgstr "Активирано"
 
 #: ui/main.qml:149
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
-msgstr ""
+msgstr "Състояние:"
 
 #: ui/main.qml:153
 #, fuzzy, kde-format
-#| msgid "Status: %1, %2% complete"
+#| msgid "%1, %2% complete"
+msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr "Статус: %1, %2% завършено"
+msgstr "%1, %2% завършено"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "Currently indexing: %1"
+#, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
-msgstr "Текущо индексиране: %1"
+msgstr "Текущо индексиране:"
 
 #: ui/main.qml:176
-#, fuzzy, kde-kuit-format
-#| msgid "Currently indexing: %1"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
-msgstr "Текущо индексиране: %1"
+msgstr "<filename>%1</filename>"
 
 #: ui/main.qml:192
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "Данни за индексиране"
 
 #: ui/main.qml:194
 #, kde-format
 msgid "File names and contents"
-msgstr ""
+msgstr "Име на файл и съдържание"
 
 #: ui/main.qml:207
 #, kde-format
 msgid "File names only"
-msgstr ""
+msgstr "Само име на файл"
 
 #: ui/main.qml:226
-#, fuzzy, kde-format
-#| msgid "Index hidden files and folders"
+#, kde-format
 msgid "Hidden files and folders"
-msgstr "Индексиране на скрити файлове и папки"
+msgstr "Скрити файлове и папки"
 
 #: ui/main.qml:282
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
+msgstr "Местоположение"
 
 #: ui/main.qml:287
-#, fuzzy, kde-format
-#| msgid "Start indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
-msgstr "Стартиране индексиране на папка…"
+msgstr "Започване на индексиране на папка…"
 
 #: ui/main.qml:298
-#, fuzzy, kde-format
-#| msgid "Stop indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
-msgstr "Спиране индексиране на папка…"
+msgstr "Спиране на индексиране на папка…"
 
 #: ui/main.qml:361
 #, kde-format

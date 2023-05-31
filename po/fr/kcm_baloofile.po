@@ -5,22 +5,22 @@
 # Johan Claude-Breuninger <johan.claudebreuninger@gmail.com>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
 # William Oprandi <william.oprandi@gmail.com>, 2020.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-28 02:18+0000\n"
-"PO-Revision-Date: 2022-12-16 20:57+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"POT-Creation-Date: 2023-05-31 03:09+0000\n"
+"PO-Revision-Date: 2023-05-28 15:33+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -76,97 +76,90 @@ msgid "Restart"
 msgstr "Redémarrer"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their "
-#| "content."
+#, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
-"La recherche sur le bureau vous permet de localiser rapidement tous vos "
-"fichiers à partir de leur contenu."
+"La recherche de fichiers vous permet de localiser rapidement tous vos "
+"fichiers. Vous pouvez sélectionner quels dossiers et quels types de fichiers "
+"sont à indexer."
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgid "Disable indexing"
+#, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
-msgstr "Désactiver l'indexation"
+msgstr "Indexation de fichiers :"
 
 #: ui/main.qml:135
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
-msgstr ""
+msgstr "Activé"
 
 #: ui/main.qml:149
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
-msgstr ""
+msgstr "État :"
 
 #: ui/main.qml:153
 #, fuzzy, kde-format
-#| msgid "Status: %1, %2% complete"
+#| msgid "%1, %2% complete"
+msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr "État : %1, %2% terminé"
+msgstr "%1, %2 % terminé"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "Currently indexing: %1"
+#, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
-msgstr "Indexation en cours actuellement : %1"
+msgstr "Indexation en cours :"
 
 #: ui/main.qml:176
-#, fuzzy, kde-kuit-format
-#| msgid "Currently indexing: %1"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
-msgstr "Indexation en cours actuellement : %1"
+msgstr "<filename>%1</filename>"
 
 #: ui/main.qml:192
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "Données à indexer :"
 
 #: ui/main.qml:194
 #, kde-format
 msgid "File names and contents"
-msgstr ""
+msgstr "Nom et contenu du fichier"
 
 #: ui/main.qml:207
 #, kde-format
 msgid "File names only"
-msgstr ""
+msgstr "Unniquement les noms de fichiers"
 
 #: ui/main.qml:226
-#, fuzzy, kde-format
-#| msgid "Index hidden files and folders"
+#, kde-format
 msgid "Hidden files and folders"
-msgstr "Indexer les fichiers et dossiers cachés"
+msgstr "Fichiers et dossiers cachés"
 
 #: ui/main.qml:282
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
+msgstr "Emplacements"
 
 #: ui/main.qml:287
-#, fuzzy, kde-format
-#| msgid "Start indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
-msgstr "Commencer l'indexation du dossier..."
+msgstr "Démarrer  l'indexation d'un dossier..."
 
 #: ui/main.qml:298
-#, fuzzy, kde-format
-#| msgid "Stop indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
-msgstr "Arrêter l'indexation du dossier..."
+msgstr "Arrêter l'indexation d'un dossier..."
 
 #: ui/main.qml:361
 #, kde-format

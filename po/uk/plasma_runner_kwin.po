@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_kwin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-15 00:47+0000\n"
+"POT-Creation-Date: 2023-05-31 03:09+0000\n"
 "PO-Revision-Date: 2016-03-31 20:31+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,12 +20,12 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: kwin-runner.cpp:41
+#: kwin-runner.cpp:37
 #, kde-format
 msgid "Open KWin debug console"
 msgstr "Відкрити консоль діагностики KWin"
 
-#: kwin-runner.cpp:72
+#: kwin-runner.cpp:64
 #, kde-format
 msgid "Opens the KWin (Plasma Window Manager) debug console."
 msgstr ""
