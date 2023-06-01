@@ -21,13 +21,17 @@ KCM.ScrollViewKCM {
     implicitHeight: Kirigami.Units.gridUnit * 18
 
     header: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
+
         QQC2.Label {
             text: i18n("Enable or disable plugins (used in KRunner, Application Launcher, and the Overview effect)")
-        }
-        Kirigami.SearchField {
-            Layout.fillWidth: true
-            id: searchField
             wrapMode: Text.WordWrap
+            Layout.fillWidth: true
+        }
+
+        Kirigami.SearchField {
+            id: searchField
+            Layout.fillWidth: true
         }
     }
 
@@ -53,12 +57,12 @@ KCM.ScrollViewKCM {
                 text: i18n("Get New Plugins…")
                 visible: KAuthorized.authorize(KAuthorized.GHNS)
                 configFile: "krunner.knsrc"
-                onEntryEvent: function (entry, event) {
-                    if (event == NewStuff.Entry.StatusChangedEvent) {
+                onEntryEvent: (entry, event) => {
+                    if (event === NewStuff.Engine.StatusChangedEvent) {
                         kcm.reloadPlugin()
                     }
                 }
-            } 
+            }
         ]
     }
 }
