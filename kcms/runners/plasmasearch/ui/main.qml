@@ -20,6 +20,23 @@ KCM.ScrollViewKCM {
     implicitWidth: Kirigami.Units.gridUnit * 32
     implicitHeight: Kirigami.Units.gridUnit * 18
 
+    actions: [
+        Kirigami.Action {
+            text: i18n("Configure KRunner…")
+            onTriggered: kcm.showKRunnerKCM()
+        },
+        NewStuff.Action {
+            text: i18n("Get New Plugins…")
+            visible: KAuthorized.authorize(KAuthorized.GHNS)
+            configFile: "krunner.knsrc"
+            onEntryEvent: (entry, event) => {
+                if (event === NewStuff.Engine.StatusChangedEvent) {
+                    kcm.reloadPlugin()
+                }
+            }
+        }
+    ]
+
     header: ColumnLayout {
         spacing: Kirigami.Units.smallSpacing
 
@@ -43,26 +60,5 @@ KCM.ScrollViewKCM {
             highlighted: false
             hoverEnabled: false
         }
-    }
-
-    footer: Kirigami.ActionToolBar {
-        flat: false
-        alignment: Qt.AlignRight
-        actions: [
-            Kirigami.Action {
-                text: i18n("Configure KRunner…")
-                onTriggered: kcm.showKRunnerKCM()
-            },
-            NewStuff.Action {
-                text: i18n("Get New Plugins…")
-                visible: KAuthorized.authorize(KAuthorized.GHNS)
-                configFile: "krunner.knsrc"
-                onEntryEvent: (entry, event) => {
-                    if (event === NewStuff.Engine.StatusChangedEvent) {
-                        kcm.reloadPlugin()
-                    }
-                }
-            }
-        ]
     }
 }
