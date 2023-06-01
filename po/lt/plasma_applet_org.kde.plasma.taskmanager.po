@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-26 01:59+0000\n"
+"POT-Creation-Date: 2023-06-01 02:11+0000\n"
 "PO-Revision-Date: 2022-12-28 00:59+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -677,7 +677,7 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Prieinamas šiose veiklose: %1"
 
-#: plugin/backend.cpp:351
+#: plugin/backend.cpp:326
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
@@ -687,40 +687,40 @@ msgstr[1] "ir dar %1 vietos"
 msgstr[2] "ir dar %1 vietų"
 msgstr[3] "ir dar %1 vieta"
 
-#: plugin/backend.cpp:447
+#: plugin/backend.cpp:422
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Paskiausi atsiuntimai"
 
-#: plugin/backend.cpp:449
+#: plugin/backend.cpp:424
 #, kde-format
 msgid "Recent Connections"
 msgstr "Paskiausi ryšiai"
 
-#: plugin/backend.cpp:451
+#: plugin/backend.cpp:426
 #, kde-format
 msgid "Recent Places"
 msgstr "Paskiausios vietos"
 
-#: plugin/backend.cpp:460
+#: plugin/backend.cpp:435
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Išvalyti paskiausius atsiuntimus"
 
-#: plugin/backend.cpp:462
+#: plugin/backend.cpp:437
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Išvalyti paskiausius ryšius"
 
-#: plugin/backend.cpp:464
+#: plugin/backend.cpp:439
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Išvalyti paskiausias vietas"
 
-#: plugin/backend.cpp:466
+#: plugin/backend.cpp:441
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

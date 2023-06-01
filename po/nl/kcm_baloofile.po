@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-31 03:09+0000\n"
-"PO-Revision-Date: 2023-05-28 15:52+0200\n"
+"PO-Revision-Date: 2023-05-31 10:40+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -94,8 +94,7 @@ msgid "Status:"
 msgstr "Status:"
 
 #: ui/main.qml:153
-#, fuzzy, kde-format
-#| msgid "%1, %2% complete"
+#, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% voltooid"
