@@ -126,11 +126,6 @@ QQC2.Page {
             }
             QQC2.Label {
                 Layout.leftMargin: Kirigami.Units.gridUnit
-                text: page.metaData.extraInformation
-                visible: text.length > 0
-            }
-            QQC2.Label {
-                Layout.leftMargin: Kirigami.Units.gridUnit
                 text: page.metaData.copyrightText
                 visible: text.length > 0
             }
