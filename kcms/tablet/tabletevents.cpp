@@ -91,12 +91,7 @@ public:
         , q(q)
     {
         setParent(q);
-#if QTWAYLANDCLIENT_VERSION >= QT_VERSION_CHECK(6, 2, 0)
         initialize();
-#else
-        // QWaylandClientExtensionTemplate invokes this with a QueuedConnection but we want it called immediately
-        QMetaObject::invokeMethod(this, "addRegistryListener", Qt::DirectConnection);
-#endif
         Q_ASSERT(isInitialized());
     }
 
