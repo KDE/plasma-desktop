@@ -356,7 +356,7 @@ void ShortcutsModelPrivate::slotSourceLayoutAboutToBeChanged(const QList<QPersis
     const QModelIndexList persistentIndexList = q->persistentIndexList();
     layoutChangePersistentIndexes.reserve(persistentIndexList.size());
 
-    for (const QPersistentModelIndex &proxyPersistentIndex : persistentIndexList) {
+    for (const QModelIndex &proxyPersistentIndex : persistentIndexList) {
         proxyIndexes << proxyPersistentIndex;
         Q_ASSERT(proxyPersistentIndex.isValid());
         const QPersistentModelIndex srcPersistentIndex = q->mapToSource(proxyPersistentIndex);

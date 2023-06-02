@@ -49,7 +49,6 @@ static QString findXkbRulesFile()
 int main(int argc, char *argv[])
 {
     setenv("QT_QPA_PLATFORM", "xcb", 1);
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     Application app(argc, argv);
     Q_ASSERT(app.platformName() == QStringLiteral("xcb"));
 

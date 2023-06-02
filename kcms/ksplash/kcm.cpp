@@ -33,7 +33,7 @@ const QLatin1String s_nonePluginName("None");
 class SplashScreenSortModel : public QSortFilterProxyModel
 {
     using QSortFilterProxyModel::QSortFilterProxyModel;
-    virtual bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const
+    bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override
     {
         // The "None" entry should be the last item of the model, BUG: 451422
         if (source_left.data(KCMSplashScreen::PluginNameRole).toString() == s_nonePluginName) {

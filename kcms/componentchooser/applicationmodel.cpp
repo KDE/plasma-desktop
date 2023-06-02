@@ -192,7 +192,7 @@ bool ApplicationModel::setData(const QModelIndex &index, const QVariant &value, 
     if (!isValid(index)) {
         return false;
     }
-    if (!value.canConvert(QMetaType::Type::Bool) && !value.toBool()) {
+    if (!value.canConvert(QMetaType(QMetaType::Type::Bool)) && !value.toBool()) {
         return false;
     }
 

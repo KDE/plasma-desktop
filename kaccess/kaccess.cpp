@@ -10,16 +10,18 @@
 
 #include "kaccess.h"
 
+#include <QAction>
+#include <QApplication>
+#include <QDialog>
+#include <QDialogButtonBox>
 #include <QFile>
-#include <QMessageBox>
+#include <QHBoxLayout>
+#include <QLoggingCategory>
 #include <QPainter>
 #include <QProcess>
 #include <QScreen>
+#include <QStyle>
 #include <QTimer>
-
-#include <QAction>
-#include <QApplication>
-#include <QHBoxLayout>
 #include <QVBoxLayout>
 
 #include <KAboutData>
@@ -36,8 +38,6 @@
 #include <KUserTimestamp>
 #include <KWindowSystem>
 #include <KX11Extras>
-#include <QDialog>
-#include <QDialogButtonBox>
 
 #include <netwm.h>
 #define XK_MISCELLANY
@@ -49,8 +49,6 @@
 #else
 #include <QtGui/private/qtx11extras_p.h>
 #endif
-
-#include <QLoggingCategory>
 
 #include <canberra.h>
 
@@ -418,6 +416,8 @@ bool KAccessApp::nativeEventFilter(const QByteArray &eventType, void *message, l
 bool KAccessApp::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
 #endif
 {
+    Q_UNUSED(result);
+
     if (eventType == "xcb_generic_event_t") {
         xcb_generic_event_t *event = static_cast<xcb_generic_event_t *>(message);
         if ((event->response_type & ~0x80) == XkbEventCode + xkb_opcode) {
@@ -683,7 +683,7 @@ void KAccessApp::createDialogContents()
         QLabel *label1 = new QLabel();
         QIcon icon = QIcon::fromTheme(QStringLiteral("dialog-warning"));
         if (icon.isNull())
-            icon = QMessageBox::standardIcon(QMessageBox::Warning);
+            icon = qApp->style()->standardIcon(QStyle::SP_MessageBoxWarning);
         label1->setPixmap(icon.pixmap(64, 64));
 
         lay->addWidget(label1, 0, Qt::AlignCenter);

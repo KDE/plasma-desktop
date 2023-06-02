@@ -113,6 +113,8 @@ void StandardShortcutsModel::importConfig(const KConfigBase &config)
         case KStandardShortcut::Category::Help:
             name = "Help";
             break;
+        case KStandardShortcut::Category::InvalidCategory:
+            break;
         }
         auto cat = std::find_if(m_components.begin(), m_components.end(), [&name](const Component &c) {
             return c.id == name;
