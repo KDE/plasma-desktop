@@ -8,22 +8,15 @@
 */
 #include <array>
 
-#include "screenmappertest.h"
 #include "screenmapper.h"
+#include "screenmappertest.h"
 
 #include <QSignalSpy>
 #include <QTest>
 
 #include <KActivities/Consumer>
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-constexpr inline QLatin1String operator"" _L1(const char *str, size_t size) noexcept
-{
-    return QLatin1String(str, size);
-}
-#else
 using namespace Qt::StringLiterals;
-#endif
 
 QTEST_MAIN(ScreenMapperTest)
 

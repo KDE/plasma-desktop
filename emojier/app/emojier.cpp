@@ -26,11 +26,7 @@
 #include <QQuickWindow>
 #include <QSessionManager>
 #include <QVector>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QX11Info>
-#else
 #include <QtGui/private/qtx11extras_p.h>
-#endif
 
 #include "config-workspace.h"
 #include <kstartupinfo.h>
@@ -70,9 +66,6 @@ public:
 
 int main(int argc, char **argv)
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QGuiApplication::setFallbackSessionManagementEnabled(false);
-#endif
     QApplication app(argc, argv);
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-emoticons")));
     KCrash::initialize();

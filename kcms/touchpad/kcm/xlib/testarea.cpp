@@ -25,11 +25,7 @@ TestArea::TestArea(QWidget *parent)
     m_ui.scrollAreaWidgetContents->setStyleSheet(stylesheet.arg(wallpaper));
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-void TestArea::enterEvent(QEvent *e)
-#else
 void TestArea::enterEvent(QEnterEvent *e)
-#endif
 {
     Q_EMIT enter();
     QWidget::enterEvent(e);

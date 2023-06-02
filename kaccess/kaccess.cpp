@@ -23,6 +23,7 @@
 #include <QStyle>
 #include <QTimer>
 #include <QVBoxLayout>
+#include <QtGui/private/qtx11extras_p.h>
 
 #include <KAboutData>
 #include <KComboBox>
@@ -43,12 +44,6 @@
 #define XK_MISCELLANY
 #define XK_XKB_KEYS
 #include <X11/keysymdef.h>
-
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QX11Info>
-#else
-#include <QtGui/private/qtx11extras_p.h>
-#endif
 
 #include <canberra.h>
 
@@ -410,11 +405,7 @@ struct xkb_any_ {
     uint8_t deviceID;
 };
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-bool KAccessApp::nativeEventFilter(const QByteArray &eventType, void *message, long *result)
-#else
 bool KAccessApp::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
-#endif
 {
     Q_UNUSED(result);
 

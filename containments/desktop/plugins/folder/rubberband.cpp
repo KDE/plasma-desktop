@@ -40,18 +40,10 @@ bool RubberBand::intersects(const QRectF &rect) const
     return m_geometry.intersects(rect);
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-void RubberBand::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
-#else
 void RubberBand::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)
-#endif
 {
     Q_UNUSED(oldGeometry);
 
     m_geometry = newGeometry;
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QQuickItem::geometryChanged(newGeometry, oldGeometry);
-#else
     QQuickItem::geometryChange(newGeometry, oldGeometry);
-#endif
 }

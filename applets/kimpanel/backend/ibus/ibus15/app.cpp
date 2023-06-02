@@ -15,11 +15,7 @@
 
 #define USED_MASK (XCB_MOD_MASK_SHIFT | XCB_MOD_MASK_CONTROL | XCB_MOD_MASK_1 | XCB_MOD_MASK_4)
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-bool XcbEventFilter::nativeEventFilter(const QByteArray &eventType, void *message, long *result)
-#else
 bool XcbEventFilter::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
-#endif
 {
     Q_UNUSED(result);
     if (eventType != "xcb_generic_event_t") {

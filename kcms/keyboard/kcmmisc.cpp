@@ -12,19 +12,15 @@
 */
 
 #include "kcmmisc.h"
-#include "ui_kcmmiscwidget.h"
 #include "keyboardmiscsettings.h"
+#include "ui_kcmmiscwidget.h"
 
 #include <QButtonGroup>
 #include <QCheckBox>
 #include <QDoubleSpinBox>
 #include <QSpinBox>
 #include <QWhatsThis>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QX11Info>
-#else
 #include <QtGui/private/qtx11extras_p.h>
-#endif
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -88,10 +84,8 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent, KeyboardMiscSettings
     connect(_keyboardRepeatButtonGroup, &QButtonGroup::idClicked, this, qOverload<>(&KCMiscKeyboardWidget::changed));
     connect(_keyboardRepeatButtonGroup, &QButtonGroup::idClicked, this, &KCMiscKeyboardWidget::keyboardRepeatStateChanged);
 
-    connect(_numlockButtonGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked),
-            this, &KCMiscKeyboardWidget::updateUiDefaultIndicator);
-    connect(_keyboardRepeatButtonGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked),
-            this, &KCMiscKeyboardWidget::updateUiDefaultIndicator);
+    connect(_numlockButtonGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked), this, &KCMiscKeyboardWidget::updateUiDefaultIndicator);
+    connect(_keyboardRepeatButtonGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked), this, &KCMiscKeyboardWidget::updateUiDefaultIndicator);
 }
 
 KCMiscKeyboardWidget::~KCMiscKeyboardWidget()
@@ -167,13 +161,13 @@ QString KCMiscKeyboardWidget::quickHelp() const
 bool KCMiscKeyboardWidget::isSaveNeeded() const
 {
     return m_settings->keyboardRepeat() != keybehaviourNames[KeyBehaviour(_keyboardRepeatButtonGroup->checkedId())]
-            || m_settings->numLock() != TriStateHelper::getInt(TriStateHelper::getTriState(_numlockButtonGroup));
+        || m_settings->numLock() != TriStateHelper::getInt(TriStateHelper::getTriState(_numlockButtonGroup));
 }
 
 bool KCMiscKeyboardWidget::isDefault() const
 {
     return defaultValueKeyboardRepeat() == KeyBehaviour(_keyboardRepeatButtonGroup->checkedId())
-            && m_settings->defaultNumLockValue() == TriStateHelper::getInt(TriStateHelper::getTriState(_numlockButtonGroup));
+        && m_settings->defaultNumLockValue() == TriStateHelper::getInt(TriStateHelper::getTriState(_numlockButtonGroup));
 }
 
 void KCMiscKeyboardWidget::setDefaultIndicator(bool visible)

@@ -21,11 +21,7 @@ public:
     Q_INVOKABLE bool intersects(const QRectF &rect) const;
 
 protected:
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
-#else
     void geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry) override;
-#endif
 
 private:
     QRectF m_geometry;

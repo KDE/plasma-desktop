@@ -40,7 +40,7 @@
 #define Uses_SCIM_TRANS_COMMANDS
 #define Uses_SCIM_CONFIG
 #define Uses_SCIM_CONFIG_MODULE
-//#define Uses_SCIM_DEBUG
+// #define Uses_SCIM_DEBUG
 #define Uses_SCIM_HELPER
 #define Uses_SCIM_HELPER_MODULE
 #define Uses_SCIM_PANEL_AGENT
@@ -52,19 +52,11 @@
 #include <scim.h>
 #pragma GCC visibility pop
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-constexpr inline QLatin1String operator"" _L1(const char *str, size_t size) noexcept
-{
-    return QLatin1String(str, size);
-}
-#else
-using namespace Qt::StringLiterals;
-#endif
-
 Q_DECLARE_METATYPE(scim::Property)
 Q_DECLARE_METATYPE(scim::PanelFactoryInfo)
 Q_DECLARE_METATYPE(scim::HelperInfo)
 
+using namespace Qt::StringLiterals;
 using namespace scim;
 
 // PanelAgent related functions

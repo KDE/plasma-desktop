@@ -11,11 +11,7 @@
 #include <QString>
 #include <QStringList>
 #include <QWidget>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QX11Info>
-#else
 #include <QtGui/private/qtx11extras_p.h>
-#endif
 
 #define explicit explicit_is_keyword_in_cpp
 #include <xcb/xcb.h>
@@ -60,11 +56,7 @@ protected:
     virtual bool processOtherEvents(xcb_generic_event_t *e);
     virtual bool processXkbEvents(xcb_generic_event_t *e);
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) override;
-#else
     bool nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result) override;
-#endif
 
 private:
     int registerForXkbEvents(Display *display);

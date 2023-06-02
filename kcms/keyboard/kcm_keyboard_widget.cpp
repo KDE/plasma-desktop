@@ -20,14 +20,10 @@
 #include <QPixmap>
 #include <QVBoxLayout>
 #include <QWidget>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QX11Info>
-#else
 #include <QtGui/private/qtx11extras_p.h>
-#endif
 
-#include "workspace_options.h"
 #include "keyboardmiscsettings.h"
+#include "workspace_options.h"
 
 #include "bindings.h"
 #include "flags.h"
@@ -126,17 +122,14 @@ void KCMKeyboardWidget::defaults()
 
 bool KCMKeyboardWidget::isSaveNeeded() const
 {
-    return keyboardModelFromUI() != keyboardConfig->keyboardModel() ||
-            switchingPolicyFromUI() != keyboardConfig->switchingPolicy() ||
-            xkbOptionsFromUI() != keyboardConfig->xkbOptions() ||
-            keyboardConfig->layoutsSaveNeeded();
+    return keyboardModelFromUI() != keyboardConfig->keyboardModel() || switchingPolicyFromUI() != keyboardConfig->switchingPolicy()
+        || xkbOptionsFromUI() != keyboardConfig->xkbOptions() || keyboardConfig->layoutsSaveNeeded();
 }
 
 bool KCMKeyboardWidget::isDefault() const
 {
-    return keyboardModelFromUI() == keyboardConfig->defaultKeyboardModelValue() &&
-            switchingPolicyFromUI() == keyboardConfig->defaultSwitchingPolicyValue() &&
-            xkbOptionsFromUI() == keyboardConfig->xkbOptions();
+    return keyboardModelFromUI() == keyboardConfig->defaultKeyboardModelValue() && switchingPolicyFromUI() == keyboardConfig->defaultSwitchingPolicyValue()
+        && xkbOptionsFromUI() == keyboardConfig->xkbOptions();
 }
 
 void KCMKeyboardWidget::setDefaultIndicator(bool visible)
@@ -219,12 +212,7 @@ void KCMKeyboardWidget::initializeKeyboardModelUI()
 
 void KCMKeyboardWidget::addLayout()
 {
-    AddLayoutDialog dialog(rules,
-                           flags,
-                           keyboardModelFromUI(),
-                           xkbOptionsFromUI(),
-                           false,
-                           this);
+    AddLayoutDialog dialog(rules, flags, keyboardModelFromUI(), xkbOptionsFromUI(), false, this);
     dialog.setModal(true);
     if (dialog.exec() == QDialog::Accepted) {
         keyboardConfig->layouts.append(dialog.getSelectedLayoutUnit());
@@ -322,8 +310,10 @@ void KCMKeyboardWidget::initializeLayoutsUI()
     connect(uiWidget->addLayoutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::addLayout);
     connect(uiWidget->removeLayoutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::removeLayout);
     connect(uiWidget->layoutsTableView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &KCMKeyboardWidget::layoutSelectionChanged);
-    connect(uiWidget->layoutsTableView->model(), qOverload<const QModelIndex &, const QModelIndex &, const QVector<int> &>(&QAbstractItemModel::dataChanged),
-            this, &KCMKeyboardWidget::uiChanged);
+    connect(uiWidget->layoutsTableView->model(),
+            qOverload<const QModelIndex &, const QModelIndex &, const QVector<int> &>(&QAbstractItemModel::dataChanged),
+            this,
+            &KCMKeyboardWidget::uiChanged);
 
     connect(uiWidget->moveUpBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::moveUp);
     connect(uiWidget->moveDownBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::moveDown);
@@ -592,7 +582,7 @@ void KCMKeyboardWidget::saveXkbOptions()
 {
     QStringList options;
 
-    if(uiWidget->kcfg_resetOldXkbOptions->isChecked()) {
+    if (uiWidget->kcfg_resetOldXkbOptions->isChecked()) {
         options = xkbOptionsFromUI();
 
         // QStringLists with a single empty string are serialized as "\\0", avoid that

@@ -71,11 +71,7 @@ public:
 
         const auto idxSpecific = bcp.indexOf(QLatin1Char('-'));
         if (idxSpecific > 0) {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-            const QString genericDictName = QLatin1String{"plasma/emoji/"} + bcp.leftRef(idxSpecific) + QLatin1String{".dict"};
-#else
             const QString genericDictName = QLatin1String{"plasma/emoji/"} + QStringView(bcp).left(idxSpecific) + QLatin1String{".dict"};
-#endif
             const QString genericPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, genericDictName);
 
             if (!genericPath.isEmpty()) {

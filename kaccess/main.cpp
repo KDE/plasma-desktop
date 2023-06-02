@@ -9,25 +9,12 @@
 
 #include <KAboutData>
 #include <KLocalizedString>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <Kdelibs4ConfigMigrator>
-#endif
 #include <QApplication>
 #include <QDebug>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QX11Info>
-#else
 #include <QtGui/private/qtx11extras_p.h>
-#endif
 
 int main(int argc, char *argv[])
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Kdelibs4ConfigMigrator migrate(QStringLiteral("kaccess"));
-    migrate.setConfigFiles(QStringList() << QStringLiteral("kaccessrc"));
-    migrate.migrate();
-#endif
-
     qunsetenv("SESSION_MANAGER");
 
     // this application is currently only relevant on X, force to run under X
