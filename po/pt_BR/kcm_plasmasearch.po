@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_search\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-06 02:09+0000\n"
+"POT-Creation-Date: 2023-06-02 02:04+0000\n"
 "PO-Revision-Date: 2022-06-22 12:02-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -27,22 +27,22 @@ msgstr "Plugins disponíveis"
 
 #: plasmasearch/ui/main.qml:25
 #, kde-format
+msgid "Configure KRunner…"
+msgstr "Configurar KRunner..."
+
+#: plasmasearch/ui/main.qml:29
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "Baixar novos plugins..."
+
+#: plasmasearch/ui/main.qml:44
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect)"
 msgstr ""
 "Habilitar ou desabilitar plugins (usados no KRunner, lançador de aplicativos "
 "e no efeito visão geral)"
-
-#: plasmasearch/ui/main.qml:49
-#, kde-format
-msgid "Configure KRunner…"
-msgstr "Configurar KRunner..."
-
-#: plasmasearch/ui/main.qml:53
-#, kde-format
-msgid "Get New Plugins…"
-msgstr "Baixar novos plugins..."
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

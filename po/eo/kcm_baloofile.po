@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-31 03:09+0000\n"
-"PO-Revision-Date: 2023-05-28 11:26+0100\n"
+"PO-Revision-Date: 2023-06-01 18:38+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -93,8 +93,7 @@ msgid "Status:"
 msgstr "Stato:"
 
 #: ui/main.qml:153
-#, fuzzy, kde-format
-#| msgid "%1, %2% complete"
+#, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% kompleta"

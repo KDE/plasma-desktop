@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-06 02:09+0000\n"
+"POT-Creation-Date: 2023-06-02 02:04+0000\n"
 "PO-Revision-Date: 2023-05-22 13:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -24,20 +24,20 @@ msgstr "可用插件"
 
 #: plasmasearch/ui/main.qml:25
 #, kde-format
+msgid "Configure KRunner…"
+msgstr "配置 KRunner…"
+
+#: plasmasearch/ui/main.qml:29
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "获取新插件…"
+
+#: plasmasearch/ui/main.qml:44
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect)"
 msgstr "启用/禁用插件 (KRunner、应用程序启动器和桌面概览特效)"
-
-#: plasmasearch/ui/main.qml:49
-#, kde-format
-msgid "Configure KRunner…"
-msgstr "配置 KRunner…"
-
-#: plasmasearch/ui/main.qml:53
-#, kde-format
-msgid "Get New Plugins…"
-msgstr "获取新插件…"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

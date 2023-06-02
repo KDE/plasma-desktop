@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-06 02:09+0000\n"
+"POT-Creation-Date: 2023-06-02 02:04+0000\n"
 "PO-Revision-Date: 2022-07-02 10:58+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -26,22 +26,22 @@ msgstr "Connectors disponibles"
 
 #: plasmasearch/ui/main.qml:25
 #, kde-format
+msgid "Configure KRunner…"
+msgstr "Configura el KRunner…"
+
+#: plasmasearch/ui/main.qml:29
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "Obtén connectors nous…"
+
+#: plasmasearch/ui/main.qml:44
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect)"
 msgstr ""
 "Habilita o inhabilita connectors (usats al KRunner, Llançador d'aplicacions "
 "i l'efecte Vista general)"
-
-#: plasmasearch/ui/main.qml:49
-#, kde-format
-msgid "Configure KRunner…"
-msgstr "Configura el KRunner…"
-
-#: plasmasearch/ui/main.qml:53
-#, kde-format
-msgid "Get New Plugins…"
-msgstr "Obtén connectors nous…"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

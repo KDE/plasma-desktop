@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_search\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-06 02:09+0000\n"
+"POT-Creation-Date: 2023-06-02 02:04+0000\n"
 "PO-Revision-Date: 2021-10-03 17:22-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -22,6 +22,16 @@ msgid "Available Plugins"
 msgstr "利用可能なプラグイン"
 
 #: plasmasearch/ui/main.qml:25
+#, kde-format
+msgid "Configure KRunner…"
+msgstr ""
+
+#: plasmasearch/ui/main.qml:29
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "新しいプラグインを取得…"
+
+#: plasmasearch/ui/main.qml:44
 #, fuzzy, kde-format
 #| msgid "Enable or disable plugins (used in KRunner and Application Launcher)"
 msgid ""
@@ -30,16 +40,6 @@ msgid ""
 msgstr ""
 "プラグインを有効または無効にする (KRunner とアプリケーションランチャーで使用"
 "されます)"
-
-#: plasmasearch/ui/main.qml:49
-#, kde-format
-msgid "Configure KRunner…"
-msgstr ""
-
-#: plasmasearch/ui/main.qml:53
-#, kde-format
-msgid "Get New Plugins…"
-msgstr "新しいプラグインを取得…"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
