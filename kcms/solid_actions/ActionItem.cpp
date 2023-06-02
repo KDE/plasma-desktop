@@ -27,13 +27,13 @@ ActionItem::ActionItem(const QString &pathToDesktop, const QString &action, QObj
     desktopFileWrite = new KDesktopFile(desktopWritePath);
     // Now we can fill the action groups list
     configGroups.append(desktopFileMaster->desktopGroup());
-    actionGroups.insert(ActionItem::GroupDesktop, &configGroups.last());
+    actionGroupIndices.insert(ActionItem::GroupDesktop, configGroups.size() - 1);
     configGroups.append(desktopFileMaster->actionGroup(actionName));
-    actionGroups.insert(ActionItem::GroupAction, &configGroups.last());
+    actionGroupIndices.insert(ActionItem::GroupAction, configGroups.size() - 1);
     configGroups.append(desktopFileWrite->desktopGroup());
-    actionGroups.insert(ActionItem::GroupDesktop, &configGroups.last());
+    actionGroupIndices.insert(ActionItem::GroupDesktop, configGroups.size() - 1);
     configGroups.append(desktopFileWrite->actionGroup(actionName));
-    actionGroups.insert(ActionItem::GroupAction, &configGroups.last());
+    actionGroupIndices.insert(ActionItem::GroupAction, configGroups.size() - 1);
 
     const QString predicateString = readKey(ActionItem::GroupDesktop, QStringLiteral("X-KDE-Solid-Predicate"), QString());
     predicateItem = Solid::Predicate::fromString(predicateString);
@@ -109,35 +109,45 @@ void ActionItem::setPredicate(const QString &newPredicate)
 
 QString ActionItem::readKey(GroupType keyGroup, const QString &keyName, const QString &defaultValue) const
 {
-    return configItem(ActionItem::DesktopRead, keyGroup, keyName)->readEntry(keyName, defaultValue);
+    return configItem(ActionItem::DesktopRead, keyGroup, keyName).readEntry(keyName, defaultValue);
 }
 
 void ActionItem::setKey(GroupType keyGroup, const QString &keyName, const QString &keyContents)
 {
-    configItem(ActionItem::DesktopWrite, keyGroup)->writeEntry(keyName, keyContents);
+    configItem(ActionItem::DesktopWrite, keyGroup).writeEntry(keyName, keyContents);
 }
 
 bool ActionItem::hasKey(GroupType keyGroup, const QString &keyName) const
 {
-    return configItem(ActionItem::DesktopRead, keyGroup, keyName)->hasKey(keyName);
+    return configItem(ActionItem::DesktopRead, keyGroup, keyName).hasKey(keyName);
 }
 
-KConfigGroup *ActionItem::configItem(DesktopAction actionType, GroupType keyGroup, const QString &keyName) const
+KConfigGroup &ActionItem::configItem(DesktopAction actionType, GroupType keyGroup, const QString &keyName)
 {
-    int countAccess = 0;
+    return configGroups[configItemIndex(actionType, keyGroup, keyName)];
+}
 
-    if (actionType == ActionItem::DesktopRead) {
-        const auto values = actionGroups.values(keyGroup);
-        for (KConfigGroup *possibleGroup : values) {
-            if (possibleGroup->hasKey(keyName)) {
-                return possibleGroup;
+const KConfigGroup &ActionItem::configItem(DesktopAction actionType, GroupType keyGroup, const QString &keyName) const
+{
+    return configGroups.at(configItemIndex(actionType, keyGroup, keyName));
+}
+
+qsizetype ActionItem::configItemIndex(DesktopAction actionType, GroupType keyGroup, const QString &keyName) const
+{
+    switch (actionType) {
+    case ActionItem::DesktopRead: {
+        const auto indices = actionGroupIndices.values(keyGroup);
+        for (qsizetype possibleGroupIndex : indices) {
+            if (configGroups[possibleGroupIndex].hasKey(keyName)) {
+                return possibleGroupIndex;
             }
         }
-    } else if (actionType == ActionItem::DesktopWrite) {
-        if (isUserSupplied()) {
-            countAccess = 1;
-        }
-        return actionGroups.values(keyGroup).at(countAccess);
+        return indices.first(); // backstop so a valid value is always returned
     }
-    return actionGroups.values(keyGroup).at(0); // Implement a backstop so a valid value is always returned
+    case ActionItem::DesktopWrite: {
+        int countAccess = isUserSupplied() ? 1 : 0;
+        return actionGroupIndices.values(keyGroup).at(countAccess);
+    }
+    }
+    Q_UNREACHABLE();
 }

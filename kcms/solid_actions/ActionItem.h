@@ -47,11 +47,14 @@ private:
     QString readKey(GroupType keyGroup, const QString &keyName, const QString &defaultValue) const;
     void setKey(GroupType keyGroup, const QString &keyName, const QString &keyContents);
     bool hasKey(GroupType keyGroup, const QString &keyName) const;
-    KConfigGroup *configItem(DesktopAction actionType, GroupType keyGroup, const QString &keyName = QString()) const;
+
+    KConfigGroup &configItem(DesktopAction actionType, GroupType keyGroup, const QString &keyName = QString());
+    const KConfigGroup &configItem(DesktopAction actionType, GroupType keyGroup, const QString &keyName = QString()) const;
+    qsizetype configItemIndex(DesktopAction actionType, GroupType keyGroup, const QString &keyName = QString()) const;
 
     KDesktopFile *desktopFileMaster;
     KDesktopFile *desktopFileWrite;
-    QMultiMap<GroupType, KConfigGroup *> actionGroups;
+    QMultiMap<GroupType, qsizetype> actionGroupIndices;
     QList<KConfigGroup> configGroups;
     Solid::Predicate predicateItem;
 };
