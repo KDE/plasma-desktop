@@ -15,7 +15,7 @@ class FilterProxyModel : public QSortFilterProxyModel
     Q_OBJECT
 
     Q_PROPERTY(QString query READ query WRITE setQuery NOTIFY queryChanged)
-    Q_PROPERTY(KDEDConfig::ModuleStatus statusFilter WRITE setStatusFilter NOTIFY statusFilterChanged)
+    Q_PROPERTY(KDEDConfig::ModuleStatus statusFilter READ statusFilter WRITE setStatusFilter NOTIFY statusFilterChanged)
 
 public:
     FilterProxyModel(QObject *parent = nullptr);
