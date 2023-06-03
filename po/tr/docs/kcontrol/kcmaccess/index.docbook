@@ -1,0 +1,527 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Erişilebilirlik</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>erişilebilirlik</keyword>
+<keyword
+>düğmeler</keyword>
+<keyword
+>zil</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Erişilebilirlik</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Giriş</title>
+
+<para
+>Bu modül, işitsel ipuçlarını duymakta güçlük çeken veya klavye kullanmakta güçlük çeken kullanıcılara yardımcı olmak için tasarlanmıştır. </para>
+
+<para
+>Modül, altı sekmeye bölünmüştür: <link linkend="access-bell"
+><guilabel
+>Zil</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Değiştirici Düğmeler</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Klavye Süzgeçleri</guilabel
+></link
+>, <link linkend="access-activation-gestures"
+><guilabel
+>Etkinleştirme Hareketleri</guilabel
+></link
+>, <link linkend="mouse-navigation"
+><guilabel
+>Fare Dolaşımı</guilabel
+></link
+>, ve <link linkend="access-screenreader"
+><guilabel
+>Ekran Okuyucu</guilabel
+></link
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Zil</guilabel
+></title>
+
+<para
+>Bu panel, bir <guilabel
+>Sesli Zil</guilabel
+> ve <guilabel
+>Görsel Zil</guilabel
+> bölümlerine ayrılmıştır. </para>
+
+<para
+>Üstteki <guilabel
+>Sistem Zilini Kullan</guilabel
+> etiketli onay kutusu, normal sistem zilinin çalıp çalmayacağını belirler. Bu seçenek devre dışı bırakılırsa sistem zili susacaktır. </para>
+
+<para
+>Bir sonraki onay kutusu, sistem zili her tetiklendiğinde farklı bir ses çalmak için kullanılabilir. Etkinleştirmek için, <guilabel
+>Özelleştirilmiş zil kullan</guilabel
+> etiketli onay kutusunu işaretleyin ve <guilabel
+>Çalınacak ses</guilabel
+> etiketli metin kutusuna ses dosyasının tam yol adını girin. İsterseniz tam dosyayı bulmak üzere dosya sisteminizde gezinmek için <guibutton
+>Göz At</guibutton
+> düğmesini seçebilirsiniz. </para>
+
+<para
+>Sistem zilini duymakta güçlük çeken veya sessiz bir bilgisayarı olan kullanıcılar için &kde;, <emphasis
+>görsel zili</emphasis
+> sunar. Bu, sistem zili normalde çaldığında görsel bir sinyal (ekran renklerini ters çevirerek veya üzerinde bir renk yanıp söner) sağlar. </para>
+
+<para
+>Görsel zili kullanmak için önce <guilabel
+>Görsel zili kullan</guilabel
+> etiketli onay kutusunu işaretleyin. </para>
+
+<para
+>Daha sonra <guilabel
+>Ekranı Tersine Çevir</guilabel
+> veya <guilabel
+>Flaş</guilabel
+> arasında seçim yapabilirsiniz. <guilabel
+>Ekranı Tersine Çevir</guilabel
+>'i seçerseniz ekrandaki tüm renkler tersine çevrilir. <guilabel
+>Flaş</guilabel
+>'ı seçerseniz, <guilabel
+>Flaş</guilabel
+> seçiminin sağındaki düğmeyi tıklayarak rengi seçebilirsiniz. </para>
+
+<para
+>Döndürme kutusu, görsel zilin süresini ayarlamak için kullanılabilir. Öntanımlı değer 500 msn veya yarım saniyedir. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Değiştirici Düğmeler</guilabel
+></title>
+
+<para
+>Bu panelde <guilabel
+>Yapışkan Düğmeler</guilabel
+> ve <guilabel
+>Kilitleme Düğmeleri</guilabel
+> olmak üzere iki bölüm vardır.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Yapışkan Düğmeleri Kullan</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek etkinleştirilirse &Shift;, &Alt; veya &Ctrl; düğmelerine basın ve ardından bir düğme kombinasyonu elde etmek için başka bir düğmeye basın (örnek: <keycombo action="simul"
+>&Ctrl;&Alt;&Del;</keycombo
+> &Ctrl;, ardından &Alt; ve ardından &Del; ile yapılabilir). </para>
+
+<para
+>Ayrıca bu bölümde <guilabel
+>Yapışkan Düğmeleri Kilitle</guilabel
+> etiketli bir onay kutusu bulunur. Bu onay kutusu etkinleştirilirse &Alt;, &Ctrl; ve &Shift; düğmeler, siz onların <quote
+>seçimini kaldırana</quote
+> kadar <quote
+>seçili</quote
+> kalır. </para>
+
+<para
+>Örnek olarak: </para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Yapışkan Düğmeleri Kilitle</guilabel
+> devre dışıyken:</term>
+<listitem>
+<para
+>&Shift; düğmesine, ardından <keycap
+>F</keycap
+> düğmesine basarsanız bilgisayar bunu <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+> olarak yorumlar. Şimdi bir <keycap
+>P</keycap
+> yazarsanız bilgisayar bunu p harfi (küçük) olarak yorumlar. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Yapışkan Düğmeleri Kilitle</guilabel
+> etkinken:</term>
+<listitem>
+<para
+>&Shift; düğmesine <emphasis
+>iki kez</emphasis
+>, ardından <keycap
+>F</keycap
+> düğmesine basarsanız bilgisayar bunu <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+> olarak yorumlar. Şimdi bir <keycap
+>P</keycap
+> yazarsanız bilgisayar bunu P harfi olarak yorumlar (<keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>). Seçimi kaldırmak için &Shift; düğmesine yeniden basın. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Klavye Süzgeçleri</guilabel
+></title>
+
+<para
+>Bu panelde iki bölüm vardır.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Yavaş düğmeleri kullan</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek etkinleştirilirse düğme vuruşu kabul edilmeden önce düğmeyi belirli bir süre basılı tutmalısınız (döndürme kutusuyla ayarlanabilir). Bu, yanlışlıkla düğme vuruşlarını önlemeye yardımcı olur. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Sıçrama düğmelerini kullan</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek etkinleştirilirse bir sonraki düğme basımının kabul edilebilmesi için belirli bir süre (döndürme kutusuyla yapılandırılabilir) beklemeniz gerekir. Bu, yanlışlıkla birden fazla düğme vuruşunu önler. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Etkinleştirme Hareketleri</guilabel
+></title>
+
+<para
+>Bu panelde iki bölüm vardır.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Etkinleştirme Hareketleri</guilabel
+>'nde şu seçenekler vardır:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Yapışkan ve yavaş düğmeleri etkinleştirmek için hareketleri kullan</guilabel
+></member>
+<member
+>Buradan, aşağıdaki özellikleri açan klavye hareketlerini etkinleştirebilirsiniz:</member>
+<member
+>Fare düğmeleri: &Shift;+Sayı Kilidi düğmelerine bas</member>
+<member
+>Yapışkan düğmeler: &Shift; düğmesine 5 kez ard arda bas</member>
+<member
+>Yavaş düğmeler: &Shift;düğmesini 8 saniye boyunca basılı tut</member>
+<member
+><guilabel
+>Belirli bir süre etkinlik olmaması durumunda yapışkan ve yavaş düğmeleri kapatır</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Bildirim</guilabel
+>'de şu seçenekler vardır:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Bir erişilebilirlik özelliğini açmak veya kapatmak için bir hareket kullanıldığında sistem zilini kullan</guilabel
+></member>
+
+<member
+><guilabel
+>Bir klavye erişilebilirlik özelliği her açıldığında veya kapatıldığında bir onay iletişim kutusu göster</guilabel
+></member>
+<member
+>Bu seçenek işaretliyse &kde;, bir klavye erişilebilirlik özelliği her açıldığında veya kapatıldığında bir onay iletişim kutusu gösterecektir.</member>
+<member
+>İşareti kaldırırsanız ne yaptığınızı bildiğinizden emin olun, çünkü klavye erişilebilirlik ayarları her zaman onaylanmadan uygulanacaktır.</member>
+
+<member
+><guilabel
+>Bir klavye erişilebilirlik özelliği her açıldığında veya kapatıldığında &kde;'nin sistem bildirim mekanizmasını kullan</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Tüm düğmelerin durum değişiklikleri için bildirimleri düzenlemenizi sağlayan bir iletişim kutusu açmak için <guibutton
+>Bildirimleri Yapılandır</guibutton
+> düğmesine tıklayın.</para>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>Fare Dolaşımı</title>
+
+<para
+>Bu sekme, klavye sayısal düğme takımını fare gibi bir aygıt olarak yapılandırmanıza olanak tanır. Bu, başka bir işaretleme aygıtı olmayan bir aygıt üzerinde çalışırken veya sayısal düğme takımını başka şekilde kullanmadığınız durumlarda yararlı olabilir. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>İmleci hareket ettirmek için sayısal düğme takımını kullan</guilabel
+></term>
+<listitem>
+<para
+>Klavye fare kipini etkinleştirmek için, <guilabel
+>İmleci hareket ettirmek için sayısal düğme takımını kullan</guilabel
+> etiketli onay kutusunu seçmeniz gerekir. Bunu yaptığınızda, diğer ayarlar etkinleştirilir ve gerekirse klavye imleci davranışını daha da özelleştirebilirsiniz. </para>
+<para
+>Sayısal düğme takımındaki çeşitli düğmeler, beklediğiniz yönde hareket eder. Çapraz olarak ve ayrıca yukarı, aşağı, sola ve sağa hareket edebileceğinizi unutmayın. <keycap
+>5</keycap
+> düğmesi, genellikle &LMB; ile yapılan tıklamayı öykünür. <keycap
+>/</keycap
+> düğmesini (&LMB; yapar), <keycap
+>*</keycap
+> düğmesini (&MMB; yapar) ve <keycap
+>-</keycap
+> düğmesini kullanarak hangi düğmeyi öyküneceğini değiştirirsiniz (bu onu &RMB; yapar). <keycap
+>+</keycap
+> düğmesinin kullanılması, seçili işaretçi düğmesine çift tıklamayı öykünür. Seçili işaretçi düğmesini basılı tutmayı (kolay sürükleme için) öykünmek için <keycap
+>0</keycap
+> düğmesini kullanabilir ve ardından seçilen işaretçi düğmesini bırakarak öykünmek için <keycap
+>.</keycap
+> düğmesini kullanabilirsiniz. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>İvmelenme gecikmesi</guilabel
+></term>
+<listitem>
+<para
+>Bu, düğmeye ilk basış ile fare düğmesi ivmelenmesi için ilk yinelenen hareket olayı arasındaki süredir (milisaniye olarak). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Yineleme aralığı</guilabel
+></term>
+<listitem>
+<para
+>Bu, fare düğmesi ivmelenmesi için yinelenen hareket olayları arasındaki milisaniye türünden süredir. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>İvmelenme süresi</guilabel
+></term>
+<listitem>
+<para
+>Bu, işaretçinin fare düğmesi ivmelenmesi için en yüksek hıza ulaşmasından önceki milisaniye türünden süredir. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>En yüksek hız</guilabel
+></term>
+<listitem>
+<para
+>Bu, işaretçinin fare düğmesi ivmelenmesi için ulaşabileceği piksel/saniye türünden en yüksek hızdır. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>İvmelenme profili</guilabel
+></term>
+<listitem>
+<para
+>Bu, fare tuşu ivmelenmesi için ivme eğrisinin eğimidir. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Ekran Okuyucu</guilabel
+></title>
+
+<para
+><ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca</ulink
+> gibi bir ekran okuyucu uygulamayı, <application
+>konuşma dağıtıcısı</application
+> ile birlikte kurun. </para>
+
+<para
+>Bir uçbirimde <command
+>spd-say esenlikler</command
+> komutunu kullanarak konuşma dağıtım programından gelen sesin çalıştığını sınayın. </para>
+
+<para
+>Ek olarak bir metinden konuşma sentezleyici uygulamaya gereksiniminiz var; &eg;, <application
+>espeak</application
+>. </para>
+
+<para
+>Onay kutusundan ekran okuyucuyu etkinleştirin, oturumu kapatın ve yeniden açın. </para>
+
+<para
+>&plasma; için, geleneksel <guilabel
+>Uygulama Menüsü</guilabel
+>'nü kullandığınızdan ve bu menüyle bir klavye kısayolunun ilişkili olduğundan emin olun (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). Bu kısayola basıldığında menü açılmalı ve menüde ok düğmeleriyle dolaşırken etiketler okunmalıdır. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

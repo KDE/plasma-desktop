@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title
+>Kısayollar</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>düğme bağıntıları</keyword>
+<keyword
+>bağıntılar</keyword>
+<keyword
+>kısayollar</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title
+>Kısayollar</title>
+
+<sect2 id="key-bindings-intro"
+> 
+<title
+>Giriş</title
+> 
+
+<para
+>&plasma; tarafından sunulan işlevselliğin birçoğuna temel bir <quote
+>işaretle ve tıkla</quote
+> arayüzüyle erişilebilirken, birçok kişi bazı görevler için klavyeyi kullanmayı yeğler. <keycombo action="simul"
+> &Ctrl;<keycap
+>F</keycap
+></keycombo
+> gibi bir kısayollu kullanmak, çoğu zaman elinizi klavyeden kaldırıp fareyi almak ve <guimenu
+>Düzen</guimenu
+> menüsünü açıp <guimenuitem
+>Bul</guimenuitem
+>'u seçmekten çok daha hızlıdır.</para>
+
+<para
+>Farklı kişilerin klavye kısayolları hakkında farklı tercihleri olduğundan, &plasma; <quote
+>düğme bağıntılarının</quote
+> tam olarak özelleştirilmesine izin verir. Bir düğme bağıntısı veya kısayol, bir eylemin bir düğme veya bir düğme kombinasyonu ile birleşimidir.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title
+>Standart Kısayollar ve Global Kısayollar</title>
+
+<para
+>Standart kısayollar ve Global kısayollar aynı biçimde çalışır. Aslında, belirli bir şekilde standart veya uygulama kısayolları da <quote
+>global</quote
+>'dir. Tek farkı:</para>
+
+<itemizedlist>
+<listitem
+><para
+><quote
+>Standart kısayollar</quote
+> genellikle uygulamalarda bulunan Kaydet, Yazdır, Kopyala vb. eylemlere başvurur.</para
+></listitem
+> 
+<listitem
+><para
+><quote
+>Global kısayollar</quote
+>, hiçbir uygulama açık değilken bile anlamlı olan eylemler için kısayollardır. Bu kısayollar genellikle masaüstleri arasında geçiş yapma, pencereleri değiştirme vb. işlemlere başvurur.</para
+></listitem
+> 
+</itemizedlist>
+
+<para
+>Lütfen burada yapılandırılan uygulama kısayollarının <emphasis
+>yalnızca</emphasis
+> uygulamalarda sıklıkla bulunan standart eylemler olduğunu unutmayın. Çoğu uygulama, uygulamanın düğme bağıntıları iletişim kutusunu kullanarak özelleştirmeniz gereken kendi eylemlerini de tanımlar.</para>
+
+<sect3 id="key-bindings-standard">
+<title
+>Standart Kısayollar sayfası</title>
+<para
+>Bu iletişim kutusunun üst kısmında, etkileşimli olarak kısayol adlarını buraya yazarak (&eg;, Kopyala) veya düğme kombinasyonlarını (&eg;, <quote
+><userinput
+>Kontrol+C</userinput
+></quote
+>) arayabileceğiniz bir giriş kutusu görürsünüz.</para>
+<para
+>Arama kutusunun altında düğme bağıntılarının bir listesini görebilirsiniz. Bunlara örnek olarak, <guilabel
+>Eylem</guilabel
+> sütününda gösterilen eylemler arasındaki ilişkilendirmeler (&eg;, Kopyala) ve <guilabel
+>Kısayol</guilabel
+> veya <guilabel
+>Alternatif</guilabel
+> sütünundaki düğmeler veya düğme kombinasyonları (&eg;, <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>) verilebilir. </para>
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title
+>Global Kısayollar sayfası</title>
+<para
+>Bu sayfanın solunda, KWin, Plasma Masaüstü vb. gibi bir <guilabel
+>Bileşen</guilabel
+> seçmenizi sağlayan bir liste kutusu bulunur. Seçilen bileşen için tanımlanan kısayollar, liste görünümünde <guilabel
+>Eylem</guilabel
+> ve <guilabel
+>Global</guilabel
+> sütunlarında görüntülenir.</para>
+<para
+>Bu sayfa, <guilabel
+>Standart Kısayollar</guilabel
+> sekmesiyle aynı arama kutusuna sahiptir.</para>
+<para
+>Bir bileşen eklemek veya kaldırmak için <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="list-add.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> veya <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> düğmelerini kullanın. </para>
+
+<para
+>Bir bileşen eklemek, kısayol olarak kullanılabilecek başlatıcılar eklemek için başlat menüsü yapısından uygulamaları seçmek üzere bir iletişim kutusu açar. Bir uygulamanın atlama listesi seçenekleri varsa bunlar eylem olarak kullanılabilir. </para>
+
+<para
+>Bir şemayı içe/dışa aktarmak için sağdaki <guilabel
+>Dosya</guilabel
+> açılır kutusuna tıklayın, tüm kısayolları yok olarak ayarlayın.</para>
+<para
+>Global kısayollar artık bir uygulama içindeki belirli görevlere atlayacak şekilde yapılandırılabilir.</para>
+
+<para
+>Öntanımlı olarak, uygulama menüsünü yalnızca &Meta; düğmesine basarak açabilirsiniz. </para>
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title
+>Düğme Bağıntılarını Yapılandırmak</title>
+
+<para
+>Düğme bağıntılarını yapılandırmak oldukça kolaydır. Bu &systemsettings; modülünün ortasında, kullanılabilir eylemlerin bir listesini bulacaksınız. Bu eylem için yapılandırılmış bir düğme bağıntısı varsa onu da hemen yanındaki sütunlarda bulacaksınız. Yalnızca yapılandırmak istediğiniz eylemi seçin.</para>
+
+<para
+>Listede bir eylem seçtikten sonra, bu ögenin vurgulandığını fark edersiniz ve liste görünümünde bu ögenin altında iki ek onay kutusu göreceksiniz. Orada, seçilen eylem için bir düğme kombinasyonunu yapılandırabilir veya belki de hiçbir düğme bağıntısı koymayabilirsiniz. </para>
+
+<itemizedlist>
+
+<listitem
+><para
+><guilabel
+>Öntanımlı</guilabel
+>: Seçili eylem, &kde;'nin öntanımlı değeriyle ilişkilendirilecektir. Bu, çoğu eylem için iyi bir seçimdir; çünkü &kde; makul olduğunu düşündüğümüz düğme bağıntılarıyla gelir. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Özel</guilabel
+>: Bu seçenek etkinleştirilirse seçili eylem için bir düğme kombinasyonu oluşturabilirsiniz. <guibutton
+>Yok</guibutton
+> etiketli veya önceden seçilen özel kısayolla etiketlenmiş düğmeyi tıklayın. Şimdi düğme etiketi <guibutton
+>Giriş</guibutton
+> olarak değişir. Ardından herhangi bir değiştirici düğmeye (&eg; &Shift;, &Ctrl; veya &Alt;) ve ardından bu düğme kombinasyonuna atamak istediğiniz normal düğmeye veya bir işlev düğmesine (&eg;, <keycap
+>F11</keycap
+>) basın.</para>
+<para
+>Listedeki bir satırın <guilabel
+>Alternatif</guilabel
+> sütununa tıklamak, eylem için ikinci kısayolu düzenlemeye izin verir.</para
+></listitem>
+</itemizedlist>
+
+</sect3>
+</sect2>
+</sect1>
+
+</article>

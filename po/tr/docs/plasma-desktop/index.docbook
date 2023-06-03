@@ -1,0 +1,1071 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>&plasma; El Kitabı</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Serdar</firstname
+><surname
+>Soytetir</surname
+><affiliation
+><address
+><email
+>tulliana@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-07-23</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>&plasma;, masaüstünün çekirdek kullanıcı arayüzüdür. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Plasmoid</keyword>
+<keyword
+>Araç Takımı</keyword>
+<keyword
+>Kapsamalar</keyword>
+<keyword
+>Masaüstü</keyword>
+<keyword
+>Çalıştırıcı</keyword>
+<keyword
+>Kicker</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Giriş</title>
+
+<para
+>&plasma; favori uygulamalarınızı çalıştırmak ve bilgilerinize nerede olursa olsun erişmek için çağdaş ve özelleştirilebilir bir ortam sağlar. &plasma; Masaüstü'nün diğer ortak öznitelikleri gelişmiş pencere yönetimi ve masaüstü efektleri, &kde; &plasma; araç takımları desteği, tümleşik arama, donanım yönetimi ve yüksek derecede özelleştirilebilirlik içerir. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>&plasma; Kullanımı</title>
+
+<sect1 id="plasma-components">
+<title
+>&plasma; Bileşenleri</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>&plasma; Araç Takımları ve Kapsamaları</title>
+
+<para
+>&plasma;'nın özü iki ana bağlamda değerlendirilebilir: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>&plasma; Araç Takımları</term>
+<listitem>
+<para
+>Uygulamacıklar, masaüstünde yaşayan küçük uygulamalar. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Kapsamalar</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>&plasma; araç takımları için kapsayıcılar olarak rol alan uygulamacıklar </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Öntanımlı masaüstünde iki ana öge vardır: Panel ve Masaüstü'nün kendisi. &plasma;'nın yapı mantığına göre bunların ikisi de kapsamadır. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>Öntanımlı &plasma; Masaüstü</title>
+
+<para
+><note
+><para
+>&plasma; Masaüstü, sayısız biçimde yapılandırılabilir. Aşağıda görülen ekran görüntüsü oldukça standart bir masaüstünü göstermektedir. Bazı dağıtımlar kapsamlı özelleştirmeler uygular, bu nedenle masaüstünüz farklı görünebilir. </para>
+<para
+>Benzer şekilde, arayüz ögelerinin grafiksel görünümünün biçemi değiştirilebilir. Bu ekran görüntüleri &plasma;'nın öntanımlı biçemi olan Esinti'yi kullanır.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Oldukça standart bir &plasma; Masaüstü</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>Program başlatıcı. Genellikle, <link linkend="panel-launcher"
+>Uygulama Başlatıcı</link
+>.</para
+></listitem>
+<listitem
+><para
+>Sık kullanılan uygulamalara kolay erişim sağlayan birkaç simge</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+><link linkend="panel-taskbar"
+>Görev Yöneticisi</link
+>, şu anda çalışan uygulamaların pencerelerinin başlığını gösterir. Ekran görüntüsü alındığında açık hiçbir uygulama yoktu</para
+></listitem>
+<listitem
+><para
+><link linkend="panel-system-tray"
+>Sistem Tepsisi</link
+></para
+></listitem>
+<listitem
+><para
+><link linkend="panel-digital-clock"
+>Sayısal Saat</link
+> araç takımı</para
+></listitem>
+<listitem
+><para
+><link linkend="panel-toolbox"
+>Panel Araç Çubuğu</link
+></para
+></listitem>
+<listitem
+><para
+><link linkend="desktop"
+>Masaüstü</link
+> Araç Çubuğu</para
+></listitem>
+<listitem
+><para
+>Masaüstü klasörünün içeriğini gösteren Klasör Görünümü araç takımı</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>Panel</title>
+
+<para
+>Öntanımlı panel, birkaç &plasma; araç takımını barındırır: soldan başlayarak uygulama başlatıcıyı görebilirsiniz.</para>
+
+<sect2 id="panel-launcher">
+<title
+>Uygulama Başlatıcı</title>
+
+<screenshot>
+<screeninfo
+>Uygulama başlatıcı</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Uygulama başlatıcı</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para
+>Uygulamaları başlatmak, yakın zamanda açılmış dosyaları açmak ve normal çıkış/kapatma seçeneklerini kullanmak için kullanabilirsiniz. Uygulamalarınıza göz atmanızı sağlayan bir yapı da vardır. Yerleşim, en yaygın kullanılan durum olan bir uygulamayı başlatma için eniyilenmiştir. Öntanımlı sekme olan <guilabel
+>Sık Kullanılanlar</guilabel
+>, en çok kullanılan girdileri tutar. Başlangıçta <guilabel
+>Uygulamalar</guilabel
+> sekmesini daha fazla kullanabilirsiniz. Bir kere sık kullandığınız uygulamayı bulduğunuzda ona <mousebutton
+>sağ</mousebutton
+> fare düğmesiyle tıklayın ve onu <guilabel
+>Sık Kullanılanlar</guilabel
+>'a (veya doğrudan panelin içine veya masaüstüne) eklemek için <guilabel
+>Sık Kullanılanlara Ekle</guilabel
+>'yi seçin. Unutmayın, bunu yapmadan önce masaüstünde herhangi bir değişiklik yapmak için <mousebutton
+>sağ</mousebutton
+> tıklayarak &plasma;'nın <quote
+>kilidini açmanız</quote
+> gerekiyor).</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title
+>Uygulama Menüsü</title>
+
+<para
+>Eğer geleneksel menü biçemli uygulama başlatıcıyı tercih ediyorsanız bunu menü düğmesine <mousebutton
+>sağ</mousebutton
+> tıklayıp <guimenuitem
+>Alternatifler</guimenuitem
+>'i seçerek yapabilirsiniz. </para>
+<screenshot>
+<screeninfo
+>Uygulama menüsü</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Uygulama menüsü</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-launcher-settings">
+<title
+>Uygulama Başlatıcı Ayarları</title>
+
+<para
+>Uygulama başlatıcıyı yapılandırmak istiyorsanız menü düğmesine <mousebutton
+>sağ</mousebutton
+> tıklayın ve <guimenuitem
+>Uygulama Başlatıcı Ögesini Yapılandır</guimenuitem
+>'ı seçin. </para>
+<screenshot>
+<screeninfo
+>Uygulama başlatıcı ayarları</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Uygulama başlatıcı ayarları</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title
+>Görev Çubuğu</title>
+
+<para
+>Görev çubuğu, paneldeki başka bir pencere araç takımıdır. Öntanımlı olarak tüm masaüstlerindeki tüm açık pencereler için bir alan gösterir. İki pencere arasında görev yöneticisine sağ tıkladığınızda <guimenuitem
+>Yalnızca geçerli masaüstünün pencerelerini göster</guimenuitem
+> seçeneğini işaretleyerek geçerli masaüstündeki tüm açık pencereleri göstermesini sağlayabilirsiniz. Görev çubuğu ögeleri üzerindeki metnin boyutu &systemsettings; <menuchoice
+><guimenu
+>Görünüş</guimenu
+><guisubmenu
+>Yazıtipleri</guisubmenu
+> </menuchoice
+> altında ayarlanabilir. Görev çubuğuna sağ tıklamak, görev çubuğunuzu özelleştirmek için çeşitli seçenekler seçebileceğiniz Ayarlar iletişim kutusunu getirir. <screenshot>
+<screeninfo
+>Görev çubuğu ayarları iletişim kutusunun ekran görüntüsü</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Görev çubuğu ayarları iletişim kutusu</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+
+<sect2 id="panel-system-tray">
+<title
+>Sistem Tepsisi</title>
+
+<para
+>Diğer bir öntanımlı panel ögesi ise geleneksel uygulamalar ve araç takımları tarafından rıhtım olarak kullanılan <application
+>Sistem Tepsisi</application
+>'dir. <application
+>Sistem Tepsisi</application
+> ögesine sağ tıklamak, görüntülenecek girdileri ve bunların görünürlüğünü ayarlayabileceğiniz ayarlar iletişim kutusunu açmanıza olanak tanır. </para>
+<screenshot>
+<screeninfo
+>Sistem Tepsisi ayarları penceresi</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Sistem Tepsisi ayarları penceresi</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="device-notifier">
+<title
+>Aygıt Bildirici</title>
+
+<para
+>Sistem tepsisinde yer alan simgelerden biri de genellikle <application
+>Aygıt Bildirici</application
+>'dir. Bir &USB; disk bağladığınızda onu &dolphin; veya başka bir ilişkili uygulamayla açıp açmamak istediğinizi soran bir iletişim kutusu belirir. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+><application
+>Aygıt Bildirici</application
+>, &USB; bellekler, sayısal kameralar, dış &USB; sabit sürücüler vb. gibi takılabilir aygıtları yönetmek için kullanılır. Optik sürücüye bir &CD; veya DVD koyulduğunda da çalışır. </para>
+<para
+>Bir dış aygıt taktığınızda veya bir sürücüye yeni bir ortam taktığınızda <guilabel
+>Bildirici</guilabel
+>  penceresi kendiliğinden açılır (Bu pencereyi paneldeki simgesine tıklayarak da açabilirsiniz). Fare işaretçisi üzerine gelene kadar açık kalır, gelmezse birkaç saniye sonra kendiliğinden kapanır. </para>
+<para
+><guilabel
+>Bildirici</guilabel
+> penceresi tanıdığı aygıtların listesini gösterir. Fare işaretçisi ile listedeki bir aygıtın üzerine geldiğinizde bu aygıta uygun olan, yapılabilecek birçok eylem gösterilir. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Aygıt adının etrafındaki gölgeli kutuda herhangi bir yeri tıklamak (ancak varsa çıkar/bağlantıyı kes simgesini tıklamak), o aygıt için olası eylemlerin listesini gösterecek biçimde girişi genişletir. Eylemler dizisi aygıta bağlıdır; <application
+>Aygıt Bildirici</application
+>'nin içerik menüsünden veya &systemsettings; penceresinin <ulink url="help:/kcontrol/solid-actions/index.html"
+>Aygıt Eylemleri</ulink
+> ve <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>Çıkarılabilir Aygıtlar</ulink
+> bölümlerinden yapılandırılabilir. Bir eylemi başlatmak için fare veya klavyeyle birini seçmeniz yeterlidir. </para>
+<para
+>Ayrıca her girişin sağında, söz konusu aygıtın şu anda erişilebilir (veya <emphasis
+>bağlanmış</emphasis
+>) olup olmadığını gösteren küçük bir simge vardır. Yalnızca bir aygıt bağlı olmadığında bilgisayardan fiziksel olarak bağlantısını kesmek güvenlidir. Simgeye tıklamak, aygıtın bağlantısının kesilmesine ve/veya o anda takılıysa ortamın çıkarılmasını sağlar ve takılı değilse onu bağlar. Aygıtta hâlâ açık dosyalar varsa örn. büyük bir dosya kopyalaması tamamlanmadıysa çıkarma ve/veya bağlantısını kesme işlemi başarısız olabilir. Çoğu durumda bir süre bekleyip yeniden deneyebilirsiniz. Kaldırma işlemi başarılı olduğunda, <application
+>Aygıt Bildirici</application
+> simgesinde bir başarı simgesi gösterilecektir. </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title
+>Gizli Ögeler</title>
+
+<para
+><application
+>Sistem Tepsisi</application
+>; normalde &klipper;, &kmix; vb. gibi ögeler barındırır.</para>
+
+<para
+><application
+>Sistem Tepsisi</application
+>'ndeki bazı girdiler, alandan tasarruf etmek için gizlenmiştir. Bu girdileri görüntülemek için küçük beyaz yukarı ok simgesine <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> tıklayın ve sonrasında bir araç takımını başlatmak için &LMB;, ayarlarını açmak için &RMB; kullanın.</para>
+</sect2>
+
+<sect2 id="panel-digital-clock">
+<title
+>Sayısal Saat</title>
+
+<para
+>Öntanımlı panelde en sağdaki &plasma; araç takımı <application
+>Sayısal Saat</application
+>'i barındırır. Bu saat, çeşitli saat dilimlerindeki saati görüntüleyebilir ve büyüklüğü ayarlanabilir. Saat, çevresindeki alanın büyüklüğüne göre yazıtipi boyutunu ayarlar (bu durumda panelin). Tarihi görüntülemeyi seçerseniz bu saat, &systemsettings; <guilabel
+>Yazıtipi</guilabel
+> bölümündeki <guimenuitem
+>Küçük yazıtipi</guimenuitem
+> ayarı kullanılarark görüntülenir. Zaman ise geri kalan alanı kaplar. Özet olarak, görüntülemek isteyeceğiniz bilgi miktarını sığdığı sürece siz seçersiniz. Daha fazla bilgi görüntülemek istiyorsanız paneli daha büyük yapın veya saati rahatça büyüyebileceği masaüstüne koyun. </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title
+>Sayfalayıcı</title>
+
+<para
+>Panelinizdeki isteğe bağlı ögelerden biri de <application
+>Sayfalayıcı</application
+>'dır. Sanal masaüstleriniz arasında geçiş yapmanızı sağlar. <guimenuitem
+>Satır sayısı</guimenuitem
+> seçeneği ile <application
+>Sayfalayıcı</application
+>'nın yerleşiminde değişiklik yaparsanız bu, &kwin;’in <guimenuitem
+>Masaüstü Izgarası</guimenuitem
+>'nda gösterilen yerleşimi ve canlandırmaları da etkiler. Daha büyük sayfalayıcılar için <guimenuitem
+>Pencerelerin simgelerini görüntüle</guimenuitem
+> seçeneği genelde işe yarar. </para>
+</sect2>
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="panel-toolbox">
+<title
+>Panel Araç Kutuları</title>
+
+<para
+>Masaüstünüzün kilidi açıksa (bunu masaüstünde <mousebutton
+>sağ</mousebutton
+> tıklayarak veya herhangi bir uygulama odakta değilse <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+> düğmeleriyle yapabilirsiniz) panelin sağ alt köşesinde bir &plasma; logosu görünecektir. Bu araç kutusuna tıklayın ve panel denetleyicisi açılır.</para>
+
+<screenshot>
+<screeninfo
+>Panel Ayarları</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Panel Ayarları</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Panel denetleyici, paneli yeniden konumlandırmanıza, yeniden boyutlandırmanıza ve yeniden hizalamanıza olanak tanır. &plasma; bu panelde yaşayan araç takımlarının boyutlarını otomatik olarak ayarlayacaktır. &plasma; araç takımları, kapsama tarafından sağlanan boyutlandırma hakkında temel bilgilere sahiptir. Bu boyuttan yararlanmak üzere programlanmışlardır ve uygulamaya ne kadar alana gereksinim duydukları hakkında bilgi verirler. Demek oluyor ki, kapsama uygulamacıklara olası bir boyut verir ve uygulamacıklar buna uyar.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>Uygulamacıklar Eklemek</title>
+
+<para
+>Masaüstü kilidini açtığınızda panele ve masaüstüne &plasma; araç takımları ekleyip kaldırabilirsiniz. &plasma; araç takımlarını basit bir şekilde sürükleyerek istediğiniz yere bırakabilirsiniz. Bir araç takımının üzerine <mousebutton
+>sağ</mousebutton
+> tıklayarak o araç takımını kaldırabilirsiniz. <screenshot
+> <screeninfo
+>Araç Takımı Ekle</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Araç Takımı Ekle</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+> <guibutton
+>Yeni Araç Takımları Al</guibutton
+> düğmesi daha önce indirdiğiniz araç takımlarınızı eklemenize ve yeni &plasma; araç takımları indirmenize olanak sağlar. Şu anda bu özellik yerel &plasmagik; paketlerini ve bazı &Mac; OS&nbsp;X Dashboard araç takımlarını desteklemektedir. Bu yolu kullanarak indirdiğiniz araç takımlarına daha önceden kurulu olan araç takımları ile aynı biçimde erişebilirsiniz. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>Masaüstü</title>
+
+<para
+>Masaüstü, aslında başka bir kapsamadır. Uygulamacıklar üzerinde boyut sınırlandırması yapmayan. Uygulamacıklar serbestçe taşınabilir ve boyutlandırılabilir. Kilidi açılmış bir masaüstünde, &plasma; araç takımlar, onların üzerine fareyi getirdiğinizde bir dörtgen gösterirler. Bu uygulamacık; paneli taşımanıza, yeniden boyutlandırmanıza, yeniden konumlandırmanıza ve yeniden hizalamanıza olanak sağlar. Ayrıca, &plasma; masaüstüne sürükleyip bırakmayı da halleder. Köşedeki düğmeler yeniden boyutlandırmak, döndürmek, yapılandırmak ve kaldırmak için kullanılır. Döndürüldüğünde, bir &plasma; araç takımı saat 12 yönüne manyetik olarak çekilir; böylelikle onu düzgün bir duruma rahatlıkla geri sokabilirsiniz. Öntanımlı olarak, çoğu uygulamacık yeniden boyutlandırılırken en-boy oranını korur. Bir uygulamacığı serbestçe yeniden boyutlandırmak istiyorsanız yeniden boyutlarken &Ctrl; düğmesini basılı tutun. </para>
+
+<para
+>Masaüstüne sağ tıklamak size duvar kağıdını, kullanılan düzeni ve fare eylemlerini değiştirme olanağı sağlar. Ayrıca &knewstuff; ile yeni duvar kağıtları indirmenize izin verir. </para>
+<para
+><guilabel
+>İnce Ayarlar</guilabel
+> sayfasında masaüstü araç çubuğunu gizleyecek şekilde yapılandırabilir ve araç takımı kullanımını ayarlayabilirsiniz. </para>
+
+<screenshot>
+<screeninfo
+>Masaüstü Ayarları</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Masaüstü Ayarları</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>&plasma; temasını değiştirmek veya &knewstuff; kullanarak yeni temalar almak için &systemsettings; içindeki <menuchoice
+><guimenu
+>Görünüş</guimenu
+> <guimenuitem
+>Masaüstü Teması</guimenuitem
+></menuchoice
+> yolunu izlemelisiniz.</para>
+
+<para
+>Açık uygulamalar varken masaüstünizdeki &plasma; araç takımlarını görmeniz zorlaşır. Bu durumda <emphasis role="bold"
+>Denetim Paneli</emphasis
+>, tıpkı geleneksel masaüstünde kullandığınız <guilabel
+>Masaüstünü Göster</guilabel
+> düğmesi gibi &plasma; araç takımlarını önünüze getirir. </para>
+
+</sect1>
+
+<sect1 id="folder-view">
+<title
+>Klasör Görünümü</title>
+<para
+><guilabel
+>Klasör Görünümü</guilabel
+> araç takımı, öntanımlı olarak <filename class="directory"
+>$<envar
+>HOME</envar
+>/Masaüstü</filename
+> konumundaki bir klasörden dosyalar veya klasörler gibi girdiler görüntülemek için kullanılır. </para>
+<para
+>Tüm dosyaları görmeyi veya düzenli ifadelerle (örn., belirli uzantıya sahip tüm dosyalar) tanımlanmışları süzerek veya dosya türüne göre (örn. yalnızca görseller) seçebilirsiniz. </para>
+<para
+>Bu araç takımı, aynı zamanda temel dosya yönetimi özelliklerini destekler (taşıma, kopyalama, kesme ve yapıştırma gibi) ve masaüstünüze istediğiniz kadar çok koyabilirsiniz. </para>
+
+<screenshot>
+<screeninfo
+>Klasör Görünümü</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Klasör Görünümü</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+><guilabel
+>Masaüstü Ayarları</guilabel
+>'ndan <guilabel
+>Klasör Görünümü</guilabel
+> yerleşimini seçerseniz bir Klasör Görünümünü tüm masaüstü olarak kullanabilir ve "eski tarz" masaüstü anlayışını tümüyle değiştirebilirsiniz. </para>
+</sect1>
+
+<sect1 id="krunner">
+<title
+>&krunner;</title>
+<para
+>&krunner; becerikli bir mini komut satırıdır. Uygulamaları başlatmak, web sayfalarını açmak, yer imlerine erişmek, masaüstü araması yapmak, basit eşitlikleri hesaplamak ve daha birçok amaç için kullanılabilir. <keycombo action="simul"
+>&Alt;&Space;</keycombo
+> veya <keycombo action="simul"
+>&Alt;<keysym
+>F2</keysym
+></keycombo
+> klavye kısayolu ile &krunner; iletişim kutusunu açabilirsiniz. Açıldıktan sonra yazmaya başladığınızda iki karakterden sonra &krunner; eşleşmeleri aramaya başlar. Ayrıca ayarlar penceresini açarak eklentiler tarafından sağlanan &krunner; işlevleri hakkında bilgi alabilirsiniz. Eşleşmeler arasında gezinmek için sekme veya ok düğmelerini kullanabilirsiniz. </para>
+<!-- without tab no arrow keys-->
+<screenshot>
+<screeninfo
+>&krunner; iletişim kutusu</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>&krunner; iletişim kutusu</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+><guilabel
+>K Çalıştır</guilabel
+> &systemsettings; modülünü açmak ve &krunner;'da neyi nasıl arayacağınızı yapılandırmak için <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> düğmesini kullanın. </para>
+
+<para
+>&krunner;, bir uygulamanın ortak eylemler gerçekleştirmek veya Görev Yöneticisi'nden belirli bir göreve doğrudan atlamak için sunabileceği ek eylemler olan <quote
+>Masaüstü Eylemleri</quote
+>'ni destekler. Yaygın örnekler, tarayıcınızı gizli kipte açmak için <guilabel
+>Yeni Gizli Pencere Aç</guilabel
+>, tam teşekküllü eposta istemcisini açmadan <guilabel
+>E-posta Oluştur</guilabel
+> veya &spectacle; tarafınan sağlanan eylemler: </para>
+
+<screenshot>
+<screeninfo
+>&krunner; Masaüstü Eylemleri</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>&krunner; Masaüstü Eylemleri</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Boş bir &krunner;'da &Down; düğmesine basarsanız son varlıkların geçmişi gösterilir. Bir arama sonucu çağrıldıktan sonra, onun sorgusu en başa taşınır, böylelikle sürekli kullanılan komutlar hiçbir zaman bu liste dışına çıkmaz. </para>
+<para
+>Listeden tekli girdileri silmek için <inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> düğmesini kullanın veya &krunner; ayarlarından bütün geçmişi temizleyin. </para>
+
+<para
+>Eğer sisteminizde neler olduğunu görmek istiyorsanız <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+> düğmelerine basarak hızlı bir biçimde pencerelerin ve süreçlerin listesine erişebilirsiniz. Açılan bu pencereden süreçlerin ve pencerelerin çıktılarını sağlanan seçenekler ile izleyebilir ve süreçleri sonlandırabilirsiniz. </para>
+</sect1>
+
+<sect1 id="activities-interface">
+<title
+>Etkinlikler</title>
+
+<para
+>Masaüstü araç kutusuna sağ üst köşedeki düğme ile erişebilirsiniz. Bu düğme masaüstünüzde kullandığınız etkinlikleri gösterir. &plasma; birden fazla etkinlik oluşturmanıza izin verir. Etkinlik kavramı temelde bir masaüstünde birden fazla masaüstü kapsamasının birden fazla &plasma; araç takımını barındırmasıdır. <quote
+>Etkinlikler</quote
+> çubuğunu görüntülediğinizde önceden tanımlanmış etkinliklerden birini seçebilirsiniz veya <guilabel
+>Etkinlik Oluştur</guilabel
+> seçeneği ile zevkinize göre yapılandırarak yeni bir etkinlik oluşturabilirsiniz. &plasma;'nın etkinlikleri ve &kwin;'in masaüstü ızgarası aslında aynıdır ancak köken itibariyle farklıdır. Sanal masaüstleri pencereleri gruplandırıp düzenlerken &plasma;'nın etkinlikleri &plasma; araç takımlarını gruplandırır ve düzenler. Bu yolla etkinlikler arasında geçiş yapabilir ve erişmek istediğiniz görevleri destekleyen &plasma; araç takımlarına ulaşabilirsiniz. Karikatürlerle, bulmacalarla ve diğer &plasma; araç takımları ile bir <quote
+>Boş zaman</quote
+> etkinliği veya <acronym
+>RSS</acronym
+> beslemeleri, hesap makinesi ve takvim ile bir <quote
+>İş</quote
+> etkinliği oluşturabilirsiniz. </para>
+
+<para
+>Bir etkinliği silmek için <quote
+>Etkinlikler</quote
+> çubuğundaki (bu çubuğu açmak için <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> düğmelerine, ardından <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+> düğmelerine basın) <guibutton
+>Etkinliği Durdur</guibutton
+> düğmesine, kırmızı 'X''e basıp (veya <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> ardından <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+> düğmelerine basın) silme işlemini onaylayın. </para>
+
+</sect1>
+
+<sect1 id="shortcuts">
+<title
+>Kısayollar</title>
+
+<para
+>&plasma; işlevlerinin birçoğuna klavye kısayolları ile de erişilebilir. Çeşitli düğmelere birlikte ard arda basılarak bu işlevlere kullanılabilir; örneğin, <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> dizilimi; &Alt; ve <keycap
+>D</keycap
+> düğmesine basılıyken, <keycap
+>A</keycap
+> düğmesine basıp bırakın demektir. </para>
+<para
+>Öntanımlı olarak şu kısayollar kullanılır: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>Araç Takımları Ekle</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>Araç Takımını Kaldır</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>Araç Takımlarını Kilitle/Kilitlerini Aç</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Uzaklaştır</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>-</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Yakınlaştır</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>Sonraki Araç Takımı</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>Önceki Araç Takımı</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>Araç Takımı Ayarları</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Etkinlikler</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Bu Etkinliği Kaldır</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Masaüstü Ayarları</para
+></listitem
+> <!--FIXME also Panel Settings?-->
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Sonraki Etkinlik</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Shift;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Önceki Etkinlik</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Masaüstüne Bak</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>İlişkilendirilmiş Uygulamayı Çalıştır</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Etkinlikler Panelini Aç</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Emeği Geçenler ve Lisans</title>
+
+<para
+>&plasma; </para>
+<para
+>Uygulamanın telif hakkı 2008 &Aaron.J.Seigo; &Aaron.J.Seigo.mail; </para>
+
+<para
+>Belgelendirme Telif Hakkı &copy; 2008&ndash;2010 Sebastian Kügler <email
+>sebas@kde.org</email
+> </para>
+
+<para
+>Serdar Soytetir <email
+>tulliana@gmail.com</email
+></para
+> <para
+>Emir SARI<email
+>emir_sari@icloud.com</email
+></para
+> &underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
