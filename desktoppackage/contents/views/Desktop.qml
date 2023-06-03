@@ -91,6 +91,7 @@ Item {
                     }
                     return imageColors.dominant;
                 }
+                when: desktop.usedInAccentColor // Without this, accentColor may still be updated after usedInAccentColor becomes false
             }
 
             property Connections repaintConnection: Connections {
