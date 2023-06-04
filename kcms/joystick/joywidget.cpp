@@ -71,7 +71,7 @@ JoyWidget::JoyWidget(QWidget *parent)
     KUrlCompletion *kc = new KUrlCompletion(KUrlCompletion::FileCompletion);
     device->setCompletionObject(kc);
     device->setAutoDeleteCompletionObject(true);
-    connect(device, SIGNAL(activated(QString)), this, SLOT(deviceChanged(QString)));
+    connect(device, &KComboBox::textActivated, this, &JoyWidget::deviceChanged);
     connect(device, SIGNAL(returnPressed(QString)), this, SLOT(deviceChanged(QString)));
     devHbox->setStretchFactor(device, 3);
 
