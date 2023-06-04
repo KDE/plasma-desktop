@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-31 03:09+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2020-10-07 22:37+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -29,14 +29,14 @@ msgstr "Indekseeritud"
 msgid "Resume Indexer"
 msgstr ""
 
-#: ui/main.qml:77
+#: ui/main.qml:78
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -44,24 +44,24 @@ msgid ""
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
 
-#: ui/main.qml:88
+#: ui/main.qml:89
 #, fuzzy, kde-format
 #| msgid "Delete entry"
 msgid "Delete Index Data"
 msgstr "Kustuta kirje"
 
-#: ui/main.qml:108
+#: ui/main.qml:109
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
 msgstr ""
 
-#: ui/main.qml:112
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr ""
 
-#: ui/main.qml:119
+#: ui/main.qml:120
 #, fuzzy, kde-format
 #| msgid ""
 #| "File Search helps you quickly locate all your files based on their "
@@ -71,109 +71,109 @@ msgid ""
 "folders and what types of file data are indexed."
 msgstr "Failiotsing aitab kiiresti leida vajalikud failid nende sinu põhjal."
 
-#: ui/main.qml:134
+#: ui/main.qml:135
 #, fuzzy, kde-format
 #| msgid "Disable indexing"
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Indekseerimise keelamine"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr ""
 
-#: ui/main.qml:149
+#: ui/main.qml:150
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
 msgstr ""
 
-#: ui/main.qml:153
+#: ui/main.qml:154
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr ""
 
-#: ui/main.qml:166
+#: ui/main.qml:167
 #, fuzzy, kde-format
 #| msgid "Full content indexing"
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "Sisu täielik indekseerimine"
 
-#: ui/main.qml:176
+#: ui/main.qml:177
 #, fuzzy, kde-kuit-format
 #| msgid "Full content indexing"
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
 msgstr "Sisu täielik indekseerimine"
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr ""
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgid "File names and contents"
 msgstr ""
 
-#: ui/main.qml:207
+#: ui/main.qml:208
 #, kde-format
 msgid "File names only"
 msgstr ""
 
-#: ui/main.qml:226
+#: ui/main.qml:227
 #, fuzzy, kde-format
 #| msgid "Index hidden files and folders"
 msgid "Hidden files and folders"
 msgstr "Peidetud failide ja kataloogide indekseerimine"
 
-#: ui/main.qml:282
+#: ui/main.qml:283
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr ""
 
-#: ui/main.qml:287
+#: ui/main.qml:288
 #, fuzzy, kde-format
 #| msgid "Start indexing a folder..."
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Kataloogi indekseerimise alustamine ..."
 
-#: ui/main.qml:298
+#: ui/main.qml:299
 #, fuzzy, kde-format
 #| msgid "Stop indexing a folder..."
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Kataloogi indekseerimise peatamine ..."
 
-#: ui/main.qml:361
+#: ui/main.qml:362
 #, kde-format
 msgid "Not indexed"
 msgstr "Ei ole indekseeritud"
 
-#: ui/main.qml:362
+#: ui/main.qml:363
 #, kde-format
 msgid "Indexed"
 msgstr "Indekseeritud"
 
-#: ui/main.qml:392
+#: ui/main.qml:393
 #, kde-format
 msgid "Delete entry"
 msgstr "Kustuta kirje"
 
-#: ui/main.qml:407
+#: ui/main.qml:408
 #, fuzzy, kde-format
 #| msgid "Select a folder to filter"
 msgid "Select a folder to include"
 msgstr "Kataloogi valimine filtreerimiseks"
 
-#: ui/main.qml:407
+#: ui/main.qml:408
 #, fuzzy, kde-format
 #| msgid "Select a folder to filter"
 msgid "Select a folder to exclude"

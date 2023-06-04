@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2023-01-23 20:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -25,67 +25,67 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:112
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:118
+#: kcmaccess.cpp:114
 #, kde-format
 msgid "Hyper"
 msgstr "فائق"
 
-#: kcmaccess.cpp:120
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "Super"
 msgstr "ممتاز"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:126
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "اضغط %1 بينما NumLock ، CapsLock  و  ScrollLock في وضع نشط "
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:127
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "اضغط %1 بينما CapsLock  و  ScrollLock في وضع نشط"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:128
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "اضغط %1 بينما NumLock   و  ScrollLock في وضع نشط"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "اضغط %1 بينما ScrollLock في وضع نشط"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "اضغط %1 بينما NumLock  و CapsLock في وضع نشط"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "اضغط %1 بينما CapsLock في وضع نشط"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "اضغط %1 بينما NumLock  في وضع نشط"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1"
 msgstr "اضغط %1"
 
-#: kcmaccess.cpp:182
+#: kcmaccess.cpp:178
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "لا يمكن وضع gsettings لـOrca: فشل \"%1\""
 
-#: kcmaccess.cpp:189
+#: kcmaccess.cpp:185
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "خطأ: لا يمكن تشغيل \"orca --setup\""

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2021-05-27 14:31+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -170,47 +170,47 @@ msgstr ""
 "vous n'avez pas le mot de passe du superutilisateur mais que vous estimez "
 "que l'heure est erronée, veuillez contacter votre administrateur système."
 
-#: main.cpp:49
+#: main.cpp:43
 #, kde-format
 msgid "KDE Clock Control Module"
 msgstr "Module de configuration de l'horloge de KDE"
 
-#: main.cpp:53
+#: main.cpp:47
 #, kde-format
 msgid "(c) 1996 - 2001 Luca Montecchiani"
 msgstr "(c) 1996 - 2001 Luca Montecchiani"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Luca Montecchiani"
 msgstr "Luca Montecchiani"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Original author"
 msgstr "Auteur originel"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Paul Campbell"
 msgstr "Paul Campbell"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Current Maintainer"
 msgstr "Mainteneur actuel"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Added NTP support"
 msgstr "Ajout de la gestion « NTP »"
 
-#: main.cpp:60
+#: main.cpp:54
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This control module can be used to set the system date "
@@ -226,22 +226,22 @@ msgstr ""
 "vous n'avez pas le mot de passe du superutilisateur mais que vous estimez "
 "que l'heure est erronée, veuillez contacter votre administrateur système."
 
-#: main.cpp:113
+#: main.cpp:107
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Impossible d'authentifier / d'exécuter l'action : %1, %2"
 
-#: main.cpp:133
+#: main.cpp:127
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Impossible de changer la configuration NTP"
 
-#: main.cpp:144
+#: main.cpp:138
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Impossible de régler l'heure actuelle"
 
-#: main.cpp:154
+#: main.cpp:148
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Impossible de régler le fuseau horaire"

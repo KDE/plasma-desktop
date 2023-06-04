@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -159,49 +159,49 @@ msgstr ""
 "системско вријеме требало да буде измијењено, обратите се систем-"
 "администратору.</p></qt>"
 
-#: main.cpp:49
+#: main.cpp:43
 #, kde-format
 msgid "KDE Clock Control Module"
 msgstr ""
 "КДЕ‑ов контролни модул сата|/|$[својства дат 'КДЕ‑овом контролном модулу "
 "сата']"
 
-#: main.cpp:53
+#: main.cpp:47
 #, kde-format
 msgid "(c) 1996 - 2001 Luca Montecchiani"
 msgstr "© 1996-2001, Лука Монтекијани"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Luca Montecchiani"
 msgstr "Лука Монтекијани"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Original author"
 msgstr "првобитни аутор"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Paul Campbell"
 msgstr "Пол Кемпбел"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Current Maintainer"
 msgstr "тренутни одржавалац"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Бенџамин К. Мејер"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Added NTP support"
 msgstr "додао подршку за НТП"
 
-#: main.cpp:60
+#: main.cpp:54
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This control module can be used to set the system date "
@@ -217,22 +217,22 @@ msgstr ""
 "системско вријеме требало да буде измијењено, обратите се систем-"
 "администратору.</p></qt>"
 
-#: main.cpp:113
+#: main.cpp:107
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Не могу да се аутентификујем или извршим радњу: %1, %2"
 
-#: main.cpp:133
+#: main.cpp:127
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Не могу изменим НТП поставке."
 
-#: main.cpp:144
+#: main.cpp:138
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Не могу да поставим тренутно време."
 
-#: main.cpp:154
+#: main.cpp:148
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Не могу да поставим временску зону."

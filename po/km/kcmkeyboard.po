@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2012-06-13 15:26+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -291,19 +291,19 @@ msgstr "កម្រិត​ខ្ពស់"
 msgid "&Configure keyboard options"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ​ជម្រើស​ក្ដារចុច"
 
-#: kcm_keyboard_widget.cpp:211
+#: kcm_keyboard_widget.cpp:204
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "មិន​ស្គាល់"
 
-#: kcm_keyboard_widget.cpp:213
+#: kcm_keyboard_widget.cpp:206
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
 
-#: kcm_keyboard_widget.cpp:643
+#: kcm_keyboard_widget.cpp:633
 #, fuzzy, kde-format
 #| msgctxt "no shortcut defined"
 #| msgid "None"
@@ -311,7 +311,7 @@ msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "គ្មាន"
 
-#: kcm_keyboard_widget.cpp:657
+#: kcm_keyboard_widget.cpp:647
 #, fuzzy, kde-format
 #| msgid "Shortcut:"
 msgid "%1 shortcut"
@@ -481,14 +481,14 @@ msgstr " មិល្លីវិនាទី"
 msgid "&Delay:"
 msgstr "ការពន្យារ ៖"
 
-#: tastenbrett/main.cpp:56
+#: tastenbrett/main.cpp:52
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "app display name"
 msgid "Keyboard Preview"
 msgstr "ការ​ធ្វើ​ឡើង​វិញ​របស់​ក្តារចុច"
 
-#: tastenbrett/main.cpp:58
+#: tastenbrett/main.cpp:54
 #, fuzzy, kde-format
 #| msgctxt "tooltip title"
 #| msgid "Keyboard Layout"
@@ -496,7 +496,7 @@ msgctxt "app description"
 msgid "Keyboard layout visualization"
 msgstr "ប្លង់​ក្ដារចុច​"
 
-#: tastenbrett/main.cpp:143
+#: tastenbrett/main.cpp:139
 #, kde-format
 msgctxt "@label"
 msgid ""

@@ -1,7 +1,7 @@
 # translation of kcmkclock.po to Slovenian
 # Translation of kcmkclock.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMKCLOCK.
-# $Id: kcmkclock.po 1619958 2022-02-27 01:39:10Z scripty $
+# $Id: kcmkclock.po 1653130 2023-06-04 02:32:20Z scripty $
 # $Source$
 #
 # Copyright (C) 2000, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2021-05-27 08:10+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -170,47 +170,47 @@ msgstr ""
 "vendar ste mnenja, da bi bilo potrebno popraviti sistemski čas, stopite v "
 "stik s skrbnikom vašega sistema."
 
-#: main.cpp:49
+#: main.cpp:43
 #, kde-format
 msgid "KDE Clock Control Module"
 msgstr "Nadzorni modul ure za KDE"
 
-#: main.cpp:53
+#: main.cpp:47
 #, kde-format
 msgid "(c) 1996 - 2001 Luca Montecchiani"
 msgstr "© 1996 - 2001 Luca Montecchiani"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Luca Montecchiani"
 msgstr "Luca Montecchiani"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Original author"
 msgstr "Prvotni avtor"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Paul Campbell"
 msgstr "Paul Campbell"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Current Maintainer"
 msgstr "Trenutni vzdrževalec"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Added NTP support"
 msgstr "Dodal podporo za NTP"
 
-#: main.cpp:60
+#: main.cpp:54
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This control module can be used to set the system date "
@@ -226,22 +226,22 @@ msgstr ""
 "vendar ste mnenja, da bi bilo potrebno popraviti sistemski čas, stopite v "
 "stik s skrbnikom vašega sistema."
 
-#: main.cpp:113
+#: main.cpp:107
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Ni bilo mogoče overiti/izvesti dejanja: %1, %2"
 
-#: main.cpp:133
+#: main.cpp:127
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Ni bilo mogoče spremeniti nastavitev NTP"
 
-#: main.cpp:144
+#: main.cpp:138
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Ni bilo mogoče nastaviti trenutnega časa"
 
-#: main.cpp:154
+#: main.cpp:148
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Ni bilo mogoče nastaviti časovnega pasu"

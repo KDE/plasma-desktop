@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2017-05-16 06:53-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -167,47 +167,47 @@ msgstr ""
 "כמשתמש root. אם אין לך את הססמה של המשתמש root, אך אתה סבור כי יש לתקן את "
 "השעה של המערכת, צור קשר עם מנהל המערכת שלך."
 
-#: main.cpp:49
+#: main.cpp:43
 #, kde-format
 msgid "KDE Clock Control Module"
 msgstr "מודול בקרת השעון של KDE"
 
-#: main.cpp:53
+#: main.cpp:47
 #, kde-format
 msgid "(c) 1996 - 2001 Luca Montecchiani"
 msgstr "(c) 1996 - 2001 Luca Montecchiani"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Luca Montecchiani"
 msgstr "Luca Montecchiani"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Original author"
 msgstr "כותב מקורי"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Paul Campbell"
 msgstr "Paul Campbell"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Current Maintainer"
 msgstr "מתחזק נוכחי"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Added NTP support"
 msgstr "הוסיף תמיכה ב־NTP"
 
-#: main.cpp:60
+#: main.cpp:54
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This control module can be used to set the system date "
@@ -222,22 +222,22 @@ msgstr ""
 "root. אם אין לך את הססמה של המשתמש root, אך אתה סבור כי יש לתקן את השעה של "
 "המערכת, צור קשר עם מנהל המערכת שלך."
 
-#: main.cpp:113
+#: main.cpp:107
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "לא ניתן לאמת / לבצע את הפעולה: %1, %2"
 
-#: main.cpp:133
+#: main.cpp:127
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "אין אפשרות לשנות את הגדרות ה־NTP"
 
-#: main.cpp:144
+#: main.cpp:138
 #, kde-format
 msgid "Unable to set current time"
 msgstr "לא יכול לקבצוע את השעה הנוכחית"
 
-#: main.cpp:154
+#: main.cpp:148
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "לא יכול לקבצוע את איזור הזמן"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2021-12-15 11:17+0100\n"
 "Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -157,47 +157,47 @@ msgstr ""
 "systeminnstillingane som root. Dersom du ikkje har root-passordet men "
 "likevel synest systemtida bør stillast, kontakt systemadministratoren."
 
-#: main.cpp:49
+#: main.cpp:43
 #, kde-format
 msgid "KDE Clock Control Module"
 msgstr "Kontrollmodul for KDE-klokka"
 
-#: main.cpp:53
+#: main.cpp:47
 #, kde-format
 msgid "(c) 1996 - 2001 Luca Montecchiani"
 msgstr "© 1996–2001 Luca Montecchiani"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Luca Montecchiani"
 msgstr "Luca Montecchiani"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Original author"
 msgstr "Opphavsperson"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Paul Campbell"
 msgstr "Paul Campbell"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Current Maintainer"
 msgstr "Noverande vedlikehaldar"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Added NTP support"
 msgstr "Lagt til NTP-støtte"
 
-#: main.cpp:60
+#: main.cpp:54
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This control module can be used to set the system date "
@@ -212,22 +212,22 @@ msgstr ""
 "startar systemoppsettet som root. Dersom du ikkje har root-passordet men "
 "likevel synest systemtida bør stillast, kontakt systemadministratoren."
 
-#: main.cpp:113
+#: main.cpp:107
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Klarte ikkje autentisera/køyra handlinga: %1, %2"
 
-#: main.cpp:133
+#: main.cpp:127
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Klarte ikkje å endra NTP-innstillingar"
 
-#: main.cpp:144
+#: main.cpp:138
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Klarte ikkje å stilla inn gjeldande tid"
 
-#: main.cpp:154
+#: main.cpp:148
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Klarte ikkje stilla inn tidssone"

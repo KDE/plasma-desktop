@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1651012 2023-05-05 02:31:54Z scripty $
+# $Id: kcm_access.po 1653130 2023-06-04 02:32:20Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2023-01-21 09:34+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -27,67 +27,67 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:112
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:118
+#: kcmaccess.cpp:114
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:120
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:126
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko so vključeni NumLock, CapsLock in ScrollLock"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:127
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko sta vključena CapsLock in ScrollLock"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:128
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko sta vključena NumLock in ScrollLock"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Pritisnite %1, ko je vključen ScrollLock"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Pritisnite %1, ko sta vključena NumLock in CapsLock"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Pritisnite %1, ko je vključen CapsLock"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Pritisnite %1, ko je vključen NumLock"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1"
 msgstr "Pritisnite %1"
 
-#: kcmaccess.cpp:182
+#: kcmaccess.cpp:178
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Ni bilo mogoče nastaviti gsettings za Orco: \"%1\" ni uspelo"
 
-#: kcmaccess.cpp:189
+#: kcmaccess.cpp:185
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Napaka: ni bilo mogoče zagnati »orca --setup«"

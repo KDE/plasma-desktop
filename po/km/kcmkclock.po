@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2012-06-13 15:26+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -160,47 +160,47 @@ msgstr ""
 "មិន​មាន​ពាក្យ​សម្ងាត់​ជា root ប៉ុន្តែ​ចង់​ឲ្យ​ពេល​វេលា​ប្រព័ន្ធ​របស់​អ្នក​ត្រឹមត្រូវ សូម​ទាក់ទង​អ្នក​គ្រប់គ្រង​ប្រព័ន្ធ​"
 "របស់​អ្នក ។"
 
-#: main.cpp:49
+#: main.cpp:43
 #, kde-format
 msgid "KDE Clock Control Module"
 msgstr "ម៉ូឌុល​ត្រួត​ពិនិត្យ​នាឡិកា​របស់ KDE"
 
-#: main.cpp:53
+#: main.cpp:47
 #, kde-format
 msgid "(c) 1996 - 2001 Luca Montecchiani"
 msgstr "រក្សា​សិទ្ធិ​ឆ្នាំ ១៩៩៦-២០០១ ដោយ Luca Montecchiani"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Luca Montecchiani"
 msgstr "Luca Montecchiani"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Original author"
 msgstr "អ្នក​និពន្ធ​ដើម"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Paul Campbell"
 msgstr "Paul Campbell"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Current Maintainer"
 msgstr "អ្នក​ថែទាំ​បច្ចុប្បន្ន"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Added NTP support"
 msgstr "ការ​គាំទ្រ NTP ដែល​បាន​បន្ថែម"
 
-#: main.cpp:60
+#: main.cpp:54
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This control module can be used to set the system date "
@@ -215,23 +215,23 @@ msgstr ""
 "មិន​មាន​ពាក្យ​សម្ងាត់​ជា root ប៉ុន្តែ​ចង់​ឲ្យ​ពេល​វេលា​ប្រព័ន្ធ​របស់​អ្នក​ត្រឹមត្រូវ សូម​ទាក់ទង​អ្នក​គ្រប់គ្រង​ប្រព័ន្ធ​"
 "របស់​អ្នក ។"
 
-#: main.cpp:113
+#: main.cpp:107
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "មិនអាច​ផ្ទៀងផ្ទាត់/ប្រតិបត្តិ​សកម្មភាព ៖ %1, %2"
 
-#: main.cpp:133
+#: main.cpp:127
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:144
+#: main.cpp:138
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
 msgstr "មិន​អាច​ទាក់ទង​ម៉ាស៊ីន​បម្រើ​ពេល​វេលា ៖ %1 ។"
 
-#: main.cpp:154
+#: main.cpp:148
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"

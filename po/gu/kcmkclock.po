@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2008-10-14 05:58+0530\n"
 "Last-Translator: Pragnesh Radadiya <pg.radadia@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@lists.kde.org>\n"
@@ -157,47 +157,47 @@ msgstr ""
 "તરીકે શરુ કરશો. જો તમારી પાસે root પાસવર્ડ ના હોય, પણ તમને લાગતુ હોય કે સિસ્ટમનો સમય "
 "સાચો હોવો જોઇએ, મહેરબાની કરી તમારા સિસ્ટમ સંચાલકનો સંપર્ક કરો."
 
-#: main.cpp:49
+#: main.cpp:43
 #, kde-format
 msgid "KDE Clock Control Module"
 msgstr "કેડીઇ ઘડિયાળ નિયંત્રણ મોડ્યુલ"
 
-#: main.cpp:53
+#: main.cpp:47
 #, kde-format
 msgid "(c) 1996 - 2001 Luca Montecchiani"
 msgstr "(c) ૧૯૯૬ - ૨૦૦૧ લુકા મોન્ટેચૈની"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Luca Montecchiani"
 msgstr "લુકા મોન્ટેચૈની"
 
-#: main.cpp:55
+#: main.cpp:49
 #, kde-format
 msgid "Original author"
 msgstr "મૂળ લેખક"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Paul Campbell"
 msgstr "પૌલ કેમ્પબેલ"
 
-#: main.cpp:56
+#: main.cpp:50
 #, kde-format
 msgid "Current Maintainer"
 msgstr "હાલમાં જાવળવનાર"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "બેન્જામીન મેયર"
 
-#: main.cpp:57
+#: main.cpp:51
 #, kde-format
 msgid "Added NTP support"
 msgstr "NTP મદદ ઉમેરી"
 
-#: main.cpp:60
+#: main.cpp:54
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This control module can be used to set the system date "
@@ -212,23 +212,23 @@ msgstr ""
 "તમારી પાસે root પાસવર્ડ ના હોય, પણ તમને લાગતુ હોય કે સિસ્ટમનો સમય સાચો હોવો જોઇએ, "
 "મહેરબાની કરીને તમારા સિસ્ટમ સંચાલકનો સંપર્ક કરો."
 
-#: main.cpp:113
+#: main.cpp:107
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "ક્રિયાને અધિકૃત/ચલાવવામાં અસક્ષમ: %1, %2"
 
-#: main.cpp:133
+#: main.cpp:127
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:144
+#: main.cpp:138
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
 msgstr "સમય સર્વરનો સંપર્ક સાધી શકયા નથી: %1."
 
-#: main.cpp:154
+#: main.cpp:148
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"

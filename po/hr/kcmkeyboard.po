@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-04 02:17+0000\n"
 "PO-Revision-Date: 2011-03-04 18:44+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -292,19 +292,19 @@ msgstr "Napredno"
 msgid "&Configure keyboard options"
 msgstr "Podesi opcije tipkovnice"
 
-#: kcm_keyboard_widget.cpp:211
+#: kcm_keyboard_widget.cpp:204
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "Nepoznato"
 
-#: kcm_keyboard_widget.cpp:213
+#: kcm_keyboard_widget.cpp:206
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
 
-#: kcm_keyboard_widget.cpp:643
+#: kcm_keyboard_widget.cpp:633
 #, fuzzy, kde-format
 #| msgctxt "no shortcut defined"
 #| msgid "None"
@@ -312,7 +312,7 @@ msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Ništa"
 
-#: kcm_keyboard_widget.cpp:657
+#: kcm_keyboard_widget.cpp:647
 #, fuzzy, kde-format
 #| msgid "Shortcut:"
 msgid "%1 shortcut"
@@ -487,14 +487,14 @@ msgstr " ms"
 msgid "&Delay:"
 msgstr "&Pauza:"
 
-#: tastenbrett/main.cpp:56
+#: tastenbrett/main.cpp:52
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "app display name"
 msgid "Keyboard Preview"
 msgstr "Brzina ponavljanja znaka na tipkovnici"
 
-#: tastenbrett/main.cpp:58
+#: tastenbrett/main.cpp:54
 #, fuzzy, kde-format
 #| msgctxt "tooltip title"
 #| msgid "Keyboard Layout"
@@ -502,7 +502,7 @@ msgctxt "app description"
 msgid "Keyboard layout visualization"
 msgstr "Raspored tipkovnice"
 
-#: tastenbrett/main.cpp:143
+#: tastenbrett/main.cpp:139
 #, kde-format
 msgctxt "@label"
 msgid ""
