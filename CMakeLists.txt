@@ -284,5 +284,12 @@ set_package_properties(XdgUserDir PROPERTIES
     TYPE RUNTIME
 )
 
+find_package(FontNotoColorEmoji)
+set_package_properties(FontNotoColorEmoji PROPERTIES
+    PURPOSE "Default emoji font, needed to display emojis properly in Emoji Selector"
+    URL "https://www.google.com/get/noto/"
+    TYPE RUNTIME
+)
+
 ki18n_install(po)
 kdoctools_install(po)
