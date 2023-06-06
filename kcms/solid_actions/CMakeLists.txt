@@ -35,4 +35,3 @@ target_link_libraries(solid-action-desktop-gen KF6::Solid KF6::KIOCore KF6::I18n
 install( TARGETS kcm_solid_actions DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets )
 install( TARGETS solid-action-desktop-gen ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 install( FILES solid-action-template.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kcmsolidactions )
-install( FILES solid-device-type.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPESDIR} )
