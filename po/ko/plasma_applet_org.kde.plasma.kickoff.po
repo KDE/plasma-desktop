@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 02:13+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2023-03-01 00:35+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -48,18 +48,18 @@ msgstr "현재 활동에만"
 msgid "Show in Favorites"
 msgstr "책갈피에 표시"
 
-#: package/contents/ui/ConfigGeneral.qml:38
+#: package/contents/ui/ConfigGeneral.qml:39
 #, kde-format
 msgid "Icon:"
 msgstr "아이콘:"
 
-#: package/contents/ui/ConfigGeneral.qml:44
+#: package/contents/ui/ConfigGeneral.qml:45
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "프로그램 실행기 아이콘 변경"
 
-#: package/contents/ui/ConfigGeneral.qml:45
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -69,144 +69,144 @@ msgstr ""
 "현재 아이콘은 %1입니다. 현재 아이콘을 변경하거나 기본 아이콘으로 초기화하려"
 "면 클릭하여 메뉴를 여십시오."
 
-#: package/contents/ui/ConfigGeneral.qml:49
+#: package/contents/ui/ConfigGeneral.qml:50
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "아이콘 이름: \"%1\""
 
-#: package/contents/ui/ConfigGeneral.qml:82
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "선택..."
 
-#: package/contents/ui/ConfigGeneral.qml:84
+#: package/contents/ui/ConfigGeneral.qml:85
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "프로그램 실행기 아이콘 선택"
 
-#: package/contents/ui/ConfigGeneral.qml:88
+#: package/contents/ui/ConfigGeneral.qml:89
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "기본 아이콘으로 초기화"
 
-#: package/contents/ui/ConfigGeneral.qml:94
+#: package/contents/ui/ConfigGeneral.qml:95
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "아이콘 삭제"
 
-#: package/contents/ui/ConfigGeneral.qml:105
+#: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "텍스트 이름표:"
 
-#: package/contents/ui/ConfigGeneral.qml:107
+#: package/contents/ui/ConfigGeneral.qml:108
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "텍스트 이름표를 추가하려면 입력"
 
-#: package/contents/ui/ConfigGeneral.qml:122
+#: package/contents/ui/ConfigGeneral.qml:123
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "메뉴 이름표 초기화"
 
-#: package/contents/ui/ConfigGeneral.qml:136
+#: package/contents/ui/ConfigGeneral.qml:137
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "패널이 수직 방향일 때에는 텍스트 이름표를 설정할 수 없습니다."
 
-#: package/contents/ui/ConfigGeneral.qml:147
+#: package/contents/ui/ConfigGeneral.qml:148
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "일반:"
 
-#: package/contents/ui/ConfigGeneral.qml:148
+#: package/contents/ui/ConfigGeneral.qml:149
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "항상 가나다순으로 프로그램 정렬"
 
-#: package/contents/ui/ConfigGeneral.qml:153
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Use compact list item style"
 msgstr "간략한 목록 항목 스타일 사용"
 
-#: package/contents/ui/ConfigGeneral.qml:159
+#: package/contents/ui/ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "터치 모드에서 자동으로 비활성화됨"
 
-#: package/contents/ui/ConfigGeneral.qml:168
+#: package/contents/ui/ConfigGeneral.qml:169
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "사용할 검색 플러그인 설정…"
 
-#: package/contents/ui/ConfigGeneral.qml:178
+#: package/contents/ui/ConfigGeneral.qml:179
 #, kde-format
 msgid "Show favorites:"
 msgstr "책갈피 표시:"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "격자로"
 
-#: package/contents/ui/ConfigGeneral.qml:187
+#: package/contents/ui/ConfigGeneral.qml:188
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "목록으로"
 
-#: package/contents/ui/ConfigGeneral.qml:195
+#: package/contents/ui/ConfigGeneral.qml:196
 #, kde-format
 msgid "Show other applications:"
 msgstr "다른 프로그램 표시:"
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: package/contents/ui/ConfigGeneral.qml:197
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "격자로"
 
-#: package/contents/ui/ConfigGeneral.qml:204
+#: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "목록으로"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Show buttons for:"
 msgstr "다음 단추 표시:"
 
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:218
 #: package/contents/ui/LeaveButtons.qml:115
 #, kde-format
 msgid "Power"
 msgstr "전원"
 
-#: package/contents/ui/ConfigGeneral.qml:226
+#: package/contents/ui/ConfigGeneral.qml:227
 #, kde-format
 msgid "Session"
 msgstr "세션"
 
-#: package/contents/ui/ConfigGeneral.qml:235
+#: package/contents/ui/ConfigGeneral.qml:236
 #, kde-format
 msgid "Power and session"
 msgstr "전원과 세션"
 
-#: package/contents/ui/ConfigGeneral.qml:244
+#: package/contents/ui/ConfigGeneral.qml:245
 #, kde-format
 msgid "Show action button captions"
 msgstr "동작 단추 캡션 표시"
@@ -227,12 +227,12 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr "검색 결과 없음"
 
-#: package/contents/ui/Header.qml:64
+#: package/contents/ui/Header.qml:65
 #, kde-format
 msgid "Open user settings"
 msgstr "사용자 설정 열기"
 
-#: package/contents/ui/Header.qml:240
+#: package/contents/ui/Header.qml:241
 #, kde-format
 msgid "Keep Open"
 msgstr "열린 상태로 유지"

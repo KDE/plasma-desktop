@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2023-02-03 19:41+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -105,12 +105,12 @@ msgstr "Sélectionner l'éditeur de texte par défaut"
 msgid "Select default video player"
 msgstr "Sélectionner le lecteur de vidéo par défaut"
 
-#: ui/ComponentOverlay.qml:22
+#: ui/ComponentOverlay.qml:23
 #, kde-format
 msgid "Details"
 msgstr "Détails"
 
-#: ui/ComponentOverlay.qml:28
+#: ui/ComponentOverlay.qml:29
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
@@ -118,13 +118,13 @@ msgstr ""
 "Cette application n'annonce pas la prise en charge pour les types de "
 "fichiers suivants :"
 
-#: ui/ComponentOverlay.qml:42
+#: ui/ComponentOverlay.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
 msgstr "Forcer l'ouverture de toute façon"
 
-#: ui/ComponentOverlay.qml:50
+#: ui/ComponentOverlay.qml:51
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
@@ -132,19 +132,19 @@ msgstr ""
 "Les types suivants de fichiers sont toujours associés à une application "
 "différente :"
 
-#: ui/ComponentOverlay.qml:59
+#: ui/ComponentOverlay.qml:60
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
 msgstr "%1 associé avec %2"
 
-#: ui/ComponentOverlay.qml:65
+#: ui/ComponentOverlay.qml:66
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
 msgstr "Tout ré-allouer à %1"
 
-#: ui/ComponentOverlay.qml:73
+#: ui/ComponentOverlay.qml:74
 #, kde-format
 msgid "Change file type association manually"
 msgstr "Modifier manuellement l'association du type de fichier"

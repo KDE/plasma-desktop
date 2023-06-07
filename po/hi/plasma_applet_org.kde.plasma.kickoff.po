@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 02:13+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2021-10-11 11:33+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -47,18 +47,18 @@ msgstr "वर्तामान गतिविधि पर"
 msgid "Show in Favorites"
 msgstr "पसंदीदा में प्रदर्शित करें"
 
-#: package/contents/ui/ConfigGeneral.qml:38
+#: package/contents/ui/ConfigGeneral.qml:39
 #, kde-format
 msgid "Icon:"
 msgstr "प्रतीकः"
 
-#: package/contents/ui/ConfigGeneral.qml:44
+#: package/contents/ui/ConfigGeneral.qml:45
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:45
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -66,146 +66,146 @@ msgid ""
 "to the default icon."
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:49
+#: package/contents/ui/ConfigGeneral.qml:50
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:82
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "चुनें…"
 
-#: package/contents/ui/ConfigGeneral.qml:84
+#: package/contents/ui/ConfigGeneral.qml:85
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:88
+#: package/contents/ui/ConfigGeneral.qml:89
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:94
+#: package/contents/ui/ConfigGeneral.qml:95
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:105
+#: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:107
+#: package/contents/ui/ConfigGeneral.qml:108
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:122
+#: package/contents/ui/ConfigGeneral.qml:123
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:136
+#: package/contents/ui/ConfigGeneral.qml:137
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:147
+#: package/contents/ui/ConfigGeneral.qml:148
 #, fuzzy, kde-format
 #| msgid "General"
 msgctxt "General options"
 msgid "General:"
 msgstr "सामान्य"
 
-#: package/contents/ui/ConfigGeneral.qml:148
+#: package/contents/ui/ConfigGeneral.qml:149
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "अनुप्रयोगों को हमेशा वर्णानुक्रम में क्रमबद्ध करें"
 
-#: package/contents/ui/ConfigGeneral.qml:153
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Use compact list item style"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:159
+#: package/contents/ui/ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:168
+#: package/contents/ui/ConfigGeneral.qml:169
 #, fuzzy, kde-format
 #| msgid "Configure enabled search plugins"
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "सक्षम खोज प्लग इन विन्यस्त करें"
 
-#: package/contents/ui/ConfigGeneral.qml:178
+#: package/contents/ui/ConfigGeneral.qml:179
 #, kde-format
 msgid "Show favorites:"
 msgstr "पसंदीदा दिखाएँ :"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "ग्रिड में दिखाएँ"
 
-#: package/contents/ui/ConfigGeneral.qml:187
+#: package/contents/ui/ConfigGeneral.qml:188
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "सूची में दिखाएँ"
 
-#: package/contents/ui/ConfigGeneral.qml:195
+#: package/contents/ui/ConfigGeneral.qml:196
 #, kde-format
 msgid "Show other applications:"
 msgstr "अन्य अनुप्रयोगों को दिखाएँ :"
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: package/contents/ui/ConfigGeneral.qml:197
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "ग्रिड में दिखाएँ"
 
-#: package/contents/ui/ConfigGeneral.qml:204
+#: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "सूची में दिखाएँ"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Show buttons for:"
 msgstr "इनके लिए बटन दिखाएँ :"
 
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:218
 #: package/contents/ui/LeaveButtons.qml:115
 #, kde-format
 msgid "Power"
 msgstr "शक्ती..."
 
-#: package/contents/ui/ConfigGeneral.qml:226
+#: package/contents/ui/ConfigGeneral.qml:227
 #, kde-format
 msgid "Session"
 msgstr "सत्र"
 
-#: package/contents/ui/ConfigGeneral.qml:235
+#: package/contents/ui/ConfigGeneral.qml:236
 #, kde-format
 msgid "Power and session"
 msgstr "शक्ती और सत्र"
 
-#: package/contents/ui/ConfigGeneral.qml:244
+#: package/contents/ui/ConfigGeneral.qml:245
 #, kde-format
 msgid "Show action button captions"
 msgstr "क्रिया बटन अनुशिर्षक दिखाएं"
@@ -226,13 +226,13 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr ""
 
-#: package/contents/ui/Header.qml:64
+#: package/contents/ui/Header.qml:65
 #, fuzzy, kde-format
 #| msgid "Go to user settings"
 msgid "Open user settings"
 msgstr "उपयोक्ता सेटिंग में जाएँ"
 
-#: package/contents/ui/Header.qml:240
+#: package/contents/ui/Header.qml:241
 #, kde-format
 msgid "Keep Open"
 msgstr "खुला रखें"
