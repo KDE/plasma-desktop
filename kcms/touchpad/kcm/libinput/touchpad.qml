@@ -9,7 +9,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0 as QQC2
 import QtQuick.Layouts 1.3 as Layouts
 
-import org.kde.kcm 1.2 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.kirigami 2.13 as Kirigami
 
 import org.kde.touchpad.kcm 1.0

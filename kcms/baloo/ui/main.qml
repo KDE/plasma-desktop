@@ -11,7 +11,7 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Dialogs 6.3 as QtDialogs
 import org.kde.baloo.experimental 0.1 as Baloo
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kcm 1.3 as KCM
+import org.kde.kcmutils as KCM
 
 KCM.ScrollViewKCM {
     id: root

@@ -8,7 +8,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Dialogs 6.3
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kcm 1.5 as KCM
+import org.kde.kcmutils as KCM
 
 Row {
     id: urlRequester

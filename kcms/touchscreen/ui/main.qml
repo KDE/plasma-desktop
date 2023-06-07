@@ -12,10 +12,9 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QQC2
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.touchscreen.kcm 1.0
-import org.kde.kcm 1.3
-import org.kde.kcmutils 1.0 as KCMUtils
+import org.kde.kcmutils as KCMUtils
 
-SimpleKCM {
+KCMUtils.SimpleKCM {
     id: root
 
     property var device: null

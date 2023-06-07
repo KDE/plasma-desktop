@@ -12,7 +12,7 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.iconthemes 1.0 as KIconThemes
 
-import org.kde.kcm 1.6 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.kcms.activities
 
 KCM.SimpleKCM {

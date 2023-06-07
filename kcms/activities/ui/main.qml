@@ -10,8 +10,7 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.0
 
 import org.kde.activities 0.1 as Activities
-import org.kde.kcm 1.6 as KCM
-import org.kde.kcmutils 1.0
+import org.kde.kcmutils as KCM
 import org.kde.kirigami 2.19 as Kirigami
 
 
@@ -20,7 +19,7 @@ KCM.ScrollViewKCM {
     implicitWidth: Kirigami.Units.gridUnit * 18
     implicitHeight: Kirigami.Units.gridUnit * 22
 
-    ConfigModule.buttons: ConfigModule.Help
+    KCM.ConfigModule.buttons: KCM.ConfigModule.Help
 
     view: ListView {
         id: activitiesList

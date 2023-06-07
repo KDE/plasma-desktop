@@ -10,7 +10,7 @@ import QtQuick.Controls 2.3 as QQC2
 
 import org.kde.kirigami 2.10 as Kirigami
 import org.kde.kquickcontrols 2.0
-import org.kde.kcm 1.5 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.private.kcms.keys 2.0 as Private
 
 
