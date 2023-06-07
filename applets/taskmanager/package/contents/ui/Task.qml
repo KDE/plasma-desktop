@@ -108,7 +108,7 @@ PlasmaCore.ToolTipArea {
     }
     Accessible.role: Accessible.Button
 
-    onToolTipVisibleChanged: {
+    onToolTipVisibleChanged: toolTipVisible => {
         task.toolTipOpen = toolTipVisible;
         if (!toolTipVisible) {
             tasks.toolTipOpenedByClick = null;
