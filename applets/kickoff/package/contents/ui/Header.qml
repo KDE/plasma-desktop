@@ -81,10 +81,6 @@ PlasmaExtras.PlasmoidHeading {
                 border.width: avatar.visualFocus ? PlasmaCore.Units.devicePixelRatio * 2 : 0
                 border.color: PlasmaCore.Theme.buttonFocusColor
             }
-            HoverHandler {
-                id: hoverHandler
-                cursorShape: Qt.PointingHandCursor
-            }
             PC3.ToolTip.text: Accessible.name
             PC3.ToolTip.visible: hovered
             PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
