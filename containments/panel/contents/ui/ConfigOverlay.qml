@@ -23,7 +23,7 @@ MouseArea {
     property Item currentApplet
     property real startDragOffset: 0.0
 
-    onPositionChanged: {
+    onPositionChanged: mouse => {
         if (pressed) {
 
             // If the object has been dragged outside of the panel and there's
@@ -87,7 +87,7 @@ MouseArea {
         }
     }
 
-    onPressed: {
+    onPressed: mouse => {
         // Need to set currentApplet here too, to make touch selection + drag
         // with with a touchscreen, because there are no entered events in that
         // case
@@ -116,7 +116,7 @@ MouseArea {
         }
     }
 
-    onReleased: finishDragOperation()
+    onReleased: mouse => finishDragOperation()
 
     onCanceled: finishDragOperation()
 
