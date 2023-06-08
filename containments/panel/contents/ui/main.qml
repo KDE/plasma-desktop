@@ -207,9 +207,9 @@ ContainmentItem {
                     }
                 }
 
-                function getMargins(side, returnAllMargins = false, overrideFillArea = null, overrideThickArea = null) {
+                function getMargins(side, returnAllMargins = false, overrideFillArea = null, overrideThickArea = null): real {
                     if (!applet || !applet.plasmoid) {
-                        return;
+                        return 0;
                     }
                     //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon + smallSpace) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
                     let fillArea = overrideFillArea === null ? applet && (applet.plasmoid.constraintHints & PlasmaCore.Types.CanFillArea) : overrideFillArea
