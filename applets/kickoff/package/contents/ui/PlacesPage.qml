@@ -30,9 +30,9 @@ BasePage {
         focus: true
         objectName: "frequentlyUsedView"
         model: switch (root.sideBarItem.currentIndex) {
-            case 0: return plasmoid.rootItem.computerModel
-            case 1: return plasmoid.rootItem.recentUsageModel
-            case 2: return plasmoid.rootItem.frequentUsageModel
+            case 0: return kickoff.computerModel
+            case 1: return kickoff.recentUsageModel
+            case 2: return kickoff.frequentUsageModel
         }
         onActiveFocusChanged: if (activeFocus && count < 1) {
             root.sideBarItem.forceActiveFocus()
@@ -60,14 +60,14 @@ BasePage {
     // StackView.status and visible. This way the bindings are reset when
     // NormalPage is Activated again.
     Binding {
-        target: plasmoid.rootItem
+        target: kickoff
         property: "sideBar"
         value: root.sideBarItem
         when: root.T.StackView.status === T.StackView.Active && root.visible
         restoreMode: Binding.RestoreBinding
     }
     Binding {
-        target: plasmoid.rootItem
+        target: kickoff
         property: "contentArea"
         value: root.contentAreaItem // NOT root.contentAreaItem.currentItem
         when: root.T.StackView.status === T.StackView.Active && root.visible

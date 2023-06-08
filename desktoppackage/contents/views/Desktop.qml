@@ -142,7 +142,7 @@ Item {
                 return result;
             }
 
-            var rect = containment.availableScreenRect;
+            var rect = containment.plasmoid.availableScreenRect;
             result += rect.x;
 
             if (Qt.application.layoutDirection === Qt.RightToLeft) {
@@ -151,7 +151,7 @@ Item {
 
             return result;
         }
-        y: desktop.y + (containment ? containment.availableScreenRect.y : 0)
+        y: desktop.y + (containment ? containment.plasmoid.availableScreenRect.y : 0)
 
         onVisibleChanged: {
             if (!visible) {
@@ -164,7 +164,7 @@ Item {
             id: sidePanelStack
             asynchronous: true
             width: item ? item.width: 0
-            height: containment ? containment.availableScreenRect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000
+            height: containment ? containment.plasmoid.availableScreenRect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000
             state: "closed"
 
             LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
@@ -203,7 +203,7 @@ Item {
     }
 
     Connections {
-        target: containment
+        target: containment.plasmoid
         function onAvailableScreenRectChanged() {
             sidePanel.requestActivate();
         }

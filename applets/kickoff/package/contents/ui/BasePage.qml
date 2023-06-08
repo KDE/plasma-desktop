@@ -49,8 +49,8 @@ FocusScope {
             // backtab is implicitly set by the last button in Header.qml
             KeyNavigation.tab: root.contentAreaItem
             KeyNavigation.right: contentAreaLoader
-            Keys.onUpPressed: plasmoid.rootItem.header.nextItemInFocusChain().forceActiveFocus(Qt.BacktabFocusReason)
-            Keys.onDownPressed: plasmoid.rootItem.footer.tabBar.forceActiveFocus(Qt.TabFocusReason)
+            Keys.onUpPressed: kickoff.header.nextItemInFocusChain().forceActiveFocus(Qt.BacktabFocusReason)
+            Keys.onDownPressed: kickoff.footer.tabBar.forceActiveFocus(Qt.TabFocusReason)
         }
     }
     PlasmaCore.SvgItem {
@@ -76,9 +76,9 @@ FocusScope {
         }
         KeyNavigation.backtab: root.sideBarItem
         // Tab should go to the start of the footer focus chain
-        KeyNavigation.tab: plasmoid.rootItem.footer.nextItemInFocusChain()
+        KeyNavigation.tab: kickoff.footer.nextItemInFocusChain()
         KeyNavigation.left: sideBarLoader
-        Keys.onUpPressed: plasmoid.rootItem.searchField.forceActiveFocus(Qt.BacktabFocusReason)
-        Keys.onDownPressed: plasmoid.rootItem.footer.leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+        Keys.onUpPressed: kickoff.searchField.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onDownPressed: kickoff.footer.leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
     }
 }

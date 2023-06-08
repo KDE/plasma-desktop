@@ -20,7 +20,7 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 
 import "code/tools.js" as Tools
 
-Item {
+PlasmoidItem {
     id: kickoff
 
     // The properties are defined here instead of the singleton because each
@@ -36,13 +36,14 @@ Item {
 
     // Used to prevent the width from changing frequently when the scrollbar appears or disappears
     readonly property bool mayHaveGridWithScrollBar: plasmoid.configuration.applicationsDisplay === 0
-        || (plasmoid.configuration.favoritesDisplay === 0 && plasmoid.rootItem.rootModel.favoritesModel.count > minimumGridRowCount * minimumGridRowCount)
+        || (plasmoid.configuration.favoritesDisplay === 0 && kickoff.rootModel.favoritesModel.count > minimumGridRowCount * minimumGridRowCount)
 
     //BEGIN Models
     readonly property Kicker.RootModel rootModel: Kicker.RootModel {
         autoPopulate: false
 
-        appletInterface: plasmoid
+        // TODO: appletInterface property now can be ported to "applet" and have the real Applet* assigned directly
+        appletInterface: kickoff
 
         flat: true // have categories, but no subcategories
         sorted: plasmoid.configuration.alphaSort
@@ -145,19 +146,19 @@ Item {
     }
 
     // Used to show smaller Kickoff on small screens
-    readonly property int minimumGridRowCount: Math.min(Screen.desktopAvailableWidth, Screen.desktopAvailableHeight) < KickoffSingleton.gridCellSize * 4 + (Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.normalPage.preferredSideBarWidth : KickoffSingleton.gridCellSize * 2) ? 2 : 4
+    readonly property int minimumGridRowCount: Math.min(Screen.desktopAvailableWidth, Screen.desktopAvailableHeight) < KickoffSingleton.gridCellSize * 4 + (fullRepresentationItem ? fullRepresentationItem.normalPage.preferredSideBarWidth : KickoffSingleton.gridCellSize * 2) ? 2 : 4
     //END
-
-    Plasmoid.switchWidth: plasmoid.fullRepresentationItem ? plasmoid.fullRepresentationItem.Layout.minimumWidth : -1
-    Plasmoid.switchHeight: plasmoid.fullRepresentationItem ? plasmoid.fullRepresentationItem.Layout.minimumHeight : -1
-
-    Plasmoid.preferredRepresentation: plasmoid.compactRepresentation
-
-    Plasmoid.fullRepresentation: FullRepresentation { focus: true }
 
     Plasmoid.icon: plasmoid.configuration.icon
 
-    Plasmoid.compactRepresentation: MouseArea {
+    switchWidth: fullRepresentationItem ? fullRepresentationItem.Layout.minimumWidth : -1
+    switchHeight: fullRepresentationItem ? fullRepresentationItem.Layout.minimumHeight : -1
+
+    preferredRepresentation: compactRepresentation
+
+    fullRepresentation: FullRepresentation { focus: true }
+
+    compactRepresentation: MouseArea {
         id: compactRoot
 
         // Taken from DigitalClock to ensure uniform sizing when next to each other
@@ -219,8 +220,8 @@ Item {
 
         property bool wasExpanded
 
-        onPressed: wasExpanded = Plasmoid.expanded
-        onClicked: Plasmoid.expanded = !wasExpanded
+        onPressed: wasExpanded = kickoff.expanded
+        onClicked: kickoff.expanded = !wasExpanded
 
         DropArea {
             id: compactDragArea
@@ -232,7 +233,7 @@ Item {
             // this is an interaction and not an animation, so we want it as a constant
             interval: 250
             running: compactDragArea.containsDrag
-            onTriggered: plasmoid.expanded = true
+            onTriggered: kickoff.expanded = true
         }
 
         RowLayout {

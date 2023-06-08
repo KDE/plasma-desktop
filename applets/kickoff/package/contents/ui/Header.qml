@@ -35,8 +35,8 @@ PlasmaExtras.PlasmoidHeading {
     topPadding: Math.round((background.margins.top - background.inset.top) / 2.0)
     bottomPadding: background.margins.bottom + Math.round((background.margins.bottom - background.inset.bottom) / 2.0)
 
-    leftInset: -plasmoid.rootItem.backgroundMetrics.leftPadding
-    rightInset: -plasmoid.rootItem.backgroundMetrics.rightPadding
+    leftInset: -kickoff.backgroundMetrics.leftPadding
+    rightInset: -kickoff.backgroundMetrics.rightPadding
     topInset: -background.margins.top
     bottomInset: 0
 
@@ -44,7 +44,7 @@ PlasmaExtras.PlasmoidHeading {
         id: kuser
     }
 
-    spacing: plasmoid.rootItem.backgroundMetrics.spacing
+    spacing: kickoff.backgroundMetrics.spacing
 
     RowLayout {
         id: nameAndIcon
@@ -91,10 +91,10 @@ PlasmaExtras.PlasmoidHeading {
             Keys.onRightPressed: if (!LayoutMirroring.enabled) {
                 searchField.forceActiveFocus(Qt.TabFocusReason)
             }
-            Keys.onDownPressed: if (plasmoid.rootItem.sideBar) {
-                plasmoid.rootItem.sideBar.forceActiveFocus(Qt.TabFocusReason)
+            Keys.onDownPressed: if (kickoff.sideBar) {
+                kickoff.sideBar.forceActiveFocus(Qt.TabFocusReason)
             } else {
-                plasmoid.rootItem.contentArea.forceActiveFocus(Qt.TabFocusReason)
+                kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason)
             }
 
             onClicked: KCM.KCMLauncher.openSystemSettings("kcm_users")
@@ -158,26 +158,26 @@ PlasmaExtras.PlasmoidHeading {
             left: nameAndIcon.right
             right: parent.right
         }
-        Keys.onDownPressed: plasmoid.rootItem.contentArea.forceActiveFocus(Qt.TabFocusReason)
+        Keys.onDownPressed: kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason)
 
         PlasmaExtras.SearchField {
             id: searchField
             Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
             Layout.fillWidth: true
-            Layout.leftMargin: plasmoid.rootItem.backgroundMetrics.leftPadding
+            Layout.leftMargin: kickoff.backgroundMetrics.leftPadding
             focus: true
 
             Binding {
-                target: plasmoid.rootItem
+                target: kickoff
                 property: "searchField"
                 value: searchField
                 // there's only one header ever, so don't waste resources
                 restoreMode: Binding.RestoreNone
             }
             Connections {
-                target: plasmoid
+                target: kickoff
                 function onExpandedChanged() {
-                    if (plasmoid.expanded) {
+                    if (kickoff.expanded) {
                         searchField.clear()
                     }
                 }
@@ -186,11 +186,11 @@ PlasmaExtras.PlasmoidHeading {
                 searchField.forceActiveFocus(Qt.ShortcutFocusReason)
             }
             onAccepted: {
-                plasmoid.rootItem.contentArea.currentItem.action.triggered()
-                plasmoid.rootItem.contentArea.currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
+                kickoff.contentArea.currentItem.action.triggered()
+                kickoff.contentArea.currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
             }
             Keys.priority: Keys.AfterItem
-            Keys.forwardTo: plasmoid.rootItem.contentArea !== null ? plasmoid.rootItem.contentArea.view : []
+            Keys.forwardTo: kickoff.contentArea !== null ? kickoff.contentArea.view : []
             Keys.onLeftPressed: if (activeFocus) {
                 if (LayoutMirroring.enabled) {
                     nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
@@ -240,15 +240,15 @@ PlasmaExtras.PlasmoidHeading {
             PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
             PC3.ToolTip.visible: hovered
             Binding {
-                target: plasmoid
+                target: kickoff
                 property: "hideOnWindowDeactivate"
                 value: !plasmoid.configuration.pin
                 // there should be no other bindings, so don't waste resources
                 restoreMode: Binding.RestoreNone
             }
             KeyNavigation.backtab: configureButton
-            KeyNavigation.tab: if (plasmoid.rootItem.sideBar) {
-                return plasmoid.rootItem.sideBar
+            KeyNavigation.tab: if (kickoff.sideBar) {
+                return kickoff.sideBar
             } else {
                 return nextItemInFocusChain()
             }

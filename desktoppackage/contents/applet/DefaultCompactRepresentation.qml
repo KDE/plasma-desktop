@@ -11,6 +11,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 
 PlasmaCore.IconItem {
+    property PlasmoidItem plasmoidItem
     readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge]
         .includes(Plasmoid.location)
 
@@ -46,7 +47,7 @@ PlasmaCore.IconItem {
 
         anchors.fill: parent
         hoverEnabled: true
-        onPressed: wasExpanded = Plasmoid.expanded
-        onClicked: Plasmoid.expanded = !wasExpanded
+        onPressed: wasExpanded = plasmoidItem.expanded
+        onClicked: plasmoidItem.expanded = !wasExpanded
     }
 }

@@ -55,7 +55,7 @@ FocusScope {
         repeat: false
 
         onTriggered: {
-            if (!plasmoid.expanded || model === undefined || currentIndex == -1) {
+            if (!kicker.expanded || model === undefined || currentIndex == -1) {
                 return;
             }
 
@@ -64,7 +64,7 @@ FocusScope {
             }
 
             // Gets reenabled after the dialog spawn causes a focus-in on the dialog window.
-            plasmoid.hideOnWindowDeactivate = false;
+            kicker.hideOnWindowDeactivate = false;
 
             itemList.childDialog = itemListDialogComponent.createObject(itemList);
             itemList.childDialog.focusParent = itemList;
@@ -164,7 +164,7 @@ FocusScope {
                             return;
                         }
 
-                        if (currentItem == null || !currentItem.hasChildren || !plasmoid.expanded) {
+                        if (currentItem == null || !currentItem.hasChildren || !kicker.expanded) {
                             dialogSpawnTimer.stop();
 
                             return;
@@ -232,7 +232,7 @@ FocusScope {
                     } else if (event.key === Qt.Key_Left && dialog != null) {
                         dialog.destroy();
                     } else if (event.key === Qt.Key_Escape) {
-                        plasmoid.expanded = false;
+                        kicker.expanded = false;
                     } else if (event.key === Qt.Key_Tab) {
                         //do nothing, and skip appending text
                     } else if (event.text !== "") {

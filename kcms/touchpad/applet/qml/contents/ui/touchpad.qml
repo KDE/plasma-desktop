@@ -15,7 +15,7 @@ import org.kde.plasma.plasma5support 2.0 as P5Support
 
 import org.kde.plasma.plasmoid 2.0
 
-Item {
+PlasmoidItem {
     id: root
 
     // Don't de-duplicate `touchpadEnabled` expression using `hasTouchpad`
@@ -26,7 +26,6 @@ Item {
     readonly property bool touchpadEnabled: typeof dataSource.data.touchpad !== "undefined" && dataSource.data.touchpad.workingTouchpadFound
         && dataSource.data.touchpad.enabled
 
-    Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.icon: touchpadEnabled ? "input-touchpad-on" : "input-touchpad-off"
     // Touchpad being enabled is normal; only show the applet when it's disabled
     Plasmoid.status: {
@@ -39,7 +38,7 @@ Item {
         }
     }
 
-    Plasmoid.toolTipSubText: {
+    toolTipSubText: {
         if (!hasTouchpad) {
             return i18n("No touchpad was found");
         } else if (touchpadEnabled) {
@@ -55,7 +54,7 @@ Item {
         connectedSources: dataSource.sources
     }
 
-    Plasmoid.compactRepresentation: PlasmaCore.IconItem {
+   compactRepresentation: PlasmaCore.IconItem {
         implicitWidth: PlasmaCore.Units.iconSizes.small
         implicitHeight: PlasmaCore.Units.iconSizes.small
 
@@ -64,7 +63,7 @@ Item {
 
         PlasmaCore.ToolTipArea {
             mainText: plasmoid.title
-            subText: plasmoid.toolTipSubText
+            subText: toolTipSubText
         }
 
         MouseArea {
@@ -72,19 +71,19 @@ Item {
 
             anchors.fill: parent
             onClicked: {
-                plasmoid.expanded = !plasmoid.expanded;
+                root.expanded = !root.expanded;
             }
         }
     }
 
     // This is only accessible from System Tray, when hidden in the popup
     // and you click the list item text instead of the icon
-    Plasmoid.fullRepresentation: Item {
+   fullRepresentation: Item {
 
         PlasmaExtras.PlaceholderMessage {
             anchors.centerIn: parent
             width: parent.width - (PlasmaCore.Units.largeSpacing * 8)
-            text: plasmoid.toolTipSubText
+            text: root.toolTipSubText
             iconName: plasmoid.icon
         }
     }

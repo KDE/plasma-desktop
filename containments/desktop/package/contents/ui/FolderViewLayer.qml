@@ -155,11 +155,11 @@ FocusScope {
     }
 
     Connections {
-        target: plasmoid
+        target: root
 
         function onExpandedChanged() {
             if (root.isPopup) {
-                if (plasmoid.expanded) {
+                if (root.expanded) {
                     folderView.currentIndex = -1;
                     folderView.forceActiveFocus();
                     folderView.positionViewAtBeginning();
@@ -171,10 +171,6 @@ FocusScope {
                     folderView.cancelRename();
                 }
             }
-        }
-
-        function onExternalData(mimetype, data) {
-            plasmoid.configuration.url = data
         }
     }
 
@@ -287,7 +283,7 @@ FocusScope {
             // propagates recursively) and that confuses the Label, hence the temp property.
             readonly property bool active: (plasmoid.configuration.labelMode !== 0)
 
-            readonly property bool showPin: root.isPopup && plasmoid.compactRepresentationItem && plasmoid.compactRepresentationItem.visible
+            readonly property bool showPin: root.isPopup && root.compactRepresentationItem && root.compactRepresentationItem.visible
 
             width: parent.width
             height: active ? labelHeight : 0
@@ -299,7 +295,7 @@ FocusScope {
 
             onVisibleChanged: {
                 if (root.isPopup && !visible) {
-                    plasmoid.hideOnWindowDeactivate = true;
+                    root.hideOnWindowDeactivate = true;
                 }
             }
 
@@ -371,7 +367,7 @@ FocusScope {
                     height: width
                     checkable: true
                     icon.name: "window-pin"
-                    onCheckedChanged: plasmoid.hideOnWindowDeactivate = !checked
+                    onCheckedChanged: root.hideOnWindowDeactivate = !checked
                 }
             }
 

@@ -1,4 +1,4 @@
-/*
+    /*
     SPDX-FileCopyrightText: 2014-2015 Eike Hein <hein@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
@@ -13,7 +13,7 @@ import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
-Item {
+PlasmoidItem {
     id: kicker
 
     anchors.fill: parent
@@ -22,14 +22,14 @@ Item {
 
     property bool isDash: plasmoid.pluginName === "org.kde.plasma.kickerdash"
 
-    Plasmoid.switchWidth: isDash || !Plasmoid.fullRepresentationItem ? 0 : Plasmoid.fullRepresentationItem.Layout.minimumWidth
-    Plasmoid.switchHeight: isDash || !Plasmoid.fullRepresentationItem ? 0 : Plasmoid.fullRepresentationItem.Layout.minimumHeight
+    switchWidth: isDash || !fullRepresentationItem ? 0 :fullRepresentationItem.Layout.minimumWidth
+    switchHeight: isDash || !fullRepresentationItem ? 0 :fullRepresentationItem.Layout.minimumHeight
 
     // this is a bit of a hack to prevent Plasma from spawning a dialog on its own when we're Dash
-    Plasmoid.preferredRepresentation: isDash ? Plasmoid.fullRepresentation : null
+   preferredRepresentation: isDash ?fullRepresentation : null
 
-    Plasmoid.compactRepresentation: isDash ? null : compactRepresentation
-    Plasmoid.fullRepresentation: isDash ? compactRepresentation : menuRepresentation
+   compactRepresentation: isDash ? null : compactRepresentation
+   fullRepresentation: isDash ? compactRepresentation : menuRepresentation
 
     property Component itemListDialogComponent: Qt.createComponent(Qt.resolvedUrl("./ItemListDialog.qml"))
     property Item dragSource: null
@@ -71,7 +71,8 @@ Item {
         flat: kicker.isDash || plasmoid.configuration.limitDepth
         sorted: plasmoid.configuration.alphaSort
         showSeparators: !kicker.isDash
-        appletInterface: plasmoid
+        // TODO: appletInterface property now can be ported to "applet" and have the real Applet* assigned directly
+        appletInterface: kicker
 
         showAllApps: kicker.isDash
         showAllAppsCategorized: true
@@ -222,7 +223,7 @@ Item {
     }
 
     Connections {
-        target: plasmoid
+        target: kicker
 
         function onExpandedChanged(expanded) {
             if (expanded) {
@@ -248,7 +249,7 @@ Item {
         }
 
         windowSystem.focusIn.connect(enableHideOnWindowDeactivate);
-        plasmoid.hideOnWindowDeactivate = true;
+        kicker.hideOnWindowDeactivate = true;
 
         if (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
             plasmoid.setAction("menuedit", i18n("Edit Applications…"), "kmenuedit");

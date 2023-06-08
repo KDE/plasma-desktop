@@ -908,7 +908,7 @@ Kicker.DashboardWindow {
 
                             onActionTriggered: {
                                 if (Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument) === true) {
-                                    plasmoid.expanded = false;
+                                    kicker.expanded = false;
                                 }
                             }
 

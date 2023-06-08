@@ -20,13 +20,13 @@ Kicker.SubMenu {
     property bool aboutToBeDestroyed: false
 
     visible: false
-    hideOnWindowDeactivate: plasmoid.hideOnWindowDeactivate
+    hideOnWindowDeactivate: kicker.hideOnWindowDeactivate
     location: PlasmaCore.Types.Floating
     offset: PlasmaCore.Units.smallSpacing
 
     onWindowDeactivated: {
         if (!aboutToBeDestroyed) {
-            plasmoid.expanded = false;
+            kicker.expanded = false;
         }
     }
 

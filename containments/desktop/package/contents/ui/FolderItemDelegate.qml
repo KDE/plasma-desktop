@@ -557,7 +557,7 @@ Item {
             }
 
             Component.onCompleted: {
-                if (root.isContainment && main.GridView.view.isRootView && root.GraphicsInfo.api === GraphicsInfo.OpenGL) {
+                if (Plasmoid.isContainment && main.GridView.view.isRootView && root.GraphicsInfo.api === GraphicsInfo.OpenGL) {
                     frameLoader.textShadow = textShadowComponent.createObject(frameLoader);
                     frameLoader.iconShadow = iconShadowComponent.createObject(frameLoader);
                 }

@@ -161,9 +161,9 @@ FocusScope {
     }
 
     Connections {
-        target: plasmoid
+        target: root
         function onExpandedChanged() {
-            if (plasmoid.expanded && dir.status === Folder.FolderModel.Ready && !gridView.model) {
+            if (root.expanded && dir.status === Folder.FolderModel.Ready && !gridView.model) {
                 gridView.model = positioner;
             }
         }
@@ -1214,7 +1214,7 @@ FocusScope {
             appletInterface: plasmoid
 
             onListingCompleted: {
-                if (!gridView.model && plasmoid.expanded) {
+                if (!gridView.model && root.expanded) {
                     gridView.model = positioner;
                     gridView.currentIndex = isPopup ? 0 : -1;
                 } else if (goingBack) {

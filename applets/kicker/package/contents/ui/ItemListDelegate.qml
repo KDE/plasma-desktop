@@ -48,7 +48,7 @@ Item {
 
     onActionTriggered: {
         if (Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument) === true) {
-            plasmoid.expanded = false;
+            kicker.expanded = false;
         }
     }
 
@@ -100,7 +100,7 @@ Item {
         onReleased: mouse => {
             if (pressed && !item.hasChildren) {
                 item.ListView.view.model.trigger(index, "", null);
-                plasmoid.expanded = false;
+                kicker.expanded = false;
             }
 
             pressed = false;
@@ -267,7 +267,7 @@ Item {
             if (!item.hasChildren) {
                 event.accepted = true;
                 item.ListView.view.model.trigger(index, "", null);
-                plasmoid.expanded = false;
+                kicker.expanded = false;
             }
         }
     }

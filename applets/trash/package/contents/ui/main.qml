@@ -18,7 +18,7 @@ import org.kde.plasma.private.trash 1.0 as TrashPrivate
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
 
-DragDrop.DropArea {
+PlasmoidItem {
     id: root
 
     readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
@@ -44,12 +44,9 @@ DragDrop.DropArea {
     readonly property int formFactor: plasmoid.formFactor
     readonly property bool constrained: formFactor === PlasmaCore.Types.Vertical || formFactor === PlasmaCore.Types.Horizontal
 
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
     Plasmoid.icon: (dirModel.count > 0) ? "user-trash-full": "user-trash"
     Plasmoid.onActivated: action_open()
-
-    preventStealing: true
 
     Keys.onPressed: {
         switch (event.key) {
@@ -65,18 +62,23 @@ DragDrop.DropArea {
     Accessible.description: toolTip.subText
     Accessible.role: Accessible.Button
 
-    onDragEnter: containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
-    onDragLeave: containsAcceptableDrag = false
+    DragDrop.DropArea {
+        id: dropArea
+        anchors.fill: parent
+        preventStealing: true
+        onDragEnter: containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
+        onDragLeave: containsAcceptableDrag = false
 
-    onDrop: {
-        containsAcceptableDrag = false
+        onDrop: {
+            containsAcceptableDrag = false
 
-        var trashableUrls = TrashPrivate.Trash.trashableUrls(event.mimeData.urls)
-        if (trashableUrls.length > 0) {
-            TrashPrivate.Trash.trashUrls(trashableUrls)
-            event.accept(Qt.MoveAction)
-        } else {
-            event.accept(Qt.IgnoreAction) // prevent Plasma from spawning an applet
+            var trashableUrls = TrashPrivate.Trash.trashableUrls(event.mimeData.urls)
+            if (trashableUrls.length > 0) {
+                TrashPrivate.Trash.trashUrls(trashableUrls)
+                event.accept(Qt.MoveAction)
+            } else {
+                event.accept(Qt.IgnoreAction) // prevent Plasma from spawning an applet
+            }
         }
     }
 
@@ -128,7 +130,7 @@ DragDrop.DropArea {
             top: parent.top
             bottom: constrained ? parent.bottom: text.top
         }
-        active: toolTip.containsMouse || root.containsAcceptableDrag
+        active: toolTip.containsMouse || dropArea.containsAcceptableDrag
     }
 
     DropShadow {

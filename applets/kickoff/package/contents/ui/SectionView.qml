@@ -25,7 +25,7 @@ KickoffGridView {
 
     // Using implicitWidth instead of width so that delegates don't
     // become super big when using the new popup resizing feature.
-    view.cellWidth: Math.floor((view.implicitWidth - view.leftMargin - view.rightMargin) / (plasmoid.rootItem.minimumGridRowCount * 1.75))
+    view.cellWidth: Math.floor((view.implicitWidth - view.leftMargin - view.rightMargin) / (kickoff.minimumGridRowCount * 1.75))
     view.cellHeight: view.cellWidth
 
     delegate: PC3.AbstractButton {

@@ -22,8 +22,8 @@ PlasmaExtras.PlasmoidHeading {
     contentHeight: leaveButtons.implicitHeight
 
     // We use an increased vertical padding to improve touch usability
-    leftPadding: plasmoid.rootItem.backgroundMetrics.leftPadding
-    rightPadding: plasmoid.rootItem.backgroundMetrics.rightPadding
+    leftPadding: kickoff.backgroundMetrics.leftPadding
+    rightPadding: kickoff.backgroundMetrics.rightPadding
     topPadding: PlasmaCore.Units.smallSpacing * 2
     bottomPadding: PlasmaCore.Units.smallSpacing * 2
 
@@ -32,7 +32,7 @@ PlasmaExtras.PlasmoidHeading {
     topInset: 0
     bottomInset: 0
 
-    spacing: plasmoid.rootItem.backgroundMetrics.spacing
+    spacing: kickoff.backgroundMetrics.spacing
     position: PC3.ToolBar.Footer
 
     PC3.TabBar {
@@ -95,7 +95,7 @@ PlasmaExtras.PlasmoidHeading {
             icon.height: PlasmaCore.Units.iconSizes.smallMedium
             icon.name: "applications-other"
             text: i18n("Applications")
-            KeyNavigation.backtab: plasmoid.rootItem.contentArea ? plasmoid.rootItem.contentArea : null
+            KeyNavigation.backtab: kickoff.contentArea ? kickoff.contentArea : null
         }
         PC3.TabButton {
             id: placesTab
@@ -111,9 +111,9 @@ PlasmaExtras.PlasmoidHeading {
         }
 
         Connections {
-            target: plasmoid
+            target: kickoff
             function onExpandedChanged() {
-                if (plasmoid.expanded) {
+                if (kickoff.expanded) {
                     tabBar.currentIndex = 0
                 }
             }
@@ -149,7 +149,7 @@ PlasmaExtras.PlasmoidHeading {
                 leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
             }
         }
-        Keys.onUpPressed: plasmoid.rootItem.sideBar.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onUpPressed: kickoff.sideBar.forceActiveFocus(Qt.BacktabFocusReason)
     }
 
     LeaveButtons {
@@ -161,11 +161,11 @@ PlasmaExtras.PlasmoidHeading {
             leftMargin: root.spacing
         }
         shouldCollapseButtons: root.contentWidth + root.spacing + buttonImplicitWidth > root.width
-        Keys.onUpPressed: plasmoid.rootItem.contentArea.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onUpPressed: kickoff.contentArea.forceActiveFocus(Qt.BacktabFocusReason)
     }
 
     Behavior on height {
-        enabled: plasmoid.expanded
+        enabled: kickoff.expanded
         NumberAnimation {
             duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InQuad

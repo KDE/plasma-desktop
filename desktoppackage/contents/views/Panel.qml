@@ -23,7 +23,7 @@ Item {
     property Item containment
 
     property bool floatingPrefix: floatingPanelSvg.usedPrefix === "floating"
-    readonly property bool verticalPanel: containment && containment.formFactor === PlasmaCore.Types.Vertical
+    readonly property bool verticalPanel: containment && containment.plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     readonly property real spacingAtMinSize: Math.round(Math.max(1, (verticalPanel ? root.width : root.height) - PlasmaCore.Units.iconSizes.smallMedium)/2)
     PlasmaCore.FrameSvgItem {
@@ -43,10 +43,10 @@ Item {
     readonly property int leftPadding: Math.round(Math.min(thickPanelSvg.fixedMargins.left, spacingAtMinSize));
     readonly property int rightPadding: Math.round(Math.min(thickPanelSvg.fixedMargins.right, spacingAtMinSize));
 
-    readonly property int bottomFloatingPadding: floating && containment.location !== PlasmaCore.Types.TopEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.bottom : 8) : 0
-    readonly property int leftFloatingPadding: floating && containment.location !== PlasmaCore.Types.RightEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.left   : 8) : 0
-    readonly property int rightFloatingPadding: floating && containment.location !== PlasmaCore.Types.LeftEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.right  : 8) : 0
-    readonly property int topFloatingPadding: floating && containment.location !== PlasmaCore.Types.BottomEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.top    : 8) : 0
+    readonly property int bottomFloatingPadding: floating && containment.plasmoid.location !== PlasmaCore.Types.TopEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.bottom : 8) : 0
+    readonly property int leftFloatingPadding: floating && containment.plasmoid.location !== PlasmaCore.Types.RightEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.left   : 8) : 0
+    readonly property int rightFloatingPadding: floating && containment.plasmoid.location !== PlasmaCore.Types.LeftEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.right  : 8) : 0
+    readonly property int topFloatingPadding: floating && containment.plasmoid.location !== PlasmaCore.Types.BottomEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.top    : 8) : 0
 
     readonly property int minPanelHeight: translucentItem.minimumDrawingHeight
     readonly property int minPanelWidth: translucentItem.minimumDrawingWidth
@@ -133,7 +133,7 @@ Item {
         visible: floatingness === 0 && panelOpacity !== 1
         enabledBorders: panel.enabledBorders
         anchors.fill: parent
-        imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
+        imagePath: containment && containment.plasmoid.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
     }
     PlasmaCore.FrameSvgItem {
         id: floatingTranslucentItem
@@ -145,7 +145,7 @@ Item {
             rightMargin: Math.round(rightFloatingPadding * floatingness)
             topMargin: Math.round(topFloatingPadding * floatingness)
         }
-        imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
+        imagePath: containment && containment.plasmoid.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
     }
     PlasmaCore.FrameSvgItem {
         id: floatingOpaqueItem
@@ -158,7 +158,7 @@ Item {
             rightMargin: Math.round(rightFloatingPadding * floatingness)
             topMargin: Math.round(topFloatingPadding * floatingness)
         }
-        imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
+        imagePath: containment && containment.plasmoid.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
     }
     PlasmaCore.FrameSvgItem {
         id: opaqueItem
@@ -166,7 +166,7 @@ Item {
         opacity: panelOpacity
         enabledBorders: panel.enabledBorders
         anchors.fill: parent
-        imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
+        imagePath: containment && containment.plasmoid.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
     }
 
     Keys.onEscapePressed: {
@@ -204,9 +204,9 @@ Item {
         // be still read as the initial value here, before the animation starts.
         if (containment) {
             if (opaqueApplets) {
-                containment.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered
+                containment.plasmoid.containmentDisplayHints |= PlasmaCore.Types.DesktopFullyCovered
             } else {
-                containment.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered
+                containment.plasmoid.containmentDisplayHints &= ~PlasmaCore.Types.DesktopFullyCovered
             }
         }
     }
@@ -216,7 +216,7 @@ Item {
             return "";
         }
         var pre;
-        switch (containment.location) {
+        switch (containment.plasmoid.location) {
         case PlasmaCore.Types.LeftEdge:
             pre = "west";
             break;
@@ -243,7 +243,7 @@ Item {
         containment.parent = containmentParent;
         containment.visible = true;
         containment.anchors.fill = containmentParent;
-        containment.locationChanged.connect(adjustPrefix);
+        containment.plasmoid.locationChanged.connect(adjustPrefix);
         adjustPrefix();
     }
 
@@ -274,7 +274,7 @@ Item {
                 return;
             }
 
-            return containment.backgroundHints;
+            return containment.plasmoid.backgroundHints;
         }
         restoreMode: Binding.RestoreBinding
     }
@@ -302,7 +302,7 @@ Item {
                 return "";
             }
             var prefix = ""
-            switch (root.containment.location) {
+            switch (root.containment.plasmoid.location) {
                 case PlasmaCore.Types.LeftEdge:
                     prefix = "west-active-tab";
                     break;

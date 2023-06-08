@@ -69,7 +69,7 @@ T.ItemDelegate {
             actionList = allActions;
         }
         if (actionList && actionList.length > 0) {
-            ActionMenu.plasmoid = plasmoid;
+            ActionMenu.plasmoid = kickoff;
             ActionMenu.menu.visualParent = root;
             if (x !== undefined && y !== undefined) {
                 ActionMenu.menu.open(x, y);
@@ -114,8 +114,8 @@ T.ItemDelegate {
             view.currentIndex = index
             // if successfully triggered, close popup
             if (view.model.trigger && view.model.trigger(index, "", null)) {
-                if (plasmoid.hideOnWindowDeactivate) {
-                    plasmoid.expanded = false;
+                if (kickoff.hideOnWindowDeactivate) {
+                    kickoff.expanded = false;
                 }
             }
         }
@@ -140,7 +140,7 @@ T.ItemDelegate {
         hoverEnabled: root.view && !root.view.movedWithKeyboard
             // Fix VerticalStackView animation causing view currentIndex
             // to change while delegates are moving under the mouse cursor
-            && plasmoid.fullRepresentationItem && !plasmoid.fullRepresentationItem.contentItem.busy
+            && kickoff.fullRepresentationItem && !kickoff.fullRepresentationItem.contentItem.busy
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         drag {
             axis: Drag.XAndYAxis

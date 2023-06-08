@@ -35,7 +35,7 @@ DragDrop.DropArea {
     preventStealing: true
 
     function toggle() {
-        plasmoid.expanded = !plasmoid.expanded;
+        root.expanded = !root.expanded;
     }
 
     PlasmaCore.IconItem {

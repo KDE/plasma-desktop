@@ -16,7 +16,7 @@ BasePage {
     sideBarComponent: KickoffListView {
         id: sideBar
         focus: true // needed for Loaders
-        model: plasmoid.rootItem.rootModel
+        model: kickoff.rootModel
         // needed otherwise app displayed at top-level will show a first character as group.
         section.property: ""
         delegate: KickoffListDelegate {
@@ -71,7 +71,7 @@ BasePage {
         // NOTE: The 0 index modelForRow isn't supposed to be used. That's just how it works.
         // But to trigger model data update, set initial value to 0
         property int appsModelRow: 0
-        readonly property Kicker.AppsModel appsModel: plasmoid.rootItem.rootModel.modelForRow(appsModelRow)
+        readonly property Kicker.AppsModel appsModel: kickoff.rootModel.modelForRow(appsModelRow)
         focus: true
         initialItem: preferredFavoritesViewComponent
 
@@ -82,7 +82,7 @@ BasePage {
                 objectName: "favoritesListView"
                 mainContentView: true
                 focus: true
-                model: plasmoid.rootItem.rootModel.favoritesModel
+                model: kickoff.rootModel.favoritesModel
             }
         }
 
@@ -92,7 +92,7 @@ BasePage {
                 id: favoritesGridView
                 objectName: "favoritesGridView"
                 focus: true
-                model: plasmoid.rootItem.rootModel.favoritesModel
+                model: kickoff.rootModel.favoritesModel
             }
         }
 
@@ -196,10 +196,10 @@ BasePage {
             }
         }
         Connections {
-            target: plasmoid
+            target: kickoff
             function onExpandedChanged() {
-                if (plasmoid.expanded) {
-                    plasmoid.rootItem.contentArea.currentItem.forceActiveFocus()
+                if (kickoff.expanded) {
+                    kickoff.contentArea.currentItem.forceActiveFocus()
                 }
             }
         }
@@ -208,14 +208,14 @@ BasePage {
     // StackView.status and visible. This way the bindings are reset when
     // NormalPage is Activated again.
     Binding {
-        target: plasmoid.rootItem
+        target: kickoff
         property: "sideBar"
         value: root.sideBarItem
         when: root.T.StackView.status === T.StackView.Active && root.visible
         restoreMode: Binding.RestoreBinding
     }
     Binding {
-        target: plasmoid.rootItem
+        target: kickoff
         property: "contentArea"
         value: root.contentAreaItem.currentItem // NOT just root.contentAreaItem
         when: root.T.StackView.status === T.StackView.Active && root.visible

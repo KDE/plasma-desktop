@@ -35,7 +35,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
         }
         ScriptAction {
             script: {
-                appletContainer.applet.action("remove").trigger();
+                appletContainer.applet.plasmoid.action("remove").trigger();
                 appletContainer.editMode = false;
             }
         }
@@ -90,8 +90,8 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 elementId: "rotate"
                 toolTip: !rotateHandle.pressed ? i18n("Rotate") : ""
                 iconSize: overlay.iconSize
-                action: applet ? applet.action("rotate") : null
-                down: !rotateHandle.pressed
+                action: applet ? applet.plasmoid.action("rotate") : null
+                down: rotateHandle.pressed
                 Component.onCompleted: {
                     if (action !== null) {
                         action.enabled = true;
@@ -166,7 +166,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 elementId: "configure"
                 iconSize: overlay.iconSize
                 visible: qAction && qAction.enabled || false
-                qAction: applet ? applet.action("configure") : null
+                qAction: applet ? applet.plasmoid.action("configure") : null
                 Component.onCompleted: {
                     if (qAction) {
                         qAction.enabled = true;
@@ -179,21 +179,21 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 elementId: "showbackground"
                 toolTip: checked ? i18n("Hide Background") : i18n("Show Background")
                 iconSize: overlay.iconSize
-                visible: (applet.backgroundHints & PlasmaCore.Types.ConfigurableBackground)
-                checked: applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground || applet.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground
+                visible: (applet.plasmoid.backgroundHints & PlasmaCore.Types.ConfigurableBackground)
+                checked: applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground || applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground
                 checkable: true
                 onClicked: {
                     if (checked) {
-                        if (applet.backgroundHints & PlasmaCore.Types.StandardBackground || applet.backgroundHints & PlasmaCore.Types.TranslucentBackground) {
-                            applet.userBackgroundHints = applet.backgroundHints;
+                        if (applet.plasmoid.backgroundHints & PlasmaCore.Types.StandardBackground || applet.plasmoid.backgroundHints & PlasmaCore.Types.TranslucentBackground) {
+                            applet.plasmoid.userBackgroundHints = applet.plasmoid.backgroundHints;
                         } else {
-                            applet.userBackgroundHints = PlasmaCore.Types.StandardBackground;
+                            applet.plasmoid.userBackgroundHints = PlasmaCore.Types.StandardBackground;
                         }
                     } else {
-                        if (applet.backgroundHints & PlasmaCore.Types.ShadowBackground || applet.backgroundHints & PlasmaCore.Types.NoBackground) {
-                            applet.userBackgroundHints = applet.backgroundHints;
+                        if (applet.plasmoid.backgroundHints & PlasmaCore.Types.ShadowBackground || applet.plasmoid.backgroundHints & PlasmaCore.Types.NoBackground) {
+                            applet.plasmoid.userBackgroundHints = applet.plasmoid.backgroundHints;
                         } else {
-                            applet.userBackgroundHints = PlasmaCore.Types.ShadowBackground;
+                            applet.plasmoid.userBackgroundHints = PlasmaCore.Types.ShadowBackground;
                         }
                     }
                 }
@@ -231,7 +231,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                     if (!applet) {
                         return false;
                     }
-                    var a = applet.action("remove");
+                    var a = applet.plasmoid.action("remove");
                     return a && a.enabled || false;
                 }
                 // we don't set action, since we want to catch the button click,
@@ -243,7 +243,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                     removeAnim.restart();
                 }
                 Component.onCompleted: {
-                    var a = applet.action("remove");
+                    var a = applet.plasmoid.action("remove");
                     if (a) {
                         a.enabled = true;
                     }

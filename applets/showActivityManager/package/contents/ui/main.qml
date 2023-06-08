@@ -16,7 +16,7 @@ import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 
 import org.kde.activities 0.1 as Activities
 
-DND.DropArea {
+PlasmoidItem {
     id: root
 
     width: PlasmaCore.Units.iconSizes.large
@@ -40,72 +40,76 @@ DND.DropArea {
     property bool showActivityIcon: plasmoid.configuration.showActivityIcon
 
     Plasmoid.onActivated: ActivitySwitcher.Backend.toggleActivityManager()
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    preferredRepresentation: fullRepresentation
 
-    onDragEnter: {
-        ActivitySwitcher.Backend.setDropMode(true);
-    }
-
-    onDragLeave: {
-        ActivitySwitcher.Backend.setDropMode(false);
-    }
-
-    Activities.ActivityInfo {
-        id: currentActivity
-        activityId: ":current"
-    }
-
-    MouseArea {
+    DND.DropArea {
+        id: dropArea
         anchors.fill: parent
 
-        activeFocusOnTab: true
+        onDragEnter: {
+            ActivitySwitcher.Backend.setDropMode(true);
+        }
 
-        Keys.onPressed: {
-            switch (event.key) {
-            case Qt.Key_Space:
-            case Qt.Key_Enter:
-            case Qt.Key_Return:
-            case Qt.Key_Select:
-                Plasmoid.activated();
-                break;
+        onDragLeave: {
+            ActivitySwitcher.Backend.setDropMode(false);
+        }
+
+        Activities.ActivityInfo {
+            id: currentActivity
+            activityId: ":current"
+        }
+
+        MouseArea {
+            anchors.fill: parent
+
+            activeFocusOnTab: true
+
+            Keys.onPressed: {
+                switch (event.key) {
+                case Qt.Key_Space:
+                case Qt.Key_Enter:
+                case Qt.Key_Return:
+                case Qt.Key_Select:
+                    Plasmoid.activated();
+                    break;
+                }
             }
+            Accessible.name: name.text ? i18nc("@info:tooltip", "Current activity is %1", name.text) : ""
+            Accessible.description: tooltip.subText
+            Accessible.role: Accessible.Button
+
+            onClicked: Plasmoid.activated()
         }
-        Accessible.name: name.text ? i18nc("@info:tooltip", "Current activity is %1", name.text) : ""
-        Accessible.description: tooltip.subText
-        Accessible.role: Accessible.Button
 
-        onClicked: Plasmoid.activated()
-    }
-
-    PlasmaCore.ToolTipArea {
-        id: tooltip
-        anchors.fill: parent
-        mainText: i18n("Show Activity Manager")
-        subText: i18n("Click to show the activity manager")
-    }
-
-    PlasmaCore.IconItem {
-        id: icon
-        height: Math.min(parent.height, parent.width)
-        width: height
-
-        source: !root.showActivityIcon ? "activities" :
-                currentActivity.icon == "" ? "activities" :
-                currentActivity.icon
-    }
-
-    PlasmaComponents3.Label {
-        id: name
-
-        anchors {
-            left: icon.right
-            leftMargin: PlasmaCore.Units.smallSpacing
+        PlasmaCore.ToolTipArea {
+            id: tooltip
+            anchors.fill: parent
+            mainText: i18n("Show Activity Manager")
+            subText: i18n("Click to show the activity manager")
         }
-        height: parent.height
-        width: implicitWidth
-        visible: root.showActivityName && !root.inVertical
 
-        text: currentActivity.name
+        PlasmaCore.IconItem {
+            id: icon
+            height: Math.min(parent.height, parent.width)
+            width: height
+
+            source: !root.showActivityIcon ? "activities" :
+                    currentActivity.icon == "" ? "activities" :
+                    currentActivity.icon
+        }
+
+        PlasmaComponents3.Label {
+            id: name
+
+            anchors {
+                left: icon.right
+                leftMargin: PlasmaCore.Units.smallSpacing
+            }
+            height: parent.height
+            width: implicitWidth
+            visible: root.showActivityName && !root.inVertical
+
+            text: currentActivity.name
+        }
     }
 }
-

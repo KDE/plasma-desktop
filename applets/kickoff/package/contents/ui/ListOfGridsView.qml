@@ -22,7 +22,7 @@ KickoffListView {
 
         allAppsSection: section
         isCurrentSectionGrid: ListView.isCurrentItem
-        isSearchFieldActive: plasmoid.rootItem.contentArea === root && plasmoid.rootItem.searchField.activeFocus
+        isSearchFieldActive: kickoff.contentArea === root && kickoff.searchField.activeFocus
         parentView: ListView.view
         gridIndex: index
 

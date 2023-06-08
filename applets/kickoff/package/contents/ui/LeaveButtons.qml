@@ -17,11 +17,11 @@ RowLayout {
     id: root
     readonly property alias buttonImplicitWidth: buttonRepeaterRow.implicitWidth
     property bool shouldCollapseButtons: false
-    spacing: plasmoid.rootItem.backgroundMetrics.spacing
+    spacing: kickoff.backgroundMetrics.spacing
 
     Kicker.SystemModel {
         id: systemModel
-        favoritesModel: plasmoid.rootItem.rootModel.systemFavoritesModel
+        favoritesModel: kickoff.rootModel.systemFavoritesModel
     }
 
     component FilteredModel : KItemModels.KSortFilterProxyModel {

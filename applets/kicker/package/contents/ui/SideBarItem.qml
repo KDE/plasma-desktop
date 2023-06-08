@@ -31,7 +31,7 @@ Item {
 
     onActionTriggered: (actionId, actionArgument) => {
         if (Tools.triggerAction(repeater.model, model.index, actionId, actionArgument) === true) {
-            plasmoid.expanded = false;
+            kicker.expanded = false;
         }
     }
 
@@ -92,7 +92,7 @@ Item {
         onReleased: {
             if (pressed) {
                 repeater.model.trigger(index, "", null);
-                plasmoid.expanded = false;
+                kicker.expanded = false;
             }
 
             pressed = false;

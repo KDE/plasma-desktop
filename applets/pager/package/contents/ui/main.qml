@@ -18,7 +18,7 @@ import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
 
-MouseArea {
+PlasmoidItem {
     id: root
 
     readonly property bool isActivityPager: Plasmoid.pluginName === "org.kde.plasma.activitypager"
@@ -35,7 +35,6 @@ MouseArea {
     Layout.maximumWidth: !root.vertical ? Math.floor(height * aspectRatio) : Infinity
     Layout.maximumHeight: root.vertical ? Math.floor(width / aspectRatio) : Infinity
 
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.status: pagerModel.shouldShowPager ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
 
     Layout.fillWidth: root.vertical
@@ -47,11 +46,6 @@ MouseArea {
     property int dragSwitchDesktopIndex: -1
 
     property int wheelDelta: 0
-
-    anchors.fill: parent
-    acceptedButtons: Qt.NoButton
-
-    hoverEnabled: true
 
     function colorWithAlpha(color: color, alpha: real): color {
         return Qt.rgba(color.r, color.g, color.b, alpha)
@@ -109,47 +103,55 @@ MouseArea {
         return text
     }
 
-    onContainsMouseChanged: {
-        if (!containsMouse && dragging) {
-            // Somewhat heavy-handed way to clean up after a window delegate drag
-            // exits the window.
-            pagerModel.refresh();
-            dragging = false;
-        }
-    }
+    MouseArea {
+        id: rootMouseArea
+        anchors.fill: parent
 
-    onWheel: {
-        // Magic number 120 for common "one click, see:
-        // https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
-        wheelDelta += wheel.angleDelta.y || wheel.angleDelta.x;
+        acceptedButtons: Qt.NoButton
+        hoverEnabled: true
 
-        let increment = 0;
-
-        while (wheelDelta >= 120) {
-            wheelDelta -= 120;
-            increment++;
+        onContainsMouseChanged: {
+            if (!containsMouse && dragging) {
+                // Somewhat heavy-handed way to clean up after a window delegate drag
+                // exits the window.
+                pagerModel.refresh();
+                dragging = false;
+            }
         }
 
-        while (wheelDelta <= -120) {
-            wheelDelta += 120;
-            increment--;
-        }
+        onWheel: {
+            // Magic number 120 for common "one click, see:
+            // https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+            wheelDelta += wheel.angleDelta.y || wheel.angleDelta.x;
 
-        while (increment !== 0) {
-            if (increment < 0) {
-                const nextPage = Plasmoid.configuration.wrapPage?
-                    (pagerModel.currentPage + 1) % repeater.count :
-                    Math.min(pagerModel.currentPage + 1, repeater.count - 1);
-                pagerModel.changePage(nextPage);
-            } else {
-                const previousPage = Plasmoid.configuration.wrapPage ?
-                    (repeater.count + pagerModel.currentPage - 1) % repeater.count :
-                    Math.max(pagerModel.currentPage - 1, 0);
-                pagerModel.changePage(previousPage);
+            let increment = 0;
+
+            while (wheelDelta >= 120) {
+                wheelDelta -= 120;
+                increment++;
             }
 
-            increment += (increment < 0) ? 1 : -1;
-            wheelDelta = 0;
+            while (wheelDelta <= -120) {
+                wheelDelta += 120;
+                increment--;
+            }
+
+            while (increment !== 0) {
+                if (increment < 0) {
+                    const nextPage = Plasmoid.configuration.wrapPage?
+                        (pagerModel.currentPage + 1) % repeater.count :
+                        Math.min(pagerModel.currentPage + 1, repeater.count - 1);
+                    pagerModel.changePage(nextPage);
+                } else {
+                    const previousPage = Plasmoid.configuration.wrapPage ?
+                        (repeater.count + pagerModel.currentPage - 1) % repeater.count :
+                        Math.max(pagerModel.currentPage - 1, 0);
+                    pagerModel.changePage(previousPage);
+                }
+
+                increment += (increment < 0) ? 1 : -1;
+                wheelDelta = 0;
+            }
         }
     }
 

@@ -29,7 +29,7 @@ PC3.ToolButton {
         if (qAction) {
             qAction.trigger()
         }
-        if (!plasmoid.editMode) {
+        if (!plasmoid.containment.corona.editMode) {
             appletContainer.editMode = false;
         }
     }

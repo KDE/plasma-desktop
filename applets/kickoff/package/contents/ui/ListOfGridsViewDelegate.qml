@@ -37,8 +37,8 @@ KickoffGridView {
         z: root.currentItem && root.currentItem.Drag.active ?
             3 : 0
         opacity: view.activeFocus
-            || (plasmoid.rootItem.contentArea === root
-                && plasmoid.rootItem.searchField.activeFocus) || (root.isSearchFieldActive && root.isCurrentSectionGrid) ? 1 : (root.isCurrentSectionGrid ? 0.5 : 0)
+            || (kickoff.contentArea === root
+                && kickoff.searchField.activeFocus) || (root.isSearchFieldActive && root.isCurrentSectionGrid) ? 1 : (root.isCurrentSectionGrid ? 0.5 : 0)
         width: view.cellWidth
         height: view.cellHeight
         imagePath: "widgets/viewitem"

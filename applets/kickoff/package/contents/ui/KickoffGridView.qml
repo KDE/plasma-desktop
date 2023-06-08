@@ -73,8 +73,8 @@ EmptyPage {
         // There are lots of ways to try to center the content of a GridView
         // and many of them have bad visual flaws. This way works pretty well.
         // Not center aligning when there might be a scrollbar to keep click target positions consistent.
-        anchors.horizontalCenter: plasmoid.rootItem.mayHaveGridWithScrollBar ? undefined : parent.horizontalCenter
-        anchors.horizontalCenterOffset: if (plasmoid.rootItem.mayHaveGridWithScrollBar) {
+        anchors.horizontalCenter: kickoff.mayHaveGridWithScrollBar ? undefined : parent.horizontalCenter
+        anchors.horizontalCenterOffset: if (kickoff.mayHaveGridWithScrollBar) {
             if (root.mirrored) {
                 return verticalScrollBar.implicitWidth/2
             } else {
@@ -83,22 +83,22 @@ EmptyPage {
         } else {
             return 0
         }
-        width: Math.min(parent.width, Math.floor((parent.width - leftMargin - rightMargin - (plasmoid.rootItem.mayHaveGridWithScrollBar ? verticalScrollBar.implicitWidth : 0)) / cellWidth) * cellWidth + leftMargin + rightMargin)
+        width: Math.min(parent.width, Math.floor((parent.width - leftMargin - rightMargin - (kickoff.mayHaveGridWithScrollBar ? verticalScrollBar.implicitWidth : 0)) / cellWidth) * cellWidth + leftMargin + rightMargin)
 
         Accessible.description: i18n("Grid with %1 rows, %2 columns", rows, columns) // can't use i18np here
 
 
         implicitWidth: {
-            let w = view.cellWidth * plasmoid.rootItem.minimumGridRowCount + leftMargin + rightMargin
-            if (plasmoid.rootItem.mayHaveGridWithScrollBar) {
+            let w = view.cellWidth * kickoff.minimumGridRowCount + leftMargin + rightMargin
+            if (kickoff.mayHaveGridWithScrollBar) {
                 w += verticalScrollBar.implicitWidth
             }
             return w
         }
-        implicitHeight: view.cellHeight * plasmoid.rootItem.minimumGridRowCount + topMargin + bottomMargin
+        implicitHeight: view.cellHeight * kickoff.minimumGridRowCount + topMargin + bottomMargin
 
-        leftMargin: plasmoid.rootItem.backgroundMetrics.leftPadding
-        rightMargin: plasmoid.rootItem.backgroundMetrics.rightPadding
+        leftMargin: kickoff.backgroundMetrics.leftPadding
+        rightMargin: kickoff.backgroundMetrics.rightPadding
 
         cellHeight: KickoffSingleton.gridCellSize
         cellWidth: KickoffSingleton.gridCellSize
@@ -121,8 +121,8 @@ EmptyPage {
             z: root.currentItem && root.currentItem.Drag.active ?
                 3 : 0
             opacity: view.activeFocus
-                || (plasmoid.rootItem.contentArea === root
-                    && plasmoid.rootItem.searchField.activeFocus) ? 1 : 0.5
+                || (kickoff.contentArea === root
+                    && kickoff.searchField.activeFocus) ? 1 : 0.5
             width: view.cellWidth
             height: view.cellHeight
             imagePath: "widgets/viewitem"
@@ -167,9 +167,9 @@ EmptyPage {
         }
 
         Connections {
-            target: plasmoid
+            target: kickoff
             function onExpandedChanged() {
-                if (plasmoid.expanded) {
+                if (kickoff.expanded) {
                     view.currentIndex = 0
                     view.positionViewAtBeginning()
                 }
@@ -209,11 +209,11 @@ EmptyPage {
             // Implements the keyboard navigation described in https://www.w3.org/TR/wai-aria-practices-1.2/#grid
             if (count > 1) {
                 switch (event.key) {
-                    case Qt.Key_Left: if (!atLeft && !plasmoid.rootItem.searchField.activeFocus) {
+                    case Qt.Key_Left: if (!atLeft && !kickoff.searchField.activeFocus) {
                         moveCurrentIndexLeft()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
-                    case Qt.Key_H: if (!atLeft && !plasmoid.rootItem.searchField.activeFocus && event.modifiers & Qt.ControlModifier) {
+                    case Qt.Key_H: if (!atLeft && !kickoff.searchField.activeFocus && event.modifiers & Qt.ControlModifier) {
                         moveCurrentIndexLeft()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
@@ -225,11 +225,11 @@ EmptyPage {
                         moveCurrentIndexUp()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
-                    case Qt.Key_Right: if (!atRight && !plasmoid.rootItem.searchField.activeFocus) {
+                    case Qt.Key_Right: if (!atRight && !kickoff.searchField.activeFocus) {
                         moveCurrentIndexRight()
                         focusCurrentItem(event, Qt.TabFocusReason)
                     } break
-                    case Qt.Key_L: if (!atRight && !plasmoid.rootItem.searchField.activeFocus && event.modifiers & Qt.ControlModifier) {
+                    case Qt.Key_L: if (!atRight && !kickoff.searchField.activeFocus && event.modifiers & Qt.ControlModifier) {
                         moveCurrentIndexRight()
                         focusCurrentItem(event, Qt.TabFocusReason)
                     } break

@@ -278,7 +278,7 @@ MouseArea {
 
             PlasmaComponents3.ToolButton {
                 id: manageContainmentsButton
-                property QtObject qAction: plasmoid.globalAction("manage-containments")
+                property QtObject qAction: plasmoid.corona.action("manage-containments")
                 text: qAction.text
                 visible: qAction.visible
                 icon.name: "preferences-system-windows-effect-fadedesktop"
@@ -305,7 +305,7 @@ MouseArea {
             anchors.verticalCenter: buttonLayout.verticalCenter
             height: addWidgetButton.height
             icon.name: "window-close"
-            onClicked: plasmoid.editMode = false
+            onClicked: plasmoid.containment.corona.editMode = false
             PlasmaComponents3.ToolTip {
                 text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Exit Edit Mode")
             }

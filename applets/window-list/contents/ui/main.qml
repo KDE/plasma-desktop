@@ -15,12 +15,12 @@ import org.kde.kirigami 2.12 as Kirigami
 
 import org.kde.taskmanager 0.1 as TaskManager
 
-Item {
+PlasmoidItem {
     Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
-    Plasmoid.compactRepresentation: windowListButton
-    Plasmoid.fullRepresentation: windowListView
-    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 8
-    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 6
+    compactRepresentation: windowListButton
+    fullRepresentation: windowListView
+    switchWidth: PlasmaCore.Units.gridUnit * 8
+    switchHeight: PlasmaCore.Units.gridUnit * 6
 
     Component {
         id: windowListView
@@ -77,7 +77,7 @@ Item {
             down: pressed || tasksMenu.status === PlasmaExtras.DialogStatus.Open
 
             Accessible.name: Plasmoid.title
-            Accessible.description: Plasmoid.toolTipSubText
+            Accessible.description: toolTipSubText
 
             text: if (tasksModel.activeTask.valid) {
                 return tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||

@@ -84,25 +84,25 @@ EmptyPage {
         implicitWidth: {
             let totalMargins = leftMargin + rightMargin
             if (mainContentView) {
-                if (plasmoid.rootItem.mayHaveGridWithScrollBar) {
+                if (kickoff.mayHaveGridWithScrollBar) {
                     totalMargins += verticalScrollBar.implicitWidth
                 }
-                return KickoffSingleton.gridCellSize * plasmoid.rootItem.minimumGridRowCount + totalMargins
+                return KickoffSingleton.gridCellSize * kickoff.minimumGridRowCount + totalMargins
             }
             return contentWidth + totalMargins
         }
         implicitHeight: {
             // use grid cells to determine size
-            let h = KickoffSingleton.gridCellSize * plasmoid.rootItem.minimumGridRowCount
+            let h = KickoffSingleton.gridCellSize * kickoff.minimumGridRowCount
             // If no grids are used, use the number of items that would fit in the grid height
             if (plasmoid.configuration.favoritesDisplay !== 0 && plasmoid.configuration.applicationsDisplay !== 0) {
-                h = Math.floor(h / plasmoid.rootItem.listDelegateHeight) * plasmoid.rootItem.listDelegateHeight
+                h = Math.floor(h / kickoff.listDelegateHeight) * kickoff.listDelegateHeight
             }
             return h + topMargin + bottomMargin
         }
 
-        leftMargin: plasmoid.rootItem.backgroundMetrics.leftPadding
-        rightMargin: plasmoid.rootItem.backgroundMetrics.rightPadding
+        leftMargin: kickoff.backgroundMetrics.leftPadding
+        rightMargin: kickoff.backgroundMetrics.rightPadding
 
         currentIndex: count > 0 ? 0 : -1
         focus: true
@@ -124,8 +124,8 @@ EmptyPage {
             z: root.currentItem && root.currentItem.Drag.active ?
                 3 : 0
             opacity: view.activeFocus
-                || (plasmoid.rootItem.contentArea === root
-                    && plasmoid.rootItem.searchField.activeFocus) ? 1 : 0.5
+                || (kickoff.contentArea === root
+                    && kickoff.searchField.activeFocus) ? 1 : 0.5
             imagePath: "widgets/viewitem"
             prefix: "hover"
         }
@@ -203,9 +203,9 @@ EmptyPage {
         }
 
         Connections {
-            target: plasmoid
+            target: kickoff
             function onExpandedChanged() {
-                if (plasmoid.expanded) {
+                if (kickoff.expanded) {
                     view.currentIndex = 0
                     view.positionViewAtBeginning()
                 }

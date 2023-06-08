@@ -21,11 +21,8 @@ import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
 import "code/layout.js" as LayoutManager
 import "code/tools.js" as TaskTools
 
-MouseArea {
+PlasmoidItem {
     id: tasks
-
-    anchors.fill: parent
-    hoverEnabled: true
 
     // For making a bottom to top layout since qml flow can't do that.
     // We just hang the task manager upside down to achieve that.
@@ -47,7 +44,7 @@ MouseArea {
     property variant taskClosedWithMouseMiddleButton: []
     property alias taskList: taskList
 
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    preferredRepresentation: fullRepresentation
 
     Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
 
@@ -105,13 +102,6 @@ MouseArea {
         }
     }
 
-    onExited: {
-        if (needLayoutRefresh) {
-            LayoutManager.layout(taskRepeater)
-            needLayoutRefresh = false;
-        }
-    }
-
     function publishIconGeometries(taskItems) {
         if (TaskTools.taskManagerInstanceCount >= 2) {
             return;
@@ -148,7 +138,7 @@ MouseArea {
         }
 
         virtualDesktop: virtualDesktopInfo.currentDesktop
-        screenGeometry: plasmoid.screenGeometry
+        screenGeometry: plasmoid.containment.screenGeometry
         activity: activityInfo.currentActivity
 
         filterByVirtualDesktop: plasmoid.configuration.showOnlyCurrentDesktop
@@ -221,15 +211,6 @@ MouseArea {
         }
     }
 
-    TaskManager.VirtualDesktopInfo {
-        id: virtualDesktopInfo
-    }
-
-    TaskManager.ActivityInfo {
-        id: activityInfo
-        readonly property string nullUuid: "00000000-0000-0000-0000-000000000000"
-    }
-
     property TaskManagerApplet.Backend backend: TaskManagerApplet.Backend {
         taskManagerItem: tasks
         highlightWindows: plasmoid.configuration.highlightWindows
@@ -241,150 +222,6 @@ MouseArea {
         onWindowViewAvailableChanged: TaskTools.windowViewAvailable = windowViewAvailable;
 
         Component.onCompleted: TaskTools.windowViewAvailable = windowViewAvailable;
-    }
-
-    P5Support.DataSource {
-        id: mpris2Source
-        engine: "mpris2"
-        connectedSources: sources
-        onSourceAdded: source => connectSource(source);
-        onSourceRemoved: source => disconnectSource(source);
-        function sourceNameForLauncherUrl(launcherUrl, pid) {
-            if (!launcherUrl || launcherUrl === "") {
-                return "";
-            }
-
-            // MPRIS spec explicitly mentions that "DesktopEntry" is with .desktop extension trimmed
-            // Moreover, remove URL parameters, like wmClass (part after the question mark)
-            var desktopFileName = launcherUrl.toString().split('/').pop().split('?')[0].replace(".desktop", "")
-            if (desktopFileName.indexOf("applications:") === 0) {
-                desktopFileName = desktopFileName.substr(13)
-            }
-
-            let fallbackSource = "";
-
-            for (var i = 0, length = connectedSources.length; i < length; ++i) {
-                var source = connectedSources[i];
-                // we intend to connect directly, otherwise the multiplexer steals the connection away
-                if (source === "@multiplex") {
-                    continue;
-                }
-
-                var sourceData = data[source];
-                if (!sourceData) {
-                    continue;
-                }
-
-                /**
-                 * If the task is in a group, we can't use desktopFileName to match the task.
-                 * but in case PID match fails, use the match result from desktopFileName.
-                 */
-                if (pid && sourceData.InstancePid === pid) {
-                    return source;
-                }
-                if (sourceData.DesktopEntry === desktopFileName) {
-                    fallbackSource = source;
-                }
-
-                var metadata = sourceData.Metadata;
-                if (metadata) {
-                    var kdePid = metadata["kde:pid"];
-                    if (kdePid && pid === kdePid) {
-                        return source;
-                    }
-                }
-            }
-
-            // If PID match fails, return fallbackSource.
-            return fallbackSource;
-        }
-
-        function startOperation(source, op) {
-            var service = serviceForSource(source)
-            var operation = service.operationDescription(op)
-            return service.startOperationCall(operation)
-        }
-
-        function goPrevious(source) {
-            startOperation(source, "Previous");
-        }
-        function goNext(source) {
-            startOperation(source, "Next");
-        }
-        function play(source) {
-            startOperation(source, "Play");
-        }
-        function pause(source) {
-            startOperation(source, "Pause");
-        }
-        function playPause(source) {
-            startOperation(source, "PlayPause");
-        }
-        function stop(source) {
-            startOperation(source, "Stop");
-        }
-        function raise(source) {
-            startOperation(source, "Raise");
-        }
-        function quit(source) {
-            startOperation(source, "Quit");
-        }
-    }
-
-    Loader {
-        id: pulseAudio
-        sourceComponent: pulseAudioComponent
-        active: pulseAudioComponent.status === Component.Ready
-    }
-
-    Timer {
-        id: iconGeometryTimer
-
-        interval: 500
-        repeat: false
-
-        onTriggered: {
-            tasks.publishIconGeometries(taskList.children, tasks);
-        }
-    }
-
-    Binding {
-        target: plasmoid
-        property: "status"
-        value: (tasksModel.anyTaskDemandsAttention && plasmoid.configuration.unhideOnAttention
-            ? PlasmaCore.Types.NeedsAttentionStatus : PlasmaCore.Types.PassiveStatus)
-        restoreMode: Binding.RestoreBinding
-    }
-
-    Connections {
-        target: plasmoid
-
-        function onLocationChanged() {
-            if (TaskTools.taskManagerInstanceCount >= 2) {
-                return;
-            }
-            // This is on a timer because the panel may not have
-            // settled into position yet when the location prop-
-            // erty updates.
-            iconGeometryTimer.start();
-        }
-    }
-
-    Connections {
-        target: plasmoid.configuration
-
-        function onLaunchersChanged() {
-            tasksModel.launcherList = plasmoid.configuration.launchers
-        }
-        function onGroupingAppIdBlacklistChanged() {
-            tasksModel.groupingAppIdBlacklist = plasmoid.configuration.groupingAppIdBlacklist;
-        }
-        function onGroupingLauncherUrlBlacklistChanged() {
-            tasksModel.groupingLauncherUrlBlacklist = plasmoid.configuration.groupingLauncherUrlBlacklist;
-        }
-        function onIconSpacingChanged() {
-            taskList.layout();
-        }
     }
 
     property Component taskInitComponent: Component {
@@ -401,167 +238,332 @@ MouseArea {
         }
     }
 
-    Component {
-        id: busyIndicator
-        PlasmaComponents3.BusyIndicator {}
-    }
-
-    // Save drag data
-    Item {
-        id: dragHelper
-
-        Drag.dragType: Drag.Automatic
-        Drag.supportedActions: Qt.CopyAction | Qt.MoveAction | Qt.LinkAction
-        Drag.onDragFinished: tasks.dragSource = null;
-    }
-
-    PlasmaCore.FrameSvgItem {
-        id: taskFrame
-
-        visible: false;
-
-        imagePath: "widgets/tasks";
-        prefix: "normal"
-    }
-
-    PlasmaCore.Svg {
-        id: taskSvg
-
-        imagePath: "widgets/tasks"
-    }
-
-    MouseHandler {
-        id: mouseHandler
-
+    MouseArea {
         anchors.fill: parent
 
-        target: taskList
+        hoverEnabled: true
+        onExited: {
+            if (needLayoutRefresh) {
+                LayoutManager.layout(taskRepeater)
+                needLayoutRefresh = false;
+            }
+        }
 
-        onUrlsDropped: (urls) => {
-            // If all dropped URLs point to application desktop files, we'll add a launcher for each of them.
-            var createLaunchers = urls.every(function (item) {
-                return backend.isApplication(item)
-            });
+        TaskManager.VirtualDesktopInfo {
+            id: virtualDesktopInfo
+        }
 
-            if (createLaunchers) {
-                urls.forEach(function (item) {
-                    addLauncher(item);
+        TaskManager.ActivityInfo {
+            id: activityInfo
+            readonly property string nullUuid: "00000000-0000-0000-0000-000000000000"
+        }
+
+        P5Support.DataSource {
+            id: mpris2Source
+            engine: "mpris2"
+            connectedSources: sources
+            onSourceAdded: source => connectSource(source);
+            onSourceRemoved: source => disconnectSource(source);
+            function sourceNameForLauncherUrl(launcherUrl, pid) {
+                if (!launcherUrl || launcherUrl === "") {
+                    return "";
+                }
+
+                // MPRIS spec explicitly mentions that "DesktopEntry" is with .desktop extension trimmed
+                // Moreover, remove URL parameters, like wmClass (part after the question mark)
+                var desktopFileName = launcherUrl.toString().split('/').pop().split('?')[0].replace(".desktop", "")
+                if (desktopFileName.indexOf("applications:") === 0) {
+                    desktopFileName = desktopFileName.substr(13)
+                }
+
+                let fallbackSource = "";
+
+                for (var i = 0, length = connectedSources.length; i < length; ++i) {
+                    var source = connectedSources[i];
+                    // we intend to connect directly, otherwise the multiplexer steals the connection away
+                    if (source === "@multiplex") {
+                        continue;
+                    }
+
+                    var sourceData = data[source];
+                    if (!sourceData) {
+                        continue;
+                    }
+
+                    /**
+                    * If the task is in a group, we can't use desktopFileName to match the task.
+                    * but in case PID match fails, use the match result from desktopFileName.
+                    */
+                    if (pid && sourceData.InstancePid === pid) {
+                        return source;
+                    }
+                    if (sourceData.DesktopEntry === desktopFileName) {
+                        fallbackSource = source;
+                    }
+
+                    var metadata = sourceData.Metadata;
+                    if (metadata) {
+                        var kdePid = metadata["kde:pid"];
+                        if (kdePid && pid === kdePid) {
+                            return source;
+                        }
+                    }
+                }
+
+                // If PID match fails, return fallbackSource.
+                return fallbackSource;
+            }
+
+            function startOperation(source, op) {
+                var service = serviceForSource(source)
+                var operation = service.operationDescription(op)
+                return service.startOperationCall(operation)
+            }
+
+            function goPrevious(source) {
+                startOperation(source, "Previous");
+            }
+            function goNext(source) {
+                startOperation(source, "Next");
+            }
+            function play(source) {
+                startOperation(source, "Play");
+            }
+            function pause(source) {
+                startOperation(source, "Pause");
+            }
+            function playPause(source) {
+                startOperation(source, "PlayPause");
+            }
+            function stop(source) {
+                startOperation(source, "Stop");
+            }
+            function raise(source) {
+                startOperation(source, "Raise");
+            }
+            function quit(source) {
+                startOperation(source, "Quit");
+            }
+        }
+
+        Loader {
+            id: pulseAudio
+            sourceComponent: pulseAudioComponent
+            active: pulseAudioComponent.status === Component.Ready
+        }
+
+        Timer {
+            id: iconGeometryTimer
+
+            interval: 500
+            repeat: false
+
+            onTriggered: {
+                tasks.publishIconGeometries(taskList.children, tasks);
+            }
+        }
+
+        Binding {
+            target: plasmoid
+            property: "status"
+            value: (tasksModel.anyTaskDemandsAttention && plasmoid.configuration.unhideOnAttention
+                ? PlasmaCore.Types.NeedsAttentionStatus : PlasmaCore.Types.PassiveStatus)
+            restoreMode: Binding.RestoreBinding
+        }
+
+        Connections {
+            target: plasmoid
+
+            function onLocationChanged() {
+                if (TaskTools.taskManagerInstanceCount >= 2) {
+                    return;
+                }
+                // This is on a timer because the panel may not have
+                // settled into position yet when the location prop-
+                // erty updates.
+                iconGeometryTimer.start();
+            }
+        }
+
+        Connections {
+            target: plasmoid.configuration
+
+            function onLaunchersChanged() {
+                tasksModel.launcherList = plasmoid.configuration.launchers
+            }
+            function onGroupingAppIdBlacklistChanged() {
+                tasksModel.groupingAppIdBlacklist = plasmoid.configuration.groupingAppIdBlacklist;
+            }
+            function onGroupingLauncherUrlBlacklistChanged() {
+                tasksModel.groupingLauncherUrlBlacklist = plasmoid.configuration.groupingLauncherUrlBlacklist;
+            }
+            function onIconSpacingChanged() {
+                taskList.layout();
+            }
+        }
+
+        Component {
+            id: busyIndicator
+            PlasmaComponents3.BusyIndicator {}
+        }
+
+        // Save drag data
+        Item {
+            id: dragHelper
+
+            Drag.dragType: Drag.Automatic
+            Drag.supportedActions: Qt.CopyAction | Qt.MoveAction | Qt.LinkAction
+            Drag.onDragFinished: tasks.dragSource = null;
+        }
+
+        PlasmaCore.FrameSvgItem {
+            id: taskFrame
+
+            visible: false;
+
+            imagePath: "widgets/tasks";
+            prefix: "normal"
+        }
+
+        PlasmaCore.Svg {
+            id: taskSvg
+
+            imagePath: "widgets/tasks"
+        }
+
+        MouseHandler {
+            id: mouseHandler
+
+            anchors.fill: parent
+
+            target: taskList
+
+            onUrlsDropped: (urls) => {
+                // If all dropped URLs point to application desktop files, we'll add a launcher for each of them.
+                var createLaunchers = urls.every(function (item) {
+                    return backend.isApplication(item)
                 });
-                return;
-            }
 
-            if (!hoveredItem) {
-                return;
-            }
+                if (createLaunchers) {
+                    urls.forEach(function (item) {
+                        addLauncher(item);
+                    });
+                    return;
+                }
 
-            // Otherwise we'll just start a new instance of the application with the URLs as argument,
-            // as you probably don't expect some of your files to open in the app and others to spawn launchers.
-            tasksModel.requestOpenUrls(hoveredItem.modelIndex(), urls);
-        }
-    }
+                if (!hoveredItem) {
+                    return;
+                }
 
-    ToolTipDelegate {
-        id: openWindowToolTipDelegate
-        visible: false
-    }
-
-    ToolTipDelegate {
-        id: pinnedAppToolTipDelegate
-        visible: false
-    }
-
-    TriangleMouseFilter {
-        id: tmf
-        filterTimeOut: 300
-        active: tasks.toolTipAreaItem && tasks.toolTipAreaItem.toolTipOpen
-        blockFirstEnter: false
-
-        edge: {
-            switch (plasmoid.location) {
-                case PlasmaCore.Types.BottomEdge:
-                    return Qt.TopEdge;
-                case PlasmaCore.Types.TopEdge:
-                    return Qt.BottomEdge;
-                case PlasmaCore.Types.LeftEdge:
-                    return Qt.RightEdge;
-                case PlasmaCore.Types.RightEdge:
-                    return Qt.LeftEdge;
-                default:
-                    return Qt.TopEdge;
+                // Otherwise we'll just start a new instance of the application with the URLs as argument,
+                // as you probably don't expect some of your files to open in the app and others to spawn launchers.
+                tasksModel.requestOpenUrls(hoveredItem.modelIndex(), urls);
             }
         }
 
-        secondaryPoint: {
-            if (tasks.toolTipAreaItem === null) {
-                return Qt.point(0, 0);
+        ToolTipDelegate {
+            id: openWindowToolTipDelegate
+            visible: false
+        }
+
+        ToolTipDelegate {
+            id: pinnedAppToolTipDelegate
+            visible: false
+        }
+
+        TriangleMouseFilter {
+            id: tmf
+            filterTimeOut: 300
+            active: tasks.toolTipAreaItem && tasks.toolTipAreaItem.toolTipOpen
+            blockFirstEnter: false
+
+            edge: {
+                switch (plasmoid.location) {
+                    case PlasmaCore.Types.BottomEdge:
+                        return Qt.TopEdge;
+                    case PlasmaCore.Types.TopEdge:
+                        return Qt.BottomEdge;
+                    case PlasmaCore.Types.LeftEdge:
+                        return Qt.RightEdge;
+                    case PlasmaCore.Types.RightEdge:
+                        return Qt.LeftEdge;
+                    default:
+                        return Qt.TopEdge;
+                }
             }
-            const x = tasks.toolTipAreaItem.x;
-            const y = tasks.toolTipAreaItem.y;
-            const height = tasks.toolTipAreaItem.height;
-            const width = tasks.toolTipAreaItem.width;
-            return Qt.point(x+width/2, height);
-        }
 
-        anchors {
-            left: parent.left
-            top: parent.top
-        }
-
-        height: taskList.implicitHeight
-        width: taskList.implicitWidth
-
-        TaskList {
-            id: taskList
+            secondaryPoint: {
+                if (tasks.toolTipAreaItem === null) {
+                    return Qt.point(0, 0);
+                }
+                const x = tasks.toolTipAreaItem.x;
+                const y = tasks.toolTipAreaItem.y;
+                const height = tasks.toolTipAreaItem.height;
+                const width = tasks.toolTipAreaItem.width;
+                return Qt.point(x+width/2, height);
+            }
 
             anchors {
                 left: parent.left
                 top: parent.top
             }
-            width: tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutWidth()
-            height: tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutHeight()
 
-            flow: {
-                if (tasks.vertical) {
-                    return plasmoid.configuration.forceStripes ? Flow.LeftToRight : Flow.TopToBottom
+            height: taskList.implicitHeight
+            width: taskList.implicitWidth
+
+            TaskList {
+                id: taskList
+
+                anchors {
+                    left: parent.left
+                    top: parent.top
                 }
-                return plasmoid.configuration.forceStripes ? Flow.TopToBottom : Flow.LeftToRight
-            }
+                width: tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutWidth()
+                height: tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutHeight()
 
-            onAnimatingChanged: {
-                if (!animating) {
-                    tasks.publishIconGeometries(children, tasks);
-                }
-            }
-            onWidthChanged: layoutTimer.restart()
-            onHeightChanged: layoutTimer.restart()
-
-            function layout() {
-                LayoutManager.layout(taskRepeater);
-            }
-
-            Timer {
-                id: layoutTimer
-
-                interval: 0
-                repeat: false
-
-                onTriggered: taskList.layout()
-            }
-
-            Repeater {
-                id: taskRepeater
-
-                delegate: Task {}
-                onItemAdded: taskList.layout()
-                onItemRemoved: {
-                    if (tasks.containsMouse && index != taskRepeater.count &&
-                        item.m.WinIdList.length > 0 &&
-                        taskClosedWithMouseMiddleButton.indexOf(item.winIdList[0]) > -1) {
-                        needLayoutRefresh = true;
-                    } else {
-                        taskList.layout();
+                flow: {
+                    if (tasks.vertical) {
+                        return plasmoid.configuration.forceStripes ? Flow.LeftToRight : Flow.TopToBottom
                     }
-                    taskClosedWithMouseMiddleButton = [];
+                    return plasmoid.configuration.forceStripes ? Flow.TopToBottom : Flow.LeftToRight
+                }
+
+                onAnimatingChanged: {
+                    if (!animating) {
+                        tasks.publishIconGeometries(children, tasks);
+                    }
+                }
+                onWidthChanged: layoutTimer.restart()
+                onHeightChanged: layoutTimer.restart()
+
+                function layout() {
+                    LayoutManager.layout(taskRepeater);
+                }
+
+                Timer {
+                    id: layoutTimer
+
+                    interval: 0
+                    repeat: false
+
+                    onTriggered: taskList.layout()
+                }
+
+                Repeater {
+                    id: taskRepeater
+
+                    delegate: Task {}
+                    onItemAdded: taskList.layout()
+                    onItemRemoved: {
+                        if (tasks.containsMouse && index != taskRepeater.count &&
+                            item.m.WinIdList.length > 0 &&
+                            taskClosedWithMouseMiddleButton.indexOf(item.winIdList[0]) > -1) {
+                            needLayoutRefresh = true;
+                        } else {
+                            taskList.layout();
+                        }
+                        taskClosedWithMouseMiddleButton = [];
+                    }
                 }
             }
         }

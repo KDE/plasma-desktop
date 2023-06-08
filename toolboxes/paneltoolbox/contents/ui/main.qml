@@ -31,7 +31,7 @@ Item {
 
     states: [
         State {
-            when: plasmoid.editMode
+            when: plasmoid.containment.corona.editMode
             PropertyChanges {
                 target: main
                 visible: true
@@ -42,7 +42,7 @@ Item {
             }
         },
         State {
-            when: !plasmoid.editMode
+            when: !plasmoid.containment.corona.editMode
             PropertyChanges {
                 target: main
                 visible: false
@@ -87,7 +87,7 @@ Item {
         target: plasmoid
         function onUserConfiguringChanged() {
             if (plasmoid.userConfiguring) {
-                plasmoid.editMode = true;
+                plasmoid.containment.corona.editMode = true;
                 toolTipArea.hideToolTip();
             }
         }
@@ -97,7 +97,7 @@ Item {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: enabled
-        enabled: plasmoid.editMode || plasmoid.userConfiguring
+        enabled: plasmoid.containment.corona.editMode || plasmoid.userConfiguring
         onClicked: {
             main.Plasmoid.action("configure").trigger()
         }

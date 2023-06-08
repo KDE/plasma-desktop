@@ -33,7 +33,7 @@ FocusScope {
     signal appendSearchText(string text)
 
     function reset() {
-        plasmoid.hideOnWindowDeactivate = true;
+        kicker.hideOnWindowDeactivate = true;
 
         rootList.currentIndex = -1;
 
@@ -421,7 +421,7 @@ FocusScope {
             } else if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
                 if (runnerColumns.visible && runnerModel.modelForRow(0).count) {
                     runnerModel.modelForRow(0).trigger(0, "", null);
-                    plasmoid.expanded = false;
+                    kicker.expanded = false;
                 }
             }
         }
@@ -434,7 +434,7 @@ FocusScope {
 
     Keys.onPressed: event => {
         if (event.key === Qt.Key_Escape) {
-            plasmoid.expanded = false;
+            kicker.expanded = false;
         }
     }
 

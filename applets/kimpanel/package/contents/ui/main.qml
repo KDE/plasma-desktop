@@ -11,7 +11,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
 
-Item {
+PlasmoidItem {
     id: kimpanel
 
     property int visibleButtons: 0
@@ -25,7 +25,7 @@ Item {
     Layout.preferredWidth: vertical ? kimpanel.width : mainLayout.implicitWidth
     Layout.preferredHeight: !vertical ? kimpanel.height : mainLayout.implicitHeight
 
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+   preferredRepresentation:fullRepresentation
 
     Component.onCompleted: {
         timer.restart();

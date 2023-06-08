@@ -21,12 +21,12 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 EmptyPage {
     id: root
 
-    // plasmoid.rootItem is Kickoff.qml
-    leftPadding: -plasmoid.rootItem.backgroundMetrics.leftPadding
-    rightPadding: -plasmoid.rootItem.backgroundMetrics.rightPadding
+    // kickoff is Kickoff.qml
+    leftPadding: -kickoff.backgroundMetrics.leftPadding
+    rightPadding: -kickoff.backgroundMetrics.rightPadding
     topPadding: 0
-    bottomPadding: -plasmoid.rootItem.backgroundMetrics.bottomPadding
-    readonly property var appletInterface: Plasmoid.self
+    bottomPadding: -kickoff.backgroundMetrics.bottomPadding
+    readonly property var appletInterface: kickoff
 
     Layout.minimumWidth: implicitWidth
     Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
@@ -65,7 +65,7 @@ EmptyPage {
         id: header
         preferredNameAndIconWidth: normalPage.preferredSideBarWidth
         Binding {
-            target: plasmoid.rootItem
+            target: kickoff
             property: "header"
             value: header
             restoreMode: Binding.RestoreBinding
@@ -90,7 +90,7 @@ EmptyPage {
                 mainContentView: true
                 // Forces the function be re-run every time runnerModel.count changes.
                 // This is absolutely necessary to make the search view work reliably.
-                model: plasmoid.rootItem.runnerModel.count ? plasmoid.rootItem.runnerModel.modelForRow(0) : null
+                model: kickoff.runnerModel.count ? kickoff.runnerModel.modelForRow(0) : null
                 delegate: KickoffListDelegate {
                     width: view.availableWidth
                     isSearchResult: true
@@ -99,8 +99,8 @@ EmptyPage {
                 // always focus the first item in the header focus chain
                 KeyNavigation.tab: root.header.nextItemInFocusChain()
                 T.StackView.onActivated: {
-                    plasmoid.rootItem.sideBar = null
-                    plasmoid.rootItem.contentArea = searchView
+                    kickoff.sideBar = null
+                    kickoff.contentArea = searchView
                 }
 
                 Loader {
@@ -141,7 +141,7 @@ EmptyPage {
         Keys.priority: Keys.AfterItem
         // This is here rather than root because events are implicitly forwarded
         // to parent items. Don't want to send multiple events to searchField.
-        Keys.forwardTo: plasmoid.rootItem.searchField
+        Keys.forwardTo: kickoff.searchField
 
         Connections {
             target: root.header

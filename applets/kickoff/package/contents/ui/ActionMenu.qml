@@ -20,9 +20,8 @@ Item {
 
     property var actionList: menu.visualParent ? menu.visualParent.actionList : null
 
-    // Workaround for `plasmoid` context property not working in singletons.
     // Only one action menu can be open at a time, so this should be safe to use.
-    property Plasmoid plasmoid: null
+    property PlasmoidItem plasmoid: null
 
     // Not a QQC1 Menu. It's actually a custom QObject that uses a QMenu.
     readonly property PlasmaExtras.Menu menu: PlasmaExtras.Menu {
@@ -83,7 +82,7 @@ Item {
                     modelData.actionArgument
                 )
                 if (modelActionTriggered) {
-                    root.plasmoid.expanded = false
+                    kickoff.expanded = false
                 }
             }
         }

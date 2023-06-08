@@ -42,8 +42,8 @@ Item {
     LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
     LayoutMirroring.childrenInherit: true
 
-    Plasmoid.onEditModeChanged: {
-        if (!Plasmoid.editMode) {
+    Plasmoid.containment.corona.onEditModeChanged: {
+        if (!Plasmoid.containment.corona.editMode) {
             toolBoxContent.exitAnimation.start();
             return;
         }
@@ -78,26 +78,27 @@ Item {
         var tx = Plasmoid.configuration.ToolBoxButtonX
         var ty = Plasmoid.configuration.ToolBoxButtonY
         var pos;
+        const plasmoidItem = main.parent;
 
         switch (ts) {
         case "top":
             ty = main.y;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
+            pos = plasmoidItem.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         case "bottom":
             ty = main.height + main.y - toolBoxContent.height;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
+            pos = plasmoidItem.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         case "bottomcenter":
             tx = main.width / 2 - toolBoxContent.width / 2;
             ty = main.height + main.y - toolBoxContent.height;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
+            pos = plasmoidItem.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         case "topcenter":
         default:
             tx = main.width / 2 - toolBoxContent.width / 2;
             ty = main.y;
-            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
+            pos = plasmoidItem.adjustToAvailableScreenRegion(tx, ty, toolBoxContent.width, toolBoxContent.height);
             break;
         }
         //print("XXXY Setting toolbox to: " + ts + " " + tx + "x" + ty + " screen: " + main.width+ "x" + main.height+"");
