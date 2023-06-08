@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2013 Marco Martin <mart@kde.org>
     SPDX-FileCopyrightText: 2022 Niccolò Venerandi <niccolo@venerandi.com>
+    SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -45,12 +46,12 @@ MouseArea {
                 }
             }
             if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-                currentApplet.y = mouse.y - configurationArea.startDragOffset;
+                currentApplet.y = mouse.y - startDragOffset;
             } else {
-                currentApplet.x = mouse.x - configurationArea.startDragOffset;
+                currentApplet.x = mouse.x - startDragOffset;
             }
 
-            var item = root.layoutManager.childAtCoordinates(mouse.x, mouse.y);
+            const item = root.layoutManager.childAtCoordinates(mouse.x, mouse.y);
 
             if (item && item.applet !== placeHolder) {
                 var posInItem = mapToItem(item, mouse.x, mouse.y)
@@ -64,13 +65,13 @@ MouseArea {
             }
 
         } else {
-            var item = currentLayout.childAt(mouse.x, mouse.y);
-            if (configurationArea && item && item !== lastSpacer) {
-                configurationArea.currentApplet = item;
+            const item = currentLayout.childAt(mouse.x, mouse.y);
+            if (item && item !== lastSpacer) {
+                currentApplet = item;
             }
         }
 
-        if (configurationArea.currentApplet) {
+        if (currentApplet) {
             hideTimer.stop();
             tooltip.raise();
         }
@@ -81,7 +82,7 @@ MouseArea {
     onExited: hideTimer.restart()
 
     onCurrentAppletChanged: {
-        if (!currentApplet || !configurationArea.currentApplet) {
+        if (!currentApplet) {
             hideTimer.start();
             return;
         }
@@ -110,9 +111,9 @@ MouseArea {
         root.dragAndDropping = true
 
         if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-            configurationArea.startDragOffset = mouse.y - currentApplet.y;
+            startDragOffset = mouse.y - currentApplet.y;
         } else {
-            configurationArea.startDragOffset = mouse.x - currentApplet.x;
+            startDragOffset = mouse.x - currentApplet.x;
         }
     }
 
@@ -129,7 +130,7 @@ MouseArea {
         let newCurrentApplet = currentApplet.applet.parent
         newCurrentApplet.animateFrom(currentApplet.x, currentApplet.y)
         newCurrentApplet.dragging = null
-        placeHolder.parent = configurationArea;
+        placeHolder.parent = this;
         currentApplet.destroy()
         root.layoutManager.save()
     }
@@ -139,31 +140,34 @@ MouseArea {
         property Item dragging
         property bool busy: false
         visible: configurationArea.containsMouse
-        Layout.preferredWidth: currentApplet ? currentApplet.Layout.preferredWidth : 0
-        Layout.preferredHeight: currentApplet ? currentApplet.Layout.preferredHeight : 0
-        Layout.maximumWidth: currentApplet ? currentApplet.Layout.maximumWidth : 0
-        Layout.maximumHeight: currentApplet ? currentApplet.Layout.maximumHeight : 0
-        Layout.minimumWidth: currentApplet ? currentApplet.Layout.minimumWidth : 0
-        Layout.minimumHeight: currentApplet ? currentApplet.Layout.minimumHeight : 0
-        Layout.fillWidth: currentApplet ? currentApplet.Layout.fillWidth : false
-        Layout.fillHeight: currentApplet ? currentApplet.Layout.fillHeight : false
+        Layout.preferredWidth: configurationArea.currentApplet?.Layout.preferredWidth ?? 0
+        Layout.preferredHeight: configurationArea.currentApplet?.Layout.preferredHeight ?? 0
+        Layout.maximumWidth: configurationArea.currentApplet?.Layout.maximumWidth ?? 0
+        Layout.maximumHeight: configurationArea.currentApplet?.Layout.maximumHeight ?? 0
+        Layout.minimumWidth: configurationArea.currentApplet?.Layout.minimumWidth ?? 0
+        Layout.minimumHeight: configurationArea.currentApplet?.Layout.minimumHeight ?? 0
+        Layout.fillWidth: configurationArea.currentApplet?.Layout.fillWidth ?? false
+        Layout.fillHeight: configurationArea.currentApplet?.Layout.fillHeight ?? false
     }
 
     Timer {
         id: hideTimer
         interval: PlasmaCore.Units.longDuration * 5
-        onTriggered: currentApplet = null
+        onTriggered: configurationArea.currentApplet = null
     }
 
     Rectangle {
         id: handle
-        x: currentApplet ? currentApplet.x : NaN
-        y: currentApplet ? currentApplet.y : NaN
-        width: currentApplet ? currentApplet.width : NaN
-        height: currentApplet ? currentApplet.height : NaN
+
+        x: configurationArea.currentApplet?.x ?? 0
+        y: configurationArea.currentApplet?.y ?? 0
+        width: configurationArea.currentApplet?.width ?? 0
+        height: configurationArea.currentApplet?.height ?? 0
+
         color: PlasmaCore.Theme.backgroundColor
         radius: 3
-        opacity: currentApplet && configurationArea.containsMouse ? 0.5 : 0
+        opacity: configurationArea.currentApplet && configurationArea.containsMouse ? 0.5 : 0
+
         PlasmaCore.IconItem {
             visible: !root.dragAndDropping
             source: "transform-move"
@@ -208,8 +212,8 @@ MouseArea {
     }
     PlasmaCore.Dialog {
         id: tooltip
-        visible: currentApplet && !root.dragAndDropping
-        visualParent: currentApplet
+        visible: configurationArea.currentApplet && !root.dragAndDropping
+        visualParent: configurationArea.currentApplet
 
         type: PlasmaCore.Dialog.Dock
         flags: Qt.WindowStaysOnTopHint|Qt.WindowDoesNotAcceptFocus|Qt.BypassWindowManagerHint
@@ -217,10 +221,11 @@ MouseArea {
 
         onVisualParentChanged: {
             if (visualParent) {
-                currentApplet.applet.plasmoid.contextualActionsAboutToShow();
-                alternativesButton.visible = currentApplet.applet.plasmoid.action("alternatives") && currentApplet.applet.plasmoid.action("alternatives").enabled;
-                configureButton.visible = currentApplet.applet.plasmoid.action("configure") && currentApplet.applet.plasmoid.action("configure").enabled;
-                label.text = currentApplet.applet.plasmoid.title;
+                const plasmoid = configurationArea.currentApplet.applet.plasmoid;
+                plasmoid.contextualActionsAboutToShow();
+                alternativesButton.visible = plasmoid.action("alternatives")?.enabled ?? false;
+                configureButton.visible = plasmoid.action("configure")?.enabled ?? false;
+                label.text = plasmoid.title;
             }
         }
 
@@ -253,14 +258,12 @@ MouseArea {
                     // cursor position, so show this on the top unless it's on
                     // a top panel
                     visible: tooltip.location !== PlasmaCore.Types.TopEdge
-                             && currentApplet
-                             && currentApplet.applet.plasmoid.action("remove")
-                             && currentApplet.applet.plasmoid.action("remove").enabled
+                             && (configurationArea.currentApplet?.applet.plasmoid.action("remove")?.enabled ?? false)
                     icon.name: "delete"
                     text: i18n("Remove")
                     onClicked: {
-                        currentApplet.applet.plasmoid.action("remove").trigger();
-                        currentApplet = null
+                        configurationArea.currentApplet.applet.plasmoid.action("remove").trigger();
+                        configurationArea.currentApplet = null;
                     }
                 }
                 PlasmaComponents3.ToolButton {
@@ -269,8 +272,8 @@ MouseArea {
                     icon.name: "configure"
                     text: i18n("Configure…")
                     onClicked: {
-                        currentApplet.applet.plasmoid.action("configure").trigger()
-                        currentApplet = null
+                        configurationArea.currentApplet.applet.plasmoid.action("configure").trigger();
+                        configurationArea.currentApplet = null;
                     }
                 }
                 PlasmaComponents3.ToolButton {
@@ -279,8 +282,8 @@ MouseArea {
                     icon.name: "widget-alternatives"
                     text: i18n("Show Alternatives…")
                     onClicked: {
-                        currentApplet.applet.plasmoid.action("alternatives").trigger()
-                        currentApplet = null
+                        configurationArea.currentApplet.applet.plasmoid.action("alternatives").trigger();
+                        configurationArea.currentApplet = null;
                     }
                 }
                 PlasmaComponents3.ToolButton {
@@ -288,14 +291,12 @@ MouseArea {
                     // we want destructive actions to be far from the initial
                     // cursor position, so show this on the bottom for top panels
                     visible: tooltip.location === PlasmaCore.Types.TopEdge
-                             && currentApplet
-                             && currentApplet.applet.plasmoid.action("remove")
-                             && currentApplet.applet.plasmoid.action("remove").enabled
+                             && (configurationArea.currentApplet?.applet.plasmoid.action("remove")?.enabled ?? false)
                     icon.name: "delete"
                     text: i18n("Remove")
                     onClicked: {
-                        currentApplet.applet.plasmoid.action("remove").trigger()
-                        currentApplet = null
+                        configurationArea.currentApplet.applet.plasmoid.action("remove").trigger();
+                        configurationArea.currentApplet = null;
                     }
                 }
 
@@ -312,13 +313,14 @@ MouseArea {
                     editable: true
                     Layout.fillWidth: true
                     focus: !Kirigami.InputMethod.willShowOnActive
-                    visible: currentApplet && currentApplet.applet.plasmoid.pluginName === "org.kde.plasma.panelspacer" && !currentApplet.applet.plasmoid.configuration.expanding
+                    visible: configurationArea.currentApplet?.applet.plasmoid.pluginName === "org.kde.plasma.panelspacer"
+                        && !configurationArea.currentApplet.applet.plasmoid.configuration.expanding
                     from: 0
                     stepSize: 10
                     to: root.width
-                    value: currentApplet && currentApplet.applet.plasmoid.configuration.length ? currentApplet.applet.plasmoid.configuration.length : 0
+                    value: configurationArea.currentApplet?.applet.plasmoid.configuration.length ?? 0
                     onValueModified: {
-                        currentApplet.applet.plasmoid.configuration.length = value
+                        configurationArea.currentApplet.applet.plasmoid.configuration.length = value
                     }
                 }
             }
