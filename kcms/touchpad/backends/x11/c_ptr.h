@@ -12,5 +12,5 @@ struct CDeleter {
         if (ptr) {
             free(ptr);
         }
-    };
+    }
 };
