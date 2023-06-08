@@ -128,6 +128,33 @@ ContainmentItem {
         plasmoid.configuration.url = data
     }
 
+    PlasmaCore.FrameSvgItem {
+        id: highlightItemSvg
+
+        visible: false
+
+        imagePath: isPopup ? "widgets/viewitem" : ""
+        prefix: "hover"
+    }
+
+    PlasmaCore.FrameSvgItem {
+        id: listItemSvg
+
+        visible: false
+
+        imagePath: isPopup ? "widgets/viewitem" : ""
+        prefix: "normal"
+    }
+
+    PlasmaCore.Svg {
+        id: toolBoxSvg
+        imagePath: "widgets/toolbox"
+        property int rightBorder: elementSize("right").width
+        property int topBorder: elementSize("top").height
+        property int bottomBorder: elementSize("bottom").height
+        property int leftBorder: elementSize("left").width
+    }
+
     // FIXME: the use and existence of this property is a workaround
     preloadFullRepresentation: true
     fullRepresentation: FolderViewDropArea {
@@ -233,33 +260,6 @@ ContainmentItem {
         Component {
             id: compactRepresentation
             CompactRepresentation { folderView: folderViewLayer.view }
-        }
-
-        PlasmaCore.FrameSvgItem {
-            id : highlightItemSvg
-
-            visible: false
-
-            imagePath: isPopup ? "widgets/viewitem" : ""
-            prefix: "hover"
-        }
-
-        PlasmaCore.FrameSvgItem {
-            id : listItemSvg
-
-            visible: false
-
-            imagePath: isPopup ? "widgets/viewitem" : ""
-            prefix: "normal"
-        }
-
-        PlasmaCore.Svg {
-            id: toolBoxSvg
-            imagePath: "widgets/toolbox"
-            property int rightBorder: elementSize("right").width
-            property int topBorder: elementSize("top").height
-            property int bottomBorder: elementSize("bottom").height
-            property int leftBorder: elementSize("left").width
         }
 
         // Can be removed?
