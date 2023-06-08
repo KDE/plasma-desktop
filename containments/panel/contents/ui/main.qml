@@ -259,31 +259,35 @@ ContainmentItem {
                             let right = mirror[left]
                             let up = mirror[side]
                             anchors[up] = undefined
-                            this[isHorizontal ? 'height' : 'width'] = padding
+                            if (root.isHorizontal) {
+                                height = padding;
+                            } else {
+                                width = padding;
+                            }
                             anchors[left+'Margin'] = - currentLayout.rowSpacing/2 - (appletIndex == 0 ? panelSvg.margins[left] + currentLayout.x : 0)
                             anchors[right+'Margin'] = - currentLayout.rowSpacing/2 - (appletIndex == appletsModel.count-1 ? panelSvg.margins[right] + currentLayout.toolBoxSize : 0)
                             anchors[side+'Margin'] = - inset
                         }
-                        elementId: fill ? 'fill' : (isHorizontal ? side + (inThickArea ? 'left' : 'right') : (inThickArea ? 'top' : 'bottom') + side)
+                        elementId: fill ? 'fill' : (root.isHorizontal ? side + (inThickArea ? 'left' : 'right') : (inThickArea ? 'top' : 'bottom') + side)
                         svg: dropArea.marginHighlightSvg
                         anchors {top: parent.top; left: parent.left; right: parent.right; bottom: parent.bottom}
                     }
                     Repeater {
                         model: ['top', 'bottom', 'right', 'left']
-                        SideMargin{
-                            side: modelData;
-                            inset: container.getMargins(side);
-                            visible: (modelData == 'top' || modelData == 'bottom') == isHorizontal
+                        SideMargin {
+                            side: modelData
+                            inset: container.getMargins(side)
+                            visible: (modelData === 'top' || modelData === 'bottom') === root.isHorizontal
                             padding: container.getMargins(side, false, false, isMarginSeparator ? false : inThickArea)
                         }
                     }
                     Repeater {
                         model: ['top', 'bottom', 'right', 'left']
-                        SideMargin{
-                            side: modelData;
-                            inset: -container.getMargins(side, false, false, false);
-                            padding: container.getMargins(side, false, false, true) + inset;
-                            visible: isMarginSeparator && (modelData == 'top' || modelData == 'bottom') == isHorizontal;
+                        SideMargin {
+                            side: modelData
+                            inset: -container.getMargins(side, false, false, false)
+                            padding: container.getMargins(side, false, false, true) + inset
+                            visible: isMarginSeparator && (modelData === 'top' || modelData === 'bottom') === root.isHorizontal
                             fill: false
                         }
                     }
