@@ -68,7 +68,9 @@ ContainmentItem {
 
     Containment.onAppletRemoved: (applet) => {
         let plasmoidItem = root.itemFor(applet);
-        appletsModel.remove(plasmoidItem.parent.index);
+        if (plasmoidItem) {
+            appletsModel.remove(plasmoidItem.parent.index);
+        }
         checkLastSpacer();
         LayoutManager.save();
     }
@@ -288,8 +290,12 @@ ContainmentItem {
                 }
 
                 onAppletChanged: {
-                    applet.parent = container
-                    applet.anchors.fill = container
+                    if (applet) {
+                        applet.parent = container
+                        applet.anchors.fill = container
+                    } else {
+                        appletsModel.remove(index)
+                    }
                 }
 
                 active: applet && applet.Plasmoid.busy
