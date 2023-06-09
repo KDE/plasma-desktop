@@ -163,7 +163,7 @@ PlasmoidItem {
         showDesktop: (Plasmoid.configuration.currentDesktopSelected === 1)
 
         showOnlyCurrentScreen: Plasmoid.configuration.showOnlyCurrentScreen
-        screenGeometry: Plasmoid.screenGeometry
+        screenGeometry: Plasmoid.containment.screenGeometry
 
         pagerType: isActivityPager ? PagerModel.Activities : PagerModel.VirtualDesktops
     }
