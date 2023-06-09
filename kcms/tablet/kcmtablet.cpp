@@ -142,8 +142,8 @@ public:
     }
 };
 
-Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData, const QVariantList &list)
-    : KQuickManagedConfigModule(parent, metaData, list)
+Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_toolsModel(new DevicesModel("tabletTool", this))
     , m_padsModel(new DevicesModel("tabletPad", this))
 {

@@ -24,7 +24,7 @@ class DesktopPathConfig : public KQuickManagedConfigModule
     Q_PROPERTY(QObject *settings READ settings CONSTANT)
 
 public:
-    DesktopPathConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &list);
+    DesktopPathConfig(QObject *parent, const KPluginMetaData &metaData);
     ~DesktopPathConfig() override;
 
     QObject *settings() const;

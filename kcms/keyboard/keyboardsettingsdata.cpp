@@ -9,8 +9,8 @@
 #include "keyboard_config.h"
 #include "keyboardmiscsettings.h"
 
-KeyboardSettingsData::KeyboardSettingsData(QObject *parent, const QVariantList &args)
-    : KCModuleData(parent, args)
+KeyboardSettingsData::KeyboardSettingsData(QObject *parent)
+    : KCModuleData(parent)
     , m_keyboardConfig(new KeyboardConfig(this))
     , m_miscSettings(new KeyboardMiscSettings(this))
 {

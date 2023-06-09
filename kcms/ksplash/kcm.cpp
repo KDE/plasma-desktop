@@ -46,8 +46,8 @@ class SplashScreenSortModel : public QSortFilterProxyModel
     }
 };
 
-KCMSplashScreen::KCMSplashScreen(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, metaData, args)
+KCMSplashScreen::KCMSplashScreen(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_data(new SplashScreenData(this))
     , m_model(new QStandardItemModel(this))
 {

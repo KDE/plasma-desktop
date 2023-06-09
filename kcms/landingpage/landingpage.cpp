@@ -156,8 +156,8 @@ QUrl LookAndFeelGroup::thumbnail() const
     return m_package.fileUrl("preview");
 }
 
-KCMLandingPage::KCMLandingPage(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, metaData, args)
+KCMLandingPage::KCMLandingPage(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_data(new LandingPageData(this))
 {
     qmlRegisterAnonymousType<LandingPageGlobalsSettings>("org.kde.plasma.landingpage.kcm", 0);

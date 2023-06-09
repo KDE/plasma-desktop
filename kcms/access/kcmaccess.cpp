@@ -133,8 +133,8 @@ QString mouseKeysShortcut(Display *display)
                                                        : i18n("Press %1", keyname);
 }
 
-KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, metaData, args)
+KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_data(new AccessibilityData(this))
     , m_desktopShortcutInfo(QX11Info::isPlatformX11() ? mouseKeysShortcut(QX11Info::display()) : QString())
 {

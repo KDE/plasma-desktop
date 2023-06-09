@@ -21,8 +21,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMWorkspaceOptionsFactory, "kcm_workspace.json", registerPlugin<KCMWorkspaceOptions>(); registerPlugin<WorkspaceOptionsData>();)
 
-KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, metaData, args)
+KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_data(new WorkspaceOptionsData(this))
 {
     qmlRegisterAnonymousType<WorkspaceOptionsGlobalsSettings>("org.kde.plasma.workspaceoptions.kcm", 0);

@@ -38,7 +38,7 @@ class TouchpadConfigXlib : public TouchpadConfigPlugin
     Q_OBJECT
 
 public:
-    explicit TouchpadConfigXlib(TouchpadConfigContainer *parent, TouchpadBackend *backend, const QVariantList &args = QVariantList());
+    explicit TouchpadConfigXlib(TouchpadConfigContainer *parent, TouchpadBackend *backend);
     ~TouchpadConfigXlib() override;
 
     static void kcmInit();

@@ -20,8 +20,8 @@ Q_DECL_EXPORT void kcminit()
 }
 }
 
-ConfigContainer::ConfigContainer(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KCModule(parent, data, args)
+ConfigContainer::ConfigContainer(QObject *parent, const KPluginMetaData &data)
+    : KCModule(parent, data)
 {
     m_plugin = ConfigPlugin::implementation(this);
 }

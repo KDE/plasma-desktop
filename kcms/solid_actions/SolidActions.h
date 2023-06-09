@@ -20,7 +20,7 @@ class SolidActions : public KCModule
     Q_OBJECT
 
 public:
-    explicit SolidActions(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    explicit SolidActions(QObject *parent, const KPluginMetaData &data);
     ~SolidActions() override;
     void load() override;
     void save() override;

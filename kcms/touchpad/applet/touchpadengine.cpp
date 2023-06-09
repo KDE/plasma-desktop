@@ -12,8 +12,8 @@
 #include "touchpadinterface.h"
 #include "touchpadservice.h"
 
-TouchpadEngine::TouchpadEngine(QObject *parent, const QVariantList &args)
-    : Plasma5Support::DataEngine(parent, args)
+TouchpadEngine::TouchpadEngine(QObject *parent)
+    : Plasma5Support::DataEngine(parent)
     , m_source("touchpad")
     , m_daemon(nullptr)
 {

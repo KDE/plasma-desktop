@@ -36,7 +36,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(bool screenReaderIsDefaults READ screenReaderIsDefaults NOTIFY screenReaderIsDefaultsChanged)
 
 public:
-    KAccessConfig(QObject *parent, const KPluginMetaData &, const QVariantList &);
+    KAccessConfig(QObject *parent, const KPluginMetaData &);
     ~KAccessConfig() override;
 
     void save() override;

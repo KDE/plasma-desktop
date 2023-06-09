@@ -25,7 +25,7 @@
 #include "xkb_helper.h"
 
 KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KCModule(parent, data, args)
+    : KCModule(parent, data)
     , m_data(new KeyboardSettingsData(this))
 {
     rules = Rules::readRules(Rules::READ_EXTRAS);

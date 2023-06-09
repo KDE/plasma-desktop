@@ -15,7 +15,7 @@ class ConfigContainer : public KCModule
     Q_OBJECT
 
 public:
-    explicit ConfigContainer(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    explicit ConfigContainer(QObject *parent, const KPluginMetaData &data);
 
     /*QSize minimumSizeHint() const override;
     QSize sizeHint() const override;

@@ -35,8 +35,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(SMServerConfigFactory, "kcm_smserver.json", registerPlugin<SMServerConfig>(); registerPlugin<SMServerData>();)
 
-SMServerConfig::SMServerConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, metaData, args)
+SMServerConfig::SMServerConfig(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_login1Manager(new OrgFreedesktopLogin1ManagerInterface(QStringLiteral("org.freedesktop.login1"),
                                                                QStringLiteral("/org/freedesktop/login1"),
                                                                QDBusConnection::systemBus(),

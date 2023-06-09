@@ -12,7 +12,7 @@ class KeysData : public KCModuleData
 {
     Q_OBJECT
 public:
-    KeysData(QObject *parent = nullptr, const QVariantList &args = {});
+    KeysData(QObject *parent = nullptr);
     bool isDefaults() const override;
 
 private:

@@ -15,8 +15,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(KCMQtQuickSettingsModule, "kcm_qtquicksettings.json")
 
-KCMQtQuickSettingsModule::KCMQtQuickSettingsModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KCModule(parent, data, args)
+KCMQtQuickSettingsModule::KCMQtQuickSettingsModule(QObject *parent, const KPluginMetaData &data)
+    : KCModule(parent, data)
     , m_ui(new Ui::KCMQtQuickSettingsWidget)
     , m_settings(new PlasmaQtQuickSettings::RendererSettings(KSharedConfig::openConfig(QStringLiteral("kdeglobals"))))
 {

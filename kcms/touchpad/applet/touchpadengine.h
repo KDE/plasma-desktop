@@ -14,7 +14,7 @@ class TouchpadEngine : public Plasma5Support::DataEngine
     Q_OBJECT
 
 public:
-    TouchpadEngine(QObject *parent, const QVariantList &args);
+    TouchpadEngine(QObject *parent);
     ~TouchpadEngine();
 
     Plasma5Support::Service *serviceForSource(const QString &source) override;

@@ -32,8 +32,8 @@ extern KSERVICE_EXPORT int ksycoca_ms_between_checks;
 
 K_PLUGIN_FACTORY_WITH_JSON(KcmComponentChooserFactory, "kcm_componentchooser.json", registerPlugin<KcmComponentChooser>();)
 
-KcmComponentChooser::KcmComponentChooser(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, metaData, args)
+KcmComponentChooser::KcmComponentChooser(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_browsers(new ComponentChooserBrowser(this))
     , m_fileManagers(new ComponentChooserFileManager(this))
     , m_terminalEmulators(new ComponentChooserTerminal(this))

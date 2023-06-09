@@ -25,7 +25,7 @@ class SonnetSpellCheckingModule : public KCModule
     Q_OBJECT
 
 public:
-    SonnetSpellCheckingModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    SonnetSpellCheckingModule(QObject *parent, const KPluginMetaData &data);
     ~SonnetSpellCheckingModule() override;
 
     void save() override;

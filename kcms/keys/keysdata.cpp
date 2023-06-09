@@ -13,8 +13,8 @@
 #include <kglobalaccel_component_interface.h>
 #include <kglobalaccel_interface.h>
 
-KeysData::KeysData(QObject *parent, const QVariantList &args)
-    : KCModuleData(parent, args)
+KeysData::KeysData(QObject *parent)
+    : KCModuleData(parent)
 {
     for (int i = KStandardShortcut::AccelNone + 1; i < KStandardShortcut::StandardShortcutCount; ++i) {
         const auto id = static_cast<KStandardShortcut::StandardShortcut>(i);

@@ -18,7 +18,7 @@ class KeyboardSettingsData : public KCModuleData
     Q_OBJECT
 
 public:
-    explicit KeyboardSettingsData(QObject *parent = nullptr, const QVariantList &args = QVariantList());
+    explicit KeyboardSettingsData(QObject *parent = nullptr);
 
     KeyboardConfig *keyboardConfig() const;
     KeyboardMiscSettings *miscSettings() const;

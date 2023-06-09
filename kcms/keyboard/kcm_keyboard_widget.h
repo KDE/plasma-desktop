@@ -11,8 +11,8 @@
 
 #include <QTabWidget>
 
-#include <config-keyboard.h>
 #include "keyboard_config.h"
+#include <config-keyboard.h>
 
 class QWidget;
 class KeyboardConfig;

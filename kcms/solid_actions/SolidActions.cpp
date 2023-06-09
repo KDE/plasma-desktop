@@ -26,8 +26,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(SolidActions, "kcm_solid_actions.json")
 
-SolidActions::SolidActions(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KCModule(parent, data, args)
+SolidActions::SolidActions(QObject *parent, const KPluginMetaData &data)
+    : KCModule(parent, data)
 {
     setButtons(KCModule::Help);
 

@@ -37,7 +37,7 @@ class SMServerConfig : public KQuickManagedConfigModule
     Q_PROPERTY(bool canFirmwareSetup READ canFirmwareSetup CONSTANT)
 
 public:
-    explicit SMServerConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    explicit SMServerConfig(QObject *parent, const KPluginMetaData &metaData);
     ~SMServerConfig() override;
 
     bool isUefi() const;

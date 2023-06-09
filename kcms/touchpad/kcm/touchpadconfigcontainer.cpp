@@ -24,8 +24,8 @@ Q_DECL_EXPORT void kcminit()
 }
 }
 
-TouchpadConfigContainer::TouchpadConfigContainer(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KCModule(parent, data, args)
+TouchpadConfigContainer::TouchpadConfigContainer(QObject *parent, const KPluginMetaData &data)
+    : KCModule(parent, data)
 {
     TouchpadBackend *backend = TouchpadBackend::implementation();
     if (KWindowSystem::isPlatformX11()) {

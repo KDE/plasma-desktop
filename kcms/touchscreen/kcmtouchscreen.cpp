@@ -74,8 +74,8 @@ public:
     }
 };
 
-Touchscreen::Touchscreen(QObject *parent, const KPluginMetaData &metaData, const QVariantList &list)
-    : KQuickManagedConfigModule(parent, metaData, list)
+Touchscreen::Touchscreen(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_touchscreensModel(new DevicesModel("touch", this))
 {
     qmlRegisterType<OutputsModel>("org.kde.plasma.touchscreen.kcm", 1, 0, "OutputsModel");

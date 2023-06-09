@@ -30,7 +30,7 @@ class KcmComponentChooser : public KQuickManagedConfigModule
     Q_PROPERTY(ComponentChooser *archiveManagers READ archiveManagers CONSTANT)
 
 public:
-    KcmComponentChooser(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    KcmComponentChooser(QObject *parent, const KPluginMetaData &metaData);
 
     ComponentChooser *browsers() const;
     ComponentChooser *emailClients() const;

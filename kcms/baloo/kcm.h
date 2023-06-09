@@ -25,7 +25,7 @@ class ServerConfigModule : public KQuickManagedConfigModule
     Q_PROPERTY(BalooSettings *balooSettings READ balooSettings CONSTANT)
 
 public:
-    ServerConfigModule(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    ServerConfigModule(QObject *parent, const KPluginMetaData &metaData);
     virtual ~ServerConfigModule() override;
 
     BalooSettings *balooSettings() const;

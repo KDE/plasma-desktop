@@ -18,8 +18,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(SpellFactory, "kcmspellchecking.json", registerPlugin<SonnetSpellCheckingModule>(); registerPlugin<SpellCheckingData>();)
 
-SonnetSpellCheckingModule::SonnetSpellCheckingModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KCModule(parent, data, args)
+SonnetSpellCheckingModule::SonnetSpellCheckingModule(QObject *parent, const KPluginMetaData &data)
+    : KCModule(parent, data)
     , m_data(new SpellCheckingData(this))
 {
     QBoxLayout *layout = new QVBoxLayout(widget());

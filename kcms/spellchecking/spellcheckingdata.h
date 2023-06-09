@@ -17,7 +17,7 @@ class SpellCheckingData : public KCModuleData
     Q_OBJECT
 
 public:
-    explicit SpellCheckingData(QObject *parent = nullptr, const QVariantList &args = QVariantList());
+    explicit SpellCheckingData(QObject *parent = nullptr);
     SpellCheckingSkeleton *settings() const;
     bool isDefaults() const override;
 

@@ -17,7 +17,7 @@ class BalooData : public KCModuleData
     Q_OBJECT
 
 public:
-    explicit BalooData(QObject *parent = nullptr, const QVariantList &args = QVariantList());
+    explicit BalooData(QObject *parent = nullptr);
     BalooSettings *settings() const;
 
 private:

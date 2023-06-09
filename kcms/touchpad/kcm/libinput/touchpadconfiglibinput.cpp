@@ -23,7 +23,7 @@
 
 #include "plasma_version.h"
 
-TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, TouchpadBackend *backend, const QVariantList & /*args*/)
+TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, TouchpadBackend *backend)
     : TouchpadConfigPlugin(parent, backend)
 {
     m_initError = !m_backend->errorString().isNull();

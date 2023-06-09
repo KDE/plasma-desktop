@@ -18,7 +18,7 @@
 K_PLUGIN_CLASS_WITH_JSON(ActivitiesModule, "kcm_activities.json")
 
 ActivitiesModule::ActivitiesModule(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickConfigModule(parent, metaData, args)
+    : KQuickConfigModule(parent, metaData)
     , m_isNewActivityAuthorized(KAuthorized::authorize(QStringLiteral("plasma-desktop/add_activities")))
 {
     qmlRegisterType<ActivityConfig>("org.kde.kcms.activities", 1, 0, "ActivityConfig");

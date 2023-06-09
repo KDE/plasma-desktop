@@ -13,8 +13,8 @@
 
 using namespace Baloo;
 
-BalooData::BalooData(QObject *parent, const QVariantList &args)
-    : KCModuleData(parent, args)
+BalooData::BalooData(QObject *parent)
+    : KCModuleData(parent)
     , m_settings(new BalooSettings(this))
 {
     autoRegisterSkeletons();

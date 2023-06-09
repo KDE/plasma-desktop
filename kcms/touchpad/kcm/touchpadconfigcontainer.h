@@ -21,7 +21,7 @@ class TouchpadConfigContainer : public KCModule
     friend TouchpadConfigLibinput;
 
 public:
-    explicit TouchpadConfigContainer(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    explicit TouchpadConfigContainer(QObject *parent, const KPluginMetaData &data);
 
     static void kcmInit();
 

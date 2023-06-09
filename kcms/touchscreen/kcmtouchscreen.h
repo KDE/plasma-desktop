@@ -22,7 +22,7 @@ class Touchscreen : public KQuickManagedConfigModule
     Q_PROPERTY(DevicesModel *touchscreensModel READ touchscreensModel CONSTANT)
 
 public:
-    explicit Touchscreen(QObject *parent, const KPluginMetaData &metaData, const QVariantList &list);
+    explicit Touchscreen(QObject *parent, const KPluginMetaData &metaData);
     ~Touchscreen() override;
 
     void load() override;

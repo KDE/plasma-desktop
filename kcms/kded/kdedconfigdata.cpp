@@ -10,8 +10,8 @@
 #include <KConfig>
 #include <KConfigGroup>
 
-KDEDConfigData::KDEDConfigData(QObject *parent, const QVariantList &args)
-    : KCModuleData(parent, args)
+KDEDConfigData::KDEDConfigData(QObject *parent)
+    : KCModuleData(parent)
 {
 }
 

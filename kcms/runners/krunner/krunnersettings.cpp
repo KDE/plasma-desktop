@@ -23,7 +23,7 @@
 K_PLUGIN_CLASS_WITH_JSON(KRunnerSettings, "kcm_krunnersettings.json")
 
 KRunnerSettings::KRunnerSettings(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, metaData, args)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_data(new KRunnerSettingsData(this))
     , m_consumer(new KActivities::Consumer(this))
     , m_historyConfigGroup(KSharedConfig::openConfig(QStringLiteral("krunnerstaterc"), KConfig::NoGlobals, QStandardPaths::GenericDataLocation)

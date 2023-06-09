@@ -12,8 +12,8 @@
 
 #include "spellcheckingskeleton.h"
 
-SpellCheckingData::SpellCheckingData(QObject *parent, const QVariantList &args)
-    : KCModuleData(parent, args)
+SpellCheckingData::SpellCheckingData(QObject *parent)
+    : KCModuleData(parent)
     , m_settings(new SpellCheckingSkeleton(this))
 {
     autoRegisterSkeletons();

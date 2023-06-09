@@ -43,8 +43,8 @@ static QString balooDatabaseLocation()
 
 using namespace Baloo;
 
-ServerConfigModule::ServerConfigModule(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, metaData, args)
+ServerConfigModule::ServerConfigModule(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_data(new BalooData(this))
     , m_filteredFolderModel(new FilteredFolderModel(m_data->settings(), this))
 {

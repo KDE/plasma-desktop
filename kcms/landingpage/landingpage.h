@@ -72,7 +72,7 @@ class KCMLandingPage : public KQuickManagedConfigModule
     Q_PROPERTY(LookAndFeelGroup *defaultDarkLookAndFeel READ defaultDarkLookAndFeel CONSTANT)
 
 public:
-    KCMLandingPage(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    KCMLandingPage(QObject *parent, const KPluginMetaData &metaData);
     ~KCMLandingPage() override
     {
     }

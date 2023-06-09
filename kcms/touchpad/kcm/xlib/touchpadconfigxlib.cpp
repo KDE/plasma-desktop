@@ -19,9 +19,9 @@
 #include <QAction>
 
 #include "../touchpadconfigcontainer.h"
+#include "actions.h"
 #include "customconfigdialogmanager.h"
 #include "customslider.h"
-#include "actions.h"
 #include "sliderpair.h"
 #include "touchpadbackend.h"
 #include "touchpadinterface.h"
@@ -74,7 +74,7 @@ QWidget *addTab(QTabWidget *tabs, T &form)
     return widget;
 }
 
-TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, TouchpadBackend *backend, const QVariantList & /*args*/)
+TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, TouchpadBackend *backend)
     : TouchpadConfigPlugin(parent, backend)
     , m_configOutOfSync(false)
 {

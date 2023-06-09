@@ -22,7 +22,7 @@ class KCMWorkspaceOptions : public KQuickManagedConfigModule
     Q_PROPERTY(WorkspaceOptionsKwinSettings *kwinSettings READ kwinSettings CONSTANT)
 
 public:
-    KCMWorkspaceOptions(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    KCMWorkspaceOptions(QObject *parent, const KPluginMetaData &metaData);
     ~KCMWorkspaceOptions() override
     {
     }

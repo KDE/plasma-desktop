@@ -42,7 +42,7 @@ private:
 K_PLUGIN_FACTORY_WITH_JSON(SearchConfigModuleFactory, "kcm_plasmasearch.json", registerPlugin<SearchConfigModule>(); registerPlugin<KRunnerData>();)
 
 SearchConfigModule::SearchConfigModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, data, args)
+    : KQuickManagedConfigModule(parent, data)
     , m_model(new KPluginModel(this))
     , m_config(KSharedConfig::openConfig("krunnerrc"))
 {

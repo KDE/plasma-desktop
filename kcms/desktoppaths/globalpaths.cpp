@@ -19,8 +19,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(DesktopPathConfig, "kcm_desktoppaths.json")
 
-DesktopPathConfig::DesktopPathConfig(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, metaData, args)
+DesktopPathConfig::DesktopPathConfig(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_data(new DesktopPathsData(this))
 {
 }

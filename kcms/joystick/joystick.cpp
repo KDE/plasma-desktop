@@ -21,8 +21,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(Joystick, "kcm_joystick.json")
 
-Joystick::Joystick(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KCModule(parent, data, args)
+Joystick::Joystick(QObject *parent, const KPluginMetaData &data)
+    : KCModule(parent, data)
 {
     setButtons(Help | Default);
 
