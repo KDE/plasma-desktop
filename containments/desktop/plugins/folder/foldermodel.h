@@ -24,6 +24,8 @@
 
 #include <KNewFileMenu>
 
+#include <Plasma/Applet>
+
 #include "folderplugin_private_export.h"
 
 class QDrag;
@@ -85,7 +87,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
     Q_PROPERTY(QString filterPattern READ filterPattern WRITE setFilterPattern NOTIFY filterPatternChanged)
     Q_PROPERTY(QStringList filterMimeTypes READ filterMimeTypes WRITE setFilterMimeTypes NOTIFY filterMimeTypesChanged)
     Q_PROPERTY(QObject *newMenu READ newMenu CONSTANT)
-    Q_PROPERTY(QObject *appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged)
+    Q_PROPERTY(Plasma::Applet *applet READ applet WRITE setApplet NOTIFY appletChanged)
     Q_PROPERTY(bool showHiddenFiles READ showHiddenFiles WRITE setShowHiddenFiles NOTIFY showHiddenFilesChanged)
 
 public:
@@ -177,8 +179,8 @@ public:
     QStringList filterMimeTypes() const;
     void setFilterMimeTypes(const QStringList &mimeList);
 
-    QObject *appletInterface() const;
-    void setAppletInterface(QObject *appletInterface);
+    Plasma::Applet *applet() const;
+    void setApplet(Plasma::Applet *applet);
 
     bool showHiddenFiles() const;
     void setShowHiddenFiles(bool enable);
@@ -264,7 +266,7 @@ Q_SIGNALS:
     void filterPatternChanged() const;
     void filterMimeTypesChanged() const;
     void screenChanged() const;
-    void appletInterfaceChanged() const;
+    void appletChanged() const;
     void requestRename() const;
     void move(int x, int y, QList<QUrl> urls);
     void popupMenuAboutToShow(KIO::DropJob *dropJob, QMimeData *mimeData, int x, int y);
@@ -350,7 +352,7 @@ private:
     int m_screen = -1;
     bool m_screenUsed;
     ScreenMapper *m_screenMapper = nullptr;
-    QObject *m_appletInterface = nullptr;
+    Plasma::Applet *m_applet = nullptr;
     bool m_complete;
     QPoint m_menuPosition;
 

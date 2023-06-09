@@ -1997,37 +1997,33 @@ void FolderModel::refresh()
     m_dirModel->dirLister()->updateDirectory(m_dirModel->dirLister()->url());
 }
 
-QObject *FolderModel::appletInterface() const
+Plasma::Applet *FolderModel::applet() const
 {
-    return m_appletInterface;
+    return m_applet;
 }
 
-void FolderModel::setAppletInterface(QObject *appletInterface)
+void FolderModel::setApplet(Plasma::Applet *applet)
 {
-    if (m_appletInterface != appletInterface) {
-        Q_ASSERT(!m_appletInterface);
+    if (m_applet != applet) {
+        Q_ASSERT(!m_applet);
 
-        m_appletInterface = appletInterface;
+        m_applet = applet;
 
-        if (appletInterface) {
-            Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+        if (applet) {
+            Plasma::Containment *containment = applet->containment();
 
-            if (applet) {
-                Plasma::Containment *containment = applet->containment();
+            if (containment) {
+                Plasma::Corona *corona = containment->corona();
 
-                if (containment) {
-                    Plasma::Corona *corona = containment->corona();
-
-                    if (corona) {
-                        m_screenMapper->setCorona(corona, m_currentActivity);
-                    }
-                    setScreen(containment->screen());
-                    connect(containment, &Plasma::Containment::screenChanged, this, &FolderModel::setScreen);
+                if (corona) {
+                    m_screenMapper->setCorona(corona, m_currentActivity);
                 }
+                setScreen(containment->screen());
+                connect(containment, &Plasma::Containment::screenChanged, this, &FolderModel::setScreen);
             }
         }
 
-        Q_EMIT appletInterfaceChanged();
+        Q_EMIT appletChanged();
     }
 }
 

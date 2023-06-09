@@ -1211,7 +1211,7 @@ FocusScope {
             parseDesktopFiles: (plasmoid.configuration.url === "desktop:/")
             previews: plasmoid.configuration.previews
             previewPlugins: plasmoid.configuration.previewPlugins
-            appletInterface: plasmoid
+            applet: plasmoid
 
             onListingCompleted: {
                 if (!gridView.model && root.expanded) {
