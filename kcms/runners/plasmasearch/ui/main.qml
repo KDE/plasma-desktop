@@ -21,6 +21,7 @@ KCMUtils.ScrollViewKCM {
 
     actions: [
         Kirigami.Action {
+            icon.name: "configure"
             text: i18n("Configure KRunner…")
             onTriggered: kcm.showKRunnerKCM()
         },
