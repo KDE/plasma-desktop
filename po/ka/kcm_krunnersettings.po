@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2022-09-02 07:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,90 +18,90 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: ui/main.qml:31
+#: ui/main.qml:29
 #, kde-format
 msgid "Position on screen:"
 msgstr "მდებარეობა ეკრანზე:"
 
-#: ui/main.qml:35
+#: ui/main.qml:33
 #, kde-format
 msgid "Top"
 msgstr "ზედა"
 
-#: ui/main.qml:42
+#: ui/main.qml:40
 #, kde-format
 msgid "Center"
 msgstr "ცენტრი"
 
-#: ui/main.qml:55
+#: ui/main.qml:53
 #, kde-format
 msgid "Activation:"
 msgstr "აქტივაცია:"
 
-#: ui/main.qml:58
+#: ui/main.qml:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Activate when pressing any key on the desktop"
 msgstr "აქტივაცია, როცა სამუშაო მაგიდაზე ნებისმიერ კლავიშს დააწვებით"
 
-#: ui/main.qml:71
+#: ui/main.qml:69
 #, kde-format
 msgid "History:"
 msgstr "ისტორია:"
 
-#: ui/main.qml:74
+#: ui/main.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Remember past searches"
 msgstr "ბოლო ძებნების დამახსოვრება"
 
-#: ui/main.qml:85
+#: ui/main.qml:83
 #, kde-format
 msgctxt "@option:check"
 msgid "Retain last search when re-opening"
 msgstr "თავიდან გახსნისას ბოლო ძებნების შენარჩუნება"
 
-#: ui/main.qml:96
+#: ui/main.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Activity-aware (last search and history)"
 msgstr "აქტივობების დევნება (ბოლო ძებნის და ისტორიის0"
 
-#: ui/main.qml:111
+#: ui/main.qml:109
 #, kde-format
 msgid "Clear History"
 msgstr "ისტორიის გაწმენდა"
 
-#: ui/main.qml:112
+#: ui/main.qml:110
 #, kde-format
 msgctxt "@action:button %1 activity name"
 msgid "Clear History for Activity \"%1\""
 msgstr "აქტივობისთვის (%1) ისტორიის გასუფთავება"
 
-#: ui/main.qml:113
+#: ui/main.qml:111
 #, kde-format
 msgid "Clear History…"
 msgstr "ისტორიის გასუფთავება…"
 
-#: ui/main.qml:142
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "ყველა აქტივობისთვის"
 
-#: ui/main.qml:155
+#: ui/main.qml:153
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "აქტივობისთვის %1"
 
-#: ui/main.qml:172
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
 msgstr "დამატებები:"
 
-#: ui/main.qml:176
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"

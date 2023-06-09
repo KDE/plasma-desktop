@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2022-06-27 08:58+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -20,90 +20,90 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.08.3\n"
 
-#: ui/main.qml:31
+#: ui/main.qml:29
 #, kde-format
 msgid "Position on screen:"
 msgstr "Расположение:"
 
-#: ui/main.qml:35
+#: ui/main.qml:33
 #, kde-format
 msgid "Top"
 msgstr "Сверху"
 
-#: ui/main.qml:42
+#: ui/main.qml:40
 #, kde-format
 msgid "Center"
 msgstr "В центре"
 
-#: ui/main.qml:55
+#: ui/main.qml:53
 #, kde-format
 msgid "Activation:"
 msgstr "Активация:"
 
-#: ui/main.qml:58
+#: ui/main.qml:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Activate when pressing any key on the desktop"
 msgstr "Открывать при нажатии любой клавиши в рабочем столе"
 
-#: ui/main.qml:71
+#: ui/main.qml:69
 #, kde-format
 msgid "History:"
 msgstr "История:"
 
-#: ui/main.qml:74
+#: ui/main.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Remember past searches"
 msgstr "Запоминать последние запросы"
 
-#: ui/main.qml:85
+#: ui/main.qml:83
 #, kde-format
 msgctxt "@option:check"
 msgid "Retain last search when re-opening"
 msgstr "Восстанавливать последний запрос при открытии"
 
-#: ui/main.qml:96
+#: ui/main.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Activity-aware (last search and history)"
 msgstr "Отдельная для каждой комнаты"
 
-#: ui/main.qml:111
+#: ui/main.qml:109
 #, kde-format
 msgid "Clear History"
 msgstr "Очистить историю запросов"
 
-#: ui/main.qml:112
+#: ui/main.qml:110
 #, kde-format
 msgctxt "@action:button %1 activity name"
 msgid "Clear History for Activity \"%1\""
 msgstr "Очистить историю запросов для комнаты «%1»"
 
-#: ui/main.qml:113
+#: ui/main.qml:111
 #, kde-format
 msgid "Clear History…"
 msgstr "Очистить историю запросов…"
 
-#: ui/main.qml:142
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "Во всех комнатах"
 
-#: ui/main.qml:155
+#: ui/main.qml:153
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "В комнате «%1»"
 
-#: ui/main.qml:172
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
 msgstr "Модули:"
 
-#: ui/main.qml:176
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"

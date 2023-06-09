@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2015-02-15 12:42+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -121,7 +121,7 @@ msgid "Shows the desktop"
 msgstr "Prikazuje površ"
 
 #         translations.
-#: package/contents/ui/main.qml:106
+#: package/contents/ui/main.qml:100
 #, fuzzy, kde-format
 #| msgid "and %1 other window"
 #| msgid_plural "and %1 other windows"
@@ -132,7 +132,7 @@ msgstr[1] "i %1 nova prozora"
 msgstr[2] "i %1 novih prozora"
 
 #         translations.
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:367
 #, fuzzy, kde-format
 #| msgid "%1 window"
 #| msgid_plural "%1 windows"
@@ -142,7 +142,7 @@ msgstr[0] "%1 prozor"
 msgstr[1] "%1 prozora"
 msgstr[2] "%1 prozora"
 
-#: package/contents/ui/main.qml:377
+#: package/contents/ui/main.qml:379
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
@@ -150,34 +150,34 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: package/contents/ui/main.qml:452
+#: package/contents/ui/main.qml:454
 #, fuzzy, kde-format
 #| msgid "Desktop name"
 msgid "Desktop %1"
 msgstr "Naziv površi"
 
-#: package/contents/ui/main.qml:453
+#: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:598
+#: package/contents/ui/main.qml:600
 #, kde-format
 msgid "Show Activity Manager…"
 msgstr ""
 
-#: package/contents/ui/main.qml:601
+#: package/contents/ui/main.qml:603
 #, kde-format
 msgid "Add Virtual Desktop"
 msgstr "Dodaj virtualni desktop"
 
-#: package/contents/ui/main.qml:602
+#: package/contents/ui/main.qml:604
 #, kde-format
 msgid "Remove Virtual Desktop"
 msgstr "Ukloni virtualni desktop"
 
-#: package/contents/ui/main.qml:605
+#: package/contents/ui/main.qml:607
 #, fuzzy, kde-format
 #| msgid "Configure Desktops"
 msgid "Configure Virtual Desktops…"
