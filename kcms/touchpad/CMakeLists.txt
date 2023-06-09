@@ -39,11 +39,7 @@ target_link_libraries(touchpad
     KF6::I18n
     KF6::GlobalAccel
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(touchpad PRIVATE Qt6::X11Extras)
-else()
-    target_link_libraries(touchpad PRIVATE Qt::GuiPrivate)
-endif()
+target_link_libraries(touchpad PRIVATE Qt::GuiPrivate)
 
 add_subdirectory(kcm)
 add_subdirectory(kded)

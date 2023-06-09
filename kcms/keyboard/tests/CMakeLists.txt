@@ -13,11 +13,7 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                                      X11::xkbfile
                                      X11::X11
                )
-               if (QT_MAJOR_VERSION EQUAL "5")
-                  target_link_libraries(${_testname}_test Qt6::X11Extras)
-               else()
-                  target_link_libraries(${_testname}_test Qt::GuiPrivate)
-               endif()
+               target_link_libraries(${_testname}_test Qt::GuiPrivate)
 endmacro(KEYBOARD_DAEMON_UNIT_TESTS)
 
 keyboard_daemon_unit_tests(xkb_rules)
@@ -75,9 +71,6 @@ if( X11_XTest_FOUND )
                          ${X11_XTest_LIB}
                          X11::X11
    )
-   if (QT_MAJOR_VERSION EQUAL "5")
-      target_link_libraries(keyboard_daemon_test Qt6::X11Extras)
-   endif()
 
    if (HAVE_XINPUT)
       target_link_libraries(keyboard_daemon_test X11::Xi)

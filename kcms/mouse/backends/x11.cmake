@@ -19,8 +19,4 @@ set(backend_LIBS
     X11::Xi
     X11::Xcursor
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    list(APPEND backend_LIBS Qt::X11Extras)
-else()
-    list(APPEND backend_LIBS Qt::GuiPrivate)
-endif()
+list(APPEND backend_LIBS Qt::GuiPrivate)

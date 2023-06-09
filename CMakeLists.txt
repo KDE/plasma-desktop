@@ -31,7 +31,7 @@ include(CheckIncludeFiles)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
     QuickWidgets
     DBus
@@ -41,16 +41,7 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core5Compat
     Sql # kcms/activities
 )
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG OPTIONAL_COMPONENTS WaylandClient)
-if (QT_MAJOR_VERSION EQUAL "5")
-    find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
-
-    find_package(QtWaylandScanner)
-    set_package_properties(QtWaylandScanner PROPERTIES
-        TYPE REQUIRED
-        PURPOSE "Required for building KWin with Wayland support"
-    )
-endif()
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG OPTIONAL_COMPONENTS WaylandClient)
 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Auth
@@ -82,14 +73,11 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     IconThemes
     XmlGui
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS KDELibs4Support) # kcms/dateandtime
-endif()
 
 # TODO re-enable once KAccounts is ported to Qt6
-# find_package(AccountsQt${QT_MAJOR_VERSION} ${ACCOUNTSQT_DEP_VERSION} CONFIG)
+# find_package(AccountsQt6 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
 #
-# set_package_properties(AccountsQt${QT_MAJOR_VERSION} PROPERTIES
+# set_package_properties(AccountsQt6 PROPERTIES
 #     DESCRIPTION "Accounts management library for Qt applications"
 #     URL "https://gitlab.com/accounts-sso/libaccounts-qt"
 #     PURPOSE "Required for building the OpenDesktop integration plugin"
@@ -106,7 +94,7 @@ endif()
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SignOnOAuth2 IMPORTED_TARGET signon-oauth2plugin)
 set_package_properties(signon-oauth2plugin PROPERTIES
-    DESCRIPTION "Plugin for SignOnQt${QT_MAJOR_VERSION} which handles OAuth and OAuth2 logins"
+    DESCRIPTION "Plugin for SignOnQt6 which handles OAuth and OAuth2 logins"
     URL "https://gitlab.com/accounts-sso/signon-plugin-oauth2"
     PURPOSE "Required for running the OpenDesktop integration plugin"
     TYPE RUNTIME
@@ -219,14 +207,14 @@ endif()
 
 include(ConfigureChecks.cmake)
 
-find_package(PackageKitQt${QT_MAJOR_VERSION})
-set_package_properties(PackageKitQt${QT_MAJOR_VERSION} PROPERTIES
+find_package(PackageKitQt6)
+set_package_properties(PackageKitQt6 PROPERTIES
     DESCRIPTION "Software Manager integration"
     PURPOSE "Used in the KRunner plugin installer"
     TYPE OPTIONAL
 )
 
-if(PackageKitQt${QT_MAJOR_VERSION}_FOUND)
+if(PackageKitQt6_FOUND)
     set(HAVE_PACKAGEKIT TRUE)
 endif()
 
@@ -259,7 +247,7 @@ add_subdirectory(toolboxes)
 add_subdirectory(applets)
 add_subdirectory(kcms)
 add_subdirectory(knetattach)
-if(KAccounts_FOUND AND AccountsQt${QT_MAJOR_VERSION}_FOUND)
+if(KAccounts_FOUND AND AccountsQt6_FOUND)
     add_subdirectory(attica-kde)
 endif()
 add_subdirectory(imports/activitymanager/)

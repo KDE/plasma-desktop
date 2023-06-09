@@ -31,10 +31,6 @@ target_link_libraries(tastenbrett
         X11::xkbfile
         X11::X11
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(tastenbrett PRIVATE Qt6::X11Extras)
-else()
-    target_link_libraries(tastenbrett PRIVATE Qt::GuiPrivate)
-endif()
+target_link_libraries(tastenbrett PRIVATE Qt::GuiPrivate)
 
 install(TARGETS tastenbrett DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

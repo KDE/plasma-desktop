@@ -36,7 +36,7 @@ kconfig_add_kcfg_files(kded_keyboard_SRCS keyboardsettings.kcfgc)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-kcoreaddons_add_plugin(kded_keyboard SOURCES ${kded_keyboard_SRCS} INSTALL_NAMESPACE kf${QT_MAJOR_VERSION}/kded)
+kcoreaddons_add_plugin(kded_keyboard SOURCES ${kded_keyboard_SRCS} INSTALL_NAMESPACE kf6/kded)
 set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
 
 target_link_libraries(kded_keyboard
@@ -59,11 +59,7 @@ target_link_libraries(kded_keyboard
     X11::X11
     X11::xkbfile
  )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(kded_keyboard Qt6::X11Extras)
-else()
-    target_link_libraries(kded_keyboard Qt::GuiPrivate)
-endif()
+target_link_libraries(kded_keyboard Qt::GuiPrivate)
 
 if (HAVE_XINPUT)
     target_link_libraries(kded_keyboard X11::Xi)
@@ -149,7 +145,7 @@ configure_file(config-keyboard.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keyboa
 
 # Unit tests
 if(BUILD_TESTING)
-    find_package(Qt${QT_MAJOR_VERSION}Test ${QT_MIN_VERSION} CONFIG REQUIRED)
+    find_package(Qt6Test ${QT_MIN_VERSION} CONFIG REQUIRED)
     add_subdirectory( tests )
 endif()
 

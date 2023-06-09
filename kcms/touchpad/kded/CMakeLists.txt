@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kded_touchpad SOURCES kded.cpp INSTALL_NAMESPACE kf${QT_MAJOR_VERSION}/kded)
+kcoreaddons_add_plugin(kded_touchpad SOURCES kded.cpp INSTALL_NAMESPACE kf6/kded)
 
 target_link_libraries(kded_touchpad
     PRIVATE
