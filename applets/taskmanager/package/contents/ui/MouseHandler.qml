@@ -19,7 +19,7 @@ Item {
     property bool moved: false
 
     property alias hoveredItem: dropHandler.hoveredItem
-    property alias handleWheelEvents: wheelHandler.active
+    property alias handleWheelEvents: wheelHandler.handleWheelEvents
 
     function insertIndexAt(above, x, y) {
         if (above) {
@@ -62,10 +62,10 @@ Item {
     WheelHandler {
         id: wheelHandler
 
-        property bool active: true
+        property bool handleWheelEvents: true
         property int wheelDelta: 0;
 
-        enabled: active && plasmoid.configuration.wheelEnabled
+        enabled: handleWheelEvents && plasmoid.configuration.wheelEnabled
 
         onWheel: {
             wheelDelta = TaskTools.wheelActivateNextPrevTask(null, wheelDelta, event.angleDelta.y, plasmoid.configuration.wheelSkipMinimized, tasks);
