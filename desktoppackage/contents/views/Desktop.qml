@@ -203,9 +203,11 @@ Item {
     }
 
     Connections {
-        target: containment.plasmoid
+        target: containment?.plasmoid ?? null
         function onAvailableScreenRectChanged() {
-            sidePanel.requestActivate();
+            if (sidePanel.visible) {
+                sidePanel.requestActivate();
+            }
         }
     }
 

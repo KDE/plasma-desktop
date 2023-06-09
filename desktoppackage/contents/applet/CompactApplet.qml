@@ -19,7 +19,7 @@ PlasmaCore.ToolTipArea {
     mainText: plasmoidItem ? plasmoidItem.toolTipMainText : ""
     subText: plasmoidItem ? plasmoidItem.toolTipSubText : ""
     location: Plasmoid.location
-    active: !plasmoidItem.expanded
+    active: plasmoidItem ? !plasmoidItem.expanded : false
     textFormat: plasmoidItem ? plasmoidItem.toolTipTextFormat : 0
     mainItem: plasmoidItem && plasmoidItem.toolTipItem ? plasmoidItem.toolTipItem : null
 
