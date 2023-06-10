@@ -59,48 +59,23 @@ Item {
         id: activityInfo
     }
 
-    property bool touchingWindow: false
+    property bool touchingWindow: visibleWindowsModel.count > 0
 
-    function rectOverlap(a, b, dpr) {
-        return (Math.max(a.left, b.left / dpr) - 1 <= Math.min(a.right, b.right / dpr) &&
-                Math.max(a.top, b.top / dpr) - 1 <= Math.min(a.bottom, b.bottom / dpr))
-    }
-
-    function updateWindows() {
-        if (visibleWindowsModel.count === 0) {
-            root.touchingWindow = false
-            return
-        }
-        let panelGeo = panel.geometryByDistance(0)
-        const screenDevicePixelRatio = KWindowSystem.isPlatformX11 ? Screen.devicePixelRatio : 1
-        for( var i = 0; i < visibleWindowsModel.rowCount(); i++ ) {
-            if (rectOverlap(panelGeo, visibleWindowsModel.get(i).Geometry, screenDevicePixelRatio)) {
-                root.touchingWindow = true
-                return
-            }
-        }
-        root.touchingWindow = false
-    }
-
-    PlasmaCore.SortFilterModel {
+    TaskManager.TasksModel {
         id: visibleWindowsModel
-        filterRole: 'IsMinimized'
-        filterRegExp: 'false'
-        onDataChanged: Qt.callLater(root.updateWindows)
-        onCountChanged: Qt.callLater(root.updateWindows)
-        sourceModel: TaskManager.TasksModel {
-            filterByVirtualDesktop: true
-            filterByActivity: true
-            filterByScreen: true
-            filterHidden: true
+        filterByVirtualDesktop: true
+        filterByActivity: true
+        filterByScreen: true
+        filterByRegion: TaskManager.RegionFilterMode.Intersect
+        filterHidden: true
+        filterMinimized: true
 
-            screenGeometry: panel.screenGeometry
-            virtualDesktop: virtualDesktopInfo.currentDesktop
-            activity: activityInfo.currentActivity
+        screenGeometry: panel.screenGeometry
+        regionGeometry: panel.thickness, panel.offset, panel.length, panel.geometryByDistance(0)
+        virtualDesktop: virtualDesktopInfo.currentDesktop
+        activity: activityInfo.currentActivity
 
-            id: tasksModel
-            groupMode: TaskManager.TasksModel.GroupDisabled
-        }
+        groupMode: TaskManager.TasksModel.GroupDisabled
     }
 
     // Floatingness is a value in [0, 1] that's multiplied to the floating margin; 0: not floating, 1: floating, between 0 and 1: animation between the two states
