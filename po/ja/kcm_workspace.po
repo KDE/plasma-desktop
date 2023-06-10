@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-06-10 02:09+0000\n"
 "PO-Revision-Date: 2023-02-23 18:20+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -79,28 +79,28 @@ msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "開く"
 
-#: ui/main.qml:133
+#: ui/main.qml:134
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "アイテムの選択マーカーをクリックして選択"
 
-#: ui/main.qml:143
+#: ui/main.qml:144
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "選択する"
 
-#: ui/main.qml:156
+#: ui/main.qml:158
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "ダブルクリックで開く"
 
-#: ui/main.qml:170
+#: ui/main.qml:172
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "スクロールバーのスクロールエリアをクリックした際の挙動:"
 
-#: ui/main.qml:171
+#: ui/main.qml:173
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -108,7 +108,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "クリックした位置にスクロール"
 
-#: ui/main.qml:189
+#: ui/main.qml:191
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -116,39 +116,39 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "1ページ分上下にスクロール"
 
-#: ui/main.qml:201
+#: ui/main.qml:204
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "中クリックでクリックした位置にスクロール"
 
-#: ui/main.qml:213
+#: ui/main.qml:216
 #, kde-format
 msgid "Middle Click:"
 msgstr "中クリック:"
 
-#: ui/main.qml:215
+#: ui/main.qml:218
 #, kde-format
 msgid "Paste selected text"
 msgstr "選択されたテキストを貼り付け"
 
-#: ui/main.qml:232
+#: ui/main.qml:235
 #, kde-format
 msgid "Touch Mode:"
 msgstr "タッチモード:"
 
-#: ui/main.qml:234
+#: ui/main.qml:237
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "必要なとき自動的に有効化する"
 
-#: ui/main.qml:234 ui/main.qml:263
+#: ui/main.qml:237 ui/main.qml:267
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "有効化しない"
 
-#: ui/main.qml:246
+#: ui/main.qml:249
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -159,13 +159,13 @@ msgstr ""
 "検出されないとき自動的に有効化されます。例: タブレット PC のキーボードがフ"
 "リップされたとき、もしくは取り外されたとき"
 
-#: ui/main.qml:251
+#: ui/main.qml:254
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "常に有効"
 
-#: ui/main.qml:276
+#: ui/main.qml:281
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
