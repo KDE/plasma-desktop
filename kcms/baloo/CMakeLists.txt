@@ -16,6 +16,7 @@ target_link_libraries(kcm_baloofile
     KF6::Solid
     KF6::Baloo
     KF6::KCMUtilsQuick
+    KF6::KIOCore
     Qt::DBus
     Qt::Widgets
 )
