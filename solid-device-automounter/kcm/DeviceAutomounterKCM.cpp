@@ -29,8 +29,8 @@
 K_PLUGIN_FACTORY_WITH_JSON(DeviceAutomounterKCMFactory, "device_automounter_kcm.json", registerPlugin<DeviceAutomounterKCM>();
                            registerPlugin<DeviceAutomounterData>();)
 
-DeviceAutomounterKCM::DeviceAutomounterKCM(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KCModule(parent, data, args)
+DeviceAutomounterKCM::DeviceAutomounterKCM(QObject *parent, const KPluginMetaData &data)
+    : KCModule(parent, data)
     , m_settings(new AutomounterSettings(widget()))
     , m_devices(new DeviceModel(m_settings, this))
 {

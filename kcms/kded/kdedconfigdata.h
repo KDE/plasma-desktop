@@ -15,7 +15,7 @@ class KDEDConfigData : public KCModuleData
     Q_OBJECT
 
 public:
-    KDEDConfigData(QObject *parent = nullptr);
+    KDEDConfigData(QObject *parent);
 
     bool isDefaults() const override;
 };
