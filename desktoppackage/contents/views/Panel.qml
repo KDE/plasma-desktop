@@ -86,8 +86,8 @@ Item {
         id: visibleWindowsModel
         filterRole: 'IsMinimized'
         filterRegExp: 'false'
-        onDataChanged: root.updateWindows()
-        onCountChanged: root.updateWindows()
+        onDataChanged: Qt.callLater(root.updateWindows)
+        onCountChanged: Qt.callLater(root.updateWindows)
         sourceModel: TaskManager.TasksModel {
             filterByVirtualDesktop: true
             filterByActivity: true
