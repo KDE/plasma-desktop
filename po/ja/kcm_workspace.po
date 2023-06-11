@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-06-11 02:11+0000\n"
 "PO-Revision-Date: 2023-02-23 18:20+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -122,13 +122,19 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "中クリックでクリックした位置にスクロール"
 
 #: ui/main.qml:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle Click:"
+msgctxt ""
+"@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "中クリック:"
 
 #: ui/main.qml:218
-#, kde-format
-msgid "Paste selected text"
+#, fuzzy, kde-format
+#| msgid "Paste selected text"
+msgctxt ""
+"@radio part of a complete sentence: 'Middle click pastes selected text'"
+msgid "Pastes selected text"
 msgstr "選択されたテキストを貼り付け"
 
 #: ui/main.qml:235

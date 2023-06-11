@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-06-11 02:11+0000\n"
 "PO-Revision-Date: 2022-12-20 11:20-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -124,13 +124,19 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "Para rolar até a posição clicada, use o botão do meio"
 
 #: ui/main.qml:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle Click:"
+msgctxt ""
+"@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "Botão do meio:"
 
 #: ui/main.qml:218
-#, kde-format
-msgid "Paste selected text"
+#, fuzzy, kde-format
+#| msgid "Paste selected text"
+msgctxt ""
+"@radio part of a complete sentence: 'Middle click pastes selected text'"
+msgid "Pastes selected text"
 msgstr "Colar texto selecionado"
 
 #: ui/main.qml:235

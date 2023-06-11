@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-06-11 02:11+0000\n"
 "PO-Revision-Date: 2022-12-28 21:16+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -120,13 +120,19 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "Clic-mijloc pentru derulare la locul ales"
 
 #: ui/main.qml:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle Click:"
+msgctxt ""
+"@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "Clic mijlociu:"
 
 #: ui/main.qml:218
-#, kde-format
-msgid "Paste selected text"
+#, fuzzy, kde-format
+#| msgid "Paste selected text"
+msgctxt ""
+"@radio part of a complete sentence: 'Middle click pastes selected text'"
+msgid "Pastes selected text"
 msgstr "Lipește textul ales"
 
 #: ui/main.qml:235
