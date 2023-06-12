@@ -71,11 +71,15 @@ Item {
         filterMinimized: true
 
         screenGeometry: panel.screenGeometry
-        regionGeometry: panel.thickness, panel.offset, panel.length, panel.geometryByDistance(0)
         virtualDesktop: virtualDesktopInfo.currentDesktop
         activity: activityInfo.currentActivity
 
         groupMode: TaskManager.TasksModel.GroupDisabled
+
+        Binding on regionGeometry {
+            delayed: true
+            value: panel.width, panel.height, panel.x, panel.y, panel.geometryByDistance(1 /* Touch the border */)
+        }
     }
 
     // Floatingness is a value in [0, 1] that's multiplied to the floating margin; 0: not floating, 1: floating, between 0 and 1: animation between the two states
