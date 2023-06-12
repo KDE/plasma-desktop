@@ -154,7 +154,7 @@ void ModulesModel::load()
     QVector<ModulesModelData> autostartModules;
     QVector<ModulesModelData> onDemandModules;
 
-    const auto modules = KPluginMetaData::findPlugins(QStringLiteral("kf" QT_STRINGIFY(QT_VERSION_MAJOR) "/kded"));
+    const auto modules = KPluginMetaData::findPlugins(QStringLiteral("kf6/kded"));
     for (const KPluginMetaData &module : modules) {
         QString servicePath = module.fileName();
 
