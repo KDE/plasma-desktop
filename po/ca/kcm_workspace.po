@@ -1,9 +1,9 @@
 # Translation of kcm_workspace.po to Catalan
-# Copyright (C) 2014-2022 This_file_is_part_of_KDE
+# Copyright (C) 2014-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2017, 2018, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-11 02:11+0000\n"
-"PO-Revision-Date: 2022-12-17 11:41+0100\n"
+"PO-Revision-Date: 2023-06-11 09:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -126,16 +126,14 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "Clic del mig per a desplaçar a la ubicació clicada"
 
 #: ui/main.qml:216
-#, fuzzy, kde-format
-#| msgid "Middle Click:"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "Clic del mig:"
 
 #: ui/main.qml:218
-#, fuzzy, kde-format
-#| msgid "Paste selected text"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
