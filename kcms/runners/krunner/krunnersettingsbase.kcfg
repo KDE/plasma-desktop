@@ -6,23 +6,24 @@
   <kcfgfile name="krunnerrc" />
   <group name="General">
     <entry name="freeFloating" key="FreeFloating" type="Bool">
-      <label></label>
       <default>false</default>
     </entry>
     <entry name="activateWhenTypingOnDesktop" key="ActivateWhenTypingOnDesktop" type="Bool">
-      <label></label>
       <default>true</default>
+    </entry>
+    <entry name="historyBehavior" type="Enum">
+      <label>Option to determine the behavior of KRunner's history and history completion</label>
+      <choices>
+        <choice name="Disabled" />
+        <choice name="ImmediateCompletion" />
+        <choice name="CompletionSuggestion" />
+      </choices>
+      <default>CompletionSuggestion</default>
     </entry>
     <entry name="retainPriorSearch" key="RetainPriorSearch" type="Bool">
-      <label></label>
-      <default>true</default>
-    </entry>
-    <entry name="historyEnabled" key="HistoryEnabled" type="Bool">
-      <label></label>
       <default>true</default>
     </entry>
     <entry name="activityAware" key="ActivityAware" type="Bool">
-      <label></label>
       <default>true</default>
     </entry>
   </group>

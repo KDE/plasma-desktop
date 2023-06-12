@@ -11,6 +11,8 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
 
+import org.kde.plasma.runners.kcm
+
 KCM.SimpleKCM {
     id: root
 
@@ -65,27 +67,21 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: false
         }
 
-        QQC2.CheckBox {
+        QQC2.RadioButton {
             Kirigami.FormData.label: i18n("History:")
-            checked: kcm.krunnerSettings.historyEnabled
-            onToggled: kcm.krunnerSettings.historyEnabled = checked
-            text: i18nc("@option:check", "Remember past searches")
-
-            KCM.SettingStateBinding {
-                configObject: kcm.krunnerSettings
-                settingName: "historyEnabled"
-            }
+            checked: kcm.krunnerSettings.historyBehavior === KRunnerSettings.Disabled
+            onToggled: kcm.krunnerSettings.historyBehavior = KRunnerSettings.Disabled
+            text: i18nc("@option:check", "Disabled")
         }
-
-        QQC2.CheckBox {
-            checked: kcm.krunnerSettings.retainPriorSearch
-            onToggled: kcm.krunnerSettings.retainPriorSearch = checked
-            text: i18nc("@option:check", "Retain last search when re-opening")
-
-            KCM.SettingStateBinding {
-                configObject: kcm.krunnerSettings
-                settingName: "retainPriorSearch"
-            }
+        QQC2.RadioButton {
+            checked: kcm.krunnerSettings.historyBehavior === KRunnerSettings.CompletionSuggestion
+            onToggled: kcm.krunnerSettings.historyBehavior = KRunnerSettings.CompletionSuggestion
+            text: i18nc("@option:check The thing being enabled is search history", "Enabled")
+        }
+        QQC2.RadioButton {
+            checked: kcm.krunnerSettings.historyBehavior === KRunnerSettings.ImmediateCompletion
+            onToggled: kcm.krunnerSettings.historyBehavior = KRunnerSettings.ImmediateCompletion
+            text: i18nc("@option:check The thing being enabled is search history", "Enabled with auto-complete")
         }
 
         QQC2.CheckBox {
@@ -101,7 +97,7 @@ KCM.SimpleKCM {
 
         QQC2.Button {
             id: clearHistoryButton
-            enabled: kcm.krunnerSettings.historyEnabled && kcm.historyKeys.length > 0
+            enabled: kcm.krunnerSettings.historyBehavior !== KRunnerSettings.Disabled && kcm.historyKeys.length > 0
 
             icon.name: Qt.application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
             text: kcm.hasSingleHistory ?

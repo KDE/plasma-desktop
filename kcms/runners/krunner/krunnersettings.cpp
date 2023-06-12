@@ -32,7 +32,7 @@ KRunnerSettings::KRunnerSettings(QObject *parent, const KPluginMetaData &metaDat
     , m_historyKeys(m_historyConfigGroup.keyList())
     , m_doesShowPluginButton(args.isEmpty() || args.constFirst() != QLatin1String("openedFromPluginSettings"))
 {
-    qmlRegisterAnonymousType<KRunnerSettingsBase>("org.kde.plasma.runners.kcm", 0);
+    qmlRegisterUncreatableType<KRunnerSettingsBase>("org.kde.plasma.runners.kcm", 1, 0, "KRunnerSettings", QStringLiteral("Only for enums"));
 
     setButtons(Apply | Default);
 
