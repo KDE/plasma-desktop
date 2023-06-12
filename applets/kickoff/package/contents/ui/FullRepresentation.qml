@@ -119,7 +119,7 @@ EmptyPage {
                         text: i18nc("@info:status", "No matches")
 
                         Connections {
-                            target: Plasmoid.rootItem.runnerModel
+                            target: kickoff.runnerModel
                             function onQueryFinished() {
                                 showAnimation.restart()
                             }
