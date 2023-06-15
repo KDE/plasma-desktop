@@ -317,16 +317,16 @@ ContainmentItem {
                         appletsLayout.hidePlaceHolder();
                     }
                 }
-                component DropAnimation : NumberAnimation {
-                    duration: PlasmaCore.Units.shortDuration
-                    easing.type: Easing.InOutQuad
+
+                component DropBehavior : Behavior {
+                    NumberAnimation {
+                        duration: PlasmaCore.Units.shortDuration
+                        easing.type: Easing.InOutQuad
+                    }
                 }
-                Behavior on x {
-                    DropAnimation { }
-                }
-                Behavior on y {
-                    DropAnimation { }
-                }
+
+                DropBehavior on x { }
+                DropBehavior on y { }
             }
 
             placeHolder: ContainmentLayoutManager.PlaceHolder {}
