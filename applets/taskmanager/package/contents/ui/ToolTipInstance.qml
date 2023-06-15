@@ -162,8 +162,8 @@ ColumnLayout {
         // There's no PlasmaComponents3 version
         PlasmaExtras.Highlight {
             anchors.fill: hoverHandler
-            visible: hoverHandler.item ? hoverHandler.item.containsMouse : false
-            pressed: hoverHandler.item ? hoverHandler.item.containsPress : false
+            visible: hoverHandler.item?.containsMouse
+            pressed: hoverHandler.item?.containsPress
             hovered: true
         }
 
@@ -290,7 +290,7 @@ ColumnLayout {
             sourceSize: Qt.size(parent.width, parent.height)
 
             asynchronous: true
-            source: playerController.item ? playerController.item.albumArt : ""
+            source: playerController.item?.albumArt ?? ""
             fillMode: Image.PreserveAspectFit
             visible: available
         }
