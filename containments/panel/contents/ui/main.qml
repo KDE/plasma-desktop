@@ -140,7 +140,7 @@ ContainmentItem {
             });
         }
 
-        onDragEnter: {
+        onDragEnter: event => {
             if (plasmoid.immutable) {
                 event.ignore();
                 return;
@@ -151,11 +151,11 @@ ContainmentItem {
             appletsModel.insert(LayoutManager.indexAtCoordinates(event.x, event.y), {applet: dndSpacer})
         }
 
-        onDragMove: {
+        onDragMove: event => {
             LayoutManager.move(dndSpacer.parent, LayoutManager.indexAtCoordinates(event.x, event.y));
         }
 
-        onDragLeave: {
+        onDragLeave: event => {
             /*
             * When reordering task items, dragLeave signal will be emitted directly
             * without dragEnter, and in this case parent.index is undefined, so also
@@ -167,7 +167,7 @@ ContainmentItem {
             }
         }
 
-        onDrop: {
+        onDrop: event => {
             appletsModel.remove(dndSpacer.parent.index);
             root.processMimeData(event.mimeData, event.x, event.y);
             event.accept(event.proposedAction);

@@ -124,13 +124,13 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                         return mousePos;
                     }
 
-                    onPressed: {
+                    onPressed: mouse => {
                         mouse.accepted = true;
                         startRotation = overlay.itemContainer.rotation;
                         startCenterRelativeAngle = pointAngle(centerRelativePos(mouse.x, mouse.y));
                     }
-                    onPositionChanged: {
 
+                    onPositionChanged: mouse => {
                         var rot = startRotation % 360;
                         var snap = 4;
                         var newRotation = Math.round(pointAngle(centerRelativePos(mouse.x, mouse.y)) - startCenterRelativeAngle + startRotation);
@@ -154,7 +154,8 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
 
                         overlay.itemContainer.rotation = newRotation;
                     }
-                    onReleased: {
+
+                    onReleased: mouse => {
                         // save rotation
                         appletsLayout.save();
                     }
@@ -206,8 +207,10 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 Layout.fillWidth: true
                 cursorShape: containsPress ? Qt.DragMoveCursor : Qt.OpenHandCursor
                 hoverEnabled: true
-                onPressed: appletsLayout.releaseSpace(overlay.itemContainer);
-                onPositionChanged: {
+                onPressed: mouse => {
+                    appletsLayout.releaseSpace(overlay.itemContainer);
+                }
+                onPositionChanged: mouse => {
                     if (!pressed) {
                         return;
                     }
@@ -215,7 +218,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                     var dragPos = mapToItem(overlay.itemContainer, mouse.x, mouse.y);
                     overlay.itemContainer.userDrag(Qt.point(overlay.itemContainer.x, overlay.itemContainer.y), dragPos);
                 }
-                onReleased: {
+                onReleased: mouse => {
                     appletsLayout.hidePlaceHolder();
                     appletsLayout.positionItem(overlay.itemContainer);
                 }

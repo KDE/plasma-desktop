@@ -48,7 +48,7 @@ PlasmaCore.SvgItem {
         acceptedButtons: Qt.LeftButton
         hoverEnabled: true
 
-        onClicked: actionButton.clicked()
+        onClicked: mouse => actionButton.clicked()
 
         states: [
             State {

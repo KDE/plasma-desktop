@@ -23,7 +23,7 @@ DragDrop.DropArea {
 
     property Item folderView: null
 
-    onContainsDragChanged: {
+    onContainsDragChanged: contained => {
         if (containsDrag) {
             hoverActivateTimer.restart();
         } else {
@@ -31,7 +31,10 @@ DragDrop.DropArea {
         }
     }
 
-    onDrop: folderView.model.dropCwd(event)
+    onDrop: event => {
+        folderView.model.dropCwd(event);
+    }
+
     preventStealing: true
 
     function toggle() {
@@ -55,7 +58,7 @@ DragDrop.DropArea {
 
         hoverEnabled: true
 
-        onClicked: toggle()
+        onClicked: mouse => toggle()
     }
 
     Timer {

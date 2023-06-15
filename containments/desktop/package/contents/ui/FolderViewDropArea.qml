@@ -34,7 +34,7 @@ DragDrop.DropArea {
         folderView.endDragMove();
     }
 
-    onDragMove: {
+    onDragMove: event => {
         // TODO: We should reject drag moves onto file items that don't accept drops
         // (cf. QAbstractItemModel::flags() here, but DeclarativeDropArea currently
         // is currently incapable of rejecting drag events.
@@ -44,13 +44,13 @@ DragDrop.DropArea {
         }
     }
 
-    onDragLeave: {
+    onDragLeave: event => {
         if (folderView) {
             handleDragEnd(folderView);
         }
     }
 
-    onDrop: {
+    onDrop: event => {
         if (folderView) {
             handleDragEnd(folderView);
 

@@ -971,16 +971,16 @@ FocusScope {
                 Behavior on contentX { id: smoothX; enabled: false; SmoothedAnimation { velocity: 700 } }
                 Behavior on contentY { id: smoothY; enabled: false; SmoothedAnimation { velocity: 700 } }
 
-                Keys.onReturnPressed: {
+                Keys.onReturnPressed: event => {
                     if (event.modifiers === Qt.AltModifier) {
                         dir.openPropertiesDialog();
                     } else {
                         runOrCdSelected();
                     }
                 }
-                Keys.onEnterPressed: Keys.returnPressed(event)
+                Keys.onEnterPressed: event => Keys.returnPressed(event)
 
-                Keys.onMenuPressed: {
+                Keys.onMenuPressed: event => {
                     if (currentIndex !== -1 && dir.hasSelection() && currentItem) {
                         dir.setSelected(positioner.map(currentIndex));
                         dir.openContextMenu(currentItem.frame, event.modifiers);
@@ -990,7 +990,7 @@ FocusScope {
                     }
                 }
 
-                Keys.onEscapePressed: {
+                Keys.onEscapePressed: event => {
                     if (!editor || !editor.targetItem) {
                         previouslySelectedItemIndex = -1;
                         dir.clearSelection();
@@ -1023,7 +1023,7 @@ FocusScope {
                     }
                 }
 
-                Keys.onPressed: {
+                Keys.onPressed: event => {
                     event.accepted = true;
 
                     if (event.key === Qt.Key_Control) {
@@ -1057,7 +1057,7 @@ FocusScope {
                     }
                 }
 
-                Keys.onReleased: {
+                Keys.onReleased: event => {
                     if (event.key === Qt.Key_Control) {
                         ctrlPressed = false;
                     } else if (event.key === Qt.Key_Shift) {
@@ -1066,7 +1066,7 @@ FocusScope {
                     }
                 }
 
-                Keys.onLeftPressed: {
+                Keys.onLeftPressed: event => {
                     if (root.isPopup && root.useListViewMode) {
                         if (dir.resolvedUrl !== dir.resolve(plasmoid.configuration.url)) {
                             doBack();
@@ -1092,7 +1092,7 @@ FocusScope {
                     }
                 }
 
-                Keys.onRightPressed: {
+                Keys.onRightPressed: event => {
                     if (root.isPopup && root.useListViewMode) {
                         if (currentIndex !== -1 && dir.hasSelection() && currentItem.isDir) {
                             doCd(positioner.map(currentIndex));
@@ -1118,7 +1118,7 @@ FocusScope {
                     }
                 }
 
-                Keys.onUpPressed: {
+                Keys.onUpPressed: event => {
                     if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.UpArrow));
@@ -1140,7 +1140,7 @@ FocusScope {
                     }
                 }
 
-                Keys.onDownPressed: {
+                Keys.onDownPressed: event => {
                     if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.DownArrow));
@@ -1162,7 +1162,7 @@ FocusScope {
                     }
                 }
 
-                Keys.onBackPressed: {
+                Keys.onBackPressed: event => {
                     if (root.isPopup && dir.resolvedUrl !== dir.resolve(plasmoid.configuration.url)) {
                         doBack();
                     }
@@ -1225,7 +1225,7 @@ FocusScope {
                 }
             }
 
-            onMove: {
+            onMove: (x, y, urls) => {
                 var rows = (gridView.flow === GridView.FlowLeftToRight);
                 var axis = rows ? gridView.width : gridView.height;
                 var step = rows ? cellWidth : cellHeight;

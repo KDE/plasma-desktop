@@ -234,7 +234,7 @@ ContainmentItem {
             }
         }
 
-        onDragLeave: {
+        onDragLeave: event => {
             // Cancel autoscroll.
             if (isFolder) {
                 handleDragEnd(folderViewLayer.view);
@@ -245,7 +245,7 @@ ContainmentItem {
             }
         }
 
-        onDrop: {
+        onDrop: event => {
             if (isFolder && FolderTools.isFileDrag(event)) {
                 handleDragEnd(folderViewLayer.view);
                 folderViewLayer.view.drop(root, event, mapToItem(folderViewLayer.view, event.x, event.y));

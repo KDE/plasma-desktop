@@ -47,7 +47,7 @@ PlasmaCore.FrameSvgItem {
             gridView.hoveredItem = null;
         }
 
-        onPressed: {
+        onPressed: mouse => {
             if (mouse.buttons & Qt.BackButton) {
                 if (root.isPopup && dir.resolvedUrl !== dir.resolve(plasmoid.configuration.url)) {
                     doBack();
@@ -56,7 +56,7 @@ PlasmaCore.FrameSvgItem {
             }
         }
 
-        onClicked: {
+        onClicked: mouse => {
             if (ignoreClick) {
                 ignoreClick = false;
                 return;

@@ -78,7 +78,7 @@ PlasmaComponents.ScrollView {
             }
         }
 
-        Keys.onPressed: {
+        Keys.onPressed: event => {
             switch(event.key) {
             case Qt.Key_Return:
             case Qt.Key_Enter:
@@ -112,7 +112,7 @@ PlasmaComponents.ScrollView {
             }
         }
 
-        Keys.onReleased: {
+        Keys.onReleased: event => {
             adjustSize();
         }
 
