@@ -6,7 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQuick
 
 MouseArea {
     property var modelIndex
@@ -18,7 +18,7 @@ MouseArea {
     hoverEnabled: true
     enabled: winId !== 0
 
-    onClicked: {
+    onClicked: (mouse) => {
         switch (mouse.button) {
         case Qt.LeftButton:
             tasksModel.requestActivate(modelIndex);
