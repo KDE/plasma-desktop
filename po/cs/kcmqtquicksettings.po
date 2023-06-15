@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-07 02:03+0000\n"
-"PO-Revision-Date: 2023-04-11 18:05+0200\n"
+"PO-Revision-Date: 2023-06-14 15:00+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,7 +34,7 @@ msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
 "you know what you are doing."
 msgstr ""
-"Tato nastavení upravují nastavení QtQuick používaná Plasmou. Pokračujte jen "
+"Tato nastavení upravují nastavení QtQuick používaná v Plasma. Pokračujte jen "
 "na vlastní nebezpečí."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -78,7 +78,7 @@ msgstr "Profil GL Core:"
 #: kcmqtquicksettingswidget.ui:76
 #, kde-format
 msgid "Render Loop:"
-msgstr "Rendrovací smyčka:"
+msgstr "Renderovací smyčka:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:89
