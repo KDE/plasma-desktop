@@ -30,7 +30,7 @@ ContainmentItem {
 
     property Item configOverlay
 
-    property bool isHorizontal: root.Plasmoid.formFactor !== PlasmaCore.Types.Vertical
+    property bool isHorizontal: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
     property int fixedWidth: 0
     property int fixedHeight: 0
     property bool hasSpacer
@@ -41,16 +41,15 @@ ContainmentItem {
 
 //BEGIN functions
     function checkLastSpacer() {
-        var flexibleFound = false;
         for (var i = 0; i < appletsModel.count; ++i) {
             const applet = appletsModel.get(i).applet;
             if (!applet || !applet.visible || !applet.Layout) {
                 continue;
             }
-            if ((root.isHorizontal && applet.Layout.fillWidth) ||
-                (!root.isHorizontal && applet.Layout.fillHeight)) {
+            if ((isHorizontal && applet.Layout.fillWidth) ||
+                (!isHorizontal && applet.Layout.fillHeight)) {
                     hasSpacer = true;
-                return
+                return;
             }
         }
         hasSpacer = false;
