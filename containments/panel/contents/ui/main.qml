@@ -55,6 +55,20 @@ ContainmentItem {
         }
         hasSpacer = false;
     }
+
+    function plasmoidLocationString(): string {
+        switch (Plasmoid.location) {
+        case PlasmaCore.Types.LeftEdge:
+            return "west";
+        case PlasmaCore.Types.TopEdge:
+            return "north";
+        case PlasmaCore.Types.RightEdge:
+            return "east";
+        case PlasmaCore.Types.BottomEdge:
+            return "south";
+        }
+        return "";
+    }
 //END functions
 
 //BEGIN connections
@@ -107,10 +121,8 @@ ContainmentItem {
         PlasmaCore.FrameSvgItem {
             id: panelSvg
             visible: false
-            prefix: [{[PlasmaCore.Types.LeftEdge]: 'west', [PlasmaCore.Types.TopEdge]: 'north',
-                    [PlasmaCore.Types.RightEdge]: 'east', [PlasmaCore.Types.BottomEdge]: 'south'
-            }[root.Plasmoid.location], ""]
             imagePath: "widgets/panel-background"
+            prefix: [root.plasmoidLocationString(), ""]
         }
         PlasmaCore.FrameSvgItem {
             id: thickPanelSvg
