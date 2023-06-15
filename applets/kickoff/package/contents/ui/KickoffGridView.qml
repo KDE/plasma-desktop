@@ -66,6 +66,7 @@ EmptyPage {
         readonly property int columns: Math.floor(availableWidth / cellWidth)
         readonly property int rows: Math.floor(availableHeight / cellHeight)
         property bool movedWithKeyboard: false
+        property bool movedWithWheel: false
 
         // NOTE: parent is the contentItem that Control subclasses automatically
         // create when no contentItem is set, but content is added.
@@ -164,6 +165,12 @@ EmptyPage {
             // because Plasma doesn't support Qt scaling.
             horizontalStepSize: 20 * Qt.styleHints.wheelScrollLines * PlasmaCore.Units.devicePixelRatio
             verticalStepSize: 20 * Qt.styleHints.wheelScrollLines * PlasmaCore.Units.devicePixelRatio
+
+            onWheel: {
+                view.movedWithWheel = true
+                view.movedWithKeyboard = false
+                movedWithWheelTimer.restart()
+            }
         }
 
         Connections {
@@ -183,6 +190,12 @@ EmptyPage {
             id: movedWithKeyboardTimer
             interval: 200
             onTriggered: view.movedWithKeyboard = false
+        }
+
+        Timer {
+            id: movedWithWheelTimer
+            interval: 200
+            onTriggered: view.movedWithWheel = false
         }
 
         function focusCurrentItem(event, focusReason) {

@@ -137,7 +137,10 @@ T.ItemDelegate {
         // Only for ListView since extending margins for GridView is hard
         anchors.leftMargin: root.view instanceof ListView ? -root.view.leftMargin : anchors.margins
         anchors.rightMargin: root.view instanceof ListView ? -root.view.rightMargin : anchors.margins
-        hoverEnabled: root.view && !root.view.movedWithKeyboard
+        hoverEnabled: root.view
+            // When the movedWithWheel condition is broken, this ensures that
+            // onEntered is called again without moving the mouse.
+            && !root.view.movedWithWheel
             // Fix VerticalStackView animation causing view currentIndex
             // to change while delegates are moving under the mouse cursor
             && kickoff.fullRepresentationItem && !kickoff.fullRepresentationItem.contentItem.busy
@@ -149,12 +152,14 @@ T.ItemDelegate {
         // Using this Item fixes drag and drop causing delegates
         // to reset to a 0 X position and overlapping each other.
         Item { id: dragItem }
-        // Using onPositionChanged instead of onEntered because it enables several
-        // desirable behaviors:
-        // 1. prevents changing selection while scrolling with the mouse wheel
-        // 2. Prevents the cursor position resetting selection when navigating using the keyboard
-        // See Bugs 455674 and 454349
-        onPositionChanged: {
+
+        onEntered: {
+            // When the movedWithKeyboard condition is broken, we do not want to
+            // select the hovered item without moving the mouse.
+            if (root.view.movedWithKeyboard) {
+                return
+            }
+
             // forceActiveFocus() touches multiple items, so check for
             // activeFocus first to be more efficient.
             if (!root.activeFocus) {

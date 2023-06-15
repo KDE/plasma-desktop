@@ -78,6 +78,7 @@ EmptyPage {
         readonly property real availableWidth: width - leftMargin - rightMargin
         readonly property real availableHeight: height - topMargin - bottomMargin
         property bool movedWithKeyboard: false
+        property bool movedWithWheel: false
 
         Accessible.role: Accessible.List
 
@@ -200,6 +201,12 @@ EmptyPage {
             // because Plasma doesn't support Qt scaling.
             horizontalStepSize: 20 * Qt.styleHints.wheelScrollLines * PlasmaCore.Units.devicePixelRatio
             verticalStepSize: 20 * Qt.styleHints.wheelScrollLines * PlasmaCore.Units.devicePixelRatio
+
+            onWheel: {
+                view.movedWithWheel = true
+                view.movedWithKeyboard = false
+                movedWithWheelTimer.restart()
+            }
         }
 
         Connections {
@@ -212,10 +219,19 @@ EmptyPage {
             }
         }
 
+        // Used to block hover events temporarily after using keyboard navigation.
+        // If you have one hand on the touch pad or mouse and another hand on the keyboard,
+        // it's easy to accidentally reset the highlight/focus position to the mouse position.
         Timer {
             id: movedWithKeyboardTimer
             interval: 200
             onTriggered: view.movedWithKeyboard = false
+        }
+
+        Timer {
+            id: movedWithWheelTimer
+            interval: 200
+            onTriggered: view.movedWithWheel = false
         }
 
         function focusCurrentItem(event, focusReason) {
