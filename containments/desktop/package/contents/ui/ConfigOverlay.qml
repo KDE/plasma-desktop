@@ -104,7 +104,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                     property int startRotation
                     property real startCenterRelativeAngle
 
-                    function pointAngle(pos) {
+                    function pointAngle(pos: point): real {
                         var r = Math.sqrt(pos.x * pos.x + pos.y * pos.y);
                         var cosine = pos.x / r;
 
@@ -115,7 +115,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                         }
                     }
 
-                    function centerRelativePos(x, y) {
+                    function centerRelativePos(x: real, y: real): point {
                         var mousePos = overlay.itemContainer.parent.mapFromItem(rotateButton, x, y);
                         var centerPos = overlay.itemContainer.parent.mapFromItem(overlay.itemContainer, overlay.itemContainer.width/2, overlay.itemContainer.height/2);
 
