@@ -139,48 +139,6 @@ PC3.Page {
         // model set on first invocation
         onClicked: model.trigger()
     }
-    /*
-    PlasmaCore.Dialog {
-        id: tooltipDialog
-        property Item appletDelegate
-        location: PlasmaCore.Types.RightEdge //actually we want this to be the opposite location of the explorer itself
-
-        type: PlasmaCore.Dialog.Tooltip
-        flags:Qt.Window|Qt.WindowStaysOnTopHint|Qt.X11BypassWindowManagerHint
-
-        onAppletDelegateChanged: {
-            if (!appletDelegate) {
-                toolTipHideTimer.restart()
-                toolTipShowTimer.running = false
-            } else if (tooltipDialog.visible) {
-                tooltipDialog.visualParent = appletDelegate
-            } else {
-                tooltipDialog.visualParent = appletDelegate
-                toolTipShowTimer.restart()
-                toolTipHideTimer.running = false
-            }
-        }
-        mainItem: Tooltip { id: tooltipWidget }
-
-        Behavior on y {
-            NumberAnimation { duration: PlasmaCore.Units.longDuration }
-        }
-    }
-    Timer {
-        id: toolTipShowTimer
-        interval: 500
-        repeat: false
-        onTriggered: {
-            tooltipDialog.visible = true
-        }
-    }
-    Timer {
-        id: toolTipHideTimer
-        interval: 1000
-        repeat: false
-        onTriggered: tooltipDialog.visible = false
-    }
-    */
 
     header: PlasmaExtras.PlasmoidHeading {
         ColumnLayout {
