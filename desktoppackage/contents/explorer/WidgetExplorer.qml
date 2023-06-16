@@ -57,7 +57,6 @@ PC3.Page {
             root.widgetExplorer = widgetExplorerComponent.createObject(root)
         }
         root.widgetExplorer.containment = main.containment
-        startupTimer.start()
     }
 
     Component.onDestruction: {
@@ -77,16 +76,6 @@ PC3.Page {
         if (pluginName) {
             widgetExplorer.addApplet(pluginName)
         }
-    }
-
-    // The view can take a bit of time to initialize itself, during which time,
-    // count is 0, which would cause the placeholder message to appear for a
-    // moment and then disappear. To prevent this, let's suppress it appearing
-    // for a moment.
-    Timer {
-        id: startupTimer
-        interval: Kirigami.Units.humanMoment
-        running: false
     }
 
     QQC2.Action {
@@ -287,6 +276,6 @@ PC3.Page {
         width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
         iconName: "edit-none"
         text: searchInput.text.length > 0 ? i18nd("plasma_shell_org.kde.plasma.desktop", "No widgets matched the search terms") : i18nd("plasma_shell_org.kde.plasma.desktop", "No widgets available")
-        visible: list.count == 0 && !startupTimer.running
+        visible: list.count == 0 && !setModelTimer.running
     }
 }
