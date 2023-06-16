@@ -134,7 +134,11 @@ PC3.Page {
             id: header
             anchors.fill: parent
 
+            spacing: Kirigami.Units.smallSpacing
+
             RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+
                 PlasmaExtras.Heading {
                     id: heading
                     level: 1
@@ -167,6 +171,8 @@ PC3.Page {
             }
 
             RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+
                 PlasmaExtras.SearchField {
                     id: searchInput
                     Layout.fillWidth: true
