@@ -89,57 +89,59 @@ QQC2.Page {
     }
 
     ColumnLayout {
-        width: parent.width
-        spacing: Kirigami.Units.largeSpacing * 3
+        anchors.horizontalCenter: parent.horizontalCenter
+        spacing: Kirigami.Units.largeSpacing
 
-        Kirigami.FormLayout {
-            id: form
-            GridLayout {
-                columns: 2
-                Layout.fillWidth: true
+        GridLayout {
+            columns: 2
+            Layout.fillWidth: true
 
-                Kirigami.Icon {
-                    Layout.rowSpan: 2
-                    Layout.preferredHeight: Kirigami.Units.iconSizes.huge
-                    Layout.preferredWidth: height
-                    Layout.maximumWidth: page.width / 3;
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    source: page.metaData.iconName || page.metaData.pluginId
-                    fallback: "application-x-plasma"
-                }
-                Kirigami.Heading {
-                    Layout.fillWidth: true
-                    text: page.metaData.name + " " + page.metaData.version
-                }
-                Kirigami.Heading {
-                    Layout.fillWidth: true
-                    level: 2
-                    wrapMode: Text.WordWrap
-                    text: page.metaData.description
-                }
+            Kirigami.Icon {
+                Layout.rowSpan: 2
+                Layout.preferredHeight: Kirigami.Units.iconSizes.huge
+                Layout.preferredWidth: height
+                Layout.maximumWidth: page.width / 3;
+                Layout.rightMargin: Kirigami.Units.largeSpacing
+                source: page.metaData.iconName || page.metaData.pluginId
+                fallback: "application-x-plasma"
             }
-
-            Kirigami.Separator {
-                Layout.fillWidth: true
-            }
-
             Kirigami.Heading {
-                Kirigami.FormData.isSection: true
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Copyright")
+                Layout.fillWidth: true
+                text: page.metaData.name + " " + page.metaData.version
             }
+            Kirigami.Heading {
+                Layout.fillWidth: true
+                Layout.maximumWidth: Kirigami.Units.gridUnit * 15
+                level: 2
+                wrapMode: Text.WordWrap
+                text: page.metaData.description
+            }
+        }
+
+        Kirigami.Separator {
+            Layout.fillWidth: true
+        }
+
+        Kirigami.Heading {
+            Layout.topMargin: Kirigami.Units.smallSpacing
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Copyright")
+        }
+
+        ColumnLayout {
+            spacing: Kirigami.Units.smallSpacing
+            Layout.leftMargin: Kirigami.Units.smallSpacing
+
             QQC2.Label {
-                Layout.leftMargin: Kirigami.Units.gridUnit
                 text: page.metaData.copyrightText
                 visible: text.length > 0
             }
             Kirigami.UrlButton {
-                Layout.leftMargin: Kirigami.Units.gridUnit
                 url: page.metaData.website
                 visible: url.length > 0
             }
 
             RowLayout {
-                Layout.leftMargin: Kirigami.Units.smallSpacing
+                spacing: Kirigami.Units.smallSpacing
                 QQC2.Label { text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:") }
                 Kirigami.LinkButton {
                     text: page.metaData.license
@@ -152,38 +154,45 @@ QQC2.Page {
                     }
                 }
             }
-            Kirigami.Heading {
-                Layout.fillWidth: true
-                Kirigami.FormData.isSection: visible
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Authors")
-                visible: page.metaData.authors.length > 0
-            }
-            Repeater {
-                model: page.metaData.authors
-                delegate: personDelegate
-            }
-            Kirigami.Heading {
-                height: visible ? implicitHeight : 0
-                Kirigami.FormData.isSection: visible
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Credits")
-                visible: repCredits.count > 0
-            }
-            Repeater {
-                id: repCredits
-                model: page.metaData.otherContributors
-                delegate: personDelegate
-            }
-            Kirigami.Heading {
-                height: visible ? implicitHeight : 0
-                Kirigami.FormData.isSection: visible
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translators")
-                visible: repTranslators.count > 0
-            }
-            Repeater {
-                id: repTranslators
-                model: page.metaData.translators
-                delegate: personDelegate
-            }
+        }
+
+        Kirigami.Heading {
+            Layout.fillWidth: true
+            Layout.topMargin: Kirigami.Units.smallSpacing
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Authors")
+            visible: page.metaData.authors.length > 0
+        }
+        Repeater {
+            model: page.metaData.authors
+            delegate: personDelegate
+        }
+
+        Kirigami.Heading {
+            height: visible ? implicitHeight : 0
+            Layout.topMargin: Kirigami.Units.smallSpacing
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Credits")
+            visible: repCredits.count > 0
+        }
+        Repeater {
+            id: repCredits
+            model: page.metaData.otherContributors
+            delegate: personDelegate
+        }
+
+        Kirigami.Heading {
+            height: visible ? implicitHeight : 0
+            Layout.topMargin: Kirigami.Units.smallSpacing
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translators")
+            visible: repTranslators.count > 0
+        }
+        Repeater {
+            id: repTranslators
+            model: page.metaData.translators
+            delegate: personDelegate
+        }
+
+        Item {
+            Layout.fillWidth: true
         }
 
         QQC2.Button {
