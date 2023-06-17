@@ -52,11 +52,14 @@ Item {
 
             property alias metaData: aboutPluginPage.metaData
 
-            contentItem: ColumnLayout {
+            onClosed: destroy()
+
+            ColumnLayout {
                 AboutPlugin {
                     id: aboutPluginPage
+                    Layout.preferredWidth: contentWidth
+                    Layout.maximumWidth: Math.round(root.width * 0.8)
                     metaData: internalAboutDialog.metaData
-                    Layout.maximumWidth: Math.min(Kirigami.Units.gridUnit * 30, Math.round(root.width * 0.8))
                 }
             }
 
