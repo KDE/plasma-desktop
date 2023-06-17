@@ -76,8 +76,11 @@ QQC2.Page {
         Kirigami.OverlaySheet {
             property alias text: licenseLabel.text
 
-            contentItem: Kirigami.SelectableLabel {
+            onClosed: destroy()
+
+            Kirigami.SelectableLabel {
                 id: licenseLabel
+                implicitWidth: Math.max(Kirigami.Units.gridUnit * 25, page.width / 2, contentWidth)
                 wrapMode: Text.WordWrap
             }
 
