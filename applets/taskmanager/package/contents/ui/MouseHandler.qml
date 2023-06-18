@@ -38,13 +38,13 @@ DropArea {
     }
 
     //ignore anything that is neither internal to TaskManager or a URL list
-    onEntered: (event) => {
+    onEntered: event => {
         if (event.formats.indexOf("text/x-plasmoidservicename") >= 0) {
             event.accepted = false;
         }
     }
 
-    onPositionChanged: (event) => {
+    onPositionChanged: event => {
         if (target.animating) {
             return;
         }
@@ -111,7 +111,7 @@ DropArea {
         activationTimer.stop();
     }
 
-    onDropped: (event) => {
+    onDropped: event => {
         // Reject internal drops.
         if (event.formats.indexOf("application/x-orgkdeplasmataskmanager_taskbuttonitem") >= 0) {
             event.accepted = false;
