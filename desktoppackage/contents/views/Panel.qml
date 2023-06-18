@@ -23,7 +23,7 @@ Item {
     property Item containment
 
     property bool floatingPrefix: floatingPanelSvg.usedPrefix === "floating"
-    readonly property bool verticalPanel: containment && containment.plasmoid.formFactor === PlasmaCore.Types.Vertical
+    readonly property bool verticalPanel: containment?.plasmoid?.formFactor === PlasmaCore.Types.Vertical
 
     readonly property real spacingAtMinSize: Math.round(Math.max(1, (verticalPanel ? root.width : root.height) - PlasmaCore.Units.iconSizes.smallMedium)/2)
     PlasmaCore.FrameSvgItem {
@@ -43,10 +43,10 @@ Item {
     readonly property int leftPadding: Math.round(Math.min(thickPanelSvg.fixedMargins.left, spacingAtMinSize));
     readonly property int rightPadding: Math.round(Math.min(thickPanelSvg.fixedMargins.right, spacingAtMinSize));
 
-    readonly property int bottomFloatingPadding: floating && containment.plasmoid.location !== PlasmaCore.Types.TopEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.bottom : 8) : 0
-    readonly property int leftFloatingPadding: floating && containment.plasmoid.location !== PlasmaCore.Types.RightEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.left   : 8) : 0
-    readonly property int rightFloatingPadding: floating && containment.plasmoid.location !== PlasmaCore.Types.LeftEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.right  : 8) : 0
-    readonly property int topFloatingPadding: floating && containment.plasmoid.location !== PlasmaCore.Types.BottomEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.top    : 8) : 0
+    readonly property int bottomFloatingPadding: floating && containment?.plasmoid?.location !== PlasmaCore.Types.TopEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.bottom : 8) : 0
+    readonly property int leftFloatingPadding: floating && containment?.plasmoid?.location !== PlasmaCore.Types.RightEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.left   : 8) : 0
+    readonly property int rightFloatingPadding: floating && containment?.plasmoid?.location !== PlasmaCore.Types.LeftEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.right  : 8) : 0
+    readonly property int topFloatingPadding: floating && containment?.plasmoid?.location !== PlasmaCore.Types.BottomEdge ? (floatingPrefix ? floatingPanelSvg.fixedMargins.top    : 8) : 0
 
     readonly property int minPanelHeight: translucentItem.minimumDrawingHeight
     readonly property int minPanelWidth: translucentItem.minimumDrawingWidth
@@ -112,7 +112,7 @@ Item {
         visible: floatingness === 0 && panelOpacity !== 1
         enabledBorders: panel.enabledBorders
         anchors.fill: parent
-        imagePath: containment && containment.plasmoid.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
+        imagePath: containment?.plasmoid?.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
     }
     PlasmaCore.FrameSvgItem {
         id: floatingTranslucentItem
@@ -124,7 +124,7 @@ Item {
             rightMargin: Math.round(rightFloatingPadding * floatingness)
             topMargin: Math.round(topFloatingPadding * floatingness)
         }
-        imagePath: containment && containment.plasmoid.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
+        imagePath: containment?.plasmoid?.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
     }
     PlasmaCore.FrameSvgItem {
         id: floatingOpaqueItem
@@ -137,7 +137,7 @@ Item {
             rightMargin: Math.round(rightFloatingPadding * floatingness)
             topMargin: Math.round(topFloatingPadding * floatingness)
         }
-        imagePath: containment && containment.plasmoid.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
+        imagePath: containment?.plasmoid?.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
     }
     PlasmaCore.FrameSvgItem {
         id: opaqueItem
@@ -145,7 +145,7 @@ Item {
         opacity: panelOpacity
         enabledBorders: panel.enabledBorders
         anchors.fill: parent
-        imagePath: containment && containment.plasmoid.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
+        imagePath: containment?.plasmoid?.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
     }
 
     Keys.onEscapePressed: {
