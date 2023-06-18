@@ -80,7 +80,7 @@ QQC2.Page {
 
             Kirigami.SelectableLabel {
                 id: licenseLabel
-                implicitWidth: Math.max(Kirigami.Units.gridUnit * 25, page.width / 2, contentWidth)
+                implicitWidth: Math.max(Kirigami.Units.gridUnit * 25, Math.round(page.width / 2), contentWidth)
                 wrapMode: Text.WordWrap
             }
 
