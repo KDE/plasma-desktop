@@ -29,7 +29,7 @@ Kirigami.OverlaySheet {
         onRejected: dialog.close();
     }
 
-    contentItem: ListView {
+    ListView {
         implicitWidth: Kirigami.Units.gridUnit * 15
 
         model: Folder.PreviewPluginsModel {
