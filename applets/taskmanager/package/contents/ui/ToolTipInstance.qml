@@ -162,8 +162,8 @@ ColumnLayout {
         // There's no PlasmaComponents3 version
         PlasmaExtras.Highlight {
             anchors.fill: hoverHandler
-            visible: hoverHandler.item?.containsMouse
-            pressed: hoverHandler.item?.containsPress
+            visible: Boolean(hoverHandler.item?.containsMouse)
+            pressed: Boolean(hoverHandler.item?.containsPress)
             hovered: true
         }
 
