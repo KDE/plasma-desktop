@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-05 02:15+0000\n"
-"PO-Revision-Date: 2023-05-22 13:58\n"
+"PO-Revision-Date: 2023-06-17 04:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -105,19 +105,19 @@ msgstr "会话恢复"
 #: ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr "登录时启动之前打开的应用程序："
+msgstr "登录时自动启动应用程序："
 
 #: ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr "上次注销时"
+msgstr "上次注销时正在打开的应用程序"
 
 #: ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "手动保存会话时"
+msgstr "手动保存会话时正在打开的应用程序"
 
 #: ui/main.qml:127
 #, kde-kuit-format
@@ -169,7 +169,7 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr "下一次重启之后："
+msgstr "下次重启时："
 
 #: ui/main.qml:184
 #, kde-format
