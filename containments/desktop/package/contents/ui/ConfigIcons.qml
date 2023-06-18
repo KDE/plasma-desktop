@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQuick
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
@@ -345,7 +345,7 @@ Item {
 
             onClicked: {
                 const component = Qt.createComponent(Qt.resolvedUrl("FolderItemPreviewPluginsDialog.qml"));
-                component.incubateObject(configIcons, {
+                component.incubateObject(configIcons.Window.window.contentItem, {
                     "previewPlugins": configIcons.cfg_previewPlugins,
                 }, Qt.Asynchronous);
                 component.destroy();
