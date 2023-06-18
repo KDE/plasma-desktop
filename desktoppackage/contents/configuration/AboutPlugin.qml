@@ -5,7 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.4
+import QtQuick
 import QtQuick.Controls 2.4 as QQC2
 import QtQuick.Layouts 1.3
 
@@ -147,7 +147,7 @@ QQC2.Page {
                     text: page.metaData.license
                     Accessible.description: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:whatsthis", "View license text")
                     onClicked: {
-                        licenseComponent.incubateObject(page, {
+                        licenseComponent.incubateObject(page.Window.window.contentItem, {
                             "text": page.metaData.licenseText,
                             "title": page.metaData.license,
                         }, Qt.Asynchronous);
