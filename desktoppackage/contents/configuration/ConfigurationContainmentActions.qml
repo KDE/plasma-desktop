@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick
 import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Layouts 1.0
 
@@ -165,7 +165,7 @@ Item {
                         if (!metaData) {
                             return;
                         }
-                        aboutComponent.incubateObject(root, {
+                        aboutComponent.incubateObject(root.Window.window.contentItem, {
                             "metaData": metaData,
                             "title": i18ndc("plasma_shell_org.kde.plasma.desktop", "@title", "About"),
                         }, Qt.Asynchronous);
