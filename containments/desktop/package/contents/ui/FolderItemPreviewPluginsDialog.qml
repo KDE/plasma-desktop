@@ -18,9 +18,7 @@ Kirigami.OverlaySheet {
 
     title: i18n("Preview Plugins")
 
-    onVisibleChanged: if (!visible) {
-        dialog.destroy(Kirigami.Units.veryLongDuration); // longer than closeAnimation
-    }
+    onClosed: destroy()
 
     footer: DialogButtonBox {
         standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
