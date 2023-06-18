@@ -155,7 +155,7 @@ FocusScope {
         target: dir
         function onPopupMenuAboutToShow(dropJob, mimeData, x, y) {
             if (root.isContainment && !plasmoid.immutable) {
-                plasmoid.processMimeData(mimeData, x, y, dropJob);
+                root.processMimeData(mimeData, x, y, dropJob);
             }
         }
     }
