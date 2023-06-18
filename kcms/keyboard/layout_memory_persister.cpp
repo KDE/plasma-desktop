@@ -149,13 +149,14 @@ public:
     bool startElement(QXmlStreamReader &xml)
     {
         if (!verified && xml.name() == QLatin1String(ROOT_NODE)) {
-            if (xml.attributes().value(VERSION_ATTRIBUTE) != QLatin1String(VERSION))
+            if (xml.attributes().value(VERSION_ATTRIBUTE) != QLatin1String(VERSION)) {
                 xml.raiseError("Unexpected version!");
-            return false;
-            if (xml.attributes().value(SWITCH_MODE_ATTRIBUTE) != KeyboardConfig::getSwitchingPolicyString(switchingPolicy))
+                return false;
+            }
+            if (xml.attributes().value(SWITCH_MODE_ATTRIBUTE) != KeyboardConfig::getSwitchingPolicyString(switchingPolicy)) {
                 xml.raiseError("Unexpected switching mode!");
-            return false;
-
+                return false;
+            }
             verified = true;
         } else if (xml.name() == QLatin1String(ITEM_NODE)) {
             if (!verified) {
@@ -181,6 +182,7 @@ public:
 
                 layoutMap[ownerKey] = layoutSet;
             }
+            xml.skipCurrentElement();
         } else {
             verified = false;
             xml.raiseError("Malformed xml structure! Unexpected element!");
@@ -219,7 +221,8 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile &file_)
         return false;
     }
 
-    MapHandler mapHandler(layoutMemory.keyboardConfig.switchingPolicy());
+    auto switchingPolicy = layoutMemory.keyboardConfig.switchingPolicy();
+    MapHandler mapHandler(switchingPolicy);
 
     QXmlStreamReader xml(&file);
     qCDebug(KCM_KEYBOARD) << "Restoring keyboard layout map from" << file.fileName();
@@ -233,8 +236,8 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile &file_)
         }
     } while (xml.readNextStartElement());
 
-    if (!xml.atEnd() || xml.hasError()) {
-        qCWarning(KCM_KEYBOARD) << xml.errorString();
+    if (xml.hasError()) {
+        qCWarning(KCM_KEYBOARD) << "XML error:" << xml.errorString();
         return false;
     }
 
