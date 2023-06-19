@@ -9,7 +9,7 @@ import QtQuick 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
 
 import "code/layout.js" as LayoutManager
@@ -20,7 +20,7 @@ PlasmaCore.ToolTipArea {
 
     activeFocusOnTab: true
 
-    height: Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.medium) + LayoutManager.verticalMargins()
+    height: Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium) + LayoutManager.verticalMargins()
 
     visible: false
 
@@ -449,7 +449,7 @@ PlasmaCore.ToolTipArea {
             - adjustMargin(false, parent.height, taskFrame.margins.bottom))
 
         asynchronous: true
-        active: height >= PlasmaCore.Units.iconSizes.small
+        active: height >= Kirigami.Units.iconSizes.small
                 && task.smartLauncherItem && task.smartLauncherItem.countVisible
         source: "TaskBadgeOverlay.qml"
 
@@ -460,8 +460,8 @@ PlasmaCore.ToolTipArea {
 
             var margins = vert ? LayoutManager.horizontalMargins() : LayoutManager.verticalMargins();
 
-            if ((size - margins) < PlasmaCore.Units.iconSizes.small) {
-                return Math.ceil((margin * (PlasmaCore.Units.iconSizes.small / size)) / 2);
+            if ((size - margins) < Kirigami.Units.iconSizes.small) {
+                return Math.ceil((margin * (Kirigami.Units.iconSizes.small / size)) / 2);
             }
 
             return margin;
@@ -514,7 +514,7 @@ PlasmaCore.ToolTipArea {
         id: label
 
         visible: (inPopup || !iconsOnly && !model.IsLauncher
-            && (parent.width - iconBox.height - PlasmaCore.Units.smallSpacing) >= (theme.mSize(theme.defaultFont).width * LayoutManager.minimumMColumns()))
+            && (parent.width - iconBox.height - Kirigami.Units.smallSpacing) >= (Kirigami.Units.iconSizes.sizeForLabels * LayoutManager.minimumMColumns()))
 
         anchors {
             fill: parent

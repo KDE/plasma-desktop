@@ -10,6 +10,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     id: statusIcon
@@ -18,7 +19,7 @@ Item {
     property string tip;
     property string hint;
     signal triggered(variant button);
-    property int iconSize: PlasmaCore.Units.roundToIconSize(Math.min(width, height))
+    property int iconSize: Kirigami.Units.roundedIconSize(Math.min(width, height))
 
     opacity: 'disable' == hint ? 0.3 : 1
 

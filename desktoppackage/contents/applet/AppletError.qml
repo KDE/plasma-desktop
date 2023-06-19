@@ -10,7 +10,7 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.plasmoid 2.0
 
 PlasmoidItem {
@@ -25,15 +25,15 @@ PlasmoidItem {
 
     property var errorInformation
 
-    readonly property real minimumPreferredWidth: PlasmaCore.Units.gridUnit * 12
-    readonly property real minimumPreferredHeight: PlasmaCore.Units.gridUnit * 12
+    readonly property real minimumPreferredWidth: Kirigami.Units.gridUnit * 12
+    readonly property real minimumPreferredHeight: Kirigami.Units.gridUnit * 12
 
     // To properly show the error message in panel
     readonly property int layoutForm: {
         if (fullRepresentationItem.width >= root.minimumPreferredWidth) {
             if (fullRepresentationItem.height >= root.minimumPreferredHeight) {
                 return AppletError.Desktop;
-            } else if (fullRepresentationItem.height >= PlasmaCore.Units.iconSizes.huge + root.fullRepresentationItem.buttonLayout.implicitHeight) {
+            } else if (fullRepresentationItem.height >= Kirigami.Units.iconSizes.huge + root.fullRepresentationItem.buttonLayout.implicitHeight) {
                 return AppletError.DesktopCompact;
             }
         }
@@ -75,10 +75,10 @@ PlasmoidItem {
             }
         }
         // Same as systray popups
-        Layout.preferredWidth: PlasmaCore.Units.gridUnit * 24
-        Layout.preferredHeight: PlasmaCore.Units.gridUnit * 24
-        Layout.maximumWidth: PlasmaCore.Units.gridUnit * 34
-        Layout.maximumHeight: PlasmaCore.Units.gridUnit * 34
+        Layout.preferredWidth: Kirigami.Units.gridUnit * 24
+        Layout.preferredHeight: Kirigami.Units.gridUnit * 24
+        Layout.maximumWidth: Kirigami.Units.gridUnit * 34
+        Layout.maximumHeight: Kirigami.Units.gridUnit * 34
 
         rowSpacing: textArea.topPadding
         columnSpacing: rowSpacing
@@ -94,14 +94,14 @@ PlasmoidItem {
         RowLayout {
             id: headingLayout
 
-            Layout.margins: root.layoutForm !== AppletError.Desktop ? 0 : PlasmaCore.Units.gridUnit
+            Layout.margins: root.layoutForm !== AppletError.Desktop ? 0 : Kirigami.Units.gridUnit
             Layout.maximumWidth: fullRep.width
             spacing: 0
             Layout.fillWidth: true
 
             PlasmaCore.IconItem {
                 id: headerIcon
-                implicitWidth: Math.min(PlasmaCore.Units.iconSizes.huge, fullRep.width, fullRep.height)
+                implicitWidth: Math.min(Kirigami.Units.iconSizes.huge, fullRep.width, fullRep.height)
                 implicitHeight: implicitWidth
 
                 activeFocusOnTab: true
@@ -117,7 +117,7 @@ PlasmoidItem {
                 }
             }
 
-            PlasmaExtras.Heading {
+            Kirigami.Heading {
                 id: heading
                 visible: root.layoutForm !== AppletError.VerticalPanel
                 // Descent is equal to the amount of space above and below capital letters.
@@ -204,8 +204,8 @@ PlasmoidItem {
                             + dialogTextArea.leftPadding + dialogTextArea.rightPadding
                         minimumHeight: dialogFontMetrics.height * 12
                             + dialogTextArea.topPadding + dialogTextArea.bottomPadding
-                        width: PlasmaCore.Units.gridUnit * 24
-                        height: PlasmaCore.Units.gridUnit * 24
+                        width: Kirigami.Units.gridUnit * 24
+                        height: Kirigami.Units.gridUnit * 24
                         color: palette.base
                         QQC2.ScrollView {
                             id: dialogScrollView

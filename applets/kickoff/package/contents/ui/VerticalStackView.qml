@@ -5,7 +5,7 @@
 
 import QtQuick 2.15
 import QtQuick.Templates 2.15 as T
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 T.StackView {
     id: root
@@ -29,13 +29,13 @@ T.StackView {
             properties: "y"
             from: (root.reverseTransitions ? -0.5 : 0.5) * -root.height
             to: 0
-            duration: root.movementTransitionsEnabled ? PlasmaCore.Units.longDuration : 0
+            duration: root.movementTransitionsEnabled ? Kirigami.Units.longDuration : 0
             easing.type: Easing.OutCubic
         }
         NumberAnimation { property: "opacity"
             from: 0.0
             to: 1.0
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.OutCubic
         }
     }
@@ -45,14 +45,14 @@ T.StackView {
             property: "y"
             from: 0
             to: (root.reverseTransitions ? -0.5 : 0.5) * root.height
-            duration: root.movementTransitionsEnabled ? PlasmaCore.Units.longDuration : 0
+            duration: root.movementTransitionsEnabled ? Kirigami.Units.longDuration : 0
             easing.type: Easing.OutCubic
         }
         NumberAnimation {
             property: "opacity"
             from: 1.0
             to: 0.0
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.OutCubic
         }
     }

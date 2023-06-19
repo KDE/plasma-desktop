@@ -8,6 +8,7 @@ import QtQuick 2.15
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 import "code/tools.js" as Tools
 
@@ -58,7 +59,7 @@ Item {
         width: iconSize
         height: width
 
-        colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+        colorGroup: Kirigami.Theme.ComplementaryColorGroup
 
         animated: false
         usesPlasmaTheme: item.GridView.view.usesPlasmaTheme
@@ -73,7 +74,7 @@ Item {
 
         anchors {
             top: icon.bottom
-            topMargin: PlasmaCore.Units.smallSpacing
+            topMargin: Kirigami.Units.smallSpacing
             left: parent.left
             leftMargin: highlightItemSvg.margins.left
             right: parent.right

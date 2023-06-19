@@ -11,9 +11,9 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 RowLayout {
     enabled: !!playerData.CanControl
@@ -47,9 +47,9 @@ RowLayout {
 
     ColumnLayout {
         Layout.fillWidth: true
-        Layout.topMargin: PlasmaCore.Units.smallSpacing
-        Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-        Layout.rightMargin: isWin ? PlasmaCore.Units.smallSpacing : PlasmaCore.Units.largeSpacing
+        Layout.topMargin: Kirigami.Units.smallSpacing
+        Layout.bottomMargin: Kirigami.Units.smallSpacing
+        Layout.rightMargin: isWin ? Kirigami.Units.smallSpacing : Kirigami.Units.gridUnit
         spacing: 0
 
         ScrollableTextWrapper {
@@ -90,7 +90,7 @@ RowLayout {
                 lineHeight: 1
                 elide: parent.state ? Text.ElideNone : Text.ElideRight
                 text: artists.length > 0 ? artists.join(", ") : albumArtists.join(", ")
-                font: PlasmaCore.Theme.smallestFont
+                font: Kirigami.Theme.smallFont
                 textFormat: Text.PlainText
             }
         }

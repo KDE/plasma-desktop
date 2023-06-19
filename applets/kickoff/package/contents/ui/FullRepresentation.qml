@@ -14,7 +14,7 @@ import QtQuick.Templates 2.15 as T
 import QtQuick.Layouts 1.15
 import QtQml 2.15
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -29,9 +29,9 @@ EmptyPage {
     readonly property var appletInterface: kickoff
 
     Layout.minimumWidth: implicitWidth
-    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
+    Layout.maximumWidth: Kirigami.Units.gridUnit * 80
     Layout.minimumHeight: implicitHeight
-    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+    Layout.maximumHeight: Kirigami.Units.gridUnit * 40
     Layout.preferredWidth: Math.max(implicitWidth, width)
     Layout.preferredHeight: Math.max(implicitHeight, height)
 
@@ -105,7 +105,7 @@ EmptyPage {
 
                 Loader {
                     anchors.centerIn: searchView.view
-                    width: searchView.view.width - (PlasmaCore.Units.largeSpacing * 4)
+                    width: searchView.view.width - (Kirigami.Units.gridUnit * 4)
 
                     active: searchView.view.count === 0
                     visible: active
@@ -127,7 +127,7 @@ EmptyPage {
 
                         NumberAnimation {
                             id: showAnimation
-                            duration: PlasmaCore.Units.longDuration
+                            duration: Kirigami.Units.longDuration
                             easing.type: Easing.OutCubic
                             property: "opacity"
                             target: emptyHint

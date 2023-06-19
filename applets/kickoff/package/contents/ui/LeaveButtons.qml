@@ -10,7 +10,7 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kirigami 2.16 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kitemmodels 1.0 as KItemModels
 
 RowLayout {
@@ -79,7 +79,7 @@ RowLayout {
                 icon.name: model.decoration
                 onClicked: filteredButtonsModel.trigger(index);
                 display: plasmoid.configuration.showActionButtonCaptions ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly;
-                Layout.rightMargin: model.favoriteId === "switch-user" && plasmoid.configuration.primaryActions === 3 ? PlasmaCore.Units.gridUnit : undefined
+                Layout.rightMargin: model.favoriteId === "switch-user" && plasmoid.configuration.primaryActions === 3 ? Kirigami.Units.gridUnit : undefined
 
                 PC3.ToolTip.text: text
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
@@ -108,8 +108,8 @@ RowLayout {
         readonly property int currentId: plasmoid.configuration.primaryActions
         readonly property bool shouldBeVisible: plasmoid.configuration.primaryActions !== 3 || root.shouldCollapseButtons
         Accessible.role: Accessible.ButtonMenu
-        icon.width: PlasmaCore.Units.iconSizes.smallMedium
-        icon.height: PlasmaCore.Units.iconSizes.smallMedium
+        icon.width: Kirigami.Units.iconSizes.smallMedium
+        icon.height: Kirigami.Units.iconSizes.smallMedium
         icon.name: ["system-log-out", "system-shutdown", "view-more-symbolic", "view-more-symbolic"][currentId]
         display: root.shouldCollapseButtons ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly
         text: [i18n("Leave"), i18n("Power"), i18n("More"), i18n("More")][currentId]

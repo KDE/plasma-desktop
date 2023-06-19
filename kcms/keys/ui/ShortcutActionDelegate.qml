@@ -8,7 +8,7 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3 as QQC2
 
-import org.kde.kirigami 2.10 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kquickcontrols 2.0
 import org.kde.kcmutils as KCM
 import org.kde.private.kcms.keys 2.0 as Private
@@ -60,8 +60,8 @@ Kirigami.AbstractListItem {
                 Rectangle {
                     id: defaultIndicator
                     radius: width * 0.5
-                    implicitWidth: Kirigami.Units.largeSpacing
-                    implicitHeight: Kirigami.Units.largeSpacing
+                    implicitWidth: Kirigami.Units.gridUnit
+                    implicitHeight: Kirigami.Units.gridUnit
                     visible: kcm.defaultsIndicatorsVisible
                     opacity: !model.isDefault
                     color: Kirigami.Theme.neutralTextColor

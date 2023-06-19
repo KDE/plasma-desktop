@@ -8,7 +8,7 @@ import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 PlasmaExtras.ScrollArea {
@@ -74,27 +74,27 @@ PlasmaExtras.ScrollArea {
     Column {
         id: itemColumn
 
-        width: itemMultiGrid.width - PlasmaCore.Units.gridUnit
+        width: itemMultiGrid.width - Kirigami.Units.gridUnit
 
         Repeater {
             id: repeater
 
             delegate: Item {
-                width: itemColumn.width - PlasmaCore.Units.gridUnit
+                width: itemColumn.width - Kirigami.Units.gridUnit
                 height: headerHeight + gridView.height + (index == repeater.count - 1 ? 0 : footerHeight)
 
                 property int headerHeight: (gridViewLabel.height
-                    + gridViewLabelUnderline.height + PlasmaCore.Units.largeSpacing)
+                    + gridViewLabelUnderline.height + Kirigami.Units.gridUnit)
                 property int footerHeight: (Math.ceil(headerHeight / cellSize) * cellSize) - headerHeight
 
                 property Item itemGrid: gridView
 
-                PlasmaExtras.Heading {
+                Kirigami.Heading {
                     id: gridViewLabel
 
                     anchors.top: parent.top
 
-                    x: PlasmaCore.Units.smallSpacing
+                    x: Kirigami.Units.smallSpacing
                     width: parent.width - x
                     height: dummyHeading.height
 
@@ -114,7 +114,7 @@ PlasmaExtras.ScrollArea {
 
                     anchors.top: gridViewLabel.bottom
 
-                    width: parent.width - PlasmaCore.Units.gridUnit
+                    width: parent.width - Kirigami.Units.gridUnit
                     height: lineSvg.horLineHeight
 
                     svg: lineSvg
@@ -133,7 +133,7 @@ PlasmaExtras.ScrollArea {
 
                     anchors {
                         top: gridViewLabelUnderline.bottom
-                        topMargin: PlasmaCore.Units.largeSpacing
+                        topMargin: Kirigami.Units.gridUnit
                     }
 
                     width: parent.width

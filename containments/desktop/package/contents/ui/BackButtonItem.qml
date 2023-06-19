@@ -11,6 +11,7 @@ import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaCore.FrameSvgItem {
     id: upButton
@@ -71,7 +72,7 @@ PlasmaCore.FrameSvgItem {
 
         anchors {
             left: parent.left
-            leftMargin: PlasmaCore.Units.smallSpacing
+            leftMargin: Kirigami.Units.smallSpacing
             verticalCenter: parent.verticalCenter
         }
 
@@ -86,11 +87,11 @@ PlasmaCore.FrameSvgItem {
 
         anchors {
             left: icon.right
-            leftMargin: PlasmaCore.Units.smallSpacing * 2
+            leftMargin: Kirigami.Units.smallSpacing * 2
             verticalCenter: parent.verticalCenter
         }
 
-        width:  parent.width - icon.width - (PlasmaCore.Units.smallSpacing * 4);
+        width:  parent.width - icon.width - (Kirigami.Units.smallSpacing * 4);
 
         height: undefined // Unset PlasmaComponents.Label's default.
 

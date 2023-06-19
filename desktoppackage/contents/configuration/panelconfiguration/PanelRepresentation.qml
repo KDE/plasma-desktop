@@ -6,6 +6,7 @@ import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.plasma.shell.panel 0.1 as Panel
+import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     id: panelRepresentation
@@ -51,19 +52,19 @@ Item {
     }
 
     ColumnLayout {
-        spacing: PlasmaCore.Units.smallSpacing * 2
+        spacing: Kirigami.Units.smallSpacing * 2
         Rectangle {
             id: screenRect
 
-            readonly property double margin: PlasmaCore.Units.smallSpacing * 2
+            readonly property double margin: Kirigami.Units.smallSpacing * 2
             readonly property bool isVertical: panel.formFactor === PlasmaCore.Types.Vertical
-            readonly property int floatingGap: panelRepresentation.floatingGap > -1 ? panelRepresentation.floatingGap : (panel.floating ? PlasmaCore.Units.smallSpacing : 0)
+            readonly property int floatingGap: panelRepresentation.floatingGap > -1 ? panelRepresentation.floatingGap : (panel.floating ? Kirigami.Units.smallSpacing : 0)
 
             Layout.alignment: Qt.AlignHCenter
-            implicitWidth: Math.round(Math.min(PlasmaCore.Units.gridUnit * 6, Screen.width * 0.1))
-            implicitHeight: Math.round(Math.min(PlasmaCore.Units.gridUnit * 4, Screen.width * 0.1))
-            color: PlasmaCore.Theme.backgroundColor
-            border.color: PlasmaCore.Theme.highlightColor
+            implicitWidth: Math.round(Math.min(Kirigami.Units.gridUnit * 6, Screen.width * 0.1))
+            implicitHeight: Math.round(Math.min(Kirigami.Units.gridUnit * 4, Screen.width * 0.1))
+            color: Kirigami.Theme.backgroundColor
+            border.color: Kirigami.Theme.highlightColor
             radius: 5
             clip: sunkenPanel
 
@@ -72,7 +73,7 @@ Item {
 
                 width: screenRect.isVertical ? Math.round(parent.width / 6): Math.round(parent.width * 0.8)
                 height: screenRect.isVertical ? Math.round(parent.height * 0.8) : Math.round(parent.height / 4)
-                color: panelRepresentation.translucentPanel ? parent.color : PlasmaCore.Theme.buttonBackgroundColor
+                color: panelRepresentation.translucentPanel ? parent.color : Kirigami.Theme.backgroundColor
                 opacity: panelRepresentation.translucentPanel ? 0.8 : 1.0
                 border.color: "transparent"
                 visible: panelRepresentation.panelVisible
@@ -91,7 +92,7 @@ Item {
                         anchors.left: parent.left
                         anchors.leftMargin: Math.round(panelImage.width / 3)
                         color: screenRect.color
-                        border.color: PlasmaCore.Theme.highlightColor
+                        border.color: Kirigami.Theme.highlightColor
                         width: panelImage.width
                         height: Math.round(panelImage.height * 4)
                         radius: Math.round(height / 2)
@@ -107,7 +108,7 @@ Item {
                         anchors.top: parent.top
                         anchors.topMargin: Math.round(panelImage.height / 4)
                         color: screenRect.color
-                        border.color: PlasmaCore.Theme.highlightColor
+                        border.color: Kirigami.Theme.highlightColor
                         width: Math.round(panelImage.width * 2)
                         height: panelImage.height
                         radius: Math.round(height / 2)
@@ -119,7 +120,7 @@ Item {
                     id: panelBorder
                     anchors.fill: parent
                     color: "transparent"
-                    border.color: PlasmaCore.Theme.highlightColor
+                    border.color: Kirigami.Theme.highlightColor
                     radius: parent.radius
                 }
             }
@@ -130,25 +131,25 @@ Item {
                 height: Math.round(parent.height / 2)
                 visible: panelRepresentation.windowVisible
                 radius: 5
-                color: PlasmaCore.Theme.highlightColor
+                color: Kirigami.Theme.highlightColor
                 border.color: "transparent"
 
-                x: screenRect.isVertical ? Math.round(panelImage.x + panelImage.width / 2) : Math.round(screenRect.width / 2 - width / 2) + PlasmaCore.Units.largeSpacing
+                x: screenRect.isVertical ? Math.round(panelImage.x + panelImage.width / 2) : Math.round(screenRect.width / 2 - width / 2) + Kirigami.Units.gridUnit
                 y: screenRect.isVertical ? Math.round(screenRect.height / 2 - height / 2) : Math.round(panelImage.y - height + panelImage.height / 2)
                 z: panelRepresentation.windowZ
 
                 Row {
                     anchors.top: parent.top
                     anchors.right: parent.right
-                    anchors.margins: PlasmaCore.Units.smallSpacing
-                    spacing: PlasmaCore.Units.smallSpacing
+                    anchors.margins: Kirigami.Units.smallSpacing
+                    spacing: Kirigami.Units.smallSpacing
                     Repeater {
                         model: 3
                         delegate: Rectangle {
-                            width: Math.round(PlasmaCore.Units.gridUnit / 6)
+                            width: Math.round(Kirigami.Units.gridUnit / 6)
                             height: width
                             radius: Math.round(height / 2)
-                            color: PlasmaCore.Theme.textColor
+                            color: Kirigami.Theme.textColor
                         }
                     }
                 }

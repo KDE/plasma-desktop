@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaCore.IconItem {
     property PlasmoidItem plasmoidItem
@@ -22,7 +23,7 @@ PlasmaCore.IconItem {
         case PlasmaCore.Types.Horizontal:
             return height;
         default:
-            return PlasmaCore.Units.gridUnit * 3;
+            return Kirigami.Units.gridUnit * 3;
         }
     }
 
@@ -33,7 +34,7 @@ PlasmaCore.IconItem {
         case PlasmaCore.Types.Horizontal:
             return 0;
         default:
-            return PlasmaCore.Units.gridUnit * 3;
+            return Kirigami.Units.gridUnit * 3;
         }
     }
 

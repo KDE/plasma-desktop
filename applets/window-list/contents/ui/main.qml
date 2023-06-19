@@ -11,7 +11,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 3.0 as PC3
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.taskmanager 0.1 as TaskManager
 
@@ -19,16 +19,16 @@ PlasmoidItem {
     Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
     compactRepresentation: windowListButton
     fullRepresentation: windowListView
-    switchWidth: PlasmaCore.Units.gridUnit * 8
-    switchHeight: PlasmaCore.Units.gridUnit * 6
+    switchWidth: Kirigami.Units.gridUnit * 8
+    switchHeight: Kirigami.Units.gridUnit * 6
 
     Component {
         id: windowListView
 
         ListView {
             clip: true
-            Layout.preferredWidth: PlasmaCore.Units.gridUnit * 10
-            Layout.preferredHeight: PlasmaCore.Units.gridUnit * 12
+            Layout.preferredWidth: Kirigami.Units.gridUnit * 10
+            Layout.preferredHeight: Kirigami.Units.gridUnit * 12
             model: TaskManager.TasksModel {
                 id: tasksModel
 
@@ -48,16 +48,16 @@ PlasmoidItem {
                         source: model.decoration
                         visible: source !== "" && iconItem.valid
 
-                        implicitWidth: PlasmaCore.Units.roundToIconSize(parent.height)
-                        implicitHeight: PlasmaCore.Units.roundToIconSize(parent.height)
+                        implicitWidth: parent.height
+                        implicitHeight: parent.height
                     }
                     // Fall back to a generic icon if the application doesn't provide a valid one
                     PlasmaCore.IconItem {
                         source: "preferences-system-windows"
                         visible: !iconItem.valid
 
-                        implicitWidth: PlasmaCore.Units.roundToIconSize(parent.height)
-                        implicitHeight: PlasmaCore.Units.roundToIconSize(parent.height)
+                        implicitWidth: parent.height
+                        implicitHeight: parent.height
                     }
                 }
                 text: model.display

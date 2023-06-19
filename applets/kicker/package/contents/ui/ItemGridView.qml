@@ -9,6 +9,7 @@ import QtQuick 2.15
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 FocusScope {
     id: itemGrid
@@ -183,7 +184,7 @@ FocusScope {
 
                 property bool usesPlasmaTheme: false
 
-                property int iconSize: PlasmaCore.Units.iconSizes.huge
+                property int iconSize: Kirigami.Units.iconSizes.huge
 
                 property bool animating: false
                 property int animationDuration: itemGrid.dropEnabled ? resetAnimationDurationTimer.interval : 0
@@ -259,7 +260,7 @@ FocusScope {
                                 bottomMargin: parent.margins.bottom
                             }
 
-                            width: PlasmaCore.Units.iconSizes.smallMedium
+                            width: Kirigami.Units.iconSizes.smallMedium
                             height: width
 
                             source: "list-add"

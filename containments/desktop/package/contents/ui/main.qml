@@ -13,6 +13,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
@@ -36,7 +37,7 @@ ContainmentItem {
     function switchSize() {
         // Support expanding into the full representation on very thick vertical panels.
         if (isPopup && plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-            return PlasmaCore.Units.gridUnit * 8;
+            return Kirigami.Units.gridUnit * 8;
         }
 
         return 0;
@@ -56,7 +57,7 @@ ContainmentItem {
     property int handleDelay: 800
     property real haloOpacity: 0.5
 
-    property int iconSize: PlasmaCore.Units.iconSizes.small
+    property int iconSize: Kirigami.Units.iconSizes.small
     property int iconWidth: iconSize
     property int iconHeight: iconWidth
 
@@ -90,10 +91,10 @@ ContainmentItem {
         if (isContainment || !folderViewLayer.ready) {
             return -1;
         } else if (useListViewMode) {
-            return (minimum ? folderViewLayer.view.cellHeight * 4 : PlasmaCore.Units.gridUnit * 16);
+            return (minimum ? folderViewLayer.view.cellHeight * 4 : Kirigami.Units.gridUnit * 16);
         }
 
-        return (folderViewLayer.view.cellWidth * (minimum ? 1 : 3)) + (PlasmaCore.Units.largeSpacing * 2);
+        return (folderViewLayer.view.cellWidth * (minimum ? 1 : 3)) + (Kirigami.Units.gridUnit * 2);
     }
 
     function preferredHeight(minimum) {
@@ -101,9 +102,9 @@ ContainmentItem {
         if (isContainment || !folderViewLayer.ready) {
             return -1;
         } else if (useListViewMode) {
-            height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 15)) + PlasmaCore.Units.smallSpacing;
+            height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 15)) + Kirigami.Units.smallSpacing;
         } else {
-            height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + PlasmaCore.Units.largeSpacing;
+            height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + Kirigami.Units.gridUnit;
         }
 
         if (plasmoid.configuration.labelMode !== 0) {
@@ -173,16 +174,16 @@ ContainmentItem {
         }
 
         Behavior on anchors.topMargin {
-            NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad }
+            NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.InOutQuad }
         }
         Behavior on anchors.leftMargin {
-            NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad }
+            NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.InOutQuad }
         }
         Behavior on anchors.rightMargin {
-            NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad }
+            NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.InOutQuad }
         }
         Behavior on anchors.bottomMargin {
-            NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.InOutQuad }
+            NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.InOutQuad }
         }
 
         property alias folderViewLayer: folderViewLayer
@@ -292,10 +293,10 @@ ContainmentItem {
             // Sets the containment in edit mode when we go in edit mode as well
             onEditModeChanged: plasmoid.containment.corona.editMode = editMode;
 
-            minimumItemWidth: PlasmaCore.Units.gridUnit * 3
+            minimumItemWidth: Kirigami.Units.gridUnit * 3
             minimumItemHeight: minimumItemWidth
 
-            cellWidth: PlasmaCore.Units.iconSizes.small
+            cellWidth: Kirigami.Units.iconSizes.small
             cellHeight: cellWidth
 
             eventManagerToFilter: folderViewLayer.item ? folderViewLayer.item.view.view : null
@@ -319,15 +320,15 @@ ContainmentItem {
                 }
 
                 component DropBehavior : Behavior {
-                    NumberAnimation {
-                        duration: PlasmaCore.Units.shortDuration
-                        easing.type: Easing.InOutQuad
-                    }
+                        NumberAnimation {
+                            duration: Kirigami.Units.shortDuration
+                            easing.type: Easing.InOutQuad
+                        }
                 }
-
-                DropBehavior on x { }
-                DropBehavior on y { }
-            }
+                
+                    DropBehavior on x { }
+                    DropBehavior on y { }
+             }
 
             placeHolder: ContainmentLayoutManager.PlaceHolder {}
 

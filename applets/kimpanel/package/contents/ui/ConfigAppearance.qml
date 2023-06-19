@@ -9,7 +9,7 @@ import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Dialogs 6.3 as QtDialogs
 import QtQuick.Layouts 1.0
 
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -89,7 +89,7 @@ Kirigami.FormLayout {
         id: fontDialog
         title: i18nc("@title:window", "Select Font")
 
-        font: !cfg_font || cfg_font.family === "" ? PlasmaCore.Theme.defaultFont : cfg_font
+        font: !cfg_font || cfg_font.family === "" ? Kirigami.Theme.defaultFont : cfg_font
 
         onAccepted: {
             cfg_font = font

@@ -4,11 +4,10 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-.import org.kde.plasma.core 2.0 as PlasmaCore
-.import org.kde.kirigami 2.19 as Kirigami
+.import org.kde.kirigami 2.20 as Kirigami
 
-const iconMargin = Math.round(PlasmaCore.Units.smallSpacing / 4);
-const labelMargin = PlasmaCore.Units.smallSpacing;
+const iconMargin = Math.round(Kirigami.Units.smallSpacing / 4);
+const labelMargin = Kirigami.Units.smallSpacing;
 
 function horizontalMargins() {
     const spacingAdjustment = (plasmoid.pluginName === "org.kde.plasma.icontasks") ? (Kirigami.Settings.tabletMode ? 3 : plasmoid.configuration.iconSpacing) : 1
@@ -23,8 +22,8 @@ function verticalMargins() {
 function adjustMargin(height, margin) {
     var available = height - verticalMargins();
 
-    if (available < PlasmaCore.Units.iconSizes.small) {
-        return Math.floor((margin * (PlasmaCore.Units.iconSizes.small / available)) / 3);
+    if (available < Kirigami.Units.iconSizes.small) {
+        return Math.floor((margin * (Kirigami.Units.iconSizes.small / available)) / 3);
     }
 
     return margin;
@@ -105,8 +104,8 @@ function preferredMinWidth() {
 
     if (!tasks.vertical && !tasks.iconsOnly) {
       width +=
-          (PlasmaCore.Units.smallSpacing * 2) +
-          (PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 12);
+          (Kirigami.Units.smallSpacing * 2) +
+          (Kirigami.Units.iconSizes.sizeForLabels * 12);
     }
 
     return width;
@@ -130,7 +129,7 @@ function preferredMaxWidth() {
 
 function preferredMinHeight() {
     // TODO FIXME UPSTREAM: Port to proper font metrics for descenders once we have access to them.
-    return PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height + 4;
+    return Kirigami.Units.iconSizes.sizeForLabels + 4;
 }
 
 function preferredMaxHeight() {
@@ -142,15 +141,15 @@ function preferredMaxHeight() {
                  tasks.width,
                  tasks.iconsOnly ? tasks.width :
                     Math.max(
-                        PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height,
-                        PlasmaCore.Units.iconSizes.medium
+                        Kirigami.Units.iconSizes.sizeForLabels,
+                        Kirigami.Units.iconSizes.medium
                     )
              );
     } else {
       return verticalMargins() +
              Math.min(
-                 PlasmaCore.Units.iconSizes.small * 3,
-                 PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height *
+                 Kirigami.Units.iconSizes.small * 3,
+                 Kirigami.Units.iconSizes.sizeForLabels *
                      3);
     }
 }
@@ -186,14 +185,14 @@ function taskHeight() {
 }
 
 function launcherWidth() {
-    var baseWidth = tasks.vertical ? preferredMinHeight() : Math.min(tasks.height, PlasmaCore.Units.iconSizes.small * 3);
+    var baseWidth = tasks.vertical ? preferredMinHeight() : Math.min(tasks.height, Kirigami.Units.iconSizes.small * 3);
 
     return (baseWidth + horizontalMargins())
         - (adjustMargin(baseWidth, taskFrame.margins.top) + adjustMargin(baseWidth, taskFrame.margins.bottom));
 }
 
 function maximumContextMenuTextWidth() {
-  return (PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 28);
+  return (Kirigami.Units.iconSizes.sizeForLabels * 28);
 }
 
 function layout(container) {

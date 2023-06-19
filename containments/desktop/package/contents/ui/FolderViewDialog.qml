@@ -8,6 +8,7 @@ import QtQuick 2.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
@@ -48,7 +49,7 @@ Folder.SubDialog {
     mainItem: FolderViewDropArea {
         id: folderViewDropArea
 
-        width: folderView.cellWidth * 3 + PlasmaCore.Units.gridUnit // FIXME HACK: Use actual scrollbar width.
+        width: folderView.cellWidth * 3 + Kirigami.Units.gridUnit // FIXME HACK: Use actual scrollbar width.
         height: folderView.cellHeight * 2
 
         folderView: folderView
@@ -82,7 +83,7 @@ Folder.SubDialog {
         Timer {
             id: closeTimer
 
-            interval: PlasmaCore.Units.longDuration * 2
+            interval: Kirigami.Units.longDuration * 2
 
             onTriggered: {
                 if (childDialog !== null) {

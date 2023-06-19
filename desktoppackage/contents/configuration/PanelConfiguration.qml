@@ -6,6 +6,7 @@
 
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.configuration 2.0
 import "panelconfiguration"
 
@@ -97,7 +98,7 @@ PlasmaCore.FrameSvgItem {
                     return panel.screenGeometry.y + panel.screenGeometry.height - panel.height - panel.distance
                 }
             }
-            duration: PlasmaCore.Units.shortDuration
+            duration: Kirigami.Units.shortDuration
         }
 
         NumberAnimation {
@@ -116,7 +117,7 @@ PlasmaCore.FrameSvgItem {
                     return panel.screenGeometry.y + panel.screenGeometry.height - panel.height - configDialog.height - panel.distance
                 }
             }
-            duration: PlasmaCore.Units.shortDuration
+            duration: Kirigami.Units.shortDuration
         }
     }
 //END Animations

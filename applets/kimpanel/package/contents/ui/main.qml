@@ -10,6 +10,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmoidItem {
     id: kimpanel
@@ -20,8 +21,8 @@ PlasmoidItem {
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    Layout.minimumWidth: vertical ? PlasmaCore.Units.iconSizes.small : mainLayout.implicitWidth
-    Layout.minimumHeight: vertical ? mainLayout.implicitHeight : PlasmaCore.Units.iconSizes.small
+    Layout.minimumWidth: vertical ? Kirigami.Units.iconSizes.small : mainLayout.implicitWidth
+    Layout.minimumHeight: vertical ? mainLayout.implicitHeight : Kirigami.Units.iconSizes.small
     Layout.preferredWidth: vertical ? kimpanel.width : mainLayout.implicitWidth
     Layout.preferredHeight: !vertical ? kimpanel.height : mainLayout.implicitHeight
 
@@ -49,7 +50,7 @@ PlasmoidItem {
             flow: kimpanel.vertical ? GridView.FlowLeftToRight : GridView.FlowTopToBottom
 
             // The icon size to display when not using the auto-scaling setting
-            readonly property int smallIconSize: PlasmaCore.Units.iconSizes.smallMedium
+            readonly property int smallIconSize: Kirigami.Units.iconSizes.smallMedium
             readonly property bool autoSize: plasmoid.configuration.scaleIconsToFit
 
             readonly property int gridThickness: kimpanel.vertical ? kimpanel.width : kimpanel.height
@@ -57,7 +58,7 @@ PlasmoidItem {
             readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(count, Math.floor(gridThickness / smallSizeCellLength)))
 
             // Add margins only if the panel is larger than a small icon (to avoid large gaps between tiny icons)
-            readonly property int smallSizeCellLength: gridThickness < smallIconSize ? gridThickness : smallIconSize + PlasmaCore.Units.smallSpacing
+            readonly property int smallSizeCellLength: gridThickness < smallIconSize ? gridThickness : smallIconSize + Kirigami.Units.smallSpacing
             cellHeight: {
                 if (kimpanel.vertical) {
                     return autoSize ? kimpanel.width : smallSizeCellLength
@@ -84,7 +85,7 @@ PlasmoidItem {
                 } else {
                     size = Math.min(gridThickness, smallIconSize)
                 }
-                return PlasmaCore.Units.roundToIconSize(Math.min(size, PlasmaCore.Units.iconSizes.enormous))
+                return Kirigami.Units.roundedIconSize(Math.min(size, Kirigami.Units.iconSizes.enormous))
             }
 
             model: ListModel {

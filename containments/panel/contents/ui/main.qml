@@ -13,6 +13,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.draganddrop 2.0 as DragDrop
+import org.kde.kirigami 2.20 as Kirigami
 
 import "LayoutManager.js" as LayoutManager
 
@@ -133,7 +134,7 @@ ContainmentItem {
         property var marginHighlightSvg: PlasmaCore.Svg{imagePath: "widgets/margins-highlight"}
         //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
         //the size a margin should be to force a panel to be the required size above
-        readonly property real spacingAtMinSize: Math.floor(Math.max(1, (isHorizontal ? root.height : root.width) - PlasmaCore.Units.iconSizes.smallMedium)/2)
+        readonly property real spacingAtMinSize: Math.floor(Math.max(1, (isHorizontal ? root.height : root.width) - Kirigami.Units.iconSizes.smallMedium)/2)
 
         Component.onCompleted: {
             LayoutManager.plasmoid = root.Plasmoid;
@@ -255,7 +256,7 @@ ContainmentItem {
                     opacity: plasmoid.containment.corona.editMode && dropArea.marginAreasEnabled && !root.dragAndDropping && index != -1 ? 1 : 0
                     Behavior on opacity {
                         NumberAnimation {
-                            duration: PlasmaCore.Units.longDuration
+                            duration: Kirigami.Units.longDuration
                             easing.type: Easing.InOutQuad
                         }
                     }
@@ -331,7 +332,7 @@ ContainmentItem {
                 }
                 NumberAnimation {
                     id: translAnim
-                    duration: PlasmaCore.Units.shortDuration
+                    duration: Kirigami.Units.shortDuration
                     easing.type: Easing.OutCubic
                     target: translation
                     properties: "x,y"
@@ -355,8 +356,8 @@ ContainmentItem {
             property bool busy: false
             Layout.preferredWidth: width
             Layout.preferredHeight: height
-            width: isHorizontal ? PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 5 : currentLayout.width
-            height: isHorizontal ? currentLayout.height : PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 5
+            width: isHorizontal ? Kirigami.Units.iconSizes.sizeForLabels * 5 : currentLayout.width
+            height: isHorizontal ? currentLayout.height : Kirigami.Units.iconSizes.sizeForLabels * 5
         }
 
         ListModel {
@@ -371,8 +372,8 @@ ContainmentItem {
                 delegate: appletContainerComponent
             }
 
-            rowSpacing: PlasmaCore.Units.smallSpacing
-            columnSpacing: PlasmaCore.Units.smallSpacing
+            rowSpacing: Kirigami.Units.smallSpacing
+            columnSpacing: Kirigami.Units.smallSpacing
 
             x: Qt.application.layoutDirection === Qt.RightToLeft && isHorizontal ? toolBoxSize : 0;
             readonly property int toolBoxSize: !toolBox || !plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)

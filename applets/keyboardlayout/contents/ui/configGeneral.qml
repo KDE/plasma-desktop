@@ -46,8 +46,8 @@ Kirigami.FormLayout {
             // with what the widget will show
             PlasmaCore.IconItem {
                 id: flagImage
-                width: PlasmaCore.Units.iconSizes.medium
-                height: PlasmaCore.Units.iconSizes.medium
+                width: Kirigami.Units.iconSizes.medium
+                height: Kirigami.Units.iconSizes.medium
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
                 source: KCMKeyboard.Flags.getIcon(root.layoutShortName)
@@ -84,8 +84,8 @@ Kirigami.FormLayout {
             // Deliberately using this instead of Image to preserve visual fidelity
             // with what the widget will show
             PlasmaCore.IconItem {
-                width: PlasmaCore.Units.iconSizes.medium
-                height: PlasmaCore.Units.iconSizes.medium
+                width: Kirigami.Units.iconSizes.medium
+                height: Kirigami.Units.iconSizes.medium
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
                 source: KCMKeyboard.Flags.getIcon(root.layoutShortName)

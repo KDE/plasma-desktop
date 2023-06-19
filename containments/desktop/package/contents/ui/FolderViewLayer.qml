@@ -11,6 +11,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.config // for KAuthorized
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
@@ -22,8 +23,8 @@ FocusScope {
 
     property Item view: folderView
     property Item label: null
-    property int labelHeight: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height
-        + (root.isPopup ? (PlasmaCore.Units.smallSpacing * 2) : 0)
+    property int labelHeight: Kirigami.Units.iconSizes.sizeForLabels
+        + (root.isPopup ? (Kirigami.Units.smallSpacing * 2) : 0)
 
     property alias model: folderView.model
     property alias overflowing: folderView.overflowing
@@ -326,7 +327,7 @@ FocusScope {
                 anchors {
                     left: label.homeButton ? label.homeButton.right : parent.left
                     right: label.windowPin ? label.windowPin.left : parent.right
-                    margins: PlasmaCore.Units.smallSpacing
+                    margins: Kirigami.Units.smallSpacing
                 }
                 height: parent.height
 
@@ -363,7 +364,7 @@ FocusScope {
 
                     visible: label.showPin
 
-                    width: root.isPopup ? Math.round(PlasmaCore.Units.gridUnit * 1.25) : 0
+                    width: root.isPopup ? Math.round(Kirigami.Units.gridUnit * 1.25) : 0
                     height: width
                     checkable: true
                     icon.name: "window-pin"
@@ -381,7 +382,7 @@ FocusScope {
 
                     visible: root.isPopup && folderView.url !== plasmoid.configuration.url
 
-                    width: root.isPopup ? Math.round(PlasmaCore.Units.gridUnit * 1.25) : 0
+                    width: root.isPopup ? Math.round(Kirigami.Units.gridUnit * 1.25) : 0
                     height: width
                     icon.name: "go-home"
 

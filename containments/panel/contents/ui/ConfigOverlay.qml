@@ -30,7 +30,7 @@ MouseArea {
             // If the object has been dragged outside of the panel and there's
             // a different containment there, we remove it from the panel
             // containment and add it to the new one.
-            var padding = PlasmaCore.Units.gridUnit * 5;
+            var padding = Kirigami.Units.gridUnit * 5;
             if (currentApplet && (mouse.x < -padding || mouse.y < -padding ||
                 mouse.x > width + padding || mouse.y > height + padding)) {
                 var newCont = root.containmentItemAt(mouse.x, mouse.y);
@@ -152,7 +152,7 @@ MouseArea {
 
     Timer {
         id: hideTimer
-        interval: PlasmaCore.Units.longDuration * 5
+        interval: Kirigami.Units.longDuration * 5
         onTriggered: configurationArea.currentApplet = null
     }
 
@@ -164,7 +164,7 @@ MouseArea {
         width: configurationArea.currentApplet?.width ?? 0
         height: configurationArea.currentApplet?.height ?? 0
 
-        color: PlasmaCore.Theme.backgroundColor
+        color: Kirigami.Theme.backgroundColor
         radius: 3
         opacity: configurationArea.currentApplet && configurationArea.containsMouse ? 0.5 : 0
 
@@ -178,34 +178,34 @@ MouseArea {
         Behavior on x {
             enabled: !configurationArea.pressed
             NumberAnimation {
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
         Behavior on y {
             enabled: !configurationArea.pressed
             NumberAnimation {
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
         Behavior on width {
             enabled: !configurationArea.pressed
             NumberAnimation {
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
         Behavior on height {
             enabled: !configurationArea.pressed
             NumberAnimation {
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
         Behavior on opacity {
             NumberAnimation {
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
@@ -239,13 +239,13 @@ MouseArea {
 
             ColumnLayout {
                 id: handleButtons
-                spacing: PlasmaCore.Units.smallSpacing
+                spacing: Kirigami.Units.smallSpacing
 
                 PlasmaExtras.PlasmoidHeading {
-                    leftPadding: PlasmaCore.Units.smallSpacing * 2
-                    rightPadding: PlasmaCore.Units.smallSpacing * 2
+                    leftPadding: Kirigami.Units.smallSpacing * 2
+                    rightPadding: Kirigami.Units.smallSpacing * 2
 
-                    contentItem: PlasmaExtras.Heading {
+                    contentItem: Kirigami.Heading {
                         id: label
                         level: 3
                         horizontalAlignment: Text.AlignHCenter
@@ -300,7 +300,7 @@ MouseArea {
                     }
                 }
 
-                PlasmaExtras.Heading {
+                Kirigami.Heading {
                     Layout.fillWidth: true
                     visible: panelSpacerWidth.visible
                     text: i18n("Spacer width")

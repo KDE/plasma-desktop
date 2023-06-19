@@ -7,17 +7,17 @@
 import QtQuick 2.15
 
 import org.kde.draganddrop 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 DropArea {
     id: root
 
-    width: PlasmaCore.Units.iconSizes.medium
+    width: Kirigami.Units.iconSizes.medium
     height: contentHeight
 
     anchors.horizontalCenter: parent.horizontalCenter
 
-    property int contentHeight: model ? (model.count * PlasmaCore.Units.iconSizes.medium) + ((model.count - 1) * flow.spacing) : 0
+    property int contentHeight: model ? (model.count * Kirigami.Units.iconSizes.medium) + ((model.count - 1) * flow.spacing) : 0
 
     property alias model: repeater.model
     property alias usesPlasmaTheme: repeater.usesPlasmaTheme
@@ -57,7 +57,7 @@ DropArea {
             }
         }
 
-        spacing: (2 * PlasmaCore.Units.smallSpacing)
+        spacing: (2 * Kirigami.Units.smallSpacing)
 
         Repeater {
             id: repeater

@@ -9,9 +9,8 @@ import QtQuick.Layouts 1.15
 import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.plasma.components 3.0 as PC3
 import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
@@ -543,7 +542,7 @@ FocusScope {
                     target: rubberBand
                     to: 0
                     from: 1
-                    duration: PlasmaCore.Units.shortDuration
+                    duration: Kirigami.Units.shortDuration
 
                     // This easing curve has an elognated start, which works
                     // better than a standard easing curve for the rubberband
@@ -680,10 +679,10 @@ FocusScope {
                 boundsBehavior: Flickable.StopAtBounds
                 focus: true
 
-                PC3.ScrollBar.vertical: PC3.ScrollBar {
+                PlasmaComponents.ScrollBar.vertical: PlasmaComponents.ScrollBar {
                     id: verticalScrollBar
                 }
-                PC3.ScrollBar.horizontal: PC3.ScrollBar {}
+                PlasmaComponents.ScrollBar.horizontal: PlasmaComponents.ScrollBar {}
 
                 function calcExtraSpacing(cellSize, containerSize) {
                     var availableColumns = Math.floor(containerSize / cellSize);
@@ -700,9 +699,9 @@ FocusScope {
                     if (root.useListViewMode) {
                         return gridView.width - (verticalScrollBar.visible ? verticalScrollBar.width : 0);
                     } else {
-                        var iconWidth = iconSize + (2 * PlasmaCore.Units.largeSpacing) + (2 * PlasmaCore.Units.smallSpacing);
+                        var iconWidth = iconSize + (2 * Kirigami.Units.gridUnit) + (2 * Kirigami.Units.smallSpacing);
                         if (root.isContainment && isRootView && scrollArea.viewportWidth > 0) {
-                            var minIconWidth = Math.max(iconWidth, PlasmaCore.Units.iconSizes.small * ((plasmoid.configuration.labelWidth * 2) + 4));
+                            var minIconWidth = Math.max(iconWidth, Kirigami.Units.iconSizes.small * ((plasmoid.configuration.labelWidth * 2) + 4));
                             var extraWidth = calcExtraSpacing(minIconWidth, scrollArea.viewportWidth);
                             return minIconWidth + extraWidth;
                         } else {
@@ -713,11 +712,11 @@ FocusScope {
 
                 cellHeight: {
                     if (root.useListViewMode) {
-                        return Math.ceil((Math.max(PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height, iconSize)
+                        return Math.ceil((Math.max(Kirigami.Units.iconSizes.sizeForLabels, iconSize)
                             + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                             listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2;
                     } else {
-                        var iconHeight = iconSize + (PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * plasmoid.configuration.textLines) + (4 * PlasmaCore.Units.smallSpacing);
+                        var iconHeight = iconSize + (Kirigami.Units.gridUnit * (plasmoid.configuration.textLines + 1));
                         if (root.isContainment && isRootView && scrollArea.viewportHeight > 0) {
                             var extraHeight = calcExtraSpacing(iconHeight, scrollArea.viewportHeight);
                             return iconHeight + extraHeight;
@@ -864,7 +863,7 @@ FocusScope {
 
                 function makeIconSize() {
                     if (root.useListViewMode) {
-                        return PlasmaCore.Units.iconSizes.small;
+                        return Kirigami.Units.iconSizes.small;
                     }
 
                     return FolderTools.iconSizeFromTheme(plasmoid.configuration.iconSize);
@@ -896,8 +895,8 @@ FocusScope {
                     var step = rows ? cellWidth : cellHeight;
                     var perStripe = Math.floor(axis / step);
                     var stripes = Math.ceil(gridView.count / perStripe);
-                    var cWidth = gridView.cellWidth - (2 * PlasmaCore.Units.smallSpacing);
-                    var cHeight = gridView.cellHeight - (2 * PlasmaCore.Units.smallSpacing);
+                    var cWidth = gridView.cellWidth - (2 * Kirigami.Units.smallSpacing);
+                    var cHeight = gridView.cellHeight - (2 * Kirigami.Units.smallSpacing);
                     var midWidth = gridView.cellWidth / 2;
                     var midHeight = gridView.cellHeight / 2;
                     var indices = [];
@@ -925,7 +924,7 @@ FocusScope {
 
                             // Check if the rubberband intersects this cell first to avoid doing more
                             // expensive work.
-                            if (main.rubberBand.intersects(Qt.rect(itemX + PlasmaCore.Units.smallSpacing, itemY + PlasmaCore.Units.smallSpacing,
+                            if (main.rubberBand.intersects(Qt.rect(itemX + Kirigami.Units.smallSpacing, itemY + Kirigami.Units.smallSpacing,
                                 cWidth, cHeight))) {
                                 var item = gridView.contentItem.childAt(itemX + midWidth, itemY + midHeight);
 
@@ -978,6 +977,7 @@ FocusScope {
                         runOrCdSelected();
                     }
                 }
+
                 Keys.onEnterPressed: event => Keys.returnPressed(event)
 
                 Keys.onMenuPressed: event => {

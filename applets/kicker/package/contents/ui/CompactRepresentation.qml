@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -36,16 +37,16 @@ Item {
                 const scaledHeight = Math.floor(parent.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
                 root.Layout.minimumHeight = scaledHeight;
                 root.Layout.maximumHeight = scaledHeight;
-                root.Layout.minimumWidth = PlasmaCore.Units.iconSizes.small;
+                root.Layout.minimumWidth = Kirigami.Units.iconSizes.small;
             } else {
                 const scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
                 root.Layout.minimumWidth = scaledWidth;
                 root.Layout.maximumWidth = scaledWidth;
-                root.Layout.minimumHeight = PlasmaCore.Units.iconSizes.small;
+                root.Layout.minimumHeight = Kirigami.Units.iconSizes.small;
             }
         } else {
-            root.Layout.minimumWidth = PlasmaCore.Units.iconSizes.small;
-            root.Layout.minimumHeight = PlasmaCore.Units.iconSizes.small;
+            root.Layout.minimumWidth = Kirigami.Units.iconSizes.small;
+            root.Layout.minimumHeight = Kirigami.Units.iconSizes.small;
         }
     }
 

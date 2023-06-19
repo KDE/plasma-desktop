@@ -9,7 +9,7 @@
 import QtQuick 2.8
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
-import org.kde.kirigami 2.15 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     id: main
@@ -19,13 +19,13 @@ Item {
     width: Kirigami.Settings.hasTransientTouchInput
             ? (isVertical ? plasmoid.width : height)
             : (isVertical
-                ? PlasmaCore.Units.iconSizes.medium
-                : PlasmaCore.Units.iconSizes.smallMedium + PlasmaCore.Units.smallSpacing * 2)
+                ? Kirigami.Units.iconSizes.medium
+                : Kirigami.Units.iconSizes.smallMedium + Kirigami.Units.smallSpacing * 2)
     height: Kirigami.Settings.hasTransientTouchInput
             ? (isVertical ? width : plasmoid.height)
             : (isVertical
-                ? PlasmaCore.Units.iconSizes.smallMedium + PlasmaCore.Units.smallSpacing * 2
-                : PlasmaCore.Units.iconSizes.medium)
+                ? Kirigami.Units.iconSizes.smallMedium + Kirigami.Units.smallSpacing * 2
+                : Kirigami.Units.iconSizes.medium)
 
     z: 999
 
@@ -55,7 +55,7 @@ Item {
     ]
     Behavior on opacity {
         OpacityAnimator {
-            duration: PlasmaCore.Units.longDuration;
+            duration: Kirigami.Units.longDuration;
             easing.type: Easing.InOutQuad;
         }
     }
@@ -79,7 +79,7 @@ Item {
         elementId: "configure"
 
         anchors.centerIn: mouseArea
-        width: Kirigami.Settings.hasTransientTouchInput ? Math.min(PlasmaCore.Units.iconSizes.medium, parent.width - Kirigami.Units.smallSpacing * 2) : PlasmaCore.Units.iconSizes.small
+        width: Kirigami.Settings.hasTransientTouchInput ? Math.min(Kirigami.Units.iconSizes.medium, parent.width - Kirigami.Units.smallSpacing * 2) : Kirigami.Units.iconSizes.small
         height: width
     }
 

@@ -14,6 +14,7 @@ import org.kde.plasma.components 3.0 as PC3
 import org.kde.coreaddons 1.0 as KCoreAddons
 import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.plasma.private.trash 1.0 as TrashPrivate
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
@@ -38,7 +39,7 @@ PlasmoidItem {
         if (constrained) {
             return formFactor === PlasmaCore.Types.Vertical ? width : 1
         }
-        return PlasmaCore.Units.iconSizes.small + text.height
+        return Kirigami.Units.iconSizes.small + text.height
     }
 
     readonly property int formFactor: plasmoid.formFactor
@@ -158,7 +159,7 @@ PlasmoidItem {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.bottom
         }
-        width: Math.round(text.implicitWidth + PlasmaCore.Units.smallSpacing) // make sure label is not blurry
+        width: Math.round(text.implicitWidth + Kirigami.Units.smallSpacing) // make sure label is not blurry
         text: (dirModel.count === 0) ? i18n("Trash\nEmpty") : i18np("Trash\nOne item", "Trash\n %1 items", dirModel.count)
         color: "white"
         horizontalAlignment: Text.AlignHCenter

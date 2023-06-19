@@ -47,7 +47,7 @@ KCM.SimpleKCM {
 
     RowLayout {
         id: mainLayout
-        anchors.margins: Kirigami.Units.largeSpacing
+        anchors.margins: Kirigami.Units.gridUnit
         QQC2.ScrollView {
             id: leftSidePaneBackground
             contentHeight: root.contentItem.height -  Kirigami.Units.gridUnit * 4
@@ -72,8 +72,8 @@ KCM.SimpleKCM {
                     Rectangle {
                         id: defaultIndicator
                         radius: width * 0.5
-                        implicitWidth: Kirigami.Units.largeSpacing
-                        implicitHeight: Kirigami.Units.largeSpacing
+                        implicitWidth: Kirigami.Units.gridUnit
+                        implicitHeight: Kirigami.Units.gridUnit
                         visible: kcm.defaultsIndicatorsVisible
                         opacity: !kcm[modelData.defaultnessKey]
                         color: Kirigami.Theme.neutralTextColor

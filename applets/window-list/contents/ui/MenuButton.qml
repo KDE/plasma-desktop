@@ -9,7 +9,7 @@ import QtQuick.Layouts 1.10
 import QtQuick.Controls 2.10
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 AbstractButton {
     id: controlRoot
@@ -56,8 +56,8 @@ AbstractButton {
             id: iconItem
             visible: source !== "" && iconItem.valid
 
-            implicitWidth: PlasmaCore.Units.roundToIconSize(label.implicitHeight)
-            implicitHeight: PlasmaCore.Units.roundToIconSize(label.implicitHeight)
+            implicitWidth: label.implicitHeight
+            implicitHeight: label.implicitHeight
 
             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
         }
@@ -67,8 +67,8 @@ AbstractButton {
 
             source: "preferences-system-windows"
 
-            implicitWidth: PlasmaCore.Units.roundToIconSize(label.implicitHeight)
-            implicitHeight: PlasmaCore.Units.roundToIconSize(label.implicitHeight)
+            implicitWidth: label.implicitHeight
+            implicitHeight: label.implicitHeight
 
             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
         }

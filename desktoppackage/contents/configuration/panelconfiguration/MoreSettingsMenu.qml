@@ -24,12 +24,12 @@ PlasmaCore.Dialog {
     flags: Qt.Popup | Qt.FramelessWindowHint | Qt.WindowDoesNotAcceptFocus
     mainItem: ColumnLayout {
         id: menuColumn
-        width: PlasmaCore.Units.gridUnit * 30
-        height: PlasmaCore.Units.gridUnit * 43
+        width: Kirigami.Units.gridUnit * 30
+        height: Kirigami.Units.gridUnit * 43
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
-        spacing: PlasmaCore.Units.largeSpacing
+        spacing: Kirigami.Units.gridUnit
 
         readonly property int headingLabel: 2
 
@@ -37,9 +37,9 @@ PlasmaCore.Dialog {
 
             RowLayout {
                 anchors.fill: parent
-                spacing: PlasmaCore.Units.largeSpacing
+                spacing: Kirigami.Units.gridUnit
 
-                PlasmaExtras.Heading {
+                Kirigami.Heading {
                     level: 3
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Settings")
                 }
@@ -74,21 +74,21 @@ PlasmaCore.Dialog {
         }
 
         RowLayout {
-            spacing: PlasmaCore.Units.largeSpacing
-            Layout.leftMargin: PlasmaCore.Units.largeSpacing
-            Layout.rightMargin: PlasmaCore.Units.largeSpacing
+            spacing: Kirigami.Units.gridUnit
+            Layout.leftMargin: Kirigami.Units.gridUnit
+            Layout.rightMargin: Kirigami.Units.gridUnit
 
             Item {
                 Layout.preferredWidth: menuColumn.width / 5
                 Layout.fillHeight: true
-                Layout.rightMargin: PlasmaCore.Units.largeSpacing
-                PlasmaExtras.Heading {
+                Layout.rightMargin: Kirigami.Units.gridUnit
+                Kirigami.Heading {
                     anchors.right: parent.right
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
                     level: menuColumn.headingLabel
-                    Layout.topMargin: PlasmaCore.Units.smallSpacing
-                    Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+                    Layout.topMargin: Kirigami.Units.smallSpacing
+                    Layout.bottomMargin: Kirigami.Units.gridUnit
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alignment:")
                 }
             }
@@ -132,21 +132,21 @@ PlasmaCore.Dialog {
             }
         }
         RowLayout {
-            spacing: PlasmaCore.Units.largeSpacing
-            Layout.leftMargin: PlasmaCore.Units.largeSpacing
-            Layout.rightMargin: PlasmaCore.Units.largeSpacing
+            spacing: Kirigami.Units.gridUnit
+            Layout.leftMargin: Kirigami.Units.gridUnit
+            Layout.rightMargin: Kirigami.Units.gridUnit
 
             Item {
                 Layout.preferredWidth: menuColumn.width / 5
-                Layout.rightMargin: PlasmaCore.Units.largeSpacing
+                Layout.rightMargin: Kirigami.Units.gridUnit
                 Layout.fillHeight: true
-                PlasmaExtras.Heading {
+                Kirigami.Heading {
                     anchors.right: parent.right
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
                     level: menuColumn.headingLabel
-                    Layout.topMargin: PlasmaCore.Units.smallSpacing
-                    Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+                    Layout.topMargin: Kirigami.Units.smallSpacing
+                    Layout.bottomMargin: Kirigami.Units.gridUnit
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Visibility:")
                 }
             }
@@ -175,21 +175,21 @@ PlasmaCore.Dialog {
             svg: lineSvg
         }
         RowLayout {
-            spacing: PlasmaCore.Units.largeSpacing
-            Layout.leftMargin: PlasmaCore.Units.largeSpacing
-            Layout.rightMargin: PlasmaCore.Units.largeSpacing
+            spacing: Kirigami.Units.gridUnit
+            Layout.leftMargin: Kirigami.Units.gridUnit
+            Layout.rightMargin: Kirigami.Units.gridUnit
 
             Item {
                 Layout.preferredWidth: menuColumn.width / 5
-                Layout.rightMargin: PlasmaCore.Units.largeSpacing
+                Layout.rightMargin: Kirigami.Units.gridUnit
                 Layout.fillHeight: true
-                PlasmaExtras.Heading {
+                Kirigami.Heading {
                     anchors.right: parent.right
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
                     level: menuColumn.headingLabel
-                    Layout.topMargin: PlasmaCore.Units.smallSpacing
-                    Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+                    Layout.topMargin: Kirigami.Units.smallSpacing
+                    Layout.bottomMargin: Kirigami.Units.gridUnit
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity:")
                 }
             }
@@ -227,21 +227,21 @@ PlasmaCore.Dialog {
             svg: lineSvg
         }
         RowLayout {
-            spacing: PlasmaCore.Units.largeSpacing
-            Layout.leftMargin: PlasmaCore.Units.largeSpacing
-            Layout.rightMargin: PlasmaCore.Units.largeSpacing
+            spacing: Kirigami.Units.gridUnit
+            Layout.leftMargin: Kirigami.Units.gridUnit
+            Layout.rightMargin: Kirigami.Units.gridUnit
 
             Item {
                 Layout.preferredWidth: menuColumn.width / 5
-                Layout.rightMargin: PlasmaCore.Units.largeSpacing
+                Layout.rightMargin: Kirigami.Units.gridUnit
                 Layout.fillHeight: true
-                PlasmaExtras.Heading {
+                Kirigami.Heading {
                     anchors.right: parent.right
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
                     level: menuColumn.headingLabel
-                    Layout.topMargin: PlasmaCore.Units.smallSpacing
-                    Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+                    Layout.topMargin: Kirigami.Units.smallSpacing
+                    Layout.bottomMargin: Kirigami.Units.gridUnit
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating:")
                 }
             }
@@ -252,7 +252,7 @@ PlasmaCore.Dialog {
                 Layout.alignment: Qt.AlignTop
                 alignment: panel.alignment
                 checked: panel.floating
-                floatingGap: PlasmaCore.Units.smallSpacing
+                floatingGap: Kirigami.Units.smallSpacing
                 onClicked: panel.floating = true
             }
 
@@ -269,16 +269,16 @@ PlasmaCore.Dialog {
 
         PlasmaExtras.PlasmoidHeading {
             location: PlasmaExtras.PlasmoidHeading.Footer
-            Layout.topMargin: PlasmaCore.Units.smallSpacing
-            topPadding: PlasmaCore.Units.smallSpacing * 2
-            bottomPadding: PlasmaCore.Units.smallSpacing
+            Layout.topMargin: Kirigami.Units.smallSpacing
+            topPadding: Kirigami.Units.smallSpacing * 2
+            bottomPadding: Kirigami.Units.smallSpacing
 
             Layout.fillWidth: true
             RowLayout {
                 anchors.centerIn: parent
-                spacing: PlasmaCore.Units.largeSpacing
+                spacing: Kirigami.Units.gridUnit
 
-                PlasmaExtras.Heading {
+                Kirigami.Heading {
                     level: menuColumn.headingLabel
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus Shortcut:")
                     visible: panel.adaptiveOpacityEnabled

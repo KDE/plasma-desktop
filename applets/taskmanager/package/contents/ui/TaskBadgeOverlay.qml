@@ -5,8 +5,7 @@
 */
 
 import QtQuick 2.15
-
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     readonly property int iconWidthDelta: (icon.width - icon.paintedWidth) / 2
@@ -17,14 +16,14 @@ Item {
         anchors.fill: parent
 
         Rectangle {
-            readonly property int offset: Math.round(Math.max(PlasmaCore.Units.smallSpacing / 2, badgeMask.width / 32))
+            readonly property int offset: Math.round(Math.max(Kirigami.Units.smallSpacing / 2, badgeMask.width / 32))
             anchors.right: Qt.application.layoutDirection === Qt.RightToLeft ? undefined : parent.right
             anchors.left: Qt.application.layoutDirection === Qt.RightToLeft ? parent.left : undefined
             anchors.rightMargin: Qt.application.layoutDirection === Qt.RightToLeft ? 0 : -offset
             anchors.leftMargin: Qt.application.layoutDirection === Qt.RightToLeft ? -offset : 0
             y: shiftBadgeDown ? (icon.height/2) : 0
             Behavior on y {
-                NumberAnimation { duration: PlasmaCore.Units.longDuration }
+                NumberAnimation { duration: Kirigami.Units.longDuration }
             }
 
             visible: task.smartLauncherItem.countVisible
@@ -76,13 +75,13 @@ Item {
     }
 
     Badge {
-        readonly property int offset: Math.round(Math.max(PlasmaCore.Units.smallSpacing / 2, badgeMask.width / 32))
+        readonly property int offset: Math.round(Math.max(Kirigami.Units.smallSpacing / 2, badgeMask.width / 32))
         id: badgeRect
         anchors.right: Qt.application.layoutDirection === Qt.RightToLeft ? undefined : parent.right
         anchors.left: Qt.application.layoutDirection === Qt.RightToLeft ? parent.left : undefined
         y: offset + (shiftBadgeDown ? (icon.height/2) : 0)
         Behavior on y {
-            NumberAnimation { duration: PlasmaCore.Units.longDuration }
+            NumberAnimation { duration: Kirigami.Units.longDuration }
         }
         height: Math.round(parent.height * 0.4)
         visible: task.smartLauncherItem.countVisible

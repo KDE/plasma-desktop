@@ -12,7 +12,7 @@ import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.taskmanager 0.1 as TaskManager
 import org.kde.kwindowsystem 1.0
-import org.kde.kirigami 2.15 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.shell.panel 0.1 as Panel
 
 import org.kde.plasma.plasmoid 2.0
@@ -25,7 +25,7 @@ Item {
     property bool floatingPrefix: floatingPanelSvg.usedPrefix === "floating"
     readonly property bool verticalPanel: containment?.plasmoid?.formFactor === PlasmaCore.Types.Vertical
 
-    readonly property real spacingAtMinSize: Math.round(Math.max(1, (verticalPanel ? root.width : root.height) - PlasmaCore.Units.iconSizes.smallMedium)/2)
+    readonly property real spacingAtMinSize: Math.round(Math.max(1, (verticalPanel ? root.width : root.height) - Kirigami.Units.iconSizes.smallMedium)/2)
     PlasmaCore.FrameSvgItem {
         id: thickPanelSvg
         visible: false
@@ -88,13 +88,13 @@ Item {
     property double panelOpacity
     Behavior on floatingness {
         NumberAnimation {
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.OutCubic
         }
     }
     Behavior on panelOpacity {
         NumberAnimation {
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.OutCubic
         }
     }

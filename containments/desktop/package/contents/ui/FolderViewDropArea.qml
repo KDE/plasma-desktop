@@ -7,7 +7,7 @@
 import QtQuick 2.4
 
 import org.kde.draganddrop 2.0 as DragDrop
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 DragDrop.DropArea {
     id: dropArea
@@ -16,10 +16,10 @@ DragDrop.DropArea {
 
     function handleDragMove(folderView, pos) {
         // Trigger autoscroll.
-        folderView.scrollLeft = (pos.x < (PlasmaCore.Units.largeSpacing * 3));
-        folderView.scrollRight = (pos.x > width - (PlasmaCore.Units.largeSpacing * 3));
-        folderView.scrollUp = (pos.y < (PlasmaCore.Units.largeSpacing * 3));
-        folderView.scrollDown = (pos.y > height - (PlasmaCore.Units.largeSpacing * 3));
+        folderView.scrollLeft = (pos.x < (Kirigami.Units.gridUnit * 3));
+        folderView.scrollRight = (pos.x > width - (Kirigami.Units.gridUnit * 3));
+        folderView.scrollUp = (pos.y < (Kirigami.Units.gridUnit * 3));
+        folderView.scrollDown = (pos.y > height - (Kirigami.Units.gridUnit * 3));
 
         folderView.handleDragMove(pos.x, pos.y);
     }

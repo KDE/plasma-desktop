@@ -68,8 +68,8 @@ Item {
             id: imageColors
             source: root.containment.wallpaper
 
-            readonly property color backgroundColor: PlasmaCore.Theme.backgroundColor
-            readonly property color textColor: PlasmaCore.Theme.textColor
+            readonly property color backgroundColor: Kirigami.Theme.backgroundColor
+            readonly property color textColor: Kirigami.Theme.textColor
             property color colorFromPlugin: "transparent"
 
             Kirigami.Theme.inherit: false
@@ -277,14 +277,14 @@ Item {
                 target: internal.oldContainment
                 properties: "x"
                 to: internal.newContainment != null ? -root.width : 0
-                duration: PlasmaCore.Units.veryLongDuration
+                duration: Kirigami.Units.veryLongDuration
                 easing.type: Easing.InOutQuad
             }
             NumberAnimation {
                 target: internal.newContainment
                 properties: "x"
                 to: 0
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }

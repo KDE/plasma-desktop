@@ -7,9 +7,9 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Templates 2.15 as T
 import QtQml 2.15
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.private.kicker 0.1 as Kicker
+import org.kde.kirigami 2.20 as Kirigami
 
 BasePage {
     id: root
@@ -32,14 +32,14 @@ BasePage {
                 property: "x"
                 from: 0.5 * root.width
                 to: 0
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.OutCubic
             }
             NumberAnimation {
                 property: "opacity"
                 from: 0.0
                 to: 1.0
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.OutCubic
             }
         }
@@ -49,14 +49,14 @@ BasePage {
                 property: "x"
                 from: 0.5 * -root.width
                 to: 0
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.OutCubic
             }
             NumberAnimation {
                 property: "opacity"
                 from: 0.0
                 to: 1.0
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.OutCubic
             }
         }

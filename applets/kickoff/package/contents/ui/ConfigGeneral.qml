@@ -38,8 +38,8 @@ ColumnLayout {
 
             Kirigami.FormData.label: i18n("Icon:")
 
-            implicitWidth: previewFrame.width + PlasmaCore.Units.smallSpacing * 2
-            implicitHeight: previewFrame.height + PlasmaCore.Units.smallSpacing * 2
+            implicitWidth: previewFrame.width + Kirigami.Units.smallSpacing * 2
+            implicitHeight: previewFrame.height + Kirigami.Units.smallSpacing * 2
             hoverEnabled: true
 
             Accessible.name: i18nc("@action:button", "Change Application Launcher's icon")
@@ -62,12 +62,12 @@ ColumnLayout {
                 anchors.centerIn: parent
                 imagePath: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
                         ? "widgets/panel-background" : "widgets/background"
-                width: PlasmaCore.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
-                height: PlasmaCore.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
+                width: Kirigami.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
+                height: Kirigami.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
 
                 PlasmaCore.IconItem {
                     anchors.centerIn: parent
-                    width: PlasmaCore.Units.iconSizes.large
+                    width: Kirigami.Units.iconSizes.large
                     height: width
                     source: Tools.iconOrDefault(plasmoid.formFactor, cfg_icon)
                 }

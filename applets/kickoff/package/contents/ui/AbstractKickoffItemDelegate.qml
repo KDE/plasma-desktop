@@ -15,7 +15,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Templates 2.15 as T
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
-import org.kde.kirigami 2.16 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import "code/tools.js" as Tools
 
 T.ItemDelegate {
@@ -35,7 +35,7 @@ T.ItemDelegate {
     property bool isSearchResult: false
 
     readonly property bool isSeparator: model && (model.isSeparator === true)
-    property int separatorHeight: KickoffSingleton.lineSvg.horLineHeight + (2 * PlasmaCore.Units.smallSpacing)
+    property int separatorHeight: KickoffSingleton.lineSvg.horLineHeight + (2 * Kirigami.Units.smallSpacing)
     property int itemHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding)
 
     readonly property bool dragEnabled: enabled && !isCategoryListItem

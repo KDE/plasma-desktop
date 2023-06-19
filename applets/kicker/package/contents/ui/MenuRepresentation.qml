@@ -11,8 +11,7 @@ import QtQml 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 FocusScope {
     id: root
@@ -25,9 +24,9 @@ FocusScope {
 
     Layout.minimumHeight: Math.max(((rootModel.count - rootModel.separatorCount) * rootList.itemHeight)
         + (rootModel.separatorCount * rootList.separatorHeight)
-        + searchField.height + (2 * PlasmaCore.Units.smallSpacing), sideBar.margins.top + sideBar.margins.bottom
+        + searchField.height + (2 * Kirigami.Units.smallSpacing), sideBar.margins.top + sideBar.margins.bottom
         + favoriteApps.contentHeight + favoriteSystemActions.contentHeight + sidebarSeparator.height
-        + (4 * PlasmaCore.Units.smallSpacing))
+        + (4 * Kirigami.Units.smallSpacing))
     Layout.maximumHeight: Layout.minimumHeight
 
     signal appendSearchText(string text)
@@ -46,7 +45,7 @@ FocusScope {
 
         height: parent.height
 
-        spacing: PlasmaCore.Units.smallSpacing
+        spacing: Kirigami.Units.smallSpacing
 
         LayoutMirroring.enabled: ((plasmoid.location === PlasmaCore.Types.RightEdge)
             || (Qt.application.layoutDirection === Qt.RightToLeft && plasmoid.location !== PlasmaCore.Types.LeftEdge))
@@ -58,7 +57,7 @@ FocusScope {
 
             width: (globalFavorites && systemFavorites
                 && (globalFavorites.count + systemFavorites.count)
-                ? PlasmaCore.Units.iconSizes.medium + margins.left + margins.right : 0)
+                ? Kirigami.Units.iconSizes.medium + margins.left + margins.right : 0)
             height: parent.height
 
             imagePath: "widgets/frame"
@@ -71,7 +70,7 @@ FocusScope {
                 anchors.topMargin: sideBar.margins.top
 
                 height: (sideBar.height - sideBar.margins.top - sideBar.margins.bottom
-                    - favoriteSystemActions.height - sidebarSeparator.height - (4 * PlasmaCore.Units.smallSpacing))
+                    - favoriteSystemActions.height - sidebarSeparator.height - (4 * Kirigami.Units.smallSpacing))
 
                 model: globalFavorites
 
@@ -95,7 +94,7 @@ FocusScope {
                 Binding {
                     target: globalFavorites
                     property: "iconSize"
-                    value: PlasmaCore.Units.iconSizes.medium
+                    value: Kirigami.Units.iconSizes.medium
                     restoreMode: Binding.RestoreBinding
                 }
             }
@@ -104,10 +103,10 @@ FocusScope {
                 id: sidebarSeparator
 
                 anchors.bottom: favoriteSystemActions.top
-                anchors.bottomMargin: (2 * PlasmaCore.Units.smallSpacing)
+                anchors.bottomMargin: (2 * Kirigami.Units.smallSpacing)
                 anchors.horizontalCenter: parent.horizontalCenter
 
-                width: PlasmaCore.Units.iconSizes.medium
+                width: Kirigami.Units.iconSizes.medium
                 height: lineSvg.horLineHeight
 
                 visible: (favoriteApps.model && favoriteApps.model.count
@@ -129,7 +128,7 @@ FocusScope {
 
                     PropertyChanges {
                         target: sidebarSeparator
-                        anchors.topMargin: (2 * PlasmaCore.Units.smallSpacing)
+                        anchors.topMargin: (2 * Kirigami.Units.smallSpacing)
                         anchors.bottomMargin: undefined
                     }
                 }]
@@ -300,9 +299,9 @@ FocusScope {
 
         anchors.bottom: mainRow.bottom
         anchors.left: parent.left
-        anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : PlasmaCore.Units.smallSpacing)
+        anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : Kirigami.Units.smallSpacing)
 
-        readonly property real defaultWidth: PlasmaCore.Units.gridUnit * 14
+        readonly property real defaultWidth: Kirigami.Units.gridUnit * 14
         width: (runnerColumnsRepeater.count !== 0 ? runnerColumnsRepeater.itemAt(0).width
                                                   : (rootList.visible ? rootList.width : defaultWidth))
 
@@ -339,7 +338,7 @@ FocusScope {
 
             PropertyChanges {
                 target: searchField
-                anchors.leftMargin: sideBar.width + mainRow.spacing + PlasmaCore.Units.smallSpacing
+                anchors.leftMargin: sideBar.width + mainRow.spacing + Kirigami.Units.smallSpacing
                 anchors.rightMargin: undefined
             }
         },
@@ -359,7 +358,7 @@ FocusScope {
             PropertyChanges {
                 target: searchField
                 anchors.leftMargin: undefined
-                anchors.rightMargin: sideBar.width + mainRow.spacing + PlasmaCore.Units.smallSpacing
+                anchors.rightMargin: sideBar.width + mainRow.spacing + Kirigami.Units.smallSpacing
             }
         }]
 

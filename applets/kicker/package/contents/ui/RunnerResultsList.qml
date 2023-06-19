@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 FocusScope {
     width: runnerMatches.width + vertLine.width + vertLine.anchors.leftMargin + runnerMatches.anchors.leftMargin
@@ -27,7 +28,7 @@ FocusScope {
         id: vertLine
 
         anchors.left: parent.left
-        anchors.leftMargin: (index > 0 ) ? PlasmaCore.Units.smallSpacing : 0
+        anchors.leftMargin: (index > 0 ) ? Kirigami.Units.smallSpacing : 0
 
         width: (index > 0 ) ? lineSvg.vertLineWidth : 0
         height: parent.height
@@ -44,7 +45,7 @@ FocusScope {
         anchors.left: vertLine.right
 
         width: runnerMatches.width
-        height: runnerMatches.itemHeight + PlasmaCore.Units.smallSpacing
+        height: runnerMatches.itemHeight + Kirigami.Units.smallSpacing
 
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVTop
@@ -62,9 +63,9 @@ FocusScope {
 
         anchors.top: plasmoid.configuration.alignResultsToBottom ? undefined : header.bottom
         anchors.bottom: plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
-        anchors.bottomMargin: (index == 0 && anchors.bottom !== undefined) ? searchField.height + (2 * PlasmaCore.Units.smallSpacing) : undefined
+        anchors.bottomMargin: (index == 0 && anchors.bottom !== undefined) ? searchField.height + (2 * Kirigami.Units.smallSpacing) : undefined
         anchors.left: vertLine.right
-        anchors.leftMargin: (index > 0) ? PlasmaCore.Units.smallSpacing : 0
+        anchors.leftMargin: (index > 0) ? Kirigami.Units.smallSpacing : 0
 
         height: {
             var listHeight = (((index == 0)

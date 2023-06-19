@@ -14,7 +14,7 @@ import QtQml 2.15
 import QtQuick.Layouts 1.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
-import org.kde.kirigami 2.16 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 AbstractKickoffItemDelegate {
     id: root
@@ -26,11 +26,11 @@ AbstractKickoffItemDelegate {
     rightPadding: KickoffSingleton.listItemMetrics.margins.right
     + (!mirrored ? KickoffSingleton.fontMetrics.descent : 0)
     // Otherwise it's *too* compact :)
-    topPadding: compact ? PlasmaCore.Units.mediumSpacing : PlasmaCore.Units.smallSpacing
-    bottomPadding: compact ? PlasmaCore.Units.mediumSpacing : PlasmaCore.Units.smallSpacing
+    topPadding: compact ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
+    bottomPadding: compact ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
 
-    icon.width: compact || root.isCategoryListItem ? PlasmaCore.Units.iconSizes.smallMedium : PlasmaCore.Units.iconSizes.medium
-    icon.height: compact || root.isCategoryListItem ? PlasmaCore.Units.iconSizes.smallMedium : PlasmaCore.Units.iconSizes.medium
+    icon.width: compact || root.isCategoryListItem ? Kirigami.Units.iconSizes.smallMedium : Kirigami.Units.iconSizes.medium
+    icon.height: compact || root.isCategoryListItem ? Kirigami.Units.iconSizes.smallMedium : Kirigami.Units.iconSizes.medium
 
     labelTruncated: label.truncated
     descriptionTruncated: descriptionLabel.truncated
@@ -61,7 +61,7 @@ AbstractKickoffItemDelegate {
             rows: root.compact ? 1 : 2
             columns: root.compact ? 2 : 1
             rowSpacing: 0
-            columnSpacing: Kirigami.Units.largeSpacing
+            columnSpacing: Kirigami.Units.gridUnit
 
             PC3.Label {
                 id: label
@@ -92,7 +92,7 @@ AbstractKickoffItemDelegate {
                 enabled: false
                 text: root.description
                 textFormat: Text.PlainText
-                font: PlasmaCore.Theme.smallestFont
+                font: Kirigami.Theme.smallFont
                 elide: Text.ElideRight
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: root.compact ? Text.AlignRight : Text.AlignLeft

@@ -12,10 +12,9 @@ import QtQml 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Templates 2.15 as T
 import Qt5Compat.GraphicalEffects
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.coreaddons 1.0 as KCoreAddons
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
@@ -63,10 +62,10 @@ PlasmaExtras.PlasmoidHeading {
             // FIXME: Not using text with display because of RoundButton bugs in plasma-framework
             // See https://bugs.kde.org/show_bug.cgi?id=440022
             Accessible.name: i18n("Open user settings")
-            leftPadding: PlasmaCore.Units.devicePixelRatio
-            rightPadding: PlasmaCore.Units.devicePixelRatio
-            topPadding: PlasmaCore.Units.devicePixelRatio
-            bottomPadding: PlasmaCore.Units.devicePixelRatio
+            leftPadding: 1
+            rightPadding: 1
+            topPadding: 1
+            bottomPadding: 1
             contentItem: Kirigami.Avatar {
                 source: kuser.faceIconUrl
                 name: kuser.fullName
@@ -74,12 +73,12 @@ PlasmaExtras.PlasmoidHeading {
             Rectangle {
                 parent: avatar.background
                 anchors.fill: avatar.background
-                anchors.margins: -PlasmaCore.Units.devicePixelRatio
+                anchors.margins: -1
                 z: 1
                 radius: height/2
                 color: "transparent"
-                border.width: avatar.visualFocus ? PlasmaCore.Units.devicePixelRatio * 2 : 0
-                border.color: PlasmaCore.Theme.buttonFocusColor
+                border.width: avatar.visualFocus ? 2 : 0
+                border.color: Kirigami.Theme.buttonFocusColor
             }
             PC3.ToolTip.text: Accessible.name
             PC3.ToolTip.visible: hovered
@@ -107,11 +106,11 @@ PlasmaExtras.PlasmoidHeading {
             Layout.fillHeight: true
             Layout.fillWidth: true
 
-            PlasmaExtras.Heading {
+            Kirigami.Heading {
                 id: nameLabel
                 anchors.fill: parent
                 opacity: parent.containsMouse ? 0 : 1
-                color: PlasmaCore.Theme.textColor
+                color: Kirigami.Theme.textColor
                 level: 4
                 text: kuser.fullName
                 elide: Text.ElideRight
@@ -120,18 +119,18 @@ PlasmaExtras.PlasmoidHeading {
 
                 Behavior on opacity {
                     NumberAnimation {
-                        duration: PlasmaCore.Units.longDuration
+                        duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
                 }
             }
 
-            PlasmaExtras.Heading {
+            Kirigami.Heading {
                 id: infoLabel
                 anchors.fill: parent
                 level: 5
                 opacity: parent.containsMouse ? 1 : 0
-                color: PlasmaCore.Theme.textColor
+                color: Kirigami.Theme.textColor
                 text: kuser.os !== "" ? `${kuser.loginName}@${kuser.host} (${kuser.os})` : `${kuser.loginName}@${kuser.host}`
                 elide: Text.ElideRight
                 horizontalAlignment: Text.AlignLeft
@@ -139,7 +138,7 @@ PlasmaExtras.PlasmoidHeading {
 
                 Behavior on opacity {
                     NumberAnimation {
-                        duration: PlasmaCore.Units.longDuration
+                        duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
                 }

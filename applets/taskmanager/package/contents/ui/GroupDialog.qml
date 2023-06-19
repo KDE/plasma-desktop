@@ -14,6 +14,7 @@ import QtQuick.Window 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.draganddrop 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 import "code/layout.js" as LayoutManager
 
@@ -84,11 +85,11 @@ PlasmaCore.Dialog {
 
                 readonly property real maxWidth: groupFilter.maxTextWidth
                                                 + LayoutManager.horizontalMargins()
-                                                + PlasmaCore.Units.iconSizes.medium
+                                                + Kirigami.Units.iconSizes.medium
                                                 + 2 * (LayoutManager.labelMargin + LayoutManager.iconMargin)
                                                 + scrollView.leftPadding + scrollView.rightPadding
                 // Use groupFilter.count because sometimes count is not updated in time (BUG 446105)
-                readonly property real maxHeight: groupFilter.count * (LayoutManager.verticalMargins() + Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.medium))
+                readonly property real maxHeight: groupFilter.count * (LayoutManager.verticalMargins() + Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium))
 
                 model: DelegateModel {
                     id: groupFilter

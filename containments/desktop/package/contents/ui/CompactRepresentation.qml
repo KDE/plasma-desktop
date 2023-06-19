@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.draganddrop 2.0 as DragDrop
+import org.kde.kirigami 2.20 as Kirigami
 
 DragDrop.DropArea {
     readonly property bool inPanel: [
@@ -18,8 +19,8 @@ DragDrop.DropArea {
         PlasmaCore.Types.BottomEdge,
     ].includes(plasmoid.location)
 
-    Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
-    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
+    Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
+    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.iconSizes.sizeForLabels)
 
     property Item folderView: null
 

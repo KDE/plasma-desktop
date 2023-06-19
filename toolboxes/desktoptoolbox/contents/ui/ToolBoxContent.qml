@@ -31,14 +31,14 @@ MouseArea {
 
     Behavior on rotation {
         NumberAnimation {
-            duration: PlasmaCore.Units.shortDuration;
+            duration: Kirigami.Units.shortDuration;
             easing.type: Easing.InOutExpo;
         }
         enabled: visible
     }
     Behavior on x {
         NumberAnimation {
-            duration: PlasmaCore.Units.shortDuration;
+            duration: Kirigami.Units.shortDuration;
             easing.type: Easing.InOutExpo;
         }
         enabled: visible
@@ -46,7 +46,7 @@ MouseArea {
     }
     Behavior on y {
         NumberAnimation {
-            duration: PlasmaCore.Units.shortDuration;
+            duration: Kirigami.Units.shortDuration;
             easing.type: Easing.InOutExpo;
         }
         enabled: visible
@@ -79,24 +79,24 @@ MouseArea {
         pressedX = toolBoxContent.x
         pressedY = toolBoxContent.y
     }
-    onPositionChanged: {
+    onPositionChanged: mouse => {
         if (pressed && (Math.abs(toolBoxContent.x - pressedX) > iconSize ||
             Math.abs(toolBoxContent.y - pressedY) > iconSize)) {
             dragging = true;
         }
 
         // Center snapping X
-        if (snapX && Math.abs(snapStartX - mouse.x) > PlasmaCore.Units.gridUnit) {
+        if (snapX && Math.abs(snapStartX - mouse.x) > Kirigami.Units.gridUnit) {
             toolBoxContent.anchors.horizontalCenter = undefined;
             snapX = false;
-        } else if (!snapX && Math.abs(main.width/2 - (toolBoxContent.x + toolBoxContent.width/2)) < PlasmaCore.Units.gridUnit) {
+        } else if (!snapX && Math.abs(main.width/2 - (toolBoxContent.x + toolBoxContent.width/2)) < Kirigami.Units.gridUnit) {
             toolBoxContent.anchors.horizontalCenter = main.horizontalCenter;
             snapStartX = mouse.x;
             snapX = true;
         }
     }
 
-    onReleased: {
+    onReleased: mouse => {
         toolBoxContent.anchors.horizontalCenter = undefined;
         toolBoxContent.anchors.verticalCenter = undefined;
         snapX = false;
@@ -132,14 +132,14 @@ MouseArea {
 
         //top
         if (y + height / 2 < container.height / 2) {
-            if (Math.abs(container.width/2 - (x + width/2)) < PlasmaCore.Units.gridUnit) {
+            if (Math.abs(container.width/2 - (x + width/2)) < Kirigami.Units.gridUnit) {
                 toolBoxContent.state = "topcenter";
             } else {
                 toolBoxContent.state = "top";
             }
         //bottom
         } else {
-            if (Math.abs(container.width/2 - (x + height/2)) < PlasmaCore.Units.gridUnit) {
+            if (Math.abs(container.width/2 - (x + height/2)) < Kirigami.Units.gridUnit) {
                 toolBoxContent.state = "bottomcenter";
             } else {
                 toolBoxContent.state = "bottom";
@@ -170,14 +170,14 @@ MouseArea {
             NumberAnimation {
                 target: toolBoxContent
                 property: "opacity"
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.OutCubic
                 to: 1
             }
             NumberAnimation {
                 target: translator
                 property: "y"
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.OutCubic
                 from: state == "top" || state == "topcenter" ? -height
                     : state == "bottom" || state == "bottomcenter" ? height
@@ -194,14 +194,14 @@ MouseArea {
             NumberAnimation {
                 target: toolBoxContent
                 property: "opacity"
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InCubic
                 to: 0
             }
             NumberAnimation {
                 target: translator
                 property: "y"
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InCubic
                 to: state == "top" || state == "topcenter" ? -toolBoxContent.height
                     : state == "bottom" || state == "bottomcenter" ? toolBoxContent.height
@@ -233,7 +233,7 @@ MouseArea {
 
         Grid {
             id: buttonLayout
-            rowSpacing: PlasmaCore.Units.smallSpacing
+            rowSpacing: Kirigami.Units.smallSpacing
             columnSpacing: rowSpacing
 
             // Show buttons in two lines if screen space is limited

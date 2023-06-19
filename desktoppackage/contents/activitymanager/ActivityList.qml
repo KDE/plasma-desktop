@@ -6,8 +6,7 @@
 */
 
 import QtQuick 2.2
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.activities 0.1 as Activities
 
 import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
@@ -98,7 +97,7 @@ Flickable {
 
         // width: root.width - (root.width % 10)
         width: root.itemsWidth
-        spacing: PlasmaCore.Units.smallSpacing * 2
+        spacing: Kirigami.Units.smallSpacing * 2
 
         // Running activities
 
@@ -120,7 +119,7 @@ Flickable {
                 background   : model.background
                 current      : model.isCurrent
                 hasWindows   : model.hasWindows
-                innerPadding : 2 * PlasmaCore.Units.smallSpacing
+                innerPadding : 2 * Kirigami.Units.smallSpacing
                 stoppable    : activitiesList.count > 1
 
                 onClicked    : {
@@ -134,10 +133,10 @@ Flickable {
         Item {
             // spacer
             width  : parent.width
-            height : PlasmaCore.Units.largeSpacing
+            height : Kirigami.Units.gridUnit
         }
 
-        PlasmaExtras.Heading {
+        Kirigami.Heading {
             id: stoppedActivitiesHeading
 
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Stopped activities:")
@@ -161,7 +160,7 @@ Flickable {
                 activityId   : model.id
                 title        : model.name
                 icon         : model.iconSource
-                innerPadding : 2 * PlasmaCore.Units.smallSpacing
+                innerPadding : 2 * Kirigami.Units.smallSpacing
 
                 onClicked: {
                     ActivitySwitcher.Backend.setCurrentActivity(model.id)
@@ -172,7 +171,7 @@ Flickable {
         Item {
             // spacer
             width  : parent.width
-            height : PlasmaCore.Units.largeSpacing * 2
+            height : Kirigami.Units.gridUnit * 2
 
             visible: stoppedActivitiesHeading.visible
         }
@@ -181,7 +180,7 @@ Flickable {
             NumberAnimation {
                 properties: "x"
                 from: -100
-                duration: PlasmaCore.Units.shortDuration
+                duration: Kirigami.Units.shortDuration
             }
         }
 
@@ -189,7 +188,7 @@ Flickable {
             NumberAnimation {
                 id: animation
                 properties: "y"
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
             }
         }
     }

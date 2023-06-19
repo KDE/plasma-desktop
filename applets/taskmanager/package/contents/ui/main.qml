@@ -12,6 +12,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.workspace.trianglemousefilter 1.0
 
@@ -58,13 +59,13 @@ PlasmoidItem {
     Layout.fillHeight: !tasks.vertical ? true : plasmoid.configuration.fill
     Layout.minimumWidth: {
         if (shouldShirnkToZero) {
-            return PlasmaCore.Units.gridUnit; // For edit mode
+            return Kirigami.Units.gridUnit; // For edit mode
         }
         return tasks.vertical ? 0 : LayoutManager.preferredMinWidth();
     }
     Layout.minimumHeight: {
         if (shouldShirnkToZero) {
-            return PlasmaCore.Units.gridUnit; // For edit mode
+            return Kirigami.Units.gridUnit; // For edit mode
         }
         return !tasks.vertical ? 0 : LayoutManager.preferredMinHeight();
     }
@@ -75,7 +76,7 @@ PlasmoidItem {
             return 0.01;
         }
         if (tasks.vertical) {
-            return PlasmaCore.Units.gridUnit * 10;
+            return Kirigami.Units.gridUnit * 10;
         }
         return (LayoutManager.logicalTaskCount() * LayoutManager.preferredMaxWidth()) / LayoutManager.calculateStripes();
     }
@@ -86,7 +87,7 @@ PlasmoidItem {
         if (tasks.vertical) {
             return (LayoutManager.logicalTaskCount() * LayoutManager.preferredMaxHeight()) / LayoutManager.calculateStripes();
         }
-        return PlasmaCore.Units.gridUnit * 2;
+        return Kirigami.Units.gridUnit * 2;
     }
 //END TODO
 
@@ -228,7 +229,7 @@ PlasmoidItem {
         Timer {
             id: timer
 
-            interval: PlasmaCore.Units.longDuration
+            interval: Kirigami.Units.longDuration
             running: true
 
             onTriggered: {

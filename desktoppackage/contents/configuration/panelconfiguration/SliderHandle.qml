@@ -10,7 +10,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.configuration 2.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaCore.SvgItem {
     id: root
@@ -120,10 +120,10 @@ PlasmaCore.SvgItem {
         }
         anchors {
             fill: parent
-            leftMargin: (dialogRoot.vertical) ? 0 : -PlasmaCore.Units.gridUnit
-            rightMargin: (dialogRoot.vertical) ? 0 : -PlasmaCore.Units.gridUnit
-            topMargin: (dialogRoot.vertical) ? -PlasmaCore.Units.gridUnit : 0
-            bottomMargin: (dialogRoot.vertical) ? -PlasmaCore.Units.gridUnit : 0
+            leftMargin: (dialogRoot.vertical) ? 0 : -Kirigami.Units.gridUnit
+            rightMargin: (dialogRoot.vertical) ? 0 : -Kirigami.Units.gridUnit
+            topMargin: (dialogRoot.vertical) ? -Kirigami.Units.gridUnit : 0
+            bottomMargin: (dialogRoot.vertical) ? -Kirigami.Units.gridUnit : 0
         }
 
         readonly property int keyboardMoveStepSize: Math.ceil((root.maximumPosition - root.minimumPosition) / 20)

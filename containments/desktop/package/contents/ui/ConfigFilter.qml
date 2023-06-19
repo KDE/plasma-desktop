@@ -11,7 +11,6 @@ import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.core 2.1 as PlasmaCore
-
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
 ColumnLayout {
@@ -161,13 +160,13 @@ ColumnLayout {
 
             QQC1.TableViewColumn {
                 role: "decoration"
-                width: PlasmaCore.Units.iconSizes.small
+                width: Kirigami.Units.iconSizes.small
                 resizable: false
                 movable: false
 
                 delegate: PlasmaCore.IconItem {
-                    width: PlasmaCore.Units.iconSizes.small
-                    height: PlasmaCore.Units.iconSizes.small
+                    width: Kirigami.Units.iconSizes.small
+                    height: Kirigami.Units.iconSizes.small
                     animated: false // TableView re-uses delegates, avoid animation when sorting/filtering.
                     source: styleData.value
                 }
@@ -177,7 +176,7 @@ ColumnLayout {
                 id: nameColumn
                 role: "name"
                 title: i18n("File type")
-                width: PlasmaCore.Units.gridUnit * 10 // Assume somewhat reasonable default for mime type name.
+                width: Kirigami.Units.gridUnit * 10 // Assume somewhat reasonable default for mime type name.
                 onWidthChanged: mimeTypesView.adjustColumns()
                 movable: false
             }

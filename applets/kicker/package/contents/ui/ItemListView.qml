@@ -10,11 +10,12 @@ import QtQuick.Controls
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 FocusScope {
     id: itemList
 
-    property real minimumWidth: PlasmaCore.Units.gridUnit * 14
+    property real minimumWidth: Kirigami.Units.gridUnit * 14
     property real maximumWidth: minimumWidth * 2
 
     width: minimumWidth
@@ -28,10 +29,10 @@ FocusScope {
     property QtObject dialog: null
     property QtObject childDialog: null
     property bool iconsEnabled: false
-    property int itemHeight: Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, PlasmaCore.Units.iconSizes.small)
+    property int itemHeight: Math.ceil((Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.small)
         + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
         listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
-    property int separatorHeight: model.sorted === true ? 0 : lineSvg.horLineHeight + (2 * PlasmaCore.Units.smallSpacing)
+    property int separatorHeight: model.sorted === true ? 0 : lineSvg.horLineHeight + (2 * Kirigami.Units.smallSpacing)
 
     property alias currentIndex: listView.currentIndex
     property alias currentItem: listView.currentItem

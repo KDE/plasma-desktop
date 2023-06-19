@@ -13,19 +13,19 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.draganddrop 2.0 as DND
 
 import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
-
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.activities 0.1 as Activities
 
 PlasmoidItem {
     id: root
 
-    width: PlasmaCore.Units.iconSizes.large
-    height: PlasmaCore.Units.iconSizes.large
+    width: Kirigami.Units.iconSizes.large
+    height: Kirigami.Units.iconSizes.large
 
     Layout.maximumWidth: Infinity
     Layout.maximumHeight: Infinity
 
-    Layout.preferredWidth : icon.width + PlasmaCore.Units.smallSpacing + (root.showActivityName ? name.implicitWidth : 0)
+    Layout.preferredWidth : icon.width + Kirigami.Units.smallSpacing + (root.showActivityName ? name.implicitWidth : 0)
 
     Layout.minimumWidth: 0
     Layout.minimumHeight: 0
@@ -103,7 +103,7 @@ PlasmoidItem {
 
             anchors {
                 left: icon.right
-                leftMargin: PlasmaCore.Units.smallSpacing
+                leftMargin: Kirigami.Units.smallSpacing
             }
             height: parent.height
             width: implicitWidth

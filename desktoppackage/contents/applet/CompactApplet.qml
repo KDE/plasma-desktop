@@ -10,6 +10,7 @@ import QtQuick.Window 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaCore.ToolTipArea {
     id: root
@@ -135,7 +136,7 @@ PlasmaCore.ToolTipArea {
         opacity: plasmoidItem && plasmoidItem.expanded ? 1 : 0
         Behavior on opacity {
             NumberAnimation {
-                duration: PlasmaCore.Units.shortDuration
+                duration: Kirigami.Units.shortDuration
                 easing.type: Easing.InOutQuad
             }
         }
@@ -214,7 +215,7 @@ PlasmaCore.ToolTipArea {
                         return root.fullRepresentation.implicitWidth;
                     }
                 }
-                return PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 35;
+                return Kirigami.Units.iconSizes.sizeForLabels * 35;
             }
             height: {
                 if (root.fullRepresentation !== null) {
@@ -224,7 +225,7 @@ PlasmaCore.ToolTipArea {
                         return fullRepresentation.implicitHeight;
                     }
                 }
-                return PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * 25;
+                return Kirigami.Units.iconSizes.sizeForLabels * 25;
             }
 
             onActiveFocusChanged: {
@@ -248,8 +249,8 @@ PlasmaCore.ToolTipArea {
                     rightMargin: Plasmoid.location === PlasmaCore.Types.LeftEdge ? undefined : -dialog.margins.right
                     bottomMargin: Plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : -dialog.margins.bottom
                 }
-                height: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? PlasmaCore.Units.devicePixelRatio : undefined
-                width: (Plasmoid.location === PlasmaCore.Types.LeftEdge || Plasmoid.location === PlasmaCore.Types.RightEdge) ? PlasmaCore.Units.devicePixelRatio : undefined
+                height: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? 1 : undefined
+                width: (Plasmoid.location === PlasmaCore.Types.LeftEdge || Plasmoid.location === PlasmaCore.Types.RightEdge) ? 1 : undefined
                 z: 999 /* Draw the line on top of the applet */
                 elementId: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
                 svg: PlasmaCore.Svg {

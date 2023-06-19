@@ -13,13 +13,13 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.configuration 2.0
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     id: root
     // Do not use Layout's implicitWidth/implicitHeight as they are updated too late (BUG 443294)
-    implicitWidth: Math.max(addWidgetsButton.implicitWidth, addSpacerButton.implicitWidth, settingsButton.implicitWidth, spinBoxLabel.implicitWidth, spinBox.implicitWidth) + PlasmaCore.Units.smallSpacing * 2
-    implicitHeight: Math.max(addWidgetsButton.implicitHeight, addSpacerButton.implicitHeight, settingsButton.implicitHeight, spinBoxLabel.implicitHeight, spinBox.implicitHeight) + PlasmaCore.Units.smallSpacing * 5
+    implicitWidth: Math.max(addWidgetsButton.implicitWidth, addSpacerButton.implicitWidth, settingsButton.implicitWidth, spinBoxLabel.implicitWidth, spinBox.implicitWidth) + Kirigami.Units.smallSpacing * 2
+    implicitHeight: Math.max(addWidgetsButton.implicitHeight, addSpacerButton.implicitHeight, settingsButton.implicitHeight, spinBoxLabel.implicitHeight, spinBox.implicitHeight) + Kirigami.Units.smallSpacing * 5
 
     readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…")
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
@@ -38,7 +38,7 @@ Item {
         property real toolbarWidth: 0.0
         property real toolbarHeight: 0.0
 
-        onPressed: {
+        onPressed: mouse => {
             dialogRoot.closeContextMenu();
             lastX = mouse.screenX
             lastY = mouse.screenY
@@ -75,7 +75,8 @@ Item {
                 toolbarHeight = root.height;
             }
         }
-        onPositionChanged: {
+        
+        onPositionChanged: mouse => {
             panel.screenToFollow = mouse.screen;
 
             var newLocation = panel.location;
@@ -146,6 +147,7 @@ Item {
             lastX = mouse.screenX
             lastY = mouse.screenY
         }
+        
         onReleased: {
             startDragOffset = 0.0;
             toolbarWidth = toolbarHeight = 0.0;
@@ -179,8 +181,8 @@ Item {
         anchors.margins: rowSpacing
         anchors.topMargin: plasmoid.formFactor === PlasmaCore.Types.Vertical ? rowSpacing + closeButton.height : rowSpacing
 
-        rowSpacing: PlasmaCore.Units.smallSpacing
-        columnSpacing: PlasmaCore.Units.smallSpacing
+        rowSpacing: Kirigami.Units.smallSpacing
+        columnSpacing: Kirigami.Units.smallSpacing
 
         PlasmaComponents3.Button {
             id: addWidgetsButton
@@ -210,8 +212,8 @@ Item {
         rows: dialogRoot.vertical ? 4 : 1
         anchors.centerIn: parent
 
-        rowSpacing: PlasmaCore.Units.smallSpacing
-        columnSpacing: PlasmaCore.Units.smallSpacing
+        rowSpacing: Kirigami.Units.smallSpacing
+        columnSpacing: Kirigami.Units.smallSpacing
 
         PlasmaComponents3.Label {
             Layout.fillWidth: true
@@ -263,7 +265,7 @@ Item {
 
             PlasmaExtras.Highlight {
                 anchors.centerIn: parent
-                width: Math.min(root.implicitWidth, parent.contentWidth + PlasmaCore.Units.largeSpacing)
+                width: Math.min(root.implicitWidth, parent.contentWidth + Kirigami.Units.gridUnit)
                 height: spinBox.implicitHeight
 
                 visible: parent.activeFocus
@@ -271,8 +273,8 @@ Item {
             }
         }
         Item {
-            Layout.preferredWidth: dialogRoot.vertical ? 0 : PlasmaCore.Units.gridUnit * 8
-            Layout.preferredHeight: dialogRoot.vertical ? PlasmaCore.Units.gridUnit * 8 : 0
+            Layout.preferredWidth: dialogRoot.vertical ? 0 : Kirigami.Units.gridUnit * 8
+            Layout.preferredHeight: dialogRoot.vertical ? Kirigami.Units.gridUnit * 8 : 0
         }
         PlasmaComponents3.Label {
             id: spinBoxLabel
@@ -319,7 +321,7 @@ Item {
                 imagePath: "widgets/panel-background"
             }
             DragHandler {
-                property int magnitude: PlasmaCore.Units.gridUnit
+                property int magnitude: Kirigami.Units.gridUnit
                 target: null
                 xAxis.enabled: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge
                 yAxis.enabled: panel.location == PlasmaCore.Types.TopEdge || panel.location == PlasmaCore.Types.BottomEdge
@@ -372,8 +374,8 @@ Item {
 
         anchors.margins: rowSpacing
 
-        rowSpacing: PlasmaCore.Units.smallSpacing
-        columnSpacing: PlasmaCore.Units.smallSpacing
+        rowSpacing: Kirigami.Units.smallSpacing
+        columnSpacing: Kirigami.Units.smallSpacing
 
         PlasmaComponents3.Button {
             id: settingsButton

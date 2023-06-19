@@ -9,10 +9,10 @@ import QtQuick.Layouts 1.15
 import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 import "code/FolderTools.js" as FolderTools
@@ -133,7 +133,7 @@ PlasmaComponents.ScrollView {
                     && gridView.effectiveLayoutDirection === Qt.RightToLeft) {
                     _x -= root.PlasmaComponents.ScrollBar.vertical.width;
                 }
-                _y = pos.y + PlasmaCore.Units.smallSpacing - editor.topPadding;
+                _y = pos.y + Kirigami.Units.smallSpacing - editor.topPadding;
             }
             return [ _x, _y ];
         }
@@ -142,8 +142,8 @@ PlasmaComponents.ScrollView {
             if (!targetItem) {
                 return 0;
             }
-            return(targetItem.label.parent.width - PlasmaCore.Units.smallSpacing +
-                (root.useListViewMode ? -(editor.leftPadding + editor.rightPadding + PlasmaCore.Units.smallSpacing) : 0) +
+            return(targetItem.label.parent.width - Kirigami.Units.smallSpacing +
+                (root.useListViewMode ? -(editor.leftPadding + editor.rightPadding + Kirigami.Units.smallSpacing) : 0) +
                 (addWidthVerticalScroller ? root.PlasmaComponents.ScrollBar.vertical.width : 0));
         }
 
@@ -156,7 +156,7 @@ PlasmaComponents.ScrollView {
                 _height = targetItem.labelArea.height + editor.topPadding + editor.bottomPadding;
             } else {
                 var realHeight = contentHeight + editor.topPadding + editor.bottomPadding;
-                var maxHeight = PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * (plasmoid.configuration.textLines + 1) + editor.topPadding + editor.bottomPadding;
+                var maxHeight = Kirigami.Units.iconSizes.sizeForLabels * (plasmoid.configuration.textLines + 1) + editor.topPadding + editor.bottomPadding;
                 _height = Math.min(realHeight, maxHeight);
             }
             return _height + (addWidthHoriozontalScroller ? root.PlasmaComponents.ScrollBar.horizontal.height : 0);

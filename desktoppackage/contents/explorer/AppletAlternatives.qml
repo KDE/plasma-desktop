@@ -11,6 +11,7 @@ import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.private.shell 2.0
 
@@ -29,8 +30,8 @@ PlasmaCore.Dialog {
 
         signal configurationChanged
 
-        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 20
-        Layout.minimumHeight: Math.min(Screen.height - PlasmaCore.Units.gridUnit * 10, heading.height + buttonsRow.height + mainList.contentHeight + PlasmaCore.Units.gridUnit)
+        Layout.minimumWidth: Kirigami.Units.gridUnit * 20
+        Layout.minimumHeight: Math.min(Screen.height - Kirigami.Units.gridUnit * 10, heading.height + buttonsRow.height + mainList.contentHeight + Kirigami.Units.gridUnit)
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
@@ -58,7 +59,7 @@ PlasmaCore.Dialog {
         }
 
         PlasmaExtras.PlasmoidHeading {
-            PlasmaExtras.Heading {
+            Kirigami.Heading {
                 id: heading
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternative Widgets");
             }
@@ -97,7 +98,7 @@ PlasmaCore.Dialog {
                 KeyNavigation.down: switchButton.enabled ? switchButton : cancelButton
 
                 delegate: PlasmaExtras.ListItem {
-                    implicitHeight: contentLayout.implicitHeight + PlasmaCore.Units.smallSpacing * 2
+                    implicitHeight: contentLayout.implicitHeight + Kirigami.Units.smallSpacing * 2
 
                     onClicked: mainList.currentIndex = index
 
@@ -119,11 +120,11 @@ PlasmaCore.Dialog {
 
                     contentItem: RowLayout {
                         id: contentLayout
-                        spacing: PlasmaCore.Units.largeSpacing
+                        spacing: Kirigami.Units.gridUnit
 
                         PlasmaCore.IconItem {
-                            implicitWidth: PlasmaCore.Units.iconSizes.huge
-                            implicitHeight: PlasmaCore.Units.iconSizes.huge
+                            implicitWidth: Kirigami.Units.iconSizes.huge
+                            implicitHeight: Kirigami.Units.iconSizes.huge
                             source: model.decoration
                         }
 
@@ -132,7 +133,7 @@ PlasmaCore.Dialog {
                             Layout.fillWidth: true
                             spacing: 0 // The labels bring their own bottom margins
 
-                            PlasmaExtras.Heading {
+                            Kirigami.Heading {
                                 level: 4
                                 Layout.fillWidth: true
                                 text: model.name
@@ -141,7 +142,7 @@ PlasmaCore.Dialog {
                             PlasmaComponents3.Label {
                                 Layout.fillWidth: true
                                 text: model.description
-                                font: PlasmaCore.Theme.smallestFont
+                                font: Kirigami.Theme.smallFont
                                 opacity: 0.6
                                 maximumLineCount: 2
                                 wrapMode: Text.WordWrap

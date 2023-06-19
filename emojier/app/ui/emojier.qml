@@ -77,7 +77,7 @@ Kirigami.ApplicationWindow
             header: Kirigami.AbstractApplicationHeader {
                 topPadding: Kirigami.Units.smallSpacing
                 bottomPadding: Kirigami.Units.smallSpacing
-                leftPadding: Kirigami.Units.largeSpacing
+                leftPadding: Kirigami.Units.gridUnit
                 rightPadding: Kirigami.Units.smallSpacing
 
                 Kirigami.Heading {

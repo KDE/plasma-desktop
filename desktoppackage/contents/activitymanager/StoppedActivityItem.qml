@@ -10,6 +10,7 @@ import QtQuick 2.2
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.config  // KAuthorize
@@ -22,7 +23,7 @@ import "static.js" as S
 Item {
     id: root
 
-    property int innerPadding: PlasmaCore.Units.smallSpacing
+    property int innerPadding: Kirigami.Units.smallSpacing
 
     property string activityId : ""
 
@@ -32,7 +33,7 @@ Item {
     signal clicked
 
     width  : 200
-    height : icon.height + 2 * PlasmaCore.Units.smallSpacing
+    height : icon.height + 2 * Kirigami.Units.smallSpacing
 
     // Background until we get something real
     PlasmaCore.FrameSvgItem {
@@ -62,7 +63,7 @@ Item {
         PlasmaCore.IconItem {
             id: icon
 
-            width  : PlasmaCore.Units.iconSizes.medium
+            width  : Kirigami.Units.iconSizes.medium
             height : width
 
             anchors {
@@ -111,13 +112,13 @@ Item {
 
             Behavior on height {
                 NumberAnimation {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                 }
             }
 
             Behavior on opacity {
                 NumberAnimation {
-                    duration: PlasmaCore.Units.shortDuration
+                    duration: Kirigami.Units.shortDuration
                 }
             }
 
@@ -133,7 +134,7 @@ Item {
                 id: configButton
 
                 icon.name: "configure"
-                PlasmaComponents.ToolTip.delay: PlasmaCore.Units.toolTipDelay
+                PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PlasmaComponents.ToolTip.visible: hovered
                 PlasmaComponents.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Configure activity")
 
@@ -141,7 +142,7 @@ Item {
 
                 anchors {
                     right       : deleteButton.left
-                    rightMargin : 2 * PlasmaCore.Units.smallSpacing
+                    rightMargin : 2 * Kirigami.Units.smallSpacing
                     verticalCenter: parent.verticalCenter
                 }
             }
@@ -150,7 +151,7 @@ Item {
                 id: deleteButton
 
                 icon.name: "edit-delete"
-                PlasmaComponents.ToolTip.delay: PlasmaCore.Units.toolTipDelay
+                PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PlasmaComponents.ToolTip.visible: hovered
                 PlasmaComponents.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Delete")
 
@@ -159,7 +160,7 @@ Item {
 
                 anchors {
                     right       : parent.right
-                    rightMargin : 2 * PlasmaCore.Units.smallSpacing + 2
+                    rightMargin : 2 * Kirigami.Units.smallSpacing + 2
                     verticalCenter: parent.verticalCenter
                 }
             }
@@ -181,7 +182,7 @@ Item {
         Transition {
             NumberAnimation {
                 properties : "opacity"
-                duration   : PlasmaCore.Units.shortDuration
+                duration   : Kirigami.Units.shortDuration
             }
         }
     ]

@@ -8,7 +8,7 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.0 as Layouts
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 MouseArea {
     id: main
@@ -17,8 +17,8 @@ MouseArea {
     onEntered: toolTipHideTimer.running = false
     onExited: toolTipHideTimer.running = true
 
-    width: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).width * 35
-    height: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * 16
+    width: Kirigami.Units.iconSizes.sizeForLabels * 35
+    height: Kirigami.Units.iconSizes.sizeForLabels * 16
 
     property variant icon
     property string title
@@ -53,7 +53,7 @@ MouseArea {
             top: parent.top
             margins: 8
         }
-        width: PlasmaCore.Units.iconSizes.huge
+        width: Kirigami.Units.iconSizes.huge
         height: width
         source: main.icon
     }
@@ -67,7 +67,7 @@ MouseArea {
             right: parent.right
         }
 
-        PlasmaExtras.Heading {
+        Kirigami.Heading {
             text: title
             level: 2
             anchors.left: parent.left
@@ -123,7 +123,7 @@ MouseArea {
         }
         opacity: local ? 1 : 0
         Behavior on opacity {
-            NumberAnimation { duration: PlasmaCore.Units.longDuration }
+            NumberAnimation { duration: Kirigami.Units.longDuration }
         }
         iconSource: "application-exit"
         text: i18nd("plasma_shell_org.kde.plasma.desktop", "Uninstall")

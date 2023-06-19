@@ -8,6 +8,7 @@ import QtQuick 2.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaCore.SvgItem {
     id: actionButton
@@ -17,14 +18,14 @@ PlasmaCore.SvgItem {
             return 0;
         }
         switch (plasmoid.configuration.iconSize) {
-            case 0: return PlasmaCore.Units.iconSizes.small;
-            case 1: return PlasmaCore.Units.iconSizes.small;
-            case 2: return PlasmaCore.Units.iconSizes.smallMedium;
-            case 3: return PlasmaCore.Units.iconSizes.smallMedium;
-            case 4: return PlasmaCore.Units.iconSizes.smallMedium;
-            case 5: return PlasmaCore.Units.iconSizes.medium;
-            case 6: return PlasmaCore.Units.iconSizes.large;
-            default: return PlasmaCore.Units.iconSizes.small;
+            case 0: return Kirigami.Units.iconSizes.small;
+            case 1: return Kirigami.Units.iconSizes.small;
+            case 2: return Kirigami.Units.iconSizes.smallMedium;
+            case 3: return Kirigami.Units.iconSizes.smallMedium;
+            case 4: return Kirigami.Units.iconSizes.smallMedium;
+            case 5: return Kirigami.Units.iconSizes.medium;
+            case 6: return Kirigami.Units.iconSizes.large;
+            default: return Kirigami.Units.iconSizes.small;
         }
     }
     height: width
@@ -37,7 +38,7 @@ PlasmaCore.SvgItem {
     elementId: element + "-normal"
 
     Behavior on opacity {
-        NumberAnimation { duration: PlasmaCore.Units.shortDuration }
+        NumberAnimation { duration: Kirigami.Units.shortDuration }
     }
 
     MouseArea {

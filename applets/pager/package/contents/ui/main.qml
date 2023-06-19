@@ -14,6 +14,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.draganddrop 2.0
 import org.kde.plasma.private.pager 2.0
 import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
@@ -51,12 +52,12 @@ PlasmoidItem {
         return Qt.rgba(color.r, color.g, color.b, alpha)
     }
 
-    readonly property color windowActiveOnActiveDesktopColor: colorWithAlpha(PlasmaCore.Theme.textColor, 0.6)
-    readonly property color windowInactiveOnActiveDesktopColor: colorWithAlpha(PlasmaCore.Theme.textColor, 0.35)
-    readonly property color windowActiveColor: colorWithAlpha(theme.textColor, 0.5)
-    readonly property color windowActiveBorderColor: PlasmaCore.Theme.textColor
-    readonly property color windowInactiveColor: colorWithAlpha(PlasmaCore.Theme.textColor, 0.17)
-    readonly property color windowInactiveBorderColor: colorWithAlpha(PlasmaCore.Theme.textColor, 0.5)
+    readonly property color windowActiveOnActiveDesktopColor: colorWithAlpha(Kirigami.Theme.textColor, 0.6)
+    readonly property color windowInactiveOnActiveDesktopColor: colorWithAlpha(Kirigami.Theme.textColor, 0.35)
+    readonly property color windowActiveColor: colorWithAlpha(Kirigami.Theme.textColor, 0.5)
+    readonly property color windowActiveBorderColor: Kirigami.Theme.textColor
+    readonly property color windowInactiveColor: colorWithAlpha(Kirigami.Theme.textColor, 0.17)
+    readonly property color windowInactiveBorderColor: colorWithAlpha(Kirigami.Theme.textColor, 0.5)
 
     function action_addDesktop() {
         pagerModel.addDesktop();
@@ -210,7 +211,7 @@ PlasmoidItem {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
 
-            font.pixelSize: Math.min(height, PlasmaCore.Theme.defaultFont.pixelSize)
+            font.pixelSize: Math.min(height, Kirigami.Theme.defaultFont.pixelSize)
 
             z: 9999 // The label goes above everything
         }
@@ -222,14 +223,14 @@ PlasmoidItem {
         PlasmaCore.IconItem {
             anchors.centerIn: parent
 
-            height: Math.min(PlasmaCore.Units.iconSizes.small,
+            height: Math.min(Kirigami.Units.iconSizes.small,
                              parent.height,
-                             Math.max(parent.height - (PlasmaCore.Units.smallSpacing * 2),
-                                      PlasmaCore.Units.smallSpacing * 2))
-            width: Math.min(PlasmaCore.Units.iconSizes.small,
+                             Math.max(parent.height - (Kirigami.Units.smallSpacing * 2),
+                                      Kirigami.Units.smallSpacing * 2))
+            width: Math.min(Kirigami.Units.iconSizes.small,
                             parent.width,
-                            Math.max(parent.width - (PlasmaCore.Units.smallSpacing * 2),
-                                     PlasmaCore.Units.smallSpacing * 2))
+                            Math.max(parent.width - (Kirigami.Units.smallSpacing * 2),
+                                     Kirigami.Units.smallSpacing * 2))
 
             property var model: null
 
@@ -259,7 +260,7 @@ PlasmoidItem {
         id: pagerItemGrid
 
         anchors.centerIn: parent
-        spacing: PlasmaCore.Units.devicePixelRatio
+        spacing: 1
         rows: effectiveRows
         columns: effectiveColumns
 
@@ -407,7 +408,7 @@ PlasmoidItem {
                     anchors.fill: parent
                     imagePath: "widgets/pager"
                     opacity: desktop.state === usedPrefix ? 1 : 0
-                    Behavior on opacity { OpacityAnimator { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
+                    Behavior on opacity { OpacityAnimator { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
                 }
 
                 PagerFrame {
@@ -469,8 +470,8 @@ PlasmoidItem {
                 Item {
                     id: clipRect
 
-                    x: Math.round(PlasmaCore.Units.devicePixelRatio)
-                    y: Math.round(PlasmaCore.Units.devicePixelRatio)
+                    x: 1
+                    y: 1
                     z: 1 // Below FrameSvg
                     width: desktop.width - 2 * x
                     height: desktop.height - 2 * y
@@ -494,8 +495,8 @@ PlasmoidItem {
                             onVisibleNameChanged: desktop.updateSubTextIfNeeded()
 
                             /* since we move clipRect with 1, move it back */
-                            x: Math.round(geometry.x * pagerItemGrid.widthScaleFactor) - Math.round(PlasmaCore.Units.devicePixelRatio)
-                            y: Math.round(geometry.y * pagerItemGrid.heightScaleFactor) - Math.round(PlasmaCore.Units.devicePixelRatio)
+                            x: Math.round(geometry.x * pagerItemGrid.widthScaleFactor) - 1
+                            y: Math.round(geometry.y * pagerItemGrid.heightScaleFactor) - 1
                             width: Math.round(geometry.width * pagerItemGrid.widthScaleFactor)
                             height: Math.round(geometry.height * pagerItemGrid.heightScaleFactor)
                             visible: model.IsMinimized !== true
@@ -513,14 +514,14 @@ PlasmoidItem {
                                 }
                             }
 
-                            border.width: Math.round(PlasmaCore.Units.devicePixelRatio)
+                            border.width: 1
                             border.color: (model.IsActive === true) ? windowActiveBorderColor
                                                     : windowInactiveBorderColor
 
-                            Behavior on width  { NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
-                            Behavior on height { NumberAnimation { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
-                            Behavior on color        { ColorAnimation  { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
-                            Behavior on border.color { ColorAnimation  { duration: PlasmaCore.Units.longDuration; easing.type: Easing.OutCubic } }
+                            Behavior on width  { NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
+                            Behavior on height { NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
+                            Behavior on color        { ColorAnimation  { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
+                            Behavior on border.color { ColorAnimation  { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
 
                             MouseArea {
                                 id: windowMouseArea

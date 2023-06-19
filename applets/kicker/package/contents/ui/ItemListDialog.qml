@@ -8,6 +8,7 @@ import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -22,7 +23,7 @@ Kicker.SubMenu {
     visible: false
     hideOnWindowDeactivate: kicker.hideOnWindowDeactivate
     location: PlasmaCore.Types.Floating
-    offset: PlasmaCore.Units.smallSpacing
+    offset: Kirigami.Units.smallSpacing
 
     onWindowDeactivated: {
         if (!aboutToBeDestroyed) {

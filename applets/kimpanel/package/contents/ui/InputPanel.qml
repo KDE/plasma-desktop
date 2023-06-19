@@ -10,7 +10,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
-
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaCore.Dialog {
     id: inputpanel
@@ -29,7 +29,7 @@ PlasmaCore.Dialog {
     readonly property bool verticalLayout: (helper.lookupTableLayout === 1) || (helper.lookupTableLayout === 0 && plasmoid.configuration.vertical_lookup_table);
     property int highlightCandidate: helper.lookupTableCursor
     property int hoveredCandidate: -1
-    property font preferredFont: plasmoid.configuration.use_default_font ? PlasmaCore.Theme.defaultFont : plasmoid.configuration.font
+    property font preferredFont: plasmoid.configuration.use_default_font ? Kirigami.Theme.defaultFont : plasmoid.configuration.font
     readonly property alias textOffset: fontMetrics.ascent
     readonly property alias labelHeight: fontMetrics.height
     property rect position: helper.spotRect
@@ -48,7 +48,7 @@ PlasmaCore.Dialog {
             font: preferredFont
         }
         Column {
-            spacing: PlasmaCore.Units.smallSpacing
+            spacing: Kirigami.Units.smallSpacing
             Row {
                 id: textLabel
                 width: auxLabel.width + preedit.width
@@ -76,7 +76,7 @@ PlasmaCore.Dialog {
                         font: preferredFont
                     }
                     Rectangle {
-                        color: PlasmaCore.Theme.textColor
+                        color: Kirigami.Theme.textColor
                         height: parent.height
                         width: 1
                         opacity: 0.8
@@ -121,20 +121,20 @@ PlasmaCore.Dialog {
                             x: highlight.marginHints.left
                             y: highlight.marginHints.top
                             baselineOffset: inputpanel.textOffset
-                            spacing: PlasmaCore.Units.smallSpacing
+                            spacing: Kirigami.Units.smallSpacing
                             PlasmaComponents3.Label {
                                 id: tableLabel
                                 text: model.label
                                 font: preferredFont
                                 opacity: 0.8
-                                color: PlasmaCore.Theme.textColor
+                                color: Kirigami.Theme.textColor
                                 anchors.baseline: parent.baseline
                             }
                             PlasmaComponents3.Label {
                                 id: textLabel
                                 text: model.text
                                 font: preferredFont
-                                color: PlasmaCore.Theme.textColor
+                                color: Kirigami.Theme.textColor
                                 anchors.baseline: parent.baseline
                             }
                         }
@@ -166,7 +166,7 @@ PlasmaCore.Dialog {
                     Layout.minimumHeight: height
                     Layout.maximumWidth: width
                     Layout.maximumHeight: height
-                    spacing: PlasmaCore.Units.smallSpacing
+                    spacing: Kirigami.Units.smallSpacing
                     PlasmaCore.IconItem {
                         id: prevButton
                         source: inputpanel.verticalLayout ? "arrow-up" : "arrow-left"

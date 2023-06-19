@@ -90,7 +90,8 @@ QQC2.Page {
 
     ColumnLayout {
         anchors.horizontalCenter: parent.horizontalCenter
-        spacing: Kirigami.Units.largeSpacing
+        width: parent.width
+        spacing: Kirigami.Units.gridUnit * 3
 
         GridLayout {
             columns: 2
@@ -101,14 +102,16 @@ QQC2.Page {
                 Layout.preferredHeight: Kirigami.Units.iconSizes.huge
                 Layout.preferredWidth: height
                 Layout.maximumWidth: page.width / 3;
-                Layout.rightMargin: Kirigami.Units.largeSpacing
+                Layout.rightMargin: Kirigami.Units.gridUnit
                 source: page.metaData.iconName || page.metaData.pluginId
                 fallback: "application-x-plasma"
             }
+
             Kirigami.Heading {
                 Layout.fillWidth: true
                 text: page.metaData.name + " " + page.metaData.version
             }
+            
             Kirigami.Heading {
                 Layout.fillWidth: true
                 Layout.maximumWidth: Kirigami.Units.gridUnit * 15

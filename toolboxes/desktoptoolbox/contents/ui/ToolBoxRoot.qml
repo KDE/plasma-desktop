@@ -8,10 +8,9 @@
 
 import QtQuick 2.2
 import QtQuick.Window 2.2
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 
 Item {
@@ -30,8 +29,8 @@ Item {
         }
     }
 
-    property int iconSize: PlasmaCore.Units.iconSizes.small
-    property int iconWidth: PlasmaCore.Units.iconSizes.smallMedium
+    property int iconSize: Kirigami.Units.iconSizes.small
+    property int iconWidth: Kirigami.Units.iconSizes.smallMedium
     property int iconHeight: iconWidth
     property bool dialogWasVisible: false
     property bool open: false

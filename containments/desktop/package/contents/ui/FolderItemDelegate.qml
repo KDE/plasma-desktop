@@ -11,6 +11,7 @@ import Qt5Compat.GraphicalEffects
 import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 
@@ -220,8 +221,8 @@ Item {
             Loader {
                 id: frameLoader
 
-                x: root.useListViewMode ? 0 : PlasmaCore.Units.smallSpacing
-                y: root.useListViewMode ? 0 : PlasmaCore.Units.smallSpacing
+                x: root.useListViewMode ? 0 : Kirigami.Units.smallSpacing
+                y: root.useListViewMode ? 0 : Kirigami.Units.smallSpacing
 
                 property Item textShadow: null
                 property Item iconShadow: null
@@ -234,27 +235,19 @@ Item {
                 width: {
                     if (root.useListViewMode) {
                         if (main.GridView.view.overflowing) {
-                            return parent.width - PlasmaCore.Units.smallSpacing;
+                            return parent.width - Kirigami.Units.smallSpacing;
                         } else {
                             return parent.width;
                         }
                     }
 
-                    return parent.width - (PlasmaCore.Units.smallSpacing * 2);
+                    return parent.width - (Kirigami.Units.smallSpacing * 2);
                 }
 
-                height: {
-                    if (root.useListViewMode) {
-                        return parent.height;
-                    }
-
-                    // Note: frameLoader.y = PlasmaCore.Units.smallSpacing (acts as top margin)
-                    return (PlasmaCore.Units.smallSpacing // icon.anchors.topMargin (acts as top padding)
-                        + icon.height
-                        + PlasmaCore.Units.smallSpacing // label.anchors.topMargin (acts as spacing between icon and label)
-                        + (label.lineCount * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
-                        + PlasmaCore.Units.smallSpacing); // leftover (acts as bottom padding)
-                }
+                height: root.useListViewMode
+                                ? parent.height
+                                // One gridUnit per line of text, plus another one for paddings
+                                : icon.height + ((label.lineCount + 1) * Kirigami.Units.gridUnit)
 
                 PlasmaCore.IconItem {
                     id: icon
@@ -283,11 +276,11 @@ Item {
                     ]
 
                     anchors {
-                        topMargin: PlasmaCore.Units.smallSpacing
-                        leftMargin: PlasmaCore.Units.smallSpacing
+                        topMargin: Kirigami.Units.smallSpacing
+                        leftMargin: Kirigami.Units.smallSpacing
                     }
 
-                    width: root.useListViewMode ? main.GridView.view.iconSize : (parent.width - 2 * PlasmaCore.Units.smallSpacing)
+                    width: root.useListViewMode ? main.GridView.view.iconSize : (parent.width - 2 * Kirigami.Units.smallSpacing)
                     height: main.GridView.view.iconSize
 
                     opacity: {
@@ -315,11 +308,11 @@ Item {
                     visible: GraphicsInfo.api === GraphicsInfo.Software && !model.selected
                     anchors {
                         fill: label
-                        margins: -PlasmaCore.Units.smallSpacing
+                        margins: -Kirigami.Units.smallSpacing
                     }
 
                     color: "black"
-                    radius: PlasmaCore.Units.smallSpacing
+                    radius: Kirigami.Units.smallSpacing
                     opacity: 0.45
                 }
 
@@ -339,8 +332,8 @@ Item {
                             }
                             PropertyChanges {
                                 target: label
-                                anchors.topMargin: PlasmaCore.Units.smallSpacing
-                                width: Math.round(Math.min(label.implicitWidth + PlasmaCore.Units.smallSpacing, parent.width - PlasmaCore.Units.smallSpacing))
+                                anchors.topMargin: Kirigami.Units.smallSpacing
+                                width: Math.round(Math.min(label.implicitWidth + Kirigami.Units.smallSpacing, parent.width - Kirigami.Units.smallSpacing))
                                 maximumLineCount: plasmoid.configuration.textLines
                                 horizontalAlignment: Text.AlignHCenter
                             }
@@ -355,9 +348,9 @@ Item {
                             }
                             PropertyChanges {
                                 target: label
-                                anchors.leftMargin: PlasmaCore.Units.smallSpacing * 2
-                                anchors.rightMargin: PlasmaCore.Units.smallSpacing * 2
-                                width: parent.width - icon.width - (PlasmaCore.Units.smallSpacing * 4)
+                                anchors.leftMargin: Kirigami.Units.smallSpacing * 2
+                                anchors.rightMargin: Kirigami.Units.smallSpacing * 2
+                                width: parent.width - icon.width - (Kirigami.Units.smallSpacing * 4)
                                 maximumLineCount: 1
                                 horizontalAlignment: Text.AlignLeft
                             }
@@ -375,9 +368,9 @@ Item {
                         if ((frameLoader.textShadow && frameLoader.textShadow.visible) || fallbackRectangleBackground.visible) {
                             return "#fff";
                         } else if (model.selected) {
-                            return PlasmaCore.ColorScope.highlightedTextColor;
+                            return Kirigami.Theme.highlightedTextColor;
                         } else {
-                            return PlasmaCore.ColorScope.textColor
+                            return Kirigami.Theme.textColor
                         }
                     }
 
@@ -458,7 +451,7 @@ Item {
 
                         verticalOffset: 1
 
-                        radius: Math.round(5 * PlasmaCore.Units.devicePixelRatio)
+                        radius: 5.0
                         samples: radius * 2 + 1
                         spread: 0.05
 
@@ -481,7 +474,7 @@ Item {
                         horizontalOffset: 1
                         verticalOffset: 1
 
-                        radius: Math.round(4 * PlasmaCore.Units.devicePixelRatio)
+                        radius: 4.0
                         samples: radius * 2 + 1
                         spread: 0.35
 

@@ -9,13 +9,14 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
 
 ContainmentLayoutManager.ConfigOverlayWithHandles {
     id: overlay
 
-    readonly property int iconSize: touchInteraction ? PlasmaCore.Units.iconSizes.medium : PlasmaCore.Units.iconSizes.small
+    readonly property int iconSize: touchInteraction ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.small
 
     PlasmaCore.Svg {
         id: configIconsSvg
@@ -30,7 +31,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
             property: "scale"
             from: 1
             to: 0
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutQuad
         }
         ScriptAction {
@@ -45,9 +46,9 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
         id: frame
 
         anchors.verticalCenter: parent.verticalCenter
-        x: overlay.rightAvailableSpace > width + PlasmaCore.Units.gridUnit
-            ? parent.width + PlasmaCore.Units.gridUnit
-            : -width - PlasmaCore.Units.gridUnit
+        x: overlay.rightAvailableSpace > width + Kirigami.Units.gridUnit
+            ? parent.width + Kirigami.Units.gridUnit
+            : -width - Kirigami.Units.gridUnit
 
         // This MouseArea is used to block input between the applet and the handle, to not make it steal by other applets
         MouseArea {
@@ -56,16 +57,16 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 bottom: parent.bottom
             }
             z: -1
-            x: overlay.rightAvailableSpace > parent.width + PlasmaCore.Units.gridUnit ? -PlasmaCore.Units.gridUnit : 0
-            width: PlasmaCore.Units.gridUnit + parent.width
+            x: overlay.rightAvailableSpace > parent.width + Kirigami.Units.gridUnit ? -Kirigami.Units.gridUnit : 0
+            width: Kirigami.Units.gridUnit + parent.width
             hoverEnabled: true
         }
         transform: Translate {
-            x: open ? 0 : (overlay.rightAvailableSpace > frame.width + PlasmaCore.Units.gridUnit ? -frame.width : frame.width)
+            x: open ? 0 : (overlay.rightAvailableSpace > frame.width + Kirigami.Units.gridUnit ? -frame.width : frame.width)
 
             Behavior on x {
                 NumberAnimation {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -202,7 +203,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
 
             MouseArea {
                 drag.target: overlay.itemContainer
-                Layout.minimumHeight: PlasmaCore.Units.gridUnit * 3
+                Layout.minimumHeight: Kirigami.Units.gridUnit * 3
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 cursorShape: containsPress ? Qt.DragMoveCursor : Qt.OpenHandCursor

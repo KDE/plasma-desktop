@@ -61,11 +61,11 @@ KCM.ScrollViewKCM {
 
             anchors {
                 top: parent.top
-                topMargin: Kirigami.Units.largeSpacing
+                topMargin: Kirigami.Units.gridUnit
                 left: parent.left
-                leftMargin: Kirigami.Units.largeSpacing
+                leftMargin: Kirigami.Units.gridUnit
                 right: parent.right
-                rightMargin: Kirigami.Units.largeSpacing
+                rightMargin: Kirigami.Units.gridUnit
             }
 
             spacing: Kirigami.Units.smallSpacing
@@ -121,7 +121,7 @@ KCM.ScrollViewKCM {
                 Layout.fillWidth: true
                 Layout.maximumWidth: Kirigami.Units.gridUnit * 24
                 Layout.alignment: Qt.AlignHCenter
-                Layout.bottomMargin: Kirigami.Units.largeSpacing
+                Layout.bottomMargin: Kirigami.Units.gridUnit
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WordWrap
             }
@@ -184,7 +184,7 @@ KCM.ScrollViewKCM {
             Kirigami.FormLayout {
                 twinFormLayouts: indexingForm
 
-                Layout.bottomMargin: Kirigami.Units.largeSpacing * 2
+                Layout.bottomMargin: Kirigami.Units.gridUnit * 2
 
                 QQC2.ButtonGroup {
                     id: indexingStyleGroup
@@ -268,7 +268,7 @@ KCM.ScrollViewKCM {
 
                 anchors {
                     left: parent.left
-                    leftMargin: Kirigami.Units.largeSpacing
+                    leftMargin: Kirigami.Units.gridUnit
                     right: parent.right
                     rightMargin: Kirigami.Units.smallSpacing
                     top: parent.top

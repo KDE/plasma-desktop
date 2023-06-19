@@ -14,6 +14,7 @@ import QtQml.Models 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.kirigami 2.20 as Kirigami
 
 Loader {
     id: toolTipDelegate
@@ -47,7 +48,7 @@ Loader {
 
     readonly property bool isVerticalPanel: plasmoid.formFactor === PlasmaCore.Types.Vertical
     // This number controls the overall size of the window tooltips
-    readonly property int tooltipInstanceMaximumWidth: PlasmaCore.Units.gridUnit * 16
+    readonly property int tooltipInstanceMaximumWidth: Kirigami.Units.gridUnit * 16
 
     // These properties are required to make tooltip interactive when there is a player but no window is present.
     readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(launcherUrl, pidParent)
@@ -80,9 +81,9 @@ Loader {
         id: groupToolTip
 
         PlasmaComponents3.ScrollView {
-            // 2 * PlasmaCore.Units.smallSpacing is for the margin of tooltipDialog
-            implicitWidth: leftPadding + rightPadding + Math.min(Screen.desktopAvailableWidth - 2 * PlasmaCore.Units.smallSpacing, Math.max(delegateModel.estimatedWidth, contentItem.contentItem.childrenRect.width))
-            implicitHeight: bottomPadding + Math.min(Screen.desktopAvailableHeight - 2 * PlasmaCore.Units.smallSpacing, Math.max(delegateModel.estimatedHeight, contentItem.contentItem.childrenRect.height))
+            // 2 * Kirigami.Units.smallSpacing is for the margin of tooltipDialog
+            implicitWidth: leftPadding + rightPadding + Math.min(Screen.desktopAvailableWidth - 2 * Kirigami.Units.smallSpacing, Math.max(delegateModel.estimatedWidth, contentItem.contentItem.childrenRect.width))
+            implicitHeight: bottomPadding + Math.min(Screen.desktopAvailableHeight - 2 * Kirigami.Units.smallSpacing, Math.max(delegateModel.estimatedHeight, contentItem.contentItem.childrenRect.height))
 
             ListView {
                 id: groupToolTipListView
@@ -91,15 +92,15 @@ Loader {
 
                 orientation: isVerticalPanel ? ListView.Vertical : ListView.Horizontal
                 reuseItems: true
-                spacing: PlasmaCore.Units.largeSpacing
+                spacing: Kirigami.Units.gridUnit
             }
 
             DelegateModel {
                 id: delegateModel
 
                 // On Wayland, a tooltip has a significant resizing process, so estimate the size first.
-                readonly property real estimatedWidth: (toolTipDelegate.isVerticalPanel ? 1 : count) * (toolTipDelegate.tooltipInstanceMaximumWidth + PlasmaCore.Units.largeSpacing) - PlasmaCore.Units.largeSpacing
-                readonly property real estimatedHeight: (toolTipDelegate.isVerticalPanel ? count : 1) * (toolTipDelegate.tooltipInstanceMaximumWidth / 2 + PlasmaCore.Units.largeSpacing) - PlasmaCore.Units.largeSpacing
+                readonly property real estimatedWidth: (toolTipDelegate.isVerticalPanel ? 1 : count) * (toolTipDelegate.tooltipInstanceMaximumWidth + Kirigami.Units.gridUnit) - Kirigami.Units.gridUnit
+                readonly property real estimatedHeight: (toolTipDelegate.isVerticalPanel ? count : 1) * (toolTipDelegate.tooltipInstanceMaximumWidth / 2 + Kirigami.Units.gridUnit) - Kirigami.Units.gridUnit
 
                 model: tasksModel
 

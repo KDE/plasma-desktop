@@ -9,7 +9,8 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kwindowsystem
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
@@ -55,7 +56,7 @@ Item {
                 iconContainer.grabToImage(function(result) {
                     parent.Drag.imageSource = result.url;
                     parent.Drag.active = dragHandler.active;
-                }, Qt.size(PlasmaCore.Units.iconSizes.huge, PlasmaCore.Units.iconSizes.huge));
+                }, Qt.size(Kirigami.Units.iconSizes.huge, Kirigami.Units.iconSizes.huge));
             } else {
                 parent.Drag.active = false;
                 parent.Drag.imageSource = "";
@@ -65,25 +66,25 @@ Item {
 
     ColumnLayout {
         id: mainLayout
-        spacing: PlasmaCore.Units.smallSpacing
+        spacing: Kirigami.Units.smallSpacing
         anchors {
             left: parent.left
             right: parent.right
             //bottom: parent.bottom
-            margins: PlasmaCore.Units.smallSpacing * 2
-            rightMargin: PlasmaCore.Units.smallSpacing * 2 // don't cram the text to the border too much
+            margins: Kirigami.Units.smallSpacing * 2
+            rightMargin: Kirigami.Units.smallSpacing * 2 // don't cram the text to the border too much
             top: parent.top
         }
 
         Item {
             id: iconContainer
-            width: PlasmaCore.Units.iconSizes.enormous
+            width: Kirigami.Units.iconSizes.enormous
             height: width
             Layout.alignment: Qt.AlignHCenter
             opacity: delegate.pendingUninstall ? 0.6 : 1
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -97,7 +98,7 @@ Item {
                     visible: model.screenshot === ""
                 }
                 Image {
-                    width: PlasmaCore.Units.iconSizes.enormous
+                    width: Kirigami.Units.iconSizes.enormous
                     height: width
                     anchors.fill: parent
                     fillMode: Image.PreserveAspectFit
@@ -110,9 +111,9 @@ Item {
                 anchors.fill: parent
 
                 Rectangle {
-                    x: Math.round(-PlasmaCore.Units.smallSpacing * 1.5 / 2)
+                    x: Math.round(-Kirigami.Units.smallSpacing * 1.5 / 2)
                     y: x
-                    width: runningBadge.width + Math.round(PlasmaCore.Units.smallSpacing * 1.5)
+                    width: runningBadge.width + Math.round(Kirigami.Units.smallSpacing * 1.5)
                     height: width
                     radius: height
                     visible: running && delegate.GridView.isCurrentItem
@@ -122,9 +123,9 @@ Item {
             Rectangle {
                 id: runningBadge
                 width: height
-                height: Math.round(PlasmaCore.Theme.mSize(countLabel.font).height * 1.3)
+                height: Math.round(Kirigami.Units.iconSizes.sizeForLabels * 1.3)
                 radius: height
-                color: PlasmaCore.Theme.highlightColor
+                color: Kirigami.Theme.highlightColor
                 visible: running && delegate.GridView.isCurrentItem
                 onVisibleChanged: maskShaderSource.scheduleUpdate()
 
@@ -172,7 +173,7 @@ Item {
                 }
                 icon.name: delegate.pendingUninstall ? "edit-undo" : "edit-delete"
                 // we don't really "undo" anything but we'll pretend to the user that we do
-                PlasmaComponents.ToolTip.delay: PlasmaCore.Units.toolTipDelay
+                PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PlasmaComponents.ToolTip.visible: hovered
                 PlasmaComponents.ToolTip.text: delegate.pendingUninstall ? i18nd("plasma_shell_org.kde.plasma.desktop", "Undo uninstall")
                                                     : i18nd("plasma_shell_org.kde.plasma.desktop", "Uninstall widget")
@@ -206,7 +207,7 @@ Item {
                 }
             }
         }
-        PlasmaExtras.Heading {
+        Kirigami.Heading {
             id: heading
             Layout.fillWidth: true
             level: 4
@@ -222,7 +223,7 @@ Item {
             // otherwise causes binding loop due to the way the Plasma sets the height
             height: implicitHeight
             text: model.description
-            font: PlasmaCore.Theme.smallestFont
+            font: Kirigami.Theme.smallFont
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
             maximumLineCount: heading.lineCount === 1 ? 3 : 2

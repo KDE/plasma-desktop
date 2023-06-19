@@ -23,7 +23,7 @@ KCM.SimpleKCM {
 
         anchors {
             top: parent.top
-            topMargin: Kirigami.Units.largeSpacing
+            topMargin: Kirigami.Units.gridUnit
         }
 
         RowLayout {

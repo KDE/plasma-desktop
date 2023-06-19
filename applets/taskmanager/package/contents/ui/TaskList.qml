@@ -5,7 +5,7 @@
 */
 
 import QtQuick 2.15
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 Flow {
     property bool animating: false
@@ -26,7 +26,7 @@ Flow {
             NumberAnimation {
                 properties: "x, y"
                 easing.type: Easing.OutQuad
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
             }
 
             PropertyAction { target: taskList; property: "animating"; value: false }

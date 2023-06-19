@@ -13,8 +13,8 @@ import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kwindowsystem 1.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.1 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.shell 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -29,11 +29,11 @@ import "code/tools.js" as Tools
 Kicker.DashboardWindow {
     id: root
 
-    property bool smallScreen: ((Math.floor(width / PlasmaCore.Units.iconSizes.huge) <= 22) || (Math.floor(height / PlasmaCore.Units.iconSizes.huge) <= 14))
+    property bool smallScreen: ((Math.floor(width / Kirigami.Units.iconSizes.huge) <= 22) || (Math.floor(height / Kirigami.Units.iconSizes.huge) <= 14))
 
-    property int iconSize: smallScreen ? PlasmaCore.Units.iconSizes.large : PlasmaCore.Units.iconSizes.huge
-    property int cellSize: iconSize + (2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
-        + (2 * PlasmaCore.Units.smallSpacing)
+    property int iconSize: smallScreen ? Kirigami.Units.iconSizes.large : Kirigami.Units.iconSizes.huge
+    property int cellSize: iconSize + (2 * Kirigami.Units.iconSizes.sizeForLabels)
+        + (2 * Kirigami.Units.smallSpacing)
         + (2 * Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                         highlightItemSvg.margins.left + highlightItemSvg.margins.right))
     property int columns: Math.floor(((smallScreen ? 85 : 80)/100) * Math.ceil(width / cellSize))
@@ -158,7 +158,7 @@ Kicker.DashboardWindow {
             }
         }
 
-        PlasmaExtras.Heading {
+        Kirigami.Heading {
             id: dummyHeading
 
             visible: false
@@ -302,11 +302,11 @@ Kicker.DashboardWindow {
 
             anchors {
                 left: searchHeading.right
-                leftMargin: PlasmaCore.Units.largeSpacing
+                leftMargin: Kirigami.Units.gridUnit
                 verticalCenter: searchHeading.verticalCenter
             }
 
-            width: PlasmaCore.Units.iconSizes.large
+            width: Kirigami.Units.iconSizes.large
             height: width
 
             visible: (searchField.text !== "")
@@ -344,15 +344,15 @@ Kicker.DashboardWindow {
 
             anchors {
                 top: parent.top
-                topMargin: PlasmaCore.Units.gridUnit * (smallScreen ? 8 : 10)
+                topMargin: Kirigami.Units.gridUnit * (smallScreen ? 8 : 10)
                 bottom: parent.bottom
-                bottomMargin: (PlasmaCore.Units.gridUnit * 2)
+                bottomMargin: (Kirigami.Units.gridUnit * 2)
                 horizontalCenter: parent.horizontalCenter
             }
 
             width: (root.columns * root.cellSize) + (2 * spacing)
 
-            spacing: PlasmaCore.Units.gridUnit * 2
+            spacing: Kirigami.Units.gridUnit * 2
 
             Item {
                 id: favoritesColumn
@@ -362,11 +362,11 @@ Kicker.DashboardWindow {
                     bottom: parent.bottom
                 }
 
-                width: (columns * root.cellSize) + PlasmaCore.Units.gridUnit
+                width: (columns * root.cellSize) + Kirigami.Units.gridUnit
 
                 property int columns: 3
 
-                PlasmaExtras.Heading {
+                Kirigami.Heading {
                     id: favoritesColumnLabel
 
                     enabled: tabBar.activeTab === 0
@@ -375,7 +375,7 @@ Kicker.DashboardWindow {
                         top: parent.top
                     }
 
-                    x: PlasmaCore.Units.smallSpacing
+                    x: Kirigami.Units.smallSpacing
                     width: parent.width - x
 
                     elide: Text.ElideRight
@@ -389,7 +389,7 @@ Kicker.DashboardWindow {
 
                     opacity: enabled ? 1.0 : 0.3
 
-                    Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
+                    Behavior on opacity { SmoothedAnimation { duration: Kirigami.Units.longDuration; velocity: 0.01 } }
                 }
 
                 PlasmaCore.SvgItem {
@@ -401,7 +401,7 @@ Kicker.DashboardWindow {
                         top: favoritesColumnLabel.bottom
                     }
 
-                    width: parent.width - PlasmaCore.Units.gridUnit
+                    width: parent.width - Kirigami.Units.gridUnit
                     height: lineSvg.horLineHeight
 
                     svg: lineSvg
@@ -409,7 +409,7 @@ Kicker.DashboardWindow {
 
                     opacity: enabled ? 1.0 : 0.3
 
-                    Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
+                    Behavior on opacity { SmoothedAnimation { duration: Kirigami.Units.longDuration; velocity: 0.01 } }
                 }
 
                 ItemGridView {
@@ -419,11 +419,11 @@ Kicker.DashboardWindow {
 
                     anchors {
                         top: favoritesColumnLabelUnderline.bottom
-                        topMargin: PlasmaCore.Units.largeSpacing
+                        topMargin: Kirigami.Units.gridUnit
                     }
 
                     property int rows: (Math.floor((parent.height - favoritesColumnLabel.height
-                        - favoritesColumnLabelUnderline.height - PlasmaCore.Units.largeSpacing) / root.cellSize)
+                        - favoritesColumnLabelUnderline.height - Kirigami.Units.gridUnit) / root.cellSize)
                         - systemFavoritesGrid.rows)
 
                     width: parent.width
@@ -440,7 +440,7 @@ Kicker.DashboardWindow {
 
                     opacity: enabled ? 1.0 : 0.3
 
-                    Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
+                    Behavior on opacity { SmoothedAnimation { duration: Kirigami.Units.longDuration; velocity: 0.01 } }
 
                     onCurrentIndexChanged: {
                         preloadAllAppsTimer.defer();
@@ -545,7 +545,7 @@ Kicker.DashboardWindow {
 
                 anchors.top: parent.top
 
-                width: (columns * root.cellSize) + PlasmaCore.Units.gridUnit
+                width: (columns * root.cellSize) + Kirigami.Units.gridUnit
                 height: Math.floor(parent.height / root.cellSize) * root.cellSize + mainGridContainer.headerHeight
 
                 property int columns: root.columns - favoritesColumn.columns - filterListColumn.columns
@@ -565,7 +565,7 @@ Kicker.DashboardWindow {
 
                     visible: opacity !== 0.0
 
-                    property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + PlasmaCore.Units.largeSpacing
+                    property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + Kirigami.Units.gridUnit
 
                     opacity: {
                         if (tabBar.activeTab === 0 && root.searching) {
@@ -585,14 +585,14 @@ Kicker.DashboardWindow {
                         }
                     }
 
-                    PlasmaExtras.Heading {
+                    Kirigami.Heading {
                         id: mainColumnLabel
 
                         anchors {
                             top: parent.top
                         }
 
-                        x: PlasmaCore.Units.smallSpacing
+                        x: Kirigami.Units.smallSpacing
                         width: parent.width - x
 
                         elide: Text.ElideRight
@@ -615,7 +615,7 @@ Kicker.DashboardWindow {
                             top: mainColumnLabel.bottom
                         }
 
-                        width: parent.width - PlasmaCore.Units.gridUnit
+                        width: parent.width - Kirigami.Units.gridUnit
                         height: lineSvg.horLineHeight
 
                         svg: lineSvg
@@ -627,7 +627,7 @@ Kicker.DashboardWindow {
 
                         anchors {
                             top: mainColumnLabelUnderline.bottom
-                            topMargin: PlasmaCore.Units.largeSpacing
+                            topMargin: Kirigami.Units.gridUnit
                         }
 
                         width: parent.width
@@ -635,7 +635,7 @@ Kicker.DashboardWindow {
 
                         cellWidth: (tabBar.activeTab === 0 ? root.cellSize : root.cellSize * 2)
                         cellHeight: cellWidth
-                        iconSize: (tabBar.activeTab === 0 ? root.iconSize : cellWidth - (PlasmaCore.Units.largeSpacing * 2))
+                        iconSize: (tabBar.activeTab === 0 ? root.iconSize : cellWidth - (Kirigami.Units.gridUnit * 2))
 
                         model: funnelModel
 
@@ -783,7 +783,7 @@ Kicker.DashboardWindow {
 
                 anchors {
                     top: parent.top
-                    topMargin: mainColumnLabelUnderline.y + mainColumnLabelUnderline.height + PlasmaCore.Units.largeSpacing
+                    topMargin: mainColumnLabelUnderline.y + mainColumnLabelUnderline.height + Kirigami.Units.gridUnit
                     bottom: parent.bottom
                 }
 
@@ -794,9 +794,9 @@ Kicker.DashboardWindow {
                 PlasmaExtras.ScrollArea {
                     id: filterListScrollArea
 
-                    x: root.visible ? 0 : PlasmaCore.Units.gridUnit
+                    x: root.visible ? 0 : Kirigami.Units.gridUnit
 
-                    Behavior on x { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
+                    Behavior on x { SmoothedAnimation { duration: Kirigami.Units.longDuration; velocity: 0.01 } }
 
                     width: parent.width
                     height: mainGrid.height
@@ -807,7 +807,7 @@ Kicker.DashboardWindow {
 
                     opacity: root.visible ? (root.searching ? 0.30 : 1.0) : 0.3
 
-                    Behavior on opacity { SmoothedAnimation { duration: PlasmaCore.Units.longDuration; velocity: 0.01 } }
+                    Behavior on opacity { SmoothedAnimation { duration: Kirigami.Units.longDuration; velocity: 0.01 } }
 
                     verticalScrollBarPolicy: (opacity === 1.0) ? Qt.ScrollBarAsNeeded : Qt.ScrollBarAlwaysOff
 
@@ -940,7 +940,7 @@ Kicker.DashboardWindow {
                                 onTriggered: parent.updateCurrentItem()
                             }
 
-                            PlasmaExtras.Heading {
+                            Kirigami.Heading {
                                 id: label
 
                                 anchors {
@@ -968,7 +968,7 @@ Kicker.DashboardWindow {
                             width: (highlightItemSvg.margins.left
                                 + (filterList.currentItem ? filterList.currentItem.textWidth : 0)
                                 + highlightItemSvg.margins.right
-                                + PlasmaCore.Units.smallSpacing)
+                                + Kirigami.Units.smallSpacing)
 
                             visible: filterList.currentItem
                             opacity: filterListScrollArea.focus ? 1.0 : 0.7
@@ -992,7 +992,7 @@ Kicker.DashboardWindow {
                             }
 
                             filterListColumn.columns = Math.ceil(width / root.cellSize);
-                            filterListScrollArea.width = width + hItemMargins + (PlasmaCore.Units.gridUnit * 2);
+                            filterListScrollArea.width = width + hItemMargins + (Kirigami.Units.gridUnit * 2);
                         }
 
                         function applyFilter() {

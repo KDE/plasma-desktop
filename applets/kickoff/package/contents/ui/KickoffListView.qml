@@ -11,7 +11,7 @@ import QtQuick 2.15
 import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
-import org.kde.kirigami 2.16 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 // ScrollView makes it difficult to control implicit size using the contentItem.
 // Using EmptyPage instead.
@@ -179,7 +179,7 @@ EmptyPage {
         Transition {
             id: normalTransition
             NumberAnimation {
-                duration: PlasmaCore.Units.shortDuration
+                duration: Kirigami.Units.shortDuration
                 properties: "x, y"
                 easing.type: Easing.OutCubic
             }
@@ -197,10 +197,8 @@ EmptyPage {
             target: view
             filterMouseEvents: true
             // `20 * Qt.styleHints.wheelScrollLines` is the default speed.
-            // `* PlasmaCore.Units.devicePixelRatio` is needed on X11
-            // because Plasma doesn't support Qt scaling.
-            horizontalStepSize: 20 * Qt.styleHints.wheelScrollLines * PlasmaCore.Units.devicePixelRatio
-            verticalStepSize: 20 * Qt.styleHints.wheelScrollLines * PlasmaCore.Units.devicePixelRatio
+            horizontalStepSize: 20 * Qt.styleHints.wheelScrollLines
+            verticalStepSize: 20 * Qt.styleHints.wheelScrollLines
 
             onWheel: {
                 view.movedWithWheel = true

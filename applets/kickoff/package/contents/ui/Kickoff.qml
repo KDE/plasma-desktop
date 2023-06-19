@@ -17,6 +17,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.private.kicker 0.1 as Kicker
+import org.kde.kirigami 2.20 as Kirigami
 
 import "code/tools.js" as Tools
 
@@ -162,7 +163,7 @@ PlasmoidItem {
         id: compactRoot
 
         // Taken from DigitalClock to ensure uniform sizing when next to each other
-        readonly property bool tooSmall: plasmoid.formFactor === PlasmaCore.Types.Horizontal && Math.round(2 * (compactRoot.height / 5)) <= PlasmaCore.Theme.smallestFont.pixelSize
+        readonly property bool tooSmall: plasmoid.formFactor === PlasmaCore.Types.Horizontal && Math.round(2 * (compactRoot.height / 5)) <= Kirigami.Theme.smallFont.pixelSize
 
         readonly property bool shouldHaveIcon: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.icon !== ""
         readonly property bool shouldHaveLabel: Plasmoid.formFactor !== PlasmaCore.Types.Vertical && Plasmoid.configuration.menuLabel !== ""
@@ -202,7 +203,7 @@ PlasmoidItem {
                 return {
                     minimumWidth: impWidth,
                     maximumWidth: -1,
-                    minimumHeight: PlasmaCore.Units.iconSizes.small,
+                    minimumHeight: Kirigami.Units.iconSizes.small,
                     maximumHeight: -1,
                 };
             }
@@ -273,16 +274,16 @@ PlasmoidItem {
                 id: labelTextField
 
                 Layout.fillHeight: true
-                Layout.leftMargin: PlasmaCore.Units.smallSpacing
-                Layout.rightMargin: PlasmaCore.Units.smallSpacing
+                Layout.leftMargin: Kirigami.Units.smallSpacing
+                Layout.rightMargin: Kirigami.Units.smallSpacing
 
                 text: Plasmoid.configuration.menuLabel
                 horizontalAlignment: Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
                 wrapMode: Text.NoWrap
                 fontSizeMode: Text.VerticalFit
-                font.pixelSize: compactRoot.tooSmall ? PlasmaCore.Theme.defaultFont.pixelSize : PlasmaCore.Units.roundToIconSize(PlasmaCore.Units.gridUnit * 2)
-                minimumPointSize: PlasmaCore.Theme.smallestFont.pointSize
+                font.pixelSize: compactRoot.tooSmall ? Kirigami.Theme.defaultFont.pixelSize : Kirigami.Units.roundedIconSize(Kirigami.Units.gridUnit * 2)
+                minimumPointSize: Kirigami.Theme.smallFont.pointSize
                 visible: compactRoot.shouldHaveLabel
             }
         }

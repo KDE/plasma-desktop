@@ -10,6 +10,7 @@ import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaExtras.PlasmoidHeading {
     id: root
@@ -24,8 +25,8 @@ PlasmaExtras.PlasmoidHeading {
     // We use an increased vertical padding to improve touch usability
     leftPadding: kickoff.backgroundMetrics.leftPadding
     rightPadding: kickoff.backgroundMetrics.rightPadding
-    topPadding: PlasmaCore.Units.smallSpacing * 2
-    bottomPadding: PlasmaCore.Units.smallSpacing * 2
+    topPadding: Kirigami.Units.smallSpacing * 2
+    bottomPadding: Kirigami.Units.smallSpacing * 2
 
     leftInset: 0
     rightInset: 0
@@ -67,7 +68,7 @@ PlasmaExtras.PlasmoidHeading {
             flickableDirection: Flickable.AutoFlickIfNeeded
             snapMode: ListView.SnapToItem
 
-            highlightMoveDuration: PlasmaCore.Units.longDuration
+            highlightMoveDuration: Kirigami.Units.longDuration
             highlightRangeMode: ListView.ApplyRange
             preferredHighlightBegin: tabBar.tabWidth
             preferredHighlightEnd: width - tabBar.tabWidth
@@ -78,7 +79,7 @@ PlasmaExtras.PlasmoidHeading {
                 anchors.bottomMargin: -root.bottomPadding
                 imagePath: "widgets/tabbar"
                 prefix: tabBar.position === PC3.TabBar.Header ? "north-active-tab" : "south-active-tab"
-                colorGroup: PlasmaCore.ColorScope.colorGroup
+                colorGroup: Kirigami.Theme.colorSet
             }
             keyNavigationEnabled: false
         }
@@ -91,8 +92,8 @@ PlasmaExtras.PlasmoidHeading {
             anchors.bottom: tabBarListView.contentItem.bottom
             anchors.topMargin: -root.topPadding
             anchors.bottomMargin: -root.bottomPadding
-            icon.width: PlasmaCore.Units.iconSizes.smallMedium
-            icon.height: PlasmaCore.Units.iconSizes.smallMedium
+            icon.width: Kirigami.Units.iconSizes.smallMedium
+            icon.height: Kirigami.Units.iconSizes.smallMedium
             icon.name: "applications-other"
             text: i18n("Applications")
             KeyNavigation.backtab: kickoff.contentArea ? kickoff.contentArea : null
@@ -104,8 +105,8 @@ PlasmaExtras.PlasmoidHeading {
             anchors.bottom: tabBarListView.contentItem.bottom
             anchors.topMargin: -root.topPadding
             anchors.bottomMargin: -root.bottomPadding
-            icon.width: PlasmaCore.Units.iconSizes.smallMedium
-            icon.height: PlasmaCore.Units.iconSizes.smallMedium
+            icon.width: Kirigami.Units.iconSizes.smallMedium
+            icon.height: Kirigami.Units.iconSizes.smallMedium
             icon.name: "compass"
             text: i18n("Places") //Explore?
         }
@@ -167,7 +168,7 @@ PlasmaExtras.PlasmoidHeading {
     Behavior on height {
         enabled: kickoff.expanded
         NumberAnimation {
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.InQuad
         }
     }

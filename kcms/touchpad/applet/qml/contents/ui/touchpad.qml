@@ -12,6 +12,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.plasma5support 2.0 as P5Support
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.plasmoid 2.0
 
@@ -55,8 +56,8 @@ PlasmoidItem {
     }
 
    compactRepresentation: PlasmaCore.IconItem {
-        implicitWidth: PlasmaCore.Units.iconSizes.small
-        implicitHeight: PlasmaCore.Units.iconSizes.small
+        implicitWidth: Kirigami.Units.iconSizes.small
+        implicitHeight: Kirigami.Units.iconSizes.small
 
         source: plasmoid.icon
         active: mousearea.containsMouse
@@ -82,7 +83,7 @@ PlasmoidItem {
 
         PlasmaExtras.PlaceholderMessage {
             anchors.centerIn: parent
-            width: parent.width - (PlasmaCore.Units.largeSpacing * 8)
+            width: parent.width - (Kirigami.Units.gridUnit * 8)
             text: root.toolTipSubText
             iconName: plasmoid.icon
         }
