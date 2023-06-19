@@ -8,7 +8,7 @@
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@gmail.com>, 2009, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
 #
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en http://trasno.gpul.org
@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-28 00:51+0000\n"
-"PO-Revision-Date: 2019-10-19 22:15+0200\n"
+"PO-Revision-Date: 2023-06-18 14:41+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -148,15 +148,15 @@ msgstr "A tecla Hyper está inactiva."
 msgid ""
 "The Alt Graph key has been locked and is now active for all of the following "
 "keypresses."
-msgstr "A tecla AltGr bloqueouse e está activa para as seguintes pulsacións."
+msgstr "A tecla Alt Gr bloqueouse e está activa para as seguintes pulsacións."
 
 #: kaccess.cpp:112
 msgid "The Alt Graph key is now active."
-msgstr "A tecla AltGr está activa."
+msgstr "A tecla Alt Gr está activa."
 
 #: kaccess.cpp:113
 msgid "The Alt Graph key is now inactive."
-msgstr "A tecla AltGr está inactiva."
+msgstr "A tecla Alt Gr está inactiva."
 
 #: kaccess.cpp:114
 msgid "The Num Lock key has been activated."
@@ -196,7 +196,7 @@ msgstr "Accesibilidade"
 #: kaccess.cpp:615
 #, kde-format
 msgid "AltGraph"
-msgstr "AltGr"
+msgstr "Alt Gr"
 
 #: kaccess.cpp:617
 #, kde-format
@@ -231,7 +231,7 @@ msgstr "Cambiar a configuración sen preguntar"
 #: kaccess.cpp:673
 #, kde-format
 msgid "Show This Confirmation Dialog"
-msgstr "Mostrar este diálogo de confirmación"
+msgstr "Amosar este diálogo de confirmación"
 
 #: kaccess.cpp:674
 #, kde-format
@@ -452,9 +452,7 @@ msgid "Mouse keys has been disabled."
 msgstr "Desactiváronse as teclas de rato."
 
 #: main.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "Name for kaccess shortcuts category"
-#| msgid "Accessibility"
+#, kde-format
 msgid "Accessibility"
 msgstr "Accesibilidade"
 

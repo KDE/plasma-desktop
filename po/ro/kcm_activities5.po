@@ -1,25 +1,26 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-24 00:47+0000\n"
-"PO-Revision-Date: 2021-07-25 13:44+0100\n"
+"PO-Revision-Date: 2023-06-18 19:05+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: ExtraActivitiesInterface.cpp:34 MainConfigurationWidget.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activities"
 msgid "Activities"
 msgstr "Activități"
 
@@ -30,12 +31,16 @@ msgid "Delete Activity"
 msgstr "Șterge activitatea"
 
 #: imports/activitysettings.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to delete '%1'?"
 msgid "Are you sure you want to delete '%1'?"
 msgstr "Sigur doriți să ștergeți „%1”?"
 
 #: imports/dialog.cpp:82
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Error loading the QML files. Check your installation.\n"
+#| "Missing %1"
 msgid ""
 "Error loading the QML files. Check your installation.\n"
 "Missing %1"
@@ -44,7 +49,8 @@ msgstr ""
 "Lipsește %1"
 
 #: imports/dialog.cpp:146
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
 msgid "General"
 msgstr "Generale"
 
@@ -55,34 +61,42 @@ msgid "Create a New Activity"
 msgstr "Creează activitate nouă"
 
 #: imports/dialog.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activity Settings"
 msgctxt "@title:window"
 msgid "Activity Settings"
 msgstr "Configurări activitate"
 
 #: imports/dialog.cpp:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Create"
 msgctxt "@action:button"
 msgid "Create"
 msgstr "Creează"
 
 #: imports/qml/activityDialog/GeneralTab.qml:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
 msgid "Icon:"
 msgstr "Pictogramă:"
 
 #: imports/qml/activityDialog/GeneralTab.qml:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name:"
 msgid "Name:"
 msgstr "Denumire:"
 
 #: imports/qml/activityDialog/GeneralTab.qml:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description:"
 msgid "Description:"
 msgstr "Descriere:"
 
 #: imports/qml/activityDialog/GeneralTab.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Privacy:"
 msgid "Privacy:"
 msgstr "Intimitate:"
 
@@ -94,34 +108,39 @@ msgstr "Nu duce evidența utilizării pentru această activitate"
 #: imports/qml/activityDialog/GeneralTab.qml:75
 #, kde-format
 msgid "Shortcut for switching:"
-msgstr "Scurtătură pentru comutare:"
+msgstr "Scurtătură pentru schimbare:"
 
 #. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:10
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "How many months keep the activity history"
 msgid "How many months keep the activity history"
 msgstr "Câte luni să fie păstrat istoricul activității"
 
 #. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Which data to keep in activity history"
 msgid "Which data to keep in activity history"
 msgstr "Ce date să fie păstrate în istoricul activității"
 
 #. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "List of Applications whose activity history to save"
 msgid "List of Applications whose activity history to save"
 msgstr "Lista aplicațiilor al căror istoric de activitate să fie salvat"
 
 #. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "List of Applications whose activity history not to save"
 msgid "List of Applications whose activity history not to save"
 msgstr "Lista aplicațiilor al căror istoric de activitate să nu fie salvat"
 
 #: MainConfigurationWidget.cpp:33
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Switching"
 msgid "Switching"
 msgstr "Schimbare"
 
@@ -143,37 +162,45 @@ msgid "Create New…"
 msgstr "Creează nouă…"
 
 #: SwitchingTab.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activity switching"
 msgid "Activity switching"
 msgstr "Schimbare activități"
 
 #: SwitchingTab.cpp:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Walk through activities"
 msgctxt "@action"
 msgid "Walk through activities"
 msgstr "Traversează activitățile"
 
 #: SwitchingTab.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Walk through activities (Reverse)"
 msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "Traversează activitățile (invers)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
 #: ui/SwitchingTabBase.ui:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remember for each activity (needs restart)"
 msgid "Remember for each activity (needs restart)"
 msgstr "Reține pentru fiecare activitate (necesită repornire)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/SwitchingTabBase.ui:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Current virtual desktop:"
 msgid "Current virtual desktop:"
 msgstr "Biroul virtual actual:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_1)
 #: ui/SwitchingTabBase.ui:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shortcuts:"
 msgid "Shortcuts:"
 msgstr "Scurtături:"
 

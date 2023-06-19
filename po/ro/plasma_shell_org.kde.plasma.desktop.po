@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-28 02:41+0000\n"
-"PO-Revision-Date: 2022-12-28 21:26+0000\n"
+"PO-Revision-Date: 2023-04-10 18:41+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -107,7 +107,7 @@ msgstr "Licență:"
 #: contents/configuration/AboutPlugin.qml:148
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "Vezi textul licenței"
 
 #: contents/configuration/AboutPlugin.qml:160
 msgid "Authors"
@@ -123,7 +123,7 @@ msgstr "Traducători"
 
 #: contents/configuration/AboutPlugin.qml:195
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Raportează defect…"
 
 #: contents/configuration/AppletConfiguration.qml:56
 msgid "Keyboard Shortcuts"
@@ -208,8 +208,6 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
-#, fuzzy
-#| msgid "About"
 msgctxt "@title"
 msgid "About"
 msgstr "Despre"
@@ -349,6 +347,7 @@ msgstr "Scurtătură"
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:213
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
+"Apăsați această scurtătură de taste pentru a muta focalizarea asupra panoului"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum height."
@@ -399,7 +398,7 @@ msgstr "Trage pentru mutare"
 #: contents/configuration/panelconfiguration/ToolBar.qml:261
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
-msgstr ""
+msgstr "Folosiți tastele cu săgeți pentru a muta panoul"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel width:"
@@ -433,10 +432,8 @@ msgid "Move to Screen %1"
 msgstr "Mută pe ecranul %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
-#, fuzzy
-#| msgid "Remove Panel"
 msgid "Remove Desktop"
-msgstr "Elimină panoul"
+msgstr "Elimină biroul"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
 msgid "%1 (primary)"
