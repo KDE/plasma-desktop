@@ -19,7 +19,7 @@ Item {
     property string tip;
     property string hint;
     signal triggered(variant button);
-    property int iconSize: Kirigami.Units.roundedIconSize(Math.min(width, height))
+    property int iconSize: Kirigami.Units.iconSizes.roundedIconSize(Math.min(width, height))
 
     opacity: 'disable' == hint ? 0.3 : 1
 

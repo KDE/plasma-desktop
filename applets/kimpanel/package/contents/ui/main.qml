@@ -85,7 +85,7 @@ PlasmoidItem {
                 } else {
                     size = Math.min(gridThickness, smallIconSize)
                 }
-                return Kirigami.Units.roundedIconSize(Math.min(size, Kirigami.Units.iconSizes.enormous))
+                return Kirigami.Units.iconSizes.roundedIconSize(Math.min(size, Kirigami.Units.iconSizes.enormous))
             }
 
             model: ListModel {

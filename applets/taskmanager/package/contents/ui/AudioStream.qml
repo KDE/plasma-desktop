@@ -156,7 +156,7 @@ MouseArea {
 
                 PropertyChanges {
                     target: audioStreamIconBox
-                    width: Kirigami.Units.roundedIconSize(Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium))
+                    width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium))
                 }
 
                 PropertyChanges {
@@ -182,7 +182,7 @@ MouseArea {
                     target: audioStreamIconBox
 
                     anchors.topMargin: taskFrame.margins.top
-                    width: Kirigami.Units.roundedIconSize(Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium))
+                    width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium))
                 }
 
                 PropertyChanges {
