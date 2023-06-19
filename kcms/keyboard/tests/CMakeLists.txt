@@ -43,6 +43,16 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.1.1.xml ${CMAKE_CURRENT_B
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.bad.xml ${CMAKE_CURRENT_BINARY_DIR}/config/base.bad.xml COPYONLY)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.xml ${CMAKE_CURRENT_BINARY_DIR}/config/base.xml COPYONLY)
 
+add_executable(layout_memory_persister_test layout_memory_persister_test.cpp ../layout_memory.cpp ../layout_memory_persister.cpp)
+add_test(NAME kcm-keyboard-keyboard_memory_persister_test COMMAND layout_memory_persister_test)
+add_dependencies(layout_memory_persister_test kded_keyboard)
+ecm_mark_nongui_executable(layout_memory_persister_test)
+ecm_mark_as_test(layout_memory_persister_test)
+target_link_libraries(layout_memory_persister_test
+                      kcm_keyboard_static
+                      Qt::Test
+)
+
 if( X11_XTest_FOUND )
    add_executable(keyboard_daemon_test keyboard_daemon_test.cpp ../keyboard_daemon.cpp ../layout_memory.cpp ../layout_memory_persister.cpp ../flags.cpp ../udev_helper.cpp ../x11_helper.cpp ../xkb_helper.cpp ../xinput_helper.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../keyboard_hardware.cpp ../bindings.cpp ../debug.cpp ../layoutnames.cpp)
    add_test(NAME kcm-keyboard-keyboard_daemon_test COMMAND keyboard_daemon_test)

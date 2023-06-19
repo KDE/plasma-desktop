@@ -6,6 +6,7 @@
 
 #include <QApplication>
 #include <QTest>
+#include <QTemporaryFile>
 
 #include "../keyboard_config.h"
 #include "../layout_memory.h"
@@ -28,8 +29,8 @@ class LayoutMemoryPersisterTest : public QObject
 {
     Q_OBJECT
 
-    QString path;
-    KeyboardConfig keyboardConfig;
+    QTemporaryFile file;
+    KeyboardConfig *keyboardConfig;
     TestLayoutMemory *layoutMemory;
     LayoutMemoryPersister *layoutMemoryPersister;
 
@@ -43,18 +44,15 @@ public:
         , layoutUnit2("yy", "var1")
         , layoutUnit3("zz", "var2")
     {
+        Q_ASSERT(file.open());
     }
 
 private Q_SLOTS:
     void initTestCase()
     {
-        path = "keyboard_memory_test.xml";
-        QFile(path).remove();
-
-        layoutMemory = new TestLayoutMemory(keyboardConfig);
+        keyboardConfig = new KeyboardConfig(this);
+        layoutMemory = new TestLayoutMemory(*keyboardConfig);
         layoutMemoryPersister = new LayoutMemoryPersister(*layoutMemory);
-
-        //    	QFile(path).remove();
     }
 
     void cleanupTestCase()
@@ -65,32 +63,28 @@ private Q_SLOTS:
 
     void testSaveNA()
     {
-        QFile file(path);
-
-        keyboardConfig.switchingPolicy = KeyboardConfig::SWITCH_POLICY_WINDOW;
+        keyboardConfig->setSwitchingPolicy(KeyboardConfig::SWITCH_POLICY_WINDOW);
         QVERIFY(!layoutMemoryPersister->saveToFile(file));
-        QVERIFY(QFile(path).size() == 0);
+        QVERIFY(file.size() == 0);
 
         QVERIFY(!layoutMemoryPersister->restoreFromFile(file));
     }
 
     void testSaveGlobal()
     {
-        QFile file(path);
+        file.resize(0);
 
-        keyboardConfig.switchingPolicy = KeyboardConfig::SWITCH_POLICY_GLOBAL;
+        keyboardConfig->setSwitchingPolicy(KeyboardConfig::SWITCH_POLICY_GLOBAL);
         layoutMemoryPersister->setGlobalLayout(layoutUnit1);
         QVERIFY(layoutMemoryPersister->saveToFile(file));
-        QVERIFY(QFile(path).size() > 0);
-        //        file.close();
+        QVERIFY(file.size() > 0);
 
-        keyboardConfig.layouts.clear();
+        keyboardConfig->layouts.clear();
 
         QVERIFY(layoutMemoryPersister->restoreFromFile(file));
         QVERIFY(!layoutMemoryPersister->getGlobalLayout().isValid());
 
-        //        file.close();
-        keyboardConfig.layouts << layoutUnit1;
+        keyboardConfig->layouts << layoutUnit1;
         QVERIFY(layoutMemoryPersister->restoreFromFile(file));
         QVERIFY(layoutUnit1.isValid());
         QVERIFY(layoutMemoryPersister->getGlobalLayout().isValid());
@@ -99,19 +93,17 @@ private Q_SLOTS:
 
     void testSaveByApp()
     {
-        QFile file(path);
+        file.resize(0);
 
-        keyboardConfig.switchingPolicy = KeyboardConfig::SWITCH_POLICY_APPLICATION;
+        keyboardConfig->setSwitchingPolicy(KeyboardConfig::SWITCH_POLICY_APPLICATION);
 
-        layoutMemoryPersister->setGlobalLayout(LayoutUnit());
         layoutMemory->getLayoutMap().clear();
-
-        keyboardConfig.layouts.clear();
-        keyboardConfig.layouts << layoutUnit1 << layoutUnit2;
+        keyboardConfig->layouts.clear();
+        keyboardConfig->layouts << layoutUnit1 << layoutUnit2;
 
         LayoutSet layoutSet1;
         layoutSet1.layouts << layoutUnit1 << layoutUnit2;
-        layoutSet1.currentLayout = layoutUnit1;
+        layoutSet1.currentLayout = layoutUnit2;
         layoutMemory->getLayoutMap().insert(QString("app1"), layoutSet1);
 
         LayoutSet layoutSet2;
@@ -120,8 +112,7 @@ private Q_SLOTS:
         layoutMemory->getLayoutMap().insert(QString("app2"), layoutSet2);
 
         QVERIFY(layoutMemoryPersister->saveToFile(file));
-        QVERIFY(QFile(path).size() > 0);
-        file.close();
+        QVERIFY(file.size() > 0);
 
         layoutMemory->getLayoutMap().clear();
         QVERIFY(!layoutMemory->getLayoutMap().value("app1").isValid());
@@ -132,9 +123,8 @@ private Q_SLOTS:
         QCOMPARE(layoutMemory->getLayoutMap().value("app1"), layoutSet1);
         QVERIFY(!layoutMemory->getLayoutMap().value("app2").isValid());
 
-        keyboardConfig.layouts << layoutUnit3;
+        keyboardConfig->layouts << layoutUnit3;
 
-        file.close();
         QVERIFY(layoutMemoryPersister->restoreFromFile(file));
         QVERIFY(!layoutMemoryPersister->getGlobalLayout().isValid());
         QCOMPARE(layoutMemory->getLayoutMap().value("app1"), layoutSet1);
