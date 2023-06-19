@@ -246,8 +246,8 @@ Item {
 
                 height: root.useListViewMode
                                 ? parent.height
-                                // One gridUnit per line of text, plus another one for paddings
-                                : icon.height + ((label.lineCount + 1) * Kirigami.Units.gridUnit)
+                                // the smallSpacings are for padding
+                                : icon.height + (Kirigami.Units.gridUnit * label.lineCount) + (Kirigami.Units.smallSpacing * 3)
 
                 PlasmaCore.IconItem {
                     id: icon

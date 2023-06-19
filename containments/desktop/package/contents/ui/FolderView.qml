@@ -716,7 +716,8 @@ FocusScope {
                             + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                             listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2;
                     } else {
-                        var iconHeight = iconSize + (Kirigami.Units.gridUnit * (plasmoid.configuration.textLines + 1));
+                        // the smallSpacings are for padding
+                        var iconHeight = iconSize + (Kirigami.Units.gridUnit * plasmoid.configuration.textLines) + (Kirigami.Units.smallSpacing * 3);
                         if (root.isContainment && isRootView && scrollArea.viewportHeight > 0) {
                             var extraHeight = calcExtraSpacing(iconHeight, scrollArea.viewportHeight);
                             return iconHeight + extraHeight;
