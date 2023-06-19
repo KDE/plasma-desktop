@@ -1,7 +1,6 @@
 # translation of kcmkclock.po to Galician
 # Galician translation of kcmkclock.
 # Copyright (C) 2002, 2003, 2004, 2006, 2008, 2009 Free Software Foundation, Inc.
-#
 # Xabi García <xabigf@gmx.net>, 2002, 2003.
 # <xabigf@gmx.net>, 2002.
 # Xabier García Feal <xabigf@gmx.net>, 2004.
@@ -11,20 +10,22 @@
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2013.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-04 02:17+0000\n"
-"PO-Revision-Date: 2019-01-15 20:22+0100\n"
+"PO-Revision-Date: 2023-06-18 14:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -80,8 +81,7 @@ msgstr "Fuso horario local actual:"
 
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
 #: dateandtime.ui:161
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
 msgstr "Buscar…"
 
@@ -191,7 +191,7 @@ msgstr "Paul Campbell"
 #: main.cpp:50
 #, kde-format
 msgid "Current Maintainer"
-msgstr "Mantenedor actual"
+msgstr "Mantemento actual."
 
 #: main.cpp:51
 #, kde-format

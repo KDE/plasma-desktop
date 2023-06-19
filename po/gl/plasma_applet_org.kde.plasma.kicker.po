@@ -1,16 +1,16 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Marce Villarino <mvillarino@kde-espana.es>, 2013, 2014.
 # Miguel Branco <mgl.branco@gmail.com>, 2013.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-09 02:14+0000\n"
-"PO-Revision-Date: 2019-10-19 21:50+0200\n"
+"PO-Revision-Date: 2023-06-18 19:33+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -48,7 +48,7 @@ msgstr "Na actividade actual"
 #: package/contents/ui/code/tools.js:134
 #, kde-format
 msgid "Show in Favorites"
-msgstr "Mostrar nos favoritos"
+msgstr "Amosar nos favoritos"
 
 #: package/contents/ui/ConfigGeneral.qml:45
 #, kde-format
@@ -56,9 +56,7 @@ msgid "Icon:"
 msgstr "Icona:"
 
 #: package/contents/ui/ConfigGeneral.qml:125
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Open icon chooser dialog"
-#| msgid "Choose..."
+#, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Escoller…"
@@ -72,7 +70,7 @@ msgstr "Borrar a icona"
 #: package/contents/ui/ConfigGeneral.qml:148
 #, kde-format
 msgid "Show applications as:"
-msgstr "Mostrar as aplicacións como:"
+msgstr "Amosar as aplicacións como:"
 
 #: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
@@ -112,12 +110,12 @@ msgstr "Desaniñar os menús subordinados a un único nivel"
 #: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgid "Show icons on the root level of the menu"
-msgstr "Mostrar as iconas no nivel raíz do menú"
+msgstr "Amosar as iconas no nivel raíz do menú"
 
 #: package/contents/ui/ConfigGeneral.qml:188
 #, kde-format
 msgid "Show categories:"
-msgstr "Mostrar as categorías:"
+msgstr "Amosar as categorías:"
 
 #: package/contents/ui/ConfigGeneral.qml:191
 #, kde-format
@@ -130,18 +128,14 @@ msgid "Often used applications"
 msgstr "Aplicacións usadas habitualmente"
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Recent documents"
+#, kde-format
 msgid "Recent files"
-msgstr "Documentos recentes"
+msgstr "Ficheiros recentes"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
-#| msgid "Often used"
+#, kde-format
 msgid "Often used files"
-msgstr "Usados habitualmente"
+msgstr "Ficheiros usados habitualmente"
 
 #: package/contents/ui/ConfigGeneral.qml:206
 #, kde-format
@@ -183,8 +177,7 @@ msgid "Searching for '%1'"
 msgstr "Buscando «%1»"
 
 #: package/contents/ui/DashboardRepresentation.qml:288
-#, fuzzy, kde-format
-#| msgid "Type to search..."
+#, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Escriba para buscar…"
@@ -206,8 +199,7 @@ msgid "Apps & Docs"
 msgstr "Aplicativos e documentos"
 
 #: package/contents/ui/main.qml:255
-#, fuzzy, kde-format
-#| msgid "Edit Applications..."
+#, kde-format
 msgid "Edit Applications…"
 msgstr "Editar as aplicacións…"
 

@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2020-01-05 18:37+0100\n"
+"PO-Revision-Date: 2023-06-18 21:32+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,10 +29,9 @@ msgid "Your emails"
 msgstr "adrian@chaves.io"
 
 #: actions.cpp:19
-#, fuzzy, kde-format
-#| msgid "Touchpad KCM"
+#, kde-format
 msgid "Touchpad"
-msgstr "KCM de áreas táctiles"
+msgstr "Área táctil"
 
 #: actions.cpp:22
 #, kde-format
@@ -142,11 +141,9 @@ msgstr ""
 "Premer os botóns esquerdo e dereito á vez envía un clic do botón central."
 
 #: kcm/libinput/touchpad.qml:254
-#, fuzzy, kde-format
-#| msgctxt "Pointer acceleration"
-#| msgid "Acceleration:"
+#, kde-format
 msgid "Pointer acceleration:"
-msgstr "Aceleración:"
+msgstr "Aceleración do punteiro:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
@@ -303,22 +300,21 @@ msgid "Disable horizontal scrolling"
 msgstr "Desactivar o desprazamento horizontal"
 
 #: kcm/libinput/touchpad.qml:683
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgid "Scrolling speed:"
-msgstr "Desprazamento:"
+msgstr "Velocidade de desprazamento:"
 
 #: kcm/libinput/touchpad.qml:732
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "Máis amodo"
 
 #: kcm/libinput/touchpad.qml:738
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "Veloz"
 
 #: kcm/libinput/touchpad.qml:747
 #, kde-format
@@ -467,7 +463,7 @@ msgstr ""
 #: kcm/xlib/touchpadconfigxlib.cpp:102
 #, kde-format
 msgid "Show active settings"
-msgstr "Mostrar a configuración activa"
+msgstr "Amosar a configuración activa"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:139
 #, kde-format
@@ -489,8 +485,7 @@ msgstr "Activar ou desactivar a área táctil"
 #. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
 #. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
 #: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
-#, fuzzy, kde-format
-#| msgid "Configure..."
+#, kde-format
 msgid "Configure…"
 msgstr "Configurar…"
 
@@ -897,7 +892,7 @@ msgstr ""
 #: kcm/xlib/ui/scroll.ui:233
 #, kde-format
 msgid " scrolls/sec"
-msgstr " despr/seg"
+msgstr " desprazamentos/s"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/ui/scroll.ui:240
@@ -918,7 +913,7 @@ msgstr ""
 #: kcm/xlib/ui/scroll.ui:256
 #, kde-format
 msgid " scrolls/sec²"
-msgstr " despr/seg²"
+msgstr " desprazamentos/s²"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #: kcm/xlib/ui/scroll.ui:263
@@ -950,7 +945,7 @@ msgid ""
 "Moving your finger in clockwise circles around the center of the touchpad\n"
 "will scroll down and counter clockwise motion will scroll up"
 msgstr ""
-"O desprazamento actívase cando comeza a arrastras na zona indicada.\n"
+"O desprazamento actívase cando comeza a arrastras na zona detonante.\n"
 "Ao debuxar círculos co dedo no sentido das agullas do reloxo ao redor do\n"
 "centro da área táctil, producirase desprazamento cara abaixo. No sentido\n"
 "oposto producirase desprazamento cara arriba."
@@ -967,13 +962,13 @@ msgstr "Desprazamento circular"
 #, kde-format
 msgctxt "Circular scrolling"
 msgid "Trigger region:"
-msgstr "Zona inicial:"
+msgstr "Zona detonante:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
 #: kcm/xlib/ui/scroll.ui:316
 #, kde-format
 msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr "Zona da área táctil na que iniciar o desprazamento circular."
+msgstr "Zona detonante da área táctil para iniciar un desprazamento circular."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm/xlib/ui/scroll.ui:323
