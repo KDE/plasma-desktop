@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-20 02:58+0000\n"
 "PO-Revision-Date: 2014-12-28 11:53+0000\n"
 "Last-Translator: Ajla Alic <aalic2@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: contents/activitymanager/ActivityItem.qml:209
+#: contents/activitymanager/ActivityItem.qml:208
 msgid "Currently being used"
 msgstr ""
 
-#: contents/activitymanager/ActivityItem.qml:249
+#: contents/activitymanager/ActivityItem.qml:248
 #, fuzzy
 #| msgid "Stopped activities:"
 msgid ""
@@ -32,27 +32,27 @@ msgid ""
 "this activity"
 msgstr "Stopirane aktivnosti:"
 
-#: contents/activitymanager/ActivityItem.qml:279
+#: contents/activitymanager/ActivityItem.qml:278
 msgid ""
 "Show also\n"
 "in this activity"
 msgstr ""
 
-#: contents/activitymanager/ActivityItem.qml:341
+#: contents/activitymanager/ActivityItem.qml:340
 msgid "Configure"
 msgstr ""
 
-#: contents/activitymanager/ActivityItem.qml:360
+#: contents/activitymanager/ActivityItem.qml:359
 #, fuzzy
 #| msgid "Stopped activities:"
 msgid "Stop activity"
 msgstr "Stopirane aktivnosti:"
 
-#: contents/activitymanager/ActivityList.qml:143
+#: contents/activitymanager/ActivityList.qml:142
 msgid "Stopped activities:"
 msgstr "Stopirane aktivnosti:"
 
-#: contents/activitymanager/ActivityManager.qml:127
+#: contents/activitymanager/ActivityManager.qml:121
 #, fuzzy
 #| msgid "Create activity..."
 msgid "Create activity…"
@@ -62,13 +62,13 @@ msgstr "Kreiraj aktivnost..."
 msgid "Activities"
 msgstr "Aktivnosti"
 
-#: contents/activitymanager/StoppedActivityItem.qml:138
+#: contents/activitymanager/StoppedActivityItem.qml:139
 #, fuzzy
 #| msgid "Create activity..."
 msgid "Configure activity"
 msgstr "Kreiraj aktivnost..."
 
-#: contents/activitymanager/StoppedActivityItem.qml:155
+#: contents/activitymanager/StoppedActivityItem.qml:156
 msgid "Delete"
 msgstr "Obriši"
 
@@ -84,7 +84,7 @@ msgstr ""
 msgid "View Error Details…"
 msgstr ""
 
-#: contents/applet/CompactApplet.qml:72
+#: contents/applet/CompactApplet.qml:73
 msgid "Open %1"
 msgstr ""
 
@@ -102,34 +102,34 @@ msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:127
+#: contents/configuration/AboutPlugin.qml:130
 msgid "Copyright"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
+#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:93
 msgid "License:"
 msgstr "Dozvola:"
 
-#: contents/configuration/AboutPlugin.qml:148
+#: contents/configuration/AboutPlugin.qml:151
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:162
+#: contents/configuration/AboutPlugin.qml:165
 #, fuzzy
 #| msgid "Author:"
 msgid "Authors"
 msgstr "Autor:"
 
-#: contents/configuration/AboutPlugin.qml:173
+#: contents/configuration/AboutPlugin.qml:176
 msgid "Credits"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:185
+#: contents/configuration/AboutPlugin.qml:188
 msgid "Translators"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:205
 msgid "Report a Bug…"
 msgstr ""
 
@@ -160,7 +160,7 @@ msgid "Apply"
 msgstr "Primjeni"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:179
+#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Otkaži"
 
@@ -481,27 +481,27 @@ msgstr "Dodaj razmaknicu"
 msgid "More Options…"
 msgstr "Više podešavanja..."
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:222
+#: contents/configuration/panelconfiguration/ToolBar.qml:224
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:261
+#: contents/configuration/panelconfiguration/ToolBar.qml:263
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:282
+#: contents/configuration/panelconfiguration/ToolBar.qml:284
 msgid "Panel width:"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:282
+#: contents/configuration/panelconfiguration/ToolBar.qml:284
 #, fuzzy
 #| msgid "Panel Alignment"
 msgid "Panel height:"
 msgstr "Ravnanje panela"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:402
+#: contents/configuration/panelconfiguration/ToolBar.qml:404
 #: contents/configuration/ShellContainmentConfiguration.qml:43
 msgid "Close"
 msgstr "ZatvorI"
@@ -537,23 +537,23 @@ msgstr "Ukloni panel"
 msgid "%1 (primary)"
 msgstr ""
 
-#: contents/explorer/AppletAlternatives.qml:63
+#: contents/explorer/AppletAlternatives.qml:64
 #, fuzzy
 #| msgid "Alternatives"
 msgid "Alternative Widgets"
 msgstr "Alternative"
 
-#: contents/explorer/AppletAlternatives.qml:163
+#: contents/explorer/AppletAlternatives.qml:164
 msgid "Switch"
 msgstr "Prekidač"
 
-#: contents/explorer/AppletDelegate.qml:177
+#: contents/explorer/AppletDelegate.qml:178
 #, fuzzy
 #| msgid "Uninstall"
 msgid "Undo uninstall"
 msgstr "Deinstaliraj"
 
-#: contents/explorer/AppletDelegate.qml:178
+#: contents/explorer/AppletDelegate.qml:179
 #, fuzzy
 #| msgid "Uninstall"
 msgid "Uninstall widget"
@@ -572,31 +572,31 @@ msgid "Uninstall"
 msgstr "Deinstaliraj"
 
 #: contents/explorer/WidgetExplorer.qml:118
-#: contents/explorer/WidgetExplorer.qml:193
+#: contents/explorer/WidgetExplorer.qml:192
 #, fuzzy
 #| msgid "Widgets"
 msgid "All Widgets"
 msgstr "Grafičke kontrole"
 
-#: contents/explorer/WidgetExplorer.qml:145
+#: contents/explorer/WidgetExplorer.qml:144
 msgid "Widgets"
 msgstr "Grafičke kontrole"
 
-#: contents/explorer/WidgetExplorer.qml:153
+#: contents/explorer/WidgetExplorer.qml:152
 #, fuzzy
 #| msgid "Get new widgets"
 msgid "Get New Widgets…"
 msgstr "Dobavi nove grafičke elemente"
 
-#: contents/explorer/WidgetExplorer.qml:204
+#: contents/explorer/WidgetExplorer.qml:203
 msgid "Categories"
 msgstr "Kategorije"
 
-#: contents/explorer/WidgetExplorer.qml:284
+#: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets matched the search terms"
 msgstr ""
 
-#: contents/explorer/WidgetExplorer.qml:284
+#: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr ""
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-20 02:58+0000\n"
 "PO-Revision-Date: 2022-12-28 21:26+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: contents/activitymanager/ActivityItem.qml:209
+#: contents/activitymanager/ActivityItem.qml:208
 msgid "Currently being used"
 msgstr "Folosită acum"
 
-#: contents/activitymanager/ActivityItem.qml:249
+#: contents/activitymanager/ActivityItem.qml:248
 msgid ""
 "Move to\n"
 "this activity"
@@ -30,7 +30,7 @@ msgstr ""
 "Mută la\n"
 "această activitate"
 
-#: contents/activitymanager/ActivityItem.qml:279
+#: contents/activitymanager/ActivityItem.qml:278
 msgid ""
 "Show also\n"
 "in this activity"
@@ -38,19 +38,19 @@ msgstr ""
 "Arată și în\n"
 "această activitate"
 
-#: contents/activitymanager/ActivityItem.qml:341
+#: contents/activitymanager/ActivityItem.qml:340
 msgid "Configure"
 msgstr "Configurează"
 
-#: contents/activitymanager/ActivityItem.qml:360
+#: contents/activitymanager/ActivityItem.qml:359
 msgid "Stop activity"
 msgstr "Oprește activitatea"
 
-#: contents/activitymanager/ActivityList.qml:143
+#: contents/activitymanager/ActivityList.qml:142
 msgid "Stopped activities:"
 msgstr "Activități oprite:"
 
-#: contents/activitymanager/ActivityManager.qml:127
+#: contents/activitymanager/ActivityManager.qml:121
 msgid "Create activity…"
 msgstr "Creează activitate…"
 
@@ -58,11 +58,11 @@ msgstr "Creează activitate…"
 msgid "Activities"
 msgstr "Activități"
 
-#: contents/activitymanager/StoppedActivityItem.qml:138
+#: contents/activitymanager/StoppedActivityItem.qml:139
 msgid "Configure activity"
 msgstr "Configurează activitatea"
 
-#: contents/activitymanager/StoppedActivityItem.qml:155
+#: contents/activitymanager/StoppedActivityItem.qml:156
 msgid "Delete"
 msgstr "Șterge"
 
@@ -78,7 +78,7 @@ msgstr "Copiază în clipboard"
 msgid "View Error Details…"
 msgstr "Vezi detalii eroare…"
 
-#: contents/applet/CompactApplet.qml:72
+#: contents/applet/CompactApplet.qml:73
 msgid "Open %1"
 msgstr "Deschide %1"
 
@@ -96,32 +96,32 @@ msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Deschide saitul %1"
 
-#: contents/configuration/AboutPlugin.qml:127
+#: contents/configuration/AboutPlugin.qml:130
 msgid "Copyright"
 msgstr "Drept de autor"
 
-#: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
+#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:93
 msgid "License:"
 msgstr "Licență:"
 
-#: contents/configuration/AboutPlugin.qml:148
+#: contents/configuration/AboutPlugin.qml:151
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:162
+#: contents/configuration/AboutPlugin.qml:165
 msgid "Authors"
 msgstr "Autori"
 
-#: contents/configuration/AboutPlugin.qml:173
+#: contents/configuration/AboutPlugin.qml:176
 msgid "Credits"
 msgstr "Mulțumiri"
 
-#: contents/configuration/AboutPlugin.qml:185
+#: contents/configuration/AboutPlugin.qml:188
 msgid "Translators"
 msgstr "Traducători"
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:205
 msgid "Report a Bug…"
 msgstr ""
 
@@ -150,7 +150,7 @@ msgid "Apply"
 msgstr "Aplică"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:179
+#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Renunță"
 
@@ -476,25 +476,25 @@ msgstr "Adaugă spațiator"
 msgid "More Options…"
 msgstr "Opțiuni suplimentare…"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:222
+#: contents/configuration/panelconfiguration/ToolBar.qml:224
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
 msgstr "Trage pentru mutare"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:261
+#: contents/configuration/panelconfiguration/ToolBar.qml:263
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:282
+#: contents/configuration/panelconfiguration/ToolBar.qml:284
 msgid "Panel width:"
 msgstr "Lățime panou:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:282
+#: contents/configuration/panelconfiguration/ToolBar.qml:284
 msgid "Panel height:"
 msgstr "Înălțime panou:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:402
+#: contents/configuration/panelconfiguration/ToolBar.qml:404
 #: contents/configuration/ShellContainmentConfiguration.qml:43
 msgid "Close"
 msgstr "Închide"
@@ -531,19 +531,19 @@ msgstr "Elimină panoul"
 msgid "%1 (primary)"
 msgstr "%1 (primar)"
 
-#: contents/explorer/AppletAlternatives.qml:63
+#: contents/explorer/AppletAlternatives.qml:64
 msgid "Alternative Widgets"
 msgstr "Controale grafice alternative"
 
-#: contents/explorer/AppletAlternatives.qml:163
+#: contents/explorer/AppletAlternatives.qml:164
 msgid "Switch"
 msgstr "Schimbă"
 
-#: contents/explorer/AppletDelegate.qml:177
+#: contents/explorer/AppletDelegate.qml:178
 msgid "Undo uninstall"
 msgstr "Desfă dezinstalarea"
 
-#: contents/explorer/AppletDelegate.qml:178
+#: contents/explorer/AppletDelegate.qml:179
 msgid "Uninstall widget"
 msgstr "Dezinstalează controlul grafic"
 
@@ -560,27 +560,27 @@ msgid "Uninstall"
 msgstr "Dezinstalează"
 
 #: contents/explorer/WidgetExplorer.qml:118
-#: contents/explorer/WidgetExplorer.qml:193
+#: contents/explorer/WidgetExplorer.qml:192
 msgid "All Widgets"
 msgstr "Toate controalele grafice"
 
-#: contents/explorer/WidgetExplorer.qml:145
+#: contents/explorer/WidgetExplorer.qml:144
 msgid "Widgets"
 msgstr "Controale grafice"
 
-#: contents/explorer/WidgetExplorer.qml:153
+#: contents/explorer/WidgetExplorer.qml:152
 msgid "Get New Widgets…"
 msgstr "Obține controale noi…"
 
-#: contents/explorer/WidgetExplorer.qml:204
+#: contents/explorer/WidgetExplorer.qml:203
 msgid "Categories"
 msgstr "Categorii"
 
-#: contents/explorer/WidgetExplorer.qml:284
+#: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets matched the search terms"
 msgstr "Niciun control nu se potrivește termenilor căutării"
 
-#: contents/explorer/WidgetExplorer.qml:284
+#: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "Niciun control grafic disponibil"
 

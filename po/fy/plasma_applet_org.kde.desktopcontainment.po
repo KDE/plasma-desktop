@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-20 02:58+0000\n"
 "PO-Revision-Date: 2009-06-26 00:57+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -24,7 +24,7 @@ msgid "Location"
 msgstr "Lokaasje"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:421
+#: package/contents/ui/FolderViewLayer.qml:422
 #, fuzzy, kde-format
 msgid "Icons"
 msgstr "Byldkaikes"
@@ -34,63 +34,63 @@ msgstr "Byldkaikes"
 msgid "Filter"
 msgstr "Filter"
 
-#: package/contents/ui/BackButtonItem.qml:103
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:63
 #, fuzzy, kde-format
 msgid "Files:"
 msgstr "Triemtypen:"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 msgid "Show all"
 msgstr "Posysje beskoattelje"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show matching"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Hide matching"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:70
+#: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:77
+#: package/contents/ui/ConfigFilter.qml:76
 #, fuzzy, kde-format
 msgid "File types:"
 msgstr "Triemtypen:"
 
-#: package/contents/ui/ConfigFilter.qml:83
+#: package/contents/ui/ConfigFilter.qml:82
 #, fuzzy, kde-format
 #| msgid "Show Original File"
 msgid "Show hidden files:"
 msgstr "Oarspronlike triem sjen litte"
 
-#: package/contents/ui/ConfigFilter.qml:179
+#: package/contents/ui/ConfigFilter.qml:178
 #, fuzzy, kde-format
 msgid "File type"
 msgstr "Triemtypen:"
 
-#: package/contents/ui/ConfigFilter.qml:188
+#: package/contents/ui/ConfigFilter.qml:187
 #, kde-format
 msgid "Description"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:201
+#: package/contents/ui/ConfigFilter.qml:200
 #, fuzzy, kde-format
 msgid "Select All"
 msgstr "Alles selektearje"
 
-#: package/contents/ui/ConfigFilter.qml:211
+#: package/contents/ui/ConfigFilter.qml:210
 #, fuzzy, kde-format
 msgid "Deselect All"
 msgstr "Alles &ûntselektearje"
@@ -317,82 +317,82 @@ msgstr "Foarbyld yn"
 msgid "Configure Preview Plugins…"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:81
+#: package/contents/ui/ConfigLocation.qml:80
 #, kde-format
 msgid "Show:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:82
 #, fuzzy, kde-format
 msgid "Desktop folder"
 msgstr "Alles selektearje"
 
-#: package/contents/ui/ConfigLocation.qml:90
+#: package/contents/ui/ConfigLocation.qml:89
 #, kde-format
 msgid "Files linked to the current activity"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:97
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgid "Places panel item:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:130
+#: package/contents/ui/ConfigLocation.qml:129
 #, fuzzy, kde-format
 msgid "Custom location:"
 msgstr "Lokaasje"
 
-#: package/contents/ui/ConfigLocation.qml:138
+#: package/contents/ui/ConfigLocation.qml:137
 #, kde-format
 msgid "Type path or URL…"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:181
+#: package/contents/ui/ConfigLocation.qml:180
 #, kde-format
 msgid "Title:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Default"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Full path"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Custom title"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:197
 #, kde-format
 msgid "Enter custom title…"
 msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:91
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
 msgid "Rotate"
 msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Hide Background"
 msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Show Background"
 msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:231
+#: package/contents/ui/ConfigOverlay.qml:232
 #, kde-format
 msgid "Remove"
 msgstr ""
@@ -402,7 +402,7 @@ msgstr ""
 msgid "Preview Plugins"
 msgstr ""
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr ""

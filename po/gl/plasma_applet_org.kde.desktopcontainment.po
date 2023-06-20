@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-20 02:58+0000\n"
 "PO-Revision-Date: 2023-04-06 21:41+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -24,7 +24,7 @@ msgid "Location"
 msgstr "Lugar"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:421
+#: package/contents/ui/FolderViewLayer.qml:422
 #, kde-format
 msgid "Icons"
 msgstr "Iconas"
@@ -34,62 +34,62 @@ msgstr "Iconas"
 msgid "Filter"
 msgstr "Filtro"
 
-#: package/contents/ui/BackButtonItem.qml:103
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Volver"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:63
 #, kde-format
 msgid "Files:"
 msgstr "Ficheiros:"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show all"
-msgstr "Mostralo todo"
+msgstr "Amosalo todo"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show matching"
-msgstr "Mostrar as coincidencias"
+msgstr "Amosar as coincidencias"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Hide matching"
 msgstr "Agochar as coincidencias"
 
-#: package/contents/ui/ConfigFilter.qml:70
+#: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
 msgstr "Padrón do nome do ficheiro:"
 
-#: package/contents/ui/ConfigFilter.qml:77
+#: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
 msgid "File types:"
 msgstr "Tipos de ficheiro:"
 
-#: package/contents/ui/ConfigFilter.qml:83
+#: package/contents/ui/ConfigFilter.qml:82
 #, kde-format
 msgid "Show hidden files:"
-msgstr "Mostrar os ficheiros agochados:"
+msgstr "Amosar os ficheiros agochados:"
 
-#: package/contents/ui/ConfigFilter.qml:179
+#: package/contents/ui/ConfigFilter.qml:178
 #, kde-format
 msgid "File type"
 msgstr "Tipo de ficheiro"
 
-#: package/contents/ui/ConfigFilter.qml:188
+#: package/contents/ui/ConfigFilter.qml:187
 #, kde-format
 msgid "Description"
 msgstr "Descrición"
 
-#: package/contents/ui/ConfigFilter.qml:201
+#: package/contents/ui/ConfigFilter.qml:200
 #, kde-format
 msgid "Select All"
 msgstr "Seleccionalo todo"
 
-#: package/contents/ui/ConfigFilter.qml:211
+#: package/contents/ui/ConfigFilter.qml:210
 #, kde-format
 msgid "Deselect All"
 msgstr "Anular a selección"
@@ -274,17 +274,17 @@ msgstr "Ao cubrir iconas:"
 #: package/contents/ui/ConfigIcons.qml:295
 #, kde-format
 msgid "Show tooltips"
-msgstr "Mostrar as axudas emerxentes"
+msgstr "Amosar as axudas emerxentes"
 
 #: package/contents/ui/ConfigIcons.qml:302
 #, kde-format
 msgid "Show selection markers"
-msgstr "Mostrar os marcadores de selección"
+msgstr "Amosar os marcadores de selección"
 
 #: package/contents/ui/ConfigIcons.qml:309
 #, kde-format
 msgid "Show folder preview popups"
-msgstr "Mostrar as vistas previas emerxentes dos cartafoles"
+msgstr "Amosar as vistas previas emerxentes dos cartafoles"
 
 #: package/contents/ui/ConfigIcons.qml:319
 #, kde-format
@@ -311,82 +311,82 @@ msgstr "Mostras as miniaturas de vista previa"
 msgid "Configure Preview Plugins…"
 msgstr "Configurar os complementos de vista previa…"
 
-#: package/contents/ui/ConfigLocation.qml:81
+#: package/contents/ui/ConfigLocation.qml:80
 #, kde-format
 msgid "Show:"
-msgstr "Mostrar:"
+msgstr "Amosar:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:82
 #, kde-format
 msgid "Desktop folder"
 msgstr "O cartafol do escritorio"
 
-#: package/contents/ui/ConfigLocation.qml:90
+#: package/contents/ui/ConfigLocation.qml:89
 #, kde-format
 msgid "Files linked to the current activity"
 msgstr "Os ficheiros asociados coa actividade actual"
 
-#: package/contents/ui/ConfigLocation.qml:97
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgid "Places panel item:"
 msgstr "Elemento do panel de lugares:"
 
-#: package/contents/ui/ConfigLocation.qml:130
+#: package/contents/ui/ConfigLocation.qml:129
 #, kde-format
 msgid "Custom location:"
 msgstr "Lugar personalizado:"
 
-#: package/contents/ui/ConfigLocation.qml:138
+#: package/contents/ui/ConfigLocation.qml:137
 #, kde-format
 msgid "Type path or URL…"
 msgstr "Escriba unha ruta ou URL…"
 
-#: package/contents/ui/ConfigLocation.qml:181
+#: package/contents/ui/ConfigLocation.qml:180
 #, kde-format
 msgid "Title:"
 msgstr "Título:"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "None"
 msgstr "Ningunha"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Default"
 msgstr "Predeterminada"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Full path"
 msgstr "Ruta completa"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Custom title"
 msgstr "Título personalizado"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:197
 #, kde-format
 msgid "Enter custom title…"
 msgstr "Escriba un título personalizado…"
 
-#: package/contents/ui/ConfigOverlay.qml:91
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
 msgid "Rotate"
 msgstr "Rotar"
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Hide Background"
 msgstr "Agochar o fondo"
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Show Background"
-msgstr "Mostrar o fondo"
+msgstr "Amosar o fondo"
 
-#: package/contents/ui/ConfigOverlay.qml:231
+#: package/contents/ui/ConfigOverlay.qml:232
 #, kde-format
 msgid "Remove"
 msgstr "Retirar"
@@ -396,7 +396,7 @@ msgstr "Retirar"
 msgid "Preview Plugins"
 msgstr "Vistas previas dos complementos"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Configurar o escritorio e o fondo…"
@@ -580,7 +580,7 @@ msgstr "Dereita"
 #: plugins/folder/viewpropertiesmenu.cpp:93
 #, kde-format
 msgid "Show Previews"
-msgstr "Mostrar vistas previas"
+msgstr "Amosar vistas previas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:97
 #, kde-format

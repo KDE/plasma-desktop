@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-20 02:58+0000\n"
 "PO-Revision-Date: 2022-11-23 08:11+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -26,7 +26,7 @@ msgid "Location"
 msgstr "Mesto"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:421
+#: package/contents/ui/FolderViewLayer.qml:422
 #, kde-format
 msgid "Icons"
 msgstr "Ikone"
@@ -36,62 +36,62 @@ msgstr "Ikone"
 msgid "Filter"
 msgstr "Filter"
 
-#: package/contents/ui/BackButtonItem.qml:103
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Nazaj"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:63
 #, kde-format
 msgid "Files:"
 msgstr "Datoteke:"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show all"
 msgstr "Pokaži vse"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show matching"
 msgstr "Pokaži ujemanja"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Hide matching"
 msgstr "Skrij ujemanja"
 
-#: package/contents/ui/ConfigFilter.qml:70
+#: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
 msgstr "Vzorec imena datoteke:"
 
-#: package/contents/ui/ConfigFilter.qml:77
+#: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
 msgid "File types:"
 msgstr "Vrste datotek:"
 
-#: package/contents/ui/ConfigFilter.qml:83
+#: package/contents/ui/ConfigFilter.qml:82
 #, kde-format
 msgid "Show hidden files:"
 msgstr "Pokaži skrite datoteke:"
 
-#: package/contents/ui/ConfigFilter.qml:179
+#: package/contents/ui/ConfigFilter.qml:178
 #, kde-format
 msgid "File type"
 msgstr "Vrsta datoteke"
 
-#: package/contents/ui/ConfigFilter.qml:188
+#: package/contents/ui/ConfigFilter.qml:187
 #, kde-format
 msgid "Description"
 msgstr "Opis"
 
-#: package/contents/ui/ConfigFilter.qml:201
+#: package/contents/ui/ConfigFilter.qml:200
 #, kde-format
 msgid "Select All"
 msgstr "Izberi vse"
 
-#: package/contents/ui/ConfigFilter.qml:211
+#: package/contents/ui/ConfigFilter.qml:210
 #, kde-format
 msgid "Deselect All"
 msgstr "Odstrani izbiro"
@@ -313,82 +313,82 @@ msgstr "Prikaži predogledne sličice"
 msgid "Configure Preview Plugins…"
 msgstr "Nastavi vtičnike za predoglede…"
 
-#: package/contents/ui/ConfigLocation.qml:81
+#: package/contents/ui/ConfigLocation.qml:80
 #, kde-format
 msgid "Show:"
 msgstr "Prikaži:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:82
 #, kde-format
 msgid "Desktop folder"
 msgstr "Mapa Namizja"
 
-#: package/contents/ui/ConfigLocation.qml:90
+#: package/contents/ui/ConfigLocation.qml:89
 #, kde-format
 msgid "Files linked to the current activity"
 msgstr "Datoteke povezane s trenutno dejavnostjo"
 
-#: package/contents/ui/ConfigLocation.qml:97
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgid "Places panel item:"
 msgstr "Predmet panela mest:"
 
-#: package/contents/ui/ConfigLocation.qml:130
+#: package/contents/ui/ConfigLocation.qml:129
 #, kde-format
 msgid "Custom location:"
 msgstr "Mesta po meri:"
 
-#: package/contents/ui/ConfigLocation.qml:138
+#: package/contents/ui/ConfigLocation.qml:137
 #, kde-format
 msgid "Type path or URL…"
 msgstr "Vnesite pot ali naslov URL…"
 
-#: package/contents/ui/ConfigLocation.qml:181
+#: package/contents/ui/ConfigLocation.qml:180
 #, kde-format
 msgid "Title:"
 msgstr "Naslov:"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "None"
 msgstr "Brez"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Default"
 msgstr "Privzeto"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Full path"
 msgstr "Polna pot"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Custom title"
 msgstr "Naslov po meri"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:197
 #, kde-format
 msgid "Enter custom title…"
 msgstr "Vnesite naslov po meri…"
 
-#: package/contents/ui/ConfigOverlay.qml:91
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
 msgid "Rotate"
 msgstr "Zavrti"
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Hide Background"
 msgstr "Skrij ozadje"
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Show Background"
 msgstr "Prikaži ozadje"
 
-#: package/contents/ui/ConfigOverlay.qml:231
+#: package/contents/ui/ConfigOverlay.qml:232
 #, kde-format
 msgid "Remove"
 msgstr "Odstrani"
@@ -398,7 +398,7 @@ msgstr "Odstrani"
 msgid "Preview Plugins"
 msgstr "Vstavki za predogled"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Nastavi namizje in ozadje…"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-20 02:58+0000\n"
 "PO-Revision-Date: 2019-12-29 20:50+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -24,7 +24,7 @@ msgid "Location"
 msgstr "സ്ഥാനം"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:421
+#: package/contents/ui/FolderViewLayer.qml:422
 #, kde-format
 msgid "Icons"
 msgstr "ചിഹ്നങ്ങള്‍"
@@ -34,63 +34,63 @@ msgstr "ചിഹ്നങ്ങള്‍"
 msgid "Filter"
 msgstr "അരിപ്പ"
 
-#: package/contents/ui/BackButtonItem.qml:103
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "പുറകോട്ട്"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:63
 #, fuzzy, kde-format
 msgid "Files:"
 msgstr "ഫയലുകള്‍:"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show all"
 msgstr "എല്ലാം കാണിക്കുക"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 msgid "Show matching"
 msgstr "പൊരുത്തമുള്ളത് മാത്രം കാണിക്കുക"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 msgid "Hide matching"
 msgstr "പൊരുത്തമുള്ളവ മറയ്ക്കുക "
 
-#: package/contents/ui/ConfigFilter.qml:70
+#: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
 msgstr "ഫയലിന്റെ പേരിലെ പാറ്റേണ്‍:"
 
-#: package/contents/ui/ConfigFilter.qml:77
+#: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
 msgid "File types:"
 msgstr "ഫയലിന്റെ തരങ്ങള്‍:"
 
-#: package/contents/ui/ConfigFilter.qml:83
+#: package/contents/ui/ConfigFilter.qml:82
 #, fuzzy, kde-format
 #| msgid "Show All Files"
 msgid "Show hidden files:"
 msgstr "എല്ലാ ഫയലുകളും കാണിയ്ക്കുക"
 
-#: package/contents/ui/ConfigFilter.qml:179
+#: package/contents/ui/ConfigFilter.qml:178
 #, kde-format
 msgid "File type"
 msgstr "ഫയലിന്റെ തരം"
 
-#: package/contents/ui/ConfigFilter.qml:188
+#: package/contents/ui/ConfigFilter.qml:187
 #, kde-format
 msgid "Description"
 msgstr "വിവരണം"
 
-#: package/contents/ui/ConfigFilter.qml:201
+#: package/contents/ui/ConfigFilter.qml:200
 #, kde-format
 msgid "Select All"
 msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
 
-#: package/contents/ui/ConfigFilter.qml:211
+#: package/contents/ui/ConfigFilter.qml:210
 #, kde-format
 msgid "Deselect All"
 msgstr "എല്ലാം തെരഞ്ഞെടുക്കാത്തതാക്കുക"
@@ -327,83 +327,83 @@ msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര�
 msgid "Configure Preview Plugins…"
 msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
 
-#: package/contents/ui/ConfigLocation.qml:81
+#: package/contents/ui/ConfigLocation.qml:80
 #, kde-format
 msgid "Show:"
 msgstr "കാണിക്കുക:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:82
 #, fuzzy, kde-format
 msgid "Desktop folder"
 msgstr "പണിയിട അറ കാണിയ്ക്കുക"
 
-#: package/contents/ui/ConfigLocation.qml:90
+#: package/contents/ui/ConfigLocation.qml:89
 #, kde-format
 msgid "Files linked to the current activity"
 msgstr "നിലവിലത്തെ പരിപാടിയുമായി ബന്ധപ്പെട്ട ഫയലുകള്‍"
 
-#: package/contents/ui/ConfigLocation.qml:97
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgid "Places panel item:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:130
+#: package/contents/ui/ConfigLocation.qml:129
 #, fuzzy, kde-format
 msgid "Custom location:"
 msgstr "സ്ഥാനം"
 
-#: package/contents/ui/ConfigLocation.qml:138
+#: package/contents/ui/ConfigLocation.qml:137
 #, fuzzy, kde-format
 msgid "Type path or URL…"
 msgstr "ഒരു വഴിയോ യുആര്‍എല്ലോ ഇവിടെ ടൈപ്പ് ചെയ്യുക"
 
-#: package/contents/ui/ConfigLocation.qml:181
+#: package/contents/ui/ConfigLocation.qml:180
 #, kde-format
 msgid "Title:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "None"
 msgstr "ഒന്നുമല്ല"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Default"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Full path"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Custom title"
 msgstr "ഇച്ഛാനുസൃത തലക്കെട്ട്"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:197
 #, fuzzy, kde-format
 #| msgid "Enter custom title..."
 msgid "Enter custom title…"
 msgstr "ഇച്ഛാനുസൃത തലക്കെട്ട് നൽകുക..."
 
-#: package/contents/ui/ConfigOverlay.qml:91
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
 msgid "Rotate"
 msgstr "തിരിക്കുക"
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Hide Background"
 msgstr "പശ്ചാത്തലം മറയ്ക്കുക"
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Show Background"
 msgstr "പശ്ചാത്തലം കാണിക്കുക"
 
-#: package/contents/ui/ConfigOverlay.qml:231
+#: package/contents/ui/ConfigOverlay.qml:232
 #, kde-format
 msgid "Remove"
 msgstr ""
@@ -413,7 +413,7 @@ msgstr ""
 msgid "Preview Plugins"
 msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, fuzzy, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "പണിയിടം ക്രമീകരിക്കുക"

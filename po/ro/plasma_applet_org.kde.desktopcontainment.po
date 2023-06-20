@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-20 02:58+0000\n"
 "PO-Revision-Date: 2022-12-28 21:17+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -26,7 +26,7 @@ msgid "Location"
 msgstr "Amplasare"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:421
+#: package/contents/ui/FolderViewLayer.qml:422
 #, kde-format
 msgid "Icons"
 msgstr "Pictograme"
@@ -36,63 +36,63 @@ msgstr "Pictograme"
 msgid "Filter"
 msgstr "Filtru"
 
-#: package/contents/ui/BackButtonItem.qml:103
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Înapoi"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:63
 #, kde-format
 msgid "Files:"
 msgstr "Fișiere:"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show all"
 msgstr "Arată tot"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show matching"
 msgstr "Arată cele potrivite"
 
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Hide matching"
 msgstr "Ascunde cele potrivite"
 
-#: package/contents/ui/ConfigFilter.qml:70
+#: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
 msgstr "Șablon denumiri:"
 
-#: package/contents/ui/ConfigFilter.qml:77
+#: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
 msgid "File types:"
 msgstr "Tipuri de fișier:"
 
-#: package/contents/ui/ConfigFilter.qml:83
+#: package/contents/ui/ConfigFilter.qml:82
 #, fuzzy, kde-format
 #| msgid "Show All Files"
 msgid "Show hidden files:"
 msgstr "Arată toate fișierele"
 
-#: package/contents/ui/ConfigFilter.qml:179
+#: package/contents/ui/ConfigFilter.qml:178
 #, kde-format
 msgid "File type"
 msgstr "Tip fișier"
 
-#: package/contents/ui/ConfigFilter.qml:188
+#: package/contents/ui/ConfigFilter.qml:187
 #, kde-format
 msgid "Description"
 msgstr "Descriere"
 
-#: package/contents/ui/ConfigFilter.qml:201
+#: package/contents/ui/ConfigFilter.qml:200
 #, kde-format
 msgid "Select All"
 msgstr "Selectează tot"
 
-#: package/contents/ui/ConfigFilter.qml:211
+#: package/contents/ui/ConfigFilter.qml:210
 #, kde-format
 msgid "Deselect All"
 msgstr "Deselectează tot"
@@ -314,82 +314,82 @@ msgstr "Arată miniaturi cu previzualizări"
 msgid "Configure Preview Plugins…"
 msgstr "Configurează extensii de previzualizare…"
 
-#: package/contents/ui/ConfigLocation.qml:81
+#: package/contents/ui/ConfigLocation.qml:80
 #, kde-format
 msgid "Show:"
 msgstr "Arată:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:82
 #, kde-format
 msgid "Desktop folder"
 msgstr "Dosarul biroului"
 
-#: package/contents/ui/ConfigLocation.qml:90
+#: package/contents/ui/ConfigLocation.qml:89
 #, kde-format
 msgid "Files linked to the current activity"
 msgstr "Fișiere legate de activitatea curentă"
 
-#: package/contents/ui/ConfigLocation.qml:97
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgid "Places panel item:"
 msgstr "Element în panoul Locuri:"
 
-#: package/contents/ui/ConfigLocation.qml:130
+#: package/contents/ui/ConfigLocation.qml:129
 #, kde-format
 msgid "Custom location:"
 msgstr "Amplasare personalizată:"
 
-#: package/contents/ui/ConfigLocation.qml:138
+#: package/contents/ui/ConfigLocation.qml:137
 #, kde-format
 msgid "Type path or URL…"
 msgstr "Tastează o cale sau URL…"
 
-#: package/contents/ui/ConfigLocation.qml:181
+#: package/contents/ui/ConfigLocation.qml:180
 #, kde-format
 msgid "Title:"
 msgstr "Titlu:"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "None"
 msgstr "Niciunul"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Default"
 msgstr "Implicit"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Full path"
 msgstr "Cale completă"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Custom title"
 msgstr "Titlu personalizat"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:197
 #, kde-format
 msgid "Enter custom title…"
 msgstr "Introdu titlu personalizat…"
 
-#: package/contents/ui/ConfigOverlay.qml:91
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
 msgid "Rotate"
 msgstr "Rotește"
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Hide Background"
 msgstr "Ascunde fundalul"
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Show Background"
 msgstr "Arată fundalul"
 
-#: package/contents/ui/ConfigOverlay.qml:231
+#: package/contents/ui/ConfigOverlay.qml:232
 #, kde-format
 msgid "Remove"
 msgstr "Elimină"
@@ -399,7 +399,7 @@ msgstr "Elimină"
 msgid "Preview Plugins"
 msgstr "Extensii de previzualizare"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Configurează birou și tapet…"

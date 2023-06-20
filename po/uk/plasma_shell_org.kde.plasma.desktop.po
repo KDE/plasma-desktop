@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-20 02:58+0000\n"
 "PO-Revision-Date: 2023-05-19 20:40+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: contents/activitymanager/ActivityItem.qml:209
+#: contents/activitymanager/ActivityItem.qml:208
 msgid "Currently being used"
 msgstr "Використовується зараз"
 
-#: contents/activitymanager/ActivityItem.qml:249
+#: contents/activitymanager/ActivityItem.qml:248
 msgid ""
 "Move to\n"
 "this activity"
@@ -32,7 +32,7 @@ msgstr ""
 "Пересунути до\n"
 "цього простору дій"
 
-#: contents/activitymanager/ActivityItem.qml:279
+#: contents/activitymanager/ActivityItem.qml:278
 msgid ""
 "Show also\n"
 "in this activity"
@@ -40,19 +40,19 @@ msgstr ""
 "Також показати у\n"
 "цьому просторі дій"
 
-#: contents/activitymanager/ActivityItem.qml:341
+#: contents/activitymanager/ActivityItem.qml:340
 msgid "Configure"
 msgstr "Налаштувати"
 
-#: contents/activitymanager/ActivityItem.qml:360
+#: contents/activitymanager/ActivityItem.qml:359
 msgid "Stop activity"
 msgstr "Зупинити простір дій"
 
-#: contents/activitymanager/ActivityList.qml:143
+#: contents/activitymanager/ActivityList.qml:142
 msgid "Stopped activities:"
 msgstr "Зупинені простори дій:"
 
-#: contents/activitymanager/ActivityManager.qml:127
+#: contents/activitymanager/ActivityManager.qml:121
 msgid "Create activity…"
 msgstr "Створити простір дій…"
 
@@ -60,11 +60,11 @@ msgstr "Створити простір дій…"
 msgid "Activities"
 msgstr "Простори дій"
 
-#: contents/activitymanager/StoppedActivityItem.qml:138
+#: contents/activitymanager/StoppedActivityItem.qml:139
 msgid "Configure activity"
 msgstr "Налаштувати простір дій"
 
-#: contents/activitymanager/StoppedActivityItem.qml:155
+#: contents/activitymanager/StoppedActivityItem.qml:156
 msgid "Delete"
 msgstr "Вилучити"
 
@@ -80,7 +80,7 @@ msgstr "Копіювати до буфера"
 msgid "View Error Details…"
 msgstr "Переглянути подробиці щодо помилки…"
 
-#: contents/applet/CompactApplet.qml:72
+#: contents/applet/CompactApplet.qml:73
 msgid "Open %1"
 msgstr "Відкрити %1"
 
@@ -98,32 +98,32 @@ msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Відкрити сайт %1"
 
-#: contents/configuration/AboutPlugin.qml:127
+#: contents/configuration/AboutPlugin.qml:130
 msgid "Copyright"
 msgstr "Авторські права"
 
-#: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
+#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:93
 msgid "License:"
 msgstr "Ліцензування:"
 
-#: contents/configuration/AboutPlugin.qml:148
+#: contents/configuration/AboutPlugin.qml:151
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Переглянути умови ліцензування"
 
-#: contents/configuration/AboutPlugin.qml:162
+#: contents/configuration/AboutPlugin.qml:165
 msgid "Authors"
 msgstr "Автори"
 
-#: contents/configuration/AboutPlugin.qml:173
+#: contents/configuration/AboutPlugin.qml:176
 msgid "Credits"
 msgstr "Подяки"
 
-#: contents/configuration/AboutPlugin.qml:185
+#: contents/configuration/AboutPlugin.qml:188
 msgid "Translators"
 msgstr "Перекладачі"
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:205
 msgid "Report a Bug…"
 msgstr "Повідомити про ваду…"
 
@@ -152,7 +152,7 @@ msgid "Apply"
 msgstr "Застосувати"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:179
+#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -460,25 +460,25 @@ msgstr "Додати розпірку"
 msgid "More Options…"
 msgstr "Додаткові параметри…"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:222
+#: contents/configuration/panelconfiguration/ToolBar.qml:224
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
 msgstr "Вилучення — перетягуванням"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:261
+#: contents/configuration/panelconfiguration/ToolBar.qml:263
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
 msgstr "Скористайтеся клавішами зі стрілками для пересування панелі"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:282
+#: contents/configuration/panelconfiguration/ToolBar.qml:284
 msgid "Panel width:"
 msgstr "Ширина панелі:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:282
+#: contents/configuration/panelconfiguration/ToolBar.qml:284
 msgid "Panel height:"
 msgstr "Висота панелі:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:402
+#: contents/configuration/panelconfiguration/ToolBar.qml:404
 #: contents/configuration/ShellContainmentConfiguration.qml:43
 msgid "Close"
 msgstr "Закрити"
@@ -513,19 +513,19 @@ msgstr "Вилучити панель"
 msgid "%1 (primary)"
 msgstr "%1 (основний)"
 
-#: contents/explorer/AppletAlternatives.qml:63
+#: contents/explorer/AppletAlternatives.qml:64
 msgid "Alternative Widgets"
 msgstr "Альтернативні віджети"
 
-#: contents/explorer/AppletAlternatives.qml:163
+#: contents/explorer/AppletAlternatives.qml:164
 msgid "Switch"
 msgstr "Перемкнутися"
 
-#: contents/explorer/AppletDelegate.qml:177
+#: contents/explorer/AppletDelegate.qml:178
 msgid "Undo uninstall"
 msgstr "Скасувати вилучення"
 
-#: contents/explorer/AppletDelegate.qml:178
+#: contents/explorer/AppletDelegate.qml:179
 msgid "Uninstall widget"
 msgstr "Віджет вилучення"
 
@@ -542,27 +542,27 @@ msgid "Uninstall"
 msgstr "Вилучити"
 
 #: contents/explorer/WidgetExplorer.qml:118
-#: contents/explorer/WidgetExplorer.qml:193
+#: contents/explorer/WidgetExplorer.qml:192
 msgid "All Widgets"
 msgstr "Усі віджети"
 
-#: contents/explorer/WidgetExplorer.qml:145
+#: contents/explorer/WidgetExplorer.qml:144
 msgid "Widgets"
 msgstr "Віджети"
 
-#: contents/explorer/WidgetExplorer.qml:153
+#: contents/explorer/WidgetExplorer.qml:152
 msgid "Get New Widgets…"
 msgstr "Отримати нові віджети…"
 
-#: contents/explorer/WidgetExplorer.qml:204
+#: contents/explorer/WidgetExplorer.qml:203
 msgid "Categories"
 msgstr "Категорії"
 
-#: contents/explorer/WidgetExplorer.qml:284
+#: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets matched the search terms"
 msgstr "Критерію пошуку не задовольняє жоден віджет"
 
-#: contents/explorer/WidgetExplorer.qml:284
+#: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "Немає доступних віджетів"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-20 02:58+0000\n"
 "PO-Revision-Date: 2023-05-20 05:28+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,35 +18,35 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.1\n"
 
-#: contents/activitymanager/ActivityItem.qml:209
+#: contents/activitymanager/ActivityItem.qml:208
 msgid "Currently being used"
 msgstr "ამჟამად გამოიყენება"
 
-#: contents/activitymanager/ActivityItem.qml:249
+#: contents/activitymanager/ActivityItem.qml:248
 msgid ""
 "Move to\n"
 "this activity"
 msgstr "ამ აქტივობასთან გადმოტანა"
 
-#: contents/activitymanager/ActivityItem.qml:279
+#: contents/activitymanager/ActivityItem.qml:278
 msgid ""
 "Show also\n"
 "in this activity"
 msgstr "ამ აქტივობაშიც ჩვენება"
 
-#: contents/activitymanager/ActivityItem.qml:341
+#: contents/activitymanager/ActivityItem.qml:340
 msgid "Configure"
 msgstr "მორგება"
 
-#: contents/activitymanager/ActivityItem.qml:360
+#: contents/activitymanager/ActivityItem.qml:359
 msgid "Stop activity"
 msgstr "აქტივობის შეჩერება"
 
-#: contents/activitymanager/ActivityList.qml:143
+#: contents/activitymanager/ActivityList.qml:142
 msgid "Stopped activities:"
 msgstr "გაჩერებული აქტივობები:"
 
-#: contents/activitymanager/ActivityManager.qml:127
+#: contents/activitymanager/ActivityManager.qml:121
 msgid "Create activity…"
 msgstr "აქტივობის შექმნა…"
 
@@ -54,11 +54,11 @@ msgstr "აქტივობის შექმნა…"
 msgid "Activities"
 msgstr "ქმედებები"
 
-#: contents/activitymanager/StoppedActivityItem.qml:138
+#: contents/activitymanager/StoppedActivityItem.qml:139
 msgid "Configure activity"
 msgstr "აქტივობის მორგება"
 
-#: contents/activitymanager/StoppedActivityItem.qml:155
+#: contents/activitymanager/StoppedActivityItem.qml:156
 msgid "Delete"
 msgstr "წაშლა"
 
@@ -74,7 +74,7 @@ msgstr "გაცვლის ბუფერში კოპირება"
 msgid "View Error Details…"
 msgstr "შეცდომის დეტალები ნახვა…"
 
-#: contents/applet/CompactApplet.qml:72
+#: contents/applet/CompactApplet.qml:73
 msgid "Open %1"
 msgstr "%1-ის გახსნა"
 
@@ -92,32 +92,32 @@ msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "ვებგვერდის გახსნა: %1"
 
-#: contents/configuration/AboutPlugin.qml:127
+#: contents/configuration/AboutPlugin.qml:130
 msgid "Copyright"
 msgstr "საავტორო უფლებები"
 
-#: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
+#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:93
 msgid "License:"
 msgstr "ლიცენზია:"
 
-#: contents/configuration/AboutPlugin.qml:148
+#: contents/configuration/AboutPlugin.qml:151
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "ლიცენზიის ტექსტის ნახვა"
 
-#: contents/configuration/AboutPlugin.qml:162
+#: contents/configuration/AboutPlugin.qml:165
 msgid "Authors"
 msgstr "ავტორები"
 
-#: contents/configuration/AboutPlugin.qml:173
+#: contents/configuration/AboutPlugin.qml:176
 msgid "Credits"
 msgstr "კრედიტები"
 
-#: contents/configuration/AboutPlugin.qml:185
+#: contents/configuration/AboutPlugin.qml:188
 msgid "Translators"
 msgstr "მთარგმნელები"
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:205
 msgid "Report a Bug…"
 msgstr "შეცდომის პატაკი…"
 
@@ -146,7 +146,7 @@ msgid "Apply"
 msgstr "გამოყენება"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:179
+#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "გაუქმება"
 
@@ -457,25 +457,25 @@ msgstr "დამშორებლის დამატება"
 msgid "More Options…"
 msgstr "მეტი პარამეტრი…"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:222
+#: contents/configuration/panelconfiguration/ToolBar.qml:224
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
 msgstr "გადასატანად გადაათრიეთ"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:261
+#: contents/configuration/panelconfiguration/ToolBar.qml:263
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
 msgstr "პანელის გადასატანად ისრების ღილაკები გამოიყენეთ"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:282
+#: contents/configuration/panelconfiguration/ToolBar.qml:284
 msgid "Panel width:"
 msgstr "პანელის სიგანე:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:282
+#: contents/configuration/panelconfiguration/ToolBar.qml:284
 msgid "Panel height:"
 msgstr "პანელის სიმაღლე:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:402
+#: contents/configuration/panelconfiguration/ToolBar.qml:404
 #: contents/configuration/ShellContainmentConfiguration.qml:43
 msgid "Close"
 msgstr "დახურვა"
@@ -510,19 +510,19 @@ msgstr "პანელის მოცილება"
 msgid "%1 (primary)"
 msgstr "%1 (ძირითადი)"
 
-#: contents/explorer/AppletAlternatives.qml:63
+#: contents/explorer/AppletAlternatives.qml:64
 msgid "Alternative Widgets"
 msgstr "ალტერნატიული ვიჯეტები"
 
-#: contents/explorer/AppletAlternatives.qml:163
+#: contents/explorer/AppletAlternatives.qml:164
 msgid "Switch"
 msgstr "გადართვა"
 
-#: contents/explorer/AppletDelegate.qml:177
+#: contents/explorer/AppletDelegate.qml:178
 msgid "Undo uninstall"
 msgstr "წაშლის გაუქმება"
 
-#: contents/explorer/AppletDelegate.qml:178
+#: contents/explorer/AppletDelegate.qml:179
 msgid "Uninstall widget"
 msgstr "ვიჯეტის წაშლა"
 
@@ -539,27 +539,27 @@ msgid "Uninstall"
 msgstr "ამოშლა"
 
 #: contents/explorer/WidgetExplorer.qml:118
-#: contents/explorer/WidgetExplorer.qml:193
+#: contents/explorer/WidgetExplorer.qml:192
 msgid "All Widgets"
 msgstr "ყველა ვიჯეტი"
 
-#: contents/explorer/WidgetExplorer.qml:145
+#: contents/explorer/WidgetExplorer.qml:144
 msgid "Widgets"
 msgstr "ვიჯეტები"
 
-#: contents/explorer/WidgetExplorer.qml:153
+#: contents/explorer/WidgetExplorer.qml:152
 msgid "Get New Widgets…"
 msgstr "ახალი ვიჯეტების მიღება…"
 
-#: contents/explorer/WidgetExplorer.qml:204
+#: contents/explorer/WidgetExplorer.qml:203
 msgid "Categories"
 msgstr "კატეგორიები"
 
-#: contents/explorer/WidgetExplorer.qml:284
+#: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets matched the search terms"
 msgstr "ვიჯეტების თქვენს ძებნას პასუხები არ აქვს"
 
-#: contents/explorer/WidgetExplorer.qml:284
+#: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "ვიჯეტების გარეშე"
 

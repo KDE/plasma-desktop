@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-20 02:58+0000\n"
 "PO-Revision-Date: 2023-05-21 23:32+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: contents/activitymanager/ActivityItem.qml:209
+#: contents/activitymanager/ActivityItem.qml:208
 msgid "Currently being used"
 msgstr "Je trenutno v uporabi"
 
-#: contents/activitymanager/ActivityItem.qml:249
+#: contents/activitymanager/ActivityItem.qml:248
 msgid ""
 "Move to\n"
 "this activity"
@@ -32,7 +32,7 @@ msgstr ""
 "Preseli v\n"
 "to dejavnost"
 
-#: contents/activitymanager/ActivityItem.qml:279
+#: contents/activitymanager/ActivityItem.qml:278
 msgid ""
 "Show also\n"
 "in this activity"
@@ -40,19 +40,19 @@ msgstr ""
 "Prikaži tudi\n"
 "v tej dejavnosti"
 
-#: contents/activitymanager/ActivityItem.qml:341
+#: contents/activitymanager/ActivityItem.qml:340
 msgid "Configure"
 msgstr "Nastavi"
 
-#: contents/activitymanager/ActivityItem.qml:360
+#: contents/activitymanager/ActivityItem.qml:359
 msgid "Stop activity"
 msgstr "Zaustavi dejavnost"
 
-#: contents/activitymanager/ActivityList.qml:143
+#: contents/activitymanager/ActivityList.qml:142
 msgid "Stopped activities:"
 msgstr "Zaustavljene dejavnosti:"
 
-#: contents/activitymanager/ActivityManager.qml:127
+#: contents/activitymanager/ActivityManager.qml:121
 msgid "Create activity…"
 msgstr "Ustvari dejavnosti…"
 
@@ -60,11 +60,11 @@ msgstr "Ustvari dejavnosti…"
 msgid "Activities"
 msgstr "Dejavnosti"
 
-#: contents/activitymanager/StoppedActivityItem.qml:138
+#: contents/activitymanager/StoppedActivityItem.qml:139
 msgid "Configure activity"
 msgstr "Nastavi dejavnost"
 
-#: contents/activitymanager/StoppedActivityItem.qml:155
+#: contents/activitymanager/StoppedActivityItem.qml:156
 msgid "Delete"
 msgstr "Izbriši"
 
@@ -80,7 +80,7 @@ msgstr "Kopiraj na odložišče"
 msgid "View Error Details…"
 msgstr "Poglej podrobnosti napake…"
 
-#: contents/applet/CompactApplet.qml:72
+#: contents/applet/CompactApplet.qml:73
 msgid "Open %1"
 msgstr "Odpri %1"
 
@@ -98,32 +98,32 @@ msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Odpri spletišče %1"
 
-#: contents/configuration/AboutPlugin.qml:127
+#: contents/configuration/AboutPlugin.qml:130
 msgid "Copyright"
 msgstr "Copyright"
 
-#: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
+#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:93
 msgid "License:"
 msgstr "Licenca:"
 
-#: contents/configuration/AboutPlugin.qml:148
+#: contents/configuration/AboutPlugin.qml:151
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Poglej besedilo dovoljenja"
 
-#: contents/configuration/AboutPlugin.qml:162
+#: contents/configuration/AboutPlugin.qml:165
 msgid "Authors"
 msgstr "Avtorji"
 
-#: contents/configuration/AboutPlugin.qml:173
+#: contents/configuration/AboutPlugin.qml:176
 msgid "Credits"
 msgstr "Zasluge"
 
-#: contents/configuration/AboutPlugin.qml:185
+#: contents/configuration/AboutPlugin.qml:188
 msgid "Translators"
 msgstr "Prevajalci"
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:205
 msgid "Report a Bug…"
 msgstr "Poročaj o hrošču…"
 
@@ -152,7 +152,7 @@ msgid "Apply"
 msgstr "Uveljavi"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:179
+#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Prekliči"
 
@@ -451,25 +451,25 @@ msgstr "Dodaj praznino"
 msgid "More Options…"
 msgstr "Več nastavitev…"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:222
+#: contents/configuration/panelconfiguration/ToolBar.qml:224
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
 msgstr "Povlecite za prenos"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:261
+#: contents/configuration/panelconfiguration/ToolBar.qml:263
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
 msgstr "Uporabite tipke puščic za pomik plošče"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:282
+#: contents/configuration/panelconfiguration/ToolBar.qml:284
 msgid "Panel width:"
 msgstr "Širina plošče:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:282
+#: contents/configuration/panelconfiguration/ToolBar.qml:284
 msgid "Panel height:"
 msgstr "Višina plošče:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:402
+#: contents/configuration/panelconfiguration/ToolBar.qml:404
 #: contents/configuration/ShellContainmentConfiguration.qml:43
 msgid "Close"
 msgstr "Zapri"
@@ -504,19 +504,19 @@ msgstr "Odstrani pult"
 msgid "%1 (primary)"
 msgstr "%1 (primarni)"
 
-#: contents/explorer/AppletAlternatives.qml:63
+#: contents/explorer/AppletAlternatives.qml:64
 msgid "Alternative Widgets"
 msgstr "Drugotni gradniki"
 
-#: contents/explorer/AppletAlternatives.qml:163
+#: contents/explorer/AppletAlternatives.qml:164
 msgid "Switch"
 msgstr "Preklopi"
 
-#: contents/explorer/AppletDelegate.qml:177
+#: contents/explorer/AppletDelegate.qml:178
 msgid "Undo uninstall"
 msgstr "Razveljavi odstranitev"
 
-#: contents/explorer/AppletDelegate.qml:178
+#: contents/explorer/AppletDelegate.qml:179
 msgid "Uninstall widget"
 msgstr "Odstrani gradnik"
 
@@ -533,27 +533,27 @@ msgid "Uninstall"
 msgstr "Odstrani"
 
 #: contents/explorer/WidgetExplorer.qml:118
-#: contents/explorer/WidgetExplorer.qml:193
+#: contents/explorer/WidgetExplorer.qml:192
 msgid "All Widgets"
 msgstr "Vsi gradniki"
 
-#: contents/explorer/WidgetExplorer.qml:145
+#: contents/explorer/WidgetExplorer.qml:144
 msgid "Widgets"
 msgstr "Gradniki"
 
-#: contents/explorer/WidgetExplorer.qml:153
+#: contents/explorer/WidgetExplorer.qml:152
 msgid "Get New Widgets…"
 msgstr "Dobi nove gradnike…"
 
-#: contents/explorer/WidgetExplorer.qml:204
+#: contents/explorer/WidgetExplorer.qml:203
 msgid "Categories"
 msgstr "Kategorije"
 
-#: contents/explorer/WidgetExplorer.qml:284
+#: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets matched the search terms"
 msgstr "Noben gradnik se ne ujema z iskalnimi izrazi"
 
-#: contents/explorer/WidgetExplorer.qml:284
+#: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "Gradnikov ni na voljo"
 

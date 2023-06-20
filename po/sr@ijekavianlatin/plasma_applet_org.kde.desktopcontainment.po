@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-20 02:58+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -24,7 +24,7 @@ msgid "Location"
 msgstr "Lokacija"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:421
+#: package/contents/ui/FolderViewLayer.qml:422
 #, kde-format
 msgid "Icons"
 msgstr "Ikonice"
@@ -34,72 +34,72 @@ msgstr "Ikonice"
 msgid "Filter"
 msgstr "Filter"
 
-#: package/contents/ui/BackButtonItem.qml:103
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Nazad"
 
-#: package/contents/ui/ConfigFilter.qml:64
+#: package/contents/ui/ConfigFilter.qml:63
 #, fuzzy, kde-format
 #| msgid "File types:"
 msgid "Files:"
 msgstr "Tipovi fajlova:"
 
 # >> @option:radio (that is, semantics thereof)
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Show All Files"
 msgid "Show all"
 msgstr "Prikaži sve fajlove"
 
 # >> @option:radio (that is, semantics thereof)
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Show Files Matching"
 msgid "Show matching"
 msgstr "Prikaži poklopljene fajlove"
 
 # >> @option:radio (that is, semantics thereof)
-#: package/contents/ui/ConfigFilter.qml:65
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Hide Files Matching"
 msgid "Hide matching"
 msgstr "Sakrij poklopljene fajlove"
 
-#: package/contents/ui/ConfigFilter.qml:70
+#: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
 msgstr "Obrazac imena fajla:"
 
-#: package/contents/ui/ConfigFilter.qml:77
+#: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
 msgid "File types:"
 msgstr "Tipovi fajlova:"
 
-#: package/contents/ui/ConfigFilter.qml:83
+#: package/contents/ui/ConfigFilter.qml:82
 #, kde-format
 msgid "Show hidden files:"
 msgstr ""
 
 # >> @title:column
-#: package/contents/ui/ConfigFilter.qml:179
+#: package/contents/ui/ConfigFilter.qml:178
 #, kde-format
 msgid "File type"
 msgstr "tip fajla"
 
 # >> @title:column
-#: package/contents/ui/ConfigFilter.qml:188
+#: package/contents/ui/ConfigFilter.qml:187
 #, kde-format
 msgid "Description"
 msgstr "opis"
 
-#: package/contents/ui/ConfigFilter.qml:201
+#: package/contents/ui/ConfigFilter.qml:200
 #, kde-format
 msgid "Select All"
 msgstr "Izaberi sve"
 
 # На дугмету које треба да је уско.
-#: package/contents/ui/ConfigFilter.qml:211
+#: package/contents/ui/ConfigFilter.qml:210
 #, kde-format
 msgid "Deselect All"
 msgstr "Poništi izbor"
@@ -358,94 +358,94 @@ msgstr "Sličice za pregled"
 msgid "Configure Preview Plugins…"
 msgstr "Još opcija pregleda..."
 
-#: package/contents/ui/ConfigLocation.qml:81
+#: package/contents/ui/ConfigLocation.qml:80
 #, kde-format
 msgid "Show:"
 msgstr ""
 
 # >> @option:radio
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:82
 #, fuzzy, kde-format
 #| msgid "Show the Desktop folder"
 msgid "Desktop folder"
 msgstr "Prikaži fasciklu površi"
 
 # >> @option:radio
-#: package/contents/ui/ConfigLocation.qml:90
+#: package/contents/ui/ConfigLocation.qml:89
 #, fuzzy, kde-format
 #| msgid "Show files linked to the current activity"
 msgid "Files linked to the current activity"
 msgstr "Prikaži fajlove povezana sa trenutnom aktivnošću"
 
-#: package/contents/ui/ConfigLocation.qml:97
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgid "Places panel item:"
 msgstr ""
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:130
+#: package/contents/ui/ConfigLocation.qml:129
 #, fuzzy, kde-format
 #| msgid "Custom title"
 msgid "Custom location:"
 msgstr "poseban naslov"
 
-#: package/contents/ui/ConfigLocation.qml:138
+#: package/contents/ui/ConfigLocation.qml:137
 #, fuzzy, kde-format
 #| msgid "Type a path or a URL here"
 msgid "Type path or URL…"
 msgstr "Unesite putanju ili URL"
 
-#: package/contents/ui/ConfigLocation.qml:181
+#: package/contents/ui/ConfigLocation.qml:180
 #, kde-format
 msgid "Title:"
 msgstr "Naslov:"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "None"
 msgstr "nikakav"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Default"
 msgstr "podrazumevan"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Full path"
 msgstr "puna putanja"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Custom title"
 msgstr "poseban naslov"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:197
 #, fuzzy, kde-format
 #| msgid "Enter custom title here"
 msgid "Enter custom title…"
 msgstr "Unesite ovde poseban naslov"
 
-#: package/contents/ui/ConfigOverlay.qml:91
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
 msgid "Rotate"
 msgstr "Okreni"
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Hide Background"
 msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:181
+#: package/contents/ui/ConfigOverlay.qml:182
 #, kde-format
 msgid "Show Background"
 msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:231
+#: package/contents/ui/ConfigOverlay.qml:232
 #, kde-format
 msgid "Remove"
 msgstr "Ukloni"
@@ -455,7 +455,7 @@ msgstr "Ukloni"
 msgid "Preview Plugins"
 msgstr "Priključci za pregled"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, fuzzy, kde-format
 #| msgid "Configure Desktop"
 msgid "Configure Desktop and Wallpaper…"
