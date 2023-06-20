@@ -84,27 +84,12 @@ KCM.SimpleKCM {
             text: i18nc("@option:check The thing being enabled is search history", "Enabled with auto-complete")
         }
 
-        QQC2.CheckBox {
-            checked: kcm.krunnerSettings.activityAware
-            onToggled: kcm.krunnerSettings.activityAware = checked
-            text: i18nc("@option:check", "Activity-aware (last search and history)")
-
-            KCM.SettingStateBinding {
-                configObject: kcm.krunnerSettings
-                settingName: "activityAware"
-            }
-        }
-
         QQC2.Button {
             id: clearHistoryButton
             enabled: kcm.krunnerSettings.historyBehavior !== KRunnerSettings.Disabled && kcm.historyKeys.length > 0
 
             icon.name: Qt.application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
-            text: kcm.hasSingleHistory ?
-                    (!kcm.krunnerSettings.activityAware || kcm.activityCount < 2 ?
-                        i18n("Clear History")
-                      : i18nc("@action:button %1 activity name", "Clear History for Activity \"%1\"", kcm.singleActivityName))
-                  : i18n("Clear History…")
+            text: i18n("Clear History…")
 
             checkable: !kcm.hasSingleHistory
             checked: activityMenu.visible

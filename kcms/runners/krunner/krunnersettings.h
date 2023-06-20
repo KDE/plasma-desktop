@@ -9,7 +9,6 @@
 
 #pragma once
 
-#include <KActivities/Consumer>
 #include <KConfigGroup>
 #include <KQuickManagedConfigModule>
 
@@ -25,13 +24,6 @@ class KRunnerSettings : public KQuickManagedConfigModule
      * otherwise.
      */
     Q_PROPERTY(bool doesShowPluginButton MEMBER m_doesShowPluginButton CONSTANT)
-    Q_PROPERTY(int activityCount READ activityCount NOTIFY activityCountChanged)
-    /**
-     * @return @c true if activity aware is not enabled or only one activity has
-     * history, @c false otherwise.
-     */
-    Q_PROPERTY(bool hasSingleHistory READ hasSingleHistory NOTIFY hasSingleHistoryChanged)
-    Q_PROPERTY(QString singleActivityName READ singleActivityName NOTIFY singleActivityNameChanged)
     Q_PROPERTY(QStringList historyKeys READ historyKeys NOTIFY historyKeysChanged)
 
 public:
@@ -39,20 +31,12 @@ public:
 
     KRunnerSettingsBase *krunnerSettings() const;
 
-    int activityCount() const;
-    bool hasSingleHistory() const;
-    QString singleActivityName() const;
     QStringList historyKeys() const;
-
-    Q_INVOKABLE QString iconNameForActivity(const QString &id) const;
 
     Q_INVOKABLE void deleteAllHistory();
     Q_INVOKABLE void deleteHistoryGroup(const QString &key);
 
 Q_SIGNALS:
-    void activityCountChanged();
-    void hasSingleHistoryChanged();
-    void singleActivityNameChanged();
     void historyKeysChanged();
 
 public Q_SLOTS:
@@ -62,7 +46,6 @@ private:
     void configureClearHistoryButton();
 
     KRunnerSettingsData *m_data;
-    KActivities::Consumer *m_consumer;
     KConfigGroup m_historyConfigGroup;
     QStringList m_historyKeys;
 
