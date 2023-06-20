@@ -858,7 +858,7 @@ FocusScope {
                         currentIndex = cachedRectangleSelection[0];
                     }
 
-                    dir.updateSelection(cachedRectangleSelection.map(positioner.map),
+                    dir.updateSelection(cachedRectangleSelection.map(row => positioner.map(row)),
                         gridView.ctrlPressed);
                 }
 
