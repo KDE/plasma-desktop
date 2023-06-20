@@ -8,7 +8,6 @@
 
 import QtQuick 2.2
 import QtQuick.Window 2.2
-import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
 

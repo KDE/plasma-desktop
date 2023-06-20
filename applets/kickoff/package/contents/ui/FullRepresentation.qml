@@ -16,7 +16,6 @@ import QtQml 2.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.private.kicker 0.1 as Kicker
 
 EmptyPage {
     id: root

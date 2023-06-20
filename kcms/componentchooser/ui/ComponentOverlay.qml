@@ -10,7 +10,6 @@ import QtQuick.Controls 2.3 as QQC2
 import org.kde.kirigami 2.12 as Kirigami
 
 import org.kde.kcmutils as KCM
-import org.kde.config as KConfig
 
 Kirigami.OverlaySheet {
 

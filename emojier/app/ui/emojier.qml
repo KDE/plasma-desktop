@@ -6,7 +6,6 @@
 
 import QtQuick 2.11
 import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.11 as QQC2
 import org.kde.kirigami 2.6 as Kirigami
 import org.kde.plasma.emoji 1.0
 

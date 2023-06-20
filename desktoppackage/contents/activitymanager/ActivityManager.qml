@@ -12,7 +12,6 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.config as KConfig  // KAuthorized
 import org.kde.kcmutils  // KCMLauncher
 
-import org.kde.activities 0.1 as Activities
 
 FocusScope {
     id: root

@@ -8,12 +8,10 @@ import QtQuick 2.0
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.kcmutils  // KCMLauncher
-import org.kde.activities 0.1 as Activities
 
 import "static.js" as S
 

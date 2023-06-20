@@ -11,7 +11,6 @@ import QtQuick.Layouts 1.0
 
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Kirigami.FormLayout {
     id: iconsPage
