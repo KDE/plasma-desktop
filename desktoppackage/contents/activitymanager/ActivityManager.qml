@@ -9,7 +9,7 @@ import QtQuick 2.0
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.config as KConfig  // KAuthorize
+import org.kde.config as KConfig  // KAuthorized
 import org.kde.kcmutils  // KCMLauncher
 
 import org.kde.activities 0.1 as Activities
@@ -70,7 +70,7 @@ FocusScope {
         //     color        : "white"
         // }
 
-        Kirigami.Heading {
+        Heading {
             id: heading
 
             anchors {
@@ -97,7 +97,7 @@ FocusScope {
             ActivityList {
                 id: activityList
                 showSwitcherOnly: root.showSwitcherOnly
-
+                filterString: heading.searchString.toLowerCase()
                 itemsWidth: root.width - Kirigami.Units.smallSpacing
             }
         }
@@ -125,7 +125,7 @@ FocusScope {
 
                 onClicked: KCMLauncher.openSystemSettings("kcm_activities", "newActivity")
 
-                visible: KConfig.KAuthorized.authorizeControlModule("kcm_activities")
+                visible: KConfig.KAuthorized.authorize("plasma-desktop/add_activities")
                 opacity: newActivityDialog.status == Loader.Ready ?
                               1 - newActivityDialog.item.opacity : 1
             }
