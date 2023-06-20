@@ -219,7 +219,7 @@ msgstr ""
 "funcionando correctamente.<br/>Se os valores dos eixos son incorrectos, pode "
 "intentar corrixilo coa calibración.<br/>Este módulo intenta atopar todos os "
 "«joysticks» dispoñíbeis comprobando /dev/js[0-4] e /dev/input/js[0-4]<br/>Se "
-"emprega outros ficheiros de dispositivo, insíraos na lista.<br/>A lista de "
+"usa outros ficheiros de dispositivo, insíraos na lista.<br/>A lista de "
 "botóns mostra o estado dos botóns do «joystick», a de eixos mostra os "
 "valores actuais dos eixos.<br/>Nota: o controlador actual de Linux (Kernel "
 "2.4 e 2.6) só pode detectar automaticamente «joysticks» de <ul><li>2 eixos e "
@@ -241,7 +241,7 @@ msgstr "Posición:"
 #: joywidget.cpp:87
 #, kde-format
 msgid "Show trace"
-msgstr "Mostrar o trazo"
+msgstr "Amosar o trazo"
 
 #: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
