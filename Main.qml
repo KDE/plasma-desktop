@@ -11,7 +11,6 @@ import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.plasma5support 2.0 as P5Support
 
 import "components"
