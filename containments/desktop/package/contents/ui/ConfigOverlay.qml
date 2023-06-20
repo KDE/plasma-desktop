@@ -10,6 +10,8 @@ import QtQuick.Layouts 1.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg 1.0 as KSvg
+
 
 import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
 
@@ -18,7 +20,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
 
     readonly property int iconSize: touchInteraction ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.small
 
-    PlasmaCore.Svg {
+    KSvg.Svg {
         id: configIconsSvg
         imagePath: "widgets/configuration-icons"
     }
@@ -42,7 +44,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
         }
     }
 
-    PlasmaCore.FrameSvgItem {
+    KSvg.FrameSvgItem {
         id: frame
 
         anchors.verticalCenter: parent.verticalCenter

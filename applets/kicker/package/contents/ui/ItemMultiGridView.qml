@@ -7,6 +7,7 @@
 import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.private.kicker 0.1 as Kicker
@@ -109,7 +110,7 @@ PlasmaExtras.ScrollArea {
                     text: repeater.model.modelForRow(index).description
                 }
 
-                PlasmaCore.SvgItem {
+                KSvg.SvgItem {
                     id: gridViewLabelUnderline
 
                     anchors.top: gridViewLabel.bottom

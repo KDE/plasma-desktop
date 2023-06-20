@@ -12,6 +12,7 @@ import org.kde.kirigami 2.5 as Kirigami
 import org.kde.iconthemes as KIconThemes
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg 1.0 as KSvg
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -98,7 +99,7 @@ Kirigami.FormLayout {
             onIconNameChanged: setCustomButtonImage(iconName);
         }
 
-        PlasmaCore.FrameSvgItem {
+        KSvg.FrameSvgItem {
             id: previewFrame
             anchors.centerIn: parent
             imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal

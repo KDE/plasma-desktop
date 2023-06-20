@@ -9,6 +9,7 @@ import QtQuick 2.2
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -36,7 +37,7 @@ Item {
     height : icon.height + 2 * Kirigami.Units.smallSpacing
 
     // Background until we get something real
-    PlasmaCore.FrameSvgItem {
+    KSvg.FrameSvgItem {
         id: highlight
         imagePath: "widgets/viewitem"
         visible: rootArea.containsMouse

@@ -8,6 +8,7 @@
 
 import QtQuick 2.8
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -70,9 +71,9 @@ Item {
         horizontalCenter: isVertical && parent ? parent.horizontalCenter : undefined
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: toolBoxIcon
-        svg: PlasmaCore.Svg {
+        svg: KSvg.Svg {
             id: iconSvg
             imagePath: "widgets/configuration-icons"
         }

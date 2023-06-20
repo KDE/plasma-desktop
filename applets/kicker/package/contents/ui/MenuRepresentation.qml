@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.15
 import QtQml 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -50,7 +51,7 @@ FocusScope {
         LayoutMirroring.enabled: ((plasmoid.location === PlasmaCore.Types.RightEdge)
             || (Qt.application.layoutDirection === Qt.RightToLeft && plasmoid.location !== PlasmaCore.Types.LeftEdge))
 
-        PlasmaCore.FrameSvgItem {
+        KSvg.FrameSvgItem {
             id: sideBar
 
             visible: width > 0
@@ -99,7 +100,7 @@ FocusScope {
                 }
             }
 
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 id: sidebarSeparator
 
                 anchors.bottom: favoriteSystemActions.top

@@ -7,12 +7,13 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.configuration 2.0
 import "panelconfiguration"
 
 
 //TODO: all of this will be done with desktop components
-PlasmaCore.FrameSvgItem {
+KSvg.FrameSvgItem {
     id: dialogRoot
 
     signal closeContextMenu

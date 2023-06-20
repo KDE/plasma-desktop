@@ -8,6 +8,7 @@ import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg 1.0 as KSvg
 
 MouseArea {
     id: audioStreamIconBox
@@ -103,19 +104,19 @@ MouseArea {
     Accessible.description: task.muted ? i18nc("@info:tooltip %1 is the window title", "Unmute %1", model.display) : i18nc("@info:tooltip %1 is the window title", "Mute %1", model.display)
     Accessible.role: Accessible.Button
 
-    PlasmaCore.FrameSvgItem {
+    KSvg.FrameSvgItem {
         anchors.fill: audioStreamIcon
         visible: parent.containsMouse || parent.activeFocus
         imagePath: "widgets/viewitem"
         prefix: "hover"
     }
 
-    PlasmaCore.Svg {
+    KSvg.Svg {
         id: audioSvg
         imagePath: "icons/audio"
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: audioStreamIcon
 
         // Need audio indicator twice, to keep iconBox in the center.

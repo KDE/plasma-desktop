@@ -11,6 +11,7 @@ import QtQuick.Controls 2.15 as QQC2
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.shell.panel 0.1 as Panel
 import org.kde.kquickcontrols 2.0
 import org.kde.kirigami 2.20 as Kirigami
@@ -123,10 +124,10 @@ PlasmaCore.Dialog {
 
 
         }
-        PlasmaCore.SvgItem {
+        KSvg.SvgItem {
             Layout.fillWidth: true
             elementId: "horizontal-line"
-            svg: PlasmaCore.Svg {
+            svg: KSvg.Svg {
                 id: lineSvg
                 imagePath: "widgets/line"
             }
@@ -169,7 +170,7 @@ PlasmaCore.Dialog {
                 onClicked: configDialog.visibilityMode = Panel.Global.AutoHide
             }
         }
-        PlasmaCore.SvgItem {
+        KSvg.SvgItem {
             Layout.fillWidth: true
             elementId: "horizontal-line"
             svg: lineSvg
@@ -221,7 +222,7 @@ PlasmaCore.Dialog {
                 onClicked: configDialog.opacityMode = Panel.Global.Translucent
             }
         }
-        PlasmaCore.SvgItem {
+        KSvg.SvgItem {
             Layout.fillWidth: true
             elementId: "horizontal-line"
             svg: lineSvg

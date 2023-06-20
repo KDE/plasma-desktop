@@ -15,6 +15,7 @@ import QtQuick.Window 2.15
 import QtQml 2.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.private.kicker 0.1 as Kicker
 import org.kde.kirigami 2.20 as Kirigami
@@ -117,7 +118,7 @@ PlasmoidItem {
     //END
 
     //BEGIN Metrics
-    readonly property PlasmaCore.FrameSvgItem backgroundMetrics: PlasmaCore.FrameSvgItem {
+    readonly property KSvg.FrameSvgItem backgroundMetrics: KSvg.FrameSvgItem {
         // Inset defaults to a negative value when not set by margin hints
         readonly property real leftPadding: margins.left - Math.max(inset.left, 0)
         readonly property real rightPadding: margins.right - Math.max(inset.right, 0)

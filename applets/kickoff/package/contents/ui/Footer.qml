@@ -8,6 +8,7 @@
 import QtQuick 2.15
 import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
@@ -72,7 +73,7 @@ PlasmaExtras.PlasmoidHeading {
             highlightRangeMode: ListView.ApplyRange
             preferredHighlightBegin: tabBar.tabWidth
             preferredHighlightEnd: width - tabBar.tabWidth
-            highlight: PlasmaCore.FrameSvgItem {
+            highlight: KSvg.FrameSvgItem {
                 anchors.top: tabBarListView.contentItem.top
                 anchors.bottom: tabBarListView.contentItem.bottom
                 anchors.topMargin: -root.topPadding

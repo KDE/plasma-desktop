@@ -10,6 +10,7 @@ import QtQuick.Templates 2.15 as T
 import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.private.kicker 0.1 as Kicker
@@ -34,18 +35,18 @@ Item {
     //END
 
     //BEGIN Reusable Objects
-    readonly property PlasmaCore.Svg lineSvg: PlasmaCore.Svg {
+    readonly property KSvg.Svg lineSvg: KSvg.Svg {
         imagePath: "widgets/line"
         property int horLineHeight: lineSvg.elementSize("horizontal-line").height
         property int vertLineWidth: lineSvg.elementSize("vertical-line").width
     }
-    readonly property PlasmaCore.Svg arrowsSvg: PlasmaCore.Svg {
+    readonly property KSvg.Svg arrowsSvg: KSvg.Svg {
         imagePath: "widgets/arrows"
     }
     //END
 
     //BEGIN Metrics
-    readonly property PlasmaCore.FrameSvgItem listItemMetrics: PlasmaCore.FrameSvgItem {
+    readonly property KSvg.FrameSvgItem listItemMetrics: KSvg.FrameSvgItem {
         visible: false
         imagePath: "widgets/listitem"
         prefix: "normal"

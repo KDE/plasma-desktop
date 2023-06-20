@@ -8,6 +8,8 @@ import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.20 as Kirigami
@@ -86,7 +88,7 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    PlasmaCore.FrameSvgItem {
+    KSvg.FrameSvgItem {
         id: expandedItem
         z: -100
 
@@ -235,7 +237,7 @@ PlasmaCore.ToolTipArea {
             }
 
             // Draws a line between the applet dialog and the panel
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 // Only draw for popups of panel applets, not desktop applets
                 visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
                     .includes(Plasmoid.location)
@@ -253,7 +255,7 @@ PlasmaCore.ToolTipArea {
                 width: (Plasmoid.location === PlasmaCore.Types.LeftEdge || Plasmoid.location === PlasmaCore.Types.RightEdge) ? 1 : undefined
                 z: 999 /* Draw the line on top of the applet */
                 elementId: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
-                svg: PlasmaCore.Svg {
+                svg: KSvg.Svg {
                     imagePath: "widgets/line"
                 }
             }

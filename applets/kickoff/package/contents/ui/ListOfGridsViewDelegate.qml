@@ -7,6 +7,7 @@
 import QtQuick 2.15
 import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PC3
 
 KickoffGridView {
@@ -31,7 +32,7 @@ KickoffGridView {
     view.height : view.cellHeight * Math.ceil(count / view.columns)
     view.implicitHeight: view.contentHeight
     blockTargetWheel: false
-    view.highlight: PlasmaCore.FrameSvgItem {
+    view.highlight: KSvg.FrameSvgItem {
         // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
         // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
         z: root.currentItem && root.currentItem.Drag.active ?

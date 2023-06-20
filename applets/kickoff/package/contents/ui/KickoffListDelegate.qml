@@ -13,6 +13,7 @@ import QtQuick 2.15
 import QtQml 2.15
 import QtQuick.Layouts 1.15
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -111,7 +112,7 @@ AbstractKickoffItemDelegate {
         active: root.isSeparator
 
         asynchronous: false
-        sourceComponent: PlasmaCore.SvgItem {
+        sourceComponent: KSvg.SvgItem {
             width: parent.width
             height: KickoffSingleton.lineSvg.horLineHeight
 

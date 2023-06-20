@@ -9,6 +9,7 @@ import QtQuick 2.15
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg 1.0 as KSvg
 
 import "code/tools.js" as Tools
 
@@ -216,7 +217,7 @@ Item {
             text: model.display
         }
 
-        PlasmaCore.SvgItem {
+        KSvg.SvgItem {
             id: arrow
 
             anchors.verticalCenter: parent.verticalCenter
@@ -235,7 +236,7 @@ Item {
     Component {
         id: separatorComponent
 
-        PlasmaCore.SvgItem {
+        KSvg.SvgItem {
             width: parent.width
             height: lineSvg.horLineHeight
 

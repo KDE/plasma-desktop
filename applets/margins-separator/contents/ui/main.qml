@@ -9,6 +9,8 @@ import QtQuick.Layouts 1.0
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg 1.0 as KSvg
+
 
 PlasmoidItem {
     id: root
@@ -29,10 +31,10 @@ PlasmoidItem {
     Loader {
         anchors.centerIn: parent
         active: Plasmoid.containment.corona.editMode
-        sourceComponent: PlasmaCore.SvgItem {
+        sourceComponent: KSvg.SvgItem {
             height: root.isVertical ? 1 : Math.round(root.height / 2)
             width: root.isVertical ? Math.round(root.width / 2) : 1
-            svg: PlasmaCore.Svg {imagePath: "widgets/line"}
+            imagePath: "widgets/line"
             elementId: root.isVertical ? "vertical-line" : "horizontal-line"
         }
     }

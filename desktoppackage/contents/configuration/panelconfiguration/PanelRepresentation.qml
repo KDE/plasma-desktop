@@ -4,6 +4,7 @@ import QtQuick.Window 2.15
 
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.plasma.shell.panel 0.1 as Panel
 import org.kde.kirigami 2.20 as Kirigami
@@ -35,7 +36,7 @@ Item {
         visible: mouseArea.containsMouse && text.length > 0
     }
 
-    PlasmaCore.FrameSvgItem {
+    KSvg.FrameSvgItem {
         anchors.fill: parent
         visible: mouseArea.containsMouse || parent.checked
         opacity: mouseArea.containsMouse ? 1.0 : 0.5

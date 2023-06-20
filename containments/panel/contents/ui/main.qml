@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.draganddrop 2.0 as DragDrop
@@ -118,20 +119,20 @@ ContainmentItem {
         // These are invisible and only used to read panel margins
         // Both will fallback to "standard" panel margins if the theme does not
         // define a normal or a thick margin.
-        PlasmaCore.FrameSvgItem {
+        KSvg.FrameSvgItem {
             id: panelSvg
             visible: false
             imagePath: "widgets/panel-background"
             prefix: [root.plasmoidLocationString(), ""]
         }
-        PlasmaCore.FrameSvgItem {
+        KSvg.FrameSvgItem {
             id: thickPanelSvg
             visible: false
             prefix: ['thick'].concat(panelSvg.prefix)
             imagePath: "widgets/panel-background"
         }
         property bool marginAreasEnabled: panelSvg.margins != thickPanelSvg.margins
-        property var marginHighlightSvg: PlasmaCore.Svg{imagePath: "widgets/margins-highlight"}
+        property var marginHighlightSvg: KSvg.Svg{imagePath: "widgets/margins-highlight"}
         //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
         //the size a margin should be to force a panel to be the required size above
         readonly property real spacingAtMinSize: Math.floor(Math.max(1, (isHorizontal ? root.height : root.width) - Kirigami.Units.iconSizes.smallMedium)/2)
@@ -261,7 +262,7 @@ ContainmentItem {
                         }
                     }
 
-                    component SideMargin: PlasmaCore.SvgItem {
+                    component SideMargin: KSvg.SvgItem {
                         property string side; property bool fill: true
                         property int inset; property int padding
                         property var west: ({'left': 'top', 'top': 'left', 'right': 'top', 'bottom': 'left'})

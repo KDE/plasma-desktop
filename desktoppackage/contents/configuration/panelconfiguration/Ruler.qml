@@ -6,10 +6,11 @@
 
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.configuration 2.0
 import org.kde.kirigami 2.20 as Kirigami
 
-PlasmaCore.FrameSvgItem {
+KSvg.FrameSvgItem {
     id: root
 
     //Those properties get updated by PanelConfiguration.qml whenever a value in the panel changes
@@ -49,11 +50,11 @@ PlasmaCore.FrameSvgItem {
         leftMaximumLengthHandle.value = panel.maximumLength
     }
 
-    PlasmaCore.Svg {
+    KSvg.Svg {
         id: containmentControlsSvg
         imagePath: "widgets/containment-controls"
     }
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: centerMark
         svg: containmentControlsSvg
         elementId: dialogRoot.vertical ? "vertical-centerindicator" : "horizontal-centerindicator"
