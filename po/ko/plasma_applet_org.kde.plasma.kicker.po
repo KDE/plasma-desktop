@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:58+0000\n"
+"POT-Creation-Date: 2023-06-21 02:02+0000\n"
 "PO-Revision-Date: 2023-04-22 00:15+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -47,144 +47,144 @@ msgstr "현재 활동에만"
 msgid "Show in Favorites"
 msgstr "책갈피에 표시"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Icon:"
 msgstr "아이콘:"
 
-#: package/contents/ui/ConfigGeneral.qml:126
+#: package/contents/ui/ConfigGeneral.qml:127
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "선택…"
 
-#: package/contents/ui/ConfigGeneral.qml:131
+#: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "아이콘 초기화"
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Show applications as:"
 msgstr "프로그램 표시 형식:"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Name only"
 msgstr "이름만"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Description only"
 msgstr "설명만"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Name (Description)"
 msgstr "이름 (설명)"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Description (Name)"
 msgstr "설명 (이름)"
 
-#: package/contents/ui/ConfigGeneral.qml:161
+#: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
 msgid "Behavior:"
 msgstr "행동:"
 
-#: package/contents/ui/ConfigGeneral.qml:163
+#: package/contents/ui/ConfigGeneral.qml:164
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "가나다순으로 프로그램 정렬"
 
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "단일 단계로 하위 메뉴 축소"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "최상위 단계 메뉴 아이콘 표시"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Show categories:"
 msgstr "분류 표시:"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:193
 #, kde-format
 msgid "Recent applications"
 msgstr "최근 프로그램"
 
-#: package/contents/ui/ConfigGeneral.qml:193
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Often used applications"
 msgstr "자주 사용한 프로그램"
 
-#: package/contents/ui/ConfigGeneral.qml:200
+#: package/contents/ui/ConfigGeneral.qml:201
 #, kde-format
 msgid "Recent files"
 msgstr "최근 파일"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:202
 #, kde-format
 msgid "Often used files"
 msgstr "자주 사용한 파일"
 
-#: package/contents/ui/ConfigGeneral.qml:207
+#: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "분류별 항목 정렬 기준:"
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: package/contents/ui/ConfigGeneral.qml:209
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "최근 사용"
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: package/contents/ui/ConfigGeneral.qml:209
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "자주 사용"
 
-#: package/contents/ui/ConfigGeneral.qml:218
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Search:"
 msgstr "검색:"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:221
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "책갈피, 파일, 이메일에서도 찾기"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:229
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "검색 결과를 아래로 정렬"
 
-#: package/contents/ui/DashboardRepresentation.qml:288
+#: package/contents/ui/DashboardRepresentation.qml:290
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "'%1' 검색 중"
 
-#: package/contents/ui/DashboardRepresentation.qml:288
+#: package/contents/ui/DashboardRepresentation.qml:290
 #, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "입력하여 검색…"
 
-#: package/contents/ui/DashboardRepresentation.qml:388
+#: package/contents/ui/DashboardRepresentation.qml:390
 #, kde-format
 msgid "Favorites"
 msgstr "책갈피"
 
-#: package/contents/ui/DashboardRepresentation.qml:606
+#: package/contents/ui/DashboardRepresentation.qml:608
 #: package/contents/ui/DashboardTabBar.qml:42
 #, kde-format
 msgid "Widgets"
@@ -195,7 +195,7 @@ msgstr "위젯"
 msgid "Apps & Docs"
 msgstr "앱과 문서"
 
-#: package/contents/ui/main.qml:256
+#: package/contents/ui/main.qml:257
 #, kde-format
 msgid "Edit Applications…"
 msgstr "프로그램 편집…"

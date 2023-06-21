@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:58+0000\n"
+"POT-Creation-Date: 2023-06-21 02:02+0000\n"
 "PO-Revision-Date: 2023-02-15 05:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -28,25 +28,25 @@ msgstr "გარემოს იერსახე"
 msgid "Behavior"
 msgstr "ქცევა"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
 msgstr "დადუმების გამორთვა"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "დადუმება"
 
-#: package/contents/ui/AudioStream.qml:103
+#: package/contents/ui/AudioStream.qml:104
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "დადუმების გამორთვა: %1"
 
-#: package/contents/ui/AudioStream.qml:103
+#: package/contents/ui/AudioStream.qml:104
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
@@ -573,13 +573,13 @@ msgstr "ყველას &დახურვა"
 msgid "&Close"
 msgstr "&დახურვა"
 
-#: package/contents/ui/Task.qml:78
+#: package/contents/ui/Task.qml:79
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "%1-ს გაშვება"
 
-#: package/contents/ui/Task.qml:83
+#: package/contents/ui/Task.qml:84
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -587,25 +587,25 @@ msgid_plural "There are %1 new messages."
 msgstr[0] "%1 ახალი შეტყობინება."
 msgstr[1] "%1 ახალი შეტყობინება."
 
-#: package/contents/ui/Task.qml:92
+#: package/contents/ui/Task.qml:93
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "%1-ის ამოცანის მინიატურის ჩვენება"
 
-#: package/contents/ui/Task.qml:98
+#: package/contents/ui/Task.qml:99
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "%1-სთვის ფანჯრების გვერდიგვერდ ჩვენება"
 
-#: package/contents/ui/Task.qml:103
+#: package/contents/ui/Task.qml:104
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "%1-სთვის ტექსტუალური სის გახსნა"
 
-#: package/contents/ui/Task.qml:107
+#: package/contents/ui/Task.qml:108
 #, kde-format
 msgid "Activate %1"
 msgstr "%1-ის აქტივაცია"

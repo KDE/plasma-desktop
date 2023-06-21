@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:58+0000\n"
+"POT-Creation-Date: 2023-06-21 02:02+0000\n"
 "PO-Revision-Date: 2021-09-04 09:23+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -49,145 +49,145 @@ msgstr "A jelenlegi aktivitáson"
 msgid "Show in Favorites"
 msgstr "Megjelenítés a Kedvenceknél"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: package/contents/ui/ConfigGeneral.qml:126
+#: package/contents/ui/ConfigGeneral.qml:127
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Kiválasztás…"
 
-#: package/contents/ui/ConfigGeneral.qml:131
+#: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Ikon visszaállítása"
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Show applications as:"
 msgstr "Alkalmazások megjelenítése mint:"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Name only"
 msgstr "Csak név"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Description only"
 msgstr "Csak leírás"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Name (Description)"
 msgstr "Név (leírás)"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Description (Name)"
 msgstr "Leírás (név)"
 
-#: package/contents/ui/ConfigGeneral.qml:161
+#: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
 msgid "Behavior:"
 msgstr "Működés:"
 
-#: package/contents/ui/ConfigGeneral.qml:163
+#: package/contents/ui/ConfigGeneral.qml:164
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "Alkalmazások rendezése ABC sorrendben"
 
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "Almenük összenyomása egyetlen szintre"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "Ikonok megjelenítése a menü legfelső szintjén"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Show categories:"
 msgstr "Kategóriák:"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:193
 #, kde-format
 msgid "Recent applications"
 msgstr "Legutóbbi alkalmazások"
 
-#: package/contents/ui/ConfigGeneral.qml:193
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Often used applications"
 msgstr "Gyakran használt alkalmazások"
 
-#: package/contents/ui/ConfigGeneral.qml:200
+#: package/contents/ui/ConfigGeneral.qml:201
 #, kde-format
 msgid "Recent files"
 msgstr "Legutóbbi fájlok"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:202
 #, kde-format
 msgid "Often used files"
 msgstr "Gyakran használt fájlok"
 
-#: package/contents/ui/ConfigGeneral.qml:207
+#: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "Elemek kategóriába sorolási szempontja:"
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: package/contents/ui/ConfigGeneral.qml:209
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Legutóbb használt"
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: package/contents/ui/ConfigGeneral.qml:209
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "Gyakran használt"
 
-#: package/contents/ui/ConfigGeneral.qml:218
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Search:"
 msgstr "Keresés:"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:221
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Keresés kiterjesztése könyvjelzőkre, fájlokra és e-mailekre"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:229
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Találatok igazítása alulra "
 
-#: package/contents/ui/DashboardRepresentation.qml:288
+#: package/contents/ui/DashboardRepresentation.qml:290
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "„'%1” keresése"
 
-#: package/contents/ui/DashboardRepresentation.qml:288
+#: package/contents/ui/DashboardRepresentation.qml:290
 #, fuzzy, kde-format
 #| msgid "Type to search…"
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Kezdjen el gépelni a kereséshez…"
 
-#: package/contents/ui/DashboardRepresentation.qml:388
+#: package/contents/ui/DashboardRepresentation.qml:390
 #, kde-format
 msgid "Favorites"
 msgstr "Kedvencek"
 
-#: package/contents/ui/DashboardRepresentation.qml:606
+#: package/contents/ui/DashboardRepresentation.qml:608
 #: package/contents/ui/DashboardTabBar.qml:42
 #, kde-format
 msgid "Widgets"
@@ -198,7 +198,7 @@ msgstr "Elemek"
 msgid "Apps & Docs"
 msgstr "Alkalmazások és dokumentumok"
 
-#: package/contents/ui/main.qml:256
+#: package/contents/ui/main.qml:257
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Alkalmazások szerkesztése…"

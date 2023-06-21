@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:58+0000\n"
+"POT-Creation-Date: 2023-06-21 02:02+0000\n"
 "PO-Revision-Date: 2023-03-22 18:07+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -29,25 +29,25 @@ msgstr "Vzhľad"
 msgid "Behavior"
 msgstr "Správanie"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
 msgstr "Zrušiť stlmenie"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "Stlmiť"
 
-#: package/contents/ui/AudioStream.qml:103
+#: package/contents/ui/AudioStream.qml:104
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "Zrušiť stlmenie %1"
 
-#: package/contents/ui/AudioStream.qml:103
+#: package/contents/ui/AudioStream.qml:104
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
@@ -572,13 +572,13 @@ msgstr "Zavrieť všetko"
 msgid "&Close"
 msgstr "&Zavrieť"
 
-#: package/contents/ui/Task.qml:78
+#: package/contents/ui/Task.qml:79
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Spustiť %1"
 
-#: package/contents/ui/Task.qml:83
+#: package/contents/ui/Task.qml:84
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -587,25 +587,25 @@ msgstr[0] "Pribudla %1 nová správa."
 msgstr[1] "Pribudli %1 nové správy."
 msgstr[2] "Pribudli %1 nové správy."
 
-#: package/contents/ui/Task.qml:92
+#: package/contents/ui/Task.qml:93
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Zobraziť popis k úlohe pre %1"
 
-#: package/contents/ui/Task.qml:98
+#: package/contents/ui/Task.qml:99
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "Zobrazenie okien vedľa seba pre %1"
 
-#: package/contents/ui/Task.qml:103
+#: package/contents/ui/Task.qml:104
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "Otvorenie textového zoznamu okien pre %1"
 
-#: package/contents/ui/Task.qml:107
+#: package/contents/ui/Task.qml:108
 #, kde-format
 msgid "Activate %1"
 msgstr "Aktivovať %1"

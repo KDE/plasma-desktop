@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:58+0000\n"
+"POT-Creation-Date: 2023-06-21 02:02+0000\n"
 "PO-Revision-Date: 2022-12-28 00:59+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -34,25 +34,25 @@ msgstr "Išvaizda"
 msgid "Behavior"
 msgstr "Elgsena"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
 msgstr "Įjungti garsą"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "Nutildyti"
 
-#: package/contents/ui/AudioStream.qml:103
+#: package/contents/ui/AudioStream.qml:104
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "Įjungti %1 garsą"
 
-#: package/contents/ui/AudioStream.qml:103
+#: package/contents/ui/AudioStream.qml:104
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
@@ -578,13 +578,13 @@ msgstr "&Užverti"
 msgid "&Close"
 msgstr "&Užverti"
 
-#: package/contents/ui/Task.qml:78
+#: package/contents/ui/Task.qml:79
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Paleisti %1"
 
-#: package/contents/ui/Task.qml:83
+#: package/contents/ui/Task.qml:84
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -594,25 +594,25 @@ msgstr[1] "Yra %1 naujos žinutės."
 msgstr[2] "Yra %1 naujų žinučių."
 msgstr[3] "Yra %1 nauja žinutė."
 
-#: package/contents/ui/Task.qml:92
+#: package/contents/ui/Task.qml:93
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Rodyti %1 užduoties paaiškinimą"
 
-#: package/contents/ui/Task.qml:98
+#: package/contents/ui/Task.qml:99
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "Rodyti %1 langus vieną šalia kito"
 
-#: package/contents/ui/Task.qml:103
+#: package/contents/ui/Task.qml:104
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "Atverti tekstinį %1 langų sąrašą"
 
-#: package/contents/ui/Task.qml:107
+#: package/contents/ui/Task.qml:108
 #, kde-format
 msgid "Activate %1"
 msgstr "Aktyvuoti %1"
