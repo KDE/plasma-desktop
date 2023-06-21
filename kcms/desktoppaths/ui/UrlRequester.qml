@@ -4,6 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import QtCore
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Dialogs 6.3
@@ -28,7 +29,7 @@ Row {
 
         FolderDialog {
             id: fileDialog
-            currentFolder: shortcuts.home
+            currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
 
             onAccepted: {
                 urlRequester.newLocationSelected(selectedFolder);
