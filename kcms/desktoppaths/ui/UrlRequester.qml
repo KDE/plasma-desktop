@@ -16,6 +16,9 @@ Row {
 
     required property url location
     required property url defaultLocation
+    required property int textFieldWidth
+
+    readonly property int implicitTextFieldWidth: metrics.width + textField.leftPadding + textField.rightPadding
 
     /**
      * Emitted when the user selects a new folder
@@ -23,6 +26,11 @@ Row {
     signal newLocationSelected(url newLocation)
 
     spacing: Kirigami.Units.smallSpacing
+
+    TextMetrics {
+        id: metrics
+        text: textField.text
+    }
 
     Component {
         id: fileDialogComponent
@@ -46,7 +54,7 @@ Row {
 
     QQC2.TextField {
         id: textField
-        width: Kirigami.Units.gridUnit * 10
+        width: urlRequester.textFieldWidth
         height: Math.max(fileDialogButton.implicitHeight, textField.implicitHeight)
         text: location.toString().substr(7)
         readOnly: true
