@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-02-07 07:31+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -63,12 +63,12 @@ msgstr "Publikoa"
 msgid "Templates"
 msgstr "Txantiloiak"
 
-#: ui/main.qml:22
+#: ui/main.qml:34
 #, kde-format
 msgid "Desktop path:"
 msgstr "Mahaigainaren bide-izena:"
 
-#: ui/main.qml:25
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -79,12 +79,12 @@ msgstr ""
 "Nahi izanez gero, karpeta honen helbidea aldatu dezakezu, eta barnean "
 "dituenak ere automatikoki mugituko dira helbide berrira."
 
-#: ui/main.qml:31
+#: ui/main.qml:48
 #, kde-format
 msgid "Documents path:"
 msgstr "Dokumentuen bide-izena:"
 
-#: ui/main.qml:34
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
@@ -92,35 +92,35 @@ msgstr ""
 "Hau izango da dokumentuak bertatik kargatzeko edo bertara kopiatzeko "
 "erabiliko den karpeta lehenetsia."
 
-#: ui/main.qml:40
+#: ui/main.qml:62
 #, kde-format
 msgid "Downloads path:"
 msgstr "Jaitsitakoak-en bidea:"
 
-#: ui/main.qml:43
+#: ui/main.qml:68
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Hau izango da zuk jaitsitako elementuak gordetzeko erabiliko den karpeta "
 "lehenetsia."
 
-#: ui/main.qml:49
+#: ui/main.qml:76
 #, kde-format
 msgid "Videos path:"
 msgstr "Bideoen bide-izena:"
 
-#: ui/main.qml:52 ui/main.qml:79
+#: ui/main.qml:82 ui/main.qml:124
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "Hau izango da filmak kargatu edo gordetzeko erabiliko den karpeta lehenetsia."
 
-#: ui/main.qml:58
+#: ui/main.qml:90
 #, kde-format
 msgid "Pictures path:"
 msgstr "Irudien bide-izena:"
 
-#: ui/main.qml:61
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
@@ -128,35 +128,35 @@ msgstr ""
 "Hau izango da irudiak kargatu edo gordetzeko erabiliko den karpeta "
 "lehenetsia."
 
-#: ui/main.qml:67
+#: ui/main.qml:104
 #, kde-format
 msgid "Music path:"
 msgstr "Musikaren bide-izena:"
 
-#: ui/main.qml:70
+#: ui/main.qml:110
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Hau izango da musika kargatu edo gordetzeko erabiliko den karpeta lehenetsia."
 
-#: ui/main.qml:76
+#: ui/main.qml:118
 #, kde-format
 msgid "Public path:"
 msgstr "Bide-izen publikoa:"
 
-#: ui/main.qml:85
+#: ui/main.qml:132
 #, kde-format
 msgid "Templates path:"
 msgstr "Txantiloien bide-izena:"
 
-#: ui/main.qml:88
+#: ui/main.qml:138
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
 "Karpeta hau erabiliko da, era lehenetsian, txantiloiak zamatzeko/gordetzeko."
 
-#: ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

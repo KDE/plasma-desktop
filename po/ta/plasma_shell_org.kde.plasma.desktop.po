@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-21 02:02+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-05-21 14:37+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.1\n"
 
-#: contents/activitymanager/ActivityItem.qml:208
+#: contents/activitymanager/ActivityItem.qml:206
 msgid "Currently being used"
 msgstr "இப்போது பயன்படுத்தப்படுவது"
 
-#: contents/activitymanager/ActivityItem.qml:248
+#: contents/activitymanager/ActivityItem.qml:246
 msgid ""
 "Move to\n"
 "this activity"
@@ -29,7 +29,7 @@ msgstr ""
 "இந்த செயல்பாட்டிற்கு\n"
 "நகர்த்து"
 
-#: contents/activitymanager/ActivityItem.qml:278
+#: contents/activitymanager/ActivityItem.qml:276
 msgid ""
 "Show also\n"
 "in this activity"
@@ -37,11 +37,11 @@ msgstr ""
 "இந்த செயல்பாட்டிலும்\n"
 "காட்டு"
 
-#: contents/activitymanager/ActivityItem.qml:340
+#: contents/activitymanager/ActivityItem.qml:338
 msgid "Configure"
 msgstr "அமை"
 
-#: contents/activitymanager/ActivityItem.qml:359
+#: contents/activitymanager/ActivityItem.qml:357
 msgid "Stop activity"
 msgstr "செயல்பாட்டை நிறுத்து"
 
@@ -49,7 +49,7 @@ msgstr "செயல்பாட்டை நிறுத்து"
 msgid "Stopped activities:"
 msgstr "நிறுத்திய செயல்பாட்டுகள்:"
 
-#: contents/activitymanager/ActivityManager.qml:121
+#: contents/activitymanager/ActivityManager.qml:120
 msgid "Create activity…"
 msgstr "செயல்பாட்டை உருவாக்கு"
 
@@ -57,11 +57,11 @@ msgstr "செயல்பாட்டை உருவாக்கு"
 msgid "Activities"
 msgstr "செயல்பாடுகள்"
 
-#: contents/activitymanager/StoppedActivityItem.qml:140
+#: contents/activitymanager/StoppedActivityItem.qml:138
 msgid "Configure activity"
 msgstr "செயல்பாட்டை அமை"
 
-#: contents/activitymanager/StoppedActivityItem.qml:157
+#: contents/activitymanager/StoppedActivityItem.qml:155
 msgid "Delete"
 msgstr "நீக்கு"
 
@@ -260,94 +260,94 @@ msgstr "சுட்டி செயல்கள்"
 msgid "Input Here"
 msgstr "இங்கு உள்ளிடவும்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:45
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
 msgid "Panel Settings"
 msgstr "பலகைக்கான அமைப்புகள்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:51
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
 msgstr "அதிகபட்ச பெரிதாக்கு"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
 msgid "Make this panel as tall as possible"
 msgstr "பலகையை முடிந்தளவு நீளமாக்கும்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:56
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
 msgid "Make this panel as wide as possible"
 msgstr "பலகையை முடிந்தளவு நீளமாக்கும்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:64
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "நீக்கு"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:67
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
 msgstr "பலகையை நீக்கும்; இச்செயலை செயல்நீக்கலாம்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:93
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
 msgstr "சீரமைப்பு:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Top"
 msgstr "மேலே"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Left"
 msgstr "இடதுபுறமாக"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:100
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை மேல் ஓரத்துடன் சீரமைக்கும்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:100
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
 msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை மேல் ஓரத்துடன் சீரமைக்கும்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Center"
 msgstr "நடுவில்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:109
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
 msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை நடுப்படுத்தும்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Bottom"
 msgstr "கீழே"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Right"
 msgstr "வலதுபுறமாக"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:118
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை கீழ் ஓரத்துடன் சீரமைக்கும்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:118
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை வலது ஓரத்துடன் சீரமைக்கும்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:151
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
 msgid "Visibility:"
 msgstr "காட்டப்படுவது:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid "Always Visible"
 msgstr "எப்போது காட்டப்படும்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
 msgid "Auto-Hide"
 msgstr "தானாக மறை"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
@@ -355,19 +355,19 @@ msgstr ""
 "பலகை இயல்பாக மறைந்திருக்கும். திரையின் ஓரத்தில் சுட்டிக்குறியை வைக்கும்போது பலகை "
 "காட்டப்படும்."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "ஒளிபுகாமை:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:199
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
 msgid "Always Opaque"
 msgstr "எப்போதும் ஒளிபுகாத‍து"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
 msgstr "மாறக்கூடியது"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:208
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
@@ -375,35 +375,35 @@ msgstr ""
 "பலகையை சாளரங்கள் தொடும்போது பலகை ஒளிபுகாத‍தாக இருக்கும். மற்ற நேரங்களில் ஒளிபுகுவதாக "
 "இருக்கும்."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:217
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 msgid "Always Translucent"
 msgstr "எப்போதும் ஒளிபுகக்கூடியது"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:246
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
 msgstr "மிதப்பது:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:250
 msgid "Floating"
 msgstr "மிதப்பது"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:252
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
 msgstr "திரையின் ஓரத்ததை தொடாமல் பலகை மிதக்கும்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
 msgstr "ஒட்டுவது"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:262
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
 msgstr "திரையின் ஓரத்துடன் பலகை ஒட்டியிருக்கும்"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:284
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
 msgid "Focus Shortcut:"
 msgstr "குவியப்படுத்தும் சுருக்குவழி:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:294
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "பலகையை குவியப்படுத்த இந்த விசைச் சுருக்குவழியை அழுத்துங்கள்"
 

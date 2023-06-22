@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2021-03-19 09:22+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -62,12 +62,12 @@ msgstr ""
 msgid "Templates"
 msgstr ""
 
-#: ui/main.qml:22
+#: ui/main.qml:34
 #, kde-format
 msgid "Desktop path:"
 msgstr "Sökväg till skrivbord:"
 
-#: ui/main.qml:25
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -78,12 +78,12 @@ msgstr ""
 "plats på denna katalog om du vill, och innehållet kommer automatiskt att "
 "flyttas till den nya platsen."
 
-#: ui/main.qml:31
+#: ui/main.qml:48
 #, kde-format
 msgid "Documents path:"
 msgstr "Sökväg till dokument:"
 
-#: ui/main.qml:34
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
@@ -91,35 +91,35 @@ msgstr ""
 "Denna katalog kommer att användas som förval när du laddar eller sparar "
 "dokument."
 
-#: ui/main.qml:40
+#: ui/main.qml:62
 #, kde-format
 msgid "Downloads path:"
 msgstr "Sökväg till nerladdat:"
 
-#: ui/main.qml:43
+#: ui/main.qml:68
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Denna katalog kommer att användas som förval för att spara nerladdade objekt."
 
-#: ui/main.qml:49
+#: ui/main.qml:76
 #, kde-format
 msgid "Videos path:"
 msgstr "Sökväg till videor:"
 
-#: ui/main.qml:52 ui/main.qml:79
+#: ui/main.qml:82 ui/main.qml:124
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "Denna katalog kommer att användas som förval när du laddar eller sparar "
 "filmer."
 
-#: ui/main.qml:58
+#: ui/main.qml:90
 #, kde-format
 msgid "Pictures path:"
 msgstr "Sökväg till bilder:"
 
-#: ui/main.qml:61
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
@@ -127,31 +127,31 @@ msgstr ""
 "Denna katalog kommer att användas som förval när du laddar eller sparar "
 "bilder."
 
-#: ui/main.qml:67
+#: ui/main.qml:104
 #, kde-format
 msgid "Music path:"
 msgstr "Sökväg till musik:"
 
-#: ui/main.qml:70
+#: ui/main.qml:110
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Denna katalog kommer att användas som förval när du laddar eller sparar "
 "musik."
 
-#: ui/main.qml:76
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Sökväg till musik:"
 
-#: ui/main.qml:85
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgid "Templates path:"
 msgstr "Sökväg till bilder:"
 
-#: ui/main.qml:88
+#: ui/main.qml:138
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -161,7 +161,7 @@ msgstr ""
 "Denna katalog kommer att användas som förval när du laddar eller sparar "
 "bilder."
 
-#: ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

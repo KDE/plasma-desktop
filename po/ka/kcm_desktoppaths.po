@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-02-13 07:05+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -58,12 +58,12 @@ msgstr "საჯარო"
 msgid "Templates"
 msgstr "ნიმუშები"
 
-#: ui/main.qml:22
+#: ui/main.qml:34
 #, kde-format
 msgid "Desktop path:"
 msgstr "სამუშაო მაგიდის ბილიკი:"
 
-#: ui/main.qml:25
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -74,12 +74,12 @@ msgstr ""
 "თუ გსურთ, შეგიძლიათ შეცვალოთ ამ საქაღალდის მდებარეობა და შიგთავსი "
 "ავტომატურად გადავა ახალ ადგილას."
 
-#: ui/main.qml:31
+#: ui/main.qml:48
 #, kde-format
 msgid "Documents path:"
 msgstr "დოკუმენტების ბილიკი:"
 
-#: ui/main.qml:34
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
@@ -87,36 +87,36 @@ msgstr ""
 "ეს საქაღალდე ნაგულისხმევად გამოყენებული იქნება დოკუმენტების ჩასატვირთად ან "
 "შესანახად."
 
-#: ui/main.qml:40
+#: ui/main.qml:62
 #, kde-format
 msgid "Downloads path:"
 msgstr "გადმოწერების ბილიკი:"
 
-#: ui/main.qml:43
+#: ui/main.qml:68
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "ეს საქაღალდე ნაგულისხმებად გამოყენებული იქნება თქვენი გადმოწერილი ფაილების "
 "შესანახად."
 
-#: ui/main.qml:49
+#: ui/main.qml:76
 #, kde-format
 msgid "Videos path:"
 msgstr "ვიდეოების ბილიკი:"
 
-#: ui/main.qml:52 ui/main.qml:79
+#: ui/main.qml:82 ui/main.qml:124
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "ეს საქაღალდე ნაგულისხმებად გამოყენებული იქნება ფილმების ჩასატვირთად ან "
 "შესანახად."
 
-#: ui/main.qml:58
+#: ui/main.qml:90
 #, kde-format
 msgid "Pictures path:"
 msgstr "სურათების ბილიკი:"
 
-#: ui/main.qml:61
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
@@ -124,29 +124,29 @@ msgstr ""
 "ეს საქაღალდე ნაგულისხმევად გამოყენებული იქნება სურათების ჩასატვირთად ან "
 "შესანახად."
 
-#: ui/main.qml:67
+#: ui/main.qml:104
 #, kde-format
 msgid "Music path:"
 msgstr "მუსიკის ბილიკი:"
 
-#: ui/main.qml:70
+#: ui/main.qml:110
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "ეს საქაღალდე ნაგულისხმებად გამოყენებული იქნება მუსიკის ჩასატვირთად ან "
 "შესანახად."
 
-#: ui/main.qml:76
+#: ui/main.qml:118
 #, kde-format
 msgid "Public path:"
 msgstr "საჯარო ბილიკი:"
 
-#: ui/main.qml:85
+#: ui/main.qml:132
 #, kde-format
 msgid "Templates path:"
 msgstr "შაბლონების ბილიკი:"
 
-#: ui/main.qml:88
+#: ui/main.qml:138
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
@@ -154,7 +154,7 @@ msgstr ""
 "ეს საქაღალდე ნაგულისხმევად გამოყენებული იქნება შაბლონების ჩასატვირთად ან "
 "შესანახად."
 
-#: ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

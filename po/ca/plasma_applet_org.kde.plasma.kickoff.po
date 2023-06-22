@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-21 02:02+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-01-10 10:43+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -52,18 +52,18 @@ msgstr "A l'activitat actual"
 msgid "Show in Favorites"
 msgstr "Mostra als preferits"
 
-#: package/contents/ui/ConfigGeneral.qml:40
+#: package/contents/ui/ConfigGeneral.qml:39
 #, kde-format
 msgid "Icon:"
 msgstr "Icona:"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:45
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Canvia la icona del llançador d'aplicacions"
 
-#: package/contents/ui/ConfigGeneral.qml:47
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -73,144 +73,144 @@ msgstr ""
 "La icona actual és %1. Feu-hi clic per a obrir un menú per canviar la icona "
 "actual o restablir la icona predeterminada."
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: package/contents/ui/ConfigGeneral.qml:50
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "El nom de la icona és «%1»"
 
-#: package/contents/ui/ConfigGeneral.qml:84
+#: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Trieu…"
 
-#: package/contents/ui/ConfigGeneral.qml:86
+#: package/contents/ui/ConfigGeneral.qml:85
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Trieu una icona per al llançador d'aplicacions"
 
-#: package/contents/ui/ConfigGeneral.qml:90
+#: package/contents/ui/ConfigGeneral.qml:89
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Restableix a la icona predeterminada"
 
-#: package/contents/ui/ConfigGeneral.qml:96
+#: package/contents/ui/ConfigGeneral.qml:95
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Elimina la icona"
 
-#: package/contents/ui/ConfigGeneral.qml:107
+#: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Etiqueta de text:"
 
-#: package/contents/ui/ConfigGeneral.qml:109
+#: package/contents/ui/ConfigGeneral.qml:108
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Teclegeu aquí per afegir una etiqueta de text"
 
-#: package/contents/ui/ConfigGeneral.qml:124
+#: package/contents/ui/ConfigGeneral.qml:123
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Inicialitza l'etiqueta del menú"
 
-#: package/contents/ui/ConfigGeneral.qml:138
+#: package/contents/ui/ConfigGeneral.qml:137
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "No és pot definir una etiqueta de text quan el plafó és vertical."
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: package/contents/ui/ConfigGeneral.qml:148
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "General:"
 
-#: package/contents/ui/ConfigGeneral.qml:150
+#: package/contents/ui/ConfigGeneral.qml:149
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Ordena alfabèticament les aplicacions sempre"
 
-#: package/contents/ui/ConfigGeneral.qml:155
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Usa un estil compacte d'elements de llista"
 
-#: package/contents/ui/ConfigGeneral.qml:161
+#: package/contents/ui/ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Desactivat automàticament en el mode tàctil"
 
-#: package/contents/ui/ConfigGeneral.qml:170
+#: package/contents/ui/ConfigGeneral.qml:169
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Configura els connectors de cerca habilitats…"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:179
 #, kde-format
 msgid "Show favorites:"
 msgstr "Mostra els preferits:"
 
-#: package/contents/ui/ConfigGeneral.qml:181
+#: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "En una quadrícula"
 
-#: package/contents/ui/ConfigGeneral.qml:189
+#: package/contents/ui/ConfigGeneral.qml:188
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "En una llista"
 
-#: package/contents/ui/ConfigGeneral.qml:197
+#: package/contents/ui/ConfigGeneral.qml:196
 #, kde-format
 msgid "Show other applications:"
 msgstr "Mostra altres aplicacions:"
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: package/contents/ui/ConfigGeneral.qml:197
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "En una quadrícula"
 
-#: package/contents/ui/ConfigGeneral.qml:206
+#: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "En una llista"
 
-#: package/contents/ui/ConfigGeneral.qml:218
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Mostra els botons per a:"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:218
 #: package/contents/ui/LeaveButtons.qml:115
 #, kde-format
 msgid "Power"
 msgstr "Aturada"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:227
 #, kde-format
 msgid "Session"
 msgstr "Sessió"
 
-#: package/contents/ui/ConfigGeneral.qml:237
+#: package/contents/ui/ConfigGeneral.qml:236
 #, kde-format
 msgid "Power and session"
 msgstr "Aturada i sessió"
 
-#: package/contents/ui/ConfigGeneral.qml:246
+#: package/contents/ui/ConfigGeneral.qml:245
 #, kde-format
 msgid "Show action button captions"
 msgstr "Mostra les llegendes dels botons d'acció"
@@ -225,7 +225,7 @@ msgstr "Aplicacions"
 msgid "Places"
 msgstr "Llocs"
 
-#: package/contents/ui/FullRepresentation.qml:119
+#: package/contents/ui/FullRepresentation.qml:118
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
@@ -261,19 +261,19 @@ msgstr "Surt"
 msgid "More"
 msgstr "Més"
 
-#: package/contents/ui/PlacesPage.qml:49
+#: package/contents/ui/PlacesPage.qml:48
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
 msgstr "Ordinador"
 
-#: package/contents/ui/PlacesPage.qml:50
+#: package/contents/ui/PlacesPage.qml:49
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
 msgstr "Historial"
 
-#: package/contents/ui/PlacesPage.qml:51
+#: package/contents/ui/PlacesPage.qml:50
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"

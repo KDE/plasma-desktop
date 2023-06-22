@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-02-14 22:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "பொதுவானவை"
 msgid "Templates"
 msgstr "வார்ப்புருகள்"
 
-#: ui/main.qml:22
+#: ui/main.qml:34
 #, kde-format
 msgid "Desktop path:"
 msgstr "பணிமேடைப் பாதை:"
 
-#: ui/main.qml:25
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -72,78 +72,78 @@ msgstr ""
 "பணிமேடையில் காட்டப்படும் கோப்புகளை இந்த அடைவு கொண்டிருக்கும். இந்த அடைவின் இருப்பிடத்தை "
 "மாற்றினால், அதில் உள்ள உருப்படிகள் தானாகவே புது இடத்திற்கு நகர்த்தப்படும்."
 
-#: ui/main.qml:31
+#: ui/main.qml:48
 #, kde-format
 msgid "Documents path:"
 msgstr "ஆவணங்களுக்கான பாதை:"
 
-#: ui/main.qml:34
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr "ஆவணங்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
-#: ui/main.qml:40
+#: ui/main.qml:62
 #, kde-format
 msgid "Downloads path:"
 msgstr "பதிவிறக்கங்களுக்கான பாதை:"
 
-#: ui/main.qml:43
+#: ui/main.qml:68
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "உங்கள் பதிவிறக்கங்களை சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
-#: ui/main.qml:49
+#: ui/main.qml:76
 #, kde-format
 msgid "Videos path:"
 msgstr "ஒளிக்காட்சிகளுக்கான பாதை:"
 
-#: ui/main.qml:52 ui/main.qml:79
+#: ui/main.qml:82 ui/main.qml:124
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "ஒளிக்காட்சிகளை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
-#: ui/main.qml:58
+#: ui/main.qml:90
 #, kde-format
 msgid "Pictures path:"
 msgstr "படங்களுக்கான பாதை:"
 
-#: ui/main.qml:61
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr "படங்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
-#: ui/main.qml:67
+#: ui/main.qml:104
 #, kde-format
 msgid "Music path:"
 msgstr "பாடல்களுக்கான பாதை:"
 
-#: ui/main.qml:70
+#: ui/main.qml:110
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr "பாடல்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
-#: ui/main.qml:76
+#: ui/main.qml:118
 #, kde-format
 msgid "Public path:"
 msgstr "பொதுவானவற்றிற்கான பாதை:"
 
-#: ui/main.qml:85
+#: ui/main.qml:132
 #, kde-format
 msgid "Templates path:"
 msgstr "வார்ப்புருகளுக்கான பாதை:"
 
-#: ui/main.qml:88
+#: ui/main.qml:138
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
 "வார்ப்புருகளை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
-#: ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

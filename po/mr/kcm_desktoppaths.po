@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2013-02-09 16:14+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -60,12 +60,12 @@ msgstr ""
 msgid "Templates"
 msgstr ""
 
-#: ui/main.qml:22
+#: ui/main.qml:34
 #, kde-format
 msgid "Desktop path:"
 msgstr "डेस्कटॉप मार्ग :"
 
-#: ui/main.qml:25
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -73,12 +73,12 @@ msgid ""
 "move automatically to the new location as well."
 msgstr ""
 
-#: ui/main.qml:31
+#: ui/main.qml:48
 #, kde-format
 msgid "Documents path:"
 msgstr "दस्तऐवज मार्ग :"
 
-#: ui/main.qml:34
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
@@ -86,62 +86,62 @@ msgstr ""
 "या संचयीकाचा वापर मूलभूतरित्या पासून ते प्रति पर्यंत दस्तऐवजाचे दाखलन किंवा साठवणी करिता "
 "केला जाऊ शकतो."
 
-#: ui/main.qml:40
+#: ui/main.qml:62
 #, kde-format
 msgid "Downloads path:"
 msgstr "डाउनलोड मार्ग :"
 
-#: ui/main.qml:43
+#: ui/main.qml:68
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "या संचयीकाचा वापर मूलभूतरित्या डाउनलोड केलेल्या दस्तऐवजाच्या साठवणी करिता केला जाईल."
 
-#: ui/main.qml:49
+#: ui/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgid "Videos path:"
 msgstr "मूव्हीज मार्ग :"
 
-#: ui/main.qml:52 ui/main.qml:79
+#: ui/main.qml:82 ui/main.qml:124
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "या संचयीकाचा वापर मूलभूतरित्या मूव्हीजचे साठवणी करिता केला जाईल."
 
-#: ui/main.qml:58
+#: ui/main.qml:90
 #, kde-format
 msgid "Pictures path:"
 msgstr "प्रतिमा मार्ग :"
 
-#: ui/main.qml:61
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr "या संचयीकाचा वापर मूलभूतरित्या प्रतिमांचे साठवणी करिता केला जाईल."
 
-#: ui/main.qml:67
+#: ui/main.qml:104
 #, kde-format
 msgid "Music path:"
 msgstr "संगीत मार्ग :"
 
-#: ui/main.qml:70
+#: ui/main.qml:110
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr "या संचयीकाचा वापर मूलभूतरित्या संगीताच्या साठवणी करिता केला जाईल."
 
-#: ui/main.qml:76
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "संगीत मार्ग :"
 
-#: ui/main.qml:85
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgid "Templates path:"
 msgstr "प्रतिमा मार्ग :"
 
-#: ui/main.qml:88
+#: ui/main.qml:138
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -149,7 +149,7 @@ msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr "या संचयीकाचा वापर मूलभूतरित्या प्रतिमांचे साठवणी करिता केला जाईल."
 
-#: ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-02-06 15:20+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -71,12 +71,12 @@ msgstr "Público"
 msgid "Templates"
 msgstr "Plantillas"
 
-#: ui/main.qml:22
+#: ui/main.qml:34
 #, kde-format
 msgid "Desktop path:"
 msgstr "Ruta del escritorio:"
 
-#: ui/main.qml:25
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -87,76 +87,76 @@ msgstr ""
 "cambiar la ubicación de esta carpeta si así lo desea, y los contenidos "
 "también serán transferidos automáticamente a la nueva dirección."
 
-#: ui/main.qml:31
+#: ui/main.qml:48
 #, kde-format
 msgid "Documents path:"
 msgstr "Ruta para documentos:"
 
-#: ui/main.qml:34
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr "Esta carpeta será la predeterminada para cargar o guardar documentos."
 
-#: ui/main.qml:40
+#: ui/main.qml:62
 #, kde-format
 msgid "Downloads path:"
 msgstr "Ruta para descargas:"
 
-#: ui/main.qml:43
+#: ui/main.qml:68
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Esta carpeta será la predeterminada para guardar los elementos que descargue."
 
-#: ui/main.qml:49
+#: ui/main.qml:76
 #, kde-format
 msgid "Videos path:"
 msgstr "Ruta para los vídeos:"
 
-#: ui/main.qml:52 ui/main.qml:79
+#: ui/main.qml:82 ui/main.qml:124
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "Esta carpeta será la predeterminada para cargar o guardar películas."
 
-#: ui/main.qml:58
+#: ui/main.qml:90
 #, kde-format
 msgid "Pictures path:"
 msgstr "Ruta para imágenes:"
 
-#: ui/main.qml:61
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr "Esta carpeta será la predeterminada para cargar o guardar imágenes."
 
-#: ui/main.qml:67
+#: ui/main.qml:104
 #, kde-format
 msgid "Music path:"
 msgstr "Ruta para música:"
 
-#: ui/main.qml:70
+#: ui/main.qml:110
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr "Esta carpeta será la predeterminada para cargar o guardar música."
 
-#: ui/main.qml:76
+#: ui/main.qml:118
 #, kde-format
 msgid "Public path:"
 msgstr "Ruta de uso público:"
 
-#: ui/main.qml:85
+#: ui/main.qml:132
 #, kde-format
 msgid "Templates path:"
 msgstr "Ruta para plantillas:"
 
-#: ui/main.qml:88
+#: ui/main.qml:138
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr "Esta carpeta será la predeterminada para cargar o guardar plantillas."
 
-#: ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

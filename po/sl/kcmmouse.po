@@ -1,7 +1,7 @@
 # translation of kcminput.po to Slovenian
 # Translation of kcminput.po to Slovenian
 # KCMINPUT TRANSLATION TO SLOVENE LANGUAGE.
-# $Id: kcmmouse.po 1647732 2023-03-24 02:31:16Z scripty $
+# $Id: kcmmouse.po 1654331 2023-06-22 02:25:48Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-03-23 08:25+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -104,152 +104,152 @@ msgstr ""
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Kazalna naprava je izključena. Ni najti nobene druge naprave."
 
-#: kcm/libinput/main.qml:74
+#: kcm/libinput/main.qml:73
 #, kde-format
 msgid "Device:"
 msgstr "Naprava:"
 
-#: kcm/libinput/main.qml:98 kcm/libinput/main_deviceless.qml:49
+#: kcm/libinput/main.qml:97 kcm/libinput/main_deviceless.qml:49
 #, kde-format
 msgid "General:"
 msgstr "Splošno:"
 
-#: kcm/libinput/main.qml:100
+#: kcm/libinput/main.qml:99
 #, kde-format
 msgid "Device enabled"
 msgstr "Naprava omogočena"
 
-#: kcm/libinput/main.qml:120
+#: kcm/libinput/main.qml:119
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Vnos prek te naprave je mogoč."
 
-#: kcm/libinput/main.qml:125 kcm/libinput/main_deviceless.qml:51
+#: kcm/libinput/main.qml:124 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "Način za levičarje"
 
-#: kcm/libinput/main.qml:145 kcm/libinput/main_deviceless.qml:71
+#: kcm/libinput/main.qml:144 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Preklopi levi in desni gumb."
 
-#: kcm/libinput/main.qml:150 kcm/libinput/main_deviceless.qml:76
+#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Pritisnite levi in desni gumb kot srednji klik"
 
-#: kcm/libinput/main.qml:170 kcm/libinput/main_deviceless.qml:96
+#: kcm/libinput/main.qml:169 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "Hkratni klik levega in desnega gumba pošlje klik srednjega gumba."
 
-#: kcm/libinput/main.qml:179 kcm/libinput/main_deviceless.qml:105
+#: kcm/libinput/main.qml:178 kcm/libinput/main_deviceless.qml:105
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Hitrost kazalke:"
 
-#: kcm/libinput/main.qml:211 kcm/libinput/main_deviceless.qml:137
+#: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
 #, kde-format
 msgid "Acceleration profile:"
 msgstr "Profil pospeševanja:"
 
-#: kcm/libinput/main.qml:242 kcm/libinput/main_deviceless.qml:168
+#: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
 msgid "Flat"
 msgstr "Ravno"
 
-#: kcm/libinput/main.qml:246 kcm/libinput/main_deviceless.qml:172
+#: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Kazalec prepotuje enako razdaljo kot gibanje miške."
 
-#: kcm/libinput/main.qml:252 kcm/libinput/main_deviceless.qml:178
+#: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
 msgid "Adaptive"
 msgstr "Prilagodljiv"
 
-#: kcm/libinput/main.qml:256 kcm/libinput/main_deviceless.qml:182
+#: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "Razdalja poti kazalke je odvisna od hitrosti premikanja miške."
 
-#: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:193
+#: kcm/libinput/main.qml:266 kcm/libinput/main_deviceless.qml:193
 #, kde-format
 msgid "Scrolling:"
 msgstr "Drsenje zaslona:"
 
-#: kcm/libinput/main.qml:269 kcm/libinput/main_deviceless.qml:195
+#: kcm/libinput/main.qml:268 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "V obrnjeno smer drsenja zaslona"
 
-#: kcm/libinput/main.qml:285 kcm/libinput/main_deviceless.qml:211
+#: kcm/libinput/main.qml:284 kcm/libinput/main_deviceless.qml:211
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Drsenje zaslona kot pri zaslonih na dotik."
 
-#: kcm/libinput/main.qml:290
+#: kcm/libinput/main.qml:289
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Hitrost drsenja:"
 
-#: kcm/libinput/main.qml:338
+#: kcm/libinput/main.qml:337
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Počasneje"
 
-#: kcm/libinput/main.qml:344
+#: kcm/libinput/main.qml:343
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Hitreje"
 
-#: kcm/libinput/main.qml:355
+#: kcm/libinput/main.qml:354
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Ponovno poveži dodatne gumbe na miški…"
 
-#: kcm/libinput/main.qml:391
+#: kcm/libinput/main.qml:390
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Dodatni gumb %1:"
 
-#: kcm/libinput/main.qml:421
+#: kcm/libinput/main.qml:420
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "Pritisnite gumb na miški za katerega želite dodati povezavo s tipko"
 
-#: kcm/libinput/main.qml:422
+#: kcm/libinput/main.qml:421
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Vnesite novo kombinacijo tipk za %1"
 
-#: kcm/libinput/main.qml:426
+#: kcm/libinput/main.qml:425
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: kcm/libinput/main.qml:443
+#: kcm/libinput/main.qml:442
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "Pritisnite gumb na miški "
 
-#: kcm/libinput/main.qml:444
+#: kcm/libinput/main.qml:443
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Dodaj povezavo…"
 
-#: kcm/libinput/main.qml:473
+#: kcm/libinput/main.qml:472
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"

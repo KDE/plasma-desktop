@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-21 02:02+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-05-30 23:14+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "X-Generator: Lokalize 23.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: contents/activitymanager/ActivityItem.qml:208
+#: contents/activitymanager/ActivityItem.qml:206
 msgid "Currently being used"
 msgstr "В момента се използва"
 
-#: contents/activitymanager/ActivityItem.qml:248
+#: contents/activitymanager/ActivityItem.qml:246
 msgid ""
 "Move to\n"
 "this activity"
@@ -29,7 +29,7 @@ msgstr ""
 "Преместване в \n"
 "тази дейност"
 
-#: contents/activitymanager/ActivityItem.qml:278
+#: contents/activitymanager/ActivityItem.qml:276
 msgid ""
 "Show also\n"
 "in this activity"
@@ -37,11 +37,11 @@ msgstr ""
 "Показване също \n"
 "в тази дейност"
 
-#: contents/activitymanager/ActivityItem.qml:340
+#: contents/activitymanager/ActivityItem.qml:338
 msgid "Configure"
 msgstr "Настройване"
 
-#: contents/activitymanager/ActivityItem.qml:359
+#: contents/activitymanager/ActivityItem.qml:357
 msgid "Stop activity"
 msgstr "Спиране на дейност"
 
@@ -49,7 +49,7 @@ msgstr "Спиране на дейност"
 msgid "Stopped activities:"
 msgstr "Преустановени дейности:"
 
-#: contents/activitymanager/ActivityManager.qml:121
+#: contents/activitymanager/ActivityManager.qml:120
 msgid "Create activity…"
 msgstr "Създаване на дейност…"
 
@@ -57,11 +57,11 @@ msgstr "Създаване на дейност…"
 msgid "Activities"
 msgstr "Дейности"
 
-#: contents/activitymanager/StoppedActivityItem.qml:140
+#: contents/activitymanager/StoppedActivityItem.qml:138
 msgid "Configure activity"
 msgstr "Конфигурирайте дейност"
 
-#: contents/activitymanager/StoppedActivityItem.qml:157
+#: contents/activitymanager/StoppedActivityItem.qml:155
 msgid "Delete"
 msgstr "Изтриване"
 
@@ -262,122 +262,122 @@ msgstr "Действия с мишката"
 msgid "Input Here"
 msgstr "Въведете тук"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:45
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
 msgid "Panel Settings"
 msgstr "Настройки на панела"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:51
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
 msgstr "Максимизиране"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
 msgid "Make this panel as tall as possible"
 msgstr "Възможно най-висок панел"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:56
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
 msgid "Make this panel as wide as possible"
 msgstr "Възможно най-широк панел"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:64
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "Изтриване"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:67
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
 msgstr "Премахване на този панел; това действие е обратимо"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:93
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
 msgstr "Подравняване на панела:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Top"
 msgstr "Горе"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Left"
 msgstr "Наляво"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:100
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr ""
 "Изравнява немаксимизиран панел в горната част. Няма ефект, ако панелът е "
 "максимизиран"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:100
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
 msgstr ""
 "Изравнява немаксимизиран панел в ляво. Няма ефект, ако панелът е максимизиран"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Center"
 msgstr "Центрирано"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:109
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
 msgstr ""
 "Изравнява немаксимизиран панел в центъра. Няма ефект, ако панелът е "
 "максимизиран"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Bottom"
 msgstr "Отдолу"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Right"
 msgstr "Вдясно"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:118
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr ""
 "Изравнява немаксимизиран панел в долната част. Няма ефект, ако панелът е "
 "максимизиран"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:118
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr ""
 "Изравнява немаксимизиран панел в дясно. Няма ефект, ако панелът е "
 "максимизиран"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:151
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
 msgid "Visibility:"
 msgstr "Видимост:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid "Always Visible"
 msgstr "Винаги видим"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
 msgid "Auto-Hide"
 msgstr "Автоматично скриване"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr ""
 "Панелът е скрит, но се разкрива, когато курсорът докосне края на екрана"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "Непрозрачност:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:199
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
 msgid "Always Opaque"
 msgstr "Винаги непрозрачен"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
 msgstr "Адаптивен"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:208
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
@@ -385,35 +385,35 @@ msgstr ""
 "Панелът е непрозрачен, когато до него се допират прозорци, и полупрозрачен "
 "през останалото време."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:217
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 msgid "Always Translucent"
 msgstr "Винаги полупрозрачен"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:246
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
 msgstr "Плаващ панел:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:250
 msgid "Floating"
 msgstr "Плаващ панел"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:252
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
 msgstr "Панелът видимо се отдалечава от края на екрана"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
 msgstr "Прикрепен"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:262
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
 msgstr "Панелът е прикрепен до краищата на екрана"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:284
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
 msgid "Focus Shortcut:"
 msgstr "Клавишна комбинация за фокусиране:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:294
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Натиснете тази клавишна комбинация, за да преместите фокуса към панела"
 

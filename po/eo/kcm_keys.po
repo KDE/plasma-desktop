@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-05-05 22:50+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -266,12 +266,12 @@ msgstr "Elektu Dosieron…"
 msgid "Import"
 msgstr "Importi"
 
-#: ui/ShortcutActionDelegate.qml:31
+#: ui/ShortcutActionDelegate.qml:30
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Redakta ŝparvojo: %1"
 
-#: ui/ShortcutActionDelegate.qml:43
+#: ui/ShortcutActionDelegate.qml:42
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -279,12 +279,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:56
+#: ui/ShortcutActionDelegate.qml:55
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Neniuj aktivaj ŝparvojoj"
 
-#: ui/ShortcutActionDelegate.qml:96
+#: ui/ShortcutActionDelegate.qml:95
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -292,37 +292,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Defaŭlta ŝparvojo"
 msgstr[1] "Defaŭltaj ŝparvojoj"
 
-#: ui/ShortcutActionDelegate.qml:98
+#: ui/ShortcutActionDelegate.qml:97
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Neniuj defaŭltaj ŝparvojoj"
 
-#: ui/ShortcutActionDelegate.qml:106
+#: ui/ShortcutActionDelegate.qml:105
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Defaŭlta ŝparvojo %1 estas ebligita."
 
-#: ui/ShortcutActionDelegate.qml:106
+#: ui/ShortcutActionDelegate.qml:105
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Defaŭlta ŝparvojo %1 estas malŝaltita."
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:126
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Propraj ŝparvojoj"
 
-#: ui/ShortcutActionDelegate.qml:152
+#: ui/ShortcutActionDelegate.qml:151
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Forigu ĉi tiun ŝparvojon"
 
-#: ui/ShortcutActionDelegate.qml:158
+#: ui/ShortcutActionDelegate.qml:157
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Aldonu propran ŝparvojon"
 
-#: ui/ShortcutActionDelegate.qml:193
+#: ui/ShortcutActionDelegate.qml:192
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Nuligi kapton de nova ŝparvojo"

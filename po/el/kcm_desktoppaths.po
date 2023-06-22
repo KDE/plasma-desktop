@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2010-02-23 12:20+0200\n"
 "Last-Translator: Petros <pvidalis@gmail.com>\n"
 "Language-Team: Ελληνικά <i18ngr@lists.hellug.gr>\n"
@@ -65,12 +65,12 @@ msgstr ""
 msgid "Templates"
 msgstr ""
 
-#: ui/main.qml:22
+#: ui/main.qml:34
 #, kde-format
 msgid "Desktop path:"
 msgstr "Διαδρομή επιφάνειας εργασίας:"
 
-#: ui/main.qml:25
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -81,12 +81,12 @@ msgstr ""
 "σας. Μπορείτε, αν θέλετε, να αλλάξετε την τοποθεσία αυτού του φακέλου, οπότε "
 "τα περιεχόμενά του θα μετακινηθούν αυτόματα στη νέα τοποθεσία."
 
-#: ui/main.qml:31
+#: ui/main.qml:48
 #, kde-format
 msgid "Documents path:"
 msgstr "Διαδρομή εγγράφων:"
 
-#: ui/main.qml:34
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
@@ -94,67 +94,67 @@ msgstr ""
 "Αυτός θα είναι ο προκαθορισμένος φάκελος για το άνοιγμα και την αποθήκευση "
 "των εγγράφων."
 
-#: ui/main.qml:40
+#: ui/main.qml:62
 #, kde-format
 msgid "Downloads path:"
 msgstr "Διαδρομή λήψεων:"
 
-#: ui/main.qml:43
+#: ui/main.qml:68
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Αυτός θα είναι ο προκαθορισμένος φάκελος για την αποθήκευση των ληφθέντων "
 "αντικειμένων σας."
 
-#: ui/main.qml:49
+#: ui/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgid "Videos path:"
 msgstr "Διαδρομή ταινιών:"
 
-#: ui/main.qml:52 ui/main.qml:79
+#: ui/main.qml:82 ui/main.qml:124
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "Αυτός θα είναι ο προκαθορισμένος φάκελος για τη φόρτωση ή αποθήκευση ταινιών."
 
-#: ui/main.qml:58
+#: ui/main.qml:90
 #, kde-format
 msgid "Pictures path:"
 msgstr "Διαδρομή εικόνων:"
 
-#: ui/main.qml:61
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr ""
 "Αυτός θα είναι ο προκαθορισμένος φάκελος για τη φόρτωση ή αποθήκευση εικόνων."
 
-#: ui/main.qml:67
+#: ui/main.qml:104
 #, kde-format
 msgid "Music path:"
 msgstr "Διαδρομή μουσικής:"
 
-#: ui/main.qml:70
+#: ui/main.qml:110
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Αυτός θα είναι ο προκαθορισμένος φάκελος για τη φόρτωση ή αποθήκευση "
 "μουσικής."
 
-#: ui/main.qml:76
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Διαδρομή μουσικής:"
 
-#: ui/main.qml:85
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgid "Templates path:"
 msgstr "Διαδρομή εικόνων:"
 
-#: ui/main.qml:88
+#: ui/main.qml:138
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -163,7 +163,7 @@ msgid ""
 msgstr ""
 "Αυτός θα είναι ο προκαθορισμένος φάκελος για τη φόρτωση ή αποθήκευση εικόνων."
 
-#: ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

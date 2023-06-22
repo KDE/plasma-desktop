@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-21 02:02+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2017-05-22 05:23-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -49,108 +49,108 @@ msgstr ""
 msgid "Show in Favorites"
 msgstr "מועדפים"
 
-#: package/contents/ui/ConfigGeneral.qml:47
+#: package/contents/ui/ConfigGeneral.qml:46
 #, fuzzy, kde-format
 #| msgid "Icon"
 msgid "Icon:"
 msgstr "סמל"
 
-#: package/contents/ui/ConfigGeneral.qml:127
+#: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:150
+#: package/contents/ui/ConfigGeneral.qml:149
 #, kde-format
 msgid "Show applications as:"
 msgstr "הראה יישומים כ:"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:151
 #, kde-format
 msgid "Name only"
 msgstr "שם בלבד"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:151
 #, kde-format
 msgid "Description only"
 msgstr "תיאור בלבד"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:151
 #, kde-format
 msgid "Name (Description)"
 msgstr "שם (תיאור)"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:151
 #, kde-format
 msgid "Description (Name)"
 msgstr "תיאור (שם)"
 
-#: package/contents/ui/ConfigGeneral.qml:162
+#: package/contents/ui/ConfigGeneral.qml:161
 #, fuzzy, kde-format
 #| msgid "Behavior"
 msgid "Behavior:"
 msgstr "התנהגות"
 
-#: package/contents/ui/ConfigGeneral.qml:164
+#: package/contents/ui/ConfigGeneral.qml:163
 #, fuzzy, kde-format
 #| msgid "Sort alphabetically"
 msgid "Sort applications alphabetically"
 msgstr "סדר לפי שם"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:171
 #, fuzzy, kde-format
 #| msgid "Flatten menu to a single level"
 msgid "Flatten sub-menus to a single level"
 msgstr "שטח תפריט לרמה אחת"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:179
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:190
+#: package/contents/ui/ConfigGeneral.qml:189
 #, fuzzy, kde-format
 #| msgid "Categories"
 msgid "Show categories:"
 msgstr "קטגוריות"
 
-#: package/contents/ui/ConfigGeneral.qml:193
+#: package/contents/ui/ConfigGeneral.qml:192
 #, fuzzy, kde-format
 #| msgid "Recent Applications"
 msgid "Recent applications"
 msgstr "יישומים אחרונים"
 
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:193
 #, fuzzy, kde-format
 #| msgid "Often Used Applications"
 msgid "Often used applications"
 msgstr "יישומים בשימוש נפוץ"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:200
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent files"
 msgstr "מסמכים אחרונים"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:201
 #, fuzzy, kde-format
 #| msgid "Often used"
 msgid "Often used files"
 msgstr "בשימוש לעיתים קרובות"
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: package/contents/ui/ConfigGeneral.qml:207
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:208
 #, fuzzy, kde-format
 #| msgid "Recently used"
 msgctxt ""
@@ -158,7 +158,7 @@ msgctxt ""
 msgid "Recently used"
 msgstr "בשימוש לאחרונה"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:208
 #, fuzzy, kde-format
 #| msgid "Often used"
 msgctxt ""
@@ -166,18 +166,18 @@ msgctxt ""
 msgid "Often used"
 msgstr "בשימוש לעיתים קרובות"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:218
 #, fuzzy, kde-format
 #| msgid "Search"
 msgid "Search:"
 msgstr "חיפוש"
 
-#: package/contents/ui/ConfigGeneral.qml:221
+#: package/contents/ui/ConfigGeneral.qml:220
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "הרחב חיפוש ל־סמניות, קבצים והודעות דואר אלקטרוני"
 
-#: package/contents/ui/ConfigGeneral.qml:229
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "ישר תוצאות חיפוש לתחתית"

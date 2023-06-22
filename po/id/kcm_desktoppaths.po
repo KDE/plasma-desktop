@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2022-03-24 06:17+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -59,12 +59,12 @@ msgstr ""
 msgid "Templates"
 msgstr ""
 
-#: ui/main.qml:22
+#: ui/main.qml:34
 #, kde-format
 msgid "Desktop path:"
 msgstr "Alur desktop:"
 
-#: ui/main.qml:25
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -75,76 +75,76 @@ msgstr ""
 "mengubah lokasi folder ini jika anda mau, dan isinya akan secara otomatis "
 "berpindah ke lokasi yang baru."
 
-#: ui/main.qml:31
+#: ui/main.qml:48
 #, kde-format
 msgid "Documents path:"
 msgstr "Alur dokumen:"
 
-#: ui/main.qml:34
+#: ui/main.qml:54
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr ""
 "Folder ini akan digunakan sebagai baku untuk memuat atau menyimpan dokumen."
 
-#: ui/main.qml:40
+#: ui/main.qml:62
 #, kde-format
 msgid "Downloads path:"
 msgstr "Alur unduhan:"
 
-#: ui/main.qml:43
+#: ui/main.qml:68
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Folder ini akan digunakan sebagai baku untuk menyimpan butir unduhan anda."
 
-#: ui/main.qml:49
+#: ui/main.qml:76
 #, kde-format
 msgid "Videos path:"
 msgstr "Alur video:"
 
-#: ui/main.qml:52 ui/main.qml:79
+#: ui/main.qml:82 ui/main.qml:124
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "Folder ini akan digunakan sebagai baku untuk memuat atau menyimpan film."
 
-#: ui/main.qml:58
+#: ui/main.qml:90
 #, kde-format
 msgid "Pictures path:"
 msgstr "Alur gambar:"
 
-#: ui/main.qml:61
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr ""
 "Folder ini akan digunakan sebagai baku untuk memuat atau menyimpan gambar."
 
-#: ui/main.qml:67
+#: ui/main.qml:104
 #, kde-format
 msgid "Music path:"
 msgstr "Alur musik:"
 
-#: ui/main.qml:70
+#: ui/main.qml:110
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Folder ini akan digunakan sebagai baku untuk memuat atau menyimpan musik"
 
-#: ui/main.qml:76
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Alur musik:"
 
-#: ui/main.qml:85
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgid "Templates path:"
 msgstr "Alur gambar:"
 
-#: ui/main.qml:88
+#: ui/main.qml:138
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -153,7 +153,7 @@ msgid ""
 msgstr ""
 "Folder ini akan digunakan sebagai baku untuk memuat atau menyimpan gambar."
 
-#: ui/UrlRequester.qml:65
+#: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

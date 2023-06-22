@@ -1,17 +1,16 @@
-# Translation of kcm_activities5.po to Euskara/Basque (eu).
-# Copyright (C) 2017, Free Software Foundation, Inc.
-# Copyright (C) 2018-2020, This file is copyright:
+# Translation of kcm_activities.po to Euskara/Basque (eu).
+# Copyright (C) 2017-2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# KDE Euskaratzeko proiektuaren arduraduna <xalba@euskalnet.net>.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2017, 2019, 2020, 2021.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-09 02:14+0000\n"
-"PO-Revision-Date: 2021-06-20 15:07+0200\n"
+"PO-Revision-Date: 2023-06-21 16:43+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,15 +18,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.04.2\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: ui/ActivityEditor.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Activity Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings for %1"
-msgstr "Jarduera-ezarpenak"
+msgstr "«%1»(e)ren jarduera-ezarpenak"
 
 #: ui/ActivityEditor.qml:23
 #, kde-format
@@ -39,32 +36,28 @@ msgstr "Sortu jarduera berria"
 #, kde-format
 msgctxt "@action:button as in, 'save changes'"
 msgid "Save"
-msgstr ""
+msgstr "Gorde"
 
 #: ui/ActivityEditor.qml:57
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label:chooser"
 msgid "Icon:"
 msgstr "Ikonoa:"
 
 #: ui/ActivityEditor.qml:68
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Izena:"
 
 #: ui/ActivityEditor.qml:74
-#, fuzzy, kde-format
-#| msgid "Description:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Description:"
 msgstr "Azalpena:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Privacy:"
 msgstr "Pribatutasuna:"
@@ -103,16 +96,13 @@ msgid "Delete Activity"
 msgstr "Ezabatu jarduera"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to delete '%1'?"
+#, kde-format
 msgctxt "%1 is an activity name"
 msgid "Do you want to delete activity '%1'?"
-msgstr "Ziur zaude %1 ezabatu nahi duzula?"
+msgstr "'%1' jarduera ezabatu nahi duzu?"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete Activity"
+#, kde-format
 msgid "Delete Activity"
 msgstr "Ezabatu jarduera"
 

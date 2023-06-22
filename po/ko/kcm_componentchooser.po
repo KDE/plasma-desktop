@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-03-01 00:21+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -95,42 +95,42 @@ msgstr "기본 텍스트 편집기 선택"
 msgid "Select default video player"
 msgstr "기본 동영상 재생기 선택"
 
-#: ui/ComponentOverlay.qml:23
+#: ui/ComponentOverlay.qml:22
 #, kde-format
 msgid "Details"
 msgstr "자세히"
 
-#: ui/ComponentOverlay.qml:29
+#: ui/ComponentOverlay.qml:28
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
 msgstr "이 프로그램은 다음 파일 형식을 지원하지 않습니다:"
 
-#: ui/ComponentOverlay.qml:43
+#: ui/ComponentOverlay.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
 msgstr "그래도 열기"
 
-#: ui/ComponentOverlay.qml:51
+#: ui/ComponentOverlay.qml:50
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
 msgstr "다음 파일 형식이 다른 프로그램과 연결되어 있습니다:"
 
-#: ui/ComponentOverlay.qml:60
+#: ui/ComponentOverlay.qml:59
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
 msgstr "%1이(가) %2에 연결됨"
 
-#: ui/ComponentOverlay.qml:66
+#: ui/ComponentOverlay.qml:65
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
 msgstr "모두 %1(으)로 재연결"
 
-#: ui/ComponentOverlay.qml:74
+#: ui/ComponentOverlay.qml:73
 #, kde-format
 msgid "Change file type association manually"
 msgstr "수동으로 파일 형식 연결 변경"

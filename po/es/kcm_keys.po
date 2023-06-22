@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-01-11 17:08+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -269,12 +269,12 @@ msgstr "Seleccionar archivo..."
 msgid "Import"
 msgstr "Importar"
 
-#: ui/ShortcutActionDelegate.qml:31
+#: ui/ShortcutActionDelegate.qml:30
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Editando el acceso rápido: %1"
 
-#: ui/ShortcutActionDelegate.qml:43
+#: ui/ShortcutActionDelegate.qml:42
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -282,12 +282,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:56
+#: ui/ShortcutActionDelegate.qml:55
 #, kde-format
 msgid "No active shortcuts"
 msgstr "No hay accesos rápidos activos"
 
-#: ui/ShortcutActionDelegate.qml:96
+#: ui/ShortcutActionDelegate.qml:95
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -295,37 +295,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Acceso rápido por omisión"
 msgstr[1] "Accesos rápidos por omisión"
 
-#: ui/ShortcutActionDelegate.qml:98
+#: ui/ShortcutActionDelegate.qml:97
 #, kde-format
 msgid "No default shortcuts"
 msgstr "No hay accesos rápidos por omisión"
 
-#: ui/ShortcutActionDelegate.qml:106
+#: ui/ShortcutActionDelegate.qml:105
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "El acceso rápido por omisión %1 está activado."
 
-#: ui/ShortcutActionDelegate.qml:106
+#: ui/ShortcutActionDelegate.qml:105
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "El acceso rápido por omisión %1 está desactivado."
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:126
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Accesos rápidos personalizados"
 
-#: ui/ShortcutActionDelegate.qml:152
+#: ui/ShortcutActionDelegate.qml:151
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Borrar este acceso rápido"
 
-#: ui/ShortcutActionDelegate.qml:158
+#: ui/ShortcutActionDelegate.qml:157
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Añadir acceso rápido personalizado"
 
-#: ui/ShortcutActionDelegate.qml:193
+#: ui/ShortcutActionDelegate.qml:192
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Cancelar la captura del nuevo acceso rápido"

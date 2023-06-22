@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-21 02:02+0000\n"
+"POT-Creation-Date: 2023-06-22 02:07+0000\n"
 "PO-Revision-Date: 2023-05-20 05:28+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.1\n"
 
-#: contents/activitymanager/ActivityItem.qml:208
+#: contents/activitymanager/ActivityItem.qml:206
 msgid "Currently being used"
 msgstr "ამჟამად გამოიყენება"
 
-#: contents/activitymanager/ActivityItem.qml:248
+#: contents/activitymanager/ActivityItem.qml:246
 msgid ""
 "Move to\n"
 "this activity"
 msgstr "ამ აქტივობასთან გადმოტანა"
 
-#: contents/activitymanager/ActivityItem.qml:278
+#: contents/activitymanager/ActivityItem.qml:276
 msgid ""
 "Show also\n"
 "in this activity"
 msgstr "ამ აქტივობაშიც ჩვენება"
 
-#: contents/activitymanager/ActivityItem.qml:340
+#: contents/activitymanager/ActivityItem.qml:338
 msgid "Configure"
 msgstr "მორგება"
 
-#: contents/activitymanager/ActivityItem.qml:359
+#: contents/activitymanager/ActivityItem.qml:357
 msgid "Stop activity"
 msgstr "აქტივობის შეჩერება"
 
@@ -46,7 +46,7 @@ msgstr "აქტივობის შეჩერება"
 msgid "Stopped activities:"
 msgstr "გაჩერებული აქტივობები:"
 
-#: contents/activitymanager/ActivityManager.qml:121
+#: contents/activitymanager/ActivityManager.qml:120
 msgid "Create activity…"
 msgstr "აქტივობის შექმნა…"
 
@@ -54,11 +54,11 @@ msgstr "აქტივობის შექმნა…"
 msgid "Activities"
 msgstr "ქმედებები"
 
-#: contents/activitymanager/StoppedActivityItem.qml:140
+#: contents/activitymanager/StoppedActivityItem.qml:138
 msgid "Configure activity"
 msgstr "აქტივობის მორგება"
 
-#: contents/activitymanager/StoppedActivityItem.qml:157
+#: contents/activitymanager/StoppedActivityItem.qml:155
 msgid "Delete"
 msgstr "წაშლა"
 
@@ -258,104 +258,104 @@ msgstr "თაგუნას ქმედებები"
 msgid "Input Here"
 msgstr "აქ შეყვანეთ"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:45
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
 msgid "Panel Settings"
 msgstr "პანელის პარამეტრები"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:51
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
 msgstr "გადიდება"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
 msgid "Make this panel as tall as possible"
 msgstr "ამ პანელის რაც შეიძლება, მაღლად გაშლა"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:56
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
 msgid "Make this panel as wide as possible"
 msgstr "ამ პანელის რაც შეიძლება, ფართოდ გაშლა"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:64
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "წაშლა"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:67
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
 msgid "Remove this panel; this action is undo-able"
 msgstr "ამ პანელის წაშლა. ეს ქმედება დაბრუნებადია"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:93
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
 msgid "Alignment:"
 msgstr "სწორება:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Top"
 msgstr "თავში"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
 msgid "Left"
 msgstr "მარცხენა"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:100
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr ""
 "გაასწორებს გაუდიდებელ პანელს ზედა მხარეს. ეფექტი არ აქვს, როცა პანელი "
 "გადიდებულია"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:100
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
 msgstr ""
 "გაასწორებს გაუდიდებელ პანელს მარცხენა მხარეს. ეფექტი არ აქვს, როცა პანელი "
 "გადიდებულია"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Center"
 msgstr "ცენტრი"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:109
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
 msgstr ""
 "გაასწორებს გაუდიდებელ პანელს ცენტრთან. ეფექტი არ აქვს, როცა პანელი "
 "გადიდებულია"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Bottom"
 msgstr "ქვედა"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
 msgid "Right"
 msgstr "Right"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:118
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr ""
 "გაასწორებს გაუდიდებელ პანელს ქვედა მხარეს. ეფექტი არ აქვს, როცა პანელი "
 "გადიდებულია"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:118
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr ""
 "გაასწორებს გაუდიდებელ პანელს მარჯვენა მხარეს. ეფექტი არ აქვს, როცა პანელი "
 "გადიდებულია"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:151
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
 msgid "Visibility:"
 msgstr "ხილვადობა:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid "Always Visible"
 msgstr "ყოველთვის ხილული"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
 msgid "Auto-Hide"
 msgstr "ავტომატურად დამალვა"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:165
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
@@ -363,19 +363,19 @@ msgstr ""
 "პანელი დამალულია, მაგრამ გამოჩნდება, როცა კურსორი პანელის ეკრანის წიბოს "
 "შეეხება"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
 msgid "Opacity:"
 msgstr "გაუმჭირვალობა:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:199
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
 msgid "Always Opaque"
 msgstr "ყოველთვის გაუმჭვირვალე"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Adaptive"
 msgstr "შეგუებადი"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:208
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
@@ -383,35 +383,35 @@ msgstr ""
 "პანელი გაუმჭვირვალეა, როცა მას ნებისმიერი ფანჯარა ეხება და გამჭვირვალე, როცა "
 "არა"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:217
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
 msgid "Always Translucent"
 msgstr "ყოველთვის გამჭვირვალე"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:246
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
 msgid "Floating:"
 msgstr "მცურავი:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:250
 msgid "Floating"
 msgstr "მცურავი"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:252
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
 msgid "Panel visibly floats away from its screen edge"
 msgstr "პანელი ხილულად დაცურავს მისი ეკრანის წიბოდან"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
 msgid "Attached"
 msgstr "მიმაგრებული"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:262
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
 msgid "Panel is attached to its screen edge"
 msgstr "პანელი მიმაგრებულია მისი ეკრანის წიბოზე"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:284
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
 msgid "Focus Shortcut:"
 msgstr "ფოკუსის მალსახმობი:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:294
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "ფოკუსის პანელზე გადასატანად ეს კლავიატურის მალსახმობი შეგიძლიათ, გამოიყენოთ"
