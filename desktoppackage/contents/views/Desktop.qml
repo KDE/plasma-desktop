@@ -190,7 +190,7 @@ Item {
                     }
                 }
                 sidePanel.visible = true;
-                KWindowSystem.forceActivateWindow(sidePanel)
+                KX11Extras.forceActiveWindow(sidePanel);
             }
             onStateChanged: {
                 if (sidePanelStack.state == "closed") {
