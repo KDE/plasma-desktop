@@ -59,8 +59,8 @@ Kirigami.AbstractListItem {
                 Rectangle {
                     id: defaultIndicator
                     radius: width * 0.5
-                    implicitWidth: Kirigami.Units.gridUnit
-                    implicitHeight: Kirigami.Units.gridUnit
+                    implicitWidth: Kirigami.Units.largeSpacing
+                    implicitHeight: Kirigami.Units.largeSpacing
                     visible: kcm.defaultsIndicatorsVisible
                     opacity: !model.isDefault
                     color: Kirigami.Theme.neutralTextColor

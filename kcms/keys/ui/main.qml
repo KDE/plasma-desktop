@@ -199,8 +199,8 @@ KCM.AbstractKCM {
                             Rectangle {
                                 id: defaultIndicator
                                 radius: width * 0.5
-                                implicitWidth: Kirigami.Units.gridUnit
-                                implicitHeight: Kirigami.Units.gridUnit
+                                implicitWidth: Kirigami.Units.largeSpacing
+                                implicitHeight: Kirigami.Units.largeSpacing
                                 visible: kcm.defaultsIndicatorsVisible
                                 opacity: !model.isDefault
                                 color: Kirigami.Theme.neutralTextColor
@@ -214,7 +214,7 @@ KCM.AbstractKCM {
                             id: sectionCheckbox
                             Layout.alignment: Qt.AlignRight
                             // width of indicator + layout spacing
-                            Layout.rightMargin: kcm.defaultsIndicatorsVisible ? Kirigami.Units.gridUnit + Kirigami.Units.smallSpacing : 0
+                            Layout.rightMargin: kcm.defaultsIndicatorsVisible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
                             visible: exportActive
                             onToggled: {
                                 const checked = sectionCheckbox.checked
@@ -242,7 +242,7 @@ KCM.AbstractKCM {
 
                     Kirigami.PlaceholderMessage {
                         anchors.centerIn: parent
-                        width: parent.width - (Kirigami.Units.gridUnit * 4)
+                        width: parent.width - (Kirigami.Units.largeSpacing * 4)
                         visible: components.count === 0 && search.text.length > 0
                         text: i18n("No items matched the search terms")
                     }
@@ -275,7 +275,7 @@ KCM.AbstractKCM {
 
                     Kirigami.PlaceholderMessage {
                         anchors.centerIn: parent
-                        width: parent.width - (Kirigami.Units.gridUnit * 4)
+                        width: parent.width - (Kirigami.Units.largeSpacing * 4)
                         visible: components.currentIndex == -1
                         text: i18n("Select an item from the list to view its shortcuts here")
                     }

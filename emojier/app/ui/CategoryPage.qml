@@ -201,7 +201,7 @@ Kirigami.ScrollablePage
 
         Kirigami.PlaceholderMessage {
             anchors.centerIn: parent
-            width: parent.width - (Kirigami.Units.gridUnit * 8)
+            width: parent.width - (Kirigami.Units.largeSpacing * 8)
             text: i18n("No recent Emojis")
             visible: emojiView.count === 0 && view.showClearHistoryButton
         }

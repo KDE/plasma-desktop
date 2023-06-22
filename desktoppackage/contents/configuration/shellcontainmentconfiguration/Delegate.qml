@@ -158,10 +158,10 @@ QQC2.Control {
                             right: parent.right
                             top: parent.top
                             topMargin: model.edge == "floating"
-                                ? model.panelCountAtTop * moveButton.height + Kirigami.Units.gridUnit
+                                ? model.panelCountAtTop * moveButton.height + Kirigami.Units.largeSpacing
                                 : 0
                             rightMargin: model.edge == "floating"
-                                ? (moveButton.LayoutMirroring.enabled ? model.panelCountAtLeft : model.panelCountAtRight) * moveButton.height + Kirigami.Units.gridUnit
+                                ? (moveButton.LayoutMirroring.enabled ? model.panelCountAtLeft : model.panelCountAtRight) * moveButton.height + Kirigami.Units.largeSpacing
                                 : 0
                         }
                         onClicked: {

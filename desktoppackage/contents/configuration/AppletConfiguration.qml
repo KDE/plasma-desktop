@@ -309,7 +309,7 @@ Rectangle {
 
         footer: QQC2.Pane {
 
-            padding: Kirigami.Units.gridUnit
+            padding: Kirigami.Units.largeSpacing
 
             contentItem: RowLayout {
                 id: buttonsRow

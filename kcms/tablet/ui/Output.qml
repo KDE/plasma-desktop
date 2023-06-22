@@ -55,7 +55,7 @@ Item {
                 bottom: parent.bottom
             }
 
-            height: Kirigami.Units.gridUnit
+            height: Kirigami.Units.largeSpacing
             color: isSelected ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
             smooth: true
 

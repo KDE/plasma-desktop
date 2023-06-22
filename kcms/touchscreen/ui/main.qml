@@ -28,7 +28,7 @@ KCMUtils.SimpleKCM {
         text: i18n("No touchscreens found")
         anchors.centerIn: parent
         visible: combo.count === 0
-        width: parent.width - (Kirigami.Units.gridUnit * 4)
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
     }
 
     Kirigami.FormLayout {

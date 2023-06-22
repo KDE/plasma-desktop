@@ -188,7 +188,7 @@ Item {
 
             Kirigami.PlaceholderMessage {
                 id: message
-                width: parent.width - Kirigami.Units.gridUnit * 8
+                width: parent.width - Kirigami.Units.largeSpacing * 8
                 anchors.centerIn: parent
 
                 icon.name: "documentinfo"

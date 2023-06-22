@@ -49,7 +49,7 @@ KCM.SimpleKCM {
         }
 
         QQC2.Button {
-            implicitHeight:  Kirigami.Units.iconSizes.medium + Kirigami.Units.gridUnit * 2
+            implicitHeight:  Kirigami.Units.iconSizes.medium + Kirigami.Units.largeSpacing * 2
             implicitWidth: height
             icon.height: Kirigami.Units.iconSizes.medium
             icon.width: Kirigami.Units.iconSizes.medium
