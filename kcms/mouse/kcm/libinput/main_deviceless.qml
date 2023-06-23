@@ -134,7 +134,7 @@ Kirigami.ScrollablePage {
         Layouts.ColumnLayout {
             id: accelProfile
             spacing: Kirigami.Units.smallSpacing
-            Kirigami.FormData.label: i18nd("kcmmouse", "Acceleration profile:")
+            Kirigami.FormData.label: i18nd("kcmmouse", "Pointer acceleration:")
             Kirigami.FormData.buddyFor: accelProfileFlat
 
             function load() {
@@ -165,7 +165,7 @@ Kirigami.ScrollablePage {
 
             QQC2.RadioButton {
                 id: accelProfileFlat
-                text: i18nd("kcmmouse", "Flat")
+                text: i18nd("kcmmouse", "None")
 
                 QQC2.ToolTip.delay: 1000
                 QQC2.ToolTip.visible: hovered
@@ -175,7 +175,7 @@ Kirigami.ScrollablePage {
 
             QQC2.RadioButton {
                 id: accelProfileAdaptive
-                text: i18nd("kcmmouse", "Adaptive")
+                text: i18nd("kcmmouse", "Standard")
 
                 QQC2.ToolTip.delay: 1000
                 QQC2.ToolTip.visible: hovered

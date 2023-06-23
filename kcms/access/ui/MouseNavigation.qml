@@ -121,7 +121,7 @@ Kirigami.FormLayout {
         onValueChanged: kcm.mouseSettings.maxSpeed = value
     }
     QQC2.SpinBox {
-        Kirigami.FormData.label: i18n("Acceleration profile:")
+        Kirigami.FormData.label: i18n("Pointer acceleration:")
 
         from: -1000
         to: 5000

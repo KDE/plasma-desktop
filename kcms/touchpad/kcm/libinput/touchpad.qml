@@ -251,7 +251,7 @@ KCM.SimpleKCM{
 
         // Acceleration
         Layouts.RowLayout {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer acceleration:")
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer speed:")
             id: accelSpeed
 
             function onAccelSpeedChanged(val) {
@@ -346,7 +346,7 @@ KCM.SimpleKCM{
         }
 
         Layouts.ColumnLayout {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Acceleration profile:")
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer acceleration:")
             Kirigami.FormData.buddyFor: accelProfileFlat
             id: accelProfile
             spacing: Kirigami.Units.smallSpacing
@@ -378,7 +378,7 @@ KCM.SimpleKCM{
 
             QQC2.RadioButton {
                 id: accelProfileFlat
-                text: i18nd("kcm_touchpad", "Flat")
+                text: i18nd("kcm_touchpad", "None")
 
                 hoverEnabled: true
                 QQC2.ToolTip {
@@ -391,7 +391,7 @@ KCM.SimpleKCM{
 
             QQC2.RadioButton {
                 id: accelProfileAdaptive
-                text: i18nd("kcm_touchpad", "Adaptive")
+                text: i18nd("kcm_touchpad", "Standard")
 
                 hoverEnabled: true
                 QQC2.ToolTip {

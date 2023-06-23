@@ -74,9 +74,9 @@ pointing device.)</para>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Acceleration profile</guilabel></term>
+<term><guilabel>Pointer acceleration</guilabel></term>
 <listitem><para>
-The <guilabel>Adaptive</guilabel> profile is the default profile for all devices and takes the current speed of the device into account when deciding on acceleration. The <guilabel>Flat</guilabel> profile is simply a constant factor applied to all device deltas, regardless of the speed of motion.
+The <guilabel>Standard</guilabel> mode adjusts the amount of pointer acceleration according to the how fast you move the mouse. If you set it to <guilabel>None</guilabel>, the acceleration remains constant regardless of speed.
 </para>
 </listitem>
 </varlistentry>
