@@ -76,12 +76,12 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             checked: kcm.krunnerSettings.historyBehavior === KRunnerSettings.CompletionSuggestion
             onToggled: kcm.krunnerSettings.historyBehavior = KRunnerSettings.CompletionSuggestion
-            text: i18nc("@option:check The thing being enabled is search history", "Enabled")
+            text: i18nc("@option:check The thing being enabled is search history", "Enable auggestions")
         }
         QQC2.RadioButton {
             checked: kcm.krunnerSettings.historyBehavior === KRunnerSettings.ImmediateCompletion
             onToggled: kcm.krunnerSettings.historyBehavior = KRunnerSettings.ImmediateCompletion
-            text: i18nc("@option:check The thing being enabled is search history", "Enabled with auto-complete")
+            text: i18nc("@option:check The thing being enabled is search history", "Enabled auto-complete")
         }
 
         QQC2.Button {
