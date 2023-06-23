@@ -19,7 +19,7 @@ QQC2.ComboBox {
     model: component.applications
     textRole: "name"
     currentIndex: component.index
-    onActivated: component.select(currentIndex, true)
+    onActivated: component.select(currentIndex)
 
     // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
     function loadProps(background) {
