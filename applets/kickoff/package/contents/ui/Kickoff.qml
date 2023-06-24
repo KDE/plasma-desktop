@@ -78,13 +78,13 @@ PlasmoidItem {
                 kickoff.searchField.text = query;
             }
         }
-        appletInterface: plasmoid
+        appletInterface: kickoff
         mergeResults: true
         favoritesModel: rootModel.favoritesModel
     }
 
     readonly property Kicker.ComputerModel computerModel: Kicker.ComputerModel {
-        appletInterface: plasmoid
+        appletInterface: kickoff
         favoritesModel: rootModel.favoritesModel
         systemApplications: plasmoid.configuration.systemApplications
         Component.onCompleted: {

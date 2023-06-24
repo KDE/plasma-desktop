@@ -138,7 +138,7 @@ PlasmoidItem {
     Kicker.RunnerModel {
         id: runnerModel
 
-        appletInterface: plasmoid
+        appletInterface: kicker
 
         favoritesModel: globalFavorites
 
