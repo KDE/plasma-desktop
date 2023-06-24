@@ -1,12 +1,6 @@
 # translation of kcmkonq.po to galician
 # Galician translation of kcmkonq.
 # Copyright (C) 2000 Jesús Bravo Álvarez.
-#
-# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
-# colaborar connosco, podes atopar máis información en http://trasno.gpul.org
-#
-# First Version: 2000-11-04 13:52+0100
-#
 # Jesús Bravo Álvarez <jba@pobox.com>, 2000.
 # Xabi García <xabigf@gmx.net>, 2003.
 # Xabier García Feal <xabigf@gmx.net>, 2004.
@@ -16,13 +10,19 @@
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@gmail.com>, 2009, 2011, 2012.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
+# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
+# colaborar connosco, podes atopar máis información en http://trasno.gpul.org
+#
+# First Version: 2000-11-04 13:52+0100
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2019-10-19 22:07+0200\n"
+"PO-Revision-Date: 2023-06-23 09:42+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: desktoppathssettings.cpp:197
 #, kde-format
@@ -58,20 +58,19 @@ msgid "Pictures"
 msgstr "Imaxes"
 
 #: desktoppathssettings.cpp:272
-#, fuzzy, kde-format
-#| msgid "Movies path:"
+#, kde-format
 msgid "Videos"
-msgstr "Ruta dos filmes:"
+msgstr "Vídeos"
 
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "Público"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "Modelos"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -116,7 +115,7 @@ msgstr "Ruta dos documentos:"
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr ""
-"Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
+"Este cartafol usarase de maneira predeterminada para cargar ou gardar "
 "documentos."
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
@@ -135,18 +134,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: globalpaths.ui:68
-#, fuzzy, kde-format
-#| msgid "Movies path:"
+#, kde-format
 msgid "Videos path:"
-msgstr "Ruta dos filmes:"
+msgstr "Ruta dos vídeos:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
 #: globalpaths.ui:75
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
-"Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
-"filmes recibidos ou enviados."
+"Este cartafol usarase de maneira predeterminada para cargar ou gardar filmes "
+"recibidos ou enviados."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: globalpaths.ui:85
@@ -160,8 +158,8 @@ msgstr "Ruta das imaxes:"
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr ""
-"Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
-"imaxes recibidas ou enviadas."
+"Este cartafol usarase de maneira predeterminada para cargar ou gardar imaxes "
+"recibidas ou enviadas."
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: globalpaths.ui:102
@@ -174,44 +172,37 @@ msgstr "Ruta da música:"
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
-"Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
-"música."
+"Este cartafol usarase de maneira predeterminada para cargar ou gardar música."
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Ruta da música:"
+msgstr "Ruta do público:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
 msgstr ""
-"Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
-"imaxes recibidas ou enviadas."
+"Este cartafol usarase de maneira predeterminada para cargar ou gardar as "
+"comparticións públicas."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Ruta das imaxes:"
+msgstr "Ruta dos modelos:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
-"Este cartafol empregarase de maneira predeterminada para cargar ou gardar "
-"imaxes recibidas ou enviadas."
+"Este cartafol usarase de maneira predeterminada para cargar ou gardar "
+"modelos."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Ruta do inicios automáticos:"
