@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-24 02:32+0000\n"
 "PO-Revision-Date: 2022-06-04 21:06+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,94 +17,102 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.1\n"
 
-#: ui/main.qml:29
+#: ui/main.qml:31
 #, kde-format
 msgid "Position on screen:"
 msgstr "திரையில் இருப்பிடம்:"
 
-#: ui/main.qml:33
+#: ui/main.qml:35
 #, kde-format
 msgid "Top"
 msgstr "மேலே"
 
-#: ui/main.qml:40
+#: ui/main.qml:42
 #, kde-format
 msgid "Center"
 msgstr "நடுவில்"
 
-#: ui/main.qml:53
+#: ui/main.qml:55
 #, kde-format
 msgid "Activation:"
 msgstr "தூண்டுவது:"
 
-#: ui/main.qml:56
+#: ui/main.qml:58
 #, kde-format
 msgctxt "@option:check"
 msgid "Activate when pressing any key on the desktop"
 msgstr "பணிமேடையில் எந்த விசையை அழுத்தினாலும் தூண்டு"
 
-#: ui/main.qml:69
+#: ui/main.qml:71
 #, kde-format
 msgid "History:"
 msgstr "வரலாறு:"
 
-#: ui/main.qml:72
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@option:check"
-msgid "Remember past searches"
-msgstr "முந்தைய தேடல்களை நினைவில் கொள்"
+msgid "Disabled"
+msgstr ""
 
-#: ui/main.qml:83
+#: ui/main.qml:79
 #, kde-format
-msgctxt "@option:check"
-msgid "Retain last search when re-opening"
-msgstr "திறக்கும்போது முந்தைய தேடலை நிரப்பு"
+msgctxt "@option:check The thing being enabled is search history"
+msgid "Enable auggestions"
+msgstr ""
 
-#: ui/main.qml:94
+#: ui/main.qml:84
 #, kde-format
-msgctxt "@option:check"
-msgid "Activity-aware (last search and history)"
-msgstr "செயல்பாட்டை பொறுத்தது (முந்தைய தேடல் மற்றும் வரலாறு)"
+msgctxt "@option:check The thing being enabled is search history"
+msgid "Enabled auto-complete"
+msgstr ""
 
-#: ui/main.qml:109
-#, kde-format
-msgid "Clear History"
-msgstr "வரலாற்றை நீக்கு"
-
-#: ui/main.qml:110
-#, kde-format
-msgctxt "@action:button %1 activity name"
-msgid "Clear History for Activity \"%1\""
-msgstr "\"%1\" என்ற செயல்பாட்டிற்கான வரலாற்றை நீக்கு"
-
-#: ui/main.qml:111
+#: ui/main.qml:92
 #, kde-format
 msgid "Clear History…"
 msgstr "வரலாற்றை மற…"
 
-#: ui/main.qml:140
+#: ui/main.qml:121
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "அனைத்து செயல்பாடுகளுக்கும்"
 
-#: ui/main.qml:153
+#: ui/main.qml:134
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "\"%1\" என்ற செயல்பாட்டிற்கு மட்டும்"
 
-#: ui/main.qml:170
+#: ui/main.qml:151
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
 msgstr "செருகுநிரல்கள்:"
 
-#: ui/main.qml:174
+#: ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "இயக்கியுள்ள தேடல் செருகுநிரல்களை அமை…"
+
+#~ msgctxt "@option:check"
+#~ msgid "Remember past searches"
+#~ msgstr "முந்தைய தேடல்களை நினைவில் கொள்"
+
+#~ msgctxt "@option:check"
+#~ msgid "Retain last search when re-opening"
+#~ msgstr "திறக்கும்போது முந்தைய தேடலை நிரப்பு"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activity-aware (last search and history)"
+#~ msgstr "செயல்பாட்டை பொறுத்தது (முந்தைய தேடல் மற்றும் வரலாறு)"
+
+#~ msgid "Clear History"
+#~ msgstr "வரலாற்றை நீக்கு"
+
+#~ msgctxt "@action:button %1 activity name"
+#~ msgid "Clear History for Activity \"%1\""
+#~ msgstr "\"%1\" என்ற செயல்பாட்டிற்கான வரலாற்றை நீக்கு"
 
 #~ msgid "Available Plugins"
 #~ msgstr "பயன்படுத்தக்கூடிய செருகுநிரல்கள்"

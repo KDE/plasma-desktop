@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-24 02:32+0000\n"
 "PO-Revision-Date: 2022-12-26 03:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -20,94 +20,102 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#: ui/main.qml:29
+#: ui/main.qml:31
 #, kde-format
 msgid "Position on screen:"
 msgstr "螢幕上的位置："
 
-#: ui/main.qml:33
+#: ui/main.qml:35
 #, kde-format
 msgid "Top"
 msgstr "頂端"
 
-#: ui/main.qml:40
+#: ui/main.qml:42
 #, kde-format
 msgid "Center"
 msgstr "中央"
 
-#: ui/main.qml:53
+#: ui/main.qml:55
 #, kde-format
 msgid "Activation:"
 msgstr "觸發："
 
-#: ui/main.qml:56
+#: ui/main.qml:58
 #, kde-format
 msgctxt "@option:check"
 msgid "Activate when pressing any key on the desktop"
 msgstr "在桌面上按下任何按鍵時觸發"
 
-#: ui/main.qml:69
+#: ui/main.qml:71
 #, kde-format
 msgid "History:"
 msgstr "歷史："
 
-#: ui/main.qml:72
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@option:check"
-msgid "Remember past searches"
-msgstr "記住過去的搜尋"
+msgid "Disabled"
+msgstr ""
 
-#: ui/main.qml:83
+#: ui/main.qml:79
 #, kde-format
-msgctxt "@option:check"
-msgid "Retain last search when re-opening"
-msgstr "重新開啟時保留上次的搜尋"
+msgctxt "@option:check The thing being enabled is search history"
+msgid "Enable auggestions"
+msgstr ""
 
-#: ui/main.qml:94
+#: ui/main.qml:84
 #, kde-format
-msgctxt "@option:check"
-msgid "Activity-aware (last search and history)"
-msgstr "為各個活動分別記住歷史與上次搜尋"
+msgctxt "@option:check The thing being enabled is search history"
+msgid "Enabled auto-complete"
+msgstr ""
 
-#: ui/main.qml:109
-#, kde-format
-msgid "Clear History"
-msgstr "清除歷史"
-
-#: ui/main.qml:110
-#, kde-format
-msgctxt "@action:button %1 activity name"
-msgid "Clear History for Activity \"%1\""
-msgstr "清除活動「%1」中的歷史"
-
-#: ui/main.qml:111
+#: ui/main.qml:92
 #, kde-format
 msgid "Clear History…"
 msgstr "清除歷史…"
 
-#: ui/main.qml:140
+#: ui/main.qml:121
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "所有活動"
 
-#: ui/main.qml:153
+#: ui/main.qml:134
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "僅活動「%1」"
 
-#: ui/main.qml:170
+#: ui/main.qml:151
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
 msgstr "外掛程式："
 
-#: ui/main.qml:174
+#: ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "設定啟用的搜尋外掛程式…"
+
+#~ msgctxt "@option:check"
+#~ msgid "Remember past searches"
+#~ msgstr "記住過去的搜尋"
+
+#~ msgctxt "@option:check"
+#~ msgid "Retain last search when re-opening"
+#~ msgstr "重新開啟時保留上次的搜尋"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activity-aware (last search and history)"
+#~ msgstr "為各個活動分別記住歷史與上次搜尋"
+
+#~ msgid "Clear History"
+#~ msgstr "清除歷史"
+
+#~ msgctxt "@action:button %1 activity name"
+#~ msgid "Clear History for Activity \"%1\""
+#~ msgstr "清除活動「%1」中的歷史"
 
 #~ msgid "Available Plugins"
 #~ msgstr "可用的外掛程式"
