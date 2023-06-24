@@ -9,7 +9,6 @@ import QtQuick.Window 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
-import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.20 as Kirigami
@@ -74,7 +73,7 @@ PlasmaCore.ToolTipArea {
         Accessible.name: root.mainText
         Accessible.description: i18nd("plasma_shell_org.kde.plasma.desktop", "Open %1", root.subText)
         Accessible.role: Accessible.Button
-        Accessible.onPressAction: Plasmoid.nativeInterface.activated()
+        Accessible.onPressAction: Plasmoid.activated()
 
         Keys.onPressed: {
             switch (event.key) {
@@ -82,7 +81,7 @@ PlasmaCore.ToolTipArea {
                 case Qt.Key_Enter:
                 case Qt.Key_Return:
                 case Qt.Key_Select:
-                    Plasmoid.nativeInterface.activated();
+                    Plasmoid.activated();
                     break;
             }
         }
