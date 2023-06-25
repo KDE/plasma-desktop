@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-24 02:32+0000\n"
-"PO-Revision-Date: 2022-07-02 07:53+0200\n"
+"POT-Creation-Date: 2023-06-25 02:32+0000\n"
+"PO-Revision-Date: 2023-06-24 12:05+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: ui/main.qml:31
 #, kde-format
@@ -52,19 +52,21 @@ msgstr "Geschiedenis:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr ""
+msgstr "Uitgeschakeld"
 
 #: ui/main.qml:79
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check The thing being enabled is search history"
+#| msgid "Enable auggestions"
 msgctxt "@option:check The thing being enabled is search history"
-msgid "Enable auggestions"
-msgstr ""
+msgid "Enable suggestions"
+msgstr "Suggesties inschakelen"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enabled auto-complete"
-msgstr ""
+msgstr "Automatisch aanvullen inschakelen"
 
 #: ui/main.qml:92
 #, kde-format

@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2016.
-# Tommi Nieminen <translator@legisign.org>, 2019, 2020, 2021.
+# Tommi Nieminen <translator@legisign.org>, 2019, 2020, 2021, 2023.
 #
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-09 02:14+0000\n"
-"PO-Revision-Date: 2021-07-22 13:29+0300\n"
+"PO-Revision-Date: 2023-05-28 16:50+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,15 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: ui/ActivityEditor.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Activity Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings for %1"
-msgstr "Aktiviteetin asetukset"
+msgstr "Aktiviteetin asetukset – %1"
 
 #: ui/ActivityEditor.qml:23
 #, kde-format
@@ -37,32 +35,28 @@ msgstr "Luo uusi aktiviteetti"
 #, kde-format
 msgctxt "@action:button as in, 'save changes'"
 msgid "Save"
-msgstr ""
+msgstr "Tallenna"
 
 #: ui/ActivityEditor.qml:57
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label:chooser"
 msgid "Icon:"
 msgstr "Kuvake:"
 
 #: ui/ActivityEditor.qml:68
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Nimi:"
 
 #: ui/ActivityEditor.qml:74
-#, fuzzy, kde-format
-#| msgid "Description:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Description:"
 msgstr "Kuvaus:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Privacy:"
 msgstr "Yksityisyys:"
@@ -101,16 +95,13 @@ msgid "Delete Activity"
 msgstr "Poista aktiviteetti"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to delete '%1'?"
+#, kde-format
 msgctxt "%1 is an activity name"
 msgid "Do you want to delete activity '%1'?"
 msgstr "Haluatko varmasti poistaa aktiviteetin ”%1”?"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete Activity"
+#, kde-format
 msgid "Delete Activity"
 msgstr "Poista aktiviteetti"
 

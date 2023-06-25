@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2022.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_krunnersettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-24 02:32+0000\n"
-"PO-Revision-Date: 2022-07-03 13:40+0200\n"
+"POT-Creation-Date: 2023-06-25 02:32+0000\n"
+"PO-Revision-Date: 2023-06-25 00:44+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: ui/main.qml:31
 #, kde-format
@@ -54,19 +54,21 @@ msgstr "Historial:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivado"
 
 #: ui/main.qml:79
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check The thing being enabled is search history"
+#| msgid "Enable auggestions"
 msgctxt "@option:check The thing being enabled is search history"
-msgid "Enable auggestions"
-msgstr ""
+msgid "Enable suggestions"
+msgstr "Activar sugerencias"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enabled auto-complete"
-msgstr ""
+msgstr "Terminación automática activada"
 
 #: ui/main.qml:92
 #, kde-format

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-24 02:32+0000\n"
+"POT-Creation-Date: 2023-06-25 02:32+0000\n"
 "PO-Revision-Date: 2022-06-18 23:41+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -59,7 +59,7 @@ msgstr ""
 #: ui/main.qml:79
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
-msgid "Enable auggestions"
+msgid "Enable suggestions"
 msgstr ""
 
 #: ui/main.qml:84
@@ -96,22 +96,3 @@ msgstr "Programtillegg:"
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Set opp påslegne søkjetillegg …"
-
-#~ msgctxt "@option:check"
-#~ msgid "Remember past searches"
-#~ msgstr "Hugs tidlegare søk"
-
-#~ msgctxt "@option:check"
-#~ msgid "Retain last search when re-opening"
-#~ msgstr "Ta fram førre søk ved gjenopning"
-
-#~ msgctxt "@option:check"
-#~ msgid "Activity-aware (last search and history)"
-#~ msgstr "Aktivitetsbasert (førre søk og fillogg)"
-
-#~ msgid "Clear History"
-#~ msgstr "Tøm loggen"
-
-#~ msgctxt "@action:button %1 activity name"
-#~ msgid "Clear History for Activity \"%1\""
-#~ msgstr "Tøm loggen for aktiviteten «%1»"
