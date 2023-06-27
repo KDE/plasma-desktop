@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-24 00:47+0000\n"
-"PO-Revision-Date: 2019-10-19 22:08+0200\n"
+"PO-Revision-Date: 2023-06-26 06:31+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: ExtraActivitiesInterface.cpp:34 MainConfigurationWidget.cpp:32
 #, kde-format
@@ -84,7 +84,7 @@ msgstr "Descrición:"
 #: imports/qml/activityDialog/GeneralTab.qml:69
 #, kde-format
 msgid "Privacy:"
-msgstr "Intimidade:"
+msgstr "Privacidade:"
 
 #: imports/qml/activityDialog/GeneralTab.qml:70
 #, kde-format
@@ -98,29 +98,27 @@ msgstr "Atallo para cambiar:"
 
 #. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:10
-#, fuzzy, kde-format
-#| msgid "Cleared the activity history."
+#, kde-format
 msgid "How many months keep the activity history"
-msgstr "Borrouse o historial de actividade."
+msgstr "Número de meses para conservar no historial de actividade."
 
 #. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Cleared the activity history."
+#, kde-format
 msgid "Which data to keep in activity history"
-msgstr "Borrouse o historial de actividade."
+msgstr "Que datos conservar no historial de actividade."
 
 #. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:21
 #, kde-format
 msgid "List of Applications whose activity history to save"
-msgstr ""
+msgstr "Lista de aplicacións das que gardar o historial de actividade."
 
 #. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:24
 #, kde-format
 msgid "List of Applications whose activity history not to save"
-msgstr ""
+msgstr "Lista de aplicacións das que non gardar o historial de actividade."
 
 #: MainConfigurationWidget.cpp:33
 #, kde-format
@@ -131,17 +129,16 @@ msgstr "Cambio"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure %1 activity"
-msgstr "Configurar a actividade %1"
+msgstr "Configurar a actividade %1."
 
 #: qml/activitiesTab/ActivitiesView.qml:62
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete %1 activity"
-msgstr "Eliminar a actividade %1"
+msgstr "Eliminar a actividade %1."
 
 #: qml/activitiesTab/ActivitiesView.qml:73
-#, fuzzy, kde-format
-#| msgid "Create New..."
+#, kde-format
 msgid "Create New…"
 msgstr "Crear unha nova…"
 
@@ -166,7 +163,7 @@ msgstr "Navegar polas actividades (ao revés)"
 #: ui/SwitchingTabBase.ui:22
 #, kde-format
 msgid "Remember for each activity (needs restart)"
-msgstr "Lembrar para cada actividade (require reiniciar)"
+msgstr "Lembrar para cada actividade (require reiniciar)."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/SwitchingTabBase.ui:29
