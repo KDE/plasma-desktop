@@ -8,7 +8,7 @@
 #include <QDBusConnection>
 #include <QDBusInterface>
 
-#include "kded5interface.h"
+#include "kded6interface.h"
 #include "touchpadinterface.h"
 #include "touchpadservice.h"
 
@@ -22,10 +22,10 @@ TouchpadEngine::TouchpadEngine(QObject *parent)
 
 void TouchpadEngine::init()
 {
-    OrgKdeKded5Interface kded(QLatin1String("org.kde.kded5"), QLatin1String("/kded"), QDBusConnection::sessionBus());
+    OrgKdeKded6Interface kded(QLatin1String("org.kde.kded6"), QLatin1String("/kded"), QDBusConnection::sessionBus());
     kded.loadModule("kded_touchpad").waitForFinished();
 
-    m_daemon = new OrgKdeTouchpadInterface("org.kde.kded5", "/modules/kded_touchpad", QDBusConnection::sessionBus(), this);
+    m_daemon = new OrgKdeTouchpadInterface("org.kde.kded6", "/modules/kded_touchpad", QDBusConnection::sessionBus(), this);
     if (!m_daemon->isValid()) {
         return;
     }

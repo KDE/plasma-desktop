@@ -36,17 +36,17 @@ void DeviceAutomounter::init()
     if (!m_settings->automountEnabled()) {
         // Automounting is disabled, no point in hanging around.
         QDBusConnection dbus = QDBusConnection::sessionBus();
-        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded6"),
                                                           QStringLiteral("/kded"),
-                                                          QStringLiteral("org.kde.kded5"),
+                                                          QStringLiteral("org.kde.kded6"),
                                                           QStringLiteral("setModuleAutoloading"));
         msg.setArguments({QVariant(QStringLiteral("device_automounter")), QVariant(false)});
         dbus.call(msg, QDBus::NoBlock);
 
         // Unload right away
-        msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+        msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded6"),
                                              QStringLiteral("/kded"),
-                                             QStringLiteral("org.kde.kded5"),
+                                             QStringLiteral("org.kde.kded6"),
                                              QStringLiteral("unloadModule"));
         msg.setArguments({QVariant(QStringLiteral("device_automounter"))});
         dbus.call(msg, QDBus::NoBlock);

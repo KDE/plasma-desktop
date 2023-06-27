@@ -152,7 +152,7 @@ TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, Touchpad
     m_backend->watchForEvents(false);
     updateMouseList();
 
-    m_daemon = new OrgKdeTouchpadInterface("org.kde.kded5", "/modules/kded_touchpad", QDBusConnection::sessionBus(), this);
+    m_daemon = new OrgKdeTouchpadInterface("org.kde.kded6", "/modules/kded_touchpad", QDBusConnection::sessionBus(), this);
     m_kdedTab->setEnabled(false);
     QDBusPendingCallWatcher *watch;
     watch = new QDBusPendingCallWatcher(m_daemon->workingTouchpadFound(), this);

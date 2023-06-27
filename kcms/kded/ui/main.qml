@@ -33,7 +33,7 @@ KCM.ScrollViewKCM {
     header: ColumnLayout {
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            text: i18n("The background services manager (kded5) is currently not running. Make sure it is installed correctly.");
+            text: i18n("The background services manager (kded6) is currently not running. Make sure it is installed correctly.");
             type: Kirigami.MessageType.Error
             showCloseButton: false
             visible: !kcm.kdedRunning

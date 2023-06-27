@@ -17,13 +17,13 @@ class KPluginMetaData;
 class ModulesModel;
 class FilterProxyModel;
 
-class OrgKdeKded5Interface;
+class OrgKdeKded6Interface;
 
 namespace org
 {
 namespace kde
 {
-using kded5 = ::OrgKdeKded5Interface;
+using kded6 = ::OrgKdeKded6Interface;
 }
 }
 
@@ -84,7 +84,7 @@ private:
     ModulesModel *const m_model;
     FilterProxyModel *const m_filteredModel;
 
-    org::kde::kded5 *const m_kdedInterface;
+    org::kde::kded6 *const m_kdedInterface;
 
     QDBusServiceWatcher *const m_kdedWatcher;
     bool m_kdedRunning = false;

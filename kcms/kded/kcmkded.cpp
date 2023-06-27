@@ -30,13 +30,13 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_kded.json", registerPlugin<KDEDConfig>(); registerPlugin<KDEDConfigData>();)
 
-static const QString s_kdedServiceName = QStringLiteral("org.kde.kded5");
+static const QString s_kdedServiceName = QStringLiteral("org.kde.kded6");
 
 KDEDConfig::KDEDConfig(QObject *parent, const KPluginMetaData &metaData)
     : KQuickConfigModule(parent, metaData)
     , m_model(new ModulesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
-    , m_kdedInterface(new org::kde::kded5(s_kdedServiceName, QStringLiteral("/kded"), QDBusConnection::sessionBus()))
+    , m_kdedInterface(new org::kde::kded6(s_kdedServiceName, QStringLiteral("/kded"), QDBusConnection::sessionBus()))
     , m_kdedWatcher(new QDBusServiceWatcher(s_kdedServiceName, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this))
 {
     qmlRegisterUncreatableType<KDEDConfig>("org.kde.private.kcms.style", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
@@ -221,7 +221,7 @@ void KDEDConfig::save()
         watcher->deleteLater();
 
         if (reply.isError()) {
-            Q_EMIT errorMessage(i18n("Failed to notify KDE Service Manager (kded5) of saved changed: %1", reply.error().message()));
+            Q_EMIT errorMessage(i18n("Failed to notify KDE Service Manager (kded6) of saved changed: %1", reply.error().message()));
             return;
         }
 
