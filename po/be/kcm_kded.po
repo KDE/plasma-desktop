@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-06-28 02:10+0000\n"
 "PO-Revision-Date: 2022-10-09 05:49\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -43,15 +43,19 @@ msgid "Failed to start service."
 msgstr "Не ўдалося запусціць службу."
 
 #: kcmkded.cpp:224
-#, kde-format
-msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, fuzzy, kde-format
+#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
 "Не ўдалося апавясціць кіраўніка службаў KDE (kded5) пра захаваныя змены: %1"
 
 #: ui/main.qml:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The background services manager (kded5) is currently not running. Make "
+#| "sure it is installed correctly."
 msgid ""
-"The background services manager (kded5) is currently not running. Make sure "
+"The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
 "Кіраўнік фонавых службаў (kded5) не запушчаны. Пераканайцеся, што ён "

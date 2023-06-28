@@ -1,0 +1,148 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"PO-Revision-Date: 2023-06-27 07:47+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.2\n"
+
+#: kcmtablet.cpp:32
+#, kde-format
+msgid "Primary (default)"
+msgstr "Principal (predeterminada)"
+
+#: kcmtablet.cpp:33
+#, kde-format
+msgid "Portrait"
+msgstr "Vertical"
+
+#: kcmtablet.cpp:34
+#, kde-format
+msgid "Landscape"
+msgstr "Horizontal"
+
+#: kcmtablet.cpp:35
+#, kde-format
+msgid "Inverted Portrait"
+msgstr "Vertical invertida"
+
+#: kcmtablet.cpp:36
+#, kde-format
+msgid "Inverted Landscape"
+msgstr "Horizontal invertida"
+
+#: kcmtablet.cpp:86
+#, kde-format
+msgid "Follow the active screen"
+msgstr "Seguir a pantalla activa"
+
+#: kcmtablet.cpp:94
+#, kde-format
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 (%2,%3 %4×%5)"
+
+#: kcmtablet.cpp:137
+#, kde-format
+msgid "Fit to Output"
+msgstr "Axustar á saída"
+
+#: kcmtablet.cpp:138
+#, kde-format
+msgid "Fit Output in tablet"
+msgstr "Axustar a saída na tableta"
+
+#: kcmtablet.cpp:139
+#, kde-format
+msgid "Custom size"
+msgstr "Tamaño personalizado"
+
+#: ui/main.qml:31
+#, kde-format
+msgid "No drawing tablets found."
+msgstr "Non se atoparon tabletas de debuxo."
+
+#: ui/main.qml:39
+#, kde-format
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "Dispositivo:"
+
+#: ui/main.qml:77
+#, kde-format
+msgid "Target display:"
+msgstr "Pantalla de destino:"
+
+#: ui/main.qml:96
+#, kde-format
+msgid "Orientation:"
+msgstr "Orientación:"
+
+#: ui/main.qml:108
+#, kde-format
+msgid "Left-handed mode:"
+msgstr "Modo zurdo:"
+
+#: ui/main.qml:118
+#, kde-format
+msgid "Area:"
+msgstr "Área:"
+
+#: ui/main.qml:206
+#, kde-format
+msgid "Resize the tablet area"
+msgstr "Cambiar o tamaño da zona da tableta"
+
+#: ui/main.qml:230
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr "Fixar as proporcións."
+
+#: ui/main.qml:238
+#, kde-format
+msgctxt "tablet area position - size"
+msgid "%1,%2 - %3×%4"
+msgstr "%1,%2 — %3×%4"
+
+#: ui/main.qml:246
+#, kde-format
+msgid "Tool Button 1"
+msgstr "Botón de ferramenta 1"
+
+#: ui/main.qml:247
+#, kde-format
+msgid "Tool Button 2"
+msgstr "Botón de ferramenta 2"
+
+#: ui/main.qml:248
+#, kde-format
+msgid "Tool Button 3"
+msgstr "Botón de ferramenta 3"
+
+#: ui/main.qml:291
+#, kde-format
+msgctxt "@label:listbox The pad we are configuring"
+msgid "Pad:"
+msgstr "Mando:"
+
+#: ui/main.qml:302
+#, kde-format
+msgid "None"
+msgstr "Ningún"
+
+#: ui/main.qml:324
+#, kde-format
+msgid "Button %1:"
+msgstr "Botón %1:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-06-28 02:10+0000\n"
 "PO-Revision-Date: 2020-07-04 19:04+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -38,16 +38,20 @@ msgid "Failed to start service."
 msgstr "Misslyckades starta tjänsten."
 
 #: kcmkded.cpp:224
-#, kde-format
-msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, fuzzy, kde-format
+#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
 "Misslyckades underrätta KDE:s tjänsthanterare (kded5) om sparade ändringar: "
 "%1"
 
 #: ui/main.qml:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The background services manager (kded5) is currently not running. Make "
+#| "sure it is installed correctly."
 msgid ""
-"The background services manager (kded5) is currently not running. Make sure "
+"The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
 "Hanteraren av bakgrundstjänster (kded5) kör för närvarande inte. Säkerställ "

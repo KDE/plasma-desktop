@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-06-28 02:10+0000\n"
 "PO-Revision-Date: 2023-02-07 20:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -46,14 +46,18 @@ msgid "Failed to start service."
 msgstr "無法啟動服務。"
 
 #: kcmkded.cpp:224
-#, kde-format
-msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, fuzzy, kde-format
+#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr "無法通知 KDE 服務管理員 (kded5) 儲存變更：%1"
 
 #: ui/main.qml:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The background services manager (kded5) is currently not running. Make "
+#| "sure it is installed correctly."
 msgid ""
-"The background services manager (kded5) is currently not running. Make sure "
+"The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr "背景服務管理員 (kded5) 目前沒有在執行。請確定它已正確安裝。"
 

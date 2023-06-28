@@ -1,15 +1,15 @@
 # Translation of kcm_krunnersettings.po to Catalan (Valencian)
-# Copyright (C) 2022 This_file_is_part_of_KDE
+# Copyright (C) 2022-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-25 02:32+0000\n"
-"PO-Revision-Date: 2022-07-02 10:58+0200\n"
+"PO-Revision-Date: 2023-06-25 08:23+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: ui/main.qml:31
 #, kde-format
@@ -54,19 +54,19 @@ msgstr "Historial:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivat"
 
 #: ui/main.qml:79
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enable suggestions"
-msgstr ""
+msgstr "Activa els suggeriments"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enabled auto-complete"
-msgstr ""
+msgstr "Activa la compleció automàtica"
 
 #: ui/main.qml:92
 #, kde-format
@@ -96,22 +96,3 @@ msgstr "Connectors:"
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Configura els connectors de busca habilitats…"
-
-#~ msgctxt "@option:check"
-#~ msgid "Remember past searches"
-#~ msgstr "Recorda les busques antigues"
-
-#~ msgctxt "@option:check"
-#~ msgid "Retain last search when re-opening"
-#~ msgstr "Manté la busca anterior en tornar a obrir"
-
-#~ msgctxt "@option:check"
-#~ msgid "Activity-aware (last search and history)"
-#~ msgstr "Segons l'activitat (busca i historial anterior)"
-
-#~ msgid "Clear History"
-#~ msgstr "Neteja l'historial"
-
-#~ msgctxt "@action:button %1 activity name"
-#~ msgid "Clear History for Activity \"%1\""
-#~ msgstr "Neteja l'historial per a l'activitat «%1»"

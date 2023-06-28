@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-06-28 02:10+0000\n"
 "PO-Revision-Date: 2020-12-14 17:42+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -39,16 +39,20 @@ msgid "Failed to start service."
 msgstr "A szolgáltatás elindítása meghiúsult."
 
 #: kcmkded.cpp:224
-#, kde-format
-msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, fuzzy, kde-format
+#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
 "A KDE Szolgáltatáskezelő (kded5) értesítése a mentett módosításokról "
 "meghiúsult: %1"
 
 #: ui/main.qml:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The background services manager (kded5) is currently not running. Make "
+#| "sure it is installed correctly."
 msgid ""
-"The background services manager (kded5) is currently not running. Make sure "
+"The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
 "A háttérszolgáltatás-kezelő (kded5) jelenleg nem fut. Ellenőrizze, hogy "
