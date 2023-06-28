@@ -51,7 +51,7 @@ KCM.ScrollViewKCM {
         Kirigami.InlineMessage {
             id: runningModulesChangedAfterSaveHint
             Layout.fillWidth: true
-            text: i18n("Some services were automatically started/stopped when the background services manager (kded5) was restarted to apply your changes.")
+            text: i18n("Some services were automatically started/stopped when the background services manager (kded6) was restarted to apply your changes.")
             type: Kirigami.MessageType.Information
             showCloseButton: true
             visible: false
