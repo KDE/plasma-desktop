@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_krunnersettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-25 02:32+0000\n"
-"PO-Revision-Date: 2023-04-09 22:11+0100\n"
+"PO-Revision-Date: 2023-06-28 21:07+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -53,19 +53,19 @@ msgstr "Historio:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr ""
+msgstr "Malŝaltita"
 
 #: ui/main.qml:79
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enable suggestions"
-msgstr ""
+msgstr "Ebligi sugestojn"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enabled auto-complete"
-msgstr ""
+msgstr "Ŝalti aŭtokompletigon"
 
 #: ui/main.qml:92
 #, kde-format
@@ -95,22 +95,3 @@ msgstr "Kromaĵoj:"
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Agordi Ebligitajn Serĉajn kromaĵojn…"
-
-#~ msgctxt "@option:check"
-#~ msgid "Remember past searches"
-#~ msgstr "Memori pasintajn serĉojn"
-
-#~ msgctxt "@option:check"
-#~ msgid "Retain last search when re-opening"
-#~ msgstr "Konservi lastan serĉon dum remalfermo"
-
-#~ msgctxt "@option:check"
-#~ msgid "Activity-aware (last search and history)"
-#~ msgstr "Konscia agado (lasta serĉo kaj historio)"
-
-#~ msgid "Clear History"
-#~ msgstr "Klara Historio"
-
-#~ msgctxt "@action:button %1 activity name"
-#~ msgid "Clear History for Activity \"%1\""
-#~ msgstr "Forigi Historion por Agado \"%1\""

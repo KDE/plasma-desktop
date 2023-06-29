@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-28 02:10+0000\n"
+"POT-Creation-Date: 2023-06-29 02:07+0000\n"
 "PO-Revision-Date: 2023-02-07 20:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -69,10 +69,13 @@ msgid ""
 msgstr "某些服務若目前環境下沒用時會在被手動啟動後自己又把自己停用。"
 
 #: ui/main.qml:54
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services were automatically started/stopped when the background "
+#| "services manager (kded5) was restarted to apply your changes."
 msgid ""
 "Some services were automatically started/stopped when the background "
-"services manager (kded5) was restarted to apply your changes."
+"services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "某些服務已在背景服務管理員 (kded5) 重新啟動以套用您的變更時被自動啟動或停止。"
 

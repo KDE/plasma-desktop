@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-28 02:10+0000\n"
-"PO-Revision-Date: 2023-04-08 22:44+0100\n"
+"POT-Creation-Date: 2023-06-29 02:07+0000\n"
+"PO-Revision-Date: 2023-06-28 22:29+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -42,22 +42,18 @@ msgid "Failed to start service."
 msgstr "Malsukcesis lanĉi servilon."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"Malsukcesis sciigi KDE Service Manager (kded5) pri konservita ŝanĝita: %1"
+"Malsukcesis sciigi KDE Service Manager (kded6) pri konservita ŝanĝo: %1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"La administranto de fonaj servoj (kded5) nuntempe ne funkcias. Certigu, ke "
+"La administranto de fonaj servoj (kded6) nuntempe ne funkcias. Certigu, ke "
 "ĝi estas instalita ĝuste."
 
 #: ui/main.qml:45
@@ -70,13 +66,16 @@ msgstr ""
 "en la nuna medio."
 
 #: ui/main.qml:54
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services were automatically started/stopped when the background "
+#| "services manager (kded5) was restarted to apply your changes."
 msgid ""
 "Some services were automatically started/stopped when the background "
-"services manager (kded5) was restarted to apply your changes."
+"services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Iuj servoj estis aŭtomate komencitaj/haltigitaj kiam la fona administranto "
-"de servoj (kded5) estis rekomencita por apliki viajn ŝanĝojn."
+"de servoj (kded6) estis rekomencita por apliki viajn ŝanĝojn."
 
 #: ui/main.qml:96
 #, kde-format

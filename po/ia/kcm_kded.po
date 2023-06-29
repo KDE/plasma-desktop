@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# G.Sora <g.sora@tiscali.it>, 2014, 2016, 2020, 2021.
+# G.Sora <g.sora@tiscali.it>, 2014, 2016, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-28 02:10+0000\n"
-"PO-Revision-Date: 2021-01-20 16:03+0100\n"
+"POT-Creation-Date: 2023-06-29 02:07+0000\n"
+"PO-Revision-Date: 2023-06-28 11:17+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -38,23 +38,19 @@ msgid "Failed to start service."
 msgstr "Il falleva a initiar servicio."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"Falleva a notificar le Gestor de Servicio de KDE (kded5) de salveguardate "
+"Falleva a notificar le Gestor de Servicio de KDE (kded6) de salveguardate "
 "modificate:%1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Le gerente de servicios de secunde plano (kded5) non es currentemente "
+"Le gerente de servicios de secunde plano (kded6) non es currentemente "
 "executante. Tu assecura te que es installate correctemente."
 
 #: ui/main.qml:45
@@ -67,10 +63,13 @@ msgstr ""
 "illos non es utile in le ambiente currente"
 
 #: ui/main.qml:54
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services were automatically started/stopped when the background "
+#| "services manager (kded5) was restarted to apply your changes."
 msgid ""
 "Some services were automatically started/stopped when the background "
-"services manager (kded5) was restarted to apply your changes."
+"services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Alcun servicios esseva automaticamente initiate/stoppate quando le gerente "
 "de sevicios de secunde plano (kded5) esseva restartate per applicar tu "

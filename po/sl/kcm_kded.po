@@ -1,6 +1,6 @@
 # Translation of kcmkded.po to Slovenian
 # Copyright (C) 2002, 2003, 2004 Free Software Foundation, Inc.
-# $Id: kcm_kded.po 1654821 2023-06-28 02:24:28Z scripty $
+# $Id: kcm_kded.po 1654898 2023-06-29 02:20:37Z scripty $
 # $Source$
 #
 # Gregor Rakar <gregor.rakar@kiss.si>, 2002, 2003, 2004.
@@ -11,18 +11,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-28 02:10+0000\n"
-"PO-Revision-Date: 2020-07-07 09:55+0200\n"
+"POT-Creation-Date: 2023-06-29 02:07+0000\n"
+"PO-Revision-Date: 2023-06-28 09:26+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 19.12.2\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -45,23 +45,19 @@ msgid "Failed to start service."
 msgstr "Ni bilo mogoče zagnati storitve."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"Ni bilo mogoče obvestiti KDE Service Managerja (kded5) o shranjeni "
+"Ni bilo mogoče obvestiti KDE Service Managerja (kded6) o shranjeni "
 "spremembi: %1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Upravitelj storitev v ozadju (kded5) trenutno ne deluje. Poskrbite, da je "
+"Upravitelj storitev v ozadju (kded6) trenutno ne deluje. Poskrbite, da je "
 "pravilno nameščen."
 
 #: ui/main.qml:45
@@ -74,10 +70,13 @@ msgstr ""
 "potrebne v trenutnem okolju."
 
 #: ui/main.qml:54
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services were automatically started/stopped when the background "
+#| "services manager (kded5) was restarted to apply your changes."
 msgid ""
 "Some services were automatically started/stopped when the background "
-"services manager (kded5) was restarted to apply your changes."
+"services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Nekatere storitve v ozadju so se samodejno zagnale/ustavile, ko je bil "
 "upravitelj storitev (kded5) znova zagnan, da uveljavi vaše spremembe."

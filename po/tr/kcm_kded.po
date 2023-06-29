@@ -5,13 +5,13 @@
 # Adil Yıldız <adil_yildiztr@yahoo.com>, 2004.
 # Serdar Soytetir <tulliana@gmail.com>, 2008.
 # Volkan Gezer <volkangezer@gmail.com>, 2015, 2017, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-28 02:10+0000\n"
-"PO-Revision-Date: 2022-03-12 16:22+0300\n"
+"POT-Creation-Date: 2023-06-29 02:07+0000\n"
+"PO-Revision-Date: 2023-06-28 12:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -42,23 +42,19 @@ msgid "Failed to start service."
 msgstr "Hizmet başlatılamadı."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"KDE Hizmet Yöneticisi'ne (kded5) kaydedilen değişiklik bildirilemedi: %1"
+"KDE Hizmet Yöneticisi'ne (kded6) kaydedilen değişiklik bildirilemedi: %1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Arka plan hizmetleri yöneticisi (kded5) şu anda çalışmıyor. Doğru bir "
-"şekilde kurulduğundan emin olun."
+"Arka plan hizmetleri yöneticisi (kded6) şu anda çalışmıyor. Doğru bir "
+"biçimde kurulduğundan emin olun."
 
 #: ui/main.qml:45
 #, kde-format
@@ -70,10 +66,13 @@ msgstr ""
 "başlatıldıklarında kendilerini yeniden devre dışı bırakırlar."
 
 #: ui/main.qml:54
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services were automatically started/stopped when the background "
+#| "services manager (kded5) was restarted to apply your changes."
 msgid ""
 "Some services were automatically started/stopped when the background "
-"services manager (kded5) was restarted to apply your changes."
+"services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Değişikliklerinizi uygulamak için arka plan hizmetleri yöneticisi (kded5) "
 "yeniden başlatıldığında bazı hizmetler otomatik olarak başlatıldı yada "

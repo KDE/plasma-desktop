@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-25 02:32+0000\n"
-"PO-Revision-Date: 2023-01-27 15:34+0100\n"
+"PO-Revision-Date: 2023-06-28 15:48+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: ui/main.qml:31
 #, kde-format
@@ -53,19 +53,19 @@ msgstr "Historie:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr ""
+msgstr "Zakázáno"
 
 #: ui/main.qml:79
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enable suggestions"
-msgstr ""
+msgstr "Povolit návrhy"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enabled auto-complete"
-msgstr ""
+msgstr "Povolit automatické doplňování"
 
 #: ui/main.qml:92
 #, kde-format
@@ -95,18 +95,3 @@ msgstr "Moduly:"
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Nastavit povolené moduly pro vyhledávání…"
-
-#~ msgctxt "@option:check"
-#~ msgid "Remember past searches"
-#~ msgstr "Zapamatovat si minulá hledání"
-
-#~ msgctxt "@option:check"
-#~ msgid "Retain last search when re-opening"
-#~ msgstr "Ponechat poslední hledání při opakovaném otevření"
-
-#~ msgid "Clear History"
-#~ msgstr "Vyprázdnit historii"
-
-#~ msgctxt "@action:button %1 activity name"
-#~ msgid "Clear History for Activity \"%1\""
-#~ msgstr "Vyprázdnit historii pro aktivitu \"%1\""

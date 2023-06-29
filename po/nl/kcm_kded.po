@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2015, 2017, 2020.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2015, 2017, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-28 02:10+0000\n"
-"PO-Revision-Date: 2020-07-04 17:38+0200\n"
+"POT-Creation-Date: 2023-06-29 02:07+0000\n"
+"PO-Revision-Date: 2023-06-28 09:59+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -38,23 +38,19 @@ msgid "Failed to start service."
 msgstr "Service opstarten is mislukt."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"KDE Service Manager (kded5) melden van een opgeslagen wijziging is mislukt: "
+"Een opgeslagen wijziging melden aan KDE Service Manager (kded6) is mislukt: "
 "%1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"De achtergrondservicebeheerder (kded5) is nu niet actief. Ga na dat deze "
+"De achtergrondservicebeheerder (kded6) is nu niet actief. Ga na dat deze "
 "juist is geïnstalleerd."
 
 #: ui/main.qml:45
@@ -67,10 +63,13 @@ msgstr ""
 "gestart als ze niet nuttig zijn in de huidige omgeving."
 
 #: ui/main.qml:54
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services were automatically started/stopped when the background "
+#| "services manager (kded5) was restarted to apply your changes."
 msgid ""
 "Some services were automatically started/stopped when the background "
-"services manager (kded5) was restarted to apply your changes."
+"services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Sommige services zijn automatisch gestart/gestopt wanneer de beheerder van "
 "achtergrondservices (kded5) opnieuw is gestart om uw wijzigingen toe te "
