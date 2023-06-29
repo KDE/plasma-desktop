@@ -72,10 +72,9 @@ void ScreenMapper::removeScreen(int screenId, const QString &activity, const QUr
 
     const auto screenPathWithScheme = screenUrl.url();
     // store the original location for the items
-    auto it = m_screenItemMap.constBegin();
     QVector<QUrl> urlsToRemoveFromMapping;
-    while (it != m_screenItemMap.constEnd()) {
-        const auto name = it.key();
+    for (auto it = m_screenItemMap.constBegin(); it != m_screenItemMap.constEnd(); ++it) {
+        const auto &name = it.key();
         if (it.value() == screenId && name.first.url().startsWith(screenPathWithScheme) && name.second == activity) {
             bool found = false;
             for (const auto &disabledUrls : qAsConst(m_itemsOnDisabledScreensMap)) {
@@ -93,7 +92,6 @@ void ScreenMapper::removeScreen(int screenId, const QString &activity, const QUr
             }
             urlsToRemoveFromMapping.append(name.first);
         }
-        ++it;
     }
 
     saveDisabledScreensMap();
