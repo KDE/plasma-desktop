@@ -88,7 +88,7 @@ void ScreenMapper::removeScreen(int screenId, const QString &activity, const QUr
                 if (urlVectorIt == m_itemsOnDisabledScreensMap.end()) {
                     m_itemsOnDisabledScreensMap[pair] = {name.first};
                 } else {
-                    urlVectorIt->append(name.first);
+                    urlVectorIt->insert(name.first);
                 }
             }
             urlsToRemoveFromMapping.append(name.first);
@@ -128,19 +128,21 @@ void ScreenMapper::addScreen(int screenId, const QString &activity, const QUrl &
     // restore the stored locations
     auto it = m_itemsOnDisabledScreensMap.find(pair);
     if (it != m_itemsOnDisabledScreensMap.end()) {
-        auto items = it.value();
-        for (const auto &name : it.value()) {
+        auto &items = it.value();
+        auto itemIt = items.begin();
+        while (itemIt != items.end()) {
             // add the items to the new screen, if they are on a disabled screen and their
             // location is below the new screen's path
-            if (name.url().startsWith(screenPathWithScheme)) {
-                addMapping(name, screenId, activity, DelayedSignal);
-                items.removeAll(name);
+            if (itemIt->url().startsWith(screenPathWithScheme)) {
+                addMapping(*itemIt, screenId, activity, DelayedSignal);
+                itemIt = items.erase(itemIt);
+                continue;
             }
+            itemIt = std::next(itemIt);
         }
-        if (items.isEmpty()) {
+
+        if (items.empty()) {
             m_itemsOnDisabledScreensMap.erase(it);
-        } else {
-            *it = items;
         }
     }
     saveDisabledScreensMap();
@@ -216,7 +218,7 @@ void ScreenMapper::removeItemFromDisabledScreen(const QUrl &url)
 {
     for (auto it = m_itemsOnDisabledScreensMap.begin(); it != m_itemsOnDisabledScreensMap.end(); ++it) {
         auto urls = &(*it);
-        urls->removeAll(url);
+        urls->remove(url);
     }
 }
 
@@ -402,7 +404,7 @@ void ScreenMapper::readDisabledScreensMap(const QStringList &serializedMap)
             if (urlVectorIt == m_itemsOnDisabledScreensMap.end()) {
                 m_itemsOnDisabledScreensMap[pair] = {url};
             } else {
-                urlVectorIt->append(url);
+                urlVectorIt->insert(url);
             }
             vectorCounter++;
             if (vectorCounter == vectorSize) {
