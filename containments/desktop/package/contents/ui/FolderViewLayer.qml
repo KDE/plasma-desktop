@@ -264,11 +264,17 @@ FocusScope {
         }
 
         onPositionsChanged: {
-            savePositions(folderView.positions);
+            saveTimer.restart()
         }
 
         onPerStripeChanged: {
             folderView.positions = getPositions();
+        }
+
+        Timer {
+            id: saveTimer
+            interval: Kirigami.Units.humanMoment
+            onTriggered: savePositions(folderView.positions)
         }
 
         Component.onCompleted: {
