@@ -90,7 +90,8 @@ private:
     ScreenMapper(QObject *parent = nullptr);
 
     QHash<std::pair<QUrl, QString /* activity ID */>, int> m_screenItemMap;
-    QHash<std::pair<int /* screen */, QString /* activity ID */>, QVector<QUrl>> m_itemsOnDisabledScreensMap;
+    // Use QSet when appropriate to improve lookup times substantially.
+    QHash<std::pair<int /* screen */, QString /* activity ID */>, QSet<QUrl>> m_itemsOnDisabledScreensMap;
     QHash<QUrl, QVector<std::pair<int /* screen */, QString /* activity ID */>>> m_screensPerPath; // screens per registered path
     QVector<std::pair<int /* screen */, QString /* activity ID */>> m_availableScreens;
     Plasma::Corona *m_corona = nullptr;

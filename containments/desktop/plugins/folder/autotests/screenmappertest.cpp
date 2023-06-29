@@ -288,12 +288,24 @@ void ScreenMapperTest::tst_readAndSaveItemsOnActivitiesOnDisabledScreens()
 
     // Check the actual mapping result
     const QStringList mapping = m_screenMapper->disabledScreensMap();
+    qDebug() << "mapping:" << mapping;
 
     QCOMPARE(mapping.count(), expectedMapping.size() * expectedMapping[0].size());
 
     for (int i = 0; i < mapping.count() - (expectedMapping[0].size() - 1); i += expectedMapping[0].size()) {
         const QStringList configGroup{mapping[i], mapping[i + 1], mapping[i + 2], mapping[i + 3], mapping[i + 4]};
-        QVERIFY(std::find(std::cbegin(expectedMapping), std::cend(expectedMapping), configGroup) != std::cend(expectedMapping));
+        bool matched = false;
+        for (const QStringList &expectedConfigGroup : expectedMapping) {
+            if (expectedConfigGroup[0] == mapping[i] && expectedConfigGroup[1] == mapping[i + 1]) {
+                QVERIFY(expectedConfigGroup[2] == mapping[i + 2]);
+                for (int j = 3; j < 3 + mapping[i + 2].toInt(); ++j) {
+                    QVERIFY(std::find(expectedConfigGroup.cbegin(), expectedConfigGroup.cend(), mapping[i + j]) != expectedConfigGroup.cend());
+                }
+                matched = true;
+                break;
+            }
+        }
+        QVERIFY(matched);
     }
 }
 
