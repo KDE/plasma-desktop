@@ -1,6 +1,6 @@
 # Translation of kcmkded.po to Slovenian
 # Copyright (C) 2002, 2003, 2004 Free Software Foundation, Inc.
-# $Id: kcm_kded.po 1654898 2023-06-29 02:20:37Z scripty $
+# $Id: kcm_kded.po 1654968 2023-06-30 02:23:01Z scripty $
 # $Source$
 #
 # Gregor Rakar <gregor.rakar@kiss.si>, 2002, 2003, 2004.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-29 02:07+0000\n"
-"PO-Revision-Date: 2023-06-28 09:26+0200\n"
+"PO-Revision-Date: 2023-06-29 07:01+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -70,16 +70,13 @@ msgstr ""
 "potrebne v trenutnem okolju."
 
 #: ui/main.qml:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Nekatere storitve v ozadju so se samodejno zagnale/ustavile, ko je bil "
-"upravitelj storitev (kded5) znova zagnan, da uveljavi vaše spremembe."
+"upravitelj storitev (kded6) znova zagnan, da uveljavi vaše spremembe."
 
 #: ui/main.qml:96
 #, kde-format

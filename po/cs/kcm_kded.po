@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-29 02:07+0000\n"
-"PO-Revision-Date: 2023-06-28 15:48+0200\n"
+"PO-Revision-Date: 2023-06-29 11:03+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -63,16 +63,13 @@ msgstr ""
 "současném prostředí nejsou k ničemu."
 
 #: ui/main.qml:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Pro provedení vašich změny byly některé služby automaticky spuštěny/"
-"zastaveny při restartu správce služeb na pozadí (kded5)."
+"zastaveny při restartu správce služeb na pozadí (kded6)."
 
 #: ui/main.qml:96
 #, kde-format

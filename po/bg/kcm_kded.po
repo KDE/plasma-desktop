@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2010.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-29 02:07+0000\n"
-"PO-Revision-Date: 2022-05-22 12:04+0200\n"
+"PO-Revision-Date: 2023-06-29 16:04+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 23.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmkded.cpp:115
@@ -40,22 +40,18 @@ msgid "Failed to start service."
 msgstr "Стартирането на услугата е неуспешно."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"Неуспешно уведомяване на KDE Service Manager (kded5) за запазена промяна: %1"
+"Неуспешно уведомяване на KDE Service Manager (kded6) за запазена промяна: %1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Понастоящем мениджърът на услуги в заден план  (kded5) не работи. Уверете "
+"Понастоящем мениджърът на услуги в заден план  (kded6) не работи. Уверете "
 "се, че той е инсталиран правилно."
 
 #: ui/main.qml:45
@@ -68,16 +64,13 @@ msgstr ""
 "в настоящата среда."
 
 #: ui/main.qml:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
-"Някои услуги автоматично се стартираха/спираха, когато мениджърът на услуги "
-"в заден план (kded5) беше рестартиран, за да се приложат вашите промени."
+"Някои услуги автоматично бяха стартирани/спрени, когато мениджърът на услуги "
+"в заден план (kded6) се рестартира, за да бъдат приложени вашите промени."
 
 #: ui/main.qml:96
 #, kde-format
