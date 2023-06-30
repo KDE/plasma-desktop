@@ -131,10 +131,12 @@ Kirigami.FormLayout {
             onToggled: kcm.bellSettings.invertScreen = !checked
         }
         KQuickAddons.ColorButton {
+            text: i18nc("Color of the system bell","Color")
             KCM.SettingStateBinding {
                 configObject: kcm.bellSettings
                 settingName: "VisibleBellColor"
             }
+            display: QQC2.AbstractButton.IconOnly
 
             color: kcm.bellSettings.visibleBellColor
             onAccepted: kcm.bellSettings.visibleBellColor = color
