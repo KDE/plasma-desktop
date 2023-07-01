@@ -132,11 +132,13 @@ Kirigami.FormLayout {
         }
         KQuickAddons.ColorButton {
             text: i18nc("Color of the system bell","Color")
+            // avoid to show text outside button
+            display: QQC2.AbstractButton.IconOnly
+
             KCM.SettingStateBinding {
                 configObject: kcm.bellSettings
                 settingName: "VisibleBellColor"
             }
-            display: QQC2.AbstractButton.IconOnly
 
             color: kcm.bellSettings.visibleBellColor
             onAccepted: color => kcm.bellSettings.visibleBellColor = color
