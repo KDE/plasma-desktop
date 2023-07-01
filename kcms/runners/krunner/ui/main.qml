@@ -91,16 +91,10 @@ KCM.SimpleKCM {
             icon.name: Qt.application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
             text: i18n("Clear History…")
 
-            checkable: !kcm.hasSingleHistory
             checked: activityMenu.visible
 
             // NOTE: Use onReleased to avoid race condition
             onReleased: {
-                if (kcm.hasSingleHistory) {
-                    kcm.deleteAllHistory();
-                    return;
-                }
-
                 if (!activityList.model) {
                     activityList.model = Qt.createQmlObject("import org.kde.activities 0.1; ActivityModel {}", root); // Lazy load
                 }
@@ -129,7 +123,6 @@ KCM.SimpleKCM {
                 QQC2.MenuItem {
                     enabled: kcm.historyKeys.includes(model.id)
 
-                    icon.name: kcm.iconNameForActivity(model.id)
                     icon.source: model.iconSource
                     text: i18nc("@item:inmenu delete krunner history for this activity", "For activity \"%1\"", model.name)
 
