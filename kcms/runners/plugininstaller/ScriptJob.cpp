@@ -13,10 +13,8 @@
 #include <QDir>
 #include <QFileInfoList>
 
-void ScriptJob::executeOperation(const QFileInfo &fileInfo, const QString &mimeType, bool install)
+void ScriptJob::executeOperation(const QFileInfo &fileInfo, const QString & /*mimeType*/, bool install)
 {
-    Q_UNUSED(mimeType)
-
     QString installerPath;
     const QFileInfoList archiveEntries = fileInfo.absoluteDir().entryInfoList(QDir::Files, QDir::Name);
     const QString scriptPrefix = install ? "install" : "uninstall";
