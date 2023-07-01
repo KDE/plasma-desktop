@@ -139,7 +139,7 @@ Kirigami.FormLayout {
             display: QQC2.AbstractButton.IconOnly
 
             color: kcm.bellSettings.visibleBellColor
-            onAccepted: kcm.bellSettings.visibleBellColor = color
+            onAccepted: color => kcm.bellSettings.visibleBellColor = color
         }
     }
     QQC2.SpinBox {
