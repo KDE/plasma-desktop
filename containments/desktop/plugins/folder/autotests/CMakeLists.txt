@@ -1,7 +1,3 @@
-find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED Test)
-
-include(ECMAddTests)
-
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/..)
 
 ecm_add_tests(

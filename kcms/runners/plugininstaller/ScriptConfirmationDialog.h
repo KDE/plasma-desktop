@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include <KConfig>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <QDesktopServices>
 #include <QDialog>
@@ -14,11 +16,21 @@
 #include <QPushButton>
 #include <QUrl>
 #include <QVBoxLayout>
+#include <optional>
+struct InstallerInfo {
+    QString exec;
+    QString dbusService;
+    QString desktopFilePath;
+};
 
 class ScriptConfirmationDialog : public QDialog
 {
 public:
-    ScriptConfirmationDialog(const QString &installerPath, bool install, const QString &dir, QWidget *parent = nullptr)
+    ScriptConfirmationDialog(const QString &installerPath,
+                             bool install,
+                             const QString &dir,
+                             const std::optional<InstallerInfo> &info = std::nullopt,
+                             QWidget *parent = nullptr)
         : QDialog(parent)
     {
         const auto readmes = QDir(dir).entryList({QStringLiteral("README*")});
@@ -27,7 +39,10 @@ public:
         const bool noInstaller = installerPath.isEmpty();
         QVBoxLayout *layout = new QVBoxLayout(this);
         QString msg;
-        if (!install && noInstaller && readmes.isEmpty()) {
+        if (info) {
+            Q_ASSERT(install); // We do not need the warnings for uninstall
+            msg = xi18nc("@info", "This plugin executes the following command for starting the \"%1\" service:<nl/>%2", info->dbusService, info->exec);
+        } else if (!install && noInstaller && readmes.isEmpty()) {
             msg = xi18nc("@info",
                          "This plugin does not provide an uninstallation script. Please contact the author. "
                          "You can try to uninstall the plugin manually.<nl/>"
@@ -71,9 +86,9 @@ public:
         connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
         QString okText;
-        if (noInstaller && !install) {
+        if (noInstaller && !install && !info) {
             okText = i18nc("@action:button", "Mark entry as uninstalled");
-        } else if (noInstaller) {
+        } else if (noInstaller && !info) {
             okText = i18nc("@action:button", "Mark entry as installed");
         } else {
             okText = i18nc("@action:button", "Accept Risk And Continue");

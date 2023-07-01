@@ -145,7 +145,6 @@ configure_file(config-keyboard.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keyboa
 
 # Unit tests
 if(BUILD_TESTING)
-    find_package(Qt6Test ${QT_MIN_VERSION} CONFIG REQUIRED)
     add_subdirectory( tests )
 endif()
 

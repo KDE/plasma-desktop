@@ -1,6 +1,5 @@
 /*
     SPDX-FileCopyrightText: 2020 Alexander Lohnau <alexander.lohnau@gmx.de>
-
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
@@ -10,10 +9,13 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDebug>
+#include <QDir>
 #include <QFileInfo>
 #include <QMimeDatabase>
+#include <QStandardPaths>
 #include <QUrl>
 
+#include "KRunnerPlugininstallerRcJob.h"
 #include "config-workspace.h"
 #if HAVE_PACKAGEKIT
 #include "PackageKitJob.h"
@@ -38,9 +40,15 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     app.setQuitOnLastWindowClosed(false);
 
+    if (qEnvironmentVariableIsSet("PLUGININSTALLER_TEST_MODE")) {
+        QStandardPaths::setTestModeEnabled(true);
+    }
+
     QCommandLineParser parser;
     parser.addPositionalArgument(QStringLiteral("command"), i18nc("@info:shell", "Command to execute: install or uninstall."));
     parser.addPositionalArgument(QStringLiteral("path"), i18nc("@info:shell", "Path to archive."));
+    QCommandLineOption noConfirm(QStringLiteral("no-confirm"), i18nc("@info:shell", "Do not show a visual confirmation dialog"));
+    parser.addOption(noConfirm);
     parser.process(app);
 
     const QStringList args = parser.positionalArguments();
@@ -82,6 +90,9 @@ int main(int argc, char *argv[])
 #else
         fail(i18nc("@info", "No PackageKit support"));
 #endif
+    } else if (const QString rcPath = QDir(file).filePath("krunner-plugininstallerrc"); fileInfo.isDir() && QFileInfo::exists(rcPath)) {
+        fileInfo = QFileInfo(rcPath);
+        job.reset(new KRunnerPluginInstallerRcJob(parser.isSet(noConfirm)));
     } else {
         job.reset(new ScriptJob());
     }
