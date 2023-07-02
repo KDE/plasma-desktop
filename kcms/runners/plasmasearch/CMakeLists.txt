@@ -4,7 +4,6 @@
 kcmutils_add_qml_kcm(kcm_plasmasearch SOURCES kcm.cpp)
 target_link_libraries(kcm_plasmasearch
   KF6::CoreAddons
-  KF6::KCMUtilsCore
   KF6::KCMUtils
   KF6::KCMUtilsQuick
   KF6::Runner
