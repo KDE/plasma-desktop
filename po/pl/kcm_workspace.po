@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-11 02:11+0000\n"
-"PO-Revision-Date: 2023-01-21 10:09+0100\n"
+"PO-Revision-Date: 2023-07-01 07:51+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -122,20 +122,18 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "Kliknięcie środkowym przewija do naciśniętego miejsca"
 
 #: ui/main.qml:216
-#, fuzzy, kde-format
-#| msgid "Middle Click:"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "Środkowy przycisk:"
 
 #: ui/main.qml:218
-#, fuzzy, kde-format
-#| msgid "Paste selected text"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
-msgstr "Wklej zaznaczony tekst"
+msgstr "Wkleja zaznaczony tekst"
 
 #: ui/main.qml:235
 #, kde-format

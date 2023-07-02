@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-25 02:32+0000\n"
+"POT-Creation-Date: 2023-07-02 02:36+0000\n"
 "PO-Revision-Date: 2022-07-05 13:20+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -75,25 +75,25 @@ msgstr ""
 msgid "Clear History…"
 msgstr "Garbitu historia…"
 
-#: ui/main.qml:121
+#: ui/main.qml:115
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "Jarduera guztietarako"
 
-#: ui/main.qml:134
+#: ui/main.qml:127
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "«%1» jarduerarako"
 
-#: ui/main.qml:151
+#: ui/main.qml:144
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
 msgstr "Pluginak:"
 
-#: ui/main.qml:155
+#: ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"

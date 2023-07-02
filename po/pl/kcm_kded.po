@@ -1,16 +1,16 @@
 # translation of kcmkded.po to Polish
-# Version: $Revision: 1654898 $
+# Version: $Revision: 1655086 $
 # Copyright (C) 2003, 2004, 2008 Free Software Foundation, Inc.
 #
 # Wojciech Milewski <Wojciech Milewski@wp.pl>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2003, 2004, 2008.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2017, 2020, 2021, 2022.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2017, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-29 02:07+0000\n"
-"PO-Revision-Date: 2022-08-07 08:16+0200\n"
+"PO-Revision-Date: 2023-07-01 07:51+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 ">\n"
 ">\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -44,23 +44,19 @@ msgid "Failed to start service."
 msgstr "Nie można rozpocząć usługi."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"Nie udało się powiadomić zarządzania usługami KDE (kded5) o zapisanych "
+"Nie udało się powiadomić zarządzania usługami KDE (kded6) o zapisanych "
 "zmianach: %1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Zarządzanie usługami w tle (kded5) nie jest obecnie uruchomione. Upewnij "
+"Zarządzanie usługami w tle (kded6) nie jest obecnie uruchomione. Upewnij "
 "się, że jest poprawnie wgrane."
 
 #: ui/main.qml:45
@@ -73,16 +69,13 @@ msgstr ""
 "w chwili gdy nie są już użyteczne w obecnym otoczeniu."
 
 #: ui/main.qml:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Aby zastosować twoje zmiany, należało ponownie uruchomić zarządzanie "
-"usługami (kded5), co mogło spowodować uruchomienie/zatrzymanie niektórych "
+"usługami (kded6), co mogło spowodować uruchomienie/zatrzymanie niektórych "
 "usług."
 
 #: ui/main.qml:96

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-25 02:32+0000\n"
-"PO-Revision-Date: 2022-06-04 10:04+0200\n"
+"POT-Creation-Date: 2023-07-02 02:36+0000\n"
+"PO-Revision-Date: 2023-07-01 07:52+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.03.70\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: ui/main.qml:31
 #, kde-format
@@ -53,44 +53,44 @@ msgstr "Historia:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr ""
+msgstr "Wyłączone"
 
 #: ui/main.qml:79
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enable suggestions"
-msgstr ""
+msgstr "Włącz podpowiedzi"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enabled auto-complete"
-msgstr ""
+msgstr "Włącz uzupełnianie"
 
 #: ui/main.qml:92
 #, kde-format
 msgid "Clear History…"
 msgstr "Wyczyść historię..."
 
-#: ui/main.qml:121
+#: ui/main.qml:115
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "Dla wszystkich aktywności"
 
-#: ui/main.qml:134
+#: ui/main.qml:127
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "Dla aktywności \"%1\""
 
-#: ui/main.qml:151
+#: ui/main.qml:144
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
 msgstr "Wtyczki:"
 
-#: ui/main.qml:155
+#: ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
