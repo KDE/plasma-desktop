@@ -5,7 +5,7 @@
 */
 
 #include <QApplication>
-#include <QtTest>
+#include <QTest>
 
 #include "../keyboard_config.h"
 #include "../layout_memory.h"

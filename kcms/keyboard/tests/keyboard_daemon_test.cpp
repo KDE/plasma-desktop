@@ -7,7 +7,7 @@
 //#include <kapplication.h>
 
 #include <QIcon>
-#include <QtTest>
+#include <QTest>
 
 #include "../flags.h"
 #include "../keyboard_config.h"
