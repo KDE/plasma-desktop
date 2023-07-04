@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-02 02:36+0000\n"
-"PO-Revision-Date: 2023-06-17 04:09\n"
+"PO-Revision-Date: 2023-07-03 11:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -52,19 +52,19 @@ msgstr "历史记录："
 #, kde-format
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr ""
+msgstr "已禁用"
 
 #: ui/main.qml:79
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enable suggestions"
-msgstr ""
+msgstr "启用建议"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enabled auto-complete"
-msgstr ""
+msgstr "启用自动补全"
 
 #: ui/main.qml:92
 #, kde-format
@@ -94,22 +94,3 @@ msgstr "插件："
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "配置已启用的搜索插件…"
-
-#~ msgctxt "@option:check"
-#~ msgid "Remember past searches"
-#~ msgstr "记住过去的搜索"
-
-#~ msgctxt "@option:check"
-#~ msgid "Retain last search when re-opening"
-#~ msgstr "重新打开时保留上次搜索"
-
-#~ msgctxt "@option:check"
-#~ msgid "Activity-aware (last search and history)"
-#~ msgstr "活动感知 (上次搜索和历史记录)"
-
-#~ msgid "Clear History"
-#~ msgstr "清除历史记录"
-
-#~ msgctxt "@action:button %1 activity name"
-#~ msgid "Clear History for Activity \"%1\""
-#~ msgstr "清除活动“%1”的历史记录"

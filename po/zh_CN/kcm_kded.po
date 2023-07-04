@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-29 02:07+0000\n"
-"PO-Revision-Date: 2023-06-17 04:09\n"
+"PO-Revision-Date: 2023-07-03 11:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -38,20 +38,16 @@ msgid "Failed to start service."
 msgstr "启动服务失败。"
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
-msgstr "无法将已保存的更改通知到 KDE 服务管理器 (kded5)：%1"
+msgstr "无法将已保存的更改通知到 KDE 服务管理器 (kded6)：%1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
-msgstr "后台服务管理器 (kded5) 当前未在运行。请确保已正确安装了该软件包。"
+msgstr "后台服务管理器 (kded6) 当前没有运行。请确保已经正确安装了该软件包。"
 
 #: ui/main.qml:45
 #, kde-format
@@ -61,16 +57,12 @@ msgid ""
 msgstr "如果在当前环境无法发挥作用，一些服务会在手动启动后再次将自身禁用。"
 
 #: ui/main.qml:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
-"在后台服务管理器 (kded5) 为了应用更改而重新启动时，一些服务已被自动启动/停"
-"止。"
+"后台服务管理器 (kded6) 在重新启动以应用更改时，一些服务已被自动启动/停止。"
 
 #: ui/main.qml:96
 #, kde-format
