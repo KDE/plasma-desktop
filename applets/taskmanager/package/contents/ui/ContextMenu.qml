@@ -67,6 +67,8 @@ PlasmaExtras.Menu {
     }
 
     function show() {
+        plasmoid.contextualActionsAboutToShow();
+
         loadDynamicLaunchActions(get(atm.LauncherUrlWithoutIcon));
         openRelative();
     }
