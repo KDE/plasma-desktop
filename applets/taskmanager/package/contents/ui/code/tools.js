@@ -40,9 +40,10 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
 
     var taskIndexList = [];
     var activeTaskIndex = tasks.tasksModel.activeTask;
+    const taskCount = tasks.taskList !== null ? tasks.taskList.count : tasks.taskGrid.repeater.count;
 
-    for (var i = 0; i < tasks.taskList.children.length - 1; ++i) {
-        var task = tasks.taskList.children[i];
+    for (var i = 0; i < taskCount - 1; ++i) {
+        var task = tasks.taskList !== null ? tasks.taskList.itemAtIndex(i) : tasks.taskGrid.repeater.itemAt(i);
         var modelIndex = task.modelIndex(i);
 
         if (!task.m.IsLauncher && !task.m.IsStartup) {

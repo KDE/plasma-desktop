@@ -84,12 +84,12 @@ PlasmaCore.Dialog {
                 id: groupListView
 
                 readonly property real maxWidth: groupFilter.maxTextWidth
-                                                + LayoutManager.horizontalMargins()
+                                                + tasks.horizontalMargins
                                                 + Kirigami.Units.iconSizes.medium
                                                 + 2 * (LayoutManager.labelMargin + LayoutManager.iconMargin)
                                                 + scrollView.leftPadding + scrollView.rightPadding
                 // Use groupFilter.count because sometimes count is not updated in time (BUG 446105)
-                readonly property real maxHeight: groupFilter.count * (LayoutManager.verticalMargins() + Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium))
+                readonly property real maxHeight: groupFilter.count * (tasks.verticalMargins + Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium))
 
                 model: DelegateModel {
                     id: groupFilter

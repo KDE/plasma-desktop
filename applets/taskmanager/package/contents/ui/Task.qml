@@ -21,9 +21,7 @@ PlasmaCore.ToolTipArea {
 
     activeFocusOnTab: true
 
-    height: Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium) + LayoutManager.verticalMargins()
-
-    visible: false
+    height: Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium) + tasks.verticalMargins
 
     // To achieve a bottom to top layout, the task manager is rotated by 180 degrees(see main.qml).
     // This makes the tasks mirrored, so we mirror them again to fix that.
@@ -149,11 +147,6 @@ PlasmaCore.ToolTipArea {
 
     onItemIndexChanged: {
         hideToolTip();
-
-        if (!inPopup && !tasks.vertical
-            && (LayoutManager.calculateStripes() > 1 || !plasmoid.configuration.separateLaunchers)) {
-            tasks.requestLayout();
-        }
     }
 
     onSmartLauncherEnabledChanged: {
@@ -333,6 +326,9 @@ PlasmaCore.ToolTipArea {
                 hideToolTip();
             }
             TaskTools.activateTask(modelIndex(), model, point.modifiers, task, plasmoid, tasks);
+            if (!task.inPopup && plasmoid.configuration.maxStripes === 1) {
+                taskList.positionViewAtIndex(task.itemIndex, ListView.Contain);
+            }
         }
     }
 
@@ -380,13 +376,14 @@ PlasmaCore.ToolTipArea {
     KSvg.FrameSvgItem {
         id: frame
 
+        readonly property bool hasStripes: plasmoid.configuration.maxStripes > 1 && taskGrid.currentStripes > 0
         anchors {
             fill: parent
 
-            topMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 0
-            bottomMargin: (!tasks.vertical && taskList.rows > 1) ? LayoutManager.iconMargin : 0
-            leftMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? LayoutManager.iconMargin : 0
-            rightMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? LayoutManager.iconMargin : 0
+            topMargin: (!tasks.vertical && hasStripes) ? LayoutManager.iconMargin : 0
+            bottomMargin: (!tasks.vertical && hasStripes) ? LayoutManager.iconMargin : 0
+            leftMargin: ((inPopup || tasks.vertical) && hasStripes) ? LayoutManager.iconMargin : 0
+            rightMargin: ((inPopup || tasks.vertical) && hasStripes) ? LayoutManager.iconMargin : 0
         }
 
         imagePath: "widgets/tasks"
@@ -459,7 +456,7 @@ PlasmaCore.ToolTipArea {
                 return margin;
             }
 
-            var margins = vert ? LayoutManager.horizontalMargins() : LayoutManager.verticalMargins();
+            var margins = vert ? tasks.horizontalMargins : tasks.verticalMargins;
 
             if ((size - margins) < Kirigami.Units.iconSizes.small) {
                 return Math.ceil((margin * (Kirigami.Units.iconSizes.small / size)) / 2);
@@ -515,7 +512,7 @@ PlasmaCore.ToolTipArea {
         id: label
 
         visible: (inPopup || !iconsOnly && !model.IsLauncher
-            && (parent.width - iconBox.height - Kirigami.Units.smallSpacing) >= (Kirigami.Units.iconSizes.sizeForLabels * LayoutManager.minimumMColumns()))
+            && (parent.width - iconBox.height - Kirigami.Units.smallSpacing) >= (Kirigami.Units.iconSizes.sizeForLabels * LayoutManager.minimumMColumns(tasks.vertical)))
 
         anchors {
             fill: parent
@@ -592,7 +589,6 @@ PlasmaCore.ToolTipArea {
         if (!inPopup && !model.IsWindow) {
             taskInitComponent.createObject(task);
         }
-
         updateAudioStreams({delay: false})
     }
 }

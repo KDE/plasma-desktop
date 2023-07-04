@@ -24,15 +24,17 @@ DropArea {
     function insertIndexAt(above, x, y) {
         if (above) {
             return above.itemIndex;
+        } else if (plasmoid.configuration.maxStripes === 1) {
+            return Math.ceil((tasks.vertical ? x + taskList.contentX : y + taskList.contentY) / taskList.totalLength);
         } else {
-            var distance = tasks.vertical ? x : y;
-            var step = tasks.vertical ? LayoutManager.taskWidth() : LayoutManager.taskHeight();
-            var stripe = Math.ceil(distance / step);
+            const distance = tasks.vertical ? x : y;
+            const step = tasks.vertical ? taskGrid.taskWidth : taskGrid.taskHeight;
+            const stripe = Math.ceil(distance / step);
 
-            if (stripe === LayoutManager.calculateStripes()) {
+            if (stripe === taskGrid.currentStripes) {
                 return tasks.tasksModel.count - 1;
             } else {
-                return stripe * LayoutManager.tasksPerStripe();
+                return stripe * taskGrid.tasksPerStripe;
             }
         }
     }
@@ -52,6 +54,8 @@ DropArea {
         let above;
         if (isGroupDialog) {
             above = target.itemAt(event.x, event.y);
+        } else if (plasmoid.configuration.maxStripes === 1) {
+            above = target.itemAt(event.x + taskList.contentX, event.y + taskList.contentY);
         } else {
             above = target.childAt(event.x, event.y);
         }
