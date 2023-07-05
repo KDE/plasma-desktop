@@ -12,7 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -316,6 +316,7 @@ msgstr "هیچ‌کدام"
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
 msgstr[0] "میان‌برهای اصلی:"
+msgstr[1] ""
 
 #: kcm_view_models.cpp:200
 #, fuzzy, kde-format

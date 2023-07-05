@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.2\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -500,16 +500,18 @@ msgid "Acceleration &profile:"
 msgstr " شتاب‌دهی &profile‌‌:‌"
 
 #: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
-#, kde-format
+#, fuzzy, kde-format
 msgid " pixel"
 msgid_plural " pixels"
 msgstr[0] " تصویردانه"
+msgstr[1] ""
 
 #: kcm/xlib/xlib_config.cpp:277
-#, kde-format
+#, fuzzy, kde-format
 msgid " line"
 msgid_plural " lines"
 msgstr[0] " خط"
+msgstr[1] ""
 
 #~ msgid "Mouse"
 #~ msgstr "موشی"

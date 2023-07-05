@@ -12,7 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -118,18 +118,21 @@ msgstr ""
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] ""
+msgstr[1] ""
 
 #: package/contents/ui/main.qml:369
 #, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] ""
+msgstr[1] ""
 
 #: package/contents/ui/main.qml:381
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] ""
+msgstr[1] ""
 
 #: package/contents/ui/main.qml:456
 #, fuzzy, kde-format
