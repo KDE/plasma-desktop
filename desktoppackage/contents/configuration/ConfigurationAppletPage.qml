@@ -37,7 +37,7 @@ Kirigami.ScrollablePage {
 
     implicitHeight: loader.height
 
-    padding: Kirigami.Units.largeSpacing
+    padding: configItem.includeMargins ? Kirigami.Units.largeSpacing : 0
     bottomPadding: 0
 
     Loader {
