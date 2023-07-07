@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-05 02:15+0000\n"
-"PO-Revision-Date: 2023-03-24 14:18+0300\n"
+"PO-Revision-Date: 2023-07-06 22:44+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -63,7 +63,7 @@ msgstr "Yeniden Başlat"
 #: ui/main.qml:57
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
-msgstr "Üretici yazılımı kurulumuna yeniden başlatma isteği başarısız oldu: %1"
+msgstr "Donanım yazılımı ayarlarını yeniden başlatma isteği başarısız oldu: %1"
 
 #: ui/main.qml:58
 #, kde-format
@@ -77,7 +77,7 @@ msgstr ""
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
-"Bilgisayar bir sonraki yeniden başlatmada üretici yazılımı kurulum ekranına "
+"Bilgisayar bir sonraki yeniden başlatmada donanım yazılımı kurulum ekranına "
 "girecektir."
 
 #: ui/main.qml:64
@@ -176,7 +176,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr "Gömülü Yazılım"
+msgstr "Donanım Yazılımı"
 
 #: ui/main.qml:183
 #, kde-format
@@ -196,4 +196,4 @@ msgstr "UEFI ayar ekranına gir"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Üretici yazılımı ayar ekranına gir"
+msgstr "Donanım yazılımı ayar ekranına gir"

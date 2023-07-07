@@ -2,22 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015, 2016.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-02 02:36+0000\n"
-"PO-Revision-Date: 2022-06-04 19:57+0400\n"
+"PO-Revision-Date: 2023-07-06 10:36+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: ui/main.qml:31
 #, kde-format
@@ -54,19 +54,19 @@ msgstr "التأريخ:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr ""
+msgstr "معطّلة"
 
 #: ui/main.qml:79
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enable suggestions"
-msgstr ""
+msgstr "مكن الاقتراحات"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enabled auto-complete"
-msgstr ""
+msgstr "الإكمال التلقائي مفعل"
 
 #: ui/main.qml:92
 #, kde-format
