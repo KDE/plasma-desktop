@@ -90,7 +90,7 @@ Rectangle {
         app.isAboutPage = false;
         if (item.source) {
             app.isAboutPage = item.source === "AboutPlugin.qml";
-            pushReplace(Qt.resolvedUrl("ConfigurationAppletPage.qml"), {configItem: item, title: item.name});
+            pushReplace(Qt.resolvedUrl("ConfigurationAppletPage.qml"), {configItem: item});
         } else if (item.kcm) {
             pushReplace(configurationKcmPageComponent, {kcm: item.kcm, internalPage: item.kcm.mainUi});
         } else {
