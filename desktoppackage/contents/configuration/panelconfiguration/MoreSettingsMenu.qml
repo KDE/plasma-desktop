@@ -266,45 +266,6 @@ PlasmaCore.Dialog {
                 onClicked: panel.floating = false
             }
         }
-
-        PlasmaExtras.PlasmoidHeading {
-            location: PlasmaExtras.PlasmoidHeading.Footer
-            Layout.topMargin: Kirigami.Units.smallSpacing
-            topPadding: Kirigami.Units.smallSpacing * 2
-            bottomPadding: Kirigami.Units.smallSpacing
-
-            Layout.fillWidth: true
-            RowLayout {
-                anchors.centerIn: parent
-                spacing: Kirigami.Units.gridUnit
-
-                Kirigami.Heading {
-                    level: menuColumn.headingLabel
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus Shortcut:")
-                    visible: panel.adaptiveOpacityEnabled
-
-                    MouseArea {
-                        id: mouseArea
-                        anchors.fill: parent
-                        hoverEnabled: true
-                    }
-
-                    PC3.ToolTip {
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Press this keyboard shortcut to move focus to the Panel")
-                        visible: mouseArea.containsMouse
-                    }
-                }
-
-                KeySequenceItem {
-                    id: button
-                    keySequence: plasmoid.globalShortcut
-                    onCaptureFinished: {
-                        plasmoid.globalShortcut = button.keySequence
-                    }
-                }
-            }
-        }
-
     }
 
     function hide() {
