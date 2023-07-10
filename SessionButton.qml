@@ -34,8 +34,8 @@ PlasmaComponents.ToolButton {
     signal sessionChanged()
 
     PlasmaComponents.Menu {
-        PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
-        PlasmaCore.ColorScope.inherit: false
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
+        Kirigami.Theme.inherit: false
 
         id: menu
         Instantiator {

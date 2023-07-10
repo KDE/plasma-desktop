@@ -12,6 +12,7 @@ import Qt5Compat.GraphicalEffects
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasma5support 2.0 as P5Support
+import org.kde.kirigami 2.20 as Kirigami
 
 import "components"
 import "components/animation"
@@ -21,14 +22,15 @@ import "components/animation"
 // the fontSize properties in various components, because the theme's default
 // font size will be correctly propagated to the login screen
 
-PlasmaCore.ColorScope {
+Item {
     id: root
 
     // If we're using software rendering, draw outlines instead of shadows
     // See https://bugs.kde.org/show_bug.cgi?id=398317
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
-    colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+    Kirigami.Theme.inherit: false
 
     width: 1600
     height: 900
@@ -129,7 +131,7 @@ PlasmaCore.ColorScope {
             color : "black" // shadows should always be black
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: PlasmaCore.Units.veryLongDuration * 2
+                    duration: Kirigami.Units.veryLongDuration * 2
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -150,7 +152,7 @@ PlasmaCore.ColorScope {
                 left: parent.left
                 right: parent.right
             }
-            height: root.height + PlasmaCore.Units.gridUnit * 3
+            height: root.height + Kirigami.Units.gridUnit * 3
 
             // If true (depends on the style and environment variables), hover events are always accepted
             // and propagation stopped. This means the parent MouseArea won't get them and the UI won't be shown.
@@ -246,7 +248,7 @@ PlasmaCore.ColorScope {
 
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                 }
             }
 
@@ -256,13 +258,13 @@ PlasmaCore.ColorScope {
                 ScaleAnimator {
                     from: mainStack.zoomFactor
                     to: 1
-                    duration: PlasmaCore.Units.veryLongDuration
+                    duration: Kirigami.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
                 OpacityAnimator {
                     from: 0
                     to: 1
-                    duration: PlasmaCore.Units.veryLongDuration
+                    duration: Kirigami.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
             }
@@ -271,13 +273,13 @@ PlasmaCore.ColorScope {
                 ScaleAnimator {
                     from: 1
                     to: 1 / mainStack.zoomFactor
-                    duration: PlasmaCore.Units.veryLongDuration
+                    duration: Kirigami.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
                 OpacityAnimator {
                     from: 1
                     to: 0
-                    duration: PlasmaCore.Units.veryLongDuration
+                    duration: Kirigami.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
             }
@@ -286,13 +288,13 @@ PlasmaCore.ColorScope {
                 ScaleAnimator {
                     from: 1 / mainStack.zoomFactor
                     to: 1
-                    duration: PlasmaCore.Units.veryLongDuration
+                    duration: Kirigami.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
                 OpacityAnimator {
                     from: 0
                     to: 1
-                    duration: PlasmaCore.Units.veryLongDuration
+                    duration: Kirigami.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
             }
@@ -301,13 +303,13 @@ PlasmaCore.ColorScope {
                 ScaleAnimator {
                     from: 1
                     to: mainStack.zoomFactor
-                    duration: PlasmaCore.Units.veryLongDuration
+                    duration: Kirigami.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
                 OpacityAnimator {
                     from: 1
                     to: 0
-                    duration: PlasmaCore.Units.veryLongDuration
+                    duration: Kirigami.Units.veryLongDuration
                     easing.type: Easing.OutCubic
                 }
             }
@@ -379,18 +381,18 @@ PlasmaCore.ColorScope {
                             NumberAnimation {
                                 target: mainStack
                                 property: "y"
-                                duration: PlasmaCore.Units.longDuration
+                                duration: Kirigami.Units.longDuration
                                 easing.type: Easing.InOutQuad
                             }
                             NumberAnimation {
                                 target: inputPanel
                                 property: "y"
-                                duration: PlasmaCore.Units.longDuration
+                                duration: Kirigami.Units.longDuration
                                 easing.type: Easing.OutQuad
                             }
                             OpacityAnimator {
                                 target: inputPanel
-                                duration: PlasmaCore.Units.longDuration
+                                duration: Kirigami.Units.longDuration
                                 easing.type: Easing.OutQuad
                             }
                         }
@@ -404,18 +406,18 @@ PlasmaCore.ColorScope {
                             NumberAnimation {
                                 target: mainStack
                                 property: "y"
-                                duration: PlasmaCore.Units.longDuration
+                                duration: Kirigami.Units.longDuration
                                 easing.type: Easing.InOutQuad
                             }
                             NumberAnimation {
                                 target: inputPanel
                                 property: "y"
-                                duration: PlasmaCore.Units.longDuration
+                                duration: Kirigami.Units.longDuration
                                 easing.type: Easing.InQuad
                             }
                             OpacityAnimator {
                                 target: inputPanel
-                                duration: PlasmaCore.Units.longDuration
+                                duration: Kirigami.Units.longDuration
                                 easing.type: Easing.InQuad
                             }
                         }
@@ -503,7 +505,7 @@ PlasmaCore.ColorScope {
             Behavior on opacity {
                 //OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)"
                 NumberAnimation {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -515,16 +517,16 @@ PlasmaCore.ColorScope {
             source: config.logo
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: footer.top
-            anchors.bottomMargin: PlasmaCore.Units.largeSpacing
+            anchors.bottomMargin: Kirigami.Units.largeSpacing
             asynchronous: true
             sourceSize.height: height
             opacity: loginScreenRoot.uiVisible ? 0 : 1
             fillMode: Image.PreserveAspectFit
-            height: Math.round(PlasmaCore.Units.gridUnit * 3.5)
+            height: Math.round(Kirigami.Units.gridUnit * 3.5)
             Behavior on opacity {
                 // OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)"
                 NumberAnimation {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -537,12 +539,12 @@ PlasmaCore.ColorScope {
                 bottom: parent.bottom
                 left: parent.left
                 right: parent.right
-                margins: PlasmaCore.Units.smallSpacing
+                margins: Kirigami.Units.smallSpacing
             }
 
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                 }
             }
 
