@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2022-12-26 03:47+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#: ui/main.qml:50
+#: ui/main.qml:44
 #, kde-format
 msgid "Pause Indexer"
 msgstr "暫停索引器"
 
-#: ui/main.qml:50
+#: ui/main.qml:44
 #, kde-format
 msgid "Resume Indexer"
 msgstr "恢復索引器"
 
-#: ui/main.qml:78
+#: ui/main.qml:72
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -39,7 +39,7 @@ msgstr ""
 "這將會停用 KRunner 與啟動器選單內的檔案搜尋，並從所有 KDE 應用程式移除延伸的"
 "中繼資料顯示。"
 
-#: ui/main.qml:87
+#: ui/main.qml:81
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -49,23 +49,12 @@ msgstr ""
 "您要刪除已儲存的索引資料嗎？這將會清出 %1 的空間，但若之後重新啟用索引，整個"
 "索引將會需要從頭開始重新建立。取決於您的檔案數量，這可能會需要一些時間。"
 
-#: ui/main.qml:89
+#: ui/main.qml:83
 #, kde-format
 msgid "Delete Index Data"
 msgstr "刪除索引資料"
 
-#: ui/main.qml:109
-#, kde-format
-msgid "The system must be restarted before these changes will take effect."
-msgstr "系統必須重新啟動，這些變更才會生效。"
-
-#: ui/main.qml:113
-#, kde-format
-msgctxt "@action:button"
-msgid "Restart"
-msgstr "重新啟動"
-
-#: ui/main.qml:120
+#: ui/main.qml:93
 #, fuzzy, kde-format
 #| msgid ""
 #| "File Search helps you quickly locate all your files based on their "
@@ -75,112 +64,119 @@ msgid ""
 "folders and what types of file data are indexed."
 msgstr "檔案搜尋能依據檔案內容協助您快速找到您的檔案。"
 
-#: ui/main.qml:135
+#: ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "Disable indexing"
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "停用索引"
 
-#: ui/main.qml:136
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr ""
 
-#: ui/main.qml:150
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
 msgstr ""
 
-#: ui/main.qml:154
+#: ui/main.qml:127
 #, fuzzy, kde-format
 #| msgid "Status: %1, %2% complete"
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "狀態：%1，%2% 已完成"
 
-#: ui/main.qml:167
+#: ui/main.qml:140
 #, fuzzy, kde-format
 #| msgid "Currently indexing: %1"
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "正在索引：%1"
 
-#: ui/main.qml:177
+#: ui/main.qml:150
 #, fuzzy, kde-kuit-format
 #| msgid "Currently indexing: %1"
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
 msgstr "正在索引：%1"
 
-#: ui/main.qml:193
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr ""
 
-#: ui/main.qml:195
+#: ui/main.qml:168
 #, kde-format
 msgid "File names and contents"
 msgstr ""
 
-#: ui/main.qml:208
+#: ui/main.qml:181
 #, kde-format
 msgid "File names only"
 msgstr ""
 
-#: ui/main.qml:227
+#: ui/main.qml:200
 #, fuzzy, kde-format
 #| msgid "Index hidden files and folders"
 msgid "Hidden files and folders"
 msgstr "索引隱藏檔案及資料夾"
 
-#: ui/main.qml:283
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr ""
 
-#: ui/main.qml:288
+#: ui/main.qml:261
 #, fuzzy, kde-format
 #| msgid "Start indexing a folder…"
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "開始索引資料夾…"
 
-#: ui/main.qml:299
+#: ui/main.qml:272
 #, fuzzy, kde-format
 #| msgid "Stop indexing a folder…"
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "停止索引資料夾…"
 
-#: ui/main.qml:362
+#: ui/main.qml:335
 #, kde-format
 msgid "Not indexed"
 msgstr "未索引"
 
-#: ui/main.qml:363
+#: ui/main.qml:336
 #, kde-format
 msgid "Indexed"
 msgstr "已索引"
 
-#: ui/main.qml:393
+#: ui/main.qml:366
 #, kde-format
 msgid "Delete entry"
 msgstr "刪除項目"
 
-#: ui/main.qml:408
+#: ui/main.qml:381
 #, kde-format
 msgid "Select a folder to include"
 msgstr "選擇要包含的資料夾"
 
-#: ui/main.qml:408
+#: ui/main.qml:381
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "選擇要排除的資料夾"
+
+#~ msgid "The system must be restarted before these changes will take effect."
+#~ msgstr "系統必須重新啟動，這些變更才會生效。"
+
+#~ msgctxt "@action:button"
+#~ msgid "Restart"
+#~ msgstr "重新啟動"
 
 #~ msgid "Enable File Search"
 #~ msgstr "啟用檔案搜尋"

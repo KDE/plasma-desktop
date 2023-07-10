@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2023-03-01 00:19+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: ui/main.qml:50
+#: ui/main.qml:44
 #, kde-format
 msgid "Pause Indexer"
 msgstr "색인 도구 일시 중지"
 
-#: ui/main.qml:50
+#: ui/main.qml:44
 #, kde-format
 msgid "Resume Indexer"
 msgstr "색인 도구 다시 시작"
 
-#: ui/main.qml:78
+#: ui/main.qml:72
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -37,7 +37,7 @@ msgstr ""
 "KRunner와 실행기 메뉴에서 파일 검색을 비활성화하고, 모든 KDE 프로그램에서 확"
 "장된 메타데이터를 표시하지 않습니다."
 
-#: ui/main.qml:87
+#: ui/main.qml:81
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -48,23 +48,12 @@ msgstr ""
 "싱이 다시 활성화되면 전체 색인을 처음부터 다시 만들어야 합니다. 파일 수에 따"
 "라 이 작업에는 시간이 걸릴 수 있습니다."
 
-#: ui/main.qml:89
+#: ui/main.qml:83
 #, kde-format
 msgid "Delete Index Data"
 msgstr "색인 데이터 삭제"
 
-#: ui/main.qml:109
-#, kde-format
-msgid "The system must be restarted before these changes will take effect."
-msgstr "변경 사항을 적용하려면 시스템을 다시 시작해야 합니다."
-
-#: ui/main.qml:113
-#, kde-format
-msgctxt "@action:button"
-msgid "Restart"
-msgstr "다시 시작"
-
-#: ui/main.qml:120
+#: ui/main.qml:93
 #, fuzzy, kde-format
 #| msgid ""
 #| "File Search helps you quickly locate all your files based on their "
@@ -74,112 +63,119 @@ msgid ""
 "folders and what types of file data are indexed."
 msgstr "파일 검색을 사용하면 내용을 기반으로 파일을 찾을 수 있습니다."
 
-#: ui/main.qml:135
+#: ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "Disable indexing"
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "색인 사용 안 함"
 
-#: ui/main.qml:136
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr ""
 
-#: ui/main.qml:150
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
 msgstr ""
 
-#: ui/main.qml:154
+#: ui/main.qml:127
 #, fuzzy, kde-format
 #| msgid "Status: %1, %2% complete"
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "상태: %1, %2% 완료"
 
-#: ui/main.qml:167
+#: ui/main.qml:140
 #, fuzzy, kde-format
 #| msgid "Currently indexing: %1"
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "현재 색인 중: %1"
 
-#: ui/main.qml:177
+#: ui/main.qml:150
 #, fuzzy, kde-kuit-format
 #| msgid "Currently indexing: %1"
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
 msgstr "현재 색인 중: %1"
 
-#: ui/main.qml:193
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr ""
 
-#: ui/main.qml:195
+#: ui/main.qml:168
 #, kde-format
 msgid "File names and contents"
 msgstr ""
 
-#: ui/main.qml:208
+#: ui/main.qml:181
 #, kde-format
 msgid "File names only"
 msgstr ""
 
-#: ui/main.qml:227
+#: ui/main.qml:200
 #, fuzzy, kde-format
 #| msgid "Index hidden files and folders"
 msgid "Hidden files and folders"
 msgstr "숨김 파일과 폴더도 색인에 포함"
 
-#: ui/main.qml:283
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr ""
 
-#: ui/main.qml:288
+#: ui/main.qml:261
 #, fuzzy, kde-format
 #| msgid "Start indexing a folder…"
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "폴더 색인 시작하는 중…"
 
-#: ui/main.qml:299
+#: ui/main.qml:272
 #, fuzzy, kde-format
 #| msgid "Stop indexing a folder…"
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "폴더 색인 정지하는 중…"
 
-#: ui/main.qml:362
+#: ui/main.qml:335
 #, kde-format
 msgid "Not indexed"
 msgstr "색인에 포함되지 않음"
 
-#: ui/main.qml:363
+#: ui/main.qml:336
 #, kde-format
 msgid "Indexed"
 msgstr "색인에 포함됨"
 
-#: ui/main.qml:393
+#: ui/main.qml:366
 #, kde-format
 msgid "Delete entry"
 msgstr "항목 삭제"
 
-#: ui/main.qml:408
+#: ui/main.qml:381
 #, kde-format
 msgid "Select a folder to include"
 msgstr "포함할 폴더 선택"
 
-#: ui/main.qml:408
+#: ui/main.qml:381
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "제외할 폴더 선택"
+
+#~ msgid "The system must be restarted before these changes will take effect."
+#~ msgstr "변경 사항을 적용하려면 시스템을 다시 시작해야 합니다."
+
+#~ msgctxt "@action:button"
+#~ msgid "Restart"
+#~ msgstr "다시 시작"
 
 #~ msgid "Enable File Search"
 #~ msgstr "파일 검색 사용"

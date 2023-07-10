@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-07-10 02:12+0000\n"
 "PO-Revision-Date: 2023-02-20 21:18+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: ui/main.qml:50
+#: ui/main.qml:44
 #, kde-format
 msgid "Pause Indexer"
 msgstr "Set indeksering på pause"
 
-#: ui/main.qml:50
+#: ui/main.qml:44
 #, kde-format
 msgid "Resume Indexer"
 msgstr "Hald fram indeksering"
 
-#: ui/main.qml:78
+#: ui/main.qml:72
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -39,7 +39,7 @@ msgstr ""
 "Filsøk i KRunner og programstartarar vert slått av, og detaljert "
 "metadatavising i KDE-program vert fjerna."
 
-#: ui/main.qml:87
+#: ui/main.qml:81
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -50,125 +50,122 @@ msgstr ""
 "på att indekseringa seinare, må heile indeksen byggjast på nytt. Viss du har "
 "mange filer, kan dette ta lang tid."
 
-#: ui/main.qml:89
+#: ui/main.qml:83
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Slett indeksdata"
 
-#: ui/main.qml:109
-#, kde-format
-msgid "The system must be restarted before these changes will take effect."
-msgstr "Du må starta datamaskina på nytt for at endringane skal tre i kraft."
-
-#: ui/main.qml:113
-#, kde-format
-msgctxt "@action:button"
-msgid "Restart"
-msgstr "Start på nytt"
-
-#: ui/main.qml:120
+#: ui/main.qml:93
 #, fuzzy, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr "Filsøk hjelper deg å raskt finna filer basert på kva dei inneheld."
 
-#: ui/main.qml:135
+#: ui/main.qml:108
 #, fuzzy, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Indekserer no: %1"
 
-#: ui/main.qml:136
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr ""
 
-#: ui/main.qml:150
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
 msgstr ""
 
-#: ui/main.qml:154
+#: ui/main.qml:127
 #, fuzzy, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "Status: %1 – %2 % fullført"
 
-#: ui/main.qml:167
+#: ui/main.qml:140
 #, fuzzy, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "Indekserer no: %1"
 
-#: ui/main.qml:177
+#: ui/main.qml:150
 #, fuzzy, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
 msgstr "Indekserer no: %1"
 
-#: ui/main.qml:193
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr ""
 
-#: ui/main.qml:195
+#: ui/main.qml:168
 #, kde-format
 msgid "File names and contents"
 msgstr ""
 
-#: ui/main.qml:208
+#: ui/main.qml:181
 #, kde-format
 msgid "File names only"
 msgstr ""
 
-#: ui/main.qml:227
+#: ui/main.qml:200
 #, fuzzy, kde-format
 msgid "Hidden files and folders"
 msgstr "Indekser gøymde filer og mapper"
 
-#: ui/main.qml:283
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr ""
 
-#: ui/main.qml:288
+#: ui/main.qml:261
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Start indeksering av mappe …"
 
-#: ui/main.qml:299
+#: ui/main.qml:272
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stopp indeksering av mappe …"
 
-#: ui/main.qml:362
+#: ui/main.qml:335
 #, kde-format
 msgid "Not indexed"
 msgstr "Ikkje indeksert"
 
-#: ui/main.qml:363
+#: ui/main.qml:336
 #, kde-format
 msgid "Indexed"
 msgstr "Indeksert"
 
-#: ui/main.qml:393
+#: ui/main.qml:366
 #, kde-format
 msgid "Delete entry"
 msgstr "Slett oppføring"
 
-#: ui/main.qml:408
+#: ui/main.qml:381
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Vel mappe å inkludera"
 
-#: ui/main.qml:408
+#: ui/main.qml:381
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Vel mappe å ekskludera"
+
+#~ msgid "The system must be restarted before these changes will take effect."
+#~ msgstr ""
+#~ "Du må starta datamaskina på nytt for at endringane skal tre i kraft."
+
+#~ msgctxt "@action:button"
+#~ msgid "Restart"
+#~ msgstr "Start på nytt"
