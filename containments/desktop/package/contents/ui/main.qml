@@ -47,7 +47,7 @@ ContainmentItem {
     LayoutMirroring.childrenInherit: true
 
     property bool isFolder: (plasmoid.pluginName === "org.kde.plasma.folder")
-    property bool isContainment: plasmoid.isContainment
+    property bool isContainment: Plasmoid.isContainment
     property bool isPopup: (plasmoid.location !== PlasmaCore.Types.Floating)
     property bool useListViewMode: isPopup && plasmoid.configuration.viewMode === 0
 
@@ -325,7 +325,7 @@ ContainmentItem {
                             easing.type: Easing.InOutQuad
                         }
                 }
-                
+
                     DropBehavior on x { }
                     DropBehavior on y { }
              }
@@ -365,14 +365,20 @@ ContainmentItem {
             }
         }
 
+        PlasmaCore.Action {
+            id: configAction
+            text: i18n("Configure Desktop and Wallpaper…")
+            icon.name: "preferences-desktop-wallpaper"
+            shortcut: "alt+d,s"
+            onTriggered: Plasmoid.containment.configureRequested(Plasmoid)
+        }
+
         Component.onCompleted: {
-            if (!isContainment) {
+            if (!Plasmoid.isContainment) {
                 return;
             }
 
-            // Customize the icon and text to improve discoverability
-            plasmoid.setAction("configure", i18n("Configure Desktop and Wallpaper…"), "preferences-desktop-wallpaper")
-
+            Plasmoid.setInternalAction("configure", configAction)
             updateGridSize();
         }
     }

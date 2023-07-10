@@ -46,7 +46,7 @@ PlasmoidItem {
 
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
     Plasmoid.icon: (dirModel.count > 0) ? "user-trash-full": "user-trash"
-    Plasmoid.onActivated: action_open()
+    Plasmoid.onActivated: openTrash()
 
     Keys.onPressed: {
         switch (event.key) {
@@ -87,29 +87,32 @@ PlasmoidItem {
         url: "trash:/"
     }
 
-    function action_open() {
+    function openTrash() {
         Qt.openUrlExternally("trash:/");
     }
 
-    function action_empty() {
-        TrashPrivate.Trash.emptyTrash()
-    }
-
-    function action_openkcm() {
-        KCM.KCMLauncher.open("kcmtrash");
-    }
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18nc("a verb", "Open")
+            icon.name: "document-open"
+            onTriggered: Qt.openUrlExternally("trash:/")
+        },
+        PlasmaCore.Action {
+            text: i18nc("a verb", "Empty")
+            icon.name: "trash-empty"
+            enabled: dirModel.count > 0
+            onTriggered: TrashPrivate.Trash.emptyTrash()
+        },
+        PlasmaCore.Action {
+            text: i18n("Trash Settings…")
+            icon.name: "configure"
+            visible: KConfig.KAUthorized.authorizeControlModule("kcmtrash")
+            onTriggered: KCM.KCMLauncher.open("kcmtrash")
+        }
+    ]
 
     Component.onCompleted: {
-        plasmoid.removeAction("configure");
-        plasmoid.setAction("open", i18nc("a verb", "Open"),"document-open");
-        plasmoid.setAction("empty",i18nc("a verb", "Empty"),"trash-empty");
-        plasmoid.action("empty").enabled = Qt.binding(function() {
-            return dirModel.count > 0;
-        });
-
-        if (KConfig.KAUthorized.authorizeControlModule("kcmtrash")) {
-            plasmoid.setAction("openkcm", i18n("Trash Settings…"), "configure");
-        }
+        plasmoid.removeInternalAction("configure");
     }
 
     MouseArea {

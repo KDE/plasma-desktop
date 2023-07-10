@@ -60,22 +60,6 @@ PlasmoidItem {
     readonly property color windowInactiveColor: colorWithAlpha(Kirigami.Theme.textColor, 0.17)
     readonly property color windowInactiveBorderColor: colorWithAlpha(Kirigami.Theme.textColor, 0.5)
 
-    function action_addDesktop() {
-        pagerModel.addDesktop();
-    }
-
-    function action_removeDesktop() {
-        pagerModel.removeDesktop();
-    }
-
-    function action_openKCM() {
-        KCM.KCMLauncher.openSystemSettings("kcm_kwin_virtualdesktops");
-    }
-
-    function action_showActivityManager() {
-        ActivitySwitcher.Backend.toggleActivityManager()
-    }
-
     function sanitize(input: string): string {
         // Based on QQuickStyledTextPrivate::parseEntity
         const table = {
@@ -597,17 +581,30 @@ PlasmoidItem {
         }
     }
 
-    Component.onCompleted: {
-        if (isActivityPager) {
-            Plasmoid.setAction("showActivityManager", i18n("Show Activity Manager…"), "activities");
-        } else {
-            if (KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")) {
-                Plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");
-                Plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
-                Plasmoid.action("removeDesktop").enabled = Qt.binding(() => repeater.count > 1);
-
-                Plasmoid.setAction("openKCM", i18n("Configure Virtual Desktops…"), "configure");
-            }
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18n("Show Activity Manager…")
+            icon.name: "activities"
+            visible: root.isActivityPager
+            onTriggered: ActivitySwitcher.Backend.toggleActivityManager()
+        },
+        PlasmaCore.Action {
+            text: i18n("Add Virtual Desktop")
+            icon.name: "list-add"
+            visible: !root.isActivityPager && KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")
+            onTriggered: pagerModel.addDesktop()
+        },
+        PlasmaCore.Action {
+            text: i18n("Remove Virtual Desktop")
+            icon.name: "list-remove"
+            visible: !root.isActivityPager && KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")
+            enabled: repeater.count > 1
+            onTriggered: pagerModel.removeDesktop()
+        },
+        PlasmaCore.Action {
+            text: i18n("Configure Virtual Desktops…")
+            visible: !root.isActivityPager && KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")
+            onTriggered: KCM.KCMLauncher.openSystemSettings("kcm_kwin_virtualdesktops")
         }
-    }
+    ]
 }
