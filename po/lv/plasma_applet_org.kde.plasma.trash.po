@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2009-05-19 11:16+0300\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -19,14 +19,14 @@ msgstr ""
 "2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: contents/ui/main.qml:104
+#: contents/ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "&Open"
 msgctxt "a verb"
 msgid "Open"
 msgstr "&Atvērt"
 
-#: contents/ui/main.qml:105
+#: contents/ui/main.qml:101
 #, fuzzy, kde-format
 #| msgctxt "The trash is empty. This is not an action, but a state"
 #| msgid "Empty"
@@ -34,12 +34,12 @@ msgctxt "a verb"
 msgid "Empty"
 msgstr "Tukša"
 
-#: contents/ui/main.qml:111
+#: contents/ui/main.qml:107
 #, kde-format
 msgid "Trash Settings…"
 msgstr ""
 
-#: contents/ui/main.qml:162
+#: contents/ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Trash"
 msgid ""
@@ -47,7 +47,7 @@ msgid ""
 "Empty"
 msgstr "Miskaste"
 
-#: contents/ui/main.qml:162
+#: contents/ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "One item"
 #| msgid_plural "%1 items"
@@ -61,19 +61,19 @@ msgstr[0] "%1 vienums"
 msgstr[1] "%1 vienumi"
 msgstr[2] "%1 vienumu"
 
-#: contents/ui/main.qml:171
+#: contents/ui/main.qml:174
 #, kde-format
 msgid "Trash"
 msgstr "Miskaste"
 
-#: contents/ui/main.qml:172
+#: contents/ui/main.qml:175
 #, fuzzy, kde-format
 #| msgctxt "The trash is empty. This is not an action, but a state"
 #| msgid "Empty"
 msgid "Empty"
 msgstr "Tukša"
 
-#: contents/ui/main.qml:172
+#: contents/ui/main.qml:175
 #, fuzzy, kde-format
 #| msgid "One item"
 #| msgid_plural "%1 items"

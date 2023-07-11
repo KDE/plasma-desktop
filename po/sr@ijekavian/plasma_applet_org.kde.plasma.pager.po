@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-21 02:02+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2016-11-28 01:33+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -131,7 +131,7 @@ msgstr "нема ефекта"
 msgid "Shows the desktop"
 msgstr "приказује површ"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "...and %1 other window"
 #| msgid_plural "...and %1 other windows"
@@ -142,7 +142,7 @@ msgstr[1] "...и %1 друга прозора"
 msgstr[2] "...и %1 других прозора"
 msgstr[3] "...и %1 други прозор"
 
-#: package/contents/ui/main.qml:369
+#: package/contents/ui/main.qml:353
 #, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
@@ -151,7 +151,7 @@ msgstr[1] "%1 прозора:"
 msgstr[2] "%1 прозора:"
 msgstr[3] "%1 прозор:"
 
-#: package/contents/ui/main.qml:381
+#: package/contents/ui/main.qml:365
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
@@ -161,35 +161,35 @@ msgstr[2] "%1 минимизован прозора:"
 msgstr[3] "%1 минимизован прозор:"
 
 # >> @option:radio Display:
-#: package/contents/ui/main.qml:456
+#: package/contents/ui/main.qml:440
 #, fuzzy, kde-format
 #| msgid "Desktop name"
 msgid "Desktop %1"
 msgstr "име површи"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:441
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:602
+#: package/contents/ui/main.qml:586
 #, fuzzy, kde-format
 #| msgid "Show Activity Manager..."
 msgid "Show Activity Manager…"
 msgstr "Прикажи менаџер активности..."
 
-#: package/contents/ui/main.qml:605
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgid "Add Virtual Desktop"
 msgstr "Додај виртуелну површи"
 
-#: package/contents/ui/main.qml:606
+#: package/contents/ui/main.qml:598
 #, kde-format
 msgid "Remove Virtual Desktop"
 msgstr "Уклони виртуелну површ"
 
-#: package/contents/ui/main.qml:609
+#: package/contents/ui/main.qml:605
 #, fuzzy, kde-format
 #| msgid "Configure Desktops..."
 msgid "Configure Virtual Desktops…"

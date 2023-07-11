@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_pager.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-21 02:02+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2007-10-07 08:39-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -118,7 +118,7 @@ msgstr "Ní dhéanann sé faic"
 msgid "Shows the desktop"
 msgstr "Taispeáin an deasc"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "and 1 other"
 #| msgid_plural "and %1 others"
@@ -130,7 +130,7 @@ msgstr[2] "agus ceann eile"
 msgstr[3] "agus ceann eile"
 msgstr[4] "agus ceann eile"
 
-#: package/contents/ui/main.qml:369
+#: package/contents/ui/main.qml:353
 #, fuzzy, kde-format
 #| msgid "One window:"
 #| msgid_plural "%1 windows:"
@@ -142,7 +142,7 @@ msgstr[2] "Fuinneog amháin:"
 msgstr[3] "Fuinneog amháin:"
 msgstr[4] "Fuinneog amháin:"
 
-#: package/contents/ui/main.qml:381
+#: package/contents/ui/main.qml:365
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
@@ -152,36 +152,36 @@ msgstr[2] ""
 msgstr[3] ""
 msgstr[4] ""
 
-#: package/contents/ui/main.qml:456
+#: package/contents/ui/main.qml:440
 #, fuzzy, kde-format
 #| msgid "Desktop name"
 msgid "Desktop %1"
 msgstr "Ainm na deisce"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:441
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:602
+#: package/contents/ui/main.qml:586
 #, kde-format
 msgid "Show Activity Manager…"
 msgstr ""
 
-#: package/contents/ui/main.qml:605
+#: package/contents/ui/main.qml:592
 #, fuzzy, kde-format
 #| msgid "&Add Virtual Desktop"
 msgid "Add Virtual Desktop"
 msgstr "&Cuir Deasc Fhíorúil Leis"
 
-#: package/contents/ui/main.qml:606
+#: package/contents/ui/main.qml:598
 #, fuzzy, kde-format
 #| msgid "&Remove Last Virtual Desktop"
 msgid "Remove Virtual Desktop"
 msgstr "&Bain an Deasc Dheiridh Fhíorúil"
 
-#: package/contents/ui/main.qml:609
+#: package/contents/ui/main.qml:605
 #, fuzzy, kde-format
 #| msgid "Configure Desktops..."
 msgid "Configure Virtual Desktops…"

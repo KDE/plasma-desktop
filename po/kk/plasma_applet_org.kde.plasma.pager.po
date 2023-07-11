@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-21 02:02+0000\n"
+"POT-Creation-Date: 2023-07-11 02:03+0000\n"
 "PO-Revision-Date: 2013-10-28 03:53+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -118,7 +118,7 @@ msgstr "Ештеңе істемейді"
 msgid "Shows the desktop"
 msgstr "Үстеді көрсетеді"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "and 1 other"
 #| msgid_plural "and %1 others"
@@ -126,7 +126,7 @@ msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "және %1 басқа"
 
-#: package/contents/ui/main.qml:369
+#: package/contents/ui/main.qml:353
 #, fuzzy, kde-format
 #| msgid "One window:"
 #| msgid_plural "%1 windows:"
@@ -134,42 +134,42 @@ msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "%1 терезе:"
 
-#: package/contents/ui/main.qml:381
+#: package/contents/ui/main.qml:365
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] ""
 
-#: package/contents/ui/main.qml:456
+#: package/contents/ui/main.qml:440
 #, fuzzy, kde-format
 #| msgid "Desktop name"
 msgid "Desktop %1"
 msgstr "Үстел атауы"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:441
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:602
+#: package/contents/ui/main.qml:586
 #, kde-format
 msgid "Show Activity Manager…"
 msgstr ""
 
-#: package/contents/ui/main.qml:605
+#: package/contents/ui/main.qml:592
 #, fuzzy, kde-format
 #| msgid "&Add Virtual Desktop"
 msgid "Add Virtual Desktop"
 msgstr "Виртуалды үстелін қ&осу"
 
-#: package/contents/ui/main.qml:606
+#: package/contents/ui/main.qml:598
 #, fuzzy, kde-format
 #| msgid "&Remove Last Virtual Desktop"
 msgid "Remove Virtual Desktop"
 msgstr "Соңғы виртуалды үстелін алып &тастау"
 
-#: package/contents/ui/main.qml:609
+#: package/contents/ui/main.qml:605
 #, fuzzy, kde-format
 #| msgid "&Configure Virtual Desktops..."
 msgid "Configure Virtual Desktops…"
