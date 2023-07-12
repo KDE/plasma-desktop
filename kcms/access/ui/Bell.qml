@@ -36,52 +36,12 @@ Kirigami.FormLayout {
         checked: kcm.bellSettings.systemBell
         onToggled: kcm.bellSettings.systemBell = checked
     }
-
-    RowLayout {
-        Kirigami.FormData.label: i18nc("Defines if the system will use a sound system bell", "Custom sound:")
-        spacing: 0
-
-        QQC2.CheckBox {
-            id: customBell
-            Layout.alignment: Qt.AlignVCenter
-
-            KCM.SettingStateBinding {
-                configObject: kcm.bellSettings
-                settingName: "CustomBell"
-                extraEnabledConditions: kcm.bellSettings.systemBell
-            }
-
-            checked: kcm.bellSettings.customBell
-            onToggled: kcm.bellSettings.customBell= checked
-        }
-
-        QQC2.TextField {
-            id: textEdit
-
-            text: kcm.bellSettings.customBellFile
-
-            KCM.SettingStateBinding {
-                configObject: kcm.bellSettings
-                settingName: "CustomBellFile"
-                extraEnabledConditions: kcm.bellSettings.customBell
-            }
-
-            onEditingFinished: kcm.bellSettings.customBellFile = textEdit.text
-        }
-        QQC2.Button {
-            icon.name: "folder"
-            QQC2.ToolTip.visible: down
-            QQC2.ToolTip.text: i18n("Search audio file for the system bell")
-            Accessible.name: i18n("Button search audio file")
-            KCM.SettingStateBinding {
-                configObject: kcm.bellSettings
-                settingName: "CustomBellFile"
-                extraEnabledConditions: kcm.bellSettings.customBell
-            }
-
-            onClicked: fileDialog.open()
-        }
+    QQC2.Button {
+        text:i18nc("@action:button", "Change Sound…")
+        onClicked: KCM.KCMLauncher.openSystemSettings("kcm_notifications", ["--notifyrc", "plasma_workspace", "--event-id", "beep"])
     }
+
+
     Item {
         Kirigami.FormData.isSection: true
     }
