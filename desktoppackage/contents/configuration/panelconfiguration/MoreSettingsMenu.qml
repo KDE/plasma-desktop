@@ -67,7 +67,7 @@ PlasmaCore.Dialog {
                     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
                     PC3.ToolTip.visible: hovered
 
-                    onClicked: plasmoid.action("remove").trigger();
+                    onClicked: plasmoid.internalAction("remove").trigger();
                 }
 
             }

@@ -145,10 +145,10 @@ ContainmentItem {
             LayoutManager.appletsModel = appletsModel;
             LayoutManager.restore();
 
-            root.Plasmoid.action("configure").visible = Qt.binding(function() {
+            root.Plasmoid.internalAction("configure").visible = Qt.binding(function() {
                 return !root.Plasmoid.immutable;
             });
-            root.Plasmoid.action("configure").enabled = Qt.binding(function() {
+            root.Plasmoid.internalAction("configure").enabled = Qt.binding(function() {
                 return !root.Plasmoid.immutable;
             });
         }

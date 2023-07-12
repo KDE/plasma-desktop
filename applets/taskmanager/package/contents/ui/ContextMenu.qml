@@ -742,7 +742,7 @@ PlasmaExtras.Menu {
 
                 onClicked: configureAction.trigger()
 
-                Component.onCompleted: configureAction = plasmoid.action("configure")
+                Component.onCompleted: configureAction = plasmoid.internalAction("configure")
             }
 
             PlasmaExtras.MenuItem {
@@ -756,7 +756,7 @@ PlasmaExtras.Menu {
 
                 onClicked: alternativesAction.trigger()
 
-                Component.onCompleted: alternativesAction = plasmoid.action("alternatives")
+                Component.onCompleted: alternativesAction = plasmoid.internalAction("alternatives")
             }
         }
     }

@@ -100,7 +100,7 @@ Item {
         hoverEnabled: enabled
         enabled: plasmoid.containment.corona.editMode || plasmoid.userConfiguring
         onClicked: {
-            main.Plasmoid.action("configure").trigger()
+            main.Plasmoid.internalAction("configure").trigger()
         }
         activeFocusOnTab: true
         Keys.onPressed: {
@@ -109,7 +109,7 @@ Item {
             case Qt.Key_Enter:
             case Qt.Key_Return:
             case Qt.Key_Select:
-                main.Plasmoid.action("configure").trigger();
+                main.Plasmoid.internalAction("configure").trigger();
                 break;
             }
         }
@@ -117,7 +117,7 @@ Item {
         Accessible.name: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Configure Panel…")
         Accessible.description: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Open Panel configuration ui")
         Accessible.role: Accessible.Button
-        Accessible.onPressAction: main.Plasmoid.action("configure").trigger();
+        Accessible.onPressAction: main.Plasmoid.internalAction("configure").trigger();
 
         PlasmaCore.ToolTipArea {
             id: toolTipArea

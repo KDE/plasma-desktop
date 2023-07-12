@@ -223,8 +223,8 @@ MouseArea {
             if (visualParent) {
                 const plasmoid = configurationArea.currentApplet.applet.plasmoid;
                 plasmoid.contextualActionsAboutToShow();
-                alternativesButton.visible = plasmoid.action("alternatives")?.enabled ?? false;
-                configureButton.visible = plasmoid.action("configure")?.enabled ?? false;
+                alternativesButton.visible = plasmoid.internalAction("alternatives")?.enabled ?? false;
+                configureButton.visible = plasmoid.internalAction("configure")?.enabled ?? false;
                 label.text = plasmoid.title;
             }
         }
@@ -258,11 +258,11 @@ MouseArea {
                     // cursor position, so show this on the top unless it's on
                     // a top panel
                     visible: tooltip.location !== PlasmaCore.Types.TopEdge
-                             && (configurationArea.currentApplet?.applet.plasmoid.action("remove")?.enabled ?? false)
+                             && (configurationArea.currentApplet?.applet.plasmoid.internalAction("remove")?.enabled ?? false)
                     icon.name: "delete"
                     text: i18n("Remove")
                     onClicked: {
-                        configurationArea.currentApplet.applet.plasmoid.action("remove").trigger();
+                        configurationArea.currentApplet.applet.plasmoid.internalAction("remove").trigger();
                         configurationArea.currentApplet = null;
                     }
                 }
@@ -272,7 +272,7 @@ MouseArea {
                     icon.name: "configure"
                     text: i18n("Configure…")
                     onClicked: {
-                        configurationArea.currentApplet.applet.plasmoid.action("configure").trigger();
+                        configurationArea.currentApplet.applet.plasmoid.internalAction("configure").trigger();
                         configurationArea.currentApplet = null;
                     }
                 }
@@ -282,7 +282,7 @@ MouseArea {
                     icon.name: "widget-alternatives"
                     text: i18n("Show Alternatives…")
                     onClicked: {
-                        configurationArea.currentApplet.applet.plasmoid.action("alternatives").trigger();
+                        configurationArea.currentApplet.applet.plasmoid.internalAction("alternatives").trigger();
                         configurationArea.currentApplet = null;
                     }
                 }
@@ -291,11 +291,11 @@ MouseArea {
                     // we want destructive actions to be far from the initial
                     // cursor position, so show this on the bottom for top panels
                     visible: tooltip.location === PlasmaCore.Types.TopEdge
-                             && (configurationArea.currentApplet?.applet.plasmoid.action("remove")?.enabled ?? false)
+                             && (configurationArea.currentApplet?.applet.plasmoid.internalAction("remove")?.enabled ?? false)
                     icon.name: "delete"
                     text: i18n("Remove")
                     onClicked: {
-                        configurationArea.currentApplet.applet.plasmoid.action("remove").trigger();
+                        configurationArea.currentApplet.applet.plasmoid.internalAction("remove").trigger();
                         configurationArea.currentApplet = null;
                     }
                 }

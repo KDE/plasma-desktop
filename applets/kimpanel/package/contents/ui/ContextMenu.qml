@@ -137,7 +137,7 @@ Item {
 
                 onClicked: configureAction.trigger()
 
-                Component.onCompleted: configureAction = plasmoid.action("configure")
+                Component.onCompleted: configureAction = plasmoid.internalAction("configure")
             }
         }
     }

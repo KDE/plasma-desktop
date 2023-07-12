@@ -248,7 +248,7 @@ MouseArea {
 
             PlasmaComponents3.ToolButton {
                 id: addWidgetButton
-                property QtObject qAction: plasmoid.action("add widgets")
+                property QtObject qAction: plasmoid.internalAction("add widgets")
                 text: qAction.text
                 icon.name: "list-add"
                 onClicked: qAction.trigger()
@@ -256,7 +256,7 @@ MouseArea {
 
             PlasmaComponents3.ToolButton {
                 id: configureButton
-                property QtObject qAction: plasmoid.action("configure")
+                property QtObject qAction: plasmoid.internalAction("configure")
                 text: qAction.text
                 icon.name: "preferences-desktop-wallpaper"
                 onClicked: qAction.trigger()
