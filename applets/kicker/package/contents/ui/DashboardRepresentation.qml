@@ -156,7 +156,7 @@ Kicker.DashboardWindow {
             id: contextMenu
 
             PlasmaExtras.MenuItem {
-                action: plasmoid.action("configure")
+                action: plasmoid.internalAction("configure")
             }
         }
 
