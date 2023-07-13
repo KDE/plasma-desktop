@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2022-09-19 12:38+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -63,32 +63,50 @@ msgctxt "@info"
 msgid "Uninstallation executed successfully, you may now close this window"
 msgstr "Šalinimas sėkmingai įvykdytas, dabar galite užverti šį langą"
 
-#: plugininstaller/main.cpp:31
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
+#, kde-format
+msgid "Failed to copy file %1 to %2"
+msgstr ""
+
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to remove file %1:<nl/>%2"
+msgstr ""
+
+#: plugininstaller/main.cpp:33
 #, kde-format
 msgctxt "@info"
 msgid "KRunner plugin installation failed"
 msgstr "KRunner papildinio diegimas patyrė nesėkmę"
 
-#: plugininstaller/main.cpp:42
+#: plugininstaller/main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall."
 msgstr "Komanda, kurią vykdyti: įdiegti (install) ar šalinti (uninstall)."
 
-#: plugininstaller/main.cpp:43
+#: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive."
 msgstr "Kelias į archyvą."
 
-#: plugininstaller/main.cpp:83
+#: plugininstaller/main.cpp:50
+#, kde-format
+msgctxt "@info:shell"
+msgid "Do not show a visual confirmation dialog"
+msgstr ""
+
+#: plugininstaller/main.cpp:91
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
 msgstr "Nėra PackageKit palaikymo"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:23
-#: plugininstaller/ScriptConfirmationDialog.h:25
+#: plugininstaller/ScriptConfirmationDialog.h:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Installation"
@@ -105,7 +123,7 @@ msgstr ""
 "patikimų autorių/pakuotojų."
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
-#: plugininstaller/ScriptConfirmationDialog.h:79
+#: plugininstaller/ScriptConfirmationDialog.h:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept Risk And Continue"
@@ -123,7 +141,15 @@ msgctxt "@info"
 msgid "The mime type %1 is not supported by the packagekit backend"
 msgstr "PackageKit vidinė pusė nepalaiko %1 MIME tipo"
 
-#: plugininstaller/ScriptConfirmationDialog.h:32
+#: plugininstaller/ScriptConfirmationDialog.h:44
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin executes the following command for starting the \"%1\" service:"
+"<nl/>%2"
+msgstr ""
+
+#: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -136,7 +162,7 @@ msgstr ""
 "nesugebėsite to atlikti ar nesijaučiate pakankamai užtikrintai, kad tai "
 "padarytumėte, spustelėkite dabar <interface>Atsisakyti</interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:37
+#: plugininstaller/ScriptConfirmationDialog.h:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -151,7 +177,7 @@ msgstr ""
 "nesugebėsite to atlikti ar nesijaučiate pakankamai užtikrintai, kad tai "
 "padarytumėte, spustelėkite dabar <interface>Atsisakyti</interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:43
+#: plugininstaller/ScriptConfirmationDialog.h:58
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -164,7 +190,7 @@ msgstr ""
 "nesugebėsite to atlikti ar nesijaučiate pakankamai užtikrintai, kad tai "
 "padarytumėte, spustelėkite dabar <interface>Atsisakyti</interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:48
+#: plugininstaller/ScriptConfirmationDialog.h:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -179,7 +205,7 @@ msgstr ""
 "to atlikti ar nesijaučiate pakankamai užtikrintai, kad tai padarytumėte, "
 "spustelėkite dabar <interface>Atsisakyti</interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:54
+#: plugininstaller/ScriptConfirmationDialog.h:69
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -194,7 +220,7 @@ msgstr ""
 "to atlikti ar nesijaučiate pakankamai užtikrintai, kad tai padarytumėte, "
 "spustelėkite dabar <interface>Atsisakyti</interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:60
+#: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -209,31 +235,31 @@ msgstr ""
 "kad nesugebėsite to atlikti ar nesijaučiate pakankamai užtikrintai, kad tai "
 "padarytumėte, spustelėkite dabar <interface>Atsisakyti</interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:75
+#: plugininstaller/ScriptConfirmationDialog.h:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as uninstalled"
 msgstr "Žymėti įrašą kaip pašalintą"
 
-#: plugininstaller/ScriptConfirmationDialog.h:77
+#: plugininstaller/ScriptConfirmationDialog.h:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as installed"
 msgstr "Žymėti įrašą kaip įdiegtą"
 
-#: plugininstaller/ScriptConfirmationDialog.h:85
+#: plugininstaller/ScriptConfirmationDialog.h:100
 #, kde-format
 msgctxt "@action:button"
 msgid "View Script"
 msgstr "Rodyti scenarijų"
 
-#: plugininstaller/ScriptConfirmationDialog.h:91
+#: plugininstaller/ScriptConfirmationDialog.h:106
 #, kde-format
 msgctxt "@action:button"
 msgid "View Source Directory"
 msgstr "Rodyti šaltinio katalogą"
 
-#: plugininstaller/ScriptConfirmationDialog.h:102
+#: plugininstaller/ScriptConfirmationDialog.h:117
 #, kde-format
 msgctxt "@action:button"
 msgid "View %1"

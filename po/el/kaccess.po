@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2016-12-18 20:00+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -189,116 +189,116 @@ msgstr "Το πλήκτρο Scroll Lock ενεργοποιήθηκε."
 msgid "The Scroll Lock key is now inactive."
 msgstr "Το πλήκτρο Scroll Lock είναι τώρα ανενεργό."
 
-#: kaccess.cpp:329
+#: kaccess.cpp:309
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "Εναλλαγή του αναγνώστη οθόνης σε ενεργό/ανενεργό"
 
-#: kaccess.cpp:331
+#: kaccess.cpp:311
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "Προσβασιμότητα"
 
-#: kaccess.cpp:643
+#: kaccess.cpp:624
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kaccess.cpp:645
+#: kaccess.cpp:626
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kaccess.cpp:647
+#: kaccess.cpp:628
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kaccess.cpp:649
+#: kaccess.cpp:630
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: kaccess.cpp:666
+#: kaccess.cpp:647
 #, kde-format
 msgid "Warning"
 msgstr "Προειδοποίηση"
 
-#: kaccess.cpp:694
+#: kaccess.cpp:675
 #, kde-format
 msgid "&When a gesture was used:"
 msgstr "&Όταν χρησιμοποιηθεί μια χειρονομία:"
 
-#: kaccess.cpp:700
+#: kaccess.cpp:681
 #, kde-format
 msgid "Change Settings Without Asking"
 msgstr "Αλλαγή ρυθμίσεων χωρίς ερώτηση"
 
-#: kaccess.cpp:701
+#: kaccess.cpp:682
 #, kde-format
 msgid "Show This Confirmation Dialog"
 msgstr "Εμφάνισε αυτό το διάλογο επιβεβαίωσης"
 
-#: kaccess.cpp:702
+#: kaccess.cpp:683
 #, kde-format
 msgid "Deactivate All AccessX Features & Gestures"
 msgstr "Απενεργοποίηση όλων των AccessX Χαρακτηριστικών & Χειρονομιών"
 
-#: kaccess.cpp:745 kaccess.cpp:747
+#: kaccess.cpp:726 kaccess.cpp:728
 #, kde-format
 msgid "Slow keys"
 msgstr "Αργά πλήκτρα"
 
-#: kaccess.cpp:750 kaccess.cpp:752
+#: kaccess.cpp:731 kaccess.cpp:733
 #, kde-format
 msgid "Bounce keys"
 msgstr "Πλήκτρα αναπήδησης"
 
-#: kaccess.cpp:755 kaccess.cpp:757
+#: kaccess.cpp:736 kaccess.cpp:738
 #, kde-format
 msgid "Sticky keys"
 msgstr "Κολλημένα πλήκτρα"
 
-#: kaccess.cpp:760 kaccess.cpp:762
+#: kaccess.cpp:741 kaccess.cpp:743
 #, kde-format
 msgid "Mouse keys"
 msgstr "Πλήκτρα ποντικιού"
 
-#: kaccess.cpp:769
+#: kaccess.cpp:750
 #, kde-format
 msgid "Do you really want to deactivate \"%1\"?"
 msgstr "Θέλετε πραγματικά να απενεργοποιήσετε το \"%1\";"
 
-#: kaccess.cpp:772
+#: kaccess.cpp:753
 #, kde-format
 msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
 msgstr "Θέλετε πραγματικά να απενεργοποιήσετε τα \"%1\" και \"%2\";"
 
-#: kaccess.cpp:776
+#: kaccess.cpp:757
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
 msgstr "Θέλετε πραγματικά να απενεργοποιήσετε τα \"%1\", \"%2\" και \"%3\";"
 
-#: kaccess.cpp:779
+#: kaccess.cpp:760
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr ""
 "Θέλετε πραγματικά να απενεργοποιήσετε τα \"%1\", \"%2\", \"%3\" και \"%4\";"
 
-#: kaccess.cpp:790
+#: kaccess.cpp:771
 #, kde-format
 msgid "Do you really want to activate \"%1\"?"
 msgstr "Θέλετε πραγματικά να ενεργοποιήσετε το \"%1\";"
 
-#: kaccess.cpp:793
+#: kaccess.cpp:774
 #, kde-format
 msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
 msgstr ""
 "Θέλετε πραγματικά να ενεργοποιήσετε το \"%1\" και να απενεργοποιήσετε το "
 "\"%2\";"
 
-#: kaccess.cpp:796
+#: kaccess.cpp:777
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
@@ -306,7 +306,7 @@ msgstr ""
 "Θέλετε πραγματικά να ενεργοποιήσετε το \"%1\" και να απενεργοποιήσετε τα "
 "\"%2\" και \"%3\";"
 
-#: kaccess.cpp:802
+#: kaccess.cpp:783
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
@@ -315,12 +315,12 @@ msgstr ""
 "Θέλετε πραγματικά να ενεργοποιήσετε το \"%1\" και να απενεργοποιήσετε τα "
 "\"%2\", \"%3\" και \"%4\";"
 
-#: kaccess.cpp:813
+#: kaccess.cpp:794
 #, kde-format
 msgid "Do you really want to activate \"%1\" and \"%2\"?"
 msgstr "Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\" και \"%2\";"
 
-#: kaccess.cpp:816
+#: kaccess.cpp:797
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
@@ -328,7 +328,7 @@ msgstr ""
 "Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\" και \"%2\" και να "
 "απενεργοποιήσετε το \"%3\";"
 
-#: kaccess.cpp:822
+#: kaccess.cpp:803
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
@@ -337,12 +337,12 @@ msgstr ""
 "Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\" και \"%2\" και να "
 "απενεργοποιήσετε τα \"%3\" και \"%4\";"
 
-#: kaccess.cpp:833
+#: kaccess.cpp:814
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
 msgstr "Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\", \"%2\" και \"%3\";"
 
-#: kaccess.cpp:836
+#: kaccess.cpp:817
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
@@ -351,18 +351,18 @@ msgstr ""
 "Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\", \"%2\" και \"%3\" και να "
 "απενεργοποιήσετε το \"%4\";"
 
-#: kaccess.cpp:845
+#: kaccess.cpp:826
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr ""
 "Θέλετε πραγματικά να ενεργοποιήσετε τα \"%1\", \"%2\", \"%3\" και \"%4\";"
 
-#: kaccess.cpp:854
+#: kaccess.cpp:835
 #, kde-format
 msgid "An application has requested to change this setting."
 msgstr "Ένα πρόγραμμα ζήτησε την αλλαγή αυτής της ρύθμισης."
 
-#: kaccess.cpp:858
+#: kaccess.cpp:839
 #, kde-format
 msgid ""
 "You held down the Shift key for 8 seconds or an application has requested to "
@@ -371,7 +371,7 @@ msgstr ""
 "Κρατήσατε πατημένο το πλήκτρο Shift για 8 δευτερόλεπτα ή ένα πρόγραμμα "
 "ζήτησε την αλλαγή αυτής της ρύθμισης."
 
-#: kaccess.cpp:860
+#: kaccess.cpp:841
 #, kde-format
 msgid ""
 "You pressed the Shift key 5 consecutive times or an application has "
@@ -380,13 +380,13 @@ msgstr ""
 "Πατήσατε το πλήκτρο Shift 5 φορές ή ένα πρόγραμμα ζήτησε την αλλαγή αυτής "
 "της ρύθμισης."
 
-#: kaccess.cpp:864
+#: kaccess.cpp:845
 #, kde-format
 msgid "You pressed %1 or an application has requested to change this setting."
 msgstr ""
 "Πατήσατε το πλήκτρο %1 ή ένα πρόγραμμα ζήτησε την αλλαγή αυτής της ρύθμισης."
 
-#: kaccess.cpp:869
+#: kaccess.cpp:850
 #, kde-format
 msgid ""
 "An application has requested to change these settings, or you used a "
@@ -395,12 +395,12 @@ msgstr ""
 "Μια εφαρμογή ζήτησε να αλλάξει αυτές τις ρυθμίσεις, ή χρησιμοποιήσατε έναν "
 "συνδυασμό πολλών χειρονομιών με το πληκτρολόγιο."
 
-#: kaccess.cpp:871
+#: kaccess.cpp:852
 #, kde-format
 msgid "An application has requested to change these settings."
 msgstr "Ένα πρόγραμμα ζήτησε την αλλαγή αυτών των ρυθμίσεων."
 
-#: kaccess.cpp:876
+#: kaccess.cpp:857
 #, kde-format
 msgid ""
 "These AccessX settings are needed for some users with motion impairments and "
@@ -417,7 +417,7 @@ msgstr ""
 "Αν δεν τα χρειάζεστε, μπορείτε να επιλέξετε \"Απενεργοποίηση όλων των "
 "AccessX χαρακτηριστικών και χειρονομιών.\"."
 
-#: kaccess.cpp:897
+#: kaccess.cpp:878
 #, kde-format
 msgid ""
 "Slow keys has been enabled. From now on, you need to press each key for a "
@@ -426,12 +426,12 @@ msgstr ""
 "Τα αργά πλήκτρα ενεργοποιήθηκαν. Από δω και στο εξής, πρέπει να πιέσετε κάθε "
 "πλήκτρο για κάποιο χρονικό διάστημα πριν αυτό γίνει αποδεκτό."
 
-#: kaccess.cpp:899
+#: kaccess.cpp:880
 #, kde-format
 msgid "Slow keys has been disabled."
 msgstr "Τα αργά πλήκτρα απενεργοποιήθηκαν."
 
-#: kaccess.cpp:903
+#: kaccess.cpp:884
 #, kde-format
 msgid ""
 "Bounce keys has been enabled. From now on, each key will be blocked for a "
@@ -440,12 +440,12 @@ msgstr ""
 "Τα πλήκτρα αναπήδησης ενεργοποιήθηκαν. Από εδώ και πέρα, κάθε πλήκτρο θα "
 "μπλοκάρεται για ένα καθορισμένο χρονικό διάστημα μετά τη χρήση τους."
 
-#: kaccess.cpp:905
+#: kaccess.cpp:886
 #, kde-format
 msgid "Bounce keys has been disabled."
 msgstr "Τα πλήκτρα αναπήδησης απενεργοποιήθηκαν."
 
-#: kaccess.cpp:909
+#: kaccess.cpp:890
 #, kde-format
 msgid ""
 "Sticky keys has been enabled. From now on, modifier keys will stay latched "
@@ -454,12 +454,12 @@ msgstr ""
 "Τα κολλημένα πλήκτρα ενεργοποιήθηκαν. Από δω και στο εξής, τα πλήκτρα "
 "τροποποίησης θα παραμένουν ενεργοποιημένα μετά την απελευθέρωσή τους."
 
-#: kaccess.cpp:911
+#: kaccess.cpp:892
 #, kde-format
 msgid "Sticky keys has been disabled."
 msgstr "Τα κολλημένα πλήκτρα απενεργοποιήθηκαν."
 
-#: kaccess.cpp:915
+#: kaccess.cpp:896
 #, kde-format
 msgid ""
 "Mouse keys has been enabled. From now on, you can use the number pad of your "
@@ -468,7 +468,7 @@ msgstr ""
 "Τα πλήκτρα ποντικιού ενεργοποιήθηκαν. Από δω και στο εξής, μπορείτε να "
 "χρησιμοποιήσετε το αριθμητικό πληκτρολόγιο για να ελέγξετε το ποντίκι."
 
-#: kaccess.cpp:917
+#: kaccess.cpp:898
 #, kde-format
 msgid "Mouse keys has been disabled."
 msgstr "Τα πλήκτρα ποντικιού απενεργοποιήθηκαν."

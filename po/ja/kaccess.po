@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2015-05-22 22:09-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -177,167 +177,167 @@ msgstr "Scroll Lock キーがアクティブになりました。"
 msgid "The Scroll Lock key is now inactive."
 msgstr "Scroll Lock キーが非アクティブになりました。"
 
-#: kaccess.cpp:329
+#: kaccess.cpp:309
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr ""
 
-#: kaccess.cpp:331
+#: kaccess.cpp:311
 #, fuzzy, kde-format
 #| msgid "KDE Accessibility Tool"
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "KDE アクセシビリティ支援ツール"
 
-#: kaccess.cpp:643
+#: kaccess.cpp:624
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kaccess.cpp:645
+#: kaccess.cpp:626
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kaccess.cpp:647
+#: kaccess.cpp:628
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kaccess.cpp:649
+#: kaccess.cpp:630
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: kaccess.cpp:666
+#: kaccess.cpp:647
 #, kde-format
 msgid "Warning"
 msgstr "警告"
 
-#: kaccess.cpp:694
+#: kaccess.cpp:675
 #, kde-format
 msgid "&When a gesture was used:"
 msgstr "ジェスチャーが使用されたとき(&W):"
 
-#: kaccess.cpp:700
+#: kaccess.cpp:681
 #, kde-format
 msgid "Change Settings Without Asking"
 msgstr "確認せずに設定を変更する"
 
-#: kaccess.cpp:701
+#: kaccess.cpp:682
 #, kde-format
 msgid "Show This Confirmation Dialog"
 msgstr "確認ダイアログを表示する"
 
-#: kaccess.cpp:702
+#: kaccess.cpp:683
 #, kde-format
 msgid "Deactivate All AccessX Features & Gestures"
 msgstr "すべての AccessX 機能とジェスチャーを無効にする"
 
-#: kaccess.cpp:745 kaccess.cpp:747
+#: kaccess.cpp:726 kaccess.cpp:728
 #, kde-format
 msgid "Slow keys"
 msgstr "スローキー"
 
-#: kaccess.cpp:750 kaccess.cpp:752
+#: kaccess.cpp:731 kaccess.cpp:733
 #, kde-format
 msgid "Bounce keys"
 msgstr "バウンスキー"
 
-#: kaccess.cpp:755 kaccess.cpp:757
+#: kaccess.cpp:736 kaccess.cpp:738
 #, kde-format
 msgid "Sticky keys"
 msgstr "スティッキーキー"
 
-#: kaccess.cpp:760 kaccess.cpp:762
+#: kaccess.cpp:741 kaccess.cpp:743
 #, kde-format
 msgid "Mouse keys"
 msgstr "マウスキー"
 
-#: kaccess.cpp:769
+#: kaccess.cpp:750
 #, kde-format
 msgid "Do you really want to deactivate \"%1\"?"
 msgstr "本当に “%1” を無効にしますか？"
 
-#: kaccess.cpp:772
+#: kaccess.cpp:753
 #, kde-format
 msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
 msgstr "本当に “%1” と “%2” を無効にしますか？"
 
-#: kaccess.cpp:776
+#: kaccess.cpp:757
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
 msgstr "本当に “%1”、“%2”、“%3” を無効にしますか？"
 
-#: kaccess.cpp:779
+#: kaccess.cpp:760
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "本当に “%1”、“%2”、“%3”、“%4” を無効にしますか？"
 
-#: kaccess.cpp:790
+#: kaccess.cpp:771
 #, kde-format
 msgid "Do you really want to activate \"%1\"?"
 msgstr "本当に “%1” を有効にしますか？"
 
-#: kaccess.cpp:793
+#: kaccess.cpp:774
 #, kde-format
 msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
 msgstr "本当に “%1” を有効に、“%2” を無効にしますか？"
 
-#: kaccess.cpp:796
+#: kaccess.cpp:777
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
 msgstr "本当に “%1” を有効に、“%2” と “%3” を無効にしますか？"
 
-#: kaccess.cpp:802
+#: kaccess.cpp:783
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
 "\"%4\"?"
 msgstr "本当に “%1” を有効に、“%2”、“%3”、“%4” を無効にしますか？"
 
-#: kaccess.cpp:813
+#: kaccess.cpp:794
 #, kde-format
 msgid "Do you really want to activate \"%1\" and \"%2\"?"
 msgstr "本当に “%1” と “%2” を有効にしますか？"
 
-#: kaccess.cpp:816
+#: kaccess.cpp:797
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
 msgstr "本当に “%1” と “%2” を有効に、“%3” を無効にしますか？"
 
-#: kaccess.cpp:822
+#: kaccess.cpp:803
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
 "and \"%4\"?"
 msgstr "本当に “%1” と “%2” を有効に、“%3” と “%4” を無効にしますか？"
 
-#: kaccess.cpp:833
+#: kaccess.cpp:814
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
 msgstr "本当に “%1”、“%2”、“%3” を有効にしますか？"
 
-#: kaccess.cpp:836
+#: kaccess.cpp:817
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
 "\"%4\"?"
 msgstr "本当に “%1”、“%2” 、“%3” を有効に、“%4” を無効にしますか？"
 
-#: kaccess.cpp:845
+#: kaccess.cpp:826
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "本当に “%1”、“%2” 、“%3”、“%4” を有効にしますか？"
 
-#: kaccess.cpp:854
+#: kaccess.cpp:835
 #, kde-format
 msgid "An application has requested to change this setting."
 msgstr "あるアプリケーションがこの設定を変更するように要求しました。"
 
-#: kaccess.cpp:858
+#: kaccess.cpp:839
 #, kde-format
 msgid ""
 "You held down the Shift key for 8 seconds or an application has requested to "
@@ -346,7 +346,7 @@ msgstr ""
 "Shift キーが 8 秒間押されたか、あるいはアプリケーションがこの設定を変更するよ"
 "うに要求しました。"
 
-#: kaccess.cpp:860
+#: kaccess.cpp:841
 #, kde-format
 msgid ""
 "You pressed the Shift key 5 consecutive times or an application has "
@@ -355,14 +355,14 @@ msgstr ""
 "Shift キーが連続して 5 回押されたか、あるいはアプリケーションがこの設定を変更"
 "するように要求しました。"
 
-#: kaccess.cpp:864
+#: kaccess.cpp:845
 #, kde-format
 msgid "You pressed %1 or an application has requested to change this setting."
 msgstr ""
 "%1 が押されたか、あるいはアプリケーションがこの設定を変更するように要求しまし"
 "た。"
 
-#: kaccess.cpp:869
+#: kaccess.cpp:850
 #, kde-format
 msgid ""
 "An application has requested to change these settings, or you used a "
@@ -371,12 +371,12 @@ msgstr ""
 "アプリケーションがこれらの設定を変更するように要求したか、あるいはいくつかの"
 "キーボードジェスチャーの組み合わせが使用されました。"
 
-#: kaccess.cpp:871
+#: kaccess.cpp:852
 #, kde-format
 msgid "An application has requested to change these settings."
 msgstr "アプリケーションがこれらの設定を変更するように要求しました。"
 
-#: kaccess.cpp:876
+#: kaccess.cpp:857
 #, kde-format
 msgid ""
 "These AccessX settings are needed for some users with motion impairments and "
@@ -393,7 +393,7 @@ msgstr ""
 "この機能が必要がなければ「すべての AccessX 機能とジェスチャーを無効にする」を"
 "選択してください。"
 
-#: kaccess.cpp:897
+#: kaccess.cpp:878
 #, kde-format
 msgid ""
 "Slow keys has been enabled. From now on, you need to press each key for a "
@@ -402,12 +402,12 @@ msgstr ""
 "スローキーを有効にしました。これからは、キー押下を確定するには一定時間キーを"
 "押し続ける必要があります。"
 
-#: kaccess.cpp:899
+#: kaccess.cpp:880
 #, kde-format
 msgid "Slow keys has been disabled."
 msgstr "スローキーを無効にしました。"
 
-#: kaccess.cpp:903
+#: kaccess.cpp:884
 #, kde-format
 msgid ""
 "Bounce keys has been enabled. From now on, each key will be blocked for a "
@@ -416,12 +416,12 @@ msgstr ""
 "バウンスキーを有効にしました。これからは、一度使用したキーは一定時間が経過し"
 "なければ受け付けられません。"
 
-#: kaccess.cpp:905
+#: kaccess.cpp:886
 #, kde-format
 msgid "Bounce keys has been disabled."
 msgstr "バウンスキーを無効にしました。"
 
-#: kaccess.cpp:909
+#: kaccess.cpp:890
 #, kde-format
 msgid ""
 "Sticky keys has been enabled. From now on, modifier keys will stay latched "
@@ -430,12 +430,12 @@ msgstr ""
 "スティッキーキーを有効にしました。これからは、キーを離した後も修飾キーがラッ"
 "チされたままになります。"
 
-#: kaccess.cpp:911
+#: kaccess.cpp:892
 #, kde-format
 msgid "Sticky keys has been disabled."
 msgstr "スティッキーキーを無効にしました。"
 
-#: kaccess.cpp:915
+#: kaccess.cpp:896
 #, kde-format
 msgid ""
 "Mouse keys has been enabled. From now on, you can use the number pad of your "
@@ -444,7 +444,7 @@ msgstr ""
 "マウスキーを有効にしました。これからは、テンキーを使ってマウスを制御できま"
 "す。"
 
-#: kaccess.cpp:917
+#: kaccess.cpp:898
 #, kde-format
 msgid "Mouse keys has been disabled."
 msgstr "マウスキーを無効にしました。"

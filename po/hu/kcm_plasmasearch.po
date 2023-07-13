@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2021-12-09 08:03+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -64,32 +64,50 @@ msgid "Uninstallation executed successfully, you may now close this window"
 msgstr ""
 "Az eltávolítás sikeresen végrehajtódott, most már bezárhatja ezt az ablakot"
 
-#: plugininstaller/main.cpp:31
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
+#, kde-format
+msgid "Failed to copy file %1 to %2"
+msgstr ""
+
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to remove file %1:<nl/>%2"
+msgstr ""
+
+#: plugininstaller/main.cpp:33
 #, kde-format
 msgctxt "@info"
 msgid "KRunner plugin installation failed"
 msgstr "A KRunner bővítmény telepítése meghiúsult"
 
-#: plugininstaller/main.cpp:42
+#: plugininstaller/main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall."
 msgstr "Végrehajtandó parancs: telepítés vagy eltávolítás."
 
-#: plugininstaller/main.cpp:43
+#: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive."
 msgstr "Az archívum elérési útja."
 
-#: plugininstaller/main.cpp:83
+#: plugininstaller/main.cpp:50
+#, kde-format
+msgctxt "@info:shell"
+msgid "Do not show a visual confirmation dialog"
+msgstr ""
+
+#: plugininstaller/main.cpp:91
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
 msgstr "Nincs PackageKit támogatás"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:23
-#: plugininstaller/ScriptConfirmationDialog.h:25
+#: plugininstaller/ScriptConfirmationDialog.h:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Installation"
@@ -106,7 +124,7 @@ msgstr ""
 "ilyeneket, amiben megbízik!"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
-#: plugininstaller/ScriptConfirmationDialog.h:79
+#: plugininstaller/ScriptConfirmationDialog.h:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept Risk And Continue"
@@ -124,7 +142,15 @@ msgctxt "@info"
 msgid "The mime type %1 is not supported by the packagekit backend"
 msgstr "A packagekit háttérprogram nem  támogatja a(z) %1 MIME-típust"
 
-#: plugininstaller/ScriptConfirmationDialog.h:32
+#: plugininstaller/ScriptConfirmationDialog.h:44
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin executes the following command for starting the \"%1\" service:"
+"<nl/>%2"
+msgstr ""
+
+#: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -137,7 +163,7 @@ msgstr ""
 "nem képes rá, vagy nem szeretné, kattintson a <interface>Mégsem</interface> "
 "gombra most."
 
-#: plugininstaller/ScriptConfirmationDialog.h:37
+#: plugininstaller/ScriptConfirmationDialog.h:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -151,7 +177,7 @@ msgstr ""
 "a szerző által biztosított README fájlt.<nl/>Ha úgy érzi, nem képes rá, vagy "
 "nem szeretné, kattintson a <interface>Mégsem</interface> gombra most."
 
-#: plugininstaller/ScriptConfirmationDialog.h:43
+#: plugininstaller/ScriptConfirmationDialog.h:58
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -164,7 +190,7 @@ msgstr ""
 "nem képes rá, vagy nem szeretné, kattintson a <interface>Mégsem</interface> "
 "gombra most."
 
-#: plugininstaller/ScriptConfirmationDialog.h:48
+#: plugininstaller/ScriptConfirmationDialog.h:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -178,7 +204,7 @@ msgstr ""
 "szerző által biztosított README fájlt.<nl/>Ha úgy érzi, nem képes rá, vagy "
 "nem szeretné, kattintson a <interface>Mégsem</interface> gombra most."
 
-#: plugininstaller/ScriptConfirmationDialog.h:54
+#: plugininstaller/ScriptConfirmationDialog.h:69
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -193,7 +219,7 @@ msgstr ""
 "erre, vagy nem szeretné, kattintson a <interface>Mégsem</interface> gombra "
 "most."
 
-#: plugininstaller/ScriptConfirmationDialog.h:60
+#: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -208,31 +234,31 @@ msgstr ""
 "úgy érzi, nem képes erre, vagy nem szeretné, kattintson a <interface>Mégsem</"
 "interface> gombra most."
 
-#: plugininstaller/ScriptConfirmationDialog.h:75
+#: plugininstaller/ScriptConfirmationDialog.h:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as uninstalled"
 msgstr "Megjelölés eltávolítottként"
 
-#: plugininstaller/ScriptConfirmationDialog.h:77
+#: plugininstaller/ScriptConfirmationDialog.h:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as installed"
 msgstr "Megjelölés telepítettként"
 
-#: plugininstaller/ScriptConfirmationDialog.h:85
+#: plugininstaller/ScriptConfirmationDialog.h:100
 #, kde-format
 msgctxt "@action:button"
 msgid "View Script"
 msgstr "Szkript megtekintése"
 
-#: plugininstaller/ScriptConfirmationDialog.h:91
+#: plugininstaller/ScriptConfirmationDialog.h:106
 #, kde-format
 msgctxt "@action:button"
 msgid "View Source Directory"
 msgstr "Forrásmappa megtekintése"
 
-#: plugininstaller/ScriptConfirmationDialog.h:102
+#: plugininstaller/ScriptConfirmationDialog.h:117
 #, kde-format
 msgctxt "@action:button"
 msgid "View %1"

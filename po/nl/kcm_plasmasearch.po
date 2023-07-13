@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2022-07-02 07:53+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -63,32 +63,50 @@ msgstr ""
 "Installatie ongedaan maken met succes uitgevoerd, u kunt dit venster nu "
 "sluiten"
 
-#: plugininstaller/main.cpp:31
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
+#, kde-format
+msgid "Failed to copy file %1 to %2"
+msgstr ""
+
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to remove file %1:<nl/>%2"
+msgstr ""
+
+#: plugininstaller/main.cpp:33
 #, kde-format
 msgctxt "@info"
 msgid "KRunner plugin installation failed"
 msgstr "Installatie van krunner-plug-in is mislukt"
 
-#: plugininstaller/main.cpp:42
+#: plugininstaller/main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall."
 msgstr "Uit te voeren commando: installeren of installatie ongedaan maken."
 
-#: plugininstaller/main.cpp:43
+#: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive."
 msgstr "Pad naar archief."
 
-#: plugininstaller/main.cpp:83
+#: plugininstaller/main.cpp:50
+#, kde-format
+msgctxt "@info:shell"
+msgid "Do not show a visual confirmation dialog"
+msgstr ""
+
+#: plugininstaller/main.cpp:91
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
 msgstr "Geen ondersteuning van PackageKit"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:23
-#: plugininstaller/ScriptConfirmationDialog.h:25
+#: plugininstaller/ScriptConfirmationDialog.h:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Installation"
@@ -105,7 +123,7 @@ msgstr ""
 "moeten installeren van een vertrouwde auteur/inpakker."
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
-#: plugininstaller/ScriptConfirmationDialog.h:79
+#: plugininstaller/ScriptConfirmationDialog.h:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept Risk And Continue"
@@ -123,7 +141,15 @@ msgctxt "@info"
 msgid "The mime type %1 is not supported by the packagekit backend"
 msgstr "Het MIME-type %1 wordt niet ondersteund door de packagekit-backend"
 
-#: plugininstaller/ScriptConfirmationDialog.h:32
+#: plugininstaller/ScriptConfirmationDialog.h:44
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin executes the following command for starting the \"%1\" service:"
+"<nl/>%2"
+msgstr ""
+
+#: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -136,7 +162,7 @@ msgstr ""
 "handmatig ongedaan te maken.<nl/>Als u zich daarvoor niet in staat of "
 "comfortabel voelt, klik dan nu op <interface>Annuleren</interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:37
+#: plugininstaller/ScriptConfirmationDialog.h:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -151,7 +177,7 @@ msgstr ""
 ">Als u zich daarvoor niet in staat of comfortabel voelt, klik dan nu op "
 "<interface>Annuleren</interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:43
+#: plugininstaller/ScriptConfirmationDialog.h:58
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -164,7 +190,7 @@ msgstr ""
 "niet in staat of comfortabel voelt, klik dan nu op <interface>Annuleren</"
 "interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:48
+#: plugininstaller/ScriptConfirmationDialog.h:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -178,7 +204,7 @@ msgstr ""
 "README voor instructies van de auteur.<nl/>Als u zich daarvoor niet in staat "
 "of comfortabel voelt, klik dan nu op <interface>Annuleren</interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:54
+#: plugininstaller/ScriptConfirmationDialog.h:69
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -192,7 +218,7 @@ msgstr ""
 "lees tenminste de broncode van het script.<nl/>Als u zich daarvoor niet in "
 "staat of comfortabel voelt, klik dan nu op <interface>Annuleren</interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:60
+#: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -207,31 +233,31 @@ msgstr ""
 "zich daarvoor niet in staat of comfortabel voelt, klik dan nu op "
 "<interface>Annuleren</interface>."
 
-#: plugininstaller/ScriptConfirmationDialog.h:75
+#: plugininstaller/ScriptConfirmationDialog.h:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as uninstalled"
 msgstr "Item markeren als niet te installeren"
 
-#: plugininstaller/ScriptConfirmationDialog.h:77
+#: plugininstaller/ScriptConfirmationDialog.h:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as installed"
 msgstr "Item markeren als geïnstalleerd"
 
-#: plugininstaller/ScriptConfirmationDialog.h:85
+#: plugininstaller/ScriptConfirmationDialog.h:100
 #, kde-format
 msgctxt "@action:button"
 msgid "View Script"
 msgstr "Script bekijken"
 
-#: plugininstaller/ScriptConfirmationDialog.h:91
+#: plugininstaller/ScriptConfirmationDialog.h:106
 #, kde-format
 msgctxt "@action:button"
 msgid "View Source Directory"
 msgstr "Bronmap bekijken"
 
-#: plugininstaller/ScriptConfirmationDialog.h:102
+#: plugininstaller/ScriptConfirmationDialog.h:117
 #, kde-format
 msgctxt "@action:button"
 msgid "View %1"

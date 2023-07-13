@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2017-05-23 10:18-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -177,120 +177,120 @@ msgstr "מקש ה־Scroll Lock הופעל."
 msgid "The Scroll Lock key is now inactive."
 msgstr "מקש ה־Scroll Lock כובה."
 
-#: kaccess.cpp:329
+#: kaccess.cpp:309
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "שנה את מצב קורא המסך"
 
-#: kaccess.cpp:331
+#: kaccess.cpp:311
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "נגישות"
 
-#: kaccess.cpp:643
+#: kaccess.cpp:624
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kaccess.cpp:645
+#: kaccess.cpp:626
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kaccess.cpp:647
+#: kaccess.cpp:628
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kaccess.cpp:649
+#: kaccess.cpp:630
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: kaccess.cpp:666
+#: kaccess.cpp:647
 #, kde-format
 msgid "Warning"
 msgstr "אזהרה"
 
-#: kaccess.cpp:694
+#: kaccess.cpp:675
 #, kde-format
 msgid "&When a gesture was used:"
 msgstr "&כאשר הוקש קיצור מקשים:"
 
-#: kaccess.cpp:700
+#: kaccess.cpp:681
 #, kde-format
 msgid "Change Settings Without Asking"
 msgstr "שנה הגדרות מבלי לשאול"
 
-#: kaccess.cpp:701
+#: kaccess.cpp:682
 #, kde-format
 msgid "Show This Confirmation Dialog"
 msgstr "הצג בקשת אישור זו"
 
-#: kaccess.cpp:702
+#: kaccess.cpp:683
 #, kde-format
 msgid "Deactivate All AccessX Features & Gestures"
 msgstr "בטל את כל האפשרויות וקיצורי המקשים של AccessX"
 
-#: kaccess.cpp:745 kaccess.cpp:747
+#: kaccess.cpp:726 kaccess.cpp:728
 #, kde-format
 msgid "Slow keys"
 msgstr "מקשים אטיים"
 
-#: kaccess.cpp:750 kaccess.cpp:752
+#: kaccess.cpp:731 kaccess.cpp:733
 #, kde-format
 msgid "Bounce keys"
 msgstr "מקשים קופצים"
 
-#: kaccess.cpp:755 kaccess.cpp:757
+#: kaccess.cpp:736 kaccess.cpp:738
 #, kde-format
 msgid "Sticky keys"
 msgstr "מקשים דביקים"
 
-#: kaccess.cpp:760 kaccess.cpp:762
+#: kaccess.cpp:741 kaccess.cpp:743
 #, kde-format
 msgid "Mouse keys"
 msgstr "מקשי עכבר"
 
-#: kaccess.cpp:769
+#: kaccess.cpp:750
 #, kde-format
 msgid "Do you really want to deactivate \"%1\"?"
 msgstr "האם אתה בטוח שברצונך להפסיק את הפעולה \"%1\"?"
 
-#: kaccess.cpp:772
+#: kaccess.cpp:753
 #, kde-format
 msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
 msgstr "האם אתה בטוח שברצונך להפסיק את הפעולות \"%1\" ו־\"%2\"?"
 
-#: kaccess.cpp:776
+#: kaccess.cpp:757
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
 msgstr "האם אתה בטוח שברצונך להפסיק את הפעולות \"%1\", \"%2\" ו־\"%3\"?"
 
-#: kaccess.cpp:779
+#: kaccess.cpp:760
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "האם אתה בטוח שברצונך להפסיק את פעולות \"%1\", \"%2\", \"%3\" ו־\"%4\"?"
 
-#: kaccess.cpp:790
+#: kaccess.cpp:771
 #, kde-format
 msgid "Do you really want to activate \"%1\"?"
 msgstr "האם אתה בטוח שברצונך להפעיל את \"%1\"?"
 
-#: kaccess.cpp:793
+#: kaccess.cpp:774
 #, kde-format
 msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
 msgstr "האם אתה בטוח שברצונך להפעיל את \"%1\" ולהפסיק את הפעולה \"%2\"?"
 
-#: kaccess.cpp:796
+#: kaccess.cpp:777
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
 msgstr ""
 "האם אתה בטוח שברצונך להפעיל את \"%1\" ולהפסיק את הפעולות \"%2\" וגם \"%3\"?"
 
-#: kaccess.cpp:802
+#: kaccess.cpp:783
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
@@ -299,19 +299,19 @@ msgstr ""
 "האם אתה בטוח שברצונך להפעיל את \"%1\" ולהפסיק את הפעולות \"%2\", \"%3\" וגם "
 "\"%4\"?"
 
-#: kaccess.cpp:813
+#: kaccess.cpp:794
 #, kde-format
 msgid "Do you really want to activate \"%1\" and \"%2\"?"
 msgstr "האם אתה בטוח שברצונך להפעיל את \"%1\" וגם \"%2\"?"
 
-#: kaccess.cpp:816
+#: kaccess.cpp:797
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
 msgstr ""
 "האם אתה בטוח שברצונך להפעיל את \"%1\" ו־\"%2\" ולהפסיק את הפעולה \"%3\"?"
 
-#: kaccess.cpp:822
+#: kaccess.cpp:803
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
@@ -320,12 +320,12 @@ msgstr ""
 "האם אתה בטוח שברצונך להפעיל את \"%1\" ו־\"%2\" ולהפסיק את הפעולות \"%3\" וגם "
 "\"%4\"?"
 
-#: kaccess.cpp:833
+#: kaccess.cpp:814
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
 msgstr "האם אתה בטוח שברצונך להפעיל את \"%1\", \"%2\" וגם \"%3\"?"
 
-#: kaccess.cpp:836
+#: kaccess.cpp:817
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
@@ -334,17 +334,17 @@ msgstr ""
 "האם אתה בטוח שברצונך להפעיל את \"%1\", \"%2\" וגם \"%3\" ולהפסיק את הפעולה "
 "\"%4\"?"
 
-#: kaccess.cpp:845
+#: kaccess.cpp:826
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "האם אתה בטוח שברצונך להפעיל את \"%1\", \"%2\", \"%3\" וגם \"%4\"?"
 
-#: kaccess.cpp:854
+#: kaccess.cpp:835
 #, kde-format
 msgid "An application has requested to change this setting."
 msgstr "יישום כלשהו ביקש לשנות הגדרה זו."
 
-#: kaccess.cpp:858
+#: kaccess.cpp:839
 #, kde-format
 msgid ""
 "You held down the Shift key for 8 seconds or an application has requested to "
@@ -352,7 +352,7 @@ msgid ""
 msgstr ""
 "החזקת את מקש ה־Shift לחוץ במשך 8 שניות או שיישום כלשהו ביקש לשנות הגדרה זו."
 
-#: kaccess.cpp:860
+#: kaccess.cpp:841
 #, kde-format
 msgid ""
 "You pressed the Shift key 5 consecutive times or an application has "
@@ -360,24 +360,24 @@ msgid ""
 msgstr ""
 "הקשת על מקש ה־Shift חמש פעמים ברציפות או שיישום כלשהו ביקש לשנות הגדרה זו."
 
-#: kaccess.cpp:864
+#: kaccess.cpp:845
 #, kde-format
 msgid "You pressed %1 or an application has requested to change this setting."
 msgstr "הקשת %1 או שיישום כלשהו ביקש לשנות הגדרה זו."
 
-#: kaccess.cpp:869
+#: kaccess.cpp:850
 #, kde-format
 msgid ""
 "An application has requested to change these settings, or you used a "
 "combination of several keyboard gestures."
 msgstr "יישום כלשהו ביקש לשנות הגדרות אלו או שהקשת על צירוף מקשים כלשהו."
 
-#: kaccess.cpp:871
+#: kaccess.cpp:852
 #, kde-format
 msgid "An application has requested to change these settings."
 msgstr "יישום כלשהו ביקש לשנות הגדרות אלו."
 
-#: kaccess.cpp:876
+#: kaccess.cpp:857
 #, kde-format
 msgid ""
 "These AccessX settings are needed for some users with motion impairments and "
@@ -394,7 +394,7 @@ msgstr ""
 "אם אין לך צורך בהן באפשרותך לבחור ב\"בטל את כל האפשרויות וקיצורי המקשים של "
 "AccessX\"."
 
-#: kaccess.cpp:897
+#: kaccess.cpp:878
 #, kde-format
 msgid ""
 "Slow keys has been enabled. From now on, you need to press each key for a "
@@ -403,12 +403,12 @@ msgstr ""
 "מקשים אטיים הופעלו. מעכשיו הלאה, אתה תצטרך ללחוץ על כל מקש זמן מסוים לפני "
 "שהוא מאושר."
 
-#: kaccess.cpp:899
+#: kaccess.cpp:880
 #, kde-format
 msgid "Slow keys has been disabled."
 msgstr "מקשים אטיים בוטלו."
 
-#: kaccess.cpp:903
+#: kaccess.cpp:884
 #, kde-format
 msgid ""
 "Bounce keys has been enabled. From now on, each key will be blocked for a "
@@ -416,12 +416,12 @@ msgid ""
 msgstr ""
 "מקשים קופצים הופעלו. מעכשיו הלאה, כל מקש יחסם זמן מסוים אחרי שהוא היה בשימוש."
 
-#: kaccess.cpp:905
+#: kaccess.cpp:886
 #, kde-format
 msgid "Bounce keys has been disabled."
 msgstr "מקשים קופצים בוטלו."
 
-#: kaccess.cpp:909
+#: kaccess.cpp:890
 #, kde-format
 msgid ""
 "Sticky keys has been enabled. From now on, modifier keys will stay latched "
@@ -430,12 +430,12 @@ msgstr ""
 "אפשרות המקשים הדביקים פעילה כעת. מעתה מקשים דוגמת Shift, Ctrl, Alt וכו', "
 "יתפקדו כלחוצים, גם לאחר שהסרת את אצבעך מהם."
 
-#: kaccess.cpp:911
+#: kaccess.cpp:892
 #, kde-format
 msgid "Sticky keys has been disabled."
 msgstr "מקשים דביקים בוטלו."
 
-#: kaccess.cpp:915
+#: kaccess.cpp:896
 #, kde-format
 msgid ""
 "Mouse keys has been enabled. From now on, you can use the number pad of your "
@@ -444,7 +444,7 @@ msgstr ""
 "מקשי עכבר הופעלו. מעכשיו הלאה, תוכל להשתמש בפאד המספרים של המקלדת כדי לשלוט "
 "בעכבר."
 
-#: kaccess.cpp:917
+#: kaccess.cpp:898
 #, kde-format
 msgid "Mouse keys has been disabled."
 msgstr "מקשי עכבר בוטלו."

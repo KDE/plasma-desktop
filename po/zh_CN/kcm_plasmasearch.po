@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2023-07-03 11:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -57,32 +57,50 @@ msgctxt "@info"
 msgid "Uninstallation executed successfully, you may now close this window"
 msgstr "卸载成功，您现在可以关闭此窗口"
 
-#: plugininstaller/main.cpp:31
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
+#, kde-format
+msgid "Failed to copy file %1 to %2"
+msgstr ""
+
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to remove file %1:<nl/>%2"
+msgstr ""
+
+#: plugininstaller/main.cpp:33
 #, kde-format
 msgctxt "@info"
 msgid "KRunner plugin installation failed"
 msgstr "KRunner 插件安装失败"
 
-#: plugininstaller/main.cpp:42
+#: plugininstaller/main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall."
 msgstr "要执行的命令：安装或卸载。"
 
-#: plugininstaller/main.cpp:43
+#: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive."
 msgstr "压缩文件的路径。"
 
-#: plugininstaller/main.cpp:83
+#: plugininstaller/main.cpp:50
+#, kde-format
+msgctxt "@info:shell"
+msgid "Do not show a visual confirmation dialog"
+msgstr ""
+
+#: plugininstaller/main.cpp:91
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
 msgstr "缺少 PackageKit 支持"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:23
-#: plugininstaller/ScriptConfirmationDialog.h:25
+#: plugininstaller/ScriptConfirmationDialog.h:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Installation"
@@ -97,7 +115,7 @@ msgid ""
 msgstr "您即将安装二进制软件包。请务必仅安装来自您信任的作者/打包者的软件包。"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
-#: plugininstaller/ScriptConfirmationDialog.h:79
+#: plugininstaller/ScriptConfirmationDialog.h:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept Risk And Continue"
@@ -115,7 +133,15 @@ msgctxt "@info"
 msgid "The mime type %1 is not supported by the packagekit backend"
 msgstr "PackageKit 后端程序不支持 MIME 类型 %1"
 
-#: plugininstaller/ScriptConfirmationDialog.h:32
+#: plugininstaller/ScriptConfirmationDialog.h:44
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin executes the following command for starting the \"%1\" service:"
+"<nl/>%2"
+msgstr ""
+
+#: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -126,7 +152,7 @@ msgstr ""
 "此插件没有提供卸载脚本。请联系作者。您可以尝试手动卸载插件。<nl/>如果您不能或"
 "者不想这样做，请点击<interface>取消</interface>。"
 
-#: plugininstaller/ScriptConfirmationDialog.h:37
+#: plugininstaller/ScriptConfirmationDialog.h:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -139,7 +165,7 @@ msgstr ""
 "件获取作者提供的说明。<nl/>如果您不能或者不想这样做，请点击 <interface>取消</"
 "interface>。"
 
-#: plugininstaller/ScriptConfirmationDialog.h:43
+#: plugininstaller/ScriptConfirmationDialog.h:58
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -150,7 +176,7 @@ msgstr ""
 "此插件没有提供安装脚本。请联系作者。您可以尝试手动安装插件。<nl/>如果您不能或"
 "者不想这样做，请点击<interface>取消</interface>。"
 
-#: plugininstaller/ScriptConfirmationDialog.h:48
+#: plugininstaller/ScriptConfirmationDialog.h:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -163,7 +189,7 @@ msgstr ""
 "件获取作者提供的说明。<nl/>如果您不能或者不想这样做，请点击 <interface>取消</"
 "interface>。"
 
-#: plugininstaller/ScriptConfirmationDialog.h:54
+#: plugininstaller/ScriptConfirmationDialog.h:69
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -176,7 +202,7 @@ msgstr ""
 "阅读安装脚本的源代码。<nl/>如果您不能或者不想这样做，请点击<interface>取消</"
 "interface>。"
 
-#: plugininstaller/ScriptConfirmationDialog.h:60
+#: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -189,31 +215,31 @@ msgstr ""
 "阅读 README 文件和安装脚本的源代码。<nl/>如果您不能或者不想这样做，请点击"
 "<interface>取消</interface>。"
 
-#: plugininstaller/ScriptConfirmationDialog.h:75
+#: plugininstaller/ScriptConfirmationDialog.h:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as uninstalled"
 msgstr "标记条目为已卸载"
 
-#: plugininstaller/ScriptConfirmationDialog.h:77
+#: plugininstaller/ScriptConfirmationDialog.h:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as installed"
 msgstr "标记条目为已安装"
 
-#: plugininstaller/ScriptConfirmationDialog.h:85
+#: plugininstaller/ScriptConfirmationDialog.h:100
 #, kde-format
 msgctxt "@action:button"
 msgid "View Script"
 msgstr "查看脚本"
 
-#: plugininstaller/ScriptConfirmationDialog.h:91
+#: plugininstaller/ScriptConfirmationDialog.h:106
 #, kde-format
 msgctxt "@action:button"
 msgid "View Source Directory"
 msgstr "查看源代码目录"
 
-#: plugininstaller/ScriptConfirmationDialog.h:102
+#: plugininstaller/ScriptConfirmationDialog.h:117
 #, kde-format
 msgctxt "@action:button"
 msgid "View %1"
