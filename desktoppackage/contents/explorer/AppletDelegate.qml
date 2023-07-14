@@ -12,6 +12,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kwindowsystem
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.graphicaleffects as KGraphicalEffects
 
 Item {
     id: delegate
@@ -138,31 +139,19 @@ Item {
                 }
             }
 
-            ShaderEffect {
+            KGraphicalEffects.BadgeEffect {
                 anchors.fill: parent
-                property var source: ShaderEffectSource {
+                source: ShaderEffectSource {
                     sourceItem: iconWidget
                     hideSource: true
                     live: false
                 }
-                property var mask: ShaderEffectSource {
+                mask: ShaderEffectSource {
                     id: maskShaderSource
                     sourceItem: badgeMask
                     hideSource: true
                     live: false
                 }
-
-                supportsAtlasTextures: true
-
-                fragmentShader: "
-                    varying highp vec2 qt_TexCoord0;
-                    uniform highp float qt_Opacity;
-                    uniform lowp sampler2D source;
-                    uniform lowp sampler2D mask;
-                    void main() {
-                        gl_FragColor = texture2D(source, qt_TexCoord0.st) * (1.0 - (texture2D(mask, qt_TexCoord0.st).a)) * qt_Opacity;
-                    }
-                "
             }
 
             PlasmaComponents.ToolButton {

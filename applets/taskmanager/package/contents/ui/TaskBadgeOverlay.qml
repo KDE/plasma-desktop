@@ -6,6 +6,7 @@
 
 import QtQuick 2.15
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.graphicaleffects as KGraphicalEffects
 
 Item {
     readonly property int iconWidthDelta: (icon.width - icon.paintedWidth) / 2
@@ -51,27 +52,15 @@ Item {
         live: false
     }
 
-    ShaderEffect {
+    KGraphicalEffects.BadgeEffect {
         id: shader
 
         anchors.fill: parent
-        property var source: iconShaderSource
-        property var mask: maskShaderSource
+        source: iconShaderSource
+        mask: maskShaderSource
 
         onWidthChanged: maskShaderSource.scheduleUpdate()
         onHeightChanged: maskShaderSource.scheduleUpdate()
-
-        supportsAtlasTextures: true
-
-        fragmentShader: `
-            varying highp vec2 qt_TexCoord0;
-            uniform highp float qt_Opacity;
-            uniform lowp sampler2D source;
-            uniform lowp sampler2D mask;
-            void main() {
-                gl_FragColor = texture2D(source, qt_TexCoord0.st) * (1.0 - (texture2D(mask, qt_TexCoord0.st).a)) * qt_Opacity;
-            }
-        `
     }
 
     Badge {
