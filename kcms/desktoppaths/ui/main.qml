@@ -6,6 +6,7 @@
 
 import QtQuick 2.15
 import QtQuick.Layouts
+import QtQuick.Controls as QQC2
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcmutils as KCM
 
@@ -17,7 +18,15 @@ KCM.SimpleKCM {
     implicitWidth: Kirigami.Units.gridUnit * 30
     implicitHeight: Kirigami.Units.gridUnit * 20
 
-    property int commonFieldWidth: Math.min(Math.round(root.width/2),
+                                                                      // FIXME: get actual scrollbar width,
+                                                                      // don't assume gridUnit is right
+    readonly property int availableSpace: root.width - (__flickableOverflows ? Kirigami.Units.gridUnit : 0)
+                                                     - buttonMetrics.implicitWidth
+                                                     - desktop.spacing
+                                                     - leftPadding
+                                                     - rightPadding
+
+    property int commonFieldWidth: Math.min(availableSpace,
                                             Math.max(desktop.implicitTextFieldWidth,
                                                      documents.implicitTextFieldWidth,
                                                      downloads.implicitTextFieldWidth,
@@ -26,6 +35,15 @@ KCM.SimpleKCM {
                                                      music.implicitTextFieldWidth,
                                                      publicPath.implicitTextFieldWidth,
                                                      templates.implicitTextFieldWidth))
+
+    // Need to get the width of a standard button since UrlRequester includes one,
+    // so we can subtract it from the available width for the text field.Otherwise
+    // the layout overflows in FormLayout's narrow mode
+    QQC2.Button {
+        id: buttonMetrics
+        visible: false
+        icon.name: "document-open"
+    }
 
     Kirigami.FormLayout {
         UrlRequester {
