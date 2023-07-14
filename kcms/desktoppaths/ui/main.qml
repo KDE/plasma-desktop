@@ -26,15 +26,15 @@ KCM.SimpleKCM {
                                                      - leftPadding
                                                      - rightPadding
 
-    property int commonFieldWidth: Math.min(availableSpace,
-                                            Math.max(desktop.implicitTextFieldWidth,
-                                                     documents.implicitTextFieldWidth,
-                                                     downloads.implicitTextFieldWidth,
-                                                     videos.implicitTextFieldWidth,
-                                                     pictures.implicitTextFieldWidth,
-                                                     music.implicitTextFieldWidth,
-                                                     publicPath.implicitTextFieldWidth,
-                                                     templates.implicitTextFieldWidth))
+    readonly property int commonFieldWidth: Math.min(availableSpace,
+                                                     Math.max(desktop.implicitTextFieldWidth,
+                                                              documents.implicitTextFieldWidth,
+                                                              downloads.implicitTextFieldWidth,
+                                                              videos.implicitTextFieldWidth,
+                                                              pictures.implicitTextFieldWidth,
+                                                              music.implicitTextFieldWidth,
+                                                              publicPath.implicitTextFieldWidth,
+                                                              templates.implicitTextFieldWidth))
 
     // Need to get the width of a standard button since UrlRequester includes one,
     // so we can subtract it from the available width for the text field.Otherwise
