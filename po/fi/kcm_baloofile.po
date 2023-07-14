@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-10 02:12+0000\n"
-"PO-Revision-Date: 2023-05-28 16:51+0300\n"
+"PO-Revision-Date: 2023-06-27 15:53+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -82,18 +82,16 @@ msgid "Status:"
 msgstr "Tila:"
 
 #: ui/main.qml:127
-#, fuzzy, kde-format
-#| msgid "Status: %1, %2% complete"
+#, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr "Tila: %1, %2 % valmiina"
+msgstr "%1, %2 % valmiina"
 
 #: ui/main.qml:140
-#, fuzzy, kde-format
-#| msgid "Currently indexing: %1"
+#, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
-msgstr "Nyt indeksoidaan: %1"
+msgstr "Nyt indeksoidaan:"
 
 #: ui/main.qml:150
 #, kde-kuit-format
