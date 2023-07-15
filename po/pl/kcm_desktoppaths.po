@@ -1,6 +1,6 @@
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
-# Version: $Revision: 1654331 $
+# Version: $Revision: 1655838 $
 # translation of kcmkonq.po to Polish
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-15 02:06+0000\n"
 "PO-Revision-Date: 2023-02-11 08:40+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -72,12 +72,12 @@ msgstr "Publiczne"
 msgid "Templates"
 msgstr "Wzorce"
 
-#: ui/main.qml:34
+#: ui/main.qml:52
 #, kde-format
 msgid "Desktop path:"
 msgstr "Ścieżka do pulpitu:"
 
-#: ui/main.qml:40
+#: ui/main.qml:58
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -88,12 +88,12 @@ msgstr ""
 "położenie tego katalogu, jego zawartość zostanie automatycznie przeniesiona "
 "na nowe miejsce."
 
-#: ui/main.qml:48
+#: ui/main.qml:66
 #, kde-format
 msgid "Documents path:"
 msgstr "Ścieżka do dokumentów:"
 
-#: ui/main.qml:54
+#: ui/main.qml:72
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
@@ -101,36 +101,36 @@ msgstr ""
 "Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
 "dokumentów."
 
-#: ui/main.qml:62
+#: ui/main.qml:80
 #, kde-format
 msgid "Downloads path:"
 msgstr "Ścieżka do pobranych:"
 
-#: ui/main.qml:68
+#: ui/main.qml:86
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Ten katalog będzie używany jako domyślne miejsce zapisywania pobieranych "
 "elementów."
 
-#: ui/main.qml:76
+#: ui/main.qml:94
 #, kde-format
 msgid "Videos path:"
 msgstr "Ścieżka do filmów:"
 
-#: ui/main.qml:82 ui/main.qml:124
+#: ui/main.qml:100 ui/main.qml:142
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
 "filmów."
 
-#: ui/main.qml:90
+#: ui/main.qml:108
 #, kde-format
 msgid "Pictures path:"
 msgstr "Ścieżka do obrazów:"
 
-#: ui/main.qml:96
+#: ui/main.qml:114
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
@@ -138,29 +138,29 @@ msgstr ""
 "Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
 "obrazków."
 
-#: ui/main.qml:104
+#: ui/main.qml:122
 #, kde-format
 msgid "Music path:"
 msgstr "Ścieżka do muzyki:"
 
-#: ui/main.qml:110
+#: ui/main.qml:128
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
 "muzyki."
 
-#: ui/main.qml:118
+#: ui/main.qml:136
 #, kde-format
 msgid "Public path:"
 msgstr "Ścieżka do publicznego:"
 
-#: ui/main.qml:132
+#: ui/main.qml:150
 #, kde-format
 msgid "Templates path:"
 msgstr "Ścieżka do wzorców:"
 
-#: ui/main.qml:138
+#: ui/main.qml:156
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."

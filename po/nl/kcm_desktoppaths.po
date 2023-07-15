@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-15 02:06+0000\n"
 "PO-Revision-Date: 2023-02-06 11:25+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -73,12 +73,12 @@ msgstr "Publiek"
 msgid "Templates"
 msgstr "Sjablonen"
 
-#: ui/main.qml:34
+#: ui/main.qml:52
 #, kde-format
 msgid "Desktop path:"
 msgstr "Bureaubladpad:"
 
-#: ui/main.qml:40
+#: ui/main.qml:58
 #, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
@@ -89,12 +89,12 @@ msgstr ""
 "kunt u de locatie hiervan wijzigen. De inhoud van het bureaublad verhuist "
 "dan automatisch mee naar de nieuwe locatie."
 
-#: ui/main.qml:48
+#: ui/main.qml:66
 #, kde-format
 msgid "Documents path:"
 msgstr "Documentenpad:"
 
-#: ui/main.qml:54
+#: ui/main.qml:72
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
@@ -102,34 +102,34 @@ msgstr ""
 "Deze map wordt standaard gebruikt om documenten uit te laden of in op te "
 "slaan."
 
-#: ui/main.qml:62
+#: ui/main.qml:80
 #, kde-format
 msgid "Downloads path:"
 msgstr "Downloadpad:"
 
-#: ui/main.qml:68
+#: ui/main.qml:86
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Deze map wordt standaard gebruikt om gedownloade documenten in op te slaan."
 
-#: ui/main.qml:76
+#: ui/main.qml:94
 #, kde-format
 msgid "Videos path:"
 msgstr "Pad naar video's:"
 
-#: ui/main.qml:82 ui/main.qml:124
+#: ui/main.qml:100 ui/main.qml:142
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
 "Deze map wordt standaard gebruikt om films uit te laden of in op te slaan."
 
-#: ui/main.qml:90
+#: ui/main.qml:108
 #, kde-format
 msgid "Pictures path:"
 msgstr "Afbeeldingenpad:"
 
-#: ui/main.qml:96
+#: ui/main.qml:114
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
@@ -137,28 +137,28 @@ msgstr ""
 "Deze map wordt standaard gebruikt om afbeeldingen uit te laden of in op te "
 "slaan."
 
-#: ui/main.qml:104
+#: ui/main.qml:122
 #, kde-format
 msgid "Music path:"
 msgstr "Muziekpad:"
 
-#: ui/main.qml:110
+#: ui/main.qml:128
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
 "Deze map wordt standaard gebruikt om muziek uit te laden of in op te slaan."
 
-#: ui/main.qml:118
+#: ui/main.qml:136
 #, kde-format
 msgid "Public path:"
 msgstr "Publiekpad:"
 
-#: ui/main.qml:132
+#: ui/main.qml:150
 #, kde-format
 msgid "Templates path:"
 msgstr "Pad voor sjablonen:"
 
-#: ui/main.qml:138
+#: ui/main.qml:156
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
