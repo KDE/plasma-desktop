@@ -45,6 +45,7 @@ PlasmoidItem {
     property bool needLayoutRefresh: false;
     property variant taskClosedWithMouseMiddleButton: []
     property alias taskList: taskList
+    property bool isFirstEnter: true
 
     preferredRepresentation: fullRepresentation
 
@@ -244,7 +245,9 @@ PlasmoidItem {
         anchors.fill: parent
 
         hoverEnabled: true
+
         onExited: {
+            tasks.isFirstEnter = true;
             if (needLayoutRefresh) {
                 LayoutManager.layout(taskRepeater)
                 needLayoutRefresh = false;
@@ -473,99 +476,58 @@ PlasmoidItem {
             visible: false
         }
 
-        TriangleMouseFilter {
-            id: tmf
-            filterTimeOut: 300
-            active: tasks.toolTipAreaItem && tasks.toolTipAreaItem.toolTipOpen
-            blockFirstEnter: false
-
-            edge: {
-                switch (plasmoid.location) {
-                    case PlasmaCore.Types.BottomEdge:
-                        return Qt.TopEdge;
-                    case PlasmaCore.Types.TopEdge:
-                        return Qt.BottomEdge;
-                    case PlasmaCore.Types.LeftEdge:
-                        return Qt.RightEdge;
-                    case PlasmaCore.Types.RightEdge:
-                        return Qt.LeftEdge;
-                    default:
-                        return Qt.TopEdge;
-                }
-            }
-
-            secondaryPoint: {
-                if (tasks.toolTipAreaItem === null) {
-                    return Qt.point(0, 0);
-                }
-                const x = tasks.toolTipAreaItem.x;
-                const y = tasks.toolTipAreaItem.y;
-                const height = tasks.toolTipAreaItem.height;
-                const width = tasks.toolTipAreaItem.width;
-                return Qt.point(x+width/2, height);
-            }
+        TaskList {
+            id: taskList
 
             anchors {
                 left: parent.left
                 top: parent.top
             }
+            width: tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutWidth()
+            height: tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutHeight()
 
-            height: taskList.implicitHeight
-            width: taskList.implicitWidth
-
-            TaskList {
-                id: taskList
-
-                anchors {
-                    left: parent.left
-                    top: parent.top
+            flow: {
+                if (tasks.vertical) {
+                    return plasmoid.configuration.forceStripes ? Flow.LeftToRight : Flow.TopToBottom
                 }
-                width: tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutWidth()
-                height: tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutHeight()
+                return plasmoid.configuration.forceStripes ? Flow.TopToBottom : Flow.LeftToRight
+            }
 
-                flow: {
-                    if (tasks.vertical) {
-                        return plasmoid.configuration.forceStripes ? Flow.LeftToRight : Flow.TopToBottom
+            onAnimatingChanged: {
+                if (!animating) {
+                    tasks.publishIconGeometries(children, tasks);
+                }
+            }
+            onWidthChanged: layoutTimer.restart()
+            onHeightChanged: layoutTimer.restart()
+
+            function layout() {
+                LayoutManager.layout(taskRepeater);
+            }
+
+            Timer {
+                id: layoutTimer
+
+                interval: 0
+                repeat: false
+
+                onTriggered: taskList.layout()
+            }
+
+            Repeater {
+                id: taskRepeater
+
+                delegate: Task {}
+                onItemAdded: taskList.layout()
+                onItemRemoved: {
+                    if (tasks.containsMouse && index != taskRepeater.count &&
+                        item.m.WinIdList.length > 0 &&
+                        taskClosedWithMouseMiddleButton.indexOf(item.winIdList[0]) > -1) {
+                        needLayoutRefresh = true;
+                    } else {
+                        taskList.layout();
                     }
-                    return plasmoid.configuration.forceStripes ? Flow.TopToBottom : Flow.LeftToRight
-                }
-
-                onAnimatingChanged: {
-                    if (!animating) {
-                        tasks.publishIconGeometries(children, tasks);
-                    }
-                }
-                onWidthChanged: layoutTimer.restart()
-                onHeightChanged: layoutTimer.restart()
-
-                function layout() {
-                    LayoutManager.layout(taskRepeater);
-                }
-
-                Timer {
-                    id: layoutTimer
-
-                    interval: 0
-                    repeat: false
-
-                    onTriggered: taskList.layout()
-                }
-
-                Repeater {
-                    id: taskRepeater
-
-                    delegate: Task {}
-                    onItemAdded: taskList.layout()
-                    onItemRemoved: {
-                        if (tasks.containsMouse && index != taskRepeater.count &&
-                            item.m.WinIdList.length > 0 &&
-                            taskClosedWithMouseMiddleButton.indexOf(item.winIdList[0]) > -1) {
-                            needLayoutRefresh = true;
-                        } else {
-                            taskList.layout();
-                        }
-                        taskClosedWithMouseMiddleButton = [];
-                    }
+                    taskClosedWithMouseMiddleButton = [];
                 }
             }
         }

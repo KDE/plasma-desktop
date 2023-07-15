@@ -120,8 +120,9 @@ PlasmaCore.ToolTipArea {
 
     onContainsMouseChanged: if (containsMouse) {
         task.forceActiveFocus(Qt.MouseFocusReason);
-        task.updateMainItemBindings();
+        updateMainItemBindingsTimer.start();
     } else {
+        updateMainItemBindingsTimer.stop();
         tasks.toolTipOpenedByClick = null;
     }
 
@@ -298,6 +299,15 @@ PlasmaCore.ToolTipArea {
         }
     }
 
+    Timer {
+        id: updateMainItemBindingsTimer
+        interval: !tasks.isFirstEnter && task.interactive ? 200 : 0
+        onTriggered: if (task.containsMouse) {
+            updateMainItemBindings();
+            tasks.isFirstEnter = false;
+        }
+    }
+
     TapHandler {
         id: menuTapHandler
         acceptedButtons: Qt.LeftButton
@@ -330,6 +340,7 @@ PlasmaCore.ToolTipArea {
         acceptedButtons: Qt.LeftButton
         onTapped: {
             if (plasmoid.configuration.showToolTips && task.active) {
+                updateMainItemBindingsTimer.stop();
                 hideToolTip();
             }
             TaskTools.activateTask(modelIndex(), model, point.modifiers, task, plasmoid, tasks);
