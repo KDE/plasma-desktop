@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-28 00:51+0000\n"
+"POT-Creation-Date: 2023-07-16 02:45+0000\n"
 "PO-Revision-Date: 2022-12-15 14:20+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -114,8 +114,7 @@ msgid "Use a visual bell instead of a sound"
 msgstr "Usa un timbre visual en lloc d'un so"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
 msgstr "Inverteix els colors del sistema en el timbre"
@@ -174,6 +173,13 @@ msgstr "Notifica quan es prem un modificador de teclat"
 #, kde-format
 msgid "Use a timeout delay"
 msgstr "Una un retard de temps d'espera"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:37
+#, fuzzy, kde-format
+#| msgid "Delay for the mouse movement"
+msgid "Delay for timeout"
+msgstr "Retard del moviment del ratolí"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41

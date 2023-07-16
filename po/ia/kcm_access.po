@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-28 00:51+0000\n"
+"POT-Creation-Date: 2023-07-16 02:45+0000\n"
 "PO-Revision-Date: 2023-01-25 09:56+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -107,8 +107,7 @@ msgid "Use a visual bell instead of a sound"
 msgstr "Usa un vampana visual in loco de un sono"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
 msgstr "Inverte le colores de systema sur le campana"
@@ -167,6 +166,13 @@ msgstr "Notifica quando un modificator de claviero es pressate"
 #, kde-format
 msgid "Use a timeout delay"
 msgstr "Usa un retardo de tempore limite"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:37
+#, fuzzy, kde-format
+#| msgid "Delay for the mouse movement"
+msgid "Delay for timeout"
+msgstr "Retardo per le movimento del mus"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41

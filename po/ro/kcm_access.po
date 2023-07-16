@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-28 00:51+0000\n"
+"POT-Creation-Date: 2023-07-16 02:45+0000\n"
 "PO-Revision-Date: 2023-04-10 18:53+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -107,8 +107,7 @@ msgid "Use a visual bell instead of a sound"
 msgstr "Folosește clopoțel vizual în loc de sunet"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
 msgstr "Inversează culorile sistemului la clopoțel"
@@ -167,6 +166,13 @@ msgstr "Notifică când e apăsat un modificator de tastatură"
 #, kde-format
 msgid "Use a timeout delay"
 msgstr "Folosește întârziere pentru expirare"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:37
+#, fuzzy, kde-format
+#| msgid "Delay for the mouse movement"
+msgid "Delay for timeout"
+msgstr "Întârziere pentru mișcarea mausului"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41

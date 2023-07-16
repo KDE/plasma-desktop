@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-28 00:51+0000\n"
+"POT-Creation-Date: 2023-07-16 02:45+0000\n"
 "PO-Revision-Date: 2022-04-27 20:13+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -110,8 +110,7 @@ msgid "Use a visual bell instead of a sound"
 msgstr "Använd visuellt alarm istället för ett ljud"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
 msgstr "Invertera systemfärgerna för alarmet"
@@ -169,6 +168,13 @@ msgstr "Underrättelse när en väljartangent används"
 #, kde-format
 msgid "Use a timeout delay"
 msgstr "Använd en tidsgräns"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:37
+#, fuzzy, kde-format
+#| msgid "Delay for the mouse movement"
+msgid "Delay for timeout"
+msgstr "Fördröjning för musrörelsen"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41

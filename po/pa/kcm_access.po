@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-28 00:51+0000\n"
+"POT-Creation-Date: 2023-07-16 02:45+0000\n"
 "PO-Revision-Date: 2021-10-09 09:10-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -110,8 +110,7 @@ msgid "Use a visual bell instead of a sound"
 msgstr "ਆਵਾਜ਼ ਦੀ ਬਜਾਏ ਦਿੱਖ ਘੰਟੀ ਵਰਤੋਂ"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
 msgstr "ਘੰਟੀ ਵੱਜਣ ਸਮੇਂ ਸਿਸਟਮ ਰੰਗਾਂ ਨੂੰ ਉਲਟਾ ਕਰੋ"
@@ -168,6 +167,12 @@ msgstr ""
 #: kcmaccessibilitykeyboard.kcfg:33
 #, kde-format
 msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Delay for timeout"
 msgstr ""
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
