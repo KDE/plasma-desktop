@@ -28,15 +28,15 @@ static QString installMetaDataPath(const QString &filePath)
     return krunnerPluginsDir.filePath(QFileInfo(filePath).fileName());
 }
 
-static InstallerInfo getInstallerInfo(const QFileInfo dirInfo)
+static InstallerInfo getInstallerInfo(const QFileInfo &info)
 {
-    const QDir rootDir = dirInfo.absoluteDir();
-    QString installerConfigFile = dirInfo.filePath();
+    const QDir rootDir = info.absoluteDir();
+    QString installerConfigFile = info.absoluteFilePath();
     Q_ASSERT(installerConfigFile.endsWith("krunner-plugininstallerrc"));
 
     KConfig cfg(installerConfigFile);
     KConfigGroup grp = cfg.group("");
-    const QString exec = grp.readEntry("Exec").replace(QStringLiteral("%{PROJECTDIR}"), dirInfo.absolutePath());
+    const QString exec = grp.readEntry("Exec").replace(QStringLiteral("%{PROJECTDIR}"), info.absolutePath());
     const QString metaDataFile = grp.readEntry("MetaDataFile");
     KDesktopFile desktopFile(rootDir.absoluteFilePath(metaDataFile));
     QString dbusService = desktopFile.desktopGroup().readEntry("X-Plasma-DBusRunner-Service");
