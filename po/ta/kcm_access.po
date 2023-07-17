@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-13 02:10+0000\n"
-"PO-Revision-Date: 2023-01-24 21:57+0530\n"
+"PO-Revision-Date: 2023-07-16 13:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: kcmaccess.cpp:112
 #, kde-format
@@ -128,19 +128,19 @@ msgstr "காட்சிவழி மணி நீடிக்கும் க
 #: kcmaccessibilitykeyboard.kcfg:9
 #, kde-format
 msgid "Use sticky Keys"
-msgstr "ஒட்டும் விசைகளை பயன்படுத்துதல்"
+msgstr "ஒட்டும் விசைகளை பயன்படுத்து"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
 #, kde-format
 msgid "Lock the sticky keys"
-msgstr "ஒட்டும் விசைகளைப் பூட்டுதல்"
+msgstr "ஒட்டும் விசைகளைப் பூட்டு"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr ""
+msgstr "இரண்டு விசைகளைச் சேர்த்து அழுத்துகையில் ஒட்டுவிசைகளை முடக்கு"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
@@ -168,10 +168,9 @@ msgstr "காலாவதியைப் பயன்படுத்து"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:37
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
+#, kde-format
 msgid "Delay for timeout"
-msgstr "சுட்டியை நகர்த்துவதற்கான தாமதம்"
+msgstr "காலாவதிக்கான தாமதம்"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
@@ -195,19 +194,19 @@ msgstr "விசையை அழுத்துவதற்கான தாம�
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr ""
+msgstr "மெது விசைகளைப் பயன்படுத்தும்போது மணியடி"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr ""
+msgstr "விசை ஏற்கப்படுகையில் மணியடி"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr ""
+msgstr "விசை நிராகரிக்கப்படுகையில் மணியடி"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29

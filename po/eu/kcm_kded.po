@@ -1,26 +1,25 @@
 # Translation for kcm5_kded.po to Euskara/Basque (eu).
-# Copyright (C) 2003-2018 Free Software Foundation.
-# Copyright (C) 2019-2020, This file is copyright:
+# Copyright (C) 2003-2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
 # Marcos <marcos@euskalgnu.org>, 2003.
 # marcos <marcos@euskalgnu.org>, 2006, 2007, 2008, 2010.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2014, 2018, 2020.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2014, 2018, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-29 02:07+0000\n"
-"PO-Revision-Date: 2020-07-06 23:04+0200\n"
+"PO-Revision-Date: 2023-07-16 10:35+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 23.04.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: kcmkded.cpp:115
@@ -44,23 +43,19 @@ msgid "Failed to start service."
 msgstr "Huts egin du zerbitzua abiaraztea."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"Huts egin du KDE zerbitzu-kudeatzaileari (kded5) gordetako aldaketak "
+"Huts egin du KDE zerbitzu-kudeatzaileari (kded6) gordetako aldaketak "
 "jakinaraztea: %1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Hondoko zerbitzuen kudeatzailea (kded5) une honetan ez dago martxan. "
+"Hondoko zerbitzuen kudeatzailea (kded6) une honetan ez dago martxan. "
 "Ziurtatu behar bezala instalatuta dagoela."
 
 #: ui/main.qml:45
@@ -73,16 +68,13 @@ msgstr ""
 "ingurunean erabilgarriak ez direnean."
 
 #: ui/main.qml:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Zerbitzu batzuk automatikoki abiarazi/geldiarazi dira, aldaketak ezartzeko, "
-"hondoko zerbitzuen kudeatzailea (kded5) berrabiatu denean."
+"hondoko zerbitzuen kudeatzailea (kded6) berrabiatu denean."
 
 #: ui/main.qml:96
 #, kde-format
