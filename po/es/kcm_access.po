@@ -7,7 +7,7 @@
 # Jaime Robles <jaime@kde.org>, 2003, 2005, 2007, 2008.
 # Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003.
 # Pablo de Vicente <p.devicente@wanadoo.es>, 2005.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2005, 2010, 2014, 2015, 2017, 2019, 2020, 2021, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2005, 2010, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023.
 # Pablo de Vicente <pablo.devicente@gmail.com>, 2005, 2006.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
 # Javier Vinal <fjvinal@gmail.com>, 2012.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:45+0000\n"
-"PO-Revision-Date: 2022-12-15 03:19+0100\n"
+"PO-Revision-Date: 2023-07-17 11:56+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Andrea Mara Pimenta Alonso <pimenta@conectiva.com.br>\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmaccess.cpp:116
@@ -179,10 +179,9 @@ msgstr "Usar una demora de espera"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:37
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
+#, kde-format
 msgid "Delay for timeout"
-msgstr "Demora para el movimiento del ratón"
+msgstr "Demora para el tiempo de espera"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41

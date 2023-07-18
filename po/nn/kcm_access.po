@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-28 00:51+0000\n"
-"PO-Revision-Date: 2023-02-20 21:20+0100\n"
+"POT-Creation-Date: 2023-07-16 02:45+0000\n"
+"PO-Revision-Date: 2023-07-15 14:44+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -112,8 +112,7 @@ msgid "Use a visual bell instead of a sound"
 msgstr "Bruk visuell bjølle i staden for lydsignal"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitybell.kcfg:24 kcmaccessibilitykeyboard.kcfg:37
+#: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
 msgstr "Snu skjermfargane i staden for lydsignal"
@@ -171,6 +170,12 @@ msgstr "Varsling når ein valtast vert trykt"
 #, kde-format
 msgid "Use a timeout delay"
 msgstr "Bruk forseinking på tidsavbrot"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Delay for timeout"
+msgstr "Tidsgrense"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
