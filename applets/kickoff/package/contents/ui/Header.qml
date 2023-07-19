@@ -209,9 +209,9 @@ PlasmaExtras.PlasmoidHeading {
         PC3.ToolButton {
             id: configureButton
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            visible: plasmoid.action("configure").enabled
+            visible: plasmoid.internalAction("configure").enabled
             icon.name: "configure"
-            text: plasmoid.action("configure").text
+            text: plasmoid.internalAction("configure").text
             display: PC3.ToolButton.IconOnly
 
             PC3.ToolTip.text: text
@@ -227,7 +227,7 @@ PlasmaExtras.PlasmoidHeading {
             } else {
                 nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
             }
-            onClicked: plasmoid.action("configure").trigger()
+            onClicked: plasmoid.internalAction("configure").trigger()
         }
         PC3.ToolButton {
             checkable: true

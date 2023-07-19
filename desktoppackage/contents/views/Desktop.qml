@@ -311,7 +311,7 @@ Item {
                 root.containment.height + root.containment.y - item.height - Kirigami.Units.largeSpacing,
                 item.width + Kirigami.Units.largeSpacing,
                 item.height + Kirigami.Units.largeSpacing)
-            : Qt.point()
+            : Qt.point(0, 0)
         x: pos.x
         y: pos.y
         z: Number(root.containment?.z) + 1

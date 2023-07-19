@@ -48,7 +48,7 @@ Item {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: parent.clicked(null)
+        onClicked: parent.clicked()
     }
 
     ColumnLayout {
