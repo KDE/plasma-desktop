@@ -148,23 +148,23 @@ private:
     QString valueWriter(const Prop<T> &prop);
     //
     // general
-    Prop<QString> m_name = Prop<QString>("name");
-    Prop<QString> m_sysName = Prop<QString>("sysName");
+    Prop<QString> m_name = Prop<QString>("name", QString());
+    Prop<QString> m_sysName = Prop<QString>("sysName", QString());
 
     //
     // advanced
-    Prop<bool> m_supportsLeftHanded = Prop<bool>("supportsLeftHanded");
-    Prop<bool> m_supportsDisableWhileTyping = Prop<bool>("supportsDisableWhileTyping");
-    Prop<bool> m_supportsMiddleEmulation = Prop<bool>("supportsMiddleEmulation");
+    Prop<bool> m_supportsLeftHanded = PropBool("supportsLeftHanded");
+    Prop<bool> m_supportsDisableWhileTyping = PropBool("supportsDisableWhileTyping");
+    Prop<bool> m_supportsMiddleEmulation = PropBool("supportsMiddleEmulation");
 
     //
     // acceleration speed and profile
-    Prop<bool> m_supportsPointerAcceleration = Prop<bool>("supportsPointerAcceleration");
+    Prop<bool> m_supportsPointerAcceleration = PropBool("supportsPointerAcceleration");
 
     //
     // scrolling
-    Prop<bool> m_supportsNaturalScroll = Prop<bool>("supportsNaturalScroll");
-    Prop<qreal> m_scrollFactor = Prop<qreal>("scrollFactor");
+    Prop<bool> m_supportsNaturalScroll = PropBool("supportsNaturalScroll");
+    Prop<qreal> m_scrollFactor = Prop<qreal>("scrollFactor", 0);
 
     QDBusInterface *m_iface;
 };

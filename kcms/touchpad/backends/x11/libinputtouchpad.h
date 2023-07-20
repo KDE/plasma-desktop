@@ -135,12 +135,12 @@ private:
     }
 
     // Tapping
-    Prop<bool> m_lrmTapButtonMapEnabledByDefault = Prop<bool>("lrmTapButtonMapEnabledByDefault");
-    Prop<bool> m_lrmTapButtonMap = Prop<bool>("lrmTapButtonMap");
+    Prop<bool> m_lrmTapButtonMapEnabledByDefault = PropBool("lrmTapButtonMapEnabledByDefault");
+    Prop<bool> m_lrmTapButtonMap = PropBool("lrmTapButtonMap");
     //
     // advanced
-    Prop<bool> m_disableEventsOnExternalMouse = Prop<bool>("disableEventsOnExternalMouse");
-    Prop<bool> m_disableEventsOnExternalMouseDefault = Prop<bool>("disableEventsOnExternalMouseDefault");
+    Prop<bool> m_disableEventsOnExternalMouse = PropBool("disableEventsOnExternalMouse");
+    Prop<bool> m_disableEventsOnExternalMouseDefault = PropBool("disableEventsOnExternalMouseDefault");
 
     QString m_name;
 };

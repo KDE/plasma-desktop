@@ -453,8 +453,11 @@ Q_SIGNALS:
 protected:
     template<typename T>
     struct Prop {
-        explicit Prop(const QByteArray &name)
+        explicit Prop(const QByteArray &name, T initialValue)
             : name(name)
+            , avail(false)
+            , old(initialValue)
+            , val(initialValue)
         {
         }
 
@@ -482,82 +485,103 @@ protected:
         T val;
     };
 
+    struct PropInt : public Prop<int> {
+        explicit PropInt(const QByteArray &name)
+            : Prop<int>(name, 0)
+        {
+        }
+    };
+
+    struct PropReal : public Prop<qreal> {
+        explicit PropReal(const QByteArray &name)
+            : Prop<qreal>(name, false)
+        {
+        }
+    };
+
+    struct PropBool : public Prop<bool> {
+        explicit PropBool(const QByteArray &name)
+            : Prop<bool>(name, 0)
+        {
+        }
+    };
+
     //
     // general
-    Prop<bool> m_supportsDisableEvents = Prop<bool>("supportsDisableEvents");
-    Prop<bool> m_enabledDefault = Prop<bool>("enabledDefault");
-    Prop<bool> m_enabled = Prop<bool>("enabled");
+    PropBool m_supportsDisableEvents = PropBool("supportsDisableEvents");
+    PropBool m_enabledDefault = PropBool("enabledDefault");
+    PropBool m_enabled = PropBool("enabled");
 
     //
     // advanced
-    Prop<Qt::MouseButtons> m_supportedButtons = Prop<Qt::MouseButtons>("supportedButtons");
+    Prop<Qt::MouseButtons> m_supportedButtons = Prop<Qt::MouseButtons>("supportedButtons", Qt::MouseButton::NoButton);
 
-    Prop<bool> m_leftHandedEnabledByDefault = Prop<bool>("leftHandedEnabledByDefault");
-    Prop<bool> m_leftHanded = Prop<bool>("leftHanded");
+    PropBool m_leftHandedEnabledByDefault = PropBool("leftHandedEnabledByDefault");
+    PropBool m_leftHanded = PropBool("leftHanded");
 
-    Prop<bool> m_supportsDisableEventsOnExternalMouse = Prop<bool>("supportsDisableEventsOnExternalMouse");
+    PropBool m_supportsDisableEventsOnExternalMouse = PropBool("supportsDisableEventsOnExternalMouse");
 
-    Prop<bool> m_disableWhileTypingEnabledByDefault = Prop<bool>("disableWhileTypingEnabledByDefault");
-    Prop<bool> m_disableWhileTyping = Prop<bool>("disableWhileTyping");
+    PropBool m_disableWhileTypingEnabledByDefault = PropBool("disableWhileTypingEnabledByDefault");
+    PropBool m_disableWhileTyping = PropBool("disableWhileTyping");
 
-    Prop<bool> m_middleEmulationEnabledByDefault = Prop<bool>("middleEmulationEnabledByDefault");
-    Prop<bool> m_middleEmulation = Prop<bool>("middleEmulation");
+    PropBool m_middleEmulationEnabledByDefault = PropBool("middleEmulationEnabledByDefault");
+    PropBool m_middleEmulation = PropBool("middleEmulation");
 
     //
     // acceleration speed and profile
-    Prop<qreal> m_defaultPointerAcceleration = Prop<qreal>("defaultPointerAcceleration");
-    Prop<qreal> m_pointerAcceleration = Prop<qreal>("pointerAcceleration");
+    Prop<qreal> m_defaultPointerAcceleration = PropReal("defaultPointerAcceleration");
+    Prop<qreal> m_pointerAcceleration = PropReal("pointerAcceleration");
 
-    Prop<bool> m_supportsPointerAccelerationProfileFlat = Prop<bool>("supportsPointerAccelerationProfileFlat");
-    Prop<bool> m_defaultPointerAccelerationProfileFlat = Prop<bool>("defaultPointerAccelerationProfileFlat");
-    Prop<bool> m_pointerAccelerationProfileFlat = Prop<bool>("pointerAccelerationProfileFlat");
+    PropBool m_supportsPointerAccelerationProfileFlat = PropBool("supportsPointerAccelerationProfileFlat");
+    PropBool m_defaultPointerAccelerationProfileFlat = PropBool("defaultPointerAccelerationProfileFlat");
+    PropBool m_pointerAccelerationProfileFlat = PropBool("pointerAccelerationProfileFlat");
 
-    Prop<bool> m_supportsPointerAccelerationProfileAdaptive = Prop<bool>("supportsPointerAccelerationProfileAdaptive");
-    Prop<bool> m_defaultPointerAccelerationProfileAdaptive = Prop<bool>("defaultPointerAccelerationProfileAdaptive");
-    Prop<bool> m_pointerAccelerationProfileAdaptive = Prop<bool>("pointerAccelerationProfileAdaptive");
+    PropBool m_supportsPointerAccelerationProfileAdaptive = PropBool("supportsPointerAccelerationProfileAdaptive");
+    PropBool m_defaultPointerAccelerationProfileAdaptive = PropBool("defaultPointerAccelerationProfileAdaptive");
+    PropBool m_pointerAccelerationProfileAdaptive = PropBool("pointerAccelerationProfileAdaptive");
 
     //
     // tapping
-    Prop<int> m_tapFingerCount = Prop<int>("tapFingerCount");
-    Prop<bool> m_tapToClickEnabledByDefault = Prop<bool>("tapToClickEnabledByDefault");
-    Prop<bool> m_tapToClick = Prop<bool>("tapToClick");
+    Prop<int> m_tapFingerCount = PropInt("tapFingerCount");
+    PropBool m_tapToClickEnabledByDefault = PropBool("tapToClickEnabledByDefault");
+    PropBool m_tapToClick = PropBool("tapToClick");
 
-    Prop<bool> m_lmrTapButtonMapEnabledByDefault = Prop<bool>("lmrTapButtonMapEnabledByDefault");
-    Prop<bool> m_lmrTapButtonMap = Prop<bool>("lmrTapButtonMap");
+    PropBool m_lmrTapButtonMapEnabledByDefault = PropBool("lmrTapButtonMapEnabledByDefault");
+    PropBool m_lmrTapButtonMap = PropBool("lmrTapButtonMap");
 
-    Prop<bool> m_tapAndDragEnabledByDefault = Prop<bool>("tapAndDragEnabledByDefault");
-    Prop<bool> m_tapAndDrag = Prop<bool>("tapAndDrag");
-    Prop<bool> m_tapDragLockEnabledByDefault = Prop<bool>("tapDragLockEnabledByDefault");
-    Prop<bool> m_tapDragLock = Prop<bool>("tapDragLock");
+    PropBool m_tapAndDragEnabledByDefault = PropBool("tapAndDragEnabledByDefault");
+    PropBool m_tapAndDrag = PropBool("tapAndDrag");
+    PropBool m_tapDragLockEnabledByDefault = PropBool("tapDragLockEnabledByDefault");
+    PropBool m_tapDragLock = PropBool("tapDragLock");
 
     //
     // scrolling
-    Prop<bool> m_naturalScrollEnabledByDefault = Prop<bool>("naturalScrollEnabledByDefault");
-    Prop<bool> m_naturalScroll = Prop<bool>("naturalScroll");
+    PropBool m_naturalScrollEnabledByDefault = PropBool("naturalScrollEnabledByDefault");
+    PropBool m_naturalScroll = PropBool("naturalScroll");
 
-    Prop<bool> m_horizontalScrolling = Prop<bool>("horizontalScrolling");
+    PropBool m_horizontalScrolling = PropBool("horizontalScrolling");
 
-    Prop<bool> m_supportsScrollTwoFinger = Prop<bool>("supportsScrollTwoFinger");
-    Prop<bool> m_scrollTwoFingerEnabledByDefault = Prop<bool>("scrollTwoFingerEnabledByDefault");
-    Prop<bool> m_isScrollTwoFinger = Prop<bool>("scrollTwoFinger");
+    PropBool m_supportsScrollTwoFinger = PropBool("supportsScrollTwoFinger");
+    PropBool m_scrollTwoFingerEnabledByDefault = PropBool("scrollTwoFingerEnabledByDefault");
+    PropBool m_isScrollTwoFinger = PropBool("scrollTwoFinger");
 
-    Prop<bool> m_supportsScrollEdge = Prop<bool>("supportsScrollEdge");
-    Prop<bool> m_scrollEdgeEnabledByDefault = Prop<bool>("scrollEdgeEnabledByDefault");
-    Prop<bool> m_isScrollEdge = Prop<bool>("scrollEdge");
+    PropBool m_supportsScrollEdge = PropBool("supportsScrollEdge");
+    PropBool m_scrollEdgeEnabledByDefault = PropBool("scrollEdgeEnabledByDefault");
+    PropBool m_isScrollEdge = PropBool("scrollEdge");
 
-    Prop<bool> m_supportsScrollOnButtonDown = Prop<bool>("supportsScrollOnButtonDown");
-    Prop<bool> m_scrollOnButtonDownEnabledByDefault = Prop<bool>("scrollOnButtonDownEnabledByDefault");
-    Prop<bool> m_isScrollOnButtonDown = Prop<bool>("scrollOnButtonDown");
+    PropBool m_supportsScrollOnButtonDown = PropBool("supportsScrollOnButtonDown");
+    PropBool m_scrollOnButtonDownEnabledByDefault = PropBool("scrollOnButtonDownEnabledByDefault");
+    PropBool m_isScrollOnButtonDown = PropBool("scrollOnButtonDown");
 
-    Prop<quint32> m_defaultScrollButton = Prop<quint32>("defaultScrollButton");
-    Prop<quint32> m_scrollButton = Prop<quint32>("scrollButton");
+    Prop<quint32> m_defaultScrollButton = Prop<quint32>("defaultScrollButton", 0);
+    Prop<quint32> m_scrollButton = Prop<quint32>("scrollButton", 0);
 
     // Click Method
-    Prop<bool> m_supportsClickMethodAreas = Prop<bool>("supportsClickMethodAreas");
-    Prop<bool> m_defaultClickMethodAreas = Prop<bool>("defaultClickMethodAreas");
-    Prop<bool> m_clickMethodAreas = Prop<bool>("clickMethodAreas");
+    PropBool m_supportsClickMethodAreas = PropBool("supportsClickMethodAreas");
+    PropBool m_defaultClickMethodAreas = PropBool("defaultClickMethodAreas");
+    PropBool m_clickMethodAreas = PropBool("clickMethodAreas");
 
-    Prop<bool> m_supportsClickMethodClickfinger = Prop<bool>("supportsClickMethodClickfinger");
-    Prop<bool> m_defaultClickMethodClickfinger = Prop<bool>("defaultClickMethodClickfinger");
-    Prop<bool> m_clickMethodClickfinger = Prop<bool>("clickMethodClickfinger");
+    PropBool m_supportsClickMethodClickfinger = PropBool("supportsClickMethodClickfinger");
+    PropBool m_defaultClickMethodClickfinger = PropBool("defaultClickMethodClickfinger");
+    PropBool m_clickMethodClickfinger = PropBool("clickMethodClickfinger");
 };
