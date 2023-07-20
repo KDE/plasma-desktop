@@ -41,7 +41,7 @@ if (KF6Baloo_FOUND)
 endif()
 add_subdirectory(solid_actions)
 
-if (X11_XCB_FOUND AND X11_Xi_FOUND AND XORGSERVER_FOUND)
+if (BUILD_KCM_TOUCHPAD_KWIN_WAYLAND OR BUILD_KCM_TOUCHPAD_X11)
     add_subdirectory(touchpad)
 endif()
 

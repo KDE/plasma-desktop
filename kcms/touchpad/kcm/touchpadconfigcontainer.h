@@ -43,5 +43,5 @@ public:
     }
 
 private:
-    TouchpadConfigPlugin *m_plugin = nullptr;
+    TouchpadConfigPlugin *m_plugin;
 };

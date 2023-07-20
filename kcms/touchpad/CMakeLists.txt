@@ -3,15 +3,32 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_touchpad\")
 
 add_subdirectory(icon)
 
-SET(TOUCHPAD_SRCS
+set(TOUCHPAD_SRCS
     actions.cpp
     touchpadbackend.cpp
     logging.cpp
     touchpadparametersbase.cpp
 )
 
-include(backends/x11.cmake)
-include(backends/kwin_wayland.cmake)
+if (BUILD_KCM_TOUCHPAD_X11)
+    if (NOT X11_XCB_FOUND)
+        list(APPEND MISSING_DEPS "X11_XCB")
+    endif()
+    if (NOT X11_Xi_FOUND)
+        list(APPEND MISSING_DEPS "X11_Xi")
+    endif()
+    if (NOT XORGSERVER_FOUND)
+        list(APPEND MISSING_DEPS "xorg-server")
+    endif()
+    if (MISSING_DEPS)
+        message(FATAL_ERROR "Missing X11 dependencies for kcm_touchpad: ${MISSING_DEPS}. Install dependencies or set CMake option -DBUILD_KCM_TOUCHPAD_X11=OFF.")
+    endif()
+    include(backends/x11.cmake)
+endif()
+
+if (BUILD_KCM_TOUCHPAD_KWIN_WAYLAND)
+    include(backends/kwin_wayland.cmake)
+endif()
 
 qt_add_dbus_interfaces(TOUCHPAD_SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml

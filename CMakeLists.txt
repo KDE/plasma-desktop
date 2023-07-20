@@ -31,6 +31,9 @@ include(CheckIncludeFiles)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
 
+option(BUILD_KCM_TOUCHPAD_KWIN_WAYLAND "Build the Touchpad KCM's KWin+Wayland backend" ON)
+option(BUILD_KCM_TOUCHPAD_X11 "Build the Touchpad KCM's X11 backend" ON)
+
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
     QuickWidgets
@@ -181,11 +184,13 @@ find_package(XCB
         XKB XINPUT ATOM RECORD
 )
 
-find_package(X11_XCB)
-set_package_properties(X11_XCB PROPERTIES
-    PURPOSE "Required for needed for touchpad KCM (X11 backend)"
-    TYPE OPTIONAL
-)
+if (BUILD_KCM_TOUCHPAD_X11)
+    find_package(X11_XCB)
+    set_package_properties(X11_XCB PROPERTIES
+        PURPOSE "Required for touchpad KCM (X11 backend) when option BUILD_KCM_TOUCHPAD_X11=ON"
+        TYPE REQUIRED
+    )
+endif()
 
 set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
@@ -239,6 +244,7 @@ include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
+configure_file(config-build-options.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-build-options.h)
 
 plasma_install_package(desktoppackage org.kde.plasma.desktop shells shell)
 
