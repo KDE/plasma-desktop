@@ -45,7 +45,7 @@ const Parameter libinputProperties[] = {
     {"tapToClick", PT_INT, 0, 1, LIBINPUT_PROP_TAP, 8, 0},
     {"tapToClickEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_TAP_DEFAULT, 8, 0},
 
-    /* LMR */
+    /* LMR 1/2/3-finger tapping mapping to Left/right/middle or left/middle/right */
     {"lrmTapButtonMapEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_TAP_BUTTONMAP_DEFAULT, 8, 0},
     {"lrmTapButtonMap", PT_INT, 0, 1, LIBINPUT_PROP_TAP_BUTTONMAP, 8, 0},
     {"lmrTapButtonMapEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_TAP_BUTTONMAP_DEFAULT, 8, 1},
@@ -172,7 +172,14 @@ LibinputTouchpad::LibinputTouchpad(Display *display, int deviceId)
     /* FingerCount cannot be zero */
     if (!m_tapFingerCount.val) {
         m_tapFingerCount.avail = true;
-        m_tapFingerCount.set(1);
+
+        // when lmr or rml are enabled by default, fingercount must be at least 3
+        if ((getParameter(findParameter(m_lmrTapButtonMapEnabledByDefault.name)).toBool()
+             || getParameter(findParameter(m_lrmTapButtonMapEnabledByDefault.name)).toBool())) {
+            m_tapFingerCount.set(3);
+        } else {
+            m_tapFingerCount.set(1);
+        }
     }
     m_config = KSharedConfig::openConfig(QStringLiteral("touchpadxlibinputrc"));
 }
