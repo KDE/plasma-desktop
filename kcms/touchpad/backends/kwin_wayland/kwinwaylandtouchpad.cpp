@@ -149,7 +149,7 @@ bool KWinWaylandTouchpad::applyConfig()
     bool success = true;
     QString error_msg;
 
-    for (QString m : msgs) {
+    for (const QString &m : std::as_const(msgs)) {
         if (!m.isNull()) {
             qCCritical(KCM_TOUCHPAD) << "in error:" << m;
             if (!success) {

@@ -53,18 +53,14 @@ KWinWaylandBackend::~KWinWaylandBackend()
 
 void KWinWaylandBackend::findTouchpads()
 {
-    QStringList devicesSysNames;
     const QVariant reply = m_deviceManager->property("devicesSysNames");
-    if (reply.isValid()) {
-        qCDebug(KCM_TOUCHPAD) << "Devices list received successfully from KWin.";
-        devicesSysNames = reply.toStringList();
-    } else {
+    if (!reply.isValid()) {
         qCCritical(KCM_TOUCHPAD) << "Error on receiving device list from KWin.";
         m_errorString = i18n("Querying input devices failed. Please reopen this settings module.");
         return;
     }
-
-    for (QString sn : devicesSysNames) {
+    const auto devicesSysNames = reply.toStringList();
+    for (const QString &sn : devicesSysNames) {
         QDBusInterface deviceIface(QStringLiteral("org.kde.KWin"),
                                    QStringLiteral("/org/kde/KWin/InputDevice/") + sn,
                                    QStringLiteral("org.kde.KWin.InputDevice"),
@@ -79,8 +75,11 @@ void KWinWaylandBackend::findTouchpads()
                 return;
             }
             m_devices.append(tp);
-            qCDebug(KCM_TOUCHPAD).nospace() << "Touchpad found: " << tp->name() << " (" << tp->sysName() << ")";
+            qCInfo(KCM_TOUCHPAD).nospace() << "Touchpad found: " << tp->name() << " (" << tp->sysName() << ")";
         }
+    }
+    if (m_devices.isEmpty()) {
+        qCInfo(KCM_TOUCHPAD) << "No Devices found.";
     }
 }
 
