@@ -256,18 +256,18 @@ KCM.SimpleKCM{
 
             function onAccelSpeedChanged(val) {
                 // check slider
-                if (val != accelSpeedSlider.accelSpeedValue) {
+                if (val !== accelSpeedSlider.accelSpeedValue) {
                     accelSpeedSlider.accelSpeedValue = val
                     accelSpeedSlider.value = Math.round(6 + (val / 100) / 0.2)
                 }
 
                 // check spinbox
-                if (val != accelSpeedSpinbox.value) {
+                if (val !== accelSpeedSpinbox.value) {
                     accelSpeedSpinbox.value = val
                 }
 
                 // check libinput accelspeed
-                if ((val / 100) != touchpad.pointerAcceleration) {
+                if ((val / 100) !== touchpad.pointerAcceleration) {
                     touchpad.pointerAcceleration = val / 100
                     root.changeSignal()
                 }
@@ -503,8 +503,11 @@ KCM.SimpleKCM{
             id: multiTap
 
             spacing: Kirigami.Units.smallSpacing
+            // hide initially
+            visible: false
 
             function load() {
+                visible = touchpad.supportsLmrTapButtonMap
                 enabled = touchpad.supportsLmrTapButtonMap && tapToClick.checked
                 if (touchpad.tapFingerCount > 2) {
                     multiTapRightClick.text = i18nd("kcm_touchpad", "Right-click (three-finger tap to middle-click)")
@@ -526,7 +529,7 @@ KCM.SimpleKCM{
                     return
                 }
 
-                if(touchpad.lmrTapButtonMap) {
+                if (touchpad.lmrTapButtonMap) {
                     multiTapMiddleClick.checked = true
                 } else {
                     multiTapRightClick.checked = true
@@ -749,6 +752,8 @@ KCM.SimpleKCM{
             id: rightClickMethod
 
             spacing: Kirigami.Units.smallSpacing
+            // hide initially
+            visible: false
 
             function load() {
                 enabled = touchpad.supportsClickMethodAreas && touchpad.supportsClickMethodClickfinger
