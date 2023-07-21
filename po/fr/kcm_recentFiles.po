@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-16 00:47+0000\n"
+"POT-Creation-Date: 2023-07-21 02:21+0000\n"
 "PO-Revision-Date: 2021-05-27 14:32+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -95,43 +95,43 @@ msgid "Cleared the activity history."
 msgstr "Historique d'activité effacé."
 
 #. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
-#: ui/RecentFiles.ui:36
+#: ui/RecentFiles.ui:35
 #, kde-format
 msgid "Keep history:"
 msgstr "Conserver l'historique :"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
-#: ui/RecentFiles.ui:48
+#: ui/RecentFiles.ui:47
 #, kde-format
 msgid "Clear History"
 msgstr "Effacer l'historique"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
-#: ui/RecentFiles.ui:70
+#: ui/RecentFiles.ui:68
 #, kde-format
 msgid "For a&ll applications"
 msgstr "Pour toutes les app&lications"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
-#: ui/RecentFiles.ui:80
+#: ui/RecentFiles.ui:78
 #, kde-format
 msgid "&Do not remember"
 msgstr "Ne &pas se souvenir"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
-#: ui/RecentFiles.ui:87
+#: ui/RecentFiles.ui:85
 #, kde-format
 msgid "O&nly for specific applications:"
 msgstr "U&niquement pour des applications spécifiques :"
 
 #. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
-#: ui/RecentFiles.ui:97
+#: ui/RecentFiles.ui:95
 #, kde-format
 msgid "Remember opened documents:"
 msgstr "Se souvenir des documents ouverts : "
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
-#: ui/RecentFiles.ui:130
+#: ui/RecentFiles.ui:128
 #, kde-format
 msgid "Blacklist applications not on the list"
 msgstr "Mettre les applications qui ne sont pas dans la liste sur liste noire"

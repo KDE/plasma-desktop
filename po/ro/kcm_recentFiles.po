@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-16 00:47+0000\n"
+"POT-Creation-Date: 2023-07-21 02:21+0000\n"
 "PO-Revision-Date: 2022-12-28 21:27+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -90,43 +90,43 @@ msgid "Cleared the activity history."
 msgstr "S-a curățat istoricul activității."
 
 #. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
-#: ui/RecentFiles.ui:36
+#: ui/RecentFiles.ui:35
 #, kde-format
 msgid "Keep history:"
 msgstr "Păstrare istoric:"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
-#: ui/RecentFiles.ui:48
+#: ui/RecentFiles.ui:47
 #, kde-format
 msgid "Clear History"
 msgstr "Curăță istoricul"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
-#: ui/RecentFiles.ui:70
+#: ui/RecentFiles.ui:68
 #, kde-format
 msgid "For a&ll applications"
 msgstr "Pentru toate ap&licațiile"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
-#: ui/RecentFiles.ui:80
+#: ui/RecentFiles.ui:78
 #, kde-format
 msgid "&Do not remember"
 msgstr "N&u reține"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
-#: ui/RecentFiles.ui:87
+#: ui/RecentFiles.ui:85
 #, kde-format
 msgid "O&nly for specific applications:"
 msgstr "&Numai pentru anumite aplicații:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
-#: ui/RecentFiles.ui:97
+#: ui/RecentFiles.ui:95
 #, kde-format
 msgid "Remember opened documents:"
 msgstr "Ține minte documentele deschise:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
-#: ui/RecentFiles.ui:130
+#: ui/RecentFiles.ui:128
 #, kde-format
 msgid "Blacklist applications not on the list"
 msgstr "Interzice aplicațiile ce nu sunt pe listă"
