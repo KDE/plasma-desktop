@@ -50,7 +50,7 @@ Item {
 
     // We divide by 2 when not floating as only one corner per side is drawn in that case,
     // meaning the panel can be as small as that corner size without visual glitches,
-    // whereas the floating panel - with two corners - needs two times that. 
+    // whereas the floating panel - with two corners - needs two times that.
     readonly property int minPanelHeight: translucentItem.minimumDrawingHeight / (floating ? 1 : 2)
     readonly property int minPanelWidth: translucentItem.minimumDrawingWidth / (floating ? 1 : 2)
 
@@ -108,6 +108,17 @@ Item {
 
     KWindowSystem {
         id: kwindowsystem
+    }
+
+    Connections {
+        target: containment
+        function onActivated() {
+            if (containment.status !== PlasmaCore.Types.AcceptingInputStatus) {
+                containment.status = PlasmaCore.Types.AcceptingInputStatus;
+            } else {
+                containment.status = PlasmaCore.Types.PassiveStatus;
+            }
+        }
     }
 
     // Floatingness is a value in [0, 1] that's multiplied to the floating margin; 0: not floating, 1: floating, between 0 and 1: animation between the two states
