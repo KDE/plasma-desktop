@@ -206,7 +206,7 @@ ColumnLayout {
                         running: true
 
                         PauseAnimation {
-                            duration: 300
+                            duration: Kirigami.Units.humanMoment
                         }
 
                         NumberAnimation {
