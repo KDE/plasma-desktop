@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-07-22 02:10+0000\n"
 "PO-Revision-Date: 2021-05-29 10:37+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -50,14 +50,14 @@ msgstr "Onemogoči sledilno ploščico"
 msgid "Toggle Touchpad"
 msgstr "Preklopi sledilno ploščico"
 
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:63
+#: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Poizvedovanje za vhodnimi napravami ni uspelo. Znova odprite ta nastavitveni "
 "modul."
 
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:78
+#: backends/kwin_wayland/kwinwaylandbackend.cpp:74
 #, kde-format
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Kritična napaka med branjem bistvenih podatkov o sledilni ploščici %1."
@@ -133,7 +133,7 @@ msgstr "Preklopi leve in desne gumbe."
 msgid "Press left and right buttons for middle click"
 msgstr "Pritisnite levi in desni gumb za klik sredinskega"
 
-#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:855
+#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:860
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -209,12 +209,12 @@ msgstr "Vlečenje se nadaljuje po kratkem dvigu prsta."
 msgid "Two-finger tap:"
 msgstr "Trepljanje z dvema prstoma:"
 
-#: kcm/libinput/touchpad.qml:510
+#: kcm/libinput/touchpad.qml:513
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Desni klik (trepljanje s tremi prsti je klik sredine)"
 
-#: kcm/libinput/touchpad.qml:511
+#: kcm/libinput/touchpad.qml:514
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -222,12 +222,12 @@ msgstr ""
 "Trepljanje z dvema prstoma je desni klik, trepljanje s tremi prsti je "
 "srednji klik."
 
-#: kcm/libinput/touchpad.qml:513
+#: kcm/libinput/touchpad.qml:516
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Srednji klik (trepljanje s tremi prsti je desni klik)"
 
-#: kcm/libinput/touchpad.qml:514
+#: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -235,121 +235,121 @@ msgstr ""
 "Trepljanje z dvema prstoma za srednji klik, trepljanje s tremi prsti za "
 "desni klik."
 
-#: kcm/libinput/touchpad.qml:516
+#: kcm/libinput/touchpad.qml:519
 #, kde-format
 msgid "Right-click"
 msgstr "Desni klik"
 
-#: kcm/libinput/touchpad.qml:517
+#: kcm/libinput/touchpad.qml:520
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Trepljaj z dvema prstoma za desni klik."
 
-#: kcm/libinput/touchpad.qml:519
+#: kcm/libinput/touchpad.qml:522
 #, kde-format
 msgid "Middle-click"
 msgstr "Srednji klik"
 
-#: kcm/libinput/touchpad.qml:520
+#: kcm/libinput/touchpad.qml:523
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Trepljaj z dvema prstoma za srednji klik."
 
-#: kcm/libinput/touchpad.qml:578
+#: kcm/libinput/touchpad.qml:581
 #, kde-format
 msgid "Scrolling:"
 msgstr "Drsenje:"
 
-#: kcm/libinput/touchpad.qml:608
+#: kcm/libinput/touchpad.qml:611
 #, kde-format
 msgid "Two fingers"
 msgstr "Dva prsta"
 
-#: kcm/libinput/touchpad.qml:612
+#: kcm/libinput/touchpad.qml:615
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Drsenje z dvema prstoma drsi zaslon."
 
-#: kcm/libinput/touchpad.qml:620
+#: kcm/libinput/touchpad.qml:623
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Robovi sledilne ploščice"
 
-#: kcm/libinput/touchpad.qml:624
+#: kcm/libinput/touchpad.qml:627
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Drsenje po robovih sledilne ploščice drsi zaslon."
 
-#: kcm/libinput/touchpad.qml:634
+#: kcm/libinput/touchpad.qml:637
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Obrni smer drsenja (naravno drsenje zaslona)"
 
-#: kcm/libinput/touchpad.qml:650
+#: kcm/libinput/touchpad.qml:653
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Drsi kot da je zaslon z dotikom."
 
-#: kcm/libinput/touchpad.qml:658 kcm/libinput/touchpad.qml:675
+#: kcm/libinput/touchpad.qml:661 kcm/libinput/touchpad.qml:678
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Onemogoči vodoravno drsenje"
 
-#: kcm/libinput/touchpad.qml:683
+#: kcm/libinput/touchpad.qml:686
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Hitrost drsenja:"
 
-#: kcm/libinput/touchpad.qml:732
+#: kcm/libinput/touchpad.qml:735
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Počasneje"
 
-#: kcm/libinput/touchpad.qml:738
+#: kcm/libinput/touchpad.qml:741
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Hitreje"
 
-#: kcm/libinput/touchpad.qml:747
+#: kcm/libinput/touchpad.qml:750
 #, kde-format
 msgid "Right-click:"
 msgstr "Desni klik:"
 
-#: kcm/libinput/touchpad.qml:780
+#: kcm/libinput/touchpad.qml:785
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "Pritisni spodnji desni kot"
 
-#: kcm/libinput/touchpad.qml:784
+#: kcm/libinput/touchpad.qml:789
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr ""
 "Programsko omogočeni gumbi bodo dodano na spodnji del sledilne ploščice."
 
-#: kcm/libinput/touchpad.qml:792
+#: kcm/libinput/touchpad.qml:797
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "Pritisni kamorkoli z dvema prstoma"
 
-#: kcm/libinput/touchpad.qml:796
+#: kcm/libinput/touchpad.qml:801
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "Trepljaj z dvema prstoma za omogočanje desnega klika."
 
-#: kcm/libinput/touchpad.qml:809
+#: kcm/libinput/touchpad.qml:814
 #, kde-format
 msgid "Middle-click: "
 msgstr "Srednji klik: "
 
-#: kcm/libinput/touchpad.qml:839
+#: kcm/libinput/touchpad.qml:844
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Pritisni spodaj v sredini"
 
-#: kcm/libinput/touchpad.qml:843
+#: kcm/libinput/touchpad.qml:848
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
@@ -358,17 +358,17 @@ msgstr ""
 "Programsko omogočen srednji gumb bo dodan na spodnji del vaše sledilne "
 "ploščice."
 
-#: kcm/libinput/touchpad.qml:851
+#: kcm/libinput/touchpad.qml:856
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Sočasno pritisnite spodnji levi in spodnji desni kot ploščice"
 
-#: kcm/libinput/touchpad.qml:864
+#: kcm/libinput/touchpad.qml:869
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Kamorkoli pritisnite s tremi prsti"
 
-#: kcm/libinput/touchpad.qml:870
+#: kcm/libinput/touchpad.qml:875
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Kamorkoli pritisnite s tremi prsti."

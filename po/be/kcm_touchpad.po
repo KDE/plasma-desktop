@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-07-22 02:10+0000\n"
 "PO-Revision-Date: 2022-10-12 04:09\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -51,14 +51,14 @@ msgstr "Адключыць сэнсарную панэль"
 msgid "Toggle Touchpad"
 msgstr "Пераключыць сэнсарную панэль"
 
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:63
+#: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Не ўдалося адправіць запыт да прылад уводу. Нанова адкрыйце гэты модуль "
 "налад."
 
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:78
+#: backends/kwin_wayland/kwinwaylandbackend.cpp:74
 #, kde-format
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
@@ -136,7 +136,7 @@ msgstr "Памяняць левую і правую кнопкі."
 msgid "Press left and right buttons for middle click"
 msgstr "Націсканне левай і правай кнопкі для імітацыі сярэдняй кнопкі"
 
-#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:855
+#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:860
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -216,12 +216,12 @@ msgstr "Перацягванне працягваецца пасля карот�
 msgid "Two-finger tap:"
 msgstr "Дакрананне двума пальцамі:"
 
-#: kcm/libinput/touchpad.qml:510
+#: kcm/libinput/touchpad.qml:513
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Правая кнопка мышы (дакрананне трыма пальцамі - сярэдняя кнопка мышы)"
 
-#: kcm/libinput/touchpad.qml:511
+#: kcm/libinput/touchpad.qml:514
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -229,12 +229,12 @@ msgstr ""
 "Дакрананне двума пальцамі імітуе правую кнопку мышы, а трыма пальцамі - "
 "сярэднюю."
 
-#: kcm/libinput/touchpad.qml:513
+#: kcm/libinput/touchpad.qml:516
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Сярэдняя кнопка мышы (дакрананне трыма пальцамі - правая кнопка мышы)"
 
-#: kcm/libinput/touchpad.qml:514
+#: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -242,120 +242,120 @@ msgstr ""
 "Дакрананне двума пальцамі імітуе сярэднюю кнопку мышы, а трыма пальцамі - "
 "правую."
 
-#: kcm/libinput/touchpad.qml:516
+#: kcm/libinput/touchpad.qml:519
 #, kde-format
 msgid "Right-click"
 msgstr "Правая кнопка мышы"
 
-#: kcm/libinput/touchpad.qml:517
+#: kcm/libinput/touchpad.qml:520
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Націсканне двума пальцамі імітуе правую кнопку мышы."
 
-#: kcm/libinput/touchpad.qml:519
+#: kcm/libinput/touchpad.qml:522
 #, kde-format
 msgid "Middle-click"
 msgstr "Сярэдняя кнопка мышы"
 
-#: kcm/libinput/touchpad.qml:520
+#: kcm/libinput/touchpad.qml:523
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Націсканне двума пальцамі імітуе сярэднюю кнопку мышы."
 
-#: kcm/libinput/touchpad.qml:578
+#: kcm/libinput/touchpad.qml:581
 #, kde-format
 msgid "Scrolling:"
 msgstr "Пракручванне:"
 
-#: kcm/libinput/touchpad.qml:608
+#: kcm/libinput/touchpad.qml:611
 #, kde-format
 msgid "Two fingers"
 msgstr "Вядзенне двума пальцамі"
 
-#: kcm/libinput/touchpad.qml:612
+#: kcm/libinput/touchpad.qml:615
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Пракручванне з дапамогай вядзення двума пальцамі па сэнсарнай панэлі."
 
-#: kcm/libinput/touchpad.qml:620
+#: kcm/libinput/touchpad.qml:623
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Вядзенне па краях сэнсарнай панэлі"
 
-#: kcm/libinput/touchpad.qml:624
+#: kcm/libinput/touchpad.qml:627
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Пракручванне з дапамогай вядзення пальцам па краях сэнсарнай панэлі."
 
-#: kcm/libinput/touchpad.qml:634
+#: kcm/libinput/touchpad.qml:637
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Адваротны кірунак пракручвання (звычайнае пракручванне)"
 
-#: kcm/libinput/touchpad.qml:650
+#: kcm/libinput/touchpad.qml:653
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Пракручванне на сэнсарным экране."
 
-#: kcm/libinput/touchpad.qml:658 kcm/libinput/touchpad.qml:675
+#: kcm/libinput/touchpad.qml:661 kcm/libinput/touchpad.qml:678
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Адключыць гарызантальнае пракручванне"
 
-#: kcm/libinput/touchpad.qml:683
+#: kcm/libinput/touchpad.qml:686
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Хуткасць пракручвання:"
 
-#: kcm/libinput/touchpad.qml:732
+#: kcm/libinput/touchpad.qml:735
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Павольна"
 
-#: kcm/libinput/touchpad.qml:738
+#: kcm/libinput/touchpad.qml:741
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Хутка"
 
-#: kcm/libinput/touchpad.qml:747
+#: kcm/libinput/touchpad.qml:750
 #, kde-format
 msgid "Right-click:"
 msgstr "Правая кнопка мышы:"
 
-#: kcm/libinput/touchpad.qml:780
+#: kcm/libinput/touchpad.qml:785
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "Націсканне ў ніжнім правым куце"
 
-#: kcm/libinput/touchpad.qml:784
+#: kcm/libinput/touchpad.qml:789
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr "У ніжняй частцы сэнсарнай панэлі будуць дададзеныя праграмныя кнопкі."
 
-#: kcm/libinput/touchpad.qml:792
+#: kcm/libinput/touchpad.qml:797
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "Націсканне двума пальцамі ў любым месцы"
 
-#: kcm/libinput/touchpad.qml:796
+#: kcm/libinput/touchpad.qml:801
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "Дакрананне двума пальцамі лічыцца пстрыканнем правай кнопкай мышы."
 
-#: kcm/libinput/touchpad.qml:809
+#: kcm/libinput/touchpad.qml:814
 #, kde-format
 msgid "Middle-click: "
 msgstr "Сярэдняя кнопка мышы: "
 
-#: kcm/libinput/touchpad.qml:839
+#: kcm/libinput/touchpad.qml:844
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Націсканне пасярэдзіне ўнізе"
 
-#: kcm/libinput/touchpad.qml:843
+#: kcm/libinput/touchpad.qml:848
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
@@ -364,17 +364,17 @@ msgstr ""
 "У ніжняй частцы сэнсарнай панэлі будзе дададзена праграмная сярэдняя кнопка "
 "мышы."
 
-#: kcm/libinput/touchpad.qml:851
+#: kcm/libinput/touchpad.qml:856
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Адначасовае націсканне ў левым і правым кутах"
 
-#: kcm/libinput/touchpad.qml:864
+#: kcm/libinput/touchpad.qml:869
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Націсканне трыма пальцамі ў любым месцы"
 
-#: kcm/libinput/touchpad.qml:870
+#: kcm/libinput/touchpad.qml:875
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Націсканне трыма пальцамі ў любым месцы."

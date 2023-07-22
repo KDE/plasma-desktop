@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-07-22 02:10+0000\n"
 "PO-Revision-Date: 2022-05-18 08:14+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -52,14 +52,14 @@ msgstr "Desactiva el ratolí tàctil"
 msgid "Toggle Touchpad"
 msgstr "Activa/desactiva el ratolí tàctil"
 
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:63
+#: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "La consulta dels dispositius d'entrada ha fallat. Torneu a obrir este mòdul "
 "de configuració."
 
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:78
+#: backends/kwin_wayland/kwinwaylandbackend.cpp:74
 #, kde-format
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
@@ -137,7 +137,7 @@ msgstr "Intercanvia el botó esquerre i el dret."
 msgid "Press left and right buttons for middle click"
 msgstr "Prémer els botons esquerre i dret per al clic del mig"
 
-#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:855
+#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:860
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -216,12 +216,12 @@ msgstr "L'arrossegament continua després d'una elevació curta del dit."
 msgid "Two-finger tap:"
 msgstr "Toc amb dos dits:"
 
-#: kcm/libinput/touchpad.qml:510
+#: kcm/libinput/touchpad.qml:513
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Clic dret (un toc amb tres dits per al clic del mig)"
 
-#: kcm/libinput/touchpad.qml:511
+#: kcm/libinput/touchpad.qml:514
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -229,12 +229,12 @@ msgstr ""
 "Un toc amb dos dits per al clic dret, un toc amb tres dits per al clic del "
 "mig."
 
-#: kcm/libinput/touchpad.qml:513
+#: kcm/libinput/touchpad.qml:516
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Clic del mig (un toc amb tres dits per al clic dret)"
 
-#: kcm/libinput/touchpad.qml:514
+#: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -242,94 +242,94 @@ msgstr ""
 "Un toc amb dos dits per al clic del mig, un toc amb tres dits per al clic "
 "dret."
 
-#: kcm/libinput/touchpad.qml:516
+#: kcm/libinput/touchpad.qml:519
 #, kde-format
 msgid "Right-click"
 msgstr "Clic dret"
 
-#: kcm/libinput/touchpad.qml:517
+#: kcm/libinput/touchpad.qml:520
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Un toc amb dos dits per al clic dret."
 
-#: kcm/libinput/touchpad.qml:519
+#: kcm/libinput/touchpad.qml:522
 #, kde-format
 msgid "Middle-click"
 msgstr "Clic del mig"
 
-#: kcm/libinput/touchpad.qml:520
+#: kcm/libinput/touchpad.qml:523
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Un toc amb dos dits per al clic del mig."
 
-#: kcm/libinput/touchpad.qml:578
+#: kcm/libinput/touchpad.qml:581
 #, kde-format
 msgid "Scrolling:"
 msgstr "Desplaçament:"
 
-#: kcm/libinput/touchpad.qml:608
+#: kcm/libinput/touchpad.qml:611
 #, kde-format
 msgid "Two fingers"
 msgstr "Dos dits"
 
-#: kcm/libinput/touchpad.qml:612
+#: kcm/libinput/touchpad.qml:615
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Desplaçament en lliscar dos dits."
 
-#: kcm/libinput/touchpad.qml:620
+#: kcm/libinput/touchpad.qml:623
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Vores del ratolí tàctil"
 
-#: kcm/libinput/touchpad.qml:624
+#: kcm/libinput/touchpad.qml:627
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Desplaçament en lliscar a les vores del ratolí tàctil."
 
-#: kcm/libinput/touchpad.qml:634
+#: kcm/libinput/touchpad.qml:637
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Invertix la direcció de desplaçament (desplaçament natural)"
 
-#: kcm/libinput/touchpad.qml:650
+#: kcm/libinput/touchpad.qml:653
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Pantalla tàctil com el desplaçament."
 
-#: kcm/libinput/touchpad.qml:658 kcm/libinput/touchpad.qml:675
+#: kcm/libinput/touchpad.qml:661 kcm/libinput/touchpad.qml:678
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Desactiva el desplaçament horitzontal"
 
-#: kcm/libinput/touchpad.qml:683
+#: kcm/libinput/touchpad.qml:686
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocitat de desplaçament:"
 
-#: kcm/libinput/touchpad.qml:732
+#: kcm/libinput/touchpad.qml:735
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Més lenta"
 
-#: kcm/libinput/touchpad.qml:738
+#: kcm/libinput/touchpad.qml:741
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Més ràpida"
 
-#: kcm/libinput/touchpad.qml:747
+#: kcm/libinput/touchpad.qml:750
 #, kde-format
 msgid "Right-click:"
 msgstr "Clic dret:"
 
-#: kcm/libinput/touchpad.qml:780
+#: kcm/libinput/touchpad.qml:785
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "Premeu el cantó inferior dret"
 
-#: kcm/libinput/touchpad.qml:784
+#: kcm/libinput/touchpad.qml:789
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
@@ -337,27 +337,27 @@ msgstr ""
 "Els botons activats per programari s'afegiran a la part inferior del ratolí "
 "tàctil."
 
-#: kcm/libinput/touchpad.qml:792
+#: kcm/libinput/touchpad.qml:797
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "Premeu en qualsevol lloc amb dos dits"
 
-#: kcm/libinput/touchpad.qml:796
+#: kcm/libinput/touchpad.qml:801
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "Un toc amb dos dits per a activar el clic dret."
 
-#: kcm/libinput/touchpad.qml:809
+#: kcm/libinput/touchpad.qml:814
 #, kde-format
 msgid "Middle-click: "
 msgstr "Clic del mig: "
 
-#: kcm/libinput/touchpad.qml:839
+#: kcm/libinput/touchpad.qml:844
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Premeu la part inferior central"
 
-#: kcm/libinput/touchpad.qml:843
+#: kcm/libinput/touchpad.qml:848
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
@@ -366,18 +366,18 @@ msgstr ""
 "El botó del mig activat per programari s'afegirà a la part inferior del "
 "ratolí tàctil."
 
-#: kcm/libinput/touchpad.qml:851
+#: kcm/libinput/touchpad.qml:856
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr ""
 "Premeu el cantó inferior esquerre i el cantó inferior dret simultàniament"
 
-#: kcm/libinput/touchpad.qml:864
+#: kcm/libinput/touchpad.qml:869
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Premeu en qualsevol lloc amb tres dits"
 
-#: kcm/libinput/touchpad.qml:870
+#: kcm/libinput/touchpad.qml:875
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Premeu en qualsevol lloc amb tres dits."
