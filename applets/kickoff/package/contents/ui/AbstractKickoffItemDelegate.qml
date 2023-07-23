@@ -143,7 +143,7 @@ T.ItemDelegate {
             && !root.view.movedWithWheel
             // Fix VerticalStackView animation causing view currentIndex
             // to change while delegates are moving under the mouse cursor
-            && kickoff.fullRepresentationItem && !kickoff.fullRepresentationItem.contentItem.busy
+            && kickoff.fullRepresentationItem && !kickoff.fullRepresentationItem.contentItem.busy && !kickoff.fullRepresentationItem.blockingHoverFocus
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         drag {
             axis: Drag.XAndYAxis

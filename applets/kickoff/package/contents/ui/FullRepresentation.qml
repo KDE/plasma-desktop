@@ -35,6 +35,7 @@ EmptyPage {
     Layout.preferredHeight: Math.max(implicitHeight, height)
 
     property alias normalPage: normalPage
+    property bool blockingHoverFocus: false
 
     /* NOTE: Important things to know about keyboard input handling:
      *
@@ -95,11 +96,36 @@ EmptyPage {
                     isSearchResult: true
                 }
                 activeFocusOnTab: true
+                property var interceptedPosition: null
                 // always focus the first item in the header focus chain
                 KeyNavigation.tab: root.header.nextItemInFocusChain()
                 T.StackView.onActivated: {
                     kickoff.sideBar = null
                     kickoff.contentArea = searchView
+                }
+
+                Connections {
+                    target: blockHoverFocusHandler
+                    enabled: blockHoverFocusHandler.enabled && !searchView.interceptedPosition
+                    function onPointChanged() {
+                        searchView.interceptedPosition = blockHoverFocusHandler.point.position
+                    }
+                }
+
+                Connections {
+                    target: blockHoverFocusHandler
+                    enabled: blockHoverFocusHandler.enabled && searchView.interceptedPosition && root.blockingHoverFocus
+                    function onPointChanged() {
+                        if (blockHoverFocusHandler.point.position === searchView.interceptedPosition) {
+                            return;
+                        }
+                        root.blockingHoverFocus = false
+                    }
+                }
+
+                HoverHandler {
+                    id: blockHoverFocusHandler
+                    enabled: !contentItemStackView.busy && (!searchView.interceptedPosition || root.blockingHoverFocus)
                 }
 
                 Loader {
@@ -146,11 +172,18 @@ EmptyPage {
             target: root.header
             function onSearchTextChanged() {
                 if (root.header.searchText.length === 0 && contentItemStackView.currentItem.objectName !== "normalPage") {
+                    root.blockingHoverFocus = false
                     contentItemStackView.reverseTransitions = true
                     contentItemStackView.replace(normalPage)
-                } else if (root.header.searchText.length > 0 && contentItemStackView.currentItem.objectName !== "searchView") {
-                    contentItemStackView.reverseTransitions = false
-                    contentItemStackView.replace(searchViewComponent)
+                } else if (root.header.searchText.length > 0) {
+                    if (contentItemStackView.currentItem.objectName !== "searchView") {
+                        contentItemStackView.reverseTransitions = false
+                        contentItemStackView.replace(searchViewComponent)
+                    } else {
+                        root.blockingHoverFocus = true
+                        contentItemStackView.contentItem.interceptedPosition = null
+                        contentItemStackView.contentItem.currentIndex = 0
+                    }
                 }
             }
         }
