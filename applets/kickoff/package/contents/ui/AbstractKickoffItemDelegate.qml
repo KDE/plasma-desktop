@@ -138,7 +138,7 @@ T.ItemDelegate {
         hoverEnabled: root.view && !root.view.movedWithKeyboard
             // Fix VerticalStackView animation causing view currentIndex
             // to change while delegates are moving under the mouse cursor
-            && plasmoid.fullRepresentationItem && !plasmoid.fullRepresentationItem.contentItem.busy
+            && plasmoid.fullRepresentationItem && !plasmoid.fullRepresentationItem.contentItem.busy && !plasmoid.fullRepresentationItem.blockingHoverFocus
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         drag {
             axis: Drag.XAndYAxis
