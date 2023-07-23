@@ -13,7 +13,6 @@ import org.kde.kirigami 2.20 as Kirigami
 Item {
     width: childrenRect.width
     height: childrenRect.height
-    opacity: 0.8
 
     HoverHandler {
         cursorShape: Qt.PointingHandCursor
@@ -39,9 +38,9 @@ Item {
         anchors.fill: title
         z: 1
         color: "black"
-        horizontalOffset: 0
+        horizontalOffset: 1
         verticalOffset: 1
-        opacity: 0.5
+        opacity: 0.8
         radius: 4.0
         samples: radius * 2 + 1
         spread: 0.35
@@ -64,9 +63,9 @@ Item {
         anchors.fill: textLabel
         z: 1
         color: "black"
-        horizontalOffset: 0
+        horizontalOffset: 1
         verticalOffset: 1
-        opacity: 0.5
+        opacity: 0.8
         radius: 4.0
         samples: radius * 2 + 1
         spread: 0.35
