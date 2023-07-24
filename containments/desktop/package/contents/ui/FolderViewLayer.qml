@@ -40,18 +40,15 @@ FocusScope {
     function updateContextualActions() {
         folderView.model.updateActions();
 
-        var actionName = "";
-        var appletAction = null;
-        var modelAction = null;
-
-        for (var i = 0; i < sharedActions.length; i++) {
-            actionName = sharedActions[i];
-            appletAction = plasmoid.action(actionName);
-            modelAction = folderView.model.action(actionName);
-
-            appletAction.text = modelAction.text;
-            appletAction.enabled = modelAction.enabled;
-            appletAction.visible = modelAction.visible;
+        for (let i = 0, len = sharedActions.length; i < len; i++) {
+            const actionName = sharedActions[i];
+            const appletAction = plasmoid.internalAction(actionName);
+            if (appletAction) {
+                modelAction = folderView.model.action(actionName);
+                appletAction.text = modelAction.text;
+                appletAction.enabled = modelAction.enabled;
+                appletAction.visible = modelAction.visible;
+            }
         }
     }
 
@@ -416,12 +413,9 @@ FocusScope {
             label = labelComponent.createObject(folderViewLayerComponent);
         }
 
-        var actionName = "";
-        var modelAction = null;
-
-        for (var i = 0; i < sharedActions.length; i++) {
-            actionName = sharedActions[i];
-            modelAction = folderView.model.action(actionName);
+        for (let i = 0, len = sharedActions.length; i < len; i++) {
+            const actionName = sharedActions[i];
+            const modelAction = folderView.model.action(actionName);
             plasmoid.contextualActions.push(modelAction)
             if (actionName === "newMenu") {
                 plasmoid.contextualActions.push(viewPropertiesAction)
