@@ -20,7 +20,8 @@ Item {
     }
 
     TapHandler {
-        onTapped: Qt.openUrlExternally("https://bugs.kde.org/")
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
+        onTapped: desktop.showPreviewBannerMenu(mapToGlobal(point.position))
     }
 
     PlasmaExtras.ShadowedLabel {
