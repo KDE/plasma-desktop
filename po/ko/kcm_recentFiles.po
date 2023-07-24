@@ -33,13 +33,13 @@ msgstr "활동 기록에 저장할 데이터"
 #: kactivitymanagerd_plugins_settings.kcfg:21
 #, kde-format
 msgid "List of Applications whose activity history to save"
-msgstr "활동 기록을 저장할 프로그램 목록"
+msgstr "활동 기록을 저장할 앱 목록"
 
 #. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:24
 #, kde-format
 msgid "List of Applications whose activity history not to save"
-msgstr "활동 기록을 저장하지 않을 프로그램 목록"
+msgstr "활동 기록을 저장하지 않을 앱 목록"
 
 #: kcm_recentFiles.cpp:64
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "과거 기록 삭제"
 #: ui/RecentFiles.ui:70
 #, kde-format
 msgid "For a&ll applications"
-msgstr "모든 프로그램에 대해서(&L)"
+msgstr "모든 앱에 대해서(&L)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
 #: ui/RecentFiles.ui:80
@@ -114,7 +114,7 @@ msgstr "기억하지 않음(&D)"
 #: ui/RecentFiles.ui:87
 #, kde-format
 msgid "O&nly for specific applications:"
-msgstr "다음 프로그램에 대해서(&N):"
+msgstr "다음 앱에 대해서(&N):"
 
 #. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
 #: ui/RecentFiles.ui:97
@@ -126,4 +126,4 @@ msgstr "열었던 문서 기억:"
 #: ui/RecentFiles.ui:130
 #, kde-format
 msgid "Blacklist applications not on the list"
-msgstr "이 목록에 없는 프로그램 차단"
+msgstr "이 목록에 없는 앱 차단"

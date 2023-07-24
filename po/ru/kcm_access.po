@@ -7,14 +7,14 @@
 # Nick Shaforostoff <shafff@ukr.net>, 2006, 2016.
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2011, 2015, 2016, 2017, 2018.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2021, 2022, 2023.
 # Дронова Ю <juliette.tux@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:45+0000\n"
-"PO-Revision-Date: 2022-12-23 11:16+0300\n"
+"PO-Revision-Date: 2023-07-22 14:42+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -179,10 +179,9 @@ msgstr "Применять задержку"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:37
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
+#, kde-format
 msgid "Delay for timeout"
-msgstr "Задержка для движений мыши"
+msgstr "Задержка"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
