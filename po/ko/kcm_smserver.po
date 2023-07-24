@@ -41,7 +41,7 @@ msgstr "로그인할 때"
 #: smserversettings.kcfg:26
 #, kde-format
 msgid "Applications to be excluded from session"
-msgstr "세션에서 제외할 프로그램"
+msgstr "세션에서 제외할 앱"
 
 #: ui/main.qml:30
 #, kde-format
@@ -108,7 +108,7 @@ msgstr "세션 복원"
 #: ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr "로그인할 때 열려 있었던 프로그램 실행:"
+msgstr "로그인할 때 열려 있었던 앱 실행:"
 
 #: ui/main.qml:105
 #, kde-format
@@ -131,10 +131,9 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
-"<interface>프로그램 실행기</interface> 메뉴에 <interface>세션 저장</"
-"interface> 항목이 표시됩니다. 이 항목을 클릭하면 Plasma에서 현재 열린 프로그"
-"램을 기억하고 다음 로그인 시에 복원합니다. 다시 클릭하면 열린 프로그램 목록"
-"을 변경합니다."
+"<interface>앱 실행기</interface> 메뉴에 <interface>세션 저장</interface> 항목"
+"이 표시됩니다. 이 항목을 클릭하면 Plasma에서 현재 열린 앱을 기억하고 다음 로"
+"그인 시에 복원합니다. 다시 클릭하면 열린 앱 목록을 변경합니다."
 
 #: ui/main.qml:132
 #, kde-format
@@ -148,7 +147,7 @@ msgstr "빈 세션으로 시작"
 #: ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
-msgstr "무시할 프로그램:"
+msgstr "무시할 앱:"
 
 #: ui/main.qml:169
 #, kde-format
@@ -157,9 +156,8 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
-"세션에서 앱을 복원할 때 자동으로 시작하지 않을 프로그램의 실행 파일 이름을 쉼"
-"표나 쌍점으로 구분하여 입력하십시오(예: 'xterm:console' 또는 'xterm,"
-"konsole')."
+"세션에서 앱을 복원할 때 자동으로 시작하지 않을 앱의 실행 파일 이름을 쉼표나 "
+"쌍점으로 구분하여 입력하십시오(예: 'xterm:console' 또는 'xterm,konsole')."
 
 #: ui/main.qml:177
 #, kde-format
