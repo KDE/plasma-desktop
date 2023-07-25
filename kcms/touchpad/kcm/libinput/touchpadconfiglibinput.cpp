@@ -42,6 +42,12 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
     m_view->rootContext()->setContextProperty("backend", m_backend);
     m_view->rootContext()->setContextProperty("deviceModel", QVariant::fromValue(m_backend->getDevices().toList()));
 
+    QObject::connect(m_view, &QQuickWidget::statusChanged, [&](QQuickWidget::Status status) {
+        if (status == QQuickWidget::Ready) {
+            connect(m_view->rootObject(), SIGNAL(changeSignal()), this, SLOT(onChange()));
+        }
+    });
+
     qmlRegisterSingletonInstance("org.kde.touchpad.kcm", 1, 0, "TouchpadConfig", this);
 
     m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
@@ -53,7 +59,6 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
     } else {
         connect(m_backend, SIGNAL(touchpadAdded(bool)), this, SLOT(onTouchpadAdded(bool)));
         connect(m_backend, SIGNAL(touchpadRemoved(int)), this, SLOT(onTouchpadRemoved(int)));
-        connect(m_view->rootObject(), SIGNAL(changeSignal()), this, SLOT(onChange()));
     }
 }
 

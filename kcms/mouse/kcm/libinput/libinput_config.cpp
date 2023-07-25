@@ -54,6 +54,12 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     m_view->rootContext()->setContextProperty("backend", m_backend);
     m_view->rootContext()->setContextProperty("deviceModel", getDeviceList(m_backend));
 
+    QObject::connect(m_view, &QQuickWidget::statusChanged, [&](QQuickWidget::Status status) {
+        if (status == QQuickWidget::Ready) {
+            connect(m_view->rootObject(), SIGNAL(changeSignal()), this, SLOT(onChange()));
+        }
+    });
+
     m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
 
     if (m_backend->mode() == InputBackendMode::XLibinput) {
@@ -69,7 +75,6 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     } else {
         connect(m_backend, SIGNAL(deviceAdded(bool)), this, SLOT(onDeviceAdded(bool)));
         connect(m_backend, SIGNAL(deviceRemoved(int)), this, SLOT(onDeviceRemoved(int)));
-        connect(m_view->rootObject(), SIGNAL(changeSignal()), this, SLOT(onChange()));
     }
 
     // Just set it to a reasonable default size
