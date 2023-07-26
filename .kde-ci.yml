@@ -56,6 +56,7 @@ RuntimeDependencies:
 - 'on': ['@all']
   'require':
     'plasma/kwayland-integration' : '@same'
+    'plasma/plasma-integration' : '@same'
 
 Options:
   require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5']
