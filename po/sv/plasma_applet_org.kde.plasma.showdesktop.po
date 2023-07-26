@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2015, 2016, 2018, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2015, 2016, 2018, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-09-24 15:59+0200\n"
+"PO-Revision-Date: 2023-07-25 21:36+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -60,14 +60,10 @@ msgid "Moves windows back to their original positions"
 msgstr "Flyttar tillbaka fönster till sina ursprungliga positioner"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
-"Visar tillfälligt skrivbordet genom att flytta öppna fönster till skärmhörn"
+msgstr "Visar skrivbordet tillfälligt genom att flytta bort fönster"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Visa skrivbord"

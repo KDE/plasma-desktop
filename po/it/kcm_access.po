@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:45+0000\n"
-"PO-Revision-Date: 2022-12-16 11:07+0100\n"
+"PO-Revision-Date: 2023-07-15 23:25+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -174,10 +174,9 @@ msgstr "Usa un ritardo di timeout"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:37
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
+#, kde-format
 msgid "Delay for timeout"
-msgstr "Ritardo per il movimento del mouse"
+msgstr "Ritardo per il timeout"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
