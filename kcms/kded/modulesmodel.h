@@ -21,7 +21,7 @@ struct ModulesModelData {
     bool immutable;
     bool savedAutoloadEnabled;
 };
-Q_DECLARE_TYPEINFO(ModulesModelData, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(ModulesModelData, Q_RELOCATABLE_TYPE);
 
 class ModulesModel : public QAbstractListModel
 {
