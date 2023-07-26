@@ -1,14 +1,14 @@
 # Translation of kcmkded to Korean.
 # Copyright (C) 2007-2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2015, 2017, 2020, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2015, 2017, 2020, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-29 02:07+0000\n"
-"PO-Revision-Date: 2022-05-15 22:45+0200\n"
+"PO-Revision-Date: 2023-07-25 22:49+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -39,21 +39,17 @@ msgid "Failed to start service."
 msgstr "서비스를 시작할 수 없습니다."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
-msgstr "KDE 서비스 관리자(kded5)에 변경 사항 저장을 통보할 수 없음: %1"
+msgstr "KDE 서비스 관리자(kded6)에 변경 사항 저장을 통보할 수 없음: %1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"배경 서비스 관리자(kded5)가 실행 중이 아닙니다. 설치 상태를 확인하십시오."
+"배경 서비스 관리자(kded6)가 실행 중이 아닙니다. 설치 상태를 확인하십시오."
 
 #: ui/main.qml:45
 #, kde-format
@@ -65,15 +61,12 @@ msgstr ""
 "을 비활성화합니다."
 
 #: ui/main.qml:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
-"일부 서비스는 배경 서비스 관리자(kded5)가 다시 시작되었을 때 변경 사항을 적용"
+"일부 서비스는 배경 서비스 관리자(kded6)가 다시 시작되었을 때 변경 사항을 적용"
 "할 수 있도록 자동으로 다시 시작/정지되었습니다."
 
 #: ui/main.qml:96

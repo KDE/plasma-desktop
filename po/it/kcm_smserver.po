@@ -4,22 +4,22 @@
 # Andrea Celli <andrea.celli@libero.it>, 2006.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2009, 2022.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009, 2010.
-# Paolo Zamponi <feus73@gmail.com>, 2018, 2019, 2020, 2021.
+# Paolo Zamponi <feus73@gmail.com>, 2018, 2019, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-05 02:15+0000\n"
-"PO-Revision-Date: 2022-12-26 14:10+0100\n"
-"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"PO-Revision-Date: 2023-07-08 22:59+0200\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -123,7 +123,7 @@ msgstr "All'accesso, avvia le applicazioni che erano aperte:"
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr "All'ultimo chiusura di sessione"
+msgstr "All'ultima chiusura di sessione"
 
 #: ui/main.qml:118
 #, kde-format
