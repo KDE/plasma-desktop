@@ -62,7 +62,12 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
 
     m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
 
-    if (m_backend->mode() == InputBackendMode::XLibinput) {
+#if BUILD_KCM_MOUSE_X11
+    bool deviceless = m_backend->mode() == InputBackendMode::XLibinput;
+#else
+    bool deviceless = false;
+#endif
+    if (deviceless) {
         m_view->setSource(QUrl(QStringLiteral("qrc:/libinput/main_deviceless.qml")));
     } else {
         m_view->setSource(QUrl(QStringLiteral("qrc:/libinput/main.qml")));

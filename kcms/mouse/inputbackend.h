@@ -7,14 +7,21 @@
 
 #pragma once
 
+#include <config-build-options.h>
+
 #include <QObject>
 #include <QVariantHash>
 #include <QVector>
+#include <memory> // std::unique_ptr
 
 enum class InputBackendMode {
+#if BUILD_KCM_MOUSE_KWIN_WAYLAND
     KWinWayland = 0,
+#endif
+#if BUILD_KCM_MOUSE_X11
     XLibinput = 1,
     XEvdev = 2,
+#endif
 };
 
 class InputBackend : public QObject

@@ -5,18 +5,19 @@
 */
 
 #include "configcontainer.h"
-#include "configplugin.h"
 
+#include "configplugin.h"
 #include "inputbackend.h"
 
-#include <kwindowsystem.h>
+#include <KWindowSystem>
+
+#include <memory> // std::unique_ptr
 
 extern "C" {
 Q_DECL_EXPORT void kcminit()
 {
-    InputBackend *backend = InputBackend::implementation();
+    std::unique_ptr<InputBackend> backend(InputBackend::implementation());
     backend->kcmInit();
-    delete backend;
 }
 }
 

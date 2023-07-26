@@ -6,10 +6,6 @@ if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
     add_subdirectory( keyboard )
 endif()
 
-if (EVDEV_FOUND AND XORGLIBINPUT_FOUND AND X11_Xi_FOUND)
-    add_subdirectory( mouse )
-endif()
-
 add_subdirectory( access )
 add_subdirectory( dateandtime )
 add_subdirectory( ksplash )
@@ -40,6 +36,10 @@ if (KF6Baloo_FOUND)
    add_subdirectory(baloo)
 endif()
 add_subdirectory(solid_actions)
+
+if (BUILD_KCM_MOUSE_KWIN_WAYLAND OR BUILD_KCM_MOUSE_X11)
+    add_subdirectory(mouse)
+endif()
 
 if (BUILD_KCM_TOUCHPAD_KWIN_WAYLAND OR BUILD_KCM_TOUCHPAD_X11)
     add_subdirectory(touchpad)

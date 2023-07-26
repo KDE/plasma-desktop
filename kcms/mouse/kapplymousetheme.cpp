@@ -11,10 +11,10 @@
 
 #include <KWindowSystem>
 
+#include <QDebug>
 #include <QFile>
 #include <QGuiApplication>
-
-#include <QDebug>
+#include <memory> // std::unique_ptr
 
 int main(int argc, char *argv[])
 {
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    X11Backend *backend = X11Backend::implementation();
+    std::unique_ptr<X11Backend> backend(X11Backend::implementation());
 
     if (!backend->isValid()) {
         return 2;
@@ -41,6 +41,5 @@ int main(int argc, char *argv[])
 
     backend->applyCursorTheme(theme, size.toInt());
 
-    delete backend;
     return ret;
 }
