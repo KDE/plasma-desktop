@@ -211,11 +211,15 @@ EmptyPage {
             let targetY = currentItem ? currentItem.y : contentY
             let targetIndex = currentIndex
             // supports mirroring
-            let atLeft = currentIndex % columns === 0
+            const atLeft = currentIndex % columns === (LayoutMirroring.enabled ? columns - 1 : 0)
+            // at the beginning of a line
+            const isLeading = currentIndex % columns === 0
             // at the top of a given column and in the top row
             let atTop = currentIndex < columns
             // supports mirroring
-            let atRight = currentIndex % columns === columns - 1
+            const atRight = currentIndex % columns === (LayoutMirroring.enabled ? 0 : columns - 1)
+            // at the end of a line
+            const isTrailing = currentIndex % columns === columns - 1
             // at bottom of a given column, not necessarily in the last row
             let atBottom = currentIndex >= count - columns
             // Implements the keyboard navigation described in https://www.w3.org/TR/wai-aria-practices-1.2/#grid
@@ -256,7 +260,7 @@ EmptyPage {
                     case Qt.Key_Home: if (event.modifiers === Qt.ControlModifier && currentIndex !== 0) {
                         currentIndex = 0
                         focusCurrentItem(event, Qt.BacktabFocusReason)
-                    } else if (!atLeft) {
+                    } else if (!isLeading) {
                         targetIndex -= currentIndex % columns
                         currentIndex = Math.max(targetIndex, 0)
                         focusCurrentItem(event, Qt.BacktabFocusReason)
@@ -264,7 +268,7 @@ EmptyPage {
                     case Qt.Key_End: if (event.modifiers === Qt.ControlModifier && currentIndex !== count - 1) {
                         currentIndex = count - 1
                         focusCurrentItem(event, Qt.TabFocusReason)
-                    } else if (!atRight) {
+                    } else if (!isTrailing) {
                         targetIndex += columns - 1 - (currentIndex % columns)
                         currentIndex = Math.min(targetIndex, count - 1)
                         focusCurrentItem(event, Qt.TabFocusReason)
