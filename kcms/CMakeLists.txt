@@ -18,11 +18,6 @@ add_subdirectory( landingpage )
 add_subdirectory( keys )
 add_subdirectory( ksmserver )
 
-if (CMAKE_SYSTEM_NAME MATCHES Linux)
-   # this one doesn't seem to be very portable, Alex
-   add_subdirectory( joystick )
-endif ()
-
 add_subdirectory( desktoppaths )
 
 add_subdirectory(activities)
