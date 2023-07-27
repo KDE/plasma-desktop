@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -388,7 +388,7 @@ msgstr ""
 msgid "Press anywhere with three fingers."
 msgstr ""
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:68
+#: kcm/libinput/touchpadconfiglibinput.cpp:73
 #, fuzzy, kde-format
 #| msgid ""
 #| "Error while loading values. See logs for more informations. Please "
@@ -400,12 +400,12 @@ msgstr ""
 "Greška pri učitavanju vrednosti. Pogledajte dnevnik za više detalja. "
 "Pokrenite ponovo ovaj postavni modul."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:71
+#: kcm/libinput/touchpadconfiglibinput.cpp:76
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nema nijednog dodirnika. Povežite ga sada."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:80
+#: kcm/libinput/touchpadconfiglibinput.cpp:85
 #, fuzzy, kde-format
 #| msgid ""
 #| "Not able to save all changes. See logs for more informations. Please "
@@ -417,7 +417,7 @@ msgstr ""
 "Ne mogu da sačuvam sve izmene. Pogledajte dnevnik za više detalja. Pokrenite "
 "ponovo ovaj postavni modul pa pokušajte još opet."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:99
+#: kcm/libinput/touchpadconfiglibinput.cpp:104
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -426,7 +426,7 @@ msgstr ""
 "Greška pri učitavanju podrazumevanih vrednosti. Neke od opcija ne mogu da se "
 "postave na podrazumevane vrednosti."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:119
+#: kcm/libinput/touchpadconfiglibinput.cpp:124
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -435,12 +435,12 @@ msgstr ""
 "Greška pri dodavanju novog povezanog uređaja. Povežite ga opet i pokrenite "
 "ponovo ovaj postavni modul."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:147
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Dodirnik otkačen. Zatvorite njegov dijalog postavki."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:144
+#: kcm/libinput/touchpadconfiglibinput.cpp:149
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Dodirnik otkačen. Nema drugih dodirnika."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2021-05-26 09:25+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -379,7 +379,7 @@ msgstr "Натискання будь-де трьома пальцями"
 msgid "Press anywhere with three fingers."
 msgstr "Натискання будь-де трьома пальцями."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:68
+#: kcm/libinput/touchpadconfiglibinput.cpp:73
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -388,13 +388,13 @@ msgstr ""
 "Помилка під час завантаження значень. Докладнішу інформацію можна знайти у "
 "журналі. Будь ласка, перезапустіть модуль керування сенсорними панелями."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:71
+#: kcm/libinput/touchpadconfiglibinput.cpp:76
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr ""
 "Не знайдено сенсорної панелі. З’єднайте сенсорну панель із комп’ютером."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:80
+#: kcm/libinput/touchpadconfiglibinput.cpp:85
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -404,7 +404,7 @@ msgstr ""
 "Будь ласка, перезапустіть модуль керування сенсорними панелями, потім "
 "повторіть спробу."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:99
+#: kcm/libinput/touchpadconfiglibinput.cpp:104
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -413,7 +413,7 @@ msgstr ""
 "Помилка під час спроби завантажити типові значення. Не вдалося встановити "
 "типові значення для усіх параметрів."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:119
+#: kcm/libinput/touchpadconfiglibinput.cpp:124
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -423,12 +423,12 @@ msgstr ""
 "спробуйте з’єднати його з комп’ютером ще раз, потім перезапустіть модуль "
 "керування сенсорними панелями."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:147
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Сенсорну панель від’єднано. Діалогове вікно її параметрів закрито."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:144
+#: kcm/libinput/touchpadconfiglibinput.cpp:149
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Сенсорну панель від’єднано. Інших сенсорних панелей не виявлено."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2023-03-05 16:41+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -370,7 +370,7 @@ msgstr "Trykk med tre fingrar kor som helst"
 msgid "Press anywhere with three fingers."
 msgstr "Trykk med tre fingrar kor som helst."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:68
+#: kcm/libinput/touchpadconfiglibinput.cpp:73
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -379,12 +379,12 @@ msgstr ""
 "Feil ved innlesing av data. Sjå loggen for meir informasjon, og prøv å "
 "starta oppsettmodulen på nytt."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:71
+#: kcm/libinput/touchpadconfiglibinput.cpp:76
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Fann ikkje noka styreplate. Prøv å kopla ho til."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:80
+#: kcm/libinput/touchpadconfiglibinput.cpp:85
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -393,7 +393,7 @@ msgstr ""
 "Klarte ikkje lagra alle endringane. Sjå loggen for meir informasjon. Prøv å "
 "starta oppsettmodulen på nytt og prøv igjen."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:99
+#: kcm/libinput/touchpadconfiglibinput.cpp:104
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -402,7 +402,7 @@ msgstr ""
 "Klarte ikkje lasta standardverdiane. Nokre av verdiane kunne ikkje setjast "
 "til standardverdiar."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:119
+#: kcm/libinput/touchpadconfiglibinput.cpp:124
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -411,12 +411,12 @@ msgstr ""
 "Klarte ikkje leggja til nyleg tilkopla eining. Prøv å kopla ho til ein gong "
 "til, og start så oppsettmodulen på nytt."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:147
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Styreplata er kopla frå, og innstillingsvindauget vart derfor lukka."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:144
+#: kcm/libinput/touchpadconfiglibinput.cpp:149
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Styreplata er kopla frå. Finn ingen andre styreplater."

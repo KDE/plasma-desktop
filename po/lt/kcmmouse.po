@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2022-11-18 21:44+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritinė klaida skaitant svarbiausią %1 įrenginio informaciją."
 
-#: kcm/libinput/libinput_config.cpp:90
+#: kcm/libinput/libinput_config.cpp:95
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -52,12 +52,12 @@ msgstr ""
 "Klaida įkeliant reikšmes. Išsamesnei informacijai, žiūrėkite žurnalus. "
 "Paleiskite šį konfigūracijos modulį iš naujo."
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nerasta jokio rodomojo įrenginio. Prijunkite jį dabar."
 
-#: kcm/libinput/libinput_config.cpp:106
+#: kcm/libinput/libinput_config.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -67,7 +67,7 @@ msgstr ""
 "žurnalus. Paleiskite šį konfigūracijos modulį iš naujo ir bandykite dar "
 "kartą."
 
-#: kcm/libinput/libinput_config.cpp:126
+#: kcm/libinput/libinput_config.cpp:131
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -76,7 +76,7 @@ msgstr ""
 "Klaida įkeliant numatytąsias reikšmes. Nepavyko nustatyti kai kurių "
 "parinkčių į jų numatytąsias reikšmes."
 
-#: kcm/libinput/libinput_config.cpp:148
+#: kcm/libinput/libinput_config.cpp:153
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -85,12 +85,12 @@ msgstr ""
 "Klaida pridedant naujai prijungtą įrenginį. Prijunkite jį iš naujo ir "
 "paleiskite šį konfigūracijos modulį iš naujo."
 
-#: kcm/libinput/libinput_config.cpp:172
+#: kcm/libinput/libinput_config.cpp:177
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Rodomasis įrenginys atsijungė. Užvėrė savo nuostatos dialogą."
 
-#: kcm/libinput/libinput_config.cpp:174
+#: kcm/libinput/libinput_config.cpp:179
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Rodomasis įrenginys atsijungė. Jokių kitų įrenginių nerasta."

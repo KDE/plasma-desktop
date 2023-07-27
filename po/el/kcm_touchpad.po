@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2017-03-24 14:43+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -389,7 +389,7 @@ msgstr ""
 msgid "Press anywhere with three fingers."
 msgstr ""
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:68
+#: kcm/libinput/touchpadconfiglibinput.cpp:73
 #, fuzzy, kde-format
 #| msgid ""
 #| "Error while loading values. See logs for more informations. Please "
@@ -401,12 +401,12 @@ msgstr ""
 "Σφάλμα κατά τη φόρτωση των τιμών. Δείτε τα αρχεία καταγραφής για "
 "περισσότερες πληροφορίες. Παρακαλώ επανεκκινήστε το άρθρωμα διαμόρφωσης."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:71
+#: kcm/libinput/touchpadconfiglibinput.cpp:76
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Δε βρέθηκε επιφάνεια αφής. Συνδέστε μια επιφάνεια αφής τώρα."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:80
+#: kcm/libinput/touchpadconfiglibinput.cpp:85
 #, fuzzy, kde-format
 #| msgid ""
 #| "Not able to save all changes. See logs for more informations. Please "
@@ -419,7 +419,7 @@ msgstr ""
 "περισσότερες πληροφορίες. Παρακαλώ επανεκκινήστε το άρθρωμα διαμόρφωσης και "
 "ξαναπροσπαθήστε."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:99
+#: kcm/libinput/touchpadconfiglibinput.cpp:104
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -428,7 +428,7 @@ msgstr ""
 "Αδυναμία φόρτωσης των προκαθορισμένων τιμών. Αποτυχία καθορισμού κάποιων "
 "επιλογών στις προκαθορισμένες τιμές."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:119
+#: kcm/libinput/touchpadconfiglibinput.cpp:124
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -437,12 +437,12 @@ msgstr ""
 "Σφάλμα κατά την προσθήκη της πρόσφατα συνδεδεμένης συσκευής. Παρακαλώ "
 "επανασυνδέστε τη και επανεκκινήστε το άρθρωμα διαμόρφωσης."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:147
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Αποσύνδεση επιφάνειας αφής. Κλείσιμο του διαλόγου ρυθμίσεων."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:144
+#: kcm/libinput/touchpadconfiglibinput.cpp:149
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Αποσύνδεση επιφάνειας αφής. Δε βρέθηκαν άλλες επιφάνειες αφής."

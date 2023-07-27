@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2022-05-18 08:14+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -383,7 +383,7 @@ msgstr "Premeu a qualsevol lloc amb tres dits"
 msgid "Press anywhere with three fingers."
 msgstr "Premeu a qualsevol lloc amb tres dits."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:68
+#: kcm/libinput/touchpadconfiglibinput.cpp:73
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -392,12 +392,12 @@ msgstr ""
 "Error en carregar els valors. Vegeu els registres per a més informació. "
 "Torneu a iniciar aquest mòdul de configuració."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:71
+#: kcm/libinput/touchpadconfiglibinput.cpp:76
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "No s'ha trobat cap ratolí tàctil. Connecteu ara el ratolí tàctil."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:80
+#: kcm/libinput/touchpadconfiglibinput.cpp:85
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -407,7 +407,7 @@ msgstr ""
 "informació. Torneu a iniciar aquest mòdul de configuració i proveu-ho un "
 "altre cop."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:99
+#: kcm/libinput/touchpadconfiglibinput.cpp:104
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -416,7 +416,7 @@ msgstr ""
 "Error en carregar els valors predeterminats. Ha fallat en establir diverses "
 "opcions als seus valors predeterminats."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:119
+#: kcm/libinput/touchpadconfiglibinput.cpp:124
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -425,13 +425,13 @@ msgstr ""
 "Error en afegir un dispositiu connectat nou. Torneu a connectar-lo i "
 "reinicieu aquest mòdul de configuració."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:147
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr ""
 "S'ha desconnectat el ratolí tàctil. Es tanca el seu diàleg de configuració."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:144
+#: kcm/libinput/touchpadconfiglibinput.cpp:149
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""

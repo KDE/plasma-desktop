@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2023-06-14 14:59+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -372,7 +372,7 @@ msgstr "Stisknout kdekoliv třemi prsty"
 msgid "Press anywhere with three fingers."
 msgstr "Stiskněte kdekoliv třemi prsty."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:68
+#: kcm/libinput/touchpadconfiglibinput.cpp:73
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -381,12 +381,12 @@ msgstr ""
 "Chyba při načítání hodnot.Více informací naleznete v záznamech činnosti. "
 "Prosím restartujte tento nastavovací modul."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:71
+#: kcm/libinput/touchpadconfiglibinput.cpp:76
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nebyl nalezen žádný touchpad. Připojte touchpad."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:80
+#: kcm/libinput/touchpadconfiglibinput.cpp:85
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -395,7 +395,7 @@ msgstr ""
 "Nebylo možné uložit všechny změny. Více informací naleznete v záznamu. "
 "Restartujte tento konfigurační modul a zkuste to znovu."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:99
+#: kcm/libinput/touchpadconfiglibinput.cpp:104
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -404,7 +404,7 @@ msgstr ""
 "Chyba při načítání výchozích hodnot. Nastavení některých voleb na výchozí "
 "hodnotu selhalo."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:119
+#: kcm/libinput/touchpadconfiglibinput.cpp:124
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -413,12 +413,12 @@ msgstr ""
 "Při přidávání nově připojeného zařízení došlo k chybě. Připojte zařízení "
 "znovu a restartujte tento konfigurační modul."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:147
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Touchpad byl odpojen. Jeho nastavovací dialog byl uzavřen."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:144
+#: kcm/libinput/touchpadconfiglibinput.cpp:149
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Touchpad odpojen. Žádné další touchpady nebyly nalezeny."

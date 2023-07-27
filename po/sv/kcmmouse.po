@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2022-09-24 16:00+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Allvarligt fel vid läsning av grundläggande enhetsinformation för %1."
 
-#: kcm/libinput/libinput_config.cpp:90
+#: kcm/libinput/libinput_config.cpp:95
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -55,12 +55,12 @@ msgstr ""
 "Fel vid inläsning av värden. Se loggar för mer information. Starta om "
 "inställningsmodulen."
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Ingen pekarenhet hittades. Anslut nu."
 
-#: kcm/libinput/libinput_config.cpp:106
+#: kcm/libinput/libinput_config.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -69,7 +69,7 @@ msgstr ""
 "Kunde inte spara alla ändringar. Se loggar för mer information. Starta om "
 "inställningsmodulen och försök igen."
 
-#: kcm/libinput/libinput_config.cpp:126
+#: kcm/libinput/libinput_config.cpp:131
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -78,7 +78,7 @@ msgstr ""
 "Fel vid inläsning av förvalda värden. Några alternativ kunde inte ställas in "
 "till sina förvalda värden."
 
-#: kcm/libinput/libinput_config.cpp:148
+#: kcm/libinput/libinput_config.cpp:153
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -87,12 +87,12 @@ msgstr ""
 "Fel vid tillägg av nyansluten enhet. Anslut den igen och starta om "
 "inställningsmodulen."
 
-#: kcm/libinput/libinput_config.cpp:172
+#: kcm/libinput/libinput_config.cpp:177
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Pekarenhet bortkopplad. Stänger inställningsdialogrutan."
 
-#: kcm/libinput/libinput_config.cpp:174
+#: kcm/libinput/libinput_config.cpp:179
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Pekarenhet bortkopplad. Inga andra enheter hittades."

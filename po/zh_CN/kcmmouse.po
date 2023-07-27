@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2023-07-23 12:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -38,19 +38,19 @@ msgstr "查询输入设备失败。请重新打开此设置模块。"
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "读取 %1 的基本设备信息时发生致命错误。"
 
-#: kcm/libinput/libinput_config.cpp:90
+#: kcm/libinput/libinput_config.cpp:95
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr "加载数值时发生错误。请查看日志文件获取更多信息。请重启此设置模块。"
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "没有检测到指针设备。请立即连接。"
 
-#: kcm/libinput/libinput_config.cpp:106
+#: kcm/libinput/libinput_config.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -58,26 +58,26 @@ msgid ""
 msgstr ""
 "无法保存全部更改。请查看日志文件获取更多信息。请重启此设置模块，然后重试。"
 
-#: kcm/libinput/libinput_config.cpp:126
+#: kcm/libinput/libinput_config.cpp:131
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr "加载默认值时出错。设置某些选项为默认值时失败。"
 
-#: kcm/libinput/libinput_config.cpp:148
+#: kcm/libinput/libinput_config.cpp:153
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr "添加新连接的设备时出错。请重新连接，并重启此设置模块。"
 
-#: kcm/libinput/libinput_config.cpp:172
+#: kcm/libinput/libinput_config.cpp:177
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "指针设备已断开。已关闭它的设置对话框。"
 
-#: kcm/libinput/libinput_config.cpp:174
+#: kcm/libinput/libinput_config.cpp:179
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "指针设备已断开。没有检测到其他设备。"

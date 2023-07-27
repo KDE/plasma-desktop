@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2022-08-28 22:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "فشل الاستعلام عن أجهزة الإدخال. يرجى إع�
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "خطأ فادح في قراءة معلومات الجهاز الأساسية لـ%1."
 
-#: kcm/libinput/libinput_config.cpp:90
+#: kcm/libinput/libinput_config.cpp:95
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -55,12 +55,12 @@ msgstr ""
 "خطأ أثناء تحميل القيم. انظر السجلات لمزيد من المعلومات. يرجى إعادة تشغيل "
 "وحدة الضبط هذه."
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "لم يتم العثور على جهاز مؤشر. صل الآن."
 
-#: kcm/libinput/libinput_config.cpp:106
+#: kcm/libinput/libinput_config.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -69,7 +69,7 @@ msgstr ""
 "غير قادر على حفظ كل التغييرات. انظر السجلات لمزيد من المعلومات. يرجى إعادة "
 "تشغيل وحدة الضبط هذه والمحاولة مرة أخرى."
 
-#: kcm/libinput/libinput_config.cpp:126
+#: kcm/libinput/libinput_config.cpp:131
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -77,7 +77,7 @@ msgid ""
 msgstr ""
 "خطأ أثناء تحميل القيم المبدئية. فشل في تعيين بعض الخيارات لقيمها المبدئية."
 
-#: kcm/libinput/libinput_config.cpp:148
+#: kcm/libinput/libinput_config.cpp:153
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -86,12 +86,12 @@ msgstr ""
 "خطأ أثناء إضافة جهاز متصل حديثًا. يرجى إعادة توصيله وإعادة تشغيل وحدة الضبط "
 "هذه. "
 
-#: kcm/libinput/libinput_config.cpp:172
+#: kcm/libinput/libinput_config.cpp:177
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "جهاز المؤشر غير متصل. أغلقت مربع حوار الإعداد الخاص به."
 
-#: kcm/libinput/libinput_config.cpp:174
+#: kcm/libinput/libinput_config.cpp:179
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "جهاز المؤشر غير متصل. لم يتم العثور على أجهزة أخرى."

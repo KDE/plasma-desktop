@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2022-08-25 09:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -50,7 +50,7 @@ msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
 "Критична помилка під час читання основних відомостей щодо пристрою для %1."
 
-#: kcm/libinput/libinput_config.cpp:90
+#: kcm/libinput/libinput_config.cpp:95
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -59,12 +59,12 @@ msgstr ""
 "Помилка під час завантаження значень. Докладнішу інформацію можна знайти у "
 "журналі. Будь ласка, перезапустіть модуль керування сенсорними панелями."
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Не знайдено координатного пристрою. З'єднайте пристрій з комп'ютером."
 
-#: kcm/libinput/libinput_config.cpp:106
+#: kcm/libinput/libinput_config.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -74,7 +74,7 @@ msgstr ""
 "Будь ласка, перезапустіть модуль керування сенсорними панелями, потім "
 "повторіть спробу."
 
-#: kcm/libinput/libinput_config.cpp:126
+#: kcm/libinput/libinput_config.cpp:131
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -83,7 +83,7 @@ msgstr ""
 "Помилка під час спроби завантажити типові значення. Не вдалося встановити "
 "типові значення для усіх параметрів."
 
-#: kcm/libinput/libinput_config.cpp:148
+#: kcm/libinput/libinput_config.cpp:153
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -93,13 +93,13 @@ msgstr ""
 "спробуйте з’єднати його з комп’ютером ще раз, потім перезапустіть модуль "
 "керування сенсорними панелями."
 
-#: kcm/libinput/libinput_config.cpp:172
+#: kcm/libinput/libinput_config.cpp:177
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Координатний пристрій від’єднано. Діалогове вікно його параметрів закрито."
 
-#: kcm/libinput/libinput_config.cpp:174
+#: kcm/libinput/libinput_config.cpp:179
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Координатний пристрій від’єднано. Інших пристроїв не знайдено."

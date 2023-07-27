@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2023-06-15 20:56+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -373,7 +373,7 @@ msgstr "Premi ie ajn per tri fingroj"
 msgid "Press anywhere with three fingers."
 msgstr "Premi ie ajn per tri fingroj."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:68
+#: kcm/libinput/touchpadconfiglibinput.cpp:73
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -382,12 +382,12 @@ msgstr ""
 "Eraro dum ŝarĝo de valoroj. Vidu protokolojn por pliaj informoj. Bonvolu "
 "rekomenci ĉi tiun agordan modulon."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:71
+#: kcm/libinput/touchpadconfiglibinput.cpp:76
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Neniu tuŝplato trovita. Konektu tuŝplaton nun."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:80
+#: kcm/libinput/touchpadconfiglibinput.cpp:85
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -396,7 +396,7 @@ msgstr ""
 "Ne eblas konservi ĉiujn ŝanĝojn. Vidu protokolojn por pliaj informoj. "
 "Bonvolu rekomenci ĉi tiun agordan modulon kaj provi denove."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:99
+#: kcm/libinput/touchpadconfiglibinput.cpp:104
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -405,7 +405,7 @@ msgstr ""
 "Eraro dum ŝarĝo de defaŭltaj valoroj. Malsukcesis agordi kelkajn opciojn al "
 "iliaj defaŭltaj valoroj."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:119
+#: kcm/libinput/touchpadconfiglibinput.cpp:124
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -414,12 +414,12 @@ msgstr ""
 "Eraro dum aldono de lastatempe konektita aparato. Bonvolu rekonekti ĝin kaj "
 "rekomenci ĉi tiun agordan modulon."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:147
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Tuŝplato malkonektita. Fermis ĝian agordan dialogon."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:144
+#: kcm/libinput/touchpadconfiglibinput.cpp:149
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Tuŝplato malkonektita. Neniuj aliaj tuŝplatoj trovitaj."

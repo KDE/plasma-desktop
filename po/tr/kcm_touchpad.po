@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2023-07-06 22:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -370,7 +370,7 @@ msgstr "Üç parmağınızla herhangi bir yere basın"
 msgid "Press anywhere with three fingers."
 msgstr "Üç parmağınızla herhangi bir yere basın."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:68
+#: kcm/libinput/touchpadconfiglibinput.cpp:73
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -379,12 +379,12 @@ msgstr ""
 "Değerler yüklenirken hata oluştu. Daha fazla bilgi için günlüklere bakın. "
 "Lütfen bu yapılandırma modülünü yeniden başlatın."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:71
+#: kcm/libinput/touchpadconfiglibinput.cpp:76
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Dokunmatik yüzey bulunamadı. Dokunmatik yüzeyi şimdi bağlayın."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:80
+#: kcm/libinput/touchpadconfiglibinput.cpp:85
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -393,7 +393,7 @@ msgstr ""
 "Tüm değişiklikler kaydedilemiyor. Daha fazla bilgi için günlüklere bakın. "
 "Lütfen bu yapılandırma modülünü yeniden başlatın ve yeniden deneyin."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:99
+#: kcm/libinput/touchpadconfiglibinput.cpp:104
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -402,7 +402,7 @@ msgstr ""
 "Öntanımlı değerler yüklenirken hata oluştu. Bazı seçenekleri öntanımlı "
 "değerlerine ayarlama başarısız."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:119
+#: kcm/libinput/touchpadconfiglibinput.cpp:124
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -411,12 +411,12 @@ msgstr ""
 "Yeni bir aygıt eklenirken hata oluştu. Lütfen yeniden bağlayın ve bu "
 "yapılandırma modülünü yeniden başlatın."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:147
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Dokunmatik yüzey bağlantısı kesildi. Ayar iletişim kutusu kapatıldı."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:144
+#: kcm/libinput/touchpadconfiglibinput.cpp:149
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""

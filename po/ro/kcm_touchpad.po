@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2021-07-25 14:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -378,7 +378,7 @@ msgstr "Apasă oriunde cu trei degete"
 msgid "Press anywhere with three fingers."
 msgstr "Apăsați oriunde cu trei degete."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:68
+#: kcm/libinput/touchpadconfiglibinput.cpp:73
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -387,12 +387,12 @@ msgstr ""
 "Eroare la încărcarea valorilor. Vedeți jurnalul pentru informații "
 "suplimentare. Reporniți acest modul de configurare."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:71
+#: kcm/libinput/touchpadconfiglibinput.cpp:76
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nu a fost detectată o zonă tactilă. Conectați zona tactilă acum."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:80
+#: kcm/libinput/touchpadconfiglibinput.cpp:85
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -401,7 +401,7 @@ msgstr ""
 "Nu s-au putut salva toate modificările. Vedeți jurnalul pentru informații "
 "suplimentare. Reporniți acest modul de configurare și reîncercați."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:99
+#: kcm/libinput/touchpadconfiglibinput.cpp:104
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -410,7 +410,7 @@ msgstr ""
 "Eroare la încărcarea valorilor implicite. Stabilirea unor opțiuni la valori "
 "implicite a eșuat."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:119
+#: kcm/libinput/touchpadconfiglibinput.cpp:124
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -419,12 +419,12 @@ msgstr ""
 "Eroare la adăugarea dispozitivului nou conectat. Reconectați-l și reporniți "
 "acest modul de configurare."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:147
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Zonă tactilă deconectată. Dialogul său de configurare a fost închis."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:144
+#: kcm/libinput/touchpadconfiglibinput.cpp:149
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Zonă tactilă deconectată. Nu au fost găsite alte zone tactile."

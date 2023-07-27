@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-22 02:10+0000\n"
+"POT-Creation-Date: 2023-07-27 01:59+0000\n"
 "PO-Revision-Date: 2022-10-09 17:42+0200\n"
 "Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.eu>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -387,7 +387,7 @@ msgstr "Appuyer n'importe où avec trois doigts"
 msgid "Press anywhere with three fingers."
 msgstr "Appuyer n'importe où avec trois doigts."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:68
+#: kcm/libinput/touchpadconfiglibinput.cpp:73
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -397,12 +397,12 @@ msgstr ""
 "évènements pour plus d'informations. Veuillez redémarrer ce module de "
 "configuration."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:71
+#: kcm/libinput/touchpadconfiglibinput.cpp:76
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Aucun pavé tactile trouvé. Connectez un pavé tactile maintenant."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:80
+#: kcm/libinput/touchpadconfiglibinput.cpp:85
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -412,7 +412,7 @@ msgstr ""
 "l'historique des évènements pour plus d'informations. Veuillez redémarrer ce "
 "module de configuration et essayer à nouveau."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:99
+#: kcm/libinput/touchpadconfiglibinput.cpp:104
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -421,7 +421,7 @@ msgstr ""
 "Erreur lors du chargement des valeurs par défaut. Impossible de définir "
 "certaines options à leurs valeurs d'origines."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:119
+#: kcm/libinput/touchpadconfiglibinput.cpp:124
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -430,13 +430,13 @@ msgstr ""
 "Erreur lors de l'ajout du périphérique nouvellement connecté. Veuillez le "
 "reconnecter et redémarrer ce module de configuration."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:142
+#: kcm/libinput/touchpadconfiglibinput.cpp:147
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr ""
 "Pavé tactile déconnecté. Sa boîte de dialogue de configuration a été fermée."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:144
+#: kcm/libinput/touchpadconfiglibinput.cpp:149
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Pavé tactile déconnecté. Aucun autre pavé tactile trouvé."

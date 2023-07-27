@@ -5,7 +5,7 @@
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2008.
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2014, 2015.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2020.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2020, 2023.
 #
 # KDE Finnish translation sprint participants:
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-29 02:07+0000\n"
-"PO-Revision-Date: 2020-07-12 23:23+0300\n"
+"PO-Revision-Date: 2023-07-25 13:34+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:11+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -46,23 +46,19 @@ msgstr "Palvelua ei voitu käynnistää."
 
 # *** HUOM: Oletan, että ”saved changed” on kirjoitusvirhe, ja oikein olisi ”saved changes”
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"KDE-palvelunhallintaa (kded5) ei voitu tiedottaa tallennetuista muutoksista: "
+"KDE-palvelunhallintaa (kded6) ei voitu tiedottaa tallennetuista muutoksista: "
 "%1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Taustapalveluiden hallinta (kded5) ei ole käynnissä. Varmista, että se on "
+"Taustapalveluiden hallinta (kded6) ei ole käynnissä. Varmista, että se on "
 "asennettu oikein."
 
 #: ui/main.qml:45
@@ -75,17 +71,14 @@ msgstr ""
 "niistä ole hyötyä nyky-ympäristössä."
 
 #: ui/main.qml:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Jotkin palvelut käynnistettiin tai pysäytettiin automaattisesti "
-"taustapalveluiden hallinnan (kded5) käynnistyttyä uudelleen muutostesi "
-"jälkeen."
+"taustapalveluiden hallinnan (kded6) käynnistyttyä muutostesi jälkeen "
+"uudelleen."
 
 #: ui/main.qml:96
 #, kde-format
