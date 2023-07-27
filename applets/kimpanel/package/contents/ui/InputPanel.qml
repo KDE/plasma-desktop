@@ -5,10 +5,11 @@
 */
 
 import QtQuick 2.6
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts 1.1
+
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -55,7 +56,7 @@ PlasmaCore.Dialog {
                 height: inputpanel.labelHeight
                 visible: helper.auxVisible || helper.preeditVisible
                 baselineOffset: inputpanel.textOffset
-                PlasmaComponents3.Label {
+                QQC2.Label {
                     id: auxLabel
                     anchors.baseline: parent.baseline
                     font: preferredFont
@@ -69,7 +70,7 @@ PlasmaCore.Dialog {
                     clip: true
                     visible: helper.preeditVisible
                     baselineOffset: inputpanel.textOffset
-                    PlasmaComponents3.Label {
+                    QQC2.Label {
                         id: preeditLabel1
                         anchors.baseline: parent.baseline
                         anchors.left: parent.left
@@ -84,7 +85,7 @@ PlasmaCore.Dialog {
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.left: preeditLabel1.right
                     }
-                    PlasmaComponents3.Label {
+                    QQC2.Label {
                         id: preeditLabel2
                         anchors.baseline: parent.baseline
                         anchors.left: preeditLabel1.right
@@ -122,7 +123,7 @@ PlasmaCore.Dialog {
                             y: highlight.marginHints.top
                             baselineOffset: inputpanel.textOffset
                             spacing: Kirigami.Units.smallSpacing
-                            PlasmaComponents3.Label {
+                            QQC2.Label {
                                 id: tableLabel
                                 text: model.label
                                 font: preferredFont
@@ -130,7 +131,7 @@ PlasmaCore.Dialog {
                                 color: Kirigami.Theme.textColor
                                 anchors.baseline: parent.baseline
                             }
-                            PlasmaComponents3.Label {
+                            QQC2.Label {
                                 id: textLabel
                                 text: model.text
                                 font: preferredFont

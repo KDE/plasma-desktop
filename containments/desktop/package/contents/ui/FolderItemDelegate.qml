@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Controls as QQC2
 import QtQuick.Window 2.15
 import Qt5Compat.GraphicalEffects
 
@@ -13,7 +14,6 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 
 Item {
@@ -317,7 +317,7 @@ Item {
                     opacity: 0.45
                 }
 
-                PlasmaComponents.Label {
+                QQC2.Label {
                     id: label
 
                     z: 2 // So we can position a textShadowComponent below if needed.
@@ -357,8 +357,6 @@ Item {
                             }
                         }
                     ]
-
-                    height: undefined // Unset PlasmaComponents.Label's default.
 
                     textFormat: Text.PlainText
 

@@ -5,10 +5,11 @@
 */
 
 import QtQuick 2.0
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts 1.1
+
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -42,7 +43,7 @@ Item {
         animated: false
         // active: mouseArea.containsMouse
     }
-    PlasmaComponents3.Label {
+    QQC2.Label {
         id: textIcon
         anchors.centerIn: parent
         width: iconSize

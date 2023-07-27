@@ -10,10 +10,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
  */
 import QtQuick 2.15
+import QtQuick.Controls as QQC2
 import QtQml 2.15
 import QtQuick.Layouts 1.15
+
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.20 as Kirigami
 
 AbstractKickoffItemDelegate {
@@ -47,7 +48,7 @@ AbstractKickoffItemDelegate {
             source: root.decoration || root.icon.name || root.icon.source
         }
 
-        PC3.Label {
+        QQC2.Label {
             id: label
             Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
             Layout.fillWidth: true

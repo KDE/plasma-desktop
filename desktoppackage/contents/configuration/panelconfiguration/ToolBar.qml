@@ -8,6 +8,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.15
+
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
@@ -216,7 +217,7 @@ Item {
         rowSpacing: Kirigami.Units.smallSpacing
         columnSpacing: Kirigami.Units.smallSpacing
 
-        PlasmaComponents3.Label {
+        QQC2.Label {
             Layout.fillWidth: true
 
             activeFocusOnTab: true
@@ -277,7 +278,7 @@ Item {
             Layout.preferredWidth: dialogRoot.vertical ? 0 : Kirigami.Units.gridUnit * 8
             Layout.preferredHeight: dialogRoot.vertical ? Kirigami.Units.gridUnit * 8 : 0
         }
-        PlasmaComponents3.Label {
+        QQC2.Label {
             id: spinBoxLabel
             Layout.fillWidth: true
             wrapMode: Text.Wrap
@@ -352,7 +353,7 @@ Item {
         }
     }
 
-    PlasmaComponents3.Label {
+    QQC2.Label {
         id: placeHolder
         visible: false
         text: addWidgetsButtonText + addSpacerButtonText + settingsButtonText

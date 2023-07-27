@@ -5,7 +5,9 @@
 */
 
 import QtQuick 2.1
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts 1.0 as Layouts
+
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
@@ -75,7 +77,7 @@ MouseArea {
             height: paintedHeight
             wrapMode: Text.Wrap
         }
-        PlasmaComponents.Label {
+        QQC2.Label {
             text: description
             anchors.left: parent.left
             anchors.right: parent.right
@@ -89,28 +91,28 @@ MouseArea {
             topMargin: 16
             horizontalCenter: parent.horizontalCenter
         }
-        PlasmaComponents.Label {
+        QQC2.Label {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:")
             Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
-        PlasmaComponents.Label {
+        QQC2.Label {
             id: licenseText
             text: license
             wrapMode: Text.Wrap
         }
-        PlasmaComponents.Label {
+        QQC2.Label {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Author:")
             Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
-        PlasmaComponents.Label {
+        QQC2.Label {
             text: author
             wrapMode: Text.Wrap
         }
-        PlasmaComponents.Label {
+        QQC2.Label {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Email:")
             Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
-        PlasmaComponents.Label {
+        QQC2.Label {
             text: email
         }
     }

@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Controls as QQC2
 
 import org.kde.plasma.components 3.0 as PC3
 
@@ -39,7 +40,7 @@ KickoffGridView {
 
         padding: fontMetrics.descent / 2
 
-        contentItem: PC3.Label {
+        contentItem: QQC2.Label {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             maximumLineCount: 1

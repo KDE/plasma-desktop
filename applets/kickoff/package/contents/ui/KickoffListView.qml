@@ -8,7 +8,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 import QtQuick 2.15
+import QtQuick.Controls as QQC2
 import QtQml 2.15
+
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PC3
@@ -143,7 +145,7 @@ EmptyPage {
                 width: view.availableWidth
                 height: KickoffSingleton.compactListDelegateHeight
 
-                PC3.Label {
+                QQC2.Label {
                     id: contentLabel
                     anchors.left: parent.left
                     width: section.length === 1

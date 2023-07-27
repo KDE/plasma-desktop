@@ -6,6 +6,7 @@
 */
 
 import QtQuick 2.2
+import QtQuick.Controls as QQC2
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -72,7 +73,7 @@ Item {
             }
         }
 
-        PlasmaComponents.Label {
+        QQC2.Label {
             id: title
 
             elide : Text.ElideRight

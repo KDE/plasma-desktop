@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Controls as QQC2
 import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
@@ -143,7 +144,7 @@ FocusScope {
         }
     }
 
-    PlasmaComponents.Label {
+    QQC2.Label {
         anchors.fill: parent
 
         text: folderView.errorString
@@ -319,7 +320,7 @@ FocusScope {
                 }
             }
 
-            PlasmaComponents.Label {
+            QQC2.Label {
                 id: text
 
                 anchors {

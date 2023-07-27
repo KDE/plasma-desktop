@@ -7,9 +7,9 @@
 import QtQuick 2.10
 import QtQuick.Layouts 1.10
 import QtQuick.Controls 2.10
+
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.20 as Kirigami
 
 AbstractButton {
@@ -73,7 +73,7 @@ AbstractButton {
 
             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
         }
-        PC3.Label {
+        Label {
             id: label
             visible: plasmoid.formFactor === PlasmaCore.Types.Horizontal && plasmoid.configuration.showText
 
