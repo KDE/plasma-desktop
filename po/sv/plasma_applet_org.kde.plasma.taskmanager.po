@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-22 03:07+0000\n"
-"PO-Revision-Date: 2022-08-03 10:21+0200\n"
+"PO-Revision-Date: 2023-07-26 11:09+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -69,16 +69,15 @@ msgid "General:"
 msgstr "Allmänt:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Markera fönster när musen hålls över aktiviteternas verktygstips"
+msgstr ""
+"Visa små förhandsgranskningar av fönster när musen hålls över aktiviteter"
 
 #: package/contents/ui/ConfigAppearance.qml:39
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Markera fönster när musen hålls över aktiviteternas verktygstips"
+msgstr "Dölj andra fönster när musen hålls över förhandsgranskningar"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
@@ -167,25 +166,19 @@ msgid "Cycles through tasks"
 msgstr "Går igenom aktiviteter"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Visar fönster sida vid sida"
+msgstr "Visar små förhandsgranskningar av fönster"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Visar fönster sida vid sida"
+msgstr "Visar stora förhandsgranskningar av fönster"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
@@ -364,7 +357,7 @@ msgstr "Nya aktiviteter visas:"
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "Längst ner"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #: package/contents/ui/ConfigBehavior.qml:233
@@ -381,7 +374,7 @@ msgstr "Till vänster"
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "Längst upp"
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
