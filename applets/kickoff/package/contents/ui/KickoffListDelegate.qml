@@ -10,12 +10,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
  */
 import QtQuick 2.15
-import QtQuick.Controls as QQC2
 import QtQml 2.15
 import QtQuick.Layouts 1.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.20 as Kirigami
 
 AbstractKickoffItemDelegate {
@@ -65,7 +64,7 @@ AbstractKickoffItemDelegate {
             rowSpacing: 0
             columnSpacing: Kirigami.Units.largeSpacing
 
-            QQC2.Label {
+            PC3.Label {
                 id: label
                 Layout.fillWidth: !descriptionLabel.visible
                 Layout.maximumWidth: root.width - root.leftPadding - root.rightPadding - icon.width - row.spacing
@@ -85,7 +84,7 @@ AbstractKickoffItemDelegate {
                 maximumLineCount: 1
             }
 
-            QQC2.Label {
+            PC3.Label {
                 id: descriptionLabel
                 Layout.fillWidth: true
                 // Don't want to show descriptions for apps in the category list, because

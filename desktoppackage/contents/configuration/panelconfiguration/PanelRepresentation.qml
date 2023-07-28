@@ -1,5 +1,4 @@
 import QtQuick 2.15
-import QtQuick.Controls as QQC2
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.15
 
@@ -176,7 +175,7 @@ Item {
             }
         }
 
-        QQC2.Label {
+        PC3.Label {
             text: panelRepresentation.text
             Layout.alignment: Qt.AlignHCenter
             horizontalAlignment: Text.AlignHCenter

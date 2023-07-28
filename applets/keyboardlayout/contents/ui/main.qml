@@ -4,11 +4,11 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Controls as QQC2
 import Qt.labs.platform 1.1
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.components 2.0
 import org.kde.plasma.private.kcm_keyboard as KCMKeyboard
 
@@ -79,7 +79,7 @@ PlasmoidItem {
             }
         }
 
-        QQC2.Label {
+        PlasmaComponents3.Label {
             id: countryCode
             anchors.fill: parent
             visible: Plasmoid.configuration.displayStyle === 0 || !flag.valid

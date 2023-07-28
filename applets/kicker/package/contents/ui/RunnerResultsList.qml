@@ -5,9 +5,10 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Controls as QQC2
 import QtQuick.Layouts 1.15
 
+import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
 
@@ -39,7 +40,7 @@ FocusScope {
         elementId: "vertical-line"
     }
 
-    QQC2.Label {
+    PlasmaComponents3.Label {
         id: header
 
         anchors.left: vertLine.right

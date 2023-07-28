@@ -9,7 +9,6 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Controls as QQC2
 import QtQuick.Layouts 1.15
 import Qt5Compat.GraphicalEffects
 
@@ -96,7 +95,7 @@ ColumnLayout {
                 textFormat: Text.PlainText
             }
             // window title
-            QQC2.Label {
+            PlasmaComponents3.Label {
                 id: winTitle
                 maximumLineCount: 1
                 Layout.fillWidth: true
@@ -107,7 +106,7 @@ ColumnLayout {
                 textFormat: Text.PlainText
             }
             // subtext
-            QQC2.Label {
+            PlasmaComponents3.Label {
                 id: subtext
                 maximumLineCount: 1
                 Layout.fillWidth: true
@@ -161,6 +160,7 @@ ColumnLayout {
         // TODO: this causes XCB error message when being visible the first time
         readonly property var winId: toolTipDelegate.isWin && toolTipDelegate.windows[flatIndex] !== undefined ? toolTipDelegate.windows[flatIndex] : 0
 
+        // There's no PlasmaComponents3 version
         PlasmaExtras.Highlight {
             anchors.fill: hoverHandler
             visible: Boolean(hoverHandler.item?.containsMouse)
@@ -390,7 +390,7 @@ ColumnLayout {
                     stream.model.Muted = v === 0
                 })
             }
-            QQC2.Label { // percent label
+            PlasmaComponents3.Label { // percent label
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: percentMetrics.advanceWidth
                 horizontalAlignment: Qt.AlignRight

@@ -9,10 +9,10 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Controls as QQC2
 import QtQuick.Layouts 1.15
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 
 RowLayout {
@@ -59,7 +59,7 @@ RowLayout {
             Layout.preferredHeight: songText.height
             implicitWidth: songText.implicitWidth
 
-            QQC2.Label {
+            PlasmaComponents3.Label {
                 id: songText
                 parent: songTextWrapper
                 width: parent.width
@@ -81,7 +81,7 @@ RowLayout {
             implicitWidth: artistText.implicitWidth
             visible: artistText.text !== ""
 
-            QQC2.Label {
+            PlasmaExtras.DescriptiveLabel {
                 id: artistText
                 parent: artistTextWrapper
                 width: parent.width
@@ -92,7 +92,6 @@ RowLayout {
                 text: artists.length > 0 ? artists.join(", ") : albumArtists.join(", ")
                 font: Kirigami.Theme.smallFont
                 textFormat: Text.PlainText
-                opacity: 0.7
             }
         }
     }

@@ -6,7 +6,6 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Controls as QQC2
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
@@ -145,7 +144,7 @@ Item {
                 visible: running && delegate.GridView.isCurrentItem
                 onVisibleChanged: maskShaderSource.scheduleUpdate()
 
-                QQC2.Label {
+                PlasmaComponents.Label {
                     id: countLabel
                     anchors.fill: parent
                     horizontalAlignment: Text.AlignHCenter
@@ -208,7 +207,7 @@ Item {
             lineHeight: 0.95
             horizontalAlignment: Text.AlignHCenter
         }
-        QQC2.Label {
+        PlasmaComponents.Label {
             Layout.fillWidth: true
             // otherwise causes binding loop due to the way the Plasma sets the height
             height: implicitHeight
