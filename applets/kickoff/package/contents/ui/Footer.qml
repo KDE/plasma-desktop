@@ -95,7 +95,7 @@ PlasmaExtras.PlasmoidHeading {
             anchors.bottomMargin: -root.bottomPadding
             icon.width: Kirigami.Units.iconSizes.smallMedium
             icon.height: Kirigami.Units.iconSizes.smallMedium
-            icon.name: "applications-other"
+            icon.name: "applications-all-symbolic"
             text: i18n("Applications")
             KeyNavigation.backtab: kickoff.contentArea ? kickoff.contentArea : null
         }
