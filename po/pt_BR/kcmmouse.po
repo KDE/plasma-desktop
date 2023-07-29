@@ -10,20 +10,21 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>,  2009, 2010, 2011, 2012, 2014, 2015.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2016, 2017, 2018, 2020, 2022.
 # Frederico Gonçalves Guimarães <frederico@teia.bio.br>, 2018.
+# Geraldo Simiao <geraldosimiao@fedoraproject.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2022-10-19 15:26-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2023-07-28 22:49-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -241,7 +242,7 @@ msgstr "Mais rápido"
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr ""
+msgstr "Revincule botões adicionais do mouse…"
 
 #: kcm/libinput/main.qml:396
 #, kde-format
@@ -254,12 +255,14 @@ msgstr "Botão extra %1:"
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr ""
+"Pressione o botão do mouse para o qual você deseja adicionar um vínculo de "
+"tecla"
 
 #: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "Indique a nova combinação de teclas para %1"
 
 #: kcm/libinput/main.qml:431
 #, kde-format
@@ -277,7 +280,7 @@ msgstr "Pressione um botão do mouse"
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "Adicionar vinculação…"
 
 #: kcm/libinput/main.qml:478
 #, kde-format
