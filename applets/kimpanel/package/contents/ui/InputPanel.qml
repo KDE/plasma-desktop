@@ -167,7 +167,7 @@ PlasmaCore.Dialog {
                     Layout.maximumWidth: width
                     Layout.maximumHeight: height
                     spacing: Kirigami.Units.smallSpacing
-                    PlasmaCore.IconItem {
+                    Kirigami.Icon {
                         id: prevButton
                         source: inputpanel.verticalLayout ? "arrow-up" : "arrow-left"
                         width: inputpanel.labelHeight
@@ -181,7 +181,7 @@ PlasmaCore.Dialog {
                             onReleased: helper.lookupTablePageUp()
                         }
                     }
-                    PlasmaCore.IconItem {
+                    Kirigami.Icon {
                         id: nextButton
                         source: inputpanel.verticalLayout ? "arrow-down" : "arrow-right"
                         width: inputpanel.labelHeight

@@ -20,7 +20,6 @@ DropArea {
     property int contentHeight: model ? (model.count * Kirigami.Units.iconSizes.medium) + ((model.count - 1) * flow.spacing) : 0
 
     property alias model: repeater.model
-    property alias usesPlasmaTheme: repeater.usesPlasmaTheme
 
     onDragMove: event => {
         if (flow.animating) {
@@ -61,8 +60,6 @@ DropArea {
 
         Repeater {
             id: repeater
-
-            property bool usesPlasmaTheme: false
 
             delegate: SideBarItem {}
 

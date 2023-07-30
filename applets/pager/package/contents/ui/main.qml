@@ -205,7 +205,7 @@ PlasmoidItem {
     Component {
         id: windowIconComponent
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             anchors.centerIn: parent
 
             height: Math.min(Kirigami.Units.iconSizes.small,
@@ -220,7 +220,6 @@ PlasmoidItem {
             property var model: null
 
             source: model ? model.decoration : undefined
-            usesPlasmaTheme: false
             roundToIconSize: false
             animated: false
         }

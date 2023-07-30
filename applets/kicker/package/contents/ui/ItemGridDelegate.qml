@@ -48,7 +48,7 @@ Item {
         }
     }
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: icon
 
         y: item.showLabel ? (2 * highlightItemSvg.margins.top) : undefined
@@ -59,10 +59,7 @@ Item {
         width: iconSize
         height: width
 
-        colorGroup: Kirigami.Theme.ComplementaryColorGroup
-
         animated: false
-        usesPlasmaTheme: item.GridView.view.usesPlasmaTheme
 
         source: model.decoration
     }

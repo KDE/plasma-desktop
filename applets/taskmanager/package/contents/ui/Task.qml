@@ -468,14 +468,13 @@ PlasmaCore.ToolTipArea {
             return margin;
         }
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: icon
 
             anchors.fill: parent
 
             active: task.highlighted
             enabled: true
-            usesPlasmaTheme: false
 
             source: model.decoration
         }

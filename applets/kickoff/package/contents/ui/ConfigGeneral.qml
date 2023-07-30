@@ -65,7 +65,7 @@ ColumnLayout {
                 width: Kirigami.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
                 height: Kirigami.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
 
-                PlasmaCore.IconItem {
+                Kirigami.Icon {
                     anchors.centerIn: parent
                     width: Kirigami.Units.iconSizes.large
                     height: width

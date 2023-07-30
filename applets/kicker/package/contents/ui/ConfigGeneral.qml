@@ -91,7 +91,7 @@ Kirigami.FormLayout {
             id: iconDialog
 
             function setCustomButtonImage(image) {
-                configGeneral.cfg_customButtonImage = image || configGeneral.cfg_icon || "start-here-kde"
+                configGeneral.cfg_customButtonImage = image || configGeneral.cfg_icon || "start-here-kde-symbolic"
                 configGeneral.cfg_useCustomButtonImage = true;
             }
 
@@ -106,7 +106,7 @@ Kirigami.FormLayout {
             width: Kirigami.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
             height: Kirigami.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 anchors.centerIn: parent
                 width: Kirigami.Units.iconSizes.large
                 height: width
@@ -131,7 +131,7 @@ Kirigami.FormLayout {
                 text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
                 icon.name: "edit-clear"
                 onClicked: {
-                    configGeneral.cfg_icon = "start-here-kde"
+                    configGeneral.cfg_icon = "start-here-kde-symbolic"
                     configGeneral.cfg_useCustomButtonImage = false
                 }
             }

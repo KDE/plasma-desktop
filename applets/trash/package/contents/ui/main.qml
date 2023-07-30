@@ -124,7 +124,7 @@ PlasmoidItem {
         onClicked: Qt.openUrlExternally("trash:/");
     }
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: icon
         source: plasmoid.icon
         anchors {

@@ -99,7 +99,7 @@ PlasmoidItem {
             spacing: 0
             Layout.fillWidth: true
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id: headerIcon
                 implicitWidth: Math.min(Kirigami.Units.iconSizes.huge, fullRep.width, fullRep.height)
                 implicitHeight: implicitWidth

@@ -168,12 +168,11 @@ MouseArea {
         radius: 3
         opacity: configurationArea.currentApplet && configurationArea.containsMouse ? 0.5 : 0
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             visible: !root.dragAndDropping
             source: "transform-move"
             width: Math.min(parent.width, parent.height)
             height: width
-            anchors.centerIn: parent
         }
         Behavior on x {
             enabled: !configurationArea.pressed

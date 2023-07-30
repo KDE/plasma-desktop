@@ -7,7 +7,6 @@
 import QtQuick 2.15
 
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
@@ -25,7 +24,6 @@ FocusScope {
     property bool dragEnabled: true
     property bool dropEnabled: false
     property bool showLabels: true
-    property alias usesPlasmaTheme: gridView.usesPlasmaTheme
 
     property alias currentIndex: gridView.currentIndex
     property alias currentItem: gridView.currentItem
@@ -183,8 +181,6 @@ FocusScope {
 
                 signal itemContainsMouseChanged(bool containsMouse)
 
-                property bool usesPlasmaTheme: false
-
                 property int iconSize: Kirigami.Units.iconSizes.huge
 
                 property bool animating: false
@@ -253,7 +249,7 @@ FocusScope {
 
                         opacity: 0.5
 
-                        PlasmaCore.IconItem {
+                        Kirigami.Icon {
                             anchors {
                                 right: parent.right
                                 rightMargin: parent.margins.right

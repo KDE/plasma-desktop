@@ -9,7 +9,6 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.workspace.keyboardlayout 1.0
 import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 import org.kde.plasma.private.kcm_keyboard as KCMKeyboard
@@ -43,7 +42,7 @@ Kirigami.FormLayout {
 
             // Deliberately using this instead of Image to preserve visual fidelity
             // with what the widget will show
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id: flagImage
                 width: Kirigami.Units.iconSizes.medium
                 height: Kirigami.Units.iconSizes.medium
@@ -82,7 +81,7 @@ Kirigami.FormLayout {
 
             // Deliberately using this instead of Image to preserve visual fidelity
             // with what the widget will show
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 width: Kirigami.Units.iconSizes.medium
                 height: Kirigami.Units.iconSizes.medium
                 anchors.right: parent.right

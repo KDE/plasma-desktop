@@ -11,6 +11,7 @@ import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.components 2.0
 import org.kde.plasma.private.kcm_keyboard as KCMKeyboard
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmoidItem {
     id: root
@@ -59,10 +60,11 @@ PlasmoidItem {
             }
         }
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: flag
 
             anchors.fill: parent
+
             visible: valid && (Plasmoid.configuration.displayStyle === 1 || Plasmoid.configuration.displayStyle === 2)
 
             active: containsMouse

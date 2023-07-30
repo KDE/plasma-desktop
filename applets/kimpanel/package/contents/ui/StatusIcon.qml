@@ -31,7 +31,7 @@ Item {
         }
     }
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: imageIcon
         anchors.centerIn: parent
         width: iconSize

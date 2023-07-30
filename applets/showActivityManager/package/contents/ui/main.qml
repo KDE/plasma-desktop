@@ -88,7 +88,7 @@ PlasmoidItem {
             subText: i18n("Click to show the activity manager")
         }
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: icon
             height: Math.min(parent.height, parent.width)
             width: height

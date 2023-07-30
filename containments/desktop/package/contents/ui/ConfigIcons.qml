@@ -84,7 +84,7 @@ Item {
                     iconMenu.open(0, height);
                 }
 
-                PlasmaCore.IconItem {
+                Kirigami.Icon {
                     anchors.centerIn: parent
                     width: Kirigami.Units.iconSizes.large
                     height: width

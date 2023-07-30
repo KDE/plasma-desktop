@@ -53,23 +53,23 @@ AbstractButton {
     }
 
     contentItem: RowLayout {
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: iconItem
             visible: source !== "" && iconItem.valid
 
-            implicitWidth: label.implicitHeight
-            implicitHeight: label.implicitHeight
+            implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
+            implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
 
             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
         }
         // Fall back to a generic icon if the application doesn't provide a valid one
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             visible: !iconItem.valid
 
             source: "preferences-system-windows"
 
-            implicitWidth: label.implicitHeight
-            implicitHeight: label.implicitHeight
+            implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
+            implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
 
             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
         }

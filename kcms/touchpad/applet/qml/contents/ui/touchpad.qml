@@ -55,7 +55,7 @@ PlasmoidItem {
         connectedSources: dataSource.sources
     }
 
-   compactRepresentation: PlasmaCore.IconItem {
+   compactRepresentation: Kirigami.Icon {
         implicitWidth: Kirigami.Units.iconSizes.small
         implicitHeight: Kirigami.Units.iconSizes.small
 

@@ -122,7 +122,7 @@ PlasmaCore.Dialog {
                         id: contentLayout
                         spacing: Kirigami.Units.gridUnit
 
-                        PlasmaCore.IconItem {
+                        Kirigami.Icon {
                             implicitWidth: Kirigami.Units.iconSizes.huge
                             implicitHeight: Kirigami.Units.iconSizes.huge
                             source: model.decoration

@@ -50,7 +50,7 @@ Item {
         }
     }
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: buttonIcon
 
         anchors.fill: parent
@@ -60,7 +60,6 @@ Item {
             : implicitWidth / implicitHeight
 
         active: mouseArea.containsMouse && !justOpenedTimer.running
-        smooth: true
         source: root.useCustomButtonImage ? plasmoid.configuration.customButtonImage : plasmoid.configuration.icon
 
         // A custom icon could also be rectangular. However, if a square, custom, icon is given, assume it

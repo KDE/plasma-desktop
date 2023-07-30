@@ -7,7 +7,6 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.0 as Layouts
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 
 MouseArea {
@@ -46,7 +45,7 @@ MouseArea {
             local = tooltipDialog.appletDelegate.local
         }
     }
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: tooltipIconWidget
         anchors {
             left: parent.left

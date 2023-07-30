@@ -42,7 +42,7 @@ DragDrop.DropArea {
         root.expanded = !root.expanded;
     }
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: icon
 
         anchors.fill: parent

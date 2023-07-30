@@ -164,7 +164,7 @@ ColumnLayout {
                 resizable: false
                 movable: false
 
-                delegate: PlasmaCore.IconItem {
+                delegate: Kirigami.Icon {
                     width: Kirigami.Units.iconSizes.small
                     height: Kirigami.Units.iconSizes.small
                     animated: false // TableView re-uses delegates, avoid animation when sorting/filtering.

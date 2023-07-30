@@ -83,7 +83,7 @@ PlasmoidItem {
             id: minimizeAllController
         }
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             anchors.fill: parent
             active: mouseArea.containsMouse || activeController.active
             source: Plasmoid.icon

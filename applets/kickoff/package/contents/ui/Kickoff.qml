@@ -243,7 +243,7 @@ PlasmoidItem {
             anchors.fill: parent
             spacing: 0
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id: buttonIcon
 
                 Layout.fillWidth: kickoff.vertical
@@ -257,7 +257,7 @@ PlasmoidItem {
                 visible: valid
             }
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id: buttonIconFallback
                 // fallback is assumed to be square
                 Layout.fillWidth: kickoff.vertical

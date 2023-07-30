@@ -438,7 +438,6 @@ Kicker.DashboardWindow {
                     model: globalFavorites
 
                     dropEnabled: true
-                    usesPlasmaTheme: false
 
                     opacity: enabled ? 1.0 : 0.3
 
@@ -500,7 +499,6 @@ Kicker.DashboardWindow {
                     model: systemFavorites
 
                     dropEnabled: true
-                    usesPlasmaTheme: true
 
                     onCurrentIndexChanged: {
                         preloadAllAppsTimer.defer();

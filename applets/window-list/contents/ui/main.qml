@@ -41,22 +41,22 @@ PlasmoidItem {
                 leading: Item {
                     width: iconItem.width
 
-                    PlasmaCore.IconItem {
+                    Kirigami.Icon {
                         id: iconItem
 
                         source: model.decoration
                         visible: source !== "" && iconItem.valid
 
-                        implicitWidth: parent.height
-                        implicitHeight: parent.height
+                        implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
+                        implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
                     }
                     // Fall back to a generic icon if the application doesn't provide a valid one
-                    PlasmaCore.IconItem {
+                    Kirigami.Icon {
                         source: "preferences-system-windows"
                         visible: !iconItem.valid
 
-                        implicitWidth: parent.height
-                        implicitHeight: parent.height
+                        implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
+                        implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
                     }
                 }
                 text: model.display
@@ -88,7 +88,7 @@ PlasmoidItem {
             iconSource: if (tasksModel.activeTask.valid) {
                 return tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
             } else {
-                return "start-here-kde"
+                return "start-here-kde-symbolic"
             }
 
             TaskManager.TasksModel {

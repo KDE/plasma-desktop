@@ -250,7 +250,7 @@ Item {
                                 // the smallSpacings are for padding
                                 : icon.height + (Kirigami.Units.gridUnit * label.lineCount) + (Kirigami.Units.smallSpacing * 3)
 
-                PlasmaCore.IconItem {
+                Kirigami.Icon {
                     id: icon
 
                     z: 2
@@ -297,9 +297,6 @@ Item {
                     }
 
                     animated: false
-                    usesPlasmaTheme: false
-
-                    smooth: true
 
                     source: model.decoration
                 }

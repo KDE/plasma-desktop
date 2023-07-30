@@ -7,7 +7,6 @@
 import QtQuick 2.0
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -158,7 +157,7 @@ Item {
                 }
             }
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id: icon
 
                 width   : Kirigami.Units.iconSizes.medium
@@ -186,7 +185,7 @@ Item {
                 bottomMargin : Kirigami.Units.smallSpacing
             }
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id      : hasWindowsIndicator
                 source  : "window-duplicate"
                 width   : 16

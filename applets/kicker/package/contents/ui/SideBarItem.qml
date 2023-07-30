@@ -8,6 +8,7 @@ import QtQuick 2.15
 
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 import "code/tools.js" as Tools
 
@@ -49,14 +50,12 @@ Item {
         }
     }
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         anchors.fill: parent
 
         active: toolTip.containsMouse
 
         source: model.decoration
-
-        usesPlasmaTheme: repeater.usesPlasmaTheme
     }
 
     MouseEventListener {

@@ -194,11 +194,10 @@ ColumnLayout {
             Component {
                 id: iconItem
 
-                PlasmaCore.IconItem {
+                Kirigami.Icon {
                     id: realIconItem
                     source: icon
                     animated: false
-                    usesPlasmaTheme: false
                     visible: valid
                     opacity: pipeWireLoader.active ? 0 : 1
 

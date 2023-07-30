@@ -7,7 +7,6 @@
 import QtQuick 2.15
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
 
@@ -183,7 +182,7 @@ Item {
 
         LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: icon
 
             anchors.verticalCenter: parent.verticalCenter
@@ -194,7 +193,6 @@ Item {
             visible: iconsEnabled
 
             animated: false
-            usesPlasmaTheme: false
 
             source: model.decoration
         }

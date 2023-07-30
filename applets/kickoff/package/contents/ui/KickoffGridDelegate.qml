@@ -12,7 +12,6 @@
 import QtQuick 2.15
 import QtQml 2.15
 import QtQuick.Layouts 1.15
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -35,14 +34,13 @@ AbstractKickoffItemDelegate {
     contentItem: ColumnLayout {
         spacing: root.spacing
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: iconItem
             implicitWidth: root.icon.width
             implicitHeight: root.icon.height
             Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
 
             animated: false
-            usesPlasmaTheme: false
 
             source: root.decoration || root.icon.name || root.icon.source
         }
