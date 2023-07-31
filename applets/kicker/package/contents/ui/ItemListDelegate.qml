@@ -79,7 +79,7 @@ Item {
         height: parent.height
 
         property int mouseCol
-        property bool pressed: false
+        property bool mousePressed: false
         property int pressX: -1
         property int pressY: -1
 
@@ -92,19 +92,19 @@ Item {
                     item.openActionMenu(mouseArea, mouse.x, mouse.y);
                 }
             } else {
-                pressed = true;
+                mousePressed = true;
                 pressX = mouse.x;
                 pressY = mouse.y;
             }
         }
 
         onReleased: mouse => {
-            if (pressed && !item.hasChildren) {
+            if (mousePressed && !item.hasChildren) {
                 item.ListView.view.model.trigger(index, "", null);
                 kicker.expanded = false;
             }
 
-            pressed = false;
+            mousePressed = false;
             pressX = -1;
             pressY = -1;
         }
@@ -112,7 +112,7 @@ Item {
         onPositionChanged: mouse => {
             if (pressX !== -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                 dragHelper.startDrag(kicker, model.url, model.decoration);
-                pressed = false;
+                mousePressed = false;
                 pressX = -1;
                 pressY = -1;
 
@@ -145,7 +145,7 @@ Item {
 
         onContainsMouseChanged: {
             if (!containsMouse) {
-                pressed = false;
+                mousePressed = false;
                 pressX = -1;
                 pressY = -1;
                 updateCurrentItemTimer.stop();
