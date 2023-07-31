@@ -160,6 +160,11 @@ PlasmoidItem {
 
     fullRepresentation: FullRepresentation { focus: true }
 
+    // Only exists because the default CompactRepresentation doesn't:
+    // - open on drag
+    // - allow defining a custom drop handler
+    // - expose the ability to show text below or beside the icon
+    // TODO remove once it gains those features
     compactRepresentation: MouseArea {
         id: compactRoot
 

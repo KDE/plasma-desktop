@@ -63,6 +63,10 @@ PlasmoidItem {
             }
         }
     }
+
+    // Only exists because the default CompactRepresentation doesn't expose the
+    // ability to show text below or beside the icon.
+    // TODO remove once it gains that feature.
     Component {
         id: windowListButton
 

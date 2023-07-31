@@ -27,6 +27,11 @@ ContainmentItem {
 
     switchWidth: { switchSize(); }
     switchHeight: { switchSize(); }
+
+    // Only exists because the default CompactRepresentation doesn't:
+    // - open on drag
+    // - allow defining a custom drop handler
+    // TODO remove once it gains that feature (perhaps optionally?)
     compactRepresentation: (isFolder && !isContainment) ? compactRepresentation : null
 
     objectName: isFolder ? "folder" : "desktop"
