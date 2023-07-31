@@ -574,7 +574,7 @@ MouseArea {
             var text = model.display;
 
             var no_strip = ["RStudio"].some(appname => text.includes(appname));
-            var no_truncate = ["Mozilla"].some(appname => text.includes(appname));
+            // var no_truncate = ["Mozilla"].some(appname => text.includes(appname));
             var media = ["Spotify"].some(appname => text.includes(appname));
 
             // KWin appends increasing integers in between pointy brackets to otherwise equal window titles.
@@ -591,7 +591,7 @@ MouseArea {
             text = text.replace(" - Mozilla", "");
             text = text.replace(" — Mozilla", "");
             text = text.replace("Mozilla", "");
-            text = text.replace(" - Brave", "");
+            text = text.replace("Firefox", "");
             text = text.replace(" : bash", "");
             text = text.replace(" : zsh", "");
             text = text.replace(" : xonsh", "");
