@@ -301,7 +301,7 @@ PlasmaExtras.Menu {
         text: i18n("Move to &Desktop")
         icon: "virtual-desktops"
 
-        Connections {
+        property Connections virtualDesktopsMenuConnections: Connections {
             target: virtualDesktopInfo
 
             function onNumberOfDesktopsChanged() {Qt.callLater(virtualDesktopsMenu.refresh)}
@@ -309,7 +309,7 @@ PlasmaExtras.Menu {
             function onDesktopNamesChanged() {Qt.callLater(virtualDesktopsMenu.refresh)}
         }
 
-        PlasmaExtras.Menu {
+        property PlasmaExtras.Menu _virtualDesktopsMenu: PlasmaExtras.Menu {
             id: virtualDesktopsMenu
 
             visualParent: virtualDesktopsMenuItem.action
@@ -382,7 +382,7 @@ PlasmaExtras.Menu {
         text: i18n("Show in &Activities")
         icon: "activities"
 
-        Connections {
+        property Connections activityInfoConnections : Connections {
             target: activityInfo
 
             function onNumberOfRunningActivitiesChanged() {
@@ -390,7 +390,7 @@ PlasmaExtras.Menu {
             }
         }
 
-        PlasmaExtras.Menu {
+        property PlasmaExtras.Menu _activitiesDesktopsMenu: PlasmaExtras.Menu {
             id: activitiesDesktopsMenu
 
             visualParent: activitiesDesktopsMenuItem.action
@@ -524,14 +524,14 @@ PlasmaExtras.Menu {
                      && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities >= 2)
 
-        Connections {
+        property Connections activitiesLaunchersMenuConnections: Connections {
             target: activityInfo
             function onNumberOfRunningActivitiesChanged() {
                 activitiesDesktopsMenu.refresh()
             }
         }
 
-        PlasmaExtras.Menu {
+        property PlasmaExtras.Menu _activitiesLaunchersMenu: PlasmaExtras.Menu {
             id: activitiesLaunchersMenu
             visualParent: showLauncherInActivitiesItem.action
 
@@ -618,7 +618,7 @@ PlasmaExtras.Menu {
         text: i18n("More")
         icon: "view-more-symbolic"
 
-        PlasmaExtras.Menu {
+        property PlasmaExtras.Menu moreMenu: PlasmaExtras.Menu {
             visualParent: moreActionsMenuItem.action
 
             PlasmaExtras.MenuItem {
