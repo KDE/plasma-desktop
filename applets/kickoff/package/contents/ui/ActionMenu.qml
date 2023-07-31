@@ -66,7 +66,7 @@ Item {
             checkable: modelData.hasOwnProperty("checkable") ? modelData.checkable : false
             checked: modelData.hasOwnProperty("checked") ? modelData.checked : false
 
-            Instantiator {
+            property Instantiator _instantiator: Instantiator {
                 active: menuItem.subMenu !== null
                 model: modelData.subActions
                 delegate: menuItemComponent
