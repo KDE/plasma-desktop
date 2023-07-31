@@ -561,7 +561,10 @@ PlasmaCore.ToolTipArea {
                 text = text.replace(appNameRegex, "");
                 text = text.replace(/\s*(?:-|—|–|—|⸺|\|)*\s*$/, ""); // application name
             }
-            text = text.replace(/(\s-\s|\s—\s|)Mozilla/, ""); // appname in mozilla
+            console.log("taskmanager: pre truncate", text);
+            text = text.replace(/(\s-\s|\s—\s|)(Mozilla)/, ""); // appname in mozilla
+            text = text.replace(/(\s-\s|\s—\s|)(Firefox)/, ""); // appname in firefox
+            console.log("taskmanager: post truncate", text);
             text = text.replace(/\s:\s\w+sh/, ""); // shells in konsole
             text = text.replace(/\s-\s(Privat|Uni|Local)/, ""); // mail folders in thunderbird
             text = text.replace(/\s-\s\d+x\d+\s-\s\d+%/, ""); // media info in gwenview
