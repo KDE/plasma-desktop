@@ -55,28 +55,6 @@ PlasmoidItem {
         connectedSources: dataSource.sources
     }
 
-   compactRepresentation: Kirigami.Icon {
-        implicitWidth: Kirigami.Units.iconSizes.small
-        implicitHeight: Kirigami.Units.iconSizes.small
-
-        source: plasmoid.icon
-        active: mousearea.containsMouse
-
-        PlasmaCore.ToolTipArea {
-            mainText: plasmoid.title
-            subText: toolTipSubText
-        }
-
-        MouseArea {
-            id: mousearea
-
-            anchors.fill: parent
-            onClicked: {
-                root.expanded = !root.expanded;
-            }
-        }
-    }
-
     // This is only accessible from System Tray, when hidden in the popup
     // and you click the list item text instead of the icon
    fullRepresentation: Item {
