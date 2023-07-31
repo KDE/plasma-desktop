@@ -133,7 +133,6 @@ RowLayout {
         delegate: PlasmaExtras.MenuItem {
             text: model.display
             icon: model.decoration
-            Accessible.role: Accessible.MenuItem
             onClicked: filteredMenuItemsModel.trigger(index)
         }
         onObjectAdded: (index, object) => contextMenu.addMenuItem(object)
