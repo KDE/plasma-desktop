@@ -94,10 +94,7 @@ Item {
             text: actionItem.text ? actionItem.text : ""
             icon: actionItem.icon ? actionItem.icon : null
 
-            property variant submenu : submenu_
-
-            PlasmaExtras.Menu {
-                id: submenu_
+            property PlasmaExtras.Menu submenu: PlasmaExtras.Menu {
                 visualParent: submenuItem.action
             }
         }
