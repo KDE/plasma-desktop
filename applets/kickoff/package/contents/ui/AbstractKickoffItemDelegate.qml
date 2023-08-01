@@ -159,6 +159,10 @@ T.ItemDelegate {
             if (root.view.movedWithKeyboard) {
                 return
             }
+            // Don't highlight separators.
+            if (root.isSeparator) {
+                return;
+            }
 
             // forceActiveFocus() touches multiple items, so check for
             // activeFocus first to be more efficient.
