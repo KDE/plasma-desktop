@@ -110,18 +110,13 @@ MouseArea {
         prefix: "hover"
     }
 
-    KSvg.Svg {
-        id: audioSvg
-        imagePath: "icons/audio"
-    }
-
     KSvg.SvgItem {
         id: audioStreamIcon
 
         // Need audio indicator twice, to keep iconBox in the center.
         readonly property var requiredSpace: Math.min(iconBox.width, iconBox.height)
                                              + Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium) * 2
-        svg: audioSvg
+        imagePath: "icons/audio"
         smooth: false
 
         height: Math.round(Math.min(parent.height * indicatorScale, Kirigami.Units.iconSizes.smallMedium))
