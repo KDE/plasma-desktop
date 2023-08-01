@@ -39,7 +39,7 @@ MouseArea {
             }
             PropertyChanges {
                 target: audioStreamIcon
-                elementId: "audio-volume-high"
+                source: "audio-volume-high-symbolic"
             }
         },
         State {
@@ -51,7 +51,7 @@ MouseArea {
             }
             PropertyChanges {
                 target: audioStreamIcon
-                elementId: "audio-volume-muted"
+                source: "audio-volume-muted-symbolic"
             }
         }
     ]
@@ -110,14 +110,13 @@ MouseArea {
         prefix: "hover"
     }
 
-    KSvg.SvgItem {
+    Kirigami.Icon {
         id: audioStreamIcon
 
         // Need audio indicator twice, to keep iconBox in the center.
         readonly property var requiredSpace: Math.min(iconBox.width, iconBox.height)
                                              + Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium) * 2
-        imagePath: "icons/audio"
-        smooth: false
+        source: "audio-volume-high-symbolic"
 
         height: Math.round(Math.min(parent.height * indicatorScale, Kirigami.Units.iconSizes.smallMedium))
         width: height

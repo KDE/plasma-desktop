@@ -215,7 +215,7 @@ Item {
             text: model.display
         }
 
-        KSvg.SvgItem {
+        Kirigami.Icon {
             id: arrow
 
             anchors.verticalCenter: parent.verticalCenter
@@ -226,8 +226,9 @@ Item {
             visible: item.hasChildren
             opacity: (item.ListView.view.currentIndex === index) ? 1.0 : 0.4
 
-            svg: arrows
-            elementId: (Qt.application.layoutDirection === Qt.RightToLeft) ? "left-arrow" : "right-arrow"
+            source: Qt.application.layoutDirection !== Qt.RightToLeft
+                ? "go-next-symbolic"
+                : "go-next-rtl-symbolic"
         }
     }
 

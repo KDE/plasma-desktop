@@ -18,11 +18,6 @@ import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutM
 ContainmentLayoutManager.ConfigOverlayWithHandles {
     id: overlay
 
-    KSvg.Svg {
-        id: configIconsSvg
-        imagePath: "widgets/configuration-icons"
-    }
-
     SequentialAnimation {
         id: removeAnim
 
@@ -87,8 +82,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
 
             ActionButton {
                 id: rotateButton
-                svg: configIconsSvg
-                elementId: "rotate"
+                icon.name: "object-rotate-left-symbolic"
                 toolTip: !rotateHandle.pressed ? i18n("Click and drag to rotate") : ""
                 action: applet ? applet.plasmoid.internalAction("rotate") : null
                 down: rotateHandle.pressed
@@ -163,8 +157,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
             }
 
             ActionButton {
-                svg: configIconsSvg
-                elementId: "configure"
+                icon.name: "configure"
                 visible: qAction && qAction.enabled || false
                 qAction: applet ? applet.plasmoid.internalAction("configure") : null
                 Component.onCompleted: {
@@ -175,8 +168,9 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
             }
 
             ActionButton {
-                svg: configIconsSvg
-                elementId: "showbackground"
+                // FIXME: missing from Breeze icons! See
+                // https://bugs.kde.org/show_bug.cgi?id=472863.
+                icon.name: "showbackground"
                 toolTip: checked ? i18n("Hide Background") : i18n("Show Background")
                 visible: (applet.plasmoid.backgroundHints & PlasmaCore.Types.ConfigurableBackground)
                 checked: applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground || applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground
@@ -224,8 +218,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
 
             ActionButton {
                 id: closeButton
-                svg: configIconsSvg
-                elementId: "delete"
+                icon.name: "edit-delete-remove"
                 toolTip: i18n("Remove")
                 visible: {
                     if (!applet) {

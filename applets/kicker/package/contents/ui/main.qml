@@ -192,13 +192,6 @@ PlasmoidItem {
     }
 
     KSvg.Svg {
-        id: arrows
-
-        imagePath: "widgets/arrows"
-        size: "16x16"
-    }
-
-    KSvg.Svg {
         id: lineSvg
         imagePath: "widgets/line"
 
