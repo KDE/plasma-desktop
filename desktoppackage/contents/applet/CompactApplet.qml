@@ -254,9 +254,7 @@ PlasmaCore.ToolTipArea {
                 width: (Plasmoid.location === PlasmaCore.Types.LeftEdge || Plasmoid.location === PlasmaCore.Types.RightEdge) ? 1 : undefined
                 z: 999 /* Draw the line on top of the applet */
                 elementId: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
-                svg: KSvg.Svg {
-                    imagePath: "widgets/line"
-                }
+                imagePath: "widgets/line"
             }
 
             LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
