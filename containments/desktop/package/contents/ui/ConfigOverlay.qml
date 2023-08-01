@@ -18,8 +18,6 @@ import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutM
 ContainmentLayoutManager.ConfigOverlayWithHandles {
     id: overlay
 
-    readonly property int iconSize: touchInteraction ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.small
-
     KSvg.Svg {
         id: configIconsSvg
         imagePath: "widgets/configuration-icons"
@@ -92,7 +90,6 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 svg: configIconsSvg
                 elementId: "rotate"
                 toolTip: !rotateHandle.pressed ? i18n("Click and drag to rotate") : ""
-                iconSize: overlay.iconSize
                 action: applet ? applet.plasmoid.internalAction("rotate") : null
                 down: rotateHandle.pressed
                 Component.onCompleted: {
@@ -168,7 +165,6 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
             ActionButton {
                 svg: configIconsSvg
                 elementId: "configure"
-                iconSize: overlay.iconSize
                 visible: qAction && qAction.enabled || false
                 qAction: applet ? applet.plasmoid.internalAction("configure") : null
                 Component.onCompleted: {
@@ -182,7 +178,6 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 svg: configIconsSvg
                 elementId: "showbackground"
                 toolTip: checked ? i18n("Hide Background") : i18n("Show Background")
-                iconSize: overlay.iconSize
                 visible: (applet.plasmoid.backgroundHints & PlasmaCore.Types.ConfigurableBackground)
                 checked: applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground || applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground
                 checkable: true
@@ -232,7 +227,6 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 svg: configIconsSvg
                 elementId: "delete"
                 toolTip: i18n("Remove")
-                iconSize: overlay.iconSize
                 visible: {
                     if (!applet) {
                         return false;
