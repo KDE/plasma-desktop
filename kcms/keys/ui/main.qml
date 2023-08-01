@@ -397,6 +397,11 @@ KCM.AbstractKCM {
                 }
             }
         }
+        onRejected: {
+            if (addCommandDialog.editing) {
+                addCommandDialog.editing = false;
+            }
+        }
 
         property Kirigami.Action addCommandAction: Kirigami.Action {
             text: addCommandDialog.editing ? i18n("Save") : i18n("Add")
