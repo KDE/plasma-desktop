@@ -99,7 +99,8 @@ PlasmaExtras.Menu {
             {
                 title:   i18n("Recent Files"),
                 group:   "recents",
-                actions: backend.recentDocumentActions(launcherUrl, menu)
+                // Don't show recents if all places are shown, otherwise the menu can get very long.
+                actions: !showAllPlaces ? backend.recentDocumentActions(launcherUrl, menu) : []
             },
             {
                 title:   i18n("Actions"),
