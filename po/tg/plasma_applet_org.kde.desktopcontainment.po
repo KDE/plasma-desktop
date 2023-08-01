@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2021-09-05 11:41-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -33,7 +33,7 @@ msgstr "Нишонаҳо"
 msgid "Filter"
 msgstr "Полоиш"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Ба қафо"
@@ -400,22 +400,22 @@ msgstr "Сарлавҳаи шахсӣ"
 msgid "Enter custom title…"
 msgstr "Сарлавҳаи шахсиро ворид намоед..."
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Даврзанӣ"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Пинҳон кардани пасзамина"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Нишон додани пасзамина"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Тоза кардан"
@@ -425,7 +425,7 @@ msgstr "Тоза кардан"
 msgid "Preview Plugins"
 msgstr "Пешнамоиши васлкунакҳо"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Танзимоти мизи корӣ ва тасвири замина..."
@@ -637,6 +637,9 @@ msgstr "Пешнамоиш"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Қулфшуда"
+
+#~ msgid "Rotate"
+#~ msgstr "Даврзанӣ"
 
 #~ msgid "Open Externally"
 #~ msgstr "Дар берун кушодан"

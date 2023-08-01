@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2022-12-12 22:19+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr "Piktogramos"
 msgid "Filter"
 msgstr "Filtras"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Atgal"
@@ -377,22 +377,22 @@ msgstr "Tinkintas pavadinimas"
 msgid "Enter custom title…"
 msgstr "Įveskite tinkintą pavadinimą…"
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Pasukti"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Slėpti foną"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Rodyti foną"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Šalinti"
@@ -402,7 +402,7 @@ msgstr "Šalinti"
 msgid "Preview Plugins"
 msgstr "Peržiūros papildiniai"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Konfigūruoti darbalaukį ir jo foną…"
@@ -593,6 +593,9 @@ msgstr "Rodyti peržiūras"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Užrakinta"
+
+#~ msgid "Rotate"
+#~ msgstr "Pasukti"
 
 #~ msgid "Open Externally"
 #~ msgstr "Atverti išoriškai"

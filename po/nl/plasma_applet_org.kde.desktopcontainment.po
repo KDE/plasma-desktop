@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2022-11-22 11:39+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -33,7 +33,7 @@ msgstr "Pictogrammen"
 msgid "Filter"
 msgstr "Filter"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Terug"
@@ -371,22 +371,22 @@ msgstr "Aangepaste titel"
 msgid "Enter custom title…"
 msgstr "Voer aangepaste titel in…"
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Draaien"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Achtergrond verbergen"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Achtergrond tonen"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Verwijderen"
@@ -396,7 +396,7 @@ msgstr "Verwijderen"
 msgid "Preview Plugins"
 msgstr "Plug-ins voor voorbeeld"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Bureaublad en achtergrond configureren…"
@@ -587,6 +587,9 @@ msgstr "Voorbeelden tonen"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Vergrendeld"
+
+#~ msgid "Rotate"
+#~ msgstr "Draaien"
 
 #~ msgid "Open Externally"
 #~ msgstr "Extern openen"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2022-11-23 08:11+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -36,7 +36,7 @@ msgstr "Ikone"
 msgid "Filter"
 msgstr "Filter"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Nazaj"
@@ -373,22 +373,22 @@ msgstr "Naslov po meri"
 msgid "Enter custom title…"
 msgstr "Vnesite naslov po meri…"
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Zavrti"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Skrij ozadje"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Prikaži ozadje"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Odstrani"
@@ -398,7 +398,7 @@ msgstr "Odstrani"
 msgid "Preview Plugins"
 msgstr "Vstavki za predogled"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Nastavi namizje in ozadje…"
@@ -589,6 +589,9 @@ msgstr "Pokaži predoglede"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Zaklenjeno"
+
+#~ msgid "Rotate"
+#~ msgstr "Zavrti"
 
 #~ msgid "Open Externally"
 #~ msgstr "Odpri od zunaj"

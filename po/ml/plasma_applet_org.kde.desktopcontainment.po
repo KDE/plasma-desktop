@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2019-12-29 20:50+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -34,7 +34,7 @@ msgstr "ചിഹ്നങ്ങള്‍"
 msgid "Filter"
 msgstr "അരിപ്പ"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "പുറകോട്ട്"
@@ -388,22 +388,22 @@ msgstr "ഇച്ഛാനുസൃത തലക്കെട്ട്"
 msgid "Enter custom title…"
 msgstr "ഇച്ഛാനുസൃത തലക്കെട്ട് നൽകുക..."
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "തിരിക്കുക"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "പശ്ചാത്തലം മറയ്ക്കുക"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "പശ്ചാത്തലം കാണിക്കുക"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr ""
@@ -413,7 +413,7 @@ msgstr ""
 msgid "Preview Plugins"
 msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, fuzzy, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "പണിയിടം ക്രമീകരിക്കുക"
@@ -619,6 +619,9 @@ msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര�
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "പൂട്ടി"
+
+#~ msgid "Rotate"
+#~ msgstr "തിരിക്കുക"
 
 #~ msgid "Cancel"
 #~ msgstr "റദ്ദാക്കുക"

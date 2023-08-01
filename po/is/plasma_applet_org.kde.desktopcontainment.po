@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2023-03-12 21:52+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "Tákn"
 msgid "Filter"
 msgstr "Sía"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Til baka"
@@ -374,22 +374,22 @@ msgstr "Sérsniðinn titill"
 msgid "Enter custom title…"
 msgstr "Sláðu inn sérsniðinn titil…"
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Snúa"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Fela bakgrunn"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Birta bakgrunn"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Fjarlægja"
@@ -399,7 +399,7 @@ msgstr "Fjarlægja"
 msgid "Preview Plugins"
 msgstr "Forskoðunarviðbætur"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Grunnstilla skjáborð og bakgrunnsmynd…"
@@ -590,6 +590,9 @@ msgstr "Birta forskoðun"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Læst"
+
+#~ msgid "Rotate"
+#~ msgstr "Snúa"
 
 #~ msgid "Open Externally"
 #~ msgstr "Opna með öðru forriti"

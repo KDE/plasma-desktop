@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2022-11-23 23:10+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -35,7 +35,7 @@ msgstr "Икони"
 msgid "Filter"
 msgstr "Филтър"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Назад"
@@ -372,22 +372,22 @@ msgstr "Потребителско заглавие"
 msgid "Enter custom title…"
 msgstr "Въведете персонализирано заглавие…"
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Ротация"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Скриване на фона"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Показване на фона"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Премахване"
@@ -397,7 +397,7 @@ msgstr "Премахване"
 msgid "Preview Plugins"
 msgstr "Визуализация на приставки"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Конфигуриране на работния плот и тапета…"
@@ -588,6 +588,9 @@ msgstr "Показване на предварителен преглед"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Заключени"
+
+#~ msgid "Rotate"
+#~ msgstr "Ротация"
 
 #~ msgid "Open Externally"
 #~ msgstr "Отваряне с външно приложение"

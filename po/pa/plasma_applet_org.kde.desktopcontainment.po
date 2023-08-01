@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2022-11-19 06:25-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -34,7 +34,7 @@ msgstr "ਆਈਕਾਨ"
 msgid "Filter"
 msgstr "ਫਿਲਟਰ"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "ਪਿੱਛੇ"
@@ -374,22 +374,22 @@ msgstr "ਕਸਟਮ ਟਾਈਟਲ"
 msgid "Enter custom title…"
 msgstr "ਪਸੰਦੀਦਾ ਟਾਈਟਲ ਦਿਓ…"
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "ਘੁੰਮਾਓ"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "ਬੈਕਗਰਾਊਂਡ ਲੁਕਾਓ"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "ਬੈਕਗਰਾਊਂਡ ਵੇਖਾਓ"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "ਹਟਾਓ"
@@ -399,7 +399,7 @@ msgstr "ਹਟਾਓ"
 msgid "Preview Plugins"
 msgstr "ਪਲੱਗਇਨ ਝਲਕ"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "ਡੈਸਕਟਾਪ ਤੇ ਵਾਲਪੇਪਰ ਦੀ ਸੰਰਚਨਾ ਕਰੋ…"
@@ -590,6 +590,9 @@ msgstr "ਝਲਕਾਂ ਵੇਖਾਓ"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "ਲਾਕ ਕੀਤੇ"
+
+#~ msgid "Rotate"
+#~ msgstr "ਘੁੰਮਾਓ"
 
 #~ msgid "Open Externally"
 #~ msgstr "ਬਾਹਰ ਖੋਲ੍ਹੋ"

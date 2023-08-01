@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2022-06-03 10:41+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -36,7 +36,7 @@ msgstr "Ikon"
 msgid "Filter"
 msgstr "Filter"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Mundur"
@@ -377,22 +377,22 @@ msgstr "Judul kustom"
 msgid "Enter custom title…"
 msgstr "Masukkan judul kustom..."
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Rotasikan"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Sembunyikan Latarbelakang"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Tampilkan Latarbelakang"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Hapus"
@@ -402,7 +402,7 @@ msgstr "Hapus"
 msgid "Preview Plugins"
 msgstr "Plugin Pratinjau"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Konfigurasi Desktop dan Wallpaper..."
@@ -597,6 +597,9 @@ msgstr "Tampilkan Pratinjau"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Dikunci"
+
+#~ msgid "Rotate"
+#~ msgstr "Rotasikan"
 
 #~ msgid "Open Externally"
 #~ msgstr "Buka Secara Eksternal"

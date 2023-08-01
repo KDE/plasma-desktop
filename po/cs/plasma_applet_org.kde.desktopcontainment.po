@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2023-01-03 15:52+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -36,7 +36,7 @@ msgstr "Ikony"
 msgid "Filter"
 msgstr "Filtr"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Zpět"
@@ -373,22 +373,22 @@ msgstr "Vlastní titulek"
 msgid "Enter custom title…"
 msgstr "Zadejte vlastní titulek…"
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "+Otočit"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Skrýt pozadí"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Zobrazit pozadí"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "+Odstranit"
@@ -398,7 +398,7 @@ msgstr "+Odstranit"
 msgid "Preview Plugins"
 msgstr "Moduly pro náhledy"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Nastavit pracovní plochu a tapetu …"
@@ -589,3 +589,6 @@ msgstr "Zobrazit náhled"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Uzamčeno"
+
+#~ msgid "Rotate"
+#~ msgstr "+Otočit"

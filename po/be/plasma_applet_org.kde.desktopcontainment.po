@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2023-02-08 13:46\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -41,7 +41,7 @@ msgstr "Значкі"
 msgid "Filter"
 msgstr "Фільтр"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Назад"
@@ -378,22 +378,22 @@ msgstr "Адвольны подпіс"
 msgid "Enter custom title…"
 msgstr "Увядзіце адвольны подпіс…"
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Павярнуць"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Схаваць фон"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Паказаць фон"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Выдаліць"
@@ -403,7 +403,7 @@ msgstr "Выдаліць"
 msgid "Preview Plugins"
 msgstr "Убудовы папярэдняга прагляду"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Наладжванне працоўнага стала і шпалер…"
@@ -594,6 +594,9 @@ msgstr "Паказваць мініяцюры"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Заблакавана"
+
+#~ msgid "Rotate"
+#~ msgstr "Павярнуць"
 
 #~ msgid "Open Externally"
 #~ msgstr "Адкрыць звонку"

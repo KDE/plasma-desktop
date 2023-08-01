@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop files\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2022-08-20 17:58+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "Ikoner"
 msgid "Filter"
 msgstr "Filter"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Tilbage"
@@ -371,22 +371,22 @@ msgstr "Brugervalgt titel"
 msgid "Enter custom title…"
 msgstr "Angiv en brugervalgt titel..."
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Rotér"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Skjul baggrund"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Vis baggrund"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Fjern"
@@ -396,7 +396,7 @@ msgstr "Fjern"
 msgid "Preview Plugins"
 msgstr "Plugins til forhåndsvisning"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Indstil skrivebord og baggrundsbillede..."
@@ -588,6 +588,9 @@ msgstr "Vis forhåndsvisning"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Låst"
+
+#~ msgid "Rotate"
+#~ msgstr "Rotér"
 
 #~ msgid "Open Externally"
 #~ msgstr "Åbn eksternt"

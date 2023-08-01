@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2022-11-22 17:58+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "Icone"
 msgid "Filter"
 msgstr "Filtro"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Indietro"
@@ -370,22 +370,22 @@ msgstr "Titolo personalizzato"
 msgid "Enter custom title…"
 msgstr "Digita titolo personalizzato..."
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Ruota"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Nascondi sfondo"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Mostra sfondo"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Rimuovi"
@@ -395,7 +395,7 @@ msgstr "Rimuovi"
 msgid "Preview Plugins"
 msgstr "Estensioni di anteprima"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Configura desktop e sfondo..."
@@ -586,6 +586,9 @@ msgstr "Mostra anteprime"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Bloccate"
+
+#~ msgid "Rotate"
+#~ msgstr "Ruota"
 
 #~ msgid "Open Externally"
 #~ msgstr "Apri esternamente"

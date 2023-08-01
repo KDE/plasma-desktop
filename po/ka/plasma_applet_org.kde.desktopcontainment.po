@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2022-11-22 07:53+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "ხატულები"
 msgid "Filter"
 msgstr "ფილტრი"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "უკან"
@@ -371,22 +371,22 @@ msgstr "ხელით მითითებული სათაური"
 msgid "Enter custom title…"
 msgstr "შეიყვანეთ ხელით მითითებული სათაური…"
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "შემობრუნება"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "ფონის დამალვა"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "ფონის ჩვენება"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "წაშლა"
@@ -396,7 +396,7 @@ msgstr "წაშლა"
 msgid "Preview Plugins"
 msgstr "გადახედვის დამატებების მორგება"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "სამუშაო მაგიდის მორგება…"
@@ -587,6 +587,9 @@ msgstr "გადახედვების ჩვენება"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "დაბლოკილი"
+
+#~ msgid "Rotate"
+#~ msgstr "შემობრუნება"
 
 #~ msgid "Open Externally"
 #~ msgstr "გარეთ გახსნა"

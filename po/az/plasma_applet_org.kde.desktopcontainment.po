@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2023-02-19 16:58+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "İkonlar"
 msgid "Filter"
 msgstr "Filtr"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Geriyə"
@@ -370,22 +370,22 @@ msgstr "Fərdi başlıq"
 msgid "Enter custom title…"
 msgstr "Fərdi başlıq daxil etmək..."
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Döndərmək"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Arxa fonu izlətmək"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Arxa fonu göstərmək"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Silmək"
@@ -395,7 +395,7 @@ msgstr "Silmək"
 msgid "Preview Plugins"
 msgstr "Öncədən baxşı plaqini"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "İş masası və fonu tənzimləyin…"
@@ -586,6 +586,9 @@ msgstr "Miniatürləri göstərmək"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Kilidli"
+
+#~ msgid "Rotate"
+#~ msgstr "Döndərmək"
 
 #~ msgid "Open Externally"
 #~ msgstr "Xarici olaraq açın"

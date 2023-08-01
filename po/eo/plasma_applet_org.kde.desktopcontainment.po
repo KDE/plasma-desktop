@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2023-04-08 22:44+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
@@ -35,7 +35,7 @@ msgstr "Piktogramoj"
 msgid "Filter"
 msgstr "Filtri"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Reiri"
@@ -372,22 +372,22 @@ msgstr "Adaptita titolo"
 msgid "Enter custom title…"
 msgstr "Enigu adaptitan titolon…"
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Turni"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Kaŝi Fonon"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Montri Fonon"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Forigi"
@@ -397,7 +397,7 @@ msgstr "Forigi"
 msgid "Preview Plugins"
 msgstr "Antaŭrigardaj Kromprogramoj"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Agordi Labortablon kaj Ekranfonon…"
@@ -588,6 +588,9 @@ msgstr "Montri Antaŭrigardojn"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Ŝlosita"
+
+#~ msgid "Rotate"
+#~ msgstr "Turni"
 
 #~ msgid "Open Externally"
 #~ msgstr "Malfermi Eksterne"

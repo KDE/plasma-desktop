@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-25 02:00+0000\n"
+"POT-Creation-Date: 2023-08-01 02:16+0000\n"
 "PO-Revision-Date: 2022-11-22 10:24+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Icones"
 msgid "Filter"
 msgstr "Filtre"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
 msgstr "Arrere"
@@ -375,22 +375,22 @@ msgstr "Títol personalitzat"
 msgid "Enter custom title…"
 msgstr "Introduïu un títol personalitzat…"
 
-#: package/contents/ui/ConfigOverlay.qml:94
+#: package/contents/ui/ConfigOverlay.qml:92
 #, kde-format
-msgid "Rotate"
-msgstr "Gira"
+msgid "Click and drag to rotate"
+msgstr ""
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Hide Background"
 msgstr "Oculta el fons"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:180
 #, kde-format
 msgid "Show Background"
 msgstr "Mostra el fons"
 
-#: package/contents/ui/ConfigOverlay.qml:234
+#: package/contents/ui/ConfigOverlay.qml:229
 #, kde-format
 msgid "Remove"
 msgstr "Elimina"
@@ -400,7 +400,7 @@ msgstr "Elimina"
 msgid "Preview Plugins"
 msgstr "Connectors de vista prèvia"
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Configura l'escriptori i el fons de pantalla…"
@@ -591,3 +591,6 @@ msgstr "Mostra les vistes prèvies"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Blocat"
+
+#~ msgid "Rotate"
+#~ msgstr "Gira"
