@@ -41,6 +41,23 @@ Kirigami.Icon {
     source: Plasmoid.icon || "plasma"
     active: mouseArea.containsMouse
 
+    activeFocusOnTab: true
+
+    Keys.onPressed: {
+        switch (event.key) {
+            case Qt.Key_Space:
+            case Qt.Key_Enter:
+            case Qt.Key_Return:
+            case Qt.Key_Select:
+                Plasmoid.activated();
+                break;
+        }
+    }
+
+    Accessible.name: Plasmoid.title
+    Accessible.description: Plasmoid.toolTipSubText
+    Accessible.role: Accessible.Button
+
     MouseArea {
         id: mouseArea
 
