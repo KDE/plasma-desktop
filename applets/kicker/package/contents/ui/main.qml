@@ -155,8 +155,6 @@ PlasmoidItem {
 
             return results;
         }
-
-        deleteWhenEmpty: true
     }
 
     Kicker.DragHelper {
