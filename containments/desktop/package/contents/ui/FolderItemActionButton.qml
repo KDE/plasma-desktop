@@ -35,7 +35,11 @@ KSvg.SvgItem {
 
     property string element
 
-    svg: actionOverlays
+    svg: KSvg.Svg {
+        imagePath: "widgets/action-overlays"
+        multipleImages: true
+        size: "16x16"
+    }
     elementId: element + "-normal"
 
     Behavior on opacity {

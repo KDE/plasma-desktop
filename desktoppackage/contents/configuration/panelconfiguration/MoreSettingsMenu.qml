@@ -125,11 +125,8 @@ PlasmaCore.Dialog {
         }
         KSvg.SvgItem {
             Layout.fillWidth: true
+            imagePath: "widgets/line"
             elementId: "horizontal-line"
-            svg: KSvg.Svg {
-                id: lineSvg
-                imagePath: "widgets/line"
-            }
         }
         RowLayout {
             spacing: Kirigami.Units.gridUnit
@@ -171,8 +168,8 @@ PlasmaCore.Dialog {
         }
         KSvg.SvgItem {
             Layout.fillWidth: true
+            imagePath: "widgets/line"
             elementId: "horizontal-line"
-            svg: lineSvg
         }
         RowLayout {
             spacing: Kirigami.Units.gridUnit
@@ -223,8 +220,8 @@ PlasmaCore.Dialog {
         }
         KSvg.SvgItem {
             Layout.fillWidth: true
+            imagePath: "widgets/line"
             elementId: "horizontal-line"
-            svg: lineSvg
         }
         RowLayout {
             spacing: Kirigami.Units.gridUnit

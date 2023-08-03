@@ -50,13 +50,9 @@ KSvg.FrameSvgItem {
         leftMaximumLengthHandle.value = panel.maximumLength
     }
 
-    KSvg.Svg {
-        id: containmentControlsSvg
-        imagePath: "widgets/containment-controls"
-    }
     KSvg.SvgItem {
         id: centerMark
-        svg: containmentControlsSvg
+        imagePath: "widgets/containment-controls"
         elementId: dialogRoot.vertical ? "vertical-centerindicator" : "horizontal-centerindicator"
         visible: panel.alignment === Qt.AlignCenter
         width: dialogRoot.vertical ? parent.width : naturalSize.width

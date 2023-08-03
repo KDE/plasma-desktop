@@ -427,12 +427,6 @@ PlasmoidItem {
             prefix: "normal"
         }
 
-        KSvg.Svg {
-            id: taskSvg
-
-            imagePath: "widgets/tasks"
-        }
-
         MouseHandler {
             id: mouseHandler
 

@@ -38,9 +38,6 @@ Item {
         property int horLineHeight: lineSvg.elementSize("horizontal-line").height
         property int vertLineWidth: lineSvg.elementSize("vertical-line").width
     }
-    readonly property KSvg.Svg arrowsSvg: KSvg.Svg {
-        imagePath: "widgets/arrows"
-    }
     //END
 
     //BEGIN Metrics

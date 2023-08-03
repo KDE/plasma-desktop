@@ -17,7 +17,7 @@ KSvg.SvgItem {
     id: root
 
     //Those properties get updated by PanelConfiguration.qml whenever a value changes
-    svg: containmentControlsSvg
+    imagePath: "widgets/containment-controls"
     state: parent.state
     width: naturalSize.width
     height: naturalSize.height

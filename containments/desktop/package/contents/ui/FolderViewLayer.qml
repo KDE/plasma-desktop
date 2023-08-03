@@ -64,14 +64,6 @@ FocusScope {
         }
     }
 
-    KSvg.Svg {
-        id: actionOverlays
-
-        imagePath: "widgets/action-overlays"
-        multipleImages: true
-        size: "16x16"
-    }
-
     Binding {
         target: plasmoid
         property: "title"
