@@ -87,8 +87,6 @@ PlasmaCore.Dialog {
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
                     level: menuColumn.headingLabel
-                    Layout.topMargin: Kirigami.Units.smallSpacing
-                    Layout.bottomMargin: Kirigami.Units.gridUnit
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alignment:")
                 }
             }
@@ -142,8 +140,6 @@ PlasmaCore.Dialog {
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
                     level: menuColumn.headingLabel
-                    Layout.topMargin: Kirigami.Units.smallSpacing
-                    Layout.bottomMargin: Kirigami.Units.gridUnit
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Visibility:")
                 }
             }
@@ -185,8 +181,6 @@ PlasmaCore.Dialog {
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
                     level: menuColumn.headingLabel
-                    Layout.topMargin: Kirigami.Units.smallSpacing
-                    Layout.bottomMargin: Kirigami.Units.gridUnit
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity:")
                 }
             }
@@ -237,8 +231,6 @@ PlasmaCore.Dialog {
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
                     level: menuColumn.headingLabel
-                    Layout.topMargin: Kirigami.Units.smallSpacing
-                    Layout.bottomMargin: Kirigami.Units.gridUnit
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating:")
                 }
             }
