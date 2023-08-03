@@ -29,7 +29,7 @@ PlasmaCore.Dialog {
         LayoutMirroring.childrenInherit: true
         spacing: Kirigami.Units.gridUnit
 
-        readonly property int headingLabel: 2
+        readonly property int headingLevel: 2
 
         PlasmaExtras.PlasmoidHeading {
 
@@ -84,7 +84,7 @@ PlasmaCore.Dialog {
                     anchors.right: parent.right
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
-                    level: menuColumn.headingLabel
+                    level: menuColumn.headingLevel
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alignment:")
                 }
             }
@@ -137,7 +137,7 @@ PlasmaCore.Dialog {
                     anchors.right: parent.right
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
-                    level: menuColumn.headingLabel
+                    level: menuColumn.headingLevel
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Visibility:")
                 }
             }
@@ -178,7 +178,7 @@ PlasmaCore.Dialog {
                     anchors.right: parent.right
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
-                    level: menuColumn.headingLabel
+                    level: menuColumn.headingLevel
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity:")
                 }
             }
@@ -228,7 +228,7 @@ PlasmaCore.Dialog {
                     anchors.right: parent.right
                     anchors.top: parent.top
                     anchors.topMargin: referenceRepresentation.screenHeight - height / 2
-                    level: menuColumn.headingLabel
+                    level: menuColumn.headingLevel
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating:")
                 }
             }
@@ -266,7 +266,7 @@ PlasmaCore.Dialog {
                 spacing: Kirigami.Units.gridUnit
 
                 Kirigami.Heading {
-                    level: menuColumn.headingLabel
+                    level: menuColumn.headingLevel
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus Shortcut:")
                     visible: panel.adaptiveOpacityEnabled
 
