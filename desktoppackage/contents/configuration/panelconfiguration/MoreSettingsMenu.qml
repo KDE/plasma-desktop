@@ -35,7 +35,7 @@ PlasmaCore.Dialog {
 
             RowLayout {
                 anchors.fill: parent
-                spacing: Kirigami.Units.gridUnit
+                spacing: Kirigami.Units.largeSpacing
 
                 Kirigami.Heading {
                     Layout.leftMargin: Kirigami.Units.smallSpacing
@@ -263,7 +263,7 @@ PlasmaCore.Dialog {
             Layout.fillWidth: true
             RowLayout {
                 anchors.centerIn: parent
-                spacing: Kirigami.Units.gridUnit
+                spacing: Kirigami.Units.smallSpacing
 
                 Kirigami.Heading {
                     level: menuColumn.headingLevel
