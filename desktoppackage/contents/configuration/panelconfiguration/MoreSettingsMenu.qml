@@ -24,8 +24,6 @@ PlasmaCore.Dialog {
     flags: Qt.Popup | Qt.FramelessWindowHint | Qt.WindowDoesNotAcceptFocus
     mainItem: ColumnLayout {
         id: menuColumn
-        width: Kirigami.Units.gridUnit * 30
-        height: Kirigami.Units.gridUnit * 43
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
