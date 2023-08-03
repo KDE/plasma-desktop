@@ -39,7 +39,6 @@ PlasmaCore.Dialog {
 
                 Kirigami.Heading {
                     Layout.leftMargin: Kirigami.Units.smallSpacing
-                    level: 3
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Settings")
                 }
 
