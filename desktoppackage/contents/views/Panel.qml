@@ -113,9 +113,11 @@ Item {
     Connections {
         target: containment
         function onActivated() {
-            if (containment.status !== PlasmaCore.Types.AcceptingInputStatus) {
+            // BUG 472909: status changes to PassiveStatus or ActiveStatus after applet shortcut is pressed for the second time
+            if (containment.status === PlasmaCore.Types.PassiveStatus /*After pressing panel shortcut*/ || containment.status === PlasmaCore.Types.ActiveStatus) {
                 containment.status = PlasmaCore.Types.AcceptingInputStatus;
-            } else {
+                // BUG 472909: if applet shortcut is pressed, panel also gets activated, but status will change to RequiresAttentionStatus after applet has focus
+            } else /* Panel has focus, or applet has focus */ {
                 containment.status = PlasmaCore.Types.PassiveStatus;
             }
         }
