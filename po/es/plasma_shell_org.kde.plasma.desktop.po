@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:16+0000\n"
+"POT-Creation-Date: 2023-08-04 01:59+0000\n"
 "PO-Revision-Date: 2023-05-19 10:03+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -268,104 +268,104 @@ msgstr "Acciones del ratón"
 msgid "Input Here"
 msgstr "Escriba aquí"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:42
 msgid "Panel Settings"
 msgstr "Preferencias del panel"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:48
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:52
 msgid "Make this panel as tall as possible"
 msgstr "Hacer este panel lo más alto posible"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
 msgid "Make this panel as wide as possible"
 msgstr "Hacer este panel lo más ancho posible"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:61
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "Borrar"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:64
 msgid "Remove this panel; this action is undo-able"
 msgstr "Eliminar este panel (esta acción se puede deshacer)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
 msgid "Alignment:"
 msgstr "Alineación:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
 msgid "Top"
 msgstr "Arriba"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
 msgid "Left"
 msgstr "Izquierda"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr ""
 "Alinea un panel no maximizado a la parte superior (no tiene efecto en "
 "paneles maximizados)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
 msgstr ""
 "Alinea un panel no maximizado a la izquierda (no tiene efecto en paneles "
 "maximizados)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:103
 msgid "Center"
 msgstr "Centro"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
 msgstr ""
 "Alinea un panel no maximizado al centro (no tiene efecto en paneles "
 "maximizados)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
 msgid "Bottom"
 msgstr "Abajo"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
 msgid "Right"
 msgstr "Derecha"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr ""
 "Alinea un panel no maximizado a la parte inferior (no tiene efecto en "
 "paneles maximizados)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr ""
 "Alinea un panel no maximizado a la derecha (no tiene efecto en paneles "
 "maximizados)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:141
 msgid "Visibility:"
 msgstr "Visibilidad:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:146
 msgid "Always Visible"
 msgstr "Siempre visible"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
 msgid "Auto-Hide"
 msgstr "Ocultar automáticamente"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
@@ -373,19 +373,19 @@ msgstr ""
 "El panel está oculto, pero se muestra cuando el cursor toca el borde de la "
 "pantalla del panel"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
 msgid "Opacity:"
 msgstr "Opacidad:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:187
 msgid "Always Opaque"
 msgstr "Siempre opaco"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
 msgid "Adaptive"
 msgstr "Adaptable"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
@@ -393,35 +393,35 @@ msgstr ""
 "El panel es opaco cuando alguna ventana lo toca, aunque se muestra "
 "transparente el resto del tiempo"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
 msgid "Always Translucent"
 msgstr "Siempre transparente"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:232
 msgid "Floating:"
 msgstr "Flotante:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:250
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
 msgid "Floating"
 msgstr "Flotante"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
 msgid "Panel visibly floats away from its screen edge"
 msgstr "El panel flota visiblemente alejándose del borde de la pantalla"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
 msgid "Attached"
 msgstr "Anclado"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
 msgid "Panel is attached to its screen edge"
 msgstr "El panel está unido al borde de la pantalla"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
 msgid "Focus Shortcut:"
 msgstr "Acceso rápido del foco:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:280
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pulse este acceso rápido de teclado para mover el foco al panel"
 
@@ -446,7 +446,7 @@ msgstr "Arrastrar para cambiar la altura mínima."
 msgid "Drag to change minimum width."
 msgstr "Arrastrar para cambiar la anchura mínima."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:70
+#: contents/configuration/panelconfiguration/Ruler.qml:66
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."

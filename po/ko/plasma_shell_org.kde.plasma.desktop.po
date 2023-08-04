@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:16+0000\n"
+"POT-Creation-Date: 2023-08-04 01:59+0000\n"
 "PO-Revision-Date: 2023-07-25 23:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -261,156 +261,156 @@ msgstr "마우스 동작"
 msgid "Input Here"
 msgstr "여기에 입력"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:42
 msgid "Panel Settings"
 msgstr "패널 설정"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:48
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
 msgstr "최대화"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:52
 msgid "Make this panel as tall as possible"
 msgstr "이 패널을 수직으로 최대화합니다"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
 msgid "Make this panel as wide as possible"
 msgstr "이 패널을 수평으로 최대화합니다"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:61
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "삭제"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:64
 msgid "Remove this panel; this action is undo-able"
 msgstr "이 패널을 삭제합니다. 실행 취소할 수 없습니다"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
 msgid "Alignment:"
 msgstr "정렬:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
 msgid "Top"
 msgstr "위"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
 msgid "Left"
 msgstr "왼쪽"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr ""
 "최대화되지 않은 패널을 위로 정렬하며, 패널이 최대화되었다면 이 설정은 무시됩"
 "니다"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
 msgstr ""
 "최대화되지 않은 패널을 왼쪽으로 정렬하며, 패널이 최대화되었다면 이 설정은 무"
 "시됩니다"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:103
 msgid "Center"
 msgstr "가운데"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
 msgstr ""
 "최대화되지 않은 패널을 가운데로 정렬하며, 패널이 최대화되었다면 이 설정은 무"
 "시됩니다"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
 msgid "Bottom"
 msgstr "아래"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
 msgid "Right"
 msgstr "오른쪽"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr ""
 "최대화되지 않은 패널을 아래쪽으로 정렬하며, 패널이 최대화되었다면 이 설정은 "
 "무시됩니다"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr ""
 "최대화되지 않은 패널을 오른쪽으로 정렬하며, 패널이 최대화되었다면 이 설정은 "
 "무시됩니다"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:141
 msgid "Visibility:"
 msgstr "표시 여부:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:146
 msgid "Always Visible"
 msgstr "항상 표시"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
 msgid "Auto-Hide"
 msgstr "자동 숨기기"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr "패널이 숨겨지지만 패널이 있는 화면 경계 근처로 커서가 가면 표시됩니다"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
 msgid "Opacity:"
 msgstr "불투명도:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:187
 msgid "Always Opaque"
 msgstr "항상 불투명"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
 msgid "Adaptive"
 msgstr "적응"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr "패널에 창이 닿아 있을 때에는 불투명해지며, 그 외의 경우에는 반투명해짐"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
 msgid "Always Translucent"
 msgstr "항상 반투명"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:232
 msgid "Floating:"
 msgstr "떠다님:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:250
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
 msgid "Floating"
 msgstr "떠다님"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
 msgid "Panel visibly floats away from its screen edge"
 msgstr "패널이 화면 경계에서 떠 있음"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
 msgid "Attached"
 msgstr "부착됨"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
 msgid "Panel is attached to its screen edge"
 msgstr "패널이 화면 경계에 부착되어 있음"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
 msgid "Focus Shortcut:"
 msgstr "포커스 단축키:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:280
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "패널에 포커스를 맞추려면 이 키보드 단축키를 누르십시오"
 
@@ -435,7 +435,7 @@ msgstr "드래그하여 최소 높이를 변경하십시오."
 msgid "Drag to change minimum width."
 msgstr "드래그하여 최소 너비를 변경하십시오."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:70
+#: contents/configuration/panelconfiguration/Ruler.qml:66
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."

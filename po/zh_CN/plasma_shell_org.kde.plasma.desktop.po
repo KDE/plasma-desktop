@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:16+0000\n"
+"POT-Creation-Date: 2023-08-04 01:59+0000\n"
 "PO-Revision-Date: 2023-08-02 12:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -259,146 +259,146 @@ msgstr "鼠标操作"
 msgid "Input Here"
 msgstr "在此输入"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:44
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:42
 msgid "Panel Settings"
 msgstr "面板设置"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:50
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:48
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
 msgstr "最大化"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:52
 msgid "Make this panel as tall as possible"
 msgstr "纵向最大化显示面板"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:55
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
 msgid "Make this panel as wide as possible"
 msgstr "横向最大化显示面板"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:61
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "删除"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:66
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:64
 msgid "Remove this panel; this action is undo-able"
 msgstr "移除此面板；此操作不可撤销"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:92
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
 msgid "Alignment:"
 msgstr "对齐："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
 msgid "Top"
 msgstr "靠上"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:98
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
 msgid "Left"
 msgstr "靠左"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr "将一个非最大化的面板对齐到顶部；面板最大化时无效"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:99
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
 msgstr "将一个非最大化的面板对齐到左侧；面板最大化时无效"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:103
 msgid "Center"
 msgstr "居中"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:108
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
 msgstr "将一个非最大化的面板对齐到中央；面板最大化时无效"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
 msgid "Bottom"
 msgstr "靠下"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:116
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
 msgid "Right"
 msgstr "靠右"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr "将一个非最大化的面板对齐到底部；面板最大化时无效"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:117
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr "将一个非最大化的面板对齐到右侧；面板最大化时无效"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:150
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:141
 msgid "Visibility:"
 msgstr "显示/隐藏："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:146
 msgid "Always Visible"
 msgstr "始终显示"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:163
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
 msgid "Auto-Hide"
 msgstr "自动隐藏"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:164
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr "隐藏面板，但在光标触碰到面板的屏幕边缘时显示面板"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:193
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
 msgid "Opacity:"
 msgstr "不透明度："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:198
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:187
 msgid "Always Opaque"
 msgstr "总是不透明"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
 msgid "Adaptive"
 msgstr "自适应"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:207
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr "面板在任意窗口触碰到它时显示为不透明，而在其他情况下保持透明"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:216
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
 msgid "Always Translucent"
 msgstr "总是半透明"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:245
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:232
 msgid "Floating:"
 msgstr "悬浮："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:250
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
 msgid "Floating"
 msgstr "悬浮"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:251
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
 msgid "Panel visibly floats away from its screen edge"
 msgstr "面板脱离屏幕边缘悬浮显示"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:260
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
 msgid "Attached"
 msgstr "嵌入"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:261
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
 msgid "Panel is attached to its screen edge"
 msgstr "面板嵌入在屏幕边缘显示"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:283
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
 msgid "Focus Shortcut:"
 msgstr "焦点快捷键："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:293
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:280
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按下此键盘快捷键以移动焦点到面板"
 
@@ -423,7 +423,7 @@ msgstr "拖动以更改最小高度。"
 msgid "Drag to change minimum width."
 msgstr "拖动以更改最小宽度。"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:70
+#: contents/configuration/panelconfiguration/Ruler.qml:66
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
