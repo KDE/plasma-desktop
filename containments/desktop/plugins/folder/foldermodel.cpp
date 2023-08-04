@@ -48,6 +48,7 @@
 #include <KIO/PasteJob>
 #include <KIO/RestoreJob>
 #include <KLocalizedString>
+#include <KNotificationJobUiDelegate>
 #include <KPropertiesDialog>
 #include <KSharedConfig>
 #include <KShell>
@@ -1979,7 +1980,9 @@ void FolderModel::paste()
         }
     }
 
-    KIO::paste(QApplication::clipboard()->mimeData(), m_dirModel->dirLister()->url());
+    KIO::PasteJob *job = KIO::paste(QApplication::clipboard()->mimeData(), m_dirModel->dirLister()->url());
+    auto delegate = new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled);
+    job->setUiDelegate(delegate);
 }
 
 void FolderModel::pasteTo()
