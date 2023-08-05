@@ -212,7 +212,7 @@ Comment[vi]=Bàn cảm ứng đã được tắt vì phát hiện có chuột
 Comment[x-test]=xxTouchpad was disabled because mouse is detectedxx
 Comment[zh_CN]=已检测到鼠标，触摸板已禁用
 Comment[zh_TW]=觸控板已關閉，因為偵測到外接滑鼠
-Sound=Oxygen-Sys-App-Positive.ogg
+Sound=device-removed
 Action=Popup
 
 [Event/TouchpadEnabled]
@@ -320,5 +320,5 @@ Comment[vi]=Bàn cảm ứng đã được bật vì chuột đã được rút 
 Comment[x-test]=xxTouchpad was enabled because the mouse was unpluggedxx
 Comment[zh_CN]=鼠标已拔出，触摸板已启用
 Comment[zh_TW]=觸控板已開啟，因為偵測到外接滑鼠已被拔除
-Sound=Oxygen-Sys-App-Negative.ogg
-Action=Sound
+Sound=device-added
+Action=Popup
