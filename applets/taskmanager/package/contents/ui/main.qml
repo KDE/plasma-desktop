@@ -12,7 +12,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.plasma5support 2.0 as P5Support
+import org.kde.plasma.private.mpris as Mpris
 import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.workspace.trianglemousefilter 1.0
@@ -240,6 +240,10 @@ PlasmoidItem {
         }
     }
 
+    Mpris.Mpris2Model {
+        id: mpris2Source
+    }
+
     MouseArea {
         anchors.fill: parent
 
@@ -258,94 +262,6 @@ PlasmoidItem {
         TaskManager.ActivityInfo {
             id: activityInfo
             readonly property string nullUuid: "00000000-0000-0000-0000-000000000000"
-        }
-
-        P5Support.DataSource {
-            id: mpris2Source
-            engine: "mpris2"
-            connectedSources: sources
-            onSourceAdded: source => connectSource(source);
-            onSourceRemoved: source => disconnectSource(source);
-            function sourceNameForLauncherUrl(launcherUrl, pid) {
-                if (!launcherUrl || launcherUrl === "") {
-                    return "";
-                }
-
-                // MPRIS spec explicitly mentions that "DesktopEntry" is with .desktop extension trimmed
-                // Moreover, remove URL parameters, like wmClass (part after the question mark)
-                var desktopFileName = launcherUrl.toString().split('/').pop().split('?')[0].replace(".desktop", "")
-                if (desktopFileName.indexOf("applications:") === 0) {
-                    desktopFileName = desktopFileName.substr(13)
-                }
-
-                let fallbackSource = "";
-
-                for (var i = 0, length = connectedSources.length; i < length; ++i) {
-                    var source = connectedSources[i];
-                    // we intend to connect directly, otherwise the multiplexer steals the connection away
-                    if (source === "@multiplex") {
-                        continue;
-                    }
-
-                    var sourceData = data[source];
-                    if (!sourceData) {
-                        continue;
-                    }
-
-                    /**
-                    * If the task is in a group, we can't use desktopFileName to match the task.
-                    * but in case PID match fails, use the match result from desktopFileName.
-                    */
-                    if (pid && sourceData.InstancePid === pid) {
-                        return source;
-                    }
-                    if (sourceData.DesktopEntry === desktopFileName) {
-                        fallbackSource = source;
-                    }
-
-                    var metadata = sourceData.Metadata;
-                    if (metadata) {
-                        var kdePid = metadata["kde:pid"];
-                        if (kdePid && pid === kdePid) {
-                            return source;
-                        }
-                    }
-                }
-
-                // If PID match fails, return fallbackSource.
-                return fallbackSource;
-            }
-
-            function startOperation(source, op) {
-                var service = serviceForSource(source)
-                var operation = service.operationDescription(op)
-                return service.startOperationCall(operation)
-            }
-
-            function goPrevious(source) {
-                startOperation(source, "Previous");
-            }
-            function goNext(source) {
-                startOperation(source, "Next");
-            }
-            function play(source) {
-                startOperation(source, "Play");
-            }
-            function pause(source) {
-                startOperation(source, "Pause");
-            }
-            function playPause(source) {
-                startOperation(source, "PlayPause");
-            }
-            function stop(source) {
-                startOperation(source, "Stop");
-            }
-            function raise(source) {
-                startOperation(source, "Raise");
-            }
-            function quit(source) {
-                startOperation(source, "Quit");
-            }
         }
 
         Loader {

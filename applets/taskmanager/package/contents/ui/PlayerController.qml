@@ -8,42 +8,18 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Layouts
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami 2 as Kirigami
+import org.kde.plasma.private.mpris as Mpris
 
 RowLayout {
-    enabled: !!playerData.CanControl
+    enabled: toolTipDelegate.playerData.canControl
 
-    readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(launcherUrl, appPid)
-    readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
-    readonly property bool playing: !!(playerData.PlaybackStatus === "Playing")
-
-    readonly property var currentMetadata: !!playerData ? playerData.Metadata : ""
-
-    readonly property string track: {
-        const xesamTitle = currentMetadata["xesam:title"]
-        if (xesamTitle) {
-            return xesamTitle;
-        }
-        // if no track title is given, print out the file name
-        const xesamUrl = currentMetadata["xesam:url"] ? currentMetadata["xesam:url"].toString() : ""
-        if (!xesamUrl) {
-            return "";
-        }
-        const lastSlashPos = xesamUrl.lastIndexOf('/')
-        if (lastSlashPos < 0) {
-            return "";
-        }
-        const lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
-        return decodeURIComponent(lastUrlPart) || "";
-    }
-    readonly property var artists: currentMetadata["xesam:artist"] || [] // stringlist
-    readonly property var albumArtists: currentMetadata["xesam:albumArtist"] || [] // stringlist
-    readonly property string albumArt: currentMetadata["mpris:artUrl"] || ""
+    readonly property bool isPlaying: toolTipDelegate.playerData.playbackStatus === Mpris.PlaybackStatus.Playing
 
     ColumnLayout {
         Layout.fillWidth: true
@@ -68,7 +44,7 @@ RowLayout {
                 maximumLineCount: artistText.visible? 1 : 2
                 wrapMode: Text.NoWrap
                 elide: parent.state ? Text.ElideNone : Text.ElideRight
-                text: track
+                text: toolTipDelegate.playerData.track
                 textFormat: Text.PlainText
             }
         }
@@ -79,7 +55,7 @@ RowLayout {
             Layout.fillWidth: true
             Layout.preferredHeight: artistText.height
             implicitWidth: artistText.implicitWidth
-            visible: artistText.text !== ""
+            visible: artistText.text.length > 0
 
             PlasmaExtras.DescriptiveLabel {
                 id: artistText
@@ -89,7 +65,7 @@ RowLayout {
                 wrapMode: Text.NoWrap
                 lineHeight: 1
                 elide: parent.state ? Text.ElideNone : Text.ElideRight
-                text: artists.length > 0 ? artists.join(", ") : albumArtists.join(", ")
+                text: toolTipDelegate.playerData.artist
                 font: Kirigami.Theme.smallFont
                 textFormat: Text.PlainText
             }
@@ -97,26 +73,26 @@ RowLayout {
     }
 
     PlasmaComponents3.ToolButton {
-        enabled: !!playerData.CanGoPrevious
+        enabled: toolTipDelegate.playerData.canGoPrevious
         icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
-        onClicked: mpris2Source.goPrevious(mprisSourceName)
+        onClicked: toolTipDelegate.playerData.Previous()
     }
 
     PlasmaComponents3.ToolButton {
-        enabled: playing ? !!playerData.CanPause : !!playerData.CanPlay
-        icon.name: playing ? "media-playback-pause" : "media-playback-start"
+        enabled: isPlaying ? toolTipDelegate.playerData.canPause : toolTipDelegate.playerData.canPlay
+        icon.name: isPlaying ? "media-playback-pause" : "media-playback-start"
         onClicked: {
-            if (!playing) {
-                mpris2Source.play(mprisSourceName);
+            if (!isPlaying) {
+                toolTipDelegate.playerData.Play();
             } else {
-                mpris2Source.pause(mprisSourceName);
+                toolTipDelegate.playerData.Pause();
             }
         }
     }
 
     PlasmaComponents3.ToolButton {
-        enabled: !!playerData.CanGoNext
+        enabled: toolTipDelegate.playerData.canGoNext
         icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
-        onClicked: mpris2Source.goNext(mprisSourceName)
+        onClicked: toolTipDelegate.playerData.Next()
     }
 }

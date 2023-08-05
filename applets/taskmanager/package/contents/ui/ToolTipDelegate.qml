@@ -52,9 +52,7 @@ Loader {
     readonly property int tooltipInstanceMaximumWidth: Kirigami.Units.gridUnit * 16
 
     // These properties are required to make tooltip interactive when there is a player but no window is present.
-    readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(launcherUrl, pidParent)
-    readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
-    readonly property bool hasPlayer: !!mprisSourceName && !!playerData
+    readonly property QtObject playerData: mpris2Source.playerForLauncherUrl(launcherUrl, pidParent)
 
     Layout.minimumWidth: implicitWidth
     Layout.maximumWidth: Layout.minimumWidth

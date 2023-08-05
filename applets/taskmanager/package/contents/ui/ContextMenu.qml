@@ -13,6 +13,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.taskmanager 0.1 as TaskManager
+import org.kde.plasma.private.mpris as Mpris
 
 import "code/layout.js" as LayoutManager
 
@@ -165,102 +166,98 @@ PlasmaExtras.Menu {
         });
 
         // Add Media Player control actions
-        var sourceName = mpris2Source.sourceNameForLauncherUrl(launcherUrl, get(atm.AppPid));
+        const playerData = mpris2Source.playerForLauncherUrl(launcherUrl, get(atm.AppPid));
 
-        if (sourceName && !(get(atm.WinIdList) !== undefined && get(atm.WinIdList).length > 1)) {
-            var playerData = mpris2Source.data[sourceName]
+        if (playerData && playerData.canControl && !(get(atm.WinIdList) !== undefined && get(atm.WinIdList).length > 1)) {
+            const playing = playerData.playbackStatus === Mpris.PlaybackStatus.Playing;
+            var menuItem = menu.newMenuItem(menu);
+            menuItem.text = i18nc("Play previous track", "Previous Track");
+            menuItem.icon = "media-skip-backward";
+            menuItem.enabled = Qt.binding(function() {
+                return playerData.canGoPrevious;
+            });
+            menuItem.clicked.connect(function() {
+                playerData.Previous();
+            });
+            menu.addMenuItem(menuItem, startNewInstanceItem);
 
-            if (playerData.CanControl) {
-                var playing = (playerData.PlaybackStatus === "Playing");
-                var menuItem = menu.newMenuItem(menu);
-                menuItem.text = i18nc("Play previous track", "Previous Track");
-                menuItem.icon = "media-skip-backward";
-                menuItem.enabled = Qt.binding(function() {
-                    return playerData.CanGoPrevious;
-                });
-                menuItem.clicked.connect(function() {
-                    mpris2Source.goPrevious(sourceName);
-                });
-                menu.addMenuItem(menuItem, startNewInstanceItem);
-
-                menuItem = menu.newMenuItem(menu);
-                // PlasmaCore Menu doesn't actually handle icons or labels changing at runtime...
-                menuItem.text = Qt.binding(function() {
-                    // if CanPause, toggle the menu entry between Play & Pause, otherwise always use Play
-                    return playing && playerData.CanPause ? i18nc("Pause playback", "Pause") : i18nc("Start playback", "Play");
-                });
-                menuItem.icon = Qt.binding(function() {
-                    return playing && playerData.CanPause ? "media-playback-pause" : "media-playback-start";
-                });
-                menuItem.enabled = Qt.binding(function() {
-                    return playing ? playerData.CanPause : playerData.CanPlay;
-                });
-                menuItem.clicked.connect(function() {
-                    if (playing) {
-                        mpris2Source.pause(sourceName);
-                    } else {
-                        mpris2Source.play(sourceName);
-                    }
-                });
-                menu.addMenuItem(menuItem, startNewInstanceItem);
-
-                menuItem = menu.newMenuItem(menu);
-                menuItem.text = i18nc("Play next track", "Next Track");
-                menuItem.icon = "media-skip-forward";
-                menuItem.enabled = Qt.binding(function() {
-                    return playerData.CanGoNext;
-                });
-                menuItem.clicked.connect(function() {
-                    mpris2Source.goNext(sourceName);
-                });
-                menu.addMenuItem(menuItem, startNewInstanceItem);
-
-                menuItem = menu.newMenuItem(menu);
-                menuItem.text = i18nc("Stop playback", "Stop");
-                menuItem.icon = "media-playback-stop";
-                menuItem.enabled = Qt.binding(function() {
-                    return playerData.PlaybackStatus !== "Stopped";
-                });
-                menuItem.clicked.connect(function() {
-                    mpris2Source.stop(sourceName);
-                });
-                menu.addMenuItem(menuItem, startNewInstanceItem);
-
-                // Technically media controls and audio streams are separate but for the user they're
-                // semantically related, don't add a separator inbetween.
-                if (!menu.visualParent.hasAudioStream) {
-                    menu.addMenuItem(newSeparator(menu), startNewInstanceItem);
+            menuItem = menu.newMenuItem(menu);
+            // PlasmaCore Menu doesn't actually handle icons or labels changing at runtime...
+            menuItem.text = Qt.binding(function() {
+                // if CanPause, toggle the menu entry between Play & Pause, otherwise always use Play
+                return playing && playerData.canPause ? i18nc("Pause playback", "Pause") : i18nc("Start playback", "Play");
+            });
+            menuItem.icon = Qt.binding(function() {
+                return playing && playerData.canPause ? "media-playback-pause" : "media-playback-start";
+            });
+            menuItem.enabled = Qt.binding(function() {
+                return playing ? playerData.canPause : playerData.canPlay;
+            });
+            menuItem.clicked.connect(function() {
+                if (playing) {
+                    playerData.Pause();
+                } else {
+                    playerData.Play();
                 }
+            });
+            menu.addMenuItem(menuItem, startNewInstanceItem);
 
-                // If we don't have a window associated with the player but we can quit
-                // it through MPRIS we'll offer a "Quit" option instead of "Close"
-                if (!closeWindowItem.visible && playerData.CanQuit) {
-                    menuItem = menu.newMenuItem(menu);
-                    menuItem.text = i18nc("Quit media player app", "Quit");
-                    menuItem.icon = "application-exit";
-                    menuItem.visible = Qt.binding(function() {
-                        return !closeWindowItem.visible;
-                    });
-                    menuItem.clicked.connect(function() {
-                        mpris2Source.quit(sourceName);
-                    });
-                    menu.addMenuItem(menuItem);
-                }
+            menuItem = menu.newMenuItem(menu);
+            menuItem.text = i18nc("Play next track", "Next Track");
+            menuItem.icon = "media-skip-forward";
+            menuItem.enabled = Qt.binding(function() {
+                return playerData.canGoNext;
+            });
+            menuItem.clicked.connect(function() {
+                playerData.Next();
+            });
+            menu.addMenuItem(menuItem, startNewInstanceItem);
 
-                // If we don't have a window associated with the player but we can raise
-                // it through MPRIS we'll offer a "Restore" option
-                if (get(atm.IsLauncher) && !startNewInstanceItem.visible && playerData.CanRaise) {
-                    menuItem = menu.newMenuItem(menu);
-                    menuItem.text = i18nc("Open or bring to the front window of media player app", "Restore");
-                    menuItem.icon = playerData["Desktop Icon Name"];
-                    menuItem.visible = Qt.binding(function() {
-                        return !startNewInstanceItem.visible;
-                    });
-                    menuItem.clicked.connect(function() {
-                        mpris2Source.raise(sourceName);
-                    });
-                    menu.addMenuItem(menuItem, startNewInstanceItem);
-                }
+            menuItem = menu.newMenuItem(menu);
+            menuItem.text = i18nc("Stop playback", "Stop");
+            menuItem.icon = "media-playback-stop";
+            menuItem.enabled = Qt.binding(function() {
+                return playerData.canStop;
+            });
+            menuItem.clicked.connect(function() {
+                playerData.Stop();
+            });
+            menu.addMenuItem(menuItem, startNewInstanceItem);
+
+            // Technically media controls and audio streams are separate but for the user they're
+            // semantically related, don't add a separator inbetween.
+            if (!menu.visualParent.hasAudioStream) {
+                menu.addMenuItem(newSeparator(menu), startNewInstanceItem);
+            }
+
+            // If we don't have a window associated with the player but we can quit
+            // it through MPRIS we'll offer a "Quit" option instead of "Close"
+            if (!closeWindowItem.visible && playerData.canQuit) {
+                menuItem = menu.newMenuItem(menu);
+                menuItem.text = i18nc("Quit media player app", "Quit");
+                menuItem.icon = "application-exit";
+                menuItem.visible = Qt.binding(function() {
+                    return !closeWindowItem.visible;
+                });
+                menuItem.clicked.connect(function() {
+                    playerData.Quit();
+                });
+                menu.addMenuItem(menuItem);
+            }
+
+            // If we don't have a window associated with the player but we can raise
+            // it through MPRIS we'll offer a "Restore" option
+            if (get(atm.IsLauncher) && !startNewInstanceItem.visible && playerData.canRaise) {
+                menuItem = menu.newMenuItem(menu);
+                menuItem.text = i18nc("Open or bring to the front window of media player app", "Restore");
+                menuItem.icon = playerData.iconName;
+                menuItem.visible = Qt.binding(function() {
+                    return !startNewInstanceItem.visible;
+                });
+                menuItem.clicked.connect(function() {
+                    playerData.Raise();
+                });
+                menu.addMenuItem(menuItem, startNewInstanceItem);
             }
         }
 

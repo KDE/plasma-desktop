@@ -8,15 +8,15 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami 2 as Kirigami
 
 ColumnLayout {
     property var submodelIndex
@@ -61,8 +61,7 @@ ColumnLayout {
         }
         return text;
     }
-    readonly property bool titleIncludesTrack: playerController.item
-        && title.includes(playerController.item.track)
+    readonly property bool titleIncludesTrack: toolTipDelegate.playerData && title.includes(toolTipDelegate.playerData.track)
 
     spacing: Kirigami.Units.smallSpacing
 
@@ -291,7 +290,7 @@ ColumnLayout {
             sourceSize: Qt.size(parent.width, parent.height)
 
             asynchronous: true
-            source: playerController.item?.albumArt ?? ""
+            source: toolTipDelegate.playerData?.artUrl ?? ""
             fillMode: Image.PreserveAspectFit
             visible: available
         }
@@ -312,7 +311,7 @@ ColumnLayout {
     // Player controls row, load on demand so group tooltips could be loaded faster
     Loader {
         id: playerController
-        active: hasPlayer && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
+        active: toolTipDelegate.playerData && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
         asynchronous: true
         visible: active
         Layout.fillWidth: true
