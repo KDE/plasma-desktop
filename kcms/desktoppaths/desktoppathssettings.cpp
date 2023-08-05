@@ -8,7 +8,6 @@
 
 #include <QDir>
 
-#include <KBookmark>
 #include <KFilePlacesModel>
 #include <KLocalizedString>
 
