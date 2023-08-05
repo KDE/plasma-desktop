@@ -90,23 +90,29 @@ PlasmaExtras.Menu {
     }
 
     function loadDynamicLaunchActions(launcherUrl) {
-        var sections = [
-            {
-                title:   i18n("Places"),
-                group:   "places",
-                actions: backend.placesActions(launcherUrl, showAllPlaces, menu)
-            },
-            {
+        let sections = [];
+
+        const placesActions = backend.placesActions(launcherUrl, showAllPlaces, menu);
+
+        if (placesActions.length > 0) {
+            sections.push({
+                title: i18n("Places"),
+                group: "places",
+                actions: placesActions
+            });
+        } else {
+            sections.push({
                 title:   i18n("Recent Files"),
                 group:   "recents",
                 actions: backend.recentDocumentActions(launcherUrl, menu)
-            },
-            {
-                title:   i18n("Actions"),
-                group:   "actions",
-                actions: backend.jumpListActions(launcherUrl, menu)
-            }
-        ]
+            });
+        }
+
+        sections.push({
+            title: i18n("Actions"),
+            group: "actions",
+            actions: backend.jumpListActions(launcherUrl, menu)
+        });
 
         // C++ can override section heading by returning a QString as first action
         sections.forEach((section) => {
