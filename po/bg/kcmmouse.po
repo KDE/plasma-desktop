@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-06 02:04+0000\n"
 "PO-Revision-Date: 2022-08-25 20:39+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -42,7 +42,7 @@ msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
 "Критична грешка при четене на информация за основното устройство от %1."
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -51,12 +51,12 @@ msgstr ""
 "Грешка при зареждане на стойности. Вижте дневниците за повече информация. "
 "Моля, рестартирайте този конфигурационен модул."
 
-#: kcm/libinput/libinput_config.cpp:100
+#: kcm/libinput/libinput_config.cpp:105
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Не е намерено указателно устройство. Свържете се сега."
 
-#: kcm/libinput/libinput_config.cpp:111
+#: kcm/libinput/libinput_config.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -65,7 +65,7 @@ msgstr ""
 "Не може да се запазят всички промени. Вижте дневниците за повече информация. "
 "Моля, рестартирайте този конфигурационен модул и опитайте отново."
 
-#: kcm/libinput/libinput_config.cpp:131
+#: kcm/libinput/libinput_config.cpp:136
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -74,7 +74,7 @@ msgstr ""
 "Грешка при зареждането на стойностите по подразбиране. Неуспешно задаване на "
 "някои опции и на техните стойности по подразбиране."
 
-#: kcm/libinput/libinput_config.cpp:153
+#: kcm/libinput/libinput_config.cpp:158
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -83,14 +83,14 @@ msgstr ""
 "Грешка при добавяне на ново свързано устройство. Моля, свържете го отново и "
 "рестартирайте този конфигурационен модул."
 
-#: kcm/libinput/libinput_config.cpp:177
+#: kcm/libinput/libinput_config.cpp:182
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Указателното устройство се изключи и диалоговия прозорец за настройка се "
 "затвори."
 
-#: kcm/libinput/libinput_config.cpp:179
+#: kcm/libinput/libinput_config.cpp:184
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Указателното устройство е изключено. Не са намерени други устройства."

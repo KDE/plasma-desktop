@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-06 02:04+0000\n"
 "PO-Revision-Date: 2022-10-30 09:44+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -43,7 +43,7 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritisk feil ved lesing av fundamental einingsinfo for %1."
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -52,12 +52,12 @@ msgstr ""
 "Feil ved innlesing av data. Sjå loggen for meir informasjon, og prøv å "
 "starta oppsettmodulen på nytt."
 
-#: kcm/libinput/libinput_config.cpp:100
+#: kcm/libinput/libinput_config.cpp:105
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Fann inga peikareining. Prøv å kopla til ei eining no."
 
-#: kcm/libinput/libinput_config.cpp:111
+#: kcm/libinput/libinput_config.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -66,7 +66,7 @@ msgstr ""
 "Klarte ikkje lagra alle endringane. Sjå loggen for meir informasjon. Prøv å "
 "starta oppsettmodulen på nytt og prøv igjen."
 
-#: kcm/libinput/libinput_config.cpp:131
+#: kcm/libinput/libinput_config.cpp:136
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -75,7 +75,7 @@ msgstr ""
 "Klarte ikkje lasta standardverdiane. Nokre av verdiane kunne ikkje setjast "
 "til standardverdiar."
 
-#: kcm/libinput/libinput_config.cpp:153
+#: kcm/libinput/libinput_config.cpp:158
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -84,13 +84,13 @@ msgstr ""
 "Klarte ikkje leggja til nyleg tilkopla eining. Prøv å kopla ho til ein gong "
 "til, og start så oppsettmodulen på nytt."
 
-#: kcm/libinput/libinput_config.cpp:177
+#: kcm/libinput/libinput_config.cpp:182
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Peikareininga er kopla frå, og innstillingsvindauget vart derfor lukka."
 
-#: kcm/libinput/libinput_config.cpp:179
+#: kcm/libinput/libinput_config.cpp:184
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Peikareininga er kopla frå. Fann ingen andre einingar."

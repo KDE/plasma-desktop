@@ -1,4 +1,4 @@
-# Version: $Revision: 1656738 $
+# Version: $Revision: 1657630 $
 # translation of kcminput.po to
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-06 02:04+0000\n"
 "PO-Revision-Date: 2022-09-23 10:32+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -45,7 +45,7 @@ msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
 "Błąd krytyczny przy wczytywaniu podstawowych informacji o urządzeniu %1."
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -54,12 +54,12 @@ msgstr ""
 "Błąd podczas wczytywania wartości. Zajrzyj do dziennika po szczegóły. "
 "Uruchom moduł ustawień ponownie."
 
-#: kcm/libinput/libinput_config.cpp:100
+#: kcm/libinput/libinput_config.cpp:105
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nie znaleziono urządzenia wskazującego. Podłącz je teraz."
 
-#: kcm/libinput/libinput_config.cpp:111
+#: kcm/libinput/libinput_config.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -68,7 +68,7 @@ msgstr ""
 "Nie można zapisać wszystkich zmian. Zajrzyj do dziennika po szczegóły. "
 "Uruchom moduł ustawień ponownie."
 
-#: kcm/libinput/libinput_config.cpp:131
+#: kcm/libinput/libinput_config.cpp:136
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -77,7 +77,7 @@ msgstr ""
 "Błąd wczytywania wartości domyślnych. Nie można ustawić wszystkich lub "
 "części opcji do wartości domyślnych."
 
-#: kcm/libinput/libinput_config.cpp:153
+#: kcm/libinput/libinput_config.cpp:158
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -86,12 +86,12 @@ msgstr ""
 "Błąd podczas dodawania nowopodłączonego urządzenia. Podłącz je ponownie i "
 "uruchom moduł ustawień ponownie."
 
-#: kcm/libinput/libinput_config.cpp:177
+#: kcm/libinput/libinput_config.cpp:182
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Odłączono urządzenie wskazujące. Zamknięto jego okno ustawień."
 
-#: kcm/libinput/libinput_config.cpp:179
+#: kcm/libinput/libinput_config.cpp:184
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Odłączono urządzenie wskazujące. Nie znaleziono innych urządzeń."

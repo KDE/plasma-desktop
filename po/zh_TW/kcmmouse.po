@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-06 02:04+0000\n"
 "PO-Revision-Date: 2023-02-07 22:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -49,45 +49,45 @@ msgstr "查詢輸入裝置失敗。請重新開啟設定模組。"
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "讀取 %1 基本裝置資訊時發生緊急錯誤。"
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr "載入數值失敗。查看日誌了解更多詳情。請重啟設定模組。"
 
-#: kcm/libinput/libinput_config.cpp:100
+#: kcm/libinput/libinput_config.cpp:105
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "找不到任何指標裝置。請現在連接。"
 
-#: kcm/libinput/libinput_config.cpp:111
+#: kcm/libinput/libinput_config.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr "無法儲存所有變更。查看日誌了解更多詳情。重啟設定模組並重試。"
 
-#: kcm/libinput/libinput_config.cpp:131
+#: kcm/libinput/libinput_config.cpp:136
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr "載入預設值失敗。無法設定部份選項至其預設值。"
 
-#: kcm/libinput/libinput_config.cpp:153
+#: kcm/libinput/libinput_config.cpp:158
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr "加入新連接裝置失敗。請重新連接它，並且重啟設定模組"
 
-#: kcm/libinput/libinput_config.cpp:177
+#: kcm/libinput/libinput_config.cpp:182
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "已取消連結指標裝置。關閉其設定對話框。"
 
-#: kcm/libinput/libinput_config.cpp:179
+#: kcm/libinput/libinput_config.cpp:184
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "已取消連結指標裝置。找不到其他任何裝置。"

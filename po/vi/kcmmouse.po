@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-06 02:04+0000\n"
 "PO-Revision-Date: 2022-09-02 17:47+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Truy vấn thiết bị nhập thất bại. Vui lòng mở lại khối
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Lỗi nguy cấp khi đọc các thông tin thiết bị cơ bản của %1."
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -47,12 +47,12 @@ msgstr ""
 "Lỗi khi tải các giá trị. Xem thêm thông tin trong nhật kí. Vui lòng khởi "
 "động lại khối cấu hình này."
 
-#: kcm/libinput/libinput_config.cpp:100
+#: kcm/libinput/libinput_config.cpp:105
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Không tìm thấy thiết bị trỏ nào. Hãy kết nối thiết bị trỏ."
 
-#: kcm/libinput/libinput_config.cpp:111
+#: kcm/libinput/libinput_config.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -61,7 +61,7 @@ msgstr ""
 "Không thể lưu tất cả các thay đổi. Xem thêm thông tin trong nhật kí. Vui "
 "lòng khởi động lại khối cấu hình này và thử lại."
 
-#: kcm/libinput/libinput_config.cpp:131
+#: kcm/libinput/libinput_config.cpp:136
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -70,7 +70,7 @@ msgstr ""
 "Lỗi khi tải các giá trị mặc định. Đặt một số lựa chọn về giá trị mặc định "
 "thất bại."
 
-#: kcm/libinput/libinput_config.cpp:153
+#: kcm/libinput/libinput_config.cpp:158
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -79,12 +79,12 @@ msgstr ""
 "Lỗi khi thêm thiết bị mới được kết nối. Vui lòng kết nối lại và khởi động "
 "lại khối cấu hình này."
 
-#: kcm/libinput/libinput_config.cpp:177
+#: kcm/libinput/libinput_config.cpp:182
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Thiết bị trỏ bị ngắt kết nối. Đã đóng hộp thoại thiết lập."
 
-#: kcm/libinput/libinput_config.cpp:179
+#: kcm/libinput/libinput_config.cpp:184
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Thiết bị trỏ bị ngắt kết nối. Không tìm thấy thiết bị trỏ nào khác."

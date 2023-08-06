@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-06 02:04+0000\n"
 "PO-Revision-Date: 2022-11-10 12:13\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -45,7 +45,7 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Падчас чытання асноўных звестак %1 адбылася крытычная памылка."
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -54,12 +54,12 @@ msgstr ""
 "Падчас загрузкі значэнняў адбылася памылка. Каб даведацца падрабязней, "
 "глядзіце журналы. Перазапусціце гэты модуль канфігурацыі."
 
-#: kcm/libinput/libinput_config.cpp:100
+#: kcm/libinput/libinput_config.cpp:105
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Не знойдзена прылад для кіравання курсорам. Падлучыце такую прыладу."
 
-#: kcm/libinput/libinput_config.cpp:111
+#: kcm/libinput/libinput_config.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -68,7 +68,7 @@ msgstr ""
 "Немагчыма захаваць усе змены. Каб даведацца падрабязней, глядзіце журналы. "
 "Перазапусціце гэты модуль канфігурацыі і паспрабуйце зноў."
 
-#: kcm/libinput/libinput_config.cpp:131
+#: kcm/libinput/libinput_config.cpp:136
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -77,7 +77,7 @@ msgstr ""
 "Падчас загрузкі прадвызначаных значэнняў адбылася памылка. Не ўдалося "
 "вызначыць прадвызначаныя значэнні для некаторых параметраў."
 
-#: kcm/libinput/libinput_config.cpp:153
+#: kcm/libinput/libinput_config.cpp:158
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -86,13 +86,13 @@ msgstr ""
 "Не ўдалося дадаць нядаўна падлучаную прыладу. Перападлучыце яе і "
 "перазапусціце гэты модуль канфігурацыі."
 
-#: kcm/libinput/libinput_config.cpp:177
+#: kcm/libinput/libinput_config.cpp:182
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Прылада для кіравання курсорам адлучаная. Дыялогавае акно налад закрыта."
 
-#: kcm/libinput/libinput_config.cpp:179
+#: kcm/libinput/libinput_config.cpp:184
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Прылада для кіравання курсорам адлучаная. Іншыя прылады не знойдзеныя."

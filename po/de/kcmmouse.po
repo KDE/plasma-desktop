@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-06 02:04+0000\n"
 "PO-Revision-Date: 2023-02-26 00:49+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritischer Fehler beim Lesen der Basisinformation des Geräts von %1 ."
 
-#: kcm/libinput/libinput_config.cpp:95
+#: kcm/libinput/libinput_config.cpp:100
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -53,13 +53,13 @@ msgstr ""
 "Fehler beim Laden von Werten. Im Protokoll finden Sie weitere Informationen "
 "dazu. Bitte starten Sie dieses Einrichtungsmodul erneut."
 
-#: kcm/libinput/libinput_config.cpp:100
+#: kcm/libinput/libinput_config.cpp:105
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr ""
 "Es wurde kein Zeigergerät gefunden. Schließen Sie ein Zeigergerät jetzt an."
 
-#: kcm/libinput/libinput_config.cpp:111
+#: kcm/libinput/libinput_config.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -69,7 +69,7 @@ msgstr ""
 "weitere Informationen dazu. Bitte starten Sie dieses Einrichtungsmodul neu "
 "und versuchen es nochmal."
 
-#: kcm/libinput/libinput_config.cpp:131
+#: kcm/libinput/libinput_config.cpp:136
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -78,7 +78,7 @@ msgstr ""
 "Fehler beim Laden der Standardwerte. Es können nicht alle Einstellungen auf "
 "die Standardwerte zurückgesetzt werden."
 
-#: kcm/libinput/libinput_config.cpp:153
+#: kcm/libinput/libinput_config.cpp:158
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -87,14 +87,14 @@ msgstr ""
 "Fehler beim Hinzufügen des neu angeschlossenen Geräts. Schließen Sie es "
 "bitte erneut an und starten dann dieses Einrichtungsmodul neu."
 
-#: kcm/libinput/libinput_config.cpp:177
+#: kcm/libinput/libinput_config.cpp:182
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Das Zeigergerät wurde getrennt, der Einstellungsdialog dafür wird "
 "geschlossen."
 
-#: kcm/libinput/libinput_config.cpp:179
+#: kcm/libinput/libinput_config.cpp:184
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
