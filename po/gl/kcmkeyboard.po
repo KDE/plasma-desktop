@@ -7,14 +7,14 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2012.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-05 00:46+0000\n"
-"PO-Revision-Date: 2020-01-05 18:37+0100\n"
+"PO-Revision-Date: 2023-08-06 04:51+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -35,10 +35,9 @@ msgid "Your emails"
 msgstr "mvillarino@kde-espana.es"
 
 #: bindings.cpp:24
-#, fuzzy, kde-format
-#| msgid "KDE Keyboard Layout Switcher"
+#, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "Selector da disposición do teclado de KDE"
+msgstr "Selector da disposición do teclado"
 
 #: bindings.cpp:26
 #, kde-format
@@ -54,7 +53,7 @@ msgstr "Cambiar a disposición do teclado a %1"
 #, kde-format
 msgctxt "layout - variant"
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "%1 — %2"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
 #: kcm_add_layout_dialog.ui:14
@@ -66,7 +65,7 @@ msgstr "Engadir unha disposición"
 #: kcm_add_layout_dialog.ui:20
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Buscar…"
 
 #. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
 #: kcm_add_layout_dialog.ui:45
@@ -217,7 +216,7 @@ msgstr "Ningún"
 #: kcm_keyboard.ui:186 kcm_keyboard.ui:216
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm_keyboard.ui:193
@@ -250,8 +249,8 @@ msgid ""
 "or from screensaver)."
 msgstr ""
 "Este é un atallo para trocar disposicións, polo que non permite usar só "
-"teclas modificadoras e tamén poida que non funcione nalgunhas situacións "
-"(por ex. se unha xanela emerxente esta activa ou no protector da pantalla)."
+"teclas modificadoras e tamén pode que non funcione nalgunhas situacións (por "
+"ex. se unha xanela emerxente esta activa ou no protector da pantalla)."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:261
@@ -287,7 +286,7 @@ msgstr "Baixar"
 #: kcm_keyboard.ui:350
 #, kde-format
 msgid "Spare layouts"
-msgstr "Disposicións de reserva"
+msgstr "Disposicións de reserva."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm_keyboard.ui:382
@@ -305,7 +304,7 @@ msgstr "Avanzado"
 #: kcm_keyboard.ui:418
 #, kde-format
 msgid "&Configure keyboard options"
-msgstr "Configurar as &opcións do teclado"
+msgstr "Configurar as &opcións do teclado."
 
 #: kcm_keyboard_widget.cpp:211
 #, kde-format
@@ -368,25 +367,25 @@ msgstr "Predeterminado"
 #: kcmmiscwidget.ui:31
 #, kde-format
 msgid "When a key is held:"
-msgstr ""
+msgstr "Cando se mantén premida unha tecla:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
 #: kcmmiscwidget.ui:38
 #, kde-format
 msgid "&Show accented and similar characters "
-msgstr ""
+msgstr "Amo&sar os caracteres con til ou similar "
 
 #. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
 #: kcmmiscwidget.ui:45
 #, kde-format
 msgid "&Repeat the key"
-msgstr ""
+msgstr "&Repetir a tecla"
 
 #. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
 #: kcmmiscwidget.ui:52
 #, kde-format
 msgid "&Do nothing"
-msgstr ""
+msgstr "Non facer na&da"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmmiscwidget.ui:66
@@ -414,7 +413,7 @@ msgid ""
 msgstr ""
 "Se se permite, esta opción permítelle indicar o estado be BloqNum tras "
 "iniciar Plasma.<p>Pode configurar BloqNum para que estea activado ou "
-"desactivado, ou configurar Plasma para non alterar o estado de BloqNum."
+"desactivado, ou configurar Plasma para non definir o estado de BloqNum."
 
 #. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:85
@@ -455,7 +454,7 @@ msgid ""
 "key will start generating keycodes. The 'Repeat rate' option controls the "
 "frequency of these keycodes."
 msgstr ""
-"Se se permite, esta opción permítelle indicar o atraso tras o cal unha tecla "
+"Se se permite, esta opción permítelle definir o atraso tras o cal unha tecla "
 "premida comezará a emitir códigos de tecla. A opción «taxa de repetición» "
 "controla a frecuencia deses códigos de tecla."
 
@@ -467,7 +466,7 @@ msgid ""
 "If supported, this option allows you to set the rate at which keycodes are "
 "generated while a key is pressed."
 msgstr ""
-"Se se permite, esta opción permítelle indicar a taxa á que se xeran códigos "
+"Se se permite, esta opción permítelle definir a taxa á que se xeran códigos "
 "de tecla mentres se preme unha tecla."
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
@@ -489,18 +488,16 @@ msgid "&Delay:"
 msgstr "&Atraso:"
 
 #: tastenbrett/main.cpp:57
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr "Repetición de teclado"
+msgstr "Vista previa do teclado"
 
 #: tastenbrett/main.cpp:59
-#, fuzzy, kde-format
-#| msgid "KDE Keyboard Layout Switcher"
+#, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "Selector da disposición do teclado de KDE"
+msgstr "Visualización da disposición do teclado"
 
 #: tastenbrett/main.cpp:144
 #, kde-format
@@ -511,6 +508,10 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+"Non se puido cargar a xeometría do teclado. Isto adoita indicar que o modelo "
+"seleccionado non é compatíbel cunha disposición ou cunha variante de "
+"disposición concretas. O problema ocorrerá tamén probablemente ao intentar "
+"usar esta combinación de modelo, disposición e variante."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Selector da disposición do teclado de KDE"
