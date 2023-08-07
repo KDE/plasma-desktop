@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-10 02:12+0000\n"
-"PO-Revision-Date: 2023-06-01 18:38+0100\n"
+"PO-Revision-Date: 2023-08-06 22:58+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -64,10 +64,11 @@ msgstr ""
 "dosierujoj kaj tipoj de dosierdatenoj estu indeksitaj."
 
 #: ui/main.qml:108
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File indexing:"
 msgctxt "@title:group"
 msgid "File indexing:"
-msgstr "Dosierindeksado: %1"
+msgstr "Dosierindeksado:"
 
 #: ui/main.qml:109
 #, kde-format
