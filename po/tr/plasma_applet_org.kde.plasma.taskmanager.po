@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:16+0000\n"
-"PO-Revision-Date: 2023-05-14 21:05+0300\n"
+"POT-Creation-Date: 2023-08-08 02:04+0000\n"
+"PO-Revision-Date: 2023-08-07 17:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -304,7 +304,7 @@ msgstr "Geçerli sanal masaüstüne getirir"
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
-msgstr "Fare tekerini çevirmek:"
+msgstr "Fare tekerleği:"
 
 #: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
@@ -379,197 +379,197 @@ msgstr "Solda"
 msgid "On the Top"
 msgstr "Üstte"
 
-#: package/contents/ui/ContextMenu.qml:95
+#: package/contents/ui/ContextMenu.qml:99
 #, kde-format
 msgid "Places"
 msgstr "Yerler"
 
-#: package/contents/ui/ContextMenu.qml:100
+#: package/contents/ui/ContextMenu.qml:105
 #, kde-format
 msgid "Recent Files"
 msgstr "Son Dosyalar"
 
-#: package/contents/ui/ContextMenu.qml:105
+#: package/contents/ui/ContextMenu.qml:112
 #, kde-format
 msgid "Actions"
 msgstr "Eylemler"
 
-#: package/contents/ui/ContextMenu.qml:170
+#: package/contents/ui/ContextMenu.qml:176
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Önceki Parça"
 
-#: package/contents/ui/ContextMenu.qml:184
+#: package/contents/ui/ContextMenu.qml:190
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Duraklat"
 
-#: package/contents/ui/ContextMenu.qml:184
+#: package/contents/ui/ContextMenu.qml:190
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Oynat"
 
-#: package/contents/ui/ContextMenu.qml:202
+#: package/contents/ui/ContextMenu.qml:208
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Sonraki Parça"
 
-#: package/contents/ui/ContextMenu.qml:213
+#: package/contents/ui/ContextMenu.qml:219
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Durdur"
 
-#: package/contents/ui/ContextMenu.qml:233
+#: package/contents/ui/ContextMenu.qml:239
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
 msgstr "Çık"
 
-#: package/contents/ui/ContextMenu.qml:248
+#: package/contents/ui/ContextMenu.qml:254
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
 msgstr "Geri Yükle"
 
-#: package/contents/ui/ContextMenu.qml:274
+#: package/contents/ui/ContextMenu.qml:280
 #, kde-format
 msgid "Mute"
 msgstr "Sesi Kapat"
 
-#: package/contents/ui/ContextMenu.qml:285
+#: package/contents/ui/ContextMenu.qml:291
 #, kde-format
 msgid "Open New Window"
 msgstr "Yeni Pencere Aç"
 
-#: package/contents/ui/ContextMenu.qml:301
+#: package/contents/ui/ContextMenu.qml:307
 #, kde-format
 msgid "Move to &Desktop"
 msgstr "Masaüstüne &Taşı"
 
-#: package/contents/ui/ContextMenu.qml:325
+#: package/contents/ui/ContextMenu.qml:331
 #, kde-format
 msgid "Move &To Current Desktop"
 msgstr "&Geçerli Masaüstüne Taşı"
 
-#: package/contents/ui/ContextMenu.qml:334
+#: package/contents/ui/ContextMenu.qml:340
 #, kde-format
 msgid "&All Desktops"
 msgstr "&Tüm Masaüstleri"
 
-#: package/contents/ui/ContextMenu.qml:348
+#: package/contents/ui/ContextMenu.qml:354
 #, kde-format
 msgctxt "1 = number of desktop, 2 = desktop name"
 msgid "&%1 %2"
 msgstr "&%1 %2"
 
-#: package/contents/ui/ContextMenu.qml:362
+#: package/contents/ui/ContextMenu.qml:368
 #, kde-format
 msgid "&New Desktop"
 msgstr "&Yeni Masaüstü"
 
-#: package/contents/ui/ContextMenu.qml:382
+#: package/contents/ui/ContextMenu.qml:388
 #, kde-format
 msgid "Show in &Activities"
 msgstr "&Etkinliklerde Göster"
 
-#: package/contents/ui/ContextMenu.qml:406
+#: package/contents/ui/ContextMenu.qml:412
 #, kde-format
 msgid "Add To Current Activity"
 msgstr "Geçerli Etkinliğe Ekle"
 
-#: package/contents/ui/ContextMenu.qml:416
+#: package/contents/ui/ContextMenu.qml:422
 #, kde-format
 msgid "All Activities"
 msgstr "Tüm Etkinlikler"
 
-#: package/contents/ui/ContextMenu.qml:474
+#: package/contents/ui/ContextMenu.qml:480
 #, kde-format
 msgid "Move to %1"
 msgstr "Şuraya taşı: %1"
 
-#: package/contents/ui/ContextMenu.qml:502
-#: package/contents/ui/ContextMenu.qml:519
+#: package/contents/ui/ContextMenu.qml:508
+#: package/contents/ui/ContextMenu.qml:525
 #, kde-format
 msgid "&Pin to Task Manager"
 msgstr "&Görev Yöneticisine Sabitle"
 
-#: package/contents/ui/ContextMenu.qml:572
+#: package/contents/ui/ContextMenu.qml:578
 #, kde-format
 msgid "On All Activities"
 msgstr "Tüm Etkinliklerde"
 
-#: package/contents/ui/ContextMenu.qml:578
+#: package/contents/ui/ContextMenu.qml:584
 #, kde-format
 msgid "On The Current Activity"
 msgstr "Geçerli Etkinlikte"
 
-#: package/contents/ui/ContextMenu.qml:603
+#: package/contents/ui/ContextMenu.qml:609
 #, kde-format
 msgid "Unpin from Task Manager"
 msgstr "Görev Yöneticisinden Kaldır"
 
-#: package/contents/ui/ContextMenu.qml:618
+#: package/contents/ui/ContextMenu.qml:624
 #, kde-format
 msgid "More"
 msgstr "Daha Fazla"
 
-#: package/contents/ui/ContextMenu.qml:627
+#: package/contents/ui/ContextMenu.qml:633
 #, kde-format
 msgid "&Move"
 msgstr "&Taşı"
 
-#: package/contents/ui/ContextMenu.qml:636
+#: package/contents/ui/ContextMenu.qml:642
 #, kde-format
 msgid "Re&size"
 msgstr "&Yeniden Boyutlandır"
 
-#: package/contents/ui/ContextMenu.qml:650
+#: package/contents/ui/ContextMenu.qml:656
 #, kde-format
 msgid "Ma&ximize"
 msgstr "Ekranı &Kapla"
 
-#: package/contents/ui/ContextMenu.qml:664
+#: package/contents/ui/ContextMenu.qml:670
 #, kde-format
 msgid "Mi&nimize"
 msgstr "Simge &Durumuna Küçült"
 
-#: package/contents/ui/ContextMenu.qml:674
+#: package/contents/ui/ContextMenu.qml:680
 #, kde-format
 msgid "Keep &Above Others"
 msgstr "&Diğerlerinin Üzerinde Tut"
 
-#: package/contents/ui/ContextMenu.qml:684
+#: package/contents/ui/ContextMenu.qml:690
 #, kde-format
 msgid "Keep &Below Others"
 msgstr "Diğerlerinin &Altında Tut"
 
-#: package/contents/ui/ContextMenu.qml:696
+#: package/contents/ui/ContextMenu.qml:702
 #, kde-format
 msgid "&Fullscreen"
 msgstr "Tam &Ekran"
 
-#: package/contents/ui/ContextMenu.qml:708
+#: package/contents/ui/ContextMenu.qml:714
 #, kde-format
 msgid "&Shade"
 msgstr "&Panjuru Kapat"
 
-#: package/contents/ui/ContextMenu.qml:724
+#: package/contents/ui/ContextMenu.qml:730
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Bu Programın Gruplandırılmasına İzin Ver"
 
-#: package/contents/ui/ContextMenu.qml:772
+#: package/contents/ui/ContextMenu.qml:778
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "Tümünü &Kapat"
 
-#: package/contents/ui/ContextMenu.qml:772
+#: package/contents/ui/ContextMenu.qml:778
 #, kde-format
 msgid "&Close"
 msgstr "&Kapat"

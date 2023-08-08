@@ -4,21 +4,21 @@
 # Franklin, 2014.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-13 02:10+0000\n"
-"PO-Revision-Date: 2022-12-26 03:59+0900\n"
+"PO-Revision-Date: 2023-08-07 22:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: plasmasearch/kcm.cpp:87
 #, kde-format
@@ -63,14 +63,14 @@ msgstr "成功執行解除安裝，您現在可以關閉這個視窗了"
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
 #, kde-format
 msgid "Failed to copy file %1 to %2"
-msgstr ""
+msgstr "無法複製檔案 %1 到 %2"
 
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to remove file %1:<nl/>%2"
-msgstr ""
+msgstr "無法移除檔案 %1：<nl/>%2"
 
 #: plugininstaller/main.cpp:33
 #, kde-format
@@ -94,7 +94,7 @@ msgstr "封存檔路徑。"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
-msgstr ""
+msgstr "不要顯示視覺確認對話框"
 
 #: plugininstaller/main.cpp:91
 #, kde-format
@@ -142,7 +142,7 @@ msgctxt "@info"
 msgid ""
 "This plugin executes the following command for starting the \"%1\" service:"
 "<nl/>%2"
-msgstr ""
+msgstr "這個外掛程式會執行以下命令來啟動「%1」服務：<nl/>%2"
 
 #: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format

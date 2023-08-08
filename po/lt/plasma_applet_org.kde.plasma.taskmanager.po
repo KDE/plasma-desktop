@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:16+0000\n"
+"POT-Creation-Date: 2023-08-08 02:04+0000\n"
 "PO-Revision-Date: 2022-12-28 00:59+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -382,198 +382,198 @@ msgstr "Kairėje"
 msgid "On the Top"
 msgstr "Viršuje"
 
-#: package/contents/ui/ContextMenu.qml:95
+#: package/contents/ui/ContextMenu.qml:99
 #, kde-format
 msgid "Places"
 msgstr "Vietos"
 
-#: package/contents/ui/ContextMenu.qml:100
+#: package/contents/ui/ContextMenu.qml:105
 #, kde-format
 msgid "Recent Files"
 msgstr "Paskiausiai naudoti failai"
 
-#: package/contents/ui/ContextMenu.qml:105
+#: package/contents/ui/ContextMenu.qml:112
 #, kde-format
 msgid "Actions"
 msgstr "Veiksmai"
 
-#: package/contents/ui/ContextMenu.qml:170
+#: package/contents/ui/ContextMenu.qml:176
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Ankstesnis takelis"
 
-#: package/contents/ui/ContextMenu.qml:184
+#: package/contents/ui/ContextMenu.qml:190
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pristabdyti"
 
-#: package/contents/ui/ContextMenu.qml:184
+#: package/contents/ui/ContextMenu.qml:190
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Atkurti"
 
-#: package/contents/ui/ContextMenu.qml:202
+#: package/contents/ui/ContextMenu.qml:208
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Kitas takelis"
 
-#: package/contents/ui/ContextMenu.qml:213
+#: package/contents/ui/ContextMenu.qml:219
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Stabdyti"
 
-#: package/contents/ui/ContextMenu.qml:233
+#: package/contents/ui/ContextMenu.qml:239
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
 msgstr "Išeiti"
 
-#: package/contents/ui/ContextMenu.qml:248
+#: package/contents/ui/ContextMenu.qml:254
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
 msgstr "Rodyti langą"
 
-#: package/contents/ui/ContextMenu.qml:274
+#: package/contents/ui/ContextMenu.qml:280
 #, kde-format
 msgid "Mute"
 msgstr "Nutildyti"
 
-#: package/contents/ui/ContextMenu.qml:285
+#: package/contents/ui/ContextMenu.qml:291
 #, kde-format
 msgid "Open New Window"
 msgstr "Atverti naują langą"
 
-#: package/contents/ui/ContextMenu.qml:301
+#: package/contents/ui/ContextMenu.qml:307
 #, kde-format
 msgid "Move to &Desktop"
 msgstr "Perkelti į &darbalaukį"
 
-#: package/contents/ui/ContextMenu.qml:325
+#: package/contents/ui/ContextMenu.qml:331
 #, kde-format
 msgid "Move &To Current Desktop"
 msgstr "Perkelti į da&bartinį darbalaukį"
 
-#: package/contents/ui/ContextMenu.qml:334
+#: package/contents/ui/ContextMenu.qml:340
 #, kde-format
 msgid "&All Desktops"
 msgstr "&Visi darbalaukiai"
 
-#: package/contents/ui/ContextMenu.qml:348
+#: package/contents/ui/ContextMenu.qml:354
 #, kde-format
 msgctxt "1 = number of desktop, 2 = desktop name"
 msgid "&%1 %2"
 msgstr "&%1 %2"
 
-#: package/contents/ui/ContextMenu.qml:362
+#: package/contents/ui/ContextMenu.qml:368
 #, kde-format
 msgid "&New Desktop"
 msgstr "&Naujas darbalaukis"
 
-#: package/contents/ui/ContextMenu.qml:382
+#: package/contents/ui/ContextMenu.qml:388
 #, kde-format
 msgid "Show in &Activities"
 msgstr "Rodyti &veiklose"
 
-#: package/contents/ui/ContextMenu.qml:406
+#: package/contents/ui/ContextMenu.qml:412
 #, kde-format
 msgid "Add To Current Activity"
 msgstr "Pridėti į dabartinę veiklą"
 
-#: package/contents/ui/ContextMenu.qml:416
+#: package/contents/ui/ContextMenu.qml:422
 #, kde-format
 msgid "All Activities"
 msgstr "Visos veiklos"
 
-#: package/contents/ui/ContextMenu.qml:474
+#: package/contents/ui/ContextMenu.qml:480
 #, kde-format
 msgid "Move to %1"
 msgstr "Perkelti į %1"
 
-#: package/contents/ui/ContextMenu.qml:502
-#: package/contents/ui/ContextMenu.qml:519
+#: package/contents/ui/ContextMenu.qml:508
+#: package/contents/ui/ContextMenu.qml:525
 #, kde-format
 msgid "&Pin to Task Manager"
 msgstr "&Prisegti prie užduočių tvarkytuvės"
 
-#: package/contents/ui/ContextMenu.qml:572
+#: package/contents/ui/ContextMenu.qml:578
 #, kde-format
 msgid "On All Activities"
 msgstr "Visose veiklose"
 
-#: package/contents/ui/ContextMenu.qml:578
+#: package/contents/ui/ContextMenu.qml:584
 #, kde-format
 msgid "On The Current Activity"
 msgstr "Dabartinėje veikloje"
 
-#: package/contents/ui/ContextMenu.qml:603
+#: package/contents/ui/ContextMenu.qml:609
 #, kde-format
 msgid "Unpin from Task Manager"
 msgstr "Atsegti nuo užduočių tvarkytuvės"
 
-#: package/contents/ui/ContextMenu.qml:618
+#: package/contents/ui/ContextMenu.qml:624
 #, kde-format
 msgid "More"
 msgstr "Daugiau"
 
-#: package/contents/ui/ContextMenu.qml:627
+#: package/contents/ui/ContextMenu.qml:633
 #, kde-format
 msgid "&Move"
 msgstr "&Perkelti"
 
-#: package/contents/ui/ContextMenu.qml:636
+#: package/contents/ui/ContextMenu.qml:642
 #, kde-format
 msgid "Re&size"
 msgstr "Keisti &dydį"
 
-#: package/contents/ui/ContextMenu.qml:650
+#: package/contents/ui/ContextMenu.qml:656
 #, kde-format
 msgid "Ma&ximize"
 msgstr "&Išskleisti"
 
-#: package/contents/ui/ContextMenu.qml:664
+#: package/contents/ui/ContextMenu.qml:670
 #, kde-format
 msgid "Mi&nimize"
 msgstr "&Suskleisti"
 
-#: package/contents/ui/ContextMenu.qml:674
+#: package/contents/ui/ContextMenu.qml:680
 #, kde-format
 msgid "Keep &Above Others"
 msgstr "Laikyti &virš kitų"
 
-#: package/contents/ui/ContextMenu.qml:684
+#: package/contents/ui/ContextMenu.qml:690
 #, kde-format
 msgid "Keep &Below Others"
 msgstr "Laikyti &po kitais"
 
-#: package/contents/ui/ContextMenu.qml:696
+#: package/contents/ui/ContextMenu.qml:702
 #, kde-format
 msgid "&Fullscreen"
 msgstr "&Visas ekranas"
 
-#: package/contents/ui/ContextMenu.qml:708
+#: package/contents/ui/ContextMenu.qml:714
 #, kde-format
 msgid "&Shade"
 msgstr "&Pridengti"
 
-#: package/contents/ui/ContextMenu.qml:724
+#: package/contents/ui/ContextMenu.qml:730
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Leisti grupuoti šią programą"
 
-#: package/contents/ui/ContextMenu.qml:772
+#: package/contents/ui/ContextMenu.qml:778
 #, fuzzy, kde-format
 #| msgid "&Close"
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "&Užverti"
 
-#: package/contents/ui/ContextMenu.qml:772
+#: package/contents/ui/ContextMenu.qml:778
 #, kde-format
 msgid "&Close"
 msgstr "&Užverti"
