@@ -13,7 +13,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 import org.kde.kquickcontrolsaddons 2.0
 
 Item {
@@ -90,7 +90,7 @@ Item {
             property QtObject popupDialog: null
             property Item iconArea: icon
             property Item label: label
-            property Item labelArea: frameLoader.textShadow || label
+            property Item labelArea: label
             property Item actionsOverlay: actions
             property Item hoverArea: toolTip
             property Item frame: frameLoader
@@ -225,7 +225,6 @@ Item {
                 x: root.useListViewMode ? 0 : Kirigami.Units.smallSpacing
                 y: root.useListViewMode ? 0 : Kirigami.Units.smallSpacing
 
-                property Item textShadow: null
                 property Item iconShadow: null
                 property string prefix: ""
 
@@ -301,23 +300,10 @@ Item {
                     source: model.decoration
                 }
 
-                Rectangle {
-                    id: fallbackRectangleBackground
-                    visible: GraphicsInfo.api === GraphicsInfo.Software && !model.selected
-                    anchors {
-                        fill: label
-                        margins: -Kirigami.Units.smallSpacing
-                    }
-
-                    color: "black"
-                    radius: Kirigami.Units.smallSpacing
-                    opacity: 0.45
-                }
-
-                PlasmaComponents.Label {
+                WorkspaceComponents.ShadowedLabel {
                     id: label
 
-                    z: 2 // So we can position a textShadowComponent below if needed.
+                    z: 2 // So it's always above the highlight effect
 
                     states: [
                         State { // icon view
@@ -331,7 +317,7 @@ Item {
                             PropertyChanges {
                                 target: label
                                 anchors.topMargin: Kirigami.Units.smallSpacing
-                                width: Math.round(Math.min(label.implicitWidth + Kirigami.Units.smallSpacing, parent.width - Kirigami.Units.smallSpacing))
+                                width: parent.width - Kirigami.Units.smallSpacing
                                 maximumLineCount: plasmoid.configuration.textLines
                                 horizontalAlignment: Text.AlignHCenter
                             }
@@ -355,41 +341,23 @@ Item {
                         }
                     ]
 
-                    height: undefined // Unset PlasmaComponents.Label's default.
-
-                    textFormat: Text.PlainText
-
-                    wrapMode: (maximumLineCount === 1) ? Text.NoWrap : Text.Wrap
-                    elide: Text.ElideRight
-
                     color: {
-                        if ((frameLoader.textShadow && frameLoader.textShadow.visible) || fallbackRectangleBackground.visible) {
-                            return "#fff";
-                        } else if (model.selected) {
+                        if (model.selected) {
                             return Kirigami.Theme.highlightedTextColor;
+                        } else if (root.useListViewMode) {
+                            return Kirigami.Theme.textColor;
                         } else {
-                            return Kirigami.Theme.textColor
+                            // In this situation there's a shadow or a background rect, both of which are always black
+                            return "white";
                         }
                     }
-
+                    renderShadow: (!editor || editor.targetItem !== main) && !root.useListViewMode
                     opacity: model.isHidden ? 0.6 : 1
 
                     text: main.nameWrapped
-
                     font.italic: model.isLink
-
-                    visible: {
-                        if (editor && editor.targetItem === main) {
-                            return false;
-                        }
-
-                        // DropShadow renders the Label already.
-                        if (frameLoader.textShadow && frameLoader.textShadow.visible) {
-                            return false;
-                        }
-
-                        return true;
-                    }
+                    wrapMode: (maximumLineCount === 1) ? Text.NoWrap : Text.Wrap
+                    horizontalAlignment: Text.AlignHCenter
                 }
 
                 Component {
@@ -461,31 +429,6 @@ Item {
                     }
                 }
 
-                Component {
-                    id: textShadowComponent
-
-                    DropShadow {
-                        anchors.fill: label
-
-                        z: 1
-
-                        horizontalOffset: 1
-                        verticalOffset: 1
-
-                        radius: 4.0
-                        samples: radius * 2 + 1
-                        spread: 0.35
-
-                        color: "black"
-
-                        opacity: model.isHidden ? 0.6 : 1
-
-                        source: label
-
-                        visible: !editor || editor.targetItem !== main
-                    }
-                }
-
                 states: [
                     State {
                         name: "selected"
@@ -549,7 +492,6 @@ Item {
 
             Component.onCompleted: {
                 if (Plasmoid.isContainment && main.GridView.view.isRootView && root.GraphicsInfo.api === GraphicsInfo.OpenGL) {
-                    frameLoader.textShadow = textShadowComponent.createObject(frameLoader);
                     frameLoader.iconShadow = iconShadowComponent.createObject(frameLoader);
                 }
             }

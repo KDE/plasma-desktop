@@ -5,9 +5,8 @@
 */
 
 import QtQuick
-import QtQuick.Controls as QQC2
-import Qt5Compat.GraphicalEffects
 
+import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 import org.kde.kirigami 2.20 as Kirigami
 
 Item {
@@ -22,53 +21,24 @@ Item {
         onTapped: Qt.openUrlExternally("https://bugs.kde.org/")
     }
 
-    Kirigami.Heading {
+    WorkspaceComponents.ShadowedLabel {
         id: title
         anchors {
             top: parent.top
             right: parent.right
         }
         z: 2
-        color: "#fff"
-        horizontalAlignment: Text.AlignLeft
         text: desktop.previewBannerTitle
+        // Emulate the size of a level 1 heading
+        font.pointSize: Math.round(Kirigami.Theme.defaultFont.pointSize * 1.35)
     }
 
-    DropShadow {
-        anchors.fill: title
-        z: 1
-        color: "black"
-        horizontalOffset: 1
-        verticalOffset: 1
-        opacity: 0.8
-        radius: 4.0
-        samples: radius * 2 + 1
-        spread: 0.35
-        source: title
-    }
-
-    QQC2.Label {
-        id: textLabel
+    WorkspaceComponents.ShadowedLabel {
         anchors {
             top: title.bottom
             right: parent.right
         }
         z: 2
-        color: "#fff"
-        horizontalAlignment: Text.AlignLeft
         text: desktop.previewBannerText
-    }
-
-    DropShadow {
-        anchors.fill: textLabel
-        z: 1
-        color: "black"
-        horizontalOffset: 1
-        verticalOffset: 1
-        opacity: 0.8
-        radius: 4.0
-        samples: radius * 2 + 1
-        spread: 0.35
-        source: textLabel
     }
 }
