@@ -46,7 +46,7 @@ Item {
 
     KIconThemes.IconDialog {
         id: iconDialog
-        onIconNameChanged: cfg_icon = iconName || "folder";
+        onIconNameChanged: cfg_icon = iconName || "folder-symbolic";
     }
 
     Kirigami.FormLayout {
@@ -105,7 +105,7 @@ Item {
                 PlasmaExtras.MenuItem {
                     text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
                     icon: "edit-clear"
-                    onClicked: cfg_icon = "folder";
+                    onClicked: cfg_icon = "folder-symbolic";
                 }
             }
         }

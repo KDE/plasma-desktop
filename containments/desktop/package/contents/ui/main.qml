@@ -73,9 +73,21 @@ ContainmentItem {
 
     // Plasmoid.title is set by a Binding {} in FolderViewLayer
     toolTipSubText: ""
-    Plasmoid.icon: (!plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? folderViewLayer.view.model.iconName : plasmoid.configuration.icon
+    Plasmoid.icon: (!plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? symbolicizeIconName(folderViewLayer.view.model.iconName) : plasmoid.configuration.icon
 
     onIconHeightChanged: updateGridSize()
+
+    // We want to do this here rather than in the model because we don't always want
+    // symbolic icons everywhere, but we do know that we always want them in this
+    // specific representation right here
+    function symbolicizeIconName(iconName) {
+        const symbolicSuffix = "-symbolic";
+        if (iconName.endsWith(symbolicSuffix)) {
+            return iconName;
+        }
+
+        return iconName + symbolicSuffix;
+    }
 
     function updateGridSize() {
         appletsLayout.cellWidth = root.iconWidth + toolBoxSvg.elementSize("left").width + toolBoxSvg.elementSize("right").width;
