@@ -45,7 +45,7 @@ PlasmoidItem {
     readonly property bool constrained: formFactor === PlasmaCore.Types.Vertical || formFactor === PlasmaCore.Types.Horizontal
 
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
-    Plasmoid.icon: (dirModel.count > 0) ? "user-trash-full": "user-trash"
+    Plasmoid.icon: (dirModel.count > 0) ? "user-trash-full-symbolic": "user-trash-symbolic"
     Plasmoid.onActivated: openTrash()
 
     Keys.onPressed: {
