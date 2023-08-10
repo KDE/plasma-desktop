@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2013 Heena Mahour <heena393@gmail.com>
     SPDX-FileCopyrightText: 2015, 2016 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2023 Nate Graham <nate@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
