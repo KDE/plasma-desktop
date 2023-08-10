@@ -59,11 +59,11 @@ PlasmoidItem {
     DragDrop.DropArea {
         anchors.fill: parent
         preventStealing: true
-        onDragEnter: containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
-        onDragLeave: containsAcceptableDrag = false
+        onDragEnter: root.containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
+        onDragLeave: root.containsAcceptableDrag = false
 
         onDrop: {
-            containsAcceptableDrag = false
+            root.containsAcceptableDrag = false
 
             var trashableUrls = TrashPrivate.Trash.trashableUrls(event.mimeData.urls)
             if (trashableUrls.length > 0) {
