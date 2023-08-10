@@ -57,7 +57,6 @@ PlasmoidItem {
     Accessible.role: Accessible.Button
 
     DragDrop.DropArea {
-        id: dropArea
         anchors.fill: parent
         preventStealing: true
         onDragEnter: containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
@@ -123,7 +122,7 @@ PlasmoidItem {
             top: parent.top
             bottom: root.inPanel ? parent.bottom: text.top
         }
-        active: mouseArea.containsMouse || dropArea.containsAcceptableDrag
+        active: mouseArea.containsMouse || root.containsAcceptableDrag
     }
 
     DropShadow {
