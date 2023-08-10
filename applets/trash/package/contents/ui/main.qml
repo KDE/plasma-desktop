@@ -56,24 +56,6 @@ PlasmoidItem {
     Accessible.description: toolTipSubText
     Accessible.role: Accessible.Button
 
-    DragDrop.DropArea {
-        anchors.fill: parent
-        preventStealing: true
-        onDragEnter: root.containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
-        onDragLeave: root.containsAcceptableDrag = false
-
-        onDrop: {
-            root.containsAcceptableDrag = false
-
-            var trashableUrls = TrashPrivate.Trash.trashableUrls(event.mimeData.urls)
-            if (trashableUrls.length > 0) {
-                TrashPrivate.Trash.trashUrls(trashableUrls)
-                event.accept(Qt.MoveAction)
-            } else {
-                event.accept(Qt.IgnoreAction) // prevent Plasma from spawning an applet
-            }
-        }
-    }
 
     TrashPrivate.DirModel {
         id: dirModel
@@ -104,60 +86,83 @@ PlasmoidItem {
         Plasmoid.removeInternalAction("configure");
     }
 
-    MouseArea {
+    // Only exists because the default CompactRepresentation doesn't:
+    // - allow defining a custom drop handler
+    // - expose the ability to show text below or beside the icon
+    // TODO remove once it gains those features
+    preferredRepresentation: fullRepresentation
+    fullRepresentation: MouseArea {
         id: mouseArea
-        anchors.fill: parent
 
         activeFocusOnTab: true
         hoverEnabled: true
 
         onClicked: Plasmoid.activated()
-    }
 
-    Kirigami.Icon {
-        source: Plasmoid.icon
-        anchors {
-            left: parent.left
-            right: parent.right
-            top: parent.top
-            bottom: root.inPanel ? parent.bottom: text.top
+        DragDrop.DropArea {
+            anchors.fill: parent
+            preventStealing: true
+            onDragEnter: root.containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
+            onDragLeave: root.containsAcceptableDrag = false
+
+            onDrop: {
+                root.containsAcceptableDrag = false
+
+                var trashableUrls = TrashPrivate.Trash.trashableUrls(event.mimeData.urls)
+                if (trashableUrls.length > 0) {
+                    TrashPrivate.Trash.trashUrls(trashableUrls)
+                    event.accept(Qt.MoveAction)
+                } else {
+                    event.accept(Qt.IgnoreAction) // prevent Plasma from spawning an applet
+                }
+            }
         }
-        active: mouseArea.containsMouse || root.containsAcceptableDrag
-    }
 
-    DropShadow {
-        anchors.fill: text
-
-        visible: !root.inPanel
-
-        horizontalOffset: 1
-        verticalOffset: 1
-
-        radius: 4
-        samples: 9
-        spread: 0.35
-
-        color: "black"
-
-        source: root.inPanel ? null : text
-    }
-
-    PC3.Label {
-        id: text
-        anchors {
-            horizontalCenter: parent.horizontalCenter
-            bottom: parent.bottom
+        Kirigami.Icon {
+            source: Plasmoid.icon
+            anchors {
+                left: parent.left
+                right: parent.right
+                top: parent.top
+                bottom: root.inPanel ? parent.bottom: text.top
+            }
+            active: mouseArea.containsMouse || root.containsAcceptableDrag
         }
-        width: Math.round(text.implicitWidth + Kirigami.Units.smallSpacing) // make sure label is not blurry
-        text: Plasmoid.title + "\n" + root.toolTipSubText
-        color: "white"
-        horizontalAlignment: Text.AlignHCenter
-        visible: false // rendered by DropShadow
-    }
 
-    PlasmaCore.ToolTipArea {
-        anchors.fill: parent
-        mainText: Plasmoid.title
-        subText:  root.toolTipSubText
+        DropShadow {
+            anchors.fill: text
+
+            visible: !root.inPanel
+
+            horizontalOffset: 1
+            verticalOffset: 1
+
+            radius: 4
+            samples: 9
+            spread: 0.35
+
+            color: "black"
+
+            source: root.inPanel ? null : text
+        }
+
+        PC3.Label {
+            id: text
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                bottom: parent.bottom
+            }
+            width: Math.round(text.implicitWidth + Kirigami.Units.smallSpacing) // make sure label is not blurry
+            text: Plasmoid.title + "\n" + root.toolTipSubText
+            color: "white"
+            horizontalAlignment: Text.AlignHCenter
+            visible: false // rendered by DropShadow
+        }
+
+        PlasmaCore.ToolTipArea {
+            anchors.fill: parent
+            mainText: Plasmoid.title
+            subText:  root.toolTipSubText
+        }
     }
 }
