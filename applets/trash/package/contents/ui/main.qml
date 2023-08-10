@@ -126,6 +126,7 @@ PlasmoidItem {
         anchors.fill: parent
 
         activeFocusOnTab: true
+        hoverEnabled: true
 
         onClicked: Plasmoid.activated()
     }
@@ -139,7 +140,7 @@ PlasmoidItem {
             top: parent.top
             bottom: constrained ? parent.bottom: text.top
         }
-        active: toolTip.containsMouse || dropArea.containsAcceptableDrag
+        active: mouseArea.containsMouse || dropArea.containsAcceptableDrag
     }
 
     DropShadow {
