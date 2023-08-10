@@ -116,7 +116,6 @@ PlasmoidItem {
     }
 
     Kirigami.Icon {
-        id: icon
         source: Plasmoid.icon
         anchors {
             left: parent.left
@@ -128,8 +127,6 @@ PlasmoidItem {
     }
 
     DropShadow {
-        id: textShadow
-
         anchors.fill: text
 
         visible: !root.inPanel
@@ -160,7 +157,6 @@ PlasmoidItem {
     }
 
     PlasmaCore.ToolTipArea {
-        id: toolTip
         anchors.fill: parent
         mainText: Plasmoid.title
         subText:  root.toolTipSubText
