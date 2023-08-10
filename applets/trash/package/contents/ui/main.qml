@@ -109,8 +109,8 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18n("Trash Settings…")
             icon.name: "configure"
-            visible: KConfig.KAUthorized.authorizeControlModule("kcmtrash")
-            onTriggered: KCM.KCMLauncher.open("kcmtrash")
+            visible: KConfig.KAUthorized.authorizeControlModule("kcm_trash")
+            onTriggered: KCM.KCMLauncher.open("kcm_trash")
         }
     ]
 
