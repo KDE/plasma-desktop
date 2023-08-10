@@ -53,7 +53,7 @@
 
 <sect2 id="sessions-use">
 <title
->Användning</title>
+>Use</title>
 
 <para
 >I den här modulen i systeminställningarna kan du anpassa &plasma;s sessionshanterare och utloggningsinställningar.</para>
@@ -63,26 +63,26 @@
 
 <sect3 id="sessions-general">
 <title
->Allmänt</title>
+>General</title>
 <variablelist>
 <varlistentry>
 <term
 ><guilabel
->Bekräfta utloggning</guilabel
+>Confirm logout</guilabel
 ></term>
 <listitem>
 <para
->Om det här är markerat, så visar &plasma; en dialogruta när du loggar ut med en tidsgräns, normalt 30 sekunder, som ber dig bekräfta. I dialogrutan kan du också välja om du vill återställa din nuvarande session när du loggar in nästa gång.</para>
+>If this option is checked, when logging out, &plasma; will display a dialog with a default timeout of 30 seconds asking for confirmation. In this dialog you can also choose whether you want to restore your current session when you login the next time.</para>
 </listitem>
 </varlistentry>
 <varlistentry>
 <term
 ><guilabel
->Erbjud avstängningsalternativ</guilabel
+>Offer shutdown options</guilabel
 ></term>
 <listitem>
 <para
->Om alternativet är markerad, erbjuder &plasma; val av ett antal åtgärder vid utloggning. De omfattar att helt enkelt avsluta aktuell session (åtgärden som utförs om avstängningsalternativen inte är aktiverade), stänga av datorn eller starta om datorn.</para>
+>If this option is checked, &plasma; will offer a choice of actions during logout. These include simply ending the current session (the action performed if shutdown options are not enabled) turning off the computer, or restarting the computer.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -90,29 +90,29 @@
 
 <sect3 id="sessions-default-leave-options">
 <title
->Förvalt alternativ när datorn lämnas</title>
+>Default Leave Option</title>
 <para
->Du kan ställa in vad som normalt ska hända när du loggar ut från &plasma;. Alternativen är inte tillgängliga för alla operativsystem, och vissa av dem kanske inte visas om du inte använder &SDDM; som inloggningshanterare.</para>
+>You can configure what should happen by default when you log out of &plasma;. These options are not possible on all operating systems, and some of them may not appear unless you are using &SDDM; as your login manager.</para>
 <para
->De tillgängliga alternativen är självförklarande, men om du tvekar, lämna standardinställningen orörd. De är:</para>
+>The options available are self explanatory, if you are in doubt, leave the default settings. They are:</para>
 
 <itemizedlist>
 <listitem
 ><para
 ><guilabel
->Avsluta aktuell session</guilabel
-> (detta är standardvärdet)</para
+>End current session</guilabel
+> (this is the default)</para
 ></listitem>
 <listitem
 ><para
 ><guilabel
->Stäng av datorn</guilabel
+>Turn off computer</guilabel
 ></para
 ></listitem>
 <listitem
 ><para
 ><guilabel
->Starta om datorn</guilabel
+>Restart computer</guilabel
 ></para
 ></listitem>
 </itemizedlist>
@@ -120,7 +120,7 @@
 
 <sect3 id="sessions-on-login">
 <title
->Vid inloggning</title>
+>On Login</title>
 <para
 >Du kan välja ett av tre alternativ angående vad som ska hända när du loggar in i &plasma;.</para>
 
@@ -128,7 +128,7 @@
 <varlistentry>
 <term
 ><guilabel
->Återställ senaste session</guilabel
+>Restore last session</guilabel
 ></term>
 <listitem
 ><para
@@ -138,17 +138,17 @@
 <varlistentry>
 <term
 ><guilabel
->Återställ senaste manuellt sparade session</guilabel
+>Restore last manually saved session</guilabel
 ></term>
 <listitem
 ><para
 >Istället för att återställa &plasma; till tillståndet som gällde när du senast loggade ut, återställs ett särskilt tillstånd som du har sparat manuellt.</para>
 <para
->Om alternativet är markerat, erbjuder startmenyn ytterligare ett alternativ <menuchoice
+>If this option is checked, the application menu offers an additional item <menuchoice
 ><guimenu
->Session</guimenu
+>Power / Session</guimenu
 ><guimenuitem
->Spara session</guimenuitem
+>Save Session</guimenuitem
 ></menuchoice
 >. </para
 ></listitem>
