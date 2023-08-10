@@ -56,7 +56,7 @@ PlasmoidItem {
         // On the desktop: whatevs
         : (dirModel.count > 0 ? "user-trash-full" : "user-trash")
 
-    Plasmoid.onActivated: openTrash()
+    Plasmoid.onActivated: Qt.openUrlExternally("trash:/")
 
     Keys.onPressed: {
         switch (event.key) {
@@ -97,15 +97,11 @@ PlasmoidItem {
         url: "trash:/"
     }
 
-    function openTrash() {
-        Qt.openUrlExternally("trash:/");
-    }
-
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
             text: i18nc("a verb", "Open")
             icon.name: "document-open"
-            onTriggered: openTrash()
+            onTriggered: Plasmoid.activated()
         },
         PlasmaCore.Action {
             text: i18nc("a verb", "Empty")
@@ -131,7 +127,7 @@ PlasmoidItem {
 
         activeFocusOnTab: true
 
-        onClicked: openTrash()
+        onClicked: Plasmoid.activated()
     }
 
     Kirigami.Icon {
