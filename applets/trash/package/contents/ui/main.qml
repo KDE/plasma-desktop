@@ -28,10 +28,10 @@ PlasmoidItem {
 
     property bool containsAcceptableDrag: false
 
-    Plasmoid.title: i18n("Trash")
+    Plasmoid.title: i18nc("@title the name of the Trash widget", "Trash")
     toolTipSubText: dirModel.count === 0
-        ? i18n("Empty")
-        : i18np("One item", "%1 items", dirModel.count)
+        ? i18nc("@info:status The trash is empty", "Empty")
+        : i18ncp("@info:status The trash contains this many items in it", "One item", "%1 items", dirModel.count)
 
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
     Plasmoid.icon: inPanel
@@ -82,18 +82,18 @@ PlasmoidItem {
 
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
-            text: i18nc("a verb", "Open")
+            text: i18nc("@action:inmenu Open the trash", "Open")
             icon.name: "document-open-symbolic"
             onTriggered: Plasmoid.activated()
         },
         PlasmaCore.Action {
-            text: i18nc("a verb", "Empty")
+            text: i18nc("@action:inmenu Empty the trash", "Empty")
             icon.name: "trash-empty-symbolic"
             enabled: dirModel.count > 0
             onTriggered: TrashPrivate.Trash.emptyTrash()
         },
         PlasmaCore.Action {
-            text: i18n("Trash Settings…")
+            text: i18nc("@action:inmenu", "Trash Settings…")
             icon.name: "configure-symbolic"
             visible: KConfig.KAUthorized.authorizeControlModule("kcm_trash")
             onTriggered: KCM.KCMLauncher.open("kcm_trash")
