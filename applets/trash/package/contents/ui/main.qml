@@ -50,11 +50,11 @@ PlasmoidItem {
         : i18np("One item", "%1 items", dirModel.count)
 
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
-    Plasmoid.icon: constrained ?
+    Plasmoid.icon: constrained
         // In a panel: always be monochrome
-        (dirModel.count > 0 ? "user-trash-full-symbolic" : "user-trash-symbolic") :
+        ? (dirModel.count > 0 ? "user-trash-full-symbolic" : "user-trash-symbolic")
         // On the desktop: whatevs
-        (dirModel.count > 0 ? "user-trash-full" : "user-trash")
+        : (dirModel.count > 0 ? "user-trash-full" : "user-trash")
 
     Plasmoid.onActivated: openTrash()
 
