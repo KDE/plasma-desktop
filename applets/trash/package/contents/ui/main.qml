@@ -21,22 +21,22 @@ import org.kde.config as KConfig
 PlasmoidItem {
     id: root
 
-    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
+        || Plasmoid.location === PlasmaCore.Types.RightEdge
+        || Plasmoid.location === PlasmaCore.Types.BottomEdge
+        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
     property bool containsAcceptableDrag: false
 
     Layout.minimumWidth: {
         if (inPanel) {
-            return plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : 1
+            return Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : 1
         }
         return text.width
     }
     Layout.minimumHeight: {
         if (inPanel) {
-            return plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : 1
+            return Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : 1
         }
         return Kirigami.Units.iconSizes.small + text.height
     }
@@ -115,7 +115,7 @@ PlasmoidItem {
     ]
 
     Component.onCompleted: {
-        plasmoid.removeInternalAction("configure");
+        Plasmoid.removeInternalAction("configure");
     }
 
     MouseArea {
@@ -130,7 +130,7 @@ PlasmoidItem {
 
     Kirigami.Icon {
         id: icon
-        source: plasmoid.icon
+        source: Plasmoid.icon
         anchors {
             left: parent.left
             right: parent.right
