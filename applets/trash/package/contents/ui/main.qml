@@ -83,18 +83,18 @@ PlasmoidItem {
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
             text: i18nc("a verb", "Open")
-            icon.name: "document-open"
+            icon.name: "document-open-symbolic"
             onTriggered: Plasmoid.activated()
         },
         PlasmaCore.Action {
             text: i18nc("a verb", "Empty")
-            icon.name: "trash-empty"
+            icon.name: "trash-empty-symbolic"
             enabled: dirModel.count > 0
             onTriggered: TrashPrivate.Trash.emptyTrash()
         },
         PlasmaCore.Action {
             text: i18n("Trash Settings…")
-            icon.name: "configure"
+            icon.name: "configure-symbolic"
             visible: KConfig.KAUthorized.authorizeControlModule("kcm_trash")
             onTriggered: KCM.KCMLauncher.open("kcm_trash")
         }
