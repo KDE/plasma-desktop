@@ -100,7 +100,7 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18nc("a verb", "Open")
             icon.name: "document-open"
-            onTriggered: Qt.openUrlExternally("trash:/")
+            onTriggered: openTrash()
         },
         PlasmaCore.Action {
             text: i18nc("a verb", "Empty")
@@ -126,7 +126,7 @@ PlasmoidItem {
 
         activeFocusOnTab: true
 
-        onClicked: Qt.openUrlExternally("trash:/");
+        onClicked: openTrash()
     }
 
     Kirigami.Icon {
