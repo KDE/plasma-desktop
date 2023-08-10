@@ -29,20 +29,17 @@ PlasmoidItem {
     property bool containsAcceptableDrag: false
 
     Layout.minimumWidth: {
-        if (constrained) {
-            return formFactor === PlasmaCore.Types.Horizontal ? height : 1
+        if (inPanel) {
+            return plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : 1
         }
         return text.width
     }
     Layout.minimumHeight: {
-        if (constrained) {
-            return formFactor === PlasmaCore.Types.Vertical ? width : 1
+        if (inPanel) {
+            return plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : 1
         }
         return Kirigami.Units.iconSizes.small + text.height
     }
-
-    readonly property int formFactor: plasmoid.formFactor
-    readonly property bool constrained: formFactor === PlasmaCore.Types.Vertical || formFactor === PlasmaCore.Types.Horizontal
 
     Plasmoid.title: i18n("Trash")
     toolTipSubText: dirModel.count === 0
@@ -50,7 +47,7 @@ PlasmoidItem {
         : i18np("One item", "%1 items", dirModel.count)
 
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
-    Plasmoid.icon: constrained
+    Plasmoid.icon: inPanel
         // In a panel: always be monochrome
         ? (dirModel.count > 0 ? "user-trash-full-symbolic" : "user-trash-symbolic")
         // On the desktop: whatevs
@@ -138,7 +135,7 @@ PlasmoidItem {
             left: parent.left
             right: parent.right
             top: parent.top
-            bottom: constrained ? parent.bottom: text.top
+            bottom: root.inPanel ? parent.bottom: text.top
         }
         active: mouseArea.containsMouse || dropArea.containsAcceptableDrag
     }
@@ -148,7 +145,7 @@ PlasmoidItem {
 
         anchors.fill: text
 
-        visible: !constrained
+        visible: !root.inPanel
 
         horizontalOffset: 1
         verticalOffset: 1
@@ -159,7 +156,7 @@ PlasmoidItem {
 
         color: "black"
 
-        source: constrained ? null : text
+        source: root.inPanel ? null : text
     }
 
     PC3.Label {
