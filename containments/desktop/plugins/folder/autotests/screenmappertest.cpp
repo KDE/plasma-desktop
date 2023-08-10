@@ -206,32 +206,6 @@ void ScreenMapperTest::tst_readScreenActivityMapping()
     QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(paths[1]), m_alternativeActivity), -1);
 }
 
-void ScreenMapperTest::tst_readScreenActivityMappingFromOldConfig()
-{
-    const auto path = ScreenMapper::stringToUrl(QStringLiteral("desktop:/"));
-    addScreens(path, m_currentActivity);
-
-    QString file(QStringLiteral("desktop:/foo%1.txt"));
-    const QStringList paths{
-        file.arg(0),
-        file.arg(1),
-    };
-    // clang-format off
-    const QStringList mapping{
-        paths[0], "0"_L1,
-        paths[1], "1"_L1,
-    };
-    // clang-format on
-    QSignalSpy s(m_screenMapper, &ScreenMapper::screenMappingChanged);
-
-    m_screenMapper->setScreenMapping(mapping);
-    QCOMPARE(s.count(), 1);
-
-    // Check if the config is loaded correctly
-    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(paths[0]), m_currentActivity), 0);
-    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(paths[1]), m_currentActivity), 1);
-}
-
 void ScreenMapperTest::tst_saveScreenActivityMapping()
 {
     const auto path = ScreenMapper::stringToUrl(QStringLiteral("desktop:/"));
@@ -306,47 +280,6 @@ void ScreenMapperTest::tst_readAndSaveItemsOnActivitiesOnDisabledScreens()
             }
         }
         QVERIFY(matched);
-    }
-}
-
-void ScreenMapperTest::tst_readAndSaveItemsOnActivitiesOnDisabledScreensFromOldConfig()
-{
-    QString file(QStringLiteral("desktop:/foo%1.txt"));
-    const QStringList paths{
-        ScreenMapper::stringToUrl(file.arg(0)).toString(),
-        ScreenMapper::stringToUrl(file.arg(1)).toString(),
-        ScreenMapper::stringToUrl(file.arg(2)).toString(),
-        ScreenMapper::stringToUrl(file.arg(3)).toString(),
-    };
-    // clang-format off
-    const std::array<QStringList, 2> expectedMapping{
-        QStringList{"0"_L1, m_currentActivity, "2"_L1, paths[0], paths[1]},
-        QStringList{"1"_L1, m_currentActivity, "2"_L1, paths[2], paths[3]},
-    };
-    // clang-format on
-    QStringList seralizedMap;
-
-    // Create a seralized QStringList from expectedMapping
-    for (const auto &l : expectedMapping) {
-        for (const auto &s : l) {
-            if (s == m_currentActivity) {
-                continue; // Missing activity ID from the old config before 5.25
-            }
-
-            seralizedMap.append(s);
-        }
-    }
-
-    m_screenMapper->readDisabledScreensMap(seralizedMap);
-
-    // Check the actual mapping result
-    const QStringList mapping = m_screenMapper->disabledScreensMap();
-
-    QCOMPARE(mapping.count(), expectedMapping.size() * expectedMapping[0].size());
-
-    for (int i = 0; i < mapping.count() - (expectedMapping[0].size() - 1); i += expectedMapping[0].size()) {
-        const QStringList configGroup{mapping[i], mapping[i + 1], mapping[i + 2], mapping[i + 3], mapping[i + 4]};
-        QVERIFY(std::find(std::cbegin(expectedMapping), std::cend(expectedMapping), configGroup) != std::cend(expectedMapping));
     }
 }
 

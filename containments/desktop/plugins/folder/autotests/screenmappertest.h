@@ -29,10 +29,8 @@ private Q_SLOTS:
 
     // Configuration read/write tests
     void tst_readScreenActivityMapping();
-    void tst_readScreenActivityMappingFromOldConfig();
     void tst_saveScreenActivityMapping();
     void tst_readAndSaveItemsOnActivitiesOnDisabledScreens();
-    void tst_readAndSaveItemsOnActivitiesOnDisabledScreensFromOldConfig();
 
 private:
     void addScreens(const QUrl &path, const QString &activity);
