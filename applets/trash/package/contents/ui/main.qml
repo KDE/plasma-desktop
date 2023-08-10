@@ -44,6 +44,11 @@ PlasmoidItem {
     readonly property int formFactor: plasmoid.formFactor
     readonly property bool constrained: formFactor === PlasmaCore.Types.Vertical || formFactor === PlasmaCore.Types.Horizontal
 
+    Plasmoid.title: i18n("Trash")
+    toolTipSubText: dirModel.count === 0
+        ? i18n("Empty")
+        : i18np("One item", "%1 items", dirModel.count)
+
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
     Plasmoid.icon: constrained ?
         // In a panel: always be monochrome
@@ -63,8 +68,8 @@ PlasmoidItem {
             break;
         }
     }
-    Accessible.name: toolTip.mainText
-    Accessible.description: toolTip.subText
+    Accessible.name: Plasmoid.title
+    Accessible.description: toolTipSubText
     Accessible.role: Accessible.Button
 
     DragDrop.DropArea {
@@ -167,7 +172,7 @@ PlasmoidItem {
             bottom: parent.bottom
         }
         width: Math.round(text.implicitWidth + Kirigami.Units.smallSpacing) // make sure label is not blurry
-        text: (dirModel.count === 0) ? i18n("Trash\nEmpty") : i18np("Trash\nOne item", "Trash\n %1 items", dirModel.count)
+        text: Plasmoid.title + "\n" + root.toolTipSubText
         color: "white"
         horizontalAlignment: Text.AlignHCenter
         visible: false // rendered by DropShadow
@@ -176,7 +181,7 @@ PlasmoidItem {
     PlasmaCore.ToolTipArea {
         id: toolTip
         anchors.fill: parent
-        mainText: i18n("Trash")
-        subText: (dirModel.count === 0) ? i18n("Empty") : i18np("One item", "%1 items", dirModel.count)
+        mainText: Plasmoid.title
+        subText:  root.toolTipSubText
     }
 }
