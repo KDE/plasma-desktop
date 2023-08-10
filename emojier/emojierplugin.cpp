@@ -60,18 +60,22 @@ public:
 
     EmojiModel()
     {
+        const QHash<QString, QString> specialCases{{QLatin1String{"zh-TW"}, QLatin1String{"zh_Hant"}},
+                                                   {QLatin1String{"zh-HK"}, QLatin1String{"zh_Hant_HK"}}};
         QLocale locale;
         QVector<QString> dicts;
-        const auto bcp = locale.bcp47Name();
-        const QString dictName = QLatin1String{"plasma/emoji/"} + QString(bcp).replace(QLatin1Char('-'), QLatin1Char('_')) + QLatin1String{".dict"};
+        auto bcp = locale.bcp47Name();
+        bcp = specialCases.value(bcp, bcp);
+        bcp.replace(QLatin1Char('-'), QLatin1Char('_'));
+
+        const QString dictName = QLatin1String{"plasma/emoji/"} + bcp + QLatin1String{".dict"};
         const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, dictName);
         if (!path.isEmpty()) {
             dicts << path;
         }
 
-        const auto idxSpecific = bcp.indexOf(QLatin1Char('-'));
-        if (idxSpecific > 0) {
-            const QString genericDictName = QLatin1String{"plasma/emoji/"} + QStringView(bcp).left(idxSpecific) + QLatin1String{".dict"};
+        for (qsizetype underscoreIndex = -1; (underscoreIndex = bcp.lastIndexOf(QLatin1Char('_'), underscoreIndex)) != -1; --underscoreIndex) {
+            const QString genericDictName = QLatin1String{"plasma/emoji/"} + QStringView(bcp).left(underscoreIndex) + QLatin1String{".dict"};
             const QString genericPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, genericDictName);
 
             if (!genericPath.isEmpty()) {
