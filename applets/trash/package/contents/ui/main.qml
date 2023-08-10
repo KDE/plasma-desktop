@@ -56,7 +56,6 @@ PlasmoidItem {
     Accessible.description: toolTipSubText
     Accessible.role: Accessible.Button
 
-
     TrashPrivate.DirModel {
         id: dirModel
         url: "trash:/"
