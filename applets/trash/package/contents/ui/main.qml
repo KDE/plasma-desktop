@@ -28,19 +28,6 @@ PlasmoidItem {
 
     property bool containsAcceptableDrag: false
 
-    Layout.minimumWidth: {
-        if (inPanel) {
-            return Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : 1
-        }
-        return text.width
-    }
-    Layout.minimumHeight: {
-        if (inPanel) {
-            return Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : 1
-        }
-        return Kirigami.Units.iconSizes.small + text.height
-    }
-
     Plasmoid.title: i18n("Trash")
     toolTipSubText: dirModel.count === 0
         ? i18n("Empty")
