@@ -295,22 +295,17 @@ QStringList ScreenMapper::screenMapping() const
 void ScreenMapper::setScreenMapping(const QStringList &mapping)
 {
     decltype(m_screenItemMap) newMap;
-    int count = mapping.count();
-    const bool useDefaultActivity = count % 3 != 0; // Missing activity ID from the old config before 5.25
-    const int sizeOfParamGroup = useDefaultActivity ? 2 : 3; // Match screenMapping()
+    // <url>,<screen id>,<activity id>
+    constexpr int sizeOfParamGroup = 3; // Match screenMapping()
+    const int count = std::min<int>(mapping.size(), MAX_MAPPING_COUNT * sizeOfParamGroup);
+    Q_ASSERT(count % sizeOfParamGroup == 0);
 
-    auto itemCount = count / sizeOfParamGroup;
-    if (itemCount > MAX_MAPPING_COUNT) {
-        itemCount = MAX_MAPPING_COUNT;
-        count = itemCount * sizeOfParamGroup;
-    }
-
-    newMap.reserve(itemCount);
+    newMap.reserve(count / sizeOfParamGroup);
     QMap<int, int> screenConsistencyMap;
     for (int i = 0; i < count - (sizeOfParamGroup - 1); i += sizeOfParamGroup) {
         if (i + (sizeOfParamGroup - 1) < count) {
             const QUrl url = QUrl::fromUserInput(mapping[i], {}, QUrl::AssumeLocalFile);
-            const QString activity = useDefaultActivity ? KActivities::Consumer().currentActivity() : mapping[i + 2];
+            const QString activity = mapping[i + 2];
             newMap[std::make_pair(url, activity)] = mapping[i + 1].toInt();
             screenConsistencyMap[mapping[i + 1].toInt()] = -1;
         }
@@ -350,7 +345,7 @@ QStringList ScreenMapper::disabledScreensMap() const
 {
     QStringList serializedMap;
     auto it = m_itemsOnDisabledScreensMap.constBegin();
-    for (int i = 0; it != m_itemsOnDisabledScreensMap.constEnd(); ++it, ++i) {
+    for (int i = 0; it != m_itemsOnDisabledScreensMap.constEnd(); it = std::next(it), ++i) {
         if (i >= MAX_MAPPING_COUNT) {
             qCCritical(FOLDER)
                 << "Greater than" << MAX_MAPPING_COUNT
@@ -360,7 +355,7 @@ QStringList ScreenMapper::disabledScreensMap() const
         serializedMap.append(QString::number(it.key().first)); // Screen ID
         serializedMap.append(it.key().second); // Activity ID
         const auto urls = it.value();
-        serializedMap.append(QString::number(urls.size()));
+        serializedMap.append(QString::number(urls.size())); // Number of urls
         for (const auto &url : urls) {
             serializedMap.append(url.toString());
         }
@@ -379,21 +374,15 @@ void ScreenMapper::readDisabledScreensMap(const QStringList &serializedMap)
     QString activityId;
     int vectorCounter = 0;
 
-
+    // <screen id>,<activity id>,<number of urls>,<url 1>, ...
     for (const auto &entry : serializedMap) {
         if (readingScreenId) {
             screenId = entry.toInt();
             readingScreenId = false;
         } else if (readingActivityId) {
-            // Missing activity ID in the old config before 5.25
-            if (entry.toInt() > 0) {
-                vectorSize = entry.toInt();
-                activityId = KActivities::Consumer().currentActivity();
-            } else { // When a string is a uuid, toInt() will return 0
-                activityId = entry;
-            }
+            activityId = entry;
             readingActivityId = false;
-        } else if (vectorSize == -1) {
+        } else if (vectorSize == -1 /*number of urls is not read*/) {
             vectorSize = entry.toInt();
         } else {
             const auto url = stringToUrl(entry);
