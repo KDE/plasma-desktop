@@ -25,21 +25,21 @@ PlasmoidItem {
         || Plasmoid.location === PlasmaCore.Types.RightEdge
         || Plasmoid.location === PlasmaCore.Types.BottomEdge
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
-    readonly property bool isFull: dirModel.count > 0
+    readonly property bool hasContents: dirModel.count > 0
 
     property bool containsAcceptableDrag: false
 
     Plasmoid.title: i18nc("@title the name of the Trash widget", "Trash")
-    toolTipSubText: isFull
+    toolTipSubText: hasContents
         ? i18ncp("@info:status The trash contains this many items in it", "One item", "%1 items", dirModel.count)
         : i18nc("@info:status The trash is empty", "Empty")
 
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
     Plasmoid.icon: inPanel
         // In a panel: always be monochrome
-        ? (isFull ? "user-trash-full-symbolic" : "user-trash-symbolic")
+        ? (hasContents ? "user-trash-full-symbolic" : "user-trash-symbolic")
         // On the desktop: whatevs
-        : (isFull ? "user-trash-full" : "user-trash")
+        : (hasContents ? "user-trash-full" : "user-trash")
 
     Plasmoid.onActivated: Qt.openUrlExternally("trash:/")
 
@@ -71,7 +71,7 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18nc("@action:inmenu Empty the trash", "Empty")
             icon.name: "trash-empty-symbolic"
-            enabled: isFull
+            enabled: hasContents
             onTriggered: TrashPrivate.Trash.emptyTrash()
         },
         PlasmaCore.Action {
