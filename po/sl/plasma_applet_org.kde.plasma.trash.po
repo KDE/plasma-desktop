@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-08-11 01:57+0000\n"
 "PO-Revision-Date: 2023-03-01 07:04+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,71 +18,83 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: contents/ui/main.qml:96
-#, kde-format
-msgctxt "a verb"
-msgid "Open"
-msgstr "Odpri"
-
-#: contents/ui/main.qml:101
-#, kde-format
-msgctxt "a verb"
-msgid "Empty"
-msgstr "Izprazni"
-
-#: contents/ui/main.qml:107
-#, kde-format
-msgid "Trash Settings…"
-msgstr "Nastavitev smeti…"
-
-#: contents/ui/main.qml:165
-#, kde-format
-msgid ""
-"Trash\n"
-"Empty"
-msgstr ""
-"Smeti\n"
-"prazne"
-
-#: contents/ui/main.qml:165
-#, kde-format
-msgid ""
-"Trash\n"
-"One item"
-msgid_plural ""
-"Trash\n"
-" %1 items"
-msgstr[0] ""
-"Smeti\n"
-"%1 predmet"
-msgstr[1] ""
-"Smeti\n"
-"%1 predmeta"
-msgstr[2] ""
-"Smeti\n"
-"%1 predmeti"
-msgstr[3] ""
-"Smeti\n"
-"%1 predmetov"
-
-#: contents/ui/main.qml:174
-#, kde-format
+#: contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "Trash"
+msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Smeti"
 
-#: contents/ui/main.qml:175
-#, kde-format
-msgid "Empty"
-msgstr "Prazno"
-
-#: contents/ui/main.qml:175
-#, kde-format
+#: contents/ui/main.qml:34
+#, fuzzy, kde-format
+#| msgid "One item"
+#| msgid_plural "%1 items"
+msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
 msgstr[0] "%1 predmet"
 msgstr[1] "%1 predmeta"
 msgstr[2] "%1 predmeti"
 msgstr[3] "%1 predmetov"
+
+#: contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgid "Empty"
+msgctxt "@info:status The trash is empty"
+msgid "Empty"
+msgstr "Prazno"
+
+#: contents/ui/main.qml:67
+#, fuzzy, kde-format
+#| msgctxt "a verb"
+#| msgid "Open"
+msgctxt "@action:inmenu Open the trash"
+msgid "Open"
+msgstr "Odpri"
+
+#: contents/ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "Empty"
+msgctxt "@action:inmenu Empty the trash"
+msgid "Empty"
+msgstr "Prazno"
+
+#: contents/ui/main.qml:78
+#, fuzzy, kde-format
+#| msgid "Trash Settings…"
+msgctxt "@action:inmenu"
+msgid "Trash Settings…"
+msgstr "Nastavitev smeti…"
+
+#~ msgctxt "a verb"
+#~ msgid "Empty"
+#~ msgstr "Izprazni"
+
+#~ msgid ""
+#~ "Trash\n"
+#~ "Empty"
+#~ msgstr ""
+#~ "Smeti\n"
+#~ "prazne"
+
+#~ msgid ""
+#~ "Trash\n"
+#~ "One item"
+#~ msgid_plural ""
+#~ "Trash\n"
+#~ " %1 items"
+#~ msgstr[0] ""
+#~ "Smeti\n"
+#~ "%1 predmet"
+#~ msgstr[1] ""
+#~ "Smeti\n"
+#~ "%1 predmeta"
+#~ msgstr[2] ""
+#~ "Smeti\n"
+#~ "%1 predmeti"
+#~ msgstr[3] ""
+#~ "Smeti\n"
+#~ "%1 predmetov"
 
 #~ msgid ""
 #~ "Trash \n"

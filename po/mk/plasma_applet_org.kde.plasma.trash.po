@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-08-11 01:57+0000\n"
 "PO-Revision-Date: 2010-01-30 20:50+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -19,69 +19,79 @@ msgstr ""
 "2;\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: contents/ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "&Open"
-msgctxt "a verb"
-msgid "Open"
-msgstr "&Отвори"
-
-#: contents/ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt "The trash is empty. This is not an action, but a state"
-#| msgid "Empty"
-msgctxt "a verb"
-msgid "Empty"
-msgstr "Празно"
-
-#: contents/ui/main.qml:107
-#, kde-format
-msgid "Trash Settings…"
-msgstr ""
-
-#: contents/ui/main.qml:165
+#: contents/ui/main.qml:32
 #, fuzzy, kde-format
 #| msgid "Trash"
-msgid ""
-"Trash\n"
-"Empty"
-msgstr "Корпа"
-
-#: contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "One item"
-#| msgid_plural "%1 items"
-msgid ""
-"Trash\n"
-"One item"
-msgid_plural ""
-"Trash\n"
-" %1 items"
-msgstr[0] "%1 елемент"
-msgstr[1] "%1 елементи"
-msgstr[2] "%1 елементи"
-
-#: contents/ui/main.qml:174
-#, kde-format
+msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Корпа"
 
-#: contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgctxt "The trash is empty. This is not an action, but a state"
-#| msgid "Empty"
-msgid "Empty"
-msgstr "Празно"
-
-#: contents/ui/main.qml:175
+#: contents/ui/main.qml:34
 #, fuzzy, kde-format
 #| msgid "One item"
 #| msgid_plural "%1 items"
+msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
 msgstr[0] "%1 елемент"
 msgstr[1] "%1 елементи"
 msgstr[2] "%1 елементи"
+
+#: contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgctxt "The trash is empty. This is not an action, but a state"
+#| msgid "Empty"
+msgctxt "@info:status The trash is empty"
+msgid "Empty"
+msgstr "Празно"
+
+#: contents/ui/main.qml:67
+#, fuzzy, kde-format
+#| msgid "&Open"
+msgctxt "@action:inmenu Open the trash"
+msgid "Open"
+msgstr "&Отвори"
+
+#: contents/ui/main.qml:72
+#, fuzzy, kde-format
+#| msgctxt "The trash is empty. This is not an action, but a state"
+#| msgid "Empty"
+msgctxt "@action:inmenu Empty the trash"
+msgid "Empty"
+msgstr "Празно"
+
+#: contents/ui/main.qml:78
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Trash Settings…"
+msgstr ""
+
+#, fuzzy
+#~| msgctxt "The trash is empty. This is not an action, but a state"
+#~| msgid "Empty"
+#~ msgctxt "a verb"
+#~ msgid "Empty"
+#~ msgstr "Празно"
+
+#, fuzzy
+#~| msgid "Trash"
+#~ msgid ""
+#~ "Trash\n"
+#~ "Empty"
+#~ msgstr "Корпа"
+
+#, fuzzy
+#~| msgid "One item"
+#~| msgid_plural "%1 items"
+#~ msgid ""
+#~ "Trash\n"
+#~ "One item"
+#~ msgid_plural ""
+#~ "Trash\n"
+#~ " %1 items"
+#~ msgstr[0] "%1 елемент"
+#~ msgstr[1] "%1 елементи"
+#~ msgstr[2] "%1 елементи"
 
 #, fuzzy
 #~| msgctxt "@action:button"

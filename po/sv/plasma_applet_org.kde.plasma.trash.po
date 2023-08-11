@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-08-11 01:57+0000\n"
 "PO-Revision-Date: 2021-05-27 18:49+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,63 +17,75 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: contents/ui/main.qml:96
-#, kde-format
-msgctxt "a verb"
-msgid "Open"
-msgstr "Öppna"
-
-#: contents/ui/main.qml:101
-#, kde-format
-msgctxt "a verb"
-msgid "Empty"
-msgstr "Töm"
-
-#: contents/ui/main.qml:107
-#, kde-format
-msgid "Trash Settings…"
-msgstr "Inställning av papperskorg…"
-
-#: contents/ui/main.qml:165
-#, kde-format
-msgid ""
-"Trash\n"
-"Empty"
-msgstr ""
-"Papperskorg\n"
-"Tom"
-
-#: contents/ui/main.qml:165
-#, kde-format
-msgid ""
-"Trash\n"
-"One item"
-msgid_plural ""
-"Trash\n"
-" %1 items"
-msgstr[0] ""
-"Flytta ett objekt\n"
-"till papperskorgen"
-msgstr[1] ""
-"Flytta %1 objekt\n"
-"till papperskorgen"
-
-#: contents/ui/main.qml:174
-#, kde-format
+#: contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "Trash"
+msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Papperskorg"
 
-#: contents/ui/main.qml:175
-#, kde-format
-msgid "Empty"
-msgstr "Tom"
-
-#: contents/ui/main.qml:175
-#, kde-format
+#: contents/ui/main.qml:34
+#, fuzzy, kde-format
+#| msgid "One item"
+#| msgid_plural "%1 items"
+msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
 msgstr[0] "Ett objekt"
 msgstr[1] "%1 objekt"
+
+#: contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgid "Empty"
+msgctxt "@info:status The trash is empty"
+msgid "Empty"
+msgstr "Tom"
+
+#: contents/ui/main.qml:67
+#, fuzzy, kde-format
+#| msgctxt "a verb"
+#| msgid "Open"
+msgctxt "@action:inmenu Open the trash"
+msgid "Open"
+msgstr "Öppna"
+
+#: contents/ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "Empty"
+msgctxt "@action:inmenu Empty the trash"
+msgid "Empty"
+msgstr "Tom"
+
+#: contents/ui/main.qml:78
+#, fuzzy, kde-format
+#| msgid "Trash Settings…"
+msgctxt "@action:inmenu"
+msgid "Trash Settings…"
+msgstr "Inställning av papperskorg…"
+
+#~ msgctxt "a verb"
+#~ msgid "Empty"
+#~ msgstr "Töm"
+
+#~ msgid ""
+#~ "Trash\n"
+#~ "Empty"
+#~ msgstr ""
+#~ "Papperskorg\n"
+#~ "Tom"
+
+#~ msgid ""
+#~ "Trash\n"
+#~ "One item"
+#~ msgid_plural ""
+#~ "Trash\n"
+#~ " %1 items"
+#~ msgstr[0] ""
+#~ "Flytta ett objekt\n"
+#~ "till papperskorgen"
+#~ msgstr[1] ""
+#~ "Flytta %1 objekt\n"
+#~ "till papperskorgen"
 
 #~ msgid ""
 #~ "Trash \n"

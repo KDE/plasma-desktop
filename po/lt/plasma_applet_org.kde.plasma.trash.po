@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 02:03+0000\n"
+"POT-Creation-Date: 2023-08-11 01:57+0000\n"
 "PO-Revision-Date: 2021-06-15 21:38+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -19,71 +19,83 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.0\n"
 
-#: contents/ui/main.qml:96
-#, kde-format
-msgctxt "a verb"
-msgid "Open"
-msgstr "Atverti"
-
-#: contents/ui/main.qml:101
-#, kde-format
-msgctxt "a verb"
-msgid "Empty"
-msgstr "Išvalyti"
-
-#: contents/ui/main.qml:107
-#, kde-format
-msgid "Trash Settings…"
-msgstr "Šiukšlinės nuostatos…"
-
-#: contents/ui/main.qml:165
-#, kde-format
-msgid ""
-"Trash\n"
-"Empty"
-msgstr ""
-"Šiukšlinė\n"
-"Tuščia"
-
-#: contents/ui/main.qml:165
-#, kde-format
-msgid ""
-"Trash\n"
-"One item"
-msgid_plural ""
-"Trash\n"
-" %1 items"
-msgstr[0] ""
-"Šiukšlinė\n"
-"Vienas elementas"
-msgstr[1] ""
-"Šiukšlinė\n"
-" %1 elementai"
-msgstr[2] ""
-"Šiukšlinė\n"
-" %1 elementų"
-msgstr[3] ""
-"Šiukšlinė\n"
-" %1 elementas"
-
-#: contents/ui/main.qml:174
-#, kde-format
+#: contents/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "Trash"
+msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Šiukšlinė"
 
-#: contents/ui/main.qml:175
-#, kde-format
-msgid "Empty"
-msgstr "Tuščia"
-
-#: contents/ui/main.qml:175
-#, kde-format
+#: contents/ui/main.qml:34
+#, fuzzy, kde-format
+#| msgid "One item"
+#| msgid_plural "%1 items"
+msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
 msgstr[0] "Vienas elementas"
 msgstr[1] "%1 elementai"
 msgstr[2] "%1 elementų"
 msgstr[3] "%1 elementas"
+
+#: contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgid "Empty"
+msgctxt "@info:status The trash is empty"
+msgid "Empty"
+msgstr "Tuščia"
+
+#: contents/ui/main.qml:67
+#, fuzzy, kde-format
+#| msgctxt "a verb"
+#| msgid "Open"
+msgctxt "@action:inmenu Open the trash"
+msgid "Open"
+msgstr "Atverti"
+
+#: contents/ui/main.qml:72
+#, fuzzy, kde-format
+#| msgid "Empty"
+msgctxt "@action:inmenu Empty the trash"
+msgid "Empty"
+msgstr "Tuščia"
+
+#: contents/ui/main.qml:78
+#, fuzzy, kde-format
+#| msgid "Trash Settings…"
+msgctxt "@action:inmenu"
+msgid "Trash Settings…"
+msgstr "Šiukšlinės nuostatos…"
+
+#~ msgctxt "a verb"
+#~ msgid "Empty"
+#~ msgstr "Išvalyti"
+
+#~ msgid ""
+#~ "Trash\n"
+#~ "Empty"
+#~ msgstr ""
+#~ "Šiukšlinė\n"
+#~ "Tuščia"
+
+#~ msgid ""
+#~ "Trash\n"
+#~ "One item"
+#~ msgid_plural ""
+#~ "Trash\n"
+#~ " %1 items"
+#~ msgstr[0] ""
+#~ "Šiukšlinė\n"
+#~ "Vienas elementas"
+#~ msgstr[1] ""
+#~ "Šiukšlinė\n"
+#~ " %1 elementai"
+#~ msgstr[2] ""
+#~ "Šiukšlinė\n"
+#~ " %1 elementų"
+#~ msgstr[3] ""
+#~ "Šiukšlinė\n"
+#~ " %1 elementas"
 
 #~ msgid ""
 #~ "Trash \n"
