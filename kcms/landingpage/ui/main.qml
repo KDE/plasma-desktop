@@ -134,35 +134,8 @@ KCM.SimpleKCM {
         QQC2.ButtonGroup { id: singleClickGroup }
 
         QQC2.RadioButton {
-            id: singleClick
-            Kirigami.FormData.label: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
-            text: i18nc("part of a sentence: 'Clicking files or folders opens them'", "Opens them")
-            checked: kcm.globalsSettings.singleClick
-            onToggled: kcm.globalsSettings.singleClick = true
-            QQC2.ButtonGroup.group: singleClickGroup
-
-            Accessible.description: i18n("Select by clicking on item's selection marker")
-
-            KCM.SettingStateBinding {
-                configObject: kcm.globalsSettings
-                settingName: "singleClick"
-            }
-        }
-
-        QQC2.Label {
-            Layout.fillWidth: true
-            leftPadding: singleClick.indicator.width
-            text: singleClick.Accessible.description
-            elide: Text.ElideRight
-            font: Kirigami.Theme.smallFont
-        }
-
-        Item {
-            Kirigami.FormData.isSection: false
-        }
-
-        QQC2.RadioButton {
             id: doubleClick
+            Kirigami.FormData.label: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
             text: i18nc("part of a sentence: 'Clicking files or folders selects them'", "Selects them")
             checked: !kcm.globalsSettings.singleClick
             onToggled: kcm.globalsSettings.singleClick = false
@@ -181,6 +154,33 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             leftPadding: doubleClick.indicator.width
             text: doubleClick.Accessible.description
+            elide: Text.ElideRight
+            font: Kirigami.Theme.smallFont
+        }
+
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
+        QQC2.RadioButton {
+            id: singleClick
+            text: i18nc("part of a sentence: 'Clicking files or folders opens them'", "Opens them")
+            checked: kcm.globalsSettings.singleClick
+            onToggled: kcm.globalsSettings.singleClick = true
+            QQC2.ButtonGroup.group: singleClickGroup
+
+            Accessible.description: i18n("Select by clicking on item's selection marker")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.globalsSettings
+                settingName: "singleClick"
+            }
+        }
+
+        QQC2.Label {
+            Layout.fillWidth: true
+            leftPadding: singleClick.indicator.width
+            text: singleClick.Accessible.description
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
         }
