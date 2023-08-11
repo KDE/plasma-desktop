@@ -13,7 +13,6 @@ import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.20 as Kirigami
 
-import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
 PlasmaComponents.ScrollView {
     id: root
