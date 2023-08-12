@@ -1,8 +1,8 @@
 # Translation of plasma_applet_org.kde.plasma.trash.po to Catalan (Valencian)
-# Copyright (C) 1998-2021 This_file_is_part_of_KDE
+# Copyright (C) 1998-2023 This_file_is_part_of_KDE
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2020, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2020, 2021, 2023.
 # Albert Astals Cid <aacid@kde.org>, 2007.
 # Robert Millan <rmh@aybabtu.com>, 2009.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2011, 2013, 2014, 2020.
@@ -11,28 +11,25 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-11 01:57+0000\n"
-"PO-Revision-Date: 2021-05-26 10:50+0100\n"
+"PO-Revision-Date: 2023-08-11 08:20+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
 #: contents/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid "Trash"
+#, kde-format
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Paperera"
 
 #: contents/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "One item"
-#| msgid_plural "%1 items"
+#, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
@@ -40,54 +37,25 @@ msgstr[0] "Un element"
 msgstr[1] "%1 elements"
 
 #: contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Buida"
 
 #: contents/ui/main.qml:67
-#, fuzzy, kde-format
-#| msgctxt "a verb"
-#| msgid "Open"
+#, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Obri"
 
 #: contents/ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Buida"
 
 #: contents/ui/main.qml:78
-#, fuzzy, kde-format
-#| msgid "Trash Settings…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
 msgstr "Configureu la paperera…"
-
-#~ msgctxt "a verb"
-#~ msgid "Empty"
-#~ msgstr "Buida"
-
-#~ msgid ""
-#~ "Trash\n"
-#~ "Empty"
-#~ msgstr ""
-#~ "Paperera\n"
-#~ "Buida"
-
-#~ msgid ""
-#~ "Trash\n"
-#~ "One item"
-#~ msgid_plural ""
-#~ "Trash\n"
-#~ " %1 items"
-#~ msgstr[0] ""
-#~ "Paperera\n"
-#~ "Un element"
-#~ msgstr[1] ""
-#~ "Paperera\n"
-#~ "%1 elements"
