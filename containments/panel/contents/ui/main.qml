@@ -386,6 +386,7 @@ ContainmentItem {
             Item {
                 id: lastSpacer
                 visible: !root.hasSpacer
+                    || lastSpacer.width === currentLayout.width /* When all widgets are still being loaded in a new panel */
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
