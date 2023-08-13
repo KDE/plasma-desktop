@@ -1170,14 +1170,6 @@ FocusScope {
                 }
 
                 Connections {
-                    target: units
-
-                    function onIconSizesChanged() {
-                        gridView.iconSize = gridView.makeIconSize();
-                    }
-                }
-
-                Connections {
                     target: plasmoid.configuration
 
                     function onIconSizeChanged() {
