@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-11 01:57+0000\n"
-"PO-Revision-Date: 2022-09-12 09:52+0200\n"
+"PO-Revision-Date: 2023-08-12 06:09+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,19 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: contents/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid "Trash"
+#, kde-format
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
-msgstr "ნაგავი"
+msgstr "ნაგვის ყუთი"
 
 #: contents/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "One item"
-#| msgid_plural "%1 items"
+#, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
@@ -36,33 +33,28 @@ msgstr[0] "%1 ელემენტი"
 msgstr[1] "%1 ელემენტი"
 
 #: contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "ცარიელი"
 
 #: contents/ui/main.qml:67
-#, fuzzy, kde-format
-#| msgctxt "a verb"
-#| msgid "Open"
+#, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "გახსნა"
 
 #: contents/ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
-msgstr "ცარიელი"
+msgstr "დაცარიელება"
 
 #: contents/ui/main.qml:78
-#, fuzzy, kde-format
-#| msgid "Trash Settings…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
-msgstr "ნაგვის მორგება…"
+msgstr "ნაგვის ყუთის მორგება…"
 
 #~ msgctxt "a verb"
 #~ msgid "Empty"
