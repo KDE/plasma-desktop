@@ -1,18 +1,19 @@
-# Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016.
+# Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-11 01:57+0000\n"
-"PO-Revision-Date: 2021-05-26 06:35+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-08-13 16:26+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: contents/ui/main.qml:32
 #, fuzzy, kde-format
@@ -22,9 +23,7 @@ msgid "Trash"
 msgstr "Papierkorb"
 
 #: contents/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "One item"
-#| msgid_plural "%1 items"
+#, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
@@ -32,30 +31,25 @@ msgstr[0] "Ein Eintrag"
 msgstr[1] "%1 Einträge"
 
 #: contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Leer"
 
 #: contents/ui/main.qml:67
-#, fuzzy, kde-format
-#| msgctxt "a verb"
-#| msgid "Open"
+#, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Öffnen"
 
 #: contents/ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Leer"
 
 #: contents/ui/main.qml:78
-#, fuzzy, kde-format
-#| msgid "Trash Settings…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
 msgstr "Papierkorb-Einstellungen ..."
