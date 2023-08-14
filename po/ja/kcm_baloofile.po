@@ -1,10 +1,11 @@
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:48+0000\n"
-"PO-Revision-Date: 2013-12-24 01:19-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2023-08-12 01:46+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -13,12 +14,13 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
 msgid ""
 "This module lets you configure the file indexer and search functionality."
-msgstr ""
+msgstr "このモジュールでファイルインデクサーと検索機能を設定できます。"
 
 #: package/contents/ui/main.qml:58
 #, kde-format
@@ -26,6 +28,8 @@ msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
+"これにより KRunner とランチャーのメニューでのファイル検索が無効化され、すべて"
+"の KDE アプリケーションから拡張メタデータ表示が除去されます。"
 
 #: package/contents/ui/main.qml:67
 #, kde-format
@@ -34,100 +38,104 @@ msgid ""
 "if indexing is re-enabled later, the entire index will have to be re-created "
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
+"保存されたインデックスデータを削除しますか？ %1 の容量が開放されますが、イン"
+"デックス作成を後で再び有効化する場合は、インデックスデータを初めから再生成す"
+"る必要があります。ファイルの数が多い場合、これには時間がかかる可能性がありま"
+"す。"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Delete Index Data"
-msgstr ""
+msgstr "インデックスデータを削除"
 
 #: package/contents/ui/main.qml:89
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
-msgstr ""
+msgstr "変更を有効にするにはシステムを再起動する必要があります。"
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
-msgstr ""
+msgstr "再開"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
-msgstr ""
+msgstr "ファイル検索機能で、その内容に基づいてファイルを素早く見つけられます。"
 
 #: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Enable File Search"
-msgstr ""
+msgstr "ファイル検索を有効化"
 
 #: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Also index file content"
-msgstr ""
+msgstr "ファイルの内容もインデックス"
 
 #: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
-msgstr ""
+msgstr "隠しファイルと隠しフォルダをインデックス"
 
 #: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
-msgstr ""
+msgstr "状態: %1, %2% 完了"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Pause Indexer"
-msgstr ""
+msgstr "インデクサーを一時停止"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
-msgstr ""
+msgstr "インデクサーを再開"
 
 #: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Currently indexing: %1"
-msgstr ""
+msgstr "現在インデックス作成中: %1"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
-msgstr ""
+msgstr "フォルダ固有の設定:"
 
 #: package/contents/ui/main.qml:213
 #, kde-format
 msgid "Start indexing a folder…"
-msgstr ""
+msgstr "フォルダのインデックス作成を開始..."
 
 #: package/contents/ui/main.qml:224
 #, kde-format
 msgid "Stop indexing a folder…"
-msgstr ""
+msgstr "フォルダのインデックス作成を停止..."
 
 #: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Not indexed"
-msgstr ""
+msgstr "インデックスしない"
 
 #: package/contents/ui/main.qml:276
 #, kde-format
 msgid "Indexed"
-msgstr ""
+msgstr "インデックスする"
 
 #: package/contents/ui/main.qml:306
 #, kde-format
 msgid "Delete entry"
-msgstr ""
+msgstr "エントリを削除"
 
 #: package/contents/ui/main.qml:321
 #, kde-format
 msgid "Select a folder to include"
-msgstr ""
+msgstr "含むフォルダを選択"
 
 #: package/contents/ui/main.qml:321
 #, kde-format
 msgid "Select a folder to exclude"
-msgstr ""
+msgstr "除外するフォルダを選択"

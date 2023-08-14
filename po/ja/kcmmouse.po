@@ -7,20 +7,21 @@
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2008.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2005, 2007, 2011, 2019.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2019-06-08 14:03-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2023-08-12 01:47+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.04.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -28,47 +29,49 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Fumiaki Okushi,Shinichi Tsunoda"
+msgstr "Fumiaki Okushi,Shinichi Tsunoda,Ryuichi Yamada"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "okushi@kde.gr.jp,tsuno@ngy.1st.ne.jp"
+msgstr "okushi@kde.gr.jp,tsuno@ngy.1st.ne.jp,ryuichi_ya220@outlook.jp"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:66
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
+"入力デバイスへのクエリに失敗しました。再度この設定モジュールを開いてくださ"
+"い。"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:86
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
-msgstr ""
+msgstr "%1 の基本的なデバイス情報の読み込み中に深刻なエラーが発生しました。"
 
 #: kcm/libinput/libinput_config.cpp:36
 #, kde-format
 msgid "Pointer device KCM"
-msgstr ""
+msgstr "ポインタデバイス KCM"
 
 #: kcm/libinput/libinput_config.cpp:38
 #, kde-format
 msgid "System Settings module for managing mice and trackballs."
-msgstr ""
+msgstr "マウスやトラックボールを管理するシステム設定モジュールです。"
 
 #: kcm/libinput/libinput_config.cpp:40
 #, kde-format
 msgid "Copyright 2018 Roman Gilg"
-msgstr ""
+msgstr "Copyright 2018 Roman Gilg"
 
 #: kcm/libinput/libinput_config.cpp:43 kcm/xlib/xlib_config.cpp:91
 #, kde-format
 msgid "Roman Gilg"
-msgstr ""
+msgstr "Roman Gilg"
 
 #: kcm/libinput/libinput_config.cpp:43
 #, kde-format
 msgid "Developer"
-msgstr ""
+msgstr "開発者"
 
 #: kcm/libinput/libinput_config.cpp:109
 #, kde-format
@@ -76,11 +79,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"数値の読み込み中にエラーが発生しました。さらなる情報を得るにはログを確認して"
+"ください。この設定モジュールを再起動してください。"
 
 #: kcm/libinput/libinput_config.cpp:114
 #, kde-format
 msgid "No pointer device found. Connect now."
-msgstr ""
+msgstr "ポインタデバイスが見つかりません。接続してください。"
 
 #: kcm/libinput/libinput_config.cpp:125
 #, kde-format
@@ -88,6 +93,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"すべての変更を保存できませんでした。さらなる情報を得るにはログを確認してくだ"
+"さい。この設定モジュールを再起動して再試行してください。"
 
 #: kcm/libinput/libinput_config.cpp:145
 #, kde-format
@@ -95,6 +102,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
+"デフォルトの数値の読み込み中にエラーが発生しました。いくつかのオプションにデ"
+"フォルトの数値を設定できませんでした。"
 
 #: kcm/libinput/libinput_config.cpp:167
 #, kde-format
@@ -102,21 +111,23 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"新しく追加されたデバイスの読み込み中にエラーが発生しました。再接続してこの設"
+"定モジュールを再起動してください。"
 
 #: kcm/libinput/libinput_config.cpp:191
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr ""
+msgstr "ポインタデバイスが切断されました。設定ダイアログを閉じました。"
 
 #: kcm/libinput/libinput_config.cpp:193
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr ""
+msgstr "ポインタデバイスが切断されました。他のデバイスは見つかりませんでした。"
 
 #: kcm/libinput/main.qml:79
 #, kde-format
 msgid "Device:"
-msgstr ""
+msgstr "デバイス:"
 
 #: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
 #, kde-format
@@ -126,12 +137,12 @@ msgstr "全般:"
 #: kcm/libinput/main.qml:105
 #, kde-format
 msgid "Device enabled"
-msgstr ""
+msgstr "デバイスを有効化"
 
 #: kcm/libinput/main.qml:124
 #, kde-format
 msgid "Accept input through this device."
-msgstr ""
+msgstr "このデバイスからの入力を許可します。"
 
 #: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
 #, kde-format
@@ -141,7 +152,7 @@ msgstr "左利きモード"
 #: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr ""
+msgstr "左右のボタンを入れ替えます。"
 
 #: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
 #, kde-format
@@ -152,7 +163,7 @@ msgstr "左右のボタンを押して中クリック"
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
-msgstr ""
+msgstr "左右のボタンを同時に押すと中クリックを送信します。"
 
 #: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
 #, kde-format
@@ -160,10 +171,9 @@ msgid "Pointer speed:"
 msgstr "ポインタの速度:"
 
 #: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
-#, fuzzy, kde-format
-#| msgid "Acceleration &profile:"
+#, kde-format
 msgid "Acceleration profile:"
-msgstr "加速のプロファイル(&P):"
+msgstr "加速プロファイル:"
 
 #: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
 #, kde-format
@@ -173,7 +183,7 @@ msgstr "フラット"
 #: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
-msgstr ""
+msgstr "カーソルはマウスが動いた距離と同じ長さだけ動きます。"
 
 #: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
 #, kde-format
@@ -183,7 +193,7 @@ msgstr "適応"
 #: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
-msgstr ""
+msgstr "カーソルが動く距離はマウスの動く速さによって変動します。"
 
 #: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
 #, kde-format
@@ -198,73 +208,72 @@ msgstr "スクロール方向を反転"
 #: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr ""
+msgstr "タッチスクリーンのようなスクロール。"
 
 #: kcm/libinput/main.qml:295
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgid "Scrolling speed:"
-msgstr "スクロール:"
+msgstr "スクロールの速さ:"
 
 #: kcm/libinput/main.qml:343
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "遅く"
 
 #: kcm/libinput/main.qml:349
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "速く"
 
 #: kcm/libinput/main.qml:360
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr ""
+msgstr "追加のマウスボタンをリバインド..."
 
 #: kcm/libinput/main.qml:396
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "追加のボタン %1:"
 
 #: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr ""
+msgstr "キーバインドを追加するマウスボタンを押してください"
 
 #: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "%1 に対する新しいキーの組み合わせを入力してください"
 
 #: kcm/libinput/main.qml:431
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: kcm/libinput/main.qml:448
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
-msgstr ""
+msgstr "マウスボタンを押してください"
 
 #: kcm/libinput/main.qml:449
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "バインディングを追加..."
 
 #: kcm/libinput/main.qml:478
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
-msgstr ""
+msgstr "戻る"
 
 #. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
 #: kcm/xlib/kcmmouse.ui:14
@@ -487,10 +496,9 @@ msgstr ""
 # ACCELERATOR added by translator
 #. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
 #: kcm/xlib/kcmmouse.ui:387
-#, fuzzy, kde-format
-#| msgid "Mouse Navigation"
+#, kde-format
 msgid "Keyboard Navigation"
-msgstr "マウスの移動(&I)"
+msgstr "キーボードのナビゲーション"
 
 # ACCELERATOR changed by translator
 #. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
@@ -544,10 +552,9 @@ msgid "Mouse"
 msgstr "マウス"
 
 #: kcm/xlib/xlib_config.cpp:83
-#, fuzzy, kde-format
-#| msgid "(c) 1997 - 2005 Mouse developers"
+#, kde-format
 msgid "(c) 1997 - 2018 Mouse developers"
-msgstr "(c) 1997 - 2005 Mouse developers"
+msgstr "(c) 1997 - 2018 Mouse developers"
 
 #: kcm/xlib/xlib_config.cpp:84
 #, kde-format
