@@ -43,6 +43,12 @@ target_link_libraries(folderplugin
 
 install(TARGETS folderplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/folder)
 
+ecm_qt_declare_logging_category(folderplugin
+    HEADER debug.h
+    IDENTIFIER FOLDER
+    CATEGORY_NAME org.kde.plasma.folder
+)
+
 generate_export_header(folderplugin BASE_NAME folderplugin)
 
 if(BUILD_TESTING)

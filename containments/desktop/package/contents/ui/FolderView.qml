@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2014-2015 Eike Hein <hein@kde.org>
+    SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -1192,6 +1193,16 @@ FocusScope {
                         updateHistory();
                     }
                 }
+            }
+
+            Kirigami.InlineMessage {
+                width: parent.width / 2.0
+                anchors.horizontalCenter: parent.horizontalCenter
+                type: Kirigami.MessageType.Warning
+                text: i18nc("@info",
+                    "There are a lot of files and folders on the desktop. This can cause bugs and performance issues. Please consider moving some of them elsewhere.")
+                // Note: the trigger amount is intentionally lower than the screen mapping cap. We want to warn ahead of hitting our caps.
+                visible: isRootView && gridView.count > 2048
             }
         }
 

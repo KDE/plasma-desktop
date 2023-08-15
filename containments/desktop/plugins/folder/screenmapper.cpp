@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2017 Klarälvdalens Datakonsult AB a KDAB Group company <info@kdab.com>
+    SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
     Work sponsored by the LiMux project of the city of Munich.
     SPDX-FileContributor: Andras Mantia <andras.mantia@kdab.com>
@@ -20,7 +21,17 @@
 #include <Plasma/Corona>
 #include <chrono>
 
+#include "debug.h"
+
 using namespace std::chrono_literals;
+
+namespace
+{
+// The maximum amount of mappings we allow. This prevents performance and memory exhaustion problems when too many
+// items are on the desktop.
+// https://bugs.kde.org/show_bug.cgi?id=469445
+constexpr auto MAX_MAPPING_COUNT = 4096;
+} // namespace
 
 ScreenMapper *ScreenMapper::instance()
 {
@@ -151,6 +162,18 @@ void ScreenMapper::addScreen(int screenId, const QString &activity, const QUrl &
 
 void ScreenMapper::addMapping(const QUrl &url, int screen, const QString &activity, MappingSignalBehavior behavior)
 {
+    if (m_screenItemMap.count() > MAX_MAPPING_COUNT) {
+        // Don't spam this
+        static auto reported = false;
+        if (!reported) {
+            qCCritical(FOLDER)
+                << "Greater than" << MAX_MAPPING_COUNT
+                << "files and folders on the desktop; this is too many to map their positions in a performant way! Not adding any more position mappings.";
+            reported = true;
+        }
+        return;
+    }
+
     m_screenItemMap[std::make_pair(url, activity)] = screen;
 
     if (behavior == DelayedSignal) {
@@ -251,11 +274,19 @@ QStringList ScreenMapper::screenMapping() const
     QStringList result;
     result.reserve(m_screenItemMap.count() * 3); // Match setScreenMapping()
     auto it = m_screenItemMap.constBegin();
+    int i = 0;
     while (it != m_screenItemMap.constEnd()) {
+        if (i >= MAX_MAPPING_COUNT) {
+            qCCritical(FOLDER)
+                << "Greater than" << MAX_MAPPING_COUNT
+                << "disabled files and folders; this is too many to remember their position in a performant way! Not adding any more position mappings.";
+            break;
+        }
         result.append(it.key().first.toString());
         result.append(QString::number(it.value())); // Screen ID
         result.append(it.key().second); // Activity ID
         ++it;
+        ++i;
     }
 
     return result;
@@ -264,11 +295,17 @@ QStringList ScreenMapper::screenMapping() const
 void ScreenMapper::setScreenMapping(const QStringList &mapping)
 {
     decltype(m_screenItemMap) newMap;
-    const int count = mapping.count();
+    int count = mapping.count();
     const bool useDefaultActivity = count % 3 != 0; // Missing activity ID from the old config before 5.25
     const int sizeOfParamGroup = useDefaultActivity ? 2 : 3; // Match screenMapping()
 
-    newMap.reserve(count / sizeOfParamGroup);
+    auto itemCount = count / sizeOfParamGroup;
+    if (itemCount > MAX_MAPPING_COUNT) {
+        itemCount = MAX_MAPPING_COUNT;
+        count = itemCount * sizeOfParamGroup;
+    }
+
+    newMap.reserve(itemCount);
     QMap<int, int> screenConsistencyMap;
     for (int i = 0; i < count - (sizeOfParamGroup - 1); i += sizeOfParamGroup) {
         if (i + (sizeOfParamGroup - 1) < count) {
@@ -313,7 +350,13 @@ QStringList ScreenMapper::disabledScreensMap() const
 {
     QStringList serializedMap;
     auto it = m_itemsOnDisabledScreensMap.constBegin();
-    for (; it != m_itemsOnDisabledScreensMap.constEnd(); ++it) {
+    for (int i = 0; it != m_itemsOnDisabledScreensMap.constEnd(); ++it, ++i) {
+        if (i >= MAX_MAPPING_COUNT) {
+            qCCritical(FOLDER)
+                << "Greater than" << MAX_MAPPING_COUNT
+                << "files and folders on the desktop; this is too many to map their positions in a performant way! Not adding any more position mappings.";
+            break;
+        }
         serializedMap.append(QString::number(it.key().first)); // Screen ID
         serializedMap.append(it.key().second); // Activity ID
         const auto urls = it.value();
