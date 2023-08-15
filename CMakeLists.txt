@@ -100,6 +100,7 @@ endif()
 #     TYPE OPTIONAL
 # )
 
+
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SignOnOAuth2 IMPORTED_TARGET signon-oauth2plugin)
 set_package_properties(signon-oauth2plugin PROPERTIES
@@ -113,6 +114,14 @@ find_package(KF6Kirigami2 ${KF6_MIN_VERSION} CONFIG)
 set_package_properties(KF6Kirigami2 PROPERTIES
     DESCRIPTION "A QtQuick based components set"
     PURPOSE "Required at runtime by many KCMs"
+    TYPE RUNTIME
+)
+
+
+find_package(KF6KirigamiAddons2 0.10.0 CONFIG)
+set_package_properties(KF6KirigamiAddons2 PROPERTIES
+    DESCRIPTION "Extra controls for Kirigami applications"
+    PURPOSE "Required at runtime for Kickoff"
     TYPE RUNTIME
 )
 

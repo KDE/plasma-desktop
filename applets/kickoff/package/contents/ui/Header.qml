@@ -15,6 +15,7 @@ import Qt5Compat.GraphicalEffects
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
 import org.kde.coreaddons 1.0 as KCoreAddons
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
@@ -66,7 +67,7 @@ PlasmaExtras.PlasmoidHeading {
             rightPadding: 1
             topPadding: 1
             bottomPadding: 1
-            contentItem: Kirigami.Avatar {
+            contentItem: KirigamiComponents.Avatar {
                 source: kuser.faceIconUrl
                 name: kuser.fullName
             }

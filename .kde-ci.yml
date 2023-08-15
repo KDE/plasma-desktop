@@ -50,6 +50,7 @@ Dependencies:
     'third-party/packagekit-qt': '@latest'
     'third-party/wayland': '@latest'
     'third-party/wayland-protocols': '@latest'
+    'libraries/kirigami-addons': '@latest-kf6'
 
 RuntimeDependencies:
 - 'on': ['@all']
