@@ -53,37 +53,17 @@ PlasmaExtras.PlasmoidHeading {
         height: parent.height
         width: root.preferredNameAndIconWidth
 
-        PC3.RoundButton {
+        KirigamiComponents.AvatarButton {
             id: avatar
             visible: KConfig.KAuthorized.authorizeControlModule("kcm_users")
-            hoverEnabled: true
+
             Layout.fillHeight: true
             Layout.minimumWidth: height
             Layout.maximumWidth: height
-            // FIXME: Not using text with display because of RoundButton bugs in plasma-framework
-            // See https://bugs.kde.org/show_bug.cgi?id=440022
-            Accessible.name: i18n("Open user settings")
-            leftPadding: 1
-            rightPadding: 1
-            topPadding: 1
-            bottomPadding: 1
-            contentItem: KirigamiComponents.Avatar {
-                source: kuser.faceIconUrl
-                name: kuser.fullName
-            }
-            Rectangle {
-                parent: avatar.background
-                anchors.fill: avatar.background
-                anchors.margins: -1
-                z: 1
-                radius: height/2
-                color: "transparent"
-                border.width: avatar.visualFocus ? 2 : 0
-                border.color: Kirigami.Theme.buttonFocusColor
-            }
-            PC3.ToolTip.text: Accessible.name
-            PC3.ToolTip.visible: hovered
-            PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+
+            text: i18n("Open user settings")
+            name: kuser.fullName
+            source: kuser.faceIconUrl
 
             Keys.onLeftPressed: if (LayoutMirroring.enabled) {
                 searchField.forceActiveFocus(Qt.TabFocusReason)
