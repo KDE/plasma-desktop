@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
@@ -19,6 +19,7 @@ PlasmaCore.Dialog {
     id: dialog
     visualParent: alternativesHelper.applet
     location: alternativesHelper.applet.location
+    hideOnWindowDeactivate: true
 
     Component.onCompleted: {
         flags = flags |  Qt.WindowStaysOnTopHint;
@@ -31,27 +32,26 @@ PlasmaCore.Dialog {
         signal configurationChanged
 
         Layout.minimumWidth: Kirigami.Units.gridUnit * 20
-        Layout.minimumHeight: Math.min(Screen.height - Kirigami.Units.gridUnit * 10, heading.height + buttonsRow.height + mainList.contentHeight + Kirigami.Units.gridUnit)
+        Layout.minimumHeight: Math.min(Screen.height - Kirigami.Units.gridUnit * 10, implicitHeight)
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
-        property string currentPlugin
-        // we don't want a binding here, just set it to the current plugin once
-        Component.onCompleted: currentPlugin = alternativesHelper.currentPlugin
+        property string currentPlugin: ""
 
-        QQC2.Action {
-            shortcut: "Escape"
-            onTriggered: dialog.close()
+        Shortcut {
+            sequence: "Escape"
+            onActivated: dialog.close()
         }
-        QQC2.Action {
-            shortcut: "Return"
-            onTriggered: switchButton.clicked(null)
+        Shortcut {
+            sequence: "Return"
+            onActivated: root.savePluginAndClose()
         }
-        QQC2.Action {
-            shortcut: "Enter"
-            onTriggered: switchButton.clicked(null)
+        Shortcut {
+            sequence: "Enter"
+            onActivated: root.savePluginAndClose()
         }
+
 
         WidgetExplorer {
             id: widgetExplorer
@@ -65,21 +65,30 @@ PlasmaCore.Dialog {
             }
         }
 
-        // HACK for some reason initially setting the index does not work
-        // I tried setting it in Component.onCompleted of either delegate and list
-        // but that did not help either, hence the Timer as a last resort
+        // This timer checks with a short delay whether a new item in the list has been hovered by the cursor.
+        // If not, then the cursor has left the view and thus no item should be selected.
         Timer {
-            id: setCurrentIndexTimer
-            property int desiredIndex: 0
-            interval: 0
-            onTriggered: mainList.currentIndex = desiredIndex
+            id: resetCurrentIndex
+            property string oldPlugin
+            interval: 100
+            onTriggered: {
+                if (root.currentPlugin === oldPlugin) {
+                    mainList.currentIndex = -1
+                    root.currentPlugin = ""
+                }
+            }
+        }
+
+        function savePluginAndClose() {
+            alternativesHelper.loadAlternative(currentPlugin);
+            dialog.close();
         }
 
         PlasmaComponents3.ScrollView {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            Layout.preferredHeight: mainList.height
+            Layout.preferredHeight: mainList.contentHeight
 
             focus: true
 
@@ -95,17 +104,29 @@ PlasmaCore.Dialog {
                 highlightMoveDuration : 0
                 highlightResizeDuration: 0
 
-                KeyNavigation.down: switchButton.enabled ? switchButton : cancelButton
+                height: contentHeight+Kirigami.Units.smallSpacing
+
+                // we don't want to select any entry by default
+                // this cannot be set in Component.onCompleted
+                Timer {
+                    interval: 0
+                    running: true
+                    onTriggered: {
+                        mainList.currentIndex = -1
+                    }
+                }
 
                 delegate: PlasmaExtras.ListItem {
+
                     implicitHeight: contentLayout.implicitHeight + Kirigami.Units.smallSpacing * 2
 
-                    onClicked: mainList.currentIndex = index
-
-                    Component.onCompleted: {
-                        if (model.pluginName === alternativesHelper.currentPlugin) {
-                            setCurrentIndexTimer.desiredIndex = index
-                            setCurrentIndexTimer.restart()
+                    onHoveredChanged: {
+                        if (hovered) {
+                            resetCurrentIndex.stop()
+                            mainList.currentIndex = index
+                        } else {
+                            resetCurrentIndex.oldPlugin = model.pluginName
+                            resetCurrentIndex.restart()
                         }
                     }
 
@@ -118,9 +139,17 @@ PlasmaCore.Dialog {
                         }
                     }
 
+                    onClicked: root.savePluginAndClose()
+
+                    Component.onCompleted: {
+                        if (model.pluginName === alternativesHelper.currentPlugin) {
+                            root.currentPlugin = model.pluginName
+                        }
+                    }
+
                     contentItem: RowLayout {
                         id: contentLayout
-                        spacing: Kirigami.Units.gridUnit
+                        spacing: Kirigami.Units.largeSpacing
 
                         Kirigami.Icon {
                             implicitWidth: Kirigami.Units.iconSizes.huge
@@ -138,11 +167,15 @@ PlasmaCore.Dialog {
                                 Layout.fillWidth: true
                                 text: model.name
                                 elide: Text.ElideRight
+                                type: model.pluginName === alternativesHelper.currentPlugin ? PlasmaExtras.Heading.Type.Primary : PlasmaExtras.Heading.Type.Normal
                             }
+
                             PlasmaComponents3.Label {
                                 Layout.fillWidth: true
                                 text: model.description
-                                font: Kirigami.Theme.smallFont
+                                font.pointSize: Kirigami.Theme.smallFont.pointSize
+                                font.family: Kirigami.Theme.smallFont.family
+                                font.bold: model.pluginName === alternativesHelper.currentPlugin
                                 opacity: 0.6
                                 maximumLineCount: 2
                                 wrapMode: Text.WordWrap
@@ -150,39 +183,6 @@ PlasmaCore.Dialog {
                             }
                         }
                     }
-                }
-            }
-        }
-        RowLayout {
-            id: buttonsRow
-
-            Layout.fillWidth: true
-            PlasmaComponents3.Button {
-                id: switchButton
-                enabled: root.currentPlugin !== alternativesHelper.currentPlugin
-                Layout.fillWidth: true
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Switch");
-
-                KeyNavigation.up: mainList
-                KeyNavigation.right: cancelButton
-
-                onClicked: {
-                    if (enabled) {
-                        alternativesHelper.loadAlternative(root.currentPlugin);
-                        dialog.close();
-                    }
-                }
-            }
-            PlasmaComponents3.Button {
-                id: cancelButton
-
-                Layout.fillWidth: true
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel");
-
-                KeyNavigation.up: mainList
-
-                onClicked: {
-                    dialog.close();
                 }
             }
         }
