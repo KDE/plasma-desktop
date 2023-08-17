@@ -89,7 +89,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
     Q_PROPERTY(QObject *newMenu READ newMenu CONSTANT)
     Q_PROPERTY(Plasma::Applet *applet READ applet WRITE setApplet NOTIFY appletChanged)
     Q_PROPERTY(bool showHiddenFiles READ showHiddenFiles WRITE setShowHiddenFiles NOTIFY showHiddenFilesChanged)
-
+    Q_PROPERTY(int limit MEMBER m_limit WRITE setLimit NOTIFY limitChanged)
 public:
     enum DataRole {
         BlankRole = Qt::UserRole + 1,
@@ -242,6 +242,7 @@ public:
     Q_INVOKABLE void createFolder();
 
     void setScreen(int screen);
+    void setLimit(int limit);
 
 Q_SIGNALS:
     void urlChanged() const;
@@ -272,6 +273,7 @@ Q_SIGNALS:
     void popupMenuAboutToShow(KIO::DropJob *dropJob, QMimeData *mimeData, int x, int y);
     void selectionChanged() const;
     void showHiddenFilesChanged() const;
+    void limitChanged();
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
@@ -309,6 +311,7 @@ private:
     static bool isTrashEmpty();
     static bool isDeleteCommandShown();
     QList<QUrl> selectedUrls() const;
+    bool isIndexShowMore(const QModelIndex &index) const;
     KDirModel *m_dirModel;
     KDirWatch *m_dirWatch;
     QString m_url;
@@ -355,6 +358,11 @@ private:
     Plasma::Applet *m_applet = nullptr;
     bool m_complete;
     QPoint m_menuPosition;
+    KFileItem m_rootNode;
+    // The maximum capacity of rows (this is set by the UI to limit the amount of data)
+    int m_limit = -1;
+    // When limited the last index can become a show more... index, this is a reference for book keeping
+    QPersistentModelIndex m_showMoreIndex;
 
     /**
      * This property is used to save the current activity when FolderModel is initialized.

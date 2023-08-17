@@ -19,7 +19,6 @@
 #include "shortcut.h"
 #include "subdialog.h"
 #include "viewpropertiesmenu.h"
-#include "wheelinterceptor.h"
 
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -53,7 +52,6 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<RubberBand>(uri, 0, 1, "RubberBand");
     qmlRegisterType<SubDialog>(uri, 0, 1, "SubDialog");
     qmlRegisterType<ViewPropertiesMenu>(uri, 0, 1, "ViewPropertiesMenu");
-    qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
     qmlRegisterType<ShortCut>(uri, 0, 1, "ShortCut");
     qmlRegisterSingletonType<AppLauncher>(uri, 0, 1, "AppLauncher", appLauncherSingletonProvider);
 }

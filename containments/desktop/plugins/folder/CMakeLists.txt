@@ -19,7 +19,6 @@ set(folderplugin_SRCS
     rubberband.cpp
     subdialog.cpp
     viewpropertiesmenu.cpp
-    wheelinterceptor.cpp
     shortcut.cpp
     screenmapper.cpp
     removeaction.cpp

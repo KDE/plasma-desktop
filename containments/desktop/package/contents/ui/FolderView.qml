@@ -674,6 +674,12 @@ FocusScope {
 
                 property var cachedRectangleSelection: null
 
+                property var lastPossibleIndex: {
+                    const availableColumns = Math.floor(scrollArea.viewportWidth / cellWidth);
+                    const availableRows = Math.floor(scrollArea.viewportHeight / cellHeight);
+                    return (availableColumns * availableRows - 1)
+                }
+
                 currentIndex: -1
 
                 keyNavigationWraps: false
@@ -1199,15 +1205,9 @@ FocusScope {
             }
         }
 
-        Folder.WheelInterceptor {
-            anchors.fill: parent
-
-            enabled: root.isContainment && !gridView.overflowing
-            destination: plasmoid
-        }
-
         Folder.FolderModel {
             id: dir
+            limit: root.isContainment ? gridView.lastPossibleIndex : -1
 
             usedByContainment: root.isContainment && main.isRootView
             sortDesc: plasmoid.configuration.sortDesc
