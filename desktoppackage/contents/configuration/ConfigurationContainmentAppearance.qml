@@ -37,17 +37,6 @@ Item {
         configDialog.containmentPlugin = appearanceRoot.containmentPlugin
     }
 
-    Connections {
-        // BUG 407619: wallpaperConfiguration can be invalid after changing layout
-        enabled: !configDialog.wallpaperConfiguration
-        target: Plasmoid.self
-        function onWallpaperInterfaceChanged() {
-            // wallpaperConfiguration is valid now, reload the settings
-            configDialog.applyWallpaper();
-            main.loadSourceFile();
-        }
-    }
-
     ColumnLayout {
         width: root.availableWidth
         height: Math.max(implicitHeight, root.availableHeight)
@@ -152,7 +141,7 @@ Item {
 
             function loadSourceFile() {
                 const wallpaperConfig = configDialog.wallpaperConfiguration
-                // BUG 407619: wallpaperConfig can be null before calling `ContainmentInterface::loadWallpaper()`
+                // BUG 407619: wallpaperConfig can be null before calling `ContainmentItem::loadWallpaper()`
                 if (wallpaperConfig && sourceFile) {
                     var props = {}
 
