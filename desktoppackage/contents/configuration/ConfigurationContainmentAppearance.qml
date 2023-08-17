@@ -27,12 +27,12 @@ Item {
         if (main.currentItem.saveConfig) {
             main.currentItem.saveConfig()
         }
+        configDialog.currentWallpaper = appearanceRoot.currentWallpaper;
         for (var key in configDialog.wallpaperConfiguration) {
             if (main.currentItem["cfg_"+key] !== undefined) {
                 configDialog.wallpaperConfiguration[key] = main.currentItem["cfg_"+key]
             }
         }
-        configDialog.currentWallpaper = appearanceRoot.currentWallpaper;
         configDialog.applyWallpaper()
         configDialog.containmentPlugin = appearanceRoot.containmentPlugin
     }
