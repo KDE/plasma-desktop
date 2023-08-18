@@ -54,7 +54,7 @@ XlibNotifications::XlibNotifications(Display *display, int device)
     XISelectEvents(display, XDefaultRootWindow(display), masks, sizeof(masks) / sizeof(XIEventMask));
     XFlush(display);
 
-    connect(m_notifier, SIGNAL(activated(int)), SLOT(processEvents()));
+    connect(m_notifier, &QSocketNotifier::activated, this, &XlibNotifications::processEvents);
     m_notifier->setEnabled(true);
 }
 
