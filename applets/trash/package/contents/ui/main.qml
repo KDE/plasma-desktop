@@ -35,11 +35,15 @@ PlasmoidItem {
         : i18nc("@info:status The trash is empty", "Empty")
 
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
-    Plasmoid.icon: inPanel
-        // In a panel: always be monochrome
-        ? (hasContents ? "user-trash-full-symbolic" : "user-trash-symbolic")
-        // On the desktop: whatevs
-        : (hasContents ? "user-trash-full" : "user-trash")
+    Plasmoid.icon: {
+        let iconName = (hasContents ? "user-trash-full" : "user-trash");
+
+        if (inPanel) {
+            return iconName += "-symbolic";
+        }
+
+        return iconName;
+    }
 
     Plasmoid.onActivated: Qt.openUrlExternally("trash:/")
 
