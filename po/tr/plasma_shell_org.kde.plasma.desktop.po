@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2023-05-19 06:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -151,7 +151,6 @@ msgid "Apply"
 msgstr "Uygula"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "İptal"
 
@@ -218,27 +217,27 @@ msgstr "Hakkında"
 msgid "Add Action"
 msgstr "Eylem Ekle"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Yerleşim değişiklikleri sistem yöneticisi tarafından kısıtlanmış"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "Yerleşim:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 msgid "Wallpaper type:"
 msgstr "Duvar kağıdı türü:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr "Yeni Eklentiler Al…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Yerleşim değişiklikleri, diğer değişiklikler yapılmadan uygulanmalıdır"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 msgid "Apply Now"
 msgstr "Şimdi Uygula"
 
@@ -516,10 +515,6 @@ msgstr "%1 (birincil)"
 msgid "Alternative Widgets"
 msgstr "Alternatif Araç Takımları"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "Değiştir"
-
 #: contents/explorer/AppletDelegate.qml:167
 msgid "Undo uninstall"
 msgstr "Kaldırmayı geri al"
@@ -564,6 +559,9 @@ msgstr "Aranan terimler ile eşleşen araç takımı bulunamadı"
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "Kullanılabilir araç takımı yok"
+
+#~ msgid "Switch"
+#~ msgstr "Değiştir"
 
 #~| msgid "Windows Behind"
 #~ msgid "Windows Above"

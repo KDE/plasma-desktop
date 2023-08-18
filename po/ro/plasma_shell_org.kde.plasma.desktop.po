@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2022-12-28 21:26+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -150,7 +150,6 @@ msgid "Apply"
 msgstr "Aplică"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Renunță"
 
@@ -219,31 +218,31 @@ msgstr "Despre"
 msgid "Add Action"
 msgstr "Adaugă acțiune"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
 "Modificările aranjamentului au fost restricționate de către administratorul "
 "sistemului"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "Aranjament:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 msgid "Wallpaper type:"
 msgstr "Tip tapet:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr "Obține extensii noi…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Modificările de aranjament trebuiesc aplicate înainte de a putea face alte "
 "modificări"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 msgid "Apply Now"
 msgstr "Aplică acum"
 
@@ -535,10 +534,6 @@ msgstr "%1 (primar)"
 msgid "Alternative Widgets"
 msgstr "Controale grafice alternative"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "Schimbă"
-
 #: contents/explorer/AppletDelegate.qml:167
 msgid "Undo uninstall"
 msgstr "Desfă dezinstalarea"
@@ -583,6 +578,9 @@ msgstr "Niciun control nu se potrivește termenilor căutării"
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "Niciun control grafic disponibil"
+
+#~ msgid "Switch"
+#~ msgstr "Schimbă"
 
 #, fuzzy
 #~| msgid "Windows Go Below"

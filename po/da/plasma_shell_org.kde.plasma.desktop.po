@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2022-08-20 17:31+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -149,7 +149,6 @@ msgid "Apply"
 msgstr "Anvend"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Annullér"
 
@@ -218,27 +217,27 @@ msgstr "Om"
 msgid "Add Action"
 msgstr "Tilføj handling"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Layout-ændringer er blevet begrænset af systemadministratoren"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "Layout:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 msgid "Wallpaper type:"
 msgstr "Baggrundsbilledetype:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr "Hent nye plugins..."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Layoutændringer skal anvendes før andre ændringer kan foretages"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 #, fuzzy
 #| msgid "Apply now"
 msgid "Apply Now"
@@ -530,10 +529,6 @@ msgstr "%1 (primær)"
 msgid "Alternative Widgets"
 msgstr "Alternative widgets"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "Skift"
-
 #: contents/explorer/AppletDelegate.qml:167
 msgid "Undo uninstall"
 msgstr "Fortryd afinstallation"
@@ -578,6 +573,9 @@ msgstr "Ingen widgets matchede søgeordene"
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "Ingen widgets tilgængelige"
+
+#~ msgid "Switch"
+#~ msgstr "Skift"
 
 #, fuzzy
 #~| msgid "Windows Go Below"

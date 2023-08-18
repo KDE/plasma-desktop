@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2014-12-28 11:53+0000\n"
 "Last-Translator: Ajla Alic <aalic2@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -160,7 +160,6 @@ msgid "Apply"
 msgstr "Primjeni"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Otkaži"
 
@@ -229,29 +228,29 @@ msgstr ""
 msgid "Add Action"
 msgstr "Dodaj akciju"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "Raspored:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 #, fuzzy
 #| msgid "Wallpaper Type:"
 msgid "Wallpaper type:"
 msgstr "Tip pozadine:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 #, fuzzy
 #| msgid "Apply"
 msgid "Apply Now"
@@ -543,10 +542,6 @@ msgstr ""
 msgid "Alternative Widgets"
 msgstr "Alternative"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "Prekidač"
-
 #: contents/explorer/AppletDelegate.qml:167
 #, fuzzy
 #| msgid "Uninstall"
@@ -599,6 +594,9 @@ msgstr ""
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr ""
+
+#~ msgid "Switch"
+#~ msgstr "Prekidač"
 
 #, fuzzy
 #~| msgid "Windows Go Below"

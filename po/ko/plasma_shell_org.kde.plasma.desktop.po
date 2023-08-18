@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2023-07-25 23:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -150,7 +150,6 @@ msgid "Apply"
 msgstr "적용"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "취소"
 
@@ -217,27 +216,27 @@ msgstr "정보"
 msgid "Add Action"
 msgstr "동작 추가"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "시스템 관리자가 레이아웃 변경을 제한함"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "레이아웃:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 msgid "Wallpaper type:"
 msgstr "배경 그림 종류:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr "새 플러그인 가져오기…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "다른 항목을 변경하기 전 레이아웃 변경 사항을 적용해야 합니다"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 msgid "Apply Now"
 msgstr "지금 적용하기"
 
@@ -511,10 +510,6 @@ msgstr "%1(주)"
 msgid "Alternative Widgets"
 msgstr "대안 위젯"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "전환"
-
 #: contents/explorer/AppletDelegate.qml:167
 msgid "Undo uninstall"
 msgstr "삭제 실행 취소"
@@ -559,6 +554,9 @@ msgstr "검색어와 일치하는 위젯 없음"
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "사용 가능한 위젯 없음"
+
+#~ msgid "Switch"
+#~ msgstr "전환"
 
 #, fuzzy
 #~| msgid "Windows Go Below"

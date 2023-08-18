@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2023-05-20 05:28+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -146,7 +146,6 @@ msgid "Apply"
 msgstr "გამოყენება"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "გაუქმება"
 
@@ -213,28 +212,28 @@ msgstr "შესახებ"
 msgid "Add Action"
 msgstr "ქმედების დამატება"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "განლაგების ცვლილება შეზღუდულია სისტემური ადმინისტრატორის მიერ"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "განლაგება:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 msgid "Wallpaper type:"
 msgstr "ფონური სურათის ტიპი:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr "ახალი დამატებების მიღება…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "სხვა ცვლილებების განხორციელებამდე საჭიროა განლაგების ცვლილებების გადატარება"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 msgid "Apply Now"
 msgstr "ახლა გადატარება"
 
@@ -514,10 +513,6 @@ msgstr "%1 (ძირითადი)"
 msgid "Alternative Widgets"
 msgstr "ალტერნატიული ვიჯეტები"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "გადართვა"
-
 #: contents/explorer/AppletDelegate.qml:167
 msgid "Undo uninstall"
 msgstr "წაშლის გაუქმება"
@@ -562,6 +557,9 @@ msgstr "ვიჯეტების თქვენს ძებნას პა
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "ვიჯეტების გარეშე"
+
+#~ msgid "Switch"
+#~ msgstr "გადართვა"
 
 #, fuzzy
 #~| msgid "Windows Behind"

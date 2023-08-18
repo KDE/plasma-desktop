@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2023-05-20 08:17+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -149,7 +149,6 @@ msgid "Apply"
 msgstr "Zastosuj"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Anuluj"
 
@@ -216,27 +215,27 @@ msgstr "O programie"
 msgid "Add Action"
 msgstr "Dodaj działanie"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Zmiany układu zostały ograniczone przez administratora systemu"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "Układ:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 msgid "Wallpaper type:"
 msgstr "Rodzaj tapety:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr "Pobierz nową wtyczkę..."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Zmiany układu należy zastosować przed zastosowaniem kolejnych zmian"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 msgid "Apply Now"
 msgstr "Zastosuj teraz"
 
@@ -514,10 +513,6 @@ msgstr "%1 (główny)"
 msgid "Alternative Widgets"
 msgstr "Zamienny wygląd obsługi"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "Przełącz"
-
 #: contents/explorer/AppletDelegate.qml:167
 msgid "Undo uninstall"
 msgstr "Wycofaj odinstalowanie"
@@ -562,6 +557,9 @@ msgstr "Żaden z elementów interfejsu nie pasuje do wyszukiwanego wyrażenia"
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "Brak elementów interfejsu"
+
+#~ msgid "Switch"
+#~ msgstr "Przełącz"
 
 #, fuzzy
 #~| msgid "Windows Behind"

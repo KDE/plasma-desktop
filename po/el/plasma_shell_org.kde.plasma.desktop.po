@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2017-01-15 17:59+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -154,7 +154,6 @@ msgid "Apply"
 msgstr "Εφαρμογή"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Ακύρωση"
 
@@ -221,29 +220,29 @@ msgstr ""
 msgid "Add Action"
 msgstr "Προσθήκη ενέργειας"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "Διάταξη:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 #, fuzzy
 #| msgid "Wallpaper Type:"
 msgid "Wallpaper type:"
 msgstr "Τύπος ταπετσαρίας:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Οι αλλαγές στη διάταξη πρέπει να εφαρμοστούν πριν γίνουν άλλες αλλαγές"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 #, fuzzy
 #| msgid "Apply now"
 msgid "Apply Now"
@@ -533,10 +532,6 @@ msgstr ""
 msgid "Alternative Widgets"
 msgstr "Εναλλακτικά γραφικά συστατικά"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "Εναλλαγή"
-
 #: contents/explorer/AppletDelegate.qml:167
 msgid "Undo uninstall"
 msgstr "Αναίρεση απεγκατάστασης"
@@ -585,6 +580,9 @@ msgstr ""
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr ""
+
+#~ msgid "Switch"
+#~ msgstr "Εναλλαγή"
 
 #, fuzzy
 #~| msgid "Windows Go Below"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2023-05-19 20:40+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -152,7 +152,6 @@ msgid "Apply"
 msgstr "Застосувати"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -219,27 +218,27 @@ msgstr "Відомості"
 msgid "Add Action"
 msgstr "Додавання дії"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Зміни до компонування може вносити лише адміністратор системи"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "Компонування:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 msgid "Wallpaper type:"
 msgstr "Тип зображення тла:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr "Отримати нові додатки…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Перш ніж вносити інші зміни, слід застосувати зміни у компонуванні"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 msgid "Apply Now"
 msgstr "Застосувати зараз"
 
@@ -517,10 +516,6 @@ msgstr "%1 (основний)"
 msgid "Alternative Widgets"
 msgstr "Альтернативні віджети"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "Перемкнутися"
-
 #: contents/explorer/AppletDelegate.qml:167
 msgid "Undo uninstall"
 msgstr "Скасувати вилучення"
@@ -565,6 +560,9 @@ msgstr "Критерію пошуку не задовольняє жоден в�
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "Немає доступних віджетів"
+
+#~ msgid "Switch"
+#~ msgstr "Перемкнутися"
 
 #~| msgid "Windows Behind"
 #~ msgid "Windows Above"

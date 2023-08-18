@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -154,7 +154,6 @@ msgid "Apply"
 msgstr "Ужыць"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Скасаваць"
 
@@ -221,27 +220,27 @@ msgstr "Пра праграму"
 msgid "Add Action"
 msgstr "Дадаць дзеянне"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Змена макета абмежаваная сістэмным адміністратарам"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "Макет:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 msgid "Wallpaper type:"
 msgstr "Тып шпалер:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr "Атрымаць новыя ўбудовы…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Змены макета неабходна ўжыць да іншых зменаў"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 msgid "Apply Now"
 msgstr "Ужыць зараз"
 
@@ -533,10 +532,6 @@ msgstr "%1 (асноўны)"
 msgid "Alternative Widgets"
 msgstr "Альтэрнатыўныя віджэты"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "Пераключэнне"
-
 #: contents/explorer/AppletDelegate.qml:167
 msgid "Undo uninstall"
 msgstr "Адрабіць выдаленне"
@@ -581,6 +576,9 @@ msgstr "Няма віджэтаў, якія адпавядаюць умовам 
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "Няма даступных віджэтаў"
+
+#~ msgid "Switch"
+#~ msgstr "Пераключэнне"
 
 #, fuzzy
 #~| msgid "Windows Go Below"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2021-09-05 11:54-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -151,7 +151,6 @@ msgid "Apply"
 msgstr "Татбиқ кардан"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Бекор кардан"
 
@@ -218,31 +217,31 @@ msgstr ""
 msgid "Add Action"
 msgstr "Илова кардани амалиёт"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "Тарҳбандӣ:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 #, fuzzy
 #| msgid "Wallpaper Type:"
 msgid "Wallpaper type:"
 msgstr "Навъи тасвири экран:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr "Гирифтани васлкунакҳои нав..."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Пеш аз он ки тағйироти дигар тавонанд татбиқ карда шаванд, аввал тағйироти "
 "тарҳбандӣ бояд татбиқ карда шаванд."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 #, fuzzy
 #| msgid "Apply now"
 msgid "Apply Now"
@@ -533,10 +532,6 @@ msgstr ""
 msgid "Alternative Widgets"
 msgstr "Виҷетҳои иловагӣ"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "Гузариш"
-
 #: contents/explorer/AppletDelegate.qml:167
 msgid "Undo uninstall"
 msgstr "Ботил сохтани лағви насб"
@@ -581,6 +576,9 @@ msgstr ""
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr ""
+
+#~ msgid "Switch"
+#~ msgstr "Гузариш"
 
 #, fuzzy
 #~| msgid "Windows Go Below"

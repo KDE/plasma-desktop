@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2014-08-11 12:37+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -157,7 +157,6 @@ msgid "Apply"
 msgstr "Bruken"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "Afbreken"
 
@@ -226,29 +225,29 @@ msgstr ""
 msgid "Add Action"
 msgstr "Akschoon tofögen"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "Utsehn:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 #, fuzzy
 #| msgid "Wallpaper Type:"
 msgid "Wallpaper type:"
 msgstr "Achtergrundbild-Typ:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 #, fuzzy
 #| msgid "Apply"
 msgid "Apply Now"
@@ -540,10 +539,6 @@ msgstr ""
 msgid "Alternative Widgets"
 msgstr "Alternativen"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "Wesseln"
-
 #: contents/explorer/AppletDelegate.qml:167
 #, fuzzy
 #| msgid "Uninstall"
@@ -596,6 +591,9 @@ msgstr ""
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr ""
+
+#~ msgid "Switch"
+#~ msgstr "Wesseln"
 
 #, fuzzy
 #~| msgid "Windows Go Below"

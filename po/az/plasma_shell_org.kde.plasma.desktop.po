@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2023-08-18 01:56+0000\n"
 "PO-Revision-Date: 2023-02-19 16:55+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -149,7 +149,6 @@ msgid "Apply"
 msgstr "Tətbiq etmək"
 
 #: contents/configuration/AppletConfiguration.qml:338
-#: contents/explorer/AppletAlternatives.qml:180
 msgid "Cancel"
 msgstr "İmtina"
 
@@ -216,29 +215,29 @@ msgstr "Haqqında"
 msgid "Add Action"
 msgstr "Fəaliyyət əlavə etmək"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:78
+#: contents/configuration/ConfigurationContainmentAppearance.qml:67
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
 "İş otaqlarının növünün dəyişdirilməsi imkanları admin tərəfindən "
 "məhdudlaşdırıldı"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:93
+#: contents/configuration/ConfigurationContainmentAppearance.qml:82
 msgid "Layout:"
 msgstr "İş otağı növü:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:107
+#: contents/configuration/ConfigurationContainmentAppearance.qml:96
 msgid "Wallpaper type:"
 msgstr "Divar kağızı növü:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:127
+#: contents/configuration/ConfigurationContainmentAppearance.qml:116
 msgid "Get New Plugins…"
 msgstr "Yeni Qoşmalar Almaq…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:195
+#: contents/configuration/ConfigurationContainmentAppearance.qml:184
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "İş otağı növü digər ayarları tətbiq etmədən öncə dəyişdirilməlidir"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:199
+#: contents/configuration/ConfigurationContainmentAppearance.qml:188
 msgid "Apply Now"
 msgstr "İndi tətbiq edin"
 
@@ -529,10 +528,6 @@ msgstr "%1 (ilkin)"
 msgid "Alternative Widgets"
 msgstr "Alternativ Vidjetlər"
 
-#: contents/explorer/AppletAlternatives.qml:164
-msgid "Switch"
-msgstr "Əvəzləmək"
-
 #: contents/explorer/AppletDelegate.qml:167
 msgid "Undo uninstall"
 msgstr "Geri qaytarmaq"
@@ -577,6 +572,9 @@ msgstr "Axtarış nəticəsinə uyğun heç bir vidjet tapılmadı"
 #: contents/explorer/WidgetExplorer.qml:283
 msgid "No widgets available"
 msgstr "Vidjetlər tapılmadı"
+
+#~ msgid "Switch"
+#~ msgstr "Əvəzləmək"
 
 #, fuzzy
 #~| msgid "Windows Go Below"
