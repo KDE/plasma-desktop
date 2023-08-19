@@ -30,6 +30,9 @@ public:
 
     void refreshStackingOrder();
 
+private Q_SLOTS:
+    void onPagerItemSizeChanged();
+
 private:
     class Private;
     std::unique_ptr<Private> d;

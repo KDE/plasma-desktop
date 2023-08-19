@@ -41,6 +41,7 @@ WindowModel::WindowModel(PagerModel *parent)
     , d(new Private(this))
 {
     d->pagerModel = parent;
+    connect(parent, &PagerModel::pagerItemSizeChanged, this, &WindowModel::onPagerItemSizeChanged);
 }
 
 WindowModel::~WindowModel()
@@ -64,25 +65,18 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
 {
     if (role == AbstractTasksModel::Geometry) {
         QRect windowGeo = TaskFilterProxyModel::data(index, role).toRect();
-        const QScreen *const screen = QGuiApplication::screens().constFirst();
-        const QSize desktopSize = screen->virtualSize();
-
-        // KWindowInfoPrivateX11::frameGeometry() returns the true geometry of a window, so devicePixelRatio is needed.
-        if (const auto ratio = screen->devicePixelRatio(); KWindowSystem::isPlatformX11() && ratio != 1.0) {
-            windowGeo.setTopLeft(windowGeo.topLeft() / ratio);
-            windowGeo.setBottomRight(windowGeo.bottomRight() / ratio);
-        }
+        const QRect clampingRect(QPoint(0, 0), d->pagerModel->pagerItemSize());
 
         if (KWindowSystem::isPlatformX11() && KX11Extras::mapViewport()) {
-            int x = windowGeo.center().x() % desktopSize.width();
-            int y = windowGeo.center().y() % desktopSize.height();
+            int x = windowGeo.center().x() % clampingRect.width();
+            int y = windowGeo.center().y() % clampingRect.height();
 
             if (x < 0) {
-                x = x + desktopSize.width();
+                x = x + clampingRect.width();
             }
 
             if (y < 0) {
-                y = y + desktopSize.height();
+                y = y + clampingRect.height();
             }
 
             const QRect mappedGeo(x - windowGeo.width() / 2, y - windowGeo.height() / 2, windowGeo.width(), windowGeo.height());
@@ -98,19 +92,8 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
             windowGeo.translate(0 - screenOffset.x(), 0 - screenOffset.y());
         }
 
-        // Clamp to desktop rect.
-        windowGeo.setX(std::clamp(windowGeo.x(), 0, desktopSize.width()));
-        windowGeo.setY(std::clamp(windowGeo.y(), 0, desktopSize.height()));
-
-        if ((windowGeo.x() + windowGeo.width()) > desktopSize.width()) {
-            windowGeo.setWidth(desktopSize.width() - windowGeo.x());
-        }
-
-        if ((windowGeo.y() + windowGeo.height()) > desktopSize.height()) {
-            windowGeo.setHeight(desktopSize.height() - windowGeo.y());
-        }
-
-        return windowGeo;
+        // Restrict to desktop/screen rect.
+        return windowGeo.intersected(clampingRect);
     } else if (role == StackingOrder) {
 #if HAVE_X11
         const QVariantList &winIds = TaskFilterProxyModel::data(index, AbstractTasksModel::WinIdList).toList();
@@ -135,5 +118,12 @@ void WindowModel::refreshStackingOrder()
 {
     if (rowCount()) {
         Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), QVector<int>{StackingOrder});
+    }
+}
+
+void WindowModel::onPagerItemSizeChanged()
+{
+    if (rowCount() > 0) {
+        Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), {AbstractTasksModel::Geometry});
     }
 }

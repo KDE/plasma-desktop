@@ -49,6 +49,7 @@ public:
 
     bool showOnlyCurrentScreen = false;
     QRect screenGeometry;
+    QRect virtualGeometry;
 
     WindowTasksModel *tasksModel = nullptr;
 
@@ -102,17 +103,6 @@ PagerModel::Private::Private(PagerModel *q)
     });
 
     QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::desktopLayoutRowsChanged, q, &PagerModel::layoutRowsChanged);
-
-    auto configureScreen = [q](QScreen *screen) {
-        QObject::connect(screen, &QScreen::geometryChanged, q, &PagerModel::pagerItemSizeChanged);
-        Q_EMIT q->pagerItemSizeChanged();
-    };
-    const auto screens = qGuiApp->screens();
-    for (QScreen *screen : screens) {
-        configureScreen(screen);
-    }
-    QObject::connect(qGuiApp, &QGuiApplication::screenAdded, q, configureScreen);
-    QObject::connect(qGuiApp, &QGuiApplication::screenRemoved, q, &PagerModel::pagerItemSizeChanged);
 
 #if HAVE_X11
     QObject::connect(KX11Extras::self(), &KX11Extras::stackingOrderChanged, q, [this]() {
@@ -183,6 +173,17 @@ PagerModel::PagerModel(QObject *parent)
     , d(new Private(this))
 {
     d->tasksModel = new WindowTasksModel(this);
+
+    computePagerItemSize();
+    const auto screens = qGuiApp->screens();
+    for (QScreen *screen : screens) {
+        connect(screen, &QScreen::geometryChanged, this, &PagerModel::computePagerItemSize);
+    }
+    connect(qGuiApp, &QGuiApplication::screenAdded, this, [this](QScreen *screen) {
+        connect(screen, &QScreen::geometryChanged, this, &PagerModel::computePagerItemSize);
+        computePagerItemSize();
+    });
+    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &PagerModel::computePagerItemSize);
 }
 
 PagerModel::~PagerModel()
@@ -355,17 +356,15 @@ int PagerModel::layoutRows() const
 QSize PagerModel::pagerItemSize() const
 {
     if (d->showOnlyCurrentScreen && d->screenGeometry.isValid()) {
-        return d->screenGeometry.size();
+#if HAVE_X11
+        const double devicePixelRatio = KWindowSystem::isPlatformWayland() ? 1.0 : qGuiApp->devicePixelRatio();
+#else
+        constexpr int devicePixelRatio = 1;
+#endif
+        return d->screenGeometry.size() * devicePixelRatio;
     }
 
-    QRect totalRect;
-
-    const auto screens = QGuiApplication::screens();
-    for (auto screen : screens) {
-        totalRect |= screen->geometry();
-    }
-
-    return totalRect.size();
+    return d->virtualGeometry.size();
 }
 
 #if HAVE_X11
@@ -598,6 +597,26 @@ void PagerModel::componentComplete()
 
     if (d->enabled) {
         refresh();
+    }
+}
+
+void PagerModel::computePagerItemSize()
+{
+#if HAVE_X11
+    const double devicePixelRatio = KWindowSystem::isPlatformWayland() ? 1.0 : qGuiApp->devicePixelRatio();
+#else
+    constexpr int devicePixelRatio = 1;
+#endif
+    QRect wholeScreen;
+    const auto screens = qGuiApp->screens();
+    for (auto screen : screens) {
+        const QRect geometry = screen->geometry();
+        wholeScreen |= QRect(geometry.topLeft(), geometry.size() * devicePixelRatio);
+    }
+
+    if (d->virtualGeometry != wholeScreen) {
+        d->virtualGeometry = wholeScreen;
+        Q_EMIT pagerItemSizeChanged();
     }
 }
 
