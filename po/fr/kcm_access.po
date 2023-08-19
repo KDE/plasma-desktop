@@ -11,15 +11,15 @@
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
 # Vincent Pinon <vpinon@kde.org>, 2016, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:45+0000\n"
-"PO-Revision-Date: 2022-12-16 20:56+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"PO-Revision-Date: 2023-08-17 17:13+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.07.90\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -186,10 +186,9 @@ msgstr "Utiliser une durée d'attente maximale"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:37
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
+#, kde-format
 msgid "Delay for timeout"
-msgstr "Délai pour le mouvement de souris"
+msgstr "Durée de la temporisation"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
