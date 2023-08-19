@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2022-02-26 14:20+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -90,25 +90,25 @@ msgstr "फ़ाइलों या फ़ोल्डरों पर क्�
 
 #: ui/main.qml:139
 #, kde-format
-msgctxt "part of a sentence: 'Clicking files or folders opens them'"
-msgid "Opens them"
-msgstr "उन्हें खोलता है"
-
-#: ui/main.qml:144
-#, kde-format
-msgid "Select by clicking on item's selection marker"
-msgstr "वस्तु के चयन चिन्ह पर क्लिक करके चयन करें"
-
-#: ui/main.qml:166
-#, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "उन्हें चुनता है"
 
-#: ui/main.qml:171
+#: ui/main.qml:144
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "इसके बजाय डबल-क्लिक करके खोलें"
+
+#: ui/main.qml:167
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "उन्हें खोलता है"
+
+#: ui/main.qml:172
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "वस्तु के चयन चिन्ह पर क्लिक करके चयन करें"
 
 #: ui/main.qml:195
 #, kde-format

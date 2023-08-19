@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2022-11-15 20:39+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -90,25 +90,25 @@ msgstr "Ühekordne klõps failil või kataloogil:"
 
 #: ui/main.qml:139
 #, kde-format
-msgctxt "part of a sentence: 'Clicking files or folders opens them'"
-msgid "Opens them"
-msgstr "Avab selle"
-
-#: ui/main.qml:144
-#, kde-format
-msgid "Select by clicking on item's selection marker"
-msgstr "Valimine klõpsuga elemendi valikumärgisele"
-
-#: ui/main.qml:166
-#, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Valib selle"
 
-#: ui/main.qml:171
+#: ui/main.qml:144
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Avamiseks tuleb teha topeltklõps"
+
+#: ui/main.qml:167
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Avab selle"
+
+#: ui/main.qml:172
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Valimine klõpsuga elemendi valikumärgisele"
 
 #: ui/main.qml:195
 #, kde-format

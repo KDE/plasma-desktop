@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-11 02:11+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2023-06-11 21:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -66,34 +66,34 @@ msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Anında"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Dosyalara ve klasörlere tıklamak:"
 
-#: ui/main.qml:121
-#, kde-format
-msgctxt "part of a sentence: 'Clicking files or folders opens them'"
-msgid "Opens them"
-msgstr "Onları açar"
-
-#: ui/main.qml:134
-#, kde-format
-msgid "Select by clicking on item's selection marker"
-msgstr "Seçmek için ögenin seçim imleyicisine tıklayın"
-
-#: ui/main.qml:144
+#: ui/main.qml:120
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Onları seçer"
 
-#: ui/main.qml:158
+#: ui/main.qml:134
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Ögeleri açmak için çift tıklayın"
+
+#: ui/main.qml:145
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Onları açar"
+
+#: ui/main.qml:158
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Seçmek için ögenin seçim imleyicisine tıklayın"
 
 #: ui/main.qml:172
 #, kde-format

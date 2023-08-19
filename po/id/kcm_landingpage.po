@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2022-03-23 07:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -90,25 +90,25 @@ msgstr "Pengeklikan file atau folder:"
 
 #: ui/main.qml:139
 #, kde-format
-msgctxt "part of a sentence: 'Clicking files or folders opens them'"
-msgid "Opens them"
-msgstr "Membukanya"
-
-#: ui/main.qml:144
-#, kde-format
-msgid "Select by clicking on item's selection marker"
-msgstr "Pilih dengan pengeklikan pada penanda seleksi item"
-
-#: ui/main.qml:166
-#, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Memilihnya"
 
-#: ui/main.qml:171
+#: ui/main.qml:144
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Buka dengan pengeklikan ganda sebagai gantinya"
+
+#: ui/main.qml:167
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Membukanya"
+
+#: ui/main.qml:172
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Pilih dengan pengeklikan pada penanda seleksi item"
 
 #: ui/main.qml:195
 #, kde-format

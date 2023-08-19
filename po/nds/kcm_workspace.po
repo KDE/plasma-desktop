@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-11 02:11+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2011-08-17 11:37+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -64,33 +64,33 @@ msgctxt "Animation speed"
 msgid "Instant"
 msgstr ""
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr ""
 
-#: ui/main.qml:121
-#, kde-format
-msgctxt "part of a sentence: 'Clicking files or folders opens them'"
-msgid "Opens them"
-msgstr ""
-
-#: ui/main.qml:134
-#, kde-format
-msgid "Select by clicking on item's selection marker"
-msgstr ""
-
-#: ui/main.qml:144
+#: ui/main.qml:120
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr ""
 
-#: ui/main.qml:158
+#: ui/main.qml:134
 #, kde-format
 msgid "Open by double-clicking instead"
+msgstr ""
+
+#: ui/main.qml:145
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr ""
+
+#: ui/main.qml:158
+#, kde-format
+msgid "Select by clicking on item's selection marker"
 msgstr ""
 
 #: ui/main.qml:172

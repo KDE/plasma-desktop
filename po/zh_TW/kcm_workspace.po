@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-11 02:11+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2023-08-07 22:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -66,34 +66,34 @@ msgctxt "Animation speed"
 msgid "Instant"
 msgstr "立即"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "單擊檔案或資料夾來："
 
-#: ui/main.qml:121
-#, kde-format
-msgctxt "part of a sentence: 'Clicking files or folders opens them'"
-msgid "Opens them"
-msgstr "開啟它"
-
-#: ui/main.qml:134
-#, kde-format
-msgid "Select by clicking on item's selection marker"
-msgstr "按下項目的選取標記選取"
-
-#: ui/main.qml:144
+#: ui/main.qml:120
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "選取它"
 
-#: ui/main.qml:158
+#: ui/main.qml:134
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "點兩下開啟檔案"
+
+#: ui/main.qml:145
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "開啟它"
+
+#: ui/main.qml:158
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "按下項目的選取標記選取"
 
 #: ui/main.qml:172
 #, kde-format

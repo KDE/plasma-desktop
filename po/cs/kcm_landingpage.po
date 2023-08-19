@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2022-02-16 10:12+0100\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -90,25 +90,25 @@ msgstr "Klikání na soubory nebo složky:"
 
 #: ui/main.qml:139
 #, kde-format
-msgctxt "part of a sentence: 'Clicking files or folders opens them'"
-msgid "Opens them"
-msgstr "Otevře je"
-
-#: ui/main.qml:144
-#, kde-format
-msgid "Select by clicking on item's selection marker"
-msgstr "Vybrat levým kliknutím značku výběru položky"
-
-#: ui/main.qml:166
-#, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Vybere je"
 
-#: ui/main.qml:171
+#: ui/main.qml:144
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Otevřít je dvojklikem"
+
+#: ui/main.qml:167
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Otevře je"
+
+#: ui/main.qml:172
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Vybrat levým kliknutím značku výběru položky"
 
 #: ui/main.qml:195
 #, kde-format

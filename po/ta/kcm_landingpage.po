@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 02:09+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2022-04-02 21:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -90,25 +90,25 @@ msgstr "கோப்புகள் அல்லது அடைவுகளை 
 
 #: ui/main.qml:139
 #, kde-format
-msgctxt "part of a sentence: 'Clicking files or folders opens them'"
-msgid "Opens them"
-msgstr "அவற்றைத் திறக்கும்"
-
-#: ui/main.qml:144
-#, kde-format
-msgid "Select by clicking on item's selection marker"
-msgstr "ஒன்றன் தேர்வுக் குறிப்பை க்ளிக் செய்தால் அதைத் தேர்ந்தெடு"
-
-#: ui/main.qml:166
-#, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "அவற்றைத் தேர்ந்தெடுக்கும்"
 
-#: ui/main.qml:171
+#: ui/main.qml:144
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "இரண்டு முறை க்ளிக் செய்தால் அதைத் திற"
+
+#: ui/main.qml:167
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "அவற்றைத் திறக்கும்"
+
+#: ui/main.qml:172
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "ஒன்றன் தேர்வுக் குறிப்பை க்ளிக் செய்தால் அதைத் தேர்ந்தெடு"
 
 #: ui/main.qml:195
 #, kde-format

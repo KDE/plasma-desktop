@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:57+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2016-04-15 23:42+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -46,7 +46,7 @@ msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Prazno"
 
-#: contents/ui/main.qml:67
+#: contents/ui/main.qml:71
 #, fuzzy, kde-format
 #| msgctxt "a verb"
 #| msgid "Open"
@@ -55,14 +55,14 @@ msgid "Open"
 msgstr "Otvori"
 
 # >> The trash is empty. This is not an action, but a state
-#: contents/ui/main.qml:72
+#: contents/ui/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Empty"
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Prazno"
 
-#: contents/ui/main.qml:78
+#: contents/ui/main.qml:82
 #, fuzzy, kde-format
 #| msgid "Trash Settings..."
 msgctxt "@action:inmenu"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-11 02:11+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2023-06-25 12:56+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -73,34 +73,34 @@ msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Instantanée"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Cliquer sur les fichiers et les dossiers :"
 
-#: ui/main.qml:121
-#, kde-format
-msgctxt "part of a sentence: 'Clicking files or folders opens them'"
-msgid "Opens them"
-msgstr "Les ouvre"
-
-#: ui/main.qml:134
-#, kde-format
-msgid "Select by clicking on item's selection marker"
-msgstr "Sélectionner en cliquant sur l'indicateur de sélection de l'élément"
-
-#: ui/main.qml:144
+#: ui/main.qml:120
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Les sélectionne"
 
-#: ui/main.qml:158
+#: ui/main.qml:134
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Ouvrir à la place par un double-clic"
+
+#: ui/main.qml:145
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Les ouvre"
+
+#: ui/main.qml:158
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Sélectionner en cliquant sur l'indicateur de sélection de l'élément"
 
 #: ui/main.qml:172
 #, kde-format

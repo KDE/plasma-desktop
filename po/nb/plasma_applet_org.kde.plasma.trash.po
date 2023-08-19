@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:57+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2014-09-04 11:50+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -43,7 +43,7 @@ msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Tom"
 
-#: contents/ui/main.qml:67
+#: contents/ui/main.qml:71
 #, fuzzy, kde-format
 #| msgctxt "a verb"
 #| msgid "Open"
@@ -51,14 +51,14 @@ msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Åpne"
 
-#: contents/ui/main.qml:72
+#: contents/ui/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Empty"
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Tom"
 
-#: contents/ui/main.qml:78
+#: contents/ui/main.qml:82
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
