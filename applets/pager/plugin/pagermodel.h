@@ -112,6 +112,9 @@ Q_SIGNALS:
     void layoutRowsChanged() const;
     void pagerItemSizeChanged() const;
 
+private Q_SLOTS:
+    void computePagerItemSize();
+
 private:
     class Private;
     std::unique_ptr<Private> d;

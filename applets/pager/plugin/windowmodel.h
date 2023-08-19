@@ -9,6 +9,8 @@
 
 #include <memory>
 
+class QScreen;
+
 class PagerModel;
 
 class WindowModel : public TaskManager::TaskFilterProxyModel
@@ -29,6 +31,9 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
 
     void refreshStackingOrder();
+
+private Q_SLOTS:
+    void onPagerItemSizeChanged();
 
 private:
     class Private;
