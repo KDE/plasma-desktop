@@ -39,6 +39,7 @@ private Q_SLOTS:
     void forgetAll();
 
     void spinKeepHistoryValueChanged(int value);
+    void whatToRememberWidgetChanged(bool checked);
 
 Q_SIGNALS:
     void blackListModelChanged(bool changed);

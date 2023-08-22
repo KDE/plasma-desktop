@@ -4,7 +4,6 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 #include "kcm_recentFiles.h"
 #include "kactivitymanagerd_plugins_settings.h"
 #include "kactivitymanagerd_settings.h"
@@ -33,6 +32,7 @@
 
 #include "common/dbus/common.h"
 #include "kactivitiesdata.h"
+#include "kcms-recentfiles-debug.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KActivityManagerKCMFactory, "kcm_recentFiles.json", registerPlugin<RecentFilesKcm>(); registerPlugin<KActivitiesData>();)
 
@@ -90,8 +90,25 @@ RecentFilesKcm::RecentFilesKcm(QWidget *parent, QVariantList args)
     // React to changes
 
     connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled, d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::setEnabled);
-    d->blacklistedApplicationsModel->setEnabled(false);
 
+    // By default the KCModule (and eventually the kconfigdialogmanager) use
+    // the index of checked radio button as the value of the setting. In this
+    // case however we have a mismatch, the radio button "Do not remember"
+    // (radioDontRememberApplications) has index 1 but in the WhatToRemember
+    // enum has the value 2! So...
+    // 1. Let kconfigwidgets know that this QGroupBox will be using a custom
+    //    property to indicate the setting's value ("kcfg_value")
+    d->kcfg_whatToRemember->setProperty("kcfg_property", QByteArray("kcfg_value"));
+    // 2. Every time any radio button is clicked, we need to reset the
+    //    kcfg_value and potentially set the dialog to "needs saving" state
+    //    NOTE: Do not use "toggled" since it fires for two buttons each time!
+    connect(d->radioRememberSpecificApplications, &QAbstractButton::clicked, this, &RecentFilesKcm::whatToRememberWidgetChanged);
+    connect(d->radioRememberAllApplications, &QAbstractButton::clicked, this, &RecentFilesKcm::whatToRememberWidgetChanged);
+    connect(d->radioDontRememberApplications, &QAbstractButton::clicked, this, &RecentFilesKcm::whatToRememberWidgetChanged);
+
+    // Initial state
+
+    d->blacklistedApplicationsModel->setEnabled(false);
     d->messageWidget->setVisible(false);
 
     addConfig(d->pluginConfig, this);
@@ -105,6 +122,8 @@ RecentFilesKcm::~RecentFilesKcm()
 void RecentFilesKcm::defaults()
 {
     d->blacklistedApplicationsModel->defaults();
+    // Click and not setChecked to trigger whatToRememberWidgetChanged()
+    d->radioRememberAllApplications->click();
 
     KCModule::defaults();
 }
@@ -114,6 +133,21 @@ void RecentFilesKcm::load()
     d->blacklistedApplicationsModel->load();
 
     KCModule::load();
+}
+
+void RecentFilesKcm::whatToRememberWidgetChanged(bool)
+{
+    // See ctor for details: tl;dr: reset the what-to-rememeber value
+    // and set the dialog to "changed" (if save is needed)
+    // clang-format off
+    const auto whatToRemember =
+        d->radioRememberSpecificApplications->isChecked() ? SpecificApplications :
+        d->radioDontRememberApplications->isChecked()     ? NoApplications :
+        /* otherwise */                                     AllApplications;
+    // clang-format on
+    qCDebug(LOG_KCMS_RECENTFILES) << "whatToRememberWidgetChangeState: " << whatToRemember;
+    d->kcfg_whatToRemember->setProperty("kcfg_value", whatToRemember);
+    KCModule::setNeedsSave(whatToRemember != d->pluginConfig->whatToRemember());
 }
 
 void RecentFilesKcm::save()
