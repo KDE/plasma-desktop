@@ -9,8 +9,6 @@
 
 #include <memory>
 
-class QScreen;
-
 class PagerModel;
 
 class WindowModel : public TaskManager::TaskFilterProxyModel
