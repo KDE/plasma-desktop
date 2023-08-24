@@ -165,7 +165,7 @@ PlasmoidItem {
     // - allow defining a custom drop handler
     // - expose the ability to show text below or beside the icon
     // TODO remove once it gains those features
-    compactRepresentation: MouseArea {
+    compactRepresentation: DropArea {
         id: compactRoot
 
         // Taken from DigitalClock to ensure uniform sizing when next to each other
@@ -223,23 +223,24 @@ PlasmoidItem {
         Layout.minimumHeight: sizing.minimumHeight
         Layout.maximumHeight: sizing.maximumHeight
 
-        hoverEnabled: true
+        HoverHandler {
+            id: compactHoverHandler
+        }
 
-        property bool wasExpanded
-
-        onPressed: wasExpanded = kickoff.expanded
-        onClicked: kickoff.expanded = !wasExpanded
-
-        DropArea {
-            id: compactDragArea
-            anchors.fill: parent
+        TapHandler {
+            property bool wasExpanded: false
+            acceptedButtons: Qt.LeftButton
+            onPressedChanged: if (pressed) {
+                this.wasExpanded = kickoff.expanded;
+            }
+            onTapped: kickoff.expanded = !this.wasExpanded
         }
 
         Timer {
             id: expandOnDragTimer
             // this is an interaction and not an animation, so we want it as a constant
             interval: 250
-            running: compactDragArea.containsDrag
+            running: compactRoot.containsDrag
             onTriggered: kickoff.expanded = true
         }
 
@@ -257,7 +258,7 @@ PlasmoidItem {
                 Layout.preferredHeight: !kickoff.vertical ? -1 : width * (implicitHeight / implicitWidth)
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                 source: Tools.iconOrDefault(Plasmoid.formFactor, Plasmoid.icon)
-                active: compactRoot.containsMouse || compactDragArea.containsDrag
+                active: compactHoverHandler.hovered || compactRoot.containsDrag
                 roundToIconSize: implicitHeight === implicitWidth
                 visible: valid
             }
@@ -272,7 +273,7 @@ PlasmoidItem {
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
 
                 source: buttonIcon.valid ? null : Tools.defaultIconName
-                active: compactRoot.containsMouse || compactDragArea.containsDrag
+                active: buttonIcon.active
                 visible: !buttonIcon.valid && Plasmoid.icon !== ""
             }
 
