@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-01-13 08:46+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -140,15 +140,17 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Kecepatan penunjuk:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Profil akselerasi:"
+msgid "Pointer acceleration:"
+msgstr "Akselerasi penunjuk:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Rata"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -157,8 +159,8 @@ msgstr "Pindahan kursor jaraknya sama dengan perpindahan tetikus."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Adaptif"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -321,12 +323,6 @@ msgstr "Kebalikan arah gu&lir"
 #, kde-format
 msgid "Advanced"
 msgstr "Tingkat Lanjut"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Akselerasi penunjuk:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -528,6 +524,15 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " baris"
 msgstr[1] " baris"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Profil akselerasi:"
+
+#~ msgid "Flat"
+#~ msgstr "Rata"
+
+#~ msgid "Adaptive"
+#~ msgstr "Adaptif"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "Perangkat penunjuk KCM"

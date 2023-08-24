@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1655774 2023-07-14 02:31:42Z scripty $
+# $Id: kcm_access.po 1658856 2023-08-24 02:09:39Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-07-13 06:43+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -571,9 +571,10 @@ msgid "Maximum speed:"
 msgstr "Največja hitrost:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Profil pospeševanja:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "Čas pospeševanja:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -597,6 +598,9 @@ msgid ""
 msgstr ""
 "Vse kaže, da bralnik zaslona Orca ni nameščen. Namestite ga pred poskusom "
 "uporabe te možnosti, potem se odjavite in ponovno zaženite računalnik"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Profil pospeševanja:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

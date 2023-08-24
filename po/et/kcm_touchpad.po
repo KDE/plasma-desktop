@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2020-10-07 23:02+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -137,18 +137,18 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:254
 #, kde-format
-msgid "Pointer acceleration:"
-msgstr "Kursori kiirendus:"
+msgid "Pointer speed:"
+msgstr "Osutusseadme kiirus:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Kiirendusprofiil:"
+msgid "Pointer acceleration:"
+msgstr "Kursori kiirendus:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Ühtlane"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -157,8 +157,8 @@ msgstr "Kursor liigub sama palju nagu sõrm."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Kohanduv"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1399,6 +1399,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Ülemine vasak nurk"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "Kiirendusprofiil:"
+
+#~ msgid "Flat"
+#~ msgstr "Ühtlane"
+
+#~ msgid "Adaptive"
+#~ msgstr "Kohanduv"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "Puutepadja juhtimismoodul"
 
@@ -1464,9 +1473,6 @@ msgstr "Ülemine vasak nurk"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#~ msgid "Pointer speed:"
-#~ msgstr "Osutusseadme kiirus:"
 
 #~ msgid "Mouse Click Emulation"
 #~ msgstr "Hiireklõpsu emuleerimine"

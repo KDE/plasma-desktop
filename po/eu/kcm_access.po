@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-07-16 10:32+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -568,9 +568,10 @@ msgid "Maximum speed:"
 msgstr "Gehieneko abiadura:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Azelerazio-profila:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "Azelerazio-denbora:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -595,6 +596,9 @@ msgstr ""
 "Ematen du Orca pantaila-irakurgailua instalatu gabe dagoela. Instalatu ezazu "
 "ezaugarri hau erabiltzen saiatu aurretik, ondoren saio-itxi eta berrabiarazi "
 "ezazu"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Azelerazio-profila:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

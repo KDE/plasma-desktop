@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-01-23 20:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -569,9 +569,10 @@ msgid "Maximum speed:"
 msgstr "السرعة القصوى:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "نمط التسارع:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "وقت التسارع:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -595,6 +596,9 @@ msgid ""
 msgstr ""
 "يبدو أن قارئ الشاشة Orca غير مثبت. يرجى تثبيته قبل محاولة استخدام هذه "
 "الميزة ، ثم تسجيل الخروج أو إعادة التشغيل "
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "نمط التسارع:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

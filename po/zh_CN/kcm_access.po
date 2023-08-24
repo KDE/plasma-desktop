@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-08-02 12:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -560,9 +560,10 @@ msgid "Maximum speed:"
 msgstr "最大速度："
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "加速曲线："
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "加速时间："
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -582,3 +583,6 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr "Orca 屏幕阅读器似乎没有安装。请先安装它，然后注销或重新启动系统"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "加速曲线："

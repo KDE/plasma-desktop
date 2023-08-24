@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2008-06-24 19:26+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -600,7 +600,7 @@ msgstr ""
 #: ui/MouseNavigation.qml:124
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
-msgid "Acceleration profile:"
+msgid "Pointer acceleration:"
 msgstr "&Tårdjaedje po-z accepter:"
 
 #: ui/ScreenReader.qml:28
@@ -621,6 +621,11 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Acceptance dela&y:"
+#~ msgid "Acceleration profile:"
+#~ msgstr "&Tårdjaedje po-z accepter:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

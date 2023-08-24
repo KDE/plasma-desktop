@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-02-18 01:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -139,18 +139,18 @@ msgstr "同時按下左右鍵，即傳出中鍵。"
 
 #: kcm/libinput/touchpad.qml:254
 #, kde-format
-msgid "Pointer acceleration:"
-msgstr "指標加速："
+msgid "Pointer speed:"
+msgstr "游標速度："
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "加速度設定檔："
+msgid "Pointer acceleration:"
+msgstr "指標加速："
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "平移"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -159,8 +159,8 @@ msgstr "游標與手指移動同樣距離。"
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "適應"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1364,6 +1364,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "左上角"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "加速度設定檔："
+
+#~ msgid "Flat"
+#~ msgstr "平移"
+
+#~ msgid "Adaptive"
+#~ msgstr "適應"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "觸控板控制模組"
 
@@ -1427,6 +1436,3 @@ msgstr "左上角"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#~ msgid "Pointer speed:"
-#~ msgstr "游標速度："

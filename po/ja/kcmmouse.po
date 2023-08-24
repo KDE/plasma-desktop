@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-08-12 01:47+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -145,15 +145,18 @@ msgstr "左右のボタンを同時に押すと中クリックを送信します
 msgid "Pointer speed:"
 msgstr "ポインタの速度:"
 
+# ACCELERATOR added by translator
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "加速プロファイル:"
+msgid "Pointer acceleration:"
+msgstr "加速(&P):"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "フラット"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -162,8 +165,8 @@ msgstr "カーソルはマウスが動いた距離と同じ長さだけ動きま
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "適応"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -323,13 +326,6 @@ msgstr "スクロール方向を逆にする(&N)"
 #, kde-format
 msgid "Advanced"
 msgstr "詳細オプション(&X)"
-
-# ACCELERATOR added by translator
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "加速(&P):"
 
 # ACCELERATOR added by translator
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -532,3 +528,12 @@ msgstr[0] " ピクセル"
 msgid " line"
 msgid_plural " lines"
 msgstr[0] " 行"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "加速プロファイル:"
+
+#~ msgid "Flat"
+#~ msgstr "フラット"
+
+#~ msgid "Adaptive"
+#~ msgstr "適応"

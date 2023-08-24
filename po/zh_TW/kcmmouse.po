@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-02-07 22:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -138,15 +138,17 @@ msgstr "同時按下左右鍵，即送出中鍵點選事件。"
 msgid "Pointer speed:"
 msgstr "指標速度："
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "加速度設定檔："
+msgid "Pointer acceleration:"
+msgstr "指標加速："
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "平移"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -155,8 +157,8 @@ msgstr "指標移動與滑鼠移動同距離。"
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "適應型"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -311,12 +313,6 @@ msgstr "反相捲動(&V)"
 #, kde-format
 msgid "Advanced"
 msgstr "進階"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "指標加速："
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -498,6 +494,15 @@ msgstr[0] " 像素"
 msgid " line"
 msgid_plural " lines"
 msgstr[0] " 行"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "加速度設定檔："
+
+#~ msgid "Flat"
+#~ msgstr "平移"
+
+#~ msgid "Adaptive"
+#~ msgstr "適應型"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "指標裝置 KCM"

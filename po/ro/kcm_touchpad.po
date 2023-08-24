@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-07-25 14:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -143,19 +143,20 @@ msgstr ""
 "mijloc."
 
 #: kcm/libinput/touchpad.qml:254
+#, fuzzy, kde-format
+#| msgid "Minimum pointer speed"
+msgid "Pointer speed:"
+msgstr "Viteza minimă a indicatorului"
+
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Accelerație indicator:"
 
-#: kcm/libinput/touchpad.qml:349
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Profil de accelerare:"
-
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Plat"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -164,8 +165,8 @@ msgstr "Cursorul se mișcă pe aceeași distanță ca degetul."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Adaptivă"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1425,6 +1426,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Colțul din stânga-sus"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "Profil de accelerare:"
+
+#~ msgid "Flat"
+#~ msgstr "Plat"
+
+#~ msgid "Adaptive"
+#~ msgstr "Adaptivă"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "Modul de control pentru zona tactilă"
 
@@ -1490,11 +1500,6 @@ msgstr "Colțul din stânga-sus"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#, fuzzy
-#~| msgid "Minimum pointer speed"
-#~ msgid "Pointer speed:"
-#~ msgstr "Viteza minimă a indicatorului"
 
 #~ msgid "Mouse Click Emulation"
 #~ msgstr "Emularea clicului de maus"

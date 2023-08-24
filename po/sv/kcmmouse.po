@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2022-09-24 16:00+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -145,15 +145,17 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Pekarhastighet:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Accelerationsprofil:"
+msgid "Pointer acceleration:"
+msgstr "Acceleration för pekare:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Enkel"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -162,8 +164,8 @@ msgstr "Pekaren flyttas samma avstånd som musrörelsen."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Adaptiv"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -322,12 +324,6 @@ msgstr "Omvänd rullnin&gsriktning"
 #, kde-format
 msgid "Advanced"
 msgstr "Avancerat"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Acceleration för pekare:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -526,6 +522,15 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " rad"
 msgstr[1] " rader"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Accelerationsprofil:"
+
+#~ msgid "Flat"
+#~ msgstr "Enkel"
+
+#~ msgid "Adaptive"
+#~ msgstr "Adaptiv"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "Inställningsmodul för pekarenhet"

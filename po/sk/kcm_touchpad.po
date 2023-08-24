@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-06-26 19:40+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -139,18 +139,18 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:254
 #, kde-format
-msgid "Pointer acceleration:"
-msgstr "Zrýchlenie ukazovateľa:"
+msgid "Pointer speed:"
+msgstr "Rýchlosť ukazovateľa:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Profil zrýchlenia:"
+msgid "Pointer acceleration:"
+msgstr "Zrýchlenie ukazovateľa:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Rovnomerný"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -159,8 +159,8 @@ msgstr "Kurzor sa pohne o rovnakú vzdialenosť ako prst."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Adaptívny"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1393,6 +1393,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Ľavý horný roh"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "Profil zrýchlenia:"
+
+#~ msgid "Flat"
+#~ msgstr "Rovnomerný"
+
+#~ msgid "Adaptive"
+#~ msgstr "Adaptívny"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "Touchpad KCM"
 
@@ -1458,9 +1467,6 @@ msgstr "Ľavý horný roh"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#~ msgid "Pointer speed:"
-#~ msgstr "Rýchlosť ukazovateľa:"
 
 #~ msgid "Mouse Click Emulation"
 #~ msgstr "Emulácia kliknutia myši"

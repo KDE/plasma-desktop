@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2020-04-10 19:47+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -138,15 +138,17 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Osutusseadme kiirus:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Kiirendusprofiil:"
+msgid "Pointer acceleration:"
+msgstr "Kursori kiirendus:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Ühtlane"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -155,8 +157,8 @@ msgstr "Kursor liigub sama palju nagu hiir."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Kohanduv"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -315,12 +317,6 @@ msgstr "Kerimissuuna &vahetamine"
 #, kde-format
 msgid "Advanced"
 msgstr "Muud"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Kursori kiirendus:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -518,6 +514,15 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " rida"
 msgstr[1] " rida"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Kiirendusprofiil:"
+
+#~ msgid "Flat"
+#~ msgstr "Ühtlane"
+
+#~ msgid "Adaptive"
+#~ msgstr "Kohanduv"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "Osutusseadme jutimismoodul"

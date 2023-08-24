@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-07-13 08:52+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -570,9 +570,10 @@ msgid "Maximum speed:"
 msgstr "Максимальна швидкість:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Профіль прискорення:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "Час прискорення:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -599,6 +600,9 @@ msgstr ""
 "ласка, встановіть цю програму, перш ніж намагатися скористатися цією "
 "можливістю, а потім вийдіть і знову увійдіть до облікового запису або "
 "перезавантажте систему."
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Профіль прискорення:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

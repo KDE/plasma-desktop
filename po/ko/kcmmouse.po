@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-03-01 00:32+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -137,15 +137,17 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "포인터 속도:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "가속 프로필:"
+msgid "Pointer acceleration:"
+msgstr "포인터 가속:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "선형"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -154,8 +156,8 @@ msgstr "마우스가 이동한 만큼만 커서를 이동합니다."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "적응형"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -312,12 +314,6 @@ msgstr "스크롤 방향 뒤집기(&V)"
 #, kde-format
 msgid "Advanced"
 msgstr "고급 설정"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "포인터 가속:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -509,6 +505,15 @@ msgstr[0] " 픽셀"
 msgid " line"
 msgid_plural " lines"
 msgstr[0] " 줄"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "가속 프로필:"
+
+#~ msgid "Flat"
+#~ msgstr "선형"
+
+#~ msgid "Adaptive"
+#~ msgstr "적응형"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "포인터 장치 KCM"

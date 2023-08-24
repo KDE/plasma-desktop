@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2014-09-18 15:57+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -132,15 +132,16 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Wieser-Süll:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
-#, fuzzy, kde-format
-#| msgid "Acceleration &profile:"
-msgid "Acceleration profile:"
-msgstr "Beslünigen&profil:"
+#: kcm/xlib/kcmmouse.ui:164
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Wieser beslünigen:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
+msgid "None"
 msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
@@ -150,7 +151,7 @@ msgstr ""
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
+msgid "Standard"
 msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
@@ -313,12 +314,6 @@ msgstr "Rullr&icht ümdreihn"
 #, kde-format
 msgid "Advanced"
 msgstr "Verwiedert"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Wieser beslünigen:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -515,6 +510,11 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " Reeg"
 msgstr[1] " Regen"
+
+#, fuzzy
+#~| msgid "Acceleration &profile:"
+#~ msgid "Acceleration profile:"
+#~ msgstr "Beslünigen&profil:"
 
 #~ msgid "Mouse"
 #~ msgstr "Muus"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2022-11-10 12:13\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -145,15 +145,17 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Хуткасць паказальніка:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Профіль паскарэння:"
+msgid "Pointer acceleration:"
+msgstr "Паскарэнне паказальніка:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Непасрэдны"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -162,8 +164,8 @@ msgstr "Курсор перамяшчаецца на такую ​​ж адл�
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Прыстасавальны"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -321,12 +323,6 @@ msgstr "Ад&варотны кірунак пракручвання"
 #, kde-format
 msgid "Advanced"
 msgstr "Дадатковыя налады"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Паскарэнне паказальніка:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -533,6 +529,15 @@ msgstr[0] " радок"
 msgstr[1] " радкі"
 msgstr[2] " радкоў"
 msgstr[3] " радкі"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Профіль паскарэння:"
+
+#~ msgid "Flat"
+#~ msgstr "Непасрэдны"
+
+#~ msgid "Adaptive"
+#~ msgstr "Прыстасавальны"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "KCM прылад з курсорам"

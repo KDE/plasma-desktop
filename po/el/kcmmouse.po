@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2016-09-19 16:57+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -139,15 +139,16 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Κατώφλι δείκτη:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
-#, fuzzy, kde-format
-#| msgid "Acceleration &profile:"
-msgid "Acceleration profile:"
-msgstr "&Προφίλ επιτάχυνσης:"
+#: kcm/xlib/kcmmouse.ui:164
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Επιτάχυνση δείκτη:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
+msgid "None"
 msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
@@ -157,7 +158,7 @@ msgstr ""
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
+msgid "Standard"
 msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
@@ -322,12 +323,6 @@ msgstr "Α&ντιστροφή της διεύθυνσης της κύλισης"
 #, kde-format
 msgid "Advanced"
 msgstr "Για προχωρημένους"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Επιτάχυνση δείκτη:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -531,6 +526,11 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " γραμμή"
 msgstr[1] " γραμμές"
+
+#, fuzzy
+#~| msgid "Acceleration &profile:"
+#~ msgid "Acceleration profile:"
+#~ msgstr "&Προφίλ επιτάχυνσης:"
 
 #~ msgid "Mouse"
 #~ msgstr "Ποντίκι"

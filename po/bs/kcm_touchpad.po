@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: $2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2014-12-18 09:49+0000\n"
 "Last-Translator: Timur Ćerimagić <tcerimagic1@etf.unsa.ba>\n"
 "Language-Team: none\n"
@@ -145,21 +145,20 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:254
 #, fuzzy, kde-format
-#| msgctxt "Pointer acceleration"
-#| msgid "Acceleration:"
-msgid "Pointer acceleration:"
-msgstr "Ubrzanje:"
+#| msgid "Minimum pointer speed"
+msgid "Pointer speed:"
+msgstr "Minimalna brzina kursora"
 
 #: kcm/libinput/touchpad.qml:349
 #, fuzzy, kde-format
 #| msgctxt "Pointer acceleration"
 #| msgid "Acceleration:"
-msgid "Acceleration profile:"
+msgid "Pointer acceleration:"
 msgstr "Ubrzanje:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
+msgid "None"
 msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
@@ -169,7 +168,7 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
+msgid "Standard"
 msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
@@ -1426,6 +1425,12 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Gornji lijevi ugao"
 
+#, fuzzy
+#~| msgctxt "Pointer acceleration"
+#~| msgid "Acceleration:"
+#~ msgid "Acceleration profile:"
+#~ msgstr "Ubrzanje:"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "Touchpad KCM"
 
@@ -1496,11 +1501,6 @@ msgstr "Gornji lijevi ugao"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#, fuzzy
-#~| msgid "Minimum pointer speed"
-#~ msgid "Pointer speed:"
-#~ msgstr "Minimalna brzina kursora"
 
 #~ msgid "Mouse Click Emulation"
 #~ msgstr "Imitacija Klika Miša"

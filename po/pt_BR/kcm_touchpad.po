@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-06-04 15:02-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -145,18 +145,18 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:254
 #, kde-format
-msgid "Pointer acceleration:"
-msgstr "Aceleração do ponteiro:"
+msgid "Pointer speed:"
+msgstr "Velocidade do ponteiro:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Perfil de aceleração:"
+msgid "Pointer acceleration:"
+msgstr "Aceleração do ponteiro:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Plano"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -165,8 +165,8 @@ msgstr "O cursor se move à mesma distância do dedo."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Adaptativo"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1429,6 +1429,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Canto superior esquerdo"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "Perfil de aceleração:"
+
+#~ msgid "Flat"
+#~ msgstr "Plano"
+
+#~ msgid "Adaptive"
+#~ msgstr "Adaptativo"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "KCM do touchpad"
 
@@ -1494,6 +1503,3 @@ msgstr "Canto superior esquerdo"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#~ msgid "Pointer speed:"
-#~ msgstr "Velocidade do ponteiro:"

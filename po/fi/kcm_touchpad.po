@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-06-07 16:50+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -138,18 +138,18 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:254
 #, kde-format
-msgid "Pointer acceleration:"
-msgstr "Osoittimen kiihdytys:"
+msgid "Pointer speed:"
+msgstr "Osoittimen nopeus:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Kiihdytysprofiili:"
+msgid "Pointer acceleration:"
+msgstr "Osoittimen kiihdytys:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Litteä"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -158,8 +158,8 @@ msgstr "Osoitin liikkuu saman verran kuin sormi."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Mukautuva"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1402,6 +1402,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Vasen yläkulma"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "Kiihdytysprofiili:"
+
+#~ msgid "Flat"
+#~ msgstr "Litteä"
+
+#~ msgid "Adaptive"
+#~ msgstr "Mukautuva"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "Kosketuslevy-KCM"
 
@@ -1467,9 +1476,6 @@ msgstr "Vasen yläkulma"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#~ msgid "Pointer speed:"
-#~ msgstr "Osoittimen nopeus:"
 
 #~ msgid "Mouse Click Emulation"
 #~ msgstr "Hiiren napsautuksen emulointi"

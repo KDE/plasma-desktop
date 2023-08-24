@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2020-07-22 20:04+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -139,15 +139,17 @@ msgstr "Klik på venstre og højre knap samtidig sender midterknap-klik."
 msgid "Pointer speed:"
 msgstr "Markørhastighed:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Accelerationsprofil:"
+msgid "Pointer acceleration:"
+msgstr "Markørens acceleration:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Flad"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -156,8 +158,8 @@ msgstr "Markøren bevæger sig samme afstand som musebevægelsen."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Adaptiv"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -318,12 +320,6 @@ msgstr "&Vend rullepolaritet om"
 #, kde-format
 msgid "Advanced"
 msgstr "Avanceret"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Markørens acceleration:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -521,6 +517,15 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " linje"
 msgstr[1] " linjer"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Accelerationsprofil:"
+
+#~ msgid "Flat"
+#~ msgstr "Flad"
+
+#~ msgid "Adaptive"
+#~ msgstr "Adaptiv"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "KCM til pegeredskaber"

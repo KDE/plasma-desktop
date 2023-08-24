@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-05-26 09:25+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -146,18 +146,18 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:254
 #, kde-format
-msgid "Pointer acceleration:"
-msgstr "Прискорення вказівника:"
+msgid "Pointer speed:"
+msgstr "Швидкість вказівника:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Профіль прискорення:"
+msgid "Pointer acceleration:"
+msgstr "Прискорення вказівника:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Нейтральний"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -166,8 +166,8 @@ msgstr "Вказівник зсувається на ту саму відста�
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Адаптивний"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1431,6 +1431,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "У верхньому лівому куті"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "Профіль прискорення:"
+
+#~ msgid "Flat"
+#~ msgstr "Нейтральний"
+
+#~ msgid "Adaptive"
+#~ msgstr "Адаптивний"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "Модуль керування сенсорною панеллю"
 
@@ -1496,9 +1505,6 @@ msgstr "У верхньому лівому куті"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Віолетта Распрягаєва"
-
-#~ msgid "Pointer speed:"
-#~ msgstr "Швидкість вказівника:"
 
 #~ msgid "Mouse Click Emulation"
 #~ msgstr "Імітація клацання кнопками миші"

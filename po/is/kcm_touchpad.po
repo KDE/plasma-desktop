@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-03-13 11:15+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -140,19 +140,20 @@ msgstr ""
 "miðjuhnappssmell."
 
 #: kcm/libinput/touchpad.qml:254
+#, fuzzy, kde-format
+#| msgid "Minimum pointer speed"
+msgid "Pointer speed:"
+msgstr "Lágmarkshraði bendils"
+
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Hröðun bendils:"
 
-#: kcm/libinput/touchpad.qml:349
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Hröðunarsnið:"
-
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Flatt"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -161,8 +162,8 @@ msgstr "Bendillinn færist sömu vegalengd og fingurinn."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Aðlögun"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1414,6 +1415,15 @@ msgstr "Vinstri brún"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Horn efst til vinstri"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Hröðunarsnið:"
+
+#~ msgid "Flat"
+#~ msgstr "Flatt"
+
+#~ msgid "Adaptive"
+#~ msgstr "Aðlögun"
 
 #~ msgid "Touchpad KCM"
 #~ msgstr "Snertiplattaeining"

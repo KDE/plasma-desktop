@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2022-07-31 23:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -139,19 +139,20 @@ msgstr ""
 "Sol və sağ düymələrin birgə basılması özünü orta düymə kliki kimi göstərir."
 
 #: kcm/libinput/touchpad.qml:254
+#, fuzzy, kde-format
+#| msgid "Minimum pointer speed"
+msgid "Pointer speed:"
+msgstr "Göstəricinin minimum sürəti"
+
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Kursorun sürətlənməsi:"
 
-#: kcm/libinput/touchpad.qml:349
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Sürətlənmə rejimi:"
-
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Rəvan"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -160,8 +161,8 @@ msgstr "Kursor barmaqla eyni məsafədə hərəkət edir."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Uyğunlaşan"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1415,6 +1416,15 @@ msgstr "Sol kənar"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Yuxarı sol künc"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Sürətlənmə rejimi:"
+
+#~ msgid "Flat"
+#~ msgstr "Rəvan"
+
+#~ msgid "Adaptive"
+#~ msgstr "Uyğunlaşan"
 
 #~ msgid "Touchpad KCM"
 #~ msgstr "Toxunma Paneli"

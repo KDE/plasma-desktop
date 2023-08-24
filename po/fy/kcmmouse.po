@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2010-07-16 13:14+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -130,15 +130,16 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Pylkje drompelwearde:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
-#, fuzzy, kde-format
-#| msgid "Acceleration &profile:"
-msgid "Acceleration profile:"
-msgstr "Fersnellings&profyl:"
+#: kcm/xlib/kcmmouse.ui:164
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Pylkje-akseleraasje:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
+msgid "None"
 msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
@@ -148,7 +149,7 @@ msgstr ""
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
+msgid "Standard"
 msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
@@ -310,12 +311,6 @@ msgstr "Skú&frjochting omkeare"
 #, kde-format
 msgid "Advanced"
 msgstr "Avansearre"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Pylkje-akseleraasje:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -533,6 +528,11 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] "  line"
 msgstr[1] " linen"
+
+#, fuzzy
+#~| msgid "Acceleration &profile:"
+#~ msgid "Acceleration profile:"
+#~ msgstr "Fersnellings&profyl:"
 
 #~ msgid "Mouse"
 #~ msgstr "Mûs"

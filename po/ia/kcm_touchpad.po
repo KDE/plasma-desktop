@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-12-24 23:50+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -141,18 +141,18 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:254
 #, kde-format
-msgid "Pointer acceleration:"
-msgstr "Acceleration de punctator:"
+msgid "Pointer speed:"
+msgstr "Velocitate de punctator:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Profilo de acceleration:"
+msgid "Pointer acceleration:"
+msgstr "Acceleration de punctator:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Plan"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -161,8 +161,8 @@ msgstr "Cursor moves le mesme distantia que le digito."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Adaptative"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1429,6 +1429,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Angulo culmine sinistre"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "Profilo de acceleration:"
+
+#~ msgid "Flat"
+#~ msgstr "Plan"
+
+#~ msgid "Adaptive"
+#~ msgstr "Adaptative"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "Touchpad (Pannello Tactile) KCM"
 
@@ -1496,6 +1505,3 @@ msgstr "Angulo culmine sinistre"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#~ msgid "Pointer speed:"
-#~ msgstr "Velocitate de punctator:"

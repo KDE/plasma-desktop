@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-07-15 23:25+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -570,9 +570,10 @@ msgid "Maximum speed:"
 msgstr "Velocità massima:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Profilo di accelerazione:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "Tempo di accelerazione:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -597,6 +598,9 @@ msgstr ""
 "Sembra che il lettore dello schermo Orca non sia installato. Installalo "
 "prima di provare a utilizzare questa funzione, quindi chiudi la sessione o "
 "riavvia"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Profilo di accelerazione:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-04-28 06:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -141,19 +141,20 @@ msgstr ""
 "მარცხენა და მარჯვენა ღილაკებზე ერთდროული წკაპი შუა ღილაკის წკაპს აგზავნის."
 
 #: kcm/libinput/touchpad.qml:254
+#, fuzzy, kde-format
+#| msgid "Minimum pointer speed"
+msgid "Pointer speed:"
+msgstr "კურსორის მინიმალური სიჩქარე"
+
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "კურსორის აჩქარება:"
 
-#: kcm/libinput/touchpad.qml:349
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "აჩქარების პროფილი:"
-
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "ბრტყელი"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -162,8 +163,8 @@ msgstr "კურსორი იგივე მანძილით გაი
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "შეგუებადი"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1403,6 +1404,15 @@ msgstr "მარცხენა კუთხე"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "ქვედა მარცხენა კუთხე"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "აჩქარების პროფილი:"
+
+#~ msgid "Flat"
+#~ msgstr "ბრტყელი"
+
+#~ msgid "Adaptive"
+#~ msgstr "შეგუებადი"
 
 #~ msgid "Touchpad KCM"
 #~ msgstr "თაჩპედის KCM"

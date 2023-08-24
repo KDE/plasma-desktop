@@ -1,4 +1,4 @@
-# Version: $Revision: 1657630 $
+# Version: $Revision: 1658856 $
 # translation of kcminput.po to
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2022-09-23 10:32+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -144,15 +144,17 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Szybkość wskaźnika:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Krzywa przyspieszenia:"
+msgid "Pointer acceleration:"
+msgstr "Przyspieszenie wskaźnika:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Płaska"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -161,8 +163,8 @@ msgstr "Wskaźnik przesuwa się o tę samą odległość co mysz."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Dostosowująca się"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -319,12 +321,6 @@ msgstr "Od&wróć kierunek przewijania"
 #, kde-format
 msgid "Advanced"
 msgstr "Rozszerzone"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Przyspieszenie wskaźnika:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -525,6 +521,15 @@ msgid_plural " lines"
 msgstr[0] " linia"
 msgstr[1] " linie"
 msgstr[2] " linii"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Krzywa przyspieszenia:"
+
+#~ msgid "Flat"
+#~ msgstr "Płaska"
+
+#~ msgid "Adaptive"
+#~ msgstr "Dostosowująca się"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "Ustawienia urządzenia wskazującego"

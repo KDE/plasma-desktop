@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2022-08-07 23:47+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -142,19 +142,20 @@ msgstr ""
 "със среден бутон."
 
 #: kcm/libinput/touchpad.qml:254
+#, fuzzy, kde-format
+#| msgid "Minimum pointer speed"
+msgid "Pointer speed:"
+msgstr "Минимална скорост на показалеца"
+
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Ускорение на показалеца:"
 
-#: kcm/libinput/touchpad.qml:349
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Профил за ускорение:"
-
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Равен"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -163,8 +164,8 @@ msgstr "Курсорът се движи на същото разстояние 
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Адаптивен"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1423,3 +1424,12 @@ msgstr "Ляв край"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Горен ляв ъгъл"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Профил за ускорение:"
+
+#~ msgid "Flat"
+#~ msgstr "Равен"
+
+#~ msgid "Adaptive"
+#~ msgstr "Адаптивен"

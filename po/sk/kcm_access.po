@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-03-22 18:10+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -571,9 +571,10 @@ msgid "Maximum speed:"
 msgstr "Maximálna rýchlosť:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Profil zrýchlenia:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "Čas zrýchlenia:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -597,6 +598,9 @@ msgid ""
 msgstr ""
 "Zdá sa, že čítačka obrazovky Orca nie je nainštalovaná. Pred použitím tejto "
 "funkcie ju nainštalujte a potom sa odhláste alebo reštartujte"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Profil zrýchlenia:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

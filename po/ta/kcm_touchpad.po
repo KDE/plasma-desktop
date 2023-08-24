@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2022-05-08 15:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -136,19 +136,20 @@ msgid ""
 msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துதல், நடு க்ளிக்காக கருதப்படும்."
 
 #: kcm/libinput/touchpad.qml:254
+#, fuzzy, kde-format
+#| msgid "Minimum pointer speed"
+msgid "Pointer speed:"
+msgstr "சுட்டிக்குறியின் குறைந்தபட்ச வேகம்"
+
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "சுட்டிக்குறியின் வேகவளர்ச்சி:"
 
-#: kcm/libinput/touchpad.qml:349
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "வேகவளர்ச்சி முறை:"
-
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "சமமானது"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -157,8 +158,8 @@ msgstr "விரல் நகரும் அதே தூரத்திற்
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "மாறக்கூடியது"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1392,6 +1393,15 @@ msgstr "இடது ஓரம்"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "இடது-மேல் மூலை"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "வேகவளர்ச்சி முறை:"
+
+#~ msgid "Flat"
+#~ msgstr "சமமானது"
+
+#~ msgid "Adaptive"
+#~ msgstr "மாறக்கூடியது"
 
 #~ msgid "Touchpad KCM"
 #~ msgstr "தொடுபலகை கட்டுப்பாட்டுக்கூறு"

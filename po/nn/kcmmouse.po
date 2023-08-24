@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2022-10-30 09:44+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -143,15 +143,17 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Peikarfart:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Akselerasjonsprofil:"
+msgid "Pointer acceleration:"
+msgstr "Peikarakselerasjon:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Flat"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -160,8 +162,8 @@ msgstr "Peikaren flyttar seg like langt som musa."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Adaptiv"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -318,12 +320,6 @@ msgstr "Om&vend rulleretning"
 #, kde-format
 msgid "Advanced"
 msgstr "Avansert"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Peikarakselerasjon:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -520,3 +516,12 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " linje"
 msgstr[1] " linjer"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Akselerasjonsprofil:"
+
+#~ msgid "Flat"
+#~ msgstr "Flat"
+
+#~ msgid "Adaptive"
+#~ msgstr "Adaptiv"

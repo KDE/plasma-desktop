@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2022-11-23 15:52+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -147,15 +147,17 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Rýchlosť ukazovateľa:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Profil zrýchlenia:"
+msgid "Pointer acceleration:"
+msgstr "Zrýchlenie ukazovateľa:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Rovnomerný"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -164,8 +166,8 @@ msgstr "Kurzor sa posunie o rovnakú vzdialenosť ako sa hýbe myš."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Adaptívny"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -323,12 +325,6 @@ msgstr "&Obrátiť smer rolovania"
 #, kde-format
 msgid "Advanced"
 msgstr "Pokročilé"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Zrýchlenie ukazovateľa:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -527,6 +523,15 @@ msgid_plural " lines"
 msgstr[0] " riadok"
 msgstr[1] " riadky"
 msgstr[2] " riadkov"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Profil zrýchlenia:"
+
+#~ msgid "Flat"
+#~ msgstr "Rovnomerný"
+
+#~ msgid "Adaptive"
+#~ msgstr "Adaptívny"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "Pointer device KCM"

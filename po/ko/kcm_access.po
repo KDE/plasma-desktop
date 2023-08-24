@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-07-25 22:47+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -562,9 +562,10 @@ msgid "Maximum speed:"
 msgstr "최대 속도:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "가속 프로필:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "가속 시간:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -588,6 +589,9 @@ msgid ""
 msgstr ""
 "Orca 스크린 리더가 설치되어 있지 않은 것 같습니다. 이 기능을 사용하기 전에 먼"
 "저 설치한 다음 로그아웃하거나 다시 부팅하십시오"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "가속 프로필:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

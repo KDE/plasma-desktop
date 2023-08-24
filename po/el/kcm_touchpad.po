@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2017-03-24 14:43+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -144,21 +144,20 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:254
 #, fuzzy, kde-format
-#| msgctxt "Pointer acceleration"
-#| msgid "Acceleration:"
-msgid "Pointer acceleration:"
-msgstr "Επιτάχυνση:"
+#| msgid "Minimum pointer speed"
+msgid "Pointer speed:"
+msgstr "Ελάχιστη ταχύτητα δείκτη"
 
 #: kcm/libinput/touchpad.qml:349
 #, fuzzy, kde-format
 #| msgctxt "Pointer acceleration"
 #| msgid "Acceleration:"
-msgid "Acceleration profile:"
+msgid "Pointer acceleration:"
 msgstr "Επιτάχυνση:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
+msgid "None"
 msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
@@ -168,7 +167,7 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
+msgid "Standard"
 msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
@@ -1463,6 +1462,12 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Πάνω αριστερή γωνία"
 
+#, fuzzy
+#~| msgctxt "Pointer acceleration"
+#~| msgid "Acceleration:"
+#~ msgid "Acceleration profile:"
+#~ msgstr "Επιτάχυνση:"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "Επιφάνεια αφής KCM"
 
@@ -1530,11 +1535,6 @@ msgstr "Πάνω αριστερή γωνία"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#, fuzzy
-#~| msgid "Minimum pointer speed"
-#~ msgid "Pointer speed:"
-#~ msgstr "Ελάχιστη ταχύτητα δείκτη"
 
 #~ msgid "Mouse Click Emulation"
 #~ msgstr "Προσομοίωση κλικ ποντικιού"

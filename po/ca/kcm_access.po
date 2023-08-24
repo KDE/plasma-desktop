@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-07-13 10:41+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -569,9 +569,10 @@ msgid "Maximum speed:"
 msgstr "Velocitat màxima:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Perfil d'acceleració:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "Temps d'acceleració:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -596,3 +597,6 @@ msgstr ""
 "Sembla que el lector de pantalla Orca no està instal·lat. Instal·leu-lo "
 "abans d'intentar usar aquesta funcionalitat, i després sortiu de la sessió o "
 "reinicieu"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Perfil d'acceleració:"

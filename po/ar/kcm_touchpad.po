@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-06-27 22:03+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -137,19 +137,20 @@ msgstr ""
 "يؤدي النقر فوق الزر الأيمن والأيسر في نفس الوقت إلى إرسال نقرة الزر الأوسط."
 
 #: kcm/libinput/touchpad.qml:254
+#, fuzzy, kde-format
+#| msgid "Minimum pointer speed"
+msgid "Pointer speed:"
+msgstr "سرعة المؤشّر الدّنيا"
+
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "تسارع المؤشر:"
 
-#: kcm/libinput/touchpad.qml:349
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "نمط التسارع:"
-
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "مسطح"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -158,8 +159,8 @@ msgstr "يتحرك المؤشر بنفس مسافة الإصبع."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "متكيف"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1381,6 +1382,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "الحافّة اليسرى العليا"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "نمط التسارع:"
+
+#~ msgid "Flat"
+#~ msgstr "مسطح"
+
+#~ msgid "Adaptive"
+#~ msgstr "متكيف"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "وحدة تحكم بلوحة اللمس"
 
@@ -1444,11 +1454,6 @@ msgstr "الحافّة اليسرى العليا"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#, fuzzy
-#~| msgid "Minimum pointer speed"
-#~ msgid "Pointer speed:"
-#~ msgstr "سرعة المؤشّر الدّنيا"
 
 #~ msgctxt "Synaptics touchpad driver"
 #~ msgid "Synaptics backend not found"

@@ -1,4 +1,4 @@
-# Version: $Revision: 1655712 $
+# Version: $Revision: 1658856 $
 # translation of kcmaccess.po to
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2002, 2005, 2006.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-02-04 08:33+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -565,9 +565,10 @@ msgid "Maximum speed:"
 msgstr "Najwyższa szybkość:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Krzywa przyspieszenia:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "Czas przyspieszenia:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -592,6 +593,9 @@ msgstr ""
 "Wygląda na to, że nie masz czytnika ekranowego Orca. Wgraj go, zanim "
 "zaczniesz używać tej możliwości, a następnie wyloguj i zaloguj się ponownie "
 "lub uruchom ponownie komputer."
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Krzywa przyspieszenia:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

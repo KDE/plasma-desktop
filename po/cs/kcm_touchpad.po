@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-06-14 14:59+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -140,19 +140,20 @@ msgstr ""
 "Kliknutí levým a pravým tlačítkem zároveň je kliknutí prostředním tlačítkem."
 
 #: kcm/libinput/touchpad.qml:254
+#, fuzzy, kde-format
+#| msgid "Minimum pointer speed"
+msgid "Pointer speed:"
+msgstr "Minimální rychlost ukazatele"
+
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Zrychlení ukazatele:"
 
-#: kcm/libinput/touchpad.qml:349
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Profil zrychlování:"
-
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Ploché"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -161,8 +162,8 @@ msgstr "Kurzor se pohybuje o stejnou vzdálenost jako prst."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Adaptivní"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1403,3 +1404,12 @@ msgstr "Levý okraj"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Levý horní roh"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Profil zrychlování:"
+
+#~ msgid "Flat"
+#~ msgstr "Ploché"
+
+#~ msgid "Adaptive"
+#~ msgstr "Adaptivní"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-08-02 12:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -134,19 +134,20 @@ msgid ""
 msgstr "同时点击左键和右键来触发中键点击。"
 
 #: kcm/libinput/touchpad.qml:254
+#, fuzzy, kde-format
+#| msgid "Minimum pointer speed"
+msgid "Pointer speed:"
+msgstr "最小光标速度"
+
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "光标加速："
 
-#: kcm/libinput/touchpad.qml:349
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "加速特性："
-
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "恒定"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -155,8 +156,8 @@ msgstr "光标移动的距离与手指移动的距离相同。"
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "取决于鼠标速度"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1363,3 +1364,12 @@ msgstr "左边缘"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "左上角"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "加速特性："
+
+#~ msgid "Flat"
+#~ msgstr "恒定"
+
+#~ msgid "Adaptive"
+#~ msgstr "取决于鼠标速度"

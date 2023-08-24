@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-06-10 12:22+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -149,18 +149,18 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:254
 #, kde-format
-msgid "Pointer acceleration:"
-msgstr "Rodyklės pagreitis:"
+msgid "Pointer speed:"
+msgstr "Rodyklės greitis:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Pagreičio profilis:"
+msgid "Pointer acceleration:"
+msgstr "Rodyklės pagreitis:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Plokščias"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -169,8 +169,8 @@ msgstr "Žymeklis persikelia tokiu pačiu atstumu kaip ir pirštas."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Prisitaikantis"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1454,6 +1454,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Viršutinis kairysis kampas"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "Pagreičio profilis:"
+
+#~ msgid "Flat"
+#~ msgstr "Plokščias"
+
+#~ msgid "Adaptive"
+#~ msgstr "Prisitaikantis"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "Jutiklinio kilimėlio KCM"
 
@@ -1520,9 +1529,6 @@ msgstr "Viršutinis kairysis kampas"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#~ msgid "Pointer speed:"
-#~ msgstr "Rodyklės greitis:"
 
 #~ msgid "Mouse Click Emulation"
 #~ msgstr "Pelės spustelėjimų emuliacija"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2022-08-25 22:19+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -145,15 +145,17 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Erakuslearen abiadura:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Azelerazio-profila:"
+msgid "Pointer acceleration:"
+msgstr "Erakuslearen azelerazioa:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Laua"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -162,8 +164,8 @@ msgstr "Kurtsorea higitzen da sagua higitutako distantzia bera."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Moldakorra"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -325,12 +327,6 @@ msgstr "A&lderantzizko kiribiltze-noranzkoa"
 #, kde-format
 msgid "Advanced"
 msgstr "Aurreratua"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Erakuslearen azelerazioa:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -531,6 +527,15 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " lerro"
 msgstr[1] " lerro"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Azelerazio-profila:"
+
+#~ msgid "Flat"
+#~ msgstr "Laua"
+
+#~ msgid "Adaptive"
+#~ msgstr "Moldakorra"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "Gailu erakuslearen KCM"

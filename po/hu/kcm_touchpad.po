@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-09-04 09:16+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -142,18 +142,18 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:254
 #, kde-format
-msgid "Pointer acceleration:"
-msgstr "Az egérmutató gyorsítása:"
+msgid "Pointer speed:"
+msgstr "Mutató sebessége:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Gyorsítási profil:"
+msgid "Pointer acceleration:"
+msgstr "Az egérmutató gyorsítása:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Egyenletes"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -162,8 +162,8 @@ msgstr "A kurzor ugyanannyit mozog, mint az ujj."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Adaptív"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1409,6 +1409,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Bal felső sarok"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "Gyorsítási profil:"
+
+#~ msgid "Flat"
+#~ msgstr "Egyenletes"
+
+#~ msgid "Adaptive"
+#~ msgstr "Adaptív"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "Érintőtábla beállítómodul"
 
@@ -1475,6 +1484,3 @@ msgstr "Bal felső sarok"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#~ msgid "Pointer speed:"
-#~ msgstr "Mutató sebessége:"

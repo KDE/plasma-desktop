@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-03-12 20:58+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -569,9 +569,10 @@ msgid "Maximum speed:"
 msgstr "Hámarkshraði:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Hröðunarsnið:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "Hröðunartími:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -595,6 +596,9 @@ msgid ""
 msgstr ""
 "Orca skjálesarinn virðist ekki vera uppsettur. Settu forritið upp áður en þú "
 "reynir að nota þennan eiginleika og skráðu þig svo út eða endurræstu"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Hröðunarsnið:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

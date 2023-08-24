@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2022-09-02 17:47+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -135,15 +135,17 @@ msgstr "Bấm nút trái và phải đồng thời sẽ tạo ra cú bấm nút 
 msgid "Pointer speed:"
 msgstr "Tốc độ con trỏ:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Hồ sơ gia tốc:"
+msgid "Pointer acceleration:"
+msgstr "Gia tốc con trỏ:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Phẳng"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -152,8 +154,8 @@ msgstr "Con trỏ di chuyển cùng khoảng cách với di chuyển của chu�
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Thích ứng"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -313,12 +315,6 @@ msgstr "Đảo &hướng cuộn"
 #, kde-format
 msgid "Advanced"
 msgstr "Nâng cao"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Gia tốc con trỏ:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -516,6 +512,15 @@ msgstr[0] " điểm ảnh"
 msgid " line"
 msgid_plural " lines"
 msgstr[0] " dòng"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Hồ sơ gia tốc:"
+
+#~ msgid "Flat"
+#~ msgstr "Phẳng"
+
+#~ msgid "Adaptive"
+#~ msgstr "Thích ứng"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "KCM thiết bị trỏ"

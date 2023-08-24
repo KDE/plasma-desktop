@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-07-16 13:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -561,9 +561,10 @@ msgid "Maximum speed:"
 msgstr "அதிகபட்ச வேகம்:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "வேகவளர்ச்சி முறை:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "வேகவளர்ச்சி கால நீட்சி:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -587,6 +588,9 @@ msgid ""
 msgstr ""
 "ஆர்கா திரை வாசிப்பான் (Orca Screen Reader) நிறுவப்படாததுபோல் தெரிகிறது. இவ்வம்சத்தை "
 "பயன்படுத்தும் முன் அதை நிறுவி, வெளியேறி நுழையுங்கள் அல்லது மீள்துவக்குங்கள்"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "வேகவளர்ச்சி முறை:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

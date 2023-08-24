@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-02-09 08:31\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -574,9 +574,10 @@ msgid "Maximum speed:"
 msgstr "Максімальная хуткасць:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Профіль паскарэння:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "Час паскарэння:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -601,6 +602,9 @@ msgstr ""
 "Здаецца, праграма Orca не ўсталяваная. Усталюйце яе, перш чым спрабаваць "
 "выкарыстоўваць гэтую функцыю, а затым выйдзіце з сістэмы або перазапусціце "
 "сістэму"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Профіль паскарэння:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

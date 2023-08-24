@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-03-23 23:18+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -149,15 +149,17 @@ msgstr "Sol ve sağ  aynı anda tıklamak orta düğme tıklaması sağlar."
 msgid "Pointer speed:"
 msgstr "İşaretçi hızı:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "İvmelendirme profili:"
+msgid "Pointer acceleration:"
+msgstr "İmleç hızlandırma:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Düz"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -166,8 +168,8 @@ msgstr "İmleç, fare hareketiyle aynı mesafede hareket eder."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Uyarlanabilir"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -326,12 +328,6 @@ msgstr "Sarma yönünü t&ersine çevir"
 #, kde-format
 msgid "Advanced"
 msgstr "Gelişmiş"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "İmleç hızlandırma:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -528,6 +524,15 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " satır"
 msgstr[1] " satır"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "İvmelendirme profili:"
+
+#~ msgid "Flat"
+#~ msgstr "Düz"
+
+#~ msgid "Adaptive"
+#~ msgstr "Uyarlanabilir"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "İşaretci aygıt KCM'si"

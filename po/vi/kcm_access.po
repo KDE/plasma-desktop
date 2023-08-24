@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -565,9 +565,10 @@ msgid "Maximum speed:"
 msgstr "Tốc độ tối đa:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Hồ sơ gia tốc:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "Thời gian gia tốc:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -591,6 +592,9 @@ msgid ""
 msgstr ""
 "Có vẻ là trình đọc màn hình Orca chưa được cài đặt. Vui lòng cài đặt nó "
 "trước khi thử dùng tính năng này, rồi đăng xuất hoặc khởi động lại"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Hồ sơ gia tốc:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

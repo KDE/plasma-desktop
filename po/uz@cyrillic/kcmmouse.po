@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2005-10-19 21:17+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -129,15 +129,16 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Курсорнинг тезланиши:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
-#, fuzzy, kde-format
-#| msgid "Acceleration &profile:"
-msgid "Acceleration profile:"
-msgstr "Тезланиш &профили:"
+#: kcm/xlib/kcmmouse.ui:164
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Курсорнинг тезланиши:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
+msgid "None"
 msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
@@ -147,7 +148,7 @@ msgstr ""
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
+msgid "Standard"
 msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
@@ -302,12 +303,6 @@ msgstr ""
 #, kde-format
 msgid "Advanced"
 msgstr "Қўшимча"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Курсорнинг тезланиши:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -480,6 +475,11 @@ msgstr[0] " пиксел/сек"
 msgid " line"
 msgid_plural " lines"
 msgstr[0] ""
+
+#, fuzzy
+#~| msgid "Acceleration &profile:"
+#~ msgid "Acceleration profile:"
+#~ msgstr "Тезланиш &профили:"
 
 #~ msgid "Mouse"
 #~ msgstr "Сичқонча"

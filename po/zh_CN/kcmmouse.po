@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-08-02 12:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -128,15 +128,17 @@ msgstr "同时点击左键和右键时将发送中间键点击信号。"
 msgid "Pointer speed:"
 msgstr "光标速度："
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "加速特性："
+msgid "Pointer acceleration:"
+msgstr "光标加速："
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "恒定"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -145,8 +147,8 @@ msgstr "光标移动的距离与鼠标移动的距离相同。"
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "取决于鼠标速度"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -301,12 +303,6 @@ msgstr "反转滚动方向(&V)"
 #, kde-format
 msgid "Advanced"
 msgstr "高级"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "光标加速："
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -492,3 +488,12 @@ msgstr[0] " 像素"
 msgid " line"
 msgid_plural " lines"
 msgstr[0] " 行"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "加速特性："
+
+#~ msgid "Flat"
+#~ msgstr "恒定"
+
+#~ msgid "Adaptive"
+#~ msgstr "取决于鼠标速度"

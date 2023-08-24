@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2022-11-18 21:44+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -145,15 +145,17 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Rodyklės greitis:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Pagreičio profilis:"
+msgid "Pointer acceleration:"
+msgstr "Rodyklės pagreitis:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Plokščias"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -162,8 +164,8 @@ msgstr "Žymeklis persikelia tokiu pačiu atstumu kaip ir pelės judesys."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Prisitaikantis"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -323,12 +325,6 @@ msgstr "At&virkštinė ratuko slinkimo kryptis"
 #, kde-format
 msgid "Advanced"
 msgstr "Išplėstiniai"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Rodyklės pagreitis:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -532,6 +528,15 @@ msgstr[0] " eilutę"
 msgstr[1] " eilutes"
 msgstr[2] " eilučių"
 msgstr[3] " eilutę"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Pagreičio profilis:"
+
+#~ msgid "Flat"
+#~ msgstr "Plokščias"
+
+#~ msgid "Adaptive"
+#~ msgstr "Prisitaikantis"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "Rodomųjų įrenginių KCM"

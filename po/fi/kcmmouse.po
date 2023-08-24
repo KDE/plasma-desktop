@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2023-01-17 15:52+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -154,15 +154,17 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Osoittimen nopeus:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Kiihdytysprofiili:"
+msgid "Pointer acceleration:"
+msgstr "Osoittimen kiihdytys:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
-msgstr "Lattea"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -171,8 +173,8 @@ msgstr "Osoitin liikkuu saman verran kuin hiiri."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
-msgstr "Mukautuva"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -330,12 +332,6 @@ msgstr "&Käännä vierityssuunta"
 #, kde-format
 msgid "Advanced"
 msgstr "Lisäasetukset"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Osoittimen kiihdytys:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -531,6 +527,15 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " viiva"
 msgstr[1] " viivaa"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Kiihdytysprofiili:"
+
+#~ msgid "Flat"
+#~ msgstr "Lattea"
+
+#~ msgid "Adaptive"
+#~ msgstr "Mukautuva"
 
 #~ msgid "Pointer device KCM"
 #~ msgstr "Osoitinlaitteiden hallintamoduuli"

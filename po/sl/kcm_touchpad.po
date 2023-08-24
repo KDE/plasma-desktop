@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-05-29 10:37+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -141,18 +141,18 @@ msgstr "Hkratni klik levega in desnega gumba pomeni klik sredinskega gumba."
 
 #: kcm/libinput/touchpad.qml:254
 #, kde-format
-msgid "Pointer acceleration:"
-msgstr "Pospešek kazalke:"
+msgid "Pointer speed:"
+msgstr "Hitrost kazalke:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
-msgid "Acceleration profile:"
-msgstr "Profil pospeška:"
+msgid "Pointer acceleration:"
+msgstr "Pospešek kazalke:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "Ravno"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -161,8 +161,8 @@ msgstr "Kazalka se pomika enako daleč kot prst."
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
-msgstr "Prilagojeno"
+msgid "Standard"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1416,6 +1416,15 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Zgornji levi kot"
 
+#~ msgid "Acceleration profile:"
+#~ msgstr "Profil pospeška:"
+
+#~ msgid "Flat"
+#~ msgstr "Ravno"
+
+#~ msgid "Adaptive"
+#~ msgstr "Prilagojeno"
+
 #~ msgid "Touchpad KCM"
 #~ msgstr "Modul KCM za sledilno ploščico"
 
@@ -1482,9 +1491,6 @@ msgstr "Zgornji levi kot"
 
 #~ msgid "Violetta Raspryagayeva"
 #~ msgstr "Violetta Raspryagayeva"
-
-#~ msgid "Pointer speed:"
-#~ msgstr "Hitrost kazalke:"
 
 #~ msgid "Mouse Click Emulation"
 #~ msgstr "Posnemanje miškinega klika"

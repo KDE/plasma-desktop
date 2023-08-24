@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-27 01:59+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-10-09 08:21-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -134,19 +134,20 @@ msgid ""
 msgstr ""
 
 #: kcm/libinput/touchpad.qml:254
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgid "Pointer speed:"
+msgstr "ਸਰਕਾਉਣ ਦੀ ਗਤੀ:"
+
+#: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "ਪੁਆਇੰਟਰ ਐਕਸਰਲੇਸ਼ਨ:"
 
-#: kcm/libinput/touchpad.qml:349
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "ਐਕਸਰਲੇਸ਼ਨ ਪਰੋਫਾਈਲ:"
-
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
-msgid "Flat"
-msgstr "ਸਮਤਲ"
+msgid "None"
+msgstr ""
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -155,7 +156,7 @@ msgstr ""
 
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
-msgid "Adaptive"
+msgid "Standard"
 msgstr ""
 
 #: kcm/libinput/touchpad.qml:398
@@ -1346,6 +1347,12 @@ msgstr "ਖੱਬਾ ਕੰਢਾ"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "ਉੱਤੇ ਖੱਬਾ ਕੋਨਾ"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "ਐਕਸਰਲੇਸ਼ਨ ਪਰੋਫਾਈਲ:"
+
+#~ msgid "Flat"
+#~ msgstr "ਸਮਤਲ"
 
 #~ msgid "Touchpad KCM"
 #~ msgstr "ਟੱਚਪੈਡ KCM"

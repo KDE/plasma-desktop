@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2021-09-04 09:20+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -576,9 +576,10 @@ msgid "Maximum speed:"
 msgstr "Maximális sebesség:"
 
 #: ui/MouseNavigation.qml:124
-#, kde-format
-msgid "Acceleration profile:"
-msgstr "Gyorsítási profil:"
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgid "Pointer acceleration:"
+msgstr "Gyorsítási idő:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -603,6 +604,9 @@ msgstr ""
 "Az Orca képernyőolvasó valószínűleg nincs telepítve. Telepítse a "
 "szolgáltatás használata előtt, majd jelentkezzen ki és be, vagy indítsa újra "
 "a rendszert"
+
+#~ msgid "Acceleration profile:"
+#~ msgstr "Gyorsítási profil:"
 
 #~ msgid ""
 #~ "This module lets you configure the accessibility features such as a "

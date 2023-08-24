@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-08-24 01:57+0000\n"
 "PO-Revision-Date: 2008-01-11 11:48+0530\n"
 "Last-Translator: Umesh Rudrapatna <umeshrs@gmail.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -131,15 +131,16 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "ಸೂಚಿ ತ್ವರಣ:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
-#, fuzzy, kde-format
-#| msgid "Acceleration &profile:"
-msgid "Acceleration profile:"
-msgstr "ತ್ವರಣ (&ವ)ವೈಶಿಷ್ಟ್ಯ:"
+#: kcm/xlib/kcmmouse.ui:164
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "ಸೂಚಿ ತ್ವರಣ:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
-msgid "Flat"
+msgid "None"
 msgstr ""
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
@@ -149,7 +150,7 @@ msgstr ""
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
-msgid "Adaptive"
+msgid "Standard"
 msgstr ""
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
@@ -303,12 +304,6 @@ msgstr "ಸುರುಳು ಧಿಕ್ಕನ್ನು ತಿರುಮುರು�
 #, kde-format
 msgid "Advanced"
 msgstr "ಪ್ರೌಢ"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/kcmmouse.ui:164
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "ಸೂಚಿ ತ್ವರಣ:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -486,6 +481,11 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] "ಸಾಲು"
 msgstr[1] ""
+
+#, fuzzy
+#~| msgid "Acceleration &profile:"
+#~ msgid "Acceleration profile:"
+#~ msgstr "ತ್ವರಣ (&ವ)ವೈಶಿಷ್ಟ್ಯ:"
 
 #~ msgid "Mouse"
 #~ msgstr "ಮೂಷಕ"
