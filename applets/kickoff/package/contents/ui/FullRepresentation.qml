@@ -16,6 +16,7 @@ import QtQml 2.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.private.kicker 0.1 as Kicker
 
 EmptyPage {
     id: root
@@ -84,7 +85,7 @@ EmptyPage {
                 mainContentView: true
                 // Forces the function be re-run every time runnerModel.count changes.
                 // This is absolutely necessary to make the search view work reliably.
-                model: kickoff.runnerModel.count ? kickoff.runnerModel.modelForRow(0) : null
+                model: runnerModel.count ? runnerModel.modelForRow(0) : null
                 delegate: KickoffListDelegate {
                     width: view.availableWidth
                     isSearchResult: true
@@ -122,6 +123,19 @@ EmptyPage {
                     enabled: !contentItemStackView.busy && (!searchView.interceptedPosition || root.blockingHoverFocus)
                 }
 
+                Kicker.RunnerModel {
+                    id: runnerModel
+                    query: kickoff.searchField?.text ?? ""
+                    onRequestUpdateQuery: query => {
+                        if (kickoff.searchField) {
+                            kickoff.searchField.text = query;
+                        }
+                    }
+                    appletInterface: kickoff
+                    mergeResults: true
+                    favoritesModel: rootModel.favoritesModel
+                }
+
                 Loader {
                     anchors.centerIn: searchView.view
                     width: searchView.view.width - (Kirigami.Units.gridUnit * 4)
@@ -138,7 +152,7 @@ EmptyPage {
                         text: i18nc("@info:status", "No matches")
 
                         Connections {
-                            target: kickoff.runnerModel
+                            target: runnerModel
                             function onQueryFinished() {
                                 showAnimation.restart()
                             }

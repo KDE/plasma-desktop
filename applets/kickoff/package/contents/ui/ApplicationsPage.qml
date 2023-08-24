@@ -16,7 +16,7 @@ BasePage {
     sideBarComponent: KickoffListView {
         id: sideBar
         focus: true // needed for Loaders
-        model: kickoff.rootModel
+        model: rootModel
         // needed otherwise app displayed at top-level will show a first character as group.
         section.property: ""
         delegate: KickoffListDelegate {
@@ -71,7 +71,7 @@ BasePage {
         // NOTE: The 0 index modelForRow isn't supposed to be used. That's just how it works.
         // But to trigger model data update, set initial value to 0
         property int appsModelRow: 0
-        readonly property Kicker.AppsModel appsModel: kickoff.rootModel.modelForRow(appsModelRow)
+        readonly property Kicker.AppsModel appsModel: rootModel.modelForRow(appsModelRow)
         focus: true
         initialItem: preferredFavoritesViewComponent
 
@@ -82,7 +82,7 @@ BasePage {
                 objectName: "favoritesListView"
                 mainContentView: true
                 focus: true
-                model: kickoff.rootModel.favoritesModel
+                model: rootModel.favoritesModel
             }
         }
 
@@ -92,7 +92,7 @@ BasePage {
                 id: favoritesGridView
                 objectName: "favoritesGridView"
                 focus: true
-                model: kickoff.rootModel.favoritesModel
+                model: rootModel.favoritesModel
             }
         }
 

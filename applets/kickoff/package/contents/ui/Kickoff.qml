@@ -37,11 +37,12 @@ PlasmoidItem {
     readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     // Used to prevent the width from changing frequently when the scrollbar appears or disappears
-    readonly property bool mayHaveGridWithScrollBar: Plasmoid.configuration.applicationsDisplay === 0
-        || (Plasmoid.configuration.favoritesDisplay === 0 && kickoff.rootModel.favoritesModel.count > minimumGridRowCount * minimumGridRowCount)
+    readonly property bool mayHaveGridWithScrollBar: plasmoid.configuration.applicationsDisplay === 0
+        || (Plasmoid.configuration.favoritesDisplay === 0 && rootModel.favoritesModel.count > minimumGridRowCount * minimumGridRowCount)
 
     //BEGIN Models
-    readonly property Kicker.RootModel rootModel: Kicker.RootModel {
+    Kicker.RootModel {
+        id: rootModel
         autoPopulate: false
 
         // TODO: appletInterface property now can be ported to "applet" and have the real Applet* assigned directly
@@ -69,36 +70,6 @@ PlasmoidItem {
                 Plasmoid.configuration.favoritesPortedToKAstats = true;
             }
         }
-    }
-
-    readonly property Kicker.RunnerModel runnerModel: Kicker.RunnerModel {
-        query: kickoff.searchField ? kickoff.searchField.text : ""
-        onRequestUpdateQuery: query => {
-            if (kickoff.searchField) {
-                kickoff.searchField.text = query;
-            }
-        }
-        appletInterface: kickoff
-        mergeResults: true
-        favoritesModel: rootModel.favoritesModel
-    }
-
-    readonly property Kicker.ComputerModel computerModel: Kicker.ComputerModel {
-        appletInterface: kickoff
-        favoritesModel: rootModel.favoritesModel
-        systemApplications: Plasmoid.configuration.systemApplications
-        Component.onCompleted: {
-            //systemApplications = Plasmoid.configuration.systemApplications;
-        }
-    }
-
-    readonly property Kicker.RecentUsageModel recentUsageModel: Kicker.RecentUsageModel {
-        favoritesModel: rootModel.favoritesModel
-    }
-
-    readonly property Kicker.RecentUsageModel frequentUsageModel: Kicker.RecentUsageModel {
-        favoritesModel: rootModel.favoritesModel
-        ordering: 1 // Popular / Frequently Used
     }
     //END
 

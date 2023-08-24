@@ -8,6 +8,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Templates 2.15 as T
 import QtQml 2.15
+import org.kde.plasma.private.kicker 0.1 as Kicker
 
 BasePage {
     id: root
@@ -28,13 +29,31 @@ BasePage {
         focus: true
         objectName: "frequentlyUsedView"
         model: switch (root.sideBarItem.currentIndex) {
-            case 0: return kickoff.computerModel
-            case 1: return kickoff.recentUsageModel
-            case 2: return kickoff.frequentUsageModel
+            case 0: return computerModel
+            case 1: return recentUsageModel
+            case 2: return frequentUsageModel
         }
         onActiveFocusChanged: if (activeFocus && count < 1) {
             root.sideBarItem.forceActiveFocus()
         }
+    }
+
+    Kicker.ComputerModel {
+        id: computerModel
+        appletInterface: kickoff
+        favoritesModel: rootModel.favoritesModel
+        systemApplications: plasmoid.configuration.systemApplications
+    }
+
+    Kicker.RecentUsageModel {
+        id: recentUsageModel
+        favoritesModel: rootModel.favoritesModel
+    }
+
+    Kicker.RecentUsageModel {
+        id: frequentUsageModel
+        favoritesModel: rootModel.favoritesModel
+        ordering: 1 // Popular / Frequently Used
     }
 
     // we make our model ourselves
