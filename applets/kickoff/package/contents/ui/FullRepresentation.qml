@@ -64,12 +64,6 @@ EmptyPage {
     header: Header {
         id: header
         preferredNameAndIconWidth: normalPage.preferredSideBarWidth
-        Binding {
-            target: kickoff
-            property: "header"
-            value: header
-            restoreMode: Binding.RestoreBinding
-        }
     }
 
     contentItem: VerticalStackView {
