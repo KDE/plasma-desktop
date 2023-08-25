@@ -7,10 +7,11 @@
 import QtQuick 2.15
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.graphicaleffects as KGraphicalEffects
+import org.kde.plasma.plasmoid 2.0
 
 Item {
     readonly property int iconWidthDelta: (icon.width - icon.paintedWidth) / 2
-    readonly property bool shiftBadgeDown: (plasmoid.pluginName === "org.kde.plasma.icontasks") && task.audioStreamIcon !== null
+    readonly property bool shiftBadgeDown: (Plasmoid.pluginName === "org.kde.plasma.icontasks") && task.audioStreamIcon !== null
 
     Item {
         id: badgeMask

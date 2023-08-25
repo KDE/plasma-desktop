@@ -27,7 +27,7 @@ Kirigami.ScrollablePage {
             }
         })
 
-        plasmoid.configuration.writeConfig();
+        Plasmoid.configuration.writeConfig();
 
         // For ConfigurationContainmentActions.qml
         if (loader.item.hasOwnProperty("saveConfig")) {

@@ -12,6 +12,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
+import org.kde.plasma.plasmoid 2.0
 
 import "code/layout.js" as LayoutManager
 import "code/tools.js" as TaskTools
@@ -27,7 +28,7 @@ PlasmaCore.ToolTipArea {
 
     // To achieve a bottom to top layout, the task manager is rotated by 180 degrees(see main.qml).
     // This makes the tasks mirrored, so we mirror them again to fix that.
-    rotation: plasmoid.configuration.reverseMode && plasmoid.formFactor === PlasmaCore.Types.Vertical ? 180 : 0
+    rotation: Plasmoid.configuration.reverseMode && Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 180 : 0
 
     LayoutMirroring.enabled: (Qt.application.layoutDirection == Qt.RightToLeft)
     LayoutMirroring.childrenInherit: (Qt.application.layoutDirection == Qt.RightToLeft)
@@ -51,7 +52,7 @@ PlasmaCore.ToolTipArea {
     property Item audioStreamIcon: null
     property var audioStreams: []
     property bool delayAudioStreamIndicator: false
-    readonly property bool audioIndicatorsEnabled: plasmoid.configuration.indicateAudioStreams
+    readonly property bool audioIndicatorsEnabled: Plasmoid.configuration.indicateAudioStreams
     readonly property bool hasAudioStream: audioStreams.length > 0
     readonly property bool playingAudio: hasAudioStream && audioStreams.some(function (item) {
         return !item.corked
@@ -64,9 +65,9 @@ PlasmaCore.ToolTipArea {
         || (task.contextMenu && task.contextMenu.status === PlasmaExtras.DialogStatus.Open)
         || (!!tasks.groupDialog && tasks.groupDialog.visualParent === task)
 
-    active: (plasmoid.configuration.showToolTips || tasks.toolTipOpenedByClick === task) && !inPopup && !tasks.groupDialog
+    active: (Plasmoid.configuration.showToolTips || tasks.toolTipOpenedByClick === task) && !inPopup && !tasks.groupDialog
     interactive: model.IsWindow || mainItem.hasPlayer
-    location: plasmoid.location
+    location: Plasmoid.location
     mainItem: model.IsWindow ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
 
     Accessible.name: model.display
@@ -85,11 +86,11 @@ PlasmaCore.ToolTipArea {
         }
 
         if (model.IsGroupParent) {
-            switch (plasmoid.configuration.groupedTaskVisualization) {
+            switch (Plasmoid.configuration.groupedTaskVisualization) {
             case 0:
                 break; // Use the default description
             case 1: {
-                if (plasmoid.configuration.showToolTips) {
+                if (Plasmoid.configuration.showToolTips) {
                     return `${i18nc("@info:usagetip %1 task name", "Show Task tooltip for %1", model.display)}; ${smartLauncherDescription}`;
                 }
                 // fallthrough
@@ -151,7 +152,7 @@ PlasmaCore.ToolTipArea {
         hideToolTip();
 
         if (!inPopup && !tasks.vertical
-            && (LayoutManager.calculateStripes() > 1 || !plasmoid.configuration.separateLaunchers)) {
+            && (LayoutManager.calculateStripes() > 1 || !Plasmoid.configuration.separateLaunchers)) {
             tasks.requestLayout();
         }
     }
@@ -188,7 +189,7 @@ PlasmaCore.ToolTipArea {
     onAudioIndicatorsEnabledChanged: task.hasAudioStreamChanged()
 
     Keys.onMenuPressed: contextMenuTimer.start()
-    Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task, plasmoid, tasks)
+    Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task, Plasmoid, tasks)
     Keys.onEnterPressed: Keys.onReturnPressed(event);
     Keys.onSpacePressed: Keys.onReturnPressed(event);
     Keys.onUpPressed: Keys.onLeftPressed(event)
@@ -329,10 +330,10 @@ PlasmaCore.ToolTipArea {
     TapHandler {
         acceptedButtons: Qt.LeftButton
         onTapped: {
-            if (plasmoid.configuration.showToolTips && task.active) {
+            if (Plasmoid.configuration.showToolTips && task.active) {
                 hideToolTip();
             }
-            TaskTools.activateTask(modelIndex(), model, point.modifiers, task, plasmoid, tasks);
+            TaskTools.activateTask(modelIndex(), model, point.modifiers, task, Plasmoid, tasks);
         }
     }
 
@@ -340,16 +341,16 @@ PlasmaCore.ToolTipArea {
         acceptedButtons: Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
         onTapped: (eventPoint, button) => {
             if (button === Qt.MiddleButton) {
-                if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
+                if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
                     tasksModel.requestNewInstance(modelIndex());
-                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
+                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
                     tasks.taskClosedWithMouseMiddleButton = model.WinIdList.slice()
                     tasksModel.requestClose(modelIndex());
-                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
+                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
                     tasksModel.requestToggleMinimized(modelIndex());
-                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
+                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
                     tasksModel.requestToggleGrouping(modelIndex());
-                } else if (plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.BringToCurrentDesktop) {
+                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.BringToCurrentDesktop) {
                     tasksModel.requestVirtualDesktops(modelIndex(), [virtualDesktopInfo.currentDesktop]);
                 }
             } else if (button === Qt.BackButton || button === Qt.ForwardButton) {
@@ -371,9 +372,9 @@ PlasmaCore.ToolTipArea {
 
     WheelHandler {
         property int wheelDelta: 0
-        enabled: plasmoid.configuration.wheelEnabled && (!task.inPopup || !groupDialog.overflowing)
+        enabled: Plasmoid.configuration.wheelEnabled && (!task.inPopup || !groupDialog.overflowing)
         onWheel: {
-            wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, event.angleDelta.y, plasmoid.configuration.wheelSkipMinimized, tasks);
+            wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, event.angleDelta.y, Plasmoid.configuration.wheelSkipMinimized, tasks);
         }
     }
 
@@ -390,9 +391,9 @@ PlasmaCore.ToolTipArea {
         }
 
         imagePath: "widgets/tasks"
-        property bool isHovered: task.highlighted && plasmoid.configuration.taskHoverEffect
+        property bool isHovered: task.highlighted && Plasmoid.configuration.taskHoverEffect
         property string basePrefix: "normal"
-        prefix: isHovered ? TaskTools.taskPrefixHovered(basePrefix, plasmoid.location) : TaskTools.taskPrefix(basePrefix, plasmoid.location)
+        prefix: isHovered ? TaskTools.taskPrefixHovered(basePrefix, Plasmoid.location) : TaskTools.taskPrefix(basePrefix, Plasmoid.location)
 
         // Avoid repositioning delegate item after dragFinished
         DragHandler {
@@ -528,7 +529,7 @@ PlasmaCore.ToolTipArea {
         elide: Text.ElideRight
         textFormat: Text.PlainText
         verticalAlignment: Text.AlignVCenter
-        maximumLineCount: plasmoid.configuration.maxTextLines || undefined
+        maximumLineCount: Plasmoid.configuration.maxTextLines || undefined
 
         // use State to avoid unnecessary re-evaluation when the label is invisible
         states: State {

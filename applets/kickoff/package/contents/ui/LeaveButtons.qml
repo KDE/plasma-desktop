@@ -12,6 +12,7 @@ import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kitemmodels 1.0 as KItemModels
+import org.kde.plasma.plasmoid 2.0
 
 RowLayout {
     id: root
@@ -30,14 +31,14 @@ RowLayout {
         function systemFavoritesContainsRow(sourceRow, sourceParent) {
             var FavoriteIdRole = Qt.UserRole + 3; // XXX: Change to real enum value when it's exported
             var favoriteId = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), FavoriteIdRole);
-            return String(plasmoid.configuration.systemFavorites).includes(favoriteId);
+            return String(Plasmoid.configuration.systemFavorites).includes(favoriteId);
         }
         function trigger(index) {
             var sourceIndex = mapToSource(this.index(index, 0));
             systemModel.trigger(sourceIndex.row, "", null);
         }
         Component.onCompleted: {
-            plasmoid.configuration.valueChanged.connect((key, value) => {
+            Plasmoid.configuration.valueChanged.connect((key, value) => {
                 if (key === "systemFavorites") {
                     invalidateFilter();
                 }
@@ -59,7 +60,7 @@ RowLayout {
     }
 
     Item {
-        Layout.fillWidth: !plasmoid.configuration.showActionButtonCaptions && plasmoid.configuration.primaryActions === 3
+        Layout.fillWidth: !Plasmoid.configuration.showActionButtonCaptions && Plasmoid.configuration.primaryActions === 3
     }
 
     RowLayout {
@@ -78,8 +79,8 @@ RowLayout {
                 text: model.display
                 icon.name: model.decoration
                 onClicked: filteredButtonsModel.trigger(index);
-                display: plasmoid.configuration.showActionButtonCaptions ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly;
-                Layout.rightMargin: model.favoriteId === "switch-user" && plasmoid.configuration.primaryActions === 3 ? Kirigami.Units.gridUnit : undefined
+                display: Plasmoid.configuration.showActionButtonCaptions ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly;
+                Layout.rightMargin: model.favoriteId === "switch-user" && Plasmoid.configuration.primaryActions === 3 ? Kirigami.Units.gridUnit : undefined
 
                 PC3.ToolTip.text: text
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
@@ -100,13 +101,13 @@ RowLayout {
     }
 
     Item {
-        Layout.fillWidth: !plasmoid.configuration.showActionButtonCaptions || plasmoid.configuration.primaryActions !== 3
+        Layout.fillWidth: !Plasmoid.configuration.showActionButtonCaptions || Plasmoid.configuration.primaryActions !== 3
     }
 
     PC3.ToolButton {
         id: leaveButton
-        readonly property int currentId: plasmoid.configuration.primaryActions
-        readonly property bool shouldBeVisible: plasmoid.configuration.primaryActions !== 3 || root.shouldCollapseButtons
+        readonly property int currentId: Plasmoid.configuration.primaryActions
+        readonly property bool shouldBeVisible: Plasmoid.configuration.primaryActions !== 3 || root.shouldCollapseButtons
         Accessible.role: Accessible.ButtonMenu
         icon.width: Kirigami.Units.iconSizes.smallMedium
         icon.height: Kirigami.Units.iconSizes.smallMedium
@@ -143,7 +144,7 @@ RowLayout {
         id: contextMenu
         visualParent: leaveButton
         placement: {
-            switch (plasmoid.location) {
+            switch (Plasmoid.location) {
             case PlasmaCore.Types.LeftEdge:
             case PlasmaCore.Types.RightEdge:
             case PlasmaCore.Types.TopEdge:

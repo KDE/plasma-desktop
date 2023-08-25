@@ -24,7 +24,7 @@ function addApplet(applet, x, y) {
     var middle, new_element = {applet: appletItem}
 
     appletItem.visible = Qt.binding(function() {
-        return applet.status !== PlasmaCore.Types.HiddenStatus || (!plasmoid.immutable && plasmoid.userConfiguring);
+        return applet.status !== PlasmaCore.Types.HiddenStatus || (!root.plasmoid.immutable && root.plasmoid.userConfiguring);
     });
 
     // Insert icons to the left of whatever is at the center (usually a Task Manager),
@@ -51,7 +51,7 @@ function addApplet(applet, x, y) {
 }
 
 function restore() {
-    var configString = String(plasmoid.configuration.AppletOrder)
+    var configString = String(root.plasmoid.configuration.AppletOrder)
 
     //array, a cell for encoded item order
     var itemsArray = configString.split(";");
@@ -67,12 +67,12 @@ function restore() {
         idsOrder[itemsArray[i]] = i;
     }
 
-    for (var i = 0; i < plasmoid.applets.length; ++i) {
-        if (idsOrder[plasmoid.applets[i].id] !== undefined) {
-            appletsOrder[idsOrder[plasmoid.applets[i].id]] = plasmoid.applets[i];
+    for (var i = 0; i < root.plasmoid.applets.length; ++i) {
+        if (idsOrder[root.plasmoid.applets[i].id] !== undefined) {
+            appletsOrder[idsOrder[root.plasmoid.applets[i].id]] = root.plasmoid.applets[i];
         //ones that weren't saved in AppletOrder go to the end
         } else {
-            appletsOrder["unordered"+i] = plasmoid.applets[i];
+            appletsOrder["unordered"+i] = root.plasmoid.applets[i];
         }
     }
 
@@ -92,8 +92,8 @@ function save() {
             ids.push(child.applet.plasmoid.id);
         }
     }
-    plasmoid.configuration.AppletOrder = ids.join(';');
-    plasmoid.configuration.writeConfig();
+    root.plasmoid.configuration.AppletOrder = ids.join(';');
+    root.plasmoid.configuration.writeConfig();
     updateMargins();
 }
 
@@ -126,8 +126,8 @@ function childAtCoordinates(x, y) {
 
 function indexAtCoordinates(x, y) {
     let child = childAtCoordinates(x, y)
-    if ((plasmoid.formFactor === 3 && y < child.y + child.height/2) ||
-        (plasmoid.formFactor !== 3 && x < child.x + child.width/2)) {
+    if ((root.plasmoid.formFactor === 3 && y < child.y + child.height/2) ||
+        (root.plasmoid.formFactor !== 3 && x < child.x + child.width/2)) {
         return child.index;
     } else {
         return child.index+1;

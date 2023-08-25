@@ -9,6 +9,7 @@ import QtQuick
 import QtQuick.Controls 2.4 as QQC2
 import QtQuick.Layouts 1.3
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
 
 /**
@@ -18,7 +19,7 @@ QQC2.Page {
     id: page
     title: i18n("About")
 
-    property var metaData: plasmoid.metaData
+    property var metaData: Plasmoid.metaData
 
     Component {
         id: personDelegate

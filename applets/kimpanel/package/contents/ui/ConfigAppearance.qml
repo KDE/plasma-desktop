@@ -8,6 +8,7 @@ import QtQuick 2.5
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Dialogs 6.3 as QtDialogs
 import QtQuick.Layouts 1.0
+import org.kde.plasma.plasmoid 2.0
 
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -77,7 +78,7 @@ Kirigami.FormLayout {
     }
     QQC2.RadioButton {
         id: automaticScaleRadioButton
-        text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Scale with Panel height")
+        text: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Scale with Panel height")
                                                                     : i18n("Scale with Panel width")
         checked: cfg_scaleIconsToFit == true
         onToggled: cfg_scaleIconsToFit = checked

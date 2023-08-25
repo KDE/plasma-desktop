@@ -8,12 +8,13 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.13
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 
 
 Item {
-    property bool cfg_showText: plasmoid.configuration.showText
+    property bool cfg_showText: Plasmoid.configuration.showText
 
     Kirigami.FormLayout {
         anchors.right: parent.right
@@ -22,7 +23,7 @@ Item {
         QQC2.CheckBox {
             id: showTextCheckbox
 
-            enabled: plasmoid.formFactor === PlasmaCore.Types.Horizontal
+            enabled: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
 
             text: i18n("Show active application's name on Panel button")
 
@@ -42,7 +43,7 @@ Item {
 
             visible: !showTextCheckbox.enabled
 
-            text: plasmoid.formFactor === PlasmaCore.Types.Vertical ?
+            text: Plasmoid.formFactor === PlasmaCore.Types.Vertical ?
                 // On a vertical panel
                 i18n("Only icons can be shown when the Panel is vertical.") :
                 // On the desktop

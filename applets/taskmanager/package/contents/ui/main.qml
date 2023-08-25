@@ -29,11 +29,11 @@ PlasmoidItem {
     // For making a bottom to top layout since qml flow can't do that.
     // We just hang the task manager upside down to achieve that.
     // This mirrors the tasks as well, so we just rotate them again to fix that (see Task.qml).
-    rotation: plasmoid.configuration.reverseMode && plasmoid.formFactor === PlasmaCore.Types.Vertical ? 180 : 0
+    rotation: Plasmoid.configuration.reverseMode && Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 180 : 0
 
     readonly property bool shouldShirnkToZero: !LayoutManager.logicalTaskCount()
-    property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
-    property bool iconsOnly: plasmoid.pluginName === "org.kde.plasma.icontasks"
+    property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
+    property bool iconsOnly: Plasmoid.pluginName === "org.kde.plasma.icontasks"
 
     property var toolTipOpenedByClick: null
 
@@ -51,13 +51,13 @@ PlasmoidItem {
     Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
 
     Plasmoid.onUserConfiguringChanged: {
-        if (plasmoid.userConfiguring && !!tasks.groupDialog) {
+        if (Plasmoid.userConfiguring && !!tasks.groupDialog) {
             tasks.groupDialog.visible = false;
         }
     }
 
-    Layout.fillWidth: tasks.vertical ? true : plasmoid.configuration.fill
-    Layout.fillHeight: !tasks.vertical ? true : plasmoid.configuration.fill
+    Layout.fillWidth: tasks.vertical ? true : Plasmoid.configuration.fill
+    Layout.fillHeight: !tasks.vertical ? true : Plasmoid.configuration.fill
     Layout.minimumWidth: {
         if (shouldShirnkToZero) {
             return Kirigami.Units.gridUnit; // For edit mode
@@ -122,7 +122,7 @@ PlasmoidItem {
         id: tasksModel
 
         readonly property int logicalLauncherCount: {
-            if (plasmoid.configuration.separateLaunchers) {
+            if (Plasmoid.configuration.separateLaunchers) {
                 return launcherCount;
             }
 
@@ -140,41 +140,41 @@ PlasmoidItem {
         }
 
         virtualDesktop: virtualDesktopInfo.currentDesktop
-        screenGeometry: plasmoid.containment.screenGeometry
+        screenGeometry: Plasmoid.containment.screenGeometry
         activity: activityInfo.currentActivity
 
-        filterByVirtualDesktop: plasmoid.configuration.showOnlyCurrentDesktop
-        filterByScreen: plasmoid.configuration.showOnlyCurrentScreen
-        filterByActivity: plasmoid.configuration.showOnlyCurrentActivity
-        filterNotMinimized: plasmoid.configuration.showOnlyMinimized
+        filterByVirtualDesktop: Plasmoid.configuration.showOnlyCurrentDesktop
+        filterByScreen: Plasmoid.configuration.showOnlyCurrentScreen
+        filterByActivity: Plasmoid.configuration.showOnlyCurrentActivity
+        filterNotMinimized: Plasmoid.configuration.showOnlyMinimized
 
-        sortMode: sortModeEnumValue(plasmoid.configuration.sortingStrategy)
-        launchInPlace: iconsOnly && plasmoid.configuration.sortingStrategy === 1
+        sortMode: sortModeEnumValue(Plasmoid.configuration.sortingStrategy)
+        launchInPlace: iconsOnly && Plasmoid.configuration.sortingStrategy === 1
         separateLaunchers: {
-            if (!iconsOnly && !plasmoid.configuration.separateLaunchers
-                && plasmoid.configuration.sortingStrategy === 1) {
+            if (!iconsOnly && !Plasmoid.configuration.separateLaunchers
+                && Plasmoid.configuration.sortingStrategy === 1) {
                 return false;
             }
 
             return true;
         }
 
-        groupMode: groupModeEnumValue(plasmoid.configuration.groupingStrategy)
-        groupInline: !plasmoid.configuration.groupPopups && !iconsOnly
-        groupingWindowTasksThreshold: (plasmoid.configuration.onlyGroupWhenFull && !iconsOnly
+        groupMode: groupModeEnumValue(Plasmoid.configuration.groupingStrategy)
+        groupInline: !Plasmoid.configuration.groupPopups && !iconsOnly
+        groupingWindowTasksThreshold: (Plasmoid.configuration.onlyGroupWhenFull && !iconsOnly
             ? LayoutManager.optimumCapacity(width, height) + 1 : -1)
 
         onLauncherListChanged: {
             layoutTimer.restart();
-            plasmoid.configuration.launchers = launcherList;
+            Plasmoid.configuration.launchers = launcherList;
         }
 
         onGroupingAppIdBlacklistChanged: {
-            plasmoid.configuration.groupingAppIdBlacklist = groupingAppIdBlacklist;
+            Plasmoid.configuration.groupingAppIdBlacklist = groupingAppIdBlacklist;
         }
 
         onGroupingLauncherUrlBlacklistChanged: {
-            plasmoid.configuration.groupingLauncherUrlBlacklist = groupingLauncherUrlBlacklist;
+            Plasmoid.configuration.groupingLauncherUrlBlacklist = groupingLauncherUrlBlacklist;
         }
 
         function sortModeEnumValue(index) {
@@ -204,9 +204,9 @@ PlasmoidItem {
         }
 
         Component.onCompleted: {
-            launcherList = plasmoid.configuration.launchers;
-            groupingAppIdBlacklist = plasmoid.configuration.groupingAppIdBlacklist;
-            groupingLauncherUrlBlacklist = plasmoid.configuration.groupingLauncherUrlBlacklist;
+            launcherList = Plasmoid.configuration.launchers;
+            groupingAppIdBlacklist = Plasmoid.configuration.groupingAppIdBlacklist;
+            groupingLauncherUrlBlacklist = Plasmoid.configuration.groupingLauncherUrlBlacklist;
 
             // Only hook up view only after the above churn is done.
             taskRepeater.model = tasksModel;
@@ -215,7 +215,7 @@ PlasmoidItem {
 
     property TaskManagerApplet.Backend backend: TaskManagerApplet.Backend {
         taskManagerItem: tasks
-        highlightWindows: plasmoid.configuration.highlightWindows
+        highlightWindows: Plasmoid.configuration.highlightWindows
 
         onAddLauncher: {
             tasks.addLauncher(url);
@@ -366,15 +366,15 @@ PlasmoidItem {
         }
 
         Binding {
-            target: plasmoid
+            target: Plasmoid
             property: "status"
-            value: (tasksModel.anyTaskDemandsAttention && plasmoid.configuration.unhideOnAttention
+            value: (tasksModel.anyTaskDemandsAttention && Plasmoid.configuration.unhideOnAttention
                 ? PlasmaCore.Types.NeedsAttentionStatus : PlasmaCore.Types.PassiveStatus)
             restoreMode: Binding.RestoreBinding
         }
 
         Connections {
-            target: plasmoid
+            target: Plasmoid
 
             function onLocationChanged() {
                 if (TaskTools.taskManagerInstanceCount >= 2) {
@@ -388,16 +388,16 @@ PlasmoidItem {
         }
 
         Connections {
-            target: plasmoid.configuration
+            target: Plasmoid.configuration
 
             function onLaunchersChanged() {
-                tasksModel.launcherList = plasmoid.configuration.launchers
+                tasksModel.launcherList = Plasmoid.configuration.launchers
             }
             function onGroupingAppIdBlacklistChanged() {
-                tasksModel.groupingAppIdBlacklist = plasmoid.configuration.groupingAppIdBlacklist;
+                tasksModel.groupingAppIdBlacklist = Plasmoid.configuration.groupingAppIdBlacklist;
             }
             function onGroupingLauncherUrlBlacklistChanged() {
-                tasksModel.groupingLauncherUrlBlacklist = plasmoid.configuration.groupingLauncherUrlBlacklist;
+                tasksModel.groupingLauncherUrlBlacklist = Plasmoid.configuration.groupingLauncherUrlBlacklist;
             }
             function onIconSpacingChanged() {
                 taskList.layout();
@@ -474,7 +474,7 @@ PlasmoidItem {
             blockFirstEnter: false
 
             edge: {
-                switch (plasmoid.location) {
+                switch (Plasmoid.location) {
                     case PlasmaCore.Types.BottomEdge:
                         return Qt.TopEdge;
                     case PlasmaCore.Types.TopEdge:
@@ -519,9 +519,9 @@ PlasmoidItem {
 
                 flow: {
                     if (tasks.vertical) {
-                        return plasmoid.configuration.forceStripes ? Flow.LeftToRight : Flow.TopToBottom
+                        return Plasmoid.configuration.forceStripes ? Flow.LeftToRight : Flow.TopToBottom
                     }
-                    return plasmoid.configuration.forceStripes ? Flow.TopToBottom : Flow.LeftToRight
+                    return Plasmoid.configuration.forceStripes ? Flow.TopToBottom : Flow.LeftToRight
                 }
 
                 onAnimatingChanged: {
@@ -573,7 +573,7 @@ PlasmoidItem {
     }
 
     function addLauncher(url) {
-        if (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
+        if (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
             tasksModel.requestAddLauncher(url);
         }
     }
@@ -586,7 +586,7 @@ PlasmoidItem {
 
         var task = taskRepeater.itemAt(index);
         if (task) {
-            TaskTools.activateTask(task.modelIndex(), task.m, null, task, plasmoid, tasks);
+            TaskTools.activateTask(task.modelIndex(), task.m, null, task, Plasmoid, tasks);
         }
     }
 

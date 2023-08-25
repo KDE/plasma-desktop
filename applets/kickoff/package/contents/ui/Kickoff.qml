@@ -33,12 +33,12 @@ PlasmoidItem {
         PlasmaCore.Types.RightEdge,
         PlasmaCore.Types.BottomEdge,
         PlasmaCore.Types.LeftEdge,
-    ].includes(plasmoid.location)
-    readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    ].includes(Plasmoid.location)
+    readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     // Used to prevent the width from changing frequently when the scrollbar appears or disappears
-    readonly property bool mayHaveGridWithScrollBar: plasmoid.configuration.applicationsDisplay === 0
-        || (plasmoid.configuration.favoritesDisplay === 0 && kickoff.rootModel.favoritesModel.count > minimumGridRowCount * minimumGridRowCount)
+    readonly property bool mayHaveGridWithScrollBar: Plasmoid.configuration.applicationsDisplay === 0
+        || (Plasmoid.configuration.favoritesDisplay === 0 && kickoff.rootModel.favoritesModel.count > minimumGridRowCount * minimumGridRowCount)
 
     //BEGIN Models
     readonly property Kicker.RootModel rootModel: Kicker.RootModel {
@@ -48,7 +48,7 @@ PlasmoidItem {
         appletInterface: kickoff
 
         flat: true // have categories, but no subcategories
-        sorted: plasmoid.configuration.alphaSort
+        sorted: Plasmoid.configuration.alphaSort
         showSeparators: true
         showTopLevelItems: true
 
@@ -60,13 +60,13 @@ PlasmoidItem {
         showFavoritesPlaceholder: true
 
         Component.onCompleted: {
-            favoritesModel.initForClient("org.kde.plasma.kickoff.favorites.instance-" + plasmoid.id)
+            favoritesModel.initForClient("org.kde.plasma.kickoff.favorites.instance-" + Plasmoid.id)
 
-            if (!plasmoid.configuration.favoritesPortedToKAstats) {
+            if (!Plasmoid.configuration.favoritesPortedToKAstats) {
                 if (favoritesModel.count < 1) {
-                    favoritesModel.portOldFavorites(plasmoid.configuration.favorites);
+                    favoritesModel.portOldFavorites(Plasmoid.configuration.favorites);
                 }
-                plasmoid.configuration.favoritesPortedToKAstats = true;
+                Plasmoid.configuration.favoritesPortedToKAstats = true;
             }
         }
     }
@@ -86,9 +86,9 @@ PlasmoidItem {
     readonly property Kicker.ComputerModel computerModel: Kicker.ComputerModel {
         appletInterface: kickoff
         favoritesModel: rootModel.favoritesModel
-        systemApplications: plasmoid.configuration.systemApplications
+        systemApplications: Plasmoid.configuration.systemApplications
         Component.onCompleted: {
-            //systemApplications = plasmoid.configuration.systemApplications;
+            //systemApplications = Plasmoid.configuration.systemApplications;
         }
     }
 
@@ -126,7 +126,7 @@ PlasmoidItem {
         readonly property real bottomPadding: margins.bottom - Math.max(inset.bottom, 0)
         readonly property real spacing: leftPadding
         visible: false
-        imagePath: plasmoid.formFactor === PlasmaCore.Types.Planar ? "widgets/background" : "dialogs/background"
+        imagePath: Plasmoid.formFactor === PlasmaCore.Types.Planar ? "widgets/background" : "dialogs/background"
     }
 
     // This is here rather than in the singleton with the other metrics items
@@ -151,7 +151,7 @@ PlasmoidItem {
     readonly property int minimumGridRowCount: Math.min(Screen.desktopAvailableWidth, Screen.desktopAvailableHeight) * Screen.devicePixelRatio < KickoffSingleton.gridCellSize * 4 + (fullRepresentationItem ? fullRepresentationItem.normalPage.preferredSideBarWidth : KickoffSingleton.gridCellSize * 2) ? 2 : 4
     //END
 
-    Plasmoid.icon: plasmoid.configuration.icon
+    Plasmoid.icon: Plasmoid.configuration.icon
 
     switchWidth: fullRepresentationItem ? fullRepresentationItem.Layout.minimumWidth : -1
     switchHeight: fullRepresentationItem ? fullRepresentationItem.Layout.minimumHeight : -1
@@ -169,7 +169,7 @@ PlasmoidItem {
         id: compactRoot
 
         // Taken from DigitalClock to ensure uniform sizing when next to each other
-        readonly property bool tooSmall: plasmoid.formFactor === PlasmaCore.Types.Horizontal && Math.round(2 * (compactRoot.height / 5)) <= Kirigami.Theme.smallFont.pixelSize
+        readonly property bool tooSmall: Plasmoid.formFactor === PlasmaCore.Types.Horizontal && Math.round(2 * (compactRoot.height / 5)) <= Kirigami.Theme.smallFont.pixelSize
 
         readonly property bool shouldHaveIcon: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.icon !== ""
         readonly property bool shouldHaveLabel: Plasmoid.formFactor !== PlasmaCore.Types.Vertical && Plasmoid.configuration.menuLabel !== ""
@@ -256,7 +256,7 @@ PlasmoidItem {
                 Layout.preferredWidth: kickoff.vertical ? -1 : height / (implicitHeight / implicitWidth)
                 Layout.preferredHeight: !kickoff.vertical ? -1 : width * (implicitHeight / implicitWidth)
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-                source: Tools.iconOrDefault(plasmoid.formFactor, plasmoid.icon)
+                source: Tools.iconOrDefault(Plasmoid.formFactor, Plasmoid.icon)
                 active: compactRoot.containsMouse || compactDragArea.containsDrag
                 roundToIconSize: implicitHeight === implicitWidth
                 visible: valid
@@ -303,14 +303,14 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18n("Edit Applications…")
             icon.name: "kmenuedit"
-            visible: plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+            visible: Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
             onTriggered: processRunner.runMenuEditor()
         }
     ]
 
     Component.onCompleted: {
-        if (plasmoid.hasOwnProperty("activationTogglesExpanded")) {
-            plasmoid.activationTogglesExpanded = true
+        if (Plasmoid.hasOwnProperty("activationTogglesExpanded")) {
+            Plasmoid.activationTogglesExpanded = true
         }
     }
 } // root

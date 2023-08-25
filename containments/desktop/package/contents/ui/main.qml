@@ -41,7 +41,7 @@ ContainmentItem {
 
     function switchSize() {
         // Support expanding into the full representation on very thick vertical panels.
-        if (isPopup && plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+        if (isPopup && Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
             return Kirigami.Units.gridUnit * 8;
         }
 
@@ -51,10 +51,10 @@ ContainmentItem {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    property bool isFolder: (plasmoid.pluginName === "org.kde.plasma.folder")
+    property bool isFolder: (Plasmoid.pluginName === "org.kde.plasma.folder")
     property bool isContainment: Plasmoid.isContainment
-    property bool isPopup: (plasmoid.location !== PlasmaCore.Types.Floating)
-    property bool useListViewMode: isPopup && plasmoid.configuration.viewMode === 0
+    property bool isPopup: (Plasmoid.location !== PlasmaCore.Types.Floating)
+    property bool useListViewMode: isPopup && Plasmoid.configuration.viewMode === 0
 
     property Component appletAppearanceComponent
     property Item toolBox
@@ -73,7 +73,7 @@ ContainmentItem {
 
     // Plasmoid.title is set by a Binding {} in FolderViewLayer
     toolTipSubText: ""
-    Plasmoid.icon: (!plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? symbolicizeIconName(folderViewLayer.view.model.iconName) : plasmoid.configuration.icon
+    Plasmoid.icon: (!Plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? symbolicizeIconName(folderViewLayer.view.model.iconName) : Plasmoid.configuration.icon
 
     onIconHeightChanged: updateGridSize()
 
@@ -124,7 +124,7 @@ ContainmentItem {
             height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + Kirigami.Units.gridUnit;
         }
 
-        if (plasmoid.configuration.labelMode !== 0) {
+        if (Plasmoid.configuration.labelMode !== 0) {
             height += folderViewLayer.item.labelHeight;
         }
 
@@ -143,7 +143,7 @@ ContainmentItem {
     }
 
     onExternalData: (mimetype, data) => {
-        plasmoid.configuration.url = data
+        Plasmoid.configuration.url = data
     }
 
     KSvg.FrameSvgItem {
@@ -180,14 +180,14 @@ ContainmentItem {
 
         anchors {
             fill: parent
-            leftMargin: (isContainment && plasmoid.availableScreenRect) ? plasmoid.availableScreenRect.x : 0
-            topMargin: (isContainment && plasmoid.availableScreenRect) ? plasmoid.availableScreenRect.y : 0
+            leftMargin: (isContainment && Plasmoid.availableScreenRect) ? Plasmoid.availableScreenRect.x : 0
+            topMargin: (isContainment && Plasmoid.availableScreenRect) ? Plasmoid.availableScreenRect.y : 0
 
-            rightMargin: (isContainment && plasmoid.availableScreenRect && parent)
-                ? (parent.width - plasmoid.availableScreenRect.x - plasmoid.availableScreenRect.width) : 0
+            rightMargin: (isContainment && Plasmoid.availableScreenRect && parent)
+                ? (parent.width - Plasmoid.availableScreenRect.x - Plasmoid.availableScreenRect.width) : 0
 
-            bottomMargin: (isContainment && plasmoid.availableScreenRect && parent)
-                ? (parent.height - plasmoid.availableScreenRect.y - plasmoid.availableScreenRect.height) : 0
+            bottomMargin: (isContainment && Plasmoid.availableScreenRect && parent)
+                ? (parent.height - Plasmoid.availableScreenRect.y - Plasmoid.availableScreenRect.height) : 0
         }
 
         Behavior on anchors.topMargin {
@@ -218,7 +218,7 @@ ContainmentItem {
         preventStealing: true
 
         onDragEnter: event => {
-            if (isContainment && plasmoid.immutable && !(isFolder && FolderTools.isFileDrag(event))) {
+            if (isContainment && Plasmoid.immutable && !(isFolder && FolderTools.isFileDrag(event))) {
                 event.ignore();
             }
 
@@ -286,29 +286,29 @@ ContainmentItem {
         }
 
         Connections {
-            target: plasmoid.containment.corona
+            target: Plasmoid.containment.corona
             ignoreUnknownSignals: true
             function onEditModeChanged() {
-                appletsLayout.editMode = plasmoid.containment.corona.editMode;
+                appletsLayout.editMode = Plasmoid.containment.corona.editMode;
             }
         }
 
         ContainmentLayoutManager.AppletsLayout {
             id: appletsLayout
             anchors.fill: parent
-            relayoutLock: width != plasmoid.availableScreenRect.width || height != plasmoid.availableScreenRect.height
-            // NOTE: use plasmoid.availableScreenRect and not own width and height as they are updated not atomically
-            configKey: "ItemGeometries-" + Math.round(plasmoid.screenGeometry.width) + "x" + Math.round(plasmoid.screenGeometry.height)
-            fallbackConfigKey: plasmoid.availableScreenRect.width > plasmoid.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
+            relayoutLock: width != Plasmoid.availableScreenRect.width || height != Plasmoid.availableScreenRect.height
+            // NOTE: use Plasmoid.availableScreenRect and not own width and height as they are updated not atomically
+            configKey: "ItemGeometries-" + Math.round(Plasmoid.screenGeometry.width) + "x" + Math.round(Plasmoid.screenGeometry.height)
+            fallbackConfigKey: Plasmoid.availableScreenRect.width > Plasmoid.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
 
-            containment: plasmoid
+            containment: Plasmoid
             containmentItem: root
-            editModeCondition: plasmoid.immutable
+            editModeCondition: Plasmoid.immutable
                     ? ContainmentLayoutManager.AppletsLayout.Locked
                     : ContainmentLayoutManager.AppletsLayout.AfterPressAndHold
 
             // Sets the containment in edit mode when we go in edit mode as well
-            onEditModeChanged: plasmoid.containment.corona.editMode = editMode;
+            onEditModeChanged: Plasmoid.containment.corona.editMode = editMode;
 
             minimumItemWidth: Kirigami.Units.gridUnit * 3
             minimumItemHeight: minimumItemWidth
@@ -320,7 +320,7 @@ ContainmentItem {
 
             appletContainerComponent: ContainmentLayoutManager.BasicAppletContainer {
                 id: appletContainer
-                editModeCondition: plasmoid.immutable
+                editModeCondition: Plasmoid.immutable
                     ? ContainmentLayoutManager.ItemContainer.Locked
                     : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
                 configOverlayComponent: ConfigOverlay {}
@@ -328,10 +328,10 @@ ContainmentItem {
                     var pos = mapToItem(root.parent, dragCenter.x, dragCenter.y);
                     var newCont = root.containmentItemAt(pos.x, pos.y);
 
-                    if (newCont && newCont.plasmoid !== plasmoid) {
-                        var newPos = newCont.mapFromApplet(plasmoid, pos.x, pos.y);
+                    if (newCont && newCont.plasmoid !== Plasmoid) {
+                        var newPos = newCont.mapFromApplet(Plasmoid, pos.x, pos.y);
 
-                        newCont.plasmoid.addApplet(appletContainer.applet.plasmoid, Qt.rect(newPos.x, newPos.y, appletContainer.applet.width, appletContainer.applet.height));
+                        newCont.Plasmoid.addApplet(appletContainer.applet.plasmoid, Qt.rect(newPos.x, newPos.y, appletContainer.applet.width, appletContainer.applet.height));
                         appletsLayout.hidePlaceHolder();
                     }
                 }

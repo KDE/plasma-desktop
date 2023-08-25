@@ -10,12 +10,12 @@ const iconMargin = Math.round(Kirigami.Units.smallSpacing / 4);
 const labelMargin = Kirigami.Units.smallSpacing;
 
 function horizontalMargins() {
-    const spacingAdjustment = (plasmoid.pluginName === "org.kde.plasma.icontasks") ? (Kirigami.Settings.tabletMode ? 3 : plasmoid.configuration.iconSpacing) : 1
+    const spacingAdjustment = (tasks.plasmoid.pluginName === "org.kde.plasma.icontasks") ? (Kirigami.Settings.tabletMode ? 3 : tasks.plasmoid.configuration.iconSpacing) : 1
     return (taskFrame.margins.left + taskFrame.margins.right) * (tasks.vertical ? 1 : spacingAdjustment);
 }
 
 function verticalMargins() {
-    const spacingAdjustment = (plasmoid.pluginName === "org.kde.plasma.icontasks") ? (Kirigami.Settings.tabletMode ? 3 : plasmoid.configuration.iconSpacing) : 1
+    const spacingAdjustment = (tasks.plasmoid.pluginName === "org.kde.plasma.icontasks") ? (Kirigami.Settings.tabletMode ? 3 : tasks.plasmoid.configuration.iconSpacing) : 1
     return (taskFrame.margins.top + taskFrame.margins.bottom) * (tasks.vertical ? spacingAdjustment : 1);
 }
 
@@ -47,11 +47,11 @@ function maxStripes() {
     var length = tasks.vertical ? tasks.width : tasks.height;
     var minimum = tasks.vertical ? preferredMinWidth() : preferredMinHeight();
 
-    return Math.min(plasmoid.configuration.maxStripes, Math.max(1, Math.floor(length / minimum)));
+    return Math.min(tasks.plasmoid.configuration.maxStripes, Math.max(1, Math.floor(length / minimum)));
 }
 
 function tasksPerStripe() {
-    if (plasmoid.configuration.forceStripes) {
+    if (tasks.plasmoid.configuration.forceStripes) {
         return Math.ceil(logicalTaskCount() / maxStripes());
     } else {
         var length = tasks.vertical ? taskList.height : taskList.width;
@@ -62,7 +62,7 @@ function tasksPerStripe() {
 }
 
 function calculateStripes() {
-    var stripes = plasmoid.configuration.forceStripes ? plasmoid.configuration.maxStripes : Math.min(plasmoid.configuration.maxStripes, Math.ceil(logicalTaskCount() / tasksPerStripe()));
+    var stripes = tasks.plasmoid.configuration.forceStripes ? tasks.plasmoid.configuration.maxStripes : Math.min(tasks.plasmoid.configuration.maxStripes, Math.ceil(logicalTaskCount() / tasksPerStripe()));
 
     return Math.min(stripes, maxStripes());
 }
@@ -84,7 +84,7 @@ function optimumCapacity(width, height) {
 }
 
 function layoutWidth() {
-    if (plasmoid.configuration.forceStripes && !tasks.vertical) {
+    if (tasks.plasmoid.configuration.forceStripes && !tasks.vertical) {
         return Math.min(tasks.width, Math.max(preferredMaxWidth(), tasksPerStripe() * preferredMaxWidth()));
     } else {
         return tasks.width;
@@ -92,7 +92,7 @@ function layoutWidth() {
 }
 
 function layoutHeight() {
-    if (plasmoid.configuration.forceStripes && tasks.vertical) {
+    if (tasks.plasmoid.configuration.forceStripes && tasks.vertical) {
         return Math.min(tasks.height, Math.max(preferredMaxHeight(), tasksPerStripe() * preferredMaxHeight()));
     } else {
         return tasks.height;
@@ -120,7 +120,7 @@ function preferredMaxWidth() {
         }
     }
 
-    if (plasmoid.configuration.groupingStrategy != 0 && !plasmoid.configuration.groupPopups && !tasks.iconsOnly) {
+    if (tasks.plasmoid.configuration.groupingStrategy != 0 && !tasks.plasmoid.configuration.groupPopups && !tasks.iconsOnly) {
         return preferredMinWidth();
     }
 
@@ -220,9 +220,9 @@ function layout(container) {
 
         adjustedWidth = width;
 
-        if (!tasks.vertical && !tasks.iconsOnly && (plasmoid.configuration.separateLaunchers || stripes == 1)) {
+        if (!tasks.vertical && !tasks.iconsOnly && (tasks.plasmoid.configuration.separateLaunchers || stripes == 1)) {
             if (item.m.IsLauncher
-                || (!plasmoid.configuration.separateLaunchers && item.m.IsStartup && item.m.HasLauncher)) {
+                || (!tasks.plasmoid.configuration.separateLaunchers && item.m.IsStartup && item.m.HasLauncher)) {
                 adjustedWidth = launcherWidth();
             } else if (stripes > 1 && i == tasksModel.logicalLauncherCount) {
                 adjustedWidth += launcherLayoutWidthDiff();

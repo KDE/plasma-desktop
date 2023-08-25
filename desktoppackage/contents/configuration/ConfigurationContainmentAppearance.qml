@@ -63,7 +63,7 @@ Item {
         }
 
         Kirigami.InlineMessage {
-            visible: plasmoid.immutable || animating
+            visible: Plasmoid.immutable || animating
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes have been restricted by the system administrator")
             showCloseButton: true
             Layout.fillWidth: true
@@ -80,7 +80,7 @@ Item {
                 id: pluginComboBox
                 Layout.preferredWidth: Math.max(implicitWidth, wallpaperComboBox.implicitWidth)
                 Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout:")
-                enabled: !plasmoid.immutable
+                enabled: !Plasmoid.immutable
                 model: configDialog.containmentPluginsConfigModel
                 textRole: "name"
                 onActivated: {

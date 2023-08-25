@@ -91,7 +91,7 @@ Kicker.SubMenu {
 
     function delayedDestroy() {
         aboutToBeDestroyed = true;
-        plasmoid.hideOnWindowDeactivate = false;
+        Plasmoid.hideOnWindowDeactivate = false;
         visible = false;
 
         Qt.callLater(() => itemDialog.destroy());

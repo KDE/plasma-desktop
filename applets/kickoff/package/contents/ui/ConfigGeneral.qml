@@ -17,18 +17,19 @@ import org.kde.iconthemes as KIconThemes
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
+import org.kde.plasma.plasmoid 2.0
 
 import "code/tools.js" as Tools
 
 ColumnLayout {
 
     property string cfg_menuLabel: menuLabel.text
-    property string cfg_icon: plasmoid.configuration.icon
-    property int cfg_favoritesDisplay: plasmoid.configuration.favoritesDisplay
-    property int cfg_applicationsDisplay: plasmoid.configuration.applicationsDisplay
+    property string cfg_icon: Plasmoid.configuration.icon
+    property int cfg_favoritesDisplay: Plasmoid.configuration.favoritesDisplay
+    property int cfg_applicationsDisplay: Plasmoid.configuration.applicationsDisplay
     property alias cfg_alphaSort: alphaSort.checked
-    property var cfg_systemFavorites: String(plasmoid.configuration.systemFavorites)
-    property int cfg_primaryActions: plasmoid.configuration.primaryActions
+    property var cfg_systemFavorites: String(Plasmoid.configuration.systemFavorites)
+    property int cfg_primaryActions: Plasmoid.configuration.primaryActions
     property alias cfg_showActionButtonCaptions: showActionButtonCaptions.checked
     property alias cfg_compactMode: compactModeCheckbox.checked
 
@@ -60,7 +61,7 @@ ColumnLayout {
             KSvg.FrameSvgItem {
                 id: previewFrame
                 anchors.centerIn: parent
-                imagePath: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
+                imagePath: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.formFactor === PlasmaCore.Types.Horizontal
                         ? "widgets/panel-background" : "widgets/background"
                 width: Kirigami.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
                 height: Kirigami.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
@@ -69,7 +70,7 @@ ColumnLayout {
                     anchors.centerIn: parent
                     width: Kirigami.Units.iconSizes.large
                     height: width
-                    source: Tools.iconOrDefault(plasmoid.formFactor, cfg_icon)
+                    source: Tools.iconOrDefault(Plasmoid.formFactor, cfg_icon)
                 }
             }
 
@@ -94,7 +95,7 @@ ColumnLayout {
                 MenuItem {
                     text: i18nc("@action:inmenu", "Remove icon")
                     icon.name: "delete"
-                    enabled: cfg_icon !== "" && menuLabel.text && plasmoid.formFactor !== PlasmaCore.Types.Vertical
+                    enabled: cfg_icon !== "" && menuLabel.text && Plasmoid.formFactor !== PlasmaCore.Types.Vertical
                     onClicked: cfg_icon = ""
                 }
             }
@@ -102,9 +103,9 @@ ColumnLayout {
 
         Kirigami.ActionTextField {
             id: menuLabel
-            enabled: plasmoid.formFactor !== PlasmaCore.Types.Vertical
+            enabled: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
             Kirigami.FormData.label: i18nc("@label:textbox", "Text label:")
-            text: plasmoid.configuration.menuLabel
+            text: Plasmoid.configuration.menuLabel
             placeholderText: i18nc("@info:placeholder", "Type here to add a text label")
             onTextEdited: {
                 cfg_menuLabel = menuLabel.text
@@ -133,7 +134,7 @@ ColumnLayout {
         Label {
             Layout.fillWidth: true
             Layout.maximumWidth: Kirigami.Units.gridUnit * 25
-            visible: plasmoid.formFactor === PlasmaCore.Types.Vertical
+            visible: Plasmoid.formFactor === PlasmaCore.Types.Vertical
             text: i18nc("@info", "A text label cannot be set when the Panel is vertical.")
             wrapMode: Text.Wrap
             font: Kirigami.Theme.smallFont
@@ -152,7 +153,7 @@ ColumnLayout {
         CheckBox {
             id: compactModeCheckbox
             text: i18n("Use compact list item style")
-            checked: Kirigami.Settings.tabletMode ? true : plasmoid.configuration.compactMode
+            checked: Kirigami.Settings.tabletMode ? true : Plasmoid.configuration.compactMode
             enabled: !Kirigami.Settings.tabletMode
         }
         Label {
@@ -180,7 +181,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show favorites in a grid'", "In a grid")
             ButtonGroup.group: favoritesDisplayGroup
             property int index: 0
-            checked: plasmoid.configuration.favoritesDisplay === index
+            checked: Plasmoid.configuration.favoritesDisplay === index
         }
 
         RadioButton {
@@ -188,7 +189,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show favorites in a list'", "In a list")
             ButtonGroup.group: favoritesDisplayGroup
             property int index: 1
-            checked: plasmoid.configuration.favoritesDisplay === index
+            checked: Plasmoid.configuration.favoritesDisplay === index
         }
 
         RadioButton {
@@ -197,7 +198,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show other applications in a grid'", "In a grid")
             ButtonGroup.group: applicationsDisplayGroup
             property int index: 0
-            checked: plasmoid.configuration.applicationsDisplay === index
+            checked: Plasmoid.configuration.applicationsDisplay === index
         }
 
         RadioButton {
@@ -205,7 +206,7 @@ ColumnLayout {
             text: i18nc("Part of a sentence: 'Show other applications in a list'", "In a list")
             ButtonGroup.group: applicationsDisplayGroup
             property int index: 1
-            checked: plasmoid.configuration.applicationsDisplay === index
+            checked: Plasmoid.configuration.applicationsDisplay === index
         }
 
         Item {
@@ -219,7 +220,7 @@ ColumnLayout {
             ButtonGroup.group: radioGroup
             property string actions: "suspend,hibernate,reboot,shutdown"
             property int index: 0
-            checked: plasmoid.configuration.primaryActions === index
+            checked: Plasmoid.configuration.primaryActions === index
         }
 
         RadioButton {
@@ -228,7 +229,7 @@ ColumnLayout {
             ButtonGroup.group: radioGroup
             property string actions: "lock-screen,logout,save-session,switch-user"
             property int index: 1
-            checked: plasmoid.configuration.primaryActions === index
+            checked: Plasmoid.configuration.primaryActions === index
         }
 
         RadioButton {
@@ -237,7 +238,7 @@ ColumnLayout {
             ButtonGroup.group: radioGroup
             property string actions: "lock-screen,logout,save-session,switch-user,suspend,hibernate,reboot,shutdown"
             property int index: 3
-            checked: plasmoid.configuration.primaryActions === index
+            checked: Plasmoid.configuration.primaryActions === index
         }
 
         CheckBox {

@@ -19,6 +19,7 @@ import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
 import org.kde.coreaddons 1.0 as KCoreAddons
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
+import org.kde.plasma.plasmoid 2.0
 
 PlasmaExtras.PlasmoidHeading {
     id: root
@@ -190,9 +191,9 @@ PlasmaExtras.PlasmoidHeading {
         PC3.ToolButton {
             id: configureButton
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            visible: plasmoid.internalAction("configure").enabled
+            visible: Plasmoid.internalAction("configure").enabled
             icon.name: "configure"
-            text: plasmoid.internalAction("configure").text
+            text: Plasmoid.internalAction("configure").text
             display: PC3.ToolButton.IconOnly
 
             PC3.ToolTip.text: text
@@ -208,11 +209,11 @@ PlasmaExtras.PlasmoidHeading {
             } else {
                 nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
             }
-            onClicked: plasmoid.internalAction("configure").trigger()
+            onClicked: Plasmoid.internalAction("configure").trigger()
         }
         PC3.ToolButton {
             checkable: true
-            checked: plasmoid.configuration.pin
+            checked: Plasmoid.configuration.pin
             icon.name: "window-pin"
             text: i18n("Keep Open")
             display: PC3.ToolButton.IconOnly
@@ -222,7 +223,7 @@ PlasmaExtras.PlasmoidHeading {
             Binding {
                 target: kickoff
                 property: "hideOnWindowDeactivate"
-                value: !plasmoid.configuration.pin
+                value: !Plasmoid.configuration.pin
                 // there should be no other bindings, so don't waste resources
                 restoreMode: Binding.RestoreNone
             }
@@ -238,7 +239,7 @@ PlasmaExtras.PlasmoidHeading {
             Keys.onRightPressed: if (LayoutMirroring.enabled) {
                 nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
             }
-            onToggled: plasmoid.configuration.pin = checked
+            onToggled: Plasmoid.configuration.pin = checked
         }
     }
 }

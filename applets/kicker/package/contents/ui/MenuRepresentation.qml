@@ -13,6 +13,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasmoid 2.0
 
 FocusScope {
     id: root
@@ -48,8 +49,8 @@ FocusScope {
 
         spacing: Kirigami.Units.smallSpacing
 
-        LayoutMirroring.enabled: ((plasmoid.location === PlasmaCore.Types.RightEdge)
-            || (Qt.application.layoutDirection === Qt.RightToLeft && plasmoid.location !== PlasmaCore.Types.LeftEdge))
+        LayoutMirroring.enabled: ((Plasmoid.location === PlasmaCore.Types.RightEdge)
+            || (Qt.application.layoutDirection === Qt.RightToLeft && Plasmoid.location !== PlasmaCore.Types.LeftEdge))
 
         KSvg.FrameSvgItem {
             id: sideBar
@@ -77,7 +78,7 @@ FocusScope {
 
                 states: [ State {
                     name: "top"
-                    when: (plasmoid.location === PlasmaCore.Types.TopEdge)
+                    when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
 
                     AnchorChanges {
                         target: favoriteApps
@@ -118,7 +119,7 @@ FocusScope {
 
                 states: [ State {
                     name: "top"
-                    when: (plasmoid.location === PlasmaCore.Types.TopEdge)
+                    when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
 
                     AnchorChanges {
                         target: sidebarSeparator
@@ -145,7 +146,7 @@ FocusScope {
 
                 states: [ State {
                     name: "top"
-                    when: (plasmoid.location === PlasmaCore.Types.TopEdge)
+                    when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
 
                     AnchorChanges {
                         target: favoriteSystemActions
@@ -172,7 +173,7 @@ FocusScope {
 
             visible: searchField.text === ""
 
-            iconsEnabled: plasmoid.configuration.showIconsRootLevel
+            iconsEnabled: Plasmoid.configuration.showIconsRootLevel
 
             model: rootModel
 
@@ -182,7 +183,7 @@ FocusScope {
 
             states: [ State {
                 name: "top"
-                when: (plasmoid.location === PlasmaCore.Types.TopEdge)
+                when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
 
                 AnchorChanges {
                     target: rootList
@@ -326,7 +327,7 @@ FocusScope {
 
         states: [ State {
             name: "top"
-            when: plasmoid.location === PlasmaCore.Types.TopEdge
+            when: Plasmoid.location === PlasmaCore.Types.TopEdge
 
             AnchorChanges {
                 target: searchField
@@ -344,8 +345,8 @@ FocusScope {
         },
         State {
             name: "right"
-            when: (plasmoid.location === PlasmaCore.Types.RightEdge && Qt.application.layoutDirection === Qt.LeftToRight)
-                || (plasmoid.location === PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection === Qt.RightToLeft)
+            when: (Plasmoid.location === PlasmaCore.Types.RightEdge && Qt.application.layoutDirection === Qt.LeftToRight)
+                || (Plasmoid.location === PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection === Qt.RightToLeft)
 
             AnchorChanges {
                 target: searchField

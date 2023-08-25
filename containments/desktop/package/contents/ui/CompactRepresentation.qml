@@ -7,6 +7,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.kirigami 2.20 as Kirigami
@@ -17,10 +18,10 @@ DragDrop.DropArea {
         PlasmaCore.Types.LeftEdge,
         PlasmaCore.Types.RightEdge,
         PlasmaCore.Types.BottomEdge,
-    ].includes(plasmoid.location)
+    ].includes(Plasmoid.location)
 
-    Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
-    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.iconSizes.sizeForLabels)
+    Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
+    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.iconSizes.sizeForLabels)
 
     property Item folderView: null
 
@@ -49,7 +50,7 @@ DragDrop.DropArea {
 
         active: mouseArea.containsMouse
 
-        source: plasmoid.configuration.useCustomIcon ? plasmoid.configuration.icon : folderView.model.iconName
+        source: Plasmoid.configuration.useCustomIcon ? Plasmoid.configuration.icon : folderView.model.iconName
     }
 
     MouseArea {

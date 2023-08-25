@@ -14,15 +14,15 @@ import org.kde.kirigami 2.20 as Kirigami
 Item {
     id: main
 
-    property bool isVertical: plasmoid.formFactor === 3
+    property bool isVertical: Plasmoid.formFactor === 3
 
     width: Kirigami.Settings.hasTransientTouchInput
-            ? (isVertical ? plasmoid.width : height)
+            ? (isVertical ? Plasmoid.width : height)
             : (isVertical
                 ? Kirigami.Units.iconSizes.medium
                 : Kirigami.Units.iconSizes.smallMedium + Kirigami.Units.smallSpacing * 2)
     height: Kirigami.Settings.hasTransientTouchInput
-            ? (isVertical ? width : plasmoid.height)
+            ? (isVertical ? width : Plasmoid.height)
             : (isVertical
                 ? Kirigami.Units.iconSizes.smallMedium + Kirigami.Units.smallSpacing * 2
                 : Kirigami.Units.iconSizes.medium)
@@ -31,18 +31,18 @@ Item {
 
     states: [
         State {
-            when: plasmoid.containment.corona.editMode
+            when: Plasmoid.containment.corona.editMode
             PropertyChanges {
                 target: main
                 visible: true
             }
             PropertyChanges {
                 target: main
-                opacity: mouseArea.containsMouse || plasmoid.userConfiguring ? 1 : 0.5
+                opacity: mouseArea.containsMouse || Plasmoid.userConfiguring ? 1 : 0.5
             }
         },
         State {
-            when: !plasmoid.containment.corona.editMode
+            when: !Plasmoid.containment.corona.editMode
             PropertyChanges {
                 target: main
                 visible: false
@@ -81,10 +81,10 @@ Item {
     }
 
     Connections {
-        target: plasmoid
+        target: Plasmoid
         function onUserConfiguringChanged() {
-            if (plasmoid.userConfiguring) {
-                plasmoid.containment.corona.editMode = true;
+            if (Plasmoid.userConfiguring) {
+                Plasmoid.containment.corona.editMode = true;
                 toolTipArea.hideToolTip();
             }
         }
@@ -94,7 +94,7 @@ Item {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: enabled
-        enabled: plasmoid.containment.corona.editMode || plasmoid.userConfiguring
+        enabled: Plasmoid.containment.corona.editMode || Plasmoid.userConfiguring
         onClicked: {
             main.Plasmoid.internalAction("configure").trigger()
         }

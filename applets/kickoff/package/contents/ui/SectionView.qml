@@ -7,6 +7,7 @@
 import QtQuick 2.15
 
 import org.kde.plasma.components 3.0 as PC3
+import org.kde.plasma.plasmoid 2.0
 
 KickoffGridView {
     id: root
@@ -55,7 +56,7 @@ KickoffGridView {
         }
 
         onClicked: {
-            const isGridView = plasmoid.configuration.applicationsDisplay === 0
+            const isGridView = Plasmoid.configuration.applicationsDisplay === 0
             const destinationIndex = isGridView ? index : model.firstIndex
             root.hideSectionViewRequested(destinationIndex)
         }

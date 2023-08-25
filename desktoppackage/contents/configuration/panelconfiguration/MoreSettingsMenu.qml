@@ -7,6 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.0
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -19,7 +20,7 @@ import org.kde.kirigami 2.20 as Kirigami
 PlasmaCore.Dialog {
     id: contextMenu
     visualParent: settingsButton
-    location: plasmoid.location
+    location: Plasmoid.location
     type: PlasmaCore.Dialog.PopupMenu
     flags: Qt.Popup | Qt.FramelessWindowHint | Qt.WindowDoesNotAcceptFocus
     mainItem: ColumnLayout {
@@ -65,7 +66,7 @@ PlasmaCore.Dialog {
                     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
                     PC3.ToolTip.visible: hovered
 
-                    onClicked: plasmoid.internalAction("remove").trigger();
+                    onClicked: Plasmoid.internalAction("remove").trigger();
                 }
 
             }
@@ -284,9 +285,9 @@ PlasmaCore.Dialog {
 
                 KeySequenceItem {
                     id: button
-                    keySequence: plasmoid.globalShortcut
+                    keySequence: Plasmoid.globalShortcut
                     onCaptureFinished: {
-                        plasmoid.globalShortcut = button.keySequence
+                        Plasmoid.globalShortcut = button.keySequence
                     }
                 }
             }

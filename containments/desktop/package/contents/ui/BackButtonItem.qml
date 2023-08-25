@@ -50,7 +50,7 @@ KSvg.FrameSvgItem {
 
         onPressed: mouse => {
             if (mouse.buttons & Qt.BackButton) {
-                if (root.isPopup && dir.resolvedUrl !== dir.resolve(plasmoid.configuration.url)) {
+                if (root.isPopup && dir.resolvedUrl !== dir.resolve(Plasmoid.configuration.url)) {
                     doBack();
                     ignoreClick = true;
                 }
@@ -97,7 +97,7 @@ KSvg.FrameSvgItem {
 
         textFormat: Text.PlainText
 
-        maximumLineCount: root.isPopup ? 1 : plasmoid.configuration.textLines
+        maximumLineCount: root.isPopup ? 1 : Plasmoid.configuration.textLines
         wrapMode: Text.Wrap
         elide: Text.ElideRight
 

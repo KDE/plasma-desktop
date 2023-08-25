@@ -11,6 +11,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasmoid 2.0
 
 AbstractButton {
     id: controlRoot
@@ -75,7 +76,7 @@ AbstractButton {
         }
         PC3.Label {
             id: label
-            visible: plasmoid.formFactor === PlasmaCore.Types.Horizontal && plasmoid.configuration.showText
+            visible: Plasmoid.formFactor === PlasmaCore.Types.Horizontal && Plasmoid.configuration.showText
 
             text: controlRoot.Kirigami.MnemonicData.richTextLabel
 

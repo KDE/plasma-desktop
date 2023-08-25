@@ -27,11 +27,11 @@ PlasmaExtras.Menu {
     property bool showAllPlaces: false
 
     placement: {
-        if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
+        if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
             return PlasmaCore.Types.RightPosedTopAlignedPopup;
-        } else if (plasmoid.location === PlasmaCore.Types.TopEdge) {
+        } else if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
             return PlasmaCore.Types.BottomPosedLeftAlignedPopup;
-        } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
+        } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
             return PlasmaCore.Types.LeftPosedTopAlignedPopup;
         } else {
             return PlasmaCore.Types.TopPosedLeftAlignedPopup;
@@ -67,7 +67,7 @@ PlasmaExtras.Menu {
     }
 
     function show() {
-        plasmoid.contextualActionsAboutToShow();
+        Plasmoid.contextualActionsAboutToShow();
 
         loadDynamicLaunchActions(get(atm.LauncherUrlWithoutIcon));
         openRelative();
@@ -499,7 +499,7 @@ PlasmaExtras.Menu {
         visible: visualParent
                      && !get(atm.IsLauncher)
                      && !get(atm.IsStartup)
-                     && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+                     && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities < 2)
                      && !doesBelongToCurrentActivity()
 
@@ -527,7 +527,7 @@ PlasmaExtras.Menu {
 
         visible: visualParent
                      && !get(atm.IsStartup)
-                     && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+                     && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities >= 2)
 
         property Connections activitiesLaunchersMenuConnections: Connections {
@@ -602,7 +602,7 @@ PlasmaExtras.Menu {
     PlasmaExtras.MenuItem {
         visible: (visualParent
                 && get(atm.IsStartup) !== true
-                && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+                && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                 && !launcherToggleAction.visible
                 && activityInfo.numberOfRunningActivities < 2)
 
@@ -722,7 +722,7 @@ PlasmaExtras.Menu {
             }
 
             PlasmaExtras.MenuItem {
-                visible: (plasmoid.configuration.groupingStrategy !== 0) && menu.get(atm.IsWindow)
+                visible: (Plasmoid.configuration.groupingStrategy !== 0) && menu.get(atm.IsWindow)
 
                 checkable: true
                 checked: menu.visualParent && menu.get(atm.IsGroupable)
@@ -748,7 +748,7 @@ PlasmaExtras.Menu {
 
                 onClicked: configureAction.trigger()
 
-                Component.onCompleted: configureAction = plasmoid.internalAction("configure")
+                Component.onCompleted: configureAction = Plasmoid.internalAction("configure")
             }
 
             PlasmaExtras.MenuItem {
@@ -762,7 +762,7 @@ PlasmaExtras.Menu {
 
                 onClicked: alternativesAction.trigger()
 
-                Component.onCompleted: alternativesAction = plasmoid.internalAction("alternatives")
+                Component.onCompleted: alternativesAction = Plasmoid.internalAction("alternatives")
             }
         }
     }

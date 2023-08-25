@@ -12,6 +12,7 @@ import QtQml 2.15
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasmoid 2.0
 
 // ScrollView makes it difficult to control implicit size using the contentItem.
 // Using EmptyPage instead.
@@ -96,7 +97,7 @@ EmptyPage {
             // use grid cells to determine size
             let h = KickoffSingleton.gridCellSize * kickoff.minimumGridRowCount
             // If no grids are used, use the number of items that would fit in the grid height
-            if (plasmoid.configuration.favoritesDisplay !== 0 && plasmoid.configuration.applicationsDisplay !== 0) {
+            if (Plasmoid.configuration.favoritesDisplay !== 0 && Plasmoid.configuration.applicationsDisplay !== 0) {
                 h = Math.floor(h / kickoff.listDelegateHeight) * kickoff.listDelegateHeight
             }
             return h + topMargin + bottomMargin

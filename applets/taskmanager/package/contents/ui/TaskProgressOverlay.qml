@@ -8,6 +8,7 @@ import QtQuick 2.15
 import QtQuick.Templates 2.15 as T
 
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.plasma.plasmoid 2.0
 
 import "code/tools.js" as TaskTools
 
@@ -33,7 +34,7 @@ T.ProgressBar {
             height: parent.height
 
             imagePath: "widgets/tasks"
-            prefix: TaskTools.taskPrefix("progress", plasmoid.location).concat(TaskTools.taskPrefix("hover", plasmoid.location))
+            prefix: TaskTools.taskPrefix("progress", Plasmoid.location).concat(TaskTools.taskPrefix("hover", Plasmoid.location))
         }
     }
 

@@ -11,12 +11,13 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasmoid 2.0
 
 PlasmoidItem {
     id: kimpanel
 
     property int visibleButtons: 0
-    readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -51,7 +52,7 @@ PlasmoidItem {
 
             // The icon size to display when not using the auto-scaling setting
             readonly property int smallIconSize: Kirigami.Units.iconSizes.smallMedium
-            readonly property bool autoSize: plasmoid.configuration.scaleIconsToFit
+            readonly property bool autoSize: Plasmoid.configuration.scaleIconsToFit
 
             readonly property int gridThickness: kimpanel.vertical ? kimpanel.width : kimpanel.height
             // Should change to 2 rows/columns on a 56px panel (in standard DPI)
@@ -147,10 +148,10 @@ PlasmoidItem {
     function hideAction(key) {
         // We must use assignment to change the configuration property,
         // otherwise it won't get notified.
-        var hiddenList = plasmoid.configuration.hiddenList;
+        var hiddenList = Plasmoid.configuration.hiddenList;
         if (hiddenList.indexOf(key) === -1) {
             hiddenList.push(key);
-            plasmoid.configuration.hiddenList = hiddenList;
+            Plasmoid.configuration.hiddenList = hiddenList;
         }
         timer.restart();
     }
@@ -158,11 +159,11 @@ PlasmoidItem {
     function showAction(key) {
         // We must use assignment to change the configuration property,
         // otherwise it won't get notified.
-        var hiddenList = plasmoid.configuration.hiddenList;
+        var hiddenList = Plasmoid.configuration.hiddenList;
         var index = hiddenList.indexOf(key);
         if (index !== -1) {
             hiddenList.splice(index, 1);
-            plasmoid.configuration.hiddenList = hiddenList;
+            Plasmoid.configuration.hiddenList = hiddenList;
         }
         timer.restart();
     }
@@ -199,7 +200,7 @@ PlasmoidItem {
             var c = 0, i;
             var hiddenActions = [];
             for (i = 0; i < data.length; i ++) {
-                if (plasmoid.configuration.hiddenList.indexOf(data[i].key) !== -1) {
+                if (Plasmoid.configuration.hiddenList.indexOf(data[i].key) !== -1) {
                     hiddenActions.push({'key': data[i].key,
                                 'icon': data[i].icon,
                                 'label': data[i].label});
@@ -214,7 +215,7 @@ PlasmoidItem {
 
             c = 0;
             for (i = 0; i < data.length; i ++) {
-                if (plasmoid.configuration.hiddenList.indexOf(data[i].key) !== -1) {
+                if (Plasmoid.configuration.hiddenList.indexOf(data[i].key) !== -1) {
                     continue;
                 }
                 var itemData = {'key': data[i].key,

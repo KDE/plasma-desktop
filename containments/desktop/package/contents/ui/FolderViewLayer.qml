@@ -30,7 +30,7 @@ FocusScope {
     property alias overflowing: folderView.overflowing
     property alias flow: folderView.flow
 
-    property string resolution: Math.round(plasmoid.screenGeometry.width) + "x" + Math.round(plasmoid.screenGeometry.height)
+    property string resolution: Math.round(Plasmoid.screenGeometry.width) + "x" + Math.round(Plasmoid.screenGeometry.height)
 
     readonly property bool lockedByKiosk: !KAuthorized.authorize("editable_desktop_icons")
 
@@ -41,7 +41,7 @@ FocusScope {
 
         for (let i = 0, len = sharedActions.length; i < len; i++) {
             const actionName = sharedActions[i];
-            const appletAction = plasmoid.internalAction(actionName);
+            const appletAction = Plasmoid.internalAction(actionName);
             if (appletAction) {
                 modelAction = folderView.model.action(actionName);
                 appletAction.text = modelAction.text;
@@ -56,15 +56,15 @@ FocusScope {
     }
 
     function goHome() {
-        if (folderView.url !== plasmoid.configuration.url) {
-            folderView.url = Qt.binding(() => plasmoid.configuration.url);
+        if (folderView.url !== Plasmoid.configuration.url) {
+            folderView.url = Qt.binding(() => Plasmoid.configuration.url);
             folderView.history = [];
             folderView.updateHistory();
         }
     }
 
     Binding {
-        target: plasmoid
+        target: Plasmoid
         property: "title"
         value: labelGenerator.displayLabel
         restoreMode: Binding.RestoreBinding
@@ -75,8 +75,8 @@ FocusScope {
 
         folderModel: folderView.model
         rtl: (Qt.application.layoutDirection === Qt.RightToLeft)
-        labelMode: plasmoid.configuration.labelMode || (isContainment ? 0 : 1)
-        labelText: plasmoid.configuration.labelText
+        labelMode: Plasmoid.configuration.labelMode || (isContainment ? 0 : 1)
+        labelText: Plasmoid.configuration.labelText
     }
 
     Folder.ViewPropertiesMenu {
@@ -89,48 +89,48 @@ FocusScope {
         lockedEnabled: !lockedByKiosk
 
         onArrangementChanged: {
-            plasmoid.configuration.arrangement = arrangement;
+            Plasmoid.configuration.arrangement = arrangement;
         }
 
         onAlignmentChanged: {
-            plasmoid.configuration.alignment = alignment;
+            Plasmoid.configuration.alignment = alignment;
         }
 
         onPreviewsChanged: {
-            plasmoid.configuration.previews = previews;
+            Plasmoid.configuration.previews = previews;
         }
 
         onLockedChanged: {
             if (!lockedByKiosk) {
-                plasmoid.configuration.locked = locked;
+                Plasmoid.configuration.locked = locked;
             }
         }
 
         onSortModeChanged: {
-            plasmoid.configuration.sortMode = sortMode;
+            Plasmoid.configuration.sortMode = sortMode;
         }
 
         onSortDescChanged: {
-            plasmoid.configuration.sortDesc = sortDesc;
+            Plasmoid.configuration.sortDesc = sortDesc;
         }
 
         onSortDirsFirstChanged: {
-            plasmoid.configuration.sortDirsFirst = sortDirsFirst;
+            Plasmoid.configuration.sortDirsFirst = sortDirsFirst;
         }
 
         onIconSizeChanged: {
-            plasmoid.configuration.iconSize = iconSize;
+            Plasmoid.configuration.iconSize = iconSize;
         }
 
         Component.onCompleted: {
-            arrangement = plasmoid.configuration.arrangement;
-            alignment = plasmoid.configuration.alignment;
-            previews = plasmoid.configuration.previews;
-            locked = plasmoid.configuration.locked || lockedByKiosk;
-            sortMode = plasmoid.configuration.sortMode;
-            sortDesc = plasmoid.configuration.sortDesc;
-            sortDirsFirst = plasmoid.configuration.sortDirsFirst;
-            iconSize = plasmoid.configuration.iconSize;
+            arrangement = Plasmoid.configuration.arrangement;
+            alignment = Plasmoid.configuration.alignment;
+            previews = Plasmoid.configuration.previews;
+            locked = Plasmoid.configuration.locked || lockedByKiosk;
+            sortMode = Plasmoid.configuration.sortMode;
+            sortDesc = Plasmoid.configuration.sortDesc;
+            sortDirsFirst = Plasmoid.configuration.sortDirsFirst;
+            iconSize = Plasmoid.configuration.iconSize;
         }
     }
 
@@ -167,10 +167,10 @@ FocusScope {
     function getPositions() {
         let allPositions;
         try {
-            allPositions = JSON.parse(plasmoid.configuration.positions);
+            allPositions = JSON.parse(Plasmoid.configuration.positions);
         } catch (err) {
             allPositions = {};
-            allPositions[resolution] = plasmoid.configuration.positions;
+            allPositions[resolution] = Plasmoid.configuration.positions;
         }
         return allPositions[resolution] || "";
     }
@@ -178,44 +178,44 @@ FocusScope {
     function savePositions(positions) {
         let allPositions;
         try {
-            allPositions = JSON.parse(plasmoid.configuration.positions);
+            allPositions = JSON.parse(Plasmoid.configuration.positions);
         } catch (err) {
             allPositions = {};
         }
         allPositions[resolution] = positions;
-        plasmoid.configuration.positions = JSON.stringify(allPositions, Object.keys(allPositions).sort());
+        Plasmoid.configuration.positions = JSON.stringify(allPositions, Object.keys(allPositions).sort());
     }
 
     Connections {
-        target: plasmoid.configuration
+        target: Plasmoid.configuration
 
         function onArrangementChanged() {
-            viewPropertiesMenu.arrangement = plasmoid.configuration.arrangement;
+            viewPropertiesMenu.arrangement = Plasmoid.configuration.arrangement;
         }
 
         function onAlignmentChanged() {
-            viewPropertiesMenu.alignment = plasmoid.configuration.alignment;
+            viewPropertiesMenu.alignment = Plasmoid.configuration.alignment;
         }
 
         function onLockedChanged() {
-            viewPropertiesMenu.locked = plasmoid.configuration.locked;
+            viewPropertiesMenu.locked = Plasmoid.configuration.locked;
         }
 
         function onSortModeChanged() {
-            folderView.sortMode = plasmoid.configuration.sortMode;
-            viewPropertiesMenu.sortMode = plasmoid.configuration.sortMode;
+            folderView.sortMode = Plasmoid.configuration.sortMode;
+            viewPropertiesMenu.sortMode = Plasmoid.configuration.sortMode;
         }
 
         function onSortDescChanged() {
-            viewPropertiesMenu.sortDesc = plasmoid.configuration.sortDesc;
+            viewPropertiesMenu.sortDesc = Plasmoid.configuration.sortDesc;
         }
 
         function onSortDirsFirstChanged() {
-            viewPropertiesMenu.sortDirsFirst = plasmoid.configuration.sortDirsFirst;
+            viewPropertiesMenu.sortDirsFirst = Plasmoid.configuration.sortDirsFirst;
         }
 
         function onIconSizeChanged() {
-            viewPropertiesMenu.iconSize = plasmoid.configuration.iconSize;
+            viewPropertiesMenu.iconSize = Plasmoid.configuration.iconSize;
         }
 
         function onPositionsChanged() {
@@ -235,18 +235,18 @@ FocusScope {
         focus: true
         isRootView: true
 
-        url: plasmoid.configuration.url
-        locked: (plasmoid.configuration.locked || !isContainment || lockedByKiosk)
-        filterMode: plasmoid.configuration.filterMode
-        filterPattern: plasmoid.configuration.filterPattern
-        filterMimeTypes: plasmoid.configuration.filterMimeTypes
-        showHiddenFiles: plasmoid.configuration.showHiddenFiles
+        url: Plasmoid.configuration.url
+        locked: (Plasmoid.configuration.locked || !isContainment || lockedByKiosk)
+        filterMode: Plasmoid.configuration.filterMode
+        filterPattern: Plasmoid.configuration.filterPattern
+        filterMimeTypes: Plasmoid.configuration.filterMimeTypes
+        showHiddenFiles: Plasmoid.configuration.showHiddenFiles
 
-        flow: (plasmoid.configuration.arrangement === 0) ? GridView.FlowLeftToRight : GridView.FlowTopToBottom
-        layoutDirection: (plasmoid.configuration.alignment === 0) ? Qt.LeftToRight : Qt.RightToLeft
+        flow: (Plasmoid.configuration.arrangement === 0) ? GridView.FlowLeftToRight : GridView.FlowTopToBottom
+        layoutDirection: (Plasmoid.configuration.alignment === 0) ? Qt.LeftToRight : Qt.RightToLeft
 
         onSortModeChanged: {
-            plasmoid.configuration.sortMode = sortMode;
+            Plasmoid.configuration.sortMode = sortMode;
         }
 
         onPositionsChanged: {
@@ -258,7 +258,7 @@ FocusScope {
         }
 
         Component.onCompleted: {
-            folderView.sortMode = plasmoid.configuration.sortMode;
+            folderView.sortMode = Plasmoid.configuration.sortMode;
             folderView.positions = getPositions();
         }
     }
@@ -271,7 +271,7 @@ FocusScope {
 
             // If we bind height to visible, it will be invisible initially (since "visible"
             // propagates recursively) and that confuses the Label, hence the temp property.
-            readonly property bool active: (plasmoid.configuration.labelMode !== 0)
+            readonly property bool active: (Plasmoid.configuration.labelMode !== 0)
 
             readonly property bool showPin: root.isPopup && root.compactRepresentationItem && root.compactRepresentationItem.visible
 
@@ -302,9 +302,9 @@ FocusScope {
                 target: folderView
 
                 function onUrlChanged() {
-                    if (!label.homeButton && folderView.url !== plasmoid.configuration.url) {
+                    if (!label.homeButton && folderView.url !== Plasmoid.configuration.url) {
                         label.homeButton = homeButtonComponent.createObject(label);
-                    } else if (label.homeButton && folderView.url === plasmoid.configuration.url) {
+                    } else if (label.homeButton && folderView.url === Plasmoid.configuration.url) {
                         label.homeButton.destroy();
                     }
                 }
@@ -369,7 +369,7 @@ FocusScope {
 
                     anchors.left: parent.left
 
-                    visible: root.isPopup && folderView.url !== plasmoid.configuration.url
+                    visible: root.isPopup && folderView.url !== Plasmoid.configuration.url
 
                     width: root.isPopup ? Math.round(Kirigami.Units.gridUnit * 1.25) : 0
                     height: width
@@ -407,15 +407,15 @@ FocusScope {
         for (let i = 0, len = sharedActions.length; i < len; i++) {
             const actionName = sharedActions[i];
             const modelAction = folderView.model.action(actionName);
-            plasmoid.contextualActions.push(modelAction)
+            Plasmoid.contextualActions.push(modelAction)
             if (actionName === "newMenu") {
-                plasmoid.contextualActions.push(viewPropertiesAction)
+                Plasmoid.contextualActions.push(viewPropertiesAction)
             }
         }
 
-        plasmoid.contextualActions.push(actionSeparator);
+        Plasmoid.contextualActions.push(actionSeparator);
 
-        plasmoid.contextualActionsAboutToShow.connect(updateContextualActions);
-        plasmoid.contextualActionsAboutToShow.connect(folderView.model.clearSelection);
+        Plasmoid.contextualActionsAboutToShow.connect(updateContextualActions);
+        Plasmoid.contextualActionsAboutToShow.connect(folderView.model.clearSelection);
     }
 }

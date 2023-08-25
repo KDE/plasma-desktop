@@ -7,6 +7,7 @@
 import QtQuick
 
 import org.kde.taskmanager 0.1 as TaskManager
+import org.kde.plasma.plasmoid 2.0
 
 import "code/tools.js" as TaskTools
 
@@ -73,7 +74,7 @@ DropArea {
         // by tracking the cursor movement vector and allowing the drag if
         // the movement direction has reversed, establishing user intent to
         // move back.
-        if (!plasmoid.configuration.separateLaunchers && tasks.dragSource != null
+        if (!Plasmoid.configuration.separateLaunchers && tasks.dragSource != null
                 && tasks.dragSource.m.IsLauncher && !above.m.IsLauncher
                 && above === ignoredItem) {
             return;
@@ -173,10 +174,10 @@ DropArea {
         property bool handleWheelEvents: true
         property int wheelDelta: 0;
 
-        enabled: handleWheelEvents && plasmoid.configuration.wheelEnabled
+        enabled: handleWheelEvents && Plasmoid.configuration.wheelEnabled
 
         onWheel: event => {
-            wheelDelta = TaskTools.wheelActivateNextPrevTask(null, wheelDelta, event.angleDelta.y, plasmoid.configuration.wheelSkipMinimized, tasks);
+            wheelDelta = TaskTools.wheelActivateNextPrevTask(null, wheelDelta, event.angleDelta.y, Plasmoid.configuration.wheelSkipMinimized, tasks);
         }
     }
 }

@@ -15,11 +15,12 @@ import QtQuick.Layouts 1.15
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasmoid 2.0
 
 AbstractKickoffItemDelegate {
     id: root
 
-    property bool compact: Kirigami.Settings.tabletMode ? false : plasmoid.configuration.compactMode
+    property bool compact: Kirigami.Settings.tabletMode ? false : Plasmoid.configuration.compactMode
 
     leftPadding: KickoffSingleton.listItemMetrics.margins.left
     + (mirrored ? KickoffSingleton.fontMetrics.descent : 0)

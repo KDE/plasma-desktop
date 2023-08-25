@@ -17,6 +17,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.20 as Kirigami
 import "code/tools.js" as Tools
+import org.kde.plasma.plasmoid 2.0
 
 T.ItemDelegate {
     id: root
@@ -39,7 +40,7 @@ T.ItemDelegate {
     property int itemHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding)
 
     readonly property bool dragEnabled: enabled && !isCategoryListItem
-        && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+        && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
     readonly property alias mouseArea: mouseArea
 

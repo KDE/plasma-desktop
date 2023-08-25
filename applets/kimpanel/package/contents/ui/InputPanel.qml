@@ -11,6 +11,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasmoid 2.0
 
 PlasmaCore.Dialog {
     id: inputpanel
@@ -26,10 +27,10 @@ PlasmaCore.Dialog {
     }
     location: PlasmaCore.Types.Floating
     visible: helper.auxVisible || helper.preeditVisible || helper.lookupTableVisible
-    readonly property bool verticalLayout: (helper.lookupTableLayout === 1) || (helper.lookupTableLayout === 0 && plasmoid.configuration.vertical_lookup_table);
+    readonly property bool verticalLayout: (helper.lookupTableLayout === 1) || (helper.lookupTableLayout === 0 && Plasmoid.configuration.vertical_lookup_table);
     property int highlightCandidate: helper.lookupTableCursor
     property int hoveredCandidate: -1
-    property font preferredFont: plasmoid.configuration.use_default_font ? Kirigami.Theme.defaultFont : plasmoid.configuration.font
+    property font preferredFont: Plasmoid.configuration.use_default_font ? Kirigami.Theme.defaultFont : Plasmoid.configuration.font
     readonly property alias textOffset: fontMetrics.ascent
     readonly property alias labelHeight: fontMetrics.height
     property rect position: helper.spotRect

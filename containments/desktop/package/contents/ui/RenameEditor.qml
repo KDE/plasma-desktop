@@ -153,7 +153,7 @@ PlasmaComponents.ScrollView {
                 _height = targetItem.labelArea.height + editor.topPadding + editor.bottomPadding;
             } else {
                 var realHeight = contentHeight + editor.topPadding + editor.bottomPadding;
-                var maxHeight = Kirigami.Units.iconSizes.sizeForLabels * (plasmoid.configuration.textLines + 1) + editor.topPadding + editor.bottomPadding;
+                var maxHeight = Kirigami.Units.iconSizes.sizeForLabels * (Plasmoid.configuration.textLines + 1) + editor.topPadding + editor.bottomPadding;
                 _height = Math.min(realHeight, maxHeight);
             }
             return _height + (addWidthHoriozontalScroller ? root.PlasmaComponents.ScrollBar.horizontal.height : 0);

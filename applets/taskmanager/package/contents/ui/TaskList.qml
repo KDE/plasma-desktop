@@ -6,11 +6,12 @@
 
 import QtQuick 2.15
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasmoid 2.0
 
 Flow {
     property bool animating: false
 
-    layoutDirection: (plasmoid.configuration.reverseMode && !tasks.vertical)
+    layoutDirection: (Plasmoid.configuration.reverseMode && !tasks.vertical)
         ? (Qt.application.layoutDirection === Qt.LeftToRight)
             ? Qt.RightToLeft
             : Qt.LeftToRight

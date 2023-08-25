@@ -9,6 +9,7 @@
 import QtQuick 2.5
 import QtQuick.Layouts 1.0
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -45,7 +46,7 @@ MouseArea {
                     return;
                 }
             }
-            if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+            if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                 currentApplet.y = mouse.y - startDragOffset;
             } else {
                 currentApplet.x = mouse.x - startDragOffset;
@@ -110,7 +111,7 @@ MouseArea {
         appletsModel.remove(item.index)
         root.dragAndDropping = true
 
-        if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+        if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
             startDragOffset = mouse.y - currentApplet.y;
         } else {
             startDragOffset = mouse.x - currentApplet.x;
@@ -216,15 +217,15 @@ MouseArea {
 
         type: PlasmaCore.Dialog.Dock
         flags: Qt.WindowStaysOnTopHint|Qt.WindowDoesNotAcceptFocus|Qt.BypassWindowManagerHint
-        location: plasmoid.location
+        location: Plasmoid.location
 
         onVisualParentChanged: {
             if (visualParent) {
                 const plasmoid = configurationArea.currentApplet.applet.plasmoid;
-                plasmoid.contextualActionsAboutToShow();
-                alternativesButton.visible = plasmoid.internalAction("alternatives")?.enabled ?? false;
-                configureButton.visible = plasmoid.internalAction("configure")?.enabled ?? false;
-                label.text = plasmoid.title;
+                Plasmoid.contextualActionsAboutToShow();
+                alternativesButton.visible = Plasmoid.internalAction("alternatives")?.enabled ?? false;
+                configureButton.visible = Plasmoid.internalAction("configure")?.enabled ?? false;
+                label.text = Plasmoid.title;
             }
         }
 

@@ -18,6 +18,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.shell 2.0
 import org.kde.kirigami 2.20 as Kirigami
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 import "code/tools.js" as Tools
@@ -91,7 +92,7 @@ Kicker.DashboardWindow {
         if (tabBar.activeTab === 1 /* Widgets */ || tabBar.hoveredTab === 1) {
             if (!root.widgetExplorer) {
                 root.widgetExplorer = widgetExplorerComponent.createObject(root, {
-                    containment: containmentInterface.screenContainment(plasmoid)
+                    containment: containmentInterface.screenContainment(Plasmoid)
                 });
             }
         } else if (root.widgetExplorer) {
@@ -144,9 +145,9 @@ Kicker.DashboardWindow {
         }
 
         Connections {
-            target: plasmoid
+            target: Plasmoid
             function onUserConfiguringChanged() {
-                if (plasmoid.userConfiguring) {
+                if (Plasmoid.userConfiguring) {
                     root.hide()
                 }
             }
@@ -156,7 +157,7 @@ Kicker.DashboardWindow {
             id: contextMenu
 
             PlasmaExtras.MenuItem {
-                action: plasmoid.internalAction("configure")
+                action: Plasmoid.internalAction("configure")
             }
         }
 
@@ -229,7 +230,7 @@ Kicker.DashboardWindow {
 
             anchors.horizontalCenter: parent.horizontalCenter
 
-            visible: (plasmoid.immutability === PlasmaCore.Types.Mutable)
+            visible: (Plasmoid.immutability === PlasmaCore.Types.Mutable)
 
             onActiveTabChanged: {
                 root.updateWidgetExplorer();

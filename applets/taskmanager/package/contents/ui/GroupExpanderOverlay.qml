@@ -8,6 +8,7 @@ import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.plasma.plasmoid 2.0
 
 KSvg.SvgItem {
     id: arrow
@@ -22,7 +23,7 @@ KSvg.SvgItem {
     states: [
         State {
             name: "top"
-            when: plasmoid.location === PlasmaCore.Types.TopEdge
+            when: Plasmoid.location === PlasmaCore.Types.TopEdge
             AnchorChanges {
                 target: arrow
                 anchors.top: arrow.parent.top
@@ -35,7 +36,7 @@ KSvg.SvgItem {
         },
         State {
             name: "left"
-            when: plasmoid.location === PlasmaCore.Types.LeftEdge
+            when: Plasmoid.location === PlasmaCore.Types.LeftEdge
             AnchorChanges {
                 target: arrow
                 anchors.top: undefined
@@ -48,7 +49,7 @@ KSvg.SvgItem {
         },
         State {
             name: "right"
-            when: plasmoid.location === PlasmaCore.Types.RightEdge
+            when: Plasmoid.location === PlasmaCore.Types.RightEdge
             AnchorChanges {
                 target: arrow
                 anchors.top: undefined
@@ -68,7 +69,7 @@ KSvg.SvgItem {
     elementId: elementForLocation()
 
     function elementForLocation() {
-        switch (plasmoid.location) {
+        switch (Plasmoid.location) {
             case PlasmaCore.Types.LeftEdge:
                 return "group-expander-left";
             case PlasmaCore.Types.TopEdge:

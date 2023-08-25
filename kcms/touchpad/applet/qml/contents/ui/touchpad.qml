@@ -63,7 +63,7 @@ PlasmoidItem {
             anchors.centerIn: parent
             width: parent.width - (Kirigami.Units.gridUnit * 8)
             text: root.toolTipSubText
-            iconName: plasmoid.icon
+            iconName: Plasmoid.icon
         }
     }
 }

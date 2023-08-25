@@ -154,7 +154,7 @@ ContainmentItem {
         }
 
         onDragEnter: event => {
-            if (plasmoid.immutable) {
+            if (Plasmoid.immutable) {
                 event.ignore();
                 return;
             }
@@ -201,7 +201,7 @@ ContainmentItem {
                 property bool isMarginSeparator: ((applet.plasmoid.constraintHints & PlasmaCore.Types.MarginAreasSeparator) == PlasmaCore.Types.MarginAreasSeparator)
                 property int appletIndex: index // To make sure it's always readable even inside other models
                 property bool inThickArea: false
-                visible: applet.plasmoid.status !== PlasmaCore.Types.HiddenStatus || (!plasmoid.immutable && plasmoid.userConfiguring);
+                visible: applet.plasmoid.status !== PlasmaCore.Types.HiddenStatus || (!Plasmoid.immutable && Plasmoid.userConfiguring);
 
                 //when the applet moves caused by its resize, don't animate.
                 //this is completely heuristic, but looks way less "jumpy"
@@ -209,13 +209,13 @@ ContainmentItem {
 
                 Layout.fillWidth: applet && applet.Layout.fillWidth
                 Layout.onFillWidthChanged: {
-                    if (plasmoid.formFactor !== PlasmaCore.Types.Vertical) {
+                    if (Plasmoid.formFactor !== PlasmaCore.Types.Vertical) {
                         checkLastSpacer();
                     }
                 }
                 Layout.fillHeight: applet && applet.Layout.fillHeight
                 Layout.onFillHeightChanged: {
-                    if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+                    if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                         checkLastSpacer();
                     }
                 }
@@ -254,7 +254,7 @@ ContainmentItem {
                     id: marginHighlightElements
                     anchors.fill: parent
                     // index -1 is for floating applets, which do not need a margin highlight
-                    opacity: plasmoid.containment.corona.editMode && dropArea.marginAreasEnabled && !root.dragAndDropping && index != -1 ? 1 : 0
+                    opacity: Plasmoid.containment.corona.editMode && dropArea.marginAreasEnabled && !root.dragAndDropping && index != -1 ? 1 : 0
                     Behavior on opacity {
                         NumberAnimation {
                             duration: Kirigami.Units.longDuration
@@ -377,7 +377,7 @@ ContainmentItem {
             columnSpacing: Kirigami.Units.smallSpacing
 
             x: Qt.application.layoutDirection === Qt.RightToLeft && isHorizontal ? toolBoxSize : 0;
-            readonly property int toolBoxSize: !toolBox || !plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
+            readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
 
     // BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
             width: root.width - (isHorizontal ? toolBoxSize : 0)

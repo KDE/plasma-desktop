@@ -37,7 +37,7 @@ Kirigami.FormLayout {
     CheckBox {
         id: checkShowActivityName
 
-        enabled: plasmoid.formFactor !== PlasmaCore.Types.Vertical
+        enabled: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
 
         Kirigami.FormData.label: i18n("Title:")
 

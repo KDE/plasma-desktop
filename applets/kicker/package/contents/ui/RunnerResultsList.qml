@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.15
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.plasma.plasmoid 2.0
 
 FocusScope {
     width: runnerMatches.width + vertLine.width + vertLine.anchors.leftMargin + runnerMatches.anchors.leftMargin
@@ -61,8 +62,8 @@ FocusScope {
     ItemListView {
         id: runnerMatches
 
-        anchors.top: plasmoid.configuration.alignResultsToBottom ? undefined : header.bottom
-        anchors.bottom: plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
+        anchors.top: Plasmoid.configuration.alignResultsToBottom ? undefined : header.bottom
+        anchors.bottom: Plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
         anchors.bottomMargin: (index == 0 && anchors.bottom !== undefined) ? searchField.height + (2 * Kirigami.Units.smallSpacing) : undefined
         anchors.left: vertLine.right
         anchors.leftMargin: (index > 0) ? Kirigami.Units.smallSpacing : 0
