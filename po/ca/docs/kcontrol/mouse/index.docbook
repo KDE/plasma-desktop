@@ -25,7 +25,7 @@
 
 <abstract>
 <para
->Aquesta és la documentació per al mòdul d'&systemsettings; que configura el ratolí i d'altres dispositius de punter. </para>
+>Aquesta és la documentació per al mòdul d'&systemsettings; que configura el ratolí i altres dispositius apuntadors. </para>
 </abstract>
 
 <keywordset>
@@ -39,7 +39,7 @@
 </articleinfo>
 
 <para
->Aquest mòdul us permet configurar el vostre punter. El punter pot ser un ratolí, una bola, un plafó o qualsevol altre peça de maquinari que faci una funció similar.</para>
+>Aquest mòdul us permet configurar el dispositiu apuntador. Aquest pot ser un ratolí, una bola, un plafó o qualsevol altre peça de maquinari que faci una funció similar.</para>
 
 <variablelist>
 <varlistentry>
@@ -60,7 +60,7 @@
 >esquerre</mousebutton
 > i <mousebutton
 >dret</mousebutton
-> del punter marcant aquesta opció. Si el punter té més de dos botons, tan sols es veuran afectats els botons <mousebutton
+> del dispositiu apuntador marcant aquesta opció. Si el punter té més de dos botons, tan sols es veuran afectats els botons <mousebutton
 >esquerre</mousebutton
 > i <mousebutton
 >dret</mousebutton
@@ -86,7 +86,7 @@
 <varlistentry>
 <term id="peripherals-mouse-acceleration">
 <guilabel
->Velocitat de l'apuntador</guilabel
+>Velocitat del punter</guilabel
 ></term>
 <listitem
 ><para
@@ -97,15 +97,15 @@
 <varlistentry>
 <term
 ><guilabel
->Perfil d'acceleració</guilabel
+>Acceleració del punter</guilabel
 ></term>
 <listitem
 ><para
->El perfil <guilabel
->Adaptativa</guilabel
-> és el perfil predeterminat per a tots els dispositius i té en compte la velocitat actual del dispositiu per a decidir l'acceleració. El perfil <guilabel
->Uniforme</guilabel
-> és senzillament un factor constant que s'aplica a tots els deltes del dispositiu, independentment de la velocitat de moviment. </para>
+>El mode <guilabel
+>Estàndard</guilabel
+> ajusta la quantitat de l'acceleració del punter segons la rapidesa amb la qual mogueu el ratolí. Si s'estableix a <guilabel
+>Sense</guilabel
+>, l'acceleració es manté constant independentment de la velocitat. </para>
 </listitem>
 </varlistentry>
 

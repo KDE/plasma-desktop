@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1658856 2023-08-24 02:09:39Z scripty $
+# $Id: kcm_access.po 1658929 2023-08-25 02:12:51Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 01:57+0000\n"
-"PO-Revision-Date: 2023-07-13 06:43+0200\n"
+"PO-Revision-Date: 2023-08-24 06:40+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -571,10 +571,9 @@ msgid "Maximum speed:"
 msgstr "Največja hitrost:"
 
 #: ui/MouseNavigation.qml:124
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgid "Pointer acceleration:"
-msgstr "Čas pospeševanja:"
+msgstr "Pospeševanje kazalca:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format

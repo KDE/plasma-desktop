@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 01:57+0000\n"
-"PO-Revision-Date: 2023-03-23 23:18+0300\n"
+"PO-Revision-Date: 2023-08-24 06:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -154,12 +154,12 @@ msgstr "İşaretçi hızı:"
 #: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
-msgstr "İmleç hızlandırma:"
+msgstr "İşaretçi ivmelendirmesi:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Yok"
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -169,7 +169,7 @@ msgstr "İmleç, fare hareketiyle aynı mesafede hareket eder."
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Standart"
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -333,7 +333,7 @@ msgstr "Gelişmiş"
 #: kcm/xlib/kcmmouse.ui:174
 #, kde-format
 msgid "Pointer threshold:"
-msgstr "İmleç başlangıcı:"
+msgstr "İşaretçi eşiği:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/kcmmouse.ui:184
@@ -491,7 +491,7 @@ msgstr "&Yineleme aralığı:"
 #: kcm/xlib/kcmmouse.ui:466
 #, kde-format
 msgid "Acceleration &time:"
-msgstr "İ&mleç hızlandırma süresi:"
+msgstr "İvmelendirme &süresi:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: kcm/xlib/kcmmouse.ui:498

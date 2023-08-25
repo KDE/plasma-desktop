@@ -97,15 +97,15 @@
 <varlistentry>
 <term
 ><guilabel
->Versnellingsprofiel</guilabel
+>Aanwijzerversnelling</guilabel
 ></term>
 <listitem
 ><para
->Het profiel <guilabel
->Adaptief</guilabel
-> is het standaard profiel voor alle apparaten en neemt de huidige snelheid van het apparaat in rekening bij het bepalen van de versnelling. Het profiel <guilabel
->Vlak</guilabel
-> is eenvoudig een constante factor toegepast op alle apparaatdelta's, ongeacht de snelheid van bewegen. </para>
+>De modus <guilabel
+>Standaard</guilabel
+> past de hoeveelheid versnelling van de aanwijzer toe volgens het hoe snel u de muis verplaatst. Als u het instelt op <guilabel
+>Geen</guilabel
+>, dan blijft de versnelling constant ongeacht de snelheid. </para>
 </listitem>
 </varlistentry>
 

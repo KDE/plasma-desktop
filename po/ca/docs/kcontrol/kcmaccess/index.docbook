@@ -173,7 +173,7 @@
 <para
 >Si l'usuari prem la tecla &Maj;, després prem la tecla <keycap
 >F</keycap
->. L'ordinador traduirà això com a <keycombo action="simul"
+>. L'ordinador traduirà això com <keycombo action="simul"
 >&Maj;<keycap
 >F</keycap
 ></keycombo
@@ -194,13 +194,13 @@
 >dues vegades</emphasis
 > la tecla &Maj;, després prem la tecla <keycap
 >F</keycap
->, l'ordinador ho traduirà com a <keycombo action="simul"
+>, l'ordinador ho traduirà com <keycombo action="simul"
 >&Maj;<keycap
 >F</keycap
 ></keycombo
 >. Ara, si l'usuari escriu una <keycap
 >P</keycap
->, l'ordinador ho interpretarà com a la lletra P (<keycombo action="simul"
+>, l'ordinador ho interpretarà com la lletra P (<keycombo action="simul"
 >&Maj;<keycap
 >P</keycap
 ></keycombo
@@ -376,24 +376,24 @@ Use system bell whenever a key is rejected
 >Navegació amb el ratolí</title>
 
 <para
->Aquesta pestanya us permet configurar les tecles del teclat numèric per a utilitzar-lo com a un dispositiu apuntador. Això pot ser d'utilitat quan esteu treballant sense un dispositiu apuntador, o quan no teniu cap altre ús per al teclat numèric. </para>
+>Aquesta pestanya us permet configurar les tecles del teclat numèric per a utilitzar-lo com un dispositiu de tipus ratolí. Això pot ser d'utilitat quan esteu treballant sense un dispositiu de punter, o quan no teniu cap altre ús per al teclat numèric. </para>
 
 <variablelist>
 
 <varlistentry>
 <term
 ><guilabel
->Mou l'apuntador amb el teclat (usant el teclat numèric)</guilabel
+>Mou el punter amb el teclat (usant el teclat numèric)</guilabel
 ></term>
 <listitem>
 <para
 >Per a activar el mode de ratolí amb el teclat us caldrà seleccionar la casella de selecció anomenada <guilabel
 >Mou el ratolí amb el teclat (utilitzant el teclat numèric)</guilabel
->. Una vegada fet, s'activaran les altres opcions i podreu personalitzar l'apuntador del teclat perquè es comporti de forma més adequada segons les necessitats. </para>
+>. Una vegada fet, s'activaran les altres opcions i podreu personalitzar el punter del teclat perquè es comporti de forma més adequada segons les necessitats. </para>
 <para
 >Les diverses tecles sobre el teclat numèric mouen en la direcció que s'espera. Cal tenir present que podeu moure diagonalment amunt, avall, dreta i esquerra. La tecla número <keycap
 >5</keycap
-> emula un clic a un botó apuntador, típicament el &BER;. Els diferents botons són emulats per la tecla <keycap
+> emula un clic a un botó del punter, típicament el &BER;. Els diferents botons són emulats per la tecla <keycap
 >/</keycap
 > (fa de &BER;), la tecla <keycap
 >*</keycap
@@ -403,9 +403,9 @@ Use system bell whenever a key is rejected
 >+</keycap
 > emulareu el doble clic. Podeu utilitzar la tecla <keycap
 >0</keycap
-> per a emular el fet de mantenir premut un botó de l'apuntador (per a arrossegar amb facilitat) i aleshores utilitzar la tecla <keycap
+> per a emular el fet de mantenir premut un botó del punter (per a arrossegar amb facilitat) i aleshores utilitzar la tecla <keycap
 >.</keycap
-> per a emular el fet de realitzar l'acció del botó apuntador. </para>
+> per a emular el fet de realitzar l'acció del botó del punter. </para>
 </listitem>
 </varlistentry>
 
@@ -438,7 +438,7 @@ Use system bell whenever a key is rejected
 ></term>
 <listitem>
 <para
->Aquest és el temps en mil·lisegons abans que l'apuntador abasti una velocitat màxima per a l'acceleració de la tecla del ratolí. </para>
+>Aquest és el temps en mil·lisegons abans que el punter arribi a una velocitat màxima per l'acceleració de la tecla del ratolí. </para>
 </listitem>
 </varlistentry>
 
@@ -449,18 +449,18 @@ Use system bell whenever a key is rejected
 ></term>
 <listitem>
 <para
->Aquesta és la velocitat màxima en píxels per segon que l'apuntador pot abastar per a l'acceleració de la tecla del ratolí. </para>
+>Aquesta és la velocitat màxima en píxels per segon que el punter pot arribar per l'acceleració de la tecla del ratolí. </para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Perfil d'acceleració</guilabel
+>Acceleració del punter</guilabel
 ></term>
 <listitem>
 <para
->Aquesta és la declinació de la corba d'acceleració per a l'acceleració de la tecla del ratolí. </para>
+>Aquesta és la quantitat d'acceleració a aplicar a l'acceleració de la tecla del ratolí. </para>
 </listitem>
 </varlistentry>
 

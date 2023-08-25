@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 01:57+0000\n"
-"PO-Revision-Date: 2023-07-06 22:45+0300\n"
+"PO-Revision-Date: 2023-08-24 06:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -140,20 +140,19 @@ msgid ""
 msgstr "Sol ve sağ aynı anda tıklamak orta düğme tıklaması sağlar."
 
 #: kcm/libinput/touchpad.qml:254
-#, fuzzy, kde-format
-#| msgid "Minimum pointer speed"
+#, kde-format
 msgid "Pointer speed:"
-msgstr "En düşük işaretçi hızı"
+msgstr "İşaretçi hızı:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
-msgstr "İşaretçi hızlandırma:"
+msgstr "İşaretçi ivmelendirmesi:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Yok"
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -163,7 +162,7 @@ msgstr "İmleç, parmakla aynı mesafede hareket eder."
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Standart"
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -616,13 +615,13 @@ msgstr "En fazla işaretçi hızı"
 #, kde-format
 msgctxt "Pointer acceleration"
 msgid "Acceleration:"
-msgstr "İvmelenme:"
+msgstr "İvmelendirme:"
 
 #. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
 #: kcm/xlib/ui/pointermotion.ui:85
 #, kde-format
 msgid "Acceleration factor for normal pointer movements"
-msgstr "Normal işaretçi hareketleri için ivmelenme oranı"
+msgstr "Normal işaretçi hareketleri için ivmelendirme çarpanı"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: kcm/xlib/ui/pointermotion.ui:101
@@ -643,7 +642,7 @@ msgstr "En az basınç:"
 #, kde-format
 msgctxt "Pressure-dependent pointer motion"
 msgid "Minimum factor:"
-msgstr "En az oran:"
+msgstr "En düşük çarpan:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: kcm/xlib/ui/pointermotion.ui:133
@@ -657,31 +656,31 @@ msgstr "En fazla basınç:"
 #, kde-format
 msgctxt "Pressure-dependent pointer motion"
 msgid "Maximum factor:"
-msgstr "En fazla oran:"
+msgstr "En yüksek çarpan:"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMinZ)
 #: kcm/xlib/ui/pointermotion.ui:153
 #, kde-format
 msgid "Finger pressure at which minimum pressure motion factor is applied"
-msgstr "En az basınç hareket oranının uygulanacağı parmak basıncı"
+msgstr "En düşük basınç hareket çarpanının uygulandığı parmak basıncı"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
 #: kcm/xlib/ui/pointermotion.ui:166
 #, kde-format
 msgid "Finger pressure at which maximum pressure motion factor is applied"
-msgstr "En fazla basınç hareket oranının uygulanacağı parmak basıncı"
+msgstr "En yüksek basınç hareket çarpanının uygulandığı parmak basıncı"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
 #: kcm/xlib/ui/pointermotion.ui:179
 #, kde-format
 msgid "Lowest setting for pressure motion factor"
-msgstr "Basınç hareket oranı için en düşük ayarlar"
+msgstr "Basınç hareket çarpanı için en düşük ayar"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMaxFactor)
 #: kcm/xlib/ui/pointermotion.ui:189
 #, kde-format
 msgid "Greatest setting for pressure motion factor"
-msgstr "Basınç hareket oranı için en yüksek ayarlar"
+msgstr "Basınç hareket çarpanı için en yüksek ayar"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: kcm/xlib/ui/pointermotion.ui:202

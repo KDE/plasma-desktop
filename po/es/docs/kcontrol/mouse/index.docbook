@@ -139,15 +139,15 @@
 <varlistentry>
 <term
 ><guilabel
->Perfil de aceleración</guilabel
+>Aceleración del puntero</guilabel
 ></term>
 <listitem
 ><para
->El perfil <guilabel
->Adaptable</guilabel
-> es el perfil predeterminado para todos los dispositivos y tiene en cuenta la velocidad actual del dispositivo al decidir la aceleración. El perfil <guilabel
->Plano</guilabel
-> es solamente un factor constante que se aplica a todos los deltas del dispositivo, independientemente de la velocidad de movimiento. </para>
+>El modo <guilabel
+>Estándar</guilabel
+> ajusta la cantidad de aceleración del puntero según la velocidad con la que mueva el ratón. Si la ajusta a <guilabel
+>Ninguna</guilabel
+>, la aceleración permanece constante sin tener en cuenta la velocidad. </para>
 </listitem>
 </varlistentry>
 
