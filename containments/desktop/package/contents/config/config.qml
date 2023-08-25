@@ -14,7 +14,7 @@ ConfigModel {
 
     ConfigCategory {
          name: i18n("Location")
-         icon: "folder"
+         icon: "inode-directory"
          source: "ConfigLocation.qml"
          visible: isFolder
     }
