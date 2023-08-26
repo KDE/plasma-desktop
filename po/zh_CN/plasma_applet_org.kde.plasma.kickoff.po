@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 01:59+0000\n"
+"POT-Creation-Date: 2023-08-26 02:00+0000\n"
 "PO-Revision-Date: 2023-08-02 12:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -48,18 +48,18 @@ msgstr "在当前活动中"
 msgid "Show in Favorites"
 msgstr "显示到常用程序"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:40
 #, kde-format
 msgid "Icon:"
 msgstr "图标："
 
-#: package/contents/ui/ConfigGeneral.qml:45
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "更改应用程序启动器图标"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -67,144 +67,144 @@ msgid ""
 "to the default icon."
 msgstr "当前图标是 %1。点击打开菜单更改当前图标或重置为默认图标。"
 
-#: package/contents/ui/ConfigGeneral.qml:50
+#: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "图标名称是“%1”"
 
-#: package/contents/ui/ConfigGeneral.qml:83
+#: package/contents/ui/ConfigGeneral.qml:84
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "选择…"
 
-#: package/contents/ui/ConfigGeneral.qml:85
+#: package/contents/ui/ConfigGeneral.qml:86
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "选择应用程序启动器的图标"
 
-#: package/contents/ui/ConfigGeneral.qml:89
+#: package/contents/ui/ConfigGeneral.qml:90
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "重置为默认值图标"
 
-#: package/contents/ui/ConfigGeneral.qml:95
+#: package/contents/ui/ConfigGeneral.qml:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "移除图标"
 
-#: package/contents/ui/ConfigGeneral.qml:106
+#: package/contents/ui/ConfigGeneral.qml:107
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "文字标签："
 
-#: package/contents/ui/ConfigGeneral.qml:108
+#: package/contents/ui/ConfigGeneral.qml:109
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "在此输入要添加的文字标签"
 
-#: package/contents/ui/ConfigGeneral.qml:123
+#: package/contents/ui/ConfigGeneral.qml:124
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "重置菜单标签"
 
-#: package/contents/ui/ConfigGeneral.qml:137
+#: package/contents/ui/ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "面板垂直时无法设置文字标签。"
 
-#: package/contents/ui/ConfigGeneral.qml:148
+#: package/contents/ui/ConfigGeneral.qml:149
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "常规："
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "总是按字母顺序排列应用程序"
 
-#: package/contents/ui/ConfigGeneral.qml:154
+#: package/contents/ui/ConfigGeneral.qml:155
 #, kde-format
 msgid "Use compact list item style"
 msgstr "使用紧凑列表项目风格"
 
-#: package/contents/ui/ConfigGeneral.qml:160
+#: package/contents/ui/ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "在触摸模式下自动禁用"
 
-#: package/contents/ui/ConfigGeneral.qml:169
+#: package/contents/ui/ConfigGeneral.qml:170
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "配置已启用的搜索插件…"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgid "Show favorites:"
 msgstr "常用程序显示方式："
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "网格"
 
-#: package/contents/ui/ConfigGeneral.qml:188
+#: package/contents/ui/ConfigGeneral.qml:189
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "列表"
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: package/contents/ui/ConfigGeneral.qml:197
 #, kde-format
 msgid "Show other applications:"
 msgstr "显示其他应用程序："
 
-#: package/contents/ui/ConfigGeneral.qml:197
+#: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "网格"
 
-#: package/contents/ui/ConfigGeneral.qml:205
+#: package/contents/ui/ConfigGeneral.qml:206
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "列表"
 
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:218
 #, kde-format
 msgid "Show buttons for:"
 msgstr "显示按钮："
 
-#: package/contents/ui/ConfigGeneral.qml:218
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "Power"
 msgstr "电源"
 
-#: package/contents/ui/ConfigGeneral.qml:227
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgid "Session"
 msgstr "会话"
 
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:237
 #, kde-format
 msgid "Power and session"
 msgstr "电源和会话"
 
-#: package/contents/ui/ConfigGeneral.qml:245
+#: package/contents/ui/ConfigGeneral.qml:246
 #, kde-format
 msgid "Show action button captions"
 msgstr "显示操作按钮文字"
@@ -225,12 +225,12 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr "无匹配项"
 
-#: package/contents/ui/Header.qml:64
+#: package/contents/ui/Header.qml:65
 #, kde-format
 msgid "Open user settings"
 msgstr "打开用户设置"
 
-#: package/contents/ui/Header.qml:217
+#: package/contents/ui/Header.qml:218
 #, kde-format
 msgid "Keep Open"
 msgstr "保持打开"
@@ -245,12 +245,12 @@ msgstr "编辑应用程序…"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "%1 行 %2 列的网格"
 
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "Leave"
 msgstr "离开"
 
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "More"
 msgstr "更多"

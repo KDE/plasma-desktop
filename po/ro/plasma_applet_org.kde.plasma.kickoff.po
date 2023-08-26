@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 01:59+0000\n"
+"POT-Creation-Date: 2023-08-26 02:00+0000\n"
 "PO-Revision-Date: 2022-12-28 21:19+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -50,19 +50,19 @@ msgstr "Pe activitatea curentă"
 msgid "Show in Favorites"
 msgstr "Arată în favorite"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:40
 #, kde-format
 msgid "Icon:"
 msgstr "Pictogramă:"
 
-#: package/contents/ui/ConfigGeneral.qml:45
+#: package/contents/ui/ConfigGeneral.qml:46
 #, fuzzy, kde-format
 #| msgid "Application Launcher"
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Lansator de aplicații"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -70,145 +70,145 @@ msgid ""
 "to the default icon."
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:50
+#: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:83
+#: package/contents/ui/ConfigGeneral.qml:84
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Alege…"
 
-#: package/contents/ui/ConfigGeneral.qml:85
+#: package/contents/ui/ConfigGeneral.qml:86
 #, fuzzy, kde-format
 #| msgid "Application Launcher"
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Lansator de aplicații"
 
-#: package/contents/ui/ConfigGeneral.qml:89
+#: package/contents/ui/ConfigGeneral.qml:90
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Reinițializează la pictograma implicită"
 
-#: package/contents/ui/ConfigGeneral.qml:95
+#: package/contents/ui/ConfigGeneral.qml:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Elimină pictograma"
 
-#: package/contents/ui/ConfigGeneral.qml:106
+#: package/contents/ui/ConfigGeneral.qml:107
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Etichetă textuală:"
 
-#: package/contents/ui/ConfigGeneral.qml:108
+#: package/contents/ui/ConfigGeneral.qml:109
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Tastați aici pentru a adăuga o etichetă textuală"
 
-#: package/contents/ui/ConfigGeneral.qml:123
+#: package/contents/ui/ConfigGeneral.qml:124
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:137
+#: package/contents/ui/ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Eticheta textuală nu poate fi adăugată când panoul e vertical."
 
-#: package/contents/ui/ConfigGeneral.qml:148
+#: package/contents/ui/ConfigGeneral.qml:149
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Generale:"
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Sortează aplicațiile alfabetic întotdeauna"
 
-#: package/contents/ui/ConfigGeneral.qml:154
+#: package/contents/ui/ConfigGeneral.qml:155
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Folosește stil compact pentru elementele listei"
 
-#: package/contents/ui/ConfigGeneral.qml:160
+#: package/contents/ui/ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Dezactivată automat în regim tactil"
 
-#: package/contents/ui/ConfigGeneral.qml:169
+#: package/contents/ui/ConfigGeneral.qml:170
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Configurează extensiile de căutare active…"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgid "Show favorites:"
 msgstr "Arată favoritele:"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "într-o grilă"
 
-#: package/contents/ui/ConfigGeneral.qml:188
+#: package/contents/ui/ConfigGeneral.qml:189
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "într-o listă"
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: package/contents/ui/ConfigGeneral.qml:197
 #, kde-format
 msgid "Show other applications:"
 msgstr "Arată alte aplicații:"
 
-#: package/contents/ui/ConfigGeneral.qml:197
+#: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "într-o grilă"
 
-#: package/contents/ui/ConfigGeneral.qml:205
+#: package/contents/ui/ConfigGeneral.qml:206
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "într-o listă"
 
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:218
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Arată butoane pentru:"
 
-#: package/contents/ui/ConfigGeneral.qml:218
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "Power"
 msgstr "Alimentare"
 
-#: package/contents/ui/ConfigGeneral.qml:227
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgid "Session"
 msgstr "Sesiune"
 
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:237
 #, kde-format
 msgid "Power and session"
 msgstr "Alimentare și sesiune"
 
-#: package/contents/ui/ConfigGeneral.qml:245
+#: package/contents/ui/ConfigGeneral.qml:246
 #, kde-format
 msgid "Show action button captions"
 msgstr "Arată etichete pentru butoane de acțiune"
@@ -229,12 +229,12 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr ""
 
-#: package/contents/ui/Header.qml:64
+#: package/contents/ui/Header.qml:65
 #, kde-format
 msgid "Open user settings"
 msgstr "Deschide configurările utilizatorului"
 
-#: package/contents/ui/Header.qml:217
+#: package/contents/ui/Header.qml:218
 #, kde-format
 msgid "Keep Open"
 msgstr "Ține deschis"
@@ -249,12 +249,12 @@ msgstr "Modifică aplicații…"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Grilă cu %1 rânduri, %2 coloane"
 
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "Leave"
 msgstr "Pleacă"
 
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "More"
 msgstr "Mai multe"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 01:59+0000\n"
+"POT-Creation-Date: 2023-08-26 02:00+0000\n"
 "PO-Revision-Date: 2020-10-25 18:49+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -48,18 +48,18 @@ msgstr "Aktiivses tegevuses"
 msgid "Show in Favorites"
 msgstr "Näita lemmikutes"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:40
 #, kde-format
 msgid "Icon:"
 msgstr "Ikoon:"
 
-#: package/contents/ui/ConfigGeneral.qml:45
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -67,13 +67,13 @@ msgid ""
 "to the default icon."
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:50
+#: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:83
+#: package/contents/ui/ConfigGeneral.qml:84
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu Open icon chooser dialog"
 #| msgid "Choose..."
@@ -81,137 +81,137 @@ msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Vali..."
 
-#: package/contents/ui/ConfigGeneral.qml:85
+#: package/contents/ui/ConfigGeneral.qml:86
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:89
+#: package/contents/ui/ConfigGeneral.qml:90
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:95
+#: package/contents/ui/ConfigGeneral.qml:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:106
+#: package/contents/ui/ConfigGeneral.qml:107
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:108
+#: package/contents/ui/ConfigGeneral.qml:109
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:123
+#: package/contents/ui/ConfigGeneral.qml:124
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:137
+#: package/contents/ui/ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:148
+#: package/contents/ui/ConfigGeneral.qml:149
 #, fuzzy, kde-format
 #| msgid "General:"
 msgctxt "General options"
 msgid "General:"
 msgstr "Üldine:"
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: package/contents/ui/ConfigGeneral.qml:150
 #, fuzzy, kde-format
 #| msgid "Sort alphabetically"
 msgid "Always sort applications alphabetically"
 msgstr "Sordi tähestiku järgi"
 
-#: package/contents/ui/ConfigGeneral.qml:154
+#: package/contents/ui/ConfigGeneral.qml:155
 #, kde-format
 msgid "Use compact list item style"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:160
+#: package/contents/ui/ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:169
+#: package/contents/ui/ConfigGeneral.qml:170
 #, fuzzy, kde-format
 #| msgid "Configure enabled search plugins"
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Seadista lubatud otsingupluginaid"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:180
 #, fuzzy, kde-format
 #| msgid "Show in Favorites"
 msgid "Show favorites:"
 msgstr "Näita lemmikutes"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:188
+#: package/contents/ui/ConfigGeneral.qml:189
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: package/contents/ui/ConfigGeneral.qml:197
 #, fuzzy, kde-format
 #| msgid "Show applications by name"
 msgid "Show other applications:"
 msgstr "Rakenduste näitamine nime järgi"
 
-#: package/contents/ui/ConfigGeneral.qml:197
+#: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:205
+#: package/contents/ui/ConfigGeneral.qml:206
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:218
 #, kde-format
 msgid "Show buttons for:"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:218
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "Power"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:227
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgid "Session"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:237
 #, kde-format
 msgid "Power and session"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:245
+#: package/contents/ui/ConfigGeneral.qml:246
 #, kde-format
 msgid "Show action button captions"
 msgstr ""
@@ -232,12 +232,12 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr ""
 
-#: package/contents/ui/Header.qml:64
+#: package/contents/ui/Header.qml:65
 #, kde-format
 msgid "Open user settings"
 msgstr ""
 
-#: package/contents/ui/Header.qml:217
+#: package/contents/ui/Header.qml:218
 #, kde-format
 msgid "Keep Open"
 msgstr ""
@@ -253,12 +253,12 @@ msgstr "Muuda rakendusi..."
 msgid "Grid with %1 rows, %2 columns"
 msgstr ""
 
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "Leave"
 msgstr "Väljumine"
 
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "More"
 msgstr ""

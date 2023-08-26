@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 01:59+0000\n"
+"POT-Creation-Date: 2023-08-26 02:00+0000\n"
 "PO-Revision-Date: 2023-02-01 23:08+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -47,18 +47,18 @@ msgstr "Sur le activitate currente"
 msgid "Show in Favorites"
 msgstr "Monstra in Favoritos"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:40
 #, kde-format
 msgid "Icon:"
 msgstr "Icone:"
 
-#: package/contents/ui/ConfigGeneral.qml:45
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Cambia icone de Lanceator de application"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -68,145 +68,145 @@ msgstr ""
 "Icone currente es %1. Pulsa pro aperir menu per cambiar le icone currente o "
 "refixar al icone predefinite."
 
-#: package/contents/ui/ConfigGeneral.qml:50
+#: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Nomine de icone es \"%1\""
 
-#: package/contents/ui/ConfigGeneral.qml:83
+#: package/contents/ui/ConfigGeneral.qml:84
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Selige…"
 
-#: package/contents/ui/ConfigGeneral.qml:85
+#: package/contents/ui/ConfigGeneral.qml:86
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Selige un icone per Lanceator de application"
 
-#: package/contents/ui/ConfigGeneral.qml:89
+#: package/contents/ui/ConfigGeneral.qml:90
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Refixa a icone predfinite"
 
-#: package/contents/ui/ConfigGeneral.qml:95
+#: package/contents/ui/ConfigGeneral.qml:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Remove icone"
 
-#: package/contents/ui/ConfigGeneral.qml:106
+#: package/contents/ui/ConfigGeneral.qml:107
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Etiquetta de texto:"
 
-#: package/contents/ui/ConfigGeneral.qml:108
+#: package/contents/ui/ConfigGeneral.qml:109
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Typa hic pro adder un etiquetta de texto"
 
-#: package/contents/ui/ConfigGeneral.qml:123
+#: package/contents/ui/ConfigGeneral.qml:124
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Refixa etiquetta de menu"
 
-#: package/contents/ui/ConfigGeneral.qml:137
+#: package/contents/ui/ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
 "Un etiquetta de texto non pote esser fixate quando le Pannello es vertical."
 
-#: package/contents/ui/ConfigGeneral.qml:148
+#: package/contents/ui/ConfigGeneral.qml:149
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "General:"
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Sempre ordina applicationes alphabeticamente"
 
-#: package/contents/ui/ConfigGeneral.qml:154
+#: package/contents/ui/ConfigGeneral.qml:155
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Usa stilo le elemento de lista compacte"
 
-#: package/contents/ui/ConfigGeneral.qml:160
+#: package/contents/ui/ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Automaticamente dishabilitate quando in modo de tocco (Touch Mode)"
 
-#: package/contents/ui/ConfigGeneral.qml:169
+#: package/contents/ui/ConfigGeneral.qml:170
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Configura plugins de cerca habilitate..."
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgid "Show favorites:"
 msgstr "Monstra favoritos:"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "In un grillia"
 
-#: package/contents/ui/ConfigGeneral.qml:188
+#: package/contents/ui/ConfigGeneral.qml:189
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "In un lista"
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: package/contents/ui/ConfigGeneral.qml:197
 #, kde-format
 msgid "Show other applications:"
 msgstr "Monstra altere applicationes:"
 
-#: package/contents/ui/ConfigGeneral.qml:197
+#: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "In un grillia"
 
-#: package/contents/ui/ConfigGeneral.qml:205
+#: package/contents/ui/ConfigGeneral.qml:206
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "In un lista"
 
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:218
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Monstra buttones per:"
 
-#: package/contents/ui/ConfigGeneral.qml:218
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "Power"
 msgstr "Potentia"
 
-#: package/contents/ui/ConfigGeneral.qml:227
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgid "Session"
 msgstr "Session"
 
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:237
 #, kde-format
 msgid "Power and session"
 msgstr "Potentia e session"
 
-#: package/contents/ui/ConfigGeneral.qml:245
+#: package/contents/ui/ConfigGeneral.qml:246
 #, kde-format
 msgid "Show action button captions"
 msgstr "Monstra subtitulos de button de action"
@@ -227,12 +227,12 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr "Nulle correspondentias"
 
-#: package/contents/ui/Header.qml:64
+#: package/contents/ui/Header.qml:65
 #, kde-format
 msgid "Open user settings"
 msgstr "Aperi preferentias de usator"
 
-#: package/contents/ui/Header.qml:217
+#: package/contents/ui/Header.qml:218
 #, kde-format
 msgid "Keep Open"
 msgstr "Manteni aperite"
@@ -247,12 +247,12 @@ msgstr "Modifica applicationes..."
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Grillia con %1 rangos, %2 columnas"
 
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "Leave"
 msgstr "Lassa"
 
-#: package/contents/ui/LeaveButtons.qml:115
+#: package/contents/ui/LeaveButtons.qml:116
 #, kde-format
 msgid "More"
 msgstr "Altere"

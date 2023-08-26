@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 02:04+0000\n"
+"POT-Creation-Date: 2023-08-26 02:00+0000\n"
 "PO-Revision-Date: 2008-10-05 10:49+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -143,36 +143,36 @@ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:47
+#: package/contents/ui/ConfigBehavior.qml:48
 #, fuzzy, kde-format
 #| msgid "Grouping:"
 msgid "Group:"
 msgstr "Hurtavańnie:"
 
-#: package/contents/ui/ConfigBehavior.qml:50
+#: package/contents/ui/ConfigBehavior.qml:51
 #, fuzzy, kde-format
 #| msgid "Do Not Group"
 msgid "Do not group"
 msgstr "Nie hurtuj"
 
-#: package/contents/ui/ConfigBehavior.qml:50
+#: package/contents/ui/ConfigBehavior.qml:51
 #, fuzzy, kde-format
 #| msgid "By Program Name"
 msgid "By program name"
 msgstr "Pavodle nazvaŭ prahram"
 
-#: package/contents/ui/ConfigBehavior.qml:55
+#: package/contents/ui/ConfigBehavior.qml:56
 #, kde-format
 msgid "Clicking grouped task:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:62
+#: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:63
+#: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
@@ -180,110 +180,110 @@ msgctxt ""
 msgid "Shows small window previews"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:64
+#: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:65
+#: package/contents/ui/ConfigBehavior.qml:66
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:73
+#: package/contents/ui/ConfigBehavior.qml:74
 #, kde-format
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:83
+#: package/contents/ui/ConfigBehavior.qml:84
 #, kde-format
 msgid "Combine into single button"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:90
+#: package/contents/ui/ConfigBehavior.qml:91
 #, fuzzy, kde-format
 #| msgid "Only when the taskbar is full"
 msgid "Group only when the Task Manager is full"
 msgstr "Tolki kali panel zadańniaŭ zapoŭnienaja"
 
-#: package/contents/ui/ConfigBehavior.qml:101
+#: package/contents/ui/ConfigBehavior.qml:102
 #, fuzzy, kde-format
 #| msgid "Sorting:"
 msgid "Sort:"
 msgstr "Paradak:"
 
-#: package/contents/ui/ConfigBehavior.qml:104
+#: package/contents/ui/ConfigBehavior.qml:105
 #, kde-format
 msgid "Do not sort"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:104
+#: package/contents/ui/ConfigBehavior.qml:105
 #, kde-format
 msgid "Manually"
 msgstr "Uručnuju"
 
-#: package/contents/ui/ConfigBehavior.qml:104
+#: package/contents/ui/ConfigBehavior.qml:105
 #, kde-format
 msgid "Alphabetically"
 msgstr "Pavodle alfabetu"
 
-#: package/contents/ui/ConfigBehavior.qml:104
+#: package/contents/ui/ConfigBehavior.qml:105
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgid "By desktop"
 msgstr "Pavodle stałoŭ"
 
-#: package/contents/ui/ConfigBehavior.qml:104
+#: package/contents/ui/ConfigBehavior.qml:105
 #, kde-format
 msgid "By activity"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:110
+#: package/contents/ui/ConfigBehavior.qml:111
 #, kde-format
 msgid "Keep launchers separate"
-msgstr ""
-
-#: package/contents/ui/ConfigBehavior.qml:121
-#, kde-format
-msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
-msgid "Clicking active task:"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
+msgid "Clicking active task:"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:123
+#, kde-format
+msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:127
+#: package/contents/ui/ConfigBehavior.qml:128
 #, kde-format
 msgid "Middle-clicking any task:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:131
+#: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:132
+#: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:133
+#: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:134
+#: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
@@ -291,13 +291,13 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:135
+#: package/contents/ui/ConfigBehavior.qml:136
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:137
 #, fuzzy, kde-format
 #| msgid "Only show tasks from the current desktop"
 msgctxt ""
@@ -306,86 +306,86 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "Pakazvaj zadańni tolki ź dziejnaha rabočaha stała"
 
-#: package/contents/ui/ConfigBehavior.qml:146
+#: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:147
+#: package/contents/ui/ConfigBehavior.qml:148
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:156
+#: package/contents/ui/ConfigBehavior.qml:157
 #, kde-format
 msgid "Skip minimized tasks"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:167
+#: package/contents/ui/ConfigBehavior.qml:168
 #, fuzzy, kde-format
 #| msgid "Show tooltips:"
 msgid "Show only tasks:"
 msgstr "Pakazvaj padkazki:"
 
-#: package/contents/ui/ConfigBehavior.qml:168
+#: package/contents/ui/ConfigBehavior.qml:169
 #, fuzzy, kde-format
 #| msgid "Only show tasks from the current screen"
 msgid "From current screen"
 msgstr "Pakazvaj zadańni tolki ź dziejnaha ekrana"
 
-#: package/contents/ui/ConfigBehavior.qml:173
+#: package/contents/ui/ConfigBehavior.qml:174
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgid "From current desktop"
 msgstr "Pavodle stałoŭ"
 
-#: package/contents/ui/ConfigBehavior.qml:178
+#: package/contents/ui/ConfigBehavior.qml:179
 #, fuzzy, kde-format
 #| msgid "Only show tasks from the current screen"
 msgid "From current activity"
 msgstr "Pakazvaj zadańni tolki ź dziejnaha ekrana"
 
-#: package/contents/ui/ConfigBehavior.qml:183
+#: package/contents/ui/ConfigBehavior.qml:184
 #, fuzzy, kde-format
 #| msgid "Only show tasks that are minimized"
 msgid "That are minimized"
 msgstr "Pakazvaj tolki źminimalizavanyja zadańni"
 
-#: package/contents/ui/ConfigBehavior.qml:192
+#: package/contents/ui/ConfigBehavior.qml:193
 #, kde-format
 msgid "When panel is hidden:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:193
+#: package/contents/ui/ConfigBehavior.qml:194
 #, kde-format
 msgid "Unhide when a window wants attention"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:205
+#: package/contents/ui/ConfigBehavior.qml:206
 #, kde-format
 msgid "New tasks appear:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:209
+#: package/contents/ui/ConfigBehavior.qml:210
 #, kde-format
 msgid "On the bottom"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:213
-#: package/contents/ui/ConfigBehavior.qml:233
+#: package/contents/ui/ConfigBehavior.qml:214
+#: package/contents/ui/ConfigBehavior.qml:234
 #, kde-format
 msgid "To the right"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:215
-#: package/contents/ui/ConfigBehavior.qml:231
+#: package/contents/ui/ConfigBehavior.qml:216
+#: package/contents/ui/ConfigBehavior.qml:232
 #, kde-format
 msgid "To the left"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:227
+#: package/contents/ui/ConfigBehavior.qml:228
 #, kde-format
 msgid "On the Top"
 msgstr ""
@@ -591,13 +591,13 @@ msgstr ""
 msgid "&Close"
 msgstr ""
 
-#: package/contents/ui/Task.qml:79
+#: package/contents/ui/Task.qml:80
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr ""
 
-#: package/contents/ui/Task.qml:84
+#: package/contents/ui/Task.qml:85
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -606,62 +606,62 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: package/contents/ui/Task.qml:93
+#: package/contents/ui/Task.qml:94
 #, fuzzy, kde-format
 #| msgid "Show tooltips:"
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Pakazvaj padkazki:"
 
-#: package/contents/ui/Task.qml:99
+#: package/contents/ui/Task.qml:100
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr ""
 
-#: package/contents/ui/Task.qml:104
+#: package/contents/ui/Task.qml:105
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr ""
 
-#: package/contents/ui/Task.qml:108
+#: package/contents/ui/Task.qml:109
 #, kde-format
 msgid "Activate %1"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:356
+#: package/contents/ui/ToolTipInstance.qml:357
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:357
+#: package/contents/ui/ToolTipInstance.qml:358
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:380
+#: package/contents/ui/ToolTipInstance.qml:381
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:396
+#: package/contents/ui/ToolTipInstance.qml:397
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "Pavodle stałoŭ"
 
-#: package/contents/ui/ToolTipInstance.qml:399
+#: package/contents/ui/ToolTipInstance.qml:400
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:423
+#: package/contents/ui/ToolTipInstance.qml:424
 #, fuzzy, kde-format
 #| msgctxt "Which virtual desktop a window is currently on"
 #| msgid "On %1"
@@ -669,25 +669,25 @@ msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "Na %1"
 
-#: package/contents/ui/ToolTipInstance.qml:426
+#: package/contents/ui/ToolTipInstance.qml:427
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:437
+#: package/contents/ui/ToolTipInstance.qml:438
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:459
+#: package/contents/ui/ToolTipInstance.qml:460
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:463
+#: package/contents/ui/ToolTipInstance.qml:464
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

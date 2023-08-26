@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-18 01:56+0000\n"
+"POT-Creation-Date: 2023-08-26 02:00+0000\n"
 "PO-Revision-Date: 2023-05-28 16:55+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -83,46 +83,46 @@ msgstr "Näytä virheen yksityiskohdat…"
 msgid "Open %1"
 msgstr "Avaa %1"
 
-#: contents/configuration/AboutPlugin.qml:19
+#: contents/configuration/AboutPlugin.qml:20
 #: contents/configuration/AppletConfiguration.qml:245
 msgid "About"
 msgstr "Tietoa"
 
-#: contents/configuration/AboutPlugin.qml:47
+#: contents/configuration/AboutPlugin.qml:48
 msgid "Send an email to %1"
 msgstr "Lähetä sähköpostia: %1"
 
-#: contents/configuration/AboutPlugin.qml:61
+#: contents/configuration/AboutPlugin.qml:62
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Avaa sivusto %1"
 
-#: contents/configuration/AboutPlugin.qml:129
+#: contents/configuration/AboutPlugin.qml:130
 msgid "Copyright"
 msgstr "Tekijänoikeudet"
 
-#: contents/configuration/AboutPlugin.qml:147 contents/explorer/Tooltip.qml:92
+#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:92
 msgid "License:"
 msgstr "Lisenssi:"
 
-#: contents/configuration/AboutPlugin.qml:150
+#: contents/configuration/AboutPlugin.qml:151
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Näytä lisenssin teksti"
 
-#: contents/configuration/AboutPlugin.qml:164
+#: contents/configuration/AboutPlugin.qml:165
 msgid "Authors"
 msgstr "Tekijät"
 
-#: contents/configuration/AboutPlugin.qml:175
+#: contents/configuration/AboutPlugin.qml:176
 msgid "Credits"
 msgstr "Kiitokset"
 
-#: contents/configuration/AboutPlugin.qml:187
+#: contents/configuration/AboutPlugin.qml:188
 msgid "Translators"
 msgstr "Kääntäjät"
 
-#: contents/configuration/AboutPlugin.qml:204
+#: contents/configuration/AboutPlugin.qml:205
 msgid "Report a Bug…"
 msgstr "Ilmoita viasta…"
 
@@ -241,11 +241,11 @@ msgstr "Asettelumuutoksia täytyy käyttää ennen muiden muutosten tekemistä"
 msgid "Apply Now"
 msgstr "Käytä nyt"
 
-#: contents/configuration/ConfigurationShortcuts.qml:16
+#: contents/configuration/ConfigurationShortcuts.qml:17
 msgid "Shortcuts"
 msgstr "Pikanäppäimet"
 
-#: contents/configuration/ConfigurationShortcuts.qml:28
+#: contents/configuration/ConfigurationShortcuts.qml:29
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "Tämä pikanäppäin aktivoi sovelman kuin sitä olisi napsautettu."
 
@@ -261,104 +261,104 @@ msgstr "Hiiren toiminnot"
 msgid "Input Here"
 msgstr "Syötä tähän"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:42
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:43
 msgid "Panel Settings"
 msgstr "Paneeliasetukset"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:48
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:49
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
 msgstr "Suurenna"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:52
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
 msgid "Make this panel as tall as possible"
 msgstr "Tee tästä paneelista niin korkea kuin mahdollista"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
 msgid "Make this panel as wide as possible"
 msgstr "Tee tästä paneelista niin leveä kuin mahdollista"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:61
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:62
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "Poista"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:64
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:65
 msgid "Remove this panel; this action is undo-able"
 msgstr "Poista tämä paneeli – toimintoa ei voi kumota"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:89
 msgid "Alignment:"
 msgstr "Tasaus:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Top"
 msgstr "Ylhäällä"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Left"
 msgstr "Vasemmalla"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr ""
 "Tasaa suurentamattoman paneelin ylös – ei vaikutusta, kun paneeli on "
 "suurennettu"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
 msgstr ""
 "Tasaa suurentamattoman paneelin vasemmalle – ei vaikutusta, kun paneeli on "
 "suurennettu"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:103
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
 msgid "Center"
 msgstr "Keskellä"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:105
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
 msgstr ""
 "Keskittää suurentamattoman paneelin – ei vaikutusta, kun paneeli on "
 "suurennettu"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid "Bottom"
 msgstr "Alhaalla"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid "Right"
 msgstr "Oikealla"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr ""
 "Tasaa suurentamattoman paneelin alas – ei vaikutusta, kun paneeli on "
 "suurennettu"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr ""
 "Tasaa suurentamattoman paneelin oikealle – ei vaikutusta, kun paneeli on "
 "suurennettu"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:141
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
 msgid "Visibility:"
 msgstr "Näkyvyys:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:146
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:147
 msgid "Always Visible"
 msgstr "Aina näkyvissä"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid "Auto-Hide"
 msgstr "Piilota automaattisesti"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
@@ -366,54 +366,54 @@ msgstr ""
 "Paneeli on piilossa, mutta paljastaa itsensä osoittimen osuessa paneelin "
 "näytönreunaan"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
 msgid "Opacity:"
 msgstr "Peittävyys:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:187
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:188
 msgid "Always Opaque"
 msgstr "Aina peittävä"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
 msgid "Adaptive"
 msgstr "Mukautuva"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:197
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr ""
 "Paneeli on peittävä ikkunoiden koskettaessa sitä, läpikuultava muulloin"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Always Translucent"
 msgstr "Aina läpikuultava"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:232
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:233
 msgid "Floating:"
 msgstr "Kellunta:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
 msgid "Floating"
 msgstr "Kelluva"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:239
 msgid "Panel visibly floats away from its screen edge"
 msgstr "Paneeli kelluu näkyvästi näytönreunastaan"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
 msgid "Attached"
 msgstr "Kiinnitetty"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:249
 msgid "Panel is attached to its screen edge"
 msgstr "Paneeli on kiinnitetty näytönreunaansa"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
 msgid "Focus Shortcut:"
 msgstr "Kohdistuspikanäppäin:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:280
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Siirrä kohdistus paneeliin tällä pikanäppäimellä"
 
@@ -445,37 +445,37 @@ msgid ""
 msgstr ""
 "Muuta tämän näytön reunan sijaintia vetämällä. Palauta kaksoisnapsauttamalla."
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:25
+#: contents/configuration/panelconfiguration/ToolBar.qml:26
 msgid "Add Widgets…"
 msgstr "Lisää sovelmia…"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:26
+#: contents/configuration/panelconfiguration/ToolBar.qml:27
 msgid "Add Spacer"
 msgstr "Lisää erotin"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:27
+#: contents/configuration/panelconfiguration/ToolBar.qml:28
 msgid "More Options…"
 msgstr "Lisää valintoja…"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:225
+#: contents/configuration/panelconfiguration/ToolBar.qml:226
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
 msgstr "Siirrä vetämällä"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:264
+#: contents/configuration/panelconfiguration/ToolBar.qml:265
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
 msgstr "Siirrä paneelia nuolinäppäimillä"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:285
+#: contents/configuration/panelconfiguration/ToolBar.qml:286
 msgid "Panel width:"
 msgstr "Paneelin leveys:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:285
+#: contents/configuration/panelconfiguration/ToolBar.qml:286
 msgid "Panel height:"
 msgstr "Paneelin korkeus:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:405
+#: contents/configuration/panelconfiguration/ToolBar.qml:406
 #: contents/configuration/ShellContainmentConfiguration.qml:43
 msgid "Close"
 msgstr "Sulje"

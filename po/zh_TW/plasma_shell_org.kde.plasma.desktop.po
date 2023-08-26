@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-18 01:56+0000\n"
+"POT-Creation-Date: 2023-08-26 02:00+0000\n"
 "PO-Revision-Date: 2023-08-08 00:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -84,46 +84,46 @@ msgstr "檢視錯誤詳細資訊…"
 msgid "Open %1"
 msgstr "開啟 %1"
 
-#: contents/configuration/AboutPlugin.qml:19
+#: contents/configuration/AboutPlugin.qml:20
 #: contents/configuration/AppletConfiguration.qml:245
 msgid "About"
 msgstr "關於"
 
-#: contents/configuration/AboutPlugin.qml:47
+#: contents/configuration/AboutPlugin.qml:48
 msgid "Send an email to %1"
 msgstr "傳送電子郵件給 %1"
 
-#: contents/configuration/AboutPlugin.qml:61
+#: contents/configuration/AboutPlugin.qml:62
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "開啟網站 %1"
 
-#: contents/configuration/AboutPlugin.qml:129
+#: contents/configuration/AboutPlugin.qml:130
 msgid "Copyright"
 msgstr "版權"
 
-#: contents/configuration/AboutPlugin.qml:147 contents/explorer/Tooltip.qml:92
+#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:92
 msgid "License:"
 msgstr "授權條款："
 
-#: contents/configuration/AboutPlugin.qml:150
+#: contents/configuration/AboutPlugin.qml:151
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "檢視授權文字"
 
-#: contents/configuration/AboutPlugin.qml:164
+#: contents/configuration/AboutPlugin.qml:165
 msgid "Authors"
 msgstr "作者群"
 
-#: contents/configuration/AboutPlugin.qml:175
+#: contents/configuration/AboutPlugin.qml:176
 msgid "Credits"
 msgstr "致謝"
 
-#: contents/configuration/AboutPlugin.qml:187
+#: contents/configuration/AboutPlugin.qml:188
 msgid "Translators"
 msgstr "翻譯者"
 
-#: contents/configuration/AboutPlugin.qml:204
+#: contents/configuration/AboutPlugin.qml:205
 msgid "Report a Bug…"
 msgstr "回報問題…"
 
@@ -240,11 +240,11 @@ msgstr "佈局的變動必須在其他變動做出前套用"
 msgid "Apply Now"
 msgstr "立刻套用"
 
-#: contents/configuration/ConfigurationShortcuts.qml:16
+#: contents/configuration/ConfigurationShortcuts.qml:17
 msgid "Shortcuts"
 msgstr "鍵盤快捷鍵"
 
-#: contents/configuration/ConfigurationShortcuts.qml:28
+#: contents/configuration/ConfigurationShortcuts.qml:29
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "此快捷鍵將會如按下般啟用此元件。"
 
@@ -260,146 +260,146 @@ msgstr "滑鼠動作"
 msgid "Input Here"
 msgstr "在此輸入"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:42
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:43
 msgid "Panel Settings"
 msgstr "面板設定"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:48
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:49
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
 msgstr "最大化"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:52
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
 msgid "Make this panel as tall as possible"
 msgstr "讓此面板高度最大化"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
 msgid "Make this panel as wide as possible"
 msgstr "讓此面板寬度最大化"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:61
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:62
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "刪除"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:64
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:65
 msgid "Remove this panel; this action is undo-able"
 msgstr "移除這個面板；這個動作是可以復原的"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:89
 msgid "Alignment:"
 msgstr "對齊："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Top"
 msgstr "上"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Left"
 msgstr "靠左"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr "將未最大化的面板對齊到上方；面板已最大化時沒有效果"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
 msgstr "將未最大化的面板靠左對齊；面板已最大化時沒有效果"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:103
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
 msgid "Center"
 msgstr "置中"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:105
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
 msgstr "將未最大化的面板置中對齊；面板已最大化時沒有效果"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid "Bottom"
 msgstr "下"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid "Right"
 msgstr "靠右"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr "將未最大化的面板對齊到下方；面板已最大化時沒有效果"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr "將未最大化的面板靠右對齊；面板已最大化時沒有效果"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:141
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
 msgid "Visibility:"
 msgstr "可見度："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:146
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:147
 msgid "Always Visible"
 msgstr "永遠可見"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid "Auto-Hide"
 msgstr "自動隱藏"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr "面板是隱藏的，但游標碰到面板所在的螢幕邊緣時會顯示"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
 msgid "Opacity:"
 msgstr "透明度："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:187
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:188
 msgid "Always Opaque"
 msgstr "總是不透明"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
 msgid "Adaptive"
 msgstr "自動調整"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:197
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
 msgstr "面板在有視窗碰到它時是不透明的，其他時候則是半透明的"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Always Translucent"
 msgstr "總是半透明"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:232
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:233
 msgid "Floating:"
 msgstr "浮動："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
 msgid "Floating"
 msgstr "浮動"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:239
 msgid "Panel visibly floats away from its screen edge"
 msgstr "面板看起來漂浮在所屬的螢幕邊緣旁"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
 msgid "Attached"
 msgstr "接附"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:249
 msgid "Panel is attached to its screen edge"
 msgstr "面板貼附在所屬的螢幕邊緣上"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
 msgid "Focus Shortcut:"
 msgstr "取得焦點快捷鍵："
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:280
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按這個鍵盤快捷鍵來移動焦點到面板上"
 
@@ -432,37 +432,37 @@ msgstr ""
 "拖曳來變更在這個螢幕邊緣上的位置。\n"
 "雙擊來重設。"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:25
+#: contents/configuration/panelconfiguration/ToolBar.qml:26
 msgid "Add Widgets…"
 msgstr "新增元件..."
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:26
+#: contents/configuration/panelconfiguration/ToolBar.qml:27
 msgid "Add Spacer"
 msgstr "新增空白"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:27
+#: contents/configuration/panelconfiguration/ToolBar.qml:28
 msgid "More Options…"
 msgstr "更多選項…"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:225
+#: contents/configuration/panelconfiguration/ToolBar.qml:226
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
 msgstr "拖曳來移動"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:264
+#: contents/configuration/panelconfiguration/ToolBar.qml:265
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
 msgstr "用方向鍵來移動面板"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:285
+#: contents/configuration/panelconfiguration/ToolBar.qml:286
 msgid "Panel width:"
 msgstr "面板寬度："
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:285
+#: contents/configuration/panelconfiguration/ToolBar.qml:286
 msgid "Panel height:"
 msgstr "面板高度："
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:405
+#: contents/configuration/panelconfiguration/ToolBar.qml:406
 #: contents/configuration/ShellContainmentConfiguration.qml:43
 msgid "Close"
 msgstr "關閉"

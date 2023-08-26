@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-18 01:56+0000\n"
+"POT-Creation-Date: 2023-08-26 02:00+0000\n"
 "PO-Revision-Date: 2023-07-12 11:31+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -84,46 +84,46 @@ msgstr "Vis feildetaljar …"
 msgid "Open %1"
 msgstr "Opna %1"
 
-#: contents/configuration/AboutPlugin.qml:19
+#: contents/configuration/AboutPlugin.qml:20
 #: contents/configuration/AppletConfiguration.qml:245
 msgid "About"
 msgstr "Om"
 
-#: contents/configuration/AboutPlugin.qml:47
+#: contents/configuration/AboutPlugin.qml:48
 msgid "Send an email to %1"
 msgstr "Send e-post til %1"
 
-#: contents/configuration/AboutPlugin.qml:61
+#: contents/configuration/AboutPlugin.qml:62
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Opna heime­side: %1"
 
-#: contents/configuration/AboutPlugin.qml:129
+#: contents/configuration/AboutPlugin.qml:130
 msgid "Copyright"
 msgstr "Opphavsrett"
 
-#: contents/configuration/AboutPlugin.qml:147 contents/explorer/Tooltip.qml:92
+#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:92
 msgid "License:"
 msgstr "Lisens:"
 
-#: contents/configuration/AboutPlugin.qml:150
+#: contents/configuration/AboutPlugin.qml:151
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Vis lisenstekst"
 
-#: contents/configuration/AboutPlugin.qml:164
+#: contents/configuration/AboutPlugin.qml:165
 msgid "Authors"
 msgstr "Opphavspersonar"
 
-#: contents/configuration/AboutPlugin.qml:175
+#: contents/configuration/AboutPlugin.qml:176
 msgid "Credits"
 msgstr "Bidragsytarar"
 
-#: contents/configuration/AboutPlugin.qml:187
+#: contents/configuration/AboutPlugin.qml:188
 msgid "Translators"
 msgstr "Omsetjarar"
 
-#: contents/configuration/AboutPlugin.qml:204
+#: contents/configuration/AboutPlugin.qml:205
 msgid "Report a Bug…"
 msgstr "Meld frå om feil …"
 
@@ -242,11 +242,11 @@ msgstr "Du må ta i bruk utformingsendringane før du kan gjera andre endringar"
 msgid "Apply Now"
 msgstr "Bruk no"
 
-#: contents/configuration/ConfigurationShortcuts.qml:16
+#: contents/configuration/ConfigurationShortcuts.qml:17
 msgid "Shortcuts"
 msgstr "Snarvegar"
 
-#: contents/configuration/ConfigurationShortcuts.qml:28
+#: contents/configuration/ConfigurationShortcuts.qml:29
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "Denne snøggtasten vil starta skjermelementet som om du trykte på det."
 
@@ -262,115 +262,115 @@ msgstr "Muse­handlingar"
 msgid "Input Here"
 msgstr "Inndata her"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:42
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:43
 msgid "Panel Settings"
 msgstr "Panel­oppsett"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:48
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:49
 msgctxt "@action:button Make the panel as big as it can be"
 msgid "Maximize"
 msgstr "Maksimer"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:52
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
 msgid "Make this panel as tall as possible"
 msgstr "Gjer panelet så høgt som mogleg"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
 msgid "Make this panel as wide as possible"
 msgstr "Gjer panelet så breitt som mogleg"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:61
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:62
 msgctxt "@action:button Delete the panel"
 msgid "Delete"
 msgstr "Fjern"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:64
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:65
 msgid "Remove this panel; this action is undo-able"
 msgstr "Fjern panelet (kan ikkje angrast)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:88
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:89
 msgid "Alignment:"
 msgstr "Plassering:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Top"
 msgstr "Oppe"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:94
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
 msgid "Left"
 msgstr "Til venstre"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid ""
 "Aligns a non-maximized panel to the top; no effect when panel is maximized"
 msgstr "Plasserer ikkjemaksimerte panel oppe (ingen effekt ved maksimering)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
 msgid ""
 "Aligns a non-maximized panel to the left; no effect when panel is maximized"
 msgstr ""
 "Plasserer ikkjemaksimerte panel til venstre (ingen effekt ved maksimering)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:103
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
 msgid "Center"
 msgstr "I midten"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:105
 msgid ""
 "Aligns a non-maximized panel to the center; no effect when panel is maximized"
 msgstr ""
 "Plasserer ikkjemaksimerte panel i midten (ingen effekt ved maksimering)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid "Bottom"
 msgstr "Nede"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:112
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
 msgid "Right"
 msgstr "Til høgre"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
 msgid ""
 "Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
 msgstr "Plasserer ikkjemaksimerte panel nede (ingen effekt ved maksimering)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
 msgid ""
 "Aligns a non-maximized panel to the right; no effect when panel is maximized"
 msgstr ""
 "Plasserer ikkjemaksimerte panel til høgre (ingen effekt ved maksimering)"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:141
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
 msgid "Visibility:"
 msgstr "Synleg:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:146
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:147
 msgid "Always Visible"
 msgstr "Alltid synleg"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
 msgid "Auto-Hide"
 msgstr "Gøym automatisk"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
 msgid ""
 "Panel is hidden, but reveals itself when the cursor touches the panel's "
 "screen edge"
 msgstr "Panelet er gøymt, men vil visast når peikaren er over panelkanten"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:182
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
 msgid "Opacity:"
 msgstr "Gjennomsikt:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:187
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:188
 msgid "Always Opaque"
 msgstr "Heilt ugjennomsiktig"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:195
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
 msgid "Adaptive"
 msgstr "Adaptiv"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:197
 msgid ""
 "Panel is opaque when any windows are touching it, and translucent at other "
 "times"
@@ -378,35 +378,35 @@ msgstr ""
 "Panelet er ugjennomsiktig når vindauge er borti det, elles er det "
 "gjennomsiktig"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:205
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
 msgid "Always Translucent"
 msgstr "Alltid gjennomsiktig"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:232
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:233
 msgid "Floating:"
 msgstr "Sveving:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:237
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
 msgid "Floating"
 msgstr "Flytande"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:239
 msgid "Panel visibly floats away from its screen edge"
 msgstr "Panelet svevar eit stykke frå skjermkanten"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:247
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
 msgid "Attached"
 msgstr "Fastkopla"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:249
 msgid "Panel is attached to its screen edge"
 msgstr "Panelet er kopla fast i skjermkanten"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:270
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
 msgid "Focus Shortcut:"
 msgstr "Fokussnarveg:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:280
+#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Bruk snøggtasten til å flytta fokuset til panelet"
 
@@ -439,37 +439,37 @@ msgstr ""
 "Dra for å endra plassering på denne skjermkanten.\n"
 "Dobbeltklikk for å tilbakestilla."
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:25
+#: contents/configuration/panelconfiguration/ToolBar.qml:26
 msgid "Add Widgets…"
 msgstr "Legg til element …"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:26
+#: contents/configuration/panelconfiguration/ToolBar.qml:27
 msgid "Add Spacer"
 msgstr "Legg til mellomrom"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:27
+#: contents/configuration/panelconfiguration/ToolBar.qml:28
 msgid "More Options…"
 msgstr "Fleire val …"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:225
+#: contents/configuration/panelconfiguration/ToolBar.qml:226
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
 msgstr "Dra for å flytta"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:264
+#: contents/configuration/panelconfiguration/ToolBar.qml:265
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
 msgstr "Bruk piltastane til å flytta panelet"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:285
+#: contents/configuration/panelconfiguration/ToolBar.qml:286
 msgid "Panel width:"
 msgstr "Panelbreidd:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:285
+#: contents/configuration/panelconfiguration/ToolBar.qml:286
 msgid "Panel height:"
 msgstr "Panelhøgd:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:405
+#: contents/configuration/panelconfiguration/ToolBar.qml:406
 #: contents/configuration/ShellContainmentConfiguration.qml:43
 msgid "Close"
 msgstr "Lukk"
