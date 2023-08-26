@@ -88,6 +88,7 @@ KCMKeys::KCMKeys(QObject *parent, const KPluginMetaData &metaData, const QVarian
             m_argument.clear();
         }
     });
+    connect(m_globalAccelModel, &QAbstractItemModel::modelReset, m_filteredModel, &FilteredShortcutsModel::invalidate);
 
     connect(m_globalAccelModel, &GlobalAccelModel::errorOccured, this, &KCMKeys::setError);
 }
