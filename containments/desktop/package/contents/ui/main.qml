@@ -146,8 +146,22 @@ ContainmentItem {
         Plasmoid.configuration.url = data
     }
 
+    component ShortDropBehavior : Behavior {
+        NumberAnimation {
+            duration: Kirigami.Units.shortDuration
+            easing.type: Easing.InOutQuad
+        }
+    }
+
+    component LongDropBehavior : Behavior {
+        NumberAnimation {
+            duration: Kirigami.Units.longDuration
+            easing.type: Easing.InOutQuad
+        }
+    }
+
     KSvg.FrameSvgItem {
-        id : highlightItemSvg
+        id: highlightItemSvg
 
         visible: false
 
@@ -156,7 +170,7 @@ ContainmentItem {
     }
 
     KSvg.FrameSvgItem {
-        id : listItemSvg
+        id: listItemSvg
 
         visible: false
 
@@ -190,18 +204,10 @@ ContainmentItem {
                 ? (parent.height - Plasmoid.availableScreenRect.y - Plasmoid.availableScreenRect.height) : 0
         }
 
-        Behavior on anchors.topMargin {
-            NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.InOutQuad }
-        }
-        Behavior on anchors.leftMargin {
-            NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.InOutQuad }
-        }
-        Behavior on anchors.rightMargin {
-            NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.InOutQuad }
-        }
-        Behavior on anchors.bottomMargin {
-            NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.InOutQuad }
-        }
+        LongDropBehavior on anchors.topMargin { }
+        LongDropBehavior on anchors.leftMargin { }
+        LongDropBehavior on anchors.rightMargin { }
+        LongDropBehavior on anchors.bottomMargin { }
 
         property alias folderViewLayer: folderViewLayer
         property alias appletsLayout: appletsLayout
@@ -269,7 +275,8 @@ ContainmentItem {
                 folderViewLayer.view.drop(root, event, mapToItem(folderViewLayer.view, event.x, event.y));
             } else if (isContainment) {
                 root.processMimeData(event.mimeData,
-                            event.x - appletsLayout.placeHolder.width / 2, event.y - appletsLayout.placeHolder.height / 2);
+                    event.x - appletsLayout.placeHolder.width / 2,
+                    event.y - appletsLayout.placeHolder.height / 2);
                 event.accept(event.proposedAction);
                 appletsLayout.hidePlaceHolder();
             }
@@ -288,6 +295,7 @@ ContainmentItem {
         Connections {
             target: Plasmoid.containment.corona
             ignoreUnknownSignals: true
+
             function onEditModeChanged() {
                 appletsLayout.editMode = Plasmoid.containment.corona.editMode;
             }
@@ -296,7 +304,7 @@ ContainmentItem {
         ContainmentLayoutManager.AppletsLayout {
             id: appletsLayout
             anchors.fill: parent
-            relayoutLock: width != Plasmoid.availableScreenRect.width || height != Plasmoid.availableScreenRect.height
+            relayoutLock: width !== Plasmoid.availableScreenRect.width || height !== Plasmoid.availableScreenRect.height
             // NOTE: use Plasmoid.availableScreenRect and not own width and height as they are updated not atomically
             configKey: "ItemGeometries-" + Math.round(Plasmoid.screenGeometry.width) + "x" + Math.round(Plasmoid.screenGeometry.height)
             fallbackConfigKey: Plasmoid.availableScreenRect.width > Plasmoid.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
@@ -316,35 +324,31 @@ ContainmentItem {
             cellWidth: Kirigami.Units.iconSizes.small
             cellHeight: cellWidth
 
-            eventManagerToFilter: folderViewLayer.item ? folderViewLayer.item.view.view : null
+            eventManagerToFilter: folderViewLayer.item?.view ?? null
 
             appletContainerComponent: ContainmentLayoutManager.BasicAppletContainer {
                 id: appletContainer
+
                 editModeCondition: Plasmoid.immutable
                     ? ContainmentLayoutManager.ItemContainer.Locked
                     : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
+
                 configOverlayComponent: ConfigOverlay {}
-                onUserDrag: {
-                    var pos = mapToItem(root.parent, dragCenter.x, dragCenter.y);
-                    var newCont = root.containmentItemAt(pos.x, pos.y);
+
+                onUserDrag: (newPosition, dragCenter) => {
+                    const pos = mapToItem(root.parent, dragCenter.x, dragCenter.y);
+                    const newCont = root.containmentItemAt(pos.x, pos.y);
 
                     if (newCont && newCont.plasmoid !== Plasmoid) {
-                        var newPos = newCont.mapFromApplet(Plasmoid, pos.x, pos.y);
+                        const newPos = newCont.mapFromApplet(Plasmoid, pos.x, pos.y);
 
                         newCont.Plasmoid.addApplet(appletContainer.applet.plasmoid, Qt.rect(newPos.x, newPos.y, appletContainer.applet.width, appletContainer.applet.height));
                         appletsLayout.hidePlaceHolder();
                     }
                 }
 
-                component DropBehavior : Behavior {
-                    NumberAnimation {
-                        duration: Kirigami.Units.shortDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                }
-
-                DropBehavior on x { }
-                DropBehavior on y { }
+                ShortDropBehavior on x { }
+                ShortDropBehavior on y { }
             }
 
             placeHolder: ContainmentLayoutManager.PlaceHolder {}
@@ -355,8 +359,8 @@ ContainmentItem {
                 anchors.fill: parent
 
                 property bool ready: status === Loader.Ready
-                property Item view: item ? item.view : null
-                property QtObject model: item ? item.model : null
+                property Item view: item?.view ?? null
+                property QtObject model: item?.model ?? null
 
                 focus: true
 
