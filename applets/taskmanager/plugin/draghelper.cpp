@@ -21,7 +21,7 @@ DragHelper::DragHelper(QObject *parent)
     : QObject(parent)
     , m_dragIconSize(32)
 {
-    qCWarning(TASKMANAGER_DEBUG, "DragHelper is deprecated in Plasma 5.27. Use Backend::generateMimeData and QtQuick.DragHandler instead.");
+    qCWarning(TASKMANAGER_DEBUG, "DragHelper is deprecated and will be removed in Plasma 6. Use Qt Quick Drag instead.");
 }
 
 DragHelper::~DragHelper()
