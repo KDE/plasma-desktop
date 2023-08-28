@@ -17,26 +17,23 @@ Kicker.SubMenu {
     id: itemDialog
 
     property alias focusParent: itemListView.focusParent
-    property alias model: funnelModel.sourceModel
 
-    property bool aboutToBeDestroyed: false
-
-    visible: false
-    hideOnWindowDeactivate: kicker.hideOnWindowDeactivate
+    visible: true
+    visualParent: focusParent.currentItem
+    hideOnWindowDeactivate: true
     location: PlasmaCore.Types.Floating
     offset: Kirigami.Units.smallSpacing
 
     onWindowDeactivated: {
-        if (!aboutToBeDestroyed) {
-            kicker.expanded = false;
-        }
+        kicker.expanded = false;
     }
 
     mainItem: ItemListView {
         id: itemListView
 
+        width: itemListView.focusParent.minimumWidth
         height: {
-            const m = funnelModel.sourceModel;
+            const m = itemListView.model.sourceModel;
 
             if (m === null || m === undefined) {
                 // TODO: setting height to 0 triggers a warning in PlasmaQuick::Dialog
@@ -63,29 +60,27 @@ Kicker.SubMenu {
             return (Math.floor(x / y) - 1) * y;
         }
 
+        focus: true
         iconsEnabled: true
-
         dialog: itemDialog
 
-        model: funnelModel
-
-        Kicker.FunnelModel {
+        model: Kicker.FunnelModel {
             id: funnelModel
+            sourceModel: itemListView.focusParent.model.modelForRow(itemListView.focusParent.currentIndex)
+        }
 
-            property bool sorted: sourceModel.hasOwnProperty("sorted") ? sourceModel.sorted : false
+        Keys.forwardTo: kicker.fullRepresentationItem.searchField
+        Keys.onEscapePressed: {
+            itemDialog.destroy();
+        }
 
-            Component.onCompleted: {
-                kicker.reset.connect(funnelModel.reset);
-            }
-
-            onCountChanged: {
-                if (sourceModel && count === 0) {
-                    itemDialog.delayedDestroy();
+        Connections {
+            enabled: itemListView.focusParent.focusParent === null // Destroy from the root dialog
+            target: kicker.fullRepresentationItem.searchField
+            function onTextChanged() {
+                if (kicker.fullRepresentationItem.searchField.text.length > 0) {
+                    itemDialog.destroy();
                 }
-            }
-
-            onSourceModelChanged: {
-                itemListView.currentIndex = -1;
             }
         }
     }

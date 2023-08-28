@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQuick
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami 2.20 as Kirigami
@@ -20,9 +20,7 @@ Item {
 
     // if it's not disabled and is either a leaf node or a node with children
     enabled: !isSeparator && !model.disabled && (!isParent || (isParent && hasChildren))
-
-    signal actionTriggered(string actionId, variant actionArgument)
-    signal aboutToShowActionMenu(variant actionMenu)
+    focus: item.ListView.isCurrentItem // Make key events handled in this item
 
     readonly property real fullTextWidth: Math.ceil(icon.width + label.implicitWidth + arrow.width + row.anchors.leftMargin + row.anchors.rightMargin + row.actualSpacing)
     property bool isSeparator: (model.isSeparator === true)
@@ -30,31 +28,54 @@ Item {
     property bool hasChildren: (model.hasChildren === true)
     property bool hasActionList: ((model.favoriteId !== null)
         || (("hasActionList" in model) && (model.hasActionList === true)))
-    property QtObject childDialog: null
     property Item menu: actionMenu
 
     Accessible.role: isSeparator ? Accessible.Separator: Accessible.MenuItem
     Accessible.name: label.text
 
-    onHasChildrenChanged: {
-        if (!hasChildren && ListView.view.currentItem === item) {
-            ListView.view.currentIndex = -1;
+    Keys.onMenuPressed: event => {
+        if (menuHandler.enabled) {
+            item.openActionMenu(item);
+        } else {
+            event.accepted = false;
         }
     }
-
-    onAboutToShowActionMenu: {
-        var actionList = item.hasActionList ? model.actionList : [];
-        Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
+    Keys.onLeftPressed: event => {
+        if (item.ListView.view.dialog?.focusParent) {
+            item.ListView.view.dialog.destroy();
+        } else {
+            event.accepted = false;
+        }
     }
-
-    onActionTriggered: {
-        if (Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument) === true) {
+    Keys.onRightPressed: event => {
+        if (item.hasChildren) {
+            item.ListView.view.spawnDialog(true)
+        } else {
+            event.accepted = false;
+        }
+    }
+    Keys.onUpPressed: event => {
+        item.ListView.view.showChildDialogs = false; // Do not automatically expand the child menu
+        event.accepted = false; // Pass the event to ListView
+    }
+    Keys.onDownPressed: event => Keys.onUpPressed(event)
+    Keys.onReturnPressed: event => {
+        if (item.hasChildren) {
+            Keys.onRightPressed(event);
+        } else {
+            item.ListView.view.model.trigger(index, "", null);
             kicker.expanded = false;
         }
     }
+    Keys.onEnterPressed: event => Keys.onReturnPressed(event)
 
-    function openActionMenu(visualParent, x, y) {
-        aboutToShowActionMenu(actionMenu);
+    onActiveFocusChanged: if (activeFocus) {
+        ListView.view.currentIndex = index;
+    }
+
+    function openActionMenu(visualParent, x = 0, y = 0) {
+        const actionList = item.hasActionList ? model.actionList : [];
+        Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
         actionMenu.visualParent = visualParent;
         actionMenu.open(x, y);
     }
@@ -62,120 +83,48 @@ Item {
     ActionMenu {
         id: actionMenu
 
-        onActionClicked: {
-            item.actionTriggered(actionId, actionArgument);
+        onActionClicked: (actionId, actionArgument) => {
+            if (Tools.triggerAction(item.ListView.view.model, model.index, actionId, actionArgument) === true) {
+                kicker.expanded = false;
+            }
         }
     }
 
-    MouseArea {
-        id: mouseArea
-
-        anchors {
-            left: parent.left
-            right: parent.right
-            verticalCenter: parent.verticalCenter
-        }
-
-        height: parent.height
-
-        property int mouseCol
-        property bool mousePressed: false
-        property int pressX: -1
-        property int pressY: -1
-
-        hoverEnabled: true
-        acceptedButtons: Qt.LeftButton | Qt.RightButton
-
-        onPressed: mouse => {
-            if (mouse.buttons & Qt.RightButton) {
-                if (item.hasActionList) {
-                    item.openActionMenu(mouseArea, mouse.x, mouse.y);
-                }
-            } else {
-                mousePressed = true;
-                pressX = mouse.x;
-                pressY = mouse.y;
-            }
-        }
-
-        onReleased: mouse => {
-            if (mousePressed && !item.hasChildren) {
-                item.ListView.view.model.trigger(index, "", null);
-                kicker.expanded = false;
-            }
-
-            mousePressed = false;
-            pressX = -1;
-            pressY = -1;
-        }
-
-        onPositionChanged: mouse => {
-            if (pressX !== -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                dragHelper.startDrag(kicker, model.url, model.decoration);
-                mousePressed = false;
-                pressX = -1;
-                pressY = -1;
-
-                return;
-            }
-
-            // FIXME: Correct escape angle calc for right screen edge.
-            if (justOpenedTimer.running || !item.hasChildren) {
-                item.ListView.view.currentIndex = index;
-            } else {
-                mouseCol = mouse.x;
-
-                if (index === item.ListView.view.currentIndex) {
-                    updateCurrentItem();
-                } else if ((index === item.ListView.view.currentIndex - 1) && mouse.y < (itemHeight - 6)
-                    || (index === item.ListView.view.currentIndex + 1) && mouse.y > 5) {
-
-                    if ((item.childDialog && item.childDialog.facingLeft)
-                        ? mouse.x > item.ListView.view.eligibleWidth - 5 : mouse.x < item.ListView.view.eligibleWidth + 5) {
-                        updateCurrentItem();
-                    }
-                } else if ((item.childDialog && item.childDialog.facingLeft)
-                    ? mouse.x > item.ListView.view.eligibleWidth : mouse.x < item.ListView.view.eligibleWidth) {
-                    updateCurrentItem();
-                }
-
-                updateCurrentItemTimer.start();
-            }
-        }
-
-        onContainsMouseChanged: {
-            if (!containsMouse) {
-                mousePressed = false;
-                pressX = -1;
-                pressY = -1;
-                updateCurrentItemTimer.stop();
-            }
-        }
-
-        function updateCurrentItem() {
+    HoverHandler {
+        enabled: item.enabled && !item.ListView.isCurrentItem
+        onHoveredChanged: if (hovered) {
             item.ListView.view.currentIndex = index;
-            item.ListView.view.eligibleWidth = Math.min(width, mouseCol);
         }
+    }
 
-        Timer {
-            id: updateCurrentItemTimer
+    TapHandler {
+        id: actionHandler
+        enabled: !item.hasChildren
+        acceptedButtons: Qt.LeftButton
+        onTapped: item.Keys.onReturnPressed(null)
+    }
 
-            interval: 50
-            repeat: false
-
-            onTriggered: parent.updateCurrentItem()
+    TapHandler {
+        id: menuHandler
+        enabled: item.hasActionList
+        acceptedButtons: Qt.RightButton
+        gesturePolicy: TapHandler.WithinBounds // Release grab when menu appears
+        onPressedChanged: if (pressed) {
+            item.openActionMenu(item, point.position.x, point.position.y);
         }
     }
 
     Row {
         id: row
 
-        anchors.left: parent.left
-        anchors.leftMargin: highlightItemSvg.margins.left
-        anchors.right: parent.right
-        anchors.rightMargin: highlightItemSvg.margins.right
-
-        height: parent.height
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            left: parent.left
+            leftMargin: highlightItemSvg.margins.left
+            right: parent.right
+            rightMargin: highlightItemSvg.margins.right
+        }
 
         spacing: Kirigami.Units.smallSpacing * 2
         readonly property real actualSpacing: ((icon.visible ? 1 : 0) * spacing) + ((arrow.visible ? 1 : 0) * spacing)
@@ -244,7 +193,7 @@ Item {
             height: width
 
             visible: item.hasChildren
-            opacity: (item.ListView.view.currentIndex === index) ? 1.0 : 0.4
+            opacity: item.ListView.isCurrentItem ? 1.0 : 0.4
 
             source: Qt.application.layoutDirection !== Qt.RightToLeft
                 ? "go-next-symbolic"
@@ -278,18 +227,5 @@ Item {
 
         asynchronous: false
         sourceComponent: separatorComponent
-    }
-
-    Keys.onPressed: {
-        if (event.key === Qt.Key_Menu && item.hasActionList) {
-            event.accepted = true;
-            item.openActionMenu(mouseArea);
-        } else if ((event.key === Qt.Key_Enter || event.key === Qt.Key_Return) && !item.hasChildren) {
-            if (!item.hasChildren) {
-                event.accepted = true;
-                item.ListView.view.model.trigger(index, "", null);
-                kicker.expanded = false;
-            }
-        }
     }
 }

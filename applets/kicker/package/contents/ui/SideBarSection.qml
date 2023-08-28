@@ -73,7 +73,14 @@ FocusScope {
         Repeater {
             id: repeater
 
-            delegate: SideBarItem {}
+            delegate: SideBarItem {
+                width: section.width
+                height: width
+                focus: index === 0 // When FocusScope is focused, it will propagate focus to the first item
+                KeyNavigation.up: index === 0 ? section.KeyNavigation.up : null
+                KeyNavigation.down: index === repeater.count - 1 ? section.KeyNavigation.down : repeater.itemAt(index + 1)
+                KeyNavigation.right: section.KeyNavigation.right /* ListView will propagate focus to currentItem */
+            }
 
             onCountChanged: {
                 flow.animationDuration = 0;

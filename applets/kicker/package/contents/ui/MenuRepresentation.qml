@@ -4,206 +4,137 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-// Deliberately imported after QtQuick to avoid missing restoreMode property in Binding. Fix in Qt 6.
-import QtQml 2.15
+import QtQuick
+import QtQuick.Layouts
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami 2 as Kirigami
 import org.kde.plasma.plasmoid 2.0
 
 FocusScope {
     id: root
 
-    focus: true
+    Layout.minimumWidth: sideBar.width
+        + (sideBar.visible ? mainRow.anchors.leftMargin : 0) + Math.max(searchField.defaultWidth, runnerColumns.visible ? runnerColumns.implicitWidth : 0)
+    Layout.maximumWidth: Math.max(rootList.minimumWidth, Layout.minimumWidth)
 
-    Layout.minimumWidth: (sideBar.width + (sideBar.width ? mainRow.spacing : 0)
-        + Math.max(searchField.defaultWidth, runnerColumns.width))
-    Layout.maximumWidth: Math.max(mainRow.width, Layout.minimumWidth); // mainRow.width is constrained by rootList.maximumWidth
-
-    Layout.minimumHeight: Math.max(((rootModel.count - rootModel.separatorCount) * rootList.itemHeight)
-        + (rootModel.separatorCount * rootList.separatorHeight)
-        + searchField.height + (2 * Kirigami.Units.smallSpacing), sideBar.margins.top + sideBar.margins.bottom
-        + favoriteApps.contentHeight + favoriteSystemActions.contentHeight + sidebarSeparator.height
-        + (4 * Kirigami.Units.smallSpacing))
+    Layout.minimumHeight: Math.max(
+        ((rootModel.count - rootModel.separatorCount) * rootList.itemHeight) + (rootModel.separatorCount * rootList.separatorHeight) + searchField.height + 2 * Kirigami.Units.smallSpacing,
+        sideBar.margins.top + sideBar.margins.bottom + favoriteApps.contentHeight + favoriteSystemActions.contentHeight + sidebarSeparator.height + 4 * Kirigami.Units.smallSpacing
+    )
     Layout.maximumHeight: Layout.minimumHeight
 
-    signal appendSearchText(string text)
+    readonly property alias searchField: searchField // Used to forward key input
 
-    function reset() {
-        kicker.hideOnWindowDeactivate = true;
-
-        rootList.currentIndex = -1;
-
-        searchField.text = "";
-        searchField.focus = true;
+    Keys.forwardTo: searchField
+    Keys.onEscapePressed: {
+        kicker.expanded = false;
     }
 
-    Row {
-        id: mainRow
+    Connections {
+        target: kicker
+        function onExpandedChanged(expanded) {
+            if (!expanded) {
+                searchField.text = "";
+            }
+        }
+    }
 
+    KSvg.FrameSvgItem {
+        id: sideBar
+
+        visible: width > 0
+
+        anchors.top: parent.top
+        anchors.left: parent.left
+        width: (globalFavorites && systemFavorites
+            && (globalFavorites.count + systemFavorites.count)
+            ? Kirigami.Units.iconSizes.medium + margins.left + margins.right : 0)
         height: parent.height
+        focus: true
 
-        spacing: Kirigami.Units.smallSpacing
+        imagePath: "widgets/frame"
+        prefix: "plain"
 
-        LayoutMirroring.enabled: ((Plasmoid.location === PlasmaCore.Types.RightEdge)
-            || (Qt.application.layoutDirection === Qt.RightToLeft && Plasmoid.location !== PlasmaCore.Types.LeftEdge))
+        SideBarSection {
+            id: favoriteApps
 
-        KSvg.FrameSvgItem {
-            id: sideBar
+            anchors.top: Plasmoid.location === PlasmaCore.Types.TopEdge ? sidebarSeparator.bottom : parent.top
+            anchors.topMargin: Plasmoid.location === PlasmaCore.Types.TopEdge ? sideBar.margins.bottom : 0
 
-            visible: width > 0
+            height: (sideBar.height - sideBar.margins.top - sideBar.margins.bottom
+                - favoriteSystemActions.height - sidebarSeparator.height - (4 * Kirigami.Units.smallSpacing))
 
-            width: (globalFavorites && systemFavorites
-                && (globalFavorites.count + systemFavorites.count)
-                ? Kirigami.Units.iconSizes.medium + margins.left + margins.right : 0)
-            height: parent.height
+            model: globalFavorites
 
-            imagePath: "widgets/frame"
-            prefix: "plain"
+            KeyNavigation.up: Plasmoid.location === PlasmaCore.Types.TopEdge ? favoriteSystemActions : null
+            KeyNavigation.down: Plasmoid.location === PlasmaCore.Types.TopEdge ? null : favoriteSystemActions
+            KeyNavigation.right: searchField
 
-            SideBarSection {
-                id: favoriteApps
-
-                anchors.top: parent.top
-                anchors.topMargin: sideBar.margins.top
-
-                height: (sideBar.height - sideBar.margins.top - sideBar.margins.bottom
-                    - favoriteSystemActions.height - sidebarSeparator.height - (4 * Kirigami.Units.smallSpacing))
-
-                model: globalFavorites
-
-                states: [ State {
-                    name: "top"
-                    when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
-
-                    AnchorChanges {
-                        target: favoriteApps
-                        anchors.top: undefined
-                        anchors.bottom: parent.bottom
-                    }
-
-                    PropertyChanges {
-                        target: favoriteApps
-                        anchors.topMargin: undefined
-                        anchors.bottomMargin: sideBar.margins.bottom
-                    }
-                }]
-
-                Binding {
-                    target: globalFavorites
-                    property: "iconSize"
-                    value: Kirigami.Units.iconSizes.medium
-                    restoreMode: Binding.RestoreBinding
-                }
-            }
-
-            KSvg.SvgItem {
-                id: sidebarSeparator
-
-                anchors.bottom: favoriteSystemActions.top
-                anchors.bottomMargin: (2 * Kirigami.Units.smallSpacing)
-                anchors.horizontalCenter: parent.horizontalCenter
-
-                width: Kirigami.Units.iconSizes.medium
-                height: lineSvg.horLineHeight
-
-                visible: (favoriteApps.model && favoriteApps.model.count
-                    && favoriteSystemActions.model && favoriteSystemActions.model.count)
-
-                svg: lineSvg
-                elementId: "horizontal-line"
-
-                states: [ State {
-                    name: "top"
-                    when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
-
-                    AnchorChanges {
-                        target: sidebarSeparator
-                        anchors.top: favoriteSystemActions.bottom
-                        anchors.bottom: undefined
-
-                    }
-
-                    PropertyChanges {
-                        target: sidebarSeparator
-                        anchors.topMargin: (2 * Kirigami.Units.smallSpacing)
-                        anchors.bottomMargin: undefined
-                    }
-                }]
-            }
-
-            SideBarSection {
-                id: favoriteSystemActions
-
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: sideBar.margins.bottom
-
-                model: systemFavorites
-
-                states: [ State {
-                    name: "top"
-                    when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
-
-                    AnchorChanges {
-                        target: favoriteSystemActions
-                        anchors.top: parent.top
-                        anchors.bottom: undefined
-                    }
-
-                    PropertyChanges {
-                        target: favoriteSystemActions
-                        anchors.topMargin: sideBar.margins.top
-                        anchors.bottomMargin: undefined
-                    }
-                }]
+            Binding {
+                target: globalFavorites
+                property: "iconSize"
+                value: Kirigami.Units.iconSizes.medium
             }
         }
 
-        ItemListView {
-            id: rootList
+        KSvg.SvgItem {
+            id: sidebarSeparator
 
-            anchors.top: parent.top
+            anchors.top: Plasmoid.location === PlasmaCore.Types.TopEdge ? favoriteSystemActions.bottom : undefined
+            anchors.topMargin: Plasmoid.location === PlasmaCore.Types.TopEdge ? sideBar.margins.top : 0
+            anchors.bottom: Plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : favoriteSystemActions.top
+            anchors.bottomMargin: Plasmoid.location === PlasmaCore.Types.TopEdge ? 0 : sideBar.margins.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
 
-            minimumWidth: root.Layout.minimumWidth - sideBar.width - mainRow.spacing
-            height: ((rootModel.count - rootModel.separatorCount) * itemHeight) + (rootModel.separatorCount * separatorHeight)
+            width: Kirigami.Units.iconSizes.medium
+            height: lineSvg.horLineHeight
 
-            visible: searchField.text === ""
+            visible: (favoriteApps.model && favoriteApps.model.count
+                && favoriteSystemActions.model && favoriteSystemActions.model.count)
+            svg: lineSvg
+            elementId: "horizontal-line"
+        }
 
-            iconsEnabled: Plasmoid.configuration.showIconsRootLevel
+        SideBarSection {
+            id: favoriteSystemActions
 
-            model: rootModel
+            anchors.top: Plasmoid.location === PlasmaCore.Types.TopEdge ? parent.top : undefined
+            anchors.bottom: Plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : parent.bottom
 
-            onKeyNavigationAtListEnd: {
-                searchField.focus = true;
-            }
+            model: systemFavorites
 
-            states: [ State {
-                name: "top"
-                when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
+            KeyNavigation.up: Plasmoid.location === PlasmaCore.Types.TopEdge ? null : favoriteApps
+            KeyNavigation.down: Plasmoid.location === PlasmaCore.Types.TopEdge ? favoriteApps : null
+            KeyNavigation.right: favoriteApps.KeyNavigation.right
+        }
+    }
 
-                AnchorChanges {
-                    target: rootList
-                    anchors.top: parent.top
-                }
-            }]
+    Item {
+        id: mainRow
 
-            Component.onCompleted: {
-                rootList.exited.connect(root.reset);
-            }
+        anchors {
+            top: parent.top
+            bottom: searchField.top
+            left: sideBar.right
+            leftMargin: sideBar.visible ? Kirigami.Units.smallSpacing : 0
+            right: parent.right
         }
 
         Row {
             id: runnerColumns
 
-            height: parent.height
-
-            signal focusChanged()
-
+            anchors {
+                top: parent.top
+                left: parent.left
+                bottom: parent.bottom
+            }
             visible: searchField.text !== "" && runnerModel.count > 0
+
+            readonly property list<Item> visibleChildren: children
+                .filter(child => child instanceof RunnerResultsList && child.visible)
 
             Repeater {
                 id: runnerColumnsRepeater
@@ -212,103 +143,80 @@ FocusScope {
 
                 delegate: RunnerResultsList {
                     id: runnerMatches
+                    height: runnerColumns.height
                     visible: runnerModel.modelForRow(index).count > 0
 
-                    onKeyNavigationAtListEnd: {
-                        searchField.focus = true;
-                    }
-
-                    onContainsMouseChanged: {
-                        if (containsMouse) {
-                            runnerMatches.focus = true;
+                    KeyNavigation.up: searchField
+                    KeyNavigation.down: searchField
+                    // ScrollView accepts Left/Right key events, so can't use KeyNavigation here
+                    Keys.onLeftPressed: event => {
+                        let leftIndex = index - 1;
+                        while (leftIndex >= 0 && !runnerColumnsRepeater.itemAt(leftIndex).count) {
+                            leftIndex -= 1;
                         }
-                    }
-
-                    onFocusChanged: {
-                        if (focus) {
-                            runnerColumns.focusChanged();
-                        }
-                    }
-
-                    function focusChanged() {
-                        if (!runnerMatches.focus && runnerMatches.currentIndex != -1) {
-                            runnerMatches.currentIndex = -1;
-                        }
-                    }
-
-                    Keys.onPressed: event => {
-                        var target = null;
-
-                        if (event.key === Qt.Key_Right) {
-                            var targets = new Array();
-
-                            for (var i = index + 1; i < runnerModel.count; ++i) {
-                                targets[targets.length] = i;
-                            }
-
-                            for (var i = 0; i < index; ++i) {
-                                targets[targets.length] = i;
-                            }
-
-                            for (var i = 0; i < targets.length; ++i) {
-                                if (runnerModel.modelForRow(targets[i]).count) {
-                                    target = runnerColumnsRepeater.itemAt(targets[i]);
-                                    break;
-                                }
-                            }
-                        } else if (event.key === Qt.Key_Left) {
-                            var targets = new Array();
-
-                            for (var i = index - 1; i >= 0; --i) {
-                                targets[targets.length] = i;
-                            }
-
-                            for (var i = runnerModel.count - 1; i > index; --i) {
-                                targets[targets.length] = i;
-                            }
-
-                            for (var i = 0; i < targets.length; ++i) {
-                                if (runnerModel.modelForRow(targets[i]).count) {
-                                    target = runnerColumnsRepeater.itemAt(targets[i]);
-                                    break;
-                                }
-                            }
-                        }
-
-                        if (target) {
-                            event.accepted = true;
+                        if (leftIndex >= 0) {
                             currentIndex = -1;
-                            target.currentIndex = 0;
-                            target.focus = true;
+                            runnerColumnsRepeater.itemAt(leftIndex).listView.itemAtIndex(0).forceActiveFocus(Qt.TabFocusReason);
+                        } else {
+                            searchField.KeyNavigation.left.forceActiveFocus(Qt.TabFocusReason); // Focus on the first sidebar item
                         }
                     }
-
-                    Component.onCompleted: {
-                        runnerColumns.focusChanged.connect(focusChanged);
-                    }
-
-                    Component.onDestruction: {
-                        runnerColumns.focusChanged.disconnect(focusChanged);
+                    Keys.onRightPressed: event => {
+                        let rightIndex = index + 1;
+                        while (rightIndex <= runnerColumnsRepeater.count - 1 && !runnerColumnsRepeater.itemAt(rightIndex).count) {
+                            rightIndex += 1;
+                        }
+                        if (rightIndex <= runnerColumnsRepeater.count - 1) {
+                            currentIndex = -1;
+                            runnerColumnsRepeater.itemAt(rightIndex).listView.itemAtIndex(0).forceActiveFocus(Qt.TabFocusReason);
+                        }
                     }
                 }
             }
+        }
+
+        ItemListView {
+            id: rootList
+            anchors {
+                top: parent.top
+                left: parent.left
+            }
+            minimumWidth: root.Layout.minimumWidth - sideBar.width - mainRow.anchors.leftMargin
+            height: ((rootModel.count - rootModel.separatorCount) * itemHeight) + (rootModel.separatorCount * separatorHeight)
+            visible: searchField.text.length === 0
+
+            focus: !runnerColumns.visible && currentIndex !== -1 // Avoid stealing focus from runnerColumns and searchField.
+            model: rootModel
+            iconsEnabled: Plasmoid.configuration.showIconsRootLevel
+
+            KeyNavigation.left: favoriteApps.repeater.count > 0 ? favoriteApps : favoriteSystemActions
         }
     }
 
     PlasmaExtras.SearchField {
         id: searchField
 
-        anchors.bottom: mainRow.bottom
-        anchors.left: parent.left
-        anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : Kirigami.Units.smallSpacing)
+        anchors {
+            bottom: parent.bottom
+            left: mainRow.anchors.left
+            leftMargin: mainRow.anchors.leftMargin
+        }
 
         readonly property real defaultWidth: Kirigami.Units.gridUnit * 14
         width: (runnerColumnsRepeater.count !== 0 ? runnerColumnsRepeater.itemAt(0).width
-                                                  : (rootList.visible ? rootList.width : defaultWidth))
+                                                : (rootList.visible ? rootList.width : defaultWidth))
 
-        focus: !Kirigami.InputMethod.willShowOnActive
+        focus: !Kirigami.InputMethod.willShowOnActive && kicker.expanded
+
+        KeyNavigation.up: runnerColumns.visible ? runnerColumns.visibleChildren[0] : rootList
+        KeyNavigation.down: runnerColumns.visible ? runnerColumns.visibleChildren[0] : rootList
+        KeyNavigation.left: favoriteApps.repeater.count > 0 ? favoriteApps : favoriteSystemActions
+        KeyNavigation.right: runnerColumns.visibleChildren.length > 1 ? runnerColumns.visibleChildren[1] : null
 
         onTextChanged: {
+            if (text.length === 0 && rootList.currentIndex === -1) {
+                forceActiveFocus(Qt.TabFocusReason); // When rootList has no selected item, up/down key doesn't work.
+            }
             runnerModel.query = text;
         }
 
@@ -320,130 +228,52 @@ FocusScope {
                 }
 
                 if (runnerColumns.visible) {
-                    runnerColumnsRepeater.itemAt(0).currentIndex = -1;
+                    for (let i = 0; i < runnerColumnsRepeater.count; i++) {
+                        runnerColumnsRepeater.itemAt(i).currentIndex = -1;
+                    }
                 }
             }
         }
 
-        states: [ State {
-            name: "top"
-            when: Plasmoid.location === PlasmaCore.Types.TopEdge
-
-            AnchorChanges {
-                target: searchField
-                anchors.top: undefined
-                anchors.bottom: mainRow.bottom
-                anchors.left: parent.left
-                anchors.right: undefined
+        Keys.onUpPressed: event => {
+            if (runnerColumns.visible) {
+                runnerColumns.visibleChildren[0].currentIndex = runnerColumns.visibleChildren[0].count - 1;
+            } else {
+                // Create child dialogs only after a key is pressed
+                rootList.showChildDialogs = false;
+                rootList.currentIndex = rootList.count - 1;
             }
-
-            PropertyChanges {
-                target: searchField
-                anchors.leftMargin: sideBar.width + mainRow.spacing + Kirigami.Units.smallSpacing
-                anchors.rightMargin: undefined
+            event.accepted = false; // Pass the event to KeyNavigation.up
+        }
+        Keys.onDownPressed: event => {
+            if (runnerColumns.visibleChildren[0]) {
+                runnerColumns.visibleChildren[0].currentIndex = 0;
+            } else {
+                // Create child dialogs only after a key is pressed
+                rootList.showChildDialogs = false;
+                rootList.currentIndex = 0;
             }
-        },
-        State {
-            name: "right"
-            when: (Plasmoid.location === PlasmaCore.Types.RightEdge && Qt.application.layoutDirection === Qt.LeftToRight)
-                || (Plasmoid.location === PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection === Qt.RightToLeft)
-
-            AnchorChanges {
-                target: searchField
-                anchors.top: undefined
-                anchors.bottom: mainRow.bottom
-                anchors.left: undefined
-                anchors.right: parent.right
+            event.accepted = false; // Pass the event to KeyNavigation.down
+        }
+        Keys.onRightPressed: event => {
+            if (runnerColumns.visibleChildren.length > 1) {
+                runnerColumns.visibleChildren[1].currentIndex = 0;
             }
-
-            PropertyChanges {
-                target: searchField
-                anchors.leftMargin: undefined
-                anchors.rightMargin: sideBar.width + mainRow.spacing + Kirigami.Units.smallSpacing
-            }
-        }]
-
-        Keys.onPressed: event => {
-            if (event.key === Qt.Key_Up) {
-                if (rootList.visible) {
-                    rootList.showChildDialogs = false;
-                    rootList.currentIndex = rootList.model.count - 1;
-                    rootList.forceActiveFocus();
-                    rootList.showChildDialogs = true;
-                }
-
-                if (runnerColumns.visible) {
-                    for (var i = 0; i < runnerModel.count; ++i) {
-                        if (runnerModel.modelForRow(i).count) {
-                            var targetList = runnerColumnsRepeater.itemAt(i);
-                            targetList.currentIndex = runnerModel.modelForRow(i).count - 1;
-                            targetList.forceActiveFocus();
-                            break;
-                        }
-                    }
-                }
-            } else if (event.key === Qt.Key_Down) {
-                if (rootList.visible) {
-                    rootList.showChildDialogs = false;
-                    rootList.currentIndex = Math.min(1, rootList.count);
-                    rootList.forceActiveFocus();
-                    rootList.showChildDialogs = true;
-                }
-
-                if (runnerColumns.visible) {
-                    for (var i = 0; i < runnerModel.count; ++i) {
-                        if (runnerModel.modelForRow(i).count) {
-                            var targetList = runnerColumnsRepeater.itemAt(i);
-                            targetList.currentIndex = Math.min(1, targetList.count);
-                            targetList.forceActiveFocus();
-                            break;
-                        }
-                    }
-                }
-            } else if (event.key === Qt.Key_Left && cursorPosition === 0) {
-                    for (var i = runnerModel.count; i >= 0; --i) {
-                        if (runnerModel.modelForRow(i).count) {
-                            var targetList = runnerColumnsRepeater.itemAt(i);
-                            targetList.currentIndex = 0;
-                            targetList.forceActiveFocus();
-                            break;
-                        }
-                    }
-            } else if (event.key === Qt.Key_Right && cursorPosition === length) {
-                for (var i = 1; i < runnerModel.count; ++i) {
-                    if (runnerModel.modelForRow(i).count) {
-                        var targetList = runnerColumnsRepeater.itemAt(i);
-                        targetList.currentIndex = 0;
-                        targetList.forceActiveFocus();
-                        break;
-                    }
-                }
-            } else if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
-                if (runnerColumns.visible && runnerModel.modelForRow(0).count) {
-                    runnerModel.modelForRow(0).trigger(0, "", null);
-                    kicker.expanded = false;
-                }
-            }
+            event.accepted = false; // Pass the event to KeyNavigation.right
         }
 
-        function appendText(newText) {
-            focus = true;
-            text = text + newText;
+        Keys.onReturnPressed: event => {
+            if (runnerColumns.visible) {
+                const listView = runnerColumns.visibleChildren[0].listView;
+                (listView.currentItem || listView.itemAtIndex(0)).Keys.onReturnPressed(event);
+            } else {
+                event.accepted = false;
+            }
         }
-    }
-
-    Keys.onPressed: event => {
-        if (event.key === Qt.Key_Escape) {
-            kicker.expanded = false;
-        }
+        Keys.onEnterPressed: event => Keys.onReturnPressed(event)
     }
 
     Component.onCompleted: {
-        appendSearchText.connect(searchField.appendText);
-
-        kicker.reset.connect(reset);
-        windowSystem.hidden.connect(reset);
-
         rootModel.refresh();
     }
 }

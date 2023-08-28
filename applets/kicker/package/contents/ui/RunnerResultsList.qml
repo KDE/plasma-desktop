@@ -13,17 +13,16 @@ import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasmoid 2.0
 
 FocusScope {
-    width: runnerMatches.width + vertLine.width + vertLine.anchors.leftMargin + runnerMatches.anchors.leftMargin
-    height: parent.height
+    id: runnerMatchesScope
+    width: runnerMatches.width + vertLine.width + vertLine.anchors.leftMargin + resultColumn.anchors.leftMargin
 
-    signal keyNavigationAtListEnd
-
+    readonly property alias listView: runnerMatches.listView
     property alias currentIndex: runnerMatches.currentIndex
     property alias count: runnerMatches.count
-    property alias containsMouse: runnerMatches.containsMouse
 
     Accessible.name: header.text
     Accessible.role: Accessible.MenuItem
+    Keys.forwardTo: runnerMatches
 
     KSvg.SvgItem {
         id: vertLine
@@ -40,69 +39,46 @@ FocusScope {
         elementId: "vertical-line"
     }
 
-    PlasmaComponents3.Label {
-        id: header
+    Column {
+        id: resultColumn
+        anchors {
+            top: Plasmoid.configuration.alignResultsToBottom ? undefined : parent.top
+            bottom: Plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
+            left: vertLine.right
+            leftMargin: vertLine.visible ? spacing : 0
+        }
+        spacing: Kirigami.Units.smallSpacing
 
-        anchors.left: vertLine.right
+        PlasmaComponents3.Label {
+            id: header
 
-        width: runnerMatches.width
-        height: runnerMatches.itemHeight + Kirigami.Units.smallSpacing
+            width: runnerMatches.width
+            height: runnerMatches.itemHeight
 
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVTop
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignTop
 
-        textFormat: Text.PlainText
-        wrapMode: Text.NoWrap
-        elide: Text.ElideRight
-        font.weight: Font.Bold
+            textFormat: Text.PlainText
+            wrapMode: Text.NoWrap
+            elide: Text.ElideRight
+            font.weight: Font.Bold
 
-        text: (runnerMatches.model !== null) ? runnerMatches.model.name : ""
-    }
-
-    ItemListView {
-        id: runnerMatches
-
-        anchors.top: Plasmoid.configuration.alignResultsToBottom ? undefined : header.bottom
-        anchors.bottom: Plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
-        anchors.bottomMargin: (index == 0 && anchors.bottom !== undefined) ? searchField.height + (2 * Kirigami.Units.smallSpacing) : undefined
-        anchors.left: vertLine.right
-        anchors.leftMargin: (index > 0) ? Kirigami.Units.smallSpacing : 0
-
-        height: {
-            var listHeight = (((index == 0)
-                ? rootList.height : runnerColumns.height) - header.height);
-
-            if (model && model.count) {
-                return Math.min(favoriteSystemActions.height + favoriteApps.height - header.height, model.count * itemHeight);
-            }
-
-            return listHeight;
+            text: (runnerMatches.model !== null) ? runnerMatches.model.name : ""
         }
 
-        focus: true
+        ItemListView {
+            id: runnerMatches
 
-        iconsEnabled: true
-        keyNavigationWraps: (index != 0)
+            height: Math.min(runnerMatchesScope.height - header.height - spacing, (model?.count ?? 0) * itemHeight)
 
-        resetOnExitDelay: 0
+            iconsEnabled: true
 
-        model: runnerModel.modelForRow(index)
+            model: runnerModel.modelForRow(index)
 
-        onModelChanged: {
-            if (model === undefined || model === null) {
-                enabled: false;
-                visible: false;
-            }
+            KeyNavigation.up: runnerMatchesScope.KeyNavigation.up
+            KeyNavigation.down: runnerMatchesScope.KeyNavigation.down
+            Keys.onLeftPressed: event => runnerMatchesScope.Keys.onLeftPressed(event)
+            Keys.onRightPressed: event => runnerMatchesScope.Keys.onRightPressed(event)
         }
-
-        onCountChanged: {
-            if (index == 0 && searchField.focus) {
-                currentIndex = 0;
-            }
-        }
-    }
-
-    Component.onCompleted: {
-        runnerMatches.keyNavigationAtListEnd.connect(keyNavigationAtListEnd);
     }
 }
