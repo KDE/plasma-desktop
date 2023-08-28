@@ -1,26 +1,26 @@
 # Translation of kcmmouse.po to Catalan (Valencian)
-# Copyright (C) 1998-2022 This_file_is_part_of_KDE
+# Copyright (C) 1998-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2004, 2005, 2006.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2003, 2011, 2014, 2018, 2020.
 # Albert Astals Cid <aacid@kde.org>, 2004, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 01:57+0000\n"
-"PO-Revision-Date: 2022-08-25 12:39+0200\n"
+"PO-Revision-Date: 2023-08-24 10:52+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -149,19 +149,19 @@ msgstr ""
 #: kcm/libinput/main.qml:178 kcm/libinput/main_deviceless.qml:105
 #, kde-format
 msgid "Pointer speed:"
-msgstr "Velocitat de l'apuntador:"
+msgstr "Velocitat del punter:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
 #: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
-msgstr "Acceleració de l'apuntador:"
+msgstr "Acceleració del punter:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Sense"
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -171,7 +171,7 @@ msgstr "El cursor es mou la mateixa distància que el moviment del ratolí."
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Estàndard"
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -340,7 +340,7 @@ msgstr "Avançat"
 #: kcm/xlib/kcmmouse.ui:174
 #, kde-format
 msgid "Pointer threshold:"
-msgstr "Llindar de l'apuntador:"
+msgstr "Llindar del punter:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/kcmmouse.ui:184
@@ -380,12 +380,12 @@ msgid ""
 "control.</p>"
 msgstr ""
 "<p>Esta opció us permet canviar la relació entre la distància del "
-"desplaçament de l'apuntador del ratolí a la pantalla i el moviment relatiu "
-"del dispositiu físic (el qual pot ser un ratolí, una bola o qualsevol altre "
+"desplaçament del punter del ratolí a la pantalla i el moviment relatiu del "
+"dispositiu físic (el qual pot ser un ratolí, una bola o qualsevol altre "
 "dispositiu apuntador).</p><p> Un valor alt de l'acceleració provocarà grans "
-"moviments de l'apuntador del ratolí a la pantalla, fins i tot si només feu "
-"un moviment xicotet amb el dispositiu físic. La selecció de valors molt alts "
-"pot fer que l'apuntador voli travessant la pantalla, fent-se difícil de "
+"moviments del punter del ratolí a la pantalla, fins i tot si només feu un "
+"moviment xicotet amb el dispositiu físic. La selecció de valors molt alts "
+"pot fer que el punter voli travessant la pantalla, fent-se difícil de "
 "controlar.</p>"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
@@ -406,13 +406,13 @@ msgid ""
 "the mouse pointer. With larger movements of the physical device, you can "
 "move the mouse pointer rapidly to different areas on the screen.</p>"
 msgstr ""
-"<p>El llindar és la distància més xicoteta que s'ha de moure l'apuntador del "
+"<p>El llindar és la distància més xicoteta que s'ha de moure el punter del "
 "ratolí per la pantalla abans que faça efecte l'acceleració. Si el moviment "
-"és més xicotet que el llindar, l'apuntador es mourà com si l'acceleració "
-"fora 1X;</p><p>per tant, si feu moviments petits amb el dispositiu físic, no "
-"hi haurà acceleració en absolut, donant-vos un grau de control més gran de "
-"l'apuntador del ratolí. Amb moviments més grans del dispositiu físic, podreu "
-"moure l'apuntador ràpidament a diferents àrees de la pantalla.</p>"
+"és més xicotet que el llindar, el punter es mourà com si l'acceleració fora "
+"1X;</p><p>per tant, si feu moviments petits amb el dispositiu físic, no hi "
+"haurà acceleració en absolut, donant-vos un grau de control més gran del "
+"punter del ratolí. Amb moviments més grans del dispositiu físic, podreu "
+"moure el punter ràpidament a àrees diferents de la pantalla.</p>"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
 #: kcm/xlib/kcmmouse.ui:280
@@ -446,9 +446,9 @@ msgid ""
 "If you click with the mouse (e.g. in a multi-line editor) and begin to move "
 "the mouse within the drag start time, a drag operation will be initiated."
 msgstr ""
-"Si cliqueu amb el ratolí (p. ex. en un editor multilínia) i comenceu a moure "
-"el ratolí dins del temps inici per a l'arrossegada, s'iniciarà una operació "
-"d'arrossegament."
+"Si cliqueu amb el ratolí (p. ex., en un editor multilínia) i comenceu a "
+"moure el ratolí dins del temps inici per a l'arrossegada, s'iniciarà una "
+"operació d'arrossegament."
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
 #: kcm/xlib/kcmmouse.ui:333
@@ -484,7 +484,7 @@ msgstr "Navegació amb el teclat"
 #: kcm/xlib/kcmmouse.ui:395
 #, kde-format
 msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "&Mou l'apuntador amb el teclat (utilitzant el teclat numèric)"
+msgstr "&Mou el punter amb el teclat (utilitzant el teclat numèric)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: kcm/xlib/kcmmouse.ui:424
@@ -535,12 +535,3 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " línia"
 msgstr[1] " línies"
-
-#~ msgid "Acceleration profile:"
-#~ msgstr "Perfil d'acceleració:"
-
-#~ msgid "Flat"
-#~ msgstr "Uniforme"
-
-#~ msgid "Adaptive"
-#~ msgstr "Adaptativa"

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 01:57+0000\n"
-"PO-Revision-Date: 2023-04-25 19:44+0100\n"
+"PO-Revision-Date: 2023-08-26 14:21+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -152,7 +152,7 @@ msgstr "Akcelado de la montrilo:"
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Neniu"
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -162,7 +162,7 @@ msgstr "Kursoro moviĝas la saman distancon kiel la musmovo."
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Norma"
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -513,12 +513,3 @@ msgid " line"
 msgid_plural " lines"
 msgstr[0] " linio"
 msgstr[1] " linioj"
-
-#~ msgid "Acceleration profile:"
-#~ msgstr "Akcela profilo:"
-
-#~ msgid "Flat"
-#~ msgstr "Plata"
-
-#~ msgid "Adaptive"
-#~ msgstr "Sinadapta"

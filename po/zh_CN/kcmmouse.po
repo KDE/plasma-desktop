@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 01:57+0000\n"
-"PO-Revision-Date: 2023-08-02 12:38\n"
+"PO-Revision-Date: 2023-08-27 03:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -115,13 +115,13 @@ msgstr "交换左键和右键"
 #: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
-msgstr "同时按左键和右键模拟中间键点击"
+msgstr "同时按左键和右键模拟中键点击"
 
 #: kcm/libinput/main.qml:169 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
-msgstr "同时点击左键和右键时将发送中间键点击信号。"
+msgstr "同时点击左键和右键时将发送中键点击信号。"
 
 #: kcm/libinput/main.qml:178 kcm/libinput/main_deviceless.qml:105
 #, kde-format
@@ -138,7 +138,7 @@ msgstr "光标加速："
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "无"
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -148,7 +148,7 @@ msgstr "光标移动的距离与鼠标移动的距离相同。"
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "标准"
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -264,7 +264,7 @@ msgid ""
 msgstr ""
 "如果您习惯使用左手，可以勾选“左手模式”来交换指针设备的左键和右键的功能。如果"
 "您的指针设备具备两个以上的按钮，那么只有负责左键和右键功能的按钮才会受到该选"
-"项影响。例如三键鼠标的中间键不会收到该选项的影响。"
+"项影响。例如三键鼠标的中键不会收到该选项的影响。"
 
 #. i18n: ectx: property (title), widget (QGroupBox, handedBox)
 #: kcm/xlib/kcmmouse.ui:55
@@ -488,12 +488,3 @@ msgstr[0] " 像素"
 msgid " line"
 msgid_plural " lines"
 msgstr[0] " 行"
-
-#~ msgid "Acceleration profile:"
-#~ msgstr "加速特性："
-
-#~ msgid "Flat"
-#~ msgstr "恒定"
-
-#~ msgid "Adaptive"
-#~ msgstr "取决于鼠标速度"

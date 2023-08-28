@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-19 01:57+0000\n"
-"PO-Revision-Date: 2023-06-18 13:00+0200\n"
+"PO-Revision-Date: 2023-08-26 04:48+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -20,50 +20,42 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: contents/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid "Trash"
+#, kde-format
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Lixo"
 
 #: contents/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "One item"
-#| msgid_plural "%1 items"
+#, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
-msgstr[0] "Un elemento"
-msgstr[1] "%1 elementos"
+msgstr[0] "Un elemento."
+msgstr[1] "%1 elementos."
 
 #: contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
-msgstr "Baleiro"
+msgstr "Baleiro."
 
 #: contents/ui/main.qml:71
-#, fuzzy, kde-format
-#| msgctxt "a verb"
-#| msgid "Open"
+#, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Abrir"
 
 #: contents/ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
-msgstr "Baleiro"
+msgstr "Baleirar"
 
 #: contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Trash Settings…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
 msgstr "Configuración do lixo…"

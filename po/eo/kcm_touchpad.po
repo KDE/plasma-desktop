@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 01:57+0000\n"
-"PO-Revision-Date: 2023-06-15 20:56+0100\n"
+"PO-Revision-Date: 2023-08-26 14:21+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -139,20 +139,19 @@ msgstr ""
 "Alklaki maldekstran kaj dekstran butonon samtempe sendas mezan butonklakon."
 
 #: kcm/libinput/touchpad.qml:254
-#, fuzzy, kde-format
-#| msgid "Minimum pointer speed"
+#, kde-format
 msgid "Pointer speed:"
-msgstr "Minimuma montrilo rapideco"
+msgstr "Montrilsaga rapideco:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
-msgstr "Montrila akcelo:"
+msgstr "Montrilsaga akcelo:"
 
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Neniu"
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -162,7 +161,7 @@ msgstr "Kursoro movas la saman distancon kiel fingro."
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Norma"
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
