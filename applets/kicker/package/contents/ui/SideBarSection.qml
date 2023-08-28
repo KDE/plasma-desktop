@@ -4,34 +4,46 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQuick
 
-import org.kde.draganddrop 2.0
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami 2 as Kirigami
 
-DropArea {
-    id: root
+// To reflect children's activeFocus
+FocusScope {
+    id: section
 
+    anchors.horizontalCenter: parent.horizontalCenter
     width: Kirigami.Units.iconSizes.medium
     height: contentHeight
 
-    anchors.horizontalCenter: parent.horizontalCenter
-
-    property int contentHeight: model ? (model.count * Kirigami.Units.iconSizes.medium) + ((model.count - 1) * flow.spacing) : 0
-
+    property real contentHeight: model ? (model.count * Kirigami.Units.iconSizes.medium) + ((model.count - 1) * flow.spacing) : 0
+    readonly property alias repeater: repeater
     property alias model: repeater.model
 
-    onDragMove: event => {
-        if (flow.animating) {
-            return;
+    Timer {
+        id: resetAnimationDurationTimer
+
+        interval: 150
+        repeat: false
+
+        onTriggered: {
+            flow.animationDuration = interval - 20;
         }
+    }
 
-        var above = flow.childAt(event.x, event.y);
+    DropArea {
+        anchors.fill: parent
+        onPositionChanged: event => {
+            if (flow.animating) {
+                return;
+            }
 
-        if (above && above !== kicker.dragSource && dragSource.parent == flow) {
-            repeater.model.moveRow(dragSource.itemIndex, above.itemIndex);
+            const above = flow.childAt(event.x, event.y);
+
+            if (above && above !== dragSource.sourceItem && dragSource.sourceItem.parent === flow) {
+                repeater.model.moveRow(dragSource.sourceItem.itemIndex, above.itemIndex);
+            }
         }
-
     }
 
     Flow {
@@ -67,17 +79,6 @@ DropArea {
                 flow.animationDuration = 0;
                 resetAnimationDurationTimer.start();
             }
-        }
-    }
-
-    Timer {
-        id: resetAnimationDurationTimer
-
-        interval: 150
-        repeat: false
-
-        onTriggered: {
-            flow.animationDuration = interval - 20;
         }
     }
 }

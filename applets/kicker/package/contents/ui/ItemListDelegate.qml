@@ -182,6 +182,26 @@ Item {
 
         LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
 
+        DragHandler {
+            id: dragHandler
+            enabled: !item.hasChildren && model.url?.toString().length > 0
+            onActiveChanged: if (active) {
+                icon.grabToImage((result) => {
+                    if (!dragHandler.active) {
+                        return;
+                    }
+                    dragSource.Drag.imageSource = result.url;
+                    dragSource.Drag.mimeData = {
+                        "text/uri-list": model.url.toString(),
+                    };
+                    dragSource.sourceItem = item;
+                    dragSource.Drag.active = dragHandler.active;
+                });
+            } else {
+                dragSource.Drag.active = false;
+            }
+        }
+
         Kirigami.Icon {
             id: icon
 

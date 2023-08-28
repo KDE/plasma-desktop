@@ -132,12 +132,6 @@ PlasmoidItem {
         }
     }
 
-    Kicker.DragHelper {
-        id: dragHelper
-
-        dragIconSize: Kirigami.Units.iconSizes.medium
-    }
-
     Kicker.ProcessRunner {
         id: processRunner
     }
@@ -187,6 +181,17 @@ PlasmoidItem {
             onTriggered: processRunner.runMenuEditor()
         }
     ]
+
+    Item {
+        id: dragSource
+        property Item sourceItem: null
+        Drag.dragType: Drag.Automatic
+        Drag.onDragFinished: {
+            sourceItem = null;
+            dragSource.Drag.imageSource = "";
+            dragSource.Drag.mimeData = {};
+        }
+    }
 
     Component.onCompleted: {
         updateSvgMetrics();
