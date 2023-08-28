@@ -53,6 +53,18 @@ T.Button {
         actionMenu.open(x, y);
     }
 
+    Shortcut {
+        enabled: item.activeFocus && model.index > 0
+        sequence: "Ctrl+Shift+Up"
+        onActivated: repeater.model.moveRow(model.index, model.index - 1)
+    }
+
+    Shortcut {
+        enabled: item.activeFocus && model.index < repeater.count - 1
+        sequence: "Ctrl+Shift+Down"
+        onActivated: repeater.model.moveRow(model.index, model.index + 1)
+    }
+
     ActionMenu {
         id: actionMenu
 
