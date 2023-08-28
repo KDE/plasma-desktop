@@ -4,14 +4,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
+import QtQuick
+import QtQuick.Controls
 
-import org.kde.draganddrop 2.0 as DragDrop
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2 as Kirigami
 import org.kde.iconthemes as KIconThemes
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasmoid 2.0
 
@@ -39,7 +37,6 @@ Kirigami.FormLayout {
     property alias cfg_useExtraRunners: useExtraRunners.checked
     property alias cfg_alignResultsToBottom: alignResultsToBottom.checked
 
-
     Button {
         id: iconButton
 
@@ -55,33 +52,37 @@ Kirigami.FormLayout {
 
         onPressed: iconMenu.opened ? iconMenu.close() : iconMenu.open()
 
-        DragDrop.DropArea {
+        DropArea {
             id: dropArea
-
-            property bool containsAcceptableDrag: false
 
             anchors.fill: parent
 
-            onDragEnter: {
+            property bool containsAcceptableDrag: false
+
+            onEntered: event =>{
+                if (!event.hasUrls) {
+                    event.accepted = false;
+                    return;
+                }
                 // Cannot use string operations (e.g. indexOf()) on "url" basic type.
-                var urlString = event.mimeData.url.toString();
+                const urlString = event.urls[0].toString();
 
                 // This list is also hardcoded in KIconDialog.
-                var extensions = [".png", ".xpm", ".svg", ".svgz"];
+                const extensions = [".png", ".xpm", ".svg", ".svgz"];
                 containsAcceptableDrag = urlString.indexOf("file:///") === 0 && extensions.some(function (extension) {
                     return urlString.indexOf(extension) === urlString.length - extension.length; // "endsWith"
                 });
 
                 if (!containsAcceptableDrag) {
-                    event.ignore();
+                    event.accepted = false;
                 }
             }
-            onDragLeave: containsAcceptableDrag = false
+            onExited: containsAcceptableDrag = false
 
-            onDrop: {
+            onDropped: event => {
                 if (containsAcceptableDrag) {
                     // Strip file:// prefix, we already verified in onDragEnter that we have only local URLs.
-                    iconDialog.setCustomButtonImage(event.mimeData.url.toString().substr("file://".length));
+                    iconDialog.setCustomButtonImage(event.urls[0].toString().substr("file://".length));
                 }
                 containsAcceptableDrag = false;
             }
