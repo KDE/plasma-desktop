@@ -24,10 +24,6 @@ Item {
     readonly property bool useCustomButtonImage: (Plasmoid.configuration.useCustomButtonImage
         && Plasmoid.configuration.customButtonImage.length !== 0)
 
-    readonly property Component dashWindowComponent: kicker.isDash ? Qt.createComponent(Qt.resolvedUrl("./DashboardRepresentation.qml"), root) : null
-    readonly property Kicker.DashboardWindow dashWindow: dashWindowComponent && dashWindowComponent.status === Component.Ready
-        ? dashWindowComponent.createObject(root, { visualParent: root }) : null
-
     onWidthChanged: updateSizeHints()
     onHeightChanged: updateSizeHints()
 
@@ -59,7 +55,7 @@ Item {
             ? implicitHeight / implicitWidth
             : implicitWidth / implicitHeight
 
-        active: mouseArea.containsMouse && !justOpenedTimer.running
+        active: mouseArea.containsMouse
         source: root.useCustomButtonImage ? Plasmoid.configuration.customButtonImage : Plasmoid.configuration.icon
 
         // A custom icon could also be rectangular. However, if a square, custom, icon is given, assume it
@@ -77,7 +73,7 @@ Item {
         property bool wasExpanded: false;
 
         activeFocusOnTab: true
-        hoverEnabled: !root.dashWindow || !root.dashWindow.visible
+        hoverEnabled: true
 
         Keys.onPressed: {
             switch (event.key) {
@@ -94,28 +90,11 @@ Item {
         Accessible.role: Accessible.Button
 
         onPressed: {
-            if (!kicker.isDash) {
-                wasExpanded = kicker.expanded
-            }
+            wasExpanded = kicker.expanded
         }
 
         onClicked: {
-            if (kicker.isDash) {
-                root.dashWindow.toggle();
-                justOpenedTimer.start();
-            } else {
-                kicker.expanded = !wasExpanded;
-            }
-        }
-    }
-
-    Connections {
-        target: Plasmoid
-        enabled: kicker.isDash && root.dashWindow !== null
-
-        function onActivated() {
-            root.dashWindow.toggle();
-            justOpenedTimer.start();
+            kicker.expanded = !wasExpanded;
         }
     }
 }

@@ -19,8 +19,6 @@ Kirigami.FormLayout {
     anchors.left: parent.left
     anchors.right: parent.right
 
-    property bool isDash: (Plasmoid.pluginName === "org.kde.plasma.kickerdash")
-
     property string cfg_icon: Plasmoid.configuration.icon
     property bool cfg_useCustomButtonImage: Plasmoid.configuration.useCustomButtonImage
     property string cfg_customButtonImage: Plasmoid.configuration.customButtonImage
@@ -167,15 +165,11 @@ Kirigami.FormLayout {
     CheckBox {
         id: limitDepth
 
-        visible: !isDash
-
         text: i18n("Flatten sub-menus to a single level")
     }
 
     CheckBox {
         id: showIconsRootLevel
-
-        visible: !configGeneral.isDash
 
         text: i18n("Show icons on the root level of the menu")
     }
@@ -223,8 +217,6 @@ Kirigami.FormLayout {
 
     CheckBox {
         id: alignResultsToBottom
-
-        visible: !configGeneral.isDash
 
         text: i18n("Align search results to bottom")
     }
