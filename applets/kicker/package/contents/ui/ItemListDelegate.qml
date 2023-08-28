@@ -142,6 +142,7 @@ Item {
                     dragSource.Drag.imageSource = result.url;
                     dragSource.Drag.mimeData = {
                         "text/uri-list": model.url.toString(),
+                        "text/x-orgkdeplasmakicker_favoriteid": model.favoriteId,
                     };
                     dragSource.sourceItem = item;
                     dragSource.Drag.active = dragHandler.active;

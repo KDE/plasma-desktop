@@ -33,6 +33,14 @@ FocusScope {
 
     DropArea {
         anchors.fill: parent
+        property string favoriteId
+        onEntered: event => {
+            const containsFavoriteId = event.formats.indexOf("text/x-orgkdeplasmakicker_favoriteid") >= 0 && dragSource.sourceItem.parent !== flow;
+            event.accpeted = (event.hasUrls && dragSource.sourceItem.parent === flow) || containsFavoriteId;
+            if (containsFavoriteId) {
+                favoriteId = event.getDataAsString("text/x-orgkdeplasmakicker_favoriteid");
+            }
+        }
         onPositionChanged: event => {
             if (flow.animating) {
                 return;
@@ -42,6 +50,12 @@ FocusScope {
 
             if (above && above !== dragSource.sourceItem && dragSource.sourceItem.parent === flow) {
                 repeater.model.moveRow(dragSource.sourceItem.itemIndex, above.itemIndex);
+            }
+        }
+        onDropped: event => {
+            if (favoriteId.length > 0) {
+                kicker.globalFavorites.addFavorite(favoriteId);
+                favoriteId = "";
             }
         }
     }
