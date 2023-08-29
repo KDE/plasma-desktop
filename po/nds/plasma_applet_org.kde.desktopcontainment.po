@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-09 00:48+0000\n"
+"POT-Creation-Date: 2023-08-29 02:25+0000\n"
 "PO-Revision-Date: 2014-08-12 23:57+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -437,6 +437,14 @@ msgstr ""
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Vöransicht-Modulen"
+
+#: package/contents/ui/FolderView.qml:1203
+#, kde-format
+msgctxt "@info"
+msgid ""
+"There are a lot of files and folders on the desktop. This can cause bugs and "
+"performance issues. Please consider moving some of them elsewhere."
+msgstr ""
 
 #: package/contents/ui/main.qml:356
 #, fuzzy, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-09 00:48+0000\n"
+"POT-Creation-Date: 2023-08-29 02:25+0000\n"
 "PO-Revision-Date: 2023-03-01 00:32+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -400,6 +400,14 @@ msgstr "삭제"
 #, kde-format
 msgid "Preview Plugins"
 msgstr "미리 보기 플러그인"
+
+#: package/contents/ui/FolderView.qml:1203
+#, kde-format
+msgctxt "@info"
+msgid ""
+"There are a lot of files and folders on the desktop. This can cause bugs and "
+"performance issues. Please consider moving some of them elsewhere."
+msgstr ""
 
 #: package/contents/ui/main.qml:356
 #, kde-format

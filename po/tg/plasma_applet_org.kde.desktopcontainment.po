@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-09 00:48+0000\n"
+"POT-Creation-Date: 2023-08-29 02:25+0000\n"
 "PO-Revision-Date: 2021-09-05 11:41-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -429,6 +429,14 @@ msgstr "Тоза кардан"
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Пешнамоиши васлкунакҳо"
+
+#: package/contents/ui/FolderView.qml:1203
+#, kde-format
+msgctxt "@info"
+msgid ""
+"There are a lot of files and folders on the desktop. This can cause bugs and "
+"performance issues. Please consider moving some of them elsewhere."
+msgstr ""
 
 #: package/contents/ui/main.qml:356
 #, kde-format
