@@ -40,6 +40,10 @@ T.Button {
     }
     Keys.onReturnPressed: clicked()
     Keys.onEnterPressed: clicked()
+    Keys.onDeletePressed: {
+        repeater.itemAt(Math.max(model.index - 1, 0))?.forceActiveFocus(Qt.TabFocusReason);
+        repeater.model.removeFavorite(model.favoriteId);
+    }
 
     onClicked: {
         repeater.model.trigger(index, "", null);
