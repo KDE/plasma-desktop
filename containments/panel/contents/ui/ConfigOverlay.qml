@@ -221,11 +221,11 @@ MouseArea {
 
         onVisualParentChanged: {
             if (visualParent) {
-                const plasmoid = configurationArea.currentApplet.applet.plasmoid;
-                Plasmoid.contextualActionsAboutToShow();
-                alternativesButton.visible = Plasmoid.internalAction("alternatives")?.enabled ?? false;
-                configureButton.visible = Plasmoid.internalAction("configure")?.enabled ?? false;
-                label.text = Plasmoid.title;
+                const thisPlasmoid = configurationArea.currentApplet.applet.plasmoid;
+                thisPlasmoid.contextualActionsAboutToShow();
+                alternativesButton.visible = thisPlasmoid.internalAction("alternatives")?.enabled ?? false;
+                configureButton.visible = thisPlasmoid.internalAction("configure")?.enabled ?? false;
+                label.text = thisPlasmoid.title;
             }
         }
 
