@@ -6,7 +6,6 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtQuick.Controls 1.0 as QQC1
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.20 as Kirigami
@@ -34,8 +33,8 @@ ColumnLayout {
         filterRegularExpression: RegExp(mimeFilter.text)
         filterRoleName: "name"
 
-        sortRole: mimeTypesView.getColumn(mimeTypesView.sortIndicatorColumn).role
-        sortOrder: mimeTypesView.sortIndicatorOrder
+        sortRole: "name"
+        property int sortOrder: mimeTypesView.sortIndicatorOrder //FIXME: workaround for PlasmaCore.SortFilterModel, look again after porting to KItemModels
 
         function checkFiltered() {
             var types = [];
@@ -93,105 +92,104 @@ ColumnLayout {
             visible: false
         }
 
-        QQC1.TableView {
-            id: mimeTypesView
-
-            // Signal the delegates listen to when user presses space to toggle current row.
-            signal toggleCurrent()
-
+        ScrollView {
+            id: scrollView
+            enabled: (filterMode.currentIndex > 0)
             Layout.fillWidth: true
             Layout.fillHeight: true
+            Layout.preferredHeight: 100 // Note: this arbitrary number is a workaround to the layout trying to resize the scrollview to an huge value, the behavior is still correctly stretching
 
-            enabled: (filterMode.currentIndex > 0)
-
-            model: filteredMimeTypesModel
-
-            sortIndicatorVisible: true
-            sortIndicatorColumn: 2 // Default to sort by "File type".
-
-            onSortIndicatorColumnChanged: { // Disallow sorting by icon.
-                if (sortIndicatorColumn === 1) {
-                    sortIndicatorColumn = 2;
+            Component.onCompleted: {
+                if (background) {
+                    background.visible = true;
                 }
             }
 
-            Keys.onSpacePressed: toggleCurrent()
+            contentItem: ListView {
+                id: mimeTypesView
+                clip: true
 
-            function adjustColumns() {
-                // Resize description column to take whatever space is left.
-                var width = viewport.width;
-                for (var i = 0; i < columnCount - 1; ++i) {
-                    width -= getColumn(i).width;
-                }
-                descriptionColumn.width = width;
-            }
+                // Signal the delegates listen to when user presses space to toggle current row.
+                signal toggleCurrent()
 
-            onWidthChanged: adjustColumns()
-            // Component.onCompleted is too early to do this...
-            onRowCountChanged: adjustColumns()
 
-            QQC1.TableViewColumn {
-                role: "checked"
-                width: metricsCheckBox.width
-                resizable: false
-                movable: false
+                model: filteredMimeTypesModel
+                property real columnSize: Kirigami.Units.gridUnit * 15
+                headerPositioning: ListView.OverlayHeader
 
-                delegate: CheckBox {
-                    id: checkBox
+                Keys.onSpacePressed: toggleCurrent()
 
-                    checked: styleData.value
-                    activeFocusOnTab: false // only let the TableView as a whole get focus
-                    onClicked: {
-                        model.checked = checked
-                        // Clicking it breaks the binding to the model value which becomes
-                        // an issue during sorting as TableView re-uses delegates.
-                        checked = Qt.binding(() => styleData.value);
+                header: HorizontalHeaderView {
+                    id: headerView
+                    z: 9
+                    implicitWidth: mimeTypesView.width
+                    rowHeightProvider: function () {
+                        return Kirigami.Units.gridUnit * 2
                     }
+                    clip: true // This removes event handling blocking by the header
+                    model: [i18n("File Type"), i18n("Description")]
+                    interactive: false
+                    columnWidthProvider: function(column) {
+                        if (column == 0) {
+                            return mimeTypesView.columnSize;
+                        } else {
+                            return mimeTypesView.width - mimeTypesView.columnSize;
+                        }
+                    }
+                }
 
-                    Connections {
-                        target: mimeTypesView
-                        function onToggleCurrent() {
-                            if (styleData.row === mimeTypesView.currentRow) {
-                                model.checked = !checkBox.checked;
+                delegate: ItemDelegate {
+                    id: delegate
+                    width: mimeTypesView.width
+                    height: Kirigami.Units.iconSizes.small + padding * 2
+                    required property string name
+                    required property string comment
+                    required property var decoration
+
+                    contentItem: RowLayout {
+                        RowLayout {
+                            Layout.preferredWidth: mimeTypesView.columnSize
+                            Layout.maximumWidth: mimeTypesView.columnSize
+                            Layout.fillHeight: true
+                            CheckBox {
+                                Layout.fillHeight: true
+                                checked: mimeTypesModel.checkedTypes.indexOf(name) >= 0
+                                onToggled: {
+                                    let idx = mimeTypesModel.checkedTypes.indexOf(name);
+                                    if (idx >= 0) {
+                                        mimeTypesModel.checkedTypes.splice(idx, 1);
+                                    } else {
+                                        mimeTypesModel.checkedTypes.push(name)
+                                    }
+                                }
                             }
+                            Kirigami.Icon {
+                                Layout.fillHeight: true
+                                implicitWidth: Kirigami.Units.iconSizes.small
+                                implicitHeight: Kirigami.Units.iconSizes.small
+                                animated: false // TableView re-uses delegates, avoid animation when sorting/filtering.
+                                source: decoration
+                            }
+                            Label {
+                                text: name
+                                elide: Text.ElideRight
+                                Layout.fillWidth: true
+                                Layout.fillHeight: true
+                            }
+                        }
+                        Label {
+                            text: comment
+                            elide: Text.ElideRight
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
                         }
                     }
                 }
             }
-
-            QQC1.TableViewColumn {
-                role: "decoration"
-                width: Kirigami.Units.iconSizes.small
-                resizable: false
-                movable: false
-
-                delegate: Kirigami.Icon {
-                    width: Kirigami.Units.iconSizes.small
-                    height: Kirigami.Units.iconSizes.small
-                    animated: false // TableView re-uses delegates, avoid animation when sorting/filtering.
-                    source: styleData.value
-                }
-            }
-
-            QQC1.TableViewColumn {
-                id: nameColumn
-                role: "name"
-                title: i18n("File type")
-                width: Kirigami.Units.gridUnit * 10 // Assume somewhat reasonable default for mime type name.
-                onWidthChanged: mimeTypesView.adjustColumns()
-                movable: false
-            }
-
-            QQC1.TableViewColumn {
-                id: descriptionColumn
-                role: "comment"
-                title: i18n("Description")
-                movable: false
-                resizable: false
-            }
         }
 
         RowLayout {
+            id: selectLayout
             Button {
                 id: selectAllButton
                 enabled: (filterMode.currentIndex > 0)
@@ -210,6 +208,18 @@ ColumnLayout {
                 ToolTip.visible: (Kirigami.Settings.isMobile ? pressed : hovered) && ToolTip.text.length > 0
                 ToolTip.text: i18n("Deselect All")
                 onClicked: filteredMimeTypesModel.uncheckFiltered()
+            }
+
+            Button {
+                enabled: (filterMode.currentIndex > 0)
+                icon.name: filteredMimeTypesModel.sortOrder == Qt.AscendingOrder ? "view-sort-ascending-symbolic" : "view-sort-descending-symbolic"
+                ToolTip.delay: Kirigami.Units.toolTipDelay
+                ToolTip.visible: (Kirigami.Settings.isMobile ? pressed : hovered) && ToolTip.text.length > 0
+                ToolTip.text: i18n("Switch Sort Order")
+                onClicked: {
+                    filteredMimeTypesModel.sortOrder = filteredMimeTypesModel.sortOrder == Qt.AscendingOrder ? Qt.DescendingOrder : Qt.AscendingOrder;
+                    filteredMimeTypesModel.sort(0, filteredMimeTypesModel.sortOrder);
+                }
             }
         }
     }
