@@ -12,6 +12,7 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
+import org.kde.kitemmodels 1.0 as KItemModels
 
 ColumnLayout {
     id: configIcons
@@ -21,7 +22,7 @@ ColumnLayout {
     property alias cfg_filterMimeTypes: mimeTypesModel.checkedTypes
     property alias cfg_showHiddenFiles: showHiddenFiles.checked
 
-    PlasmaCore.SortFilterModel {
+    KItemModels.KSortFilterProxyModel {
         id: filteredMimeTypesModel
 
         sourceModel: Folder.MimeTypesModel {
@@ -30,8 +31,8 @@ ColumnLayout {
 
         // SortFilterModel doesn't have a case-sensitivity option
         // but filterRegExp always causes case-insensitive sorting.
-        filterRegExp: mimeFilter.text
-        filterRole: "name"
+        filterRegularExpression: RegExp(mimeFilter.text)
+        filterRoleName: "name"
 
         sortRole: mimeTypesView.getColumn(mimeTypesView.sortIndicatorColumn).role
         sortOrder: mimeTypesView.sortIndicatorOrder

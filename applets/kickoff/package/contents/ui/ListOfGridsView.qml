@@ -7,6 +7,7 @@
 import QtQuick 2.15
 import QtQml 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kitemmodels 1.0 as KItemModels
 
 KickoffListView {
     id: root
@@ -24,12 +25,12 @@ KickoffListView {
         parentView: ListView.view
         gridIndex: index
 
-        model: PlasmaCore.SortFilterModel {
+        model: KItemModels.KSortFilterProxyModel {
             id: sectionModel
 
             sourceModel: root.gridModel
-            filterRegExp: allAppsSection
-            filterRole: "group"
+            filterString: allAppsSection
+            filterRoleName: "group"
 
             function trigger(row, actionId, argument) {
                 const filteredIndex = sectionModel.index(row, 0)
