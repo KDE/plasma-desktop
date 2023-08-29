@@ -33,7 +33,7 @@ ColumnLayout {
         filterRegularExpression: RegExp(mimeFilter.text)
         filterRoleName: "name"
 
-        sortRole: "name"
+        sortRoleName: "name"
         property int sortOrder: mimeTypesView.sortIndicatorOrder //FIXME: workaround for PlasmaCore.SortFilterModel, look again after porting to KItemModels
 
         function checkFiltered() {
