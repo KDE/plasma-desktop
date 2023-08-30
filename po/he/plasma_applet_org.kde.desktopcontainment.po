@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-30 01:57+0000\n"
 "PO-Revision-Date: 2017-05-23 08:56-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -80,26 +80,31 @@ msgstr "סוגי קבצים:"
 msgid "Show hidden files:"
 msgstr "הצג את כל הקבצים"
 
-#: package/contents/ui/ConfigFilter.qml:178
+#: package/contents/ui/ConfigFilter.qml:130
 #, fuzzy, kde-format
 #| msgid "File types:"
-msgid "File type"
+msgid "File Type"
 msgstr "סוגי קבצים:"
 
-#: package/contents/ui/ConfigFilter.qml:187
+#: package/contents/ui/ConfigFilter.qml:130
 #, kde-format
 msgid "Description"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:200
+#: package/contents/ui/ConfigFilter.qml:199
 #, kde-format
 msgid "Select All"
 msgstr "בחר הכל"
 
-#: package/contents/ui/ConfigFilter.qml:210
+#: package/contents/ui/ConfigFilter.qml:209
 #, kde-format
 msgid "Deselect All"
 msgstr "בטל סימון של הכל"
+
+#: package/contents/ui/ConfigFilter.qml:218
+#, kde-format
+msgid "Switch Sort Order"
+msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:61
 #, fuzzy, kde-format
@@ -445,7 +450,7 @@ msgid ""
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
 
-#: package/contents/ui/main.qml:387
+#: package/contents/ui/main.qml:391
 #, fuzzy, kde-format
 #| msgid "Configure Desktop"
 msgid "Configure Desktop and Wallpaper…"

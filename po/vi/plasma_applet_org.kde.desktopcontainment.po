@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-30 01:57+0000\n"
 "PO-Revision-Date: 2023-01-08 16:13+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -75,25 +75,31 @@ msgstr "Kiểu tệp:"
 msgid "Show hidden files:"
 msgstr "Hiện tệp ẩn:"
 
-#: package/contents/ui/ConfigFilter.qml:178
-#, kde-format
-msgid "File type"
+#: package/contents/ui/ConfigFilter.qml:130
+#, fuzzy, kde-format
+#| msgid "File type"
+msgid "File Type"
 msgstr "Kiểu tệp"
 
-#: package/contents/ui/ConfigFilter.qml:187
+#: package/contents/ui/ConfigFilter.qml:130
 #, kde-format
 msgid "Description"
 msgstr "Mô tả"
 
-#: package/contents/ui/ConfigFilter.qml:200
+#: package/contents/ui/ConfigFilter.qml:199
 #, kde-format
 msgid "Select All"
 msgstr "Chọn tất cả"
 
-#: package/contents/ui/ConfigFilter.qml:210
+#: package/contents/ui/ConfigFilter.qml:209
 #, kde-format
 msgid "Deselect All"
 msgstr "Bỏ chọn tất cả"
+
+#: package/contents/ui/ConfigFilter.qml:218
+#, kde-format
+msgid "Switch Sort Order"
+msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:61
 #, kde-format
@@ -405,7 +411,7 @@ msgid ""
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
 
-#: package/contents/ui/main.qml:387
+#: package/contents/ui/main.qml:391
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Cấu hình bàn làm việc và phông nền…"

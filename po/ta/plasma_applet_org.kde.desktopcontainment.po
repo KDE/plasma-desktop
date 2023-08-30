@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-30 01:57+0000\n"
 "PO-Revision-Date: 2023-08-20 16:28+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -80,25 +80,31 @@ msgstr "கோப்பு வகைகள்:"
 msgid "Show hidden files:"
 msgstr "மறைந்துள்ள கோப்புகளைக் காட்டு:"
 
-#: package/contents/ui/ConfigFilter.qml:178
-#, kde-format
-msgid "File type"
+#: package/contents/ui/ConfigFilter.qml:130
+#, fuzzy, kde-format
+#| msgid "File type"
+msgid "File Type"
 msgstr "கோப்பு வகை:"
 
-#: package/contents/ui/ConfigFilter.qml:187
+#: package/contents/ui/ConfigFilter.qml:130
 #, kde-format
 msgid "Description"
 msgstr "விவரணம்"
 
-#: package/contents/ui/ConfigFilter.qml:200
+#: package/contents/ui/ConfigFilter.qml:199
 #, kde-format
 msgid "Select All"
 msgstr "அனைத்தையும் தேர்வு செய்"
 
-#: package/contents/ui/ConfigFilter.qml:210
+#: package/contents/ui/ConfigFilter.qml:209
 #, kde-format
 msgid "Deselect All"
 msgstr "அனைத்து தேர்வுகளை நிராகரி"
+
+#: package/contents/ui/ConfigFilter.qml:218
+#, kde-format
+msgid "Switch Sort Order"
+msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:61
 #, kde-format
@@ -412,7 +418,7 @@ msgstr ""
 "பணிமேடையில் பற்பல கோப்புகளும் அடைவுகளும் உள்ளன. இது சிக்கல்களை உருவாக்கலாம். முடிந்தால் "
 "அவற்றில் சிலவற்றை வேறு எங்கேயாவது நகர்த்தவும்."
 
-#: package/contents/ui/main.qml:387
+#: package/contents/ui/main.qml:391
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "பின்னணியையும் பணிமேடையையும் அமை…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-30 01:57+0000\n"
 "PO-Revision-Date: 2023-08-25 23:14+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -74,25 +74,31 @@ msgstr "파일 형식:"
 msgid "Show hidden files:"
 msgstr "숨김 파일 표시:"
 
-#: package/contents/ui/ConfigFilter.qml:178
-#, kde-format
-msgid "File type"
+#: package/contents/ui/ConfigFilter.qml:130
+#, fuzzy, kde-format
+#| msgid "File type"
+msgid "File Type"
 msgstr "파일 형식"
 
-#: package/contents/ui/ConfigFilter.qml:187
+#: package/contents/ui/ConfigFilter.qml:130
 #, kde-format
 msgid "Description"
 msgstr "설명"
 
-#: package/contents/ui/ConfigFilter.qml:200
+#: package/contents/ui/ConfigFilter.qml:199
 #, kde-format
 msgid "Select All"
 msgstr "모두 선택"
 
-#: package/contents/ui/ConfigFilter.qml:210
+#: package/contents/ui/ConfigFilter.qml:209
 #, kde-format
 msgid "Deselect All"
 msgstr "모두 선택 해제"
+
+#: package/contents/ui/ConfigFilter.qml:218
+#, kde-format
+msgid "Switch Sort Order"
+msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:61
 #, kde-format
@@ -406,7 +412,7 @@ msgstr ""
 "바탕 화면에 파일과 폴더가 너무 많이 있습니다. 버그나 성능 문제를 발생시킬 수 "
 "있습니다. 일부 항목을 다른 위치로 이동하십시오."
 
-#: package/contents/ui/main.qml:387
+#: package/contents/ui/main.qml:391
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "바탕 화면 및 배경 그림 설정…"

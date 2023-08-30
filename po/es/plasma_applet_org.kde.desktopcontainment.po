@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-30 01:57+0000\n"
 "PO-Revision-Date: 2023-08-19 16:11+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -75,25 +75,31 @@ msgstr "Tipos de archivos:"
 msgid "Show hidden files:"
 msgstr "Mostrar archivos ocultos:"
 
-#: package/contents/ui/ConfigFilter.qml:178
-#, kde-format
-msgid "File type"
+#: package/contents/ui/ConfigFilter.qml:130
+#, fuzzy, kde-format
+#| msgid "File type"
+msgid "File Type"
 msgstr "Tipo de archivo"
 
-#: package/contents/ui/ConfigFilter.qml:187
+#: package/contents/ui/ConfigFilter.qml:130
 #, kde-format
 msgid "Description"
 msgstr "Descripción"
 
-#: package/contents/ui/ConfigFilter.qml:200
+#: package/contents/ui/ConfigFilter.qml:199
 #, kde-format
 msgid "Select All"
 msgstr "Seleccionar todo"
 
-#: package/contents/ui/ConfigFilter.qml:210
+#: package/contents/ui/ConfigFilter.qml:209
 #, kde-format
 msgid "Deselect All"
 msgstr "Desmarcar todo"
+
+#: package/contents/ui/ConfigFilter.qml:218
+#, kde-format
+msgid "Switch Sort Order"
+msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:61
 #, kde-format
@@ -407,7 +413,7 @@ msgstr ""
 "Hay muchos archivos y carpetas en el escritorio. Esto puede ocasionar fallos "
 "y problemas de rendimiento. Considere mover algunos de ellos a otro lugar."
 
-#: package/contents/ui/main.qml:387
+#: package/contents/ui/main.qml:391
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Configurar el escritorio y la imagen de fondo..."

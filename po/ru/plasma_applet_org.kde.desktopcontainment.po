@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-30 01:57+0000\n"
 "PO-Revision-Date: 2023-01-22 16:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -81,25 +81,31 @@ msgstr "Типы файлов:"
 msgid "Show hidden files:"
 msgstr "Показывать скрытые файлы:"
 
-#: package/contents/ui/ConfigFilter.qml:178
-#, kde-format
-msgid "File type"
+#: package/contents/ui/ConfigFilter.qml:130
+#, fuzzy, kde-format
+#| msgid "File type"
+msgid "File Type"
 msgstr "Тип файла"
 
-#: package/contents/ui/ConfigFilter.qml:187
+#: package/contents/ui/ConfigFilter.qml:130
 #, kde-format
 msgid "Description"
 msgstr "Описание"
 
-#: package/contents/ui/ConfigFilter.qml:200
+#: package/contents/ui/ConfigFilter.qml:199
 #, kde-format
 msgid "Select All"
 msgstr "Выбрать все"
 
-#: package/contents/ui/ConfigFilter.qml:210
+#: package/contents/ui/ConfigFilter.qml:209
 #, kde-format
 msgid "Deselect All"
 msgstr "Отменить выбор"
+
+#: package/contents/ui/ConfigFilter.qml:218
+#, kde-format
+msgid "Switch Sort Order"
+msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:61
 #, kde-format
@@ -411,7 +417,7 @@ msgid ""
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
 
-#: package/contents/ui/main.qml:387
+#: package/contents/ui/main.qml:391
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "Настроить рабочий стол и обои..."
