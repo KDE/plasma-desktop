@@ -333,7 +333,7 @@ ContainmentItem {
                     ? ContainmentLayoutManager.ItemContainer.Locked
                     : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
 
-                configOverlayComponent: ConfigOverlay {}
+                configOverlaySource: "ConfigOverlay.qml"
 
                 onUserDrag: (newPosition, dragCenter) => {
                     const pos = mapToItem(root.parent, dragCenter.x, dragCenter.y);
