@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-30 01:57+0000\n"
-"PO-Revision-Date: 2023-08-19 09:07+0300\n"
+"PO-Revision-Date: 2023-08-31 08:50+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -77,10 +77,9 @@ msgid "Show hidden files:"
 msgstr "Показувати приховані файли:"
 
 #: package/contents/ui/ConfigFilter.qml:130
-#, fuzzy, kde-format
-#| msgid "File type"
+#, kde-format
 msgid "File Type"
-msgstr "Тип файла"
+msgstr "Тип файлів"
 
 #: package/contents/ui/ConfigFilter.qml:130
 #, kde-format
@@ -100,7 +99,7 @@ msgstr "Зняти позначення з усіх"
 #: package/contents/ui/ConfigFilter.qml:218
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "Перемкнути порядок сортування"
 
 #: package/contents/ui/ConfigIcons.qml:61
 #, kde-format
