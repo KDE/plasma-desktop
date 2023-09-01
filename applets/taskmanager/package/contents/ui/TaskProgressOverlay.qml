@@ -4,11 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Templates 2.15 as T
+import QtQuick
+import QtQuick.Templates as T
 
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.plasmoid 2.0
+import org.kde.ksvg as KSvg
+import org.kde.plasma.plasmoid
 
 import "code/tools.js" as TaskTools
 
@@ -22,6 +22,10 @@ T.ProgressBar {
 
     hoverEnabled: false
     padding: 0
+
+    from: 0
+    to: 100
+    value: task.smartLauncherItem.progress
 
     contentItem: Item {
         clip: true

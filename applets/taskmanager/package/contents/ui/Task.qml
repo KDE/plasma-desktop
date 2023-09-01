@@ -429,11 +429,7 @@ PlasmaCore.ToolTipArea {
         asynchronous: true
         active: model.IsWindow && task.smartLauncherItem && task.smartLauncherItem.progressVisible
 
-        sourceComponent: TaskProgressOverlay {
-            from: 0
-            to: 100
-            value: task.smartLauncherItem.progress
-        }
+        source: "TaskProgressOverlay.qml"
     }
 
     Loader {
