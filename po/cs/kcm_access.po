@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 01:57+0000\n"
-"PO-Revision-Date: 2023-06-14 14:59+0200\n"
+"PO-Revision-Date: 2023-08-07 16:50+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -174,7 +174,7 @@ msgstr ""
 #: kcmaccessibilitykeyboard.kcfg:37
 #, kde-format
 msgid "Delay for timeout"
-msgstr ""
+msgstr "Časový limit"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
@@ -564,10 +564,9 @@ msgid "Maximum speed:"
 msgstr "Maximální rychlost:"
 
 #: ui/MouseNavigation.qml:124
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgid "Pointer acceleration:"
-msgstr "Doba zrychlování:"
+msgstr "Zrychlení ukazatele:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -589,6 +588,3 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
-
-#~ msgid "Acceleration profile:"
-#~ msgstr "Profil zrychlování:"

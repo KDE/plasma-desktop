@@ -140,20 +140,20 @@ msgstr ""
 "Kliknutí levým a pravým tlačítkem zároveň je kliknutí prostředním tlačítkem."
 
 #: kcm/libinput/touchpad.qml:254
-#, fuzzy, kde-format
-#| msgid "Minimum pointer speed"
+#, kde-format
 msgid "Pointer speed:"
-msgstr "Minimální rychlost ukazatele"
+msgstr "Rychlost ukazatele:"
 
 #: kcm/libinput/touchpad.qml:349
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Zrychlení ukazatele:"
 
+# žádné parametry funkce v inspektoru funkcí
 #: kcm/libinput/touchpad.qml:381
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Nic"
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
@@ -163,7 +163,7 @@ msgstr "Kurzor se pohybuje o stejnou vzdálenost jako prst."
 #: kcm/libinput/touchpad.qml:394
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Standardní"
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
@@ -1404,12 +1404,3 @@ msgstr "Levý okraj"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Levý horní roh"
-
-#~ msgid "Acceleration profile:"
-#~ msgstr "Profil zrychlování:"
-
-#~ msgid "Flat"
-#~ msgstr "Ploché"
-
-#~ msgid "Adaptive"
-#~ msgstr "Adaptivní"

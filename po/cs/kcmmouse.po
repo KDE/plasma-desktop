@@ -148,10 +148,11 @@ msgstr "Rychlost ukazatele:"
 msgid "Pointer acceleration:"
 msgstr "Zrychlení ukazatele:"
 
+# žádné parametry funkce v inspektoru funkcí
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Nic"
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
 #, kde-format
@@ -161,7 +162,7 @@ msgstr "Kurzor se pohybuje o stejnou vzdálenost jako myš."
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Standardní"
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
 #, kde-format
@@ -520,12 +521,3 @@ msgid_plural " lines"
 msgstr[0] " řádek"
 msgstr[1] " řádky"
 msgstr[2] " řádků"
-
-#~ msgid "Acceleration profile:"
-#~ msgstr "Profil zrychlování:"
-
-#~ msgid "Flat"
-#~ msgstr "Ploché"
-
-#~ msgid "Adaptive"
-#~ msgstr "Adaptivní"
