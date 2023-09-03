@@ -221,68 +221,27 @@ KCM.ScrollViewKCM {
         delegate: directoryConfigDelegate
 
         headerPositioning: ListView.OverlayHeader
-        header: Rectangle {
-            z: 999 // don't let content overlap it
-            implicitWidth: directoryConfigList.width
-            implicitHeight: listViewHeaderlayout.implicitHeight + (2 * listViewHeaderlayout.anchors.topMargin)
-
-            Kirigami.Theme.colorSet: Kirigami.Theme.View
-            Kirigami.Theme.inherit: false
-            // We want a color that's basically halfway between the view background
-            // color and the window background color. But Due to the use of color
-            // scopes, only one will be available at a time. So to get basically the
-            // same thing, we blend the view background color with a smidgen of the
-            // text color.
-            color: Qt.tint(Kirigami.Theme.backgroundColor,
-                           Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.03))
-
-            RowLayout {
-                id: listViewHeaderlayout
-
-                anchors {
-                    left: parent.left
-                    leftMargin: Kirigami.Units.largeSpacing
-                    right: parent.right
-                    rightMargin: Kirigami.Units.smallSpacing
-                    top: parent.top
-                    topMargin: Kirigami.Units.smallSpacing
-                }
-
-                spacing: 0
-
-                Kirigami.Heading {
-                    Layout.fillWidth: true
-                    level: 2
-                    text: i18nc("@title:table Locations to include or exclude from indexing", "Locations")
-                    enabled: fileSearchEnabled.checked
-                }
-
-                QQC2.ToolButton {
+        header: Kirigami.InlineViewHeader {
+            width: directoryConfigList.width
+            text: i18nc("@title:table Locations to include or exclude from indexing", "Locations")
+            actions: [
+                Kirigami.Action {
                     text: i18nc("@action:button", "Start Indexing a Folder…")
-                    icon.name: "list-add"
-                    visible: text.length > 0
-
-                    onClicked: {
+                    icon.name: "list-add-symbolic"
+                    onTriggered: {
                         fileDialogLoader.included = true
                         fileDialogLoader.active = true
                     }
-                }
-
-                QQC2.ToolButton {
+                },
+                Kirigami.Action {
                     text: i18nc("@action:button", "Stop Indexing a Folder…")
-                    icon.name: "list-remove"
-
-                    onClicked: {
+                    icon.name: "list-remove-symbolic"
+                    onTriggered: {
                         fileDialogLoader.included = false
                         fileDialogLoader.active = true
                     }
                 }
-            }
-
-            Kirigami.Separator {
-                width: parent.width
-                anchors.top: parent.bottom
-            }
+            ]
         }
     }
 
