@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-09-03 02:37+0000\n"
 "PO-Revision-Date: 2023-07-13 06:43+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,7 +18,13 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: plasmasearch/kcm.cpp:87
+#: plasmasearch/kcm.h:70
+#, fuzzy, kde-format
+#| msgid "Available Plugins"
+msgid "Favorite Plugins"
+msgstr "Razpoložljivi vtičniki"
+
+#: plasmasearch/kcm.h:71
 #, kde-format
 msgid "Available Plugins"
 msgstr "Razpoložljivi vtičniki"
@@ -34,13 +40,27 @@ msgid "Get New Plugins…"
 msgstr "Pridobi nove vtičnike…"
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect)"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-"Overview effect)"
+"Overview effect). Mark plugins as favorites and arrange them in order you "
+"want to see them."
 msgstr ""
 "Omogoči ali onemogoči vtičnike (uporabljeni v KRunnerju, zaganjalniku "
 "aplikacij in učinku pregleda)"
+
+#: plasmasearch/ui/main.qml:81
+#, kde-format
+msgid "Remove from favorites"
+msgstr ""
+
+#: plasmasearch/ui/main.qml:81
+#, kde-format
+msgid "Add to favorites"
+msgstr ""
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

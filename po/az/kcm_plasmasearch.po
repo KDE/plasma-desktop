@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-09-03 02:37+0000\n"
 "PO-Revision-Date: 2023-02-17 01:07+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.2\n"
 
-#: plasmasearch/kcm.cpp:87
+#: plasmasearch/kcm.h:70
+#, fuzzy, kde-format
+#| msgid "Available Plugins"
+msgid "Favorite Plugins"
+msgstr "Mövcud əlavələr"
+
+#: plasmasearch/kcm.h:71
 #, kde-format
 msgid "Available Plugins"
 msgstr "Mövcud əlavələr"
@@ -33,13 +39,27 @@ msgid "Get New Plugins…"
 msgstr "Yeni Qoşmalar Almaq…"
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect)"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-"Overview effect)"
+"Overview effect). Mark plugins as favorites and arrange them in order you "
+"want to see them."
 msgstr ""
 "Qoşmaları aktiv edin və ya söndürün (KRunner və Tətbiq Başladıcısında və "
 "Görünüşdə istifadə olunur)"
+
+#: plasmasearch/ui/main.qml:81
+#, kde-format
+msgid "Remove from favorites"
+msgstr ""
+
+#: plasmasearch/ui/main.qml:81
+#, kde-format
+msgid "Add to favorites"
+msgstr ""
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

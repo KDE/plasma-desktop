@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-09-03 02:37+0000\n"
 "PO-Revision-Date: 2023-07-13 08:54+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -18,7 +18,13 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: plasmasearch/kcm.cpp:87
+#: plasmasearch/kcm.h:70
+#, fuzzy, kde-format
+#| msgid "Available Plugins"
+msgid "Favorite Plugins"
+msgstr "Доступні додатки"
+
+#: plasmasearch/kcm.h:71
 #, kde-format
 msgid "Available Plugins"
 msgstr "Доступні додатки"
@@ -34,13 +40,27 @@ msgid "Get New Plugins…"
 msgstr "Отримати нові додатки…"
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect)"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-"Overview effect)"
+"Overview effect). Mark plugins as favorites and arrange them in order you "
+"want to see them."
 msgstr ""
 "Увімкнути або вимкнути додатки (використовується у KRunner, засобі запуску "
 "програм і ефекті огляду)"
+
+#: plasmasearch/ui/main.qml:81
+#, kde-format
+msgid "Remove from favorites"
+msgstr ""
+
+#: plasmasearch/ui/main.qml:81
+#, kde-format
+msgid "Add to favorites"
+msgstr ""
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

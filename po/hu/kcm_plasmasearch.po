@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-13 02:10+0000\n"
+"POT-Creation-Date: 2023-09-03 02:37+0000\n"
 "PO-Revision-Date: 2021-12-09 08:03+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -19,7 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.0\n"
 
-#: plasmasearch/kcm.cpp:87
+#: plasmasearch/kcm.h:70
+#, fuzzy, kde-format
+#| msgid "Available Plugins"
+msgid "Favorite Plugins"
+msgstr "Elérhető bővítmények"
+
+#: plasmasearch/kcm.h:71
 #, kde-format
 msgid "Available Plugins"
 msgstr "Elérhető bővítmények"
@@ -35,13 +41,27 @@ msgid "Get New Plugins…"
 msgstr "Új bővítmények letöltése…"
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect)"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-"Overview effect)"
+"Overview effect). Mark plugins as favorites and arrange them in order you "
+"want to see them."
 msgstr ""
 "Bővítmények be- és kikapcsolása (a KRunnerben, az Alkalmazásindítóban és az "
 "Áttekintés effektusban)"
+
+#: plasmasearch/ui/main.qml:81
+#, kde-format
+msgid "Remove from favorites"
+msgstr ""
+
+#: plasmasearch/ui/main.qml:81
+#, kde-format
+msgid "Add to favorites"
+msgstr ""
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
