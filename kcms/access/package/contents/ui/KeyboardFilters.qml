@@ -43,7 +43,7 @@ Kirigami.FormLayout {
         }
 
         value: kcm.keyboardFiltersSettings.slowKeysDelay
-        onValueChanged: kcm.keyboardFiltersSettings.slowKeysDelay = value
+        onValueModified: kcm.keyboardFiltersSettings.slowKeysDelay = value
     }
     Item {
         Kirigami.FormData.isSection: true
@@ -125,7 +125,7 @@ Kirigami.FormLayout {
         }
 
         value: kcm.keyboardFiltersSettings.bounceKeysDelay
-        onValueChanged: kcm.keyboardFiltersSettings.bounceKeysDelay = value
+        onValueModified: kcm.keyboardFiltersSettings.bounceKeysDelay = value
     }
 
     QQC2.CheckBox {
