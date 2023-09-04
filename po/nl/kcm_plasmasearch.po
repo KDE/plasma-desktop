@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-03 02:37+0000\n"
-"PO-Revision-Date: 2023-07-13 12:31+0200\n"
+"PO-Revision-Date: 2023-09-03 14:32+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,13 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Beschikbare plug-ins"
+msgstr "Favoriete plug-ins"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -39,27 +38,25 @@ msgid "Get New Plugins…"
 msgstr "Haal nieuwe plug-ins op…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
 msgstr ""
 "Plug-ins in- en uitschakelen (gebruikt in KRunner, starter van toepassingen "
-"en het effect overzicht)"
+"en het effect Overzicht). Markeer plug-ins als favorieten en arrangeer ze in "
+"de volgorde waarin ui ze wilt zien."
 
 #: plasmasearch/ui/main.qml:81
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Uit favorieten verwijderen"
 
 #: plasmasearch/ui/main.qml:81
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Aan favorieten toevoegen"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

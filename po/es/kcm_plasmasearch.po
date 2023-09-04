@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2022.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plasmasearch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-03 02:37+0000\n"
-"PO-Revision-Date: 2023-07-15 00:35+0200\n"
+"PO-Revision-Date: 2023-09-03 20:06+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,13 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Complementos disponibles"
+msgstr "Complementos favoritos"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -41,27 +40,25 @@ msgid "Get New Plugins…"
 msgstr "Obtener nuevos complementos..."
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
 msgstr ""
 "Activar o desactivar complementos (usados en KRunner, el lanzador de "
-"aplicaciones y el efecto de vista general)"
+"aplicaciones y el efecto de vista general). Marque complementos como "
+"favoritos y póngalos en el orden en que prefiera verlos."
 
 #: plasmasearch/ui/main.qml:81
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Eliminar de favoritos"
 
 #: plasmasearch/ui/main.qml:81
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Añadir a favoritos"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

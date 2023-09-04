@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-03 02:37+0000\n"
-"PO-Revision-Date: 2023-07-13 10:44+0200\n"
+"PO-Revision-Date: 2023-09-03 10:27+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,10 +20,9 @@ msgstr ""
 "X-Generator: Lokalize 22.12.3\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Connectors disponibles"
+msgstr "Connectors preferits"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -41,27 +40,25 @@ msgid "Get New Plugins…"
 msgstr "Obtén connectors nous…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
 msgstr ""
 "Habilita o inhabilita connectors (usats al KRunner, Llançador d'aplicacions "
-"i l'efecte Vista general)"
+"i l'efecte Vista general). Marca connectors com a preferits i els organitza "
+"de la manera que els vulgueu veure."
 
 #: plasmasearch/ui/main.qml:81
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Elimina dels preferits"
 
 #: plasmasearch/ui/main.qml:81
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Afegeix als preferits"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
