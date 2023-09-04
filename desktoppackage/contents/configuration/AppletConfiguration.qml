@@ -8,11 +8,10 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Dialogs 6.3
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels 1.0 as KItemModels
 import org.kde.plasma.configuration 2.0
 
@@ -287,19 +286,20 @@ Rectangle {
         property var currentConfigPage: null
         property bool isAboutPage: false
 
-        MessageDialog {
+        Kirigami.PromptDialog {
             id: messageDialog
             property var item
             title: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Settings")
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "The settings of the current module have changed. Do you want to apply the changes or discard them?")
-            buttons: MessageDialog.Apply | MessageDialog.Discard | MessageDialog.Cancel
-            onAccepted: {
+            subtitle: i18nd("plasma_shell_org.kde.plasma.desktop", "The settings of the current module have changed. Do you want to apply the changes or discard them?")
+            standardButtons: Kirigami.Dialog.Apply | Kirigami.Dialog.Discard | Kirigami.Dialog.Cancel
+            onApplied: {
                 applyAction.trigger()
-                discard();
+                discarded();
             }
-            onRejected: {
+            onDiscarded: {
                 if (item) {
                     root.open(item);
+                    messageDialog.close();
                 } else {
                     applyButton.enabled = false;
                     configDialog.close();
