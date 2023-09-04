@@ -52,15 +52,19 @@ void GlobalAccelModel::load()
     if (!m_globalAccelInterface->isValid()) {
         return;
     }
-    beginResetModel();
-    m_components.clear();
+
     auto componentsWatcher = new QDBusPendingCallWatcher(m_globalAccelInterface->allComponents());
     connect(componentsWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *componentsWatcher) {
         QDBusPendingReply<QList<QDBusObjectPath>> componentsReply = *componentsWatcher;
         componentsWatcher->deleteLater();
         if (componentsReply.isError()) {
             genericErrorOccured(QStringLiteral("Error while calling allComponents()"), componentsReply.error());
+
+            beginResetModel();
+            m_components.clear();
+            m_pendingComponents.clear();
             endResetModel();
+
             return;
         }
         const QList<QDBusObjectPath> componentPaths = componentsReply.value();
@@ -75,13 +79,16 @@ void GlobalAccelModel::load()
                 if (reply.isError()) {
                     genericErrorOccured(QStringLiteral("Error while calling allShortCutInfos of") + path, reply.error());
                 } else if (!reply.value().isEmpty()) {
-                    m_components.push_back(loadComponent(reply.value()));
+                    m_pendingComponents.push_back(loadComponent(reply.value()));
                 }
                 watcher->deleteLater();
                 if (--*pendingCalls == 0) {
+                    beginResetModel();
                     QCollator collator;
                     collator.setCaseSensitivity(Qt::CaseInsensitive);
                     collator.setNumericMode(true);
+                    m_components = m_pendingComponents;
+                    m_pendingComponents.clear();
                     std::sort(m_components.begin(), m_components.end(), [&](const Component &c1, const Component &c2) {
                         return c1.type != c2.type ? c1.type < c2.type : collator.compare(c1.displayName, c2.displayName) < 0;
                     });

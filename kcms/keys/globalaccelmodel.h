@@ -43,5 +43,6 @@ private:
     void removeComponent(const Component &component);
     void genericErrorOccured(const QString &description, const QDBusError &error);
 
+    QVector<Component> m_pendingComponents;
     KGlobalAccelInterface *m_globalAccelInterface;
 };
