@@ -103,6 +103,8 @@ void PositionerTest::tst_move()
 {
     QFETCH(QVariantList, moves);
     QFETCH(QVector<int>, result);
+
+    ensureFolderModelReady();
     m_positioner->move(moves);
     for (int i = 0; i < m_positioner->rowCount(); i++) {
         QCOMPARE(m_positioner->map(i), result[i]);
@@ -139,6 +141,7 @@ void PositionerTest::tst_isBlank()
 
 void PositionerTest::tst_reset()
 {
+    ensureFolderModelReady();
     m_positioner->move({0, 10});
     m_positioner->reset();
     QSignalSpy s(m_positioner, &Positioner::positionsChanged);
@@ -287,8 +290,10 @@ void PositionerTest::tst_proxyMapping()
 
 void PositionerTest::checkPositions(int perStripe)
 {
+    ensureFolderModelReady();
+
     QSignalSpy s(m_positioner, &Positioner::positionsChanged);
-    s.wait(500);
+    s.wait();
 
     const auto positions = m_positioner->positions();
     struct Pos {
@@ -316,5 +321,13 @@ void PositionerTest::checkPositions(int perStripe)
             row++;
             col = 0;
         }
+    }
+}
+
+void PositionerTest::ensureFolderModelReady()
+{
+    if (m_folderModel->status() == FolderModel::Listing) {
+        QSignalSpy folderModelReadySpy(m_folderModel, &FolderModel::statusChanged);
+        QVERIFY(folderModelReadySpy.wait());
     }
 }
