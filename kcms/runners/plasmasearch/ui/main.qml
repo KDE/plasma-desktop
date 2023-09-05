@@ -9,7 +9,7 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.1
 
 import org.kde.config
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCMUtils
 import org.kde.newstuff 1.91 as NewStuff
 
@@ -78,7 +78,8 @@ KCMUtils.ScrollViewKCM {
                 }
             additionalActions: [
                 Kirigami.Action {
-                    tooltip: isFavorite ? i18n("Remove from favorites") : i18n("Add to favorites")
+                    displayHint: Kirigami.DisplayHint.IconOnly
+                    text: isFavorite ? i18n("Remove from favorites") : i18n("Add to favorites")
                     icon.name: isFavorite ? "starred-symbolic": "non-starred-symbolic"
                     onTriggered: isFavorite ? kcm.removeFromFavorites(model.metaData) : kcm.addToFavorites(model.metaData)
                 }
