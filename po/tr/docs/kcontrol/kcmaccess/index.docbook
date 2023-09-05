@@ -428,11 +428,11 @@ Use system bell whenever a key is rejected
 <varlistentry>
 <term
 ><guilabel
->İvmelenme gecikmesi</guilabel
+>İvmelendirme gecikmesi</guilabel
 ></term>
 <listitem>
 <para
->Bu, düğmeye ilk basış ile fare düğmesi ivmelenmesi için ilk yinelenen hareket olayı arasındaki süredir (milisaniye olarak). </para>
+>Bu, düğmeye ilk basış ile fare düğmesi ivmelendirmesi için ilk yinelenen hareket olayı arasındaki süredir (milisaniye olarak). </para>
 </listitem>
 </varlistentry>
 
@@ -443,18 +443,18 @@ Use system bell whenever a key is rejected
 ></term>
 <listitem>
 <para
->Bu, fare düğmesi ivmelenmesi için yinelenen hareket olayları arasındaki milisaniye türünden süredir. </para>
+>Bu, fare düğmesi ivmelendirmesi için yinelenen hareket olayları arasındaki milisaniye türünden süredir. </para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->İvmelenme süresi</guilabel
+>İvmelendirme süresi</guilabel
 ></term>
 <listitem>
 <para
->Bu, işaretçinin fare düğmesi ivmelenmesi için en yüksek hıza ulaşmasından önceki milisaniye türünden süredir. </para>
+>Bu, işaretçinin fare düğmesi ivmelendirmesi için en yüksek hıza ulaşmasından önceki milisaniye türünden süredir. </para>
 </listitem>
 </varlistentry>
 
@@ -465,18 +465,18 @@ Use system bell whenever a key is rejected
 ></term>
 <listitem>
 <para
->Bu, işaretçinin fare düğmesi ivmelenmesi için ulaşabileceği piksel/saniye türünden en yüksek hızdır. </para>
+>Bu, işaretçinin fare düğmesi ivmelendirmesi için ulaşabileceği piksel/saniye türünden en yüksek hızdır. </para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->İvmelenme profili</guilabel
+>İşaretçi ivmelendirmesi</guilabel
 ></term>
 <listitem>
 <para
->Bu, fare tuşu ivmelenmesi için ivme eğrisinin eğimidir. </para>
+>Bu, fare düğmesi ivmelendirmesine uygulanacak ivme miktarıdır. </para>
 </listitem>
 </varlistentry>
 

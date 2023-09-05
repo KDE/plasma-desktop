@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-09-05 01:57+0000\n"
 "PO-Revision-Date: 2023-03-01 00:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,20 +18,20 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: globalaccelmodel.cpp:202
+#: globalaccelmodel.cpp:209
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "%1: %2의 단축키를 저장하는 중 오류 발생"
 
-#: globalaccelmodel.cpp:314
+#: globalaccelmodel.cpp:321
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "%1을(를) 추가하는 동안 오류가 발생했습니다. 작업이 없는 것 같습니다."
 
-#: globalaccelmodel.cpp:357
+#: globalaccelmodel.cpp:364
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "전역 단축키 서비스와 통신하는 중 오류 발생"

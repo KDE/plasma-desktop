@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-02 02:09+0000\n"
+"POT-Creation-Date: 2023-09-05 01:57+0000\n"
 "PO-Revision-Date: 2023-03-04 18:29+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,20 +17,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: globalaccelmodel.cpp:202
+#: globalaccelmodel.cpp:209
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Virhe tallennettaessa pikanäppäintä %1: %2"
 
-#: globalaccelmodel.cpp:314
+#: globalaccelmodel.cpp:321
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Virhe lisättäessä sovellusta %1: vaikuttaa ettei sillä ole toimintoja."
 
-#: globalaccelmodel.cpp:357
+#: globalaccelmodel.cpp:364
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Virhe viestittäessä yleisen pikanäppäinpalvelun kanssa"

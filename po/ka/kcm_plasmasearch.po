@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-03 02:37+0000\n"
-"PO-Revision-Date: 2023-07-15 06:14+0200\n"
+"PO-Revision-Date: 2023-09-04 05:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19,10 +19,9 @@ msgstr ""
 "X-Generator: Poedit 3.3.2\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "ხელმისაწვდომი დამატებები"
+msgstr "რჩეული დამატებები"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -40,27 +39,25 @@ msgid "Get New Plugins…"
 msgstr "ახალი დამატებების მიღება…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
 msgstr ""
 "დამატებების ჩართვა და გამორთვა (გამოიყენება KRunner-ის, Application Launcher-"
-"ის და Overview effect-ის მიერ)"
+"ის და Overview effect-ის მიერ). იმისათვის, რომ დამატებები დაინახოთ, დაალაგეთ "
+"ისინი და მონიშნეთ, როგორც რჩეული."
 
 #: plasmasearch/ui/main.qml:81
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "რჩეულებიდან წაშლა"
 
 #: plasmasearch/ui/main.qml:81
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "რჩეულებში დამატება"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
