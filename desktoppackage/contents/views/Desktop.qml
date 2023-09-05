@@ -7,7 +7,7 @@
 
 import QtQuick 2.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.core as PlasmaCore
 import org.kde.kwindowsystem 1.0
 import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 import "../activitymanager"

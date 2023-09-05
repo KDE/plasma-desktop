@@ -7,7 +7,7 @@ import QtQuick 2.15
 import Qt.labs.platform 1.1
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.components 2.0
 import org.kde.plasma.private.kcm_keyboard as KCMKeyboard

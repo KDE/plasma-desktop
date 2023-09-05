@@ -8,7 +8,7 @@
 */
 
 .pragma library
-.import org.kde.plasma.core 2.1 as PlasmaCore
+.import org.kde.plasma.core as PlasmaCore
 
 const defaultIconName = "start-here-kde-symbolic";
 

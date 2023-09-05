@@ -11,7 +11,7 @@ import QtQml 2.15
 import QtQml.Models 2.15
 import QtQuick.Window 2.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.draganddrop 2.0
 import org.kde.kirigami 2.20 as Kirigami

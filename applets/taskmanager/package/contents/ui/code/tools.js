@@ -8,7 +8,7 @@
 .pragma library
 
 .import org.kde.taskmanager 0.1 as TaskManager
-.import org.kde.plasma.core 2.0 as PlasmaCore // Needed by TaskManager
+.import org.kde.plasma.core as PlasmaCore // Needed by TaskManager
 
 var windowViewAvailable = false;
 var taskManagerInstanceCount = 0;
