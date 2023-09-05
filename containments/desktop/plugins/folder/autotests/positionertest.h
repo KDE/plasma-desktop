@@ -40,6 +40,7 @@ private Q_SLOTS:
 
 private:
     void checkPositions(int perStripe);
+    void ensureFolderModelReady();
 
     QString m_currentActivity;
     Positioner *m_positioner;
