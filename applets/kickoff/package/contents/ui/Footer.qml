@@ -79,7 +79,6 @@ PlasmaExtras.PlasmoidHeading {
                 anchors.bottomMargin: -root.bottomPadding
                 imagePath: "widgets/tabbar"
                 prefix: tabBar.position === PC3.TabBar.Header ? "north-active-tab" : "south-active-tab"
-                colorGroup: Kirigami.Theme.colorSet
             }
             keyNavigationEnabled: false
         }
