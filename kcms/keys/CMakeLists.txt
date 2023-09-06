@@ -13,7 +13,7 @@ target_sources(kcm_keys PRIVATE
     keysdata.cpp
 )
 
-set(kglobalaccel_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.KGlobalAccel.xml)
+set(kglobalaccel_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf6_org.kde.KGlobalAccel.xml)
 set_source_files_properties(${kglobalaccel_xml} PROPERTIES
     INCLUDE "kglobalaccel.h"
     NO_NAMESPACE TRUE
@@ -21,7 +21,7 @@ set_source_files_properties(${kglobalaccel_xml} PROPERTIES
 )
 qt_add_dbus_interface(kcm_keys_DBUS_SRCS ${kglobalaccel_xml} kglobalaccel_interface)
 
-set(kglobalaccel_component_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.kglobalaccel.Component.xml)
+set(kglobalaccel_component_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf6_org.kde.kglobalaccel.Component.xml)
 set_source_files_properties(${kglobalaccel_component_xml} PROPERTIES
     INCLUDE "kglobalaccel.h"
     NO_NAMESPACE TRUE
