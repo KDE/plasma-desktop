@@ -21,7 +21,6 @@ class SolidActions : public KCModule
 
 public:
     explicit SolidActions(QObject *parent, const KPluginMetaData &data);
-    ~SolidActions() override;
     void load() override;
     void save() override;
     void defaults() override;

@@ -62,12 +62,6 @@ SolidActions::SolidActions(QObject *parent, const KPluginMetaData &data)
     connect(addUi.buttonBox, &QDialogButtonBox::rejected, addDialog, &QDialog::reject);
 }
 
-SolidActions::~SolidActions()
-{
-    delete editUi;
-    delete actionModel;
-}
-
 void SolidActions::slotShowAddDialog()
 {
     addDialog->show();
