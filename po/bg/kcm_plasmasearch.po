@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-06 01:55+0000\n"
-"PO-Revision-Date: 2023-07-27 14:29+0200\n"
+"PO-Revision-Date: 2023-09-06 09:59+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
 "Language: bg\n"
@@ -18,10 +18,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Налични приставки"
+msgstr "Предпочитане приставки"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -39,27 +38,25 @@ msgid "Get New Plugins…"
 msgstr "Изтегляне на нови приставки…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
 msgstr ""
 "Активиране или деактивиране на приставки (използвани в KRunner, Стартер на "
-"приложение и Визуализация)"
+"приложение и Визуализация). Маркирайте приставките като предпочитани и ги "
+"подредете както искате да ги видите."
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Премахване от Предпочитани"
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Добавяне в Предпочитани"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

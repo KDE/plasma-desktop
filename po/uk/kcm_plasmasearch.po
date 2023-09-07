@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-06 01:55+0000\n"
-"PO-Revision-Date: 2023-07-13 08:54+0300\n"
+"PO-Revision-Date: 2023-09-03 10:20+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -19,10 +19,9 @@ msgstr ""
 "X-Generator: Lokalize 20.12.0\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Доступні додатки"
+msgstr "Улюблені додатки"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -40,27 +39,25 @@ msgid "Get New Plugins…"
 msgstr "Отримати нові додатки…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
 msgstr ""
 "Увімкнути або вимкнути додатки (використовується у KRunner, засобі запуску "
-"програм і ефекті огляду)"
+"програм і ефекті огляду). Позначайте улюблені додатки та упорядковуйте їх у "
+"бажаному для перегляду вигляді."
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Вилучити з улюбленого"
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Додати до улюблених"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
