@@ -7,7 +7,7 @@
 
 import QtQuick 2.7
 import QtQuick.Controls 2.0 as QQC2
-import QtQuick.Layouts 1.3 as Layouts
+import QtQuick.Layouts
 import QtQuick.Window 2.15
 
 import org.kde.kirigami 2.14 as Kirigami
@@ -73,7 +73,7 @@ Kirigami.ApplicationItem {
                 Kirigami.FormData.label: i18nd("kcmmouse", "Device:")
                 id: deviceSelector
                 enabled: deviceCount > 1
-                Layouts.Layout.fillWidth: true
+                Layout.fillWidth: true
                 model: deviceModel
                 textRole: "name"
 
@@ -204,7 +204,7 @@ Kirigami.ApplicationItem {
                 }
             }
 
-            Layouts.ColumnLayout {
+            ColumnLayout {
                 id: accelProfile
                 spacing: Kirigami.Units.smallSpacing
                 Kirigami.FormData.label: i18nd("kcmmouse", "Pointer acceleration:")
@@ -285,7 +285,7 @@ Kirigami.ApplicationItem {
             }
 
             // Scroll Speed aka scroll Factor
-            Layouts.GridLayout {
+            GridLayout {
                 Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
                 Kirigami.FormData.buddyFor: scrollFactor
 
@@ -316,7 +316,7 @@ Kirigami.ApplicationItem {
                         20
                     ]
 
-                    Layouts.Layout.columnSpan: 3
+                    Layout.columnSpan: 3
 
                     function load() {
                         let index = values.indexOf(device.scrollFactor)
@@ -337,7 +337,7 @@ Kirigami.ApplicationItem {
                     text: i18ndc("kcmmouse", "Slower Scroll", "Slower")
                 }
                 Item {
-                    Layouts.Layout.fillWidth: true
+                    Layout.fillWidth: true
                 }
                 QQC2.Label {
                     text: i18ndc("kcmmouse", "Faster Scroll Speed", "Faster")
@@ -377,7 +377,7 @@ Kirigami.ApplicationItem {
             }
         }
 
-       Layouts.ColumnLayout {
+       ColumnLayout {
             Kirigami.FormLayout {
                 id: buttonLayout
                 twinFormLayouts: otherLayout
@@ -415,7 +415,7 @@ Kirigami.ApplicationItem {
 
             Kirigami.InlineMessage {
                 id: explanationLabel
-                Layouts.Layout.fillWidth: true
+                Layout.fillWidth: true
                 visible: newBinding.checked || newKeySequenceItem.visible
                 text: newBinding.visible ? i18ndc("kcmmouse","@action:button", "Press the mouse button for which you want to add a key binding") :
                     i18ndc("kcmmouse","@action:button, %1 is the translation of 'Extra Button %1' from above", "Enter the new key combination for %1", buttonCapture.lastButton.label)

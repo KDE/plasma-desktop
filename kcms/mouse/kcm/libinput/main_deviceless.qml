@@ -7,7 +7,7 @@
 
 import QtQuick 2.7
 import QtQuick.Controls 2.0 as QQC2
-import QtQuick.Layouts 1.3 as Layouts
+import QtQuick.Layouts
 
 import org.kde.kcmutils as KCM
 import org.kde.kirigami 2.4 as Kirigami
@@ -16,9 +16,9 @@ import org.kde.kirigami 2.4 as Kirigami
 // after rewrite the KCM in KConfigModule.
 Kirigami.ScrollablePage {
     id: root
-    
+
     spacing: Kirigami.Units.smallSpacing
-    
+
     signal changeSignal()
 
     property QtObject device: deviceModel[0]
@@ -131,7 +131,7 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Layouts.ColumnLayout {
+        ColumnLayout {
             id: accelProfile
             spacing: Kirigami.Units.smallSpacing
             Kirigami.FormData.label: i18nd("kcmmouse", "Pointer acceleration:")

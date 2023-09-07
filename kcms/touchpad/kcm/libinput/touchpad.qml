@@ -7,7 +7,7 @@
 
 import QtQuick 2.7
 import QtQuick.Controls 2.0 as QQC2
-import QtQuick.Layouts 1.3 as Layouts
+import QtQuick.Layouts
 
 import org.kde.kcmutils as KCM
 import org.kde.kirigami 2.13 as Kirigami
@@ -109,7 +109,7 @@ KCM.SimpleKCM{
             id: deviceSelector
 
             visible: touchpadCount > 1
-            Layouts.Layout.fillWidth: true
+            Layout.fillWidth: true
             model: deviceModel
             textRole: "name"
 
@@ -250,7 +250,7 @@ KCM.SimpleKCM{
         }
 
         // Acceleration
-        Layouts.RowLayout {
+        RowLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer speed:")
             id: accelSpeed
 
@@ -306,7 +306,7 @@ KCM.SimpleKCM{
             QQC2.SpinBox {
                 id: accelSpeedSpinbox
 
-                Layouts.Layout.minimumWidth: Kirigami.Units.gridUnit * 4
+                Layout.minimumWidth: Kirigami.Units.gridUnit * 4
 
                 from: -100
                 to: 100
@@ -345,7 +345,7 @@ KCM.SimpleKCM{
             }
         }
 
-        Layouts.ColumnLayout {
+        ColumnLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer acceleration:")
             Kirigami.FormData.buddyFor: accelProfileFlat
             id: accelProfile
@@ -497,7 +497,7 @@ KCM.SimpleKCM{
             }
         }
 
-        Layouts.ColumnLayout {
+        ColumnLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Two-finger tap:")
             Kirigami.FormData.buddyFor: multiTapRightClick
             id: multiTap
@@ -577,7 +577,7 @@ KCM.SimpleKCM{
         }
 
         // Scrolling
-        Layouts.ColumnLayout {
+        ColumnLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling:")
             Kirigami.FormData.buddyFor: scrollMethodTwoFingers
             id: scrollMethod
@@ -682,7 +682,7 @@ KCM.SimpleKCM{
         }
 
         // Scroll Speed aka scroll Factor
-        Layouts.GridLayout {
+        GridLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
             Kirigami.FormData.buddyFor: scrollFactor
             visible: touchpad.supportsScrollFactor
@@ -714,7 +714,7 @@ KCM.SimpleKCM{
                     20
                 ]
 
-                Layouts.Layout.columnSpan: 3
+                Layout.columnSpan: 3
 
                 function load() {
                     let index = values.indexOf(touchpad.scrollFactor)
@@ -735,7 +735,7 @@ KCM.SimpleKCM{
                 text: i18ndc("kcm_touchpad", "Slower Scroll", "Slower")
             }
             Item {
-                Layouts.Layout.fillWidth: true
+                Layout.fillWidth: true
             }
             QQC2.Label {
                 text: i18ndc("kcm_touchpad", "Faster Scroll Speed", "Faster")
@@ -746,7 +746,7 @@ KCM.SimpleKCM{
             Kirigami.FormData.isSection: false
         }
 
-        Layouts.ColumnLayout {
+        ColumnLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Right-click:")
             Kirigami.FormData.buddyFor: rightClickMethodAreas
             id: rightClickMethod
@@ -810,7 +810,7 @@ KCM.SimpleKCM{
             Kirigami.FormData.isSection: false
         }
 
-        Layouts.ColumnLayout {
+        ColumnLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Middle-click: ")
             Kirigami.FormData.buddyFor: middleSoftwareEmulation
             id: middleClickMethod
