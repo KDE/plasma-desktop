@@ -253,6 +253,7 @@ KCM.SimpleKCM{
         RowLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer speed:")
             id: accelSpeed
+            Layout.fillWidth: true
 
             function onAccelSpeedChanged(val) {
                 // check slider
@@ -275,6 +276,7 @@ KCM.SimpleKCM{
 
             QQC2.Slider {
                 id: accelSpeedSlider
+                Layout.fillWidth: true
 
                 from: 1
                 to: 11
@@ -685,12 +687,14 @@ KCM.SimpleKCM{
         GridLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
             Kirigami.FormData.buddyFor: scrollFactor
+            Layout.fillWidth: true
             visible: touchpad.supportsScrollFactor
 
             columns: 3
 
             QQC2.Slider {
                 id: scrollFactor
+                Layout.fillWidth: true
 
                 from: 0
                 to: 14

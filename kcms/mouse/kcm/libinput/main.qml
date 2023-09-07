@@ -177,6 +177,7 @@ Kirigami.ApplicationItem {
             QQC2.Slider {
                 Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
                 id: accelSpeed
+                Layout.fillWidth: true
 
                 from: 1
                 to: 11
@@ -288,11 +289,13 @@ Kirigami.ApplicationItem {
             GridLayout {
                 Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
                 Kirigami.FormData.buddyFor: scrollFactor
+                Layout.fillWidth: true
 
                 columns: 3
 
                 QQC2.Slider {
                     id: scrollFactor
+                    Layout.fillWidth: true
 
                     from: 0
                     to: 14

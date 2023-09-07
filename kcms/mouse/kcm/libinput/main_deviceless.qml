@@ -104,6 +104,7 @@ Kirigami.ScrollablePage {
         QQC2.Slider {
             Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
             id: accelSpeed
+            Layout.fillWidth: true
 
             from: 1
             to: 11
