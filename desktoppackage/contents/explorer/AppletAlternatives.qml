@@ -106,16 +106,6 @@ PlasmaCore.Dialog {
 
                 height: contentHeight+Kirigami.Units.smallSpacing
 
-                // we don't want to select any entry by default
-                // this cannot be set in Component.onCompleted
-                Timer {
-                    interval: 0
-                    running: true
-                    onTriggered: {
-                        mainList.currentIndex = -1
-                    }
-                }
-
                 delegate: PlasmaExtras.ListItem {
 
                     implicitHeight: contentLayout.implicitHeight + Kirigami.Units.smallSpacing * 2
@@ -144,6 +134,17 @@ PlasmaCore.Dialog {
                     Component.onCompleted: {
                         if (model.pluginName === alternativesHelper.currentPlugin) {
                             root.currentPlugin = model.pluginName
+                            setAsCurrent.restart()
+                        }
+                    }
+
+                    // we don't want to select any entry by default
+                    // this cannot be set in Component.onCompleted
+                    Timer {
+                        id: setAsCurrent
+                        interval: 100
+                        onTriggered: {
+                            mainList.currentIndex = index
                         }
                     }
 
