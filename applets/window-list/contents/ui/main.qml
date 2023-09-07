@@ -105,6 +105,18 @@ PlasmoidItem {
             PlasmaExtras.ModelContextMenu {
                 id: tasksMenu
 
+                placement: {
+                   if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
+                       return PlasmaCore.Types.RightPosedTopAlignedPopup
+                   } else if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
+                       return PlasmaCore.Types.BottomPosedLeftAlignedPopup
+                   } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
+                       return PlasmaCore.Types.LeftPosedTopAlignedPopup
+                   } else {
+                       return PlasmaCore.Types.TopPosedLeftAlignedPopup
+                   }
+                }
+
                 model: tasksModel
                 onClicked: (model) =>
                     tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
