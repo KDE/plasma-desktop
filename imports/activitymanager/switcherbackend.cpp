@@ -165,12 +165,12 @@ SwitcherBackend::SwitcherBackend(QObject *parent)
 {
     registerShortcut(QString::fromLatin1(s_action_name_next_activity),
                      i18n("Walk through activities"),
-                     Qt::META | Qt::Key_Tab,
+                     Qt::META | Qt::Key_A,
                      &SwitcherBackend::keybdSwitchToNextActivity);
 
     registerShortcut(QString::fromLatin1(s_action_name_previous_activity),
                      i18n("Walk through activities (Reverse)"),
-                     Qt::META | Qt::SHIFT | Qt::Key_Tab,
+                     Qt::META | Qt::SHIFT | Qt::Key_A,
                      &SwitcherBackend::keybdSwitchToPreviousActivity);
 
     connect(this, &SwitcherBackend::shouldShowSwitcherChanged, m_runningActivitiesModel, &SortedActivitiesModel::setInhibitUpdates);
