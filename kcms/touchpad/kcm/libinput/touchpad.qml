@@ -5,16 +5,16 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.7
-import QtQuick.Controls 2.0 as QQC2
+import QtQuick
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kirigami as Kirigami
 
-import org.kde.touchpad.kcm 1.0
+import org.kde.touchpad.kcm
 
-KCM.SimpleKCM{
+KCM.SimpleKCM {
     id: root
 
     spacing: Kirigami.Units.smallSpacing
@@ -130,8 +130,8 @@ KCM.SimpleKCM{
 
         // General settings
         QQC2.CheckBox {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "General:")
             id: deviceEnabled
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "General:")
             text: i18nd("kcm_touchpad", "Device enabled")
 
             hoverEnabled: true
@@ -348,9 +348,9 @@ KCM.SimpleKCM{
         }
 
         ColumnLayout {
+            id: accelProfile
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer acceleration:")
             Kirigami.FormData.buddyFor: accelProfileFlat
-            id: accelProfile
             spacing: Kirigami.Units.smallSpacing
 
             function load() {
@@ -411,8 +411,8 @@ KCM.SimpleKCM{
 
         // Tapping
         QQC2.CheckBox {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Tapping:")
             id: tapToClick
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Tapping:")
             text: i18nd("kcm_touchpad", "Tap-to-click")
 
             hoverEnabled: true
@@ -500,9 +500,9 @@ KCM.SimpleKCM{
         }
 
         ColumnLayout {
+            id: multiTap
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Two-finger tap:")
             Kirigami.FormData.buddyFor: multiTapRightClick
-            id: multiTap
 
             spacing: Kirigami.Units.smallSpacing
             // hide initially
@@ -580,9 +580,9 @@ KCM.SimpleKCM{
 
         // Scrolling
         ColumnLayout {
+            id: scrollMethod
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling:")
             Kirigami.FormData.buddyFor: scrollMethodTwoFingers
-            id: scrollMethod
 
             spacing: Kirigami.Units.smallSpacing
 
@@ -700,7 +700,7 @@ KCM.SimpleKCM{
                 to: 14
                 stepSize: 1
 
-                property variant values : [
+                readonly property list<real> values: [
                     0.1,
                     0.3,
                     0.5,
@@ -751,9 +751,9 @@ KCM.SimpleKCM{
         }
 
         ColumnLayout {
+            id: rightClickMethod
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Right-click:")
             Kirigami.FormData.buddyFor: rightClickMethodAreas
-            id: rightClickMethod
 
             spacing: Kirigami.Units.smallSpacing
             // hide initially
@@ -815,9 +815,9 @@ KCM.SimpleKCM{
         }
 
         ColumnLayout {
+            id: middleClickMethod
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Middle-click: ")
             Kirigami.FormData.buddyFor: middleSoftwareEmulation
-            id: middleClickMethod
 
             spacing: Kirigami.Units.smallSpacing
             visible: noMiddleSoftwareEmulation.visible ||
@@ -882,5 +882,5 @@ KCM.SimpleKCM{
                 }
             }
         }
-    } // END Kirigami.FormLayout
-} // END Kirigami.ScrollablePage
+    }
+}
