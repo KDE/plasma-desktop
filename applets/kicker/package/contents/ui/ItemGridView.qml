@@ -8,6 +8,7 @@ import QtQuick 2.15
 
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -35,8 +36,8 @@ FocusScope {
     property alias cellHeight: gridView.cellHeight
     property alias iconSize: gridView.iconSize
 
-    property alias horizontalScrollBarPolicy: scrollArea.horizontalScrollBarPolicy
-    property alias verticalScrollBarPolicy: scrollArea.verticalScrollBarPolicy
+    property var horizontalScrollBarPolicy: PlasmaComponents.ScrollBar.AlwaysOff
+    property var verticalScrollBarPolicy: PlasmaComponents.ScrollBar.AsNeeded
 
     onDropEnabledChanged: {
         if (!dropEnabled && "dropPlaceHolderIndex" in model) {
@@ -167,14 +168,14 @@ FocusScope {
             }
         }
 
-        PlasmaExtras.ScrollArea {
+        PlasmaComponents.ScrollView {
             id: scrollArea
 
             anchors.fill: parent
 
             focus: true
 
-            horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+            PlasmaComponents.ScrollBar.horizontal.policy: itemGrid.horizontalScrollBarPolicy
 
             GridView {
                 id: gridView

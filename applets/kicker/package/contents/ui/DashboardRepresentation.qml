@@ -11,10 +11,10 @@ import QtQml 2.15
 
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kwindowsystem 1.0
+import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.shell 2.0
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -314,7 +314,7 @@ Kicker.DashboardWindow {
 
             visible: (searchField.text !== "")
 
-            iconName: "edit-clear"
+            icon.name: "edit-clear"
             flat: false
 
             onClicked: searchField.clear();
@@ -792,7 +792,7 @@ Kicker.DashboardWindow {
 
                 property int columns: 3
 
-                PlasmaExtras.ScrollArea {
+                PlasmaComponents.ScrollView {
                     id: filterListScrollArea
 
                     x: root.visible ? 0 : Kirigami.Units.gridUnit
@@ -810,7 +810,7 @@ Kicker.DashboardWindow {
 
                     Behavior on opacity { SmoothedAnimation { duration: Kirigami.Units.longDuration; velocity: 0.01 } }
 
-                    verticalScrollBarPolicy: (opacity === 1.0) ? Qt.ScrollBarAsNeeded : Qt.ScrollBarAlwaysOff
+                    PlasmaComponents.ScrollBar.vertical.policy: (opacity === 1.0) ? PlasmaComponents.ScrollBar.AsNeeded : PlasmaComponents.ScrollBar.AlwaysOff
 
                     onEnabledChanged: {
                         if (!enabled) {

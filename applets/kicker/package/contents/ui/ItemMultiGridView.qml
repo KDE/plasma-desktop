@@ -7,11 +7,12 @@
 import QtQuick 2.15
 
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
-PlasmaExtras.ScrollArea {
+PlasmaComponents.ScrollView {
     id: itemMultiGrid
 
     anchors {
@@ -31,8 +32,8 @@ PlasmaExtras.ScrollArea {
 
     property alias model: repeater.model
     property alias count: repeater.count
+    property alias flickableItem: flickable
 
-    flickableItem.flickableDirection: Flickable.VerticalFlick
 
     onFocusChanged: {
         if (!focus) {
@@ -42,183 +43,189 @@ PlasmaExtras.ScrollArea {
         }
     }
 
-    function subGridAt(index) {
-        return repeater.itemAt(index).itemGrid;
-    }
+    Flickable {
+        id: flickable
 
-    function tryActivate(row, col) { // FIXME TODO: Cleanup messy algo.
-        if (flickableItem.contentY > 0) {
-            row = 0;
+        flickableDirection: Flickable.VerticalFlick
+
+        function subGridAt(index) {
+            return repeater.itemAt(index).itemGrid;
         }
 
-        var target = null;
-        var rows = 0;
+        function tryActivate(row, col) { // FIXME TODO: Cleanup messy algo.
+            if (contentY > 0) {
+                row = 0;
+            }
 
-        for (var i = 0; i < repeater.count; i++) {
-            var grid = subGridAt(i);
+            var target = null;
+            var rows = 0;
 
-            if (rows <= row) {
-                target = grid;
-                rows += grid.lastRow() + 2; // Header counts as one.
-            } else {
-                break;
+            for (var i = 0; i < repeater.count; i++) {
+                var grid = subGridAt(i);
+
+                if (rows <= row) {
+                    target = grid;
+                    rows += grid.lastRow() + 2; // Header counts as one.
+                } else {
+                    break;
+                }
+            }
+
+            if (target) {
+                rows -= (target.lastRow() + 2);
+                target.tryActivate(row - rows, col);
             }
         }
 
-        if (target) {
-            rows -= (target.lastRow() + 2);
-            target.tryActivate(row - rows, col);
-        }
-    }
+        Column {
+            id: itemColumn
 
-    Column {
-        id: itemColumn
+            width: itemMultiGrid.width - Kirigami.Units.gridUnit
 
-        width: itemMultiGrid.width - Kirigami.Units.gridUnit
+            Repeater {
+                id: repeater
 
-        Repeater {
-            id: repeater
+                delegate: Item {
+                    width: itemColumn.width - Kirigami.Units.gridUnit
+                    height: headerHeight + gridView.height + (index == repeater.count - 1 ? 0 : footerHeight)
 
-            delegate: Item {
-                width: itemColumn.width - Kirigami.Units.gridUnit
-                height: headerHeight + gridView.height + (index == repeater.count - 1 ? 0 : footerHeight)
+                    property int headerHeight: (gridViewLabel.height
+                        + gridViewLabelUnderline.height + Kirigami.Units.gridUnit)
+                    property int footerHeight: (Math.ceil(headerHeight / cellSize) * cellSize) - headerHeight
 
-                property int headerHeight: (gridViewLabel.height
-                    + gridViewLabelUnderline.height + Kirigami.Units.gridUnit)
-                property int footerHeight: (Math.ceil(headerHeight / cellSize) * cellSize) - headerHeight
+                    property Item itemGrid: gridView
 
-                property Item itemGrid: gridView
+                    Kirigami.Heading {
+                        id: gridViewLabel
 
-                Kirigami.Heading {
-                    id: gridViewLabel
+                        anchors.top: parent.top
 
-                    anchors.top: parent.top
+                        x: Kirigami.Units.smallSpacing
+                        width: parent.width - x
+                        height: dummyHeading.height
 
-                    x: Kirigami.Units.smallSpacing
-                    width: parent.width - x
-                    height: dummyHeading.height
+                        elide: Text.ElideRight
+                        wrapMode: Text.NoWrap
+                        opacity: 1.0
 
-                    elide: Text.ElideRight
-                    wrapMode: Text.NoWrap
-                    opacity: 1.0
+                        color: "white" // FIXME TODO: Respect theming?
 
-                    color: "white" // FIXME TODO: Respect theming?
+                        level: 1
 
-                    level: 1
-
-                    text: repeater.model.modelForRow(index).description
-                }
-
-                KSvg.SvgItem {
-                    id: gridViewLabelUnderline
-
-                    anchors.top: gridViewLabel.bottom
-
-                    width: parent.width - Kirigami.Units.gridUnit
-                    height: lineSvg.horLineHeight
-
-                    svg: lineSvg
-                    elementId: "horizontal-line"
-                }
-
-                MouseArea {
-                    width: parent.width
-                    height: parent.height
-
-                    onClicked: root.toggle()
-                }
-
-                ItemGridView {
-                    id: gridView
-
-                    anchors {
-                        top: gridViewLabelUnderline.bottom
-                        topMargin: Kirigami.Units.gridUnit
+                        text: repeater.model.modelForRow(index).description
                     }
 
-                    width: parent.width
-                    height: Math.ceil(count / Math.floor(width / cellSize)) * cellSize
+                    KSvg.SvgItem {
+                        id: gridViewLabelUnderline
 
-                    cellWidth: cellSize
-                    cellHeight: cellSize
-                    iconSize: root.iconSize
+                        anchors.top: gridViewLabel.bottom
 
-                    verticalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+                        width: parent.width - Kirigami.Units.gridUnit
+                        height: lineSvg.horLineHeight
 
-                    model: repeater.model.modelForRow(index)
-
-                    onFocusChanged: {
-                        if (focus) {
-                            itemMultiGrid.focus = true;
-                        }
+                        svg: lineSvg
+                        elementId: "horizontal-line"
                     }
 
-                    onCountChanged: {
-                        if (itemMultiGrid.grabFocus && index == 0 && count > 0) {
-                            currentIndex = 0;
-                            focus = true;
-                        }
+                    MouseArea {
+                        width: parent.width
+                        height: parent.height
+
+                        onClicked: root.toggle()
                     }
 
-                    onCurrentItemChanged: {
-                        if (!currentItem) {
-                            return;
+                    ItemGridView {
+                        id: gridView
+
+                        anchors {
+                            top: gridViewLabelUnderline.bottom
+                            topMargin: Kirigami.Units.gridUnit
                         }
 
-                        if (index == 0 && currentRow() === 0) {
-                            itemMultiGrid.flickableItem.contentY = 0;
-                            return;
+                        width: parent.width
+                        height: Math.ceil(count / Math.floor(width / cellSize)) * cellSize
+
+                        cellWidth: cellSize
+                        cellHeight: cellSize
+                        iconSize: root.iconSize
+
+                        verticalScrollBarPolicy: PlasmaComponents.ScrollBar.AlwaysOff
+
+                        model: repeater.model.modelForRow(index)
+
+                        onFocusChanged: {
+                            if (focus) {
+                                flickable.focus = true;
+                            }
                         }
 
-                        var y = currentItem.y;
-                        y = contentItem.mapToItem(itemMultiGrid.flickableItem.contentItem, 0, y).y;
+                        onCountChanged: {
+                            if (flickable.grabFocus && index == 0 && count > 0) {
+                                currentIndex = 0;
+                                focus = true;
+                            }
+                        }
 
-                        if (y < itemMultiGrid.flickableItem.contentY) {
-                            itemMultiGrid.flickableItem.contentY = y;
-                        } else {
-                            y += cellSize;
-                            y -= itemMultiGrid.flickableItem.contentY;
-                            y -= itemMultiGrid.viewport.height;
+                        onCurrentItemChanged: {
+                            if (!currentItem) {
+                                return;
+                            }
 
-                            if (y > 0) {
-                                itemMultiGrid.flickableItem.contentY += y;
+                            if (index == 0 && currentRow() === 0) {
+                                flickable.contentY = 0;
+                                return;
+                            }
+
+                            var y = currentItem.y;
+                            y = contentItem.mapToItem(flickable.contentItem, 0, y).y;
+
+                            if (y < flickable.contentY) {
+                                flickable.contentY = y;
+                            } else {
+                                y += cellSize;
+                                y -= flickable.contentY;
+                                y -= itemMultiGrid.height;
+
+                                if (y > 0) {
+                                    flickable.contentY += y;
+                                }
+                            }
+                        }
+
+                        onKeyNavLeft: {
+                            flickable.keyNavLeft(index);
+                        }
+
+                        onKeyNavRight: {
+                            flickable.keyNavRight(index);
+                        }
+
+                        onKeyNavUp: {
+                            if (index > 0) {
+                                var prevGrid = subGridAt(index - 1);
+                                prevGrid.tryActivate(prevGrid.lastRow(), currentCol());
+                            } else {
+                                flickable.keyNavUp();
+                            }
+                        }
+
+                        onKeyNavDown: {
+                            if (index < repeater.count - 1) {
+                                subGridAt(index + 1).tryActivate(0, currentCol());
+                            } else {
+                                flickable.keyNavDown();
                             }
                         }
                     }
 
-                    onKeyNavLeft: {
-                        itemMultiGrid.keyNavLeft(index);
+                    // HACK: Steal wheel events from the nested grid view and forward them to
+                    // the ScrollView's internal WheelArea.
+                    Kicker.WheelInterceptor {
+                        anchors.fill: gridView
+                        z: 1
+
+                        destination: findWheelArea(flickable)
                     }
-
-                    onKeyNavRight: {
-                        itemMultiGrid.keyNavRight(index);
-                    }
-
-                    onKeyNavUp: {
-                        if (index > 0) {
-                            var prevGrid = subGridAt(index - 1);
-                            prevGrid.tryActivate(prevGrid.lastRow(), currentCol());
-                        } else {
-                            itemMultiGrid.keyNavUp();
-                        }
-                    }
-
-                    onKeyNavDown: {
-                        if (index < repeater.count - 1) {
-                            subGridAt(index + 1).tryActivate(0, currentCol());
-                        } else {
-                            itemMultiGrid.keyNavDown();
-                        }
-                    }
-                }
-
-                // HACK: Steal wheel events from the nested grid view and forward them to
-                // the ScrollView's internal WheelArea.
-                Kicker.WheelInterceptor {
-                    anchors.fill: gridView
-                    z: 1
-
-                    destination: findWheelArea(itemMultiGrid.flickableItem)
                 }
             }
         }
