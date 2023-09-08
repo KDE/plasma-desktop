@@ -76,6 +76,7 @@ KCM.SimpleKCM {
         ColumnLayout {
             Kirigami.FormData.label: i18n("Animation speed:")
             Kirigami.FormData.buddyFor: slider
+            Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
 
             QQC2.Slider {
