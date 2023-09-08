@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-30 01:57+0000\n"
-"PO-Revision-Date: 2023-08-31 19:39+0200\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"PO-Revision-Date: 2023-09-06 16:43+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -30,7 +30,7 @@ msgid "Location"
 msgstr "Emplacement"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:393
+#: package/contents/ui/FolderViewLayer.qml:399
 #, kde-format
 msgid "Icons"
 msgstr "Icônes"
@@ -81,10 +81,9 @@ msgid "Show hidden files:"
 msgstr "Afficher les fichiers cachés :"
 
 #: package/contents/ui/ConfigFilter.qml:130
-#, fuzzy, kde-format
-#| msgid "File type"
+#, kde-format
 msgid "File Type"
-msgstr "Type du fichier"
+msgstr "Type de fichier"
 
 # | msgid "Execution"
 #: package/contents/ui/ConfigFilter.qml:130
@@ -105,7 +104,7 @@ msgstr "Tout désélectionner"
 #: package/contents/ui/ConfigFilter.qml:218
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "Modifier l'ordre de tri"
 
 #: package/contents/ui/ConfigIcons.qml:61
 #, kde-format
@@ -417,6 +416,9 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"Il y a beaucoup de fichiers et de dossiers sur le bureau. Cela peut causer "
+"des bogues et des problèmes de performance. Veuillez envisager de déplacer "
+"certains d’entre eux ailleurs."
 
 #: package/contents/ui/main.qml:391
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-06 01:55+0000\n"
-"PO-Revision-Date: 2023-07-15 13:58+0200\n"
+"PO-Revision-Date: 2023-09-04 15:17+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,10 +19,9 @@ msgstr ""
 "X-Generator: Lokalize 22.12.3\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Estensioni disponibili"
+msgstr "Estensioni preferite"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -40,27 +39,25 @@ msgid "Get New Plugins…"
 msgstr "Ottieni nuove estensioni…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
 msgstr ""
 "Abilita o disabilita le estensioni (usate in KRunner, nell'Avviatore di "
-"applicazioni e nell'effetto Panoramica)"
+"applicazioni e nell'effetto Panoramica). Marca le estensioni come preferite "
+"le dispone nell'ordine in cui le vuoi vedere."
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Rimuovi dai preferiti"
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Aggiungi nei preferiti"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

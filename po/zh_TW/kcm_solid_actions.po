@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2021-09-06 01:02+0800\n"
 "Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
@@ -227,22 +227,22 @@ msgstr "裝置的屬性 %1 必須為 %2"
 msgid "The device property %1 must contain %2"
 msgstr "裝置的屬性 %1 必須包含 %2"
 
-#: SolidActions.cpp:143
+#: SolidActions.cpp:137
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "此動作的描述似乎不正確。"
 
-#: SolidActions.cpp:143
+#: SolidActions.cpp:137
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "剖析裝置條件發生錯誤"
 
-#: SolidActions.cpp:191
+#: SolidActions.cpp:185
 #, kde-format
 msgid "No Action Selected"
 msgstr "沒有選取動作"
 
-#: SolidActions.cpp:212
+#: SolidActions.cpp:206
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "無法刪除"

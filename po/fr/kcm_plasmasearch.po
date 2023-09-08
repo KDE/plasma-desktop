@@ -3,14 +3,14 @@
 # Sebastien Renard <renard@kde.org>, 2014, 2015.
 # Vincent Pinon <vpinon@kde.org>, 2016, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2019.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-06 01:55+0000\n"
-"PO-Revision-Date: 2023-07-20 09:13+0200\n"
+"PO-Revision-Date: 2023-09-06 16:42+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -18,16 +18,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Modules complémentaires disponibles"
+msgstr "Modules complémentaires pour les favoris"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -45,27 +44,25 @@ msgid "Get New Plugins…"
 msgstr "Obtenir de nouveaux modules externes..."
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
 msgstr ""
-"Activer ou désactiver les modules externes (utilisé dans KRunner, le lanceur "
-"d'applications et l'effet d'aperçu)"
+"Activer ou désactiver les modules externes (Utilisés dans KRunner, le "
+"lanceur d'applications et l'effet d'aperçu). Marquer les modules externes "
+"comme des favoris et les organiser selon vos besoins."
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Supprimer des favoris"
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Ajouter aux favoris"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

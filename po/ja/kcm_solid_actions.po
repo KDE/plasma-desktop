@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
 "PO-Revision-Date: 2010-07-11 15:43-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -231,22 +231,22 @@ msgstr "デバイスのプロパティ “%1” は “%2” と等しくなけ�
 msgid "The device property %1 must contain %2"
 msgstr "デバイスのプロパティ “%1” は “%2” を含まなくてはいけない"
 
-#: SolidActions.cpp:143
+#: SolidActions.cpp:137
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
 msgstr "このアクションの述部は有効ではないようです。"
 
-#: SolidActions.cpp:143
+#: SolidActions.cpp:137
 #, kde-format
 msgid "Error Parsing Device Conditions"
 msgstr "デバイスの条件の解析エラー"
 
-#: SolidActions.cpp:191
+#: SolidActions.cpp:185
 #, kde-format
 msgid "No Action Selected"
 msgstr "アクションが選択されていません"
 
-#: SolidActions.cpp:212
+#: SolidActions.cpp:206
 #, kde-format
 msgid "Cannot be deleted"
 msgstr "削除できません"
