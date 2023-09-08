@@ -5,12 +5,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.7
-import QtQuick.Controls 2.0 as QQC2
+import QtQuick
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami as Kirigami
 
 // TODO: Change ScrollablePage as KCM.SimpleKCM
 // after rewrite the KCM in KConfigModule.
@@ -46,8 +46,8 @@ Kirigami.ScrollablePage {
 
         // General
         QQC2.CheckBox {
-            Kirigami.FormData.label: i18nd("kcmmouse", "General:")
             id: leftHanded
+            Kirigami.FormData.label: i18nd("kcmmouse", "General:")
             text: i18nd("kcmmouse", "Left handed mode")
 
             function load() {
@@ -102,8 +102,8 @@ Kirigami.ScrollablePage {
 
         // Acceleration
         QQC2.Slider {
-            Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
             id: accelSpeed
+            Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
             Layout.fillWidth: true
 
             from: 1
@@ -126,7 +126,7 @@ Kirigami.ScrollablePage {
                     // transform slider range [1, 10] to libinput's pointer acceleration range [-1, 1]
                     // by *10 and /10, we ignore the floating points after 1 digit. This prevents from
                     // having a libinput value like 0.60000001
-                    device.pointerAcceleration = Math.round(((value-6) * 0.2) * 10) / 10
+                    device.pointerAcceleration = Math.round(((value - 6) * 0.2) * 10) / 10
                     root.changeSignal()
                 }
             }
@@ -147,7 +147,7 @@ Kirigami.ScrollablePage {
                     return
                 }
 
-                if(device.pointerAccelerationProfileAdaptive) {
+                if (device.pointerAccelerationProfileAdaptive) {
                     accelProfileAdaptive.checked = true
                     accelProfileFlat.checked = false
                 } else {
@@ -191,8 +191,8 @@ Kirigami.ScrollablePage {
 
         // Scrolling
         QQC2.CheckBox {
-            Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
             id: naturalScroll
+            Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
             text: i18nd("kcmmouse", "Invert scroll direction")
 
             function load() {

@@ -5,13 +5,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.7
-import QtQuick.Controls 2.0 as QQC2
+import QtQuick
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
-import QtQuick.Window 2.15
 
-import org.kde.kirigami 2.14 as Kirigami
-import org.kde.kquickcontrols 2.0
+import org.kde.kirigami as Kirigami
+import org.kde.kquickcontrols
 
 Kirigami.ApplicationItem {
     id: root
@@ -70,8 +69,8 @@ Kirigami.ApplicationItem {
 
             // Device
             QQC2.ComboBox {
-                Kirigami.FormData.label: i18nd("kcmmouse", "Device:")
                 id: deviceSelector
+                Kirigami.FormData.label: i18nd("kcmmouse", "Device:")
                 enabled: deviceCount > 1
                 Layout.fillWidth: true
                 model: deviceModel
@@ -94,8 +93,8 @@ Kirigami.ApplicationItem {
 
             // General
             QQC2.CheckBox {
-                Kirigami.FormData.label: i18nd("kcmmouse", "General:")
                 id: deviceEnabled
+                Kirigami.FormData.label: i18nd("kcmmouse", "General:")
                 text: i18nd("kcmmouse", "Device enabled")
 
                 function load() {
@@ -175,8 +174,8 @@ Kirigami.ApplicationItem {
 
             // Acceleration
             QQC2.Slider {
-                Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
                 id: accelSpeed
+                Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
                 Layout.fillWidth: true
 
                 from: 1
@@ -264,8 +263,8 @@ Kirigami.ApplicationItem {
 
             // Scrolling
             QQC2.CheckBox {
-                Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
                 id: naturalScroll
+                Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
                 text: i18nd("kcmmouse", "Invert scroll direction")
 
                 function load() {
@@ -301,7 +300,7 @@ Kirigami.ApplicationItem {
                     to: 14
                     stepSize: 1
 
-                    property variant values : [
+                    readonly property list<real> values: [
                         0.1,
                         0.3,
                         0.5,
@@ -352,7 +351,6 @@ Kirigami.ApplicationItem {
                 Kirigami.FormData.isSection: true
             }
 
-
             QQC2.Button  {
                 text: i18ndc("kcmmouse", "@action:button", "Re-bind Additional Mouse Buttons…")
                 visible: buttonMappings.model.length > 0 || Array.prototype.some.call(deviceModel, device => device.supportedButtons & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton))
@@ -360,6 +358,7 @@ Kirigami.ApplicationItem {
             }
         }
     }
+
     Kirigami.ScrollablePage {
         id: buttonPage
 
@@ -373,7 +372,7 @@ Kirigami.ApplicationItem {
             preventStealing: true
             acceptedButtons: Qt.AllButtons & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton)
             onClicked: {
-                lastButton = buttonMappings.extraButtons.find(entry => Qt[entry.buttonName] == mouse.button)
+                lastButton = buttonMappings.extraButtons.find(entry => Qt[entry.buttonName] === mouse.button)
                 newBinding.visible = false
                 newKeySequenceItem.visible = true
                 newKeySequenceItem.startCapturing()
@@ -387,7 +386,7 @@ Kirigami.ApplicationItem {
                 Repeater {
                     id: buttonMappings
 
-                    readonly property var extraButtons: Array.from({length: 24}, (value,index) => ({
+                    readonly property var extraButtons: Array.from({length: 24}, (value, index) => ({
                         buttonName: "ExtraButton" + (index + 1),
                         button: Qt["ExtraButton" + (index + 1)],
                         label: i18ndc("kcmmouse", "@label for assigning an action to a numbered button", "Extra Button %1:", index + 1)
@@ -407,7 +406,7 @@ Kirigami.ApplicationItem {
                         checkForConflictsAgainst: ShortcutType.None
 
                         onCaptureFinished: {
-                            let copy = backend.buttonMapping;
+                            const copy = backend.buttonMapping;
                             copy[modelData.buttonName] = keySequence
                             backend.buttonMapping = copy
                             root.changeSignal()
@@ -440,7 +439,7 @@ Kirigami.ApplicationItem {
                 twinFormLayouts: buttonLayout
 
                 QQC2.Button {
-                    id:newBinding
+                    id: newBinding
                     checkable: true
                     text: checked ? i18ndc("kcmmouse", "@action:button", "Press a mouse button ") :
                         i18ndc("kcmmouse", "@action:button, Bind a mousebutton to keyboard key(s)", "Add Binding…")
@@ -458,7 +457,7 @@ Kirigami.ApplicationItem {
                         visible = false
                         newBinding.visible = true
                         newBinding.checked = false
-                        let copy = backend.buttonMapping;
+                        const copy = backend.buttonMapping;
                         copy[buttonCapture.lastButton.buttonName] = keySequence
                         backend.buttonMapping = copy
                         root.changeSignal()
@@ -474,7 +473,6 @@ Kirigami.ApplicationItem {
                     onClicked: root.pageStack.pop()
                     text: i18ndc("kcmmouse", "@action:button", "Go back")
                     icon.name: "go-previous"
-
                 }
             }
         }
