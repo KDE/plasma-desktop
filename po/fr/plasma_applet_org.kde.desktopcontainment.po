@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-29 02:25+0000\n"
-"PO-Revision-Date: 2023-08-31 19:39+0200\n"
+"POT-Creation-Date: 2023-09-08 02:26+0000\n"
+"PO-Revision-Date: 2023-09-06 16:43+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -30,7 +30,7 @@ msgid "Location"
 msgstr "Emplacement"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:429
+#: package/contents/ui/FolderViewLayer.qml:435
 #, kde-format
 msgid "Icons"
 msgstr "Icônes"
@@ -409,13 +409,16 @@ msgstr "Supprimer"
 msgid "Preview Plugins"
 msgstr "Modules d'extension d'aperçu"
 
-#: package/contents/ui/FolderView.qml:1203
+#: package/contents/ui/FolderView.qml:1204
 #, kde-format
 msgctxt "@info"
 msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"Il y a beaucoup de fichiers et de dossiers sur le bureau. Cela peut causer "
+"des bogues et des problèmes de performance. Veuillez envisager de déplacer "
+"certains d’entre eux ailleurs."
 
 #: package/contents/ui/main.qml:356
 #, kde-format
