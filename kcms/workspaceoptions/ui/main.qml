@@ -4,17 +4,18 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.7
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.5 as Kirigami
+
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
-import org.kde.kwindowsystem 1.0
+import org.kde.kwindowsystem
 
 KCM.SimpleKCM {
     implicitWidth: Kirigami.Units.gridUnit * 40
 
-    header: ColumnLayout{
+    header: ColumnLayout {
         Kirigami.InlineMessage {
             id: primarySelectionRebootMessage
             Layout.fillWidth: true
@@ -75,6 +76,7 @@ KCM.SimpleKCM {
         ColumnLayout {
             Kirigami.FormData.label: i18n("Animation speed:")
             Kirigami.FormData.buddyFor: slider
+            spacing: Kirigami.Units.smallSpacing
 
             QQC2.Slider {
                 id: slider
@@ -95,6 +97,7 @@ KCM.SimpleKCM {
                 }
             }
             RowLayout {
+                spacing: 0
                 QQC2.Label {
                     text: i18nc("Animation speed", "Slow")
                 }
@@ -236,7 +239,11 @@ KCM.SimpleKCM {
             QQC2.RadioButton {
                 text: KWindowSystem.isPlatformWayland ? i18nc("As in: 'Touch Mode is automatically enabled as needed'", "Automatically enable as needed") : i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
                 checked: kcm.kwinSettings.tabletMode === "auto"
-                onToggled: if (checked) kcm.kwinSettings.tabletMode = "auto"
+                onToggled: {
+                    if (checked) {
+                        kcm.kwinSettings.tabletMode = "auto"
+                    }
+                }
                 QQC2.ButtonGroup.group: tabletModeBehaviorGroup
 
                 KCM.SettingStateBinding {
@@ -253,7 +260,11 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             text: i18nc("As in: 'Touch Mode is always enabled'", "Always enabled")
             checked: kcm.kwinSettings.tabletMode === "on"
-            onToggled: if (checked) kcm.kwinSettings.tabletMode = "on"
+            onToggled: {
+                if (checked) {
+                    kcm.kwinSettings.tabletMode = "on"
+                }
+            }
             QQC2.ButtonGroup.group: tabletModeBehaviorGroup
 
             KCM.SettingStateBinding {
@@ -266,7 +277,11 @@ KCM.SimpleKCM {
             visible: KWindowSystem.isPlatformWayland
             text: i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
             checked: kcm.kwinSettings.tabletMode === "off"
-            onToggled: if (checked) kcm.kwinSettings.tabletMode = "off"
+            onToggled: {
+                if (checked) {
+                    kcm.kwinSettings.tabletMode = "off"
+                }
+            }
             QQC2.ButtonGroup.group: tabletModeBehaviorGroup
 
             KCM.SettingStateBinding {
