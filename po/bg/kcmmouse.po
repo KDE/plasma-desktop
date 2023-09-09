@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 01:57+0000\n"
+"POT-Creation-Date: 2023-09-09 01:58+0000\n"
 "PO-Revision-Date: 2023-08-29 14:46+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -100,39 +100,39 @@ msgstr "Указателното устройство е изключено. Н�
 msgid "Device:"
 msgstr "Устройство:"
 
-#: kcm/libinput/main.qml:97 kcm/libinput/main_deviceless.qml:49
+#: kcm/libinput/main.qml:97 kcm/libinput/main_deviceless.qml:50
 #, kde-format
 msgid "General:"
 msgstr "Общи:"
 
-#: kcm/libinput/main.qml:99
+#: kcm/libinput/main.qml:98
 #, kde-format
 msgid "Device enabled"
 msgstr "Устройството е активирано"
 
-#: kcm/libinput/main.qml:119
+#: kcm/libinput/main.qml:118
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Приемане на въвеждане чрез това устройство."
 
-#: kcm/libinput/main.qml:124 kcm/libinput/main_deviceless.qml:51
+#: kcm/libinput/main.qml:123 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "Режим за лява ръка"
 
-#: kcm/libinput/main.qml:144 kcm/libinput/main_deviceless.qml:71
+#: kcm/libinput/main.qml:143 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Размяна на левия и десния бутон."
 
-#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:76
+#: kcm/libinput/main.qml:148 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr ""
 "Емулация на кликване със среден бутон при едновременно натискане на левия и "
 "десния бутон"
 
-#: kcm/libinput/main.qml:169 kcm/libinput/main_deviceless.qml:96
+#: kcm/libinput/main.qml:168 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -140,51 +140,51 @@ msgstr ""
 "Кликването на левия и десния бутон едновременно изпраща сигнал за кликване "
 "със среден бутон."
 
-#: kcm/libinput/main.qml:178 kcm/libinput/main_deviceless.qml:105
+#: kcm/libinput/main.qml:178 kcm/libinput/main_deviceless.qml:106
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Скорост на показалеца:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
 #: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Ускорение показалеца на мишката:"
 
-#: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
+#: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:169
 #, kde-format
 msgid "None"
 msgstr "Без"
 
-#: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
+#: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:173
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Курсорът се движи на същото разстояние като движението на мишката."
 
-#: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
+#: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Standard"
 msgstr "Стандартно"
 
-#: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
+#: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:183
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Разстоянието на движение на курсора зависи от скоростта на движение на "
 "мишката."
 
-#: kcm/libinput/main.qml:266 kcm/libinput/main_deviceless.qml:193
+#: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Scrolling:"
 msgstr "Превъртане:"
 
-#: kcm/libinput/main.qml:268 kcm/libinput/main_deviceless.qml:195
+#: kcm/libinput/main.qml:268 kcm/libinput/main_deviceless.qml:196
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Обръщане на посоката на превъртане"
 
-#: kcm/libinput/main.qml:284 kcm/libinput/main_deviceless.qml:211
+#: kcm/libinput/main.qml:284 kcm/libinput/main_deviceless.qml:212
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Превъртане като при сензорен екран ."
@@ -194,62 +194,62 @@ msgstr "Превъртане като при сензорен екран ."
 msgid "Scrolling speed:"
 msgstr "Скорост на превъртане:"
 
-#: kcm/libinput/main.qml:337
+#: kcm/libinput/main.qml:339
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "По-бавно"
 
-#: kcm/libinput/main.qml:343
+#: kcm/libinput/main.qml:345
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "По-бързо"
 
-#: kcm/libinput/main.qml:354
+#: kcm/libinput/main.qml:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Повторно свързване на допълнителни бутони на мишката…"
 
-#: kcm/libinput/main.qml:390
+#: kcm/libinput/main.qml:392
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Допълнителен бутон %1:"
 
-#: kcm/libinput/main.qml:420
+#: kcm/libinput/main.qml:422
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr ""
 "Натиснете бутона на мишката, за който искате да добавите клавишна връзка"
 
-#: kcm/libinput/main.qml:421
+#: kcm/libinput/main.qml:423
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Въведете новата клавишна комбинация за %1"
 
-#: kcm/libinput/main.qml:425
+#: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Отказ"
 
-#: kcm/libinput/main.qml:442
+#: kcm/libinput/main.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "Натиснете бутон на мишката"
 
-#: kcm/libinput/main.qml:443
+#: kcm/libinput/main.qml:445
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Добавяне на свързване…"
 
-#: kcm/libinput/main.qml:472
+#: kcm/libinput/main.qml:474
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"

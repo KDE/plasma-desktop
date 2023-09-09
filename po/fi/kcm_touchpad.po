@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 01:57+0000\n"
+"POT-Creation-Date: 2023-09-09 01:58+0000\n"
 "PO-Revision-Date: 2021-06-07 16:50+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -88,7 +88,7 @@ msgstr "Kosketuslevyn asetuksia ei saada luetuksi"
 msgid "Device:"
 msgstr "Laite:"
 
-#: kcm/libinput/touchpad.qml:133
+#: kcm/libinput/touchpad.qml:134
 #, kde-format
 msgid "General:"
 msgstr "Yleistä:"
@@ -128,7 +128,7 @@ msgstr "Vaihda vasen ja oikea painike keskenään."
 msgid "Press left and right buttons for middle click"
 msgstr "Vasen ja oikea painike toimivat yhdessä keskipainikkeena"
 
-#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:860
+#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:864
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -141,77 +141,77 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Osoittimen nopeus:"
 
-#: kcm/libinput/touchpad.qml:349
+#: kcm/libinput/touchpad.qml:352
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Osoittimen kiihdytys:"
 
-#: kcm/libinput/touchpad.qml:381
+#: kcm/libinput/touchpad.qml:383
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: kcm/libinput/touchpad.qml:385
+#: kcm/libinput/touchpad.qml:387
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "Osoitin liikkuu saman verran kuin sormi."
 
-#: kcm/libinput/touchpad.qml:394
+#: kcm/libinput/touchpad.qml:396
 #, kde-format
 msgid "Standard"
 msgstr ""
 
-#: kcm/libinput/touchpad.qml:398
+#: kcm/libinput/touchpad.qml:400
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "Osoittimen kulkema matka riippuu sormen liikenopeudesta."
 
-#: kcm/libinput/touchpad.qml:412
+#: kcm/libinput/touchpad.qml:415
 #, kde-format
 msgid "Tapping:"
 msgstr "Napauttaminen:"
 
-#: kcm/libinput/touchpad.qml:414
+#: kcm/libinput/touchpad.qml:416
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Napsauta napauttamalla"
 
-#: kcm/libinput/touchpad.qml:418
+#: kcm/libinput/touchpad.qml:420
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "Vasemman painikkeen napsautus yksittäisellä napautuksella."
 
-#: kcm/libinput/touchpad.qml:447
+#: kcm/libinput/touchpad.qml:449
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Napauta ja vedä"
 
-#: kcm/libinput/touchpad.qml:451
+#: kcm/libinput/touchpad.qml:453
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "Välittömästi kosketuslevyn napautuksen jälkeinen pyyhkäisy vetää."
 
-#: kcm/libinput/touchpad.qml:478
+#: kcm/libinput/touchpad.qml:480
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Napauta ja vedä -lukitus"
 
-#: kcm/libinput/touchpad.qml:482
+#: kcm/libinput/touchpad.qml:484
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Vetäminen jatkuu, vaikka lyhyttä sormea nostetaan"
 
-#: kcm/libinput/touchpad.qml:501
+#: kcm/libinput/touchpad.qml:504
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Kahden sormen napautus:"
 
-#: kcm/libinput/touchpad.qml:513
+#: kcm/libinput/touchpad.qml:515
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Oikean painikkeen napsautus (kolmella sormella keskipainikkeen)"
 
-#: kcm/libinput/touchpad.qml:514
+#: kcm/libinput/touchpad.qml:516
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -219,12 +219,12 @@ msgstr ""
 "Oikean painikkeen napsautus kahden sormen, keskipainikkeen napsautus kolmen "
 "sormen napautuksella."
 
-#: kcm/libinput/touchpad.qml:516
+#: kcm/libinput/touchpad.qml:518
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Keskipainikkeen napsautus (kolmella sormella oikean)"
 
-#: kcm/libinput/touchpad.qml:517
+#: kcm/libinput/touchpad.qml:519
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -232,137 +232,137 @@ msgstr ""
 "Keskipainikkeen napsautus kahden sormen, oikean painikkeen napsautus kolmen "
 "sormen napautuksella."
 
-#: kcm/libinput/touchpad.qml:519
+#: kcm/libinput/touchpad.qml:521
 #, kde-format
 msgid "Right-click"
 msgstr "Oikean painikkeen napsautus"
 
-#: kcm/libinput/touchpad.qml:520
+#: kcm/libinput/touchpad.qml:522
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Kahden sormen napautus vastaa oikean painikkeen napsautusta."
 
-#: kcm/libinput/touchpad.qml:522
+#: kcm/libinput/touchpad.qml:524
 #, kde-format
 msgid "Middle-click"
 msgstr "Keskipainikkeen napsautus"
 
-#: kcm/libinput/touchpad.qml:523
+#: kcm/libinput/touchpad.qml:525
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Kahden sormen napautus vastaa keskipainikkeen napsautusta."
 
-#: kcm/libinput/touchpad.qml:581
+#: kcm/libinput/touchpad.qml:584
 #, kde-format
 msgid "Scrolling:"
 msgstr "Vieritys:"
 
-#: kcm/libinput/touchpad.qml:611
+#: kcm/libinput/touchpad.qml:613
 #, kde-format
 msgid "Two fingers"
 msgstr "Kaksi sormea"
 
-#: kcm/libinput/touchpad.qml:615
+#: kcm/libinput/touchpad.qml:617
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Vieritä pyyhkäisemällä kahdella sormella."
 
-#: kcm/libinput/touchpad.qml:623
+#: kcm/libinput/touchpad.qml:625
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Kosketuslevyn reunat"
 
-#: kcm/libinput/touchpad.qml:627
+#: kcm/libinput/touchpad.qml:629
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Vieritä pyyhkäisemällä kosketuslevyn reunaa."
 
-#: kcm/libinput/touchpad.qml:637
+#: kcm/libinput/touchpad.qml:639
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Käänteinen vierityssuunta (”luonnollinen” vieritys)"
 
-#: kcm/libinput/touchpad.qml:653
+#: kcm/libinput/touchpad.qml:655
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Kosketusnäyttömäinen vieritys."
 
-#: kcm/libinput/touchpad.qml:661 kcm/libinput/touchpad.qml:678
+#: kcm/libinput/touchpad.qml:663 kcm/libinput/touchpad.qml:680
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Poista vaakavieritys käytöstä"
 
-#: kcm/libinput/touchpad.qml:686
+#: kcm/libinput/touchpad.qml:688
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Vieritysnopeus:"
 
-#: kcm/libinput/touchpad.qml:735
+#: kcm/libinput/touchpad.qml:739
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Hitaampi"
 
-#: kcm/libinput/touchpad.qml:741
+#: kcm/libinput/touchpad.qml:745
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Nopeampi"
 
-#: kcm/libinput/touchpad.qml:750
+#: kcm/libinput/touchpad.qml:755
 #, kde-format
 msgid "Right-click:"
 msgstr "Oikean painikkeen napsautus:"
 
-#: kcm/libinput/touchpad.qml:785
+#: kcm/libinput/touchpad.qml:789
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "Paina oikeaa alakulmaa"
 
-#: kcm/libinput/touchpad.qml:789
+#: kcm/libinput/touchpad.qml:793
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr "Ohjelmalliset painikkeet lisätään kosketuslevysi alalaitaan."
 
-#: kcm/libinput/touchpad.qml:797
+#: kcm/libinput/touchpad.qml:801
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "Paina minne vain kahdella sormella"
 
-#: kcm/libinput/touchpad.qml:801
+#: kcm/libinput/touchpad.qml:805
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "Jäljittele oikeanpuoleista painiketta napauttamalla kahdella sormella."
 
-#: kcm/libinput/touchpad.qml:814
+#: kcm/libinput/touchpad.qml:819
 #, kde-format
 msgid "Middle-click: "
 msgstr "Keskipainikkeen napsautus:"
 
-#: kcm/libinput/touchpad.qml:844
+#: kcm/libinput/touchpad.qml:848
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Paina alalaidan keskelle"
 
-#: kcm/libinput/touchpad.qml:848
+#: kcm/libinput/touchpad.qml:852
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
 msgstr "Ohjelmallinen keskipainike lisätään kosketuslevysi alalaitaan"
 
-#: kcm/libinput/touchpad.qml:856
+#: kcm/libinput/touchpad.qml:860
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Paina vasenta ja oikeaa alakulmaa yhtä aikaa"
 
-#: kcm/libinput/touchpad.qml:869
+#: kcm/libinput/touchpad.qml:873
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Paina minne vain kolmella sormella"
 
-#: kcm/libinput/touchpad.qml:875
+#: kcm/libinput/touchpad.qml:879
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Paina minne vain kolmella sormella."

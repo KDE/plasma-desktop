@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-09-09 01:58+0000\n"
 "PO-Revision-Date: 2013-10-18 20:13+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,87 +20,87 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: ui/main.qml:23
+#: ui/main.qml:24
 #, kde-format
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
 
-#: ui/main.qml:29
+#: ui/main.qml:30
 #, kde-format
 msgid "Restart"
 msgstr ""
 
-#: ui/main.qml:46
+#: ui/main.qml:47
 #, kde-format
 msgid "Visual behavior:"
 msgstr ""
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: ui/main.qml:47 workspaceoptions_plasmasettings.kcfg:9
+#: ui/main.qml:48 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr ""
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: ui/main.qml:58 workspaceoptions_plasmasettings.kcfg:15
+#: ui/main.qml:59 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr ""
 
-#: ui/main.qml:76
+#: ui/main.qml:77
 #, kde-format
 msgid "Animation speed:"
 msgstr ""
 
-#: ui/main.qml:99
+#: ui/main.qml:103
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr ""
 
-#: ui/main.qml:105
+#: ui/main.qml:109
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr ""
 
-#: ui/main.qml:119
+#: ui/main.qml:123
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr ""
 
-#: ui/main.qml:120
+#: ui/main.qml:124
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr ""
 
-#: ui/main.qml:134
+#: ui/main.qml:138
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:149
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr ""
 
-#: ui/main.qml:158
+#: ui/main.qml:162
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr ""
 
-#: ui/main.qml:172
+#: ui/main.qml:176
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr ""
 
-#: ui/main.qml:173
+#: ui/main.qml:177
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -108,7 +108,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr ""
 
-#: ui/main.qml:191
+#: ui/main.qml:195
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -116,43 +116,43 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr ""
 
-#: ui/main.qml:204
+#: ui/main.qml:208
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr ""
 
-#: ui/main.qml:216
+#: ui/main.qml:220
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr ""
 
-#: ui/main.qml:218
+#: ui/main.qml:222
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
 msgstr ""
 
-#: ui/main.qml:235
+#: ui/main.qml:239
 #, kde-format
 msgid "Touch Mode:"
 msgstr ""
 
-#: ui/main.qml:237
+#: ui/main.qml:241
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr ""
 
-#: ui/main.qml:237 ui/main.qml:267
+#: ui/main.qml:241 ui/main.qml:279
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr ""
 
-#: ui/main.qml:249
+#: ui/main.qml:257
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -160,13 +160,13 @@ msgid ""
 "laptop's keyboard is flipped around or detached."
 msgstr ""
 
-#: ui/main.qml:254
+#: ui/main.qml:262
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr ""
 
-#: ui/main.qml:281
+#: ui/main.qml:297
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 01:57+0000\n"
+"POT-Creation-Date: 2023-09-09 01:58+0000\n"
 "PO-Revision-Date: 2023-08-24 21:20+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -109,37 +109,37 @@ msgstr "Координатний пристрій від’єднано. Інш�
 msgid "Device:"
 msgstr "Пристрій:"
 
-#: kcm/libinput/main.qml:97 kcm/libinput/main_deviceless.qml:49
+#: kcm/libinput/main.qml:97 kcm/libinput/main_deviceless.qml:50
 #, kde-format
 msgid "General:"
 msgstr "Загальне:"
 
-#: kcm/libinput/main.qml:99
+#: kcm/libinput/main.qml:98
 #, kde-format
 msgid "Device enabled"
 msgstr "Пристрій увімкнено"
 
-#: kcm/libinput/main.qml:119
+#: kcm/libinput/main.qml:118
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Приймати вхідні дані з цього пристрою."
 
-#: kcm/libinput/main.qml:124 kcm/libinput/main_deviceless.qml:51
+#: kcm/libinput/main.qml:123 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "Режим шульги"
 
-#: kcm/libinput/main.qml:144 kcm/libinput/main_deviceless.qml:71
+#: kcm/libinput/main.qml:143 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Поміняти місцями ліву і праву кнопки."
 
-#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:76
+#: kcm/libinput/main.qml:148 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Натискати ліву і праву кнопки для клацання середньою"
 
-#: kcm/libinput/main.qml:169 kcm/libinput/main_deviceless.qml:96
+#: kcm/libinput/main.qml:168 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -147,50 +147,50 @@ msgstr ""
 "Одночасне натискання лівої і правої кнопок надсилатиме сигнал клацання "
 "середньою кнопкою."
 
-#: kcm/libinput/main.qml:178 kcm/libinput/main_deviceless.qml:105
+#: kcm/libinput/main.qml:178 kcm/libinput/main_deviceless.qml:106
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Швидкість вказівника:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:137
+#: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
 #: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Прискорення вказівника:"
 
-#: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:168
+#: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:169
 #, kde-format
 msgid "None"
 msgstr "Немає"
 
-#: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:172
+#: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:173
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Вказівник зсувається на ту саму відстань, що і миша."
 
-#: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:178
+#: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Standard"
 msgstr "Стандартне"
 
-#: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:182
+#: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:183
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Вказівник зсувається на відстань, яка залежить від швидкості руху мишею."
 
-#: kcm/libinput/main.qml:266 kcm/libinput/main_deviceless.qml:193
+#: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Scrolling:"
 msgstr "Гортання:"
 
-#: kcm/libinput/main.qml:268 kcm/libinput/main_deviceless.qml:195
+#: kcm/libinput/main.qml:268 kcm/libinput/main_deviceless.qml:196
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Інвертувати напрямок гортання"
 
-#: kcm/libinput/main.qml:284 kcm/libinput/main_deviceless.qml:211
+#: kcm/libinput/main.qml:284 kcm/libinput/main_deviceless.qml:212
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Гортання як на сенсорній панелі."
@@ -200,62 +200,62 @@ msgstr "Гортання як на сенсорній панелі."
 msgid "Scrolling speed:"
 msgstr "Швидкість гортання:"
 
-#: kcm/libinput/main.qml:337
+#: kcm/libinput/main.qml:339
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Повільніше"
 
-#: kcm/libinput/main.qml:343
+#: kcm/libinput/main.qml:345
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Швидше"
 
-#: kcm/libinput/main.qml:354
+#: kcm/libinput/main.qml:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Повторно прив'язати додаткові кнопки…"
 
-#: kcm/libinput/main.qml:390
+#: kcm/libinput/main.qml:392
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Додаткова кнопка %1:"
 
-#: kcm/libinput/main.qml:420
+#: kcm/libinput/main.qml:422
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr ""
 "Натисніть кнопку миші, для якої ви хочете додати прив'язку до клавіатури"
 
-#: kcm/libinput/main.qml:421
+#: kcm/libinput/main.qml:423
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Введіть нову комбінацію клавіш для %1"
 
-#: kcm/libinput/main.qml:425
+#: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: kcm/libinput/main.qml:442
+#: kcm/libinput/main.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "Натисніть кнопку миші"
 
-#: kcm/libinput/main.qml:443
+#: kcm/libinput/main.qml:445
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Додати прив'язку…"
 
-#: kcm/libinput/main.qml:472
+#: kcm/libinput/main.qml:474
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"

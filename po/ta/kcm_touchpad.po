@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 01:57+0000\n"
+"POT-Creation-Date: 2023-09-09 01:58+0000\n"
 "PO-Revision-Date: 2022-05-08 15:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -89,7 +89,7 @@ msgstr "தொடுபலகையின் இயல்பிருப்ப�
 msgid "Device:"
 msgstr "சாதனம்:"
 
-#: kcm/libinput/touchpad.qml:133
+#: kcm/libinput/touchpad.qml:134
 #, kde-format
 msgid "General:"
 msgstr "பொது:"
@@ -129,7 +129,7 @@ msgstr "இடது மற்றும் வலது பட்டன்கள
 msgid "Press left and right buttons for middle click"
 msgstr "நடு க்ளிக்குக்கு இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்து"
 
-#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:860
+#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:864
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -141,78 +141,78 @@ msgstr "இடது மற்றும் வலது பட்டன்கள
 msgid "Pointer speed:"
 msgstr "சுட்டிக்குறியின் குறைந்தபட்ச வேகம்"
 
-#: kcm/libinput/touchpad.qml:349
+#: kcm/libinput/touchpad.qml:352
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "சுட்டிக்குறியின் வேகவளர்ச்சி:"
 
-#: kcm/libinput/touchpad.qml:381
+#: kcm/libinput/touchpad.qml:383
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: kcm/libinput/touchpad.qml:385
+#: kcm/libinput/touchpad.qml:387
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "விரல் நகரும் அதே தூரத்திற்கு சுட்டிக்குறியும் நகரும்."
 
-#: kcm/libinput/touchpad.qml:394
+#: kcm/libinput/touchpad.qml:396
 #, kde-format
 msgid "Standard"
 msgstr ""
 
-#: kcm/libinput/touchpad.qml:398
+#: kcm/libinput/touchpad.qml:400
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "சுட்டிக்குறி நகரும் தூரம், விரலின் வேகத்தைப் பொறுத்து அமையும்."
 
-#: kcm/libinput/touchpad.qml:412
+#: kcm/libinput/touchpad.qml:415
 #, kde-format
 msgid "Tapping:"
 msgstr "தட்டுதல்:"
 
-#: kcm/libinput/touchpad.qml:414
+#: kcm/libinput/touchpad.qml:416
 #, kde-format
 msgid "Tap-to-click"
 msgstr "க்ளிக் செய்ய தட்டு"
 
-#: kcm/libinput/touchpad.qml:418
+#: kcm/libinput/touchpad.qml:420
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "ஒரு முறை தட்டுதல், இடது க்ளிக்காக கருதப்படும்."
 
-#: kcm/libinput/touchpad.qml:447
+#: kcm/libinput/touchpad.qml:449
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "தட்டி இழு"
 
-#: kcm/libinput/touchpad.qml:451
+#: kcm/libinput/touchpad.qml:453
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "தட்டிய உடனே விரலை தொடுபலகையில் தேய்த்தல், இழுத்ததாக கருதப்படும்."
 
-#: kcm/libinput/touchpad.qml:478
+#: kcm/libinput/touchpad.qml:480
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "தட்டி இழுத்தலைப் பூட்டு"
 
-#: kcm/libinput/touchpad.qml:482
+#: kcm/libinput/touchpad.qml:484
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr ""
 "இழுக்கும்போது சிறிது நேரம் தொடுபலகையை விட்டு விரலை எடுத்தாலும், இழுத்தல் தொடரப்படும்."
 
-#: kcm/libinput/touchpad.qml:501
+#: kcm/libinput/touchpad.qml:504
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "இருவிரல் தட்டுதல்:"
 
-#: kcm/libinput/touchpad.qml:513
+#: kcm/libinput/touchpad.qml:515
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "வலது க்ளிக் (நடு க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டு தட்டவும்)"
 
-#: kcm/libinput/touchpad.qml:514
+#: kcm/libinput/touchpad.qml:516
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -220,12 +220,12 @@ msgstr ""
 "வலது க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டும், நடு க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டும் "
 "தட்டலாம்."
 
-#: kcm/libinput/touchpad.qml:516
+#: kcm/libinput/touchpad.qml:518
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "நடு க்ளிக் (வலது க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டு தட்டவும்)"
 
-#: kcm/libinput/touchpad.qml:517
+#: kcm/libinput/touchpad.qml:519
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -233,137 +233,137 @@ msgstr ""
 "நடு க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டும், வலது க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டும் "
 "தட்டலாம்."
 
-#: kcm/libinput/touchpad.qml:519
+#: kcm/libinput/touchpad.qml:521
 #, kde-format
 msgid "Right-click"
 msgstr "வலது க்ளிக்"
 
-#: kcm/libinput/touchpad.qml:520
+#: kcm/libinput/touchpad.qml:522
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "வலது க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டு தட்டலாம்."
 
-#: kcm/libinput/touchpad.qml:522
+#: kcm/libinput/touchpad.qml:524
 #, kde-format
 msgid "Middle-click"
 msgstr "நடு க்ளிக்"
 
-#: kcm/libinput/touchpad.qml:523
+#: kcm/libinput/touchpad.qml:525
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "நடு க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டு தட்டலாம்."
 
-#: kcm/libinput/touchpad.qml:581
+#: kcm/libinput/touchpad.qml:584
 #, kde-format
 msgid "Scrolling:"
 msgstr "உருளல்:"
 
-#: kcm/libinput/touchpad.qml:611
+#: kcm/libinput/touchpad.qml:613
 #, kde-format
 msgid "Two fingers"
 msgstr "இரண்டு விரல்கள்"
 
-#: kcm/libinput/touchpad.qml:615
+#: kcm/libinput/touchpad.qml:617
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "இரண்டு விரல்களைக் கொண்டு தேய்த்தல், உருளலாகக் கருதப்படும்."
 
-#: kcm/libinput/touchpad.qml:623
+#: kcm/libinput/touchpad.qml:625
 #, kde-format
 msgid "Touchpad edges"
 msgstr "தொடுபலகையின் விளிம்புகள்"
 
-#: kcm/libinput/touchpad.qml:627
+#: kcm/libinput/touchpad.qml:629
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "தொடுபலகையின் விளிம்பைத் தேய்த்தல், உருளலாகக் கருதப்படும்."
 
-#: kcm/libinput/touchpad.qml:637
+#: kcm/libinput/touchpad.qml:639
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "உருளல் திசையைப் புரட்டு (இயற்கையான உருளல்)"
 
-#: kcm/libinput/touchpad.qml:653
+#: kcm/libinput/touchpad.qml:655
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "தொடுதிரையைப் போன்ற உருளல்."
 
-#: kcm/libinput/touchpad.qml:661 kcm/libinput/touchpad.qml:678
+#: kcm/libinput/touchpad.qml:663 kcm/libinput/touchpad.qml:680
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "கிடைமட்ட உருளலை முடக்கு"
 
-#: kcm/libinput/touchpad.qml:686
+#: kcm/libinput/touchpad.qml:688
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "உருளல் வேகம்:"
 
-#: kcm/libinput/touchpad.qml:735
+#: kcm/libinput/touchpad.qml:739
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "மெதுவாக"
 
-#: kcm/libinput/touchpad.qml:741
+#: kcm/libinput/touchpad.qml:745
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "வேகமாக"
 
-#: kcm/libinput/touchpad.qml:750
+#: kcm/libinput/touchpad.qml:755
 #, kde-format
 msgid "Right-click:"
 msgstr "வலது க்ளிக்:"
 
-#: kcm/libinput/touchpad.qml:785
+#: kcm/libinput/touchpad.qml:789
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "வலது-கீழ் மூலையை அழுத்தினால்"
 
-#: kcm/libinput/touchpad.qml:789
+#: kcm/libinput/touchpad.qml:793
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr "உங்கள் தொடுபலகையின் கீழ் பகுதியில் மென்பொருள் பட்டன்கள் சேர்க்கப்படும்."
 
-#: kcm/libinput/touchpad.qml:797
+#: kcm/libinput/touchpad.qml:801
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "எங்கேயாவது இரண்டு விரல்களை கொண்டு அழுத்தினால்"
 
-#: kcm/libinput/touchpad.qml:801
+#: kcm/libinput/touchpad.qml:805
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "வலது க்ளிக் செய்ய எங்கேயேனும் இரண்டு விரல்களை கொண்டு தட்டுங்கள்."
 
-#: kcm/libinput/touchpad.qml:814
+#: kcm/libinput/touchpad.qml:819
 #, kde-format
 msgid "Middle-click: "
 msgstr "நடு க்ளிக்: "
 
-#: kcm/libinput/touchpad.qml:844
+#: kcm/libinput/touchpad.qml:848
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "நடு-கீழ் பகுதியை அழுத்தினால்"
 
-#: kcm/libinput/touchpad.qml:848
+#: kcm/libinput/touchpad.qml:852
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
 msgstr "உங்கள் தொடுபலகையின் கீழ் பகுதியில் இதற்கான மென்பொருள் பட்டன் சேர்க்கப்படும்."
 
-#: kcm/libinput/touchpad.qml:856
+#: kcm/libinput/touchpad.qml:860
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "வலது-கீழ் மற்றும் இடது-கீழ் மூலைகளை சேர்த்து அழுத்தினால்"
 
-#: kcm/libinput/touchpad.qml:869
+#: kcm/libinput/touchpad.qml:873
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "மூன்று விரல்களை கொண்டு அழுத்தினால்"
 
-#: kcm/libinput/touchpad.qml:875
+#: kcm/libinput/touchpad.qml:879
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "மூன்று விரல்களை கொண்டு எங்கேயேனும் அழுத்தினால்."
