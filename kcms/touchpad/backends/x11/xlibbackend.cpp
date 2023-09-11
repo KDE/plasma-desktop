@@ -288,7 +288,8 @@ void XlibBackend::devicePlugged(int device)
         m_device.reset(findTouchpad());
         if (m_device) {
             qWarning() << "Touchpad reset";
-            m_notifications.reset();
+            // We get called by m_notifications, need to use deleteLater
+            m_notifications.release()->deleteLater();
             watchForEvents(m_keyboard != nullptr);
             Q_EMIT touchpadReset();
         }
