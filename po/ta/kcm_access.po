@@ -1,12 +1,12 @@
 # Copyright (C) 2021 Free Software Foundation, Inc.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 01:57+0000\n"
-"PO-Revision-Date: 2023-07-16 13:04+0530\n"
+"PO-Revision-Date: 2023-09-10 19:13+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: kcmaccess.cpp:112
 #, kde-format
@@ -260,7 +260,7 @@ msgstr "அதிகபட்ச வேகம்"
 #: kcmaccessibilitymouse.kcfg:29
 #, kde-format
 msgid "Mouse Key Curve"
-msgstr ""
+msgstr "சுட்டிவிசைகளுக்கான வேகத்திட்டம்"
 
 #. i18n: ectx: label, entry (Gestures), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:35
@@ -561,10 +561,9 @@ msgid "Maximum speed:"
 msgstr "அதிகபட்ச வேகம்:"
 
 #: ui/MouseNavigation.qml:124
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgid "Pointer acceleration:"
-msgstr "வேகவளர்ச்சி கால நீட்சி:"
+msgstr "சுட்டிக்குறியின் வேகவளர்ச்சி:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format

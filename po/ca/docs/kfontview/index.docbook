@@ -9,7 +9,7 @@
 
 <articleinfo>
 <title
->Visualitzador del tipus de lletra</title>
+>Visualitzador de fonts</title>
 <authorgroup>
 <author
 >&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
@@ -26,14 +26,14 @@
 <keyword
 >KDE</keyword>
 <keyword
->visualitzador del tipus de lletra</keyword>
+>visualitzador de fonts</keyword>
 <keyword
->tipus de lletra</keyword>
+>fonts</keyword>
 </keywordset>
 </articleinfo>
 
 <para
->El &kfontview; és una aplicació per a veure i instal·lar diferents tipus de lletra: <itemizedlist>
+>El &kfontview; és una aplicació per a veure i instal·lar fonts diferents: <itemizedlist>
 <listitem
 ><para
 >&TrueType; (<filename class="extension"
@@ -76,18 +76,18 @@
 </itemizedlist>
 </para>
 <para
->Podeu utilitzar-lo com a programa independent per a pre-visualitzar i instal·lar un tipus de lletra baixat des d'Internet. A la vista prèvia, podeu comprovar que el tipus de lletra disposa de tots els caràcters que necessiteu. </para>
+>Podeu utilitzar-lo com a programa independent per a previsualitzar i instal·lar una font baixada des d'Internet. A la vista prèvia, podeu comprovar que la font disposa de tots els caràcters que necessiteu. </para>
 <para
 >A més, el &kfontview; es pot iniciar des del mòdul de &systemsettings; anomenat <ulink url="help:/kcontrol/fontinst/index.html"
 ><guilabel
->Gestió dels tipus de lletra</guilabel
+>Gestió de les fonts</guilabel
 ></ulink
-> per a utilitzar les àmplies capacitats de la vista prèvia del &kfontview;.</para>
+> per a utilitzar les àmplies capacitats de vista prèvia del &kfontview;.</para>
 
 <para
 >De manera alternativa, podeu utilitzar el mòdul <guilabel
->Gestió dels tipus de lletra</guilabel
-> per a instal·lar, eliminar, previsualitzar i gestionar tots els tipus de lletra del vostre sistema.</para>
+>Gestió de les fonts</guilabel
+> per a instal·lar, eliminar, previsualitzar i gestionar totes les fonts del sistema.</para>
 
 <!--FIXME still valid?
 <para
@@ -124,12 +124,12 @@ by selecting it from the context menu.</para>
 <para
 >El &kfontview; mostra una <guilabel
 >Vista prèvia estàndard</guilabel
-> del vostre tipus de lletra en diverses mides diferents utilitzant un pangrama (una oració utilitzant cada lletra de l'alfabet, almenys una vegada). De manera que obteniu una bona idea de com es veurà. Des de la llista desplegable a la barra d'eines podeu triar tipus de vista prèvia addicionals: <itemizedlist>
+> de la font en diverses mides diferents utilitzant un pangrama (una oració utilitzant cada lletra de l'alfabet, almenys una vegada). De manera que obteniu una bona idea de com es veurà. Des de la llista desplegable a la barra d'eines podeu triar tipus de vista prèvia addicionals: <itemizedlist>
 <listitem
 ><para
 ><guilabel
 >Tots els caràcters</guilabel
->, mostra tots els caràcters proporcionats pel tipus de lletra en una sola mida. </para
+>, mostra tots els caràcters proporcionats per la lletra tipogràfica en una sola mida. </para
 ></listitem>
 <listitem
 ><para
@@ -145,7 +145,7 @@ by selecting it from the context menu.</para>
 >Canvia el text</guibutton
 >: Utilitzant aquest botó s'obre el diàleg <guilabel
 >Cadena de vista prèvia</guilabel
-> en el qual podeu inserir un text definit per l'usuari. Aquesta característica permet comprovar que un tipus de lletra és compatible amb els caràcters que necessiteu. </para
+> en el qual podeu inserir un text definit per l'usuari. Aquesta característica permet comprovar que una font és compatible amb els caràcters que necessiteu. </para
 ></listitem>
 </itemizedlist
 ></para>
@@ -169,19 +169,19 @@ by selecting it from the context menu.</para>
 >.</para>
 
 <para
->Per a instal·lar un tipus de lletra baixat des d'Internet, feu clic al botó <guibutton
+>Per a instal·lar una font baixada des d'Internet, feu clic al botó <guibutton
 >Instal·la</guibutton
 > a la cantonada inferior dreta. </para>
 
 <para
->Podeu instal·lar el tipus de lletra personal perquè només resti disponible per a vosaltres o per a tots els usuaris del sistema, això últim requereix privilegis d'administrador.</para>
+>Podeu instal·lar la font per a ús personal perquè només resti disponible per a vosaltres o per a tots els usuaris del sistema, això últim requereix privilegis d'administrador.</para>
 
 <para
->Els tipus de lletra sovint es proporcionen en un format d'arxiu com <literal role="extension"
+>Les fonts sovint es proporcionen en un format d'arxiu com <literal role="extension"
 >zip</literal
->. Obriu aquests arxius amb &ark;, el qual proporciona una vista prèvia senzilla per als tipus de lletra. Per a fer ús de les capacitats esteses del &kfontview;, extraieu els tipus de lletra i obriu-los al &kfontview;. </para
+>. Obriu aquests arxius amb &ark;, el qual proporciona una vista prèvia senzilla de les fonts. Per a fer ús de les capacitats esteses del &kfontview;, extraieu les fonts i obriu-les al &kfontview;. </para
 ><para
->S'hauran de tornar a iniciar les aplicacions perquè utilitzin els tipus de lletra instal·lats recentment.</para>
+>S'hauran de tornar a iniciar les aplicacions perquè utilitzin les fonts instal·lades recentment.</para>
 </article>
 
 <!--

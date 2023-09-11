@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-06 01:55+0000\n"
-"PO-Revision-Date: 2023-07-16 13:11+0530\n"
+"PO-Revision-Date: 2023-09-10 19:15+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,13 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "பயன்படுத்தக்கூடிய செருகுநிரல்கள்"
+msgstr "பிடித்தமான செருகுநிரல்கள்"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -39,27 +38,25 @@ msgid "Get New Plugins…"
 msgstr "புதிய செருகுநிரல்களை பதிவிறக்கு…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
 msgstr ""
 "செருகுநிரல்களை இயக்கு அல்லது முடக்கு (கேரன்னரில், செயலி ஏவியில், மற்றும் மேலோட்ட "
-"அசைவூட்டத்தில் பயன்படுத்துபவை)"
+"அசைவூட்டத்தில் பயன்படுத்துபவை). குறிப்பிட்ட செருகுநிரல்களை பிடித்தவையாக குறிக்கலாம், "
+"மேலும் அவை காட்டப்படும் வரிசையை அமைக்கலாம்."
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "பிடித்தவற்றிலிருந்து நீக்கு"
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "பிடித்தவற்றில் சேர்"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format

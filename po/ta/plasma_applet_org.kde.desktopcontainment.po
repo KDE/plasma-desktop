@@ -8,13 +8,13 @@
 # Vasee Vaseeharan <vasee@ieee.org>, 2004.
 # Ambalam <tamilpc@ambalam.com>, 2004.
 # root <root@localhost.localdomain>, 2004.
-# Kishore G <kishore96@gmail.com>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2023-08-20 16:28+0530\n"
+"PO-Revision-Date: 2023-09-10 19:13+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -81,10 +81,9 @@ msgid "Show hidden files:"
 msgstr "மறைந்துள்ள கோப்புகளைக் காட்டு:"
 
 #: package/contents/ui/ConfigFilter.qml:130
-#, fuzzy, kde-format
-#| msgid "File type"
+#, kde-format
 msgid "File Type"
-msgstr "கோப்பு வகை:"
+msgstr "கோப்பு வகை"
 
 #: package/contents/ui/ConfigFilter.qml:130
 #, kde-format
@@ -104,7 +103,7 @@ msgstr "அனைத்து தேர்வுகளை நிராகரி"
 #: package/contents/ui/ConfigFilter.qml:218
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "வரிசைப்படுத்தும் முறையை மாற்று"
 
 #: package/contents/ui/ConfigIcons.qml:61
 #, kde-format
