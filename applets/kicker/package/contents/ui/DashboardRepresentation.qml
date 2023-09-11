@@ -425,6 +425,9 @@ Kicker.DashboardWindow {
                         topMargin: Kirigami.Units.gridUnit
                     }
 
+                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                    Kirigami.Theme.inherit: false
+
                     property int rows: (Math.floor((parent.height - favoritesColumnLabel.height
                         - favoritesColumnLabelUnderline.height - Kirigami.Units.gridUnit) / root.cellSize)
                         - systemFavoritesGrid.rows)
@@ -483,7 +486,8 @@ Kicker.DashboardWindow {
 
                 ItemGridView {
                     id: systemFavoritesGrid
-
+                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                    Kirigami.Theme.inherit: false
                     anchors {
                         top: globalFavoritesGrid.bottom
                     }
@@ -548,6 +552,9 @@ Kicker.DashboardWindow {
 
                 width: (columns * root.cellSize) + Kirigami.Units.gridUnit
                 height: Math.floor(parent.height / root.cellSize) * root.cellSize + mainGridContainer.headerHeight
+
+                Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                    Kirigami.Theme.inherit: false
 
                 property int columns: root.columns - favoritesColumn.columns - filterListColumn.columns
                 property Item visibleGrid: mainGrid
