@@ -47,6 +47,7 @@ PlasmaComponents.ScrollView {
         id: flickable
 
         flickableDirection: Flickable.VerticalFlick
+        contentHeight: itemColumn.implicitHeight
 
         function subGridAt(index) {
             return repeater.itemAt(index).itemGrid;
