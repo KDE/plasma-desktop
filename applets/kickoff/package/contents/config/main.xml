@@ -33,6 +33,10 @@
             <label>List of applications at the top of the "Computer" tab.</label>
             <default>systemsettings.desktop,org.kde.kinfocenter.desktop,org.kde.discover.desktop</default>
         </entry>
+        <entry name="paneSwap" type="Bool">
+            <label>Whether to swap the sidebar and content panes</label>
+            <default>false</default>
+        </entry>
         <entry name="favoritesDisplay" type="Int">
             <label>How to display favorites: 0 = Grid, 1 = List</label>
             <default>0</default>

@@ -95,7 +95,9 @@ PlasmaExtras.PlasmoidHeading {
             icon.height: Kirigami.Units.iconSizes.smallMedium
             icon.name: "applications-all-symbolic"
             text: i18n("Applications")
-            KeyNavigation.backtab: kickoff.contentArea ? kickoff.contentArea : null
+            Keys.onBacktabPressed:
+                (kickoff.lastCentralPane || nextItemInFocusChain(false))
+                .forceActiveFocus(Qt.BacktabFocusReason)
         }
         PC3.TabButton {
             id: placesTab
@@ -119,37 +121,24 @@ PlasmaExtras.PlasmoidHeading {
             }
         }
 
-        Keys.onLeftPressed: {
-            let moved = false
-            if (LayoutMirroring.enabled && currentIndex === 0) {
-                incrementCurrentIndex()
-                currentItem.forceActiveFocus(Qt.TabFocusReason)
-                moved = true
-            } else if (currentIndex === 1) {
+        Keys.onPressed: {
+            const Key_Next = Qt.application.layoutDirection == Qt.RightToLeft ? Qt.Key_Left : Qt.Key_Right
+            const Key_Prev = Qt.application.layoutDirection == Qt.RightToLeft ? Qt.Key_Right : Qt.Key_Left
+            if (event.key == Key_Next) {
+                if (currentIndex == count - 1) {
+                    leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                } else {
+                    incrementCurrentIndex()
+                    currentItem.forceActiveFocus(Qt.TabFocusReason)
+                }
+                event.accepted = true
+            } else if (event.key == Key_Prev && currentIndex > 0) {
                 decrementCurrentIndex()
                 currentItem.forceActiveFocus(Qt.BacktabFocusReason)
-                moved = true
-            }
-            if (!moved && currentIndex === 1) {
-                leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                event.accepted = true
             }
         }
-        Keys.onRightPressed: {
-            let moved = false
-            if (LayoutMirroring.enabled && currentIndex === 1) {
-                decrementCurrentIndex()
-                currentItem.forceActiveFocus(Qt.BacktabFocusReason)
-                moved = true
-            } else if (currentIndex === 0) {
-                incrementCurrentIndex()
-                currentItem.forceActiveFocus(Qt.TabFocusReason)
-                moved = true
-            }
-            if (!moved && currentIndex === 1) {
-                leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
-            }
-        }
-        Keys.onUpPressed: kickoff.sideBar.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onUpPressed: kickoff.firstCentralPane.forceActiveFocus(Qt.BacktabFocusReason)
     }
 
     LeaveButtons {
@@ -161,7 +150,7 @@ PlasmaExtras.PlasmoidHeading {
             leftMargin: root.spacing
         }
         shouldCollapseButtons: root.contentWidth + root.spacing + buttonImplicitWidth > root.width
-        Keys.onUpPressed: kickoff.contentArea.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onUpPressed: kickoff.lastCentralPane.forceActiveFocus(Qt.BacktabFocusReason)
     }
 
     Behavior on height {

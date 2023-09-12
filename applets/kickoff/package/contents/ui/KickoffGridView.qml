@@ -210,13 +210,13 @@ EmptyPage {
             let targetY = currentItem ? currentItem.y : contentY
             let targetIndex = currentIndex
             // supports mirroring
-            const atLeft = currentIndex % columns === (LayoutMirroring.enabled ? columns - 1 : 0)
+            const atLeft = currentIndex % columns === (Qt.application.layoutDirection == Qt.RightToLeft ? columns - 1 : 0)
             // at the beginning of a line
             const isLeading = currentIndex % columns === 0
             // at the top of a given column and in the top row
             let atTop = currentIndex < columns
             // supports mirroring
-            const atRight = currentIndex % columns === (LayoutMirroring.enabled ? 0 : columns - 1)
+            const atRight = currentIndex % columns === (Qt.application.layoutDirection == Qt.RightToLeft ? 0 : columns - 1)
             // at the end of a line
             const isTrailing = currentIndex % columns === columns - 1
             // at bottom of a given column, not necessarily in the last row

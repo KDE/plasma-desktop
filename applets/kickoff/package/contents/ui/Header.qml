@@ -26,6 +26,7 @@ PlasmaExtras.PlasmoidHeading {
 
     property alias searchText: searchField.text
     property Item configureButton: configureButton
+    property Item pinButton: pinButton
     property Item avatar: avatar
     property real preferredNameAndIconWidth: 0
 
@@ -47,10 +48,24 @@ PlasmaExtras.PlasmoidHeading {
 
     spacing: kickoff.backgroundMetrics.spacing
 
+    function tabSetFocus(event, invertedTarget, normalTarget) {
+        // Set input focus depending on whether layout order matches focus chain order
+        // normalTarget is optional
+        const reason = event.key == Qt.Key_Tab ? Qt.TabFocusReason : Qt.BacktabFocusReason
+        if (kickoff.paneSwap) {
+            invertedTarget.forceActiveFocus(reason)
+        } else if (normalTarget !== undefined) {
+            normalTarget.forceActiveFocus(reason)
+        } else {
+            event.accepted = false
+        }
+    }
+
     RowLayout {
         id: nameAndIcon
         spacing: root.spacing
         anchors.left: parent.left
+        LayoutMirroring.enabled: kickoff.sideBarOnRight
         height: parent.height
         width: root.preferredNameAndIconWidth
 
@@ -66,11 +81,13 @@ PlasmaExtras.PlasmoidHeading {
             name: kuser.fullName
             source: kuser.faceIconUrl
 
-            Keys.onLeftPressed: if (LayoutMirroring.enabled) {
-                searchField.forceActiveFocus(Qt.TabFocusReason)
+            Keys.onTabPressed: tabSetFocus(event, kickoff.firstCentralPane)
+            Keys.onBacktabPressed: tabSetFocus(event, nextItemInFocusChain())
+            Keys.onLeftPressed: if (kickoff.sideBarOnRight) {
+                searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
             }
-            Keys.onRightPressed: if (!LayoutMirroring.enabled) {
-                searchField.forceActiveFocus(Qt.TabFocusReason)
+            Keys.onRightPressed: if (!kickoff.sideBarOnRight) {
+                searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
             }
             Keys.onDownPressed: if (kickoff.sideBar) {
                 kickoff.sideBar.forceActiveFocus(Qt.TabFocusReason)
@@ -96,7 +113,7 @@ PlasmaExtras.PlasmoidHeading {
                 level: 4
                 text: kuser.fullName
                 elide: Text.ElideRight
-                horizontalAlignment: Text.AlignLeft
+                horizontalAlignment: kickoff.paneSwap ? Text.AlignRight : Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
 
                 Behavior on opacity {
@@ -115,7 +132,7 @@ PlasmaExtras.PlasmoidHeading {
                 color: Kirigami.Theme.textColor
                 text: kuser.os !== "" ? `${kuser.loginName}@${kuser.host} (${kuser.os})` : `${kuser.loginName}@${kuser.host}`
                 elide: Text.ElideRight
-                horizontalAlignment: Text.AlignLeft
+                horizontalAlignment: kickoff.paneSwap ? Text.AlignRight : Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
 
                 Behavior on opacity {
@@ -139,6 +156,7 @@ PlasmaExtras.PlasmoidHeading {
             left: nameAndIcon.right
             right: parent.right
         }
+        LayoutMirroring.enabled: kickoff.sideBarOnRight
         Keys.onDownPressed: kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason)
 
         PlasmaExtras.SearchField {
@@ -172,19 +190,15 @@ PlasmaExtras.PlasmoidHeading {
             }
             Keys.priority: Keys.AfterItem
             Keys.forwardTo: kickoff.contentArea !== null ? kickoff.contentArea.view : []
+            Keys.onTabPressed: tabSetFocus(event, nextItemInFocusChain(false))
+            Keys.onBacktabPressed: tabSetFocus(event, nextItemInFocusChain())
             Keys.onLeftPressed: if (activeFocus) {
-                if (LayoutMirroring.enabled) {
-                    nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
-                } else {
-                    nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-                }
+                nextItemInFocusChain(kickoff.sideBarOnRight).forceActiveFocus(
+                    Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
             }
             Keys.onRightPressed: if (activeFocus) {
-                if (!LayoutMirroring.enabled) {
-                    nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
-                } else {
-                    nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-                }
+                nextItemInFocusChain(!kickoff.sideBarOnRight).forceActiveFocus(
+                    Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
             }
         }
 
@@ -199,19 +213,16 @@ PlasmaExtras.PlasmoidHeading {
             PC3.ToolTip.text: text
             PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
             PC3.ToolTip.visible: hovered
-            Keys.onLeftPressed: if (LayoutMirroring.enabled) {
-                nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
-            } else {
-                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-            }
-            Keys.onRightPressed: if (!LayoutMirroring.enabled) {
-                nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
-            } else {
-                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-            }
-            onClicked: Plasmoid.internalAction("configure").trigger()
+            Keys.onTabPressed: tabSetFocus(event, nextItemInFocusChain(false))
+            Keys.onBacktabPressed: tabSetFocus(event, nextItemInFocusChain())
+            Keys.onLeftPressed: nextItemInFocusChain(kickoff.sideBarOnRight).forceActiveFocus(
+                Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+            Keys.onRightPressed: nextItemInFocusChain(!kickoff.sideBarOnRight).forceActiveFocus(
+                Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+            onClicked: plasmoid.internalAction("configure").trigger()
         }
         PC3.ToolButton {
+            id: pinButton
             checkable: true
             checked: Plasmoid.configuration.pin
             icon.name: "window-pin"
@@ -227,17 +238,13 @@ PlasmaExtras.PlasmoidHeading {
                 // there should be no other bindings, so don't waste resources
                 restoreMode: Binding.RestoreNone
             }
-            KeyNavigation.backtab: configureButton
-            KeyNavigation.tab: if (kickoff.sideBar) {
-                return kickoff.sideBar
-            } else {
-                return nextItemInFocusChain()
+            Keys.onTabPressed: tabSetFocus(event, nextItemInFocusChain(false), kickoff.firstCentralPane || nextItemInFocusChain())
+            Keys.onBacktabPressed: tabSetFocus(event, nameAndIcon.nextItemInFocusChain(false), nextItemInFocusChain(false))
+            Keys.onLeftPressed: if (!kickoff.sideBarOnRight) {
+                nextItemInFocusChain(false).forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
             }
-            Keys.onLeftPressed: if (!LayoutMirroring.enabled) {
-                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-            }
-            Keys.onRightPressed: if (LayoutMirroring.enabled) {
-                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+            Keys.onRightPressed: if (kickoff.sideBarOnRight) {
+                nextItemInFocusChain(false).forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
             }
             onToggled: Plasmoid.configuration.pin = checked
         }

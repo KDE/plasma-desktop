@@ -59,6 +59,11 @@ EmptyPage {
      * - KeyNavigation uses BacktabFocusReason (TabFocusReason if mirrored) for left,
      * TabFocusReason (BacktabFocusReason if mirrored) for right,
      * BacktabFocusReason for up and TabFocusReason for down.
+     *
+     * - KeyNavigation does not seem to respect dynamic changes to focus chain
+     * rules in the reverse direction, which can lead to confusing results.
+     * It is therefore safer to use Keys for items whose position in the Tab
+     * order must be changed on demand. (Tested with Qt 5.15.8 on X11.)
      */
 
     header: Header {
@@ -97,8 +102,8 @@ EmptyPage {
                 }
                 activeFocusOnTab: true
                 property var interceptedPosition: null
-                // always focus the first item in the header focus chain
-                KeyNavigation.tab: root.header.nextItemInFocusChain()
+                Keys.onTabPressed: kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason)
+                Keys.onBacktabPressed: kickoff.lastHeaderItem.forceActiveFocus(Qt.BacktabFocusReason)
                 T.StackView.onActivated: {
                     kickoff.sideBar = null
                     kickoff.contentArea = searchView

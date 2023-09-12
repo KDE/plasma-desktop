@@ -25,6 +25,7 @@ ColumnLayout {
 
     property string cfg_menuLabel: menuLabel.text
     property string cfg_icon: Plasmoid.configuration.icon
+    property bool cfg_paneSwap: Plasmoid.configuration.paneSwap
     property int cfg_favoritesDisplay: Plasmoid.configuration.favoritesDisplay
     property int cfg_applicationsDisplay: Plasmoid.configuration.applicationsDisplay
     property alias cfg_alphaSort: alphaSort.checked
@@ -176,6 +177,23 @@ ColumnLayout {
         }
 
         RadioButton {
+            id: paneSwapOff
+            Kirigami.FormData.label: i18n("Sidebar position:")
+            text: Qt.application.layoutDirection == Qt.RightToLeft ? i18n("Right") : i18n("Left")
+            ButtonGroup.group: paneSwapGroup
+            property int index: 0
+            checked: !Plasmoid.configuration.paneSwap
+        }
+
+        RadioButton {
+            id: paneSwapOn
+            text: Qt.application.layoutDirection == Qt.RightToLeft ? i18n("Left") : i18n("Right")
+            ButtonGroup.group: paneSwapGroup
+            property int index: 1
+            checked: Plasmoid.configuration.paneSwap
+        }
+
+        RadioButton {
             id: showFavoritesInGrid
             Kirigami.FormData.label: i18n("Show favorites:")
             text: i18nc("Part of a sentence: 'Show favorites in a grid'", "In a grid")
@@ -244,6 +262,15 @@ ColumnLayout {
         CheckBox {
             id: showActionButtonCaptions
             text: i18n("Show action button captions")
+        }
+    }
+
+    ButtonGroup {
+        id: paneSwapGroup
+        onCheckedButtonChanged: {
+            if (checkedButton) {
+                cfg_paneSwap = checkedButton.index === 1
+            }
         }
     }
 
