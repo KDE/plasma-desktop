@@ -443,11 +443,12 @@ Item {
                 userListModel: ListModel {
                     ListElement {
                         name: ""
-                        iconSource: ""
+                        icon: ""
                     }
                     Component.onCompleted: {
                         // as we can't bind inside ListElement
                         setProperty(0, "name", i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Type in Username and Password"));
+                        setProperty(0, "icon", Qt.resolvedUrl("faces/.face.icon"))
                     }
                 }
 
