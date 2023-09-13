@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-26 02:00+0000\n"
+"POT-Creation-Date: 2023-09-13 02:06+0000\n"
 "PO-Revision-Date: 2023-04-13 09:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -170,37 +170,32 @@ msgstr "وسّع البحث إلى العلامات، والملفّات وال�
 msgid "Align search results to bottom"
 msgstr "حاذِ نتائج البحث إلى الأسفل"
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "نتائج البحث عن '%1'"
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "اكتب لتبحث…"
 
-#: package/contents/ui/DashboardRepresentation.qml:391
+#: package/contents/ui/DashboardRepresentation.qml:330
 #, kde-format
 msgid "Favorites"
 msgstr "المفضّلة"
-
-#: package/contents/ui/DashboardRepresentation.qml:607
-#: package/contents/ui/DashboardTabBar.qml:42
-#, kde-format
-msgid "Widgets"
-msgstr "الودجات"
-
-#: package/contents/ui/DashboardTabBar.qml:31
-#, kde-format
-msgid "Apps & Docs"
-msgstr "التّطبيقات والمستندات"
 
 #: package/contents/ui/main.qml:241
 #, kde-format
 msgid "Edit Applications…"
 msgstr "حرّر التّطبيقات..."
+
+#~ msgid "Widgets"
+#~ msgstr "الودجات"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "التّطبيقات والمستندات"
 
 #~ msgid "Recent contacts"
 #~ msgstr "آخر المتراسلون"

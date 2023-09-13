@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-26 02:00+0000\n"
+"POT-Creation-Date: 2023-09-13 02:06+0000\n"
 "PO-Revision-Date: 2023-07-14 16:39+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -170,37 +170,32 @@ msgstr "Rozbaliť hľadanie na záložky, súbory a e-maily"
 msgid "Align search results to bottom"
 msgstr "Zarovnať výsledky hľadania na spodok"
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "Vyhľadáva sa \"%1\""
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Písať na hľadanie...."
 
-#: package/contents/ui/DashboardRepresentation.qml:391
+#: package/contents/ui/DashboardRepresentation.qml:330
 #, kde-format
 msgid "Favorites"
 msgstr "Obľúbené"
-
-#: package/contents/ui/DashboardRepresentation.qml:607
-#: package/contents/ui/DashboardTabBar.qml:42
-#, kde-format
-msgid "Widgets"
-msgstr "Miniaplikácie"
-
-#: package/contents/ui/DashboardTabBar.qml:31
-#, kde-format
-msgid "Apps & Docs"
-msgstr "Aplikácie a dokumenty"
 
 #: package/contents/ui/main.qml:241
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Upraviť aplikácie..."
+
+#~ msgid "Widgets"
+#~ msgstr "Miniaplikácie"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "Aplikácie a dokumenty"
 
 #~ msgid "Recent contacts"
 #~ msgstr "Nedávne kontakty"

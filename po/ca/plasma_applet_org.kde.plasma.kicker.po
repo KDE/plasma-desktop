@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-26 02:00+0000\n"
+"POT-Creation-Date: 2023-09-13 02:06+0000\n"
 "PO-Revision-Date: 2023-04-11 10:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -173,37 +173,32 @@ msgstr "Amplia la cerca a les adreces d'interès, fitxers i correus electrònics
 msgid "Align search results to bottom"
 msgstr "Alinea els resultats de la cerca a la part inferior"
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "S'està cercant «%1»"
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Teclegeu per a cercar…"
 
-#: package/contents/ui/DashboardRepresentation.qml:391
+#: package/contents/ui/DashboardRepresentation.qml:330
 #, kde-format
 msgid "Favorites"
 msgstr "Preferits"
-
-#: package/contents/ui/DashboardRepresentation.qml:607
-#: package/contents/ui/DashboardTabBar.qml:42
-#, kde-format
-msgid "Widgets"
-msgstr "Ginys"
-
-#: package/contents/ui/DashboardTabBar.qml:31
-#, kde-format
-msgid "Apps & Docs"
-msgstr "Aplicacions i documents"
 
 #: package/contents/ui/main.qml:241
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Edita les aplicacions…"
+
+#~ msgid "Widgets"
+#~ msgstr "Ginys"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "Aplicacions i documents"
 
 #~ msgid "Recent contacts"
 #~ msgstr "Contactes recents"

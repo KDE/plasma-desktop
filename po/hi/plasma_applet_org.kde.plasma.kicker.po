@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-26 02:00+0000\n"
+"POT-Creation-Date: 2023-09-13 02:06+0000\n"
 "PO-Revision-Date: 2021-07-08 20:37+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -168,38 +168,33 @@ msgstr "खोज को पुस्तचिह्न, फ़ाइलों �
 msgid "Align search results to bottom"
 msgstr "खोज परिणामों को नीचे से संरेखित करें"
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "'%1' के लिए खोज रहे हैं"
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, fuzzy, kde-format
 #| msgid "Type to search…"
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "खोजने के लिए लिखें…"
 
-#: package/contents/ui/DashboardRepresentation.qml:391
+#: package/contents/ui/DashboardRepresentation.qml:330
 #, kde-format
 msgid "Favorites"
 msgstr "पसंदीदा"
-
-#: package/contents/ui/DashboardRepresentation.qml:607
-#: package/contents/ui/DashboardTabBar.qml:42
-#, kde-format
-msgid "Widgets"
-msgstr "विजेट्स"
-
-#: package/contents/ui/DashboardTabBar.qml:31
-#, kde-format
-msgid "Apps & Docs"
-msgstr "अनुप्रयोग और प्रलेखन"
 
 #: package/contents/ui/main.qml:241
 #, kde-format
 msgid "Edit Applications…"
 msgstr "अनुप्रयोगों का सम्पादन करें…"
+
+#~ msgid "Widgets"
+#~ msgstr "विजेट्स"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "अनुप्रयोग और प्रलेखन"
 
 #~ msgid "Recent contacts"
 #~ msgstr "हाल के संपर्क"

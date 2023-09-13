@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-26 02:00+0000\n"
+"POT-Creation-Date: 2023-09-13 02:06+0000\n"
 "PO-Revision-Date: 2023-04-22 00:15+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -168,37 +168,32 @@ msgstr "책갈피, 파일, 이메일에서도 찾기"
 msgid "Align search results to bottom"
 msgstr "검색 결과를 아래로 정렬"
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "'%1' 검색 중"
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "입력하여 검색…"
 
-#: package/contents/ui/DashboardRepresentation.qml:391
+#: package/contents/ui/DashboardRepresentation.qml:330
 #, kde-format
 msgid "Favorites"
 msgstr "책갈피"
-
-#: package/contents/ui/DashboardRepresentation.qml:607
-#: package/contents/ui/DashboardTabBar.qml:42
-#, kde-format
-msgid "Widgets"
-msgstr "위젯"
-
-#: package/contents/ui/DashboardTabBar.qml:31
-#, kde-format
-msgid "Apps & Docs"
-msgstr "앱과 문서"
 
 #: package/contents/ui/main.qml:241
 #, kde-format
 msgid "Edit Applications…"
 msgstr "앱 편집…"
+
+#~ msgid "Widgets"
+#~ msgstr "위젯"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "앱과 문서"
 
 #~ msgid "Recent contacts"
 #~ msgstr "최근 연락처"

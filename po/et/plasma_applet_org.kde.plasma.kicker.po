@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-26 02:00+0000\n"
+"POT-Creation-Date: 2023-09-13 02:06+0000\n"
 "PO-Revision-Date: 2020-10-08 11:46+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -171,39 +171,34 @@ msgstr "Otsingu laiendamine järjehoidjatele, failidele ja kirjadele"
 msgid "Align search results to bottom"
 msgstr "Otsingutulemuste joondamine alla"
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "\"%1\" otsimine'"
 
-#: package/contents/ui/DashboardRepresentation.qml:291
+#: package/contents/ui/DashboardRepresentation.qml:234
 #, fuzzy, kde-format
 #| msgid "Type to search..."
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Kirjuta otsimiseks ..."
 
-#: package/contents/ui/DashboardRepresentation.qml:391
+#: package/contents/ui/DashboardRepresentation.qml:330
 #, kde-format
 msgid "Favorites"
 msgstr "Lemmikud"
-
-#: package/contents/ui/DashboardRepresentation.qml:607
-#: package/contents/ui/DashboardTabBar.qml:42
-#, kde-format
-msgid "Widgets"
-msgstr "Vidinad"
-
-#: package/contents/ui/DashboardTabBar.qml:31
-#, kde-format
-msgid "Apps & Docs"
-msgstr "Rakendused ja dokumendid"
 
 #: package/contents/ui/main.qml:241
 #, fuzzy, kde-format
 #| msgid "Edit Applications..."
 msgid "Edit Applications…"
 msgstr "Muuda rakendusi..."
+
+#~ msgid "Widgets"
+#~ msgstr "Vidinad"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "Rakendused ja dokumendid"
 
 #~ msgid "Recent contacts"
 #~ msgstr "Viimati kasutatud kontaktid"
