@@ -59,17 +59,17 @@ PlasmoidItem {
                 return Math.max(headerIcon.implicitWidth, buttonLayout.implicitWidth);
             case AppletError.HorizontalPanel:
                 // [Icon] [Copy] [Open]
-                return headingLayout.implicitWidth + root.rowSpacing + buttonLayout.implicitWidth;
+                return headingLayout.implicitWidth + rowSpacing + buttonLayout.implicitWidth;
             }
         }
         Layout.minimumHeight: {
             switch (root.layoutForm) {
             case AppletError.Desktop:
-                return headingLayout.implicitHeight + root.columnSpacing + buttonLayout.implicitHeight + root.columnSpacing + fullContentView.implicitHeight;
+                return headingLayout.implicitHeight + fullRep.columnSpacing + buttonLayout.implicitHeight + fullRep.columnSpacing + fullContentView.implicitHeight;
             case AppletError.DesktopCompact:
                 return Math.max(headingLayout.implicitHeight, buttonLayout.implicitHeight);
             case AppletError.VerticalPanel:
-                return headingLayout.implicitHeight + root.columnSpacing + buttonLayout.implicitHeight;
+                return headingLayout.implicitHeight + fullRep.columnSpacing + buttonLayout.implicitHeight;
             case AppletError.HorizontalPanel:
                 return Math.max(headingLayout.implicitHeight, buttonLayout.implicitHeight);
             }
@@ -148,13 +148,13 @@ PlasmoidItem {
 
             Layout.alignment: Qt.AlignCenter
 
-            rowSpacing: parent.spacing
+            rowSpacing: fullRep.rowSpacing
             columnSpacing: parent.columnSpacing
             flow: {
                 switch (root.layoutForm) {
                 case AppletError.HorizontalPanel:
                 case AppletError.VerticalPanel:
-                    return root.flow;
+                    return fullRep.flow;
                 default:
                     return GridLayout.LeftToRight;
                 }
