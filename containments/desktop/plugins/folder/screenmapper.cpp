@@ -77,7 +77,7 @@ void ScreenMapper::removeScreen(int screenId, const QString &activity, const QUr
         const auto &name = it.key();
         if (it.value() == screenId && name.first.url().startsWith(screenPathWithScheme) && name.second == activity) {
             bool found = false;
-            for (const auto &disabledUrls : qAsConst(m_itemsOnDisabledScreensMap)) {
+            for (const auto &disabledUrls : std::as_const(m_itemsOnDisabledScreensMap)) {
                 found = disabledUrls.contains(name.first);
                 if (found)
                     break;

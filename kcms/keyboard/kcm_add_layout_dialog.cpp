@@ -27,7 +27,7 @@ AddLayoutDialog::AddLayoutDialog(const Rules *rules_, Flags *flags_, const QStri
     layoutDialogUi = new Ui_AddLayoutDialog();
     layoutDialogUi->setupUi(this);
 
-    for (const LayoutInfo *layoutInfo : qAsConst(rules->layoutInfos)) {
+    for (const LayoutInfo *layoutInfo : std::as_const(rules->layoutInfos)) {
         QIcon icon;
         if (flags) {
             icon = flags->getIcon(layoutInfo->name);

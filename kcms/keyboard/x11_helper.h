@@ -207,7 +207,7 @@ struct LayoutSet {
     {
         QString str(currentLayout.toString());
         str += QLatin1String(": ");
-        for (const auto &layoutUnit : qAsConst(layouts)) {
+        for (const auto &layoutUnit : std::as_const(layouts)) {
             str += layoutUnit.toString() + QLatin1Char(' ');
         }
         return str;

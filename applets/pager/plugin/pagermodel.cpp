@@ -96,7 +96,7 @@ PagerModel::Private::Private(PagerModel *q)
 
     QObject::connect(activityInfo, &ActivityInfo::currentActivityChanged, q, [this]() {
         if (pagerType == VirtualDesktops && windowModels.count()) {
-            for (auto windowModel : qAsConst(windowModels)) {
+            for (auto windowModel : std::as_const(windowModels)) {
                 windowModel->setActivity(activityInfo->currentActivity());
             }
         }
@@ -108,7 +108,7 @@ PagerModel::Private::Private(PagerModel *q)
     QObject::connect(KX11Extras::self(), &KX11Extras::stackingOrderChanged, q, [this]() {
         cachedStackingOrder = KX11Extras::stackingOrder();
 
-        for (auto windowModel : qAsConst(windowModels)) {
+        for (auto windowModel : std::as_const(windowModels)) {
             windowModel->refreshStackingOrder();
         }
     });
@@ -408,7 +408,7 @@ void PagerModel::refresh()
     if (d->pagerType == VirtualDesktops) {
         int virtualDesktop = 0;
 
-        for (auto windowModel : qAsConst(d->windowModels)) {
+        for (auto windowModel : std::as_const(d->windowModels)) {
             windowModel->setVirtualDesktop(d->virtualDesktopInfo->desktopIds().at(virtualDesktop));
             ++virtualDesktop;
 
@@ -418,7 +418,7 @@ void PagerModel::refresh()
         int activityIndex = 0;
         const QStringList &runningActivities = d->activityInfo->runningActivities();
 
-        for (auto windowModel : qAsConst(d->windowModels)) {
+        for (auto windowModel : std::as_const(d->windowModels)) {
             windowModel->setVirtualDesktop();
 
             windowModel->setActivity(runningActivities.at(activityIndex));
@@ -426,7 +426,7 @@ void PagerModel::refresh()
         }
     }
 
-    for (auto windowModel : qAsConst(d->windowModels)) {
+    for (auto windowModel : std::as_const(d->windowModels)) {
         if (d->showOnlyCurrentScreen && d->screenGeometry.isValid()) {
             windowModel->setScreenGeometry(d->screenGeometry);
             windowModel->setFilterByScreen(true);
@@ -542,7 +542,7 @@ void PagerModel::drop(QMimeData *mimeData, int modifiers, const QVariant &itemId
         return;
     }
 
-    for (const auto &index : qAsConst(indices)) {
+    for (const auto &index : std::as_const(indices)) {
         if (d->pagerType == VirtualDesktops) {
             if (!index.data(TaskManager::AbstractTasksModel::IsOnAllVirtualDesktops).toBool()) {
                 d->tasksModel->requestVirtualDesktops(index, {itemId});

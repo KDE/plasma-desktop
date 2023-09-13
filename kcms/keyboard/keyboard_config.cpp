@@ -114,7 +114,7 @@ void KeyboardConfig::save()
     QStringList layoutList;
     QStringList variants;
     QStringList displayNames;
-    for (const LayoutUnit &layoutUnit : qAsConst(layouts)) {
+    for (const LayoutUnit &layoutUnit : std::as_const(layouts)) {
         layoutList.append(layoutUnit.layout());
         variants.append(layoutUnit.variant());
         displayNames.append(layoutUnit.getRawDisplayName());
@@ -141,7 +141,7 @@ QList<LayoutUnit> KeyboardConfig::getDefaultLayouts() const
 {
     QList<LayoutUnit> defaultLayoutList;
     int i = 0;
-    for (const LayoutUnit &layoutUnit : qAsConst(layouts)) {
+    for (const LayoutUnit &layoutUnit : std::as_const(layouts)) {
         defaultLayoutList.append(layoutUnit);
         if (layoutLoopCount() != KeyboardConfig::NO_LOOPING && i >= layoutLoopCount() - 1) {
             break;

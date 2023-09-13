@@ -65,24 +65,24 @@ static void postProcess(Rules *rules)
     removeEmptyItems(rules->optionGroupInfos);
 
     //	bindtextdomain("xkeyboard-config", LOCALE_DIR);
-    for (ModelInfo *modelInfo : qAsConst(rules->modelInfos)) {
+    for (ModelInfo *modelInfo : std::as_const(rules->modelInfos)) {
         modelInfo->vendor = translate_xml_item(modelInfo->vendor);
         modelInfo->description = translate_description(modelInfo);
     }
 
-    for (LayoutInfo *layoutInfo : qAsConst(rules->layoutInfos)) {
+    for (LayoutInfo *layoutInfo : std::as_const(rules->layoutInfos)) {
         layoutInfo->description = translate_description(layoutInfo);
 
         removeEmptyItems(layoutInfo->variantInfos);
-        for (VariantInfo *variantInfo : qAsConst(layoutInfo->variantInfos)) {
+        for (VariantInfo *variantInfo : std::as_const(layoutInfo->variantInfos)) {
             variantInfo->description = translate_description(variantInfo);
         }
     }
-    for (OptionGroupInfo *optionGroupInfo : qAsConst(rules->optionGroupInfos)) {
+    for (OptionGroupInfo *optionGroupInfo : std::as_const(rules->optionGroupInfos)) {
         optionGroupInfo->description = translate_description(optionGroupInfo);
 
         removeEmptyItems(optionGroupInfo->optionInfos);
-        for (OptionInfo *optionInfo : qAsConst(optionGroupInfo->optionInfos)) {
+        for (OptionInfo *optionInfo : std::as_const(optionGroupInfo->optionInfos)) {
             optionInfo->description = translate_description(optionInfo);
         }
     }
@@ -138,7 +138,7 @@ static void mergeRules(Rules *rules, Rules *extraRules)
     rules->optionGroupInfos.append(extraRules->optionGroupInfos); // need to iterate and merge?
 
     QList<LayoutInfo *> layoutsToAdd;
-    for (LayoutInfo *extraLayoutInfo : qAsConst(extraRules->layoutInfos)) {
+    for (LayoutInfo *extraLayoutInfo : std::as_const(extraRules->layoutInfos)) {
         LayoutInfo *layoutInfo = findByName(rules->layoutInfos, extraLayoutInfo->name);
         if (layoutInfo != nullptr) {
             layoutInfo->variantInfos.append(extraLayoutInfo->variantInfos);
@@ -266,7 +266,7 @@ bool LayoutInfo::isLanguageSupportedByLayout(const QString &lang) const
 
 bool LayoutInfo::isLanguageSupportedByVariants(const QString &lang) const
 {
-    for (const VariantInfo *info : qAsConst(variantInfos)) {
+    for (const VariantInfo *info : std::as_const(variantInfos)) {
         if (info->languages.contains(lang))
             return true;
     }

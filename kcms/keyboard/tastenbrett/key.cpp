@@ -126,7 +126,7 @@ static QString keySymToString(KeySym keysym)
             }
         }
 
-        for (const auto &c : qAsConst(ucs4Str)) {
+        for (const auto &c : std::as_const(ucs4Str)) {
             if (!QChar::isPrint(c) && !(c == 0) && !(QChar::category(c) == QChar::Other_PrivateUse)) {
                 str = "";
                 break;

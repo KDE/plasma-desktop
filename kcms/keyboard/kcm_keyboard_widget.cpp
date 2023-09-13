@@ -198,7 +198,7 @@ void KCMKeyboardWidget::uiChanged()
 
 void KCMKeyboardWidget::initializeKeyboardModelUI()
 {
-    for (const ModelInfo *modelInfo : qAsConst(rules->modelInfos)) {
+    for (const ModelInfo *modelInfo : std::as_const(rules->modelInfos)) {
         QString vendor = modelInfo->vendor;
         if (vendor.isEmpty()) {
             vendor = i18nc("unknown keyboard model vendor", "Unknown");
@@ -490,7 +490,7 @@ void KCMKeyboardWidget::moveSelectedLayouts(int shift)
         uiChanged();
 
         QItemSelection selection;
-        for (const int row : qAsConst(selectionRows)) {
+        for (const int row : std::as_const(selectionRows)) {
             QModelIndex topLeft = layoutsTableModel->index(row, 0, QModelIndex());
             QModelIndex bottomRight = layoutsTableModel->index(row, layoutsTableModel->columnCount(topLeft) - 1, QModelIndex());
             selection << QItemSelectionRange(topLeft, bottomRight);
@@ -557,7 +557,7 @@ static bool xkbOptionLessThan(const OptionInfo *o1, const OptionInfo *o2)
 void KCMKeyboardWidget::initializeXkbOptionsUI()
 {
     std::sort(rules->optionGroupInfos.begin(), rules->optionGroupInfos.end(), xkbOptionGroupLessThan);
-    for (OptionGroupInfo *optionGroupInfo : qAsConst(rules->optionGroupInfos)) {
+    for (OptionGroupInfo *optionGroupInfo : std::as_const(rules->optionGroupInfos)) {
         std::sort(optionGroupInfo->optionInfos.begin(), optionGroupInfo->optionInfos.end(), xkbOptionLessThan);
     }
 

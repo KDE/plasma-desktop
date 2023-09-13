@@ -89,7 +89,7 @@ QList<KPackage::Package> KCMSplashScreen::availablePackages(const QString &compo
         paths << dir.entryList(QDir::AllDirs | QDir::NoDotAndDotDot);
     }
 
-    for (const QString &path : qAsConst(paths)) {
+    for (const QString &path : std::as_const(paths)) {
         KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         pkg.setPath(path);
         pkg.setFallbackPackage(KPackage::Package());

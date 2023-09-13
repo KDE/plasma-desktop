@@ -69,7 +69,7 @@ void StandardShortcutsModel::load()
 void StandardShortcutsModel::exportToConfig(const KConfigBase &config)
 {
     KConfigGroup group(&config, "StandardShortcuts");
-    for (const auto &component : qAsConst(m_components)) {
+    for (const auto &component : std::as_const(m_components)) {
         if (component.checked) {
             for (const auto &action : component.actions) {
                 const QList<QKeySequence> shortcutsList(action.activeShortcuts.cbegin(), action.activeShortcuts.cend());

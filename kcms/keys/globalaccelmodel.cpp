@@ -194,7 +194,7 @@ void GlobalAccelModel::save()
                 // or QList<QKeySequence>?
                 QList<QKeySequence> keys;
                 keys.reserve(action.activeShortcuts.size());
-                for (const QKeySequence &key : qAsConst(action.activeShortcuts)) {
+                for (const QKeySequence &key : std::as_const(action.activeShortcuts)) {
                     keys.append(key);
                 }
                 qCDebug(KCMKEYS) << "Saving" << actionId << action.activeShortcuts << keys;
@@ -219,7 +219,7 @@ void GlobalAccelModel::save()
 
 void GlobalAccelModel::exportToConfig(const KConfigBase &config)
 {
-    for (const auto &component : qAsConst(m_components)) {
+    for (const auto &component : std::as_const(m_components)) {
         if (component.checked) {
             KConfigGroup mainGroup(&config, component.id);
             KConfigGroup group(&mainGroup, "Global Shortcuts");

@@ -214,7 +214,7 @@ QVariantList Backend::systemSettingsActions(QObject *parent) const
         return actions;
     }
 
-    for (const QString &id : qAsConst(ids)) {
+    for (const QString &id : std::as_const(ids)) {
         KService::Ptr service = KService::serviceByStorageId(id);
         if (!service || !service->isValid()) {
             continue;

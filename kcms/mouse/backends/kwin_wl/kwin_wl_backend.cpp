@@ -67,7 +67,7 @@ void KWinWaylandBackend::findDevices()
         return;
     }
 
-    for (const QString &sn : qAsConst(devicesSysNames)) {
+    for (const QString &sn : std::as_const(devicesSysNames)) {
         QDBusInterface deviceIface(QStringLiteral("org.kde.KWin"),
                                    QStringLiteral("/org/kde/KWin/InputDevice/") + sn,
                                    QStringLiteral("org.kde.KWin.InputDevice"),

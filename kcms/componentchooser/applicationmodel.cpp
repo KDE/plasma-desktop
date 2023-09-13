@@ -72,7 +72,7 @@ void ApplicationModel::load(const QString &mimeType,
 int ApplicationModel::currentIndex() const
 {
     int index = 0;
-    for (const auto &application : qAsConst(m_applications)) {
+    for (const auto &application : std::as_const(m_applications)) {
         if (application["isSelected"].toBool()) {
             return index;
         }
@@ -214,7 +214,7 @@ bool ApplicationModel::setData(const QModelIndex &index, const QVariant &value, 
 QModelIndex ApplicationModel::findByStorageId(const QString &storageId) const
 {
     int i = 0;
-    for (const auto &application : qAsConst(m_applications)) {
+    for (const auto &application : std::as_const(m_applications)) {
         if (application["storageId"] == storageId) {
             return index(i, 0);
         }

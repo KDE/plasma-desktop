@@ -74,11 +74,11 @@ void BaseModel::defaults()
 
 bool BaseModel::needsSave() const
 {
-    for (const auto &component : qAsConst(m_components)) {
+    for (const auto &component : std::as_const(m_components)) {
         if (component.pendingDeletion) {
             return true;
         }
-        for (const auto &action : qAsConst(component.actions)) {
+        for (const auto &action : std::as_const(component.actions)) {
             if (action.initialShortcuts != action.activeShortcuts) {
                 return true;
             }
@@ -89,8 +89,8 @@ bool BaseModel::needsSave() const
 
 bool BaseModel::isDefault() const
 {
-    for (const auto &component : qAsConst(m_components)) {
-        for (const auto &action : qAsConst(component.actions)) {
+    for (const auto &component : std::as_const(m_components)) {
+        for (const auto &action : std::as_const(component.actions)) {
             if (action.defaultShortcuts != action.activeShortcuts) {
                 return false;
             }

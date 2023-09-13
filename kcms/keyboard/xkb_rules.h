@@ -19,7 +19,7 @@ struct ConfigItem {
 template<class T>
 inline T *findByName(QList<T *> list, QString name)
 {
-    for (T *info : qAsConst(list)) {
+    for (T *info : std::as_const(list)) {
         if (info->name == name)
             return info;
     }
