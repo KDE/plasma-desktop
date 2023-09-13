@@ -147,7 +147,9 @@ void RecentFilesKcm::whatToRememberWidgetChanged(bool)
     // clang-format on
     qCDebug(LOG_KCMS_RECENTFILES) << "whatToRememberWidgetChangeState: " << whatToRemember;
     d->kcfg_whatToRemember->setProperty("kcfg_value", whatToRemember);
-    KCModule::setNeedsSave(whatToRemember != d->pluginConfig->whatToRemember());
+    if (whatToRemember != d->pluginConfig->whatToRemember()) {
+        KCModule::markAsChanged();
+    }
 }
 
 void RecentFilesKcm::save()
