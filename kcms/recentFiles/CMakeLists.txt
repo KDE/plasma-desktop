@@ -83,10 +83,3 @@ install (
 
 install(FILES kactivitymanagerd_settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES kactivitymanagerd_plugins_settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-
-include(ECMQtDeclareLoggingCategory)
-ecm_qt_declare_logging_category(kcm_recentFiles
-    HEADER kcms-recentfiles-debug.h
-    IDENTIFIER "LOG_KCMS_RECENTFILES"
-    CATEGORY_NAME "org.kde.kcms.recentFiles"
-)
