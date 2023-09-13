@@ -174,7 +174,7 @@ T.ItemDelegate {
             // built into QQuickListView::setCurrentIndex() already
             root.view.currentIndex = index
         }
-        onPressed: {
+        onPressed: mouse => {
             // Select and focus on press to improve responsiveness and touch feedback
             view.currentIndex = index
             root.forceActiveFocus(Qt.MouseFocusReason)
@@ -194,13 +194,17 @@ T.ItemDelegate {
                 })
             }
         }
-        onClicked: if (mouse.button === Qt.LeftButton) {
-            root.action.trigger()
+        onClicked: mouse => {
+            if (mouse.button === Qt.LeftButton) {
+                root.action.trigger()
+            }
         }
         // MouseEvents for pressAndHold use Qt.MouseEventSynthesizedByQt for mouse.source,
         // which makes checking mouse.source for whether or not touch input is used useless.
-        onPressAndHold: if (mouse.button === Qt.LeftButton) {
-            root.openActionMenu(mouseX, mouseY)
+        onPressAndHold: mouse => {
+            if (mouse.button === Qt.LeftButton) {
+                root.openActionMenu(mouseX, mouseY)
+            }
         }
     }
 

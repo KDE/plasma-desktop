@@ -37,8 +37,8 @@ Item {
         active: root.actionList !== null
         model: root.actionList
         delegate: menuItemComponent
-        onObjectAdded: menu.addMenuItem(object)
-        onObjectRemoved: menu.removeMenuItem(object)
+        onObjectAdded: (index, object) => menu.addMenuItem(object)
+        onObjectRemoved: (index, object) => menu.removeMenuItem(object)
     }
 
     Component {
@@ -70,8 +70,8 @@ Item {
                 active: menuItem.subMenu !== null
                 model: modelData.subActions
                 delegate: menuItemComponent
-                onObjectAdded: subMenu.addMenuItem(object)
-                onObjectRemoved: subMenu.removeMenuItem(object)
+                onObjectAdded: (index, object) => subMenu.addMenuItem(object)
+                onObjectRemoved: (index, object) => subMenu.removeMenuItem(object)
             }
 
             onClicked: {
