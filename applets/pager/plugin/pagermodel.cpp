@@ -350,7 +350,8 @@ int PagerModel::currentPage() const
 
 int PagerModel::layoutRows() const
 {
-    return qBound(1, d->virtualDesktopInfo->desktopLayoutRows(), d->virtualDesktopInfo->numberOfDesktops());
+    const int rows = std::min(d->virtualDesktopInfo->desktopLayoutRows(), d->virtualDesktopInfo->numberOfDesktops());
+    return std::max(1, rows);
 }
 
 QSize PagerModel::pagerItemSize() const
