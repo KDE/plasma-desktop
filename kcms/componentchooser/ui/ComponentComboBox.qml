@@ -1,58 +1,59 @@
 /*
     SPDX-FileCopyrightText: 2020 Tobias Fella <fella@posteo.de>
+    SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.12 as QQC2
-
-import org.kde.kirigami 2.7 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 
 QQC2.ComboBox {
     id: comboBox
-    
+
     property string label
     property var component
-    
+
     Kirigami.FormData.label: label
     model: component.applications
     textRole: "name"
     currentIndex: component.index
+
     onActivated: component.select(currentIndex)
 
     // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
-    function loadProps(background) {
+    function loadProps() {
         if (!background || !background.hasOwnProperty("properties")) {
             //not a KQuickStyleItem
             return;
         }
 
-        var props = background.properties || {};
+        const props = background.properties || {};
 
-        background.properties = Qt.binding(function() {
-            var modelIndex = model.index(currentIndex, 0);
-            var newProps = props;
-            newProps.currentIcon = model.data(modelIndex, 0x0101 /* ApplicationModel::Roles::Icon */);
-            newProps.iconColor = Kirigami.Theme.textColor;
-            return newProps;
+        background.properties = Qt.binding(() => {
+            const modelIndex = model.index(currentIndex, 0);
+            const currentIcon = model.data(modelIndex, 0x0101 /* ApplicationModel::Roles::Icon */);
+            return Object.assign(props, {
+                currentIcon,
+                iconColor: Kirigami.Theme.textColor,
+            });
         });
     }
 
     Connections {
-        target: component
+        target: comboBox.component
         function onIndexChanged() {
-            loadProps(background);
+            comboBox.loadProps();
         }
     }
 
     delegate: QQC2.ItemDelegate {
-        width: comboBox.popup.width;
+        width: ListView.view.width
         text: model.name
-        highlighted: index == currentIndex
+        highlighted: index === comboBox.currentIndex
         icon.name: model.icon
     }
 
-    Component.onCompleted: loadProps(background)
-
+    Component.onCompleted: loadProps()
 }
