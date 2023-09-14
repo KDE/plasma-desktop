@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-10 02:12+0000\n"
+"POT-Creation-Date: 2023-09-14 01:55+0000\n"
 "PO-Revision-Date: 2022-12-23 10:31+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -128,20 +128,20 @@ msgstr ""
 msgid "Hidden files and folders"
 msgstr "Индексировать скрытые файлы и папки"
 
-#: ui/main.qml:256
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr ""
 
-#: ui/main.qml:261
+#: ui/main.qml:229
 #, fuzzy, kde-format
 #| msgid "Start indexing a folder…"
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Индексировать папку…"
 
-#: ui/main.qml:272
+#: ui/main.qml:237
 #, fuzzy, kde-format
 #| msgid "Stop indexing a folder…"
 msgctxt "@action:button"
@@ -149,27 +149,27 @@ msgid "Stop Indexing a Folder…"
 msgstr "Не индексировать папку…"
 
 # BUGME: Do not index? --ayavorsky  20200412
-#: ui/main.qml:335
+#: ui/main.qml:294
 #, kde-format
 msgid "Not indexed"
 msgstr "Не индексировать"
 
-#: ui/main.qml:336
+#: ui/main.qml:295
 #, kde-format
 msgid "Indexed"
 msgstr "Индексировать"
 
-#: ui/main.qml:366
+#: ui/main.qml:325
 #, kde-format
 msgid "Delete entry"
 msgstr "Удалить запись"
 
-#: ui/main.qml:381
+#: ui/main.qml:340
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Выбор папки для индексирования"
 
-#: ui/main.qml:381
+#: ui/main.qml:340
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Выбор папки для исключения из индексирования"
