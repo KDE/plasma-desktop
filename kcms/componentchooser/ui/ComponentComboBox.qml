@@ -12,10 +12,8 @@ import org.kde.kirigami as Kirigami
 QQC2.ComboBox {
     id: comboBox
 
-    property string label
     property var component
 
-    Kirigami.FormData.label: label
     model: component.applications
     textRole: "name"
     currentIndex: component.index
