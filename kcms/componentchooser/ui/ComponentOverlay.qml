@@ -24,7 +24,7 @@ Kirigami.OverlaySheet {
     QQC2.Overlay.modal: KcmPopupModal {}
 
     ColumnLayout {
-        enabled: componentChooser !== null
+        enabled: root.componentChooser !== null
         spacing: Kirigami.Units.smallSpacing
 
         QQC2.Label {
@@ -35,9 +35,9 @@ Kirigami.OverlaySheet {
         }
         ListView {
             id: unsupportedMimeTypesListView
-            visible: unsupportedMimeTypes.length > 0
+            visible: root.unsupportedMimeTypes.length > 0
             implicitHeight: contentHeight
-            model: unsupportedMimeTypes
+            model: root.unsupportedMimeTypes
             delegate: QQC2.Label {
                 text: modelData
                 width: ListView.view.width
@@ -49,7 +49,7 @@ Kirigami.OverlaySheet {
             text: i18nc("@action:button", "Force Open Anyway")
             onClicked: {
                 root.close();
-                componentChooser.saveAssociationUnsuportedMimeTypes();
+                root.componentChooser.saveAssociationUnsuportedMimeTypes();
             }
         }
 
@@ -61,9 +61,9 @@ Kirigami.OverlaySheet {
         }
         ListView {
             id: notAssociatedlistView
-            visible: mimeTypesNotAssociated.length > 0
+            visible: root.mimeTypesNotAssociated.length > 0
             implicitHeight: contentHeight
-            model: mimeTypesNotAssociated
+            model: root.mimeTypesNotAssociated
             delegate: QQC2.Label {
                 text: i18nc("@label %1 is a MIME type and %2 is an application name", "%1 associated with %2", modelData.second, modelData.first)
                 width: ListView.view.width
@@ -71,18 +71,18 @@ Kirigami.OverlaySheet {
             Layout.fillWidth: true
         }
         QQC2.Button {
-            visible: componentChooser ? notAssociatedlistView.visible : false
+            visible: root.componentChooser ? notAssociatedlistView.visible : false
 
-            text: i18nc("@action:button %1 is an application name", "Re-assign-all to %1", componentChooser ? componentChooser.applicationName() : "")
+            text: i18nc("@action:button %1 is an application name", "Re-assign-all to %1", root.componentChooser ? root.componentChooser.applicationName() : "")
             onClicked: {
                 root.close();
-                componentChooser.saveMimeTypesNotAssociated();
+                root.componentChooser.saveMimeTypesNotAssociated();
             }
         }
 
         QQC2.Button {
             text: i18n("Change file type association manually")
-            visible: componentChooser !== null
+            visible: root.componentChooser !== null
             onClicked: {
                 root.close();
 
