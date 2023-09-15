@@ -15,8 +15,10 @@ Kirigami.OverlaySheet {
 
     property QtObject componentChooser
 
-    property var unsupportedMimeTypes: componentChooser ? componentChooser.unsupportedMimeTypes: []
-    property var mimeTypesNotAssociated: componentChooser ? componentChooser.mimeTypesNotAssociated: []
+    // type: list<string>
+    property var unsupportedMimeTypes: componentChooser?.unsupportedMimeTypes ?? []
+    // type: list<{ first, second }>
+    property var mimeTypesNotAssociated: componentChooser?.mimeTypesNotAssociated ?? []
 
     title: i18n("Details")
 
@@ -65,15 +67,24 @@ Kirigami.OverlaySheet {
             implicitHeight: contentHeight
             model: root.mimeTypesNotAssociated
             delegate: QQC2.Label {
-                text: i18nc("@label %1 is a MIME type and %2 is an application name", "%1 associated with %2", modelData.second, modelData.first)
+                text: i18nc(
+                    "@label %1 is a MIME type and %2 is an application name",
+                    "%1 associated with %2",
+                    modelData.second,
+                    modelData.first,
+                )
                 width: ListView.view.width
             }
             Layout.fillWidth: true
         }
         QQC2.Button {
-            visible: root.componentChooser ? notAssociatedlistView.visible : false
+            visible: notAssociatedlistView.visible
 
-            text: i18nc("@action:button %1 is an application name", "Re-assign-all to %1", root.componentChooser ? root.componentChooser.applicationName() : "")
+            text: i18nc(
+                "@action:button %1 is an application name",
+                "Re-assign-all to %1",
+                root.componentChooser?.applicationName() ?? ""
+            )
             onClicked: {
                 root.close();
                 root.componentChooser.saveMimeTypesNotAssociated();
@@ -85,7 +96,6 @@ Kirigami.OverlaySheet {
             visible: root.componentChooser !== null
             onClicked: {
                 root.close();
-
                 KCM.KCMLauncher.openSystemSettings("kcm_filetypes");
             }
         }
