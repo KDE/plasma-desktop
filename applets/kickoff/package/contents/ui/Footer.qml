@@ -95,9 +95,10 @@ PlasmaExtras.PlasmoidHeading {
             icon.height: Kirigami.Units.iconSizes.smallMedium
             icon.name: "applications-all-symbolic"
             text: i18n("Applications")
-            Keys.onBacktabPressed:
+            Keys.onBacktabPressed: event => {
                 (kickoff.lastCentralPane || nextItemInFocusChain(false))
-                .forceActiveFocus(Qt.BacktabFocusReason)
+                    .forceActiveFocus(Qt.BacktabFocusReason)
+            }
         }
         PC3.TabButton {
             id: placesTab
@@ -121,24 +122,26 @@ PlasmaExtras.PlasmoidHeading {
             }
         }
 
-        Keys.onPressed: {
-            const Key_Next = Qt.application.layoutDirection == Qt.RightToLeft ? Qt.Key_Left : Qt.Key_Right
-            const Key_Prev = Qt.application.layoutDirection == Qt.RightToLeft ? Qt.Key_Right : Qt.Key_Left
-            if (event.key == Key_Next) {
-                if (currentIndex == count - 1) {
+        Keys.onPressed: event => {
+            const Key_Next = Qt.application.layoutDirection === Qt.RightToLeft ? Qt.Key_Left : Qt.Key_Right
+            const Key_Prev = Qt.application.layoutDirection === Qt.RightToLeft ? Qt.Key_Right : Qt.Key_Left
+            if (event.key === Key_Next) {
+                if (currentIndex === count - 1) {
                     leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
                 } else {
                     incrementCurrentIndex()
                     currentItem.forceActiveFocus(Qt.TabFocusReason)
                 }
                 event.accepted = true
-            } else if (event.key == Key_Prev && currentIndex > 0) {
+            } else if (event.key === Key_Prev && currentIndex > 0) {
                 decrementCurrentIndex()
                 currentItem.forceActiveFocus(Qt.BacktabFocusReason)
                 event.accepted = true
             }
         }
-        Keys.onUpPressed: kickoff.firstCentralPane.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onUpPressed: event => {
+            kickoff.firstCentralPane.forceActiveFocus(Qt.BacktabFocusReason);
+        }
     }
 
     LeaveButtons {
@@ -150,7 +153,9 @@ PlasmaExtras.PlasmoidHeading {
             leftMargin: root.spacing
         }
         shouldCollapseButtons: root.contentWidth + root.spacing + buttonImplicitWidth > root.width
-        Keys.onUpPressed: kickoff.lastCentralPane.forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onUpPressed: event => {
+            kickoff.lastCentralPane.forceActiveFocus(Qt.BacktabFocusReason);
+        }
     }
 
     Behavior on height {

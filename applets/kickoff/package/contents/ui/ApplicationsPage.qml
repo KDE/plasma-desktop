@@ -108,7 +108,7 @@ BasePage {
                 section.criteria: ViewSection.FirstCharacter
                 hasSectionView: stackView.appsModelRow === 1
 
-                onShowSectionViewRequested: {
+                onShowSectionViewRequested: sectionName => {
                     stackView.push(applicationsSectionViewComponent, {
                         "currentSection": sectionName,
                         "parentView": applicationsListView
@@ -124,7 +124,7 @@ BasePage {
                 id: sectionView
                 model: stackView.appsModel.sections
 
-                onHideSectionViewRequested: {
+                onHideSectionViewRequested: index => {
                     stackView.pop();
                     stackView.currentItem.view.positionViewAtIndex(index, ListView.Beginning);
                     stackView.currentItem.currentIndex = index;
@@ -150,10 +150,10 @@ BasePage {
                 mainContentView: true
                 gridModel: stackView.appsModel
 
-                onShowSectionViewRequested: {
+                onShowSectionViewRequested: sectionName => {
                     stackView.push(applicationsSectionViewComponent, {
-                        "currentSection": sectionName,
-                        "parentView": listOfGridsView
+                        currentSection: sectionName,
+                        parentView: listOfGridsView
                     });
                 }
             }

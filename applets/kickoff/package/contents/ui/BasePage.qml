@@ -46,18 +46,32 @@ FocusScope {
             id: sideBarLoader
             anchors.fill: parent
             // When positioned after the content area, Tab should go to the start of the footer focus chain
-            Keys.onTabPressed:
+            Keys.onTabPressed: event => {
                 (kickoff.paneSwap ? kickoff.footer.nextItemInFocusChain() : contentAreaLoader)
-                .forceActiveFocus(Qt.TabFocusReason)
-            Keys.onBacktabPressed:
+                    .forceActiveFocus(Qt.TabFocusReason);
+            }
+            Keys.onBacktabPressed: event => {
                 (kickoff.paneSwap ? contentAreaLoader : kickoff.header.pinButton)
-                .forceActiveFocus(Qt.BacktabFocusReason)
-            Keys.onLeftPressed: if (kickoff.sideBarOnRight) contentAreaLoader.forceActiveFocus()
-            Keys.onRightPressed: if (!kickoff.sideBarOnRight) contentAreaLoader.forceActiveFocus()
-            Keys.onUpPressed: kickoff.header.nextItemInFocusChain().forceActiveFocus(Qt.BacktabFocusReason)
-            Keys.onDownPressed:
+                    .forceActiveFocus(Qt.BacktabFocusReason);
+            }
+            Keys.onLeftPressed: event => {
+                if (kickoff.sideBarOnRight) {
+                    contentAreaLoader.forceActiveFocus();
+                }
+            }
+            Keys.onRightPressed: event => {
+                if (!kickoff.sideBarOnRight) {
+                    contentAreaLoader.forceActiveFocus();
+                }
+            }
+            Keys.onUpPressed: event => {
+                kickoff.header.nextItemInFocusChain()
+                    .forceActiveFocus(Qt.BacktabFocusReason);
+            }
+            Keys.onDownPressed: event => {
                 (kickoff.paneSwap ? kickoff.footer.leaveButtons.nextItemInFocusChain() : kickoff.footer.tabBar)
-                .forceActiveFocus(Qt.TabFocusReason)
+                    .forceActiveFocus(Qt.TabFocusReason);
+            }
         }
     }
     KSvg.SvgItem {
@@ -84,17 +98,30 @@ FocusScope {
         }
         LayoutMirroring.enabled: kickoff.sideBarOnRight
         // When positioned after the sidebar, Tab should go to the start of the footer focus chain
-        Keys.onTabPressed:
+        Keys.onTabPressed: event => {
             (kickoff.paneSwap ? sideBarLoader : kickoff.footer.nextItemInFocusChain())
-            .forceActiveFocus(Qt.TabFocusReason)
-        Keys.onBacktabPressed:
+                .forceActiveFocus(Qt.TabFocusReason)
+        }
+        Keys.onBacktabPressed: event => {
             (kickoff.paneSwap ? kickoff.header.avatar : sideBarLoader)
-            .forceActiveFocus(Qt.BacktabFocusReason)
-        Keys.onLeftPressed: if (!kickoff.sideBarOnRight) sideBarLoader.forceActiveFocus()
-        Keys.onRightPressed: if (kickoff.sideBarOnRight) sideBarLoader.forceActiveFocus()
-        Keys.onUpPressed: kickoff.searchField.forceActiveFocus(Qt.BacktabFocusReason)
-        Keys.onDownPressed:
+                .forceActiveFocus(Qt.BacktabFocusReason)
+        }
+        Keys.onLeftPressed: event => {
+            if (!kickoff.sideBarOnRight) {
+                sideBarLoader.forceActiveFocus();
+            }
+        }
+        Keys.onRightPressed: event => {
+            if (kickoff.sideBarOnRight) {
+                sideBarLoader.forceActiveFocus();
+            }
+        }
+        Keys.onUpPressed: event => {
+            kickoff.searchField.forceActiveFocus(Qt.BacktabFocusReason);
+        }
+        Keys.onDownPressed: event => {
             (kickoff.paneSwap ? kickoff.footer.tabBar : kickoff.footer.leaveButtons.nextItemInFocusChain())
-            .forceActiveFocus(Qt.TabFocusReason)
+                .forceActiveFocus(Qt.TabFocusReason)
+        }
     }
 }

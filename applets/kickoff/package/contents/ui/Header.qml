@@ -81,18 +81,28 @@ PlasmaExtras.PlasmoidHeading {
             name: kuser.fullName
             source: kuser.faceIconUrl
 
-            Keys.onTabPressed: tabSetFocus(event, kickoff.firstCentralPane)
-            Keys.onBacktabPressed: tabSetFocus(event, nextItemInFocusChain())
-            Keys.onLeftPressed: if (kickoff.sideBarOnRight) {
-                searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+            Keys.onTabPressed: event => {
+                tabSetFocus(event, kickoff.firstCentralPane);
             }
-            Keys.onRightPressed: if (!kickoff.sideBarOnRight) {
-                searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+            Keys.onBacktabPressed: event => {
+                tabSetFocus(event, nextItemInFocusChain());
             }
-            Keys.onDownPressed: if (kickoff.sideBar) {
-                kickoff.sideBar.forceActiveFocus(Qt.TabFocusReason)
-            } else {
-                kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason)
+            Keys.onLeftPressed: event => {
+                if (kickoff.sideBarOnRight) {
+                    searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                }
+            }
+            Keys.onRightPressed: event => {
+                if (!kickoff.sideBarOnRight) {
+                    searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                }
+            }
+            Keys.onDownPressed: event => {
+                if (kickoff.sideBar) {
+                    kickoff.sideBar.forceActiveFocus(Qt.TabFocusReason)
+                } else {
+                    kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason)
+                }
             }
 
             onClicked: KCM.KCMLauncher.openSystemSettings("kcm_users")
@@ -157,7 +167,9 @@ PlasmaExtras.PlasmoidHeading {
             right: parent.right
         }
         LayoutMirroring.enabled: kickoff.sideBarOnRight
-        Keys.onDownPressed: kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason)
+        Keys.onDownPressed: event => {
+            kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason);
+        }
 
         PlasmaExtras.SearchField {
             id: searchField
@@ -190,15 +202,23 @@ PlasmaExtras.PlasmoidHeading {
             }
             Keys.priority: Keys.AfterItem
             Keys.forwardTo: kickoff.contentArea !== null ? kickoff.contentArea.view : []
-            Keys.onTabPressed: tabSetFocus(event, nextItemInFocusChain(false))
-            Keys.onBacktabPressed: tabSetFocus(event, nextItemInFocusChain())
-            Keys.onLeftPressed: if (activeFocus) {
-                nextItemInFocusChain(kickoff.sideBarOnRight).forceActiveFocus(
-                    Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+            Keys.onTabPressed: event => {
+                tabSetFocus(event, nextItemInFocusChain(false));
             }
-            Keys.onRightPressed: if (activeFocus) {
-                nextItemInFocusChain(!kickoff.sideBarOnRight).forceActiveFocus(
-                    Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+            Keys.onBacktabPressed: event => {
+                tabSetFocus(event, nextItemInFocusChain());
+            }
+            Keys.onLeftPressed: event => {
+                if (activeFocus) {
+                    nextItemInFocusChain(kickoff.sideBarOnRight).forceActiveFocus(
+                        Qt.application.layoutDirection === Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                }
+            }
+            Keys.onRightPressed: event => {
+                if (activeFocus) {
+                    nextItemInFocusChain(!kickoff.sideBarOnRight).forceActiveFocus(
+                        Qt.application.layoutDirection === Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                }
             }
         }
 
@@ -213,12 +233,20 @@ PlasmaExtras.PlasmoidHeading {
             PC3.ToolTip.text: text
             PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
             PC3.ToolTip.visible: hovered
-            Keys.onTabPressed: tabSetFocus(event, nextItemInFocusChain(false))
-            Keys.onBacktabPressed: tabSetFocus(event, nextItemInFocusChain())
-            Keys.onLeftPressed: nextItemInFocusChain(kickoff.sideBarOnRight).forceActiveFocus(
-                Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
-            Keys.onRightPressed: nextItemInFocusChain(!kickoff.sideBarOnRight).forceActiveFocus(
-                Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+            Keys.onTabPressed: event => {
+                tabSetFocus(event, nextItemInFocusChain(false));
+            }
+            Keys.onBacktabPressed: event => {
+                tabSetFocus(event, nextItemInFocusChain());
+            }
+            Keys.onLeftPressed: event => {
+                nextItemInFocusChain(kickoff.sideBarOnRight).forceActiveFocus(
+                    Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+            }
+            Keys.onRightPressed: event => {
+                nextItemInFocusChain(!kickoff.sideBarOnRight).forceActiveFocus(
+                    Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+            }
             onClicked: plasmoid.internalAction("configure").trigger()
         }
         PC3.ToolButton {
@@ -238,13 +266,21 @@ PlasmaExtras.PlasmoidHeading {
                 // there should be no other bindings, so don't waste resources
                 restoreMode: Binding.RestoreNone
             }
-            Keys.onTabPressed: tabSetFocus(event, nextItemInFocusChain(false), kickoff.firstCentralPane || nextItemInFocusChain())
-            Keys.onBacktabPressed: tabSetFocus(event, nameAndIcon.nextItemInFocusChain(false), nextItemInFocusChain(false))
-            Keys.onLeftPressed: if (!kickoff.sideBarOnRight) {
-                nextItemInFocusChain(false).forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+            Keys.onTabPressed: event => {
+                tabSetFocus(event, nextItemInFocusChain(false), kickoff.firstCentralPane || nextItemInFocusChain());
             }
-            Keys.onRightPressed: if (kickoff.sideBarOnRight) {
-                nextItemInFocusChain(false).forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+            Keys.onBacktabPressed: event => {
+                tabSetFocus(event, nameAndIcon.nextItemInFocusChain(false), nextItemInFocusChain(false));
+            }
+            Keys.onLeftPressed: event => {
+                if (!kickoff.sideBarOnRight) {
+                    nextItemInFocusChain(false).forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                }
+            }
+            Keys.onRightPressed: event => {
+                if (kickoff.sideBarOnRight) {
+                    nextItemInFocusChain(false).forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                }
             }
             onToggled: Plasmoid.configuration.pin = checked
         }

@@ -38,6 +38,8 @@ KickoffListView {
                 sourceModel.trigger(sourceIndex.row, actionId, argument)
             }
         }
-        onShowSectionView: root.showSectionViewRequested(sectionName)
+        onShowSectionView: sectionName => {
+            root.showSectionViewRequested(sectionName)
+        }
     }
 }

@@ -102,8 +102,12 @@ EmptyPage {
                 }
                 activeFocusOnTab: true
                 property var interceptedPosition: null
-                Keys.onTabPressed: kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason)
-                Keys.onBacktabPressed: kickoff.lastHeaderItem.forceActiveFocus(Qt.BacktabFocusReason)
+                Keys.onTabPressed: event => {
+                    kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason);
+                }
+                Keys.onBacktabPressed: event => {
+                    kickoff.lastHeaderItem.forceActiveFocus(Qt.BacktabFocusReason);
+                }
                 T.StackView.onActivated: {
                     kickoff.sideBar = null
                     kickoff.contentArea = searchView

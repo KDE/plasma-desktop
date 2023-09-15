@@ -86,20 +86,26 @@ RowLayout {
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PC3.ToolTip.visible: display === PC3.AbstractButton.IconOnly && hovered
 
-                Keys.onTabPressed: if (index == buttonRepeater.count - 1 && !leaveButton.shouldBeVisible) {
-                    kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason)
-                } else {
-                    event.accepted = false
+                Keys.onTabPressed: event => {
+                    if (index === buttonRepeater.count - 1 && !leaveButton.shouldBeVisible) {
+                        kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason)
+                    } else {
+                        event.accepted = false
+                    }
                 }
-                Keys.onLeftPressed: if (Qt.application.layoutDirection == Qt.LeftToRight) {
-                    nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-                } else if (index < buttonRepeater.count - 1 || leaveButton.shouldBeVisible) {
-                    nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                Keys.onLeftPressed: event => {
+                    if (Qt.application.layoutDirection === Qt.LeftToRight) {
+                        nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+                    } else if (index < buttonRepeater.count - 1 || leaveButton.shouldBeVisible) {
+                        nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                    }
                 }
-                Keys.onRightPressed: if (Qt.application.layoutDirection == Qt.RightToLeft) {
-                    nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-                } else if (index < buttonRepeater.count - 1 || leaveButton.shouldBeVisible) {
-                    nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                Keys.onRightPressed: event => {
+                    if (Qt.application.layoutDirection === Qt.RightToLeft) {
+                        nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+                    } else if (index < buttonRepeater.count - 1 || leaveButton.shouldBeVisible) {
+                        nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                    }
                 }
             }
         }
@@ -125,12 +131,18 @@ RowLayout {
         PC3.ToolTip.text: text
         PC3.ToolTip.visible: hovered
         PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
-        Keys.onTabPressed: kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason)
-        Keys.onLeftPressed: if (Qt.application.layoutDirection == Qt.LeftToRight) {
-            nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onTabPressed: event => {
+            kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason);
         }
-        Keys.onRightPressed: if (Qt.application.layoutDirection == Qt.RightToLeft) {
-            nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+        Keys.onLeftPressed: event => {
+            if (Qt.application.layoutDirection == Qt.LeftToRight) {
+                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+            }
+        }
+        Keys.onRightPressed: event => {
+            if (Qt.application.layoutDirection == Qt.RightToLeft) {
+                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+            }
         }
         onPressed: contextMenu.openRelative()
     }

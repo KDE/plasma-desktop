@@ -164,7 +164,7 @@ EmptyPage {
             horizontalStepSize: 20 * Qt.styleHints.wheelScrollLines
             verticalStepSize: 20 * Qt.styleHints.wheelScrollLines
 
-            onWheel: {
+            onWheel: wheel => {
                 view.movedWithWheel = true
                 view.movedWithKeyboard = false
                 movedWithWheelTimer.restart()
