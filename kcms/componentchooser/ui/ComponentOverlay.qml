@@ -13,7 +13,7 @@ import org.kde.kcmutils as KCM
 Kirigami.OverlaySheet {
     id: root
 
-    property var componentChooser
+    property QtObject componentChooser
 
     property var unsupportedMimeTypes: componentChooser ? componentChooser.unsupportedMimeTypes: []
     property var mimeTypesNotAssociated: componentChooser ? componentChooser.mimeTypesNotAssociated: []
@@ -24,7 +24,7 @@ Kirigami.OverlaySheet {
     QQC2.Overlay.modal: KcmPopupModal {}
 
     ColumnLayout {
-        enabled: componentChooser != undefined
+        enabled: componentChooser !== null
 
         QQC2.Label {
             text: i18n("This application does not advertise support for the following file types:")
@@ -73,7 +73,7 @@ Kirigami.OverlaySheet {
 
         QQC2.Button {
             text: i18n("Change file type association manually")
-            visible: componentChooser ? true : false
+            visible: componentChooser !== null
             onClicked: {
                 root.close();
 
