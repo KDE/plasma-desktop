@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-26 02:00+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2014-02-19 12:41+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -390,206 +390,206 @@ msgstr ""
 msgid "On the Top"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:99
+#: package/contents/ui/ContextMenu.qml:100
 #, kde-format
 msgid "Places"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:105
+#: package/contents/ui/ContextMenu.qml:106
 #, kde-format
 msgid "Recent Files"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:112
+#: package/contents/ui/ContextMenu.qml:113
 #, kde-format
 msgid "Actions"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:176
+#: package/contents/ui/ContextMenu.qml:174
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:190
+#: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:190
+#: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:208
+#: package/contents/ui/ContextMenu.qml:206
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:219
+#: package/contents/ui/ContextMenu.qml:217
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:239
+#: package/contents/ui/ContextMenu.qml:237
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:254
+#: package/contents/ui/ContextMenu.qml:252
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:280
+#: package/contents/ui/ContextMenu.qml:277
 #, kde-format
 msgid "Mute"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:291
+#: package/contents/ui/ContextMenu.qml:288
 #, kde-format
 msgid "Open New Window"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:307
+#: package/contents/ui/ContextMenu.qml:304
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgid "Move to &Desktop"
 msgstr "Na Schriefdisch"
 
-#: package/contents/ui/ContextMenu.qml:331
+#: package/contents/ui/ContextMenu.qml:328
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgid "Move &To Current Desktop"
 msgstr "Na Schriefdisch"
 
-#: package/contents/ui/ContextMenu.qml:340
+#: package/contents/ui/ContextMenu.qml:337
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgid "&All Desktops"
 msgstr "Na Schriefdisch"
 
-#: package/contents/ui/ContextMenu.qml:354
+#: package/contents/ui/ContextMenu.qml:351
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgctxt "1 = number of desktop, 2 = desktop name"
 msgid "&%1 %2"
 msgstr "Na Schriefdisch"
 
-#: package/contents/ui/ContextMenu.qml:368
+#: package/contents/ui/ContextMenu.qml:365
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgid "&New Desktop"
 msgstr "Na Schriefdisch"
 
-#: package/contents/ui/ContextMenu.qml:388
+#: package/contents/ui/ContextMenu.qml:385
 #, fuzzy, kde-format
 #| msgid "By Activity"
 msgid "Show in &Activities"
 msgstr "Na Aktiviteet"
 
-#: package/contents/ui/ContextMenu.qml:412
+#: package/contents/ui/ContextMenu.qml:409
 #, kde-format
 msgid "Add To Current Activity"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:422
+#: package/contents/ui/ContextMenu.qml:419
 #, fuzzy, kde-format
 #| msgid "By Activity"
 msgid "All Activities"
 msgstr "Na Aktiviteet"
 
-#: package/contents/ui/ContextMenu.qml:480
+#: package/contents/ui/ContextMenu.qml:477
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgid "Move to %1"
 msgstr "Na Schriefdisch"
 
-#: package/contents/ui/ContextMenu.qml:508
-#: package/contents/ui/ContextMenu.qml:525
+#: package/contents/ui/ContextMenu.qml:505
+#: package/contents/ui/ContextMenu.qml:522
 #, kde-format
 msgid "&Pin to Task Manager"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:578
+#: package/contents/ui/ContextMenu.qml:575
 #, fuzzy, kde-format
 #| msgid "By Activity"
 msgid "On All Activities"
 msgstr "Na Aktiviteet"
 
-#: package/contents/ui/ContextMenu.qml:584
+#: package/contents/ui/ContextMenu.qml:581
 #, kde-format
 msgid "On The Current Activity"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:609
+#: package/contents/ui/ContextMenu.qml:606
 #, kde-format
 msgid "Unpin from Task Manager"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:624
+#: package/contents/ui/ContextMenu.qml:621
 #, kde-format
 msgid "More"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:633
+#: package/contents/ui/ContextMenu.qml:630
 #, kde-format
 msgid "&Move"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:642
+#: package/contents/ui/ContextMenu.qml:639
 #, kde-format
 msgid "Re&size"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:656
+#: package/contents/ui/ContextMenu.qml:653
 #, kde-format
 msgid "Ma&ximize"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:670
+#: package/contents/ui/ContextMenu.qml:667
 #, kde-format
 msgid "Mi&nimize"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:680
+#: package/contents/ui/ContextMenu.qml:677
 #, kde-format
 msgid "Keep &Above Others"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:690
+#: package/contents/ui/ContextMenu.qml:687
 #, kde-format
 msgid "Keep &Below Others"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:702
+#: package/contents/ui/ContextMenu.qml:699
 #, kde-format
 msgid "&Fullscreen"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:714
+#: package/contents/ui/ContextMenu.qml:711
 #, kde-format
 msgid "&Shade"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:730
+#: package/contents/ui/ContextMenu.qml:727
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:778
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:778
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgid "&Close"
 msgstr ""
@@ -632,63 +632,63 @@ msgstr ""
 msgid "Activate %1"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:357
+#: package/contents/ui/ToolTipInstance.qml:356
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:358
+#: package/contents/ui/ToolTipInstance.qml:357
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:381
+#: package/contents/ui/ToolTipInstance.qml:380
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:397
+#: package/contents/ui/ToolTipInstance.qml:396
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "Na Schriefdisch"
 
-#: package/contents/ui/ToolTipInstance.qml:400
+#: package/contents/ui/ToolTipInstance.qml:399
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:424
+#: package/contents/ui/ToolTipInstance.qml:423
 #, fuzzy, kde-format
 #| msgid "On %1"
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "Op %1"
 
-#: package/contents/ui/ToolTipInstance.qml:427
+#: package/contents/ui/ToolTipInstance.qml:426
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:438
+#: package/contents/ui/ToolTipInstance.qml:437
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "Binnen all Aktiviteten verföögbor"
 
-#: package/contents/ui/ToolTipInstance.qml:460
+#: package/contents/ui/ToolTipInstance.qml:459
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Ok op %1 verföögbor"
 
-#: package/contents/ui/ToolTipInstance.qml:464
+#: package/contents/ui/ToolTipInstance.qml:463
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

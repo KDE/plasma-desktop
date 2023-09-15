@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-26 02:00+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2017-04-07 00:51+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -414,206 +414,206 @@ msgstr ""
 msgid "On the Top"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:99
+#: package/contents/ui/ContextMenu.qml:100
 #, kde-format
 msgid "Places"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:105
+#: package/contents/ui/ContextMenu.qml:106
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgid "Recent Files"
 msgstr "Zaboravi nedavne dokumente"
 
-#: package/contents/ui/ContextMenu.qml:112
+#: package/contents/ui/ContextMenu.qml:113
 #, fuzzy, kde-format
 #| msgid "More Actions"
 msgid "Actions"
 msgstr "Više radnji"
 
-#: package/contents/ui/ContextMenu.qml:176
+#: package/contents/ui/ContextMenu.qml:174
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Prethodna numera"
 
-#: package/contents/ui/ContextMenu.qml:190
+#: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pauziraj"
 
-#: package/contents/ui/ContextMenu.qml:190
+#: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Pusti"
 
-#: package/contents/ui/ContextMenu.qml:208
+#: package/contents/ui/ContextMenu.qml:206
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Sledeća numera"
 
-#: package/contents/ui/ContextMenu.qml:219
+#: package/contents/ui/ContextMenu.qml:217
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Zaustavi"
 
-#: package/contents/ui/ContextMenu.qml:239
+#: package/contents/ui/ContextMenu.qml:237
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
 msgstr "Napusti"
 
-#: package/contents/ui/ContextMenu.qml:254
+#: package/contents/ui/ContextMenu.qml:252
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
 msgstr "Obnovi"
 
-#: package/contents/ui/ContextMenu.qml:280
+#: package/contents/ui/ContextMenu.qml:277
 #, kde-format
 msgid "Mute"
 msgstr "Utišaj"
 
-#: package/contents/ui/ContextMenu.qml:291
+#: package/contents/ui/ContextMenu.qml:288
 #, kde-format
 msgid "Open New Window"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:307
+#: package/contents/ui/ContextMenu.qml:304
 #, fuzzy, kde-format
 #| msgid "Move To &Desktop"
 msgid "Move to &Desktop"
 msgstr "Premesti na &površ"
 
-#: package/contents/ui/ContextMenu.qml:331
+#: package/contents/ui/ContextMenu.qml:328
 #, kde-format
 msgid "Move &To Current Desktop"
 msgstr "Premesti na &tekuću površ"
 
 # >> @item:inmenu Move To Desktop
-#: package/contents/ui/ContextMenu.qml:340
+#: package/contents/ui/ContextMenu.qml:337
 #, kde-format
 msgid "&All Desktops"
 msgstr "&sve površi"
 
 # >> @item:inmenu Move To Desktop
-#: package/contents/ui/ContextMenu.qml:354
+#: package/contents/ui/ContextMenu.qml:351
 #, kde-format
 msgctxt "1 = number of desktop, 2 = desktop name"
 msgid "&%1 %2"
 msgstr "&%1 — %2"
 
 # >> @item:inmenu Move To Desktop
-#: package/contents/ui/ContextMenu.qml:368
+#: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
 msgstr "&nova površ"
 
-#: package/contents/ui/ContextMenu.qml:388
+#: package/contents/ui/ContextMenu.qml:385
 #, fuzzy, kde-format
 #| msgid "All Activities"
 msgid "Show in &Activities"
 msgstr "Sve aktivnosti"
 
-#: package/contents/ui/ContextMenu.qml:412
+#: package/contents/ui/ContextMenu.qml:409
 #, kde-format
 msgid "Add To Current Activity"
 msgstr "Dodaj u tekuću aktivnost"
 
-#: package/contents/ui/ContextMenu.qml:422
+#: package/contents/ui/ContextMenu.qml:419
 #, kde-format
 msgid "All Activities"
 msgstr "Sve aktivnosti"
 
-#: package/contents/ui/ContextMenu.qml:480
+#: package/contents/ui/ContextMenu.qml:477
 #, fuzzy, kde-format
 #| msgid "Move To &Desktop"
 msgid "Move to %1"
 msgstr "Premesti na &površ"
 
-#: package/contents/ui/ContextMenu.qml:508
-#: package/contents/ui/ContextMenu.qml:525
+#: package/contents/ui/ContextMenu.qml:505
+#: package/contents/ui/ContextMenu.qml:522
 #, kde-format
 msgid "&Pin to Task Manager"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:578
+#: package/contents/ui/ContextMenu.qml:575
 #, kde-format
 msgid "On All Activities"
 msgstr "U svim aktivnostima"
 
-#: package/contents/ui/ContextMenu.qml:584
+#: package/contents/ui/ContextMenu.qml:581
 #, kde-format
 msgid "On The Current Activity"
 msgstr "U tekućoj aktivnosti"
 
-#: package/contents/ui/ContextMenu.qml:609
+#: package/contents/ui/ContextMenu.qml:606
 #, kde-format
 msgid "Unpin from Task Manager"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:624
+#: package/contents/ui/ContextMenu.qml:621
 #, kde-format
 msgid "More"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:633
+#: package/contents/ui/ContextMenu.qml:630
 #, kde-format
 msgid "&Move"
 msgstr "&Premesti"
 
-#: package/contents/ui/ContextMenu.qml:642
+#: package/contents/ui/ContextMenu.qml:639
 #, kde-format
 msgid "Re&size"
 msgstr "Promeni &veličinu"
 
-#: package/contents/ui/ContextMenu.qml:656
+#: package/contents/ui/ContextMenu.qml:653
 #, kde-format
 msgid "Ma&ximize"
 msgstr "Ma&ksimizuj"
 
-#: package/contents/ui/ContextMenu.qml:670
+#: package/contents/ui/ContextMenu.qml:667
 #, kde-format
 msgid "Mi&nimize"
 msgstr "Mi&nimizuj"
 
-#: package/contents/ui/ContextMenu.qml:680
+#: package/contents/ui/ContextMenu.qml:677
 #, kde-format
 msgid "Keep &Above Others"
 msgstr "Drži iz&nad ostalih"
 
-#: package/contents/ui/ContextMenu.qml:690
+#: package/contents/ui/ContextMenu.qml:687
 #, kde-format
 msgid "Keep &Below Others"
 msgstr "Drži is&pod ostalih"
 
-#: package/contents/ui/ContextMenu.qml:702
+#: package/contents/ui/ContextMenu.qml:699
 #, kde-format
 msgid "&Fullscreen"
 msgstr "Preko &celog ekrana"
 
-#: package/contents/ui/ContextMenu.qml:714
+#: package/contents/ui/ContextMenu.qml:711
 #, kde-format
 msgid "&Shade"
 msgstr "&Namotaj"
 
-#: package/contents/ui/ContextMenu.qml:730
+#: package/contents/ui/ContextMenu.qml:727
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Dozvoli grupisanje za ovaj program"
 
-#: package/contents/ui/ContextMenu.qml:778
+#: package/contents/ui/ContextMenu.qml:775
 #, fuzzy, kde-format
 #| msgid "&Close"
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "&Zatvori"
 
-#: package/contents/ui/ContextMenu.qml:778
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgid "&Close"
 msgstr "&Zatvori"
@@ -659,27 +659,27 @@ msgstr ""
 msgid "Activate %1"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:357
+#: package/contents/ui/ToolTipInstance.qml:356
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:358
+#: package/contents/ui/ToolTipInstance.qml:357
 #, fuzzy, kde-format
 #| msgid "Mute"
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "Utišaj"
 
-#: package/contents/ui/ToolTipInstance.qml:381
+#: package/contents/ui/ToolTipInstance.qml:380
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr ""
 
 # >> @item:inmenu Move To Desktop
-#: package/contents/ui/ToolTipInstance.qml:397
+#: package/contents/ui/ToolTipInstance.qml:396
 #, fuzzy, kde-format
 #| msgctxt "1 = number of desktop, 2 = desktop name"
 #| msgid "&%1 %2"
@@ -687,39 +687,39 @@ msgctxt "volume percentage"
 msgid "%1%"
 msgstr "&%1 — %2"
 
-#: package/contents/ui/ToolTipInstance.qml:400
+#: package/contents/ui/ToolTipInstance.qml:399
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr ""
 
 # >> Which activity a window is currently on. Desktop name is either generic "Desktop %1" from kwin.po, or user supplied.
-#: package/contents/ui/ToolTipInstance.qml:424
+#: package/contents/ui/ToolTipInstance.qml:423
 #, fuzzy, kde-format
 #| msgid "On %1"
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "U %1|/|U $[lok %1]"
 
-#: package/contents/ui/ToolTipInstance.qml:427
+#: package/contents/ui/ToolTipInstance.qml:426
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr ""
 
-#: package/contents/ui/ToolTipInstance.qml:438
+#: package/contents/ui/ToolTipInstance.qml:437
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "Dostupan u svim aktivnostima"
 
-#: package/contents/ui/ToolTipInstance.qml:460
+#: package/contents/ui/ToolTipInstance.qml:459
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Takođe dostupan u %1|/|Takođe dostupan u $[lok %1]"
 
-#: package/contents/ui/ToolTipInstance.qml:464
+#: package/contents/ui/ToolTipInstance.qml:463
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

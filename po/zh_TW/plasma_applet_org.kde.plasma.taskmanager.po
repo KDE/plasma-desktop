@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-26 02:00+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2023-03-19 09:04+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -380,197 +380,197 @@ msgstr "左方"
 msgid "On the Top"
 msgstr "上方"
 
-#: package/contents/ui/ContextMenu.qml:99
+#: package/contents/ui/ContextMenu.qml:100
 #, kde-format
 msgid "Places"
 msgstr "位置"
 
-#: package/contents/ui/ContextMenu.qml:105
+#: package/contents/ui/ContextMenu.qml:106
 #, kde-format
 msgid "Recent Files"
 msgstr "最近的檔案"
 
-#: package/contents/ui/ContextMenu.qml:112
+#: package/contents/ui/ContextMenu.qml:113
 #, kde-format
 msgid "Actions"
 msgstr "動作"
 
-#: package/contents/ui/ContextMenu.qml:176
+#: package/contents/ui/ContextMenu.qml:174
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "前一軌"
 
-#: package/contents/ui/ContextMenu.qml:190
+#: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "暫停"
 
-#: package/contents/ui/ContextMenu.qml:190
+#: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "播放"
 
-#: package/contents/ui/ContextMenu.qml:208
+#: package/contents/ui/ContextMenu.qml:206
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "下一軌"
 
-#: package/contents/ui/ContextMenu.qml:219
+#: package/contents/ui/ContextMenu.qml:217
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "停止"
 
-#: package/contents/ui/ContextMenu.qml:239
+#: package/contents/ui/ContextMenu.qml:237
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
 msgstr "離開"
 
-#: package/contents/ui/ContextMenu.qml:254
+#: package/contents/ui/ContextMenu.qml:252
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
 msgstr "回復"
 
-#: package/contents/ui/ContextMenu.qml:280
+#: package/contents/ui/ContextMenu.qml:277
 #, kde-format
 msgid "Mute"
 msgstr "靜音"
 
-#: package/contents/ui/ContextMenu.qml:291
+#: package/contents/ui/ContextMenu.qml:288
 #, kde-format
 msgid "Open New Window"
 msgstr "開啟新視窗"
 
-#: package/contents/ui/ContextMenu.qml:307
+#: package/contents/ui/ContextMenu.qml:304
 #, kde-format
 msgid "Move to &Desktop"
 msgstr "移動到桌面(&D)"
 
-#: package/contents/ui/ContextMenu.qml:331
+#: package/contents/ui/ContextMenu.qml:328
 #, kde-format
 msgid "Move &To Current Desktop"
 msgstr "移到目前桌面(&T)"
 
-#: package/contents/ui/ContextMenu.qml:340
+#: package/contents/ui/ContextMenu.qml:337
 #, kde-format
 msgid "&All Desktops"
 msgstr "所有的桌面(&A)"
 
-#: package/contents/ui/ContextMenu.qml:354
+#: package/contents/ui/ContextMenu.qml:351
 #, kde-format
 msgctxt "1 = number of desktop, 2 = desktop name"
 msgid "&%1 %2"
 msgstr "%1 %2(&%1)"
 
-#: package/contents/ui/ContextMenu.qml:368
+#: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
 msgstr "新增桌面(&N)"
 
-#: package/contents/ui/ContextMenu.qml:388
+#: package/contents/ui/ContextMenu.qml:385
 #, kde-format
 msgid "Show in &Activities"
 msgstr "在活動中顯示(&A)"
 
-#: package/contents/ui/ContextMenu.qml:412
+#: package/contents/ui/ContextMenu.qml:409
 #, kde-format
 msgid "Add To Current Activity"
 msgstr "新增到目前活動"
 
-#: package/contents/ui/ContextMenu.qml:422
+#: package/contents/ui/ContextMenu.qml:419
 #, kde-format
 msgid "All Activities"
 msgstr "所有的活動"
 
-#: package/contents/ui/ContextMenu.qml:480
+#: package/contents/ui/ContextMenu.qml:477
 #, kde-format
 msgid "Move to %1"
 msgstr "移動到 %1"
 
-#: package/contents/ui/ContextMenu.qml:508
-#: package/contents/ui/ContextMenu.qml:525
+#: package/contents/ui/ContextMenu.qml:505
+#: package/contents/ui/ContextMenu.qml:522
 #, kde-format
 msgid "&Pin to Task Manager"
 msgstr "釘選至工作管理員(&P)"
 
-#: package/contents/ui/ContextMenu.qml:578
+#: package/contents/ui/ContextMenu.qml:575
 #, kde-format
 msgid "On All Activities"
 msgstr "在所有活動上"
 
-#: package/contents/ui/ContextMenu.qml:584
+#: package/contents/ui/ContextMenu.qml:581
 #, kde-format
 msgid "On The Current Activity"
 msgstr "在目前的活動上"
 
-#: package/contents/ui/ContextMenu.qml:609
+#: package/contents/ui/ContextMenu.qml:606
 #, kde-format
 msgid "Unpin from Task Manager"
 msgstr "在工作管理員取消釘選"
 
-#: package/contents/ui/ContextMenu.qml:624
+#: package/contents/ui/ContextMenu.qml:621
 #, kde-format
 msgid "More"
 msgstr "更多"
 
-#: package/contents/ui/ContextMenu.qml:633
+#: package/contents/ui/ContextMenu.qml:630
 #, kde-format
 msgid "&Move"
 msgstr "移動(&M)"
 
-#: package/contents/ui/ContextMenu.qml:642
+#: package/contents/ui/ContextMenu.qml:639
 #, kde-format
 msgid "Re&size"
 msgstr "調整大小(&S)"
 
-#: package/contents/ui/ContextMenu.qml:656
+#: package/contents/ui/ContextMenu.qml:653
 #, kde-format
 msgid "Ma&ximize"
 msgstr "最大化(&X)"
 
-#: package/contents/ui/ContextMenu.qml:670
+#: package/contents/ui/ContextMenu.qml:667
 #, kde-format
 msgid "Mi&nimize"
 msgstr "最小化(&N)"
 
-#: package/contents/ui/ContextMenu.qml:680
+#: package/contents/ui/ContextMenu.qml:677
 #, kde-format
 msgid "Keep &Above Others"
 msgstr "維持在其它項目之上(&A)"
 
-#: package/contents/ui/ContextMenu.qml:690
+#: package/contents/ui/ContextMenu.qml:687
 #, kde-format
 msgid "Keep &Below Others"
 msgstr "維持在其它項目之下(&B)"
 
-#: package/contents/ui/ContextMenu.qml:702
+#: package/contents/ui/ContextMenu.qml:699
 #, kde-format
 msgid "&Fullscreen"
 msgstr "全螢幕(&F)"
 
-#: package/contents/ui/ContextMenu.qml:714
+#: package/contents/ui/ContextMenu.qml:711
 #, kde-format
 msgid "&Shade"
 msgstr "收起(&S)"
 
-#: package/contents/ui/ContextMenu.qml:730
+#: package/contents/ui/ContextMenu.qml:727
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "允許此程式被分組"
 
-#: package/contents/ui/ContextMenu.qml:778
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "全部關閉(&C)"
 
-#: package/contents/ui/ContextMenu.qml:778
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgid "&Close"
 msgstr "關閉(&C)"
@@ -611,61 +611,61 @@ msgstr "為 %1 開啟文字型視窗列表"
 msgid "Activate %1"
 msgstr "將 %1 設為作用中"
 
-#: package/contents/ui/ToolTipInstance.qml:357
+#: package/contents/ui/ToolTipInstance.qml:356
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "取消靜音 %1"
 
-#: package/contents/ui/ToolTipInstance.qml:358
+#: package/contents/ui/ToolTipInstance.qml:357
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "靜音 %1"
 
-#: package/contents/ui/ToolTipInstance.qml:381
+#: package/contents/ui/ToolTipInstance.qml:380
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "調整 %1 的音量"
 
-#: package/contents/ui/ToolTipInstance.qml:397
+#: package/contents/ui/ToolTipInstance.qml:396
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/ToolTipInstance.qml:400
+#: package/contents/ui/ToolTipInstance.qml:399
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100%"
 
-#: package/contents/ui/ToolTipInstance.qml:424
+#: package/contents/ui/ToolTipInstance.qml:423
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "於 %1"
 
-#: package/contents/ui/ToolTipInstance.qml:427
+#: package/contents/ui/ToolTipInstance.qml:426
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "釘選到所有桌面"
 
-#: package/contents/ui/ToolTipInstance.qml:438
+#: package/contents/ui/ToolTipInstance.qml:437
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "所有活動都可使用"
 
-#: package/contents/ui/ToolTipInstance.qml:460
+#: package/contents/ui/ToolTipInstance.qml:459
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "也可在 %1 上使用"
 
-#: package/contents/ui/ToolTipInstance.qml:464
+#: package/contents/ui/ToolTipInstance.qml:463
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

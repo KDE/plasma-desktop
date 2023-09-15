@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-26 02:00+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2023-03-01 00:37+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -377,197 +377,197 @@ msgstr "왼쪽에"
 msgid "On the Top"
 msgstr "위쪽에"
 
-#: package/contents/ui/ContextMenu.qml:99
+#: package/contents/ui/ContextMenu.qml:100
 #, kde-format
 msgid "Places"
 msgstr "위치"
 
-#: package/contents/ui/ContextMenu.qml:105
+#: package/contents/ui/ContextMenu.qml:106
 #, kde-format
 msgid "Recent Files"
 msgstr "최근 파일"
 
-#: package/contents/ui/ContextMenu.qml:112
+#: package/contents/ui/ContextMenu.qml:113
 #, kde-format
 msgid "Actions"
 msgstr "동작"
 
-#: package/contents/ui/ContextMenu.qml:176
+#: package/contents/ui/ContextMenu.qml:174
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "이전 트랙"
 
-#: package/contents/ui/ContextMenu.qml:190
+#: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "일시 정지"
 
-#: package/contents/ui/ContextMenu.qml:190
+#: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "재생"
 
-#: package/contents/ui/ContextMenu.qml:208
+#: package/contents/ui/ContextMenu.qml:206
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "다음 트랙"
 
-#: package/contents/ui/ContextMenu.qml:219
+#: package/contents/ui/ContextMenu.qml:217
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "정지"
 
-#: package/contents/ui/ContextMenu.qml:239
+#: package/contents/ui/ContextMenu.qml:237
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
 msgstr "끝내기"
 
-#: package/contents/ui/ContextMenu.qml:254
+#: package/contents/ui/ContextMenu.qml:252
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
 msgstr "복원"
 
-#: package/contents/ui/ContextMenu.qml:280
+#: package/contents/ui/ContextMenu.qml:277
 #, kde-format
 msgid "Mute"
 msgstr "음소거"
 
-#: package/contents/ui/ContextMenu.qml:291
+#: package/contents/ui/ContextMenu.qml:288
 #, kde-format
 msgid "Open New Window"
 msgstr "새 창 열기"
 
-#: package/contents/ui/ContextMenu.qml:307
+#: package/contents/ui/ContextMenu.qml:304
 #, kde-format
 msgid "Move to &Desktop"
 msgstr "다음 바탕 화면으로 이동(&D)"
 
-#: package/contents/ui/ContextMenu.qml:331
+#: package/contents/ui/ContextMenu.qml:328
 #, kde-format
 msgid "Move &To Current Desktop"
 msgstr "현재 바탕 화면으로 이동(&T)"
 
-#: package/contents/ui/ContextMenu.qml:340
+#: package/contents/ui/ContextMenu.qml:337
 #, kde-format
 msgid "&All Desktops"
 msgstr "모든 바탕 화면(&A)"
 
-#: package/contents/ui/ContextMenu.qml:354
+#: package/contents/ui/ContextMenu.qml:351
 #, kde-format
 msgctxt "1 = number of desktop, 2 = desktop name"
 msgid "&%1 %2"
 msgstr "%1 %2(&%1)"
 
-#: package/contents/ui/ContextMenu.qml:368
+#: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
 msgstr "새 바탕 화면(&N)"
 
-#: package/contents/ui/ContextMenu.qml:388
+#: package/contents/ui/ContextMenu.qml:385
 #, kde-format
 msgid "Show in &Activities"
 msgstr "다음 활동에 표시(&A)"
 
-#: package/contents/ui/ContextMenu.qml:412
+#: package/contents/ui/ContextMenu.qml:409
 #, kde-format
 msgid "Add To Current Activity"
 msgstr "현재 활동에 추가"
 
-#: package/contents/ui/ContextMenu.qml:422
+#: package/contents/ui/ContextMenu.qml:419
 #, kde-format
 msgid "All Activities"
 msgstr "모든 활동"
 
-#: package/contents/ui/ContextMenu.qml:480
+#: package/contents/ui/ContextMenu.qml:477
 #, kde-format
 msgid "Move to %1"
 msgstr "%1(으)로 이동"
 
-#: package/contents/ui/ContextMenu.qml:508
-#: package/contents/ui/ContextMenu.qml:525
+#: package/contents/ui/ContextMenu.qml:505
+#: package/contents/ui/ContextMenu.qml:522
 #, kde-format
 msgid "&Pin to Task Manager"
 msgstr "작업 관리자에 고정(&P)"
 
-#: package/contents/ui/ContextMenu.qml:578
+#: package/contents/ui/ContextMenu.qml:575
 #, kde-format
 msgid "On All Activities"
 msgstr "모든 활동에"
 
-#: package/contents/ui/ContextMenu.qml:584
+#: package/contents/ui/ContextMenu.qml:581
 #, kde-format
 msgid "On The Current Activity"
 msgstr "현재 활동에"
 
-#: package/contents/ui/ContextMenu.qml:609
+#: package/contents/ui/ContextMenu.qml:606
 #, kde-format
 msgid "Unpin from Task Manager"
 msgstr "작업 관리자에서 고정 해제"
 
-#: package/contents/ui/ContextMenu.qml:624
+#: package/contents/ui/ContextMenu.qml:621
 #, kde-format
 msgid "More"
 msgstr "더 보기"
 
-#: package/contents/ui/ContextMenu.qml:633
+#: package/contents/ui/ContextMenu.qml:630
 #, kde-format
 msgid "&Move"
 msgstr "이동(&M)"
 
-#: package/contents/ui/ContextMenu.qml:642
+#: package/contents/ui/ContextMenu.qml:639
 #, kde-format
 msgid "Re&size"
 msgstr "크기 조정(&S)"
 
-#: package/contents/ui/ContextMenu.qml:656
+#: package/contents/ui/ContextMenu.qml:653
 #, kde-format
 msgid "Ma&ximize"
 msgstr "최대화(&X)"
 
-#: package/contents/ui/ContextMenu.qml:670
+#: package/contents/ui/ContextMenu.qml:667
 #, kde-format
 msgid "Mi&nimize"
 msgstr "최소화(&N)"
 
-#: package/contents/ui/ContextMenu.qml:680
+#: package/contents/ui/ContextMenu.qml:677
 #, kde-format
 msgid "Keep &Above Others"
 msgstr "항상 위(&A)"
 
-#: package/contents/ui/ContextMenu.qml:690
+#: package/contents/ui/ContextMenu.qml:687
 #, kde-format
 msgid "Keep &Below Others"
 msgstr "항상 아래(&B)"
 
-#: package/contents/ui/ContextMenu.qml:702
+#: package/contents/ui/ContextMenu.qml:699
 #, kde-format
 msgid "&Fullscreen"
 msgstr "전체 화면(&F)"
 
-#: package/contents/ui/ContextMenu.qml:714
+#: package/contents/ui/ContextMenu.qml:711
 #, kde-format
 msgid "&Shade"
 msgstr "말아 올리기(&S)"
 
-#: package/contents/ui/ContextMenu.qml:730
+#: package/contents/ui/ContextMenu.qml:727
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "이 프로그램을 그룹으로 묶기"
 
-#: package/contents/ui/ContextMenu.qml:778
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "모두 닫기(&C)"
 
-#: package/contents/ui/ContextMenu.qml:778
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgid "&Close"
 msgstr "닫기(&C)"
@@ -608,61 +608,61 @@ msgstr "%1의 창 텍스트 목록 표시"
 msgid "Activate %1"
 msgstr "%1 활성화"
 
-#: package/contents/ui/ToolTipInstance.qml:357
+#: package/contents/ui/ToolTipInstance.qml:356
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "%1 음소거 해제"
 
-#: package/contents/ui/ToolTipInstance.qml:358
+#: package/contents/ui/ToolTipInstance.qml:357
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "%1 음소거"
 
-#: package/contents/ui/ToolTipInstance.qml:381
+#: package/contents/ui/ToolTipInstance.qml:380
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "%1 음량 조정"
 
-#: package/contents/ui/ToolTipInstance.qml:397
+#: package/contents/ui/ToolTipInstance.qml:396
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/ToolTipInstance.qml:400
+#: package/contents/ui/ToolTipInstance.qml:399
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100%"
 
-#: package/contents/ui/ToolTipInstance.qml:424
+#: package/contents/ui/ToolTipInstance.qml:423
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "%1에 있음"
 
-#: package/contents/ui/ToolTipInstance.qml:427
+#: package/contents/ui/ToolTipInstance.qml:426
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "모든 바탕 화면에 고정됨"
 
-#: package/contents/ui/ToolTipInstance.qml:438
+#: package/contents/ui/ToolTipInstance.qml:437
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "모든 활동에 있음"
 
-#: package/contents/ui/ToolTipInstance.qml:460
+#: package/contents/ui/ToolTipInstance.qml:459
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "활동 %1에도 있음"
 
-#: package/contents/ui/ToolTipInstance.qml:464
+#: package/contents/ui/ToolTipInstance.qml:463
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
