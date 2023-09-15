@@ -4,14 +4,14 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.12
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.12 as QQC2
-
-import org.kde.kirigami 2.7 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
+    id: root
 
     function unsupportedMimeText(kcm_component) {
         return i18n("’%1’ seems to not support the following mimetypes associated with this kind of application: %2", kcm_component.applications[kcm_component.index]["name"], kcm_component.unsupportedMimeTypes.join(", "))
@@ -22,6 +22,7 @@ KCM.SimpleKCM {
 
     ComponentOverlay {
         id: overlay
+        parent: root.QQC2.Overlay.overlay
     }
 
     Kirigami.FormLayout {
