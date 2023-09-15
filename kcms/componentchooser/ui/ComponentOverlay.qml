@@ -75,7 +75,7 @@ Kirigami.OverlaySheet {
             onClicked: {
                 root.close();
 
-                KCM.KCMLauncher.openSystemSettings("kcm_filetypes", componenChooser.storageId());
+                KCM.KCMLauncher.openSystemSettings("kcm_filetypes");
             }
         }
     }
