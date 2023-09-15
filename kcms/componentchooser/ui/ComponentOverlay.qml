@@ -25,19 +25,24 @@ Kirigami.OverlaySheet {
 
     ColumnLayout {
         enabled: componentChooser !== null
+        spacing: Kirigami.Units.smallSpacing
 
         QQC2.Label {
             text: i18n("This application does not advertise support for the following file types:")
             visible: unsupportedMimeTypesListView.visible
+            wrapMode: Text.Wrap
+            Layout.fillWidth: true
         }
         ListView {
             id: unsupportedMimeTypesListView
             visible: unsupportedMimeTypes.length > 0
-            implicitHeight: unsupportedMimeTypes.length * Kirigami.Units.gridUnit
+            implicitHeight: contentHeight
             model: unsupportedMimeTypes
-            delegate: Row {
-                QQC2.Label { text: modelData }
+            delegate: QQC2.Label {
+                text: modelData
+                width: ListView.view.width
             }
+            Layout.fillWidth: true
         }
         QQC2.Button {
             visible: unsupportedMimeTypesListView.visible
@@ -51,15 +56,19 @@ Kirigami.OverlaySheet {
         QQC2.Label {
             text: i18n("The following file types are still associated with a different application:")
             visible: notAssociatedlistView.visible
+            wrapMode: Text.Wrap
+            Layout.fillWidth: true
         }
         ListView {
             id: notAssociatedlistView
             visible: mimeTypesNotAssociated.length > 0
-            implicitHeight: mimeTypesNotAssociated.length * Kirigami.Units.gridUnit;
+            implicitHeight: contentHeight
             model: mimeTypesNotAssociated
-            delegate: Row {
-                QQC2.Label { text: i18nc("@label %1 is a MIME type and %2 is an application name", "%1 associated with %2", modelData.second, modelData.first)}
+            delegate: QQC2.Label {
+                text: i18nc("@label %1 is a MIME type and %2 is an application name", "%1 associated with %2", modelData.second, modelData.first)
+                width: ListView.view.width
             }
+            Layout.fillWidth: true
         }
         QQC2.Button {
             visible: componentChooser ? notAssociatedlistView.visible : false
