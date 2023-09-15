@@ -8,6 +8,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
+import org.kde.kitemmodels as KItemModels
 
 QQC2.ComboBox {
     id: comboBox
@@ -31,7 +32,7 @@ QQC2.ComboBox {
 
         background.properties = Qt.binding(() => {
             const modelIndex = model.index(currentIndex, 0);
-            const currentIcon = model.data(modelIndex, 0x0101 /* ApplicationModel::Roles::Icon */);
+            const currentIcon = model.data(modelIndex, model.KItemModels.KRoleNames.role("icon"));
             return Object.assign(props, {
                 currentIcon,
                 iconColor: Kirigami.Theme.textColor,
