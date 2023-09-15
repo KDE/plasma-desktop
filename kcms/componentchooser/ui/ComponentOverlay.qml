@@ -11,12 +11,12 @@ import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
 Kirigami.OverlaySheet {
+    id: root
 
-    id: root;
-    property var componenChooser;
+    property var componentChooser
 
-    property var unsupportedMimeTypes: componenChooser ? componenChooser.unsupportedMimeTypes: []
-    property var mimeTypesNotAssociated: componenChooser ? componenChooser.mimeTypesNotAssociated: []
+    property var unsupportedMimeTypes: componentChooser ? componentChooser.unsupportedMimeTypes: []
+    property var mimeTypesNotAssociated: componentChooser ? componentChooser.mimeTypesNotAssociated: []
 
     title: i18n("Details")
 
@@ -24,7 +24,7 @@ Kirigami.OverlaySheet {
     QQC2.Overlay.modal: KcmPopupModal {}
 
     ColumnLayout {
-        enabled: componenChooser != undefined
+        enabled: componentChooser != undefined
 
         QQC2.Label {
             text: i18n("This application does not advertise support for the following file types:")
@@ -44,7 +44,7 @@ Kirigami.OverlaySheet {
             text: i18nc("@action:button", "Force Open Anyway")
             onClicked: {
                 root.close();
-                componenChooser.saveAssociationUnsuportedMimeTypes();
+                componentChooser.saveAssociationUnsuportedMimeTypes();
             }
         }
 
@@ -62,18 +62,18 @@ Kirigami.OverlaySheet {
             }
         }
         QQC2.Button {
-            visible: componenChooser ? notAssociatedlistView.visible : false
+            visible: componentChooser ? notAssociatedlistView.visible : false
 
-            text: i18nc("@action:button %1 is an application name", "Re-assign-all to %1", componenChooser ? componenChooser.applicationName() : "")
+            text: i18nc("@action:button %1 is an application name", "Re-assign-all to %1", componentChooser ? componentChooser.applicationName() : "")
             onClicked: {
                 root.close();
-                componenChooser.saveMimeTypesNotAssociated();
+                componentChooser.saveMimeTypesNotAssociated();
             }
         }
 
         QQC2.Button {
             text: i18n("Change file type association manually")
-            visible: componenChooser ? true : false
+            visible: componentChooser ? true : false
             onClicked: {
                 root.close();
 

@@ -63,7 +63,7 @@ KCM.SimpleKCM {
                 visible: !kcm.browsers.isSaveNeeded && (kcm.browsers.unsupportedMimeTypes.length > 0 || kcm.browsers.mimeTypesNotAssociated.length > 0)
                 icon.name: "help-contextual"
                 onClicked: {
-                    overlay.componenChooser = kcm.browsers
+                    overlay.componentChooser = kcm.browsers
                     overlay.open()
                 }
             }
@@ -85,7 +85,7 @@ KCM.SimpleKCM {
                 visible: !kcm.emailClients.isSaveNeeded && (kcm.emailClients.unsupportedMimeTypes.length > 0 || kcm.emailClients.mimeTypesNotAssociated.length > 0)
                 icon.name: "help-contextual"
                 onClicked: {
-                    overlay.componenChooser = kcm.emailClients
+                    overlay.componentChooser = kcm.emailClients
                     overlay.open()
                 }
             }
@@ -107,7 +107,7 @@ KCM.SimpleKCM {
                 visible: !kcm.telUriHandlers.isSaveNeeded && (kcm.telUriHandlers.unsupportedMimeTypes.length > 0 || kcm.telUriHandlers.mimeTypesNotAssociated.length > 0)
                 icon.name: "help-contextual"
                 onClicked: {
-                    overlay.componenChooser = kcm.telUriHandlers
+                    overlay.componentChooser = kcm.telUriHandlers
                     overlay.open()
                 }
             }
@@ -134,7 +134,7 @@ KCM.SimpleKCM {
                 visible: !kcm.imageViewers.isSaveNeeded && (kcm.imageViewers.unsupportedMimeTypes.length > 0 || kcm.imageViewers.mimeTypesNotAssociated.length > 0)
                 icon.name: "help-contextual"
                 onClicked: {
-                    overlay.componenChooser = kcm.imageViewers
+                    overlay.componentChooser = kcm.imageViewers
                     overlay.open()
                 }
             }
@@ -158,7 +158,7 @@ KCM.SimpleKCM {
                 visible: !kcm.musicPlayers.isSaveNeeded && (kcm.musicPlayers.unsupportedMimeTypes.length > 0 || kcm.musicPlayers.mimeTypesNotAssociated.length > 0)
                 icon.name: "help-contextual"
                 onClicked: {
-                    overlay.componenChooser = kcm.musicPlayers
+                    overlay.componentChooser = kcm.musicPlayers
                     overlay.open()
                 }
             }
@@ -181,7 +181,7 @@ KCM.SimpleKCM {
                 visible: !kcm.videoPlayers.isSaveNeeded && (kcm.videoPlayers.unsupportedMimeTypes.length > 0 || kcm.videoPlayers.mimeTypesNotAssociated.length > 0)
                 icon.name: "help-contextual"
                 onClicked: {
-                    overlay.componenChooser = kcm.videoPlayers
+                    overlay.componentChooser = kcm.videoPlayers
                     overlay.open()
                 }
             }
@@ -208,7 +208,7 @@ KCM.SimpleKCM {
                 visible: !kcm.textEditors.isSaveNeeded && (kcm.textEditors.unsupportedMimeTypes.length > 0 || kcm.textEditors.mimeTypesNotAssociated.length > 0)
                 icon.name: "help-contextual"
                 onClicked: {
-                    overlay.componenChooser = kcm.textEditors
+                    overlay.componentChooser = kcm.textEditors
                     overlay.open()
                 }
             }
@@ -230,7 +230,7 @@ KCM.SimpleKCM {
                 visible: !kcm.pdfViewers.isSaveNeeded && (kcm.pdfViewers.unsupportedMimeTypes.length > 0 || kcm.pdfViewers.mimeTypesNotAssociated.length > 0)
                 icon.name: "help-contextual"
                 onClicked: {
-                    overlay.componenChooser = kcm.pdfViewers
+                    overlay.componentChooser = kcm.pdfViewers
                     overlay.open()
                 }
             }
@@ -257,7 +257,7 @@ KCM.SimpleKCM {
                 visible: !kcm.fileManagers.isSaveNeeded && (kcm.fileManagers.unsupportedMimeTypes.length > 0 || kcm.fileManagers.mimeTypesNotAssociated.length > 0)
                 icon.name: "help-contextual"
                 onClicked: {
-                    overlay.componenChooser = kcm.fileManagers
+                    overlay.componentChooser = kcm.fileManagers
                     overlay.open()
                 }
             }
@@ -292,7 +292,7 @@ KCM.SimpleKCM {
                 visible: !kcm.archiveManagers.isSaveNeeded && (kcm.archiveManagers.unsupportedMimeTypes.length > 0 || kcm.archiveManagers.mimeTypesNotAssociated.length > 0)
                 icon.name: "help-contextual"
                 onClicked: {
-                    overlay.componenChooser = kcm.archiveManagers
+                    overlay.componentChooser = kcm.archiveManagers
                     overlay.open()
                 }
             }
@@ -314,7 +314,7 @@ KCM.SimpleKCM {
                 visible: !kcm.geoUriHandlers.isSaveNeeded && (kcm.geoUriHandlers.unsupportedMimeTypes.length > 0 || kcm.geoUriHandlers.mimeTypesNotAssociated.length > 0)
                 icon.name: "help-contextual"
                 onClicked: {
-                    overlay.componenChooser = kcm.geoUriHandlers
+                    overlay.componentChooser = kcm.geoUriHandlers
                     overlay.open()
                 }
             }
