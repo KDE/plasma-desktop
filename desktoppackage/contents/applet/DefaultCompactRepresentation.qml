@@ -55,7 +55,7 @@ Kirigami.Icon {
     }
 
     Accessible.name: Plasmoid.title
-    Accessible.description: Plasmoid.toolTipSubText
+    Accessible.description: plasmoidItem.toolTipSubText ?? ""
     Accessible.role: Accessible.Button
 
     MouseArea {
