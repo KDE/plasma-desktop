@@ -43,14 +43,14 @@ Kirigami.Icon {
 
     activeFocusOnTab: true
 
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         switch (event.key) {
-            case Qt.Key_Space:
-            case Qt.Key_Enter:
-            case Qt.Key_Return:
-            case Qt.Key_Select:
-                Plasmoid.activated();
-                break;
+        case Qt.Key_Space:
+        case Qt.Key_Enter:
+        case Qt.Key_Return:
+        case Qt.Key_Select:
+            Plasmoid.activated();
+            break;
         }
     }
 
