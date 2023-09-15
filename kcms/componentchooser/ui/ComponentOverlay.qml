@@ -31,12 +31,11 @@ Kirigami.OverlaySheet {
 
         QQC2.Label {
             text: i18n("This application does not advertise support for the following file types:")
-            visible: unsupportedMimeTypesListView.visible
+            visible: root.unsupportedMimeTypes.length > 0
             wrapMode: Text.Wrap
             Layout.fillWidth: true
         }
         ListView {
-            id: unsupportedMimeTypesListView
             visible: root.unsupportedMimeTypes.length > 0
             implicitHeight: contentHeight
             model: root.unsupportedMimeTypes
@@ -47,7 +46,7 @@ Kirigami.OverlaySheet {
             Layout.fillWidth: true
         }
         QQC2.Button {
-            visible: unsupportedMimeTypesListView.visible
+            visible: root.unsupportedMimeTypes.length > 0
             text: i18nc("@action:button", "Force Open Anyway")
             onClicked: {
                 root.close();
@@ -57,12 +56,11 @@ Kirigami.OverlaySheet {
 
         QQC2.Label {
             text: i18n("The following file types are still associated with a different application:")
-            visible: notAssociatedlistView.visible
+            visible: root.mimeTypesNotAssociated.length > 0
             wrapMode: Text.Wrap
             Layout.fillWidth: true
         }
         ListView {
-            id: notAssociatedlistView
             visible: root.mimeTypesNotAssociated.length > 0
             implicitHeight: contentHeight
             model: root.mimeTypesNotAssociated
@@ -78,7 +76,7 @@ Kirigami.OverlaySheet {
             Layout.fillWidth: true
         }
         QQC2.Button {
-            visible: notAssociatedlistView.visible
+            visible: root.mimeTypesNotAssociated.length > 0
 
             text: i18nc(
                 "@action:button %1 is an application name",
