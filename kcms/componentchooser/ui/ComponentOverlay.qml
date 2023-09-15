@@ -59,6 +59,25 @@ Kirigami.OverlaySheet {
         spacing: Kirigami.Units.smallSpacing
         Layout.preferredWidth: Kirigami.Units.gridUnit * 25
 
+        RowLayout {
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.largeSpacing
+
+            Kirigami.Icon {
+                Layout.preferredWidth: Kirigami.Units.iconSizes.large
+                Layout.preferredHeight: Kirigami.Units.iconSizes.large
+                source: root.componentChooser?.applicationIcon()
+            }
+
+            Kirigami.Heading {
+                text: root.componentChooser?.applicationName() ?? ""
+                level: 1
+                wrapMode: Text.Wrap
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignVCenter
+            }
+        }
+
         Kirigami.Heading {
             text: i18n("This application does not advertise support for the following file types:")
             visible: root.unsupportedMimeTypes.length > 0
