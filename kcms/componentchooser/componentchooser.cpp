@@ -218,6 +218,11 @@ QString ComponentChooser::applicationName() const
     return m_model->data(m_index, Qt::DisplayRole).toString();
 }
 
+QString ComponentChooser::applicationIcon() const
+{
+    return m_model->data(m_index, ApplicationModel::Icon).toString();
+}
+
 QStringList ComponentChooser::mimeTypes() const
 {
     return QStringList{};

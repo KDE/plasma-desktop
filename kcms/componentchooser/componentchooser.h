@@ -57,6 +57,7 @@ public:
 
     Q_INVOKABLE QString currentStorageId() const;
     Q_INVOKABLE QString applicationName() const;
+    Q_INVOKABLE QString applicationIcon() const;
 
     /// return the mimeTypes not supported by the currently selected application
     QStringList unsupportedMimeTypes() const;

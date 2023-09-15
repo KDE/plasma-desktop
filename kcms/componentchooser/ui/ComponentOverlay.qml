@@ -113,6 +113,7 @@ Kirigami.OverlaySheet {
         }
         QQC2.Button {
             visible: root.mimeTypesNotAssociated.length > 0
+            icon.name: root.componentChooser?.applicationIcon() ?? ""
             text: i18nc(
                 "@action:button %1 is an application name",
                 "Re-assign-all to %1",
