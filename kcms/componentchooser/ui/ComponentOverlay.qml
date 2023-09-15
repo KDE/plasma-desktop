@@ -45,6 +45,10 @@ Kirigami.OverlaySheet {
         focus = true;
     }
 
+    onClosed: {
+        componentChooser = null;
+    }
+
     title: i18n("Details")
 
     modal: true
