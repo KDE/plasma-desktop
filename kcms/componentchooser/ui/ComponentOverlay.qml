@@ -20,6 +20,31 @@ Kirigami.OverlaySheet {
     // type: list<{ first, second }>
     property var mimeTypesNotAssociated: componentChooser?.mimeTypesNotAssociated ?? []
 
+    function sanitize(input: string): string {
+        // Based on QQuickStyledTextPrivate::parseEntity
+        const table = {
+            '>': '&gt;',
+            '<': '&lt;',
+            '&': '&amp;',
+            "'": '&apos;',
+            '"': '&quot;',
+            '\u00a0': '&nbsp;',
+        };
+        return input.replace(/[<>&'"\u00a0]/g, c => table[c]);
+    }
+
+    function formatListItem(item: string): string {
+        return "<li>" + sanitize(item) + "</li>";
+    }
+
+    function formatHtmlUnorderedStringList(list: list<string>): string {
+        return "<ul>" + list.map(formatListItem).join("\n") + "</ul>";
+    }
+
+    onOpened: {
+        focus = true;
+    }
+
     title: i18n("Details")
 
     modal: true
@@ -37,14 +62,9 @@ Kirigami.OverlaySheet {
             Layout.fillWidth: true
             Layout.bottomMargin: Kirigami.Units.largeSpacing
         }
-        ListView {
+        Kirigami.SelectableLabel {
             visible: root.unsupportedMimeTypes.length > 0
-            implicitHeight: contentHeight
-            model: root.unsupportedMimeTypes
-            delegate: QQC2.Label {
-                text: modelData
-                width: ListView.view.width
-            }
+            text: root.formatHtmlUnorderedStringList(root.unsupportedMimeTypes)
             Layout.fillWidth: true
         }
         QQC2.Button {
@@ -73,19 +93,18 @@ Kirigami.OverlaySheet {
             Layout.fillWidth: true
             Layout.bottomMargin: Kirigami.Units.largeSpacing
         }
-        ListView {
+        Kirigami.SelectableLabel {
             visible: root.mimeTypesNotAssociated.length > 0
-            implicitHeight: contentHeight
-            model: root.mimeTypesNotAssociated
-            delegate: QQC2.Label {
-                text: i18nc(
-                    "@label %1 is a MIME type and %2 is an application name",
-                    "%1 associated with %2",
-                    modelData.second,
-                    modelData.first,
+            text: root.formatHtmlUnorderedStringList(
+                root.mimeTypesNotAssociated.map(
+                    ({first, second}) => i18nc(
+                        "@label %1 is a MIME type and %2 is an application name",
+                        "%1 associated with %2",
+                        second,
+                        first,
+                    )
                 )
-                width: ListView.view.width
-            }
+            )
             Layout.fillWidth: true
         }
         QQC2.Button {
