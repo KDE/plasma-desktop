@@ -57,6 +57,7 @@ Kirigami.OverlaySheet {
     ColumnLayout {
         enabled: root.componentChooser !== null
         spacing: Kirigami.Units.smallSpacing
+        Layout.preferredWidth: Kirigami.Units.gridUnit * 25
 
         Kirigami.Heading {
             text: i18n("This application does not advertise support for the following file types:")
