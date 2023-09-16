@@ -494,10 +494,12 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
 #warning is this the best way to invert a pixmap?
 #endif
             //    QPixmap invert(window.size.width, window.size.height);
-            QImage i = screen.toImage();
-            i.invertPixels();
             QPalette pal = overlay->palette();
-            pal.setBrush(overlay->backgroundRole(), QBrush(QPixmap::fromImage(i)));
+            {
+                QImage i = screen.toImage();
+                i.invertPixels();
+                pal.setBrush(overlay->backgroundRole(), QBrush(QPixmap::fromImage(std::move(i))));
+            }
             overlay->setPalette(pal);
             /*
                   QPainter p(&invert);
