@@ -23,4 +23,4 @@ ecm_qt_install_logging_categories(
 )
 
 kcmutils_add_qml_kcm(kcm_kded SOURCES ${kcm_kded_SRCS})
-target_link_libraries(kcm_kded KF6::KCMUtilsQuick KF6::I18n Qt::DBus)
+target_link_libraries(kcm_kded PRIVATE KF6::KCMUtilsQuick KF6::I18n Qt::DBus)

@@ -15,7 +15,7 @@ kcmutils_generate_module_data(kcm_desktoppaths
     SETTINGS_CLASSES DesktopPathsSettings
 )
 
-target_link_libraries(kcm_desktoppaths
+target_link_libraries(kcm_desktoppaths PRIVATE
     KF6::ConfigCore
     KF6::KCMUtilsQuick
     KF6::I18n

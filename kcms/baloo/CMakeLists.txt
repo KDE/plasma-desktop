@@ -9,7 +9,7 @@ target_sources(kcm_baloofile PRIVATE
     baloodata.cpp
 )
 
-target_link_libraries(kcm_baloofile
+target_link_libraries(kcm_baloofile PRIVATE
     KF6::CoreAddons
     KF6::KCMUtils
     KF6::I18n

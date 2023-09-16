@@ -27,7 +27,7 @@ target_sources(kcm_tablet PRIVATE
     tabletevents.cpp
 )
 
-target_link_libraries(kcm_tablet
+target_link_libraries(kcm_tablet PRIVATE
     Qt::Quick
     KF6::CoreAddons
     KF6::ConfigCore

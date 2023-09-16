@@ -41,7 +41,7 @@ ecm_qt_declare_logging_category(kcm_keys
 
 ecm_qt_install_logging_categories(EXPORT KCMKEYS DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
-target_link_libraries(kcm_keys
+target_link_libraries(kcm_keys PRIVATE
     Qt::DBus
     Qt::Quick
     KF6::ConfigGui

@@ -6,7 +6,7 @@ kcmutils_add_qml_kcm(kcm_activities
       activityconfig.cpp
 )
 
-target_link_libraries (kcm_activities
+target_link_libraries (kcm_activities PRIVATE
    Qt::Quick
    Qt::Core
    Qt::Qml

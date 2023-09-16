@@ -12,7 +12,7 @@ kcmutils_generate_module_data(kcm_splashscreen
 kconfig_add_kcfg_files(kcm_splashscreen splashscreensettings.kcfgc GENERATE_MOC)
 
 
-target_link_libraries(kcm_splashscreen
+target_link_libraries(kcm_splashscreen PRIVATE
   KF6::KIOWidgets
   KF6::CoreAddons
   KF6::ConfigWidgets

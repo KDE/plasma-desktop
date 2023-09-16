@@ -21,7 +21,7 @@ ecm_qt_install_logging_categories(
     EXPORT kcm_touchscreen
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
-target_link_libraries(kcm_touchscreen
+target_link_libraries(kcm_touchscreen PRIVATE
     KF6::CoreAddons
     KF6::ConfigCore
     KF6::I18n

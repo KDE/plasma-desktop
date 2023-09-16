@@ -12,7 +12,7 @@ kcmutils_generate_module_data(kcm_krunnersettings
 
 kconfig_add_kcfg_files(kcm_krunnersettings krunnersettingsbase.kcfgc GENERATE_MOC)
 
-target_link_libraries(kcm_krunnersettings
+target_link_libraries(kcm_krunnersettings PRIVATE
     Qt::DBus
     KF6::ConfigCore
     KF6::I18n

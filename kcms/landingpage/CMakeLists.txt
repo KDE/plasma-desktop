@@ -11,7 +11,7 @@ kcmutils_generate_module_data(kcm_landingpage
 )
 kconfig_add_kcfg_files(kcm_landingpage landingpage_kdeglobalssettings.kcfgc GENERATE_MOC)
 
-target_link_libraries(kcm_landingpage
+target_link_libraries(kcm_landingpage PRIVATE
     Qt::Quick
     Qt::DBus
     KF6::I18n
@@ -25,7 +25,7 @@ target_link_libraries(kcm_landingpage
 )
 
 if(X11_FOUND)
-    target_link_libraries(kcm_landingpage X11::X11)
+    target_link_libraries(kcm_landingpage PRIVATE X11::X11)
 endif()
 
 install(FILES landingpage_kdeglobalssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

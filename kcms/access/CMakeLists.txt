@@ -23,7 +23,7 @@ kcmutils_generate_module_data(kcm_access
     SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ScreenReaderSettings
 )
 
-target_link_libraries(kcm_access
+target_link_libraries(kcm_access PRIVATE
     kaccess_settings
     Qt::DBus
     Qt::Quick

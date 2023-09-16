@@ -14,7 +14,7 @@ qt_add_dbus_interface(kcm_smserver_DBUS_SRCS org.freedesktop.login1.Manager.xml 
 
 target_sources(kcm_smserver PRIVATE kcmsmserver.cpp ${kcm_smserver_DBUS_SRCS})
 
-target_link_libraries(kcm_smserver
+target_link_libraries(kcm_smserver PRIVATE
     Qt::Core
     Qt::DBus
     KF6::KCMUtilsQuick

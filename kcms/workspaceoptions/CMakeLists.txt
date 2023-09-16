@@ -14,7 +14,7 @@ kconfig_add_kcfg_files(kcm_workspace workspaceoptions_kdeglobalssettings.kcfgc G
 kconfig_add_kcfg_files(kcm_workspace workspaceoptions_plasmasettings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(kcm_workspace workspaceoptions_kwinsettings.kcfgc GENERATE_MOC)
 
-target_link_libraries(kcm_workspace
+target_link_libraries(kcm_workspace PRIVATE
     KF6::KCMUtilsQuick
     KF6::I18n
     KF6::KCMUtils
