@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-09-16 01:55+0000\n"
 "PO-Revision-Date: 2023-02-19 16:31+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -88,42 +88,42 @@ msgstr "Standart mətn redaktorunu seç"
 msgid "Select default video player"
 msgstr "Standart video oynadıcını seç"
 
-#: ui/ComponentOverlay.qml:22
+#: ui/ComponentOverlay.qml:52
 #, kde-format
 msgid "Details"
 msgstr "Təfərrüatlar"
 
-#: ui/ComponentOverlay.qml:28
+#: ui/ComponentOverlay.qml:82
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
 msgstr "Bu tətbiq aşağıdakı fayl növlərini dəstəklədiyini göstərmir:"
 
-#: ui/ComponentOverlay.qml:42
+#: ui/ComponentOverlay.qml:96
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
 msgstr "İstınilən halda açmaq"
 
-#: ui/ComponentOverlay.qml:50
+#: ui/ComponentOverlay.qml:113
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
 msgstr "Aşağıdakı fayl növləri hələ də müxtəlif tətbiqlər ilə əlaqəlidir:"
 
-#: ui/ComponentOverlay.qml:59
+#: ui/ComponentOverlay.qml:126
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
 msgstr "%1, %2 ilə əlaqəlidir"
 
-#: ui/ComponentOverlay.qml:65
+#: ui/ComponentOverlay.qml:139
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
 msgstr "Hamısını %1 ilə yenidən əlaqələndir"
 
-#: ui/ComponentOverlay.qml:73
+#: ui/ComponentOverlay.qml:150
 #, kde-format
 msgid "Change file type association manually"
 msgstr "Fayl növü əlaqəsini əl ilə dəyiş"
@@ -137,87 +137,87 @@ msgstr ""
 "Belə görünür ki, \"%1\" aşağıdakı fayl növlərinin bu qəbildən olan tətbiq "
 "ilə əlaqələndirilməsini dəstəkləmir: %2"
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "İnternet"
 
-#: ui/main.qml:49
+#: ui/main.qml:50
 #, kde-format
 msgid "Web browser:"
 msgstr "Veb Bələdçi:"
 
-#: ui/main.qml:71
+#: ui/main.qml:72
 #, kde-format
 msgid "Email client:"
 msgstr "E-Poçt müştərisi:"
 
-#: ui/main.qml:93
+#: ui/main.qml:94
 #, kde-format
 msgctxt "Default phone app"
 msgid "Dialer:"
 msgstr "Nömrə yığımı:"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: ui/main.qml:120
+#: ui/main.qml:121
 #, kde-format
 msgid "Image viewer:"
 msgstr "Şəkilə baxış:"
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
 msgstr "Musiqi oynadıcı:"
 
-#: ui/main.qml:167
+#: ui/main.qml:168
 #, kde-format
 msgid "Video player:"
 msgstr "Video oynadıcı:"
 
-#: ui/main.qml:189
+#: ui/main.qml:190
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "Sənədlər"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgid "Text editor:"
 msgstr "Mətn Redaktoru:"
 
-#: ui/main.qml:216
+#: ui/main.qml:217
 #, kde-format
 msgid "PDF viewer:"
 msgstr "PDF faylına baxış:"
 
-#: ui/main.qml:238
+#: ui/main.qml:239
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "Xidməti tətbiqlər"
 
-#: ui/main.qml:243
+#: ui/main.qml:244
 #, kde-format
 msgid "File manager:"
 msgstr "Fayl meneceri:"
 
-#: ui/main.qml:265
+#: ui/main.qml:266
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "Terminal emulyatoru:"
 
-#: ui/main.qml:278
+#: ui/main.qml:279
 #, kde-format
 msgid "Archive manager:"
 msgstr "Arxiv meneceri:"
 
-#: ui/main.qml:300
+#: ui/main.qml:301
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-09-16 01:55+0000\n"
 "PO-Revision-Date: 2023-03-01 00:21+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -95,42 +95,42 @@ msgstr "기본 텍스트 편집기 선택"
 msgid "Select default video player"
 msgstr "기본 동영상 재생기 선택"
 
-#: ui/ComponentOverlay.qml:22
+#: ui/ComponentOverlay.qml:52
 #, kde-format
 msgid "Details"
 msgstr "자세히"
 
-#: ui/ComponentOverlay.qml:28
+#: ui/ComponentOverlay.qml:82
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
 msgstr "이 앱은 다음 파일 형식을 지원하지 않습니다:"
 
-#: ui/ComponentOverlay.qml:42
+#: ui/ComponentOverlay.qml:96
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
 msgstr "그래도 열기"
 
-#: ui/ComponentOverlay.qml:50
+#: ui/ComponentOverlay.qml:113
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
 msgstr "다음 파일 형식이 다른 앱과 연결되어 있습니다:"
 
-#: ui/ComponentOverlay.qml:59
+#: ui/ComponentOverlay.qml:126
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
 msgstr "%1이(가) %2에 연결됨"
 
-#: ui/ComponentOverlay.qml:65
+#: ui/ComponentOverlay.qml:139
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
 msgstr "모두 %1(으)로 재연결"
 
-#: ui/ComponentOverlay.qml:73
+#: ui/ComponentOverlay.qml:150
 #, kde-format
 msgid "Change file type association manually"
 msgstr "수동으로 파일 형식 연결 변경"
@@ -144,87 +144,87 @@ msgstr ""
 "'%1'에서 비슷한 유형의 앱과 연관된 다음 MIME 형식을 지원하지 않는 것 같습니"
 "다: %2"
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "인터넷"
 
-#: ui/main.qml:49
+#: ui/main.qml:50
 #, kde-format
 msgid "Web browser:"
 msgstr "웹 브라우저:"
 
-#: ui/main.qml:71
+#: ui/main.qml:72
 #, kde-format
 msgid "Email client:"
 msgstr "이메일 클라이언트:"
 
-#: ui/main.qml:93
+#: ui/main.qml:94
 #, kde-format
 msgctxt "Default phone app"
 msgid "Dialer:"
 msgstr "다이얼러:"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "멀티미디어"
 
-#: ui/main.qml:120
+#: ui/main.qml:121
 #, kde-format
 msgid "Image viewer:"
 msgstr "그림 뷰어:"
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
 msgstr "음악 재생기:"
 
-#: ui/main.qml:167
+#: ui/main.qml:168
 #, kde-format
 msgid "Video player:"
 msgstr "동영상 재생기:"
 
-#: ui/main.qml:189
+#: ui/main.qml:190
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "문서"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgid "Text editor:"
 msgstr "텍스트 편집기:"
 
-#: ui/main.qml:216
+#: ui/main.qml:217
 #, kde-format
 msgid "PDF viewer:"
 msgstr "PDF 뷰어:"
 
-#: ui/main.qml:238
+#: ui/main.qml:239
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "유틸리티"
 
-#: ui/main.qml:243
+#: ui/main.qml:244
 #, kde-format
 msgid "File manager:"
 msgstr "파일 관리자:"
 
-#: ui/main.qml:265
+#: ui/main.qml:266
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "터미널 에뮬레이터:"
 
-#: ui/main.qml:278
+#: ui/main.qml:279
 #, kde-format
 msgid "Archive manager:"
 msgstr "압축 프로그램:"
 
-#: ui/main.qml:300
+#: ui/main.qml:301
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

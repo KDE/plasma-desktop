@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-09-16 01:55+0000\n"
 "PO-Revision-Date: 2023-02-27 19:54+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -91,44 +91,44 @@ msgstr "Standard-Texteditor auswählen"
 msgid "Select default video player"
 msgstr "Standard-Video-Wiedergabe auswählen"
 
-#: ui/ComponentOverlay.qml:22
+#: ui/ComponentOverlay.qml:52
 #, kde-format
 msgid "Details"
 msgstr "Details"
 
-#: ui/ComponentOverlay.qml:28
+#: ui/ComponentOverlay.qml:82
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
 msgstr ""
 "Diese Anwendung gibt keine Unterstützung für die folgenden Dateitypen an:"
 
-#: ui/ComponentOverlay.qml:42
+#: ui/ComponentOverlay.qml:96
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
 msgstr "Öffnen trotzdem erzwingen"
 
-#: ui/ComponentOverlay.qml:50
+#: ui/ComponentOverlay.qml:113
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
 msgstr ""
 "Die folgenden Dateitypen sind weiterhin einer anderen Anwendung zugewiesen:"
 
-#: ui/ComponentOverlay.qml:59
+#: ui/ComponentOverlay.qml:126
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
 msgstr "%1 zugeordnet zu %2"
 
-#: ui/ComponentOverlay.qml:65
+#: ui/ComponentOverlay.qml:139
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
 msgstr "Alle neu %1 zuordnen"
 
-#: ui/ComponentOverlay.qml:73
+#: ui/ComponentOverlay.qml:150
 #, kde-format
 msgid "Change file type association manually"
 msgstr "Dateityp-Zuordnung manuell ändern"
@@ -142,87 +142,87 @@ msgstr ""
 "„%1“ scheint die folgenden mit dieser Art von Anwendungen zugeordneten MIME-"
 "Typen nicht zu unterstützen: %2"
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "Internet"
 
-#: ui/main.qml:49
+#: ui/main.qml:50
 #, kde-format
 msgid "Web browser:"
 msgstr "Webbrowser:"
 
-#: ui/main.qml:71
+#: ui/main.qml:72
 #, kde-format
 msgid "Email client:"
 msgstr "E-Mail-Programm:"
 
-#: ui/main.qml:93
+#: ui/main.qml:94
 #, kde-format
 msgctxt "Default phone app"
 msgid "Dialer:"
 msgstr "Wählprogramm:"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: ui/main.qml:120
+#: ui/main.qml:121
 #, kde-format
 msgid "Image viewer:"
 msgstr "Bildbetrachter:"
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
 msgstr "Musik-Wiedergabe:"
 
-#: ui/main.qml:167
+#: ui/main.qml:168
 #, kde-format
 msgid "Video player:"
 msgstr "Video-Wiedergabe:"
 
-#: ui/main.qml:189
+#: ui/main.qml:190
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "Dokumente"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgid "Text editor:"
 msgstr "Texteditor:"
 
-#: ui/main.qml:216
+#: ui/main.qml:217
 #, kde-format
 msgid "PDF viewer:"
 msgstr "PDF-Betrachter:"
 
-#: ui/main.qml:238
+#: ui/main.qml:239
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "Dienstprogramme"
 
-#: ui/main.qml:243
+#: ui/main.qml:244
 #, kde-format
 msgid "File manager:"
 msgstr "Dateiverwaltung:"
 
-#: ui/main.qml:265
+#: ui/main.qml:266
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "Terminal-Emulator:"
 
-#: ui/main.qml:278
+#: ui/main.qml:279
 #, kde-format
 msgid "Archive manager:"
 msgstr "Archivverwaltung:"
 
-#: ui/main.qml:300
+#: ui/main.qml:301
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
