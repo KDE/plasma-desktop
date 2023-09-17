@@ -80,8 +80,8 @@ void KRunnerSettings::save()
     KQuickManagedConfigModule::save();
 
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
-    const QHash<QString, QByteArrayList> changes = {{QStringLiteral("Plugins"), {}}};
-    message.setArguments({QVariant::fromValue(changes)});
+    QHash<QString, QByteArrayList> changes = {{QStringLiteral("Plugins"), {}}};
+    message.setArguments({QVariant::fromValue(std::move(changes))});
     QDBusConnection::sessionBus().send(message);
 }
 

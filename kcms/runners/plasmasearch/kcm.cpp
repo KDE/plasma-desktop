@@ -138,10 +138,10 @@ void SearchConfigModule::showKCM(const KPluginMetaData &data, const QVariantList
     connect(dlg, qOverload<>(&KCMultiDialog::configCommitted), dlg, [krunnerPluginData]() {
         QDBusMessage message =
             QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
-        const QHash<QString, QByteArrayList> changes = {
+        QHash<QString, QByteArrayList> changes = {
             {QStringLiteral("Runners"), {krunnerPluginData.pluginId().toLocal8Bit()}},
         };
-        message.setArguments({QVariant::fromValue(changes)});
+        message.setArguments({QVariant::fromValue(std::move(changes))});
         QDBusConnection::sessionBus().send(message);
     });
 }
@@ -154,8 +154,8 @@ void SearchConfigModule::save()
     m_model->save();
 
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
-    const QHash<QString, QByteArrayList> changes{{QStringLiteral("Plugins"), {}}};
-    message.setArguments({QVariant::fromValue(changes)});
+    QHash<QString, QByteArrayList> changes{{QStringLiteral("Plugins"), {}}};
+    message.setArguments({QVariant::fromValue(std::move(changes))});
     QDBusConnection::sessionBus().send(message);
 }
 

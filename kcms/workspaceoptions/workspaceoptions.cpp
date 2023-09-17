@@ -64,10 +64,10 @@ void KCMWorkspaceOptions::save()
 
     {
         QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/kwinrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
-        const QHash<QString, QByteArrayList> changes = {
+        QHash<QString, QByteArrayList> changes = {
             {QStringLiteral("Wayland"), {"EnablePrimarySelection"}},
         };
-        message.setArguments({QVariant::fromValue(changes)});
+        message.setArguments({QVariant::fromValue(std::move(changes))});
         QDBusConnection::sessionBus().send(message);
     }
 
