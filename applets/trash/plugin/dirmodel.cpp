@@ -96,12 +96,10 @@ QVariantMap DirModel::get(int i) const
     QModelIndex modelIndex = index(i, 0);
 
     KFileItem item = itemForIndex(modelIndex);
-    QString url = item.url().toString();
-    QString mimeType = item.mimetype();
 
     QVariantMap ret;
-    ret.insert(QStringLiteral("url"), QVariant(url));
-    ret.insert(QStringLiteral("mimeType"), QVariant(mimeType));
+    ret.insert(QStringLiteral("url"), QVariant(std::in_place_type<QString>, item.url().toString()));
+    ret.insert(QStringLiteral("mimeType"), QVariant(std::in_place_type<QString>, item.mimetype()));
 
     return ret;
 }
