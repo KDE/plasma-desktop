@@ -532,7 +532,12 @@ Item {
             }
         }
 
-        //Footer
+        // Note: Containment masks stretch clickable area of their buttons to
+        // the screen edges, essentially making them adhere to Fitts's law.
+        // Due to virtual keyboard button having an icon, buttons may have
+        // different heights, so fillHeight is required.
+        //
+        // Note for contributors: Keep this in sync with LockScreenUi.qml footer.
         RowLayout {
             id: footer
             anchors {
@@ -550,6 +555,8 @@ Item {
             }
 
             PlasmaComponents3.ToolButton {
+                id: virtualKeyboardButton
+
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to show/hide virtual keyboard", "Virtual Keyboard")
                 font.pointSize: config.fontSize
                 icon.name: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
@@ -560,9 +567,19 @@ Item {
                     inputPanel.showHide()
                 }
                 visible: inputPanel.status === Loader.Ready
+
+                Layout.fillHeight: true
+                containmentMask: Item {
+                    parent: virtualKeyboardButton
+                    anchors.fill: parent
+                    anchors.leftMargin: -footer.anchors.margins
+                    anchors.bottomMargin: -footer.anchors.margins
+                }
             }
 
             KeyboardButton {
+                id: keyboardButton
+
                 font.pointSize: config.fontSize
 
                 onKeyboardLayoutChanged: {
@@ -570,16 +587,34 @@ Item {
                     // keystrokes get eaten
                     userListComponent.mainPasswordBox.forceActiveFocus();
                 }
+
+                Layout.fillHeight: true
+                containmentMask: Item {
+                    parent: keyboardButton
+                    anchors.fill: parent
+                    anchors.leftMargin: virtualKeyboardButton.visible ? 0 : -footer.anchors.margins
+                    anchors.bottomMargin: -footer.anchors.margins
+                }
             }
 
             SessionButton {
                 id: sessionButton
+
                 font.pointSize: config.fontSize
 
                 onSessionChanged: {
                     // Otherwise the password field loses focus and virtual keyboard
                     // keystrokes get eaten
                     userListComponent.mainPasswordBox.forceActiveFocus();
+                }
+
+                Layout.fillHeight: true
+                containmentMask: Item {
+                    parent: sessionButton
+                    anchors.fill: parent
+                    anchors.leftMargin: virtualKeyboardButton.visible || keyboardButton.visible
+                        ? 0 : -footer.anchors.margins
+                    anchors.bottomMargin: -footer.anchors.margins
                 }
             }
 
