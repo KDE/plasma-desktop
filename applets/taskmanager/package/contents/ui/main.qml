@@ -435,9 +435,9 @@ PlasmoidItem {
 
                 flow: {
                     if (tasks.vertical) {
-                        return Plasmoid.configuration.forceStripes ? Flow.LeftToRight : Flow.TopToBottom
+                        return Plasmoid.configuration.forceStripes ? GridView.FlowLeftToRight : GridView.FlowTopToBottom
                     }
-                    return Plasmoid.configuration.forceStripes ? Flow.TopToBottom : Flow.LeftToRight
+                    return Plasmoid.configuration.forceStripes ? GridView.FlowTopToBottom : GridView.FlowLeftToRight
                 }
 
                 onAnimatingChanged: {
