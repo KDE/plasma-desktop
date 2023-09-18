@@ -21,10 +21,16 @@ Grid {
     columns: tasks.vertical ? Math.floor(width / children[0].width) : undefined
 
     move: Transition {
-        NumberAnimation {
-            properties: "x, y"
-            easing.type: Easing.OutQuad
-            duration: Kirigami.Units.longDuration
+        SequentialAnimation {
+            PropertyAction { target: taskList; property: "animating"; value: true }
+
+            NumberAnimation {
+                properties: "x, y"
+                easing.type: Easing.OutQuad
+                duration: Kirigami.Units.longDuration
+            }
+
+            PropertyAction { target: taskList; property: "animating"; value: false }
         }
     }
 }
