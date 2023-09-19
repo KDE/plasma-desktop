@@ -17,8 +17,8 @@ Grid {
             : Qt.LeftToRight
         : Qt.application.layoutDirection
 
-    rows: tasks.vertical ? undefined : Math.floor(height / children[0].height)
-    columns: tasks.vertical ? Math.floor(width / children[0].width) : undefined
+    rows: tasks.vertical ? -1 : Math.floor(height / children[0].height)
+    columns: tasks.vertical ? Math.floor(width / children[0].width) : -1
 
     move: Transition {
         SequentialAnimation {
