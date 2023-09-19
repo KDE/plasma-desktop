@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Luigi Toscano <luigi.toscano@tiscali.it>, 2014, 2017.
-# Paolo Zamponi <feus73@gmail.com>, 2017, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:48+0000\n"
-"PO-Revision-Date: 2023-06-02 09:26+0200\n"
+"PO-Revision-Date: 2023-09-17 16:45+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -32,8 +32,8 @@ msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
-"Verrà disabilitata la ricerca dei file in KRunner e nei menu dei lanciatori, "
-"e verrà rimossa la visualizzazione dei metadati estesi da tutte le "
+"La ricerca dei file in KRunner e nei menu dei lanciatori verrà disabilitata, "
+"inoltre la visualizzazione dei metadati estesi verrà rimossa da tutte le "
 "applicazioni di KDE."
 
 #: package/contents/ui/main.qml:67
@@ -87,7 +87,7 @@ msgstr "Indicizza anche il contenuto dei file"
 #: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
-msgstr "Indicizza file e cartelle nascosti"
+msgstr "Indicizza i file e le cartelle nascoste"
 
 #: package/contents/ui/main.qml:160
 #, kde-format
@@ -127,12 +127,12 @@ msgstr "Interrompi l'indicizzazione di una cartella…"
 #: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Not indexed"
-msgstr "Non indicizzato"
+msgstr "Non indicizzata"
 
 #: package/contents/ui/main.qml:276
 #, kde-format
 msgid "Indexed"
-msgstr "Indicizzato"
+msgstr "Indicizzata"
 
 #: package/contents/ui/main.qml:306
 #, kde-format
