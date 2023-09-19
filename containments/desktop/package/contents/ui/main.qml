@@ -194,14 +194,14 @@ ContainmentItem {
 
         anchors {
             fill: parent
-            leftMargin: (isContainment && Plasmoid.availableScreenRect) ? Plasmoid.availableScreenRect.x : 0
-            topMargin: (isContainment && Plasmoid.availableScreenRect) ? Plasmoid.availableScreenRect.y : 0
+            leftMargin: (isContainment && root.availableScreenRect) ? root.availableScreenRect.x : 0
+            topMargin: (isContainment && root.availableScreenRect) ? root.availableScreenRect.y : 0
 
-            rightMargin: (isContainment && Plasmoid.availableScreenRect && parent)
-                ? (parent.width - Plasmoid.availableScreenRect.x - Plasmoid.availableScreenRect.width) : 0
+            rightMargin: (isContainment && root.availableScreenRect && parent)
+                ? (parent.width - root.availableScreenRect.x - root.availableScreenRect.width) : 0
 
-            bottomMargin: (isContainment && Plasmoid.availableScreenRect && parent)
-                ? (parent.height - Plasmoid.availableScreenRect.y - Plasmoid.availableScreenRect.height) : 0
+            bottomMargin: (isContainment && root.availableScreenRect && parent)
+                ? (parent.height - root.availableScreenRect.y - root.availableScreenRect.height) : 0
         }
 
         LongDropBehavior on anchors.topMargin { }
@@ -304,10 +304,10 @@ ContainmentItem {
         ContainmentLayoutManager.AppletsLayout {
             id: appletsLayout
             anchors.fill: parent
-            relayoutLock: width !== Plasmoid.availableScreenRect.width || height !== Plasmoid.availableScreenRect.height
-            // NOTE: use Plasmoid.availableScreenRect and not own width and height as they are updated not atomically
-            configKey: "ItemGeometries-" + Math.round(Plasmoid.screenGeometry.width) + "x" + Math.round(Plasmoid.screenGeometry.height)
-            fallbackConfigKey: Plasmoid.availableScreenRect.width > Plasmoid.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
+            relayoutLock: width !== root.availableScreenRect.width || height !== root.availableScreenRect.height
+            // NOTE: use root.availableScreenRect and not own width and height as they are updated not atomically
+            configKey: "ItemGeometries-" + Math.round(root.screenGeometry.width) + "x" + Math.round(root.screenGeometry.height)
+            fallbackConfigKey: root.availableScreenRect.width > root.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
 
             containment: Plasmoid
             containmentItem: root

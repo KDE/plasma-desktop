@@ -30,7 +30,7 @@ FocusScope {
     property alias overflowing: folderView.overflowing
     property alias flow: folderView.flow
 
-    property string resolution: Math.round(Plasmoid.screenGeometry.width) + "x" + Math.round(Plasmoid.screenGeometry.height)
+    property string resolution: Math.round(root.screenGeometry.width) + "x" + Math.round(root.screenGeometry.height)
 
     readonly property bool lockedByKiosk: !KAuthorized.authorize("editable_desktop_icons")
 
