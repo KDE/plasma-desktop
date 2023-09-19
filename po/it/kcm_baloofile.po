@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Luigi Toscano <luigi.toscano@tiscali.it>, 2014, 2017.
-# Paolo Zamponi <feus73@gmail.com>, 2017, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-14 01:55+0000\n"
-"PO-Revision-Date: 2023-06-02 09:26+0200\n"
+"PO-Revision-Date: 2023-09-17 16:45+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -34,8 +34,8 @@ msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
-"Verrà disabilitata la ricerca dei file in KRunner e nei menu dei lanciatori, "
-"e verrà rimossa la visualizzazione dei metadati estesi da tutte le "
+"La ricerca dei file in KRunner e nei menu dei lanciatori verrà disabilitata, "
+"inoltre la visualizzazione dei metadati estesi verrà rimossa da tutte le "
 "applicazioni di KDE."
 
 #: ui/main.qml:81
@@ -61,9 +61,8 @@ msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
-"La ricerca nei file ti aiuta a trovare facilmente i tuoi file in base al "
-"loro contenuto. Puoi scegliere quali cartelle e quali tipi di dati dei file "
-"vengono indicizzati."
+"La ricerca nei file ti aiuta a trovare velocemente i tuoi file. Puoi "
+"scegliere le cartelle e i tipi di dati dei file che vengono indicizzati."
 
 #: ui/main.qml:108
 #, kde-format
@@ -143,12 +142,12 @@ msgstr "Interrompi l'indicizzazione di una cartella…"
 #: ui/main.qml:294
 #, kde-format
 msgid "Not indexed"
-msgstr "Non indicizzato"
+msgstr "Non indicizzata"
 
 #: ui/main.qml:295
 #, kde-format
 msgid "Indexed"
-msgstr "Indicizzato"
+msgstr "Indicizzata"
 
 #: ui/main.qml:325
 #, kde-format

@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-09 01:58+0000\n"
-"PO-Revision-Date: 2023-03-13 11:15+0000\n"
-"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2023-09-16 11:47+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -140,10 +140,9 @@ msgstr ""
 "miðjuhnappssmell."
 
 #: kcm/libinput/touchpad.qml:254
-#, fuzzy, kde-format
-#| msgid "Minimum pointer speed"
+#, kde-format
 msgid "Pointer speed:"
-msgstr "Lágmarkshraði bendils"
+msgstr "Hraði bendils:"
 
 #: kcm/libinput/touchpad.qml:352
 #, kde-format
@@ -153,7 +152,7 @@ msgstr "Hröðun bendils:"
 #: kcm/libinput/touchpad.qml:383
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Engin"
 
 #: kcm/libinput/touchpad.qml:387
 #, kde-format
@@ -163,7 +162,7 @@ msgstr "Bendillinn færist sömu vegalengd og fingurinn."
 #: kcm/libinput/touchpad.qml:396
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Hefðbundin"
 
 #: kcm/libinput/touchpad.qml:400
 #, kde-format
@@ -262,7 +261,7 @@ msgstr "Pikka með tveimur fingrum til að miðjusmella."
 #: kcm/libinput/touchpad.qml:584
 #, kde-format
 msgid "Scrolling:"
-msgstr "Fletting:"
+msgstr "Skrun:"
 
 #: kcm/libinput/touchpad.qml:613
 #, kde-format
@@ -272,7 +271,7 @@ msgstr "Tveir fingur"
 #: kcm/libinput/touchpad.qml:617
 #, kde-format
 msgid "Slide with two fingers scrolls."
-msgstr "Rennt með tveimur fingrum til að fletta."
+msgstr "Rennt með tveimur fingrum til að skruna."
 
 #: kcm/libinput/touchpad.qml:625
 #, kde-format
@@ -282,27 +281,27 @@ msgstr "Brúnir snertiplatta"
 #: kcm/libinput/touchpad.qml:629
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
-msgstr "Rennt meðfram brúnum snertiplatta til að fletta."
+msgstr "Rennt meðfram brúnum snertiplatta til að skruna."
 
 #: kcm/libinput/touchpad.qml:639
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Snúa við flettistefnu (eðlileg fletting)"
+msgstr "Snúa við skrunstefnu (eðlilegt skrun)"
 
 #: kcm/libinput/touchpad.qml:655
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr "Fletting eins og á snertiskjá."
+msgstr "Skrun eins og á snertiskjá."
 
 #: kcm/libinput/touchpad.qml:663 kcm/libinput/touchpad.qml:680
 #, kde-format
 msgid "Disable horizontal scrolling"
-msgstr "Slökkva á láréttri flettingu"
+msgstr "Slökkva á láréttu skruni"
 
 #: kcm/libinput/touchpad.qml:688
 #, kde-format
 msgid "Scrolling speed:"
-msgstr "Flettihraði:"
+msgstr "Skrunhraði:"
 
 #: kcm/libinput/touchpad.qml:739
 #, kde-format
@@ -534,7 +533,7 @@ msgid ""
 "You will be still able to move pointer using touchpad and perform clicks "
 "with hardware buttons."
 msgstr ""
-"Slökkva á smellihermi og flettingu.\n"
+"Slökkva á smellihermi og skruni.\n"
 "Þú getur samt fært bendilinn til með snertiplattanum og gert smelli með "
 "hnöppum á tölvunni."
 
@@ -542,7 +541,7 @@ msgstr ""
 #: kcm/xlib/ui/kded.ui:109
 #, kde-format
 msgid "Disable taps and scrolling only"
-msgstr "Slökkva eingöngu á pikki og flettingu"
+msgstr "Slökkva eingöngu á pikki og skruni"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
 #: kcm/xlib/ui/kded.ui:119
@@ -733,19 +732,19 @@ msgstr "Lágmarksfjarlægð lárétt frá plattanum til að framkalla hreyfiskip
 #: kcm/xlib/ui/scroll.ui:14
 #, kde-format
 msgid "Scrolling"
-msgstr "Fletting"
+msgstr "Skrun"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: kcm/xlib/ui/scroll.ui:28
 #, kde-format
 msgid "Edge scrolling:"
-msgstr "Flett á brúnum"
+msgstr "Skrun á brúnum"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
 #: kcm/xlib/ui/scroll.ui:38
 #, kde-format
 msgid "Enable vertical scrolling when dragging along the right edge"
-msgstr "Virkja lóðrétta flettingu þegar fingri er rennt eftir hægri brúninni"
+msgstr "Virkja lóðrétt skrun þegar fingri er rennt eftir hægri brúninni"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
@@ -760,7 +759,7 @@ msgstr "Lóðrétt"
 #: kcm/xlib/ui/scroll.ui:48
 #, kde-format
 msgid "Enable horizontal scrolling when dragging along the bottom edge"
-msgstr "Virkja lárétta flettingu þegar fingri er rennt eftir neðri brúninni"
+msgstr "Virkja lárétt skrun þegar fingri er rennt eftir neðri brúninni"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
@@ -778,7 +777,7 @@ msgid ""
 "Enable vertical scrolling when dragging with two fingers anywhere on the "
 "touchpad"
 msgstr ""
-"Virkja lóðrétta flettingu þegar tveimur fingrum er rennt hvar sem er á "
+"Virkja lóðrétt skrun þegar tveimur fingrum er rennt hvar sem er á "
 "snertiplattanum"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
@@ -788,39 +787,39 @@ msgid ""
 "Enable horizontal scrolling when dragging with two fingers anywhere on the "
 "touchpad"
 msgstr ""
-"Virkja lárétta flettingu þegar tveimur fingrum er rennt hvar sem er á "
+"Virkja lárétt skrun þegar tveimur fingrum er rennt hvar sem er á "
 "snertiplattanum"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
 #: kcm/xlib/ui/scroll.ui:78
 #, kde-format
 msgid "Reverse vertical scrolling"
-msgstr "Umsnúin lóðrétt fletting"
+msgstr "Umsnúið lóðrétt skrun"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
 #: kcm/xlib/ui/scroll.ui:88
 #, kde-format
 msgid "Reverse horizontal scrolling"
-msgstr "Umsnúin lárétt fletting"
+msgstr "Umsnúið lárétt skrun"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: kcm/xlib/ui/scroll.ui:98
 #, kde-format
 msgid "Two-finger scrolling:"
-msgstr "Tveggja fingra fletting:"
+msgstr "Tveggja fingra skrun:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: kcm/xlib/ui/scroll.ui:108
 #, kde-format
 msgid "Reverse scrolling:"
-msgstr "Umsnúin fletting:"
+msgstr "Umsnúið skrun:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: kcm/xlib/ui/scroll.ui:126
 #, kde-format
 msgctxt "Touchpad - Scrolling"
 msgid "Scrolling Distance"
-msgstr "Flettifjarlægð"
+msgstr "Skrunfjarlægð"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/scroll.ui:138
@@ -834,7 +833,7 @@ msgstr "Lóðrétt:"
 #: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
 #, kde-format
 msgid "Move distance of the finger for a scroll event"
-msgstr "Hversu langt þarf að renna fingri til að fletting verði virk"
+msgstr "Hversu langt þarf að renna fingri til að skrun verði virkt"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
@@ -856,14 +855,14 @@ msgstr "Lárétt:"
 #, kde-format
 msgid ""
 "Continue scrolling after the finger is released from the edge of the touchpad"
-msgstr "Halda áfram að fletta eftir að fingri er lyft af brún snertiplattans"
+msgstr "Halda áfram að skruna eftir að fingri er lyft af brún snertiplattans"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
 #: kcm/xlib/ui/scroll.ui:202
 #, kde-format
 msgctxt "Touchpad - Scrolling"
 msgid "Coasting"
-msgstr "Stöðug fletting"
+msgstr "Stöðugt skrun"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/scroll.ui:217
@@ -879,14 +878,13 @@ msgid ""
 "Your finger needs to produce this many scrolls per second in order to start "
 "coasting"
 msgstr ""
-"Fingurinn þarf að fletta svona oft á sekúndu til að framkalla stöðuga "
-"flettingu"
+"Fingurinn þarf að skruna svona oft á sekúndu til að framkalla stöðugt skrun"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
 #: kcm/xlib/ui/scroll.ui:233
 #, kde-format
 msgid " scrolls/sec"
-msgstr " flettingar/sek."
+msgstr " skrun/sek."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/ui/scroll.ui:240
@@ -899,19 +897,19 @@ msgstr "Hraðaminnkun:"
 #: kcm/xlib/ui/scroll.ui:250
 #, kde-format
 msgid "Number of scrolls/second² to decrease the coasting speed"
-msgstr "Fjöldi fletting/sekúndu² til að draga úr hraða á stöðugri flettingu"
+msgstr "Fjöldi skruna/sekúndu² til að draga úr hraða á stöðugu skruni"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
 #: kcm/xlib/ui/scroll.ui:256
 #, kde-format
 msgid " scrolls/sec²"
-msgstr " flettingar/sek²"
+msgstr " skrun/sek²"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #: kcm/xlib/ui/scroll.ui:263
 #, kde-format
 msgid "Corner coasting:"
-msgstr "Stöðug fletting á horni:"
+msgstr "Stöðugt skrun á horni:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
 #: kcm/xlib/ui/scroll.ui:273
@@ -919,7 +917,7 @@ msgstr "Stöðug fletting á horni:"
 msgid ""
 "Enable edge scrolling to continue while the finger stays in an edge corner"
 msgstr ""
-"Leyfa flettingu við brún að halda áfram þegar fingrinum er haldið á horninu"
+"Leyfa skruni við brún að halda áfram þegar fingrinum er haldið á horninu"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
 #: kcm/xlib/ui/scroll.ui:276
@@ -936,29 +934,29 @@ msgid ""
 "Moving your finger in clockwise circles around the center of the touchpad\n"
 "will scroll down and counter clockwise motion will scroll up"
 msgstr ""
-"Fletting hefst þegar byrjað er að draga innan í tilgreindu flettisvæði.\n"
+"Skrun hefst þegar byrjað er að draga innan í tilgreindu skrunsvæði.\n"
 "Ef þú hreyfir fingurinn réttsælis í hringi í kringum miðju snertiplattans\n"
-"er flett niður og hreyfing rangsælis flettir upp"
+"er skrunað niður og hreyfing rangsælis skrunar upp"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
 #: kcm/xlib/ui/scroll.ui:291
 #, kde-format
 msgctxt "Touchpad - Scrolling"
 msgid "Circular Scrolling"
-msgstr "Hringfletting"
+msgstr "Hringskrun"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm/xlib/ui/scroll.ui:306
 #, kde-format
 msgctxt "Circular scrolling"
 msgid "Trigger region:"
-msgstr "Flettisvæði:"
+msgstr "Skrunsvæði:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
 #: kcm/xlib/ui/scroll.ui:316
 #, kde-format
 msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr "Flettisvæði á snertiplattanum til að hefja hringflettingu"
+msgstr "Skrunsvæði á snertiplattanum til að hefja hringskrun"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm/xlib/ui/scroll.ui:323
@@ -971,8 +969,7 @@ msgstr "Horn:"
 #: kcm/xlib/ui/scroll.ui:345
 #, kde-format
 msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr ""
-"Halli fingurs (í gráðum) þegar honum er rennt til að framkalla flettingu"
+msgstr "Halli fingurs (í gráðum) þegar honum er rennt til að framkalla skrun"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
 #: kcm/xlib/ui/scroll.ui:348
@@ -988,9 +985,8 @@ msgid ""
 "When used together with vertical scrolling, hitting the upper or lower right "
 "corner will seamlessly switch over from vertical to circular scrolling"
 msgstr ""
-"Þegar þetta er notað með lóðréttri flettingu er hægt að skipta úr lóðréttri "
-"flettingu í hringflettingu með því að pikka á efra eða neðra hornið hægra "
-"megin."
+"Þegar þetta er notað með lóðréttu skruni er hægt að skipta úr lóðréttu "
+"skruni í hringskrun með því að pikka á efra eða neðra hornið hægra megin."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
 #: kcm/xlib/ui/sensitivity.ui:14

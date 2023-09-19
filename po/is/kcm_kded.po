@@ -2,20 +2,20 @@
 # Copyright (C) 2003, 2008 Free Software Foundation, Inc.
 # Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003.
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2015.
-# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-29 02:07+0000\n"
-"PO-Revision-Date: 2022-12-10 20:17+0000\n"
-"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2023-09-08 10:20+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -23,40 +23,36 @@ msgstr ""
 #: kcmkded.cpp:115
 #, kde-format
 msgid "Failed to stop service: %1"
-msgstr "Mistókst að stöðva þjónustu: %1"
+msgstr "Gat ekki stöðvað þjónustu: %1"
 
 #: kcmkded.cpp:117
 #, kde-format
 msgid "Failed to start service: %1"
-msgstr "Mistókst að ræsa þjónustu: %1."
+msgstr "Gat ekki ræst þjónustu: %1."
 
 #: kcmkded.cpp:124
 #, kde-format
 msgid "Failed to stop service."
-msgstr "Mistókst að stöðva þjónustu."
+msgstr "Gat ekki stöðvað þjónustu."
 
 #: kcmkded.cpp:126
 #, kde-format
 msgid "Failed to start service."
-msgstr "Mistókst að ræsa þjónustu."
+msgstr "Gat ekki ræst þjónustu."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"Mistókst að tilkynna KDE-þjónustustjóranum (kded5) um vistaðar breytingar: %1"
+"Mistókst að tilkynna KDE-þjónustustjóranum (kded6) um vistaðar breytingar: %1"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Stjórinn fyrir bakgrunnsþjónustur (kded5) er ekki í gangi sem stendur. "
+"Stjórinn fyrir bakgrunnsþjónustur (kded6) er ekki í gangi sem stendur. "
 "Gakktu úr skugga um að hann sé rétt uppsettur."
 
 #: ui/main.qml:45
@@ -65,20 +61,17 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
-"Sumar þjónustur slökkva á sér sjálfar eftir að þær eru ræstar handvirkt ef "
-"þær koma ekki að gagni í núverandi umhverfi."
+"Sumar þjónustur slökkva sjálfar á sér þegar þær eru ræstar handvirkt ef þær "
+"koma ekki að gagni í núverandi umhverfi."
 
 #: ui/main.qml:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Sumar þjónustur voru sjálfkrafa ræstar/stöðvaðar þegar bakgrunnsþjónustu- "
-"stjórinn (kded5) var endurræstur til að virkja breytingarnar þínar."
+"stjórinn (kded6) var endurræstur til að virkja breytingarnar þínar."
 
 #: ui/main.qml:96
 #, kde-format

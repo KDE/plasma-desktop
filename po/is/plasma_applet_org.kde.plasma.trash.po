@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2009.
-# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-19 01:57+0000\n"
-"PO-Revision-Date: 2022-10-10 19:43+0000\n"
+"PO-Revision-Date: 2023-09-08 10:32+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -19,19 +19,16 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: contents/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid "Trash"
+#, kde-format
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Rusl"
 
 #: contents/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "One item"
-#| msgid_plural "%1 items"
+#, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
@@ -39,33 +36,28 @@ msgstr[0] "Einn hlutur"
 msgstr[1] "%1 hlutir"
 
 #: contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Tómt"
 
 #: contents/ui/main.qml:71
-#, fuzzy, kde-format
-#| msgctxt "a verb"
-#| msgid "Open"
+#, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Opna"
 
 #: contents/ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
-msgstr "Tómt"
+msgstr "Tæma"
 
 #: contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Trash Settings…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
-msgstr "Stillingar ruslafötu..."
+msgstr "Stillingar rusls..."
 
 #~ msgctxt "a verb"
 #~ msgid "Empty"
