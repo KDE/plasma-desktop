@@ -423,6 +423,79 @@ PlasmoidItem {
             height: taskList.implicitHeight
             width: taskList.implicitWidth
 
+            GridView {
+                id: taskList
+                cacheBuffer: 99999999
+                property bool animating
+                anchors {
+                    top: parent.top
+                    left: parent.left
+                }
+
+                width: tasks.width//tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutWidth()
+                height: tasks.height //tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutHeight()
+                cellWidth: Math.min(height, width/count)
+                cellHeight: height
+
+                flow: {
+                    if (tasks.vertical) {
+                        return Plasmoid.configuration.forceStripes ? GridView.FlowLeftToRight : GridView.FlowTopToBottom
+                    }
+                    return Plasmoid.configuration.forceStripes ? GridView.FlowTopToBottom : GridView.FlowLeftToRight
+                }
+                model: tasks.tasksModel
+                delegate: Task {
+                    width: taskList.cellWidth
+                    height: taskList.cellHeight
+                }
+                removeDisplaced: Transition {
+                    SequentialAnimation {
+                        PropertyAction { target: taskList; property: "animating"; value: true }
+
+                        NumberAnimation {
+                            properties: "x, y"
+                            easing.type: Easing.OutQuad
+                            duration: Kirigami.Units.longDuration
+                        }
+
+                        PropertyAction { target: taskList; property: "animating"; value: false }
+                    }
+                }
+                add: Transition {
+                    SequentialAnimation {
+                        PropertyAction { target: taskList; property: "animating"; value: true }
+
+                        NumberAnimation {
+                            properties: "y"
+                            from: -10
+                            to: 0
+                            easing.type: Easing.OutQuad
+                            duration: Kirigami.Units.longDuration
+                        }
+
+                        PropertyAction { target: taskList; property: "animating"; value: false }
+                    }
+                }
+                remove: Transition {
+                    SequentialAnimation {
+                        PropertyAction { target: taskList; property: "animating"; value: true }
+
+                        NumberAnimation {
+                            properties: "y"
+                            from: 0
+                            to: -10
+                            easing.type: Easing.OutQuad
+                            duration: Kirigami.Units.longDuration
+                        }
+
+                        PropertyAction { target: taskList; property: "animating"; value: false }
+                    }
+                }
+            }
+            Item {
+                id: taskRepeater
+                property var model
+            }/*
             TaskList {
                 id: taskList
 
@@ -477,7 +550,7 @@ PlasmoidItem {
                         taskClosedWithMouseMiddleButton = [];
                     }
                 }
-            }
+            }*/
         }
     }
 

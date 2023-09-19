@@ -24,7 +24,7 @@ PlasmaCore.ToolTipArea {
 
     height: Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium) + LayoutManager.verticalMargins()
 
-    visible: false
+    //visible: false
 
     // To achieve a bottom to top layout, the task manager is rotated by 180 degrees(see main.qml).
     // This makes the tasks mirrored, so we mirror them again to fix that.
