@@ -19,6 +19,7 @@ PlasmoidItem {
     signal layoutSelected(int layoutIndex)
 
     preferredRepresentation: fullRepresentation
+    toolTipMainText: Plasmoid.title
     toolTipSubText: fullRepresentationItem ? fullRepresentationItem.layoutNames.longName : ""
 
     fullRepresentation: KeyboardLayoutSwitcher {
@@ -26,6 +27,12 @@ PlasmoidItem {
 
         hoverEnabled: true
         Plasmoid.status: hasMultipleKeyboardLayouts ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
+
+        PlasmaCore.ToolTipArea {
+            anchors.fill: parent
+            mainText: root.toolTipMainText
+            subText: root.toolTipSubText
+        }
 
         Instantiator {
             id: actionsInstantiator
