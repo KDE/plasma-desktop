@@ -88,7 +88,7 @@ void KeyboardDaemon::configureKeyboard()
 void KeyboardDaemon::configureInput()
 {
     QStringList modules;
-    modules << QStringLiteral("kcm_mouse") << QStringLiteral("kcm_touchpad");
+    modules << QStringLiteral("kcm_mouse_init") << QStringLiteral("kcm_touchpad_init");
     QProcess::startDetached(QStringLiteral("kcminit"), modules);
 }
 
