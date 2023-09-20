@@ -8,7 +8,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.15 as Kirigami
 import QtQuick.Controls 2.11 as QQC2
-import org.kde.plasma.emoji 1.0
+import org.kde.plasma.emoji
 
 Kirigami.ScrollablePage
 {

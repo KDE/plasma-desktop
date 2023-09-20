@@ -7,7 +7,7 @@
 import QtQuick 2.11
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.6 as Kirigami
-import org.kde.plasma.emoji 1.0
+import org.kde.plasma.emoji
 
 Kirigami.ApplicationWindow
 {
@@ -40,7 +40,7 @@ Kirigami.ApplicationWindow
 
         icon.name: "document-open-recent-symbolic"
         onTriggered: {
-            window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: text, category: "", model: recentEmojiModel, showClearHistoryButton: true})
+            window.pageStack.replace("qrc:/org/kde/plasma/emoji/app/CategoryPage.qml", {title: text, category: "", model: recentEmojiModel, showClearHistoryButton: true})
         }
     }
     Kirigami.Action {
@@ -51,7 +51,7 @@ Kirigami.ApplicationWindow
         shortcut: StandardKey.Find
 
         onTriggered: {
-            window.pageStack.replace("qrc:/ui/CategoryPage.qml", {title: text, category: "", model: emoji, showSearch: true })
+            window.pageStack.replace("qrc:/org/kde/plasma/emoji/app/CategoryPage.qml", {title: text, category: "", model: emoji, showSearch: true })
         }
     }
 

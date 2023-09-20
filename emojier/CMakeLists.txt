@@ -1,12 +1,17 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"org.kde.plasma.emojier\")
 
-kconfig_add_kcfg_files(emojier_KCFG emojiersettings.kcfgc GENERATE_MOC)
+ecm_add_qml_module(EmojierDeclarativePlugin URI org.kde.plasma.emoji GENERATE_PLUGIN_SOURCE)
+target_sources(EmojierDeclarativePlugin PRIVATE
+    emojierplugin.cpp
+    emojidict.cpp
+    emojicategory.cpp
+)
 
-add_library(EmojierDeclarativePlugin SHARED emojierplugin.cpp emojidict.cpp emojicategory.cpp ${emojier_KCFG})
+kconfig_add_kcfg_files(EmojierDeclarativePlugin emojiersettings.kcfgc GENERATE_MOC)
+
 target_link_libraries(EmojierDeclarativePlugin PRIVATE Qt::Qml Qt::Gui KF6::ConfigGui KF6::I18n)
 
-install (TARGETS EmojierDeclarativePlugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/emoji)
-install (FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/emoji)
+ecm_finalize_qml_module(EmojierDeclarativePlugin)
 
 add_subdirectory(data)
 add_subdirectory(app)
