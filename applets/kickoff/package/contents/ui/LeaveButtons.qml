@@ -154,10 +154,10 @@ RowLayout {
             case PlasmaCore.Types.LeftEdge:
             case PlasmaCore.Types.RightEdge:
             case PlasmaCore.Types.TopEdge:
-                return PlasmaCore.Types.BottomPosedRightAlignedPopup;
+                return PlasmaExtras.Menu.BottomPosedRightAlignedPopup;
             case PlasmaCore.Types.BottomEdge:
             default:
-                return PlasmaCore.Types.TopPosedRightAlignedPopup;
+                return PlasmaExtras.Menu.TopPosedRightAlignedPopup;
             }
         }
     }

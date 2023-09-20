@@ -28,7 +28,7 @@ Item {
         id: menu
 
         visualParent: null
-        placement: PlasmaCore.Types.BottomPosedLeftAlignedPopup
+        placement: PlasmaExtras.Menu.BottomPosedLeftAlignedPopup
     }
 
     visible: false

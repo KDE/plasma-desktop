@@ -67,13 +67,13 @@ Item {
 
             placement: {
                 if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
-                    return PlasmaCore.Types.RightPosedTopAlignedPopup;
+                    return PlasmaExtras.Menu.RightPosedTopAlignedPopup;
                 } else if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
-                    return PlasmaCore.Types.BottomPosedLeftAlignedPopup;
+                    return PlasmaExtras.Menu.BottomPosedLeftAlignedPopup;
                 } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
-                    return PlasmaCore.Types.LeftPosedTopAlignedPopup;
+                    return PlasmaExtras.Menu.LeftPosedTopAlignedPopup;
                 } else {
-                    return PlasmaCore.Types.TopPosedLeftAlignedPopup;
+                    return PlasmaExtras.Menu.TopPosedLeftAlignedPopup;
                 }
             }
 
