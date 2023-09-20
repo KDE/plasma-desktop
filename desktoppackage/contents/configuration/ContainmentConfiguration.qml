@@ -17,8 +17,6 @@ AppletConfiguration {
     Layout.minimumHeight: Kirigami.Units.gridUnit * 30
     Layout.preferredWidth: Kirigami.Units.gridUnit * 32
     Layout.preferredHeight: Kirigami.Units.gridUnit * 36
-    Layout.maximumWidth: Plasmoid.availableScreenRect.width
-    Layout.maximumHeight: Plasmoid.availableScreenRect.height
 
 //BEGIN model
     globalConfigModel: globalContainmentConfigModel
