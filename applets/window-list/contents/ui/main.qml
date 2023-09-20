@@ -77,7 +77,7 @@ PlasmoidItem {
             Layout.fillWidth: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
             onClicked: tasksMenu.open()
-            down: pressed || tasksMenu.status === PlasmaExtras.DialogStatus.Open
+            down: pressed || tasksMenu.status === PlasmaExtras.Menu.Open
 
             Accessible.name: Plasmoid.title
             Accessible.description: toolTipSubText

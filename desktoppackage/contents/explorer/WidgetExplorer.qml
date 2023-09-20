@@ -35,8 +35,8 @@ PC3.Page {
     //therefore get deleted whilst we are still in a drag exec()
     //this is a clue to the owning dialog that hideOnWindowDeactivate should be deleted
     //See https://bugs.kde.org/show_bug.cgi?id=332733
-    property bool preventWindowHide: draggingWidget || categoriesDialog.status !== PlasmaExtras.DialogStatus.Closed
-                                  || getWidgetsDialog.status !== PlasmaExtras.DialogStatus.Closed
+    property bool preventWindowHide: draggingWidget || categoriesDialog.status !== PlasmaExtras.Menu.Closed
+                                  || getWidgetsDialog.status !== PlasmaExtras.Menu.Closed
 
     property bool outputOnly: draggingWidget
 

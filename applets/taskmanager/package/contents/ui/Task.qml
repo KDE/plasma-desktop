@@ -62,7 +62,7 @@ PlasmaCore.ToolTipArea {
     })
 
     readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
-        || (task.contextMenu && task.contextMenu.status === PlasmaExtras.DialogStatus.Open)
+        || (task.contextMenu && task.contextMenu.status === PlasmaExtras.Menu.Open)
         || (!!tasks.groupDialog && tasks.groupDialog.visualParent === task)
 
     active: (Plasmoid.configuration.showToolTips || tasks.toolTipOpenedByClick === task) && !inPopup && !tasks.groupDialog

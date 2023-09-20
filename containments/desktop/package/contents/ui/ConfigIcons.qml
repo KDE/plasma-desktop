@@ -79,7 +79,7 @@ Item {
 
                 onClicked: {
                     checked = Qt.binding(() =>
-                        iconMenu.status === PlasmaExtras.DialogStatus.Open);
+                        iconMenu.status === PlasmaExtras.Menu.Open);
 
                     iconMenu.open(0, height);
                 }

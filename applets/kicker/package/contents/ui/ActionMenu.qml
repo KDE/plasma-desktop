@@ -15,7 +15,7 @@ Item {
     property QtObject menu
     property Item visualParent
     property variant actionList
-    property bool opened: menu ? (menu.status !== PlasmaExtras.DialogStatus.Closed) : false
+    property bool opened: menu ? (menu.status !== PlasmaExtras.Menu.Closed) : false
 
     signal actionClicked(string actionId, variant actionArgument)
     signal closed

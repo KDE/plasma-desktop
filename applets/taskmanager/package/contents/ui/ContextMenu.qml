@@ -42,10 +42,10 @@ PlasmaExtras.Menu {
     minimumWidth: visualParent.width
 
     onStatusChanged: {
-        if (visualParent && get(atm.LauncherUrlWithoutIcon) != "" && status == PlasmaExtras.DialogStatus.Open) {
+        if (visualParent && get(atm.LauncherUrlWithoutIcon) != "" && status == PlasmaExtras.Menu.Open) {
             activitiesDesktopsMenu.refresh();
 
-        } else if (status == PlasmaExtras.DialogStatus.Closed) {
+        } else if (status == PlasmaExtras.Menu.Closed) {
             menu.destroy();
         }
     }
