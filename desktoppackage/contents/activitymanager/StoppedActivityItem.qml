@@ -14,7 +14,7 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcmutils  // KCMLauncher
 import org.kde.config  // KAuthorized
 
-import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
+import org.kde.plasma.activityswitcher as ActivitySwitcher
 
 import "static.js" as S
 

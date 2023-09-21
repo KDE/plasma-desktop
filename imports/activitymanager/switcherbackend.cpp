@@ -192,11 +192,11 @@ SwitcherBackend::~SwitcherBackend()
 {
 }
 
-QObject *SwitcherBackend::instance(QQmlEngine *engine, QJSEngine *scriptEngine)
+SwitcherBackend *SwitcherBackend::create(QQmlEngine *engine, QJSEngine *scriptEngine)
 {
     Q_UNUSED(scriptEngine)
     engine->addImageProvider(QStringLiteral("wallpaperthumbnail"), new ThumbnailImageProvider());
-    return new SwitcherBackend();
+    return new SwitcherBackend(nullptr);
 }
 
 void SwitcherBackend::keybdSwitchToNextActivity()

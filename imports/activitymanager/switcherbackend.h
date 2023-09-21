@@ -7,12 +7,16 @@
 #pragma once
 
 // Qt
+#include <QAbstractItemModel>
 #include <QHash>
 #include <QJSValue>
 #include <QKeySequence>
+#include <QMimeData>
 #include <QObject>
 #include <QPixmap>
 #include <QTimer>
+
+#include <qqmlregistration.h>
 
 // KDE
 #include <KActivities/Controller>
@@ -33,15 +37,18 @@ class PreviewJob;
 class SwitcherBackend : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_NAMED_ELEMENT(Backend)
+    QML_SINGLETON
 
     Q_PROPERTY(bool shouldShowSwitcher READ shouldShowSwitcher WRITE setShouldShowSwitcher NOTIFY shouldShowSwitcherChanged)
     Q_PROPERTY(bool dropEnabled READ dropEnabled CONSTANT)
 
 public:
-    explicit SwitcherBackend(QObject *parent = nullptr);
+    explicit SwitcherBackend(QObject *parent);
     ~SwitcherBackend() override;
 
-    static QObject *instance(QQmlEngine *engine, QJSEngine *scriptEngine);
+    static SwitcherBackend *create(QQmlEngine *engine, QJSEngine *scriptEngine);
 
 Q_SIGNALS:
     void showSwitchNotification(const QString &id, const QString &name, const QString &icon);

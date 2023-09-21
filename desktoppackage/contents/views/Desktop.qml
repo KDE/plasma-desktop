@@ -9,7 +9,7 @@ import QtQuick 2.15
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kwindowsystem 1.0
-import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
+import org.kde.plasma.activityswitcher as ActivitySwitcher
 import "../activitymanager"
 import "../explorer"
 import org.kde.kirigami 2.20 as Kirigami

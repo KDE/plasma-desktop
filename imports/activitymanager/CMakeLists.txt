@@ -1,16 +1,13 @@
-set (
-   activityswitcher_imports_LIB_SRCS
-   activityswitcherextensionplugin.cpp
-   switcherbackend.cpp
-   sortedactivitiesmodel.cpp
-   )
-
-add_library (activityswitcherextensionplugin SHARED ${activityswitcher_imports_LIB_SRCS})
 add_definitions(-DTRANSLATION_DOMAIN=\"plasmaactivitymanager\")
 
-target_link_libraries (
-   activityswitcherextensionplugin
+ecm_add_qml_module(activityswitcherextensionplugin URI org.kde.plasma.activityswitcher GENERATE_PLUGIN_SOURCE)
 
+target_sources(activityswitcherextensionplugin PRIVATE
+   switcherbackend.cpp
+   sortedactivitiesmodel.cpp
+)
+
+target_link_libraries(activityswitcherextensionplugin PRIVATE
    Qt::Core
    Qt::Quick
    Qt::Qml
@@ -29,10 +26,4 @@ target_link_libraries (
    PW::LibTaskManager
    )
 
-## install
-
-install (TARGETS activityswitcherextensionplugin
-         DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/activityswitcher)
-install (FILES qmldir
-         DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/activityswitcher)
-
+ecm_finalize_qml_module(activityswitcherextensionplugin)
