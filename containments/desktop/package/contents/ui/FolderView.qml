@@ -212,6 +212,10 @@ FocusScope {
         }
     }
 
+    Folder.EventGenerator {
+        id: eventGenerator
+    }
+
     MouseEventListener {
         id: listener
 
@@ -377,7 +381,7 @@ FocusScope {
 
             if (!hoveredItem || hoveredItem.blank || gridView.currentIndex === -1 || gridView.ctrlPressed || gridView.shiftPressed) {
                 // Bug 357367: Replay mouse event, so containment actions assigned to left mouse button work.
-                eventGenerator.sendMouseEvent(root, EventGenerator.MouseButtonPress, mouse.x, mouse.y, mouse.button, mouse.buttons, mouse.modifiers);
+                eventGenerator.sendMouseEvent(root, Folder.EventGenerator.MouseButtonPress, mouse.x, mouse.y, mouse.button, mouse.buttons, mouse.modifiers);
                 return;
             }
 

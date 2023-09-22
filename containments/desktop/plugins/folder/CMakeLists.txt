@@ -23,6 +23,7 @@ set(folderplugin_SRCS
     shortcut.cpp
     screenmapper.cpp
     removeaction.cpp
+    eventgenerator.cpp
 )
 
 install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/folder)

@@ -287,11 +287,6 @@ ContainmentItem {
             CompactRepresentation { folderView: folderViewLayer.view }
         }
 
-        // Can be removed?
-        KQuickControlsAddons.EventGenerator {
-            id: eventGenerator
-        }
-
         Connections {
             target: Plasmoid.containment.corona
             ignoreUnknownSignals: true

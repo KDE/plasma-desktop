@@ -7,6 +7,7 @@
 #include "folderplugin.h"
 #include "applauncher.h"
 #include "directorypicker.h"
+#include "eventgenerator.h"
 #include "foldermodel.h"
 #include "itemviewadapter.h"
 #include "labelgenerator.h"
@@ -55,5 +56,6 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<ViewPropertiesMenu>(uri, 0, 1, "ViewPropertiesMenu");
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
     qmlRegisterType<ShortCut>(uri, 0, 1, "ShortCut");
+    qmlRegisterType<EventGenerator>(uri, 0, 1, "EventGenerator");
     qmlRegisterSingletonType<AppLauncher>(uri, 0, 1, "AppLauncher", appLauncherSingletonProvider);
 }
