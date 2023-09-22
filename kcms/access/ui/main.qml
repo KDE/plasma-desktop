@@ -47,7 +47,7 @@ KCM.ScrollViewKCM {
             url: "MouseNavigation.qml"
         },
         {
-            icon: "audio-input-microphone",
+            icon: "audio-input-microphone-symbolic",
             title: i18nc("@title:window System mouse navigation", "Screen Reader"),
             defaultnessKey: "screenReaderIsDefaults",
             url: "ScreenReader.qml"
