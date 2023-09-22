@@ -10,128 +10,134 @@ import QtQuick.Controls 2.12 as QQC2
 import org.kde.kcmutils as KCM
 import org.kde.kirigami 2.3 as Kirigami
 
-Kirigami.FormLayout {
-    QQC2.CheckBox {
-        id: mouseKeys
+Kirigami.Page {
+    title: i18nc("@title:window System mouse navigation", "Mouse Navigation")
 
-        Kirigami.FormData.label:  i18n("Use number pad to move cursor:")
-        text: i18n("Enable")
+    Kirigami.FormLayout {
+        anchors.horizontalCenter: parent.horizontalCenter
 
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "MouseKeys"
+        QQC2.CheckBox {
+            id: mouseKeys
+
+            Kirigami.FormData.label: i18n("Use number pad to move cursor:")
+            text: i18n("Enable")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.mouseSettings
+                settingName: "MouseKeys"
+            }
+
+            checked: kcm.mouseSettings.mouseKeys
+            onToggled: kcm.mouseSettings.mouseKeys = checked
+        }
+        QQC2.CheckBox {
+            Kirigami.FormData.label: i18n("When a gesture is used:")
+            text: i18n("Display a confirmation dialog")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.mouseSettings
+                settingName: "GestureConfirmation"
+            }
+
+            checked: kcm.mouseSettings.gestureConfirmation
+            onToggled: kcm.mouseSettings.gestureConfirmation = checked
+        }
+        QQC2.CheckBox {
+            text: i18n("Ring the System Bell")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.mouseSettings
+                settingName: "Gestures"
+            }
+
+            checked: kcm.mouseSettings.gestures
+            onToggled: kcm.mouseSettings.gestures = checked
+        }
+        QQC2.CheckBox {
+            text: i18n("Show a notification")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.mouseSettings
+                settingName: "KeyboardNotifyAccess"
+            }
+
+            checked: kcm.mouseSettings.keyboardNotifyAccess
+            onToggled: kcm.mouseSettings.keyboardNotifyAccess = checked
         }
 
-        checked: kcm.mouseSettings.mouseKeys
-        onToggled: kcm.mouseSettings.mouseKeys = checked
-    }
-    QQC2.CheckBox {
-        Kirigami.FormData.label: i18n("When a gesture is used:")
-        text: i18n("Display a confirmation dialog")
-
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "GestureConfirmation"
+        Item {
+            Kirigami.FormData.isSection: true
         }
 
-        checked: kcm.mouseSettings.gestureConfirmation
-        onToggled: kcm.mouseSettings.gestureConfirmation = checked
-    }
-    QQC2.CheckBox {
-        text: i18n("Ring the System Bell")
+        QQC2.SpinBox {
+            Kirigami.FormData.label: i18n("Acceleration delay:")
 
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "Gestures"
+            from: 1
+            to: 490
+
+            KCM.SettingStateBinding {
+                configObject: kcm.mouseSettings
+                settingName: "AccelerationDelay"
+            }
+
+            value: kcm.mouseSettings.accelerationDelay
+            onValueChanged: kcm.mouseSettings.accelerationDelay = value
         }
+        QQC2.SpinBox {
+            Kirigami.FormData.label: i18n("Repeat interval:")
 
-        checked: kcm.mouseSettings.gestures
-        onToggled: kcm.mouseSettings.gestures = checked
-    }
-    QQC2.CheckBox {
-        text: i18n("Show a notification")
+            from: 1
+            to: 130
 
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "KeyboardNotifyAccess"
+            KCM.SettingStateBinding {
+                configObject: kcm.mouseSettings
+                settingName: "RepetitionInterval"
+            }
+
+            value: kcm.mouseSettings.repetitionInterval
+            onValueChanged: kcm.mouseSettings.repetitionInterval = value
         }
+        QQC2.SpinBox {
+            Kirigami.FormData.label: i18n("Acceleration time:")
 
-        checked: kcm.mouseSettings.keyboardNotifyAccess
-        onToggled: kcm.mouseSettings.keyboardNotifyAccess = checked
-    }
+            from: 1
+            to: 100
 
-    Item {
-        Kirigami.FormData.isSection: true
-    }
+            KCM.SettingStateBinding {
+                configObject: kcm.mouseSettings
+                settingName: "AccelerationTime"
+            }
 
-    QQC2.SpinBox {
-        Kirigami.FormData.label: i18n("Acceleration delay:")
-
-        from: 1
-        to: 490
-
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "AccelerationDelay"
+            value: kcm.mouseSettings.accelerationTime
+            onValueChanged: kcm.mouseSettings.accelerationTime = value
         }
+        QQC2.SpinBox {
+            Kirigami.FormData.label: i18n("Maximum speed:")
 
-        value: kcm.mouseSettings.accelerationDelay
-        onValueChanged: kcm.mouseSettings.accelerationDelay = value
-    }
-    QQC2.SpinBox {
-        Kirigami.FormData.label: i18n("Repeat interval:")
+            from: 1
+            to: 100
 
-        from: 1
-        to: 130
+            KCM.SettingStateBinding {
+                configObject: kcm.mouseSettings
+                settingName: "MaxSpeed"
+            }
 
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "RepetitionInterval"
+            value: kcm.mouseSettings.maxSpeed
+            onValueChanged: kcm.mouseSettings.maxSpeed = value
         }
+        QQC2.SpinBox {
+            Kirigami.FormData.label: i18n("Pointer acceleration:")
 
-        value: kcm.mouseSettings.repetitionInterval
-        onValueChanged: kcm.mouseSettings.repetitionInterval = value
-    }
-    QQC2.SpinBox {
-        Kirigami.FormData.label: i18n("Acceleration time:")
+            from: -1000
+            to: 5000
 
-        from: 1
-        to: 100
+            KCM.SettingStateBinding {
+                configObject: kcm.mouseSettings
+                settingName: "ProfileCurve"
+            }
 
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "AccelerationTime"
+            value: kcm.mouseSettings.profileCurve
+            onValueChanged: kcm.mouseSettings.profileCurve = value
         }
-
-        value: kcm.mouseSettings.accelerationTime
-        onValueChanged: kcm.mouseSettings.accelerationTime = value
-    }
-    QQC2.SpinBox {
-        Kirigami.FormData.label:  i18n("Maximum speed:")
-
-        from: 1
-        to: 100
-
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "MaxSpeed"
-        }
-
-        value: kcm.mouseSettings.maxSpeed
-        onValueChanged: kcm.mouseSettings.maxSpeed = value
-    }
-    QQC2.SpinBox {
-        Kirigami.FormData.label: i18n("Pointer acceleration:")
-
-        from: -1000
-        to: 5000
-
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "ProfileCurve"
-        }
-
-        value: kcm.mouseSettings.profileCurve
-        onValueChanged: kcm.mouseSettings.profileCurve = value
     }
 }
