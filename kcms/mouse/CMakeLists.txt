@@ -45,7 +45,7 @@ if (BUILD_KCM_MOUSE_X11)
         list(APPEND MISSING_DEPS "X11_Xinput")
     endif()
     if (MISSING_DEPS)
-        message(FATAL_ERROR "Missing X11 dependencies for kcm_mouse: ${MISSING_DEPS}. Install dependencies or set CMake option -DBUILD_KCM_TOUCHPAD_X11=OFF.")
+        message(FATAL_ERROR "Missing X11 dependencies for kcm_mouse: ${MISSING_DEPS}. Install dependencies or set CMake option -DBUILD_KCM_MOUSE_X11=OFF.")
     endif()
 
     include(backends/x11.cmake)
