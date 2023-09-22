@@ -81,7 +81,7 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18nc("@action:inmenu", "Trash Settings…")
             icon.name: "configure-symbolic"
-            visible: KConfig.KAUthorized.authorizeControlModule("kcm_trash")
+            visible: KConfig.KAuthorized.authorizeControlModule("kcm_trash")
             onTriggered: KCM.KCMLauncher.open("kcm_trash")
         }
     ]
