@@ -9,8 +9,6 @@
 
 #include "componentchooserbrowser.h"
 
-#include "browser_settings.h"
-
 ComponentChooserBrowser::ComponentChooserBrowser(QObject *parent)
     : ComponentChooser(parent, QStringLiteral("x-scheme-handler/http"), QString(), QStringLiteral("org.kde.falkon.desktop"), i18n("Select default browser"))
 {
@@ -26,10 +24,5 @@ QStringList ComponentChooserBrowser::mimeTypes() const
 void ComponentChooserBrowser::save()
 {
     const auto storageId = m_model->data(m_model->index(m_index, 0), ApplicationModel::StorageId).toString();
-
-    BrowserSettings browserSettings;
-    browserSettings.setBrowserApplication(storageId);
-    browserSettings.save();
-
     saveMimeTypeAssociations(storageId, browserMimetypes);
 }

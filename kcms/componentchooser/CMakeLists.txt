@@ -21,7 +21,6 @@ target_sources(kcm_componentchooser PRIVATE
     components/componentchoosertel.cpp
 )
 
-kconfig_add_kcfg_files(kcm_componentchooser browser_settings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(kcm_componentchooser terminal_settings.kcfgc GENERATE_MOC)
 
 target_link_libraries(kcm_componentchooser PRIVATE
