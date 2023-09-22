@@ -159,6 +159,11 @@ KAccessApp::~KAccessApp()
 void KAccessApp::newInstance()
 {
     KSharedConfig::openConfig()->reparseConfiguration();
+    m_bellSettings.load();
+    m_keyboardSettings.load();
+    m_keyboardFiltersSettings.load();
+    m_mouseSettings.load();
+    m_screenReaderSettings.load();
     readSettings();
 }
 
