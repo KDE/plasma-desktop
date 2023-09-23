@@ -133,6 +133,11 @@ void RecentFilesKcm::load()
     d->blacklistedApplicationsModel->load();
 
     KCModule::load();
+
+    auto wtr = d->pluginConfig->whatToRemember();
+    d->radioRememberSpecificApplications->setChecked(wtr == SpecificApplications);
+    d->radioDontRememberApplications->setChecked(wtr == NoApplications);
+    d->radioRememberAllApplications->setChecked(wtr == AllApplications);
 }
 
 void RecentFilesKcm::whatToRememberWidgetChanged(bool)
