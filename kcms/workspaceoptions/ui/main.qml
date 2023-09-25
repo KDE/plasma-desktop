@@ -119,49 +119,54 @@ KCM.SimpleKCM {
 
         QQC2.ButtonGroup { id: singleClickGroup }
 
-        QQC2.RadioButton {
-            Kirigami.FormData.label: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
-            text: i18nc("part of a sentence: 'Clicking files or folders selects them'", "Selects them")
-            checked: !kcm.globalsSettings.singleClick
-            onToggled: kcm.globalsSettings.singleClick = false
-            QQC2.ButtonGroup.group: singleClickGroup
+        ColumnLayout {
+            spacing: 0
 
-            KCM.SettingStateBinding {
-                configObject: kcm.globalsSettings
-                settingName: "singleClick"
-                extraEnabledConditions: singleClick.enabled
+            QQC2.RadioButton {
+                Kirigami.FormData.label: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
+                text: i18nc("part of a sentence: 'Clicking files or folders selects them'", "Selects them")
+                checked: !kcm.globalsSettings.singleClick
+                onToggled: kcm.globalsSettings.singleClick = false
+                QQC2.ButtonGroup.group: singleClickGroup
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.globalsSettings
+                    settingName: "singleClick"
+                    extraEnabledConditions: singleClick.enabled
+                }
+            }
+            QQC2.Label {
+                Layout.fillWidth: true
+                leftPadding: singleClick.indicator.width
+                text: i18n("Open by double-clicking instead")
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
             }
         }
-        QQC2.Label {
+
+        ColumnLayout {
             Layout.fillWidth: true
-            leftPadding: singleClick.indicator.width
-            text: i18n("Open by double-clicking instead")
-            elide: Text.ElideRight
-            font: Kirigami.Theme.smallFont
-        }
+            spacing: 0
 
-        Item {
-            Kirigami.FormData.isSection: false
-        }
+            QQC2.RadioButton {
+                id: singleClick
+                text: i18nc("part of a sentence: 'Clicking files or folders opens them'", "Opens them")
+                checked: kcm.globalsSettings.singleClick
+                onToggled: kcm.globalsSettings.singleClick = true
+                QQC2.ButtonGroup.group: singleClickGroup
 
-        QQC2.RadioButton {
-            id: singleClick
-            text: i18nc("part of a sentence: 'Clicking files or folders opens them'", "Opens them")
-            checked: kcm.globalsSettings.singleClick
-            onToggled: kcm.globalsSettings.singleClick = true
-            QQC2.ButtonGroup.group: singleClickGroup
-
-            KCM.SettingStateBinding {
-                configObject: kcm.globalsSettings
-                settingName: "singleClick"
+                KCM.SettingStateBinding {
+                    configObject: kcm.globalsSettings
+                    settingName: "singleClick"
+                }
             }
-        }
-        QQC2.Label {
-            Layout.fillWidth: true
-            leftPadding: singleClick.indicator.width
-            text: i18n("Select by clicking on item's selection marker")
-            elide: Text.ElideRight
-            font: Kirigami.Theme.smallFont
+            QQC2.Label {
+                Layout.fillWidth: true
+                leftPadding: singleClick.indicator.width
+                text: i18n("Select by clicking on item's selection marker")
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+            }
         }
 
         Item {
@@ -186,28 +191,29 @@ KCM.SimpleKCM {
             }
         }
 
-        Item {
-            Kirigami.FormData.isSection: false
-        }
-
-        QQC2.RadioButton {
-            id: scrollbarLeftClickNavigatesByPage
-            text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one page up or down'", "Scrolls one page up or down")
-            checked: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
-            onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = true
-            QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
-
-            KCM.SettingStateBinding {
-                configObject: kcm.globalsSettings
-                settingName: "scrollbarLeftClickNavigatesByPage"
-            }
-        }
-        QQC2.Label {
+        ColumnLayout {
             Layout.fillWidth: true
-            leftPadding: scrollbarLeftClickNavigatesByPage.indicator.width
-            text: i18n("Middle-click to scroll to clicked location")
-            elide: Text.ElideRight
-            font: Kirigami.Theme.smallFont
+            spacing: 0
+
+            QQC2.RadioButton {
+                id: scrollbarLeftClickNavigatesByPage
+                text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one page up or down'", "Scrolls one page up or down")
+                checked: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
+                onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = true
+                QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.globalsSettings
+                    settingName: "scrollbarLeftClickNavigatesByPage"
+                }
+            }
+            QQC2.Label {
+                Layout.fillWidth: true
+                leftPadding: scrollbarLeftClickNavigatesByPage.indicator.width
+                text: i18n("Middle-click to scroll to clicked location")
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+            }
         }
 
         Item {
@@ -273,31 +279,37 @@ KCM.SimpleKCM {
                 settingName: "tabletMode"
             }
         }
-        QQC2.RadioButton {
-            id: touchModeAlwaysOffRadioButton
-            visible: KWindowSystem.isPlatformWayland
-            text: i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
-            checked: kcm.kwinSettings.tabletMode === "off"
-            onToggled: {
-                if (checked) {
-                    kcm.kwinSettings.tabletMode = "off"
+
+        ColumnLayout {
+            Layout.fillWidth: true
+            spacing: 0
+
+            QQC2.RadioButton {
+                id: touchModeAlwaysOffRadioButton
+                visible: KWindowSystem.isPlatformWayland
+                text: i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
+                checked: kcm.kwinSettings.tabletMode === "off"
+                onToggled: {
+                    if (checked) {
+                        kcm.kwinSettings.tabletMode = "off"
+                    }
+                }
+                QQC2.ButtonGroup.group: tabletModeBehaviorGroup
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.kwinSettings
+                    settingName: "tabletMode"
                 }
             }
-            QQC2.ButtonGroup.group: tabletModeBehaviorGroup
-
-            KCM.SettingStateBinding {
-                configObject: kcm.kwinSettings
-                settingName: "tabletMode"
+            QQC2.Label {
+                Layout.fillWidth: true
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 20
+                leftPadding: touchModeAlwaysOffRadioButton.indicator.width
+                text: i18n("In Touch Mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+                wrapMode: Text.WordWrap
             }
-        }
-        QQC2.Label {
-            Layout.fillWidth: true
-            Layout.preferredWidth: Kirigami.Units.gridUnit * 20
-            leftPadding: touchModeAlwaysOffRadioButton.indicator.width
-            text: i18n("In Touch Mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
-            elide: Text.ElideRight
-            font: Kirigami.Theme.smallFont
-            wrapMode: Text.WordWrap
         }
 
         // There is no label for what middle-clicking does when using the
