@@ -25,7 +25,7 @@ PlasmoidItem {
     Layout.preferredHeight: Layout.minimumHeight
     Layout.maximumHeight: Layout.minimumHeight
 
-    Plasmoid.constraintHints: PlasmaCore.Types.MarginAreasSeparator
+    Plasmoid.constraintHints: Plasmoid.MarginAreasSeparator
     preferredRepresentation: fullRepresentation
 
     Loader {

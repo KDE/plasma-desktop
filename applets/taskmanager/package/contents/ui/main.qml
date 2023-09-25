@@ -48,7 +48,7 @@ PlasmoidItem {
 
     preferredRepresentation: fullRepresentation
 
-    Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
+    Plasmoid.constraintHints: Plasmoid.CanFillArea
 
     Plasmoid.onUserConfiguringChanged: {
         if (Plasmoid.userConfiguring && !!tasks.groupDialog) {

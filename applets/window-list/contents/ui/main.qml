@@ -15,7 +15,7 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.taskmanager 0.1 as TaskManager
 
 PlasmoidItem {
-    Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
+    Plasmoid.constraintHints: Plasmoid.CanFillArea
     compactRepresentation: windowListButton
     fullRepresentation: windowListView
     switchWidth: Kirigami.Units.gridUnit * 8
