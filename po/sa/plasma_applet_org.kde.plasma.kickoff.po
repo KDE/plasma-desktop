@@ -1,67 +1,63 @@
-# Translation of plasma_applet_org.kde.plasma.kickoff.po to Catalan
-# Copyright (C) 2014-2023 This_file_is_part_of_KDE
-# This file is distributed under the license LGPL version 2.1 or
-# version 3 or later versions approved by the membership of KDE e.V.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2020, 2022.
-# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
-# Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-13 02:06+0000\n"
-"PO-Revision-Date: 2023-09-24 17:18+0200\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
-"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca\n"
+"PO-Revision-Date: 2023-09-21 23:24+0530\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "General"
-msgstr "General"
+msgstr "सर्वत्रगत"
 
 #: package/contents/ui/code/tools.js:49
 #, kde-format
 msgid "Remove from Favorites"
-msgstr "Elimina de les preferides"
+msgstr "प्रियतः निष्कासयन्तु"
 
 #: package/contents/ui/code/tools.js:53
 #, kde-format
 msgid "Add to Favorites"
-msgstr "Afegeix a les preferides"
+msgstr "प्रियतमेषु योजयन्तु"
 
 #: package/contents/ui/code/tools.js:77
 #, kde-format
 msgid "On All Activities"
-msgstr "A totes les activitats"
+msgstr "सर्वेषु क्रियाकलापेषु"
 
 #: package/contents/ui/code/tools.js:127
 #, kde-format
 msgid "On the Current Activity"
-msgstr "A l'activitat actual"
+msgstr "वर्तमान क्रियाकलापस्य विषये"
 
 #: package/contents/ui/code/tools.js:141
 #, kde-format
 msgid "Show in Favorites"
-msgstr "Mostra als preferits"
+msgstr "प्रियाः इत्यत्र दर्शयतु"
 
 #: package/contents/ui/ConfigGeneral.qml:41
 #, kde-format
 msgid "Icon:"
-msgstr "Icona:"
+msgstr "चिह्नम् :"
 
 #: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr "Canvia la icona del llançador d'aplicacions"
+msgstr "अनुप्रयोगप्रक्षेपकस्य चिह्नं परिवर्तयन्तु"
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -70,228 +66,228 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
-"La icona actual és %1. Feu-hi clic per a obrir un menú per a canviar la "
-"icona actual o restablir la icona predeterminada."
+"वर्तमान चिह्नं %1 अस्ति । वर्तमानचिह्नं परिवर्तयितुं अथवा पूर्वनिर्धारितचिह्नं प्रति "
+"पुनःस्थापयितुं विकल्पसूचि उद्घाटयितुं नोदनम् कुर्वन्तु ।."
 
 #: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr "El nom de la icona és «%1»"
+msgstr "चिह्नस्य नाम \"%1\" अस्ति ।"
 
 #: package/contents/ui/ConfigGeneral.qml:85
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Trieu…"
+msgstr "चिनुत…"
 
 #: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr "Trieu una icona per al llançador d'aplicacions"
+msgstr "अनुप्रयोगप्रक्षेपकस्य कृते एकं चिह्नं चिनोतु"
 
 #: package/contents/ui/ConfigGeneral.qml:91
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr "Restableix a la icona predeterminada"
+msgstr "पूर्वनिर्धारितं चिह्नं प्रति पुनः निरूपयतु"
 
 #: package/contents/ui/ConfigGeneral.qml:97
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr "Elimina la icona"
+msgstr "चिह्नं निष्कासयन्तु"
 
 #: package/contents/ui/ConfigGeneral.qml:108
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr "Etiqueta de text:"
+msgstr "पाठ्य नामपत्र:"
 
 #: package/contents/ui/ConfigGeneral.qml:110
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr "Teclegeu aquí per a afegir una etiqueta de text"
+msgstr "पाठ्य नामपत्रं योजयितुं अत्र लिखन्तु"
 
 #: package/contents/ui/ConfigGeneral.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr "Inicialitza l'etiqueta del menú"
+msgstr "विकल्पसूचि नामपत्र पुनः निरूपयतु"
 
 #: package/contents/ui/ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr "No es pot definir una etiqueta de text quan el plafó és vertical."
+msgstr "यदा पटलः लम्बवत् भवति तदा पाठ्य नामपत्रं निरूपयतु न शक्यते ।."
 
 #: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgctxt "General options"
 msgid "General:"
-msgstr "General:"
+msgstr "सर्वत्रगत:"
 
 #: package/contents/ui/ConfigGeneral.qml:151
 #, kde-format
 msgid "Always sort applications alphabetically"
-msgstr "Ordena alfabèticament les aplicacions sempre"
+msgstr "अनुप्रयोगान् सर्वदा वर्णमालानुसारं क्रमयन्तु"
 
 #: package/contents/ui/ConfigGeneral.qml:156
 #, kde-format
 msgid "Use compact list item style"
-msgstr "Usa un estil compacte d'elements de llista"
+msgstr "संकुचितसूचीवस्तुशैल्याः उपयोगं कुर्वन्तु"
 
 #: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr "Desactivat automàticament en el mode tàctil"
+msgstr "स्पर्शविधौ स्थित्वा स्वयमेव अक्षमम्"
 
 #: package/contents/ui/ConfigGeneral.qml:171
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr "Configura els connectors de cerca habilitats…"
+msgstr "सक्षमान् अन्वेषणप्लगिन् विन्यस्तं कुर्वन्तु…"
 
 #: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgid "Sidebar position:"
-msgstr "Posició de la barra lateral:"
+msgstr "पार्श्वपट्टिकायाः स्थितिः :"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Right"
-msgstr "Dreta"
+msgstr "दक्षिणः"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Left"
-msgstr "Esquerra"
+msgstr "वामः"
 
 #: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format
 msgid "Show favorites:"
-msgstr "Mostra els preferits:"
+msgstr "प्रियं दर्शयतु :"
 
 #: package/contents/ui/ConfigGeneral.qml:199
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
-msgstr "En una quadrícula"
+msgstr "रेखागणे"
 
 #: package/contents/ui/ConfigGeneral.qml:207
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
-msgstr "En una llista"
+msgstr "एकस्मिन् सूचीयां"
 
 #: package/contents/ui/ConfigGeneral.qml:215
 #, kde-format
 msgid "Show other applications:"
-msgstr "Mostra altres aplicacions:"
+msgstr "अन्ये अनुप्रयोगाः दर्शयन्तु :"
 
 #: package/contents/ui/ConfigGeneral.qml:216
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
-msgstr "En una quadrícula"
+msgstr "रेखागणे"
 
 #: package/contents/ui/ConfigGeneral.qml:224
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
-msgstr "En una llista"
+msgstr "एकस्मिन् सूचीयां"
 
 #: package/contents/ui/ConfigGeneral.qml:236
 #, kde-format
 msgid "Show buttons for:"
-msgstr "Mostra els botons per a:"
+msgstr "कृते गण्ड दर्शयतु:"
 
 #: package/contents/ui/ConfigGeneral.qml:237
 #: package/contents/ui/LeaveButtons.qml:121
 #, kde-format
 msgid "Power"
-msgstr "Aturada"
+msgstr "विद्युत्"
 
 #: package/contents/ui/ConfigGeneral.qml:246
 #, kde-format
 msgid "Session"
-msgstr "Sessió"
+msgstr "सत्र"
 
 #: package/contents/ui/ConfigGeneral.qml:255
 #, kde-format
 msgid "Power and session"
-msgstr "Aturada i sessió"
+msgstr "विद्युत्ः सत्रं च"
 
 #: package/contents/ui/ConfigGeneral.qml:264
 #, kde-format
 msgid "Show action button captions"
-msgstr "Mostra les llegendes dels botons d'acció"
+msgstr "क्रिया गण्डस्य शीर्षकं दर्शयतु"
 
 #: package/contents/ui/Footer.qml:97
 #, kde-format
 msgid "Applications"
-msgstr "Aplicacions"
+msgstr "अनुप्रयोगाः"
 
 #: package/contents/ui/Footer.qml:112
 #, kde-format
 msgid "Places"
-msgstr "Llocs"
+msgstr "स्थानाः"
 
 #: package/contents/ui/FullRepresentation.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr "Sense coincidències"
+msgstr "न मेलनं भवति"
 
 #: package/contents/ui/Header.qml:80
 #, kde-format
 msgid "Open user settings"
-msgstr "Obre la configuració de l'usuari"
+msgstr "उपयोक्तृसमायोजनानि उद्घाटयन्तु"
 
 #: package/contents/ui/Header.qml:229
 #, kde-format
 msgid "Keep Open"
-msgstr "Mantén oberta"
+msgstr "उद्घाटितं भवतु"
 
 #: package/contents/ui/Kickoff.qml:314
 #, kde-format
 msgid "Edit Applications…"
-msgstr "Edita les aplicacions…"
+msgstr "अनुप्रयोगाः सम्पादयतु…"
 
 #: package/contents/ui/KickoffGridView.qml:89
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
-msgstr "Quadrícula amb %1 files, %2 columnes"
+msgstr "%1 पङ्क्तयः, %2 स्तम्भाः च सह जालम्"
 
 #: package/contents/ui/LeaveButtons.qml:121
 #, kde-format
 msgid "Leave"
-msgstr "Surt"
+msgstr "त्यजतु"
 
 #: package/contents/ui/LeaveButtons.qml:121
 #, kde-format
 msgid "More"
-msgstr "Més"
+msgstr "अधिकः"
 
 #: package/contents/ui/PlacesPage.qml:48
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
-msgstr "Ordinador"
+msgstr "सङ्गणक्"
 
 #: package/contents/ui/PlacesPage.qml:49
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
-msgstr "Historial"
+msgstr "इतिहासः"
 
 #: package/contents/ui/PlacesPage.qml:50
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
-msgstr "Usats amb freqüència"
+msgstr "बहुधा प्रयुक्तम्"
