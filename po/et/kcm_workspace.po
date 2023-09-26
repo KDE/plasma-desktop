@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-09-26 01:47+0000\n"
 "PO-Revision-Date: 2022-11-14 01:35+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -64,41 +64,41 @@ msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Silmapilkne"
 
-#: ui/main.qml:123
+#: ui/main.qml:126
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Ühekordne klõps failil või kataloogil:"
 
-#: ui/main.qml:124
+#: ui/main.qml:127
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Valib selle"
 
-#: ui/main.qml:138
+#: ui/main.qml:141
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Avamiseks tuleb teha topeltklõps"
 
-#: ui/main.qml:149
+#: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Avab selle"
 
-#: ui/main.qml:162
+#: ui/main.qml:166
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Valimine klõpsuga elemendi valikumärgisele"
 
-#: ui/main.qml:176
+#: ui/main.qml:181
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Klõps kerimisribal:"
 
-#: ui/main.qml:177
+#: ui/main.qml:182
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -106,7 +106,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Kerib klõpsatud asukohta"
 
-#: ui/main.qml:195
+#: ui/main.qml:200
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -114,12 +114,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Kerib ühe lehe võrra üles või alla"
 
-#: ui/main.qml:208
+#: ui/main.qml:213
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Keskklõps kerib klõpsatud asukohta"
 
-#: ui/main.qml:220
+#: ui/main.qml:226
 #, fuzzy, kde-format
 #| msgid "Middle Click:"
 msgctxt ""
@@ -127,7 +127,7 @@ msgctxt ""
 msgid "Middle Click:"
 msgstr "Keskklõps:"
 
-#: ui/main.qml:222
+#: ui/main.qml:228
 #, fuzzy, kde-format
 #| msgid "Paste selected text"
 msgctxt ""
@@ -135,24 +135,24 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "Asetab valitud teksti"
 
-#: ui/main.qml:239
+#: ui/main.qml:245
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Puuterežiim:"
 
-#: ui/main.qml:241
+#: ui/main.qml:247
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Lülitatakse automaatselt"
 
-#: ui/main.qml:241 ui/main.qml:279
+#: ui/main.qml:247 ui/main.qml:290
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Püsivalt välja lülitatud"
 
-#: ui/main.qml:257
+#: ui/main.qml:263
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -163,13 +163,13 @@ msgstr ""
 "tuvastatakse hiire ja puutepadja puudumine, näiteks hübriidarvuti "
 "klaviatuuri ümberpööramisel või eemaldamisel."
 
-#: ui/main.qml:262
+#: ui/main.qml:268
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Püsivalt sisse lülitatud"
 
-#: ui/main.qml:297
+#: ui/main.qml:308
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
