@@ -1236,6 +1236,10 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
      */
     connect(dropJob, &KIO::DropJob::copyJobStarted, this, [this, dropPos, dropTargetUrl](KIO::CopyJob *copyJob) {
         auto map = [this, dropPos, dropTargetUrl](const QUrl &targetUrl) {
+            // KIO::CopyJob::copyingDone is emitted recursively, ignore everything not directly in the target folder
+            if ((dropTargetUrl.path() + QStringLiteral("/") + targetUrl.fileName()) != targetUrl.path()) {
+                return;
+            }
             m_dropTargetPositions.insert(targetUrl.fileName(), dropPos);
             m_dropTargetPositionsCleanup->start();
 
