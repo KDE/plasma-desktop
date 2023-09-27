@@ -88,6 +88,6 @@ KCM.ScrollViewKCM {
     Component.onCompleted: {
         kcm.push("Bell.qml");
         listView.currentIndex = 0;
-        kcm.columnWidth = Kirigami.Units.gridUnit * 12;
+        kcm.columnWidth = Kirigami.Units.gridUnit * 10;
     }
 }
