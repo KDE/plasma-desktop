@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:55+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2023-02-03 19:41+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -39,18 +39,12 @@ msgstr ""
 msgid "Other…"
 msgstr "Autre..."
 
-#. i18n: ectx: label, entry (browserApplication), group (General)
-#: browser_settings.kcfg:9
-#, kde-format
-msgid "Default web browser"
-msgstr "Navigateur Internet par défaut"
-
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
 msgstr "Sélectionner votre gestionnaire d'archive par défaut"
 
-#: components/componentchooserbrowser.cpp:15
+#: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
 msgstr "Sélectionner le navigateur par défaut"
@@ -243,6 +237,9 @@ msgstr "Gestionnaire d'archives :"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Carte :"
+
+#~ msgid "Default web browser"
+#~ msgstr "Navigateur Internet par défaut"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

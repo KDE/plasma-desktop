@@ -1,7 +1,7 @@
 # translation of kcmcomponentchooser.po to Slovenian
 # Translation of kcmcomponentchooser.po to Slovenian
 # SLOVENIAN TRANSLATION OF KDEBASE.
-# $Id: kcm_componentchooser.po 1660270 2023-09-16 02:11:06Z scripty $
+# $Id: kcm_componentchooser.po 1661106 2023-09-28 02:01:52Z scripty $
 # $Source$
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:55+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2023-02-04 09:01+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -33,18 +33,12 @@ msgstr ""
 msgid "Other…"
 msgstr "Ostalo…"
 
-#. i18n: ectx: label, entry (browserApplication), group (General)
-#: browser_settings.kcfg:9
-#, kde-format
-msgid "Default web browser"
-msgstr "Privzeti spletni brskalnik"
-
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
 msgstr "Izberi privzetega upravljalnika arhivov"
 
-#: components/componentchooserbrowser.cpp:15
+#: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
 msgstr "Izberi privzetega spletnega brskalnika"
@@ -233,6 +227,9 @@ msgstr "Upravljalnik arhivov:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapa:"
+
+#~ msgid "Default web browser"
+#~ msgstr "Privzeti spletni brskalnik"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

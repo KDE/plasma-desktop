@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:55+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2023-06-01 18:38+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -26,18 +26,12 @@ msgstr ""
 msgid "Other…"
 msgstr "Alia…"
 
-#. i18n: ectx: label, entry (browserApplication), group (General)
-#: browser_settings.kcfg:9
-#, kde-format
-msgid "Default web browser"
-msgstr "Defaŭlta retumilo"
-
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
 msgstr "Elekti defaŭltan arkivmastrumilon"
 
-#: components/componentchooserbrowser.cpp:15
+#: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
 msgstr "Elekti defaŭltan retumilon"
@@ -226,3 +220,6 @@ msgstr "Arkivmastrumilo:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapo:"
+
+#~ msgid "Default web browser"
+#~ msgstr "Defaŭlta retumilo"

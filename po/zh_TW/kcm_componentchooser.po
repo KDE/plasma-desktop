@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:55+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2023-02-07 23:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -30,18 +30,12 @@ msgstr ""
 msgid "Other…"
 msgstr "其他…"
 
-#. i18n: ectx: label, entry (browserApplication), group (General)
-#: browser_settings.kcfg:9
-#, kde-format
-msgid "Default web browser"
-msgstr "預設網頁瀏覽器"
-
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
 msgstr "選擇預設封存檔管理器"
 
-#: components/componentchooserbrowser.cpp:15
+#: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
 msgstr "選擇預設瀏覽器"
@@ -228,6 +222,9 @@ msgstr "封存檔管理器："
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "地圖："
+
+#~ msgid "Default web browser"
+#~ msgstr "預設網頁瀏覽器"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

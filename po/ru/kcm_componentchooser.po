@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwincompositing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:55+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2023-02-17 13:22+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -32,18 +32,12 @@ msgstr ""
 msgid "Other…"
 msgstr "Другое..."
 
-#. i18n: ectx: label, entry (browserApplication), group (General)
-#: browser_settings.kcfg:9
-#, kde-format
-msgid "Default web browser"
-msgstr "Браузер по умолчанию"
-
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
 msgstr "Выберите приложение для работы с архивами, используемое по умолчанию"
 
-#: components/componentchooserbrowser.cpp:15
+#: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
 msgstr "Выберите браузер, используемый по умолчанию"
@@ -238,6 +232,9 @@ msgstr "Архиватор:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Карта:"
+
+#~ msgid "Default web browser"
+#~ msgstr "Браузер по умолчанию"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

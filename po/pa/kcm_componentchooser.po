@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:55+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2021-10-09 07:46-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -23,19 +23,13 @@ msgstr ""
 msgid "Other…"
 msgstr "…ਹੋਰ"
 
-#. i18n: ectx: label, entry (browserApplication), group (General)
-#: browser_settings.kcfg:9
-#, kde-format
-msgid "Default web browser"
-msgstr "ਮੂਲ ਵੈੱਬ ਬਰਾਊਜ਼ਰ"
-
 #: components/componentchooserarchivemanager.cpp:15
 #, fuzzy, kde-format
 #| msgid "Select default file manager"
 msgid "Select default archive manager"
 msgstr "ਮੂਲ ਫਾਇਲ ਮੈਨੇਜਰ ਚੁਣੋ"
 
-#: components/componentchooserbrowser.cpp:15
+#: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
 msgstr "ਮੂਲ ਬਰਾਊਜ਼ਰ ਚੁਣੋ"
@@ -230,6 +224,9 @@ msgstr "ਫਾਇਲ ਮੈਨੇਜਰ:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr ""
+
+#~ msgid "Default web browser"
+#~ msgstr "ਮੂਲ ਵੈੱਬ ਬਰਾਊਜ਼ਰ"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

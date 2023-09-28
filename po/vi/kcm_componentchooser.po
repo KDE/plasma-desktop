@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:55+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2022-01-10 22:13+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -24,19 +24,13 @@ msgstr ""
 msgid "Other…"
 msgstr "Khác…"
 
-#. i18n: ectx: label, entry (browserApplication), group (General)
-#: browser_settings.kcfg:9
-#, kde-format
-msgid "Default web browser"
-msgstr "Trình duyệt web mặc định"
-
 #: components/componentchooserarchivemanager.cpp:15
 #, fuzzy, kde-format
 #| msgid "Select default file manager"
 msgid "Select default archive manager"
 msgstr "Chọn trình quản lí tệp mặc định"
 
-#: components/componentchooserbrowser.cpp:15
+#: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
 msgstr "Chọn trình duyệt mặc định"
@@ -230,6 +224,9 @@ msgstr "Trình quản lí tệp:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Bản đồ:"
+
+#~ msgid "Default web browser"
+#~ msgstr "Trình duyệt web mặc định"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

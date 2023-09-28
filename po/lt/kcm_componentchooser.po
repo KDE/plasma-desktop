@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:55+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2023-02-04 23:30+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -22,18 +22,12 @@ msgstr ""
 msgid "Other…"
 msgstr "Kita…"
 
-#. i18n: ectx: label, entry (browserApplication), group (General)
-#: browser_settings.kcfg:9
-#, kde-format
-msgid "Default web browser"
-msgstr "Numatytoji saityno naršyklė"
-
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
 msgstr "Pasirinkti numatytąją archyvų tvarkytuvę"
 
-#: components/componentchooserbrowser.cpp:15
+#: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
 msgstr "Pasirinkti numatytąją naršyklę"
@@ -221,6 +215,9 @@ msgstr "Archyvų tvarkytuvė:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Žemėlapis:"
+
+#~ msgid "Default web browser"
+#~ msgstr "Numatytoji saityno naršyklė"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

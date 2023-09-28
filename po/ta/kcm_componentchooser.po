@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:55+0000\n"
+"POT-Creation-Date: 2023-09-28 01:41+0000\n"
 "PO-Revision-Date: 2023-02-14 22:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -24,18 +24,12 @@ msgstr ""
 msgid "Other…"
 msgstr "வேறு…"
 
-#. i18n: ectx: label, entry (browserApplication), group (General)
-#: browser_settings.kcfg:9
-#, kde-format
-msgid "Default web browser"
-msgstr "இயல்பிருப்பு இணைய உலாவி"
-
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
 msgstr "இயல்பிருப்பு காப்பக நிரலை தேர்ந்தெடு"
 
-#: components/componentchooserbrowser.cpp:15
+#: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
 msgstr "இயல்பிருப்பு இணைய உலாவியை தேர்ந்தெடு"
@@ -223,6 +217,9 @@ msgstr "காப்பக நிரல்:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "நிலப்படம்:"
+
+#~ msgid "Default web browser"
+#~ msgstr "இயல்பிருப்பு இணைய உலாவி"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
