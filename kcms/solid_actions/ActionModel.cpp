@@ -103,7 +103,7 @@ void ActionModel::buildActionList()
             const QString desktop = it.filePath();
             const KService::Ptr desktopService = KService::serviceByStorageId(it.filePath());
             // Get contained services list
-            const QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(*desktopService, true);
+            const QList<KServiceAction> services = desktopService->actions();
             for (const KServiceAction &deviceAction : services) {
                 ActionItem *actionItem = new ActionItem(desktop, deviceAction.name(), this); // Create an action
                 d->actions.append(actionItem);
