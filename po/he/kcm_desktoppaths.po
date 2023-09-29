@@ -18,15 +18,15 @@ msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-06 02:04+0000\n"
-"PO-Revision-Date: 2017-05-16 06:52-0400\n"
+"PO-Revision-Date: 2023-09-28 22:40+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-he@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: desktoppathssettings.cpp:210
 #, kde-format
@@ -54,25 +54,24 @@ msgid "Pictures"
 msgstr "תמונות"
 
 #: desktoppathssettings.cpp:285
-#, fuzzy, kde-format
-#| msgid "Movies path:"
+#, kde-format
 msgid "Videos"
-msgstr "נתיב עבור סרט&ים"
+msgstr "סרטונים"
 
 #: desktoppathssettings.cpp:300
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "ציבורי"
 
 #: desktoppathssettings.cpp:315
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "תבניות"
 
 #: ui/main.qml:52
 #, kde-format
 msgid "Desktop path:"
-msgstr "נתיב לשולח&ן העבודה:"
+msgstr "נתיב לשולחן העבודה:"
 
 #: ui/main.qml:58
 #, kde-format
@@ -88,7 +87,7 @@ msgstr ""
 #: ui/main.qml:66
 #, kde-format
 msgid "Documents path:"
-msgstr "נתיב עבור מסמכי&ם:"
+msgstr "נתיב עבור מסמכים:"
 
 #: ui/main.qml:72
 #, kde-format
@@ -99,28 +98,27 @@ msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמי
 #: ui/main.qml:80
 #, kde-format
 msgid "Downloads path:"
-msgstr "נתיב עבור הורד&ות:"
+msgstr "נתיב עבור הורדות:"
 
 #: ui/main.qml:86
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
-msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של קבצים שהורדו."
+msgstr "תיקייה זו תשמש כברירת מחדל לשמירה של פריטים שהורדו."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Movies path:"
+#, kde-format
 msgid "Videos path:"
-msgstr "נתיב עבור סרט&ים"
+msgstr "נתיב סרטונים:"
 
 #: ui/main.qml:100 ui/main.qml:142
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
-msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של סרטים."
+msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של סרטונים."
 
 #: ui/main.qml:108
 #, kde-format
 msgid "Pictures path:"
-msgstr "נתיב עבור תמונ&ות:"
+msgstr "נתיב עבור תמונות:"
 
 #: ui/main.qml:114
 #, kde-format
@@ -131,7 +129,7 @@ msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמי
 #: ui/main.qml:122
 #, kde-format
 msgid "Music path:"
-msgstr "נתיב עבור מוז&יקה:"
+msgstr "נתיב עבור מוזיקה:"
 
 #: ui/main.qml:128
 #, kde-format
@@ -139,30 +137,26 @@ msgid "This folder will be used by default to load or save music from or to."
 msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של מוזיקה."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "נתיב עבור מוז&יקה:"
+msgstr "נתיב ציבורי:"
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "נתיב עבור תמונ&ות:"
+msgstr "נתיב תבניות:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
-msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של תמונות."
+msgstr "תיקייה זו תשמש כברירת המחדל לטעינת או שמירת תבניות ממנה או אליה."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"
-msgstr ""
+msgstr "נא לבחור במקום חדש"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

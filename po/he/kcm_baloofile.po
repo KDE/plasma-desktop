@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm5_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-14 01:55+0000\n"
-"PO-Revision-Date: 2017-05-16 11:32-0400\n"
+"PO-Revision-Date: 2023-09-28 22:32+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: ui/main.qml:44
 #, kde-format
 msgid "Pause Indexer"
-msgstr ""
+msgstr "עצירת המתעד"
 
 #: ui/main.qml:44
 #, kde-format
 msgid "Resume Indexer"
-msgstr ""
+msgstr "המשך המתעד"
 
 #: ui/main.qml:72
 #, kde-format
@@ -34,6 +34,8 @@ msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
+"פעולה זו תשבית את חיפוש הקבצים בתפריטי KRunner והמשכר ותסיר תצוגת נתוני־על "
+"מורחבת מכל יישומי KDE."
 
 #: ui/main.qml:81
 #, kde-format
@@ -42,122 +44,123 @@ msgid ""
 "if indexing is re-enabled later, the entire index will have to be re-created "
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
+"למחוק את נתוני המפתח שנשמרו? %1 של נפח כונן יתפנו, אך אם תיעוד יופעל שוב "
+"מאוחר יותר, כל המפתח ייווצר מחדש. פעולה זו עלולה לארוך זמן רב כתלות בכמות "
+"הקבצים שיש לך."
 
 #: ui/main.qml:83
 #, kde-format
 msgid "Delete Index Data"
-msgstr ""
+msgstr "מחיקת נתוני מפתח"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their content"
+#, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
-msgstr "חיפוש קבצים עוזר לך למצוא במהירות את הקבצים שלך על בסיס תוכנם"
+msgstr ""
+"חיפוש קבצים מסייע לך למצוא את הקבצים שלך במהירות. ניתן לבחור אילו תיקיות "
+"ואילו סוגי נתוני קבצים יתועדו במפתח."
 
 #: ui/main.qml:108
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
-msgstr ""
+msgstr "תיעוד קבצים:"
 
 #: ui/main.qml:109
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
-msgstr ""
+msgstr "פעיל"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
-msgstr ""
+msgstr "מצב:"
 
 #: ui/main.qml:127
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr ""
+msgstr "%1, %2% הושלמו"
 
 #: ui/main.qml:140
 #, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
-msgstr ""
+msgstr "מתועד כעת:"
 
 #: ui/main.qml:150
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
-msgstr ""
+msgstr "<filename>%1</filename>"
 
 #: ui/main.qml:166
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "נתונים לתיעוד:"
 
 #: ui/main.qml:168
 #, kde-format
 msgid "File names and contents"
-msgstr ""
+msgstr "שמות קבצים ותכנים"
 
 #: ui/main.qml:181
 #, kde-format
 msgid "File names only"
-msgstr ""
+msgstr "שמות קבצים בלבד"
 
 #: ui/main.qml:200
 #, kde-format
 msgid "Hidden files and folders"
-msgstr ""
+msgstr "תיקיות וקבצים נסתרים"
 
 #: ui/main.qml:226
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
+msgstr "מקומות"
 
 #: ui/main.qml:229
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
-msgstr ""
+msgstr "התחלת תיעוד תיקייה…"
 
 #: ui/main.qml:237
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
-msgstr ""
+msgstr "עצירת תיעוד תיקייה…"
 
 #: ui/main.qml:294
 #, kde-format
 msgid "Not indexed"
-msgstr ""
+msgstr "לא במפתח"
 
 #: ui/main.qml:295
 #, kde-format
 msgid "Indexed"
-msgstr ""
+msgstr "מתועד במפתח"
 
 #: ui/main.qml:325
 #, kde-format
 msgid "Delete entry"
-msgstr ""
+msgstr "מחיקת רשומה"
 
 #: ui/main.qml:340
-#, fuzzy, kde-format
-#| msgid "Select the folder which should be excluded"
+#, kde-format
 msgid "Select a folder to include"
-msgstr "בחר את התיקיות שימנעו מחיפוש"
+msgstr "נא לבחור תיקייה להכללה"
 
 #: ui/main.qml:340
-#, fuzzy, kde-format
-#| msgid "Select the folder which should be excluded"
+#, kde-format
 msgid "Select a folder to exclude"
-msgstr "בחר את התיקיות שימנעו מחיפוש"
+msgstr "נא לבחור תיקייה להחרגה"
 
 #, fuzzy
 #~| msgid "Enable File Search"

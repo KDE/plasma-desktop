@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-20 02:04+0000\n"
-"PO-Revision-Date: 2017-05-16 06:52-0400\n"
+"PO-Revision-Date: 2023-09-29 00:43+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: kcm.cpp:161
 #, kde-format
@@ -26,46 +26,44 @@ msgstr "ללא"
 #: kcm.cpp:164
 #, kde-format
 msgid "No splash screen will be shown"
-msgstr ""
+msgstr "לא יופיע מסך פתיח"
 
 #: kcm.cpp:182
 #, kde-format
 msgid "You cannot delete the currently selected splash screen"
-msgstr ""
+msgstr "אין לך איך למחוק את מסך הפתיח שנבחר"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
 #, kde-format
 msgid "For future use"
-msgstr ""
+msgstr "לשימוש עתידי"
 
 #. i18n: ectx: label, entry (theme), group (KSplash)
 #: splashscreensettings.kcfg:16
 #, kde-format
 msgid "Name of the current splash theme"
-msgstr ""
+msgstr "שם ערכת הנושא של מסך הפתיח הנוכחי"
 
 #: ui/main.qml:30
 #, kde-format
 msgid "&Get New…"
-msgstr ""
+msgstr "הורדת &חדש…"
 
 #: ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid "Failed to successfully test the splash screen."
+#, kde-format
 msgid "Failed to show the splash screen preview."
-msgstr "נכשל בבדיקת מסך הפתיחה."
+msgstr "הצגת תצוגה מקדימה של מסך הפתיח נכשלה."
 
 #: ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Test Splashscreen"
+#, kde-format
 msgid "Preview Splash Screen"
-msgstr "נסה מסך פתיחה"
+msgstr "הצגה מקדימה של מסך הפתיח"
 
 #: ui/main.qml:88
 #, kde-format
 msgid "Uninstall"
-msgstr ""
+msgstr "הסרה"
 
 #, fuzzy
 #~| msgid "Test Splashscreen"

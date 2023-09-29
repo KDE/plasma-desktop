@@ -19,15 +19,15 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 01:57+0000\n"
-"PO-Revision-Date: 2017-05-16 12:02-0400\n"
+"PO-Revision-Date: 2023-09-28 22:25+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: kcmaccess.cpp:112
 #, kde-format
@@ -47,581 +47,548 @@ msgstr "Super"
 #: kcmaccess.cpp:126
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
-msgstr "לחץ על %1 בזמן ש־NumLock, CapsLock ו־ScrollLock פעילים."
+msgstr "יש ללחוץ על %1 בזמן ש־NumLock, CapsLock ו־ScrollLock פעילים"
 
 #: kcmaccess.cpp:127
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
-msgstr "לחץ על %1 בזמן ש־CapsLock ו־ScrollLock פעילים."
+msgstr "יש ללחוץ על %1 בזמן ש־CapsLock ו־ScrollLock פעילים"
 
 #: kcmaccess.cpp:128
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
-msgstr "לחץ על %1 בזמן ש־NumLock ו־ScrollLock פעילים."
+msgstr "יש ללחוץ על %1 בזמן ש־NumLock ו־ScrollLock פעילים"
 
 #: kcmaccess.cpp:129
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
-msgstr "לחץ על %1 בזמן ש־ScrollLock פעיל."
+msgstr "יש ללחוץ על %1 בזמן ש־ScrollLock פעיל"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
-msgstr "לחץ על %1 בזמן ש־NumLock ו־CapsLock פעילים."
+msgstr "יש ללחוץ על %1 בזמן ש־NumLock ו־CapsLock פעילים"
 
 #: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock is active"
-msgstr "לחץ על %1 בזמן ש־CapsLock פעיל."
+msgstr "יש ללחוץ על %1 בזמן ש־CapsLock פעיל"
 
 #: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock is active"
-msgstr "לחץ על %1 בזמן ש־NumLock פעיל."
+msgstr "יש ללחוץ על %1 בזמן ש־NumLock פעיל"
 
 #: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1"
-msgstr "לחץ על %1"
+msgstr "יש ללחוץ על %1"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
-msgstr ""
+msgstr "לא ניתן להגדיר gsettings ל־Orca‏: „%1” נכשל"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
-msgstr ""
+msgstr "שגיאה: לא ניתן להפעיל את „orca --setup”"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Use System Bell"
-msgstr "השתמש בפעמון המער&כת"
+msgstr "להשתמש בפעמון המערכת"
 
 #. i18n: ectx: label, entry (CustomBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Customize system bell"
-msgstr "השתמש בפעמון המער&כת"
+msgstr "התאמת פעמון המערכת"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
 #, kde-format
 msgid "Sound file for the Bell"
-msgstr ""
+msgstr "קובץ שמע לפעמון"
 
 #. i18n: ectx: label, entry (VisibleBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:20
 #, kde-format
 msgid "Use a visual bell instead of a sound"
-msgstr ""
+msgstr "להשתמש בפעמון חזותי במקום בצליל"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
 #: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
-msgstr ""
+msgstr "היפוך צבעי המערכת עם הפעמון"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Color of the Visible Bell"
-msgstr "השתמש בפעמון המער&כת"
+msgstr "צבע הפעמון החזותי"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
 #, kde-format
 msgid "Duration of the Visible Bell"
-msgstr ""
+msgstr "משך הפעמון החזותי"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Use &sticky keys"
+#, kde-format
 msgid "Use sticky Keys"
-msgstr "השתמש במקשים &דביקים"
+msgstr "להשתמש במקשים דביקים"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
-#, fuzzy, kde-format
-#| msgid "&Lock sticky keys"
+#, kde-format
 msgid "Lock the sticky keys"
-msgstr "&נעל מקשים דביקים"
+msgstr "נעילת המקשים הדביקים"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "כבה מקשים דביקים כאשר שני מקשים נלחצים בו־זמנית"
+msgstr "לכבות מקשים דביקים כאשר שני מקשים נלחצים בו־זמנית"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Use &sticky keys"
+#, kde-format
 msgid "Beep on a sticky key press"
-msgstr "השתמש במקשים &דביקים"
+msgstr "לצפצף בכל לחיצת מקש דביק"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
 #, kde-format
 msgid "Toggle keys beep"
-msgstr ""
+msgstr "החלפת מצב צפצוף מקשים"
 
 #. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr ""
+msgstr "להציג התראה כאשר מקש החלפה נלחץ במקלדת"
 
 #. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:33
 #, kde-format
 msgid "Use a timeout delay"
-msgstr ""
+msgstr "להשתמש בהשהיית תום־זמן"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:37
 #, kde-format
 msgid "Delay for timeout"
-msgstr ""
+msgstr "השהיה לתום־זמן"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
 #, kde-format
 msgid "Use a beep for access"
-msgstr ""
+msgstr "להשתמש בצפצוף לגישה"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
-#, fuzzy, kde-format
-#| msgid "&Use slow keys"
+#, kde-format
 msgid "Use slow keypresses"
-msgstr "השתמש במקשים אי&טיים"
+msgstr "להשתמש במקשים איטיים"
 
 #. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:13
 #, kde-format
 msgid "Delay for the key press"
-msgstr ""
+msgstr "השהיה ללחיצת המקש"
 
 #. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr ""
+msgstr "לצפצף בלחיצת מקש איטית"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr ""
+msgstr "לצפצף כשלחיצת מקש מתקבלת"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr ""
+msgstr "לצפצף אם לחיצת מקש נדחתה"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
 #, kde-format
 msgid "Bounce Keys"
-msgstr "מקשי הקפצה"
+msgstr "מקשים חוזרים"
 
 #. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:33
 #, kde-format
 msgid "Use a delay for bouncing"
-msgstr ""
+msgstr "להשתמש בהשהיה להחזרה"
 
 #. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:37
 #, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr ""
+msgstr "לצפצף אם אירוע מקש חוזר נדחה"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
 #, kde-format
 msgid "Use keys to control the mouse"
-msgstr ""
+msgstr "שימוש במקשים לשליטה בעכבר"
 
 #. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:13
 #, kde-format
 msgid "Delay for the mouse movement"
-msgstr ""
+msgstr "השהיה לתזוזת העכבר"
 
 #. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:17
 #, kde-format
 msgid "Repetition interval for the mouse movement"
-msgstr ""
+msgstr "הפרש חזרות לתזוזת העכבר"
 
 #. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:21
 #, kde-format
 msgid "Time to hit maximum velocity"
-msgstr ""
+msgstr "זמן להגעה למהירות המרבית"
 
 #. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:25
 #, kde-format
 msgid "Maximum Velocity"
-msgstr ""
+msgstr "מהירות מרבית"
 
 #. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:29
 #, kde-format
 msgid "Mouse Key Curve"
-msgstr ""
+msgstr "עקומת מקש עכבר"
 
 #. i18n: ectx: label, entry (Gestures), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:35
 #, kde-format
 msgid "Use Gestures"
-msgstr ""
+msgstr "שימוש במחוות"
 
 #. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:39
 #, kde-format
 msgid "Ask for Confirmation for a gesture"
-msgstr ""
+msgstr "בקשת אישור למחווה"
 
 #. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:43
 #, kde-format
 msgid "Confirm access to the Keyboard"
-msgstr ""
+msgstr "אישור גישה למקלדת"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
-#, fuzzy, kde-format
-#| msgid "Screen Reader"
+#, kde-format
 msgid "Enable Screen Reader"
-msgstr "קורא  מסך"
+msgstr "הפעלת קורא מסך"
 
 #: ui/Bell.qml:19
 #, kde-format
 msgid "Please choose an audio file"
-msgstr ""
+msgstr "נא לבחור קובץ שמע"
 
 #: ui/Bell.qml:20
 #, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
-msgstr ""
+msgstr "קובצי שמע (‎*.ogg ‏‎*.wav)"
 
 #: ui/Bell.qml:29
-#, fuzzy, kde-format
-#| msgid "Audible Bell"
+#, kde-format
 msgid "Audible bell:"
-msgstr "פעמון נשמע"
+msgstr "פעמון שמע:"
 
 #: ui/Bell.qml:30
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
-msgstr ""
+msgstr "הפעלה"
 
 #: ui/Bell.qml:41
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
-msgstr ""
+msgstr "צליל משלך:"
 
 #: ui/Bell.qml:74
 #, kde-format
 msgid "Search audio file for the system bell"
-msgstr ""
+msgstr "חיפוש קובץ שמע לפעמון המערכת"
 
 #: ui/Bell.qml:75
 #, kde-format
 msgid "Button search audio file"
-msgstr ""
+msgstr "כפתור לחיפוש קובץ שמע"
 
 #: ui/Bell.qml:91
-#, fuzzy, kde-format
-#| msgid "Visible Bell"
+#, kde-format
 msgid "Visual bell:"
-msgstr "פעמון חזותי"
+msgstr "פעמון חזותי:"
 
 #: ui/Bell.qml:92
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
-msgstr ""
+msgstr "הפעלה"
 
 #: ui/Bell.qml:106
-#, fuzzy, kde-format
-#| msgid "I&nvert screen"
+#, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
-msgstr "הפוך את &צבעי המסך"
+msgstr "היפוך צבעי המסך"
 
 #: ui/Bell.qml:123
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
-msgstr ""
+msgstr "הבהוב"
 
 #: ui/Bell.qml:134
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
-msgstr ""
+msgstr "צבע"
 
 #: ui/Bell.qml:148
-#, fuzzy, kde-format
-#| msgid "&Duration:"
+#, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "משך:"
 
 #: ui/KeyboardFilters.qml:18
-#, fuzzy, kde-format
-#| msgid "&Use slow keys"
+#, kde-format
 msgid "Slow keys:"
-msgstr "השתמש במקשים אי&טיים"
+msgstr "מקשים איטיים:"
 
 #: ui/KeyboardFilters.qml:19
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
-msgstr ""
+msgstr "הפעלה"
 
 #: ui/KeyboardFilters.qml:22
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
-msgstr ""
+msgstr "כדי שמקש יתקבל, יש להחזיק אותו במשך זמן כמוגדר"
 
 #: ui/KeyboardFilters.qml:37
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
-msgstr ""
+msgstr "השהיה:"
 
 #: ui/KeyboardFilters.qml:54
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Ring system bell:"
-msgstr "השתמש בפעמון המער&כת"
+msgstr "צלצול בפעמון המערכת:"
 
 #: ui/KeyboardFilters.qml:55
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
+#, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "&השתמש בפעמון המערכת בכל פעם שמקש נלחץ"
+msgstr "כאשר מקש נ&לחץ"
 
 #: ui/KeyboardFilters.qml:69
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is accepted"
+#, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "&השתמש בפעמון המערכת בכל פעם שמקש מתקבל"
+msgstr "כאשר מקש מ&תקבל"
 
 #: ui/KeyboardFilters.qml:83
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is rejected"
+#, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "&השתמש בפעמון המערכת בכל פעם שמקש נדחה"
+msgstr "כאשר מקש נ&דחה"
 
 #: ui/KeyboardFilters.qml:100
-#, fuzzy, kde-format
-#| msgid "Bounce Keys"
+#, kde-format
 msgid "Bounce keys:"
-msgstr "מקשי הקפצה"
+msgstr "מקשים חוזרים:"
 
 #: ui/KeyboardFilters.qml:101
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
-msgstr ""
+msgstr "הפעלה"
 
 #: ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "התעלמות מהקשות מהירות חוזרות ונשנות על אותו המקש"
 
 #: ui/KeyboardFilters.qml:119
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
-msgstr ""
+msgstr "השהיה:"
 
 #: ui/KeyboardFilters.qml:134
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is rejected"
+#, kde-format
 msgid "Ring system bell when rejected"
-msgstr "&השתמש בפעמון המערכת בכל פעם שמקש נדחה"
+msgstr "לצלצל בפעמון המערכת בעת דחיית מקש"
 
 #: ui/main.qml:23
-#, fuzzy, kde-format
-#| msgid "&Bell"
+#, kde-format
 msgctxt "System Bell"
 msgid "Bell"
-msgstr "פע&מון"
+msgstr "פעמון"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Modifier Keys"
+#, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
-msgstr "&מקשי שינוי"
+msgstr "מקשי החלפה"
 
 #: ui/main.qml:33
-#, fuzzy, kde-format
-#| msgid "&Keyboard Filters"
+#, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
-msgstr "&מסנני מקלדת"
+msgstr "מסנני מקלדת"
 
 #: ui/main.qml:38
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
-msgstr ""
+msgstr "ניווט עכבר"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Screen Reader"
+#, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
-msgstr "קורא  מסך"
+msgstr "קורא מסך"
 
 #: ui/ModifierKeys.qml:16
-#, fuzzy, kde-format
-#| msgid "Sticky Keys"
+#, kde-format
 msgid "Sticky keys:"
-msgstr "מקשי&ם דביקים"
+msgstr "מקשים דביקים:"
 
 #: ui/ModifierKeys.qml:17
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
-msgstr ""
+msgstr "הפעלה"
 
 #: ui/ModifierKeys.qml:28
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
-msgstr ""
+msgstr "נעילה"
 
 #: ui/ModifierKeys.qml:42
 #, kde-format
 msgid "Disable when two keys are held down"
-msgstr ""
+msgstr "להשבית בעת החזקה של שני מקשים"
 
 #: ui/ModifierKeys.qml:54
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
+#, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr "&השתמש בפעמון המערכת בכל פעם שמקש נלחץ"
+msgstr "לצלצל בפעמון המערכת בעת שימוש במקשי החלפה"
 
 #: ui/ModifierKeys.qml:71
 #, kde-format
 msgid "Feedback:"
-msgstr ""
+msgstr "משוב:"
 
 #: ui/ModifierKeys.qml:72
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is accepted"
+#, kde-format
 msgid "Ring system bell when locking keys are toggled"
-msgstr "&השתמש בפעמון המערכת בכל פעם שמקש מתקבל"
+msgstr "לצלצל בפעמון המערכת בעת החלפת מצב של מקשי החלפה"
 
 #: ui/ModifierKeys.qml:83
-#, fuzzy, kde-format
-#| msgid ""
-#| "Use Plasma's notification mechanism for modifier or locking key state "
-#| "changes"
+#, kde-format
 msgid "Show notification when modifier or locking keys are used"
-msgstr "השתמש במנגנון ההתראה של KDE בכל פעם שמקש נעילה משנה את מצבו"
+msgstr "הצגת התראות כשנעשה שימוש במקשי החלפה או נעילה"
 
 #: ui/ModifierKeys.qml:95
-#, fuzzy, kde-format
-#| msgid "Configure &Notifications..."
+#, kde-format
 msgid "Configure Notifications…"
-msgstr "הגדר &התראת מערכת..."
+msgstr "הגדרת התראות…"
 
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
-msgstr ""
+msgstr "שימוש בלוח המספרים כדי להזיז את הסמן:"
 
 #: ui/MouseNavigation.qml:18
 #, kde-format
 msgid "Enable"
-msgstr ""
+msgstr "הפעלה"
 
 #: ui/MouseNavigation.qml:29
 #, kde-format
 msgid "When a gesture is used:"
-msgstr ""
+msgstr "בעת שימוש במחווה:"
 
 #: ui/MouseNavigation.qml:30
 #, kde-format
 msgid "Display a confirmation dialog"
-msgstr ""
+msgstr "הצגת חלונית אישור"
 
 #: ui/MouseNavigation.qml:41
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Ring the System Bell"
-msgstr "השתמש בפעמון המער&כת"
+msgstr "צלצול בפעמון המערכת"
 
 #: ui/MouseNavigation.qml:52
-#, fuzzy, kde-format
-#| msgid "Notification"
+#, kde-format
 msgid "Show a notification"
-msgstr "התראה"
+msgstr "הצגת התראה"
 
 #: ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
-msgstr ""
+msgstr "השהיית האצה:"
 
 #: ui/MouseNavigation.qml:82
 #, kde-format
 msgid "Repeat interval:"
-msgstr ""
+msgstr "משך חזרה:"
 
 #: ui/MouseNavigation.qml:96
 #, kde-format
 msgid "Acceleration time:"
-msgstr ""
+msgstr "זמן האצה:"
 
 #: ui/MouseNavigation.qml:110
 #, kde-format
 msgid "Maximum speed:"
-msgstr ""
+msgstr "מהירות מרבית:"
 
 #: ui/MouseNavigation.qml:124
 #, kde-format
 msgid "Pointer acceleration:"
-msgstr ""
+msgstr "האצת סמן:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr ""
+msgstr "הפעלת ההגדרות של קורא המסך Orca…"
 
 #: ui/ScreenReader.qml:41
-#, fuzzy, kde-format
-#| msgid ""
-#| "Please note that you may have to log out once to allow the screen reader "
-#| "to work properly."
+#, kde-format
 msgid ""
 "Please note that you may have to log out or reboot once to allow the screen "
 "reader to work properly."
-msgstr "שים לב שאולי תצטרך להתחבר שוב כדי שהקורא מסך יפעל כראוי."
+msgstr ""
+"נא לשים לב שצריך לצאת מהמערכת או להפעיל אותה מחדש כדי לאפשר לקורא המסך לעבור "
+"כראוי."
 
 #: ui/ScreenReader.qml:42
 #, kde-format
@@ -629,6 +596,8 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
+"נראה שקורא המסך Orca לא מותקן. נא להתקין אותו בטרם ניסיון להשתמש ביכולת "
+"הזאת, לאחר מכן יש לצאת מהמשתמש או להפעיל את המערכת מחדש"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

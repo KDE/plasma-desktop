@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2017-05-16 06:52-0400\n"
+"PO-Revision-Date: 2023-09-29 00:41+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -36,7 +36,7 @@ msgstr "kde-l10n-he@kde.org"
 #: ActionEditor.cpp:60
 #, kde-format
 msgid "Editing Action '%1'"
-msgstr "עורך פעולה '%1'"
+msgstr "עריכת הפעולה ‚%1’"
 
 #: ActionEditor.cpp:162
 #, kde-format
@@ -45,7 +45,7 @@ msgid ""
 "Therefore, changes will not be applied."
 msgstr ""
 "ככל הנראה שם הפעולה, הפקודה, הסמל או התנאי אינם קיימים.\n"
-"לכן השינויים לא יוחלו."
+"לכן השינויים לא יחולו."
 
 #: ActionEditor.cpp:163
 #, kde-format
@@ -56,13 +56,13 @@ msgstr "פעולה שגויה"
 #: ActionEditor.ui:17
 #, kde-format
 msgid "Edit Parameter"
-msgstr "ערוך ארגומנט"
+msgstr "עריכת משתנה"
 
 #. i18n: ectx: property (text), widget (QLabel, LblParameterType)
 #: ActionEditor.ui:43
 #, kde-format
 msgid "Parameter type:"
-msgstr "סוג הארגומנט:"
+msgstr "סוג משתנה:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:51
@@ -80,7 +80,7 @@ msgstr "צומת של תוכן"
 #: ActionEditor.ui:61
 #, kde-format
 msgid "Content Disjunction"
-msgstr "פיצל של תוכן"
+msgstr "פיצול של תוכן"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:66
@@ -116,31 +116,31 @@ msgstr "מכיל"
 #: ActionEditor.ui:208
 #, kde-format
 msgid "Reset Parameter"
-msgstr "אפס ארגומנט"
+msgstr "איפוס משתנה"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
 #: ActionEditor.ui:215
 #, kde-format
 msgid "Save Parameter Changes"
-msgstr "שמור את שינוי הארגומנט"
+msgstr "שמירת השינויים למשתנה"
 
 #. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
 #: ActionEditor.ui:247
 #, kde-format
 msgid "Action icon, click to change it"
-msgstr "סמל פעולה, הקלק כדי לשנותו"
+msgstr "סמל פעולה, לחיצה לשינוי"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
 #: ActionEditor.ui:254
 #, kde-format
 msgid "Action name"
-msgstr "שם פעולה:"
+msgstr "שם פעולה"
 
 #. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
 #: ActionEditor.ui:271
 #, kde-format
 msgid "Command: "
-msgstr "פקודה:"
+msgstr "פקודה"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
 #: ActionEditor.ui:283
@@ -154,17 +154,17 @@ msgid ""
 "%i: The identifier of the device"
 msgstr ""
 "הפקודה שתפעיל את הפעולה\n"
-"הפעולה הזאת יכולה להכיל את אחד מההרחבות הבאת:\n"
+"יכולה להכיל את אחת מההרחבות הבאות:\n"
 "\n"
-"%f: מיקום החיבור של ההתקן - התקני גישה בלבד\n"
-"%d: המיקום של ה־device node - רק התקני block\n"
+"%f: מיקום העיגון של ההתקן - התקני גישה לאחסון בלבד\n"
+"%d: הנתיב של ה־device node - התקני אחסון בלוק בלבד\n"
 "%i: המזהה של ההתקן"
 
 #. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
 #: ActionEditor.ui:300
 #, kde-format
 msgid "Devices must match the following parameters for this action:"
-msgstr "ההתקנים לא תואמים את הארגומנטים של הפעולה הזאת:"
+msgstr "ההתקנים חייבות לענות על המשתנים הבאים של הפעולה הזאת:"
 
 #. i18n: ectx: property (text), widget (QLabel, LblActionName)
 #: AddAction.ui:19
@@ -176,7 +176,7 @@ msgstr "שם הפעולה:"
 #: AddAction.ui:26
 #, kde-format
 msgid "Enter the name for your new action"
-msgstr "הכנס שם לפעולה החדשה"
+msgstr "נא למלא שם לפעולה החדשה"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -189,18 +189,18 @@ msgid ""
 "Tool to automatically generate Desktop Files from Solid DeviceInterface "
 "classes for translation"
 msgstr ""
-"כלי ליצירה אוטומטית של קבצי Desktop עבור תרגום של מחלקות DeviceInterface של "
-"Solid"
+"כלי ליצירה אוטומטית של קובצי Desktop עבור מחלקות DeviceInterface של Solid "
+"לתרגום"
 
 #: DesktopFileGenerator.cpp:29
 #, kde-format
 msgid "(c) 2009, Ben Cooksley"
-msgstr "(c) 2009, Ben Cooksley"
+msgstr "(c) 2009, בן קוקסלי"
 
 #: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Ben Cooksley"
-msgstr "Ben Cooksley"
+msgstr "בן קוקסלי"
 
 #: DesktopFileGenerator.cpp:30
 #, kde-format
@@ -210,32 +210,32 @@ msgstr "מתחזק"
 #: PredicateItem.cpp:119
 #, kde-format
 msgid "The device must be of the type %1"
-msgstr "ההתקן חייב להיות מהסוג %1"
+msgstr "ההתקן חייב להיות מסוג %1"
 
 #: PredicateItem.cpp:122
 #, kde-format
 msgid "Any of the contained properties must match"
-msgstr "כל אחד סוג של מאפיינים מוכלים חייבים להתאים"
+msgstr "כל אחד מהמאפיינים המוכלים חייב להיות תואם"
 
 #: PredicateItem.cpp:125
 #, kde-format
 msgid "All of the contained properties must match"
-msgstr "כל סוג של מאפיינים מוכלים חייבים להתאים"
+msgstr "כל המאפיינים המוכלים חייבים להיות תואמים"
 
 #: PredicateItem.cpp:134
 #, kde-format
 msgid "The device property %1 must equal %2"
-msgstr "המאפיין %1 של התקן %2 חייב להיות %2"
+msgstr "המאפיין %1 של ההתקן %2 חייב להיות %2"
 
 #: PredicateItem.cpp:137
 #, kde-format
 msgid "The device property %1 must contain %2"
-msgstr "המאפיין %1 של התקן %2 חייב להכיל %2"
+msgstr "המאפיין %1 של ההתקן %2 חייב להכיל %2"
 
 #: SolidActions.cpp:137
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
-msgstr "נראה שפרדיקט לפעילות זו לא תקין."
+msgstr "נראה שהפרדיקט לפעילות זו לא תקין."
 
 #: SolidActions.cpp:137
 #, kde-format
@@ -250,25 +250,25 @@ msgstr "לא נבחרה פעולה"
 #: SolidActions.cpp:206
 #, kde-format
 msgid "Cannot be deleted"
-msgstr "לא ניתן להימחק"
+msgstr "לא יכול להימחק"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
 #: SolidActions.ui:22
 #, kde-format
 msgid "Remove"
-msgstr "הסר"
+msgstr "הסרה"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
 #: SolidActions.ui:29
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "עריכה…"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "הוספה…"
 
 #~ msgid "Solid Device Actions Editor"
 #~ msgstr "עורך פעולות התקנים של ּSolid"

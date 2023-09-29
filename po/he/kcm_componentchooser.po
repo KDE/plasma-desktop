@@ -18,131 +18,120 @@ msgstr ""
 "Project-Id-Version: kcm5_componentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-28 01:41+0000\n"
-"PO-Revision-Date: 2017-05-16 11:28-0400\n"
+"PO-Revision-Date: 2023-09-28 22:37+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
 msgid "Other…"
-msgstr ""
+msgstr "אחר…"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "בחר את תוכנית הדוא\"ל המועדפת:"
+msgstr "נא לבחור את מנהל הארכיונים כברירת המחדל"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
-msgstr ""
+msgstr "נא לבחור דפדפן ברירת מחדל"
 
 #: components/componentchooseremail.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use a different &email client:"
+#, kde-format
 msgid "Select default e-mail client"
-msgstr "השתמש בתוכנית דוא\"&ל אחרת:"
+msgstr "נא לבחור את לקוח הדוא״ל כברירת המחדל"
 
 #: components/componentchooserfilemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default file manager"
-msgstr "בחר את תוכנית הדוא\"ל המועדפת:"
+msgstr "נא לבחור את מנהל הקבצים כברירת המחדל"
 
 #: components/componentchoosergeo.cpp:13
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default map"
-msgstr "בחר את תוכנית הדוא\"ל המועדפת:"
+msgstr "נא לבחור את מפת ברירת המחדל"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "בחר את תוכנית הדוא\"ל המועדפת:"
+msgstr "נא לבחור את מציג התמונות כברירת המחדל"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default music player"
-msgstr "בחר את תוכנית הדוא\"ל המועדפת:"
+msgstr "נא לבחור את נגן המוזיקה כברירת המחדל"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "בחר את תוכנית הדוא\"ל המועדפת:"
+msgstr "נא לבחור את מציג ה־PDF כברירת המחדל"
 
 #: components/componentchoosertel.cpp:17
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default dialer application"
-msgstr "בחר את יישום המסוף המועדף:"
+msgstr "נא לבחור את יישום החייגן כברירת המחדל"
 
 #: components/componentchooserterminal.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default terminal emulator"
-msgstr "בחר את יישום המסוף המועדף:"
+msgstr "נא לבחור את מדמה המסוף כברירת המחדל"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default text editor"
-msgstr "בחר את יישום המסוף המועדף:"
+msgstr "נא לבחור את עורך הטקסט כברירת המחדל"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default video player"
-msgstr "בחר את תוכנית הדוא\"ל המועדפת:"
+msgstr "נא לבחור את נגן הווידאו כברירת המחדל"
 
 #: ui/ComponentOverlay.qml:52
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "פרטים"
 
 #: ui/ComponentOverlay.qml:82
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types:"
-msgstr ""
+msgstr "היישום הזה לא מפרסם תמיכה בסוגי הקבצים הבאים:"
 
 #: ui/ComponentOverlay.qml:96
 #, kde-format
 msgctxt "@action:button"
 msgid "Force Open Anyway"
-msgstr ""
+msgstr "לפתוח בכוח בכל מקרה"
 
 #: ui/ComponentOverlay.qml:113
 #, kde-format
 msgid ""
 "The following file types are still associated with a different application:"
-msgstr ""
+msgstr "סוגי הקבצים הבאים עדיין משויכים ליישום אחר:"
 
 #: ui/ComponentOverlay.qml:126
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 associated with %2"
-msgstr ""
+msgstr "%1 משויך ל־%2"
 
 #: ui/ComponentOverlay.qml:139
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Re-assign-all to %1"
-msgstr ""
+msgstr "להקצות הכול מחדש אל %1"
 
 #: ui/ComponentOverlay.qml:150
 #, kde-format
 msgid "Change file type association manually"
-msgstr ""
+msgstr "החלפת שיוך סוג קובץ ידנית"
 
 #: ui/main.qml:17
 #, kde-format
@@ -150,93 +139,93 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"נראה שאין תמיכה מצד ‚%1’ בסוגי ה־MIME הברים שמשויכים ליישום מהסוג הבא: %2"
 
 #: ui/main.qml:46
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "אינטרנט"
 
 #: ui/main.qml:50
 #, kde-format
 msgid "Web browser:"
-msgstr ""
+msgstr "דפדפן אינטרנט:"
 
 #: ui/main.qml:72
 #, kde-format
 msgid "Email client:"
-msgstr ""
+msgstr "לקוח דוא״ל:"
 
 #: ui/main.qml:94
 #, kde-format
 msgctxt "Default phone app"
 msgid "Dialer:"
-msgstr ""
+msgstr "חייגן:"
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "מולטימדיה"
 
 #: ui/main.qml:121
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "מציג תמונות:"
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "נגן מוזיקה:"
 
 #: ui/main.qml:168
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "נגן וידאו:"
 
 #: ui/main.qml:190
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "מסמכים"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "עורך טקסט:"
 
 #: ui/main.qml:217
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "מציג PDF:"
 
 #: ui/main.qml:239
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "עזרים"
 
 #: ui/main.qml:244
 #, kde-format
 msgid "File manager:"
-msgstr ""
+msgstr "מנהל קבצים"
 
 #: ui/main.qml:266
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Terminal emulator:"
-msgstr "בחר את יישום המסוף המועדף:"
+msgstr "מדמה מסוף:"
 
 #: ui/main.qml:279
 #, kde-format
 msgid "Archive manager:"
-msgstr ""
+msgstr "מנהל ארכיונים:"
 
 #: ui/main.qml:301
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
-msgstr ""
+msgstr "מפה:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

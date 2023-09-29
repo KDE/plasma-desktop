@@ -21,15 +21,15 @@ msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-04 02:17+0000\n"
-"PO-Revision-Date: 2017-05-16 06:53-0400\n"
+"PO-Revision-Date: 2023-09-28 22:48+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -51,19 +51,19 @@ msgstr "תאריך ושעה"
 #: dateandtime.ui:30
 #, kde-format
 msgid "Set date and time &automatically"
-msgstr "קבע את התאריך והשעה באופן &אוטומטי:"
+msgstr "הגדרת התאריך והשעה אוטומטית:"
 
 #. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
 #: dateandtime.ui:53
 #, kde-format
 msgid "&Time server:"
-msgstr "שרת זמן:"
+msgstr "שרת &זמן:"
 
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
 #: dateandtime.ui:86
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
-msgstr "כאן באפשרותך לשנות את היום בחודש, החודש והשנה של התאריך של המערכת."
+msgstr "כאן אפשר לשנות את היום בחודש, החודש והשנה של תאריך המערכת."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: dateandtime.ui:122
@@ -75,7 +75,7 @@ msgstr "אזור הזמן"
 #: dateandtime.ui:128
 #, kde-format
 msgid "To change the local time zone, select your area from the list below."
-msgstr "על מנת לשנות את אזור הזמן, בחר את האזור שלך מתוך הרשימה הבאה."
+msgstr "כדי לשנות את אזור הזמן, יש לבחור את האזור שלך מתוך הרשימה הבאה."
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
 #: dateandtime.ui:151
@@ -85,10 +85,9 @@ msgstr "אזור הזמן הנוכחי:"
 
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
 #: dateandtime.ui:161
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "חפש"
+msgstr "חיפוש…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -96,8 +95,8 @@ msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
-"לא נמצאה השירותית NTP. עליך להתקין את הפקודות ntpdate או rdate בכדי לאפשר "
-"עדכון אוטומטי של התאריך והזמן."
+"לא נמצא כלי ה־NTP. יש להתקין את ntpdate או את rdate כדי לאפשר עדכון אוטומטי "
+"של התאריך והזמן."
 
 #: dtime.cpp:91
 #, kde-format
@@ -106,9 +105,9 @@ msgid ""
 "seconds field to change the relevant value, either using the up and down "
 "buttons to the right or by entering a new value."
 msgstr ""
-"כאן באפשרותך לשנות את השעה של המערכת. לחץ בתוך שדות השעות, הדקות או השניות "
-"כדי לשנות את הערך המתאים, בין אם באמצעות הכפתורים למעלה ולמטה שמשמאל, ובין "
-"אם באמצעות הזנת ערך חדש."
+"כאן אפשר לשנות את שעת המערכת. לחיצה בשדות השעות, הדקות או השניות מאפשרת "
+"לשנות לערך המתאים, בין אם באמצעות הכפתורים למעלה ולמטה שמשמאל, ובין אם "
+"באמצעות מילוי ערך חדש."
 
 #: dtime.cpp:113
 #, kde-format
@@ -128,18 +127,18 @@ msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
 "pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
 msgstr ""
-"שרתי זמן ציבוריים (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org, "
-"north-america.pool.ntp.org,oceania.pool.ntp.org"
+"שרתי זמן ציבוריים (pool.ntp.org),        asia.pool.ntp.org,‏        europe."
+"pool.ntp.org,‏        north-america.pool.ntp.org,‏        timeserver.iix.net.il"
 
 #: dtime.cpp:274
 #, kde-format
 msgid "Unable to contact time server: %1."
-msgstr "אין אפשרות ליצור קשר עם השרת: %1."
+msgstr "לא ניתן ליצור קשר עם השרת: %1."
 
 #: dtime.cpp:278
 #, kde-format
 msgid "Can not set date."
-msgstr "אין אפשרות לשנות את התאריך."
+msgstr "לא ניתן לשנות את התאריך."
 
 #: dtime.cpp:281
 #, kde-format
@@ -175,22 +174,22 @@ msgstr "מודול בקרת השעון של KDE"
 #: main.cpp:47
 #, kde-format
 msgid "(c) 1996 - 2001 Luca Montecchiani"
-msgstr "(c) 1996 - 2001 Luca Montecchiani"
+msgstr "(c) 1996 - 2001 לוקה מונטקיאני"
 
 #: main.cpp:49
 #, kde-format
 msgid "Luca Montecchiani"
-msgstr "Luca Montecchiani"
+msgstr "לוקה מונטקיאני"
 
 #: main.cpp:49
 #, kde-format
 msgid "Original author"
-msgstr "כותב מקורי"
+msgstr "יוצר מקורי"
 
 #: main.cpp:50
 #, kde-format
 msgid "Paul Campbell"
-msgstr "Paul Campbell"
+msgstr "פול קמפבל"
 
 #: main.cpp:50
 #, kde-format
@@ -200,7 +199,7 @@ msgstr "מתחזק נוכחי"
 #: main.cpp:51
 #, kde-format
 msgid "Benjamin Meyer"
-msgstr "Benjamin Meyer"
+msgstr "בנג׳מין מייר"
 
 #: main.cpp:51
 #, kde-format
@@ -216,11 +215,11 @@ msgid ""
 "Settings as root. If you do not have the root password, but feel the system "
 "time should be corrected, please contact your system administrator."
 msgstr ""
-"‏<h1>תאריך ושעה</h1> במודול בקרה זה ניתן לעשות שימוש על מנת להגדיר את התאריך "
-"והשעה של המערכת. מכיוון שהגדרות אלה לא משפיעות רק עליך בתור משתמש, אלא על "
-"המערכת כולה, באפשרותך לשנות הגדרות אלה רק אם הגדרות המערכת מופעל כמשתמש "
-"root. אם אין לך את הססמה של המשתמש root, אך אתה סבור כי יש לתקן את השעה של "
-"המערכת, צור קשר עם מנהל המערכת שלך."
+"<h1>תאריך ושעה</h1> במודול בקרה זה ניתן להשתמש כדי להגדיר את התאריך והשעה של "
+"המערכת. מכיוון שהגדרות אלה לא משפיעות רק עליך בתור משתמש, אלא על המערכת "
+"כולה, אפשר לשנות הגדרות אלה רק אם הגדרות המערכת מופעלות כמשתמש root. אם אין "
+"לך את הסיסמה של המשתמש root, אך ברור לך כי יש לתקן את השעה של המערכת, יש "
+"ליצור קשר עם הנהלת המערכת שלך."
 
 #: main.cpp:107
 #, kde-format
@@ -235,9 +234,9 @@ msgstr "אין אפשרות לשנות את הגדרות ה־NTP"
 #: main.cpp:138
 #, kde-format
 msgid "Unable to set current time"
-msgstr "לא יכול לקבצוע את השעה הנוכחית"
+msgstr "לא ניתן להגדיר את השעה הנוכחית"
 
 #: main.cpp:148
 #, kde-format
 msgid "Unable to set timezone"
-msgstr "לא יכול לקבצוע את איזור הזמן"
+msgstr "לא ניתן להגדיר את איזור הזמן"

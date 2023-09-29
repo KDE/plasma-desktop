@@ -16,15 +16,15 @@ msgstr ""
 "Project-Id-Version: kcm5_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2017-05-16 06:52-0400\n"
+"PO-Revision-Date: 2023-09-28 21:40+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -38,28 +38,17 @@ msgstr "kde-l10n-he@kde.org"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\".\n"
-#| "\n"
-#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
-#| "overrides do not apply and no devices will be automatically mounted."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, the device will be automatically mounted even though "
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
-"הרשימה כוללת את התקני האחסון הידועים ל־KDE. אם תיבת \"עיגון אוטומטי בעת "
-"התחברות למערכת\" מסומנת, ההתקן יעוגן באופן אוטומטי אף שהתיבה \"עגן את כל "
-"המדיה הנשלפת בעת התחברות למערכת\" אינה מסומנת. אותה ההתייחסות גם כלפי התיבה "
-"\"עיגון אוטומטי בעת חיבור למחשב\".\n"
-"\n"
-"אם התיבה \"אפשר עיגון אוטומטי של מדיה נשלפת\" אינה מסומנת, העקיפה לא תתאפשר, "
-"ואף התקן לא יעוגן באופן אוטומטי."
+"הרשימה כוללת את התקני האחסון המוכרים ל־KDE. אם התיבה „עיגון אוטומטי בעת "
+"כניסה למערכת” מסומנת, ההתקן יעוגן באופן אוטומטי אף שהתיבה „עיגון כל המדיה "
+"הנשלפת בעת כניסה למערכת” אינה מסומנת. תקף גם על התיבה „עיגון אוטומטי בעת "
+"חיבור למחשב”."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -71,28 +60,20 @@ msgid ""
 "system is set to only automatically mount familiar devices, the device will "
 "not be automatically mounted."
 msgstr ""
-"לחיצה על כפתור זה תגרום \"לשכוח\" שההתקנים הנבחרים היו קיימים אי פעם. דבר זה "
-"שימושי אם התיבה \"עגן אוטומטית רק מדיה נשלפת שעוגנה באופן ידני בעבר\" "
-"מסומנת. כאשר התקן נשכח והמערכת מוגדרת לעיגון אוטומטי של התקנים מוכרים בלבד, "
-"התקנים אלו לא יעוגנו באופן אוטומטי."
+"לחיצה על כפתור זה „תשכיח” שההתקנים הנבחרים היו קיימים אי פעם. דבר זה שימושי "
+"אם התיבה „לעגן אוטומטית רק מדיה נשלפת שעוגנה ידנית בעבר” מסומנת. כאשר התקן "
+"נשכח והמערכת מוגדרת לעיגון אוטומטי של התקנים מוכרים בלבד, התקנים אלו לא "
+"יעוגנו אוטומטית."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
 #, kde-format
 msgid "Forget Device"
-msgstr "שכח התקן"
+msgstr "לשכוח התקן"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:67
-#, fuzzy, kde-format
-#| msgid ""
-#| "When this is checked, only remembered devices will be automatically "
-#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#| "instance, plugging in a USB media player to charge is not sufficient to "
-#| "'remember' it - if the files are not accessed, it will not be "
-#| "automatically mounted the next time it is seen. Once they have been "
-#| "accessed, however, the device's contents will be automatically made "
-#| "available to the system."
+#, kde-format
 msgid ""
 "When this is not checked, only remembered devices will be automatically "
 "mounted. A device is 'remembered' if it has ever been mounted before. For "
@@ -101,48 +82,44 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"בעת שתיבה זו מסומנת, KDE יעגן אוטומטית רק התקנים אותם הוא מוכר. התקן נחשב "
-"\"מוכר\" אם אי פעם הוא עוגן. לדוגמה חיבור נגן USB לצורך הטענה, אם לא ניגשו "
-"אל הקבצים, KDE לא יעגן אוטומטית את הנגן בעת חיבור עתידי.  אך אם ניגשו אל "
-"הקבצים, KDE יזכור בעתיד לגרום באופן אוטומטי שהתוכן יהיה נגיש למערכת שלך."
+"כשתיבה זו מסומנת, KDE יעגן אוטומטית רק התקנים אותם הוא מכיר. התקן נחשב "
+"„מוכר” אם אי פעם הוא עוגן. לדוגמה חיבור נגן USB לצורך הטענה היא אינה פעולה "
+"מספקת כדי שיהיה ‚מוכר ’, אם לא בוצעה גישה אל הקבצים, KDE לא יעגן אוטומטית את "
+"הנגן בעת חיבור עתידי. אך אם הייתה גישה אל הקבצים, KDE יזכור בעתיד לגרום "
+"באופן אוטומטי שהתוכן יהיה נגיש למערכת שלך."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Only automatically mount removable media that has been manually mounted "
-#| "before"
+#, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
-msgstr "עגן אוטומטית רק מדיה נשלפת שעוגנה באופן ידני בעבר."
+msgstr "לעגן אוטומטית רק מדיה נשלפת שעוגנה ידנית בעבר"
 
 #: DeviceModel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Automount on Login"
+#, kde-format
 msgid "Automount Device"
-msgstr "עיגון אוטומטי בעת התחברות למערכת"
+msgstr "עיגון התקן אוטומטית"
 
 #: DeviceModel.cpp:54
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
-msgstr ""
+msgstr "עם הכניסה"
 
 #: DeviceModel.cpp:56
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr ""
+msgstr "עם החיבור"
 
 #: DeviceModel.cpp:258
-#, fuzzy, kde-format
-#| msgid "Device"
+#, kde-format
 msgid "All Devices"
-msgstr "התקן"
+msgstr "כל ההתקנים"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr ""
+msgstr "כל ההתקנים המוכרים"
 
 #: DeviceModel.cpp:260
 #, kde-format
@@ -162,22 +139,22 @@ msgstr "UDI: %1"
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will be automatically mounted at login."
-msgstr "ההתקן יעוגן אוטומטית בעת התחברות למערכת."
+msgstr "ההתקן יעוגן אוטומטית בעת כניסה למערכת."
 
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will not be automatically mounted at login."
-msgstr "ההתקן לא יעוגן אוטומטית בעת התחברות למערכת."
+msgstr "ההתקן לא יעוגן אוטומטית בעת כניסה למערכת."
 
 #: DeviceModel.cpp:326
 #, kde-format
 msgid "This device will be automatically mounted when attached."
-msgstr "ההתקן יעוגן באופן אוטומטי בעת חיבור ההתקן למחשב"
+msgstr "ההתקן יעוגן אוטומטית בעת חיבורו למחשב."
 
 #: DeviceModel.cpp:327
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
-msgstr "ההתקן לא יעוגן באופן אוטומטי בעת חיבור ההתקן למחשב"
+msgstr "ההתקן לא יעוגן אוטומטית בעת חיבורו למחשב."
 
 #~ msgid "Device Automounter"
 #~ msgstr "מעגן התקנים אוטומטי"

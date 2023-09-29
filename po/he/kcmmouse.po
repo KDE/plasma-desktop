@@ -19,15 +19,15 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-09 01:58+0000\n"
-"PO-Revision-Date: 2017-05-16 06:53-0400\n"
+"PO-Revision-Date: 2023-09-29 00:23+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -42,12 +42,12 @@ msgstr "kde-l10n-he@kde.org"
 #: backends/kwin_wl/kwin_wl_backend.cpp:66
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
-msgstr ""
+msgstr "תשאול התקן הפלט נכשל. נא לפתוח את מודול ההגדרות הזה מחדש."
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:86
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
-msgstr ""
+msgstr "שגיאה משמעותית בקריאת פרטי התקן יסודיים של %1."
 
 #: kcm/libinput/libinput_config.cpp:100
 #, kde-format
@@ -55,11 +55,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"שגיאה בטעינת ערכים. יש מידע נוסף ביומנים. נא להפעיל את מודול ההגדרות הזה "
+"מחדש."
 
 #: kcm/libinput/libinput_config.cpp:105
 #, kde-format
 msgid "No pointer device found. Connect now."
-msgstr ""
+msgstr "לא נמצא התקן הצבעה. יש לחבר כעת."
 
 #: kcm/libinput/libinput_config.cpp:116
 #, kde-format
@@ -67,6 +69,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"אי אפשר לשמור את כל השינויים. יש מידע נוסף ביומן. נא להפעיל את מודול הגדרות "
+"זה מחדש ולנסות שוב."
 
 #: kcm/libinput/libinput_config.cpp:136
 #, kde-format
@@ -74,6 +78,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
+"שגיאה בטעינת ערכי ברירת המחדל. הגדרת אפשרויות מסוימות לברירות המחדל שלהן "
+"נכשלה,"
 
 #: kcm/libinput/libinput_config.cpp:158
 #, kde-format
@@ -81,65 +87,64 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"שגיאה בהוספת התקן מחובר חדש. נא לחבר אותו מחדש ולהפעיל את מודול ההגדרות הזה "
+"מחדש."
 
 #: kcm/libinput/libinput_config.cpp:182
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr ""
+msgstr "התקן הצבעה מנותק. חלונית ההגדרות שלו נסגרה."
 
 #: kcm/libinput/libinput_config.cpp:184
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr ""
+msgstr "התקן הצבעה מנותק. לא נמצאו התקנים אחרים."
 
 #: kcm/libinput/main.qml:73
 #, kde-format
 msgid "Device:"
-msgstr ""
+msgstr "התקן:"
 
 #: kcm/libinput/main.qml:97 kcm/libinput/main_deviceless.qml:50
-#, fuzzy, kde-format
-#| msgid "&General"
+#, kde-format
 msgid "General:"
-msgstr "&כללי"
+msgstr "כללי:"
 
 #: kcm/libinput/main.qml:98
 #, kde-format
 msgid "Device enabled"
-msgstr ""
+msgstr "התקן פעיל"
 
 #: kcm/libinput/main.qml:118
 #, kde-format
 msgid "Accept input through this device."
-msgstr ""
+msgstr "קבלת קלט דרך ההתקן הזה."
 
 #: kcm/libinput/main.qml:123 kcm/libinput/main_deviceless.qml:51
-#, fuzzy, kde-format
-#| msgid "Le&ft handed"
+#, kde-format
 msgid "Left handed mode"
-msgstr "ש&מאלי"
+msgstr "מצב ש&מאלי"
 
 #: kcm/libinput/main.qml:143 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr ""
+msgstr "החלפה בין הכפתורים השמאלי והימני."
 
 #: kcm/libinput/main.qml:148 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
-msgstr ""
+msgstr "לחיצה על הכפתורים השמאלי והימני תייצר לחיצה אמצעית"
 
 #: kcm/libinput/main.qml:168 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
-msgstr ""
+msgstr "לחיצה על הכפתורים השמאלי והימני בו־זמנית תשלח לחיצה על כפתור אמצעי."
 
 #: kcm/libinput/main.qml:178 kcm/libinput/main_deviceless.qml:106
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgid "Pointer speed:"
-msgstr "סף מצביע:"
+msgstr "מהירות מצביע:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
@@ -151,104 +156,102 @@ msgstr "האצת מצביע:"
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:169
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "ללא"
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:173
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
-msgstr ""
+msgstr "הסמן זז את אותו המרחק כמו תנועת העכבר."
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "רגיל"
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:183
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
-msgstr ""
+msgstr "הסמן מטייל מרחק שתלוי במהירות תנועת העכבר."
 
 #: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Scrolling:"
-msgstr ""
+msgstr "גלילה:"
 
 #: kcm/libinput/main.qml:268 kcm/libinput/main_deviceless.qml:196
-#, fuzzy, kde-format
-#| msgid "Re&verse scroll direction"
+#, kde-format
 msgid "Invert scroll direction"
-msgstr "ה&פוך קוטביות הגלגלת"
+msgstr "היפוך כיוון הגלילה"
 
 #: kcm/libinput/main.qml:284 kcm/libinput/main_deviceless.qml:212
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr ""
+msgstr "גלילה כמו מסך מגע."
 
 #: kcm/libinput/main.qml:289
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgid "Scrolling speed:"
-msgstr "סף מצביע:"
+msgstr "מהירות גלילה:"
 
 #: kcm/libinput/main.qml:339
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "איטית יותר"
 
 #: kcm/libinput/main.qml:345
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "מהירה יותר"
 
 #: kcm/libinput/main.qml:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr ""
+msgstr "איגוד מחדש כפתורי עכבר נוספים…"
 
 #: kcm/libinput/main.qml:392
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "כפתור נוסף %1:"
 
 #: kcm/libinput/main.qml:422
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr ""
+msgstr "נא ללחוץ על כפתור העכבר לו ברצונך להוסיף צירוף מקשים"
 
 #: kcm/libinput/main.qml:423
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "נא למלא את צירוף המקשרים החדש עבור %1"
 
 #: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: kcm/libinput/main.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
-msgstr ""
+msgstr "נא ללחוץ על כפתור בעכבר"
 
 #: kcm/libinput/main.qml:445
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "הוספת צירוף מקשים…"
 
 #: kcm/libinput/main.qml:474
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
-msgstr ""
+msgstr "חזרה"
 
 #. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
 #: kcm/xlib/kcmmouse.ui:14
@@ -259,8 +262,8 @@ msgid ""
 "trackball, or some other hardware that performs a similar function."
 msgstr ""
 "<h1>עכבר</h1> מודול זה מאפשר לך לבחור אפשרויות שונות בנוגע לדרך שבה יפעל "
-"התקן ההצבעה שלך. התקן ההצבעה שלך יכול להיות עכבר, כדור עקיבה, או כל חומרה "
-"אחרת שממלאת תפקיד דומה."
+"התקן ההצבעה שלך. התקן ההצבעה שלך יכול להיות עכבר, כדור מעקב או כל חומרה אחרת "
+"שממלאת תפקיד דומה."
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: kcm/xlib/kcmmouse.ui:36
@@ -278,10 +281,10 @@ msgid ""
 "as the left and right buttons are affected. For example, if you have a three-"
 "button mouse, the middle button is unaffected."
 msgstr ""
-"אם אתה שמאלי, יכול להיות שתעדיף להחליף את התפקידים של הלחצנים הימני והשמאלי "
-"של התקן ההצבעה שלך, וזאת באמצעות בחירה באפשרות \"שמאלי\". אם להתקן ההצבעה "
-"שלך יש יותר משני לחצנים, יושפעו מזאת רק הלחצנים המתפקדים בתור הימני והשמאלי. "
-"כך למשל, אם יש לך עכבר עם שלושה לחצנים, הלחצן האמצעי לא יושפע."
+"לשמאליים, יכול להיות שעדיף להחליף את תפקידי הלחצנים הימני והשמאלי של התקן "
+"ההצבעה שלך על ידי בחירה באפשרות „שמאלי”. אם להתקן ההצבעה שלך יש יותר משני "
+"לחצנים, יושפעו מזאת רק הלחצנים המתפקדים בתור הימני והשמאלי. כך למשל, אם יש "
+"לך עכבר עם שלושה לחצנים, הלחצן האמצעי לא יושפע."
 
 #. i18n: ectx: property (title), widget (QGroupBox, handedBox)
 #: kcm/xlib/kcmmouse.ui:55
@@ -299,7 +302,7 @@ msgstr "ימ&ני"
 #: kcm/xlib/kcmmouse.ui:77
 #, kde-format
 msgid "Le&ft handed"
-msgstr "ש&מאלי"
+msgstr "&שמאלי"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
 #: kcm/xlib/kcmmouse.ui:106
@@ -307,13 +310,13 @@ msgstr "ש&מאלי"
 msgid ""
 "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
 "mouse buttons."
-msgstr "שנה את כיוון הגלילה לגלגלת העכבר או כפתורי העכבר הרביעי והחמישי."
+msgstr "שינוי כיוון הגלילה עם גלגלת העכבר או כפתור העכבר הרביעי והחמישי."
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
 #: kcm/xlib/kcmmouse.ui:109
 #, kde-format
 msgid "Re&verse scroll direction"
-msgstr "ה&פוך קוטביות הגלגלת"
+msgstr "הי&פוך כיוון הגלגלת"
 
 #. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
 #: kcm/xlib/kcmmouse.ui:156
@@ -365,11 +368,10 @@ msgid ""
 "control.</p>"
 msgstr ""
 "<p> אפשרות זו מאפשרת לך לשנות את היחס בין המרחק שעובר מצביע העכבר על המסך "
-"לבין התזוזה היחסית של ההתקן עצמו (שיכול להיות עכבר, כדור עקיבה, או כל התקן "
+"לבין התזוזה היחסית של ההתקן עצמו (שיכול להיות עכבר, כדור מעקב או כל התקן "
 "הצבעה אחר). </p> <p> ערך האצה גבוה יביא לתזוזות גדולות של מצביע העכבר על "
-"המסך, אפילו כשאתה מבצע רק תזוזות קטנות עם ההתקן עצמו. בחירה בערכים גבוהים "
-"מאוד עלולה להביא לכך שמצביע העכבר יטוס על גבי המסך, דבר אשר יקשה על השליטה "
-"עליו. </p>"
+"המסך, אפילו בעת ביצוע תזוזות קטנות בלבד עם ההתקן עצמו. בחירה בערכים גבוהים "
+"מאוד עלולה להביא לכך שמצביע העכבר יטוס על גבי המסך, מה שיקשה לשלוט בו. </p>"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
 #: kcm/xlib/kcmmouse.ui:233
@@ -427,8 +429,8 @@ msgid ""
 "If you click with the mouse (e.g. in a multi-line editor) and begin to move "
 "the mouse within the drag start time, a drag operation will be initiated."
 msgstr ""
-"אם תלחץ עם העכבר (למשל בתוך עורך טקסט) ותתחיל להזיז אותו במסגרת טווח זמן "
-"התחלת הגרירה, תותחל פעולת גרירה."
+"לחיצה עם העכבר (למשל בתוך עורך טקסט) והזזתו במסגרת טווח זמן התחלת הגרירה, "
+"תתחיל פעולת גרירה."
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
 #: kcm/xlib/kcmmouse.ui:333
@@ -437,8 +439,7 @@ msgid ""
 "If you click with the mouse and begin to move the mouse at least the drag "
 "start distance, a drag operation will be initiated."
 msgstr ""
-"אם תלחץ עם העכבר ותתחיל להזיז אותו למרחק השווה לפחות למרחק התחלת הגרירה, "
-"תותחל פעולת גרירה."
+"לחיצה עם העכבר והזזתו במסגרת טווח מרחק התחלת הגרירה, תתחיל פעולת גרירה."
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
 #: kcm/xlib/kcmmouse.ui:355
@@ -449,9 +450,9 @@ msgid ""
 "number of visible lines, it will be ignored and the wheel movement will be "
 "handled as a page up/down movement."
 msgstr ""
-"אם אתה משתמש בגלגלת של העכבר, ערך זה קובע את מספר השורות שייגללו לכל הזזה של "
-"הגלגלת. שים לב כי אם מספר זה עולה על מספר השורות הנראות, יתעלמו ממנו והזזת "
-"הגלגלת תהיה כמו מעבר עמוד למעלה\\למטה."
+"אם גלגלת העכבר משמשת אותך, ערך זה קובע את מספר השורות לגלילה בכל תנועת עכבר. "
+"נא לשים לב שאם המספר חורג ממספר השורות הגלויות, לא תהיה משמעות למספר ותנועת "
+"העכבר תטופל כתנועה עמוד מעלה/מטה (PgUp/PgDn)."
 
 #. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
 #: kcm/xlib/kcmmouse.ui:387
@@ -463,7 +464,7 @@ msgstr "ניווט מקלדת"
 #: kcm/xlib/kcmmouse.ui:395
 #, kde-format
 msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "הזז את העכבר בעזרת המקל&דת (באמצעות מקשי החצים)"
+msgstr "הזזת העכבר בעזרת המקל&דת (באמצעות לוח המספרים)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: kcm/xlib/kcmmouse.ui:424
@@ -475,19 +476,19 @@ msgstr "השהיית הא&צה:"
 #: kcm/xlib/kcmmouse.ui:434
 #, kde-format
 msgid "R&epeat interval:"
-msgstr "מרווח בי&ן חזרות:"
+msgstr "מרווח &בין חזרות:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: kcm/xlib/kcmmouse.ui:466
 #, kde-format
 msgid "Acceleration &time:"
-msgstr "ז&מן האצה:"
+msgstr "&זמן האצה:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: kcm/xlib/kcmmouse.ui:498
 #, kde-format
 msgid "Ma&ximum speed:"
-msgstr "מהיר&ות מרבית:"
+msgstr "מהי&רות מרבית:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
 #: kcm/xlib/kcmmouse.ui:514
@@ -499,7 +500,7 @@ msgstr " פיקסלים לשנייה"
 #: kcm/xlib/kcmmouse.ui:530
 #, kde-format
 msgid "Acceleration &profile:"
-msgstr "פרופי&ל האצה:"
+msgstr "&פרופיל האצה:"
 
 #: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
 #, kde-format

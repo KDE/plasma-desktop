@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2017-05-16 06:51-0400\n"
+"PO-Revision-Date: 2023-09-28 21:49+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-he@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -42,17 +42,17 @@ msgstr "הבא"
 #: caldialog.cpp:50
 #, kde-format
 msgid "Please wait a moment to calculate the precision"
-msgstr "המתן רגע לחישוב הרגישות"
+msgstr "נא להמתין לחישוב הרגישות"
 
 #: caldialog.cpp:79
 #, kde-format
 msgid "(usually X)"
-msgstr "(בד\"כ X)"
+msgstr "(בד״כ X)"
 
 #: caldialog.cpp:81
 #, kde-format
 msgid "(usually Y)"
-msgstr "(בד\"כ Y)"
+msgstr "(בד״כ Y)"
 
 #: caldialog.cpp:87
 #, kde-format
@@ -62,9 +62,9 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>תהליך הכיול עומד לבדוק את טווח הערכים שהמכשיר שלך שולח. <br /> <br /> "
-"הזז את <b>ציר %1 %2</b> במכשירך למיקום <b>המינימלי.</b> <br /> <br /> הקש על "
-"מקש כלשהו במכשירך והקש על \"הבא\" כדי להמשיך לשלב הבא.</qt>"
+"<qt>תהליך הכיול עומד לבדוק את טווח הערכים שהמכשיר שלך שולח. <br /> <br /> נא "
+"להזיז את <b>ציר %1 %2</b> במכשירך למיקום <b>המזערי.</b> <br /> <br /> יש "
+"להקיש על מקש כלשהו במכשיר וללחוץ על „הבא” כדי להמשיך לשלב הבא.</qt>"
 
 #: caldialog.cpp:110
 #, kde-format
@@ -74,9 +74,9 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>תהליך הכיול עומד לבדוק את טווח הערכים שהמכשיר שלך שולח.<br /> <br />  "
-"הזז את <b>ציר %1 %2</b> במכשירך  <b>למרכז.</b> <br /> <br />  הקש על מקש "
-"כלשהו במכשירך והקש על \"הבא\" כדי להמשיך לשלב הבא.</qt>"
+"<qt>תהליך הכיול עומד לבדוק את טווח הערכים שהמכשיר שלך שולח. <br /> <br /> נא "
+"להזיז את <b>ציר %1 %2</b> במכשירך למיקום <b>המרכזי.</b> <br /> <br /> יש "
+"להקיש על מקש כלשהו במכשיר וללחוץ על „הבא” כדי להמשיך לשלב הבא.</qt>"
 
 #: caldialog.cpp:133
 #, kde-format
@@ -86,9 +86,9 @@ msgid ""
 "position.<br /><br />Press any button on the device or click on the 'Next' "
 "button to continue with the next step.</qt>"
 msgstr ""
-"<qt>תהליך הכיול עומד לבדוק את טווח הערכים שהמכשיר שלך שולח. <br /> <br />  "
-"הזז את <b>ציר %1 %2</b> במכשירך למיקום <b>המקסימלי.</b> <br /> <br />  הקש "
-"על מקש כלשהו במכשירך והקש על \"הבא\" כדי להמשיך לשלב הבא.</qt>"
+"<qt>תהליך הכיול עומד לבדוק את טווח הערכים שהמכשיר שלך שולח. <br /> <br /> נא "
+"להזיז את <b>ציר %1 %2</b> במכשירך למיקום <b>המרבי.</b> <br /> <br /> יש "
+"להקיש על מקש כלשהו במכשיר וללחוץ על „הבא” כדי להמשיך לשלב הבא.</qt>"
 
 #: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
@@ -98,12 +98,12 @@ msgstr "שגיאת תקשורת"
 #: caldialog.cpp:164
 #, kde-format
 msgid "You have successfully calibrated your device"
-msgstr "המכשיר כויל בהצלחה"
+msgstr "כיול המכשיר הצליח"
 
 #: caldialog.cpp:164 joywidget.cpp:367
 #, kde-format
 msgid "Calibration Success"
-msgstr "הכיול עבר בהצלחה"
+msgstr "הכיול הצליח"
 
 #: caldialog.cpp:184
 #, kde-format
@@ -113,17 +113,17 @@ msgstr "ערך ציר: %2:%1"
 #: joydevice.cpp:41
 #, kde-format
 msgid "The given device %1 could not be opened: %2"
-msgstr "לא יכול לפתוח את ההתקן הנתון %2: %1"
+msgstr "אי אפשר לפתוח את ההתקן הנתון %2: %1"
 
 #: joydevice.cpp:45
 #, kde-format
 msgid "The given device %1 is not a joystick."
-msgstr "ההתקן הנתון %1 הוא לא ג'ויסטיק."
+msgstr "ההתקן הנתון %1 הוא לא ג׳ויסטיק."
 
 #: joydevice.cpp:49
 #, kde-format
 msgid "Could not get kernel driver version for joystick device %1: %2"
-msgstr "לא יכול להגיש את ההתקן של הליבה עבוד התקן ג'ויסטיק %1: %2"
+msgstr "אי אפשר לאתר את גרסת מנהל ההתקן של הליבה עבור התקן הג׳ויסטיק %1: %2"
 
 #: joydevice.cpp:60
 #, kde-format
@@ -131,38 +131,38 @@ msgid ""
 "The current running kernel driver version (%1.%2.%3) is not the one this "
 "module was compiled for (%4.%5.%6)."
 msgstr ""
-"גרסת הדרייבר של הקרנל הנוכחי (%1.%2.%3) הוא לא זה שעבורו מודול זה הודר (%4."
-"%5.%6)."
+"גרסת מנהל ההתקן של הליבה הנוכחית (%1.%2.%3) היא לא זו שעבורה מודול זה הודר "
+"(%4.%5.%6)."
 
 #: joydevice.cpp:71
 #, kde-format
 msgid "Could not get number of buttons for joystick device %1: %2"
-msgstr "אין אפשרות לקבל את מספר הכפתורים עבור התקן הג'ויסטיק %1: %2"
+msgstr "אי אפשר לקבל את מספר הכפתורים עבור התקן הג׳ויסטיק %1: %2"
 
 #: joydevice.cpp:75
 #, kde-format
 msgid "Could not get number of axes for joystick device %1: %2"
-msgstr "אין אפשרות לקבל את מספר הצירים עבור התקן הג'ויסטיק %1: %2"
+msgstr "אי אפשר לקבל את מספר הצירים עבור התקן הג׳ויסטיק %1: %2"
 
 #: joydevice.cpp:79
 #, kde-format
 msgid "Could not get calibration values for joystick device %1: %2"
-msgstr "אין אפשרות לקבל את ערך הכיול עבור התקן הג'ויסטיק %1: %2"
+msgstr "אי אפשר לקבל את ערך הכיול עבור התקן הג׳ויסטיק %1: %2"
 
 #: joydevice.cpp:83
 #, kde-format
 msgid "Could not restore calibration values for joystick device %1: %2"
-msgstr "אין אפשרות לשחזר את ערך הכיול עבור התקן הג'ויסטיק %1: %2"
+msgstr "אי אפשר לשחזר את ערך הכיול עבור התקן הג׳ויסטיק %1: %2"
 
 #: joydevice.cpp:87
 #, kde-format
 msgid "Could not initialize calibration values for joystick device %1: %2"
-msgstr "אין אפשרות לאתחל את ערכי הכיול עבור התקן הג'ויסטיק %1: %2"
+msgstr "אי אפשר לאתחל את ערכי הכיול עבור התקן הג׳ויסטיק %1: %2"
 
 #: joydevice.cpp:91
 #, kde-format
 msgid "Could not apply calibration values for joystick device %1: %2"
-msgstr "אין אפשרות ליישם את ערכי הכיול עבור התקן הג'ויסטיק %1: %2"
+msgstr "אי אפשר ליישם את ערכי הכיול עבור התקן הג׳ויסטיק %1: %2"
 
 #: joydevice.cpp:95
 #, kde-format
@@ -183,7 +183,7 @@ msgstr "מיקום:"
 #: joywidget.cpp:87
 #, kde-format
 msgid "Show trace"
-msgstr "הצג מסלול"
+msgstr "הצגת מסלול"
 
 #: joywidget.cpp:96 joywidget.cpp:303
 #, kde-format
@@ -213,7 +213,7 @@ msgstr "ערך"
 #: joywidget.cpp:127
 #, kde-format
 msgid "Calibrate"
-msgstr "כייל"
+msgstr "כיול"
 
 #: joywidget.cpp:190
 #, kde-format
@@ -222,9 +222,9 @@ msgid ""
 "done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
 "one attached, please enter the correct device file."
 msgstr ""
-"לא נמצא אף ג'ויסטיק באופן אוטומטי במחשב זה.\n"
+"לא נמצא אף ג׳ויסטיק במחשב זה אוטומטית.\n"
 "בדיקות נעשו ב־‪/dev/js[0-4]‬  וב־‪/dev/input/js[0-4]‬\n"
-". אם אתה יודע שיש אחד מחובר, הכנס את קובץ ההתקן המתאים."
+"אם ידוע לך שיש אחד מחובר, נא למלא את קובץ ההתקן הנכון."
 
 #: joywidget.cpp:226
 #, kde-format
@@ -233,9 +233,9 @@ msgid ""
 "Please select a device from the list or\n"
 "enter a device file, like /dev/js0."
 msgstr ""
-"שם ההתקן אינו חוקי (לא מכיל /dev).\n"
-"בחר התקן מהרשימה או\n"
-"הכנס קובץ התקן, כגון ‎/dev/js."
+"שם ההתקן שגוי (לא מכיל ‎/dev).\n"
+"נא לבחור התקן מהרשימה או\n"
+"למלא קובץ התקן, כגון ‎/dev/js0."
 
 #: joywidget.cpp:229
 #, kde-format
@@ -264,13 +264,14 @@ msgid ""
 "all axes to their center position and then do not touch the joystick anymore."
 "</b><br /><br />Click OK to start the calibration.</qt>"
 msgstr ""
-"<qt>תהליך הכיול עומד לבדוק את הדיוק. <br /> <br /> <b>הזז את כל הצירים למרכז "
-"ואל תיגע בג'ויסטיק יותר.</b> <br /> <br />לחץ אישור כדי להתחיל בכיול.</qt>"
+"<qt>תהליך הכיול עומד לבדוק את הדיוק. <br /> <br /> <b>נא להזיז את כל הצירים "
+"למרכז ולא לגעת בג׳ויסטיק יותר.</b> <br /> <br />לחץ אישור כדי להתחיל בכיול.</"
+"qt>"
 
 #: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
-msgstr "שוחזרו כל ערכי הכיול עבור התקן הג'ויסטיק %1."
+msgstr "שוחזרו כל ערכי הכיול עבור התקן הג׳ויסטיק %1."
 
 #~ msgid "KDE Joystick Control Module"
 #~ msgstr "מודול מרכז בקרה לבקרת ג'ויסטיק"
