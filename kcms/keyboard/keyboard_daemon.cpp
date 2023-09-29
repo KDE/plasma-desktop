@@ -99,7 +99,26 @@ void KeyboardDaemon::registerShortcut()
 
         QAction *toggleLayoutAction = actionCollection->getToggleAction();
         connect(toggleLayoutAction, &QAction::triggered, this, [this]() {
+            setLastUsedLayoutValue(getLayout());
             switchToNextLayout();
+
+            LayoutUnit newLayout = X11Helper::getCurrentLayout();
+            QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                              QStringLiteral("/org/kde/osdService"),
+                                                              QStringLiteral("org.kde.osdService"),
+                                                              QStringLiteral("kbdLayoutChanged"));
+            msg << Flags::getLongText(newLayout, rules);
+            QDBusConnection::sessionBus().asyncCall(msg);
+        });
+
+        QAction *lastUsedLayoutAction = actionCollection->getLastUsedLayoutAction();
+        connect(lastUsedLayoutAction, &QAction::triggered, this, [this]() {
+            auto layoutsList = X11Helper::getLayoutsList();
+            if (!lastUsedLayout.has_value() || layoutsList.count() <= *lastUsedLayout) {
+                switchToPreviousLayout();
+            } else {
+                setLayout(*lastUsedLayout);
+            }
 
             LayoutUnit newLayout = X11Helper::getCurrentLayout();
             QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
@@ -170,17 +189,22 @@ void KeyboardDaemon::layoutMapChanged()
 
 void KeyboardDaemon::switchToNextLayout()
 {
+    setLastUsedLayoutValue(getLayout());
     X11Helper::scrollLayouts(1);
 }
 
 void KeyboardDaemon::switchToPreviousLayout()
 {
+    setLastUsedLayoutValue(getLayout());
     X11Helper::scrollLayouts(-1);
 }
 
 bool KeyboardDaemon::setLayout(QAction *action)
 {
     if (action == actionCollection->getToggleAction())
+        return false;
+
+    if (action == actionCollection->getLastUsedLayoutAction())
         return false;
 
     return setLayout(action->data().toUInt());
@@ -222,6 +246,7 @@ bool KeyboardDaemon::setLayout(uint index)
         XkbHelper::initializeKeyboardLayouts(layouts);
         index = indexOfLastMainLayoutInXKB;
     }
+    setLastUsedLayoutValue(getLayout());
     return X11Helper::setGroup(index);
 }
 
@@ -259,6 +284,14 @@ QVector<LayoutNames> KeyboardDaemon::getLayoutsList() const
         ret.append({layoutUnit.layout(), displayName, Flags::getLongText(layoutUnit, rules)});
     }
     return ret;
+}
+
+void KeyboardDaemon::setLastUsedLayoutValue(uint newValue)
+{
+    auto layoutsList = X11Helper::getLayoutsList();
+    if (layoutsList.count() > 1) {
+        lastUsedLayout = std::optional<uint>{newValue};
+    }
 }
 
 #include "keyboard_daemon.moc"

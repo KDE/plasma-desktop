@@ -118,6 +118,11 @@ void KCMKeyboardWidget::defaults()
     auto *xkbOptionModel = dynamic_cast<XkbOptionsTreeModel *>(uiWidget->xkbOptionsTreeView->model());
     xkbOptionModel->setXkbOptions(keyboardConfig->defaultXkbOptionsValue());
     keyboardConfig->setDefaults();
+    if (actionCollection == nullptr) {
+        actionCollection = new KeyboardLayoutActionCollection(this, true);
+    }
+    actionCollection->setLastUsedLayoutShortcut(QKeySequence(Qt::META | Qt::ALT | Qt::Key_L));
+    updateShortcutsUI();
 }
 
 bool KCMKeyboardWidget::isSaveNeeded() const
@@ -304,6 +309,8 @@ void KCMKeyboardWidget::initializeLayoutsUI()
 
     uiWidget->kdeKeySequence->setModifierlessAllowed(false);
 
+    uiWidget->toggleLastUsedLayoutKeySequence->setModifierlessAllowed(false);
+
     uiWidget->kcfg_osdKbdLayoutChangedEnabled->setText(m_workspaceOptions.osdKbdLayoutChangedEnabledItem()->label());
     uiWidget->kcfg_osdKbdLayoutChangedEnabled->setToolTip(m_workspaceOptions.osdKbdLayoutChangedEnabledItem()->toolTip());
 
@@ -323,6 +330,7 @@ void KCMKeyboardWidget::initializeLayoutsUI()
     connect(uiWidget->xkb3rdLevelClearBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::clear3rdLevelShortcuts);
 
     connect(uiWidget->kdeKeySequence, &KKeySequenceWidget::keySequenceChanged, this, &KCMKeyboardWidget::alternativeShortcutChanged);
+    connect(uiWidget->toggleLastUsedLayoutKeySequence, &KKeySequenceWidget::keySequenceChanged, this, &KCMKeyboardWidget::lastUsedLayoutShortcutChanged);
     connect(uiWidget->switchingPolicyButtonGroup, &QButtonGroup::idClicked, this, &KCMKeyboardWidget::uiChanged);
     connect(uiWidget->switchingPolicyButtonGroup, &QButtonGroup::idClicked, this, &KCMKeyboardWidget::updateUiDefaultIndicator);
 
@@ -374,6 +382,20 @@ void KCMKeyboardWidget::alternativeShortcutChanged(const QKeySequence &seq)
         actionCollection = new KeyboardLayoutActionCollection(this, true);
     }
     actionCollection->setToggleShortcut(uiWidget->kdeKeySequence->keySequence());
+}
+
+void KCMKeyboardWidget::lastUsedLayoutShortcutChanged(const QKeySequence &seq)
+{
+    Q_UNUSED(seq)
+
+    if (rules == nullptr) {
+        return;
+    }
+
+    if (actionCollection == nullptr) {
+        actionCollection = new KeyboardLayoutActionCollection(this, true);
+    }
+    actionCollection->setLastUsedLayoutShortcut(uiWidget->toggleLastUsedLayoutKeySequence->keySequence());
 }
 
 void KCMKeyboardWidget::switchKeyboardShortcutChanged()
@@ -663,6 +685,10 @@ void KCMKeyboardWidget::updateShortcutsUI()
     QAction *toggleAction = actionCollection->getToggleAction();
     const auto shortcuts = KGlobalAccel::self()->shortcut(toggleAction);
     uiWidget->kdeKeySequence->setKeySequence(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
+
+    QAction *lastUsedLayoutAction = actionCollection->getLastUsedLayoutAction();
+    const auto lastUsedLayoutShortcuts = KGlobalAccel::self()->shortcut(lastUsedLayoutAction);
+    uiWidget->toggleLastUsedLayoutKeySequence->setKeySequence(lastUsedLayoutShortcuts.isEmpty() ? QKeySequence() : lastUsedLayoutShortcuts.first());
 
     actionCollection->loadLayoutShortcuts(keyboardConfig->layouts, rules);
     layoutsTableModel->refresh();

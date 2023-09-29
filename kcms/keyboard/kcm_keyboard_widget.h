@@ -65,6 +65,7 @@ private Q_SLOTS:
     void configureXkbOptionsChanged();
     void previewLayout();
     void alternativeShortcutChanged(const QKeySequence &seq);
+    void lastUsedLayoutShortcutChanged(const QKeySequence &seq);
     void switchKeyboardShortcutChanged();
 
 private:

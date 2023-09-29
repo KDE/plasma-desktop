@@ -20,9 +20,11 @@ public:
     ~KeyboardLayoutActionCollection() override;
 
     QAction *getToggleAction();
+    QAction *getLastUsedLayoutAction();
     QAction *createLayoutShortcutActon(const LayoutUnit &layoutUnit, int layoutIndex, const Rules *rules, bool autoload);
     void setLayoutShortcuts(QList<LayoutUnit> &layoutUnits, const Rules *rules);
     void setToggleShortcut(const QKeySequence &keySequence);
+    void setLastUsedLayoutShortcut(const QKeySequence &keySequence);
     void loadLayoutShortcuts(QList<LayoutUnit> &layoutUnits, const Rules *rules);
     void resetLayoutShortcuts();
 

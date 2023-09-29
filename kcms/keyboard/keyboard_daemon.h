@@ -8,6 +8,7 @@
 
 #include <KDEDModule>
 #include <QStringList>
+#include <optional>
 
 #include "bindings.h"
 #include "keyboard_dbus.h"
@@ -27,12 +28,14 @@ class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
     KeyboardLayoutActionCollection *actionCollection;
     XInputEventNotifier *xEventNotifier;
     LayoutMemory layoutMemory;
+    std::optional<uint> lastUsedLayout;
     const Rules *rules;
 
     void registerListeners();
     void registerShortcut();
     void unregisterListeners();
     void unregisterShortcut();
+    void setLastUsedLayoutValue(uint newValue);
 
 private Q_SLOTS:
     void configureKeyboard();

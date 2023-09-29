@@ -25,8 +25,14 @@ KeyboardLayoutActionCollection::KeyboardLayoutActionCollection(QObject *parent, 
     QAction *toggleAction = addAction(QStringLiteral("Switch to Next Keyboard Layout"));
     toggleAction->setText(i18n("Switch to Next Keyboard Layout"));
     KGlobalAccel::self()->setShortcut(toggleAction, QList<QKeySequence>() << QKeySequence(Qt::META | Qt::ALT | Qt::Key_K), KGlobalAccel::Autoloading);
+
+    QAction *lastUsedLayoutAction = addAction(QStringLiteral("Switch to Last-Used Keyboard Layout"));
+    lastUsedLayoutAction->setText(i18n("Switch to Last-Used Keyboard Layout"));
+    KGlobalAccel::self()->setShortcut(lastUsedLayoutAction, QList<QKeySequence>() << QKeySequence(Qt::META | Qt::ALT | Qt::Key_L), KGlobalAccel::Autoloading);
+
     if (configAction) {
         toggleAction->setProperty("isConfigurationAction", true);
+        lastUsedLayoutAction->setProperty("isConfigurationAction", true);
     }
 }
 
@@ -38,6 +44,11 @@ KeyboardLayoutActionCollection::~KeyboardLayoutActionCollection()
 QAction *KeyboardLayoutActionCollection::getToggleAction()
 {
     return action(0);
+}
+
+QAction *KeyboardLayoutActionCollection::getLastUsedLayoutAction()
+{
+    return action(1);
 }
 
 QAction *KeyboardLayoutActionCollection::createLayoutShortcutActon(const LayoutUnit &layoutUnit, int layoutIndex, const Rules *rules, bool autoload)
@@ -63,6 +74,11 @@ QAction *KeyboardLayoutActionCollection::createLayoutShortcutActon(const LayoutU
 void KeyboardLayoutActionCollection::setToggleShortcut(const QKeySequence &keySequence)
 {
     KGlobalAccel::self()->setShortcut(getToggleAction(), QList<QKeySequence>() << keySequence, KGlobalAccel::NoAutoloading);
+}
+
+void KeyboardLayoutActionCollection::setLastUsedLayoutShortcut(const QKeySequence &keySequence)
+{
+    KGlobalAccel::self()->setShortcut(getLastUsedLayoutAction(), QList<QKeySequence>() << keySequence, KGlobalAccel::NoAutoloading);
 }
 
 void KeyboardLayoutActionCollection::setLayoutShortcuts(QList<LayoutUnit> &layoutUnits, const Rules *rules)
@@ -95,7 +111,7 @@ void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit> &layo
 
 void KeyboardLayoutActionCollection::resetLayoutShortcuts()
 {
-    for (int i = 1; i < actions().size(); i++) {
+    for (int i = 2; i < actions().size(); i++) {
         KGlobalAccel::self()->setShortcut(action(i), QList<QKeySequence>(), KGlobalAccel::NoAutoloading);
         KGlobalAccel::self()->setDefaultShortcut(action(i), QList<QKeySequence>(), KGlobalAccel::NoAutoloading);
     }
