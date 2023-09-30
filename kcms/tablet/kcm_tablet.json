@@ -65,7 +65,9 @@
     "X-KDE-Keywords[sv]": "ritplatta,platta,wacom,penna",
     "X-KDE-Keywords[uk]": "drawing,tablet,wacom,pen,малювання,рисування,планшет,ваком,перо",
     "X-KDE-Keywords[x-test]": "xxdrawingxx,xxtabletxx,xxwacomxx,xxpenxx",
-    "X-KDE-OnlyShowOnQtPlatforms": "wayland",
+    "X-KDE-OnlyShowOnQtPlatforms": [
+        "wayland"
+    ],
     "X-KDE-System-Settings-Parent-Category": "input-devices",
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/main.qml"

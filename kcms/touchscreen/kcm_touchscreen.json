@@ -49,7 +49,9 @@
         "Name[zh_TW]": "觸控螢幕"
     },
     "X-KDE-Keywords": "touchscreen,touch,laptop,screen,display",
-    "X-KDE-OnlyShowOnQtPlatforms": "wayland",
+    "X-KDE-OnlyShowOnQtPlatforms": [
+        "wayland"
+    ],
     "X-KDE-System-Settings-Parent-Category": "hardware-input-touchscreen",
     "X-KDE-Weight": 10,
     "X-Plasma-MainScript": "ui/main.qml"
