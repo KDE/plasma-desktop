@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-09 00:48+0000\n"
+"POT-Creation-Date: 2023-09-27 02:28+0000\n"
 "PO-Revision-Date: 2007-12-24 02:54+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -25,7 +25,7 @@ msgid "Location"
 msgstr ""
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:429
+#: package/contents/ui/FolderViewLayer.qml:435
 #, kde-format
 msgid "Icons"
 msgstr "Govažat"
@@ -402,6 +402,14 @@ msgstr "Váldde eret"
 msgid "Preview Plugins"
 msgstr ""
 
+#: package/contents/ui/FolderView.qml:1204
+#, kde-format
+msgctxt "@info"
+msgid ""
+"There are a lot of files and folders on the desktop. This can cause bugs and "
+"performance issues. Please consider moving some of them elsewhere."
+msgstr ""
+
 #: package/contents/ui/main.qml:356
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
@@ -417,33 +425,33 @@ msgstr ""
 msgid "&Refresh Desktop"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:467 plugins/folder/foldermodel.cpp:1625
+#: plugins/folder/foldermodel.cpp:467 plugins/folder/foldermodel.cpp:1629
 #, kde-format
 msgid "&Refresh View"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1634
+#: plugins/folder/foldermodel.cpp:1638
 #, kde-format
 msgid "&Empty Trash"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1637
+#: plugins/folder/foldermodel.cpp:1641
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1640
+#: plugins/folder/foldermodel.cpp:1644
 #, kde-format
 msgid "&Open"
 msgstr "&Raba"
 
-#: plugins/folder/foldermodel.cpp:1757
+#: plugins/folder/foldermodel.cpp:1761
 #, kde-format
 msgid "&Paste"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1874
+#: plugins/folder/foldermodel.cpp:1878
 #, kde-format
 msgid "&Properties"
 msgstr "&Iešvuođat"
