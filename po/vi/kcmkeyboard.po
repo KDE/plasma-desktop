@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxkb\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-09-30 01:42+0000\n"
 "PO-Revision-Date: 2021-10-19 14:38+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -38,7 +38,13 @@ msgstr "Trình chuyển bố cục bàn phím"
 msgid "Switch to Next Keyboard Layout"
 msgstr "Chuyển sang bố cục bàn phím tiếp theo"
 
-#: bindings.cpp:49
+#: bindings.cpp:30
+#, fuzzy, kde-format
+#| msgid "Switch to Next Keyboard Layout"
+msgid "Switch to Last-Used Keyboard Layout"
+msgstr "Chuyển sang bố cục bàn phím tiếp theo"
+
+#: bindings.cpp:60
 #, kde-format
 msgid "Switch keyboard layout to %1"
 msgstr "Chuyển bố cục bàn phím sang %1"
@@ -75,7 +81,7 @@ msgstr "Nhãn:"
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:338
 #, kde-format
 msgid "Preview"
 msgstr "Xem thử"
@@ -226,79 +232,94 @@ msgstr ""
 "phím bổ trợ, và có thể cũng không hoạt động trong một vài tình huống (vd. "
 "nếu đang có ô bật lên hoặc ở trình bảo vệ màn hình)."
 
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm_keyboard.ui:246
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgid "Last used shortcut:"
+msgstr "Phím tắt thay thế:"
+
+#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
+#: kcm_keyboard.ui:259
+#, kde-format
+msgid ""
+"This shortcut allows for fast switching between two layouts, by always "
+"switching to the last-used one."
+msgstr ""
+
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:261
+#: kcm_keyboard.ui:284
 #, kde-format
 msgid "Configure layouts"
 msgstr "Cấu hình bố cục"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:275
+#: kcm_keyboard.ui:298
 #, kde-format
 msgid "Add"
 msgstr "Thêm"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:285
+#: kcm_keyboard.ui:308
 #, kde-format
 msgid "Remove"
 msgstr "Xoá"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:295
+#: kcm_keyboard.ui:318
 #, kde-format
 msgid "Move Up"
 msgstr "Chuyển lên"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:305
+#: kcm_keyboard.ui:328
 #, kde-format
 msgid "Move Down"
 msgstr "Chuyển xuống"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:350
+#: kcm_keyboard.ui:373
 #, kde-format
 msgid "Spare layouts"
 msgstr "Bố cục phụ"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:382
+#: kcm_keyboard.ui:405
 #, kde-format
 msgid "Main layout count:"
 msgstr "Số lượng bố cục chính:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:412
+#: kcm_keyboard.ui:435
 #, kde-format
 msgid "Advanced"
 msgstr "Nâng cao"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:418
+#: kcm_keyboard.ui:441
 #, kde-format
 msgid "&Configure keyboard options"
 msgstr "Cấu hình các &lựa chọn bàn phím"
 
-#: kcm_keyboard_widget.cpp:204
+#: kcm_keyboard_widget.cpp:209
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "Không rõ"
 
-#: kcm_keyboard_widget.cpp:206
+#: kcm_keyboard_widget.cpp:211
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
 
-#: kcm_keyboard_widget.cpp:633
+#: kcm_keyboard_widget.cpp:655
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Không"
 
-#: kcm_keyboard_widget.cpp:647
+#: kcm_keyboard_widget.cpp:669
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"

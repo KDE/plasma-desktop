@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-09-30 01:42+0000\n"
 "PO-Revision-Date: 2021-11-17 12:09+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -41,7 +41,13 @@ msgstr "Prepínač rozloženia klávesnice"
 msgid "Switch to Next Keyboard Layout"
 msgstr "Prepnúť na ďalšie rozloženie klávesnice"
 
-#: bindings.cpp:49
+#: bindings.cpp:30
+#, fuzzy, kde-format
+#| msgid "Switch to Next Keyboard Layout"
+msgid "Switch to Last-Used Keyboard Layout"
+msgstr "Prepnúť na ďalšie rozloženie klávesnice"
+
+#: bindings.cpp:60
 #, kde-format
 msgid "Switch keyboard layout to %1"
 msgstr "Prepnúť rozloženie klávesnice na %1"
@@ -78,7 +84,7 @@ msgstr "Popis:"
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:338
 #, kde-format
 msgid "Preview"
 msgstr "Náhľad"
@@ -229,79 +235,94 @@ msgstr ""
 "modifikačné skratky a nemusí tiež fungovať v niektorých situáciách (napr. "
 "pri aktívnom vyskakovacom okne alebo zo šetriča obrazovky)."
 
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm_keyboard.ui:246
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgid "Last used shortcut:"
+msgstr "Alternatívne skratky:"
+
+#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
+#: kcm_keyboard.ui:259
+#, kde-format
+msgid ""
+"This shortcut allows for fast switching between two layouts, by always "
+"switching to the last-used one."
+msgstr ""
+
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:261
+#: kcm_keyboard.ui:284
 #, kde-format
 msgid "Configure layouts"
 msgstr "Nastaviť rozloženia"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:275
+#: kcm_keyboard.ui:298
 #, kde-format
 msgid "Add"
 msgstr "Pridať"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:285
+#: kcm_keyboard.ui:308
 #, kde-format
 msgid "Remove"
 msgstr "Odstrániť"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:295
+#: kcm_keyboard.ui:318
 #, kde-format
 msgid "Move Up"
 msgstr "Presunúť hore"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:305
+#: kcm_keyboard.ui:328
 #, kde-format
 msgid "Move Down"
 msgstr "Presunúť dole"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:350
+#: kcm_keyboard.ui:373
 #, kde-format
 msgid "Spare layouts"
 msgstr "Náhradné rozloženia"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:382
+#: kcm_keyboard.ui:405
 #, kde-format
 msgid "Main layout count:"
 msgstr "Počet hlavných rozložení:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:412
+#: kcm_keyboard.ui:435
 #, kde-format
 msgid "Advanced"
 msgstr "Pokročilé"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:418
+#: kcm_keyboard.ui:441
 #, kde-format
 msgid "&Configure keyboard options"
 msgstr "&Nastaviť možnosti klávesnice"
 
-#: kcm_keyboard_widget.cpp:204
+#: kcm_keyboard_widget.cpp:209
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "Neznáme"
 
-#: kcm_keyboard_widget.cpp:206
+#: kcm_keyboard_widget.cpp:211
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
 
-#: kcm_keyboard_widget.cpp:633
+#: kcm_keyboard_widget.cpp:655
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Žiadna"
 
-#: kcm_keyboard_widget.cpp:647
+#: kcm_keyboard_widget.cpp:669
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"

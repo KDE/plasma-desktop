@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-09-30 01:42+0000\n"
 "PO-Revision-Date: 2022-12-10 21:00+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -41,7 +41,13 @@ msgstr "Skiptir fyrir lyklaborðsskipan"
 msgid "Switch to Next Keyboard Layout"
 msgstr "Skipta í næstu lyklaborðsskipan"
 
-#: bindings.cpp:49
+#: bindings.cpp:30
+#, fuzzy, kde-format
+#| msgid "Switch to Next Keyboard Layout"
+msgid "Switch to Last-Used Keyboard Layout"
+msgstr "Skipta í næstu lyklaborðsskipan"
+
+#: bindings.cpp:60
 #, kde-format
 msgid "Switch keyboard layout to %1"
 msgstr "Skipta lyklaborðsskipan í %1"
@@ -78,7 +84,7 @@ msgstr "Skýring:"
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:338
 #, kde-format
 msgid "Preview"
 msgstr "Forskoða"
@@ -231,79 +237,94 @@ msgstr ""
 "kannski ekki í sumum tilvikum (t.d. þegar sprettgluggi er virkur eða "
 "skjáhvíla er í gangi)."
 
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm_keyboard.ui:246
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgid "Last used shortcut:"
+msgstr "Aukaflýtilykill:"
+
+#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
+#: kcm_keyboard.ui:259
+#, kde-format
+msgid ""
+"This shortcut allows for fast switching between two layouts, by always "
+"switching to the last-used one."
+msgstr ""
+
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:261
+#: kcm_keyboard.ui:284
 #, kde-format
 msgid "Configure layouts"
 msgstr "Stilla lyklaborðsskipan"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:275
+#: kcm_keyboard.ui:298
 #, kde-format
 msgid "Add"
 msgstr "Bæta við"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:285
+#: kcm_keyboard.ui:308
 #, kde-format
 msgid "Remove"
 msgstr "Fjarlægja"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:295
+#: kcm_keyboard.ui:318
 #, kde-format
 msgid "Move Up"
 msgstr "Færa upp"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:305
+#: kcm_keyboard.ui:328
 #, kde-format
 msgid "Move Down"
 msgstr "Færa niður"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:350
+#: kcm_keyboard.ui:373
 #, kde-format
 msgid "Spare layouts"
 msgstr "Aukaskipanir"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:382
+#: kcm_keyboard.ui:405
 #, kde-format
 msgid "Main layout count:"
 msgstr "Fjöldi aðallyklaborðsskipana:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:412
+#: kcm_keyboard.ui:435
 #, kde-format
 msgid "Advanced"
 msgstr "Nánar"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:418
+#: kcm_keyboard.ui:441
 #, kde-format
 msgid "&Configure keyboard options"
 msgstr "&Grunnstilla valkosti lyklaborðs"
 
-#: kcm_keyboard_widget.cpp:204
+#: kcm_keyboard_widget.cpp:209
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "Óþekkt"
 
-#: kcm_keyboard_widget.cpp:206
+#: kcm_keyboard_widget.cpp:211
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
 
-#: kcm_keyboard_widget.cpp:633
+#: kcm_keyboard_widget.cpp:655
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Ekkert"
 
-#: kcm_keyboard_widget.cpp:647
+#: kcm_keyboard_widget.cpp:669
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"

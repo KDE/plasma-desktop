@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-09-30 01:42+0000\n"
 "PO-Revision-Date: 2012-06-13 15:26+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -45,7 +45,14 @@ msgstr "ប្លង់​ក្ដារចុច​"
 msgid "Switch to Next Keyboard Layout"
 msgstr "ប្លង់​ក្ដារចុច​"
 
-#: bindings.cpp:49
+#: bindings.cpp:30
+#, fuzzy, kde-format
+#| msgctxt "tooltip title"
+#| msgid "Keyboard Layout"
+msgid "Switch to Last-Used Keyboard Layout"
+msgstr "ប្លង់​ក្ដារចុច​"
+
+#: bindings.cpp:60
 #, fuzzy, kde-format
 #| msgctxt "tooltip title"
 #| msgid "Keyboard Layout"
@@ -84,7 +91,7 @@ msgstr "ស្លាក ៖"
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:338
 #, kde-format
 msgid "Preview"
 msgstr ""
@@ -237,73 +244,88 @@ msgstr ""
 "នេះ​ជា​ផ្លូវកាត់​ដើម្បី​ប្ដូរ​ប្លង់​ដែល​ត្រូវ​បាន​គ្រប់គ្រ​ងដោយ KDE ។ វា​មិន​គាំទ្រ​​ផ្លូវកាត់ modifier-only "
 "ហើយ​អាច​មិន​ដំណើរការ​ក្នុង​ស្ថានភាព​មួយ​ចំនួន (ឧ. ប្រសិន​បើ​ការ​លេចឡើង​សកម្ម ឬ​ពី​ធាតុ​រក្សាអេក្រង់) ។"
 
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm_keyboard.ui:246
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgid "Last used shortcut:"
+msgstr "ផ្លូវ​កាត់​ជម្រើស ៖"
+
+#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
+#: kcm_keyboard.ui:259
+#, kde-format
+msgid ""
+"This shortcut allows for fast switching between two layouts, by always "
+"switching to the last-used one."
+msgstr ""
+
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:261
+#: kcm_keyboard.ui:284
 #, kde-format
 msgid "Configure layouts"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ​ប្លង់"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:275
+#: kcm_keyboard.ui:298
 #, kde-format
 msgid "Add"
 msgstr "បន្ថែម"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:285
+#: kcm_keyboard.ui:308
 #, kde-format
 msgid "Remove"
 msgstr "យកចេញ​"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:295
+#: kcm_keyboard.ui:318
 #, kde-format
 msgid "Move Up"
 msgstr "ផ្លាស់​ទី​ឡើងលើ​"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:305
+#: kcm_keyboard.ui:328
 #, kde-format
 msgid "Move Down"
 msgstr "ផ្លាស់ទី​ចុះ​ក្រោម​"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:350
+#: kcm_keyboard.ui:373
 #, kde-format
 msgid "Spare layouts"
 msgstr "ប្លង់​បម្រុង"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:382
+#: kcm_keyboard.ui:405
 #, kde-format
 msgid "Main layout count:"
 msgstr "ចំនួន​ប្លង់​​ចម្បង ៖   "
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:412
+#: kcm_keyboard.ui:435
 #, kde-format
 msgid "Advanced"
 msgstr "កម្រិត​ខ្ពស់"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:418
+#: kcm_keyboard.ui:441
 #, kde-format
 msgid "&Configure keyboard options"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ​ជម្រើស​ក្ដារចុច"
 
-#: kcm_keyboard_widget.cpp:204
+#: kcm_keyboard_widget.cpp:209
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "មិន​ស្គាល់"
 
-#: kcm_keyboard_widget.cpp:206
+#: kcm_keyboard_widget.cpp:211
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
 
-#: kcm_keyboard_widget.cpp:633
+#: kcm_keyboard_widget.cpp:655
 #, fuzzy, kde-format
 #| msgctxt "no shortcut defined"
 #| msgid "None"
@@ -311,7 +333,7 @@ msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "គ្មាន"
 
-#: kcm_keyboard_widget.cpp:647
+#: kcm_keyboard_widget.cpp:669
 #, fuzzy, kde-format
 #| msgid "Shortcut:"
 msgid "%1 shortcut"
