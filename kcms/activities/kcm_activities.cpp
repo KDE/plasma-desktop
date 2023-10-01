@@ -13,6 +13,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
+#include <QTimer>
 #include <QtQml/QQmlModuleRegistration>
 
 K_PLUGIN_CLASS_WITH_JSON(ActivitiesModule, "kcm_activities.json")

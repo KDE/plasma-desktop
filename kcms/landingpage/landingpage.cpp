@@ -18,6 +18,7 @@
 #include <QDBusMessage>
 #include <QDBusPendingCall>
 #include <QGuiApplication>
+#include <QProcess>
 #include <QQuickItem>
 #include <QQuickRenderControl>
 #include <QQuickWindow>

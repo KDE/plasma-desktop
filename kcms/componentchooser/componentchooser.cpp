@@ -12,6 +12,7 @@
 #include <QApplication>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QMimeDatabase>
 
 #include <KApplicationTrader>
 #include <KBuildSycocaProgressDialog>

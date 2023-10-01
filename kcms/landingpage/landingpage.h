@@ -12,6 +12,7 @@
 
 #include <QJsonArray>
 #include <QJsonValue>
+#include <QSortFilterProxyModel>
 
 class QStandardItemModel;
 

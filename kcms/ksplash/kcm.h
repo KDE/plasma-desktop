@@ -11,9 +11,11 @@
 #include <KNSCore/Entry>
 #include <KPackage/Package>
 #include <KQuickManagedConfigModule>
+#include <QAbstractProxyModel>
 
 class QStandardItemModel;
 class QSortFilterProxyModel;
+class QProcess;
 class SplashScreenSettings;
 class SplashScreenData;
 
