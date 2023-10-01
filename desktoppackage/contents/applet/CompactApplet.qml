@@ -25,6 +25,8 @@ PlasmaCore.ToolTipArea {
     textFormat: plasmoidItem ? plasmoidItem.toolTipTextFormat : 0
     mainItem: plasmoidItem && plasmoidItem.toolTipItem ? plasmoidItem.toolTipItem : null
 
+    readonly property bool vertical: location === PlasmaCore.Types.RightEdge || location === PlasmaCore.Types.LeftEdge
+
     property Item fullRepresentation
     property Item compactRepresentation
     property Item expandedFeedback: expandedItem
@@ -107,10 +109,10 @@ PlasmaCore.ToolTipArea {
             property bool returnAllMargins: true
             // The above makes sure margin is returned even for side margins, that
             // would be otherwise turned off.
-            bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0;
-            topMargin: containerMargins ? -containerMargins('top', returnAllMargins) : 0;
-            leftMargin: containerMargins ? -containerMargins('left', returnAllMargins) : 0;
-            rightMargin: containerMargins ? -containerMargins('right', returnAllMargins) : 0;
+            bottomMargin: !vertical && containerMargins ? -containerMargins('bottom', returnAllMargins) : 0;
+            topMargin: !vertical && containerMargins ? -containerMargins('top', returnAllMargins) : 0;
+            leftMargin: vertical && containerMargins ? -containerMargins('left', returnAllMargins) : 0;
+            rightMargin: vertical && containerMargins ? -containerMargins('right', returnAllMargins) : 0;
         }
         imagePath: "widgets/tabbar"
         visible: opacity > 0

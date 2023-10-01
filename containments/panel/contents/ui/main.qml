@@ -106,7 +106,7 @@ ContainmentItem {
         Plasmoid.applets.forEach(applet => applet.expanded = false);
         const component = Qt.createComponent("ConfigOverlay.qml");
         root.configOverlay = component.createObject(root, {
-            "anchors.fill": root,
+            "anchors.fill": dropArea,
         });
         component.destroy();
     }
@@ -198,10 +198,10 @@ ContainmentItem {
                 required property int index
                 property Item dragging
                 property bool isAppletContainer: true
-                property bool isMarginSeparator: ((applet.plasmoid.constraintHints & PlasmaCore.Types.MarginAreasSeparator) == PlasmaCore.Types.MarginAreasSeparator)
+                property bool isMarginSeparator: ((applet.plasmoid?.constraintHints & PlasmaCore.Types.MarginAreasSeparator) == PlasmaCore.Types.MarginAreasSeparator)
                 property int appletIndex: index // To make sure it's always readable even inside other models
                 property bool inThickArea: false
-                visible: applet.plasmoid.status !== PlasmaCore.Types.HiddenStatus || (!Plasmoid.immutable && Plasmoid.userConfiguring);
+                visible: applet.plasmoid?.status !== PlasmaCore.Types.HiddenStatus || (!Plasmoid.immutable && Plasmoid.userConfiguring);
 
                 //when the applet moves caused by its resize, don't animate.
                 //this is completely heuristic, but looks way less "jumpy"
@@ -346,10 +346,10 @@ ContainmentItem {
 //BEGIN UI elements
 
         anchors {
-            leftMargin: isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.left) : 0
-            rightMargin: isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.right) : 0
-            topMargin: isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.top)
-            bottomMargin: isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.bottom)
+            leftMargin: isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.left + currentLayout.rowSpacing) : 0
+            rightMargin: isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.right + currentLayout.rowSpacing) : 0
+            topMargin: isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.top + currentLayout.rowSpacing)
+            bottomMargin: isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.bottom + currentLayout.rowSpacing)
         }
 
         Item {
@@ -380,8 +380,8 @@ ContainmentItem {
             readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
 
     // BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
-            width: root.width - (isHorizontal ? toolBoxSize : 0)
-            height: root.height - (!isHorizontal ? toolBoxSize : 0)
+            width: root.width - x - parent.anchors.leftMargin - parent.anchors.rightMargin - (isHorizontal ? toolBoxSize : 0)
+            height: root.height - y - parent.anchors.topMargin - parent.anchors.bottomMargin - (isHorizontal ? 0 : toolBoxSize)
 
             Item {
                 id: lastSpacer

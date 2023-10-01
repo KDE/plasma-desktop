@@ -27,11 +27,19 @@ PlasmoidItem {
 
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
-    Layout.minimumWidth: Kirigami.Units.iconSizes.small
-    Layout.minimumHeight: Kirigami.Units.iconSizes.small
+    Layout.minimumWidth: Kirigami.Units.iconSizes.medium
+    Layout.minimumHeight: Kirigami.Units.iconSizes.medium
+
+    Layout.maximumWidth: Layout.minimumWidth
+    Layout.maximumHeight: Layout.minimumHeight
+
+    Layout.preferredWidth: Layout.minimumWidth
+    Layout.preferredHeight: Layout.minimumHeight
 
     readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge]
             .includes(Plasmoid.location)
+
+    readonly property bool vertical: Plasmoid.location === PlasmaCore.Types.RightEdge || Plasmoid.location === PlasmaCore.Types.LeftEdge
 
     /**
     * @c true if the current applet is Minimize All, @c false if the
@@ -120,10 +128,10 @@ PlasmoidItem {
                 property bool returnAllMargins: true
                 // The above makes sure margin is returned even for side margins
                 // that would be otherwise turned off.
-                topMargin: containerMargins ? -containerMargins('top', returnAllMargins) : 0
-                leftMargin: containerMargins ? -containerMargins('left', returnAllMargins) : 0
-                rightMargin: containerMargins ? -containerMargins('right', returnAllMargins) : 0
-                bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0
+                topMargin: !vertical && containerMargins ? -containerMargins('top', returnAllMargins) : 0
+                leftMargin: vertical && containerMargins ? -containerMargins('left', returnAllMargins) : 0
+                rightMargin: vertical && containerMargins ? -containerMargins('right', returnAllMargins) : 0
+                bottomMargin: !vertical && containerMargins ? -containerMargins('bottom', returnAllMargins) : 0
             }
             imagePath: "widgets/tabbar"
             visible: opacity > 0
