@@ -335,18 +335,6 @@ ContainmentItem {
 
                 configOverlaySource: "ConfigOverlay.qml"
 
-                onUserDrag: (newPosition, dragCenter) => {
-                    const pos = mapToItem(root.parent, dragCenter.x, dragCenter.y);
-                    const newCont = root.containmentItemAt(pos.x, pos.y);
-
-                    if (newCont && newCont.plasmoid !== Plasmoid) {
-                        const newPos = newCont.mapFromApplet(Plasmoid, pos.x, pos.y);
-
-                        newCont.Plasmoid.addApplet(appletContainer.applet.plasmoid, Qt.rect(newPos.x, newPos.y, appletContainer.applet.width, appletContainer.applet.height));
-                        appletsLayout.hidePlaceHolder();
-                    }
-                }
-
                 ShortDropBehavior on x { }
                 ShortDropBehavior on y { }
             }

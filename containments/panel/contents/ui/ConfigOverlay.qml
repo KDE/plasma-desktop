@@ -27,25 +27,6 @@ MouseArea {
 
     onPositionChanged: mouse => {
         if (pressed) {
-
-            // If the object has been dragged outside of the panel and there's
-            // a different containment there, we remove it from the panel
-            // containment and add it to the new one.
-            var padding = Kirigami.Units.gridUnit * 5;
-            if (currentApplet && (mouse.x < -padding || mouse.y < -padding ||
-                mouse.x > width + padding || mouse.y > height + padding)) {
-                var newCont = root.containmentItemAt(mouse.x, mouse.y);
-
-                if (newCont && newCont !== plasmoid) {
-                    var newPos = newCont.mapFromApplet(currentApplet.applet.plasmoid, mouse.x, mouse.y);
-                    var applet = currentApplet.applet;
-                    appletsModel.remove(placeHolder.parent.index);
-                    currentApplet.destroy();
-                    applet.anchors.fill = undefined
-                    newCont.plasmoid.addApplet(applet.plasmoid, Qt.rect(newPos.x, newPos.y, applet.width, applet.height));
-                    return;
-                }
-            }
             if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                 currentApplet.y = mouse.y - startDragOffset;
             } else {
