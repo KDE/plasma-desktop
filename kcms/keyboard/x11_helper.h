@@ -13,6 +13,7 @@
 #include <QWidget>
 #include <QtGui/private/qtx11extras_p.h>
 
+QT_WARNING_DISABLE_CLANG("-Wkeyword-macro")
 #define explicit explicit_is_keyword_in_cpp
 #include <xcb/xcb.h>
 #include <xcb/xkb.h>
