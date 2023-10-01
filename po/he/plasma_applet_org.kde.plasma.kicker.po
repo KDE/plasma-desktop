@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-13 02:06+0000\n"
-"PO-Revision-Date: 2017-05-22 05:23-0400\n"
+"PO-Revision-Date: 2023-09-30 14:56+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -26,173 +26,159 @@ msgstr "כללי"
 #: package/contents/ui/code/tools.js:42
 #, kde-format
 msgid "Remove from Favorites"
-msgstr "הסר ממועדפים"
+msgstr "הסרה מהמועדפים"
 
 #: package/contents/ui/code/tools.js:46
 #, kde-format
 msgid "Add to Favorites"
-msgstr "הוסף למועדפים"
+msgstr "הוספה למועדפים"
 
 #: package/contents/ui/code/tools.js:70
 #, kde-format
 msgid "On All Activities"
-msgstr ""
+msgstr "בכל הפעילויות"
 
 #: package/contents/ui/code/tools.js:120
 #, kde-format
 msgid "On the Current Activity"
-msgstr ""
+msgstr "בפעילות הנוכחית"
 
 #: package/contents/ui/code/tools.js:134
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgid "Show in Favorites"
-msgstr "מועדפים"
+msgstr "הצגה במועדפים"
 
 #: package/contents/ui/ConfigGeneral.qml:46
-#, fuzzy, kde-format
-#| msgid "Icon"
+#, kde-format
 msgid "Icon:"
-msgstr "סמל"
+msgstr "סמל:"
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr ""
+msgstr "בחירה…"
 
 #: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
-msgstr ""
+msgstr "פינוי הסמל"
 
 #: package/contents/ui/ConfigGeneral.qml:149
 #, kde-format
 msgid "Show applications as:"
-msgstr "הראה יישומים כ:"
+msgstr "הצגת יישומים:"
 
 #: package/contents/ui/ConfigGeneral.qml:151
 #, kde-format
 msgid "Name only"
-msgstr "שם בלבד"
+msgstr "כשם בלבד"
 
 #: package/contents/ui/ConfigGeneral.qml:151
 #, kde-format
 msgid "Description only"
-msgstr "תיאור בלבד"
+msgstr "כתיאור בלבד"
 
 #: package/contents/ui/ConfigGeneral.qml:151
 #, kde-format
 msgid "Name (Description)"
-msgstr "שם (תיאור)"
+msgstr "כשם (תיאור)"
 
 #: package/contents/ui/ConfigGeneral.qml:151
 #, kde-format
 msgid "Description (Name)"
-msgstr "תיאור (שם)"
+msgstr "כתיאור (שם)"
 
 #: package/contents/ui/ConfigGeneral.qml:161
-#, fuzzy, kde-format
-#| msgid "Behavior"
+#, kde-format
 msgid "Behavior:"
-msgstr "התנהגות"
+msgstr "התנהגות:"
 
 #: package/contents/ui/ConfigGeneral.qml:163
-#, fuzzy, kde-format
-#| msgid "Sort alphabetically"
+#, kde-format
 msgid "Sort applications alphabetically"
-msgstr "סדר לפי שם"
+msgstr "סידור יישומים לפי אלפבית"
 
 #: package/contents/ui/ConfigGeneral.qml:171
-#, fuzzy, kde-format
-#| msgid "Flatten menu to a single level"
+#, kde-format
 msgid "Flatten sub-menus to a single level"
-msgstr "שטח תפריט לרמה אחת"
+msgstr "שיטוח תת־תפריטים לרמה אחידה"
 
 #: package/contents/ui/ConfigGeneral.qml:179
 #, kde-format
 msgid "Show icons on the root level of the menu"
-msgstr ""
+msgstr "הצגת סמלים ברמה העליונה של התפריט"
 
 #: package/contents/ui/ConfigGeneral.qml:189
-#, fuzzy, kde-format
-#| msgid "Categories"
+#, kde-format
 msgid "Show categories:"
-msgstr "קטגוריות"
+msgstr "הצגת קטגוריות:"
 
 #: package/contents/ui/ConfigGeneral.qml:192
-#, fuzzy, kde-format
-#| msgid "Recent Applications"
+#, kde-format
 msgid "Recent applications"
 msgstr "יישומים אחרונים"
 
 #: package/contents/ui/ConfigGeneral.qml:193
-#, fuzzy, kde-format
-#| msgid "Often Used Applications"
+#, kde-format
 msgid "Often used applications"
-msgstr "יישומים בשימוש נפוץ"
+msgstr "יישומים בשימוש תדיר"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent files"
-msgstr "מסמכים אחרונים"
+msgstr "קבצים אחרונים"
 
 #: package/contents/ui/ConfigGeneral.qml:201
-#, fuzzy, kde-format
-#| msgid "Often used"
+#, kde-format
 msgid "Often used files"
-msgstr "בשימוש לעיתים קרובות"
+msgstr "קבצים בשימוש תדיר"
 
 #: package/contents/ui/ConfigGeneral.qml:207
 #, kde-format
 msgid "Sort items in categories by:"
-msgstr ""
+msgstr "מיון פריטים בקטגוריות לפי:"
 
 #: package/contents/ui/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Recently used"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "בשימוש לאחרונה"
 
 #: package/contents/ui/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Often used"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "בשימוש לעיתים קרובות"
 
 #: package/contents/ui/ConfigGeneral.qml:218
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search:"
-msgstr "חיפוש"
+msgstr "חיפוש:"
 
 #: package/contents/ui/ConfigGeneral.qml:220
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
-msgstr "הרחב חיפוש ל־סמניות, קבצים והודעות דואר אלקטרוני"
+msgstr "הרחבת החיפוש לסימניות, קבצים והודעות דוא״ל"
 
 #: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgid "Align search results to bottom"
-msgstr "ישר תוצאות חיפוש לתחתית"
+msgstr "יישור תוצאות חיפוש לתחתית"
 
 #: package/contents/ui/DashboardRepresentation.qml:234
 #, kde-format
 msgid "Searching for '%1'"
-msgstr "מחפש \"%1\""
+msgstr "בחיפוש אחר „%1”"
 
 #: package/contents/ui/DashboardRepresentation.qml:234
-#, fuzzy, kde-format
-#| msgid "Type to search."
+#, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
-msgstr "הקלד כדי לחפש."
+msgstr "הקלדה מתחילה חיפוש…"
 
 #: package/contents/ui/DashboardRepresentation.qml:330
 #, kde-format
@@ -200,10 +186,9 @@ msgid "Favorites"
 msgstr "מועדפים"
 
 #: package/contents/ui/main.qml:241
-#, fuzzy, kde-format
-#| msgid "Edit Applications..."
+#, kde-format
 msgid "Edit Applications…"
-msgstr "ערוך יישומים..."
+msgstr "עריכת יישומים…"
 
 #~ msgid "Widgets"
 #~ msgstr "יישומונים"

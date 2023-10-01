@@ -9,20 +9,20 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:42+0000\n"
-"PO-Revision-Date: 2017-05-23 08:56-0400\n"
+"PO-Revision-Date: 2023-09-30 14:31+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
 msgid "Location"
-msgstr "מיקום"
+msgstr "מקום"
 
 #: package/contents/config/config.qml:23
 #: package/contents/ui/FolderViewLayer.qml:399
@@ -38,36 +38,32 @@ msgstr "סינון"
 #: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
-msgstr "חזור"
+msgstr "חזרה"
 
 #: package/contents/ui/ConfigFilter.qml:63
-#, fuzzy, kde-format
-#| msgid "File types:"
+#, kde-format
 msgid "Files:"
-msgstr "סוגי קבצים:"
+msgstr "קבצים:"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Show a place:"
+#, kde-format
 msgid "Show all"
-msgstr "הצג מיקום:"
+msgstr "להציג הכול"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Show Files Matching"
+#, kde-format
 msgid "Show matching"
-msgstr "הצג את הקבצים התואמים"
+msgstr "להציג מתאימים"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Hide Files Matching"
+#, kde-format
 msgid "Hide matching"
-msgstr "הסתר את הקבצים התואמים"
+msgstr "הסתרת מתאימים"
 
 #: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
-msgstr "תבנית סוג הקובץ:"
+msgstr "תבנית שם הקובץ:"
 
 #: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
@@ -75,105 +71,96 @@ msgid "File types:"
 msgstr "סוגי קבצים:"
 
 #: package/contents/ui/ConfigFilter.qml:82
-#, fuzzy, kde-format
-#| msgid "Show All Files"
+#, kde-format
 msgid "Show hidden files:"
-msgstr "הצג את כל הקבצים"
+msgstr "הצגת קבצים מוסתרים:"
 
 #: package/contents/ui/ConfigFilter.qml:130
-#, fuzzy, kde-format
-#| msgid "File types:"
+#, kde-format
 msgid "File Type"
-msgstr "סוגי קבצים:"
+msgstr "סוג קובץ"
 
 #: package/contents/ui/ConfigFilter.qml:130
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "תיאור"
 
 #: package/contents/ui/ConfigFilter.qml:199
 #, kde-format
 msgid "Select All"
-msgstr "בחר הכל"
+msgstr "בחירה בהכול"
 
 #: package/contents/ui/ConfigFilter.qml:209
 #, kde-format
 msgid "Deselect All"
-msgstr "בטל סימון של הכל"
+msgstr "ביטול בחירה"
 
 #: package/contents/ui/ConfigFilter.qml:218
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "היפוך הסדר"
 
 #: package/contents/ui/ConfigIcons.qml:61
-#, fuzzy, kde-format
-#| msgid "Panel Button"
+#, kde-format
 msgid "Panel button:"
-msgstr "מקש לוח"
+msgstr "כפתור בלוח:"
 
 #: package/contents/ui/ConfigIcons.qml:67
-#, fuzzy, kde-format
-#| msgid "Custom icon:"
+#, kde-format
 msgid "Use a custom icon"
-msgstr "סמל מותאמת אישית:"
+msgstr "להשתמש כסמל מותאם אישית"
 
 #: package/contents/ui/ConfigIcons.qml:100
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Open icon chooser dialog"
-#| msgid "Choose..."
+#, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "בחר..."
+msgstr "בחירה…"
 
 #: package/contents/ui/ConfigIcons.qml:106
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
-msgstr "נקה סמלים"
+msgstr "פינוי סמל"
 
 #: package/contents/ui/ConfigIcons.qml:126
-#, fuzzy, kde-format
-#| msgid "Arrangement"
+#, kde-format
 msgid "Arrangement:"
-msgstr "סידור"
+msgstr "סידור:"
 
 #: package/contents/ui/ConfigIcons.qml:130
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "משמאל לימין"
 
 #: package/contents/ui/ConfigIcons.qml:131
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "מימין לשמאל"
 
 #: package/contents/ui/ConfigIcons.qml:132
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "מלמעלה למטה"
 
 #: package/contents/ui/ConfigIcons.qml:141
-#, fuzzy, kde-format
-#| msgid "Align"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
-msgstr "יישור"
+msgstr "יישור לשמאל"
 
 #: package/contents/ui/ConfigIcons.qml:142
-#, fuzzy, kde-format
-#| msgid "Align"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
-msgstr "יישור"
+msgstr "יישור לימין"
 
 #: package/contents/ui/ConfigIcons.qml:157
 #, kde-format
 msgid "Lock in place"
-msgstr "נעל במקום"
+msgstr "נעילה במקום"
 
 #: package/contents/ui/ConfigIcons.qml:171
 #, kde-format
@@ -184,61 +171,52 @@ msgstr "מיון:"
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
-msgstr ""
+msgstr "ידנית"
 
 #: package/contents/ui/ConfigIcons.qml:180
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "שם"
 
 #: package/contents/ui/ConfigIcons.qml:181
-#, fuzzy, kde-format
-#| msgid "Size"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "גודל"
 
 #: package/contents/ui/ConfigIcons.qml:182
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "סוג"
 
 #: package/contents/ui/ConfigIcons.qml:183
-#, fuzzy, kde-format
-#| msgid "Date"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "תאריך"
 
 #: package/contents/ui/ConfigIcons.qml:194
-#, fuzzy, kde-format
-#| msgid "Descending"
+#, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "יורד"
 
 #: package/contents/ui/ConfigIcons.qml:202
-#, fuzzy, kde-format
-#| msgid "Folders first"
+#, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "תיקיות תחילה"
 
 #: package/contents/ui/ConfigIcons.qml:216
-#, fuzzy, kde-format
-#| msgctxt "whether to use icon or list view"
-#| msgid "View Mode:"
+#, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "מצב תצוגה:"
 
 #: package/contents/ui/ConfigIcons.qml:218
-#, fuzzy, kde-format
-#| msgid "List"
+#, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "רשימה"
@@ -247,24 +225,21 @@ msgstr "רשימה"
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
-msgstr ""
+msgstr "רשת"
 
 #: package/contents/ui/ConfigIcons.qml:230
-#, fuzzy, kde-format
-#| msgid "Icon Size"
+#, kde-format
 msgid "Icon size:"
-msgstr "גודל הסמל"
+msgstr "גודל סמלים:"
 
 #: package/contents/ui/ConfigIcons.qml:245
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "קטן"
 
 #: package/contents/ui/ConfigIcons.qml:254
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "גדול"
@@ -272,17 +247,16 @@ msgstr "גדול"
 #: package/contents/ui/ConfigIcons.qml:263
 #, kde-format
 msgid "Label width:"
-msgstr ""
+msgstr "רוחב תווית:"
 
 #: package/contents/ui/ConfigIcons.qml:266
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
-msgstr ""
+msgstr "צר"
 
 #: package/contents/ui/ConfigIcons.qml:267
-#, fuzzy, kde-format
-#| msgid "Medium"
+#, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "בינוני"
@@ -291,110 +265,97 @@ msgstr "בינוני"
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
-msgstr ""
+msgstr "רחב"
 
 #: package/contents/ui/ConfigIcons.qml:276
-#, fuzzy, kde-format
-#| msgid "Text lines:"
+#, kde-format
 msgid "Text lines:"
 msgstr "שורות טקסט:"
 
 #: package/contents/ui/ConfigIcons.qml:292
 #, kde-format
 msgid "When hovering over icons:"
-msgstr ""
+msgstr "במעבר על סמלים:"
 
 #: package/contents/ui/ConfigIcons.qml:294
-#, fuzzy, kde-format
-#| msgid "Tooltips"
+#, kde-format
 msgid "Show tooltips"
-msgstr "בועות עצה"
+msgstr "הצגת חלוניות הסבר"
 
 #: package/contents/ui/ConfigIcons.qml:301
-#, fuzzy, kde-format
-#| msgid "Selection markers"
+#, kde-format
 msgid "Show selection markers"
-msgstr "סימן בחירה"
+msgstr "הצגת סמני בחירה"
 
 #: package/contents/ui/ConfigIcons.qml:308
-#, fuzzy, kde-format
-#| msgid "Folder preview popups"
+#, kde-format
 msgid "Show folder preview popups"
-msgstr "תצוגה מקדימה קופצת"
+msgstr "הצגת חלוניות תצוגה מקדימה לתיקיות"
 
 #: package/contents/ui/ConfigIcons.qml:318
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgid "Rename:"
-msgstr "&שנה שם"
+msgstr "שינוי שם:"
 
 #: package/contents/ui/ConfigIcons.qml:322
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
-msgstr ""
+msgstr "שינוי כחלק מהשורה בלחיצה על הטקסט של הפריט הנבחר"
 
 #: package/contents/ui/ConfigIcons.qml:333
-#, fuzzy, kde-format
-#| msgid "Preview Plugins"
+#, kde-format
 msgid "Previews:"
-msgstr "תצוגה מקדימה של תוספים"
+msgstr "תצוגות מקדימות:"
 
 #: package/contents/ui/ConfigIcons.qml:335
-#, fuzzy, kde-format
-#| msgid "Preview thumbnails"
+#, kde-format
 msgid "Show preview thumbnails"
-msgstr "תצוגות מקדימות"
+msgstr "הצגת תצוגות מקדימות מוקטנות"
 
 #: package/contents/ui/ConfigIcons.qml:343
-#, fuzzy, kde-format
-#| msgid "More Preview Options..."
+#, kde-format
 msgid "Configure Preview Plugins…"
-msgstr "עוד אפשרויות תצוגה מקדימה..."
+msgstr "הגדרת תוספי תצוגות מקדימות…"
 
 #: package/contents/ui/ConfigLocation.qml:80
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "הצגה:"
 
 #: package/contents/ui/ConfigLocation.qml:82
-#, fuzzy, kde-format
-#| msgid "Show the Desktop folder"
+#, kde-format
 msgid "Desktop folder"
-msgstr "הצג את תקיית שולחן העבודה"
+msgstr "תיקיית שולחן העבודה"
 
 #: package/contents/ui/ConfigLocation.qml:89
-#, fuzzy, kde-format
-#| msgid "Show files linked to the current activity"
+#, kde-format
 msgid "Files linked to the current activity"
-msgstr "הראה קבצים הקשורים לפעילות הנוכחית"
+msgstr "קבצים שמקושרים לפעילות הנוכחית"
 
 #: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgid "Places panel item:"
-msgstr ""
+msgstr "פריט בלוח מקומות:"
 
 #: package/contents/ui/ConfigLocation.qml:129
-#, fuzzy, kde-format
-#| msgid "Custom title"
+#, kde-format
 msgid "Custom location:"
-msgstr "כותרת מותאמת אישית"
+msgstr "מקום מותאם אישית:"
 
 #: package/contents/ui/ConfigLocation.qml:137
-#, fuzzy, kde-format
-#| msgid "Type a path or a URL here"
+#, kde-format
 msgid "Type path or URL…"
-msgstr "הקלד את הנתיב או הכתובת כאן"
+msgstr "נא להקליד נתיב או כתובת…"
 
 #: package/contents/ui/ConfigLocation.qml:180
-#, fuzzy, kde-format
-#| msgid "Title"
+#, kde-format
 msgid "Title:"
-msgstr "כותרת"
+msgstr "כותרת:"
 
 #: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "None"
-msgstr "כלום"
+msgstr "ללא"
 
 #: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
@@ -412,25 +373,24 @@ msgid "Custom title"
 msgstr "כותרת מותאמת אישית"
 
 #: package/contents/ui/ConfigLocation.qml:197
-#, fuzzy, kde-format
-#| msgid "Enter custom title here"
+#, kde-format
 msgid "Enter custom title…"
-msgstr "הכנס כותרת מותאמת אישית"
+msgstr "נא למלא כותרת משלך…"
 
 #: package/contents/ui/ConfigOverlay.qml:86
 #, kde-format
 msgid "Click and drag to rotate"
-msgstr ""
+msgstr "יש ללחוץ ולגרור כדי להטות"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format
 msgid "Hide Background"
-msgstr ""
+msgstr "הסתרת רקע"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format
 msgid "Show Background"
-msgstr ""
+msgstr "הצגת רקע"
 
 #: package/contents/ui/ConfigOverlay.qml:222
 #, kde-format
@@ -449,49 +409,49 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"יש קבצים ותיקיות רבים על שולחן העבודה. עלול לגרום לתקלות ולהאטת ביצועים. נא "
+"לשקול להעביר חלק מהם למקום אחר."
 
 #: package/contents/ui/main.qml:391
-#, fuzzy, kde-format
-#| msgid "Configure Desktop"
+#, kde-format
 msgid "Configure Desktop and Wallpaper…"
-msgstr "הגדרות שולחן עבודה"
+msgstr "הגדרת שולחן עבודה ותמונת רקע…"
 
 #: plugins/folder/directorypicker.cpp:32
 #, kde-format
 msgid "Select Folder"
-msgstr "בחר תיקיה"
+msgstr "בחירת תיקייה"
 
 #: plugins/folder/foldermodel.cpp:469
 #, kde-format
 msgid "&Refresh Desktop"
-msgstr "&רענן שולחן העבודה"
+msgstr "&רענון שולחן העבודה"
 
 #: plugins/folder/foldermodel.cpp:469 plugins/folder/foldermodel.cpp:1629
 #, kde-format
 msgid "&Refresh View"
-msgstr "&רענן תצוגה"
+msgstr "&רענון תצוגה"
 
 #: plugins/folder/foldermodel.cpp:1638
-#, fuzzy, kde-format
-#| msgid "&Empty Trash Bin"
+#, kde-format
 msgid "&Empty Trash"
-msgstr "&רוקן פח אשפה"
+msgstr "&פינוי פח האשפה"
 
 #: plugins/folder/foldermodel.cpp:1641
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
-msgstr "שחזר"
+msgstr "שחזור"
 
 #: plugins/folder/foldermodel.cpp:1644
 #, kde-format
 msgid "&Open"
-msgstr "&פתח"
+msgstr "&פתיחה"
 
 #: plugins/folder/foldermodel.cpp:1761
 #, kde-format
 msgid "&Paste"
-msgstr "&הדבק"
+msgstr "ה&דבקה"
 
 #: plugins/folder/foldermodel.cpp:1878
 #, kde-format
@@ -501,53 +461,46 @@ msgstr "מא&פיינים"
 #: plugins/folder/viewpropertiesmenu.cpp:21
 #, kde-format
 msgid "Sort By"
-msgstr "מיין לפי"
+msgstr "מיון לפי"
 
 #: plugins/folder/viewpropertiesmenu.cpp:24
-#, fuzzy, kde-format
-#| msgid "Unsorted"
+#, kde-format
 msgctxt "@item:inmenu Sort icons manually"
 msgid "Unsorted"
-msgstr "לא ממויין"
+msgstr "לא ממוין"
 
 #: plugins/folder/viewpropertiesmenu.cpp:28
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by name"
 msgid "Name"
 msgstr "שם"
 
 #: plugins/folder/viewpropertiesmenu.cpp:32
-#, fuzzy, kde-format
-#| msgid "Size"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by size"
 msgid "Size"
 msgstr "גודל"
 
 #: plugins/folder/viewpropertiesmenu.cpp:36
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by file type"
 msgid "Type"
 msgstr "סוג"
 
 #: plugins/folder/viewpropertiesmenu.cpp:40
-#, fuzzy, kde-format
-#| msgid "Date"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by date"
 msgid "Date"
 msgstr "תאריך"
 
 #: plugins/folder/viewpropertiesmenu.cpp:45
-#, fuzzy, kde-format
-#| msgid "Descending"
+#, kde-format
 msgctxt "@item:inmenu Sort icons in descending order"
 msgid "Descending"
 msgstr "יורד"
 
 #: plugins/folder/viewpropertiesmenu.cpp:47
-#, fuzzy, kde-format
-#| msgid "Folders First"
+#, kde-format
 msgctxt "@item:inmenu Sort icons with folders first"
 msgid "Folders First"
 msgstr "תיקיות תחילה"
@@ -555,81 +508,73 @@ msgstr "תיקיות תחילה"
 #: plugins/folder/viewpropertiesmenu.cpp:50
 #, kde-format
 msgid "Icon Size"
-msgstr "גודל הסמל"
+msgstr "גודל הסמלים"
 
 #: plugins/folder/viewpropertiesmenu.cpp:53
-#, fuzzy, kde-format
-#| msgid "Tiny"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Tiny"
-msgstr "פיצפון"
+msgstr "זעיר"
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Very Small"
-msgstr "קטן"
+msgstr "קטן מאוד"
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small"
 msgstr "קטן"
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
-#, fuzzy, kde-format
-#| msgid "Small Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small-Medium"
-msgstr "קטן בינוני"
+msgstr "בינוני קטן"
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
-#, fuzzy, kde-format
-#| msgid "Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Medium"
 msgstr "בינוני"
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Large"
 msgstr "גדול"
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
-#, fuzzy, kde-format
-#| msgid "Huge"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Huge"
 msgstr "ענק"
 
 #: plugins/folder/viewpropertiesmenu.cpp:67
-#, fuzzy, kde-format
-#| msgid "Arrange In"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
-msgstr "סדר ב"
+msgstr "סידור"
 
 #: plugins/folder/viewpropertiesmenu.cpp:71
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "משמאל לימין"
 
 #: plugins/folder/viewpropertiesmenu.cpp:72
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "מימין לשמאל"
 
 #: plugins/folder/viewpropertiesmenu.cpp:76
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "מלמעלה למטה"
 
 #: plugins/folder/viewpropertiesmenu.cpp:81
 #, kde-format
@@ -637,15 +582,13 @@ msgid "Align"
 msgstr "יישור"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left"
 msgstr "שמאל"
 
 #: plugins/folder/viewpropertiesmenu.cpp:88
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right"
 msgstr "ימין"
@@ -653,11 +596,10 @@ msgstr "ימין"
 #: plugins/folder/viewpropertiesmenu.cpp:93
 #, kde-format
 msgid "Show Previews"
-msgstr ""
+msgstr "להציג תצוגות מקדימות"
 
 #: plugins/folder/viewpropertiesmenu.cpp:97
-#, fuzzy, kde-format
-#| msgid "Locked"
+#, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "נעול"

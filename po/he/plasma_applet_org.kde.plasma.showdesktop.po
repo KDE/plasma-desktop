@@ -8,65 +8,63 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2017-05-16 06:56-0400\n"
+"PO-Revision-Date: 2023-09-30 15:10+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restore All Minimized Windows"
-msgstr "מזער את כל החלונות"
+msgstr "שחזור כל החלונות הממוזערים"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
-msgstr "מזער את כל החלונות"
+msgstr "מזעור כל החלונות"
 
 #: package/contents/ui/MinimizeAllController.qml:20
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Restores the previously minimized windows"
-msgstr ""
+msgstr "משחזר את החלונות שמוזערו לאחרונה"
 
 #: package/contents/ui/MinimizeAllController.qml:21
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr ""
+msgstr "מציג את שולחן העבודה על ידי מזעור כל החלונות"
 
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
-msgstr ""
+msgstr "הצצה בשולחן העבודה"
 
 #: package/contents/ui/PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
-msgstr ""
+msgstr "הפסקת ההצצה בשולחן העבודה"
 
 #: package/contents/ui/PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
-msgstr ""
+msgstr "מזיז את החלונות בחזרה למקומם המקורי"
 
 #: package/contents/ui/PeekController.qml:18
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
+msgstr "מציג את שולחן העבודה באופן זמני על ידי הסטת החלונות לצדדים"
 
 #~ msgid "Show Desktop"
 #~ msgstr "הצג שולחן עבודה"

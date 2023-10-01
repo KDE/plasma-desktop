@@ -2,20 +2,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010, 2011.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2022-05-22 12:15+0200\n"
+"PO-Revision-Date: 2023-09-30 10:13+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"Language-Team: \n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -39,10 +39,9 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "Превключване на следваща клавиатурна подредба"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Превключване на следваща клавиатурна подредба"
+msgstr "Превключване към последно използваната клавиатурна подредба"
 
 #: bindings.cpp:60
 #, kde-format
@@ -71,7 +70,7 @@ msgstr "Търсене..."
 #: kcm_add_layout_dialog.ui:45
 #, kde-format
 msgid "Shortcut:"
-msgstr "Бърз клавиш:"
+msgstr "Клавишна комбинация:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelLabel)
 #: kcm_add_layout_dialog.ui:55
@@ -173,13 +172,13 @@ msgstr "Про&зорец"
 #: kcm_keyboard.ui:157
 #, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "Бързи клавиши за превключване на подредбите"
+msgstr "Клавишни комбинации за превключване на подредбите"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:163
 #, kde-format
 msgid "Main shortcuts:"
-msgstr "Основни клавиши:"
+msgstr "Основна:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
 #: kcm_keyboard.ui:176
@@ -210,7 +209,7 @@ msgstr "…"
 #: kcm_keyboard.ui:193
 #, kde-format
 msgid "3rd level shortcuts:"
-msgstr "Бързи клавиши за 3-то ниво:"
+msgstr "За 3-то ниво:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
 #: kcm_keyboard.ui:206
@@ -227,7 +226,7 @@ msgstr ""
 #: kcm_keyboard.ui:223
 #, kde-format
 msgid "Alternative shortcut:"
-msgstr "Алтернативен бърз клавиш:"
+msgstr "Алтернативна:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
 #: kcm_keyboard.ui:236
@@ -244,10 +243,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:246
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "Алтернативен бърз клавиш:"
+msgstr "За последно използвана подредба:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:259
@@ -256,6 +254,8 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
+"Тази клавишна комбинация позволява бързо превключване между две подредби,"
+"като винагипревключва към последно използваната."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:284
@@ -315,7 +315,7 @@ msgstr "&Настройки на клавиатурата"
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
-msgstr "Непознато"
+msgstr "Неизвестно"
 
 #: kcm_keyboard_widget.cpp:211
 #, kde-format

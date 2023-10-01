@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:47+0000\n"
-"PO-Revision-Date: 2017-05-16 12:12-0400\n"
+"PO-Revision-Date: 2023-09-30 13:33+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: ui/main.qml:24
 #, kde-format
@@ -24,80 +24,80 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
+"יש להפעיל את המערכת מחדש בטרם השינויים להגדרת ההדבקה עם המקש האמצעי יחולו."
 
 #: ui/main.qml:30
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "הפעלה מחדש"
 
 #: ui/main.qml:47
 #, kde-format
 msgid "Visual behavior:"
-msgstr ""
+msgstr "התנהגות חזותית:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
 #: ui/main.qml:48 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
-msgstr ""
+msgstr "הצגת חלוניות מידע עם מעבר העכבר"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: ui/main.qml:59 workspaceoptions_plasmasettings.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Visual feedback for status changes"
+#, kde-format
 msgid "Display visual feedback for status changes"
-msgstr "משוב נראה בשינוי מצב"
+msgstr "הצגת משוב חזותי בשינויי מצב"
 
 #: ui/main.qml:77
 #, kde-format
 msgid "Animation speed:"
-msgstr ""
+msgstr "מהירות הנפשה:"
 
 #: ui/main.qml:103
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
-msgstr ""
+msgstr "איטית"
 
 #: ui/main.qml:109
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
-msgstr ""
+msgstr "מיידית"
 
 #: ui/main.qml:126
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr ""
+msgstr "לחיצה על קבצים או תיקיות"
 
 #: ui/main.qml:127
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr ""
+msgstr "בוחרת אותם"
 
 #: ui/main.qml:141
 #, kde-format
 msgid "Open by double-clicking instead"
-msgstr ""
+msgstr "פתיחה בלחיצה כפולה במקום"
 
 #: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr ""
+msgstr "פותחת אותם"
 
 #: ui/main.qml:166
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr ""
+msgstr "אפשר לבחור בלחיצה על סמן הבחירה של הפריט"
 
 #: ui/main.qml:181
 #, kde-format
 msgid "Clicking in scrollbar track:"
-msgstr ""
+msgstr "לחיצה במסילת פס הגלילה:"
 
 #: ui/main.qml:182
 #, kde-format
@@ -105,7 +105,7 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr ""
+msgstr "גוללת למקום שנלחץ"
 
 #: ui/main.qml:200
 #, kde-format
@@ -113,43 +113,43 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr ""
+msgstr "גוללת מעלה או מטה בעמוד שלם"
 
 #: ui/main.qml:213
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr ""
+msgstr "לחיצה אמצעית כוללת למקום הנבחר"
 
 #: ui/main.qml:226
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
-msgstr ""
+msgstr "לחיצה אמצעית:"
 
 #: ui/main.qml:228
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
-msgstr ""
+msgstr "מדביקה את הטקסט הנבחר"
 
 #: ui/main.qml:245
 #, kde-format
 msgid "Touch Mode:"
-msgstr ""
+msgstr "מצב מגע:"
 
 #: ui/main.qml:247
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "להפעיל אוטומטית כנדרש"
 
 #: ui/main.qml:247 ui/main.qml:290
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "לא להפעיל אף פעם"
 
 #: ui/main.qml:263
 #, kde-format
@@ -158,12 +158,14 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"מצב מגע יופעל אוטומטית כשהמערכת מזהה מסך מגע אך לא מזהה עכבר או משטח מגע. "
+"למשל: כאשר מקלדת של מחשב נייד גמיש מקופלת לאחור או מנותקת."
 
 #: ui/main.qml:268
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
-msgstr ""
+msgstr "תמיד פעיל"
 
 #: ui/main.qml:308
 #, kde-format
@@ -171,36 +173,37 @@ msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
+"במצב מגע, רכיבים רבים בממשק המשתמש יוגדלו כדי להקל על הפעלה באמצעות מגע."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Single click to open files"
-msgstr ""
+msgstr "לחיצה בודדת פותחת קבצים"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
 #, kde-format
 msgid "Animation speed"
-msgstr ""
+msgstr "מהירות הנפשה"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr ""
+msgstr "לחיצה שמאלית בפס הגלילה גוללת אותו בעמוד אחד"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr ""
+msgstr "להחליף אוטומטית למצב מותאם מגע"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr ""
+msgstr "הפעלת לחיצה אמצעית להדבקת בחירה"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
@@ -208,19 +211,19 @@ msgstr ""
 msgid ""
 "Show an on-screen display to indicate status changes such as brightness or "
 "volume"
-msgstr ""
+msgstr "הצגת תצוגה על גבי המסך כדי לציין שינויי מצב כגון בהירות או עוצמת שמע"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:20
 #, kde-format
 msgid "OSD on layout change"
-msgstr ""
+msgstr "תצוגת על עם שינוי פריסת מקלדת"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "הצגת חלונית עם שינויי פריסת מקלדת"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

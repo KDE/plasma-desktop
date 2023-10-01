@@ -120,7 +120,7 @@ msgstr "Valor do eixo %1 : %2"
 #: joydevice.cpp:41
 #, kde-format
 msgid "The given device %1 could not be opened: %2"
-msgstr "Non se puido abrir o dispositivo %1: %2"
+msgstr "Non foi posíbel abrir o dispositivo %1: %2"
 
 #: joydevice.cpp:45
 #, kde-format
@@ -131,7 +131,8 @@ msgstr "O dispositivo %1 non é un «joystick»."
 #, kde-format
 msgid "Could not get kernel driver version for joystick device %1: %2"
 msgstr ""
-"Non se puido obter a versión do controlador do dispositivo «joystick» %1: %2"
+"Non foi posíbel obter a versión do controlador do dispositivo «joystick» %1: "
+"%2"
 
 #: joydevice.cpp:60
 #, kde-format
@@ -145,39 +146,41 @@ msgstr ""
 #: joydevice.cpp:71
 #, kde-format
 msgid "Could not get number of buttons for joystick device %1: %2"
-msgstr "Non se puido obter o número de botóns do dispositivo «joystick» %1: %2"
+msgstr ""
+"Non foi posíbel obter o número de botóns do dispositivo «joystick» %1: %2"
 
 #: joydevice.cpp:75
 #, kde-format
 msgid "Could not get number of axes for joystick device %1: %2"
-msgstr "Non se puido obter o número de eixos do dispositivo «joystick» %1: %2"
+msgstr ""
+"Non foi posíbel obter o número de eixos do dispositivo «joystick» %1: %2"
 
 #: joydevice.cpp:79
 #, kde-format
 msgid "Could not get calibration values for joystick device %1: %2"
 msgstr ""
-"Non se puideron obter os valores de calibración do dispositivo «joystick» "
+"Non foi posíbel obter os valores de calibración do dispositivo «joystick» "
 "%1: %2"
 
 #: joydevice.cpp:83
 #, kde-format
 msgid "Could not restore calibration values for joystick device %1: %2"
 msgstr ""
-"Non se puideron recuperar os valores de calibración do dispositivo "
+"Non foi posíbel recuperar os valores de calibración do dispositivo "
 "«joystick» %1: %2"
 
 #: joydevice.cpp:87
 #, kde-format
 msgid "Could not initialize calibration values for joystick device %1: %2"
 msgstr ""
-"Non se puideron inicializar os valores de calibración do dispositivo "
+"Non foi posíbel inicializar os valores de calibración do dispositivo "
 "«joystick» %1: %2"
 
 #: joydevice.cpp:91
 #, kde-format
 msgid "Could not apply calibration values for joystick device %1: %2"
 msgstr ""
-"Non se puideron aplicar os valores de calibración do dispositivo «joystick» "
+"Non foi posíbel aplicar os valores de calibración do dispositivo «joystick» "
 "%1: %2"
 
 #: joydevice.cpp:95

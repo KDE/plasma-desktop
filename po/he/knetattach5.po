@@ -8,25 +8,25 @@ msgstr ""
 "Project-Id-Version: knetattach5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-14 00:46+0000\n"
-"PO-Revision-Date: 2017-05-16 06:53-0400\n"
+"PO-Revision-Date: 2023-09-30 14:16+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: עברית <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Israel Berger"
+msgstr "Israel Berger וצוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "israelb@gmail.com"
+msgstr "israelb@gmail.com, kde-l10n-he@kde.org"
 
 #: knetattach.cpp:79
 #, kde-format
@@ -34,8 +34,8 @@ msgid ""
 "Enter a name for this <i>WebFolder</i> as well as a server address, port and "
 "folder path to use and press the <b>Save & Connect</b> button."
 msgstr ""
-"הכנס שם עבור <i>תיקיית רשת</i> זו וכן כתובת שרת, יציאה ומיקום תיקייה לשימוש "
-"ולחץ על הכפתור <b>שמור והתחבר</b>."
+"נא למלא שם ל<i>תיקיית רשת</i> זו ואת כתובת השרת, הפתחה ונתיב התיקייה לשימוש "
+"וללחוץ על הכפתור <b>שמירה וחיבור</b>."
 
 #: knetattach.cpp:82
 #, kde-format
@@ -44,8 +44,8 @@ msgid ""
 "address, port and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"הכנס שם עבור <i>התחברות Secure Shell</i> זו וכן כתובת שרת, יציאה ומיקום "
-"תיקייה לשימוש ולחץ על הכפתור <b>שמור והתחבר</b>."
+"נא למלא שם ל<i>התחברות Secure Shell</i> זו ואת כתובת השרת, הפתחה ונתיב "
+"התיקייה לשימוש וללחץ על הכפתור <b>שמירה וחיבור</b>."
 
 #: knetattach.cpp:86
 #, kde-format
@@ -54,7 +54,8 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"הכנס שם עבור <i>חיבור FTP</i> זה וכן כתובת שרת, ומיקום תיקייה לשימוש ולחץ על  הכפתור <b>שמור והתחבר</b>."
+"נא למלא שם ל<i>חיבור FTP</i> זה ואת כתובת השרת, ונתיב התיקייה לשימוש וללחץ "
+"על הכפתור <b>שמירה וחיבור</b>."
 
 #: knetattach.cpp:90
 #, kde-format
@@ -63,22 +64,23 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"הכנס שם עבור <i>כונן רשת של חלונות</i> זה וכן כתובת שרת ומיקום תיקייה לשימוש  ולחץ על הכפתור <b>שמור והתחבר</b>."
+"נא למלא שם ל<i>כונן רשת מסוג Microsoft Windows</i> הזה לרבות כתובת השרת "
+"ונתיב התיקייה לשימוש וללחוץ על הכפתור <b>שמירה וחיבור</b>."
 
 #: knetattach.cpp:208
 #, kde-format
 msgid "Unable to connect to server.  Please check your settings and try again."
-msgstr "לא יכול להתחבר לשרת. בדוק את ההגדרות ונסה שוב."
+msgstr "החיבור לשרת נכשל.  נא לבדוק את ההגדרות שלך ולנסות שוב."
 
 #: knetattach.cpp:336
 #, kde-format
 msgid "Save && C&onnect"
-msgstr "&שמור והתחבר"
+msgstr "&שמירה וחיבור"
 
 #: knetattach.cpp:338
 #, kde-format
 msgid "C&onnect"
-msgstr "&התחבר"
+msgstr "&חיבור"
 
 #. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
 #: knetattach.ui:14
@@ -90,7 +92,7 @@ msgstr "אשף תיקיית רשת"
 #: knetattach.ui:18
 #, kde-format
 msgid "Add Network Folder"
-msgstr "הוסף תקיית רשת"
+msgstr "הוספת תקיית רשת"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: knetattach.ui:24
@@ -98,7 +100,7 @@ msgstr "הוסף תקיית רשת"
 msgid ""
 "Select the type of network folder you wish to connect to and press the Next "
 "button."
-msgstr "בחר את סוג תיקיית הרשת שברצונך לחבר ולחץ על \"הבא\"."
+msgstr "נא לבחור את סוג כונן הרשת לחיבור וללחוץ על כפתור „הבא”."
 
 #. i18n: ectx: property (text), widget (QRadioButton, _recent)
 #: knetattach.ui:65
@@ -128,7 +130,7 @@ msgstr "FT&P"
 #: knetattach.ui:118
 #, kde-format
 msgid "&Microsoft® Windows® network drive"
-msgstr "כונן רשת של &חלונות"
+msgstr "&כונן רשת של Windows"
 
 #. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
 #: knetattach.ui:145
@@ -158,7 +160,7 @@ msgstr "&שרת:"
 #: knetattach.ui:248
 #, kde-format
 msgid "&Port:"
-msgstr "&יציאה:"
+msgstr "פ&תחה:"
 
 #. i18n: ectx: property (text), widget (QLabel, _protocol)
 #: knetattach.ui:283
@@ -182,13 +184,13 @@ msgstr "קידוד:"
 #: knetattach.ui:351
 #, kde-format
 msgid "Cr&eate an icon for this remote folder"
-msgstr "&צור סמל עבור תיקייה מרוחקת זו"
+msgstr "י&צירת סמל לתיקייה מרוחקת זו"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
 #: knetattach.ui:361
 #, kde-format
 msgid "&Use encryption"
-msgstr "&השתמש בהצפנה"
+msgstr "לה&שתמש בהצפנה"
 
 #: main.cpp:21 main.cpp:23
 #, kde-format
@@ -198,12 +200,12 @@ msgstr "אשף הרשת של KDE"
 #: main.cpp:25
 #, kde-format
 msgid "(c) 2004 George Staikos"
-msgstr "(c) 2004 George Staikos"
+msgstr "(c) 2004 ג׳ורג׳ סטייקוס"
 
 #: main.cpp:28
 #, kde-format
 msgid "George Staikos"
-msgstr "George Staikos"
+msgstr "ג׳ורג׳ סטייקוס"
 
 #: main.cpp:28
 #, kde-format

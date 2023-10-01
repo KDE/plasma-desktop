@@ -6,14 +6,14 @@
 # Jaime Robles <jaime@kde.org>, 2008.
 # Jaime Robles <jaime@robles.es>, 2009.
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010, 2011.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2010, 2011, 2012, 2014, 2016, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2014, 2016, 2017, 2020, 2021, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 # Javier Vinal <fjvinal@gmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2021-10-14 22:34+0200\n"
+"PO-Revision-Date: 2023-09-30 04:43+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -37,23 +37,22 @@ msgstr "ecuadra@eloihr.net,kirajfdez@gmail.com,the.blue.valkyrie@gmail.com"
 #: bindings.cpp:24
 #, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "Selector de distribución del teclado"
+msgstr "Selector de distribución de teclado"
 
 #: bindings.cpp:26
 #, kde-format
 msgid "Switch to Next Keyboard Layout"
-msgstr "Cambiar a la siguiente distribución del teclado"
+msgstr "Cambiar a la siguiente distribución de teclado"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Cambiar a la siguiente distribución del teclado"
+msgstr "Cambiar a la última distribución de teclado usada"
 
 #: bindings.cpp:60
 #, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "Cambiar la distribución del teclado a %1"
+msgstr "Cambiar la distribución de teclado a %1"
 
 #: flags.cpp:77
 #, kde-format
@@ -77,7 +76,7 @@ msgstr "Buscar..."
 #: kcm_add_layout_dialog.ui:45
 #, kde-format
 msgid "Shortcut:"
-msgstr "Acceso rápido:"
+msgstr "Atajo de teclado:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelLabel)
 #: kcm_add_layout_dialog.ui:55
@@ -173,13 +172,13 @@ msgstr "&Ventana"
 #: kcm_keyboard.ui:157
 #, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "Accesos rápidos de teclado para cambiar de distribución"
+msgstr "Atajos de teclado para cambiar de distribución"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:163
 #, kde-format
 msgid "Main shortcuts:"
-msgstr "Accesos rápidos principales:"
+msgstr "Atajos de teclado principales:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
 #: kcm_keyboard.ui:176
@@ -189,7 +188,7 @@ msgid ""
 "allows modifier-only shortcuts."
 msgstr ""
 "Esto es un atajo de teclado para cambiar las distribuciones, que está "
-"gestionado por X.org. Permite solo accesos rápidos de teclas modificadoras."
+"gestionado por X.org. Permite solo atajos de teclas modificadoras."
 
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
 #. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
@@ -210,7 +209,7 @@ msgstr "..."
 #: kcm_keyboard.ui:193
 #, kde-format
 msgid "3rd level shortcuts:"
-msgstr "Accesos rápidos de tercer nivel:"
+msgstr "Atajos de teclado de tercer nivel:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
 #: kcm_keyboard.ui:206
@@ -219,7 +218,7 @@ msgid ""
 "This is a shortcut for switching to a third level of the active layout (if "
 "it has one) which is handled by X.org. It allows modifier-only shortcuts."
 msgstr ""
-"Este es un acceso rápido de teclado para cambiar a un tercer nivel de la "
+"Este es un atajo de teclado para cambiar a un tercer nivel de la "
 "distribución activa (si tiene una), que está gestionado por X.org. Permite "
 "solo atajos con teclas modificadoras."
 
@@ -227,7 +226,7 @@ msgstr ""
 #: kcm_keyboard.ui:223
 #, kde-format
 msgid "Alternative shortcut:"
-msgstr "Acceso rápido alternativo:"
+msgstr "Atajo de teclado alternativo:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
 #: kcm_keyboard.ui:236
@@ -237,17 +236,16 @@ msgid ""
 "shortcuts and also may not work in some situations (e.g. if popup is active "
 "or from screensaver)."
 msgstr ""
-"Este es un acceso rápido para cambiar distribuciones. No admite accesos "
-"rápidos con solo teclas modificadoras y es posible que no funcione en "
+"Este es un atajo de teclado para cambiar distribuciones. No admite atajos de "
+"teclado con solo teclas modificadoras y es posible que no funcione en "
 "algunas situaciones (por ejemplo, si alguna ventana emergente o el "
 "salvapantallas están activos)."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:246
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "Acceso rápido alternativo:"
+msgstr "Último atajo de teclado usadoac:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:259
@@ -256,6 +254,8 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
+"Este atajo de teclado permite el cambio rápido entre dos distribuciones, "
+"cambiando siempre a la última que haya usado."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:284
@@ -333,8 +333,8 @@ msgstr "Ninguno"
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
-msgstr[0] "%1 acceso rápido"
-msgstr[1] "%1 acceso rápidos"
+msgstr[0] "%1 atajo de teclado"
+msgstr[1] "%1 atajos de teclado"
 
 #: kcm_view_models.cpp:200
 #, kde-format
@@ -360,7 +360,7 @@ msgstr "Etiqueta"
 #: kcm_view_models.cpp:200
 #, kde-format
 msgid "Shortcut"
-msgstr "Acceso rápido"
+msgstr "Atajo de teclado"
 
 #: kcm_view_models.cpp:273
 #, kde-format

@@ -9,20 +9,20 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-15 01:54+0000\n"
-"PO-Revision-Date: 2017-05-23 01:00-0400\n"
+"PO-Revision-Date: 2023-09-30 15:25+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "מראה"
 
 #: package/contents/config/config.qml:18
 #, kde-format
@@ -33,97 +33,91 @@ msgstr "התנהגות"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr ""
+msgstr "השתקה"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action:button"
 msgid "Mute"
-msgstr "השתק"
+msgstr "השתקה"
 
 #: package/contents/ui/AudioStream.qml:103
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr "השתק"
+msgstr "ביטול השתקת %1"
 
 #: package/contents/ui/AudioStream.qml:103
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
-msgstr "השתק"
+msgstr "השתקת %1"
 
 #: package/contents/ui/Badge.qml:54
 #, kde-format
 msgctxt "Invalid number of new messages, overlay, keep short"
 msgid "—"
-msgstr ""
+msgstr "—"
 
 #: package/contents/ui/Badge.qml:56
 #, kde-format
 msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
-msgstr ""
+msgstr "‎9,999+‎"
 
 #: package/contents/ui/ConfigAppearance.qml:33
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "כללי"
+msgstr "כללי:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr ""
+msgstr "הצגת חלוניות תצוגת מקדימה בעת ריחוף מעל משימות"
 
 #: package/contents/ui/ConfigAppearance.qml:39
 #, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr ""
+msgstr "הסתרת חלונות אחרים בעת ריחוף מעל תצוגות מקדימות"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
 msgid "Mark applications that play audio"
-msgstr "סמן יישומים המנגנים שמע"
+msgstr "סימון יישומים שמשמיעים קול"
 
 #: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "מילוי המקום הפנוי בלוח"
 
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum columns:"
-msgstr "מקסימום עמודות:"
+msgstr "כמות עמודות מרבית:"
 
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum rows:"
-msgstr "מספר שורות מירבי:"
+msgstr "כמות שורות מרבית:"
 
 #: package/contents/ui/ConfigAppearance.qml:67
-#, fuzzy, kde-format
-#| msgid "Always arrange tasks in columns of as many rows"
+#, kde-format
 msgid "Always arrange tasks in rows of as many columns"
-msgstr "תמיד ארגן משימות בעמודות של הרבה שורות"
+msgstr "תמיד לסדר משימות בשורות של כמה שיותר עמודות"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in columns of as many rows"
-msgstr "תמיד ארגן משימות בעמודות של הרבה שורות"
+msgstr "תמיד לסדר משימות בעמודות של כמה שיותר שורות"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "ריווח בין סמלים:"
 
 #: package/contents/ui/ConfigAppearance.qml:81
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "קטן"
@@ -132,11 +126,10 @@ msgstr "קטן"
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "רגיל"
 
 #: package/contents/ui/ConfigAppearance.qml:89
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "גדול"
@@ -145,37 +138,33 @@ msgstr "גדול"
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "להגדיר לגדול במצב מגע"
 
 #: package/contents/ui/ConfigBehavior.qml:48
-#, fuzzy, kde-format
-#| msgid "Grouping:"
+#, kde-format
 msgid "Group:"
 msgstr "קיבוץ:"
 
 #: package/contents/ui/ConfigBehavior.qml:51
-#, fuzzy, kde-format
-#| msgid "Do Not Group"
+#, kde-format
 msgid "Do not group"
-msgstr "אל תקבץ"
+msgstr "לא לקבץ"
 
 #: package/contents/ui/ConfigBehavior.qml:51
-#, fuzzy, kde-format
-#| msgid "By Program Name"
+#, kde-format
 msgid "By program name"
 msgstr "לפי שם יישום"
 
 #: package/contents/ui/ConfigBehavior.qml:56
 #, kde-format
 msgid "Clicking grouped task:"
-msgstr ""
+msgstr "לחיצה על משימות מקובצות:"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgid "Cycle through tasks with mouse wheel"
+#, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
-msgstr "עבור בין משימות ע\"י גלילה"
+msgstr "עוברת מעגלית בין משימות"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -183,20 +172,20 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr ""
+msgstr "מציגה חלוניות קטנות לתצוגה מקדימה"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr ""
+msgstr "מציגה חלוניות גדולות לתצוגה מקדימה"
 
 #: package/contents/ui/ConfigBehavior.qml:66
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
-msgstr ""
+msgstr "מציגה רשימת הקשרים"
 
 #: package/contents/ui/ConfigBehavior.qml:74
 #, kde-format
@@ -204,28 +193,27 @@ msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
+"המסדר החלונאי לא תומך בהצגת חלונות זה לצד זה, לכן תופיע רשימת הקשרים במקום."
 
 #: package/contents/ui/ConfigBehavior.qml:84
 #, kde-format
 msgid "Combine into single button"
-msgstr ""
+msgstr "גיבוש לכפתור יחיד"
 
 #: package/contents/ui/ConfigBehavior.qml:91
-#, fuzzy, kde-format
-#| msgid "Only group when the task manager is full"
+#, kde-format
 msgid "Group only when the Task Manager is full"
-msgstr "קבץ רק ששורת המשימות מלאה"
+msgstr "לקבץ רק כששורת המשימות מלאה"
 
 #: package/contents/ui/ConfigBehavior.qml:102
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort:"
 msgstr "מיון:"
 
 #: package/contents/ui/ConfigBehavior.qml:105
 #, kde-format
 msgid "Do not sort"
-msgstr ""
+msgstr "לא למיין"
 
 #: package/contents/ui/ConfigBehavior.qml:105
 #, kde-format
@@ -235,187 +223,173 @@ msgstr "ידנית"
 #: package/contents/ui/ConfigBehavior.qml:105
 #, kde-format
 msgid "Alphabetically"
-msgstr "לפי סדר הא\"ב"
+msgstr "לפי האלפבית"
 
 #: package/contents/ui/ConfigBehavior.qml:105
-#, fuzzy, kde-format
-#| msgid "By Desktop"
+#, kde-format
 msgid "By desktop"
 msgstr "לפי שולחן עבודה"
 
 #: package/contents/ui/ConfigBehavior.qml:105
-#, fuzzy, kde-format
-#| msgid "By Activity"
+#, kde-format
 msgid "By activity"
 msgstr "לפי פעילות"
 
 #: package/contents/ui/ConfigBehavior.qml:111
 #, kde-format
 msgid "Keep launchers separate"
-msgstr "שמור משגרים מופרדים"
+msgstr "שמירה על הפרדת משגרים"
 
 #: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
-msgstr ""
+msgstr "לחיצה על משימה פעילה:"
 
 #: package/contents/ui/ConfigBehavior.qml:123
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr ""
+msgstr "ממזערת את המשימה"
 
 #: package/contents/ui/ConfigBehavior.qml:128
 #, kde-format
 msgid "Middle-clicking any task:"
-msgstr ""
+msgstr "לחיצה אמצעית על משימה כלשהי:"
 
 #: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
-msgstr ""
+msgstr "לא עושה כלום"
 
 #: package/contents/ui/ConfigBehavior.qml:133
-#, fuzzy, kde-format
-#| msgid "Close Window or Group"
+#, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
-msgstr "סגור חלון או קבוצת חלונות"
+msgstr "סוגרת חלון או קבוצה"
 
 #: package/contents/ui/ConfigBehavior.qml:134
-#, fuzzy, kde-format
-#| msgid "New Instance"
+#, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
-msgstr "פתח מופע חדש"
+msgstr "פותחת חלון חדש"
 
 #: package/contents/ui/ConfigBehavior.qml:135
-#, fuzzy, kde-format
-#| msgid "Minimize/Restore Window or Group"
+#, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
 "group'"
 msgid "Minimizes/Restores window or group"
-msgstr "מזער/שחזר חלון או קבוצה"
+msgstr "ממזערת/משחזרת חלון או קבוצה"
 
 #: package/contents/ui/ConfigBehavior.qml:136
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
-msgstr ""
+msgstr "מחליפה את הקיבוץ"
 
 #: package/contents/ui/ConfigBehavior.qml:137
-#, fuzzy, kde-format
-#| msgid "Show only tasks from the current desktop"
+#, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
 "virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr "הראה רק משימות משולחן העבודה הנוכחי"
+msgstr "מקדמת אותה לשולחן העבודה הווירטואלי הנוכחי"
 
 #: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
-msgstr ""
+msgstr "גלגלת עכבר:"
 
 #: package/contents/ui/ConfigBehavior.qml:148
-#, fuzzy, kde-format
-#| msgid "Cycle through tasks with mouse wheel"
+#, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr "עבור בין משימות ע\"י גלילה"
+msgstr "עוברת מעגלית בין משימות"
 
 #: package/contents/ui/ConfigBehavior.qml:157
 #, kde-format
 msgid "Skip minimized tasks"
-msgstr ""
+msgstr "מדלגת על משימות ממוזערות"
 
 #: package/contents/ui/ConfigBehavior.qml:168
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgid "Show only tasks:"
-msgstr "הצג חלוניות מידע"
+msgstr "הצגת משימות:"
 
 #: package/contents/ui/ConfigBehavior.qml:169
-#, fuzzy, kde-format
-#| msgid "Show only tasks from the current screen"
+#, kde-format
 msgid "From current screen"
-msgstr "הראה רק משימות מהמסך הנוכחי"
+msgstr "רק מהמסך הנוכחי"
 
 #: package/contents/ui/ConfigBehavior.qml:174
-#, fuzzy, kde-format
-#| msgid "Move &To Current Desktop"
+#, kde-format
 msgid "From current desktop"
-msgstr "העבר לשולחן עבודה הנוכחי"
+msgstr "רק משולחן העבודה הנוכחי"
 
 #: package/contents/ui/ConfigBehavior.qml:179
-#, fuzzy, kde-format
-#| msgid "Add To Current Activity"
+#, kde-format
 msgid "From current activity"
-msgstr "הוסף לפעילות הנוכחית"
+msgstr "רק מהפעילות הנוכחית"
 
 #: package/contents/ui/ConfigBehavior.qml:184
-#, fuzzy, kde-format
-#| msgid "Show only tasks that are minimized"
+#, kde-format
 msgid "That are minimized"
-msgstr "הראה רק משימות ממוזערות"
+msgstr "ממוזערות בלבד"
 
 #: package/contents/ui/ConfigBehavior.qml:193
 #, kde-format
 msgid "When panel is hidden:"
-msgstr ""
+msgstr "כאשר הלוח מוסתר:"
 
 #: package/contents/ui/ConfigBehavior.qml:194
 #, kde-format
 msgid "Unhide when a window wants attention"
-msgstr ""
+msgstr "לבטל את ההסתרה כאשר חלון צריך תשומת לב"
 
 #: package/contents/ui/ConfigBehavior.qml:206
 #, kde-format
 msgid "New tasks appear:"
-msgstr ""
+msgstr "משימות חדשות מופיעות:"
 
 #: package/contents/ui/ConfigBehavior.qml:210
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "למטה"
 
 #: package/contents/ui/ConfigBehavior.qml:214
 #: package/contents/ui/ConfigBehavior.qml:234
 #, kde-format
 msgid "To the right"
-msgstr ""
+msgstr "מימין"
 
 #: package/contents/ui/ConfigBehavior.qml:216
 #: package/contents/ui/ConfigBehavior.qml:232
 #, kde-format
 msgid "To the left"
-msgstr ""
+msgstr "משמאל"
 
 #: package/contents/ui/ConfigBehavior.qml:228
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "למעלה"
 
 #: package/contents/ui/ContextMenu.qml:100
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "מקומות"
 
 #: package/contents/ui/ContextMenu.qml:106
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgid "Recent Files"
-msgstr "נקה מסמכים אחרונים"
+msgstr "קבצים אחרונים"
 
 #: package/contents/ui/ContextMenu.qml:113
-#, fuzzy, kde-format
-#| msgid "More Actions"
+#, kde-format
 msgid "Actions"
-msgstr "עוד פעולות"
+msgstr "פעולות"
 
 #: package/contents/ui/ContextMenu.qml:174
 #, kde-format
@@ -427,13 +401,13 @@ msgstr "הרצועה הקודמת"
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
-msgstr "השהה"
+msgstr "השהיה"
 
 #: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
-msgstr "נגן"
+msgstr "נגינה"
 
 #: package/contents/ui/ContextMenu.qml:206
 #, kde-format
@@ -445,40 +419,39 @@ msgstr "הרצועה הבאה"
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
-msgstr "עצור"
+msgstr "עצירה"
 
 #: package/contents/ui/ContextMenu.qml:237
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
-msgstr "צא"
+msgstr "יציאה"
 
 #: package/contents/ui/ContextMenu.qml:252
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
-msgstr "שחזר"
+msgstr "שחזור"
 
 #: package/contents/ui/ContextMenu.qml:277
 #, kde-format
 msgid "Mute"
-msgstr "השתק"
+msgstr "השתקה"
 
 #: package/contents/ui/ContextMenu.qml:288
 #, kde-format
 msgid "Open New Window"
-msgstr ""
+msgstr "פתיחת חלון חדש"
 
 #: package/contents/ui/ContextMenu.qml:304
-#, fuzzy, kde-format
-#| msgid "Move To &Desktop"
+#, kde-format
 msgid "Move to &Desktop"
-msgstr "העבר לשולחן עבודה"
+msgstr "העברה ל&שולחן עבודה"
 
 #: package/contents/ui/ContextMenu.qml:328
 #, kde-format
 msgid "Move &To Current Desktop"
-msgstr "העבר לשולחן עבודה הנוכחי"
+msgstr "העברה לשולחן העבודה ה&נוכחי"
 
 #: package/contents/ui/ContextMenu.qml:337
 #, kde-format
@@ -497,15 +470,14 @@ msgid "&New Desktop"
 msgstr "שולחן עבודה חדש"
 
 #: package/contents/ui/ContextMenu.qml:385
-#, fuzzy, kde-format
-#| msgid "All Activities"
+#, kde-format
 msgid "Show in &Activities"
-msgstr "כל הפעילויות"
+msgstr "הצגה ב&פעילויות"
 
 #: package/contents/ui/ContextMenu.qml:409
 #, kde-format
 msgid "Add To Current Activity"
-msgstr "הוסף לפעילות הנוכחית"
+msgstr "הוספה לפעילות הנוכחית"
 
 #: package/contents/ui/ContextMenu.qml:419
 #, kde-format
@@ -513,16 +485,15 @@ msgid "All Activities"
 msgstr "כל הפעילויות"
 
 #: package/contents/ui/ContextMenu.qml:477
-#, fuzzy, kde-format
-#| msgid "Move To &Desktop"
+#, kde-format
 msgid "Move to %1"
-msgstr "העבר לשולחן עבודה"
+msgstr "העברה אל %1"
 
 #: package/contents/ui/ContextMenu.qml:505
 #: package/contents/ui/ContextMenu.qml:522
 #, kde-format
 msgid "&Pin to Task Manager"
-msgstr ""
+msgstr "ה&צמדה למנהל המשימות"
 
 #: package/contents/ui/ContextMenu.qml:575
 #, kde-format
@@ -537,144 +508,138 @@ msgstr "בפעילות הנוכחית"
 #: package/contents/ui/ContextMenu.qml:606
 #, kde-format
 msgid "Unpin from Task Manager"
-msgstr ""
+msgstr "שחרור ממנהל המשימות"
 
 #: package/contents/ui/ContextMenu.qml:621
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "עוד"
 
 #: package/contents/ui/ContextMenu.qml:630
 #, kde-format
 msgid "&Move"
-msgstr "ה&זז"
+msgstr "ה&עברה"
 
 #: package/contents/ui/ContextMenu.qml:639
 #, kde-format
 msgid "Re&size"
-msgstr "שנה &גודל"
+msgstr "שינוי &גודל"
 
 #: package/contents/ui/ContextMenu.qml:653
 #, kde-format
 msgid "Ma&ximize"
-msgstr "&הגדל"
+msgstr "הג&דלה"
 
 #: package/contents/ui/ContextMenu.qml:667
 #, kde-format
 msgid "Mi&nimize"
-msgstr "&מזער"
+msgstr "מ&זעור"
 
 #: package/contents/ui/ContextMenu.qml:677
 #, kde-format
 msgid "Keep &Above Others"
-msgstr "שמור מעל אחרים"
+msgstr "&ריחוף מעל השאר"
 
 #: package/contents/ui/ContextMenu.qml:687
 #, kde-format
 msgid "Keep &Below Others"
-msgstr "שמור מתחת אחרים"
+msgstr "&חתירה מתחת לשאר"
 
 #: package/contents/ui/ContextMenu.qml:699
 #, kde-format
 msgid "&Fullscreen"
-msgstr "&מסך מלא"
+msgstr "מ&סך מלא"
 
 #: package/contents/ui/ContextMenu.qml:711
 #, kde-format
 msgid "&Shade"
-msgstr "האפל"
+msgstr "ה&אפלה"
 
 #: package/contents/ui/ContextMenu.qml:727
 #, kde-format
 msgid "Allow this program to be grouped"
-msgstr "אפשר ליישום זה להתקבץ"
+msgstr "לאפשר קיבוץ של יישום זה"
 
 #: package/contents/ui/ContextMenu.qml:775
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "&סגור"
+msgstr "ל&סגור הכול"
 
 #: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgid "&Close"
-msgstr "&סגור"
+msgstr "&סגירה"
 
 #: package/contents/ui/Task.qml:80
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "הרצת %1"
 
 #: package/contents/ui/Task.qml:85
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "יש הודעה אחת חדשה."
+msgstr[1] "יש %1 הודעות חדשות."
 
 #: package/contents/ui/Task.qml:94
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "הצג חלוניות מידע"
+msgstr "הצגת חלוניות מידע על משימה עבור %1"
 
 #: package/contents/ui/Task.qml:100
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "הצגת חלונות זה לצד זה עבור %1"
 
 #: package/contents/ui/Task.qml:105
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "פתיחת רשימת הקשרים של חלונות עבור %1"
 
 #: package/contents/ui/Task.qml:109
 #, kde-format
 msgid "Activate %1"
-msgstr ""
+msgstr "הפעלת %1"
 
 #: package/contents/ui/ToolTipInstance.qml:356
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr ""
+msgstr "ביטול השתקת %1"
 
 #: package/contents/ui/ToolTipInstance.qml:357
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
-msgstr "השתק"
+msgstr "השתקת %1"
 
 #: package/contents/ui/ToolTipInstance.qml:380
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr ""
+msgstr "התאמת עוצמת השמע של %1"
 
 #: package/contents/ui/ToolTipInstance.qml:396
-#, fuzzy, kde-format
-#| msgctxt "1 = number of desktop, 2 = desktop name"
-#| msgid "&%1 %2"
+#, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr "&%1 %2"
+msgstr "%1%"
 
 #: package/contents/ui/ToolTipInstance.qml:399
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: package/contents/ui/ToolTipInstance.qml:423
-#, fuzzy, kde-format
-#| msgid "On %1"
+#, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "ב־%1"
@@ -683,7 +648,7 @@ msgstr "ב־%1"
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
-msgstr ""
+msgstr "מוצמד לכל שולחנות העבודה"
 
 #: package/contents/ui/ToolTipInstance.qml:437
 #, kde-format
@@ -695,13 +660,13 @@ msgstr "זמין בכל הפעילויות"
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
-msgstr "זמין גם ב %1"
+msgstr "זמין גם ב־%1"
 
 #: package/contents/ui/ToolTipInstance.qml:463
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
-msgstr "זמין ב %1"
+msgstr "זמין ב־%1"
 
 #: plugin/backend.cpp:326
 #, kde-format
@@ -712,50 +677,43 @@ msgstr[0] "עוד מקום אחד"
 msgstr[1] "עוד %1 מקומות"
 
 #: plugin/backend.cpp:422
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgid "Recent Downloads"
-msgstr "נקה מסמכים אחרונים"
+msgstr "הורדות אחרונות"
 
 #: plugin/backend.cpp:424
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgid "Recent Connections"
-msgstr "נקה מסמכים אחרונים"
+msgstr "חיבורים אחרונים"
 
 #: plugin/backend.cpp:426
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgid "Recent Places"
-msgstr "נקה מסמכים אחרונים"
+msgstr "מקומות אחרונים"
 
 #: plugin/backend.cpp:435
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr "נקה מסמכים אחרונים"
+msgstr "פינוי הורדות אחרונות"
 
 #: plugin/backend.cpp:437
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr "נקה מסמכים אחרונים"
+msgstr "פינוי חיבורים אחרונים"
 
 #: plugin/backend.cpp:439
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr "נקה מסמכים אחרונים"
+msgstr "פינוי מקומות אחרונים"
 
 #: plugin/backend.cpp:441
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
-msgstr "נקה מסמכים אחרונים"
+msgstr "פינוי קבצים אחרונים"
 
 #~ msgid "Show tooltips"
 #~ msgstr "הצג חלוניות מידע"

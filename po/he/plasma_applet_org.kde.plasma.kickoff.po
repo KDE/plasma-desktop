@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-13 02:06+0000\n"
-"PO-Revision-Date: 2017-05-22 05:18-0400\n"
+"PO-Revision-Date: 2023-09-30 15:01+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,38 +16,37 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "כללי"
 
 #: package/contents/ui/code/tools.js:49
 #, kde-format
 msgid "Remove from Favorites"
-msgstr "הסר ממועדפים"
+msgstr "הסרה מהמועדפים"
 
 #: package/contents/ui/code/tools.js:53
 #, kde-format
 msgid "Add to Favorites"
-msgstr "הוסף למועדפים"
+msgstr "הוספה למועדפים"
 
 #: package/contents/ui/code/tools.js:77
 #, kde-format
 msgid "On All Activities"
-msgstr ""
+msgstr "בכל הפעילויות"
 
 #: package/contents/ui/code/tools.js:127
 #, kde-format
 msgid "On the Current Activity"
-msgstr ""
+msgstr "בפעילות הנוכחית"
 
 #: package/contents/ui/code/tools.js:141
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgid "Show in Favorites"
-msgstr "מועדפים"
+msgstr "הצגה במועדפים"
 
 #: package/contents/ui/ConfigGeneral.qml:41
 #, kde-format
@@ -58,7 +57,7 @@ msgstr "סמל:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "החלפת סמל המשגר של היישום"
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -67,170 +66,167 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"הסמל הנוכחי הוא %1. לחיצה תפתח את התפריט כדי לאפשר שינוי של הסמל הנוכחי או "
+"איפוס לסמל ברירת המחדל."
 
 #: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "שם הסמל הוא „%1”"
 
 #: package/contents/ui/ConfigGeneral.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Open icon chooser dialog"
-#| msgid "Choose..."
+#, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "בחר..."
+msgstr "בחירה…"
 
 #: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "נא לבחור סמל למשגר היישומים"
 
 #: package/contents/ui/ConfigGeneral.qml:91
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "איפוס לסמל ברירת המחדל"
 
 #: package/contents/ui/ConfigGeneral.qml:97
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "הסרת סמל"
 
 #: package/contents/ui/ConfigGeneral.qml:108
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr ""
+msgstr "תווית טקסט:"
 
 #: package/contents/ui/ConfigGeneral.qml:110
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "נא להקליד כאן כדי להוסיף תווית טקסט"
 
 #: package/contents/ui/ConfigGeneral.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "איפוס תווית תפריט"
 
 #: package/contents/ui/ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr ""
+msgstr "אי אפשר להגדיר תווית כאשר הלוח הוא אנכי."
 
 #: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgctxt "General options"
 msgid "General:"
-msgstr ""
+msgstr "כללי:"
 
 #: package/contents/ui/ConfigGeneral.qml:151
-#, fuzzy, kde-format
-#| msgid "Sort alphabetically"
+#, kde-format
 msgid "Always sort applications alphabetically"
-msgstr "סדר לפי שם"
+msgstr "תמיד לסדר יישומים לפי אלפבית"
 
 #: package/contents/ui/ConfigGeneral.qml:156
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "להשתמש בסגנון פריטי תפריט מצומצם"
 
 #: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "מושבת אוטומטית במצב מגע"
 
 #: package/contents/ui/ConfigGeneral.qml:171
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr ""
+msgstr "הגדרת תוספי חיפוש פעילים…"
 
 #: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgid "Sidebar position:"
-msgstr ""
+msgstr "מקום סרגל צד:"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Right"
-msgstr ""
+msgstr "ימין"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Left"
-msgstr ""
+msgstr "שמאל"
 
 #: package/contents/ui/ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgid "Show favorites:"
-msgstr "מועדפים"
+msgstr "הצגת מועדפים:"
 
 #: package/contents/ui/ConfigGeneral.qml:199
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
-msgstr ""
+msgstr "ברשת"
 
 #: package/contents/ui/ConfigGeneral.qml:207
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
-msgstr ""
+msgstr "ברשימה"
 
 #: package/contents/ui/ConfigGeneral.qml:215
-#, fuzzy, kde-format
-#| msgid "Show applications by name"
+#, kde-format
 msgid "Show other applications:"
-msgstr "הראה יישומים על ידי שמות"
+msgstr "הצגת יישומים אחרים:"
 
 #: package/contents/ui/ConfigGeneral.qml:216
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
-msgstr ""
+msgstr "ברשת"
 
 #: package/contents/ui/ConfigGeneral.qml:224
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
-msgstr ""
+msgstr "ברשימה"
 
 #: package/contents/ui/ConfigGeneral.qml:236
 #, kde-format
 msgid "Show buttons for:"
-msgstr ""
+msgstr "הצגת כפתורים עבור:"
 
 #: package/contents/ui/ConfigGeneral.qml:237
 #: package/contents/ui/LeaveButtons.qml:121
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "כיבוי"
 
 #: package/contents/ui/ConfigGeneral.qml:246
 #, kde-format
 msgid "Session"
-msgstr ""
+msgstr "הפעלה"
 
 #: package/contents/ui/ConfigGeneral.qml:255
 #, kde-format
 msgid "Power and session"
-msgstr ""
+msgstr "כיבוי והפעלה"
 
 #: package/contents/ui/ConfigGeneral.qml:264
 #, kde-format
 msgid "Show action button captions"
-msgstr ""
+msgstr "הצגת תוויות כפתורי פעולה"
 
 #: package/contents/ui/Footer.qml:97
 #, kde-format
@@ -240,34 +236,33 @@ msgstr "יישומים"
 #: package/contents/ui/Footer.qml:112
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "מקומות"
 
 #: package/contents/ui/FullRepresentation.qml:149
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "אין התאמות"
 
 #: package/contents/ui/Header.qml:80
 #, kde-format
 msgid "Open user settings"
-msgstr ""
+msgstr "פתיחת הגדרות משתמש"
 
 #: package/contents/ui/Header.qml:229
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "להשאיר פתוח"
 
 #: package/contents/ui/Kickoff.qml:314
-#, fuzzy, kde-format
-#| msgid "Edit Applications..."
+#, kde-format
 msgid "Edit Applications…"
-msgstr "ערוך יישומים..."
+msgstr "עריכת יישומים…"
 
 #: package/contents/ui/KickoffGridView.qml:89
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
-msgstr ""
+msgstr "רשת עם %1 שורות ו־%2 עמודות"
 
 #: package/contents/ui/LeaveButtons.qml:121
 #, kde-format
@@ -277,18 +272,16 @@ msgstr "יציאה"
 #: package/contents/ui/LeaveButtons.qml:121
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "עוד"
 
 #: package/contents/ui/PlacesPage.qml:48
-#, fuzzy, kde-format
-#| msgid "Computer"
+#, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
 msgstr "מחשב"
 
 #: package/contents/ui/PlacesPage.qml:49
-#, fuzzy, kde-format
-#| msgid "History"
+#, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
 msgstr "היסטוריה"
@@ -297,7 +290,7 @@ msgstr "היסטוריה"
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
-msgstr ""
+msgstr "בשימוש תדיר"
 
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"

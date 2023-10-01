@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.kimpanel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-26 02:00+0000\n"
-"PO-Revision-Date: 2017-05-22 05:33-0400\n"
+"PO-Revision-Date: 2023-09-30 15:02+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -29,31 +29,29 @@ msgid "(Empty)"
 msgstr "(ריק)"
 
 #: package/contents/ui/ConfigAppearance.qml:29
-#, fuzzy, kde-format
-#| msgid "Exit Input Method"
+#, kde-format
 msgid "Input method list:"
-msgstr "יציאה משיטת הקלט"
+msgstr "רשימת שיטות קלט:"
 
 #: package/contents/ui/ConfigAppearance.qml:30
-#, fuzzy, kde-format
-#| msgid "Vertical List"
+#, kde-format
 msgid "Vertical"
-msgstr "רשימה אנכית"
+msgstr "אנכית"
 
 #: package/contents/ui/ConfigAppearance.qml:36
 #, kde-format
 msgid "Horizontal"
-msgstr ""
+msgstr "אופקי"
 
 #: package/contents/ui/ConfigAppearance.qml:43
 #, kde-format
 msgid "Font:"
-msgstr ""
+msgstr "גופן:"
 
 #: package/contents/ui/ConfigAppearance.qml:49
 #, kde-format
 msgid "Use custom:"
-msgstr ""
+msgstr "להשתמש במותאם אישית:"
 
 #: package/contents/ui/ConfigAppearance.qml:55
 #, kde-format
@@ -62,32 +60,30 @@ msgid " "
 msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:67
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Font"
+#, kde-format
 msgid "Select Font…"
-msgstr "בחירת גופן"
+msgstr "בחירת גופן…"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "The arrangement of icons in the Panel"
 msgid "Panel icon size:"
-msgstr ""
+msgstr "גודל סמלי לוח:"
 
 #: package/contents/ui/ConfigAppearance.qml:74
 #, kde-format
 msgid "Small"
-msgstr ""
+msgstr "קטן"
 
 #: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgid "Scale with Panel height"
-msgstr ""
+msgstr "מסתגל לגובה הלוח"
 
 #: package/contents/ui/ConfigAppearance.qml:82
 #, kde-format
 msgid "Scale with Panel width"
-msgstr ""
+msgstr "מסתגל לרוחב הלוח"
 
 #: package/contents/ui/ConfigAppearance.qml:90
 #, kde-format
@@ -98,12 +94,12 @@ msgstr "בחירת גופן"
 #: package/contents/ui/ContextMenu.qml:83
 #, kde-format
 msgid "Show"
-msgstr "הצג"
+msgstr "הצגה"
 
 #: package/contents/ui/ContextMenu.qml:98
 #, kde-format
 msgid "Hide %1"
-msgstr "הסתר את %1"
+msgstr "הסתרת %1"
 
 #: package/contents/ui/ContextMenu.qml:107
 #, kde-format
@@ -113,7 +109,7 @@ msgstr "הגדרת שיטת קלט"
 #: package/contents/ui/ContextMenu.qml:115
 #, kde-format
 msgid "Reload Config"
-msgstr "טען מחדש הגדרות"
+msgstr "טעינת הגדרות מחדש"
 
 #: package/contents/ui/ContextMenu.qml:123
 #, kde-format
@@ -121,10 +117,9 @@ msgid "Exit Input Method"
 msgstr "יציאה משיטת הקלט"
 
 #: package/contents/ui/main.qml:239
-#, fuzzy, kde-format
-#| msgid "Exit Input Method"
+#, kde-format
 msgid "Input Method Panel"
-msgstr "יציאה משיטת הקלט"
+msgstr "לוח שיטות קלט"
 
 #, fuzzy
 #~| msgid "Select Font"
