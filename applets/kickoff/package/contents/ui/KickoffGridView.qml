@@ -201,11 +201,14 @@ EmptyPage {
             event.accepted = true
         }
 
-        Keys.onMenuPressed: if (currentItem !== null) {
-            currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
-            currentItem.openActionMenu()
+        Keys.onMenuPressed: event => {
+            if (currentItem !== null) {
+                currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
+                currentItem.openActionMenu()
+            }
         }
-        Keys.onPressed: {
+
+        Keys.onPressed: event => {
             let targetX = currentItem ? currentItem.x : contentX
             let targetY = currentItem ? currentItem.y : contentY
             let targetIndex = currentIndex
