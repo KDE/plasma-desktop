@@ -9,6 +9,10 @@
 #include <KCModule>
 #include <KPluginMetaData>
 
+#include <QQuickWidget>
+
+#include "touchpadbackend.h"
+
 class TouchpadConfigPlugin;
 class TouchpadConfigLibinput;
 
@@ -27,19 +31,18 @@ public:
     void save() override;
     void defaults() override;
 
-    void kcmLoad()
-    {
-        KCModule::load();
-    }
-    void kcmSave()
-    {
-        KCModule::save();
-    }
-    void kcmDefaults()
-    {
-        KCModule::defaults();
-    }
+Q_SIGNALS:
+    void showMessage(const QString message, int type = 3 /*Kirigami.MessageType.Error*/);
+
+private Q_SLOTS:
+    void onChange();
+    void onTouchpadAdded(bool success);
+    void onTouchpadRemoved(int index);
 
 private:
-    TouchpadConfigLibinput *m_plugin;
+    void hideErrorMessage();
+
+    QQuickWidget *m_view;
+    TouchpadBackend *m_backend;
+    bool m_initError;
 };
