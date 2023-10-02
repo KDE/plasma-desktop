@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2023-04-08 22:44+0100\n"
+"PO-Revision-Date: 2023-10-01 05:27+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -41,10 +41,9 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "Elekti sekvan klavararanĝon"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Elekti sekvan klavararanĝon"
+msgstr "Ŝalti al Laste-Uzita Klavararanĝo"
 
 #: bindings.cpp:60
 #, kde-format
@@ -237,10 +236,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:246
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "Alternativa fulmoklavo:"
+msgstr "Laste uzita fulmoklavo:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:259
@@ -249,6 +247,8 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
+"Ĉi tiu ŝparvojo permesas rapidan ŝanĝadon inter du aranĝoj, ĉiam ŝanĝante al "
+"la lasta uzita."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:284

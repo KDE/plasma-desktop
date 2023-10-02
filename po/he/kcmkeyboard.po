@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2023-09-30 13:15+0300\n"
+"PO-Revision-Date: 2023-10-01 09:10+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
@@ -40,10 +40,9 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "מעבר לפריסת המקלדת הבאה"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "עבור לפריסת המקלדת הבאה"
+msgstr "מעבר לפריסת המקלדת הבאה"
 
 #: bindings.cpp:60
 #, kde-format
@@ -232,10 +231,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:246
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "פריסה אלטרנטיבית:"
+msgstr "מקש קיצור אחרון שהיה בשימוש:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:259
@@ -244,6 +242,8 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
+"מקש קיצור זה מאפשר לעבור מהר בין שתי פריסות על ידי מעבר לפריסה האחרונה "
+"שהייתה בשימוש."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:284
@@ -470,7 +470,7 @@ msgstr " חזרות לשנייה"
 #: kcmmiscwidget.ui:205
 #, kde-format
 msgid " ms"
-msgstr "מ״ש"
+msgstr " מ״ש"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDelay)
 #: kcmmiscwidget.ui:246
