@@ -67,13 +67,6 @@ if (BUILD_KCM_MOUSE_X11)
         PW::KWorkspace
     )
     install(TARGETS kapplymousetheme ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-
-    ########### next target ###############
-
-    list(APPEND common_SRCS
-        kcm/xlib/xlib_config.cpp
-    )
-    ki18n_wrap_ui(common_SRCS kcm/xlib/kcmmouse.ui)
 endif()
 
 qt_add_resources( common_SRCS kcm/resources.qrc )

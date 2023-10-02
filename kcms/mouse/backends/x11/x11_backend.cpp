@@ -6,7 +6,6 @@
 */
 
 #include "x11_backend.h"
-#include "x11_evdev_backend.h"
 #include "x11_libinput_backend.h"
 
 #include "logging.h"
@@ -37,14 +36,12 @@ X11Backend *X11Backend::implementation(QObject *parent)
     auto dpy = QX11Info::display();
     Atom testAtom = XInternAtom(dpy, LIBINPUT_PROP_ACCEL, True);
 
-    // There are multiple possible drivers
     if (testAtom) {
         qCDebug(KCM_MOUSE) << "Using libinput driver on X11.";
         return new X11LibinputBackend(parent);
-    } else {
-        qCDebug(KCM_MOUSE) << "Using evdev driver on X11.";
-        return new X11EvdevBackend(parent);
     }
+
+    return nullptr;
 }
 
 X11Backend::X11Backend(QObject *parent)

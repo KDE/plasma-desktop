@@ -33,6 +33,10 @@ int main(int argc, char *argv[])
 
     std::unique_ptr<X11Backend> backend(X11Backend::implementation());
 
+    if (!backend) {
+        return 2;
+    }
+
     if (!backend->isValid()) {
         return 2;
     }

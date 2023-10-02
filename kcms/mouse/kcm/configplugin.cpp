@@ -12,15 +12,17 @@
 
 #include <config-build-options.h>
 
-#if BUILD_KCM_MOUSE_X11
-#include "xlib/xlib_config.h"
-#endif
-
 #include <logging.h>
 
 ConfigPlugin *ConfigPlugin::implementation(ConfigContainer *parent)
 {
     InputBackend *backend = InputBackend::implementation(parent);
+
+    if (!backend) {
+        qCCritical(KCM_MOUSE) << "Not able to select appropriate backend.";
+        return nullptr;
+    }
+
     InputBackendMode mode = backend->mode();
 
 #if BUILD_KCM_MOUSE_KWIN_WAYLAND
@@ -34,12 +36,7 @@ ConfigPlugin *ConfigPlugin::implementation(ConfigContainer *parent)
         qCDebug(KCM_MOUSE) << "With libinput user interface.";
         return new LibinputConfig(parent, backend);
     }
-    if (mode == InputBackendMode::XEvdev) {
-        qCDebug(KCM_MOUSE) << "With X11 evdev user interface.";
-        return new XlibConfig(parent, backend);
-    }
 #endif
-    qCCritical(KCM_MOUSE) << "Not able to select appropriate backend.";
     return nullptr;
 }
 
