@@ -6,13 +6,15 @@
 
 #pragma once
 
-#include "../touchpadconfigplugin.h"
+#include <QObject>
+
+#include "touchpadconfigcontainer.h"
 
 class TouchpadBackend;
 class QHideEvent;
 class QQuickWidget;
 
-class TouchpadConfigLibinput : public TouchpadConfigPlugin
+class TouchpadConfigLibinput : public QObject
 {
     Q_OBJECT
 
@@ -22,9 +24,9 @@ public:
     {
     }
 
-    void load() override;
-    void save() override;
-    void defaults() override;
+    void load();
+    void save();
+    void defaults();
 
 Q_SIGNALS:
     void showMessage(const QString message, int type = 3 /*Kirigami.MessageType.Error*/);
@@ -40,4 +42,6 @@ private:
     QQuickWidget *m_view;
 
     bool m_initError;
+    TouchpadBackend *m_backend;
+    TouchpadConfigContainer *m_parent;
 };

@@ -41,5 +41,5 @@ public:
     }
 
 private:
-    TouchpadConfigPlugin *m_plugin;
+    TouchpadConfigLibinput *m_plugin;
 };

@@ -9,7 +9,6 @@
 #include "../logging.h"
 #include "libinput/touchpadconfiglibinput.h"
 #include "touchpadbackend.h"
-#include "touchpadconfigplugin.h"
 #include <config-build-options.h>
 
 #include <KPluginFactory>
