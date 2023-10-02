@@ -59,8 +59,8 @@ TouchpadConfigLibinput::TouchpadConfigLibinput(TouchpadConfigContainer *parent, 
     if (m_initError) {
         Q_EMIT showMessage(m_backend->errorString());
     } else {
-        connect(m_backend, SIGNAL(touchpadAdded(bool)), this, SLOT(onTouchpadAdded(bool)));
-        connect(m_backend, SIGNAL(touchpadRemoved(int)), this, SLOT(onTouchpadRemoved(int)));
+        connect(m_backend, &TouchpadBackend::touchpadAdded, this, &TouchpadConfigLibinput::onTouchpadAdded);
+        connect(m_backend, &TouchpadBackend::touchpadRemoved, this, &TouchpadConfigLibinput::onTouchpadRemoved);
     }
 }
 
