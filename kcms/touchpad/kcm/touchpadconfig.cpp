@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "touchpadconfigcontainer.h"
+#include "touchpadconfig.h"
 
 #include "../logging.h"
 #include "touchpadbackend.h"
@@ -21,20 +21,20 @@
 #include <QQuickItem>
 #include <QVBoxLayout>
 
-K_PLUGIN_CLASS_WITH_JSON(TouchpadConfigContainer, "kcm_touchpad.json")
+K_PLUGIN_CLASS_WITH_JSON(TouchpadConfig, "kcm_touchpad.json")
 
 extern "C" {
 Q_DECL_EXPORT void kcminit()
 {
 #if BUILD_KCM_TOUCHPAD_X11
     if (KWindowSystem::isPlatformX11()) {
-        TouchpadConfigContainer::kcmInit();
+        TouchpadConfig::kcmInit();
     }
 #endif
 }
 }
 
-TouchpadConfigContainer::TouchpadConfigContainer(QObject *parent, const KPluginMetaData &data)
+TouchpadConfig::TouchpadConfig(QObject *parent, const KPluginMetaData &data)
     : KCModule(parent, data)
 {
     m_backend = TouchpadBackend::implementation();
@@ -70,14 +70,14 @@ TouchpadConfigContainer::TouchpadConfigContainer(QObject *parent, const KPluginM
     if (m_initError) {
         Q_EMIT showMessage(m_backend->errorString());
     } else {
-        connect(m_backend, &TouchpadBackend::touchpadAdded, this, &TouchpadConfigContainer::onTouchpadAdded);
-        connect(m_backend, &TouchpadBackend::touchpadRemoved, this, &TouchpadConfigContainer::onTouchpadRemoved);
+        connect(m_backend, &TouchpadBackend::touchpadAdded, this, &TouchpadConfig::onTouchpadAdded);
+        connect(m_backend, &TouchpadBackend::touchpadRemoved, this, &TouchpadConfig::onTouchpadRemoved);
     }
 
     setButtons(KCModule::Default | KCModule::Apply);
 }
 
-void TouchpadConfigContainer::kcmInit()
+void TouchpadConfig::kcmInit()
 {
 #if BUILD_KCM_TOUCHPAD_X11
     TouchpadBackend *backend = TouchpadBackend::implementation();
@@ -88,7 +88,7 @@ void TouchpadConfigContainer::kcmInit()
 #endif
 }
 
-void TouchpadConfigContainer::load()
+void TouchpadConfig::load()
 {
     // in case of critical init error in backend, don't try
     if (m_initError) {
@@ -105,7 +105,7 @@ void TouchpadConfigContainer::load()
     QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
 }
 
-void TouchpadConfigContainer::save()
+void TouchpadConfig::save()
 {
     if (!m_backend->applyConfig()) {
         Q_EMIT showMessage(i18n("Not able to save all changes. See logs for more information. Please restart this configuration module and try again."));
@@ -119,7 +119,7 @@ void TouchpadConfigContainer::save()
     setNeedsSave(m_backend->isChangedConfig());
 }
 
-void TouchpadConfigContainer::defaults()
+void TouchpadConfig::defaults()
 {
     // in case of critical init error in backend, don't try
     if (m_initError) {
@@ -133,7 +133,7 @@ void TouchpadConfigContainer::defaults()
     setNeedsSave(m_backend->isChangedConfig());
 }
 
-void TouchpadConfigContainer::onChange()
+void TouchpadConfig::onChange()
 {
     if (!m_backend->touchpadCount()) {
         return;
@@ -142,7 +142,7 @@ void TouchpadConfigContainer::onChange()
     setNeedsSave(m_backend->isChangedConfig());
 }
 
-void TouchpadConfigContainer::onTouchpadAdded(bool success)
+void TouchpadConfig::onTouchpadAdded(bool success)
 {
     QQuickItem *rootObj = m_view->rootObject();
 
@@ -163,7 +163,7 @@ void TouchpadConfigContainer::onTouchpadAdded(bool success)
     QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
 }
 
-void TouchpadConfigContainer::onTouchpadRemoved(int index)
+void TouchpadConfig::onTouchpadRemoved(int index)
 {
     QQuickItem *rootObj = m_view->rootObject();
 
@@ -187,9 +187,9 @@ void TouchpadConfigContainer::onTouchpadRemoved(int index)
     setNeedsSave(m_backend->isChangedConfig());
 }
 
-void TouchpadConfigContainer::hideErrorMessage()
+void TouchpadConfig::hideErrorMessage()
 {
     Q_EMIT showMessage(QString());
 }
 
-#include "touchpadconfigcontainer.moc"
+#include "touchpadconfig.moc"

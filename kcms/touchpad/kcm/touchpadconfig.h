@@ -16,14 +16,14 @@
 class TouchpadConfigPlugin;
 class TouchpadConfigLibinput;
 
-class TouchpadConfigContainer : public KCModule
+class TouchpadConfig : public KCModule
 {
     Q_OBJECT
 
     friend TouchpadConfigLibinput;
 
 public:
-    explicit TouchpadConfigContainer(QObject *parent, const KPluginMetaData &data);
+    explicit TouchpadConfig(QObject *parent, const KPluginMetaData &data);
 
     static void kcmInit();
 

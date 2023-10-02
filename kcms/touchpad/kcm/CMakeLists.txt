@@ -1,5 +1,5 @@
 set(KCM_TOUCHPAD_SRCS
-    touchpadconfigcontainer.cpp
+    touchpadconfig.cpp
     resources.qrc
 )
 
