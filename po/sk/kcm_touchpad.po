@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2021-06-26 19:40+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -60,27 +60,27 @@ msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
 "Kritická chyba pri čítaní základných informácií zariadenia pre touchpad %1."
 
-#: backends/x11/xlibbackend.cpp:74
+#: backends/x11/xlibbackend.cpp:71
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "Nemôžem sa pripojiť k X serveru"
 
-#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:94
+#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:94
 #, kde-format
 msgid "No touchpad found"
 msgstr "Nenašiel sa touchpad"
 
-#: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
+#: backends/x11/xlibbackend.cpp:124 backends/x11/xlibbackend.cpp:138
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "Nemôžem použiť nastavenie touchpadu"
 
-#: backends/x11/xlibbackend.cpp:164 backends/x11/xlibbackend.cpp:177
+#: backends/x11/xlibbackend.cpp:152 backends/x11/xlibbackend.cpp:165
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "Nemôžem čítať nastavenie touchpadu"
 
-#: backends/x11/xlibbackend.cpp:190
+#: backends/x11/xlibbackend.cpp:178
 #, kde-format
 msgid "Cannot read default touchpad configuration"
 msgstr "Nemôžem čítať predvolené nastavenia touchpadu"
@@ -417,881 +417,6 @@ msgstr "Touchpad odpojený. Zatvorený jeho dialóg nastavení."
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Touchpad odpojený. Nenašli sa žiadne iné."
 
-#: kcm/xlib/testarea.cpp:20
-#, kde-format
-msgid "Drag me"
-msgstr "Potiahni ma"
-
-#: kcm/xlib/testbutton.cpp:29
-#, kde-format
-msgctxt "Mouse button"
-msgid "Left button"
-msgstr "Ľavé tlačidlo"
-
-#: kcm/xlib/testbutton.cpp:32
-#, kde-format
-msgctxt "Mouse button"
-msgid "Right button"
-msgstr "Pravé tlačidlo"
-
-#: kcm/xlib/testbutton.cpp:35
-#, kde-format
-msgctxt "Mouse button"
-msgid "Middle button"
-msgstr "Stredné tlačidlo"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:96
-#, kde-format
-msgid ""
-"Active settings don't match saved settings.\n"
-"You currently see saved settings."
-msgstr ""
-"Aktívne nastavenia sa nezhodujú s uloženými nastaveniami.\n"
-"Práve vidíte uložené nastavenia."
-
-#: kcm/xlib/touchpadconfigxlib.cpp:102
-#, kde-format
-msgid "Show active settings"
-msgstr "Zobraziť aktívne nastavenia"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:139
-#, kde-format
-msgid "These settings won't take effect in the testing area"
-msgstr "Tieto nastavenia nemajú efekt v testovacej oblasti"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:144
-#, kde-format
-msgid "Enable/Disable Touchpad"
-msgstr "Povoliť/zakázať touchpad"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
-#: kcm/xlib/ui/kded.ui:14
-#, kde-format
-msgctxt "@title:window"
-msgid "Enable/Disable Touchpad"
-msgstr "Povoliť/zakázať touchpad"
-
-#. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
-#. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
-#: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
-#, kde-format
-msgid "Configure…"
-msgstr "Nastaviť..."
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/kded.ui:47
-#, kde-format
-msgid "Keyboard shortcuts:"
-msgstr "Klávesové skratky:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:60
-#, kde-format
-msgid "Disable touchpad when typing"
-msgstr "Zakázať touchpad pri písaní"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/kded.ui:75
-#, kde-format
-msgid "Timeout:"
-msgstr "Čas vypršania:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:86
-#, kde-format
-msgid ""
-"If there was no keyboard activity for more than specified\n"
-"number of milliseconds, touchpad will be enabled again"
-msgstr ""
-"Ak nie je žiadna aktivita klávesnice za viac ako daný počet\n"
-"milisekúnd, touchpad bude zase povolený"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_SingleTapTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:98 kcm/xlib/ui/tap.ui:306 kcm/xlib/ui/tap.ui:401
-#: kcm/xlib/ui/tap.ui:439 kcm/xlib/ui/tap.ui:458
-#, kde-format
-msgid " ms"
-msgstr " ms"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:106
-#, kde-format
-msgid ""
-"Disable click emulation and scrolling.\n"
-"You will be still able to move pointer using touchpad and perform clicks "
-"with hardware buttons."
-msgstr ""
-"Zakázať emuláciu kliknutia a rolovanie.\n"
-"Stále budete môcť pohybovať ukazovateľom a vykonávať kliknutia s "
-"hardvérovými tlačidlami."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:109
-#, kde-format
-msgid "Disable taps and scrolling only"
-msgstr "Zakázať iba ťuknutia a rolovania"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
-#: kcm/xlib/ui/kded.ui:119
-#, kde-format
-msgid "Disable touchpad when mouse is plugged in"
-msgstr "Zakázať touchpad, keď je pripojená myš"
-
-#. i18n: ectx: property (text), widget (QLabel, notificationsLabel)
-#: kcm/xlib/ui/kded.ui:136
-#, kde-format
-msgid "Notifications:"
-msgstr "Upozornenia:"
-
-#. i18n: ectx: property (text), widget (QLabel, ignoredDevLabel)
-#: kcm/xlib/ui/kded.ui:158
-#, kde-format
-msgid "Ignored devices:"
-msgstr "Ignorované zariadenia:"
-
-#. i18n: ectx: property (toolTip), widget (KEditListWidget, kcfg_MouseBlacklist)
-#: kcm/xlib/ui/kded.ui:169
-#, kde-format
-msgid ""
-"Some devices might be incorrectly treated as a mouse.\n"
-"You can add them to this list so that they will be ignored when they're "
-"plugged in."
-msgstr ""
-"Niektoré zariadenia sa môžu nesprávne prejavovať ako myš.\n"
-"Môžete ich pridať do tohto zoznamu, aby boli ignorované pri ich pripojení."
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
-#: kcm/xlib/ui/pointermotion.ui:14
-#, kde-format
-msgid "Pointer Motion"
-msgstr "Pohyb kurzora"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/pointermotion.ui:20
-#, kde-format
-msgctxt "Mouse pointer motion parameters"
-msgid "Speed"
-msgstr "Rýchlosť"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/pointermotion.ui:29
-#, kde-format
-msgctxt "Minimum pointer movement speed"
-msgid "Minimum:"
-msgstr "Minimum:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MinSpeed)
-#: kcm/xlib/ui/pointermotion.ui:39
-#, kde-format
-msgid "Minimum pointer speed"
-msgstr "Minimálna rýchlosť ukazovateľa"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/pointermotion.ui:52
-#, kde-format
-msgctxt "Maximum pointer movement speed"
-msgid "Maximum:"
-msgstr "Maximum:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MaxSpeed)
-#: kcm/xlib/ui/pointermotion.ui:62
-#, kde-format
-msgid "Maximum pointer speed"
-msgstr "Maximálna rýchlosť ukazovateľa"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/pointermotion.ui:75
-#, kde-format
-msgctxt "Pointer acceleration"
-msgid "Acceleration:"
-msgstr "Zrýchlenie:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
-#: kcm/xlib/ui/pointermotion.ui:85
-#, kde-format
-msgid "Acceleration factor for normal pointer movements"
-msgstr "Akceleračný násobič pre normálne pohyby ukazovateľa"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/pointermotion.ui:101
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Pressure-Dependent Motion"
-msgstr "Pohyb závislý na tlaku"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/pointermotion.ui:113
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum pressure:"
-msgstr "Minimálny tlak:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/pointermotion.ui:123
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum factor:"
-msgstr "Minimálny činiteľ:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/pointermotion.ui:133
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum pressure:"
-msgstr "Maximálny tlak:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/pointermotion.ui:143
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum factor:"
-msgstr "Maximálny činiteľ:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMinZ)
-#: kcm/xlib/ui/pointermotion.ui:153
-#, kde-format
-msgid "Finger pressure at which minimum pressure motion factor is applied"
-msgstr "Tlak prsta, pri ktorom sa použije faktor minimálneho tlaku pohybu"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
-#: kcm/xlib/ui/pointermotion.ui:166
-#, kde-format
-msgid "Finger pressure at which maximum pressure motion factor is applied"
-msgstr "Tlak prsta, pri ktorom sa použije faktor maximálneho tlaku pohybu"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
-#: kcm/xlib/ui/pointermotion.ui:179
-#, kde-format
-msgid "Lowest setting for pressure motion factor"
-msgstr "Najnižšie nastavenie pre tlak faktoru pohybu"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMaxFactor)
-#: kcm/xlib/ui/pointermotion.ui:189
-#, kde-format
-msgid "Greatest setting for pressure motion factor"
-msgstr "Najvyššie nastavenie pre tlak faktoru pohybu"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/pointermotion.ui:202
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Noise Cancellation"
-msgstr "Rušenie šumu"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/pointermotion.ui:214
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Vertical:"
-msgstr "Vertikálna:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/pointermotion.ui:224
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Horizontal:"
-msgstr "Horizontálna:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_VertHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:234
-#, kde-format
-msgid ""
-"The minimum vertical hardware distance required to generate motion events"
-msgstr ""
-"Minimálna zvislá hardvérová vzdialenosť potrebná na generovanie udalostí "
-"pohybu"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_VertHysteresis)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:243 kcm/xlib/ui/pointermotion.ui:259
-#, kde-format
-msgid " units"
-msgstr " jednotky"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:250
-#, kde-format
-msgid ""
-"The minimum horizontal hardware distance required to generate motion events"
-msgstr ""
-"Minimálna vodorovná hardvérová vzdialenosť potrebná na generovanie udalostí "
-"pohybu"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, ScrollForm)
-#: kcm/xlib/ui/scroll.ui:14
-#, kde-format
-msgid "Scrolling"
-msgstr "Rolovanie"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/scroll.ui:28
-#, kde-format
-msgid "Edge scrolling:"
-msgstr "Rolovanie okraja:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:38
-#, kde-format
-msgid "Enable vertical scrolling when dragging along the right edge"
-msgstr "Povoliť zvislé rolovanie pri posunutí pri pravom okraji"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:41 kcm/xlib/ui/scroll.ui:61 kcm/xlib/ui/scroll.ui:81
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Vertical"
-msgstr "Vertikálne"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:48
-#, kde-format
-msgid "Enable horizontal scrolling when dragging along the bottom edge"
-msgstr "Povoliť vodorovné rolovanie pri posunutí pri spodnom okraji"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:51 kcm/xlib/ui/scroll.ui:71 kcm/xlib/ui/scroll.ui:91
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Horizontal"
-msgstr "Horizontálne"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:58
-#, kde-format
-msgid ""
-"Enable vertical scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr ""
-"Povoliť zvislé rolovanie pri posunutí s dvoma prstami kdekoľvek na touchpade"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:68
-#, kde-format
-msgid ""
-"Enable horizontal scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr ""
-"Povoliť vodorovné rolovanie pri posunutí s dvoma prstami kdekoľvek na "
-"touchpade"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:78
-#, kde-format
-msgid "Reverse vertical scrolling"
-msgstr "Reverzné zvislé rolovanie"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:88
-#, kde-format
-msgid "Reverse horizontal scrolling"
-msgstr "Reverzné vodorovné rolovanie"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/scroll.ui:98
-#, kde-format
-msgid "Two-finger scrolling:"
-msgstr "Dvojprstové rolovanie:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/scroll.ui:108
-#, kde-format
-msgid "Reverse scrolling:"
-msgstr "Reverzné rolovanie:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/scroll.ui:126
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Scrolling Distance"
-msgstr "Vzdialenosť rolovania"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/scroll.ui:138
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Vertical:"
-msgstr "Vertikálna:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
-#, kde-format
-msgid "Move distance of the finger for a scroll event"
-msgstr "Vzdialenosť pohybu prsta pre udalosť rolovania"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/scroll.ui:157 kcm/xlib/ui/scroll.ui:186 kcm/xlib/ui/tap.ui:417
-#, kde-format
-msgid " mm"
-msgstr " mm"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/scroll.ui:167
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Horizontal:"
-msgstr "Horizontálna:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:199
-#, kde-format
-msgid ""
-"Continue scrolling after the finger is released from the edge of the touchpad"
-msgstr "Pokračovať v rolovaní po uvoľnení prsta z okraja touchpadu"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:202
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Coasting"
-msgstr "Coasting"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/scroll.ui:217
-#, kde-format
-msgctxt "Coasting"
-msgid "Minimum speed:"
-msgstr "Minimálna rýchlosť:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:227
-#, kde-format
-msgid ""
-"Your finger needs to produce this many scrolls per second in order to start "
-"coasting"
-msgstr ""
-"Váš prst musí urobiť toľkoto rolovaní za sekundu na spustenie coastingu"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:233
-#, kde-format
-msgid " scrolls/sec"
-msgstr " rolovaní/sek"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/scroll.ui:240
-#, kde-format
-msgctxt "Coasting"
-msgid "Deceleration:"
-msgstr "Decelerácia:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:250
-#, kde-format
-msgid "Number of scrolls/second² to decrease the coasting speed"
-msgstr "Počet rolovaní/sekunda² na zníženie rýchlosti coastingu"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:256
-#, kde-format
-msgid " scrolls/sec²"
-msgstr " rolovaní/sek²"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/scroll.ui:263
-#, kde-format
-msgid "Corner coasting:"
-msgstr "Coasting rohov:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:273
-#, kde-format
-msgid ""
-"Enable edge scrolling to continue while the finger stays in an edge corner"
-msgstr ""
-"Povoliť pokračovanie rolovania rohov počas toho, ako prst ostane v rohu"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:276
-#, kde-format
-msgctxt "Coasting"
-msgid "Enable"
-msgstr "Povoliť"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:288
-#, kde-format
-msgid ""
-"Scrolling is engaged when a drag starts in the given trigger region.\n"
-"Moving your finger in clockwise circles around the center of the touchpad\n"
-"will scroll down and counter clockwise motion will scroll up"
-msgstr ""
-"Rolovanie sa spustí pri začatí posunu v danom regióne spustenia.\n"
-"Posun prsta v smere pohybu hodinových ručičiek okolo stredu touchpadu\n"
-"bude rolovať dolu a v opačnom smere bude rolovať hore"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:291
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Circular Scrolling"
-msgstr "Cirkulárne rolovanie"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/scroll.ui:306
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Trigger region:"
-msgstr "Oblasť spustenia:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
-#: kcm/xlib/ui/scroll.ui:316
-#, kde-format
-msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr "Oblasť spustenia na touchpade na začatie cirkulárneho rolovania"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/scroll.ui:323
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Angle:"
-msgstr "Uhol:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:345
-#, kde-format
-msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr "Uhol posunu (radiány) prsta na generovanie udalosti rolovania"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:348
-#, kde-format
-msgctxt "suffix - degrees (angle)"
-msgid "°"
-msgstr "°"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/scroll.ui:355
-#, kde-format
-msgid ""
-"When used together with vertical scrolling, hitting the upper or lower right "
-"corner will seamlessly switch over from vertical to circular scrolling"
-msgstr ""
-"Pri použití so zvislým rolovaním, zásah horného alebo dolného pravého rohu "
-"plynulo prepne zo zvislého na vodorovné rolovanie"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
-#: kcm/xlib/ui/sensitivity.ui:14
-#, kde-format
-msgid "Sensitivity"
-msgstr "Citlivosť"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/sensitivity.ui:20
-#, kde-format
-msgctxt "Touchpad"
-msgid "Sensitivity"
-msgstr "Citlivosť"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/sensitivity.ui:29
-#, kde-format
-msgid "Pressure for detecting a touch:"
-msgstr "Tlak na detekciu dotyku:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/sensitivity.ui:39
-#, kde-format
-msgid "Pressure for detecting a release:"
-msgstr "Tlak na detekciu uvoľnenia:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerHigh)
-#: kcm/xlib/ui/sensitivity.ui:49
-#, kde-format
-msgid ""
-"When finger pressure goes above this value, the driver counts it as a touch"
-msgstr "Keď tlak prsta presiahne túto hodnotu, ovládač to počíta ako dotyk"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerLow)
-#: kcm/xlib/ui/sensitivity.ui:62
-#, kde-format
-msgid ""
-"When finger pressure drops below this value, the driver counts it as a "
-"release"
-msgstr ""
-"Keď tlak prsta sa zníži pod túto hodnotu, ovládač to počíta ako uvoľnenie"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:78
-#, kde-format
-msgid ""
-"If palm detection should be enabled. Note that this also requires hardware/"
-"firmware support from the touchpad"
-msgstr ""
-"Či má byť povolená detekcia dlane. Toto vyžaduje aj podporu hardvéru/"
-"firmvéru pre touchpad"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:81
-#, kde-format
-msgctxt "Touchpad"
-msgid "Palm Detection"
-msgstr "Detekcia dlane"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/sensitivity.ui:93
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum width:"
-msgstr "Minimálna šírka:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/sensitivity.ui:103
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum pressure:"
-msgstr "Minimálny tlak:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinWidth)
-#: kcm/xlib/ui/sensitivity.ui:113
-#, kde-format
-msgid "Minimum finger width at which touch is considered a palm"
-msgstr "Minimálna šírka prsta, pri ktorej sa dotyk považuje za dlaň"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinZ)
-#: kcm/xlib/ui/sensitivity.ui:129
-#, kde-format
-msgid "Minimum finger pressure at which touch is considered a palm"
-msgstr "Minimálny tlak prsta, pri ktorom sa dotyk považuje za dlaň"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, TapForm)
-#: kcm/xlib/ui/tap.ui:14
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Taps"
-msgstr "Ťuknutia"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
-#: kcm/xlib/ui/tap.ui:28
-#, kde-format
-msgid "Tap to Click"
-msgstr "Ťuknite na kliknutie"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/tap.ui:43
-#, kde-format
-msgctxt "Tapping"
-msgid "One finger:"
-msgstr "Jeden prst:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_OneFingerTapButton)
-#: kcm/xlib/ui/tap.ui:53
-#, kde-format
-msgid "Which mouse button is reported on a non-corner one-finger tap"
-msgstr "Ktoré tlačidlo myši sa oznáme pri nerohovom jednoprstovom ťuknutí"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/tap.ui:60
-#, kde-format
-msgctxt "Tapping"
-msgid "Two fingers:"
-msgstr "Dva prsty:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_TwoFingerTapButton)
-#: kcm/xlib/ui/tap.ui:70
-#, kde-format
-msgid "Which mouse button is reported on a non-corner two-finger tap"
-msgstr "Ktoré tlačidlo myši sa oznáme pri nerohovom dvojprstovom ťuknutí"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/tap.ui:77
-#, kde-format
-msgctxt "Tapping"
-msgid "Three fingers:"
-msgstr "Tri prsty:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_ThreeFingerTapButton)
-#: kcm/xlib/ui/tap.ui:87
-#, kde-format
-msgid "Which mouse button is reported on a non-corner three-finger tap"
-msgstr "Ktoré tlačidlo myši sa oznáme pri nerohovom trojprstovom ťuknutí"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/tap.ui:107
-#, kde-format
-msgctxt "Touchpad"
-msgid "Corners"
-msgstr "Rohy"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/tap.ui:131
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top left:"
-msgstr "Vľavo hore:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LTCornerButton)
-#: kcm/xlib/ui/tap.ui:144
-#, kde-format
-msgid "Which mouse button is reported on a left top corner tap"
-msgstr "Ktoré tlačidlo myši sa oznáme pri ľavom hornom rohovom ťuknutí"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/tap.ui:151
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom left:"
-msgstr "Vľavo dole:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/tap.ui:164
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top right:"
-msgstr "Vpravo hore:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LBCornerButton)
-#: kcm/xlib/ui/tap.ui:177
-#, kde-format
-msgid "Which mouse button is reported on a left bottom corner tap"
-msgstr "Ktoré tlačidlo myši sa oznáme pri ľavom dolnom rohovom ťuknutí"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
-#: kcm/xlib/ui/tap.ui:184
-#, kde-format
-msgid "Which mouse button is reported on a right top corner tap"
-msgstr "Ktoré tlačidlo myši sa oznáme pri pravom hornom rohovom ťuknutí"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
-#: kcm/xlib/ui/tap.ui:191
-#, kde-format
-msgid "Which mouse button is reported on a right bottom corner tap"
-msgstr "Ktoré tlačidlo myši sa oznáme pri pravom dolnom rohovom ťuknutí"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/tap.ui:214
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom right:"
-msgstr "Vpravo dole:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:251
-#, kde-format
-msgid ""
-"This gesture is an alternative way of dragging. It is performed by tapping "
-"(touching and releasing the finger), then touching again and moving the "
-"finger on the touchpad"
-msgstr ""
-"Toto gesto je alternatíva pre posun. Vykonáva sa ťuknutím (dotykom a "
-"uvoľnením prsta), potom ďalším dotykom a posunom prsta na touchpade"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:254
-#, kde-format
-msgid "Tap-and-Drag Gesture"
-msgstr "Gesto Tap-and-Drag"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:266
-#, kde-format
-msgid ""
-"If off, a tap-and-drag gesture ends when you release the finger. If on, the "
-"gesture is active until you tap a second time, or until timeout expires"
-msgstr ""
-"Ak je vypnuté, gesto tap-and-drag končí pri uvoľnení prsta. Ak je zapnuté, "
-"gesto je aktívne kým neťuknete druhýkrát alebo ak vyprší čas"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:269
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Locked Drags"
-msgstr "Zamknuté posuny"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/tap.ui:284
-#, kde-format
-msgctxt "Locked drags"
-msgid "Timeout:"
-msgstr "Čas vypršania:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_LockedDragTimeout)
-#: kcm/xlib/ui/tap.ui:294
-#, kde-format
-msgid ""
-"How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
-"automatically turned off after the finger is released from the touchpad"
-msgstr ""
-"Ako dlho to trvá (v milisekundách) pre režim \"Zamknuté posuny\", aby sa "
-"automaticky vypli po uvoľnení prsta z touchpadu"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/tap.ui:325
-#, kde-format
-msgid "Tap Detection"
-msgstr "Detekcia ťuknutia"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/tap.ui:340
-#, kde-format
-msgid "Maximum time:"
-msgstr "Maximálny čas:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/tap.ui:353
-#, kde-format
-msgid "Maximum finger movement:"
-msgstr "Maximálny pohyb prsta:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#: kcm/xlib/ui/tap.ui:366
-#, kde-format
-msgid "Maximum time for double tap:"
-msgstr "Maximálny čas pre dvojité ťuknutie:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: kcm/xlib/ui/tap.ui:379
-#, kde-format
-msgid "Single tap timeout:"
-msgstr "Čas pre jednoduché ťuknutie:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
-#: kcm/xlib/ui/tap.ui:389
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a tap"
-msgstr "Maximálny čas (v milisekundách) pre detekciu ťuknutia"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/tap.ui:408
-#, kde-format
-msgid "Maximum movement of the finger for detecting a tap"
-msgstr "Maximálny pohyb prsta na detekciu ťuknutia"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#: kcm/xlib/ui/tap.ui:427
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a double tap"
-msgstr "Maximálny čas (v milisekundách) na detekciu dvojitého ťuknutia"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
-#: kcm/xlib/ui/tap.ui:446
-#, kde-format
-msgid "Timeout after a tap to recognize it as a single tap"
-msgstr "Čas vypršania po ťuknutí na vyhodnotenie ako jednoduché ťuknutie"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/testarea.ui:20
-#, kde-format
-msgid "Testing area"
-msgstr "Testovacia oblasť"
-
-#. i18n: ectx: property (text), widget (TestButton, pushButton)
-#: kcm/xlib/ui/testarea.ui:29
-#, kde-format
-msgid "Click me"
-msgstr "Klikni sem"
-
 #: kded/kded.cpp:201
 #, kde-format
 msgid "Touchpad was disabled because a mouse was plugged in"
@@ -1392,6 +517,504 @@ msgstr "Ľavý okraj"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Ľavý horný roh"
+
+#~ msgid "Drag me"
+#~ msgstr "Potiahni ma"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Left button"
+#~ msgstr "Ľavé tlačidlo"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Right button"
+#~ msgstr "Pravé tlačidlo"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Middle button"
+#~ msgstr "Stredné tlačidlo"
+
+#~ msgid ""
+#~ "Active settings don't match saved settings.\n"
+#~ "You currently see saved settings."
+#~ msgstr ""
+#~ "Aktívne nastavenia sa nezhodujú s uloženými nastaveniami.\n"
+#~ "Práve vidíte uložené nastavenia."
+
+#~ msgid "Show active settings"
+#~ msgstr "Zobraziť aktívne nastavenia"
+
+#~ msgid "These settings won't take effect in the testing area"
+#~ msgstr "Tieto nastavenia nemajú efekt v testovacej oblasti"
+
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "Povoliť/zakázať touchpad"
+
+#~ msgctxt "@title:window"
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "Povoliť/zakázať touchpad"
+
+#~ msgid "Configure…"
+#~ msgstr "Nastaviť..."
+
+#~ msgid "Keyboard shortcuts:"
+#~ msgstr "Klávesové skratky:"
+
+#~ msgid "Disable touchpad when typing"
+#~ msgstr "Zakázať touchpad pri písaní"
+
+#~ msgid "Timeout:"
+#~ msgstr "Čas vypršania:"
+
+#~ msgid ""
+#~ "If there was no keyboard activity for more than specified\n"
+#~ "number of milliseconds, touchpad will be enabled again"
+#~ msgstr ""
+#~ "Ak nie je žiadna aktivita klávesnice za viac ako daný počet\n"
+#~ "milisekúnd, touchpad bude zase povolený"
+
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "Disable click emulation and scrolling.\n"
+#~ "You will be still able to move pointer using touchpad and perform clicks "
+#~ "with hardware buttons."
+#~ msgstr ""
+#~ "Zakázať emuláciu kliknutia a rolovanie.\n"
+#~ "Stále budete môcť pohybovať ukazovateľom a vykonávať kliknutia s "
+#~ "hardvérovými tlačidlami."
+
+#~ msgid "Disable taps and scrolling only"
+#~ msgstr "Zakázať iba ťuknutia a rolovania"
+
+#~ msgid "Disable touchpad when mouse is plugged in"
+#~ msgstr "Zakázať touchpad, keď je pripojená myš"
+
+#~ msgid "Notifications:"
+#~ msgstr "Upozornenia:"
+
+#~ msgid "Ignored devices:"
+#~ msgstr "Ignorované zariadenia:"
+
+#~ msgid ""
+#~ "Some devices might be incorrectly treated as a mouse.\n"
+#~ "You can add them to this list so that they will be ignored when they're "
+#~ "plugged in."
+#~ msgstr ""
+#~ "Niektoré zariadenia sa môžu nesprávne prejavovať ako myš.\n"
+#~ "Môžete ich pridať do tohto zoznamu, aby boli ignorované pri ich pripojení."
+
+#~ msgid "Pointer Motion"
+#~ msgstr "Pohyb kurzora"
+
+#~ msgctxt "Mouse pointer motion parameters"
+#~ msgid "Speed"
+#~ msgstr "Rýchlosť"
+
+#~ msgctxt "Minimum pointer movement speed"
+#~ msgid "Minimum:"
+#~ msgstr "Minimum:"
+
+#~ msgid "Minimum pointer speed"
+#~ msgstr "Minimálna rýchlosť ukazovateľa"
+
+#~ msgctxt "Maximum pointer movement speed"
+#~ msgid "Maximum:"
+#~ msgstr "Maximum:"
+
+#~ msgid "Maximum pointer speed"
+#~ msgstr "Maximálna rýchlosť ukazovateľa"
+
+#~ msgctxt "Pointer acceleration"
+#~ msgid "Acceleration:"
+#~ msgstr "Zrýchlenie:"
+
+#~ msgid "Acceleration factor for normal pointer movements"
+#~ msgstr "Akceleračný násobič pre normálne pohyby ukazovateľa"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Pressure-Dependent Motion"
+#~ msgstr "Pohyb závislý na tlaku"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum pressure:"
+#~ msgstr "Minimálny tlak:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum factor:"
+#~ msgstr "Minimálny činiteľ:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum pressure:"
+#~ msgstr "Maximálny tlak:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum factor:"
+#~ msgstr "Maximálny činiteľ:"
+
+#~ msgid "Finger pressure at which minimum pressure motion factor is applied"
+#~ msgstr "Tlak prsta, pri ktorom sa použije faktor minimálneho tlaku pohybu"
+
+#~ msgid "Finger pressure at which maximum pressure motion factor is applied"
+#~ msgstr "Tlak prsta, pri ktorom sa použije faktor maximálneho tlaku pohybu"
+
+#~ msgid "Lowest setting for pressure motion factor"
+#~ msgstr "Najnižšie nastavenie pre tlak faktoru pohybu"
+
+#~ msgid "Greatest setting for pressure motion factor"
+#~ msgstr "Najvyššie nastavenie pre tlak faktoru pohybu"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Noise Cancellation"
+#~ msgstr "Rušenie šumu"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Vertical:"
+#~ msgstr "Vertikálna:"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Horizontal:"
+#~ msgstr "Horizontálna:"
+
+#~ msgid ""
+#~ "The minimum vertical hardware distance required to generate motion events"
+#~ msgstr ""
+#~ "Minimálna zvislá hardvérová vzdialenosť potrebná na generovanie udalostí "
+#~ "pohybu"
+
+#~ msgid " units"
+#~ msgstr " jednotky"
+
+#~ msgid ""
+#~ "The minimum horizontal hardware distance required to generate motion "
+#~ "events"
+#~ msgstr ""
+#~ "Minimálna vodorovná hardvérová vzdialenosť potrebná na generovanie "
+#~ "udalostí pohybu"
+
+#~ msgid "Scrolling"
+#~ msgstr "Rolovanie"
+
+#~ msgid "Edge scrolling:"
+#~ msgstr "Rolovanie okraja:"
+
+#~ msgid "Enable vertical scrolling when dragging along the right edge"
+#~ msgstr "Povoliť zvislé rolovanie pri posunutí pri pravom okraji"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Vertical"
+#~ msgstr "Vertikálne"
+
+#~ msgid "Enable horizontal scrolling when dragging along the bottom edge"
+#~ msgstr "Povoliť vodorovné rolovanie pri posunutí pri spodnom okraji"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Horizontal"
+#~ msgstr "Horizontálne"
+
+#~ msgid ""
+#~ "Enable vertical scrolling when dragging with two fingers anywhere on the "
+#~ "touchpad"
+#~ msgstr ""
+#~ "Povoliť zvislé rolovanie pri posunutí s dvoma prstami kdekoľvek na "
+#~ "touchpade"
+
+#~ msgid ""
+#~ "Enable horizontal scrolling when dragging with two fingers anywhere on "
+#~ "the touchpad"
+#~ msgstr ""
+#~ "Povoliť vodorovné rolovanie pri posunutí s dvoma prstami kdekoľvek na "
+#~ "touchpade"
+
+#~ msgid "Reverse vertical scrolling"
+#~ msgstr "Reverzné zvislé rolovanie"
+
+#~ msgid "Reverse horizontal scrolling"
+#~ msgstr "Reverzné vodorovné rolovanie"
+
+#~ msgid "Two-finger scrolling:"
+#~ msgstr "Dvojprstové rolovanie:"
+
+#~ msgid "Reverse scrolling:"
+#~ msgstr "Reverzné rolovanie:"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Scrolling Distance"
+#~ msgstr "Vzdialenosť rolovania"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Vertical:"
+#~ msgstr "Vertikálna:"
+
+#~ msgid "Move distance of the finger for a scroll event"
+#~ msgstr "Vzdialenosť pohybu prsta pre udalosť rolovania"
+
+#~ msgid " mm"
+#~ msgstr " mm"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Horizontal:"
+#~ msgstr "Horizontálna:"
+
+#~ msgid ""
+#~ "Continue scrolling after the finger is released from the edge of the "
+#~ "touchpad"
+#~ msgstr "Pokračovať v rolovaní po uvoľnení prsta z okraja touchpadu"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Coasting"
+#~ msgstr "Coasting"
+
+#~ msgctxt "Coasting"
+#~ msgid "Minimum speed:"
+#~ msgstr "Minimálna rýchlosť:"
+
+#~ msgid ""
+#~ "Your finger needs to produce this many scrolls per second in order to "
+#~ "start coasting"
+#~ msgstr ""
+#~ "Váš prst musí urobiť toľkoto rolovaní za sekundu na spustenie coastingu"
+
+#~ msgid " scrolls/sec"
+#~ msgstr " rolovaní/sek"
+
+#~ msgctxt "Coasting"
+#~ msgid "Deceleration:"
+#~ msgstr "Decelerácia:"
+
+#~ msgid "Number of scrolls/second² to decrease the coasting speed"
+#~ msgstr "Počet rolovaní/sekunda² na zníženie rýchlosti coastingu"
+
+#~ msgid " scrolls/sec²"
+#~ msgstr " rolovaní/sek²"
+
+#~ msgid "Corner coasting:"
+#~ msgstr "Coasting rohov:"
+
+#~ msgid ""
+#~ "Enable edge scrolling to continue while the finger stays in an edge corner"
+#~ msgstr ""
+#~ "Povoliť pokračovanie rolovania rohov počas toho, ako prst ostane v rohu"
+
+#~ msgctxt "Coasting"
+#~ msgid "Enable"
+#~ msgstr "Povoliť"
+
+#~ msgid ""
+#~ "Scrolling is engaged when a drag starts in the given trigger region.\n"
+#~ "Moving your finger in clockwise circles around the center of the "
+#~ "touchpad\n"
+#~ "will scroll down and counter clockwise motion will scroll up"
+#~ msgstr ""
+#~ "Rolovanie sa spustí pri začatí posunu v danom regióne spustenia.\n"
+#~ "Posun prsta v smere pohybu hodinových ručičiek okolo stredu touchpadu\n"
+#~ "bude rolovať dolu a v opačnom smere bude rolovať hore"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Circular Scrolling"
+#~ msgstr "Cirkulárne rolovanie"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Trigger region:"
+#~ msgstr "Oblasť spustenia:"
+
+#~ msgid "Trigger region on the touchpad to start circular scrolling"
+#~ msgstr "Oblasť spustenia na touchpade na začatie cirkulárneho rolovania"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Angle:"
+#~ msgstr "Uhol:"
+
+#~ msgid "Move angle (degrees) of finger to generate a scroll event"
+#~ msgstr "Uhol posunu (radiány) prsta na generovanie udalosti rolovania"
+
+#~ msgctxt "suffix - degrees (angle)"
+#~ msgid "°"
+#~ msgstr "°"
+
+#~ msgid ""
+#~ "When used together with vertical scrolling, hitting the upper or lower "
+#~ "right corner will seamlessly switch over from vertical to circular "
+#~ "scrolling"
+#~ msgstr ""
+#~ "Pri použití so zvislým rolovaním, zásah horného alebo dolného pravého "
+#~ "rohu plynulo prepne zo zvislého na vodorovné rolovanie"
+
+#~ msgid "Sensitivity"
+#~ msgstr "Citlivosť"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Sensitivity"
+#~ msgstr "Citlivosť"
+
+#~ msgid "Pressure for detecting a touch:"
+#~ msgstr "Tlak na detekciu dotyku:"
+
+#~ msgid "Pressure for detecting a release:"
+#~ msgstr "Tlak na detekciu uvoľnenia:"
+
+#~ msgid ""
+#~ "When finger pressure goes above this value, the driver counts it as a "
+#~ "touch"
+#~ msgstr "Keď tlak prsta presiahne túto hodnotu, ovládač to počíta ako dotyk"
+
+#~ msgid ""
+#~ "When finger pressure drops below this value, the driver counts it as a "
+#~ "release"
+#~ msgstr ""
+#~ "Keď tlak prsta sa zníži pod túto hodnotu, ovládač to počíta ako uvoľnenie"
+
+#~ msgid ""
+#~ "If palm detection should be enabled. Note that this also requires "
+#~ "hardware/firmware support from the touchpad"
+#~ msgstr ""
+#~ "Či má byť povolená detekcia dlane. Toto vyžaduje aj podporu hardvéru/"
+#~ "firmvéru pre touchpad"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Palm Detection"
+#~ msgstr "Detekcia dlane"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum width:"
+#~ msgstr "Minimálna šírka:"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum pressure:"
+#~ msgstr "Minimálny tlak:"
+
+#~ msgid "Minimum finger width at which touch is considered a palm"
+#~ msgstr "Minimálna šírka prsta, pri ktorej sa dotyk považuje za dlaň"
+
+#~ msgid "Minimum finger pressure at which touch is considered a palm"
+#~ msgstr "Minimálny tlak prsta, pri ktorom sa dotyk považuje za dlaň"
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Taps"
+#~ msgstr "Ťuknutia"
+
+#~ msgid "Tap to Click"
+#~ msgstr "Ťuknite na kliknutie"
+
+#~ msgctxt "Tapping"
+#~ msgid "One finger:"
+#~ msgstr "Jeden prst:"
+
+#~ msgid "Which mouse button is reported on a non-corner one-finger tap"
+#~ msgstr "Ktoré tlačidlo myši sa oznáme pri nerohovom jednoprstovom ťuknutí"
+
+#~ msgctxt "Tapping"
+#~ msgid "Two fingers:"
+#~ msgstr "Dva prsty:"
+
+#~ msgid "Which mouse button is reported on a non-corner two-finger tap"
+#~ msgstr "Ktoré tlačidlo myši sa oznáme pri nerohovom dvojprstovom ťuknutí"
+
+#~ msgctxt "Tapping"
+#~ msgid "Three fingers:"
+#~ msgstr "Tri prsty:"
+
+#~ msgid "Which mouse button is reported on a non-corner three-finger tap"
+#~ msgstr "Ktoré tlačidlo myši sa oznáme pri nerohovom trojprstovom ťuknutí"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Corners"
+#~ msgstr "Rohy"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top left:"
+#~ msgstr "Vľavo hore:"
+
+#~ msgid "Which mouse button is reported on a left top corner tap"
+#~ msgstr "Ktoré tlačidlo myši sa oznáme pri ľavom hornom rohovom ťuknutí"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom left:"
+#~ msgstr "Vľavo dole:"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top right:"
+#~ msgstr "Vpravo hore:"
+
+#~ msgid "Which mouse button is reported on a left bottom corner tap"
+#~ msgstr "Ktoré tlačidlo myši sa oznáme pri ľavom dolnom rohovom ťuknutí"
+
+#~ msgid "Which mouse button is reported on a right top corner tap"
+#~ msgstr "Ktoré tlačidlo myši sa oznáme pri pravom hornom rohovom ťuknutí"
+
+#~ msgid "Which mouse button is reported on a right bottom corner tap"
+#~ msgstr "Ktoré tlačidlo myši sa oznáme pri pravom dolnom rohovom ťuknutí"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom right:"
+#~ msgstr "Vpravo dole:"
+
+#~ msgid ""
+#~ "This gesture is an alternative way of dragging. It is performed by "
+#~ "tapping (touching and releasing the finger), then touching again and "
+#~ "moving the finger on the touchpad"
+#~ msgstr ""
+#~ "Toto gesto je alternatíva pre posun. Vykonáva sa ťuknutím (dotykom a "
+#~ "uvoľnením prsta), potom ďalším dotykom a posunom prsta na touchpade"
+
+#~ msgid "Tap-and-Drag Gesture"
+#~ msgstr "Gesto Tap-and-Drag"
+
+#~ msgid ""
+#~ "If off, a tap-and-drag gesture ends when you release the finger. If on, "
+#~ "the gesture is active until you tap a second time, or until timeout "
+#~ "expires"
+#~ msgstr ""
+#~ "Ak je vypnuté, gesto tap-and-drag končí pri uvoľnení prsta. Ak je "
+#~ "zapnuté, gesto je aktívne kým neťuknete druhýkrát alebo ak vyprší čas"
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Locked Drags"
+#~ msgstr "Zamknuté posuny"
+
+#~ msgctxt "Locked drags"
+#~ msgid "Timeout:"
+#~ msgstr "Čas vypršania:"
+
+#~ msgid ""
+#~ "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
+#~ "automatically turned off after the finger is released from the touchpad"
+#~ msgstr ""
+#~ "Ako dlho to trvá (v milisekundách) pre režim \"Zamknuté posuny\", aby sa "
+#~ "automaticky vypli po uvoľnení prsta z touchpadu"
+
+#~ msgid "Tap Detection"
+#~ msgstr "Detekcia ťuknutia"
+
+#~ msgid "Maximum time:"
+#~ msgstr "Maximálny čas:"
+
+#~ msgid "Maximum finger movement:"
+#~ msgstr "Maximálny pohyb prsta:"
+
+#~ msgid "Maximum time for double tap:"
+#~ msgstr "Maximálny čas pre dvojité ťuknutie:"
+
+#~ msgid "Single tap timeout:"
+#~ msgstr "Čas pre jednoduché ťuknutie:"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a tap"
+#~ msgstr "Maximálny čas (v milisekundách) pre detekciu ťuknutia"
+
+#~ msgid "Maximum movement of the finger for detecting a tap"
+#~ msgstr "Maximálny pohyb prsta na detekciu ťuknutia"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a double tap"
+#~ msgstr "Maximálny čas (v milisekundách) na detekciu dvojitého ťuknutia"
+
+#~ msgid "Timeout after a tap to recognize it as a single tap"
+#~ msgstr "Čas vypršania po ťuknutí na vyhodnotenie ako jednoduché ťuknutie"
+
+#~ msgid "Testing area"
+#~ msgstr "Testovacia oblasť"
+
+#~ msgid "Click me"
+#~ msgstr "Klikni sem"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Profil zrýchlenia:"

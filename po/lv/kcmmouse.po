@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2011-07-08 13:24+0300\n"
 "Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
@@ -133,9 +133,7 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Kursora jutība:"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
-#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Kursora paātrinājums:"
@@ -243,280 +241,185 @@ msgctxt "@action:button"
 msgid "Go back"
 msgstr ""
 
-#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
-#: kcm/xlib/kcmmouse.ui:14
-#, kde-format
-msgid ""
-"<h1>Mouse</h1> This module allows you to choose various options for the way "
-"in which your pointing device works. Your pointing device may be a mouse, "
-"trackball, or some other hardware that performs a similar function."
-msgstr ""
-"<h1>Pele</h1> Šis modulis ļauj jums izvēlēties dažādas opcijas veidam, kādā "
-"strādā jūsu manipulatora ierīce. Jūsu manipulatora ierīce var būt pele, "
-"kursorbumba, vai kāda cita aparatūra, kas izpilda šīs funkcijas."
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Pele</h1> Šis modulis ļauj jums izvēlēties dažādas opcijas veidam, "
+#~ "kādā strādā jūsu manipulatora ierīce. Jūsu manipulatora ierīce var būt "
+#~ "pele, kursorbumba, vai kāda cita aparatūra, kas izpilda šīs funkcijas."
 
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#: kcm/xlib/kcmmouse.ui:36
-#, kde-format
-msgid "&General"
-msgstr "&Pamata"
+#~ msgid "&General"
+#~ msgstr "&Pamata"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:52
-#, kde-format
-msgid ""
-"If you are left-handed, you may prefer to swap the functions of the left and "
-"right buttons on your pointing device by choosing the 'left-handed' option. "
-"If your pointing device has more than two buttons, only those that function "
-"as the left and right buttons are affected. For example, if you have a three-"
-"button mouse, the middle button is unaffected."
-msgstr ""
-"Ja jūs esat kreilis, jūs, iespējams, vēlaties apmainīt vietām kreisās un "
-"labās pogas funkcijas jūsu manipulatora ierīcē, izvēloties \"Kreilis\" "
-"opciju. Ja jūsu manipulatora ierīcei ir vairāk par divām pogām, tikai labā "
-"un kreisā poga tiks ietekmēta. Piemēram, ja jums ir trīs pogu pele, vidējā "
-"poga netiks ietekmēta."
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Ja jūs esat kreilis, jūs, iespējams, vēlaties apmainīt vietām kreisās un "
+#~ "labās pogas funkcijas jūsu manipulatora ierīcē, izvēloties \"Kreilis\" "
+#~ "opciju. Ja jūsu manipulatora ierīcei ir vairāk par divām pogām, tikai "
+#~ "labā un kreisā poga tiks ietekmēta. Piemēram, ja jums ir trīs pogu pele, "
+#~ "vidējā poga netiks ietekmēta."
 
-#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:55
-#, kde-format
-msgid "Button Order"
-msgstr "Pogu secība"
+#~ msgid "Button Order"
+#~ msgstr "Pogu secība"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
-#: kcm/xlib/kcmmouse.ui:64
-#, kde-format
-msgid "Righ&t handed"
-msgstr "&Labrocis"
+#~ msgid "Righ&t handed"
+#~ msgstr "&Labrocis"
 
-#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
-#: kcm/xlib/kcmmouse.ui:77
-#, kde-format
-msgid "Le&ft handed"
-msgstr "&Kreilis"
+#~ msgid "Le&ft handed"
+#~ msgstr "&Kreilis"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:106
-#, kde-format
-msgid ""
-"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
-"mouse buttons."
-msgstr ""
-"Izmainīt peles ritentiņa ritināšanas virzienu vai arī samainīt vietām 4. un "
-"5. peles pogu."
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Izmainīt peles ritentiņa ritināšanas virzienu vai arī samainīt vietām 4. "
+#~ "un 5. peles pogu."
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:109
-#, kde-format
-msgid "Re&verse scroll direction"
-msgstr "Ritināt pretējā &virzienā"
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Ritināt pretējā &virzienā"
 
-#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
-#: kcm/xlib/kcmmouse.ui:156
-#, kde-format
-msgid "Advanced"
-msgstr "Paplašināti"
+#~ msgid "Advanced"
+#~ msgstr "Paplašināti"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/kcmmouse.ui:174
-#, kde-format
-msgid "Pointer threshold:"
-msgstr "Kursora jutība:"
+#~ msgid "Pointer threshold:"
+#~ msgstr "Kursora jutība:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/kcmmouse.ui:184
-#, kde-format
-msgid "Double click interval:"
-msgstr "Dubultklikšķa intervāls:"
+#~ msgid "Double click interval:"
+#~ msgstr "Dubultklikšķa intervāls:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/kcmmouse.ui:194
-#, kde-format
-msgid "Drag start time:"
-msgstr "Pārvilkšanas sākšanās laiks:"
+#~ msgid "Drag start time:"
+#~ msgstr "Pārvilkšanas sākšanās laiks:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/kcmmouse.ui:204
-#, kde-format
-msgid "Drag start distance:"
-msgstr "Pārvilkšanas sākšanās attālums:"
+#~ msgid "Drag start distance:"
+#~ msgstr "Pārvilkšanas sākšanās attālums:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/kcmmouse.ui:214
-#, kde-format
-msgid "Mouse wheel scrolls by:"
-msgstr "Peles rullītis ritina par:"
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Peles rullītis ritina par:"
 
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:230
-#, kde-format
-msgid ""
-"<p>This option allows you to change the relationship between the distance "
-"that the mouse pointer moves on the screen and the relative movement of the "
-"physical device itself (which may be a mouse, trackball, or some other "
-"pointing device.)</p><p> A high value for the acceleration will lead to "
-"large movements of the mouse pointer on the screen even when you only make a "
-"small movement with the physical device. Selecting very high values may "
-"result in the mouse pointer flying across the screen, making it hard to "
-"control.</p>"
-msgstr ""
-"<p>Šī opcija atļauj jums mainīt attiecību starp attālumu, par kuru peles "
-"bultiņa pārvietojas pa ekrānu, un relatīvo fiziskās ierīces kustību (kura "
-"var būt pele, kursorbumba, vai kāda cita manipulatora ierīce).</p><p> Augsta "
-"paātrinājuma vērtība izsauks straujas peles bultiņas kustības uz ekrāna pat, "
-"ja jūs tikai nedaudz pakustināsiet fizisko ierīci. Ļoti augstas vērtības "
-"izvēlēšanās var būt par iemeslu tam, ka peles bultiņa \"lido\" pa ekrānu, "
-"padarot ļoti grūtu tās vadību.</p>"
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Šī opcija atļauj jums mainīt attiecību starp attālumu, par kuru peles "
+#~ "bultiņa pārvietojas pa ekrānu, un relatīvo fiziskās ierīces kustību (kura "
+#~ "var būt pele, kursorbumba, vai kāda cita manipulatora ierīce).</p><p> "
+#~ "Augsta paātrinājuma vērtība izsauks straujas peles bultiņas kustības uz "
+#~ "ekrāna pat, ja jūs tikai nedaudz pakustināsiet fizisko ierīci. Ļoti "
+#~ "augstas vērtības izvēlēšanās var būt par iemeslu tam, ka peles bultiņa "
+#~ "\"lido\" pa ekrānu, padarot ļoti grūtu tās vadību.</p>"
 
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:233
-#, kde-format
-msgid " x"
-msgstr " x"
+#~ msgid " x"
+#~ msgstr " x"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
-#: kcm/xlib/kcmmouse.ui:261
-#, kde-format
-msgid ""
-"<p>The threshold is the smallest distance that the mouse pointer must move "
-"on the screen before acceleration has any effect. If the movement is smaller "
-"than the threshold, the mouse pointer moves as if the acceleration was set "
-"to 1X;</p><p> thus, when you make small movements with the physical device, "
-"there is no acceleration at all, giving you a greater degree of control over "
-"the mouse pointer. With larger movements of the physical device, you can "
-"move the mouse pointer rapidly to different areas on the screen.</p>"
-msgstr ""
-"<p>Jutība ir mazākais attālums, pa kādu jāpārvieto peles kurors pa ekrānu, "
-"lai būtu efekts no paātrinājuma. Ja pārvietošana ir mazāka, par jūtību, "
-"peles kursors pārvietosies tā, it kā paātrinājuma nebūtu.</p><p>Tādēļ, kad "
-"jūs veicat sīkas kustības ar fizisko ierīci, paātrinājuma nav vispār, "
-"sniedzot jums lielāku kontroles pakāpi pār kursoru. Ar plašākām ierīces "
-"kustībām, jūs varat ātri pārvietot peles kursoru uz citu ekrāna apgabalu.</p>"
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Jutība ir mazākais attālums, pa kādu jāpārvieto peles kurors pa "
+#~ "ekrānu, lai būtu efekts no paātrinājuma. Ja pārvietošana ir mazāka, par "
+#~ "jūtību, peles kursors pārvietosies tā, it kā paātrinājuma nebūtu.</"
+#~ "p><p>Tādēļ, kad jūs veicat sīkas kustības ar fizisko ierīci, paātrinājuma "
+#~ "nav vispār, sniedzot jums lielāku kontroles pakāpi pār kursoru. Ar "
+#~ "plašākām ierīces kustībām, jūs varat ātri pārvietot peles kursoru uz citu "
+#~ "ekrāna apgabalu.</p>"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
-#: kcm/xlib/kcmmouse.ui:280
-#, kde-format
-msgid ""
-"The double click interval is the maximal time (in milliseconds) between two "
-"mouse clicks which turns them into a double click. If the second click "
-"happens later than this time interval after the first click, they are "
-"recognized as two separate clicks."
-msgstr ""
-"Dubultklikšķa intervāls ir maksimālais laiks (milisekundēs) starp diviem "
-"peles klikšķiem, kurā tie pārtop dubultklikšķī. Ja otrs klikšķis ir izdarīts "
-"vēlāk par šo laika intervālu pēc pirmā klikšķa, tos atpazīs kā divus "
-"atsevišķus klikšķus."
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Dubultklikšķa intervāls ir maksimālais laiks (milisekundēs) starp diviem "
+#~ "peles klikšķiem, kurā tie pārtop dubultklikšķī. Ja otrs klikšķis ir "
+#~ "izdarīts vēlāk par šo laika intervālu pēc pirmā klikšķa, tos atpazīs kā "
+#~ "divus atsevišķus klikšķus."
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
-#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
-#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
-#, kde-format
-msgid " msec"
-msgstr " ms"
+#~ msgid " msec"
+#~ msgstr " ms"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
-#: kcm/xlib/kcmmouse.ui:308
-#, kde-format
-msgid ""
-"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
-"the mouse within the drag start time, a drag operation will be initiated."
-msgstr ""
-"Ja jūs noklikšķināt ar peli (piemēram, daudzrindu-redaktorā) un sākat to "
-"pārvietot pārvilkšanas sākšanās laika ietvaros, tiks uzsākta pārvilkšanas "
-"operācija."
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Ja jūs noklikšķināt ar peli (piemēram, daudzrindu-redaktorā) un sākat to "
+#~ "pārvietot pārvilkšanas sākšanās laika ietvaros, tiks uzsākta pārvilkšanas "
+#~ "operācija."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
-#: kcm/xlib/kcmmouse.ui:333
-#, kde-format
-msgid ""
-"If you click with the mouse and begin to move the mouse at least the drag "
-"start distance, a drag operation will be initiated."
-msgstr ""
-"Ja jūs noklikšķināt ar peli un pārvietojat kursoru par vismaz pārvilkšanas "
-"sākšanās attālumu, tiks uzsākta pārvilkšanas operācija."
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Ja jūs noklikšķināt ar peli un pārvietojat kursoru par vismaz "
+#~ "pārvilkšanas sākšanās attālumu, tiks uzsākta pārvilkšanas operācija."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
-#: kcm/xlib/kcmmouse.ui:355
-#, kde-format
-msgid ""
-"If you use the wheel of a mouse, this value determines the number of lines "
-"to scroll for each wheel movement. Note that if this number exceeds the "
-"number of visible lines, it will be ignored and the wheel movement will be "
-"handled as a page up/down movement."
-msgstr ""
-"Ja jūs izmantojat peles rullīti, šī vērtība nosaka līniju skaitu, kas tiks "
-"paritinātas pie katras rullīša kustības. Atcerieties, ka, ja šis skaitlis "
-"pārsniedz redzamo līniju skaitu, tas tiks ignorēts, un ritentiņa "
-"pārvietošana tiks apstrādāta kā lapas augšup/lejup pārvietošana."
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Ja jūs izmantojat peles rullīti, šī vērtība nosaka līniju skaitu, kas "
+#~ "tiks paritinātas pie katras rullīša kustības. Atcerieties, ka, ja šis "
+#~ "skaitlis pārsniedz redzamo līniju skaitu, tas tiks ignorēts, un ritentiņa "
+#~ "pārvietošana tiks apstrādāta kā lapas augšup/lejup pārvietošana."
 
-#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
-#: kcm/xlib/kcmmouse.ui:387
-#, fuzzy, kde-format
-#| msgid "Mouse Navigation"
-msgid "Keyboard Navigation"
-msgstr "Pārvietošanās ar peli"
+#, fuzzy
+#~| msgid "Mouse Navigation"
+#~ msgid "Keyboard Navigation"
+#~ msgstr "Pārvietošanās ar peli"
 
-#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
-#: kcm/xlib/kcmmouse.ui:395
-#, kde-format
-msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "&Pārvietot kursoru ar tastatūru (izmantojot ciparu taustiņus)"
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Pārvietot kursoru ar tastatūru (izmantojot ciparu taustiņus)"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/kcmmouse.ui:424
-#, kde-format
-msgid "&Acceleration delay:"
-msgstr "P&aātrināšanas aizture:"
+#~ msgid "&Acceleration delay:"
+#~ msgstr "P&aātrināšanas aizture:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/kcmmouse.ui:434
-#, kde-format
-msgid "R&epeat interval:"
-msgstr "Atkārtošanas int&ervāls:"
+#~ msgid "R&epeat interval:"
+#~ msgstr "Atkārtošanas int&ervāls:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/kcmmouse.ui:466
-#, kde-format
-msgid "Acceleration &time:"
-msgstr "Paā&trināšanās laiks:"
+#~ msgid "Acceleration &time:"
+#~ msgstr "Paā&trināšanās laiks:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/kcmmouse.ui:498
-#, kde-format
-msgid "Ma&ximum speed:"
-msgstr "M&aksimālais ātrums:"
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "M&aksimālais ātrums:"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
-#: kcm/xlib/kcmmouse.ui:514
-#, kde-format
-msgid " pixel/sec"
-msgstr " punkti/sekundē"
+#~ msgid " pixel/sec"
+#~ msgstr " punkti/sekundē"
 
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/kcmmouse.ui:530
-#, kde-format
-msgid "Acceleration &profile:"
-msgstr "Paātrināšanas &profils:"
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Paātrināšanas &profils:"
 
-#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
-#, kde-format
-msgid " pixel"
-msgid_plural " pixels"
-msgstr[0] "punkts"
-msgstr[1] "punkti"
-msgstr[2] "punktu"
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] "punkts"
+#~ msgstr[1] "punkti"
+#~ msgstr[2] "punktu"
 
-#: kcm/xlib/xlib_config.cpp:277
-#, kde-format
-msgid " line"
-msgid_plural " lines"
-msgstr[0] "līnija"
-msgstr[1] "līnijas"
-msgstr[2] "līniju"
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] "līnija"
+#~ msgstr[1] "līnijas"
+#~ msgstr[2] "līniju"
 
 #, fuzzy
 #~| msgid "Acceleration &profile:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2005-11-26 15:22+0200\n"
 "Last-Translator: Kobus <kabousv@therugby.co.za>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -130,9 +130,7 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Wyser drempelpunt:"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
-#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Wyser versnelling:"
@@ -240,298 +238,200 @@ msgctxt "@action:button"
 msgid "Go back"
 msgstr ""
 
-#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
-#: kcm/xlib/kcmmouse.ui:14
-#, kde-format
-msgid ""
-"<h1>Mouse</h1> This module allows you to choose various options for the way "
-"in which your pointing device works. Your pointing device may be a mouse, "
-"trackball, or some other hardware that performs a similar function."
-msgstr ""
-"<h1>Muis</h1> Hierdie module laat toe jy na kies verskeie opsies vir die weg "
-"in wat jou aanwys toestel werk. jou aanwys toestel dalk mag wees 'n Muis, "
-"volgbal, of sommige ander hardeware wat verrig 'n soortgelyk funksie."
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Muis</h1> Hierdie module laat toe jy na kies verskeie opsies vir die "
+#~ "weg in wat jou aanwys toestel werk. jou aanwys toestel dalk mag wees 'n "
+#~ "Muis, volgbal, of sommige ander hardeware wat verrig 'n soortgelyk "
+#~ "funksie."
 
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#: kcm/xlib/kcmmouse.ui:36
-#, kde-format
-msgid "&General"
-msgstr "Algemeen"
+#~ msgid "&General"
+#~ msgstr "Algemeen"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:52
-#, kde-format
-msgid ""
-"If you are left-handed, you may prefer to swap the functions of the left and "
-"right buttons on your pointing device by choosing the 'left-handed' option. "
-"If your pointing device has more than two buttons, only those that function "
-"as the left and right buttons are affected. For example, if you have a three-"
-"button mouse, the middle button is unaffected."
-msgstr ""
-"as jy word links-handed, jy dalk mag verkies na uitruil die funksies van die "
-"links en regterkant knoppies op jou aanwys toestel deur kies die 'links-"
-"handed' opsie. as jou aanwys toestel het meer as twee knoppies, slegs "
-"daardie wat funksie as die links en regterkant knoppies word geaffekteer. "
-"Vir voorbeeld, as jy het 'n three-knoppie muis, die middelste knoppie is nie "
-"geaffekteer."
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "as jy word links-handed, jy dalk mag verkies na uitruil die funksies van "
+#~ "die links en regterkant knoppies op jou aanwys toestel deur kies die "
+#~ "'links-handed' opsie. as jou aanwys toestel het meer as twee knoppies, "
+#~ "slegs daardie wat funksie as die links en regterkant knoppies word "
+#~ "geaffekteer. Vir voorbeeld, as jy het 'n three-knoppie muis, die "
+#~ "middelste knoppie is nie geaffekteer."
 
-#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:55
-#, kde-format
-msgid "Button Order"
-msgstr "Knoppie Orde"
+#~ msgid "Button Order"
+#~ msgstr "Knoppie Orde"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
-#: kcm/xlib/kcmmouse.ui:64
-#, kde-format
-msgid "Righ&t handed"
-msgstr "Regshandig"
+#~ msgid "Righ&t handed"
+#~ msgstr "Regshandig"
 
-#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
-#: kcm/xlib/kcmmouse.ui:77
-#, kde-format
-msgid "Le&ft handed"
-msgstr "Links handig"
+#~ msgid "Le&ft handed"
+#~ msgstr "Links handig"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:106
-#, kde-format
-msgid ""
-"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
-"mouse buttons."
-msgstr ""
-"Verander die rigting van rol van die muis wiel of die 4de en 5de muis "
-"knoppies."
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Verander die rigting van rol van die muis wiel of die 4de en 5de muis "
+#~ "knoppies."
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:109
-#, kde-format
-msgid "Re&verse scroll direction"
-msgstr "Agteruit rol rigting"
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Agteruit rol rigting"
 
-#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
-#: kcm/xlib/kcmmouse.ui:156
-#, kde-format
-msgid "Advanced"
-msgstr "Gevorderde"
+#~ msgid "Advanced"
+#~ msgstr "Gevorderde"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/kcmmouse.ui:174
-#, kde-format
-msgid "Pointer threshold:"
-msgstr "Wyser drempelpunt:"
+#~ msgid "Pointer threshold:"
+#~ msgstr "Wyser drempelpunt:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/kcmmouse.ui:184
-#, kde-format
-msgid "Double click interval:"
-msgstr "Dubbel kliek interval:"
+#~ msgid "Double click interval:"
+#~ msgstr "Dubbel kliek interval:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/kcmmouse.ui:194
-#, kde-format
-msgid "Drag start time:"
-msgstr "Trek begin tyd:"
+#~ msgid "Drag start time:"
+#~ msgstr "Trek begin tyd:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/kcmmouse.ui:204
-#, kde-format
-msgid "Drag start distance:"
-msgstr "Trek begin afstand:"
+#~ msgid "Drag start distance:"
+#~ msgstr "Trek begin afstand:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/kcmmouse.ui:214
-#, kde-format
-msgid "Mouse wheel scrolls by:"
-msgstr "Muis wiel rol deur:"
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Muis wiel rol deur:"
 
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:230
-#, fuzzy, kde-format
-#| msgid ""
-#| "This option allows you to change the relationship between the distance "
-#| "that the mouse pointer moves on the screen and the relative movement of "
-#| "the physical device itself (which may be a mouse, trackball, or some "
-#| "other pointing device.)<p> A high value for the acceleration will lead to "
-#| "large movements of the mouse pointer on the screen even when you only "
-#| "make a small movement with the physical device. Selecting very high "
-#| "values may result in the mouse pointer flying across the screen, making "
-#| "it hard to control."
-msgid ""
-"<p>This option allows you to change the relationship between the distance "
-"that the mouse pointer moves on the screen and the relative movement of the "
-"physical device itself (which may be a mouse, trackball, or some other "
-"pointing device.)</p><p> A high value for the acceleration will lead to "
-"large movements of the mouse pointer on the screen even when you only make a "
-"small movement with the physical device. Selecting very high values may "
-"result in the mouse pointer flying across the screen, making it hard to "
-"control.</p>"
-msgstr ""
-"Hierdie opsie laat toe jy na verander die verhouding tussen die afstand wat "
-"die muis wyser skuiwe op die skerm en die relatiewe beweging van die fisiese "
-"toestel self (wat dalk mag wees 'n muis, volgbal, van sommige ander aanwys "
-"toestel.)<p> 'n ho wëaarde vir die versnelling sal lei na groot bewegings "
-"van die muis wyser op die skerm self wanneer jy slegs maak 'n klein beweging "
-"met die fisiese toestel. Deur te kies baie hoog waardes dalk mag resultaat "
-"in die muis wyser vlieg oor die skerm, maak dit hard na kontrole!"
+#, fuzzy
+#~| msgid ""
+#~| "This option allows you to change the relationship between the distance "
+#~| "that the mouse pointer moves on the screen and the relative movement of "
+#~| "the physical device itself (which may be a mouse, trackball, or some "
+#~| "other pointing device.)<p> A high value for the acceleration will lead "
+#~| "to large movements of the mouse pointer on the screen even when you only "
+#~| "make a small movement with the physical device. Selecting very high "
+#~| "values may result in the mouse pointer flying across the screen, making "
+#~| "it hard to control."
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "Hierdie opsie laat toe jy na verander die verhouding tussen die afstand "
+#~ "wat die muis wyser skuiwe op die skerm en die relatiewe beweging van die "
+#~ "fisiese toestel self (wat dalk mag wees 'n muis, volgbal, van sommige "
+#~ "ander aanwys toestel.)<p> 'n ho wëaarde vir die versnelling sal lei na "
+#~ "groot bewegings van die muis wyser op die skerm self wanneer jy slegs "
+#~ "maak 'n klein beweging met die fisiese toestel. Deur te kies baie hoog "
+#~ "waardes dalk mag resultaat in die muis wyser vlieg oor die skerm, maak "
+#~ "dit hard na kontrole!"
 
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:233
-#, kde-format
-msgid " x"
-msgstr ""
+#, fuzzy
+#~| msgid ""
+#~| "The threshold is the smallest distance that the mouse pointer must move "
+#~| "on the screen before acceleration has any effect. If the movement is "
+#~| "smaller than the threshold, the mouse pointer moves as if the "
+#~| "acceleration was set to 1X;<p> thus, when you make small movements with "
+#~| "the physical device, there is no acceleration at all, giving you a "
+#~| "greater degree of control over the mouse pointer. With larger movements "
+#~| "of the physical device, you can move the mouse pointer rapidly to "
+#~| "different areas on the screen."
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "Die drempelpunt is die kleinste afstand wat die muis wyser moet beweeg op "
+#~ "Die skerm voor versnelling het enige effek. as Die beweging is kleiner as "
+#~ "Die drempelpunt, Die muis wyser skuiwe as as Die versnelling was stel na "
+#~ "1x.<p> Dus, wanneer jy maak klein bewegings met Die fisiese toestel, daar "
+#~ "is geen vernelling na alle, gee jy 'n grootter graad van kontrole bo Die "
+#~ "muis wyser. met grootter bewegings van Die fisiese toestel, jy kan beweeg "
+#~ "Die muis wyser vinnig na ander areas op Die skerm."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
-#: kcm/xlib/kcmmouse.ui:261
-#, fuzzy, kde-format
-#| msgid ""
-#| "The threshold is the smallest distance that the mouse pointer must move "
-#| "on the screen before acceleration has any effect. If the movement is "
-#| "smaller than the threshold, the mouse pointer moves as if the "
-#| "acceleration was set to 1X;<p> thus, when you make small movements with "
-#| "the physical device, there is no acceleration at all, giving you a "
-#| "greater degree of control over the mouse pointer. With larger movements "
-#| "of the physical device, you can move the mouse pointer rapidly to "
-#| "different areas on the screen."
-msgid ""
-"<p>The threshold is the smallest distance that the mouse pointer must move "
-"on the screen before acceleration has any effect. If the movement is smaller "
-"than the threshold, the mouse pointer moves as if the acceleration was set "
-"to 1X;</p><p> thus, when you make small movements with the physical device, "
-"there is no acceleration at all, giving you a greater degree of control over "
-"the mouse pointer. With larger movements of the physical device, you can "
-"move the mouse pointer rapidly to different areas on the screen.</p>"
-msgstr ""
-"Die drempelpunt is die kleinste afstand wat die muis wyser moet beweeg op "
-"Die skerm voor versnelling het enige effek. as Die beweging is kleiner as "
-"Die drempelpunt, Die muis wyser skuiwe as as Die versnelling was stel na 1x."
-"<p> Dus, wanneer jy maak klein bewegings met Die fisiese toestel, daar is "
-"geen vernelling na alle, gee jy 'n grootter graad van kontrole bo Die muis "
-"wyser. met grootter bewegings van Die fisiese toestel, jy kan beweeg Die "
-"muis wyser vinnig na ander areas op Die skerm."
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Die dubbel kliek interval is Die maksimum tyd (in millisekondes) tussen "
+#~ "twee muis klieke wat draai hulle binnein 'n dubbel kliek. as Die tweede "
+#~ "kliek gebeur later as hierdie tyd interval na Die eerste kliek, hulle "
+#~ "word herken as twee aparte klieke."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
-#: kcm/xlib/kcmmouse.ui:280
-#, kde-format
-msgid ""
-"The double click interval is the maximal time (in milliseconds) between two "
-"mouse clicks which turns them into a double click. If the second click "
-"happens later than this time interval after the first click, they are "
-"recognized as two separate clicks."
-msgstr ""
-"Die dubbel kliek interval is Die maksimum tyd (in millisekondes) tussen twee "
-"muis klieke wat draai hulle binnein 'n dubbel kliek. as Die tweede kliek "
-"gebeur later as hierdie tyd interval na Die eerste kliek, hulle word herken "
-"as twee aparte klieke."
+#~ msgid " msec"
+#~ msgstr " msek"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
-#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
-#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
-#, kde-format
-msgid " msec"
-msgstr " msek"
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "As jy kliek met die muis (e.g. in 'n multi-line redigeerder) en begin na "
+#~ "beweeg die muis binne in die trek begin tyd, 'n trek operasie sal wees "
+#~ "begin."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
-#: kcm/xlib/kcmmouse.ui:308
-#, kde-format
-msgid ""
-"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
-"the mouse within the drag start time, a drag operation will be initiated."
-msgstr ""
-"As jy kliek met die muis (e.g. in 'n multi-line redigeerder) en begin na "
-"beweeg die muis binne in die trek begin tyd, 'n trek operasie sal wees begin."
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "As jy kliek met die muis en begin na beweeg die muis na minste die trek "
+#~ "begin afstand, 'n trek operasie sal wees begin."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
-#: kcm/xlib/kcmmouse.ui:333
-#, kde-format
-msgid ""
-"If you click with the mouse and begin to move the mouse at least the drag "
-"start distance, a drag operation will be initiated."
-msgstr ""
-"As jy kliek met die muis en begin na beweeg die muis na minste die trek "
-"begin afstand, 'n trek operasie sal wees begin."
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "as jy gebruik die wiel van 'n muis, hierdie waarde bepaal die nommer van "
+#~ "lyne na rol vir elke wiel beweging. Nota wat as hierdie nommer oorskry "
+#~ "die nommer van sigbare lyne, dit sal wees geignoreer en die wiel beweging "
+#~ "sal wees handteer as 'n bladsy begin/ondertoe beweging."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
-#: kcm/xlib/kcmmouse.ui:355
-#, kde-format
-msgid ""
-"If you use the wheel of a mouse, this value determines the number of lines "
-"to scroll for each wheel movement. Note that if this number exceeds the "
-"number of visible lines, it will be ignored and the wheel movement will be "
-"handled as a page up/down movement."
-msgstr ""
-"as jy gebruik die wiel van 'n muis, hierdie waarde bepaal die nommer van "
-"lyne na rol vir elke wiel beweging. Nota wat as hierdie nommer oorskry die "
-"nommer van sigbare lyne, dit sal wees geignoreer en die wiel beweging sal "
-"wees handteer as 'n bladsy begin/ondertoe beweging."
+#, fuzzy
+#~| msgid "Mouse Navigation"
+#~ msgid "Keyboard Navigation"
+#~ msgstr "Muis Navigering"
 
-#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
-#: kcm/xlib/kcmmouse.ui:387
-#, fuzzy, kde-format
-#| msgid "Mouse Navigation"
-msgid "Keyboard Navigation"
-msgstr "Muis Navigering"
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "Beweeg muis met sleutelbord (gebruik die num bordjie)"
 
-#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
-#: kcm/xlib/kcmmouse.ui:395
-#, kde-format
-msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "Beweeg muis met sleutelbord (gebruik die num bordjie)"
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Versnelling vertraging:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/kcmmouse.ui:424
-#, kde-format
-msgid "&Acceleration delay:"
-msgstr "Versnelling vertraging:"
+#~ msgid "R&epeat interval:"
+#~ msgstr "Herhaal interval:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/kcmmouse.ui:434
-#, kde-format
-msgid "R&epeat interval:"
-msgstr "Herhaal interval:"
+#~ msgid "Acceleration &time:"
+#~ msgstr "Versnelling tyd:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/kcmmouse.ui:466
-#, kde-format
-msgid "Acceleration &time:"
-msgstr "Versnelling tyd:"
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Maksimum spoed:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/kcmmouse.ui:498
-#, kde-format
-msgid "Ma&ximum speed:"
-msgstr "Maksimum spoed:"
+#~ msgid " pixel/sec"
+#~ msgstr " beeld elemente/sek"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
-#: kcm/xlib/kcmmouse.ui:514
-#, kde-format
-msgid " pixel/sec"
-msgstr " beeld elemente/sek"
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Versnelling profiel:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/kcmmouse.ui:530
-#, kde-format
-msgid "Acceleration &profile:"
-msgstr "Versnelling profiel:"
-
-#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
-#, fuzzy, kde-format
-#| msgid " pixel/sec"
-msgid " pixel"
-msgid_plural " pixels"
-msgstr[0] " beeld elemente/sek"
-msgstr[1] " beeld elemente/sek"
-
-#: kcm/xlib/xlib_config.cpp:277
-#, kde-format
-msgid " line"
-msgid_plural " lines"
-msgstr[0] ""
-msgstr[1] ""
+#, fuzzy
+#~| msgid " pixel/sec"
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " beeld elemente/sek"
+#~ msgstr[1] " beeld elemente/sek"
 
 #, fuzzy
 #~| msgid "Acceleration &profile:"

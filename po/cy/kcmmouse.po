@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2004-07-03 07:13+0100\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -134,9 +134,7 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Trothwy pwyntydd:"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
-#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Cyflymiad Pwyntydd:"
@@ -243,295 +241,197 @@ msgctxt "@action:button"
 msgid "Go back"
 msgstr ""
 
-#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
-#: kcm/xlib/kcmmouse.ui:14
-#, kde-format
-msgid ""
-"<h1>Mouse</h1> This module allows you to choose various options for the way "
-"in which your pointing device works. Your pointing device may be a mouse, "
-"trackball, or some other hardware that performs a similar function."
-msgstr ""
-"<h1>Llygoden</h1> Galluoga'r modwl yma i chi ddewis aml ddewisiadau ar gyfer "
-"y ffordd y mae'ch dyfais bwyntio'n gweithio. Gall eich dyfais bwyntio fod yn "
-"lygoden, yn bêl-drac, neu ryw galedwedd arall sydd â swyddogaeth tebyg."
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Llygoden</h1> Galluoga'r modwl yma i chi ddewis aml ddewisiadau ar "
+#~ "gyfer y ffordd y mae'ch dyfais bwyntio'n gweithio. Gall eich dyfais "
+#~ "bwyntio fod yn lygoden, yn bêl-drac, neu ryw galedwedd arall sydd â "
+#~ "swyddogaeth tebyg."
 
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#: kcm/xlib/kcmmouse.ui:36
-#, kde-format
-msgid "&General"
-msgstr "&Cyffredinol"
+#~ msgid "&General"
+#~ msgstr "&Cyffredinol"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:52
-#, kde-format
-msgid ""
-"If you are left-handed, you may prefer to swap the functions of the left and "
-"right buttons on your pointing device by choosing the 'left-handed' option. "
-"If your pointing device has more than two buttons, only those that function "
-"as the left and right buttons are affected. For example, if you have a three-"
-"button mouse, the middle button is unaffected."
-msgstr ""
-"Os ydych yn llaw-chwith, efallai hoffech gyfnewid swyddogaethau'r botymau "
-"chwith a dde ar eich dyfais bwyntio drwy ddewis y dewisiad 'llaw-chwith'. Os "
-"oes gan eich dyfais bwyntio mwy na dau fotwm, dim ond ar y rhai chwith a dde "
-"bydd effaith. Er enghraifft, os oes gennych lygoden â tri botwm, nid oes "
-"effaith ar y botwm canol."
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Os ydych yn llaw-chwith, efallai hoffech gyfnewid swyddogaethau'r botymau "
+#~ "chwith a dde ar eich dyfais bwyntio drwy ddewis y dewisiad 'llaw-chwith'. "
+#~ "Os oes gan eich dyfais bwyntio mwy na dau fotwm, dim ond ar y rhai chwith "
+#~ "a dde bydd effaith. Er enghraifft, os oes gennych lygoden â tri botwm, "
+#~ "nid oes effaith ar y botwm canol."
 
-#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:55
-#, kde-format
-msgid "Button Order"
-msgstr "Trefn Botymau"
+#~ msgid "Button Order"
+#~ msgstr "Trefn Botymau"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
-#: kcm/xlib/kcmmouse.ui:64
-#, kde-format
-msgid "Righ&t handed"
-msgstr "Llaw &Dde"
+#~ msgid "Righ&t handed"
+#~ msgstr "Llaw &Dde"
 
-#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
-#: kcm/xlib/kcmmouse.ui:77
-#, kde-format
-msgid "Le&ft handed"
-msgstr "Llaw &Chwith"
+#~ msgid "Le&ft handed"
+#~ msgstr "Llaw &Chwith"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:106
-#, kde-format
-msgid ""
-"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
-"mouse buttons."
-msgstr ""
-"Newid cyfeiriad y sgrolio am yr olwyn llygoden neu'r pedwerydd neu pumed "
-"botwm llygoden."
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Newid cyfeiriad y sgrolio am yr olwyn llygoden neu'r pedwerydd neu pumed "
+#~ "botwm llygoden."
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:109
-#, kde-format
-msgid "Re&verse scroll direction"
-msgstr "Gwrthdro&i cyfeiriad sgrolio"
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Gwrthdro&i cyfeiriad sgrolio"
 
-#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
-#: kcm/xlib/kcmmouse.ui:156
-#, kde-format
-msgid "Advanced"
-msgstr "Uwch"
+#~ msgid "Advanced"
+#~ msgstr "Uwch"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/kcmmouse.ui:174
-#, kde-format
-msgid "Pointer threshold:"
-msgstr "Trothwy pwyntydd:"
+#~ msgid "Pointer threshold:"
+#~ msgstr "Trothwy pwyntydd:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/kcmmouse.ui:184
-#, kde-format
-msgid "Double click interval:"
-msgstr "Cyfnod clic dwbl:"
+#~ msgid "Double click interval:"
+#~ msgstr "Cyfnod clic dwbl:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/kcmmouse.ui:194
-#, kde-format
-msgid "Drag start time:"
-msgstr "Amser cychwyn llusgo:"
+#~ msgid "Drag start time:"
+#~ msgstr "Amser cychwyn llusgo:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/kcmmouse.ui:204
-#, kde-format
-msgid "Drag start distance:"
-msgstr "Pellter dechrau llusgo:"
+#~ msgid "Drag start distance:"
+#~ msgstr "Pellter dechrau llusgo:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/kcmmouse.ui:214
-#, kde-format
-msgid "Mouse wheel scrolls by:"
-msgstr "Olwyn llygoden yn sgrolio:"
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Olwyn llygoden yn sgrolio:"
 
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:230
-#, fuzzy, kde-format
-#| msgid ""
-#| "This option allows you to change the relationship between the distance "
-#| "that the mouse pointer moves on the screen and the relative movement of "
-#| "the physical device itself (which may be a mouse, trackball, or some "
-#| "other pointing device.)<p> A high value for the acceleration will lead to "
-#| "large movements of the mouse pointer on the screen even when you only "
-#| "make a small movement with the physical device. Selecting very high "
-#| "values may result in the mouse pointer flying across the screen, making "
-#| "it hard to control."
-msgid ""
-"<p>This option allows you to change the relationship between the distance "
-"that the mouse pointer moves on the screen and the relative movement of the "
-"physical device itself (which may be a mouse, trackball, or some other "
-"pointing device.)</p><p> A high value for the acceleration will lead to "
-"large movements of the mouse pointer on the screen even when you only make a "
-"small movement with the physical device. Selecting very high values may "
-"result in the mouse pointer flying across the screen, making it hard to "
-"control.</p>"
-msgstr ""
-"Caniatâ'r dewisiad yma i chi newid y berthynas rhwng y pellter y teithia "
-"pwyntydd y lygoden ar y sgrîn a symudiad perthynol y ddyfais gorfforol ei "
-"hunan. (Gall fod yn llygoden, yn bêl-drac, neu ryw ddyfais bwyntio "
-"arall.)<p>Achosa gwerth uchel o gyflymiad symudiadau mawr ym mhwyntydd y "
-"lygoden ar y sgrîn hyd yn oed pan gwnewch symudiad bach iawn â'r ddyfais "
-"gorfforol. Gall ddewis gwerthoedd uchel iawn achosi i bwyntydd y llygoden "
-"wibio ar draws y sgrîn gan ei wneud yn anodd iawn i'w reoli!"
+#, fuzzy
+#~| msgid ""
+#~| "This option allows you to change the relationship between the distance "
+#~| "that the mouse pointer moves on the screen and the relative movement of "
+#~| "the physical device itself (which may be a mouse, trackball, or some "
+#~| "other pointing device.)<p> A high value for the acceleration will lead "
+#~| "to large movements of the mouse pointer on the screen even when you only "
+#~| "make a small movement with the physical device. Selecting very high "
+#~| "values may result in the mouse pointer flying across the screen, making "
+#~| "it hard to control."
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "Caniatâ'r dewisiad yma i chi newid y berthynas rhwng y pellter y teithia "
+#~ "pwyntydd y lygoden ar y sgrîn a symudiad perthynol y ddyfais gorfforol ei "
+#~ "hunan. (Gall fod yn llygoden, yn bêl-drac, neu ryw ddyfais bwyntio "
+#~ "arall.)<p>Achosa gwerth uchel o gyflymiad symudiadau mawr ym mhwyntydd y "
+#~ "lygoden ar y sgrîn hyd yn oed pan gwnewch symudiad bach iawn â'r ddyfais "
+#~ "gorfforol. Gall ddewis gwerthoedd uchel iawn achosi i bwyntydd y llygoden "
+#~ "wibio ar draws y sgrîn gan ei wneud yn anodd iawn i'w reoli!"
 
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:233
-#, kde-format
-msgid " x"
-msgstr ""
+#, fuzzy
+#~| msgid ""
+#~| "The threshold is the smallest distance that the mouse pointer must move "
+#~| "on the screen before acceleration has any effect. If the movement is "
+#~| "smaller than the threshold, the mouse pointer moves as if the "
+#~| "acceleration was set to 1X;<p> thus, when you make small movements with "
+#~| "the physical device, there is no acceleration at all, giving you a "
+#~| "greater degree of control over the mouse pointer. With larger movements "
+#~| "of the physical device, you can move the mouse pointer rapidly to "
+#~| "different areas on the screen."
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "Y pellter lleiaf sydd angen i bwyntydd y llygoden symud ar y sgrîn cyn "
+#~ "i'r cyflymiad gael effaith yw'r drothwy. Os yw'r symudiad yn llai na'r "
+#~ "drothwy, symuda pwyntydd y llygoden fel petai'r cyflymiad yn 1X.<p> "
+#~ "Felly, pan wnewch symudiadau bach â'r ddyfais gorfforol, nid oes "
+#~ "cyflymiad o gwbl, sy'n rhoi mwy o reolaeth i chi dros bwyntydd y "
+#~ "llygoden. Â symudiadau mwy o'r ddyfais gorfforol, gallwch symud pwyntydd "
+#~ "y llygoden yn gyflym i ardaloedd gwahanol ar y sgrîn."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
-#: kcm/xlib/kcmmouse.ui:261
-#, fuzzy, kde-format
-#| msgid ""
-#| "The threshold is the smallest distance that the mouse pointer must move "
-#| "on the screen before acceleration has any effect. If the movement is "
-#| "smaller than the threshold, the mouse pointer moves as if the "
-#| "acceleration was set to 1X;<p> thus, when you make small movements with "
-#| "the physical device, there is no acceleration at all, giving you a "
-#| "greater degree of control over the mouse pointer. With larger movements "
-#| "of the physical device, you can move the mouse pointer rapidly to "
-#| "different areas on the screen."
-msgid ""
-"<p>The threshold is the smallest distance that the mouse pointer must move "
-"on the screen before acceleration has any effect. If the movement is smaller "
-"than the threshold, the mouse pointer moves as if the acceleration was set "
-"to 1X;</p><p> thus, when you make small movements with the physical device, "
-"there is no acceleration at all, giving you a greater degree of control over "
-"the mouse pointer. With larger movements of the physical device, you can "
-"move the mouse pointer rapidly to different areas on the screen.</p>"
-msgstr ""
-"Y pellter lleiaf sydd angen i bwyntydd y llygoden symud ar y sgrîn cyn i'r "
-"cyflymiad gael effaith yw'r drothwy. Os yw'r symudiad yn llai na'r drothwy, "
-"symuda pwyntydd y llygoden fel petai'r cyflymiad yn 1X.<p> Felly, pan wnewch "
-"symudiadau bach â'r ddyfais gorfforol, nid oes cyflymiad o gwbl, sy'n rhoi "
-"mwy o reolaeth i chi dros bwyntydd y llygoden. Â symudiadau mwy o'r ddyfais "
-"gorfforol, gallwch symud pwyntydd y llygoden yn gyflym i ardaloedd gwahanol "
-"ar y sgrîn."
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Y cyfnod hiraf (mewn milieiliadau) rhwng dau glic llygoden sy'n eu troi'n "
+#~ "glic dwbl yw'r cyfnod clic dwbl. Os yw'r ail glic yn digwydd wedi'r "
+#~ "cyfnod yma ar ôl y clic cyntaf, fe'u adnabyddir yn ddau glic arwahanol."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
-#: kcm/xlib/kcmmouse.ui:280
-#, kde-format
-msgid ""
-"The double click interval is the maximal time (in milliseconds) between two "
-"mouse clicks which turns them into a double click. If the second click "
-"happens later than this time interval after the first click, they are "
-"recognized as two separate clicks."
-msgstr ""
-"Y cyfnod hiraf (mewn milieiliadau) rhwng dau glic llygoden sy'n eu troi'n "
-"glic dwbl yw'r cyfnod clic dwbl. Os yw'r ail glic yn digwydd wedi'r cyfnod "
-"yma ar ôl y clic cyntaf, fe'u adnabyddir yn ddau glic arwahanol."
+#~ msgid " msec"
+#~ msgstr "meil"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
-#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
-#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
-#, kde-format
-msgid " msec"
-msgstr "meil"
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Os gliciwch â'r llygoden (e.e. mewn golygydd aml-linell) a dechreuwch "
+#~ "symud y lygoden o fewn yr amser dechrau llusgo, fe gychwynnir gweithred "
+#~ "lusgo."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
-#: kcm/xlib/kcmmouse.ui:308
-#, kde-format
-msgid ""
-"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
-"the mouse within the drag start time, a drag operation will be initiated."
-msgstr ""
-"Os gliciwch â'r llygoden (e.e. mewn golygydd aml-linell) a dechreuwch symud "
-"y lygoden o fewn yr amser dechrau llusgo, fe gychwynnir gweithred lusgo."
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Os gliciwch â'r llygoden a dechreuwch symud y lygoden o leiaf y pellter "
+#~ "dechrau llusgo, fe gychwynnir gweithred lusgo."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
-#: kcm/xlib/kcmmouse.ui:333
-#, kde-format
-msgid ""
-"If you click with the mouse and begin to move the mouse at least the drag "
-"start distance, a drag operation will be initiated."
-msgstr ""
-"Os gliciwch â'r llygoden a dechreuwch symud y lygoden o leiaf y pellter "
-"dechrau llusgo, fe gychwynnir gweithred lusgo."
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Os defnyddiwch olwyn llygoden, penna'r werth hon nifer y llinellau i "
+#~ "sgrolio am bob symudiad o'r olwyn. Noder os yw'r rhif yma'n fwy na'r "
+#~ "nifer o linellau yn y golwg, fe'i anwybyddir ac fe gaiff symudiad yr "
+#~ "olwyn ei drin fel symudiad tudalen i fyny/i lawr."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
-#: kcm/xlib/kcmmouse.ui:355
-#, kde-format
-msgid ""
-"If you use the wheel of a mouse, this value determines the number of lines "
-"to scroll for each wheel movement. Note that if this number exceeds the "
-"number of visible lines, it will be ignored and the wheel movement will be "
-"handled as a page up/down movement."
-msgstr ""
-"Os defnyddiwch olwyn llygoden, penna'r werth hon nifer y llinellau i sgrolio "
-"am bob symudiad o'r olwyn. Noder os yw'r rhif yma'n fwy na'r nifer o "
-"linellau yn y golwg, fe'i anwybyddir ac fe gaiff symudiad yr olwyn ei drin "
-"fel symudiad tudalen i fyny/i lawr."
+#, fuzzy
+#~| msgid "Mouse Navigation"
+#~ msgid "Keyboard Navigation"
+#~ msgstr "Llywio Llygoden"
 
-#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
-#: kcm/xlib/kcmmouse.ui:387
-#, fuzzy, kde-format
-#| msgid "Mouse Navigation"
-msgid "Keyboard Navigation"
-msgstr "Llywio Llygoden"
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Symud pwyntydd â bysyll (ar y pad rhifol)"
 
-#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
-#: kcm/xlib/kcmmouse.ui:395
-#, kde-format
-msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "&Symud pwyntydd â bysyll (ar y pad rhifol)"
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Oedi &cyflymiad:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/kcmmouse.ui:424
-#, kde-format
-msgid "&Acceleration delay:"
-msgstr "Oedi &cyflymiad:"
+#~ msgid "R&epeat interval:"
+#~ msgstr "Cyfnod &ailadrodd:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/kcmmouse.ui:434
-#, kde-format
-msgid "R&epeat interval:"
-msgstr "Cyfnod &ailadrodd:"
+#~ msgid "Acceleration &time:"
+#~ msgstr "A&mser cyflymiad:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/kcmmouse.ui:466
-#, kde-format
-msgid "Acceleration &time:"
-msgstr "A&mser cyflymiad:"
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Cyflymder &uchaf:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/kcmmouse.ui:498
-#, kde-format
-msgid "Ma&ximum speed:"
-msgstr "Cyflymder &uchaf:"
+#, fuzzy
+#~ msgid " pixel/sec"
+#~ msgstr "picseli"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
-#: kcm/xlib/kcmmouse.ui:514
-#, fuzzy, kde-format
-msgid " pixel/sec"
-msgstr "picseli"
+#~ msgid "Acceleration &profile:"
+#~ msgstr "&Proffil cyflymiad:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/kcmmouse.ui:530
-#, kde-format
-msgid "Acceleration &profile:"
-msgstr "&Proffil cyflymiad:"
-
-#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
-#, fuzzy, kde-format
-msgid " pixel"
-msgid_plural " pixels"
-msgstr[0] "picseli"
-msgstr[1] "picseli"
-
-#: kcm/xlib/xlib_config.cpp:277
-#, kde-format
-msgid " line"
-msgid_plural " lines"
-msgstr[0] ""
-msgstr[1] ""
+#, fuzzy
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] "picseli"
+#~ msgstr[1] "picseli"
 
 #, fuzzy
 #~| msgid "Acceleration &profile:"

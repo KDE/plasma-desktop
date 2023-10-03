@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2021-05-27 18:51+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -61,27 +61,27 @@ msgstr ""
 "Allvarligt fel vid läsning av grundläggande enhetsinformation för "
 "tryckplatta %1."
 
-#: backends/x11/xlibbackend.cpp:74
+#: backends/x11/xlibbackend.cpp:71
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "Kan inte ansluta till X-server"
 
-#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:94
+#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:94
 #, kde-format
 msgid "No touchpad found"
 msgstr "Ingen tryckplatta hittades"
 
-#: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
+#: backends/x11/xlibbackend.cpp:124 backends/x11/xlibbackend.cpp:138
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "Kan inte verkställa inställning av tryckplattan"
 
-#: backends/x11/xlibbackend.cpp:164 backends/x11/xlibbackend.cpp:177
+#: backends/x11/xlibbackend.cpp:152 backends/x11/xlibbackend.cpp:165
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "Kan inte läsa tryckplattans inställning"
 
-#: backends/x11/xlibbackend.cpp:190
+#: backends/x11/xlibbackend.cpp:178
 #, kde-format
 msgid "Cannot read default touchpad configuration"
 msgstr "Kan inte läsa tryckplattans standardinställning"
@@ -424,884 +424,6 @@ msgstr "Tryckplatta bortkopplad. Stäng dess inställningsdialogruta."
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Tryckplatta bortkopplad. Inga andra tryckplattor hittades."
 
-#: kcm/xlib/testarea.cpp:20
-#, kde-format
-msgid "Drag me"
-msgstr "Dra här"
-
-#: kcm/xlib/testbutton.cpp:29
-#, kde-format
-msgctxt "Mouse button"
-msgid "Left button"
-msgstr "Vänster knapp"
-
-#: kcm/xlib/testbutton.cpp:32
-#, kde-format
-msgctxt "Mouse button"
-msgid "Right button"
-msgstr "Höger knapp"
-
-#: kcm/xlib/testbutton.cpp:35
-#, kde-format
-msgctxt "Mouse button"
-msgid "Middle button"
-msgstr "Mittenknappen"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:96
-#, kde-format
-msgid ""
-"Active settings don't match saved settings.\n"
-"You currently see saved settings."
-msgstr ""
-"Aktiva inställningar motsvarar inte sparade inställningar.\n"
-"Du ser för närvarande sparade inställningar."
-
-#: kcm/xlib/touchpadconfigxlib.cpp:102
-#, kde-format
-msgid "Show active settings"
-msgstr "Visa aktiva inställningar"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:139
-#, kde-format
-msgid "These settings won't take effect in the testing area"
-msgstr "Inställningarna får ingen effekt i provområdet"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:144
-#, kde-format
-msgid "Enable/Disable Touchpad"
-msgstr "Aktivera eller stäng av tryckplatta"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
-#: kcm/xlib/ui/kded.ui:14
-#, kde-format
-msgctxt "@title:window"
-msgid "Enable/Disable Touchpad"
-msgstr "Aktivera eller inaktivera tryckplatta"
-
-#. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
-#. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
-#: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
-#, kde-format
-msgid "Configure…"
-msgstr "Anpassa…"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/kded.ui:47
-#, kde-format
-msgid "Keyboard shortcuts:"
-msgstr "Snabbtangenter:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:60
-#, kde-format
-msgid "Disable touchpad when typing"
-msgstr "Stäng av tryckplatta vid skrivning på tangentbordet"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/kded.ui:75
-#, kde-format
-msgid "Timeout:"
-msgstr "Tidsgräns:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:86
-#, kde-format
-msgid ""
-"If there was no keyboard activity for more than specified\n"
-"number of milliseconds, touchpad will be enabled again"
-msgstr ""
-"Om ingen tangentbordsaktivitet inträffade under angivet\n"
-"antal millisekunder, aktiveras tryckplattan igen"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_SingleTapTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:98 kcm/xlib/ui/tap.ui:306 kcm/xlib/ui/tap.ui:401
-#: kcm/xlib/ui/tap.ui:439 kcm/xlib/ui/tap.ui:458
-#, kde-format
-msgid " ms"
-msgstr " ms"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:106
-#, kde-format
-msgid ""
-"Disable click emulation and scrolling.\n"
-"You will be still able to move pointer using touchpad and perform clicks "
-"with hardware buttons."
-msgstr ""
-"Stäng av enkelklicksemulering och rullning.\n"
-"Du kommer fortfarande att kunna flytta pekaren med tryckplattan och utföra "
-"klick med de fysiska knapparna."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:109
-#, kde-format
-msgid "Disable taps and scrolling only"
-msgstr "Stäng bara av tryck och rullning"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
-#: kcm/xlib/ui/kded.ui:119
-#, kde-format
-msgid "Disable touchpad when mouse is plugged in"
-msgstr "Stäng av tryckplatta när mus kopplas in"
-
-#. i18n: ectx: property (text), widget (QLabel, notificationsLabel)
-#: kcm/xlib/ui/kded.ui:136
-#, kde-format
-msgid "Notifications:"
-msgstr "Underrättelser:"
-
-#. i18n: ectx: property (text), widget (QLabel, ignoredDevLabel)
-#: kcm/xlib/ui/kded.ui:158
-#, kde-format
-msgid "Ignored devices:"
-msgstr "Ignorera enheter:"
-
-#. i18n: ectx: property (toolTip), widget (KEditListWidget, kcfg_MouseBlacklist)
-#: kcm/xlib/ui/kded.ui:169
-#, kde-format
-msgid ""
-"Some devices might be incorrectly treated as a mouse.\n"
-"You can add them to this list so that they will be ignored when they're "
-"plugged in."
-msgstr ""
-"Vissa enheter kan felaktigt behandlas som en mus.\n"
-"Du kan lägga till dem i den här listan, så att de ignoreras när de ansluts."
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
-#: kcm/xlib/ui/pointermotion.ui:14
-#, kde-format
-msgid "Pointer Motion"
-msgstr "Pekarrörelse"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/pointermotion.ui:20
-#, kde-format
-msgctxt "Mouse pointer motion parameters"
-msgid "Speed"
-msgstr "Hastighet"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/pointermotion.ui:29
-#, kde-format
-msgctxt "Minimum pointer movement speed"
-msgid "Minimum:"
-msgstr "Minimum:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MinSpeed)
-#: kcm/xlib/ui/pointermotion.ui:39
-#, kde-format
-msgid "Minimum pointer speed"
-msgstr "Minimal pekarhastighet"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/pointermotion.ui:52
-#, kde-format
-msgctxt "Maximum pointer movement speed"
-msgid "Maximum:"
-msgstr "Maximum:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MaxSpeed)
-#: kcm/xlib/ui/pointermotion.ui:62
-#, kde-format
-msgid "Maximum pointer speed"
-msgstr "Maximal pekarhastighet"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/pointermotion.ui:75
-#, kde-format
-msgctxt "Pointer acceleration"
-msgid "Acceleration:"
-msgstr "Acceleration:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
-#: kcm/xlib/ui/pointermotion.ui:85
-#, kde-format
-msgid "Acceleration factor for normal pointer movements"
-msgstr "Accelerationsfaktor för normala pekarrörelser"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/pointermotion.ui:101
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Pressure-Dependent Motion"
-msgstr "Tryckberoende rörelse"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/pointermotion.ui:113
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum pressure:"
-msgstr "Minimalt tryck:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/pointermotion.ui:123
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum factor:"
-msgstr "Minimal faktor:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/pointermotion.ui:133
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum pressure:"
-msgstr "Maximalt tryck:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/pointermotion.ui:143
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum factor:"
-msgstr "Maximal faktor:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMinZ)
-#: kcm/xlib/ui/pointermotion.ui:153
-#, kde-format
-msgid "Finger pressure at which minimum pressure motion factor is applied"
-msgstr "Fingertryck vid vilket minimal tryckrörelsefaktor används."
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
-#: kcm/xlib/ui/pointermotion.ui:166
-#, kde-format
-msgid "Finger pressure at which maximum pressure motion factor is applied"
-msgstr "Fingertryck vid vilket maximal tryckrörelsefaktor används."
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
-#: kcm/xlib/ui/pointermotion.ui:179
-#, kde-format
-msgid "Lowest setting for pressure motion factor"
-msgstr "Minsta inställning av tryckrörelsefaktor"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMaxFactor)
-#: kcm/xlib/ui/pointermotion.ui:189
-#, kde-format
-msgid "Greatest setting for pressure motion factor"
-msgstr "Största inställning av tryckrörelsefaktor"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/pointermotion.ui:202
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Noise Cancellation"
-msgstr "Brusreducering"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/pointermotion.ui:214
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Vertical:"
-msgstr "Vertikal:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/pointermotion.ui:224
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Horizontal:"
-msgstr "Horisontell:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_VertHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:234
-#, kde-format
-msgid ""
-"The minimum vertical hardware distance required to generate motion events"
-msgstr ""
-"Minimal vertikal hårdvaruavstånd som krävs för att skapa rörelsehändelser"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_VertHysteresis)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:243 kcm/xlib/ui/pointermotion.ui:259
-#, kde-format
-msgid " units"
-msgstr " enheter"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:250
-#, kde-format
-msgid ""
-"The minimum horizontal hardware distance required to generate motion events"
-msgstr ""
-"Minimal horisontellt hårdvaruavstånd som krävs för att skapa rörelsehändelser"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, ScrollForm)
-#: kcm/xlib/ui/scroll.ui:14
-#, kde-format
-msgid "Scrolling"
-msgstr "Rullning"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/scroll.ui:28
-#, kde-format
-msgid "Edge scrolling:"
-msgstr "Kantrullning:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:38
-#, kde-format
-msgid "Enable vertical scrolling when dragging along the right edge"
-msgstr "Aktivera vertikal rullning vid drag längs höger kant"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:41 kcm/xlib/ui/scroll.ui:61 kcm/xlib/ui/scroll.ui:81
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Vertical"
-msgstr "Vertikal"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:48
-#, kde-format
-msgid "Enable horizontal scrolling when dragging along the bottom edge"
-msgstr "Aktivera horisontell rullning vid drag längs underkant"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:51 kcm/xlib/ui/scroll.ui:71 kcm/xlib/ui/scroll.ui:91
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Horizontal"
-msgstr "Horisontell"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:58
-#, kde-format
-msgid ""
-"Enable vertical scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr ""
-"Aktivera vertikal rullning vid drag med två fingrar var som helst på "
-"tryckplattan"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:68
-#, kde-format
-msgid ""
-"Enable horizontal scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr ""
-"Aktivera horisontell rullning vid drag med två fingrar var som helst på "
-"tryckplattan"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:78
-#, kde-format
-msgid "Reverse vertical scrolling"
-msgstr "Omvänd vertikal rullning"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:88
-#, kde-format
-msgid "Reverse horizontal scrolling"
-msgstr "Omvänd horisontell rullning"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/scroll.ui:98
-#, kde-format
-msgid "Two-finger scrolling:"
-msgstr "Rullning med två fingrar:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/scroll.ui:108
-#, kde-format
-msgid "Reverse scrolling:"
-msgstr "Omvänd rullning:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/scroll.ui:126
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Scrolling Distance"
-msgstr "Rullningsavstånd"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/scroll.ui:138
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Vertical:"
-msgstr "Vertikal:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
-#, kde-format
-msgid "Move distance of the finger for a scroll event"
-msgstr "Avstånd fingret ska flyttas för en rullningshändelse"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/scroll.ui:157 kcm/xlib/ui/scroll.ui:186 kcm/xlib/ui/tap.ui:417
-#, kde-format
-msgid " mm"
-msgstr " mm"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/scroll.ui:167
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Horizontal:"
-msgstr "Horisontell:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:199
-#, kde-format
-msgid ""
-"Continue scrolling after the finger is released from the edge of the touchpad"
-msgstr "Fortsätt rulla efter fingret har släppt kanten på tryckplattan"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:202
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Coasting"
-msgstr "Glidning"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/scroll.ui:217
-#, kde-format
-msgctxt "Coasting"
-msgid "Minimum speed:"
-msgstr "Minimal hastighet:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:227
-#, kde-format
-msgid ""
-"Your finger needs to produce this many scrolls per second in order to start "
-"coasting"
-msgstr ""
-"Fingret måste skapa så här många rullningar per sekund för att starta "
-"glidning"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:233
-#, kde-format
-msgid " scrolls/sec"
-msgstr " rullningar/sek"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/scroll.ui:240
-#, kde-format
-msgctxt "Coasting"
-msgid "Deceleration:"
-msgstr "Retardation:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:250
-#, kde-format
-msgid "Number of scrolls/second² to decrease the coasting speed"
-msgstr "Antal rullningar/sekund² för att minska glidhastigheten"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:256
-#, kde-format
-msgid " scrolls/sec²"
-msgstr " rullningar/sek²"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/scroll.ui:263
-#, kde-format
-msgid "Corner coasting:"
-msgstr "Hörnglidning:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:273
-#, kde-format
-msgid ""
-"Enable edge scrolling to continue while the finger stays in an edge corner"
-msgstr "Låt hörnrullning fortsätta medan fingret hålls i ett hörn"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:276
-#, kde-format
-msgctxt "Coasting"
-msgid "Enable"
-msgstr "Aktivera"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:288
-#, kde-format
-msgid ""
-"Scrolling is engaged when a drag starts in the given trigger region.\n"
-"Moving your finger in clockwise circles around the center of the touchpad\n"
-"will scroll down and counter clockwise motion will scroll up"
-msgstr ""
-"Rullning inleds när en dragning börjar i angivet utlösningsområde.\n"
-"Att flytta fingret i cirklar medurs omkring tryckplattans centrum\n"
-"rullar neråt, och en moturs rörelse rullar uppåt."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:291
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Circular Scrolling"
-msgstr "Cirkulär rullning"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/scroll.ui:306
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Trigger region:"
-msgstr "Utlösningsområde:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
-#: kcm/xlib/ui/scroll.ui:316
-#, kde-format
-msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr "Utlösningsområde på tryckplattan för att starta cirkulär rullning"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/scroll.ui:323
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Angle:"
-msgstr "Vinkel:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:345
-#, kde-format
-msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr "Fingrets rörelsevinkel (grader) för att skapa en rullningshändelse"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:348
-#, kde-format
-msgctxt "suffix - degrees (angle)"
-msgid "°"
-msgstr "°"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/scroll.ui:355
-#, kde-format
-msgid ""
-"When used together with vertical scrolling, hitting the upper or lower right "
-"corner will seamlessly switch over from vertical to circular scrolling"
-msgstr ""
-"När det används tillsammans med vertikal rullning, byts sömlöst från "
-"vertikal till cirkulär rullning vid beröring av övre eller nedre högra hörnet"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
-#: kcm/xlib/ui/sensitivity.ui:14
-#, kde-format
-msgid "Sensitivity"
-msgstr "Känslighet"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/sensitivity.ui:20
-#, kde-format
-msgctxt "Touchpad"
-msgid "Sensitivity"
-msgstr "Känslighet"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/sensitivity.ui:29
-#, kde-format
-msgid "Pressure for detecting a touch:"
-msgstr "Tryck för att detektera beröring:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/sensitivity.ui:39
-#, kde-format
-msgid "Pressure for detecting a release:"
-msgstr "Tryck för att detektera släpp:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerHigh)
-#: kcm/xlib/ui/sensitivity.ui:49
-#, kde-format
-msgid ""
-"When finger pressure goes above this value, the driver counts it as a touch"
-msgstr ""
-"När fingertrycket överstiger det här värdet, räknar drivrutinen det som en "
-"beröring"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerLow)
-#: kcm/xlib/ui/sensitivity.ui:62
-#, kde-format
-msgid ""
-"When finger pressure drops below this value, the driver counts it as a "
-"release"
-msgstr ""
-"När fingertrycket sjunker under det här värdet, räknar drivrutinen det som "
-"släpp"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:78
-#, kde-format
-msgid ""
-"If palm detection should be enabled. Note that this also requires hardware/"
-"firmware support from the touchpad"
-msgstr ""
-"Om detektering av handflata ska aktiveras. Observera att det också kräver "
-"stöd i hårdvaran och den fasta programvaran i tryckplattan."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:81
-#, kde-format
-msgctxt "Touchpad"
-msgid "Palm Detection"
-msgstr "Detektering av handflata"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/sensitivity.ui:93
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum width:"
-msgstr "Minimal bredd:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/sensitivity.ui:103
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum pressure:"
-msgstr "Minimalt tryck:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinWidth)
-#: kcm/xlib/ui/sensitivity.ui:113
-#, kde-format
-msgid "Minimum finger width at which touch is considered a palm"
-msgstr "Minimal fingerbredd för att beröringen ska anses vara en handflata"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinZ)
-#: kcm/xlib/ui/sensitivity.ui:129
-#, kde-format
-msgid "Minimum finger pressure at which touch is considered a palm"
-msgstr "Minimal fingertryck för att beröringen ska anses vara en handflata"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, TapForm)
-#: kcm/xlib/ui/tap.ui:14
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Taps"
-msgstr "Tryck"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
-#: kcm/xlib/ui/tap.ui:28
-#, kde-format
-msgid "Tap to Click"
-msgstr "Tryck för att klicka"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/tap.ui:43
-#, kde-format
-msgctxt "Tapping"
-msgid "One finger:"
-msgstr "Ett finger:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_OneFingerTapButton)
-#: kcm/xlib/ui/tap.ui:53
-#, kde-format
-msgid "Which mouse button is reported on a non-corner one-finger tap"
-msgstr "Vilken musknapp rapporteras för tryck utanför hörn med ett finger"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/tap.ui:60
-#, kde-format
-msgctxt "Tapping"
-msgid "Two fingers:"
-msgstr "Två fingrar:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_TwoFingerTapButton)
-#: kcm/xlib/ui/tap.ui:70
-#, kde-format
-msgid "Which mouse button is reported on a non-corner two-finger tap"
-msgstr "Vilken musknapp rapporteras för tryck utanför hörn med två fingrar"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/tap.ui:77
-#, kde-format
-msgctxt "Tapping"
-msgid "Three fingers:"
-msgstr "Tre fingrar:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_ThreeFingerTapButton)
-#: kcm/xlib/ui/tap.ui:87
-#, kde-format
-msgid "Which mouse button is reported on a non-corner three-finger tap"
-msgstr "Vilken musknapp rapporteras för tryck utanför hörn med tre fingrar"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/tap.ui:107
-#, kde-format
-msgctxt "Touchpad"
-msgid "Corners"
-msgstr "Hörn"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/tap.ui:131
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top left:"
-msgstr "Överst till vänster:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LTCornerButton)
-#: kcm/xlib/ui/tap.ui:144
-#, kde-format
-msgid "Which mouse button is reported on a left top corner tap"
-msgstr "Vilken musknapp rapporteras för tryck i övre vänstra hörnet"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/tap.ui:151
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom left:"
-msgstr "Nederst till vänster:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/tap.ui:164
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top right:"
-msgstr "Överst till höger:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LBCornerButton)
-#: kcm/xlib/ui/tap.ui:177
-#, kde-format
-msgid "Which mouse button is reported on a left bottom corner tap"
-msgstr "Vilken musknapp rapporteras för tryck i nedre vänstra hörnet"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
-#: kcm/xlib/ui/tap.ui:184
-#, kde-format
-msgid "Which mouse button is reported on a right top corner tap"
-msgstr "Vilken musknapp rapporteras för tryck i övre högra hörnet"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
-#: kcm/xlib/ui/tap.ui:191
-#, kde-format
-msgid "Which mouse button is reported on a right bottom corner tap"
-msgstr "Vilken musknapp rapporteras för tryck i nedre högra hörnet"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/tap.ui:214
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom right:"
-msgstr "Nederst till höger:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:251
-#, kde-format
-msgid ""
-"This gesture is an alternative way of dragging. It is performed by tapping "
-"(touching and releasing the finger), then touching again and moving the "
-"finger on the touchpad"
-msgstr ""
-"Den här gesten är ett alternativt sätt att dra. Den utförs genom att trycka "
-"(beröra och släppa med fingret), och därefter trycka igen och flytta fingret "
-"på tryckplattan."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:254
-#, kde-format
-msgid "Tap-and-Drag Gesture"
-msgstr "Tryck och dra-gest"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:266
-#, kde-format
-msgid ""
-"If off, a tap-and-drag gesture ends when you release the finger. If on, the "
-"gesture is active until you tap a second time, or until timeout expires"
-msgstr ""
-"Om av, avslutas en tryck och dra-gest när fingret släpper. Om på, förblir "
-"gesten aktiv till du trycker en andra gång, eller en tidsgräns går ut."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:269
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Locked Drags"
-msgstr "Låsta dragåtgärder"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/tap.ui:284
-#, kde-format
-msgctxt "Locked drags"
-msgid "Timeout:"
-msgstr "Tidsgräns:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_LockedDragTimeout)
-#: kcm/xlib/ui/tap.ui:294
-#, kde-format
-msgid ""
-"How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
-"automatically turned off after the finger is released from the touchpad"
-msgstr ""
-"Hur lång tid det tar (i millisekunder) innan \"Låsta dragåtgärder\" "
-"automatiskt stängs av efter att fingret har släppt tryckplattan"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/tap.ui:325
-#, kde-format
-msgid "Tap Detection"
-msgstr "Detektering av tryck"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/tap.ui:340
-#, kde-format
-msgid "Maximum time:"
-msgstr "Maximal tid:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/tap.ui:353
-#, kde-format
-msgid "Maximum finger movement:"
-msgstr "Maximal fingerrörelse:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#: kcm/xlib/ui/tap.ui:366
-#, kde-format
-msgid "Maximum time for double tap:"
-msgstr "Maximal tid för dubbeltryck:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: kcm/xlib/ui/tap.ui:379
-#, kde-format
-msgid "Single tap timeout:"
-msgstr "Tidsgräns för enkeltryck:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
-#: kcm/xlib/ui/tap.ui:389
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a tap"
-msgstr "Maximal tid (i millisekunder) för att detektera ett tryck"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/tap.ui:408
-#, kde-format
-msgid "Maximum movement of the finger for detecting a tap"
-msgstr "Maximal rörelse av fingret för att detektera ett tryck"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#: kcm/xlib/ui/tap.ui:427
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a double tap"
-msgstr "Maximal tid (i millisekunder) för att detektera ett dubbeltryck"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
-#: kcm/xlib/ui/tap.ui:446
-#, kde-format
-msgid "Timeout after a tap to recognize it as a single tap"
-msgstr "Tidsgräns efter ett tryck för att känna igen den som ett enkeltryck"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/testarea.ui:20
-#, kde-format
-msgid "Testing area"
-msgstr "Provområde"
-
-#. i18n: ectx: property (text), widget (TestButton, pushButton)
-#: kcm/xlib/ui/testarea.ui:29
-#, kde-format
-msgid "Click me"
-msgstr "Klicka här"
-
 #: kded/kded.cpp:201
 #, kde-format
 msgid "Touchpad was disabled because a mouse was plugged in"
@@ -1402,6 +524,509 @@ msgstr "Vänster kant"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Övre vänstra hörnet"
+
+#~ msgid "Drag me"
+#~ msgstr "Dra här"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Left button"
+#~ msgstr "Vänster knapp"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Right button"
+#~ msgstr "Höger knapp"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Middle button"
+#~ msgstr "Mittenknappen"
+
+#~ msgid ""
+#~ "Active settings don't match saved settings.\n"
+#~ "You currently see saved settings."
+#~ msgstr ""
+#~ "Aktiva inställningar motsvarar inte sparade inställningar.\n"
+#~ "Du ser för närvarande sparade inställningar."
+
+#~ msgid "Show active settings"
+#~ msgstr "Visa aktiva inställningar"
+
+#~ msgid "These settings won't take effect in the testing area"
+#~ msgstr "Inställningarna får ingen effekt i provområdet"
+
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "Aktivera eller stäng av tryckplatta"
+
+#~ msgctxt "@title:window"
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "Aktivera eller inaktivera tryckplatta"
+
+#~ msgid "Configure…"
+#~ msgstr "Anpassa…"
+
+#~ msgid "Keyboard shortcuts:"
+#~ msgstr "Snabbtangenter:"
+
+#~ msgid "Disable touchpad when typing"
+#~ msgstr "Stäng av tryckplatta vid skrivning på tangentbordet"
+
+#~ msgid "Timeout:"
+#~ msgstr "Tidsgräns:"
+
+#~ msgid ""
+#~ "If there was no keyboard activity for more than specified\n"
+#~ "number of milliseconds, touchpad will be enabled again"
+#~ msgstr ""
+#~ "Om ingen tangentbordsaktivitet inträffade under angivet\n"
+#~ "antal millisekunder, aktiveras tryckplattan igen"
+
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "Disable click emulation and scrolling.\n"
+#~ "You will be still able to move pointer using touchpad and perform clicks "
+#~ "with hardware buttons."
+#~ msgstr ""
+#~ "Stäng av enkelklicksemulering och rullning.\n"
+#~ "Du kommer fortfarande att kunna flytta pekaren med tryckplattan och "
+#~ "utföra klick med de fysiska knapparna."
+
+#~ msgid "Disable taps and scrolling only"
+#~ msgstr "Stäng bara av tryck och rullning"
+
+#~ msgid "Disable touchpad when mouse is plugged in"
+#~ msgstr "Stäng av tryckplatta när mus kopplas in"
+
+#~ msgid "Notifications:"
+#~ msgstr "Underrättelser:"
+
+#~ msgid "Ignored devices:"
+#~ msgstr "Ignorera enheter:"
+
+#~ msgid ""
+#~ "Some devices might be incorrectly treated as a mouse.\n"
+#~ "You can add them to this list so that they will be ignored when they're "
+#~ "plugged in."
+#~ msgstr ""
+#~ "Vissa enheter kan felaktigt behandlas som en mus.\n"
+#~ "Du kan lägga till dem i den här listan, så att de ignoreras när de "
+#~ "ansluts."
+
+#~ msgid "Pointer Motion"
+#~ msgstr "Pekarrörelse"
+
+#~ msgctxt "Mouse pointer motion parameters"
+#~ msgid "Speed"
+#~ msgstr "Hastighet"
+
+#~ msgctxt "Minimum pointer movement speed"
+#~ msgid "Minimum:"
+#~ msgstr "Minimum:"
+
+#~ msgid "Minimum pointer speed"
+#~ msgstr "Minimal pekarhastighet"
+
+#~ msgctxt "Maximum pointer movement speed"
+#~ msgid "Maximum:"
+#~ msgstr "Maximum:"
+
+#~ msgid "Maximum pointer speed"
+#~ msgstr "Maximal pekarhastighet"
+
+#~ msgctxt "Pointer acceleration"
+#~ msgid "Acceleration:"
+#~ msgstr "Acceleration:"
+
+#~ msgid "Acceleration factor for normal pointer movements"
+#~ msgstr "Accelerationsfaktor för normala pekarrörelser"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Pressure-Dependent Motion"
+#~ msgstr "Tryckberoende rörelse"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum pressure:"
+#~ msgstr "Minimalt tryck:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum factor:"
+#~ msgstr "Minimal faktor:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum pressure:"
+#~ msgstr "Maximalt tryck:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum factor:"
+#~ msgstr "Maximal faktor:"
+
+#~ msgid "Finger pressure at which minimum pressure motion factor is applied"
+#~ msgstr "Fingertryck vid vilket minimal tryckrörelsefaktor används."
+
+#~ msgid "Finger pressure at which maximum pressure motion factor is applied"
+#~ msgstr "Fingertryck vid vilket maximal tryckrörelsefaktor används."
+
+#~ msgid "Lowest setting for pressure motion factor"
+#~ msgstr "Minsta inställning av tryckrörelsefaktor"
+
+#~ msgid "Greatest setting for pressure motion factor"
+#~ msgstr "Största inställning av tryckrörelsefaktor"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Noise Cancellation"
+#~ msgstr "Brusreducering"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Vertical:"
+#~ msgstr "Vertikal:"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Horizontal:"
+#~ msgstr "Horisontell:"
+
+#~ msgid ""
+#~ "The minimum vertical hardware distance required to generate motion events"
+#~ msgstr ""
+#~ "Minimal vertikal hårdvaruavstånd som krävs för att skapa rörelsehändelser"
+
+#~ msgid " units"
+#~ msgstr " enheter"
+
+#~ msgid ""
+#~ "The minimum horizontal hardware distance required to generate motion "
+#~ "events"
+#~ msgstr ""
+#~ "Minimal horisontellt hårdvaruavstånd som krävs för att skapa "
+#~ "rörelsehändelser"
+
+#~ msgid "Scrolling"
+#~ msgstr "Rullning"
+
+#~ msgid "Edge scrolling:"
+#~ msgstr "Kantrullning:"
+
+#~ msgid "Enable vertical scrolling when dragging along the right edge"
+#~ msgstr "Aktivera vertikal rullning vid drag längs höger kant"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Vertical"
+#~ msgstr "Vertikal"
+
+#~ msgid "Enable horizontal scrolling when dragging along the bottom edge"
+#~ msgstr "Aktivera horisontell rullning vid drag längs underkant"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Horizontal"
+#~ msgstr "Horisontell"
+
+#~ msgid ""
+#~ "Enable vertical scrolling when dragging with two fingers anywhere on the "
+#~ "touchpad"
+#~ msgstr ""
+#~ "Aktivera vertikal rullning vid drag med två fingrar var som helst på "
+#~ "tryckplattan"
+
+#~ msgid ""
+#~ "Enable horizontal scrolling when dragging with two fingers anywhere on "
+#~ "the touchpad"
+#~ msgstr ""
+#~ "Aktivera horisontell rullning vid drag med två fingrar var som helst på "
+#~ "tryckplattan"
+
+#~ msgid "Reverse vertical scrolling"
+#~ msgstr "Omvänd vertikal rullning"
+
+#~ msgid "Reverse horizontal scrolling"
+#~ msgstr "Omvänd horisontell rullning"
+
+#~ msgid "Two-finger scrolling:"
+#~ msgstr "Rullning med två fingrar:"
+
+#~ msgid "Reverse scrolling:"
+#~ msgstr "Omvänd rullning:"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Scrolling Distance"
+#~ msgstr "Rullningsavstånd"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Vertical:"
+#~ msgstr "Vertikal:"
+
+#~ msgid "Move distance of the finger for a scroll event"
+#~ msgstr "Avstånd fingret ska flyttas för en rullningshändelse"
+
+#~ msgid " mm"
+#~ msgstr " mm"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Horizontal:"
+#~ msgstr "Horisontell:"
+
+#~ msgid ""
+#~ "Continue scrolling after the finger is released from the edge of the "
+#~ "touchpad"
+#~ msgstr "Fortsätt rulla efter fingret har släppt kanten på tryckplattan"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Coasting"
+#~ msgstr "Glidning"
+
+#~ msgctxt "Coasting"
+#~ msgid "Minimum speed:"
+#~ msgstr "Minimal hastighet:"
+
+#~ msgid ""
+#~ "Your finger needs to produce this many scrolls per second in order to "
+#~ "start coasting"
+#~ msgstr ""
+#~ "Fingret måste skapa så här många rullningar per sekund för att starta "
+#~ "glidning"
+
+#~ msgid " scrolls/sec"
+#~ msgstr " rullningar/sek"
+
+#~ msgctxt "Coasting"
+#~ msgid "Deceleration:"
+#~ msgstr "Retardation:"
+
+#~ msgid "Number of scrolls/second² to decrease the coasting speed"
+#~ msgstr "Antal rullningar/sekund² för att minska glidhastigheten"
+
+#~ msgid " scrolls/sec²"
+#~ msgstr " rullningar/sek²"
+
+#~ msgid "Corner coasting:"
+#~ msgstr "Hörnglidning:"
+
+#~ msgid ""
+#~ "Enable edge scrolling to continue while the finger stays in an edge corner"
+#~ msgstr "Låt hörnrullning fortsätta medan fingret hålls i ett hörn"
+
+#~ msgctxt "Coasting"
+#~ msgid "Enable"
+#~ msgstr "Aktivera"
+
+#~ msgid ""
+#~ "Scrolling is engaged when a drag starts in the given trigger region.\n"
+#~ "Moving your finger in clockwise circles around the center of the "
+#~ "touchpad\n"
+#~ "will scroll down and counter clockwise motion will scroll up"
+#~ msgstr ""
+#~ "Rullning inleds när en dragning börjar i angivet utlösningsområde.\n"
+#~ "Att flytta fingret i cirklar medurs omkring tryckplattans centrum\n"
+#~ "rullar neråt, och en moturs rörelse rullar uppåt."
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Circular Scrolling"
+#~ msgstr "Cirkulär rullning"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Trigger region:"
+#~ msgstr "Utlösningsområde:"
+
+#~ msgid "Trigger region on the touchpad to start circular scrolling"
+#~ msgstr "Utlösningsområde på tryckplattan för att starta cirkulär rullning"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Angle:"
+#~ msgstr "Vinkel:"
+
+#~ msgid "Move angle (degrees) of finger to generate a scroll event"
+#~ msgstr "Fingrets rörelsevinkel (grader) för att skapa en rullningshändelse"
+
+#~ msgctxt "suffix - degrees (angle)"
+#~ msgid "°"
+#~ msgstr "°"
+
+#~ msgid ""
+#~ "When used together with vertical scrolling, hitting the upper or lower "
+#~ "right corner will seamlessly switch over from vertical to circular "
+#~ "scrolling"
+#~ msgstr ""
+#~ "När det används tillsammans med vertikal rullning, byts sömlöst från "
+#~ "vertikal till cirkulär rullning vid beröring av övre eller nedre högra "
+#~ "hörnet"
+
+#~ msgid "Sensitivity"
+#~ msgstr "Känslighet"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Sensitivity"
+#~ msgstr "Känslighet"
+
+#~ msgid "Pressure for detecting a touch:"
+#~ msgstr "Tryck för att detektera beröring:"
+
+#~ msgid "Pressure for detecting a release:"
+#~ msgstr "Tryck för att detektera släpp:"
+
+#~ msgid ""
+#~ "When finger pressure goes above this value, the driver counts it as a "
+#~ "touch"
+#~ msgstr ""
+#~ "När fingertrycket överstiger det här värdet, räknar drivrutinen det som "
+#~ "en beröring"
+
+#~ msgid ""
+#~ "When finger pressure drops below this value, the driver counts it as a "
+#~ "release"
+#~ msgstr ""
+#~ "När fingertrycket sjunker under det här värdet, räknar drivrutinen det "
+#~ "som släpp"
+
+#~ msgid ""
+#~ "If palm detection should be enabled. Note that this also requires "
+#~ "hardware/firmware support from the touchpad"
+#~ msgstr ""
+#~ "Om detektering av handflata ska aktiveras. Observera att det också kräver "
+#~ "stöd i hårdvaran och den fasta programvaran i tryckplattan."
+
+#~ msgctxt "Touchpad"
+#~ msgid "Palm Detection"
+#~ msgstr "Detektering av handflata"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum width:"
+#~ msgstr "Minimal bredd:"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum pressure:"
+#~ msgstr "Minimalt tryck:"
+
+#~ msgid "Minimum finger width at which touch is considered a palm"
+#~ msgstr "Minimal fingerbredd för att beröringen ska anses vara en handflata"
+
+#~ msgid "Minimum finger pressure at which touch is considered a palm"
+#~ msgstr "Minimal fingertryck för att beröringen ska anses vara en handflata"
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Taps"
+#~ msgstr "Tryck"
+
+#~ msgid "Tap to Click"
+#~ msgstr "Tryck för att klicka"
+
+#~ msgctxt "Tapping"
+#~ msgid "One finger:"
+#~ msgstr "Ett finger:"
+
+#~ msgid "Which mouse button is reported on a non-corner one-finger tap"
+#~ msgstr "Vilken musknapp rapporteras för tryck utanför hörn med ett finger"
+
+#~ msgctxt "Tapping"
+#~ msgid "Two fingers:"
+#~ msgstr "Två fingrar:"
+
+#~ msgid "Which mouse button is reported on a non-corner two-finger tap"
+#~ msgstr "Vilken musknapp rapporteras för tryck utanför hörn med två fingrar"
+
+#~ msgctxt "Tapping"
+#~ msgid "Three fingers:"
+#~ msgstr "Tre fingrar:"
+
+#~ msgid "Which mouse button is reported on a non-corner three-finger tap"
+#~ msgstr "Vilken musknapp rapporteras för tryck utanför hörn med tre fingrar"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Corners"
+#~ msgstr "Hörn"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top left:"
+#~ msgstr "Överst till vänster:"
+
+#~ msgid "Which mouse button is reported on a left top corner tap"
+#~ msgstr "Vilken musknapp rapporteras för tryck i övre vänstra hörnet"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom left:"
+#~ msgstr "Nederst till vänster:"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top right:"
+#~ msgstr "Överst till höger:"
+
+#~ msgid "Which mouse button is reported on a left bottom corner tap"
+#~ msgstr "Vilken musknapp rapporteras för tryck i nedre vänstra hörnet"
+
+#~ msgid "Which mouse button is reported on a right top corner tap"
+#~ msgstr "Vilken musknapp rapporteras för tryck i övre högra hörnet"
+
+#~ msgid "Which mouse button is reported on a right bottom corner tap"
+#~ msgstr "Vilken musknapp rapporteras för tryck i nedre högra hörnet"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom right:"
+#~ msgstr "Nederst till höger:"
+
+#~ msgid ""
+#~ "This gesture is an alternative way of dragging. It is performed by "
+#~ "tapping (touching and releasing the finger), then touching again and "
+#~ "moving the finger on the touchpad"
+#~ msgstr ""
+#~ "Den här gesten är ett alternativt sätt att dra. Den utförs genom att "
+#~ "trycka (beröra och släppa med fingret), och därefter trycka igen och "
+#~ "flytta fingret på tryckplattan."
+
+#~ msgid "Tap-and-Drag Gesture"
+#~ msgstr "Tryck och dra-gest"
+
+#~ msgid ""
+#~ "If off, a tap-and-drag gesture ends when you release the finger. If on, "
+#~ "the gesture is active until you tap a second time, or until timeout "
+#~ "expires"
+#~ msgstr ""
+#~ "Om av, avslutas en tryck och dra-gest när fingret släpper. Om på, förblir "
+#~ "gesten aktiv till du trycker en andra gång, eller en tidsgräns går ut."
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Locked Drags"
+#~ msgstr "Låsta dragåtgärder"
+
+#~ msgctxt "Locked drags"
+#~ msgid "Timeout:"
+#~ msgstr "Tidsgräns:"
+
+#~ msgid ""
+#~ "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
+#~ "automatically turned off after the finger is released from the touchpad"
+#~ msgstr ""
+#~ "Hur lång tid det tar (i millisekunder) innan \"Låsta dragåtgärder\" "
+#~ "automatiskt stängs av efter att fingret har släppt tryckplattan"
+
+#~ msgid "Tap Detection"
+#~ msgstr "Detektering av tryck"
+
+#~ msgid "Maximum time:"
+#~ msgstr "Maximal tid:"
+
+#~ msgid "Maximum finger movement:"
+#~ msgstr "Maximal fingerrörelse:"
+
+#~ msgid "Maximum time for double tap:"
+#~ msgstr "Maximal tid för dubbeltryck:"
+
+#~ msgid "Single tap timeout:"
+#~ msgstr "Tidsgräns för enkeltryck:"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a tap"
+#~ msgstr "Maximal tid (i millisekunder) för att detektera ett tryck"
+
+#~ msgid "Maximum movement of the finger for detecting a tap"
+#~ msgstr "Maximal rörelse av fingret för att detektera ett tryck"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a double tap"
+#~ msgstr "Maximal tid (i millisekunder) för att detektera ett dubbeltryck"
+
+#~ msgid "Timeout after a tap to recognize it as a single tap"
+#~ msgstr "Tidsgräns efter ett tryck för att känna igen den som ett enkeltryck"
+
+#~ msgid "Testing area"
+#~ msgstr "Provområde"
+
+#~ msgid "Click me"
+#~ msgstr "Klicka här"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Accelerationsprofil:"

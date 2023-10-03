@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2007-11-04 18:50+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -131,9 +131,7 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "सङ्केतक थ्रेसहोल्ड:"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
-#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "सङ्केतक गतिबर्धन:"
@@ -241,270 +239,173 @@ msgctxt "@action:button"
 msgid "Go back"
 msgstr ""
 
-#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
-#: kcm/xlib/kcmmouse.ui:14
-#, kde-format
-msgid ""
-"<h1>Mouse</h1> This module allows you to choose various options for the way "
-"in which your pointing device works. Your pointing device may be a mouse, "
-"trackball, or some other hardware that performs a similar function."
-msgstr ""
-"<h1>माउस</h1>तपाईँको सङ्केतक यन्त्रले कार्य गर्ने ठाउँमा तपाईँलाई मार्गका लागि धेरै विकल्प "
-"रोज्न यो मोड्युलले अनुमति दिन्छ । तपाईँको सङ्केतक यन्त्र माउस, ट्र्याकबल, वा अन्य केही "
-"हार्डवेयर हुन सक्छ जसले समान कार्य सम्पादन गर्छ ।"
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>माउस</h1>तपाईँको सङ्केतक यन्त्रले कार्य गर्ने ठाउँमा तपाईँलाई मार्गका लागि धेरै "
+#~ "विकल्प रोज्न यो मोड्युलले अनुमति दिन्छ । तपाईँको सङ्केतक यन्त्र माउस, ट्र्याकबल, वा अन्य "
+#~ "केही हार्डवेयर हुन सक्छ जसले समान कार्य सम्पादन गर्छ ।"
 
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#: kcm/xlib/kcmmouse.ui:36
-#, kde-format
-msgid "&General"
-msgstr "सामान्य"
+#~ msgid "&General"
+#~ msgstr "सामान्य"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:52
-#, kde-format
-msgid ""
-"If you are left-handed, you may prefer to swap the functions of the left and "
-"right buttons on your pointing device by choosing the 'left-handed' option. "
-"If your pointing device has more than two buttons, only those that function "
-"as the left and right buttons are affected. For example, if you have a three-"
-"button mouse, the middle button is unaffected."
-msgstr ""
-"यदि तपाईँ बायाँ हाते हुनुहुन्छ भने, तपाईँ बायाँको कार्य र दायाँ बटन तपाईँको सूचक यन्त्रमा "
-"'बायाँ' विकल्प रोजाइद्वारा साट्न रुचाउनुहुन्छ । यदि तपईँको सूचक यन्त्रमा दुई भन्दा बढी बटन "
-"भएमा, तिनीहरूका ति कार्य मात्र बायाँ र दायाँ बटन जस्तै प्रभावित हुन्छन् । उदाहरणका लागि "
-"यदि तपाईँसँग तीन बटन भएको माउस छ भने, बीचको बटन प्रभावित हुदैन ।"
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "यदि तपाईँ बायाँ हाते हुनुहुन्छ भने, तपाईँ बायाँको कार्य र दायाँ बटन तपाईँको सूचक यन्त्रमा "
+#~ "'बायाँ' विकल्प रोजाइद्वारा साट्न रुचाउनुहुन्छ । यदि तपईँको सूचक यन्त्रमा दुई भन्दा बढी "
+#~ "बटन भएमा, तिनीहरूका ति कार्य मात्र बायाँ र दायाँ बटन जस्तै प्रभावित हुन्छन् । "
+#~ "उदाहरणका लागि यदि तपाईँसँग तीन बटन भएको माउस छ भने, बीचको बटन प्रभावित हुदैन ।"
 
-#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:55
-#, kde-format
-msgid "Button Order"
-msgstr "बटन क्रम"
+#~ msgid "Button Order"
+#~ msgstr "बटन क्रम"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
-#: kcm/xlib/kcmmouse.ui:64
-#, kde-format
-msgid "Righ&t handed"
-msgstr "दायाँ हाते"
+#~ msgid "Righ&t handed"
+#~ msgstr "दायाँ हाते"
 
-#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
-#: kcm/xlib/kcmmouse.ui:77
-#, kde-format
-msgid "Le&ft handed"
-msgstr "बायाँ हाते"
+#~ msgid "Le&ft handed"
+#~ msgstr "बायाँ हाते"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:106
-#, kde-format
-msgid ""
-"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
-"mouse buttons."
-msgstr ""
-"माउस चक्र वा चौथो र पाँचौ माउस बटनका लागि स्क्रोलिङको दिशा परिवर्तन गर्नुहोस् ।"
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "माउस चक्र वा चौथो र पाँचौ माउस बटनका लागि स्क्रोलिङको दिशा परिवर्तन गर्नुहोस् ।"
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:109
-#, kde-format
-msgid "Re&verse scroll direction"
-msgstr "स्क्रोल दिशा उल्टाउनुहोस्"
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "स्क्रोल दिशा उल्टाउनुहोस्"
 
-#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
-#: kcm/xlib/kcmmouse.ui:156
-#, kde-format
-msgid "Advanced"
-msgstr "उन्नत"
+#~ msgid "Advanced"
+#~ msgstr "उन्नत"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/kcmmouse.ui:174
-#, kde-format
-msgid "Pointer threshold:"
-msgstr "सङ्केतक थ्रेसहोल्ड:"
+#~ msgid "Pointer threshold:"
+#~ msgstr "सङ्केतक थ्रेसहोल्ड:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/kcmmouse.ui:184
-#, kde-format
-msgid "Double click interval:"
-msgstr "डबल क्लिक अन्तराल:"
+#~ msgid "Double click interval:"
+#~ msgstr "डबल क्लिक अन्तराल:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/kcmmouse.ui:194
-#, kde-format
-msgid "Drag start time:"
-msgstr "सुरुआत समय तान्नुहोस्:"
+#~ msgid "Drag start time:"
+#~ msgstr "सुरुआत समय तान्नुहोस्:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/kcmmouse.ui:204
-#, kde-format
-msgid "Drag start distance:"
-msgstr "सुरुआत दूरी तान्नुहोस्:"
+#~ msgid "Drag start distance:"
+#~ msgstr "सुरुआत दूरी तान्नुहोस्:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/kcmmouse.ui:214
-#, kde-format
-msgid "Mouse wheel scrolls by:"
-msgstr "यसद्वारा माउस चक्र स्क्रोल गर्छ:"
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "यसद्वारा माउस चक्र स्क्रोल गर्छ:"
 
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:230
-#, kde-format
-msgid ""
-"<p>This option allows you to change the relationship between the distance "
-"that the mouse pointer moves on the screen and the relative movement of the "
-"physical device itself (which may be a mouse, trackball, or some other "
-"pointing device.)</p><p> A high value for the acceleration will lead to "
-"large movements of the mouse pointer on the screen even when you only make a "
-"small movement with the physical device. Selecting very high values may "
-"result in the mouse pointer flying across the screen, making it hard to "
-"control.</p>"
-msgstr ""
-"<p>यो विकल्पले तपाईँलाई माउस सूचक पर्दामा सरेको र भौतिक यन्त्र आफैँको सापेक्षीक चाल "
-"बीचको दुरीको सम्बन्ध परिवर्तन गर्न अनुमति दिन्छ (जुन माउस, ट्र्याकबल, वा अन्य कुनै देखाउने "
-"यन्त्र हुन सक्छ ।)</p><p> तपाईँले भौतिक यन्त्रमा सानो चाल मात्र ल्याउदा पनि गतिबर्धनका "
-"लागि एउटा उच्च मानले पर्दामा माउस सूचकको ठूलो चाल नेतृत्व गर्नेछ । धेरै उच्च मान चयन गर्दा "
-"यसको परिणाम स्वरुप नियन्त्रण गर्न कठीन हुने गरि, पर्दामा माउस सूचक उडी राख्छ ।</p>"
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>यो विकल्पले तपाईँलाई माउस सूचक पर्दामा सरेको र भौतिक यन्त्र आफैँको सापेक्षीक चाल "
+#~ "बीचको दुरीको सम्बन्ध परिवर्तन गर्न अनुमति दिन्छ (जुन माउस, ट्र्याकबल, वा अन्य कुनै "
+#~ "देखाउने यन्त्र हुन सक्छ ।)</p><p> तपाईँले भौतिक यन्त्रमा सानो चाल मात्र ल्याउदा पनि "
+#~ "गतिबर्धनका लागि एउटा उच्च मानले पर्दामा माउस सूचकको ठूलो चाल नेतृत्व गर्नेछ । धेरै उच्च "
+#~ "मान चयन गर्दा यसको परिणाम स्वरुप नियन्त्रण गर्न कठीन हुने गरि, पर्दामा माउस सूचक "
+#~ "उडी राख्छ ।</p>"
 
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:233
-#, kde-format
-msgid " x"
-msgstr ""
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>थ्रेसहोल्ड गतिबर्धनको कुनै पनि प्रभाव भन्दा पहिले माउस देखाउने पर्दामा सर्ने सबैभन्दा "
+#~ "सानो दुरी हो । यदि चाल थ्रेसहोल्ड भन्दा सानो छ भने, माउस देखाउने 1X मा सेट भएको "
+#~ "गतिवर्धन अनुरुप सर्दछ;</p><p>त्यसैले, तपाईँलाई माउस देखाउमा नियन्त्रणको बृहत अंश दिइ, "
+#~ "भौतिक यन्त्रलाई थोरै सार्दा, त्यहाँ सबैमा गतिबर्धन हुदैँन । भौतिक यन्त्रको ठूलो चालमा, "
+#~ "तपाईँले पर्दाको विभिन्न क्षेत्रमा माउस देखाउने तत्काल सर्न सक्नुहुन्छ ।</p>"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
-#: kcm/xlib/kcmmouse.ui:261
-#, kde-format
-msgid ""
-"<p>The threshold is the smallest distance that the mouse pointer must move "
-"on the screen before acceleration has any effect. If the movement is smaller "
-"than the threshold, the mouse pointer moves as if the acceleration was set "
-"to 1X;</p><p> thus, when you make small movements with the physical device, "
-"there is no acceleration at all, giving you a greater degree of control over "
-"the mouse pointer. With larger movements of the physical device, you can "
-"move the mouse pointer rapidly to different areas on the screen.</p>"
-msgstr ""
-"<p>थ्रेसहोल्ड गतिबर्धनको कुनै पनि प्रभाव भन्दा पहिले माउस देखाउने पर्दामा सर्ने सबैभन्दा "
-"सानो दुरी हो । यदि चाल थ्रेसहोल्ड भन्दा सानो छ भने, माउस देखाउने 1X मा सेट भएको "
-"गतिवर्धन अनुरुप सर्दछ;</p><p>त्यसैले, तपाईँलाई माउस देखाउमा नियन्त्रणको बृहत अंश दिइ, "
-"भौतिक यन्त्रलाई थोरै सार्दा, त्यहाँ सबैमा गतिबर्धन हुदैँन । भौतिक यन्त्रको ठूलो चालमा, "
-"तपाईँले पर्दाको विभिन्न क्षेत्रमा माउस देखाउने तत्काल सर्न सक्नुहुन्छ ।</p>"
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "डबल क्लिक अन्तराल तीनिहरूलाई डबल क्लिक विषयवस्तुमा फर्काउने दुई माउस क्लिक बीचको "
+#~ "अधिकतम समय (मिलिसेकेन्डमा) हो । यदि दोस्रो क्लिक यो समय अन्तराल पछि आउछ भने "
+#~ "त्यसपछि पहिलो क्लिकलाई दुई फरक क्लिकहरू अनुरुप चिनिन्छ ।"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
-#: kcm/xlib/kcmmouse.ui:280
-#, kde-format
-msgid ""
-"The double click interval is the maximal time (in milliseconds) between two "
-"mouse clicks which turns them into a double click. If the second click "
-"happens later than this time interval after the first click, they are "
-"recognized as two separate clicks."
-msgstr ""
-"डबल क्लिक अन्तराल तीनिहरूलाई डबल क्लिक विषयवस्तुमा फर्काउने दुई माउस क्लिक बीचको "
-"अधिकतम समय (मिलिसेकेन्डमा) हो । यदि दोस्रो क्लिक यो समय अन्तराल पछि आउछ भने त्यसपछि "
-"पहिलो क्लिकलाई दुई फरक क्लिकहरू अनुरुप चिनिन्छ ।"
+#~ msgid " msec"
+#~ msgstr " मिलि सेकेन्ड"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
-#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
-#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
-#, kde-format
-msgid " msec"
-msgstr " मिलि सेकेन्ड"
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "यदि तपाईँले माउसमा क्लिक गरेमा (जस्तै: बहु-लाइन सम्पादकमा) र तान्ने सुरु समयमा माउस "
+#~ "सार्न सुरु गरेमा, तान्ने कार्य सुरुआत हुनेछ ।"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
-#: kcm/xlib/kcmmouse.ui:308
-#, kde-format
-msgid ""
-"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
-"the mouse within the drag start time, a drag operation will be initiated."
-msgstr ""
-"यदि तपाईँले माउसमा क्लिक गरेमा (जस्तै: बहु-लाइन सम्पादकमा) र तान्ने सुरु समयमा माउस सार्न "
-"सुरु गरेमा, तान्ने कार्य सुरुआत हुनेछ ।"
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "यदि तपाईँले माउसमा क्लिक गरेमा र कम्तिमा तान्ने सुरुआत दूरीमा माउस सार्न सुरु गरेमा, "
+#~ "तान्ने कार्य सुरुआत हुनेछ ।"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
-#: kcm/xlib/kcmmouse.ui:333
-#, kde-format
-msgid ""
-"If you click with the mouse and begin to move the mouse at least the drag "
-"start distance, a drag operation will be initiated."
-msgstr ""
-"यदि तपाईँले माउसमा क्लिक गरेमा र कम्तिमा तान्ने सुरुआत दूरीमा माउस सार्न सुरु गरेमा, तान्ने "
-"कार्य सुरुआत हुनेछ ।"
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "यदि तपाईँले माउसको चक्र प्रयोग गरेमा, यो मानले प्रत्येक चक्र चालका लागि स्क्रोल "
+#~ "गर्नुपर्ने लाइनको सङ्ख्या निर्धारण गर्छ । याद गर्नुहोस् यदि यो सङ्ख्या देखिने लाइनको "
+#~ "सङ्ख्या भन्दा बढी भएमा, यसलाई उपेक्षा गरिनेछ र चक्र चाललाई पृष्ठ तल/माथि चाल अनुरुप "
+#~ "ह्यान्डल गरिनेछ ।"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
-#: kcm/xlib/kcmmouse.ui:355
-#, kde-format
-msgid ""
-"If you use the wheel of a mouse, this value determines the number of lines "
-"to scroll for each wheel movement. Note that if this number exceeds the "
-"number of visible lines, it will be ignored and the wheel movement will be "
-"handled as a page up/down movement."
-msgstr ""
-"यदि तपाईँले माउसको चक्र प्रयोग गरेमा, यो मानले प्रत्येक चक्र चालका लागि स्क्रोल गर्नुपर्ने "
-"लाइनको सङ्ख्या निर्धारण गर्छ । याद गर्नुहोस् यदि यो सङ्ख्या देखिने लाइनको सङ्ख्या भन्दा "
-"बढी भएमा, यसलाई उपेक्षा गरिनेछ र चक्र चाललाई पृष्ठ तल/माथि चाल अनुरुप ह्यान्डल गरिनेछ ।"
+#, fuzzy
+#~| msgid "Mouse Navigation"
+#~ msgid "Keyboard Navigation"
+#~ msgstr "माउस नेभिगेसन"
 
-#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
-#: kcm/xlib/kcmmouse.ui:387
-#, fuzzy, kde-format
-#| msgid "Mouse Navigation"
-msgid "Keyboard Navigation"
-msgstr "माउस नेभिगेसन"
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "(नम प्याड प्रयोग गरेर) कुञ्जीपाटीबाट सङ्केतक सार्नुहोस्"
 
-#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
-#: kcm/xlib/kcmmouse.ui:395
-#, kde-format
-msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "(नम प्याड प्रयोग गरेर) कुञ्जीपाटीबाट सङ्केतक सार्नुहोस्"
+#~ msgid "&Acceleration delay:"
+#~ msgstr "गतिबर्धन बिलम्व:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/kcmmouse.ui:424
-#, kde-format
-msgid "&Acceleration delay:"
-msgstr "गतिबर्धन बिलम्व:"
+#~ msgid "R&epeat interval:"
+#~ msgstr "अन्तराल दोहोर्याउनुहोस्:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/kcmmouse.ui:434
-#, kde-format
-msgid "R&epeat interval:"
-msgstr "अन्तराल दोहोर्याउनुहोस्:"
+#~ msgid "Acceleration &time:"
+#~ msgstr "गतिबर्धन समय:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/kcmmouse.ui:466
-#, kde-format
-msgid "Acceleration &time:"
-msgstr "गतिबर्धन समय:"
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "अधिकतम गति:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/kcmmouse.ui:498
-#, kde-format
-msgid "Ma&ximum speed:"
-msgstr "अधिकतम गति:"
+#~ msgid " pixel/sec"
+#~ msgstr " पिक्सेल/सेकेन्ड"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
-#: kcm/xlib/kcmmouse.ui:514
-#, kde-format
-msgid " pixel/sec"
-msgstr " पिक्सेल/सेकेन्ड"
+#~ msgid "Acceleration &profile:"
+#~ msgstr "गतिबर्धन प्रोफाइल:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/kcmmouse.ui:530
-#, kde-format
-msgid "Acceleration &profile:"
-msgstr "गतिबर्धन प्रोफाइल:"
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " पिक्सेल"
+#~ msgstr[1] " पिक्सेल"
 
-#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
-#, kde-format
-msgid " pixel"
-msgid_plural " pixels"
-msgstr[0] " पिक्सेल"
-msgstr[1] " पिक्सेल"
-
-#: kcm/xlib/xlib_config.cpp:277
-#, kde-format
-msgid " line"
-msgid_plural " lines"
-msgstr[0] "रेखा"
-msgstr[1] "रेखा"
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] "रेखा"
+#~ msgstr[1] "रेखा"
 
 #, fuzzy
 #~| msgid "Acceleration &profile:"

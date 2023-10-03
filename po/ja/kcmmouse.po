@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2023-08-12 01:47+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -146,9 +146,7 @@ msgid "Pointer speed:"
 msgstr "ポインタの速度:"
 
 # ACCELERATOR added by translator
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
-#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "加速(&P):"
@@ -253,281 +251,185 @@ msgctxt "@action:button"
 msgid "Go back"
 msgstr "戻る"
 
-#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
-#: kcm/xlib/kcmmouse.ui:14
-#, kde-format
-msgid ""
-"<h1>Mouse</h1> This module allows you to choose various options for the way "
-"in which your pointing device works. Your pointing device may be a mouse, "
-"trackball, or some other hardware that performs a similar function."
-msgstr ""
-"<h1>マウス</h1> このモジュールではポインティングデバイスの動作を設定します。"
-"対象となるのは、マウス、トラックボール、その他同等の機能を持つハードウェアで"
-"す。"
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>マウス</h1> このモジュールではポインティングデバイスの動作を設定しま"
+#~ "す。対象となるのは、マウス、トラックボール、その他同等の機能を持つハード"
+#~ "ウェアです。"
 
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#: kcm/xlib/kcmmouse.ui:36
-#, kde-format
-msgid "&General"
-msgstr "全般(&G)"
+#~ msgid "&General"
+#~ msgstr "全般(&G)"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:52
-#, kde-format
-msgid ""
-"If you are left-handed, you may prefer to swap the functions of the left and "
-"right buttons on your pointing device by choosing the 'left-handed' option. "
-"If your pointing device has more than two buttons, only those that function "
-"as the left and right buttons are affected. For example, if you have a three-"
-"button mouse, the middle button is unaffected."
-msgstr ""
-"あなたが左利きなら「左利き」オプションを選択して、左右のボタンの機能を入れ替"
-"えた方が好ましいでしょう。ポインティングデバイスにボタンが 3 つ以上ある場合"
-"は、左右のボタンとして機能しているボタンの機能が入れ替わるだけです (3 ボタン"
-"マウスの中ボタンの機能は変わりません)。"
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "あなたが左利きなら「左利き」オプションを選択して、左右のボタンの機能を入れ"
+#~ "替えた方が好ましいでしょう。ポインティングデバイスにボタンが 3 つ以上ある"
+#~ "場合は、左右のボタンとして機能しているボタンの機能が入れ替わるだけです (3 "
+#~ "ボタンマウスの中ボタンの機能は変わりません)。"
 
-#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:55
-#, kde-format
-msgid "Button Order"
-msgstr "ボタンの順番"
+#~ msgid "Button Order"
+#~ msgstr "ボタンの順番"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
-#: kcm/xlib/kcmmouse.ui:64
-#, kde-format
-msgid "Righ&t handed"
-msgstr "右利き(&T)"
+#~ msgid "Righ&t handed"
+#~ msgstr "右利き(&T)"
 
 # ACCELERATOR changed by translator
-#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
-#: kcm/xlib/kcmmouse.ui:77
-#, kde-format
-msgid "Le&ft handed"
-msgstr "左利き(&L)"
+#~ msgid "Le&ft handed"
+#~ msgstr "左利き(&L)"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:106
-#, kde-format
-msgid ""
-"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
-"mouse buttons."
-msgstr "マウスホイール/第4第5ボタンによるスクロールの方向を変更します。"
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr "マウスホイール/第4第5ボタンによるスクロールの方向を変更します。"
 
 # ACCELERATOR changed by translator
-#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:109
-#, kde-format
-msgid "Re&verse scroll direction"
-msgstr "スクロール方向を逆にする(&N)"
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "スクロール方向を逆にする(&N)"
 
 # ACCELERATOR added by translator
-#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
-#: kcm/xlib/kcmmouse.ui:156
-#, kde-format
-msgid "Advanced"
-msgstr "詳細オプション(&X)"
+#~ msgid "Advanced"
+#~ msgstr "詳細オプション(&X)"
 
 # ACCELERATOR added by translator
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/kcmmouse.ui:174
-#, kde-format
-msgid "Pointer threshold:"
-msgstr "しきい値(&L):"
+#~ msgid "Pointer threshold:"
+#~ msgstr "しきい値(&L):"
 
 # ACCELERATOR added by translator
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/kcmmouse.ui:184
-#, kde-format
-msgid "Double click interval:"
-msgstr "ダブルクリックの間隔(&U):"
+#~ msgid "Double click interval:"
+#~ msgstr "ダブルクリックの間隔(&U):"
 
 # ACCELERATOR added by translator
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/kcmmouse.ui:194
-#, kde-format
-msgid "Drag start time:"
-msgstr "ドラッグ開始までの時間(&T):"
+#~ msgid "Drag start time:"
+#~ msgstr "ドラッグ開始までの時間(&T):"
 
 # ACCELERATOR added by translator
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/kcmmouse.ui:204
-#, kde-format
-msgid "Drag start distance:"
-msgstr "ドラッグを開始する距離(&N):"
+#~ msgid "Drag start distance:"
+#~ msgstr "ドラッグを開始する距離(&N):"
 
 # ACCELERATOR added by translator
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/kcmmouse.ui:214
-#, kde-format
-msgid "Mouse wheel scrolls by:"
-msgstr "マウスホイールのスクロール(&W):"
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "マウスホイールのスクロール(&W):"
 
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:230
-#, kde-format
-msgid ""
-"<p>This option allows you to change the relationship between the distance "
-"that the mouse pointer moves on the screen and the relative movement of the "
-"physical device itself (which may be a mouse, trackball, or some other "
-"pointing device.)</p><p> A high value for the acceleration will lead to "
-"large movements of the mouse pointer on the screen even when you only make a "
-"small movement with the physical device. Selecting very high values may "
-"result in the mouse pointer flying across the screen, making it hard to "
-"control.</p>"
-msgstr ""
-"<p>このオプションで、スクリーン上のマウスポインタの移動距離とポインティングデ"
-"バイス (マウス、トラックボール、その他の機器) の物理的な移動距離の相関関係を"
-"変更することができます。</p><p>大きな値を設定すると、ポインティングデバイスを"
-"少し動かしただけで、マウスポインタは大きく移動するようになります。非常に大き"
-"な値を設定するとマウスポインタはスクリーンを飛び回るほどになり、制御するのが"
-"難しくなります。</p>"
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>このオプションで、スクリーン上のマウスポインタの移動距離とポインティン"
+#~ "グデバイス (マウス、トラックボール、その他の機器) の物理的な移動距離の相関"
+#~ "関係を変更することができます。</p><p>大きな値を設定すると、ポインティング"
+#~ "デバイスを少し動かしただけで、マウスポインタは大きく移動するようになりま"
+#~ "す。非常に大きな値を設定するとマウスポインタはスクリーンを飛び回るほどにな"
+#~ "り、制御するのが難しくなります。</p>"
 
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:233
-#, kde-format
-msgid " x"
-msgstr " x"
+#~ msgid " x"
+#~ msgstr " x"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
-#: kcm/xlib/kcmmouse.ui:261
-#, kde-format
-msgid ""
-"<p>The threshold is the smallest distance that the mouse pointer must move "
-"on the screen before acceleration has any effect. If the movement is smaller "
-"than the threshold, the mouse pointer moves as if the acceleration was set "
-"to 1X;</p><p> thus, when you make small movements with the physical device, "
-"there is no acceleration at all, giving you a greater degree of control over "
-"the mouse pointer. With larger movements of the physical device, you can "
-"move the mouse pointer rapidly to different areas on the screen.</p>"
-msgstr ""
-"<p>しきい値は、加速効果が現れるマウスポインタの最小の移動距離です。移動距離が"
-"しきい値より小さいときは、マウスポインタの動きは等速 (加速=1X) のままです。</"
-"p><p>これにより、ポインティングデバイスを小さく動かしている間は加速されないの"
-"で、マウスポインタをスクリーン上で細かく制御できます。一方、大きく動かすと、"
-"マウスポインタを素早くスクリーンの別の場所に移動させることができます。</p>"
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>しきい値は、加速効果が現れるマウスポインタの最小の移動距離です。移動距"
+#~ "離がしきい値より小さいときは、マウスポインタの動きは等速 (加速=1X) のまま"
+#~ "です。</p><p>これにより、ポインティングデバイスを小さく動かしている間は加"
+#~ "速されないので、マウスポインタをスクリーン上で細かく制御できます。一方、大"
+#~ "きく動かすと、マウスポインタを素早くスクリーンの別の場所に移動させることが"
+#~ "できます。</p>"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
-#: kcm/xlib/kcmmouse.ui:280
-#, kde-format
-msgid ""
-"The double click interval is the maximal time (in milliseconds) between two "
-"mouse clicks which turns them into a double click. If the second click "
-"happens later than this time interval after the first click, they are "
-"recognized as two separate clicks."
-msgstr ""
-"「ダブルクリックの間隔」とは、2 回のクリックを 1 回のダブルクリックと見なす最"
-"大間隔 (ミリ秒) です。1 回目のクリックの後、2 回目がここで指定した時間よりも"
-"後にクリックされた場合は、それらは別々のクリックとして認識されます。"
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "「ダブルクリックの間隔」とは、2 回のクリックを 1 回のダブルクリックと見な"
+#~ "す最大間隔 (ミリ秒) です。1 回目のクリックの後、2 回目がここで指定した時間"
+#~ "よりも後にクリックされた場合は、それらは別々のクリックとして認識されます。"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
-#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
-#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
-#, kde-format
-msgid " msec"
-msgstr " ミリ秒"
+#~ msgid " msec"
+#~ msgstr " ミリ秒"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
-#: kcm/xlib/kcmmouse.ui:308
-#, kde-format
-msgid ""
-"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
-"the mouse within the drag start time, a drag operation will be initiated."
-msgstr ""
-"マウスで (例えばマルチラインエディタ内で) クリックしてから「ドラッグ開始まで"
-"の時間」以内にマウスを動かすとドラッグ処理を開始します。"
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "マウスで (例えばマルチラインエディタ内で) クリックしてから「ドラッグ開始ま"
+#~ "での時間」以内にマウスを動かすとドラッグ処理を開始します。"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
-#: kcm/xlib/kcmmouse.ui:333
-#, kde-format
-msgid ""
-"If you click with the mouse and begin to move the mouse at least the drag "
-"start distance, a drag operation will be initiated."
-msgstr ""
-"マウスでクリックしてから「ドラッグを開始する距離」以上マウスを移動するとド"
-"ラッグ処理を開始します。"
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "マウスでクリックしてから「ドラッグを開始する距離」以上マウスを移動するとド"
+#~ "ラッグ処理を開始します。"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
-#: kcm/xlib/kcmmouse.ui:355
-#, kde-format
-msgid ""
-"If you use the wheel of a mouse, this value determines the number of lines "
-"to scroll for each wheel movement. Note that if this number exceeds the "
-"number of visible lines, it will be ignored and the wheel movement will be "
-"handled as a page up/down movement."
-msgstr ""
-"この値はマウスのホイールを動かしたときにスクロールする行数を決定します。表示"
-"されている行数がこの値より少ない場合は、この設定にかかわらずホイールの動きは "
-"PageUp (1 画面上へスクロール) / PageDown (1 画面下へスクロール) と同様になり"
-"ます。"
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "この値はマウスのホイールを動かしたときにスクロールする行数を決定します。表"
+#~ "示されている行数がこの値より少ない場合は、この設定にかかわらずホイールの動"
+#~ "きは PageUp (1 画面上へスクロール) / PageDown (1 画面下へスクロール) と同"
+#~ "様になります。"
 
 # ACCELERATOR added by translator
-#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
-#: kcm/xlib/kcmmouse.ui:387
-#, kde-format
-msgid "Keyboard Navigation"
-msgstr "キーボードのナビゲーション"
+#~ msgid "Keyboard Navigation"
+#~ msgstr "キーボードのナビゲーション"
 
 # ACCELERATOR changed by translator
-#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
-#: kcm/xlib/kcmmouse.ui:395
-#, kde-format
-msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "キーボード (テンキー) でマウスポインタを移動する(&N)"
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "キーボード (テンキー) でマウスポインタを移動する(&N)"
 
 # ACCELERATOR changed by translator
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/kcmmouse.ui:424
-#, kde-format
-msgid "&Acceleration delay:"
-msgstr "加速の遅延(&L):"
+#~ msgid "&Acceleration delay:"
+#~ msgstr "加速の遅延(&L):"
 
 # ACCELERATOR changed by translator
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/kcmmouse.ui:434
-#, kde-format
-msgid "R&epeat interval:"
-msgstr "リピート間隔(&V):"
+#~ msgid "R&epeat interval:"
+#~ msgstr "リピート間隔(&V):"
 
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/kcmmouse.ui:466
-#, kde-format
-msgid "Acceleration &time:"
-msgstr "加速時間(&T):"
+#~ msgid "Acceleration &time:"
+#~ msgstr "加速時間(&T):"
 
 # ACCELERATOR changed by translator
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/kcmmouse.ui:498
-#, kde-format
-msgid "Ma&ximum speed:"
-msgstr "最大速度(&U):"
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "最大速度(&U):"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
-#: kcm/xlib/kcmmouse.ui:514
-#, kde-format
-msgid " pixel/sec"
-msgstr " ピクセル/秒"
+#~ msgid " pixel/sec"
+#~ msgstr " ピクセル/秒"
 
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/kcmmouse.ui:530
-#, kde-format
-msgid "Acceleration &profile:"
-msgstr "加速のプロファイル(&P):"
+#~ msgid "Acceleration &profile:"
+#~ msgstr "加速のプロファイル(&P):"
 
-#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
-#, kde-format
-msgid " pixel"
-msgid_plural " pixels"
-msgstr[0] " ピクセル"
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " ピクセル"
 
-#: kcm/xlib/xlib_config.cpp:277
-#, kde-format
-msgid " line"
-msgid_plural " lines"
-msgstr[0] " 行"
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " 行"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "加速プロファイル:"

@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2020.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-05 01:57+0000\n"
-"PO-Revision-Date: 2023-01-11 17:08+0100\n"
+"PO-Revision-Date: 2023-10-02 22:20+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,14 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: globalaccelmodel.cpp:209
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
-msgstr "Ha ocurrido un error al guardar el acceso rápido %1: %2"
+msgstr "Ha ocurrido un error al guardar el atajo de teclado %1: %2"
 
 #: globalaccelmodel.cpp:321
 #, kde-format
@@ -36,13 +36,14 @@ msgstr "Ha ocurrido un error al añadir %1. Parece que no tiene acciones."
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr ""
-"Ha ocurrido un error durante la comunicación con el servicio de accesos "
-"rápidos globales"
+"Ha ocurrido un error durante la comunicación con el servicio de atajos de "
+"teclado globales"
 
 #: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
-msgstr "Ha fallado la comunicación con el demonio de accesos rápidos globales"
+msgstr ""
+"Ha fallado la comunicación con el demonio de atajos de teclado globales"
 
 #: kcm_keys.cpp:312
 #, kde-format
@@ -51,7 +52,7 @@ msgid ""
 "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
 "Do you want to reassign it?"
 msgstr ""
-"El acceso rápido %1 ya está asignado a la acción común de %2 «%3».\n"
+"El atajo de teclado %1 ya está asignado a la acción común de %2 «%3».\n"
 "¿Desea cambiar la asignación?"
 
 #: kcm_keys.cpp:316
@@ -60,7 +61,7 @@ msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
 "Do you want to reassign it?"
 msgstr ""
-"El acceso rápido %1 ya está asignado a la acción «%2» de %3.\n"
+"El atajo de teclado %1 ya está asignado a la acción «%2» de %3.\n"
 "¿Desea cambiar la asignación?"
 
 #: kcm_keys.cpp:317
@@ -146,7 +147,7 @@ msgstr "Editar orden para %1"
 #: ui/main.qml:185
 #, kde-format
 msgid "Remove all shortcuts for %1"
-msgstr "Eliminar todos los accesos rápidos para %1"
+msgstr "Eliminar todos los atajos de teclado para %1"
 
 #: ui/main.qml:196
 #, kde-format
@@ -161,7 +162,7 @@ msgstr "Ningún elemento concuerda con los términos buscados"
 #: ui/main.qml:280
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
-msgstr "Seleccione un elemento de la lista para ver sus accesos rápidos"
+msgstr "Seleccione un elemento de la lista para ver sus atajos de teclado"
 
 #: ui/main.qml:305
 #, kde-format
@@ -193,18 +194,18 @@ msgstr "Exportar esquema..."
 #: ui/main.qml:359
 #, kde-format
 msgid "Export Shortcut Scheme"
-msgstr "Exportar esquema de accesos rápidos"
+msgstr "Exportar esquema de atajos de teclado"
 
 #: ui/main.qml:359 ui/main.qml:475
 #, kde-format
 msgid "Import Shortcut Scheme"
-msgstr "Importar esquema de accesos rápidos"
+msgstr "Importar esquema de atajos de teclado"
 
 #: ui/main.qml:361
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
-msgstr "Esquema de accesos rápidos (*.kksrc)"
+msgstr "Esquema de atajos de teclado (*.kksrc)"
 
 #: ui/main.qml:389
 #, kde-format
@@ -272,7 +273,7 @@ msgstr "Importar"
 #: ui/ShortcutActionDelegate.qml:30
 #, kde-format
 msgid "Editing shortcut: %1"
-msgstr "Editando el acceso rápido: %1"
+msgstr "Editando el atajo de teclado: %1"
 
 #: ui/ShortcutActionDelegate.qml:42
 #, kde-format
@@ -285,50 +286,50 @@ msgstr "%1:"
 #: ui/ShortcutActionDelegate.qml:55
 #, kde-format
 msgid "No active shortcuts"
-msgstr "No hay accesos rápidos activos"
+msgstr "No hay atajos de teclado activos"
 
 #: ui/ShortcutActionDelegate.qml:95
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
-msgstr[0] "Acceso rápido por omisión"
-msgstr[1] "Accesos rápidos por omisión"
+msgstr[0] "Atajo de teclado predeterminado"
+msgstr[1] "Atajos de teclado predeterminados"
 
 #: ui/ShortcutActionDelegate.qml:97
 #, kde-format
 msgid "No default shortcuts"
-msgstr "No hay accesos rápidos por omisión"
+msgstr "No hay atajos de teclado predeterminados"
 
 #: ui/ShortcutActionDelegate.qml:105
 #, kde-format
 msgid "Default shortcut %1 is enabled."
-msgstr "El acceso rápido por omisión %1 está activado."
+msgstr "El atajo de teclado predeterminado %1 está activado."
 
 #: ui/ShortcutActionDelegate.qml:105
 #, kde-format
 msgid "Default shortcut %1 is disabled."
-msgstr "El acceso rápido por omisión %1 está desactivado."
+msgstr "El atajo de teclado predeterminado %1 está desactivado."
 
 #: ui/ShortcutActionDelegate.qml:126
 #, kde-format
 msgid "Custom shortcuts"
-msgstr "Accesos rápidos personalizados"
+msgstr "Atajos de teclado personalizados"
 
 #: ui/ShortcutActionDelegate.qml:151
 #, kde-format
 msgid "Delete this shortcut"
-msgstr "Borrar este acceso rápido"
+msgstr "Borrar este atajo de teclado"
 
 #: ui/ShortcutActionDelegate.qml:157
 #, kde-format
 msgid "Add custom shortcut"
-msgstr "Añadir acceso rápido personalizado"
+msgstr "Añadir atajo de teclado personalizado"
 
 #: ui/ShortcutActionDelegate.qml:192
 #, kde-format
 msgid "Cancel capturing of new shortcut"
-msgstr "Cancelar la captura del nuevo acceso rápido"
+msgstr "Cancelar la captura del nuevo atajo de teclado"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2023-09-16 10:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -57,27 +57,27 @@ msgstr "查询输入设备失败。请重新打开此设置模块。"
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "读取触摸板 %1 的基本设备信息时发生严重错误。"
 
-#: backends/x11/xlibbackend.cpp:74
+#: backends/x11/xlibbackend.cpp:71
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "无法连接到 X 服务器"
 
-#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:94
+#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:94
 #, kde-format
 msgid "No touchpad found"
 msgstr "没有找到触摸板"
 
-#: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
+#: backends/x11/xlibbackend.cpp:124 backends/x11/xlibbackend.cpp:138
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "无法应用触摸板配置"
 
-#: backends/x11/xlibbackend.cpp:164 backends/x11/xlibbackend.cpp:177
+#: backends/x11/xlibbackend.cpp:152 backends/x11/xlibbackend.cpp:165
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "无法读取触摸板配置"
 
-#: backends/x11/xlibbackend.cpp:190
+#: backends/x11/xlibbackend.cpp:178
 #, kde-format
 msgid "Cannot read default touchpad configuration"
 msgstr "无法读取默认触摸板配置"
@@ -403,866 +403,6 @@ msgstr "触摸板已断开连接。已关闭它的设置对话框。"
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "触摸板已断开连接。没有找到其他触摸板。"
 
-#: kcm/xlib/testarea.cpp:20
-#, kde-format
-msgid "Drag me"
-msgstr "拖拽测试"
-
-#: kcm/xlib/testbutton.cpp:29
-#, kde-format
-msgctxt "Mouse button"
-msgid "Left button"
-msgstr "左键"
-
-#: kcm/xlib/testbutton.cpp:32
-#, kde-format
-msgctxt "Mouse button"
-msgid "Right button"
-msgstr "右键"
-
-#: kcm/xlib/testbutton.cpp:35
-#, kde-format
-msgctxt "Mouse button"
-msgid "Middle button"
-msgstr "中键"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:96
-#, kde-format
-msgid ""
-"Active settings don't match saved settings.\n"
-"You currently see saved settings."
-msgstr ""
-"活动设置与保存的设置不匹配。\n"
-"当前显示的是保存的设置。"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:102
-#, kde-format
-msgid "Show active settings"
-msgstr "显示活动设置"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:139
-#, kde-format
-msgid "These settings won't take effect in the testing area"
-msgstr "这些设置不影响测试区域"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:144
-#, kde-format
-msgid "Enable/Disable Touchpad"
-msgstr "启用/禁用触摸板"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
-#: kcm/xlib/ui/kded.ui:14
-#, kde-format
-msgctxt "@title:window"
-msgid "Enable/Disable Touchpad"
-msgstr "启用/禁用触摸板"
-
-#. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
-#. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
-#: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
-#, kde-format
-msgid "Configure…"
-msgstr "配置…"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/kded.ui:47
-#, kde-format
-msgid "Keyboard shortcuts:"
-msgstr "键盘快捷键："
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:60
-#, kde-format
-msgid "Disable touchpad when typing"
-msgstr "键盘输入时禁用触摸板"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/kded.ui:75
-#, kde-format
-msgid "Timeout:"
-msgstr "超时："
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:86
-#, kde-format
-msgid ""
-"If there was no keyboard activity for more than specified\n"
-"number of milliseconds, touchpad will be enabled again"
-msgstr ""
-"如果在经过了指定的时间后没有键盘输入，\n"
-"触摸板将会重新启用"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_SingleTapTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:98 kcm/xlib/ui/tap.ui:306 kcm/xlib/ui/tap.ui:401
-#: kcm/xlib/ui/tap.ui:439 kcm/xlib/ui/tap.ui:458
-#, kde-format
-msgid " ms"
-msgstr " 毫秒"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:106
-#, kde-format
-msgid ""
-"Disable click emulation and scrolling.\n"
-"You will be still able to move pointer using touchpad and perform clicks "
-"with hardware buttons."
-msgstr ""
-"禁用点击模拟和滚动。\n"
-"您仍可以使用触摸板移动光标和用硬件按钮点击。"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:109
-#, kde-format
-msgid "Disable taps and scrolling only"
-msgstr "仅禁用轻触和滚动"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
-#: kcm/xlib/ui/kded.ui:119
-#, kde-format
-msgid "Disable touchpad when mouse is plugged in"
-msgstr "插入鼠标时禁用触摸板"
-
-#. i18n: ectx: property (text), widget (QLabel, notificationsLabel)
-#: kcm/xlib/ui/kded.ui:136
-#, kde-format
-msgid "Notifications:"
-msgstr "通知："
-
-#. i18n: ectx: property (text), widget (QLabel, ignoredDevLabel)
-#: kcm/xlib/ui/kded.ui:158
-#, kde-format
-msgid "Ignored devices:"
-msgstr "忽略的设备："
-
-#. i18n: ectx: property (toolTip), widget (KEditListWidget, kcfg_MouseBlacklist)
-#: kcm/xlib/ui/kded.ui:169
-#, kde-format
-msgid ""
-"Some devices might be incorrectly treated as a mouse.\n"
-"You can add them to this list so that they will be ignored when they're "
-"plugged in."
-msgstr ""
-"某些设备可能会被错误地识别为鼠标。\n"
-"您可以将这些设备添加到此列表中，它们将在插入时被忽略。"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
-#: kcm/xlib/ui/pointermotion.ui:14
-#, kde-format
-msgid "Pointer Motion"
-msgstr "光标移动方式"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/pointermotion.ui:20
-#, kde-format
-msgctxt "Mouse pointer motion parameters"
-msgid "Speed"
-msgstr "速度"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/pointermotion.ui:29
-#, kde-format
-msgctxt "Minimum pointer movement speed"
-msgid "Minimum:"
-msgstr "最小速度："
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MinSpeed)
-#: kcm/xlib/ui/pointermotion.ui:39
-#, kde-format
-msgid "Minimum pointer speed"
-msgstr "最小光标速度"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/pointermotion.ui:52
-#, kde-format
-msgctxt "Maximum pointer movement speed"
-msgid "Maximum:"
-msgstr "最大速度："
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MaxSpeed)
-#: kcm/xlib/ui/pointermotion.ui:62
-#, kde-format
-msgid "Maximum pointer speed"
-msgstr "最大光标速度"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/pointermotion.ui:75
-#, kde-format
-msgctxt "Pointer acceleration"
-msgid "Acceleration:"
-msgstr "加速："
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
-#: kcm/xlib/ui/pointermotion.ui:85
-#, kde-format
-msgid "Acceleration factor for normal pointer movements"
-msgstr "正常光标移动的加速系数"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/pointermotion.ui:101
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Pressure-Dependent Motion"
-msgstr "压力相关操作"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/pointermotion.ui:113
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum pressure:"
-msgstr "最小压力："
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/pointermotion.ui:123
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum factor:"
-msgstr "最小系数："
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/pointermotion.ui:133
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum pressure:"
-msgstr "最大压力："
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/pointermotion.ui:143
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum factor:"
-msgstr "最大系数："
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMinZ)
-#: kcm/xlib/ui/pointermotion.ui:153
-#, kde-format
-msgid "Finger pressure at which minimum pressure motion factor is applied"
-msgstr "最小压力移动系数对应的手指压力"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
-#: kcm/xlib/ui/pointermotion.ui:166
-#, kde-format
-msgid "Finger pressure at which maximum pressure motion factor is applied"
-msgstr "最大压力移动系数对应的手指压力"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
-#: kcm/xlib/ui/pointermotion.ui:179
-#, kde-format
-msgid "Lowest setting for pressure motion factor"
-msgstr "压力移动系数的最小值"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMaxFactor)
-#: kcm/xlib/ui/pointermotion.ui:189
-#, kde-format
-msgid "Greatest setting for pressure motion factor"
-msgstr "压力移动系数的最大值"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/pointermotion.ui:202
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Noise Cancellation"
-msgstr "指针移动信号降噪"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/pointermotion.ui:214
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Vertical:"
-msgstr "垂直："
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/pointermotion.ui:224
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Horizontal:"
-msgstr "水平："
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_VertHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:234
-#, kde-format
-msgid ""
-"The minimum vertical hardware distance required to generate motion events"
-msgstr "识别为光标移动事件的最小垂直硬件距离"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_VertHysteresis)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:243 kcm/xlib/ui/pointermotion.ui:259
-#, kde-format
-msgid " units"
-msgstr " 单位"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:250
-#, kde-format
-msgid ""
-"The minimum horizontal hardware distance required to generate motion events"
-msgstr "识别为光标移动事件的最小水平硬件距离"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, ScrollForm)
-#: kcm/xlib/ui/scroll.ui:14
-#, kde-format
-msgid "Scrolling"
-msgstr "滚动手势"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/scroll.ui:28
-#, kde-format
-msgid "Edge scrolling:"
-msgstr "边缘滚动："
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:38
-#, kde-format
-msgid "Enable vertical scrolling when dragging along the right edge"
-msgstr "在触摸板右侧边缘拖拽时进行垂直滚动"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:41 kcm/xlib/ui/scroll.ui:61 kcm/xlib/ui/scroll.ui:81
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Vertical"
-msgstr "垂直"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:48
-#, kde-format
-msgid "Enable horizontal scrolling when dragging along the bottom edge"
-msgstr "在触摸板底部边缘拖拽时进行水平滚动"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:51 kcm/xlib/ui/scroll.ui:71 kcm/xlib/ui/scroll.ui:91
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Horizontal"
-msgstr "水平"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:58
-#, kde-format
-msgid ""
-"Enable vertical scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr "在触摸板任意位置双指拖动时进行垂直滚动"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:68
-#, kde-format
-msgid ""
-"Enable horizontal scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr "在触摸板任意位置双指拖动时进行水平滚动"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:78
-#, kde-format
-msgid "Reverse vertical scrolling"
-msgstr "反向垂直滚动"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:88
-#, kde-format
-msgid "Reverse horizontal scrolling"
-msgstr "反向水平滚动"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/scroll.ui:98
-#, kde-format
-msgid "Two-finger scrolling:"
-msgstr "双指滚动："
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/scroll.ui:108
-#, kde-format
-msgid "Reverse scrolling:"
-msgstr "反向滚动："
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/scroll.ui:126
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Scrolling Distance"
-msgstr "滚动距离"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/scroll.ui:138
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Vertical:"
-msgstr "垂直："
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
-#, kde-format
-msgid "Move distance of the finger for a scroll event"
-msgstr "触发一次滚动事件的手指移动距离"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/scroll.ui:157 kcm/xlib/ui/scroll.ui:186 kcm/xlib/ui/tap.ui:417
-#, kde-format
-msgid " mm"
-msgstr " 毫米"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/scroll.ui:167
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Horizontal:"
-msgstr "水平："
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:199
-#, kde-format
-msgid ""
-"Continue scrolling after the finger is released from the edge of the touchpad"
-msgstr "手指从触摸板的边缘松开后继续滚动"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:202
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Coasting"
-msgstr "惯性滚动"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/scroll.ui:217
-#, kde-format
-msgctxt "Coasting"
-msgid "Minimum speed:"
-msgstr "最小速度："
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:227
-#, kde-format
-msgid ""
-"Your finger needs to produce this many scrolls per second in order to start "
-"coasting"
-msgstr "触发惯性滚动的每秒滚动次数"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:233
-#, kde-format
-msgid " scrolls/sec"
-msgstr "次滚动/秒"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/scroll.ui:240
-#, kde-format
-msgctxt "Coasting"
-msgid "Deceleration:"
-msgstr "减速："
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:250
-#, kde-format
-msgid "Number of scrolls/second² to decrease the coasting speed"
-msgstr "触发降低惯性滚动速度的滚动/秒²值"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:256
-#, kde-format
-msgid " scrolls/sec²"
-msgstr "  次滚动/秒²"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/scroll.ui:263
-#, kde-format
-msgid "Corner coasting:"
-msgstr "四角惯性滚动："
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:273
-#, kde-format
-msgid ""
-"Enable edge scrolling to continue while the finger stays in an edge corner"
-msgstr "手指滑动到触摸板四角并停留时，边缘滚动将继续进行"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:276
-#, kde-format
-msgctxt "Coasting"
-msgid "Enable"
-msgstr "启用"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:288
-#, kde-format
-msgid ""
-"Scrolling is engaged when a drag starts in the given trigger region.\n"
-"Moving your finger in clockwise circles around the center of the touchpad\n"
-"will scroll down and counter clockwise motion will scroll up"
-msgstr ""
-"在指定区域划圈时触发滚动。\n"
-"绕触摸板中心顺时针划圈可向下滚动\n"
-"绕触摸板中心逆时针划圈可向上滚动"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:291
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Circular Scrolling"
-msgstr "划圈滚动"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/scroll.ui:306
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Trigger region:"
-msgstr "触发区域："
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
-#: kcm/xlib/ui/scroll.ui:316
-#, kde-format
-msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr "划圈滚动手势的触摸板触发区域"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/scroll.ui:323
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Angle:"
-msgstr "角度："
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:345
-#, kde-format
-msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr "识别为滚动事件的手指移动角度"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:348
-#, kde-format
-msgctxt "suffix - degrees (angle)"
-msgid "°"
-msgstr "°"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/scroll.ui:355
-#, kde-format
-msgid ""
-"When used together with vertical scrolling, hitting the upper or lower right "
-"corner will seamlessly switch over from vertical to circular scrolling"
-msgstr ""
-"配合垂直滚动使用时，手指滑动到触摸板的右上角或者左上角时，将从垂直滚动无缝切"
-"换到划圈滚动"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
-#: kcm/xlib/ui/sensitivity.ui:14
-#, kde-format
-msgid "Sensitivity"
-msgstr "灵敏度"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/sensitivity.ui:20
-#, kde-format
-msgctxt "Touchpad"
-msgid "Sensitivity"
-msgstr "灵敏度"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/sensitivity.ui:29
-#, kde-format
-msgid "Pressure for detecting a touch:"
-msgstr "识别为触摸的压力："
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/sensitivity.ui:39
-#, kde-format
-msgid "Pressure for detecting a release:"
-msgstr "识别为松开的压力："
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerHigh)
-#: kcm/xlib/ui/sensitivity.ui:49
-#, kde-format
-msgid ""
-"When finger pressure goes above this value, the driver counts it as a touch"
-msgstr "当手指压力大于此值时，驱动程序识别为手指触摸。"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerLow)
-#: kcm/xlib/ui/sensitivity.ui:62
-#, kde-format
-msgid ""
-"When finger pressure drops below this value, the driver counts it as a "
-"release"
-msgstr "当手指压力小于此值时，驱动程序识别为手指松开。"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:78
-#, kde-format
-msgid ""
-"If palm detection should be enabled. Note that this also requires hardware/"
-"firmware support from the touchpad"
-msgstr "是否启用手掌检测。注意：此功能需要触摸板的硬件/固件支持。"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:81
-#, kde-format
-msgctxt "Touchpad"
-msgid "Palm Detection"
-msgstr "手掌检测"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/sensitivity.ui:93
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum width:"
-msgstr "最小宽度："
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/sensitivity.ui:103
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum pressure:"
-msgstr "最小压力："
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinWidth)
-#: kcm/xlib/ui/sensitivity.ui:113
-#, kde-format
-msgid "Minimum finger width at which touch is considered a palm"
-msgstr "触摸被识别为手掌的最小手指宽度"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinZ)
-#: kcm/xlib/ui/sensitivity.ui:129
-#, kde-format
-msgid "Minimum finger pressure at which touch is considered a palm"
-msgstr "触摸被识别为手掌的最小手指压力"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, TapForm)
-#: kcm/xlib/ui/tap.ui:14
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Taps"
-msgstr "轻触手势"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
-#: kcm/xlib/ui/tap.ui:28
-#, kde-format
-msgid "Tap to Click"
-msgstr "轻触点击"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/tap.ui:43
-#, kde-format
-msgctxt "Tapping"
-msgid "One finger:"
-msgstr "单指轻触："
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_OneFingerTapButton)
-#: kcm/xlib/ui/tap.ui:53
-#, kde-format
-msgid "Which mouse button is reported on a non-corner one-finger tap"
-msgstr "单指在非屏幕角落轻触时触发的鼠标键。"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/tap.ui:60
-#, kde-format
-msgctxt "Tapping"
-msgid "Two fingers:"
-msgstr "双指轻触："
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_TwoFingerTapButton)
-#: kcm/xlib/ui/tap.ui:70
-#, kde-format
-msgid "Which mouse button is reported on a non-corner two-finger tap"
-msgstr "双指在非屏幕角落轻触时触发的鼠标键。"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/tap.ui:77
-#, kde-format
-msgctxt "Tapping"
-msgid "Three fingers:"
-msgstr "三指轻触："
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_ThreeFingerTapButton)
-#: kcm/xlib/ui/tap.ui:87
-#, kde-format
-msgid "Which mouse button is reported on a non-corner three-finger tap"
-msgstr "三指在非屏幕角落轻触时触发的鼠标键。"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/tap.ui:107
-#, kde-format
-msgctxt "Touchpad"
-msgid "Corners"
-msgstr "触摸板四角轻触"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/tap.ui:131
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top left:"
-msgstr "左上角："
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LTCornerButton)
-#: kcm/xlib/ui/tap.ui:144
-#, kde-format
-msgid "Which mouse button is reported on a left top corner tap"
-msgstr "单指在触摸板左上角轻触时触发的鼠标键。"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/tap.ui:151
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom left:"
-msgstr "左下角："
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/tap.ui:164
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top right:"
-msgstr "右上角："
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LBCornerButton)
-#: kcm/xlib/ui/tap.ui:177
-#, kde-format
-msgid "Which mouse button is reported on a left bottom corner tap"
-msgstr "单指在触摸板左下角轻触时触发的鼠标键。"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
-#: kcm/xlib/ui/tap.ui:184
-#, kde-format
-msgid "Which mouse button is reported on a right top corner tap"
-msgstr "单指在触摸板右上角轻触时触发的鼠标键。"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
-#: kcm/xlib/ui/tap.ui:191
-#, kde-format
-msgid "Which mouse button is reported on a right bottom corner tap"
-msgstr "单指在触摸板右下角轻触时触发的鼠标键。"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/tap.ui:214
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom right:"
-msgstr "右下角："
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:251
-#, kde-format
-msgid ""
-"This gesture is an alternative way of dragging. It is performed by tapping "
-"(touching and releasing the finger), then touching again and moving the "
-"finger on the touchpad"
-msgstr ""
-"这个手势以另一种方式激活拖拽操作。首先轻触 (触摸并放开手指)，然后再次触摸触摸"
-"板并拖动手指。"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:254
-#, kde-format
-msgid "Tap-and-Drag Gesture"
-msgstr "轻触后拖拽手势"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:266
-#, kde-format
-msgid ""
-"If off, a tap-and-drag gesture ends when you release the finger. If on, the "
-"gesture is active until you tap a second time, or until timeout expires"
-msgstr ""
-"关闭此选项时，轻触后拖拽手势将在松开手指时结束。打开此选项时，该手势将保持激"
-"活状态，直到第二次轻触或者超时。"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:269
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Locked Drags"
-msgstr "锁定拖拽"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/tap.ui:284
-#, kde-format
-msgctxt "Locked drags"
-msgid "Timeout:"
-msgstr "超时："
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_LockedDragTimeout)
-#: kcm/xlib/ui/tap.ui:294
-#, kde-format
-msgid ""
-"How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
-"automatically turned off after the finger is released from the touchpad"
-msgstr "“锁定拖拽”模式在手指从触摸板松开多久后自动关闭"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/tap.ui:325
-#, kde-format
-msgid "Tap Detection"
-msgstr "轻触检测"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/tap.ui:340
-#, kde-format
-msgid "Maximum time:"
-msgstr "最大时间："
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/tap.ui:353
-#, kde-format
-msgid "Maximum finger movement:"
-msgstr "最大手指移动距离："
-
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#: kcm/xlib/ui/tap.ui:366
-#, kde-format
-msgid "Maximum time for double tap:"
-msgstr "最大双击时间："
-
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: kcm/xlib/ui/tap.ui:379
-#, kde-format
-msgid "Single tap timeout:"
-msgstr "单击超时："
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
-#: kcm/xlib/ui/tap.ui:389
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a tap"
-msgstr "识别为手指轻触的最大时间 (毫秒)"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/tap.ui:408
-#, kde-format
-msgid "Maximum movement of the finger for detecting a tap"
-msgstr "识别为手指轻触的最大手指移动距离"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#: kcm/xlib/ui/tap.ui:427
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a double tap"
-msgstr "识别为双击的最大时间 (毫秒)"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
-#: kcm/xlib/ui/tap.ui:446
-#, kde-format
-msgid "Timeout after a tap to recognize it as a single tap"
-msgstr "轻触后被识别为单指轻触的超时时间"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/testarea.ui:20
-#, kde-format
-msgid "Testing area"
-msgstr "测试区域"
-
-#. i18n: ectx: property (text), widget (TestButton, pushButton)
-#: kcm/xlib/ui/testarea.ui:29
-#, kde-format
-msgid "Click me"
-msgstr "点此测试"
-
 #: kded/kded.cpp:201
 #, kde-format
 msgid "Touchpad was disabled because a mouse was plugged in"
@@ -1363,3 +503,485 @@ msgstr "左边缘"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "左上角"
+
+#~ msgid "Drag me"
+#~ msgstr "拖拽测试"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Left button"
+#~ msgstr "左键"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Right button"
+#~ msgstr "右键"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Middle button"
+#~ msgstr "中键"
+
+#~ msgid ""
+#~ "Active settings don't match saved settings.\n"
+#~ "You currently see saved settings."
+#~ msgstr ""
+#~ "活动设置与保存的设置不匹配。\n"
+#~ "当前显示的是保存的设置。"
+
+#~ msgid "Show active settings"
+#~ msgstr "显示活动设置"
+
+#~ msgid "These settings won't take effect in the testing area"
+#~ msgstr "这些设置不影响测试区域"
+
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "启用/禁用触摸板"
+
+#~ msgctxt "@title:window"
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "启用/禁用触摸板"
+
+#~ msgid "Configure…"
+#~ msgstr "配置…"
+
+#~ msgid "Keyboard shortcuts:"
+#~ msgstr "键盘快捷键："
+
+#~ msgid "Disable touchpad when typing"
+#~ msgstr "键盘输入时禁用触摸板"
+
+#~ msgid "Timeout:"
+#~ msgstr "超时："
+
+#~ msgid ""
+#~ "If there was no keyboard activity for more than specified\n"
+#~ "number of milliseconds, touchpad will be enabled again"
+#~ msgstr ""
+#~ "如果在经过了指定的时间后没有键盘输入，\n"
+#~ "触摸板将会重新启用"
+
+#~ msgid " ms"
+#~ msgstr " 毫秒"
+
+#~ msgid ""
+#~ "Disable click emulation and scrolling.\n"
+#~ "You will be still able to move pointer using touchpad and perform clicks "
+#~ "with hardware buttons."
+#~ msgstr ""
+#~ "禁用点击模拟和滚动。\n"
+#~ "您仍可以使用触摸板移动光标和用硬件按钮点击。"
+
+#~ msgid "Disable taps and scrolling only"
+#~ msgstr "仅禁用轻触和滚动"
+
+#~ msgid "Disable touchpad when mouse is plugged in"
+#~ msgstr "插入鼠标时禁用触摸板"
+
+#~ msgid "Notifications:"
+#~ msgstr "通知："
+
+#~ msgid "Ignored devices:"
+#~ msgstr "忽略的设备："
+
+#~ msgid ""
+#~ "Some devices might be incorrectly treated as a mouse.\n"
+#~ "You can add them to this list so that they will be ignored when they're "
+#~ "plugged in."
+#~ msgstr ""
+#~ "某些设备可能会被错误地识别为鼠标。\n"
+#~ "您可以将这些设备添加到此列表中，它们将在插入时被忽略。"
+
+#~ msgid "Pointer Motion"
+#~ msgstr "光标移动方式"
+
+#~ msgctxt "Mouse pointer motion parameters"
+#~ msgid "Speed"
+#~ msgstr "速度"
+
+#~ msgctxt "Minimum pointer movement speed"
+#~ msgid "Minimum:"
+#~ msgstr "最小速度："
+
+#~ msgid "Minimum pointer speed"
+#~ msgstr "最小光标速度"
+
+#~ msgctxt "Maximum pointer movement speed"
+#~ msgid "Maximum:"
+#~ msgstr "最大速度："
+
+#~ msgid "Maximum pointer speed"
+#~ msgstr "最大光标速度"
+
+#~ msgctxt "Pointer acceleration"
+#~ msgid "Acceleration:"
+#~ msgstr "加速："
+
+#~ msgid "Acceleration factor for normal pointer movements"
+#~ msgstr "正常光标移动的加速系数"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Pressure-Dependent Motion"
+#~ msgstr "压力相关操作"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum pressure:"
+#~ msgstr "最小压力："
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum factor:"
+#~ msgstr "最小系数："
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum pressure:"
+#~ msgstr "最大压力："
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum factor:"
+#~ msgstr "最大系数："
+
+#~ msgid "Finger pressure at which minimum pressure motion factor is applied"
+#~ msgstr "最小压力移动系数对应的手指压力"
+
+#~ msgid "Finger pressure at which maximum pressure motion factor is applied"
+#~ msgstr "最大压力移动系数对应的手指压力"
+
+#~ msgid "Lowest setting for pressure motion factor"
+#~ msgstr "压力移动系数的最小值"
+
+#~ msgid "Greatest setting for pressure motion factor"
+#~ msgstr "压力移动系数的最大值"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Noise Cancellation"
+#~ msgstr "指针移动信号降噪"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Vertical:"
+#~ msgstr "垂直："
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Horizontal:"
+#~ msgstr "水平："
+
+#~ msgid ""
+#~ "The minimum vertical hardware distance required to generate motion events"
+#~ msgstr "识别为光标移动事件的最小垂直硬件距离"
+
+#~ msgid " units"
+#~ msgstr " 单位"
+
+#~ msgid ""
+#~ "The minimum horizontal hardware distance required to generate motion "
+#~ "events"
+#~ msgstr "识别为光标移动事件的最小水平硬件距离"
+
+#~ msgid "Scrolling"
+#~ msgstr "滚动手势"
+
+#~ msgid "Edge scrolling:"
+#~ msgstr "边缘滚动："
+
+#~ msgid "Enable vertical scrolling when dragging along the right edge"
+#~ msgstr "在触摸板右侧边缘拖拽时进行垂直滚动"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Vertical"
+#~ msgstr "垂直"
+
+#~ msgid "Enable horizontal scrolling when dragging along the bottom edge"
+#~ msgstr "在触摸板底部边缘拖拽时进行水平滚动"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Horizontal"
+#~ msgstr "水平"
+
+#~ msgid ""
+#~ "Enable vertical scrolling when dragging with two fingers anywhere on the "
+#~ "touchpad"
+#~ msgstr "在触摸板任意位置双指拖动时进行垂直滚动"
+
+#~ msgid ""
+#~ "Enable horizontal scrolling when dragging with two fingers anywhere on "
+#~ "the touchpad"
+#~ msgstr "在触摸板任意位置双指拖动时进行水平滚动"
+
+#~ msgid "Reverse vertical scrolling"
+#~ msgstr "反向垂直滚动"
+
+#~ msgid "Reverse horizontal scrolling"
+#~ msgstr "反向水平滚动"
+
+#~ msgid "Two-finger scrolling:"
+#~ msgstr "双指滚动："
+
+#~ msgid "Reverse scrolling:"
+#~ msgstr "反向滚动："
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Scrolling Distance"
+#~ msgstr "滚动距离"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Vertical:"
+#~ msgstr "垂直："
+
+#~ msgid "Move distance of the finger for a scroll event"
+#~ msgstr "触发一次滚动事件的手指移动距离"
+
+#~ msgid " mm"
+#~ msgstr " 毫米"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Horizontal:"
+#~ msgstr "水平："
+
+#~ msgid ""
+#~ "Continue scrolling after the finger is released from the edge of the "
+#~ "touchpad"
+#~ msgstr "手指从触摸板的边缘松开后继续滚动"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Coasting"
+#~ msgstr "惯性滚动"
+
+#~ msgctxt "Coasting"
+#~ msgid "Minimum speed:"
+#~ msgstr "最小速度："
+
+#~ msgid ""
+#~ "Your finger needs to produce this many scrolls per second in order to "
+#~ "start coasting"
+#~ msgstr "触发惯性滚动的每秒滚动次数"
+
+#~ msgid " scrolls/sec"
+#~ msgstr "次滚动/秒"
+
+#~ msgctxt "Coasting"
+#~ msgid "Deceleration:"
+#~ msgstr "减速："
+
+#~ msgid "Number of scrolls/second² to decrease the coasting speed"
+#~ msgstr "触发降低惯性滚动速度的滚动/秒²值"
+
+#~ msgid " scrolls/sec²"
+#~ msgstr "  次滚动/秒²"
+
+#~ msgid "Corner coasting:"
+#~ msgstr "四角惯性滚动："
+
+#~ msgid ""
+#~ "Enable edge scrolling to continue while the finger stays in an edge corner"
+#~ msgstr "手指滑动到触摸板四角并停留时，边缘滚动将继续进行"
+
+#~ msgctxt "Coasting"
+#~ msgid "Enable"
+#~ msgstr "启用"
+
+#~ msgid ""
+#~ "Scrolling is engaged when a drag starts in the given trigger region.\n"
+#~ "Moving your finger in clockwise circles around the center of the "
+#~ "touchpad\n"
+#~ "will scroll down and counter clockwise motion will scroll up"
+#~ msgstr ""
+#~ "在指定区域划圈时触发滚动。\n"
+#~ "绕触摸板中心顺时针划圈可向下滚动\n"
+#~ "绕触摸板中心逆时针划圈可向上滚动"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Circular Scrolling"
+#~ msgstr "划圈滚动"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Trigger region:"
+#~ msgstr "触发区域："
+
+#~ msgid "Trigger region on the touchpad to start circular scrolling"
+#~ msgstr "划圈滚动手势的触摸板触发区域"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Angle:"
+#~ msgstr "角度："
+
+#~ msgid "Move angle (degrees) of finger to generate a scroll event"
+#~ msgstr "识别为滚动事件的手指移动角度"
+
+#~ msgctxt "suffix - degrees (angle)"
+#~ msgid "°"
+#~ msgstr "°"
+
+#~ msgid ""
+#~ "When used together with vertical scrolling, hitting the upper or lower "
+#~ "right corner will seamlessly switch over from vertical to circular "
+#~ "scrolling"
+#~ msgstr ""
+#~ "配合垂直滚动使用时，手指滑动到触摸板的右上角或者左上角时，将从垂直滚动无缝"
+#~ "切换到划圈滚动"
+
+#~ msgid "Sensitivity"
+#~ msgstr "灵敏度"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Sensitivity"
+#~ msgstr "灵敏度"
+
+#~ msgid "Pressure for detecting a touch:"
+#~ msgstr "识别为触摸的压力："
+
+#~ msgid "Pressure for detecting a release:"
+#~ msgstr "识别为松开的压力："
+
+#~ msgid ""
+#~ "When finger pressure goes above this value, the driver counts it as a "
+#~ "touch"
+#~ msgstr "当手指压力大于此值时，驱动程序识别为手指触摸。"
+
+#~ msgid ""
+#~ "When finger pressure drops below this value, the driver counts it as a "
+#~ "release"
+#~ msgstr "当手指压力小于此值时，驱动程序识别为手指松开。"
+
+#~ msgid ""
+#~ "If palm detection should be enabled. Note that this also requires "
+#~ "hardware/firmware support from the touchpad"
+#~ msgstr "是否启用手掌检测。注意：此功能需要触摸板的硬件/固件支持。"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Palm Detection"
+#~ msgstr "手掌检测"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum width:"
+#~ msgstr "最小宽度："
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum pressure:"
+#~ msgstr "最小压力："
+
+#~ msgid "Minimum finger width at which touch is considered a palm"
+#~ msgstr "触摸被识别为手掌的最小手指宽度"
+
+#~ msgid "Minimum finger pressure at which touch is considered a palm"
+#~ msgstr "触摸被识别为手掌的最小手指压力"
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Taps"
+#~ msgstr "轻触手势"
+
+#~ msgid "Tap to Click"
+#~ msgstr "轻触点击"
+
+#~ msgctxt "Tapping"
+#~ msgid "One finger:"
+#~ msgstr "单指轻触："
+
+#~ msgid "Which mouse button is reported on a non-corner one-finger tap"
+#~ msgstr "单指在非屏幕角落轻触时触发的鼠标键。"
+
+#~ msgctxt "Tapping"
+#~ msgid "Two fingers:"
+#~ msgstr "双指轻触："
+
+#~ msgid "Which mouse button is reported on a non-corner two-finger tap"
+#~ msgstr "双指在非屏幕角落轻触时触发的鼠标键。"
+
+#~ msgctxt "Tapping"
+#~ msgid "Three fingers:"
+#~ msgstr "三指轻触："
+
+#~ msgid "Which mouse button is reported on a non-corner three-finger tap"
+#~ msgstr "三指在非屏幕角落轻触时触发的鼠标键。"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Corners"
+#~ msgstr "触摸板四角轻触"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top left:"
+#~ msgstr "左上角："
+
+#~ msgid "Which mouse button is reported on a left top corner tap"
+#~ msgstr "单指在触摸板左上角轻触时触发的鼠标键。"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom left:"
+#~ msgstr "左下角："
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top right:"
+#~ msgstr "右上角："
+
+#~ msgid "Which mouse button is reported on a left bottom corner tap"
+#~ msgstr "单指在触摸板左下角轻触时触发的鼠标键。"
+
+#~ msgid "Which mouse button is reported on a right top corner tap"
+#~ msgstr "单指在触摸板右上角轻触时触发的鼠标键。"
+
+#~ msgid "Which mouse button is reported on a right bottom corner tap"
+#~ msgstr "单指在触摸板右下角轻触时触发的鼠标键。"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom right:"
+#~ msgstr "右下角："
+
+#~ msgid ""
+#~ "This gesture is an alternative way of dragging. It is performed by "
+#~ "tapping (touching and releasing the finger), then touching again and "
+#~ "moving the finger on the touchpad"
+#~ msgstr ""
+#~ "这个手势以另一种方式激活拖拽操作。首先轻触 (触摸并放开手指)，然后再次触摸"
+#~ "触摸板并拖动手指。"
+
+#~ msgid "Tap-and-Drag Gesture"
+#~ msgstr "轻触后拖拽手势"
+
+#~ msgid ""
+#~ "If off, a tap-and-drag gesture ends when you release the finger. If on, "
+#~ "the gesture is active until you tap a second time, or until timeout "
+#~ "expires"
+#~ msgstr ""
+#~ "关闭此选项时，轻触后拖拽手势将在松开手指时结束。打开此选项时，该手势将保持"
+#~ "激活状态，直到第二次轻触或者超时。"
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Locked Drags"
+#~ msgstr "锁定拖拽"
+
+#~ msgctxt "Locked drags"
+#~ msgid "Timeout:"
+#~ msgstr "超时："
+
+#~ msgid ""
+#~ "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
+#~ "automatically turned off after the finger is released from the touchpad"
+#~ msgstr "“锁定拖拽”模式在手指从触摸板松开多久后自动关闭"
+
+#~ msgid "Tap Detection"
+#~ msgstr "轻触检测"
+
+#~ msgid "Maximum time:"
+#~ msgstr "最大时间："
+
+#~ msgid "Maximum finger movement:"
+#~ msgstr "最大手指移动距离："
+
+#~ msgid "Maximum time for double tap:"
+#~ msgstr "最大双击时间："
+
+#~ msgid "Single tap timeout:"
+#~ msgstr "单击超时："
+
+#~ msgid "Maximum time (in milliseconds) for detecting a tap"
+#~ msgstr "识别为手指轻触的最大时间 (毫秒)"
+
+#~ msgid "Maximum movement of the finger for detecting a tap"
+#~ msgstr "识别为手指轻触的最大手指移动距离"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a double tap"
+#~ msgstr "识别为双击的最大时间 (毫秒)"
+
+#~ msgid "Timeout after a tap to recognize it as a single tap"
+#~ msgstr "轻触后被识别为单指轻触的超时时间"
+
+#~ msgid "Testing area"
+#~ msgstr "测试区域"
+
+#~ msgid "Click me"
+#~ msgstr "点此测试"

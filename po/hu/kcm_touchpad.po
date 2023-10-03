@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2021-09-04 09:16+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -60,27 +60,27 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Kritikus hiba a(z) %1 érintőtábla eszközinformációinak olvasásakor."
 
-#: backends/x11/xlibbackend.cpp:74
+#: backends/x11/xlibbackend.cpp:71
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "Nem lehet kapcsolódni az X szerverhez"
 
-#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:94
+#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:94
 #, kde-format
 msgid "No touchpad found"
 msgstr "Nem található érintőtábla"
 
-#: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
+#: backends/x11/xlibbackend.cpp:124 backends/x11/xlibbackend.cpp:138
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "Nem lehet alkalmazni az érintőtábla beállításait"
 
-#: backends/x11/xlibbackend.cpp:164 backends/x11/xlibbackend.cpp:177
+#: backends/x11/xlibbackend.cpp:152 backends/x11/xlibbackend.cpp:165
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "Nem lehet olvasni az érintőtábla beállításait"
 
-#: backends/x11/xlibbackend.cpp:190
+#: backends/x11/xlibbackend.cpp:178
 #, kde-format
 msgid "Cannot read default touchpad configuration"
 msgstr "Nem lehet olvasni az érintőtábla alapértelmezett beállításait"
@@ -424,890 +424,6 @@ msgstr "Az értintőpárna nincs csatlakoztatva. A beállítóablak bezárva."
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Az értintőtábla nincs csatlakoztatva. Nem található másik érintőtábla."
 
-#: kcm/xlib/testarea.cpp:20
-#, kde-format
-msgid "Drag me"
-msgstr "Húzza ezt"
-
-#: kcm/xlib/testbutton.cpp:29
-#, kde-format
-msgctxt "Mouse button"
-msgid "Left button"
-msgstr "Bal gomb"
-
-#: kcm/xlib/testbutton.cpp:32
-#, kde-format
-msgctxt "Mouse button"
-msgid "Right button"
-msgstr "Jobb gomb"
-
-#: kcm/xlib/testbutton.cpp:35
-#, kde-format
-msgctxt "Mouse button"
-msgid "Middle button"
-msgstr "Középső gomb"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:96
-#, kde-format
-msgid ""
-"Active settings don't match saved settings.\n"
-"You currently see saved settings."
-msgstr ""
-"Az aktív beállítások nem egyeznek a mentett beállításokkal.\n"
-"Most a mentett beállításokat látja."
-
-#: kcm/xlib/touchpadconfigxlib.cpp:102
-#, kde-format
-msgid "Show active settings"
-msgstr "Aktív beállítások megjelenítése"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:139
-#, kde-format
-msgid "These settings won't take effect in the testing area"
-msgstr "Ezek a beállítások nem érvényesülnek a próbaterületen"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:144
-#, kde-format
-msgid "Enable/Disable Touchpad"
-msgstr "Érintőtábla be-/kikapcsolása"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
-#: kcm/xlib/ui/kded.ui:14
-#, kde-format
-msgctxt "@title:window"
-msgid "Enable/Disable Touchpad"
-msgstr "Érintőtábla be-/kikapcsolása"
-
-#. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
-#. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
-#: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
-#, kde-format
-msgid "Configure…"
-msgstr "Beállítások…"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/kded.ui:47
-#, kde-format
-msgid "Keyboard shortcuts:"
-msgstr "Gyorsbillentyűk:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:60
-#, kde-format
-msgid "Disable touchpad when typing"
-msgstr "Érintőtábla kikapcsolása gépeléskor"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/kded.ui:75
-#, kde-format
-msgid "Timeout:"
-msgstr "Időkorlát:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:86
-#, kde-format
-msgid ""
-"If there was no keyboard activity for more than specified\n"
-"number of milliseconds, touchpad will be enabled again"
-msgstr ""
-"Ha nincs aktivitás a billentyűzeten az ezredmásodpercekben\n"
-"megadott ideig, az érintőtábla újra bekapcsol."
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_SingleTapTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:98 kcm/xlib/ui/tap.ui:306 kcm/xlib/ui/tap.ui:401
-#: kcm/xlib/ui/tap.ui:439 kcm/xlib/ui/tap.ui:458
-#, kde-format
-msgid " ms"
-msgstr " ms"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:106
-#, kde-format
-msgid ""
-"Disable click emulation and scrolling.\n"
-"You will be still able to move pointer using touchpad and perform clicks "
-"with hardware buttons."
-msgstr ""
-"Kattintásemuláció és görgetés kikapcsolása.\n"
-"A kurzort továbbra is mozgathatja az érintőtáblával, és kattinthat a fizikai "
-"gombokkal."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:109
-#, kde-format
-msgid "Disable taps and scrolling only"
-msgstr "Csak a koppintás és görgetés kikapcsolása"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
-#: kcm/xlib/ui/kded.ui:119
-#, kde-format
-msgid "Disable touchpad when mouse is plugged in"
-msgstr "Érintőtábla kikapcsolása, ha az egér csatlakoztatva van"
-
-#. i18n: ectx: property (text), widget (QLabel, notificationsLabel)
-#: kcm/xlib/ui/kded.ui:136
-#, kde-format
-msgid "Notifications:"
-msgstr "Értesítések:"
-
-#. i18n: ectx: property (text), widget (QLabel, ignoredDevLabel)
-#: kcm/xlib/ui/kded.ui:158
-#, kde-format
-msgid "Ignored devices:"
-msgstr "Mellőzött eszközök:"
-
-#. i18n: ectx: property (toolTip), widget (KEditListWidget, kcfg_MouseBlacklist)
-#: kcm/xlib/ui/kded.ui:169
-#, kde-format
-msgid ""
-"Some devices might be incorrectly treated as a mouse.\n"
-"You can add them to this list so that they will be ignored when they're "
-"plugged in."
-msgstr ""
-"Néhány eszközt a rendszer helytelenül egérként ismer fel.\n"
-"Ezeket hozzáadhatja ehhez a listához, így csatlakoztatáskor mellőzve lesznek."
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
-#: kcm/xlib/ui/pointermotion.ui:14
-#, kde-format
-msgid "Pointer Motion"
-msgstr "Mutató mozgás"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/pointermotion.ui:20
-#, kde-format
-msgctxt "Mouse pointer motion parameters"
-msgid "Speed"
-msgstr "Sebesség"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/pointermotion.ui:29
-#, kde-format
-msgctxt "Minimum pointer movement speed"
-msgid "Minimum:"
-msgstr "Minimum:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MinSpeed)
-#: kcm/xlib/ui/pointermotion.ui:39
-#, kde-format
-msgid "Minimum pointer speed"
-msgstr "A mutató minimális sebessége"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/pointermotion.ui:52
-#, kde-format
-msgctxt "Maximum pointer movement speed"
-msgid "Maximum:"
-msgstr "Maximum:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MaxSpeed)
-#: kcm/xlib/ui/pointermotion.ui:62
-#, kde-format
-msgid "Maximum pointer speed"
-msgstr "A mutató maximális sebessége"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/pointermotion.ui:75
-#, kde-format
-msgctxt "Pointer acceleration"
-msgid "Acceleration:"
-msgstr "Gyorsulás:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
-#: kcm/xlib/ui/pointermotion.ui:85
-#, kde-format
-msgid "Acceleration factor for normal pointer movements"
-msgstr "Gyorsítási tényező a normál mutatómozgásoknál"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/pointermotion.ui:101
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Pressure-Dependent Motion"
-msgstr "Nyomásfüggő mozgás"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/pointermotion.ui:113
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum pressure:"
-msgstr "Minimális nyomás:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/pointermotion.ui:123
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum factor:"
-msgstr "Minimális szorzó:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/pointermotion.ui:133
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum pressure:"
-msgstr "Maximális szorzó:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/pointermotion.ui:143
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum factor:"
-msgstr "Maximális szorzó:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMinZ)
-#: kcm/xlib/ui/pointermotion.ui:153
-#, kde-format
-msgid "Finger pressure at which minimum pressure motion factor is applied"
-msgstr ""
-"Nyomás, amelynél a minimális nyomási mozgástényező-szorzó alkalmazva lesz"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
-#: kcm/xlib/ui/pointermotion.ui:166
-#, kde-format
-msgid "Finger pressure at which maximum pressure motion factor is applied"
-msgstr ""
-"Nyomás, amelynél a maximális nyomási mozgástényező-szorzó alkalmazva lesz"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
-#: kcm/xlib/ui/pointermotion.ui:179
-#, kde-format
-msgid "Lowest setting for pressure motion factor"
-msgstr "A nyomási mozgástényező legalacsonyabb értéke"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMaxFactor)
-#: kcm/xlib/ui/pointermotion.ui:189
-#, kde-format
-msgid "Greatest setting for pressure motion factor"
-msgstr "A nyomási mozgástényező legmagasabb értéke"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/pointermotion.ui:202
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Noise Cancellation"
-msgstr "Zajkioltás"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/pointermotion.ui:214
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Vertical:"
-msgstr "Függőleges:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/pointermotion.ui:224
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Horizontal:"
-msgstr "Vízszintes:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_VertHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:234
-#, kde-format
-msgid ""
-"The minimum vertical hardware distance required to generate motion events"
-msgstr ""
-"A minimális függőleges hardveres távolság mozgási események kiváltásához"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_VertHysteresis)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:243 kcm/xlib/ui/pointermotion.ui:259
-#, kde-format
-msgid " units"
-msgstr " egység"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:250
-#, kde-format
-msgid ""
-"The minimum horizontal hardware distance required to generate motion events"
-msgstr ""
-"A minimális vízszintes hardveres távolság mozgási események kiváltásához"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, ScrollForm)
-#: kcm/xlib/ui/scroll.ui:14
-#, kde-format
-msgid "Scrolling"
-msgstr "Görgetés"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/scroll.ui:28
-#, kde-format
-msgid "Edge scrolling:"
-msgstr "Élgörgetés:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:38
-#, kde-format
-msgid "Enable vertical scrolling when dragging along the right edge"
-msgstr "Függőleges görgetés bekapcsolása a jobb oldali szélen húzáskor"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:41 kcm/xlib/ui/scroll.ui:61 kcm/xlib/ui/scroll.ui:81
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Vertical"
-msgstr "Függőleges"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:48
-#, kde-format
-msgid "Enable horizontal scrolling when dragging along the bottom edge"
-msgstr "Vízszines görgetés bekapcsolása az alsó szélen húzáskor"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:51 kcm/xlib/ui/scroll.ui:71 kcm/xlib/ui/scroll.ui:91
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Horizontal"
-msgstr "Vízszintes"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:58
-#, kde-format
-msgid ""
-"Enable vertical scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr "Függőleges görgetés bekapcsolása két ujj húzásakor az érintőtáblán"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:68
-#, kde-format
-msgid ""
-"Enable horizontal scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr "Vízszintes görgetés bekapcsolása két ujj húzásakor az érintőtáblán"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:78
-#, kde-format
-msgid "Reverse vertical scrolling"
-msgstr "Fordított függőleges görgetés"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:88
-#, kde-format
-msgid "Reverse horizontal scrolling"
-msgstr "Fordított vízszintes görgetés"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/scroll.ui:98
-#, kde-format
-msgid "Two-finger scrolling:"
-msgstr "Kétujjas görgetés:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/scroll.ui:108
-#, kde-format
-msgid "Reverse scrolling:"
-msgstr "Fordított görgetés:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/scroll.ui:126
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Scrolling Distance"
-msgstr "Görgetési távolság"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/scroll.ui:138
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Vertical:"
-msgstr "Függőleges:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
-#, kde-format
-msgid "Move distance of the finger for a scroll event"
-msgstr "Ujjmozgás hossza görgetési eseményhez"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/scroll.ui:157 kcm/xlib/ui/scroll.ui:186 kcm/xlib/ui/tap.ui:417
-#, kde-format
-msgid " mm"
-msgstr " mm"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/scroll.ui:167
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Horizontal:"
-msgstr "Vízszintes:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:199
-#, kde-format
-msgid ""
-"Continue scrolling after the finger is released from the edge of the touchpad"
-msgstr "Görgetés folytatása az érintőtábla élének elengedése után"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:202
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Coasting"
-msgstr "Siklás"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/scroll.ui:217
-#, kde-format
-msgctxt "Coasting"
-msgid "Minimum speed:"
-msgstr "Minimális sebesség:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:227
-#, kde-format
-msgid ""
-"Your finger needs to produce this many scrolls per second in order to start "
-"coasting"
-msgstr ""
-"Ennyiszer kell másodpercenként görgetnie az ujjával a siklás elindításához"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:233
-#, kde-format
-msgid " scrolls/sec"
-msgstr " görgetés/s"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/scroll.ui:240
-#, kde-format
-msgctxt "Coasting"
-msgid "Deceleration:"
-msgstr "Lassulás:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:250
-#, kde-format
-msgid "Number of scrolls/second² to decrease the coasting speed"
-msgstr "A siklási sebesség csökkenésének mértéke, görgetés/másodperc²"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:256
-#, kde-format
-msgid " scrolls/sec²"
-msgstr " görgetés/s²"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/scroll.ui:263
-#, kde-format
-msgid "Corner coasting:"
-msgstr "Siklás a sarokban:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:273
-#, kde-format
-msgid ""
-"Enable edge scrolling to continue while the finger stays in an edge corner"
-msgstr "Élgörgetés folytatása, ha az ujj a sarokban marad"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:276
-#, kde-format
-msgctxt "Coasting"
-msgid "Enable"
-msgstr "Bekapcsolás"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:288
-#, kde-format
-msgid ""
-"Scrolling is engaged when a drag starts in the given trigger region.\n"
-"Moving your finger in clockwise circles around the center of the touchpad\n"
-"will scroll down and counter clockwise motion will scroll up"
-msgstr ""
-"A görgetés akkor kezdődik, ha húzás történik az előre meghatározott "
-"területen.\n"
-"Az érintőtábla középponta körül az óramutató járása szerinti irányba körözve "
-"lefelé\n"
-"görgethet, az óramutatóval ellentétes irányba körözve felfelé"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:291
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Circular Scrolling"
-msgstr "Körkörös görgetés"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/scroll.ui:306
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Trigger region:"
-msgstr "Terület:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
-#: kcm/xlib/ui/scroll.ui:316
-#, kde-format
-msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr "A körkörös görgetés kiváltásához meghatározott terület"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/scroll.ui:323
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Angle:"
-msgstr "Szög:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:345
-#, kde-format
-msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr "Az a szög (fokban), amelyben az ujjat mozgatva görgetés történik"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:348
-#, kde-format
-msgctxt "suffix - degrees (angle)"
-msgid "°"
-msgstr "°"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/scroll.ui:355
-#, kde-format
-msgid ""
-"When used together with vertical scrolling, hitting the upper or lower right "
-"corner will seamlessly switch over from vertical to circular scrolling"
-msgstr ""
-"Ha a függőleges görgetéssel együtt használja, a jobb felső vagy alsó sarok "
-"érintésével átválthat függőlegesről körkörös görgetésre"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
-#: kcm/xlib/ui/sensitivity.ui:14
-#, kde-format
-msgid "Sensitivity"
-msgstr "Érzékenység"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/sensitivity.ui:20
-#, kde-format
-msgctxt "Touchpad"
-msgid "Sensitivity"
-msgstr "Érzékenység"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/sensitivity.ui:29
-#, kde-format
-msgid "Pressure for detecting a touch:"
-msgstr "Érintés felismeréséhez:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/sensitivity.ui:39
-#, kde-format
-msgid "Pressure for detecting a release:"
-msgstr "Felengedés felismeréséhez:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerHigh)
-#: kcm/xlib/ui/sensitivity.ui:49
-#, kde-format
-msgid ""
-"When finger pressure goes above this value, the driver counts it as a touch"
-msgstr ""
-"Ha az ujj ennél nagyobb erővel nyomja az érintőtáblát, az illesztőprogram "
-"érintésként ismeri fel azt"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerLow)
-#: kcm/xlib/ui/sensitivity.ui:62
-#, kde-format
-msgid ""
-"When finger pressure drops below this value, the driver counts it as a "
-"release"
-msgstr ""
-"Ha az ujj ennél kisebb értékkel nyomja az érintőtáblát, az illesztőprogram "
-"felengedésként ismeri fel azt"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:78
-#, kde-format
-msgid ""
-"If palm detection should be enabled. Note that this also requires hardware/"
-"firmware support from the touchpad"
-msgstr ""
-"Legyen-e tenyérfelismerés? Fontos tudnia, hogy ehhez hardver és firmware "
-"támogatás is szükséges az érintőtábla oldaláról"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:81
-#, kde-format
-msgctxt "Touchpad"
-msgid "Palm Detection"
-msgstr "Tenyérfelismerés"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/sensitivity.ui:93
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum width:"
-msgstr "Minimális szélesség:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/sensitivity.ui:103
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum pressure:"
-msgstr "Minimális nyomás:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinWidth)
-#: kcm/xlib/ui/sensitivity.ui:113
-#, kde-format
-msgid "Minimum finger width at which touch is considered a palm"
-msgstr "Minimális szélesség, amitől az érintés tenyérnek számít"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinZ)
-#: kcm/xlib/ui/sensitivity.ui:129
-#, kde-format
-msgid "Minimum finger pressure at which touch is considered a palm"
-msgstr "Minimális nyomás, amitől az érintés tenyérnek számít"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, TapForm)
-#: kcm/xlib/ui/tap.ui:14
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Taps"
-msgstr "Koppintások"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
-#: kcm/xlib/ui/tap.ui:28
-#, kde-format
-msgid "Tap to Click"
-msgstr "Koppintással kattintás"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/tap.ui:43
-#, kde-format
-msgctxt "Tapping"
-msgid "One finger:"
-msgstr "Egy ujjal:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_OneFingerTapButton)
-#: kcm/xlib/ui/tap.ui:53
-#, kde-format
-msgid "Which mouse button is reported on a non-corner one-finger tap"
-msgstr ""
-"Melyik egérgombnak feleljen meg az egyujjas koppintás, ha nem sarokban "
-"történik"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/tap.ui:60
-#, kde-format
-msgctxt "Tapping"
-msgid "Two fingers:"
-msgstr "Két ujjal:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_TwoFingerTapButton)
-#: kcm/xlib/ui/tap.ui:70
-#, kde-format
-msgid "Which mouse button is reported on a non-corner two-finger tap"
-msgstr ""
-"Melyik egérgombnak feleljen meg a kétujjas koppintás, ha nem sarokban "
-"történik"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/tap.ui:77
-#, kde-format
-msgctxt "Tapping"
-msgid "Three fingers:"
-msgstr "Három ujjal:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_ThreeFingerTapButton)
-#: kcm/xlib/ui/tap.ui:87
-#, kde-format
-msgid "Which mouse button is reported on a non-corner three-finger tap"
-msgstr ""
-"Melyik egérgombnak feleljen meg a háromujjas koppintás, ha nem sarokban "
-"történik"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/tap.ui:107
-#, kde-format
-msgctxt "Touchpad"
-msgid "Corners"
-msgstr "Sarkok"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/tap.ui:131
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top left:"
-msgstr "Bal felső:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LTCornerButton)
-#: kcm/xlib/ui/tap.ui:144
-#, kde-format
-msgid "Which mouse button is reported on a left top corner tap"
-msgstr "Melyik egérgombnak feleljen meg a bal felső sarokban koppintás"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/tap.ui:151
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom left:"
-msgstr "Bal alsó:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/tap.ui:164
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top right:"
-msgstr "Jobb felső:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LBCornerButton)
-#: kcm/xlib/ui/tap.ui:177
-#, kde-format
-msgid "Which mouse button is reported on a left bottom corner tap"
-msgstr "Melyik egérgombnak feleljen meg a bal alsó sarokban koppintás"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
-#: kcm/xlib/ui/tap.ui:184
-#, kde-format
-msgid "Which mouse button is reported on a right top corner tap"
-msgstr "Melyik egérgombnak feleljen meg a jobb felső sarokban koppintás"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
-#: kcm/xlib/ui/tap.ui:191
-#, kde-format
-msgid "Which mouse button is reported on a right bottom corner tap"
-msgstr "Melyik egérgombnak feleljen meg a jobb alsó sarokban koppintás"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/tap.ui:214
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom right:"
-msgstr "Jobb alsó:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:251
-#, kde-format
-msgid ""
-"This gesture is an alternative way of dragging. It is performed by tapping "
-"(touching and releasing the finger), then touching again and moving the "
-"finger on the touchpad"
-msgstr ""
-"Ez a mozdulat a húzás alternatív módja. Koppintással (az ujj érintésével és "
-"felengedésével) történik, majd újabb érintéssel és az ujj mozgatásával az "
-"érintőtáblán"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:254
-#, kde-format
-msgid "Tap-and-Drag Gesture"
-msgstr "Koppintás és húzás mozdulat"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:266
-#, kde-format
-msgid ""
-"If off, a tap-and-drag gesture ends when you release the finger. If on, the "
-"gesture is active until you tap a second time, or until timeout expires"
-msgstr ""
-"Ha ki van kapcsolva, a koppintás és húzás mozdulat akkor ér véget, ha "
-"felengedi az ujját. Ha be van kapcsolva, a mozdulat a második koppintásig, "
-"vagy az időkorlát lejártáig tart"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:269
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Locked Drags"
-msgstr "Húzás rögzítése"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/tap.ui:284
-#, kde-format
-msgctxt "Locked drags"
-msgid "Timeout:"
-msgstr "Időkorlát:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_LockedDragTimeout)
-#: kcm/xlib/ui/tap.ui:294
-#, kde-format
-msgid ""
-"How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
-"automatically turned off after the finger is released from the touchpad"
-msgstr ""
-"A húzás rögzítésének automatikus feloldása (ezredmásodpercekben) az ujj "
-"érintőtábláról felengedése után"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/tap.ui:325
-#, kde-format
-msgid "Tap Detection"
-msgstr "Koppintás-érzékelés"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/tap.ui:340
-#, kde-format
-msgid "Maximum time:"
-msgstr "Időmaximum:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/tap.ui:353
-#, kde-format
-msgid "Maximum finger movement:"
-msgstr "Ujjmozgás maximuma:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#: kcm/xlib/ui/tap.ui:366
-#, kde-format
-msgid "Maximum time for double tap:"
-msgstr "Dupla koppintás időkorlátja:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: kcm/xlib/ui/tap.ui:379
-#, kde-format
-msgid "Single tap timeout:"
-msgstr "Egyszeres koppintás időkorlátja:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
-#: kcm/xlib/ui/tap.ui:389
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a tap"
-msgstr "Koppintás felismerésének maximális ideje (ezredmásodpercekben)"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/tap.ui:408
-#, kde-format
-msgid "Maximum movement of the finger for detecting a tap"
-msgstr "Az ujj mozgásának maximuma koppintás felismeréséhez"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#: kcm/xlib/ui/tap.ui:427
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a double tap"
-msgstr "Dupla érintés felismerésének maximális ideje (ezredmásodpercekben)"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
-#: kcm/xlib/ui/tap.ui:446
-#, kde-format
-msgid "Timeout after a tap to recognize it as a single tap"
-msgstr "Érintés egyszeres érintésként felismerésének időkorlátja"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/testarea.ui:20
-#, kde-format
-msgid "Testing area"
-msgstr "Próbaterület"
-
-#. i18n: ectx: property (text), widget (TestButton, pushButton)
-#: kcm/xlib/ui/testarea.ui:29
-#, kde-format
-msgid "Click me"
-msgstr "Kattintson ide"
-
 #: kded/kded.cpp:201
 #, kde-format
 msgid "Touchpad was disabled because a mouse was plugged in"
@@ -1408,6 +524,513 @@ msgstr "Bal oldali él"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Bal felső sarok"
+
+#~ msgid "Drag me"
+#~ msgstr "Húzza ezt"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Left button"
+#~ msgstr "Bal gomb"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Right button"
+#~ msgstr "Jobb gomb"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Middle button"
+#~ msgstr "Középső gomb"
+
+#~ msgid ""
+#~ "Active settings don't match saved settings.\n"
+#~ "You currently see saved settings."
+#~ msgstr ""
+#~ "Az aktív beállítások nem egyeznek a mentett beállításokkal.\n"
+#~ "Most a mentett beállításokat látja."
+
+#~ msgid "Show active settings"
+#~ msgstr "Aktív beállítások megjelenítése"
+
+#~ msgid "These settings won't take effect in the testing area"
+#~ msgstr "Ezek a beállítások nem érvényesülnek a próbaterületen"
+
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "Érintőtábla be-/kikapcsolása"
+
+#~ msgctxt "@title:window"
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "Érintőtábla be-/kikapcsolása"
+
+#~ msgid "Configure…"
+#~ msgstr "Beállítások…"
+
+#~ msgid "Keyboard shortcuts:"
+#~ msgstr "Gyorsbillentyűk:"
+
+#~ msgid "Disable touchpad when typing"
+#~ msgstr "Érintőtábla kikapcsolása gépeléskor"
+
+#~ msgid "Timeout:"
+#~ msgstr "Időkorlát:"
+
+#~ msgid ""
+#~ "If there was no keyboard activity for more than specified\n"
+#~ "number of milliseconds, touchpad will be enabled again"
+#~ msgstr ""
+#~ "Ha nincs aktivitás a billentyűzeten az ezredmásodpercekben\n"
+#~ "megadott ideig, az érintőtábla újra bekapcsol."
+
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "Disable click emulation and scrolling.\n"
+#~ "You will be still able to move pointer using touchpad and perform clicks "
+#~ "with hardware buttons."
+#~ msgstr ""
+#~ "Kattintásemuláció és görgetés kikapcsolása.\n"
+#~ "A kurzort továbbra is mozgathatja az érintőtáblával, és kattinthat a "
+#~ "fizikai gombokkal."
+
+#~ msgid "Disable taps and scrolling only"
+#~ msgstr "Csak a koppintás és görgetés kikapcsolása"
+
+#~ msgid "Disable touchpad when mouse is plugged in"
+#~ msgstr "Érintőtábla kikapcsolása, ha az egér csatlakoztatva van"
+
+#~ msgid "Notifications:"
+#~ msgstr "Értesítések:"
+
+#~ msgid "Ignored devices:"
+#~ msgstr "Mellőzött eszközök:"
+
+#~ msgid ""
+#~ "Some devices might be incorrectly treated as a mouse.\n"
+#~ "You can add them to this list so that they will be ignored when they're "
+#~ "plugged in."
+#~ msgstr ""
+#~ "Néhány eszközt a rendszer helytelenül egérként ismer fel.\n"
+#~ "Ezeket hozzáadhatja ehhez a listához, így csatlakoztatáskor mellőzve "
+#~ "lesznek."
+
+#~ msgid "Pointer Motion"
+#~ msgstr "Mutató mozgás"
+
+#~ msgctxt "Mouse pointer motion parameters"
+#~ msgid "Speed"
+#~ msgstr "Sebesség"
+
+#~ msgctxt "Minimum pointer movement speed"
+#~ msgid "Minimum:"
+#~ msgstr "Minimum:"
+
+#~ msgid "Minimum pointer speed"
+#~ msgstr "A mutató minimális sebessége"
+
+#~ msgctxt "Maximum pointer movement speed"
+#~ msgid "Maximum:"
+#~ msgstr "Maximum:"
+
+#~ msgid "Maximum pointer speed"
+#~ msgstr "A mutató maximális sebessége"
+
+#~ msgctxt "Pointer acceleration"
+#~ msgid "Acceleration:"
+#~ msgstr "Gyorsulás:"
+
+#~ msgid "Acceleration factor for normal pointer movements"
+#~ msgstr "Gyorsítási tényező a normál mutatómozgásoknál"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Pressure-Dependent Motion"
+#~ msgstr "Nyomásfüggő mozgás"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum pressure:"
+#~ msgstr "Minimális nyomás:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum factor:"
+#~ msgstr "Minimális szorzó:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum pressure:"
+#~ msgstr "Maximális szorzó:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum factor:"
+#~ msgstr "Maximális szorzó:"
+
+#~ msgid "Finger pressure at which minimum pressure motion factor is applied"
+#~ msgstr ""
+#~ "Nyomás, amelynél a minimális nyomási mozgástényező-szorzó alkalmazva lesz"
+
+#~ msgid "Finger pressure at which maximum pressure motion factor is applied"
+#~ msgstr ""
+#~ "Nyomás, amelynél a maximális nyomási mozgástényező-szorzó alkalmazva lesz"
+
+#~ msgid "Lowest setting for pressure motion factor"
+#~ msgstr "A nyomási mozgástényező legalacsonyabb értéke"
+
+#~ msgid "Greatest setting for pressure motion factor"
+#~ msgstr "A nyomási mozgástényező legmagasabb értéke"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Noise Cancellation"
+#~ msgstr "Zajkioltás"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Vertical:"
+#~ msgstr "Függőleges:"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Horizontal:"
+#~ msgstr "Vízszintes:"
+
+#~ msgid ""
+#~ "The minimum vertical hardware distance required to generate motion events"
+#~ msgstr ""
+#~ "A minimális függőleges hardveres távolság mozgási események kiváltásához"
+
+#~ msgid " units"
+#~ msgstr " egység"
+
+#~ msgid ""
+#~ "The minimum horizontal hardware distance required to generate motion "
+#~ "events"
+#~ msgstr ""
+#~ "A minimális vízszintes hardveres távolság mozgási események kiváltásához"
+
+#~ msgid "Scrolling"
+#~ msgstr "Görgetés"
+
+#~ msgid "Edge scrolling:"
+#~ msgstr "Élgörgetés:"
+
+#~ msgid "Enable vertical scrolling when dragging along the right edge"
+#~ msgstr "Függőleges görgetés bekapcsolása a jobb oldali szélen húzáskor"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Vertical"
+#~ msgstr "Függőleges"
+
+#~ msgid "Enable horizontal scrolling when dragging along the bottom edge"
+#~ msgstr "Vízszines görgetés bekapcsolása az alsó szélen húzáskor"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Horizontal"
+#~ msgstr "Vízszintes"
+
+#~ msgid ""
+#~ "Enable vertical scrolling when dragging with two fingers anywhere on the "
+#~ "touchpad"
+#~ msgstr "Függőleges görgetés bekapcsolása két ujj húzásakor az érintőtáblán"
+
+#~ msgid ""
+#~ "Enable horizontal scrolling when dragging with two fingers anywhere on "
+#~ "the touchpad"
+#~ msgstr "Vízszintes görgetés bekapcsolása két ujj húzásakor az érintőtáblán"
+
+#~ msgid "Reverse vertical scrolling"
+#~ msgstr "Fordított függőleges görgetés"
+
+#~ msgid "Reverse horizontal scrolling"
+#~ msgstr "Fordított vízszintes görgetés"
+
+#~ msgid "Two-finger scrolling:"
+#~ msgstr "Kétujjas görgetés:"
+
+#~ msgid "Reverse scrolling:"
+#~ msgstr "Fordított görgetés:"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Scrolling Distance"
+#~ msgstr "Görgetési távolság"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Vertical:"
+#~ msgstr "Függőleges:"
+
+#~ msgid "Move distance of the finger for a scroll event"
+#~ msgstr "Ujjmozgás hossza görgetési eseményhez"
+
+#~ msgid " mm"
+#~ msgstr " mm"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Horizontal:"
+#~ msgstr "Vízszintes:"
+
+#~ msgid ""
+#~ "Continue scrolling after the finger is released from the edge of the "
+#~ "touchpad"
+#~ msgstr "Görgetés folytatása az érintőtábla élének elengedése után"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Coasting"
+#~ msgstr "Siklás"
+
+#~ msgctxt "Coasting"
+#~ msgid "Minimum speed:"
+#~ msgstr "Minimális sebesség:"
+
+#~ msgid ""
+#~ "Your finger needs to produce this many scrolls per second in order to "
+#~ "start coasting"
+#~ msgstr ""
+#~ "Ennyiszer kell másodpercenként görgetnie az ujjával a siklás elindításához"
+
+#~ msgid " scrolls/sec"
+#~ msgstr " görgetés/s"
+
+#~ msgctxt "Coasting"
+#~ msgid "Deceleration:"
+#~ msgstr "Lassulás:"
+
+#~ msgid "Number of scrolls/second² to decrease the coasting speed"
+#~ msgstr "A siklási sebesség csökkenésének mértéke, görgetés/másodperc²"
+
+#~ msgid " scrolls/sec²"
+#~ msgstr " görgetés/s²"
+
+#~ msgid "Corner coasting:"
+#~ msgstr "Siklás a sarokban:"
+
+#~ msgid ""
+#~ "Enable edge scrolling to continue while the finger stays in an edge corner"
+#~ msgstr "Élgörgetés folytatása, ha az ujj a sarokban marad"
+
+#~ msgctxt "Coasting"
+#~ msgid "Enable"
+#~ msgstr "Bekapcsolás"
+
+#~ msgid ""
+#~ "Scrolling is engaged when a drag starts in the given trigger region.\n"
+#~ "Moving your finger in clockwise circles around the center of the "
+#~ "touchpad\n"
+#~ "will scroll down and counter clockwise motion will scroll up"
+#~ msgstr ""
+#~ "A görgetés akkor kezdődik, ha húzás történik az előre meghatározott "
+#~ "területen.\n"
+#~ "Az érintőtábla középponta körül az óramutató járása szerinti irányba "
+#~ "körözve lefelé\n"
+#~ "görgethet, az óramutatóval ellentétes irányba körözve felfelé"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Circular Scrolling"
+#~ msgstr "Körkörös görgetés"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Trigger region:"
+#~ msgstr "Terület:"
+
+#~ msgid "Trigger region on the touchpad to start circular scrolling"
+#~ msgstr "A körkörös görgetés kiváltásához meghatározott terület"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Angle:"
+#~ msgstr "Szög:"
+
+#~ msgid "Move angle (degrees) of finger to generate a scroll event"
+#~ msgstr "Az a szög (fokban), amelyben az ujjat mozgatva görgetés történik"
+
+#~ msgctxt "suffix - degrees (angle)"
+#~ msgid "°"
+#~ msgstr "°"
+
+#~ msgid ""
+#~ "When used together with vertical scrolling, hitting the upper or lower "
+#~ "right corner will seamlessly switch over from vertical to circular "
+#~ "scrolling"
+#~ msgstr ""
+#~ "Ha a függőleges görgetéssel együtt használja, a jobb felső vagy alsó "
+#~ "sarok érintésével átválthat függőlegesről körkörös görgetésre"
+
+#~ msgid "Sensitivity"
+#~ msgstr "Érzékenység"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Sensitivity"
+#~ msgstr "Érzékenység"
+
+#~ msgid "Pressure for detecting a touch:"
+#~ msgstr "Érintés felismeréséhez:"
+
+#~ msgid "Pressure for detecting a release:"
+#~ msgstr "Felengedés felismeréséhez:"
+
+#~ msgid ""
+#~ "When finger pressure goes above this value, the driver counts it as a "
+#~ "touch"
+#~ msgstr ""
+#~ "Ha az ujj ennél nagyobb erővel nyomja az érintőtáblát, az illesztőprogram "
+#~ "érintésként ismeri fel azt"
+
+#~ msgid ""
+#~ "When finger pressure drops below this value, the driver counts it as a "
+#~ "release"
+#~ msgstr ""
+#~ "Ha az ujj ennél kisebb értékkel nyomja az érintőtáblát, az "
+#~ "illesztőprogram felengedésként ismeri fel azt"
+
+#~ msgid ""
+#~ "If palm detection should be enabled. Note that this also requires "
+#~ "hardware/firmware support from the touchpad"
+#~ msgstr ""
+#~ "Legyen-e tenyérfelismerés? Fontos tudnia, hogy ehhez hardver és firmware "
+#~ "támogatás is szükséges az érintőtábla oldaláról"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Palm Detection"
+#~ msgstr "Tenyérfelismerés"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum width:"
+#~ msgstr "Minimális szélesség:"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum pressure:"
+#~ msgstr "Minimális nyomás:"
+
+#~ msgid "Minimum finger width at which touch is considered a palm"
+#~ msgstr "Minimális szélesség, amitől az érintés tenyérnek számít"
+
+#~ msgid "Minimum finger pressure at which touch is considered a palm"
+#~ msgstr "Minimális nyomás, amitől az érintés tenyérnek számít"
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Taps"
+#~ msgstr "Koppintások"
+
+#~ msgid "Tap to Click"
+#~ msgstr "Koppintással kattintás"
+
+#~ msgctxt "Tapping"
+#~ msgid "One finger:"
+#~ msgstr "Egy ujjal:"
+
+#~ msgid "Which mouse button is reported on a non-corner one-finger tap"
+#~ msgstr ""
+#~ "Melyik egérgombnak feleljen meg az egyujjas koppintás, ha nem sarokban "
+#~ "történik"
+
+#~ msgctxt "Tapping"
+#~ msgid "Two fingers:"
+#~ msgstr "Két ujjal:"
+
+#~ msgid "Which mouse button is reported on a non-corner two-finger tap"
+#~ msgstr ""
+#~ "Melyik egérgombnak feleljen meg a kétujjas koppintás, ha nem sarokban "
+#~ "történik"
+
+#~ msgctxt "Tapping"
+#~ msgid "Three fingers:"
+#~ msgstr "Három ujjal:"
+
+#~ msgid "Which mouse button is reported on a non-corner three-finger tap"
+#~ msgstr ""
+#~ "Melyik egérgombnak feleljen meg a háromujjas koppintás, ha nem sarokban "
+#~ "történik"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Corners"
+#~ msgstr "Sarkok"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top left:"
+#~ msgstr "Bal felső:"
+
+#~ msgid "Which mouse button is reported on a left top corner tap"
+#~ msgstr "Melyik egérgombnak feleljen meg a bal felső sarokban koppintás"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom left:"
+#~ msgstr "Bal alsó:"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top right:"
+#~ msgstr "Jobb felső:"
+
+#~ msgid "Which mouse button is reported on a left bottom corner tap"
+#~ msgstr "Melyik egérgombnak feleljen meg a bal alsó sarokban koppintás"
+
+#~ msgid "Which mouse button is reported on a right top corner tap"
+#~ msgstr "Melyik egérgombnak feleljen meg a jobb felső sarokban koppintás"
+
+#~ msgid "Which mouse button is reported on a right bottom corner tap"
+#~ msgstr "Melyik egérgombnak feleljen meg a jobb alsó sarokban koppintás"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom right:"
+#~ msgstr "Jobb alsó:"
+
+#~ msgid ""
+#~ "This gesture is an alternative way of dragging. It is performed by "
+#~ "tapping (touching and releasing the finger), then touching again and "
+#~ "moving the finger on the touchpad"
+#~ msgstr ""
+#~ "Ez a mozdulat a húzás alternatív módja. Koppintással (az ujj érintésével "
+#~ "és felengedésével) történik, majd újabb érintéssel és az ujj mozgatásával "
+#~ "az érintőtáblán"
+
+#~ msgid "Tap-and-Drag Gesture"
+#~ msgstr "Koppintás és húzás mozdulat"
+
+#~ msgid ""
+#~ "If off, a tap-and-drag gesture ends when you release the finger. If on, "
+#~ "the gesture is active until you tap a second time, or until timeout "
+#~ "expires"
+#~ msgstr ""
+#~ "Ha ki van kapcsolva, a koppintás és húzás mozdulat akkor ér véget, ha "
+#~ "felengedi az ujját. Ha be van kapcsolva, a mozdulat a második "
+#~ "koppintásig, vagy az időkorlát lejártáig tart"
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Locked Drags"
+#~ msgstr "Húzás rögzítése"
+
+#~ msgctxt "Locked drags"
+#~ msgid "Timeout:"
+#~ msgstr "Időkorlát:"
+
+#~ msgid ""
+#~ "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
+#~ "automatically turned off after the finger is released from the touchpad"
+#~ msgstr ""
+#~ "A húzás rögzítésének automatikus feloldása (ezredmásodpercekben) az ujj "
+#~ "érintőtábláról felengedése után"
+
+#~ msgid "Tap Detection"
+#~ msgstr "Koppintás-érzékelés"
+
+#~ msgid "Maximum time:"
+#~ msgstr "Időmaximum:"
+
+#~ msgid "Maximum finger movement:"
+#~ msgstr "Ujjmozgás maximuma:"
+
+#~ msgid "Maximum time for double tap:"
+#~ msgstr "Dupla koppintás időkorlátja:"
+
+#~ msgid "Single tap timeout:"
+#~ msgstr "Egyszeres koppintás időkorlátja:"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a tap"
+#~ msgstr "Koppintás felismerésének maximális ideje (ezredmásodpercekben)"
+
+#~ msgid "Maximum movement of the finger for detecting a tap"
+#~ msgstr "Az ujj mozgásának maximuma koppintás felismeréséhez"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a double tap"
+#~ msgstr "Dupla érintés felismerésének maximális ideje (ezredmásodpercekben)"
+
+#~ msgid "Timeout after a tap to recognize it as a single tap"
+#~ msgstr "Érintés egyszeres érintésként felismerésének időkorlátja"
+
+#~ msgid "Testing area"
+#~ msgstr "Próbaterület"
+
+#~ msgid "Click me"
+#~ msgstr "Kattintson ide"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Gyorsítási profil:"

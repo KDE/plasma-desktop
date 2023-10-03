@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2023-08-25 07:12+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -139,9 +139,7 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "კურსორის სიჩქარე:"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
-#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "კურსორის აჩქარება:"
@@ -246,277 +244,183 @@ msgctxt "@action:button"
 msgid "Go back"
 msgstr "უკან გადასვლა"
 
-#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
-#: kcm/xlib/kcmmouse.ui:14
-#, kde-format
-msgid ""
-"<h1>Mouse</h1> This module allows you to choose various options for the way "
-"in which your pointing device works. Your pointing device may be a mouse, "
-"trackball, or some other hardware that performs a similar function."
-msgstr ""
-"<h1>თაგუნა</h1>ეს მოდული საშუალებას გაძლევთ აირჩიოთ სხვადასხვა ვარიანტი "
-"იმისა, როგორ მუშაობს თქვენი მიმთითებელი მოწყობილობა. ესენი შეიძლება იყოს "
-"თაგუნა, ტრეკბოლი ან რამე სხვა, რომელიც იგივე ფუნქციას ასრულებს."
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>თაგუნა</h1>ეს მოდული საშუალებას გაძლევთ აირჩიოთ სხვადასხვა ვარიანტი "
+#~ "იმისა, როგორ მუშაობს თქვენი მიმთითებელი მოწყობილობა. ესენი შეიძლება იყოს "
+#~ "თაგუნა, ტრეკბოლი ან რამე სხვა, რომელიც იგივე ფუნქციას ასრულებს."
 
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#: kcm/xlib/kcmmouse.ui:36
-#, kde-format
-msgid "&General"
-msgstr "&ზოგადი"
+#~ msgid "&General"
+#~ msgstr "&ზოგადი"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:52
-#, kde-format
-msgid ""
-"If you are left-handed, you may prefer to swap the functions of the left and "
-"right buttons on your pointing device by choosing the 'left-handed' option. "
-"If your pointing device has more than two buttons, only those that function "
-"as the left and right buttons are affected. For example, if you have a three-"
-"button mouse, the middle button is unaffected."
-msgstr ""
-"თუ თქვენ მარცხენა მხარეს ხართ, შეიძლება გირჩევნიათ შეცვალოთ მარცხენა და "
-"მარჯვენა ღილაკების ფუნქციები თქვენს საჩვენებელი მოწყობილობაზე \"მარცხენა "
-"ხელით\" ვარიანტის არჩევით. თუ თქვენს საჩვენებელი მოწყობილობას აქვს ორზე მეტი "
-"ღილაკი, მხოლოდ ის, რაც ფუნქციონირებს, როგორც მარცხენა და მარჯვენა ღილაკები. "
-"მაგალითად, თუ თქვენ გაქვთ სამ ღილაკიანი მაუსი, შუა ღილაკი გავლენას არ ახდენს."
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "თუ თქვენ მარცხენა მხარეს ხართ, შეიძლება გირჩევნიათ შეცვალოთ მარცხენა და "
+#~ "მარჯვენა ღილაკების ფუნქციები თქვენს საჩვენებელი მოწყობილობაზე \"მარცხენა "
+#~ "ხელით\" ვარიანტის არჩევით. თუ თქვენს საჩვენებელი მოწყობილობას აქვს ორზე "
+#~ "მეტი ღილაკი, მხოლოდ ის, რაც ფუნქციონირებს, როგორც მარცხენა და მარჯვენა "
+#~ "ღილაკები. მაგალითად, თუ თქვენ გაქვთ სამ ღილაკიანი მაუსი, შუა ღილაკი "
+#~ "გავლენას არ ახდენს."
 
-#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:55
-#, kde-format
-msgid "Button Order"
-msgstr "ღილაკების მიმდევრობა"
+#~ msgid "Button Order"
+#~ msgstr "ღილაკების მიმდევრობა"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
-#: kcm/xlib/kcmmouse.ui:64
-#, kde-format
-msgid "Righ&t handed"
-msgstr "მარჯვენახელიანი"
+#~ msgid "Righ&t handed"
+#~ msgstr "მარჯვენახელიანი"
 
-#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
-#: kcm/xlib/kcmmouse.ui:77
-#, kde-format
-msgid "Le&ft handed"
-msgstr "ცაცია"
+#~ msgid "Le&ft handed"
+#~ msgstr "ცაცია"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:106
-#, kde-format
-msgid ""
-"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
-"mouse buttons."
-msgstr ""
-"თაგუნას ბორბლის ან მეოთხე/მეხუთე ღილაკებით დაქაჩვის მიმართულების შეცვლა."
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "თაგუნას ბორბლის ან მეოთხე/მეხუთე ღილაკებით დაქაჩვის მიმართულების შეცვლა."
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:109
-#, kde-format
-msgid "Re&verse scroll direction"
-msgstr "&აწევ-ჩამოწევის მიმართულების ინვერსია"
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "&აწევ-ჩამოწევის მიმართულების ინვერსია"
 
-#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
-#: kcm/xlib/kcmmouse.ui:156
-#, kde-format
-msgid "Advanced"
-msgstr "დაწინაურებული"
+#~ msgid "Advanced"
+#~ msgstr "დაწინაურებული"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/kcmmouse.ui:174
-#, kde-format
-msgid "Pointer threshold:"
-msgstr "კურსორის ზღვარი:"
+#~ msgid "Pointer threshold:"
+#~ msgstr "კურსორის ზღვარი:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/kcmmouse.ui:184
-#, kde-format
-msgid "Double click interval:"
-msgstr "ორაგი წკაპის ინტერვალი:"
+#~ msgid "Double click interval:"
+#~ msgstr "ორაგი წკაპის ინტერვალი:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/kcmmouse.ui:194
-#, kde-format
-msgid "Drag start time:"
-msgstr "გადათრევის დაწყების დრო:"
+#~ msgid "Drag start time:"
+#~ msgstr "გადათრევის დაწყების დრო:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/kcmmouse.ui:204
-#, kde-format
-msgid "Drag start distance:"
-msgstr "გადათრევის დაწყების დაშორება:"
+#~ msgid "Drag start distance:"
+#~ msgstr "გადათრევის დაწყების დაშორება:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/kcmmouse.ui:214
-#, kde-format
-msgid "Mouse wheel scrolls by:"
-msgstr "თაგუნას რგოლის აწევ-ჩამოწევის დონე:"
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "თაგუნას რგოლის აწევ-ჩამოწევის დონე:"
 
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:230
-#, kde-format
-msgid ""
-"<p>This option allows you to change the relationship between the distance "
-"that the mouse pointer moves on the screen and the relative movement of the "
-"physical device itself (which may be a mouse, trackball, or some other "
-"pointing device.)</p><p> A high value for the acceleration will lead to "
-"large movements of the mouse pointer on the screen even when you only make a "
-"small movement with the physical device. Selecting very high values may "
-"result in the mouse pointer flying across the screen, making it hard to "
-"control.</p>"
-msgstr ""
-"<p>ეს ვარიანტი საშუალებას გაძლევთ შეცვალოთ ურთიერთობა იმ მანძილს შორის, "
-"რომელსაც მაუსის მაჩვენებელი მოძრაობს ეკრანზე და თავად ფიზიკური მოწყობილობის "
-"შედარებითი მოძრაობა (რომელიც შეიძლება იყოს მაუსი, ტრეკბოლი ან სხვა "
-"საჩვენებელი მოწყობილობა.)</p><p> აჩქარების მაღალი მნიშვნელობა გამოიწვევს "
-"მაუსის მაჩვენებლის დიდ მოძრაობებს ეკრანზე მაშინაც კი, როდესაც მხოლოდ მცირე "
-"მოძრაობას აკეთებთ ფიზიკური მოწყობილობით. ძალიან მაღალი მნიშვნელობების "
-"შერჩევამ შეიძლება გამოიწვიოს მაუსის მაჩვენებელი, რომელიც დაფრინავს ეკრანზე, "
-"რაც ართულებს კონტროლს.</p>"
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>ეს ვარიანტი საშუალებას გაძლევთ შეცვალოთ ურთიერთობა იმ მანძილს შორის, "
+#~ "რომელსაც მაუსის მაჩვენებელი მოძრაობს ეკრანზე და თავად ფიზიკური "
+#~ "მოწყობილობის შედარებითი მოძრაობა (რომელიც შეიძლება იყოს მაუსი, ტრეკბოლი "
+#~ "ან სხვა საჩვენებელი მოწყობილობა.)</p><p> აჩქარების მაღალი მნიშვნელობა "
+#~ "გამოიწვევს მაუსის მაჩვენებლის დიდ მოძრაობებს ეკრანზე მაშინაც კი, როდესაც "
+#~ "მხოლოდ მცირე მოძრაობას აკეთებთ ფიზიკური მოწყობილობით. ძალიან მაღალი "
+#~ "მნიშვნელობების შერჩევამ შეიძლება გამოიწვიოს მაუსის მაჩვენებელი, რომელიც "
+#~ "დაფრინავს ეკრანზე, რაც ართულებს კონტროლს.</p>"
 
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:233
-#, kde-format
-msgid " x"
-msgstr " x"
+#~ msgid " x"
+#~ msgstr " x"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
-#: kcm/xlib/kcmmouse.ui:261
-#, kde-format
-msgid ""
-"<p>The threshold is the smallest distance that the mouse pointer must move "
-"on the screen before acceleration has any effect. If the movement is smaller "
-"than the threshold, the mouse pointer moves as if the acceleration was set "
-"to 1X;</p><p> thus, when you make small movements with the physical device, "
-"there is no acceleration at all, giving you a greater degree of control over "
-"the mouse pointer. With larger movements of the physical device, you can "
-"move the mouse pointer rapidly to different areas on the screen.</p>"
-msgstr ""
-"<p>ბარიერი არის ყველაზე პატარა მანძილი, რომელიც მაუსის მაჩვენებელმა უნდა "
-"გადავიდეს ეკრანზე, სანამ აჩქარებას რაიმე ეფექტი აქვს. თუ მოძრაობა ზღურბლზე "
-"ნაკლებია, მაუსის მაჩვენებელი მოძრაობს ისე, თითქოს აჩქარება 1X- ზე იყო "
-"დაყენებული;</p><p> ამრიგად, როდესაც ფიზიკურ მოწყობილობასთან მცირე მოძრაობებს "
-"აკეთებთ, საერთოდ არ არის აჩქარება, რაც უფრო მეტ კონტროლს გაძლევთ მაუსის "
-"მაჩვენებელზე. ფიზიკური მოწყობილობის უფრო დიდი მოძრაობებით, თქვენ შეგიძლიათ "
-"თაგვის მაჩვენებელი სწრაფად გადაიტანოთ ეკრანზე სხვადასხვა ადგილებში.</p>"
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>ბარიერი არის ყველაზე პატარა მანძილი, რომელიც მაუსის მაჩვენებელმა უნდა "
+#~ "გადავიდეს ეკრანზე, სანამ აჩქარებას რაიმე ეფექტი აქვს. თუ მოძრაობა "
+#~ "ზღურბლზე ნაკლებია, მაუსის მაჩვენებელი მოძრაობს ისე, თითქოს აჩქარება 1X- "
+#~ "ზე იყო დაყენებული;</p><p> ამრიგად, როდესაც ფიზიკურ მოწყობილობასთან მცირე "
+#~ "მოძრაობებს აკეთებთ, საერთოდ არ არის აჩქარება, რაც უფრო მეტ კონტროლს "
+#~ "გაძლევთ მაუსის მაჩვენებელზე. ფიზიკური მოწყობილობის უფრო დიდი მოძრაობებით, "
+#~ "თქვენ შეგიძლიათ თაგვის მაჩვენებელი სწრაფად გადაიტანოთ ეკრანზე სხვადასხვა "
+#~ "ადგილებში.</p>"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
-#: kcm/xlib/kcmmouse.ui:280
-#, kde-format
-msgid ""
-"The double click interval is the maximal time (in milliseconds) between two "
-"mouse clicks which turns them into a double click. If the second click "
-"happens later than this time interval after the first click, they are "
-"recognized as two separate clicks."
-msgstr ""
-"ორმაგი დაწკაპუნების ინტერვალი არის მაქსიმალური დრო (მილიწამებში) მაუსის ორ "
-"დაწკაპუნებას შორის, რაც მათ ორმაგ დაწკაპუნებად აქცევს. თუ მეორე დაჭერით "
-"ხდება ამ დროის ინტერვალის შემდეგ პირველი დაწკაპუნების შემდეგ, ისინი "
-"აღიარებულია, როგორც ორი ცალკეული დაწკაპუნება."
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "ორმაგი დაწკაპუნების ინტერვალი არის მაქსიმალური დრო (მილიწამებში) მაუსის "
+#~ "ორ დაწკაპუნებას შორის, რაც მათ ორმაგ დაწკაპუნებად აქცევს. თუ მეორე "
+#~ "დაჭერით ხდება ამ დროის ინტერვალის შემდეგ პირველი დაწკაპუნების შემდეგ, "
+#~ "ისინი აღიარებულია, როგორც ორი ცალკეული დაწკაპუნება."
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
-#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
-#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
-#, kde-format
-msgid " msec"
-msgstr " მწმ"
+#~ msgid " msec"
+#~ msgstr " მწმ"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
-#: kcm/xlib/kcmmouse.ui:308
-#, kde-format
-msgid ""
-"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
-"the mouse within the drag start time, a drag operation will be initiated."
-msgstr ""
-"თუ დააჭირეთ მაუსის (მაგ. მრავალხაზიან რედაქტორში) და დაიწყებთ მაუსის "
-"გადაადგილებას გადაადგილების დაწყების დროს, დაიწყება გადაადგილების ოპერაცია."
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "თუ დააჭირეთ მაუსის (მაგ. მრავალხაზიან რედაქტორში) და დაიწყებთ მაუსის "
+#~ "გადაადგილებას გადაადგილების დაწყების დროს, დაიწყება გადაადგილების "
+#~ "ოპერაცია."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
-#: kcm/xlib/kcmmouse.ui:333
-#, kde-format
-msgid ""
-"If you click with the mouse and begin to move the mouse at least the drag "
-"start distance, a drag operation will be initiated."
-msgstr ""
-"თუ დააჭირეთ მაუსის და დაიწყოს გადაადგილება მაუსის მინიმუმ drag დაწყების "
-"მანძილი, გადაადგილების ოპერაცია დაიწყება."
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "თუ დააჭირეთ მაუსის და დაიწყოს გადაადგილება მაუსის მინიმუმ drag დაწყების "
+#~ "მანძილი, გადაადგილების ოპერაცია დაიწყება."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
-#: kcm/xlib/kcmmouse.ui:355
-#, kde-format
-msgid ""
-"If you use the wheel of a mouse, this value determines the number of lines "
-"to scroll for each wheel movement. Note that if this number exceeds the "
-"number of visible lines, it will be ignored and the wheel movement will be "
-"handled as a page up/down movement."
-msgstr ""
-"თუ იყენებთ მაუსის საჭეს, ეს მნიშვნელობა განსაზღვრავს ხაზების რაოდენობას "
-"თითოეული ბორბლის მოძრაობისთვის. გაითვალისწინეთ, რომ თუ ეს რიცხვი აღემატება "
-"ხილული ხაზების რაოდენობას, ის იგნორირებული იქნება და ბორბლის მოძრაობა "
-"დამუშავდება, როგორც გვერდის ზემოთ / ქვემოთ მოძრაობა."
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "თუ იყენებთ მაუსის საჭეს, ეს მნიშვნელობა განსაზღვრავს ხაზების რაოდენობას "
+#~ "თითოეული ბორბლის მოძრაობისთვის. გაითვალისწინეთ, რომ თუ ეს რიცხვი "
+#~ "აღემატება ხილული ხაზების რაოდენობას, ის იგნორირებული იქნება და ბორბლის "
+#~ "მოძრაობა დამუშავდება, როგორც გვერდის ზემოთ / ქვემოთ მოძრაობა."
 
-#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
-#: kcm/xlib/kcmmouse.ui:387
-#, kde-format
-msgid "Keyboard Navigation"
-msgstr "კლავიატურით ნავიგაცია"
+#~ msgid "Keyboard Navigation"
+#~ msgstr "კლავიატურით ნავიგაცია"
 
-#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
-#: kcm/xlib/kcmmouse.ui:395
-#, kde-format
-msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "&თაგუნას კურსორის კლავიატურით გადაადგილება (numpad-ით)"
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&თაგუნას კურსორის კლავიატურით გადაადგილება (numpad-ით)"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/kcmmouse.ui:424
-#, kde-format
-msgid "&Acceleration delay:"
-msgstr "&აჩქარების დაყოვნება:"
+#~ msgid "&Acceleration delay:"
+#~ msgstr "&აჩქარების დაყოვნება:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/kcmmouse.ui:434
-#, kde-format
-msgid "R&epeat interval:"
-msgstr "&გამეორების ინტერვალი:"
+#~ msgid "R&epeat interval:"
+#~ msgstr "&გამეორების ინტერვალი:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/kcmmouse.ui:466
-#, kde-format
-msgid "Acceleration &time:"
-msgstr "&აჩქარების დრო:"
+#~ msgid "Acceleration &time:"
+#~ msgstr "&აჩქარების დრო:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/kcmmouse.ui:498
-#, kde-format
-msgid "Ma&ximum speed:"
-msgstr "მაქსიმალური სიჩქარე:"
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "მაქსიმალური სიჩქარე:"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
-#: kcm/xlib/kcmmouse.ui:514
-#, kde-format
-msgid " pixel/sec"
-msgstr " პიქსელ/წმ"
+#~ msgid " pixel/sec"
+#~ msgstr " პიქსელ/წმ"
 
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/kcmmouse.ui:530
-#, kde-format
-msgid "Acceleration &profile:"
-msgstr "აჩქარების &პროფილი:"
+#~ msgid "Acceleration &profile:"
+#~ msgstr "აჩქარების &პროფილი:"
 
-#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
-#, kde-format
-msgid " pixel"
-msgid_plural " pixels"
-msgstr[0] " პიქსელი"
-msgstr[1] " პიქსელი"
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " პიქსელი"
+#~ msgstr[1] " პიქსელი"
 
-#: kcm/xlib/xlib_config.cpp:277
-#, kde-format
-msgid " line"
-msgid_plural " lines"
-msgstr[0] " ხაზი"
-msgstr[1] " ხაზი"
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " ხაზი"
+#~ msgstr[1] " ხაზი"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "აჩქარების პროფილი:"

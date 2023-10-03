@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2023-08-26 14:21+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -142,9 +142,7 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Rapideco de la montrilo:"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
-#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Akcelado de la montrilo:"
@@ -249,267 +247,171 @@ msgctxt "@action:button"
 msgid "Go back"
 msgstr "Reiri"
 
-#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
-#: kcm/xlib/kcmmouse.ui:14
-#, kde-format
-msgid ""
-"<h1>Mouse</h1> This module allows you to choose various options for the way "
-"in which your pointing device works. Your pointing device may be a mouse, "
-"trackball, or some other hardware that performs a similar function."
-msgstr ""
-"<h1>Muso</h1> Tiu modulo permesas elekti diversajn opciojn rilate vian "
-"montroaparaton, t.e. muso, stirglobo aŭ similaĵo."
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Muso</h1> Tiu modulo permesas elekti diversajn opciojn rilate vian "
+#~ "montroaparaton, t.e. muso, stirglobo aŭ similaĵo."
 
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#: kcm/xlib/kcmmouse.ui:36
-#, kde-format
-msgid "&General"
-msgstr "Ĝ&enerale"
+#~ msgid "&General"
+#~ msgstr "Ĝ&enerale"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:52
-#, kde-format
-msgid ""
-"If you are left-handed, you may prefer to swap the functions of the left and "
-"right buttons on your pointing device by choosing the 'left-handed' option. "
-"If your pointing device has more than two buttons, only those that function "
-"as the left and right buttons are affected. For example, if you have a three-"
-"button mouse, the middle button is unaffected."
-msgstr ""
-"Se vi estas maldekstramanulo, vi eble ŝatas interŝangi la signifon de la "
-"butonoj de via muso (aŭ simila aparato). Nur la maldekstra kaj dekstra "
-"butono estas interŝanĝitaj. Iuj aliaj butonoj, ekz. la meza ĉe tributona "
-"muso, ne estas influataj."
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Se vi estas maldekstramanulo, vi eble ŝatas interŝangi la signifon de la "
+#~ "butonoj de via muso (aŭ simila aparato). Nur la maldekstra kaj dekstra "
+#~ "butono estas interŝanĝitaj. Iuj aliaj butonoj, ekz. la meza ĉe tributona "
+#~ "muso, ne estas influataj."
 
-#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:55
-#, kde-format
-msgid "Button Order"
-msgstr "Butonordo"
+#~ msgid "Button Order"
+#~ msgstr "Butonordo"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
-#: kcm/xlib/kcmmouse.ui:64
-#, kde-format
-msgid "Righ&t handed"
-msgstr "Deks&tromana"
+#~ msgid "Righ&t handed"
+#~ msgstr "Deks&tromana"
 
-#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
-#: kcm/xlib/kcmmouse.ui:77
-#, kde-format
-msgid "Le&ft handed"
-msgstr "Maldekstr&omana"
+#~ msgid "Le&ft handed"
+#~ msgstr "Maldekstr&omana"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:106
-#, kde-format
-msgid ""
-"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
-"mouse buttons."
-msgstr ""
-"Ŝanĝi la direkton de rulumado por la musrado aŭ la kvara kaj kvinaj "
-"musbutonoj."
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Ŝanĝi la direkton de rulumado por la musrado aŭ la kvara kaj kvinaj "
+#~ "musbutonoj."
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:109
-#, kde-format
-msgid "Re&verse scroll direction"
-msgstr "In&versigi la ruluman direkton"
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "In&versigi la ruluman direkton"
 
-#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
-#: kcm/xlib/kcmmouse.ui:156
-#, kde-format
-msgid "Advanced"
-msgstr "Plie"
+#~ msgid "Advanced"
+#~ msgstr "Plie"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/kcmmouse.ui:174
-#, kde-format
-msgid "Pointer threshold:"
-msgstr "Reagosojlo de la montrilo:"
+#~ msgid "Pointer threshold:"
+#~ msgstr "Reagosojlo de la montrilo:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/kcmmouse.ui:184
-#, kde-format
-msgid "Double click interval:"
-msgstr "Duklako-intervalo:"
+#~ msgid "Double click interval:"
+#~ msgstr "Duklako-intervalo:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/kcmmouse.ui:194
-#, kde-format
-msgid "Drag start time:"
-msgstr "Tempo por ektreno:"
+#~ msgid "Drag start time:"
+#~ msgstr "Tempo por ektreno:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/kcmmouse.ui:204
-#, kde-format
-msgid "Drag start distance:"
-msgstr "Distanco por ektreno:"
+#~ msgid "Drag start distance:"
+#~ msgstr "Distanco por ektreno:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/kcmmouse.ui:214
-#, kde-format
-msgid "Mouse wheel scrolls by:"
-msgstr "Musrado ŝovas je:"
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Musrado ŝovas je:"
 
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:230
-#, kde-format
-msgid ""
-"<p>This option allows you to change the relationship between the distance "
-"that the mouse pointer moves on the screen and the relative movement of the "
-"physical device itself (which may be a mouse, trackball, or some other "
-"pointing device.)</p><p> A high value for the acceleration will lead to "
-"large movements of the mouse pointer on the screen even when you only make a "
-"small movement with the physical device. Selecting very high values may "
-"result in the mouse pointer flying across the screen, making it hard to "
-"control.</p>"
-msgstr ""
-"<p>Tio permesas difini la rilaton inter la movo de la muso (aŭ simila "
-"aparato)  kaj la movo de la montrilo sur la ekrano</p><p> Alta akcelo "
-"signifas grandan movon de la montrilo ĉe malgrandaj movoj de la muso mem. "
-"Tro alta valoro povas kaŭzi flugadon de la montrilo, kio tro malfaciligus la "
-"stiradon!</p>"
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Tio permesas difini la rilaton inter la movo de la muso (aŭ simila "
+#~ "aparato)  kaj la movo de la montrilo sur la ekrano</p><p> Alta akcelo "
+#~ "signifas grandan movon de la montrilo ĉe malgrandaj movoj de la muso mem. "
+#~ "Tro alta valoro povas kaŭzi flugadon de la montrilo, kio tro malfaciligus "
+#~ "la stiradon!</p>"
 
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:233
-#, kde-format
-msgid " x"
-msgstr " x"
+#~ msgid " x"
+#~ msgstr " x"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
-#: kcm/xlib/kcmmouse.ui:261
-#, kde-format
-msgid ""
-"<p>The threshold is the smallest distance that the mouse pointer must move "
-"on the screen before acceleration has any effect. If the movement is smaller "
-"than the threshold, the mouse pointer moves as if the acceleration was set "
-"to 1X;</p><p> thus, when you make small movements with the physical device, "
-"there is no acceleration at all, giving you a greater degree of control over "
-"the mouse pointer. With larger movements of the physical device, you can "
-"move the mouse pointer rapidly to different areas on the screen.</p>"
-msgstr ""
-"<p>La reagosojlo estas la plej malgranda distanco, kiun la montrilo devas "
-"moviĝi sur la ekrano antaŭ kiam la akcelado efikas. Moviĝo pli malgranda ol "
-"la reagosojlo okazas neniu akcelo.</p><p>Do malgrandaj movaĵoj per la fizika "
-"aparato permesas akuratan stiradon de la montrilo. Per moviĝoj pli grandaj "
-"vi povas pli rapide movi la montrilon al diversaj lokoj de la ekrano.</p>"
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>La reagosojlo estas la plej malgranda distanco, kiun la montrilo devas "
+#~ "moviĝi sur la ekrano antaŭ kiam la akcelado efikas. Moviĝo pli malgranda "
+#~ "ol la reagosojlo okazas neniu akcelo.</p><p>Do malgrandaj movaĵoj per la "
+#~ "fizika aparato permesas akuratan stiradon de la montrilo. Per moviĝoj pli "
+#~ "grandaj vi povas pli rapide movi la montrilon al diversaj lokoj de la "
+#~ "ekrano.</p>"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
-#: kcm/xlib/kcmmouse.ui:280
-#, kde-format
-msgid ""
-"The double click interval is the maximal time (in milliseconds) between two "
-"mouse clicks which turns them into a double click. If the second click "
-"happens later than this time interval after the first click, they are "
-"recognized as two separate clicks."
-msgstr ""
-"La duklako-intervalo estas la maksimuma tempo (en ms) inter du musklakoj, "
-"por kiu la du klakoj estas konsiderataj duklako. Se la dua klako okazas pli "
-"poste, ili estas interpretataj kiel du unuopaj klakoj."
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "La duklako-intervalo estas la maksimuma tempo (en ms) inter du musklakoj, "
+#~ "por kiu la du klakoj estas konsiderataj duklako. Se la dua klako okazas "
+#~ "pli poste, ili estas interpretataj kiel du unuopaj klakoj."
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
-#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
-#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
-#, kde-format
-msgid " msec"
-msgstr " ms"
+#~ msgid " msec"
+#~ msgstr " ms"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
-#: kcm/xlib/kcmmouse.ui:308
-#, kde-format
-msgid ""
-"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
-"the mouse within the drag start time, a drag operation will be initiated."
-msgstr ""
-"Se vi klakas la muson kaj ekmovas ĝin ene de tiu ĉi tempo, trenoperacio "
-"estas komencata."
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Se vi klakas la muson kaj ekmovas ĝin ene de tiu ĉi tempo, trenoperacio "
+#~ "estas komencata."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
-#: kcm/xlib/kcmmouse.ui:333
-#, kde-format
-msgid ""
-"If you click with the mouse and begin to move the mouse at least the drag "
-"start distance, a drag operation will be initiated."
-msgstr ""
-"Se vi klakas la muson kaj ekmovas la muson almenaŭ je tiu ĉi distanco, "
-"trenoperacio estas komencata."
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Se vi klakas la muson kaj ekmovas la muson almenaŭ je tiu ĉi distanco, "
+#~ "trenoperacio estas komencata."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
-#: kcm/xlib/kcmmouse.ui:355
-#, kde-format
-msgid ""
-"If you use the wheel of a mouse, this value determines the number of lines "
-"to scroll for each wheel movement. Note that if this number exceeds the "
-"number of visible lines, it will be ignored and the wheel movement will be "
-"handled as a page up/down movement."
-msgstr ""
-"Se vi uzas la radon de muso, tiu valoro difinas la nombron de linioj, je "
-"kiuj la dokumento ŝoviĝas ĉe ĉiu radmovo. Atentu, se tiu nombro superas la "
-"nombron de videblaj linioj, ĝi estos ignorata kaj la ŝoviĝo okazas je unu "
-"paĝo."
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Se vi uzas la radon de muso, tiu valoro difinas la nombron de linioj, je "
+#~ "kiuj la dokumento ŝoviĝas ĉe ĉiu radmovo. Atentu, se tiu nombro superas "
+#~ "la nombron de videblaj linioj, ĝi estos ignorata kaj la ŝoviĝo okazas je "
+#~ "unu paĝo."
 
-#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
-#: kcm/xlib/kcmmouse.ui:387
-#, kde-format
-msgid "Keyboard Navigation"
-msgstr "Klavara navigado"
+#~ msgid "Keyboard Navigation"
+#~ msgstr "Klavara navigado"
 
-#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
-#: kcm/xlib/kcmmouse.ui:395
-#, kde-format
-msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "&Movi montrilon per la klavaro (uzante la numeran klavaron)"
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Movi montrilon per la klavaro (uzante la numeran klavaron)"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/kcmmouse.ui:424
-#, kde-format
-msgid "&Acceleration delay:"
-msgstr "&Akceloprokrasto:"
+#~ msgid "&Acceleration delay:"
+#~ msgstr "&Akceloprokrasto:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/kcmmouse.ui:434
-#, kde-format
-msgid "R&epeat interval:"
-msgstr "&Ripetintervalo:"
+#~ msgid "R&epeat interval:"
+#~ msgstr "&Ripetintervalo:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/kcmmouse.ui:466
-#, kde-format
-msgid "Acceleration &time:"
-msgstr "Akcelado &tempo:"
+#~ msgid "Acceleration &time:"
+#~ msgstr "Akcelado &tempo:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/kcmmouse.ui:498
-#, kde-format
-msgid "Ma&ximum speed:"
-msgstr "&Maksimuma rapideco:"
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "&Maksimuma rapideco:"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
-#: kcm/xlib/kcmmouse.ui:514
-#, kde-format
-msgid " pixel/sec"
-msgstr " rastrumeroj/sek"
+#~ msgid " pixel/sec"
+#~ msgstr " rastrumeroj/sek"
 
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/kcmmouse.ui:530
-#, kde-format
-msgid "Acceleration &profile:"
-msgstr "Akcela &profilo:"
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Akcela &profilo:"
 
-#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
-#, kde-format
-msgid " pixel"
-msgid_plural " pixels"
-msgstr[0] " rastrumero"
-msgstr[1] " rastrumeroj"
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " rastrumero"
+#~ msgstr[1] " rastrumeroj"
 
-#: kcm/xlib/xlib_config.cpp:277
-#, kde-format
-msgid " line"
-msgid_plural " lines"
-msgstr[0] " linio"
-msgstr[1] " linioj"
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " linio"
+#~ msgstr[1] " linioj"

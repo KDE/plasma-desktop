@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2022-09-02 17:47+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -135,9 +135,7 @@ msgstr "Bấm nút trái và phải đồng thời sẽ tạo ra cú bấm nút 
 msgid "Pointer speed:"
 msgstr "Tốc độ con trỏ:"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
-#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Gia tốc con trỏ:"
@@ -243,275 +241,179 @@ msgctxt "@action:button"
 msgid "Go back"
 msgstr "Đi lùi"
 
-#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
-#: kcm/xlib/kcmmouse.ui:14
-#, kde-format
-msgid ""
-"<h1>Mouse</h1> This module allows you to choose various options for the way "
-"in which your pointing device works. Your pointing device may be a mouse, "
-"trackball, or some other hardware that performs a similar function."
-msgstr ""
-"<h1>Chuột</h1>Khối này cho phép bạn chọn nhiều lựa chọn khác nhau về cách mà "
-"thiết bị trỏ hoạt động. Thiết bị trỏ có thể là chuột, bi điều khiển, hay "
-"phần cứng khác thực hiện chức năng tương tự."
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Chuột</h1>Khối này cho phép bạn chọn nhiều lựa chọn khác nhau về cách "
+#~ "mà thiết bị trỏ hoạt động. Thiết bị trỏ có thể là chuột, bi điều khiển, "
+#~ "hay phần cứng khác thực hiện chức năng tương tự."
 
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#: kcm/xlib/kcmmouse.ui:36
-#, kde-format
-msgid "&General"
-msgstr "Ch&ung"
+#~ msgid "&General"
+#~ msgstr "Ch&ung"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:52
-#, kde-format
-msgid ""
-"If you are left-handed, you may prefer to swap the functions of the left and "
-"right buttons on your pointing device by choosing the 'left-handed' option. "
-"If your pointing device has more than two buttons, only those that function "
-"as the left and right buttons are affected. For example, if you have a three-"
-"button mouse, the middle button is unaffected."
-msgstr ""
-"Nếu bạn thuận tay trái, bạn có thể muốn hoán đổi chức năng của nút trái và "
-"phải trên thiết bị trỏ của mình bằng cách chọn lựa chọn 'thuận tay trái'. "
-"Nếu thiết bị trỏ của bạn có nhiều hơn hai nút, thì chỉ những nút có chức "
-"năng của hai nút trái và phải là bị ảnh hưởng. Ví dụ, nếu chuột của bạn có "
-"ba nút, thì nút giữa không bị ảnh hưởng."
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Nếu bạn thuận tay trái, bạn có thể muốn hoán đổi chức năng của nút trái "
+#~ "và phải trên thiết bị trỏ của mình bằng cách chọn lựa chọn 'thuận tay "
+#~ "trái'. Nếu thiết bị trỏ của bạn có nhiều hơn hai nút, thì chỉ những nút "
+#~ "có chức năng của hai nút trái và phải là bị ảnh hưởng. Ví dụ, nếu chuột "
+#~ "của bạn có ba nút, thì nút giữa không bị ảnh hưởng."
 
-#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:55
-#, kde-format
-msgid "Button Order"
-msgstr "Thứ tự nút"
+#~ msgid "Button Order"
+#~ msgstr "Thứ tự nút"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
-#: kcm/xlib/kcmmouse.ui:64
-#, kde-format
-msgid "Righ&t handed"
-msgstr "Thuận tay &phải"
+#~ msgid "Righ&t handed"
+#~ msgstr "Thuận tay &phải"
 
-#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
-#: kcm/xlib/kcmmouse.ui:77
-#, kde-format
-msgid "Le&ft handed"
-msgstr "Thuận tay &trái"
+#~ msgid "Le&ft handed"
+#~ msgstr "Thuận tay &trái"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:106
-#, kde-format
-msgid ""
-"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
-"mouse buttons."
-msgstr ""
-"Thay đổi hướng cuộn của nút cuộn chuột hoặc các nút chuột thứ tư và thứ năm."
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Thay đổi hướng cuộn của nút cuộn chuột hoặc các nút chuột thứ tư và thứ "
+#~ "năm."
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:109
-#, kde-format
-msgid "Re&verse scroll direction"
-msgstr "Đảo &hướng cuộn"
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Đảo &hướng cuộn"
 
-#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
-#: kcm/xlib/kcmmouse.ui:156
-#, kde-format
-msgid "Advanced"
-msgstr "Nâng cao"
+#~ msgid "Advanced"
+#~ msgstr "Nâng cao"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/kcmmouse.ui:174
-#, kde-format
-msgid "Pointer threshold:"
-msgstr "Ngưỡng con trỏ:"
+#~ msgid "Pointer threshold:"
+#~ msgstr "Ngưỡng con trỏ:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/kcmmouse.ui:184
-#, kde-format
-msgid "Double click interval:"
-msgstr "Thời gian bấm đúp:"
+#~ msgid "Double click interval:"
+#~ msgstr "Thời gian bấm đúp:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/kcmmouse.ui:194
-#, kde-format
-msgid "Drag start time:"
-msgstr "Thời gian bắt đầu kéo:"
+#~ msgid "Drag start time:"
+#~ msgstr "Thời gian bắt đầu kéo:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/kcmmouse.ui:204
-#, kde-format
-msgid "Drag start distance:"
-msgstr "Khoảng cách bắt đầu kéo:"
+#~ msgid "Drag start distance:"
+#~ msgstr "Khoảng cách bắt đầu kéo:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/kcmmouse.ui:214
-#, kde-format
-msgid "Mouse wheel scrolls by:"
-msgstr "Nút cuộn chuột cuộn mỗi lần:"
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Nút cuộn chuột cuộn mỗi lần:"
 
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:230
-#, kde-format
-msgid ""
-"<p>This option allows you to change the relationship between the distance "
-"that the mouse pointer moves on the screen and the relative movement of the "
-"physical device itself (which may be a mouse, trackball, or some other "
-"pointing device.)</p><p> A high value for the acceleration will lead to "
-"large movements of the mouse pointer on the screen even when you only make a "
-"small movement with the physical device. Selecting very high values may "
-"result in the mouse pointer flying across the screen, making it hard to "
-"control.</p>"
-msgstr ""
-"<p>Lựa chọn này cho phép bạn thay đổi quan hệ giữa khoảng cách con trỏ chuột "
-"di chuyển trên màn hình và sự di chuyển tương đối của bản thân thiết bị vật "
-"lí đó (có thể là chuột, bi điều khiển, hoặc một thiết bị trỏ khác).</"
-"p><p>Một giá trị gia tốc lớn sẽ dẫn đến khoảng di chuyển lớn của con trỏ "
-"chuột trên màn hình kể cả khi bạn chỉ di chuyển thiết bị vật lí một khoảng "
-"nhỏ. Việc chọn các giá trị rất cao có thể khiến con trỏ chuột bay ngang qua "
-"màn hình, rất khó điều khiển.</p>"
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Lựa chọn này cho phép bạn thay đổi quan hệ giữa khoảng cách con trỏ "
+#~ "chuột di chuyển trên màn hình và sự di chuyển tương đối của bản thân "
+#~ "thiết bị vật lí đó (có thể là chuột, bi điều khiển, hoặc một thiết bị trỏ "
+#~ "khác).</p><p>Một giá trị gia tốc lớn sẽ dẫn đến khoảng di chuyển lớn của "
+#~ "con trỏ chuột trên màn hình kể cả khi bạn chỉ di chuyển thiết bị vật lí "
+#~ "một khoảng nhỏ. Việc chọn các giá trị rất cao có thể khiến con trỏ chuột "
+#~ "bay ngang qua màn hình, rất khó điều khiển.</p>"
 
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:233
-#, kde-format
-msgid " x"
-msgstr " x"
+#~ msgid " x"
+#~ msgstr " x"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
-#: kcm/xlib/kcmmouse.ui:261
-#, kde-format
-msgid ""
-"<p>The threshold is the smallest distance that the mouse pointer must move "
-"on the screen before acceleration has any effect. If the movement is smaller "
-"than the threshold, the mouse pointer moves as if the acceleration was set "
-"to 1X;</p><p> thus, when you make small movements with the physical device, "
-"there is no acceleration at all, giving you a greater degree of control over "
-"the mouse pointer. With larger movements of the physical device, you can "
-"move the mouse pointer rapidly to different areas on the screen.</p>"
-msgstr ""
-"<p>Ngưỡng này là khoảng cách nhỏ nhất mà con trỏ chuột phải di chuyển trên "
-"màn hình trước khi gia tốc có tác dụng. Nếu khoảng di chuyển nhỏ hơn ngưỡng, "
-"con trỏ chuột sẽ di chuyển như thể gia tốc được đặt là 1X;</p><p> vì vậy, "
-"khi bạn thực hiện các di chuyển nhỏ với thiết bị vật lí, sẽ không hề có gia "
-"tốc, việc đó cho bạn khả năng điều khiển con trỏ chuột tốt hơn. Với các di "
-"chuyển lớn hơn của thiết bị vật lí, bạn có thể di chuyển nhanh con trỏ chuột "
-"đến các vùng khác nhau trên màn hình.</p>"
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Ngưỡng này là khoảng cách nhỏ nhất mà con trỏ chuột phải di chuyển "
+#~ "trên màn hình trước khi gia tốc có tác dụng. Nếu khoảng di chuyển nhỏ hơn "
+#~ "ngưỡng, con trỏ chuột sẽ di chuyển như thể gia tốc được đặt là 1X;</p><p> "
+#~ "vì vậy, khi bạn thực hiện các di chuyển nhỏ với thiết bị vật lí, sẽ không "
+#~ "hề có gia tốc, việc đó cho bạn khả năng điều khiển con trỏ chuột tốt hơn. "
+#~ "Với các di chuyển lớn hơn của thiết bị vật lí, bạn có thể di chuyển nhanh "
+#~ "con trỏ chuột đến các vùng khác nhau trên màn hình.</p>"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
-#: kcm/xlib/kcmmouse.ui:280
-#, kde-format
-msgid ""
-"The double click interval is the maximal time (in milliseconds) between two "
-"mouse clicks which turns them into a double click. If the second click "
-"happens later than this time interval after the first click, they are "
-"recognized as two separate clicks."
-msgstr ""
-"Thời gian bấm đúp là khoảng thời gian tối đa (bằng mi-li giây) giữa hai lần "
-"bấm chuột để chúng được coi là một cú bấm đúp. Nếu lần bấm thứ hai xảy ra "
-"muộn hơn khoảng thời gian này sau lần bấm thứ nhất, chúng được coi là hai "
-"lần bấm riêng."
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Thời gian bấm đúp là khoảng thời gian tối đa (bằng mi-li giây) giữa hai "
+#~ "lần bấm chuột để chúng được coi là một cú bấm đúp. Nếu lần bấm thứ hai "
+#~ "xảy ra muộn hơn khoảng thời gian này sau lần bấm thứ nhất, chúng được coi "
+#~ "là hai lần bấm riêng."
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
-#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
-#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
-#, kde-format
-msgid " msec"
-msgstr " mi-li giây"
+#~ msgid " msec"
+#~ msgstr " mi-li giây"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
-#: kcm/xlib/kcmmouse.ui:308
-#, kde-format
-msgid ""
-"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
-"the mouse within the drag start time, a drag operation will be initiated."
-msgstr ""
-"Nếu bạn bấm chuột (vd. trong một trình biên tập đa dòng) và bắt đầu di "
-"chuyển chuột trong vòng thời gian bắt đầu kéo, thì một thao tác kéo sẽ được "
-"tạo ra."
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Nếu bạn bấm chuột (vd. trong một trình biên tập đa dòng) và bắt đầu di "
+#~ "chuyển chuột trong vòng thời gian bắt đầu kéo, thì một thao tác kéo sẽ "
+#~ "được tạo ra."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
-#: kcm/xlib/kcmmouse.ui:333
-#, kde-format
-msgid ""
-"If you click with the mouse and begin to move the mouse at least the drag "
-"start distance, a drag operation will be initiated."
-msgstr ""
-"Nếu bạn bấm chuột và bắt đầu di chuyển chuột một khoảng ít nhất là khoảng "
-"cách bắt đầu kéo, thì một thao tác kéo sẽ được tạo ra."
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Nếu bạn bấm chuột và bắt đầu di chuyển chuột một khoảng ít nhất là khoảng "
+#~ "cách bắt đầu kéo, thì một thao tác kéo sẽ được tạo ra."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
-#: kcm/xlib/kcmmouse.ui:355
-#, kde-format
-msgid ""
-"If you use the wheel of a mouse, this value determines the number of lines "
-"to scroll for each wheel movement. Note that if this number exceeds the "
-"number of visible lines, it will be ignored and the wheel movement will be "
-"handled as a page up/down movement."
-msgstr ""
-"Nếu bạn dùng nút cuộn chuột, giá trị này xác định số dòng sẽ cuộn cho mỗi "
-"lần di chuyển nút cuộn. Lưu ý rằng nếu con số này vượt quá số dòng hiển thị, "
-"nó sẽ bị bỏ qua và sự di chuyển của nút cuộn sẽ được xử lí như là một di "
-"chuyển lên/xuống trang."
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Nếu bạn dùng nút cuộn chuột, giá trị này xác định số dòng sẽ cuộn cho mỗi "
+#~ "lần di chuyển nút cuộn. Lưu ý rằng nếu con số này vượt quá số dòng hiển "
+#~ "thị, nó sẽ bị bỏ qua và sự di chuyển của nút cuộn sẽ được xử lí như là "
+#~ "một di chuyển lên/xuống trang."
 
-#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
-#: kcm/xlib/kcmmouse.ui:387
-#, kde-format
-msgid "Keyboard Navigation"
-msgstr "Điều hướng bàn phím"
+#~ msgid "Keyboard Navigation"
+#~ msgstr "Điều hướng bàn phím"
 
-#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
-#: kcm/xlib/kcmmouse.ui:395
-#, kde-format
-msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "&Di chuyển con trỏ bằng bàn phím (dùng bàn phím số)"
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Di chuyển con trỏ bằng bàn phím (dùng bàn phím số)"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/kcmmouse.ui:424
-#, kde-format
-msgid "&Acceleration delay:"
-msgstr "Độ trễ &gia tốc:"
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Độ trễ &gia tốc:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/kcmmouse.ui:434
-#, kde-format
-msgid "R&epeat interval:"
-msgstr "Khoảng &lặp lại:"
+#~ msgid "R&epeat interval:"
+#~ msgstr "Khoảng &lặp lại:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/kcmmouse.ui:466
-#, kde-format
-msgid "Acceleration &time:"
-msgstr "&Thời gian gia tốc:"
+#~ msgid "Acceleration &time:"
+#~ msgstr "&Thời gian gia tốc:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/kcmmouse.ui:498
-#, kde-format
-msgid "Ma&ximum speed:"
-msgstr "Tốc độ tố&i đa:"
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Tốc độ tố&i đa:"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
-#: kcm/xlib/kcmmouse.ui:514
-#, kde-format
-msgid " pixel/sec"
-msgstr " điểm ảnh/giây"
+#~ msgid " pixel/sec"
+#~ msgstr " điểm ảnh/giây"
 
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/kcmmouse.ui:530
-#, kde-format
-msgid "Acceleration &profile:"
-msgstr "Hồ &sơ gia tốc:"
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Hồ &sơ gia tốc:"
 
-#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
-#, kde-format
-msgid " pixel"
-msgid_plural " pixels"
-msgstr[0] " điểm ảnh"
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " điểm ảnh"
 
-#: kcm/xlib/xlib_config.cpp:277
-#, kde-format
-msgid " line"
-msgid_plural " lines"
-msgstr[0] " dòng"
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " dòng"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Hồ sơ gia tốc:"

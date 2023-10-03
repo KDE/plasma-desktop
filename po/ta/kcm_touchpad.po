@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2023-09-10 19:11+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -59,27 +59,27 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "%1 என்ற தொடுபலகையின் அடிப்படை விவரங்களை கண்டறிவதில் சிக்கல்."
 
-#: backends/x11/xlibbackend.cpp:74
+#: backends/x11/xlibbackend.cpp:71
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "X சேவையகத்தை தொடர்பு கொள்ள முடியவில்லை"
 
-#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:94
+#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:94
 #, kde-format
 msgid "No touchpad found"
 msgstr "தொடுபலகை கண்டுபிடிக்கப்படவில்லை"
 
-#: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
+#: backends/x11/xlibbackend.cpp:124 backends/x11/xlibbackend.cpp:138
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "தொடுபலகையின் அமைப்பை செயல்படுத்த முடியவில்லை"
 
-#: backends/x11/xlibbackend.cpp:164 backends/x11/xlibbackend.cpp:177
+#: backends/x11/xlibbackend.cpp:152 backends/x11/xlibbackend.cpp:165
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "தொடுபலகையின் அமைப்பை படிக்க முடியவில்லை"
 
-#: backends/x11/xlibbackend.cpp:190
+#: backends/x11/xlibbackend.cpp:178
 #, kde-format
 msgid "Cannot read default touchpad configuration"
 msgstr "தொடுபலகையின் இயல்பிருப்பு அமைப்பை படிக்க முடியவில்லை"
@@ -418,880 +418,6 @@ msgstr "தொடுபலகை கழற்றப்பட்டது. அத
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "தொடுபலகை கழற்றப்பட்டது. வேறெந்த தொடுபலகையும் கண்டுபிடிக்கப்படவில்லை."
 
-#: kcm/xlib/testarea.cpp:20
-#, kde-format
-msgid "Drag me"
-msgstr "என்னை இழுங்கள்"
-
-#: kcm/xlib/testbutton.cpp:29
-#, kde-format
-msgctxt "Mouse button"
-msgid "Left button"
-msgstr "இடது பட்டன்"
-
-#: kcm/xlib/testbutton.cpp:32
-#, kde-format
-msgctxt "Mouse button"
-msgid "Right button"
-msgstr "வலது பட்டன்"
-
-#: kcm/xlib/testbutton.cpp:35
-#, kde-format
-msgctxt "Mouse button"
-msgid "Middle button"
-msgstr "நடு பட்டன்"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:96
-#, kde-format
-msgid ""
-"Active settings don't match saved settings.\n"
-"You currently see saved settings."
-msgstr ""
-"செயலிலுள்ள அமைப்புகளும் சேமிக்கப்பட்ட அமைப்புகளும் வேறுபடுகின்றன.\n"
-"சேமிக்கப்பட்ட அமைப்புகள் தற்போது காட்டப்படுகின்றன."
-
-#: kcm/xlib/touchpadconfigxlib.cpp:102
-#, kde-format
-msgid "Show active settings"
-msgstr "செயலிலுள்ள அமைப்புகளை காட்டு"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:139
-#, kde-format
-msgid "These settings won't take effect in the testing area"
-msgstr "இவ்வமைப்புகள் சோதனைக்கான இடத்தில் செயல்படா"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:144
-#, kde-format
-msgid "Enable/Disable Touchpad"
-msgstr "தொடுபலகையை முடக்கு/இயக்கு"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
-#: kcm/xlib/ui/kded.ui:14
-#, kde-format
-msgctxt "@title:window"
-msgid "Enable/Disable Touchpad"
-msgstr "தொடுபலகையை முடக்குதல்/இயக்குதல்"
-
-#. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
-#. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
-#: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
-#, kde-format
-msgid "Configure…"
-msgstr "அமை..."
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/kded.ui:47
-#, kde-format
-msgid "Keyboard shortcuts:"
-msgstr "விசைப்பலகை சுருக்குவழிகள்:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:60
-#, kde-format
-msgid "Disable touchpad when typing"
-msgstr "தட்டச்சிடும்போது தொடுபலகையை முடக்கு"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/kded.ui:75
-#, kde-format
-msgid "Timeout:"
-msgstr "நீடிப்பது:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:86
-#, kde-format
-msgid ""
-"If there was no keyboard activity for more than specified\n"
-"number of milliseconds, touchpad will be enabled again"
-msgstr ""
-"இத்தனை மில்லிநொடிகளுக்கு மேல் விசைப்பலகையை பயன்படுத்தாமல் இருந்தால், தொடுபலகை "
-"மறுபடியும் இயக்கப்படும்"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_SingleTapTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:98 kcm/xlib/ui/tap.ui:306 kcm/xlib/ui/tap.ui:401
-#: kcm/xlib/ui/tap.ui:439 kcm/xlib/ui/tap.ui:458
-#, kde-format
-msgid " ms"
-msgstr " மி.நொ."
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:106
-#, kde-format
-msgid ""
-"Disable click emulation and scrolling.\n"
-"You will be still able to move pointer using touchpad and perform clicks "
-"with hardware buttons."
-msgstr ""
-"தட்டி க்ளிக் செய்வதையும் உருள்வதையும் முடக்கும்.\n"
-"தொடுபலகையை கொண்டு சுட்டிக்குறியை நகர்த்தலாம், மேலும் வன் பட்டன்களை கொண்டு க்ளிக் செய்யலாம்."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:109
-#, kde-format
-msgid "Disable taps and scrolling only"
-msgstr "தட்டலையும் உருளலையும் மட்டும் முடக்கு"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
-#: kcm/xlib/ui/kded.ui:119
-#, kde-format
-msgid "Disable touchpad when mouse is plugged in"
-msgstr "சுட்டி செருகப்படும்போது தொடுபலகையை முடக்கு"
-
-#. i18n: ectx: property (text), widget (QLabel, notificationsLabel)
-#: kcm/xlib/ui/kded.ui:136
-#, kde-format
-msgid "Notifications:"
-msgstr "அறிவிப்புகள்:"
-
-#. i18n: ectx: property (text), widget (QLabel, ignoredDevLabel)
-#: kcm/xlib/ui/kded.ui:158
-#, kde-format
-msgid "Ignored devices:"
-msgstr "பொருட்படுத்தப்படாத சாதனங்கள்:"
-
-#. i18n: ectx: property (toolTip), widget (KEditListWidget, kcfg_MouseBlacklist)
-#: kcm/xlib/ui/kded.ui:169
-#, kde-format
-msgid ""
-"Some devices might be incorrectly treated as a mouse.\n"
-"You can add them to this list so that they will be ignored when they're "
-"plugged in."
-msgstr ""
-"சில சாதனங்கள், தவறுதலாக சுட்டியாக கருதப்படலாம்.\n"
-"அவற்றை இப்பட்டியலில் சேர்த்தால், அவை சொருகப்பட்டிருக்கும்போதும் இவ்வம்சத்தால் பொருட்படுத்தப்படா."
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
-#: kcm/xlib/ui/pointermotion.ui:14
-#, kde-format
-msgid "Pointer Motion"
-msgstr "சுட்டிக்குறி நகர்வது"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/pointermotion.ui:20
-#, kde-format
-msgctxt "Mouse pointer motion parameters"
-msgid "Speed"
-msgstr "வேகம்"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/pointermotion.ui:29
-#, kde-format
-msgctxt "Minimum pointer movement speed"
-msgid "Minimum:"
-msgstr "குறைந்தபட்சம்:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MinSpeed)
-#: kcm/xlib/ui/pointermotion.ui:39
-#, kde-format
-msgid "Minimum pointer speed"
-msgstr "சுட்டிக்குறியின் குறைந்தபட்ச வேகம்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/pointermotion.ui:52
-#, kde-format
-msgctxt "Maximum pointer movement speed"
-msgid "Maximum:"
-msgstr "அதிகபட்சம்: "
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MaxSpeed)
-#: kcm/xlib/ui/pointermotion.ui:62
-#, kde-format
-msgid "Maximum pointer speed"
-msgstr "சுட்டிக்குறியின் அதிகபட்ச வேகம்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/pointermotion.ui:75
-#, kde-format
-msgctxt "Pointer acceleration"
-msgid "Acceleration:"
-msgstr "வேகவளர்ச்சி"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
-#: kcm/xlib/ui/pointermotion.ui:85
-#, kde-format
-msgid "Acceleration factor for normal pointer movements"
-msgstr "சுட்டிக்குறியை நகர்த்துவதற்கான வேகவளர்ச்சி விகிதம்"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/pointermotion.ui:101
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Pressure-Dependent Motion"
-msgstr "அழுத்த-உணரி நகர்த்தல்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/pointermotion.ui:113
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum pressure:"
-msgstr "குறைந்தபட்ச அழுத்தம்:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/pointermotion.ui:123
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum factor:"
-msgstr "குறைந்தபட்ச விகிதம்:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/pointermotion.ui:133
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum pressure:"
-msgstr "அதிகபட்ச அழுத்தம்:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/pointermotion.ui:143
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum factor:"
-msgstr "அதிகபட்ச விகிதம்:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMinZ)
-#: kcm/xlib/ui/pointermotion.ui:153
-#, kde-format
-msgid "Finger pressure at which minimum pressure motion factor is applied"
-msgstr "குறைந்தபட்ச விகிதம் இவ்வழுத்திற்கு பொருந்தும்"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
-#: kcm/xlib/ui/pointermotion.ui:166
-#, kde-format
-msgid "Finger pressure at which maximum pressure motion factor is applied"
-msgstr "அதிகபட்ச விகிதம் இவ்வழுத்திற்கு பொருந்தும்"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
-#: kcm/xlib/ui/pointermotion.ui:179
-#, kde-format
-msgid "Lowest setting for pressure motion factor"
-msgstr "அழுத்த-உணரி நகர்த்தலுக்கான குறைந்தபட்ச விகிதம்"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMaxFactor)
-#: kcm/xlib/ui/pointermotion.ui:189
-#, kde-format
-msgid "Greatest setting for pressure motion factor"
-msgstr "அழுத்த-உணரி நகர்த்தலுக்கான அதிகபட்ச விகிதம்"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/pointermotion.ui:202
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Noise Cancellation"
-msgstr "நடுக்க நீக்கம்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/pointermotion.ui:214
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Vertical:"
-msgstr "நெடுக்காக:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/pointermotion.ui:224
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Horizontal:"
-msgstr "கிடைமட்டமாக:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_VertHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:234
-#, kde-format
-msgid ""
-"The minimum vertical hardware distance required to generate motion events"
-msgstr "விரல்கள் குறைந்தபட்சம் இவ்வளவு தூரம் நகர்ந்தால்தான் சுட்டிக்குறி நெடுக்காக நகரும்"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_VertHysteresis)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:243 kcm/xlib/ui/pointermotion.ui:259
-#, kde-format
-msgid " units"
-msgstr " அலகுகள்"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:250
-#, kde-format
-msgid ""
-"The minimum horizontal hardware distance required to generate motion events"
-msgstr "விரல்கள் குறைந்தபட்சம் இவ்வளவு தூரம் நகர்ந்தால்தான் சுட்டிக்குறி கிடைமட்டமாக நகரும்"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, ScrollForm)
-#: kcm/xlib/ui/scroll.ui:14
-#, kde-format
-msgid "Scrolling"
-msgstr "உருளல்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/scroll.ui:28
-#, kde-format
-msgid "Edge scrolling:"
-msgstr "ஓர உருளல்:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:38
-#, kde-format
-msgid "Enable vertical scrolling when dragging along the right edge"
-msgstr "வலது ஓரத்தில் விரலை நகர்த்துவதன் மூலம் நெடுக்காக உருளுங்கள்"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:41 kcm/xlib/ui/scroll.ui:61 kcm/xlib/ui/scroll.ui:81
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Vertical"
-msgstr "நெடுக்காக"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:48
-#, kde-format
-msgid "Enable horizontal scrolling when dragging along the bottom edge"
-msgstr "கீழ் ஓரத்தில் விரலை நகர்த்துவதன் மூலம் கிடைமட்டமாக உருளுங்கள்"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:51 kcm/xlib/ui/scroll.ui:71 kcm/xlib/ui/scroll.ui:91
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Horizontal"
-msgstr "கிடைமட்டமாக"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:58
-#, kde-format
-msgid ""
-"Enable vertical scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr "இரண்டு விரல்களை தொடுபலகையில் தேய்ப்பதன் மூலம் நெடுக்காக உருளுங்கள்"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:68
-#, kde-format
-msgid ""
-"Enable horizontal scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr "இரண்டு விரல்களை தொடுபலகையில் தேய்ப்பதன் மூலம் கிடைமட்டமாக உருளுங்கள்"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:78
-#, kde-format
-msgid "Reverse vertical scrolling"
-msgstr "நெடுக்கான உருளலை புரட்டு"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:88
-#, kde-format
-msgid "Reverse horizontal scrolling"
-msgstr "கிடைமட்டமான உருளலை புரட்டு"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/scroll.ui:98
-#, kde-format
-msgid "Two-finger scrolling:"
-msgstr "இருவிரல் உருளல்:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/scroll.ui:108
-#, kde-format
-msgid "Reverse scrolling:"
-msgstr "உருளலை புரட்டு:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/scroll.ui:126
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Scrolling Distance"
-msgstr "உருள்வதற்கான தூரம்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/scroll.ui:138
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Vertical:"
-msgstr "நெடுக்காக:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
-#, kde-format
-msgid "Move distance of the finger for a scroll event"
-msgstr "ஒருமுறை உருள்வதற்காக விரலை எவ்வளவு தூரம் நகர்த்த வேண்டும்"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/scroll.ui:157 kcm/xlib/ui/scroll.ui:186 kcm/xlib/ui/tap.ui:417
-#, kde-format
-msgid " mm"
-msgstr "மி.மீ."
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/scroll.ui:167
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Horizontal:"
-msgstr "கிடைமட்டமாக:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:199
-#, kde-format
-msgid ""
-"Continue scrolling after the finger is released from the edge of the touchpad"
-msgstr "விரலை தொடுபலகையை விட்டு தூக்கிய பின்பும் சிறிது தூரம் உருள வேண்டுமா"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:202
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Coasting"
-msgstr "தான்தொடர் உருளல்"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/scroll.ui:217
-#, kde-format
-msgctxt "Coasting"
-msgid "Minimum speed:"
-msgstr "குறைந்தபட்ச வேகம்:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:227
-#, kde-format
-msgid ""
-"Your finger needs to produce this many scrolls per second in order to start "
-"coasting"
-msgstr ""
-"குறைந்தபட்சம் இவ்வளவு வேகமாக விரலை நகர்த்தினால்தான் விரலை தூக்கிய பின்னும் உருளல் தொடரும்"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:233
-#, kde-format
-msgid " scrolls/sec"
-msgstr " உருளல்கள்/நொடி"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/scroll.ui:240
-#, kde-format
-msgctxt "Coasting"
-msgid "Deceleration:"
-msgstr "வேகத்தேய்வு:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:250
-#, kde-format
-msgid "Number of scrolls/second² to decrease the coasting speed"
-msgstr "உருளல் வேகம் இத்தனை உருளல்கள்/நொடி² என குறைக்கப்படும்"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:256
-#, kde-format
-msgid " scrolls/sec²"
-msgstr " உருளல்கள்/நொடி²"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/scroll.ui:263
-#, kde-format
-msgid "Corner coasting:"
-msgstr "மூலையில் தான்தொடர் உருளல்"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:273
-#, kde-format
-msgid ""
-"Enable edge scrolling to continue while the finger stays in an edge corner"
-msgstr "உருளும்போது விரலை மூலையில் வைத்தால் உருள்வதை தொடரும்"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:276
-#, kde-format
-msgctxt "Coasting"
-msgid "Enable"
-msgstr "இயக்கு"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:288
-#, kde-format
-msgid ""
-"Scrolling is engaged when a drag starts in the given trigger region.\n"
-"Moving your finger in clockwise circles around the center of the touchpad\n"
-"will scroll down and counter clockwise motion will scroll up"
-msgstr ""
-"குறிப்பிட்ட பகுதியில் தொடங்கி விரலை இழுத்தல் உருளலை துவக்கும்.\n"
-"தொடுபலகையின் மையத்தை சுற்றி விரலை வலஞ்சுழி வட்டமாக நகர்த்தல் கீழே உருள செய்யும்;\n"
-"மாற்றாக இடஞ்சுழி வட்டமாக நகர்த்தல் மேலே உருள செய்யும்."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:291
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Circular Scrolling"
-msgstr "வட்ட உருளல்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/scroll.ui:306
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Trigger region:"
-msgstr "தூண்டும் பகுதி:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
-#: kcm/xlib/ui/scroll.ui:316
-#, kde-format
-msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr "வட்ட உருளலின் துவக்கத்தை தூண்டும் பகுதி"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/scroll.ui:323
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Angle:"
-msgstr "கோணம்:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:345
-#, kde-format
-msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr "விரலை இத்தனை டிகிரி நகர்த்தல் ஒரு உருளலை செயல்படுத்தும்"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:348
-#, kde-format
-msgctxt "suffix - degrees (angle)"
-msgid "°"
-msgstr "°"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/scroll.ui:355
-#, kde-format
-msgid ""
-"When used together with vertical scrolling, hitting the upper or lower right "
-"corner will seamlessly switch over from vertical to circular scrolling"
-msgstr ""
-"நெடுக்கான உருளலும் இயக்கப்பட்டிருக்கும்போது, வலது-மேல் அல்லது வலது-கீழ் ஓரங்களில் விரல் "
-"பட்டால், உருளல் முறை நெடுக்கானதிலிருந்து வட்டமானதாக மாறும்"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
-#: kcm/xlib/ui/sensitivity.ui:14
-#, kde-format
-msgid "Sensitivity"
-msgstr "உணர்வுத்திறம்"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/sensitivity.ui:20
-#, kde-format
-msgctxt "Touchpad"
-msgid "Sensitivity"
-msgstr "உணர்வுத்திறம்"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/sensitivity.ui:29
-#, kde-format
-msgid "Pressure for detecting a touch:"
-msgstr "தொடுவதற்கு தேவையான அழுத்தம்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/sensitivity.ui:39
-#, kde-format
-msgid "Pressure for detecting a release:"
-msgstr "விடுவதற்கு தேவையான அழுத்தம்:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerHigh)
-#: kcm/xlib/ui/sensitivity.ui:49
-#, kde-format
-msgid ""
-"When finger pressure goes above this value, the driver counts it as a touch"
-msgstr "விரலின் அழுத்தம் இதற்கு மேல் இருந்தால், தொடுபலகையை தொட்டதாக கருதப்படும்"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerLow)
-#: kcm/xlib/ui/sensitivity.ui:62
-#, kde-format
-msgid ""
-"When finger pressure drops below this value, the driver counts it as a "
-"release"
-msgstr ""
-"விரலின் அழுத்தம் இதைவிட குறைவாக இருந்தால், தொடுபலகையை விட்டு விரலை எடுத்த‍தாக "
-"கருதப்படும்"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:78
-#, kde-format
-msgid ""
-"If palm detection should be enabled. Note that this also requires hardware/"
-"firmware support from the touchpad"
-msgstr ""
-"உள்ளங்கையை கண்டறிய வேண்டுமா? இது சரியாக செயல்பட, வன்பொருள்/சாதனநிரல் அளவிலான ஆதரவு "
-"தேவை."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:81
-#, kde-format
-msgctxt "Touchpad"
-msgid "Palm Detection"
-msgstr "உள்ளங்கையை கண்டறிதல்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/sensitivity.ui:93
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum width:"
-msgstr "குறைந்தபட்ச அகலம்:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/sensitivity.ui:103
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum pressure:"
-msgstr "குறைந்தபட்ச அழுத்தம்:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinWidth)
-#: kcm/xlib/ui/sensitivity.ui:113
-#, kde-format
-msgid "Minimum finger width at which touch is considered a palm"
-msgstr "தொடும் உறுப்பின் அகலம் இதைவிட குறைவாக இருந்தால் அது உள்ளங்கையாக கருதப்படும்"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinZ)
-#: kcm/xlib/ui/sensitivity.ui:129
-#, kde-format
-msgid "Minimum finger pressure at which touch is considered a palm"
-msgstr "தொடும் உறுப்பின் அழுத்தம் இதைவிட குறைவாக இருந்தால் அது உள்ளங்கையாக கருதப்படும்"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, TapForm)
-#: kcm/xlib/ui/tap.ui:14
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Taps"
-msgstr "தட்டல்"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
-#: kcm/xlib/ui/tap.ui:28
-#, kde-format
-msgid "Tap to Click"
-msgstr "க்ளிக் செய்ய தட்டல்"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/tap.ui:43
-#, kde-format
-msgctxt "Tapping"
-msgid "One finger:"
-msgstr "ஒரு விரல்:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_OneFingerTapButton)
-#: kcm/xlib/ui/tap.ui:53
-#, kde-format
-msgid "Which mouse button is reported on a non-corner one-finger tap"
-msgstr ""
-"மூலையில் இல்லாமல் வேறிடத்தில் ஒரு விரலைக்கொண்டு தட்டினால் அது எவ்வகையான க்ளிக்காக "
-"கருதப்பட வேண்டும்?"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/tap.ui:60
-#, kde-format
-msgctxt "Tapping"
-msgid "Two fingers:"
-msgstr "இரண்டு விரல்கள்:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_TwoFingerTapButton)
-#: kcm/xlib/ui/tap.ui:70
-#, kde-format
-msgid "Which mouse button is reported on a non-corner two-finger tap"
-msgstr ""
-"மூலையில் இல்லாமல் வேறிடத்தில் இரு விரல்களைக்கொண்டு தட்டினால் அது எவ்வகையான க்ளிக்காக "
-"கருதப்பட வேண்டும்?"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/tap.ui:77
-#, kde-format
-msgctxt "Tapping"
-msgid "Three fingers:"
-msgstr "மூன்று விரல்கள்:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_ThreeFingerTapButton)
-#: kcm/xlib/ui/tap.ui:87
-#, kde-format
-msgid "Which mouse button is reported on a non-corner three-finger tap"
-msgstr ""
-"மூலையில் இல்லாமல் வேறிடத்தில் மூன்று விரல்களைக்கொண்டு தட்டினால் அது எவ்வகையான க்ளிக்காக "
-"கருதப்பட வேண்டும்?"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/tap.ui:107
-#, kde-format
-msgctxt "Touchpad"
-msgid "Corners"
-msgstr "மூலைகள்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/tap.ui:131
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top left:"
-msgstr "மேல்-இடது:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LTCornerButton)
-#: kcm/xlib/ui/tap.ui:144
-#, kde-format
-msgid "Which mouse button is reported on a left top corner tap"
-msgstr "மேல்-இடது ஓரத்தில் தட்டுவது எவ்வகையான க்ளிக்காக கருதப்பட வேண்டும்?"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/tap.ui:151
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom left:"
-msgstr "கீழ்-இடது:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/tap.ui:164
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top right:"
-msgstr "மேல்-வலது:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LBCornerButton)
-#: kcm/xlib/ui/tap.ui:177
-#, kde-format
-msgid "Which mouse button is reported on a left bottom corner tap"
-msgstr "கீழ்-இடது ஓரத்தில் தட்டுவது எவ்வகையான க்ளிக்காக கருதப்பட வேண்டும்?"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
-#: kcm/xlib/ui/tap.ui:184
-#, kde-format
-msgid "Which mouse button is reported on a right top corner tap"
-msgstr "மேல்-வலது ஓரத்தில் தட்டுவது எவ்வகையான க்ளிக்காக கருதப்பட வேண்டும்?"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
-#: kcm/xlib/ui/tap.ui:191
-#, kde-format
-msgid "Which mouse button is reported on a right bottom corner tap"
-msgstr "கீழ்-வலது ஓரத்தில் தட்டுவது எவ்வகையான க்ளிக்காக கருதப்பட வேண்டும்?"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/tap.ui:214
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom right:"
-msgstr "கீழ்-வலது:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:251
-#, kde-format
-msgid ""
-"This gesture is an alternative way of dragging. It is performed by tapping "
-"(touching and releasing the finger), then touching again and moving the "
-"finger on the touchpad"
-msgstr ""
-"இச்சைகை, இழுப்பதற்கான வேறு வழியாகும். தட்டி விரலை எடுத்த உடனேயே மறுபடியும் "
-"தொடுபலகையை தொட்டு விரலை நகர்த்தலாம். இது, சுட்டி பட்டனை அழுத்திக்கொண்டே சுட்டியை "
-"நகர்த்துவதற்கு சம‍மாகும்."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:254
-#, kde-format
-msgid "Tap-and-Drag Gesture"
-msgstr "தட்டி இழுக்கும் சைகை"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:266
-#, kde-format
-msgid ""
-"If off, a tap-and-drag gesture ends when you release the finger. If on, the "
-"gesture is active until you tap a second time, or until timeout expires"
-msgstr ""
-"இத்தேர்வு முடக்கப்பட்டால், விரலை தூக்கியவுடனேயே தட்டி இழுக்கும் சைகை முடிவடையும். மாறாக "
-"இயக்கப்பட்டால், குறிப்பிட்ட நேரத்திற்குள் இன்னொரு முறை தட்டி சைகையை தொடரலாம்."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:269
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Locked Drags"
-msgstr "பூட்டிய இழுத்தல்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/tap.ui:284
-#, kde-format
-msgctxt "Locked drags"
-msgid "Timeout:"
-msgstr "காலாவதி"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_LockedDragTimeout)
-#: kcm/xlib/ui/tap.ui:294
-#, kde-format
-msgid ""
-"How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
-"automatically turned off after the finger is released from the touchpad"
-msgstr ""
-"விரலை தொடுபலகையிலிருந்து தூக்கிய பின், இழுக்கும் சைகையை முடிக்க எத்தனை மில்லிநொடி "
-"காத்திருக்க வேண்டும்?"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/tap.ui:325
-#, kde-format
-msgid "Tap Detection"
-msgstr "தட்டுவதை கண்டறிதல்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/tap.ui:340
-#, kde-format
-msgid "Maximum time:"
-msgstr "அதிகபட்ச நேரம்:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/tap.ui:353
-#, kde-format
-msgid "Maximum finger movement:"
-msgstr "அதிகபட்ச விரல் அசைவு:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#: kcm/xlib/ui/tap.ui:366
-#, kde-format
-msgid "Maximum time for double tap:"
-msgstr "இரட்டை தட்டலுக்கான அதிகபட்ச நேரம்:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: kcm/xlib/ui/tap.ui:379
-#, kde-format
-msgid "Single tap timeout:"
-msgstr "ஒற்றை தட்டலுக்கான காலாவதி:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
-#: kcm/xlib/ui/tap.ui:389
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a tap"
-msgstr "தட்டுவதை கண்டறியும் அதிகபட்ச நேரம் (மில்லிநொடிகளில்)"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/tap.ui:408
-#, kde-format
-msgid "Maximum movement of the finger for detecting a tap"
-msgstr "தட்டும்போது விரல் நகரக்கூடிய அதிகபட்ச தூரம்"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#: kcm/xlib/ui/tap.ui:427
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a double tap"
-msgstr "இரட்டை தட்டலை கண்டறிவதற்கான அதிகபட்ச நேரம் (மில்லிநொடிகளில்)"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
-#: kcm/xlib/ui/tap.ui:446
-#, kde-format
-msgid "Timeout after a tap to recognize it as a single tap"
-msgstr "ஒற்றை தட்டலை எவ்வளவு நேரத்திற்கு பின் பொருட்படுத்த வேண்டும்?"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/testarea.ui:20
-#, kde-format
-msgid "Testing area"
-msgstr "சோதனைக்கான இடம்"
-
-#. i18n: ectx: property (text), widget (TestButton, pushButton)
-#: kcm/xlib/ui/testarea.ui:29
-#, kde-format
-msgid "Click me"
-msgstr "என்னை க்ளிக் செய்யுங்கள்"
-
 #: kded/kded.cpp:201
 #, kde-format
 msgid "Touchpad was disabled because a mouse was plugged in"
@@ -1392,6 +518,506 @@ msgstr "இடது ஓரம்"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "இடது-மேல் மூலை"
+
+#~ msgid "Drag me"
+#~ msgstr "என்னை இழுங்கள்"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Left button"
+#~ msgstr "இடது பட்டன்"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Right button"
+#~ msgstr "வலது பட்டன்"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Middle button"
+#~ msgstr "நடு பட்டன்"
+
+#~ msgid ""
+#~ "Active settings don't match saved settings.\n"
+#~ "You currently see saved settings."
+#~ msgstr ""
+#~ "செயலிலுள்ள அமைப்புகளும் சேமிக்கப்பட்ட அமைப்புகளும் வேறுபடுகின்றன.\n"
+#~ "சேமிக்கப்பட்ட அமைப்புகள் தற்போது காட்டப்படுகின்றன."
+
+#~ msgid "Show active settings"
+#~ msgstr "செயலிலுள்ள அமைப்புகளை காட்டு"
+
+#~ msgid "These settings won't take effect in the testing area"
+#~ msgstr "இவ்வமைப்புகள் சோதனைக்கான இடத்தில் செயல்படா"
+
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "தொடுபலகையை முடக்கு/இயக்கு"
+
+#~ msgctxt "@title:window"
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "தொடுபலகையை முடக்குதல்/இயக்குதல்"
+
+#~ msgid "Configure…"
+#~ msgstr "அமை..."
+
+#~ msgid "Keyboard shortcuts:"
+#~ msgstr "விசைப்பலகை சுருக்குவழிகள்:"
+
+#~ msgid "Disable touchpad when typing"
+#~ msgstr "தட்டச்சிடும்போது தொடுபலகையை முடக்கு"
+
+#~ msgid "Timeout:"
+#~ msgstr "நீடிப்பது:"
+
+#~ msgid ""
+#~ "If there was no keyboard activity for more than specified\n"
+#~ "number of milliseconds, touchpad will be enabled again"
+#~ msgstr ""
+#~ "இத்தனை மில்லிநொடிகளுக்கு மேல் விசைப்பலகையை பயன்படுத்தாமல் இருந்தால், தொடுபலகை "
+#~ "மறுபடியும் இயக்கப்படும்"
+
+#~ msgid " ms"
+#~ msgstr " மி.நொ."
+
+#~ msgid ""
+#~ "Disable click emulation and scrolling.\n"
+#~ "You will be still able to move pointer using touchpad and perform clicks "
+#~ "with hardware buttons."
+#~ msgstr ""
+#~ "தட்டி க்ளிக் செய்வதையும் உருள்வதையும் முடக்கும்.\n"
+#~ "தொடுபலகையை கொண்டு சுட்டிக்குறியை நகர்த்தலாம், மேலும் வன் பட்டன்களை கொண்டு க்ளிக் "
+#~ "செய்யலாம்."
+
+#~ msgid "Disable taps and scrolling only"
+#~ msgstr "தட்டலையும் உருளலையும் மட்டும் முடக்கு"
+
+#~ msgid "Disable touchpad when mouse is plugged in"
+#~ msgstr "சுட்டி செருகப்படும்போது தொடுபலகையை முடக்கு"
+
+#~ msgid "Notifications:"
+#~ msgstr "அறிவிப்புகள்:"
+
+#~ msgid "Ignored devices:"
+#~ msgstr "பொருட்படுத்தப்படாத சாதனங்கள்:"
+
+#~ msgid ""
+#~ "Some devices might be incorrectly treated as a mouse.\n"
+#~ "You can add them to this list so that they will be ignored when they're "
+#~ "plugged in."
+#~ msgstr ""
+#~ "சில சாதனங்கள், தவறுதலாக சுட்டியாக கருதப்படலாம்.\n"
+#~ "அவற்றை இப்பட்டியலில் சேர்த்தால், அவை சொருகப்பட்டிருக்கும்போதும் இவ்வம்சத்தால் "
+#~ "பொருட்படுத்தப்படா."
+
+#~ msgid "Pointer Motion"
+#~ msgstr "சுட்டிக்குறி நகர்வது"
+
+#~ msgctxt "Mouse pointer motion parameters"
+#~ msgid "Speed"
+#~ msgstr "வேகம்"
+
+#~ msgctxt "Minimum pointer movement speed"
+#~ msgid "Minimum:"
+#~ msgstr "குறைந்தபட்சம்:"
+
+#~ msgid "Minimum pointer speed"
+#~ msgstr "சுட்டிக்குறியின் குறைந்தபட்ச வேகம்"
+
+#~ msgctxt "Maximum pointer movement speed"
+#~ msgid "Maximum:"
+#~ msgstr "அதிகபட்சம்: "
+
+#~ msgid "Maximum pointer speed"
+#~ msgstr "சுட்டிக்குறியின் அதிகபட்ச வேகம்"
+
+#~ msgctxt "Pointer acceleration"
+#~ msgid "Acceleration:"
+#~ msgstr "வேகவளர்ச்சி"
+
+#~ msgid "Acceleration factor for normal pointer movements"
+#~ msgstr "சுட்டிக்குறியை நகர்த்துவதற்கான வேகவளர்ச்சி விகிதம்"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Pressure-Dependent Motion"
+#~ msgstr "அழுத்த-உணரி நகர்த்தல்"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum pressure:"
+#~ msgstr "குறைந்தபட்ச அழுத்தம்:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum factor:"
+#~ msgstr "குறைந்தபட்ச விகிதம்:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum pressure:"
+#~ msgstr "அதிகபட்ச அழுத்தம்:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum factor:"
+#~ msgstr "அதிகபட்ச விகிதம்:"
+
+#~ msgid "Finger pressure at which minimum pressure motion factor is applied"
+#~ msgstr "குறைந்தபட்ச விகிதம் இவ்வழுத்திற்கு பொருந்தும்"
+
+#~ msgid "Finger pressure at which maximum pressure motion factor is applied"
+#~ msgstr "அதிகபட்ச விகிதம் இவ்வழுத்திற்கு பொருந்தும்"
+
+#~ msgid "Lowest setting for pressure motion factor"
+#~ msgstr "அழுத்த-உணரி நகர்த்தலுக்கான குறைந்தபட்ச விகிதம்"
+
+#~ msgid "Greatest setting for pressure motion factor"
+#~ msgstr "அழுத்த-உணரி நகர்த்தலுக்கான அதிகபட்ச விகிதம்"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Noise Cancellation"
+#~ msgstr "நடுக்க நீக்கம்"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Vertical:"
+#~ msgstr "நெடுக்காக:"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Horizontal:"
+#~ msgstr "கிடைமட்டமாக:"
+
+#~ msgid ""
+#~ "The minimum vertical hardware distance required to generate motion events"
+#~ msgstr "விரல்கள் குறைந்தபட்சம் இவ்வளவு தூரம் நகர்ந்தால்தான் சுட்டிக்குறி நெடுக்காக நகரும்"
+
+#~ msgid " units"
+#~ msgstr " அலகுகள்"
+
+#~ msgid ""
+#~ "The minimum horizontal hardware distance required to generate motion "
+#~ "events"
+#~ msgstr ""
+#~ "விரல்கள் குறைந்தபட்சம் இவ்வளவு தூரம் நகர்ந்தால்தான் சுட்டிக்குறி கிடைமட்டமாக நகரும்"
+
+#~ msgid "Scrolling"
+#~ msgstr "உருளல்"
+
+#~ msgid "Edge scrolling:"
+#~ msgstr "ஓர உருளல்:"
+
+#~ msgid "Enable vertical scrolling when dragging along the right edge"
+#~ msgstr "வலது ஓரத்தில் விரலை நகர்த்துவதன் மூலம் நெடுக்காக உருளுங்கள்"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Vertical"
+#~ msgstr "நெடுக்காக"
+
+#~ msgid "Enable horizontal scrolling when dragging along the bottom edge"
+#~ msgstr "கீழ் ஓரத்தில் விரலை நகர்த்துவதன் மூலம் கிடைமட்டமாக உருளுங்கள்"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Horizontal"
+#~ msgstr "கிடைமட்டமாக"
+
+#~ msgid ""
+#~ "Enable vertical scrolling when dragging with two fingers anywhere on the "
+#~ "touchpad"
+#~ msgstr "இரண்டு விரல்களை தொடுபலகையில் தேய்ப்பதன் மூலம் நெடுக்காக உருளுங்கள்"
+
+#~ msgid ""
+#~ "Enable horizontal scrolling when dragging with two fingers anywhere on "
+#~ "the touchpad"
+#~ msgstr "இரண்டு விரல்களை தொடுபலகையில் தேய்ப்பதன் மூலம் கிடைமட்டமாக உருளுங்கள்"
+
+#~ msgid "Reverse vertical scrolling"
+#~ msgstr "நெடுக்கான உருளலை புரட்டு"
+
+#~ msgid "Reverse horizontal scrolling"
+#~ msgstr "கிடைமட்டமான உருளலை புரட்டு"
+
+#~ msgid "Two-finger scrolling:"
+#~ msgstr "இருவிரல் உருளல்:"
+
+#~ msgid "Reverse scrolling:"
+#~ msgstr "உருளலை புரட்டு:"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Scrolling Distance"
+#~ msgstr "உருள்வதற்கான தூரம்"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Vertical:"
+#~ msgstr "நெடுக்காக:"
+
+#~ msgid "Move distance of the finger for a scroll event"
+#~ msgstr "ஒருமுறை உருள்வதற்காக விரலை எவ்வளவு தூரம் நகர்த்த வேண்டும்"
+
+#~ msgid " mm"
+#~ msgstr "மி.மீ."
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Horizontal:"
+#~ msgstr "கிடைமட்டமாக:"
+
+#~ msgid ""
+#~ "Continue scrolling after the finger is released from the edge of the "
+#~ "touchpad"
+#~ msgstr "விரலை தொடுபலகையை விட்டு தூக்கிய பின்பும் சிறிது தூரம் உருள வேண்டுமா"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Coasting"
+#~ msgstr "தான்தொடர் உருளல்"
+
+#~ msgctxt "Coasting"
+#~ msgid "Minimum speed:"
+#~ msgstr "குறைந்தபட்ச வேகம்:"
+
+#~ msgid ""
+#~ "Your finger needs to produce this many scrolls per second in order to "
+#~ "start coasting"
+#~ msgstr ""
+#~ "குறைந்தபட்சம் இவ்வளவு வேகமாக விரலை நகர்த்தினால்தான் விரலை தூக்கிய பின்னும் உருளல் "
+#~ "தொடரும்"
+
+#~ msgid " scrolls/sec"
+#~ msgstr " உருளல்கள்/நொடி"
+
+#~ msgctxt "Coasting"
+#~ msgid "Deceleration:"
+#~ msgstr "வேகத்தேய்வு:"
+
+#~ msgid "Number of scrolls/second² to decrease the coasting speed"
+#~ msgstr "உருளல் வேகம் இத்தனை உருளல்கள்/நொடி² என குறைக்கப்படும்"
+
+#~ msgid " scrolls/sec²"
+#~ msgstr " உருளல்கள்/நொடி²"
+
+#~ msgid "Corner coasting:"
+#~ msgstr "மூலையில் தான்தொடர் உருளல்"
+
+#~ msgid ""
+#~ "Enable edge scrolling to continue while the finger stays in an edge corner"
+#~ msgstr "உருளும்போது விரலை மூலையில் வைத்தால் உருள்வதை தொடரும்"
+
+#~ msgctxt "Coasting"
+#~ msgid "Enable"
+#~ msgstr "இயக்கு"
+
+#~ msgid ""
+#~ "Scrolling is engaged when a drag starts in the given trigger region.\n"
+#~ "Moving your finger in clockwise circles around the center of the "
+#~ "touchpad\n"
+#~ "will scroll down and counter clockwise motion will scroll up"
+#~ msgstr ""
+#~ "குறிப்பிட்ட பகுதியில் தொடங்கி விரலை இழுத்தல் உருளலை துவக்கும்.\n"
+#~ "தொடுபலகையின் மையத்தை சுற்றி விரலை வலஞ்சுழி வட்டமாக நகர்த்தல் கீழே உருள செய்யும்;\n"
+#~ "மாற்றாக இடஞ்சுழி வட்டமாக நகர்த்தல் மேலே உருள செய்யும்."
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Circular Scrolling"
+#~ msgstr "வட்ட உருளல்"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Trigger region:"
+#~ msgstr "தூண்டும் பகுதி:"
+
+#~ msgid "Trigger region on the touchpad to start circular scrolling"
+#~ msgstr "வட்ட உருளலின் துவக்கத்தை தூண்டும் பகுதி"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Angle:"
+#~ msgstr "கோணம்:"
+
+#~ msgid "Move angle (degrees) of finger to generate a scroll event"
+#~ msgstr "விரலை இத்தனை டிகிரி நகர்த்தல் ஒரு உருளலை செயல்படுத்தும்"
+
+#~ msgctxt "suffix - degrees (angle)"
+#~ msgid "°"
+#~ msgstr "°"
+
+#~ msgid ""
+#~ "When used together with vertical scrolling, hitting the upper or lower "
+#~ "right corner will seamlessly switch over from vertical to circular "
+#~ "scrolling"
+#~ msgstr ""
+#~ "நெடுக்கான உருளலும் இயக்கப்பட்டிருக்கும்போது, வலது-மேல் அல்லது வலது-கீழ் ஓரங்களில் விரல் "
+#~ "பட்டால், உருளல் முறை நெடுக்கானதிலிருந்து வட்டமானதாக மாறும்"
+
+#~ msgid "Sensitivity"
+#~ msgstr "உணர்வுத்திறம்"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Sensitivity"
+#~ msgstr "உணர்வுத்திறம்"
+
+#~ msgid "Pressure for detecting a touch:"
+#~ msgstr "தொடுவதற்கு தேவையான அழுத்தம்"
+
+#~ msgid "Pressure for detecting a release:"
+#~ msgstr "விடுவதற்கு தேவையான அழுத்தம்:"
+
+#~ msgid ""
+#~ "When finger pressure goes above this value, the driver counts it as a "
+#~ "touch"
+#~ msgstr "விரலின் அழுத்தம் இதற்கு மேல் இருந்தால், தொடுபலகையை தொட்டதாக கருதப்படும்"
+
+#~ msgid ""
+#~ "When finger pressure drops below this value, the driver counts it as a "
+#~ "release"
+#~ msgstr ""
+#~ "விரலின் அழுத்தம் இதைவிட குறைவாக இருந்தால், தொடுபலகையை விட்டு விரலை எடுத்த‍தாக "
+#~ "கருதப்படும்"
+
+#~ msgid ""
+#~ "If palm detection should be enabled. Note that this also requires "
+#~ "hardware/firmware support from the touchpad"
+#~ msgstr ""
+#~ "உள்ளங்கையை கண்டறிய வேண்டுமா? இது சரியாக செயல்பட, வன்பொருள்/சாதனநிரல் அளவிலான "
+#~ "ஆதரவு தேவை."
+
+#~ msgctxt "Touchpad"
+#~ msgid "Palm Detection"
+#~ msgstr "உள்ளங்கையை கண்டறிதல்"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum width:"
+#~ msgstr "குறைந்தபட்ச அகலம்:"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum pressure:"
+#~ msgstr "குறைந்தபட்ச அழுத்தம்:"
+
+#~ msgid "Minimum finger width at which touch is considered a palm"
+#~ msgstr "தொடும் உறுப்பின் அகலம் இதைவிட குறைவாக இருந்தால் அது உள்ளங்கையாக கருதப்படும்"
+
+#~ msgid "Minimum finger pressure at which touch is considered a palm"
+#~ msgstr "தொடும் உறுப்பின் அழுத்தம் இதைவிட குறைவாக இருந்தால் அது உள்ளங்கையாக கருதப்படும்"
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Taps"
+#~ msgstr "தட்டல்"
+
+#~ msgid "Tap to Click"
+#~ msgstr "க்ளிக் செய்ய தட்டல்"
+
+#~ msgctxt "Tapping"
+#~ msgid "One finger:"
+#~ msgstr "ஒரு விரல்:"
+
+#~ msgid "Which mouse button is reported on a non-corner one-finger tap"
+#~ msgstr ""
+#~ "மூலையில் இல்லாமல் வேறிடத்தில் ஒரு விரலைக்கொண்டு தட்டினால் அது எவ்வகையான க்ளிக்காக "
+#~ "கருதப்பட வேண்டும்?"
+
+#~ msgctxt "Tapping"
+#~ msgid "Two fingers:"
+#~ msgstr "இரண்டு விரல்கள்:"
+
+#~ msgid "Which mouse button is reported on a non-corner two-finger tap"
+#~ msgstr ""
+#~ "மூலையில் இல்லாமல் வேறிடத்தில் இரு விரல்களைக்கொண்டு தட்டினால் அது எவ்வகையான க்ளிக்காக "
+#~ "கருதப்பட வேண்டும்?"
+
+#~ msgctxt "Tapping"
+#~ msgid "Three fingers:"
+#~ msgstr "மூன்று விரல்கள்:"
+
+#~ msgid "Which mouse button is reported on a non-corner three-finger tap"
+#~ msgstr ""
+#~ "மூலையில் இல்லாமல் வேறிடத்தில் மூன்று விரல்களைக்கொண்டு தட்டினால் அது எவ்வகையான க்ளிக்காக "
+#~ "கருதப்பட வேண்டும்?"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Corners"
+#~ msgstr "மூலைகள்"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top left:"
+#~ msgstr "மேல்-இடது:"
+
+#~ msgid "Which mouse button is reported on a left top corner tap"
+#~ msgstr "மேல்-இடது ஓரத்தில் தட்டுவது எவ்வகையான க்ளிக்காக கருதப்பட வேண்டும்?"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom left:"
+#~ msgstr "கீழ்-இடது:"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top right:"
+#~ msgstr "மேல்-வலது:"
+
+#~ msgid "Which mouse button is reported on a left bottom corner tap"
+#~ msgstr "கீழ்-இடது ஓரத்தில் தட்டுவது எவ்வகையான க்ளிக்காக கருதப்பட வேண்டும்?"
+
+#~ msgid "Which mouse button is reported on a right top corner tap"
+#~ msgstr "மேல்-வலது ஓரத்தில் தட்டுவது எவ்வகையான க்ளிக்காக கருதப்பட வேண்டும்?"
+
+#~ msgid "Which mouse button is reported on a right bottom corner tap"
+#~ msgstr "கீழ்-வலது ஓரத்தில் தட்டுவது எவ்வகையான க்ளிக்காக கருதப்பட வேண்டும்?"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom right:"
+#~ msgstr "கீழ்-வலது:"
+
+#~ msgid ""
+#~ "This gesture is an alternative way of dragging. It is performed by "
+#~ "tapping (touching and releasing the finger), then touching again and "
+#~ "moving the finger on the touchpad"
+#~ msgstr ""
+#~ "இச்சைகை, இழுப்பதற்கான வேறு வழியாகும். தட்டி விரலை எடுத்த உடனேயே மறுபடியும் "
+#~ "தொடுபலகையை தொட்டு விரலை நகர்த்தலாம். இது, சுட்டி பட்டனை அழுத்திக்கொண்டே சுட்டியை "
+#~ "நகர்த்துவதற்கு சம‍மாகும்."
+
+#~ msgid "Tap-and-Drag Gesture"
+#~ msgstr "தட்டி இழுக்கும் சைகை"
+
+#~ msgid ""
+#~ "If off, a tap-and-drag gesture ends when you release the finger. If on, "
+#~ "the gesture is active until you tap a second time, or until timeout "
+#~ "expires"
+#~ msgstr ""
+#~ "இத்தேர்வு முடக்கப்பட்டால், விரலை தூக்கியவுடனேயே தட்டி இழுக்கும் சைகை முடிவடையும். "
+#~ "மாறாக இயக்கப்பட்டால், குறிப்பிட்ட நேரத்திற்குள் இன்னொரு முறை தட்டி சைகையை தொடரலாம்."
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Locked Drags"
+#~ msgstr "பூட்டிய இழுத்தல்"
+
+#~ msgctxt "Locked drags"
+#~ msgid "Timeout:"
+#~ msgstr "காலாவதி"
+
+#~ msgid ""
+#~ "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
+#~ "automatically turned off after the finger is released from the touchpad"
+#~ msgstr ""
+#~ "விரலை தொடுபலகையிலிருந்து தூக்கிய பின், இழுக்கும் சைகையை முடிக்க எத்தனை மில்லிநொடி "
+#~ "காத்திருக்க வேண்டும்?"
+
+#~ msgid "Tap Detection"
+#~ msgstr "தட்டுவதை கண்டறிதல்"
+
+#~ msgid "Maximum time:"
+#~ msgstr "அதிகபட்ச நேரம்:"
+
+#~ msgid "Maximum finger movement:"
+#~ msgstr "அதிகபட்ச விரல் அசைவு:"
+
+#~ msgid "Maximum time for double tap:"
+#~ msgstr "இரட்டை தட்டலுக்கான அதிகபட்ச நேரம்:"
+
+#~ msgid "Single tap timeout:"
+#~ msgstr "ஒற்றை தட்டலுக்கான காலாவதி:"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a tap"
+#~ msgstr "தட்டுவதை கண்டறியும் அதிகபட்ச நேரம் (மில்லிநொடிகளில்)"
+
+#~ msgid "Maximum movement of the finger for detecting a tap"
+#~ msgstr "தட்டும்போது விரல் நகரக்கூடிய அதிகபட்ச தூரம்"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a double tap"
+#~ msgstr "இரட்டை தட்டலை கண்டறிவதற்கான அதிகபட்ச நேரம் (மில்லிநொடிகளில்)"
+
+#~ msgid "Timeout after a tap to recognize it as a single tap"
+#~ msgstr "ஒற்றை தட்டலை எவ்வளவு நேரத்திற்கு பின் பொருட்படுத்த வேண்டும்?"
+
+#~ msgid "Testing area"
+#~ msgstr "சோதனைக்கான இடம்"
+
+#~ msgid "Click me"
+#~ msgstr "என்னை க்ளிக் செய்யுங்கள்"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "வேகவளர்ச்சி முறை:"

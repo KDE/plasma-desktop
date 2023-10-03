@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2023-08-24 09:39+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -61,27 +61,27 @@ msgstr ""
 "Kritische fout bij lezen van fundamentele apparaatinformatie voor touchpad "
 "%1."
 
-#: backends/x11/xlibbackend.cpp:74
+#: backends/x11/xlibbackend.cpp:71
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "Kan geen verbinding met de X-server maken"
 
-#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:94
+#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:94
 #, kde-format
 msgid "No touchpad found"
 msgstr "Geen touchpad gevonden"
 
-#: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
+#: backends/x11/xlibbackend.cpp:124 backends/x11/xlibbackend.cpp:138
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "Kan de configuratie van het touchpad niet toepassen"
 
-#: backends/x11/xlibbackend.cpp:164 backends/x11/xlibbackend.cpp:177
+#: backends/x11/xlibbackend.cpp:152 backends/x11/xlibbackend.cpp:165
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "Kan de configuratie van het touchpad niet lezen"
 
-#: backends/x11/xlibbackend.cpp:190
+#: backends/x11/xlibbackend.cpp:178
 #, kde-format
 msgid "Cannot read default touchpad configuration"
 msgstr "Kan de standaard configuratie van het touchpad niet lezen"
@@ -427,906 +427,6 @@ msgstr ""
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Verbinding met touchpad verbroken. Geen andere touchpads gevonden."
 
-#: kcm/xlib/testarea.cpp:20
-#, kde-format
-msgid "Drag me"
-msgstr "Versleep mij"
-
-#: kcm/xlib/testbutton.cpp:29
-#, kde-format
-msgctxt "Mouse button"
-msgid "Left button"
-msgstr "Linker muisknop"
-
-#: kcm/xlib/testbutton.cpp:32
-#, kde-format
-msgctxt "Mouse button"
-msgid "Right button"
-msgstr "Rechter muisknop"
-
-#: kcm/xlib/testbutton.cpp:35
-#, kde-format
-msgctxt "Mouse button"
-msgid "Middle button"
-msgstr "Middelste muisknop"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:96
-#, kde-format
-msgid ""
-"Active settings don't match saved settings.\n"
-"You currently see saved settings."
-msgstr ""
-"Actieve instellingen komen niet overeen met opgeslagen instellingen.\n"
-"U ziet nu de opgeslagen instellingen."
-
-#: kcm/xlib/touchpadconfigxlib.cpp:102
-#, kde-format
-msgid "Show active settings"
-msgstr "Actieve instellingen tonen"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:139
-#, kde-format
-msgid "These settings won't take effect in the testing area"
-msgstr "Deze instellingen zullen geen effect hebben in het testgebied"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:144
-#, kde-format
-msgid "Enable/Disable Touchpad"
-msgstr "Touchpad in-/uitschakelen"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
-#: kcm/xlib/ui/kded.ui:14
-#, kde-format
-msgctxt "@title:window"
-msgid "Enable/Disable Touchpad"
-msgstr "Touchpad in-/uitschakelen"
-
-#. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
-#. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
-#: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
-#, kde-format
-msgid "Configure…"
-msgstr "Configureren…"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/kded.ui:47
-#, kde-format
-msgid "Keyboard shortcuts:"
-msgstr "Sneltoetsen:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:60
-#, kde-format
-msgid "Disable touchpad when typing"
-msgstr "Touchpad uitschakelen bij typen"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/kded.ui:75
-#, kde-format
-msgid "Timeout:"
-msgstr "Tijdslimiet:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:86
-#, kde-format
-msgid ""
-"If there was no keyboard activity for more than specified\n"
-"number of milliseconds, touchpad will be enabled again"
-msgstr ""
-"Als er geen toetsenbordactiviteit is voor meer dan het gespecificeerde\n"
-"aantal milliseconden, zal het touchpad weer ingeschakeld worden"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_SingleTapTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:98 kcm/xlib/ui/tap.ui:306 kcm/xlib/ui/tap.ui:401
-#: kcm/xlib/ui/tap.ui:439 kcm/xlib/ui/tap.ui:458
-#, kde-format
-msgid " ms"
-msgstr " ms"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:106
-#, kde-format
-msgid ""
-"Disable click emulation and scrolling.\n"
-"You will be still able to move pointer using touchpad and perform clicks "
-"with hardware buttons."
-msgstr ""
-"Klikemulatie en schuiven uitschakelen.\n"
-"U zult nog steeds in staat zijn de aanwijzer te verplaatsen met het touchpad "
-"en kunnen klikken met de echte knoppen."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:109
-#, kde-format
-msgid "Disable taps and scrolling only"
-msgstr "Alleen tikken en schuiven uitschakelen"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
-#: kcm/xlib/ui/kded.ui:119
-#, kde-format
-msgid "Disable touchpad when mouse is plugged in"
-msgstr "Touchpad uitschakelen wanneer een muis in ingeplugd"
-
-#. i18n: ectx: property (text), widget (QLabel, notificationsLabel)
-#: kcm/xlib/ui/kded.ui:136
-#, kde-format
-msgid "Notifications:"
-msgstr "Meldingen:"
-
-#. i18n: ectx: property (text), widget (QLabel, ignoredDevLabel)
-#: kcm/xlib/ui/kded.ui:158
-#, kde-format
-msgid "Ignored devices:"
-msgstr "Genegeerde apparaten:"
-
-#. i18n: ectx: property (toolTip), widget (KEditListWidget, kcfg_MouseBlacklist)
-#: kcm/xlib/ui/kded.ui:169
-#, kde-format
-msgid ""
-"Some devices might be incorrectly treated as a mouse.\n"
-"You can add them to this list so that they will be ignored when they're "
-"plugged in."
-msgstr ""
-"Sommige apparaten kunnen onjuist behandeld worden als een muis.\n"
-"U kunt ze aan deze lijst toevoegen zodat ze genegeerd worden wanneer ze "
-"ingeplugd worden."
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
-#: kcm/xlib/ui/pointermotion.ui:14
-#, kde-format
-msgid "Pointer Motion"
-msgstr "Beweging van aanwijzer"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/pointermotion.ui:20
-#, kde-format
-msgctxt "Mouse pointer motion parameters"
-msgid "Speed"
-msgstr "Snelheid"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/pointermotion.ui:29
-#, kde-format
-msgctxt "Minimum pointer movement speed"
-msgid "Minimum:"
-msgstr "Minimum:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MinSpeed)
-#: kcm/xlib/ui/pointermotion.ui:39
-#, kde-format
-msgid "Minimum pointer speed"
-msgstr "Minimale snelheid van aanwijzer"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/pointermotion.ui:52
-#, kde-format
-msgctxt "Maximum pointer movement speed"
-msgid "Maximum:"
-msgstr "Maximum:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MaxSpeed)
-#: kcm/xlib/ui/pointermotion.ui:62
-#, kde-format
-msgid "Maximum pointer speed"
-msgstr "Maximale snelheid van aanwijzer"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/pointermotion.ui:75
-#, kde-format
-msgctxt "Pointer acceleration"
-msgid "Acceleration:"
-msgstr "Versnelling:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
-#: kcm/xlib/ui/pointermotion.ui:85
-#, kde-format
-msgid "Acceleration factor for normal pointer movements"
-msgstr "Versnellingsfactor voor normale bewegingen van de aanwijzer"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/pointermotion.ui:101
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Pressure-Dependent Motion"
-msgstr "Drukafhankelijke beweging"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/pointermotion.ui:113
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum pressure:"
-msgstr "Minimale druk:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/pointermotion.ui:123
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum factor:"
-msgstr "Minimale factor:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/pointermotion.ui:133
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum pressure:"
-msgstr "Maximale druk:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/pointermotion.ui:143
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum factor:"
-msgstr "Maximale factor:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMinZ)
-#: kcm/xlib/ui/pointermotion.ui:153
-#, kde-format
-msgid "Finger pressure at which minimum pressure motion factor is applied"
-msgstr ""
-"Vingerdruk waarbij de minimale factor voor beweging met druk wordt toegepast"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
-#: kcm/xlib/ui/pointermotion.ui:166
-#, kde-format
-msgid "Finger pressure at which maximum pressure motion factor is applied"
-msgstr ""
-"Vingerdruk waarbij de maximale factor voor beweging met druk wordt toegepast"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
-#: kcm/xlib/ui/pointermotion.ui:179
-#, kde-format
-msgid "Lowest setting for pressure motion factor"
-msgstr "Laagste instelling van de factor voor beweging met druk"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMaxFactor)
-#: kcm/xlib/ui/pointermotion.ui:189
-#, kde-format
-msgid "Greatest setting for pressure motion factor"
-msgstr "Hoogste instelling van de factor voor beweging met druk"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/pointermotion.ui:202
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Noise Cancellation"
-msgstr "Ruisonderdrukking"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/pointermotion.ui:214
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Vertical:"
-msgstr "Verticaal:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/pointermotion.ui:224
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Horizontal:"
-msgstr "Horizontaal:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_VertHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:234
-#, kde-format
-msgid ""
-"The minimum vertical hardware distance required to generate motion events"
-msgstr ""
-"De minimaal vereiste verticale echte afstand om bewegingsgebeurtenissen te "
-"genereren"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_VertHysteresis)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:243 kcm/xlib/ui/pointermotion.ui:259
-#, kde-format
-msgid " units"
-msgstr " eenheden"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:250
-#, kde-format
-msgid ""
-"The minimum horizontal hardware distance required to generate motion events"
-msgstr ""
-"De minimaal vereiste horizontale echte afstand om bewegingsgebeurtenissen te "
-"genereren"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, ScrollForm)
-#: kcm/xlib/ui/scroll.ui:14
-#, kde-format
-msgid "Scrolling"
-msgstr "Schuiven"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/scroll.ui:28
-#, kde-format
-msgid "Edge scrolling:"
-msgstr "Schuiven aan de randen:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:38
-#, kde-format
-msgid "Enable vertical scrolling when dragging along the right edge"
-msgstr "Verticaal schuiven inschakelen bij vegen langs de rechter rand"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:41 kcm/xlib/ui/scroll.ui:61 kcm/xlib/ui/scroll.ui:81
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Vertical"
-msgstr "Verticaal"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:48
-#, kde-format
-msgid "Enable horizontal scrolling when dragging along the bottom edge"
-msgstr "Horizontaal schuiven inschakelen bij vegen langs de onderrand"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:51 kcm/xlib/ui/scroll.ui:71 kcm/xlib/ui/scroll.ui:91
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Horizontal"
-msgstr "Horizontaal"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:58
-#, kde-format
-msgid ""
-"Enable vertical scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr "Verticaal schuiven inschakelen bij vegen langs de rechter rand"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:68
-#, kde-format
-msgid ""
-"Enable horizontal scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr ""
-"Horizontaal schuiven inschakelen bij vegen met twee vingers ergens op het "
-"touchpad"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:78
-#, kde-format
-msgid "Reverse vertical scrolling"
-msgstr "Omgekeerd verticaal schuiven"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:88
-#, kde-format
-msgid "Reverse horizontal scrolling"
-msgstr "Omgekeerd horizontaal schuiven"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/scroll.ui:98
-#, kde-format
-msgid "Two-finger scrolling:"
-msgstr "Schuiven met twee vingers:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/scroll.ui:108
-#, kde-format
-msgid "Reverse scrolling:"
-msgstr "Omgekeerd schuiven:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/scroll.ui:126
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Scrolling Distance"
-msgstr "Schuifafstand"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/scroll.ui:138
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Vertical:"
-msgstr "Verticaal:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
-#, kde-format
-msgid "Move distance of the finger for a scroll event"
-msgstr "Verplaatsingsafstand van de vinger voor een schuifgebeurtenis"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/scroll.ui:157 kcm/xlib/ui/scroll.ui:186 kcm/xlib/ui/tap.ui:417
-#, kde-format
-msgid " mm"
-msgstr " mm"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/scroll.ui:167
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Horizontal:"
-msgstr "Horizontaal:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:199
-#, kde-format
-msgid ""
-"Continue scrolling after the finger is released from the edge of the touchpad"
-msgstr ""
-"Ga door met schuiven nadat de vinger is vrijgekomen van de rand van het "
-"touchpad"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:202
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Coasting"
-msgstr "Afrollen"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/scroll.ui:217
-#, kde-format
-msgctxt "Coasting"
-msgid "Minimum speed:"
-msgstr "Minimale snelheid"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:227
-#, kde-format
-msgid ""
-"Your finger needs to produce this many scrolls per second in order to start "
-"coasting"
-msgstr ""
-"Uw vinger moet zoveel keer per seconde vegen om te beginnen met afrollen"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:233
-#, kde-format
-msgid " scrolls/sec"
-msgstr " vegen/sec"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/scroll.ui:240
-#, kde-format
-msgctxt "Coasting"
-msgid "Deceleration:"
-msgstr "Vertragen:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:250
-#, kde-format
-msgid "Number of scrolls/second² to decrease the coasting speed"
-msgstr "Aantal vegen/seconde² om de afrolsnelheid te vertragen"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:256
-#, kde-format
-msgid " scrolls/sec²"
-msgstr " vegen/sec²"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/scroll.ui:263
-#, kde-format
-msgid "Corner coasting:"
-msgstr "Afrollen in de hoek:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:273
-#, kde-format
-msgid ""
-"Enable edge scrolling to continue while the finger stays in an edge corner"
-msgstr ""
-"Schakel randschuiven in om door te gaan terwijl de vinger in een hoek aan de "
-"rand blijft"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:276
-#, kde-format
-msgctxt "Coasting"
-msgid "Enable"
-msgstr "Inschakelen"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:288
-#, kde-format
-msgid ""
-"Scrolling is engaged when a drag starts in the given trigger region.\n"
-"Moving your finger in clockwise circles around the center of the touchpad\n"
-"will scroll down and counter clockwise motion will scroll up"
-msgstr ""
-"Schuiven wordt gedaan wanneer een veeg begint in het gegeven startgebied.\n"
-"Uw vinger rechtsom rond het midden van het touchpad draaien\n"
-"zal omlaag schuiven en linksom omhoog"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:291
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Circular Scrolling"
-msgstr "Circulair schuiven"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/scroll.ui:306
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Trigger region:"
-msgstr "Triggergebied:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
-#: kcm/xlib/ui/scroll.ui:316
-#, kde-format
-msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr "Triggergebied op het touchpad om te beginnen met circulair schuiven"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/scroll.ui:323
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Angle:"
-msgstr "Hoek:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:345
-#, kde-format
-msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr ""
-"Verplaatsingshoek (graden) van de vinger om een schuifgebeurtenis te "
-"genereren"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:348
-#, kde-format
-msgctxt "suffix - degrees (angle)"
-msgid "°"
-msgstr "°"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/scroll.ui:355
-#, kde-format
-msgid ""
-"When used together with vertical scrolling, hitting the upper or lower right "
-"corner will seamlessly switch over from vertical to circular scrolling"
-msgstr ""
-"Bij gebruik samen met verticaal schuiven, zal het aanraken van de "
-"rechtsboven of -onder hoek zal zonder hapering overschakelen van verticaal "
-"naar rondraaiend schuiven"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
-#: kcm/xlib/ui/sensitivity.ui:14
-#, kde-format
-msgid "Sensitivity"
-msgstr "Gevoeligheid"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/sensitivity.ui:20
-#, kde-format
-msgctxt "Touchpad"
-msgid "Sensitivity"
-msgstr "Gevoeligheid"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/sensitivity.ui:29
-#, kde-format
-msgid "Pressure for detecting a touch:"
-msgstr "Druk voor detecteren van een aanraking:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/sensitivity.ui:39
-#, kde-format
-msgid "Pressure for detecting a release:"
-msgstr "Druk voor detecteren van een loslating:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerHigh)
-#: kcm/xlib/ui/sensitivity.ui:49
-#, kde-format
-msgid ""
-"When finger pressure goes above this value, the driver counts it as a touch"
-msgstr ""
-"Wanneer de vingerdruk boven deze waarde gaat zal het stuurprogramma dit als "
-"een aanraking tellen"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerLow)
-#: kcm/xlib/ui/sensitivity.ui:62
-#, kde-format
-msgid ""
-"When finger pressure drops below this value, the driver counts it as a "
-"release"
-msgstr ""
-"Wanneer de vingerdruk onder deze waarde gaat zal het stuurprogramma dit als "
-"een loslating tellen"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:78
-#, kde-format
-msgid ""
-"If palm detection should be enabled. Note that this also requires hardware/"
-"firmware support from the touchpad"
-msgstr ""
-"Als detectie van een palm ingeschakeld moet worden. merk op dat dit ook "
-"ondersteuning van hardware/firmware van het touchpad vereist"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:81
-#, kde-format
-msgctxt "Touchpad"
-msgid "Palm Detection"
-msgstr "Detectie van palm"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/sensitivity.ui:93
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum width:"
-msgstr "Minimum breedte:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/sensitivity.ui:103
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum pressure:"
-msgstr "Minimale druk:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinWidth)
-#: kcm/xlib/ui/sensitivity.ui:113
-#, kde-format
-msgid "Minimum finger width at which touch is considered a palm"
-msgstr ""
-"Minimum breedte van de vinger wanneer een aanraking als een palm wordt "
-"beschouwd"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinZ)
-#: kcm/xlib/ui/sensitivity.ui:129
-#, kde-format
-msgid "Minimum finger pressure at which touch is considered a palm"
-msgstr ""
-"Minimale druk van de vinger wanneer een aanraking als een palm wordt "
-"beschouwd"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, TapForm)
-#: kcm/xlib/ui/tap.ui:14
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Taps"
-msgstr "Tikken"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
-#: kcm/xlib/ui/tap.ui:28
-#, kde-format
-msgid "Tap to Click"
-msgstr "Tikken om te klikken"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/tap.ui:43
-#, kde-format
-msgctxt "Tapping"
-msgid "One finger:"
-msgstr "Eén vinger:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_OneFingerTapButton)
-#: kcm/xlib/ui/tap.ui:53
-#, kde-format
-msgid "Which mouse button is reported on a non-corner one-finger tap"
-msgstr ""
-"Welke muisknop gerapporteerd wordt bij een tik met een vinger niet in een "
-"hoek"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/tap.ui:60
-#, kde-format
-msgctxt "Tapping"
-msgid "Two fingers:"
-msgstr "Twee vingers:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_TwoFingerTapButton)
-#: kcm/xlib/ui/tap.ui:70
-#, kde-format
-msgid "Which mouse button is reported on a non-corner two-finger tap"
-msgstr ""
-"Welke muisknop gerapporteerd wordt bij een tik met twee vingers niet in een "
-"hoek"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/tap.ui:77
-#, kde-format
-msgctxt "Tapping"
-msgid "Three fingers:"
-msgstr "Drie vingers:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_ThreeFingerTapButton)
-#: kcm/xlib/ui/tap.ui:87
-#, kde-format
-msgid "Which mouse button is reported on a non-corner three-finger tap"
-msgstr ""
-"Welke muisknop gerapporteerd wordt bij een tik met drie vingers niet in een "
-"hoek"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/tap.ui:107
-#, kde-format
-msgctxt "Touchpad"
-msgid "Corners"
-msgstr "Hoeken"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/tap.ui:131
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top left:"
-msgstr "Linksboven:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LTCornerButton)
-#: kcm/xlib/ui/tap.ui:144
-#, kde-format
-msgid "Which mouse button is reported on a left top corner tap"
-msgstr "Welke muisknop gerapporteerd wordt bij een tik in de linker bovenhoek"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/tap.ui:151
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom left:"
-msgstr "Linksonder:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/tap.ui:164
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top right:"
-msgstr "Rechtsboven:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LBCornerButton)
-#: kcm/xlib/ui/tap.ui:177
-#, kde-format
-msgid "Which mouse button is reported on a left bottom corner tap"
-msgstr "Welke muisknop gerapporteerd wordt bij een tik in de linker onderhoek"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
-#: kcm/xlib/ui/tap.ui:184
-#, kde-format
-msgid "Which mouse button is reported on a right top corner tap"
-msgstr "Welke muisknop gerapporteerd wordt bij een tik in de rechter bovenhoek"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
-#: kcm/xlib/ui/tap.ui:191
-#, kde-format
-msgid "Which mouse button is reported on a right bottom corner tap"
-msgstr "Welke muisknop gerapporteerd wordt bij een tik in de rechter onderhoek"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/tap.ui:214
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom right:"
-msgstr "Rechtsonder:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:251
-#, kde-format
-msgid ""
-"This gesture is an alternative way of dragging. It is performed by tapping "
-"(touching and releasing the finger), then touching again and moving the "
-"finger on the touchpad"
-msgstr ""
-"Dit gebaar is een alternatieve manier voor vegen. Het wordt gedaan door "
-"tikken (aanraken en loslaten van de vinger), daarna opnieuw aanraken en de "
-"vinger verplaatsen op het touchpad"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:254
-#, kde-format
-msgid "Tap-and-Drag Gesture"
-msgstr "Tik-en-veeg-gebaar"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:266
-#, kde-format
-msgid ""
-"If off, a tap-and-drag gesture ends when you release the finger. If on, the "
-"gesture is active until you tap a second time, or until timeout expires"
-msgstr ""
-"Indien uit eindigt een tik-en-veeg-gebaar wanneer u de vinger loslaat. "
-"Indien aan zal het gebaar actief zijn totdat u een tweede keep tikt of "
-"totdat de tijdslimiet wordt overschreden"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:269
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Locked Drags"
-msgstr "Vergrendelde vegen"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/tap.ui:284
-#, kde-format
-msgctxt "Locked drags"
-msgid "Timeout:"
-msgstr "Tijdslimiet:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_LockedDragTimeout)
-#: kcm/xlib/ui/tap.ui:294
-#, kde-format
-msgid ""
-"How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
-"automatically turned off after the finger is released from the touchpad"
-msgstr ""
-"Hoe lang het duurt (in milliseconden) voor de modus \"Vergrendelde vegen\" "
-"om automatisch uit te schakelen nadat de vinger is losgelaten van het "
-"touchpad"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/tap.ui:325
-#, kde-format
-msgid "Tap Detection"
-msgstr "Detectie van een tik"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/tap.ui:340
-#, kde-format
-msgid "Maximum time:"
-msgstr "Maximale tijd:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/tap.ui:353
-#, kde-format
-msgid "Maximum finger movement:"
-msgstr "Maximale verplaatsing van de vinger:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#: kcm/xlib/ui/tap.ui:366
-#, kde-format
-msgid "Maximum time for double tap:"
-msgstr "Maximum tijd voor een dubbele tik:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: kcm/xlib/ui/tap.ui:379
-#, kde-format
-msgid "Single tap timeout:"
-msgstr "Tijdslimiet voor een enkele tik:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
-#: kcm/xlib/ui/tap.ui:389
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a tap"
-msgstr "Maximum tijd (in milliseconden) voor detectie van een tik"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/tap.ui:408
-#, kde-format
-msgid "Maximum movement of the finger for detecting a tap"
-msgstr "Maximum verplaatsing van de vinger voor het detecteren van een tap"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#: kcm/xlib/ui/tap.ui:427
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a double tap"
-msgstr ""
-"Maximum tijd (in milliseconden) voor het detecteren van een dubbele tap"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
-#: kcm/xlib/ui/tap.ui:446
-#, kde-format
-msgid "Timeout after a tap to recognize it as a single tap"
-msgstr "Tijdslimiet na een tap om het te herkennen als een enkele tap"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/testarea.ui:20
-#, kde-format
-msgid "Testing area"
-msgstr "Testgebied"
-
-#. i18n: ectx: property (text), widget (TestButton, pushButton)
-#: kcm/xlib/ui/testarea.ui:29
-#, kde-format
-msgid "Click me"
-msgstr "Klik op mij"
-
 #: kded/kded.cpp:201
 #, kde-format
 msgid "Touchpad was disabled because a mouse was plugged in"
@@ -1427,6 +527,535 @@ msgstr "Linker rand"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Hoek linksboven"
+
+#~ msgid "Drag me"
+#~ msgstr "Versleep mij"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Left button"
+#~ msgstr "Linker muisknop"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Right button"
+#~ msgstr "Rechter muisknop"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Middle button"
+#~ msgstr "Middelste muisknop"
+
+#~ msgid ""
+#~ "Active settings don't match saved settings.\n"
+#~ "You currently see saved settings."
+#~ msgstr ""
+#~ "Actieve instellingen komen niet overeen met opgeslagen instellingen.\n"
+#~ "U ziet nu de opgeslagen instellingen."
+
+#~ msgid "Show active settings"
+#~ msgstr "Actieve instellingen tonen"
+
+#~ msgid "These settings won't take effect in the testing area"
+#~ msgstr "Deze instellingen zullen geen effect hebben in het testgebied"
+
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "Touchpad in-/uitschakelen"
+
+#~ msgctxt "@title:window"
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "Touchpad in-/uitschakelen"
+
+#~ msgid "Configure…"
+#~ msgstr "Configureren…"
+
+#~ msgid "Keyboard shortcuts:"
+#~ msgstr "Sneltoetsen:"
+
+#~ msgid "Disable touchpad when typing"
+#~ msgstr "Touchpad uitschakelen bij typen"
+
+#~ msgid "Timeout:"
+#~ msgstr "Tijdslimiet:"
+
+#~ msgid ""
+#~ "If there was no keyboard activity for more than specified\n"
+#~ "number of milliseconds, touchpad will be enabled again"
+#~ msgstr ""
+#~ "Als er geen toetsenbordactiviteit is voor meer dan het gespecificeerde\n"
+#~ "aantal milliseconden, zal het touchpad weer ingeschakeld worden"
+
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "Disable click emulation and scrolling.\n"
+#~ "You will be still able to move pointer using touchpad and perform clicks "
+#~ "with hardware buttons."
+#~ msgstr ""
+#~ "Klikemulatie en schuiven uitschakelen.\n"
+#~ "U zult nog steeds in staat zijn de aanwijzer te verplaatsen met het "
+#~ "touchpad en kunnen klikken met de echte knoppen."
+
+#~ msgid "Disable taps and scrolling only"
+#~ msgstr "Alleen tikken en schuiven uitschakelen"
+
+#~ msgid "Disable touchpad when mouse is plugged in"
+#~ msgstr "Touchpad uitschakelen wanneer een muis in ingeplugd"
+
+#~ msgid "Notifications:"
+#~ msgstr "Meldingen:"
+
+#~ msgid "Ignored devices:"
+#~ msgstr "Genegeerde apparaten:"
+
+#~ msgid ""
+#~ "Some devices might be incorrectly treated as a mouse.\n"
+#~ "You can add them to this list so that they will be ignored when they're "
+#~ "plugged in."
+#~ msgstr ""
+#~ "Sommige apparaten kunnen onjuist behandeld worden als een muis.\n"
+#~ "U kunt ze aan deze lijst toevoegen zodat ze genegeerd worden wanneer ze "
+#~ "ingeplugd worden."
+
+#~ msgid "Pointer Motion"
+#~ msgstr "Beweging van aanwijzer"
+
+#~ msgctxt "Mouse pointer motion parameters"
+#~ msgid "Speed"
+#~ msgstr "Snelheid"
+
+#~ msgctxt "Minimum pointer movement speed"
+#~ msgid "Minimum:"
+#~ msgstr "Minimum:"
+
+#~ msgid "Minimum pointer speed"
+#~ msgstr "Minimale snelheid van aanwijzer"
+
+#~ msgctxt "Maximum pointer movement speed"
+#~ msgid "Maximum:"
+#~ msgstr "Maximum:"
+
+#~ msgid "Maximum pointer speed"
+#~ msgstr "Maximale snelheid van aanwijzer"
+
+#~ msgctxt "Pointer acceleration"
+#~ msgid "Acceleration:"
+#~ msgstr "Versnelling:"
+
+#~ msgid "Acceleration factor for normal pointer movements"
+#~ msgstr "Versnellingsfactor voor normale bewegingen van de aanwijzer"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Pressure-Dependent Motion"
+#~ msgstr "Drukafhankelijke beweging"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum pressure:"
+#~ msgstr "Minimale druk:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum factor:"
+#~ msgstr "Minimale factor:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum pressure:"
+#~ msgstr "Maximale druk:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum factor:"
+#~ msgstr "Maximale factor:"
+
+#~ msgid "Finger pressure at which minimum pressure motion factor is applied"
+#~ msgstr ""
+#~ "Vingerdruk waarbij de minimale factor voor beweging met druk wordt "
+#~ "toegepast"
+
+#~ msgid "Finger pressure at which maximum pressure motion factor is applied"
+#~ msgstr ""
+#~ "Vingerdruk waarbij de maximale factor voor beweging met druk wordt "
+#~ "toegepast"
+
+#~ msgid "Lowest setting for pressure motion factor"
+#~ msgstr "Laagste instelling van de factor voor beweging met druk"
+
+#~ msgid "Greatest setting for pressure motion factor"
+#~ msgstr "Hoogste instelling van de factor voor beweging met druk"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Noise Cancellation"
+#~ msgstr "Ruisonderdrukking"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Vertical:"
+#~ msgstr "Verticaal:"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Horizontal:"
+#~ msgstr "Horizontaal:"
+
+#~ msgid ""
+#~ "The minimum vertical hardware distance required to generate motion events"
+#~ msgstr ""
+#~ "De minimaal vereiste verticale echte afstand om bewegingsgebeurtenissen "
+#~ "te genereren"
+
+#~ msgid " units"
+#~ msgstr " eenheden"
+
+#~ msgid ""
+#~ "The minimum horizontal hardware distance required to generate motion "
+#~ "events"
+#~ msgstr ""
+#~ "De minimaal vereiste horizontale echte afstand om bewegingsgebeurtenissen "
+#~ "te genereren"
+
+#~ msgid "Scrolling"
+#~ msgstr "Schuiven"
+
+#~ msgid "Edge scrolling:"
+#~ msgstr "Schuiven aan de randen:"
+
+#~ msgid "Enable vertical scrolling when dragging along the right edge"
+#~ msgstr "Verticaal schuiven inschakelen bij vegen langs de rechter rand"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Vertical"
+#~ msgstr "Verticaal"
+
+#~ msgid "Enable horizontal scrolling when dragging along the bottom edge"
+#~ msgstr "Horizontaal schuiven inschakelen bij vegen langs de onderrand"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Horizontal"
+#~ msgstr "Horizontaal"
+
+#~ msgid ""
+#~ "Enable vertical scrolling when dragging with two fingers anywhere on the "
+#~ "touchpad"
+#~ msgstr "Verticaal schuiven inschakelen bij vegen langs de rechter rand"
+
+#~ msgid ""
+#~ "Enable horizontal scrolling when dragging with two fingers anywhere on "
+#~ "the touchpad"
+#~ msgstr ""
+#~ "Horizontaal schuiven inschakelen bij vegen met twee vingers ergens op het "
+#~ "touchpad"
+
+#~ msgid "Reverse vertical scrolling"
+#~ msgstr "Omgekeerd verticaal schuiven"
+
+#~ msgid "Reverse horizontal scrolling"
+#~ msgstr "Omgekeerd horizontaal schuiven"
+
+#~ msgid "Two-finger scrolling:"
+#~ msgstr "Schuiven met twee vingers:"
+
+#~ msgid "Reverse scrolling:"
+#~ msgstr "Omgekeerd schuiven:"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Scrolling Distance"
+#~ msgstr "Schuifafstand"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Vertical:"
+#~ msgstr "Verticaal:"
+
+#~ msgid "Move distance of the finger for a scroll event"
+#~ msgstr "Verplaatsingsafstand van de vinger voor een schuifgebeurtenis"
+
+#~ msgid " mm"
+#~ msgstr " mm"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Horizontal:"
+#~ msgstr "Horizontaal:"
+
+#~ msgid ""
+#~ "Continue scrolling after the finger is released from the edge of the "
+#~ "touchpad"
+#~ msgstr ""
+#~ "Ga door met schuiven nadat de vinger is vrijgekomen van de rand van het "
+#~ "touchpad"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Coasting"
+#~ msgstr "Afrollen"
+
+#~ msgctxt "Coasting"
+#~ msgid "Minimum speed:"
+#~ msgstr "Minimale snelheid"
+
+#~ msgid ""
+#~ "Your finger needs to produce this many scrolls per second in order to "
+#~ "start coasting"
+#~ msgstr ""
+#~ "Uw vinger moet zoveel keer per seconde vegen om te beginnen met afrollen"
+
+#~ msgid " scrolls/sec"
+#~ msgstr " vegen/sec"
+
+#~ msgctxt "Coasting"
+#~ msgid "Deceleration:"
+#~ msgstr "Vertragen:"
+
+#~ msgid "Number of scrolls/second² to decrease the coasting speed"
+#~ msgstr "Aantal vegen/seconde² om de afrolsnelheid te vertragen"
+
+#~ msgid " scrolls/sec²"
+#~ msgstr " vegen/sec²"
+
+#~ msgid "Corner coasting:"
+#~ msgstr "Afrollen in de hoek:"
+
+#~ msgid ""
+#~ "Enable edge scrolling to continue while the finger stays in an edge corner"
+#~ msgstr ""
+#~ "Schakel randschuiven in om door te gaan terwijl de vinger in een hoek aan "
+#~ "de rand blijft"
+
+#~ msgctxt "Coasting"
+#~ msgid "Enable"
+#~ msgstr "Inschakelen"
+
+#~ msgid ""
+#~ "Scrolling is engaged when a drag starts in the given trigger region.\n"
+#~ "Moving your finger in clockwise circles around the center of the "
+#~ "touchpad\n"
+#~ "will scroll down and counter clockwise motion will scroll up"
+#~ msgstr ""
+#~ "Schuiven wordt gedaan wanneer een veeg begint in het gegeven "
+#~ "startgebied.\n"
+#~ "Uw vinger rechtsom rond het midden van het touchpad draaien\n"
+#~ "zal omlaag schuiven en linksom omhoog"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Circular Scrolling"
+#~ msgstr "Circulair schuiven"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Trigger region:"
+#~ msgstr "Triggergebied:"
+
+#~ msgid "Trigger region on the touchpad to start circular scrolling"
+#~ msgstr "Triggergebied op het touchpad om te beginnen met circulair schuiven"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Angle:"
+#~ msgstr "Hoek:"
+
+#~ msgid "Move angle (degrees) of finger to generate a scroll event"
+#~ msgstr ""
+#~ "Verplaatsingshoek (graden) van de vinger om een schuifgebeurtenis te "
+#~ "genereren"
+
+#~ msgctxt "suffix - degrees (angle)"
+#~ msgid "°"
+#~ msgstr "°"
+
+#~ msgid ""
+#~ "When used together with vertical scrolling, hitting the upper or lower "
+#~ "right corner will seamlessly switch over from vertical to circular "
+#~ "scrolling"
+#~ msgstr ""
+#~ "Bij gebruik samen met verticaal schuiven, zal het aanraken van de "
+#~ "rechtsboven of -onder hoek zal zonder hapering overschakelen van "
+#~ "verticaal naar rondraaiend schuiven"
+
+#~ msgid "Sensitivity"
+#~ msgstr "Gevoeligheid"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Sensitivity"
+#~ msgstr "Gevoeligheid"
+
+#~ msgid "Pressure for detecting a touch:"
+#~ msgstr "Druk voor detecteren van een aanraking:"
+
+#~ msgid "Pressure for detecting a release:"
+#~ msgstr "Druk voor detecteren van een loslating:"
+
+#~ msgid ""
+#~ "When finger pressure goes above this value, the driver counts it as a "
+#~ "touch"
+#~ msgstr ""
+#~ "Wanneer de vingerdruk boven deze waarde gaat zal het stuurprogramma dit "
+#~ "als een aanraking tellen"
+
+#~ msgid ""
+#~ "When finger pressure drops below this value, the driver counts it as a "
+#~ "release"
+#~ msgstr ""
+#~ "Wanneer de vingerdruk onder deze waarde gaat zal het stuurprogramma dit "
+#~ "als een loslating tellen"
+
+#~ msgid ""
+#~ "If palm detection should be enabled. Note that this also requires "
+#~ "hardware/firmware support from the touchpad"
+#~ msgstr ""
+#~ "Als detectie van een palm ingeschakeld moet worden. merk op dat dit ook "
+#~ "ondersteuning van hardware/firmware van het touchpad vereist"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Palm Detection"
+#~ msgstr "Detectie van palm"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum width:"
+#~ msgstr "Minimum breedte:"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum pressure:"
+#~ msgstr "Minimale druk:"
+
+#~ msgid "Minimum finger width at which touch is considered a palm"
+#~ msgstr ""
+#~ "Minimum breedte van de vinger wanneer een aanraking als een palm wordt "
+#~ "beschouwd"
+
+#~ msgid "Minimum finger pressure at which touch is considered a palm"
+#~ msgstr ""
+#~ "Minimale druk van de vinger wanneer een aanraking als een palm wordt "
+#~ "beschouwd"
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Taps"
+#~ msgstr "Tikken"
+
+#~ msgid "Tap to Click"
+#~ msgstr "Tikken om te klikken"
+
+#~ msgctxt "Tapping"
+#~ msgid "One finger:"
+#~ msgstr "Eén vinger:"
+
+#~ msgid "Which mouse button is reported on a non-corner one-finger tap"
+#~ msgstr ""
+#~ "Welke muisknop gerapporteerd wordt bij een tik met een vinger niet in een "
+#~ "hoek"
+
+#~ msgctxt "Tapping"
+#~ msgid "Two fingers:"
+#~ msgstr "Twee vingers:"
+
+#~ msgid "Which mouse button is reported on a non-corner two-finger tap"
+#~ msgstr ""
+#~ "Welke muisknop gerapporteerd wordt bij een tik met twee vingers niet in "
+#~ "een hoek"
+
+#~ msgctxt "Tapping"
+#~ msgid "Three fingers:"
+#~ msgstr "Drie vingers:"
+
+#~ msgid "Which mouse button is reported on a non-corner three-finger tap"
+#~ msgstr ""
+#~ "Welke muisknop gerapporteerd wordt bij een tik met drie vingers niet in "
+#~ "een hoek"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Corners"
+#~ msgstr "Hoeken"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top left:"
+#~ msgstr "Linksboven:"
+
+#~ msgid "Which mouse button is reported on a left top corner tap"
+#~ msgstr ""
+#~ "Welke muisknop gerapporteerd wordt bij een tik in de linker bovenhoek"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom left:"
+#~ msgstr "Linksonder:"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top right:"
+#~ msgstr "Rechtsboven:"
+
+#~ msgid "Which mouse button is reported on a left bottom corner tap"
+#~ msgstr ""
+#~ "Welke muisknop gerapporteerd wordt bij een tik in de linker onderhoek"
+
+#~ msgid "Which mouse button is reported on a right top corner tap"
+#~ msgstr ""
+#~ "Welke muisknop gerapporteerd wordt bij een tik in de rechter bovenhoek"
+
+#~ msgid "Which mouse button is reported on a right bottom corner tap"
+#~ msgstr ""
+#~ "Welke muisknop gerapporteerd wordt bij een tik in de rechter onderhoek"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom right:"
+#~ msgstr "Rechtsonder:"
+
+#~ msgid ""
+#~ "This gesture is an alternative way of dragging. It is performed by "
+#~ "tapping (touching and releasing the finger), then touching again and "
+#~ "moving the finger on the touchpad"
+#~ msgstr ""
+#~ "Dit gebaar is een alternatieve manier voor vegen. Het wordt gedaan door "
+#~ "tikken (aanraken en loslaten van de vinger), daarna opnieuw aanraken en "
+#~ "de vinger verplaatsen op het touchpad"
+
+#~ msgid "Tap-and-Drag Gesture"
+#~ msgstr "Tik-en-veeg-gebaar"
+
+#~ msgid ""
+#~ "If off, a tap-and-drag gesture ends when you release the finger. If on, "
+#~ "the gesture is active until you tap a second time, or until timeout "
+#~ "expires"
+#~ msgstr ""
+#~ "Indien uit eindigt een tik-en-veeg-gebaar wanneer u de vinger loslaat. "
+#~ "Indien aan zal het gebaar actief zijn totdat u een tweede keep tikt of "
+#~ "totdat de tijdslimiet wordt overschreden"
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Locked Drags"
+#~ msgstr "Vergrendelde vegen"
+
+#~ msgctxt "Locked drags"
+#~ msgid "Timeout:"
+#~ msgstr "Tijdslimiet:"
+
+#~ msgid ""
+#~ "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
+#~ "automatically turned off after the finger is released from the touchpad"
+#~ msgstr ""
+#~ "Hoe lang het duurt (in milliseconden) voor de modus \"Vergrendelde vegen"
+#~ "\" om automatisch uit te schakelen nadat de vinger is losgelaten van het "
+#~ "touchpad"
+
+#~ msgid "Tap Detection"
+#~ msgstr "Detectie van een tik"
+
+#~ msgid "Maximum time:"
+#~ msgstr "Maximale tijd:"
+
+#~ msgid "Maximum finger movement:"
+#~ msgstr "Maximale verplaatsing van de vinger:"
+
+#~ msgid "Maximum time for double tap:"
+#~ msgstr "Maximum tijd voor een dubbele tik:"
+
+#~ msgid "Single tap timeout:"
+#~ msgstr "Tijdslimiet voor een enkele tik:"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a tap"
+#~ msgstr "Maximum tijd (in milliseconden) voor detectie van een tik"
+
+#~ msgid "Maximum movement of the finger for detecting a tap"
+#~ msgstr "Maximum verplaatsing van de vinger voor het detecteren van een tap"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a double tap"
+#~ msgstr ""
+#~ "Maximum tijd (in milliseconden) voor het detecteren van een dubbele tap"
+
+#~ msgid "Timeout after a tap to recognize it as a single tap"
+#~ msgstr "Tijdslimiet na een tap om het te herkennen als een enkele tap"
+
+#~ msgid "Testing area"
+#~ msgstr "Testgebied"
+
+#~ msgid "Click me"
+#~ msgstr "Klik op mij"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Versnellingsprofiel:"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2023-08-24 10:52+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -150,9 +150,7 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Velocitat del punter:"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
-#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Acceleració del punter:"
@@ -259,277 +257,182 @@ msgctxt "@action:button"
 msgid "Go back"
 msgstr "Retrocedeix"
 
-#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
-#: kcm/xlib/kcmmouse.ui:14
-#, kde-format
-msgid ""
-"<h1>Mouse</h1> This module allows you to choose various options for the way "
-"in which your pointing device works. Your pointing device may be a mouse, "
-"trackball, or some other hardware that performs a similar function."
-msgstr ""
-"<h1>Ratolí</h1> Aquest mòdul us permet escollir diverses opcions quant a la "
-"manera de treballar del dispositiu apuntador. Aquest pot ser un ratolí, una "
-"bola o algun altre maquinari que faci una funció similar."
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Ratolí</h1> Aquest mòdul us permet escollir diverses opcions quant a "
+#~ "la manera de treballar del dispositiu apuntador. Aquest pot ser un "
+#~ "ratolí, una bola o algun altre maquinari que faci una funció similar."
 
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#: kcm/xlib/kcmmouse.ui:36
-#, kde-format
-msgid "&General"
-msgstr "Ge&neral"
+#~ msgid "&General"
+#~ msgstr "Ge&neral"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:52
-#, kde-format
-msgid ""
-"If you are left-handed, you may prefer to swap the functions of the left and "
-"right buttons on your pointing device by choosing the 'left-handed' option. "
-"If your pointing device has more than two buttons, only those that function "
-"as the left and right buttons are affected. For example, if you have a three-"
-"button mouse, the middle button is unaffected."
-msgstr ""
-"Si sou esquerrà, potser us voldreu intercanviar les funcions dels botons "
-"esquerre i dret del dispositiu apuntador escollint l'opció «mà esquerra». Si "
-"el vostre dispositiu apuntador té més de dos botons, només es canvien els "
-"que funcionen com a botó esquerre i dret. Per exemple, si teniu un ratolí de "
-"tres botons, el botó del mig no es veu afectat."
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Si sou esquerrà, potser us voldreu intercanviar les funcions dels botons "
+#~ "esquerre i dret del dispositiu apuntador escollint l'opció «mà esquerra». "
+#~ "Si el vostre dispositiu apuntador té més de dos botons, només es canvien "
+#~ "els que funcionen com a botó esquerre i dret. Per exemple, si teniu un "
+#~ "ratolí de tres botons, el botó del mig no es veu afectat."
 
-#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:55
-#, kde-format
-msgid "Button Order"
-msgstr "Ordre del botó"
+#~ msgid "Button Order"
+#~ msgstr "Ordre del botó"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
-#: kcm/xlib/kcmmouse.ui:64
-#, kde-format
-msgid "Righ&t handed"
-msgstr "D&retà"
+#~ msgid "Righ&t handed"
+#~ msgstr "D&retà"
 
-#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
-#: kcm/xlib/kcmmouse.ui:77
-#, kde-format
-msgid "Le&ft handed"
-msgstr "&Esquerrà"
+#~ msgid "Le&ft handed"
+#~ msgstr "&Esquerrà"
 
 # skip-rule: kct-mousewheel
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:106
-#, kde-format
-msgid ""
-"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
-"mouse buttons."
-msgstr ""
-"Canvia la direcció del desplaçament amb la roda o els botons 4t i 5è del "
-"ratolí."
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Canvia la direcció del desplaçament amb la roda o els botons 4t i 5è del "
+#~ "ratolí."
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:109
-#, kde-format
-msgid "Re&verse scroll direction"
-msgstr "In&verteix la direcció de desplaçament"
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "In&verteix la direcció de desplaçament"
 
-#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
-#: kcm/xlib/kcmmouse.ui:156
-#, kde-format
-msgid "Advanced"
-msgstr "Avançat"
+#~ msgid "Advanced"
+#~ msgstr "Avançat"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/kcmmouse.ui:174
-#, kde-format
-msgid "Pointer threshold:"
-msgstr "Llindar del punter:"
+#~ msgid "Pointer threshold:"
+#~ msgstr "Llindar del punter:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/kcmmouse.ui:184
-#, kde-format
-msgid "Double click interval:"
-msgstr "Interval del doble clic:"
+#~ msgid "Double click interval:"
+#~ msgstr "Interval del doble clic:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/kcmmouse.ui:194
-#, kde-format
-msgid "Drag start time:"
-msgstr "Temps inici de l'arrossegament:"
+#~ msgid "Drag start time:"
+#~ msgstr "Temps inici de l'arrossegament:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/kcmmouse.ui:204
-#, kde-format
-msgid "Drag start distance:"
-msgstr "Distància d'inici de l'arrossegament:"
+#~ msgid "Drag start distance:"
+#~ msgstr "Distància d'inici de l'arrossegament:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/kcmmouse.ui:214
-#, kde-format
-msgid "Mouse wheel scrolls by:"
-msgstr "La roda del ratolí es desplaça:"
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "La roda del ratolí es desplaça:"
 
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:230
-#, kde-format
-msgid ""
-"<p>This option allows you to change the relationship between the distance "
-"that the mouse pointer moves on the screen and the relative movement of the "
-"physical device itself (which may be a mouse, trackball, or some other "
-"pointing device.)</p><p> A high value for the acceleration will lead to "
-"large movements of the mouse pointer on the screen even when you only make a "
-"small movement with the physical device. Selecting very high values may "
-"result in the mouse pointer flying across the screen, making it hard to "
-"control.</p>"
-msgstr ""
-"<p>Aquesta opció us permet canviar la relació entre la distància del "
-"desplaçament del punter del ratolí a la pantalla i el moviment relatiu del "
-"dispositiu físic (el qual pot ser un ratolí, una bola o qualsevol altre "
-"dispositiu apuntador).</p><p> Un valor alt de l'acceleració provocarà grans "
-"moviments del punter del ratolí a la pantalla, fins i tot si només feu un "
-"moviment petit amb el dispositiu físic. La selecció de valors molt alts pot "
-"fer que el punter voli travessant la pantalla, fent-se difícil de controlar."
-"</p>"
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Aquesta opció us permet canviar la relació entre la distància del "
+#~ "desplaçament del punter del ratolí a la pantalla i el moviment relatiu "
+#~ "del dispositiu físic (el qual pot ser un ratolí, una bola o qualsevol "
+#~ "altre dispositiu apuntador).</p><p> Un valor alt de l'acceleració "
+#~ "provocarà grans moviments del punter del ratolí a la pantalla, fins i tot "
+#~ "si només feu un moviment petit amb el dispositiu físic. La selecció de "
+#~ "valors molt alts pot fer que el punter voli travessant la pantalla, fent-"
+#~ "se difícil de controlar.</p>"
 
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:233
-#, kde-format
-msgid " x"
-msgstr " x"
+#~ msgid " x"
+#~ msgstr " x"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
-#: kcm/xlib/kcmmouse.ui:261
-#, kde-format
-msgid ""
-"<p>The threshold is the smallest distance that the mouse pointer must move "
-"on the screen before acceleration has any effect. If the movement is smaller "
-"than the threshold, the mouse pointer moves as if the acceleration was set "
-"to 1X;</p><p> thus, when you make small movements with the physical device, "
-"there is no acceleration at all, giving you a greater degree of control over "
-"the mouse pointer. With larger movements of the physical device, you can "
-"move the mouse pointer rapidly to different areas on the screen.</p>"
-msgstr ""
-"<p>El llindar és la distància més petita que s'ha de moure el punter del "
-"ratolí per la pantalla abans que faci efecte l'acceleració. Si el moviment "
-"és més petit que el llindar, el punter es mourà com si l'acceleració fos 1X;"
-"</p><p>per tant, si feu moviments petits amb el dispositiu físic, no hi "
-"haurà acceleració en absolut, donant-vos un grau de control més gran del "
-"punter del ratolí. Amb moviments més grans del dispositiu físic, podreu "
-"moure el punter ràpidament a àrees diferents de la pantalla.</p>"
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>El llindar és la distància més petita que s'ha de moure el punter del "
+#~ "ratolí per la pantalla abans que faci efecte l'acceleració. Si el "
+#~ "moviment és més petit que el llindar, el punter es mourà com si "
+#~ "l'acceleració fos 1X;</p><p>per tant, si feu moviments petits amb el "
+#~ "dispositiu físic, no hi haurà acceleració en absolut, donant-vos un grau "
+#~ "de control més gran del punter del ratolí. Amb moviments més grans del "
+#~ "dispositiu físic, podreu moure el punter ràpidament a àrees diferents de "
+#~ "la pantalla.</p>"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
-#: kcm/xlib/kcmmouse.ui:280
-#, kde-format
-msgid ""
-"The double click interval is the maximal time (in milliseconds) between two "
-"mouse clicks which turns them into a double click. If the second click "
-"happens later than this time interval after the first click, they are "
-"recognized as two separate clicks."
-msgstr ""
-"L'interval per al doble clic és el temps màxim (en mil·lisegons) entre dos "
-"clics del ratolí que els converteix en un doble clic. Si el segon clic "
-"ocorre més tard que aquest interval de temps després del primer clic, es "
-"reconeixen com a dos clics separats."
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "L'interval per al doble clic és el temps màxim (en mil·lisegons) entre "
+#~ "dos clics del ratolí que els converteix en un doble clic. Si el segon "
+#~ "clic ocorre més tard que aquest interval de temps després del primer "
+#~ "clic, es reconeixen com a dos clics separats."
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
-#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
-#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
-#, kde-format
-msgid " msec"
-msgstr " ms"
+#~ msgid " msec"
+#~ msgstr " ms"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
-#: kcm/xlib/kcmmouse.ui:308
-#, kde-format
-msgid ""
-"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
-"the mouse within the drag start time, a drag operation will be initiated."
-msgstr ""
-"Si cliqueu amb el ratolí (p. ex. en un editor multilínia) i comenceu a moure "
-"el ratolí dins del temps inici per a l'arrossegada, s'iniciarà una operació "
-"d'arrossegament."
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Si cliqueu amb el ratolí (p. ex. en un editor multilínia) i comenceu a "
+#~ "moure el ratolí dins del temps inici per a l'arrossegada, s'iniciarà una "
+#~ "operació d'arrossegament."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
-#: kcm/xlib/kcmmouse.ui:333
-#, kde-format
-msgid ""
-"If you click with the mouse and begin to move the mouse at least the drag "
-"start distance, a drag operation will be initiated."
-msgstr ""
-"Si cliqueu amb el ratolí i comenceu a moure el ratolí dins de la distància "
-"inici per a l'arrossegada, s'iniciarà una operació d'arrossegament."
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Si cliqueu amb el ratolí i comenceu a moure el ratolí dins de la "
+#~ "distància inici per a l'arrossegada, s'iniciarà una operació "
+#~ "d'arrossegament."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
-#: kcm/xlib/kcmmouse.ui:355
-#, kde-format
-msgid ""
-"If you use the wheel of a mouse, this value determines the number of lines "
-"to scroll for each wheel movement. Note that if this number exceeds the "
-"number of visible lines, it will be ignored and the wheel movement will be "
-"handled as a page up/down movement."
-msgstr ""
-"Si useu la roda d'un ratolí, aquest valor determina el nombre de línies de "
-"desplaçament per a cada moviment de la roda. Cal tenir present que si aquest "
-"nombre excedeix el nombre de línies visibles, s'ignorarà i el moviment de la "
-"roda es gestionarà com un moviment de pàgina amunt/avall."
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Si useu la roda d'un ratolí, aquest valor determina el nombre de línies "
+#~ "de desplaçament per a cada moviment de la roda. Cal tenir present que si "
+#~ "aquest nombre excedeix el nombre de línies visibles, s'ignorarà i el "
+#~ "moviment de la roda es gestionarà com un moviment de pàgina amunt/avall."
 
-#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
-#: kcm/xlib/kcmmouse.ui:387
-#, kde-format
-msgid "Keyboard Navigation"
-msgstr "Navegació amb el teclat"
+#~ msgid "Keyboard Navigation"
+#~ msgstr "Navegació amb el teclat"
 
-#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
-#: kcm/xlib/kcmmouse.ui:395
-#, kde-format
-msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "&Mou el punter amb el teclat (usant el teclat numèric)"
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Mou el punter amb el teclat (usant el teclat numèric)"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/kcmmouse.ui:424
-#, kde-format
-msgid "&Acceleration delay:"
-msgstr "Retard de l'a&cceleració:"
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Retard de l'a&cceleració:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/kcmmouse.ui:434
-#, kde-format
-msgid "R&epeat interval:"
-msgstr "Inter&val de repetició:"
+#~ msgid "R&epeat interval:"
+#~ msgstr "Inter&val de repetició:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/kcmmouse.ui:466
-#, kde-format
-msgid "Acceleration &time:"
-msgstr "&Temps d'acceleració:"
+#~ msgid "Acceleration &time:"
+#~ msgstr "&Temps d'acceleració:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/kcmmouse.ui:498
-#, kde-format
-msgid "Ma&ximum speed:"
-msgstr "Velocitat &màxima:"
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Velocitat &màxima:"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
-#: kcm/xlib/kcmmouse.ui:514
-#, kde-format
-msgid " pixel/sec"
-msgstr " píxels/s"
+#~ msgid " pixel/sec"
+#~ msgstr " píxels/s"
 
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/kcmmouse.ui:530
-#, kde-format
-msgid "Acceleration &profile:"
-msgstr "&Perfil d'acceleració:"
+#~ msgid "Acceleration &profile:"
+#~ msgstr "&Perfil d'acceleració:"
 
-#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
-#, kde-format
-msgid " pixel"
-msgid_plural " pixels"
-msgstr[0] " píxel"
-msgstr[1] " píxels"
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " píxel"
+#~ msgstr[1] " píxels"
 
-#: kcm/xlib/xlib_config.cpp:277
-#, kde-format
-msgid " line"
-msgid_plural " lines"
-msgstr[0] " línia"
-msgstr[1] " línies"
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " línia"
+#~ msgstr[1] " línies"

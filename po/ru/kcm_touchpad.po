@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2022-06-27 10:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -64,27 +64,27 @@ msgstr ""
 "Критическая ошибка при чтении основных сведений об устройстве для сенсорной "
 "панели %1."
 
-#: backends/x11/xlibbackend.cpp:74
+#: backends/x11/xlibbackend.cpp:71
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "Не удалось подключиться к X-серверу"
 
-#: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:94
+#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:94
 #, kde-format
 msgid "No touchpad found"
 msgstr "Не найдено ни одной сенсорной панели"
 
-#: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
+#: backends/x11/xlibbackend.cpp:124 backends/x11/xlibbackend.cpp:138
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "Не удалось применить конфигурацию сенсорной панели"
 
-#: backends/x11/xlibbackend.cpp:164 backends/x11/xlibbackend.cpp:177
+#: backends/x11/xlibbackend.cpp:152 backends/x11/xlibbackend.cpp:165
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "Не удалось прочитать конфигурацию сенсорной панели"
 
-#: backends/x11/xlibbackend.cpp:190
+#: backends/x11/xlibbackend.cpp:178
 #, kde-format
 msgid "Cannot read default touchpad configuration"
 msgstr ""
@@ -437,908 +437,6 @@ msgstr "Сенсорная панель отключена, её окно нас
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Сенсорная панель отключена. Других сенсорных панелей не найдено."
 
-#: kcm/xlib/testarea.cpp:20
-#, kde-format
-msgid "Drag me"
-msgstr "Перетащите"
-
-#: kcm/xlib/testbutton.cpp:29
-#, kde-format
-msgctxt "Mouse button"
-msgid "Left button"
-msgstr "Левая кнопка"
-
-#: kcm/xlib/testbutton.cpp:32
-#, kde-format
-msgctxt "Mouse button"
-msgid "Right button"
-msgstr "Правая кнопка"
-
-#: kcm/xlib/testbutton.cpp:35
-#, kde-format
-msgctxt "Mouse button"
-msgid "Middle button"
-msgstr "Средняя кнопка"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:96
-#, kde-format
-msgid ""
-"Active settings don't match saved settings.\n"
-"You currently see saved settings."
-msgstr ""
-"Задействованные параметры не соответствуют сохраненным параметрам.\n"
-"В настоящее время вы видите сохранённые параметры."
-
-#: kcm/xlib/touchpadconfigxlib.cpp:102
-#, kde-format
-msgid "Show active settings"
-msgstr "Показать задействованные параметры"
-
-#: kcm/xlib/touchpadconfigxlib.cpp:139
-#, kde-format
-msgid "These settings won't take effect in the testing area"
-msgstr "Эти параметры не будут действовать в области проверки."
-
-# BUGME: where does this appear in the UI? --aspotashev
-#: kcm/xlib/touchpadconfigxlib.cpp:144
-#, kde-format
-msgid "Enable/Disable Touchpad"
-msgstr "Включить или выключить панель"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
-#: kcm/xlib/ui/kded.ui:14
-#, kde-format
-msgctxt "@title:window"
-msgid "Enable/Disable Touchpad"
-msgstr "Включение и выключение панели"
-
-#. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
-#. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
-#: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
-#, kde-format
-msgid "Configure…"
-msgstr "Настроить..."
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/kded.ui:47
-#, kde-format
-msgid "Keyboard shortcuts:"
-msgstr "Комбинации клавиш:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:60
-#, kde-format
-msgid "Disable touchpad when typing"
-msgstr "Выключать сенсорную панель при вводе текста"
-
-# Touchpad silence timeout. --aspotashev
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/kded.ui:75
-#, kde-format
-msgid "Timeout:"
-msgstr "Задержка включения:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:86
-#, kde-format
-msgid ""
-"If there was no keyboard activity for more than specified\n"
-"number of milliseconds, touchpad will be enabled again"
-msgstr ""
-"Если с клавиатуры ничего не вводится дольше указанного числа\n"
-"миллисекунд, сенсорная панель будет снова включена"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_SingleTapTimeout)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
-#: kcm/xlib/ui/kded.ui:98 kcm/xlib/ui/tap.ui:306 kcm/xlib/ui/tap.ui:401
-#: kcm/xlib/ui/tap.ui:439 kcm/xlib/ui/tap.ui:458
-#, kde-format
-msgid " ms"
-msgstr " мс"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:106
-#, kde-format
-msgid ""
-"Disable click emulation and scrolling.\n"
-"You will be still able to move pointer using touchpad and perform clicks "
-"with hardware buttons."
-msgstr ""
-"Выключать только эмуляцию кнопок мыши и прокрутку.\n"
-"При этом сохраняется возможность перемещать указатель мыши с помощью\n"
-"сенсорной панели и выполнять щелчки аппаратными кнопками."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
-#: kcm/xlib/ui/kded.ui:109
-#, kde-format
-msgid "Disable taps and scrolling only"
-msgstr "Выключать только действия касания и прокрутки"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
-#: kcm/xlib/ui/kded.ui:119
-#, kde-format
-msgid "Disable touchpad when mouse is plugged in"
-msgstr "Выключать сенсорную панель при подключении мыши"
-
-#. i18n: ectx: property (text), widget (QLabel, notificationsLabel)
-#: kcm/xlib/ui/kded.ui:136
-#, kde-format
-msgid "Notifications:"
-msgstr "Уведомления:"
-
-#. i18n: ectx: property (text), widget (QLabel, ignoredDevLabel)
-#: kcm/xlib/ui/kded.ui:158
-#, kde-format
-msgid "Ignored devices:"
-msgstr "Игнорируемые устройства:"
-
-#. i18n: ectx: property (toolTip), widget (KEditListWidget, kcfg_MouseBlacklist)
-#: kcm/xlib/ui/kded.ui:169
-#, kde-format
-msgid ""
-"Some devices might be incorrectly treated as a mouse.\n"
-"You can add them to this list so that they will be ignored when they're "
-"plugged in."
-msgstr ""
-"Некоторые устройства могут быть ошибочно распознаны как мышь.\n"
-"Если добавить их в этот список, то они будут проигнорированы при подключении."
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
-#: kcm/xlib/ui/pointermotion.ui:14
-#, kde-format
-msgid "Pointer Motion"
-msgstr "Движение указателя"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/pointermotion.ui:20
-#, kde-format
-msgctxt "Mouse pointer motion parameters"
-msgid "Speed"
-msgstr "Скорость"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/pointermotion.ui:29
-#, kde-format
-msgctxt "Minimum pointer movement speed"
-msgid "Minimum:"
-msgstr "Минимальная:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MinSpeed)
-#: kcm/xlib/ui/pointermotion.ui:39
-#, kde-format
-msgid "Minimum pointer speed"
-msgstr "Минимальная скорость перемещения указателя мыши"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/pointermotion.ui:52
-#, kde-format
-msgctxt "Maximum pointer movement speed"
-msgid "Maximum:"
-msgstr "Максимальная:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MaxSpeed)
-#: kcm/xlib/ui/pointermotion.ui:62
-#, kde-format
-msgid "Maximum pointer speed"
-msgstr "Максимальная скорость перемещения указателя мыши"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/pointermotion.ui:75
-#, kde-format
-msgctxt "Pointer acceleration"
-msgid "Acceleration:"
-msgstr "Ускорение:"
-
-#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
-#: kcm/xlib/ui/pointermotion.ui:85
-#, kde-format
-msgid "Acceleration factor for normal pointer movements"
-msgstr "Коэффициент ускорения для обычных движений указателя"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/pointermotion.ui:101
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Pressure-Dependent Motion"
-msgstr "Зависимость движения от давления"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/pointermotion.ui:113
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum pressure:"
-msgstr "Минимальное давление:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/pointermotion.ui:123
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Minimum factor:"
-msgstr "Минимальный коэффициент:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/pointermotion.ui:133
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum pressure:"
-msgstr "Максимальное давление:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/pointermotion.ui:143
-#, kde-format
-msgctxt "Pressure-dependent pointer motion"
-msgid "Maximum factor:"
-msgstr "Максимальный коэффициент:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMinZ)
-#: kcm/xlib/ui/pointermotion.ui:153
-#, kde-format
-msgid "Finger pressure at which minimum pressure motion factor is applied"
-msgstr ""
-"Давление пальца, при котором применяется минимальный коэффициент скорости "
-"движения"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
-#: kcm/xlib/ui/pointermotion.ui:166
-#, kde-format
-msgid "Finger pressure at which maximum pressure motion factor is applied"
-msgstr ""
-"Давление пальца, при котором применяется максимальный коэффициент скорости "
-"движения"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
-#: kcm/xlib/ui/pointermotion.ui:179
-#, kde-format
-msgid "Lowest setting for pressure motion factor"
-msgstr "Задайте минимальное значение коэффициента скорости движения"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMaxFactor)
-#: kcm/xlib/ui/pointermotion.ui:189
-#, kde-format
-msgid "Greatest setting for pressure motion factor"
-msgstr "Задайте максимальное значение коэффициента скорости движения"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/pointermotion.ui:202
-#, kde-format
-msgctxt "Pointer motion"
-msgid "Noise Cancellation"
-msgstr "Подавление шума"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/pointermotion.ui:214
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Vertical:"
-msgstr "По вертикали:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/pointermotion.ui:224
-#, kde-format
-msgctxt "Noise cancellation"
-msgid "Horizontal:"
-msgstr "По горизонтали:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_VertHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:234
-#, kde-format
-msgid ""
-"The minimum vertical hardware distance required to generate motion events"
-msgstr "Минимальное перемещение по вертикали, рассматриваемое как движение"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_VertHysteresis)
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:243 kcm/xlib/ui/pointermotion.ui:259
-#, kde-format
-msgid " units"
-msgstr " единиц"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_HorizHysteresis)
-#: kcm/xlib/ui/pointermotion.ui:250
-#, kde-format
-msgid ""
-"The minimum horizontal hardware distance required to generate motion events"
-msgstr "Минимальное перемещение по горизонтали, рассматриваемое как движение"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, ScrollForm)
-#: kcm/xlib/ui/scroll.ui:14
-#, kde-format
-msgid "Scrolling"
-msgstr "Прокрутка"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/scroll.ui:28
-#, kde-format
-msgid "Edge scrolling:"
-msgstr "Краевая прокрутка:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:38
-#, kde-format
-msgid "Enable vertical scrolling when dragging along the right edge"
-msgstr "Включить вертикальную прокрутку при перемещении вдоль правого края"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:41 kcm/xlib/ui/scroll.ui:61 kcm/xlib/ui/scroll.ui:81
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Vertical"
-msgstr "Вертикальная"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#: kcm/xlib/ui/scroll.ui:48
-#, kde-format
-msgid "Enable horizontal scrolling when dragging along the bottom edge"
-msgstr "Включить горизонтальную прокрутку при перемещении вдоль нижнего края"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:51 kcm/xlib/ui/scroll.ui:71 kcm/xlib/ui/scroll.ui:91
-#, kde-format
-msgctxt "Scrolling direction"
-msgid "Horizontal"
-msgstr "Горизонтальная"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:58
-#, kde-format
-msgid ""
-"Enable vertical scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr ""
-"Включить вертикальную прокрутку при перемещении двух пальцев\n"
-"по сенсорной панели"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
-#: kcm/xlib/ui/scroll.ui:68
-#, kde-format
-msgid ""
-"Enable horizontal scrolling when dragging with two fingers anywhere on the "
-"touchpad"
-msgstr ""
-"Включить горизонтальную прокрутку при перемещении двух пальцев\n"
-"по сенсорной панели"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
-#: kcm/xlib/ui/scroll.ui:78
-#, kde-format
-msgid "Reverse vertical scrolling"
-msgstr "Сменить направление вертикальной прокрутки на противоположное"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
-#: kcm/xlib/ui/scroll.ui:88
-#, kde-format
-msgid "Reverse horizontal scrolling"
-msgstr "Сменить направление горизонтальной прокрутки на противоположное"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/scroll.ui:98
-#, kde-format
-msgid "Two-finger scrolling:"
-msgstr "Прокрутка двумя пальцами:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/scroll.ui:108
-#, kde-format
-msgid "Reverse scrolling:"
-msgstr "Прокрутка в обратную сторону:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/scroll.ui:126
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Scrolling Distance"
-msgstr "Расстояние прокрутки"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/scroll.ui:138
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Vertical:"
-msgstr "По вертикали:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
-#, kde-format
-msgid "Move distance of the finger for a scroll event"
-msgstr "Дальность перемещения пальца для генерации одного события прокрутки"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/scroll.ui:157 kcm/xlib/ui/scroll.ui:186 kcm/xlib/ui/tap.ui:417
-#, kde-format
-msgid " mm"
-msgstr " мм"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/scroll.ui:167
-#, kde-format
-msgctxt "Scrolling distance"
-msgid "Horizontal:"
-msgstr "По горизонтали:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:199
-#, kde-format
-msgid ""
-"Continue scrolling after the finger is released from the edge of the touchpad"
-msgstr "Продолжать прокрутку после отпускания пальцев на краю сенсорной панели"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
-#: kcm/xlib/ui/scroll.ui:202
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Coasting"
-msgstr "Прокрутка по инерции"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/scroll.ui:217
-#, kde-format
-msgctxt "Coasting"
-msgid "Minimum speed:"
-msgstr "Минимальная скорость:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:227
-#, kde-format
-msgid ""
-"Your finger needs to produce this many scrolls per second in order to start "
-"coasting"
-msgstr ""
-"Необходимая скорость прокрутки пальцами для начала прокрутки по инерции"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
-#: kcm/xlib/ui/scroll.ui:233
-#, kde-format
-msgid " scrolls/sec"
-msgstr " прокруток/сек"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/scroll.ui:240
-#, kde-format
-msgctxt "Coasting"
-msgid "Deceleration:"
-msgstr "Замедление:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:250
-#, kde-format
-msgid "Number of scrolls/second² to decrease the coasting speed"
-msgstr "Быстрота замедления прокрутки по инерции"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
-#: kcm/xlib/ui/scroll.ui:256
-#, kde-format
-msgid " scrolls/sec²"
-msgstr " прокруток/сек²"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/scroll.ui:263
-#, kde-format
-msgid "Corner coasting:"
-msgstr "Продолжать при оставлении в углу:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:273
-#, kde-format
-msgid ""
-"Enable edge scrolling to continue while the finger stays in an edge corner"
-msgstr ""
-"Продолжать движение по инерции при краевой прокрутке, пока палец\n"
-" остаётся в углу на соответствующем краю сенсорной панели."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
-#: kcm/xlib/ui/scroll.ui:276
-#, kde-format
-msgctxt "Coasting"
-msgid "Enable"
-msgstr "Включить"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:288
-#, kde-format
-msgid ""
-"Scrolling is engaged when a drag starts in the given trigger region.\n"
-"Moving your finger in clockwise circles around the center of the touchpad\n"
-"will scroll down and counter clockwise motion will scroll up"
-msgstr ""
-"Круговая прокрутка включается при начале движения пальца в заданной "
-"области.\n"
-"Перемещение пальца по часовой стрелке вокруг центра сенсорной панели будет\n"
-"прокручивать вниз, а движение против часовой стрелки будет прокручивать "
-"вверх."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
-#: kcm/xlib/ui/scroll.ui:291
-#, kde-format
-msgctxt "Touchpad - Scrolling"
-msgid "Circular Scrolling"
-msgstr "Круговая прокрутка"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/scroll.ui:306
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Trigger region:"
-msgstr "Область запуска:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
-#: kcm/xlib/ui/scroll.ui:316
-#, kde-format
-msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr ""
-"Область сенсорной панели, перемещение по которой начинает круговую прокрутку"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/scroll.ui:323
-#, kde-format
-msgctxt "Circular scrolling"
-msgid "Angle:"
-msgstr "Угол:"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:345
-#, kde-format
-msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr ""
-"Угол перемещения пальца по кругу для генерации одного события прокрутки"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
-#: kcm/xlib/ui/scroll.ui:348
-#, kde-format
-msgctxt "suffix - degrees (angle)"
-msgid "°"
-msgstr "°"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/scroll.ui:355
-#, kde-format
-msgid ""
-"When used together with vertical scrolling, hitting the upper or lower right "
-"corner will seamlessly switch over from vertical to circular scrolling"
-msgstr ""
-"Если выбрать в качестве области запуска правый верхний или нижний угол, и во "
-"время использования вертикальной краевой прокрутки переместить палец в "
-"правый верхний или нижний угол, то после этого можно начать использовать "
-"круговую прокрутку вместо вертикальной."
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
-#: kcm/xlib/ui/sensitivity.ui:14
-#, kde-format
-msgid "Sensitivity"
-msgstr "Чувствительность"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/sensitivity.ui:20
-#, kde-format
-msgctxt "Touchpad"
-msgid "Sensitivity"
-msgstr "Чувствительность"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/sensitivity.ui:29
-#, kde-format
-msgid "Pressure for detecting a touch:"
-msgstr "Давление для определения прикосновения:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/ui/sensitivity.ui:39
-#, kde-format
-msgid "Pressure for detecting a release:"
-msgstr "Давление для определения отпускания:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerHigh)
-#: kcm/xlib/ui/sensitivity.ui:49
-#, kde-format
-msgid ""
-"When finger pressure goes above this value, the driver counts it as a touch"
-msgstr ""
-"Когда давление пальца превышает это значение, драйвер\n"
-"считает это прикосновением"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerLow)
-#: kcm/xlib/ui/sensitivity.ui:62
-#, kde-format
-msgid ""
-"When finger pressure drops below this value, the driver counts it as a "
-"release"
-msgstr ""
-"Когда давление пальца падает ниже этого значения, драйвер\n"
-"считает это завершением прикосновения"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:78
-#, kde-format
-msgid ""
-"If palm detection should be enabled. Note that this also requires hardware/"
-"firmware support from the touchpad"
-msgstr ""
-"Включает, если необходимо, обнаружение ладони. Для работы этой\n"
-"функции требуется её аппаратная поддержка у сенсорной панели."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
-#: kcm/xlib/ui/sensitivity.ui:81
-#, kde-format
-msgctxt "Touchpad"
-msgid "Palm Detection"
-msgstr "Определение ладони"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/sensitivity.ui:93
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum width:"
-msgstr "Минимальная ширина:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/sensitivity.ui:103
-#, kde-format
-msgctxt "Palm detection"
-msgid "Minimum pressure:"
-msgstr "Минимальное давление:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinWidth)
-#: kcm/xlib/ui/sensitivity.ui:113
-#, kde-format
-msgid "Minimum finger width at which touch is considered a palm"
-msgstr "Минимальная ширина касания, которое считается касанием ладонью"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinZ)
-#: kcm/xlib/ui/sensitivity.ui:129
-#, kde-format
-msgid "Minimum finger pressure at which touch is considered a palm"
-msgstr "Минимальное давление касания, которое считается касанием ладонью"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, TapForm)
-#: kcm/xlib/ui/tap.ui:14
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Taps"
-msgstr "Касания"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
-#: kcm/xlib/ui/tap.ui:28
-#, kde-format
-msgid "Tap to Click"
-msgstr "Эмуляция кнопок мыши"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm/xlib/ui/tap.ui:43
-#, kde-format
-msgctxt "Tapping"
-msgid "One finger:"
-msgstr "Касание одним пальцем:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_OneFingerTapButton)
-#: kcm/xlib/ui/tap.ui:53
-#, kde-format
-msgid "Which mouse button is reported on a non-corner one-finger tap"
-msgstr "Какой кнопке мыши соответствует касание одним пальцем не в углу"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/ui/tap.ui:60
-#, kde-format
-msgctxt "Tapping"
-msgid "Two fingers:"
-msgstr "Касание двумя пальцами:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_TwoFingerTapButton)
-#: kcm/xlib/ui/tap.ui:70
-#, kde-format
-msgid "Which mouse button is reported on a non-corner two-finger tap"
-msgstr "Какой кнопке мыши соответствует касание двумя пальцами не в углу"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/ui/tap.ui:77
-#, kde-format
-msgctxt "Tapping"
-msgid "Three fingers:"
-msgstr "Касание тремя пальцами:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_ThreeFingerTapButton)
-#: kcm/xlib/ui/tap.ui:87
-#, kde-format
-msgid "Which mouse button is reported on a non-corner three-finger tap"
-msgstr "Какой кнопке мыши соответствует касание тремя пальцами не в углу"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: kcm/xlib/ui/tap.ui:107
-#, kde-format
-msgctxt "Touchpad"
-msgid "Corners"
-msgstr "Углы"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/ui/tap.ui:131
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top left:"
-msgstr "Левый верхний:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LTCornerButton)
-#: kcm/xlib/ui/tap.ui:144
-#, kde-format
-msgid "Which mouse button is reported on a left top corner tap"
-msgstr "Какой кнопке мыши соответствует касание левого верхнего угла"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/ui/tap.ui:151
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom left:"
-msgstr "Левый нижний:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/ui/tap.ui:164
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Top right:"
-msgstr "Правый верхний:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LBCornerButton)
-#: kcm/xlib/ui/tap.ui:177
-#, kde-format
-msgid "Which mouse button is reported on a left bottom corner tap"
-msgstr "Какой кнопке мыши соответствует касание левого нижнего угла"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
-#: kcm/xlib/ui/tap.ui:184
-#, kde-format
-msgid "Which mouse button is reported on a right top corner tap"
-msgstr "Какой кнопке мыши соответствует касание правого верхнего угла"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
-#: kcm/xlib/ui/tap.ui:191
-#, kde-format
-msgid "Which mouse button is reported on a right bottom corner tap"
-msgstr "Какой кнопке мыши соответствует касание правого нижнего угла"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/ui/tap.ui:214
-#, kde-format
-msgctxt "Touchpad corner"
-msgid "Bottom right:"
-msgstr "Правый нижний:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:251
-#, kde-format
-msgid ""
-"This gesture is an alternative way of dragging. It is performed by tapping "
-"(touching and releasing the finger), then touching again and moving the "
-"finger on the touchpad"
-msgstr ""
-"Этот режим является альтернативным способом перетаскивания,\n"
-"то есть движения указателя в то время, когда кнопка мыши считается\n"
-"зажатой. Чтобы запустить перетаскивание, выполните двойное\n"
-"касание, но не отпускайте палец после второго из касаний. Пока вы\n"
-"не отпустите палец, перемещения будут выполнять функцию\n"
-"перетаскивания."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: kcm/xlib/ui/tap.ui:254
-#, kde-format
-msgid "Tap-and-Drag Gesture"
-msgstr "Перетаскивание после двойного щелчка"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:266
-#, kde-format
-msgid ""
-"If off, a tap-and-drag gesture ends when you release the finger. If on, the "
-"gesture is active until you tap a second time, or until timeout expires"
-msgstr ""
-"Если выключено, перетаскивание таким способом закончится\n"
-"при отпускании пальца. Если включено, режим перетаскивания\n"
-"останется активным после отпускания пальца либо до второго\n"
-"касания, либо до истечения указанного времени."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
-#: kcm/xlib/ui/tap.ui:269
-#, kde-format
-msgctxt "Touchpad gesture"
-msgid "Locked Drags"
-msgstr "Продолжать перетаскивание после отпускания пальца"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/ui/tap.ui:284
-#, kde-format
-msgctxt "Locked drags"
-msgid "Timeout:"
-msgstr "Максимальная задержка между движениями:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_LockedDragTimeout)
-#: kcm/xlib/ui/tap.ui:294
-#, kde-format
-msgid ""
-"How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
-"automatically turned off after the finger is released from the touchpad"
-msgstr ""
-"Через какое время после отпускания пальца режим «Продолжать\n"
-" перетаскивание после отпускания пальца» будет автоматически выключен."
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: kcm/xlib/ui/tap.ui:325
-#, kde-format
-msgid "Tap Detection"
-msgstr "Определение касания"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/ui/tap.ui:340
-#, kde-format
-msgid "Maximum time:"
-msgstr "Максимальное время:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/ui/tap.ui:353
-#, kde-format
-msgid "Maximum finger movement:"
-msgstr "Максимальное перемещение пальца:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#: kcm/xlib/ui/tap.ui:366
-#, kde-format
-msgid "Maximum time for double tap:"
-msgstr "Максимальное время двойного касания:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: kcm/xlib/ui/tap.ui:379
-#, kde-format
-msgid "Single tap timeout:"
-msgstr "Задержка одиночного касания:"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
-#: kcm/xlib/ui/tap.ui:389
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a tap"
-msgstr ""
-"Максимальное время соприкосновения (в миллисекундах),\n"
-"которое будет считаться касанием"
-
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
-#: kcm/xlib/ui/tap.ui:408
-#, kde-format
-msgid "Maximum movement of the finger for detecting a tap"
-msgstr ""
-"Максимальное перемещение пальца во время соприкосновения,\n"
-"при котором будет зарегистрировано касание"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
-#: kcm/xlib/ui/tap.ui:427
-#, kde-format
-msgid "Maximum time (in milliseconds) for detecting a double tap"
-msgstr ""
-"Максимальная задержка между касаниями для выполнения\n"
-"двойного касания"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
-#: kcm/xlib/ui/tap.ui:446
-#, kde-format
-msgid "Timeout after a tap to recognize it as a single tap"
-msgstr ""
-"Длина периода ожидания после соприкосновения, по прошествии\n"
-"которого будет зарегистрировано одиночные касание"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kcm/xlib/ui/testarea.ui:20
-#, kde-format
-msgid "Testing area"
-msgstr "Область проверки"
-
-#. i18n: ectx: property (text), widget (TestButton, pushButton)
-#: kcm/xlib/ui/testarea.ui:29
-#, kde-format
-msgid "Click me"
-msgstr "Нажмите здесь"
-
 #: kded/kded.cpp:201
 #, kde-format
 msgid "Touchpad was disabled because a mouse was plugged in"
@@ -1439,6 +537,536 @@ msgstr "Левый край"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Левый верхний угол"
+
+#~ msgid "Drag me"
+#~ msgstr "Перетащите"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Left button"
+#~ msgstr "Левая кнопка"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Right button"
+#~ msgstr "Правая кнопка"
+
+#~ msgctxt "Mouse button"
+#~ msgid "Middle button"
+#~ msgstr "Средняя кнопка"
+
+#~ msgid ""
+#~ "Active settings don't match saved settings.\n"
+#~ "You currently see saved settings."
+#~ msgstr ""
+#~ "Задействованные параметры не соответствуют сохраненным параметрам.\n"
+#~ "В настоящее время вы видите сохранённые параметры."
+
+#~ msgid "Show active settings"
+#~ msgstr "Показать задействованные параметры"
+
+#~ msgid "These settings won't take effect in the testing area"
+#~ msgstr "Эти параметры не будут действовать в области проверки."
+
+# BUGME: where does this appear in the UI? --aspotashev
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "Включить или выключить панель"
+
+#~ msgctxt "@title:window"
+#~ msgid "Enable/Disable Touchpad"
+#~ msgstr "Включение и выключение панели"
+
+#~ msgid "Configure…"
+#~ msgstr "Настроить..."
+
+#~ msgid "Keyboard shortcuts:"
+#~ msgstr "Комбинации клавиш:"
+
+#~ msgid "Disable touchpad when typing"
+#~ msgstr "Выключать сенсорную панель при вводе текста"
+
+# Touchpad silence timeout. --aspotashev
+#~ msgid "Timeout:"
+#~ msgstr "Задержка включения:"
+
+#~ msgid ""
+#~ "If there was no keyboard activity for more than specified\n"
+#~ "number of milliseconds, touchpad will be enabled again"
+#~ msgstr ""
+#~ "Если с клавиатуры ничего не вводится дольше указанного числа\n"
+#~ "миллисекунд, сенсорная панель будет снова включена"
+
+#~ msgid " ms"
+#~ msgstr " мс"
+
+#~ msgid ""
+#~ "Disable click emulation and scrolling.\n"
+#~ "You will be still able to move pointer using touchpad and perform clicks "
+#~ "with hardware buttons."
+#~ msgstr ""
+#~ "Выключать только эмуляцию кнопок мыши и прокрутку.\n"
+#~ "При этом сохраняется возможность перемещать указатель мыши с помощью\n"
+#~ "сенсорной панели и выполнять щелчки аппаратными кнопками."
+
+#~ msgid "Disable taps and scrolling only"
+#~ msgstr "Выключать только действия касания и прокрутки"
+
+#~ msgid "Disable touchpad when mouse is plugged in"
+#~ msgstr "Выключать сенсорную панель при подключении мыши"
+
+#~ msgid "Notifications:"
+#~ msgstr "Уведомления:"
+
+#~ msgid "Ignored devices:"
+#~ msgstr "Игнорируемые устройства:"
+
+#~ msgid ""
+#~ "Some devices might be incorrectly treated as a mouse.\n"
+#~ "You can add them to this list so that they will be ignored when they're "
+#~ "plugged in."
+#~ msgstr ""
+#~ "Некоторые устройства могут быть ошибочно распознаны как мышь.\n"
+#~ "Если добавить их в этот список, то они будут проигнорированы при "
+#~ "подключении."
+
+#~ msgid "Pointer Motion"
+#~ msgstr "Движение указателя"
+
+#~ msgctxt "Mouse pointer motion parameters"
+#~ msgid "Speed"
+#~ msgstr "Скорость"
+
+#~ msgctxt "Minimum pointer movement speed"
+#~ msgid "Minimum:"
+#~ msgstr "Минимальная:"
+
+#~ msgid "Minimum pointer speed"
+#~ msgstr "Минимальная скорость перемещения указателя мыши"
+
+#~ msgctxt "Maximum pointer movement speed"
+#~ msgid "Maximum:"
+#~ msgstr "Максимальная:"
+
+#~ msgid "Maximum pointer speed"
+#~ msgstr "Максимальная скорость перемещения указателя мыши"
+
+#~ msgctxt "Pointer acceleration"
+#~ msgid "Acceleration:"
+#~ msgstr "Ускорение:"
+
+#~ msgid "Acceleration factor for normal pointer movements"
+#~ msgstr "Коэффициент ускорения для обычных движений указателя"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Pressure-Dependent Motion"
+#~ msgstr "Зависимость движения от давления"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum pressure:"
+#~ msgstr "Минимальное давление:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Minimum factor:"
+#~ msgstr "Минимальный коэффициент:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum pressure:"
+#~ msgstr "Максимальное давление:"
+
+#~ msgctxt "Pressure-dependent pointer motion"
+#~ msgid "Maximum factor:"
+#~ msgstr "Максимальный коэффициент:"
+
+#~ msgid "Finger pressure at which minimum pressure motion factor is applied"
+#~ msgstr ""
+#~ "Давление пальца, при котором применяется минимальный коэффициент скорости "
+#~ "движения"
+
+#~ msgid "Finger pressure at which maximum pressure motion factor is applied"
+#~ msgstr ""
+#~ "Давление пальца, при котором применяется максимальный коэффициент "
+#~ "скорости движения"
+
+#~ msgid "Lowest setting for pressure motion factor"
+#~ msgstr "Задайте минимальное значение коэффициента скорости движения"
+
+#~ msgid "Greatest setting for pressure motion factor"
+#~ msgstr "Задайте максимальное значение коэффициента скорости движения"
+
+#~ msgctxt "Pointer motion"
+#~ msgid "Noise Cancellation"
+#~ msgstr "Подавление шума"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Vertical:"
+#~ msgstr "По вертикали:"
+
+#~ msgctxt "Noise cancellation"
+#~ msgid "Horizontal:"
+#~ msgstr "По горизонтали:"
+
+#~ msgid ""
+#~ "The minimum vertical hardware distance required to generate motion events"
+#~ msgstr "Минимальное перемещение по вертикали, рассматриваемое как движение"
+
+#~ msgid " units"
+#~ msgstr " единиц"
+
+#~ msgid ""
+#~ "The minimum horizontal hardware distance required to generate motion "
+#~ "events"
+#~ msgstr ""
+#~ "Минимальное перемещение по горизонтали, рассматриваемое как движение"
+
+#~ msgid "Scrolling"
+#~ msgstr "Прокрутка"
+
+#~ msgid "Edge scrolling:"
+#~ msgstr "Краевая прокрутка:"
+
+#~ msgid "Enable vertical scrolling when dragging along the right edge"
+#~ msgstr "Включить вертикальную прокрутку при перемещении вдоль правого края"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Vertical"
+#~ msgstr "Вертикальная"
+
+#~ msgid "Enable horizontal scrolling when dragging along the bottom edge"
+#~ msgstr ""
+#~ "Включить горизонтальную прокрутку при перемещении вдоль нижнего края"
+
+#~ msgctxt "Scrolling direction"
+#~ msgid "Horizontal"
+#~ msgstr "Горизонтальная"
+
+#~ msgid ""
+#~ "Enable vertical scrolling when dragging with two fingers anywhere on the "
+#~ "touchpad"
+#~ msgstr ""
+#~ "Включить вертикальную прокрутку при перемещении двух пальцев\n"
+#~ "по сенсорной панели"
+
+#~ msgid ""
+#~ "Enable horizontal scrolling when dragging with two fingers anywhere on "
+#~ "the touchpad"
+#~ msgstr ""
+#~ "Включить горизонтальную прокрутку при перемещении двух пальцев\n"
+#~ "по сенсорной панели"
+
+#~ msgid "Reverse vertical scrolling"
+#~ msgstr "Сменить направление вертикальной прокрутки на противоположное"
+
+#~ msgid "Reverse horizontal scrolling"
+#~ msgstr "Сменить направление горизонтальной прокрутки на противоположное"
+
+#~ msgid "Two-finger scrolling:"
+#~ msgstr "Прокрутка двумя пальцами:"
+
+#~ msgid "Reverse scrolling:"
+#~ msgstr "Прокрутка в обратную сторону:"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Scrolling Distance"
+#~ msgstr "Расстояние прокрутки"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Vertical:"
+#~ msgstr "По вертикали:"
+
+#~ msgid "Move distance of the finger for a scroll event"
+#~ msgstr "Дальность перемещения пальца для генерации одного события прокрутки"
+
+#~ msgid " mm"
+#~ msgstr " мм"
+
+#~ msgctxt "Scrolling distance"
+#~ msgid "Horizontal:"
+#~ msgstr "По горизонтали:"
+
+#~ msgid ""
+#~ "Continue scrolling after the finger is released from the edge of the "
+#~ "touchpad"
+#~ msgstr ""
+#~ "Продолжать прокрутку после отпускания пальцев на краю сенсорной панели"
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Coasting"
+#~ msgstr "Прокрутка по инерции"
+
+#~ msgctxt "Coasting"
+#~ msgid "Minimum speed:"
+#~ msgstr "Минимальная скорость:"
+
+#~ msgid ""
+#~ "Your finger needs to produce this many scrolls per second in order to "
+#~ "start coasting"
+#~ msgstr ""
+#~ "Необходимая скорость прокрутки пальцами для начала прокрутки по инерции"
+
+#~ msgid " scrolls/sec"
+#~ msgstr " прокруток/сек"
+
+#~ msgctxt "Coasting"
+#~ msgid "Deceleration:"
+#~ msgstr "Замедление:"
+
+#~ msgid "Number of scrolls/second² to decrease the coasting speed"
+#~ msgstr "Быстрота замедления прокрутки по инерции"
+
+#~ msgid " scrolls/sec²"
+#~ msgstr " прокруток/сек²"
+
+#~ msgid "Corner coasting:"
+#~ msgstr "Продолжать при оставлении в углу:"
+
+#~ msgid ""
+#~ "Enable edge scrolling to continue while the finger stays in an edge corner"
+#~ msgstr ""
+#~ "Продолжать движение по инерции при краевой прокрутке, пока палец\n"
+#~ " остаётся в углу на соответствующем краю сенсорной панели."
+
+#~ msgctxt "Coasting"
+#~ msgid "Enable"
+#~ msgstr "Включить"
+
+#~ msgid ""
+#~ "Scrolling is engaged when a drag starts in the given trigger region.\n"
+#~ "Moving your finger in clockwise circles around the center of the "
+#~ "touchpad\n"
+#~ "will scroll down and counter clockwise motion will scroll up"
+#~ msgstr ""
+#~ "Круговая прокрутка включается при начале движения пальца в заданной "
+#~ "области.\n"
+#~ "Перемещение пальца по часовой стрелке вокруг центра сенсорной панели "
+#~ "будет\n"
+#~ "прокручивать вниз, а движение против часовой стрелки будет прокручивать "
+#~ "вверх."
+
+#~ msgctxt "Touchpad - Scrolling"
+#~ msgid "Circular Scrolling"
+#~ msgstr "Круговая прокрутка"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Trigger region:"
+#~ msgstr "Область запуска:"
+
+#~ msgid "Trigger region on the touchpad to start circular scrolling"
+#~ msgstr ""
+#~ "Область сенсорной панели, перемещение по которой начинает круговую "
+#~ "прокрутку"
+
+#~ msgctxt "Circular scrolling"
+#~ msgid "Angle:"
+#~ msgstr "Угол:"
+
+#~ msgid "Move angle (degrees) of finger to generate a scroll event"
+#~ msgstr ""
+#~ "Угол перемещения пальца по кругу для генерации одного события прокрутки"
+
+#~ msgctxt "suffix - degrees (angle)"
+#~ msgid "°"
+#~ msgstr "°"
+
+#~ msgid ""
+#~ "When used together with vertical scrolling, hitting the upper or lower "
+#~ "right corner will seamlessly switch over from vertical to circular "
+#~ "scrolling"
+#~ msgstr ""
+#~ "Если выбрать в качестве области запуска правый верхний или нижний угол, и "
+#~ "во время использования вертикальной краевой прокрутки переместить палец в "
+#~ "правый верхний или нижний угол, то после этого можно начать использовать "
+#~ "круговую прокрутку вместо вертикальной."
+
+#~ msgid "Sensitivity"
+#~ msgstr "Чувствительность"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Sensitivity"
+#~ msgstr "Чувствительность"
+
+#~ msgid "Pressure for detecting a touch:"
+#~ msgstr "Давление для определения прикосновения:"
+
+#~ msgid "Pressure for detecting a release:"
+#~ msgstr "Давление для определения отпускания:"
+
+#~ msgid ""
+#~ "When finger pressure goes above this value, the driver counts it as a "
+#~ "touch"
+#~ msgstr ""
+#~ "Когда давление пальца превышает это значение, драйвер\n"
+#~ "считает это прикосновением"
+
+#~ msgid ""
+#~ "When finger pressure drops below this value, the driver counts it as a "
+#~ "release"
+#~ msgstr ""
+#~ "Когда давление пальца падает ниже этого значения, драйвер\n"
+#~ "считает это завершением прикосновения"
+
+#~ msgid ""
+#~ "If palm detection should be enabled. Note that this also requires "
+#~ "hardware/firmware support from the touchpad"
+#~ msgstr ""
+#~ "Включает, если необходимо, обнаружение ладони. Для работы этой\n"
+#~ "функции требуется её аппаратная поддержка у сенсорной панели."
+
+#~ msgctxt "Touchpad"
+#~ msgid "Palm Detection"
+#~ msgstr "Определение ладони"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum width:"
+#~ msgstr "Минимальная ширина:"
+
+#~ msgctxt "Palm detection"
+#~ msgid "Minimum pressure:"
+#~ msgstr "Минимальное давление:"
+
+#~ msgid "Minimum finger width at which touch is considered a palm"
+#~ msgstr "Минимальная ширина касания, которое считается касанием ладонью"
+
+#~ msgid "Minimum finger pressure at which touch is considered a palm"
+#~ msgstr "Минимальное давление касания, которое считается касанием ладонью"
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Taps"
+#~ msgstr "Касания"
+
+#~ msgid "Tap to Click"
+#~ msgstr "Эмуляция кнопок мыши"
+
+#~ msgctxt "Tapping"
+#~ msgid "One finger:"
+#~ msgstr "Касание одним пальцем:"
+
+#~ msgid "Which mouse button is reported on a non-corner one-finger tap"
+#~ msgstr "Какой кнопке мыши соответствует касание одним пальцем не в углу"
+
+#~ msgctxt "Tapping"
+#~ msgid "Two fingers:"
+#~ msgstr "Касание двумя пальцами:"
+
+#~ msgid "Which mouse button is reported on a non-corner two-finger tap"
+#~ msgstr "Какой кнопке мыши соответствует касание двумя пальцами не в углу"
+
+#~ msgctxt "Tapping"
+#~ msgid "Three fingers:"
+#~ msgstr "Касание тремя пальцами:"
+
+#~ msgid "Which mouse button is reported on a non-corner three-finger tap"
+#~ msgstr "Какой кнопке мыши соответствует касание тремя пальцами не в углу"
+
+#~ msgctxt "Touchpad"
+#~ msgid "Corners"
+#~ msgstr "Углы"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top left:"
+#~ msgstr "Левый верхний:"
+
+#~ msgid "Which mouse button is reported on a left top corner tap"
+#~ msgstr "Какой кнопке мыши соответствует касание левого верхнего угла"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom left:"
+#~ msgstr "Левый нижний:"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Top right:"
+#~ msgstr "Правый верхний:"
+
+#~ msgid "Which mouse button is reported on a left bottom corner tap"
+#~ msgstr "Какой кнопке мыши соответствует касание левого нижнего угла"
+
+#~ msgid "Which mouse button is reported on a right top corner tap"
+#~ msgstr "Какой кнопке мыши соответствует касание правого верхнего угла"
+
+#~ msgid "Which mouse button is reported on a right bottom corner tap"
+#~ msgstr "Какой кнопке мыши соответствует касание правого нижнего угла"
+
+#~ msgctxt "Touchpad corner"
+#~ msgid "Bottom right:"
+#~ msgstr "Правый нижний:"
+
+#~ msgid ""
+#~ "This gesture is an alternative way of dragging. It is performed by "
+#~ "tapping (touching and releasing the finger), then touching again and "
+#~ "moving the finger on the touchpad"
+#~ msgstr ""
+#~ "Этот режим является альтернативным способом перетаскивания,\n"
+#~ "то есть движения указателя в то время, когда кнопка мыши считается\n"
+#~ "зажатой. Чтобы запустить перетаскивание, выполните двойное\n"
+#~ "касание, но не отпускайте палец после второго из касаний. Пока вы\n"
+#~ "не отпустите палец, перемещения будут выполнять функцию\n"
+#~ "перетаскивания."
+
+#~ msgid "Tap-and-Drag Gesture"
+#~ msgstr "Перетаскивание после двойного щелчка"
+
+#~ msgid ""
+#~ "If off, a tap-and-drag gesture ends when you release the finger. If on, "
+#~ "the gesture is active until you tap a second time, or until timeout "
+#~ "expires"
+#~ msgstr ""
+#~ "Если выключено, перетаскивание таким способом закончится\n"
+#~ "при отпускании пальца. Если включено, режим перетаскивания\n"
+#~ "останется активным после отпускания пальца либо до второго\n"
+#~ "касания, либо до истечения указанного времени."
+
+#~ msgctxt "Touchpad gesture"
+#~ msgid "Locked Drags"
+#~ msgstr "Продолжать перетаскивание после отпускания пальца"
+
+#~ msgctxt "Locked drags"
+#~ msgid "Timeout:"
+#~ msgstr "Максимальная задержка между движениями:"
+
+#~ msgid ""
+#~ "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
+#~ "automatically turned off after the finger is released from the touchpad"
+#~ msgstr ""
+#~ "Через какое время после отпускания пальца режим «Продолжать\n"
+#~ " перетаскивание после отпускания пальца» будет автоматически выключен."
+
+#~ msgid "Tap Detection"
+#~ msgstr "Определение касания"
+
+#~ msgid "Maximum time:"
+#~ msgstr "Максимальное время:"
+
+#~ msgid "Maximum finger movement:"
+#~ msgstr "Максимальное перемещение пальца:"
+
+#~ msgid "Maximum time for double tap:"
+#~ msgstr "Максимальное время двойного касания:"
+
+#~ msgid "Single tap timeout:"
+#~ msgstr "Задержка одиночного касания:"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a tap"
+#~ msgstr ""
+#~ "Максимальное время соприкосновения (в миллисекундах),\n"
+#~ "которое будет считаться касанием"
+
+#~ msgid "Maximum movement of the finger for detecting a tap"
+#~ msgstr ""
+#~ "Максимальное перемещение пальца во время соприкосновения,\n"
+#~ "при котором будет зарегистрировано касание"
+
+#~ msgid "Maximum time (in milliseconds) for detecting a double tap"
+#~ msgstr ""
+#~ "Максимальная задержка между касаниями для выполнения\n"
+#~ "двойного касания"
+
+#~ msgid "Timeout after a tap to recognize it as a single tap"
+#~ msgstr ""
+#~ "Длина периода ожидания после соприкосновения, по прошествии\n"
+#~ "которого будет зарегистрировано одиночные касание"
+
+#~ msgid "Testing area"
+#~ msgstr "Область проверки"
+
+#~ msgid "Click me"
+#~ msgstr "Нажмите здесь"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Режим ускорения:"

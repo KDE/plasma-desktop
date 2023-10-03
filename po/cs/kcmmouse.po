@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-09 01:58+0000\n"
+"POT-Creation-Date: 2023-10-03 01:39+0000\n"
 "PO-Revision-Date: 2023-02-22 16:43+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -141,9 +141,7 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Rychlost ukazatele:"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
-#: kcm/xlib/kcmmouse.ui:164
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Zrychlení ukazatele:"
@@ -249,275 +247,178 @@ msgctxt "@action:button"
 msgid "Go back"
 msgstr "Přejít zpět"
 
-#. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
-#: kcm/xlib/kcmmouse.ui:14
-#, kde-format
-msgid ""
-"<h1>Mouse</h1> This module allows you to choose various options for the way "
-"in which your pointing device works. Your pointing device may be a mouse, "
-"trackball, or some other hardware that performs a similar function."
-msgstr ""
-"<h1>Myš</h1> Tento modul umožňuje výběr různých voleb určujících chování "
-"polohovacích zařízení. vaším polohovacím zařízením může být myš, trackball "
-"nebo jiné zařízení, které provádí obdobnou činnost."
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Myš</h1> Tento modul umožňuje výběr různých voleb určujících chování "
+#~ "polohovacích zařízení. vaším polohovacím zařízením může být myš, "
+#~ "trackball nebo jiné zařízení, které provádí obdobnou činnost."
 
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#: kcm/xlib/kcmmouse.ui:36
-#, kde-format
-msgid "&General"
-msgstr "Obe&cné"
+#~ msgid "&General"
+#~ msgstr "Obe&cné"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:52
-#, kde-format
-msgid ""
-"If you are left-handed, you may prefer to swap the functions of the left and "
-"right buttons on your pointing device by choosing the 'left-handed' option. "
-"If your pointing device has more than two buttons, only those that function "
-"as the left and right buttons are affected. For example, if you have a three-"
-"button mouse, the middle button is unaffected."
-msgstr ""
-"Jste-li levák, pak pravděpodobně dáváte přednost přehození funkcí levého a "
-"pravého tlačítka myši svého polohovacího zařízení, které je provedeno "
-"zaškrtnutím volby 'Levoruké'. Má-li vaše polohovací zařízení víc než dvě "
-"tlačítka, pak se změna projeví pouze v nastavení funkcí levého a pravého "
-"tlačítka. Například máte-li třítlačítkovou myš, pak funkce prostředního "
-"tlačítka zůstane nedotčena."
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Jste-li levák, pak pravděpodobně dáváte přednost přehození funkcí levého "
+#~ "a pravého tlačítka myši svého polohovacího zařízení, které je provedeno "
+#~ "zaškrtnutím volby 'Levoruké'. Má-li vaše polohovací zařízení víc než dvě "
+#~ "tlačítka, pak se změna projeví pouze v nastavení funkcí levého a pravého "
+#~ "tlačítka. Například máte-li třítlačítkovou myš, pak funkce prostředního "
+#~ "tlačítka zůstane nedotčena."
 
-#. i18n: ectx: property (title), widget (QGroupBox, handedBox)
-#: kcm/xlib/kcmmouse.ui:55
-#, kde-format
-msgid "Button Order"
-msgstr "Pořadí tlačítek"
+#~ msgid "Button Order"
+#~ msgstr "Pořadí tlačítek"
 
-#. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
-#: kcm/xlib/kcmmouse.ui:64
-#, kde-format
-msgid "Righ&t handed"
-msgstr "Pro p&raváka"
+#~ msgid "Righ&t handed"
+#~ msgstr "Pro p&raváka"
 
-#. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
-#: kcm/xlib/kcmmouse.ui:77
-#, kde-format
-msgid "Le&ft handed"
-msgstr "Pro &leváka"
+#~ msgid "Le&ft handed"
+#~ msgstr "Pro &leváka"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:106
-#, kde-format
-msgid ""
-"Change the direction of scrolling for the mouse wheel or the 4th and 5th "
-"mouse buttons."
-msgstr "Změnit směr rolování pro 4. nebo 5. kolečko myši."
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr "Změnit směr rolování pro 4. nebo 5. kolečko myši."
 
-#. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
-#: kcm/xlib/kcmmouse.ui:109
-#, kde-format
-msgid "Re&verse scroll direction"
-msgstr "Obrácený směr při rolo&vání"
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Obrácený směr při rolo&vání"
 
-#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
-#: kcm/xlib/kcmmouse.ui:156
-#, kde-format
-msgid "Advanced"
-msgstr "Pokročilé"
+#~ msgid "Advanced"
+#~ msgstr "Pokročilé"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm/xlib/kcmmouse.ui:174
-#, kde-format
-msgid "Pointer threshold:"
-msgstr "Práh ukazatele myši:"
+#~ msgid "Pointer threshold:"
+#~ msgstr "Práh ukazatele myši:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm/xlib/kcmmouse.ui:184
-#, kde-format
-msgid "Double click interval:"
-msgstr "Interval dvojkliku:"
+#~ msgid "Double click interval:"
+#~ msgstr "Interval dvojkliku:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm/xlib/kcmmouse.ui:194
-#, kde-format
-msgid "Drag start time:"
-msgstr "Čas začátku přesunu:"
+#~ msgid "Drag start time:"
+#~ msgstr "Čas začátku přesunu:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm/xlib/kcmmouse.ui:204
-#, kde-format
-msgid "Drag start distance:"
-msgstr "Vzdálenost pro začátek přesunu:"
+#~ msgid "Drag start distance:"
+#~ msgstr "Vzdálenost pro začátek přesunu:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm/xlib/kcmmouse.ui:214
-#, kde-format
-msgid "Mouse wheel scrolls by:"
-msgstr "Kolečko myši posouvá o:"
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Kolečko myši posouvá o:"
 
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:230
-#, kde-format
-msgid ""
-"<p>This option allows you to change the relationship between the distance "
-"that the mouse pointer moves on the screen and the relative movement of the "
-"physical device itself (which may be a mouse, trackball, or some other "
-"pointing device.)</p><p> A high value for the acceleration will lead to "
-"large movements of the mouse pointer on the screen even when you only make a "
-"small movement with the physical device. Selecting very high values may "
-"result in the mouse pointer flying across the screen, making it hard to "
-"control.</p>"
-msgstr ""
-"<p>Tato volba umožňuje změnit vztah mezi vzdáleností, kterou urazí ukazatel "
-"myši na obrazovce a relativním posunem samotného fyzického zařízení (může se "
-"jednat o myš, trackball nebo jiné polohovací zařízení).</p><p> Nastavení "
-"vysoké hodnoty zrychlení způsobí velké pohyby ukazatele myši na obrazovce, i "
-"když budete provádět pouze malé pohyby fyzickým zařízením. Výběr velké "
-"hodnoty může způsobit poletování ukazatele myši přes obrazovku a jeho těžkou "
-"ovladatelnost.</p>"
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Tato volba umožňuje změnit vztah mezi vzdáleností, kterou urazí "
+#~ "ukazatel myši na obrazovce a relativním posunem samotného fyzického "
+#~ "zařízení (může se jednat o myš, trackball nebo jiné polohovací zařízení)."
+#~ "</p><p> Nastavení vysoké hodnoty zrychlení způsobí velké pohyby ukazatele "
+#~ "myši na obrazovce, i když budete provádět pouze malé pohyby fyzickým "
+#~ "zařízením. Výběr velké hodnoty může způsobit poletování ukazatele myši "
+#~ "přes obrazovku a jeho těžkou ovladatelnost.</p>"
 
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
-#: kcm/xlib/kcmmouse.ui:233
-#, kde-format
-msgid " x"
-msgstr " x"
+#~ msgid " x"
+#~ msgstr " x"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
-#: kcm/xlib/kcmmouse.ui:261
-#, kde-format
-msgid ""
-"<p>The threshold is the smallest distance that the mouse pointer must move "
-"on the screen before acceleration has any effect. If the movement is smaller "
-"than the threshold, the mouse pointer moves as if the acceleration was set "
-"to 1X;</p><p> thus, when you make small movements with the physical device, "
-"there is no acceleration at all, giving you a greater degree of control over "
-"the mouse pointer. With larger movements of the physical device, you can "
-"move the mouse pointer rapidly to different areas on the screen.</p>"
-msgstr ""
-"<p>Práh je nejmenší vzdálenost, kterou musí myš urazit na obrazovce předtím, "
-"než bude použito zrychlení. Je-li pohyb menší než tento práh, pak se bude "
-"myš pohybovat tak, jako by bylo zrychlení nastaveno na hodnotu 1x.</p><p> "
-"Tedy, budete-li dělat malé pohyby s fyzickým zařízením, pak se neprojeví "
-"žádné zrychlení, což vám dá větší kontrolu nad ukazatelem myši. Většími "
-"pohyby s fyzickým zařízením je možné rychle přesunout ukazatel myši do "
-"různých oblastí obrazovky.</p>"
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Práh je nejmenší vzdálenost, kterou musí myš urazit na obrazovce "
+#~ "předtím, než bude použito zrychlení. Je-li pohyb menší než tento práh, "
+#~ "pak se bude myš pohybovat tak, jako by bylo zrychlení nastaveno na "
+#~ "hodnotu 1x.</p><p> Tedy, budete-li dělat malé pohyby s fyzickým "
+#~ "zařízením, pak se neprojeví žádné zrychlení, což vám dá větší kontrolu "
+#~ "nad ukazatelem myši. Většími pohyby s fyzickým zařízením je možné rychle "
+#~ "přesunout ukazatel myši do různých oblastí obrazovky.</p>"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
-#: kcm/xlib/kcmmouse.ui:280
-#, kde-format
-msgid ""
-"The double click interval is the maximal time (in milliseconds) between two "
-"mouse clicks which turns them into a double click. If the second click "
-"happens later than this time interval after the first click, they are "
-"recognized as two separate clicks."
-msgstr ""
-"Interval dvojkliku je maximální doba (v milisekundách) mezi dvěma kliknutími "
-"myši, při které budou tato kliknutí považována za dvojklik. Je-li druhé "
-"kliknutí provedeno po uplynutí této doby, pak budou rozpoznána dvě "
-"samostatná kliknutí."
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Interval dvojkliku je maximální doba (v milisekundách) mezi dvěma "
+#~ "kliknutími myši, při které budou tato kliknutí považována za dvojklik. Je-"
+#~ "li druhé kliknutí provedeno po uplynutí této doby, pak budou rozpoznána "
+#~ "dvě samostatná kliknutí."
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_delay)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_interval)
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
-#: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
-#: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
-#, kde-format
-msgid " msec"
-msgstr " msec"
+#~ msgid " msec"
+#~ msgstr " msec"
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
-#: kcm/xlib/kcmmouse.ui:308
-#, kde-format
-msgid ""
-"If you click with the mouse (e.g. in a multi-line editor) and begin to move "
-"the mouse within the drag start time, a drag operation will be initiated."
-msgstr ""
-"Kliknete (např. ve víceřádkovém editoru) a začnete-li pohybovat myší během "
-"času začátku přesunu, pak bude provedena činnost přesunu."
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Kliknete (např. ve víceřádkovém editoru) a začnete-li pohybovat myší "
+#~ "během času začátku přesunu, pak bude provedena činnost přesunu."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
-#: kcm/xlib/kcmmouse.ui:333
-#, kde-format
-msgid ""
-"If you click with the mouse and begin to move the mouse at least the drag "
-"start distance, a drag operation will be initiated."
-msgstr ""
-"Kliknete a pohnete-li myší přinejmenším o vzdálenost pro začátek přesunu, "
-"pak bude zahájena činnost přesunu."
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Kliknete a pohnete-li myší přinejmenším o vzdálenost pro začátek přesunu, "
+#~ "pak bude zahájena činnost přesunu."
 
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
-#: kcm/xlib/kcmmouse.ui:355
-#, kde-format
-msgid ""
-"If you use the wheel of a mouse, this value determines the number of lines "
-"to scroll for each wheel movement. Note that if this number exceeds the "
-"number of visible lines, it will be ignored and the wheel movement will be "
-"handled as a page up/down movement."
-msgstr ""
-"Používáte-li kolečko myši, pak tato hodnota určuje počet řádek, o které bude "
-"provedeno posunutí po každém posunutí kolečka. Je třeba poznamenat, že pokud "
-"tato hodnota překročí počet viditelných řádek, bude ignorována a kolečkem "
-"budete posunovat o stránku nahoru/dolů."
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Používáte-li kolečko myši, pak tato hodnota určuje počet řádek, o které "
+#~ "bude provedeno posunutí po každém posunutí kolečka. Je třeba poznamenat, "
+#~ "že pokud tato hodnota překročí počet viditelných řádek, bude ignorována a "
+#~ "kolečkem budete posunovat o stránku nahoru/dolů."
 
-#. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
-#: kcm/xlib/kcmmouse.ui:387
-#, kde-format
-msgid "Keyboard Navigation"
-msgstr "Ovládání pomocí klávesnice"
+#~ msgid "Keyboard Navigation"
+#~ msgstr "Ovládání pomocí klávesnice"
 
-#. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
-#: kcm/xlib/kcmmouse.ui:395
-#, kde-format
-msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "Pohybovat &myší pomocí klávesnice (použitím numerické klávesnice)"
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "Pohybovat &myší pomocí klávesnice (použitím numerické klávesnice)"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: kcm/xlib/kcmmouse.ui:424
-#, kde-format
-msgid "&Acceleration delay:"
-msgstr "Prodlev&a zrychlení:"
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Prodlev&a zrychlení:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: kcm/xlib/kcmmouse.ui:434
-#, kde-format
-msgid "R&epeat interval:"
-msgstr "Int&erval opakování:"
+#~ msgid "R&epeat interval:"
+#~ msgstr "Int&erval opakování:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: kcm/xlib/kcmmouse.ui:466
-#, kde-format
-msgid "Acceleration &time:"
-msgstr "Doba z&rychlování:"
+#~ msgid "Acceleration &time:"
+#~ msgstr "Doba z&rychlování:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: kcm/xlib/kcmmouse.ui:498
-#, kde-format
-msgid "Ma&ximum speed:"
-msgstr "Ma&ximální rychlost:"
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Ma&ximální rychlost:"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
-#: kcm/xlib/kcmmouse.ui:514
-#, kde-format
-msgid " pixel/sec"
-msgstr " pixelů/sek"
+#~ msgid " pixel/sec"
+#~ msgstr " pixelů/sek"
 
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: kcm/xlib/kcmmouse.ui:530
-#, kde-format
-msgid "Acceleration &profile:"
-msgstr "&Profil zrychlování:"
+#~ msgid "Acceleration &profile:"
+#~ msgstr "&Profil zrychlování:"
 
-#: kcm/xlib/xlib_config.cpp:267 kcm/xlib/xlib_config.cpp:272
-#, kde-format
-msgid " pixel"
-msgid_plural " pixels"
-msgstr[0] " pixel"
-msgstr[1] " pixely"
-msgstr[2] " pixelů"
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " pixel"
+#~ msgstr[1] " pixely"
+#~ msgstr[2] " pixelů"
 
-#: kcm/xlib/xlib_config.cpp:277
-#, kde-format
-msgid " line"
-msgid_plural " lines"
-msgstr[0] " řádek"
-msgstr[1] " řádky"
-msgstr[2] " řádků"
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " řádek"
+#~ msgstr[1] " řádky"
+#~ msgstr[2] " řádků"
