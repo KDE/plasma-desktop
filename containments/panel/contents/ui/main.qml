@@ -5,8 +5,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.1
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Layouts
 import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core as PlasmaCore
@@ -38,6 +38,8 @@ ContainmentItem {
     property bool hasSpacer
     // True when a widget is being drag and dropped within the panel.
     property bool dragAndDropping: false
+    // This also considers drag and drop of applets from outside the panel
+    property bool anyDragAndDrop: dragAndDropping || dropArea.containsDrag
 
 //END properties
 
@@ -93,6 +95,7 @@ ContainmentItem {
     Plasmoid.onUserConfiguringChanged: {
         if (!Plasmoid.userConfiguring) {
             if (root.configOverlay) {
+                root.configOverlay.dragAndDropToDifferentPanel = false
                 root.configOverlay.destroy();
                 root.configOverlay = null;
             }
@@ -154,7 +157,8 @@ ContainmentItem {
         }
 
         onDragEnter: event => {
-            if (Plasmoid.immutable) {
+            console.log('dragEnter')
+            if (Plasmoid.immutable || root?.configOverlay?.dragAndDropToDifferentPanel) {
                 event.ignore();
                 return;
             }
@@ -165,6 +169,7 @@ ContainmentItem {
         }
 
         onDragMove: event => {
+            console.log('dragMove')
             LayoutManager.move(dndSpacer.parent, LayoutManager.indexAtCoordinates(event.x, event.y));
         }
 
@@ -174,6 +179,7 @@ ContainmentItem {
             * without dragEnter, and in this case parent.index is undefined, so also
             * check if dndSpacer is in appletsModel.
             */
+            console.log('dragLeave')
             if (typeof(dndSpacer.parent.index) === "number") {
                 appletsModel.remove(dndSpacer.parent.index);
                 root.fixedWidth = root.fixedHeight = 0;
@@ -181,6 +187,7 @@ ContainmentItem {
         }
 
         onDrop: event => {
+            console.log('dragDrop')
             appletsModel.remove(dndSpacer.parent.index);
             root.processMimeData(event.mimeData, event.x, event.y);
             event.accept(event.proposedAction);
@@ -202,6 +209,14 @@ ContainmentItem {
                 property int appletIndex: index // To make sure it's always readable even inside other models
                 property bool inThickArea: false
                 visible: applet.plasmoid?.status !== PlasmaCore.Types.HiddenStatus || (!Plasmoid.immutable && Plasmoid.userConfiguring);
+
+                opacity: root?.configOverlay?.dragAndDropToDifferentPanel && root?.configOverlay?.currentApplet !== container ? 0.25 : 1
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
 
                 //when the applet moves caused by its resize, don't animate.
                 //this is completely heuristic, but looks way less "jumpy"
@@ -254,7 +269,7 @@ ContainmentItem {
                     id: marginHighlightElements
                     anchors.fill: parent
                     // index -1 is for floating applets, which do not need a margin highlight
-                    opacity: Plasmoid.containment.corona.editMode && dropArea.marginAreasEnabled && !root.dragAndDropping && index != -1 ? 1 : 0
+                    opacity: Plasmoid.userConfiguring && dropArea.marginAreasEnabled && !root.dragAndDropping && index != -1 && !root?.configOverlay?.dragAndDropToDifferentPanel ? 1 : 0
                     Behavior on opacity {
                         NumberAnimation {
                             duration: Kirigami.Units.longDuration
@@ -318,6 +333,22 @@ ContainmentItem {
                 active: applet && applet.Plasmoid.busy
                 sourceComponent: PlasmaComponents.BusyIndicator {
                     z: 999
+                }
+
+                Image {
+                    id: replacementImage
+                    visible: root.anyDragAndDrop
+                    fillMode: Image.PreserveAspectFit
+                    onVisibleChanged: {
+                        if (visible) {
+                            applet.grabToImage((result) => {
+                                replacementImage.source = result.url
+                                applet.visible = false
+                            })
+                        } else {
+                            applet.visible = true
+                        }
+                    }
                 }
 
                 property int oldX: 0

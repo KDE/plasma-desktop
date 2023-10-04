@@ -88,7 +88,7 @@ function save() {
     var ids = new Array();
     for (var i = 0; i < layout.children.length; ++i) {
         var child = layout.children[i];
-        if (child.hasOwnProperty("applet") && child.applet) {
+        if (child.hasOwnProperty("applet") && child.applet && child.applet.plasmoid) {
             ids.push(child.applet.plasmoid.id);
         }
     }

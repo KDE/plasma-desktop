@@ -24,28 +24,29 @@ MouseArea {
 
     property Item currentApplet
     property real startDragOffset: 0.0
+    property bool dragAndDropToDifferentPanel: false
+
+    Drag.dragType: Drag.Automatic
+    Drag.active: false
+    Drag.supportedActions: Qt.MoveAction
+    Drag.mimeData: {
+        "text/x-plasmoidservicename" : configurationArea.currentApplet?.applet.plasmoid.pluginName
+    }
+    Drag.onDragFinished: dropEvent => {
+        if (dropEvent == Qt.MoveAction) {
+            var applet = currentApplet.applet
+            applet.plasmoid.internalAction("remove").trigger()
+            dragAndDropToDifferentPanel = false
+            root.layoutManager.save()
+            currentApplet = null
+        }
+    }
 
     onPositionChanged: mouse => {
+        if (dragAndDropToDifferentPanel) {
+            return;
+        }
         if (pressed) {
-
-            // If the object has been dragged outside of the panel and there's
-            // a different containment there, we remove it from the panel
-            // containment and add it to the new one.
-            var padding = Kirigami.Units.gridUnit * 5;
-            if (currentApplet && (mouse.x < -padding || mouse.y < -padding ||
-                mouse.x > width + padding || mouse.y > height + padding)) {
-                var newCont = root.containmentItemAt(mouse.x, mouse.y);
-
-                if (newCont && newCont !== plasmoid) {
-                    var newPos = newCont.mapFromApplet(currentApplet.applet.plasmoid, mouse.x, mouse.y);
-                    var applet = currentApplet.applet;
-                    appletsModel.remove(placeHolder.parent.index);
-                    currentApplet.destroy();
-                    applet.anchors.fill = undefined
-                    newCont.plasmoid.addApplet(applet.plasmoid, Qt.rect(newPos.x, newPos.y, applet.width, applet.height));
-                    return;
-                }
-            }
             if (Plasmoid.formFactor === PlasmaCore.Types.Vertical && currentApplet) {
                 currentApplet.y = mouse.y - startDragOffset;
             } else {
@@ -53,7 +54,6 @@ MouseArea {
             }
 
             const item = root.layoutManager.childAtCoordinates(mouse.x, mouse.y);
-
             if (item && item.applet !== placeHolder) {
                 var posInItem = mapToItem(item, mouse.x, mouse.y)
                 var pos = root.isHorizontal ? posInItem.x : posInItem.y
@@ -90,6 +90,13 @@ MouseArea {
     }
 
     onPressed: mouse => {
+        if (dragAndDropToDifferentPanel) {
+            configurationArea.currentApplet.grabToImage(result => {
+                configurationArea.Drag.imageSource = result.url
+            })
+            configurationArea.Drag.active = true
+            return
+        }
         // Need to set currentApplet here too, to make touch selection + drag
         // with with a touchscreen, because there are no entered events in that
         // case
@@ -126,7 +133,7 @@ MouseArea {
 
     function finishDragOperation() {
         root.dragAndDropping = false
-        if (!currentApplet) {
+        if (!currentApplet || configurationArea.dragAndDropToDifferentPanel) {
             return;
         }
         appletsModel.set(placeHolder.parent.index, {applet: currentApplet.applet})
@@ -156,7 +163,11 @@ MouseArea {
     Timer {
         id: hideTimer
         interval: Kirigami.Units.longDuration * 5
-        onTriggered: configurationArea.currentApplet = null
+        onTriggered: {
+            if (!configurationArea.dragAndDropToDifferentPanel) {
+                configurationArea.currentApplet = null
+            }
+        }
     }
 
     Rectangle {
@@ -215,7 +226,7 @@ MouseArea {
     }
     PlasmaCore.Dialog {
         id: tooltip
-        visible: configurationArea.currentApplet && !root.dragAndDropping
+        visible: configurationArea.currentApplet && !root.dragAndDropping && !configurationArea.dragAndDropToDifferentPanel
         visualParent: configurationArea.currentApplet
 
         type: PlasmaCore.Dialog.Dock
@@ -268,6 +279,13 @@ MouseArea {
                         configurationArea.currentApplet.applet.plasmoid.internalAction("remove").trigger();
                         configurationArea.currentApplet = null;
                     }
+                }
+                PlasmaComponents3.ToolButton {
+                    Layout.fillWidth: true
+                    // TODO: only visible if there are multiple panels?
+                    icon.name: "transform-move"
+                    text: i18n("Move to a different panel or desktop...")
+                    onClicked: configurationArea.dragAndDropToDifferentPanel = true
                 }
                 PlasmaComponents3.ToolButton {
                     id: configureButton
@@ -327,6 +345,7 @@ MouseArea {
                     }
                 }
             }
+
         }
     }
 }
