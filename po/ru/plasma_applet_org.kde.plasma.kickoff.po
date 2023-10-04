@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_launcher\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-13 02:06+0000\n"
+"POT-Creation-Date: 2023-10-04 01:40+0000\n"
 "PO-Revision-Date: 2023-01-21 18:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -220,7 +220,7 @@ msgid "Show buttons for:"
 msgstr "Показывать кнопки:"
 
 #: package/contents/ui/ConfigGeneral.qml:237
-#: package/contents/ui/LeaveButtons.qml:121
+#: package/contents/ui/LeaveButtons.qml:127
 #, kde-format
 msgid "Power"
 msgstr "Управления питанием"
@@ -246,12 +246,12 @@ msgstr "Подписи кнопок действия"
 msgid "Applications"
 msgstr "Приложения"
 
-#: package/contents/ui/Footer.qml:112
+#: package/contents/ui/Footer.qml:113
 #, kde-format
 msgid "Places"
 msgstr "Точки входа"
 
-#: package/contents/ui/FullRepresentation.qml:149
+#: package/contents/ui/FullRepresentation.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
@@ -262,7 +262,7 @@ msgstr "Совпадений не найдено"
 msgid "Open user settings"
 msgstr "Открыть настройки пользователя"
 
-#: package/contents/ui/Header.qml:229
+#: package/contents/ui/Header.qml:257
 #, kde-format
 msgid "Keep Open"
 msgstr "Не закрывать"
@@ -278,12 +278,12 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Сетка, строк: %1, столбцов: %2"
 
 # shutdown-method
-#: package/contents/ui/LeaveButtons.qml:121
+#: package/contents/ui/LeaveButtons.qml:127
 #, kde-format
 msgid "Leave"
 msgstr "Выход"
 
-#: package/contents/ui/LeaveButtons.qml:121
+#: package/contents/ui/LeaveButtons.qml:127
 #, kde-format
 msgid "More"
 msgstr "Больше"
