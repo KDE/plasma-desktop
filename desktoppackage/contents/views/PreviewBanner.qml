@@ -10,7 +10,9 @@ import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 import org.kde.kirigami 2.20 as Kirigami
 
 Item {
-    width: childrenRect.width
+    // Using childrenRect.width causes a binding loop since we can only get the
+    // actual width, not the implicitWidth--which is what we would want
+    width: Math.max(title.implicitWidth, subtitle.implicitWidth)
     height: childrenRect.height
 
     HoverHandler {
@@ -34,6 +36,7 @@ Item {
     }
 
     WorkspaceComponents.ShadowedLabel {
+        id: subtitle
         anchors {
             top: title.bottom
             right: parent.right
