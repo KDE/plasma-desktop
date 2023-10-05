@@ -128,7 +128,7 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
         const KService::List services = KApplicationTrader::query(filter);
         service = services.value(0, KService::Ptr());
     }
-    bool isCommandShortcut = service && service->property(QStringLiteral("X-KDE-GlobalAccel-CommandShortcut"), QMetaType::Bool).toBool();
+    bool isCommandShortcut = service && service->property<bool>(QStringLiteral("X-KDE-GlobalAccel-CommandShortcut"));
     const ComponentType type =
         service && service->isApplication() ? (isCommandShortcut ? ComponentType::Command : ComponentType::Application) : ComponentType::SystemService;
     QString icon;
