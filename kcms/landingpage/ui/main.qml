@@ -5,6 +5,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+
+pragma ComponentBehavior: Bound
+
 import QtQuick 2.7
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
@@ -229,6 +232,8 @@ KCM.SimpleKCM {
 
                 model: kcm.mostUsedModel
                 delegate: MostUsedIcon {
+                    required property var model
+
                     kcmIcon: model.decoration
                     kcmName: model.display
                     onClicked: kcm.openKCM(model.kcmPlugin)
