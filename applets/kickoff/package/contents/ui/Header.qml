@@ -7,6 +7,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import org.kde.plasma.plasmoid 2.0
 import QtQuick 2.15
 import QtQml 2.15
 import QtQuick.Layouts 1.15
@@ -247,7 +248,7 @@ PlasmaExtras.PlasmoidHeading {
                 nextItemInFocusChain(!kickoff.sideBarOnRight).forceActiveFocus(
                     Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
             }
-            onClicked: plasmoid.internalAction("configure").trigger()
+            onClicked: Plasmoid.internalAction("configure").trigger()
         }
         PC3.ToolButton {
             id: pinButton
