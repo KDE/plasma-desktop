@@ -15,7 +15,9 @@ Kirigami.Page {
     title: i18nc("@title:window System keyboard filters", "Keyboard Filters")
 
     Kirigami.FormLayout {
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
 
         QQC2.CheckBox {
             id: slowKeys

@@ -15,7 +15,9 @@ Kirigami.Page {
     title: i18nc("@title:window System Modifier Keys", "Modifier Keys")
 
     Kirigami.FormLayout {
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
 
         QQC2.CheckBox {
             Kirigami.FormData.label: i18n("Sticky keys:")

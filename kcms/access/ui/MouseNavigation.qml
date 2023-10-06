@@ -14,7 +14,9 @@ Kirigami.Page {
     title: i18nc("@title:window System mouse navigation", "Mouse Navigation")
 
     Kirigami.FormLayout {
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
 
         QQC2.CheckBox {
             id: mouseKeys

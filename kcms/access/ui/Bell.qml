@@ -16,7 +16,9 @@ Kirigami.Page {
     title: i18nc("@title:window System Bell", "Bell")
 
     Kirigami.FormLayout {
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
 
         Dialogs.FileDialog {
             id: fileDialog
