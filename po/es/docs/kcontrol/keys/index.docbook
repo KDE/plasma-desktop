@@ -8,7 +8,7 @@
 
 <article id="keys" lang="&language;">
 <title
->Accesos rápidos</title>
+>Atajos de teclado</title>
 <articleinfo>
 <authorgroup>
 <author
@@ -75,13 +75,13 @@
 <keyword
 >asociaciones</keyword>
 <keyword
->accesos rápidos</keyword>
+>atajos de teclado</keyword>
 </keywordset>
 </articleinfo>
 
 <sect1 id="key-bindings">
 <title
->Accesos rápidos</title>
+>Atajos de teclado</title>
 
 <sect2 id="key-bindings-intro"
 > 
@@ -101,40 +101,40 @@
 >.</para>
 
 <para
->Como cada persona tiene diferentes preferencias sobre los accesos rápidos de teclado, &plasma; ofrece una personalización completa de las «asociaciones de teclas». Una asociación de tecla o un acceso rápido es una asociación de una acción con una tecla o una combinación de teclas.</para>
+>Como cada persona tiene diferentes preferencias sobre los atajos de teclado, &plasma; ofrece una personalización completa de las «asociaciones de teclas». Una asociación de tecla o un atajo de teclado es una asociación de una acción con una tecla o una combinación de teclas.</para>
 
 </sect2>
 
 <sect2 id="key-bindings-use-globapp">
 <title
->Accesos rápidos estándar y accesos rápidos globales</title>
+>Atajos de teclado estándar y atajos de teclado globales</title>
 
 <para
->Los accesos rápidos estándar y los accesos rápidos globales funcionan del mismo modo. De hecho, en cierto modo los accesos rápidos estándar o de aplicaciones son también «globales». La única diferencia es:</para>
+>Los atajos de teclado estándar y los atajos de teclado globales funcionan del mismo modo. De hecho, en cierto modo los atajos de teclado estándar o de aplicaciones son también «globales». La única diferencia es:</para>
 
 <itemizedlist>
 <listitem
 ><para
->Los «accesos rápidos estándar» se refieren a acciones que están normalmente disponibles en las aplicaciones tales como Guardar, Imprimir, Copiar, etc.</para
+>Los «atajos de teclado estándar» se refieren a acciones que están normalmente disponibles en las aplicaciones tales como Guardar, Imprimir, Copiar, etc.</para
 ></listitem
 > 
 <listitem
 ><para
->«Accesos rápidos globales» son los accesos rápidos que tienen sentido incluso cuando no hay ninguna aplicación abierta. Estos accesos rápidos normalmente se refieren a acciones como pasar a diferentes escritorios, manipulación de ventanas etc.</para
+>«Atajos de teclado globales» son los atajos de teclado que tienen sentido incluso cuando no hay ninguna aplicación abierta. Estos atajos de teclado normalmente se refieren a acciones como pasar a diferentes escritorios, manipulación de ventanas etc.</para
 ></listitem
 > 
 </itemizedlist>
 
 <para
->Por favor tenga en cuenta que los accesos rápidos de aplicaciones configurados aquí son <emphasis
+>Tenga en cuenta que los atajo de teclado de aplicaciones configurados aquí son <emphasis
 >solo</emphasis
 > las acciones estándar encontradas frecuentemente en aplicaciones. La mayor parte de las aplicaciones definirán sus propias acciones también, para lo cual debe personalizar las asociaciones de teclas utilizando el diálogo de asociaciones de teclas.</para>
 
 <sect3 id="key-bindings-standard">
 <title
->Página de accesos rápidos estándar</title>
+>Página de atajos de teclado estándar</title>
 <para
->En la parte superior de este diálogo podrá ver un cuadro de entrada en el que puede buscar de manera interactiva los nombres de los accesos rápidos  (&eg;, Copiar) o de las combinaciones de teclas (&eg;, <quote
+>En la parte superior de este diálogo podrá ver un cuadro de entrada en el que puede buscar de manera interactiva los nombres de los atajos de teclado  (&eg;, Copiar) o de las combinaciones de teclas (&eg;, <quote
 ><userinput
 >Ctrl+C</userinput
 ></quote
@@ -147,7 +147,7 @@
 >C</keycap
 > </keycombo
 >) que aparecen en la columna <guilabel
->Acceso rápido</guilabel
+>Atajo de teclado</guilabel
 > o <guilabel
 >Alternativa</guilabel
 >. </para>
@@ -155,18 +155,18 @@
 
 <sect3 id="key-bindings-global">
 <title
->Página de accesos rápidos globales</title>
+>Página de atajos de teclado globales</title>
 <para
 >En la parte izquierda de esta página, hay una lista que permite seleccionar un <guilabel
 >Componente</guilabel
->, como KWin, escritorio Plasma, etc. Los accesos rápidos definidos para el componente seleccionado se muestran en las columnas <guilabel
+>, como KWin, escritorio Plasma, etc. Los atajos de teclado definidos para el componente seleccionado se muestran en las columnas <guilabel
 >Acción</guilabel
 > y <guilabel
 >Global</guilabel
 > de la lista.</para>
 <para
 >Esta página tiene el mismo cuadro de búsqueda que la pestaña <guilabel
->Accesos rápidos estándar</guilabel
+>Atajos de teclado estándar</guilabel
 >.</para>
 <para
 >Use <guiicon
@@ -184,14 +184,14 @@
 > para añadir o eliminar un componente. </para>
 
 <para
->Al añadir un componente se abre un diálogo para seleccionar aplicaciones de la estructura del menú de inicio a las que añadir lanzadores que se puedan usar como accesos rápidos. Si una aplicación tiene opciones en la lista de saltos, estarán disponibles como acciones. </para>
+>Al añadir un componente se abre un diálogo para seleccionar aplicaciones de la estructura del menú de inicio a las que añadir lanzadores que se puedan usar como atajos de teclado. Si una aplicación tiene opciones en la lista de saltos, estarán disponibles como acciones. </para>
 
 <para
 >Pulse la lista desplegable <guilabel
 >Archivo</guilabel
-> que hay a la derecha para importar/exportar un esquema, defina todos los accesos directos a ninguno.</para>
+> que hay a la derecha para importar/exportar un esquema, defina todos los atajos de teclado a ninguno.</para>
 <para
->Los accesos directos globales se pueden configurar ahora para saltar a tareas específicas dentro de una aplicación.</para>
+>Los atajos de teclado globales se pueden configurar ahora para saltar a tareas específicas dentro de una aplicación.</para>
 
 <para
 >De forma predeterminada, puede abrir el menú de la aplicación pulsando la tecla &Meta;. </para>
@@ -222,7 +222,7 @@
 >Personalizada</guilabel
 >: si selecciona esta opción, puede crear una combinación de teclas para la acción seleccionada. Pulse el botón cuya etiqueta es, bien <guibutton
 >Ninguna</guibutton
-> o bien, el acceso rápido personalizado anteriormente. Ahora, la etiqueta cambia a <guibutton
+> o bien, el atajo de teclado personalizado anteriormente. Ahora, la etiqueta cambia a <guibutton
 >Entrada</guibutton
 >. Después, pulse cualquier modificador (&ie;, &Shift;, &Ctrl; o &Alt;) y después seleccione la tecla normal o la tecla de función (&eg;, <keycap
 >F11</keycap
@@ -230,7 +230,7 @@
 <para
 >Al pulsar en la columna <guilabel
 >Alternativo</guilabel
-> de una fila de la lista, se puede editar al segundo acceso rápido para la acción.</para
+> de una fila de la lista, se puede editar al segundo atajo de teclado para la acción.</para
 ></listitem>
 </itemizedlist>
 

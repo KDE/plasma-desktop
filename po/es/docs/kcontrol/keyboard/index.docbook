@@ -202,7 +202,7 @@
 <title
 >La pestaña Diseños</title>
 <para
->Esta pestaña le permite elegir los diseños de teclado que desea usar, el indicador quiere que se muestre en la bandeja del sistema, cómo desea cambiar de teclado y qué accesos directos se usarán para ello.</para>
+>Esta pestaña le permite elegir los diseños de teclado que desea usar, el indicador quiere que se muestre en la bandeja del sistema, cómo desea cambiar de teclado y qué atajos de teclado se usarán para ello.</para>
 
 <variablelist>
 <varlistentry>
@@ -242,16 +242,16 @@
 <varlistentry>
 <term
 ><guilabel
->Accesos rápidos para cambiar el diseño</guilabel
+>Atajos de teclado para cambiar el diseño</guilabel
 ></term>
 <listitem>
 <para
 ><guilabel
->Accesos rápidos principales</guilabel
+>Atajos de teclado principales</guilabel
 > es un atajo para cambiar de diseño que maneja X.org. <guilabel
->Accesos rápidos de tercer nivel</guilabel
-> es un atajo para cambiar a un tercer nivel del diseño activo (si existe alguno), que maneja X.org. Permite accesos rápidos de solo modificadores. <guilabel
->Acceso rápido alternativo</guilabel
+>Atajos de teclado de tercer nivel</guilabel
+> es un atajo para cambiar a un tercer nivel del diseño activo (si existe alguno), que maneja X.org. Permite atajos de teclado de solo modificadores. <guilabel
+>Atajo de teclado alternativo</guilabel
 > es un atajo para cambiar de diseño que maneja &plasma;. No permite atajos de solo modificadores y es posible que no funcione en algunas situaciones (por ejemplo, si hay una ventana emergente activa o si se ha activado el salvapantallas). </para>
 </listitem>
 </varlistentry>
@@ -297,7 +297,7 @@
 >Contador de diseños principales</guilabel
 > a 2) y el alemán como de repuesto: cuando cambie con el teclado y el botón izquierdo del ratón, solo cambiará entre los diseños principales, aunque siempre podrá seleccionar el tercer diseño con el menú de contexto.</para>
 <para
->Cuando seleccione un diseño de repuesto, reemplazará al último diseño principal (esto se hace por motivos técnicos, ya que, por lo general, los accesos rápidos globales funcionan basados el primer diseño activo, por lo que resulta más fiable preservar el primer diseño cuando permita la activación de diseños de repuesto).</para>
+>Cuando seleccione un diseño de repuesto, reemplazará al último diseño principal (esto se hace por motivos técnicos, ya que, por lo general, los atajos de teclado globales funcionan basados el primer diseño activo, por lo que resulta más fiable preservar el primer diseño cuando permita la activación de diseños de repuesto).</para>
 <!-- context menu ?-->
 <para
 >Como X.org solo permite tener 4 diseños entre los que cambiar, la función «diseños de repuesto» también permite superar esta limitación: el usuario puede tener hasta 4 diseños principales (gestionados por X.org) y hasta 4 más diseños de repuesto (gestionados por el selector de diseños). De este modo es posible trabajar convenientemente con hasta 8 diseños (aunque el límite de 4 diseños de repuesto se puede elevar en el futuro). </para>
