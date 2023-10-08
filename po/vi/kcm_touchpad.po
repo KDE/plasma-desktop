@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2021-09-09 16:18+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 20.12.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Nguyễn Hùng Phú"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "phu.nguyen@kdemail.net"
 
 #: actions.cpp:19
 #, kde-format
@@ -364,7 +354,7 @@ msgstr "Nhấn bất kì đâu bằng ba ngón"
 msgid "Press anywhere with three fingers."
 msgstr "Nhấn bất kì đâu bằng ba ngón."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -373,12 +363,12 @@ msgstr ""
 "Lỗi khi tải các giá trị. Xem thêm thông tin trong nhật kí. Vui lòng khởi "
 "động lại khối cấu hình này."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Không tìm thấy bàn cảm ứng nào. Hãy kết nối bàn cảm ứng."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -387,7 +377,7 @@ msgstr ""
 "Không thể lưu tất cả các thay đổi. Xem thêm thông tin trong nhật kí. Vui "
 "lòng khởi động lại khối cấu hình này và thử lại."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -396,7 +386,7 @@ msgstr ""
 "Lỗi khi tải các giá trị mặc định. Đặt một số lựa chọn về giá trị mặc định "
 "thất bại."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -405,12 +395,12 @@ msgstr ""
 "Lỗi khi thêm thiết bị mới được kết nối. Vui lòng kết nối lại và khởi động "
 "lại khối cấu hình này."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Bàn cảm ứng bị ngắt kết nối. Đã đóng hộp thoại thiết lập."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Bàn cảm ứng bị ngắt kết nối. Không tìm thấy bàn cảm ứng nào khác."
@@ -515,6 +505,14 @@ msgstr "Cạnh trái"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Góc trái trên"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Nguyễn Hùng Phú"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "phu.nguyen@kdemail.net"
 
 #~ msgid "Drag me"
 #~ msgstr "Kéo tôi đi"

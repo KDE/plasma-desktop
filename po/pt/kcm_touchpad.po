@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2020-04-09 10:54+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -19,16 +19,6 @@ msgstr ""
 "X-POFile-SpellExtra: Raspryagayeva Synaptics Osterlund synclient Peter\n"
 "X-POFile-SpellExtra: Mezin Zaytsev Alexander Libinput Roman Gilg tácteis\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "José Nuno Pires"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "zepires@gmail.com"
 
 #: actions.cpp:19
 #, kde-format
@@ -383,7 +373,7 @@ msgstr "Carregar em qualquer lado com três dedos"
 msgid "Press anywhere with three fingers."
 msgstr "Carregue em qualquer lado com três dedos."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -392,12 +382,12 @@ msgstr ""
 "Ocorreu um erro ao carregar os valores. Veja os registos para obter mais "
 "informações. Por favor, reinicie este módulo de configuração."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Não foi detectado nenhum rato por toque. Ligue-o agora."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -407,7 +397,7 @@ msgstr ""
 "mais informações. Por favor, reinicie este módulo de configuração e tente de "
 "novo."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -416,7 +406,7 @@ msgstr ""
 "Ocorreu um erro ao ler os valores predefinidos. Nem todas as opções puderam "
 "ser configuradas com os seus valores por omissão."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -425,13 +415,13 @@ msgstr ""
 "Ocorreu um erro ao adicionar o dispositivo acabado de ligar. Por favor, "
 "ligue-o de novo e reinicie este módulo de configuração."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr ""
 "O rato por toque foi desligado. Foi fechada a sua janela de configuração."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""
@@ -538,6 +528,14 @@ msgstr "Extremo esquerdo"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Canto superior esquerdo"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "José Nuno Pires"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "zepires@gmail.com"
 
 #~ msgid "Drag me"
 #~ msgstr "Arraste-me"

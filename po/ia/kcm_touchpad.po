@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2023-08-24 10:31+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Giovanni Sora"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "g.sora@tiscali.it"
 
 #: actions.cpp:19
 #, kde-format
@@ -375,7 +365,7 @@ msgstr "Pressa ubique con tres digitos"
 msgid "Press anywhere with three fingers."
 msgstr "Pressa ubique con tres digitos."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -384,12 +374,12 @@ msgstr ""
 "Error durante que il incarga valores. Tu vide registros (logs) per ulterior "
 "information. Pro favor reinitia iste modulo de configuration."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Necu touchpad (pannello tactile) trovate. onnecte nunc le touchpad."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -399,7 +389,7 @@ msgstr ""
 "information. Pro favor tu restarta iste modulo de configuration e essaya de "
 "novo."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -408,7 +398,7 @@ msgstr ""
 "Error quando il cargava valores predefinite. Il falleva a fixar alcun "
 "optiones a lor valor predefinite."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -417,12 +407,12 @@ msgstr ""
 "Error durante que il adde dispositivos connectite recentemente. Pro favor "
 "reconnecte lo e restarta iste modulo de configuration."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Touchpad disconnectite. Claudite su dialogo de preferentia."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""
@@ -531,6 +521,14 @@ msgstr "Bordo sinistre"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Angulo culmine sinistre"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Giovanni Sora"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "g.sora@tiscali.it"
 
 #~ msgid "Drag me"
 #~ msgstr "Trahe me"

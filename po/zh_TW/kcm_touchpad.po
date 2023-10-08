@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2023-02-18 01:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -20,16 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Franklin Weng, Jeff Huang"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
 #: actions.cpp:19
 #, kde-format
@@ -364,19 +354,19 @@ msgstr "用三指點觸任何位置"
 msgid "Press anywhere with three fingers."
 msgstr "用三指點觸任何位置。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr "載入值時發生錯誤。請見紀錄檔以取得更多資訊。請重新啟動本設定模組。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "找不到觸控板。請接上觸控板。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -384,26 +374,26 @@ msgid ""
 msgstr ""
 "無法儲存所有變動。請見紀錄檔以取得更多資訊。請重新啟動本設定模組並再次嘗試。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr "載入預設值時發生錯誤。將部份選項設定為它們的預設值時失敗。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr "加入新連線的裝置時發生錯誤。請重新連接它並重新啟動本設定模組。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "觸控板已斷線。關閉此設定對話框。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "觸控板已斷線。找不到其他的觸控板。"
@@ -508,6 +498,14 @@ msgstr "左邊緣"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "左上角"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Franklin Weng, Jeff Huang"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
 #~ msgid "Drag me"
 #~ msgstr "拖曳我"

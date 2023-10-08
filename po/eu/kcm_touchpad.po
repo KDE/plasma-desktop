@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2023-08-25 00:24+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,16 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.04.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Ander Elortondo,Iñigo Salvador Azurmendi"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "ander.elor@gmail.com,xalba@euskalnet.net"
 
 #: actions.cpp:19
 #, kde-format
@@ -379,7 +369,7 @@ msgstr "Sakatu edonon hiru hatzekin"
 msgid "Press anywhere with three fingers."
 msgstr "Sakatu edonon hiru hatzekin."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -388,12 +378,12 @@ msgstr ""
 "Errorea balioak zamatzean. Begiratu egunkariak informazio zabalagoa izateko. "
 "Berrabiarazi konfiguratze modulu hau."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Ez da ukipen-sagua aurkitu. Konektatu ukipen-sagua orain."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -402,7 +392,7 @@ msgstr ""
 "Ez da aldaketa guztiak gordetzeko gai. Begiratu egunkariak informazio "
 "zabalagoa izateko. Berrabiarazi konfiguratzeko modulu hau eta saiatu berriz."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -411,7 +401,7 @@ msgstr ""
 "Errorea balio lehenetsiak kargatzean. Huts egin du aukera batzuk ezartzean "
 "bere balio lehenetsietara."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -420,12 +410,12 @@ msgstr ""
 "Errorea gailu konektatu berria gehitzean. Mesedez berriz konektatu eta "
 "berrabiarazi konfigurazio modulua."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "ukipen-sagua deskonektatua. Itxita bere ezarpen elkarrizketa."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "ukipen-sagua deskonektatua. Ez da beste ukipen-sagurik aurkitu."
@@ -530,6 +520,14 @@ msgstr "Ezkerreko ertza"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Goiko ezkerreko izkina"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ander Elortondo,Iñigo Salvador Azurmendi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ander.elor@gmail.com,xalba@euskalnet.net"
 
 #~ msgid "Drag me"
 #~ msgstr "Arrasta nazazu"

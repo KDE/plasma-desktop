@@ -3,22 +3,22 @@
 # This file is distributed under the same license as the kdebase package.
 # Luciano Montanaro <mikelima@cirulla.net>, 2007, 2008.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009, 2010, 2011, 2012, 2014.
-# Paolo Zamponi <feus73@gmail.com>, 2016, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2016, 2017, 2020, 2021, 2023 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2021-11-30 15:26+0100\n"
-"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"PO-Revision-Date: 2023-10-01 20:58+0200\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,15 +41,14 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "Passa alla mappatura di tastiera successiva"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Passa alla mappatura di tastiera successiva"
+msgstr "Passa all'ultima mappatura di tastiera utilizzata"
 
 #: bindings.cpp:60
 #, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "Cambia la mappatura della tastiera a %1"
+msgstr "Cambia la mappatura della tastiera in %1"
 
 #: flags.cpp:77
 #, kde-format
@@ -240,10 +239,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:246
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "Scorciatoia alternativa:"
+msgstr "Ultima scorciatoia utilizzata:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:259
@@ -252,6 +250,8 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
+"Questa scorciatoia permette di passare velocemente tra due scorciatoie, "
+"ritornando sempre all'ultima utilizzata."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:284

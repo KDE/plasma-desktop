@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2023-09-24 17:15+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,16 +21,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 22.12.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Empar Montoro Martín,Josep M. Ferrer"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "montoro_mde@gva.es,txemaq@gmail.com"
 
 #: actions.cpp:19
 #, kde-format
@@ -382,7 +372,7 @@ msgstr "Premeu en qualsevol lloc amb tres dits"
 msgid "Press anywhere with three fingers."
 msgstr "Premeu en qualsevol lloc amb tres dits."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -391,12 +381,12 @@ msgstr ""
 "S'ha produït un error en carregar els valors. Vegeu els registres per a més "
 "informació. Torneu a iniciar este mòdul de configuració."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "No s'ha trobat cap ratolí tàctil. Connecteu ara el ratolí tàctil."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -406,7 +396,7 @@ msgstr ""
 "informació. Torneu a iniciar este mòdul de configuració i proveu-ho una "
 "altra vegada."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -415,7 +405,7 @@ msgstr ""
 "S'ha produït un error en carregar els valors predeterminats. No s'han pogut "
 "establir diverses opcions als seus valors predeterminats."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -424,13 +414,13 @@ msgstr ""
 "S'ha produït un error en afegir un dispositiu connectat nou. Torneu a "
 "connectar-lo i reinicieu este mòdul de configuració."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr ""
 "S'ha desconnectat el ratolí tàctil. Es tanca el seu diàleg de configuració."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""
@@ -536,6 +526,14 @@ msgstr "Vora esquerra"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Cantó superior esquerre"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Empar Montoro Martín,Josep M. Ferrer"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "montoro_mde@gva.es,txemaq@gmail.com"
 
 #~ msgid "Drag me"
 #~ msgstr "Arrossegueu-me"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2023-08-24 06:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -18,16 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 23.11.70\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Volkan Gezer"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "volkangezer@gmail.com"
 
 #: actions.cpp:19
 #, kde-format
@@ -370,7 +360,7 @@ msgstr "Üç parmağınızla herhangi bir yere basın"
 msgid "Press anywhere with three fingers."
 msgstr "Üç parmağınızla herhangi bir yere basın."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -379,12 +369,12 @@ msgstr ""
 "Değerler yüklenirken hata oluştu. Daha fazla bilgi için günlüklere bakın. "
 "Lütfen bu yapılandırma modülünü yeniden başlatın."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Dokunmatik yüzey bulunamadı. Dokunmatik yüzeyi şimdi bağlayın."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -393,7 +383,7 @@ msgstr ""
 "Tüm değişiklikler kaydedilemiyor. Daha fazla bilgi için günlüklere bakın. "
 "Lütfen bu yapılandırma modülünü yeniden başlatın ve yeniden deneyin."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -402,7 +392,7 @@ msgstr ""
 "Öntanımlı değerler yüklenirken hata oluştu. Bazı seçenekleri öntanımlı "
 "değerlerine ayarlama başarısız."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -411,12 +401,12 @@ msgstr ""
 "Yeni bir aygıt eklenirken hata oluştu. Lütfen yeniden bağlayın ve bu "
 "yapılandırma modülünü yeniden başlatın."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Dokunmatik yüzey bağlantısı kesildi. Ayar iletişim kutusu kapatıldı."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""
@@ -523,6 +513,14 @@ msgstr "Sol kenarlık"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Sol üst köşe"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Volkan Gezer"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "volkangezer@gmail.com"
 
 #~ msgid "Drag me"
 #~ msgstr "Beni sürükle"

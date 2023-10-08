@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2023-06-14 14:59+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Vít Pelčák,Lukáš Kucharczyk"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "vit@pelcak.org,lukas@kucharczyk.xyz"
 
 #: actions.cpp:19
 #, kde-format
@@ -373,7 +363,7 @@ msgstr "Stisknout kdekoliv třemi prsty"
 msgid "Press anywhere with three fingers."
 msgstr "Stiskněte kdekoliv třemi prsty."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -382,12 +372,12 @@ msgstr ""
 "Chyba při načítání hodnot.Více informací naleznete v záznamech činnosti. "
 "Prosím restartujte tento nastavovací modul."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nebyl nalezen žádný touchpad. Připojte touchpad."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -396,7 +386,7 @@ msgstr ""
 "Nebylo možné uložit všechny změny. Více informací naleznete v záznamu. "
 "Restartujte tento konfigurační modul a zkuste to znovu."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -405,7 +395,7 @@ msgstr ""
 "Chyba při načítání výchozích hodnot. Nastavení některých voleb na výchozí "
 "hodnotu selhalo."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -414,12 +404,12 @@ msgstr ""
 "Při přidávání nově připojeného zařízení došlo k chybě. Připojte zařízení "
 "znovu a restartujte tento konfigurační modul."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Touchpad byl odpojen. Jeho nastavovací dialog byl uzavřen."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Touchpad odpojen. Žádné další touchpady nebyly nalezeny."
@@ -524,6 +514,14 @@ msgstr "Levý okraj"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Levý horní roh"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Vít Pelčák,Lukáš Kucharczyk"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "vit@pelcak.org,lukas@kucharczyk.xyz"
 
 #~ msgid "Drag me"
 #~ msgstr "Táhni mě"

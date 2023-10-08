@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2023-08-12 01:47+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 23.04.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Ryuichi Yamada"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "ryuichi_ya220@outlook.jp"
 
 #: actions.cpp:19
 #, kde-format
@@ -365,7 +355,7 @@ msgstr "三本指でどこかを押す"
 msgid "Press anywhere with three fingers."
 msgstr "三本指でどこかを押してください。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -374,12 +364,12 @@ msgstr ""
 "数値の読み込み中にエラーが発生しました。さらなる情報を得るにはログを確認して"
 "ください。この設定モジュールを再起動してください。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "タッチパッドが見つかりません。タッチパッドを接続してください。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -388,7 +378,7 @@ msgstr ""
 "すべての変更を保存できませんでした。さらなる情報を得るにはログを確認してくだ"
 "さい。この設定モジュールを再起動して再試行してください。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -397,7 +387,7 @@ msgstr ""
 "デフォルトの数値の読み込み中にエラーが発生しました。いくつかのオプションにデ"
 "フォルトの数値を設定できませんでした。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -406,12 +396,12 @@ msgstr ""
 "新しく追加されたデバイスの読み込み中にエラーが発生しました。再接続してこの設"
 "定モジュールを再起動してください。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "タッチパッドが切断されました。設定ダイアログを閉じました。"
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""
@@ -517,6 +507,14 @@ msgstr "左の端"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "左上の端"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ryuichi Yamada"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ryuichi_ya220@outlook.jp"
 
 #~ msgid "Drag me"
 #~ msgstr "ドラッグしてください"

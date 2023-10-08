@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2023-08-24 06:39+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -19,16 +19,6 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.3.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Andrej Mernik,Matjaž Jeran"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net"
 
 #: actions.cpp:19
 #, kde-format
@@ -373,7 +363,7 @@ msgstr "Kamorkoli pritisnite s tremi prsti"
 msgid "Press anywhere with three fingers."
 msgstr "Kamorkoli pritisnite s tremi prsti."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -382,12 +372,12 @@ msgstr ""
 "Napaka med nalaganjem vrednosti. Za več podrobnosti si oglejte dnevnike. "
 "Znova zaženite ta nastavitveni modul."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Najdena ni bila nobena sledilna ploščica. Povežite jo zdaj."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -396,7 +386,7 @@ msgstr ""
 "Vseh sprememb ni bilo mogoče shraniti. Za več podrobnosti si oglejte "
 "dnevnike. Znova zaženite ta nastavitveni modul in poskusite znova."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -405,7 +395,7 @@ msgstr ""
 "Napaka med nalaganjem privzetih vrednosti. Nekaterih možnosti ni bilo mogoče "
 "ponastaviti na privzete."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -414,14 +404,14 @@ msgstr ""
 "Napaka med dodajanjem novo povezane naprave. Povežite jo znova in znova "
 "zaženite ta nastavitveni modul."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr ""
 "Sledilna ploščica je bila odklopljena, zato je bilo pogovorno okno z "
 "nastavitvami zaprto."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Sledilna ploščica je bila odklopljena. Druge niso bile najdene."
@@ -526,6 +516,14 @@ msgstr "Levi rob"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Zgornji levi kot"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Andrej Mernik,Matjaž Jeran"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net"
 
 #~ msgid "Drag me"
 #~ msgstr "Povleci me"

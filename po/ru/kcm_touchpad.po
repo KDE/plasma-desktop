@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2022-06-27 10:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -17,18 +17,6 @@ msgstr ""
 "X-Generator: Lokalize 22.04.2\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Виктор Рыжих,Александр Поташев,Александр Яворский,Олеся Герасименко"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"victorr2007@yandex.ru,aspotashev@gmail.com,KekcuHa@gmail.com,"
-"gammaray@basealt.ru"
 
 #: actions.cpp:19
 #, kde-format
@@ -386,7 +374,7 @@ msgstr "Нажмите тремя пальцами"
 msgid "Press anywhere with three fingers."
 msgstr "Нажмите тремя пальцами."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -395,12 +383,12 @@ msgstr ""
 "Ошибка при загрузке значений. Более подробная информация сохранена в "
 "журналах. Закройте и снова откройте этот модуль настройки."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Сенсорная панель не найдена. Подключите сенсорную панель."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -410,7 +398,7 @@ msgstr ""
 "журналах. Закройте и снова откройте этот модуль настройки, затем повторите "
 "попытку."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -418,7 +406,7 @@ msgid ""
 msgstr ""
 "Произошла ошибка: не всем параметрам удалось назначить значения по умолчанию."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -427,12 +415,12 @@ msgstr ""
 "При добавлении недавно подключённого устройства возникла ошибка. Отключите и "
 "снова подключите устройство, а также перезапустите этот модуль настройки."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Сенсорная панель отключена, её окно настройки закрыто."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Сенсорная панель отключена. Других сенсорных панелей не найдено."
@@ -537,6 +525,16 @@ msgstr "Левый край"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Левый верхний угол"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Виктор Рыжих,Александр Поташев,Александр Яворский,Олеся Герасименко"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "victorr2007@yandex.ru,aspotashev@gmail.com,KekcuHa@gmail.com,"
+#~ "gammaray@basealt.ru"
 
 #~ msgid "Drag me"
 #~ msgstr "Перетащите"

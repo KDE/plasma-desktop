@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2021-06-07 16:50+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 20.04.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Tommi Nieminen,Lasse Liehu"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "translator@legisign.org,lasse.liehu@gmail.com"
 
 #: actions.cpp:19
 #, kde-format
@@ -367,7 +357,7 @@ msgstr "Paina minne vain kolmella sormella"
 msgid "Press anywhere with three fingers."
 msgstr "Paina minne vain kolmella sormella."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -376,12 +366,12 @@ msgstr ""
 "Virhe ladattaessa arvoja. Katso lisätietoa lokista. Käynnistä tämä "
 "asetusmoduuli uudelleen."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Kosketuslevyä ei löydy. Kytke kosketuslevy nyt."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -390,7 +380,7 @@ msgstr ""
 "Kaikkia muutoksia ei voitu tallentaa. Katso lisätietoa lokista. Käynnistä "
 "tämä asetusmoduuli uudelleen."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -399,7 +389,7 @@ msgstr ""
 "Virhe ladattaessa oletusarvoja. Joitain tai kaikkia asetuksia ei onnistuttu "
 "asettamaan oletusarvoihin."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -408,12 +398,12 @@ msgstr ""
 "Virhe lisättäessä vasta kytkettyä laitetta. Kytke se toistamiseen ja "
 "käynnistä tämä asetusosio uudelleen."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Kosketuslevy irrotettiin. Sen asetusikkuna suljettiin."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Kosketuslevy irrotettiin. Muita kosketuslevyjä ei löytynyt."
@@ -518,6 +508,14 @@ msgstr "Vasen reuna"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Vasen yläkulma"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Tommi Nieminen,Lasse Liehu"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "translator@legisign.org,lasse.liehu@gmail.com"
 
 #~ msgid "Drag me"
 #~ msgstr "Vedä minua"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2021-05-27 18:51+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Stefan Asserhäll"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "stefan.asserhall@bredband.net"
 
 #: actions.cpp:19
 #, kde-format
@@ -373,7 +363,7 @@ msgstr "Tryck var som helst med tre fingrar"
 msgid "Press anywhere with three fingers."
 msgstr "Tryck var som helst med tre fingrar."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -382,12 +372,12 @@ msgstr ""
 "Fel vid inläsning av värden. Se loggar för mer information. Starta om "
 "inställningsmodulen."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Ingen tryckplatta hittades. Anslut tryckplatta nu."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -396,7 +386,7 @@ msgstr ""
 "Kunde inte spara alla ändringar. Se loggar för mer information. Starta om "
 "inställningsmodulen och försök igen."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -405,7 +395,7 @@ msgstr ""
 "Fel vid inläsning av förvalda värden. Några alternativ kunde inte ställas in "
 "till sina förvalda värden."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -414,12 +404,12 @@ msgstr ""
 "Fel vid tillägg av nyansluten enhet. Anslut den igen och starta om "
 "inställningsmodulen."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Tryckplatta bortkopplad. Stäng dess inställningsdialogruta."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Tryckplatta bortkopplad. Inga andra tryckplattor hittades."
@@ -524,6 +514,14 @@ msgstr "Vänster kant"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Övre vänstra hörnet"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stefan Asserhäll"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "stefan.asserhall@bredband.net"
 
 #~ msgid "Drag me"
 #~ msgstr "Dra här"

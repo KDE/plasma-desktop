@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2023-10-01 09:09+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.3.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "אלקנה ברדוגו וצוות התרגום של KDE ישראל"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "ttv200@gmail.com, kde-l10n-he@kde.org"
 
 #: actions.cpp:19
 #, kde-format
@@ -362,19 +352,19 @@ msgstr "יש ללחוץ איפשהו עם שלוש אצבעות"
 msgid "Press anywhere with three fingers."
 msgstr "יש ללחוץ איפשהו עם שלוש אצבעות."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr "שגיאה בטעינת ערכים. יש להפעיל מודול הגדרות זה מחדש."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "לא נמצא משטח מגע. יש לחבר אותו כעת."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -383,7 +373,7 @@ msgstr ""
 "לא ניתן לשמור את כל השינויים. ביומני המערכת יש פירוט נוסף. נא להפעיל את "
 "מודול הגדרות זה מחדש ולנסות שוב."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -391,7 +381,7 @@ msgid ""
 msgstr ""
 "שגיאה בטעינת ערכי ברירת המחדל. הגדרת חלק מהאפשרויות לברירות המחדל שלהן נכשלה."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -399,12 +389,12 @@ msgid ""
 msgstr ""
 "שגיאה בהוספת התקן חדש שחובר. נא לחבר אותו מחדש ולהפעיל את ההגדרות מחדש."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "משטח המגע התנתק. חלון ההגדרות שלו נסגר."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "משטח המגע התנתק. לא נמצאו משטחי מגע אחרים."
@@ -509,6 +499,14 @@ msgstr "קצה שמאל"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "פינה שמאלית עליונה"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "אלקנה ברדוגו וצוות התרגום של KDE ישראל"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ttv200@gmail.com, kde-l10n-he@kde.org"
 
 #~ msgid "Drag me"
 #~ msgstr "ממתין לגרירה"

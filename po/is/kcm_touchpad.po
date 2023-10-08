@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2023-09-16 11:47+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Guðmundur Erlingsson"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "gudmundure@gmail.com"
 
 #: actions.cpp:19
 #, kde-format
@@ -374,7 +364,7 @@ msgstr "Ýta hvar sem er með þremur fingrum"
 msgid "Press anywhere with three fingers."
 msgstr "Ýta hvar sem er með þremur fingrum."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -383,12 +373,12 @@ msgstr ""
 "Villa þegar gildi voru hlaðin inn. Sjá frekari upplýsingar í annálaskrám. "
 "Endurræstu þessa grunnstillingaeiningu."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Enginn snertiplatti fannst. Tengdu snertiplatta núna."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -397,7 +387,7 @@ msgstr ""
 "Ekki tókst að vista allar breytingar. Sjá frekari upplýsingar í annálaskrám. "
 "Endurræstu þessa grunnstillingaeiningu og reyndu aftur."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -406,7 +396,7 @@ msgstr ""
 "Villa þegar sjálfgefin gildi voru hlaðin inn. Mistókst að stilla suma "
 "valkosti á sjálfgefin gildi."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -415,12 +405,12 @@ msgstr ""
 "Villa þegar nýtengdu tæki var bætt við. Tengdu það aftur og endurræstu þessa "
 "grunnstillingaeiningu."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Snertiplatti aftengdur. Stillingaglugga hans lokað."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Snertiplatti aftengdur. Engir aðrir snertiplattar fundust."
@@ -525,6 +515,14 @@ msgstr "Vinstri brún"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Horn efst til vinstri"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Guðmundur Erlingsson"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "gudmundure@gmail.com"
 
 #~ msgid "Drag me"
 #~ msgstr "Dragðu mig"

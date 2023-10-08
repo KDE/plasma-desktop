@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
 "PO-Revision-Date: 2023-01-13 08:50+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.1\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Wantoyèk,Linerly"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "wantoyek@gmail.com,linerly@protonmail.com"
 
 #: actions.cpp:19
 #, kde-format
@@ -374,7 +364,7 @@ msgstr "Tekan di mana pun dengan tiga jari"
 msgid "Press anywhere with three fingers."
 msgstr "Tekan di mana pun dengan tiga jari."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:73
+#: kcm/touchpadconfig.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -383,12 +373,12 @@ msgstr ""
 "Error selagi memuat nilai. Lihat log untuk informasi selebihnya. Silakan "
 "jalankan ulang modul konfigurasi ini."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:76
+#: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Tidak ada touchpad yang ditemukan. Koneksikan touchpad sekarang."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:85
+#: kcm/touchpadconfig.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -397,7 +387,7 @@ msgstr ""
 "Tidak dapat menyimpan semua perubahan. Lihat log untuk informasi selebihnya. "
 "Silakan jalankan ulang modul konfigurasi ini dan coba lagi."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:104
+#: kcm/touchpadconfig.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -406,7 +396,7 @@ msgstr ""
 "Error selagi memuat nilai baku. Gagal mengeset beberapa opsi ke nilai "
 "bakunya."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:124
+#: kcm/touchpadconfig.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -415,12 +405,12 @@ msgstr ""
 "Error selagi menambahkan peranti yang baru terkoneksi. Silakan koneksikan "
 "ulang dan jalankan ulang modul konfigurasi ini."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:147
+#: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Touchpad terdiskoneksi. Tutuplah dialog pengaturan."
 
-#: kcm/libinput/touchpadconfiglibinput.cpp:149
+#: kcm/touchpadconfig.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Touchpad terdiskoneksi. Tidak ada touchpad lain yang ditemukan."
@@ -525,6 +515,14 @@ msgstr "Tepi kiri"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Sudut kiri atas"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Wantoyèk,Linerly"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wantoyek@gmail.com,linerly@protonmail.com"
 
 #~ msgid "Drag me"
 #~ msgstr "Seret aku"
