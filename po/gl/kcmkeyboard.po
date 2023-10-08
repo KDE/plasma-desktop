@@ -7,14 +7,14 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2012.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-05 00:46+0000\n"
-"PO-Revision-Date: 2023-08-06 04:51+0200\n"
+"PO-Revision-Date: 2023-10-07 13:16+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,17 +37,17 @@ msgstr "mvillarino@kde-espana.es"
 #: bindings.cpp:24
 #, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "Selector da disposición do teclado"
+msgstr "Selector de disposición de teclado"
 
 #: bindings.cpp:26
 #, kde-format
 msgid "Switch to Next Keyboard Layout"
-msgstr "Cambiar para a seguinte disposición do teclado"
+msgstr "Cambiar á seguinte disposición de teclado"
 
 #: bindings.cpp:49
 #, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "Cambiar a disposición do teclado a %1"
+msgstr "Cambiar a disposición de teclado a %1"
 
 #: flags.cpp:122
 #, kde-format
@@ -89,7 +89,7 @@ msgstr "Vista previa"
 #: kcm_keyboard.cpp:32
 #, kde-format
 msgid "KDE Keyboard Control Module"
-msgstr "Módulo de control do teclado de KDE"
+msgstr "Módulo de control de teclados de KDE"
 
 #: kcm_keyboard.cpp:36
 #, kde-format
@@ -129,7 +129,7 @@ msgid ""
 "have.\n"
 msgstr ""
 "Aquí pode escoller o modelo de teclado. Este parámetro é independente da "
-"disposición do teclado e refírese ao modelo de «soporte físico», isto é como "
+"disposición de teclado e refírese ao modelo de «soporte físico», isto é como "
 "está fabricado. Os teclados modernos que veñen cos computadores polo xeral "
 "teñen dúas teclas adicionais e chámaselles modelos de «104-teclas». Isto "
 "posibelmente sexa o que deba escoller se non sabe o tipo de teclado que "
@@ -148,7 +148,7 @@ msgid ""
 "If you select \"Application\" or \"Window\" switching policy, changing the "
 "keyboard layout will only affect the current application or window."
 msgstr ""
-"Se escolle as políticas «Aplicación» ou «Xanela» o cambio da disposición do "
+"Se escolle as políticas «Aplicación» ou «Xanela» o cambio da disposición de "
 "teclado só ha afectar á aplicación ou á xanela actuais."
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
@@ -304,7 +304,7 @@ msgstr "Avanzado"
 #: kcm_keyboard.ui:418
 #, kde-format
 msgid "&Configure keyboard options"
-msgstr "Configurar as &opcións do teclado."
+msgstr "Configurar as &opcións de teclado."
 
 #: kcm_keyboard_widget.cpp:211
 #, kde-format
@@ -400,7 +400,7 @@ msgid ""
 "Allows to test keyboard repeat and click volume (just don't forget to apply "
 "the changes)."
 msgstr ""
-"Permite probar o volume da repetición de teclado e da pulsación (non esqueza "
+"Permite probar o volume da repetición de teclado e da prema (non esqueza "
 "aplicar os cambios)."
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
@@ -497,7 +497,7 @@ msgstr "Vista previa do teclado"
 #, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "Visualización da disposición do teclado"
+msgstr "Visualización da disposición de teclado"
 
 #: tastenbrett/main.cpp:144
 #, kde-format
@@ -508,10 +508,10 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
-"Non foi posíbel cargar a xeometría do teclado. Isto adoita indicar que o "
-"modelo seleccionado non é compatíbel cunha disposición ou cunha variante de "
-"disposición concretas. O problema ocorrerá tamén probabelmente ao intentar "
-"usar esta combinación de modelo, disposición e variante."
+"Produciuse un erro ao cargar a xeometría do teclado. Isto adoita indicar que "
+"o modelo seleccionado non é compatíbel cunha disposición ou cunha variante "
+"de disposición concretas. O problema ocorrerá tamén probabelmente ao "
+"intentar usar esta combinación de modelo, disposición e variante."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Selector da disposición do teclado de KDE"
