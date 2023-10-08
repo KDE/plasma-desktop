@@ -34,7 +34,7 @@ ColumnLayout {
         filterRoleName: "name"
 
         sortRoleName: "name"
-        property int sortOrder: mimeTypesView.sortIndicatorOrder //FIXME: workaround for PlasmaCore.SortFilterModel, look again after porting to KItemModels
+        sortOrder: Qt.AscendingOrder
 
         function checkFiltered() {
             var types = [];
@@ -212,12 +212,12 @@ ColumnLayout {
 
             Button {
                 enabled: (filterMode.currentIndex > 0)
-                icon.name: filteredMimeTypesModel.sortOrder == Qt.AscendingOrder ? "view-sort-ascending-symbolic" : "view-sort-descending-symbolic"
+                icon.name: filteredMimeTypesModel.sortOrder === Qt.AscendingOrder ? "view-sort-ascending-symbolic" : "view-sort-descending-symbolic"
                 ToolTip.delay: Kirigami.Units.toolTipDelay
                 ToolTip.visible: (Kirigami.Settings.isMobile ? pressed : hovered) && ToolTip.text.length > 0
                 ToolTip.text: i18n("Switch Sort Order")
                 onClicked: {
-                    filteredMimeTypesModel.sortOrder = filteredMimeTypesModel.sortOrder == Qt.AscendingOrder ? Qt.DescendingOrder : Qt.AscendingOrder;
+                    filteredMimeTypesModel.sortOrder = filteredMimeTypesModel.sortOrder === Qt.AscendingOrder ? Qt.DescendingOrder : Qt.AscendingOrder;
                     filteredMimeTypesModel.sort(0, filteredMimeTypesModel.sortOrder);
                 }
             }
