@@ -127,10 +127,15 @@ ColumnLayout {
                         return Kirigami.Units.gridUnit * 2
                     }
                     clip: true // This removes event handling blocking by the header
-                    model: [i18n("File Type"), i18n("Description")]
+                    model: ListModel {
+                        Component.onCompleted: {
+                            append({ display: i18n("File Type") });
+                            append({ display: i18n("Description") });
+                        }
+                    }
                     interactive: false
                     columnWidthProvider: function(column) {
-                        if (column == 0) {
+                        if (column === 0) {
                             return mimeTypesView.columnSize;
                         } else {
                             return mimeTypesView.width - mimeTypesView.columnSize;
