@@ -20,6 +20,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMFindQmlModule)
+include(ECMGenerateExportHeader)
 include(ECMInstallIcons)
 include(ECMMarkAsTest)
 include(ECMMarkNonGuiExecutable)
@@ -291,6 +292,8 @@ set_package_properties(FontNotoColorEmoji PROPERTIES
     URL "https://www.google.com/get/noto/"
     TYPE RUNTIME
 )
+
+add_subdirectory(appiumtests)
 
 ki18n_install(po)
 kdoctools_install(po)

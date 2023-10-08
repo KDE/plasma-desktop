@@ -237,6 +237,8 @@ PlasmoidItem {
 
         property bool wasExpanded
 
+        Accessible.name: Plasmoid.title
+
         onPressed: wasExpanded = kickoff.expanded
         onClicked: kickoff.expanded = !wasExpanded
 

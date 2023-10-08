@@ -43,7 +43,7 @@ Dependencies:
     'frameworks/sonnet': '@latest-kf6'
     'frameworks/kunitconversion': '@latest-kf6'
     'plasma/libksysguard': '@same'
-    'plasma/oxygen': '@same'
+    'plasma/breeze': '@same'
     'plasma/plasma-workspace': '@same'
     'plasma/powerdevil': '@same'
     'plasma/systemsettings': '@same'
@@ -57,6 +57,11 @@ RuntimeDependencies:
   'require':
     'plasma/kwayland-integration' : '@same'
     'plasma/plasma-integration' : '@same'
+- 'on': ['Linux']
+  'require':
+    'frameworks/qqc2-desktop-style': '@latest-kf6'
+    'plasma/kactivitymanagerd': '@same'
+    'sdk/selenium-webdriver-at-spi': '@latest-kf6'
 
 Options:
   require-passing-tests-on: [ '@all' ]
