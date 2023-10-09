@@ -245,9 +245,6 @@ KCM.ScrollViewKCM {
             }
         }
 
-        delegate: Kirigami.DelegateRecycler {
-            width: list.width
-            sourceComponent: listDelegateComponent
-        }
+        delegate: listDelegateComponent
     }
 }
