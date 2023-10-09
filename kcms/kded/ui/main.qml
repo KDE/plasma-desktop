@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.6
+import QtQuick
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QQC2
 import QtQml 2.15
@@ -123,6 +123,7 @@ KCM.ScrollViewKCM {
         id: list
         clip: true
         activeFocusOnTab: true
+        reuseItems: true
 
         model: kcm.filteredModel
 
