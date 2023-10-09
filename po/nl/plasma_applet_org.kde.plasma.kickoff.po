@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:40+0000\n"
+"POT-Creation-Date: 2023-10-09 01:46+0000\n"
 "PO-Revision-Date: 2023-09-13 09:26+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -254,11 +254,6 @@ msgstr "Gebruikersinstellingen openen"
 msgid "Keep Open"
 msgstr "Open houden"
 
-#: package/contents/ui/Kickoff.qml:314
-#, kde-format
-msgid "Edit Applications…"
-msgstr "Toepassingen bewerken…"
-
 #: package/contents/ui/KickoffGridView.qml:89
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
@@ -273,6 +268,11 @@ msgstr "Verlaten"
 #, kde-format
 msgid "More"
 msgstr "Meer"
+
+#: package/contents/ui/main.qml:314
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Toepassingen bewerken…"
 
 #: package/contents/ui/PlacesPage.qml:48
 #, kde-format

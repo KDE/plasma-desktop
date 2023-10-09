@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:40+0000\n"
+"POT-Creation-Date: 2023-10-09 01:46+0000\n"
 "PO-Revision-Date: 2023-03-04 19:56+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -253,11 +253,6 @@ msgstr "Avaa käyttäjäasetukset"
 msgid "Keep Open"
 msgstr "Pidä avoinna"
 
-#: package/contents/ui/Kickoff.qml:314
-#, kde-format
-msgid "Edit Applications…"
-msgstr "Muokkaa sovelluksia…"
-
 #: package/contents/ui/KickoffGridView.qml:89
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
@@ -272,6 +267,11 @@ msgstr "Poistu"
 #, kde-format
 msgid "More"
 msgstr "Lisää"
+
+#: package/contents/ui/main.qml:314
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Muokkaa sovelluksia…"
 
 #: package/contents/ui/PlacesPage.qml:48
 #, kde-format

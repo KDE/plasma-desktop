@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_launcher\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:40+0000\n"
+"POT-Creation-Date: 2023-10-09 01:46+0000\n"
 "PO-Revision-Date: 2023-01-21 18:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -267,11 +267,6 @@ msgstr "Открыть настройки пользователя"
 msgid "Keep Open"
 msgstr "Не закрывать"
 
-#: package/contents/ui/Kickoff.qml:314
-#, kde-format
-msgid "Edit Applications…"
-msgstr "Редактировать меню..."
-
 #: package/contents/ui/KickoffGridView.qml:89
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
@@ -287,6 +282,11 @@ msgstr "Выход"
 #, kde-format
 msgid "More"
 msgstr "Больше"
+
+#: package/contents/ui/main.qml:314
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Редактировать меню..."
 
 #: package/contents/ui/PlacesPage.qml:48
 #, kde-format

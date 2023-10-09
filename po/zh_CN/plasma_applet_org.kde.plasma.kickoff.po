@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:40+0000\n"
+"POT-Creation-Date: 2023-10-09 01:46+0000\n"
 "PO-Revision-Date: 2023-09-16 10:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -252,11 +252,6 @@ msgstr "打开用户设置"
 msgid "Keep Open"
 msgstr "保持打开"
 
-#: package/contents/ui/Kickoff.qml:314
-#, kde-format
-msgid "Edit Applications…"
-msgstr "编辑应用程序…"
-
 #: package/contents/ui/KickoffGridView.qml:89
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
@@ -271,6 +266,11 @@ msgstr "离开"
 #, kde-format
 msgid "More"
 msgstr "更多"
+
+#: package/contents/ui/main.qml:314
+#, kde-format
+msgid "Edit Applications…"
+msgstr "编辑应用程序…"
 
 #: package/contents/ui/PlacesPage.qml:48
 #, kde-format

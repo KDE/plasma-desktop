@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:40+0000\n"
+"POT-Creation-Date: 2023-10-09 01:46+0000\n"
 "PO-Revision-Date: 2023-01-10 21:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -252,11 +252,6 @@ msgstr "பயனர் அமைப்புகளை திற"
 msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"
 
-#: package/contents/ui/Kickoff.qml:314
-#, kde-format
-msgid "Edit Applications…"
-msgstr "செயலிகளை திருத்து…"
-
 #: package/contents/ui/KickoffGridView.qml:89
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
@@ -271,6 +266,11 @@ msgstr "வெளியேறு"
 #, kde-format
 msgid "More"
 msgstr "மேலும்"
+
+#: package/contents/ui/main.qml:314
+#, kde-format
+msgid "Edit Applications…"
+msgstr "செயலிகளை திருத்து…"
 
 #: package/contents/ui/PlacesPage.qml:48
 #, kde-format

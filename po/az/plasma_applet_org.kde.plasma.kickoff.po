@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-04 01:40+0000\n"
+"POT-Creation-Date: 2023-10-09 01:46+0000\n"
 "PO-Revision-Date: 2023-02-19 16:44+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -253,11 +253,6 @@ msgstr "İstifadəçi ayarlarını açın"
 msgid "Keep Open"
 msgstr "Açıq saxlayın"
 
-#: package/contents/ui/Kickoff.qml:314
-#, kde-format
-msgid "Edit Applications…"
-msgstr "Tətbiqər siyahısına düzəliş…"
-
 #: package/contents/ui/KickoffGridView.qml:89
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
@@ -272,6 +267,11 @@ msgstr "Çıxış"
 #, kde-format
 msgid "More"
 msgstr "Daha çox"
+
+#: package/contents/ui/main.qml:314
+#, kde-format
+msgid "Edit Applications…"
+msgstr "Tətbiqər siyahısına düzəliş…"
 
 #: package/contents/ui/PlacesPage.qml:48
 #, kde-format
