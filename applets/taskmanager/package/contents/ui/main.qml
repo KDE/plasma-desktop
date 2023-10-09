@@ -148,11 +148,11 @@ PlasmoidItem {
         filterByActivity: Plasmoid.configuration.showOnlyCurrentActivity
         filterNotMinimized: Plasmoid.configuration.showOnlyMinimized
 
-        hideActivatedLaunchers: iconsOnly
+        hideActivatedLaunchers: tasks.iconsOnly
         sortMode: sortModeEnumValue(Plasmoid.configuration.sortingStrategy)
-        launchInPlace: iconsOnly && Plasmoid.configuration.sortingStrategy === 1
+        launchInPlace: tasks.iconsOnly && Plasmoid.configuration.sortingStrategy === 1
         separateLaunchers: {
-            if (!iconsOnly && !Plasmoid.configuration.separateLaunchers
+            if (!tasks.iconsOnly && !Plasmoid.configuration.separateLaunchers
                 && Plasmoid.configuration.sortingStrategy === 1) {
                 return false;
             }
@@ -161,8 +161,8 @@ PlasmoidItem {
         }
 
         groupMode: groupModeEnumValue(Plasmoid.configuration.groupingStrategy)
-        groupInline: !Plasmoid.configuration.groupPopups && !iconsOnly
-        groupingWindowTasksThreshold: (Plasmoid.configuration.onlyGroupWhenFull && !iconsOnly
+        groupInline: !Plasmoid.configuration.groupPopups && !tasks.iconsOnly
+        groupingWindowTasksThreshold: (Plasmoid.configuration.onlyGroupWhenFull && !tasks.iconsOnly
             ? LayoutManager.optimumCapacity(width, height) + 1 : -1)
 
         onLauncherListChanged: {
