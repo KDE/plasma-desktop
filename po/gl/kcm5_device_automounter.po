@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-12-10 00:45+0000\n"
-"PO-Revision-Date: 2019-07-28 12:45+0200\n"
+"PO-Revision-Date: 2023-10-10 15:48+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Adrián Chaves Fernández (Gallaecio)"
+msgstr "Adrián Chaves (Gallaecio)"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -46,7 +46,7 @@ msgstr "Trever Fischer"
 #: DeviceAutomounterKCM.cpp:43
 #, kde-format
 msgid "Original Author"
-msgstr "Autor orixinal."
+msgstr "Autoría orixinal."
 
 #: DeviceAutomounterKCM.cpp:44
 #, kde-format
@@ -60,29 +60,18 @@ msgstr "Adaptación a Plasma 5."
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\".\n"
-#| "\n"
-#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
-#| "overrides do not apply and no devices will be automatically mounted."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, the device will be automatically mounted even though "
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
-"Esta lista contén os dispositivos de almacenaxe que coñece o sistema. Se "
-"escolleu «Montar automaticamente ao acceder» o dispositivo montarase "
+"Esta lista contén os dispositivos de almacenamento que coñece o sistema. Se "
+"marcou «Montar automaticamente ao acceder» o dispositivo montarase "
 "automaticamente mesmo se non escolleu «Montar todos os dispositivos "
 "extraíbeis ao acceder». O mesmo aplícase a «Montar automaticamente ao "
-"conectar».\n"
-"\n"
-"Se non marca «Activar a montaxe automática dos dispositivos extraíbeis», "
-"todo isto non se aplica e non se montará automaticamente ningún dispositivo."
+"conectar»."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -108,15 +97,7 @@ msgstr "Esquecer este dispositivo"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:67
-#, fuzzy, kde-format
-#| msgid ""
-#| "When this is checked, only remembered devices will be automatically "
-#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#| "instance, plugging in a USB media player to charge is not sufficient to "
-#| "'remember' it - if the files are not accessed, it will not be "
-#| "automatically mounted the next time it is seen. Once they have been "
-#| "accessed, however, the device's contents will be automatically made "
-#| "available to the system."
+#, kde-format
 msgid ""
 "When this is not checked, only remembered devices will be automatically "
 "mounted. A device is 'remembered' if it has ever been mounted before. For "
@@ -125,7 +106,7 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"Se marca esta opción, só se montarán automaticamente os dispositivos que "
+"Se non marca esta opción, só se montarán automaticamente os dispositivos que "
 "lembre. Os dispositivos hanse «lembrar» se fosen montados algunha vez antes, "
 "p.ex., non abonda con conectar un reprodutor multimedia USB para cargalo "
 "para lembralo. Se non accedeu aos ficheiros non se ha montar automaticamente "
@@ -134,43 +115,36 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Only automatically mount removable media that has been manually mounted "
-#| "before"
+#, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
-msgstr ""
-"Só montar automaticamente os dispositivos extraíbeis que xa se montasen "
-"manualmente antes."
+msgstr "Montar automaticamente os medios extraíbeis que nunca se montasen."
 
 #: DeviceModel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Automount on Login"
+#, kde-format
 msgid "Automount Device"
-msgstr "Montar automaticamente ao acceder"
+msgstr "Montar automaticamente o dispositivo"
 
 #: DeviceModel.cpp:54
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
-msgstr ""
+msgstr "Ao acceder"
 
 #: DeviceModel.cpp:56
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr ""
+msgstr "Ao conectar"
 
 #: DeviceModel.cpp:258
-#, fuzzy, kde-format
-#| msgid "Device"
+#, kde-format
 msgid "All Devices"
-msgstr "Dispositivo"
+msgstr "Todos os dispositivos"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr ""
+msgstr "Dispositivos coñecidos"
 
 #: DeviceModel.cpp:260
 #, kde-format
