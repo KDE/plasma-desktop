@@ -137,12 +137,14 @@ KCM.SimpleKCM {
         QQC2.ButtonGroup { id: singleClickGroup }
 
         ColumnLayout {
+            Kirigami.FormData.label: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
+            Kirigami.FormData.buddyFor: doubleClick
+
             Layout.fillWidth: true
             spacing: 0
 
             QQC2.RadioButton {
                 id: doubleClick
-                Kirigami.FormData.label: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
                 text: i18nc("part of a sentence: 'Clicking files or folders selects them'", "Selects them")
                 checked: !kcm.globalsSettings.singleClick
                 onToggled: kcm.globalsSettings.singleClick = false
