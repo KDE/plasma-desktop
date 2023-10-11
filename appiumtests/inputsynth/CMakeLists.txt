@@ -23,9 +23,6 @@ target_link_libraries(inputsynth
         Wayland::Client
 )
 
-# Do not really install the library
 if(DEFINED ENV{KDECI_BUILD})
 install(TARGETS inputsynth ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-else()
-install(TARGETS inputsynth DESTINATION ${CMAKE_BINARY_DIR})
 endif()
