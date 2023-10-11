@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2023-09-16 10:06\n"
+"PO-Revision-Date: 2023-10-10 14:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -38,10 +38,9 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "切换到下一个键盘布局"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "切换到下一个键盘布局"
+msgstr "切换到上次使用过的键盘布局"
 
 #: bindings.cpp:60
 #, kde-format
@@ -229,10 +228,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:246
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "备选快捷键："
+msgstr "上次布局快捷键："
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:259
@@ -240,7 +238,7 @@ msgstr "备选快捷键："
 msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
-msgstr ""
+msgstr "此快捷键用于在当前键盘布局和上次使用过的布局之间进行快速切换。"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:284
