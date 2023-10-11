@@ -207,7 +207,8 @@ void DesktopPathsSettings::setDesktopLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultDesktopLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", "Desktop"));
+    const char *desktop = "Desktop";
+    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", desktop));
 }
 
 QUrl DesktopPathsSettings::documentsLocation() const
@@ -222,7 +223,8 @@ void DesktopPathsSettings::setDocumentsLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultDocumentsLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", "Documents"));
+    const char *documents = "Documents";
+    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", documents));
 }
 
 QUrl DesktopPathsSettings::downloadsLocation() const
@@ -237,7 +239,8 @@ void DesktopPathsSettings::setDownloadsLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultDownloadsLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", "Downloads"));
+    const char *downloads = "Downloads";
+    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", "downloads"));
 }
 
 QUrl DesktopPathsSettings::musicLocation() const
@@ -252,7 +255,8 @@ void DesktopPathsSettings::setMusicLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultMusicLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", "Music"));
+    const char *music = "Music";
+    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", music));
 }
 
 QUrl DesktopPathsSettings::picturesLocation() const
@@ -267,7 +271,8 @@ void DesktopPathsSettings::setPicturesLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultPicturesLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", "Pictures"));
+    const char *pictures = "Pictures";
+    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", pictures));
 }
 
 QUrl DesktopPathsSettings::videosLocation() const
@@ -282,7 +287,8 @@ void DesktopPathsSettings::setVideosLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultVideosLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", "Videos"));
+    const char *videos = "Videos";
+    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", videos));
 }
 
 QUrl DesktopPathsSettings::publicLocation() const
@@ -297,7 +303,8 @@ void DesktopPathsSettings::setPublicLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultPublicLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", "Public"));
+    const char *pub = "Public";
+    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", pub));
 }
 
 QUrl DesktopPathsSettings::templatesLocation() const
@@ -312,7 +319,8 @@ void DesktopPathsSettings::setTemplatesLocation(const QUrl &url)
 
 QUrl DesktopPathsSettings::defaultTemplatesLocation() const
 {
-    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", "Templates"));
+    const char *templates = "Templates";
+    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", templates));
 }
 
 #include "desktoppathssettings.moc"
