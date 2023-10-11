@@ -240,7 +240,7 @@ void DesktopPathsSettings::setDownloadsLocation(const QUrl &url)
 QUrl DesktopPathsSettings::defaultDownloadsLocation() const
 {
     const char *downloads = "Downloads";
-    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", "downloads"));
+    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", downloads));
 }
 
 QUrl DesktopPathsSettings::musicLocation() const
