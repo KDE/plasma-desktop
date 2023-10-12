@@ -91,7 +91,7 @@ KCM.SimpleKCM {
             }
         }
         RowLayout {
-            Kirigami.FormData.label: i18nc("Default phone app", "Dialer:")
+            Kirigami.FormData.label: i18nc("Default phone app", "Phone Numbers:")
 
             ComponentComboBox {
                 id: dialerCombo
