@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2022-12-28 01:34+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -19,46 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.2\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "Darbalaukis"
-
-#: desktoppathssettings.cpp:225
-#, kde-format
-msgid "Documents"
-msgstr "Dokumentai"
-
-#: desktoppathssettings.cpp:240
-#, kde-format
-msgid "Downloads"
-msgstr "Atsiuntimai"
-
-#: desktoppathssettings.cpp:255
-#, kde-format
-msgid "Music"
-msgstr "Muzika"
-
-#: desktoppathssettings.cpp:270
-#, kde-format
-msgid "Pictures"
-msgstr "Paveikslai"
-
-#: desktoppathssettings.cpp:285
-#, kde-format
-msgid "Videos"
-msgstr "Vaizdo įrašai"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr "Vieša"
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr "Šablonai"
 
 #: ui/main.qml:52
 #, kde-format
@@ -161,6 +121,30 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid "Desktop"
+#~ msgstr "Darbalaukis"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumentai"
+
+#~ msgid "Downloads"
+#~ msgstr "Atsiuntimai"
+
+#~ msgid "Music"
+#~ msgstr "Muzika"
+
+#~ msgid "Pictures"
+#~ msgstr "Paveikslai"
+
+#~ msgid "Videos"
+#~ msgstr "Vaizdo įrašai"
+
+#~ msgid "Public"
+#~ msgstr "Vieša"
+
+#~ msgid "Templates"
+#~ msgstr "Šablonai"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

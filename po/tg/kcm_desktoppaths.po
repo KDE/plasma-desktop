@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2019-09-23 20:07+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -16,47 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.04.3\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "Мизи корӣ"
-
-#: desktoppathssettings.cpp:225
-#, kde-format
-msgid "Documents"
-msgstr "Ҳуҷҷатҳо"
-
-#: desktoppathssettings.cpp:240
-#, kde-format
-msgid "Downloads"
-msgstr "Боргириҳо"
-
-#: desktoppathssettings.cpp:255
-#, kde-format
-msgid "Music"
-msgstr "Мусиқӣ"
-
-#: desktoppathssettings.cpp:270
-#, kde-format
-msgid "Pictures"
-msgstr "Тасвирҳо"
-
-#: desktoppathssettings.cpp:285
-#, fuzzy, kde-format
-#| msgid "Movies path:"
-msgid "Videos"
-msgstr "Масири филмҳо:"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr ""
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr ""
 
 #: ui/main.qml:52
 #, kde-format
@@ -147,6 +106,26 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid "Desktop"
+#~ msgstr "Мизи корӣ"
+
+#~ msgid "Documents"
+#~ msgstr "Ҳуҷҷатҳо"
+
+#~ msgid "Downloads"
+#~ msgstr "Боргириҳо"
+
+#~ msgid "Music"
+#~ msgstr "Мусиқӣ"
+
+#~ msgid "Pictures"
+#~ msgstr "Тасвирҳо"
+
+#, fuzzy
+#~| msgid "Movies path:"
+#~ msgid "Videos"
+#~ msgstr "Масири филмҳо:"
 
 #~ msgid "Autostart path:"
 #~ msgstr "Масир барои оғози худкор:"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2023-03-01 00:22+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -25,52 +25,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-# xdg-user-dirs
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "바탕화면"
-
-# xdg-user-dirs
-#: desktoppathssettings.cpp:225
-#, kde-format
-msgid "Documents"
-msgstr "문서"
-
-# xdg-user-dirs
-#: desktoppathssettings.cpp:240
-#, kde-format
-msgid "Downloads"
-msgstr "다운로드"
-
-# xdg-user-dirs
-#: desktoppathssettings.cpp:255
-#, kde-format
-msgid "Music"
-msgstr "음악"
-
-# xdg-user-dirs
-#: desktoppathssettings.cpp:270
-#, kde-format
-msgid "Pictures"
-msgstr "사진"
-
-# xdg-user-dirs
-#: desktoppathssettings.cpp:285
-#, kde-format
-msgid "Videos"
-msgstr "동영상"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr "공개"
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr "템플릿"
 
 #: ui/main.qml:52
 #, kde-format
@@ -160,6 +114,36 @@ msgstr "이 폴더는 템플릿을 저장하는 기본 폴더로 사용됩니다
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "새 위치 선택"
+
+# xdg-user-dirs
+#~ msgid "Desktop"
+#~ msgstr "바탕화면"
+
+# xdg-user-dirs
+#~ msgid "Documents"
+#~ msgstr "문서"
+
+# xdg-user-dirs
+#~ msgid "Downloads"
+#~ msgstr "다운로드"
+
+# xdg-user-dirs
+#~ msgid "Music"
+#~ msgstr "음악"
+
+# xdg-user-dirs
+#~ msgid "Pictures"
+#~ msgstr "사진"
+
+# xdg-user-dirs
+#~ msgid "Videos"
+#~ msgstr "동영상"
+
+#~ msgid "Public"
+#~ msgstr "공개"
+
+#~ msgid "Templates"
+#~ msgstr "템플릿"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

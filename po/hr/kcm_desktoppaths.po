@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2009-12-31 02:12+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -21,47 +21,6 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "Radna površina"
-
-#: desktoppathssettings.cpp:225
-#, kde-format
-msgid "Documents"
-msgstr "Dokumenti"
-
-#: desktoppathssettings.cpp:240
-#, kde-format
-msgid "Downloads"
-msgstr "Skinute datoteke"
-
-#: desktoppathssettings.cpp:255
-#, kde-format
-msgid "Music"
-msgstr "Glazba"
-
-#: desktoppathssettings.cpp:270
-#, kde-format
-msgid "Pictures"
-msgstr "Slike"
-
-#: desktoppathssettings.cpp:285
-#, fuzzy, kde-format
-#| msgid "Movies path:"
-msgid "Videos"
-msgstr "Putanja filmova:"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr ""
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr ""
 
 #: ui/main.qml:52
 #, kde-format
@@ -158,6 +117,26 @@ msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje slika."
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid "Desktop"
+#~ msgstr "Radna površina"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenti"
+
+#~ msgid "Downloads"
+#~ msgstr "Skinute datoteke"
+
+#~ msgid "Music"
+#~ msgstr "Glazba"
+
+#~ msgid "Pictures"
+#~ msgstr "Slike"
+
+#, fuzzy
+#~| msgid "Movies path:"
+#~ msgid "Videos"
+#~ msgstr "Putanja filmova:"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

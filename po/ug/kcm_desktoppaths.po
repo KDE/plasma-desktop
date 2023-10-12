@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -16,47 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "ئۈستەلئۈستى"
-
-#: desktoppathssettings.cpp:225
-#, kde-format
-msgid "Documents"
-msgstr "پۈتۈكلەر"
-
-#: desktoppathssettings.cpp:240
-#, kde-format
-msgid "Downloads"
-msgstr "چۈشۈرۈلمىلەر"
-
-#: desktoppathssettings.cpp:255
-#, kde-format
-msgid "Music"
-msgstr "مۇزىكا"
-
-#: desktoppathssettings.cpp:270
-#, kde-format
-msgid "Pictures"
-msgstr "سۈرەتلەر"
-
-#: desktoppathssettings.cpp:285
-#, fuzzy, kde-format
-#| msgid "Movies path:"
-msgid "Videos"
-msgstr "كىنو يولى:"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr ""
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr ""
 
 #: ui/main.qml:52
 #, kde-format
@@ -147,6 +106,26 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid "Desktop"
+#~ msgstr "ئۈستەلئۈستى"
+
+#~ msgid "Documents"
+#~ msgstr "پۈتۈكلەر"
+
+#~ msgid "Downloads"
+#~ msgstr "چۈشۈرۈلمىلەر"
+
+#~ msgid "Music"
+#~ msgstr "مۇزىكا"
+
+#~ msgid "Pictures"
+#~ msgstr "سۈرەتلەر"
+
+#, fuzzy
+#~| msgid "Movies path:"
+#~ msgid "Videos"
+#~ msgstr "كىنو يولى:"
 
 #~ msgid "Autostart path:"
 #~ msgstr "ئاپتوماتىك باشلاش يولى:"

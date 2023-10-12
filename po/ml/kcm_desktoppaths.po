@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2010-06-29 16:06+0530\n"
 "Last-Translator: arkarjun <arkarjun@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -17,47 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: desktoppathssettings.cpp:210
-#, fuzzy, kde-format
-msgid "Desktop"
-msgstr "പണിയിടം"
-
-#: desktoppathssettings.cpp:225
-#, fuzzy, kde-format
-msgid "Documents"
-msgstr "രേഖകള്‍"
-
-#: desktoppathssettings.cpp:240
-#, fuzzy, kde-format
-msgid "Downloads"
-msgstr "ഡൌണ്‍ലോഡുക്കള്‍"
-
-#: desktoppathssettings.cpp:255
-#, fuzzy, kde-format
-msgid "Music"
-msgstr "സംഗീതം"
-
-#: desktoppathssettings.cpp:270
-#, fuzzy, kde-format
-msgid "Pictures"
-msgstr "ചിത്രങ്ങള്‍"
-
-#: desktoppathssettings.cpp:285
-#, fuzzy, kde-format
-#| msgid "Movies path:"
-msgid "Videos"
-msgstr "ചലചിത്രങ്ങളുടെ പാത:"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr ""
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr ""
 
 #: ui/main.qml:52
 #, kde-format
@@ -152,6 +111,31 @@ msgstr "ചിത്രങ്ങള്‍ സൂക്ഷിക്കാനു�
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Desktop"
+#~ msgstr "പണിയിടം"
+
+#, fuzzy
+#~ msgid "Documents"
+#~ msgstr "രേഖകള്‍"
+
+#, fuzzy
+#~ msgid "Downloads"
+#~ msgstr "ഡൌണ്‍ലോഡുക്കള്‍"
+
+#, fuzzy
+#~ msgid "Music"
+#~ msgstr "സംഗീതം"
+
+#, fuzzy
+#~ msgid "Pictures"
+#~ msgstr "ചിത്രങ്ങള്‍"
+
+#, fuzzy
+#~| msgid "Movies path:"
+#~ msgid "Videos"
+#~ msgstr "ചലചിത്രങ്ങളുടെ പാത:"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

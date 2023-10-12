@@ -1,6 +1,6 @@
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
-# Version: $Revision: 1657630 $
+# Version: $Revision: 1662170 $
 # translation of kcmkonq.po to Polish
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2023-02-11 08:40+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -31,46 +31,6 @@ msgstr ""
 "X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "Pulpit"
-
-#: desktoppathssettings.cpp:225
-#, kde-format
-msgid "Documents"
-msgstr "Dokumenty"
-
-#: desktoppathssettings.cpp:240
-#, kde-format
-msgid "Downloads"
-msgstr "Pobrane"
-
-#: desktoppathssettings.cpp:255
-#, kde-format
-msgid "Music"
-msgstr "Muzyka"
-
-#: desktoppathssettings.cpp:270
-#, kde-format
-msgid "Pictures"
-msgstr "Obrazy"
-
-#: desktoppathssettings.cpp:285
-#, kde-format
-msgid "Videos"
-msgstr "Filmy"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr "Publiczne"
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr "Wzorce"
 
 #: ui/main.qml:52
 #, kde-format
@@ -173,6 +133,30 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Wybierz nowe miejsce"
+
+#~ msgid "Desktop"
+#~ msgstr "Pulpit"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenty"
+
+#~ msgid "Downloads"
+#~ msgstr "Pobrane"
+
+#~ msgid "Music"
+#~ msgstr "Muzyka"
+
+#~ msgid "Pictures"
+#~ msgstr "Obrazy"
+
+#~ msgid "Videos"
+#~ msgstr "Filmy"
+
+#~ msgid "Public"
+#~ msgstr "Publiczne"
+
+#~ msgid "Templates"
+#~ msgstr "Wzorce"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

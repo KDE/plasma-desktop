@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Marce Villarino <mvillarino@kde-espana.org>, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
-"PO-Revision-Date: 2019-09-28 23:51+0200\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"PO-Revision-Date: 2023-10-11 13:35+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: ui/main.qml:24
 #, kde-format
@@ -24,11 +24,13 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
+"Debe reiniciarse o sistema para que os cambios na opción de pegar co clic "
+"central xurdan efecto."
 
 #: ui/main.qml:30
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "Reiniciar"
 
 #: ui/main.qml:47
 #, kde-format
@@ -39,7 +41,7 @@ msgstr "Comportamento visual:"
 #: ui/main.qml:48 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
-msgstr "Amosar axudas ao cubrir co rato."
+msgstr "Amosar indicacións emerxentes informativas ao cubrir co rato."
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: ui/main.qml:59 workspaceoptions_plasmasettings.kcfg:15
@@ -64,145 +66,149 @@ msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Instantánea"
 
-#: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Single-click to open files and folders"
+#: ui/main.qml:123
+#, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr "Un só clic para abrir ficheiros e cartafoles"
+msgstr "Premer ficheiros e cartafoles:"
 
-#: ui/main.qml:127
+#: ui/main.qml:130
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr ""
+msgstr "Selecciónaos"
 
-#: ui/main.qml:141
+#: ui/main.qml:144
 #, kde-format
 msgid "Open by double-clicking instead"
-msgstr ""
+msgstr "Abrir con prema dupla no seu lugar"
 
-#: ui/main.qml:153
+#: ui/main.qml:156
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr ""
+msgstr "Ábreos"
 
-#: ui/main.qml:166
+#: ui/main.qml:169
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr ""
+msgstr "Seleccionar premendo o marcador de selección dos elementos"
 
-#: ui/main.qml:181
+#: ui/main.qml:184
 #, kde-format
 msgid "Clicking in scrollbar track:"
-msgstr ""
+msgstr "Premer na pista de barra de desprazamento:"
 
-#: ui/main.qml:182
+#: ui/main.qml:185
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr ""
+msgstr "Despraza á localización premida"
 
-#: ui/main.qml:200
+#: ui/main.qml:203
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr ""
+msgstr "Despraza unha páxina arriba ou abaixo"
 
-#: ui/main.qml:213
+#: ui/main.qml:216
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr ""
+msgstr "Clic central para desprazar á localización premida"
 
-#: ui/main.qml:226
+#: ui/main.qml:229
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
-msgstr ""
+msgstr "Clic central:"
 
-#: ui/main.qml:228
+#: ui/main.qml:231
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
-msgstr ""
+msgstr "Pega o texto seleccionado"
 
-#: ui/main.qml:245
+#: ui/main.qml:248
 #, kde-format
 msgid "Touch Mode:"
-msgstr ""
+msgstr "Modo táctil:"
 
-#: ui/main.qml:247
+#: ui/main.qml:250
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "Activar automaticamente cando se necesite"
 
-#: ui/main.qml:247 ui/main.qml:290
+#: ui/main.qml:250 ui/main.qml:293
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "Non activar nunca"
 
-#: ui/main.qml:263
+#: ui/main.qml:266
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"O modo táctil activarase automaticamente cando o sistema detecta unha "
+"pantalla táctil e ningún rato ou área táctil. Por exemplo,  cando ao teclado "
+"dun portátil transformábel se lle dá a volta ou se desconecta."
 
-#: ui/main.qml:268
+#: ui/main.qml:271
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
-msgstr ""
+msgstr "Sempre activo"
 
-#: ui/main.qml:308
+#: ui/main.qml:311
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
+"No modo táctil, moitos elementos da interface aumentan de tamaño para "
+"facilitar a interacción táctil."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Single-click to open files and folders"
+#, kde-format
 msgid "Single click to open files"
-msgstr "Un só clic para abrir ficheiros e cartafoles"
+msgstr "Un só clic para abrir ficheiros"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Animation speed:"
+#, kde-format
 msgid "Animation speed"
-msgstr "Velocidade das animacións:"
+msgstr "Velocidade das animacións"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr ""
+"Clic esquerdo na pista de barra de desprazamento move a barra de "
+"desprazamento unha páxina"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr ""
+msgstr "Cambiar automaticamente ao modo optimizado para tacto"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr ""
+msgstr "Activar o pegado da selección co clic central"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
@@ -211,18 +217,20 @@ msgid ""
 "Show an on-screen display to indicate status changes such as brightness or "
 "volume"
 msgstr ""
+"Amosar un cadro para indicar os cambios de estado como os de brillo ou "
+"volume."
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:20
 #, kde-format
 msgid "OSD on layout change"
-msgstr ""
+msgstr "Cadro ao cambiar de disposición"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "Amosar unha xanela emerxente ao cambiar de disposición."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

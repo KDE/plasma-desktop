@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2009-12-01 01:18+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -18,47 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "Schriefdisch"
-
-#: desktoppathssettings.cpp:225
-#, kde-format
-msgid "Documents"
-msgstr "Dokmenten"
-
-#: desktoppathssettings.cpp:240
-#, kde-format
-msgid "Downloads"
-msgstr "Daalladen"
-
-#: desktoppathssettings.cpp:255
-#, kde-format
-msgid "Music"
-msgstr "Musik"
-
-#: desktoppathssettings.cpp:270
-#, kde-format
-msgid "Pictures"
-msgstr "Biller"
-
-#: desktoppathssettings.cpp:285
-#, fuzzy, kde-format
-#| msgid "Movies path:"
-msgid "Videos"
-msgstr "Filmen-Orner:"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr ""
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr ""
 
 #: ui/main.qml:52
 #, kde-format
@@ -160,6 +119,26 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid "Desktop"
+#~ msgstr "Schriefdisch"
+
+#~ msgid "Documents"
+#~ msgstr "Dokmenten"
+
+#~ msgid "Downloads"
+#~ msgstr "Daalladen"
+
+#~ msgid "Music"
+#~ msgstr "Musik"
+
+#~ msgid "Pictures"
+#~ msgstr "Biller"
+
+#, fuzzy
+#~| msgid "Movies path:"
+#~ msgid "Videos"
+#~ msgstr "Filmen-Orner:"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

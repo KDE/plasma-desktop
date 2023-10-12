@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2023-02-16 12:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -25,46 +25,6 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "سطح المكتب"
-
-#: desktoppathssettings.cpp:225
-#, kde-format
-msgid "Documents"
-msgstr "المستندات"
-
-#: desktoppathssettings.cpp:240
-#, kde-format
-msgid "Downloads"
-msgstr "التنزيلات"
-
-#: desktoppathssettings.cpp:255
-#, kde-format
-msgid "Music"
-msgstr "الموسيقى"
-
-#: desktoppathssettings.cpp:270
-#, kde-format
-msgid "Pictures"
-msgstr "الصور"
-
-#: desktoppathssettings.cpp:285
-#, kde-format
-msgid "Videos"
-msgstr "الفيديوهات"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr "العام"
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr "القوالب"
 
 #: ui/main.qml:52
 #, kde-format
@@ -154,6 +114,30 @@ msgstr "سيُستخدم هذا المجلد بشكل مبدئي لتحميل ا
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "اختر موقع جديداً"
+
+#~ msgid "Desktop"
+#~ msgstr "سطح المكتب"
+
+#~ msgid "Documents"
+#~ msgstr "المستندات"
+
+#~ msgid "Downloads"
+#~ msgstr "التنزيلات"
+
+#~ msgid "Music"
+#~ msgstr "الموسيقى"
+
+#~ msgid "Pictures"
+#~ msgstr "الصور"
+
+#~ msgid "Videos"
+#~ msgstr "الفيديوهات"
+
+#~ msgid "Public"
+#~ msgstr "العام"
+
+#~ msgid "Templates"
+#~ msgstr "القوالب"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

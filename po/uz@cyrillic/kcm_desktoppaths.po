@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2006-10-01 21:18+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -16,51 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "Иш столи"
-
-#: desktoppathssettings.cpp:225
-#, fuzzy, kde-format
-#| msgid "Desktop %1:"
-msgid "Documents"
-msgstr "Иш столи %1:"
-
-#: desktoppathssettings.cpp:240
-#, fuzzy, kde-format
-#| msgid "Desktop %1:"
-msgid "Downloads"
-msgstr "Иш столи %1:"
-
-#: desktoppathssettings.cpp:255
-#, fuzzy, kde-format
-#| msgid "Autostart"
-msgid "Music"
-msgstr "Авто-бошлаш"
-
-#: desktoppathssettings.cpp:270
-#, fuzzy, kde-format
-#| msgid "Desktop %1:"
-msgid "Pictures"
-msgstr "Иш столи %1:"
-
-#: desktoppathssettings.cpp:285
-#, fuzzy, kde-format
-#| msgid "Desktop %1:"
-msgid "Videos"
-msgstr "Иш столи %1:"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr ""
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr ""
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
@@ -156,6 +111,34 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid "Desktop"
+#~ msgstr "Иш столи"
+
+#, fuzzy
+#~| msgid "Desktop %1:"
+#~ msgid "Documents"
+#~ msgstr "Иш столи %1:"
+
+#, fuzzy
+#~| msgid "Desktop %1:"
+#~ msgid "Downloads"
+#~ msgstr "Иш столи %1:"
+
+#, fuzzy
+#~| msgid "Autostart"
+#~ msgid "Music"
+#~ msgstr "Авто-бошлаш"
+
+#, fuzzy
+#~| msgid "Desktop %1:"
+#~ msgid "Pictures"
+#~ msgstr "Иш столи %1:"
+
+#, fuzzy
+#~| msgid "Desktop %1:"
+#~ msgid "Videos"
+#~ msgstr "Иш столи %1:"
 
 #, fuzzy
 #~| msgid "Autostart"

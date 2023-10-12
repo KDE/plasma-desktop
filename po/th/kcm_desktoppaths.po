@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2010-02-11 21:34+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -18,47 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "พื้นที่หน้าจอ"
-
-#: desktoppathssettings.cpp:225
-#, kde-format
-msgid "Documents"
-msgstr "เอกสารต่าง ๆ"
-
-#: desktoppathssettings.cpp:240
-#, kde-format
-msgid "Downloads"
-msgstr "แฟ้มดาวน์โหลดต่าง ๆ"
-
-#: desktoppathssettings.cpp:255
-#, kde-format
-msgid "Music"
-msgstr "ดนตรีต่าง ๆ"
-
-#: desktoppathssettings.cpp:270
-#, kde-format
-msgid "Pictures"
-msgstr "รูปภาพต่าง ๆ"
-
-#: desktoppathssettings.cpp:285
-#, fuzzy, kde-format
-#| msgid "Movies path:"
-msgid "Videos"
-msgstr "พาธตำแหน่งเก็บภาพยนตร์:"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr ""
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr ""
 
 #: ui/main.qml:52
 #, kde-format
@@ -153,6 +112,26 @@ msgstr "โฟลเดอร์นี้จะถูกใช้โดยปร
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid "Desktop"
+#~ msgstr "พื้นที่หน้าจอ"
+
+#~ msgid "Documents"
+#~ msgstr "เอกสารต่าง ๆ"
+
+#~ msgid "Downloads"
+#~ msgstr "แฟ้มดาวน์โหลดต่าง ๆ"
+
+#~ msgid "Music"
+#~ msgstr "ดนตรีต่าง ๆ"
+
+#~ msgid "Pictures"
+#~ msgstr "รูปภาพต่าง ๆ"
+
+#, fuzzy
+#~| msgid "Movies path:"
+#~ msgid "Videos"
+#~ msgstr "พาธตำแหน่งเก็บภาพยนตร์:"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

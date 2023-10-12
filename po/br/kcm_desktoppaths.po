@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2004-09-21 18:50+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud.com>\n"
 "Language-Team: Brezhoneg <Suav.Icb.fr>\n"
@@ -13,51 +13,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "Burev"
-
-#: desktoppathssettings.cpp:225
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
-msgid "Documents"
-msgstr "Hent an &teulioù :"
-
-#: desktoppathssettings.cpp:240
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
-msgid "Downloads"
-msgstr "Hent an &teulioù :"
-
-#: desktoppathssettings.cpp:255
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
-msgid "Music"
-msgstr "Hent an &teulioù :"
-
-#: desktoppathssettings.cpp:270
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
-msgid "Pictures"
-msgstr "Hent an &teulioù :"
-
-#: desktoppathssettings.cpp:285
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
-msgid "Videos"
-msgstr "Hent an &teulioù :"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr ""
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr ""
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
@@ -153,6 +108,34 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid "Desktop"
+#~ msgstr "Burev"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Documents"
+#~ msgstr "Hent an &teulioù :"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Downloads"
+#~ msgstr "Hent an &teulioù :"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Music"
+#~ msgstr "Hent an &teulioù :"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Pictures"
+#~ msgstr "Hent an &teulioù :"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Videos"
+#~ msgstr "Hent an &teulioù :"
 
 #, fuzzy
 #~| msgid "A&utostart path:"

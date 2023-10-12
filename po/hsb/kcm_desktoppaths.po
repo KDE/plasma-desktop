@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2008-11-19 23:51+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -16,51 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "Dźěłowy powjerch"
-
-#: desktoppathssettings.cpp:225
-#, kde-format
-msgid "Documents"
-msgstr "Dokumenty"
-
-#: desktoppathssettings.cpp:240
-#, fuzzy, kde-format
-#| msgid "Download"
-msgid "Downloads"
-msgstr "Sćahnyć"
-
-#: desktoppathssettings.cpp:255
-#, fuzzy, kde-format
-#| msgctxt "Name"
-#| msgid "MusE"
-msgid "Music"
-msgstr "MusE"
-
-#: desktoppathssettings.cpp:270
-#, fuzzy, kde-format
-#| msgid "All Pictures"
-msgid "Pictures"
-msgstr "Wšitke wobrazy"
-
-#: desktoppathssettings.cpp:285
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
-msgid "Videos"
-msgstr "Puć za &dokumenty:"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr ""
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr ""
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
@@ -169,6 +124,33 @@ msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid "Desktop"
+#~ msgstr "Dźěłowy powjerch"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenty"
+
+#, fuzzy
+#~| msgid "Download"
+#~ msgid "Downloads"
+#~ msgstr "Sćahnyć"
+
+#, fuzzy
+#~| msgctxt "Name"
+#~| msgid "MusE"
+#~ msgid "Music"
+#~ msgstr "MusE"
+
+#, fuzzy
+#~| msgid "All Pictures"
+#~ msgid "Pictures"
+#~ msgstr "Wšitke wobrazy"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Videos"
+#~ msgstr "Puć za &dokumenty:"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
 "PO-Revision-Date: 2008-08-05 22:26+0200\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (lengadocian) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -19,51 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: KBabel 1.11.4\n"
-
-#: desktoppathssettings.cpp:210
-#, kde-format
-msgid "Desktop"
-msgstr "Burèu"
-
-#: desktoppathssettings.cpp:225
-#, fuzzy, kde-format
-#| msgid "Move Up"
-msgid "Documents"
-msgstr "Montar"
-
-#: desktoppathssettings.cpp:240
-#, fuzzy, kde-format
-#| msgid "Move Up"
-msgid "Downloads"
-msgstr "Montar"
-
-#: desktoppathssettings.cpp:255
-#, fuzzy, kde-format
-#| msgid "Move Up"
-msgid "Music"
-msgstr "Montar"
-
-#: desktoppathssettings.cpp:270
-#, fuzzy, kde-format
-#| msgid "Move Up"
-msgid "Pictures"
-msgstr "Montar"
-
-#: desktoppathssettings.cpp:285
-#, fuzzy, kde-format
-#| msgid "Move Up"
-msgid "Videos"
-msgstr "Montar"
-
-#: desktoppathssettings.cpp:300
-#, kde-format
-msgid "Public"
-msgstr ""
-
-#: desktoppathssettings.cpp:315
-#, kde-format
-msgid "Templates"
-msgstr ""
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
@@ -159,6 +114,34 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
+
+#~ msgid "Desktop"
+#~ msgstr "Burèu"
+
+#, fuzzy
+#~| msgid "Move Up"
+#~ msgid "Documents"
+#~ msgstr "Montar"
+
+#, fuzzy
+#~| msgid "Move Up"
+#~ msgid "Downloads"
+#~ msgstr "Montar"
+
+#, fuzzy
+#~| msgid "Move Up"
+#~ msgid "Music"
+#~ msgstr "Montar"
+
+#, fuzzy
+#~| msgid "Move Up"
+#~ msgid "Pictures"
+#~ msgstr "Montar"
+
+#, fuzzy
+#~| msgid "Move Up"
+#~ msgid "Videos"
+#~ msgstr "Montar"
 
 #, fuzzy
 #~| msgid "Move Up"
