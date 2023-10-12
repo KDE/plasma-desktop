@@ -20,9 +20,10 @@
 class Kclock;
 class QTimeEdit;
 
-namespace Plasma
+namespace KSvg
 {
 class Svg;
+class ImageSet;
 }
 
 class Dtime : public QWidget, public Ui::DateAndTime
@@ -93,7 +94,8 @@ private:
 
 private:
     QTime time;
-    Plasma::Svg *m_theme;
+    KSvg::ImageSet *m_imageSet;
+    KSvg::Svg *m_theme;
     enum RepaintCache {
         RepaintNone,
         RepaintAll,

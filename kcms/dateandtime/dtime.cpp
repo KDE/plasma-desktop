@@ -22,17 +22,16 @@
 
 #include <KColorScheme>
 #include <KConfig>
-#include <KGlobal>
+#include <KConfigGroup>
 #include <KMessageBox>
 #include <KProcess>
-#include <KSystemTimeZone>
 #include <KTreeWidgetSearchLine>
 #include <QDebug>
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 
-#include <Plasma/Svg>
+#include <KSvg/Svg>
 
 #include "timedated_interface.h"
 
@@ -82,7 +81,6 @@ Dtime::Dtime(QWidget *parent, bool haveTimeDated)
 
     timeEdit = new QTimeEdit(timeBox);
     timeEdit->setWrapping(true);
-    timeEdit->setDisplayFormat(KLocale::global()->use12Clock() ? "hh:mm:ss ap" : "HH:mm:ss");
     v3->addWidget(timeEdit);
 
     v3->addStretch();
@@ -107,15 +105,19 @@ Dtime::Dtime(QWidget *parent, bool haveTimeDated)
 
 void Dtime::currentZone()
 {
-    KTimeZone localZone = KSystemTimeZones::local();
-
-    if (localZone.abbreviations().isEmpty()) {
-        m_local->setText(i18nc("%1 is name of time zone", "Current local time zone: %1", K4TimeZoneWidget::displayName(localZone)));
+    QTimeZone localZone = QTimeZone::systemTimeZone();
+    const auto continentCity = localZone.id().split('/');
+    // Use the translation catalog of the digitalclock applet until  there is a standard API for city/continent names
+    const char *domain = "plasma_applet_org.kde.plasma.digitalclock.mo";
+    QString displayName = i18nd(domain, continentCity[0]);
+    if (continentCity.size() > 1) {
+        displayName += '/' + i18nd(domain, continentCity[1]);
+    }
+    const QString abbreviation = localZone.abbreviation(QDateTime::currentDateTime());
+    if (abbreviation.isEmpty()) {
+        m_local->setText(i18nc("%1 is name of time zone", "Current local time zone: %1", displayName));
     } else {
-        m_local->setText(i18nc("%1 is name of time zone, %2 is its abbreviation",
-                               "Current local time zone: %1 (%2)",
-                               K4TimeZoneWidget::displayName(localZone),
-                               QString::fromUtf8(localZone.abbreviations().constFirst())));
+        m_local->setText(i18nc("%1 is name of time zone, %2 is its abbreviation", "Current local time zone: %1 (%2)", displayName, abbreviation));
     }
 }
 
@@ -211,7 +213,7 @@ void Dtime::load()
         if (ntpUtility.isEmpty()) {
             timeServerList->setEnabled(false);
         }
-        currentTimeZone = KSystemTimeZones::local().name();
+        currentTimeZone = QTimeZone::systemTimeZoneId();
     }
 
     // Reset to the current date and time
@@ -306,7 +308,11 @@ QString Dtime::quickHelp() const
 Kclock::Kclock(QWidget *parent)
     : QWidget(parent)
 {
-    m_theme = new Plasma::Svg(this);
+    m_imageSet = new KSvg::ImageSet();
+    m_imageSet->setBasePath("plasma/desktoptheme");
+    auto plasmaConfig = KSharedConfig::openConfig(QStringLiteral("plasmarc"));
+    m_imageSet->setImageSetName(plasmaConfig->group("Theme").readEntry("name", "default"));
+    m_theme = new KSvg::Svg(this);
     m_theme->setImagePath(QStringLiteral("widgets/clock"));
     m_theme->setContainsMultipleImages(true);
 }

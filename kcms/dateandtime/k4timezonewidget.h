@@ -20,11 +20,8 @@
 #ifndef KTIMEZONEWIDGET_H
 #define KTIMEZONEWIDGET_H
 
-#include <kdelibs4support_export.h>
-
 #include <QTreeWidget>
 
-class KTimeZone;
 class KTimeZones;
 
 /**
@@ -56,7 +53,8 @@ class KTimeZones;
  *
  * @author S.R.Haque <srhaque@iee.org>
  */
-class KDELIBS4SUPPORT_EXPORT K4TimeZoneWidget : public QTreeWidget
+
+class K4TimeZoneWidget : public QTreeWidget
 {
     Q_OBJECT
     Q_PROPERTY(bool itemsCheckable READ itemsCheckable WRITE setItemsCheckable)
@@ -70,7 +68,7 @@ public:
      * @param timeZones The time zone database to use. If 0, the system time zone
      *                  database is used.
      */
-    KDELIBS4SUPPORT_DEPRECATED explicit K4TimeZoneWidget(QWidget *parent = nullptr, KTimeZones *timeZones = nullptr);
+    explicit K4TimeZoneWidget(QWidget *parent = nullptr);
 
     /**
      * Destroys the time zone selection widget.
@@ -132,13 +130,6 @@ public:
      * The overload is @since 4.4.
      */
     void clearSelection();
-
-    /**
-     * Format a time zone name in a standardised manner.
-     *
-     * @return formatted time zone name.
-     */
-    static QString displayName(const KTimeZone &zone);
 
 private:
     class Private;

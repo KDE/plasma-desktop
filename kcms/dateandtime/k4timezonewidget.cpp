@@ -20,14 +20,18 @@
 
 #include "k4timezonewidget.h"
 
+#include <KCountry>
+#include <KCountryFlagEmojiIconEngine>
+#include <KLocalizedString>
+
 #include <QDebug>
 #include <QFile>
 #include <QPixmap>
+#include <QTimeZone>
 
-#include <klocale.h>
-#include <klocalizedstring.h>
-#include <ksystemtimezone.h>
-#include <ktimezone.h>
+#include <unicode/localebuilder.h>
+#include <unicode/tznames.h>
+#include <unicode/unistr.h>
 
 class Q_DECL_HIDDEN K4TimeZoneWidget::Private
 {
@@ -51,7 +55,8 @@ static bool localeLessThan(const QString &a, const QString &b)
     return QString::localeAwareCompare(a, b) < 0;
 }
 
-K4TimeZoneWidget::K4TimeZoneWidget(QWidget *parent, KTimeZones *db)
+
+K4TimeZoneWidget::K4TimeZoneWidget(QWidget *parent)
     : QTreeWidget(parent)
     , d(new K4TimeZoneWidget::Private)
 {
@@ -59,67 +64,73 @@ K4TimeZoneWidget::K4TimeZoneWidget(QWidget *parent, KTimeZones *db)
     setRootIsDecorated(false);
     setHeaderLabels(QStringList() << i18nc("Define an area in the time zone, like a town area", "Area") << i18nc("Time zone", "Region") << i18n("Comment"));
 
-    // Collect zones by localized city names, so that they can be sorted properly.
-    QStringList cities;
-    QHash<QString, KTimeZone> zonesByCity;
+    const auto locale = icu::Locale(QLocale::system().name().toLatin1());
+    UErrorCode error = U_ZERO_ERROR;
+    std::unique_ptr<icu::TimeZoneNames> tzNames(icu::TimeZoneNames::createInstance(locale, error));
+    if (!U_SUCCESS(error)) {
+        qWarning() << "failed to create timezone names" << u_errorName(error);
+        return;
+    };
+    icu::UnicodeString result;
 
-    if (!db) {
-        db = KSystemTimeZones::timeZones();
+    const auto timezones = QTimeZone::availableTimeZoneIds();
 
-        // add UTC to the defaults default
-        KTimeZone utc = KTimeZone::utc();
-        cities.append(utc.name());
-        zonesByCity.insert(utc.name(), utc);
-    }
+    struct TimeZoneInfo {
+        QTimeZone zone;
+        QString region;
+        QString city;
+    };
 
-    const KTimeZones::ZoneMap zones = db->zones();
-    for (KTimeZones::ZoneMap::ConstIterator it = zones.begin(); it != zones.end(); ++it) {
-        const KTimeZone zone = it.value();
-        const QString continentCity = displayName(zone);
-        const int separator = continentCity.lastIndexOf('/');
+    std::vector<TimeZoneInfo> zones;
+    zones.reserve(timezones.size());
+    for (const auto &id : timezones) {
+        const int separator = id.lastIndexOf('/');
         // Make up the localized key that will be used for sorting.
-        // Example: i18n(Asia/Tokyo) -> key = "i18n(Tokyo)|i18n(Asia)|Asia/Tokyo"
+        // Example: Asia/Tokyo -> key = "i18n(Tokyo)|i18n(Asia)|Asia/Tokyo"
         // The zone name is appended to ensure unicity even with equal translations (#174918)
-        const QString key = continentCity.mid(separator + 1) + '|' + continentCity.left(separator) + '|' + zone.name();
-        cities.append(key);
-        zonesByCity.insert(key, zone);
+        // since there is no  API continent names, we use the translation catalog of the digitalclock applet which contain these
+        const char *domain = "plasma_applet_org.kde.plasma.digitalclock.mo";
+        const QString continent = separator > 0 ? i18nd(domain, id.left(separator)) : QString();
+        const icu::UnicodeString &exemplarCity = tzNames->getExemplarLocationName(icu::UnicodeString::fromUTF8(icu::StringPiece(id.data(), id.size())), result);
+        zones.push_back(
+            {QTimeZone(id), continent, exemplarCity.isBogus() ? QString::fromLatin1(id) : QString::fromUtf16(exemplarCity.getBuffer(), exemplarCity.length())});
     }
-    std::sort(cities.begin(), cities.end(), localeLessThan);
+    std::sort(zones.begin(), zones.end(), [](const TimeZoneInfo &left, const TimeZoneInfo &right) {
+        if (auto result = QString::localeAwareCompare(left.city, right.city); result != 0) {
+            return result < 0;
+        }
+        if (auto result = QString::localeAwareCompare(left.region, right.region); result != 0) {
+            return result < 0;
+        }
+        return QString::localeAwareCompare(left.zone.id(), right.zone.id()) < 0;
+    });
 
-    foreach (const QString &key, cities) {
-        const KTimeZone zone = zonesByCity.value(key);
-        const QString tzName = zone.name();
+    for (const auto &zoneInfo : zones) {
+        const QTimeZone &zone = zoneInfo.zone;
+        const QString tzName = zone.id();
         QString comment = zone.comment();
 
         if (!comment.isEmpty()) {
             comment = i18n(comment.toUtf8());
         }
 
-        // Convert:
-        //
-        //  "Europe/London", "GB" -> "London", "Europe/GB".
-        //  "UTC",           ""   -> "UTC",    "".
-        QStringList continentCity = displayName(zone).split('/');
-
         QTreeWidgetItem *listItem = new QTreeWidgetItem(this);
-        listItem->setText(Private::CityColumn, continentCity[continentCity.count() - 1]);
-        QString countryName = KLocale::global()->countryCodeToName(zone.countryCode());
+        listItem->setText(Private::CityColumn, zoneInfo.city);
+        QString countryName = KCountry::fromQLocale(zone.territory()).name();
         if (countryName.isEmpty()) {
-            continentCity[continentCity.count() - 1] = zone.countryCode();
-        } else {
-            continentCity[continentCity.count() - 1] = countryName;
+            countryName = QLocale::territoryToCode(zone.territory());
         }
+        QString regionLabel = zoneInfo.region;
+        if (!regionLabel.isEmpty() && !countryName.isEmpty()) {
+            regionLabel += '/';
+        }
+        regionLabel += countryName;
 
-        listItem->setText(Private::RegionColumn, continentCity.join(QChar('/')));
+        listItem->setText(Private::RegionColumn, regionLabel);
         listItem->setText(Private::CommentColumn, comment);
         listItem->setData(Private::CityColumn, Private::ZoneRole, tzName); // store complete path in custom role
 
-        // Locate the flag from share/kf5/locale/countries/%1/flag.png
-        QString flag =
-            QStandardPaths::locate(QStandardPaths::GenericDataLocation, QString("kf5/locale/countries/%1/flag.png").arg(zone.countryCode().toLower()));
-        if (QFile::exists(flag)) {
-            listItem->setIcon(Private::RegionColumn, QPixmap(flag));
-        }
+        listItem->setIcon(Private::RegionColumn, QIcon(new KCountryFlagEmojiIconEngine(QLocale::territoryToCode(zone.territory()))));
     }
 }
 
@@ -142,11 +153,6 @@ void K4TimeZoneWidget::setItemsCheckable(bool enable)
 bool K4TimeZoneWidget::itemsCheckable() const
 {
     return d->itemsCheckable;
-}
-
-QString K4TimeZoneWidget::displayName(const KTimeZone &zone)
-{
-    return i18n(zone.name().toUtf8()).replace('_', ' ');
 }
 
 QStringList K4TimeZoneWidget::selection() const
@@ -244,3 +250,6 @@ QAbstractItemView::SelectionMode K4TimeZoneWidget::selectionMode() const
         return QTreeWidget::selectionMode();
     }
 }
+
+
+#include "moc_k4timezonewidget.cpp"

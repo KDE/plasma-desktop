@@ -15,7 +15,7 @@ class KclockModule : public KCModule
     Q_OBJECT
 
 public:
-    explicit KclockModule(QWidget *parent, const QVariantList &);
+    explicit KclockModule(QObject *parent, const KPluginMetaData &);
 
     void save() override;
     void load() override;
