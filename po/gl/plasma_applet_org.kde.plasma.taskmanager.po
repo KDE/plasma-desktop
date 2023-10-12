@@ -1,20 +1,20 @@
 # translation of plasma_applet_tasks.po to Galician
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # mvillarino <mvillarino@users.sourceforge.net>, 2008.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # marce villarino <mvillarino@gmail.com>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2013.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-22 03:07+0000\n"
-"PO-Revision-Date: 2019-10-19 21:48+0200\n"
+"PO-Revision-Date: 2023-10-11 13:46+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -38,28 +38,25 @@ msgstr "Comportamento"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr ""
+msgstr "Activar o son"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "Silenciar"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr "Silenciar"
+msgstr "Activar o son de %1."
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
-msgstr "Silenciar"
+msgstr "Silenciar %1."
 
 #: package/contents/ui/Badge.qml:54
 #, kde-format
@@ -79,16 +76,14 @@ msgid "General:"
 msgstr "Xeral:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over tasks"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Realzar as xanelas ao cubrir as tarefas"
+msgstr "Amosar vistas previas de xanelas pequenas ao cubrir tarefas"
 
 #: package/contents/ui/ConfigAppearance.qml:39
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over tasks"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Realzar as xanelas ao cubrir as tarefas"
+msgstr "Agochar outras xanelas ao cubrir vistas previas"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
@@ -99,7 +94,7 @@ msgstr "Marcar as aplicacións que reproducen son"
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "Encher o espazo libre no panel."
 
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
@@ -124,11 +119,10 @@ msgstr "Organizar as tarefas sempre en columnas de tantas filas."
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "Espazo entre iconas:"
 
 #: package/contents/ui/ConfigAppearance.qml:81
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Pequeno"
@@ -137,11 +131,10 @@ msgstr "Pequeno"
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: package/contents/ui/ConfigAppearance.qml:89
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Grande"
@@ -150,7 +143,7 @@ msgstr "Grande"
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "Faise grande automaticamente no modo táctil."
 
 #: package/contents/ui/ConfigBehavior.qml:47
 #, kde-format
@@ -170,14 +163,13 @@ msgstr "Polo nome do programa"
 #: package/contents/ui/ConfigBehavior.qml:55
 #, kde-format
 msgid "Clicking grouped task:"
-msgstr ""
+msgstr "Premer tarefas agrupadas:"
 
 #: package/contents/ui/ConfigBehavior.qml:62
-#, fuzzy, kde-format
-#| msgid "Cycle through tasks with mouse wheel"
+#, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
-msgstr "Pasar polas tarefas coa roda do rato"
+msgstr "Circula polas tarefas"
 
 #: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
@@ -185,20 +177,20 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr ""
+msgstr "Amosa vistas previas de xanelas pequenas."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr ""
+msgstr "Amosa vistas previas de xanelas grandes"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
-msgstr ""
+msgstr "Amosa unha lista de texto"
 
 #: package/contents/ui/ConfigBehavior.qml:73
 #, kde-format
@@ -206,11 +198,13 @@ msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
+"O compositor non permite amosar xanelas unha a cada lado, así que se amosará "
+"unha lista de texto no seu lugar."
 
 #: package/contents/ui/ConfigBehavior.qml:83
 #, kde-format
 msgid "Combine into single button"
-msgstr ""
+msgstr "Combinar nun botón"
 
 #: package/contents/ui/ConfigBehavior.qml:90
 #, kde-format
@@ -256,147 +250,137 @@ msgstr "Manter os iniciadores separados"
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
-msgstr ""
+msgstr "Premer a tarefa activa:"
 
 #: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr ""
+msgstr "Minimiza a tarefa"
 
 #: package/contents/ui/ConfigBehavior.qml:127
 #, kde-format
 msgid "Middle-clicking any task:"
-msgstr ""
+msgstr "Clic central en calquera tarefa:"
 
 #: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
-msgstr ""
+msgstr "Non fai nada"
 
 #: package/contents/ui/ConfigBehavior.qml:132
-#, fuzzy, kde-format
-#| msgid "Close window or group"
+#, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
-msgstr "Pechar a xanela ou grupo"
+msgstr "Pecha a xanela ou o grupo"
 
 #: package/contents/ui/ConfigBehavior.qml:133
-#, fuzzy, kde-format
-#| msgid "New instance"
+#, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
-msgstr "Nova instancia"
+msgstr "Abre unha nova xanela"
 
 #: package/contents/ui/ConfigBehavior.qml:134
-#, fuzzy, kde-format
-#| msgid "Minimize/Restore window or group"
+#, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
 "group'"
 msgid "Minimizes/Restores window or group"
-msgstr "Minimizar ou restaurar a xanela ou grupo"
+msgstr "Minimiza ou restaura a xanela ou o grupo"
 
 #: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
-msgstr ""
+msgstr "Conmuta o agrupamento"
 
 #: package/contents/ui/ConfigBehavior.qml:136
-#, fuzzy, kde-format
-#| msgid "Bring to the current virtual desktop"
+#, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
 "virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr "Traer ao escritorio virtual actual"
+msgstr "Tráea ao escritorio virtual actual"
 
 #: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
-msgstr ""
+msgstr "Roda do rato:"
 
 #: package/contents/ui/ConfigBehavior.qml:147
-#, fuzzy, kde-format
-#| msgid "Cycle through tasks with mouse wheel"
+#, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr "Pasar polas tarefas coa roda do rato"
+msgstr "Circula polas tarefas"
 
 #: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
 msgid "Skip minimized tasks"
-msgstr ""
+msgstr "Saltar as tarefas minimizadas"
 
 #: package/contents/ui/ConfigBehavior.qml:167
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgid "Show only tasks:"
-msgstr "Mostrar as axudas"
+msgstr "Só amosar as tarefas:"
 
 #: package/contents/ui/ConfigBehavior.qml:168
-#, fuzzy, kde-format
-#| msgid "Show only tasks from the current screen"
+#, kde-format
 msgid "From current screen"
-msgstr "Mostrar só as tarefas na pantalla actual"
+msgstr "Da pantalla actual."
 
 #: package/contents/ui/ConfigBehavior.qml:173
-#, fuzzy, kde-format
-#| msgid "Move &To Current Desktop"
+#, kde-format
 msgid "From current desktop"
-msgstr "Mover ao escritorio &actual"
+msgstr "Do escritorio actual."
 
 #: package/contents/ui/ConfigBehavior.qml:178
-#, fuzzy, kde-format
-#| msgid "Add To Current Activity"
+#, kde-format
 msgid "From current activity"
-msgstr "Engadir á actividade actual"
+msgstr "Da actividade actual."
 
 #: package/contents/ui/ConfigBehavior.qml:183
-#, fuzzy, kde-format
-#| msgid "Show only tasks that are minimized"
+#, kde-format
 msgid "That are minimized"
-msgstr "Mostrar só as tarefas minimizadas"
+msgstr "Minimizadas."
 
 #: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgid "When panel is hidden:"
-msgstr ""
+msgstr "Cando se agocha o panel:"
 
 #: package/contents/ui/ConfigBehavior.qml:193
 #, kde-format
 msgid "Unhide when a window wants attention"
-msgstr ""
+msgstr "Amosar cando unha xanela queira atención."
 
 #: package/contents/ui/ConfigBehavior.qml:205
 #, kde-format
 msgid "New tasks appear:"
-msgstr ""
+msgstr "As novas tarefas aparecen:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "Abaixo"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgid "To the right"
-msgstr ""
+msgstr "Á dereita"
 
 #: package/contents/ui/ConfigBehavior.qml:215
 #: package/contents/ui/ConfigBehavior.qml:231
 #, kde-format
 msgid "To the left"
-msgstr ""
+msgstr "Á esquerda"
 
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "Arriba"
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -404,10 +388,9 @@ msgid "Places"
 msgstr "Lugares"
 
 #: package/contents/ui/ContextMenu.qml:98
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Files"
-msgstr "Documentos recentes"
+msgstr "Ficheiros recentes"
 
 #: package/contents/ui/ContextMenu.qml:103
 #, kde-format
@@ -464,7 +447,7 @@ msgstr "Silenciar"
 #: package/contents/ui/ContextMenu.qml:283
 #, kde-format
 msgid "Open New Window"
-msgstr ""
+msgstr "Abrir unha nova xanela"
 
 #: package/contents/ui/ContextMenu.qml:299
 #, kde-format
@@ -508,10 +491,9 @@ msgid "All Activities"
 msgstr "Todas as actividades"
 
 #: package/contents/ui/ContextMenu.qml:472
-#, fuzzy, kde-format
-#| msgid "Move to &Desktop"
+#, kde-format
 msgid "Move to %1"
-msgstr "Mover ao &escritorio"
+msgstr "Mover a %1"
 
 #: package/contents/ui/ContextMenu.qml:500
 #: package/contents/ui/ContextMenu.qml:517
@@ -532,12 +514,12 @@ msgstr "Na actividade actual"
 #: package/contents/ui/ContextMenu.qml:601
 #, kde-format
 msgid "Unpin from Task Manager"
-msgstr "Soltar do xestor de tarefas"
+msgstr "Desprender do xestor de tarefas"
 
 #: package/contents/ui/ContextMenu.qml:616
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Máis"
 
 #: package/contents/ui/ContextMenu.qml:625
 #, kde-format
@@ -593,72 +575,68 @@ msgstr "&Pechar"
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "Iniciar %1"
 
 #: package/contents/ui/Task.qml:88
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hai %1 nova mensaxe."
+msgstr[1] "Hai %1 novas mensaxes."
 
 #: package/contents/ui/Task.qml:97
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Mostrar as axudas"
+msgstr "Amosar a indicación emerxente de tarefa de %1."
 
 #: package/contents/ui/Task.qml:103
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "Amosar as xanela unha a carón da outra para %1."
 
 #: package/contents/ui/Task.qml:108
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "Abrir unha lista de texto das xanelas para %1."
 
 #: package/contents/ui/Task.qml:112
 #, kde-format
 msgid "Activate %1"
-msgstr ""
+msgstr "Activar %1"
 
 #: package/contents/ui/ToolTipInstance.qml:356
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr ""
+msgstr "Activar o son de %1"
 
 #: package/contents/ui/ToolTipInstance.qml:357
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
-msgstr "Silenciar"
+msgstr "Silenciar %1"
 
 #: package/contents/ui/ToolTipInstance.qml:380
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr ""
+msgstr "Axustar o volume de %1"
 
 #: package/contents/ui/ToolTipInstance.qml:396
-#, fuzzy, kde-format
-#| msgctxt "@title:group Name of a group of windows"
-#| msgid "%1"
+#, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr "%1"
+msgstr "%1%"
 
 #: package/contents/ui/ToolTipInstance.qml:399
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: package/contents/ui/ToolTipInstance.qml:423
 #, kde-format
@@ -670,7 +648,7 @@ msgstr "En %1"
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
-msgstr ""
+msgstr "Fixada en todos os escritorios."
 
 #: package/contents/ui/ToolTipInstance.qml:437
 #, kde-format
@@ -699,50 +677,43 @@ msgstr[0] "%1 lugar máis"
 msgstr[1] "%1 lugares máis"
 
 #: plugin/backend.cpp:447
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Downloads"
-msgstr "Documentos recentes"
+msgstr "Descargas recentes"
 
 #: plugin/backend.cpp:449
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Connections"
-msgstr "Documentos recentes"
+msgstr "Conexións recentes"
 
 #: plugin/backend.cpp:451
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Places"
-msgstr "Documentos recentes"
+msgstr "Lugares recentes"
 
 #: plugin/backend.cpp:460
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr "Esquecer os documentos recentes"
+msgstr "Esquecer as descargas recentes"
 
 #: plugin/backend.cpp:462
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr "Esquecer os documentos recentes"
+msgstr "Esquecer as conexións recentes"
 
 #: plugin/backend.cpp:464
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr "Esquecer os documentos recentes"
+msgstr "Esquecer os lugares recentes"
 
 #: plugin/backend.cpp:466
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
-msgstr "Esquecer os documentos recentes"
+msgstr "Esquecer os ficheiros recentes"
 
 #~ msgid "Show tooltips"
 #~ msgstr "Mostrar as axudas"
