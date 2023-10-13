@@ -277,8 +277,8 @@ ContainmentItem {
                             } else {
                                 width = padding;
                             }
-                            anchors[left+'Margin'] = - currentLayout.rowSpacing/2 - (appletIndex == 0 ? panelSvg.margins[left] + currentLayout.x : 0)
-                            anchors[right+'Margin'] = - currentLayout.rowSpacing/2 - (appletIndex == appletsModel.count-1 ? panelSvg.margins[right] + currentLayout.toolBoxSize : 0)
+                            anchors[left+'Margin'] = - currentLayout.rowSpacing/2 - (appletIndex == 0 ? dropArea.anchors[left + 'Margin'] + currentLayout.x : 0)
+                            anchors[right+'Margin'] = - currentLayout.rowSpacing/2 - (appletIndex == appletsModel.count-1 ? dropArea.anchors[right + 'Margin'] + currentLayout.toolBoxSize : 0)
                             anchors[side+'Margin'] = - inset
                         }
                         elementId: fill ? 'fill' : (root.isHorizontal ? side + (inThickArea ? 'left' : 'right') : (inThickArea ? 'top' : 'bottom') + side)
