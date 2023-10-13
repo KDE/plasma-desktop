@@ -22,6 +22,7 @@ Item {
     property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - appearanceRoot.Kirigami.ScenePosition.x + Kirigami.Units.smallSpacing
     property string currentWallpaper: ""
     property string containmentPlugin: ""
+    property alias parentLayout: parentLayout
 
     function saveConfig() {
         if (main.currentItem.saveConfig) {
@@ -143,7 +144,9 @@ Item {
                 const wallpaperConfig = configDialog.wallpaperConfiguration
                 // BUG 407619: wallpaperConfig can be null before calling `ContainmentItem::loadWallpaper()`
                 if (wallpaperConfig && sourceFile) {
-                    var props = {}
+                    var props = {
+                        "configDialog": configDialog
+                    }
 
                     for (var key in wallpaperConfig) {
                         props["cfg_" + key] = wallpaperConfig[key]
