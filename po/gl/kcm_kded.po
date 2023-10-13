@@ -1,6 +1,5 @@
 # translation of kcmkded.po to Galician
 # Copyright (C) 2003, 2004, 2007, 2008, 2009 Free Software Foundation, Inc.
-#
 # Xabi García <xabigf@gmx.net>, 2003.
 # Xabier García Feal <xabigf@gmx.net>, 2004.
 # mvillarino <mvillarino@users.sourceforge.net>, 2007, 2008.
@@ -9,49 +8,49 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-10 01:47+0000\n"
-"PO-Revision-Date: 2018-04-21 15:23+0100\n"
-"Last-Translator: Adrian Chaves <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-12 22:13+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: kcmkded.cpp:115
-#, fuzzy, kde-format
-#| msgid "Unable to stop service <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service: %1"
-msgstr "Non foi posíbel deter o servizo <em>%1</em>."
+msgstr "Non foi posíbel deter o servizo: %1"
 
 #: kcmkded.cpp:117
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service: %1"
-msgstr "Non foi posíbel iniciar o servidor <em>%1</em>."
+msgstr "Non foi posíbel iniciar o servizo: %1"
 
 #: kcmkded.cpp:124
-#, fuzzy, kde-format
-#| msgid "Unable to stop service <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service."
-msgstr "Non foi posíbel deter o servizo <em>%1</em>."
+msgstr "Non foi posíbel deter o servizo."
 
 #: kcmkded.cpp:126
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service."
-msgstr "Non foi posíbel iniciar o servidor <em>%1</em>."
+msgstr "Non foi posíbel iniciar o servizo."
 
 #: kcmkded.cpp:224
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
+"Non foi posíbel notificar o cambio gardado ao xestor de servizos de KDE "
+"(kded6): %1"
 
 #: ui/main.qml:36
 #, kde-format
@@ -59,6 +58,8 @@ msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
+"O xestor de servizos en segundo plano (kded6) non está a executarse. "
+"Asegúrese de que está instalado correctamente."
 
 #: ui/main.qml:45
 #, kde-format
@@ -66,6 +67,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
+"Algúns servizos desactívanse a si mesmos de novo cando se inician "
+"manualmente se non resultan útiles no contorno actual."
 
 #: ui/main.qml:54
 #, kde-format
@@ -73,23 +76,22 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
+"Algúns servizos iniciáronse ou detivéronse automaticamente cando o xestor de "
+"servizos en segundo plano (kded6) se reiniciou para aplicar os cambios."
 
 #: ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "All Services"
-msgstr "Servizo"
+msgstr "Todos os servizos"
 
 #: ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "En execución"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Non está a executarse"
@@ -107,7 +109,7 @@ msgstr "Servizos cargados segundo a demanda"
 #: ui/main.qml:153
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "Conmutar a carga automática deste servizo no inicio"
 
 #: ui/main.qml:220
 #, kde-format
@@ -120,16 +122,14 @@ msgid "Running"
 msgstr "En execución"
 
 #: ui/main.qml:239
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Stop Service"
-msgstr "Servizo"
+msgstr "Deter o servizo"
 
 #: ui/main.qml:239
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Start Service"
-msgstr "Servizo"
+msgstr "Iniciar o servizo"
 
 #, fuzzy
 #~| msgid ""

@@ -1,7 +1,7 @@
 # translation of kcmcomponentchooser.po to Slovenian
 # Translation of kcmcomponentchooser.po to Slovenian
 # SLOVENIAN TRANSLATION OF KDEBASE.
-# $Id: kcm_componentchooser.po 1661106 2023-09-28 02:01:52Z scripty $
+# $Id: kcm_componentchooser.po 1662237 2023-10-13 02:05:26Z scripty $
 # $Source$
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:41+0000\n"
+"POT-Creation-Date: 2023-10-13 01:43+0000\n"
 "PO-Revision-Date: 2023-02-04 09:01+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -161,8 +161,8 @@ msgstr "Odjemalec elektronske pošte:"
 #: ui/main.qml:94
 #, kde-format
 msgctxt "Default phone app"
-msgid "Dialer:"
-msgstr "Klicanje telefonskih številk:"
+msgid "Phone Numbers:"
+msgstr ""
 
 #: ui/main.qml:116
 #, kde-format
@@ -227,6 +227,10 @@ msgstr "Upravljalnik arhivov:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapa:"
+
+#~ msgctxt "Default phone app"
+#~ msgid "Dialer:"
+#~ msgstr "Klicanje telefonskih številk:"
 
 #~ msgid "Default web browser"
 #~ msgstr "Privzeti spletni brskalnik"
