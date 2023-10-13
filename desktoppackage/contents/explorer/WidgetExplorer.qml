@@ -124,7 +124,7 @@ PC3.Page {
     PlasmaExtras.ModelContextMenu {
         id: getWidgetsDialog
         visualParent: getWidgetsButton
-        placement: PlasmaCore.Types.TopPosedLeftAlignedPopup
+        placement: PlasmaExtras.Menu.TopPosedLeftAlignedPopup
         // model set on first invocation
         onClicked: model.trigger()
     }
