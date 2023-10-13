@@ -1,6 +1,5 @@
 # translation of kcmkded.po to Galician
 # Copyright (C) 2003, 2004, 2007, 2008, 2009 Free Software Foundation, Inc.
-#
 # Xabi García <xabigf@gmx.net>, 2003.
 # Xabier García Feal <xabigf@gmx.net>, 2004.
 # mvillarino <mvillarino@users.sourceforge.net>, 2007, 2008.
@@ -9,20 +8,22 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-04 00:47+0000\n"
-"PO-Revision-Date: 2018-04-21 15:23+0100\n"
-"Last-Translator: Adrian Chaves <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-12 22:13+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -35,16 +36,14 @@ msgid "Your emails"
 msgstr "xabigf@gmx.net, mvillarino@users.sourceforge.net"
 
 #: kcmkded.cpp:48
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Background Services"
-msgstr "Servizos de inicio"
+msgstr "Servizos en segundo plano"
 
 #: kcmkded.cpp:52
-#, fuzzy, kde-format
-#| msgid "(c) 2002 Daniel Molkentin"
+#, kde-format
 msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-msgstr "© 2002 Daniel Molkentin"
+msgstr "© 2002 Daniel Molkentin; © 2020 Kai Uwe Broulik"
 
 #: kcmkded.cpp:53
 #, kde-format
@@ -54,49 +53,37 @@ msgstr "Daniel Molkentin"
 #: kcmkded.cpp:54
 #, kde-format
 msgid "Kai Uwe Broulik"
-msgstr ""
+msgstr "Kai Uwe Broulik"
 
 #: kcmkded.cpp:125
-#, fuzzy, kde-format
-#| msgid "Unable to stop service <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service: %1"
-msgstr "Non foi posíbel deter o servizo <em>%1</em>."
+msgstr "Non foi posíbel deter o servizo: %1"
 
 #: kcmkded.cpp:127
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service: %1"
-msgstr "Non foi posíbel iniciar o servidor <em>%1</em>."
+msgstr "Non foi posíbel iniciar o servizo: %1"
 
 #: kcmkded.cpp:134
-#, fuzzy, kde-format
-#| msgid "Unable to stop service <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service."
-msgstr "Non foi posíbel deter o servizo <em>%1</em>."
+msgstr "Non foi posíbel deter o servizo."
 
 #: kcmkded.cpp:136
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service."
-msgstr "Non foi posíbel iniciar o servidor <em>%1</em>."
+msgstr "Non foi posíbel iniciar o servizo."
 
 #: kcmkded.cpp:234
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
+"Non foi posíbel notificar o cambio gardado ao xestor de servizos de KDE "
+"(kded5): %1"
 
 #: package/contents/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
-#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
-#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
-#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
-#| "listed for convenience. The startup services can be started and stopped. "
-#| "In Administrator mode, you can also define whether services should be "
-#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
-#| "for Plasma; do not deactivate services if you do not know what you are "
-#| "doing.</b></p>"
+#, kde-format
 msgid ""
 "<p>This module allows you to have an overview of all plugins of the KDE "
 "Daemon, also referred to as KDE Services. Generally, there are two types of "
@@ -107,15 +94,14 @@ msgid ""
 "vital for Plasma; do not deactivate services if you  do not know what you "
 "are doing.</b></p>"
 msgstr ""
-"<h1>Xestor de servizos</h1><p>Este módulo permítelle ter unha vista xeral de "
-"todos os complementos do servizo de KDE, tamén chamados Servizos de KDE. En "
-"xeral, hai dous tipos de servizo:</p><ul><li>Os que se invocan no inicio</"
-"li> <li>Servizos iniciados segundo a demanda</li></ul><p>Estes últimos só se "
-"listan por conveniencia. Os servizos de inicio pode iniciarse e pararse. No "
-"modo Administrador, pode tamén decidir cales servizos deberían cargarse no "
-"inicio.</p> <p><b> Empregue isto con coidado. Algúns servizos son vitais "
-"para Plasma. Non desactive ningún servizo se non coñece a súa finalidade.</"
-"b></p>"
+"<p>Este módulo permítelle ter unha vista xeral de todos os complementos do "
+"servizo de KDE, tamén chamados Servizos de KDE. En xeral, hai dous tipos de "
+"servizo:</p><ul><li>Os que se invocan no inicio</li> <li>Servizos iniciados "
+"segundo a demanda</li></ul><p>Estes últimos só se listan por conveniencia. "
+"Os servizos de inicio pode iniciarse e pararse. Tamén pode decidir que "
+"servizos deberían cargarse no inicio.</p> <p><b> Use isto con coidado. "
+"Algúns servizos son vitais para Plasma. Non desactive ningún servizo se non "
+"coñece a súa finalidade.</b></p>"
 
 #: package/contents/ui/main.qml:38
 #, kde-format
@@ -123,6 +109,8 @@ msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
+"O xestor de servizos en segundo plano (kded5) non está a executarse. "
+"Asegúrese de que está instalado correctamente."
 
 #: package/contents/ui/main.qml:47
 #, kde-format
@@ -130,6 +118,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
+"Algúns servizos desactívanse a si mesmos de novo cando se inician "
+"manualmente se non resultan útiles no contorno actual."
 
 #: package/contents/ui/main.qml:56
 #, kde-format
@@ -137,23 +127,22 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
+"Algúns servizos iniciáronse ou detivéronse automaticamente cando o xestor de "
+"servizos en segundo plano (kded5) se reiniciou para aplicar os cambios."
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "All Services"
-msgstr "Servizo"
+msgstr "Todos os servizos"
 
 #: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "En execución"
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Non está a executarse"
@@ -171,7 +160,7 @@ msgstr "Servizos cargados segundo a demanda"
 #: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "Conmutar a carga automática deste servizo no inicio"
 
 #: package/contents/ui/main.qml:221
 #, kde-format
@@ -184,16 +173,14 @@ msgid "Running"
 msgstr "En execución"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Stop Service"
-msgstr "Servizo"
+msgstr "Deter o servizo"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Start Service"
-msgstr "Servizo"
+msgstr "Iniciar o servizo"
 
 #~ msgid "kcmkded"
 #~ msgstr "kcmkded"
