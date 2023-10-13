@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQuick
 import QtQuick.Layouts 1.15
 import QtQml 2.15
 
@@ -241,6 +241,28 @@ PlasmoidItem {
         }
     }
 
+    Connections {
+        target: Plasmoid
+
+        function onLocationChanged() {
+            if (TaskTools.taskManagerInstanceCount >= 2) {
+                return;
+            }
+            // This is on a timer because the panel may not have
+            // settled into position yet when the location prop-
+            // erty updates.
+            iconGeometryTimer.start();
+        }
+    }
+
+    Connections {
+        target: Plasmoid.containment
+
+        function onScreenGeometryChanged() {
+            iconGeometryTimer.start();
+        }
+    }
+
     Mpris.Mpris2Model {
         id: mpris2Source
     }
@@ -288,20 +310,6 @@ PlasmoidItem {
             value: (tasksModel.anyTaskDemandsAttention && Plasmoid.configuration.unhideOnAttention
                 ? PlasmaCore.Types.NeedsAttentionStatus : PlasmaCore.Types.PassiveStatus)
             restoreMode: Binding.RestoreBinding
-        }
-
-        Connections {
-            target: Plasmoid
-
-            function onLocationChanged() {
-                if (TaskTools.taskManagerInstanceCount >= 2) {
-                    return;
-                }
-                // This is on a timer because the panel may not have
-                // settled into position yet when the location prop-
-                // erty updates.
-                iconGeometryTimer.start();
-            }
         }
 
         Connections {
