@@ -27,7 +27,6 @@ class Backend : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QQuickItem *taskManagerItem READ taskManagerItem WRITE setTaskManagerItem NOTIFY taskManagerItemChanged)
     Q_PROPERTY(bool highlightWindows READ highlightWindows WRITE setHighlightWindows NOTIFY highlightWindowsChanged)
     Q_PROPERTY(bool windowViewAvailable READ windowViewAvailable NOTIFY windowViewAvailableChanged)
 
@@ -45,9 +44,6 @@ public:
 
     explicit Backend(QObject *parent = nullptr);
     ~Backend() override;
-
-    QQuickItem *taskManagerItem() const;
-    void setTaskManagerItem(QQuickItem *item);
 
     bool highlightWindows() const;
     void setHighlightWindows(bool highlight);
@@ -75,7 +71,6 @@ public Q_SLOTS:
     void windowsHovered(const QVariant &winIds, bool hovered);
 
 Q_SIGNALS:
-    void taskManagerItemChanged() const;
     void highlightWindowsChanged() const;
     void addLauncher(const QUrl &url) const;
     void windowViewAvailableChanged();
@@ -90,7 +85,6 @@ private:
 
     QVariantList systemSettingsActions(QObject *parent) const;
 
-    QQuickItem *m_taskManagerItem = nullptr;
     bool m_highlightWindows;
     QStringList m_windowsToHighlight;
     QActionGroup *m_actionGroup = nullptr;

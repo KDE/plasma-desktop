@@ -85,20 +85,6 @@ Backend::~Backend()
 {
 }
 
-QQuickItem *Backend::taskManagerItem() const
-{
-    return m_taskManagerItem;
-}
-
-void Backend::setTaskManagerItem(QQuickItem *item)
-{
-    if (item != m_taskManagerItem) {
-        m_taskManagerItem = item;
-
-        Q_EMIT taskManagerItemChanged();
-    }
-}
-
 bool Backend::highlightWindows() const
 {
     return m_highlightWindows;
