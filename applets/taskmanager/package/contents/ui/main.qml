@@ -214,7 +214,7 @@ PlasmoidItem {
         }
     }
 
-    TaskManagerApplet.Backend {
+    property TaskManagerApplet.Backend backend: TaskManagerApplet.Backend {
         id: backend
         highlightWindows: Plasmoid.configuration.highlightWindows
 
