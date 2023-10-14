@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-10-14 01:49+0000\n"
 "PO-Revision-Date: 2023-02-14 10:31+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -452,12 +452,12 @@ msgstr "Obri una finestra nova"
 #: package/contents/ui/ContextMenu.qml:304
 #, kde-format
 msgid "Move to &Desktop"
-msgstr "Mou a l'&escriptori"
+msgstr "Mou cap a l'&escriptori"
 
 #: package/contents/ui/ContextMenu.qml:328
 #, kde-format
 msgid "Move &To Current Desktop"
-msgstr "Mou a l'escriptori ac&tual"
+msgstr "Mou cap a l'escriptori ac&tual"
 
 #: package/contents/ui/ContextMenu.qml:337
 #, kde-format
@@ -493,7 +493,7 @@ msgstr "Totes les activitats"
 #: package/contents/ui/ContextMenu.qml:477
 #, kde-format
 msgid "Move to %1"
-msgstr "Mou a %1"
+msgstr "Mou cap a %1"
 
 #: package/contents/ui/ContextMenu.qml:505
 #: package/contents/ui/ContextMenu.qml:522
@@ -674,7 +674,7 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Disponible en %1"
 
-#: plugin/backend.cpp:326
+#: plugin/backend.cpp:312
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
@@ -682,40 +682,40 @@ msgid_plural "%1 more Places"
 msgstr[0] "%1 lloc més"
 msgstr[1] "%1 llocs més"
 
-#: plugin/backend.cpp:422
+#: plugin/backend.cpp:408
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Baixades recents"
 
-#: plugin/backend.cpp:424
+#: plugin/backend.cpp:410
 #, kde-format
 msgid "Recent Connections"
 msgstr "Connexions recents"
 
-#: plugin/backend.cpp:426
+#: plugin/backend.cpp:412
 #, kde-format
 msgid "Recent Places"
 msgstr "Llocs recents"
 
-#: plugin/backend.cpp:435
+#: plugin/backend.cpp:421
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Oblida les baixades recents"
 
-#: plugin/backend.cpp:437
+#: plugin/backend.cpp:423
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Oblida les connexions recents"
 
-#: plugin/backend.cpp:439
+#: plugin/backend.cpp:425
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Oblida els llocs recents"
 
-#: plugin/backend.cpp:441
+#: plugin/backend.cpp:427
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

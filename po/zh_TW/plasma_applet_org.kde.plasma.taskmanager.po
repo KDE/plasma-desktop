@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-10-14 01:49+0000\n"
 "PO-Revision-Date: 2023-03-19 09:04+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -671,47 +671,47 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "於 %1 上可用"
 
-#: plugin/backend.cpp:326
+#: plugin/backend.cpp:312
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
 msgid_plural "%1 more Places"
 msgstr[0] "還有 %1 個位置"
 
-#: plugin/backend.cpp:422
+#: plugin/backend.cpp:408
 #, kde-format
 msgid "Recent Downloads"
 msgstr "最近的下載"
 
-#: plugin/backend.cpp:424
+#: plugin/backend.cpp:410
 #, kde-format
 msgid "Recent Connections"
 msgstr "最近的連線"
 
-#: plugin/backend.cpp:426
+#: plugin/backend.cpp:412
 #, kde-format
 msgid "Recent Places"
 msgstr "最近的位置"
 
-#: plugin/backend.cpp:435
+#: plugin/backend.cpp:421
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "忘掉最近的下載"
 
-#: plugin/backend.cpp:437
+#: plugin/backend.cpp:423
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "忘掉最近的連線"
 
-#: plugin/backend.cpp:439
+#: plugin/backend.cpp:425
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "忘掉最近的位置"
 
-#: plugin/backend.cpp:441
+#: plugin/backend.cpp:427
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

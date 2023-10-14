@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-10-14 01:49+0000\n"
 "PO-Revision-Date: 2023-03-04 19:58+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -671,7 +671,7 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Käytettävissä aktiviteetissa %1"
 
-#: plugin/backend.cpp:326
+#: plugin/backend.cpp:312
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
@@ -679,40 +679,40 @@ msgid_plural "%1 more Places"
 msgstr[0] "Vielä %1 kohde"
 msgstr[1] "Vielä %1 kohdetta"
 
-#: plugin/backend.cpp:422
+#: plugin/backend.cpp:408
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Viimeisimmät lataukset"
 
-#: plugin/backend.cpp:424
+#: plugin/backend.cpp:410
 #, kde-format
 msgid "Recent Connections"
 msgstr "Viimeisimmät yhteydet"
 
-#: plugin/backend.cpp:426
+#: plugin/backend.cpp:412
 #, kde-format
 msgid "Recent Places"
 msgstr "Viimeisimmät sijainnit"
 
-#: plugin/backend.cpp:435
+#: plugin/backend.cpp:421
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Unohda viimeisimmät lataukset"
 
-#: plugin/backend.cpp:437
+#: plugin/backend.cpp:423
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Unohda viimeisimmät yhteydet"
 
-#: plugin/backend.cpp:439
+#: plugin/backend.cpp:425
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Unohda viimeisimmät sijainnit"
 
-#: plugin/backend.cpp:441
+#: plugin/backend.cpp:427
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
