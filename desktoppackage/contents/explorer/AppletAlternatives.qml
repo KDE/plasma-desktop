@@ -11,6 +11,7 @@ import QtQuick.Window 2.1
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.plasmoid
 import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.private.shell 2.0
@@ -18,7 +19,7 @@ import org.kde.plasma.private.shell 2.0
 PlasmaCore.Dialog {
     id: dialog
     visualParent: alternativesHelper.applet
-    location: alternativesHelper.applet.location
+    location: alternativesHelper.applet.Plasmoid.location
     hideOnWindowDeactivate: true
 
     Component.onCompleted: {
