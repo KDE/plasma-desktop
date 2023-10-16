@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # ஆமாச்சு <amachu@ubuntu.com>, 2008, 2009.
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2022-04-02 21:46+0530\n"
+"PO-Revision-Date: 2023-10-15 13:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.03.80\n"
+"X-Generator: Lokalize 23.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -37,13 +37,12 @@ msgstr "விசைப்பலகை தளவமைப்பு மாற்�
 #: bindings.cpp:26
 #, kde-format
 msgid "Switch to Next Keyboard Layout"
-msgstr "அடுத்த விசைப்பலகை இட அமைவுக்கு மாற்று"
+msgstr "அடுத்த விசைப்பலகை தளவமைப்புக்கு மாறு"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "அடுத்த விசைப்பலகை இட அமைவுக்கு மாற்று"
+msgstr "கடைசியாக பயன்படுத்திய விசைப்பலகை தளவமைப்புக்கு மாறு"
 
 #: bindings.cpp:60
 #, kde-format
@@ -231,10 +230,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:246
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "மாற்று சுருக்குவழி:"
+msgstr "கடைசியாக பயன்படுத்தியதற்கான சுருக்குவழி:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:259
