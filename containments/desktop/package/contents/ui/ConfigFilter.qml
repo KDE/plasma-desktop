@@ -11,7 +11,7 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.core as PlasmaCore
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
-import org.kde.kitemmodels 1.0 as KItemModels
+import org.kde.kitemmodels as KItemModels
 
 ColumnLayout {
     id: configIcons
@@ -37,26 +37,22 @@ ColumnLayout {
         sortOrder: Qt.AscendingOrder
 
         function checkFiltered() {
-            var types = [];
+            const types = [];
 
-            for (var i = 0; i < count; ++i) {
-                types.push(get(i).name);
+            const nameRole = KItemModels.KRoleNames.role("name");
+            const n = count;
+            for (let i = 0; i < n; ++i) {
+                const name = data(index(i, 0), nameRole);
+                types.push(name);
             }
-
             mimeTypesModel.checkedTypes = types;
         }
 
         function uncheckFiltered() {
-            var types = [];
-
-            for (var i = 0; i < count; ++i) {
-                types.push(get(i).name);
-            }
-
-            mimeTypesModel.checkedTypes = mimeTypesModel.checkedTypes
-                .filter(x => types.indexOf(x) === -1);
+            mimeTypesModel.checkedTypes = [];
         }
     }
+
     Kirigami.FormLayout {
         ComboBox {
             id: filterMode
