@@ -104,16 +104,13 @@ ColumnLayout {
             contentItem: ListView {
                 id: mimeTypesView
                 clip: true
-
-                // Signal the delegates listen to when user presses space to toggle current row.
-                signal toggleCurrent()
-
+                reuseItems: true
+                keyNavigationEnabled: true
+                currentIndex: -1
 
                 model: filteredMimeTypesModel
                 property real columnSize: Kirigami.Units.gridUnit * 15
                 headerPositioning: ListView.OverlayHeader
-
-                Keys.onSpacePressed: toggleCurrent()
 
                 header: HorizontalHeaderView {
                     id: headerView
@@ -139,48 +136,67 @@ ColumnLayout {
                     }
                 }
 
-                delegate: ItemDelegate {
+                delegate: CheckDelegate {
                     id: delegate
-                    width: mimeTypesView.width
-                    height: Kirigami.Units.iconSizes.small + padding * 2
+
+                    required property int index
                     required property string name
                     required property string comment
-                    required property var decoration
+                    required property string decoration
+
+                    width: mimeTypesView.width
+                    height: Kirigami.Units.iconSizes.small + padding * 2
+
+                    icon.name: decoration
+
+                    checked: mimeTypesModel.checkedTypes.indexOf(name) >= 0
+                    highlighted: ListView.isCurrentItem && activeFocus
+
+                    onToggled: {
+                        ListView.view.currentIndex = index;
+                        const idx = mimeTypesModel.checkedTypes.indexOf(name);
+                        if (idx >= 0) {
+                            mimeTypesModel.checkedTypes.splice(idx, 1);
+                        } else {
+                            mimeTypesModel.checkedTypes.push(name)
+                        }
+                    }
 
                     contentItem: RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
+
                         RowLayout {
-                            Layout.preferredWidth: mimeTypesView.columnSize
-                            Layout.maximumWidth: mimeTypesView.columnSize
+                            // Note: assuming check indicator will be on the left
+                            Layout.preferredWidth: mimeTypesView.columnSize - (delegate.mirrored ? delegate.rightPadding : delegate.leftPadding)
+                            Layout.minimumWidth: Layout.preferredWidth
+                            Layout.maximumWidth: Layout.preferredWidth
+                            Layout.fillWidth: false
                             Layout.fillHeight: true
-                            CheckBox {
-                                Layout.fillHeight: true
-                                checked: mimeTypesModel.checkedTypes.indexOf(name) >= 0
-                                onToggled: {
-                                    let idx = mimeTypesModel.checkedTypes.indexOf(name);
-                                    if (idx >= 0) {
-                                        mimeTypesModel.checkedTypes.splice(idx, 1);
-                                    } else {
-                                        mimeTypesModel.checkedTypes.push(name)
-                                    }
-                                }
-                            }
+
+                            spacing: delegate.spacing
+
                             Kirigami.Icon {
-                                Layout.fillHeight: true
-                                implicitWidth: Kirigami.Units.iconSizes.small
-                                implicitHeight: Kirigami.Units.iconSizes.small
-                                animated: false // TableView re-uses delegates, avoid animation when sorting/filtering.
-                                source: decoration
+                                visible: delegate.icon.name !== ""
+                                source: delegate.icon.name
+                                animated: false
+                                selected: (delegate.pressed || delegate.highlighted)
+                                Layout.alignment: Qt.AlignVCenter
+                                Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                                Layout.preferredWidth: Kirigami.Units.iconSizes.small
                             }
+
                             Label {
-                                text: name
+                                text: delegate.name
                                 elide: Text.ElideRight
+                                color: (delegate.pressed || delegate.highlighted) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                             }
                         }
                         Label {
-                            text: comment
+                            text: delegate.comment
                             elide: Text.ElideRight
+                            color: (delegate.pressed || delegate.highlighted) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                             Layout.fillWidth: true
                             Layout.fillHeight: true
                         }
