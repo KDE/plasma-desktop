@@ -37,9 +37,9 @@ Item {
 
     KSvg.FrameSvgItem {
         anchors.fill: parent
+        anchors.margins: -Kirigami.Units.smallSpacing
         visible: mouseArea.containsMouse || parent.checked
         opacity: mouseArea.containsMouse ? 1.0 : 0.5
-        scale: 1.1
         imagePath: "widgets/viewitem"
         prefix: "hover"
     }
