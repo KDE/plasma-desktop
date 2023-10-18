@@ -11,7 +11,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kitemmodels 1.0 as KItemModels
+import org.kde.kitemmodels as KItemModels
 import org.kde.plasma.plasmoid 2.0
 
 RowLayout {
@@ -29,7 +29,7 @@ RowLayout {
         sourceModel: systemModel
 
         function systemFavoritesContainsRow(sourceRow, sourceParent) {
-            const FavoriteIdRole = Qt.UserRole + 3; // XXX: Change to real enum value when it's exported
+            const FavoriteIdRole = sourceModel.KItemModels.KRoleNames.role("favoriteId");
             const favoriteId = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), FavoriteIdRole);
             return String(Plasmoid.configuration.systemFavorites).includes(favoriteId);
         }
