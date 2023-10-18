@@ -8,8 +8,11 @@
 
 import QtQuick 2.15
 import QtQml 2.15
-import org.kde.ksvg 1.0 as KSvg
+
 import org.kde.plasma.components 3.0 as PC3
+import org.kde.plasma.extras as PlasmaExtras
+
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.kirigami 2.20 as Kirigami
 
 // ScrollView makes it difficult to control implicit size using the contentItem.
@@ -116,19 +119,17 @@ EmptyPage {
         keyNavigationWraps: false
 
         highlightMoveDuration: 0
-        // TODO: port to PlasmaExtras.Highlight
-        highlight: KSvg.FrameSvgItem {
+        highlight: PlasmaExtras.Highlight {
             // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
             // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
             z: root.currentItem && root.currentItem.Drag.active ?
                 3 : 0
-            opacity: view.activeFocus
+            pressed: view.currentItem && view.currentItem.isPressed
+            active: view.activeFocus
                 || (kickoff.contentArea === root
-                    && kickoff.searchField.activeFocus) ? 1 : 0.5
+                    && kickoff.searchField.activeFocus)
             width: view.cellWidth
             height: view.cellHeight
-            imagePath: "widgets/viewitem"
-            prefix: view.currentItem.isPressed ? "selected+hover" : "hover"
         }
 
         delegate: KickoffGridDelegate {

@@ -18,6 +18,7 @@ Item {
 
     readonly property string pluginName: model.pluginName
     readonly property bool pendingUninstall: pendingUninstallTimer.applets.indexOf(pluginName) > -1
+    readonly property bool pressed: tapHandler.pressed
 
     width: list.cellWidth
     height: list.cellHeight
@@ -27,6 +28,7 @@ Item {
     }
 
     TapHandler {
+        id: tapHandler
         enabled: !delegate.pendingUninstall
         onTapped: widgetExplorer.addApplet(delegate.pluginName)
     }
@@ -66,6 +68,9 @@ Item {
 
     ColumnLayout {
         id: mainLayout
+
+        readonly property color textColor: tapHandler.pressed ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+
         spacing: Kirigami.Units.smallSpacing
         anchors {
             left: parent.left
@@ -96,6 +101,7 @@ Item {
                     anchors.fill: parent
                     source: model.decoration
                     visible: model.screenshot === ""
+                    selected: tapHandler.pressed
                 }
                 Image {
                     width: Kirigami.Units.iconSizes.enormous
@@ -206,6 +212,7 @@ Item {
             maximumLineCount: 2
             lineHeight: 0.95
             horizontalAlignment: Text.AlignHCenter
+            color: mainLayout.textColor
         }
         PlasmaComponents.Label {
             Layout.fillWidth: true
@@ -217,6 +224,7 @@ Item {
             elide: Text.ElideRight
             maximumLineCount: heading.lineCount === 1 ? 3 : 2
             horizontalAlignment: Text.AlignHCenter
+            color: mainLayout.textColor
         }
     }
 }

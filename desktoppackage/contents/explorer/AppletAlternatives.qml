@@ -100,7 +100,7 @@ PlasmaCore.Dialog {
                 model: widgetExplorer.widgetsModel
                 boundsBehavior: Flickable.StopAtBounds
                 highlight: PlasmaExtras.Highlight {
-                    id: highlight
+                    pressed: mainList.currentItem && mainList.currentItem.pressed
                 }
                 highlightMoveDuration : 0
                 highlightResizeDuration: 0
@@ -108,6 +108,7 @@ PlasmaCore.Dialog {
                 height: contentHeight+Kirigami.Units.smallSpacing
 
                 delegate: PlasmaExtras.ListItem {
+                    id: listItem
 
                     implicitHeight: contentLayout.implicitHeight + Kirigami.Units.smallSpacing * 2
 
@@ -160,6 +161,10 @@ PlasmaCore.Dialog {
                         }
 
                         ColumnLayout {
+                            id: labelLayout
+
+                            readonly property color textColor: listItem.pressed ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+
                             Layout.fillHeight: true
                             Layout.fillWidth: true
                             spacing: 0 // The labels bring their own bottom margins
@@ -170,6 +175,7 @@ PlasmaCore.Dialog {
                                 text: model.name
                                 elide: Text.ElideRight
                                 type: model.pluginName === alternativesHelper.currentPlugin ? PlasmaExtras.Heading.Type.Primary : PlasmaExtras.Heading.Type.Normal
+                                color: labelLayout.textColor
                             }
 
                             PlasmaComponents3.Label {
@@ -182,6 +188,7 @@ PlasmaCore.Dialog {
                                 maximumLineCount: 2
                                 wrapMode: Text.WordWrap
                                 elide: Text.ElideRight
+                                color: labelLayout.textColor
                             }
                         }
                     }

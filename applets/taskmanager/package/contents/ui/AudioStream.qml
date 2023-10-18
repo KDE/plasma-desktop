@@ -6,6 +6,7 @@
 
 import QtQuick 2.15
 
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
 
@@ -103,11 +104,10 @@ MouseArea {
     Accessible.description: task.muted ? i18nc("@info:tooltip %1 is the window title", "Unmute %1", model.display) : i18nc("@info:tooltip %1 is the window title", "Mute %1", model.display)
     Accessible.role: Accessible.Button
 
-    KSvg.FrameSvgItem {
+    PlasmaExtras.Highlight {
         anchors.fill: audioStreamIcon
-        visible: parent.containsMouse || parent.activeFocus
-        imagePath: "widgets/viewitem"
-        prefix: "hover"
+        hovered: audioStreamIconBox.containsMouse || parent.activeFocus
+        pressed: audioStreamIconBox.pressed
     }
 
     Kirigami.Icon {
@@ -117,6 +117,7 @@ MouseArea {
         readonly property var requiredSpace: Math.min(iconBox.width, iconBox.height)
                                              + Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium) * 2
         source: "audio-volume-high-symbolic"
+        selected: audioStreamIconBox.pressed
 
         height: Math.round(Math.min(parent.height * indicatorScale, Kirigami.Units.iconSizes.smallMedium))
         width: height

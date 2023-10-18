@@ -32,6 +32,8 @@ Item {
         || (("hasActionList" in model) && (model.hasActionList === true)))
     property QtObject childDialog: null
     property Item menu: actionMenu
+    readonly property bool pressed: mouseArea.pressed
+    readonly property bool iconAndLabelsShouldlookSelected: mouseArea.pressed && !hasChildren
 
     Accessible.role: isSeparator ? Accessible.Separator: Accessible.MenuItem
     Accessible.name: label.text
@@ -193,7 +195,7 @@ Item {
             visible: iconsEnabled
 
             animated: false
-
+            selected: item.iconAndLabelsShouldlookSelected
             source: model.decoration
         }
 
@@ -211,6 +213,7 @@ Item {
             textFormat: Text.PlainText
             wrapMode: Text.NoWrap
             elide: Text.ElideRight
+            color: item.iconAndLabelsShouldlookSelected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
 
             text: model.display
         }
@@ -225,7 +228,7 @@ Item {
 
             visible: item.hasChildren
             opacity: (item.ListView.view.currentIndex === index) ? 1.0 : 0.4
-
+            selected: item.iconAndLabelsShouldlookSelected
             source: Qt.application.layoutDirection !== Qt.RightToLeft
                 ? "go-next-symbolic"
                 : "go-next-rtl-symbolic"

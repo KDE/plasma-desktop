@@ -4,6 +4,7 @@ import QtQuick.Window 2.15
 
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.shell.panel 0.1 as Panel
 import org.kde.kirigami 2.20 as Kirigami
@@ -25,6 +26,8 @@ Item {
     property int windowZ: 0
     property int screenHeight: Math.round(screenRect.height / 2)
 
+    readonly property bool iconAndLabelsShouldlookSelected: checked || mouseArea.pressed
+
     signal clicked()
 
     implicitHeight: childrenRect.height
@@ -35,13 +38,11 @@ Item {
         visible: mouseArea.containsMouse && text.length > 0
     }
 
-    KSvg.FrameSvgItem {
+    PlasmaExtras.Highlight {
         anchors.fill: parent
         anchors.margins: -Kirigami.Units.smallSpacing
-        visible: mouseArea.containsMouse || parent.checked
-        opacity: mouseArea.containsMouse ? 1.0 : 0.5
-        imagePath: "widgets/viewitem"
-        prefix: "hover"
+        hovered: mouseArea.containsMouse
+        pressed: panelRepresentation.iconAndLabelsShouldlookSelected
     }
 
     MouseArea {
@@ -181,6 +182,7 @@ Item {
             horizontalAlignment: Text.AlignHCenter
             Layout.maximumWidth: screenRect.implicitWidth
             wrapMode: Text.Wrap
+            color: panelRepresentation.iconAndLabelsShouldlookSelected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
         }
     }
 }

@@ -892,7 +892,8 @@ Kicker.DashboardWindow {
                                 + Kirigami.Units.smallSpacing)
 
                             visible: filterList.currentItem
-                            opacity: filterListScrollArea.focus ? 1.0 : 0.7
+                            active: filterListScrollArea.focus
+                            pressed: filterList.currentItem && filterList.currentItem.pressed
                         }
 
                         highlightFollowsCurrentItem: false

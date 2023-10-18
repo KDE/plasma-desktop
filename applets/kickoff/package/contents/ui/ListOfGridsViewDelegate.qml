@@ -6,6 +6,9 @@
 
 import QtQuick 2.15
 import QtQml 2.15
+
+import org.kde.plasma.extras as PlasmaExtras
+
 import org.kde.ksvg 1.0 as KSvg
 
 KickoffGridView {
@@ -30,18 +33,18 @@ KickoffGridView {
     view.height : view.cellHeight * Math.ceil(count / view.columns)
     view.implicitHeight: view.contentHeight
     blockTargetWheel: false
-    view.highlight: KSvg.FrameSvgItem {
+    view.highlight: PlasmaExtras.Highlight {
+        visible: root.isCurrentSectionGrid
         // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
         // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
         z: root.currentItem && root.currentItem.Drag.active ?
             3 : 0
-        opacity: view.activeFocus
-            || (kickoff.contentArea === root
-                && kickoff.searchField.activeFocus) || (root.isSearchFieldActive && root.isCurrentSectionGrid) ? 1 : (root.isCurrentSectionGrid ? 0.5 : 0)
         width: view.cellWidth
         height: view.cellHeight
-        imagePath: "widgets/viewitem"
-        prefix: "hover"
+        pressed: view.currentItem && view.currentItem.isPressed
+        active: view.activeFocus
+            || (kickoff.contentArea === root
+                && kickoff.searchField.activeFocus)
     }
 
     delegate: KickoffGridDelegate {

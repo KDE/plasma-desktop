@@ -41,7 +41,7 @@ AbstractKickoffItemDelegate {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
 
             animated: false
-
+            selected: root.iconAndLabelsShouldlookSelected
             source: root.decoration || root.icon.name || root.icon.source
         }
 
@@ -58,7 +58,7 @@ AbstractKickoffItemDelegate {
             verticalAlignment: Text.AlignTop
             maximumLineCount: 2
             wrapMode: Text.Wrap
-            color: root.isPressed ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+            color: root.iconAndLabelsShouldlookSelected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
         }
     }
 }

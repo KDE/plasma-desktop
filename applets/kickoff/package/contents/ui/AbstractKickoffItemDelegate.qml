@@ -44,6 +44,8 @@ T.ItemDelegate {
 
     readonly property alias mouseArea: mouseArea
 
+    readonly property bool iconAndLabelsShouldlookSelected: isPressed && !isCategoryListItem
+
     property bool labelTruncated: false
     property bool descriptionTruncated: false
     property bool descriptionVisible: true

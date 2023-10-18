@@ -9,11 +9,12 @@ import QtQuick.Window 2.15
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid 2.0
-
 import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
+import org.kde.plasma.extras as PlasmaExtras
+
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 import org.kde.kquickcontrolsaddons 2.0
 
 Item {
@@ -97,6 +98,8 @@ Item {
             property Item toolTip: toolTip
             property Item selectionButton: null
             property Item popupButton: null
+
+            readonly property bool iconAndLabelsShouldlookSelected: impl.hovered && Plasmoid.configuration.iconHoverEffect
 
             onSelectedChanged: {
                 if (selected && !blank) {
@@ -229,7 +232,7 @@ Item {
                 property string prefix: ""
 
                 sourceComponent: frameComponent
-                active: state !== ""
+                active: impl.iconAndLabelsShouldlookSelected || model.selected
                 asynchronous: true
 
                 width: {
@@ -363,18 +366,14 @@ Item {
                 Component {
                     id: frameComponent
 
-                    KSvg.FrameSvgItem {
+                    PlasmaExtras.Highlight {
                         // Workaround for a bug where the frameComponent does not
                         // get unloaded when items are dragged to a different
                         // place on the desktop.
                         visible: this === frameLoader.item
-
-                        prefix: frameLoader.prefix
-
-                        imagePath: "widgets/viewitem"
-
-                        // Use inactive highlight effect when something else has focus
-                        opacity: Window.active ? 1 : 0.4
+                        hovered: impl.iconAndLabelsShouldlookSelected
+                        pressed: model.selected
+                        active: Window.active
                     }
                 }
 
@@ -428,36 +427,6 @@ Item {
                         source: icon
                     }
                 }
-
-                states: [
-                    State {
-                        name: "selected"
-                        when: model.selected
-
-                        PropertyChanges {
-                            target: frameLoader
-                            prefix: "selected"
-                        }
-                    },
-                    State {
-                        name: "hover"
-                        when: hovered && !model.selected && Plasmoid.configuration.iconHoverEffect
-
-                        PropertyChanges {
-                            target: frameLoader
-                            prefix: "hover"
-                        }
-                    },
-                    State {
-                        name: "selected+hover"
-                        when: hovered && model.selected && Plasmoid.configuration.iconHoverEffect
-
-                        PropertyChanges {
-                            target: frameLoader
-                            prefix: "selected+hover"
-                        }
-                    }
-                ]
             }
 
             Column {

@@ -141,7 +141,9 @@ FocusScope {
                 }
 
                 highlight: PlasmaExtras.Highlight {
-                    visible: listView.currentItem && !listView.currentItem.isSeparator
+                    visible: !listView.currentItem.isSeparator
+                    pressed: listView.currentItem && listView.currentItem.pressed && !listView.currentItem.hasChildren
+                    active:  listView.currentItem && listView.currentItem.hovered
                 }
 
                 highlightMoveDuration: 0

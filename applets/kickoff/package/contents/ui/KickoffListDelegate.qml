@@ -50,14 +50,14 @@ AbstractKickoffItemDelegate {
             Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
 
             animated: false
-
+            selected: root.iconAndLabelsShouldlookSelected
             source: root.decoration || root.icon.name || root.icon.source
         }
 
         GridLayout {
             id: gridLayout
 
-            readonly property color textColor: root.isPressed && !root.isCategoryListItem ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+            readonly property color textColor: root.iconAndLabelsShouldlookSelected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
 
             Layout.fillWidth: true
 

@@ -236,6 +236,7 @@ FocusScope {
                     PlasmaExtras.Highlight {
                         visible: gridView.currentItem && !isDropPlaceHolder
                         hovered: true
+                        pressed: hoverArea.pressed
 
                         anchors.fill: parent
                     }

@@ -237,7 +237,9 @@ PC3.Page {
             cellHeight: cellWidth + Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing * 2
 
             delegate: AppletDelegate {}
-            highlight: PlasmaExtras.Highlight {}
+            highlight: PlasmaExtras.Highlight {
+                pressed: list.currentItem && list.currentItem.pressed
+            }
             highlightMoveDuration: 0
             //highlightResizeDuration: 0
 
