@@ -50,6 +50,10 @@ T.ItemDelegate {
 
     property Item dragIconItem: null
 
+    // pressed: is read-only and we're not using it here because we have fancy
+    // custom mouse handling
+    readonly property bool isPressed: mouseArea.pressed
+
     function openActionMenu(x = undefined, y = undefined) {
         if (!hasActionList) { return; }
         // fill actionList only when needed to prevent slowness when changing app categories rapidly.

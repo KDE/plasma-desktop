@@ -56,6 +56,9 @@ AbstractKickoffItemDelegate {
 
         GridLayout {
             id: gridLayout
+
+            readonly property color textColor: root.isPressed && !root.isCategoryListItem ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+
             Layout.fillWidth: true
 
             rows: root.compact ? 1 : 2
@@ -81,6 +84,7 @@ AbstractKickoffItemDelegate {
                 elide: Text.ElideRight
                 verticalAlignment: Text.AlignVCenter
                 maximumLineCount: 1
+                color: gridLayout.textColor
             }
 
             PC3.Label {
@@ -97,6 +101,7 @@ AbstractKickoffItemDelegate {
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: root.compact ? Text.AlignRight : Text.AlignLeft
                 maximumLineCount: 1
+                color: gridLayout.textColor
             }
         }
     }

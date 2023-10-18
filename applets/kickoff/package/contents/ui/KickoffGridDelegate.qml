@@ -58,6 +58,7 @@ AbstractKickoffItemDelegate {
             verticalAlignment: Text.AlignTop
             maximumLineCount: 2
             wrapMode: Text.Wrap
+            color: root.isPressed ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
         }
     }
 }

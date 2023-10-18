@@ -120,6 +120,7 @@ EmptyPage {
         // This is actually needed. The highlight will animate from thin to wide otherwise.
         highlightResizeDuration: 0
         highlightMoveDuration: 0
+        // TODO: port to PlasmaExtras.Highlight
         highlight: KSvg.FrameSvgItem {
             // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
             // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
@@ -129,7 +130,7 @@ EmptyPage {
                 || (kickoff.contentArea === root
                     && kickoff.searchField.activeFocus) ? 1 : 0.5
             imagePath: "widgets/viewitem"
-            prefix: "hover"
+            prefix: view.currentItem.isPressed  && !view.currentItem.isCategoryListItem ? "selected+hover" : "hover"
         }
 
         delegate: KickoffListDelegate {
