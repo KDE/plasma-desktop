@@ -1,28 +1,27 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-29 01:56+0000\n"
-"PO-Revision-Date: 2023-10-01 09:25+0300\n"
-"Last-Translator: \n"
-"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-17 21:52+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:10
 #, kde-format
 msgid "How many months keep the activity history"
-msgstr "במשך כמה חודשים לשמור את היסטוריית הפעילות"
+msgstr "למשך כמה חודשים לשמור את היסטוריית הפעילות"
 
 #. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:17
@@ -69,14 +68,12 @@ msgid "Forget everything"
 msgstr "לשכוח הכול"
 
 #: kcm_recentFiles.cpp:200
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "unit of time. months to keep the history"
 msgid " month"
 msgid_plural " months"
 msgstr[0] " חודש"
-msgstr[1] " חודשיים"
-msgstr[2] " חודשים"
-msgstr[3] " חודשים"
+msgstr[1] " חודשים"
 
 #: kcm_recentFiles.cpp:203
 #, kde-format

@@ -3,20 +3,21 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmaactivitymanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2023-09-30 14:22+0300\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-17 21:52+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: sortedactivitiesmodel.cpp:311
 #, kde-format
@@ -29,44 +30,36 @@ msgid "Used more than a year ago"
 msgstr "היה בשימוש לפני למעלה משנה"
 
 #: sortedactivitiesmodel.cpp:328
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "amount in months"
 msgid "Used a month ago"
 msgid_plural "Used %1 months ago"
 msgstr[0] "היה בשימוש לפני חודש"
-msgstr[1] "היה בשימוש לפני חודשיים"
-msgstr[2] "היה בשימוש לפני %1 חודש"
-msgstr[3] "היה בשימוש לפני %1 חודשים"
+msgstr[1] "היה בשימוש לפני %1 חודשים"
 
 #: sortedactivitiesmodel.cpp:329
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "amount in days"
 msgid "Used a day ago"
 msgid_plural "Used %1 days ago"
 msgstr[0] "היה בשימוש אתמול"
-msgstr[1] "היה בשימוש שלשום"
-msgstr[2] "היה בשימוש לפני %1 יום"
-msgstr[3] "היה בשימוש לפני %1 ימים"
+msgstr[1] "היה בשימוש לפני %1 ימים"
 
 #: sortedactivitiesmodel.cpp:330
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "amount in hours"
 msgid "Used an hour ago"
 msgid_plural "Used %1 hours ago"
 msgstr[0] "היה בשימוש לפני שעה"
-msgstr[1] "היה בשימוש לפני שעתיים"
-msgstr[2] "היה בשימוש לפני %1 שעות"
-msgstr[3] "היה בשימוש לפני %1 שעות"
+msgstr[1] "היה בשימוש לפני %1 שעות"
 
 #: sortedactivitiesmodel.cpp:331
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "amount in minutes"
 msgid "Used a minute ago"
 msgid_plural "Used %1 minutes ago"
 msgstr[0] "היה בשימוש לפני דקה"
 msgstr[1] "היה בשימוש לפני %1 דקות"
-msgstr[2] "היה בשימוש לפני %1 דקות"
-msgstr[3] "היה בשימוש לפני %1 דקות"
 
 #: sortedactivitiesmodel.cpp:332
 #, kde-format

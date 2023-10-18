@@ -1,22 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-05 01:57+0000\n"
-"PO-Revision-Date: 2023-09-30 13:25+0300\n"
-"Last-Translator: \n"
-"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-17 21:55+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: globalaccelmodel.cpp:209
 #, kde-format
@@ -283,14 +282,12 @@ msgid "No active shortcuts"
 msgstr "אין קיצורי מקשים פעילים"
 
 #: ui/ShortcutActionDelegate.qml:95
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "קיצור ברירת מחדל"
 msgstr[1] "קיצורי ברירת מחדל"
-msgstr[2] "קיצורי ברירת מחדל"
-msgstr[3] "קיצורי ברירת מחדל"
 
 #: ui/ShortcutActionDelegate.qml:97
 #, kde-format
