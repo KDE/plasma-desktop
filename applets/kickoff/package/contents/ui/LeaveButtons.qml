@@ -27,16 +27,18 @@ RowLayout {
 
     component FilteredModel : KItemModels.KSortFilterProxyModel {
         sourceModel: systemModel
-        // BUG: Can't use const or let inside inline component due to QTBUG-91917
+
         function systemFavoritesContainsRow(sourceRow, sourceParent) {
-            var FavoriteIdRole = Qt.UserRole + 3; // XXX: Change to real enum value when it's exported
-            var favoriteId = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), FavoriteIdRole);
+            const FavoriteIdRole = Qt.UserRole + 3; // XXX: Change to real enum value when it's exported
+            const favoriteId = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), FavoriteIdRole);
             return String(Plasmoid.configuration.systemFavorites).includes(favoriteId);
         }
+
         function trigger(index) {
-            var sourceIndex = mapToSource(this.index(index, 0));
+            const sourceIndex = mapToSource(this.index(index, 0));
             systemModel.trigger(sourceIndex.row, "", null);
         }
+
         Component.onCompleted: {
             Plasmoid.configuration.valueChanged.connect((key, value) => {
                 if (key === "systemFavorites") {
