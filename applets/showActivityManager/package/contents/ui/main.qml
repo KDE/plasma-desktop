@@ -41,13 +41,8 @@ PlasmoidItem {
         id: dropArea
         anchors.fill: parent
 
-        onDragEnter: {
-            ActivitySwitcher.Backend.setDropMode(true);
-        }
-
-        onDragLeave: {
-            ActivitySwitcher.Backend.setDropMode(false);
-        }
+        onDragEnter: ActivitySwitcher.Backend.setDropMode(true)
+        onDragLeave: ActivitySwitcher.Backend.setDropMode(false)
 
         Activities.ActivityInfo {
             id: currentActivity
@@ -89,7 +84,7 @@ PlasmoidItem {
             width: height
 
             source: !root.showActivityIcon ? "activities" :
-                    currentActivity.icon == "" ? "activities" :
+                    currentActivity.icon === "" ? "activities" :
                     currentActivity.icon
         }
 
