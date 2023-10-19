@@ -6,8 +6,8 @@
 
 #pragma once
 
+#include <QList>
 #include <QSocketNotifier>
-#include <QVector>
 #include <QtGui/private/qtx11extras_p.h>
 
 #include <xcb/record.h>
@@ -40,6 +40,6 @@ private:
     xcb_record_context_t m_context;
     xcb_record_enable_context_cookie_t m_cookie;
 
-    QVector<bool> m_modifier, m_ignore, m_pressed;
+    QList<bool> m_modifier, m_ignore, m_pressed;
     int m_modifiersPressed, m_keysPressed;
 };

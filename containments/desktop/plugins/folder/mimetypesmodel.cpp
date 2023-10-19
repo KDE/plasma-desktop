@@ -20,7 +20,7 @@ MimeTypesModel::MimeTypesModel(QObject *parent)
     m_mimeTypesList = db.allMimeTypes();
     std::stable_sort(m_mimeTypesList.begin(), m_mimeTypesList.end(), lessThan);
 
-    m_checkedRows = QVector<bool>(m_mimeTypesList.size(), false);
+    m_checkedRows = QList<bool>(m_mimeTypesList.size(), false);
 }
 
 MimeTypesModel::~MimeTypesModel()
@@ -114,7 +114,7 @@ QStringList MimeTypesModel::checkedTypes() const
 
 void MimeTypesModel::setCheckedTypes(const QStringList &list)
 {
-    m_checkedRows = QVector<bool>(m_mimeTypesList.size(), false);
+    m_checkedRows = QList<bool>(m_mimeTypesList.size(), false);
 
     for (const QString &name : list) {
         const int row = indexOfType(name);

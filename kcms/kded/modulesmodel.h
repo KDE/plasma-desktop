@@ -7,8 +7,8 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QList>
 #include <QString>
-#include <QVector>
 
 #include "kcmkded.h"
 
@@ -61,7 +61,7 @@ Q_SIGNALS:
     void autoloadedModulesChanged();
 
 private:
-    QVector<ModulesModelData> m_data;
+    QList<ModulesModelData> m_data;
 
     bool m_runningModulesKnown = false;
     QStringList m_runningModules;

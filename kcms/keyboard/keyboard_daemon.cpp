@@ -255,9 +255,9 @@ uint KeyboardDaemon::getLayout() const
     return X11Helper::getGroup();
 }
 
-QVector<LayoutNames> KeyboardDaemon::getLayoutsList() const
+QList<LayoutNames> KeyboardDaemon::getLayoutsList() const
 {
-    QVector<LayoutNames> ret;
+    QList<LayoutNames> ret;
 
     auto layoutsList = X11Helper::getLayoutsList();
     if (keyboardConfig->layoutLoopCount() != KeyboardConfig::NO_LOOPING) {

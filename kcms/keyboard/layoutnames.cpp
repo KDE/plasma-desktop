@@ -10,7 +10,7 @@
 void LayoutNames::registerMetaType()
 {
     qDBusRegisterMetaType<LayoutNames>();
-    qDBusRegisterMetaType<QVector<LayoutNames>>();
+    qDBusRegisterMetaType<QList<LayoutNames>>();
 }
 
 QDBusArgument &operator<<(QDBusArgument &argument, const LayoutNames &layoutNames)

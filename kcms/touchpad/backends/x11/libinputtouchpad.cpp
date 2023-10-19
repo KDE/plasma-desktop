@@ -259,7 +259,7 @@ bool LibinputTouchpad::getConfig()
 
 bool LibinputTouchpad::applyConfig()
 {
-    QVector<QString> msgs;
+    QList<QString> msgs;
 
     msgs << valueWriter(m_enabled) << valueWriter(m_tapToClick) << valueWriter(m_lrmTapButtonMap) << valueWriter(m_lmrTapButtonMap) << valueWriter(m_tapAndDrag)
          << valueWriter(m_tapDragLock) << valueWriter(m_leftHanded) << valueWriter(m_disableWhileTyping) << valueWriter(m_middleEmulation)

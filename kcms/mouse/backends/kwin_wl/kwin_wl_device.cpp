@@ -10,7 +10,7 @@
 #include <QDBusError>
 #include <QDBusMessage>
 #include <QDBusReply>
-#include <QVector>
+#include <QList>
 
 #include "logging.h"
 
@@ -118,7 +118,7 @@ bool KWinWaylandDevice::getDefaultConfig()
 
 bool KWinWaylandDevice::applyConfig()
 {
-    QVector<QString> msgs;
+    QList<QString> msgs;
 
     msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat)
          << valueWriter(m_pointerAccelerationProfileAdaptive) << valueWriter(m_middleEmulation) << valueWriter(m_naturalScroll) << valueWriter(m_scrollFactor);

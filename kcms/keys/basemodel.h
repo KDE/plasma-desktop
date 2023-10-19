@@ -8,8 +8,8 @@
 
 #include <QAbstractItemModel>
 #include <QKeySequence>
+#include <QList>
 #include <QSet>
-#include <QVector>
 
 class KConfigBase;
 
@@ -41,7 +41,7 @@ struct Component {
     QString displayName;
     ComponentType type;
     QString icon;
-    QVector<Action> actions;
+    QList<Action> actions;
     bool checked;
     bool pendingDeletion;
 };
@@ -89,5 +89,5 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
 protected:
-    QVector<Component> m_components;
+    QList<Component> m_components;
 };

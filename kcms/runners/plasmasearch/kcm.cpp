@@ -27,7 +27,7 @@ public:
 
     bool isDefaults() const override
     {
-        const QVector<KPluginMetaData> runnerData = KRunner::RunnerManager::runnerMetaDataList();
+        const QList<KPluginMetaData> runnerData = KRunner::RunnerManager::runnerMetaDataList();
         KConfigGroup cfgGroup(m_krunnerConfig, "Plugins");
         if (cfgGroup.group("Favorites").readEntry("plugins", SearchConfigModule::defaultFavoriteIds()) != SearchConfigModule::defaultFavoriteIds()) {
             return false;

@@ -19,6 +19,7 @@
 #include <QDBusMessage>
 #include <QDebug>
 #include <QIcon>
+#include <QList>
 #include <QLocale>
 #include <QPainter>
 #include <QQmlApplicationEngine>
@@ -26,7 +27,6 @@
 #include <QQuickImageProvider>
 #include <QQuickWindow>
 #include <QSessionManager>
-#include <QVector>
 
 #include "config-workspace.h"
 

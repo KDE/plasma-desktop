@@ -22,7 +22,7 @@ PreviewPluginsModel::PreviewPluginsModel(QObject *parent)
 {
     std::stable_sort(m_plugins.begin(), m_plugins.end(), lessThan);
 
-    m_checkedRows = QVector<bool>(m_plugins.size(), false);
+    m_checkedRows = QList<bool>(m_plugins.size(), false);
 }
 
 PreviewPluginsModel::~PreviewPluginsModel()
@@ -86,7 +86,7 @@ void PreviewPluginsModel::setCheckedPlugins(const QStringList &list)
         plugins = KIO::PreviewJob::defaultPlugins();
     }
 
-    m_checkedRows = QVector<bool>(m_plugins.size(), false);
+    m_checkedRows = QList<bool>(m_plugins.size(), false);
 
     for (const QString &name : std::as_const(plugins)) {
         const int row = indexOfPlugin(name);

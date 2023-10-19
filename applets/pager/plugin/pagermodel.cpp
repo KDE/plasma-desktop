@@ -138,7 +138,7 @@ void PagerModel::Private::refreshDataSource()
         QObject::disconnect(virtualDesktopNamesConn);
         virtualDesktopNamesConn = QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::desktopNamesChanged, q, [this]() {
             if (q->rowCount()) {
-                Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QVector<int>{Qt::DisplayRole});
+                Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QList<int>{Qt::DisplayRole});
             }
         });
 
@@ -517,8 +517,8 @@ void PagerModel::drop(QMimeData *mimeData, int modifiers, const QVariant &itemId
         return;
     }
 
-    auto findWindows = [this](const auto &windowIds) -> QVector<QModelIndex> {
-        QVector<QModelIndex> indices;
+    auto findWindows = [this](const auto &windowIds) -> QList<QModelIndex> {
+        QList<QModelIndex> indices;
         for (const auto &id : windowIds) {
             for (int i = 0; i < d->tasksModel->rowCount(); ++i) {
                 const QModelIndex &idx = d->tasksModel->index(i, 0);
@@ -533,7 +533,7 @@ void PagerModel::drop(QMimeData *mimeData, int modifiers, const QVariant &itemId
     };
 
     bool ok = false;
-    QVector<QModelIndex> indices;
+    QList<QModelIndex> indices;
     if (KWindowSystem::isPlatformX11()) {
         indices = findWindows(TaskManager::XWindowTasksModel::winIdsFromMimeData(mimeData, &ok));
     } else if (KWindowSystem::isPlatformWayland()) {

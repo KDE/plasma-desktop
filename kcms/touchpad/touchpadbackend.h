@@ -9,9 +9,9 @@
 
 #include <config-build-options.h>
 
+#include <QList>
 #include <QObject>
 #include <QVariantHash>
-#include <QVector>
 
 enum class TouchpadInputBackendMode {
     Unset = 0,
@@ -80,9 +80,9 @@ public:
         return QString();
     }
 
-    virtual QVector<QObject *> getDevices() const
+    virtual QList<QObject *> getDevices() const
     {
-        return QVector<QObject *>();
+        return QList<QObject *>();
     }
     virtual int touchpadCount() const
     {

@@ -352,8 +352,8 @@ int Positioner::move(const QVariantList &moves)
         return -1;
     }
 
-    QVector<int> fromIndices;
-    QVector<int> toIndices;
+    QList<int> fromIndices;
+    QList<int> toIndices;
     QVariantList sourceRows;
 
     for (int i = 0; i < moves.count(); ++i) {
@@ -483,7 +483,7 @@ void Positioner::sourceStatusChanged()
     }
 }
 
-void Positioner::sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles)
+void Positioner::sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles)
 {
     if (m_enabled) {
         int start = topLeft.row();

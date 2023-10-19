@@ -50,7 +50,7 @@ private:
         bool isFromConfig;
     };
 
-    QVector<FolderInfo> m_folderList;
+    QList<FolderInfo> m_folderList;
     QStringList m_deletedSettings; //< track deleted entries
 
     void syncFolderConfig(const FolderInfo &entry);

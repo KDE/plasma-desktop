@@ -8,7 +8,7 @@
 
 #include "x11_backend.h"
 
-#include <QVector>
+#include <QList>
 
 class X11LibinputBackend : public X11Backend
 {
@@ -35,9 +35,9 @@ public:
     {
         return 1;
     }
-    virtual QVector<QObject *> getDevices() const override
+    virtual QList<QObject *> getDevices() const override
     {
-        return QVector<QObject *>(1, m_device);
+        return QList<QObject *>(1, m_device);
     }
 
 private:

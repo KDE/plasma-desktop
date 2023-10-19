@@ -139,7 +139,7 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
 
 void KWinWaylandBackend::onDeviceRemoved(QString sysName)
 {
-    QVector<QObject *>::const_iterator it = std::find_if(m_devices.constBegin(), m_devices.constEnd(), [sysName](QObject *t) {
+    QList<QObject *>::const_iterator it = std::find_if(m_devices.constBegin(), m_devices.constEnd(), [sysName](QObject *t) {
         return static_cast<KWinWaylandTouchpad *>(t)->sysName() == sysName;
     });
     if (it == m_devices.cend()) {

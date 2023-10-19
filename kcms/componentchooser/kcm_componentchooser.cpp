@@ -157,7 +157,7 @@ void KcmComponentChooser::load()
 
 void KcmComponentChooser::save()
 {
-    QVector<ComponentChooser *> componentsSaved;
+    QList<ComponentChooser *> componentsSaved;
 
     auto handleSave = [&componentsSaved](ComponentChooser *chooser) {
         if (chooser->isSaveNeeded()) {

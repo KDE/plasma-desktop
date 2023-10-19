@@ -8,7 +8,7 @@
 
 #include <QDBusError>
 #include <QDBusInterface>
-#include <QVector>
+#include <QList>
 
 #include "logging.h"
 
@@ -132,7 +132,7 @@ bool KWinWaylandTouchpad::getDefaultConfig()
 
 bool KWinWaylandTouchpad::applyConfig()
 {
-    QVector<QString> msgs;
+    QList<QString> msgs;
 
     msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat)
          << valueWriter(m_pointerAccelerationProfileAdaptive)

@@ -64,7 +64,7 @@ public:
     void watchForEvents(bool keyboard) override;
 
     QStringList listMouses(const QStringList &blacklist) override;
-    QVector<QObject *> getDevices() const override;
+    QList<QObject *> getDevices() const override;
 
 private Q_SLOTS:
     void propertyChanged(xcb_atom_t);

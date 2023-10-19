@@ -325,9 +325,9 @@ QStringList XlibBackend::listMouses(const QStringList &blacklist)
     return list;
 }
 
-QVector<QObject *> XlibBackend::getDevices() const
+QList<QObject *> XlibBackend::getDevices() const
 {
-    QVector<QObject *> touchpads;
+    QList<QObject *> touchpads;
 
 #if HAVE_XORGLIBINPUT
     LibinputTouchpad *libinputtouchpad = dynamic_cast<LibinputTouchpad *>(m_device.get());

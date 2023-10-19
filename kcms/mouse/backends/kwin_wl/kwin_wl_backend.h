@@ -8,7 +8,7 @@
 
 #include "inputbackend.h"
 
-#include <QVector>
+#include <QList>
 
 class QDBusInterface;
 
@@ -36,7 +36,7 @@ public:
     {
         return m_devices.count();
     }
-    virtual QVector<QObject *> getDevices() const override
+    virtual QList<QObject *> getDevices() const override
     {
         return m_devices;
     }
@@ -55,7 +55,7 @@ private:
     void findDevices();
 
     QDBusInterface *m_deviceManager;
-    QVector<QObject *> m_devices;
+    QList<QObject *> m_devices;
     QVariantMap m_buttonMapping;
     QVariantMap m_loadedButtonMapping;
 

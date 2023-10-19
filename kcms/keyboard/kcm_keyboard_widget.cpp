@@ -318,7 +318,7 @@ void KCMKeyboardWidget::initializeLayoutsUI()
     connect(uiWidget->removeLayoutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::removeLayout);
     connect(uiWidget->layoutsTableView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &KCMKeyboardWidget::layoutSelectionChanged);
     connect(uiWidget->layoutsTableView->model(),
-            qOverload<const QModelIndex &, const QModelIndex &, const QVector<int> &>(&QAbstractItemModel::dataChanged),
+            qOverload<const QModelIndex &, const QModelIndex &, const QList<int> &>(&QAbstractItemModel::dataChanged),
             this,
             &KCMKeyboardWidget::uiChanged);
 

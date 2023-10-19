@@ -110,7 +110,7 @@ private:
     Q_PRIVATE_SLOT(d, void slotColumnsInserted(const QModelIndex &parent, int, int))
     Q_PRIVATE_SLOT(d, void slotColumnsAboutToBeRemoved(const QModelIndex &parent, int start, int end))
     Q_PRIVATE_SLOT(d, void slotColumnsRemoved(const QModelIndex &parent, int, int))
-    Q_PRIVATE_SLOT(d, void slotDataChanged(const QModelIndex &from, const QModelIndex &to, const QVector<int> &roles))
+    Q_PRIVATE_SLOT(d, void slotDataChanged(const QModelIndex &from, const QModelIndex &to, const QList<int> &roles))
     Q_PRIVATE_SLOT(d, void slotSourceLayoutAboutToBeChanged(QList<QPersistentModelIndex>, QAbstractItemModel::LayoutChangeHint))
     Q_PRIVATE_SLOT(d, void slotSourceLayoutChanged(const QList<QPersistentModelIndex> &, QAbstractItemModel::LayoutChangeHint))
     Q_PRIVATE_SLOT(d, void slotModelAboutToBeReset())

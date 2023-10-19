@@ -27,7 +27,7 @@ public:
     void slotColumnsInserted(const QModelIndex &parent, int, int);
     void slotColumnsAboutToBeRemoved(const QModelIndex &parent, int start, int end);
     void slotColumnsRemoved(const QModelIndex &parent, int, int);
-    void slotDataChanged(const QModelIndex &from, const QModelIndex &to, const QVector<int> &roles);
+    void slotDataChanged(const QModelIndex &from, const QModelIndex &to, const QList<int> &roles);
     void slotSourceLayoutAboutToBeChanged(const QList<QPersistentModelIndex> &sourceParents, QAbstractItemModel::LayoutChangeHint hint);
     void slotSourceLayoutChanged(const QList<QPersistentModelIndex> &sourceParents, QAbstractItemModel::LayoutChangeHint hint);
     void slotModelAboutToBeReset();
@@ -38,7 +38,7 @@ public:
     int m_rowCount = 0; // have to maintain it here since we can't compute during model destruction
 
     // for layoutAboutToBeChanged/layoutChanged
-    QVector<QPersistentModelIndex> layoutChangePersistentIndexes;
+    QList<QPersistentModelIndex> layoutChangePersistentIndexes;
     QModelIndexList proxyIndexes;
 };
 
@@ -198,7 +198,7 @@ void ShortcutsModel::addSourceModel(QAbstractItemModel *sourceModel)
     Q_ASSERT(sourceModel);
     Q_ASSERT(!d->m_models.contains(sourceModel));
     // clang-format off
-    connect(sourceModel, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)), this, SLOT(slotDataChanged(QModelIndex,QModelIndex,QVector<int>)));
+    connect(sourceModel, SIGNAL(dataChanged(QModelIndex,QModelIndex,QList<int>)), this, SLOT(slotDataChanged(QModelIndex,QModelIndex,QList<int>)));
     connect(sourceModel, SIGNAL(rowsInserted(QModelIndex,int,int)), this, SLOT(slotRowsInserted(QModelIndex,int,int)));
     connect(sourceModel, SIGNAL(rowsRemoved(QModelIndex,int,int)), this, SLOT(slotRowsRemoved(QModelIndex,int,int)));
     connect(sourceModel, SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)), this, SLOT(slotRowsAboutToBeInserted(QModelIndex,int,int)));
@@ -327,7 +327,7 @@ void ShortcutsModelPrivate::slotColumnsRemoved(const QModelIndex &parent, int, i
     }
 }
 
-void ShortcutsModelPrivate::slotDataChanged(const QModelIndex &from, const QModelIndex &to, const QVector<int> &roles)
+void ShortcutsModelPrivate::slotDataChanged(const QModelIndex &from, const QModelIndex &to, const QList<int> &roles)
 {
     if (!from.isValid()) { // QSFPM bug, it emits dataChanged(invalid, invalid) if a cell in a hidden column changes
         return;

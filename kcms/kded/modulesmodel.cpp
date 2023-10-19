@@ -151,8 +151,8 @@ void ModulesModel::load()
 
     QStringList knownModules;
 
-    QVector<ModulesModelData> autostartModules;
-    QVector<ModulesModelData> onDemandModules;
+    QList<ModulesModelData> autostartModules;
+    QList<ModulesModelData> onDemandModules;
 
     const auto modules = KPluginMetaData::findPlugins(QStringLiteral("kf6/kded"));
     for (const KPluginMetaData &module : modules) {

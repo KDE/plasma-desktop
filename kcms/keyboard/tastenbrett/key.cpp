@@ -244,7 +244,7 @@ KeyCap *Key::resolveCap()
     // such as 'F1' that can appear in all levels but we only want it shown
     // once in the TopLeft position.
     const auto levelEnum = QMetaEnum::fromType<KeyCap::Level>();
-    QVector<QString> seen;
+    QList<QString> seen;
     for (int i = 0; i < levelEnum.keyCount(); ++i) {
         int level = levelEnum.value(i);
         if (group >= XkbKeyNumGroups(xkb, keycode)) {

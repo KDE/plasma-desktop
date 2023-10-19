@@ -40,6 +40,6 @@ Q_SIGNALS:
 private:
     int indexOfPlugin(const QString &pluginId) const;
 
-    QVector<KPluginMetaData> m_plugins;
-    QVector<bool> m_checkedRows;
+    QList<KPluginMetaData> m_plugins;
+    QList<bool> m_checkedRows;
 };

@@ -8,9 +8,9 @@
 */
 #pragma once
 
+#include <QList>
 #include <QObject>
 #include <QVariantHash>
-#include <QVector>
 
 #include "folderplugin_private_export.h"
 
@@ -92,8 +92,8 @@ private:
     QHash<std::pair<QUrl, QString /* activity ID */>, int> m_screenItemMap;
     // Use QSet when appropriate to improve lookup times substantially.
     QHash<std::pair<int /* screen */, QString /* activity ID */>, QSet<QUrl>> m_itemsOnDisabledScreensMap;
-    QHash<QUrl, QVector<std::pair<int /* screen */, QString /* activity ID */>>> m_screensPerPath; // screens per registered path
-    QVector<std::pair<int /* screen */, QString /* activity ID */>> m_availableScreens;
+    QHash<QUrl, QList<std::pair<int /* screen */, QString /* activity ID */>>> m_screensPerPath; // screens per registered path
+    QList<std::pair<int /* screen */, QString /* activity ID */>> m_availableScreens;
     Plasma::Corona *m_corona = nullptr;
     QTimer *const m_screenMappingChangedTimer;
     bool m_sharedDesktops = false; // all screens share the same desktops, disabling the screen mapping

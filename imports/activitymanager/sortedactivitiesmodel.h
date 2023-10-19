@@ -26,7 +26,7 @@ class SortedActivitiesModel : public QSortFilterProxyModel
     Q_PROPERTY(bool inhibitUpdates READ inhibitUpdates WRITE setInhibitUpdates NOTIFY inhibitUpdatesChanged)
 
 public:
-    SortedActivitiesModel(const QVector<KActivities::Info::State> &states, QObject *parent = nullptr);
+    SortedActivitiesModel(const QList<KActivities::Info::State> &states, QObject *parent = nullptr);
     ~SortedActivitiesModel() override;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -57,7 +57,7 @@ public Q_SLOTS:
     QString activityIdForIndex(const QModelIndex &index) const;
     int rowForActivityId(const QString &activity) const;
 
-    void rowChanged(int row, const QVector<int> &roles);
+    void rowChanged(int row, const QList<int> &roles);
 
     void onWindowAdded(WId window);
     void onWindowRemoved(WId window);
@@ -74,5 +74,5 @@ private:
     KActivities::ActivitiesModel *m_activitiesModel = nullptr;
     KActivities::Consumer *m_activities = nullptr;
 
-    QHash<QString, QVector<WId>> m_activitiesWindows;
+    QHash<QString, QList<WId>> m_activitiesWindows;
 };

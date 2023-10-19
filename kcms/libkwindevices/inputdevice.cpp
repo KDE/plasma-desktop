@@ -8,7 +8,7 @@
 
 #include <QDBusError>
 #include <QDBusInterface>
-#include <QVector>
+#include <QList>
 
 #include "logging.h"
 

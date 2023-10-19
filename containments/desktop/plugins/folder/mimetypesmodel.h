@@ -40,5 +40,5 @@ private:
     int indexOfType(const QString &name) const;
 
     QList<QMimeType> m_mimeTypesList;
-    QVector<bool> m_checkedRows;
+    QList<bool> m_checkedRows;
 };

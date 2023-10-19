@@ -1297,7 +1297,7 @@ void FolderModel::changeSelection(const QItemSelection &selected, const QItemSel
     QModelIndexList indices = selected.indexes();
     indices.append(deselected.indexes());
 
-    const QVector<int> roles{SelectedRole};
+    const QList<int> roles{SelectedRole};
 
     for (const QModelIndex &index : std::as_const(indices)) {
         Q_EMIT dataChanged(index, index, roles);
@@ -1442,7 +1442,7 @@ void FolderModel::statResult(KJob *job)
     if (idx.isValid() && statJob->error() == KJob::NoError) {
         m_isDirCache[url] = statJob->statResult().isDir();
 
-        Q_EMIT dataChanged(idx, idx, QVector<int>() << IsDirRole);
+        Q_EMIT dataChanged(idx, idx, QList<int>() << IsDirRole);
     }
 
     m_isDirJobs.remove(url);

@@ -92,7 +92,7 @@ Q_SIGNALS:
 private Q_SLOTS:
     void updatePositions();
     void sourceStatusChanged();
-    void sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles);
+    void sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles);
     void sourceModelAboutToBeReset();
     void sourceModelReset();
     void sourceRowsAboutToBeInserted(const QModelIndex &parent, int start, int end);

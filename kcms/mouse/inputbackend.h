@@ -9,9 +9,9 @@
 
 #include <config-build-options.h>
 
+#include <QList>
 #include <QObject>
 #include <QVariantHash>
-#include <QVector>
 #include <memory> // std::unique_ptr
 
 enum class InputBackendMode {
@@ -92,9 +92,9 @@ public:
     {
         return 0;
     }
-    virtual QVector<QObject *> getDevices() const
+    virtual QList<QObject *> getDevices() const
     {
-        return QVector<QObject *>();
+        return QList<QObject *>();
     }
 
 Q_SIGNALS:

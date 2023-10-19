@@ -46,7 +46,7 @@ EmojiModel::EmojiModel()
 {
     const QHash<QString, QString> specialCases{{QLatin1String{"zh-TW"}, QLatin1String{"zh_Hant"}}, {QLatin1String{"zh-HK"}, QLatin1String{"zh_Hant_HK"}}};
     QLocale locale;
-    QVector<QString> dicts;
+    QList<QString> dicts;
     auto bcp = locale.bcp47Name();
     bcp = specialCases.value(bcp, bcp);
     bcp.replace(QLatin1Char('-'), QLatin1Char('_'));

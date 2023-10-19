@@ -91,18 +91,18 @@ void PositionerTest::tst_map()
 void PositionerTest::tst_move_data()
 {
     QTest::addColumn<QVariantList>("moves");
-    QTest::addColumn<QVector<int>>("result");
-    QTest::newRow("First to last") << QVariantList({0, 10}) << QVector<int>({-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0});
-    QTest::newRow("First to after last") << QVariantList({0, 11}) << QVector<int>({-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, -1, 0});
-    QTest::newRow("Switch 2nd with 3rd ") << QVariantList({1, 2, 2, 1}) << QVector<int>({0, 2, 1, 3, 4, 5, 6, 7, 8, 9});
-    QTest::newRow("Switch 2nd with 2nd ") << QVariantList({1, 1, 1, 1}) << QVector<int>({0, 1, 2, 3, 4, 5, 6, 7, 8, 9});
-    QTest::newRow("2nd to last") << QVariantList({2, 10}) << QVector<int>({0, 1, -1, 3, 4, 5, 6, 7, 8, 9, 2});
+    QTest::addColumn<QList<int>>("result");
+    QTest::newRow("First to last") << QVariantList({0, 10}) << QList<int>({-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0});
+    QTest::newRow("First to after last") << QVariantList({0, 11}) << QList<int>({-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, -1, 0});
+    QTest::newRow("Switch 2nd with 3rd ") << QVariantList({1, 2, 2, 1}) << QList<int>({0, 2, 1, 3, 4, 5, 6, 7, 8, 9});
+    QTest::newRow("Switch 2nd with 2nd ") << QVariantList({1, 1, 1, 1}) << QList<int>({0, 1, 2, 3, 4, 5, 6, 7, 8, 9});
+    QTest::newRow("2nd to last") << QVariantList({2, 10}) << QList<int>({0, 1, -1, 3, 4, 5, 6, 7, 8, 9, 2});
 }
 
 void PositionerTest::tst_move()
 {
     QFETCH(QVariantList, moves);
-    QFETCH(QVector<int>, result);
+    QFETCH(QList<int>, result);
 
     ensureFolderModelReady();
     m_positioner->move(moves);
@@ -114,18 +114,18 @@ void PositionerTest::tst_move()
 void PositionerTest::tst_nearestitem_data()
 {
     QTest::addColumn<int>("index");
-    QTest::addColumn<QVector<int>>("result");
-    QTest::newRow("Around first") << 0 << QVector<int>{-1, -1, 3, -1, 1};
-    QTest::newRow("Around second") << 1 << QVector<int>{-1, -1, 4, 0, 2};
-    QTest::newRow("Around 5th") << 4 << QVector<int>{-1, 1, 7, 3, 5};
-    QTest::newRow("Around last") << 9 << QVector<int>{-1, 6, -1, -1, 7};
-    QTest::newRow("Around invalid") << 11 << QVector<int>{-1, -1, -1, -1, -1};
+    QTest::addColumn<QList<int>>("result");
+    QTest::newRow("Around first") << 0 << QList<int>{-1, -1, 3, -1, 1};
+    QTest::newRow("Around second") << 1 << QList<int>{-1, -1, 4, 0, 2};
+    QTest::newRow("Around 5th") << 4 << QList<int>{-1, 1, 7, 3, 5};
+    QTest::newRow("Around last") << 9 << QList<int>{-1, 6, -1, -1, 7};
+    QTest::newRow("Around invalid") << 11 << QList<int>{-1, -1, -1, -1, -1};
 }
 
 void PositionerTest::tst_nearestitem()
 {
     QFETCH(int, index);
-    QFETCH(QVector<int>, result);
+    QFETCH(QList<int>, result);
     for (int i = Qt::NoArrow; i <= Qt::RightArrow; i++) {
         QCOMPARE(m_positioner->nearestItem(index, (Qt::ArrowType)i), result[i]);
     }

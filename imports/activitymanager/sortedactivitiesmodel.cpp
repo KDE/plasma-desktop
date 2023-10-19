@@ -198,7 +198,7 @@ static BackgroundCache &backgrounds()
 
 }
 
-SortedActivitiesModel::SortedActivitiesModel(const QVector<KActivities::Info::State> &states, QObject *parent)
+SortedActivitiesModel::SortedActivitiesModel(const QList<KActivities::Info::State> &states, QObject *parent)
     : QSortFilterProxyModel(parent)
     , m_activitiesModel(new KActivities::ActivitiesModel(states, this))
     , m_activities(new KActivities::Consumer(this))
@@ -434,8 +434,8 @@ void SortedActivitiesModel::onWindowAdded(WId window)
 
             rowChanged(rowForActivityId(activity),
                        m_activitiesWindows.size() == 1 //
-                           ? QVector<int>{WindowCount, HasWindows}
-                           : QVector<int>{WindowCount});
+                           ? QList<int>{WindowCount, HasWindows}
+                           : QList<int>{WindowCount});
         }
     }
 }
@@ -448,8 +448,8 @@ void SortedActivitiesModel::onWindowRemoved(WId window)
 
             rowChanged(rowForActivityId(activity),
                        m_activitiesWindows.size() == 0 //
-                           ? QVector<int>{WindowCount, HasWindows}
-                           : QVector<int>{WindowCount});
+                           ? QList<int>{WindowCount, HasWindows}
+                           : QList<int>{WindowCount});
         }
     }
 }
@@ -464,7 +464,7 @@ void SortedActivitiesModel::onWindowChanged(WId window, NET::Properties properti
     }
 }
 
-void SortedActivitiesModel::rowChanged(int row, const QVector<int> &roles)
+void SortedActivitiesModel::rowChanged(int row, const QList<int> &roles)
 {
     if (row == -1)
         return;
