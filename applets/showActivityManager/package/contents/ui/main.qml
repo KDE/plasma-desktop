@@ -31,9 +31,8 @@ PlasmoidItem {
     Layout.minimumHeight: 0
 
     readonly property bool inVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
-    property string activeSource: "Status"
-    property bool showActivityName: Plasmoid.configuration.showActivityName
-    property bool showActivityIcon: Plasmoid.configuration.showActivityIcon
+    readonly property bool showActivityName: Plasmoid.configuration.showActivityName
+    readonly property bool showActivityIcon: Plasmoid.configuration.showActivityIcon
 
     Plasmoid.onActivated: ActivitySwitcher.Backend.toggleActivityManager()
     preferredRepresentation: fullRepresentation
