@@ -298,21 +298,4 @@ Item {
             }
         }
     }
-
-    Loader {
-        id: previewBannerLoader
-        readonly property point pos: root.containment?.plasmoid.availableScreenRegion,
-            active ? root.containment.adjustToAvailableScreenRegion(
-                root.containment.width + root.containment.x - item.width - Kirigami.Units.largeSpacing,
-                root.containment.height + root.containment.y - item.height - Kirigami.Units.largeSpacing,
-                item.width + Kirigami.Units.largeSpacing,
-                item.height + Kirigami.Units.largeSpacing)
-            : Qt.point(0, 0)
-        x: pos.x
-        y: pos.y
-        z: Number(root.containment?.z) + 1
-        active: root.containment && Boolean(desktop.showPreviewBanner)
-        visible: active
-        source: "PreviewBanner.qml"
-    }
 }
