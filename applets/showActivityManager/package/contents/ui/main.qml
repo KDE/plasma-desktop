@@ -30,10 +30,6 @@ PlasmoidItem {
     Layout.minimumWidth: 0
     Layout.minimumHeight: 0
 
-    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
-        || Plasmoid.location === PlasmaCore.Types.RightEdge
-        || Plasmoid.location === PlasmaCore.Types.BottomEdge
-        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
     readonly property bool inVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     property string activeSource: "Status"
     property bool showActivityName: Plasmoid.configuration.showActivityName
