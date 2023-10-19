@@ -99,6 +99,8 @@ PlasmoidItem {
             width: implicitWidth
             visible: root.showActivityName && !root.inVertical
 
+            verticalAlignment: Text.AlignVCenter
+
             text: currentActivity.name
         }
     }
