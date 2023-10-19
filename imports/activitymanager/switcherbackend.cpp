@@ -28,6 +28,7 @@
 #include <KGlobalAccel>
 #include <KIO/PreviewJob>
 #include <KLocalizedString>
+#include <KWindowInfo>
 #include <KWindowSystem>
 #include <KX11Extras>
 #include <windowtasksmodel.h>

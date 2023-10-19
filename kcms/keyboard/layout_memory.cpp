@@ -7,6 +7,7 @@
 #include "layout_memory.h"
 #include "debug.h"
 
+#include <KWindowInfo>
 #include <KWindowSystem>
 #include <KX11Extras>
 
