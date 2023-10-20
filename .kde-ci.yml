@@ -55,7 +55,6 @@ Dependencies:
 RuntimeDependencies:
 - 'on': ['@all']
   'require':
-    'plasma/kwayland-integration' : '@same'
     'plasma/plasma-integration' : '@same'
 - 'on': ['Linux']
   'require':
