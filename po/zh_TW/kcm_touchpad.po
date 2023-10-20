@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-08 01:39+0000\n"
-"PO-Revision-Date: 2023-02-18 01:26+0900\n"
+"PO-Revision-Date: 2023-10-20 02:25+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -140,7 +140,7 @@ msgstr "指標加速："
 #: kcm/libinput/touchpad.qml:383
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "無"
 
 #: kcm/libinput/touchpad.qml:387
 #, kde-format
@@ -150,7 +150,7 @@ msgstr "游標與手指移動同樣距離。"
 #: kcm/libinput/touchpad.qml:396
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "標準"
 
 #: kcm/libinput/touchpad.qml:400
 #, kde-format
@@ -252,7 +252,7 @@ msgstr "兩指"
 #: kcm/libinput/touchpad.qml:617
 #, kde-format
 msgid "Slide with two fingers scrolls."
-msgstr "兩指滑動以滾動。"
+msgstr "兩指滑動以捲動。"
 
 #: kcm/libinput/touchpad.qml:625
 #, kde-format
@@ -262,27 +262,27 @@ msgstr "觸控板邊緣"
 #: kcm/libinput/touchpad.qml:629
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
-msgstr "在觸控板邊緣滑動來滾動。"
+msgstr "在觸控板邊緣滑動來捲動。"
 
 #: kcm/libinput/touchpad.qml:639
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "反向滾動方向（自然捲動）"
+msgstr "反轉捲動方向（自然捲動）"
 
 #: kcm/libinput/touchpad.qml:655
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr "觸控螢幕就跟滾動一樣。"
+msgstr "像觸控螢幕的捲動。"
 
 #: kcm/libinput/touchpad.qml:663 kcm/libinput/touchpad.qml:680
 #, kde-format
 msgid "Disable horizontal scrolling"
-msgstr "停用水平捲軸"
+msgstr "停用水平捲動"
 
 #: kcm/libinput/touchpad.qml:688
 #, kde-format
 msgid "Scrolling speed:"
-msgstr "滾動速度："
+msgstr "捲動速度："
 
 #: kcm/libinput/touchpad.qml:739
 #, kde-format
@@ -372,7 +372,7 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
-"無法儲存所有變動。請見紀錄檔以取得更多資訊。請重新啟動本設定模組並再次嘗試。"
+"無法儲存所有變更。請見紀錄檔以取得更多資訊。請重新啟動本設定模組並再次嘗試。"
 
 #: kcm/touchpadconfig.cpp:130
 #, kde-format

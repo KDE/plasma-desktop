@@ -17,27 +17,27 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-03 01:39+0000\n"
-"PO-Revision-Date: 2023-02-07 22:57+0900\n"
+"PO-Revision-Date: 2023-10-20 02:25+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Jouston Huang,Paladin Liu,林耕宇, Jeff Huang"
+msgstr "Jouston Huang,Paladin Liu,林耕宇, Jeff Huang, Kisaragi Hiu"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "jouston@housediy.com,paladin@ms1.hinet.net,s9321028@ncnu.edu.tw, "
-"s8321414@gmail.com"
+"s8321414@gmail.com, mail@kisaragi-hiu.com"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:66
 #, kde-format
@@ -66,7 +66,8 @@ msgstr "找不到任何指標裝置。請現在連接。"
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
-msgstr "無法儲存所有變更。查看日誌了解更多詳情。重啟設定模組並重試。"
+msgstr ""
+"無法儲存所有變更。請見紀錄檔以取得更多資訊。請重新啟動本設定模組並再次嘗試。"
 
 #: kcm/libinput/libinput_config.cpp:136
 #, kde-format
@@ -120,12 +121,12 @@ msgstr "左手模式"
 #: kcm/libinput/main.qml:143 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr "交換左右按鍵"
+msgstr "交換左右鍵。"
 
 #: kcm/libinput/main.qml:148 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
-msgstr "按下左右鍵送出右鍵"
+msgstr "按下左右鍵傳出中鍵"
 
 #: kcm/libinput/main.qml:168 kcm/libinput/main_deviceless.qml:96
 #, kde-format
@@ -146,7 +147,7 @@ msgstr "指標加速："
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:169
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "無"
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:173
 #, kde-format
@@ -156,7 +157,7 @@ msgstr "指標移動與滑鼠移動同距離。"
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "標準"
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:183
 #, kde-format
@@ -166,22 +167,22 @@ msgstr "指標移動距離取決於滑鼠的移動速度。"
 #: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Scrolling:"
-msgstr "滾動："
+msgstr "捲動："
 
 #: kcm/libinput/main.qml:268 kcm/libinput/main_deviceless.qml:196
 #, kde-format
 msgid "Invert scroll direction"
-msgstr "反向捲動"
+msgstr "反轉捲動方向"
 
 #: kcm/libinput/main.qml:284 kcm/libinput/main_deviceless.qml:212
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr "像滾動的觸控螢幕。"
+msgstr "像觸控螢幕的捲動。"
 
 #: kcm/libinput/main.qml:289
 #, kde-format
 msgid "Scrolling speed:"
-msgstr "滾動速度："
+msgstr "捲動速度："
 
 #: kcm/libinput/main.qml:339
 #, kde-format
