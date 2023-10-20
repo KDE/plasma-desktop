@@ -207,18 +207,24 @@ ContainmentItem {
                 //this is completely heuristic, but looks way less "jumpy"
                 property bool movingForResize: false
 
-                Layout.fillWidth: applet && applet.Layout.fillWidth
-                Layout.onFillWidthChanged: {
+                readonly property bool wantsToFillWidth: applet && applet.Layout.fillWidth
+                onWantsToFillWidthChanged: {
                     if (Plasmoid.formFactor !== PlasmaCore.Types.Vertical) {
                         checkLastSpacer();
                     }
                 }
-                Layout.fillHeight: applet && applet.Layout.fillHeight
-                Layout.onFillHeightChanged: {
+                readonly property bool wantsToFillHeight: applet && applet.Layout.fillWidth
+                onWantsToFillHeightChanged: {
                     if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                         checkLastSpacer();
                     }
                 }
+                Component.onDestruction: --dropArea.__fillWidthApplets;
+                // Always fill width/height, in order to still shrink the applet when there is not enough space.
+                // When the applet doesn't want to expand set a Layout.maximumWidth accordingly
+                // https://bugs.kde.org/show_bug.cgi?id=473420
+                Layout.fillWidth: true
+                Layout.fillHeight: true
 
                 function getMargins(side, returnAllMargins = false, overrideFillArea = null, overrideThickArea = null): real {
                     if (!applet || !applet.plasmoid) {
@@ -240,16 +246,35 @@ ContainmentItem {
                 Layout.rightMargin: getMargins('right')
 
     // BEGIN BUG 454095: do not combine these expressions to a function or the bindings won't work
+                readonly property real appletMaxWidth: applet?.Layout.maximumWidth >= 0 ? applet.Layout.maximumWidth : root.width
+                readonly property real appletPrefWidth: Math.max(root.height,
+                                                        applet
+                                                        ? (applet.Layout.preferredWidth >= 0
+                                                            ? applet.Layout.preferredWidth
+                                                            : (applet.implicitWidth > 0 ? applet.implicitWidth : applet.Layout.minimumWidth))
+                                                        : root.height)
+                readonly property real appletMaxHeight: applet?.Layout.maximumHeight >= 0 ? applet.Layout.maximumHeight : root.height
+                readonly property real appletPrefHeight: Math.max(root.width,
+                                                         applet
+                                                         ? (applet.Layout.preferredHeight >= 0
+                                                            ? applet.Layout.preferredHeight
+                                                            : (applet.implicitHeight > 0 ? applet.implicitHeight : applet.Layout.minimumHeight))
+                                                         : root.width)
+
                 Layout.minimumWidth: (root.isHorizontal ? (applet && applet.Layout.minimumWidth > 0 ? applet.Layout.minimumWidth : root.height) : root.width) - Layout.leftMargin - Layout.rightMargin
                 Layout.minimumHeight: (!root.isHorizontal ? (applet && applet.Layout.minimumHeight > 0 ? applet.Layout.minimumHeight : root.width) : root.height) - Layout.bottomMargin - Layout.topMargin
 
-                Layout.preferredWidth: (root.isHorizontal ? (applet && applet.Layout.preferredWidth > 0 ? applet.Layout.preferredWidth : root.height) : root.width) - Layout.leftMargin - Layout.rightMargin
-                Layout.preferredHeight: (!root.isHorizontal ? (applet && applet.Layout.preferredHeight > 0 ? applet.Layout.preferredHeight : root.width) : root.height) - Layout.bottomMargin - Layout.topMargin
+                Layout.preferredWidth: (root.isHorizontal ? appletPrefWidth : root.width) - Layout.leftMargin - Layout.rightMargin
+                Layout.preferredHeight: (!root.isHorizontal ? appletPrefHeight : root.height) - Layout.bottomMargin - Layout.topMargin
 
-                Layout.maximumWidth: (root.isHorizontal ? (applet && applet.Layout.maximumWidth > 0 ? applet.Layout.maximumWidth : (Layout.fillWidth ? root.width : root.height)) : root.height) - Layout.leftMargin - Layout.rightMargin
-                Layout.maximumHeight: (!root.isHorizontal ? (applet && applet.Layout.maximumHeight > 0 ? applet.Layout.maximumHeight : (Layout.fillHeight ? root.height : root.width)) : root.width) - Layout.bottomMargin - Layout.topMargin
+                // Use the preferred width as maximum in the case the applet doesn't want to fill width, see BUG:473420
+                Layout.maximumWidth: (root.isHorizontal
+                        ? (applet?.Layout.fillWidth ? appletMaxWidth : appletPrefWidth)
+                        : root.height) - Layout.leftMargin - Layout.rightMargin
+                Layout.maximumHeight: (!root.isHorizontal
+                        ? (applet?.Layout.fillHeight ? appletMaxHeight : appletPrefHeight)
+                        : root.width) - Layout.bottomMargin - Layout.topMargin
     // END BUG 454095
-
                 Item {
                     id: marginHighlightElements
                     anchors.fill: parent
