@@ -13,7 +13,6 @@
 
 #include <KConfigGroup>
 #include <KDesktopFile>
-#include <KDesktopFileActions>
 #include <KFileUtils>
 #include <KStringHandler>
 

@@ -11,7 +11,6 @@
 
 #include <KConfigGroup>
 #include <KDesktopFile>
-#include <KDesktopFileActions>
 
 #include <Solid/DeviceInterface>
 

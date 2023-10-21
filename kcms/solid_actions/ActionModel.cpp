@@ -8,7 +8,6 @@
 #include "ActionModel.h"
 #include "ActionItem.h"
 
-#include <KDesktopFileActions>
 #include <KService>
 
 #include <QDirIterator>
