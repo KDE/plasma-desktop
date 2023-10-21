@@ -14,8 +14,7 @@
 #include <QRegularExpression>
 #include <QTextDocument> // for Qt::escape
 #include <QXmlStreamReader>
-
-#include <QtConcurrent>
+#include <QtConcurrentFilter>
 
 #include "x11_helper.h"
 

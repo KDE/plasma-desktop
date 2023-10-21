@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
 #include <QQmlExtensionPlugin>
-#include <QtQml>
+#include <QmlTypeAndRevisionsRegistration>
 
 #include <flags.h>
 
