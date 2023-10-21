@@ -18,7 +18,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.3.2\n"
 
 #: contents/ui/main.qml:32
@@ -28,12 +29,14 @@ msgid "Trash"
 msgstr "אשפה"
 
 #: contents/ui/main.qml:34
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
 msgstr[0] "פריט אחד"
 msgstr[1] "%1 פריטים"
+msgstr[2] ""
+msgstr[3] ""
 
 #: contents/ui/main.qml:35
 #, kde-format

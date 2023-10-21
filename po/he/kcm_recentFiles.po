@@ -14,7 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 23.08.1\n"
 
 #. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
@@ -68,12 +69,14 @@ msgid "Forget everything"
 msgstr "לשכוח הכול"
 
 #: kcm_recentFiles.cpp:200
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "unit of time. months to keep the history"
 msgid " month"
 msgid_plural " months"
 msgstr[0] " חודש"
 msgstr[1] " חודשים"
+msgstr[2] ""
+msgstr[3] ""
 
 #: kcm_recentFiles.cpp:203
 #, kde-format

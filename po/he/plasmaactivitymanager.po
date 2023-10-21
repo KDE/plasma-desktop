@@ -16,7 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 23.08.1\n"
 
 #: sortedactivitiesmodel.cpp:311
@@ -30,36 +31,44 @@ msgid "Used more than a year ago"
 msgstr "היה בשימוש לפני למעלה משנה"
 
 #: sortedactivitiesmodel.cpp:328
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "amount in months"
 msgid "Used a month ago"
 msgid_plural "Used %1 months ago"
 msgstr[0] "היה בשימוש לפני חודש"
 msgstr[1] "היה בשימוש לפני %1 חודשים"
+msgstr[2] ""
+msgstr[3] ""
 
 #: sortedactivitiesmodel.cpp:329
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "amount in days"
 msgid "Used a day ago"
 msgid_plural "Used %1 days ago"
 msgstr[0] "היה בשימוש אתמול"
 msgstr[1] "היה בשימוש לפני %1 ימים"
+msgstr[2] ""
+msgstr[3] ""
 
 #: sortedactivitiesmodel.cpp:330
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "amount in hours"
 msgid "Used an hour ago"
 msgid_plural "Used %1 hours ago"
 msgstr[0] "היה בשימוש לפני שעה"
 msgstr[1] "היה בשימוש לפני %1 שעות"
+msgstr[2] ""
+msgstr[3] ""
 
 #: sortedactivitiesmodel.cpp:331
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "amount in minutes"
 msgid "Used a minute ago"
 msgid_plural "Used %1 minutes ago"
 msgstr[0] "היה בשימוש לפני דקה"
 msgstr[1] "היה בשימוש לפני %1 דקות"
+msgstr[2] ""
+msgstr[3] ""
 
 #: sortedactivitiesmodel.cpp:332
 #, kde-format

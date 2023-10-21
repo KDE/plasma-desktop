@@ -19,7 +19,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.3.2\n"
 
 #: package/contents/config/config.qml:13
@@ -119,25 +120,31 @@ msgid "Shows the desktop"
 msgstr "מציג את שולחן העבודה"
 
 #: package/contents/ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "…וחלון אחד נוסף"
 msgstr[1] "…ו־%1 חלונות אחרים"
+msgstr[2] ""
+msgstr[3] ""
 
 #: package/contents/ui/main.qml:352
-#, kde-format
+#, fuzzy, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "חלון אחד:"
 msgstr[1] "%1 חלונות:"
+msgstr[2] ""
+msgstr[3] ""
 
 #: package/contents/ui/main.qml:364
-#, kde-format
+#, fuzzy, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "חלון ממוזער:"
 msgstr[1] "%1 חלונות ממוזערים:"
+msgstr[2] ""
+msgstr[3] ""
 
 #: package/contents/ui/main.qml:439
 #, kde-format
