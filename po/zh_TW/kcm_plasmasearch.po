@@ -10,21 +10,20 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-06 01:55+0000\n"
-"PO-Revision-Date: 2023-08-07 22:50+0900\n"
+"PO-Revision-Date: 2023-10-21 16:41+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "可用的外掛程式"
+msgstr "最愛的外掛程式"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -42,25 +41,24 @@ msgid "Get New Plugins…"
 msgstr "取得新的外掛程式…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
-msgstr "啟用或停用外掛程式（在 KRunner、應用程式啟動器以及總覽效果中使用）"
+msgstr ""
+"啟用或停用外掛程式（在 KRunner、應用程式啟動器以及總覽效果中使用）。可以標記"
+"外掛程式為最愛或是以您希望看到的順序將它們進行排序。"
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "從我的最愛中移除"
 
 #: plasmasearch/ui/main.qml:82
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "新增到我的最愛"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
