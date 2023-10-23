@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-05 01:57+0000\n"
-"PO-Revision-Date: 2023-10-17 21:55+0300\n"
+"PO-Revision-Date: 2023-10-22 08:55+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
-msgstr "שגיאה בשמירת קיצור המקשים %1:‏ %2"
+msgstr "שגיאה בשמירת מקשי הקיצור %1:‏ %2"
 
 #: globalaccelmodel.cpp:321
 #, kde-format
@@ -283,14 +283,14 @@ msgid "No active shortcuts"
 msgstr "אין קיצורי מקשים פעילים"
 
 #: ui/ShortcutActionDelegate.qml:95
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "קיצור ברירת מחדל"
 msgstr[1] "קיצורי ברירת מחדל"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[2] "קיצורי ברירת מחדל"
+msgstr[3] "קיצורי ברירת מחדל"
 
 #: ui/ShortcutActionDelegate.qml:97
 #, kde-format

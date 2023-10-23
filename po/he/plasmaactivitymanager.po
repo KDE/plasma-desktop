@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmaactivitymanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-20 01:39+0000\n"
-"PO-Revision-Date: 2023-10-17 21:52+0300\n"
+"PO-Revision-Date: 2023-10-22 09:01+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -31,44 +31,44 @@ msgid "Used more than a year ago"
 msgstr "היה בשימוש לפני למעלה משנה"
 
 #: sortedactivitiesmodel.cpp:328
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "amount in months"
 msgid "Used a month ago"
 msgid_plural "Used %1 months ago"
 msgstr[0] "היה בשימוש לפני חודש"
-msgstr[1] "היה בשימוש לפני %1 חודשים"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "היה בשימוש לפני חודשיים"
+msgstr[2] "היה בשימוש לפני %1 חודשים"
+msgstr[3] "היה בשימוש לפני %1 חודשים"
 
 #: sortedactivitiesmodel.cpp:329
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "amount in days"
 msgid "Used a day ago"
 msgid_plural "Used %1 days ago"
 msgstr[0] "היה בשימוש אתמול"
-msgstr[1] "היה בשימוש לפני %1 ימים"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "היה בשימוש לפני יומיים"
+msgstr[2] "היה בשימוש לפני %1 ימים"
+msgstr[3] "היה בשימוש לפני %1 ימים"
 
 #: sortedactivitiesmodel.cpp:330
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "amount in hours"
 msgid "Used an hour ago"
 msgid_plural "Used %1 hours ago"
 msgstr[0] "היה בשימוש לפני שעה"
-msgstr[1] "היה בשימוש לפני %1 שעות"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "היה בשימוש לפני שעתיים"
+msgstr[2] "היה בשימוש לפני %1 שעות"
+msgstr[3] "היה בשימוש לפני %1 שעות"
 
 #: sortedactivitiesmodel.cpp:331
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "amount in minutes"
 msgid "Used a minute ago"
 msgid_plural "Used %1 minutes ago"
 msgstr[0] "היה בשימוש לפני דקה"
-msgstr[1] "היה בשימוש לפני %1 דקות"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "היה בשימוש לפני שתי דקות"
+msgstr[2] "היה בשימוש לפני %1 דקות"
+msgstr[3] "היה בשימוש לפני %1 דקות"
 
 #: sortedactivitiesmodel.cpp:332
 #, kde-format
@@ -83,4 +83,4 @@ msgstr "מעבר בין פעילויות"
 #: switcherbackend.cpp:173
 #, kde-format
 msgid "Walk through activities (Reverse)"
-msgstr "מעבר (הפוך) בין פעילויות"
+msgstr "מעבר (אחורה) בין פעילויות"
