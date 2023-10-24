@@ -729,39 +729,37 @@ PlasmaExtras.Menu {
 
                 onClicked: tasksModel.requestToggleGrouping(menu.modelIndex)
             }
-
-            PlasmaExtras.MenuItem {
-                separator: true
-            }
-
-            PlasmaExtras.MenuItem {
-                property QtObject configureAction: null
-
-                enabled: configureAction && configureAction.enabled
-                visible: configureAction && configureAction.visible
-
-                text: configureAction ? configureAction.text : ""
-                icon: configureAction ? configureAction.icon : ""
-
-                onClicked: configureAction.trigger()
-
-                Component.onCompleted: configureAction = Plasmoid.internalAction("configure")
-            }
-
-            PlasmaExtras.MenuItem {
-                property QtObject alternativesAction: null
-
-                enabled: alternativesAction && alternativesAction.enabled
-                visible: alternativesAction && alternativesAction.visible
-
-                text: alternativesAction ? alternativesAction.text : ""
-                icon: alternativesAction ? alternativesAction.icon : ""
-
-                onClicked: alternativesAction.trigger()
-
-                Component.onCompleted: alternativesAction = Plasmoid.internalAction("alternatives")
-            }
         }
+    }
+
+    PlasmaExtras.MenuItem { separator: true }
+
+    PlasmaExtras.MenuItem {
+        property QtObject configureAction: null
+
+        enabled: configureAction && configureAction.enabled
+        visible: configureAction && configureAction.visible
+
+        text: configureAction ? configureAction.text : ""
+        icon: configureAction ? configureAction.icon : ""
+
+        onClicked: configureAction.trigger()
+
+        Component.onCompleted: configureAction = Plasmoid.internalAction("configure")
+    }
+
+    PlasmaExtras.MenuItem {
+        property QtObject editModeAction: null
+
+        enabled: editModeAction && editModeAction.enabled
+        visible: editModeAction && editModeAction.visible
+
+        text: editModeAction ? editModeAction.text : ""
+        icon: editModeAction ? editModeAction.icon : ""
+
+        onClicked: editModeAction.trigger()
+
+        Component.onCompleted: editModeAction = Plasmoid.containment.internalAction("configure")
     }
 
     PlasmaExtras.MenuItem { separator: true }
