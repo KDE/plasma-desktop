@@ -3,31 +3,32 @@
 # Israel Berger <israelb@gmail.com>, 2005.
 # Diego Iastrubni <elcuco@kde.org>, 2008, 2012.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: knetattach5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-14 00:46+0000\n"
-"PO-Revision-Date: 2023-09-30 14:16+0300\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: עברית <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-23 09:10+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Israel Berger וצוות התרגום של KDE ישראל"
+msgstr "Israel Berger,צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "israelb@gmail.com, kde-l10n-he@kde.org"
+msgstr "israelb@gmail.com,kde-l10n-he@kde.org"
 
 #: knetattach.cpp:79
 #, kde-format
@@ -46,7 +47,7 @@ msgid ""
 "button."
 msgstr ""
 "נא למלא שם ל<i>התחברות Secure Shell</i> זו ואת כתובת השרת, הפתחה ונתיב "
-"התיקייה לשימוש וללחץ על הכפתור <b>שמירה וחיבור</b>."
+"התיקייה לשימוש וללחוץ על הכפתור <b>שמירה וחיבור</b>."
 
 #: knetattach.cpp:86
 #, kde-format
@@ -55,7 +56,7 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"נא למלא שם ל<i>חיבור FTP</i> זה ואת כתובת השרת, ונתיב התיקייה לשימוש וללחץ "
+"נא למלא שם ל<i>חיבור FTP</i> זה ואת כתובת השרת, ונתיב התיקייה לשימוש וללחוץ "
 "על הכפתור <b>שמירה וחיבור</b>."
 
 #: knetattach.cpp:90
@@ -87,13 +88,13 @@ msgstr "&חיבור"
 #: knetattach.ui:14
 #, kde-format
 msgid "Network Folder Wizard"
-msgstr "אשף תיקיית רשת"
+msgstr "אשף תיקיות רשת"
 
 #. i18n: ectx: property (title), widget (QWizardPage, _folderType)
 #: knetattach.ui:18
 #, kde-format
 msgid "Add Network Folder"
-msgstr "הוספת תקיית רשת"
+msgstr "הוספת תיקיית רשת"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: knetattach.ui:24
