@@ -4,17 +4,21 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "inputsynth.h"
+#define QT_FORCE_ASSERTS
 
 #include <atomic>
 #include <iostream>
 #include <thread>
+
+#include <Python.h>
 
 #include "qwayland-fake-input.h"
 #include <QGuiApplication>
 #include <QWaylandClientExtensionTemplate>
 
 #include <wayland-client-protocol.h>
+
+using namespace Qt::StringLiterals;
 
 namespace
 {
@@ -35,7 +39,11 @@ public:
     Q_DISABLE_COPY_MOVE(FakeInputInterface)
 };
 
-quint32 linuxKeyCode(int keycode)
+QGuiApplication *s_application = nullptr;
+wl_display *s_display = nullptr;
+FakeInputInterface *s_fakeInputInterface = nullptr;
+
+[[nodiscard]] inline quint32 linuxKeyCode(int keycode)
 {
     // The offset between KEY_* numbering, and keycodes in the XKB evdev dataset.
     // Stolen from xdg-desktop-portal-kde.
@@ -44,98 +52,122 @@ quint32 linuxKeyCode(int keycode)
     return keycode - EVDEV_OFFSET;
 }
 
-std::atomic<bool> s_locked{false}; // Used to block function return in the main thread
-QGuiApplication *s_application = nullptr;
-wl_display *s_display = nullptr;
-FakeInputInterface *s_fakeInputInterface = nullptr;
+void init_fake_input()
+{
+    QMetaObject::invokeMethod(
+        s_application,
+        [] {
+            s_fakeInputInterface = new FakeInputInterface();
+            s_fakeInputInterface->setParent(s_application);
+            if (!s_fakeInputInterface->isInitialized()) {
+                std::cerr << "Failed to initialize fake_input" << std::endl;
+                Q_UNREACHABLE(); // Crash directly to fail a test early
+            }
+            if (!s_fakeInputInterface->isActive()) {
+                std::cerr << "fake_input is inactive" << std::endl;
+                Q_UNREACHABLE(); // Crash directly to fail a test early
+            }
+            s_fakeInputInterface->authenticate("inputsynth"_L1, "used in a test"_L1);
+            s_display = qGuiApp->nativeInterface<QNativeInterface::QWaylandApplication>()->display();
+            wl_display_roundtrip(s_display);
+        },
+        Qt::BlockingQueuedConnection);
 }
 
-void init_application()
+PyObject *init_module(PyObject *, PyObject *)
 {
     if (s_application) {
-        return;
+        Py_RETURN_NONE;
     }
-    s_locked = true;
-    std::thread t([] {
+    std::atomic<bool> locked{true}; // Used to block function return in the main thread
+    std::thread t([&locked] {
         int argc = 1;
         const char *argv[] = {"inputsynth"};
+        qputenv("QT_QPA_PLATFORM", "wayland");
         s_application = new QGuiApplication(argc, const_cast<char **>(argv));
-        s_locked = false;
-        s_locked.notify_one();
-        std::clog << "A QGuiApplication thread has started" << s_application << std::endl;
+        locked = false;
+        locked.notify_one();
+        std::clog << "QGuiApplication thread has started" << s_application << std::endl;
         s_application->exec();
     });
     t.detach();
-    s_locked.wait(true);
+    locked.wait(true);
+    init_fake_input();
+    Py_RETURN_NONE;
 }
 
-void unload_application()
+void unload_module(void *)
 {
     if (!s_application) {
         return;
     }
-    s_locked = true;
-    QMetaObject::invokeMethod(s_application, [] {
-        s_application->quit();
-        s_application = nullptr;
-        s_locked = false;
-        s_locked.notify_one();
-    });
-    s_locked.wait(true);
+    QMetaObject::invokeMethod(
+        s_application,
+        [] {
+            s_application->quit();
+            s_application = nullptr;
+        },
+        Qt::BlockingQueuedConnection);
     std::clog << "QGuiApplication quit" << std::endl;
 }
 
-void init_fake_input()
+PyObject *key_press(PyObject *, PyObject *arg)
 {
-    s_locked = true;
-    QMetaObject::invokeMethod(s_application, [] {
-        s_fakeInputInterface = new FakeInputInterface();
-        s_fakeInputInterface->setParent(s_application);
-        if (!s_fakeInputInterface->isInitialized()) {
-            delete s_fakeInputInterface;
-            s_fakeInputInterface = nullptr;
-            std::cerr << "Failed to initialize fake_input" << std::endl;
-            Q_UNREACHABLE(); // Crash directly to fail a test early
-        }
-        if (!s_fakeInputInterface->isActive()) {
-            delete s_fakeInputInterface;
-            s_fakeInputInterface = nullptr;
-            std::cerr << "fake_input is inactive" << std::endl;
-            Q_UNREACHABLE(); // Crash directly to fail a test early
-        }
-        s_fakeInputInterface->authenticate(QLatin1String("InputSynth"), QLatin1String("used in a test"));
-        s_display = qGuiApp->nativeInterface<QNativeInterface::QWaylandApplication>()->display();
-        wl_display_roundtrip(s_display);
-        s_locked = false;
-        s_locked.notify_one();
-    });
-    s_locked.wait(true);
-}
-
-void key_press(int keycode)
-{
-    s_locked = true;
-    QMetaObject::invokeMethod(s_application, [keycode] {
-        s_fakeInputInterface->keyboard_key(linuxKeyCode(keycode), WL_KEYBOARD_KEY_STATE_PRESSED);
-        wl_display_roundtrip(s_display);
-        s_locked = false;
-        s_locked.notify_one();
-    });
-    s_locked.wait(true);
+    const long keycode = PyLong_AsLong(arg);
+    QMetaObject::invokeMethod(
+        s_application,
+        [keycode] {
+            s_fakeInputInterface->keyboard_key(linuxKeyCode(keycode), WL_KEYBOARD_KEY_STATE_PRESSED);
+            wl_display_roundtrip(s_display);
+        },
+        Qt::BlockingQueuedConnection);
     std::clog << "pressing " << keycode << std::endl;
+    Py_RETURN_NONE;
 }
 
-void key_release(int keycode)
+PyObject *key_release(PyObject *, PyObject *arg)
 {
-    s_locked = true;
-    QMetaObject::invokeMethod(s_application, [keycode] {
-        s_fakeInputInterface->keyboard_key(linuxKeyCode(keycode), WL_KEYBOARD_KEY_STATE_RELEASED);
-        wl_display_roundtrip(s_display);
-        s_locked = false;
-        s_locked.notify_one();
-    });
-    s_locked.wait(true);
+    const long keycode = PyLong_AsLong(arg);
+    QMetaObject::invokeMethod(
+        s_application,
+        [keycode] {
+            s_fakeInputInterface->keyboard_key(linuxKeyCode(keycode), WL_KEYBOARD_KEY_STATE_RELEASED);
+            wl_display_roundtrip(s_display);
+        },
+        Qt::BlockingQueuedConnection);
     std::clog << "releasing" << keycode << std::endl;
+    Py_RETURN_NONE;
 }
 
-#include "moc_inputsynth.cpp"
+// Exported methods are collected in a table
+// https://docs.python.org/3/c-api/structures.html
+PyMethodDef method_table[] = {
+    {"init_module", (PyCFunction)init_module, METH_NOARGS, "Initialize QGuiApplication"},
+    {"key_press", (PyCFunction)key_press, METH_O, "Press down and hold a key"},
+    {"key_release", (PyCFunction)key_release, METH_O, "Release a key"},
+    {nullptr, nullptr, 0, nullptr} // Sentinel value ending the table
+};
+
+// A struct contains the definition of a module
+PyModuleDef inputsynth_module = {
+    PyModuleDef_HEAD_INIT,
+    "inputsynth_plasma_desktop", // Module name
+    "Python bindings of the fake input protocol",
+    -1, // Optional size of the module state memory
+    method_table,
+    nullptr, // Optional slot definitions
+    nullptr, // Optional traversal function
+    nullptr, // Optional clear function
+    unload_module // Optional module deallocation function
+};
+}
+
+// The module init function
+PyMODINIT_FUNC PyInit_inputsynth_plasma_desktop(void)
+{
+    PyObject *m = PyModule_Create(&inputsynth_module);
+    if (!m) {
+        Q_UNREACHABLE();
+    }
+    return m;
+}

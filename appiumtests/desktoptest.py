@@ -4,11 +4,11 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-import ctypes
 import os
 import pathlib
 import subprocess
 import sys
+import sysconfig
 import time
 import unittest
 from typing import Final
@@ -21,6 +21,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 gi.require_version('Gdk', '3.0')
 from gi.repository import Gdk, Gio, GLib
+
+if "KDECI_BUILD" not in os.environ:
+    CMAKE_INSTALL_PREFIX: Final = os.environ.get("CMAKE_INSTALL_PREFIX", os.path.join(pathlib.Path.home(), "kde", "usr"))
+    SITE_PACKAGES_DIR: Final = os.path.join(CMAKE_INSTALL_PREFIX, sysconfig.get_path("platlib")[len(sys.prefix + os.sep):])
+    for subdir in os.listdir(SITE_PACKAGES_DIR):
+        sys.path.append(os.path.join(SITE_PACKAGES_DIR, subdir))
+import inputsynth_plasma_desktop as IS
 
 CMAKE_BINARY_DIR: Final = os.environ.get("CMAKE_BINARY_DIR", os.path.join(pathlib.Path.home(), "kde/build/plasma-desktop/bin"))
 KACTIVITYMANAGERD_PATH: Final = os.environ.get("KACTIVITYMANAGERD_PATH", os.path.join(pathlib.Path.home(), "kde/usr/lib64/libexec/kactivitymanagerd"))
@@ -63,7 +70,6 @@ class DesktopTest(unittest.TestCase):
     """
 
     driver: webdriver.Remote
-    inputsynth: ctypes.CDLL
     kactivitymanagerd: subprocess.Popen
 
     @classmethod
@@ -82,12 +88,7 @@ class DesktopTest(unittest.TestCase):
             time.sleep(1)
         assert kactivitymanagerd_started
 
-        if os.path.exists(os.path.join(CMAKE_BINARY_DIR, "libinputsynth.so")):
-            cls.inputsynth = ctypes.cdll.LoadLibrary(os.path.join(CMAKE_BINARY_DIR, "libinputsynth.so"))
-        else:
-            cls.inputsynth = ctypes.cdll.LoadLibrary("libinputsynth.so")
-        cls.inputsynth.init_application()
-        cls.inputsynth.init_fake_input()
+        IS.init_module()
 
         options = AppiumOptions()
         options.set_capability("app", "plasmashell -p org.kde.plasma.desktop --no-respawn")
@@ -106,7 +107,6 @@ class DesktopTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
-        cls.inputsynth.unload_application()
         subprocess.check_output(["kquitapp6", "plasmashell"], stderr=sys.stderr)
         cls.kactivitymanagerd.kill()
         cls.driver.quit()
@@ -124,16 +124,16 @@ class DesktopTest(unittest.TestCase):
         """
         # Key values are from https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
         # Alt+D
-        self.inputsynth.key_press(keyval_to_keycode(0xffe9))
-        self.inputsynth.key_press(keyval_to_keycode(0x0044))
+        IS.key_press(keyval_to_keycode(0xffe9))
+        IS.key_press(keyval_to_keycode(0x0044))
         time.sleep(0.5)
-        self.inputsynth.key_release(keyval_to_keycode(0x0044))
-        self.inputsynth.key_release(keyval_to_keycode(0xffe9))
+        IS.key_release(keyval_to_keycode(0x0044))
+        IS.key_release(keyval_to_keycode(0xffe9))
         time.sleep(0.5)
         # E
-        self.inputsynth.key_press(keyval_to_keycode(0x0045))
+        IS.key_press(keyval_to_keycode(0x0045))
         time.sleep(0.5)
-        self.inputsynth.key_release(keyval_to_keycode(0x0045))
+        IS.key_release(keyval_to_keycode(0x0045))
 
         global_theme_button = self.driver.find_element(AppiumBy.NAME, "Choose Global Theme…")
         self.driver.find_element(AppiumBy.NAME, "Exit Edit Mode").click()
