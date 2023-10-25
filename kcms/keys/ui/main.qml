@@ -129,7 +129,7 @@ KCM.AbstractKCM {
             QQC2.ScrollView {
                 id: categoryList
 
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 16
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 14
                 Layout.fillHeight: true
                 clip: true
 
