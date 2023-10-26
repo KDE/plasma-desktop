@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-05 01:57+0000\n"
+"POT-Creation-Date: 2023-10-26 01:46+0000\n"
 "PO-Revision-Date: 2022-05-09 20:24+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -116,12 +116,33 @@ msgstr "Layanan Sistem"
 msgid "Common Actions"
 msgstr "Aksi Umum"
 
-#: ui/main.qml:51
+#: ui/main.qml:43
+#, fuzzy, kde-format
+#| msgid "Import"
+msgctxt "@action: button Import shortcut scheme"
+msgid "Import…"
+msgstr "Impor"
+
+#: ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "Cancel Export"
+msgctxt "@action:button"
+msgid "Cancel Export"
+msgstr "Batalkan Ekspor..."
+
+#: ui/main.qml:49
+#, fuzzy, kde-format
+#| msgid "Export Scheme…"
+msgctxt "@action:button Export shortcut scheme"
+msgid "Export…"
+msgstr "Ekspor Skema..."
+
+#: ui/main.qml:75
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Tidak bisa mengekspor skema ketika sedang perubahannya tidak tersimpan"
 
-#: ui/main.qml:63
+#: ui/main.qml:87
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
@@ -129,150 +150,143 @@ msgstr ""
 "Pilih komponen di bawah ini yang seharusnya disertakan di dalam skema yang "
 "diekspor"
 
-#: ui/main.qml:69
-#, kde-format
-msgid "Save scheme"
+#: ui/main.qml:93
+#, fuzzy, kde-format
+#| msgid "Save scheme"
+msgctxt "@action:button Save shortcut scheme"
+msgid "Save Scheme"
 msgstr "Simpan skema"
 
-#: ui/main.qml:169
+#: ui/main.qml:158
+#, kde-format
+msgctxt "@action:button Add new shortcut"
+msgid "Add New"
+msgstr ""
+
+#: ui/main.qml:164
+#, fuzzy, kde-format
+#| msgid "Add Application…"
+msgctxt "@action:menu End of the sentence 'Add New Application…'"
+msgid "Application…"
+msgstr "Tambahkan Aplikasi..."
+
+#: ui/main.qml:170
+#, kde-format
+msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
+msgid "Command or Script…"
+msgstr ""
+
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr ""
 
-#: ui/main.qml:185
+#: ui/main.qml:242
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "Hapus semua pintasan untuk %1"
 
-#: ui/main.qml:196
+#: ui/main.qml:253
 #, kde-format
 msgid "Undo deletion"
 msgstr "Urung penghapusan"
 
-#: ui/main.qml:247
+#: ui/main.qml:306
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Tidak ada item yang cocok dengan pencarian yang ditentukan"
 
-#: ui/main.qml:280
+#: ui/main.qml:339
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Pilih sebuah item dari daftar untuk menampilkan pintasannya di sini"
 
-#: ui/main.qml:305
-#, fuzzy, kde-format
-#| msgid "Add Application…"
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Application…"
-msgstr "Tambahkan Aplikasi..."
-
-#: ui/main.qml:315
-#, kde-format
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Command…"
-msgstr ""
-
-#: ui/main.qml:334
-#, kde-format
-msgid "Import Scheme…"
-msgstr "Impor Skema..."
-
-#: ui/main.qml:339
-#, kde-format
-msgid "Cancel Export"
-msgstr "Batalkan Ekspor..."
-
-#: ui/main.qml:339
-#, kde-format
-msgid "Export Scheme…"
-msgstr "Ekspor Skema..."
-
-#: ui/main.qml:359
+#: ui/main.qml:351
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Ekspor Skema Pintasan"
 
-#: ui/main.qml:359 ui/main.qml:475
+#: ui/main.qml:351 ui/main.qml:467
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Impor Skema Pintasan"
 
-#: ui/main.qml:361
+#: ui/main.qml:353
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Skema Puntasan (*.kksrc)"
 
-#: ui/main.qml:389
+#: ui/main.qml:381
 #, kde-format
 msgid "Edit Command"
 msgstr ""
 
-#: ui/main.qml:389
+#: ui/main.qml:381
 #, kde-format
 msgid "Add Command"
 msgstr ""
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Save"
 msgstr ""
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Add"
 msgstr ""
 
-#: ui/main.qml:432
+#: ui/main.qml:424
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr ""
 
-#: ui/main.qml:446
+#: ui/main.qml:438
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr ""
 
-#: ui/main.qml:459
+#: ui/main.qml:451
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr ""
 
-#: ui/main.qml:461
+#: ui/main.qml:453
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr ""
 
-#: ui/main.qml:482
+#: ui/main.qml:474
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "PIlih skema untuk diimpor:"
 
-#: ui/main.qml:496
+#: ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Skema Kustom"
 
-#: ui/main.qml:501
+#: ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "Pilih File..."
 
-#: ui/main.qml:501
+#: ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "Impor"
 
-#: ui/ShortcutActionDelegate.qml:30
+#: ui/ShortcutActionDelegate.qml:29
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Pengeditan pintasan: %1"
 
-#: ui/ShortcutActionDelegate.qml:42
+#: ui/ShortcutActionDelegate.qml:41
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -280,7 +294,7 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:55
+#: ui/ShortcutActionDelegate.qml:54
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Tidak ada pintasan yang aktif"
@@ -308,25 +322,28 @@ msgstr "Pintasan default %1 difungsikan."
 msgid "Default shortcut %1 is disabled."
 msgstr "Pintasan default %1 dinonfungsikan."
 
-#: ui/ShortcutActionDelegate.qml:126
+#: ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Pintasan kustom"
 
-#: ui/ShortcutActionDelegate.qml:151
+#: ui/ShortcutActionDelegate.qml:153
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Hapus pintasan ini"
 
-#: ui/ShortcutActionDelegate.qml:157
+#: ui/ShortcutActionDelegate.qml:159
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Tambahkan pintasan kustom"
 
-#: ui/ShortcutActionDelegate.qml:192
+#: ui/ShortcutActionDelegate.qml:196
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Batal menangkap pintasan baru"
+
+#~ msgid "Import Scheme…"
+#~ msgstr "Impor Skema..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

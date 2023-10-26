@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-05 01:57+0000\n"
+"POT-Creation-Date: 2023-10-26 01:46+0000\n"
 "PO-Revision-Date: 2022-02-04 16:00+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -117,162 +117,176 @@ msgstr "Servicii de sistem"
 msgid "Common Actions"
 msgstr "Acțiuni comune"
 
-#: ui/main.qml:51
+#: ui/main.qml:43
+#, fuzzy, kde-format
+#| msgid "Import"
+msgctxt "@action: button Import shortcut scheme"
+msgid "Import…"
+msgstr "Importă"
+
+#: ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "Cancel Export"
+msgctxt "@action:button"
+msgid "Cancel Export"
+msgstr "Anulează exportul"
+
+#: ui/main.qml:49
+#, fuzzy, kde-format
+#| msgid "Export Scheme…"
+msgctxt "@action:button Export shortcut scheme"
+msgid "Export…"
+msgstr "Exportă schema…"
+
+#: ui/main.qml:75
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Schema nu poate fi exportată în timp se sunt modificări nesalvate"
 
-#: ui/main.qml:63
+#: ui/main.qml:87
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
 "Alegeți componentele de mai jos ce trebuiesc incluse în schema exportată"
 
-#: ui/main.qml:69
-#, kde-format
-msgid "Save scheme"
+#: ui/main.qml:93
+#, fuzzy, kde-format
+#| msgid "Save scheme"
+msgctxt "@action:button Save shortcut scheme"
+msgid "Save Scheme"
 msgstr "Salvează schema"
 
-#: ui/main.qml:169
+#: ui/main.qml:158
+#, kde-format
+msgctxt "@action:button Add new shortcut"
+msgid "Add New"
+msgstr ""
+
+#: ui/main.qml:164
+#, fuzzy, kde-format
+#| msgid "Add Application…"
+msgctxt "@action:menu End of the sentence 'Add New Application…'"
+msgid "Application…"
+msgstr "Adaugă aplicație…"
+
+#: ui/main.qml:170
+#, kde-format
+msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
+msgid "Command or Script…"
+msgstr ""
+
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr ""
 
-#: ui/main.qml:185
+#: ui/main.qml:242
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "Elimină toate scurtăturile pentru %1"
 
-#: ui/main.qml:196
+#: ui/main.qml:253
 #, kde-format
 msgid "Undo deletion"
 msgstr "Desfă ștergerea"
 
-#: ui/main.qml:247
+#: ui/main.qml:306
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Niciun element nu se potrivește termenilor căutării"
 
-#: ui/main.qml:280
+#: ui/main.qml:339
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Alegeți un element din listă pentru a-i vedea scurtăturile aici"
 
-#: ui/main.qml:305
-#, fuzzy, kde-format
-#| msgid "Add Application…"
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Application…"
-msgstr "Adaugă aplicație…"
-
-#: ui/main.qml:315
-#, kde-format
-msgctxt "@action:button Keep translated text as short as possible"
-msgid "Add Command…"
-msgstr ""
-
-#: ui/main.qml:334
-#, kde-format
-msgid "Import Scheme…"
-msgstr "Importă schemă…"
-
-#: ui/main.qml:339
-#, kde-format
-msgid "Cancel Export"
-msgstr "Anulează exportul"
-
-#: ui/main.qml:339
-#, kde-format
-msgid "Export Scheme…"
-msgstr "Exportă schema…"
-
-#: ui/main.qml:359
+#: ui/main.qml:351
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Exportă schema de scurtături"
 
-#: ui/main.qml:359 ui/main.qml:475
+#: ui/main.qml:351 ui/main.qml:467
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importă schemă de scurtături"
 
-#: ui/main.qml:361
+#: ui/main.qml:353
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Schemă de scurtături (*.kksrc)"
 
-#: ui/main.qml:389
+#: ui/main.qml:381
 #, kde-format
 msgid "Edit Command"
 msgstr ""
 
-#: ui/main.qml:389
+#: ui/main.qml:381
 #, kde-format
 msgid "Add Command"
 msgstr ""
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Save"
 msgstr ""
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Add"
 msgstr ""
 
-#: ui/main.qml:432
+#: ui/main.qml:424
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr ""
 
-#: ui/main.qml:446
+#: ui/main.qml:438
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr ""
 
-#: ui/main.qml:459
+#: ui/main.qml:451
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr ""
 
-#: ui/main.qml:461
+#: ui/main.qml:453
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr ""
 
-#: ui/main.qml:482
+#: ui/main.qml:474
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Alegeți schema de importat:"
 
-#: ui/main.qml:496
+#: ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Schemă personalizată"
 
-#: ui/main.qml:501
+#: ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "Alege fișierul…"
 
-#: ui/main.qml:501
+#: ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "Importă"
 
-#: ui/ShortcutActionDelegate.qml:30
+#: ui/ShortcutActionDelegate.qml:29
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Modificarea scurtăturii: %1"
 
-#: ui/ShortcutActionDelegate.qml:42
+#: ui/ShortcutActionDelegate.qml:41
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -280,7 +294,7 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:55
+#: ui/ShortcutActionDelegate.qml:54
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Nicio scurtătură activă"
@@ -309,25 +323,28 @@ msgstr "Scurtătură implicită %1 e activată."
 msgid "Default shortcut %1 is disabled."
 msgstr "Scurtătură implicită %1 e dezactivată."
 
-#: ui/ShortcutActionDelegate.qml:126
+#: ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Scurtături personalizate"
 
-#: ui/ShortcutActionDelegate.qml:151
+#: ui/ShortcutActionDelegate.qml:153
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Șterge această scurtătură"
 
-#: ui/ShortcutActionDelegate.qml:157
+#: ui/ShortcutActionDelegate.qml:159
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Adaugă scurtătură personalizată"
 
-#: ui/ShortcutActionDelegate.qml:192
+#: ui/ShortcutActionDelegate.qml:196
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Anulează capturarea noii scurtături"
+
+#~ msgid "Import Scheme…"
+#~ msgstr "Importă schemă…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
