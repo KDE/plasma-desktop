@@ -69,7 +69,7 @@ int main(int argc, char **argv)
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-emoticons")));
     KCrash::initialize();
 
-    KLocalizedString::setApplicationDomain("org.kde.plasma.emojier");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("org.kde.plasma.emojier"));
 
     KAboutData about(QStringLiteral("plasma.emojier"),
                      i18n("Emoji Selector"),

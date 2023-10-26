@@ -15,7 +15,7 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    KLocalizedString::setApplicationDomain("knetattach5");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("knetattach5"));
 
     KAboutData aboutData(QLatin1String("knetattach"),
                          i18n("KDE Network Wizard"),
