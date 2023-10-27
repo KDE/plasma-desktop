@@ -76,18 +76,18 @@ KCMUtils.ScrollViewKCM {
                         leading = drag
                     }
                 }
-            additionalActions: [
-                Kirigami.Action {
-                    displayHint: Kirigami.DisplayHint.IconOnly
-                    text: isFavorite ? i18n("Remove from favorites") : i18n("Add to favorites")
-                    icon.name: isFavorite ? "starred-symbolic": "non-starred-symbolic"
-                    onTriggered: isFavorite ? kcm.removeFromFavorites(model.metaData) : kcm.addToFavorites(model.metaData)
-                }
-            ]
-            onConfigTriggered: kcm.showKCM(model.config, [], model.metaData)
-            highlighted: false
-            hoverEnabled: false
-        }
+                additionalActions: [
+                    Kirigami.Action {
+                        displayHint: Kirigami.DisplayHint.IconOnly
+                        text: isFavorite ? i18n("Remove from favorites") : i18n("Add to favorites")
+                        icon.name: isFavorite ? "starred-symbolic": "non-starred-symbolic"
+                        onTriggered: isFavorite ? kcm.removeFromFavorites(model.metaData) : kcm.addToFavorites(model.metaData)
+                    }
+                ]
+                onConfigTriggered: kcm.showKCM(model.config, [], model.metaData)
+                highlighted: false
+                hoverEnabled: false
+            }
         }
     }
 }
