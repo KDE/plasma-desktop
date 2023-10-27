@@ -4,23 +4,23 @@
 # Yoann Laissus <yoann.laissus@gmail.com>, 2015, 2016, 2017.
 # Vincent Pinon <vpinon@kde.org>, 2016, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 01:40+0000\n"
-"PO-Revision-Date: 2023-05-22 17:27+0200\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"PO-Revision-Date: 2023-10-25 18:49+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -114,7 +114,7 @@ msgstr "Licence :"
 #: contents/configuration/AboutPlugin.qml:151
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr "Afficher le texte de license"
+msgstr "Afficher le texte de licence"
 
 #: contents/configuration/AboutPlugin.qml:165
 msgid "Authors"
@@ -528,11 +528,11 @@ msgstr "%1 (primaire)"
 msgid "Alternative Widgets"
 msgstr "Composants graphiques alternatifs"
 
-#: contents/explorer/AppletDelegate.qml:167
+#: contents/explorer/AppletDelegate.qml:173
 msgid "Undo uninstall"
 msgstr "Annuler la désinstallation"
 
-#: contents/explorer/AppletDelegate.qml:168
+#: contents/explorer/AppletDelegate.qml:174
 msgid "Uninstall widget"
 msgstr "Désinstaller le composant graphique"
 
@@ -565,11 +565,11 @@ msgstr "Plus de composants graphiques…"
 msgid "Categories"
 msgstr "Catégories"
 
-#: contents/explorer/WidgetExplorer.qml:283
+#: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets matched the search terms"
 msgstr "Aucun composant graphique ne correspond aux mots clés de la recherche"
 
-#: contents/explorer/WidgetExplorer.qml:283
+#: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "Aucun composant graphique disponible"
 

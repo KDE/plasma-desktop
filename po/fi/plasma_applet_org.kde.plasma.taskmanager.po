@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-14 01:49+0000\n"
+"POT-Creation-Date: 2023-10-27 01:41+0000\n"
 "PO-Revision-Date: 2023-03-04 19:58+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -28,26 +28,26 @@ msgstr "Ulkoasu"
 msgid "Behavior"
 msgstr "Toiminta"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
 msgstr "Poista vaimennus"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "Vaimenna"
 
-#: package/contents/ui/AudioStream.qml:103
+#: package/contents/ui/AudioStream.qml:104
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "Poista vaimennus: %1"
 
 # Kaksoispiste yhdenmukaisuussyistä: ”Poista vaimennus” vaatii genetiivin (poista JONKIN vaimennus)
-#: package/contents/ui/AudioStream.qml:103
+#: package/contents/ui/AudioStream.qml:104
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"

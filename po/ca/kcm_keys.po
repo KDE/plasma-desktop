@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-26 01:46+0000\n"
-"PO-Revision-Date: 2023-01-11 09:21+0100\n"
+"PO-Revision-Date: 2023-10-26 12:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: globalaccelmodel.cpp:209
 #, kde-format
@@ -121,25 +121,22 @@ msgid "Common Actions"
 msgstr "Accions comunes"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action: button Import shortcut scheme"
 msgid "Import…"
-msgstr "Importa"
+msgstr "Importa…"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Cancel Export"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
 msgstr "Cancel·la l'exportació"
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr "Exporta un esquema…"
+msgstr "Exporta…"
 
 #: ui/main.qml:75
 #, kde-format
@@ -155,8 +152,7 @@ msgstr ""
 "exportat"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid "Save scheme"
+#, kde-format
 msgctxt "@action:button Save shortcut scheme"
 msgid "Save Scheme"
 msgstr "Desa l'esquema"
@@ -165,21 +161,19 @@ msgstr "Desa l'esquema"
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
-msgstr ""
+msgstr "Afegeix nova"
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep translated text as short as possible"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr "Afegeix una aplicació…"
+msgstr "Aplicació…"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr ""
+msgstr "Ordre o script…"
 
 #: ui/main.qml:226
 #, kde-format
@@ -348,10 +342,3 @@ msgstr "Afegeix una drecera personalitzada"
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Cancel·la la captura d'una drecera nova"
-
-#~ msgctxt "@action:button Keep translated text as short as possible"
-#~ msgid "Add Command…"
-#~ msgstr "Afegeix una ordre…"
-
-#~ msgid "Import Scheme…"
-#~ msgstr "Importa un esquema…"
