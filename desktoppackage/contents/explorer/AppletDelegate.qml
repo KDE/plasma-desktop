@@ -56,6 +56,9 @@ Item {
 
             onActiveChanged: if (active) {
                 iconContainer.grabToImage(function(result) {
+                    if (!dragHandler.active) {
+                        return;
+                    }
                     parent.Drag.imageSource = result.url;
                     parent.Drag.active = dragHandler.active;
                 }, Qt.size(Kirigami.Units.iconSizes.huge, Kirigami.Units.iconSizes.huge));
@@ -140,7 +143,7 @@ Item {
                     live: false
                 }
             }
-            
+
             Rectangle {
                 id: runningBadge
                 width: height
@@ -173,7 +176,7 @@ Item {
                 PlasmaComponents.ToolTip.text: delegate.pendingUninstall ? i18nd("plasma_shell_org.kde.plasma.desktop", "Undo uninstall")
                                                     : i18nd("plasma_shell_org.kde.plasma.desktop", "Uninstall widget")
                 flat: false
-                visible: model.local && delegate.GridView.isCurrentItem
+                visible: model.local && delegate.GridView.isCurrentItem && !dragHandler.active
 
                 onHoveredChanged: {
                     if (hovered) {
