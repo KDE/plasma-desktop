@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-26 01:46+0000\n"
-"PO-Revision-Date: 2023-05-05 22:50+0100\n"
+"PO-Revision-Date: 2023-10-27 07:10+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -117,25 +117,22 @@ msgid "Common Actions"
 msgstr "Komunaj Agoj"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action: button Import shortcut scheme"
 msgid "Import…"
-msgstr "Importi"
+msgstr "Importi…"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Cancel Export"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
 msgstr "Nuligi Eksporton"
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr "Eksporta Skemo…"
+msgstr "Eksporti…"
 
 #: ui/main.qml:75
 #, kde-format
@@ -151,31 +148,28 @@ msgstr ""
 "skemo"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid "Save scheme"
+#, kde-format
 msgctxt "@action:button Save shortcut scheme"
 msgid "Save Scheme"
-msgstr "Konservi skemon"
+msgstr "Konservi Skemon"
 
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
-msgstr ""
+msgstr "Aldoni Novan"
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep translated text as short as possible"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr "Aldoni Aplikaĵon…"
+msgstr "Aplikaĵon…"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr ""
+msgstr "Komandon aŭ Skripton…"
 
 #: ui/main.qml:226
 #, kde-format
