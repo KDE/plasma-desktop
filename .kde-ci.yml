@@ -58,6 +58,7 @@ RuntimeDependencies:
     'plasma/plasma-integration' : '@same'
 - 'on': ['Linux']
   'require':
+    'frameworks/kded': '@latest-kf6'
     'frameworks/qqc2-desktop-style': '@latest-kf6'
     'plasma/kactivitymanagerd': '@same'
     'sdk/selenium-webdriver-at-spi': '@latest-kf6'

@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: GPL-2.0-or-later
 
+from enum import Enum
 import os
 import pathlib
 import subprocess
@@ -18,6 +19,7 @@ from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 gi.require_version('Gdk', '3.0')
 from gi.repository import Gdk, Gio, GLib
@@ -33,6 +35,30 @@ CMAKE_BINARY_DIR: Final = os.environ.get("CMAKE_BINARY_DIR", os.path.join(pathli
 KACTIVITYMANAGERD_PATH: Final = os.environ.get("KACTIVITYMANAGERD_PATH", os.path.join(pathlib.Path.home(), "kde/usr/lib64/libexec/kactivitymanagerd"))
 KACTIVITYMANAGERD_SERVICE_NAME: Final = "org.kde.ActivityManager"
 EVDEV_OFFSET: Final = 8
+KDE_VERSION: Final = 6
+
+
+class XKeyCode(Enum):
+    """
+    @see https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
+    """
+    Alt = 0xffe9
+    Ctrl = 0xffe3
+    D = 0x0044
+    Down = 0xff54
+    E = 0x0045
+    Enter = 0xff8d
+    Escape = 0xff1b
+    Menu = 0xff67
+    P = 0x0050
+    Shift = 0xffe1
+    Space = 0x0020
+    Return = 0xff0d
+    Right = 0xff53
+    S = 0x0053
+    Super = 0xffeb
+    Tab = 0xff09
+    Up = 0xff52
 
 
 def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
@@ -45,20 +71,20 @@ def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
     return reply and reply.get_signature() == 'b' and reply.get_body().get_child_value(0).get_boolean()
 
 
-def keyval_to_keycode(key_val: int) -> int:
+def keyval_to_keycode(key_val: XKeyCode) -> int:
     """
     @param key_val see https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
     """
     match key_val:
-        case 0xffe1:  # XK_Shift_L
+        case XKeyCode.Shift:  # XK_Shift_L
             return 42 + EVDEV_OFFSET
-        case 0xffe9:  #XK_Alt_L
+        case XKeyCode.Alt:  #XK_Alt_L
             return 56 + EVDEV_OFFSET
-        case 0xffe3:  # XK_Control_L
+        case XKeyCode.Ctrl:  # XK_Control_L
             return 29 + EVDEV_OFFSET
 
     keymap = Gdk.Keymap.get_default()
-    ret, keys = keymap.get_entries_for_keyval(key_val)
+    ret, keys = keymap.get_entries_for_keyval(key_val.value)
     if not ret:
         raise RuntimeError("Failed to map key!")
     return keys[0].keycode
@@ -70,28 +96,44 @@ class DesktopTest(unittest.TestCase):
     """
 
     driver: webdriver.Remote
-    kactivitymanagerd: subprocess.Popen
+    kactivitymanagerd: subprocess.Popen | None = None
+    kded: subprocess.Popen | None = None
+    plasmashell: subprocess.Popen | None = None
 
     @classmethod
     def setUpClass(cls) -> None:
         """
         Initializes the webdriver
         """
-        cls.kactivitymanagerd = subprocess.Popen([KACTIVITYMANAGERD_PATH], stdout=sys.stderr, stderr=sys.stderr)
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
-        kactivitymanagerd_started: bool = False
-        for _ in range(10):
-            if name_has_owner(session_bus, KACTIVITYMANAGERD_SERVICE_NAME):
-                kactivitymanagerd_started = True
-                break
-            print("waiting for kactivitymanagerd to appear on the DBus session")
-            time.sleep(1)
-        assert kactivitymanagerd_started
+        if not name_has_owner(session_bus, KACTIVITYMANAGERD_SERVICE_NAME):
+            cls.kactivitymanagerd = subprocess.Popen([KACTIVITYMANAGERD_PATH], stdout=sys.stderr, stderr=sys.stderr)
+            kactivitymanagerd_started: bool = False
+            for _ in range(10):
+                if name_has_owner(session_bus, KACTIVITYMANAGERD_SERVICE_NAME):
+                    kactivitymanagerd_started = True
+                    break
+                print("waiting for kactivitymanagerd to appear on the DBus session")
+                time.sleep(1)
+            assert kactivitymanagerd_started
+
+        if not name_has_owner(session_bus, f"org.kde.kded{KDE_VERSION}"):
+            cls.kded = subprocess.Popen([f"kded{KDE_VERSION}"], stdout=sys.stderr, stderr=sys.stderr)
+            kded_started: bool = False
+            for _ in range(10):
+                if name_has_owner(session_bus, f"org.kde.kded{KDE_VERSION}"):
+                    kded_started = True
+                    break
+                print(f"waiting for kded{KDE_VERSION} to appear on the dbus session")
+                time.sleep(1)
+            assert kded_started
+
+        cls.plasmashell = subprocess.Popen(["plasmashell", "-p", "org.kde.plasma.desktop", "--no-respawn"], stdout=sys.stderr, stderr=sys.stderr)
 
         IS.init_module()
 
         options = AppiumOptions()
-        options.set_capability("app", "plasmashell -p org.kde.plasma.desktop --no-respawn")
+        options.set_capability("app", "Root")
         options.set_capability("timeouts", {'implicit': 30000})
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
@@ -108,7 +150,10 @@ class DesktopTest(unittest.TestCase):
         Make sure to terminate the driver again, lest it dangles.
         """
         subprocess.check_output(["kquitapp6", "plasmashell"], stderr=sys.stderr)
-        cls.kactivitymanagerd.kill()
+        if cls.kded:
+            cls.kded.kill()
+        if cls.kactivitymanagerd:
+            cls.kactivitymanagerd.kill()
         cls.driver.quit()
 
     def test_0_panel_ready(self) -> None:
@@ -124,20 +169,38 @@ class DesktopTest(unittest.TestCase):
         """
         # Key values are from https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
         # Alt+D
-        IS.key_press(keyval_to_keycode(0xffe9))
-        IS.key_press(keyval_to_keycode(0x0044))
+        IS.key_press(keyval_to_keycode(XKeyCode.Alt))
+        IS.key_press(keyval_to_keycode(XKeyCode.D))
         time.sleep(0.5)
-        IS.key_release(keyval_to_keycode(0x0044))
-        IS.key_release(keyval_to_keycode(0xffe9))
+        IS.key_release(keyval_to_keycode(XKeyCode.Alt))
+        IS.key_release(keyval_to_keycode(XKeyCode.D))
         time.sleep(0.5)
         # E
-        IS.key_press(keyval_to_keycode(0x0045))
+        IS.key_press(keyval_to_keycode(XKeyCode.E))
         time.sleep(0.5)
-        IS.key_release(keyval_to_keycode(0x0045))
+        IS.key_release(keyval_to_keycode(XKeyCode.E))
 
         global_theme_button = self.driver.find_element(AppiumBy.NAME, "Choose Global Theme…")
         self.driver.find_element(AppiumBy.NAME, "Exit Edit Mode").click()
         WebDriverWait(self.driver, 5).until(lambda _: not global_theme_button.is_displayed())
+
+    def test_2_open_panel_edit_mode(self) -> None:
+        # Alt+D
+        IS.key_press(keyval_to_keycode(XKeyCode.Alt))
+        IS.key_press(keyval_to_keycode(XKeyCode.D))
+        time.sleep(0.5)
+        IS.key_release(keyval_to_keycode(XKeyCode.Alt))
+        IS.key_release(keyval_to_keycode(XKeyCode.D))
+        time.sleep(0.5)
+        # E
+        IS.key_press(keyval_to_keycode(XKeyCode.E))
+        time.sleep(0.5)
+        IS.key_release(keyval_to_keycode(XKeyCode.E))
+
+        wait = WebDriverWait(self.driver, 5)
+        self.driver.find_element(AppiumBy.NAME, "Configure Panel…").click()
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Widgets…")))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Spacer")))
 
 
 if __name__ == '__main__':

@@ -77,7 +77,7 @@ Item {
                 toolbarHeight = root.height;
             }
         }
-        
+
         onPositionChanged: mouse => {
             panel.screenToFollow = mouse.screen;
 
@@ -149,7 +149,7 @@ Item {
             lastX = mouse.screenX
             lastY = mouse.screenY
         }
-        
+
         onReleased: {
             startDragOffset = 0.0;
             toolbarWidth = toolbarHeight = 0.0;
@@ -385,6 +385,7 @@ Item {
             icon.name: "configure"
             Layout.fillWidth: true
             checkable: true
+            Accessible.onPressAction: settingsButton.checked = !settingsButton.checked
             onCheckedChanged: {
                 if (checked) {
                     contextMenuLoader.open()
