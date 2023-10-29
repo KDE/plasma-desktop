@@ -1,19 +1,19 @@
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-26 01:46+0000\n"
-"PO-Revision-Date: 2023-01-14 19:34+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"PO-Revision-Date: 2023-10-27 09:52+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: globalaccelmodel.cpp:209
 #, kde-format
@@ -114,25 +114,22 @@ msgid "Common Actions"
 msgstr "Actions communes"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action: button Import shortcut scheme"
 msgid "Import…"
-msgstr "Importer"
+msgstr "Importer..."
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Cancel Export"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
-msgstr "Annuler une exportation"
+msgstr "Annuler l'exportation"
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr "Exporter un thème..."
+msgstr "Exporter..."
 
 #: ui/main.qml:75
 #, kde-format
@@ -150,31 +147,28 @@ msgstr ""
 "d'exportation"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid "Save scheme"
+#, kde-format
 msgctxt "@action:button Save shortcut scheme"
 msgid "Save Scheme"
-msgstr "Enregistrer un schéma"
+msgstr "Enregistrer un thème"
 
 #: ui/main.qml:158
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
-msgstr ""
+msgstr "Ajouter un nouveau"
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep translated text as short as possible"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr "Ajouter une application..."
+msgstr "Application..."
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr ""
+msgstr "Commande ou script..."
 
 #: ui/main.qml:226
 #, kde-format
