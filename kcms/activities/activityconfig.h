@@ -23,6 +23,8 @@ class ActivityConfig : public QObject
     Q_PROPERTY(bool isPrivate MEMBER m_private NOTIFY infoChanged)
     Q_PROPERTY(QKeySequence shortcut MEMBER m_shortcut NOTIFY infoChanged)
     Q_PROPERTY(bool isSaveNeeded READ isSaveNeeded NOTIFY infoChanged)
+    Q_PROPERTY(bool inhibitScreen MEMBER m_inhibitScreen NOTIFY infoChanged)
+    Q_PROPERTY(bool inhibitSleep MEMBER m_inhibitSleep NOTIFY infoChanged)
 
 public:
     explicit ActivityConfig(QObject *parent = nullptr);
@@ -53,6 +55,10 @@ private:
     QString m_iconName;
     bool m_private;
     QKeySequence m_shortcut;
+    bool m_inhibitScreen = false;
+    bool m_savedInhibitScreen = false;
+    bool m_inhibitSleep = false;
+    bool m_savedInhibitSleep = false;
 
     KActivities::Controller m_activities;
     bool m_savedPrivate = false;

@@ -11,6 +11,8 @@
 
 #include <KActivities/Info>
 
+#include <KConfig>
+#include <KConfigGroup>
 #include <KGlobalAccel>
 #include <KLocalizedString>
 
@@ -36,6 +38,8 @@ void ActivityConfig::reset()
     m_iconName = QStringLiteral("activities");
     m_private = false;
     m_shortcut = QKeySequence();
+    m_inhibitScreen = false;
+    m_inhibitSleep = false;
 }
 
 QString ActivityConfig::activityId() const
@@ -70,6 +74,14 @@ bool ActivityConfig::isSaveNeeded()
 
     // The private state is retrieved/set via DBus. We store it in a member variable for convenience
     if (m_private != m_savedPrivate) {
+        return true;
+    }
+
+    if (m_inhibitScreen != m_savedInhibitScreen) {
+        return true;
+    }
+
+    if (m_inhibitSleep != m_savedInhibitSleep) {
         return true;
     }
 
@@ -113,6 +125,13 @@ void ActivityConfig::load()
         watcher->deleteLater();
     });
 
+    KConfig powerdevilConfig("powerdevilrc");
+    KConfigGroup activityGroup = powerdevilConfig.group("Activities").group(m_activityId);
+    m_inhibitScreen = activityGroup.readEntry("InhibitScreenManagement", false);
+    m_savedInhibitScreen = m_inhibitScreen;
+    m_inhibitSleep = activityGroup.readEntry("InhibitSuspend", false);
+    m_savedInhibitSleep = m_inhibitSleep;
+
     Q_EMIT infoChanged();
 }
 
@@ -144,6 +163,13 @@ void ActivityConfig::save()
         QVariant::fromValue(QDBusVariant(m_private)),
     });
     QDBusConnection::sessionBus().asyncCall(message);
+
+    KConfig powerdevilConfig("powerdevilrc");
+    KConfigGroup activityGroup = powerdevilConfig.group("Activities").group(m_activityId);
+    activityGroup.writeEntry("InhibitScreenManagement", m_inhibitScreen);
+    m_savedInhibitScreen = m_inhibitScreen;
+    activityGroup.writeEntry("InhibitSuspend", m_inhibitSleep);
+    m_savedInhibitSleep = m_inhibitSleep;
 }
 
 void ActivityConfig::createActivity()
