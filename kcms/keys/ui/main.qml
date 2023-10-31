@@ -174,10 +174,6 @@ KCM.AbstractKCM {
                         }
                     }
 
-                    // Not using CheckableListItem despite having a checkbox because
-                    // the list item is not always in a checkable state, so the checkbox
-                    // does not always need to be visible, but CheckableListItem
-                    // makes that assumption.
                     delegate: QQC2.ItemDelegate {
                         id: componentDelegate
                         width: ListView.view.width

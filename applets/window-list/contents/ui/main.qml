@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.10
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -34,12 +35,9 @@ PlasmoidItem {
                 sortMode: TaskManager.TasksModel.SortVirtualDesktop
                 groupMode: TaskManager.TasksModel.GroupDisabled
             }
-            delegate: Kirigami.BasicListItem {
-                id: del
-                onClicked: tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
-
-                leading: Item {
-                    width: iconItem.width
+            delegate: PlasmaExtras.ListItem {
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
 
                     Kirigami.Icon {
                         id: iconItem
@@ -58,8 +56,14 @@ PlasmoidItem {
                         implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
                         implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
                     }
+                    PlasmaComponents.Label {
+                        Layout.fillWidth: true
+                        text: model.display
+                        elide: Text.ElideRight
+                    }
                 }
-                text: model.display
+
+                onClicked: tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
             }
         }
     }

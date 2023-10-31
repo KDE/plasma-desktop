@@ -10,6 +10,7 @@ import QtQuick.Controls 2.3 as QQC2
 import QtQml 2.15
 
 import org.kde.kirigami 2.10 as Kirigami
+import org.kde.kirigami.delegates as KD
 import org.kde.kcmutils as KCM
 import org.kde.private.kcms.style 1.0 as Private
 
@@ -141,9 +142,11 @@ KCM.ScrollViewKCM {
         Component {
             id: listDelegateComponent
 
-            Kirigami.AbstractListItem {
+            // Not using KirigamiDelegates.CheckSubtitleDelegate because some
+            // delegates need to be checkable, but others don't
+            QQC2.ItemDelegate {
                 id: delegate
-                // FIXME why does the padding logic to dodge the ScrollBars not work here?
+                width: list.width
                 text: model.display
                 enabled: !model.immutable
                 checkable: model.type !== Private.KCM.OnDemandType
@@ -155,16 +158,6 @@ KCM.ScrollViewKCM {
                     if (checkable) {
                         model.autoloadEnabled = !model.autoloadEnabled;
                     }
-                }
-
-                Component.onCompleted: {
-                    // Checkable Kirigami.ListItem has blue background which we don't want
-                    // as we have a dedicated CheckBox. Still using those properties for accessibility.
-                    background.color = Qt.binding(function() {
-                        return delegate.highlighted || (delegate.supportsMouseEvents && delegate.pressed)
-                            ? delegate.activeBackgroundColor
-                            : delegate.backgroundColor
-                    });
                 }
 
                 contentItem: RowLayout {
@@ -185,35 +178,21 @@ KCM.ScrollViewKCM {
                         }
                     }
 
-                    ColumnLayout {
+                    KD.TitleSubtitle {
+                        id: titleSubtitle
                         Layout.fillWidth: true
-                        spacing: 0
-
-                        QQC2.Label {
-                            id: displayLabel
-                            Layout.fillWidth: true
-                            text: delegate.text
-                            elide: Text.ElideRight
-                            textFormat: Text.PlainText
-                            color: (delegate.highlighted || (delegate.pressed && delegate.supportsMouseEvents)) ? delegate.activeTextColor : delegate.textColor
-                        }
-
-                        QQC2.Label {
-                            Layout.fillWidth: true
-                            text: model.description
-                            // FIXME do we have a descriptive label component?
-                            opacity: delegate.hovered ? 0.8 : 0.6
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.PlainText
-                            color: displayLabel.color
-                        }
+                        title: delegate.text
+                        subtitle: model.description
+                        selected: delegate.highlighted || delegate.pressed || delegate.down
                     }
 
                     QQC2.Label {
                         id: statusLabel
                         horizontalAlignment: Text.AlignRight
                         opacity: model.status === Private.KCM.Running ? 1 : delegate.hovered ? 0.8 : 0.6
-                        color: model.status === Private.KCM.Running ? Kirigami.Theme.positiveTextColor : displayLabel.color
+                        color: model.status === Private.KCM.Running
+                            ? Kirigami.Theme.positiveTextColor
+                            : (titleSubtitle.selected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor)
                         visible: kcm.kdedRunning && model.type !== Private.KCM.OnDemandType
                         text: {
                             switch (model.status) {

@@ -12,7 +12,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols
 import org.kde.kcmutils as KCM
 
-Kirigami.AbstractListItem {
+QQC2.ItemDelegate {
     id: root
     property bool showExpandButton: true
 

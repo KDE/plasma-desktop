@@ -247,12 +247,14 @@ KCM.ScrollViewKCM {
 
     Component {
         id: directoryConfigDelegate
-        Kirigami.AbstractListItem {
+        QQC2.ItemDelegate {
             id: listItem
 
             // Store this as a property so we can access it within the combobox,
             // which also has a `model` property
             property var indexingModel: model
+
+            width: directoryConfigList.width
 
             // There's no need for a list item to ever be selected
             down: false
@@ -260,7 +262,7 @@ KCM.ScrollViewKCM {
             hoverEnabled: false
             // ... and because of that, use alternating backgrounds to visually
             // connect list items' left and right side content elements
-            alternatingBackground: true
+            Kirigami.Theme.useAlternateBackgroundColor: true
 
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing

@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.12
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.14 as QQC2
 import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami.delegates as KD
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
@@ -64,19 +65,33 @@ KCM.SimpleKCM {
 
                 onCurrentIndexChanged: stackView.currentIndex = currentIndex
 
-                delegate: Kirigami.BasicListItem {
+                delegate: QQC2.ItemDelegate {
+                    id: baseDelegate
+
                     width: listView.width
+
                     icon.name: modelData.icon
-                    label: modelData.title
+                    text: modelData.title
+
                     onClicked: listView.forceActiveFocus()
-                    Rectangle {
-                        id: defaultIndicator
-                        radius: width * 0.5
-                        implicitWidth: Kirigami.Units.largeSpacing
-                        implicitHeight: Kirigami.Units.largeSpacing
-                        visible: kcm.defaultsIndicatorsVisible
-                        opacity: !kcm[modelData.defaultnessKey]
-                        color: Kirigami.Theme.neutralTextColor
+
+                    contentItem: RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
+
+                        KD.IconTitleSubtitle {
+                            Layout.fillWidth: true
+                            icon.name: baseDelegate.icon.name
+                            title: baseDelegate.text
+                        }
+
+                        Rectangle {
+                            radius: width * 0.5
+                            implicitWidth: Kirigami.Units.largeSpacing
+                            implicitHeight: Kirigami.Units.largeSpacing
+                            visible: kcm.defaultsIndicatorsVisible
+                            opacity: !kcm[modelData.defaultnessKey]
+                            color: Kirigami.Theme.neutralTextColor
+                        }
                     }
                 }
             }
