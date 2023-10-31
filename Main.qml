@@ -13,8 +13,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.kirigami 2.20 as Kirigami
 
-import "components"
-import "components/animation"
+import org.kde.breeze.components
 
 // TODO: Once SDDM 0.19 is released and we are setting the font size using the
 // SDDM KCM's syncing feature, remove the `config.fontSize` overrides here and
@@ -328,8 +327,15 @@ Item {
                     state = "hidden";
                 }
             }
-
-            source: Qt.platform.pluginName.includes("wayland") ? "components/VirtualKeyboard_wayland.qml" : "components/VirtualKeyboard.qml"
+            Component {
+                id: keyboard
+                VirtualKeyboard {}
+            }
+            Component {
+                id: keyboardWayland
+                VirtualKeyboard_wayland {}
+            }
+            sourceComponent: Qt.platform.pluginName.includes("wayland") ? keyboardWayland : keyboard
             anchors {
                 left: parent.left
                 right: parent.right
