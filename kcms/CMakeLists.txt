@@ -15,6 +15,10 @@ add_subdirectory( keys )
 add_subdirectory( ksmserver )
 add_subdirectory( desktoppaths )
 
+if (TARGET SDL2::SDL2)
+    add_subdirectory( gamecontroller )
+endif()
+
 add_subdirectory(activities)
 add_subdirectory(recentFiles)
 add_subdirectory(componentchooser)

@@ -78,6 +78,7 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Package
     IconThemes
     XmlGui
+    Svg
 )
 if(BUILD_TESTING)
     find_package(Qt6Test ${QT_MIN_VERSION} CONFIG REQUIRED)
@@ -143,6 +144,12 @@ find_package(Wayland 1.2)
 set_package_properties(Wayland PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required for building Tablet input KCM"
+)
+
+find_package(SDL2)
+set_package_properties(SDL2 PROPERTIES
+        TYPE OPTIONAL
+        PURPOSE "Required for building Game Controller KCM"
 )
 
 find_package(LibKWorkspace ${PROJECT_VERSION} CONFIG REQUIRED)
