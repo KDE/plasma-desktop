@@ -40,6 +40,6 @@ target_link_libraries(kcm_tablet PRIVATE
     kwindevices
 )
 if (Qt${QT_MAJOR_VERSION}_VERSION VERSION_LESS "6.5.0")
-    target_link_libraries(kcm_tablet Qt::GuiPrivate)
+    target_link_libraries(kcm_tablet PRIVATE Qt::GuiPrivate)
 endif()
 
