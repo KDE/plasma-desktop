@@ -116,25 +116,22 @@ msgid "Common Actions"
 msgstr "Obvyklé činnosti"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action: button Import shortcut scheme"
 msgid "Import…"
-msgstr "Importovat"
+msgstr ""
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Cancel Export"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
-msgstr "Zrušit export"
+msgstr ""
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr "Exportovat schéma…"
+msgstr ""
 
 #: ui/main.qml:75
 #, kde-format
@@ -149,11 +146,10 @@ msgstr ""
 "Níže vyberte komponenty, které chcete zahrnout do exportovaného schématu"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid "Save scheme"
+#, kde-format
 msgctxt "@action:button Save shortcut scheme"
 msgid "Save Scheme"
-msgstr "Uložit schéma"
+msgstr ""
 
 #: ui/main.qml:158
 #, kde-format
@@ -162,12 +158,10 @@ msgid "Add New"
 msgstr ""
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep translated text as short as possible"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr "Přidat aplikaci…"
+msgstr ""
 
 #: ui/main.qml:170
 #, kde-format
@@ -341,10 +335,3 @@ msgstr "Přidat vlastní klávesovou zkratku"
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Zrušit zadání nové klávesové zkratky"
-
-#~ msgctxt "@action:button Keep translated text as short as possible"
-#~ msgid "Add Command…"
-#~ msgstr "Přidat příkaz…"
-
-#~ msgid "Import Scheme…"
-#~ msgstr "Importovat schéma…"
