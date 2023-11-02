@@ -180,7 +180,7 @@ PlasmaCore.ToolTipArea {
                 return Qt.TopEdge
         }
         margin: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersFloatingApplets) ? Kirigami.Units.largeSpacing : 0
-        floating: Plasmoid.location == PlasmaCore.Desktop
+        floating: Plasmoid.location == PlasmaCore.Types.Floating
         removeBorderStrategy: Plasmoid.location === PlasmaCore.Types.Floating
             ? PlasmaCore.AppletPopup.AtScreenEdges
             : PlasmaCore.AppletPopup.AtScreenEdges | PlasmaCore.AppletPopup.AtPanelEdges
