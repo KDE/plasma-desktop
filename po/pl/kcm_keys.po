@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-26 01:46+0000\n"
+"POT-Creation-Date: 2023-11-02 01:40+0000\n"
 "PO-Revision-Date: 2023-10-28 09:23+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -18,20 +18,20 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: globalaccelmodel.cpp:209
+#: globalaccelmodel.cpp:210
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Błąd podczas zapisywania skrótu %1: %2"
 
-#: globalaccelmodel.cpp:321
+#: globalaccelmodel.cpp:322
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Błąd dodawania %1, wygląda na to, że nie zawiera działań."
 
-#: globalaccelmodel.cpp:364
+#: globalaccelmodel.cpp:372
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Błąd porozumiewania się z usługą skrótów globalnych"

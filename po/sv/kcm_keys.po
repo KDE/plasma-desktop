@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-26 01:46+0000\n"
+"POT-Creation-Date: 2023-11-02 01:40+0000\n"
 "PO-Revision-Date: 2021-10-05 17:04+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,20 +17,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: globalaccelmodel.cpp:209
+#: globalaccelmodel.cpp:210
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Fel när genväg %1 skulle sparas: %2"
 
-#: globalaccelmodel.cpp:321
+#: globalaccelmodel.cpp:322
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Fel vid tillägg av %1, det verkar som det inte har några åtgärder."
 
-#: globalaccelmodel.cpp:364
+#: globalaccelmodel.cpp:372
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Fel vid kommunikation med den globala genvägstjänsten"

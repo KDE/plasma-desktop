@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-29 01:38+0000\n"
-"PO-Revision-Date: 2023-05-03 21:47+0200\n"
+"PO-Revision-Date: 2023-11-01 23:55+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -55,7 +55,7 @@ msgstr ""
 #, kde-format
 msgctxt "Invalid number of new messages, overlay, keep short"
 msgid "—"
-msgstr ""
+msgstr "—"
 
 #: package/contents/ui/Badge.qml:56
 #, kde-format
@@ -66,7 +66,7 @@ msgstr ""
 #: package/contents/ui/ConfigAppearance.qml:33
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Xeneral:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
 #, kde-format
@@ -81,7 +81,7 @@ msgstr ""
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
 msgid "Mark applications that play audio"
-msgstr ""
+msgstr "Marcar les aplicaciones que reproduzan audiu"
 
 #: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
@@ -92,12 +92,12 @@ msgstr ""
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum columns:"
-msgstr ""
+msgstr "Columnes máximes"
 
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum rows:"
-msgstr ""
+msgstr "Fileres máximes:"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
@@ -112,19 +112,19 @@ msgstr ""
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "Espaciu ente iconos:"
 
 #: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "Grande"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
@@ -156,13 +156,13 @@ msgstr ""
 #: package/contents/ui/ConfigBehavior.qml:56
 #, kde-format
 msgid "Clicking grouped task:"
-msgstr ""
+msgstr "Al calcar nes xeres agrupaes:"
 
 #: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "Percorrer les xeres"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -170,20 +170,20 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr ""
+msgstr "Amosar ventanes de previsualización pequeñes"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr ""
+msgstr "Amosar ventanes de previsualización grandes"
 
 #: package/contents/ui/ConfigBehavior.qml:66
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
-msgstr ""
+msgstr "Amosar la llista testual"
 
 #: package/contents/ui/ConfigBehavior.qml:74
 #, kde-format
@@ -195,7 +195,7 @@ msgstr ""
 #: package/contents/ui/ConfigBehavior.qml:84
 #, kde-format
 msgid "Combine into single button"
-msgstr ""
+msgstr "Combinar nun botón"
 
 #: package/contents/ui/ConfigBehavior.qml:91
 #, kde-format
@@ -215,12 +215,12 @@ msgstr ""
 #: package/contents/ui/ConfigBehavior.qml:105
 #, kde-format
 msgid "Manually"
-msgstr ""
+msgstr "Manualmente"
 
 #: package/contents/ui/ConfigBehavior.qml:105
 #, kde-format
 msgid "Alphabetically"
-msgstr ""
+msgstr "Alfabéticamente"
 
 #: package/contents/ui/ConfigBehavior.qml:105
 #, kde-format
@@ -241,13 +241,13 @@ msgstr ""
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
-msgstr ""
+msgstr "Al calcar na xera activa:"
 
 #: package/contents/ui/ConfigBehavior.qml:123
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr ""
+msgstr "Minimízala"
 
 #: package/contents/ui/ConfigBehavior.qml:128
 #, kde-format
@@ -258,19 +258,19 @@ msgstr ""
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
-msgstr ""
+msgstr "Nun fai nada"
 
 #: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
-msgstr ""
+msgstr "Zarra la venta o'l grupu"
 
 #: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
-msgstr ""
+msgstr "Abre una ventana nueva"
 
 #: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
@@ -298,18 +298,18 @@ msgstr ""
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
-msgstr ""
+msgstr "La rueda del mur:"
 
 #: package/contents/ui/ConfigBehavior.qml:148
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "Percuerre les xeres"
 
 #: package/contents/ui/ConfigBehavior.qml:157
 #, kde-format
 msgid "Skip minimized tasks"
-msgstr ""
+msgstr "Salta les xeres minimizaes"
 
 #: package/contents/ui/ConfigBehavior.qml:168
 #, kde-format
@@ -319,22 +319,22 @@ msgstr ""
 #: package/contents/ui/ConfigBehavior.qml:169
 #, kde-format
 msgid "From current screen"
-msgstr ""
+msgstr "De la pantalla actual"
 
 #: package/contents/ui/ConfigBehavior.qml:174
 #, kde-format
 msgid "From current desktop"
-msgstr ""
+msgstr "Del escritoriu actual"
 
 #: package/contents/ui/ConfigBehavior.qml:179
 #, kde-format
 msgid "From current activity"
-msgstr ""
+msgstr "De l'actividá actual"
 
 #: package/contents/ui/ConfigBehavior.qml:184
 #, kde-format
 msgid "That are minimized"
-msgstr ""
+msgstr "Que tán minimizaes"
 
 #: package/contents/ui/ConfigBehavior.qml:193
 #, kde-format
@@ -349,111 +349,111 @@ msgstr ""
 #: package/contents/ui/ConfigBehavior.qml:206
 #, kde-format
 msgid "New tasks appear:"
-msgstr ""
+msgstr "Les xeres nueves apaecen:"
 
 #: package/contents/ui/ConfigBehavior.qml:210
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "Abaxo"
 
 #: package/contents/ui/ConfigBehavior.qml:214
 #: package/contents/ui/ConfigBehavior.qml:234
 #, kde-format
 msgid "To the right"
-msgstr ""
+msgstr "A la derecha"
 
 #: package/contents/ui/ConfigBehavior.qml:216
 #: package/contents/ui/ConfigBehavior.qml:232
 #, kde-format
 msgid "To the left"
-msgstr ""
+msgstr "A la esquierda"
 
 #: package/contents/ui/ConfigBehavior.qml:228
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "Arriba"
 
 #: package/contents/ui/ContextMenu.qml:100
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "Llugares"
 
 #: package/contents/ui/ContextMenu.qml:106
 #, kde-format
 msgid "Recent Files"
-msgstr ""
+msgstr "Ficheros de recién"
 
 #: package/contents/ui/ContextMenu.qml:113
 #, kde-format
 msgid "Actions"
-msgstr ""
+msgstr "Aiciones"
 
 #: package/contents/ui/ContextMenu.qml:174
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
-msgstr ""
+msgstr "Pista anterior"
 
 #: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
-msgstr ""
+msgstr "Posar"
 
 #: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
-msgstr ""
+msgstr "Reproducir"
 
 #: package/contents/ui/ContextMenu.qml:206
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
-msgstr ""
+msgstr "Pista siguiente"
 
 #: package/contents/ui/ContextMenu.qml:217
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
-msgstr ""
+msgstr "Parar"
 
 #: package/contents/ui/ContextMenu.qml:237
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
-msgstr ""
+msgstr "Colar"
 
 #: package/contents/ui/ContextMenu.qml:252
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
-msgstr ""
+msgstr "Restaurar"
 
 #: package/contents/ui/ContextMenu.qml:277
 #, kde-format
 msgid "Mute"
-msgstr ""
+msgstr "Desactivar el soníu"
 
 #: package/contents/ui/ContextMenu.qml:288
 #, kde-format
 msgid "Open New Window"
-msgstr ""
+msgstr "Abrir una ventana nueva"
 
 #: package/contents/ui/ContextMenu.qml:304
 #, kde-format
 msgid "Move to &Desktop"
-msgstr ""
+msgstr "Mover al &escritoriu"
 
 #: package/contents/ui/ContextMenu.qml:328
 #, kde-format
 msgid "Move &To Current Desktop"
-msgstr ""
+msgstr "Mover &al escritoriu actual"
 
 #: package/contents/ui/ContextMenu.qml:337
 #, kde-format
 msgid "&All Desktops"
-msgstr ""
+msgstr "&Tolos escritorios"
 
 #: package/contents/ui/ContextMenu.qml:351
 #, kde-format
@@ -464,73 +464,73 @@ msgstr ""
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
-msgstr ""
+msgstr "Escritoriu &nuevu"
 
 #: package/contents/ui/ContextMenu.qml:385
 #, kde-format
 msgid "Show in &Activities"
-msgstr ""
+msgstr "Amosar n'&Actividaes"
 
 #: package/contents/ui/ContextMenu.qml:409
 #, kde-format
 msgid "Add To Current Activity"
-msgstr ""
+msgstr "Amestar a l'actividá actual"
 
 #: package/contents/ui/ContextMenu.qml:419
 #, kde-format
 msgid "All Activities"
-msgstr ""
+msgstr "Toles actividaes"
 
 #: package/contents/ui/ContextMenu.qml:477
 #, kde-format
 msgid "Move to %1"
-msgstr ""
+msgstr "Mover a «%1»"
 
 #: package/contents/ui/ContextMenu.qml:505
 #: package/contents/ui/ContextMenu.qml:522
 #, kde-format
 msgid "&Pin to Task Manager"
-msgstr ""
+msgstr "&Fixar nel xestor de xeres"
 
 #: package/contents/ui/ContextMenu.qml:575
 #, kde-format
 msgid "On All Activities"
-msgstr ""
+msgstr "En toles actividaes"
 
 #: package/contents/ui/ContextMenu.qml:581
 #, kde-format
 msgid "On The Current Activity"
-msgstr ""
+msgstr "Na actividá actual"
 
 #: package/contents/ui/ContextMenu.qml:606
 #, kde-format
 msgid "Unpin from Task Manager"
-msgstr ""
+msgstr "Soltar del xestor de xeres"
 
 #: package/contents/ui/ContextMenu.qml:621
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Más"
 
 #: package/contents/ui/ContextMenu.qml:630
 #, kde-format
 msgid "&Move"
-msgstr ""
+msgstr "&Mover"
 
 #: package/contents/ui/ContextMenu.qml:639
 #, kde-format
 msgid "Re&size"
-msgstr ""
+msgstr "Re&dimensionar"
 
 #: package/contents/ui/ContextMenu.qml:653
 #, kde-format
 msgid "Ma&ximize"
-msgstr ""
+msgstr "Ma&ximizar"
 
 #: package/contents/ui/ContextMenu.qml:667
 #, kde-format
 msgid "Mi&nimize"
-msgstr ""
+msgstr "Mi&nimizar"
 
 #: package/contents/ui/ContextMenu.qml:677
 #, kde-format
@@ -555,32 +555,32 @@ msgstr ""
 #: package/contents/ui/ContextMenu.qml:727
 #, kde-format
 msgid "Allow this program to be grouped"
-msgstr ""
+msgstr "Permitir qu'esti programa s'agrupe"
 
 #: package/contents/ui/ContextMenu.qml:773
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr ""
+msgstr "&Zarrar too"
 
 #: package/contents/ui/ContextMenu.qml:773
 #, kde-format
 msgid "&Close"
-msgstr ""
+msgstr "&Zarrar"
 
 #: package/contents/ui/Task.qml:80
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "Llanzar «%1»"
 
 #: package/contents/ui/Task.qml:85
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hai %1 mensaxe nuevu."
+msgstr[1] "Hai %1 mensaxe nuevos."
 
 #: package/contents/ui/Task.qml:94
 #, kde-format
@@ -627,13 +627,13 @@ msgstr ""
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: package/contents/ui/ToolTipInstance.qml:399
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: package/contents/ui/ToolTipInstance.qml:423
 #, kde-format
@@ -670,44 +670,44 @@ msgstr ""
 msgctxt "Show all user Places"
 msgid "%1 more Place"
 msgid_plural "%1 more Places"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 llugar más"
+msgstr[1] "%1 llugares más"
 
 #: plugin/backend.cpp:408
 #, kde-format
 msgid "Recent Downloads"
-msgstr ""
+msgstr "Descargues de recién"
 
 #: plugin/backend.cpp:410
 #, kde-format
 msgid "Recent Connections"
-msgstr ""
+msgstr "Conexones de recién"
 
 #: plugin/backend.cpp:412
 #, kde-format
 msgid "Recent Places"
-msgstr ""
+msgstr "Llugares de recién"
 
 #: plugin/backend.cpp:421
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr ""
+msgstr "Escaecer les descargues de recién"
 
 #: plugin/backend.cpp:423
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr ""
+msgstr "Escaecer les conexones de recién"
 
 #: plugin/backend.cpp:425
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr ""
+msgstr "Escaecer los llugares de recién"
 
 #: plugin/backend.cpp:427
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
-msgstr ""
+msgstr "Escaecer los ficheros de recién"
