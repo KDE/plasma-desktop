@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.15
+import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
@@ -401,7 +402,7 @@ PlasmaCore.ToolTipArea {
             grabPermissions: PointerHandler.TakeOverForbidden
 
             onActiveChanged: if (active) {
-                icon.grabToImage((result) => {
+                iconBox.grabToImage((result) => {
                     if (!dragHandler.active) {
                         // BUG 466675 grabToImage is async, so avoid updating dragSource when active is false
                         return;
@@ -420,6 +421,17 @@ PlasmaCore.ToolTipArea {
                 dragHelper.Drag.imageSource = "";
             }
         }
+    }
+
+    KSvg.Svg {
+        id: taskSvg
+
+        readonly property bool hasExpanderGraphics: hasElement("group-expander-left")
+                                                 && hasElement("group-expander-right")
+                                                 && hasElement("group-expander-top")
+                                                 && hasElement("group-expander-bottom")
+
+        imagePath: "widgets/tasks"
     }
 
     Loader {
@@ -465,15 +477,38 @@ PlasmaCore.ToolTipArea {
             return margin;
         }
 
-        Kirigami.Icon {
-            id: icon
+        Repeater {
+            id: iconRepeater
+            readonly property bool hasFadeableIcons: !taskSvg.hasExpanderGraphics && m.IsGroupParent && m.ChildCount > 0
+            readonly property int maxIcons: 3
 
-            anchors.fill: parent
+            model: hasFadeableIcons ? Math.min(m.ChildCount, iconRepeater.maxIcons) : 1
 
-            active: task.highlighted
-            enabled: true
+            delegate: Kirigami.Icon {
+                anchors {
+                    centerIn: parent
+                    verticalCenterOffset: !iconRepeater.hasFadeableIcons ? 0 : -Math.round(Kirigami.Units.smallSpacing / 2 * (iconRepeater.count - 1 - index * 2))
+                    horizontalCenterOffset: !iconRepeater.hasFadeableIcons ? 0 : -Math.round(Kirigami.Units.smallSpacing / 2 * (iconRepeater.count - 1 - index * 2))
+                }
+                width: parent.width
+                height: parent.height
+                z: 0 - index
 
-            source: model.decoration
+                active: task.highlighted
+                enabled: true
+                opacity: 1 - (index * (1 / iconRepeater.maxIcons))
+
+                source: task.m.decoration
+
+                layer.enabled:  iconRepeater.hasFadeableIcons
+                layer.effect: DropShadow {
+                    cached: true
+                    color: "gray"
+                    samples: 7 // 2 fewer than default to reduce resource use
+                    horizontalOffset: 1
+                    verticalOffset: 1
+                }
+            }
         }
 
         states: [
@@ -579,7 +614,7 @@ PlasmaCore.ToolTipArea {
     ]
 
     Component.onCompleted: {
-        if (!inPopup && model.IsWindow) {
+        if (!inPopup && model.IsWindow && taskSvg.hasExpanderGraphics) {
             var component = Qt.createComponent("GroupExpanderOverlay.qml");
             component.createObject(task);
             component.destroy();
