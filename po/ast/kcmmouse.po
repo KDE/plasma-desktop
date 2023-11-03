@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-03 01:39+0000\n"
-"PO-Revision-Date: 2023-05-03 21:44+0200\n"
+"PO-Revision-Date: 2023-11-02 15:11+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -55,6 +55,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"Nun ye posible tolos cambeos. Mira los rexistros pa consiguir más "
+"información. Reanicia esti módulu de configuración ya volvi tentalo."
 
 #: kcm/libinput/libinput_config.cpp:136
 #, kde-format
@@ -83,12 +85,12 @@ msgstr ""
 #: kcm/libinput/main.qml:73
 #, kde-format
 msgid "Device:"
-msgstr ""
+msgstr "Preséu:"
 
 #: kcm/libinput/main.qml:97 kcm/libinput/main_deviceless.qml:50
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Xeneral:"
 
 #: kcm/libinput/main.qml:98
 #, kde-format
@@ -124,17 +126,17 @@ msgstr ""
 #: kcm/libinput/main.qml:178 kcm/libinput/main_deviceless.qml:106
 #, kde-format
 msgid "Pointer speed:"
-msgstr ""
+msgstr "Velocidá del punteru:"
 
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
 #, kde-format
 msgid "Pointer acceleration:"
-msgstr ""
+msgstr "Aceleración del punteru:"
 
 #: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:169
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Nenguna"
 
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:173
 #, kde-format
@@ -144,7 +146,7 @@ msgstr ""
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Estándar"
 
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:183
 #, kde-format
@@ -154,7 +156,7 @@ msgstr ""
 #: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Scrolling:"
-msgstr ""
+msgstr "Desplazamientu:"
 
 #: kcm/libinput/main.qml:268 kcm/libinput/main_deviceless.qml:196
 #, kde-format
@@ -175,13 +177,13 @@ msgstr ""
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "Despacio"
 
 #: kcm/libinput/main.qml:345
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "Rápido"
 
 #: kcm/libinput/main.qml:355
 #, kde-format
