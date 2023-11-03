@@ -32,7 +32,7 @@ void KWinRunner::match(RunnerContext &context)
     if (m_enabled && context.query().compare(s_keyword, Qt::CaseInsensitive) == 0) {
         QueryMatch match(this);
         match.setId(QStringLiteral("kwin"));
-        match.setType(QueryMatch::ExactMatch);
+        match.setCategoryRelevance(QueryMatch::CategoryRelevance::Highest);
         match.setIconName(QStringLiteral("kwin"));
         match.setText(i18n("Open KWin debug console"));
         match.setRelevance(1.0);

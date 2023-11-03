@@ -37,7 +37,7 @@ void PlasmaDesktopRunner::match(RunnerContext &context)
     if (context.query().startsWith(m_desktopConsoleKeyword, Qt::CaseInsensitive)) {
         QueryMatch match(this);
         match.setId(QStringLiteral("plasma-desktop-console"));
-        match.setType(QueryMatch::ExactMatch);
+        match.setCategoryRelevance(QueryMatch::CategoryRelevance::Highest);
         match.setIconName(QStringLiteral("plasma"));
         match.setText(i18n("Open Plasma desktop interactive console"));
         match.setRelevance(1.0);
@@ -46,7 +46,7 @@ void PlasmaDesktopRunner::match(RunnerContext &context)
     if (context.query().startsWith(m_kwinConsoleKeyword, Qt::CaseInsensitive)) {
         QueryMatch match(this);
         match.setId(QStringLiteral("plasma-desktop-console"));
-        match.setType(QueryMatch::ExactMatch);
+        match.setCategoryRelevance(QueryMatch::CategoryRelevance::Highest);
         match.setIconName(QStringLiteral("kwin"));
         match.setText(i18n("Open KWin interactive console"));
         match.setRelevance(1.0);
