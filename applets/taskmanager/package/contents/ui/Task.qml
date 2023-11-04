@@ -487,8 +487,8 @@ PlasmaCore.ToolTipArea {
             delegate: Kirigami.Icon {
                 anchors {
                     centerIn: parent
-                    verticalCenterOffset: !iconRepeater.hasFadeableIcons ? 0 : -Math.round(Kirigami.Units.smallSpacing / 2 * (iconRepeater.count - 1 - index * 2))
-                    horizontalCenterOffset: !iconRepeater.hasFadeableIcons ? 0 : -Math.round(Kirigami.Units.smallSpacing / 2 * (iconRepeater.count - 1 - index * 2))
+                    verticalCenterOffset: !iconRepeater.hasFadeableIcons || Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? 0 : -Math.round(Kirigami.Units.smallSpacing / 2 * (iconRepeater.count - 1 - index * 2))
+                    horizontalCenterOffset: !iconRepeater.hasFadeableIcons || Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 0 : -Math.round(Kirigami.Units.smallSpacing / 2 * (iconRepeater.count - 1 - index * 2))
                 }
                 width: parent.width
                 height: parent.height
