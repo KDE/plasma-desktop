@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2023-11-04 12:20+0000\n"
 "PO-Revision-Date: 2021-12-31 10:43-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -170,6 +170,31 @@ msgid ""
 "more easily accommodate touch interaction."
 msgstr ""
 
+#: ui/main.qml:328
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgid "Double-click interval:"
+msgstr "ਇਸ ਦੀ ਬਜਾਏ ਦੋ ਵਾਰ ਕਲਿੱਕ ਕਰਕੇ ਖੋਲ੍ਹੋ"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "%1 msec"
+msgid_plural "%1 msec"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:347
+#, kde-format
+msgid "msec"
+msgstr ""
+
+#: ui/main.qml:361
+#, kde-format
+msgid ""
+"Two clicks within this duration are considered a double-click. Some "
+"applications may not honor this setting."
+msgstr ""
+
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
@@ -187,6 +212,13 @@ msgstr "ਐਨੀਮੇਸ਼ਨ ਗਤੀ"
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr ""
+
+#. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgid "Double click interval"
+msgstr "ਇਸ ਦੀ ਬਜਾਏ ਦੋ ਵਾਰ ਕਲਿੱਕ ਕਰਕੇ ਖੋਲ੍ਹੋ"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

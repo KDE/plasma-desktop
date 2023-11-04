@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2023-11-04 12:20+0000\n"
 "PO-Revision-Date: 2022-12-28 21:16+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -178,6 +178,32 @@ msgstr ""
 "În regim tactil, multe elemente ale interfeței cu utilizatorul vor deveni "
 "mai mari pentru a facilita interacțiunea prin atingeri."
 
+#: ui/main.qml:328
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgid "Double-click interval:"
+msgstr "Deschide prin apăsare dublă în schimb"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "%1 msec"
+msgid_plural "%1 msec"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ui/main.qml:347
+#, kde-format
+msgid "msec"
+msgstr ""
+
+#: ui/main.qml:361
+#, kde-format
+msgid ""
+"Two clicks within this duration are considered a double-click. Some "
+"applications may not honor this setting."
+msgstr ""
+
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
@@ -195,6 +221,13 @@ msgstr "Viteza animației"
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr "Clic stâng în calea barei de derulare mută bara cu o pagină"
+
+#. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgid "Double click interval"
+msgstr "Deschide prin apăsare dublă în schimb"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2023-11-04 12:20+0000\n"
 "PO-Revision-Date: 2022-08-20 17:28+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -175,6 +175,31 @@ msgstr ""
 "I touch-tilstand vil mange elementer i brugerfladen blive større, for bedre "
 "at imødekomme interaktion med touch."
 
+#: ui/main.qml:328
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgid "Double-click interval:"
+msgstr "Åbn med dobbeltklik i stedet"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "%1 msec"
+msgid_plural "%1 msec"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:347
+#, kde-format
+msgid "msec"
+msgstr ""
+
+#: ui/main.qml:361
+#, kde-format
+msgid ""
+"Two clicks within this duration are considered a double-click. Some "
+"applications may not honor this setting."
+msgstr ""
+
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
@@ -192,6 +217,13 @@ msgstr "Animationshastighed"
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr "Venstreklik på rullebjælkesporet flytter rullebjælken med en side"
+
+#. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgid "Double click interval"
+msgstr "Åbn med dobbeltklik i stedet"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2023-11-04 12:20+0000\n"
 "PO-Revision-Date: 2023-06-12 05:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -176,6 +176,31 @@ msgstr ""
 "სენსორული ეკრანის რეჟიმში მომხმარებლის ინტერფეისის ძირითადი ნაწილის ზომა "
 "შესამჩნევად იზრდება მათზე თითის მორტყმის გასაადვილებლად."
 
+#: ui/main.qml:328
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgid "Double-click interval:"
+msgstr "გახსნა მხოლოდ ორმაგი წკაპით მოხდება"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "%1 msec"
+msgid_plural "%1 msec"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:347
+#, kde-format
+msgid "msec"
+msgstr ""
+
+#: ui/main.qml:361
+#, kde-format
+msgid ""
+"Two clicks within this duration are considered a double-click. Some "
+"applications may not honor this setting."
+msgstr ""
+
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
@@ -193,6 +218,13 @@ msgstr "ანიმაციის სიჩქარე"
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr "ჩოჩიაზე მარცხენა წკაპი მას 1 გერდით გადააადგილებს"
+
+#. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgid "Double click interval"
+msgstr "გახსნა მხოლოდ ორმაგი წკაპით მოხდება"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

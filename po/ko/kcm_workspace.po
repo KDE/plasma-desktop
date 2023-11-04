@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2023-11-04 12:20+0000\n"
 "PO-Revision-Date: 2023-07-25 23:18+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -176,6 +176,30 @@ msgstr ""
 "터치 모드에서는 사용자 인터페이스의 여러 구성 요소가 쉽게 터치할 수 있도록 "
 "더 커집니다."
 
+#: ui/main.qml:328
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgid "Double-click interval:"
+msgstr "대신 두 번 클릭하여 열기"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "%1 msec"
+msgid_plural "%1 msec"
+msgstr[0] ""
+
+#: ui/main.qml:347
+#, kde-format
+msgid "msec"
+msgstr ""
+
+#: ui/main.qml:361
+#, kde-format
+msgid ""
+"Two clicks within this duration are considered a double-click. Some "
+"applications may not honor this setting."
+msgstr ""
+
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
@@ -193,6 +217,13 @@ msgstr "애니메이션 속도"
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr "스크롤 바의 빈 공간을 왼쪽 클릭했을 때 한 쪽 단위로 이동"
+
+#. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgid "Double click interval"
+msgstr "대신 두 번 클릭하여 열기"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
