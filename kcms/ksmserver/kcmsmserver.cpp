@@ -21,7 +21,6 @@
 #include <KPluginFactory>
 #include <KProcess>
 #include <QDBusInterface>
-#include <kworkspace.h>
 
 #include "kcmsmserver.h"
 #include "smserverdata.h"
