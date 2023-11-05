@@ -9,6 +9,7 @@
 #pragma once
 
 #include <QObject>
+#include <QPointF>
 #include <QString>
 #include <QVector2D>
 
@@ -50,5 +51,5 @@ private:
 
     QString m_name;
     QString m_path;
-    float m_axisX = 0.0, m_axisY = 0.0;
+    QPointF m_axis = QPointF(0.0, 0.0);
 };

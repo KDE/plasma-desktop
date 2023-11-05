@@ -40,10 +40,10 @@ void Gamepad::onAxisEvent(const SDL_ControllerAxisEvent sdlEvent)
 {
     const float value = static_cast<float>(sdlEvent.value) / std::numeric_limits<Sint16>::max();
     if (sdlEvent.axis == SDL_CONTROLLER_AXIS_LEFTX) {
-        m_axisX = value;
+        m_axis.setX(value);
         Q_EMIT axisValueChanged();
     } else if (sdlEvent.axis == SDL_CONTROLLER_AXIS_LEFTY) {
-        m_axisY = value;
+        m_axis.setY(value);
         Q_EMIT axisValueChanged();
     }
 
@@ -57,7 +57,7 @@ SDL_Joystick *Gamepad::joystick() const
 
 QVector2D Gamepad::axisValue() const
 {
-    return {m_axisX, m_axisY};
+    return QVector2D(m_axis);
 }
 
 #include "moc_gamepad.cpp"
