@@ -7,8 +7,6 @@ Dependencies:
     'frameworks/attica': '@latest'
     'frameworks/baloo': '@latest'
     'frameworks/extra-cmake-modules': '@latest'
-    'frameworks/kactivities': '@latest'
-    'frameworks/kactivities-stats': '@latest'
     'frameworks/kauth': '@latest'
     'frameworks/kbookmarks': '@latest'
     'frameworks/kcmutils': '@latest'
@@ -49,8 +47,12 @@ Dependencies:
     'plasma/plasma-workspace': '@same'
     'plasma/powerdevil': '@same'
     'plasma/systemsettings': '@same'
+    'plasma/kactivities': '@latest' # Different branch scheme due to formerly being a Framework
+    'plasma/kactivities-stats': '@latest' # Different branch scheme due to formerly being a Framework
+
 - 'on': ['Linux/Qt5', 'FreeBSD/Qt5']
   'require':
     'frameworks/kdelibs4support': '@latest'
+
 Options:
-  require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5']
+  require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5' ]
