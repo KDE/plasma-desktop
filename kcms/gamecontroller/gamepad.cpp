@@ -55,6 +55,11 @@ SDL_Joystick *Gamepad::joystick() const
     return m_joystick;
 }
 
+SDL_GameController *Gamepad::gamecontroller() const
+{
+    return m_gameController;
+}
+
 QVector2D Gamepad::axisValue() const
 {
     return QVector2D(m_axis);

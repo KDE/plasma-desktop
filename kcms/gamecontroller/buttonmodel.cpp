@@ -10,6 +10,7 @@
 
 #include "gamepad.h"
 
+#include <SDL2/SDL_gamecontroller.h>
 #include <SDL2/SDL_joystick.h>
 
 ButtonModel::ButtonModel(QObject *parent)
@@ -52,7 +53,7 @@ QVariant ButtonModel::data(const QModelIndex &index, int role) const
     }
 
     if (index.column() == 0 && role == ButtonStateRole) {
-        return SDL_JoystickGetButton(m_device->joystick(), index.row());
+        return SDL_GameControllerGetButton(m_device->gamecontroller(), SDL_GameControllerButton(index.row()));
     }
 
     return {};

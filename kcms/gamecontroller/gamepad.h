@@ -32,6 +32,7 @@ public:
     QString path() const;
 
     SDL_Joystick *joystick() const;
+    SDL_GameController *gamecontroller() const;
 
     QVector2D axisValue() const;
 
