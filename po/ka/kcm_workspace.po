@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 12:20+0000\n"
-"PO-Revision-Date: 2023-06-12 05:08+0200\n"
+"PO-Revision-Date: 2023-11-05 06:04+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: ui/main.qml:24
 #, kde-format
@@ -177,22 +177,21 @@ msgstr ""
 "შესამჩნევად იზრდება მათზე თითის მორტყმის გასაადვილებლად."
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double-click interval:"
-msgstr "გახსნა მხოლოდ ორმაგი წკაპით მოხდება"
+msgstr "ორმაგი წკაპის ინტერვალი:"
 
 #: ui/main.qml:343
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 მწმ"
+msgstr[1] "%1 მწმ"
 
 #: ui/main.qml:347
 #, kde-format
 msgid "msec"
-msgstr ""
+msgstr "მწმ"
 
 #: ui/main.qml:361
 #, kde-format
@@ -200,6 +199,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"ორი წკაპი ამ შუალედში აღქმული იქნება, როგორც ორმაგი წკაპი. ზოგიერთმა "
+"პროგრამამ, შეიძლება, ეს ვერ გაიგოს."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -221,10 +222,9 @@ msgstr "ჩოჩიაზე მარცხენა წკაპი მას
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double click interval"
-msgstr "გახსნა მხოლოდ ორმაგი წკაპით მოხდება"
+msgstr "ორმაგი წკაპის ინტერვალი"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
