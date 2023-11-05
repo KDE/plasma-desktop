@@ -348,7 +348,7 @@ PlasmoidItem {
 
             visible: false;
 
-            imagePath: "widgets/tasks"
+            imagePath: "widgets/tasks";
             prefix: "normal"
         }
 
