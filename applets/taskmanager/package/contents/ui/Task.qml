@@ -371,14 +371,6 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    WheelHandler {
-        property int wheelDelta: 0
-        enabled: Plasmoid.configuration.wheelEnabled && (!task.inPopup || !groupDialog.overflowing)
-        onWheel: {
-            wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, event.angleDelta.y, Plasmoid.configuration.wheelSkipMinimized, tasks);
-        }
-    }
-
     KSvg.FrameSvgItem {
         id: frame
 

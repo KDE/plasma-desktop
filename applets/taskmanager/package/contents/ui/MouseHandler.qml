@@ -12,6 +12,7 @@ import org.kde.plasma.plasmoid 2.0
 import "code/tools.js" as TaskTools
 
 DropArea {
+    id: dropArea
     signal urlsDropped(var urls)
 
     property Item target
@@ -171,13 +172,29 @@ DropArea {
     WheelHandler {
         id: wheelHandler
 
+        acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
+
         property bool handleWheelEvents: true
-        property int wheelDelta: 0;
 
         enabled: handleWheelEvents && Plasmoid.configuration.wheelEnabled
 
         onWheel: event => {
-            wheelDelta = TaskTools.wheelActivateNextPrevTask(null, wheelDelta, event.angleDelta.y, Plasmoid.configuration.wheelSkipMinimized, tasks);
+            // magic number 15 for common "one scroll"
+            // See https://doc.qt.io/qt-6/qml-qtquick-wheelhandler.html#rotation-prop
+            let increment = 0;
+            while (rotation >= 15) {
+                rotation -= 15;
+                increment++;
+            }
+            while (rotation <= -15) {
+                rotation += 15;
+                increment--;
+            }
+            const anchor = dropArea.target.childAt(event.x, event.y);
+            while (increment !== 0) {
+                TaskTools.activateNextPrevTask(anchor, increment < 0, Plasmoid.configuration.wheelSkipMinimized, tasks);
+                increment += (increment < 0) ? 1 : -1;
+            }
         }
     }
 }

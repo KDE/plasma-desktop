@@ -13,28 +13,6 @@
 var windowViewAvailable = false;
 var taskManagerInstanceCount = 0;
 
-function wheelActivateNextPrevTask(anchor, wheelDelta, eventDelta, wheelSkipMinimized, tasks) {
-    // magic number 120 for common "one click"
-    // See: http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
-    wheelDelta += eventDelta;
-    var increment = 0;
-    while (wheelDelta >= 120) {
-        wheelDelta -= 120;
-        increment++;
-    }
-    while (wheelDelta <= -120) {
-        wheelDelta += 120;
-        increment--;
-    }
-    while (increment != 0) {
-        activateNextPrevTask(anchor, increment < 0, wheelSkipMinimized, tasks)
-        increment += (increment < 0) ? 1 : -1;
-        wheelDelta = 0;
-    }
-
-    return wheelDelta;
-}
-
 function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
     // FIXME TODO: Unnecessarily convoluted and costly; optimize.
 
