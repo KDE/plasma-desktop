@@ -9,7 +9,6 @@
 #include "kcm.h"
 
 #include <KPluginFactory>
-#include <KSvg/ImageSet>
 #include <SDL.h>
 
 #include "axesmodel.h"

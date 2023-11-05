@@ -78,7 +78,6 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Package
     IconThemes
     XmlGui
-    Svg
 )
 if(BUILD_TESTING)
     find_package(Qt6Test ${QT_MIN_VERSION} CONFIG REQUIRED)

@@ -38,7 +38,6 @@ target_link_libraries(kcm_gamecontroller
     KF6::KCMUtils
     KF6::KCMUtilsQuick
     KF6::I18n
-    KF6::Svg
     Qt6::Quick
     Qt6::QuickWidgets
     SDL2::SDL2
