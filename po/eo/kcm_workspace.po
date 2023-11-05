@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_workspace.\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 12:20+0000\n"
-"PO-Revision-Date: 2023-06-11 06:10+0100\n"
+"PO-Revision-Date: 2023-11-04 19:37+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -179,8 +179,7 @@ msgstr ""
 "por pli facile akomodi tuŝan interagon."
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double-click interval:"
 msgstr "Malfermi per duobla klako anstataŭe"
 
@@ -188,13 +187,13 @@ msgstr "Malfermi per duobla klako anstataŭe"
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 msek"
+msgstr[1] "%1 msek"
 
 #: ui/main.qml:347
 #, kde-format
 msgid "msec"
-msgstr ""
+msgstr "msek"
 
 #: ui/main.qml:361
 #, kde-format
@@ -202,6 +201,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"Du klakoj ene de tiu ĉi daŭro estas konsiderataj duobla klako. Iuj aplikaĵoj "
+"eble ne honoras ĉi tiun agordon."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -223,10 +224,9 @@ msgstr "Maldekstre alklaku en rulbreto trako movas rulobreton je unu paĝo"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double click interval"
-msgstr "Malfermi per duobla klako anstataŭe"
+msgstr "Intervalo de duobla klako"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
