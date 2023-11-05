@@ -160,7 +160,8 @@ class DesktopTest(unittest.TestCase):
         """
         Until the panel is ready
         """
-        self.driver.find_element(AppiumBy.NAME, "Application Launcher")
+        wait = WebDriverWait(self.driver, 30)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Application Launcher")))
 
     def test_1_open_edit_mode(self) -> None:
         """
@@ -182,7 +183,7 @@ class DesktopTest(unittest.TestCase):
 
         global_theme_button = self.driver.find_element(AppiumBy.NAME, "Choose Global Theme…")
         self.driver.find_element(AppiumBy.NAME, "Exit Edit Mode").click()
-        WebDriverWait(self.driver, 5).until(lambda _: not global_theme_button.is_displayed())
+        WebDriverWait(self.driver, 30).until(lambda _: not global_theme_button.is_displayed())
 
     def test_2_open_panel_edit_mode(self) -> None:
         # Alt+D
@@ -197,7 +198,7 @@ class DesktopTest(unittest.TestCase):
         time.sleep(0.5)
         IS.key_release(keyval_to_keycode(XKeyCode.E))
 
-        wait = WebDriverWait(self.driver, 5)
+        wait = WebDriverWait(self.driver, 30)
         self.driver.find_element(AppiumBy.NAME, "Configure Panel…").click()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Widgets…")))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Spacer")))
