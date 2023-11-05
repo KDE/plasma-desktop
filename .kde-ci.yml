@@ -7,8 +7,6 @@ Dependencies:
     'frameworks/attica': '@latest-kf6'
     'frameworks/baloo': '@latest-kf6'
     'frameworks/extra-cmake-modules': '@latest-kf6'
-    'frameworks/kactivities': '@latest-kf6'
-    'frameworks/kactivities-stats': '@latest-kf6'
     'frameworks/kauth': '@latest-kf6'
     'frameworks/kcmutils': '@latest-kf6'
     'frameworks/kcodecs': '@latest-kf6'
@@ -47,6 +45,8 @@ Dependencies:
     'plasma/plasma-workspace': '@same'
     'plasma/powerdevil': '@same'
     'plasma/systemsettings': '@same'
+    'plasma/kactivities': '@latest-kf6' # Different branch scheme due to formerly being a Framework
+    'plasma/kactivities-stats': '@latest-kf6' # Different branch scheme due to formerly being a Framework
     'third-party/packagekit-qt': '@latest'
     'third-party/wayland': '@latest'
     'third-party/wayland-protocols': '@latest'
