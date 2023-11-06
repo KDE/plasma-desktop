@@ -2023,7 +2023,17 @@ void FolderModel::setApplet(Plasma::Applet *applet)
                 Plasma::Corona *corona = containment->corona();
 
                 if (corona) {
-                    m_screenMapper->setCorona(corona, m_currentActivity);
+                    connect(corona, &Plasma::Corona::screenRemoved, this, [this](int screenId) {
+                        if (m_screen == screenId) {
+                            m_screenMapper->removeScreen(screenId, m_currentActivity, resolvedUrl());
+                        }
+                    });
+                    connect(corona, &Plasma::Corona::screenAdded, this, [this](int screenId) {
+                        if (m_screen == screenId) {
+                            m_screenMapper->addScreen(screenId, m_currentActivity, resolvedUrl());
+                        }
+                    });
+                    m_screenMapper->setCorona(corona);
                 }
                 setScreen(containment->screen());
                 connect(containment, &Plasma::Containment::screenChanged, this, &FolderModel::setScreen);
