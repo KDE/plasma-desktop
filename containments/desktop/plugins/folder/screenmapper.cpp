@@ -243,20 +243,13 @@ void ScreenMapper::cleanup()
 }
 #endif
 
-void ScreenMapper::setCorona(Plasma::Corona *corona, const QString &activity)
+void ScreenMapper::setCorona(Plasma::Corona *corona)
 {
     if (m_corona != corona) {
         Q_ASSERT(!m_corona);
 
         m_corona = corona;
         if (m_corona) {
-            connect(m_corona, &Plasma::Corona::screenRemoved, this, [this, activity](int screenId) {
-                removeScreen(screenId, activity, {});
-            });
-            connect(m_corona, &Plasma::Corona::screenAdded, this, [this, activity](int screenId) {
-                addScreen(screenId, activity, {});
-            });
-
             auto config = m_corona->config();
             KConfigGroup group(config, QStringLiteral("ScreenMapping"));
             const QStringList mapping = group.readEntry(QStringLiteral("screenMapping"), QStringList{});

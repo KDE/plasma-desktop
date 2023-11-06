@@ -50,7 +50,7 @@ public:
     int screenForItem(const QUrl &url, const QString &activity) const;
     void addMapping(const QUrl &url, int screen, const QString &activity, MappingSignalBehavior behavior = ImmediateSignal);
     void removeFromMap(const QUrl &url, const QString &activity);
-    void setCorona(Plasma::Corona *corona, const QString &activity);
+    void setCorona(Plasma::Corona *corona);
 
     void addScreen(int screenId, const QString &activity, const QUrl &screenUrl);
     void removeScreen(int screenId, const QString &activity, const QUrl &screenUrl);
