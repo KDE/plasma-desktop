@@ -52,9 +52,6 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG OPTIONAL_COMPONENTS WaylandClient)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Auth
     Crash
-    Plasma
-    PlasmaQuick
-    Plasma5Support
     Config
     DocTools
     I18n
@@ -69,8 +66,6 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons # KSharedDataCache required by KImageCache, KStringHandler required by FolderModel
     GuiAddons # KImageCache
     DBusAddons
-    Activities
-    ActivitiesStats
     Config
     WidgetsAddons
     Codecs
@@ -79,6 +74,9 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     IconThemes
     XmlGui
 )
+
+find_package(KF6 ${PROJECT_VERSION} REQUIRED COMPONENTS Activities ActivitiesStats Plasma PlasmaQuick Plasma5Support)
+
 if(BUILD_TESTING)
     find_package(Qt6Test ${QT_MIN_VERSION} CONFIG REQUIRED)
     include(ECMAddTests)
