@@ -12,26 +12,29 @@ import org.kde.kirigami 2.20 as Kirigami
 Item {
     id: panelRepresentation
 
-    required property string text
-    required property int alignment
+    property string text: ""
+    property var alignment: Qt.AlignHCenter | Qt.AlignBottom
     property string tooltip
 
+    property bool isVertical: false
     property bool checked: false
     property bool windowVisible: false
     property bool panelVisible: true
     property bool translucentPanel: false
     property bool sunkenPanel: false
     property bool adaptivePanel: false
-    property int floatingGap: -1
+    property bool fillAvailable: false
+    property int floatingGap: 0
     property int windowZ: 0
+    property var mainIconSource: null
     property int screenHeight: Math.round(screenRect.height / 2)
 
     readonly property bool iconAndLabelsShouldlookSelected: checked || mouseArea.pressed
 
     signal clicked()
 
-    implicitHeight: childrenRect.height
-    implicitWidth: childrenRect.width
+    implicitHeight: mainItem.height
+    implicitWidth: mainItem.width
 
     PC3.ToolTip {
         text: parent.tooltip
@@ -53,76 +56,81 @@ Item {
     }
 
     ColumnLayout {
-        spacing: Kirigami.Units.smallSpacing * 2
+        id: mainItem
+        spacing: Kirigami.Units.smallSpacing
         Rectangle {
             id: screenRect
 
             readonly property double margin: Kirigami.Units.smallSpacing * 2
-            readonly property bool isVertical: panel.formFactor === PlasmaCore.Types.Vertical
             readonly property int floatingGap: panelRepresentation.floatingGap > -1 ? panelRepresentation.floatingGap : (panel.floating ? Kirigami.Units.smallSpacing : 0)
 
             Layout.alignment: Qt.AlignHCenter
             implicitWidth: Math.round(Math.min(Kirigami.Units.gridUnit * 6, Screen.width * 0.1))
             implicitHeight: Math.round(Math.min(Kirigami.Units.gridUnit * 4, Screen.width * 0.1))
-            color: Kirigami.Theme.backgroundColor
+            color: Qt.tint(Kirigami.Theme.backgroundColor, Qt.rgba(1, 1, 1, 0.3))
             border.color: Kirigami.Theme.highlightColor
             radius: 5
             clip: sunkenPanel
 
-            Rectangle {
-                id: panelImage
-
-                width: screenRect.isVertical ? Math.round(parent.width / 6): Math.round(parent.width * 0.8)
-                height: screenRect.isVertical ? Math.round(parent.height * 0.8) : Math.round(parent.height / 4)
-                color: panelRepresentation.translucentPanel ? parent.color : Kirigami.Theme.backgroundColor
-                opacity: panelRepresentation.translucentPanel ? 0.8 : 1.0
-                border.color: "transparent"
-                visible: panelRepresentation.panelVisible
-                clip: panelRepresentation.adaptivePanel
-                radius: clip ? 2 : 5 // Use very small radius when clip is true since clip cannot clip it. Zero radius will make it look too sharp
-
-                x: screenRect.calculateOrdinate(screenRect.width, width, true) + (screenRect.isVertical && sunkenPanel ? -Math.round(width / 2) : 0)
-                y: screenRect.calculateOrdinate(screenRect.height, height, false) + (!screenRect.isVertical && sunkenPanel ? Math.round(height / 2) : 0)
-                z: 1
-
-                Loader {
-                    id: horizontalAdaptivePanelLoader
-                    active: panelRepresentation.adaptivePanel && !screenRect.isVertical
-                    sourceComponent: Rectangle {
-                        anchors.verticalCenter: parent.verticalCenter
-                        anchors.left: parent.left
-                        anchors.leftMargin: Math.round(panelImage.width / 3)
-                        color: screenRect.color
-                        border.color: Kirigami.Theme.highlightColor
-                        width: panelImage.width
-                        height: Math.round(panelImage.height * 4)
-                        radius: Math.round(height / 2)
-                        rotation: 45
-                    }
-                }
-
-                Loader {
-                    id: verticalAdaptivePanelLoader
-                    active: panelRepresentation.adaptivePanel && screenRect.isVertical
-                    sourceComponent: Rectangle {
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        anchors.top: parent.top
-                        anchors.topMargin: Math.round(panelImage.height / 4)
-                        color: screenRect.color
-                        border.color: Kirigami.Theme.highlightColor
-                        width: Math.round(panelImage.width * 2)
-                        height: panelImage.height
-                        radius: Math.round(height / 2)
-                        rotation: 45
-                    }
-                }
-
+            RowLayout {
+                anchors.fill: parent
                 Rectangle {
-                    id: panelBorder
-                    anchors.fill: parent
-                    color: "transparent"
-                    border.color: Kirigami.Theme.highlightColor
-                    radius: parent.radius
+                    id: panelImage
+
+                    width: isVertical ? Math.round(parent.width / 6) : Math.round(parent.width * (fillAvailable ? 1 : 0.8))
+                    height: isVertical ? Math.round(parent.height * (fillAvailable ? 1 : 0.8)) : Math.round(parent.height / 4)
+                    implicitWidth: width
+                    implicitHeight: height
+                    Layout.alignment: alignment
+                    Layout.bottomMargin: sunkenPanel * -Math.round(height / 2) + floatingGap
+                    color: panelRepresentation.translucentPanel ? screenRect.color : Kirigami.Theme.backgroundColor
+                    opacity: panelRepresentation.translucentPanel ? 0.8 : 1.0
+                    border.color: "transparent"
+                    visible: panelRepresentation.panelVisible
+                    clip: panelRepresentation.adaptivePanel
+                    radius: clip ? 2 : 5 // Use very small radius when clip is true since clip cannot clip it. Zero radius will make it look too sharp
+
+                    z: 1
+
+                    Loader {
+                        id: horizontalAdaptivePanelLoader
+                        active: panelRepresentation.adaptivePanel && !isVertical
+                        sourceComponent: Rectangle {
+                            anchors.verticalCenter: parent.verticalCenter
+                            anchors.left: parent.left
+                            anchors.leftMargin: Math.round(panelImage.width / 3)
+                            color: Qt.lighter(screenRect.color)
+                            border.color: Kirigami.Theme.highlightColor
+                            width: panelImage.width
+                            height: Math.round(panelImage.height * 4)
+                            radius: Math.round(height / 2)
+                            rotation: 45
+                        }
+                    }
+
+                    Loader {
+                        id: verticalAdaptivePanelLoader
+                        active: panelRepresentation.adaptivePanel && isVertical
+                        sourceComponent: Rectangle {
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.top: parent.top
+                            anchors.topMargin: Math.round(panelImage.height / 4)
+                            color: Qt.lighter(screenRect.color)
+                            border.color: Kirigami.Theme.highlightColor
+                            width: Math.round(panelImage.width * 2)
+                            height: panelImage.height
+                            radius: Math.round(height / 2)
+                            rotation: 45
+                        }
+                    }
+
+                    Rectangle {
+                        id: panelBorder
+                        anchors.fill: parent
+                        color: "transparent"
+                        border.color: Kirigami.Theme.highlightColor
+                        radius: parent.radius
+                    }
                 }
             }
 
@@ -135,8 +143,8 @@ Item {
                 color: Kirigami.Theme.highlightColor
                 border.color: "transparent"
 
-                x: screenRect.isVertical ? Math.round(panelImage.x + panelImage.width / 2) : Math.round(screenRect.width / 2 - width / 2) + Kirigami.Units.gridUnit
-                y: screenRect.isVertical ? Math.round(screenRect.height / 2 - height / 2) : Math.round(panelImage.y - height + panelImage.height / 2)
+                x: isVertical ? Math.round(panelImage.x + panelImage.width / 2) : Math.round(screenRect.width / 2 - width / 2) + Kirigami.Units.gridUnit
+                y: isVertical ? Math.round(screenRect.height / 2 - height / 2) : Math.round(panelImage.y - height + panelImage.height / 2)
                 z: panelRepresentation.windowZ
 
                 Row {
@@ -156,33 +164,17 @@ Item {
                 }
             }
 
-            function calculateOrdinate(screenLength, panelLength, isX) {
-                if(isVertical && isX) {
-                    return 0 + floatingGap;
+            Kirigami.Icon {
+                id: mainIcon
+                visible: panelRepresentation.mainIconSource
+                anchors.centerIn: parent
+                transform: Translate {
+                    y: isVertical ? 0 : Math.round((mainIcon.y - panelImage.y) / 4)
+                    x: isVertical ? Math.round((mainIcon.x - panelImage.x) / 4) : 0
                 }
-                if(!isVertical && !isX) {
-                    return screenLength - panelLength - floatingGap;
-                }
-                switch(panelRepresentation.alignment) {
-                    case Qt.AlignLeft:
-                        return 0;
-
-                    case Qt.AlignCenter:
-                        return Math.round((screenLength / 2) - ( panelLength / 2));
-
-                    case Qt.AlignRight:
-                        return Math.round(screenLength - panelLength);
-                }
+                height: parent.height / 2
+                source: panelRepresentation.mainIconSource
             }
-        }
-
-        PC3.Label {
-            text: panelRepresentation.text
-            Layout.alignment: Qt.AlignHCenter
-            horizontalAlignment: Text.AlignHCenter
-            Layout.maximumWidth: screenRect.implicitWidth
-            wrapMode: Text.Wrap
-            color: panelRepresentation.iconAndLabelsShouldlookSelected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
         }
     }
 }

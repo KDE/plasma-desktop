@@ -5,12 +5,21 @@
 */
 
 import QtQuick 2.0
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.configuration 2.0
+import QtQuick.Layouts 1.0
+import QtQuick.Controls 2.4 as QQC2
+import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg 1.0 as KSvg
+import org.kde.plasma.components 3.0 as PC3
+import org.kde.plasma.shell.panel 0.1 as Panel
+import org.kde.kquickcontrols 2.0
 
 KSvg.FrameSvgItem {
     id: root
+
+    anchors.fill: parent
 
     //Those properties get updated by PanelConfiguration.qml whenever a value in the panel changes
     property alias offset: offsetHandle.value
@@ -21,12 +30,11 @@ KSvg.FrameSvgItem {
     property string minimumText: (dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change minimum height.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change minimum width.")) + "\n" + i18nd("plasma_shell_org.kde.plasma.desktop", "Double click to reset.")
 
     imagePath: "widgets/containment-controls"
-    state: "BottomEdge"
-    implicitWidth: offsetHandle.width + rightMinimumLengthHandle.width
-    implicitHeight: offsetHandle.height + rightMinimumLengthHandle.height
+    implicitWidth: Math.max(offsetHandle.width, rightMinimumLengthHandle.width + rightMaximumLengthHandle.width)
+    implicitHeight: Math.max(offsetHandle.height, rightMinimumLengthHandle.height + rightMaximumLengthHandle.height)
 
-    onMinimumLengthChanged: leftMinimumLengthHandle.value = minimumLength
-    onMaximumLengthChanged: leftMaximumLengthHandle.value = maximumLength
+    onMinimumLengthChanged: rightMinimumLengthHandle.value = leftMinimumLengthHandle.value = minimumLength
+    onMaximumLengthChanged: rightMaximumLengthHandle.value = leftMaximumLengthHandle.value = maximumLength
 
     /* As offset and length have a different meaning in all alignments, the panel shifts on alignment change.
      * This could result in wrong panel positions (e.g. panel shifted over monitor border).
@@ -61,6 +69,12 @@ KSvg.FrameSvgItem {
 
     SliderHandle {
         id: offsetHandle
+        anchors {
+            right: root.prefix[0] === 'west' ? root.right : undefined
+            left: root.prefix[0] === 'east' ? root.left : undefined
+            top: root.prefix[0] === 'south' ? root.top : undefined
+            bottom: root.prefix[0] === 'north' ? root.bottom : undefined
+        }
         graphicElementName: "offsetslider"
         description: i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change position on this screen edge.\nDouble click to reset.")
         onValueChanged: panel.offset = value
@@ -86,14 +100,14 @@ KSvg.FrameSvgItem {
         //Needed for the same reason as above
         maximumPosition: {
             var size = dialogRoot.vertical ? height : width
-            var dialogRootSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width
+            var rootSize = dialogRoot.vertical ? root.height : root.width
             switch(panel.alignment){
             case Qt.AlignLeft:
-                return dialogRootSize - rightMaximumLengthHandle.value - size / 2
+                return rootSize - rightMaximumLengthHandle.value - size / 2
             case Qt.AlignRight:
-                return dialogRootSize - size / 2
+                return rootSize - size / 2
             default:
-                return dialogRootSize - panel.maximumLength / 2 - size / 2
+                return rootSize - panel.maximumLength / 2 - size / 2
             }
         }
         function defaultPosition(): int /*override*/ {
@@ -115,6 +129,12 @@ KSvg.FrameSvgItem {
 
     SliderHandle {
         id: rightMinimumLengthHandle
+        anchors {
+            right: root.prefix[0] === 'east' ? root.right : undefined
+            left: root.prefix[0] === 'west' ? root.left : undefined
+            top: root.prefix[0] === 'north' ? root.top : undefined
+            bottom: root.prefix[0] === 'south' ? root.bottom : undefined
+        }
         description: root.minimumText
         alignment: panel.alignment | Qt.AlignLeft
         visible: panel.alignment !== Qt.AlignRight
@@ -123,14 +143,20 @@ KSvg.FrameSvgItem {
         onValueChanged: panel.minimumLength = value
         minimumPosition: offsetHandle.position + Kirigami.Units.gridUnit * 3
         maximumPosition: {
-            var dialogRootSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width
+            var rootSize = dialogRoot.vertical ? root.height : root.width
             var size = dialogRoot.vertical ? height : width
-            panel.alignment === Qt.AlignCenter ? Math.min(dialogRootSize - size/2, dialogRootSize + offset * 2 - size/2) : dialogRootSize - size/2
+            panel.alignment === Qt.AlignCenter ? Math.min(rootSize - size/2, rootSize + offset * 2 - size/2) : rootSize - size/2
         }
     }
 
     SliderHandle {
         id: rightMaximumLengthHandle
+        anchors {
+            right: root.prefix[0] === 'west' ? root.right : undefined
+            left: root.prefix[0] === 'east' ? root.left : undefined
+            top: root.prefix[0] === 'south' ? root.top : undefined
+            bottom: root.prefix[0] === 'north' ? root.bottom : undefined
+        }
         description: root.maximumText
         alignment: panel.alignment | Qt.AlignLeft
         visible: panel.alignment !== Qt.AlignRight
@@ -139,14 +165,20 @@ KSvg.FrameSvgItem {
         onValueChanged: panel.maximumLength = value
         minimumPosition: offsetHandle.position + Kirigami.Units.gridUnit * 3
         maximumPosition: {
-            var dialogRootSize = dialogRoot.vertical ? dialogRoot.height : dialogRoot.width
+            var rootSize = dialogRoot.vertical ? root.height : root.width
             var size = dialogRoot.vertical ? height : width
-            panel.alignment === Qt.AlignCenter ? Math.min(dialogRootSize - size/2, dialogRootSize + offset * 2 - size/2) : dialogRootSize - size/2
+            panel.alignment === Qt.AlignCenter ? Math.min(rootSize - size/2, rootSize + offset * 2 - size/2) : rootSize - size/2
         }
     }
 
     SliderHandle {
         id: leftMinimumLengthHandle
+        anchors {
+            right: root.prefix[0] === 'east' ? root.right : undefined
+            left: root.prefix[0] === 'west' ? root.left : undefined
+            top: root.prefix[0] === 'north' ? root.top : undefined
+            bottom: root.prefix[0] === 'south' ? root.bottom : undefined
+        }
         description: root.minimumText
         alignment: panel.alignment | Qt.AlignRight
         visible: panel.alignment !== Qt.AlignLeft
@@ -162,6 +194,12 @@ KSvg.FrameSvgItem {
 
     SliderHandle {
         id: leftMaximumLengthHandle
+        anchors {
+            right: root.prefix[0] === 'west' ? root.right : undefined
+            left: root.prefix[0] === 'east' ? root.left : undefined
+            top: root.prefix[0] === 'south' ? root.top : undefined
+            bottom: root.prefix[0] === 'north' ? root.bottom : undefined
+        }
         description: root.maximumText
         alignment: panel.alignment | Qt.AlignRight
         visible: panel.alignment !== Qt.AlignLeft
@@ -174,255 +212,4 @@ KSvg.FrameSvgItem {
             panel.alignment === Qt.AlignCenter ? Math.max(-size/2, offset*2 - size/2) : -size/2
         }
     }
-
-    states: [
-        State {
-            name: "TopEdge"
-            PropertyChanges {
-                target: root
-                prefix: "north"
-                height: root.implicitHeight
-            }
-            AnchorChanges {
-                target: root
-                anchors {
-                    top: root.parent.top
-                    bottom: undefined
-                    left: root.parent.left
-                    right: root.parent.right
-                }
-            }
-            AnchorChanges {
-                target: offsetHandle
-                anchors {
-                    top: undefined
-                    bottom: root.bottom
-                    left: undefined
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: rightMinimumLengthHandle
-                anchors {
-                    top: root.top
-                    bottom: undefined
-                    left: undefined
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: rightMaximumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: root.bottom
-                    left: undefined
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: leftMinimumLengthHandle
-                anchors {
-                    top: root.top
-                    bottom: undefined
-                    left: undefined
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: leftMaximumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: root.bottom
-                    left: undefined
-                    right: undefined
-                }
-            }
-        },
-        State {
-            name: "BottomEdge"
-            PropertyChanges {
-                target: root
-                prefix: "south"
-                height: root.implicitHeight
-            }
-            AnchorChanges {
-                target: root
-                anchors {
-                    top: undefined
-                    bottom: root.parent.bottom
-                    left: root.parent.left
-                    right: root.parent.right
-                }
-            }
-            AnchorChanges {
-                target: offsetHandle
-                anchors {
-                    top: root.top
-                    bottom: undefined
-                    left: undefined
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: rightMinimumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: root.bottom
-                    left: undefined
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: rightMaximumLengthHandle
-                anchors {
-                    top: root.top
-                    bottom: undefined
-                    left: undefined
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: leftMinimumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: root.bottom
-                    left: undefined
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: leftMaximumLengthHandle
-                anchors {
-                    top: root.top
-                    bottom: undefined
-                    left: undefined
-                    right: undefined
-                }
-            }
-        },
-        State {
-            name: "LeftEdge"
-            PropertyChanges {
-                target: root
-                prefix: "west"
-                width: root.implicitWidth
-            }
-            AnchorChanges {
-                target: root
-                anchors {
-                    top: root.parent.top
-                    bottom: root.parent.bottom
-                    left: root.parent.left
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: offsetHandle
-                anchors {
-                    top: undefined
-                    bottom: undefined
-                    left: undefined
-                    right: root.right
-                }
-            }
-            AnchorChanges {
-                target: rightMinimumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: undefined
-                    left: root.left
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: rightMaximumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: undefined
-                    left: undefined
-                    right: root.right
-                }
-            }
-            AnchorChanges {
-                target: leftMinimumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: undefined
-                    left: root.left
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: leftMaximumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: undefined
-                    left: undefined
-                    right: root.right
-                }
-            }
-        },
-        State {
-            name: "RightEdge"
-            PropertyChanges {
-                target: root
-                prefix: "east"
-                width: root.implicitWidth
-            }
-            AnchorChanges {
-                target: root
-                anchors {
-                    top: root.parent.top
-                    bottom: root.parent.bottom
-                    left: undefined
-                    right: root.parent.right
-                }
-            }
-            AnchorChanges {
-                target: offsetHandle
-                anchors {
-                    top: undefined
-                    bottom: undefined
-                    left: parent.left
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: rightMinimumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: undefined
-                    left: undefined
-                    right: parent.right
-                }
-            }
-            AnchorChanges {
-                target: rightMaximumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: undefined
-                    left: parent.left
-                    right: undefined
-                }
-            }
-            AnchorChanges {
-                target: leftMinimumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: undefined
-                    left: undefined
-                    right: parent.right
-                }
-            }
-            AnchorChanges {
-                target: leftMaximumLengthHandle
-                anchors {
-                    top: undefined
-                    bottom: undefined
-                    left: parent.left
-                    right: undefined
-                }
-            }
-        }
-    ]
 }
