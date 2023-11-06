@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2023-05-17 09:27+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -59,15 +59,27 @@ msgstr "Opis:"
 #: ui/ActivityEditor.qml:84
 #, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "Zasebnost:"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
-msgid "Do not track usage for this activity"
-msgstr "Ne sledi uporabi te dejavnosti"
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "Bližnjica za preklop:"
@@ -105,6 +117,13 @@ msgstr "Ali želite izbrisati dejavnost '%1'?"
 #, kde-format
 msgid "Delete Activity"
 msgstr "Izbriši dejavnost"
+
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "Zasebnost:"
+
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "Ne sledi uporabi te dejavnosti"
 
 #~ msgid "Activities"
 #~ msgstr "Dejavnosti"

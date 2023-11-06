@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2023-07-25 22:48+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -56,15 +56,27 @@ msgstr "설명:"
 #: ui/ActivityEditor.qml:84
 #, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "정보 보호:"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
-msgid "Do not track usage for this activity"
-msgstr "이 활동의 사용 내역 기록하지 않기"
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "전환 단축키:"
@@ -102,6 +114,13 @@ msgstr "'%1' 활동을 삭제하시겠습니까?"
 #, kde-format
 msgid "Delete Activity"
 msgstr "활동 삭제"
+
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "정보 보호:"
+
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "이 활동의 사용 내역 기록하지 않기"
 
 #~ msgid "Activities"
 #~ msgstr "활동"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2022-03-23 07:41+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -59,18 +59,29 @@ msgid "Description:"
 msgstr "Deskripsi:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy:"
+#, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "Privasi:"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
-msgid "Do not track usage for this activity"
-msgstr "Jangan lacak penggunaan untuk aktivitas ini"
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "Pintasan untuk mengalihkan:"
@@ -111,6 +122,15 @@ msgstr "Apakah kamu yakin ingin menghapus '%1'?"
 #| msgid "Delete Activity"
 msgid "Delete Activity"
 msgstr "Hapus Aktivitas"
+
+#, fuzzy
+#~| msgid "Privacy:"
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "Privasi:"
+
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "Jangan lacak penggunaan untuk aktivitas ini"
 
 #~ msgid "Activities"
 #~ msgstr "Activities"

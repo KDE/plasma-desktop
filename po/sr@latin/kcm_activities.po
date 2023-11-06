@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2016-04-03 12:10+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -59,21 +59,30 @@ msgctxt "@label:textbox"
 msgid "Description:"
 msgstr "Opis:"
 
-# >> @title:tab
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy"
+#, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "Privatnost"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
-#, fuzzy, kde-format
-#| msgid "Private - do not track usage for this activity"
-msgid "Do not track usage for this activity"
-msgstr "Privatna — ne prati korišćenje ove aktivnosti"
+#, kde-format
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, fuzzy, kde-format
 #| msgid "Shortcut for switching to this activity:"
 msgid "Shortcut for switching:"
@@ -119,6 +128,18 @@ msgstr "Želite li zaista da obrišete „%1“?"
 #| msgid "Delete Activity"
 msgid "Delete Activity"
 msgstr "Brisanje aktivnosti"
+
+# >> @title:tab
+#, fuzzy
+#~| msgid "Privacy"
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "Privatnost"
+
+#, fuzzy
+#~| msgid "Private - do not track usage for this activity"
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "Privatna — ne prati korišćenje ove aktivnosti"
 
 # >> @title:tab
 #~ msgid "Activities"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2022-07-03 14:23+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -59,18 +59,29 @@ msgid "Description:"
 msgstr "Təfərrüatı:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy:"
+#, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "Məxfilik:"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
-msgid "Do not track usage for this activity"
-msgstr "Bu İş otağının işini izləməmək"
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "Dəyişdirmək üçün qısayol:"
@@ -111,6 +122,15 @@ msgstr "'%1' silmək istədiyinizə əminsiniz?"
 #| msgid "Delete Activity"
 msgid "Delete Activity"
 msgstr "İş otaqlarını silmək"
+
+#, fuzzy
+#~| msgid "Privacy:"
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "Məxfilik:"
+
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "Bu İş otağının işini izləməmək"
 
 #~ msgid "Activities"
 #~ msgstr "Iş Otaqları"

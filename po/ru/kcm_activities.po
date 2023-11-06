@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2021-05-29 13:29+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -64,18 +64,29 @@ msgid "Description:"
 msgstr "Описание:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy:"
+#, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "Конфиденциальность:"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
-msgid "Do not track usage for this activity"
-msgstr "Не запоминать статистику использования"
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "Комбинация клавиш для переключения:"
@@ -116,6 +127,15 @@ msgstr "Удалить комнату «%1»?"
 #| msgid "Delete Activity"
 msgid "Delete Activity"
 msgstr "Удаление комнаты"
+
+#, fuzzy
+#~| msgid "Privacy:"
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "Конфиденциальность:"
+
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "Не запоминать статистику использования"
 
 #~ msgid "Activities"
 #~ msgstr "Комнаты"

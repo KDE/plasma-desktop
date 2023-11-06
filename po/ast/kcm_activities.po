@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2023-11-02 00:00+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -56,15 +56,27 @@ msgstr "Descripción:"
 #: ui/ActivityEditor.qml:84
 #, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "Privacidá:"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
-msgid "Do not track usage for this activity"
-msgstr "Nun rastrexar l'usu d'esta actividá"
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "Atayu pal cambéu:"
@@ -102,6 +114,13 @@ msgstr "¿Quies desaniciar l'actividá «%1»?"
 #, kde-format
 msgid "Delete Activity"
 msgstr "Desaniciar l'actividá"
+
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "Privacidá:"
+
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "Nun rastrexar l'usu d'esta actividá"
 
 #~ msgid "Activities"
 #~ msgstr "Actividaes"

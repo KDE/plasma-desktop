@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2020-10-27 21:32+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -60,18 +60,29 @@ msgid "Description:"
 msgstr "Kirjeldus:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy:"
+#, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "Privaatsus:"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
-msgid "Do not track usage for this activity"
-msgstr "Selle tegevuse kasutamist ei jälgita"
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "Lülitumise kiirklahv:"
@@ -113,6 +124,15 @@ msgstr "Kas tõesti kustutada \"%1\"?"
 #| msgid "Delete Activity"
 msgid "Delete Activity"
 msgstr "Tegevuse kustutamine"
+
+#, fuzzy
+#~| msgid "Privacy:"
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "Privaatsus:"
+
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "Selle tegevuse kasutamist ei jälgita"
 
 #~ msgid "Activities"
 #~ msgstr "Tegevused"

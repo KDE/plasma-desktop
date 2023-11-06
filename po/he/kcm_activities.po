@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2023-09-28 22:28+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -58,15 +58,27 @@ msgstr "תיאור:"
 #: ui/ActivityEditor.qml:84
 #, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "פרטיות:"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
-msgid "Do not track usage for this activity"
-msgstr "לא לעקוב אחר דפוס השימוש של הפעילות הזאת"
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "קיצור מקשים להחלפה:"
@@ -104,6 +116,13 @@ msgstr "למחוק את הפעילות ‚%1’?"
 #, kde-format
 msgid "Delete Activity"
 msgstr "מחיקת פעילות"
+
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "פרטיות:"
+
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "לא לעקוב אחר דפוס השימוש של הפעילות הזאת"
 
 #~ msgid "Activities"
 #~ msgstr "פעילויות"

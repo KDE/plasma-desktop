@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2021-06-07 15:25+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -55,18 +55,29 @@ msgid "Description:"
 msgstr "Descrição:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy:"
+#, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "Privacidade:"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
-msgid "Do not track usage for this activity"
-msgstr "Não seguir o uso desta actividade"
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "Atalho de mudança:"
@@ -107,6 +118,15 @@ msgstr "Tem a certeza que deseja remover a '%1'?"
 #| msgid "Delete Activity"
 msgid "Delete Activity"
 msgstr "Apagar a Actividade"
+
+#, fuzzy
+#~| msgid "Privacy:"
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "Privacidade:"
+
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "Não seguir o uso desta actividade"
 
 #~ msgid "Activities"
 #~ msgstr "Actividades"

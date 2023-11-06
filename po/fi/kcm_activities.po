@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2023-05-28 16:50+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -58,15 +58,27 @@ msgstr "Kuvaus:"
 #: ui/ActivityEditor.qml:84
 #, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "Yksityisyys:"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
-msgid "Do not track usage for this activity"
-msgstr "Älä seuraa tämän aktiviteetin käyttöä"
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "Pikanäppäin vaihtamiseen:"
@@ -104,6 +116,13 @@ msgstr "Haluatko varmasti poistaa aktiviteetin ”%1”?"
 #, kde-format
 msgid "Delete Activity"
 msgstr "Poista aktiviteetti"
+
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "Yksityisyys:"
+
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "Älä seuraa tämän aktiviteetin käyttöä"
 
 #~ msgid "Activities"
 #~ msgstr "Aktiviteetit"

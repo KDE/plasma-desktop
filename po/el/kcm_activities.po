@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2016-06-04 15:11+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -59,19 +59,29 @@ msgid "Description:"
 msgstr "Περιγραφή:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy"
+#, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "Ιδιωτικότητα"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
-#, fuzzy, kde-format
-#| msgid "Private - do not track usage for this activity"
-msgid "Do not track usage for this activity"
-msgstr "Ιδιωτική - να μην καταγράφεται η χρήση για αυτήν τη δραστηριότητα"
+#, kde-format
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, fuzzy, kde-format
 #| msgid "Shortcut for switching to this activity:"
 msgid "Shortcut for switching:"
@@ -116,6 +126,17 @@ msgstr "Επιθυμείτε σίγουρα τη διαγραφή του '%1';"
 #| msgid "Delete Activity"
 msgid "Delete Activity"
 msgstr "Διαγραφή δραστηριότητας"
+
+#, fuzzy
+#~| msgid "Privacy"
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "Ιδιωτικότητα"
+
+#, fuzzy
+#~| msgid "Private - do not track usage for this activity"
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "Ιδιωτική - να μην καταγράφεται η χρήση για αυτήν τη δραστηριότητα"
 
 #~ msgid "Activities"
 #~ msgstr "Δραστηριότητες"

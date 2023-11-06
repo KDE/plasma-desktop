@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-11-06 01:40+0000\n"
 "PO-Revision-Date: 2021-10-09 07:48-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -59,18 +59,29 @@ msgid "Description:"
 msgstr "ਵੇਰਵਾ:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgid "Privacy:"
+#, kde-format
 msgctxt "@option:check"
-msgid "Privacy:"
-msgstr "ਪਰਦੇਦਾਰੀ:"
+msgid "While on this activity, allow:"
+msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
-msgid "Do not track usage for this activity"
-msgstr "ਇਸ ਸਰਗਰਮੀ ਲਈ ਵਰਤੋਂ ਨੂੰ ਟਰੈਕ ਨਾ ਕਰੋ"
+msgid "Tracking file and app use"
+msgstr ""
 
 #: ui/ActivityEditor.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically turning off the screen"
+msgstr ""
+
+#: ui/ActivityEditor.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Automatically shutting down or sleeping"
+msgstr ""
+
+#: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
 msgstr "ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ:"
@@ -111,6 +122,15 @@ msgstr "ਕੀ ਤੁਸੀਂ %1 ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹ�
 #| msgid "Delete Activity"
 msgid "Delete Activity"
 msgstr "ਸਰਗਰਮੀ ਨੂੰ ਹਟਾਓ"
+
+#, fuzzy
+#~| msgid "Privacy:"
+#~ msgctxt "@option:check"
+#~ msgid "Privacy:"
+#~ msgstr "ਪਰਦੇਦਾਰੀ:"
+
+#~ msgid "Do not track usage for this activity"
+#~ msgstr "ਇਸ ਸਰਗਰਮੀ ਲਈ ਵਰਤੋਂ ਨੂੰ ਟਰੈਕ ਨਾ ਕਰੋ"
 
 #~ msgid "Activities"
 #~ msgstr "ਸਰਗਰਮੀਆਂ"
