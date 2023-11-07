@@ -99,7 +99,7 @@ Item {
             property Item selectionButton: null
             property Item popupButton: null
 
-            readonly property bool iconAndLabelsShouldlookSelected: impl.hovered && Plasmoid.configuration.iconHoverEffect
+            readonly property bool iconAndLabelsShouldlookSelected: impl.hovered
 
             onSelectedChanged: {
                 if (selected && !blank) {

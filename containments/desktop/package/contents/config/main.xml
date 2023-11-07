@@ -118,10 +118,6 @@
       <label>The text color to use below Folder View icons. Only used when serving as containment.</label>
       <default>white</default>
     </entry>
-    <entry name="iconHoverEffect" type="Bool">
-      <label>Whether icons should change in appearance when the mouse pointer is above them.</label>
-      <default>true</default>
-    </entry>
 
     <entry name="filterPattern" type="String">
       <label>The pattern to filter files by. Supports wildcards.</label>
