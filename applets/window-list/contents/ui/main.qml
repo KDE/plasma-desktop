@@ -35,7 +35,10 @@ PlasmoidItem {
                 sortMode: TaskManager.TasksModel.SortVirtualDesktop
                 groupMode: TaskManager.TasksModel.GroupDisabled
             }
-            delegate: PlasmaExtras.ListItem {
+            delegate: PlasmaComponents.ItemDelegate {
+
+                width: ListView.view.width
+
                 contentItem: RowLayout {
                     spacing: Kirigami.Units.smallSpacing
 

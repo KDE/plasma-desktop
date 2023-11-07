@@ -107,10 +107,11 @@ PlasmaCore.Dialog {
 
                 height: contentHeight+Kirigami.Units.smallSpacing
 
-                delegate: PlasmaExtras.ListItem {
+                delegate: PlasmaComponents3.ItemDelegate {
                     id: listItem
 
                     implicitHeight: contentLayout.implicitHeight + Kirigami.Units.smallSpacing * 2
+                    width: ListView.view.width
 
                     onHoveredChanged: {
                         if (hovered) {
