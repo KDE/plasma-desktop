@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-10 01:47+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-09-08 10:20+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
 "Mistókst að tilkynna KDE-þjónustustjóranum (kded6) um vistaðar breytingar: %1"
 
-#: ui/main.qml:36
+#: ui/main.qml:37
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
@@ -55,7 +55,7 @@ msgstr ""
 "Stjórinn fyrir bakgrunnsþjónustur (kded6) er ekki í gangi sem stendur. "
 "Gakktu úr skugga um að hann sé rétt uppsettur."
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -64,7 +64,7 @@ msgstr ""
 "Sumar þjónustur slökkva sjálfar á sér þegar þær eru ræstar handvirkt ef þær "
 "koma ekki að gagni í núverandi umhverfi."
 
-#: ui/main.qml:54
+#: ui/main.qml:55
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -73,54 +73,54 @@ msgstr ""
 "Sumar þjónustur voru sjálfkrafa ræstar/stöðvaðar þegar bakgrunnsþjónustu- "
 "stjórinn (kded6) var endurræstur til að virkja breytingarnar þínar."
 
-#: ui/main.qml:96
+#: ui/main.qml:97
 #, kde-format
 msgid "All Services"
 msgstr "Allar þjónustur"
 
-#: ui/main.qml:97
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Í keyrslu"
 
-#: ui/main.qml:98
+#: ui/main.qml:99
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Ekki í keyrslu"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Startup Services"
 msgstr "Þjónustur við ræsingu"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Þjónustur sem ræstar eru eftir þörfum"
 
-#: ui/main.qml:153
+#: ui/main.qml:156
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Víxla sjálfkrafa keyrslu á þessari þjónustu við ræsingu"
 
-#: ui/main.qml:220
+#: ui/main.qml:199
 #, kde-format
 msgid "Not running"
 msgstr "Ekki í keyrslu"
 
-#: ui/main.qml:221
+#: ui/main.qml:200
 #, kde-format
 msgid "Running"
 msgstr "Í keyrslu"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Stop Service"
 msgstr "Stöðva þjónustu"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Start Service"
 msgstr "Ræsa þjónustu"

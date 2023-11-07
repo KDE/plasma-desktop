@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-10 01:47+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2022-03-24 06:59+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr ""
 "Gagal memberitahu KDE Service Manager (kded5) atas perubahan yang disimpan: "
 "%1"
 
-#: ui/main.qml:36
+#: ui/main.qml:37
 #, fuzzy, kde-format
 #| msgid ""
 #| "The background services manager (kded5) is currently not running. Make "
@@ -59,7 +59,7 @@ msgstr ""
 "Manajer layanan latarbelakang (kded5) saat ini tidak berjalan. Pastikan itu "
 "dipasang dengan benar."
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -68,7 +68,7 @@ msgstr ""
 "Beberapa layanan menonfungsikan diri mereka sendiri lagi ketika secara "
 "manual dimulai jika mereka tidak berguna di lingkungan saat ini."
 
-#: ui/main.qml:54
+#: ui/main.qml:55
 #, fuzzy, kde-format
 #| msgid ""
 #| "Some services were automatically started/stopped when the background "
@@ -80,54 +80,54 @@ msgstr ""
 "Beberapa layanan dimulai/dihentikan secara otomatis ketika manajer layanan "
 "latar belakang (kded5) dijalankan ulang untuk menerapkan perubahan Anda."
 
-#: ui/main.qml:96
+#: ui/main.qml:97
 #, kde-format
 msgid "All Services"
 msgstr "Semua Layanan"
 
-#: ui/main.qml:97
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Berjalan"
 
-#: ui/main.qml:98
+#: ui/main.qml:99
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Tidak Berjalan"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Startup Services"
 msgstr "Layanan Pemulaian"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Layanan Muat Sesuai Permintaan"
 
-#: ui/main.qml:153
+#: ui/main.qml:156
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Jungkitan pemuatan secara otomatis layanan ini saat pemulaian"
 
-#: ui/main.qml:220
+#: ui/main.qml:199
 #, kde-format
 msgid "Not running"
 msgstr "Tidak berjalan"
 
-#: ui/main.qml:221
+#: ui/main.qml:200
 #, kde-format
 msgid "Running"
 msgstr "Berjalan"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Stop Service"
 msgstr "Hentikan Layanan"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Start Service"
 msgstr "Jalankan Layanan"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 12:20+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-09-24 17:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -264,226 +264,187 @@ msgstr "Accions del ratolí"
 msgid "Input Here"
 msgstr "Introduïu-ho ací"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:43
+#: contents/configuration/PanelConfiguration.qml:92
 msgid "Panel Settings"
 msgstr "Configureu el quadro"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:49
-msgctxt "@action:button Make the panel as big as it can be"
-msgid "Maximize"
-msgstr "Maximitza"
+#: contents/configuration/PanelConfiguration.qml:98
+msgid "Add Spacer"
+msgstr "Afig un espaiador"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
-msgid "Make this panel as tall as possible"
-msgstr "Fa este quadro el més alt possible"
+#: contents/configuration/PanelConfiguration.qml:101
+msgid "Add spacer widget to the panel"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-msgid "Make this panel as wide as possible"
-msgstr "Fa este quadro el més ample possible"
+#: contents/configuration/PanelConfiguration.qml:108
+msgid "Add Widgets…"
+msgstr "Afig ginys…"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:62
-msgctxt "@action:button Delete the panel"
-msgid "Delete"
-msgstr "Suprimix"
+#: contents/configuration/PanelConfiguration.qml:111
+msgid "Open the widget selector to drag and drop widgets to the panel"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:65
-msgid "Remove this panel; this action is undo-able"
-msgstr "Elimina este quadro. Esta acció no es podrà desfer"
+#: contents/configuration/PanelConfiguration.qml:133
+msgid "Position"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:89
-msgid "Alignment:"
-msgstr "Alineació:"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:283
 msgid "Top"
 msgstr "Dalt"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
-msgid "Left"
-msgstr "Esquerra"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr ""
-"Alinea el quadro a la part superior si no està maximitzat. No tindrà cap "
-"efecte si el quadro està maximitzat"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr ""
-"Alinea el quadro a l'esquerra si no està maximitzat. No tindrà cap efecte si "
-"el quadro està maximitzat"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
-msgid "Center"
-msgstr "Centre"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:105
-msgid ""
-"Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr ""
-"Alinea el quadro al centre si no està maximitzat. No tindrà cap efecte si el "
-"quadro està maximitzat"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
-msgid "Bottom"
-msgstr "Baix"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:285
 msgid "Right"
 msgstr "Dreta"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr ""
-"Alinea el quadro a la part inferior si no està maximitzat. No tindrà cap "
-"efecte si el quadro està maximitzat"
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:283
+msgid "Left"
+msgstr "Esquerra"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr ""
-"Alinea el quadro a la dreta si no està maximitzat. No tindrà cap efecte si "
-"el quadro està maximitzat"
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:285
+msgid "Bottom"
+msgstr "Baix"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
-msgid "Visibility:"
+#: contents/configuration/PanelConfiguration.qml:156
+msgid "Set Position..."
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:221
+#, fuzzy
+#| msgid "Alignment:"
+msgid "Alignment"
+msgstr "Alineació:"
+
+#: contents/configuration/PanelConfiguration.qml:284
+msgid "Center"
+msgstr "Centre"
+
+#: contents/configuration/PanelConfiguration.qml:307
+msgid "Length"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel height:"
+msgid "Fill height"
+msgstr "Alçària del quadro:"
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel width:"
+msgid "Fill width"
+msgstr "Amplària del quadro:"
+
+#: contents/configuration/PanelConfiguration.qml:324
+msgid "Fit content"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:325
+msgid "Custom"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:361
+#, fuzzy
+#| msgid "Visibility:"
+msgid "Visibility"
 msgstr "Visibilitat:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:147
-msgid "Always Visible"
-msgstr "Sempre visible"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
-msgid "Auto-Hide"
+#: contents/configuration/PanelConfiguration.qml:372
+#, fuzzy
+#| msgid "Auto-Hide"
+msgid "Auto hide"
 msgstr "Oculta automàticament"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
-msgid ""
-"Panel is hidden, but reveals itself when the cursor touches the panel's "
-"screen edge"
-msgstr ""
-"El quadro està ocult, però es mostrarà quan el cursor toque la vora de la "
-"pantalla del quadro"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-msgid "Opacity:"
+#: contents/configuration/PanelConfiguration.qml:390
+#, fuzzy
+#| msgid "Opacity:"
+msgid "Opacity"
 msgstr "Opacitat:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:188
-msgid "Always Opaque"
-msgstr "Sempre opac"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
+#: contents/configuration/PanelConfiguration.qml:403
 msgid "Adaptive"
 msgstr "Adaptativa"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:197
-msgid ""
-"Panel is opaque when any windows are touching it, and translucent at other "
-"times"
-msgstr ""
-"El quadro serà opac quan el toque qualsevol finestra, i translúcid la resta "
-"del temps"
+#: contents/configuration/PanelConfiguration.qml:404
+#, fuzzy
+#| msgid "Always Opaque"
+msgid "Opaque"
+msgstr "Sempre opac"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
-msgid "Always Translucent"
+#: contents/configuration/PanelConfiguration.qml:405
+#, fuzzy
+#| msgid "Always Translucent"
+msgid "Translucent"
 msgstr "Sempre translúcid"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:233
-msgid "Floating:"
-msgstr "Flotant:"
+#: contents/configuration/PanelConfiguration.qml:427
+msgid "Style"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
-msgid "Floating"
-msgstr "Flotant"
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Panel width:"
+msgid "Panel Width:"
+msgstr "Amplària del quadro:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:239
-msgid "Panel visibly floats away from its screen edge"
-msgstr "El quadro flota visiblement lluny de la vora de la pantalla"
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Right"
+msgid "Height:"
+msgstr "Dreta"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
-msgid "Attached"
-msgstr "Fixat"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:249
-msgid "Panel is attached to its screen edge"
-msgstr "El quadro està ancorat a la seua vora de la pantalla"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
-msgid "Focus Shortcut:"
+#: contents/configuration/PanelConfiguration.qml:489
+#, fuzzy
+#| msgid "Focus Shortcut:"
+msgid "Focus shortcut:"
 msgstr "Drecera de focus:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
+#: contents/configuration/PanelConfiguration.qml:499
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Premeu esta drecera de teclat per a moure el focus al quadro"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/PanelConfiguration.qml:515
+#, fuzzy
+#| msgid "Remove Panel"
+msgctxt "@action:button Delete the panel"
+msgid "Delete Panel"
+msgstr "Elimina el quadro"
+
+#: contents/configuration/PanelConfiguration.qml:518
+msgid "Remove this panel; this action is undo-able"
+msgstr "Elimina este quadro. Esta acció no es podrà desfer"
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
 msgid "Drag to change maximum height."
 msgstr "Arrossegueu per a canviar l'alçària màxima."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/panelconfiguration/Ruler.qml:29
 msgid "Drag to change maximum width."
 msgstr "Arrossegueu per a canviar l'amplària màxima."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Double click to reset."
 msgstr "Doble clic per a reiniciar."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change minimum height."
 msgstr "Arrossegueu per a canviar l'alçària mínima."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change minimum width."
 msgstr "Arrossegueu per a canviar l'amplària mínima."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:65
+#: contents/configuration/panelconfiguration/Ruler.qml:79
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
 "Arrossegueu per a canviar a esta vora de la pantalla.\n"
 "Doble clic per a reiniciar."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:26
-msgid "Add Widgets…"
-msgstr "Afig ginys…"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:27
-msgid "Add Spacer"
-msgstr "Afig un espaiador"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:28
-msgid "More Options…"
-msgstr "Més opcions…"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:226
-msgctxt "Minimize the length of this string as much as possible"
-msgid "Drag to move"
-msgstr "Arrossegueu per a moure"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:265
-msgctxt "@info:tooltip"
-msgid "Use arrow keys to move the panel"
-msgstr "Utilitzeu les tecles de fletxa per a moure el quadro"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel width:"
-msgstr "Amplària del quadro:"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel height:"
-msgstr "Alçària del quadro:"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:407
-#: contents/configuration/ShellContainmentConfiguration.qml:43
-msgid "Close"
-msgstr "Tanca"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
@@ -495,6 +456,10 @@ msgid ""
 msgstr ""
 "Podeu arrossegar els quadros i els escriptoris per a moure'ls cap a "
 "pantalles diferents."
+
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "Tanca"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
@@ -564,3 +529,94 @@ msgstr "No hi ha cap giny que coincidisca amb els termes de la busca"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "No hi ha cap giny disponible"
+
+#~ msgctxt "@action:button Make the panel as big as it can be"
+#~ msgid "Maximize"
+#~ msgstr "Maximitza"
+
+#~ msgid "Make this panel as tall as possible"
+#~ msgstr "Fa este quadro el més alt possible"
+
+#~ msgid "Make this panel as wide as possible"
+#~ msgstr "Fa este quadro el més ample possible"
+
+#~ msgctxt "@action:button Delete the panel"
+#~ msgid "Delete"
+#~ msgstr "Suprimix"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the top; no effect when panel is maximized"
+#~ msgstr ""
+#~ "Alinea el quadro a la part superior si no està maximitzat. No tindrà cap "
+#~ "efecte si el quadro està maximitzat"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the left; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Alinea el quadro a l'esquerra si no està maximitzat. No tindrà cap efecte "
+#~ "si el quadro està maximitzat"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the center; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Alinea el quadro al centre si no està maximitzat. No tindrà cap efecte si "
+#~ "el quadro està maximitzat"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the bottom; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Alinea el quadro a la part inferior si no està maximitzat. No tindrà cap "
+#~ "efecte si el quadro està maximitzat"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the right; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Alinea el quadro a la dreta si no està maximitzat. No tindrà cap efecte "
+#~ "si el quadro està maximitzat"
+
+#~ msgid "Always Visible"
+#~ msgstr "Sempre visible"
+
+#~ msgid ""
+#~ "Panel is hidden, but reveals itself when the cursor touches the panel's "
+#~ "screen edge"
+#~ msgstr ""
+#~ "El quadro està ocult, però es mostrarà quan el cursor toque la vora de la "
+#~ "pantalla del quadro"
+
+#~ msgid ""
+#~ "Panel is opaque when any windows are touching it, and translucent at "
+#~ "other times"
+#~ msgstr ""
+#~ "El quadro serà opac quan el toque qualsevol finestra, i translúcid la "
+#~ "resta del temps"
+
+#~ msgid "Floating:"
+#~ msgstr "Flotant:"
+
+#~ msgid "Floating"
+#~ msgstr "Flotant"
+
+#~ msgid "Panel visibly floats away from its screen edge"
+#~ msgstr "El quadro flota visiblement lluny de la vora de la pantalla"
+
+#~ msgid "Attached"
+#~ msgstr "Fixat"
+
+#~ msgid "Panel is attached to its screen edge"
+#~ msgstr "El quadro està ancorat a la seua vora de la pantalla"
+
+#~ msgid "More Options…"
+#~ msgstr "Més opcions…"
+
+#~ msgctxt "Minimize the length of this string as much as possible"
+#~ msgid "Drag to move"
+#~ msgstr "Arrossegueu per a moure"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use arrow keys to move the panel"
+#~ msgstr "Utilitzeu les tecles de fletxa per a moure el quadro"

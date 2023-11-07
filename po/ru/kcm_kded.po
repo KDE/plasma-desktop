@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-10 01:47+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2020-10-08 18:49+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -52,7 +52,7 @@ msgstr ""
 "Не удалось передать в менеджер служб KDE (kded5) информацию о сохранённых "
 "изменениях: %1"
 
-#: ui/main.qml:36
+#: ui/main.qml:37
 #, fuzzy, kde-format
 #| msgid ""
 #| "The background services manager (kded5) is currently not running. Make "
@@ -64,7 +64,7 @@ msgstr ""
 "Система управления службами (kded5) не запущена, проверьте, что она "
 "установлена."
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -73,7 +73,7 @@ msgstr ""
 "Некоторые службы отключают себя при их запуске, если они не требуются в "
 "текущем окружении."
 
-#: ui/main.qml:54
+#: ui/main.qml:55
 #, fuzzy, kde-format
 #| msgid ""
 #| "Some services were automatically started/stopped when the background "
@@ -85,54 +85,54 @@ msgstr ""
 "Некоторые службы были автоматически запущены или остановлены при перезапуске "
 "системы управления службами (kded5) для применения внесённых изменений."
 
-#: ui/main.qml:96
+#: ui/main.qml:97
 #, kde-format
 msgid "All Services"
 msgstr "Все службы"
 
-#: ui/main.qml:97
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Запущенные"
 
-#: ui/main.qml:98
+#: ui/main.qml:99
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Остановленные"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Startup Services"
 msgstr "Службы, загружаемые при запуске"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Службы, загружаемые при необходимости"
 
-#: ui/main.qml:153
+#: ui/main.qml:156
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Включить или отключить автоматический запуск этой службы"
 
-#: ui/main.qml:220
+#: ui/main.qml:199
 #, kde-format
 msgid "Not running"
 msgstr "Не запущена"
 
-#: ui/main.qml:221
+#: ui/main.qml:200
 #, kde-format
 msgid "Running"
 msgstr "Выполняется"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Stop Service"
 msgstr "Остановить службу"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Start Service"
 msgstr "Запустить службу"

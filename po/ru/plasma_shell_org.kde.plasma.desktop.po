@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 12:20+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-02-05 18:21+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -272,237 +272,192 @@ msgstr "Действия мыши"
 msgid "Input Here"
 msgstr "Нажимайте здесь"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:43
+#: contents/configuration/PanelConfiguration.qml:92
 #, fuzzy
 #| msgid "Apply Settings"
 msgid "Panel Settings"
 msgstr "Сохранение параметров"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:49
-#, fuzzy
-#| msgid "Maximize Panel"
-msgctxt "@action:button Make the panel as big as it can be"
-msgid "Maximize"
-msgstr "Растянуть панель"
+#: contents/configuration/PanelConfiguration.qml:98
+msgid "Add Spacer"
+msgstr "Добавить разделитель"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
-msgid "Make this panel as tall as possible"
+#: contents/configuration/PanelConfiguration.qml:101
+msgid "Add spacer widget to the panel"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-msgid "Make this panel as wide as possible"
+#: contents/configuration/PanelConfiguration.qml:108
+msgid "Add Widgets…"
+msgstr "Добавить виджеты..."
+
+#: contents/configuration/PanelConfiguration.qml:111
+msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:62
+#: contents/configuration/PanelConfiguration.qml:133
 #, fuzzy
-#| msgid "Delete"
-msgctxt "@action:button Delete the panel"
-msgid "Delete"
-msgstr "Удалить"
+#| msgid "Description"
+msgid "Position"
+msgstr "Описание"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:65
-msgid "Remove this panel; this action is undo-able"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:89
-#, fuzzy
-#| msgid "Panel Alignment"
-msgid "Alignment:"
-msgstr "Выравнивание панели"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:283
 msgid "Top"
 msgstr "Сверху"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
-msgid "Left"
-msgstr "Слева"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
-msgid "Center"
-msgstr "По центру"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:105
-msgid ""
-"Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
-msgid "Bottom"
-msgstr "Снизу"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:285
 msgid "Right"
 msgstr "Справа"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:283
+msgid "Left"
+msgstr "Слева"
+
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:285
+msgid "Bottom"
+msgstr "Снизу"
+
+#: contents/configuration/PanelConfiguration.qml:156
+msgid "Set Position..."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the right; no effect when panel is maximized"
+#: contents/configuration/PanelConfiguration.qml:221
+#, fuzzy
+#| msgid "Panel Alignment"
+msgid "Alignment"
+msgstr "Выравнивание панели"
+
+#: contents/configuration/PanelConfiguration.qml:284
+msgid "Center"
+msgstr "По центру"
+
+#: contents/configuration/PanelConfiguration.qml:307
+msgid "Length"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel height:"
+msgid "Fill height"
+msgstr "Высота панели:"
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel width:"
+msgid "Fill width"
+msgstr "Ширина панели:"
+
+#: contents/configuration/PanelConfiguration.qml:324
+msgid "Fit content"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:325
+msgid "Custom"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:361
 #, fuzzy
 #| msgid "Visibility"
-msgid "Visibility:"
+msgid "Visibility"
 msgstr "Видимость"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:147
-msgid "Always Visible"
-msgstr "Показывать всегда"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
+#: contents/configuration/PanelConfiguration.qml:372
 #, fuzzy
 #| msgid "Auto Hide"
-msgid "Auto-Hide"
+msgid "Auto hide"
 msgstr "Автоматически скрывать"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
-msgid ""
-"Panel is hidden, but reveals itself when the cursor touches the panel's "
-"screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
+#: contents/configuration/PanelConfiguration.qml:390
 #, fuzzy
 #| msgid "Opacity"
-msgid "Opacity:"
+msgid "Opacity"
 msgstr "Прозрачность"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:188
-#, fuzzy
-#| msgid "Opaque"
-msgid "Always Opaque"
-msgstr "Непрозрачно"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
+#: contents/configuration/PanelConfiguration.qml:403
 msgid "Adaptive"
 msgstr "Адаптивно"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:197
-msgid ""
-"Panel is opaque when any windows are touching it, and translucent at other "
-"times"
-msgstr ""
+#: contents/configuration/PanelConfiguration.qml:404
+#, fuzzy
+#| msgid "Opaque"
+msgid "Opaque"
+msgstr "Непрозрачно"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
+#: contents/configuration/PanelConfiguration.qml:405
 #, fuzzy
 #| msgid "Translucent"
-msgid "Always Translucent"
+msgid "Translucent"
 msgstr "Полупрозрачно"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:233
+#: contents/configuration/PanelConfiguration.qml:427
+msgid "Style"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:455
 #, fuzzy
-#| msgid "Floating Panel"
-msgid "Floating:"
-msgstr "Плавающая панель"
+#| msgid "Panel width:"
+msgid "Panel Width:"
+msgstr "Ширина панели:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
+#: contents/configuration/PanelConfiguration.qml:455
 #, fuzzy
-#| msgid "Floating Panel"
-msgid "Floating"
-msgstr "Плавающая панель"
+#| msgid "Height"
+msgid "Height:"
+msgstr "Высота"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:239
-msgid "Panel visibly floats away from its screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
-msgid "Attached"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:249
-msgid "Panel is attached to its screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
+#: contents/configuration/PanelConfiguration.qml:489
 #, fuzzy
 #| msgid "Shortcut"
-msgid "Focus Shortcut:"
+msgid "Focus shortcut:"
 msgstr "Комбинация клавиш"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
+#: contents/configuration/PanelConfiguration.qml:499
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Используйте эту комбинацию клавиш для переключения фокуса ввода в панель"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/PanelConfiguration.qml:515
+#, fuzzy
+#| msgid "Remove Panel"
+msgctxt "@action:button Delete the panel"
+msgid "Delete Panel"
+msgstr "Удалить панель"
+
+#: contents/configuration/PanelConfiguration.qml:518
+msgid "Remove this panel; this action is undo-able"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
 msgid "Drag to change maximum height."
 msgstr "Перетаскивайте для изменения максимальной высоты."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/panelconfiguration/Ruler.qml:29
 msgid "Drag to change maximum width."
 msgstr "Перетаскивайте для изменения максимальной ширины."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Double click to reset."
 msgstr "Двойной щелчок для отмены."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change minimum height."
 msgstr "Перетаскивайте для изменения минимальной высоты."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change minimum width."
 msgstr "Перетаскивайте для изменения минимальной ширины."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:65
+#: contents/configuration/panelconfiguration/Ruler.qml:79
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
 "Перетаскивайте для изменения расположения на краю экрана.\n"
 "Двойной щелчок для отмены."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:26
-msgid "Add Widgets…"
-msgstr "Добавить виджеты..."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:27
-msgid "Add Spacer"
-msgstr "Добавить разделитель"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:28
-msgid "More Options…"
-msgstr "Дополнительные параметры..."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:226
-msgctxt "Minimize the length of this string as much as possible"
-msgid "Drag to move"
-msgstr "Перетащите для перемещения"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:265
-msgctxt "@info:tooltip"
-msgid "Use arrow keys to move the panel"
-msgstr "Для перемещения панели используйте клавиши со стрелками"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel width:"
-msgstr "Ширина панели:"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel height:"
-msgstr "Высота панели:"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:407
-#: contents/configuration/ShellContainmentConfiguration.qml:43
-msgid "Close"
-msgstr "Закрыть"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
@@ -512,6 +467,10 @@ msgstr "Управление панелями и рабочими столами
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr "Панели и столы возможно перетаскивать на другие экраны."
+
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "Закрыть"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
@@ -584,6 +543,42 @@ msgstr "Не найдено ни одного виджета, удовлетво
 msgid "No widgets available"
 msgstr "Виджеты не найдены"
 
+#, fuzzy
+#~| msgid "Maximize Panel"
+#~ msgctxt "@action:button Make the panel as big as it can be"
+#~ msgid "Maximize"
+#~ msgstr "Растянуть панель"
+
+#, fuzzy
+#~| msgid "Delete"
+#~ msgctxt "@action:button Delete the panel"
+#~ msgid "Delete"
+#~ msgstr "Удалить"
+
+#~ msgid "Always Visible"
+#~ msgstr "Показывать всегда"
+
+#, fuzzy
+#~| msgid "Floating Panel"
+#~ msgid "Floating:"
+#~ msgstr "Плавающая панель"
+
+#, fuzzy
+#~| msgid "Floating Panel"
+#~ msgid "Floating"
+#~ msgstr "Плавающая панель"
+
+#~ msgid "More Options…"
+#~ msgstr "Дополнительные параметры..."
+
+#~ msgctxt "Minimize the length of this string as much as possible"
+#~ msgid "Drag to move"
+#~ msgstr "Перетащите для перемещения"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use arrow keys to move the panel"
+#~ msgstr "Для перемещения панели используйте клавиши со стрелками"
+
 #~ msgid "Switch"
 #~ msgstr "Заменить"
 
@@ -621,9 +616,6 @@ msgstr "Виджеты не найдены"
 
 #~ msgid "Width"
 #~ msgstr "Ширина"
-
-#~ msgid "Height"
-#~ msgstr "Высота"
 
 #~ msgid "Click and drag the button to resize the panel."
 #~ msgstr "Нажмите и потяните за кнопку, чтобы изменить размер панели."
@@ -871,9 +863,6 @@ msgstr "Виджеты не найдены"
 
 #~ msgid "..."
 #~ msgstr "…"
-
-#~ msgid "Description"
-#~ msgstr "Описание"
 
 #~ msgctxt ""
 #~ "%1 is the entity (person, staff, organization...) which recommends the "

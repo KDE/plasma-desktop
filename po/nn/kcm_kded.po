@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-10 01:47+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-07-15 14:43+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -47,7 +47,7 @@ msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
 "Klarte ikkje varsla KDE-tenestehandsamaren (kded6) om lagra endringar: %1"
 
-#: ui/main.qml:36
+#: ui/main.qml:37
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
@@ -56,7 +56,7 @@ msgstr ""
 "Handsamaren for bakgrunns­tenester (kded6) køyrer ikkje. Sjå til at han er "
 "rett installert."
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -65,7 +65,7 @@ msgstr ""
 "Nokre tenester slår seg sjølve automatisk av dersom dei vert manuelt starta "
 "når det ikkje er bruk for dei."
 
-#: ui/main.qml:54
+#: ui/main.qml:55
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -74,54 +74,54 @@ msgstr ""
 "Nokre tenester vart automatisk starta/stoppa når handsamaren for bakgrunns­"
 "tenester (kded6) vart starta på nytt for å ta i bruk endringane."
 
-#: ui/main.qml:96
+#: ui/main.qml:97
 #, kde-format
 msgid "All Services"
 msgstr "Alle tenester"
 
-#: ui/main.qml:97
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Køyrer"
 
-#: ui/main.qml:98
+#: ui/main.qml:99
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Køyrer ikkje"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Startup Services"
 msgstr "Oppstartstenester"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Når-det-trengst-tenester"
 
-#: ui/main.qml:153
+#: ui/main.qml:156
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Slå på/av automatisk lasting av tenesta ved oppstart"
 
-#: ui/main.qml:220
+#: ui/main.qml:199
 #, kde-format
 msgid "Not running"
 msgstr "Køyrer ikkje"
 
-#: ui/main.qml:221
+#: ui/main.qml:200
 #, kde-format
 msgid "Running"
 msgstr "Køyrer"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Stop Service"
 msgstr "Stopp teneste"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Start Service"
 msgstr "Start teneste"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-10 01:47+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-07-06 10:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -48,14 +48,14 @@ msgstr "فشل في بدء الخدمة"
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr "فشل في إعلام مدير خدمات كي (kded6) بالتغيرات المحفوظة: %1"
 
-#: ui/main.qml:36
+#: ui/main.qml:37
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr "مدير خدمات الخلفية (kded6) لا يعمل حاليًا. تأكد من تثبيته بشكل صحيح."
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -64,7 +64,7 @@ msgstr ""
 "تقوم بعض الخدمات بتعطيل نفسها مرة أخرى عند بدء التشغيل يدويًا إذا لم تكن "
 "مفيدة في البيئة الحالية."
 
-#: ui/main.qml:54
+#: ui/main.qml:55
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -73,54 +73,54 @@ msgstr ""
 "تم تشغيل / إيقاف بعض الخِدمات تلقائيًا عند إعادة تشغيل مدير خدمات الخلفية "
 "(kded6) لتطبيق تغييراتك."
 
-#: ui/main.qml:96
+#: ui/main.qml:97
 #, kde-format
 msgid "All Services"
 msgstr "جميع الخدمات"
 
-#: ui/main.qml:97
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "العاملة"
 
-#: ui/main.qml:98
+#: ui/main.qml:99
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "غير عاملة"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Startup Services"
 msgstr "خدمات بدء التشغيل"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "خدمات التحميل عند الطلب"
 
-#: ui/main.qml:153
+#: ui/main.qml:156
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "بدّل تحميل هذه الخدمة تلقائيا عند بدء التشغيل"
 
-#: ui/main.qml:220
+#: ui/main.qml:199
 #, kde-format
 msgid "Not running"
 msgstr "متوقف عن التشغيل"
 
-#: ui/main.qml:221
+#: ui/main.qml:200
 #, kde-format
 msgid "Running"
 msgstr "قيد التشغيل"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Stop Service"
 msgstr "أوقف الخدمة"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Start Service"
 msgstr "ابدأ الخدمة"

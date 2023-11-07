@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 12:20+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-10-25 18:49+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -271,227 +271,188 @@ msgstr "Actions de la souris"
 msgid "Input Here"
 msgstr "Saisir ici"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:43
+#: contents/configuration/PanelConfiguration.qml:92
 msgid "Panel Settings"
 msgstr "Configuration des panneaux"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:49
-msgctxt "@action:button Make the panel as big as it can be"
-msgid "Maximize"
-msgstr "Maximiser"
+#: contents/configuration/PanelConfiguration.qml:98
+msgid "Add Spacer"
+msgstr "Ajouter un élément séparateur"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
-msgid "Make this panel as tall as possible"
-msgstr "Rendre ce panneau aussi haut que possible."
+#: contents/configuration/PanelConfiguration.qml:101
+msgid "Add spacer widget to the panel"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-msgid "Make this panel as wide as possible"
-msgstr "Rendre ce panneau aussi large que possible."
+#: contents/configuration/PanelConfiguration.qml:108
+msgid "Add Widgets…"
+msgstr "Ajouter des composants graphiques..."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:62
-msgctxt "@action:button Delete the panel"
-msgid "Delete"
-msgstr "Supprimer"
+#: contents/configuration/PanelConfiguration.qml:111
+msgid "Open the widget selector to drag and drop widgets to the panel"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:65
-msgid "Remove this panel; this action is undo-able"
-msgstr "Supprimer ce panneau. Cette action peut être annulée."
+#: contents/configuration/PanelConfiguration.qml:133
+msgid "Position"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:89
-msgid "Alignment:"
-msgstr "Alignement :"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:283
 msgid "Top"
 msgstr "Haut"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
-msgid "Left"
-msgstr "Gauche"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr ""
-"Aligne le panneau sur le haut s'il n'est pas maximisé. Cela n'a aucun effet "
-"si le panneau est maximisé."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr ""
-"Aligne le panneau sur la gauche s'il n'est pas maximisé. Cela n'a aucun "
-"effet si le panneau est maximisé."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
-msgid "Center"
-msgstr "Centre"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:105
-msgid ""
-"Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr ""
-"Aligne le panneau sur le centre s'il n'est pas maximisé. Cela n'a aucun "
-"effet si le panneau est maximisé."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
-msgid "Bottom"
-msgstr "Bas"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:285
 msgid "Right"
 msgstr "Droite"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr ""
-"Aligne le panneau sur le bas s'il n'est pas maximisé. Cela n'a aucun effet "
-"si le panneau est maximisé."
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:283
+msgid "Left"
+msgstr "Gauche"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr ""
-"Aligne le panneau sur la droite s'il n'est pas maximisé. Cela n'a aucun "
-"effet si le panneau est maximisé."
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:285
+msgid "Bottom"
+msgstr "Bas"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
-msgid "Visibility:"
+#: contents/configuration/PanelConfiguration.qml:156
+msgid "Set Position..."
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:221
+#, fuzzy
+#| msgid "Alignment:"
+msgid "Alignment"
+msgstr "Alignement :"
+
+#: contents/configuration/PanelConfiguration.qml:284
+msgid "Center"
+msgstr "Centre"
+
+#: contents/configuration/PanelConfiguration.qml:307
+msgid "Length"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel height:"
+msgid "Fill height"
+msgstr "Hauteur de panneau :"
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel width:"
+msgid "Fill width"
+msgstr "Largeur du panneau :"
+
+#: contents/configuration/PanelConfiguration.qml:324
+msgid "Fit content"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:325
+msgid "Custom"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:361
+#, fuzzy
+#| msgid "Visibility:"
+msgid "Visibility"
 msgstr "Visibilité :"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:147
-msgid "Always Visible"
-msgstr "Toujours visible"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
-msgid "Auto-Hide"
+#: contents/configuration/PanelConfiguration.qml:372
+#, fuzzy
+#| msgid "Auto-Hide"
+msgid "Auto hide"
 msgstr "Masquer automatiquement"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
-msgid ""
-"Panel is hidden, but reveals itself when the cursor touches the panel's "
-"screen edge"
-msgstr ""
-"Le panneau est masqué mais ré-apparaît lorsque le curseur touche le bord "
-"d'écran du panneau."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-msgid "Opacity:"
+#: contents/configuration/PanelConfiguration.qml:390
+#, fuzzy
+#| msgid "Opacity:"
+msgid "Opacity"
 msgstr "Opacité :"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:188
-msgid "Always Opaque"
-msgstr "Toujours opaque"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
+#: contents/configuration/PanelConfiguration.qml:403
 msgid "Adaptive"
 msgstr "Adaptatif"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:197
-msgid ""
-"Panel is opaque when any windows are touching it, and translucent at other "
-"times"
-msgstr ""
-"Le panneau est transparent lorsqu'aucune fenêtre ne le touche et translucide "
-"dans le cas contraire."
+#: contents/configuration/PanelConfiguration.qml:404
+#, fuzzy
+#| msgid "Always Opaque"
+msgid "Opaque"
+msgstr "Toujours opaque"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
-msgid "Always Translucent"
+#: contents/configuration/PanelConfiguration.qml:405
+#, fuzzy
+#| msgid "Always Translucent"
+msgid "Translucent"
 msgstr "Toujours translucide"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:233
-msgid "Floating:"
-msgstr "Flottant :"
+#: contents/configuration/PanelConfiguration.qml:427
+msgid "Style"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
-msgid "Floating"
-msgstr "Flottant"
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Panel width:"
+msgid "Panel Width:"
+msgstr "Largeur du panneau :"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:239
-msgid "Panel visibly floats away from its screen edge"
-msgstr "Le panneau flotte visiblement loin du bord de son écran."
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Height"
+msgid "Height:"
+msgstr "Hauteur"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
-msgid "Attached"
-msgstr "Attaché"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:249
-msgid "Panel is attached to its screen edge"
-msgstr "Le panneau est attaché à son bord d'écran."
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
-msgid "Focus Shortcut:"
+#: contents/configuration/PanelConfiguration.qml:489
+#, fuzzy
+#| msgid "Focus Shortcut:"
+msgid "Focus shortcut:"
 msgstr "Raccourci pour le focus :"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
+#: contents/configuration/PanelConfiguration.qml:499
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Appuyez sur ce raccourci clavier pour déplacer le focus vers le panneau"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/PanelConfiguration.qml:515
+#, fuzzy
+#| msgid "Remove Panel"
+msgctxt "@action:button Delete the panel"
+msgid "Delete Panel"
+msgstr "Supprimer le tableau de bord"
+
+#: contents/configuration/PanelConfiguration.qml:518
+msgid "Remove this panel; this action is undo-able"
+msgstr "Supprimer ce panneau. Cette action peut être annulée."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
 msgid "Drag to change maximum height."
 msgstr "Faire glisser pour modifier la hauteur maximale."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/panelconfiguration/Ruler.qml:29
 msgid "Drag to change maximum width."
 msgstr "Faire glisser pour modifier la largeur maximale."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Double click to reset."
 msgstr "Double-cliquer pour ré-initialiser."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change minimum height."
 msgstr "Faire glisser pour modifier la hauteur minimale."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change minimum width."
 msgstr "Faire glisser pour modifier la largeur minimale."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:65
+#: contents/configuration/panelconfiguration/Ruler.qml:79
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
 "Faire glisser pour modifier la position sur ce bord d'écran.\n"
 "Faire un double clic pour ré-initialiser."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:26
-msgid "Add Widgets…"
-msgstr "Ajouter des composants graphiques..."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:27
-msgid "Add Spacer"
-msgstr "Ajouter un élément séparateur"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:28
-msgid "More Options…"
-msgstr "Plus d'options..."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:226
-msgctxt "Minimize the length of this string as much as possible"
-msgid "Drag to move"
-msgstr "Faire glisser pour déplacer"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:265
-msgctxt "@info:tooltip"
-msgid "Use arrow keys to move the panel"
-msgstr "Utiliser les touches de flèche pour déplacer le panneau"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel width:"
-msgstr "Largeur du panneau :"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel height:"
-msgstr "Hauteur de panneau :"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:407
-#: contents/configuration/ShellContainmentConfiguration.qml:43
-msgid "Close"
-msgstr "Fermer"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
@@ -503,6 +464,10 @@ msgid ""
 msgstr ""
 "Vous pouvez faire glisser les panneaux et les bureaux pour les déplacer vers "
 "d'autres écrans."
+
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "Fermer"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
@@ -572,6 +537,97 @@ msgstr "Aucun composant graphique ne correspond aux mots clés de la recherche"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "Aucun composant graphique disponible"
+
+#~ msgctxt "@action:button Make the panel as big as it can be"
+#~ msgid "Maximize"
+#~ msgstr "Maximiser"
+
+#~ msgid "Make this panel as tall as possible"
+#~ msgstr "Rendre ce panneau aussi haut que possible."
+
+#~ msgid "Make this panel as wide as possible"
+#~ msgstr "Rendre ce panneau aussi large que possible."
+
+#~ msgctxt "@action:button Delete the panel"
+#~ msgid "Delete"
+#~ msgstr "Supprimer"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the top; no effect when panel is maximized"
+#~ msgstr ""
+#~ "Aligne le panneau sur le haut s'il n'est pas maximisé. Cela n'a aucun "
+#~ "effet si le panneau est maximisé."
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the left; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Aligne le panneau sur la gauche s'il n'est pas maximisé. Cela n'a aucun "
+#~ "effet si le panneau est maximisé."
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the center; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Aligne le panneau sur le centre s'il n'est pas maximisé. Cela n'a aucun "
+#~ "effet si le panneau est maximisé."
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the bottom; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Aligne le panneau sur le bas s'il n'est pas maximisé. Cela n'a aucun "
+#~ "effet si le panneau est maximisé."
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the right; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Aligne le panneau sur la droite s'il n'est pas maximisé. Cela n'a aucun "
+#~ "effet si le panneau est maximisé."
+
+#~ msgid "Always Visible"
+#~ msgstr "Toujours visible"
+
+#~ msgid ""
+#~ "Panel is hidden, but reveals itself when the cursor touches the panel's "
+#~ "screen edge"
+#~ msgstr ""
+#~ "Le panneau est masqué mais ré-apparaît lorsque le curseur touche le bord "
+#~ "d'écran du panneau."
+
+#~ msgid ""
+#~ "Panel is opaque when any windows are touching it, and translucent at "
+#~ "other times"
+#~ msgstr ""
+#~ "Le panneau est transparent lorsqu'aucune fenêtre ne le touche et "
+#~ "translucide dans le cas contraire."
+
+#~ msgid "Floating:"
+#~ msgstr "Flottant :"
+
+#~ msgid "Floating"
+#~ msgstr "Flottant"
+
+#~ msgid "Panel visibly floats away from its screen edge"
+#~ msgstr "Le panneau flotte visiblement loin du bord de son écran."
+
+#~ msgid "Attached"
+#~ msgstr "Attaché"
+
+#~ msgid "Panel is attached to its screen edge"
+#~ msgstr "Le panneau est attaché à son bord d'écran."
+
+#~ msgid "More Options…"
+#~ msgstr "Plus d'options..."
+
+#~ msgctxt "Minimize the length of this string as much as possible"
+#~ msgid "Drag to move"
+#~ msgstr "Faire glisser pour déplacer"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use arrow keys to move the panel"
+#~ msgstr "Utiliser les touches de flèche pour déplacer le panneau"
 
 #~ msgid "Switch"
 #~ msgstr "Changer"
@@ -654,9 +710,6 @@ msgstr "Aucun composant graphique disponible"
 
 #~ msgid "Width"
 #~ msgstr "Largeur"
-
-#~ msgid "Height"
-#~ msgstr "Hauteur"
 
 #~ msgid "Click and drag the button to resize the panel."
 #~ msgstr "Cliquer et faire glisser pour re-dimensionner le panneau."

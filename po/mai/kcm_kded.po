@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-10 01:47+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2009-01-18 15:29+0530\n"
 "Last-Translator: Sangeeta Kumari <sangeeta09@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -45,80 +45,80 @@ msgstr ""
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
 
-#: ui/main.qml:36
+#: ui/main.qml:37
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
 
-#: ui/main.qml:54
+#: ui/main.qml:55
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 
-#: ui/main.qml:96
+#: ui/main.qml:97
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "All Services"
 msgstr "सेवा"
 
-#: ui/main.qml:97
+#: ui/main.qml:98
 #, fuzzy, kde-format
 #| msgid "Running"
 msgctxt "List running services"
 msgid "Running"
 msgstr "चलि रहल अछि"
 
-#: ui/main.qml:98
+#: ui/main.qml:99
 #, fuzzy, kde-format
 #| msgid "Not running"
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "नहि चलि रहल अछि..."
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Startup Services"
 msgid "Startup Services"
 msgstr "शुरूआतक सेवासभ"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "माँग-पर सेवा प्रारंभ करू"
 
-#: ui/main.qml:153
+#: ui/main.qml:156
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
-#: ui/main.qml:220
+#: ui/main.qml:199
 #, kde-format
 msgid "Not running"
 msgstr "नहि चलि रहल अछि..."
 
-#: ui/main.qml:221
+#: ui/main.qml:200
 #, kde-format
 msgid "Running"
 msgstr "चलि रहल अछि"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Stop Service"
 msgstr "सेवा"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Start Service"

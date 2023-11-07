@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 12:20+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-07-19 15:11+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -261,225 +261,187 @@ msgstr "Akcie myši"
 msgid "Input Here"
 msgstr "Vstup sem"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:43
+#: contents/configuration/PanelConfiguration.qml:92
 msgid "Panel Settings"
 msgstr "Nastavenia panela"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:49
-msgctxt "@action:button Make the panel as big as it can be"
-msgid "Maximize"
-msgstr "Maximalizovať"
+#: contents/configuration/PanelConfiguration.qml:98
+msgid "Add Spacer"
+msgstr "Pridať medzeru"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
-msgid "Make this panel as tall as possible"
-msgstr "Urobiť tento panel čo najvyšší"
+#: contents/configuration/PanelConfiguration.qml:101
+msgid "Add spacer widget to the panel"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-msgid "Make this panel as wide as possible"
-msgstr "Urobiť tento panel čo najširší"
+#: contents/configuration/PanelConfiguration.qml:108
+msgid "Add Widgets…"
+msgstr "Pridať miniaplikácie..."
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:62
-msgctxt "@action:button Delete the panel"
-msgid "Delete"
-msgstr "Vymazať"
+#: contents/configuration/PanelConfiguration.qml:111
+msgid "Open the widget selector to drag and drop widgets to the panel"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:65
-msgid "Remove this panel; this action is undo-able"
-msgstr "Odstrániť tento panel; túto akciu je možné zrušiť"
+#: contents/configuration/PanelConfiguration.qml:133
+msgid "Position"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:89
-msgid "Alignment:"
-msgstr "Zarovnanie:"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:283
 msgid "Top"
 msgstr "Vrch"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
-msgid "Left"
-msgstr "Vľavo"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr ""
-"Zarovná nemaximalizovaný panel k vrchu; bez účinku, keď je panel "
-"maximalizovaný"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr ""
-"Zarovná nemaximalizovaný panel doľava; bez účinku, keď je panel "
-"maximalizovaný"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
-msgid "Center"
-msgstr "Vycentrovať"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:105
-msgid ""
-"Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr ""
-"Zarovná nemaximalizovaný panel na stred; bez účinku, keď je panel "
-"maximalizovaný"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
-msgid "Bottom"
-msgstr "Spodok"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:285
 msgid "Right"
 msgstr "Vpravo"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr ""
-"Zarovná nemaximalizovaný panel na spodok; bez účinku, keď je panel "
-"maximalizovaný"
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:283
+msgid "Left"
+msgstr "Vľavo"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr ""
-"Zarovná nemaximalizovaný panel doprava; bez účinku, keď je panel "
-"maximalizovaný"
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:285
+msgid "Bottom"
+msgstr "Spodok"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
-msgid "Visibility:"
+#: contents/configuration/PanelConfiguration.qml:156
+msgid "Set Position..."
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:221
+#, fuzzy
+#| msgid "Alignment:"
+msgid "Alignment"
+msgstr "Zarovnanie:"
+
+#: contents/configuration/PanelConfiguration.qml:284
+msgid "Center"
+msgstr "Vycentrovať"
+
+#: contents/configuration/PanelConfiguration.qml:307
+msgid "Length"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel height:"
+msgid "Fill height"
+msgstr "Výška panela:"
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel width:"
+msgid "Fill width"
+msgstr "Šírka panelu:"
+
+#: contents/configuration/PanelConfiguration.qml:324
+msgid "Fit content"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:325
+msgid "Custom"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:361
+#, fuzzy
+#| msgid "Visibility:"
+msgid "Visibility"
 msgstr "Viditeľnosť:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:147
-msgid "Always Visible"
-msgstr "Vždy viditeľný"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
-msgid "Auto-Hide"
+#: contents/configuration/PanelConfiguration.qml:372
+#, fuzzy
+#| msgid "Auto-Hide"
+msgid "Auto hide"
 msgstr "Automaticky skryť"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
-msgid ""
-"Panel is hidden, but reveals itself when the cursor touches the panel's "
-"screen edge"
-msgstr ""
-"Panel je skrytý, ale odhalí sa, keď sa kurzor dotkne okraja obrazovky panelu"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-msgid "Opacity:"
+#: contents/configuration/PanelConfiguration.qml:390
+#, fuzzy
+#| msgid "Opacity:"
+msgid "Opacity"
 msgstr "Priehľadnosť:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:188
-msgid "Always Opaque"
-msgstr "Vždy nepriehľadný"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
+#: contents/configuration/PanelConfiguration.qml:403
 msgid "Adaptive"
 msgstr "Prispôsobivý"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:197
-msgid ""
-"Panel is opaque when any windows are touching it, and translucent at other "
-"times"
-msgstr ""
-"Panel je nepriehľadný, keď sa ho dotýkajú okná, a priesvitný v ostatných "
-"prípadoch."
+#: contents/configuration/PanelConfiguration.qml:404
+#, fuzzy
+#| msgid "Always Opaque"
+msgid "Opaque"
+msgstr "Vždy nepriehľadný"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
-msgid "Always Translucent"
+#: contents/configuration/PanelConfiguration.qml:405
+#, fuzzy
+#| msgid "Always Translucent"
+msgid "Translucent"
 msgstr "Vždy priesvitný"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:233
-msgid "Floating:"
-msgstr "Plávajúci:"
+#: contents/configuration/PanelConfiguration.qml:427
+msgid "Style"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
-msgid "Floating"
-msgstr "Plávajúci"
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Panel width:"
+msgid "Panel Width:"
+msgstr "Šírka panelu:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:239
-msgid "Panel visibly floats away from its screen edge"
-msgstr "Panel sa viditeľne vzďaľuje od okraja obrazovky"
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Height"
+msgid "Height:"
+msgstr "Výška"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
-msgid "Attached"
-msgstr "Pripojený"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:249
-msgid "Panel is attached to its screen edge"
-msgstr "Panel je pripojený k okraju obrazovky"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
-msgid "Focus Shortcut:"
+#: contents/configuration/PanelConfiguration.qml:489
+#, fuzzy
+#| msgid "Focus Shortcut:"
+msgid "Focus shortcut:"
 msgstr "Skratka zamerania:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
+#: contents/configuration/PanelConfiguration.qml:499
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Stlačte túto klávesovú skratku na presun zamerania na panel"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/PanelConfiguration.qml:515
+#, fuzzy
+#| msgid "Remove Panel"
+msgctxt "@action:button Delete the panel"
+msgid "Delete Panel"
+msgstr "Odstrániť panel"
+
+#: contents/configuration/PanelConfiguration.qml:518
+msgid "Remove this panel; this action is undo-able"
+msgstr "Odstrániť tento panel; túto akciu je možné zrušiť"
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
 msgid "Drag to change maximum height."
 msgstr "Potiahnutím zmeníte maximálnu výšku."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/panelconfiguration/Ruler.qml:29
 msgid "Drag to change maximum width."
 msgstr "Potiahnutím zmeníte maximálnu šírku."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Double click to reset."
 msgstr "Dvojitým kliknutím obnovíte."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change minimum height."
 msgstr "Potiahnutím zmeníte minimálnu výšku."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change minimum width."
 msgstr "Potiahnutím zmeníte minimálnu šírku."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:65
+#: contents/configuration/panelconfiguration/Ruler.qml:79
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
 "Potiahnutím zmeníte polohu na tomto okraji obrazovky.\n"
 "Dvojitým kliknutím obnovíte nastavenie."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:26
-msgid "Add Widgets…"
-msgstr "Pridať miniaplikácie..."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:27
-msgid "Add Spacer"
-msgstr "Pridať medzeru"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:28
-msgid "More Options…"
-msgstr "Viac možností..."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:226
-msgctxt "Minimize the length of this string as much as possible"
-msgid "Drag to move"
-msgstr "Ťahať na presunutie"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:265
-msgctxt "@info:tooltip"
-msgid "Use arrow keys to move the panel"
-msgstr "Panel môžete presúvať pomocou klávesov so šípkami"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel width:"
-msgstr "Šírka panelu:"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel height:"
-msgstr "Výška panela:"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:407
-#: contents/configuration/ShellContainmentConfiguration.qml:43
-msgid "Close"
-msgstr "Zavrieť"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
@@ -489,6 +451,10 @@ msgstr "Panely a správa plôch"
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr "Panely a plochy môžete presúvať na rôzne obrazovky."
+
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "Zavrieť"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
@@ -559,6 +525,97 @@ msgstr "Žiadne miniaplikácie nevyhovujú hľadaným výrazom."
 msgid "No widgets available"
 msgstr "Žiadne miniaplikáciw nie sú dostupné"
 
+#~ msgctxt "@action:button Make the panel as big as it can be"
+#~ msgid "Maximize"
+#~ msgstr "Maximalizovať"
+
+#~ msgid "Make this panel as tall as possible"
+#~ msgstr "Urobiť tento panel čo najvyšší"
+
+#~ msgid "Make this panel as wide as possible"
+#~ msgstr "Urobiť tento panel čo najširší"
+
+#~ msgctxt "@action:button Delete the panel"
+#~ msgid "Delete"
+#~ msgstr "Vymazať"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the top; no effect when panel is maximized"
+#~ msgstr ""
+#~ "Zarovná nemaximalizovaný panel k vrchu; bez účinku, keď je panel "
+#~ "maximalizovaný"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the left; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Zarovná nemaximalizovaný panel doľava; bez účinku, keď je panel "
+#~ "maximalizovaný"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the center; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Zarovná nemaximalizovaný panel na stred; bez účinku, keď je panel "
+#~ "maximalizovaný"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the bottom; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Zarovná nemaximalizovaný panel na spodok; bez účinku, keď je panel "
+#~ "maximalizovaný"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the right; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Zarovná nemaximalizovaný panel doprava; bez účinku, keď je panel "
+#~ "maximalizovaný"
+
+#~ msgid "Always Visible"
+#~ msgstr "Vždy viditeľný"
+
+#~ msgid ""
+#~ "Panel is hidden, but reveals itself when the cursor touches the panel's "
+#~ "screen edge"
+#~ msgstr ""
+#~ "Panel je skrytý, ale odhalí sa, keď sa kurzor dotkne okraja obrazovky "
+#~ "panelu"
+
+#~ msgid ""
+#~ "Panel is opaque when any windows are touching it, and translucent at "
+#~ "other times"
+#~ msgstr ""
+#~ "Panel je nepriehľadný, keď sa ho dotýkajú okná, a priesvitný v ostatných "
+#~ "prípadoch."
+
+#~ msgid "Floating:"
+#~ msgstr "Plávajúci:"
+
+#~ msgid "Floating"
+#~ msgstr "Plávajúci"
+
+#~ msgid "Panel visibly floats away from its screen edge"
+#~ msgstr "Panel sa viditeľne vzďaľuje od okraja obrazovky"
+
+#~ msgid "Attached"
+#~ msgstr "Pripojený"
+
+#~ msgid "Panel is attached to its screen edge"
+#~ msgstr "Panel je pripojený k okraju obrazovky"
+
+#~ msgid "More Options…"
+#~ msgstr "Viac možností..."
+
+#~ msgctxt "Minimize the length of this string as much as possible"
+#~ msgid "Drag to move"
+#~ msgstr "Ťahať na presunutie"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use arrow keys to move the panel"
+#~ msgstr "Panel môžete presúvať pomocou klávesov so šípkami"
+
 #~ msgid "Switch"
 #~ msgstr "Prepnúť"
 
@@ -595,9 +652,6 @@ msgstr "Žiadne miniaplikáciw nie sú dostupné"
 
 #~ msgid "Width"
 #~ msgstr "Šírka"
-
-#~ msgid "Height"
-#~ msgstr "Výška"
 
 #~ msgid "Click and drag the button to resize the panel."
 #~ msgstr "Kliknite a ťahajte za tlačítko na zmenu veľkosti."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 12:20+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2014-12-28 11:53+0000\n"
 "Last-Translator: Ajla Alic <aalic2@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -278,232 +278,185 @@ msgstr "Radnje mišem"
 msgid "Input Here"
 msgstr "Unesi ovdje"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:43
+#: contents/configuration/PanelConfiguration.qml:92
 #, fuzzy
 #| msgid "Apply Settings"
 msgid "Panel Settings"
 msgstr "Primijeni postavke"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:49
-#, fuzzy
-#| msgid "Maximize Panel"
-msgctxt "@action:button Make the panel as big as it can be"
-msgid "Maximize"
-msgstr "Uvećaj panel"
+#: contents/configuration/PanelConfiguration.qml:98
+msgid "Add Spacer"
+msgstr "Dodaj razmaknicu"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
-msgid "Make this panel as tall as possible"
+#: contents/configuration/PanelConfiguration.qml:101
+msgid "Add spacer widget to the panel"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-msgid "Make this panel as wide as possible"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:62
-#, fuzzy
-#| msgid "Delete"
-msgctxt "@action:button Delete the panel"
-msgid "Delete"
-msgstr "Obriši"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:65
-msgid "Remove this panel; this action is undo-able"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:89
-#, fuzzy
-#| msgid "Panel Alignment"
-msgid "Alignment:"
-msgstr "Ravnanje panela"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
-msgid "Top"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
-msgid "Left"
-msgstr "Lijevo"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
-msgid "Center"
-msgstr "Centar"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:105
-msgid ""
-"Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
-msgid "Bottom"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
-msgid "Right"
-msgstr "Desno"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
-#, fuzzy
-#| msgid "Visibility"
-msgid "Visibility:"
-msgstr "Vidljivost"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:147
-msgid "Always Visible"
-msgstr "Uvijek vidljivo"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
-#, fuzzy
-#| msgid "Auto Hide"
-msgid "Auto-Hide"
-msgstr "Automatsko sakrivanje"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
-msgid ""
-"Panel is hidden, but reveals itself when the cursor touches the panel's "
-"screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-msgid "Opacity:"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:188
-msgid "Always Opaque"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
-msgid "Adaptive"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:197
-msgid ""
-"Panel is opaque when any windows are touching it, and translucent at other "
-"times"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
-#, fuzzy
-#| msgid "Always Visible"
-msgid "Always Translucent"
-msgstr "Uvijek vidljivo"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:233
-msgid "Floating:"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
-msgid "Floating"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:239
-msgid "Panel visibly floats away from its screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
-msgid "Attached"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:249
-msgid "Panel is attached to its screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
-#, fuzzy
-#| msgid "Keyboard shortcuts"
-msgid "Focus Shortcut:"
-msgstr "Prečice na tastaturi"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
-msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-msgid "Drag to change maximum height."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-msgid "Drag to change maximum width."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-#: contents/configuration/panelconfiguration/Ruler.qml:21
-msgid "Double click to reset."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:21
-msgid "Drag to change minimum height."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:21
-msgid "Drag to change minimum width."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:65
-msgid ""
-"Drag to change position on this screen edge.\n"
-"Double click to reset."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:26
+#: contents/configuration/PanelConfiguration.qml:108
 #, fuzzy
 #| msgid "Add Widgets..."
 msgid "Add Widgets…"
 msgstr "Dodaj grafičke kontrole..."
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:27
-msgid "Add Spacer"
-msgstr "Dodaj razmaknicu"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:28
-#, fuzzy
-#| msgid "More Settings..."
-msgid "More Options…"
-msgstr "Više podešavanja..."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:226
-msgctxt "Minimize the length of this string as much as possible"
-msgid "Drag to move"
+#: contents/configuration/PanelConfiguration.qml:111
+msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:265
-msgctxt "@info:tooltip"
-msgid "Use arrow keys to move the panel"
+#: contents/configuration/PanelConfiguration.qml:133
+msgid "Position"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel width:"
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:283
+msgid "Top"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:285
+msgid "Right"
+msgstr "Desno"
+
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:283
+msgid "Left"
+msgstr "Lijevo"
+
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:285
+msgid "Bottom"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:156
+msgid "Set Position..."
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:221
 #, fuzzy
 #| msgid "Panel Alignment"
-msgid "Panel height:"
+msgid "Alignment"
 msgstr "Ravnanje panela"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:407
-#: contents/configuration/ShellContainmentConfiguration.qml:43
-msgid "Close"
-msgstr "ZatvorI"
+#: contents/configuration/PanelConfiguration.qml:284
+msgid "Center"
+msgstr "Centar"
+
+#: contents/configuration/PanelConfiguration.qml:307
+msgid "Length"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel Alignment"
+msgid "Fill height"
+msgstr "Ravnanje panela"
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Uninstall"
+msgid "Fill width"
+msgstr "Deinstaliraj"
+
+#: contents/configuration/PanelConfiguration.qml:324
+msgid "Fit content"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:325
+msgid "Custom"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:361
+#, fuzzy
+#| msgid "Visibility"
+msgid "Visibility"
+msgstr "Vidljivost"
+
+#: contents/configuration/PanelConfiguration.qml:372
+#, fuzzy
+#| msgid "Auto Hide"
+msgid "Auto hide"
+msgstr "Automatsko sakrivanje"
+
+#: contents/configuration/PanelConfiguration.qml:390
+msgid "Opacity"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:403
+msgid "Adaptive"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:404
+msgid "Opaque"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:405
+#, fuzzy
+#| msgid "Always Visible"
+msgid "Translucent"
+msgstr "Uvijek vidljivo"
+
+#: contents/configuration/PanelConfiguration.qml:427
+msgid "Style"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Panel Alignment"
+msgid "Panel Width:"
+msgstr "Ravnanje panela"
+
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Height"
+msgid "Height:"
+msgstr "Visina"
+
+#: contents/configuration/PanelConfiguration.qml:489
+#, fuzzy
+#| msgid "Keyboard shortcuts"
+msgid "Focus shortcut:"
+msgstr "Prečice na tastaturi"
+
+#: contents/configuration/PanelConfiguration.qml:499
+msgid "Press this keyboard shortcut to move focus to the Panel"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:515
+#, fuzzy
+#| msgid "Remove Panel"
+msgctxt "@action:button Delete the panel"
+msgid "Delete Panel"
+msgstr "Ukloni panel"
+
+#: contents/configuration/PanelConfiguration.qml:518
+msgid "Remove this panel; this action is undo-able"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+msgid "Drag to change maximum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+msgid "Drag to change maximum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+msgid "Double click to reset."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+msgid "Drag to change minimum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+msgid "Drag to change minimum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:79
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double click to reset."
+msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
@@ -513,6 +466,10 @@ msgstr ""
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
+
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "ZatvorI"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
@@ -595,6 +552,26 @@ msgstr ""
 msgid "No widgets available"
 msgstr ""
 
+#, fuzzy
+#~| msgid "Maximize Panel"
+#~ msgctxt "@action:button Make the panel as big as it can be"
+#~ msgid "Maximize"
+#~ msgstr "Uvećaj panel"
+
+#, fuzzy
+#~| msgid "Delete"
+#~ msgctxt "@action:button Delete the panel"
+#~ msgid "Delete"
+#~ msgstr "Obriši"
+
+#~ msgid "Always Visible"
+#~ msgstr "Uvijek vidljivo"
+
+#, fuzzy
+#~| msgid "More Settings..."
+#~ msgid "More Options…"
+#~ msgstr "Više podešavanja..."
+
 #~ msgid "Switch"
 #~ msgstr "Prekidač"
 
@@ -623,9 +600,6 @@ msgstr ""
 
 #~ msgid "Width"
 #~ msgstr "Širina"
-
-#~ msgid "Height"
-#~ msgstr "Visina"
 
 #~ msgid "Lock Widgets"
 #~ msgstr "Zaključaj grafičku kontrolu"

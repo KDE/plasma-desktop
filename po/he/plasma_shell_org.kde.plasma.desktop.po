@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 12:20+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-09-30 22:00+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -257,212 +257,187 @@ msgstr "פעולות עכבר"
 msgid "Input Here"
 msgstr "קלט כאן"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:43
+#: contents/configuration/PanelConfiguration.qml:92
 msgid "Panel Settings"
 msgstr "הגדרות לוח"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:49
-msgctxt "@action:button Make the panel as big as it can be"
-msgid "Maximize"
-msgstr "הגדלה"
+#: contents/configuration/PanelConfiguration.qml:98
+msgid "Add Spacer"
+msgstr "הוספת מפריד"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
-msgid "Make this panel as tall as possible"
-msgstr "להגביה את הלוח הזה ככל הניתן"
+#: contents/configuration/PanelConfiguration.qml:101
+msgid "Add spacer widget to the panel"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-msgid "Make this panel as wide as possible"
-msgstr "הרחבת הלוח הזה ככל הניתן"
+#: contents/configuration/PanelConfiguration.qml:108
+msgid "Add Widgets…"
+msgstr "הוספת יישומונים…"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:62
-msgctxt "@action:button Delete the panel"
-msgid "Delete"
-msgstr "מחיקה"
+#: contents/configuration/PanelConfiguration.qml:111
+msgid "Open the widget selector to drag and drop widgets to the panel"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:65
-msgid "Remove this panel; this action is undo-able"
-msgstr "הסרת הלוח הזה, זאת פעולה בלתי הפיכה"
+#: contents/configuration/PanelConfiguration.qml:133
+msgid "Position"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:89
-msgid "Alignment:"
-msgstr "יישור:"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:283
 msgid "Top"
 msgstr "למעלה"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
-msgid "Left"
-msgstr "שמאל"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr "מיישר את הלוח הלא מוגדל לחלק העליון, אין השפעה כאשר הלוח מוגדל לגמרי"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr "מיישר את הלוח הלא מוגדל לשמאל, אין השפעה כאשר הלוח מוגדל לגמרי"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
-msgid "Center"
-msgstr "במרכז"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:105
-msgid ""
-"Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr "מיישר את הלוח הלא מוגדל למרכז, אין השפעה כאשר הלוח מוגדל לגמרי"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
-msgid "Bottom"
-msgstr "למטה"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:285
 msgid "Right"
 msgstr "ימין"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr "מיישר את הלוח הלא מוגדל לחלק התחתון, אין השפעה כאשר הלוח מוגדל לגמרי"
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:283
+msgid "Left"
+msgstr "שמאל"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr "מיישר את הלוח הלא מוגדל לימין, אין השפעה כאשר הלוח מוגדל לגמרי"
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:285
+msgid "Bottom"
+msgstr "למטה"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
-msgid "Visibility:"
+#: contents/configuration/PanelConfiguration.qml:156
+msgid "Set Position..."
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:221
+#, fuzzy
+#| msgid "Alignment:"
+msgid "Alignment"
+msgstr "יישור:"
+
+#: contents/configuration/PanelConfiguration.qml:284
+msgid "Center"
+msgstr "במרכז"
+
+#: contents/configuration/PanelConfiguration.qml:307
+msgid "Length"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel height:"
+msgid "Fill height"
+msgstr "גובה לוח:"
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel width:"
+msgid "Fill width"
+msgstr "רוחב לוח:"
+
+#: contents/configuration/PanelConfiguration.qml:324
+msgid "Fit content"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:325
+msgid "Custom"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:361
+#, fuzzy
+#| msgid "Visibility:"
+msgid "Visibility"
 msgstr "חשיפה:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:147
-msgid "Always Visible"
-msgstr "תמיד נראה"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
-msgid "Auto-Hide"
+#: contents/configuration/PanelConfiguration.qml:372
+#, fuzzy
+#| msgid "Auto-Hide"
+msgid "Auto hide"
 msgstr "הסתרה אוטומטית"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
-msgid ""
-"Panel is hidden, but reveals itself when the cursor touches the panel's "
-"screen edge"
-msgstr "הלוח מוסתר אך הוא יחשוף את עצמו עם נגיעת הסמן בקצה מסך הלוח"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-msgid "Opacity:"
+#: contents/configuration/PanelConfiguration.qml:390
+#, fuzzy
+#| msgid "Opacity:"
+msgid "Opacity"
 msgstr "אטימות:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:188
-msgid "Always Opaque"
-msgstr "תמיד אטום"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
+#: contents/configuration/PanelConfiguration.qml:403
 msgid "Adaptive"
 msgstr "מסתגל"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:197
-msgid ""
-"Panel is opaque when any windows are touching it, and translucent at other "
-"times"
-msgstr "הלוח אטום כשלא נוגע בו אף חלון ושקוף למחצה במקרים אחרים"
+#: contents/configuration/PanelConfiguration.qml:404
+#, fuzzy
+#| msgid "Always Opaque"
+msgid "Opaque"
+msgstr "תמיד אטום"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
-msgid "Always Translucent"
+#: contents/configuration/PanelConfiguration.qml:405
+#, fuzzy
+#| msgid "Always Translucent"
+msgid "Translucent"
 msgstr "תמיד שקוף למחצה"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:233
-msgid "Floating:"
-msgstr "ציפה:"
+#: contents/configuration/PanelConfiguration.qml:427
+msgid "Style"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
-msgid "Floating"
-msgstr "צף"
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Panel width:"
+msgid "Panel Width:"
+msgstr "רוחב לוח:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:239
-msgid "Panel visibly floats away from its screen edge"
-msgstr "הלוח צף הרחק מקצה המסך"
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Height"
+msgid "Height:"
+msgstr "גובה"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
-msgid "Attached"
-msgstr "מוצמד"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:249
-msgid "Panel is attached to its screen edge"
-msgstr "הלוח מוצמד לקצה המסך"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
-msgid "Focus Shortcut:"
+#: contents/configuration/PanelConfiguration.qml:489
+#, fuzzy
+#| msgid "Focus Shortcut:"
+msgid "Focus shortcut:"
 msgstr "קיצור מקשים למיקוד:"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
+#: contents/configuration/PanelConfiguration.qml:499
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "יש ללחוץ על קיצור מקשים זה כדי להעביר את המיקוד ללוח"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/PanelConfiguration.qml:515
+#, fuzzy
+#| msgid "Remove Panel"
+msgctxt "@action:button Delete the panel"
+msgid "Delete Panel"
+msgstr "הסרת לוח"
+
+#: contents/configuration/PanelConfiguration.qml:518
+msgid "Remove this panel; this action is undo-able"
+msgstr "הסרת הלוח הזה, זאת פעולה בלתי הפיכה"
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
 msgid "Drag to change maximum height."
 msgstr "יש לגרור כדי לשנות את הגובה המרבי."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
+#: contents/configuration/panelconfiguration/Ruler.qml:29
 msgid "Drag to change maximum width."
 msgstr "אפשר לגרור כדי לשנות את הרוחב המרבי."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Double click to reset."
 msgstr "לחיצה כפולה לאיפוס."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change minimum height."
 msgstr "אפשר לגרור כדי לשנות את הגובה המזערי."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:21
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change minimum width."
 msgstr "אפשר לגרור כדי לשנות את הרוחב המזערי."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:65
+#: contents/configuration/panelconfiguration/Ruler.qml:79
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
 "יש לגרור כדי לשנות את המיקום בקצה המסך הזה.\n"
 "לחיצה כפולה לאיפוס."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:26
-msgid "Add Widgets…"
-msgstr "הוספת יישומונים…"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:27
-msgid "Add Spacer"
-msgstr "הוספת מפריד"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:28
-msgid "More Options…"
-msgstr "אפשרויות נוספות…"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:226
-msgctxt "Minimize the length of this string as much as possible"
-msgid "Drag to move"
-msgstr "גרירה להעברה"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:265
-msgctxt "@info:tooltip"
-msgid "Use arrow keys to move the panel"
-msgstr "להשתמש במקשי החצים כדי להעביר את הלוח"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel width:"
-msgstr "רוחב לוח:"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel height:"
-msgstr "גובה לוח:"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:407
-#: contents/configuration/ShellContainmentConfiguration.qml:43
-msgid "Close"
-msgstr "סגירה"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
@@ -472,6 +447,10 @@ msgstr "ניהול לוחות ושולחנות עבודה"
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr "אפשר לגרור לוחות ושולחנות עבודה סביב כדי להזיז אותם למסכים אחרים."
+
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "סגירה"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
@@ -542,6 +521,85 @@ msgstr "אף יישומון לא עונה על תנאי החיפוש"
 msgid "No widgets available"
 msgstr "אין יישומונים זמינים"
 
+#~ msgctxt "@action:button Make the panel as big as it can be"
+#~ msgid "Maximize"
+#~ msgstr "הגדלה"
+
+#~ msgid "Make this panel as tall as possible"
+#~ msgstr "להגביה את הלוח הזה ככל הניתן"
+
+#~ msgid "Make this panel as wide as possible"
+#~ msgstr "הרחבת הלוח הזה ככל הניתן"
+
+#~ msgctxt "@action:button Delete the panel"
+#~ msgid "Delete"
+#~ msgstr "מחיקה"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the top; no effect when panel is maximized"
+#~ msgstr ""
+#~ "מיישר את הלוח הלא מוגדל לחלק העליון, אין השפעה כאשר הלוח מוגדל לגמרי"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the left; no effect when panel is "
+#~ "maximized"
+#~ msgstr "מיישר את הלוח הלא מוגדל לשמאל, אין השפעה כאשר הלוח מוגדל לגמרי"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the center; no effect when panel is "
+#~ "maximized"
+#~ msgstr "מיישר את הלוח הלא מוגדל למרכז, אין השפעה כאשר הלוח מוגדל לגמרי"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the bottom; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "מיישר את הלוח הלא מוגדל לחלק התחתון, אין השפעה כאשר הלוח מוגדל לגמרי"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the right; no effect when panel is "
+#~ "maximized"
+#~ msgstr "מיישר את הלוח הלא מוגדל לימין, אין השפעה כאשר הלוח מוגדל לגמרי"
+
+#~ msgid "Always Visible"
+#~ msgstr "תמיד נראה"
+
+#~ msgid ""
+#~ "Panel is hidden, but reveals itself when the cursor touches the panel's "
+#~ "screen edge"
+#~ msgstr "הלוח מוסתר אך הוא יחשוף את עצמו עם נגיעת הסמן בקצה מסך הלוח"
+
+#~ msgid ""
+#~ "Panel is opaque when any windows are touching it, and translucent at "
+#~ "other times"
+#~ msgstr "הלוח אטום כשלא נוגע בו אף חלון ושקוף למחצה במקרים אחרים"
+
+#~ msgid "Floating:"
+#~ msgstr "ציפה:"
+
+#~ msgid "Floating"
+#~ msgstr "צף"
+
+#~ msgid "Panel visibly floats away from its screen edge"
+#~ msgstr "הלוח צף הרחק מקצה המסך"
+
+#~ msgid "Attached"
+#~ msgstr "מוצמד"
+
+#~ msgid "Panel is attached to its screen edge"
+#~ msgstr "הלוח מוצמד לקצה המסך"
+
+#~ msgid "More Options…"
+#~ msgstr "אפשרויות נוספות…"
+
+#~ msgctxt "Minimize the length of this string as much as possible"
+#~ msgid "Drag to move"
+#~ msgstr "גרירה להעברה"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use arrow keys to move the panel"
+#~ msgstr "להשתמש במקשי החצים כדי להעביר את הלוח"
+
 #~ msgid "Switch"
 #~ msgstr "החלף"
 
@@ -570,9 +628,6 @@ msgstr "אין יישומונים זמינים"
 
 #~ msgid "Width"
 #~ msgstr "רוחב"
-
-#~ msgid "Height"
-#~ msgstr "גובה"
 
 #, fuzzy
 #~| msgid "Layout cannot be changed whilst widgets are locked"

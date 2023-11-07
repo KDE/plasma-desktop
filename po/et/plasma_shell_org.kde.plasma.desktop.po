@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 12:20+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2020-10-08 11:52+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -272,230 +272,185 @@ msgstr "Hiire toimingud"
 msgid "Input Here"
 msgstr "Sisend"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:43
+#: contents/configuration/PanelConfiguration.qml:92
 #, fuzzy
 #| msgid "Apply Settings"
 msgid "Panel Settings"
 msgstr "Rakenda seadistused"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:49
-#, fuzzy
-#| msgid "Maximize Panel"
-msgctxt "@action:button Make the panel as big as it can be"
-msgid "Maximize"
-msgstr "Maksimeeri paneel"
+#: contents/configuration/PanelConfiguration.qml:98
+msgid "Add Spacer"
+msgstr "Lisa eraldaja"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
-msgid "Make this panel as tall as possible"
+#: contents/configuration/PanelConfiguration.qml:101
+msgid "Add spacer widget to the panel"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-msgid "Make this panel as wide as possible"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:62
-#, fuzzy
-#| msgid "Delete"
-msgctxt "@action:button Delete the panel"
-msgid "Delete"
-msgstr "Kustuta"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:65
-msgid "Remove this panel; this action is undo-able"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:89
-#, fuzzy
-#| msgid "Panel Alignment"
-msgid "Alignment:"
-msgstr "Paneeli joondus"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
-msgid "Top"
-msgstr "Ülal"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
-msgid "Left"
-msgstr "Vasakul"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
-msgid "Center"
-msgstr "Keskel"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:105
-msgid ""
-"Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
-msgid "Bottom"
-msgstr "All"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
-msgid "Right"
-msgstr "Paremal"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
-#, fuzzy
-#| msgid "Visibility"
-msgid "Visibility:"
-msgstr "Nähtavus"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:147
-msgid "Always Visible"
-msgstr "Alati nähtav"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
-#, fuzzy
-#| msgid "Auto Hide"
-msgid "Auto-Hide"
-msgstr "Automaatne peitmine"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
-msgid ""
-"Panel is hidden, but reveals itself when the cursor touches the panel's "
-"screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-msgid "Opacity:"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:188
-msgid "Always Opaque"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
-msgid "Adaptive"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:197
-msgid ""
-"Panel is opaque when any windows are touching it, and translucent at other "
-"times"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
-#, fuzzy
-#| msgid "Translators"
-msgid "Always Translucent"
-msgstr "Tõlkijad"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:233
-msgid "Floating:"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
-msgid "Floating"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:239
-msgid "Panel visibly floats away from its screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
-msgid "Attached"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:249
-msgid "Panel is attached to its screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
-#, fuzzy
-#| msgid "Keyboard Shortcuts"
-msgid "Focus Shortcut:"
-msgstr "Kiirklahvid"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
-msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-msgid "Drag to change maximum height."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-msgid "Drag to change maximum width."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-#: contents/configuration/panelconfiguration/Ruler.qml:21
-msgid "Double click to reset."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:21
-msgid "Drag to change minimum height."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:21
-msgid "Drag to change minimum width."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:65
-msgid ""
-"Drag to change position on this screen edge.\n"
-"Double click to reset."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:26
+#: contents/configuration/PanelConfiguration.qml:108
 #, fuzzy
 #| msgid "Add Widgets..."
 msgid "Add Widgets…"
 msgstr "Lisa vidinaid..."
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:27
-msgid "Add Spacer"
-msgstr "Lisa eraldaja"
+#: contents/configuration/PanelConfiguration.qml:111
+msgid "Open the widget selector to drag and drop widgets to the panel"
+msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:28
+#: contents/configuration/PanelConfiguration.qml:133
+msgid "Position"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:283
+msgid "Top"
+msgstr "Ülal"
+
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:285
+msgid "Right"
+msgstr "Paremal"
+
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:283
+msgid "Left"
+msgstr "Vasakul"
+
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:285
+msgid "Bottom"
+msgstr "All"
+
+#: contents/configuration/PanelConfiguration.qml:156
+msgid "Set Position..."
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:221
 #, fuzzy
-#| msgid "More Options..."
-msgid "More Options…"
-msgstr "Rohkem valikuid ..."
+#| msgid "Panel Alignment"
+msgid "Alignment"
+msgstr "Paneeli joondus"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:226
-msgctxt "Minimize the length of this string as much as possible"
-msgid "Drag to move"
+#: contents/configuration/PanelConfiguration.qml:284
+msgid "Center"
+msgstr "Keskel"
+
+#: contents/configuration/PanelConfiguration.qml:307
+msgid "Length"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:265
-msgctxt "@info:tooltip"
-msgid "Use arrow keys to move the panel"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel width:"
-msgstr "Paneeli laius:"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel height:"
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel height:"
+msgid "Fill height"
 msgstr "Paneeli kõrgus:"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:407
-#: contents/configuration/ShellContainmentConfiguration.qml:43
-msgid "Close"
-msgstr "Sulge"
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel width:"
+msgid "Fill width"
+msgstr "Paneeli laius:"
+
+#: contents/configuration/PanelConfiguration.qml:324
+msgid "Fit content"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:325
+msgid "Custom"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:361
+#, fuzzy
+#| msgid "Visibility"
+msgid "Visibility"
+msgstr "Nähtavus"
+
+#: contents/configuration/PanelConfiguration.qml:372
+#, fuzzy
+#| msgid "Auto Hide"
+msgid "Auto hide"
+msgstr "Automaatne peitmine"
+
+#: contents/configuration/PanelConfiguration.qml:390
+msgid "Opacity"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:403
+msgid "Adaptive"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:404
+msgid "Opaque"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:405
+#, fuzzy
+#| msgid "Translators"
+msgid "Translucent"
+msgstr "Tõlkijad"
+
+#: contents/configuration/PanelConfiguration.qml:427
+msgid "Style"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Panel width:"
+msgid "Panel Width:"
+msgstr "Paneeli laius:"
+
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Height"
+msgid "Height:"
+msgstr "Kõrgus"
+
+#: contents/configuration/PanelConfiguration.qml:489
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgid "Focus shortcut:"
+msgstr "Kiirklahvid"
+
+#: contents/configuration/PanelConfiguration.qml:499
+msgid "Press this keyboard shortcut to move focus to the Panel"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:515
+#, fuzzy
+#| msgid "Remove Panel"
+msgctxt "@action:button Delete the panel"
+msgid "Delete Panel"
+msgstr "Eemalda paneel"
+
+#: contents/configuration/PanelConfiguration.qml:518
+msgid "Remove this panel; this action is undo-able"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+msgid "Drag to change maximum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+msgid "Drag to change maximum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+msgid "Double click to reset."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+msgid "Drag to change minimum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+msgid "Drag to change minimum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:79
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double click to reset."
+msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
@@ -505,6 +460,10 @@ msgstr ""
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
+
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "Sulge"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
@@ -579,6 +538,26 @@ msgstr "Otsinguga ei sobi ükski vidin"
 msgid "No widgets available"
 msgstr "Ühtegi vidinat pole saada"
 
+#, fuzzy
+#~| msgid "Maximize Panel"
+#~ msgctxt "@action:button Make the panel as big as it can be"
+#~ msgid "Maximize"
+#~ msgstr "Maksimeeri paneel"
+
+#, fuzzy
+#~| msgid "Delete"
+#~ msgctxt "@action:button Delete the panel"
+#~ msgid "Delete"
+#~ msgstr "Kustuta"
+
+#~ msgid "Always Visible"
+#~ msgstr "Alati nähtav"
+
+#, fuzzy
+#~| msgid "More Options..."
+#~ msgid "More Options…"
+#~ msgstr "Rohkem valikuid ..."
+
 #~ msgid "Switch"
 #~ msgstr "Vaheta"
 
@@ -610,9 +589,6 @@ msgstr "Ühtegi vidinat pole saada"
 
 #~ msgid "Width"
 #~ msgstr "Laius"
-
-#~ msgid "Height"
-#~ msgstr "Kõrgus"
 
 #~ msgid "Click and drag the button to resize the panel."
 #~ msgstr "Paneeli suuruse muutmiseks klõpsa ja lohista nuppu."

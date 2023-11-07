@@ -1,5 +1,5 @@
 # translation of kcmkded.po to Polish
-# Version: $Revision: 1662054 $
+# Version: $Revision: 1664240 $
 # Copyright (C) 2003, 2004, 2008 Free Software Foundation, Inc.
 #
 # Wojciech Milewski <Wojciech Milewski@wp.pl>, 2002.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-10 01:47+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-07-01 07:51+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -50,7 +50,7 @@ msgstr ""
 "Nie udało się powiadomić zarządzania usługami KDE (kded6) o zapisanych "
 "zmianach: %1"
 
-#: ui/main.qml:36
+#: ui/main.qml:37
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
@@ -59,7 +59,7 @@ msgstr ""
 "Zarządzanie usługami w tle (kded6) nie jest obecnie uruchomione. Upewnij "
 "się, że jest poprawnie wgrane."
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -68,7 +68,7 @@ msgstr ""
 "Niektóre z usług same się wyłączają, nawet gdy zostały ręcznie uruchomione, "
 "w chwili gdy nie są już użyteczne w obecnym otoczeniu."
 
-#: ui/main.qml:54
+#: ui/main.qml:55
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -78,54 +78,54 @@ msgstr ""
 "usługami (kded6), co mogło spowodować uruchomienie/zatrzymanie niektórych "
 "usług."
 
-#: ui/main.qml:96
+#: ui/main.qml:97
 #, kde-format
 msgid "All Services"
 msgstr "Wszystkie usługi"
 
-#: ui/main.qml:97
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Uruchomione"
 
-#: ui/main.qml:98
+#: ui/main.qml:99
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Nieuruchomione"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Startup Services"
 msgstr "Usługi ciągłe"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Usługi na żądanie"
 
-#: ui/main.qml:153
+#: ui/main.qml:156
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Przestaw samoczynne uruchamianie tej usług po uruchomieniu systemu"
 
-#: ui/main.qml:220
+#: ui/main.qml:199
 #, kde-format
 msgid "Not running"
 msgstr "Nieuruchomiona"
 
-#: ui/main.qml:221
+#: ui/main.qml:200
 #, kde-format
 msgid "Running"
 msgstr "Uruchomiona"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Stop Service"
 msgstr "Zatrzymaj usługę"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Start Service"
 msgstr "Uruchom usługę"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-10 01:47+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2021-08-19 10:44+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr ""
 "KDE Xidmət Menecerinə (kded5) saxlanılan dəyişikliyə dair məlumat verilmədi:"
 "%1"
 
-#: ui/main.qml:36
+#: ui/main.qml:37
 #, fuzzy, kde-format
 #| msgid ""
 #| "The background services manager (kded5) is currently not running. Make "
@@ -57,7 +57,7 @@ msgstr ""
 "Fon xidmətləri meneceri (kded5) hazırda işləmir. Düzgün quraşdırıldığına "
 "əmin olun."
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -66,7 +66,7 @@ msgstr ""
 "Bəzi xidmətlər, hazırkı mühitdə yararlı olmadıqda əl ilə işə salındıqda "
 "yenidən qeyri-aktiv edilirlər"
 
-#: ui/main.qml:54
+#: ui/main.qml:55
 #, fuzzy, kde-format
 #| msgid ""
 #| "Some services were automatically started/stopped when the background "
@@ -78,54 +78,54 @@ msgstr ""
 "Dəyişikliklərinizi tətbiq etmək üçün fon xidmətləri meneceri (kded5) yenidən "
 "başladıqda bəzi xidmətlər avtomatik olaraq yenidən başladıldı/dayandırıldı."
 
-#: ui/main.qml:96
+#: ui/main.qml:97
 #, kde-format
 msgid "All Services"
 msgstr "Bütün xidmətlər"
 
-#: ui/main.qml:97
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "İşlək"
 
-#: ui/main.qml:98
+#: ui/main.qml:99
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "İşləməyən"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Startup Services"
 msgstr "Başlatma Xidmətləri"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Təlabata görə yüklənən xidmətlər"
 
-#: ui/main.qml:153
+#: ui/main.qml:156
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Başlandıqda bu xidməti avtomatik yükləməyi aç/bağla"
 
-#: ui/main.qml:220
+#: ui/main.qml:199
 #, kde-format
 msgid "Not running"
 msgstr "İşlək olmayan"
 
-#: ui/main.qml:221
+#: ui/main.qml:200
 #, kde-format
 msgid "Running"
 msgstr "İşlək"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Stop Service"
 msgstr "Xidməti dayandıqmaq"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Start Service"
 msgstr "Başlatma Xidməti"

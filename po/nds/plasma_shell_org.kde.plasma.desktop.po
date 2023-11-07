@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 12:20+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2014-08-11 12:37+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -275,232 +275,185 @@ msgstr "Muusakschonen"
 msgid "Input Here"
 msgstr "Hier wat ingeven"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:43
+#: contents/configuration/PanelConfiguration.qml:92
 #, fuzzy
 #| msgid "Apply Settings"
 msgid "Panel Settings"
 msgstr "Instellen bruken"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:49
-#, fuzzy
-#| msgid "Maximize Panel"
-msgctxt "@action:button Make the panel as big as it can be"
-msgid "Maximize"
-msgstr "Paneel maximeren"
+#: contents/configuration/PanelConfiguration.qml:98
+msgid "Add Spacer"
+msgstr "Platzmaker tofögen"
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:53
-msgid "Make this panel as tall as possible"
+#: contents/configuration/PanelConfiguration.qml:101
+msgid "Add spacer widget to the panel"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:54
-msgid "Make this panel as wide as possible"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:62
-#, fuzzy
-#| msgid "Delete"
-msgctxt "@action:button Delete the panel"
-msgid "Delete"
-msgstr "Wegdoon"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:65
-msgid "Remove this panel; this action is undo-able"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:89
-#, fuzzy
-#| msgid "Panel Alignment"
-msgid "Alignment:"
-msgstr "Paneelutrichten"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
-msgid "Top"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:95
-msgid "Left"
-msgstr "Links"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the top; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:96
-msgid ""
-"Aligns a non-maximized panel to the left; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:104
-msgid "Center"
-msgstr "Merrn"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:105
-msgid ""
-"Aligns a non-maximized panel to the center; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
-msgid "Bottom"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:113
-msgid "Right"
-msgstr "Rechts"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the bottom; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
-msgid ""
-"Aligns a non-maximized panel to the right; no effect when panel is maximized"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:142
-#, fuzzy
-#| msgid "Visibility"
-msgid "Visibility:"
-msgstr "Sichtborkeit"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:147
-msgid "Always Visible"
-msgstr "Jümmers sichtbor"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:155
-#, fuzzy
-#| msgid "Auto Hide"
-msgid "Auto-Hide"
-msgstr "Automaatsch versteken"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:156
-msgid ""
-"Panel is hidden, but reveals itself when the cursor touches the panel's "
-"screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:183
-msgid "Opacity:"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:188
-msgid "Always Opaque"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:196
-msgid "Adaptive"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:197
-msgid ""
-"Panel is opaque when any windows are touching it, and translucent at other "
-"times"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:206
-#, fuzzy
-#| msgid "Always Visible"
-msgid "Always Translucent"
-msgstr "Jümmers sichtbor"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:233
-msgid "Floating:"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:238
-msgid "Floating"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:239
-msgid "Panel visibly floats away from its screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:248
-msgid "Attached"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:249
-msgid "Panel is attached to its screen edge"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:271
-#, fuzzy
-#| msgid "Keyboard shortcuts"
-msgid "Focus Shortcut:"
-msgstr "Tastkombinatschonen"
-
-#: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:281
-msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-msgid "Drag to change maximum height."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-msgid "Drag to change maximum width."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:20
-#: contents/configuration/panelconfiguration/Ruler.qml:21
-msgid "Double click to reset."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:21
-msgid "Drag to change minimum height."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:21
-msgid "Drag to change minimum width."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/Ruler.qml:65
-msgid ""
-"Drag to change position on this screen edge.\n"
-"Double click to reset."
-msgstr ""
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:26
+#: contents/configuration/PanelConfiguration.qml:108
 #, fuzzy
 #| msgid "Add Widgets..."
 msgid "Add Widgets…"
 msgstr "Lüttprogrammen tofögen..."
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:27
-msgid "Add Spacer"
-msgstr "Platzmaker tofögen"
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:28
-#, fuzzy
-#| msgid "More Settings..."
-msgid "More Options…"
-msgstr "Anner Instellen..."
-
-#: contents/configuration/panelconfiguration/ToolBar.qml:226
-msgctxt "Minimize the length of this string as much as possible"
-msgid "Drag to move"
+#: contents/configuration/PanelConfiguration.qml:111
+msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:265
-msgctxt "@info:tooltip"
-msgid "Use arrow keys to move the panel"
+#: contents/configuration/PanelConfiguration.qml:133
+msgid "Position"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
-msgid "Panel width:"
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:283
+msgid "Top"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:286
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:285
+msgid "Right"
+msgstr "Rechts"
+
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:283
+msgid "Left"
+msgstr "Links"
+
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:285
+msgid "Bottom"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:156
+msgid "Set Position..."
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:221
 #, fuzzy
 #| msgid "Panel Alignment"
-msgid "Panel height:"
+msgid "Alignment"
 msgstr "Paneelutrichten"
 
-#: contents/configuration/panelconfiguration/ToolBar.qml:407
-#: contents/configuration/ShellContainmentConfiguration.qml:43
-msgid "Close"
-msgstr "Tomaken"
+#: contents/configuration/PanelConfiguration.qml:284
+msgid "Center"
+msgstr "Merrn"
+
+#: contents/configuration/PanelConfiguration.qml:307
+msgid "Length"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Panel Alignment"
+msgid "Fill height"
+msgstr "Paneelutrichten"
+
+#: contents/configuration/PanelConfiguration.qml:323
+#, fuzzy
+#| msgid "Uninstall"
+msgid "Fill width"
+msgstr "Wegmaken"
+
+#: contents/configuration/PanelConfiguration.qml:324
+msgid "Fit content"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:325
+msgid "Custom"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:361
+#, fuzzy
+#| msgid "Visibility"
+msgid "Visibility"
+msgstr "Sichtborkeit"
+
+#: contents/configuration/PanelConfiguration.qml:372
+#, fuzzy
+#| msgid "Auto Hide"
+msgid "Auto hide"
+msgstr "Automaatsch versteken"
+
+#: contents/configuration/PanelConfiguration.qml:390
+msgid "Opacity"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:403
+msgid "Adaptive"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:404
+msgid "Opaque"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:405
+#, fuzzy
+#| msgid "Always Visible"
+msgid "Translucent"
+msgstr "Jümmers sichtbor"
+
+#: contents/configuration/PanelConfiguration.qml:427
+msgid "Style"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Panel Alignment"
+msgid "Panel Width:"
+msgstr "Paneelutrichten"
+
+#: contents/configuration/PanelConfiguration.qml:455
+#, fuzzy
+#| msgid "Height"
+msgid "Height:"
+msgstr "Hööchde"
+
+#: contents/configuration/PanelConfiguration.qml:489
+#, fuzzy
+#| msgid "Keyboard shortcuts"
+msgid "Focus shortcut:"
+msgstr "Tastkombinatschonen"
+
+#: contents/configuration/PanelConfiguration.qml:499
+msgid "Press this keyboard shortcut to move focus to the Panel"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:515
+#, fuzzy
+#| msgid "Remove Panel"
+msgctxt "@action:button Delete the panel"
+msgid "Delete Panel"
+msgstr "Paneel wegmaken"
+
+#: contents/configuration/PanelConfiguration.qml:518
+msgid "Remove this panel; this action is undo-able"
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+msgid "Drag to change maximum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+msgid "Drag to change maximum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:29
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+msgid "Double click to reset."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+msgid "Drag to change minimum height."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+msgid "Drag to change minimum width."
+msgstr ""
+
+#: contents/configuration/panelconfiguration/Ruler.qml:79
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double click to reset."
+msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
@@ -510,6 +463,10 @@ msgstr ""
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
+
+#: contents/configuration/ShellContainmentConfiguration.qml:43
+msgid "Close"
+msgstr "Tomaken"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
@@ -592,6 +549,26 @@ msgstr ""
 msgid "No widgets available"
 msgstr ""
 
+#, fuzzy
+#~| msgid "Maximize Panel"
+#~ msgctxt "@action:button Make the panel as big as it can be"
+#~ msgid "Maximize"
+#~ msgstr "Paneel maximeren"
+
+#, fuzzy
+#~| msgid "Delete"
+#~ msgctxt "@action:button Delete the panel"
+#~ msgid "Delete"
+#~ msgstr "Wegdoon"
+
+#~ msgid "Always Visible"
+#~ msgstr "Jümmers sichtbor"
+
+#, fuzzy
+#~| msgid "More Settings..."
+#~ msgid "More Options…"
+#~ msgstr "Anner Instellen..."
+
 #~ msgid "Switch"
 #~ msgstr "Wesseln"
 
@@ -620,9 +597,6 @@ msgstr ""
 
 #~ msgid "Width"
 #~ msgstr "Breed"
-
-#~ msgid "Height"
-#~ msgstr "Hööchde"
 
 #~ msgid "Lock Widgets"
 #~ msgstr "Lüttprogrammen afsluten"

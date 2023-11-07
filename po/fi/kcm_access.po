@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 01:57+0000\n"
-"PO-Revision-Date: 2023-03-04 19:54+0200\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"PO-Revision-Date: 2023-09-26 18:03+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -179,10 +179,9 @@ msgstr "Käytä aikakatkaisuviivettä"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:37
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
+#, kde-format
 msgid "Delay for timeout"
-msgstr "Hiiren liikkeen viive"
+msgstr "Aikakatkaisun viive"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
@@ -444,31 +443,31 @@ msgstr "Viive:"
 msgid "Ring system bell when rejected"
 msgstr "Anna järjestelmän äänimerkki hylättäessä"
 
-#: ui/main.qml:23
+#: ui/main.qml:24
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Äänimerkki"
 
-#: ui/main.qml:28
+#: ui/main.qml:29
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Muuntonäppäimet"
 
-#: ui/main.qml:33
+#: ui/main.qml:34
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Näppäimistösuodattimet"
 
-#: ui/main.qml:38
+#: ui/main.qml:39
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Hiirinavigointi"
 
-#: ui/main.qml:43
+#: ui/main.qml:44
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
@@ -572,10 +571,9 @@ msgid "Maximum speed:"
 msgstr "Enimmäisnopeus:"
 
 #: ui/MouseNavigation.qml:124
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgid "Pointer acceleration:"
-msgstr "Kiihdytysaika:"
+msgstr "Osoittimen kiihdytys:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format

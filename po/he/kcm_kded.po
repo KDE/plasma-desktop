@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_kded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-10 01:47+0000\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
 "PO-Revision-Date: 2023-09-28 23:53+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -56,14 +56,14 @@ msgstr "הפעלת השירות נכשלה."
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr "שליחת הודעה למנהל שירות KDE‏ (kded6) על השינויים שנשמרו נכשלה: %1"
 
-#: ui/main.qml:36
+#: ui/main.qml:37
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr "מנהל שירותי הרקע (kded6) לא פעיל כרגע. נא לוודא שהוא מותקן כראוי."
 
-#: ui/main.qml:45
+#: ui/main.qml:46
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -72,7 +72,7 @@ msgstr ""
 "חלק מהשירותים משביתים את עצמם שוב כשמופעלים ידנית אם אינם מביאים תועלת "
 "בסביבה הנוכחית."
 
-#: ui/main.qml:54
+#: ui/main.qml:55
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -81,54 +81,54 @@ msgstr ""
 "חלק מהשירותים הופעלו/נעצרו אוטומטית כאשר מנהל שירותי הרקע (kdad6) הופעל מחדש "
 "כדי להחיל את השינויים שלך."
 
-#: ui/main.qml:96
+#: ui/main.qml:97
 #, kde-format
 msgid "All Services"
 msgstr "כל השירותים"
 
-#: ui/main.qml:97
+#: ui/main.qml:98
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "פועל"
 
-#: ui/main.qml:98
+#: ui/main.qml:99
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "לא פועל"
 
-#: ui/main.qml:135
+#: ui/main.qml:136
 #, kde-format
 msgid "Startup Services"
 msgstr "שירותי פתיחה"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "שירותים הנטענים לפי דרישה"
 
-#: ui/main.qml:153
+#: ui/main.qml:156
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "החלפת מצב טעינה אוטומטית של השירות הזה עם הפתיחה"
 
-#: ui/main.qml:220
+#: ui/main.qml:199
 #, kde-format
 msgid "Not running"
 msgstr "לא פועל"
 
-#: ui/main.qml:221
+#: ui/main.qml:200
 #, kde-format
 msgid "Running"
 msgstr "פועל"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Stop Service"
 msgstr "עצירת שירות"
 
-#: ui/main.qml:239
+#: ui/main.qml:218
 #, kde-format
 msgid "Start Service"
 msgstr "הפעלת שירות"
