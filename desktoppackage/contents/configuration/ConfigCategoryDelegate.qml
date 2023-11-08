@@ -25,6 +25,7 @@ QQC2.ItemDelegate {
     Accessible.role: Accessible.MenuItem
     Accessible.name: model.name
     Accessible.description: i18nd("plasma_shell_org.kde.plasma.desktop", "Open configuration page")
+    Accessible.onPressAction: delegate.clicked()
 
     property var item
 //END properties
@@ -62,6 +63,7 @@ QQC2.ItemDelegate {
             horizontalAlignment: Text.AlignHCenter
             color: Window.active && (delegate.highlighted || delegate.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             font.bold: delegate.highlighted && delegate.parent.activeFocus
+            Accessible.ignored: true
         }
     }
 //END UI components

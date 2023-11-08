@@ -4,7 +4,6 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-from enum import Enum
 import os
 import pathlib
 import subprocess
@@ -12,14 +11,17 @@ import sys
 import sysconfig
 import time
 import unittest
+from enum import Enum
 from typing import Final
 
 import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.webdriver.support.ui import WebDriverWait
+from appium.webdriver.webdriver import ExtensionBase
+from appium.webdriver.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 gi.require_version('Gdk', '3.0')
 from gi.repository import Gdk, Gio, GLib
@@ -156,17 +158,9 @@ class DesktopTest(unittest.TestCase):
             cls.kactivitymanagerd.kill()
         cls.driver.quit()
 
-    def test_0_panel_ready(self) -> None:
+    def _enter_edit_mode(self) -> None:
         """
-        Until the panel is ready
-        """
-        wait = WebDriverWait(self.driver, 30)
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Application Launcher")))
-
-    def test_1_open_edit_mode(self) -> None:
-        """
-        Tests the edit mode toolbox can be loaded
-        Consolidates https://invent.kde.org/frameworks/plasma-framework/-/commit/3bb099a427cacd44fef7668225d8094f952dd5b2
+        Uses the keyboard shortcut to enter edit mode
         """
         # Key values are from https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
         # Alt+D
@@ -181,11 +175,25 @@ class DesktopTest(unittest.TestCase):
         time.sleep(0.5)
         IS.key_release(keyval_to_keycode(XKeyCode.E))
 
+    def _exit_edit_mode(self) -> None:
+        """
+        Finds the close button and clicks it
+        """
         global_theme_button = self.driver.find_element(AppiumBy.NAME, "Choose Global Theme…")
         self.driver.find_element(AppiumBy.NAME, "Exit Edit Mode").click()
         WebDriverWait(self.driver, 30).until(lambda _: not global_theme_button.is_displayed())
 
-    def test_2_open_panel_edit_mode(self) -> None:
+    def test_0_panel_ready(self) -> None:
+        """
+        Waits until the panel is ready
+        """
+        wait = WebDriverWait(self.driver, 30)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Application Launcher")))
+
+    def test_1_containment_config_dialog_1_open(self) -> None:
+        """
+        Opens the containment config dialog by clicking the button in the toolbox
+        """
         # Alt+D
         IS.key_press(keyval_to_keycode(XKeyCode.Alt))
         IS.key_press(keyval_to_keycode(XKeyCode.D))
@@ -193,15 +201,68 @@ class DesktopTest(unittest.TestCase):
         IS.key_release(keyval_to_keycode(XKeyCode.Alt))
         IS.key_release(keyval_to_keycode(XKeyCode.D))
         time.sleep(0.5)
-        # E
-        IS.key_press(keyval_to_keycode(XKeyCode.E))
+        # S
+        IS.key_press(keyval_to_keycode(XKeyCode.S))
         time.sleep(0.5)
-        IS.key_release(keyval_to_keycode(XKeyCode.E))
+        IS.key_release(keyval_to_keycode(XKeyCode.S))
+        wait = WebDriverWait(self.driver, 30)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Wallpaper type:")))
+
+    def test_1_containment_config_dialog_2_add_new_wallpaper(self) -> None:
+        """
+        Tests if the file dialog is opened successfully
+        @see https://invent.kde.org/plasma/plasma-integration/-/merge_requests/117
+        """
+        self.driver.find_element(AppiumBy.NAME, "Add…").click()
+        wait = WebDriverWait(self.driver, 30)
+        title_element: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Open Image")))
+
+        IS.key_press(keyval_to_keycode(XKeyCode.Escape))
+        IS.key_release(keyval_to_keycode(XKeyCode.Escape))
+        wait.until_not(lambda _: title_element.is_displayed())
+
+    def test_1_containment_config_dialog_3_other_sections(self) -> None:
+        """
+        Opens other sections successively and matches text to make sure there is no breaking QML error
+        """
+        self.test_1_containment_config_dialog_1_open()
+
+        wait = WebDriverWait(self.driver, 30)
+        mouseaction_element: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Mouse Actions")))
+        location_element = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Location")))
+        icons_element = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Icons")))
+        filter_element = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Filter")))
+
+        mouseaction_element.click()
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Action")))
+
+        location_element.click()
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Desktop folder")))
+
+        icons_element.click()
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Configure Preview Plugins…"))).click()
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Preview Plugins")))
+
+        filter_element.click()
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "File name pattern:")))
+
+        IS.key_press(keyval_to_keycode(XKeyCode.Escape))
+        IS.key_release(keyval_to_keycode(XKeyCode.Escape))
+        wait.until_not(lambda _: mouseaction_element.is_displayed())
+
+    def test_3_open_panel_edit_mode(self) -> None:
+        """
+        Tests the edit mode toolbox can be loaded
+        Consolidates https://invent.kde.org/frameworks/plasma-framework/-/commit/3bb099a427cacd44fef7668225d8094f952dd5b2
+        """
+        self._enter_edit_mode()
 
         wait = WebDriverWait(self.driver, 30)
         self.driver.find_element(AppiumBy.NAME, "Configure Panel…").click()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Widgets…")))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Spacer")))
+
+        self._exit_edit_mode()
 
 
 if __name__ == '__main__':

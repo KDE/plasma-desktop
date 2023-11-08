@@ -19,7 +19,7 @@ add_subdirectory(inputsynth)
 
 add_test(
     NAME desktoptest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/desktoptest.py
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/desktoptest.py --failfast
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 execute_process(COMMAND ${CMAKE_C_COMPILER} -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
