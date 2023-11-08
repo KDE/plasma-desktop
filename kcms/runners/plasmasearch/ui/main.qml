@@ -57,12 +57,18 @@ KCMUtils.ScrollViewKCM {
         sourceModel: kcm.model
         query: searchField.text
         delegate: Item { // Needed to avoid visual glitches in ListItemDragHandle
-            id: delegate
+            id: delegateItem
             width: pluginSelector.width
             implicitHeight: pluginDelegate.implicitHeight
+            // PluginDelegate must either be a direct delegate, or have a model explicitly set
+            // "model: model" would just be a binding loop, so we store the model in a property of the
+            // direct delegate Item and access it from PluginDelegate
+            property var modelObject: model
             property bool isFavorite: model.category === kcm.favoriteCategory
             KCMUtils.PluginDelegate {
                 id: pluginDelegate
+                model: delegateItem.modelObject
+                width: pluginSelector.width
                 property var drag: Kirigami.ListItemDragHandle {
                     property int dropNewIndex
                     listItem: pluginDelegate
