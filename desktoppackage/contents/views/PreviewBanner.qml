@@ -6,7 +6,7 @@
 
 import QtQuick
 
-import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 
 Item {
@@ -23,7 +23,7 @@ Item {
         onTapped: Qt.openUrlExternally("https://bugs.kde.org/")
     }
 
-    WorkspaceComponents.ShadowedLabel {
+    PlasmaExtras.ShadowedLabel {
         id: title
         anchors {
             top: parent.top
@@ -35,7 +35,7 @@ Item {
         font.pointSize: Math.round(Kirigami.Theme.defaultFont.pointSize * 1.35)
     }
 
-    WorkspaceComponents.ShadowedLabel {
+    PlasmaExtras.ShadowedLabel {
         id: subtitle
         anchors {
             top: title.bottom

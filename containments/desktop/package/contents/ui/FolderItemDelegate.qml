@@ -10,7 +10,6 @@ import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 import org.kde.plasma.extras as PlasmaExtras
 
 import org.kde.kirigami 2.20 as Kirigami
@@ -303,7 +302,7 @@ Item {
                     source: model.decoration
                 }
 
-                WorkspaceComponents.ShadowedLabel {
+                PlasmaExtras.ShadowedLabel {
                     id: label
 
                     z: 2 // So it's always above the highlight effect
