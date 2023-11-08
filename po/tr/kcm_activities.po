@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-06 01:40+0000\n"
-"PO-Revision-Date: 2023-05-17 11:48+0300\n"
+"PO-Revision-Date: 2023-11-07 11:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -58,24 +58,24 @@ msgstr "Açıklama:"
 #, kde-format
 msgctxt "@option:check"
 msgid "While on this activity, allow:"
-msgstr ""
+msgstr "Bu etkinlikteyken şuna izin ver:"
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
 msgid "Tracking file and app use"
-msgstr ""
+msgstr "Dosya ve uygulama kullanımı"
 
 #: ui/ActivityEditor.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically turning off the screen"
-msgstr ""
+msgstr "Ekranı kendiliğinden kapatmak"
 
 #: ui/ActivityEditor.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically shutting down or sleeping"
-msgstr ""
+msgstr "Kendiliğinden kapatmak veya uyutmak"
 
 #: ui/ActivityEditor.qml:103
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "Bu etkinliğe geçmek için kısayol:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure %1 activity"
-msgstr "Etkinliği yapılandır: %1"
+msgstr "%1 etkinliğini yapılandır"
 
 #: ui/main.qml:62
 #, kde-format
@@ -115,62 +115,3 @@ msgstr "'%1' etkinliğini silmek istediğinizden emin misiniz?"
 #, kde-format
 msgid "Delete Activity"
 msgstr "Etkinliği Sil"
-
-#~ msgctxt "@option:check"
-#~ msgid "Privacy:"
-#~ msgstr "Gizlilik:"
-
-#~ msgid "Do not track usage for this activity"
-#~ msgstr "Bu etkinlikte kullanımı izleme"
-
-#~ msgid "Activities"
-#~ msgstr "Etkinlikler"
-
-#~ msgid ""
-#~ "Error loading the QML files. Check your installation.\n"
-#~ "Missing %1"
-#~ msgstr ""
-#~ "QML dosyaları yüklenirken hata. Kurulumunuzu denetleyin.\n"
-#~ "%1 eksik"
-
-#~ msgctxt "@action:button"
-#~ msgid "Create"
-#~ msgstr "Oluştur"
-
-#~ msgid "How many months keep the activity history"
-#~ msgstr "Etkinlik geçmişi kaç ay tutulsun"
-
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "Hangi veri etkinlik geçmişinde tutulsun"
-
-#~ msgid "List of Applications whose activity history to save"
-#~ msgstr "Etkinlik geçmişi kaydedilecek uygulamaların listesi"
-
-#~ msgid "List of Applications whose activity history not to save"
-#~ msgstr "Etkinlik geçmişi kaydedilmeyecek uygulamaların listesi"
-
-#~ msgid "Switching"
-#~ msgstr "Geçiş"
-
-#~ msgid "Activity switching"
-#~ msgstr "Etkinlik geçişi"
-
-#~ msgctxt "@action"
-#~ msgid "Walk through activities"
-#~ msgstr "Etkinlikler arasında gezin"
-
-#~ msgctxt "@action"
-#~ msgid "Walk through activities (Reverse)"
-#~ msgstr "Etkinlikler arasında gezin (Ters)"
-
-#~ msgid "Remember for each activity (needs restart)"
-#~ msgstr "Her etkinliği anımsa (yeniden başlatma gerektirir)"
-
-#~ msgid "Current virtual desktop:"
-#~ msgstr "Geçerli sanal masaüstü:"
-
-#~ msgid "Shortcuts:"
-#~ msgstr "Kısayollar:"
-
-#~ msgid "General"
-#~ msgstr "Genel"

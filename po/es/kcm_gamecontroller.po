@@ -1,0 +1,67 @@
+# Spanish translations for kcm_gamecontroller.po package.
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Automatically generated, 2023.
+#
+# SPDX-FileCopyrightText: 2023 Eloy Cuadra <ecuadra@eloihr.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_gamecontroller\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"PO-Revision-Date: 2023-11-07 21:22+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.2\n"
+
+#: axesmodel.cpp:63
+#, kde-format
+msgctxt "@label Axis value"
+msgid "Value"
+msgstr "Valor"
+
+#: buttonmodel.cpp:66
+#, kde-format
+msgctxt "@label Button state"
+msgid "State"
+msgstr "Estado"
+
+#: devicemodel.cpp:51
+#, kde-format
+msgctxt "Device name and path"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/main.qml:22
+#, kde-format
+msgid "No game controllers found"
+msgstr "No se han encontrado mandos de juego"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Device:"
+msgstr "Dispositivo:"
+
+#: ui/main.qml:80
+#, kde-format
+msgctxt "@label Visual representation of an axis position"
+msgid "Position:"
+msgstr "Posición:"
+
+#: ui/main.qml:97
+#, kde-format
+msgctxt "@label Gamepad buttons"
+msgid "Buttons:"
+msgstr "Botones:"
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@label Gamepad axes (sticks)"
+msgid "Axes:"
+msgstr "Ejes:"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2023-05-21 23:32+0200\n"
+"PO-Revision-Date: 2023-11-07 18:03+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -270,11 +270,11 @@ msgstr "Nastavitve plošče"
 
 #: contents/configuration/PanelConfiguration.qml:98
 msgid "Add Spacer"
-msgstr "Dodaj praznino"
+msgstr "Dodaj distančnik"
 
 #: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Dodaj gradnik distančnika na ploščo"
 
 #: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
@@ -282,11 +282,11 @@ msgstr "Dodaj gradnike…"
 
 #: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "Odpri izbirnik gradnikov za vlečenje in spuščanje gradnikov na ploščo"
 
 #: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
-msgstr ""
+msgstr "Pozicija"
 
 #: contents/configuration/PanelConfiguration.qml:137
 #: contents/configuration/PanelConfiguration.qml:283
@@ -310,13 +310,11 @@ msgstr "Spodaj"
 
 #: contents/configuration/PanelConfiguration.qml:156
 msgid "Set Position..."
-msgstr ""
+msgstr "Nastavi pozicijo..."
 
 #: contents/configuration/PanelConfiguration.qml:221
-#, fuzzy
-#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "Poravnava:"
+msgstr "Poravnava"
 
 #: contents/configuration/PanelConfiguration.qml:284
 msgid "Center"
@@ -324,81 +322,61 @@ msgstr "V sredini"
 
 #: contents/configuration/PanelConfiguration.qml:307
 msgid "Length"
-msgstr ""
+msgstr "Dolžina"
 
 #: contents/configuration/PanelConfiguration.qml:323
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Višina plošče:"
+msgstr "Napolni višino"
 
 #: contents/configuration/PanelConfiguration.qml:323
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Širina plošče:"
+msgstr "Napolni širino"
 
 #: contents/configuration/PanelConfiguration.qml:324
 msgid "Fit content"
-msgstr ""
+msgstr "Prilagodi vsebini"
 
 #: contents/configuration/PanelConfiguration.qml:325
 msgid "Custom"
-msgstr ""
+msgstr "Po meri"
 
 #: contents/configuration/PanelConfiguration.qml:361
-#, fuzzy
-#| msgid "Visibility:"
 msgid "Visibility"
-msgstr "Vidnost:"
+msgstr "Vidnost"
 
 #: contents/configuration/PanelConfiguration.qml:372
-#, fuzzy
-#| msgid "Auto-Hide"
 msgid "Auto hide"
 msgstr "Samodejno skrivaj"
 
 #: contents/configuration/PanelConfiguration.qml:390
-#, fuzzy
-#| msgid "Opacity:"
 msgid "Opacity"
-msgstr "Neprosojnost:"
+msgstr "Neprosojnost"
 
 #: contents/configuration/PanelConfiguration.qml:403
 msgid "Adaptive"
 msgstr "Prilagodljivo"
 
 #: contents/configuration/PanelConfiguration.qml:404
-#, fuzzy
-#| msgid "Always Opaque"
 msgid "Opaque"
-msgstr "Vedno neprosojno"
+msgstr "Neprosojno"
 
 #: contents/configuration/PanelConfiguration.qml:405
-#, fuzzy
-#| msgid "Always Translucent"
 msgid "Translucent"
-msgstr "Vedno prosojno"
+msgstr "Prosojno"
 
 #: contents/configuration/PanelConfiguration.qml:427
 msgid "Style"
-msgstr ""
+msgstr "Slog"
 
 #: contents/configuration/PanelConfiguration.qml:455
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Širina plošče:"
 
 #: contents/configuration/PanelConfiguration.qml:455
-#, fuzzy
-#| msgid "Height"
 msgid "Height:"
-msgstr "Višina"
+msgstr "Višina:"
 
 #: contents/configuration/PanelConfiguration.qml:489
-#, fuzzy
-#| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
 msgstr "Bližnjica osredotočenosti:"
 
@@ -408,11 +386,9 @@ msgstr ""
 "Pritisnite to bližnjico na tipkovnici, da prenesete osredotočenja na ploščo"
 
 #: contents/configuration/PanelConfiguration.qml:515
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "Odstrani pult"
+msgstr "Odstrani ploščo"
 
 #: contents/configuration/PanelConfiguration.qml:518
 msgid "Remove this panel; this action is undo-able"

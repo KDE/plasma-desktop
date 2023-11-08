@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2021-10-07 18:06-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -76,7 +76,7 @@ msgstr "ਮੌਜੂਦਾ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ:"
 msgid "Search…"
 msgstr "…ਖੋਜੋ"
 
-#: dtime.cpp:61
+#: dtime.cpp:60
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
@@ -85,7 +85,7 @@ msgstr ""
 "ਕੋਈ NTP ਸਹੂਲਤ ਨਹੀਂ ਲੱਭੀ ਹੈ। ਸਮੇਂ ਅਤੇ ਮਿਤੀ ਨੂੰ ਆਟੋਮੈਟਿਕ ਅੱਪਡੇਟ ਕਰਨ ਨੂੰ ਚਾਲੂ ਕਰਨ ਲਈ 'ntpdate' "
 "ਜਾਂ 'rdate' ਕਮਾਂਡ ਇੰਸਟਾਲ ਕਰੋ।"
 
-#: dtime.cpp:91
+#: dtime.cpp:89
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -95,19 +95,19 @@ msgstr ""
 "ਤੁਸੀਂ ਇੱਥੇ ਸਮਾਂ ਤਬਦੀਲ ਕਰ ਸਕਦੇ ਹੋ। ਘੰਟੇ, ਮਿੰਟ ਜਾਂ ਸਕਿੰਟ ਤਬਦੀਲ ਕਰਨ ਲਈ ਅਨੁਸਾਰੀ ਖੇਤਰ ਉੱਤੇ ਕਲਿੱਕ "
 "ਕਰੋ, ਭਾਵੇਂ ਉੱਤੇ ਹੇਠਾਂ ਸਵਿੱਚਾਂ ਵਰਤੋਂ ਜਾਂ ਸਿੱਧਾ ਮੁੱਲ ਭਰੋ।"
 
-#: dtime.cpp:113
+#: dtime.cpp:118
 #, kde-format
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
 msgstr "ਮੌਜੂਦਾ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ: %1"
 
-#: dtime.cpp:116
+#: dtime.cpp:120
 #, kde-format
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
 msgstr "ਮੌਜੂਦਾ ਲੋਕਲ ਟਾਈਮ ਜ਼ੋਨ: %1 (%2)"
 
-#: dtime.cpp:203
+#: dtime.cpp:205
 #, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
@@ -116,27 +116,27 @@ msgstr ""
 "ਪਬਲਿਕ ਟਾਈਮ ਸਰਵਰ (pool.ntp.org),        asia.pool.ntp.org,        europe.pool."
 "ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
 
-#: dtime.cpp:274
+#: dtime.cpp:276
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "ਟਾਈਮ ਸਰਵਰ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਲਈ ਅਸਮਰੱਥ: %1"
 
-#: dtime.cpp:278
+#: dtime.cpp:280
 #, kde-format
 msgid "Can not set date."
 msgstr "ਤਾਰੀਖ ਸੈੱਟ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।"
 
-#: dtime.cpp:281
+#: dtime.cpp:283
 #, kde-format
 msgid "Error setting new time zone."
 msgstr "ਨਵਾਂ ਟਾਈਮ-ਜ਼ੋਨ ਸੈਟਿੰਗ ਗਲਤੀ ਹੈ।"
 
-#: dtime.cpp:281
+#: dtime.cpp:283
 #, kde-format
 msgid "Time zone Error"
 msgstr "ਟਾਈਮ-ਜ਼ੋਨ ਗਲਤੀ"
 
-#: dtime.cpp:299
+#: dtime.cpp:301
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "
@@ -151,79 +151,79 @@ msgstr ""
 "ਤੁਸੀਂ ਸਿਰਫ ਪਰਸ਼ਾਸ਼ਕ ਦੇ ਤੌਰ ਤੇ ਹੀ ਸਿਸਟਮ ਸੈਟਿੰਗ ਨੂੰ ਚਲਾ ਰਹੇ ਹੋਵੋ। ਪਰ ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ ਪ੍ਰਬੰਧਕੀ "
 "(root) ਪਾਸਵਰਡ ਨਹੀਂ ਹੈ ਤਾਂ ਸਮਾਂ ਠੀਕ ਕਰਨ ਲਈ ਆਪਣੇ ਸਿਸਟਮ ਪਰਸ਼ਾਸ਼ਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।"
 
-#: main.cpp:43
+#: k4timezonewidget.cpp:65
 #, kde-format
-msgid "KDE Clock Control Module"
-msgstr "KDE ਘੜੀ ਕੰਟਰੋਲ ਮੋਡੀਊਲ"
-
-#: main.cpp:47
-#, kde-format
-msgid "(c) 1996 - 2001 Luca Montecchiani"
-msgstr "(c) 1996 - 2001 Luca Montecchiani"
-
-#: main.cpp:49
-#, kde-format
-msgid "Luca Montecchiani"
-msgstr "Luca Montecchiani"
-
-#: main.cpp:49
-#, kde-format
-msgid "Original author"
-msgstr "ਅਸਲੀ ਲੇਖਕ"
-
-#: main.cpp:50
-#, kde-format
-msgid "Paul Campbell"
-msgstr "Paul Campbell"
-
-#: main.cpp:50
-#, kde-format
-msgid "Current Maintainer"
-msgstr "ਮੌਜੂਦਾ ਪ੍ਰਬੰਧਕ"
-
-#: main.cpp:51
-#, kde-format
-msgid "Benjamin Meyer"
-msgstr "Benjamin Meyer"
-
-#: main.cpp:51
-#, kde-format
-msgid "Added NTP support"
-msgstr "NTP ਸਹਿਯੋਗ ਸ਼ਾਮਿਲ"
-
-#: main.cpp:54
-#, kde-format
-msgid ""
-"<h1>Date & Time</h1> This control module can be used to set the system date "
-"and time. As these settings do not only affect you as a user, but rather the "
-"whole system, you can only change these settings when you start the System "
-"Settings as root. If you do not have the root password, but feel the system "
-"time should be corrected, please contact your system administrator."
+msgctxt "Define an area in the time zone, like a town area"
+msgid "Area"
 msgstr ""
-"<h1>ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ</h1> ਇਹ ਕੰਟਰੋਲ ਮੋਡੀਊਲ ਸਿਸਟਮ ਦਾ ਸਮਾਂ ਅਤੇ ਤਾਰੀਖ ਸੈੱਟ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾ "
-"ਸਕਦਾ ਹੈ। ਇਹ ਸੈਟਿੰਗ ਨਾ ਸਿਰਫ ਤੁਹਾਡੇ ਲਈ ਸਹਾਈ ਹਨ, ਬਲਕਿ ਪੂਰੇ ਸਿਸਟਮ ਉੱਤੇ ਲਾਗੂ ਹੋਣਗੀਆਂ, ਪਰ ਜਦੋਂ "
-"ਤੁਸੀਂ ਸਿਰਫ ਪਰਸ਼ਾਸ਼ਕ ਦੇ ਤੌਰ ਤੇ ਸਿਸਟਮ ਸੈਟਿੰਗ ਨੂੰ ਚਲਾ ਰਹੇ ਹੋਵੋ। ਪਰ ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ ਪ੍ਰਬੰਧਕੀ (root) "
-"ਪਾਸਵਰਡ ਨਹੀਂ ਹੈ ਤਾਂ ਸਮਾਂ ਠੀਕ ਕਰਨ ਲਈ ਆਪਣੇ ਸਿਸਟਮ ਪਰਸ਼ਾਸ਼ਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।"
 
-#: main.cpp:107
+#: k4timezonewidget.cpp:65
+#, kde-format
+msgctxt "Time zone"
+msgid "Region"
+msgstr ""
+
+#: k4timezonewidget.cpp:65
+#, kde-format
+msgid "Comment"
+msgstr ""
+
+#: main.cpp:89
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "ਕਾਰਵਾਈ ਨੂੰ ਪਰਮਾਣਿਤ ਕਰਨ/ਚਲਾਉਣ ਲਈ ਅਸਮਰੱਥ: %1, %2"
 
-#: main.cpp:127
+#: main.cpp:109
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "NTP ਸੈਟਿੰਗਾਂ ਬਦਲਣ ਲਈ ਅਸਮਰੱਥ"
 
-#: main.cpp:138
+#: main.cpp:120
 #, kde-format
 msgid "Unable to set current time"
 msgstr "ਮੌਜੂਦਾ ਸਮਾਂ ਸੈੱਟ ਕਰਨ ਲਈ ਅਸਮਰੱਥ"
 
-#: main.cpp:148
+#: main.cpp:130
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "ਸਮਾਂ-ਖੇਤਰ ਸੈੱਟ ਕਰਨ ਲਈ ਅਸਮਰੱਥ"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "KDE ਘੜੀ ਕੰਟਰੋਲ ਮੋਡੀਊਲ"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "ਅਸਲੀ ਲੇਖਕ"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "ਮੌਜੂਦਾ ਪ੍ਰਬੰਧਕ"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "NTP ਸਹਿਯੋਗ ਸ਼ਾਮਿਲ"
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ</h1> ਇਹ ਕੰਟਰੋਲ ਮੋਡੀਊਲ ਸਿਸਟਮ ਦਾ ਸਮਾਂ ਅਤੇ ਤਾਰੀਖ ਸੈੱਟ ਕਰਨ ਲਈ ਵਰਤਿਆ "
+#~ "ਜਾ ਸਕਦਾ ਹੈ। ਇਹ ਸੈਟਿੰਗ ਨਾ ਸਿਰਫ ਤੁਹਾਡੇ ਲਈ ਸਹਾਈ ਹਨ, ਬਲਕਿ ਪੂਰੇ ਸਿਸਟਮ ਉੱਤੇ ਲਾਗੂ ਹੋਣਗੀਆਂ, "
+#~ "ਪਰ ਜਦੋਂ ਤੁਸੀਂ ਸਿਰਫ ਪਰਸ਼ਾਸ਼ਕ ਦੇ ਤੌਰ ਤੇ ਸਿਸਟਮ ਸੈਟਿੰਗ ਨੂੰ ਚਲਾ ਰਹੇ ਹੋਵੋ। ਪਰ ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ "
+#~ "ਪ੍ਰਬੰਧਕੀ (root) ਪਾਸਵਰਡ ਨਹੀਂ ਹੈ ਤਾਂ ਸਮਾਂ ਠੀਕ ਕਰਨ ਲਈ ਆਪਣੇ ਸਿਸਟਮ ਪਰਸ਼ਾਸ਼ਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

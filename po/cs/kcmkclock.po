@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2023-01-05 11:35+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -78,7 +78,7 @@ msgstr "Současné časové pásmo:"
 msgid "Search…"
 msgstr "Hledat…"
 
-#: dtime.cpp:61
+#: dtime.cpp:60
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
@@ -87,7 +87,7 @@ msgstr ""
 "Nebyl nalezen NTP výstup. Nainstalujte program 'ntpdate' nebo 'rdate' k "
 "povolení automatické aktualizace data a času."
 
-#: dtime.cpp:91
+#: dtime.cpp:89
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -98,19 +98,19 @@ msgstr ""
 "sekundy ke změně příslušné hodnoty. Hodnota se mění buď tlačítky '+'/'-' "
 "nebo vložením hodnoty."
 
-#: dtime.cpp:113
+#: dtime.cpp:118
 #, kde-format
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
 msgstr "Současné časové pásmo: %1"
 
-#: dtime.cpp:116
+#: dtime.cpp:120
 #, kde-format
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
 msgstr "Současné časové pásmo: %1 (%2)"
 
-#: dtime.cpp:203
+#: dtime.cpp:205
 #, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
@@ -119,27 +119,27 @@ msgstr ""
 "Veřejný server času (pool.ntp.org),        asia.pool.ntp.org,        europe."
 "pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
 
-#: dtime.cpp:274
+#: dtime.cpp:276
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "Nelze kontaktovat časový server: %1."
 
-#: dtime.cpp:278
+#: dtime.cpp:280
 #, kde-format
 msgid "Can not set date."
 msgstr "Není možné nastavit datum."
 
-#: dtime.cpp:281
+#: dtime.cpp:283
 #, kde-format
 msgid "Error setting new time zone."
 msgstr "Chyba při nastavování nového časového pásma."
 
-#: dtime.cpp:281
+#: dtime.cpp:283
 #, kde-format
 msgid "Time zone Error"
 msgstr "Chyba - časové pásmo"
 
-#: dtime.cpp:299
+#: dtime.cpp:301
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "
@@ -156,78 +156,78 @@ msgstr ""
 "Nemáte-li heslo uživatele root a přesto si myslíte, že by bylo třeba opravit "
 "nastavení systémového času, pak prosím kontaktujte svého správce systému."
 
-#: main.cpp:43
+#: k4timezonewidget.cpp:65
 #, kde-format
-msgid "KDE Clock Control Module"
-msgstr "Ovládací modul pro hodiny"
-
-#: main.cpp:47
-#, kde-format
-msgid "(c) 1996 - 2001 Luca Montecchiani"
-msgstr "(c) 1996 - 2001 Luca Montecchiani"
-
-#: main.cpp:49
-#, kde-format
-msgid "Luca Montecchiani"
-msgstr "Luca Montecchiani"
-
-#: main.cpp:49
-#, kde-format
-msgid "Original author"
-msgstr "Původní autor"
-
-#: main.cpp:50
-#, kde-format
-msgid "Paul Campbell"
-msgstr "Paul Campbell"
-
-#: main.cpp:50
-#, kde-format
-msgid "Current Maintainer"
-msgstr "Současný správce"
-
-#: main.cpp:51
-#, kde-format
-msgid "Benjamin Meyer"
-msgstr "Benjamin Meyer"
-
-#: main.cpp:51
-#, kde-format
-msgid "Added NTP support"
-msgstr "Přidal podporu pro NTP"
-
-#: main.cpp:54
-#, kde-format
-msgid ""
-"<h1>Date & Time</h1> This control module can be used to set the system date "
-"and time. As these settings do not only affect you as a user, but rather the "
-"whole system, you can only change these settings when you start the System "
-"Settings as root. If you do not have the root password, but feel the system "
-"time should be corrected, please contact your system administrator."
+msgctxt "Define an area in the time zone, like a town area"
+msgid "Area"
 msgstr ""
-"<h1>Datum a čas</h1> Tento modul je možné použít k nastavení systémového "
-"data a času. Protože se tato nastavení netýkají pouze vás jako uživatele, "
-"ale celého systému, je možné změnit tato nastavení pouze v případě, že jste "
-"spustili Nastavení systému jako superuživatel root. Nemáte-li heslo "
-"uživatele root a přesto si myslíte, že by bylo třeba opravit nastavení "
-"systémového času, pak prosím kontaktujte svého správce systému."
 
-#: main.cpp:107
+#: k4timezonewidget.cpp:65
+#, kde-format
+msgctxt "Time zone"
+msgid "Region"
+msgstr ""
+
+#: k4timezonewidget.cpp:65
+#, kde-format
+msgid "Comment"
+msgstr ""
+
+#: main.cpp:89
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Nelze ověřit/vykonat činnost: %1, %2"
 
-#: main.cpp:127
+#: main.cpp:109
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Nelze změnit nastavení NTP"
 
-#: main.cpp:138
+#: main.cpp:120
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Nelze nastavit aktuální čas"
 
-#: main.cpp:148
+#: main.cpp:130
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Nelze nastavit časové pásmo"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "Ovládací modul pro hodiny"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "Původní autor"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Současný správce"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "Přidal podporu pro NTP"
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Datum a čas</h1> Tento modul je možné použít k nastavení systémového "
+#~ "data a času. Protože se tato nastavení netýkají pouze vás jako uživatele, "
+#~ "ale celého systému, je možné změnit tato nastavení pouze v případě, že "
+#~ "jste spustili Nastavení systému jako superuživatel root. Nemáte-li heslo "
+#~ "uživatele root a přesto si myslíte, že by bylo třeba opravit nastavení "
+#~ "systémového času, pak prosím kontaktujte svého správce systému."

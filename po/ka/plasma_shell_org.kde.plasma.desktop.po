@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2023-05-20 05:28+0200\n"
+"PO-Revision-Date: 2023-11-08 02:40+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -267,7 +267,7 @@ msgstr "დამშორებლის დამატება"
 
 #: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "პანელზე გამყოფი ვიჯეტის დამატება"
 
 #: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
@@ -275,11 +275,11 @@ msgstr "ვიჯეტების დამატება…"
 
 #: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "გახსენით ვიჯეტის ამრჩევი და გადმოათრიეთ ვიჯეტები პანელზე"
 
 #: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
-msgstr ""
+msgstr "პოზიცია"
 
 #: contents/configuration/PanelConfiguration.qml:137
 #: contents/configuration/PanelConfiguration.qml:283
@@ -289,7 +289,7 @@ msgstr "თავში"
 #: contents/configuration/PanelConfiguration.qml:138
 #: contents/configuration/PanelConfiguration.qml:285
 msgid "Right"
-msgstr "Right"
+msgstr "მარჯვენა"
 
 #: contents/configuration/PanelConfiguration.qml:139
 #: contents/configuration/PanelConfiguration.qml:283
@@ -303,13 +303,11 @@ msgstr "ქვედა"
 
 #: contents/configuration/PanelConfiguration.qml:156
 msgid "Set Position..."
-msgstr ""
+msgstr "მდებარეობის დაყენება..."
 
 #: contents/configuration/PanelConfiguration.qml:221
-#, fuzzy
-#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "სწორება:"
+msgstr "სწორება"
 
 #: contents/configuration/PanelConfiguration.qml:284
 msgid "Center"
@@ -317,81 +315,61 @@ msgstr "ცენტრი"
 
 #: contents/configuration/PanelConfiguration.qml:307
 msgid "Length"
-msgstr ""
+msgstr "სიგრძე"
 
 #: contents/configuration/PanelConfiguration.qml:323
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "პანელის სიმაღლე:"
+msgstr "სიმაღლის შევსება"
 
 #: contents/configuration/PanelConfiguration.qml:323
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "პანელის სიგანე:"
+msgstr "სიგანის შევსება"
 
 #: contents/configuration/PanelConfiguration.qml:324
 msgid "Fit content"
-msgstr ""
+msgstr "შემცველობის ჩატევა"
 
 #: contents/configuration/PanelConfiguration.qml:325
 msgid "Custom"
-msgstr ""
+msgstr "ხელით"
 
 #: contents/configuration/PanelConfiguration.qml:361
-#, fuzzy
-#| msgid "Visibility:"
 msgid "Visibility"
-msgstr "ხილვადობა:"
+msgstr "ხილვადობა"
 
 #: contents/configuration/PanelConfiguration.qml:372
-#, fuzzy
-#| msgid "Auto-Hide"
 msgid "Auto hide"
-msgstr "ავტომატურად დამალვა"
+msgstr "ავტოდამალვა"
 
 #: contents/configuration/PanelConfiguration.qml:390
-#, fuzzy
-#| msgid "Opacity:"
 msgid "Opacity"
-msgstr "გაუმჭირვალობა:"
+msgstr "გაუმჭვირვალობა"
 
 #: contents/configuration/PanelConfiguration.qml:403
 msgid "Adaptive"
 msgstr "შეგუებადი"
 
 #: contents/configuration/PanelConfiguration.qml:404
-#, fuzzy
-#| msgid "Always Opaque"
 msgid "Opaque"
-msgstr "ყოველთვის გაუმჭვირვალე"
+msgstr "გაუმჭვირვალე"
 
 #: contents/configuration/PanelConfiguration.qml:405
-#, fuzzy
-#| msgid "Always Translucent"
 msgid "Translucent"
-msgstr "ყოველთვის გამჭვირვალე"
+msgstr "ნახევრადგამჭვირვალე"
 
 #: contents/configuration/PanelConfiguration.qml:427
 msgid "Style"
-msgstr ""
+msgstr "სტილი"
 
 #: contents/configuration/PanelConfiguration.qml:455
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "პანელის სიგანე:"
 
 #: contents/configuration/PanelConfiguration.qml:455
-#, fuzzy
-#| msgid "Right"
 msgid "Height:"
-msgstr "Right"
+msgstr "სიმაღლე:"
 
 #: contents/configuration/PanelConfiguration.qml:489
-#, fuzzy
-#| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
 msgstr "ფოკუსის მალსახმობი:"
 
@@ -401,11 +379,9 @@ msgstr ""
 "ფოკუსის პანელზე გადასატანად ეს კლავიატურის მალსახმობი შეგიძლიათ, გამოიყენოთ"
 
 #: contents/configuration/PanelConfiguration.qml:515
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "პანელის მოცილება"
+msgstr "პანელის წაშლა"
 
 #: contents/configuration/PanelConfiguration.qml:518
 msgid "Remove this panel; this action is undo-able"

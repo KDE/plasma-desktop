@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -77,14 +77,14 @@ msgstr "نۆۋەتتىكى يەرلىك ۋاقىت رايونى"
 msgid "Search…"
 msgstr "ئىزدە"
 
-#: dtime.cpp:61
+#: dtime.cpp:60
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
 
-#: dtime.cpp:91
+#: dtime.cpp:89
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -92,46 +92,46 @@ msgid ""
 "buttons to the right or by entering a new value."
 msgstr "h"
 
-#: dtime.cpp:113
+#: dtime.cpp:118
 #, kde-format
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
 msgstr ""
 
-#: dtime.cpp:116
+#: dtime.cpp:120
 #, kde-format
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
 msgstr ""
 
-#: dtime.cpp:203
+#: dtime.cpp:205
 #, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
 "pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
 msgstr ""
 
-#: dtime.cpp:274
+#: dtime.cpp:276
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "ۋاقىت مۇلازىمېتىرى بىلەن ئالاقە قىلغىلى بولمىدى: %1."
 
-#: dtime.cpp:278
+#: dtime.cpp:280
 #, kde-format
 msgid "Can not set date."
 msgstr "چېسلانى بەلگىلىگىلى بولمىدى."
 
-#: dtime.cpp:281
+#: dtime.cpp:283
 #, kde-format
 msgid "Error setting new time zone."
 msgstr ""
 
-#: dtime.cpp:281
+#: dtime.cpp:283
 #, kde-format
 msgid "Time zone Error"
 msgstr ""
 
-#: dtime.cpp:299
+#: dtime.cpp:301
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "
@@ -142,77 +142,65 @@ msgid ""
 "administrator."
 msgstr ""
 
-#: main.cpp:43
+#: k4timezonewidget.cpp:65
 #, kde-format
-msgid "KDE Clock Control Module"
+msgctxt "Define an area in the time zone, like a town area"
+msgid "Area"
 msgstr ""
 
-#: main.cpp:47
+#: k4timezonewidget.cpp:65
 #, kde-format
-msgid "(c) 1996 - 2001 Luca Montecchiani"
-msgstr "(c) 1996 - 2001 Luca Montecchiani"
-
-#: main.cpp:49
-#, kde-format
-msgid "Luca Montecchiani"
-msgstr "Luca Montecchiani"
-
-#: main.cpp:49
-#, kde-format
-msgid "Original author"
-msgstr "ئەسلى ئاپتور"
-
-#: main.cpp:50
-#, kde-format
-msgid "Paul Campbell"
-msgstr "Paul Campbell"
-
-#: main.cpp:50
-#, kde-format
-msgid "Current Maintainer"
-msgstr "نۆۋەتتىكى مەسئۇلى"
-
-#: main.cpp:51
-#, kde-format
-msgid "Benjamin Meyer"
-msgstr "Benjamin Meyer"
-
-#: main.cpp:51
-#, kde-format
-msgid "Added NTP support"
-msgstr "قوشۇلغان NTP قوللىشى"
-
-#: main.cpp:54
-#, kde-format
-msgid ""
-"<h1>Date & Time</h1> This control module can be used to set the system date "
-"and time. As these settings do not only affect you as a user, but rather the "
-"whole system, you can only change these settings when you start the System "
-"Settings as root. If you do not have the root password, but feel the system "
-"time should be corrected, please contact your system administrator."
+msgctxt "Time zone"
+msgid "Region"
 msgstr ""
 
-#: main.cpp:107
+#: k4timezonewidget.cpp:65
+#, kde-format
+msgid "Comment"
+msgstr ""
+
+#: main.cpp:89
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr ""
 
-#: main.cpp:127
+#: main.cpp:109
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:138
+#: main.cpp:120
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
 msgstr "ۋاقىت مۇلازىمېتىرى بىلەن ئالاقە قىلغىلى بولمىدى: %1."
 
-#: main.cpp:148
+#: main.cpp:130
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "ۋاقىت مۇلازىمېتىرى بىلەن ئالاقە قىلغىلى بولمىدى: %1."
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "ئەسلى ئاپتور"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "نۆۋەتتىكى مەسئۇلى"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "قوشۇلغان NTP قوللىشى"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

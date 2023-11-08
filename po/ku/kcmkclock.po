@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2008-12-25 11:12+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <de@li.org>\n"
@@ -81,14 +81,14 @@ msgstr "Demê herêmî yê heyî: %1 (%2)"
 msgid "Search…"
 msgstr ""
 
-#: dtime.cpp:61
+#: dtime.cpp:60
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
 
-#: dtime.cpp:91
+#: dtime.cpp:89
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -99,21 +99,21 @@ msgstr ""
 "çirkeyan bike ku biguherînî, tu hem dikarî bi bijkojkên jor û jêr re jî rast "
 "bikî hem jî dikarî demê nû binivîsî."
 
-#: dtime.cpp:113
+#: dtime.cpp:118
 #, fuzzy, kde-format
 #| msgid "Current local time zone: %1 (%2)"
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
 msgstr "Demê herêmî yê heyî: %1 (%2)"
 
-#: dtime.cpp:116
+#: dtime.cpp:120
 #, fuzzy, kde-format
 #| msgid "Current local time zone: %1 (%2)"
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
 msgstr "Demê herêmî yê heyî: %1 (%2)"
 
-#: dtime.cpp:203
+#: dtime.cpp:205
 #, fuzzy, kde-format
 #| msgid ""
 #| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
@@ -125,27 +125,27 @@ msgstr ""
 "Pêşkêşkera Demê Gelemperî(pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp."
 "org,north-america.pool.ntp.org,oceania.pool.ntp.org"
 
-#: dtime.cpp:274
+#: dtime.cpp:276
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "Nikare bigihîje pêşkêşkerê demê: %1"
 
-#: dtime.cpp:278
+#: dtime.cpp:280
 #, kde-format
 msgid "Can not set date."
 msgstr "Nikare dîrokê ava bike."
 
-#: dtime.cpp:281
+#: dtime.cpp:283
 #, kde-format
 msgid "Error setting new time zone."
 msgstr "Avakirina demê herêmî de çewtî derket."
 
-#: dtime.cpp:281
+#: dtime.cpp:283
 #, kde-format
 msgid "Time zone Error"
 msgstr "Çewtiya Demê herêmî"
 
-#: dtime.cpp:299
+#: dtime.cpp:301
 #, fuzzy, kde-format
 #| msgid ""
 #| "<h1>Date & Time</h1> This control module can be used to set the system "
@@ -169,90 +169,91 @@ msgstr ""
 "pêwistî demê pergalê ser-rast bikî, jê kerema xwe bi rêvebirê pergalê re "
 "bikeve têkilî yê. "
 
-#: main.cpp:43
+#: k4timezonewidget.cpp:65
 #, kde-format
-msgid "KDE Clock Control Module"
-msgstr "KDE Modûla Kontrola Demjimêrê"
-
-#: main.cpp:47
-#, kde-format
-msgid "(c) 1996 - 2001 Luca Montecchiani"
-msgstr "(c) 1996 - 2001 Luca Montecchiani"
-
-#: main.cpp:49
-#, kde-format
-msgid "Luca Montecchiani"
-msgstr "Luca Montecchiani"
-
-#: main.cpp:49
-#, kde-format
-msgid "Original author"
-msgstr "Nivîskarê yekemîn"
-
-#: main.cpp:50
-#, kde-format
-msgid "Paul Campbell"
-msgstr "Paul Campbell"
-
-#: main.cpp:50
-#, kde-format
-msgid "Current Maintainer"
-msgstr "Peydekerê Niha"
-
-#: main.cpp:51
-#, kde-format
-msgid "Benjamin Meyer"
-msgstr "Benjamin Meyer"
-
-#: main.cpp:51
-#, kde-format
-msgid "Added NTP support"
-msgstr "Piştgirî ya NTP lê hate zêdekirin"
-
-#: main.cpp:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Date & Time</h1> This control module can be used to set the system "
-#| "date and time. As these settings do not only affect you as a user, but "
-#| "rather the whole system, you can only change these settings when you "
-#| "start the Control Center as root. If you do not have the root password, "
-#| "but feel the system time should be corrected, please contact your system "
-#| "administrator."
-msgid ""
-"<h1>Date & Time</h1> This control module can be used to set the system date "
-"and time. As these settings do not only affect you as a user, but rather the "
-"whole system, you can only change these settings when you start the System "
-"Settings as root. If you do not have the root password, but feel the system "
-"time should be corrected, please contact your system administrator."
+msgctxt "Define an area in the time zone, like a town area"
+msgid "Area"
 msgstr ""
-"<h1>Dîrok & Dem</h1> Ev modûla kontrolê ji bo avakirina dîrok û demê pergalê "
-"tê karandin. Ji ber ku ew avakirin ne tenê te wekî bikarhêner bandor dike, "
-"hem jî hemû pergalê bandor dike, tu tenê dikarî wan avakirinan wekî root di "
-"Navenda Kontrol de biguherînî. Heke nasnavê te yê root tune ye, lê belê tu "
-"pêwistî demê pergalê ser-rast bikî, jê kerema xwe bi rêvebirê pergalê re "
-"bikeve têkilî yê. "
 
-#: main.cpp:107
+#: k4timezonewidget.cpp:65
+#, kde-format
+msgctxt "Time zone"
+msgid "Region"
+msgstr ""
+
+#: k4timezonewidget.cpp:65
+#, kde-format
+msgid "Comment"
+msgstr ""
+
+#: main.cpp:89
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr ""
 
-#: main.cpp:127
+#: main.cpp:109
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:138
+#: main.cpp:120
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
 msgstr "Nikare bigihîje pêşkêşkerê demê: %1"
 
-#: main.cpp:148
+#: main.cpp:130
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "Nikare bigihîje pêşkêşkerê demê: %1"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "KDE Modûla Kontrola Demjimêrê"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "Nivîskarê yekemîn"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Peydekerê Niha"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "Piştgirî ya NTP lê hate zêdekirin"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Date & Time</h1> This control module can be used to set the system "
+#~| "date and time. As these settings do not only affect you as a user, but "
+#~| "rather the whole system, you can only change these settings when you "
+#~| "start the Control Center as root. If you do not have the root password, "
+#~| "but feel the system time should be corrected, please contact your system "
+#~| "administrator."
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Dîrok & Dem</h1> Ev modûla kontrolê ji bo avakirina dîrok û demê "
+#~ "pergalê tê karandin. Ji ber ku ew avakirin ne tenê te wekî bikarhêner "
+#~ "bandor dike, hem jî hemû pergalê bandor dike, tu tenê dikarî wan "
+#~ "avakirinan wekî root di Navenda Kontrol de biguherînî. Heke nasnavê te yê "
+#~ "root tune ye, lê belê tu pêwistî demê pergalê ser-rast bikî, jê kerema "
+#~ "xwe bi rêvebirê pergalê re bikeve têkilî yê. "
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

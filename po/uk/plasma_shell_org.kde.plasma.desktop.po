@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2023-05-19 20:40+0300\n"
+"PO-Revision-Date: 2023-11-07 13:24+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -274,7 +274,7 @@ msgstr "Додати розпірку"
 
 #: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Додати віджет-розпірку на панель"
 
 #: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
@@ -283,10 +283,12 @@ msgstr "Додати віджети…"
 #: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
+"Відкрити засіб вибору віджетів для перетягування і скидання віджетів на "
+"панель"
 
 #: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
-msgstr ""
+msgstr "Позиція"
 
 #: contents/configuration/PanelConfiguration.qml:137
 #: contents/configuration/PanelConfiguration.qml:283
@@ -310,13 +312,11 @@ msgstr "Вниз"
 
 #: contents/configuration/PanelConfiguration.qml:156
 msgid "Set Position..."
-msgstr ""
+msgstr "Встановити позицію…"
 
 #: contents/configuration/PanelConfiguration.qml:221
-#, fuzzy
-#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "Вирівнювання:"
+msgstr "Вирівнювання"
 
 #: contents/configuration/PanelConfiguration.qml:284
 msgid "Center"
@@ -324,81 +324,61 @@ msgstr "За центром"
 
 #: contents/configuration/PanelConfiguration.qml:307
 msgid "Length"
-msgstr ""
+msgstr "Довжина"
 
 #: contents/configuration/PanelConfiguration.qml:323
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Висота панелі:"
+msgstr "Заповнити у висоту"
 
 #: contents/configuration/PanelConfiguration.qml:323
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Ширина панелі:"
+msgstr "Заповнити у ширину"
 
 #: contents/configuration/PanelConfiguration.qml:324
 msgid "Fit content"
-msgstr ""
+msgstr "За вмістом"
 
 #: contents/configuration/PanelConfiguration.qml:325
 msgid "Custom"
-msgstr ""
+msgstr "Нетиповий"
 
 #: contents/configuration/PanelConfiguration.qml:361
-#, fuzzy
-#| msgid "Visibility:"
 msgid "Visibility"
-msgstr "Видимість:"
+msgstr "Видимість"
 
 #: contents/configuration/PanelConfiguration.qml:372
-#, fuzzy
-#| msgid "Auto-Hide"
 msgid "Auto hide"
 msgstr "Автоматично ховати"
 
 #: contents/configuration/PanelConfiguration.qml:390
-#, fuzzy
-#| msgid "Opacity:"
 msgid "Opacity"
-msgstr "Непрозорість:"
+msgstr "Непрозорість"
 
 #: contents/configuration/PanelConfiguration.qml:403
 msgid "Adaptive"
 msgstr "Адаптивна"
 
 #: contents/configuration/PanelConfiguration.qml:404
-#, fuzzy
-#| msgid "Always Opaque"
 msgid "Opaque"
-msgstr "Завжди непрозора"
+msgstr "Непрозорість"
 
 #: contents/configuration/PanelConfiguration.qml:405
-#, fuzzy
-#| msgid "Always Translucent"
 msgid "Translucent"
-msgstr "Завжди прозора"
+msgstr "Прозорість"
 
 #: contents/configuration/PanelConfiguration.qml:427
 msgid "Style"
-msgstr ""
+msgstr "Стиль"
 
 #: contents/configuration/PanelConfiguration.qml:455
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Ширина панелі:"
 
 #: contents/configuration/PanelConfiguration.qml:455
-#, fuzzy
-#| msgid "Height"
 msgid "Height:"
-msgstr "Висота"
+msgstr "Висота:"
 
 #: contents/configuration/PanelConfiguration.qml:489
-#, fuzzy
-#| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
 msgstr "Скорочення фокусування:"
 
@@ -407,8 +387,6 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Натисніть цю комбінацію клавіш, щоб передати фокус панелі"
 
 #: contents/configuration/PanelConfiguration.qml:515
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Вилучити панель"

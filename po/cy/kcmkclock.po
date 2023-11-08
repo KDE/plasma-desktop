@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 02:17+0000\n"
+"POT-Creation-Date: 2023-11-08 08:48+0000\n"
 "PO-Revision-Date: 2004-07-03 07:15+0100\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -80,14 +80,14 @@ msgstr "Cylchfa amser gyfredol:"
 msgid "Search…"
 msgstr ""
 
-#: dtime.cpp:61
+#: dtime.cpp:60
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
 
-#: dtime.cpp:91
+#: dtime.cpp:89
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -98,47 +98,47 @@ msgstr ""
 "munudau neu eiliadau i newid y gwerth perthnasol, unai gan ddefnyddio y "
 "botymau i fyny ac i lawr i'r dde, neu gan fewnosod gwerth newydd."
 
-#: dtime.cpp:113
+#: dtime.cpp:118
 #, fuzzy, kde-format
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
 msgstr "Cylchfa amser gyfredol:"
 
-#: dtime.cpp:116
+#: dtime.cpp:120
 #, fuzzy, kde-format
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
 msgstr "Cylchfa amser gyfredol:"
 
-#: dtime.cpp:203
+#: dtime.cpp:205
 #, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
 "pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
 msgstr ""
 
-#: dtime.cpp:274
+#: dtime.cpp:276
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr ""
 
-#: dtime.cpp:278
+#: dtime.cpp:280
 #, kde-format
 msgid "Can not set date."
 msgstr "Methu gosod dyddiad newydd."
 
-#: dtime.cpp:281
+#: dtime.cpp:283
 #, fuzzy, kde-format
 msgid "Error setting new time zone."
 msgstr "Gwall wrth osod Amserfa newydd."
 
-#: dtime.cpp:281
+#: dtime.cpp:283
 #, fuzzy, kde-format
 #| msgid "Timezone Error"
 msgid "Time zone Error"
 msgstr "Gwall Cylchfa Amser"
 
-#: dtime.cpp:299
+#: dtime.cpp:301
 #, fuzzy, kde-format
 #| msgid ""
 #| "<h1>Date & Time</h1> This control module can be used to set the system "
@@ -162,88 +162,74 @@ msgstr ""
 "oes gennych y cyfrinair gwraidd, ond rydych yn teimlo dylai'r amser cysawd "
 "cael ei cywiro, cysylltwch â gweinyddwr eich cysawd."
 
-#: main.cpp:43
+#: k4timezonewidget.cpp:65
 #, kde-format
-msgid "KDE Clock Control Module"
-msgstr "Modiwl Rheoli'r Cloc KDE"
-
-#: main.cpp:47
-#, kde-format
-msgid "(c) 1996 - 2001 Luca Montecchiani"
+msgctxt "Define an area in the time zone, like a town area"
+msgid "Area"
 msgstr ""
 
-#: main.cpp:49
+#: k4timezonewidget.cpp:65
 #, kde-format
-msgid "Luca Montecchiani"
+msgctxt "Time zone"
+msgid "Region"
 msgstr ""
 
-#: main.cpp:49
+#: k4timezonewidget.cpp:65
 #, kde-format
-msgid "Original author"
-msgstr "Awdur gwreiddiol"
-
-#: main.cpp:50
-#, kde-format
-msgid "Paul Campbell"
+msgid "Comment"
 msgstr ""
 
-#: main.cpp:50
-#, kde-format
-msgid "Current Maintainer"
-msgstr "Cynhaliwr Cyfredol"
-
-#: main.cpp:51
-#, kde-format
-msgid "Benjamin Meyer"
-msgstr ""
-
-#: main.cpp:51
-#, kde-format
-msgid "Added NTP support"
-msgstr ""
-
-#: main.cpp:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Date & Time</h1> This control module can be used to set the system "
-#| "date and time. As these settings do not only affect you as a user, but "
-#| "rather the whole system, you can only change these settings when you "
-#| "start the Control Center as root. If you do not have the root password, "
-#| "but feel the system time should be corrected, please contact your system "
-#| "administrator."
-msgid ""
-"<h1>Date & Time</h1> This control module can be used to set the system date "
-"and time. As these settings do not only affect you as a user, but rather the "
-"whole system, you can only change these settings when you start the System "
-"Settings as root. If you do not have the root password, but feel the system "
-"time should be corrected, please contact your system administrator."
-msgstr ""
-"<h1>Dyddiad ac Amser</h1> Gellir y modiwl rheolaeth yma cael ei ddefnyddio i "
-"osod dyddiad ac amser y cysawd.  Gan fod y gosodiadau yma yn effeithio dim "
-"yn unig arnoch chi fel defnyddiwr, ond ar y cysawd cyfan, cewch newid y "
-"gosodiadau yma dim ond wrth gychwyn y Ganolfan Reoli fel gwraidd.  Os nid "
-"oes gennych y cyfrinair gwraidd, ond rydych yn teimlo dylai'r amser cysawd "
-"cael ei cywiro, cysylltwch â gweinyddwr eich cysawd."
-
-#: main.cpp:107
+#: main.cpp:89
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr ""
 
-#: main.cpp:127
+#: main.cpp:109
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:138
+#: main.cpp:120
 #, kde-format
 msgid "Unable to set current time"
 msgstr ""
 
-#: main.cpp:148
+#: main.cpp:130
 #, kde-format
 msgid "Unable to set timezone"
 msgstr ""
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "Modiwl Rheoli'r Cloc KDE"
+
+#~ msgid "Original author"
+#~ msgstr "Awdur gwreiddiol"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Cynhaliwr Cyfredol"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Date & Time</h1> This control module can be used to set the system "
+#~| "date and time. As these settings do not only affect you as a user, but "
+#~| "rather the whole system, you can only change these settings when you "
+#~| "start the Control Center as root. If you do not have the root password, "
+#~| "but feel the system time should be corrected, please contact your system "
+#~| "administrator."
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Dyddiad ac Amser</h1> Gellir y modiwl rheolaeth yma cael ei "
+#~ "ddefnyddio i osod dyddiad ac amser y cysawd.  Gan fod y gosodiadau yma yn "
+#~ "effeithio dim yn unig arnoch chi fel defnyddiwr, ond ar y cysawd cyfan, "
+#~ "cewch newid y gosodiadau yma dim ond wrth gychwyn y Ganolfan Reoli fel "
+#~ "gwraidd.  Os nid oes gennych y cyfrinair gwraidd, ond rydych yn teimlo "
+#~ "dylai'r amser cysawd cael ei cywiro, cysylltwch â gweinyddwr eich cysawd."
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"
