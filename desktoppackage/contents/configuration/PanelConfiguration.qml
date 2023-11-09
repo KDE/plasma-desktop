@@ -151,6 +151,7 @@ ColumnLayout {
             PC3.Button {
                 id: setPositionButton
                 Layout.minimumHeight: transparencyBox.height
+                Layout.minimumWidth: positionRepresentation.width
                 Layout.alignment: Qt.AlignHCenter
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Set Position...")
                 checkable: true
@@ -220,6 +221,7 @@ ColumnLayout {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alignment")
             }
             PanelRepresentation {
+                id: alignmentRepresentation
                 Layout.alignment: Qt.AlignHCenter
                 mainIconSource: {
                     if (dialogRoot.vertical) {
@@ -276,8 +278,9 @@ ColumnLayout {
             }
             PC3.ComboBox {
                 id: alignmentBox
-                Layout.alignment: Qt.AlignHCenter
                 property int previewIndex: highlightedIndex > -1 ? highlightedIndex : currentIndex
+                Layout.alignment: Qt.AlignHCenter
+                Layout.minimumWidth: alignmentRepresentation.width
                 model: [
                     dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Top") : i18nd("plasma_shell_org.kde.plasma.desktop", "Left"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Center"),
@@ -306,6 +309,7 @@ ColumnLayout {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Length")
             }
             PanelRepresentation {
+                id: lengthRepresentation
                 Layout.alignment: Qt.AlignHCenter
                 mainIconSource: (widthBox.previewIndex === 1 ? "gnumeric-ungroup" :
                                  widthBox.previewIndex === 0 ? (dialogRoot.vertical ? "panel-fit-height" : "panel-fit-width") : "kdenlive-custom-effect")
@@ -316,8 +320,9 @@ ColumnLayout {
             }
             PC3.ComboBox {
                 id: widthBox
-                Layout.alignment: Qt.AlignHCenter
                 property int previewIndex: highlightedIndex > -1 ? highlightedIndex : currentIndex
+                Layout.alignment: Qt.AlignHCenter
+                Layout.minimumWidth: lengthRepresentation.width
                 model: [
                     dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Fill height") : i18nd("plasma_shell_org.kde.plasma.desktop", "Fill width"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Fit content"),
@@ -389,6 +394,7 @@ ColumnLayout {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity")
             }
             PanelRepresentation {
+                id: opacityRepresentation
                 Layout.alignment: Qt.AlignHCenter
                 adaptivePanel: transparencyBox.previewIndex === 0
                 translucentPanel: transparencyBox.previewIndex === 2
@@ -396,13 +402,14 @@ ColumnLayout {
             }
             PC3.ComboBox {
                 id: transparencyBox
-                Layout.alignment: Qt.AlignHCenter
                 property int previewIndex: popup.visible ? highlightedIndex : currentIndex
                 model: [
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Opaque"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Translucent")
                 ]
+                Layout.alignment: Qt.AlignHCenter
+                Layout.minimumWidth: opacityRepresentation.width
                 currentIndex: (panel.opacityMode === Panel.Global.Adaptive ? 0 :
                                 panel.opacityMode === Panel.Global.Opaque ? 1 : 2)
                 onActivated: (index) => {
