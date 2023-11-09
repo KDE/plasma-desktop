@@ -90,6 +90,10 @@ ContainmentItem {
     }
 
     function updateGridSize() {
+        // onIconHeightChanged can be triggered before this component is complete and all the children are created
+        if (!toolBoxSvg) {
+            return;
+        }
         appletsLayout.cellWidth = root.iconWidth + toolBoxSvg.elementSize("left").width + toolBoxSvg.elementSize("right").width;
         appletsLayout.cellHeight = root.iconHeight + toolBoxSvg.elementSize("top").height + toolBoxSvg.elementSize("bottom").height;
         appletsLayout.defaultItemWidth = appletsLayout.cellWidth * 6;
