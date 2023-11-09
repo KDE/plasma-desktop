@@ -1,10 +1,10 @@
 # Translation of kcmkclock.po to Catalan
-# Copyright (C) 2001-2021 This_file_is_part_of_KDE
+# Copyright (C) 2001-2023 This_file_is_part_of_KDE
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 2001, 2004, 2005.
 # Ivan Lloro Boada <antispam@wanadoo.es>, 2004.
 # Albert Astals Cid <aacid@kde.org>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2013, 2015, 2019, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2013, 2015, 2019, 2021, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2020.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-08 08:48+0000\n"
-"PO-Revision-Date: 2021-05-26 10:43+0100\n"
+"PO-Revision-Date: 2023-11-08 11:09+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -165,18 +165,18 @@ msgstr ""
 #, kde-format
 msgctxt "Define an area in the time zone, like a town area"
 msgid "Area"
-msgstr ""
+msgstr "Àrea"
 
 #: k4timezonewidget.cpp:65
 #, kde-format
 msgctxt "Time zone"
 msgid "Region"
-msgstr ""
+msgstr "Regió"
 
 #: k4timezonewidget.cpp:65
 #, kde-format
 msgid "Comment"
-msgstr ""
+msgstr "Comentari"
 
 #: main.cpp:89
 #, kde-format
@@ -197,43 +197,3 @@ msgstr "No s'ha pogut establir l'hora actual"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "No s'ha pogut establir la zona horària"
-
-#~ msgid "KDE Clock Control Module"
-#~ msgstr "Mòdul de control KDE del rellotge"
-
-#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
-#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
-
-#~ msgid "Luca Montecchiani"
-#~ msgstr "Luca Montecchiani"
-
-#~ msgid "Original author"
-#~ msgstr "Autor original"
-
-#~ msgid "Paul Campbell"
-#~ msgstr "Paul Campbell"
-
-#~ msgid "Current Maintainer"
-#~ msgstr "Mantenidor actual"
-
-#~ msgid "Benjamin Meyer"
-#~ msgstr "Benjamin Meyer"
-
-#~ msgid "Added NTP support"
-#~ msgstr "S'ha afegit la implementació del NTP"
-
-#~ msgid ""
-#~ "<h1>Date & Time</h1> This control module can be used to set the system "
-#~ "date and time. As these settings do not only affect you as a user, but "
-#~ "rather the whole system, you can only change these settings when you "
-#~ "start the System Settings as root. If you do not have the root password, "
-#~ "but feel the system time should be corrected, please contact your system "
-#~ "administrator."
-#~ msgstr ""
-#~ "<h1>Data i hora</h1> Aquest mòdul de l'Arranjament del sistema es pot "
-#~ "usar per a establir la data i l'hora del sistema. Com que aquests valors "
-#~ "no només us afecten a vós com a usuari, sinó al sistema sencer, només "
-#~ "podeu canviar-los quan engegueu l'arranjament del sistema com a "
-#~ "administrador. Si no teniu la contrasenya de l'administrador, però creieu "
-#~ "que l'hora del sistema s'hauria de corregir, contacteu l'administrador "
-#~ "del sistema."
