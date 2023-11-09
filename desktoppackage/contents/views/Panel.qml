@@ -214,7 +214,7 @@ Item {
             floatingness = 1
             floatingApplets = true
         }
-        if (!KX11Extras.compositingActive) {
+        if (!KWindowSystem.isPlatformWayland && !KX11Extras.compositingActive) {
             opaqueApplets = false
             panelOpacity = 0
         }
