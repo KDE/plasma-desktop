@@ -50,8 +50,11 @@ Item {
     }
 
     Kirigami.FormLayout {
-        anchors.horizontalCenter: parent.horizontalCenter
-
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+        }
 
         // Panel button
         RowLayout {
