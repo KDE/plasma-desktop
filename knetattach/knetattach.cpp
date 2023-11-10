@@ -43,7 +43,7 @@ KNetAttach::KNetAttach(QWidget *parent)
     // setResizeMode(Fixed); FIXME: make the wizard fixed-geometry
     button(FinishButton)->setEnabled(false);
     KConfig crecent(QStringLiteral("krecentconnections"), KConfig::NoGlobals);
-    KConfigGroup recent(&crecent, "General");
+    KConfigGroup recent(&crecent, QStringLiteral("General"));
     QStringList idx = recent.readEntry("Index", QStringList());
     if (idx.isEmpty()) {
         _recent->setEnabled(false);
@@ -126,7 +126,7 @@ bool KNetAttach::validateCurrentPage()
         } else { // if (_recent->isChecked()) {
             KConfig recent(QStringLiteral("krecentconnections"), KConfig::NoGlobals);
             if (!recent.hasGroup(_recentConnectionName->currentText())) {
-                KConfigGroup group = recent.group("General");
+                KConfigGroup group = recent.group(QStringLiteral("General"));
                 QStringList idx = group.readEntry("Index", QStringList());
                 if (idx.isEmpty()) {
                     _recent->setEnabled(false);
@@ -221,7 +221,7 @@ bool KNetAttach::validateCurrentPage()
             QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/remoteview/");
             path += name + QStringLiteral(".desktop");
             KConfig _desktopFile(path, KConfig::SimpleConfig);
-            KConfigGroup desktopFile(&_desktopFile, "Desktop Entry");
+            KConfigGroup desktopFile(&_desktopFile, QStringLiteral("Desktop Entry"));
             desktopFile.writeEntry("Icon", "folder-remote");
             desktopFile.writeEntry("Name", name);
             desktopFile.writeEntry("Type", "Link");
@@ -233,7 +233,7 @@ bool KNetAttach::validateCurrentPage()
 
         if (!name.isEmpty()) {
             KConfig _recent(QStringLiteral("krecentconnections"), KConfig::NoGlobals);
-            KConfigGroup recent(&_recent, "General");
+            KConfigGroup recent(&_recent, QStringLiteral("General"));
             QStringList idx = recent.readEntry("Index", QStringList());
             _recent.deleteGroup(name); // erase anything stale
             if (idx.contains(name)) {

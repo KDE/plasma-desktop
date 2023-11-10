@@ -44,7 +44,7 @@ public:
         QWindow *window = qobject_cast<QWindow *>(object);
 
         auto conf = KSharedConfig::openConfig();
-        KWindowConfig::restoreWindowSize(window, conf->group("Window"));
+        KWindowConfig::restoreWindowSize(window, conf->group(QStringLiteral("Window")));
 
         object->installEventFilter(this);
     }
@@ -55,7 +55,7 @@ public:
             QWindow *window = qobject_cast<QWindow *>(object);
 
             auto conf = KSharedConfig::openConfig();
-            auto group = conf->group("Window");
+            auto group = conf->group(QStringLiteral("Window"));
             KWindowConfig::saveWindowSize(window, group);
             group.sync();
         }

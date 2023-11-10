@@ -35,7 +35,7 @@ bool AutomounterSettings::usrIsSaveNeeded()
 
 QStringList AutomounterSettings::knownDevices() const
 {
-    return config()->group("Devices").groupList();
+    return config()->group(QStringLiteral("Devices")).groupList();
 }
 
 bool AutomounterSettings::hasDeviceInfo(const QString &udi) const
@@ -106,7 +106,7 @@ void AutomounterSettings::setDeviceInfo(const Solid::Device &dev)
 
 void AutomounterSettings::removeDeviceGroup(const QString &udi)
 {
-    if (config()->group("Devices").hasGroup(udi)) {
-        config()->group("Devices").group(udi).deleteGroup();
+    if (config()->group(QStringLiteral("Devices")).hasGroup(udi)) {
+        config()->group(QStringLiteral("Devices")).group(udi).deleteGroup();
     }
 }

@@ -1865,7 +1865,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
 
         // Copy To, Move To
         KSharedConfig::Ptr dolphin = KSharedConfig::openConfig(QStringLiteral("dolphinrc"));
-        if (KConfigGroup(dolphin, "General").readEntry("ShowCopyMoveMenu", false)) {
+        if (KConfigGroup(dolphin, QStringLiteral("General")).readEntry("ShowCopyMoveMenu", false)) {
             m_copyToMenu->setUrls(urls);
             m_copyToMenu->setReadOnly(!itemProperties.supportsMoving());
             m_copyToMenu->addActionsTo(menu);
@@ -2134,7 +2134,7 @@ void FolderModel::restoreSelectedFromTrash()
 bool FolderModel::isTrashEmpty()
 {
     KConfig trashConfig(QStringLiteral("trashrc"), KConfig::SimpleConfig);
-    return trashConfig.group("Status").readEntry("Empty", true);
+    return trashConfig.group(QStringLiteral("Status")).readEntry("Empty", true);
 }
 
 void FolderModel::undoTextChanged(const QString &text)
@@ -2152,6 +2152,6 @@ void FolderModel::createFolder()
 
 bool FolderModel::isDeleteCommandShown()
 {
-    KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("KDE"));
     return cg.readEntry("ShowDeleteCommand", false);
 }

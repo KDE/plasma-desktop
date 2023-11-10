@@ -321,7 +321,7 @@ void KAccessApp::readSettings()
 void KAccessApp::toggleScreenReader()
 {
     KSharedConfig::Ptr _config = KSharedConfig::openConfig();
-    KConfigGroup screenReaderGroup(_config, "ScreenReader");
+    KConfigGroup screenReaderGroup(_config, QStringLiteral("ScreenReader"));
     bool enabled = !screenReaderGroup.readEntry("Enabled", false);
     screenReaderGroup.writeEntry("Enabled", enabled);
     setScreenReaderEnabled(enabled);
@@ -911,7 +911,7 @@ void KAccessApp::applyChanges()
     unsigned int enabled = requestedFeatures & ~features;
     unsigned int disabled = features & ~requestedFeatures;
 
-    KConfigGroup config(KSharedConfig::openConfig(), "Keyboard");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("Keyboard"));
 
     if (enabled & XCB_XKB_BOOL_CTRL_SLOW_KEYS)
         config.writeEntry("SlowKeys", true);
@@ -928,7 +928,7 @@ void KAccessApp::applyChanges()
     else if (disabled & XCB_XKB_BOOL_CTRL_STICKY_KEYS)
         config.writeEntry("StickyKeys", false);
 
-    KConfigGroup mousegrp(KSharedConfig::openConfig(), "Mouse");
+    KConfigGroup mousegrp(KSharedConfig::openConfig(), QStringLiteral("Mouse"));
 
     if (enabled & XCB_XKB_BOOL_CTRL_MOUSE_KEYS)
         mousegrp.writeEntry("MouseKeys", true);
@@ -944,7 +944,7 @@ void KAccessApp::yesClicked()
         dialog->deleteLater();
     dialog = nullptr;
 
-    KConfigGroup config(KSharedConfig::openConfig(), "Keyboard");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("Keyboard"));
     switch (showModeCombobox->currentIndex()) {
     case 0:
         config.writeEntry("Gestures", true);
@@ -975,7 +975,7 @@ void KAccessApp::noClicked()
     dialog = nullptr;
     requestedFeatures = features;
 
-    KConfigGroup config(KSharedConfig::openConfig(), "Keyboard");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("Keyboard"));
     switch (showModeCombobox->currentIndex()) {
     case 0:
         config.writeEntry("Gestures", true);

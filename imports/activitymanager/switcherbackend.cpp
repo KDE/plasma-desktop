@@ -291,7 +291,7 @@ void SwitcherBackend::onCurrentActivityChanged(const QString &id)
     Q_EMIT showSwitchNotification(id, activity.name(), activity.icon());
 
     KConfig config(QStringLiteral("kactivitymanagerd-switcher"));
-    KConfigGroup times(&config, "LastUsed");
+    KConfigGroup times(&config, QStringLiteral("LastUsed"));
 
     const auto now = QDateTime::currentDateTime().toSecsSinceEpoch();
 
