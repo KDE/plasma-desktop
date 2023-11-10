@@ -7,7 +7,7 @@
 <article id="joystick" lang="&language;">
 <articleinfo>
 <title
->Oyun Denetleyicisi</title>
+>Oyun Kumandası</title>
 <authorgroup>
 <author
 ><firstname
@@ -51,7 +51,7 @@
 <keyword
 >oyun çubuğu</keyword>
 <keyword
->denetleyici</keyword>
+>kumanda</keyword>
 <keyword
 >oyun pedi</keyword>
 <keyword
@@ -61,22 +61,22 @@
 
 <sect1 id="kcm_joystick">
 <title
->Oyun Denetleyicisini Kalibre Et</title>
+>Oyun Kumandasını Kalibre Et</title>
 
 <para
->Bu modül, oyun denetleyicinizi kalibre etmenin yanı sıra oyun denetleyicinizdeki hangi işlevlerin hangi mantıksal düğme veya eksenle eşlemlendiğini görmeniz için bir arayüz sağlar.</para>
+>Bu modül, oyun kumandanızı kalibre etmenin yanı sıra oyun kumandanızdaki hangi işlevlerin hangi mantıksal düğme veya eksenle eşlemlendiğini görmeniz için bir arayüz sağlar.</para>
 
 <para>
 <screenshot>
 <screeninfo
->İşte oyun denetleyicisi modülünün bir ekran görüntüsü</screeninfo>
+>İşte oyun kumandası modülünün bir ekran görüntüsü</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="joystick-main.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->Oyun denetleyicisi modülü</phrase>
+>Oyun kumandası modülü</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
@@ -90,9 +90,9 @@
 ></term>
 <listitem>
 <para
->Burada aygıtın mantıksal konumunu görebilirsiniz. Birden fazla oyun denetleyiciniz varsa hangisini yapılandıracağınızı da seçebilirsiniz. </para>
+>Burada aygıtın mantıksal konumunu görebilirsiniz. Birden fazla oyun kumandanız varsa hangisini yapılandıracağınızı da seçebilirsiniz. </para>
 <para
->Bilgisayarınızda otomatik olarak oyun denetleyicisi bulunmazsa ve bağlı olduğunu biliyorsanız doğru aygıt dosyasını buraya girebilirsiniz. </para>
+>Bilgisayarınızda kendiliğinden oyun kumandası bulunmazsa ve bağlı olduğunu biliyorsanız doğru aygıt dosyasını buraya girebilirsiniz. </para>
 </listitem>
 </varlistentry>
 
@@ -103,7 +103,7 @@
 ></term>
 <listitem>
 <para
->Oyun denetleyicisinin çubuğunun X ve Y eksenlerinin çizilen konumu. Oyun çubuğunun yolunu bir noktadan diğerine çizmek için <guibutton
+>Oyun kumandanızın çubuğunun X ve Y eksenlerinin çizilen konumu. Oyun çubuğunun yolunu bir noktadan diğerine çizmek için <guibutton
 >İzi göster</guibutton
 >'i etkinleştirin. </para>
 <tip
@@ -152,14 +152,14 @@
 <para>
 <screenshot>
 <screeninfo
->Oyun denetleyicinizi kalibre etme</screeninfo>
+>Oyun kumandanızı kalibre etmek</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="joystick-calibration.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->Oyun denetleyicinizi kalibre etme</phrase>
+>Oyun kumandanızı kalibre etmek</phrase>
     </textobject>
   </mediaobject>
 </screenshot>

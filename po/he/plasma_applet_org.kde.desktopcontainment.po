@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-21 01:39+0000\n"
+"POT-Creation-Date: 2023-11-10 01:48+0000\n"
 "PO-Revision-Date: 2023-09-30 14:31+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -101,219 +101,219 @@ msgstr "ביטול בחירה"
 msgid "Switch Sort Order"
 msgstr "היפוך הסדר"
 
-#: package/contents/ui/ConfigIcons.qml:61
+#: package/contents/ui/ConfigIcons.qml:64
 #, kde-format
 msgid "Panel button:"
 msgstr "כפתור בלוח:"
 
-#: package/contents/ui/ConfigIcons.qml:67
+#: package/contents/ui/ConfigIcons.qml:70
 #, kde-format
 msgid "Use a custom icon"
 msgstr "להשתמש כסמל מותאם אישית"
 
-#: package/contents/ui/ConfigIcons.qml:100
+#: package/contents/ui/ConfigIcons.qml:103
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "בחירה…"
 
-#: package/contents/ui/ConfigIcons.qml:106
+#: package/contents/ui/ConfigIcons.qml:109
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "פינוי סמל"
 
-#: package/contents/ui/ConfigIcons.qml:126
+#: package/contents/ui/ConfigIcons.qml:129
 #, kde-format
 msgid "Arrangement:"
 msgstr "סידור:"
 
-#: package/contents/ui/ConfigIcons.qml:130
+#: package/contents/ui/ConfigIcons.qml:133
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr "משמאל לימין"
 
-#: package/contents/ui/ConfigIcons.qml:131
+#: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr "מימין לשמאל"
 
-#: package/contents/ui/ConfigIcons.qml:132
+#: package/contents/ui/ConfigIcons.qml:135
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr "מלמעלה למטה"
 
-#: package/contents/ui/ConfigIcons.qml:141
+#: package/contents/ui/ConfigIcons.qml:144
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "יישור לשמאל"
 
-#: package/contents/ui/ConfigIcons.qml:142
+#: package/contents/ui/ConfigIcons.qml:145
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "יישור לימין"
 
-#: package/contents/ui/ConfigIcons.qml:157
+#: package/contents/ui/ConfigIcons.qml:160
 #, kde-format
 msgid "Lock in place"
 msgstr "נעילה במקום"
 
-#: package/contents/ui/ConfigIcons.qml:171
+#: package/contents/ui/ConfigIcons.qml:174
 #, kde-format
 msgid "Sorting:"
 msgstr "מיון:"
 
-#: package/contents/ui/ConfigIcons.qml:179
+#: package/contents/ui/ConfigIcons.qml:182
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "ידנית"
 
-#: package/contents/ui/ConfigIcons.qml:180
+#: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "שם"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:184
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "גודל"
 
-#: package/contents/ui/ConfigIcons.qml:182
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "סוג"
 
-#: package/contents/ui/ConfigIcons.qml:183
+#: package/contents/ui/ConfigIcons.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "תאריך"
 
-#: package/contents/ui/ConfigIcons.qml:194
+#: package/contents/ui/ConfigIcons.qml:197
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "יורד"
 
-#: package/contents/ui/ConfigIcons.qml:202
+#: package/contents/ui/ConfigIcons.qml:205
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "תיקיות תחילה"
 
-#: package/contents/ui/ConfigIcons.qml:216
+#: package/contents/ui/ConfigIcons.qml:219
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "מצב תצוגה:"
 
-#: package/contents/ui/ConfigIcons.qml:218
+#: package/contents/ui/ConfigIcons.qml:221
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "רשימה"
 
-#: package/contents/ui/ConfigIcons.qml:219
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr "רשת"
 
-#: package/contents/ui/ConfigIcons.qml:230
+#: package/contents/ui/ConfigIcons.qml:233
 #, kde-format
 msgid "Icon size:"
 msgstr "גודל סמלים:"
 
-#: package/contents/ui/ConfigIcons.qml:245
+#: package/contents/ui/ConfigIcons.qml:248
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "קטן"
 
-#: package/contents/ui/ConfigIcons.qml:254
+#: package/contents/ui/ConfigIcons.qml:257
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "גדול"
 
-#: package/contents/ui/ConfigIcons.qml:263
+#: package/contents/ui/ConfigIcons.qml:266
 #, kde-format
 msgid "Label width:"
 msgstr "רוחב תווית:"
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "צר"
 
-#: package/contents/ui/ConfigIcons.qml:267
+#: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "בינוני"
 
-#: package/contents/ui/ConfigIcons.qml:268
+#: package/contents/ui/ConfigIcons.qml:271
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "רחב"
 
-#: package/contents/ui/ConfigIcons.qml:276
+#: package/contents/ui/ConfigIcons.qml:279
 #, kde-format
 msgid "Text lines:"
 msgstr "שורות טקסט:"
 
-#: package/contents/ui/ConfigIcons.qml:292
+#: package/contents/ui/ConfigIcons.qml:295
 #, kde-format
 msgid "When hovering over icons:"
 msgstr "במעבר על סמלים:"
 
-#: package/contents/ui/ConfigIcons.qml:294
+#: package/contents/ui/ConfigIcons.qml:297
 #, kde-format
 msgid "Show tooltips"
 msgstr "הצגת חלוניות הסבר"
 
-#: package/contents/ui/ConfigIcons.qml:301
+#: package/contents/ui/ConfigIcons.qml:304
 #, kde-format
 msgid "Show selection markers"
 msgstr "הצגת סמני בחירה"
 
-#: package/contents/ui/ConfigIcons.qml:308
+#: package/contents/ui/ConfigIcons.qml:311
 #, kde-format
 msgid "Show folder preview popups"
 msgstr "הצגת חלוניות תצוגה מקדימה לתיקיות"
 
-#: package/contents/ui/ConfigIcons.qml:318
+#: package/contents/ui/ConfigIcons.qml:321
 #, kde-format
 msgid "Rename:"
 msgstr "שינוי שם:"
 
-#: package/contents/ui/ConfigIcons.qml:322
+#: package/contents/ui/ConfigIcons.qml:325
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr "שינוי כחלק מהשורה בלחיצה על הטקסט של הפריט הנבחר"
 
-#: package/contents/ui/ConfigIcons.qml:333
+#: package/contents/ui/ConfigIcons.qml:336
 #, kde-format
 msgid "Previews:"
 msgstr "תצוגות מקדימות:"
 
-#: package/contents/ui/ConfigIcons.qml:335
+#: package/contents/ui/ConfigIcons.qml:338
 #, kde-format
 msgid "Show preview thumbnails"
 msgstr "הצגת תצוגות מקדימות מוקטנות"
 
-#: package/contents/ui/ConfigIcons.qml:343
+#: package/contents/ui/ConfigIcons.qml:346
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "הגדרת תוספי תצוגות מקדימות…"
@@ -413,7 +413,7 @@ msgstr ""
 "יש קבצים ותיקיות רבים על שולחן העבודה. עלול לגרום לתקלות ולהאטת ביצועים. נא "
 "לשקול להעביר חלק מהם למקום אחר."
 
-#: package/contents/ui/main.qml:386
+#: package/contents/ui/main.qml:390
 #, kde-format
 msgid "Configure Desktop and Wallpaper…"
 msgstr "הגדרת שולחן עבודה ותמונת רקע…"
