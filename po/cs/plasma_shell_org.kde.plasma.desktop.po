@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vit Pelcak <vit@pelcak.org>, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2023-05-31 11:44+0200\n"
+"PO-Revision-Date: 2023-11-09 11:36+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -284,7 +284,7 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
-msgstr ""
+msgstr "Pozice"
 
 #: contents/configuration/PanelConfiguration.qml:137
 #: contents/configuration/PanelConfiguration.qml:283
@@ -308,13 +308,11 @@ msgstr "Dolů"
 
 #: contents/configuration/PanelConfiguration.qml:156
 msgid "Set Position..."
-msgstr ""
+msgstr "Nastavit pozici..."
 
 #: contents/configuration/PanelConfiguration.qml:221
-#, fuzzy
-#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "Zarovnání:"
+msgstr "Zarovnání"
 
 #: contents/configuration/PanelConfiguration.qml:284
 msgid "Center"
@@ -322,77 +320,60 @@ msgstr "Střed"
 
 #: contents/configuration/PanelConfiguration.qml:307
 msgid "Length"
-msgstr ""
+msgstr "Délka"
 
 #: contents/configuration/PanelConfiguration.qml:323
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Výška panelu:"
+msgstr "Vyplnit víšku"
 
 #: contents/configuration/PanelConfiguration.qml:323
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Šířka panelu:"
+msgstr "Vyplnit šířku"
 
 #: contents/configuration/PanelConfiguration.qml:324
 msgid "Fit content"
-msgstr ""
+msgstr "Přizpůsob obsah"
 
 #: contents/configuration/PanelConfiguration.qml:325
 msgid "Custom"
-msgstr ""
+msgstr "Vlastní"
 
 #: contents/configuration/PanelConfiguration.qml:361
-#, fuzzy
-#| msgid "Visibility:"
 msgid "Visibility"
-msgstr "Viditelnost:"
+msgstr "Viditelnost"
 
+# 55051 AttribValues/label
 #: contents/configuration/PanelConfiguration.qml:372
-#, fuzzy
-#| msgid "Auto-Hide"
 msgid "Auto hide"
-msgstr "Automaticky skrývat"
+msgstr "Automatické schovávání"
 
 #: contents/configuration/PanelConfiguration.qml:390
-#, fuzzy
-#| msgid "Opacity:"
 msgid "Opacity"
-msgstr "Krytí:"
+msgstr "Krytí"
 
 #: contents/configuration/PanelConfiguration.qml:403
 msgid "Adaptive"
 msgstr "Adaptivní"
 
 #: contents/configuration/PanelConfiguration.qml:404
-#, fuzzy
-#| msgid "Always Opaque"
 msgid "Opaque"
-msgstr "Vždy neprůhledné"
+msgstr "Neprůhledné"
 
 #: contents/configuration/PanelConfiguration.qml:405
-#, fuzzy
-#| msgid "Always Translucent"
 msgid "Translucent"
-msgstr "Vždy průhledné"
+msgstr "Průhledné"
 
 #: contents/configuration/PanelConfiguration.qml:427
 msgid "Style"
-msgstr ""
+msgstr "Styl"
 
 #: contents/configuration/PanelConfiguration.qml:455
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Šířka panelu:"
 
 #: contents/configuration/PanelConfiguration.qml:455
-#, fuzzy
-#| msgid "Right"
 msgid "Height:"
-msgstr "Vpravo"
+msgstr "Výška:"
 
 #: contents/configuration/PanelConfiguration.qml:489
 msgid "Focus shortcut:"
@@ -403,11 +384,9 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Touto klávesovou zkratkou se přepnete na panel7"
 
 #: contents/configuration/PanelConfiguration.qml:515
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "Odstranit panel"
+msgstr "Smazat panel"
 
 #: contents/configuration/PanelConfiguration.qml:518
 msgid "Remove this panel; this action is undo-able"
@@ -523,37 +502,3 @@ msgstr "Vyhledávacím kritériím neodpovídá žádný widget"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "Nejsou dostupné žádné widgety"
-
-#~ msgctxt "@action:button Make the panel as big as it can be"
-#~ msgid "Maximize"
-#~ msgstr "Maximalizovat"
-
-#~ msgid "Make this panel as tall as possible"
-#~ msgstr "Ať je panel co nejvyšší"
-
-#~ msgid "Make this panel as wide as possible"
-#~ msgstr "Ať je panel co nejširší"
-
-#~ msgctxt "@action:button Delete the panel"
-#~ msgid "Delete"
-#~ msgstr "Smazat"
-
-#~ msgid "Always Visible"
-#~ msgstr "Vždy viditelné"
-
-#~ msgid "Floating:"
-#~ msgstr "Plovoucí:"
-
-#~ msgid "Floating"
-#~ msgstr "Plovoucí"
-
-#~ msgid "More Options…"
-#~ msgstr "Více možností…"
-
-#~ msgctxt "Minimize the length of this string as much as possible"
-#~ msgid "Drag to move"
-#~ msgstr "Přetáhněte pro přesunuti"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use arrow keys to move the panel"
-#~ msgstr "Použijte šipky pro posunutí panelu"

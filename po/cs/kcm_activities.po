@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2016, 2017, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
 # Vit Pelcak <vit@pelcak.org>, 2021, 2023.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-06 01:40+0000\n"
-"PO-Revision-Date: 2023-05-31 11:44+0200\n"
+"PO-Revision-Date: 2023-11-09 11:38+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -58,24 +58,24 @@ msgstr "Popis:"
 #, kde-format
 msgctxt "@option:check"
 msgid "While on this activity, allow:"
-msgstr ""
+msgstr "Pokud v této aktivitě, povolit:"
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
 msgid "Tracking file and app use"
-msgstr ""
+msgstr "Sledování použitých souborů na aplikací"
 
 #: ui/ActivityEditor.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically turning off the screen"
-msgstr ""
+msgstr "Automaticky vypínat obrazovku"
 
 #: ui/ActivityEditor.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically shutting down or sleeping"
-msgstr ""
+msgstr "Automatické vypínání nebo uspávání"
 
 #: ui/ActivityEditor.qml:103
 #, kde-format
@@ -115,10 +115,3 @@ msgstr "Opravdu si přejete smazat aktivitu '%1'?"
 #, kde-format
 msgid "Delete Activity"
 msgstr "Smazat aktivitu"
-
-#~ msgctxt "@option:check"
-#~ msgid "Privacy:"
-#~ msgstr "Soukromí:"
-
-#~ msgid "Do not track usage for this activity"
-#~ msgstr "Nesledovat použití této aktivity"

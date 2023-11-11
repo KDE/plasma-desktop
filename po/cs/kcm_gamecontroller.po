@@ -1,36 +1,33 @@
-# Translation for kcm_gamecontroller.po to Euskara/Basque (eu).
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023 Vit Pelcak <vit@pelcak.org>
 #
-# Translators:
-# SPDX-FileCopyrightText: 2023 Iñigo Salvador Azurmendi <xalba@ni.eus>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2023-11-09 17:12+0100\n"
-"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
-"Language: eu\n"
+"PO-Revision-Date: 2023-11-08 15:20+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.08.2\n"
 
 #: axesmodel.cpp:63
 #, kde-format
 msgctxt "@label Axis value"
 msgid "Value"
-msgstr "Balioa"
+msgstr "Hodnota"
 
 #: buttonmodel.cpp:66
 #, kde-format
 msgctxt "@label Button state"
 msgid "State"
-msgstr "Egoera"
+msgstr "Stav"
 
 #: devicemodel.cpp:51
 #, kde-format
@@ -41,28 +38,28 @@ msgstr "%1 (%2)"
 #: ui/main.qml:22
 #, kde-format
 msgid "No game controllers found"
-msgstr "Ez da joko-kontrolagailurik aurkitu"
+msgstr "Nebyl nalezen žádný herní ovladač"
 
 #: ui/main.qml:54
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
-msgstr "Gailua:"
+msgstr "Zařízení:"
 
 #: ui/main.qml:80
 #, kde-format
 msgctxt "@label Visual representation of an axis position"
 msgid "Position:"
-msgstr "Kokapena:"
+msgstr "Pozice:"
 
 #: ui/main.qml:97
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
-msgstr "Botoiak:"
+msgstr "Tlačítka:"
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"
-msgstr "Ardatzak:"
+msgstr "Osy:"

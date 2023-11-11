@@ -4,13 +4,13 @@
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2014.
 # Jeff Huang <s8321414@gmail.com>, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 12:20+0000\n"
-"PO-Revision-Date: 2023-08-07 22:48+0900\n"
+"PO-Revision-Date: 2023-11-10 23:24+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: ui/main.qml:24
 #, kde-format
@@ -176,28 +176,27 @@ msgid ""
 msgstr "觸控模式會讓使用者介面許多元素變大，讓觸控操作更容易。"
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double-click interval:"
-msgstr "點兩下開啟檔案"
+msgstr "雙擊間隔："
 
 #: ui/main.qml:343
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] ""
+msgstr[0] "%1 微秒"
 
 #: ui/main.qml:347
 #, kde-format
 msgid "msec"
-msgstr ""
+msgstr "微秒"
 
 #: ui/main.qml:361
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
-msgstr ""
+msgstr "在這個時長內點擊兩下就會被視為雙擊。某些應用程式可能不會使用這個設定。"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -219,10 +218,9 @@ msgstr "左鍵捲軸列軌道："
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double click interval"
-msgstr "點兩下開啟檔案"
+msgstr "雙擊間隔"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

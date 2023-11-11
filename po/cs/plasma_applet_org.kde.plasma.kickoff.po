@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
 # Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-27 01:41+0000\n"
-"PO-Revision-Date: 2023-01-30 14:19+0100\n"
+"PO-Revision-Date: 2023-11-10 16:31+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -117,7 +117,7 @@ msgstr "Pro přidání textového popisku pište zde"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr "Resetovat štítek nabídky"
+msgstr "Resetovat popisek nabídky"
 
 #: package/contents/ui/ConfigGeneral.qml:139
 #, kde-format
@@ -156,7 +156,7 @@ msgstr "Nastavit povolené moduly pro vyhledávání…"
 #: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgid "Sidebar position:"
-msgstr ""
+msgstr "Pozice postranní lišty:"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #: package/contents/ui/ConfigGeneral.qml:190

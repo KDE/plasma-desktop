@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 12:20+0000\n"
-"PO-Revision-Date: 2023-10-01 21:39+0200\n"
+"PO-Revision-Date: 2023-11-08 10:27+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: ui/main.qml:24
 #, kde-format
@@ -179,22 +179,21 @@ msgstr ""
 "tocco, molti elementi dell'interfaccia utente diventeranno più grandi."
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double-click interval:"
-msgstr "Apri invece con un doppio clic"
+msgstr "Intervallo per il doppio clic:"
 
 #: ui/main.qml:343
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 msec"
+msgstr[1] "%1 msec"
 
 #: ui/main.qml:347
 #, kde-format
 msgid "msec"
-msgstr ""
+msgstr "msec"
 
 #: ui/main.qml:361
 #, kde-format
@@ -202,6 +201,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"Due clic in questo intervallo di tempo vengono considerati un doppio clic. "
+"Alcune applicazioni potrebbero non tener conto di questa impostazione."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -225,10 +226,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double click interval"
-msgstr "Apri invece con un doppio clic"
+msgstr "Intervallo per il doppio clic"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

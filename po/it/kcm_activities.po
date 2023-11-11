@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Paolo Zamponi <feus73@gmail.com>, 2018, 2019, 2020, 2021.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2023 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-06 01:40+0000\n"
-"PO-Revision-Date: 2023-05-18 18:28+0200\n"
+"PO-Revision-Date: 2023-11-08 10:10+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -58,24 +58,24 @@ msgstr "Descrizione:"
 #, kde-format
 msgctxt "@option:check"
 msgid "While on this activity, allow:"
-msgstr ""
+msgstr "Durante questa attività, consenti:"
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
 msgid "Tracking file and app use"
-msgstr ""
+msgstr "Tracciamento dell'utilizzo di file e applicazioni"
 
 #: ui/ActivityEditor.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically turning off the screen"
-msgstr ""
+msgstr "Spegnimento automatico dello schermo"
 
 #: ui/ActivityEditor.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically shutting down or sleeping"
-msgstr ""
+msgstr "Spegnimento o sospensione automatica"
 
 #: ui/ActivityEditor.qml:103
 #, kde-format

@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma-desktop package.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2014, 2015, 2017, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2020, 2021, 2022, 2023 Vincenzo Reale <smart2128vr@gmail.com>
 # Paolo Zamponi <feus73@gmail.com>, 2018, 2019.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2023-05-20 10:27+0200\n"
+"PO-Revision-Date: 2023-11-08 09:39+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -275,7 +275,7 @@ msgstr "Aggiungi spaziatore"
 
 #: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Aggiungi l'oggetto spaziatore al pannello"
 
 #: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
@@ -284,10 +284,12 @@ msgstr "Aggiungi oggetti..."
 #: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
+"Apri il selettore degli oggetti per trascinare e rilasciare gli oggetti sul "
+"pannello"
 
 #: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
-msgstr ""
+msgstr "Posizione"
 
 #: contents/configuration/PanelConfiguration.qml:137
 #: contents/configuration/PanelConfiguration.qml:283
@@ -311,13 +313,11 @@ msgstr "Basso"
 
 #: contents/configuration/PanelConfiguration.qml:156
 msgid "Set Position..."
-msgstr ""
+msgstr "Imposta la posizione..."
 
 #: contents/configuration/PanelConfiguration.qml:221
-#, fuzzy
-#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "Allineamento:"
+msgstr "Allineamento"
 
 #: contents/configuration/PanelConfiguration.qml:284
 msgid "Center"
@@ -325,81 +325,61 @@ msgstr "Centro"
 
 #: contents/configuration/PanelConfiguration.qml:307
 msgid "Length"
-msgstr ""
+msgstr "Lunghezza"
 
 #: contents/configuration/PanelConfiguration.qml:323
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Altezza del pannello:"
+msgstr "Riempi in altezza"
 
 #: contents/configuration/PanelConfiguration.qml:323
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Larghezza del pannello:"
+msgstr "Riempi in larghezza"
 
 #: contents/configuration/PanelConfiguration.qml:324
 msgid "Fit content"
-msgstr ""
+msgstr "Adatta il contenuto"
 
 #: contents/configuration/PanelConfiguration.qml:325
 msgid "Custom"
-msgstr ""
+msgstr "Personalizzato"
 
 #: contents/configuration/PanelConfiguration.qml:361
-#, fuzzy
-#| msgid "Visibility:"
 msgid "Visibility"
-msgstr "Visibilità:"
+msgstr "Visibilità"
 
 #: contents/configuration/PanelConfiguration.qml:372
-#, fuzzy
-#| msgid "Auto-Hide"
 msgid "Auto hide"
 msgstr "Nascondi automaticamente"
 
 #: contents/configuration/PanelConfiguration.qml:390
-#, fuzzy
-#| msgid "Opacity:"
 msgid "Opacity"
-msgstr "Opacità:"
+msgstr "Opacità"
 
 #: contents/configuration/PanelConfiguration.qml:403
 msgid "Adaptive"
 msgstr "Flessibile"
 
 #: contents/configuration/PanelConfiguration.qml:404
-#, fuzzy
-#| msgid "Always Opaque"
 msgid "Opaque"
-msgstr "Sempre opaco"
+msgstr "Opaco"
 
 #: contents/configuration/PanelConfiguration.qml:405
-#, fuzzy
-#| msgid "Always Translucent"
 msgid "Translucent"
-msgstr "Sempre trasparente"
+msgstr "Trasparente"
 
 #: contents/configuration/PanelConfiguration.qml:427
 msgid "Style"
-msgstr ""
+msgstr "Stile"
 
 #: contents/configuration/PanelConfiguration.qml:455
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Larghezza del pannello:"
 
 #: contents/configuration/PanelConfiguration.qml:455
-#, fuzzy
-#| msgid "Height"
 msgid "Height:"
-msgstr "Altezza"
+msgstr "Altezza:"
 
 #: contents/configuration/PanelConfiguration.qml:489
-#, fuzzy
-#| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
 msgstr "Scorciatoia per messa a fuoco:"
 
@@ -409,11 +389,9 @@ msgstr ""
 "Premi questa scorciatoia da tastiera per spostare il fuoco sul pannello"
 
 #: contents/configuration/PanelConfiguration.qml:515
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "Rimuovi pannello"
+msgstr "Elimina pannello"
 
 #: contents/configuration/PanelConfiguration.qml:518
 msgid "Remove this panel; this action is undo-able"
