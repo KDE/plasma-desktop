@@ -219,7 +219,6 @@ ContainmentItem {
                         checkLastSpacer();
                     }
                 }
-                Component.onDestruction: --dropArea.__fillWidthApplets;
                 // Always fill width/height, in order to still shrink the applet when there is not enough space.
                 // When the applet doesn't want to expand set a Layout.maximumWidth accordingly
                 // https://bugs.kde.org/show_bug.cgi?id=473420
