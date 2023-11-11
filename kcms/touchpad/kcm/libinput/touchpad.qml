@@ -91,7 +91,7 @@ KCM.SimpleKCM {
     }
 
     Kirigami.PlaceholderMessage {
-        text: i18n("No touchpad found")
+        text: i18nd("kcm_touchpad", "No touchpad found")
         anchors.centerIn: parent
         visible: touchpadCount === 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
