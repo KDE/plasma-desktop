@@ -82,7 +82,7 @@ Item {
                 visible: separatorItem.visible
                 text: i18n("Show")
 
-                PlasmaExtras.Menu {
+                property PlasmaExtras.Menu _subShowMenu: PlasmaExtras.Menu {
                     id: subShowMenu
                     visualParent: showItem.action
                 }
