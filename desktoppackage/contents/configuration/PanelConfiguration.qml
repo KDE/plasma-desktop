@@ -7,7 +7,6 @@
 import QtQuick
 import QtQuick.Layouts 1.0
 import QtQuick.Controls 2.4 as QQC2
-import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
@@ -503,9 +502,9 @@ ColumnLayout {
 
             KeySequenceItem {
                 id: button
-                keySequence: Plasmoid.globalShortcut
+                keySequence: plasmoid.globalShortcut
                 onCaptureFinished: {
-                    Plasmoid.globalShortcut = button.keySequence
+                    plasmoid.globalShortcut = button.keySequence
                 }
             }
 
@@ -519,7 +518,7 @@ ColumnLayout {
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PC3.ToolTip.visible: hovered
 
-                onClicked: Plasmoid.internalAction("remove").trigger();
+                onClicked: plasmoid.internalAction("remove").trigger();
             }
         }
     }
