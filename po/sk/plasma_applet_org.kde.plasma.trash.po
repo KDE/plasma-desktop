@@ -1,68 +1,56 @@
 # translation of plasma_applet_org.kde.plasma.trash.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-19 01:57+0000\n"
-"PO-Revision-Date: 2021-06-26 19:38+0200\n"
+"PO-Revision-Date: 2023-11-11 15:46+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.04.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: contents/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid "Trash"
+#, kde-format
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Kôš"
 
 #: contents/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "One item"
-#| msgid_plural "%1 items"
+#, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
 msgstr[0] "Jedna položka"
-msgstr[1] ""
-"Kôš\n"
-" %1 položky"
-msgstr[2] ""
-"Kôš\n"
-" %1 položiek"
+msgstr[1] "%1 položky"
+msgstr[2] "%1 položiek"
 
 #: contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Prázdny"
 
 #: contents/ui/main.qml:71
-#, fuzzy, kde-format
-#| msgctxt "a verb"
-#| msgid "Open"
+#, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Otvoriť"
 
 #: contents/ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Prázdny"
 
 #: contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Trash Settings…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
 msgstr "Nastavenie koša..."

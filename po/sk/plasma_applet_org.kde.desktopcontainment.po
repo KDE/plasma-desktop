@@ -1,20 +1,20 @@
 # translation of plasma_applet_org.kde.desktopcontainment.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016, 2017.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-10 01:48+0000\n"
-"PO-Revision-Date: 2022-11-22 17:52+0100\n"
+"PO-Revision-Date: 2023-11-11 15:39+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.11.80\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/config/config.qml:16
@@ -74,8 +74,7 @@ msgid "Show hidden files:"
 msgstr "Zobraziť skryté súbory:"
 
 #: package/contents/ui/ConfigFilter.qml:132
-#, fuzzy, kde-format
-#| msgid "File type"
+#, kde-format
 msgid "File Type"
 msgstr "Typ súboru"
 
@@ -97,7 +96,7 @@ msgstr "Zrušiť výber"
 #: package/contents/ui/ConfigFilter.qml:223
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "Prepnúť poradie triedenia"
 
 #: package/contents/ui/ConfigIcons.qml:64
 #, kde-format
@@ -379,7 +378,7 @@ msgstr "Zadajte vlastný titulok..."
 #: package/contents/ui/ConfigOverlay.qml:86
 #, kde-format
 msgid "Click and drag to rotate"
-msgstr ""
+msgstr "Kliknutím a potiahnutím otočíte"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format
@@ -408,6 +407,8 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"Na pracovnej ploche je veľa súborov a priečinkov. To môže spôsobiť chyby a "
+"problémy s výkonom. Zvážte, či niektoré z nich nepresuniete inde."
 
 #: package/contents/ui/main.qml:390
 #, kde-format

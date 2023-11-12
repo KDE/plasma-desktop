@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kde-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-03-28 17:56+0300\n"
+"PO-Revision-Date: 2023-11-11 23:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 "Bu liste, sistem tarafından bilinen depolama aygıtlarını gösterir. Eğer, "
 "\"Oturum açılışında otomatik bağla\" seçiliyse \"Tüm çıkarılabilir ortamları "
-"oturum açılışında otomatik olarak bağla\" seçili olmasa dahi aygıt otomatik "
+"oturum açılışında kendiliğinden bağla\" seçili olmasa dahi aygıt otomatik "
 "olarak bağlanacaktır. Aynı şey \"Takıldığında otomatik bağla\" seçeneği için "
 "de geçerlidir."
 
@@ -59,9 +59,9 @@ msgid ""
 msgstr ""
 "Bu düğmeye tıklamak, seçili olan aygıtı 'unutturur'. Bu eylem yalnızca "
 "\"Yalnızca daha önce takılmış olan çıkarılabilir ortamları takıldıklarında "
-"otomatik olarak bağla\" seçildiğinde işe yarar. Bir aygıt bir kere "
-"unutulduysa ve sistem yalnızca daha önceden takılı aygıtları bağlayacak "
-"şekilde ayarlandıysa aygıt otomatik bağlanmayacaktır."
+"kendiliğinden bağla\" seçildiğinde işe yarar. Bir aygıt bir kere unutulduysa "
+"ve sistem yalnızca daha önceden takılı aygıtları bağlayacak şekilde "
+"ayarlandıysa aygıt otomatik bağlanmayacaktır."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
@@ -80,18 +80,18 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"Bu seçenek işaretli değilse yalnızca anımsanan aygıtlar otomatik olarak "
+"Bu seçenek işaretli değilse yalnızca anımsanan aygıtlar kendiliğinden "
 "bağlanacaktır. Bir aygıt, eğer daha önce bağlandıysa 'anımsanacaktır'. "
 "Örneğin, bir USB müzik çaları şarj etmek için bağlayıp dosyalarına "
 "erişmediyseniz bir sonraki takılışında müzik çalar otomatik "
 "bağlanmayacaktır. Fakat, bir kere dosyalarına eriştiğinizde, aygıt anımsanır "
-"ve otomatik olarak dosyalar erişilebilir yapılır."
+"ve kendiliğinden dosyalar erişilebilir yapılır."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
 #, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
-msgstr "Daha önce hiç takılmamış çıkarılabilir ortamları otomatik olarak bağla"
+msgstr "Daha önce hiç takılmamış çıkarılabilir ortamları kendiliğinden bağla"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -138,22 +138,22 @@ msgstr "UDI: %1"
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will be automatically mounted at login."
-msgstr "Bu aygıt oturum açıldığında otomatik olarak bağlanacak."
+msgstr "Bu aygıt oturum açıldığında kendiliğinden bağlanacak."
 
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will not be automatically mounted at login."
-msgstr "Bu aygıt oturum açıldığında otomatik olarak bağlanmayacak."
+msgstr "Bu aygıt oturum açıldığında kendiliğinden bağlanmayacak."
 
 #: DeviceModel.cpp:326
 #, kde-format
 msgid "This device will be automatically mounted when attached."
-msgstr "Bu aygıt takıldığında otomatik olarak bağlanacak."
+msgstr "Bu aygıt takıldığında kendiliğinden bağlanacak."
 
 #: DeviceModel.cpp:327
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
-msgstr "Bu aygıt takıldığında otomatik olarak bağlanmayacak."
+msgstr "Bu aygıt takıldığında kendiliğinden bağlanmayacak."
 
 #~ msgid "Device Automounter"
 #~ msgstr "Otomatik Aygıt Bağlayıcı"

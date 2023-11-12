@@ -3,20 +3,20 @@
 # Miroslav David <mirodav@gmail.com>, 2009.
 # Michal Sulek <misurel@gmail.com>, 2011.
 # Roman Paholík <wizzardsk@gmail.com>, 2012, 2014, 2016, 2017.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2021-11-17 12:09+0100\n"
-"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"PO-Revision-Date: 2023-11-11 15:38+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -42,10 +42,9 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "Prepnúť na ďalšie rozloženie klávesnice"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Prepnúť na ďalšie rozloženie klávesnice"
+msgstr "Prepnutie na naposledy použité rozloženie klávesnice"
 
 #: bindings.cpp:60
 #, kde-format
@@ -237,10 +236,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:246
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "Alternatívne skratky:"
+msgstr "Posledná použitá skratka:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:259
@@ -249,6 +247,8 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
+"Táto skratka umožňuje rýchle prepínanie medzi dvoma rozloženiami, a to vždy "
+"na posledné použité rozloženie."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:284
