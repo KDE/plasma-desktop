@@ -105,7 +105,7 @@ function preferredMinWidth() {
     if (!tasks.vertical && !tasks.iconsOnly) {
       width +=
           (Kirigami.Units.smallSpacing * 2) +
-          (Kirigami.Units.iconSizes.sizeForLabels * 12);
+          (Kirigami.Units.gridUnit * 8);
     }
 
     return width;
