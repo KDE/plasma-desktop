@@ -25,6 +25,7 @@ KSvg.FrameSvgItem {
     property alias offset: offsetHandle.value
     property alias minimumLength: rightMinimumLengthHandle.value
     property alias maximumLength: rightMaximumLengthHandle.value
+    property bool isHorizontal: root.prefix[0] === 'north' || root.prefix[0] === 'south'
 
     property string maximumText: (dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change maximum height.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change maximum width.")) + "\n" + i18nd("plasma_shell_org.kde.plasma.desktop", "Double click to reset.")
     property string minimumText: (dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change minimum height.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change minimum width.")) + "\n" + i18nd("plasma_shell_org.kde.plasma.desktop", "Double click to reset.")
@@ -70,10 +71,8 @@ KSvg.FrameSvgItem {
     SliderHandle {
         id: offsetHandle
         anchors {
-            right: root.prefix[0] === 'west' ? root.right : undefined
-            left: root.prefix[0] === 'east' ? root.left : undefined
-            top: root.prefix[0] === 'south' ? root.top : undefined
-            bottom: root.prefix[0] === 'north' ? root.bottom : undefined
+            right: !root.isHorizontal ? root.right : undefined
+            bottom: root.isHorizontal ? root.bottom : undefined
         }
         graphicElementName: "offsetslider"
         description: i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change position on this screen edge.\nDouble click to reset.")
@@ -130,10 +129,8 @@ KSvg.FrameSvgItem {
     SliderHandle {
         id: rightMinimumLengthHandle
         anchors {
-            right: root.prefix[0] === 'east' ? root.right : undefined
-            left: root.prefix[0] === 'west' ? root.left : undefined
-            top: root.prefix[0] === 'north' ? root.top : undefined
-            bottom: root.prefix[0] === 'south' ? root.bottom : undefined
+            left: !root.isHorizontal ? root.left : undefined
+            top: root.isHorizontal ? root.top : undefined
         }
         description: root.minimumText
         alignment: panel.alignment | Qt.AlignLeft
@@ -152,10 +149,8 @@ KSvg.FrameSvgItem {
     SliderHandle {
         id: rightMaximumLengthHandle
         anchors {
-            right: root.prefix[0] === 'west' ? root.right : undefined
-            left: root.prefix[0] === 'east' ? root.left : undefined
-            top: root.prefix[0] === 'south' ? root.top : undefined
-            bottom: root.prefix[0] === 'north' ? root.bottom : undefined
+            right: !root.isHorizontal ? root.right : undefined
+            bottom: root.isHorizontal ? root.bottom : undefined
         }
         description: root.maximumText
         alignment: panel.alignment | Qt.AlignLeft
@@ -174,10 +169,8 @@ KSvg.FrameSvgItem {
     SliderHandle {
         id: leftMinimumLengthHandle
         anchors {
-            right: root.prefix[0] === 'east' ? root.right : undefined
-            left: root.prefix[0] === 'west' ? root.left : undefined
-            top: root.prefix[0] === 'north' ? root.top : undefined
-            bottom: root.prefix[0] === 'south' ? root.bottom : undefined
+            left: !root.isHorizontal ? root.left : undefined
+            top: root.isHorizontal ? root.top : undefined
         }
         description: root.minimumText
         alignment: panel.alignment | Qt.AlignRight
@@ -195,10 +188,8 @@ KSvg.FrameSvgItem {
     SliderHandle {
         id: leftMaximumLengthHandle
         anchors {
-            right: root.prefix[0] === 'west' ? root.right : undefined
-            left: root.prefix[0] === 'east' ? root.left : undefined
-            top: root.prefix[0] === 'south' ? root.top : undefined
-            bottom: root.prefix[0] === 'north' ? root.bottom : undefined
+            right: !root.isHorizontal ? root.right : undefined
+            bottom: root.isHorizontal ? root.bottom : undefined
         }
         description: root.maximumText
         alignment: panel.alignment | Qt.AlignRight
