@@ -79,9 +79,7 @@ public:
     int layoutRows() const;
     QSize pagerItemSize() const;
 
-#if HAVE_X11
-    QList<WId> stackingOrder() const;
-#endif
+    QList<QVariant> stackingOrder(const QModelIndex &window) const;
 
     Q_INVOKABLE void refresh();
 

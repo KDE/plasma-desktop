@@ -15,8 +15,6 @@
 #include <KWindowSystem>
 #include <KX11Extras>
 
-#include <algorithm>
-
 using namespace TaskManager;
 
 class WindowModel::Private
@@ -42,6 +40,11 @@ WindowModel::WindowModel(PagerModel *parent)
 {
     d->pagerModel = parent;
     connect(parent, &PagerModel::pagerItemSizeChanged, this, &WindowModel::onPagerItemSizeChanged);
+    connect(this, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
+        if (roles.contains(AbstractTasksModel::StackingOrder)) {
+            Q_EMIT dataChanged(topLeft, bottomRight, {WindowModelRoles::StackingOrder});
+        }
+    });
 }
 
 WindowModel::~WindowModel()
@@ -95,30 +98,16 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
         // Restrict to desktop/screen rect.
         return windowGeo.intersected(clampingRect);
     } else if (role == StackingOrder) {
-#if HAVE_X11
-        const QVariantList &winIds = TaskFilterProxyModel::data(index, AbstractTasksModel::WinIdList).toList();
+        const auto &winId = TaskFilterProxyModel::data(index, AbstractTasksModel::WinIdList);
+        const int z = d->pagerModel->stackingOrder(index).indexOf(winId);
 
-        if (winIds.count()) {
-            const WId winId = winIds.at(0).toLongLong();
-            const int z = d->pagerModel->stackingOrder().indexOf(winId);
-
-            if (z != -1) {
-                return z;
-            }
+        if (z != -1) {
+            return z;
         }
-#endif
-
         return 0;
     }
 
     return TaskFilterProxyModel::data(index, role);
-}
-
-void WindowModel::refreshStackingOrder()
-{
-    if (rowCount()) {
-        Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), QList<int>{StackingOrder});
-    }
 }
 
 void WindowModel::onPagerItemSizeChanged()

@@ -63,10 +63,6 @@ public:
 
     QList<WindowModel *> windowModels;
 
-#if HAVE_X11
-    QList<WId> cachedStackingOrder = KX11Extras::stackingOrder();
-#endif
-
     void refreshDataSource();
 
 private:
@@ -103,16 +99,6 @@ PagerModel::Private::Private(PagerModel *q)
     });
 
     QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::desktopLayoutRowsChanged, q, &PagerModel::layoutRowsChanged);
-
-#if HAVE_X11
-    QObject::connect(KX11Extras::self(), &KX11Extras::stackingOrderChanged, q, [this]() {
-        cachedStackingOrder = KX11Extras::stackingOrder();
-
-        for (auto windowModel : std::as_const(windowModels)) {
-            windowModel->refreshStackingOrder();
-        }
-    });
-#endif
 }
 
 PagerModel::Private::~Private()
@@ -368,12 +354,10 @@ QSize PagerModel::pagerItemSize() const
     return d->virtualGeometry.size();
 }
 
-#if HAVE_X11
-QList<WId> PagerModel::stackingOrder() const
+QList<QVariant> PagerModel::stackingOrder(const QModelIndex &index) const
 {
-    return d->cachedStackingOrder;
+    return index.data(TaskManager::AbstractTasksModel::StackingOrder).toList();
 }
-#endif
 
 void PagerModel::refresh()
 {
