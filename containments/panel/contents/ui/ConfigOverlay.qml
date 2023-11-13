@@ -95,7 +95,7 @@ MouseArea {
         // case
         let item = currentLayout.childAt(mouse.x, mouse.y);
         // BUG 454095: Don't allow dragging lastSpacer as it's not a real applet
-        if (!item || item == lastSpacer) {
+        if (!item || item == lastSpacer || item == addWidgetsButton) {
             configurationArea.currentApplet = null
             return;
         }

@@ -11,7 +11,7 @@ import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PC3
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.kirigami 2.20 as Kirigami
@@ -24,8 +24,8 @@ ContainmentItem {
     height: 48
 
 //BEGIN properties
-    Layout.preferredWidth: fixedWidth || currentLayout.implicitWidth
-    Layout.preferredHeight: fixedHeight || currentLayout.implicitHeight
+    Layout.preferredWidth: fixedWidth || currentLayout.implicitWidth + currentLayout.horizontalDisplacement
+    Layout.preferredHeight: fixedHeight || currentLayout.implicitHeight + currentLayout.verticalDisplacement
 
     property Item toolBox
     property var layoutManager: LayoutManager
@@ -341,8 +341,24 @@ ContainmentItem {
                 }
 
                 active: applet && applet.Plasmoid.busy
-                sourceComponent: PlasmaComponents.BusyIndicator {
+                sourceComponent: PC3.BusyIndicator {
                     z: 999
+                }
+
+                Image {
+                    id: replacementImage
+                    visible: root.anyDragAndDrop
+                    fillMode: Image.PreserveAspectFit
+                    onVisibleChanged: {
+                        if (visible) {
+                            applet.grabToImage((result) => {
+                                replacementImage.source = result.url
+                                applet.visible = false
+                            })
+                        } else {
+                            applet.visible = true
+                        }
+                    }
                 }
 
                 property int oldX: 0
@@ -404,9 +420,23 @@ ContainmentItem {
             x: Qt.application.layoutDirection === Qt.RightToLeft && isHorizontal ? toolBoxSize : 0;
             readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
 
+            PC3.ToolButton {
+                id: addWidgetsButton
+                Layout.preferredWidth: width
+                Layout.preferredHeight: height
+                Layout.alignment: Qt.AlignHCenter
+                visible: appletsModel.count === 0
+                text: isHorizontal ? i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…") : undefined
+                icon.name: "list-add-symbolic"
+                onClicked: Plasmoid.internalAction("add widgets").trigger()
+            }
+
+            property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin + (isHorizontal ? currentLayout.toolBoxSize : 0)
+            property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin + (isHorizontal ? 0 : currentLayout.toolBoxSize)
+
     // BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
-            width: root.width - x - parent.anchors.leftMargin - parent.anchors.rightMargin - (isHorizontal ? toolBoxSize : 0)
-            height: root.height - y - parent.anchors.topMargin - parent.anchors.bottomMargin - (isHorizontal ? 0 : toolBoxSize)
+            width: root.width - horizontalDisplacement
+            height: root.height - verticalDisplacement
 
             Item {
                 id: lastSpacer
