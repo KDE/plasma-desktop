@@ -10,16 +10,14 @@
 
 #include <QList>
 #include <QObject>
+#include <QPointer>
 #include <QVariantHash>
+
+#include <Plasma/Corona>
 
 #include "folderplugin_private_export.h"
 
 class QTimer;
-
-namespace Plasma
-{
-class Corona;
-}
 
 class FOLDERPLUGIN_TESTS_EXPORT ScreenMapper : public QObject
 {
@@ -94,7 +92,7 @@ private:
     QHash<std::pair<int /* screen */, QString /* activity ID */>, QSet<QUrl>> m_itemsOnDisabledScreensMap;
     QHash<QUrl, QList<std::pair<int /* screen */, QString /* activity ID */>>> m_screensPerPath; // screens per registered path
     QList<std::pair<int /* screen */, QString /* activity ID */>> m_availableScreens;
-    Plasma::Corona *m_corona = nullptr;
+    QPointer<Plasma::Corona> m_corona;
     QTimer *const m_screenMappingChangedTimer;
     bool m_sharedDesktops = false; // all screens share the same desktops, disabling the screen mapping
 
