@@ -33,13 +33,13 @@ PlasmaCore.ToolTipArea {
     LayoutMirroring.enabled: (Qt.application.layoutDirection == Qt.RightToLeft)
     LayoutMirroring.childrenInherit: (Qt.application.layoutDirection == Qt.RightToLeft)
 
-    readonly property var m: model
+    required property var model
+    required property int index
 
     readonly property int pid: model.AppPid
     readonly property string appName: model.AppName
     readonly property string appId: model.AppId.replace(/\.desktop/, '')
     property bool toolTipOpen: false
-    property int itemIndex: index
     property bool inPopup: false
     property bool isWindow: model.IsWindow
     property int childCount: model.ChildCount
@@ -148,7 +148,7 @@ PlasmaCore.ToolTipArea {
         previousChildCount = childCount;
     }
 
-    onItemIndexChanged: {
+    onIndexChanged: {
         hideToolTip();
 
         if (!inPopup && !tasks.vertical
@@ -195,18 +195,18 @@ PlasmaCore.ToolTipArea {
     Keys.onUpPressed: Keys.onLeftPressed(event)
     Keys.onDownPressed: Keys.onRightPressed(event)
     Keys.onLeftPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
-        tasksModel.move(task.itemIndex, task.itemIndex - 1);
+        tasksModel.move(task.index, task.index - 1);
     } else {
         event.accepted = false;
     }
     Keys.onRightPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
-        tasksModel.move(task.itemIndex, task.itemIndex + 1);
+        tasksModel.move(task.index, task.index + 1);
     } else {
         event.accepted = false;
     }
 
     function modelIndex() {
-        return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex, index)
+        return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.index, index)
             : tasksModel.makeModelIndex(index));
     }
 
@@ -261,14 +261,14 @@ PlasmaCore.ToolTipArea {
 
     // Will also be called in activateTaskAtIndex(index)
     function updateMainItemBindings() {
-        if ((mainItem.parentTask === task && mainItem.rootIndex.row === task.itemIndex) || (tasks.toolTipOpenedByClick === null && !task.active) || (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task)) {
+        if ((mainItem.parentTask === task && mainItem.rootIndex.row === task.index) || (tasks.toolTipOpenedByClick === null && !task.active) || (tasks.toolTipOpenedByClick !== null && tasks.toolTipOpenedByClick !== task)) {
             return;
         }
 
         mainItem.blockingUpdates = (mainItem.isGroup !== model.IsGroupParent); // BUG 464597 Force unload the previous component
 
         mainItem.parentTask = task;
-        mainItem.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
+        mainItem.rootIndex = tasksModel.makeModelIndex(index, -1);
 
         mainItem.appName = Qt.binding(() => model.AppName);
         mainItem.pidParent = Qt.binding(() => model.AppPid);

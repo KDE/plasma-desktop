@@ -23,8 +23,8 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
         var task = tasks.taskList.children[i];
         var modelIndex = task.modelIndex(i);
 
-        if (!task.m.IsLauncher && !task.m.IsStartup) {
-            if (task.m.IsGroupParent) {
+        if (!task.model.IsLauncher && !task.model.IsStartup) {
+            if (task.model.IsGroupParent) {
                 if (task == anchor) { // If the anchor is a group parent, collect only windows within the group.
                     taskIndexList = [];
                 }
@@ -41,7 +41,7 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
                     break;
                 }
             } else {
-                if (!wheelSkipMinimized || !task.m.IsHidden) {
+                if (!wheelSkipMinimized || !task.model.IsHidden) {
                     taskIndexList.push(modelIndex);
                 }
             }
@@ -99,7 +99,7 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks) {
 
             // Build list of child tasks and get stacking order data for them
             for (let i = 0; i < tasks.tasksModel.rowCount(task.modelIndex(index)); ++i) {
-                const childTaskModelIndex = tasks.tasksModel.makeModelIndex(task.itemIndex, i);
+                const childTaskModelIndex = tasks.tasksModel.makeModelIndex(task.index, i);
                 childTaskList.push(childTaskModelIndex);
                 const stacking = tasks.tasksModel.data(childTaskModelIndex, TaskManager.AbstractTasksModel.StackingOrder);
                 if (stacking > highestStacking) {

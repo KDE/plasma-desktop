@@ -25,7 +25,7 @@ DropArea {
 
     function insertIndexAt(above, x, y) {
         if (above) {
-            return above.itemIndex;
+            return above.index;
         } else {
             var distance = tasks.vertical ? x : y;
             var step = tasks.vertical ? LayoutManager.taskWidth() : LayoutManager.taskHeight();
@@ -76,7 +76,7 @@ DropArea {
         // the movement direction has reversed, establishing user intent to
         // move back.
         if (!Plasmoid.configuration.separateLaunchers && tasks.dragSource != null
-                && tasks.dragSource.m.IsLauncher && !above.m.IsLauncher
+                && tasks.dragSource.model.IsLauncher && !above.model.IsLauncher
                 && above === ignoredItem) {
             return;
         } else {
@@ -91,12 +91,12 @@ DropArea {
 
             var insertAt = insertIndexAt(above, event.x, event.y);
 
-            if (tasks.dragSource !== above && tasks.dragSource.itemIndex !== insertAt) {
+            if (tasks.dragSource !== above && tasks.dragSource.index !== insertAt) {
                 if (!!tasks.groupDialog) {
-                    tasksModel.move(tasks.dragSource.itemIndex, insertAt,
-                        tasksModel.makeModelIndex(tasks.groupDialog.visualParent.itemIndex));
+                    tasksModel.move(tasks.dragSource.index, insertAt,
+                        tasksModel.makeModelIndex(tasks.groupDialog.visualParent.index));
                 } else {
-                    tasksModel.move(tasks.dragSource.itemIndex, insertAt);
+                    tasksModel.move(tasks.dragSource.index, insertAt);
                 }
 
                 ignoredItem = above;
@@ -161,9 +161,9 @@ DropArea {
         repeat: false
 
         onTriggered: {
-            if (parent.hoveredItem.m.IsGroupParent) {
+            if (parent.hoveredItem.model.IsGroupParent) {
                 TaskTools.createGroupDialog(parent.hoveredItem, tasks);
-            } else if (!parent.hoveredItem.m.IsLauncher) {
+            } else if (!parent.hoveredItem.model.IsLauncher) {
                 tasksModel.requestActivate(parent.hoveredItem.modelIndex());
             }
         }

@@ -111,8 +111,8 @@ PlasmoidItem {
         for (var i = 0; i < taskItems.length - 1; ++i) {
             var task = taskItems[i];
 
-            if (!task.m.IsLauncher && !task.m.IsStartup) {
-                tasks.tasksModel.requestPublishDelegateGeometry(tasks.tasksModel.makeModelIndex(task.itemIndex),
+            if (!task.model.IsLauncher && !task.model.IsStartup) {
+                tasks.tasksModel.requestPublishDelegateGeometry(tasks.tasksModel.makeModelIndex(task.index),
                     backend.globalRect(task), task);
             }
         }
@@ -131,7 +131,9 @@ PlasmoidItem {
             for (var i = 0; i < taskRepeater.count; ++i) {
                 var item = taskRepeater.itemAt(i);
 
-                if (item && item.m.IsStartup && item.m.HasLauncher) {
+                // During destruction required properties such as item.model can go null for a while,
+                // so in paths that can trigger on those moments, they need to be guarded
+                if (item?.model?.IsStartup && item.model.HasLauncher) {
                     ++startupsWithLaunchers;
                 }
             }
@@ -477,7 +479,7 @@ PlasmoidItem {
                     onItemAdded: taskList.layout()
                     onItemRemoved: {
                         if (tasks.containsMouse && index != taskRepeater.count &&
-                            item.m.WinIdList.length > 0 &&
+                            item.model.WinIdList.length > 0 &&
                             taskClosedWithMouseMiddleButton.indexOf(item.winIdList[0]) > -1) {
                             needLayoutRefresh = true;
                         } else {

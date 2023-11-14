@@ -40,7 +40,7 @@ PlasmaCore.Dialog {
             return;
         }
         for (let i = 0; i < groupListView.count; i++) {
-            if (tasksModel.makeModelIndex(visualParent.itemIndex, i) === tasksModel.activeTask) {
+            if (tasksModel.makeModelIndex(visualParent.index, i) === tasksModel.activeTask) {
                 groupListView.positionViewAtIndex(i, ListView.Contain); // Prevent visual glitches
                 groupListView.currentIndex = i;
                 return;
@@ -67,7 +67,7 @@ PlasmaCore.Dialog {
                 return;
             }
 
-            const parentModelIndex = tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex);
+            const parentModelIndex = tasksModel.makeModelIndex(groupDialog.visualParent.index);
             const status = tasksModel.move(groupListView.currentIndex, insertAt, parentModelIndex);
             if (!status) {
                 return;
@@ -99,7 +99,7 @@ PlasmaCore.Dialog {
                     property real maxTextWidth: 0
 
                     model: tasksModel
-                    rootIndex: tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex)
+                    rootIndex: tasksModel.makeModelIndex(groupDialog.visualParent.index)
                     delegate: Task {
                         width: groupListView.width
                         visible: true
