@@ -347,7 +347,7 @@ Item {
     Item {
         id: containmentParent
         anchors.centerIn: isOpaque ? floatingOpaqueItem : floatingTranslucentItem
-        width: root.verticalPanel ? panel.thickness : root.width - fixedLeftFloatingPadding - fixedRightFloatingPadding
-        height: root.verticalPanel ? root.height - fixedBottomFloatingPadding - fixedTopFloatingPadding : panel.thickness
+        width: root.verticalPanel ? panel.thickness : root.width - root.floatingness * (fixedLeftFloatingPadding + fixedRightFloatingPadding)
+        height: root.verticalPanel ? root.height - root.floatingness * (fixedBottomFloatingPadding + fixedTopFloatingPadding) : panel.thickness
     }
 }
