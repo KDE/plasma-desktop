@@ -7,9 +7,10 @@
 #include "positioner.h"
 #include "foldermodel.h"
 
-#include <QTimer>
-
 #include <cstdlib>
+#include <span>
+
+#include <QTimer>
 
 Positioner::Positioner(QObject *parent)
     : QAbstractItemModel(parent)
@@ -790,9 +791,9 @@ void Positioner::applyPositions()
     m_proxyToSource.clear();
     m_sourceToProxy.clear();
 
-    const QStringList &positions = m_positions.mid(2);
+    const std::span positions{std::next(m_positions.cbegin(), 2), m_positions.cend()};
 
-    if (positions.count() % 3 != 0) {
+    if (positions.size() % 3 != 0) {
         return;
     }
 
@@ -811,16 +812,16 @@ void Positioner::applyPositions()
     int offset = 0;
 
     // Restore positions for items that still fit.
-    for (int i = 0; i < positions.count() / 3; ++i) {
+    for (std::size_t i = 0; i < positions.size() / 3; ++i) {
         offset = i * 3;
-        pos = positions.at(offset + 2).toInt(&ok);
+        pos = positions[offset + 2].toInt(&ok);
         if (!ok) {
             return;
         }
 
         if (pos <= m_perStripe) {
-            name = positions.at(offset);
-            stripe = positions.at(offset + 1).toInt(&ok);
+            name = positions[offset];
+            stripe = positions[offset + 1].toInt(&ok);
             if (!ok) {
                 return;
             }
@@ -843,15 +844,15 @@ void Positioner::applyPositions()
     }
 
     // Find new positions for items that didn't fit.
-    for (int i = 0; i < positions.count() / 3; ++i) {
+    for (std::size_t i = 0; i < positions.size() / 3; ++i) {
         offset = i * 3;
-        pos = positions.at(offset + 2).toInt(&ok);
+        pos = positions[offset + 2].toInt(&ok);
         if (!ok) {
             return;
         }
 
         if (pos > m_perStripe) {
-            name = positions.at(offset);
+            name = positions[offset];
 
             if (!sourceIndices.contains(name)) {
                 continue;
