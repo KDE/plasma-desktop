@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-12 01:38+0000\n"
+"POT-Creation-Date: 2023-11-14 01:39+0000\n"
 "PO-Revision-Date: 2023-11-11 07:19\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -283,132 +283,132 @@ msgid "Position"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:136
-#: contents/configuration/PanelConfiguration.qml:282
+#: contents/configuration/PanelConfiguration.qml:285
 msgid "Top"
 msgstr "靠上"
 
 #: contents/configuration/PanelConfiguration.qml:137
-#: contents/configuration/PanelConfiguration.qml:284
+#: contents/configuration/PanelConfiguration.qml:287
 msgid "Right"
 msgstr "靠右"
 
 #: contents/configuration/PanelConfiguration.qml:138
-#: contents/configuration/PanelConfiguration.qml:282
+#: contents/configuration/PanelConfiguration.qml:285
 msgid "Left"
 msgstr "靠左"
 
 #: contents/configuration/PanelConfiguration.qml:139
-#: contents/configuration/PanelConfiguration.qml:284
+#: contents/configuration/PanelConfiguration.qml:287
 msgid "Bottom"
 msgstr "靠下"
 
-#: contents/configuration/PanelConfiguration.qml:155
+#: contents/configuration/PanelConfiguration.qml:156
 msgid "Set Position..."
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:220
+#: contents/configuration/PanelConfiguration.qml:221
 msgid "Alignment"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:283
+#: contents/configuration/PanelConfiguration.qml:286
 msgid "Center"
 msgstr "居中"
 
-#: contents/configuration/PanelConfiguration.qml:306
+#: contents/configuration/PanelConfiguration.qml:309
 msgid "Length"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:322
+#: contents/configuration/PanelConfiguration.qml:327
 msgid "Fill height"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:322
+#: contents/configuration/PanelConfiguration.qml:327
 msgid "Fill width"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:323
+#: contents/configuration/PanelConfiguration.qml:328
 msgid "Fit content"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:324
+#: contents/configuration/PanelConfiguration.qml:329
 msgid "Custom"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:360
+#: contents/configuration/PanelConfiguration.qml:365
 msgid "Visibility"
 msgstr "显示/隐藏"
 
-#: contents/configuration/PanelConfiguration.qml:371
+#: contents/configuration/PanelConfiguration.qml:376
 msgid "Auto hide"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:389
+#: contents/configuration/PanelConfiguration.qml:394
 msgid "Opacity"
 msgstr "不透明度"
 
-#: contents/configuration/PanelConfiguration.qml:402
+#: contents/configuration/PanelConfiguration.qml:407
 msgid "Adaptive"
 msgstr "自适应"
 
-#: contents/configuration/PanelConfiguration.qml:403
+#: contents/configuration/PanelConfiguration.qml:408
 msgid "Opaque"
 msgstr "不透明"
 
-#: contents/configuration/PanelConfiguration.qml:404
+#: contents/configuration/PanelConfiguration.qml:409
 msgid "Translucent"
 msgstr "半透明"
 
-#: contents/configuration/PanelConfiguration.qml:426
+#: contents/configuration/PanelConfiguration.qml:433
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:454
+#: contents/configuration/PanelConfiguration.qml:461
 msgid "Panel Width:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:454
+#: contents/configuration/PanelConfiguration.qml:461
 msgid "Height:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:488
+#: contents/configuration/PanelConfiguration.qml:495
 msgid "Focus shortcut:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:498
+#: contents/configuration/PanelConfiguration.qml:505
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按下此键盘快捷键以移动焦点到面板"
 
-#: contents/configuration/PanelConfiguration.qml:514
+#: contents/configuration/PanelConfiguration.qml:521
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:517
+#: contents/configuration/PanelConfiguration.qml:524
 msgid "Remove this panel; this action is undo-able"
 msgstr "移除此面板；此操作不可撤销"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:29
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
 msgstr "拖动以更改最大高度。"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:29
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum width."
 msgstr "拖动以更改最大宽度。"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:29
 #: contents/configuration/panelconfiguration/Ruler.qml:30
+#: contents/configuration/panelconfiguration/Ruler.qml:31
 msgid "Double click to reset."
 msgstr "双击以重置。"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
+#: contents/configuration/panelconfiguration/Ruler.qml:31
 msgid "Drag to change minimum height."
 msgstr "拖动以更改最小高度。"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
+#: contents/configuration/panelconfiguration/Ruler.qml:31
 msgid "Drag to change minimum width."
 msgstr "拖动以更改最小宽度。"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:79
+#: contents/configuration/panelconfiguration/Ruler.qml:78
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
