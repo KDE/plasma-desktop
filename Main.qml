@@ -328,14 +328,14 @@ Item {
                 }
             }
             Component {
-                id: keyboard
+                id: virtualkeyboard
                 VirtualKeyboard {}
             }
             Component {
-                id: keyboardWayland
+                id: virtualkeyboardWayland
                 VirtualKeyboard_wayland {}
             }
-            sourceComponent: Qt.platform.pluginName.includes("wayland") ? keyboardWayland : keyboard
+            sourceComponent: Qt.platform.pluginName.includes("wayland") ? virtualkeyboardWayland : virtualkeyboard
             anchors {
                 left: parent.left
                 right: parent.right
