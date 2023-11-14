@@ -281,6 +281,7 @@ ColumnLayout {
                 property int previewIndex: highlightedIndex > -1 ? highlightedIndex : currentIndex
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: alignmentRepresentation.width
+                Layout.maximumWidth: alignmentRepresentation.width
                 model: [
                     dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Top") : i18nd("plasma_shell_org.kde.plasma.desktop", "Left"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Center"),
@@ -323,6 +324,7 @@ ColumnLayout {
                 property int previewIndex: highlightedIndex > -1 ? highlightedIndex : currentIndex
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: lengthRepresentation.width
+                Layout.maximumWidth: lengthRepresentation.width
                 model: [
                     dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Fill height") : i18nd("plasma_shell_org.kde.plasma.desktop", "Fill width"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Fit content"),
@@ -410,6 +412,7 @@ ColumnLayout {
                 ]
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: opacityRepresentation.width
+                Layout.maximumWidth: opacityRepresentation.width
                 currentIndex: (panel.opacityMode === Panel.Global.Adaptive ? 0 :
                                 panel.opacityMode === Panel.Global.Opaque ? 1 : 2)
                 onActivated: (index) => {
