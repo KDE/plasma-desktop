@@ -791,6 +791,8 @@ void Positioner::applyPositions()
     m_proxyToSource.clear();
     m_sourceToProxy.clear();
 
+    // The assertion makes sure std::span is faster than QList::mid
+    static_assert(!std::is_trivially_copy_assignable_v<decltype(m_positions)::value_type>);
     const std::span positions{std::next(m_positions.cbegin(), 2), m_positions.cend()};
 
     if (positions.size() % 3 != 0) {
