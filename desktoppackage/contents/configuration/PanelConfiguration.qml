@@ -441,7 +441,7 @@ ColumnLayout {
                 id: floatingSwitch
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumHeight: transparencyBox.height
-                i18nd("plasma_shell_org.kde.plasma.desktop", "Floating")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating")
                 Component.onCompleted: checked = panel.floating
                 onCheckedChanged: panel.floating = checked
             }
