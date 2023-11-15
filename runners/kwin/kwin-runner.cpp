@@ -16,12 +16,11 @@
 K_PLUGIN_CLASS_WITH_JSON(KWinRunner, "plasma-runner-kwin.json")
 
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
-static const QString s_keyword = QStringLiteral("KWin");
+static const QStringList s_keywords = {QStringLiteral("kwin"), QStringLiteral("debug"), QStringLiteral("console")};
 
 KWinRunner::KWinRunner(QObject *parent, const KPluginMetaData &metaData)
     : AbstractRunner(parent, metaData)
 {
-    setObjectName(s_keyword);
     QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_kwinService, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
     connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &KWinRunner::checkAvailability);
     checkAvailability(QString(), QString(), QString());
@@ -29,10 +28,15 @@ KWinRunner::KWinRunner(QObject *parent, const KPluginMetaData &metaData)
 
 void KWinRunner::match(RunnerContext &context)
 {
-    if (m_enabled && context.query().compare(s_keyword, Qt::CaseInsensitive) == 0) {
+    const bool containsAnyKeyword = std::any_of(s_keywords.begin(), s_keywords.end(), [&context](const QString &keyword) {
+        return context.query().contains(keyword, Qt::CaseInsensitive);
+    });
+    if (m_enabled && containsAnyKeyword) {
         QueryMatch match(this);
         match.setId(QStringLiteral("kwin"));
-        match.setCategoryRelevance(QueryMatch::CategoryRelevance::Highest);
+        if (context.query().contains(s_keywords.first(), Qt::CaseInsensitive)) {
+            match.setCategoryRelevance(QueryMatch::CategoryRelevance::Highest);
+        }
         match.setIconName(QStringLiteral("kwin"));
         match.setText(i18n("Open KWin debug console"));
         match.setRelevance(1.0);
@@ -61,7 +65,7 @@ void KWinRunner::checkAvailability(const QString &name, const QString & /*oldOwn
         m_enabled = enabled;
 
         if (m_enabled) {
-            addSyntax(s_keyword, i18n("Opens the KWin (Plasma Window Manager) debug console."));
+            RunnerSyntax(s_keywords, i18n("Opens the KWin (Plasma Window Manager) debug console."));
         } else {
             setSyntaxes(QList<RunnerSyntax>());
         }
