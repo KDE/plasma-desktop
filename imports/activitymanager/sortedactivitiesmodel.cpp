@@ -130,7 +130,7 @@ public:
             //          << "last screen is" << lastScreen
             //          ;
 
-            if (processed && newForActivity[activity][0] != QLatin1Char{'#'})
+            if (processed && !newForActivity[activity].startsWith(QLatin1Char{'#'}))
                 continue;
 
             // Marking the current activity as processed
