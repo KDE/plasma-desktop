@@ -14,12 +14,10 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kcmutils as KCM
 
-Kirigami.FormLayout {
+KCM.SimpleKCM {
     id: configGeneral
-
-    anchors.left: parent.left
-    anchors.right: parent.right
 
     property bool isDash: (Plasmoid.pluginName === "org.kde.plasma.kickerdash")
 
@@ -39,192 +37,196 @@ Kirigami.FormLayout {
     property alias cfg_useExtraRunners: useExtraRunners.checked
     property alias cfg_alignResultsToBottom: alignResultsToBottom.checked
 
+    Kirigami.FormLayout {
+        anchors.left: parent.left
+        anchors.right: parent.right
 
-    Button {
-        id: iconButton
+        Button {
+            id: iconButton
 
-        Kirigami.FormData.label: i18n("Icon:")
+            Kirigami.FormData.label: i18n("Icon:")
 
-        implicitWidth: previewFrame.width + Kirigami.Units.smallSpacing * 2
-        implicitHeight: previewFrame.height + Kirigami.Units.smallSpacing * 2
+            implicitWidth: previewFrame.width + Kirigami.Units.smallSpacing * 2
+            implicitHeight: previewFrame.height + Kirigami.Units.smallSpacing * 2
 
-        // Just to provide some visual feedback when dragging;
-        // cannot have checked without checkable enabled
-        checkable: true
-        checked: dropArea.containsAcceptableDrag
+            // Just to provide some visual feedback when dragging;
+            // cannot have checked without checkable enabled
+            checkable: true
+            checked: dropArea.containsAcceptableDrag
 
-        onPressed: iconMenu.opened ? iconMenu.close() : iconMenu.open()
+            onPressed: iconMenu.opened ? iconMenu.close() : iconMenu.open()
 
-        DragDrop.DropArea {
-            id: dropArea
+            DragDrop.DropArea {
+                id: dropArea
 
-            property bool containsAcceptableDrag: false
+                property bool containsAcceptableDrag: false
 
-            anchors.fill: parent
+                anchors.fill: parent
 
-            onDragEnter: {
-                // Cannot use string operations (e.g. indexOf()) on "url" basic type.
-                var urlString = event.mimeData.url.toString();
+                onDragEnter: {
+                    // Cannot use string operations (e.g. indexOf()) on "url" basic type.
+                    var urlString = event.mimeData.url.toString();
 
-                // This list is also hardcoded in KIconDialog.
-                var extensions = [".png", ".xpm", ".svg", ".svgz"];
-                containsAcceptableDrag = urlString.indexOf("file:///") === 0 && extensions.some(function (extension) {
-                    return urlString.indexOf(extension) === urlString.length - extension.length; // "endsWith"
-                });
+                    // This list is also hardcoded in KIconDialog.
+                    var extensions = [".png", ".xpm", ".svg", ".svgz"];
+                    containsAcceptableDrag = urlString.indexOf("file:///") === 0 && extensions.some(function (extension) {
+                        return urlString.indexOf(extension) === urlString.length - extension.length; // "endsWith"
+                    });
 
-                if (!containsAcceptableDrag) {
-                    event.ignore();
+                    if (!containsAcceptableDrag) {
+                        event.ignore();
+                    }
+                }
+                onDragLeave: containsAcceptableDrag = false
+
+                onDrop: {
+                    if (containsAcceptableDrag) {
+                        // Strip file:// prefix, we already verified in onDragEnter that we have only local URLs.
+                        iconDialog.setCustomButtonImage(event.mimeData.url.toString().substr("file://".length));
+                    }
+                    containsAcceptableDrag = false;
                 }
             }
-            onDragLeave: containsAcceptableDrag = false
 
-            onDrop: {
-                if (containsAcceptableDrag) {
-                    // Strip file:// prefix, we already verified in onDragEnter that we have only local URLs.
-                    iconDialog.setCustomButtonImage(event.mimeData.url.toString().substr("file://".length));
+            KIconThemes.IconDialog {
+                id: iconDialog
+
+                function setCustomButtonImage(image) {
+                    configGeneral.cfg_customButtonImage = image || configGeneral.cfg_icon || "start-here-kde-symbolic"
+                    configGeneral.cfg_useCustomButtonImage = true;
                 }
-                containsAcceptableDrag = false;
-            }
-        }
 
-        KIconThemes.IconDialog {
-            id: iconDialog
-
-            function setCustomButtonImage(image) {
-                configGeneral.cfg_customButtonImage = image || configGeneral.cfg_icon || "start-here-kde-symbolic"
-                configGeneral.cfg_useCustomButtonImage = true;
+                onIconNameChanged: setCustomButtonImage(iconName);
             }
 
-            onIconNameChanged: setCustomButtonImage(iconName);
-        }
-
-        KSvg.FrameSvgItem {
-            id: previewFrame
-            anchors.centerIn: parent
-            imagePath: Plasmoid.location === PlasmaCore.Types.Vertical || Plasmoid.location === PlasmaCore.Types.Horizontal
-                    ? "widgets/panel-background" : "widgets/background"
-            width: Kirigami.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
-            height: Kirigami.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
-
-            Kirigami.Icon {
+            KSvg.FrameSvgItem {
+                id: previewFrame
                 anchors.centerIn: parent
-                width: Kirigami.Units.iconSizes.large
-                height: width
-                source: configGeneral.cfg_useCustomButtonImage ? configGeneral.cfg_customButtonImage : configGeneral.cfg_icon
+                imagePath: Plasmoid.location === PlasmaCore.Types.Vertical || Plasmoid.location === PlasmaCore.Types.Horizontal
+                        ? "widgets/panel-background" : "widgets/background"
+                width: Kirigami.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
+                height: Kirigami.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
+
+                Kirigami.Icon {
+                    anchors.centerIn: parent
+                    width: Kirigami.Units.iconSizes.large
+                    height: width
+                    source: configGeneral.cfg_useCustomButtonImage ? configGeneral.cfg_customButtonImage : configGeneral.cfg_icon
+                }
             }
-        }
 
-        Menu {
-            id: iconMenu
+            Menu {
+                id: iconMenu
 
-            // Appear below the button
-            y: +parent.height
+                // Appear below the button
+                y: +parent.height
 
-            onClosed: iconButton.checked = false;
+                onClosed: iconButton.checked = false;
 
-            MenuItem {
-                text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
-                icon.name: "document-open-folder"
-                onClicked: iconDialog.open()
-            }
-            MenuItem {
-                text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
-                icon.name: "edit-clear"
-                onClicked: {
-                    configGeneral.cfg_icon = "start-here-kde-symbolic"
-                    configGeneral.cfg_useCustomButtonImage = false
+                MenuItem {
+                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
+                    icon.name: "document-open-folder"
+                    onClicked: iconDialog.open()
+                }
+                MenuItem {
+                    text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
+                    icon.name: "edit-clear"
+                    onClicked: {
+                        configGeneral.cfg_icon = "start-here-kde-symbolic"
+                        configGeneral.cfg_useCustomButtonImage = false
+                    }
                 }
             }
         }
-    }
 
 
-    Item {
-        Kirigami.FormData.isSection: true
-    }
+        Item {
+            Kirigami.FormData.isSection: true
+        }
 
-    ComboBox {
-        id: appNameFormat
+        ComboBox {
+            id: appNameFormat
 
-        Kirigami.FormData.label: i18n("Show applications as:")
+            Kirigami.FormData.label: i18n("Show applications as:")
 
-        model: [i18n("Name only"), i18n("Description only"), i18n("Name (Description)"), i18n("Description (Name)")]
-    }
+            model: [i18n("Name only"), i18n("Description only"), i18n("Name (Description)"), i18n("Description (Name)")]
+        }
 
-    Item {
-        Kirigami.FormData.isSection: true
-    }
+        Item {
+            Kirigami.FormData.isSection: true
+        }
 
-    CheckBox {
-        id: alphaSort
+        CheckBox {
+            id: alphaSort
 
-        Kirigami.FormData.label: i18n("Behavior:")
+            Kirigami.FormData.label: i18n("Behavior:")
 
-        text: i18n("Sort applications alphabetically")
-    }
+            text: i18n("Sort applications alphabetically")
+        }
 
-    CheckBox {
-        id: limitDepth
+        CheckBox {
+            id: limitDepth
 
-        visible: !isDash
+            visible: !isDash
 
-        text: i18n("Flatten sub-menus to a single level")
-    }
+            text: i18n("Flatten sub-menus to a single level")
+        }
 
-    CheckBox {
-        id: showIconsRootLevel
+        CheckBox {
+            id: showIconsRootLevel
 
-        visible: !configGeneral.isDash
+            visible: !configGeneral.isDash
 
-        text: i18n("Show icons on the root level of the menu")
-    }
+            text: i18n("Show icons on the root level of the menu")
+        }
 
-    Item {
-        Kirigami.FormData.isSection: true
-    }
+        Item {
+            Kirigami.FormData.isSection: true
+        }
 
-    CheckBox {
-        id: showRecentApps
+        CheckBox {
+            id: showRecentApps
 
-        Kirigami.FormData.label: i18n("Show categories:")
+            Kirigami.FormData.label: i18n("Show categories:")
 
-        text: recentOrdering.currentIndex == 0
-                ? i18n("Recent applications")
-                : i18n("Often used applications")
-    }
+            text: recentOrdering.currentIndex == 0
+                    ? i18n("Recent applications")
+                    : i18n("Often used applications")
+        }
 
-    CheckBox {
-        id: showRecentDocs
+        CheckBox {
+            id: showRecentDocs
 
-        text: recentOrdering.currentIndex == 0
-                ? i18n("Recent files")
-                : i18n("Often used files")
-    }
+            text: recentOrdering.currentIndex == 0
+                    ? i18n("Recent files")
+                    : i18n("Often used files")
+        }
 
-    ComboBox {
-        id: recentOrdering
+        ComboBox {
+            id: recentOrdering
 
-        Kirigami.FormData.label: i18n("Sort items in categories by:")
-        model: [i18nc("@item:inlistbox Sort items in categories by [Recently used | Often used]", "Recently used"), i18nc("@item:inlistbox Sort items in categories by [Recently used | Ofetn used]", "Often used")]
-    }
+            Kirigami.FormData.label: i18n("Sort items in categories by:")
+            model: [i18nc("@item:inlistbox Sort items in categories by [Recently used | Often used]", "Recently used"), i18nc("@item:inlistbox Sort items in categories by [Recently used | Ofetn used]", "Often used")]
+        }
 
-    Item {
-        Kirigami.FormData.isSection: true
-    }
+        Item {
+            Kirigami.FormData.isSection: true
+        }
 
-    CheckBox {
-        id: useExtraRunners
+        CheckBox {
+            id: useExtraRunners
 
-        Kirigami.FormData.label: i18n("Search:")
+            Kirigami.FormData.label: i18n("Search:")
 
-        text: i18n("Expand search to bookmarks, files and emails")
-    }
+            text: i18n("Expand search to bookmarks, files and emails")
+        }
 
-    CheckBox {
-        id: alignResultsToBottom
+        CheckBox {
+            id: alignResultsToBottom
 
-        visible: !configGeneral.isDash
+            visible: !configGeneral.isDash
 
-        text: i18n("Align search results to bottom")
+            text: i18n("Align search results to bottom")
+        }
     }
 }

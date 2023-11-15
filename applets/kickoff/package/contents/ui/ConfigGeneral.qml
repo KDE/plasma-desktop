@@ -18,11 +18,11 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kcmutils as KCM
 
 import "code/tools.js" as Tools
 
-ColumnLayout {
-
+KCM.SimpleKCM {
     property string cfg_menuLabel: menuLabel.text
     property string cfg_icon: Plasmoid.configuration.icon
     property bool cfg_paneSwap: Plasmoid.configuration.paneSwap
@@ -300,9 +300,5 @@ ColumnLayout {
                 cfg_systemFavorites = checkedButton.actions
             }
         }
-    }
-
-    Item {
-        Layout.fillHeight: true
     }
 }

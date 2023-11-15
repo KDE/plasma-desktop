@@ -11,13 +11,11 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kcmutils as KCM
 
 import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
 
-Item {
-    width: childrenRect.width
-    height: childrenRect.height
-
+KCM.SimpleKCM {
     property alias cfg_groupingStrategy: groupingStrategy.currentIndex
     property alias cfg_groupedTaskVisualization: groupedTaskVisualization.currentIndex
     property alias cfg_groupPopups: groupPopups.checked
