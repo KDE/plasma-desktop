@@ -23,4 +23,5 @@ set_property(TARGET kwindevices PROPERTY POSITION_INDEPENDENT_CODE ON)
 target_link_libraries(kwindevices
     Qt::Core
     Qt::DBus
+    Qt::Gui
 )
