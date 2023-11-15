@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 01:39+0000\n"
-"PO-Revision-Date: 2023-09-18 11:49-0300\n"
+"PO-Revision-Date: 2023-11-14 14:07-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -286,7 +286,7 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:132
 msgid "Position"
-msgstr ""
+msgstr "Posição"
 
 #: contents/configuration/PanelConfiguration.qml:136
 #: contents/configuration/PanelConfiguration.qml:285
@@ -310,13 +310,11 @@ msgstr "Inferior"
 
 #: contents/configuration/PanelConfiguration.qml:156
 msgid "Set Position..."
-msgstr ""
+msgstr "Definir posição..."
 
 #: contents/configuration/PanelConfiguration.qml:221
-#, fuzzy
-#| msgid "Panel Alignment"
 msgid "Alignment"
-msgstr "Alinhamento do painel"
+msgstr "Alinhamento"
 
 #: contents/configuration/PanelConfiguration.qml:286
 msgid "Center"
@@ -324,43 +322,33 @@ msgstr "Centro"
 
 #: contents/configuration/PanelConfiguration.qml:309
 msgid "Length"
-msgstr ""
+msgstr "Comprimento"
 
 #: contents/configuration/PanelConfiguration.qml:327
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Altura do painel:"
+msgstr "Preencher altura"
 
 #: contents/configuration/PanelConfiguration.qml:327
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Largura do painel:"
+msgstr "Preencher largura"
 
 #: contents/configuration/PanelConfiguration.qml:328
 msgid "Fit content"
-msgstr ""
+msgstr "Preencher conteúdo"
 
 #: contents/configuration/PanelConfiguration.qml:329
 msgid "Custom"
-msgstr ""
+msgstr "Personalizado"
 
 #: contents/configuration/PanelConfiguration.qml:365
-#, fuzzy
-#| msgid "Visibility"
 msgid "Visibility"
 msgstr "Visibilidade"
 
 #: contents/configuration/PanelConfiguration.qml:376
-#, fuzzy
-#| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "Ocultar automaticamente"
 
 #: contents/configuration/PanelConfiguration.qml:394
-#, fuzzy
-#| msgid "Opacity"
 msgid "Opacity"
 msgstr "Opacidade"
 
@@ -369,32 +357,24 @@ msgid "Adaptive"
 msgstr "Adaptativo"
 
 #: contents/configuration/PanelConfiguration.qml:408
-#, fuzzy
-#| msgid "Opaque"
 msgid "Opaque"
 msgstr "Opaco"
 
 #: contents/configuration/PanelConfiguration.qml:409
-#, fuzzy
-#| msgid "Translucent"
 msgid "Translucent"
 msgstr "Transparente"
 
 #: contents/configuration/PanelConfiguration.qml:433
 msgid "Style"
-msgstr ""
+msgstr "Estilo"
 
 #: contents/configuration/PanelConfiguration.qml:461
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Largura do painel:"
 
 #: contents/configuration/PanelConfiguration.qml:461
-#, fuzzy
-#| msgid "Height"
 msgid "Height:"
-msgstr "Altura"
+msgstr "Altura:"
 
 #: contents/configuration/PanelConfiguration.qml:495
 #, fuzzy
@@ -407,15 +387,13 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pressione este atalho de teclado para mover o foco para o painel"
 
 #: contents/configuration/PanelConfiguration.qml:521
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "Remover o painel"
+msgstr "Excluir painel"
 
 #: contents/configuration/PanelConfiguration.qml:524
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "Exclui este painel; esta ação não pode ser desfeita"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
