@@ -120,7 +120,7 @@ ColumnLayout {
 
     GridLayout {
         id: buttonGrid
-        rowSpacing: Kirigami.Units.smallSpacing
+        rowSpacing: Kirigami.Units.largeSpacing * 2
         columnSpacing: Kirigami.Units.smallSpacing
         uniformCellWidths: true
         Layout.bottomMargin: Kirigami.Units.smallSpacing
