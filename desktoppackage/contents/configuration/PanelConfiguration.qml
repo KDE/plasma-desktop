@@ -123,6 +123,7 @@ ColumnLayout {
         rowSpacing: Kirigami.Units.smallSpacing
         columnSpacing: Kirigami.Units.smallSpacing
         uniformCellWidths: true
+        Layout.bottomMargin: Kirigami.Units.smallSpacing
         Layout.fillWidth: true
         columns: 3
 
@@ -455,11 +456,6 @@ ColumnLayout {
             }
         }
 
-    }
-
-    RowLayout {
-        spacing: Kirigami.Units.smallSpacing
-        Layout.fillWidth: true
     }
 
     RowLayout {
