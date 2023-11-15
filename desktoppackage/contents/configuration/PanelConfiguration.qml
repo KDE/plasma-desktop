@@ -286,6 +286,7 @@ ColumnLayout {
                 property int previewIndex: highlightedIndex > -1 ? highlightedIndex : currentIndex
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: alignmentRepresentation.width
+                implicitContentWidthPolicy: PC3.ComboBox.WidestText
                 model: [
                     dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Top") : i18nd("plasma_shell_org.kde.plasma.desktop", "Left"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Center"),
@@ -329,6 +330,7 @@ ColumnLayout {
                 property int previewIndex: highlightedIndex > -1 ? highlightedIndex : currentIndex
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: lengthRepresentation.width
+                implicitContentWidthPolicy: PC3.ComboBox.WidestText
                 model: [
                     dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Fill height") : i18nd("plasma_shell_org.kde.plasma.desktop", "Fill width"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Fit content"),
@@ -405,13 +407,14 @@ ColumnLayout {
             PC3.ComboBox {
                 id: transparencyBox
                 property int previewIndex: popup.visible ? highlightedIndex : currentIndex
+                Layout.alignment: Qt.AlignHCenter
+                Layout.minimumWidth: opacityRepresentation.width
+                implicitContentWidthPolicy: PC3.ComboBox.WidestText
                 model: [
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Opaque"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Translucent")
                 ]
-                Layout.alignment: Qt.AlignHCenter
-                Layout.minimumWidth: opacityRepresentation.width
                 currentIndex: (panel.opacityMode === Panel.Global.Adaptive ? 0 :
                                 panel.opacityMode === Panel.Global.Opaque ? 1 : 2)
                 onActivated: (index) => {
