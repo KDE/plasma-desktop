@@ -5,7 +5,7 @@
 */
 
 import QtQuick
-import QtQuick.Layouts 1.0
+import QtQuick.Layouts
 import QtQuick.Controls 2.4 as QQC2
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -21,7 +21,6 @@ ColumnLayout {
     spacing: Kirigami.Units.largeSpacing * 2
 
     signal closeContextMenu
-    implicitWidth: Kirigami.Units.gridUnit * 27
 
     required property QtObject panelConfiguration
 
@@ -119,10 +118,15 @@ ColumnLayout {
         }
     }
 
-    RowLayout {
-        spacing: Kirigami.Units.smallSpacing
+    GridLayout {
+        id: buttonGrid
+        rowSpacing: Kirigami.Units.smallSpacing
+        columnSpacing: Kirigami.Units.smallSpacing
+        uniformCellWidths: true
         Layout.fillWidth: true
+        columns: 3
 
+        // position
         ColumnLayout {
             Layout.preferredWidth: dialogRoot.width / 3
             spacing: Kirigami.Units.mediumSpacing
@@ -156,62 +160,63 @@ ColumnLayout {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Set Position...")
                 checkable: true
             }
-        }
-        Repeater {
-            model: Application.screens
-            Item {
-                required property var modelData
+            Repeater {
+                model: Application.screens
+                Item {
+                    required property var modelData
 
-                component Indicator : PlasmaCore.Dialog {
-                    id: root
-                    property string iconSource
-                    property var onClickedLocation
-                    flags: Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus | Qt.BypassWindowManagerHint
-                    location: PlasmaCore.Types.Floating
-                    visible: setPositionButton.checked && panel.location !== onClickedLocation
+                    component Indicator : PlasmaCore.Dialog {
+                        id: root
+                        property string iconSource
+                        property var onClickedLocation
+                        flags: Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus | Qt.BypassWindowManagerHint
+                        location: PlasmaCore.Types.Floating
+                        visible: setPositionButton.checked && panel.location !== onClickedLocation
 
-                    x: modelData.virtualX + Kirigami.Units.largeSpacing
-                    y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
+                        x: modelData.virtualX + Kirigami.Units.largeSpacing
+                        y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
 
-                    mainItem: PC3.ToolButton {
-                        width: Kirigami.Units.iconSizes.enormous
-                        height: Kirigami.Units.iconSizes.enormous
-                        icon.name: root.iconSource
+                        mainItem: PC3.ToolButton {
+                            width: Kirigami.Units.iconSizes.enormous
+                            height: Kirigami.Units.iconSizes.enormous
+                            icon.name: root.iconSource
 
-                        onClicked: {
-                            setPositionButton.checked = false
-                            panel.location = root.onClickedLocation
+                            onClicked: {
+                                setPositionButton.checked = false
+                                panel.location = root.onClickedLocation
+                            }
                         }
                     }
-                }
 
-                Indicator {
-                    x: modelData.virtualX + Kirigami.Units.largeSpacing
-                    y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
-                    iconSource: "arrow-left"
-                    onClickedLocation: PlasmaCore.Types.LeftEdge
-                }
-                Indicator {
-                    x: modelData.virtualX + modelData.width - Kirigami.Units.largeSpacing - margins.left - margins.right - mainItem.width
-                    y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
-                    iconSource: "arrow-right"
-                    onClickedLocation: PlasmaCore.Types.RightEdge
-                }
-                Indicator {
-                    x: modelData.virtualX + modelData.width / 2 - mainItem.width / 2 - margins.left
-                    y: modelData.virtualY + Kirigami.Units.largeSpacing
-                    iconSource: "arrow-up"
-                    onClickedLocation: PlasmaCore.Types.TopEdge
-                }
-                Indicator {
-                    x: modelData.virtualX + modelData.width / 2 - mainItem.width / 2 - margins.left
-                    y: modelData.virtualY + modelData.height - mainItem.height - margins.top - margins.bottom - Kirigami.Units.largeSpacing
-                    iconSource: "arrow-down"
-                    onClickedLocation: PlasmaCore.Types.BottomEdge
+                    Indicator {
+                        x: modelData.virtualX + Kirigami.Units.largeSpacing
+                        y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
+                        iconSource: "arrow-left"
+                        onClickedLocation: PlasmaCore.Types.LeftEdge
+                    }
+                    Indicator {
+                        x: modelData.virtualX + modelData.width - Kirigami.Units.largeSpacing - margins.left - margins.right - mainItem.width
+                        y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
+                        iconSource: "arrow-right"
+                        onClickedLocation: PlasmaCore.Types.RightEdge
+                    }
+                    Indicator {
+                        x: modelData.virtualX + modelData.width / 2 - mainItem.width / 2 - margins.left
+                        y: modelData.virtualY + Kirigami.Units.largeSpacing
+                        iconSource: "arrow-up"
+                        onClickedLocation: PlasmaCore.Types.TopEdge
+                    }
+                    Indicator {
+                        x: modelData.virtualX + modelData.width / 2 - mainItem.width / 2 - margins.left
+                        y: modelData.virtualY + modelData.height - mainItem.height - margins.top - margins.bottom - Kirigami.Units.largeSpacing
+                        iconSource: "arrow-down"
+                        onClickedLocation: PlasmaCore.Types.BottomEdge
+                    }
                 }
             }
         }
 
+        // alignment
         ColumnLayout {
             Layout.preferredWidth: dialogRoot.width / 3
             spacing: Kirigami.Units.mediumSpacing
@@ -300,6 +305,7 @@ ColumnLayout {
             }
         }
 
+        // length
         ColumnLayout {
             Layout.preferredWidth: dialogRoot.width / 3
             spacing: Kirigami.Units.mediumSpacing
@@ -350,12 +356,7 @@ ColumnLayout {
             }
         }
 
-    }
-
-    RowLayout {
-        spacing: Kirigami.Units.smallSpacing
-        Layout.fillWidth: true
-
+        // visibility
         ColumnLayout {
             Layout.preferredWidth: dialogRoot.width / 3
             spacing: Kirigami.Units.mediumSpacing
@@ -385,6 +386,7 @@ ColumnLayout {
             }
         }
 
+        // opacity
         ColumnLayout {
             Layout.preferredWidth: dialogRoot.width / 3
             spacing: Kirigami.Units.mediumSpacing
@@ -424,6 +426,7 @@ ColumnLayout {
             }
         }
 
+        // style (floating)
         ColumnLayout {
             Layout.preferredWidth: dialogRoot.width / 3
             spacing: Kirigami.Units.mediumSpacing
@@ -433,6 +436,7 @@ ColumnLayout {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Style")
             }
             PanelRepresentation {
+                id: floatingRepresentation
                 text: "Yes"
                 Layout.alignment: Qt.AlignHCenter
                 floatingGap: Kirigami.Units.smallSpacing * floatingSwitch.checked
@@ -448,6 +452,11 @@ ColumnLayout {
             }
         }
 
+    }
+
+    RowLayout {
+        spacing: Kirigami.Units.smallSpacing
+        Layout.fillWidth: true
     }
 
     RowLayout {
