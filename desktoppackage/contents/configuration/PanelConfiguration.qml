@@ -433,7 +433,6 @@ ColumnLayout {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Style")
             }
             PanelRepresentation {
-                text: "Yes"
                 Layout.alignment: Qt.AlignHCenter
                 floatingGap: Kirigami.Units.smallSpacing * floatingSwitch.checked
                 onClicked: floatingSwitch.checked = !floatingSwitch.checked
@@ -442,7 +441,7 @@ ColumnLayout {
                 id: floatingSwitch
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumHeight: transparencyBox.height
-                text: "Floating"
+                i18nd("plasma_shell_org.kde.plasma.desktop", "Floating")
                 Component.onCompleted: checked = panel.floating
                 onCheckedChanged: panel.floating = checked
             }
