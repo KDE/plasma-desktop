@@ -9,6 +9,7 @@
 
 #include "InputDevice_interface.h"
 
+#include <QMatrix4x4>
 #include <QObject>
 #include <QString>
 
@@ -24,6 +25,7 @@ class InputDevice : public QObject
     Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(bool supportsLeftHanded READ supportsLeftHanded CONSTANT)
     Q_PROPERTY(bool leftHanded READ isLeftHanded WRITE setLeftHanded NOTIFY leftHandedChanged)
+    Q_PROPERTY(bool supportsCalibrationMatrix READ supportsCalibrationMatrix CONSTANT)
 
     Q_PROPERTY(bool supportsOrientation READ supportsOrientation CONSTANT)
     Q_PROPERTY(int orientation READ orientation WRITE setOrientation NOTIFY orientationChanged)
@@ -85,9 +87,26 @@ public:
     }
     void setOutputArea(const QRectF &outputArea);
 
+    bool supportsCalibrationMatrix() const
+    {
+        return m_supportsCalibrationMatrix.value();
+    }
+
     bool isEnabled() const
     {
         return m_enabled.value();
+    }
+
+    QMatrix4x4 defaultCalibrationMatrix() const
+    {
+        return m_iface->property("defaultCalibrationMatrix").value<QMatrix4x4>();
+    }
+
+    void setCalibrationMatrix(const QMatrix4x4 &matrix) const
+    {
+        // TODO: why does this not with our existing interface...?
+        QDBusInterface iface(QStringLiteral("org.kde.KWin"), m_iface->path());
+        iface.setProperty("calibrationMatrix", matrix);
     }
 
     void setEnabled(bool enabled);
@@ -225,6 +244,9 @@ private:
 
     Prop<bool> m_mapToWorkspace =
         Prop<bool>(this, "mapToWorkspace", &OrgKdeKWinInputDeviceInterface::defaultMapToWorkspace, nullptr, &InputDevice::mapToWorkspaceChanged);
+
+    Prop<bool> m_supportsCalibrationMatrix =
+        Prop<bool>(this, "supportsCalibrationMatrix", nullptr, &OrgKdeKWinInputDeviceInterface::supportsCalibrationMatrix, nullptr);
 
     std::unique_ptr<OrgKdeKWinInputDeviceInterface> m_iface;
 };
