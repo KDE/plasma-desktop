@@ -5,13 +5,16 @@
 */
 
 #include "kcmtablet.h"
+#include "calibrationtool.h"
 #include "inputdevice.h"
 #include "tabletevents.h"
 
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <LayerShellQt/shell.h>
 #include <QGuiApplication>
+#include <QMatrix4x4>
 #include <QScreen>
 #include <QStandardItemModel>
 
@@ -165,16 +168,48 @@ public:
     }
 };
 
+// QMatrix4x4 over DBus is needed for writing calibration matrices
+QDBusArgument &operator<<(QDBusArgument &argument, const QMatrix4x4 &matrix)
+{
+    argument.beginArray(qMetaTypeId<double>());
+    for (quint8 row = 0; row < 4; ++row) {
+        for (quint8 col = 0; col < 4; ++col) {
+            argument << matrix(row, col);
+        }
+    }
+    argument.endArray();
+    return argument;
+}
+
+const QDBusArgument &operator>>(const QDBusArgument &argument, QMatrix4x4 &matrix)
+{
+    argument.beginArray();
+    for (quint8 row = 0; row < 4; ++row) {
+        for (quint8 col = 0; col < 4; ++col) {
+            double val;
+            argument >> val;
+            matrix(row, col) = val;
+        }
+    }
+    argument.endArray();
+    return argument;
+}
+
 Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData)
     : KQuickManagedConfigModule(parent, metaData)
     , m_toolsModel(new DevicesModel("tabletTool", this))
     , m_padsModel(new DevicesModel("tabletPad", this))
 {
+    LayerShellQt::Shell::useLayerShell();
+
+    qDBusRegisterMetaType<QMatrix4x4>();
+
     qmlRegisterType<OutputsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OutputsModel");
     qmlRegisterType<OrientationsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OrientationsModel");
     qmlRegisterType<OutputsFittingModel>("org.kde.plasma.tablet.kcm", 1, 1, "OutputsFittingModel");
     qmlRegisterType<TabletEvents>("org.kde.plasma.tablet.kcm", 1, 1, "TabletEvents");
     qmlRegisterAnonymousType<InputDevice>("org.kde.plasma.tablet.kcm", 1);
+    qmlRegisterType<CalibrationTool>("org.kde.plasma.tablet.kcm", 1, 1, "CalibrationTool");
 
     connect(m_toolsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
     connect(m_padsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);

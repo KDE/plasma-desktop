@@ -17,6 +17,7 @@ SimpleKCM {
     id: root
 
     property bool testerWindowOpen: false
+    property bool calibrationWindowOpen: false
 
     ConfigModule.buttons: ConfigModule.Default | ConfigModule.Apply
 
@@ -316,6 +317,49 @@ SimpleKCM {
                     kcm.assignToolButtonMapping(form.device.name, modelData.value, keySequence)
                 }
             }
+        }
+
+        QQC2.Button {
+            // The device must support calibration, and we don't support calibration across multiple screens
+            readonly property bool supportsCalibration: form.device.supportsCalibrationMatrix && !outputsModel.isMapToWorkspaceAt(outputsCombo.currentIndex)
+
+            text: {
+                if (supportsCalibration) {
+                    if (root.calibrationWindowOpen) {
+                        return i18nc("@action:button Calibration in progress", "Calibration in Progress");
+                    } else {
+                        return i18nc("@action:button Calibrate the pen display", "Calibrate");
+                    }
+                } else {
+                    return i18nc("@action:button Pen display doesn't support calibration", "Calibration Not Supported");
+                }
+            }
+            icon.name: "crosshairs"
+            enabled: supportsCalibration && !root.calibrationWindowOpen
+            onClicked: {
+                const component = Qt.createComponent("Calibration.qml");
+                if (component.status === Component.Ready) {
+                    let screenIndex = 0;
+                    for (let i = 0; i < Qt.application.screens.length; i++) {
+                        if (Qt.application.screens[i].name === form.device.outputName) {
+                            screenIndex = i;
+                            break;
+                        }
+                    }
+
+                    const window = component.createObject(root, {device: form.device, tabletEvents, screen: Qt.application.screens[screenIndex]});
+                    window.showFullScreen();
+                    window.closing.connect((close) => {
+                        root.calibrationWindowOpen = false;
+                    });
+
+                    root.calibrationWindowOpen = true;
+                }
+            }
+
+            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+            QQC2.ToolTip.text: i18nc("@info:tooltip", "Calibration across multiple screens is not supported.")
+            QQC2.ToolTip.visible: hovered && outputsModel.isMapToWorkspaceAt(outputsCombo.currentIndex)
         }
 
         Kirigami.Separator {
