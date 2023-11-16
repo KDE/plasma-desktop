@@ -50,7 +50,7 @@ msgstr "Desactiva el ratolí tàctil"
 #: actions.cpp:38
 #, kde-format
 msgid "Toggle Touchpad"
-msgstr "Activa/desactiva el ratolí tàctil"
+msgstr "Activa o desactiva el ratolí tàctil"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:63
 #, kde-format
@@ -584,14 +584,14 @@ msgstr "Estos paràmetres no s'efectuaran en l'àrea de proves"
 #: kcm/xlib/touchpadconfigxlib.cpp:164
 #, kde-format
 msgid "Enable/Disable Touchpad"
-msgstr "Activa/Desactiva el ratolí tàctil"
+msgstr "Activa o desactiva el ratolí tàctil"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
 #: kcm/xlib/ui/kded.ui:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Enable/Disable Touchpad"
-msgstr "Activa/Desactiva el ratolí tàctil"
+msgstr "Activa o desactiva el ratolí tàctil"
 
 #. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
 #. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
@@ -1112,7 +1112,7 @@ msgid ""
 "corner will seamlessly switch over from vertical to circular scrolling"
 msgstr ""
 "Quan s'utilitza conjuntament amb el desplaçament vertical, en tocar el cantó "
-"superior dret o inferior es canviarà amb fluïdesa des del desplaçament "
+"dret superior o inferior es canviarà amb fluïdesa des del desplaçament "
 "vertical al circular"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
@@ -1348,9 +1348,9 @@ msgid ""
 "If off, a tap-and-drag gesture ends when you release the finger. If on, the "
 "gesture is active until you tap a second time, or until timeout expires"
 msgstr ""
-"Si està inactivada, un gest de tocar i arrossegar finalitza quan s'allibera "
-"el dit. Si està activada, el gest estarà funcionant fins que hi feu un segon "
-"toc, o fins que s'exhaurisca el temps d'espera"
+"Si no se selecciona, un gest de tocar i arrossegar finalitzarà quan "
+"s'aixeque el dit. Si se selecciona, el gest estarà funcionant fins que hi "
+"feu un segon toc, o fins que s'exhaurisca el temps d'espera"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
 #: kcm/xlib/ui/tap.ui:269
