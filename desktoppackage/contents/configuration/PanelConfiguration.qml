@@ -365,21 +365,44 @@ ColumnLayout {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Visibility")
             }
             PanelRepresentation {
+                id: visibilityRepresentation
                 Layout.alignment: Qt.AlignHCenter
-                sunkenPanel: autoHideSwitch.checked
-                onClicked: autoHideSwitch.checked = !autoHideSwitch.checked
+                sunkenPanel: autoHideBox.previewIndex !== 0
+                onClicked: autoHideBox.popup.visible = true
             }
-            PC3.Switch {
-                id: autoHideSwitch
+            PC3.ComboBox {
+                id: autoHideBox
+                property int previewIndex: popup.visible ? highlightedIndex : currentIndex
+                model: [
+                    i18nd("plasma_shell_org.kde.plasma.desktop", "Always visible"),
+                    i18nd("plasma_shell_org.kde.plasma.desktop", "Auto hide"),
+                    i18nd("plasma_shell_org.kde.plasma.desktop", "Dodge windows"),
+                ]
                 Layout.alignment: Qt.AlignHCenter
-                Layout.minimumHeight: transparencyBox.height
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Auto hide")
-                Component.onCompleted: checked = configDialog.visibilityMode === Panel.Global.AutoHide
-                onCheckedChanged: {
-                    if (checked) {
-                        configDialog.visibilityMode = Panel.Global.AutoHide
-                    } else {
-                        configDialog.visibilityMode = Panel.Global.NormalPanel
+                Layout.minimumWidth: visibilityRepresentation.width
+                currentIndex: {
+                    switch (panel.visibilityMode) {
+                        case Panel.Global.AutoHide:
+                            return 1;
+                        case Panel.Global.DodgeWindows:
+                            return 2;
+                        case Panel.Global.NormalPanel:
+                        default:
+                            return 0;
+                    }
+                }
+                onActivated: (index) => {
+                    switch (index) {
+                        case 1:
+                            panel.visibilityMode = Panel.Global.AutoHide;
+                            break;
+                        case 2:
+                            panel.visibilityMode = Panel.Global.DodgeWindows;
+                            break;
+                        case 0:
+                        default:
+                            panel.visibilityMode = Panel.Global.NormalPanel;
+                            break;
                     }
                 }
             }
@@ -402,7 +425,7 @@ ColumnLayout {
             }
             PC3.ComboBox {
                 id: transparencyBox
-                property int previewIndex: popup.visible ? highlightedIndex : currentIndex
+                readonly property int previewIndex: popup.visible ? highlightedIndex : currentIndex
                 model: [
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Opaque"),

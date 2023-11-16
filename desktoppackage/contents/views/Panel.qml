@@ -40,6 +40,9 @@ Item {
         imagePath: "widgets/panel-background"
     }
 
+    // NOTE: Many of the properties in this file are accessed directly in C++ PanelView!
+    // If you change these, make sure to also correct the related code in panelview.cpp.
+
     readonly property bool topEdge: containment?.plasmoid?.location === PlasmaCore.Types.TopEdge
     readonly property bool leftEdge: containment?.plasmoid?.location === PlasmaCore.Types.LeftEdge
     readonly property bool rightEdge: containment?.plasmoid?.location === PlasmaCore.Types.RightEdge
@@ -71,7 +74,20 @@ Item {
         id: activityInfo
     }
 
-    property bool touchingWindow: visibleWindowsModel.count > 0
+    // We need to have a little gap between the raw visibleWindowsModel count
+    // and actually determining if a window is touching.
+    // This is because certain dialog windows start off with a position of (screenwidth/2, screenheight/2)
+    // and they register as "touching" in the split-second before KWin can place them correctly.
+    // This avoids the panel flashing if it is auto-hide etc and such a window is shown.
+    // Examples of such windows: properties of a file on desktop, or portal "open with" dialog
+    property bool touchingWindow: false
+    property bool touchingWindowDirect: visibleWindowsModel.count > 0
+    Timer {
+        id: touchingWindowDebounceTimer
+        interval: 10  // ms, I find that this value is enough while not causing unresponsiveness while dragging windows close
+        onTriggered: root.touchingWindow = root.touchingWindowDirect
+    }
+    onTouchingWindowDirectChanged: touchingWindowDebounceTimer.start()
 
     TaskManager.TasksModel {
         id: visibleWindowsModel
@@ -92,10 +108,10 @@ Item {
             delayed: true
             property real verticalMargin: (fixedTopFloatingPadding + fixedBottomFloatingPadding) * (1 - floatingness)
             property real horizontalMargin: (fixedLeftFloatingPadding + fixedRightFloatingPadding) * (1 - floatingness)
-            // This makes the panel de-float when a window is 6px from it or less.
-            // 6px is chosen to avoid any potential issue with kwin snapping behavior,
+            // This makes the panel de-float when a window is 12px from it or less.
+            // 12px is chosen to avoid any potential issue with kwin snapping behavior,
             // and it looks like the panel hides away from the active window.
-            value: floatingness, panel.width, panel.height, panel.x, panel.y, panel.geometryByDistance(6 + (verticalPanel ? horizontalMargin : verticalMargin))
+            value: floatingness, panel.width, panel.height, panel.x, panel.y, panel.geometryByDistance(12 + (verticalPanel ? horizontalMargin : verticalMargin))
         }
     }
 
