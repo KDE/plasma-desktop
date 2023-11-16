@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-11-11 07:19\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -362,28 +362,32 @@ msgstr "半透明"
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+msgid "Floating"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:460
 msgid "Panel Width:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 msgid "Height:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 msgid "Focus shortcut:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按下此键盘快捷键以移动焦点到面板"
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr "移除此面板；此操作不可撤销"
 

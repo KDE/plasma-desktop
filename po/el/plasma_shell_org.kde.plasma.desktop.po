@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2017-01-15 17:59+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -390,36 +390,40 @@ msgstr "Πάντα ορατό"
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+msgid "Floating"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Panel Alignment"
 msgid "Panel Width:"
 msgstr "Στοίχιση πίνακα"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Height"
 msgid "Height:"
 msgstr "Ύψος"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 #, fuzzy
 #| msgid "Keyboard shortcuts"
 msgid "Focus shortcut:"
 msgstr "Συντομεύσεις πληκτρολογίου"
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Αφαίρεση πίνακα"
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 

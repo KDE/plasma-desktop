@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2010-12-17 16:16+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -91,51 +91,74 @@ msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:61
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
-msgid "Maximum columns:"
-msgstr "จำนวนแถวสูงสุด:"
-
-#: package/contents/ui/ConfigAppearance.qml:61
+#: package/contents/ui/ConfigAppearance.qml:60
 #, kde-format
-msgid "Maximum rows:"
-msgstr "จำนวนแถวสูงสุด:"
+msgctxt "@option: radio"
+msgid "Use multi-column view:"
+msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:60
 #, kde-format
-msgid "Always arrange tasks in rows of as many columns"
+msgctxt "@option:radio"
+msgid "Use multi-row view:"
 msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
-msgid "Always arrange tasks in columns of as many rows"
+msgctxt "Never use multi-column view for Task Manager"
+msgid "Never"
 msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
+msgctxt "When to use multi-row view in Task Manager"
+msgid "When Panel is low on space and thick enough"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:88
+#, kde-format
+msgctxt "When to use multi-row view in Task Manager"
+msgid "Always when Panel is thick enough"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:94
+#, fuzzy, kde-format
+#| msgid "Maximum rows:"
+msgctxt "@label:spinbox"
+msgid "Maximum columns:"
+msgstr "จำนวนแถวสูงสุด:"
+
+#: package/contents/ui/ConfigAppearance.qml:94
+#, fuzzy, kde-format
+#| msgid "Maximum rows:"
+msgctxt "@label:spinbox"
+msgid "Maximum rows:"
+msgstr "จำนวนแถวสูงสุด:"
+
+#: package/contents/ui/ConfigAppearance.qml:104
+#, kde-format
 msgid "Spacing between icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:81
+#: package/contents/ui/ConfigAppearance.qml:108
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:85
+#: package/contents/ui/ConfigAppearance.qml:112
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:89
+#: package/contents/ui/ConfigAppearance.qml:116
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:113
+#: package/contents/ui/ConfigAppearance.qml:140
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"

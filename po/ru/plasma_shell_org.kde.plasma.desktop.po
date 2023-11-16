@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-02-05 18:21+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -396,37 +396,43 @@ msgstr "Полупрозрачно"
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+#, fuzzy
+#| msgid "Floating Panel"
+msgid "Floating"
+msgstr "Плавающая панель"
+
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Ширина панели:"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Height"
 msgid "Height:"
 msgstr "Высота"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Комбинация клавиш"
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Используйте эту комбинацию клавиш для переключения фокуса ввода в панель"
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Удалить панель"
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
@@ -561,11 +567,6 @@ msgstr "Виджеты не найдены"
 #, fuzzy
 #~| msgid "Floating Panel"
 #~ msgid "Floating:"
-#~ msgstr "Плавающая панель"
-
-#, fuzzy
-#~| msgid "Floating Panel"
-#~ msgid "Floating"
 #~ msgstr "Плавающая панель"
 
 #~ msgid "More Options…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-02-22 23:19+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -385,36 +385,42 @@ msgstr "透明"
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+#, fuzzy
+#| msgid "Floating Panel"
+msgid "Floating"
+msgstr "フローティングパネル"
+
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "パネルの幅:"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Right"
 msgid "Height:"
 msgstr "右"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "ショートカット"
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "キーボードショートカットを押してパネルをフォーカス"
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "パネルを削除"
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
@@ -549,11 +555,6 @@ msgstr "利用可能なウィジェットはありません"
 #, fuzzy
 #~| msgid "Floating Panel"
 #~ msgid "Floating:"
-#~ msgstr "フローティングパネル"
-
-#, fuzzy
-#~| msgid "Floating Panel"
-#~ msgid "Floating"
 #~ msgstr "フローティングパネル"
 
 #~ msgid "More Options…"

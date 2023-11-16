@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma__desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -389,36 +389,40 @@ msgstr "Увек видљив"
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+msgid "Floating"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Panel Alignment"
 msgid "Panel Width:"
 msgstr "Поравнање панела"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Right"
 msgid "Height:"
 msgstr "Десно"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 #, fuzzy
 #| msgid "Keyboard shortcuts"
 msgid "Focus shortcut:"
 msgstr "Пречице са тастатуре"
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Уклони панел"
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 

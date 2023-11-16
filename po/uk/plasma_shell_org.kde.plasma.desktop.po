@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-11-07 13:24+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -370,28 +370,32 @@ msgstr "Прозорість"
 msgid "Style"
 msgstr "Стиль"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+msgid "Floating"
+msgstr "Рухома"
+
+#: contents/configuration/PanelConfiguration.qml:460
 msgid "Panel Width:"
 msgstr "Ширина панелі:"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 msgid "Height:"
 msgstr "Висота:"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 msgid "Focus shortcut:"
 msgstr "Скорочення фокусування:"
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Натисніть цю комбінацію клавіш, щоб передати фокус панелі"
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Вилучити панель"
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr "Вилучити цю панель; наслідки цієї дії можна скасувати"
 
@@ -573,9 +577,6 @@ msgstr "Немає доступних віджетів"
 
 #~ msgid "Floating:"
 #~ msgstr "Рухома:"
-
-#~ msgid "Floating"
-#~ msgstr "Рухома"
 
 #~ msgid "Panel visibly floats away from its screen edge"
 #~ msgstr "Панель видимо відкривається з її краю екрана"

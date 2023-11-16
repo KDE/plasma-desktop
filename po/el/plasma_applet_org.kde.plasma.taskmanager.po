@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2017-03-24 14:33+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -99,53 +99,76 @@ msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:61
+#: package/contents/ui/ConfigAppearance.qml:60
 #, kde-format
+msgctxt "@option: radio"
+msgid "Use multi-column view:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:60
+#, kde-format
+msgctxt "@option:radio"
+msgid "Use multi-row view:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, kde-format
+msgctxt "Never use multi-column view for Task Manager"
+msgid "Never"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:77
+#, kde-format
+msgctxt "When to use multi-row view in Task Manager"
+msgid "When Panel is low on space and thick enough"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:88
+#, kde-format
+msgctxt "When to use multi-row view in Task Manager"
+msgid "Always when Panel is thick enough"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:94
+#, fuzzy, kde-format
+#| msgid "Maximum columns:"
+msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Μέγιστος αριθμός στηλών:"
 
-#: package/contents/ui/ConfigAppearance.qml:61
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:94
+#, fuzzy, kde-format
+#| msgid "Maximum rows:"
+msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Μέγιστος αριθμός γραμμών:"
 
-#: package/contents/ui/ConfigAppearance.qml:67
-#, fuzzy, kde-format
-#| msgid "Always arrange tasks in columns of as many rows"
-msgid "Always arrange tasks in rows of as many columns"
-msgstr "Διάταξη των εργασιών πάντοτε σε στήλες με όσες γραμμές χρειαστούν"
-
-#: package/contents/ui/ConfigAppearance.qml:67
-#, kde-format
-msgid "Always arrange tasks in columns of as many rows"
-msgstr "Διάταξη των εργασιών πάντοτε σε στήλες με όσες γραμμές χρειαστούν"
-
-#: package/contents/ui/ConfigAppearance.qml:77
+#: package/contents/ui/ConfigAppearance.qml:104
 #, kde-format
 msgid "Spacing between icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:81
+#: package/contents/ui/ConfigAppearance.qml:108
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Μικρό"
 
-#: package/contents/ui/ConfigAppearance.qml:85
+#: package/contents/ui/ConfigAppearance.qml:112
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:89
+#: package/contents/ui/ConfigAppearance.qml:116
 #, fuzzy, kde-format
 #| msgid "Large"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Μεγάλο"
 
-#: package/contents/ui/ConfigAppearance.qml:113
+#: package/contents/ui/ConfigAppearance.qml:140
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
@@ -760,6 +783,14 @@ msgstr "Να ξεχαστούν τα πρόσφατα έγγραφα"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Να ξεχαστούν τα πρόσφατα έγγραφα"
+
+#, fuzzy
+#~| msgid "Always arrange tasks in columns of as many rows"
+#~ msgid "Always arrange tasks in rows of as many columns"
+#~ msgstr "Διάταξη των εργασιών πάντοτε σε στήλες με όσες γραμμές χρειαστούν"
+
+#~ msgid "Always arrange tasks in columns of as many rows"
+#~ msgstr "Διάταξη των εργασιών πάντοτε σε στήλες με όσες γραμμές χρειαστούν"
 
 #~ msgid "Show tooltips"
 #~ msgstr "Εμφάνιση υποδείξεων"

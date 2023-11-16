@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-07-25 23:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -380,36 +380,40 @@ msgstr "항상 반투명"
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+msgid "Floating"
+msgstr "떠다님"
+
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "패널 너비:"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Height"
 msgid "Height:"
 msgstr "높이"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 #, fuzzy
 #| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
 msgstr "포커스 단축키:"
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "패널에 포커스를 맞추려면 이 키보드 단축키를 누르십시오"
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "패널 삭제"
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr "이 패널을 삭제합니다. 실행 취소할 수 없습니다"
 
@@ -589,9 +593,6 @@ msgstr "사용 가능한 위젯 없음"
 
 #~ msgid "Floating:"
 #~ msgstr "떠다님:"
-
-#~ msgid "Floating"
-#~ msgstr "떠다님"
 
 #~ msgid "Panel visibly floats away from its screen edge"
 #~ msgstr "패널이 화면 경계에서 떠 있음"

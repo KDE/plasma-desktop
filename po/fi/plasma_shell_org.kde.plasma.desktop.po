@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-05-28 16:55+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -381,36 +381,40 @@ msgstr "Aina läpikuultava"
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+msgid "Floating"
+msgstr "Kelluva"
+
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Paneelin leveys:"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Height"
 msgid "Height:"
 msgstr "Korkeus"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 #, fuzzy
 #| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
 msgstr "Kohdistuspikanäppäin:"
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Siirrä kohdistus paneeliin tällä pikanäppäimellä"
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Poista paneeli"
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr "Poista tämä paneeli – toimintoa ei voi kumota"
 
@@ -590,9 +594,6 @@ msgstr "Sovelmia ei ole saatavilla"
 
 #~ msgid "Floating:"
 #~ msgstr "Kellunta:"
-
-#~ msgid "Floating"
-#~ msgstr "Kelluva"
 
 #~ msgid "Panel visibly floats away from its screen edge"
 #~ msgstr "Paneeli kelluu näkyvästi näytönreunastaan"

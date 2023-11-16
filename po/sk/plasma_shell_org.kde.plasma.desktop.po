@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-11-11 15:48+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -369,28 +369,32 @@ msgstr "Priesvitný"
 msgid "Style"
 msgstr "Štýl"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+msgid "Floating"
+msgstr "Plávajúci"
+
+#: contents/configuration/PanelConfiguration.qml:460
 msgid "Panel Width:"
 msgstr "Šírka panelu:"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 msgid "Height:"
 msgstr "Výška:"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 msgid "Focus shortcut:"
 msgstr "Skratka zamerania:"
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Stlačte túto klávesovú skratku na presun zamerania na panel"
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Odstrániť panel"
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr "Odstrániť tento panel; túto akciu je možné zrušiť"
 
@@ -572,9 +576,6 @@ msgstr "Žiadne miniaplikáciw nie sú dostupné"
 
 #~ msgid "Floating:"
 #~ msgstr "Plávajúci:"
-
-#~ msgid "Floating"
-#~ msgstr "Plávajúci"
 
 #~ msgid "Panel visibly floats away from its screen edge"
 #~ msgstr "Panel sa viditeľne vzďaľuje od okraja obrazovky"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-11-10 23:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -364,28 +364,32 @@ msgstr "半透明"
 msgid "Style"
 msgstr "風格"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+msgid "Floating"
+msgstr "浮動"
+
+#: contents/configuration/PanelConfiguration.qml:460
 msgid "Panel Width:"
 msgstr "面板寬度："
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 msgid "Height:"
 msgstr "高度："
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 msgid "Focus shortcut:"
 msgstr "取得焦點快捷鍵："
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按這個鍵盤快捷鍵來移動焦點到面板上"
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "刪除面板"
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr "移除這個面板；這個動作是可以復原的"
 
@@ -553,9 +557,6 @@ msgstr "沒有可用元件"
 
 #~ msgid "Floating:"
 #~ msgstr "浮動："
-
-#~ msgid "Floating"
-#~ msgstr "浮動"
 
 #~ msgid "Panel visibly floats away from its screen edge"
 #~ msgstr "面板看起來漂浮在所屬的螢幕邊緣旁"

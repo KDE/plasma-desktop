@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-06-25 17:05+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -374,38 +374,42 @@ msgstr "Durchscheinend"
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+msgid "Floating"
+msgstr "Schwebend"
+
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Breite der Kontrollleiste:"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 #, fuzzy
 #| msgid "Height"
 msgid "Height:"
 msgstr "Höhe"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Kurzbefehl"
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Drücken Sie diesen Tastatur-Kurzbefehl, um den Fokus auf die Kontrollleiste "
 "zu setzen"
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Kontrollleiste entfernen"
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 "Diese Kontrollleiste entfernen; diese Aktion kann rückgängig gemacht werden"
@@ -536,9 +540,6 @@ msgstr "Keine Miniprogramme verfügbar"
 
 #~ msgid "Floating:"
 #~ msgstr "Schwebend:"
-
-#~ msgid "Floating"
-#~ msgstr "Schwebend"
 
 #~ msgid "More Options…"
 #~ msgstr "Weitere Einstellungen ..."

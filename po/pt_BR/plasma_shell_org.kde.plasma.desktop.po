@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 01:39+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-11-14 14:07-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -368,30 +368,36 @@ msgstr "Transparente"
 msgid "Style"
 msgstr "Estilo"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:444
+#, fuzzy
+#| msgid "Floating Panel"
+msgid "Floating"
+msgstr "Painel flutuante"
+
+#: contents/configuration/PanelConfiguration.qml:460
 msgid "Panel Width:"
 msgstr "Largura do painel:"
 
-#: contents/configuration/PanelConfiguration.qml:461
+#: contents/configuration/PanelConfiguration.qml:460
 msgid "Height:"
 msgstr "Altura:"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:494
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Atalho"
 
-#: contents/configuration/PanelConfiguration.qml:505
+#: contents/configuration/PanelConfiguration.qml:504
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pressione este atalho de teclado para mover o foco para o painel"
 
-#: contents/configuration/PanelConfiguration.qml:521
+#: contents/configuration/PanelConfiguration.qml:520
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Excluir painel"
 
-#: contents/configuration/PanelConfiguration.qml:524
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Remove this panel; this action is undo-able"
 msgstr "Exclui este painel; esta ação não pode ser desfeita"
 
@@ -522,11 +528,6 @@ msgstr "Nenhum widget disponível"
 #, fuzzy
 #~| msgid "Floating Panel"
 #~ msgid "Floating:"
-#~ msgstr "Painel flutuante"
-
-#, fuzzy
-#~| msgid "Floating Panel"
-#~ msgid "Floating"
 #~ msgstr "Painel flutuante"
 
 #~ msgid "More Options…"

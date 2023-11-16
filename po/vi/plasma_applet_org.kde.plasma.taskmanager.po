@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-01-08 16:15+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -90,50 +90,74 @@ msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "Lấp đầy chỗ trống trong bảng"
 
-#: package/contents/ui/ConfigAppearance.qml:61
+#: package/contents/ui/ConfigAppearance.qml:60
 #, kde-format
+msgctxt "@option: radio"
+msgid "Use multi-column view:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:60
+#, kde-format
+msgctxt "@option:radio"
+msgid "Use multi-row view:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, kde-format
+msgctxt "Never use multi-column view for Task Manager"
+msgid "Never"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:77
+#, kde-format
+msgctxt "When to use multi-row view in Task Manager"
+msgid "When Panel is low on space and thick enough"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:88
+#, kde-format
+msgctxt "When to use multi-row view in Task Manager"
+msgid "Always when Panel is thick enough"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:94
+#, fuzzy, kde-format
+#| msgid "Maximum columns:"
+msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Số cột tối đa:"
 
-#: package/contents/ui/ConfigAppearance.qml:61
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:94
+#, fuzzy, kde-format
+#| msgid "Maximum rows:"
+msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Số hàng tối đa:"
 
-#: package/contents/ui/ConfigAppearance.qml:67
-#, kde-format
-msgid "Always arrange tasks in rows of as many columns"
-msgstr "Luôn sắp xếp tác vụ thành hàng của từng đó cột"
-
-#: package/contents/ui/ConfigAppearance.qml:67
-#, kde-format
-msgid "Always arrange tasks in columns of as many rows"
-msgstr "Luôn sắp xếp tác vụ thành cột của từng đó hàng"
-
-#: package/contents/ui/ConfigAppearance.qml:77
+#: package/contents/ui/ConfigAppearance.qml:104
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "Khoảng cách giữa các biểu tượng:"
 
-#: package/contents/ui/ConfigAppearance.qml:81
+#: package/contents/ui/ConfigAppearance.qml:108
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Nhỏ"
 
-#: package/contents/ui/ConfigAppearance.qml:85
+#: package/contents/ui/ConfigAppearance.qml:112
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Trung bình"
 
-#: package/contents/ui/ConfigAppearance.qml:89
+#: package/contents/ui/ConfigAppearance.qml:116
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Lớn"
 
-#: package/contents/ui/ConfigAppearance.qml:113
+#: package/contents/ui/ConfigAppearance.qml:140
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
@@ -713,6 +737,12 @@ msgstr "Quên các địa điểm gần đây đi"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Quên các tệp gần đây đi"
+
+#~ msgid "Always arrange tasks in rows of as many columns"
+#~ msgstr "Luôn sắp xếp tác vụ thành hàng của từng đó cột"
+
+#~ msgid "Always arrange tasks in columns of as many rows"
+#~ msgstr "Luôn sắp xếp tác vụ thành cột của từng đó hàng"
 
 #~ msgid ""
 #~ "Tooltips are disabled, so the windows will be displayed side by side "

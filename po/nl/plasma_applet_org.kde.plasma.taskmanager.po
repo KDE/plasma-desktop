@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-16 01:46+0000\n"
 "PO-Revision-Date: 2023-02-14 10:44+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -89,50 +89,74 @@ msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "Vrije ruimte op paneel vullen"
 
-#: package/contents/ui/ConfigAppearance.qml:61
+#: package/contents/ui/ConfigAppearance.qml:60
 #, kde-format
+msgctxt "@option: radio"
+msgid "Use multi-column view:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:60
+#, kde-format
+msgctxt "@option:radio"
+msgid "Use multi-row view:"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:67
+#, kde-format
+msgctxt "Never use multi-column view for Task Manager"
+msgid "Never"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:77
+#, kde-format
+msgctxt "When to use multi-row view in Task Manager"
+msgid "When Panel is low on space and thick enough"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:88
+#, kde-format
+msgctxt "When to use multi-row view in Task Manager"
+msgid "Always when Panel is thick enough"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:94
+#, fuzzy, kde-format
+#| msgid "Maximum columns:"
+msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Maximum aantal kolommen:"
 
-#: package/contents/ui/ConfigAppearance.qml:61
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:94
+#, fuzzy, kde-format
+#| msgid "Maximum rows:"
+msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Maximum aantal rijen:"
 
-#: package/contents/ui/ConfigAppearance.qml:67
-#, kde-format
-msgid "Always arrange tasks in rows of as many columns"
-msgstr "Taken altijd in rijen van zo veel mogelijke kolommen plaatsen"
-
-#: package/contents/ui/ConfigAppearance.qml:67
-#, kde-format
-msgid "Always arrange tasks in columns of as many rows"
-msgstr "Taken altijd in kolommen van zo veel mogelijke rijen plaatsen"
-
-#: package/contents/ui/ConfigAppearance.qml:77
+#: package/contents/ui/ConfigAppearance.qml:104
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "Ruimte tussen pictogrammen:"
 
-#: package/contents/ui/ConfigAppearance.qml:81
+#: package/contents/ui/ConfigAppearance.qml:108
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Klein"
 
-#: package/contents/ui/ConfigAppearance.qml:85
+#: package/contents/ui/ConfigAppearance.qml:112
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normaal"
 
-#: package/contents/ui/ConfigAppearance.qml:89
+#: package/contents/ui/ConfigAppearance.qml:116
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Groot"
 
-#: package/contents/ui/ConfigAppearance.qml:113
+#: package/contents/ui/ConfigAppearance.qml:140
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
@@ -713,6 +737,12 @@ msgstr "Recente plaatsen vergeten"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Recente bestanden vergeten"
+
+#~ msgid "Always arrange tasks in rows of as many columns"
+#~ msgstr "Taken altijd in rijen van zo veel mogelijke kolommen plaatsen"
+
+#~ msgid "Always arrange tasks in columns of as many rows"
+#~ msgstr "Taken altijd in kolommen van zo veel mogelijke rijen plaatsen"
 
 #~ msgid ""
 #~ "Tooltips are disabled, so the windows will be displayed side by side "
