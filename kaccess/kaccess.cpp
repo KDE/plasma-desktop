@@ -121,11 +121,9 @@ KAccessApp::KAccessApp()
     , m_mouseSettings(new MouseSettings(this))
     , m_screenReaderSettings(new ScreenReaderSettings(this))
     , overlay(nullptr)
-    , _activeWindow(KX11Extras::activeWindow())
     , toggleScreenReaderAction(new QAction(this))
 {
     m_error = false;
-    connect(KX11Extras::self(), &KX11Extras::activeWindowChanged, this, &KAccessApp::activeWindowChanged);
 
     features = 0;
     requestedFeatures = 0;
@@ -135,6 +133,8 @@ KAccessApp::KAccessApp()
         m_error = true;
         return;
     }
+    _activeWindow = KX11Extras::activeWindow();
+    connect(KX11Extras::self(), &KX11Extras::activeWindowChanged, this, &KAccessApp::activeWindowChanged);
 
     initMasks();
     XkbStateRec state_return;
