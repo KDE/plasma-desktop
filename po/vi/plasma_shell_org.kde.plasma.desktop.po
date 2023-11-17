@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-16 01:46+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -81,58 +81,58 @@ msgstr "Xem chi tiết về lỗi…"
 msgid "Open %1"
 msgstr "Mở %1"
 
-#: contents/configuration/AboutPlugin.qml:20
-#: contents/configuration/AppletConfiguration.qml:244
+#: contents/configuration/AboutPlugin.qml:21
+#: contents/configuration/AppletConfiguration.qml:302
 msgid "About"
 msgstr "Thông tin"
 
-#: contents/configuration/AboutPlugin.qml:48
+#: contents/configuration/AboutPlugin.qml:49
 msgid "Send an email to %1"
 msgstr "Gửi thư đến %1"
 
-#: contents/configuration/AboutPlugin.qml:62
+#: contents/configuration/AboutPlugin.qml:63
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Mở địa điểm web %1"
 
-#: contents/configuration/AboutPlugin.qml:130
+#: contents/configuration/AboutPlugin.qml:134
 msgid "Copyright"
 msgstr "Bản quyền"
 
-#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:92
+#: contents/configuration/AboutPlugin.qml:152 contents/explorer/Tooltip.qml:92
 msgid "License:"
 msgstr "Giấy phép:"
 
-#: contents/configuration/AboutPlugin.qml:151
+#: contents/configuration/AboutPlugin.qml:155
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Xem văn bản giấy phép"
 
-#: contents/configuration/AboutPlugin.qml:165
+#: contents/configuration/AboutPlugin.qml:169
 msgid "Authors"
 msgstr "Tác giả"
 
-#: contents/configuration/AboutPlugin.qml:176
+#: contents/configuration/AboutPlugin.qml:180
 msgid "Credits"
 msgstr "Ghi nhận"
 
-#: contents/configuration/AboutPlugin.qml:188
+#: contents/configuration/AboutPlugin.qml:192
 msgid "Translators"
 msgstr "Người dịch"
 
-#: contents/configuration/AboutPlugin.qml:205
+#: contents/configuration/AboutPlugin.qml:209
 msgid "Report a Bug…"
 msgstr "Báo lỗi…"
 
-#: contents/configuration/AppletConfiguration.qml:55
+#: contents/configuration/AppletConfiguration.qml:74
 msgid "Keyboard Shortcuts"
 msgstr "Phím tắt"
 
-#: contents/configuration/AppletConfiguration.qml:292
+#: contents/configuration/AppletConfiguration.qml:350
 msgid "Apply Settings"
 msgstr "Áp dụng thiết lập"
 
-#: contents/configuration/AppletConfiguration.qml:293
+#: contents/configuration/AppletConfiguration.qml:351
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
@@ -140,15 +140,15 @@ msgstr ""
 "Thiết lập cho khối hiện tại đã thay đổi. Bạn muốn áp dụng hay loại bỏ các "
 "thay đổi?"
 
-#: contents/configuration/AppletConfiguration.qml:324
+#: contents/configuration/AppletConfiguration.qml:382
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:332
+#: contents/configuration/AppletConfiguration.qml:390
 msgid "Apply"
 msgstr "Áp dụng"
 
-#: contents/configuration/AppletConfiguration.qml:338
+#: contents/configuration/AppletConfiguration.qml:396
 msgid "Cancel"
 msgstr "Huỷ"
 
@@ -240,11 +240,11 @@ msgstr ""
 msgid "Apply Now"
 msgstr "Áp dụng ngay"
 
-#: contents/configuration/ConfigurationShortcuts.qml:17
+#: contents/configuration/ConfigurationShortcuts.qml:18
 msgid "Shortcuts"
 msgstr "Phím tắt"
 
-#: contents/configuration/ConfigurationShortcuts.qml:29
+#: contents/configuration/ConfigurationShortcuts.qml:30
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "Phím tắt này sẽ kích hoạt tiểu ứng dụng như thể nó được bấm vào."
 
@@ -350,74 +350,84 @@ msgstr ""
 msgid "Visibility"
 msgstr "Khả kiến"
 
-#: contents/configuration/PanelConfiguration.qml:376
+#: contents/configuration/PanelConfiguration.qml:377
+#, fuzzy
+#| msgid "Always Visible"
+msgid "Always visible"
+msgstr "Luôn hiện"
+
+#: contents/configuration/PanelConfiguration.qml:378
 #, fuzzy
 #| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "Tự động ẩn"
 
-#: contents/configuration/PanelConfiguration.qml:394
+#: contents/configuration/PanelConfiguration.qml:379
+msgid "Dodge windows"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:417
 #, fuzzy
 #| msgid "Opacity"
 msgid "Opacity"
 msgstr "Độ mờ đục"
 
-#: contents/configuration/PanelConfiguration.qml:407
+#: contents/configuration/PanelConfiguration.qml:430
 msgid "Adaptive"
 msgstr "Thích ứng"
 
-#: contents/configuration/PanelConfiguration.qml:408
+#: contents/configuration/PanelConfiguration.qml:431
 #, fuzzy
 #| msgid "Opaque"
 msgid "Opaque"
 msgstr "Đục"
 
-#: contents/configuration/PanelConfiguration.qml:409
+#: contents/configuration/PanelConfiguration.qml:432
 #, fuzzy
 #| msgid "Translucent"
 msgid "Translucent"
 msgstr "Trong mờ"
 
-#: contents/configuration/PanelConfiguration.qml:433
+#: contents/configuration/PanelConfiguration.qml:456
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:444
+#: contents/configuration/PanelConfiguration.qml:467
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating"
 msgstr "Bảng trôi"
 
-#: contents/configuration/PanelConfiguration.qml:460
+#: contents/configuration/PanelConfiguration.qml:483
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Độ rộng bảng:"
 
-#: contents/configuration/PanelConfiguration.qml:460
+#: contents/configuration/PanelConfiguration.qml:483
 #, fuzzy
 #| msgid "Right"
 msgid "Height:"
 msgstr "Phải"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:517
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Phím tắt"
 
-#: contents/configuration/PanelConfiguration.qml:504
+#: contents/configuration/PanelConfiguration.qml:527
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Nhấn phím tắt này để chuyển nhắm đến bảng"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:543
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Xoá bỏ bảng"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:546
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
@@ -547,9 +557,6 @@ msgstr "Không có phụ kiện nào"
 #~ msgctxt "@action:button Delete the panel"
 #~ msgid "Delete"
 #~ msgstr "Xoá"
-
-#~ msgid "Always Visible"
-#~ msgstr "Luôn hiện"
 
 #, fuzzy
 #~| msgid "Floating Panel"

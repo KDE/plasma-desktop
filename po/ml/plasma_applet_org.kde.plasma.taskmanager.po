@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-16 01:46+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2008-11-25 02:43-0800\n"
 "Last-Translator: Praveen Arimbrathodiyil <pravi.a@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -63,131 +63,131 @@ msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:33
+#: package/contents/ui/ConfigAppearance.qml:32
 #, fuzzy, kde-format
 msgid "General:"
 msgstr "പൊതുവായ"
 
-#: package/contents/ui/ConfigAppearance.qml:34
+#: package/contents/ui/ConfigAppearance.qml:33
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:39
+#: package/contents/ui/ConfigAppearance.qml:38
 #, kde-format
 msgid "Hide other windows when hovering over previews"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:44
+#: package/contents/ui/ConfigAppearance.qml:43
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:52
+#: package/contents/ui/ConfigAppearance.qml:51
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:60
+#: package/contents/ui/ConfigAppearance.qml:59
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:60
+#: package/contents/ui/ConfigAppearance.qml:59
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:66
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:77
+#: package/contents/ui/ConfigAppearance.qml:76
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:88
+#: package/contents/ui/ConfigAppearance.qml:87
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:94
+#: package/contents/ui/ConfigAppearance.qml:93
 #, fuzzy, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "ഏറ്റവും കൂടുതല്‍ ആകാവുന്ന വരികള്‍:"
 
-#: package/contents/ui/ConfigAppearance.qml:94
+#: package/contents/ui/ConfigAppearance.qml:93
 #, fuzzy, kde-format
 #| msgid "Maximum rows:"
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "ഏറ്റവും കൂടുതല്‍ ആകാവുന്ന വരികള്‍:"
 
-#: package/contents/ui/ConfigAppearance.qml:104
+#: package/contents/ui/ConfigAppearance.qml:103
 #, kde-format
 msgid "Spacing between icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:108
+#: package/contents/ui/ConfigAppearance.qml:107
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:112
+#: package/contents/ui/ConfigAppearance.qml:111
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:116
+#: package/contents/ui/ConfigAppearance.qml:115
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:140
+#: package/contents/ui/ConfigAppearance.qml:139
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:48
+#: package/contents/ui/ConfigBehavior.qml:46
 #, fuzzy, kde-format
 msgid "Group:"
 msgstr "ഒരുമിച്ചു് കാണിയ്ക്കല്‍:"
 
-#: package/contents/ui/ConfigBehavior.qml:51
+#: package/contents/ui/ConfigBehavior.qml:49
 #, fuzzy, kde-format
 msgid "Do not group"
 msgstr "ഒരുമിച്ചു് കാണിയ്ക്കരുതു്"
 
-#: package/contents/ui/ConfigBehavior.qml:51
+#: package/contents/ui/ConfigBehavior.qml:49
 #, fuzzy, kde-format
 msgid "By program name"
 msgstr "പ്രയോഗത്തിന്റെ പേരനുസരിച്ചു്"
 
-#: package/contents/ui/ConfigBehavior.qml:56
+#: package/contents/ui/ConfigBehavior.qml:54
 #, kde-format
 msgid "Clicking grouped task:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:63
+#: package/contents/ui/ConfigBehavior.qml:61
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:64
+#: package/contents/ui/ConfigBehavior.qml:62
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
@@ -195,107 +195,107 @@ msgctxt ""
 msgid "Shows small window previews"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:65
+#: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:66
+#: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:74
+#: package/contents/ui/ConfigBehavior.qml:72
 #, kde-format
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:84
+#: package/contents/ui/ConfigBehavior.qml:82
 #, kde-format
 msgid "Combine into single button"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:91
+#: package/contents/ui/ConfigBehavior.qml:89
 #, fuzzy, kde-format
 msgid "Group only when the Task Manager is full"
 msgstr "ജോലികള്‍ കാണിയ്ക്കുന്ന പട്ട നിറയുമ്പോള്‍ മാത്രം"
 
-#: package/contents/ui/ConfigBehavior.qml:102
+#: package/contents/ui/ConfigBehavior.qml:100
 #, fuzzy, kde-format
 msgid "Sort:"
 msgstr "തരംതിരിയ്ക്കല്‍:"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "Do not sort"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "Manually"
 msgstr "യാന്ത്രികമായി"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "Alphabetically"
 msgstr "അകാരാദിക്രമത്തില്‍"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, fuzzy, kde-format
 msgid "By desktop"
 msgstr "പണിയിടം അനുസരിച്ച്"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "By activity"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:111
+#: package/contents/ui/ConfigBehavior.qml:109
 #, kde-format
 msgid "Keep launchers separate"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:122
+#: package/contents/ui/ConfigBehavior.qml:120
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:123
+#: package/contents/ui/ConfigBehavior.qml:121
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:128
+#: package/contents/ui/ConfigBehavior.qml:126
 #, kde-format
 msgid "Middle-clicking any task:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:132
+#: package/contents/ui/ConfigBehavior.qml:130
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:133
+#: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:134
+#: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:135
+#: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
@@ -303,13 +303,13 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:137
+#: package/contents/ui/ConfigBehavior.qml:135
 #, fuzzy, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
@@ -317,81 +317,81 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "ഇപ്പോഴത്തെ പണിയിടത്തിലെ ജോലികള്‍ മാത്രം കാണിയ്ക്കുക"
 
-#: package/contents/ui/ConfigBehavior.qml:147
+#: package/contents/ui/ConfigBehavior.qml:145
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:148
+#: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:157
+#: package/contents/ui/ConfigBehavior.qml:155
 #, kde-format
 msgid "Skip minimized tasks"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:168
+#: package/contents/ui/ConfigBehavior.qml:166
 #, fuzzy, kde-format
 msgid "Show only tasks:"
 msgstr "സൂചനകള്‍ കാണിയ്ക്കുക:"
 
-#: package/contents/ui/ConfigBehavior.qml:169
+#: package/contents/ui/ConfigBehavior.qml:167
 #, fuzzy, kde-format
 msgid "From current screen"
 msgstr "ഇപ്പോഴത്തെ സ്ക്രീനിലെ ജോലികള്‍ മാത്രം കാണിയ്ക്കുക"
 
-#: package/contents/ui/ConfigBehavior.qml:174
+#: package/contents/ui/ConfigBehavior.qml:172
 #, fuzzy, kde-format
 msgid "From current desktop"
 msgstr "പണിയിടം അനുസരിച്ച്"
 
-#: package/contents/ui/ConfigBehavior.qml:179
+#: package/contents/ui/ConfigBehavior.qml:177
 #, fuzzy, kde-format
 msgid "From current activity"
 msgstr "ഇപ്പോഴത്തെ സ്ക്രീനിലെ ജോലികള്‍ മാത്രം കാണിയ്ക്കുക"
 
-#: package/contents/ui/ConfigBehavior.qml:184
+#: package/contents/ui/ConfigBehavior.qml:182
 #, fuzzy, kde-format
 msgid "That are minimized"
 msgstr "ഇപ്പോള്‍ മിനിമൈസ് ചെയ്തിരിക്കുന്ന ജോലികള്‍ മാത്രം കാണിയ്ക്കുക"
 
-#: package/contents/ui/ConfigBehavior.qml:193
+#: package/contents/ui/ConfigBehavior.qml:191
 #, kde-format
 msgid "When panel is hidden:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:194
+#: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgid "Unhide when a window wants attention"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:204
 #, kde-format
 msgid "New tasks appear:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:210
+#: package/contents/ui/ConfigBehavior.qml:208
 #, kde-format
 msgid "On the bottom"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:214
-#: package/contents/ui/ConfigBehavior.qml:234
+#: package/contents/ui/ConfigBehavior.qml:212
+#: package/contents/ui/ConfigBehavior.qml:232
 #, kde-format
 msgid "To the right"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:216
-#: package/contents/ui/ConfigBehavior.qml:232
+#: package/contents/ui/ConfigBehavior.qml:214
+#: package/contents/ui/ConfigBehavior.qml:230
 #, kde-format
 msgid "To the left"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:228
+#: package/contents/ui/ConfigBehavior.qml:226
 #, kde-format
 msgid "On the Top"
 msgstr ""

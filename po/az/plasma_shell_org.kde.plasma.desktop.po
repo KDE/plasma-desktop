@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-16 01:46+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2023-02-19 16:55+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -81,58 +81,58 @@ msgstr "Xətaya nəzər salın..."
 msgid "Open %1"
 msgstr "%1 açın"
 
-#: contents/configuration/AboutPlugin.qml:20
-#: contents/configuration/AppletConfiguration.qml:244
+#: contents/configuration/AboutPlugin.qml:21
+#: contents/configuration/AppletConfiguration.qml:302
 msgid "About"
 msgstr "Haqqında"
 
-#: contents/configuration/AboutPlugin.qml:48
+#: contents/configuration/AboutPlugin.qml:49
 msgid "Send an email to %1"
 msgstr "%1 e-poçtuna məktub göndərin"
 
-#: contents/configuration/AboutPlugin.qml:62
+#: contents/configuration/AboutPlugin.qml:63
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "%1 veb-səhifəsində"
 
-#: contents/configuration/AboutPlugin.qml:130
+#: contents/configuration/AboutPlugin.qml:134
 msgid "Copyright"
 msgstr "Müəllif Hüquqları"
 
-#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:92
+#: contents/configuration/AboutPlugin.qml:152 contents/explorer/Tooltip.qml:92
 msgid "License:"
 msgstr "Lisenziya:"
 
-#: contents/configuration/AboutPlugin.qml:151
+#: contents/configuration/AboutPlugin.qml:155
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Lisenziya mətninə bax"
 
-#: contents/configuration/AboutPlugin.qml:165
+#: contents/configuration/AboutPlugin.qml:169
 msgid "Authors"
 msgstr "Müəlliflər:"
 
-#: contents/configuration/AboutPlugin.qml:176
+#: contents/configuration/AboutPlugin.qml:180
 msgid "Credits"
 msgstr "Minnətdarlıq"
 
-#: contents/configuration/AboutPlugin.qml:188
+#: contents/configuration/AboutPlugin.qml:192
 msgid "Translators"
 msgstr "Tərcüməçilər"
 
-#: contents/configuration/AboutPlugin.qml:205
+#: contents/configuration/AboutPlugin.qml:209
 msgid "Report a Bug…"
 msgstr "Xəta haqqında bildirin…"
 
-#: contents/configuration/AppletConfiguration.qml:55
+#: contents/configuration/AppletConfiguration.qml:74
 msgid "Keyboard Shortcuts"
 msgstr "Klaviatura qısayolları"
 
-#: contents/configuration/AppletConfiguration.qml:292
+#: contents/configuration/AppletConfiguration.qml:350
 msgid "Apply Settings"
 msgstr "Ayarları tətbiq etmək"
 
-#: contents/configuration/AppletConfiguration.qml:293
+#: contents/configuration/AppletConfiguration.qml:351
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
@@ -140,15 +140,15 @@ msgstr ""
 "Cari modulun ayarları dəyişdirildi. Siz bu dəyişiklikləri tətbiq etmək, "
 "yoxsa onları ləğv etmək istəyirsiniz"
 
-#: contents/configuration/AppletConfiguration.qml:324
+#: contents/configuration/AppletConfiguration.qml:382
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:332
+#: contents/configuration/AppletConfiguration.qml:390
 msgid "Apply"
 msgstr "Tətbiq etmək"
 
-#: contents/configuration/AppletConfiguration.qml:338
+#: contents/configuration/AppletConfiguration.qml:396
 msgid "Cancel"
 msgstr "İmtina"
 
@@ -241,11 +241,11 @@ msgstr "İş otağı növü digər ayarları tətbiq etmədən öncə dəyişdir
 msgid "Apply Now"
 msgstr "İndi tətbiq edin"
 
-#: contents/configuration/ConfigurationShortcuts.qml:17
+#: contents/configuration/ConfigurationShortcuts.qml:18
 msgid "Shortcuts"
 msgstr "Qısayollar"
 
-#: contents/configuration/ConfigurationShortcuts.qml:29
+#: contents/configuration/ConfigurationShortcuts.qml:30
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "Bu qısayol vidjeti, ona kliklənmiş kimi əlavə edəcəkdir."
 
@@ -351,74 +351,84 @@ msgstr ""
 msgid "Visibility"
 msgstr "Görünən"
 
-#: contents/configuration/PanelConfiguration.qml:376
+#: contents/configuration/PanelConfiguration.qml:377
+#, fuzzy
+#| msgid "Always Visible"
+msgid "Always visible"
+msgstr "Həmişə görünən"
+
+#: contents/configuration/PanelConfiguration.qml:378
 #, fuzzy
 #| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "Avtomatik gizlətmək"
 
-#: contents/configuration/PanelConfiguration.qml:394
+#: contents/configuration/PanelConfiguration.qml:379
+msgid "Dodge windows"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:417
 #, fuzzy
 #| msgid "Opacity"
 msgid "Opacity"
 msgstr "Qeyri-şəffaflıq"
 
-#: contents/configuration/PanelConfiguration.qml:407
+#: contents/configuration/PanelConfiguration.qml:430
 msgid "Adaptive"
 msgstr "Uyğunlaşdırılmış"
 
-#: contents/configuration/PanelConfiguration.qml:408
+#: contents/configuration/PanelConfiguration.qml:431
 #, fuzzy
 #| msgid "Opaque"
 msgid "Opaque"
 msgstr "Qeyri-şəffaf"
 
-#: contents/configuration/PanelConfiguration.qml:409
+#: contents/configuration/PanelConfiguration.qml:432
 #, fuzzy
 #| msgid "Translucent"
 msgid "Translucent"
 msgstr "Şəffaf"
 
-#: contents/configuration/PanelConfiguration.qml:433
+#: contents/configuration/PanelConfiguration.qml:456
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:444
+#: contents/configuration/PanelConfiguration.qml:467
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating"
 msgstr "Üzən panel"
 
-#: contents/configuration/PanelConfiguration.qml:460
+#: contents/configuration/PanelConfiguration.qml:483
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Panel eni:"
 
-#: contents/configuration/PanelConfiguration.qml:460
+#: contents/configuration/PanelConfiguration.qml:483
 #, fuzzy
 #| msgid "Right"
 msgid "Height:"
 msgstr "Sağ"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:517
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Qısayol"
 
-#: contents/configuration/PanelConfiguration.qml:504
+#: contents/configuration/PanelConfiguration.qml:527
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Diqqəti panelə yönəltmək üçün bu klaviatura qısyolunu istifadə et"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:543
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Paneli silmək"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:546
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
@@ -547,9 +557,6 @@ msgstr "Vidjetlər tapılmadı"
 #~ msgctxt "@action:button Delete the panel"
 #~ msgid "Delete"
 #~ msgstr "Silmək"
-
-#~ msgid "Always Visible"
-#~ msgstr "Həmişə görünən"
 
 #, fuzzy
 #~| msgid "Floating Panel"

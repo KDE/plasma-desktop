@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-16 01:46+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2023-11-07 18:03+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -84,58 +84,58 @@ msgstr "Poglej podrobnosti napake…"
 msgid "Open %1"
 msgstr "Odpri %1"
 
-#: contents/configuration/AboutPlugin.qml:20
-#: contents/configuration/AppletConfiguration.qml:244
+#: contents/configuration/AboutPlugin.qml:21
+#: contents/configuration/AppletConfiguration.qml:302
 msgid "About"
 msgstr "O programu"
 
-#: contents/configuration/AboutPlugin.qml:48
+#: contents/configuration/AboutPlugin.qml:49
 msgid "Send an email to %1"
 msgstr "Pošlji e-pošto za %1"
 
-#: contents/configuration/AboutPlugin.qml:62
+#: contents/configuration/AboutPlugin.qml:63
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Odpri spletišče %1"
 
-#: contents/configuration/AboutPlugin.qml:130
+#: contents/configuration/AboutPlugin.qml:134
 msgid "Copyright"
 msgstr "Copyright"
 
-#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:92
+#: contents/configuration/AboutPlugin.qml:152 contents/explorer/Tooltip.qml:92
 msgid "License:"
 msgstr "Licenca:"
 
-#: contents/configuration/AboutPlugin.qml:151
+#: contents/configuration/AboutPlugin.qml:155
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Poglej besedilo dovoljenja"
 
-#: contents/configuration/AboutPlugin.qml:165
+#: contents/configuration/AboutPlugin.qml:169
 msgid "Authors"
 msgstr "Avtorji"
 
-#: contents/configuration/AboutPlugin.qml:176
+#: contents/configuration/AboutPlugin.qml:180
 msgid "Credits"
 msgstr "Zasluge"
 
-#: contents/configuration/AboutPlugin.qml:188
+#: contents/configuration/AboutPlugin.qml:192
 msgid "Translators"
 msgstr "Prevajalci"
 
-#: contents/configuration/AboutPlugin.qml:205
+#: contents/configuration/AboutPlugin.qml:209
 msgid "Report a Bug…"
 msgstr "Poročaj o hrošču…"
 
-#: contents/configuration/AppletConfiguration.qml:55
+#: contents/configuration/AppletConfiguration.qml:74
 msgid "Keyboard Shortcuts"
 msgstr "Tipkovne bližnjice"
 
-#: contents/configuration/AppletConfiguration.qml:292
+#: contents/configuration/AppletConfiguration.qml:350
 msgid "Apply Settings"
 msgstr "Uveljavi nastavitve"
 
-#: contents/configuration/AppletConfiguration.qml:293
+#: contents/configuration/AppletConfiguration.qml:351
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
@@ -143,15 +143,15 @@ msgstr ""
 "Nastavitve trenutnega modula so se spremenile. Ali želite spremembe "
 "uveljaviti ali zavreči?"
 
-#: contents/configuration/AppletConfiguration.qml:324
+#: contents/configuration/AppletConfiguration.qml:382
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:332
+#: contents/configuration/AppletConfiguration.qml:390
 msgid "Apply"
 msgstr "Uveljavi"
 
-#: contents/configuration/AppletConfiguration.qml:338
+#: contents/configuration/AppletConfiguration.qml:396
 msgid "Cancel"
 msgstr "Prekliči"
 
@@ -244,11 +244,11 @@ msgstr ""
 msgid "Apply Now"
 msgstr "Uveljavi zdaj"
 
-#: contents/configuration/ConfigurationShortcuts.qml:17
+#: contents/configuration/ConfigurationShortcuts.qml:18
 msgid "Shortcuts"
 msgstr "Bližnjice"
 
-#: contents/configuration/ConfigurationShortcuts.qml:29
+#: contents/configuration/ConfigurationShortcuts.qml:30
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "Ta bližnjica bo aktivirala program, kot da bi ga kliknili."
 
@@ -344,57 +344,67 @@ msgstr "Po meri"
 msgid "Visibility"
 msgstr "Vidnost"
 
-#: contents/configuration/PanelConfiguration.qml:376
+#: contents/configuration/PanelConfiguration.qml:377
+#, fuzzy
+#| msgid "Always Visible"
+msgid "Always visible"
+msgstr "Vedno viden"
+
+#: contents/configuration/PanelConfiguration.qml:378
 msgid "Auto hide"
 msgstr "Samodejno skrivaj"
 
-#: contents/configuration/PanelConfiguration.qml:394
+#: contents/configuration/PanelConfiguration.qml:379
+msgid "Dodge windows"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:417
 msgid "Opacity"
 msgstr "Neprosojnost"
 
-#: contents/configuration/PanelConfiguration.qml:407
+#: contents/configuration/PanelConfiguration.qml:430
 msgid "Adaptive"
 msgstr "Prilagodljivo"
 
-#: contents/configuration/PanelConfiguration.qml:408
+#: contents/configuration/PanelConfiguration.qml:431
 msgid "Opaque"
 msgstr "Neprosojno"
 
-#: contents/configuration/PanelConfiguration.qml:409
+#: contents/configuration/PanelConfiguration.qml:432
 msgid "Translucent"
 msgstr "Prosojno"
 
-#: contents/configuration/PanelConfiguration.qml:433
+#: contents/configuration/PanelConfiguration.qml:456
 msgid "Style"
 msgstr "Slog"
 
-#: contents/configuration/PanelConfiguration.qml:444
+#: contents/configuration/PanelConfiguration.qml:467
 msgid "Floating"
 msgstr "Plavajoča"
 
-#: contents/configuration/PanelConfiguration.qml:460
+#: contents/configuration/PanelConfiguration.qml:483
 msgid "Panel Width:"
 msgstr "Širina plošče:"
 
-#: contents/configuration/PanelConfiguration.qml:460
+#: contents/configuration/PanelConfiguration.qml:483
 msgid "Height:"
 msgstr "Višina:"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:517
 msgid "Focus shortcut:"
 msgstr "Bližnjica osredotočenosti:"
 
-#: contents/configuration/PanelConfiguration.qml:504
+#: contents/configuration/PanelConfiguration.qml:527
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Pritisnite to bližnjico na tipkovnici, da prenesete osredotočenja na ploščo"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:543
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Odstrani ploščo"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:546
 msgid "Remove this panel; this action is undo-able"
 msgstr "Odstrani to ploščo; te dejavnosti ni mogoče stornirati"
 
@@ -547,9 +557,6 @@ msgstr "Gradnikov ni na voljo"
 #~ "Aligns a non-maximized panel to the right; no effect when panel is "
 #~ "maximized"
 #~ msgstr "Poravnaj nerazpeto ploščo na desno, ni učinka, če je plošča razpeta"
-
-#~ msgid "Always Visible"
-#~ msgstr "Vedno viden"
 
 #~ msgid ""
 #~ "Panel is hidden, but reveals itself when the cursor touches the panel's "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-16 01:46+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2023-05-21 14:37+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -81,58 +81,58 @@ msgstr "சிக்கலின் விவரங்களை காட்ட�
 msgid "Open %1"
 msgstr "%1-ஐ திற"
 
-#: contents/configuration/AboutPlugin.qml:20
-#: contents/configuration/AppletConfiguration.qml:244
+#: contents/configuration/AboutPlugin.qml:21
+#: contents/configuration/AppletConfiguration.qml:302
 msgid "About"
 msgstr "பற்றி"
 
-#: contents/configuration/AboutPlugin.qml:48
+#: contents/configuration/AboutPlugin.qml:49
 msgid "Send an email to %1"
 msgstr "%1 என்பவருக்கு மின்னஞ்சல் அனுப்பு"
 
-#: contents/configuration/AboutPlugin.qml:62
+#: contents/configuration/AboutPlugin.qml:63
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "%1 எனும் இணையதளத்தைத் திற"
 
-#: contents/configuration/AboutPlugin.qml:130
+#: contents/configuration/AboutPlugin.qml:134
 msgid "Copyright"
 msgstr "பதிப்புரிமை"
 
-#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:92
+#: contents/configuration/AboutPlugin.qml:152 contents/explorer/Tooltip.qml:92
 msgid "License:"
 msgstr "உரிமம்:"
 
-#: contents/configuration/AboutPlugin.qml:151
+#: contents/configuration/AboutPlugin.qml:155
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "உரிமத்தின் உரையைக் காட்டும்"
 
-#: contents/configuration/AboutPlugin.qml:165
+#: contents/configuration/AboutPlugin.qml:169
 msgid "Authors"
 msgstr "இயற்றியவர்கள்"
 
-#: contents/configuration/AboutPlugin.qml:176
+#: contents/configuration/AboutPlugin.qml:180
 msgid "Credits"
 msgstr "நன்றி"
 
-#: contents/configuration/AboutPlugin.qml:188
+#: contents/configuration/AboutPlugin.qml:192
 msgid "Translators"
 msgstr "மொழிபெயர்ப்பாளர்கள்"
 
-#: contents/configuration/AboutPlugin.qml:205
+#: contents/configuration/AboutPlugin.qml:209
 msgid "Report a Bug…"
 msgstr "பிழையை தெரிவி…"
 
-#: contents/configuration/AppletConfiguration.qml:55
+#: contents/configuration/AppletConfiguration.qml:74
 msgid "Keyboard Shortcuts"
 msgstr "விசைப்பலகை சுருக்குவழிகள்"
 
-#: contents/configuration/AppletConfiguration.qml:292
+#: contents/configuration/AppletConfiguration.qml:350
 msgid "Apply Settings"
 msgstr "அமைப்புகளை செயல்படுத்து"
 
-#: contents/configuration/AppletConfiguration.qml:293
+#: contents/configuration/AppletConfiguration.qml:351
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
@@ -140,15 +140,15 @@ msgstr ""
 "தற்போதைய கூறின் அமைப்புகள் மாறியுள்ளன. அவற்றை செயல்படுத்த வேண்டுமா, அல்லது கைவிட "
 "வேண்டுமா?"
 
-#: contents/configuration/AppletConfiguration.qml:324
+#: contents/configuration/AppletConfiguration.qml:382
 msgid "OK"
 msgstr "சரி"
 
-#: contents/configuration/AppletConfiguration.qml:332
+#: contents/configuration/AppletConfiguration.qml:390
 msgid "Apply"
 msgstr "செயல்படுத்து"
 
-#: contents/configuration/AppletConfiguration.qml:338
+#: contents/configuration/AppletConfiguration.qml:396
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
@@ -239,11 +239,11 @@ msgstr "தளவமைப்பை மாற்றியதை செயல்�
 msgid "Apply Now"
 msgstr "இப்போது செயல்படுத்து"
 
-#: contents/configuration/ConfigurationShortcuts.qml:17
+#: contents/configuration/ConfigurationShortcuts.qml:18
 msgid "Shortcuts"
 msgstr "சுருக்குவழிகள்"
 
-#: contents/configuration/ConfigurationShortcuts.qml:29
+#: contents/configuration/ConfigurationShortcuts.qml:30
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "நீங்கள் பிளாஸ்மாய்டை க்ளிக் செய்த‍து போலவே இச்சுருக்குவழி அதனை இயக்கும்."
 
@@ -347,72 +347,82 @@ msgstr ""
 msgid "Visibility"
 msgstr "காட்டப்படுவது:"
 
-#: contents/configuration/PanelConfiguration.qml:376
+#: contents/configuration/PanelConfiguration.qml:377
+#, fuzzy
+#| msgid "Always Visible"
+msgid "Always visible"
+msgstr "எப்போது காட்டப்படும்"
+
+#: contents/configuration/PanelConfiguration.qml:378
 #, fuzzy
 #| msgid "Auto-Hide"
 msgid "Auto hide"
 msgstr "தானாக மறை"
 
-#: contents/configuration/PanelConfiguration.qml:394
+#: contents/configuration/PanelConfiguration.qml:379
+msgid "Dodge windows"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:417
 #, fuzzy
 #| msgid "Opacity:"
 msgid "Opacity"
 msgstr "ஒளிபுகாமை:"
 
-#: contents/configuration/PanelConfiguration.qml:407
+#: contents/configuration/PanelConfiguration.qml:430
 msgid "Adaptive"
 msgstr "மாறக்கூடியது"
 
-#: contents/configuration/PanelConfiguration.qml:408
+#: contents/configuration/PanelConfiguration.qml:431
 #, fuzzy
 #| msgid "Always Opaque"
 msgid "Opaque"
 msgstr "எப்போதும் ஒளிபுகாத‍து"
 
-#: contents/configuration/PanelConfiguration.qml:409
+#: contents/configuration/PanelConfiguration.qml:432
 #, fuzzy
 #| msgid "Always Translucent"
 msgid "Translucent"
 msgstr "எப்போதும் ஒளிபுகக்கூடியது"
 
-#: contents/configuration/PanelConfiguration.qml:433
+#: contents/configuration/PanelConfiguration.qml:456
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:444
+#: contents/configuration/PanelConfiguration.qml:467
 msgid "Floating"
 msgstr "மிதப்பது"
 
-#: contents/configuration/PanelConfiguration.qml:460
+#: contents/configuration/PanelConfiguration.qml:483
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "பலகையின் அகலம்:"
 
-#: contents/configuration/PanelConfiguration.qml:460
+#: contents/configuration/PanelConfiguration.qml:483
 #, fuzzy
 #| msgid "Right"
 msgid "Height:"
 msgstr "வலதுபுறமாக"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:517
 #, fuzzy
 #| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
 msgstr "குவியப்படுத்தும் சுருக்குவழி:"
 
-#: contents/configuration/PanelConfiguration.qml:504
+#: contents/configuration/PanelConfiguration.qml:527
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "பலகையை குவியப்படுத்த இந்த விசைச் சுருக்குவழியை அழுத்துங்கள்"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:543
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "பலகையை நீக்கு"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:546
 msgid "Remove this panel; this action is undo-able"
 msgstr "பலகையை நீக்கும்; இச்செயலை செயல்நீக்கலாம்"
 
@@ -564,9 +574,6 @@ msgstr "பிளாஸ்மாய்டுகள் ஏதுமில்ல�
 #~ "Aligns a non-maximized panel to the right; no effect when panel is "
 #~ "maximized"
 #~ msgstr "பலகை அதிகபட்ச நீளத்தைக் கொண்டிராத பட்சத்தில் அதை வலது ஓரத்துடன் சீரமைக்கும்"
-
-#~ msgid "Always Visible"
-#~ msgstr "எப்போது காட்டப்படும்"
 
 #~ msgid ""
 #~ "Panel is hidden, but reveals itself when the cursor touches the panel's "

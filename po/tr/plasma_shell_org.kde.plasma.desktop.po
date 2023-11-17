@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-16 01:46+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2023-11-08 21:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -83,58 +83,58 @@ msgstr "Hata Ayrıntılarını Görüntüle…"
 msgid "Open %1"
 msgstr "Aç: %1"
 
-#: contents/configuration/AboutPlugin.qml:20
-#: contents/configuration/AppletConfiguration.qml:244
+#: contents/configuration/AboutPlugin.qml:21
+#: contents/configuration/AppletConfiguration.qml:302
 msgid "About"
 msgstr "Hakkında"
 
-#: contents/configuration/AboutPlugin.qml:48
+#: contents/configuration/AboutPlugin.qml:49
 msgid "Send an email to %1"
 msgstr "%1 adresine bir e-posta gönder"
 
-#: contents/configuration/AboutPlugin.qml:62
+#: contents/configuration/AboutPlugin.qml:63
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "%1 web sayfasını aç"
 
-#: contents/configuration/AboutPlugin.qml:130
+#: contents/configuration/AboutPlugin.qml:134
 msgid "Copyright"
 msgstr "Telif Hakkı"
 
-#: contents/configuration/AboutPlugin.qml:148 contents/explorer/Tooltip.qml:92
+#: contents/configuration/AboutPlugin.qml:152 contents/explorer/Tooltip.qml:92
 msgid "License:"
 msgstr "Lisans:"
 
-#: contents/configuration/AboutPlugin.qml:151
+#: contents/configuration/AboutPlugin.qml:155
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Lisans metnini görüntüle"
 
-#: contents/configuration/AboutPlugin.qml:165
+#: contents/configuration/AboutPlugin.qml:169
 msgid "Authors"
 msgstr "Yazarlar"
 
-#: contents/configuration/AboutPlugin.qml:176
+#: contents/configuration/AboutPlugin.qml:180
 msgid "Credits"
 msgstr "Emeği Geçenler"
 
-#: contents/configuration/AboutPlugin.qml:188
+#: contents/configuration/AboutPlugin.qml:192
 msgid "Translators"
 msgstr "Çevirmenler"
 
-#: contents/configuration/AboutPlugin.qml:205
+#: contents/configuration/AboutPlugin.qml:209
 msgid "Report a Bug…"
 msgstr "Hata Bildir…"
 
-#: contents/configuration/AppletConfiguration.qml:55
+#: contents/configuration/AppletConfiguration.qml:74
 msgid "Keyboard Shortcuts"
 msgstr "Klavye Kısayolları"
 
-#: contents/configuration/AppletConfiguration.qml:292
+#: contents/configuration/AppletConfiguration.qml:350
 msgid "Apply Settings"
 msgstr "Ayarları Uygula"
 
-#: contents/configuration/AppletConfiguration.qml:293
+#: contents/configuration/AppletConfiguration.qml:351
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
@@ -142,15 +142,15 @@ msgstr ""
 "Etkin modülün ayarları değiştirildi. Bu değişiklikleri uygulamak mı yok "
 "saymak mı istersiniz?"
 
-#: contents/configuration/AppletConfiguration.qml:324
+#: contents/configuration/AppletConfiguration.qml:382
 msgid "OK"
 msgstr "Tamam"
 
-#: contents/configuration/AppletConfiguration.qml:332
+#: contents/configuration/AppletConfiguration.qml:390
 msgid "Apply"
 msgstr "Uygula"
 
-#: contents/configuration/AppletConfiguration.qml:338
+#: contents/configuration/AppletConfiguration.qml:396
 msgid "Cancel"
 msgstr "İptal"
 
@@ -241,11 +241,11 @@ msgstr "Yerleşim değişiklikleri, diğer değişiklikler yapılmadan uygulanma
 msgid "Apply Now"
 msgstr "Şimdi Uygula"
 
-#: contents/configuration/ConfigurationShortcuts.qml:17
+#: contents/configuration/ConfigurationShortcuts.qml:18
 msgid "Shortcuts"
 msgstr "Kısayollar"
 
-#: contents/configuration/ConfigurationShortcuts.qml:29
+#: contents/configuration/ConfigurationShortcuts.qml:30
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "Bu kısayol, uygulamacığı tıklanmış gibi etkinleştirir."
 
@@ -342,56 +342,66 @@ msgstr "Özel"
 msgid "Visibility"
 msgstr "Görünürlük"
 
-#: contents/configuration/PanelConfiguration.qml:376
+#: contents/configuration/PanelConfiguration.qml:377
+#, fuzzy
+#| msgid "Always Visible"
+msgid "Always visible"
+msgstr "Her Zaman Görünür"
+
+#: contents/configuration/PanelConfiguration.qml:378
 msgid "Auto hide"
 msgstr "Kendiliğinden gizle"
 
-#: contents/configuration/PanelConfiguration.qml:394
+#: contents/configuration/PanelConfiguration.qml:379
+msgid "Dodge windows"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:417
 msgid "Opacity"
 msgstr "Matlık"
 
-#: contents/configuration/PanelConfiguration.qml:407
+#: contents/configuration/PanelConfiguration.qml:430
 msgid "Adaptive"
 msgstr "Uyarlanabilir"
 
-#: contents/configuration/PanelConfiguration.qml:408
+#: contents/configuration/PanelConfiguration.qml:431
 msgid "Opaque"
 msgstr "Mat"
 
-#: contents/configuration/PanelConfiguration.qml:409
+#: contents/configuration/PanelConfiguration.qml:432
 msgid "Translucent"
 msgstr "Yarısaydam"
 
-#: contents/configuration/PanelConfiguration.qml:433
+#: contents/configuration/PanelConfiguration.qml:456
 msgid "Style"
 msgstr "Biçem"
 
-#: contents/configuration/PanelConfiguration.qml:444
+#: contents/configuration/PanelConfiguration.qml:467
 msgid "Floating"
 msgstr "Yüzer"
 
-#: contents/configuration/PanelConfiguration.qml:460
+#: contents/configuration/PanelConfiguration.qml:483
 msgid "Panel Width:"
 msgstr "Panel genişliği:"
 
-#: contents/configuration/PanelConfiguration.qml:460
+#: contents/configuration/PanelConfiguration.qml:483
 msgid "Height:"
 msgstr "Yükseklik:"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:517
 msgid "Focus shortcut:"
 msgstr "Odak kısayolu:"
 
-#: contents/configuration/PanelConfiguration.qml:504
+#: contents/configuration/PanelConfiguration.qml:527
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Odağı panele taşımak için bu klavye kısayolunu kullan"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:543
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Paneli Sil"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:546
 msgid "Remove this panel; this action is undo-able"
 msgstr "Bu paneli kaldır; bu eylem geri alınabilir"
 
@@ -553,9 +563,6 @@ msgstr "Kullanılabilir araç takımı yok"
 #~ msgstr ""
 #~ "Ekranı kaplamayan bir paneli sağa hizalar; panel ekranı kapladığında aynı "
 #~ "kalır"
-
-#~ msgid "Always Visible"
-#~ msgstr "Her Zaman Görünür"
 
 #~ msgid ""
 #~ "Panel is hidden, but reveals itself when the cursor touches the panel's "

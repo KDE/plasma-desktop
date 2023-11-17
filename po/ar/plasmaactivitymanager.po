@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2017-02-10 13:34+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: sortedactivitiesmodel.cpp:311
+#: sortedactivitiesmodel.cpp:301
 #, kde-format
 msgid "Used some time ago"
 msgstr "استُخدم منذ أمد"
 
-#: sortedactivitiesmodel.cpp:327
+#: sortedactivitiesmodel.cpp:317
 #, kde-format
 msgid "Used more than a year ago"
 msgstr "استُخدم منذ أكثر من سنة"
 
-#: sortedactivitiesmodel.cpp:328
+#: sortedactivitiesmodel.cpp:318
 #, kde-format
 msgctxt "amount in months"
 msgid "Used a month ago"
@@ -40,7 +40,7 @@ msgstr[3] "استُخدم منذ %1 أشهر"
 msgstr[4] "استُخدم منذ %1 شهرًا"
 msgstr[5] "استُخدم منذ %1 شهر"
 
-#: sortedactivitiesmodel.cpp:329
+#: sortedactivitiesmodel.cpp:319
 #, kde-format
 msgctxt "amount in days"
 msgid "Used a day ago"
@@ -52,7 +52,7 @@ msgstr[3] "استُخدم منذ %1 أيّام"
 msgstr[4] "استُخدم منذ %1 يومًا"
 msgstr[5] "استُخدم منذ %1 يوم"
 
-#: sortedactivitiesmodel.cpp:330
+#: sortedactivitiesmodel.cpp:320
 #, kde-format
 msgctxt "amount in hours"
 msgid "Used an hour ago"
@@ -64,7 +64,7 @@ msgstr[3] "استُخدم منذ %1 ساعات"
 msgstr[4] "استُخدم منذ %1 ساعة"
 msgstr[5] "استُخدم منذ %1 ساعة"
 
-#: sortedactivitiesmodel.cpp:331
+#: sortedactivitiesmodel.cpp:321
 #, kde-format
 msgctxt "amount in minutes"
 msgid "Used a minute ago"
@@ -76,7 +76,7 @@ msgstr[3] "استُخدم منذ %1 دقائق"
 msgstr[4] "استُخدم منذ %1 دقيقة"
 msgstr[5] "استُخدم منذ %1 دقيقة"
 
-#: sortedactivitiesmodel.cpp:332
+#: sortedactivitiesmodel.cpp:322
 #, kde-format
 msgid "Used a moment ago"
 msgstr "استُخدم منذ قليل"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmaactivitymanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:39+0000\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
 "PO-Revision-Date: 2016-04-15 23:42+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,19 +19,19 @@ msgstr ""
 "X-Environment: kde\n"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:311
+#: sortedactivitiesmodel.cpp:301
 #, kde-format
 msgid "Used some time ago"
 msgstr "коришћено пре неког времена"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:327
+#: sortedactivitiesmodel.cpp:317
 #, kde-format
 msgid "Used more than a year ago"
 msgstr "коришћено пре више од године"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:328
+#: sortedactivitiesmodel.cpp:318
 #, kde-format
 msgctxt "amount in months"
 msgid "Used a month ago"
@@ -42,7 +42,7 @@ msgstr[2] "коришћено пре %1 месеци"
 msgstr[3] "коришћено месец раније"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:329
+#: sortedactivitiesmodel.cpp:319
 #, kde-format
 msgctxt "amount in days"
 msgid "Used a day ago"
@@ -53,7 +53,7 @@ msgstr[2] "коришћено пре %1 дана"
 msgstr[3] "коришћено дан раније"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:330
+#: sortedactivitiesmodel.cpp:320
 #, kde-format
 msgctxt "amount in hours"
 msgid "Used an hour ago"
@@ -64,7 +64,7 @@ msgstr[2] "коришћено пре %1 сати"
 msgstr[3] "коришћено сат раније"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:331
+#: sortedactivitiesmodel.cpp:321
 #, kde-format
 msgctxt "amount in minutes"
 msgid "Used a minute ago"
@@ -75,7 +75,7 @@ msgstr[2] "коришћено пре %1 минута"
 msgstr[3] "коришћено минут раније"
 
 # >> @item
-#: sortedactivitiesmodel.cpp:332
+#: sortedactivitiesmodel.cpp:322
 #, kde-format
 msgid "Used a moment ago"
 msgstr "само што је коришћено"

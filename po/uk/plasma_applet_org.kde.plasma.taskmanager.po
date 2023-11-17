@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-16 01:46+0000\n"
-"PO-Revision-Date: 2023-02-14 08:18+0200\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"PO-Revision-Date: 2023-11-16 18:51+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -66,132 +66,130 @@ msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
 msgstr "9999+"
 
-#: package/contents/ui/ConfigAppearance.qml:33
+#: package/contents/ui/ConfigAppearance.qml:32
 #, kde-format
 msgid "General:"
 msgstr "Загальне:"
 
-#: package/contents/ui/ConfigAppearance.qml:34
+#: package/contents/ui/ConfigAppearance.qml:33
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
 msgstr "Показувати мініатюри вікон при наведенні на пункт на панелі завдань"
 
-#: package/contents/ui/ConfigAppearance.qml:39
+#: package/contents/ui/ConfigAppearance.qml:38
 #, kde-format
 msgid "Hide other windows when hovering over previews"
 msgstr "Сховати інші вікна при наведення на мініатюру"
 
-#: package/contents/ui/ConfigAppearance.qml:44
+#: package/contents/ui/ConfigAppearance.qml:43
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr "Позначати програми, які відтворюють звук"
 
-#: package/contents/ui/ConfigAppearance.qml:52
+#: package/contents/ui/ConfigAppearance.qml:51
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "Заповнити вільне місце на панелі"
 
-#: package/contents/ui/ConfigAppearance.qml:60
+#: package/contents/ui/ConfigAppearance.qml:59
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "Перегляд у декілька стовпців:"
 
-#: package/contents/ui/ConfigAppearance.qml:60
+#: package/contents/ui/ConfigAppearance.qml:59
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "Перегляд у декілька рядків:"
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:66
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "Ніколи"
 
-#: package/contents/ui/ConfigAppearance.qml:77
+#: package/contents/ui/ConfigAppearance.qml:76
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
-msgstr ""
+msgstr "Якщо на панелі мало місця, і вона достатньо товста"
 
-#: package/contents/ui/ConfigAppearance.qml:88
+#: package/contents/ui/ConfigAppearance.qml:87
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
-msgstr ""
+msgstr "Завжди, коли панель достатньо товста"
 
-#: package/contents/ui/ConfigAppearance.qml:94
-#, fuzzy, kde-format
-#| msgid "Maximum columns:"
+#: package/contents/ui/ConfigAppearance.qml:93
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Максимальна кількість стовпчиків:"
 
-#: package/contents/ui/ConfigAppearance.qml:94
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#: package/contents/ui/ConfigAppearance.qml:93
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Максимальна кількість рядків:"
 
-#: package/contents/ui/ConfigAppearance.qml:104
+#: package/contents/ui/ConfigAppearance.qml:103
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "Інтервал між піктограмами:"
 
-#: package/contents/ui/ConfigAppearance.qml:108
+#: package/contents/ui/ConfigAppearance.qml:107
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Малий"
 
-#: package/contents/ui/ConfigAppearance.qml:112
+#: package/contents/ui/ConfigAppearance.qml:111
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Звичайний"
 
-#: package/contents/ui/ConfigAppearance.qml:116
+#: package/contents/ui/ConfigAppearance.qml:115
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Великий"
 
-#: package/contents/ui/ConfigAppearance.qml:140
+#: package/contents/ui/ConfigAppearance.qml:139
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "У режимі сенсорного керування буде автоматично встановлено «Великий»"
 
-#: package/contents/ui/ConfigBehavior.qml:48
+#: package/contents/ui/ConfigBehavior.qml:46
 #, kde-format
 msgid "Group:"
 msgstr "Групування:"
 
-#: package/contents/ui/ConfigBehavior.qml:51
+#: package/contents/ui/ConfigBehavior.qml:49
 #, kde-format
 msgid "Do not group"
 msgstr "Не групувати"
 
-#: package/contents/ui/ConfigBehavior.qml:51
+#: package/contents/ui/ConfigBehavior.qml:49
 #, kde-format
 msgid "By program name"
 msgstr "За назвою програми"
 
-#: package/contents/ui/ConfigBehavior.qml:56
+#: package/contents/ui/ConfigBehavior.qml:54
 #, kde-format
 msgid "Clicking grouped task:"
 msgstr "Після клацання на згрупованому завданні:"
 
-#: package/contents/ui/ConfigBehavior.qml:63
+#: package/contents/ui/ConfigBehavior.qml:61
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
 msgstr "Циклічно переходити між завданнями"
 
-#: package/contents/ui/ConfigBehavior.qml:64
+#: package/contents/ui/ConfigBehavior.qml:62
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
@@ -199,20 +197,20 @@ msgctxt ""
 msgid "Shows small window previews"
 msgstr "Показує малі ескізи вікон"
 
-#: package/contents/ui/ConfigBehavior.qml:65
+#: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
 msgstr "Показує великі ескізи вікон"
 
-#: package/contents/ui/ConfigBehavior.qml:66
+#: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
 msgstr "Показувати текстовий список"
 
-#: package/contents/ui/ConfigBehavior.qml:74
+#: package/contents/ui/ConfigBehavior.qml:72
 #, kde-format
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
@@ -221,87 +219,87 @@ msgstr ""
 "У засобі композиції не передбачено можливості показу вікон поряд одне з "
 "одним, тому буде показано текстовий список."
 
-#: package/contents/ui/ConfigBehavior.qml:84
+#: package/contents/ui/ConfigBehavior.qml:82
 #, kde-format
 msgid "Combine into single button"
 msgstr "Поєднати у одній кнопці"
 
-#: package/contents/ui/ConfigBehavior.qml:91
+#: package/contents/ui/ConfigBehavior.qml:89
 #, kde-format
 msgid "Group only when the Task Manager is full"
 msgstr "Групувати, лише якщо панель задач заповнено"
 
-#: package/contents/ui/ConfigBehavior.qml:102
+#: package/contents/ui/ConfigBehavior.qml:100
 #, kde-format
 msgid "Sort:"
 msgstr "Впорядкування:"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "Do not sort"
 msgstr "Не впорядковувати"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "Manually"
 msgstr "Вручну"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "Alphabetically"
 msgstr "За алфавітом"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "By desktop"
 msgstr "За стільницею"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "By activity"
 msgstr "За простором дій"
 
-#: package/contents/ui/ConfigBehavior.qml:111
+#: package/contents/ui/ConfigBehavior.qml:109
 #, kde-format
 msgid "Keep launchers separate"
 msgstr "Відокремлювати засоби запуску"
 
-#: package/contents/ui/ConfigBehavior.qml:122
+#: package/contents/ui/ConfigBehavior.qml:120
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
 msgstr "Клацання на активному завданні:"
 
-#: package/contents/ui/ConfigBehavior.qml:123
+#: package/contents/ui/ConfigBehavior.qml:121
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "Мінімізує вікно"
 
-#: package/contents/ui/ConfigBehavior.qml:128
+#: package/contents/ui/ConfigBehavior.qml:126
 #, kde-format
 msgid "Middle-clicking any task:"
 msgstr "Клацання середньою на будь-якому завданні:"
 
-#: package/contents/ui/ConfigBehavior.qml:132
+#: package/contents/ui/ConfigBehavior.qml:130
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "Не призводить до якихось дій"
 
-#: package/contents/ui/ConfigBehavior.qml:133
+#: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
 msgstr "Закриває вікно або групу"
 
-#: package/contents/ui/ConfigBehavior.qml:134
+#: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
 msgstr "Відкриває нове вікно"
 
-#: package/contents/ui/ConfigBehavior.qml:135
+#: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
@@ -309,13 +307,13 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "Мінімізує або відновлює вікно або групу"
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
 msgstr "Перемикає групування"
 
-#: package/contents/ui/ConfigBehavior.qml:137
+#: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
@@ -323,81 +321,81 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "Переносить на поточну віртуальну стільницю"
 
-#: package/contents/ui/ConfigBehavior.qml:147
+#: package/contents/ui/ConfigBehavior.qml:145
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "Коліщатко миші:"
 
-#: package/contents/ui/ConfigBehavior.qml:148
+#: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "Циклічно переходити між завданнями"
 
-#: package/contents/ui/ConfigBehavior.qml:157
+#: package/contents/ui/ConfigBehavior.qml:155
 #, kde-format
 msgid "Skip minimized tasks"
 msgstr "Пропустити мінімізовані завдання"
 
-#: package/contents/ui/ConfigBehavior.qml:168
+#: package/contents/ui/ConfigBehavior.qml:166
 #, kde-format
 msgid "Show only tasks:"
 msgstr "Показувати лише завдання:"
 
-#: package/contents/ui/ConfigBehavior.qml:169
+#: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
 msgid "From current screen"
 msgstr "з поточного екрана"
 
-#: package/contents/ui/ConfigBehavior.qml:174
+#: package/contents/ui/ConfigBehavior.qml:172
 #, kde-format
 msgid "From current desktop"
 msgstr "з поточної стільниці"
 
-#: package/contents/ui/ConfigBehavior.qml:179
+#: package/contents/ui/ConfigBehavior.qml:177
 #, kde-format
 msgid "From current activity"
 msgstr "з поточного простору дій"
 
-#: package/contents/ui/ConfigBehavior.qml:184
+#: package/contents/ui/ConfigBehavior.qml:182
 #, kde-format
 msgid "That are minimized"
 msgstr "вікна яких мінімізовано"
 
-#: package/contents/ui/ConfigBehavior.qml:193
+#: package/contents/ui/ConfigBehavior.qml:191
 #, kde-format
 msgid "When panel is hidden:"
 msgstr "Якщо панель приховано:"
 
-#: package/contents/ui/ConfigBehavior.qml:194
+#: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgid "Unhide when a window wants attention"
 msgstr "Скасовувати приховування, якщо вікно потребує уваги"
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:204
 #, kde-format
 msgid "New tasks appear:"
 msgstr "Нові завдання з'являтимуться:"
 
-#: package/contents/ui/ConfigBehavior.qml:210
+#: package/contents/ui/ConfigBehavior.qml:208
 #, kde-format
 msgid "On the bottom"
 msgstr "Внизу"
 
-#: package/contents/ui/ConfigBehavior.qml:214
-#: package/contents/ui/ConfigBehavior.qml:234
+#: package/contents/ui/ConfigBehavior.qml:212
+#: package/contents/ui/ConfigBehavior.qml:232
 #, kde-format
 msgid "To the right"
 msgstr "Праворуч"
 
-#: package/contents/ui/ConfigBehavior.qml:216
-#: package/contents/ui/ConfigBehavior.qml:232
+#: package/contents/ui/ConfigBehavior.qml:214
+#: package/contents/ui/ConfigBehavior.qml:230
 #, kde-format
 msgid "To the left"
 msgstr "Ліворуч"
 
-#: package/contents/ui/ConfigBehavior.qml:228
+#: package/contents/ui/ConfigBehavior.qml:226
 #, kde-format
 msgid "On the Top"
 msgstr "Згори"

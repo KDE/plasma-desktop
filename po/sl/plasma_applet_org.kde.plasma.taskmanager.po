@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-16 01:46+0000\n"
-"PO-Revision-Date: 2023-11-04 14:29+0100\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"PO-Revision-Date: 2023-11-16 13:33+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -66,132 +66,130 @@ msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
 msgstr "9999+"
 
-#: package/contents/ui/ConfigAppearance.qml:33
+#: package/contents/ui/ConfigAppearance.qml:32
 #, kde-format
 msgid "General:"
 msgstr "Splošno:"
 
-#: package/contents/ui/ConfigAppearance.qml:34
+#: package/contents/ui/ConfigAppearance.qml:33
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
 msgstr "Prikazuj mahne predoglede oken, kadar je miška nad namigi opravil"
 
-#: package/contents/ui/ConfigAppearance.qml:39
+#: package/contents/ui/ConfigAppearance.qml:38
 #, kde-format
 msgid "Hide other windows when hovering over previews"
 msgstr "Skrivaj ostala okna, kadar je miška nad predogledi"
 
-#: package/contents/ui/ConfigAppearance.qml:44
+#: package/contents/ui/ConfigAppearance.qml:43
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr "Označi programe, ki predvajajo zvok"
 
-#: package/contents/ui/ConfigAppearance.qml:52
+#: package/contents/ui/ConfigAppearance.qml:51
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "Zapolni prazen prostor na plošči"
 
-#: package/contents/ui/ConfigAppearance.qml:60
+#: package/contents/ui/ConfigAppearance.qml:59
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "Uporabi pogled z več stolpci:"
 
-#: package/contents/ui/ConfigAppearance.qml:60
+#: package/contents/ui/ConfigAppearance.qml:59
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "Uporabi pogled z več vrsticami:"
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:66
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "Nikoli"
 
-#: package/contents/ui/ConfigAppearance.qml:77
+#: package/contents/ui/ConfigAppearance.qml:76
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
-msgstr ""
+msgstr "Kadar na plošči zmanjkuje prostora in je dovolj debela"
 
-#: package/contents/ui/ConfigAppearance.qml:88
+#: package/contents/ui/ConfigAppearance.qml:87
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
-msgstr ""
+msgstr "Vedno, kadar je plošča dovolj debela"
 
-#: package/contents/ui/ConfigAppearance.qml:94
-#, fuzzy, kde-format
-#| msgid "Maximum columns:"
+#: package/contents/ui/ConfigAppearance.qml:93
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
-msgstr "Največ stolpcev:"
+msgstr "Maksimimum stolpcev:"
 
-#: package/contents/ui/ConfigAppearance.qml:94
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#: package/contents/ui/ConfigAppearance.qml:93
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
-msgstr "Največ vrstic:"
+msgstr "Maksimimum vrstic:"
 
-#: package/contents/ui/ConfigAppearance.qml:104
+#: package/contents/ui/ConfigAppearance.qml:103
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "Prostor med ikonami:"
 
-#: package/contents/ui/ConfigAppearance.qml:108
+#: package/contents/ui/ConfigAppearance.qml:107
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Majhen"
 
-#: package/contents/ui/ConfigAppearance.qml:112
+#: package/contents/ui/ConfigAppearance.qml:111
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normalen"
 
-#: package/contents/ui/ConfigAppearance.qml:116
+#: package/contents/ui/ConfigAppearance.qml:115
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Velik"
 
-#: package/contents/ui/ConfigAppearance.qml:140
+#: package/contents/ui/ConfigAppearance.qml:139
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Samodejno nastavi na Velik, kadar v dotikalnem načinu"
 
-#: package/contents/ui/ConfigBehavior.qml:48
+#: package/contents/ui/ConfigBehavior.qml:46
 #, kde-format
 msgid "Group:"
 msgstr "Združi:"
 
-#: package/contents/ui/ConfigBehavior.qml:51
+#: package/contents/ui/ConfigBehavior.qml:49
 #, kde-format
 msgid "Do not group"
 msgstr "Ne združuj"
 
-#: package/contents/ui/ConfigBehavior.qml:51
+#: package/contents/ui/ConfigBehavior.qml:49
 #, kde-format
 msgid "By program name"
 msgstr "Po imenu programa"
 
-#: package/contents/ui/ConfigBehavior.qml:56
+#: package/contents/ui/ConfigBehavior.qml:54
 #, kde-format
 msgid "Clicking grouped task:"
 msgstr "Ob kliku na grupirano opravilo:"
 
-#: package/contents/ui/ConfigBehavior.qml:63
+#: package/contents/ui/ConfigBehavior.qml:61
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
 msgstr "Kroži skozi opravila"
 
-#: package/contents/ui/ConfigBehavior.qml:64
+#: package/contents/ui/ConfigBehavior.qml:62
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
@@ -199,20 +197,20 @@ msgctxt ""
 msgid "Shows small window previews"
 msgstr "Prikazuje majhne predoglede oken"
 
-#: package/contents/ui/ConfigBehavior.qml:65
+#: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
 msgstr "Prikazuje velike predoglede oken"
 
-#: package/contents/ui/ConfigBehavior.qml:66
+#: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
 msgstr "Prikaže kontekstni seznam"
 
-#: package/contents/ui/ConfigBehavior.qml:74
+#: package/contents/ui/ConfigBehavior.qml:72
 #, kde-format
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
@@ -221,87 +219,87 @@ msgstr ""
 "Upravljalnik skladnje ne podpira prikaza oken drugega ob drugem, zato bo "
 "namesto tega prikazan besedilni seznam."
 
-#: package/contents/ui/ConfigBehavior.qml:84
+#: package/contents/ui/ConfigBehavior.qml:82
 #, kde-format
 msgid "Combine into single button"
 msgstr "Sestavi v en gumb"
 
-#: package/contents/ui/ConfigBehavior.qml:91
+#: package/contents/ui/ConfigBehavior.qml:89
 #, kde-format
 msgid "Group only when the Task Manager is full"
 msgstr "Združi samo, kadar je upravljalnik opravil poln"
 
-#: package/contents/ui/ConfigBehavior.qml:102
+#: package/contents/ui/ConfigBehavior.qml:100
 #, kde-format
 msgid "Sort:"
 msgstr "Razvrsti:"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "Do not sort"
 msgstr "Ne razvrščaj"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "Manually"
 msgstr "Ročno"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "Alphabetically"
 msgstr "Po abecedi"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "By desktop"
 msgstr "Po namizju"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "By activity"
 msgstr "Po dejavnosti"
 
-#: package/contents/ui/ConfigBehavior.qml:111
+#: package/contents/ui/ConfigBehavior.qml:109
 #, kde-format
 msgid "Keep launchers separate"
 msgstr "Ohrani zaganjalnike ločene"
 
-#: package/contents/ui/ConfigBehavior.qml:122
+#: package/contents/ui/ConfigBehavior.qml:120
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
 msgstr "Ob kliku na dejavno opravilo:"
 
-#: package/contents/ui/ConfigBehavior.qml:123
+#: package/contents/ui/ConfigBehavior.qml:121
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "Strni opravilo"
 
-#: package/contents/ui/ConfigBehavior.qml:128
+#: package/contents/ui/ConfigBehavior.qml:126
 #, kde-format
 msgid "Middle-clicking any task:"
 msgstr "Srednji klik na opravilo:"
 
-#: package/contents/ui/ConfigBehavior.qml:132
+#: package/contents/ui/ConfigBehavior.qml:130
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "Ne napravi nič"
 
-#: package/contents/ui/ConfigBehavior.qml:133
+#: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
 msgstr "Zapre okno ali skupino"
 
-#: package/contents/ui/ConfigBehavior.qml:134
+#: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
 msgstr "Odpre novo okno"
 
-#: package/contents/ui/ConfigBehavior.qml:135
+#: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
@@ -309,13 +307,13 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "Skrči/obnovi okno ali skupino"
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
 msgstr "Preklaplja grupiranje"
 
-#: package/contents/ui/ConfigBehavior.qml:137
+#: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
@@ -323,81 +321,81 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "Ga prinese na trenutno navidezno namizje"
 
-#: package/contents/ui/ConfigBehavior.qml:147
+#: package/contents/ui/ConfigBehavior.qml:145
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "Miškin kolešček:"
 
-#: package/contents/ui/ConfigBehavior.qml:148
+#: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "Kroži skozi opravila"
 
-#: package/contents/ui/ConfigBehavior.qml:157
+#: package/contents/ui/ConfigBehavior.qml:155
 #, kde-format
 msgid "Skip minimized tasks"
 msgstr "Preskoči strnjena opravila"
 
-#: package/contents/ui/ConfigBehavior.qml:168
+#: package/contents/ui/ConfigBehavior.qml:166
 #, kde-format
 msgid "Show only tasks:"
 msgstr "Prikaži samo opravila:"
 
-#: package/contents/ui/ConfigBehavior.qml:169
+#: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
 msgid "From current screen"
 msgstr "S trenutnega zaslona"
 
-#: package/contents/ui/ConfigBehavior.qml:174
+#: package/contents/ui/ConfigBehavior.qml:172
 #, kde-format
 msgid "From current desktop"
 msgstr "S trenutnega namizja"
 
-#: package/contents/ui/ConfigBehavior.qml:179
+#: package/contents/ui/ConfigBehavior.qml:177
 #, kde-format
 msgid "From current activity"
 msgstr "S trenutne dejavnosti"
 
-#: package/contents/ui/ConfigBehavior.qml:184
+#: package/contents/ui/ConfigBehavior.qml:182
 #, kde-format
 msgid "That are minimized"
 msgstr "Skrčena opravila"
 
-#: package/contents/ui/ConfigBehavior.qml:193
+#: package/contents/ui/ConfigBehavior.qml:191
 #, kde-format
 msgid "When panel is hidden:"
 msgstr "Kadar je plošča skrita:"
 
-#: package/contents/ui/ConfigBehavior.qml:194
+#: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgid "Unhide when a window wants attention"
 msgstr "Razkrij se, kadar okno želi pozornost"
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:204
 #, kde-format
 msgid "New tasks appear:"
 msgstr "Nova opravila se pokažejo:"
 
-#: package/contents/ui/ConfigBehavior.qml:210
+#: package/contents/ui/ConfigBehavior.qml:208
 #, kde-format
 msgid "On the bottom"
 msgstr "Na dnu"
 
-#: package/contents/ui/ConfigBehavior.qml:214
-#: package/contents/ui/ConfigBehavior.qml:234
+#: package/contents/ui/ConfigBehavior.qml:212
+#: package/contents/ui/ConfigBehavior.qml:232
 #, kde-format
 msgid "To the right"
 msgstr "Na desni"
 
-#: package/contents/ui/ConfigBehavior.qml:216
-#: package/contents/ui/ConfigBehavior.qml:232
+#: package/contents/ui/ConfigBehavior.qml:214
+#: package/contents/ui/ConfigBehavior.qml:230
 #, kde-format
 msgid "To the left"
 msgstr "Na levi"
 
-#: package/contents/ui/ConfigBehavior.qml:228
+#: package/contents/ui/ConfigBehavior.qml:226
 #, kde-format
 msgid "On the Top"
 msgstr "Na vrhu"
