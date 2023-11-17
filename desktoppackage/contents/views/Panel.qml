@@ -81,6 +81,7 @@ Item {
     // This avoids the panel flashing if it is auto-hide etc and such a window is shown.
     // Examples of such windows: properties of a file on desktop, or portal "open with" dialog
     property bool touchingWindow: false
+    property bool touchingActiveWindow: touchingWindow && visibleWindowsModel.activeTask.valid
     property bool touchingWindowDirect: visibleWindowsModel.count > 0
     Timer {
         id: touchingWindowDebounceTimer
