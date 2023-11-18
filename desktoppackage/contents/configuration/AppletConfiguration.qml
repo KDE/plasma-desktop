@@ -34,6 +34,8 @@ Rectangle {
 
     property ConfigModel globalConfigModel:  globalAppletConfigModel
 
+    property url currentSource
+
     function closing() {
         if (applyButton.enabled) {
             messageDialog.item = null;
@@ -73,7 +75,7 @@ Rectangle {
         ConfigCategory {
             name: i18nd("plasma_shell_org.kde.plasma.desktop", "Keyboard Shortcuts")
             icon: "preferences-desktop-keyboard"
-            source: "ConfigurationShortcuts.qml"
+            source: Qt.resolvedUrl("ConfigurationShortcuts.qml")
         }
     }
 
@@ -106,8 +108,10 @@ Rectangle {
 
     function open(item) {
         app.isAboutPage = false;
+        root.currentSource = item.source
+
         if (item.source) {
-            app.isAboutPage = item.source === "AboutPlugin.qml";
+            app.isAboutPage = item.source === Qt.resolvedUrl("AboutPlugin.qml");
 
             if (isContainment) {
                 pushReplace(Qt.resolvedUrl("ConfigurationAppletPage.qml"), {configItem: item});
@@ -123,7 +127,7 @@ Rectangle {
                     props["cfg_" + key] = config[key];
                 });
 
-                pushReplace(Qt.resolvedUrl(item.source), props);
+                pushReplace(item.source, props);
             }
 
         } else if (item.kcm) {
@@ -268,10 +272,8 @@ Rectangle {
                         if (app.pageStack.currentItem) {
                             if (model.kcm && app.pageStack.currentItem.kcm) {
                                 return model.kcm == app.pageStack.currentItem.kcm
-                            } else if (app.pageStack.currentItem.configItem) {
-                                return model.source == app.pageStack.currentItem.configItem.source
                             } else {
-                                return app.pageStack.currentItem.source == Qt.resolvedUrl(model.source)
+                                return root.currentSource == model.source
                             }
                         }
                         return false
@@ -301,7 +303,7 @@ Rectangle {
                     ConfigCategory{
                         name: i18nd("plasma_shell_org.kde.plasma.desktop", "About")
                         icon: "help-about"
-                        source: "AboutPlugin.qml"
+                        source: Qt.resolvedUrl("AboutPlugin.qml")
                     }
                 }
                 delegate: categoryDelegate
