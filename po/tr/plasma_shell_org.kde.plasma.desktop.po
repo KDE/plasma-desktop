@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-17 01:38+0000\n"
-"PO-Revision-Date: 2023-11-08 21:38+0300\n"
+"PO-Revision-Date: 2023-11-17 14:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -90,12 +90,12 @@ msgstr "Hakkında"
 
 #: contents/configuration/AboutPlugin.qml:49
 msgid "Send an email to %1"
-msgstr "%1 adresine bir e-posta gönder"
+msgstr "E-posta gönder: %1"
 
 #: contents/configuration/AboutPlugin.qml:63
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr "%1 web sayfasını aç"
+msgstr "Web sayfasını aç: %1"
 
 #: contents/configuration/AboutPlugin.qml:134
 msgid "Copyright"
@@ -343,10 +343,8 @@ msgid "Visibility"
 msgstr "Görünürlük"
 
 #: contents/configuration/PanelConfiguration.qml:377
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
-msgstr "Her Zaman Görünür"
+msgstr "Her zaman görünür"
 
 #: contents/configuration/PanelConfiguration.qml:378
 msgid "Auto hide"
@@ -354,7 +352,7 @@ msgstr "Kendiliğinden gizle"
 
 #: contents/configuration/PanelConfiguration.qml:379
 msgid "Dodge windows"
-msgstr ""
+msgstr "Pencereleri atlat"
 
 #: contents/configuration/PanelConfiguration.qml:417
 msgid "Opacity"
