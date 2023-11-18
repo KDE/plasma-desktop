@@ -20,7 +20,6 @@
 #include <KMessageBox>
 #include <QDesktopServices>
 #include <QIcon>
-#include <QTextCodec>
 
 KNetAttach::KNetAttach(QWidget *parent)
     : QWizard(parent)
@@ -56,7 +55,7 @@ KNetAttach::KNetAttach(QWidget *parent)
     }
     _encoding->clear();
     _encoding->addItems(KCharsets::charsets()->descriptiveEncodingNames());
-    const int codecForLocaleIdx = _encoding->findText(QString::fromLatin1(QTextCodec::codecForLocale()->name()), Qt::MatchContains);
+    const int codecForLocaleIdx = _encoding->findText(QLatin1String("UTF-8"), Qt::MatchContains);
     _encoding->setCurrentIndex(codecForLocaleIdx != -1 ? codecForLocaleIdx : 0);
 }
 
