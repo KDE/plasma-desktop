@@ -79,7 +79,52 @@ Kirigami.OverlaySheet {
         }
 
         Kirigami.Heading {
-            text: i18n("This application does not advertise support for the following file types:")
+            text: i18n("This application can also open these file types:")
+            visible: root.mimeTypesNotAssociated.length > 0
+            level: 3
+            wrapMode: Text.Wrap
+            Layout.fillWidth: true
+            Layout.bottomMargin: Kirigami.Units.largeSpacing
+        }
+        Kirigami.SelectableLabel {
+            visible: root.mimeTypesNotAssociated.length > 0
+            text: root.formatHtmlUnorderedStringList(
+                root.mimeTypesNotAssociated.map(
+                    ({first, second}) => i18nc(
+                        "@label %1 is a MIME type and %2 is an application name",
+                        "%1 (Currently opens in %2)",
+                        second,
+                        first,
+                    )
+                )
+            )
+            Layout.fillWidth: true
+        }
+        QQC2.Button {
+            visible: root.mimeTypesNotAssociated.length > 0
+            icon.name: root.componentChooser?.applicationIcon() ?? ""
+            text: i18nc(
+                "@action:button %1 is an application name",
+                "Open All in %1",
+                root.componentChooser?.applicationName() ?? ""
+            )
+            Layout.topMargin: Kirigami.Units.largeSpacing
+            onClicked: {
+                root.close();
+                root.componentChooser.saveMimeTypesNotAssociated();
+            }
+        }
+
+        Kirigami.Separator {
+            // extra double-spacing
+            Layout.fillWidth: true
+            Layout.margins: Kirigami.Units.largeSpacing
+            visible: root.unsupportedMimeTypes.length > 0
+                && root.mimeTypesNotAssociated.length > 0
+        }
+
+        Kirigami.Heading {
+            text: i18n("This application does not advertise support for the following file types, but may be able to open them anyway:")
             visible: root.unsupportedMimeTypes.length > 0
             level: 3
             wrapMode: Text.Wrap
@@ -93,7 +138,10 @@ Kirigami.OverlaySheet {
         }
         QQC2.Button {
             visible: root.unsupportedMimeTypes.length > 0
-            text: i18nc("@action:button", "Force Open Anyway")
+            icon.name: root.componentChooser?.applicationIcon() ?? ""
+            text: root.componentChooser
+                ? i18nc("@action:button", "Force All to Open in %1", root.componentChooser.applicationName())
+                : ""
             Layout.topMargin: Kirigami.Units.largeSpacing
             onClicked: {
                 root.close();
@@ -101,53 +149,10 @@ Kirigami.OverlaySheet {
             }
         }
 
-        Kirigami.Separator {
-            // extra double-spacing
-            Layout.fillWidth: true
-            Layout.margins: Kirigami.Units.largeSpacing
-            visible: root.unsupportedMimeTypes.length > 0
-                && root.mimeTypesNotAssociated.length > 0
-        }
-
-        Kirigami.Heading {
-            text: i18n("The following file types are still associated with a different application:")
-            visible: root.mimeTypesNotAssociated.length > 0
-            level: 3
-            wrapMode: Text.Wrap
-            Layout.fillWidth: true
-            Layout.bottomMargin: Kirigami.Units.largeSpacing
-        }
-        Kirigami.SelectableLabel {
-            visible: root.mimeTypesNotAssociated.length > 0
-            text: root.formatHtmlUnorderedStringList(
-                root.mimeTypesNotAssociated.map(
-                    ({first, second}) => i18nc(
-                        "@label %1 is a MIME type and %2 is an application name",
-                        "%1 associated with %2",
-                        second,
-                        first,
-                    )
-                )
-            )
-            Layout.fillWidth: true
-        }
         QQC2.Button {
-            visible: root.mimeTypesNotAssociated.length > 0
-            icon.name: root.componentChooser?.applicationIcon() ?? ""
-            text: i18nc(
-                "@action:button %1 is an application name",
-                "Re-assign-all to %1",
-                root.componentChooser?.applicationName() ?? ""
-            )
             Layout.topMargin: Kirigami.Units.largeSpacing
-            onClicked: {
-                root.close();
-                root.componentChooser.saveMimeTypesNotAssociated();
-            }
-        }
-
-        QQC2.Button {
-            text: i18n("Change file type association manually")
+            icon.name: "configure-symbolic"
+            text: i18n("Configure Manually…")
             visible: root.componentChooser !== null
             onClicked: {
                 root.close();
