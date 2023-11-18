@@ -1207,7 +1207,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
 
     KIO::DropJobFlag flag = showMenuManually ? KIO::ShowMenuManually : KIO::DropJobDefaultFlags;
     KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl, flag);
-    dropJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
+    dropJob->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
 
     // No menu will be shown so skip copying QMimeData
     if (mimeData->urls().empty()) {
@@ -1289,7 +1289,7 @@ void FolderModel::dropCwd(QObject *dropEvent)
     ev.setDropAction(proposedAction);
 
     KIO::DropJob *dropJob = KIO::drop(&ev, m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile));
-    dropJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
+    dropJob->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
 }
 
 void FolderModel::changeSelection(const QItemSelection &selected, const QItemSelection &deselected)
