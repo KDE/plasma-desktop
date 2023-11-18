@@ -183,11 +183,19 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
 
 void GlobalAccelModel::save()
 {
+    QList<Component *> componentsToRemove;
+
     for (auto it = m_components.rbegin(); it != m_components.rend(); ++it) {
         if (it->pendingDeletion) {
-            removeComponent(*it);
-            continue;
+            componentsToRemove.append(&(*it));
         }
+    }
+
+    for (Component *component : std::as_const(componentsToRemove)) {
+        removeComponent(*component);
+    }
+
+    for (auto it = m_components.rbegin(); it != m_components.rend(); ++it) {
         for (auto &action : it->actions) {
             if (action.initialShortcuts != action.activeShortcuts) {
                 const QStringList actionId = buildActionId(it->id, it->displayName, action.id, action.displayName);
