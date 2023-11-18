@@ -144,7 +144,7 @@ set_package_properties(Wayland PROPERTIES
     PURPOSE "Required for building Tablet input KCM"
 )
 
-find_package(SDL2)
+find_package(SDL2 2.0.16)
 set_package_properties(SDL2 PROPERTIES
         TYPE OPTIONAL
         PURPOSE "Required for building Game Controller KCM"
