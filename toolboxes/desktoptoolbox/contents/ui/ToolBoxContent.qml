@@ -52,7 +52,7 @@ MouseArea {
     }
 
     width: buttonRow.width
-    height: buttonRow.height
+    height: buttonRow.height + (menuButton.visible ? backgroundFrame.margins.top + backgroundFrame.margins.bottom : 0)
 
     state: "topcenter"
 
@@ -217,9 +217,9 @@ MouseArea {
         anchors {
             fill: parent
             leftMargin: -backgroundFrame.margins.left
-            topMargin: -backgroundFrame.margins.top
+            topMargin: menuButton.visible ? 0 : -backgroundFrame.margins.top
             rightMargin: -backgroundFrame.margins.right
-            bottomMargin: -backgroundFrame.margins.bottom
+            bottomMargin: menuButton.visible ? 0 : -backgroundFrame.margins.bottom
         }
         imagePath: "widgets/background"
         width: Math.round(buttonLayout.width + margins.horizontal)
@@ -228,6 +228,7 @@ MouseArea {
 
     Row {
         id: buttonRow
+        anchors.centerIn: parent
         spacing: buttonLayout.columnSpacing
 
         Grid {
