@@ -18,23 +18,6 @@ function iconOrDefault(formFactor, preferredIconName) {
         ? defaultIconName : preferredIconName;
 }
 
-function fillActionMenu(i18n, actionMenu, actionList, favoriteModel, favoriteId) {
-    // Accessing actionList can be a costly operation, so we don't
-    // access it until we need the menu.
-
-    var actions = createFavoriteActions(i18n, favoriteModel, favoriteId);
-
-    if (actions && actions.length > 0) {
-        if (actionList && actionList.length > 0) {
-            actionList.push({ "type": "separator" }, ...actions);
-        } else {
-            actionList = actions;
-        }
-    }
-
-    actionMenu.actionList = actionList;
-}
-
 function createFavoriteActions(i18n, favoriteModel, favoriteId) {
     if (!favoriteModel || !favoriteId || !favoriteModel.enabled) {
         return null;
