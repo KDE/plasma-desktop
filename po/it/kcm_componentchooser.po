@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-13 01:43+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-10-15 04:58+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -95,40 +95,48 @@ msgid "Details"
 msgstr "Dettagli"
 
 #: ui/ComponentOverlay.qml:82
-#, kde-format
-msgid ""
-"This application does not advertise support for the following file types:"
+#, fuzzy, kde-format
+#| msgid ""
+#| "This application does not advertise support for the following file types:"
+msgid "This application can also open these file types:"
 msgstr ""
 "Questa applicazione non prevede il supporto per i seguenti tipi di file:"
 
-#: ui/ComponentOverlay.qml:96
-#, kde-format
-msgctxt "@action:button"
-msgid "Force Open Anyway"
-msgstr "Forza l'apertura comunque"
-
-#: ui/ComponentOverlay.qml:113
-#, kde-format
-msgid ""
-"The following file types are still associated with a different application:"
-msgstr "I seguenti tipi di file sono ancora associati a un'altra applicazione:"
-
-#: ui/ComponentOverlay.qml:126
+#: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
-msgid "%1 associated with %2"
-msgstr "%1 associato a %2"
+msgid "%1 (Currently opens in %2)"
+msgstr ""
 
-#: ui/ComponentOverlay.qml:139
+#: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
-msgid "Re-assign-all to %1"
-msgstr "Riassegna tutto a %1"
+msgid "Open All in %1"
+msgstr ""
 
-#: ui/ComponentOverlay.qml:150
-#, kde-format
-msgid "Change file type association manually"
-msgstr "Modifica manualmente l'associazione del tipo di file"
+#: ui/ComponentOverlay.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "This application does not advertise support for the following file types:"
+msgid ""
+"This application does not advertise support for the following file types, "
+"but may be able to open them anyway:"
+msgstr ""
+"Questa applicazione non prevede il supporto per i seguenti tipi di file:"
+
+#: ui/ComponentOverlay.qml:143
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Force Open Anyway"
+msgctxt "@action:button"
+msgid "Force All to Open in %1"
+msgstr "Forza l'apertura comunque"
+
+#: ui/ComponentOverlay.qml:155
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgid "Configure Manually…"
+msgstr "Configura"
 
 #: ui/main.qml:17
 #, kde-format
@@ -224,6 +232,23 @@ msgstr "Gestore di archivi:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mappa:"
+
+#~ msgid ""
+#~ "The following file types are still associated with a different "
+#~ "application:"
+#~ msgstr ""
+#~ "I seguenti tipi di file sono ancora associati a un'altra applicazione:"
+
+#~ msgctxt "@label %1 is a MIME type and %2 is an application name"
+#~ msgid "%1 associated with %2"
+#~ msgstr "%1 associato a %2"
+
+#~ msgctxt "@action:button %1 is an application name"
+#~ msgid "Re-assign-all to %1"
+#~ msgstr "Riassegna tutto a %1"
+
+#~ msgid "Change file type association manually"
+#~ msgstr "Modifica manualmente l'associazione del tipo di file"
 
 #~ msgctxt "Default phone app"
 #~ msgid "Dialer:"
@@ -498,9 +523,6 @@ msgstr "Mappa:"
 
 #~ msgid "Use a different &window manager:"
 #~ msgstr "Usa un altro &gestore delle finestre:"
-
-#~ msgid "Configure"
-#~ msgstr "Configura"
 
 #~ msgid ""
 #~ "Note: Most window managers have their own configuration and do not follow "

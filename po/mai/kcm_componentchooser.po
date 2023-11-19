@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-13 01:43+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2009-05-31 12:51+0530\n"
 "Last-Translator: Sangeeta Kumari <sangeeta09@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -104,38 +104,39 @@ msgstr ""
 
 #: ui/ComponentOverlay.qml:82
 #, kde-format
-msgid ""
-"This application does not advertise support for the following file types:"
+msgid "This application can also open these file types:"
 msgstr ""
 
-#: ui/ComponentOverlay.qml:96
-#, kde-format
-msgctxt "@action:button"
-msgid "Force Open Anyway"
-msgstr ""
-
-#: ui/ComponentOverlay.qml:113
-#, kde-format
-msgid ""
-"The following file types are still associated with a different application:"
-msgstr ""
-
-#: ui/ComponentOverlay.qml:126
+#: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
-msgid "%1 associated with %2"
+msgid "%1 (Currently opens in %2)"
 msgstr ""
 
-#: ui/ComponentOverlay.qml:139
+#: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
-msgid "Re-assign-all to %1"
+msgid "Open All in %1"
 msgstr ""
 
-#: ui/ComponentOverlay.qml:150
+#: ui/ComponentOverlay.qml:127
 #, kde-format
-msgid "Change file type association manually"
+msgid ""
+"This application does not advertise support for the following file types, "
+"but may be able to open them anyway:"
 msgstr ""
+
+#: ui/ComponentOverlay.qml:143
+#, kde-format
+msgctxt "@action:button"
+msgid "Force All to Open in %1"
+msgstr ""
+
+#: ui/ComponentOverlay.qml:155
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgid "Configure Manually…"
+msgstr "बिन्यस्त करू"
 
 #: ui/main.qml:17
 #, kde-format
@@ -349,9 +350,6 @@ msgstr ""
 #~| msgid "Use a different &terminal program:"
 #~ msgid "Use a different &window manager:"
 #~ msgstr "एकटा भिन्न टर्मिनल अनुप्रयोगक इस्तेमाल करू (&t)"
-
-#~ msgid "Configure"
-#~ msgstr "बिन्यस्त करू"
 
 #~ msgid "kcmcomponentchooser"
 #~ msgstr "केसीएमकम्पोनेंटचूजर"

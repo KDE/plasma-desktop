@@ -345,10 +345,8 @@ msgid "Custom"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:365
-#, fuzzy
-#| msgid "Visibility:"
 msgid "Visibility"
-msgstr "Synleg:"
+msgstr "Synlegheit"
 
 #: contents/configuration/PanelConfiguration.qml:377
 #, fuzzy
@@ -367,26 +365,20 @@ msgid "Dodge windows"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:417
-#, fuzzy
-#| msgid "Opacity:"
 msgid "Opacity"
-msgstr "Gjennomsikt:"
+msgstr "Gjennomsikt"
 
 #: contents/configuration/PanelConfiguration.qml:430
 msgid "Adaptive"
 msgstr "Adaptiv"
 
 #: contents/configuration/PanelConfiguration.qml:431
-#, fuzzy
-#| msgid "Always Opaque"
 msgid "Opaque"
-msgstr "Heilt ugjennomsiktig"
+msgstr "Ugjennomsiktig"
 
 #: contents/configuration/PanelConfiguration.qml:432
-#, fuzzy
-#| msgid "Always Translucent"
 msgid "Translucent"
-msgstr "Alltid gjennomsiktig"
+msgstr "Gjennomsiktig"
 
 #: contents/configuration/PanelConfiguration.qml:456
 msgid "Style"
@@ -539,79 +531,3 @@ msgstr "Ingen element passar til søkjeteksten"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "Ingen element er tilgjengelege"
-
-#~ msgctxt "@action:button Make the panel as big as it can be"
-#~ msgid "Maximize"
-#~ msgstr "Maksimer"
-
-#~ msgid "Make this panel as tall as possible"
-#~ msgstr "Gjer panelet så høgt som mogleg"
-
-#~ msgid "Make this panel as wide as possible"
-#~ msgstr "Gjer panelet så breitt som mogleg"
-
-#~ msgctxt "@action:button Delete the panel"
-#~ msgid "Delete"
-#~ msgstr "Fjern"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the top; no effect when panel is maximized"
-#~ msgstr "Plasserer ikkjemaksimerte panel oppe (ingen effekt ved maksimering)"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the left; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Plasserer ikkjemaksimerte panel til venstre (ingen effekt ved maksimering)"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the center; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Plasserer ikkjemaksimerte panel i midten (ingen effekt ved maksimering)"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the bottom; no effect when panel is "
-#~ "maximized"
-#~ msgstr "Plasserer ikkjemaksimerte panel nede (ingen effekt ved maksimering)"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the right; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Plasserer ikkjemaksimerte panel til høgre (ingen effekt ved maksimering)"
-
-#~ msgid ""
-#~ "Panel is hidden, but reveals itself when the cursor touches the panel's "
-#~ "screen edge"
-#~ msgstr "Panelet er gøymt, men vil visast når peikaren er over panelkanten"
-
-#~ msgid ""
-#~ "Panel is opaque when any windows are touching it, and translucent at "
-#~ "other times"
-#~ msgstr ""
-#~ "Panelet er ugjennomsiktig når vindauge er borti det, elles er det "
-#~ "gjennomsiktig"
-
-#~ msgid "Floating:"
-#~ msgstr "Sveving:"
-
-#~ msgid "Panel visibly floats away from its screen edge"
-#~ msgstr "Panelet svevar eit stykke frå skjermkanten"
-
-#~ msgid "Attached"
-#~ msgstr "Fastkopla"
-
-#~ msgid "Panel is attached to its screen edge"
-#~ msgstr "Panelet er kopla fast i skjermkanten"
-
-#~ msgid "More Options…"
-#~ msgstr "Fleire val …"
-
-#~ msgctxt "Minimize the length of this string as much as possible"
-#~ msgid "Drag to move"
-#~ msgstr "Dra for å flytta"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use arrow keys to move the panel"
-#~ msgstr "Bruk piltastane til å flytta panelet"

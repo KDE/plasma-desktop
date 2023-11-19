@@ -1,7 +1,7 @@
 # translation of kcmcomponentchooser.po to Slovenian
 # Translation of kcmcomponentchooser.po to Slovenian
 # SLOVENIAN TRANSLATION OF KDEBASE.
-# $Id: kcm_componentchooser.po 1662295 2023-10-14 02:11:40Z scripty $
+# $Id: kcm_componentchooser.po 1665364 2023-11-19 02:17:20Z scripty $
 # $Source$
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-13 01:43+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-10-13 07:05+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -99,39 +99,46 @@ msgid "Details"
 msgstr "Podrobnosti"
 
 #: ui/ComponentOverlay.qml:82
-#, kde-format
-msgid ""
-"This application does not advertise support for the following file types:"
+#, fuzzy, kde-format
+#| msgid ""
+#| "This application does not advertise support for the following file types:"
+msgid "This application can also open these file types:"
 msgstr "Ta aplikacija ne oglašuje podpore za naslednje vrste datotek:"
 
-#: ui/ComponentOverlay.qml:96
-#, kde-format
-msgctxt "@action:button"
-msgid "Force Open Anyway"
-msgstr "Kljub temu prisilno odpri"
-
-#: ui/ComponentOverlay.qml:113
-#, kde-format
-msgid ""
-"The following file types are still associated with a different application:"
-msgstr "Naslednje vrste datotek so še vedno v povezavi z drugo aplikacijo:"
-
-#: ui/ComponentOverlay.qml:126
+#: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
-msgid "%1 associated with %2"
-msgstr "%1 je v povezavi z %2"
+msgid "%1 (Currently opens in %2)"
+msgstr ""
 
-#: ui/ComponentOverlay.qml:139
+#: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
-msgid "Re-assign-all to %1"
-msgstr "Poveži vse z %1"
+msgid "Open All in %1"
+msgstr ""
 
-#: ui/ComponentOverlay.qml:150
-#, kde-format
-msgid "Change file type association manually"
-msgstr "Ročno spremeni povezavo vrste datoteke"
+#: ui/ComponentOverlay.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "This application does not advertise support for the following file types:"
+msgid ""
+"This application does not advertise support for the following file types, "
+"but may be able to open them anyway:"
+msgstr "Ta aplikacija ne oglašuje podpore za naslednje vrste datotek:"
+
+#: ui/ComponentOverlay.qml:143
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Force Open Anyway"
+msgctxt "@action:button"
+msgid "Force All to Open in %1"
+msgstr "Kljub temu prisilno odpri"
+
+#: ui/ComponentOverlay.qml:155
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgid "Configure Manually…"
+msgstr "Nastavi"
 
 #: ui/main.qml:17
 #, kde-format
@@ -227,6 +234,22 @@ msgstr "Upravljalnik arhivov:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapa:"
+
+#~ msgid ""
+#~ "The following file types are still associated with a different "
+#~ "application:"
+#~ msgstr "Naslednje vrste datotek so še vedno v povezavi z drugo aplikacijo:"
+
+#~ msgctxt "@label %1 is a MIME type and %2 is an application name"
+#~ msgid "%1 associated with %2"
+#~ msgstr "%1 je v povezavi z %2"
+
+#~ msgctxt "@action:button %1 is an application name"
+#~ msgid "Re-assign-all to %1"
+#~ msgstr "Poveži vse z %1"
+
+#~ msgid "Change file type association manually"
+#~ msgstr "Ročno spremeni povezavo vrste datoteke"
 
 #~ msgctxt "Default phone app"
 #~ msgid "Dialer:"
@@ -502,9 +525,6 @@ msgstr "Mapa:"
 
 #~ msgid "Use a different &window manager:"
 #~ msgstr "Uporabi drug up&ravljalnik oken:"
-
-#~ msgid "Configure"
-#~ msgstr "Nastavi"
 
 #~ msgid ""
 #~ "Note: Most window managers have their own configuration and do not follow "

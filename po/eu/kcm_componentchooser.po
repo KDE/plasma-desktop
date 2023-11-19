@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-13 01:43+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-10-14 17:48+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -96,41 +96,48 @@ msgid "Details"
 msgstr "Xehetasunak"
 
 #: ui/ComponentOverlay.qml:82
-#, kde-format
-msgid ""
-"This application does not advertise support for the following file types:"
+#, fuzzy, kde-format
+#| msgid ""
+#| "This application does not advertise support for the following file types:"
+msgid "This application can also open these file types:"
 msgstr ""
 "Aplikazio honek ez du ondoko fitxategi-motetarako euskarririk iragartzen:"
 
-#: ui/ComponentOverlay.qml:96
-#, kde-format
-msgctxt "@action:button"
-msgid "Force Open Anyway"
-msgstr "Behartu irekitzera nolanahi ere"
-
-#: ui/ComponentOverlay.qml:113
-#, kde-format
-msgid ""
-"The following file types are still associated with a different application:"
-msgstr ""
-"Ondoko fitxategi-motak oraindik beste aplikazio batekin elkartuta daude:"
-
-#: ui/ComponentOverlay.qml:126
+#: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
-msgid "%1 associated with %2"
-msgstr "%1 %2(e)rekin elkartuta"
+msgid "%1 (Currently opens in %2)"
+msgstr ""
 
-#: ui/ComponentOverlay.qml:139
+#: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
-msgid "Re-assign-all to %1"
-msgstr "Berresleitu guztiak %1(e)ra"
+msgid "Open All in %1"
+msgstr ""
 
-#: ui/ComponentOverlay.qml:150
-#, kde-format
-msgid "Change file type association manually"
-msgstr "Aldatu fitxategi-mota elkarketa eskuz"
+#: ui/ComponentOverlay.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "This application does not advertise support for the following file types:"
+msgid ""
+"This application does not advertise support for the following file types, "
+"but may be able to open them anyway:"
+msgstr ""
+"Aplikazio honek ez du ondoko fitxategi-motetarako euskarririk iragartzen:"
+
+#: ui/ComponentOverlay.qml:143
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Force Open Anyway"
+msgctxt "@action:button"
+msgid "Force All to Open in %1"
+msgstr "Behartu irekitzera nolanahi ere"
+
+#: ui/ComponentOverlay.qml:155
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgid "Configure Manually…"
+msgstr "Konfiguratu"
 
 #: ui/main.qml:17
 #, kde-format
@@ -226,6 +233,23 @@ msgstr "Artxibo-kudeatzailea:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapa:"
+
+#~ msgid ""
+#~ "The following file types are still associated with a different "
+#~ "application:"
+#~ msgstr ""
+#~ "Ondoko fitxategi-motak oraindik beste aplikazio batekin elkartuta daude:"
+
+#~ msgctxt "@label %1 is a MIME type and %2 is an application name"
+#~ msgid "%1 associated with %2"
+#~ msgstr "%1 %2(e)rekin elkartuta"
+
+#~ msgctxt "@action:button %1 is an application name"
+#~ msgid "Re-assign-all to %1"
+#~ msgstr "Berresleitu guztiak %1(e)ra"
+
+#~ msgid "Change file type association manually"
+#~ msgstr "Aldatu fitxategi-mota elkarketa eskuz"
 
 #~ msgctxt "Default phone app"
 #~ msgid "Dialer:"
@@ -502,9 +526,6 @@ msgstr "Mapa:"
 
 #~ msgid "Use a different &window manager:"
 #~ msgstr "Erabili beste &leiho-kudeatzaile bat:"
-
-#~ msgid "Configure"
-#~ msgstr "Konfiguratu"
 
 #~ msgid ""
 #~ "Note: Most window managers have their own configuration and do not follow "

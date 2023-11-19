@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-17 01:38+0000\n"
-"PO-Revision-Date: 2023-11-07 16:09+0200\n"
+"PO-Revision-Date: 2023-11-17 08:48+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -339,10 +339,8 @@ msgid "Visibility"
 msgstr "חשיפה"
 
 #: contents/configuration/PanelConfiguration.qml:377
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
-msgstr "תמיד נראה"
+msgstr "גלוי תמיד"
 
 #: contents/configuration/PanelConfiguration.qml:378
 msgid "Auto hide"
@@ -350,7 +348,7 @@ msgstr "הסתרה אוטומטית"
 
 #: contents/configuration/PanelConfiguration.qml:379
 msgid "Dodge windows"
-msgstr ""
+msgstr "חמיקת חלונות"
 
 #: contents/configuration/PanelConfiguration.qml:417
 msgid "Opacity"

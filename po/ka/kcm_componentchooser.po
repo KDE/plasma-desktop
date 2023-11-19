@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-13 01:43+0000\n"
+"POT-Creation-Date: 2023-11-19 01:53+0000\n"
 "PO-Revision-Date: 2023-10-14 05:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -89,40 +89,47 @@ msgid "Details"
 msgstr "დეტალები"
 
 #: ui/ComponentOverlay.qml:82
-#, kde-format
-msgid ""
-"This application does not advertise support for the following file types:"
+#, fuzzy, kde-format
+#| msgid ""
+#| "This application does not advertise support for the following file types:"
+msgid "This application can also open these file types:"
 msgstr ""
 "ამ აპლიკაციას არ აქვს მითითებული, რომ აქვს ფაილის შემდეგი ტიპების მხარდაჭერა:"
 
-#: ui/ComponentOverlay.qml:96
-#, kde-format
-msgctxt "@action:button"
-msgid "Force Open Anyway"
-msgstr "ძალით, მაინც გახსნა"
-
-#: ui/ComponentOverlay.qml:113
-#, kde-format
-msgid ""
-"The following file types are still associated with a different application:"
-msgstr "შემდეგი ფაილის ტიპები ჯერ კიდევ სხვა აპლიკაციაზეა მიბმული:"
-
-#: ui/ComponentOverlay.qml:126
+#: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
-msgid "%1 associated with %2"
-msgstr "%1 ასოცირებულია %2-სთან"
+msgid "%1 (Currently opens in %2)"
+msgstr ""
 
-#: ui/ComponentOverlay.qml:139
+#: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
-msgid "Re-assign-all to %1"
-msgstr "ყველას %1-ზე მინიჭება"
+msgid "Open All in %1"
+msgstr ""
 
-#: ui/ComponentOverlay.qml:150
+#: ui/ComponentOverlay.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "This application does not advertise support for the following file types:"
+msgid ""
+"This application does not advertise support for the following file types, "
+"but may be able to open them anyway:"
+msgstr ""
+"ამ აპლიკაციას არ აქვს მითითებული, რომ აქვს ფაილის შემდეგი ტიპების მხარდაჭერა:"
+
+#: ui/ComponentOverlay.qml:143
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Force Open Anyway"
+msgctxt "@action:button"
+msgid "Force All to Open in %1"
+msgstr "ძალით, მაინც გახსნა"
+
+#: ui/ComponentOverlay.qml:155
 #, kde-format
-msgid "Change file type association manually"
-msgstr "ფაილის ტიპის ასოცირების ხელით შეცვლა"
+msgid "Configure Manually…"
+msgstr ""
 
 #: ui/main.qml:17
 #, kde-format
@@ -218,6 +225,22 @@ msgstr "არქივების მმართველი:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "რუკა:"
+
+#~ msgid ""
+#~ "The following file types are still associated with a different "
+#~ "application:"
+#~ msgstr "შემდეგი ფაილის ტიპები ჯერ კიდევ სხვა აპლიკაციაზეა მიბმული:"
+
+#~ msgctxt "@label %1 is a MIME type and %2 is an application name"
+#~ msgid "%1 associated with %2"
+#~ msgstr "%1 ასოცირებულია %2-სთან"
+
+#~ msgctxt "@action:button %1 is an application name"
+#~ msgid "Re-assign-all to %1"
+#~ msgstr "ყველას %1-ზე მინიჭება"
+
+#~ msgid "Change file type association manually"
+#~ msgstr "ფაილის ტიპის ასოცირების ხელით შეცვლა"
 
 #~ msgctxt "Default phone app"
 #~ msgid "Dialer:"
