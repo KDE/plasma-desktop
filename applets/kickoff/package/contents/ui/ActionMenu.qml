@@ -18,7 +18,7 @@ import "code/tools.js" as Tools
 Item {
     id: root
 
-    property var actionList: menu.visualParent ? menu.visualParent.actionList : null
+    property var actionList: null
 
     // Only one action menu can be open at a time, so this should be safe to use.
     property PlasmoidItem plasmoid: null

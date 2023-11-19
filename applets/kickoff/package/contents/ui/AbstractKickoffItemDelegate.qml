@@ -32,7 +32,6 @@ T.ItemDelegate {
     readonly property Flickable view: ListView.view ?? GridView.view
     property bool isCategoryListItem: false
     readonly property bool hasActionList: model && (model.favoriteId !== null || ("hasActionList" in model && model.hasActionList === true))
-    property var actionList: null
     property bool isSearchResult: false
 
     readonly property bool isSeparator: model && (model.isSeparator === true)
@@ -58,26 +57,25 @@ T.ItemDelegate {
 
     function openActionMenu(x = undefined, y = undefined) {
         if (!hasActionList) { return; }
-        // fill actionList only when needed to prevent slowness when changing app categories rapidly.
-        if (actionList === null) {
-            let allActions = model.actionList;
-            const favoriteActions = Tools.createFavoriteActions(
-                i18n, //i18n() function callback
-                view.model.favoritesModel,
-                model.favoriteId,
-            );
-            if (favoriteActions) {
-                if (allActions && allActions.length > 0) {
-                    allActions.push({ "type": "separator" }, ...favoriteActions);
-                } else {
-                    allActions = favoriteActions;
-                }
+
+        let actions = model.actionList;
+        const favoriteActions = Tools.createFavoriteActions(
+            i18n, //i18n() function callback
+            view.model.favoritesModel,
+            model.favoriteId,
+        );
+        if (favoriteActions) {
+            if (actions && actions.length > 0) {
+                actions.push({ "type": "separator" }, ...favoriteActions);
+            } else {
+                actions = favoriteActions;
             }
-            actionList = allActions;
         }
-        if (actionList && actionList.length > 0) {
+
+        if (actions && actions.length > 0) {
             ActionMenu.plasmoid = kickoff;
             ActionMenu.menu.visualParent = root;
+            ActionMenu.actionList = actions;
             if (x !== undefined && y !== undefined) {
                 ActionMenu.menu.open(x, y);
             } else {
