@@ -294,7 +294,7 @@ MouseArea {
                 text: i18ndc("plasma_toolbox_org.kde.desktoptoolbox", "@action:button", "More")
 
                 onClicked: {
-                    Plasmoid.openContextMenu(mapToGlobal(0, height));
+                    container.parent.openContextMenu(mapToGlobal(0, height));
                 }
             }
         }
