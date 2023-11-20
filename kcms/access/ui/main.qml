@@ -73,7 +73,10 @@ KCM.SimpleKCM {
                     icon.name: modelData.icon
                     text: modelData.title
 
-                    onClicked: listView.forceActiveFocus()
+                    onClicked: {
+                        listView.currentIndex = index
+                        listView.forceActiveFocus()
+                    }
 
                     contentItem: RowLayout {
                         spacing: Kirigami.Units.smallSpacing
