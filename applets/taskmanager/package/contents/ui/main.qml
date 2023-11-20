@@ -351,7 +351,7 @@ PlasmoidItem {
             visible: false;
 
             imagePath: "widgets/tasks";
-            prefix: "normal"
+            prefix: TaskTools.taskPrefix("normal", Plasmoid.location)
         }
 
         MouseHandler {
