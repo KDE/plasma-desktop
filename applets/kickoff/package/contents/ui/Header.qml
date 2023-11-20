@@ -80,6 +80,7 @@ PlasmaExtras.PlasmoidHeading {
             text: i18n("Open user settings")
             name: kuser.fullName
             source: kuser.faceIconUrl
+            cache: false
 
             Keys.onTabPressed: event => {
                 tabSetFocus(event, kickoff.firstCentralPane);
