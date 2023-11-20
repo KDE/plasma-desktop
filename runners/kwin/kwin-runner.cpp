@@ -16,6 +16,7 @@
 K_PLUGIN_CLASS_WITH_JSON(KWinRunner, "plasma-runner-kwin.json")
 
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
+static const QString s_keyword = QStringLiteral("kwin debug console");
 static const QStringList s_keywords = {QStringLiteral("kwin"), QStringLiteral("debug"), QStringLiteral("console")};
 
 KWinRunner::KWinRunner(QObject *parent, const KPluginMetaData &metaData)
@@ -34,7 +35,7 @@ void KWinRunner::match(RunnerContext &context)
     if (m_enabled && containsAnyKeyword) {
         QueryMatch match(this);
         match.setId(QStringLiteral("kwin"));
-        if (context.query().contains(s_keywords.first(), Qt::CaseInsensitive)) {
+        if (context.query().compare(s_keyword, Qt::CaseInsensitive) == 0) {
             match.setCategoryRelevance(QueryMatch::CategoryRelevance::Highest);
         }
         match.setIconName(QStringLiteral("kwin"));
