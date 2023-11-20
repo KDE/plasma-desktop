@@ -382,6 +382,7 @@ ColumnLayout {
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Always visible"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Auto hide"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Dodge windows"),
+                    i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Go Below"),
                 ]
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: visibilityRepresentation.width
@@ -391,6 +392,8 @@ ColumnLayout {
                             return 1;
                         case Panel.Global.DodgeWindows:
                             return 2;
+                        case Panel.Global.WindowsGoBelow:
+                            return 3;
                         case Panel.Global.NormalPanel:
                         default:
                             return 0;
@@ -403,6 +406,9 @@ ColumnLayout {
                             break;
                         case 2:
                             panel.visibilityMode = Panel.Global.DodgeWindows;
+                            break;
+                        case 3:
+                            panel.visibilityMode = Panel.Global.WindowsGoBelow;
                             break;
                         case 0:
                         default:
