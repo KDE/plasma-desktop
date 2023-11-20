@@ -25,6 +25,7 @@ public:
     Q_INVOKABLE void deleteActivity(const QString &id);
 
     void load() override;
+    void handleArgument(const QString &argument);
 
 private:
     bool m_isNewActivityAuthorized;

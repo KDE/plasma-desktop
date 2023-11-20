@@ -27,6 +27,12 @@ ActivitiesModule::ActivitiesModule(QObject *parent, const KPluginMetaData &metaD
     if (!args.isEmpty()) {
         m_firstArgument = args.first().toString();
     }
+
+    connect(this, &KAbstractConfigModule::activationRequested, this, [this](const QVariantList &args) {
+        if (!args.isEmpty()) {
+            handleArgument(args.first().toString());
+        }
+    });
 }
 
 ActivitiesModule::~ActivitiesModule()
@@ -75,13 +81,18 @@ void ActivitiesModule::load()
 
     // Delay so the KActivities::Consumer can load the activities status
     QTimer::singleShot(0, this, [this]() {
-        if (m_firstArgument == QStringLiteral("newActivity")) {
-            newActivity();
-        } else {
-            configureActivity(m_firstArgument);
-        }
+        handleArgument(m_firstArgument);
         m_firstArgument = QString();
     });
+}
+
+void ActivitiesModule::handleArgument(const QString &argument)
+{
+    if (argument == QStringLiteral("newActivity")) {
+        newActivity();
+    } else {
+        configureActivity(argument);
+    }
 }
 
 #include "kcm_activities.moc"
