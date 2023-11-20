@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-17 01:38+0000\n"
-"PO-Revision-Date: 2023-11-11 07:19\n"
+"PO-Revision-Date: 2023-11-19 03:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -121,15 +121,13 @@ msgid "Always when Panel is thick enough"
 msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:93
-#, fuzzy, kde-format
-#| msgid "Maximum columns:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "最大列数："
 
 #: package/contents/ui/ConfigAppearance.qml:93
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "最大行数："
@@ -734,9 +732,3 @@ msgstr "忘记最近位置"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "清除最近文件"
-
-#~ msgid "Always arrange tasks in rows of as many columns"
-#~ msgstr "总是将任务排成多列"
-
-#~ msgid "Always arrange tasks in columns of as many rows"
-#~ msgstr "总是将任务排成多行"

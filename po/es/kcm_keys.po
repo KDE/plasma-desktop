@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-20 02:00+0000\n"
 "PO-Revision-Date: 2023-10-27 00:08+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,20 +19,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.2\n"
 
-#: globalaccelmodel.cpp:210
+#: globalaccelmodel.cpp:218
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Ha ocurrido un error al guardar el atajo de teclado %1: %2"
 
-#: globalaccelmodel.cpp:322
+#: globalaccelmodel.cpp:330
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Ha ocurrido un error al añadir %1. Parece que no tiene acciones."
 
-#: globalaccelmodel.cpp:372
+#: globalaccelmodel.cpp:380
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr ""

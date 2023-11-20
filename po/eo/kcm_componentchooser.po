@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-10-13 07:27+0100\n"
+"PO-Revision-Date: 2023-11-19 07:08+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -92,45 +92,41 @@ msgid "Details"
 msgstr "Detaloj"
 
 #: ui/ComponentOverlay.qml:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid "This application can also open these file types:"
-msgstr "Tiu aplikaĵo ne reklamas subtenon pot la sekvaj dosiertipoj:"
+msgstr "Tiu aplikaĵo ankaŭ kapablas malfermi ĉi tiujn dosiertipojn:"
 
 #: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (Aktuale malfermiĝas en %2)"
 
 #: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Malfermi Ĉiujn en %1"
 
 #: ui/ComponentOverlay.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
-msgstr "Tiu aplikaĵo ne reklamas subtenon pot la sekvaj dosiertipoj:"
+msgstr ""
+"Tiu aplikaĵo ne reklamas subtenon por la sekvantaj dosiertipoj, sed eble "
+"kapablas malfermi ilin ĉiukaze:"
 
 #: ui/ComponentOverlay.qml:143
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Force Open Anyway"
+#, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr "Devigi malfermon ĉiukaze"
+msgstr "Devigi Ĉiujn Malfermiĝi en %1"
 
 #: ui/ComponentOverlay.qml:155
 #, kde-format
 msgid "Configure Manually…"
-msgstr ""
+msgstr "Agordi Permane…"
 
 #: ui/main.qml:17
 #, kde-format
@@ -226,20 +222,3 @@ msgstr "Arkivmastrumilo:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapo:"
-
-#~ msgid ""
-#~ "The following file types are still associated with a different "
-#~ "application:"
-#~ msgstr ""
-#~ "La sekvontaj dosiertipoj estas ankoraŭ asociitaj kun malsama aplikaĵo:"
-
-#~ msgctxt "@label %1 is a MIME type and %2 is an application name"
-#~ msgid "%1 associated with %2"
-#~ msgstr "%1 asociita kun %2"
-
-#~ msgctxt "@action:button %1 is an application name"
-#~ msgid "Re-assign-all to %1"
-#~ msgstr "Re-assign-all al %1"
-
-#~ msgid "Change file type association manually"
-#~ msgstr "Ŝanĝi dosiertipan asociiĝon permane"

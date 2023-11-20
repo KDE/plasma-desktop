@@ -6,21 +6,21 @@
 # Sebastià Pla i Sanz <sps@sastia.com>, 2002, 2004, 2005, 2006.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2003, 2014, 2016, 2017, 2019.
 # Albert Astals Cid <aacid@kde.org>, 2005.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2016, 2017, 2020, 2021, 2022, 2023 Josep M. Ferrer <txemaq@gmail.com>
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2016, 2017, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-10-13 17:12+0200\n"
+"PO-Revision-Date: 2023-11-19 11:21+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -95,45 +95,41 @@ msgid "Details"
 msgstr "Detalls"
 
 #: ui/ComponentOverlay.qml:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid "This application can also open these file types:"
-msgstr "Aquesta aplicació no anuncia suport per als tipus de fitxers següents:"
+msgstr "Aquesta aplicació també pot obrir aquests tipus de fitxers:"
 
 #: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (Actualment s'obre amb %2)"
 
 #: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Obre-ho tot amb %1"
 
 #: ui/ComponentOverlay.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
-msgstr "Aquesta aplicació no anuncia suport per als tipus de fitxers següents:"
+msgstr ""
+"Aquesta aplicació no anuncia el suport per als tipus de fitxers següents, "
+"però igualment els pot obrir:"
 
 #: ui/ComponentOverlay.qml:143
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Force Open Anyway"
+#, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr "Força l'obertura igualment"
+msgstr "Força-ho tot a obrir amb %1"
 
 #: ui/ComponentOverlay.qml:155
 #, kde-format
 msgid "Configure Manually…"
-msgstr ""
+msgstr "Configura manualment…"
 
 #: ui/main.qml:17
 #, kde-format
@@ -229,21 +225,3 @@ msgstr "Gestor d'arxius:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapa:"
-
-#~ msgid ""
-#~ "The following file types are still associated with a different "
-#~ "application:"
-#~ msgstr ""
-#~ "Els tipus de fitxers següents encara estan associats amb una aplicació "
-#~ "diferent:"
-
-#~ msgctxt "@label %1 is a MIME type and %2 is an application name"
-#~ msgid "%1 associated with %2"
-#~ msgstr "%1 està associat amb %2"
-
-#~ msgctxt "@action:button %1 is an application name"
-#~ msgid "Re-assign-all to %1"
-#~ msgstr "Reassigna-ho tot a %1"
-
-#~ msgid "Change file type association manually"
-#~ msgstr "Canvia l'associació de tipus de fitxer manualment"
