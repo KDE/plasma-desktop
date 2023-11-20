@@ -43,7 +43,6 @@ function addApplet(applet, x, y) {
     // Fall through to determining an appropriate insert position.
     } else if (x >= 0 && y >= 0) {
         appletsModel.insert(indexAtCoordinates(x, y), new_element)
-
     } else {
         appletsModel.append(new_element);
     }

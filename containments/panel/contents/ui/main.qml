@@ -73,9 +73,8 @@ ContainmentItem {
 //END functions
 
 //BEGIN connections
-    Containment.onAppletAdded: (applet) => {
-        let plasmoidItem = root.itemFor(applet);
-        LayoutManager.addApplet(applet, plasmoidItem.x, plasmoidItem.y);
+    Containment.onAppletAdded: (applet, geometry) => {
+        LayoutManager.addApplet(applet, geometry.x, geometry.y);
         root.checkLastSpacer();
         // When a new preset panel is added, avoid calling save() multiple times
         Qt.callLater(LayoutManager.save);
@@ -440,7 +439,6 @@ ContainmentItem {
             Item {
                 id: lastSpacer
                 visible: !root.hasSpacer
-                    || lastSpacer.width === currentLayout.width /* When all widgets are still being loaded in a new panel */
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
