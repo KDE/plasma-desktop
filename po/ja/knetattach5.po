@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-14 00:46+0000\n"
+"POT-Creation-Date: 2023-11-21 01:35+0000\n"
 "PO-Revision-Date: 2006-06-10 14:00+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "fumiaki@okushi.com"
 
-#: knetattach.cpp:79
+#: knetattach.cpp:78
 #, kde-format
 msgid ""
 "Enter a name for this <i>WebFolder</i> as well as a server address, port and "
@@ -38,7 +38,7 @@ msgstr ""
 "この「ウェブフォルダ」の名前、サーバアドレス、ポート番号、フォルダパスを入力"
 "し、「保存して接続」ボタンを押してください。"
 
-#: knetattach.cpp:82
+#: knetattach.cpp:81
 #, kde-format
 msgid ""
 "Enter a name for this <i>Secure shell connection</i> as well as a server "
@@ -48,7 +48,7 @@ msgstr ""
 "この「セキュアシェルによる接続」の名前、サーバアドレス、ポート番号、フォルダ"
 "パスを入力し、「保存して接続」ボタンを押してください。"
 
-#: knetattach.cpp:86
+#: knetattach.cpp:85
 #, kde-format
 msgid ""
 "Enter a name for this <i>File Transfer Protocol connection</i> as well as a "
@@ -58,7 +58,7 @@ msgstr ""
 "この「FTP 接続」の名前、サーバアドレス、ポート番号、フォルダパスを入力し、"
 "「保存して接続」ボタンを押してください。"
 
-#: knetattach.cpp:90
+#: knetattach.cpp:89
 #, kde-format
 msgid ""
 "Enter a name for this <i>Microsoft Windows network drive</i> as well as a "
@@ -68,17 +68,17 @@ msgstr ""
 "この「Microsoft Windows ネットワークドライブ」の名前、サーバアドレス、ポート"
 "番号、フォルダパスを入力し、「保存して接続」ボタンを押してください。"
 
-#: knetattach.cpp:208
+#: knetattach.cpp:207
 #, kde-format
 msgid "Unable to connect to server.  Please check your settings and try again."
 msgstr "サーバに接続できません。設定を確認して、もう一度実行してください。"
 
-#: knetattach.cpp:336
+#: knetattach.cpp:335
 #, kde-format
 msgid "Save && C&onnect"
 msgstr "保存して接続(&O)"
 
-#: knetattach.cpp:338
+#: knetattach.cpp:337
 #, kde-format
 msgid "C&onnect"
 msgstr "接続(&O)"

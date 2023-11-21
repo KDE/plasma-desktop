@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-21 01:35+0000\n"
 "PO-Revision-Date: 2023-11-17 10:29+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -263,145 +263,151 @@ msgstr "Actiones de mus"
 msgid "Input Here"
 msgstr "Inserta ci"
 
-#: contents/configuration/PanelConfiguration.qml:91
+#: contents/configuration/PanelConfiguration.qml:92
 msgid "Panel Settings"
 msgstr "Preferentias de Pannello"
 
-#: contents/configuration/PanelConfiguration.qml:97
+#: contents/configuration/PanelConfiguration.qml:98
 msgid "Add Spacer"
 msgstr "Adde spatiator"
 
-#: contents/configuration/PanelConfiguration.qml:100
+#: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
 msgstr "Adde widget spatiator al pannello"
 
-#: contents/configuration/PanelConfiguration.qml:107
+#: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
 msgstr "Adde Widgets..."
 
-#: contents/configuration/PanelConfiguration.qml:110
+#: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
 "Aperi le selector de widget per traher e poner le widgets in le pannello"
 
-#: contents/configuration/PanelConfiguration.qml:132
+#: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
 msgstr "Position"
 
-#: contents/configuration/PanelConfiguration.qml:136
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:290
 msgid "Top"
 msgstr "Culmine"
 
-#: contents/configuration/PanelConfiguration.qml:137
-#: contents/configuration/PanelConfiguration.qml:287
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:292
 msgid "Right"
 msgstr "Dextera"
 
-#: contents/configuration/PanelConfiguration.qml:138
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:290
 msgid "Left"
 msgstr "Sinistra"
 
-#: contents/configuration/PanelConfiguration.qml:139
-#: contents/configuration/PanelConfiguration.qml:287
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:292
 msgid "Bottom"
 msgstr "Basso"
 
-#: contents/configuration/PanelConfiguration.qml:156
+#: contents/configuration/PanelConfiguration.qml:157
 msgid "Set Position..."
 msgstr "Assigna position..."
 
-#: contents/configuration/PanelConfiguration.qml:221
+#: contents/configuration/PanelConfiguration.qml:226
 msgid "Alignment"
 msgstr "Alineamento"
 
-#: contents/configuration/PanelConfiguration.qml:286
+#: contents/configuration/PanelConfiguration.qml:291
 msgid "Center"
 msgstr "Centro"
 
-#: contents/configuration/PanelConfiguration.qml:309
+#: contents/configuration/PanelConfiguration.qml:314
 msgid "Length"
 msgstr "Longitude"
 
-#: contents/configuration/PanelConfiguration.qml:327
+#: contents/configuration/PanelConfiguration.qml:332
 msgid "Fill height"
 msgstr "Reimple Altessa "
 
-#: contents/configuration/PanelConfiguration.qml:327
+#: contents/configuration/PanelConfiguration.qml:332
 msgid "Fill width"
 msgstr "Reimple Largessa"
 
-#: contents/configuration/PanelConfiguration.qml:328
+#: contents/configuration/PanelConfiguration.qml:333
 msgid "Fit content"
 msgstr "Adapta contento"
 
-#: contents/configuration/PanelConfiguration.qml:329
+#: contents/configuration/PanelConfiguration.qml:334
 msgid "Custom"
 msgstr "Personalisate"
 
-#: contents/configuration/PanelConfiguration.qml:365
+#: contents/configuration/PanelConfiguration.qml:370
 msgid "Visibility"
 msgstr "Visibilitate"
 
-#: contents/configuration/PanelConfiguration.qml:377
+#: contents/configuration/PanelConfiguration.qml:382
 msgid "Always visible"
 msgstr "Sempre visibile"
 
-#: contents/configuration/PanelConfiguration.qml:378
+#: contents/configuration/PanelConfiguration.qml:383
 msgid "Auto hide"
 msgstr "Auto-Cela"
 
-#: contents/configuration/PanelConfiguration.qml:379
+#: contents/configuration/PanelConfiguration.qml:384
 msgid "Dodge windows"
 msgstr "Elude fenestras"
 
-#: contents/configuration/PanelConfiguration.qml:417
+#: contents/configuration/PanelConfiguration.qml:385
+#, fuzzy
+#| msgid "Windows Below"
+msgid "Windows Go Below"
+msgstr "Fenestras A Basso"
+
+#: contents/configuration/PanelConfiguration.qml:428
 msgid "Opacity"
 msgstr "Opacitate"
 
-#: contents/configuration/PanelConfiguration.qml:430
+#: contents/configuration/PanelConfiguration.qml:441
 msgid "Adaptive"
 msgstr "Adaptative"
 
-#: contents/configuration/PanelConfiguration.qml:431
+#: contents/configuration/PanelConfiguration.qml:442
 msgid "Opaque"
 msgstr "Opaque"
 
-#: contents/configuration/PanelConfiguration.qml:432
+#: contents/configuration/PanelConfiguration.qml:443
 msgid "Translucent"
 msgstr "Traslucente"
 
-#: contents/configuration/PanelConfiguration.qml:456
+#: contents/configuration/PanelConfiguration.qml:467
 msgid "Style"
 msgstr "Stilo"
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:478
 msgid "Floating"
 msgstr "Fluctuante"
 
-#: contents/configuration/PanelConfiguration.qml:483
+#: contents/configuration/PanelConfiguration.qml:494
 msgid "Panel Width:"
 msgstr "Largessa de Pannello:"
 
-#: contents/configuration/PanelConfiguration.qml:483
+#: contents/configuration/PanelConfiguration.qml:494
 msgid "Height:"
 msgstr "Altessa:"
 
-#: contents/configuration/PanelConfiguration.qml:517
+#: contents/configuration/PanelConfiguration.qml:528
 msgid "Focus shortcut:"
 msgstr "Via Breve de Foco:"
 
-#: contents/configuration/PanelConfiguration.qml:527
+#: contents/configuration/PanelConfiguration.qml:538
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pressa iste via breve de claviero pro mover foco al Pannello"
 
-#: contents/configuration/PanelConfiguration.qml:543
+#: contents/configuration/PanelConfiguration.qml:554
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Dele pannello"
 
-#: contents/configuration/PanelConfiguration.qml:546
+#: contents/configuration/PanelConfiguration.qml:557
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 "Remove iste pannello: iste action es sub le commando que on pote annullar"
@@ -617,10 +623,6 @@ msgstr "Necun widgets disponibile"
 #~ msgstr ""
 #~ "Como \"Auto-Cela\" ma le pannello remane visibile usque necun fenestra lo "
 #~ "coperi"
-
-#~| msgid "Windows Behind"
-#~ msgid "Windows Below"
-#~ msgstr "Fenestras A Basso"
 
 #~ msgid ""
 #~ "Like \"Always Visible\", but maximized and tiled windows go under the "

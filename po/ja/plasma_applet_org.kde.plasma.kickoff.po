@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-27 01:41+0000\n"
+"POT-Creation-Date: 2023-11-21 01:35+0000\n"
 "PO-Revision-Date: 2023-02-04 01:43+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -24,27 +24,27 @@ msgstr ""
 msgid "General"
 msgstr "全般"
 
-#: package/contents/ui/code/tools.js:49
+#: package/contents/ui/code/tools.js:32
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "お気に入りから削除"
 
-#: package/contents/ui/code/tools.js:53
+#: package/contents/ui/code/tools.js:36
 #, kde-format
 msgid "Add to Favorites"
 msgstr "お気に入りに追加"
 
-#: package/contents/ui/code/tools.js:77
+#: package/contents/ui/code/tools.js:60
 #, kde-format
 msgid "On All Activities"
 msgstr "すべてのアクティビティ"
 
-#: package/contents/ui/code/tools.js:127
+#: package/contents/ui/code/tools.js:110
 #, kde-format
 msgid "On the Current Activity"
 msgstr "現在のアクティビティ"
 
-#: package/contents/ui/code/tools.js:141
+#: package/contents/ui/code/tools.js:124
 #, kde-format
 msgid "Show in Favorites"
 msgstr "お気に入りに表示"
@@ -250,7 +250,7 @@ msgstr "一致なし"
 msgid "Open user settings"
 msgstr "ユーザ設定を開く"
 
-#: package/contents/ui/Header.qml:257
+#: package/contents/ui/Header.qml:258
 #, kde-format
 msgid "Keep Open"
 msgstr "開けたままにする"

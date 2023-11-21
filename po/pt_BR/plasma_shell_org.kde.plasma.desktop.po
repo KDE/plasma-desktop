@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-21 01:35+0000\n"
 "PO-Revision-Date: 2023-11-14 14:07-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -264,150 +264,156 @@ msgstr "Ações do mouse"
 msgid "Input Here"
 msgstr "Clique aqui"
 
-#: contents/configuration/PanelConfiguration.qml:91
+#: contents/configuration/PanelConfiguration.qml:92
 msgid "Panel Settings"
 msgstr "Configurações do painel"
 
-#: contents/configuration/PanelConfiguration.qml:97
+#: contents/configuration/PanelConfiguration.qml:98
 msgid "Add Spacer"
 msgstr "Adicionar espaçador"
 
-#: contents/configuration/PanelConfiguration.qml:100
+#: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:107
+#: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
 msgstr "Adicionar widgets..."
 
-#: contents/configuration/PanelConfiguration.qml:110
+#: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:132
+#: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
 msgstr "Posição"
 
-#: contents/configuration/PanelConfiguration.qml:136
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:290
 msgid "Top"
 msgstr "Superior"
 
-#: contents/configuration/PanelConfiguration.qml:137
-#: contents/configuration/PanelConfiguration.qml:287
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:292
 msgid "Right"
 msgstr "Direita"
 
-#: contents/configuration/PanelConfiguration.qml:138
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:290
 msgid "Left"
 msgstr "Esquerda"
 
-#: contents/configuration/PanelConfiguration.qml:139
-#: contents/configuration/PanelConfiguration.qml:287
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:292
 msgid "Bottom"
 msgstr "Inferior"
 
-#: contents/configuration/PanelConfiguration.qml:156
+#: contents/configuration/PanelConfiguration.qml:157
 msgid "Set Position..."
 msgstr "Definir posição..."
 
-#: contents/configuration/PanelConfiguration.qml:221
+#: contents/configuration/PanelConfiguration.qml:226
 msgid "Alignment"
 msgstr "Alinhamento"
 
-#: contents/configuration/PanelConfiguration.qml:286
+#: contents/configuration/PanelConfiguration.qml:291
 msgid "Center"
 msgstr "Centro"
 
-#: contents/configuration/PanelConfiguration.qml:309
+#: contents/configuration/PanelConfiguration.qml:314
 msgid "Length"
 msgstr "Comprimento"
 
-#: contents/configuration/PanelConfiguration.qml:327
+#: contents/configuration/PanelConfiguration.qml:332
 msgid "Fill height"
 msgstr "Preencher altura"
 
-#: contents/configuration/PanelConfiguration.qml:327
+#: contents/configuration/PanelConfiguration.qml:332
 msgid "Fill width"
 msgstr "Preencher largura"
 
-#: contents/configuration/PanelConfiguration.qml:328
+#: contents/configuration/PanelConfiguration.qml:333
 msgid "Fit content"
 msgstr "Preencher conteúdo"
 
-#: contents/configuration/PanelConfiguration.qml:329
+#: contents/configuration/PanelConfiguration.qml:334
 msgid "Custom"
 msgstr "Personalizado"
 
-#: contents/configuration/PanelConfiguration.qml:365
+#: contents/configuration/PanelConfiguration.qml:370
 msgid "Visibility"
 msgstr "Visibilidade"
 
-#: contents/configuration/PanelConfiguration.qml:377
+#: contents/configuration/PanelConfiguration.qml:382
 #, fuzzy
 #| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Sempre visível"
 
-#: contents/configuration/PanelConfiguration.qml:378
+#: contents/configuration/PanelConfiguration.qml:383
 msgid "Auto hide"
 msgstr "Ocultar automaticamente"
 
-#: contents/configuration/PanelConfiguration.qml:379
+#: contents/configuration/PanelConfiguration.qml:384
 msgid "Dodge windows"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:417
+#: contents/configuration/PanelConfiguration.qml:385
+#, fuzzy
+#| msgid "Windows Go Below"
+msgid "Windows Go Below"
+msgstr "As janelas passam para trás"
+
+#: contents/configuration/PanelConfiguration.qml:428
 msgid "Opacity"
 msgstr "Opacidade"
 
-#: contents/configuration/PanelConfiguration.qml:430
+#: contents/configuration/PanelConfiguration.qml:441
 msgid "Adaptive"
 msgstr "Adaptativo"
 
-#: contents/configuration/PanelConfiguration.qml:431
+#: contents/configuration/PanelConfiguration.qml:442
 msgid "Opaque"
 msgstr "Opaco"
 
-#: contents/configuration/PanelConfiguration.qml:432
+#: contents/configuration/PanelConfiguration.qml:443
 msgid "Translucent"
 msgstr "Transparente"
 
-#: contents/configuration/PanelConfiguration.qml:456
+#: contents/configuration/PanelConfiguration.qml:467
 msgid "Style"
 msgstr "Estilo"
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:478
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating"
 msgstr "Painel flutuante"
 
-#: contents/configuration/PanelConfiguration.qml:483
+#: contents/configuration/PanelConfiguration.qml:494
 msgid "Panel Width:"
 msgstr "Largura do painel:"
 
-#: contents/configuration/PanelConfiguration.qml:483
+#: contents/configuration/PanelConfiguration.qml:494
 msgid "Height:"
 msgstr "Altura:"
 
-#: contents/configuration/PanelConfiguration.qml:517
+#: contents/configuration/PanelConfiguration.qml:528
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Atalho"
 
-#: contents/configuration/PanelConfiguration.qml:527
+#: contents/configuration/PanelConfiguration.qml:538
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pressione este atalho de teclado para mover o foco para o painel"
 
-#: contents/configuration/PanelConfiguration.qml:543
+#: contents/configuration/PanelConfiguration.qml:554
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Excluir painel"
 
-#: contents/configuration/PanelConfiguration.qml:546
+#: contents/configuration/PanelConfiguration.qml:557
 msgid "Remove this panel; this action is undo-able"
 msgstr "Exclui este painel; esta ação não pode ser desfeita"
 
@@ -554,11 +560,6 @@ msgstr "Nenhum widget disponível"
 #, fuzzy
 #~| msgid "Windows Go Below"
 #~ msgid "Windows Above"
-#~ msgstr "As janelas passam para trás"
-
-#, fuzzy
-#~| msgid "Windows Go Below"
-#~ msgid "Windows Below"
 #~ msgstr "As janelas passam para trás"
 
 #, fuzzy

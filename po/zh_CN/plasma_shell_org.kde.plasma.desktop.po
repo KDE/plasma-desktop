@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-21 01:35+0000\n"
 "PO-Revision-Date: 2023-11-19 03:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -258,144 +258,148 @@ msgstr "鼠标操作"
 msgid "Input Here"
 msgstr "在此输入"
 
-#: contents/configuration/PanelConfiguration.qml:91
+#: contents/configuration/PanelConfiguration.qml:92
 msgid "Panel Settings"
 msgstr "面板设置"
 
-#: contents/configuration/PanelConfiguration.qml:97
+#: contents/configuration/PanelConfiguration.qml:98
 msgid "Add Spacer"
 msgstr "添加间距"
 
-#: contents/configuration/PanelConfiguration.qml:100
+#: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:107
+#: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
 msgstr "添加挂件…"
 
-#: contents/configuration/PanelConfiguration.qml:110
+#: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:132
+#: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:136
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:290
 msgid "Top"
 msgstr "靠上"
 
-#: contents/configuration/PanelConfiguration.qml:137
-#: contents/configuration/PanelConfiguration.qml:287
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:292
 msgid "Right"
 msgstr "靠右"
 
-#: contents/configuration/PanelConfiguration.qml:138
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:290
 msgid "Left"
 msgstr "靠左"
 
-#: contents/configuration/PanelConfiguration.qml:139
-#: contents/configuration/PanelConfiguration.qml:287
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:292
 msgid "Bottom"
 msgstr "靠下"
 
-#: contents/configuration/PanelConfiguration.qml:156
+#: contents/configuration/PanelConfiguration.qml:157
 msgid "Set Position..."
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:221
+#: contents/configuration/PanelConfiguration.qml:226
 msgid "Alignment"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:286
+#: contents/configuration/PanelConfiguration.qml:291
 msgid "Center"
 msgstr "居中"
 
-#: contents/configuration/PanelConfiguration.qml:309
+#: contents/configuration/PanelConfiguration.qml:314
 msgid "Length"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:327
+#: contents/configuration/PanelConfiguration.qml:332
 msgid "Fill height"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:327
+#: contents/configuration/PanelConfiguration.qml:332
 msgid "Fill width"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:328
+#: contents/configuration/PanelConfiguration.qml:333
 msgid "Fit content"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:329
+#: contents/configuration/PanelConfiguration.qml:334
 msgid "Custom"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:365
+#: contents/configuration/PanelConfiguration.qml:370
 msgid "Visibility"
 msgstr "显示/隐藏"
 
-#: contents/configuration/PanelConfiguration.qml:377
+#: contents/configuration/PanelConfiguration.qml:382
 msgid "Always visible"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:378
+#: contents/configuration/PanelConfiguration.qml:383
 msgid "Auto hide"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:379
+#: contents/configuration/PanelConfiguration.qml:384
 msgid "Dodge windows"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:417
+#: contents/configuration/PanelConfiguration.qml:385
+msgid "Windows Go Below"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:428
 msgid "Opacity"
 msgstr "不透明度"
 
-#: contents/configuration/PanelConfiguration.qml:430
+#: contents/configuration/PanelConfiguration.qml:441
 msgid "Adaptive"
 msgstr "自适应"
 
-#: contents/configuration/PanelConfiguration.qml:431
+#: contents/configuration/PanelConfiguration.qml:442
 msgid "Opaque"
 msgstr "不透明"
 
-#: contents/configuration/PanelConfiguration.qml:432
+#: contents/configuration/PanelConfiguration.qml:443
 msgid "Translucent"
 msgstr "半透明"
 
-#: contents/configuration/PanelConfiguration.qml:456
+#: contents/configuration/PanelConfiguration.qml:467
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:478
 msgid "Floating"
 msgstr "悬浮"
 
-#: contents/configuration/PanelConfiguration.qml:483
+#: contents/configuration/PanelConfiguration.qml:494
 msgid "Panel Width:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:483
+#: contents/configuration/PanelConfiguration.qml:494
 msgid "Height:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:517
+#: contents/configuration/PanelConfiguration.qml:528
 msgid "Focus shortcut:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:527
+#: contents/configuration/PanelConfiguration.qml:538
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按下此键盘快捷键以移动焦点到面板"
 
-#: contents/configuration/PanelConfiguration.qml:543
+#: contents/configuration/PanelConfiguration.qml:554
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:546
+#: contents/configuration/PanelConfiguration.qml:557
 msgid "Remove this panel; this action is undo-able"
 msgstr "移除此面板；此操作可以撤销"
 

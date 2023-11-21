@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-21 01:35+0000\n"
 "PO-Revision-Date: 2020-10-08 11:52+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -272,170 +272,176 @@ msgstr "Hiire toimingud"
 msgid "Input Here"
 msgstr "Sisend"
 
-#: contents/configuration/PanelConfiguration.qml:91
+#: contents/configuration/PanelConfiguration.qml:92
 #, fuzzy
 #| msgid "Apply Settings"
 msgid "Panel Settings"
 msgstr "Rakenda seadistused"
 
-#: contents/configuration/PanelConfiguration.qml:97
+#: contents/configuration/PanelConfiguration.qml:98
 msgid "Add Spacer"
 msgstr "Lisa eraldaja"
 
-#: contents/configuration/PanelConfiguration.qml:100
+#: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:107
+#: contents/configuration/PanelConfiguration.qml:108
 #, fuzzy
 #| msgid "Add Widgets..."
 msgid "Add Widgets…"
 msgstr "Lisa vidinaid..."
 
-#: contents/configuration/PanelConfiguration.qml:110
+#: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:132
+#: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:136
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:137
+#: contents/configuration/PanelConfiguration.qml:290
 msgid "Top"
 msgstr "Ülal"
 
-#: contents/configuration/PanelConfiguration.qml:137
-#: contents/configuration/PanelConfiguration.qml:287
+#: contents/configuration/PanelConfiguration.qml:138
+#: contents/configuration/PanelConfiguration.qml:292
 msgid "Right"
 msgstr "Paremal"
 
-#: contents/configuration/PanelConfiguration.qml:138
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:290
 msgid "Left"
 msgstr "Vasakul"
 
-#: contents/configuration/PanelConfiguration.qml:139
-#: contents/configuration/PanelConfiguration.qml:287
+#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:292
 msgid "Bottom"
 msgstr "All"
 
-#: contents/configuration/PanelConfiguration.qml:156
+#: contents/configuration/PanelConfiguration.qml:157
 msgid "Set Position..."
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:221
+#: contents/configuration/PanelConfiguration.qml:226
 #, fuzzy
 #| msgid "Panel Alignment"
 msgid "Alignment"
 msgstr "Paneeli joondus"
 
-#: contents/configuration/PanelConfiguration.qml:286
+#: contents/configuration/PanelConfiguration.qml:291
 msgid "Center"
 msgstr "Keskel"
 
-#: contents/configuration/PanelConfiguration.qml:309
+#: contents/configuration/PanelConfiguration.qml:314
 msgid "Length"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:327
+#: contents/configuration/PanelConfiguration.qml:332
 #, fuzzy
 #| msgid "Panel height:"
 msgid "Fill height"
 msgstr "Paneeli kõrgus:"
 
-#: contents/configuration/PanelConfiguration.qml:327
+#: contents/configuration/PanelConfiguration.qml:332
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Fill width"
 msgstr "Paneeli laius:"
 
-#: contents/configuration/PanelConfiguration.qml:328
+#: contents/configuration/PanelConfiguration.qml:333
 msgid "Fit content"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:329
+#: contents/configuration/PanelConfiguration.qml:334
 msgid "Custom"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:365
+#: contents/configuration/PanelConfiguration.qml:370
 #, fuzzy
 #| msgid "Visibility"
 msgid "Visibility"
 msgstr "Nähtavus"
 
-#: contents/configuration/PanelConfiguration.qml:377
+#: contents/configuration/PanelConfiguration.qml:382
 #, fuzzy
 #| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Alati nähtav"
 
-#: contents/configuration/PanelConfiguration.qml:378
+#: contents/configuration/PanelConfiguration.qml:383
 #, fuzzy
 #| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "Automaatne peitmine"
 
-#: contents/configuration/PanelConfiguration.qml:379
+#: contents/configuration/PanelConfiguration.qml:384
 msgid "Dodge windows"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:417
+#: contents/configuration/PanelConfiguration.qml:385
+#, fuzzy
+#| msgid "Windows Go Below"
+msgid "Windows Go Below"
+msgstr "Võib jääda akende peale"
+
+#: contents/configuration/PanelConfiguration.qml:428
 msgid "Opacity"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:430
+#: contents/configuration/PanelConfiguration.qml:441
 msgid "Adaptive"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:431
+#: contents/configuration/PanelConfiguration.qml:442
 msgid "Opaque"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:432
+#: contents/configuration/PanelConfiguration.qml:443
 #, fuzzy
 #| msgid "Translators"
 msgid "Translucent"
 msgstr "Tõlkijad"
 
-#: contents/configuration/PanelConfiguration.qml:456
+#: contents/configuration/PanelConfiguration.qml:467
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:478
 msgid "Floating"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:483
+#: contents/configuration/PanelConfiguration.qml:494
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Paneeli laius:"
 
-#: contents/configuration/PanelConfiguration.qml:483
+#: contents/configuration/PanelConfiguration.qml:494
 #, fuzzy
 #| msgid "Height"
 msgid "Height:"
 msgstr "Kõrgus"
 
-#: contents/configuration/PanelConfiguration.qml:517
+#: contents/configuration/PanelConfiguration.qml:528
 #, fuzzy
 #| msgid "Keyboard Shortcuts"
 msgid "Focus shortcut:"
 msgstr "Kiirklahvid"
 
-#: contents/configuration/PanelConfiguration.qml:527
+#: contents/configuration/PanelConfiguration.qml:538
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:543
+#: contents/configuration/PanelConfiguration.qml:554
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Eemalda paneel"
 
-#: contents/configuration/PanelConfiguration.qml:546
+#: contents/configuration/PanelConfiguration.qml:557
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
@@ -575,11 +581,6 @@ msgstr "Ühtegi vidinat pole saada"
 #, fuzzy
 #~| msgid "Windows Go Below"
 #~ msgid "Windows Above"
-#~ msgstr "Võib jääda akende peale"
-
-#, fuzzy
-#~| msgid "Windows Go Below"
-#~ msgid "Windows Below"
 #~ msgstr "Võib jääda akende peale"
 
 #, fuzzy
