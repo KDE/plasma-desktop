@@ -513,7 +513,7 @@ PlasmoidItem {
 
         var task = taskRepeater.itemAt(index);
         if (task) {
-            TaskTools.activateTask(task.modelIndex(), task.m, null, task, Plasmoid, tasks);
+            TaskTools.activateTask(task.modelIndex(), task.model, null, task, Plasmoid, tasks);
         }
     }
 
