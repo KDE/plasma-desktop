@@ -26,6 +26,19 @@ KCM.SimpleKCM {
     property alias cfg_forceStripes: forceStripes.checked
     property int cfg_iconSpacing: 0
 
+    Component.onCompleted: {
+        /* Don't rely on bindings for checking the radiobuttons
+           When checking forceStripes, the condition for the checked value for the allow stripes button
+           became true and that one got checked instead, stealing the checked state for the just clicked checkbox
+        */
+        if (maxStripes.value === 1) {
+            forbidStripes.checked = true;
+        } else if (!Plasmoid.configuration.forceStripes && maxStripes.value > 1) {
+            allowStripes.checked = true;
+        } else if (Plasmoid.configuration.forceStripes && maxStripes.value > 1) {
+            forceStripes.checked = true;
+        }
+    }
     Kirigami.FormLayout {
         CheckBox {
             id: showToolTips
@@ -56,8 +69,8 @@ KCM.SimpleKCM {
         }
 
         RadioButton {
+            id: forbidStripes
             Kirigami.FormData.label: plasmoidVertical ? i18nc("@option: radio", "Use multi-column view:") : i18nc("@option:radio", "Use multi-row view:")
-            checked: maxStripes.value == 1
             onToggled: {
                 if (checked) {
                     maxStripes.value = 1
@@ -67,7 +80,7 @@ KCM.SimpleKCM {
         }
 
         RadioButton {
-            checked: !Plasmoid.configuration.forceStripes && maxStripes.value > 1
+            id: allowStripes
             onToggled: {
                 if (checked) {
                     maxStripes.value = Math.max(2, maxStripes.value)
@@ -78,7 +91,6 @@ KCM.SimpleKCM {
 
         RadioButton {
             id: forceStripes
-            checked: Plasmoid.configuration.forceStripes && maxStripes.value > 1
             onToggled: {
                 if (checked) {
                     maxStripes.value = Math.max(2, maxStripes.value)
