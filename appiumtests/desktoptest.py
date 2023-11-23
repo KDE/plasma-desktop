@@ -8,59 +8,25 @@ import os
 import pathlib
 import subprocess
 import sys
-import sysconfig
 import time
 import unittest
-from enum import Enum
 from typing import Final
 
-import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from appium.webdriver.webdriver import ExtensionBase
 from appium.webdriver.webelement import WebElement
+from gi.repository import Gio, GLib
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-
-gi.require_version('Gdk', '3.0')
-from gi.repository import Gdk, Gio, GLib
-
-if "KDECI_BUILD" not in os.environ:
-    CMAKE_INSTALL_PREFIX: Final = os.environ.get("CMAKE_INSTALL_PREFIX", os.path.join(pathlib.Path.home(), "kde", "usr"))
-    SITE_PACKAGES_DIR: Final = os.path.join(CMAKE_INSTALL_PREFIX, sysconfig.get_path("platlib")[len(sys.prefix + os.sep):])
-    for subdir in os.listdir(SITE_PACKAGES_DIR):
-        sys.path.append(os.path.join(SITE_PACKAGES_DIR, subdir))
-import inputsynth_plasma_desktop as IS
 
 CMAKE_BINARY_DIR: Final = os.environ.get("CMAKE_BINARY_DIR", os.path.join(pathlib.Path.home(), "kde/build/plasma-desktop/bin"))
 KACTIVITYMANAGERD_PATH: Final = os.environ.get("KACTIVITYMANAGERD_PATH", os.path.join(pathlib.Path.home(), "kde/usr/lib64/libexec/kactivitymanagerd"))
 KACTIVITYMANAGERD_SERVICE_NAME: Final = "org.kde.ActivityManager"
 EVDEV_OFFSET: Final = 8
 KDE_VERSION: Final = 6
-
-
-class XKeyCode(Enum):
-    """
-    @see https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
-    """
-    Alt = 0xffe9
-    Ctrl = 0xffe3
-    D = 0x0044
-    Down = 0xff54
-    E = 0x0045
-    Enter = 0xff8d
-    Escape = 0xff1b
-    Menu = 0xff67
-    P = 0x0050
-    Shift = 0xffe1
-    Space = 0x0020
-    Return = 0xff0d
-    Right = 0xff53
-    S = 0x0053
-    Super = 0xffeb
-    Tab = 0xff09
-    Up = 0xff52
 
 
 def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
@@ -71,25 +37,6 @@ def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
     message.set_body(GLib.Variant("(s)", [name]))
     reply, _ = session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
     return reply and reply.get_signature() == 'b' and reply.get_body().get_child_value(0).get_boolean()
-
-
-def keyval_to_keycode(key_val: XKeyCode) -> int:
-    """
-    @param key_val see https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
-    """
-    match key_val:
-        case XKeyCode.Shift:  # XK_Shift_L
-            return 42 + EVDEV_OFFSET
-        case XKeyCode.Alt:  #XK_Alt_L
-            return 56 + EVDEV_OFFSET
-        case XKeyCode.Ctrl:  # XK_Control_L
-            return 29 + EVDEV_OFFSET
-
-    keymap = Gdk.Keymap.get_default()
-    ret, keys = keymap.get_entries_for_keyval(key_val.value)
-    if not ret:
-        raise RuntimeError("Failed to map key!")
-    return keys[0].keycode
 
 
 class DesktopTest(unittest.TestCase):
@@ -132,8 +79,6 @@ class DesktopTest(unittest.TestCase):
 
         cls.plasmashell = subprocess.Popen(["plasmashell", "-p", "org.kde.plasma.desktop", "--no-respawn"], stdout=sys.stderr, stderr=sys.stderr)
 
-        IS.init_module()
-
         options = AppiumOptions()
         options.set_capability("app", "Root")
         options.set_capability("timeouts", {'implicit': 30000})
@@ -158,30 +103,21 @@ class DesktopTest(unittest.TestCase):
             cls.kactivitymanagerd.kill()
         cls.driver.quit()
 
-    def _enter_edit_mode(self) -> None:
-        """
-        Uses the keyboard shortcut to enter edit mode
-        """
-        # Key values are from https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
-        # Alt+D
-        IS.key_press(keyval_to_keycode(XKeyCode.Alt))
-        IS.key_press(keyval_to_keycode(XKeyCode.D))
-        time.sleep(0.5)
-        IS.key_release(keyval_to_keycode(XKeyCode.Alt))
-        IS.key_release(keyval_to_keycode(XKeyCode.D))
-        time.sleep(0.5)
-        # E
-        IS.key_press(keyval_to_keycode(XKeyCode.E))
-        time.sleep(0.5)
-        IS.key_release(keyval_to_keycode(XKeyCode.E))
-
     def _exit_edit_mode(self) -> None:
         """
         Finds the close button and clicks it
         """
         global_theme_button = self.driver.find_element(AppiumBy.NAME, "Choose Global Theme…")
         self.driver.find_element(AppiumBy.NAME, "Exit Edit Mode").click()
-        WebDriverWait(self.driver, 30).until(lambda _: not global_theme_button.is_displayed())
+        WebDriverWait(self.driver, 30).until_not(lambda _: global_theme_button.is_displayed())
+
+    def _open_containment_config_dialog(self) -> None:
+        # Alt+D, S
+        actions = ActionChains(self.driver)
+        actions.key_down(Keys.ALT).key_down("d").key_up("d").key_up(Keys.ALT).perform()
+        time.sleep(0.5)
+        actions.send_keys("s").perform()
+        WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((AppiumBy.NAME, "Wallpaper type:")))
 
     def test_0_panel_ready(self) -> None:
         """
@@ -190,43 +126,24 @@ class DesktopTest(unittest.TestCase):
         wait = WebDriverWait(self.driver, 30)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Application Launcher")))
 
-    def test_1_containment_config_dialog_1_open(self) -> None:
-        """
-        Opens the containment config dialog by clicking the button in the toolbox
-        """
-        # Alt+D
-        IS.key_press(keyval_to_keycode(XKeyCode.Alt))
-        IS.key_press(keyval_to_keycode(XKeyCode.D))
-        time.sleep(0.5)
-        IS.key_release(keyval_to_keycode(XKeyCode.Alt))
-        IS.key_release(keyval_to_keycode(XKeyCode.D))
-        time.sleep(0.5)
-        # S
-        IS.key_press(keyval_to_keycode(XKeyCode.S))
-        time.sleep(0.5)
-        IS.key_release(keyval_to_keycode(XKeyCode.S))
-        wait = WebDriverWait(self.driver, 30)
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Wallpaper type:")))
-
     def test_1_containment_config_dialog_2_add_new_wallpaper(self) -> None:
         """
         Tests if the file dialog is opened successfully
         @see https://invent.kde.org/plasma/plasma-integration/-/merge_requests/117
         """
+        self._open_containment_config_dialog()
         self.driver.find_element(AppiumBy.NAME, "Add…").click()
         wait = WebDriverWait(self.driver, 30)
         title_element: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Open Image")))
 
-        IS.key_press(keyval_to_keycode(XKeyCode.Escape))
-        IS.key_release(keyval_to_keycode(XKeyCode.Escape))
+        ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
         wait.until_not(lambda _: title_element.is_displayed())
 
     def test_1_containment_config_dialog_3_other_sections(self) -> None:
         """
         Opens other sections successively and matches text to make sure there is no breaking QML error
         """
-        self.test_1_containment_config_dialog_1_open()
-
+        self._open_containment_config_dialog()
         wait = WebDriverWait(self.driver, 30)
         mouseaction_element: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Mouse Actions")))
         location_element = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Location")))
@@ -246,8 +163,7 @@ class DesktopTest(unittest.TestCase):
         filter_element.click()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "File name pattern:")))
 
-        IS.key_press(keyval_to_keycode(XKeyCode.Escape))
-        IS.key_release(keyval_to_keycode(XKeyCode.Escape))
+        ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
         wait.until_not(lambda _: mouseaction_element.is_displayed())
 
     def test_3_open_panel_edit_mode(self) -> None:
@@ -255,12 +171,18 @@ class DesktopTest(unittest.TestCase):
         Tests the edit mode toolbox can be loaded
         Consolidates https://invent.kde.org/frameworks/plasma-framework/-/commit/3bb099a427cacd44fef7668225d8094f952dd5b2
         """
-        self._enter_edit_mode()
+        # Alt+D, E
+        actions = ActionChains(self.driver)
+        actions.key_down(Keys.ALT).key_down("d").key_up("d").key_up(Keys.ALT).perform()
+        actions.send_keys("e").perform()
 
         wait = WebDriverWait(self.driver, 30)
         self.driver.find_element(AppiumBy.NAME, "Configure Panel…").click()
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Widgets…")))
+        widget_button: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Widgets…")))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Spacer")))
+
+        ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
+        wait.until_not(lambda _: widget_button.is_displayed())
 
         self._exit_edit_mode()
 
