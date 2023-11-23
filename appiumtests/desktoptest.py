@@ -4,8 +4,10 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: GPL-2.0-or-later
 
+import functools
 import os
 import pathlib
+import stat
 import subprocess
 import sys
 import time
@@ -114,7 +116,7 @@ class DesktopTest(unittest.TestCase):
     def _open_containment_config_dialog(self) -> None:
         # Alt+D, S
         actions = ActionChains(self.driver)
-        actions.key_down(Keys.ALT).key_down("d").key_up("d").key_up(Keys.ALT).perform()
+        actions.key_down(Keys.ALT).send_keys("d").key_up(Keys.ALT).perform()
         time.sleep(0.5)
         actions.send_keys("s").perform()
         WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((AppiumBy.NAME, "Wallpaper type:")))
@@ -173,7 +175,7 @@ class DesktopTest(unittest.TestCase):
         """
         # Alt+D, E
         actions = ActionChains(self.driver)
-        actions.key_down(Keys.ALT).key_down("d").key_up("d").key_up(Keys.ALT).perform()
+        actions.key_down(Keys.ALT).send_keys("d").key_up(Keys.ALT).perform()
         actions.send_keys("e").perform()
 
         wait = WebDriverWait(self.driver, 30)
@@ -181,10 +183,46 @@ class DesktopTest(unittest.TestCase):
         widget_button: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Widgets…")))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Spacer")))
 
-        ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
+        actions.send_keys(Keys.ESCAPE).perform()
         wait.until_not(lambda _: widget_button.is_displayed())
 
         self._exit_edit_mode()
+
+    def test_4_bug477185_meta_number_shortcut(self) -> None:
+        """
+        Meta+1 should activate the first launcher item
+        """
+        # Prepare a desktop file
+        os.makedirs(os.path.join(GLib.get_user_data_dir(), "applications"))
+        desktopfile_path = os.path.join(GLib.get_user_data_dir(), "applications", "org.kde.testwindow.desktop")
+        with open(desktopfile_path, "w", encoding="utf-8") as file_handler:
+            file_handler.writelines([
+                "[Desktop Entry]\n",
+                "Type=Application\n",
+                "Icon=preferences-system\n",
+                "Name=Software Center\n",
+                f"Exec=python3 {os.path.join(os.getcwd(), 'resources', 'org.kde.testwindow.py')}\n",
+            ])
+            file_handler.flush()
+        os.chmod(desktopfile_path, os.stat(desktopfile_path).st_mode | stat.S_IEXEC)
+        self.addCleanup(functools.partial(os.remove, desktopfile_path))
+
+        session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
+
+        # Add a new launcher item
+        message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "evaluateScript")
+        message.set_body(GLib.Variant("(s)", [f"panels().forEach(containment => containment.widgets('org.kde.plasma.icontasks').forEach(widget => {{widget.currentConfigGroup = ['General'];widget.writeConfig('launchers', 'file://{desktopfile_path}');}}))"]))
+        session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
+
+        wait = WebDriverWait(self.driver, 30)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Software Center")))
+
+        # Activate the first launcher
+        # ActionChains(self.driver).key_down(Keys.META).send_keys("1").key_up(Keys.META) # FIXME Meta modifier doesn't work
+        message = Gio.DBusMessage.new_method_call("org.kde.kglobalaccel", "/component/plasmashell", "org.kde.kglobalaccel.Component", "invokeShortcut")
+        message.set_body(GLib.Variant("(s)", ["activate task manager entry 1"]))
+        session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Install Software")))
 
 
 if __name__ == '__main__':
