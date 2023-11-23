@@ -19,8 +19,8 @@ target_link_libraries(kcm_splashscreen PRIVATE
   KF6::KCMUtils
   KF6::KCMUtilsQuick
   KF6::I18n
-  KF6::Plasma
-  KF6::PlasmaQuick
+  Plasma::Plasma
+  Plasma::PlasmaQuick
   KF6::NewStuffCore
   KF6::Package
 

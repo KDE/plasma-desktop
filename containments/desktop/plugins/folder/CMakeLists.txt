@@ -40,7 +40,7 @@ target_link_libraries(folderplugin
                       KF6::KIOWidgets
                       KF6::KIOFileWidgets
                       KF6::I18n
-                      KF6::PlasmaQuick
+                      Plasma::PlasmaQuick
                       KF6::ConfigGui
                       KF6::Notifications
                       KF6::XmlGui)

@@ -17,7 +17,7 @@ target_link_libraries(kcm_touchpad
     KF6::I18n
     KF6::Completion
     KF6::KCMUtils
-    KF6::Plasma
+    Plasma::Plasma
     KF6::WindowSystem
     KF6::NotifyConfig
     KF6::XmlGui

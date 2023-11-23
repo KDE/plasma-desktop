@@ -11,7 +11,7 @@ add_library(pagerplugin SHARED ${pager_SRCS})
 target_link_libraries(pagerplugin
                       KF6::KIOCore
                       KF6::WindowSystem
-                      KF6::Plasma
+                      Plasma::Plasma
                       Plasma::Activities
                       PW::LibTaskManager
                       Qt::Core

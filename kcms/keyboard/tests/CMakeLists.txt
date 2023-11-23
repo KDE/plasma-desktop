@@ -31,7 +31,7 @@ target_link_libraries(flags_test
                       KF6::GuiAddons
                       KF6::KCMUtils
                       KF6::I18n
-                      KF6::Plasma
+                      Plasma::Plasma
                       KF6::WindowSystem
                       XCB::XCB
                       XCB::XKB
@@ -71,7 +71,7 @@ if( X11_XTest_FOUND )
                          KF6::GuiAddons
                          KF6::I18n
                          KF6::Notifications
-                         KF6::Plasma
+                         Plasma::Plasma
                          KF6::GlobalAccel
                          KF6::WindowSystem
                          KF6::XmlGui

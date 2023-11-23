@@ -32,7 +32,7 @@ target_link_libraries(taskmanagerplugin
                       KF6::KIOGui
                       KF6::KIOFileWidgets # KFilePlacesModel
                       KF6::Notifications # KNotificationJobUiDelegate
-                      KF6::Plasma
+                      Plasma::Plasma
                       KSysGuard::ProcessCore
                       KF6::Service
                       KF6::WindowSystem
