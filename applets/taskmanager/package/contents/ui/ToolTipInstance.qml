@@ -46,13 +46,13 @@ ColumnLayout {
         // the window-provided title. But if it doesn't, this is intentional 100%
         // of the time because the developer or user has deliberately removed that
         // part, so just display it with no more fancy processing.
-        if (!text.includes("—") && !text.includes("-")) {
+        if (!text.match(/\s+(—|-|–)/)) {
             return text;
         }
 
         // KWin appends increasing integers in between pointy brackets to otherwise equal window titles.
         // In this case save <#number> as counter and delete it at the end of text.
-        text = `${(text.match(/.*(?=\s*(—|-))/) || [""])[0]}${(text.match(/<\d+>/) || [""]).pop()}`;
+        text = `${(text.match(/.*(?=\s+(—|-|–))/) || [""])[0]}${(text.match(/<\d+>/) || [""]).pop()}`;
 
         // In case the window title had only redundant information (i.e. appName), text is now empty.
         // Add a hyphen to indicate that and avoid empty space.
