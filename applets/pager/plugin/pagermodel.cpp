@@ -29,7 +29,7 @@
 #include <KX11Extras>
 #endif
 
-#include <KActivities/Controller>
+#include <PlasmaActivities/Controller>
 
 using namespace TaskManager;
 

@@ -9,7 +9,7 @@
 
 #include "utils/continue_with.h"
 
-#include <KActivities/Info>
+#include <PlasmaActivities/Info>
 
 #include <KConfig>
 #include <KConfigGroup>

@@ -15,7 +15,7 @@
 #include <QScreen>
 #include <QTimer>
 
-#include <KActivities/Consumer>
+#include <PlasmaActivities/Consumer>
 #include <KConfig>
 #include <KConfigGroup>
 #include <Plasma/Corona>

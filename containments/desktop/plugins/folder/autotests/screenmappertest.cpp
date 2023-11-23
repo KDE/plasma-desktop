@@ -14,7 +14,7 @@
 #include <QSignalSpy>
 #include <QTest>
 
-#include <KActivities/Consumer>
+#include <PlasmaActivities/Consumer>
 
 using namespace Qt::StringLiterals;
 

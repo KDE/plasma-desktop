@@ -20,7 +20,7 @@ target_link_libraries(kcm_landingpage PRIVATE
     KF6::ConfigWidgets
     KF6::Package
     PW::KWorkspace
-    KF6::ActivitiesStats
+    Plasma::ActivitiesStats
     KF6::Service
 )
 

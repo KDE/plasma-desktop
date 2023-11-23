@@ -10,8 +10,8 @@
 #include <QSortFilterProxyModel>
 
 // KDE
-#include <KActivities/ActivitiesModel>
-#include <KActivities/Consumer>
+#include <PlasmaActivities/ActivitiesModel>
+#include <PlasmaActivities/Consumer>
 
 #include <config-X11.h> // Required by files that include this header
 

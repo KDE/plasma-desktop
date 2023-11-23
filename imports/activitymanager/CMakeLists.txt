@@ -14,7 +14,7 @@ target_link_libraries(activityswitcherextensionplugin PRIVATE
    Qt::Widgets
 
    KF6::I18n
-   KF6::Activities
+   Plasma::Activities
    KF6::ConfigCore
    KF6::CoreAddons
    KF6::GlobalAccel

@@ -12,7 +12,7 @@ target_link_libraries(pagerplugin
                       KF6::KIOCore
                       KF6::WindowSystem
                       KF6::Plasma
-                      KF6::Activities
+                      Plasma::Activities
                       PW::LibTaskManager
                       Qt::Core
                       Qt::DBus

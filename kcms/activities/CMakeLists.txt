@@ -17,5 +17,5 @@ target_link_libraries (kcm_activities PRIVATE
    KF6::Service
    KF6::XmlGui
    KF6::GlobalAccel
-   KF6::Activities
+   Plasma::Activities
 )

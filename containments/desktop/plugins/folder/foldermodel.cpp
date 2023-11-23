@@ -32,7 +32,7 @@
 #include <QTimer>
 #include <qplatformdefs.h>
 
-#include <KActivities/Consumer>
+#include <PlasmaActivities/Consumer>
 #include <KAuthorized>
 #include <KConfigGroup>
 #include <KDirWatch>

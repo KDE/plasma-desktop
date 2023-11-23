@@ -8,7 +8,7 @@
 #include "kcm_activities.h"
 #include "activityconfig.h"
 
-#include <KActivities/Controller>
+#include <PlasmaActivities/Controller>
 #include <KAuthorized>
 #include <KLocalizedString>
 #include <KPluginFactory>

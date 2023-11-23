@@ -28,9 +28,9 @@
 #include "landingpage_kdeglobalssettings.h"
 #include "landingpagedata.h"
 
-#include <KActivities/Stats/ResultModel>
-#include <KActivities/Stats/ResultSet>
-#include <KActivities/Stats/Terms>
+#include <PlasmaActivities/Stats/ResultModel>
+#include <PlasmaActivities/Stats/ResultSet>
+#include <PlasmaActivities/Stats/Terms>
 
 namespace KAStats = KActivities::Stats;
 

@@ -19,7 +19,7 @@
 #include <qqmlregistration.h>
 
 // KDE
-#include <KActivities/Controller>
+#include <PlasmaActivities/Controller>
 
 // Local
 #include "sortedactivitiesmodel.h"

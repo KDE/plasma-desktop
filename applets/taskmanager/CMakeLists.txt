@@ -25,8 +25,8 @@ target_link_libraries(taskmanagerplugin
                       Qt::DBus
                       Qt::Qml
                       Qt::Quick
-                      KF6::Activities
-                      KF6::ActivitiesStats
+                      Plasma::Activities
+                      Plasma::ActivitiesStats
                       KF6::I18n
                       KF6::KIOCore
                       KF6::KIOGui

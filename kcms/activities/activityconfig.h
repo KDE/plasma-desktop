@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <KActivities/Controller>
+#include <PlasmaActivities/Controller>
 
 #include <QKeySequence>
 #include <QtQml/QQmlModuleRegistration>
