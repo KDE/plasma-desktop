@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2023-11-17 00:52+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -65,100 +65,100 @@ msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
 msgstr "9.999+"
 
-#: package/contents/ui/ConfigAppearance.qml:32
+#: package/contents/ui/ConfigAppearance.qml:45
 #, kde-format
 msgid "General:"
 msgstr "General:"
 
-#: package/contents/ui/ConfigAppearance.qml:33
+#: package/contents/ui/ConfigAppearance.qml:46
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
 msgstr ""
 "Mostrar vistas previas pequeñas de las ventanas al situar el ratón sobre las "
 "tareas"
 
-#: package/contents/ui/ConfigAppearance.qml:38
+#: package/contents/ui/ConfigAppearance.qml:51
 #, kde-format
 msgid "Hide other windows when hovering over previews"
 msgstr "Ocultar otras ventanas al situar el ratón sobre las vistas previas"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: package/contents/ui/ConfigAppearance.qml:56
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr "Marcar las aplicaciones que reproducen sonido"
 
-#: package/contents/ui/ConfigAppearance.qml:51
+#: package/contents/ui/ConfigAppearance.qml:64
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "Rellenar el espacio libre del panel"
 
-#: package/contents/ui/ConfigAppearance.qml:59
+#: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
 msgstr "Usar vista multicolumna:"
 
-#: package/contents/ui/ConfigAppearance.qml:59
+#: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
 msgstr "Usar vista multifila:"
 
-#: package/contents/ui/ConfigAppearance.qml:66
+#: package/contents/ui/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "Nunca"
 
-#: package/contents/ui/ConfigAppearance.qml:76
+#: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
 msgstr "Cuando quede poco espacio en el panel y sea lo suficientemente grueso"
 
-#: package/contents/ui/ConfigAppearance.qml:87
+#: package/contents/ui/ConfigAppearance.qml:99
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
 msgstr "Siempre que el panel sea lo suficientemente grueso"
 
-#: package/contents/ui/ConfigAppearance.qml:93
+#: package/contents/ui/ConfigAppearance.qml:105
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Máximo de columnas:"
 
-#: package/contents/ui/ConfigAppearance.qml:93
+#: package/contents/ui/ConfigAppearance.qml:105
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Máximo de filas:"
 
-#: package/contents/ui/ConfigAppearance.qml:103
+#: package/contents/ui/ConfigAppearance.qml:115
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "Espacio entre iconos:"
 
-#: package/contents/ui/ConfigAppearance.qml:107
+#: package/contents/ui/ConfigAppearance.qml:119
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Pequeño"
 
-#: package/contents/ui/ConfigAppearance.qml:111
+#: package/contents/ui/ConfigAppearance.qml:123
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normal"
 
-#: package/contents/ui/ConfigAppearance.qml:115
+#: package/contents/ui/ConfigAppearance.qml:127
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Grande"
 
-#: package/contents/ui/ConfigAppearance.qml:139
+#: package/contents/ui/ConfigAppearance.qml:151
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"

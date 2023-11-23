@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2023-01-08 16:15+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -64,100 +64,100 @@ msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
 msgstr "9,999+"
 
-#: package/contents/ui/ConfigAppearance.qml:32
+#: package/contents/ui/ConfigAppearance.qml:45
 #, kde-format
 msgid "General:"
 msgstr "Chung:"
 
-#: package/contents/ui/ConfigAppearance.qml:33
+#: package/contents/ui/ConfigAppearance.qml:46
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
 msgstr "Hiện ô xem thử nhỏ cho cửa sổ khi đảo chuột trên các tác vụ"
 
-#: package/contents/ui/ConfigAppearance.qml:38
+#: package/contents/ui/ConfigAppearance.qml:51
 #, kde-format
 msgid "Hide other windows when hovering over previews"
 msgstr "Ẩn các cửa sổ khác khi đảo chuột trên ô xem thử"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: package/contents/ui/ConfigAppearance.qml:56
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr "Đánh dấu ứng dụng đang phát âm thanh"
 
-#: package/contents/ui/ConfigAppearance.qml:51
+#: package/contents/ui/ConfigAppearance.qml:64
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "Lấp đầy chỗ trống trong bảng"
 
-#: package/contents/ui/ConfigAppearance.qml:59
+#: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:59
+#: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:66
+#: package/contents/ui/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:76
+#: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:87
+#: package/contents/ui/ConfigAppearance.qml:99
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:93
+#: package/contents/ui/ConfigAppearance.qml:105
 #, fuzzy, kde-format
 #| msgid "Maximum columns:"
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Số cột tối đa:"
 
-#: package/contents/ui/ConfigAppearance.qml:93
+#: package/contents/ui/ConfigAppearance.qml:105
 #, fuzzy, kde-format
 #| msgid "Maximum rows:"
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Số hàng tối đa:"
 
-#: package/contents/ui/ConfigAppearance.qml:103
+#: package/contents/ui/ConfigAppearance.qml:115
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "Khoảng cách giữa các biểu tượng:"
 
-#: package/contents/ui/ConfigAppearance.qml:107
+#: package/contents/ui/ConfigAppearance.qml:119
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Nhỏ"
 
-#: package/contents/ui/ConfigAppearance.qml:111
+#: package/contents/ui/ConfigAppearance.qml:123
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Trung bình"
 
-#: package/contents/ui/ConfigAppearance.qml:115
+#: package/contents/ui/ConfigAppearance.qml:127
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Lớn"
 
-#: package/contents/ui/ConfigAppearance.qml:139
+#: package/contents/ui/ConfigAppearance.qml:151
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"

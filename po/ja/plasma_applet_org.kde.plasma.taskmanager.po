@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2022-08-20 23:18-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -69,102 +69,102 @@ msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
 msgstr "9,999+"
 
-#: package/contents/ui/ConfigAppearance.qml:32
+#: package/contents/ui/ConfigAppearance.qml:45
 #, kde-format
 msgid "General:"
 msgstr "全般:"
 
-#: package/contents/ui/ConfigAppearance.qml:33
+#: package/contents/ui/ConfigAppearance.qml:46
 #, fuzzy, kde-format
 #| msgid "Highlight windows when hovering over task tooltips"
 msgid "Show small window previews when hovering over Tasks"
 msgstr "ツールチップへのホバー時にウィンドウを強調表示"
 
-#: package/contents/ui/ConfigAppearance.qml:38
+#: package/contents/ui/ConfigAppearance.qml:51
 #, fuzzy, kde-format
 #| msgid "Highlight windows when hovering over task tooltips"
 msgid "Hide other windows when hovering over previews"
 msgstr "ツールチップへのホバー時にウィンドウを強調表示"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: package/contents/ui/ConfigAppearance.qml:56
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr "音声を再生するアプリケーションに印を付ける"
 
-#: package/contents/ui/ConfigAppearance.qml:51
+#: package/contents/ui/ConfigAppearance.qml:64
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "パネルの空き領域を埋める"
 
-#: package/contents/ui/ConfigAppearance.qml:59
+#: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:59
+#: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:66
+#: package/contents/ui/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:76
+#: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:87
+#: package/contents/ui/ConfigAppearance.qml:99
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:93
+#: package/contents/ui/ConfigAppearance.qml:105
 #, fuzzy, kde-format
 #| msgid "Maximum columns:"
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "最大列数:"
 
-#: package/contents/ui/ConfigAppearance.qml:93
+#: package/contents/ui/ConfigAppearance.qml:105
 #, fuzzy, kde-format
 #| msgid "Maximum rows:"
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "最大行数:"
 
-#: package/contents/ui/ConfigAppearance.qml:103
+#: package/contents/ui/ConfigAppearance.qml:115
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "アイコンの間隔:"
 
-#: package/contents/ui/ConfigAppearance.qml:107
+#: package/contents/ui/ConfigAppearance.qml:119
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "小"
 
-#: package/contents/ui/ConfigAppearance.qml:111
+#: package/contents/ui/ConfigAppearance.qml:123
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "普通"
 
-#: package/contents/ui/ConfigAppearance.qml:115
+#: package/contents/ui/ConfigAppearance.qml:127
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "大"
 
-#: package/contents/ui/ConfigAppearance.qml:139
+#: package/contents/ui/ConfigAppearance.qml:151
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"

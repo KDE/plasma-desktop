@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-21 01:35+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2023-07-12 11:31+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -366,7 +366,7 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:385
 msgid "Windows Go Below"
-msgstr ""
+msgstr "Vindauge kan liggja under"
 
 #: contents/configuration/PanelConfiguration.qml:428
 msgid "Opacity"
@@ -491,11 +491,15 @@ msgstr "%1 (hovudskjerm)"
 msgid "Alternative Widgets"
 msgstr "Alternative element"
 
-#: contents/explorer/AppletDelegate.qml:176
+#: contents/explorer/AppletDelegate.qml:42
+msgid "Unsupported Widget"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
 msgstr "Angra avinstallering"
 
-#: contents/explorer/AppletDelegate.qml:177
+#: contents/explorer/AppletDelegate.qml:189
 msgid "Uninstall widget"
 msgstr "Avinstaller element"
 

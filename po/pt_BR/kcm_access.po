@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2023-10-20 00:39-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -396,52 +396,52 @@ msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr "Atraso:"
 
-#: ui/KeyboardFilters.qml:54
+#: ui/KeyboardFilters.qml:57
 #, kde-format
 msgid "Ring system bell:"
 msgstr "Tocar a campainha do sistema:"
 
-#: ui/KeyboardFilters.qml:55
+#: ui/KeyboardFilters.qml:58
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "quando qualquer tecla for &pressionada"
 
-#: ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:72
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "quando qualquer tecla for &aceita"
 
-#: ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:86
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "quando qualquer tecla for &rejeitada"
 
-#: ui/KeyboardFilters.qml:100
+#: ui/KeyboardFilters.qml:103
 #, kde-format
 msgid "Bounce keys:"
 msgstr "Teclas de repercussão:"
 
-#: ui/KeyboardFilters.qml:101
+#: ui/KeyboardFilters.qml:104
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr "Habilitar"
 
-#: ui/KeyboardFilters.qml:104
+#: ui/KeyboardFilters.qml:107
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
 msgstr "Ignore pressionamentos rápidos e repetidos da mesma tecla"
 
-#: ui/KeyboardFilters.qml:119
+#: ui/KeyboardFilters.qml:122
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr "Atraso:"
 
-#: ui/KeyboardFilters.qml:134
+#: ui/KeyboardFilters.qml:140
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr "Tocar a campainha do sistema quando rejeitada"

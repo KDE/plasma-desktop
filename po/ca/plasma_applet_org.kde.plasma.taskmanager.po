@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2023-11-16 13:04+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -68,100 +68,100 @@ msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
 msgstr "9.999+"
 
-#: package/contents/ui/ConfigAppearance.qml:32
+#: package/contents/ui/ConfigAppearance.qml:45
 #, kde-format
 msgid "General:"
 msgstr "General:"
 
-#: package/contents/ui/ConfigAppearance.qml:33
+#: package/contents/ui/ConfigAppearance.qml:46
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
 msgstr ""
 "Mostra vistes prèvies petites de les finestres en passar per sobre de les "
 "tasques"
 
-#: package/contents/ui/ConfigAppearance.qml:38
+#: package/contents/ui/ConfigAppearance.qml:51
 #, kde-format
 msgid "Hide other windows when hovering over previews"
 msgstr "Oculta les altres finestres en passar per sobre de les vistes prèvies"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: package/contents/ui/ConfigAppearance.qml:56
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr "Marca les aplicacions que reprodueixin àudio"
 
-#: package/contents/ui/ConfigAppearance.qml:51
+#: package/contents/ui/ConfigAppearance.qml:64
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "Omple l'espai lliure en el plafó"
 
-#: package/contents/ui/ConfigAppearance.qml:59
+#: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
 msgstr "Usa una vista multi-columna:"
 
-#: package/contents/ui/ConfigAppearance.qml:59
+#: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
 msgstr "Usa una vista multi-fila:"
 
-#: package/contents/ui/ConfigAppearance.qml:66
+#: package/contents/ui/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "Mai"
 
-#: package/contents/ui/ConfigAppearance.qml:76
+#: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
 msgstr "Quan el plafó té poc espai i és prou ample"
 
-#: package/contents/ui/ConfigAppearance.qml:87
+#: package/contents/ui/ConfigAppearance.qml:99
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
 msgstr "Sempre quan el plafó és prou ample"
 
-#: package/contents/ui/ConfigAppearance.qml:93
+#: package/contents/ui/ConfigAppearance.qml:105
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Màxim de columnes:"
 
-#: package/contents/ui/ConfigAppearance.qml:93
+#: package/contents/ui/ConfigAppearance.qml:105
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Màxim de files:"
 
-#: package/contents/ui/ConfigAppearance.qml:103
+#: package/contents/ui/ConfigAppearance.qml:115
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "Espaiat entre les icones:"
 
-#: package/contents/ui/ConfigAppearance.qml:107
+#: package/contents/ui/ConfigAppearance.qml:119
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Petit"
 
-#: package/contents/ui/ConfigAppearance.qml:111
+#: package/contents/ui/ConfigAppearance.qml:123
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normal"
 
-#: package/contents/ui/ConfigAppearance.qml:115
+#: package/contents/ui/ConfigAppearance.qml:127
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Gran"
 
-#: package/contents/ui/ConfigAppearance.qml:139
+#: package/contents/ui/ConfigAppearance.qml:151
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"

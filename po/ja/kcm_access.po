@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2015-05-22 22:11-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -403,14 +403,14 @@ msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:54
+#: ui/KeyboardFilters.qml:57
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Ring system bell:"
 msgstr "システムベルを使う(&S)"
 
 # ACCELERATOR changed by translator
-#: ui/KeyboardFilters.qml:55
+#: ui/KeyboardFilters.qml:58
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is pressed"
 msgctxt "Use system bell when a key is pressed"
@@ -418,7 +418,7 @@ msgid "when any key is &pressed"
 msgstr "キーが押されたらシステムベルを使う(&T)"
 
 # ACCELERATOR changed by translator
-#: ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:72
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is accepted"
 msgctxt "Use system bell when a key is accepted"
@@ -426,38 +426,38 @@ msgid "when any key is &accepted"
 msgstr "キー押下が受け付けられたらシステムベルを使う(&L)"
 
 # ACCELERATOR changed by translator
-#: ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:86
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "キー押下が拒否されたらシステムベルを使う(&W)"
 
-#: ui/KeyboardFilters.qml:100
+#: ui/KeyboardFilters.qml:103
 #, fuzzy, kde-format
 #| msgid "Bounce Keys"
 msgid "Bounce keys:"
 msgstr "バウンスキー (二度打ち防止機能)"
 
-#: ui/KeyboardFilters.qml:101
+#: ui/KeyboardFilters.qml:104
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:104
+#: ui/KeyboardFilters.qml:107
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:119
+#: ui/KeyboardFilters.qml:122
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr ""
 
 # ACCELERATOR changed by translator
-#: ui/KeyboardFilters.qml:134
+#: ui/KeyboardFilters.qml:140
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgid "Ring system bell when rejected"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-21 01:35+0000\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
 "PO-Revision-Date: 2023-07-25 23:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -499,11 +499,15 @@ msgstr "%1(주)"
 msgid "Alternative Widgets"
 msgstr "대안 위젯"
 
-#: contents/explorer/AppletDelegate.qml:176
+#: contents/explorer/AppletDelegate.qml:42
+msgid "Unsupported Widget"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
 msgstr "삭제 실행 취소"
 
-#: contents/explorer/AppletDelegate.qml:177
+#: contents/explorer/AppletDelegate.qml:189
 msgid "Uninstall widget"
 msgstr "위젯 삭제"
 
