@@ -345,7 +345,7 @@ ContainmentItem {
 
                 Image {
                     id: replacementImage
-                    visible: root.anyDragAndDrop
+                    visible: root.dragAndDropping
                     fillMode: Image.PreserveAspectFit
                     onVisibleChanged: {
                         if (visible) {
