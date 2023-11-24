@@ -37,7 +37,7 @@ public:
     QVector2D axisValue() const;
 
 Q_SIGNALS:
-    void buttonStateChanged(int index);
+    void buttonStateChanged(SDL_GameControllerButton button);
     void axisStateChanged(int index);
     void axisValueChanged();
 

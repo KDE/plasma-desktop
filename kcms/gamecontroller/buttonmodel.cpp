@@ -7,24 +7,44 @@
 */
 
 #include "buttonmodel.h"
-
 #include "gamepad.h"
 
-#include <SDL2/SDL_gamecontroller.h>
 #include <SDL2/SDL_joystick.h>
 
 ButtonModel::ButtonModel(QObject *parent)
     : QAbstractTableModel(parent)
 {
-    connect(this, &ButtonModel::deviceChanged, this, [this] {
-        beginResetModel();
-        endResetModel();
+    connect(this, &ButtonModel::deviceChanged, this, &ButtonModel::initDeviceButtons);
+}
 
-        if (m_device != nullptr) {
-            connect(m_device, &Gamepad::buttonStateChanged, this, [this](int index) {
-                const QModelIndex changedIndex = this->index(index, 0);
-                Q_EMIT dataChanged(changedIndex, changedIndex, {ButtonStateRole});
-            });
+void ButtonModel::initDeviceButtons()
+{
+    beginResetModel();
+    m_buttons.clear();
+
+    if (!m_device) {
+        endResetModel();
+        return;
+    }
+
+    const int numButtons = SDL_JoystickNumButtons(m_device->joystick());
+    for (int i = 0; i < SDL_CONTROLLER_BUTTON_MAX; i++) {
+        const SDL_GameControllerButton button = static_cast<SDL_GameControllerButton>(i);
+        if (SDL_GameControllerHasButton(m_device->gamecontroller(), button)) {
+            m_buttons << button;
+            if (m_buttons.count() == numButtons) {
+                break;
+            }
+        }
+    }
+
+    endResetModel();
+
+    connect(m_device, &Gamepad::buttonStateChanged, this, [this](SDL_GameControllerButton button) {
+        const int row = m_buttons.indexOf(button);
+        if (row >= 0) {
+            const QModelIndex changedIndex = index(row, 0);
+            Q_EMIT dataChanged(changedIndex, changedIndex, {ButtonStateRole});
         }
     });
 }
@@ -32,12 +52,7 @@ ButtonModel::ButtonModel(QObject *parent)
 int ButtonModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
-
-    if (m_device == nullptr) {
-        return 0;
-    }
-
-    return SDL_JoystickNumButtons(m_device->joystick());
+    return m_buttons.count();
 }
 
 int ButtonModel::columnCount(const QModelIndex &parent) const
@@ -53,7 +68,7 @@ QVariant ButtonModel::data(const QModelIndex &index, int role) const
     }
 
     if (index.column() == 0 && role == ButtonStateRole) {
-        return SDL_GameControllerGetButton(m_device->gamecontroller(), SDL_GameControllerButton(index.row()));
+        return SDL_GameControllerGetButton(m_device->gamecontroller(), m_buttons.at(index.row()));
     }
 
     return {};

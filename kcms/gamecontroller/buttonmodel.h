@@ -9,6 +9,7 @@
 #pragma once
 
 #include <QAbstractTableModel>
+#include <SDL2/SDL_gamecontroller.h>
 
 class Gamepad;
 
@@ -36,5 +37,9 @@ Q_SIGNALS:
     void deviceChanged();
 
 private:
+    Q_SLOT void initDeviceButtons();
+
+private:
     Gamepad *m_device = nullptr;
+    QList<SDL_GameControllerButton> m_buttons;
 };

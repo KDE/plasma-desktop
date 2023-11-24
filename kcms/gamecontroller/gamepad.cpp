@@ -33,7 +33,7 @@ QString Gamepad::path() const
 
 void Gamepad::onButtonEvent(const SDL_ControllerButtonEvent sdlEvent)
 {
-    Q_EMIT buttonStateChanged(sdlEvent.button);
+    Q_EMIT buttonStateChanged(static_cast<SDL_GameControllerButton>(sdlEvent.button));
 }
 
 void Gamepad::onAxisEvent(const SDL_ControllerAxisEvent sdlEvent)
