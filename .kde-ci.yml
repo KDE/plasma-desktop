@@ -41,14 +41,14 @@ Dependencies:
     'frameworks/solid': '@latest'
     'frameworks/sonnet': '@latest'
     'frameworks/kunitconversion': '@latest'
-    'plasma/plasma-framework': 'kf5'
+    'plasma/libplasma': 'kf5'
     'plasma/libksysguard': '@same'
     'plasma/oxygen': '@same'
     'plasma/plasma-workspace': '@same'
     'plasma/powerdevil': '@same'
     'plasma/systemsettings': '@same'
-    'plasma/kactivities': '@latest' # Different branch scheme due to formerly being a Framework
-    'plasma/kactivities-stats': '@latest' # Different branch scheme due to formerly being a Framework
+    'plasma/plasma-activities': '@latest' # Different branch scheme due to formerly being a Framework
+    'plasma/plasma-activities-stats': '@latest' # Different branch scheme due to formerly being a Framework
 
 - 'on': ['Linux/Qt5', 'FreeBSD/Qt5']
   'require':
