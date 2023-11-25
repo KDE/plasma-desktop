@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 01:39+0000\n"
-"PO-Revision-Date: 2023-11-22 18:40+0100\n"
-"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"POT-Creation-Date: 2023-11-25 01:35+0000\n"
+"PO-Revision-Date: 2023-11-24 22:30+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -83,7 +83,7 @@ msgid "Open %1"
 msgstr "%1 openen"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:302
+#: contents/configuration/AppletConfiguration.qml:304
 msgid "About"
 msgstr "Info over"
 
@@ -125,15 +125,15 @@ msgstr "Vertalers"
 msgid "Report a Bug…"
 msgstr "Een bug rapporteren…"
 
-#: contents/configuration/AppletConfiguration.qml:74
+#: contents/configuration/AppletConfiguration.qml:76
 msgid "Keyboard Shortcuts"
 msgstr "Sneltoetsen"
 
-#: contents/configuration/AppletConfiguration.qml:350
+#: contents/configuration/AppletConfiguration.qml:352
 msgid "Apply Settings"
 msgstr "Instellingen toepassen"
 
-#: contents/configuration/AppletConfiguration.qml:351
+#: contents/configuration/AppletConfiguration.qml:353
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
@@ -141,15 +141,15 @@ msgstr ""
 "De instellingen van de huidige module zijn gewijzigd. Wilt u de wijzigingen "
 "toepassen of verwerpen?"
 
-#: contents/configuration/AppletConfiguration.qml:382
+#: contents/configuration/AppletConfiguration.qml:384
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:390
+#: contents/configuration/AppletConfiguration.qml:392
 msgid "Apply"
 msgstr "Toepassen"
 
-#: contents/configuration/AppletConfiguration.qml:396
+#: contents/configuration/AppletConfiguration.qml:398
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -477,7 +477,7 @@ msgstr "Alternatieve widgets"
 
 #: contents/explorer/AppletDelegate.qml:42
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Niet ondersteund widget"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
