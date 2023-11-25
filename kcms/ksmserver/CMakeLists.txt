@@ -23,4 +23,3 @@ target_link_libraries(kcm_smserver PRIVATE
     KF6::KCMUtils
     PW::KWorkspace)
 
-add_subdirectory(kconf_update)

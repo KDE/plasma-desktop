@@ -42,6 +42,3 @@ endif()
 if (BUILD_KCM_TOUCHPAD_KWIN_WAYLAND OR BUILD_KCM_TOUCHPAD_X11)
     add_subdirectory(touchpad)
 endif()
-
-install(FILES migrationlib/kcm_rename_plasma_desktop.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
-install(PROGRAMS migrationlib/kcm_rename_plasma_desktop.sh DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR} )

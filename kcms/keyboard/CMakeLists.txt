@@ -87,15 +87,6 @@ set(kcm_keyboard_PART_SRCS
   bindings.cpp
   tastenbrett.cpp)
 
-install(FILES kcminputrc_repeat.upd
-        DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
-install(PROGRAMS kcminputrc_migrate_repeat_value.py
-        DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
-install(FILES kcminputrc_fix_botched_5_21_0.upd
-        DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
-install(PROGRAMS kcminputrc_fix_botched_5_21_0.py
-        DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
-
 ecm_qt_declare_logging_category(kcm_keyboard_PART_SRCS
     HEADER debug.h
     IDENTIFIER KCM_KEYBOARD
@@ -138,8 +129,6 @@ kcoreaddons_add_plugin(kcm_keyboard SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasm
 kcmutils_generate_desktop_file(kcm_keyboard)
 
 target_link_libraries(kcm_keyboard kcm_keyboard_static)
-
-add_subdirectory(kconf_update)
 
 configure_file(config-keyboard.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keyboard.h)
 
