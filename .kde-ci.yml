@@ -39,14 +39,14 @@ Dependencies:
     'frameworks/solid': '@latest-kf6'
     'frameworks/sonnet': '@latest-kf6'
     'frameworks/kunitconversion': '@latest-kf6'
-    'plasma/plasma-framework': '@same'
+    'plasma/libplasma': '@same'
     'plasma/libksysguard': '@same'
     'plasma/breeze': '@same'
     'plasma/plasma-workspace': '@same'
     'plasma/powerdevil': '@same'
     'plasma/systemsettings': '@same'
-    'plasma/kactivities': '@latest-kf6' # Different branch scheme due to formerly being a Framework
-    'plasma/kactivities-stats': '@latest-kf6' # Different branch scheme due to formerly being a Framework
+    'plasma/plasma-activities': '@latest-kf6' # Different branch scheme due to formerly being a Framework
+    'plasma/plasma-activities-stats': '@latest-kf6' # Different branch scheme due to formerly being a Framework
     'third-party/packagekit-qt': '@latest'
     'third-party/wayland': '@latest'
     'third-party/wayland-protocols': '@latest'
