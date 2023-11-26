@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-25 01:35+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"POT-Creation-Date: 2023-11-26 02:00+0000\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -214,27 +214,27 @@ msgstr "关于"
 msgid "Add Action"
 msgstr "添加操作"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:67
+#: contents/configuration/ConfigurationContainmentAppearance.qml:68
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "布局更改已被系统管理员限制使用"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:82
+#: contents/configuration/ConfigurationContainmentAppearance.qml:83
 msgid "Layout:"
 msgstr "布局："
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:96
+#: contents/configuration/ConfigurationContainmentAppearance.qml:97
 msgid "Wallpaper type:"
 msgstr "壁纸类型："
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:116
+#: contents/configuration/ConfigurationContainmentAppearance.qml:117
 msgid "Get New Plugins…"
 msgstr "获取新插件…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:184
+#: contents/configuration/ConfigurationContainmentAppearance.qml:187
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "布局更改后，必须先应用后才能更改其他选项"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:188
+#: contents/configuration/ConfigurationContainmentAppearance.qml:191
 msgid "Apply Now"
 msgstr "立即应用"
 
@@ -268,7 +268,7 @@ msgstr "添加间距"
 
 #: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "添加占位符挂件到面板"
 
 #: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
@@ -276,11 +276,11 @@ msgstr "添加挂件…"
 
 #: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "打开挂件选择器以拖放挂件到面板"
 
 #: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
-msgstr ""
+msgstr "位置"
 
 #: contents/configuration/PanelConfiguration.qml:137
 #: contents/configuration/PanelConfiguration.qml:290
@@ -304,11 +304,11 @@ msgstr "靠下"
 
 #: contents/configuration/PanelConfiguration.qml:157
 msgid "Set Position..."
-msgstr ""
+msgstr "设置位置..."
 
 #: contents/configuration/PanelConfiguration.qml:226
 msgid "Alignment"
-msgstr ""
+msgstr "对齐"
 
 #: contents/configuration/PanelConfiguration.qml:291
 msgid "Center"
@@ -316,23 +316,23 @@ msgstr "居中"
 
 #: contents/configuration/PanelConfiguration.qml:314
 msgid "Length"
-msgstr ""
+msgstr "长度"
 
 #: contents/configuration/PanelConfiguration.qml:332
 msgid "Fill height"
-msgstr ""
+msgstr "填满高度"
 
 #: contents/configuration/PanelConfiguration.qml:332
 msgid "Fill width"
-msgstr ""
+msgstr "填满宽度"
 
 #: contents/configuration/PanelConfiguration.qml:333
 msgid "Fit content"
-msgstr ""
+msgstr "适合内容"
 
 #: contents/configuration/PanelConfiguration.qml:334
 msgid "Custom"
-msgstr ""
+msgstr "自定义"
 
 #: contents/configuration/PanelConfiguration.qml:370
 msgid "Visibility"
@@ -340,19 +340,19 @@ msgstr "显示/隐藏"
 
 #: contents/configuration/PanelConfiguration.qml:382
 msgid "Always visible"
-msgstr ""
+msgstr "总是显示"
 
 #: contents/configuration/PanelConfiguration.qml:383
 msgid "Auto hide"
-msgstr ""
+msgstr "自动隐藏"
 
 #: contents/configuration/PanelConfiguration.qml:384
 msgid "Dodge windows"
-msgstr ""
+msgstr "避开窗口"
 
 #: contents/configuration/PanelConfiguration.qml:385
 msgid "Windows Go Below"
-msgstr ""
+msgstr "窗口移至其后"
 
 #: contents/configuration/PanelConfiguration.qml:428
 msgid "Opacity"
@@ -372,7 +372,7 @@ msgstr "半透明"
 
 #: contents/configuration/PanelConfiguration.qml:467
 msgid "Style"
-msgstr ""
+msgstr "风格"
 
 #: contents/configuration/PanelConfiguration.qml:478
 msgid "Floating"
@@ -380,15 +380,15 @@ msgstr "悬浮"
 
 #: contents/configuration/PanelConfiguration.qml:494
 msgid "Panel Width:"
-msgstr ""
+msgstr "面板宽度："
 
 #: contents/configuration/PanelConfiguration.qml:494
 msgid "Height:"
-msgstr ""
+msgstr "高度："
 
 #: contents/configuration/PanelConfiguration.qml:528
 msgid "Focus shortcut:"
-msgstr ""
+msgstr "焦点快捷键："
 
 #: contents/configuration/PanelConfiguration.qml:538
 msgid "Press this keyboard shortcut to move focus to the Panel"
@@ -397,7 +397,7 @@ msgstr "按下此键盘快捷键以移动焦点到面板"
 #: contents/configuration/PanelConfiguration.qml:554
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr ""
+msgstr "删除面板"
 
 #: contents/configuration/PanelConfiguration.qml:557
 msgid "Remove this panel; this action is undo-able"
@@ -471,7 +471,7 @@ msgstr "替代挂件"
 
 #: contents/explorer/AppletDelegate.qml:42
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "不支持的挂件"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"

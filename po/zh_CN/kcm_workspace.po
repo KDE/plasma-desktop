@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 12:20+0000\n"
-"PO-Revision-Date: 2023-11-19 03:37\n"
+"PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -175,18 +175,18 @@ msgstr "在触摸模式下，用户界面的许多元素将被放大，以便适
 #: ui/main.qml:328
 #, kde-format
 msgid "Double-click interval:"
-msgstr ""
+msgstr "双击间隔时间："
 
 #: ui/main.qml:343
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] ""
+msgstr[0] "%1 毫秒"
 
 #: ui/main.qml:347
 #, kde-format
 msgid "msec"
-msgstr ""
+msgstr "毫秒"
 
 #: ui/main.qml:361
 #, kde-format
@@ -194,6 +194,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"在这个间隔时长内发生的两次点击将被视作一次双击。有些应用程序可能不遵守此设"
+"置。"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -217,7 +219,7 @@ msgstr "左键单击滚动条空白位置可以滚动一页距离"
 #: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Double click interval"
-msgstr ""
+msgstr "双击间隔时间"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
