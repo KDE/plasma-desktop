@@ -89,7 +89,7 @@ void X11Backend::applyCursorTheme(const QString &theme, int size)
 #if HAVE_XCURSOR
 
     // Apply the KDE cursor theme to ourselves
-    if (m_dpy) {
+    if (!m_dpy) {
         return;
     }
     if (!theme.isEmpty()) {
