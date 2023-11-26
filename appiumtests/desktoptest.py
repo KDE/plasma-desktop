@@ -98,7 +98,11 @@ class DesktopTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
-        subprocess.check_output(["kquitapp6", "plasmashell"], stderr=sys.stderr)
+        if cls.plasmashell is not None:
+            subprocess.check_output(["kquitapp6", "plasmashell"], stderr=sys.stderr)
+            WebDriverWait(cls.driver, 30).until_not(lambda _: cls.plasmashell.poll() is None)
+            assert cls.plasmashell.returncode == 0, cls.plasmashell.returncode
+
         if cls.kded:
             cls.kded.kill()
         if cls.kactivitymanagerd:
