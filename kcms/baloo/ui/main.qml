@@ -256,13 +256,14 @@ KCM.ScrollViewKCM {
 
             width: directoryConfigList.width
 
-            // There's no need for a list item to ever be selected
-            down: false
-            highlighted: false
-            hoverEnabled: false
-            // ... and because of that, use alternating backgrounds to visually
+            // use alternating backgrounds to visually
             // connect list items' left and right side content elements
             Kirigami.Theme.useAlternateBackgroundColor: true
+
+            onClicked: {
+                const url = Qt.url("file://" + indexingModel.url);
+                Qt.openUrlExternally(url);
+            }
 
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing
