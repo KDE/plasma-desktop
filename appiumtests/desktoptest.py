@@ -119,9 +119,9 @@ class DesktopTest(unittest.TestCase):
     def _open_containment_config_dialog(self) -> None:
         # Alt+D, S
         actions = ActionChains(self.driver)
-        actions.key_down(Keys.ALT).send_keys("d").key_up(Keys.ALT).perform()
+        actions.key_down(Keys.ALT).send_keys("d").perform()
         time.sleep(0.5)
-        actions.send_keys("s").perform()
+        actions.send_keys("s").key_up(Keys.ALT).perform()
         WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((AppiumBy.NAME, "Wallpaper type:")))
 
     def test_0_panel_ready(self) -> None:
