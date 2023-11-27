@@ -245,18 +245,18 @@ ContainmentItem {
 
     // BEGIN BUG 454095: do not combine these expressions to a function or the bindings won't work
                 readonly property real appletMaxWidth: applet?.Layout.maximumWidth >= 0 ? applet.Layout.maximumWidth : root.width
-                readonly property real appletPrefWidth: Math.max(root.height,
-                                                        applet
-                                                        ? (applet.Layout.preferredWidth >= 0
+                readonly property real appletPrefWidth: (applet ? (applet.Layout.preferredWidth >= 0
                                                             ? applet.Layout.preferredWidth
-                                                            : (applet.implicitWidth > 0 ? applet.implicitWidth : applet.Layout.minimumWidth))
+                                                            : Math.max(root.height,
+                                                                (applet.implicitWidth > 0 ?
+                                                                applet.implicitWidth : applet.Layout.minimumWidth)))
                                                         : root.height)
                 readonly property real appletMaxHeight: applet?.Layout.maximumHeight >= 0 ? applet.Layout.maximumHeight : root.height
-                readonly property real appletPrefHeight: Math.max(root.width,
-                                                         applet
-                                                         ? (applet.Layout.preferredHeight >= 0
+                readonly property real appletPrefHeight: (applet ? (applet.Layout.preferredHeight >= 0
                                                             ? applet.Layout.preferredHeight
-                                                            : (applet.implicitHeight > 0 ? applet.implicitHeight : applet.Layout.minimumHeight))
+                                                            : Math.max(root.width,
+                                                                (applet.implicitHeight > 0 ?
+                                                                applet.implicitHeight : applet.Layout.minimumHeight)))
                                                          : root.width)
 
                 Layout.minimumWidth: (root.isHorizontal ? (applet && applet.Layout.minimumWidth > 0 ? applet.Layout.minimumWidth : root.height) : root.width) - Layout.leftMargin - Layout.rightMargin
