@@ -64,6 +64,7 @@ QQC2.Control {
                     color: Kirigami.Theme.backgroundColor
                     state: model.edge
                     z: state === "floating" ? 0 : 1
+                    visible: !model.isDestroyed
 
                     HoverHandler {
                         cursorShape: Qt.OpenHandCursor
