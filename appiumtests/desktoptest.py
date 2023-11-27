@@ -79,6 +79,7 @@ class DesktopTest(unittest.TestCase):
                 time.sleep(1)
             assert kded_started
 
+        os.environ["WAYLAND_DEBUG"] = "1"
         cls.plasmashell = subprocess.Popen(["plasmashell", "-p", "org.kde.plasma.desktop", "--no-respawn"], stdout=sys.stderr, stderr=sys.stderr)
 
         options = AppiumOptions()
