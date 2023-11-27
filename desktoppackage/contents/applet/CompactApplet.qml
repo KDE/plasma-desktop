@@ -253,7 +253,7 @@ PlasmaCore.ToolTipArea {
                 id: separator
                 // Only draw for popups of panel applets, not desktop applets
                 visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
-                    .includes(Plasmoid.location)
+                    .includes(Plasmoid.location) && !dialog.margin
                 anchors {
                     topMargin: -dialog.topMarin
                     leftMargin: -dialog.leftMargin
