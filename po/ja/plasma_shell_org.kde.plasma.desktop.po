@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-26 02:00+0000\n"
+"POT-Creation-Date: 2023-11-28 01:37+0000\n"
 "PO-Revision-Date: 2023-02-22 23:19+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -348,8 +348,6 @@ msgid "Custom"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:370
-#, fuzzy
-#| msgid "Visibility"
 msgid "Visibility"
 msgstr "表示"
 
@@ -371,11 +369,9 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:385
 msgid "Windows Go Below"
-msgstr ""
+msgstr "ウィンドウはパネルの下に隠れる"
 
 #: contents/configuration/PanelConfiguration.qml:428
-#, fuzzy
-#| msgid "Opacity"
 msgid "Opacity"
 msgstr "透明度"
 
@@ -384,14 +380,10 @@ msgid "Adaptive"
 msgstr "アダプティブ"
 
 #: contents/configuration/PanelConfiguration.qml:442
-#, fuzzy
-#| msgid "Opaque"
 msgid "Opaque"
 msgstr "不透明"
 
 #: contents/configuration/PanelConfiguration.qml:443
-#, fuzzy
-#| msgid "Translucent"
 msgid "Translucent"
 msgstr "透明"
 
@@ -480,25 +472,25 @@ msgstr "パネルとデスクトップをドラッグして他のスクリーン
 msgid "Close"
 msgstr "閉じる"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
 msgstr "スクリーン %1 のデスクトップと入れ替える"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
 msgstr "スクリーン %1 に移動"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 #, fuzzy
 #| msgid "Remove Panel"
 msgid "Remove Desktop"
 msgstr "パネルを削除"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:195
 msgid "Remove Panel"
 msgstr "パネルを削除"
 
-#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:268
 msgid "%1 (primary)"
 msgstr "%1 (プライマリ)"
 
@@ -554,31 +546,3 @@ msgstr "検索語に一致するウィジェットはありません"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "利用可能なウィジェットはありません"
-
-#, fuzzy
-#~| msgid "Maximize Panel"
-#~ msgctxt "@action:button Make the panel as big as it can be"
-#~ msgid "Maximize"
-#~ msgstr "パネルを最大化"
-
-#, fuzzy
-#~| msgid "Delete"
-#~ msgctxt "@action:button Delete the panel"
-#~ msgid "Delete"
-#~ msgstr "削除"
-
-#, fuzzy
-#~| msgid "Floating Panel"
-#~ msgid "Floating:"
-#~ msgstr "フローティングパネル"
-
-#~ msgid "More Options…"
-#~ msgstr "その他の設定..."
-
-#~ msgctxt "Minimize the length of this string as much as possible"
-#~ msgid "Drag to move"
-#~ msgstr "ドラッグして移動"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use arrow keys to move the panel"
-#~ msgstr "矢印キーを使用してパネルを移動"
