@@ -255,7 +255,7 @@ PlasmaCore.ToolTipArea {
                 visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
                     .includes(Plasmoid.location) && !dialog.margin
                 anchors {
-                    topMargin: -dialog.topMarin
+                    topMargin: -dialog.topMargin
                     leftMargin: -dialog.leftMargin
                     rightMargin: -dialog.rightMargin
                     bottomMargin: -dialog.bottomMargin
