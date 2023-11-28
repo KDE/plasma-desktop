@@ -324,8 +324,8 @@ Kclock::~Kclock()
 
 void Kclock::showEvent(QShowEvent *event)
 {
-    setClockSize(size());
     QWidget::showEvent(event);
+    setClockSize(size());
 }
 
 void Kclock::resizeEvent(QResizeEvent *)
@@ -338,16 +338,15 @@ void Kclock::setClockSize(const QSize &size)
     int dim = qMin(size.width(), size.height());
     QSize newSize = QSize(dim, dim) * devicePixelRatioF();
 
-    if (newSize != m_faceCache.size()) {
+    if (newSize != m_handsCache.size()) {
         m_faceCache = QPixmap(newSize);
         m_handsCache = QPixmap(newSize);
         m_glassCache = QPixmap(newSize);
-        m_faceCache.setDevicePixelRatio(devicePixelRatioF());
         m_handsCache.setDevicePixelRatio(devicePixelRatioF());
-        m_glassCache.setDevicePixelRatio(devicePixelRatioF());
 
         m_theme->resize(QSize(dim, dim));
         m_repaintCache = RepaintAll;
+        update();
     }
 }
 
@@ -429,16 +428,15 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
         facePainter.setRenderHint(QPainter::SmoothPixmapTransform);
         glassPainter.setRenderHint(QPainter::SmoothPixmapTransform);
 
-        m_theme->paint(&facePainter, targetRect, QStringLiteral("ClockFace"));
+        m_theme->paint(&facePainter, faceRect, QStringLiteral("ClockFace"));
 
         glassPainter.save();
         QRectF elementRect = QRectF(QPointF(0, 0), m_theme->elementSize(QStringLiteral("HandCenterScrew")));
-        glassPainter.translate(faceRect.width() / (2 * devicePixelRatioF()) - elementRect.width() / 2,
-                               faceRect.height() / (2 * devicePixelRatioF()) - elementRect.height() / 2);
+        glassPainter.translate(faceRect.width() / 2.0 - elementRect.width() / 2.0, faceRect.height() / 2.0 - elementRect.height() / 2.0);
         m_theme->paint(&glassPainter, elementRect, QStringLiteral("HandCenterScrew"));
         glassPainter.restore();
 
-        m_theme->paint(&glassPainter, targetRect, QStringLiteral("Glass"));
+        m_theme->paint(&glassPainter, faceRect, QStringLiteral("Glass"));
 
         // get vertical translation, see drawHand() for more details
         m_verticalTranslation = m_theme->elementRect(QStringLiteral("ClockFace")).center().y();
