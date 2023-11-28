@@ -34,7 +34,7 @@ PlasmaComponents.ScrollView {
 
         textMargin: 0
 
-        horizontalAlignment: root.useListViewMode ? TextEdit.AlignHLeft : TextEdit.AlignHCenter
+        horizontalAlignment: root.useListViewMode ? TextEdit.AlignLeft : TextEdit.AlignHCenter
 
         rightPadding: root.PlasmaComponents.ScrollBar.vertical.visible ? root.PlasmaComponents.ScrollBar.vertical.width : 0
 
