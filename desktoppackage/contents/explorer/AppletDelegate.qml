@@ -26,7 +26,6 @@ Item {
 
     HoverHandler {
         id: hoverHandler
-        enabled: model.isSupported
         onHoveredChanged: if (hovered) delegate.GridView.view.currentIndex = index
     }
 
@@ -63,7 +62,7 @@ Item {
 
         DragHandler {
             id: dragHandler
-            enabled: !delegate.pendingUninstall
+            enabled: !delegate.pendingUninstall && model.isSupported
 
             onActiveChanged: if (active) {
                 iconContainer.grabToImage(function(result) {
@@ -82,7 +81,6 @@ Item {
 
     ColumnLayout {
         id: mainLayout
-        enabled: model.isSupported
 
         readonly property color textColor: tapHandler.pressed ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
 
@@ -117,6 +115,7 @@ Item {
                     source: model.decoration
                     visible: model.screenshot === ""
                     selected: tapHandler.pressed
+                    enabled: model.isSupported
                 }
                 Image {
                     width: Kirigami.Units.iconSizes.enormous
