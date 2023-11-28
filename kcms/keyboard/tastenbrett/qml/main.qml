@@ -52,7 +52,7 @@ Window {
             Layout.fillWidth: true
             text: errorDescription
             color: activePalette.text
-            wrapMode: Text.WordWrap
+            wrapMode: Text.Wrap
         }
 
         TextArea {
@@ -60,6 +60,7 @@ Window {
             text: errorDetails
             readOnly: true
             color: activePalette.text
+            wrapMode: TextEdit.Wrap
         }
     }
 
