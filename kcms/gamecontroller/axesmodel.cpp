@@ -20,7 +20,7 @@ AxesModel::AxesModel(QObject *parent)
         if (m_device != nullptr) {
             connect(m_device, &Gamepad::axisStateChanged, this, [this](int index) {
                 const QModelIndex changedIndex = this->index(index, 0);
-                Q_EMIT dataChanged(changedIndex, changedIndex, {AxisValueRole});
+                Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
             });
         }
     });
@@ -49,7 +49,7 @@ QVariant AxesModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    if (index.column() == 0 && role == AxisValueRole) {
+    if (index.column() == 0 && role == Qt::DisplayRole) {
         return SDL_JoystickGetAxis(m_device->joystick(), index.row());
     }
 
@@ -62,16 +62,11 @@ QVariant AxesModel::headerData(int section, Qt::Orientation orientation, int rol
         if (orientation == Qt::Horizontal && section == 0) {
             return i18nc("@label Axis value", "Value");
         } else if (orientation == Qt::Vertical) {
-            return QVariant::fromValue(section + 1);
+            return QString::number(section + 1);
         }
     }
 
     return {};
-}
-
-QHash<int, QByteArray> AxesModel::roleNames() const
-{
-    return {{AxisValueRole, QByteArrayLiteral("axisValue")}};
 }
 
 #include "moc_axesmodel.cpp"

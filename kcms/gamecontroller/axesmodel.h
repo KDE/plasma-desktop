@@ -19,8 +19,6 @@ class AxesModel : public QAbstractTableModel
     Q_PROPERTY(Gamepad *device MEMBER m_device NOTIFY deviceChanged REQUIRED)
 
 public:
-    enum CustomRoles { AxisValueRole = Qt::UserRole };
-
     explicit AxesModel(QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &) const override;
@@ -29,8 +27,6 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
 
     QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
-
-    QHash<int, QByteArray> roleNames() const override;
 
 Q_SIGNALS:
     void deviceChanged();

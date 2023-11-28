@@ -45,18 +45,13 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    if (role == CustomRoles::NameRole) {
+    if (role == Qt::DisplayRole) {
         const int sdlIndex = m_devices.keys().at(index.row());
 
         return i18nc("Device name and path", "%1 (%2)", m_devices.value(sdlIndex)->name(), m_devices.value(sdlIndex)->path());
     }
 
     return {};
-}
-
-QHash<int, QByteArray> DeviceModel::roleNames() const
-{
-    return {{CustomRoles::NameRole, "name"}};
 }
 
 void DeviceModel::poll()

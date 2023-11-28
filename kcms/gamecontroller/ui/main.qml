@@ -59,7 +59,7 @@ KCM.SimpleKCM {
 
                 model: deviceModel
 
-                textRole: "name"
+                textRole: "display"
 
                 Layout.fillWidth: true
             }
@@ -92,6 +92,7 @@ KCM.SimpleKCM {
 
                 Layout.fillWidth: true
                 Layout.fillHeight: true
+                Layout.preferredWidth: 50 // Same space for the two columns
 
                 QQC2.Label {
                     text: i18nc("@label Gamepad buttons", "Buttons:")
@@ -101,8 +102,6 @@ KCM.SimpleKCM {
                     model: ButtonModel {
                         device: root.device
                     }
-
-                    textRole: "buttonState"
 
                     Layout.fillWidth: true
                     Layout.fillHeight: true
@@ -114,6 +113,7 @@ KCM.SimpleKCM {
 
                 Layout.fillWidth: true
                 Layout.fillHeight: true
+                Layout.preferredWidth: 50 // Same space for the two columns
 
                 QQC2.Label {
                     text: i18nc("@label Gamepad axes (sticks)", "Axes:")
@@ -123,8 +123,6 @@ KCM.SimpleKCM {
                     model: AxesModel {
                         device: root.device
                     }
-
-                    textRole: "axisValue"
 
                     Layout.fillWidth: true
                     Layout.fillHeight: true

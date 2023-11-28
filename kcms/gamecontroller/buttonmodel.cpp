@@ -11,6 +11,8 @@
 
 #include <SDL2/SDL_joystick.h>
 
+#include <KLocalizedString>
+
 ButtonModel::ButtonModel(QObject *parent)
     : QAbstractTableModel(parent)
 {
@@ -44,7 +46,7 @@ void ButtonModel::initDeviceButtons()
         const int row = m_buttons.indexOf(button);
         if (row >= 0) {
             const QModelIndex changedIndex = index(row, 0);
-            Q_EMIT dataChanged(changedIndex, changedIndex, {ButtonStateRole});
+            Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
         }
     });
 }
@@ -67,8 +69,9 @@ QVariant ButtonModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    if (index.column() == 0 && role == ButtonStateRole) {
-        return SDL_GameControllerGetButton(m_device->gamecontroller(), m_buttons.at(index.row()));
+    if (index.column() == 0 && role == Qt::DisplayRole) {
+        const int pressed = SDL_GameControllerGetButton(m_device->gamecontroller(), m_buttons.at(index.row()));
+        return pressed ? i18nc("Status of a gamepad button", "PRESSED") : QStringLiteral("-");
     }
 
     return {};
@@ -80,16 +83,11 @@ QVariant ButtonModel::headerData(int section, Qt::Orientation orientation, int r
         if (orientation == Qt::Horizontal && section == 0) {
             return i18nc("@label Button state", "State");
         } else if (orientation == Qt::Vertical) {
-            return QVariant::fromValue(section + 1);
+            return QString::number(section + 1);
         }
     }
 
     return {};
-}
-
-QHash<int, QByteArray> ButtonModel::roleNames() const
-{
-    return {{ButtonStateRole, QByteArrayLiteral("buttonState")}};
 }
 
 #include "moc_buttonmodel.cpp"
