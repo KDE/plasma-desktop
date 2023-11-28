@@ -158,7 +158,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
 
             ActionButton {
                 icon.name: "configure"
-                visible: qAction && qAction.enabled || false
+                visible: qAction && qAction.enabled && (applet && applet.plasmoid.hasConfigurationInterface)
                 qAction: applet ? applet.plasmoid.internalAction("configure") : null
                 Component.onCompleted: {
                     if (qAction) {
