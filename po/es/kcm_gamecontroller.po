@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_gamecontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-11-07 21:22+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -25,7 +25,13 @@ msgctxt "@label Axis value"
 msgid "Value"
 msgstr "Valor"
 
-#: buttonmodel.cpp:66
+#: buttonmodel.cpp:74
+#, kde-format
+msgctxt "Status of a gamepad button"
+msgid "PRESSED"
+msgstr ""
+
+#: buttonmodel.cpp:84
 #, kde-format
 msgctxt "@label Button state"
 msgid "State"
@@ -54,7 +60,7 @@ msgctxt "@label Visual representation of an axis position"
 msgid "Position:"
 msgstr "Posición:"
 
-#: ui/main.qml:97
+#: ui/main.qml:98
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"

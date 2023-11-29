@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2023-11-29 01:38+0000\n"
 "PO-Revision-Date: 2023-11-07 17:16+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -24,7 +24,13 @@ msgctxt "@label Axis value"
 msgid "Value"
 msgstr ""
 
-#: buttonmodel.cpp:66
+#: buttonmodel.cpp:74
+#, kde-format
+msgctxt "Status of a gamepad button"
+msgid "PRESSED"
+msgstr ""
+
+#: buttonmodel.cpp:84
 #, kde-format
 msgctxt "@label Button state"
 msgid "State"
@@ -53,7 +59,7 @@ msgctxt "@label Visual representation of an axis position"
 msgid "Position:"
 msgstr ""
 
-#: ui/main.qml:97
+#: ui/main.qml:98
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
