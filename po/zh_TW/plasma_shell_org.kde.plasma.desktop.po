@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-28 01:37+0000\n"
-"PO-Revision-Date: 2023-11-10 23:27+0900\n"
+"PO-Revision-Date: 2023-11-29 17:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -341,8 +341,6 @@ msgid "Visibility"
 msgstr "可見度"
 
 #: contents/configuration/PanelConfiguration.qml:382
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
 msgstr "永遠可見"
 
@@ -352,13 +350,11 @@ msgstr "自動隱藏"
 
 #: contents/configuration/PanelConfiguration.qml:384
 msgid "Dodge windows"
-msgstr ""
+msgstr "躲避視窗"
 
 #: contents/configuration/PanelConfiguration.qml:385
-#, fuzzy
-#| msgid "Windows Behind"
 msgid "Windows Go Below"
-msgstr "視窗在後方"
+msgstr "視窗在下面"
 
 #: contents/configuration/PanelConfiguration.qml:428
 msgid "Opacity"
@@ -477,7 +473,7 @@ msgstr "替代元件"
 
 #: contents/explorer/AppletDelegate.qml:42
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "不支援的元件"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
