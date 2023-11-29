@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2023-01-04 10:00+0100\n"
+"PO-Revision-Date: 2023-04-08 22:44+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -50,19 +50,23 @@ msgstr "Reŝargi"
 #: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
-msgstr ""
+msgstr "Malsukcesis peti rekomencon de la agordo de la firmware: %1"
 
 #: package/contents/ui/main.qml:58
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
+"La venontan fojon kiam la komputilo estos rekomencita, ĝi eniros la agordan "
+"ekranon de UEFI."
 
 #: package/contents/ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
+"La venontan fojon, kiam la komputilo estos rekomencita, ĝi eniros la ekranon "
+"de agordo de firmware."
 
 #: package/contents/ui/main.qml:64
 #, kde-format
@@ -88,6 +92,9 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Kiam ĉi tiu agordo estas ŝaltita, la ekrano de konfirmo de elsalutiĝo estos "
+"montrata kiam vi elsalutas, malŝaltas, rekomencas, premas la ŝaltilon aŭ "
+"alklakas butonojn aŭ menueroj etikeditaj <interface>Forlasi…</interface>."
 
 #: package/contents/ui/main.qml:96
 #, kde-format
@@ -121,9 +128,18 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Butono <interface>Konservi Seancon</interface> aperos en la menuo "
+"<interface>Aplika Lanĉilo</interface>. Kiam vi klakas ĝin, Plasma memoros la "
+"apojn malfermitajn kaj restarigos ilin ĉe la sekva ensaluto. Alklaku ĝin "
+"denove por anstataŭigi la aron de memoritaj programoj."
 
 #: package/contents/ui/main.qml:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@option:radio Here 'session' refers to the technical concept of session "
+#| "¦restoration, whereby the windows that were open on logout are re-opened "
+#| "on ¦the next login"
+#| msgid "Start with an empty session"
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
@@ -143,15 +159,22 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Skribu la efektivigeblajn nomojn de aplikaĵoj ĉi tie (apartigite per komoj "
+"aŭ dupunktoj, ekzemple 'xterm:konsole' aŭ 'xterm,konsole') por malhelpi ilin "
+"aŭtomate ekfunkciigi kune kun aliaj seancaj restaŭrigitaj apps."
 
 #: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "Firmvaro"
 
 #: package/contents/ui/main.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label:check part of a sentence: After next restart enter UEFI/Firmware "
+#| "¦setup screen"
+#| msgid "After next restart:"
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
@@ -162,13 +185,13 @@ msgstr "Post sekva restarto:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr ""
+msgstr "Eniri UEFI-agordan ekranon"
 
 #: package/contents/ui/main.qml:185
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
+msgstr "Eniri la ekranon de agordo de firmware"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9

@@ -1,15 +1,15 @@
 # translation of plasma_applet_org.kde.desktopcontainment.pot to Esperanto
 # Copyright (C) 2009-2023 Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the plasma-desktop package.
 # Markus Sunela <markus.sunela@tut.fi>, 2009.
 # Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 02:28+0000\n"
-"PO-Revision-Date: 2023-01-04 10:00+0100\n"
+"PO-Revision-Date: 2023-08-31 21:15+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -270,12 +270,12 @@ msgstr "Tekstlinioj:"
 #: package/contents/ui/ConfigIcons.qml:294
 #, kde-format
 msgid "When hovering over icons:"
-msgstr ""
+msgstr "Kiam ŝvebante super piktogramoj:"
 
 #: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
 msgid "Show tooltips"
-msgstr ""
+msgstr "Montri konsiletojn"
 
 #: package/contents/ui/ConfigIcons.qml:303
 #, kde-format
@@ -295,7 +295,7 @@ msgstr "Renomi:"
 #: package/contents/ui/ConfigIcons.qml:324
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
-msgstr ""
+msgstr "Alinomi enlinie alklakante la tekston de elektita elemento"
 
 #: package/contents/ui/ConfigIcons.qml:335
 #, kde-format
@@ -330,7 +330,7 @@ msgstr "Dosiero ligataj la aktuala aktiveco"
 #: package/contents/ui/ConfigLocation.qml:97
 #, kde-format
 msgid "Places panel item:"
-msgstr ""
+msgstr "Panelero pri lokoj:"
 
 #: package/contents/ui/ConfigLocation.qml:130
 #, kde-format
@@ -350,17 +350,17 @@ msgstr "Titolo:"
 #: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Neniu"
 
 #: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Defaŭlto"
 
 #: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Full path"
-msgstr ""
+msgstr "Plena vojo"
 
 #: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
@@ -409,6 +409,9 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"Estas multaj dosieroj kaj dosierujoj sur la labortablo. Tio povas kaŭzi "
+"cimojn kaj rendimentajn problemojn. Bonvolu konsideri movi kelkajn el ili "
+"aliloken."
 
 #: package/contents/ui/main.qml:356
 #, kde-format
@@ -495,7 +498,7 @@ msgstr "Dato"
 #, kde-format
 msgctxt "@item:inmenu Sort icons in descending order"
 msgid "Descending"
-msgstr ""
+msgstr "Malkreskanta"
 
 #: plugins/folder/viewpropertiesmenu.cpp:47
 #, kde-format
@@ -536,7 +539,7 @@ msgstr "Mez-Malgranda"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Medium"
-msgstr "Mezgranda"
+msgstr "Meza"
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
 #, kde-format
@@ -548,7 +551,7 @@ msgstr "Granda"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Huge"
-msgstr ""
+msgstr "Grandega"
 
 #: plugins/folder/viewpropertiesmenu.cpp:67
 #, kde-format
@@ -572,7 +575,7 @@ msgstr "De dekstre al maldekstre"
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Top to Bottom"
-msgstr "El supre al sube"
+msgstr "De Supre al Sube"
 
 #: plugins/folder/viewpropertiesmenu.cpp:81
 #, kde-format
@@ -583,13 +586,13 @@ msgstr "Alkradigi"
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left"
-msgstr ""
+msgstr "Maldekstra"
 
 #: plugins/folder/viewpropertiesmenu.cpp:88
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right"
-msgstr ""
+msgstr "Dekstra"
 
 #: plugins/folder/viewpropertiesmenu.cpp:93
 #, kde-format
@@ -600,4 +603,4 @@ msgstr "Montri Antaŭrigardojn"
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
-msgstr ""
+msgstr "Ŝlosita"

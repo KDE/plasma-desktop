@@ -1,13 +1,16 @@
-# Translation of plasma_applet_showdesktop into esperanto.
+# Translation of plasma_applet_org.kde.plasma.showdesktop.po into esperanto.
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-desktop package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2009-11-15 12:06+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-04-08 22:44+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -20,46 +23,46 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Restore All Minimized Windows"
-msgstr ""
+msgstr "Restarigi ĉiujn minimumigitajn fenestrojn"
 
 #: package/contents/ui/MinimizeAllController.qml:18
 #, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
-msgstr ""
+msgstr "Minimumigi ĉiujn fenestrojn"
 
 #: package/contents/ui/MinimizeAllController.qml:20
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Restores the previously minimized windows"
-msgstr ""
+msgstr "Restarigas la antaŭe minimumigitajn fenestrojn"
 
 #: package/contents/ui/MinimizeAllController.qml:21
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr ""
+msgstr "Montras la labortablon minimumigante ĉiujn fenestrojn"
 
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
-msgstr ""
+msgstr "Rigardeti al Labortablo"
 
 #: package/contents/ui/PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
-msgstr ""
+msgstr "Ĉesi kaŝrigardi labortablon"
 
 #: package/contents/ui/PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
-msgstr ""
+msgstr "Movas fenestrojn reen al iliaj originalaj pozicioj"
 
 #: package/contents/ui/PeekController.qml:18
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
+msgstr "Provizore montras la labortablon formovante fenestrojn"
