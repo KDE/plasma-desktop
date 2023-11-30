@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!--
+    SPDX-FileCopyrightText: 2021 Yuri Chornoivan <yurchor@ukr.net>
+    SPDX-FileCopyrightText: 2023 Méven Car <meven@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="kcm_recentFiles" lang="&language;">
+<articleinfo>
+    
+<title>Recent Files</title>
+<authorgroup>
+<author><firstname>Yuri</firstname><surname>Chornoivan</surname>
+<email>yurchor@ukr.net</email></author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2023-11-30</date>
+<releaseinfo>Plasma 6.0</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>Recent Files</keyword>
+</keywordset>
+</articleinfo>
+
+<para>    
+    This module allows configuring the time to <guilabel>Keep history</guilabel> for opened files and clean some tracking data. Use the <guibutton>Clear History</guibutton> drop-down button to make &plasma; <guimenuitem>Forget the last hour</guimenuitem>, <guimenuitem>Forget the last two hours</guimenuitem>, <guimenuitem>Forget a day</guimenuitem>, or <guimenuitem>Forget everything</guimenuitem>.
+</para>
+    
+<para>
+    Below, you can configure the range of applications for memorizing opened documents. Use the <guilabel>For all applications</guilabel> item to store all data, the <guilabel>Do not remember</guilabel> item to switch off storing data, or <guilabel>Only for specific applications</guilabel> item for fine-grained selection (clicking on the application item toggles its current mode).
+</para>
+
+<para>
+    Check the <guilabel>Blacklist applications not on the list</guilabel> item to switch off tracking for all applications that are not on the list.
+</para>
+
+</article>

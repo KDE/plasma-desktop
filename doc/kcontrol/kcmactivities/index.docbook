@@ -35,10 +35,9 @@
 </para>
 
 <para>
-    The module is divided into three tabs:
-    <link linkend="activities-main"><guilabel>Activities</guilabel></link>,
-    <link linkend="activities-switching"><guilabel>Switching</guilabel></link>, and
-    <link linkend="activities-privacy"><guilabel>Privacy</guilabel></link>.
+    The module is divided into two tabs:
+    <link linkend="activities-main"><guilabel>Activities</guilabel></link> and
+    <link linkend="activities-switching"><guilabel>Switching</guilabel></link>.
 </para>
 
 <sect3 id="activities-main">
@@ -110,20 +109,6 @@
 </para>
 <para>
     For more information on how to use the &kde; shortcut system, see the <ulink url="help:/fundamentals/shortcuts.html"><emphasis>Using and Customizing Shortcuts</emphasis> section of the <emphasis>&kde; Fundamentals</emphasis> documentation</ulink>.
-</para>
-</sect3>
-
-<sect3 id="activities-privacy">
-<title><guilabel>Privacy</guilabel></title>
-
-<para>
-    This tab allows configuring the time for activities to <guilabel>Keep history</guilabel> and clean some tracking data. Use the <guibutton>Clear History</guibutton> drop-down button to make &plasma; <guimenuitem>Forget the last hour</guimenuitem>, <guimenuitem>Forget the last two hours</guimenuitem>, <guimenuitem>Forget a day</guimenuitem>, or <guimenuitem>Forget everything</guimenuitem>.
-</para>
-<para>
-    Below, you can configure the range of applications for memorizing opened documents in your activities. Use the <guilabel>For all applications</guilabel> item to store all data, the <guilabel>Do not remember</guilabel> item to switch off storing data, or <guilabel>Only for specific applications</guilabel> item for fine-grained selection (clicking on the application item toggles its current mode).
-</para>
-<para>
-    Check the <guilabel>Blacklist applications not on the list</guilabel> item to switch off tracking for all applications that are not on the list.
 </para>
 </sect3>
 
