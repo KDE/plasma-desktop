@@ -69,7 +69,18 @@ Item {
 
             readonly property color backgroundColor: Kirigami.Theme.backgroundColor
             readonly property color textColor: Kirigami.Theme.textColor
-            property color colorFromPlugin: "transparent"
+
+            // Ignore the initial dominant color
+            onPaletteChanged: {
+                if (!Qt.colorEqual(root.containment.wallpaper.accentColor, "transparent")) {
+                    desktop.accentColor = root.containment.wallpaper.accentColor;
+                }
+                if (this.palette.length === 0) {
+                    desktop.accentColor = "transparent";
+                } else {
+                    desktop.accentColor = this.dominant;
+                }
+            }
 
             Kirigami.Theme.inherit: false
             Kirigami.Theme.backgroundColor: backgroundColor
@@ -78,34 +89,17 @@ Item {
             onBackgroundColorChanged: Qt.callLater(update)
             onTextColorChanged: Qt.callLater(update)
 
-            property Binding colorBinding: Binding {
-                target: desktop
-                property: "accentColor"
-                value: {
-                    if (!Qt.colorEqual(imageColors.colorFromPlugin, "transparent")) {
-                        return imageColors.colorFromPlugin;
-                    }
-                    if (imageColors.palette.length === 0) {
-                        return "transparent";
-                    }
-                    return imageColors.dominant;
-                }
-                when: desktop.usedInAccentColor // Without this, accentColor may still be updated after usedInAccentColor becomes false
-            }
-
             property Connections repaintConnection: Connections {
                 target: root.containment.wallpaper
-                function onRepaintNeeded(color) {
-                    imageColors.colorFromPlugin = color;
-
-                    if (Qt.colorEqual(color, "transparent")) {
+                function onAccentColorChanged() {
+                    if (Qt.colorEqual(root.containment.wallpaper.accentColor, "transparent")) {
                         imageColors.update();
+                    } else {
+                        imageColors.paletteChanged();
                     }
                 }
             }
         }
-
-        onLoaded: item.update()
     }
 
     Timer {
