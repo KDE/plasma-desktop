@@ -118,14 +118,14 @@ class DesktopTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
-        if cls.plasmashell is not None:
-            subprocess.check_output(["kquitapp6", "plasmashell"], stderr=sys.stderr)
-            assert cls.plasmashell.wait(30) == 0, cls.plasmashell.returncode
-
         if cls.kded:
             cls.kded.kill()
         if cls.kactivitymanagerd:
             cls.kactivitymanagerd.kill()
+        if cls.plasmashell is not None:
+            subprocess.check_output(["kquitapp6", "plasmashell"], stderr=sys.stderr)
+            assert cls.plasmashell.wait(30) == 0, cls.plasmashell.returncode
+
         cls.driver.quit()
 
     def _exit_edit_mode(self) -> None:
