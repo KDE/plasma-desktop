@@ -247,6 +247,20 @@ class DesktopTest(unittest.TestCase):
         session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Install Software")))
 
+    def test_5_sentry_3516_load_layout(self) -> None:
+        """
+        ShellCorona::loadLookAndFeelDefaultLayout -> ShellCorona::unload() -> qDeleteAll(panelViews) -> QWindow::visibleChanged -> rectNotify() -> 💣
+        @see https://bugreports.qt.io/browse/QTBUG-118841
+        """
+        kickoff_element = self.driver.find_element(AppiumBy.NAME, "Application Launcher")
+        session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
+        # LookAndFeelManager::save
+        message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "loadLookAndFeelDefaultLayout")
+        message.set_body(GLib.Variant("(s)", ["Breeze Dark"]))
+        session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 5000)
+        self.assertFalse(kickoff_element.is_displayed())
+        self.driver.find_element(AppiumBy.NAME, "Application Launcher")
+
 
 if __name__ == '__main__':
     unittest.main()
