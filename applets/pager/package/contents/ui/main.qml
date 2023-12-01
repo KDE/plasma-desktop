@@ -12,7 +12,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.draganddrop 2.0
+import org.kde.draganddrop 2.0 as DnD
 import org.kde.plasma.private.pager 2.0
 import org.kde.plasma.activityswitcher as ActivitySwitcher
 import org.kde.kirigami 2.20 as Kirigami
@@ -105,7 +105,7 @@ PlasmoidItem {
             }
         }
 
-        onWheel: {
+        onWheel: wheel => {
             // Magic number 120 for common "one click, see:
             // https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
             wheelDelta += wheel.angleDelta.y || wheel.angleDelta.x;
@@ -409,21 +409,21 @@ PlasmoidItem {
                     prefix: "normal"
                 }
 
-                DropArea {
+                DnD.DropArea {
                     id: droparea
                     anchors.fill: parent
                     preventStealing: true
 
-                    onDragEnter: {
+                    onDragEnter: event => {
                         root.dragSwitchDesktopIndex = index;
                     }
-                    onDragLeave: {
+                    onDragLeave: event => {
                         // new onDragEnter may happen before an old onDragLeave
                         if (root.dragSwitchDesktopIndex === index) {
                             root.dragSwitchDesktopIndex = -1;
                         }
                     }
-                    onDrop: {
+                    onDrop: event => {
                         pagerModel.drop(event.mimeData, event.modifiers, desktop.desktopId);
                         root.dragSwitchDesktopIndex = -1;
                     }
@@ -435,7 +435,9 @@ PlasmoidItem {
                     anchors.fill: parent
                     hoverEnabled: true
                     activeFocusOnTab: true
-                    onClicked: pagerModel.changePage(index);
+                    onClicked: mouse => {
+                        pagerModel.changePage(index);
+                    }
                     Accessible.name: Plasmoid.configuration.displayedText ? model.display : i18n("Desktop %1", (index + 1))
                     Accessible.description: Plasmoid.configuration.displayedText ? i18nc("@info:tooltip %1 is the name of a virtual desktop or an activity", "Switch to %1", model.display) : i18nc("@info:tooltip %1 is the name of a virtual desktop or an activity", "Switch to %1", (index + 1))
                     Accessible.role: Accessible.Button
@@ -533,7 +535,7 @@ PlasmoidItem {
                                     }
                                 }
 
-                                onReleased: {
+                                onReleased: mouse => {
                                     if (root.dragging) {
                                         windowRect.visible = false;
                                         const windowCenter = Qt.point(windowRect.x + windowRect.width / 2, windowRect.y + windowRect.height / 2);
