@@ -343,22 +343,6 @@ ContainmentItem {
                     z: 999
                 }
 
-                Image {
-                    id: replacementImage
-                    visible: root.dragAndDropping
-                    fillMode: Image.PreserveAspectFit
-                    onVisibleChanged: {
-                        if (visible) {
-                            applet.grabToImage((result) => {
-                                replacementImage.source = result.url
-                                applet.visible = false
-                            })
-                        } else {
-                            applet.visible = true
-                        }
-                    }
-                }
-
                 property int oldX: 0
                 property int oldY: 0
                 onXChanged: if (oldX) animateFrom(oldX, y)
