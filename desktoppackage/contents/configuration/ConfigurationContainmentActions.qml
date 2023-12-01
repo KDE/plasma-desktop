@@ -52,15 +52,12 @@ Item {
 
             property alias metaData: aboutPluginPage.metaData
 
+            width: Math.round(root.width * 0.8)
             onClosed: destroy()
 
-            ColumnLayout {
-                AboutPlugin {
-                    id: aboutPluginPage
-                    Layout.preferredWidth: contentWidth
-                    Layout.maximumWidth: Math.round(root.width * 0.8)
-                    metaData: internalAboutDialog.metaData
-                }
+            AboutPlugin {
+                id: aboutPluginPage
+                metaData: internalAboutDialog.metaData
             }
 
             Component.onCompleted: open();
