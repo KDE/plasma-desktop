@@ -15,14 +15,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-10-14 17:48+0200\n"
+"PO-Revision-Date: 2023-11-30 09:55+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: applicationmodel.cpp:67
@@ -96,48 +96,41 @@ msgid "Details"
 msgstr "Xehetasunak"
 
 #: ui/ComponentOverlay.qml:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid "This application can also open these file types:"
-msgstr ""
-"Aplikazio honek ez du ondoko fitxategi-motetarako euskarririk iragartzen:"
+msgstr "Aplikazio honek beste fitxategi-mota horiek ere ireki ditzake:"
 
 #: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (Egun, %2(e)n irekitzen da)"
 
 #: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Ireki dena %1(e)n"
 
 #: ui/ComponentOverlay.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
 msgstr ""
-"Aplikazio honek ez du ondoko fitxategi-motetarako euskarririk iragartzen:"
+"Aplikazio honek ez du ondoko fitxategi-motetarako euskarririk iragartzen, "
+"baina hala ere haiek irekitzeko gai izan liteke:"
 
 #: ui/ComponentOverlay.qml:143
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Force Open Anyway"
+#, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr "Behartu irekitzera nolanahi ere"
+msgstr "Behartu denak %1(e)n irekitzea"
 
 #: ui/ComponentOverlay.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Manually…"
-msgstr "Konfiguratu"
+msgstr "Konfiguratu eskuz..."
 
 #: ui/main.qml:17
 #, kde-format
@@ -145,8 +138,8 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
-"Ematen du '%1'(e)k ez dituela onartzen aplikazio-mota honekin elkartutako "
-"ondoko MIME motak: %2"
+"Ematen du '%1'(e)k ez dituela aplikazio mota honekin lotutako ondoko MIME "
+"motak onartzen: %2"
 
 #: ui/main.qml:46
 #, kde-format

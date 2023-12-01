@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-28 01:37+0000\n"
-"PO-Revision-Date: 2023-11-09 17:26+0100\n"
+"PO-Revision-Date: 2023-11-30 10:00+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -345,8 +345,6 @@ msgid "Visibility"
 msgstr "Ikusgaitasuna"
 
 #: contents/configuration/PanelConfiguration.qml:382
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Beti ikusgai"
 
@@ -356,13 +354,11 @@ msgstr "Automatikoki ezkutatzea"
 
 #: contents/configuration/PanelConfiguration.qml:384
 msgid "Dodge windows"
-msgstr ""
+msgstr "Saihestu leihoak"
 
 #: contents/configuration/PanelConfiguration.qml:385
-#, fuzzy
-#| msgid "Windows Behind"
 msgid "Windows Go Below"
-msgstr "Leihoak atzean"
+msgstr "Leihoak azpira doaz"
 
 #: contents/configuration/PanelConfiguration.qml:428
 msgid "Opacity"
@@ -483,7 +479,7 @@ msgstr "Ordezko trepetak"
 
 #: contents/explorer/AppletDelegate.qml:42
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Euskarririk gabeko trepeta"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
