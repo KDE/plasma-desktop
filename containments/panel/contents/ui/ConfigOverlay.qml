@@ -8,7 +8,7 @@
 
 import QtQuick 2.5
 import QtQuick.Layouts 1.0
-
+import QtQuick.Window
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -213,14 +213,23 @@ MouseArea {
             }
         }
     }
-    PlasmaCore.Dialog {
+    PlasmaCore.PopupPlasmaWindow {
         id: tooltip
         visible: configurationArea.currentApplet && !root.dragAndDropping
         visualParent: configurationArea.currentApplet
+        // Try to dodge the ruler, as we can't cover it since it's a layershell surface
+        margin: configurationArea.Window.window?.lengthMode === 2 ? Kirigami.Units.gridUnit * 2 : 0
 
-        type: PlasmaCore.Dialog.Dock
-        flags: Qt.WindowStaysOnTopHint|Qt.WindowDoesNotAcceptFocus|Qt.BypassWindowManagerHint
-        location: Plasmoid.location
+        popupDirection: switch (Plasmoid.location) {
+            case PlasmaCore.Types.TopEdge:
+                return Qt.BottomEdge
+            case PlasmaCore.Types.LeftEdge:
+                return Qt.RightEdge
+            case PlasmaCore.Types.RightEdge:
+                return Qt.LeftEdge
+            default:
+                return Qt.TopEdge
+        }
 
         onVisualParentChanged: {
             if (visualParent) {
@@ -234,8 +243,8 @@ MouseArea {
 
         mainItem: MouseArea {
             enabled: tooltip.visible
-            width: handleButtons.width
-            height: handleButtons.height
+            implicitWidth: handleButtons.width
+            implicitHeight: handleButtons.height
             hoverEnabled: true
             onEntered: hideTimer.stop();
             onExited:  hideTimer.restart();
