@@ -64,17 +64,13 @@
 >Bu modül, etkinliklerin yapılandırılmasına izin verir. Etkinlikler, her biri birden çok &plasma; örneğini, her biri ayrı araç takımları ve temalarla ayarlamanıza izin verir. Bazı etkinlikler gizli olabilir. Bu tür etkinlikler eylemlerinizi izlemez. Örneğin, en son hangi belgeyi açtığınızı takip etmezler. </para>
 
 <para
->Modül, üç ayrı sekmeye ayrılmıştır: <link linkend="activities-main"
+>The module is divided into two tabs: <link linkend="activities-main"
 ><guilabel
->Etkinlikler</guilabel
+>Activities</guilabel
 ></link
->, <link linkend="activities-switching"
+> and <link linkend="activities-switching"
 ><guilabel
->Geçiş</guilabel
-></link
->, ve <link linkend="activities-privacy"
-><guilabel
->Gizlilik</guilabel
+>Switching</guilabel
 ></link
 >. </para>
 
@@ -180,40 +176,6 @@
 >Kısayolları Kullanmak ve Özelleştirmek</emphasis
 ></ulink
 > bölümüne bakın. </para>
-</sect3>
-
-<sect3 id="activities-privacy">
-<title
-><guilabel
->Gizlilik</guilabel
-></title>
-
-<para
->Bu sekme, etkinliklerin <guilabel
->Geçmişi tut</guilabel
-> ayarını yapabilir ve izleme verilerini temizleyebilirsiniz. <guibutton
->Geçmişi Temizle</guibutton
-> açılır menüsünü kullanarak &plasma;'nın <guimenuitem
->Son bir saati unut</guimenuitem
->, <guimenuitem
->Son iki saati unut</guimenuitem
->, <guimenuitem
->Son bir günü unut</guimenuitem
->, veya <guimenuitem
->Her şeyi unut</guimenuitem
-> yapmasını sağlayabilirsiniz. </para>
-<para
->Aşağıda, etkinliklerinizde açılan belgeleri ezberlemek için uygulama yelpazesini yapılandırabilirsiniz. Tüm verileri depolamak için <guilabel
->Tüm uygulamalar için</guilabel
-> ögesini, veri depolamayı kapatmak için <guilabel
->Anımsama</guilabel
-> ögesini veya ince ayarlı seçim için <guilabel
->Yalnızca belirli uygulamalar için</guilabel
-> ögesini kullanın (uygulama ögesine tıklamak, geçerli kipi değiştirir). </para>
-<para
->Listede olmayan uygulamaların sizi izlemelerini engellemek için <guilabel
->Listede olmayan uygulamaları engelle</guilabel
-> kutusunu işaretleyin. </para>
 </sect3>
 
 </sect2>
