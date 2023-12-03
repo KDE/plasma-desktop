@@ -14,6 +14,7 @@ import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcmutils
 import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.configuration 2.0
 
 Item {
     id: appearanceRoot
@@ -45,8 +46,8 @@ Item {
 
         Component.onCompleted: {
             for (var i = 0; i < configDialog.containmentPluginsConfigModel.count; ++i) {
-                var data = configDialog.containmentPluginsConfigModel.get(i);
-                if (configDialog.containmentPlugin === data.pluginName) {
+                var pluginName = configDialog.containmentPluginsConfigModel.data(configDialog.containmentPluginsConfigModel.index(i, 0), ConfigModel.PluginNameRole);
+                if (configDialog.containmentPlugin === pluginName) {
                     pluginComboBox.currentIndex = i
                     pluginComboBox.activated(i);
                     break;
@@ -54,8 +55,8 @@ Item {
             }
 
             for (var i = 0; i < configDialog.wallpaperConfigModel.count; ++i) {
-                var data = configDialog.wallpaperConfigModel.get(i);
-                if (configDialog.currentWallpaper === data.pluginName) {
+                var pluginName = configDialog.wallpaperConfigModel.data(configDialog.wallpaperConfigModel.index(i, 0), ConfigModel.PluginNameRole);
+                if (configDialog.currentWallpaper === pluginName) {
                     wallpaperComboBox.currentIndex = i
                     wallpaperComboBox.activated(i);
                     break;
@@ -102,13 +103,14 @@ Item {
                     model: configDialog.wallpaperConfigModel
                     textRole: "name"
                     onActivated: {
-                        var model = configDialog.wallpaperConfigModel.get(currentIndex)
-                        if (appearanceRoot.currentWallpaper === model.pluginName) {
+                        var idx = configDialog.wallpaperConfigModel.index(currentIndex, 0)
+                        var pluginName = configDialog.wallpaperConfigModel.data(idx, ConfigModel.PluginNameRole)
+                        if (appearanceRoot.currentWallpaper === pluginName) {
                             return;
                         }
-                        appearanceRoot.currentWallpaper = model.pluginName
-                        configDialog.currentWallpaper = model.pluginName
-                        main.sourceFile = model.source
+                        appearanceRoot.currentWallpaper = pluginName
+                        configDialog.currentWallpaper = pluginName
+                        main.sourceFile = configDialog.wallpaperConfigModel.data(idx, ConfigModel.SourceRole)
                         appearanceRoot.configurationChanged()
                     }
                 }
