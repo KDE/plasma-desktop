@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!--
+    SPDX-FileCopyrightText: 2021 Yuri Chornoivan <yurchor@ukr.net>
+    SPDX-FileCopyrightText: 2023 Méven Car <meven@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcm_recentFiles" lang="&language;">
+<articleinfo>
+    
+<title
+>Archivos recientes</title>
+<authorgroup>
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Eloy</firstname
+> <surname
+>Cuadra</surname
+> <affiliation
+><address
+><email
+>ecuadra@eloihr.net</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-11-30</date>
+<releaseinfo
+>Plasma 6.0</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>Archivos recientes</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Este módulo permite configurar el tiempo para <guilabel
+>Mantener el historial</guilabel
+> de los archivos abiertos y limpiar algunos datos de seguimiento. Use el botón desplegable <guibutton
+>Borrar el historial</guibutton
+> para que &plasma; <guimenuitem
+>Olvide la última hora</guimenuitem
+>, <guimenuitem
+>Olvide las dos últimas horas</guimenuitem
+>, <guimenuitem
+>Olvide un día</guimenuitem
+> u <guimenuitem
+>Olvide todo</guimenuitem
+>. </para>
+    
+<para
+>A continuación puede configurar el abanico de aplicaciones que memorizarán los documentos abiertos. Use la opción <guilabel
+>Para todas las aplicaciones</guilabel
+> para guardar todos los datos, el elemento <guilabel
+>No recordar</guilabel
+> para desactivar el almacenamiento de datos o la opción <guilabel
+>Solo para aplicaciones específicas</guilabel
+> para una selección más personalizada (si pulsa sobre una aplicación se conmuta su modo actual). </para>
+
+<para
+>Marque la opción <guilabel
+>Ignorar las aplicaciones que no estén en la lista</guilabel
+> para no hacer seguimiento de las aplicaciones que no aparezcan en la lista. </para>
+
+</article>

@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!--
+    SPDX-FileCopyrightText: 2021 Yuri Chornoivan <yurchor@ukr.net>
+    SPDX-FileCopyrightText: 2023 Méven Car <meven@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcm_recentFiles" lang="&language;">
+<articleinfo>
+    
+<title
+>Нещодавні файли</title>
+<authorgroup>
+<author
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>30 листопада 2023 року</date>
+<releaseinfo
+>Плазма 6.0</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>Нещодавні файли</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>За допомогою цього модуля можна налаштувати час, протягом якого система <guilabel
+>Зберігатиме журнал</guilabel
+> для відкритих файлів і вилучити деякі зібрані дані. Скористайтеся спадним списком <guibutton
+>Спорожнити журнал</guibutton
+>, щоб змусити Плазму <guimenuitem
+>Забути останню годину</guimenuitem
+>, <guimenuitem
+>Забути дві останні години</guimenuitem
+>, <guimenuitem
+>Забути день</guimenuitem
+> або <guimenuitem
+>Забути все</guimenuitem
+>. </para>
+    
+<para
+>Нижче, ви можете налаштувати діапазон програм для запам'ятовування даних щодо відкритих документів. Скористайтеся пунктом <guilabel
+>Для всіх програм</guilabel
+>, щоб зберігалися усі дані, пунктом <guilabel
+>Не запам'ятовувати</guilabel
+>, щоб вимкнути зберігання даних, або пунктом <guilabel
+>Лише для вказаних програм</guilabel
+> для точнішого налаштовування (клацання на пункті програми у списку перемикає її поточний режим). </para>
+
+<para
+>Позначте пункт <guilabel
+>Не запам’ятовувати дані для програм поза цим списком</guilabel
+>, щоб вимкнути стеження для усіх програм, яких немає у списку. </para>
+
+</article>

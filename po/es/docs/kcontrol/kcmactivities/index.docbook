@@ -64,17 +64,13 @@
 >Este módulo permite configurar las actividades. Las actividades son una forma de tener múltiples configuraciones de &plasma;, cada una con un conjunto diferente de widgets y temas. Algunas actividades pueden ser privadas. Estas actividades no rastrean sus acciones. Por ejemplo, no rastrean los documentos recientes que abra. </para>
 
 <para
->Este módulo contiene tres pestañas: <link linkend="activities-main"
+>Este módulo contiene dos pestañas: <link linkend="activities-main"
 ><guilabel
 >Actividades</guilabel
 ></link
->, <link linkend="activities-switching"
+> y <link linkend="activities-switching"
 ><guilabel
 >Cambio</guilabel
-></link
-> y <link linkend="activities-privacy"
-><guilabel
->Privacidad</guilabel
 ></link
 >. </para>
 
@@ -180,40 +176,6 @@
 >Fundamentos de &kde;</emphasis
 ></ulink
 >. </para>
-</sect3>
-
-<sect3 id="activities-privacy">
-<title
-><guilabel
->Privacidad</guilabel
-></title>
-
-<para
->Esta pestaña permite configurar el tiempo de las actividades para <guilabel
->Mantener el historial</guilabel
-> y limpiar algunos datos de seguimiento. Use el botón desplegable <guibutton
->Borrar el historial</guibutton
-> para que &plasma; <guimenuitem
->Olvide la última hora</guimenuitem
->, <guimenuitem
->Olvide las dos últimas horas</guimenuitem
->, <guimenuitem
->Olvide un día</guimenuitem
-> u <guimenuitem
->Olvide todo</guimenuitem
->. </para>
-<para
->A continuación puede configurar el intervalo de aplicaciones que memorizarán los documentos abiertos en las actividades. Use la opción <guilabel
->Para todas las actividades</guilabel
-> para guardar todos los datos, el elemento <guilabel
->No recordar</guilabel
-> para desactivar el almacenamiento de datos o la opción <guilabel
->Solo para aplicaciones específicas</guilabel
-> para una selección más personalizada (si pulsa sobre una aplicación se conmuta su modo actual). </para>
-<para
->Marque la opción <guilabel
->Ignorar las aplicaciones que no estén en la lista</guilabel
-> para no rastrear las aplicaciones que no aparezcan en la lista. </para>
 </sect3>
 
 </sect2>

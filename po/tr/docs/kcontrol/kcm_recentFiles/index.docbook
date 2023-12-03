@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!--
+    SPDX-FileCopyrightText: 2021 Yuri Chornoivan <yurchor@ukr.net>
+    SPDX-FileCopyrightText: 2023 Méven Car <meven@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcm_recentFiles" lang="&language;">
+<articleinfo>
+    
+<title
+>Son Kullanılan Dosyalar</title>
+<authorgroup>
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-11-30</date>
+<releaseinfo
+>Plasma 6.0</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistem Ayarları</keyword>
+<keyword
+>Son Kullanılan Dosyalar</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Bu modül, açılmış dosyalar için <guilabel
+>Geçmişi tut</guilabel
+> yapmaya ve bazı izleyici verisini temizlemeye olanak tanır. &plasma;'nın <guimenuitem
+>Son bir saati unut</guimenuitem
+>, <guimenuitem
+>Son iki saati unut</guimenuitem
+>, <guimenuitem
+>Son bir günü unut</guimenuitem
+> veya <guimenuitem
+>Her şeyi unut</guimenuitem
+> eylemlerini gerçekleştirebilmesi için <guibutton
+>Geçmişi Temizle</guibutton
+> açılır kutusunu kullanın. </para>
+    
+<para
+>Aşağıda, açılan belgeleri anımsayacak uygulamalar erimini yapılandırabilirsiniz. Tüm veriyi depolamak için <guilabel
+>Tüm uygulamalar için</guilabel
+>, veri depolamayı kaydetmek için <guilabel
+>Anımsana</guilabel
+> veya özel ayarlar kullanmak içinse <guilabel
+>Yalnızca belirli uygulamalar için</guilabel
+> ögelerinden birini kullanın (uygulama ögesinin üzerine tıklamak geçerli kipi açar/kapatır). </para>
+
+<para
+>Listede olmayan tüm uygulamalar için izlemeyi kapatmak üzere <guilabel
+>Listede olmayan uygulamaları engelle</guilabel
+> onay kutusunu kullanın. </para>
+
+</article>

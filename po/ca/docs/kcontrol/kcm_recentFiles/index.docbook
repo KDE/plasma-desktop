@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!--
+    SPDX-FileCopyrightText: 2021 Yuri Chornoivan <yurchor@ukr.net>
+    SPDX-FileCopyrightText: 2023 Méven Car <meven@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcm_recentFiles" lang="&language;">
+<articleinfo>
+    
+<title
+>Fitxers recents</title>
+<authorgroup>
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+&traductor.JosepMa.Ferrer; 
+</authorgroup>
+
+<date
+>30 de novembre de 2023</date>
+<releaseinfo
+>Plasma 6.0</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>Fitxers recents</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Aquest mòdul permet configurar el temps per a <guilabel
+>Mantén l'historial:</guilabel
+> dels fitxers oberts i netejar algunes dades de seguiment. Utilitzeu el botó desplegable <guibutton
+>Neteja historial</guibutton
+> per a fer que el &plasma; <guimenuitem
+>Oblida la darrera hora</guimenuitem
+>, <guimenuitem
+>Oblida les dues darreres hores</guimenuitem
+>, <guimenuitem
+>Oblida un dia</guimenuitem
+> o <guimenuitem
+>Oblida-ho tot</guimenuitem
+>. </para>
+    
+<para
+>A continuació, podreu configurar l'interval d'aplicacions per a memoritzar els documents oberts. Utilitzeu l'element <guilabel
+>Per a totes les aplicacions</guilabel
+> per a emmagatzemar totes les dades, l'element <guilabel
+>No ho recordis</guilabel
+> per a desactivar l'emmagatzematge de les dades o l'element <guilabel
+>Només per a aplicacions específiques</guilabel
+> per a una selecció detallada (en fer clic sobre l'element de l'aplicació s'alternarà el seu mode actual). </para>
+
+<para
+>Marqueu l'element <guilabel
+>Bloqueja les aplicacions que no estiguin a la llista</guilabel
+> per a desactivar el seguiment de totes les aplicacions que no es trobin a la llista. </para>
+
+</article>
