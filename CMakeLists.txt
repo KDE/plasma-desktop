@@ -87,22 +87,21 @@ if(BUILD_TESTING)
     include(ECMAddTests)
 endif()
 
-# TODO re-enable once KAccounts is ported to Qt6
-# find_package(AccountsQt6 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
-#
-# set_package_properties(AccountsQt6 PROPERTIES
-#     DESCRIPTION "Accounts management library for Qt applications"
-#     URL "https://gitlab.com/accounts-sso/libaccounts-qt"
-#     PURPOSE "Required for building the OpenDesktop integration plugin"
-#     TYPE OPTIONAL
-# )
-#
-# find_package(KAccounts 20.04)
-# set_package_properties(KAccounts PROPERTIES
-#     DESCRIPTION "Accounts management library for KDE applications"
-#     PURPOSE "Required for building the OpenDesktop integration plugin"
-#     TYPE OPTIONAL
-# )
+find_package(AccountsQt6 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
+
+set_package_properties(AccountsQt6 PROPERTIES
+    DESCRIPTION "Accounts management library for Qt applications"
+    URL "https://gitlab.com/accounts-sso/libaccounts-qt"
+    PURPOSE "Required for building the OpenDesktop integration plugin"
+    TYPE OPTIONAL
+)
+
+find_package(KAccounts6 20.04)
+set_package_properties(KAccounts6 PROPERTIES
+    DESCRIPTION "Accounts management library for KDE applications"
+    PURPOSE "Required for building the OpenDesktop integration plugin"
+    TYPE OPTIONAL
+)
 
 
 find_package(PkgConfig REQUIRED)
@@ -277,7 +276,7 @@ add_subdirectory(toolboxes)
 add_subdirectory(applets)
 add_subdirectory(kcms)
 add_subdirectory(knetattach)
-if(KAccounts_FOUND AND AccountsQt6_FOUND)
+if(KAccounts6_FOUND AND AccountsQt6_FOUND)
     add_subdirectory(attica-kde)
 endif()
 add_subdirectory(imports/activitymanager/)

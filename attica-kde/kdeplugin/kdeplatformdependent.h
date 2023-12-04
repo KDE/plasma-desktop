@@ -14,7 +14,6 @@
 
 #include <QHash>
 
-#include <KIO/AccessManager>
 #include <KSharedConfig>
 
 namespace Attica

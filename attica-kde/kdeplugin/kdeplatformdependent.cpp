@@ -17,6 +17,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <QApplication>
+#include <QNetworkAccessManager>
 #include <QNetworkDiskCache>
 #include <QStorageInfo>
 
