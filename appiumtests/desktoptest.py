@@ -261,6 +261,29 @@ class DesktopTest(unittest.TestCase):
         self.assertFalse(kickoff_element.is_displayed())
         self.driver.find_element(AppiumBy.NAME, "Application Launcher")
 
+    def test_6_bug_query_accent_color_binding_loop(self) -> None:
+        """
+        Don't use binding as usedInAccentColor may be disabled immediately after a query from kcm_colors.
+
+        The call order is:
+        1. desktop.usedInAccentColor: true -> wallpaperColors.active: true
+        2. Kirigami.ImageColors.update()
+        3. Kirigami.ImageColors emits paletteChanged()
+        5. If binding is used, ShellCorona::colorChanged is emitted immediately in the same context after desktop.accentColor is updated
+           -> desktop.usedInAccentColor: false -> desktop.accentColor: "transparent" (binding restoration).
+        6. The second time querying the accent color, the QML engine will report binding loop detected in desktop.usedInAccentColor,
+           and desktop.accentColor will return "transparent" directly before any accent color from the wallpaper is extracted.
+        """
+        session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
+        # Send the same request twice to check binding loop
+        for i in range(2):
+            print(f"sending message {i}", file=sys.stderr)
+            message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "color")
+            reply, _ = session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
+            self.assertEqual(reply.get_signature(), "u")
+            self.assertGreater(reply.get_body().get_child_value(0).get_uint32(), 0)
+            print("done sending message", file=sys.stderr)
+
 
 if __name__ == '__main__':
     unittest.main()
