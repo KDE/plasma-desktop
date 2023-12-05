@@ -395,6 +395,7 @@ KCM.AbstractKCM {
         property Kirigami.Action addCommandAction: Kirigami.Action {
             text: addCommandDialog.editing ? i18n("Save") : i18n("Add")
             icon.name: addCommandDialog.editing ? "dialog-ok" : "list-add"
+            enabled: cmdField.length > 0
             onTriggered: {
                 if (addCommandDialog.editing) {
                     const newLabel = kcm.editCommand(addCommandDialog.componentName, cmdField.text);
