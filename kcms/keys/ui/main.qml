@@ -264,6 +264,7 @@ KCM.AbstractKCM {
                     section.property: "section"
                     section.delegate: Kirigami.ListSectionHeader {
                         label: root.sectionNames[section]
+                        width:  components.width
                         QQC2.CheckBox {
                             id: sectionCheckbox
                             Layout.alignment: Qt.AlignRight
