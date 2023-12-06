@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_recentFiles5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-06 01:38+0000\n"
 "PO-Revision-Date: 2022-07-29 09:24+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -39,33 +39,33 @@ msgstr "Zoznam aplikácií, ktorých históriu aktivity chcete uložiť"
 msgid "List of Applications whose activity history not to save"
 msgstr "Zoznam aplikácií, ktorých históriu aktivity nechcete uložiť"
 
-#: kcm_recentFiles.cpp:64
+#: kcm_recentFiles.cpp:77
 #, kde-format
 msgctxt "unlimited number of months"
 msgid "Forever"
 msgstr "Navždy"
 
-#: kcm_recentFiles.cpp:73
+#: kcm_recentFiles.cpp:86
 #, kde-format
 msgid "Forget the last hour"
 msgstr "Zabudnúť poslednú hodinu"
 
-#: kcm_recentFiles.cpp:74
+#: kcm_recentFiles.cpp:87
 #, kde-format
 msgid "Forget the last two hours"
 msgstr "Zabudnúť posledné dve hodiny"
 
-#: kcm_recentFiles.cpp:75
+#: kcm_recentFiles.cpp:88
 #, kde-format
 msgid "Forget a day"
 msgstr "Zabudnúť deň"
 
-#: kcm_recentFiles.cpp:76
+#: kcm_recentFiles.cpp:89
 #, kde-format
 msgid "Forget everything"
 msgstr "Zabudnúť všetko"
 
-#: kcm_recentFiles.cpp:205
+#: kcm_recentFiles.cpp:232
 #, kde-format
 msgctxt "unit of time. months to keep the history"
 msgid " month"
@@ -74,7 +74,7 @@ msgstr[0] " mesiac"
 msgstr[1] " mesiace"
 msgstr[2] " mesiacov"
 
-#: kcm_recentFiles.cpp:208
+#: kcm_recentFiles.cpp:235
 #, kde-format
 msgctxt "for in 'keep history for 5 months'"
 msgid "For "

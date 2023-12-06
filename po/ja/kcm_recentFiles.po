@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-06 01:38+0000\n"
 "PO-Revision-Date: 2019-05-31 21:29+0900\n"
 "Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -41,40 +41,40 @@ msgstr ""
 msgid "List of Applications whose activity history not to save"
 msgstr ""
 
-#: kcm_recentFiles.cpp:64
+#: kcm_recentFiles.cpp:77
 #, kde-format
 msgctxt "unlimited number of months"
 msgid "Forever"
 msgstr ""
 
-#: kcm_recentFiles.cpp:73
+#: kcm_recentFiles.cpp:86
 #, kde-format
 msgid "Forget the last hour"
 msgstr "最後の1時間分を忘れる"
 
-#: kcm_recentFiles.cpp:74
+#: kcm_recentFiles.cpp:87
 #, kde-format
 msgid "Forget the last two hours"
 msgstr "最後の2時間分を忘れる"
 
-#: kcm_recentFiles.cpp:75
+#: kcm_recentFiles.cpp:88
 #, kde-format
 msgid "Forget a day"
 msgstr "1日分忘れる"
 
-#: kcm_recentFiles.cpp:76
+#: kcm_recentFiles.cpp:89
 #, kde-format
 msgid "Forget everything"
 msgstr "すべて忘れる"
 
-#: kcm_recentFiles.cpp:205
+#: kcm_recentFiles.cpp:232
 #, kde-format
 msgctxt "unit of time. months to keep the history"
 msgid " month"
 msgid_plural " months"
 msgstr[0] "カ月"
 
-#: kcm_recentFiles.cpp:208
+#: kcm_recentFiles.cpp:235
 #, kde-format
 msgctxt "for in 'keep history for 5 months'"
 msgid "For "

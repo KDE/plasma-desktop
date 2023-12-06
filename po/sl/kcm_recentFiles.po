@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-06 01:38+0000\n"
 "PO-Revision-Date: 2023-03-01 07:05+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -42,33 +42,33 @@ msgstr "Seznam aplikacij, katerih dejavnosti shranjevati"
 msgid "List of Applications whose activity history not to save"
 msgstr "Seznam aplikacij, katerih dejavnosti ne shranjevati"
 
-#: kcm_recentFiles.cpp:64
+#: kcm_recentFiles.cpp:77
 #, kde-format
 msgctxt "unlimited number of months"
 msgid "Forever"
 msgstr "Za zmeraj"
 
-#: kcm_recentFiles.cpp:73
+#: kcm_recentFiles.cpp:86
 #, kde-format
 msgid "Forget the last hour"
 msgstr "Pozabi zadnjo uro"
 
-#: kcm_recentFiles.cpp:74
+#: kcm_recentFiles.cpp:87
 #, kde-format
 msgid "Forget the last two hours"
 msgstr "Pozabi zadnji dve uri"
 
-#: kcm_recentFiles.cpp:75
+#: kcm_recentFiles.cpp:88
 #, kde-format
 msgid "Forget a day"
 msgstr "Pozabi dan"
 
-#: kcm_recentFiles.cpp:76
+#: kcm_recentFiles.cpp:89
 #, kde-format
 msgid "Forget everything"
 msgstr "Pozabi vse"
 
-#: kcm_recentFiles.cpp:205
+#: kcm_recentFiles.cpp:232
 #, kde-format
 msgctxt "unit of time. months to keep the history"
 msgid " month"
@@ -78,7 +78,7 @@ msgstr[1] " meseca"
 msgstr[2] " meseci"
 msgstr[3] " mesecev"
 
-#: kcm_recentFiles.cpp:208
+#: kcm_recentFiles.cpp:235
 #, kde-format
 msgctxt "for in 'keep history for 5 months'"
 msgid "For "

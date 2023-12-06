@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 01:38+0000\n"
+"POT-Creation-Date: 2023-12-06 01:38+0000\n"
 "PO-Revision-Date: 2022-07-24 16:43+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -45,33 +45,33 @@ msgstr ""
 "Lijst met toepassingen waarvan de geschiedenis van activiteit niet "
 "opgeslagen moet worden"
 
-#: kcm_recentFiles.cpp:64
+#: kcm_recentFiles.cpp:77
 #, kde-format
 msgctxt "unlimited number of months"
 msgid "Forever"
 msgstr "Altijd"
 
-#: kcm_recentFiles.cpp:73
+#: kcm_recentFiles.cpp:86
 #, kde-format
 msgid "Forget the last hour"
 msgstr "Het laatste uur vergeten"
 
-#: kcm_recentFiles.cpp:74
+#: kcm_recentFiles.cpp:87
 #, kde-format
 msgid "Forget the last two hours"
 msgstr "De laatste twee uur vergeten"
 
-#: kcm_recentFiles.cpp:75
+#: kcm_recentFiles.cpp:88
 #, kde-format
 msgid "Forget a day"
 msgstr "Een dag vergeten"
 
-#: kcm_recentFiles.cpp:76
+#: kcm_recentFiles.cpp:89
 #, kde-format
 msgid "Forget everything"
 msgstr "Alles vergeten"
 
-#: kcm_recentFiles.cpp:205
+#: kcm_recentFiles.cpp:232
 #, kde-format
 msgctxt "unit of time. months to keep the history"
 msgid " month"
@@ -79,7 +79,7 @@ msgid_plural " months"
 msgstr[0] " maand"
 msgstr[1] " maanden"
 
-#: kcm_recentFiles.cpp:208
+#: kcm_recentFiles.cpp:235
 #, kde-format
 msgctxt "for in 'keep history for 5 months'"
 msgid "For "
