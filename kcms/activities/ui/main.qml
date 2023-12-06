@@ -30,8 +30,9 @@ KCM.ScrollViewKCM {
             id: kactivities
         }
 
-        delegate: Kirigami.SwipeListItem {
-            hoverEnabled: true
+        delegate: QQC2.ItemDelegate {
+            width: ListView.view.width
+            down: false
 
             contentItem: RowLayout {
                 id: row
@@ -47,26 +48,31 @@ KCM.ScrollViewKCM {
                     Layout.fillWidth: true
                     text: model.name
                 }
-            }
 
-            actions: [
-                Kirigami.Action {
+                QQC2.ToolButton {
                     icon.name: "configure"
-                    tooltip: i18nc("@info:tooltip", "Configure %1 activity", model.name)
-                    onTriggered: kcm.configureActivity(model.id);
-                },
-                Kirigami.Action {
+                    text: i18nc("@info:tooltip", "Configure %1 activity", model.name)
+                    display: QQC2.AbstractButton.IconOnly
+                    QQC2.ToolTip.text: text
+                    QQC2.ToolTip.visible: hovered
+                    onClicked: kcm.configureActivity(model.id);
+                }
+
+                QQC2.ToolButton {
                     visible: kcm.isNewActivityAuthorized
                     enabled:  activitiesList.count > 1
                     icon.name: "edit-delete"
-                    tooltip: i18nc("@info:tooltip", "Delete %1 activity", model.name)
-                    onTriggered: {
+                    text: i18nc("@info:tooltip", "Delete %1 activity", model.name)
+                    display: QQC2.AbstractButton.IconOnly
+                    QQC2.ToolTip.text: text
+                    QQC2.ToolTip.visible: hovered
+                    onClicked: {
                         removePrompt.activityId = model.id;
                         removePrompt.activityName = model.name;
                         removePrompt.open();
                     }
                 }
-            ]
+            }
         }
     }
 
