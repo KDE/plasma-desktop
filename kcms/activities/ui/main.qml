@@ -32,7 +32,8 @@ KCM.ScrollViewKCM {
 
         delegate: QQC2.ItemDelegate {
             width: ListView.view.width
-            down: false
+
+            onClicked: kcm.configureActivity(model.id);
 
             contentItem: RowLayout {
                 id: row
@@ -47,15 +48,6 @@ KCM.ScrollViewKCM {
                 QQC2.Label {
                     Layout.fillWidth: true
                     text: model.name
-                }
-
-                QQC2.ToolButton {
-                    icon.name: "configure"
-                    text: i18nc("@info:tooltip", "Configure %1 activity", model.name)
-                    display: QQC2.AbstractButton.IconOnly
-                    QQC2.ToolTip.text: text
-                    QQC2.ToolTip.visible: hovered
-                    onClicked: kcm.configureActivity(model.id);
                 }
 
                 QQC2.ToolButton {
