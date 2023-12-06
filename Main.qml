@@ -316,6 +316,8 @@ Item {
         VirtualKeyboardLoader {
             id: inputPanel
 
+            z: 1
+
             screenRoot: root
             mainStack: mainStack
             mainBlock: userListComponent
