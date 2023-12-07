@@ -11,13 +11,13 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QQC2
 import org.kde.kirigami 2.19 as Kirigami
-import org.kde.plasma.touchscreen.kcm 1.0
 import org.kde.kcmutils as KCMUtils
+import org.kde.plasma.touchscreen.kcm as TouchScreenKCM
 
 KCMUtils.SimpleKCM {
     id: root
 
-    property var device: null
+    property TouchScreenKCM.InputDevice device
 
     KCMUtils.ConfigModule.buttons: KCMUtils.ConfigModule.Default | KCMUtils.ConfigModule.Apply
 
@@ -63,7 +63,7 @@ KCMUtils.SimpleKCM {
         QQC2.ComboBox {
             id: outputsCombo
             Kirigami.FormData.label: i18n("Target display:")
-            model: OutputsModel {
+            model: TouchScreenKCM.OutputsModel {
                 id: outputsModel
             }
             enabled: count > 2 //It's only interesting when there's more than 1 screen
