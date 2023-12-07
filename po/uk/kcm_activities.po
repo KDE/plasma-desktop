@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:40+0000\n"
+"POT-Creation-Date: 2023-12-07 01:42+0000\n"
 "PO-Revision-Date: 2023-11-06 09:02+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -84,39 +84,37 @@ msgstr "Автоматично вимикати або присипляти"
 msgid "Shortcut for switching:"
 msgstr "Скорочення для перемикання:"
 
-#: ui/main.qml:55
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure %1 activity"
-msgstr "Налаштувати простір дій %1"
-
-#: ui/main.qml:62
+#: ui/main.qml:57
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete %1 activity"
 msgstr "Вилучити простір дій %1"
 
-#: ui/main.qml:75
+#: ui/main.qml:73
 #, kde-format
 msgid "Create New…"
 msgstr "Створити…"
 
-#: ui/main.qml:86
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Activity"
 msgstr "Вилучення простору дій"
 
-#: ui/main.qml:88
+#: ui/main.qml:86
 #, kde-format
 msgctxt "%1 is an activity name"
 msgid "Do you want to delete activity '%1'?"
 msgstr "Хочете вилучити простір дій «%1»?"
 
-#: ui/main.qml:93
+#: ui/main.qml:91
 #, kde-format
 msgid "Delete Activity"
 msgstr "Вилучення простору дій"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure %1 activity"
+#~ msgstr "Налаштувати простір дій %1"
 
 #~ msgctxt "@option:check"
 #~ msgid "Privacy:"

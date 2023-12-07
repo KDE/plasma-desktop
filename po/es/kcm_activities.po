@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:40+0000\n"
+"POT-Creation-Date: 2023-12-07 01:42+0000\n"
 "PO-Revision-Date: 2023-11-07 21:44+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -83,39 +83,37 @@ msgstr "Apagar o entrar en reposo automáticamente"
 msgid "Shortcut for switching:"
 msgstr "Atajo de teclado para cambiar:"
 
-#: ui/main.qml:55
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure %1 activity"
-msgstr "Configurar la actividad %1"
-
-#: ui/main.qml:62
+#: ui/main.qml:57
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete %1 activity"
 msgstr "Borrar la actividad %1"
 
-#: ui/main.qml:75
+#: ui/main.qml:73
 #, kde-format
 msgid "Create New…"
 msgstr "Crear nueva..."
 
-#: ui/main.qml:86
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Activity"
 msgstr "Borrar actividad"
 
-#: ui/main.qml:88
+#: ui/main.qml:86
 #, kde-format
 msgctxt "%1 is an activity name"
 msgid "Do you want to delete activity '%1'?"
 msgstr "¿Desea borrar la actividad «%1»?"
 
-#: ui/main.qml:93
+#: ui/main.qml:91
 #, kde-format
 msgid "Delete Activity"
 msgstr "Borrar actividad"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure %1 activity"
+#~ msgstr "Configurar la actividad %1"
 
 #~ msgctxt "@option:check"
 #~ msgid "Privacy:"

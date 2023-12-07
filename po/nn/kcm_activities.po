@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:40+0000\n"
+"POT-Creation-Date: 2023-12-07 01:42+0000\n"
 "PO-Revision-Date: 2023-05-27 14:57+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -84,36 +84,34 @@ msgstr ""
 msgid "Shortcut for switching:"
 msgstr "Snøggtast for byte:"
 
-#: ui/main.qml:55
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure %1 activity"
-msgstr "Set opp %1-aktivitet"
-
-#: ui/main.qml:62
+#: ui/main.qml:57
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete %1 activity"
 msgstr "Slett %1-aktivitet"
 
-#: ui/main.qml:75
+#: ui/main.qml:73
 #, kde-format
 msgid "Create New…"
 msgstr "Lag ny …"
 
-#: ui/main.qml:86
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Activity"
 msgstr "Slett aktivitet"
 
-#: ui/main.qml:88
+#: ui/main.qml:86
 #, kde-format
 msgctxt "%1 is an activity name"
 msgid "Do you want to delete activity '%1'?"
 msgstr "Vil du sletta aktiviteten «%1»?"
 
-#: ui/main.qml:93
+#: ui/main.qml:91
 #, kde-format
 msgid "Delete Activity"
 msgstr "Slett aktivitet"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure %1 activity"
+#~ msgstr "Set opp %1-aktivitet"
