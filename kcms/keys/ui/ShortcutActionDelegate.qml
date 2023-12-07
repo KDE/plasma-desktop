@@ -27,9 +27,11 @@ QQC2.ItemDelegate {
     width: shortcutsList.width
     action: QQC2.Action {
         id: expandAction
-        onTriggered: root.state === 'expanded' ?  shortcutsList.selectedIndex = -1 : shortcutsList.selectedIndex = index
+        onTriggered: {
+            shortcutsList.selectedIndex = (root.state === "expanded") ? -1 : index;
+        }
     }
-    Accessible.name: root.state === 'expanded' ? i18n("Editing shortcut: %1", displayLabel.text) : displayLabel.text + keySequenceList.text
+    Accessible.name: root.state === "expanded" ? i18n("Editing shortcut: %1", displayLabel.text) : displayLabel.text + keySequenceList.text
     contentItem: ColumnLayout {
         clip: true
 

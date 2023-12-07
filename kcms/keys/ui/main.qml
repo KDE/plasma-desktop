@@ -182,7 +182,7 @@ KCM.AbstractKCM {
                         KeyNavigation.right: shortcutsList
 
                         onClicked: ListView.view.currentIndex = index
-                        highlighted: index === ListView.view.currentIndex
+                        highlighted: ListView.isCurrentItem
 
                         contentItem: RowLayout {
                             spacing: Kirigami.Units.smallSpacing
