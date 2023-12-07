@@ -156,6 +156,27 @@ ColumnLayout {
                 Layout.alignment: Qt.AlignHCenter
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Set Position...")
                 checkable: true
+                Keys.onPressed: (event)=> {
+                    if (!setPositionButton.checked) {
+                        return;
+                    }
+                    switch(event.key) {
+                    case Qt.Key_Left:
+                        panel.location = PlasmaCore.Types.LeftEdge;
+                        break;
+                    case Qt.Key_Right:
+                        panel.location = PlasmaCore.Types.RightEdge;
+                        break;
+                    case Qt.Key_Up:
+                        panel.location = PlasmaCore.Types.TopEdge;
+                        break;
+                    case Qt.Key_Down:
+                        panel.location = PlasmaCore.Types.BottomEdge;
+                        break;
+                    default:
+                    }
+                    setPositionButton.checked = false;
+                }
             }
         }
         Repeater {
