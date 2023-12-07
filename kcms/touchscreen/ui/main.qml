@@ -56,7 +56,7 @@ KCMUtils.SimpleKCM {
         QQC2.CheckBox {
             Kirigami.FormData.label: i18n("Enabled:")
 
-            checked: root.device.enabled
+            checked: root.device?.enabled ?? false
             onToggled: root.device.enabled = checked
         }
 
@@ -68,15 +68,17 @@ KCMUtils.SimpleKCM {
             }
             enabled: count > 2 //It's only interesting when there's more than 1 screen
             currentIndex: {
-                if (count == 0) {
+                if (!root.device || count === 0) {
                     return -1;
                 }
 
-                return outputsModel.rowForOutputName(root.device.outputName)
+                return outputsModel.rowForOutputName(root.device.outputName);
             }
             textRole: "display"
             onActivated: {
-                root.device.outputName = outputsModel.outputNameAt(currentIndex)
+                if (root.device) {
+                    root.device.outputName = outputsModel.outputNameAt(currentIndex);
+                }
             }
         }
     }
