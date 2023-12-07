@@ -344,14 +344,17 @@ Item {
                     ]
 
                     color: {
-                        if (model.selected) {
-                            return Kirigami.Theme.highlightedTextColor;
-                        } else if (root.useListViewMode) {
-                            return Kirigami.Theme.textColor;
-                        } else {
+                        if (!root.useListViewMode) {
                             // In this situation there's a shadow or a background rect, both of which are always black
                             return "white";
                         }
+
+                        if (model.selected) {
+                            return Kirigami.Theme.highlightedTextColor;
+                        }
+
+                        return Kirigami.Theme.textColor;
+
                     }
                     renderShadow: (!editor || editor.targetItem !== main) && !root.useListViewMode
                     opacity: model.isHidden ? 0.6 : 1
