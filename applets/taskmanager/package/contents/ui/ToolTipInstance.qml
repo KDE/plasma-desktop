@@ -17,6 +17,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2 as Kirigami
+import org.kde.kwindowsystem 1.0
 
 ColumnLayout {
     property var submodelIndex
@@ -229,7 +230,7 @@ ColumnLayout {
             // shadow can cover up the highlight
             anchors.margins: thumbnailLoader.anchors.margins
 
-            active: !albumArtImage.visible && !Number.isInteger(thumbnailSourceItem.winId) && flatIndex !== -1
+            active: !albumArtImage.visible && KWindowSystem.isPlatformWayland && flatIndex !== -1
             asynchronous: true
             //In a loader since we might not have PipeWire available yet (WITH_PIPEWIRE could be undefined in plasma-workspace/libtaskmanager/declarative/taskmanagerplugin.cpp)
             source: "PipeWireThumbnail.qml"
