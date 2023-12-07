@@ -191,7 +191,7 @@ KCM.AbstractKCM {
                                 title: model.display
                                 Layout.fillWidth: true
                                 opacity: model.pendingDeletion ? 0.5 : 1.0
-                                selected: componentDelegate.highlighted
+                                selected: componentDelegate.highlighted || componentDelegate.down
                             }
 
                             QQC2.CheckBox {

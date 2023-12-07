@@ -14,7 +14,10 @@ import org.kde.kcmutils as KCM
 
 QQC2.ItemDelegate {
     id: root
+
     property bool showExpandButton: true
+
+    readonly property bool selected: highlighted || down
 
     highlighted: false
     // If it's the only one in the list, clicking it won't do anything, so don't provide any visual feedback.
@@ -29,6 +32,10 @@ QQC2.ItemDelegate {
     Accessible.name: root.state === 'expanded' ? i18n("Editing shortcut: %1", displayLabel.text) : displayLabel.text + keySequenceList.text
     contentItem: ColumnLayout {
         clip: true
+
+        Kirigami.Theme.textColor: root.selected ? root.Kirigami.Theme.highlightedTextColor : undefined
+        Kirigami.Theme.inherit: !root.selected
+
         Item {
             Layout.alignment: Qt.AlignTop
             Layout.preferredHeight: topRow.implicitHeight
@@ -44,7 +51,17 @@ QQC2.ItemDelegate {
                 QQC2.Label {
                     id: keySequenceList
                     Layout.fillWidth: true
-                    color: model?.activeShortcuts?.length !== 0 ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+
+                    color: {
+                        if (root.selected) {
+                            return Kirigami.Theme.highlightedTextColor;
+                        } else if (model?.activeShortcuts?.length !== 0) {
+                            return Kirigami.Theme.textColor;
+                        } else {
+                            return Kirigami.Theme.disabledTextColor;
+                        }
+                    }
+
                     elide: Text.ElideRight
                     horizontalAlignment: Text.AlignRight
                     text: {
