@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 12:20+0000\n"
-"PO-Revision-Date: 2023-06-11 18:55+0530\n"
+"PO-Revision-Date: 2023-12-07 21:31+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ui/main.qml:24
 #, kde-format
@@ -176,22 +176,21 @@ msgstr ""
 "பெரிதாக்கப்படும்."
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double-click interval:"
-msgstr "பதிலாக இரட்டை க்ளிக் செய்து திறவுங்கள்"
+msgstr "இரட்டை க்ளிக் இடைவெளி:"
 
 #: ui/main.qml:343
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 மிநொ"
+msgstr[1] "%1 மிநொ"
 
 #: ui/main.qml:347
 #, kde-format
 msgid "msec"
-msgstr ""
+msgstr "மிநொ"
 
 #: ui/main.qml:361
 #, kde-format
@@ -199,6 +198,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"இதற்குள் இருமுறை கிளிக் செய்வது, இரட்டை கிளிக்காக கருத‍ப்படும். சில செயலிகள் இந்த "
+"அமைப்பை பொருட்படுத்தாமல் இருக்கலாம்."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -220,10 +221,9 @@ msgstr "உருள் பட்டையில் க்ளிக் செய
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double click interval"
-msgstr "பதிலாக இரட்டை க்ளிக் செய்து திறவுங்கள்"
+msgstr "இரட்டை கிளிக் இடைவெளி"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

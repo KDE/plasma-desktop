@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:38+0000\n"
+"POT-Creation-Date: 2023-12-08 01:36+0000\n"
 "PO-Revision-Date: 2023-11-14 14:06-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -275,12 +275,12 @@ msgstr "Selecionar arquivo..."
 msgid "Import"
 msgstr "Importar"
 
-#: ui/ShortcutActionDelegate.qml:29
+#: ui/ShortcutActionDelegate.qml:34
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Editando atalho: %1"
 
-#: ui/ShortcutActionDelegate.qml:41
+#: ui/ShortcutActionDelegate.qml:50
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -288,12 +288,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:54
+#: ui/ShortcutActionDelegate.qml:73
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Sem atalhos ativos"
 
-#: ui/ShortcutActionDelegate.qml:95
+#: ui/ShortcutActionDelegate.qml:114
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -301,37 +301,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Atalho padrão"
 msgstr[1] "Atalhos padrão"
 
-#: ui/ShortcutActionDelegate.qml:97
+#: ui/ShortcutActionDelegate.qml:116
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Sem atalho padrão"
 
-#: ui/ShortcutActionDelegate.qml:105
+#: ui/ShortcutActionDelegate.qml:124
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "O atalho padrão %1 está habilitado."
 
-#: ui/ShortcutActionDelegate.qml:105
+#: ui/ShortcutActionDelegate.qml:124
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "O atalho padrão %1 está desabilitado."
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:146
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Atalhos personalizados"
 
-#: ui/ShortcutActionDelegate.qml:153
+#: ui/ShortcutActionDelegate.qml:172
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Excluir este atalho"
 
-#: ui/ShortcutActionDelegate.qml:159
+#: ui/ShortcutActionDelegate.qml:178
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Adicionar atalho personalizado"
 
-#: ui/ShortcutActionDelegate.qml:196
+#: ui/ShortcutActionDelegate.qml:215
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Cancelar a captura do novo atalho"

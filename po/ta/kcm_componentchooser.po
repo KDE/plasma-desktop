@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-10-15 13:00+0530\n"
+"PO-Revision-Date: 2023-12-07 21:25+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
@@ -90,45 +90,41 @@ msgid "Details"
 msgstr "விவரங்கள்"
 
 #: ui/ComponentOverlay.qml:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid "This application can also open these file types:"
-msgstr "பின்வரும் கோப்புவகைகளை ஆதரிப்பதாக இச்செயலி கூறவில்லை:"
+msgstr "பின்வரும் கோப்புவகைகளையும் இச்செயலியால் திறக்கக்கூடும்:"
 
 #: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (தற்போது %2 தனில் திறக்கப்படுவது)"
 
 #: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "அனைத்தையும் %1 தனில் திற"
 
 #: ui/ComponentOverlay.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
-msgstr "பின்வரும் கோப்புவகைகளை ஆதரிப்பதாக இச்செயலி கூறவில்லை:"
+msgstr ""
+"பின்வரும் கோப்புவகைகளை ஆதரிப்பதாக இச்செயலி கூறவில்லை, ஆனாலும் அவற்றைத் திறக்கக்கூடியதாக "
+"இருக்கலாம்:"
 
 #: ui/ComponentOverlay.qml:143
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Force Open Anyway"
+#, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr "கட்டாயப்படுத்தி திற"
+msgstr "அனைத்தையுத் %1 தனில் திறக்குமாறு கட்டாயப்படுத்து"
 
 #: ui/ComponentOverlay.qml:155
 #, kde-format
 msgid "Configure Manually…"
-msgstr ""
+msgstr "கைமுறையாக அமை…"
 
 #: ui/main.qml:17
 #, kde-format

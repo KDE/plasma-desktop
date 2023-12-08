@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:38+0000\n"
+"POT-Creation-Date: 2023-12-08 01:36+0000\n"
 "PO-Revision-Date: 2021-01-23 14:48-0800\n"
 "Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -275,12 +275,12 @@ msgstr "ਫਾਇਲ ਚੁਣੋ..."
 msgid "Import"
 msgstr "ਇੰਪੋਰਟ ਕਰੋ"
 
-#: ui/ShortcutActionDelegate.qml:29
+#: ui/ShortcutActionDelegate.qml:34
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:41
+#: ui/ShortcutActionDelegate.qml:50
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -288,12 +288,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:54
+#: ui/ShortcutActionDelegate.qml:73
 #, kde-format
 msgid "No active shortcuts"
 msgstr "ਕੋਈ ਸਰਗਰਮ ਸ਼ਾਰਟਕੱਟ ਨਹੀਂ ਹੈ"
 
-#: ui/ShortcutActionDelegate.qml:95
+#: ui/ShortcutActionDelegate.qml:114
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -301,12 +301,12 @@ msgid_plural "Default shortcuts"
 msgstr[0] "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ"
 msgstr[1] "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ"
 
-#: ui/ShortcutActionDelegate.qml:97
+#: ui/ShortcutActionDelegate.qml:116
 #, kde-format
 msgid "No default shortcuts"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:105
+#: ui/ShortcutActionDelegate.qml:124
 #, fuzzy, kde-format
 #| msgctxt "%1 decides if singular or plural will be used"
 #| msgid "Default shortcut"
@@ -314,7 +314,7 @@ msgstr ""
 msgid "Default shortcut %1 is enabled."
 msgstr "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ"
 
-#: ui/ShortcutActionDelegate.qml:105
+#: ui/ShortcutActionDelegate.qml:124
 #, fuzzy, kde-format
 #| msgctxt "%1 decides if singular or plural will be used"
 #| msgid "Default shortcut"
@@ -322,22 +322,22 @@ msgstr "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ"
 msgid "Default shortcut %1 is disabled."
 msgstr "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:146
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "ਪਸੰਦੀਦਾ ਸ਼ਾਰਟਕੱਟ"
 
-#: ui/ShortcutActionDelegate.qml:153
+#: ui/ShortcutActionDelegate.qml:172
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "ਇਹ ਸ਼ਾਰਟਕੱਟ ਹਟਾਓ"
 
-#: ui/ShortcutActionDelegate.qml:159
+#: ui/ShortcutActionDelegate.qml:178
 #, kde-format
 msgid "Add custom shortcut"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:196
+#: ui/ShortcutActionDelegate.qml:215
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr ""
