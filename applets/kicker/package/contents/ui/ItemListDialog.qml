@@ -21,6 +21,7 @@ Kicker.SubMenu {
     property bool aboutToBeDestroyed: false
 
     visible: false
+    flags: Qt.WindowStaysOnTopHint
     hideOnWindowDeactivate: kicker.hideOnWindowDeactivate
     location: PlasmaCore.Types.Floating
     offset: Kirigami.Units.smallSpacing
