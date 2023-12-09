@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
+"POT-Creation-Date: 2023-12-09 01:37+0000\n"
 "PO-Revision-Date: 2023-11-23 11:57+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -290,22 +290,22 @@ msgid "Position"
 msgstr "Posició"
 
 #: contents/configuration/PanelConfiguration.qml:137
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Top"
 msgstr "Dalt"
 
 #: contents/configuration/PanelConfiguration.qml:138
-#: contents/configuration/PanelConfiguration.qml:292
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Right"
 msgstr "Dreta"
 
 #: contents/configuration/PanelConfiguration.qml:139
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Left"
 msgstr "Esquerra"
 
 #: contents/configuration/PanelConfiguration.qml:140
-#: contents/configuration/PanelConfiguration.qml:292
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Bottom"
 msgstr "Baix"
 
@@ -313,100 +313,100 @@ msgstr "Baix"
 msgid "Set Position..."
 msgstr "Estableix una posició..."
 
-#: contents/configuration/PanelConfiguration.qml:226
+#: contents/configuration/PanelConfiguration.qml:247
 msgid "Alignment"
 msgstr "Alineació"
 
-#: contents/configuration/PanelConfiguration.qml:291
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Center"
 msgstr "Centre"
 
-#: contents/configuration/PanelConfiguration.qml:314
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Length"
 msgstr "Longitud"
 
-#: contents/configuration/PanelConfiguration.qml:332
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Fill height"
 msgstr "Omple l'alçada"
 
-#: contents/configuration/PanelConfiguration.qml:332
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Fill width"
 msgstr "Omple l'amplada"
 
-#: contents/configuration/PanelConfiguration.qml:333
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Fit content"
 msgstr "Ajusta el contingut"
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:355
 msgid "Custom"
 msgstr "Personalitzada"
 
-#: contents/configuration/PanelConfiguration.qml:370
+#: contents/configuration/PanelConfiguration.qml:391
 msgid "Visibility"
 msgstr "Visibilitat"
 
-#: contents/configuration/PanelConfiguration.qml:382
+#: contents/configuration/PanelConfiguration.qml:403
 msgid "Always visible"
 msgstr "Sempre visible"
 
-#: contents/configuration/PanelConfiguration.qml:383
+#: contents/configuration/PanelConfiguration.qml:404
 msgid "Auto hide"
 msgstr "Oculta automàticament"
 
-#: contents/configuration/PanelConfiguration.qml:384
+#: contents/configuration/PanelConfiguration.qml:405
 msgid "Dodge windows"
 msgstr "Esvaeix les finestres"
 
-#: contents/configuration/PanelConfiguration.qml:385
+#: contents/configuration/PanelConfiguration.qml:406
 msgid "Windows Go Below"
 msgstr "Les finestres van a sota"
 
-#: contents/configuration/PanelConfiguration.qml:428
+#: contents/configuration/PanelConfiguration.qml:449
 msgid "Opacity"
 msgstr "Opacitat"
 
-#: contents/configuration/PanelConfiguration.qml:441
+#: contents/configuration/PanelConfiguration.qml:462
 msgid "Adaptive"
 msgstr "Adaptativa"
 
-#: contents/configuration/PanelConfiguration.qml:442
+#: contents/configuration/PanelConfiguration.qml:463
 msgid "Opaque"
 msgstr "Opac"
 
-#: contents/configuration/PanelConfiguration.qml:443
+#: contents/configuration/PanelConfiguration.qml:464
 msgid "Translucent"
 msgstr "Translúcid"
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:488
 msgid "Style"
 msgstr "Estil"
 
-#: contents/configuration/PanelConfiguration.qml:478
+#: contents/configuration/PanelConfiguration.qml:499
 msgid "Floating"
 msgstr "Flotant"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:515
 msgid "Panel Width:"
 msgstr "Amplada del plafó:"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:515
 msgid "Height:"
 msgstr "Alçada:"
 
-#: contents/configuration/PanelConfiguration.qml:528
+#: contents/configuration/PanelConfiguration.qml:549
 msgid "Focus shortcut:"
 msgstr "Drecera de focus:"
 
-#: contents/configuration/PanelConfiguration.qml:538
+#: contents/configuration/PanelConfiguration.qml:559
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Premeu aquesta drecera de teclat per a moure el focus al plafó"
 
-#: contents/configuration/PanelConfiguration.qml:554
+#: contents/configuration/PanelConfiguration.qml:575
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Suprimeix el plafó"
 
-#: contents/configuration/PanelConfiguration.qml:557
+#: contents/configuration/PanelConfiguration.qml:578
 msgid "Remove this panel; this action is undo-able"
 msgstr "Elimina aquest plafó; aquesta acció no es pot desfer"
 

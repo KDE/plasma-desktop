@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
+"POT-Creation-Date: 2023-12-09 01:37+0000\n"
 "PO-Revision-Date: 2022-12-28 21:26+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -294,22 +294,22 @@ msgid "Position"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:137
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Top"
 msgstr "Sus"
 
 #: contents/configuration/PanelConfiguration.qml:138
-#: contents/configuration/PanelConfiguration.qml:292
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Right"
 msgstr "Dreapta"
 
 #: contents/configuration/PanelConfiguration.qml:139
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Left"
 msgstr "Stânga"
 
 #: contents/configuration/PanelConfiguration.qml:140
-#: contents/configuration/PanelConfiguration.qml:292
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Bottom"
 msgstr "Jos"
 
@@ -317,130 +317,130 @@ msgstr "Jos"
 msgid "Set Position..."
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:226
+#: contents/configuration/PanelConfiguration.qml:247
 #, fuzzy
 #| msgid "Panel Alignment"
 msgid "Alignment"
 msgstr "Aliniere panou"
 
-#: contents/configuration/PanelConfiguration.qml:291
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Center"
 msgstr "Centru"
 
-#: contents/configuration/PanelConfiguration.qml:314
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Length"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:332
+#: contents/configuration/PanelConfiguration.qml:353
 #, fuzzy
 #| msgid "Panel height:"
 msgid "Fill height"
 msgstr "Înălțime panou:"
 
-#: contents/configuration/PanelConfiguration.qml:332
+#: contents/configuration/PanelConfiguration.qml:353
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Fill width"
 msgstr "Lățime panou:"
 
-#: contents/configuration/PanelConfiguration.qml:333
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Fit content"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:355
 msgid "Custom"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:370
+#: contents/configuration/PanelConfiguration.qml:391
 #, fuzzy
 #| msgid "Visibility"
 msgid "Visibility"
 msgstr "Vizibilitate"
 
-#: contents/configuration/PanelConfiguration.qml:382
+#: contents/configuration/PanelConfiguration.qml:403
 #, fuzzy
 #| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Întotdeauna vizibil"
 
-#: contents/configuration/PanelConfiguration.qml:383
+#: contents/configuration/PanelConfiguration.qml:404
 #, fuzzy
 #| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "Ascunde automat"
 
-#: contents/configuration/PanelConfiguration.qml:384
+#: contents/configuration/PanelConfiguration.qml:405
 msgid "Dodge windows"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:385
+#: contents/configuration/PanelConfiguration.qml:406
 #, fuzzy
 #| msgid "Windows Go Below"
 msgid "Windows Go Below"
 msgstr "Ferestrele merg dedesubt"
 
-#: contents/configuration/PanelConfiguration.qml:428
+#: contents/configuration/PanelConfiguration.qml:449
 #, fuzzy
 #| msgid "Opacity"
 msgid "Opacity"
 msgstr "Opacitate"
 
-#: contents/configuration/PanelConfiguration.qml:441
+#: contents/configuration/PanelConfiguration.qml:462
 msgid "Adaptive"
 msgstr "Adaptivă"
 
-#: contents/configuration/PanelConfiguration.qml:442
+#: contents/configuration/PanelConfiguration.qml:463
 #, fuzzy
 #| msgid "Opaque"
 msgid "Opaque"
 msgstr "Opac"
 
-#: contents/configuration/PanelConfiguration.qml:443
+#: contents/configuration/PanelConfiguration.qml:464
 #, fuzzy
 #| msgid "Translucent"
 msgid "Translucent"
 msgstr "Translucid"
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:488
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:478
+#: contents/configuration/PanelConfiguration.qml:499
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating"
 msgstr "Panou flotant"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:515
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Lățime panou:"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:515
 #, fuzzy
 #| msgid "Height"
 msgid "Height:"
 msgstr "Înălțime"
 
-#: contents/configuration/PanelConfiguration.qml:528
+#: contents/configuration/PanelConfiguration.qml:549
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Scurtătură"
 
-#: contents/configuration/PanelConfiguration.qml:538
+#: contents/configuration/PanelConfiguration.qml:559
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:554
+#: contents/configuration/PanelConfiguration.qml:575
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Elimină panoul"
 
-#: contents/configuration/PanelConfiguration.qml:557
+#: contents/configuration/PanelConfiguration.qml:578
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 

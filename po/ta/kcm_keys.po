@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:36+0000\n"
-"PO-Revision-Date: 2023-01-12 21:32+0530\n"
+"PO-Revision-Date: 2023-12-08 21:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: globalaccelmodel.cpp:218
 #, kde-format
@@ -116,22 +116,19 @@ msgid "Common Actions"
 msgstr "பொதுவான செயல்கள்"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action: button Import shortcut scheme"
 msgid "Import…"
-msgstr "இறக்குமதி"
+msgstr "இறக்குமதி செய்…"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Cancel Export"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
 msgstr "ஏற்றுமதியை ரத்து செய்"
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "ஏற்றுமதி செய்…"
@@ -148,17 +145,16 @@ msgid ""
 msgstr "ஏற்றுமதி செய்யும் திட்டத்தில் இருக்க வேண்டிய கூறுகளை தேர்ந்தெடுக்கவும்"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid "Save scheme"
+#, kde-format
 msgctxt "@action:button Save shortcut scheme"
 msgid "Save Scheme"
 msgstr "திட்டத்தை சேமி"
 
 #: ui/main.qml:158
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
-msgstr ""
+msgstr "புதியதைச் சேர்"
 
 #: ui/main.qml:164
 #, fuzzy, kde-format
@@ -166,13 +162,13 @@ msgstr ""
 #| msgid "Add Application…"
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr "செயலியை சேர்…"
+msgstr "செயலி…"
 
 #: ui/main.qml:170
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr ""
+msgstr "சிறுநிரல் அல்லது கட்டளை…"
 
 #: ui/main.qml:222
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
+"POT-Creation-Date: 2023-12-09 01:37+0000\n"
 "PO-Revision-Date: 2023-11-23 08:31+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -291,22 +291,22 @@ msgid "Position"
 msgstr "Позиція"
 
 #: contents/configuration/PanelConfiguration.qml:137
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Top"
 msgstr "Вгору"
 
 #: contents/configuration/PanelConfiguration.qml:138
-#: contents/configuration/PanelConfiguration.qml:292
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Right"
 msgstr "Праворуч"
 
 #: contents/configuration/PanelConfiguration.qml:139
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Left"
 msgstr "Ліворуч"
 
 #: contents/configuration/PanelConfiguration.qml:140
-#: contents/configuration/PanelConfiguration.qml:292
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Bottom"
 msgstr "Вниз"
 
@@ -314,100 +314,100 @@ msgstr "Вниз"
 msgid "Set Position..."
 msgstr "Встановити позицію…"
 
-#: contents/configuration/PanelConfiguration.qml:226
+#: contents/configuration/PanelConfiguration.qml:247
 msgid "Alignment"
 msgstr "Вирівнювання"
 
-#: contents/configuration/PanelConfiguration.qml:291
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Center"
 msgstr "За центром"
 
-#: contents/configuration/PanelConfiguration.qml:314
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Length"
 msgstr "Довжина"
 
-#: contents/configuration/PanelConfiguration.qml:332
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Fill height"
 msgstr "Заповнити у висоту"
 
-#: contents/configuration/PanelConfiguration.qml:332
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Fill width"
 msgstr "Заповнити у ширину"
 
-#: contents/configuration/PanelConfiguration.qml:333
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Fit content"
 msgstr "За вмістом"
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:355
 msgid "Custom"
 msgstr "Нетиповий"
 
-#: contents/configuration/PanelConfiguration.qml:370
+#: contents/configuration/PanelConfiguration.qml:391
 msgid "Visibility"
 msgstr "Видимість"
 
-#: contents/configuration/PanelConfiguration.qml:382
+#: contents/configuration/PanelConfiguration.qml:403
 msgid "Always visible"
 msgstr "Показувати завжди"
 
-#: contents/configuration/PanelConfiguration.qml:383
+#: contents/configuration/PanelConfiguration.qml:404
 msgid "Auto hide"
 msgstr "Автоматично ховати"
 
-#: contents/configuration/PanelConfiguration.qml:384
+#: contents/configuration/PanelConfiguration.qml:405
 msgid "Dodge windows"
 msgstr "Стежити за вікнами"
 
-#: contents/configuration/PanelConfiguration.qml:385
+#: contents/configuration/PanelConfiguration.qml:406
 msgid "Windows Go Below"
 msgstr "Перекриває вікна"
 
-#: contents/configuration/PanelConfiguration.qml:428
+#: contents/configuration/PanelConfiguration.qml:449
 msgid "Opacity"
 msgstr "Непрозорість"
 
-#: contents/configuration/PanelConfiguration.qml:441
+#: contents/configuration/PanelConfiguration.qml:462
 msgid "Adaptive"
 msgstr "Адаптивна"
 
-#: contents/configuration/PanelConfiguration.qml:442
+#: contents/configuration/PanelConfiguration.qml:463
 msgid "Opaque"
 msgstr "Непрозорість"
 
-#: contents/configuration/PanelConfiguration.qml:443
+#: contents/configuration/PanelConfiguration.qml:464
 msgid "Translucent"
 msgstr "Прозорість"
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:488
 msgid "Style"
 msgstr "Стиль"
 
-#: contents/configuration/PanelConfiguration.qml:478
+#: contents/configuration/PanelConfiguration.qml:499
 msgid "Floating"
 msgstr "Рухома"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:515
 msgid "Panel Width:"
 msgstr "Ширина панелі:"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:515
 msgid "Height:"
 msgstr "Висота:"
 
-#: contents/configuration/PanelConfiguration.qml:528
+#: contents/configuration/PanelConfiguration.qml:549
 msgid "Focus shortcut:"
 msgstr "Скорочення фокусування:"
 
-#: contents/configuration/PanelConfiguration.qml:538
+#: contents/configuration/PanelConfiguration.qml:559
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Натисніть цю комбінацію клавіш, щоб передати фокус панелі"
 
-#: contents/configuration/PanelConfiguration.qml:554
+#: contents/configuration/PanelConfiguration.qml:575
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Вилучити панель"
 
-#: contents/configuration/PanelConfiguration.qml:557
+#: contents/configuration/PanelConfiguration.qml:578
 msgid "Remove this panel; this action is undo-able"
 msgstr "Вилучити цю панель; наслідки цієї дії можна скасувати"
 

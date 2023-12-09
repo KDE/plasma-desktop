@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
+"POT-Creation-Date: 2023-12-09 01:37+0000\n"
 "PO-Revision-Date: 2023-11-24 22:30+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -287,22 +287,22 @@ msgid "Position"
 msgstr "Positie"
 
 #: contents/configuration/PanelConfiguration.qml:137
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Top"
 msgstr "Boven"
 
 #: contents/configuration/PanelConfiguration.qml:138
-#: contents/configuration/PanelConfiguration.qml:292
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Right"
 msgstr "Rechts"
 
 #: contents/configuration/PanelConfiguration.qml:139
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Left"
 msgstr "Links"
 
 #: contents/configuration/PanelConfiguration.qml:140
-#: contents/configuration/PanelConfiguration.qml:292
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Bottom"
 msgstr "Onder"
 
@@ -310,100 +310,100 @@ msgstr "Onder"
 msgid "Set Position..."
 msgstr "Positie instellen..."
 
-#: contents/configuration/PanelConfiguration.qml:226
+#: contents/configuration/PanelConfiguration.qml:247
 msgid "Alignment"
 msgstr "Uitlijning"
 
-#: contents/configuration/PanelConfiguration.qml:291
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Center"
 msgstr "Midden"
 
-#: contents/configuration/PanelConfiguration.qml:314
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Length"
 msgstr "Lengte"
 
-#: contents/configuration/PanelConfiguration.qml:332
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Fill height"
 msgstr "Volle hoogte"
 
-#: contents/configuration/PanelConfiguration.qml:332
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Fill width"
 msgstr "Volle breedte"
 
-#: contents/configuration/PanelConfiguration.qml:333
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Fit content"
 msgstr "Aangepast aan inhoud"
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:355
 msgid "Custom"
 msgstr "Aangepast"
 
-#: contents/configuration/PanelConfiguration.qml:370
+#: contents/configuration/PanelConfiguration.qml:391
 msgid "Visibility"
 msgstr "Zichtbaarheid"
 
-#: contents/configuration/PanelConfiguration.qml:382
+#: contents/configuration/PanelConfiguration.qml:403
 msgid "Always visible"
 msgstr "Altijd zichtbaar"
 
-#: contents/configuration/PanelConfiguration.qml:383
+#: contents/configuration/PanelConfiguration.qml:404
 msgid "Auto hide"
 msgstr "Automatisch verbergen"
 
-#: contents/configuration/PanelConfiguration.qml:384
+#: contents/configuration/PanelConfiguration.qml:405
 msgid "Dodge windows"
 msgstr "Ontwijk vensters"
 
-#: contents/configuration/PanelConfiguration.qml:385
+#: contents/configuration/PanelConfiguration.qml:406
 msgid "Windows Go Below"
 msgstr "Vensters naar onderen"
 
-#: contents/configuration/PanelConfiguration.qml:428
+#: contents/configuration/PanelConfiguration.qml:449
 msgid "Opacity"
 msgstr "Dekking"
 
-#: contents/configuration/PanelConfiguration.qml:441
+#: contents/configuration/PanelConfiguration.qml:462
 msgid "Adaptive"
 msgstr "Adaptief"
 
-#: contents/configuration/PanelConfiguration.qml:442
+#: contents/configuration/PanelConfiguration.qml:463
 msgid "Opaque"
 msgstr "Ondoorzichtig"
 
-#: contents/configuration/PanelConfiguration.qml:443
+#: contents/configuration/PanelConfiguration.qml:464
 msgid "Translucent"
 msgstr "Transparant"
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:488
 msgid "Style"
 msgstr "Stijl"
 
-#: contents/configuration/PanelConfiguration.qml:478
+#: contents/configuration/PanelConfiguration.qml:499
 msgid "Floating"
 msgstr "Zwevend"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:515
 msgid "Panel Width:"
 msgstr "Paneelbreedte:"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:515
 msgid "Height:"
 msgstr "Hoogte:"
 
-#: contents/configuration/PanelConfiguration.qml:528
+#: contents/configuration/PanelConfiguration.qml:549
 msgid "Focus shortcut:"
 msgstr "Sneltoets voor focus:"
 
-#: contents/configuration/PanelConfiguration.qml:538
+#: contents/configuration/PanelConfiguration.qml:559
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Deze sneltoets indrukken om focus te verplaatsen naar het paneel"
 
-#: contents/configuration/PanelConfiguration.qml:554
+#: contents/configuration/PanelConfiguration.qml:575
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Paneel verwijderen"
 
-#: contents/configuration/PanelConfiguration.qml:557
+#: contents/configuration/PanelConfiguration.qml:578
 msgid "Remove this panel; this action is undo-able"
 msgstr "Dit paneel verwijderen; deze actie kan niet ongedaan worden"
 

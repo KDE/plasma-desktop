@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:35+0000\n"
-"PO-Revision-Date: 2023-05-21 14:37+0530\n"
+"POT-Creation-Date: 2023-12-09 01:37+0000\n"
+"PO-Revision-Date: 2023-12-08 21:13+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -269,7 +269,7 @@ msgstr "இடைவெளியை சேர்"
 
 #: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "பலகைக்கு இடைவெளியை சேர்க்கும்"
 
 #: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
@@ -277,158 +277,130 @@ msgstr "பிளாஸ்மாய்டுகளை சேர்…"
 
 #: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "பலகையில் பிளாஸ்மாய்டுகளைச் இழுத்துப் போட விடும் ஓரப்பட்டையைத் திறக்கும்"
 
 #: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
-msgstr ""
+msgstr "இருப்பிடம்"
 
 #: contents/configuration/PanelConfiguration.qml:137
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Top"
 msgstr "மேலே"
 
 #: contents/configuration/PanelConfiguration.qml:138
-#: contents/configuration/PanelConfiguration.qml:292
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Right"
 msgstr "வலதுபுறமாக"
 
 #: contents/configuration/PanelConfiguration.qml:139
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Left"
 msgstr "இடதுபுறமாக"
 
 #: contents/configuration/PanelConfiguration.qml:140
-#: contents/configuration/PanelConfiguration.qml:292
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Bottom"
 msgstr "கீழே"
 
 #: contents/configuration/PanelConfiguration.qml:157
 msgid "Set Position..."
-msgstr ""
+msgstr "இருப்பிடத்தை அமை…"
 
-#: contents/configuration/PanelConfiguration.qml:226
-#, fuzzy
-#| msgid "Alignment:"
+#: contents/configuration/PanelConfiguration.qml:247
 msgid "Alignment"
-msgstr "சீரமைப்பு:"
+msgstr "சீரமைப்பு"
 
-#: contents/configuration/PanelConfiguration.qml:291
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Center"
 msgstr "நடுவில்"
 
-#: contents/configuration/PanelConfiguration.qml:314
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Length"
-msgstr ""
+msgstr "நீளம்"
 
-#: contents/configuration/PanelConfiguration.qml:332
-#, fuzzy
-#| msgid "Panel height:"
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Fill height"
-msgstr "பலகையின் உயரம்:"
+msgstr "உயரத்தை நிரப்பு"
 
-#: contents/configuration/PanelConfiguration.qml:332
-#, fuzzy
-#| msgid "Panel width:"
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Fill width"
-msgstr "பலகையின் அகலம்:"
+msgstr "அகலத்தை நிரப்பு"
 
-#: contents/configuration/PanelConfiguration.qml:333
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Fit content"
-msgstr ""
+msgstr "உள்ளடக்கத்தைப் பொறுத்து"
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:355
 msgid "Custom"
-msgstr ""
+msgstr "விருப்பமானது"
 
-#: contents/configuration/PanelConfiguration.qml:370
-#, fuzzy
-#| msgid "Visibility:"
+#: contents/configuration/PanelConfiguration.qml:391
 msgid "Visibility"
-msgstr "காட்டப்படுவது:"
+msgstr "காட்டப்படுவது"
 
-#: contents/configuration/PanelConfiguration.qml:382
-#, fuzzy
-#| msgid "Always Visible"
+#: contents/configuration/PanelConfiguration.qml:403
 msgid "Always visible"
 msgstr "எப்போது காட்டப்படும்"
 
-#: contents/configuration/PanelConfiguration.qml:383
-#, fuzzy
-#| msgid "Auto-Hide"
+#: contents/configuration/PanelConfiguration.qml:404
 msgid "Auto hide"
 msgstr "தானாக மறை"
 
-#: contents/configuration/PanelConfiguration.qml:384
+#: contents/configuration/PanelConfiguration.qml:405
 msgid "Dodge windows"
-msgstr ""
+msgstr "சாளரங்களைத் தவிர்"
 
-#: contents/configuration/PanelConfiguration.qml:385
-#, fuzzy
-#| msgid "Windows Behind"
+#: contents/configuration/PanelConfiguration.qml:406
 msgid "Windows Go Below"
-msgstr "சாளரங்கள் பின்னே"
+msgstr "சாளரங்கள் இதற்கு அடியில் இருக்கலாம்"
 
-#: contents/configuration/PanelConfiguration.qml:428
-#, fuzzy
-#| msgid "Opacity:"
+#: contents/configuration/PanelConfiguration.qml:449
 msgid "Opacity"
-msgstr "ஒளிபுகாமை:"
+msgstr "ஒளிபுகாமை"
 
-#: contents/configuration/PanelConfiguration.qml:441
+#: contents/configuration/PanelConfiguration.qml:462
 msgid "Adaptive"
 msgstr "மாறக்கூடியது"
 
-#: contents/configuration/PanelConfiguration.qml:442
-#, fuzzy
-#| msgid "Always Opaque"
+#: contents/configuration/PanelConfiguration.qml:463
 msgid "Opaque"
-msgstr "எப்போதும் ஒளிபுகாத‍து"
+msgstr "ஒளி புகாத‍து"
 
-#: contents/configuration/PanelConfiguration.qml:443
-#, fuzzy
-#| msgid "Always Translucent"
+#: contents/configuration/PanelConfiguration.qml:464
 msgid "Translucent"
-msgstr "எப்போதும் ஒளிபுகக்கூடியது"
+msgstr "ஒளிபுகக்கூடியது"
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:488
 msgid "Style"
-msgstr ""
+msgstr "வகை"
 
-#: contents/configuration/PanelConfiguration.qml:478
+#: contents/configuration/PanelConfiguration.qml:499
 msgid "Floating"
 msgstr "மிதப்பது"
 
-#: contents/configuration/PanelConfiguration.qml:494
-#, fuzzy
-#| msgid "Panel width:"
+#: contents/configuration/PanelConfiguration.qml:515
 msgid "Panel Width:"
 msgstr "பலகையின் அகலம்:"
 
-#: contents/configuration/PanelConfiguration.qml:494
-#, fuzzy
-#| msgid "Right"
+#: contents/configuration/PanelConfiguration.qml:515
 msgid "Height:"
-msgstr "வலதுபுறமாக"
+msgstr "உயரம்:"
 
-#: contents/configuration/PanelConfiguration.qml:528
-#, fuzzy
-#| msgid "Focus Shortcut:"
+#: contents/configuration/PanelConfiguration.qml:549
 msgid "Focus shortcut:"
 msgstr "குவியப்படுத்தும் சுருக்குவழி:"
 
-#: contents/configuration/PanelConfiguration.qml:538
+#: contents/configuration/PanelConfiguration.qml:559
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "பலகையை குவியப்படுத்த இந்த விசைச் சுருக்குவழியை அழுத்துங்கள்"
 
-#: contents/configuration/PanelConfiguration.qml:554
-#, fuzzy
-#| msgid "Remove Panel"
+#: contents/configuration/PanelConfiguration.qml:575
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "பலகையை நீக்கு"
 
-#: contents/configuration/PanelConfiguration.qml:557
+#: contents/configuration/PanelConfiguration.qml:578
 msgid "Remove this panel; this action is undo-able"
 msgstr "பலகையை நீக்கும்; இச்செயலை செயல்நீக்கலாம்"
 
@@ -500,7 +472,7 @@ msgstr "மாற்று பிளாஸ்மாய்டுகள்"
 
 #: contents/explorer/AppletDelegate.qml:42
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "ஆதரிக்கப்படாத பிளாஸ்மாய்ட்"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"

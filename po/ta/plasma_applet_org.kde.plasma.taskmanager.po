@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:36+0000\n"
-"PO-Revision-Date: 2023-02-14 22:09+0530\n"
+"PO-Revision-Date: 2023-12-08 21:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -93,42 +93,40 @@ msgstr "பலகையிலுள்ள காலியிடத்தை ந�
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "பல நெடுவரிசைகளைப் பயன்படுத்துவது:"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "பல வரிசைகளைப் பயன்படுத்துவது:"
 
 #: package/contents/ui/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "ஒருபோதும் வேண்டாம்"
 
 #: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
-msgstr ""
+msgstr "பலகையில் இடம் குறைவாக இருந்து அதன் அகலம் போதியதாக இருக்கும்போது"
 
 #: package/contents/ui/ConfigAppearance.qml:99
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
-msgstr ""
+msgstr "பலகையின் அகலம் போதியதாக இருக்கும்போது"
 
 #: package/contents/ui/ConfigAppearance.qml:105
-#, fuzzy, kde-format
-#| msgid "Maximum columns:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "அதிகபட்ச நெடுவரிசைகள்:"
 
 #: package/contents/ui/ConfigAppearance.qml:105
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "அதிகபட்ச வரிசைகள்:"
