@@ -65,9 +65,9 @@ QString KdePlatformDependent::getAccessToken(const QUrl & /*baseUrl*/) const
             if (account) {
                 bool completed{false};
                 qCDebug(ATTICA_PLUGIN_LOG) << "Fetching data for" << accountId;
-                GetCredentialsJob *job = new GetCredentialsJob(accountId, accountsManager);
+                KAccounts::GetCredentialsJob *job = new KAccounts::GetCredentialsJob(accountId, accountsManager);
                 connect(job, &KJob::finished, [&completed, &accessToken, &idToken](KJob *kjob) {
-                    GetCredentialsJob *job = qobject_cast<GetCredentialsJob *>(kjob);
+                    KAccounts::GetCredentialsJob *job = qobject_cast<KAccounts::GetCredentialsJob *>(kjob);
                     const QVariantMap credentialsData = job->credentialsData();
                     accessToken = credentialsData[QStringLiteral("AccessToken")].toString();
                     idToken = credentialsData[QStringLiteral("IdToken")].toString();
