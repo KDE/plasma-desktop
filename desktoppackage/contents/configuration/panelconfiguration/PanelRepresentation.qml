@@ -30,6 +30,9 @@ Item {
     property var mainIconSource: null
     property int screenHeight: Math.round(screenRect.height / 2)
 
+    property bool visibleApplet: false
+    property bool floatingApplet: false
+
     readonly property bool iconAndLabelsShouldlookSelected: checked || mouseArea.pressed
 
     function maximizeWindow() {
@@ -115,6 +118,7 @@ Item {
             RowLayout {
                 anchors.fill: parent
                 z: 1
+
                 Rectangle {
                     id: panelImage
 
@@ -201,6 +205,23 @@ Item {
                         color: "transparent"
                         border.color: Kirigami.Theme.highlightColor
                         radius: panelImage.radius
+                    }
+                }
+            }
+
+            Rectangle {
+                x: panelImage.x
+                y: panelImage.y - height + Kirigami.Units.smallSpacing * (root.floatingApplet ? -1 : 1)
+                height: Math.round(parent.height / 2)
+                width: Math.round(parent.width / 3)
+                visible: root.visibleApplet
+
+                color: window.color
+                radius: 5
+
+                Behavior on y {
+                    NumberAnimation {
+                        duration: Kirigami.Units.shortDuration
                     }
                 }
             }

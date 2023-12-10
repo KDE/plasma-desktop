@@ -189,7 +189,7 @@ Item {
     property bool floating: panel.floating
     property bool hasCompositing: KWindowSystem.isPlatformX11 ? KX11Extras.compositingActive : true
     readonly property bool screenCovered: touchingWindow && panel.visibilityMode == Panel.Global.NormalPanel
-    property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent, hasCompositing, containment]
+    property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent, hasCompositing, containment, panel.floatingApplets]
     onStateTriggersChanged: {
         let opaqueApplets = false
         let floatingApplets = false
@@ -197,9 +197,11 @@ Item {
             panelOpacity = 1
             opaqueApplets = true
             floatingnessTarget = 0
+            floatingApplets = (panel.floatingApplets && !floating)
         } else if ((!floating || screenCovered) && (isTransparent || (!screenCovered && isAdaptive))) {
             panelOpacity = 0
             floatingnessTarget = 0
+            floatingApplets = (panel.floatingApplets && !floating)
         } else if ((floating && !screenCovered) && (isTransparent || isAdaptive)) {
             panelOpacity = 0
             floatingnessTarget = 1
