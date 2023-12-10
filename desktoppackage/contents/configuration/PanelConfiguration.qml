@@ -489,16 +489,30 @@ ColumnLayout {
             }
             PanelRepresentation {
                 Layout.alignment: Qt.AlignHCenter
-                floatingGap: Kirigami.Units.smallSpacing * floatingSwitch.checked
-                onClicked: floatingSwitch.checked = !floatingSwitch.checked
+                floatingGap: Kirigami.Units.smallSpacing * (floatingBox.previewIndex === 2)
+                onClicked: floatingBox.popup.visible = true
             }
-            PC3.Switch {
-                id: floatingSwitch
+            PC3.ComboBox {
+                id: floatingBox
+                readonly property int previewIndex: popup.visible ? highlightedIndex : currentIndex
+                model: [
+                    i18nd("plasma_shell_org.kde.plasma.desktop", "Nothing"),
+                    i18nd("plasma_shell_org.kde.plasma.desktop", "Applets"),
+                    i18nd("plasma_shell_org.kde.plasma.desktop", "Panel & Applets")
+                ]
                 Layout.alignment: Qt.AlignHCenter
-                Layout.minimumHeight: transparencyBox.height
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating")
-                Component.onCompleted: checked = panel.floating
-                onCheckedChanged: panel.floating = checked
+                Layout.minimumWidth: opacityRepresentation.width
+                currentIndex: (panel.floating ? 2 : panel.floatingApplets ? 1 : 0)
+                onActivated: (index) => {
+                    if (index === 0) {
+                        panel.floating = panel.floatingApplets = false
+                    } else if (index === 1) {
+                        panel.floating = false
+                        panel.floatingApplets = true
+                    } else {
+                        panel.floating = true
+                    }
+                }
             }
         }
 
