@@ -291,7 +291,6 @@ Item {
         target: panel
         property: "length"
         when: containment
-        delayed: true
         value: {
             if (!containment) {
                 return;
