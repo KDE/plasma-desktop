@@ -31,6 +31,7 @@ include(FeatureSummary)
 include(CheckIncludeFiles)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
+include(ECMQmlModule)
 
 option(BUILD_KCM_MOUSE_KWIN_WAYLAND "Build the Mouse KCM's KWin+Wayland backend" ON)
 option(BUILD_KCM_MOUSE_X11 "Build the Mouse KCM's X11 backend" ON)
