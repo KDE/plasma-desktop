@@ -93,7 +93,7 @@ Item {
         id: visibleWindowsModel
         filterByVirtualDesktop: true
         filterByActivity: true
-        filterByScreen: false
+        filterByScreen: true
         filterByRegion: TaskManager.RegionFilterMode.Intersect
         filterHidden: true
         filterMinimized: true
