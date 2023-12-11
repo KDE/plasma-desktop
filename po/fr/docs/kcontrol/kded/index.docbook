@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % French "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Services en arrière-plan</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+&traducteurLudovicGrossard; 
+</authorgroup>
+
+<date
+>08-04-2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configuration du système</keyword>
+<keyword
+>Service</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Le module <guilabel
+>Gestionnaire de services</guilabel
+> vous donne un aperçu de tous les modules externes du démon de &kde;, que l'on appelle également services. Généralement, il y a deux types de services :</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Services chargés à la demande</guilabel
+></term>
+<listitem
+><para
+>Il s'agit d'une liste des services de &kde; disponibles qui peuvent être démarrés à la demande. Il sont listés ici uniquement pour des raisons pratiques car vous ne pouvez pas les manipuler. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Services au démarrage</guilabel
+></term>
+<listitem
+><para
+>Ceci affiche tous les services de &kde; qui peuvent être chargés au démarrage. Les services pour lesquels la colonne <guilabel
+>Utilisation</guilabel
+> est cochée seront appelés au prochain démarrage.</para>
+<para
+>Soyez prudent avec la désactivation de services inconnus : certains services sont vitaux pour &kde;. Ne désactivez pas de services si vous ne savez pas ce qu'ils font. </para>
+<para
+>Pour modifier l'<guilabel
+>état</guilabel
+> d'un service, choisissez-le dans la liste. Vous pouvez alors utiliser les boutons <guibutton
+>Démarrage</guibutton
+> et <guibutton
+>Arrêter</guibutton
+> pour basculer entre les états <guilabel
+>N'est pas lancé</guilabel
+> et <guilabel
+>En fonctionnement</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>
