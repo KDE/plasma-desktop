@@ -82,12 +82,14 @@ Item {
     // Examples of such windows: properties of a file on desktop, or portal "open with" dialog
     property bool touchingWindow: false
     property bool touchingWindowDirect: visibleWindowsModel.count > 0
+    property bool showingDesktop: KWindowSystem.showingDesktop
     Timer {
         id: touchingWindowDebounceTimer
         interval: 10  // ms, I find that this value is enough while not causing unresponsiveness while dragging windows close
-        onTriggered: root.touchingWindow = root.touchingWindowDirect
+        onTriggered: root.touchingWindow = !KWindowSystem.showingDesktop && root.touchingWindowDirect
     }
     onTouchingWindowDirectChanged: touchingWindowDebounceTimer.start()
+    onShowingDesktopChanged: touchingWindowDebounceTimer.start()
 
     TaskManager.TasksModel {
         id: visibleWindowsModel
@@ -209,7 +211,7 @@ Item {
     property bool isAdaptive: panel.opacityMode === Panel.Global.Adaptive
     property bool floating: panel.floating
     property bool hasCompositing: KWindowSystem.isPlatformX11 ? KX11Extras.compositingActive : true
-    readonly property bool screenCovered: !KWindowSystem.showingDesktop && touchingWindow && panel.visibilityMode == Panel.Global.NormalPanel
+    readonly property bool screenCovered: touchingWindow && panel.visibilityMode == Panel.Global.NormalPanel
     property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent, hasCompositing, containment]
     onStateTriggersChanged: {
         let opaqueApplets = false
