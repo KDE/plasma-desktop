@@ -361,6 +361,7 @@ Kirigami.ApplicationItem {
 
     Kirigami.ScrollablePage {
         id: buttonPage
+        visible: false
 
         MouseArea {
             // Deliberately using MouseArea on the page instead of a TapHandler on the button, so we can capture clicks anywhere
