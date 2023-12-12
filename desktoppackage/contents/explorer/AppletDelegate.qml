@@ -45,7 +45,6 @@ Item {
     // Avoid repositioning delegate item after dragFinished
     Item {
         anchors.fill: parent
-        enabled: model.isSupported
 
         Drag.dragType: Drag.Automatic
         Drag.supportedActions: Qt.MoveAction | Qt.LinkAction
@@ -110,6 +109,7 @@ Item {
             Item {
                 id: iconWidget
                 anchors.fill: parent
+                enabled: model.isSupported
                 Kirigami.Icon {
                     anchors.fill: parent
                     source: model.decoration
@@ -220,6 +220,7 @@ Item {
         Kirigami.Heading {
             id: heading
             Layout.fillWidth: true
+            enabled: model.isSupported
             level: 4
             text: model.name
             textFormat: Text.PlainText
@@ -232,6 +233,7 @@ Item {
         }
         PlasmaComponents.Label {
             Layout.fillWidth: true
+            enabled: model.isSupported
             // otherwise causes binding loop due to the way the Plasma sets the height
             height: implicitHeight
             text: model.description
