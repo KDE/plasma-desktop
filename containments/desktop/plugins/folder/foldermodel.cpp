@@ -970,6 +970,8 @@ void FolderModel::addDragImage(QDrag *drag, int x, int y)
         return;
     }
 
+    qreal dpr = 1.0;
+
     QRegion region;
 
     for (DragImage *image : std::as_const(m_dragImages)) {
@@ -977,6 +979,7 @@ void FolderModel::addDragImage(QDrag *drag, int x, int y)
         image->rect.translate(-m_dragHotSpotScrollOffset.x(), -m_dragHotSpotScrollOffset.y());
         if (!image->blank && !image->image.isNull()) {
             region = region.united(image->rect);
+            dpr = std::max(dpr, image->image.devicePixelRatioF());
         }
     }
 
@@ -984,7 +987,8 @@ void FolderModel::addDragImage(QDrag *drag, int x, int y)
     QPoint offset = rect.topLeft();
     rect.translate(-offset.x(), -offset.y());
 
-    QImage dragImage(rect.size(), QImage::Format_RGBA8888);
+    QImage dragImage(rect.size() * dpr, QImage::Format_RGBA8888);
+    dragImage.setDevicePixelRatio(dpr);
     dragImage.fill(Qt::transparent);
 
     QPainter painter(&dragImage);
