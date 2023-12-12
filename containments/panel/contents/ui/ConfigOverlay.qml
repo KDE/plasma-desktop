@@ -219,6 +219,8 @@ MouseArea {
         visualParent: configurationArea.currentApplet
         // Try to dodge the ruler, as we can't cover it since it's a layershell surface
         margin: configurationArea.Window.window?.lengthMode === 2 ? Kirigami.Units.gridUnit * 2 : 0
+        width: mainItem.implicitWidth + leftPadding + rightPadding
+        height: mainItem.implicitHeight + topPadding + bottomPadding
 
         popupDirection: switch (Plasmoid.location) {
             case PlasmaCore.Types.TopEdge:
