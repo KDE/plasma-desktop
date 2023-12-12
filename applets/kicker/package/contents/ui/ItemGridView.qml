@@ -382,8 +382,8 @@ FocusScope {
                     gridView.currentIndex = -1;
                     pressedItem = null;
                 } else {
+                    itemGrid.focus = (item.itemIndex !== -1)
                     gridView.currentIndex = item.itemIndex;
-                    itemGrid.focus = (itemGrid.currentIndex !== -1)
                 }
 
                 return item;
