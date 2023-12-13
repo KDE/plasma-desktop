@@ -1,21 +1,21 @@
 #
 # Tamas Szanto <tszanto@interware.hu>, 2000.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2015, 2019.
-# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2017, 2020, 2021, 2023 Kiszel Kristóf <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:39+0000\n"
-"PO-Revision-Date: 2021-09-04 09:20+0200\n"
-"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2023-12-12 21:28+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: kcmaccess.cpp:112
 #, kde-format
@@ -176,10 +176,9 @@ msgstr "Időtúllépési késleltetés"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:37
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
+#, kde-format
 msgid "Delay for timeout"
-msgstr "Egérmozgás késleltetése"
+msgstr "Késleltetés időkorlátja"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
@@ -301,11 +300,10 @@ msgid "Please choose an audio file"
 msgstr "Válasszon ki egy hangfájlt"
 
 #: ui/Bell.qml:20
-#, fuzzy, kde-format
-#| msgid "Audio Files (*.mp3 *.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
-msgstr "Hangfájlok (*.mp3 *.ogg *.wav)"
+msgstr "Hangfájlok (*.ogg *.wav)"
 
 #: ui/Bell.qml:29
 #, kde-format
@@ -384,7 +382,7 @@ msgstr "Bekapcsolás"
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
-msgstr ""
+msgstr "Egy billentyű elfogadásához lenyomva kell tartani azt a megadott ideig"
 
 #: ui/KeyboardFilters.qml:37
 #, kde-format
@@ -398,25 +396,19 @@ msgid "Ring system bell:"
 msgstr "A rendszercsengő megszólaltatása:"
 
 #: ui/KeyboardFilters.qml:58
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is pressed"
-#| msgid "&when any key is pressed"
+#, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "Billentyű megny&omásakor"
 
 #: ui/KeyboardFilters.qml:72
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is accepted"
-#| msgid "&when any key is accepted"
+#, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "Billentyű &elfogadásakor"
 
 #: ui/KeyboardFilters.qml:86
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is rejected"
-#| msgid "&when any key is rejected"
+#, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "Billentyű &visszautasításakor"
@@ -436,6 +428,7 @@ msgstr "Bekapcsolás"
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
 msgstr ""
+"Ugyanazon billentyű gyors, ismételt lenyomásának figyelmen kívül hagyása"
 
 #: ui/KeyboardFilters.qml:122
 #, kde-format
@@ -576,10 +569,9 @@ msgid "Maximum speed:"
 msgstr "Maximális sebesség:"
 
 #: ui/MouseNavigation.qml:124
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgid "Pointer acceleration:"
-msgstr "Gyorsítási idő:"
+msgstr "Mutatógyorsítás:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format

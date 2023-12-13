@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-03 01:39+0000\n"
+"POT-Creation-Date: 2023-12-13 01:35+0000\n"
 "PO-Revision-Date: 2023-02-26 00:49+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -213,13 +213,13 @@ msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Zusätzliche Maustasten neu zuordnen ..."
 
-#: kcm/libinput/main.qml:392
+#: kcm/libinput/main.qml:393
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Zusatztaste %1:"
 
-#: kcm/libinput/main.qml:422
+#: kcm/libinput/main.qml:423
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
@@ -227,31 +227,31 @@ msgstr ""
 "Drücken Sie die Maustaste, der Sie eine Taste auf der Tastatur zuordnen "
 "möchten"
 
-#: kcm/libinput/main.qml:423
+#: kcm/libinput/main.qml:424
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Neue Tastenkombination für %1 eingeben"
 
-#: kcm/libinput/main.qml:427
+#: kcm/libinput/main.qml:428
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: kcm/libinput/main.qml:444
+#: kcm/libinput/main.qml:445
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "Drücken Sie eine Maustaste "
 
-#: kcm/libinput/main.qml:445
+#: kcm/libinput/main.qml:446
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Zuordnung hinzufügen ..."
 
-#: kcm/libinput/main.qml:474
+#: kcm/libinput/main.qml:475
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
