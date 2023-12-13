@@ -40,7 +40,7 @@ Kirigami.ApplicationWindow
 
         icon.name: "document-open-recent-symbolic"
         onTriggered: {
-            window.pageStack.replace("qrc:/org/kde/plasma/emoji/app/CategoryPage.qml", {title: text, category: "", model: recentEmojiModel, showClearHistoryButton: true})
+            window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {title: text, category: "", model: recentEmojiModel, showClearHistoryButton: true})
         }
     }
     Kirigami.Action {
@@ -51,7 +51,7 @@ Kirigami.ApplicationWindow
         shortcut: StandardKey.Find
 
         onTriggered: {
-            window.pageStack.replace("qrc:/org/kde/plasma/emoji/app/CategoryPage.qml", {title: text, category: "", model: emoji, showSearch: true })
+            window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {title: text, category: "", model: emoji, showSearch: true })
         }
     }
 

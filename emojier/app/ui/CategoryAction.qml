@@ -12,6 +12,6 @@ Kirigami.Action {
     text: i18ndc("org.kde.plasma.emojier", "Emoji Category", category)
 
     onTriggered: {
-        window.pageStack.replace("qrc:/org/kde/plasma/emoji/app/CategoryPage.qml", {title: text, category: category, model: emoji })
+        window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {title: text, category: category, model: emoji })
     }
 }

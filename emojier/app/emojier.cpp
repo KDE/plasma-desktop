@@ -110,7 +110,7 @@ int main(int argc, char **argv)
     new EngineWatcher(&engine);
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-    engine.load(QStringLiteral("qrc:/org/kde/plasma/emoji/app/emojier.qml"));
+    engine.loadFromModule("org.kde.plasma.emoji.app", "Emojier");
 
     QObject::connect(service, &KDBusService::activateRequested, &engine, [&engine](const QStringList & /*arguments*/, const QString & /*workingDirectory*/) {
         for (QObject *object : engine.rootObjects()) {
