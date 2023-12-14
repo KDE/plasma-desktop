@@ -150,6 +150,8 @@ Kirigami.ScrollablePage
             text: model.display
             horizontalAlignment: Text.AlignHCenter
 
+            Accessible.name: model.toolTip
+            Accessible.onPressAction: tapHandler.tapped(null, null)
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
             QQC2.ToolTip.text: model.toolTip
             QQC2.ToolTip.visible: hoverHandler.hovered
@@ -157,8 +159,8 @@ Kirigami.ScrollablePage
             opacity: hoverHandler.hovered ? 0.7 : 1
             scale: tapHandler.pressed ? 0.6 : 1
 
-            Keys.onMenuPressed: contextMenuHandler.tapped(null)
-            Keys.onReturnPressed: tapHandler.tapped(null)
+            Keys.onMenuPressed: contextMenuHandler.tapped(null, null)
+            Keys.onReturnPressed: tapHandler.tapped(null, null)
 
             HoverHandler {
                 id: hoverHandler
@@ -172,7 +174,7 @@ Kirigami.ScrollablePage
             TapHandler {
                 acceptedButtons: Qt.LeftButton
                 acceptedDevices: PointerDevice.TouchScreen | PointerDevice.Stylus
-                onLongPressed: contextMenuHandler.tapped(null)
+                onLongPressed: contextMenuHandler.tapped(null, null)
             }
 
             TapHandler {
