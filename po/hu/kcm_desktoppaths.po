@@ -1,21 +1,21 @@
 #
 # Marcell Lengyel <miketkf@yahoo.com>, 1999.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010.
-# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2017, 2020, 2021, 2023 Kiszel Kristóf <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 01:43+0000\n"
-"PO-Revision-Date: 2021-09-04 09:01+0200\n"
-"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2023-12-13 23:13+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ui/main.qml:52
 #, kde-format
@@ -29,9 +29,9 @@ msgid ""
 "change the location of this folder if you want to, and the contents will "
 "move automatically to the new location as well."
 msgstr ""
-"Ez a könyvtár tartalmazza azokat a fájlokat, amelyek a munkaasztalon "
-"látszanak. Ha kívánja, megváltoztathatja az elérési utat, ilyenkor a "
-"tartalom automatikusan átkerül az új helyre."
+"Ez a mappa tartalmazza azokat a fájlokat, amelyek a munkaasztalon látszanak. "
+"Ha kívánja, megváltoztathatja az elérési utat, ilyenkor a tartalom "
+"automatikusan átkerül az új helyre."
 
 #: ui/main.qml:66
 #, kde-format
@@ -43,8 +43,7 @@ msgstr "Dokumentumok:"
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr ""
-"Ez a könyvtár lesz a dokumentumok megnyitásának és elmentésének "
-"alapértelmezett könyvtára."
+"A dokumentumok betöltésére és mentésére használt alapértelmezett mappa."
 
 #: ui/main.qml:80
 #, kde-format
@@ -54,8 +53,7 @@ msgstr "Letöltések:"
 #: ui/main.qml:86
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
-msgstr ""
-"Ez a könyvtár lesz a letöltött elemek alapértelmezett mentési könyvtára."
+msgstr "A letöltött elemek mentésére használt alapértelmezett mappa."
 
 #: ui/main.qml:94
 #, kde-format
@@ -65,9 +63,7 @@ msgstr "Videók:"
 #: ui/main.qml:100 ui/main.qml:142
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
-msgstr ""
-"Ez a könyvtár lesz a filmek megnyitásának és elmentésének alapértelmezett "
-"könyvtára."
+msgstr "A videók betöltésére és mentésére használt alapértelmezett mappa."
 
 #: ui/main.qml:108
 #, kde-format
@@ -78,9 +74,7 @@ msgstr "Képek:"
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
-msgstr ""
-"Ez a könyvtár lesz a képek megnyitásának és elmentésének alapértelmezett "
-"könyvtára."
+msgstr "A képek betöltésére és mentésére használt alapértelmezett mappa."
 
 #: ui/main.qml:122
 #, kde-format
@@ -90,37 +84,29 @@ msgstr "Zenék:"
 #: ui/main.qml:128
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
-msgstr ""
-"Ez a könyvtár lesz a zenék megnyitásának és elmentésének alapértelmezett "
-"könyvtára."
+msgstr "A zenék betöltésére és mentésére használt alapértelmezett mappa."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Zenék:"
+msgstr "Nyilvános:"
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Képek:"
+msgstr "Sablonok:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
-msgstr ""
-"Ez a könyvtár lesz a képek megnyitásának és elmentésének alapértelmezett "
-"könyvtára."
+msgstr "A sablonok betöltésére és mentésére használt alapértelmezett mappa."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"
-msgstr ""
+msgstr "Válassza ki az új helyet"
 
 #~ msgid "Desktop"
 #~ msgstr "Asztal"

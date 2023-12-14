@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-12-14 01:36+0000\n"
 "PO-Revision-Date: 2022-08-11 14:20+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "ryuichi_ya220@outlook.jp"
 msgid "Replace an existing instance"
 msgstr "既存のインスタンスを置換"
 
-#: app/ui/CategoryPage.qml:33 app/ui/emojier.qml:49
+#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:49
 #, kde-format
 msgid "Search"
 msgstr "検索"
@@ -62,7 +62,7 @@ msgid "Copy Character"
 msgstr ""
 
 #: app/ui/CategoryPage.qml:107 app/ui/CategoryPage.qml:115
-#: app/ui/emojier.qml:33
+#: app/ui/Emojier.qml:33
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 がクリップボードにコピーされました"
@@ -78,17 +78,17 @@ msgstr ""
 msgid "No recent Emojis"
 msgstr "最近使用した絵文字はありません"
 
-#: app/ui/emojier.qml:39
+#: app/ui/Emojier.qml:39
 #, kde-format
 msgid "Recent"
 msgstr "最近"
 
-#: app/ui/emojier.qml:60
+#: app/ui/Emojier.qml:60
 #, kde-format
 msgid "All"
 msgstr "すべて"
 
-#: app/ui/emojier.qml:71
+#: app/ui/Emojier.qml:71
 #, kde-format
 msgid "Categories"
 msgstr "カテゴリ"

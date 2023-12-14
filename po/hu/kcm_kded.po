@@ -2,60 +2,56 @@
 #
 # Tamas Szanto <tszanto@interware.hu>, 2002.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2015.
-# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020.
+# SPDX-FileCopyrightText: 2017, 2020, 2023 Kiszel Kristóf <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2020-12-14 17:42+0100\n"
-"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2023-12-13 23:30+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.03.70\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: kcmkded.cpp:115
 #, kde-format
 msgid "Failed to stop service: %1"
-msgstr "A szolgáltatlás leállítása meghiúsult: %1"
+msgstr "Nem sikerült leállítani a szolgáltatást: %1"
 
 #: kcmkded.cpp:117
 #, kde-format
 msgid "Failed to start service: %1"
-msgstr "A szolgáltatás elindítása meghiúsult: %1"
+msgstr "Nem sikerült elindítani a szolgáltatást: %1"
 
 #: kcmkded.cpp:124
 #, kde-format
 msgid "Failed to stop service."
-msgstr "A szolgáltatlás leállítása meghiúsult."
+msgstr "Nem sikerült leállítani a szolgáltatást."
 
 #: kcmkded.cpp:126
 #, kde-format
 msgid "Failed to start service."
-msgstr "A szolgáltatás elindítása meghiúsult."
+msgstr "Nem sikerült elindítani a szolgáltatást."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"A KDE Szolgáltatáskezelő (kded5) értesítése a mentett módosításokról "
-"meghiúsult: %1"
+"A KDE Szolgáltatáskezelő (kded6) értesítése a mentett módosításokról nem "
+"sikerült: %1"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"A háttérszolgáltatás-kezelő (kded5) jelenleg nem fut. Ellenőrizze, hogy "
+"A háttérszolgáltatás-kezelő (kded6) jelenleg nem fut. Ellenőrizze, hogy "
 "megfelelően lett-e telepítve."
 
 #: ui/main.qml:46
@@ -68,16 +64,13 @@ msgstr ""
 "nem hasznosak a jelenlegi környezetben."
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Néhány szolgáltatás automatikusan elindult/leállt, amikor a "
-"háttérszolgáltatás-kezelő (kded5) újraindult a változtatások alkalmazásához."
+"háttérszolgáltatás-kezelő (kded6) újraindult a változtatások alkalmazásához."
 
 #: ui/main.qml:97
 #, kde-format

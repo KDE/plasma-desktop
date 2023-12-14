@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-06 02:04+0000\n"
+"POT-Creation-Date: 2023-12-14 01:36+0000\n"
 "PO-Revision-Date: 2023-02-26 00:41+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "kde-i18n-de@kde.org"
 msgid "Replace an existing instance"
 msgstr "Eine bestehende Instanz ersetzen"
 
-#: app/ui/CategoryPage.qml:33 app/ui/emojier.qml:49
+#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:49
 #, kde-format
 msgid "Search"
 msgstr "Suchen"
@@ -63,7 +63,7 @@ msgid "Copy Character"
 msgstr "Zeichen kopieren"
 
 #: app/ui/CategoryPage.qml:107 app/ui/CategoryPage.qml:115
-#: app/ui/emojier.qml:33
+#: app/ui/Emojier.qml:33
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 ist in die Zwischenablage kopiert worden"
@@ -79,17 +79,17 @@ msgstr "Beschreibung kopieren"
 msgid "No recent Emojis"
 msgstr "Keine zuletzt verwendeten Emojis"
 
-#: app/ui/emojier.qml:39
+#: app/ui/Emojier.qml:39
 #, kde-format
 msgid "Recent"
 msgstr "Zuletzt verwendet"
 
-#: app/ui/emojier.qml:60
+#: app/ui/Emojier.qml:60
 #, kde-format
 msgid "All"
 msgstr "Alle"
 
-#: app/ui/emojier.qml:71
+#: app/ui/Emojier.qml:71
 #, kde-format
 msgid "Categories"
 msgstr "Kategorien"
