@@ -171,7 +171,8 @@ ColumnLayout {
 
         Loader {
             id: thumbnailLoader
-            active: !albumArtImage.visible
+            active: !toolTipDelegate.isLauncher
+                && !albumArtImage.visible
                 && (Number.isInteger(thumbnailSourceItem.winId) || pipeWireLoader.item && !pipeWireLoader.item.hasThumbnail)
                 && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
             asynchronous: true
@@ -230,7 +231,7 @@ ColumnLayout {
             // shadow can cover up the highlight
             anchors.margins: thumbnailLoader.anchors.margins
 
-            active: !albumArtImage.visible && KWindowSystem.isPlatformWayland && flatIndex !== -1
+            active: !toolTipDelegate.isLauncher && !albumArtImage.visible && KWindowSystem.isPlatformWayland && flatIndex !== -1
             asynchronous: true
             //In a loader since we might not have PipeWire available yet (WITH_PIPEWIRE could be undefined in plasma-workspace/libtaskmanager/declarative/taskmanagerplugin.cpp)
             source: "PipeWireThumbnail.qml"
