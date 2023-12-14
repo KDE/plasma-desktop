@@ -26,6 +26,7 @@ Backend::Backend(QObject *parent)
     : QObject(parent)
     , m_watcher(new QDBusServiceWatcher(this))
     , m_settings(new Settings(this))
+    , m_jobsModel(nullptr)
 {
     setupUnity();
 
@@ -44,7 +45,10 @@ void Backend::reload()
         return desktopEntry + QStringLiteral(".desktop");
     });
 
-    setupApplicationJobs();
+    if (!m_jobsModel) {
+        m_jobsModel = JobsModel::createJobsModel();
+        m_jobsModel->init();
+    }
 
     Q_EMIT reloadRequested(QString() /*all*/);
 }
@@ -92,16 +96,6 @@ void Backend::setupUnity()
     }
 }
 
-void Backend::setupApplicationJobs()
-{
-    if (m_settings->jobsInTaskManager() && !m_jobsModel) {
-        m_jobsModel = JobsModel::createJobsModel();
-        m_jobsModel->init();
-    } else if (!m_settings->jobsInTaskManager() && m_jobsModel) {
-        m_jobsModel = nullptr;
-    }
-}
-
 bool Backend::hasLauncher(const QString &storageId) const
 {
     return m_launchers.contains(storageId);
@@ -125,17 +119,11 @@ bool Backend::countVisible(const QString &uri) const
 
 int Backend::progress(const QString &uri) const
 {
-    if (!m_settings->jobsInTaskManager()) {
-        return 0;
-    }
     return m_launchers.value(uri).progress;
 }
 
 bool Backend::progressVisible(const QString &uri) const
 {
-    if (!m_settings->jobsInTaskManager()) {
-        return false;
-    }
     return m_launchers.value(uri).progressVisible;
 }
 
