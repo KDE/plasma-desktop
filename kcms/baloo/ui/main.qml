@@ -146,7 +146,7 @@ KCM.ScrollViewKCM {
             Kirigami.SelectableLabel {
                 id: fileBeingIndexed
                 Layout.fillWidth: true
-                visible: fileSearchEnabled.checked && monitor.completionPercentage !== 100 && monitor.filePath.length > 0
+                visible: fileSearchEnabled.checked && monitor.currentlyIndexing && monitor.completionPercentage !== 100 && monitor.filePath.length > 0
                 text: xi18nc("@info Currently Indexing", "<filename>%1</filename>", monitor.filePath)
             }
 
