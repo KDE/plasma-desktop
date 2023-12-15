@@ -347,6 +347,12 @@ void Positioner::reset()
 
 int Positioner::move(const QVariantList &moves)
 {
+    struct RowMove {
+        int from;
+        int to;
+        int sourceRow;
+    };
+
     // Don't allow moves while listing.
     if (m_folderModel->status() == FolderModel::Listing) {
         m_deferMovePositions.append(moves);
@@ -356,6 +362,7 @@ int Positioner::move(const QVariantList &moves)
     QList<int> fromIndices;
     QList<int> toIndices;
     QVariantList sourceRows;
+    QList<RowMove> actualMoves;
 
     for (int i = 0; i < moves.count(); ++i) {
         const int isFrom = (i % 2 == 0);
@@ -373,7 +380,12 @@ int Positioner::move(const QVariantList &moves)
     }
 
     const int oldCount = rowCount();
+    int newEnd = oldCount - 1;
+    int maxTo = -1;
+    QSet<int> toBeRemoved;
 
+    // NOTE: this is the same code repeated twice: first it "tries" the move to see what the final count would look like to know if there would be rows
+    // insertions or removals. then do it for real enclosed in beginRemoveRows/endRemoveRows or beginInsertRows/endRemoveRows
     for (int i = 0; i < fromIndices.count(); ++i) {
         const int from = fromIndices[i];
         int to = toIndices[i];
@@ -402,35 +414,48 @@ int Positioner::move(const QVariantList &moves)
 
         toIndices[i] = to;
 
-        if (!toIndices.contains(from)) {
-            m_proxyToSource.remove(from);
+        if (toBeRemoved.contains(to)) {
+            toBeRemoved.remove(to);
         }
 
-        updateMaps(to, sourceRow);
+        if (from == newEnd) {
+            for (int i = oldCount - 1; i >= 0 && (isBlank(i) || toBeRemoved.contains(i)); --i) {
+                newEnd = i;
+            }
+            toBeRemoved.insert(newEnd);
+        }
+        maxTo = std::max(maxTo, to);
+        newEnd = std::max(newEnd, maxTo);
+        actualMoves.append({from, to, sourceRow});
+    }
 
-        const QModelIndex &fromIdx = index(from, 0);
+    if (newEnd < oldCount - 1) {
+        beginRemoveRows(QModelIndex(), newEnd + 1, oldCount - 1);
+    } else if (newEnd > oldCount - 1 && !m_beginInsertRowsCalled) {
+        beginInsertRows(QModelIndex(), oldCount, newEnd);
+    }
+
+    for (const RowMove &move : std::as_const(actualMoves)) {
+        if (!toIndices.contains(move.from)) {
+            m_proxyToSource.remove(move.from);
+        }
+
+        updateMaps(move.to, move.sourceRow);
+
+        const QModelIndex &fromIdx = index(move.from, 0);
         Q_EMIT dataChanged(fromIdx, fromIdx);
 
-        if (to < oldCount) {
-            const QModelIndex &toIdx = index(to, 0);
+        if (move.to < oldCount) {
+            const QModelIndex &toIdx = index(move.to, 0);
             Q_EMIT dataChanged(toIdx, toIdx);
         }
     }
 
-    const int newCount = rowCount();
-
-    if (newCount > oldCount) {
-        if (m_beginInsertRowsCalled) {
-            endInsertRows();
-            m_beginInsertRowsCalled = false;
-        }
-        beginInsertRows(QModelIndex(), oldCount, newCount - 1);
-        endInsertRows();
-    }
-
-    if (newCount < oldCount) {
-        beginRemoveRows(QModelIndex(), newCount, oldCount - 1);
+    if (newEnd < oldCount - 1) {
         endRemoveRows();
+    } else if (newEnd > oldCount - 1) {
+        endInsertRows();
+        m_beginInsertRowsCalled = false;
     }
 
     m_folderModel->updateSelection(sourceRows, true);
