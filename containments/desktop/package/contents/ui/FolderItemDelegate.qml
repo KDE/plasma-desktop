@@ -100,7 +100,10 @@ Item {
 
             readonly property bool iconAndLabelsShouldlookSelected: impl.hovered
 
-            onSelectedChanged: {
+            // When a drop happens, a new item is created, and is set to selected
+            // grabToImagebefore it gets the final width, making grabToImage fail because it's still 0x0
+            onSelectedChanged: Qt.callLater(updateDragImage)
+            function updateDragImage() {
                 if (selected && !blank) {
                     frameLoader.grabToImage(result => {
                         dir.addItemDragImage(positioner.map(index), main.x + frameLoader.x, main.y + frameLoader.y, frameLoader.width, frameLoader.height, result.image);
