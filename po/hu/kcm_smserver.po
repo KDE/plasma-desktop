@@ -1,26 +1,27 @@
 #
 # Tamas Szanto <tszanto@interware.hu>, 2000.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2023 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-05 02:15+0000\n"
-"PO-Revision-Date: 2021-01-13 20:22+0100\n"
-"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2023-12-14 22:49+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.03.70\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
 #, kde-format
 msgid "Confirm logout"
-msgstr "Megerősítés kérése kijelentkezésnél"
+msgstr "Kijelentkezés megerősítése"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:13
@@ -45,12 +46,13 @@ msgstr "Az állapotkezelésből kizárandó alkalmazások:"
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"A rendszert újra kell indítani, mielőtt a kézi munkamenetmentés aktívvá "
+"válik."
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Újraindítás most"
+msgstr "Újraindítás"
 
 #: ui/main.qml:57
 #, kde-format
@@ -62,16 +64,14 @@ msgstr "Nem sikerült az újraindítás a firmware telepítéshez: %1"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
-"A számítógép a következő újrainduláskor az UEFI beállítóképernyő fog "
-"megjelenni."
+"A számítógép következő újraindításakor az UEFI-beállító képernyőre kerül."
 
 #: ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
-"A számítógép a következő újrainduláskor a firmware-telepítő képernyő fog "
-"megjelenni."
+"A számítógép következő újraindításakor a firmware-beállító képernyőre kerül."
 
 #: ui/main.qml:64
 #, kde-format
@@ -82,12 +82,12 @@ msgstr "Újraindítás most"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "Kijelentkező képernyő"
 
 #: ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Megjelenítés:"
 
 #: ui/main.qml:89
 #, kde-kuit-format
@@ -97,31 +97,33 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"Ha ez a beállítás be van kapcsolva, a kijelentkezést megerősítő képernyő "
+"jelenik meg kijelentkezéskor, leállításkor, újraindításkor, a bekapcsológomb "
+"megnyomásakor, vagy a <interface>Kilépés…</interface> feliratú gombokra vagy "
+"menüelemekre kattintáskor."
 
 #: ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Session Manager"
+#, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr "Munkamenetkezelő"
+msgstr "Munkamenet-visszaállítás"
 
 #: ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Azon alkalmazások indítása bejelentkezéskor:"
 
 #: ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "A legutolsó kijelentkezéskor megnyitva voltak"
 
 #: ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Restore manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Kézzel mentett állapot visszatöltése"
+msgstr "A munkamenet kézi mentésekor megnyitva voltak"
 
 #: ui/main.qml:127
 #, kde-kuit-format
@@ -132,22 +134,25 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"A <interface>Munkamenet mentése</interface> gomb megjelenik az "
+"<interface>Alkalmazásindító</interface> menüben. Ha rákattint, a Plasma "
+"megjegyzi a megnyitott alkalmazásokat, és visszaállítja azokat a következő "
+"bejelentkezéskor. Kattintson rá ismét a megjegyzett alkalmazások listájának "
+"cseréjéhez."
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid "Start with an empty session"
+#, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr "Indítás alapállapotban"
+msgstr "Indítás üres munkamenettel"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "Ne állítsa vissza ezeket az alkalmazásokat:"
+msgstr "Mellőzött alkalmazások:"
 
 #: ui/main.qml:169
 #, kde-format
@@ -156,13 +161,16 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Ide írja az alkalmazások végrehajtható állományainak neveit (vesszővel vagy "
+"kettősponttal elválasztva, például például „xterm:konsole” vagy „xterm,"
+"konsole”), hogy megakadályozza azok automatikus elindulását a munkamenet "
+"visszaállításakor."
 
 #: ui/main.qml:177
-#, fuzzy, kde-format
-#| msgid "Firmware Setup"
+#, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr "Firmware-telepítés"
+msgstr "Firmware"
 
 #: ui/main.qml:183
 #, kde-format
@@ -170,21 +178,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Következő újraindításkor:"
 
 #: ui/main.qml:184
-#, fuzzy, kde-format
-#| msgid "Enter UEFI setup on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "UEFI beállítóképernyő indítása a következő újrainduláskor"
+msgstr "Belépés az UEFI-beállító képernyőre"
 
 #: ui/main.qml:185
-#, fuzzy, kde-format
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Firmware-telepítő indítása a következő újrainduláskor"
+msgstr "Belépés a firmware-beállító képernyőre"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "

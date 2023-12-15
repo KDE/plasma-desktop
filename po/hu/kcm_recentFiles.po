@@ -1,0 +1,132 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2023 Kristof Kiszel <kiszel.kristof@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-12-06 01:38+0000\n"
+"PO-Revision-Date: 2023-12-14 22:34+0100\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.3\n"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "Hány hónapig tárolódjanak a tevékenységek előzményei"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "Mely adatokat kell megőrizni a tevékenységi előzményekben"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr ""
+"Azon alkalmazások listája, amelyek tevékenységi előzményeit menteni kell"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr ""
+"Azon alkalmazások listája, amelyek tevékenységi előzményeit nem kell menteni"
+
+#: kcm_recentFiles.cpp:77
+#, kde-format
+msgctxt "unlimited number of months"
+msgid "Forever"
+msgstr "Örökre"
+
+#: kcm_recentFiles.cpp:86
+#, kde-format
+msgid "Forget the last hour"
+msgstr "Az utolsó egy óra elfelejtése"
+
+#: kcm_recentFiles.cpp:87
+#, kde-format
+msgid "Forget the last two hours"
+msgstr "Az utolsó két óra elfelejtése"
+
+#: kcm_recentFiles.cpp:88
+#, kde-format
+msgid "Forget a day"
+msgstr "Egy nap elfelejtése"
+
+#: kcm_recentFiles.cpp:89
+#, kde-format
+msgid "Forget everything"
+msgstr "Minden elfelejtése"
+
+#: kcm_recentFiles.cpp:232
+#, kde-format
+msgctxt "unit of time. months to keep the history"
+msgid " month"
+msgid_plural " months"
+msgstr[0] " hónapig"
+msgstr[1] " hónapig"
+
+#: kcm_recentFiles.cpp:235
+#, kde-format
+msgctxt "for in 'keep history for 5 months'"
+msgid "For "
+msgstr " "
+
+#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
+#: ui/RecentFiles.ui:17
+#, kde-format
+msgid "Cleared the activity history."
+msgstr "A tevékenységi előzmények törölve."
+
+#. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
+#: ui/RecentFiles.ui:35
+#, kde-format
+msgid "Keep history:"
+msgstr "Előzmények megőrzése:"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
+#: ui/RecentFiles.ui:47
+#, kde-format
+msgid "Clear History"
+msgstr "Előzmények törlése"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
+#: ui/RecentFiles.ui:68
+#, kde-format
+msgid "For a&ll applications"
+msgstr "Minden a&lkalmazáshoz"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
+#: ui/RecentFiles.ui:78
+#, kde-format
+msgid "&Do not remember"
+msgstr "&Ne jegyezze meg"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
+#: ui/RecentFiles.ui:85
+#, kde-format
+msgid "O&nly for specific applications:"
+msgstr "&Csak a megadott alkalmazásokhoz:"
+
+#. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
+#: ui/RecentFiles.ui:95
+#, kde-format
+msgid "Remember opened documents:"
+msgstr "Megnyitott dokumentumok megjegyzése:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
+#: ui/RecentFiles.ui:128
+#, kde-format
+msgid "Blacklist applications not on the list"
+msgstr "A listán nem szereplő alkalmazások"
