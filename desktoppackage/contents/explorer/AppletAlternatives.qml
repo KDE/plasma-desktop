@@ -21,6 +21,7 @@ PlasmaCore.Dialog {
     visualParent: alternativesHelper.applet
     location: alternativesHelper.applet.Plasmoid.location
     hideOnWindowDeactivate: true
+    backgroundHints: (alternativesHelper.applet.Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersOpaqueBackground) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
 
     Component.onCompleted: {
         flags = flags |  Qt.WindowStaysOnTopHint;
