@@ -4,13 +4,13 @@
 # Tamas Szanto <tszanto@interware.hu>, 2007.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2014, 2015.
 # Balázs Úr <urbalazs@gmail.com>, 2012.
-# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2017, 2020, 2021, 2023 Kiszel Kristóf <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2021-10-17 16:24+0200\n"
+"PO-Revision-Date: 2023-12-15 13:20+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,10 +41,9 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "Váltás a következő billentyűzetkiosztásra"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Váltás a következő billentyűzetkiosztásra"
+msgstr "Váltás a legutóbb használt billentyűzetkiosztásra"
 
 #: bindings.cpp:60
 #, kde-format
@@ -238,10 +237,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:246
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "Alternatív gyorsbillentyű:"
+msgstr "Legutóbbi gyorsbillentyű:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:259
@@ -250,6 +248,8 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
+"Ez a gyorsbillentyű lehetővé teszi a gyors váltást két elrendezés között "
+"azzal, hogy mindig a legutóbb használtra vált."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:284

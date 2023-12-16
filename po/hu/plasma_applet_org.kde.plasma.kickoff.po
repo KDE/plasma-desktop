@@ -3,13 +3,13 @@
 #
 # Balázs Úr <urbalazs@gmail.com>, 2013.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2015, 2019.
-# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2018, 2020, 2021.
+# SPDX-FileCopyrightText: 2017, 2018, 2020, 2021, 2023 Kiszel Kristóf <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-25 01:35+0000\n"
-"PO-Revision-Date: 2021-10-26 10:26+0200\n"
+"PO-Revision-Date: 2023-12-15 13:43+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -55,11 +55,10 @@ msgid "Icon:"
 msgstr "Ikon:"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Application Launcher"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr "Alkalmazásindító"
+msgstr "Alkalmazásindító ikonjának módosítása"
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -68,12 +67,14 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"A jelenlegi ikon a(z) %1. Kattintson a menü megnyitásához a jelenlegi ikon "
+"megváltoztatására vagy az alapértelmezett ikon visszaállítására."
 
 #: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "Ikonnév: „%1”"
 
 #: package/contents/ui/ConfigGeneral.qml:85
 #, kde-format
@@ -82,51 +83,49 @@ msgid "Choose…"
 msgstr "Kiválasztás…"
 
 #: package/contents/ui/ConfigGeneral.qml:87
-#, fuzzy, kde-format
-#| msgid "Application Launcher"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr "Alkalmazásindító"
+msgstr "Ikon választása az Alkalmazásindítóhoz"
 
 #: package/contents/ui/ConfigGeneral.qml:91
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Alapértelmezett ikon visszaállítása"
 
 #: package/contents/ui/ConfigGeneral.qml:97
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "Ikon eltávolítása"
 
 #: package/contents/ui/ConfigGeneral.qml:108
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr ""
+msgstr "Szövegcímke:"
 
 #: package/contents/ui/ConfigGeneral.qml:110
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "Írjon ide szövegcímke hozzáadásához"
 
 #: package/contents/ui/ConfigGeneral.qml:125
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Menücímke visszaállítása"
 
 #: package/contents/ui/ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr ""
+msgstr "Nem állítható be szövegcímke függőleges panelhez."
 
 #: package/contents/ui/ConfigGeneral.qml:150
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Általános:"
@@ -139,37 +138,36 @@ msgstr "Mindig rendezze ABC sorrendbe az alkalmazásokat"
 #: package/contents/ui/ConfigGeneral.qml:156
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "Kompakt listaelemstílus használata"
 
 #: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "Automatikus kikapcsolás Érintés módban"
 
 #: package/contents/ui/ConfigGeneral.qml:171
-#, fuzzy, kde-format
-#| msgid "Configure enabled search plugins"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr "Bekapcsolt keresőbővítmények beállítása"
+msgstr "Bekapcsolt keresőbővítmények beállítása…"
 
 #: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgid "Sidebar position:"
-msgstr ""
+msgstr "Oldalsáv pozíció:"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Right"
-msgstr ""
+msgstr "Jobbra"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Left"
-msgstr ""
+msgstr "Balra"
 
 #: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format
@@ -245,7 +243,7 @@ msgstr "Helyek"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Nincs találat"
 
 #: package/contents/ui/Header.qml:80
 #, kde-format
