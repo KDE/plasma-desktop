@@ -273,6 +273,7 @@ SimpleKCM {
 
                 showCancelButton: true
                 modifierlessAllowed: true
+                modifierOnlyAllowed: true
                 multiKeyShortcutsAllowed: false
                 checkForConflictsAgainst: ShortcutType.None
 
@@ -344,6 +345,7 @@ SimpleKCM {
 
                 showCancelButton: true
                 modifierlessAllowed: true
+                modifierOnlyAllowed: true
                 multiKeyShortcutsAllowed: false
                 checkForConflictsAgainst: ShortcutType.None
 
