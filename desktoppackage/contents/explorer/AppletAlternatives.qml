@@ -60,9 +60,10 @@ PlasmaCore.Dialog {
         }
 
         PlasmaExtras.PlasmoidHeading {
-            Kirigami.Heading {
+            contentItem: Kirigami.Heading {
                 id: heading
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternative Widgets");
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternative Widgets")
+                horizontalAlignment: Text.AlignHCenter
             }
         }
 
