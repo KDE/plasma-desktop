@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 01:37+0000\n"
-"PO-Revision-Date: 2023-11-11 13:52+0100\n"
+"PO-Revision-Date: 2023-12-16 11:33+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -340,8 +340,6 @@ msgid "Visibility"
 msgstr "Widoczność"
 
 #: contents/configuration/PanelConfiguration.qml:403
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Zawsze widoczny"
 
@@ -351,11 +349,9 @@ msgstr "Samoukrywający się"
 
 #: contents/configuration/PanelConfiguration.qml:405
 msgid "Dodge windows"
-msgstr ""
+msgstr "Unikaj okien"
 
 #: contents/configuration/PanelConfiguration.qml:406
-#, fuzzy
-#| msgid "Windows Behind"
 msgid "Windows Go Below"
 msgstr "Okna są przykrywane"
 
@@ -476,7 +472,7 @@ msgstr "Zamienny wygląd obsługi"
 
 #: contents/explorer/AppletDelegate.qml:42
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Nieobsługiwany element interfejsu"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
