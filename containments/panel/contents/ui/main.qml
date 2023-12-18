@@ -206,24 +206,6 @@ ContainmentItem {
                 //this is completely heuristic, but looks way less "jumpy"
                 property bool movingForResize: false
 
-                readonly property bool wantsToFillWidth: applet && applet.Layout.fillWidth
-                onWantsToFillWidthChanged: {
-                    if (Plasmoid.formFactor !== PlasmaCore.Types.Vertical) {
-                        checkLastSpacer();
-                    }
-                }
-                readonly property bool wantsToFillHeight: applet && applet.Layout.fillWidth
-                onWantsToFillHeightChanged: {
-                    if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-                        checkLastSpacer();
-                    }
-                }
-                // Always fill width/height, in order to still shrink the applet when there is not enough space.
-                // When the applet doesn't want to expand set a Layout.maximumWidth accordingly
-                // https://bugs.kde.org/show_bug.cgi?id=473420
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
                 function getMargins(side, returnAllMargins = false, overrideFillArea = null, overrideThickArea = null): real {
                     if (!applet || !applet.plasmoid) {
                         return 0;
@@ -243,36 +225,31 @@ ContainmentItem {
                 Layout.leftMargin: getMargins('left')
                 Layout.rightMargin: getMargins('right')
 
+                // Always fill width/height, in order to still shrink the applet when there is not enough space.
+                // When the applet doesn't want to expand set a Layout.maximumWidth accordingly
+                // https://bugs.kde.org/show_bug.cgi?id=473420
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                property bool wantsToFillWidth: applet?.Layout.fillWidth
+                property bool wantsToFillHeight: applet?.Layout.fillHeight
+                property bool wantsToFillSpace: [wantsToFillHeight, wantsToFillWidth]
+                onWantsToFillSpaceChanged: checkLastSpacer()
+
+                property int availWidth: root.width - Layout.leftMargin - Layout.rightMargin
+                property int availHeight: root.height - Layout.topMargin - Layout.bottomMargin
+                function findPositive(first, second) {return first > 0 ? first : second}
+
     // BEGIN BUG 454095: do not combine these expressions to a function or the bindings won't work
-                readonly property real appletMaxWidth: applet?.Layout.maximumWidth >= 0 ? applet.Layout.maximumWidth : root.width
-                readonly property real appletPrefWidth: (applet ? (applet.Layout.preferredWidth >= 0
-                                                            ? applet.Layout.preferredWidth
-                                                            : Math.max(root.height,
-                                                                (applet.implicitWidth > 0 ?
-                                                                applet.implicitWidth : applet.Layout.minimumWidth)))
-                                                        : root.height)
-                readonly property real appletMaxHeight: applet?.Layout.maximumHeight >= 0 ? applet.Layout.maximumHeight : root.height
-                readonly property real appletPrefHeight: (applet ? (applet.Layout.preferredHeight >= 0
-                                                            ? applet.Layout.preferredHeight
-                                                            : Math.max(root.width,
-                                                                (applet.implicitHeight > 0 ?
-                                                                applet.implicitHeight : applet.Layout.minimumHeight)))
-                                                         : root.width)
+                Layout.minimumWidth: root.isHorizontal ? findPositive(applet?.Layout.minimumWidth, root.height) : availWidth
+                Layout.minimumHeight: !root.isHorizontal ? findPositive(applet?.Layout.minimumHeight, root.width) : availHeight
 
-                Layout.minimumWidth: (root.isHorizontal ? (applet && applet.Layout.minimumWidth > 0 ? applet.Layout.minimumWidth : root.height) : root.width) - Layout.leftMargin - Layout.rightMargin
-                Layout.minimumHeight: (!root.isHorizontal ? (applet && applet.Layout.minimumHeight > 0 ? applet.Layout.minimumHeight : root.width) : root.height) - Layout.bottomMargin - Layout.topMargin
+                Layout.preferredWidth: root.isHorizontal ? findPositive(applet?.Layout.preferredWidth, Layout.minimumWidth) : availWidth
+                Layout.preferredHeight: !root.isHorizontal ? findPositive(applet?.Layout.preferredHeight, Layout.minimumHeight) : availHeight
 
-                Layout.preferredWidth: (root.isHorizontal ? appletPrefWidth : root.width) - Layout.leftMargin - Layout.rightMargin
-                Layout.preferredHeight: (!root.isHorizontal ? appletPrefHeight : root.height) - Layout.bottomMargin - Layout.topMargin
-
-                // Use the preferred width as maximum in the case the applet doesn't want to fill width, see BUG:473420
-                Layout.maximumWidth: (root.isHorizontal
-                        ? (applet?.Layout.fillWidth ? appletMaxWidth : appletPrefWidth)
-                        : root.height) - Layout.leftMargin - Layout.rightMargin
-                Layout.maximumHeight: (!root.isHorizontal
-                        ? (applet?.Layout.fillHeight ? appletMaxHeight : appletPrefHeight)
-                        : root.width) - Layout.bottomMargin - Layout.topMargin
+                Layout.maximumWidth: root.isHorizontal ? (wantsToFillWidth ? findPositive(applet?.Layout.maximumWidth, root.width) : Layout.preferredWidth) : availWidth
+                Layout.maximumHeight: !root.isHorizontal ? (wantsToFillHeight ? findPositive(applet?.Layout.maximumHeight, root.height) : Layout.preferredHeight) : availHeight
     // END BUG 454095
+
                 Item {
                     id: marginHighlightElements
                     anchors.fill: parent

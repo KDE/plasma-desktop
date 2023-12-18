@@ -204,8 +204,8 @@ PlasmoidItem {
                     return {
                         minimumWidth: -1,
                         maximumWidth: iconSize,
-                        minimumHeight: -1,
-                        maximumHeight: iconSize,
+                        minimumHeight: impHeight,
+                        maximumHeight: impHeight,
                     };
                 } else { // horizontal
                     return {
