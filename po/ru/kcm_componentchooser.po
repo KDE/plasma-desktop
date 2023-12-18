@@ -7,13 +7,13 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Nick Shaforostoff <shafff@ukr.net>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2011, 2016, 2017.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkwincompositing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-02-17 13:22+0300\n"
+"PO-Revision-Date: 2023-12-17 21:42+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -104,46 +104,41 @@ msgid "Details"
 msgstr "Подробные сведения"
 
 #: ui/ComponentOverlay.qml:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid "This application can also open these file types:"
-msgstr "Приложением не декларирована поддержка следующих типов файлов:"
+msgstr "Приложение также может открывать файлы следующих типов:"
 
 #: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (сейчас настроено открытие в %2)"
 
 #: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Открывать все в %1"
 
 #: ui/ComponentOverlay.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
-msgstr "Приложением не декларирована поддержка следующих типов файлов:"
+msgstr ""
+"Приложением не декларирована поддержка следующих типов файлов, но приложение "
+"может использоваться для их открытия:"
 
 #: ui/ComponentOverlay.qml:143
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Force Open Anyway"
+#, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr "Принудительно использовать"
+msgstr "Принудительно использовать %1 для всех типов"
 
 #: ui/ComponentOverlay.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Manually…"
-msgstr "Настроить"
+msgstr "Настроить вручную…"
 
 #: ui/main.qml:17
 #, kde-format
@@ -174,7 +169,7 @@ msgstr "Почтовый клиент:"
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
-msgstr ""
+msgstr "Телефонные номера:"
 
 #: ui/main.qml:116
 #, kde-format

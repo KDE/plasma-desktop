@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2017, 2019.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2023-11-14 22:34+0300\n"
+"PO-Revision-Date: 2023-12-17 10:34+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -57,14 +57,13 @@ msgid "Delete Index Data"
 msgstr "Удалить данные индексирования"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their "
-#| "content."
+#, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
-msgstr "Система поиска позволяет быстро находить файлы по их содержимому."
+msgstr ""
+"Система поиска позволяет быстро находить файлы. Вы можете выбрать папки и "
+"настроить типы данных для индексирования."
 
 #: ui/main.qml:108
 #, kde-format
