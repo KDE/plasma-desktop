@@ -82,6 +82,8 @@ FocusScope {
             }
 
             visible: !root.showSwitcherOnly
+
+            onCloseRequested: activityBrowser.closeRequested()
         }
 
         PlasmaComponents.ScrollView {
