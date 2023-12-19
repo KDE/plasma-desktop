@@ -1,13 +1,13 @@
+# SPDX-FileCopyrightText: 2022, 2023 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-28 02:41+0000\n"
-"PO-Revision-Date: 2023-02-22 23:19+0900\n"
+"PO-Revision-Date: 2023-12-17 23:25+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -249,7 +249,7 @@ msgstr "ショートカット"
 #: contents/configuration/ConfigurationShortcuts.qml:28
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr ""
-"ここで設定したショートカットで、アプレットがクリックされたときのようにアク"
+"ここで設定したショートカットで、クリックされたときのようにウィジェットがアク"
 "ティブになります。"
 
 #: contents/configuration/ContainmentConfiguration.qml:29
@@ -312,7 +312,7 @@ msgstr "ウィンドウはパネルを覆う"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:128
 msgid "Windows Go Below"
-msgstr "ウィンドウはパネルの下に隠れる"
+msgstr "ウィンドウを覆う"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
 msgid "Opacity"
@@ -428,10 +428,8 @@ msgid "Move to Screen %1"
 msgstr "スクリーン %1 に移動"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
-#, fuzzy
-#| msgid "Remove Panel"
 msgid "Remove Desktop"
-msgstr "パネルを削除"
+msgstr "デスクトップを削除"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
 msgid "%1 (primary)"
