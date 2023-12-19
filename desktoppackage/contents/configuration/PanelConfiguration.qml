@@ -156,85 +156,19 @@ ColumnLayout {
                 Layout.alignment: Qt.AlignHCenter
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Set Position...")
                 checkable: true
-                Keys.onPressed: (event)=> {
+
+                function moveTo(newLocation: int) {
                     if (!setPositionButton.checked) {
                         return;
                     }
-                    switch(event.key) {
-                    case Qt.Key_Left:
-                        panel.location = PlasmaCore.Types.LeftEdge;
-                        break;
-                    case Qt.Key_Right:
-                        panel.location = PlasmaCore.Types.RightEdge;
-                        break;
-                    case Qt.Key_Up:
-                        panel.location = PlasmaCore.Types.TopEdge;
-                        break;
-                    case Qt.Key_Down:
-                        panel.location = PlasmaCore.Types.BottomEdge;
-                        break;
-                    default:
-                    }
+                    panel.location = newLocation;
                     setPositionButton.checked = false;
                 }
-            }
-        }
-        Repeater {
-            model: Application.screens
-            Item {
-                required property var modelData
 
-                component Indicator : PlasmaCore.Dialog {
-                    id: root
-                    property string iconSource
-                    property var onClickedLocation
-                    flags: Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus | Qt.BypassWindowManagerHint
-                    location: PlasmaCore.Types.Floating
-                    visible: setPositionButton.checked && (panel.location !== onClickedLocation || modelData.name !== panel.screenToFollow.name)
-
-                    x: modelData.virtualX + Kirigami.Units.largeSpacing
-                    y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
-
-                    mainItem: PC3.ToolButton {
-                        width: Kirigami.Units.iconSizes.enormous
-                        height: Kirigami.Units.iconSizes.enormous
-                        icon.name: root.iconSource
-
-                        KQuickControlsAddons.MouseEventListener {
-                            anchors.fill: parent
-                            onClicked: mouse => {
-                                setPositionButton.checked = false
-                                panel.location = root.onClickedLocation
-                                panel.screenToFollow = mouse.screen
-                            }
-                        }
-                    }
-                }
-
-                Indicator {
-                    x: modelData.virtualX + Kirigami.Units.largeSpacing
-                    y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
-                    iconSource: "arrow-left"
-                    onClickedLocation: PlasmaCore.Types.LeftEdge
-                }
-                Indicator {
-                    x: modelData.virtualX + modelData.width - Kirigami.Units.largeSpacing - margins.left - margins.right - mainItem.width
-                    y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
-                    iconSource: "arrow-right"
-                    onClickedLocation: PlasmaCore.Types.RightEdge
-                }
-                Indicator {
-                    x: modelData.virtualX + modelData.width / 2 - mainItem.width / 2 - margins.left
-                    y: modelData.virtualY + Kirigami.Units.largeSpacing
-                    iconSource: "arrow-up"
-                    onClickedLocation: PlasmaCore.Types.TopEdge
-                }
-                Indicator {
-                    x: modelData.virtualX + modelData.width / 2 - mainItem.width / 2 - margins.left
-                    y: modelData.virtualY + modelData.height - mainItem.height - margins.top - margins.bottom - Kirigami.Units.largeSpacing
-                    iconSource: "arrow-down"
-                    onClickedLocation: PlasmaCore.Types.BottomEdge
-                }
+                Keys.onLeftPressed: moveTo(PlasmaCore.Types.LeftEdge)
+                Keys.onRightPressed: moveTo(PlasmaCore.Types.RightEdge)
+                Keys.onUpPressed: moveTo(PlasmaCore.Types.TopEdge)
+                Keys.onDownPressed: moveTo(PlasmaCore.Types.BottomEdge)
             }
         }
 
@@ -501,7 +435,67 @@ ColumnLayout {
                 onCheckedChanged: panel.floating = checked
             }
         }
+    Instantiator {
+        active: setPositionButton.checked
+        asynchronous: true
+        model: Application.screens
+        Item {
+            width: 0
+            height: 0
+            required property var modelData
 
+            component Indicator : PlasmaCore.Dialog {
+                id: root
+                property string iconSource
+                property var onClickedLocation
+                flags: Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus | Qt.BypassWindowManagerHint
+                location: PlasmaCore.Types.Floating
+                visible: setPositionButton.checked && (panel.location !== onClickedLocation || modelData.name !== panel.screenToFollow.name)
+
+                x: modelData.virtualX + Kirigami.Units.largeSpacing
+                y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
+
+                mainItem: PC3.ToolButton {
+                    width: Kirigami.Units.iconSizes.enormous
+                    height: Kirigami.Units.iconSizes.enormous
+                    icon.name: root.iconSource
+
+                    KQuickControlsAddons.MouseEventListener {
+                        anchors.fill: parent
+                        onClicked: mouse => {
+                            setPositionButton.moveTo(root.onClickedLocation);
+                            panel.screenToFollow = mouse.screen;
+                            setPositionButton.checked = false;
+                        }
+                    }
+                }
+            }
+
+            Indicator {
+                x: modelData.virtualX + Kirigami.Units.largeSpacing
+                y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
+                iconSource: "arrow-left"
+                onClickedLocation: PlasmaCore.Types.LeftEdge
+            }
+            Indicator {
+                x: modelData.virtualX + modelData.width - Kirigami.Units.largeSpacing - margins.left - margins.right - mainItem.width
+                y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
+                iconSource: "arrow-right"
+                onClickedLocation: PlasmaCore.Types.RightEdge
+            }
+            Indicator {
+                x: modelData.virtualX + modelData.width / 2 - mainItem.width / 2 - margins.left
+                y: modelData.virtualY + Kirigami.Units.largeSpacing
+                iconSource: "arrow-up"
+                onClickedLocation: PlasmaCore.Types.TopEdge
+            }
+            Indicator {
+                x: modelData.virtualX + modelData.width / 2 - mainItem.width / 2 - margins.left
+                y: modelData.virtualY + modelData.height - mainItem.height - margins.top - margins.bottom - Kirigami.Units.largeSpacing
+                iconSource: "arrow-down"
+                onClickedLocation: PlasmaCore.Types.BottomEdge
+            }
+        }
     }
 
     RowLayout {
