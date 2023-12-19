@@ -58,22 +58,14 @@ KSvg.FrameSvgItem {
         leftMaximumLengthHandle.value = panel.maximumLength
     }
 
-    KSvg.SvgItem {
-        id: centerMark
-        imagePath: "widgets/containment-controls"
-        elementId: dialogRoot.vertical ? "vertical-centerindicator" : "horizontal-centerindicator"
-        visible: panel.alignment === Qt.AlignCenter
-        width: dialogRoot.vertical ? parent.width : naturalSize.width
-        height: dialogRoot.vertical ? naturalSize.height : parent.height
-        anchors.centerIn: parent
-    }
-
     SliderHandle {
         id: offsetHandle
         anchors {
             right: !root.isHorizontal ? root.right : undefined
             bottom: root.isHorizontal ? root.bottom : undefined
         }
+        // On wayland the center handle can't work for technical reasons, hide it everywhere
+        visible: panel.alignment !== Qt.AlignCenter
         graphicElementName: "offsetslider"
         description: i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change position on this screen edge.\nDouble click to reset.")
         onValueChanged: panel.offset = value
@@ -93,7 +85,7 @@ KSvg.FrameSvgItem {
             case Qt.AlignRight:
                 return leftMaximumLengthHandle.value - size / 2
             default:
-                return panel.maximumLength / 2 - size / 2
+                return 0
             }
         }
         //Needed for the same reason as above
