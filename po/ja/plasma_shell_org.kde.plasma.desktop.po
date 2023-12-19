@@ -1,13 +1,13 @@
+# SPDX-FileCopyrightText: 2022, 2023 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-09 01:37+0000\n"
-"PO-Revision-Date: 2023-02-22 23:19+0900\n"
+"POT-Creation-Date: 2023-12-19 01:34+0000\n"
+"PO-Revision-Date: 2023-12-17 23:25+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -51,7 +51,7 @@ msgstr "アクティビティを停止"
 msgid "Stopped activities:"
 msgstr "停止したアクティビティ:"
 
-#: contents/activitymanager/ActivityManager.qml:120
+#: contents/activitymanager/ActivityManager.qml:122
 msgid "Create activity…"
 msgstr "アクティビティを作成..."
 
@@ -248,7 +248,7 @@ msgstr "ショートカット"
 #: contents/configuration/ConfigurationShortcuts.qml:30
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr ""
-"ここで設定したショートカットで、アプレットがクリックされたときのようにアク"
+"ここで設定したショートカットで、クリックされたときのようにウィジェットがアク"
 "ティブになります。"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
@@ -264,10 +264,8 @@ msgid "Input Here"
 msgstr "ここに入力"
 
 #: contents/configuration/PanelConfiguration.qml:92
-#, fuzzy
-#| msgid "Apply Settings"
 msgid "Panel Settings"
-msgstr "設定を適用"
+msgstr "パネル設定"
 
 #: contents/configuration/PanelConfiguration.qml:98
 msgid "Add Spacer"
@@ -275,7 +273,7 @@ msgstr "スペーサーを追加"
 
 #: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "スペーサーウィジェットをパネルに追加"
 
 #: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
@@ -283,11 +281,11 @@ msgstr "ウィジェットを追加..."
 
 #: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "ウィジェットをセレクタからパネルにドラッグ＆ドロップ"
 
 #: contents/configuration/PanelConfiguration.qml:133
 msgid "Position"
-msgstr ""
+msgstr "位置"
 
 #: contents/configuration/PanelConfiguration.qml:137
 #: contents/configuration/PanelConfiguration.qml:311
@@ -311,13 +309,11 @@ msgstr "下"
 
 #: contents/configuration/PanelConfiguration.qml:157
 msgid "Set Position..."
-msgstr ""
+msgstr "位置を設定..."
 
 #: contents/configuration/PanelConfiguration.qml:247
-#, fuzzy
-#| msgid "Panel Alignment"
 msgid "Alignment"
-msgstr "パネルの配置"
+msgstr "配置"
 
 #: contents/configuration/PanelConfiguration.qml:312
 msgid "Center"
@@ -325,51 +321,43 @@ msgstr "中央"
 
 #: contents/configuration/PanelConfiguration.qml:335
 msgid "Length"
-msgstr ""
+msgstr "長さ"
 
 #: contents/configuration/PanelConfiguration.qml:353
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "パネルの高さ:"
+msgstr "高さを埋める"
 
 #: contents/configuration/PanelConfiguration.qml:353
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "パネルの幅:"
+msgstr "幅を埋める"
 
 #: contents/configuration/PanelConfiguration.qml:354
 msgid "Fit content"
-msgstr ""
+msgstr "内容に合わせる"
 
 #: contents/configuration/PanelConfiguration.qml:355
 msgid "Custom"
-msgstr ""
+msgstr "カスタム"
 
 #: contents/configuration/PanelConfiguration.qml:391
 msgid "Visibility"
 msgstr "表示"
 
 #: contents/configuration/PanelConfiguration.qml:403
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
 msgstr "常に表示"
 
 #: contents/configuration/PanelConfiguration.qml:404
-#, fuzzy
-#| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "自動的に隠す"
 
 #: contents/configuration/PanelConfiguration.qml:405
 msgid "Dodge windows"
-msgstr ""
+msgstr "ウィンドウを避ける"
 
 #: contents/configuration/PanelConfiguration.qml:406
 msgid "Windows Go Below"
-msgstr "ウィンドウはパネルの下に隠れる"
+msgstr "ウィンドウを覆う"
 
 #: contents/configuration/PanelConfiguration.qml:449
 msgid "Opacity"
@@ -389,46 +377,36 @@ msgstr "透明"
 
 #: contents/configuration/PanelConfiguration.qml:488
 msgid "Style"
-msgstr ""
+msgstr "スタイル"
 
 #: contents/configuration/PanelConfiguration.qml:499
-#, fuzzy
-#| msgid "Floating Panel"
 msgid "Floating"
-msgstr "フローティングパネル"
+msgstr "フローティング"
 
 #: contents/configuration/PanelConfiguration.qml:515
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "パネルの幅:"
 
 #: contents/configuration/PanelConfiguration.qml:515
-#, fuzzy
-#| msgid "Right"
 msgid "Height:"
-msgstr "右"
+msgstr "高さ:"
 
 #: contents/configuration/PanelConfiguration.qml:549
-#, fuzzy
-#| msgid "Shortcut"
 msgid "Focus shortcut:"
-msgstr "ショートカット"
+msgstr "フォーカスショートカット:"
 
 #: contents/configuration/PanelConfiguration.qml:559
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "キーボードショートカットを押してパネルをフォーカス"
 
 #: contents/configuration/PanelConfiguration.qml:575
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "パネルを削除"
 
 #: contents/configuration/PanelConfiguration.qml:578
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "このパネルを削除します。この操作は取り消せません"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -481,10 +459,8 @@ msgid "Move to Screen %1"
 msgstr "スクリーン %1 に移動"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
-#, fuzzy
-#| msgid "Remove Panel"
 msgid "Remove Desktop"
-msgstr "パネルを削除"
+msgstr "デスクトップを削除"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:195
 msgid "Remove Panel"
@@ -500,7 +476,7 @@ msgstr "代替ウィジェット"
 
 #: contents/explorer/AppletDelegate.qml:42
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "サポートされていないウィジェット"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
