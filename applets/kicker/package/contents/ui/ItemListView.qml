@@ -187,63 +187,63 @@ FocusScope {
                         currentItem.menu.closed.connect(resetIndexTimer.restart);
                     }
                 }
+            }
 
-                Keys.onPressed: event => {
-                    if (event.key === Qt.Key_Up) {
-                        event.accepted = true;
+            Keys.onPressed: event => {
+                if (event.key === Qt.Key_Up) {
+                    event.accepted = true;
 
-                        if (!keyNavigationWraps && currentIndex == 0) {
-                            itemList.keyNavigationAtListEnd();
+                    if (!keyNavigationWraps && currentIndex == 0) {
+                        itemList.keyNavigationAtListEnd();
 
-                            return;
-                        }
+                        return;
+                    }
 
-                        showChildDialogs = false;
-                        decrementCurrentIndex();
+                    showChildDialogs = false;
+                    listView.decrementCurrentIndex();
 
-                        if (currentItem.isSeparator) {
-                            decrementCurrentIndex();
-                        }
+                    if (currentItem.isSeparator) {
+                        listView.decrementCurrentIndex();
+                    }
 
-                        showChildDialogs = true;
-                    } else if (event.key === Qt.Key_Down) {
-                        event.accepted = true;
+                    showChildDialogs = true;
+                } else if (event.key === Qt.Key_Down) {
+                    event.accepted = true;
 
-                        if (!keyNavigationWraps && currentIndex == count - 1) {
-                            itemList.keyNavigationAtListEnd();
+                    if (!keyNavigationWraps && currentIndex == count - 1) {
+                        itemList.keyNavigationAtListEnd();
 
-                            return;
-                        }
+                        return;
+                    }
 
-                        showChildDialogs = false;
-                        incrementCurrentIndex();
+                    showChildDialogs = false;
+                    listView.incrementCurrentIndex();
 
-                        if (currentItem.isSeparator) {
-                            incrementCurrentIndex();
-                        }
+                    if (currentItem.isSeparator) {
+                        listView.incrementCurrentIndex();
+                    }
 
-                        showChildDialogs = true;
-                    } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && itemList.childDialog != null) {
-                        windowSystem.forceActive(itemList.childDialog.mainItem);
-                        itemList.childDialog.mainItem.focus = true;
-                        itemList.childDialog.mainItem.currentIndex = 0;
-                    } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && itemList.childDialog == null
-                        && currentItem != null && currentItem.hasChildren) {
-                        dialogSpawnTimer.focusOnSpawn = true;
-                        dialogSpawnTimer.restart();
-                    } else if (event.key === Qt.Key_Left && dialog != null) {
-                        dialog.destroy();
-                    } else if (event.key === Qt.Key_Escape) {
-                        kicker.expanded = false;
-                    } else if (event.key === Qt.Key_Tab) {
-                        //do nothing, and skip appending text
-                    } else if (event.text !== "") {
-                        if (/[\x00-\x1F\x7F]/.test(event.text)) {
-                            // We still want to focus it
-                            appendSearchText("");
-                        } else {
-                            appendSearchText(event.text);
-                        }
+                    showChildDialogs = true;
+                } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && itemList.childDialog != null) {
+                    windowSystem.forceActive(itemList.childDialog.mainItem);
+                    itemList.childDialog.mainItem.focus = true;
+                    itemList.childDialog.mainItem.currentIndex = 0;
+                } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && itemList.childDialog == null
+                    && currentItem != null && currentItem.hasChildren) {
+                    dialogSpawnTimer.focusOnSpawn = true;
+                    dialogSpawnTimer.restart();
+                } else if (event.key === Qt.Key_Left && dialog != null) {
+                    dialog.destroy();
+                } else if (event.key === Qt.Key_Escape) {
+                    kicker.expanded = false;
+                } else if (event.key === Qt.Key_Tab) {
+                    //do nothing, and skip appending text
+                } else if (event.text !== "") {
+                    if (/[\x00-\x1F\x7F]/.test(event.text)) {
+                        // We still want to focus it
+                        appendSearchText("");
+                    } else {
+                        appendSearchText(event.text);
                     }
                 }
             }
