@@ -128,6 +128,7 @@ ColumnLayout {
         columnSpacing: Kirigami.Units.smallSpacing
         rows: 2
         columns: 3
+        uniformCellWidths: true
 
         ColumnLayout {
             Layout.alignment: Qt.AlignHCenter
