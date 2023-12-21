@@ -77,7 +77,7 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Svg
 )
 
-find_package(KF6 ${PROJECT_VERSION} REQUIRED COMPONENTS Plasma5Support)
+find_package(Plasma5Support ${PROJECT_VERSION} REQUIRED)
 find_package(Plasma ${PROJECT_VERSION} REQUIRED)
 find_package(PlasmaQuick ${PROJECT_VERSION} REQUIRED)
 find_package(PlasmaActivities ${PROJECT_VERSION} REQUIRED)
