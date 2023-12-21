@@ -76,8 +76,43 @@ KSvg.FrameSvgItem {
         }
         graphicElementName: "offsetslider"
         description: i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change position on this screen edge.\nDouble click to reset.")
-        onValueChanged: panel.offset = value
-        property int position: (dialogRoot.vertical) ? y : x
+        offset: panel.alignment === Qt.AlignCenter ? 0 : (dialogRoot.vertical ? panel.height : panel.width) / 2
+        property int position: (dialogRoot.vertical) ? y + height / 2 : x + width / 2
+        onPositionChanged: {
+            if (!offsetHandle.hasEverBeenMoved) return;
+            let panelLength = dialogRoot.vertical ? panel.height : panel.width
+            let rootLength = dialogRoot.vertical ? root.height : root.width
+            // Snap at the center
+            if (Math.abs(position - rootLength / 2) < 5) {
+                if (panel.alignment !== Qt.AlignCenter) {
+                    panel.alignment = Qt.AlignCenter
+                    // Coordinate change: since we switch from measuring the min/max
+                    // length from the side of the panel to the center of the panel,
+                    // we need to double the distance between the min/max indicators
+                    // and the panel side.
+                    panel.minimumLength += panel.minimumLength - panelLength
+                    panel.maximumLength += panel.maximumLength - panelLength
+                }
+                panel.offset = 0
+            } else if (position > rootLength / 2) {
+                if (panel.alignment === Qt.AlignCenter) {
+                    // This is the opposite of the previous comment, as we are
+                    // cutting in half the distance between the min/max indicators
+                    // and the side of the panel.
+                    panel.minimumLength -= (panel.minimumLength - panelLength) / 2
+                    panel.maximumLength -= (panel.maximumLength - panelLength) / 2
+                }
+                panel.alignment = Qt.AlignRight
+                panel.offset = Math.round(rootLength - position - offset)
+            } else if (position <= rootLength / 2) {
+                if (panel.alignment === Qt.AlignCenter) {
+                    panel.minimumLength -= (panel.minimumLength - panelLength) / 2
+                    panel.maximumLength -= (panel.maximumLength - panelLength) / 2
+                }
+                panel.alignment = Qt.AlignLeft
+                panel.offset = Math.round(position - offset)
+            }
+        }
         /* The maximum/minimumPosition values are needed to prevent the user from moving a panel with
          * center alignment to the left and then drag the position handle to the left.
          * This would make the panel to go off the monitor:
@@ -89,9 +124,9 @@ KSvg.FrameSvgItem {
             var size = dialogRoot.vertical ? height : width
             switch(panel.alignment){
             case Qt.AlignLeft:
-                return -size / 2
+                return -size / 2 + offset
             case Qt.AlignRight:
-                return leftMaximumLengthHandle.value - size / 2
+                return leftMaximumLengthHandle.value - size / 2 - offset
             default:
                 return panel.maximumLength / 2 - size / 2
             }
@@ -102,9 +137,9 @@ KSvg.FrameSvgItem {
             var rootSize = dialogRoot.vertical ? root.height : root.width
             switch(panel.alignment){
             case Qt.AlignLeft:
-                return rootSize - rightMaximumLengthHandle.value - size / 2
+                return rootSize - rightMaximumLengthHandle.value - size / 2 + offset
             case Qt.AlignRight:
-                return rootSize - size / 2
+                return rootSize - size / 2 - offset
             default:
                 return rootSize - panel.maximumLength / 2 - size / 2
             }
