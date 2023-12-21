@@ -63,6 +63,8 @@ KSvg.SvgItem {
     // Handle name displayed as a tooltip.
     property string description
 
+    property bool hasEverBeenMoved: false
+
     function syncPos() {
         if (dialogRoot.vertical) {
             if (alignment === Qt.AlignRight) {
@@ -180,6 +182,7 @@ KSvg.SvgItem {
         }
 
         function changePosition() {
+            root.hasEverBeenMoved = true
             if (dialogRoot.vertical) {
                 if (root.alignment === Qt.AlignRight) {
                     root.value = root.parent.height - (root.y + offset + root.height/2)
