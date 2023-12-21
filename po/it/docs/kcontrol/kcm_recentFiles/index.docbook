@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!--
+    SPDX-FileCopyrightText: 2021 Yuri Chornoivan <yurchor@ukr.net>
+    SPDX-FileCopyrightText: 2023 Méven Car <meven@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcm_recentFiles" lang="&language;">
+<articleinfo>
+    
+<title
+>File recenti</title>
+<authorgroup>
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Paolo</firstname
+> <surname
+>Zamponi</surname
+> <affiliation
+><address
+><email
+>feus73@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traduzione del documento</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>30/11/2023</date>
+<releaseinfo
+>Plasma 6.0</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>File recenti</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Questo modulo ti permette di configurare l'intervallo di tempo in cui <guilabel
+>Mantieni la cronologia</guilabel
+> dei file aperti prima che vengano eliminati alcuni dati traccianti. Usa il pulsante a discesa <guibutton
+>Cancella la cronologia</guibutton
+> per fare in modo che &plasma; <guimenuitem
+>Dimentica l'ultima ora</guimenuitem
+>, <guimenuitem
+>Dimentica le ultime due ore</guimenuitem
+>, <guimenuitem
+>Dimentica un giorno</guimenuitem
+> o <guimenuitem
+>Dimentica tutto</guimenuitem
+>. </para>
+    
+<para
+>Sotto puoi configurare quali applicazioni possono memorizzare i documenti aperti. Usa l'elemento <guilabel
+>Per tutte le applicazioni</guilabel
+> per salvare tutti i dati, <guilabel
+>Non ricordare</guilabel
+>per inibire il salvataggio dei dati, oppure <guilabel
+>Solo per certe applicazioni</guilabel
+> per una selezione più fine (facendo clic sull'elemento dell'applicazione si cambia la sua modalità corrente). </para>
+
+<para
+>Controlla l'elemento <guilabel
+>Aggiungi alla lista nera le applicazioni non nell'elenco</guilabel
+> per inibire il tracciamento da tutte le applicazioni che non sono nell'elenco. </para>
+
+</article>

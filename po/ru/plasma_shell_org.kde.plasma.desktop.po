@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:34+0000\n"
-"PO-Revision-Date: 2023-02-05 18:21+0300\n"
+"POT-Creation-Date: 2023-12-21 02:00+0000\n"
+"PO-Revision-Date: 2023-12-20 14:00+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -272,185 +272,153 @@ msgstr "Действия мыши"
 msgid "Input Here"
 msgstr "Нажимайте здесь"
 
-#: contents/configuration/PanelConfiguration.qml:92
-#, fuzzy
-#| msgid "Apply Settings"
+#: contents/configuration/PanelConfiguration.qml:91
 msgid "Panel Settings"
-msgstr "Сохранение параметров"
+msgstr "Параметры панели"
 
-#: contents/configuration/PanelConfiguration.qml:98
+#: contents/configuration/PanelConfiguration.qml:97
 msgid "Add Spacer"
 msgstr "Добавить разделитель"
 
-#: contents/configuration/PanelConfiguration.qml:101
+#: contents/configuration/PanelConfiguration.qml:100
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Добавить виджет "
 
-#: contents/configuration/PanelConfiguration.qml:108
+#: contents/configuration/PanelConfiguration.qml:107
 msgid "Add Widgets…"
 msgstr "Добавить виджеты..."
 
-#: contents/configuration/PanelConfiguration.qml:111
+#: contents/configuration/PanelConfiguration.qml:110
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
+"Открыть панель выбора виджетов, из которой возможно перетаскивать их на "
+"панель"
 
-#: contents/configuration/PanelConfiguration.qml:133
-#, fuzzy
-#| msgid "Description"
+#: contents/configuration/PanelConfiguration.qml:139
 msgid "Position"
-msgstr "Описание"
+msgstr "Расположение"
 
-#: contents/configuration/PanelConfiguration.qml:137
-#: contents/configuration/PanelConfiguration.qml:311
+#: contents/configuration/PanelConfiguration.qml:143
+#: contents/configuration/PanelConfiguration.qml:251
 msgid "Top"
 msgstr "Сверху"
 
-#: contents/configuration/PanelConfiguration.qml:138
-#: contents/configuration/PanelConfiguration.qml:313
+#: contents/configuration/PanelConfiguration.qml:144
+#: contents/configuration/PanelConfiguration.qml:253
 msgid "Right"
 msgstr "Справа"
 
-#: contents/configuration/PanelConfiguration.qml:139
-#: contents/configuration/PanelConfiguration.qml:311
+#: contents/configuration/PanelConfiguration.qml:145
+#: contents/configuration/PanelConfiguration.qml:251
 msgid "Left"
 msgstr "Слева"
 
-#: contents/configuration/PanelConfiguration.qml:140
-#: contents/configuration/PanelConfiguration.qml:313
+#: contents/configuration/PanelConfiguration.qml:146
+#: contents/configuration/PanelConfiguration.qml:253
 msgid "Bottom"
 msgstr "Снизу"
 
-#: contents/configuration/PanelConfiguration.qml:157
+#: contents/configuration/PanelConfiguration.qml:163
 msgid "Set Position..."
-msgstr ""
+msgstr "Расположение..."
 
-#: contents/configuration/PanelConfiguration.qml:247
-#, fuzzy
-#| msgid "Panel Alignment"
+#: contents/configuration/PanelConfiguration.qml:187
 msgid "Alignment"
-msgstr "Выравнивание панели"
+msgstr "Выравнивание"
 
-#: contents/configuration/PanelConfiguration.qml:312
+#: contents/configuration/PanelConfiguration.qml:252
 msgid "Center"
 msgstr "По центру"
 
-#: contents/configuration/PanelConfiguration.qml:335
+#: contents/configuration/PanelConfiguration.qml:275
 msgid "Length"
-msgstr ""
+msgstr "Длина"
 
-#: contents/configuration/PanelConfiguration.qml:353
-#, fuzzy
-#| msgid "Panel height:"
+#: contents/configuration/PanelConfiguration.qml:293
 msgid "Fill height"
-msgstr "Высота панели:"
+msgstr "Во всю высоту"
 
-#: contents/configuration/PanelConfiguration.qml:353
-#, fuzzy
-#| msgid "Panel width:"
+#: contents/configuration/PanelConfiguration.qml:293
 msgid "Fill width"
-msgstr "Ширина панели:"
+msgstr "Во всю ширину"
 
-#: contents/configuration/PanelConfiguration.qml:354
+#: contents/configuration/PanelConfiguration.qml:294
 msgid "Fit content"
-msgstr ""
+msgstr "По содержимому"
 
-#: contents/configuration/PanelConfiguration.qml:355
+#: contents/configuration/PanelConfiguration.qml:295
 msgid "Custom"
-msgstr ""
+msgstr "Другое"
 
-#: contents/configuration/PanelConfiguration.qml:391
-#, fuzzy
-#| msgid "Visibility"
+#: contents/configuration/PanelConfiguration.qml:325
 msgid "Visibility"
 msgstr "Видимость"
 
-#: contents/configuration/PanelConfiguration.qml:403
-#, fuzzy
-#| msgid "Always Visible"
+#: contents/configuration/PanelConfiguration.qml:337
 msgid "Always visible"
 msgstr "Показывать всегда"
 
-#: contents/configuration/PanelConfiguration.qml:404
-#, fuzzy
-#| msgid "Auto Hide"
+#: contents/configuration/PanelConfiguration.qml:338
 msgid "Auto hide"
-msgstr "Автоматически скрывать"
+msgstr "Автосокрытие"
 
-#: contents/configuration/PanelConfiguration.qml:405
+#: contents/configuration/PanelConfiguration.qml:339
 msgid "Dodge windows"
-msgstr ""
+msgstr "Скрывать под окнами"
 
-#: contents/configuration/PanelConfiguration.qml:406
-#, fuzzy
-#| msgid "Windows Go Below"
+#: contents/configuration/PanelConfiguration.qml:340
 msgid "Windows Go Below"
-msgstr "Панель перекрывает окна"
+msgstr "Поверх окон"
 
-#: contents/configuration/PanelConfiguration.qml:449
-#, fuzzy
-#| msgid "Opacity"
+#: contents/configuration/PanelConfiguration.qml:383
 msgid "Opacity"
-msgstr "Прозрачность"
+msgstr "Непрозрачность"
 
-#: contents/configuration/PanelConfiguration.qml:462
+#: contents/configuration/PanelConfiguration.qml:396
 msgid "Adaptive"
 msgstr "Адаптивно"
 
-#: contents/configuration/PanelConfiguration.qml:463
-#, fuzzy
-#| msgid "Opaque"
+#: contents/configuration/PanelConfiguration.qml:397
 msgid "Opaque"
 msgstr "Непрозрачно"
 
-#: contents/configuration/PanelConfiguration.qml:464
-#, fuzzy
-#| msgid "Translucent"
+#: contents/configuration/PanelConfiguration.qml:398
 msgid "Translucent"
 msgstr "Полупрозрачно"
 
-#: contents/configuration/PanelConfiguration.qml:488
+#: contents/configuration/PanelConfiguration.qml:422
 msgid "Style"
-msgstr ""
+msgstr "Оформление"
 
-#: contents/configuration/PanelConfiguration.qml:499
-#, fuzzy
-#| msgid "Floating Panel"
+#: contents/configuration/PanelConfiguration.qml:433
 msgid "Floating"
-msgstr "Плавающая панель"
+msgstr "Плавающее"
 
-#: contents/configuration/PanelConfiguration.qml:515
-#, fuzzy
-#| msgid "Panel width:"
+#: contents/configuration/PanelConfiguration.qml:511
 msgid "Panel Width:"
 msgstr "Ширина панели:"
 
-#: contents/configuration/PanelConfiguration.qml:515
-#, fuzzy
-#| msgid "Height"
+#: contents/configuration/PanelConfiguration.qml:511
 msgid "Height:"
-msgstr "Высота"
+msgstr "Высота:"
 
-#: contents/configuration/PanelConfiguration.qml:549
-#, fuzzy
-#| msgid "Shortcut"
+#: contents/configuration/PanelConfiguration.qml:545
 msgid "Focus shortcut:"
-msgstr "Комбинация клавиш"
+msgstr "Комбинация переключения в панель:"
 
-#: contents/configuration/PanelConfiguration.qml:559
+#: contents/configuration/PanelConfiguration.qml:555
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Используйте эту комбинацию клавиш для переключения фокуса ввода в панель"
 
-#: contents/configuration/PanelConfiguration.qml:575
-#, fuzzy
-#| msgid "Remove Panel"
+#: contents/configuration/PanelConfiguration.qml:571
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Удалить панель"
 
-#: contents/configuration/PanelConfiguration.qml:578
+#: contents/configuration/PanelConfiguration.qml:574
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "Удалить панель, необратимое действие"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -503,10 +471,8 @@ msgid "Move to Screen %1"
 msgstr "Переместить на экран %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
-#, fuzzy
-#| msgid "Remove Panel"
 msgid "Remove Desktop"
-msgstr "Удалить панель"
+msgstr "Удалить рабочий стол"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:195
 msgid "Remove Panel"
@@ -522,7 +488,7 @@ msgstr "Варианты виджета"
 
 #: contents/explorer/AppletDelegate.qml:42
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Неподдерживаемый виджет"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"

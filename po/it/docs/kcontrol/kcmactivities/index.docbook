@@ -64,17 +64,13 @@
 >Questo modulo tu permette di configurare le attività. Queste sono un modo di avere più impostazioni di &plasma;, ciascuno con un diverso insieme di oggetti e di temi. Alcune attività possono essere private: esse non tengono traccia delle tue azioni, ad esempio non memorizzano quali documenti hai aperto. </para>
 
 <para
->Questo modulo è diviso in tre schede: <link linkend="activities-main"
+>Questo modulo è diviso in due schede: <link linkend="activities-main"
 ><guilabel
 >Attività</guilabel
 ></link
->, <link linkend="activities-switching"
+> e <link linkend="activities-switching"
 ><guilabel
 >Passa a</guilabel
-></link
-> e <link linkend="activities-privacy"
-><guilabel
->Riservatezza</guilabel
 ></link
 >. </para>
 
@@ -180,40 +176,6 @@
 >Fondamentali di &kde;</emphasis
 ></ulink
 >. </para>
-</sect3>
-
-<sect3 id="activities-privacy">
-<title
-><guilabel
->Riservatezza</guilabel
-></title>
-
-<para
->Questa scheda ti permette di configurare l'intervallo di tempo in cui <guilabel
->Mantieni la cronologia</guilabel
-> prima che vengano eliminati i dati traccianti. Usa il pulsante a discesa <guibutton
->Cancella la cronologia</guibutton
-> prima che &plasma; <guimenuitem
->Dimentica l'ultima ora</guimenuitem
->, <guimenuitem
->Dimentica le ultime due ore</guimenuitem
->, <guimenuitem
->Dimentica un giorno</guimenuitem
-> o <guimenuitem
->Dimentica tutto</guimenuitem
->. </para>
-<para
->Sotto puoi configurare quali applicazioni possono memorizzare i documenti aperti nelle attività. Usa l'elemento <guilabel
->Per tutte le applicazioni</guilabel
-> per salvare tutti i dati, <guilabel
->Non ricordare</guilabel
->per inibire il salvataggio dei dati, oppure <guilabel
->Solo per certe applicazioni</guilabel
-> per una selezione più fine (facendo clic sull'elemento dell'applicazione si cambia la sua modalità corrente). </para>
-<para
->Controlla l'elemento <guilabel
->Aggiungi alla lista nera le applicazioni non nell'elenco</guilabel
-> per inibire il tracciamento da tutte le applicazioni che non sono nell'elenco. </para>
 </sect3>
 
 </sect2>
