@@ -94,7 +94,7 @@ void KWinWaylandBackend::findDevices()
 
 bool KWinWaylandBackend::applyConfig()
 {
-    KConfigGroup buttonGroup = KSharedConfig::openConfig("kcminputrc")->group("ButtonRebinds").group("Mouse");
+    KConfigGroup buttonGroup = KSharedConfig::openConfig(QStringLiteral("kcminputrc"))->group(QStringLiteral("ButtonRebinds")).group(QStringLiteral("Mouse"));
     for (auto it = m_buttonMapping.cbegin(); it != m_buttonMapping.cend(); ++it) {
         if (auto keys = it.value().value<QKeySequence>(); !keys.isEmpty()) {
             buttonGroup.writeEntry(it.key(), QStringList{"Key", keys.toString(QKeySequence::PortableText)}, KConfig::Notify);
@@ -111,7 +111,7 @@ bool KWinWaylandBackend::applyConfig()
 bool KWinWaylandBackend::getConfig()
 {
     m_loadedButtonMapping.clear();
-    const KConfigGroup buttonGroup = KSharedConfig::openConfig("kcminputrc")->group("ButtonRebinds").group("Mouse");
+    const KConfigGroup buttonGroup = KSharedConfig::openConfig(QStringLiteral("kcminputrc"))->group(QStringLiteral("ButtonRebinds")).group(QStringLiteral("Mouse"));
     for (int i = 1; i <= 24; ++i) {
         const QString buttonName = QLatin1String("ExtraButton%1").arg(QString::number(i));
         auto entry = buttonGroup.readEntry(buttonName, QStringList());

@@ -12,7 +12,7 @@ namespace
 KConfigGroup &systemDefaults()
 {
     static KSharedConfig::Ptr p(KSharedConfig::openConfig(".touchpaddefaults", KConfig::SimpleConfig, QStandardPaths::TempLocation));
-    static KConfigGroup group(p->group("parameters"));
+    static KConfigGroup group(p->group(QStringLiteral("parameters")));
     return group;
 }
 

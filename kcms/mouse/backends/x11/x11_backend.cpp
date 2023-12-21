@@ -106,7 +106,7 @@ void X11Backend::applyCursorTheme(const QString &theme, int size)
 void X11Backend::kcmInit()
 {
     auto config = KSharedConfig::openConfig("kcminputrc", KConfig::NoGlobals);
-    KConfigGroup group = config->group("Mouse");
+    KConfigGroup group = config->group(QStringLiteral("Mouse"));
     const QString theme = group.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
     const int size = group.readEntry("cursorSize", 24);
 

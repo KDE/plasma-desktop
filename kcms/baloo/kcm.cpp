@@ -90,7 +90,7 @@ void ServerConfigModule::save()
 
     // enable baloo runner if we have indexing enabled, otherwise disable it
     KConfig cfg(QStringLiteral("krunnerrc"));
-    KConfigGroup grp = cfg.group("Plugins");
+    KConfigGroup grp = cfg.group(QStringLiteral("Plugins"));
     grp.writeEntry("baloosearchEnabled", balooSettings()->indexingEnabled(), KConfig::Notify);
 }
 

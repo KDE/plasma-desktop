@@ -214,7 +214,7 @@ bool Attica::KdePlatformDependent::askForCredentials(const QUrl &baseUrl, QStrin
 
 QList<QUrl> KdePlatformDependent::getDefaultProviderFiles() const
 {
-    KConfigGroup group(m_config, "General");
+    KConfigGroup group(m_config, QStringLiteral("General"));
     const QStringList pathStrings = group.readPathEntry("providerFiles", QStringList(QStringLiteral("https://autoconfig.kde.org/ocs/providers.xml")));
     QList<QUrl> paths;
     for (const QString &pathString : pathStrings) {
@@ -226,7 +226,7 @@ QList<QUrl> KdePlatformDependent::getDefaultProviderFiles() const
 
 void KdePlatformDependent::addDefaultProviderFile(const QUrl &url)
 {
-    KConfigGroup group(m_config, "General");
+    KConfigGroup group(m_config, QStringLiteral("General"));
     QStringList pathStrings = group.readPathEntry("providerFiles", QStringList(QStringLiteral("https://autoconfig.kde.org/ocs/providers.xml")));
     QString urlString = url.toString();
     if (!pathStrings.contains(urlString)) {
@@ -239,7 +239,7 @@ void KdePlatformDependent::addDefaultProviderFile(const QUrl &url)
 
 void KdePlatformDependent::removeDefaultProviderFile(const QUrl &url)
 {
-    KConfigGroup group(m_config, "General");
+    KConfigGroup group(m_config, QStringLiteral("General"));
     QStringList pathStrings = group.readPathEntry("providerFiles", QStringList(QStringLiteral("https://autoconfig.kde.org/ocs/providers.xml")));
     pathStrings.removeAll(url.toString());
     group.writeEntry("providerFiles", pathStrings);
@@ -247,7 +247,7 @@ void KdePlatformDependent::removeDefaultProviderFile(const QUrl &url)
 
 void KdePlatformDependent::enableProvider(const QUrl &baseUrl, bool enabled) const
 {
-    KConfigGroup group(m_config, "General");
+    KConfigGroup group(m_config, QStringLiteral("General"));
     QStringList pathStrings = group.readPathEntry("disabledProviders", QStringList());
     if (enabled) {
         pathStrings.removeAll(baseUrl.toString());
@@ -262,7 +262,7 @@ void KdePlatformDependent::enableProvider(const QUrl &baseUrl, bool enabled) con
 
 bool KdePlatformDependent::isEnabled(const QUrl &baseUrl) const
 {
-    KConfigGroup group(m_config, "General");
+    KConfigGroup group(m_config, QStringLiteral("General"));
     return !group.readPathEntry("disabledProviders", QStringList()).contains(baseUrl.toString());
 }
 

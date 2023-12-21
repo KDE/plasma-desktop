@@ -157,7 +157,7 @@ QVariantList KCMKeys::defaultSchemes() const
         for (const QString &file : fileNames) {
             const QString path = dir + QLatin1Char('/') + file;
             KConfig scheme(path, KConfig::SimpleConfig);
-            const QString name = KConfigGroup(&scheme, "Settings").readEntry("Name", file);
+            const QString name = KConfigGroup(&scheme, QStringLiteral("Settings")).readEntry(QStringLiteral("Name"), file);
             schemes.append(QVariantMap({{"name", name}, {"url", QUrl::fromLocalFile(path)}}));
         }
     }

@@ -35,7 +35,7 @@ static InstallerInfo getInstallerInfo(const QFileInfo &info)
     Q_ASSERT(installerConfigFile.endsWith("krunner-plugininstallerrc"));
 
     KConfig cfg(installerConfigFile);
-    KConfigGroup grp = cfg.group("");
+    KConfigGroup grp = cfg.group(QStringLiteral(""));
     const QString exec = grp.readEntry("Exec").replace(QStringLiteral("%{PROJECTDIR}"), info.absolutePath());
     const QString metaDataFile = grp.readEntry("MetaDataFile");
     KDesktopFile desktopFile(rootDir.absoluteFilePath(metaDataFile));

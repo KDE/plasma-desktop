@@ -126,7 +126,7 @@ void ActivityConfig::load()
     });
 
     KConfig powerdevilConfig("powerdevilrc");
-    KConfigGroup activityGroup = powerdevilConfig.group("Activities").group(m_activityId);
+    KConfigGroup activityGroup = powerdevilConfig.group(QStringLiteral("Activities")).group(m_activityId);
     m_inhibitScreen = activityGroup.readEntry("InhibitScreenManagement", false);
     m_savedInhibitScreen = m_inhibitScreen;
     m_inhibitSleep = activityGroup.readEntry("InhibitSuspend", false);
@@ -165,7 +165,7 @@ void ActivityConfig::save()
     QDBusConnection::sessionBus().asyncCall(message);
 
     KConfig powerdevilConfig("powerdevilrc");
-    KConfigGroup activityGroup = powerdevilConfig.group("Activities").group(m_activityId);
+    KConfigGroup activityGroup = powerdevilConfig.group(QStringLiteral("Activities")).group(m_activityId);
     activityGroup.writeEntry("InhibitScreenManagement", m_inhibitScreen);
     m_savedInhibitScreen = m_inhibitScreen;
     activityGroup.writeEntry("InhibitSuspend", m_inhibitSleep);

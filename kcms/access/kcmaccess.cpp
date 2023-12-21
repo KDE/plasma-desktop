@@ -192,7 +192,7 @@ void KAccessConfig::save()
 
     if (bellSettings()->systemBell() || bellSettings()->customBell() || bellSettings()->visibleBell()) {
         KConfig _cfg(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
-        KConfigGroup cfg(&_cfg, "General");
+        KConfigGroup cfg(&_cfg, QStringLiteral("General"));
         cfg.writeEntry("UseSystemBell", true);
         cfg.sync();
     }

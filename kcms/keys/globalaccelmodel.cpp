@@ -231,7 +231,7 @@ void GlobalAccelModel::exportToConfig(const KConfigBase &config)
     for (const auto &component : std::as_const(m_components)) {
         if (component.checked) {
             KConfigGroup mainGroup(&config, component.id);
-            KConfigGroup group(&mainGroup, "Global Shortcuts");
+            KConfigGroup group(&mainGroup, QStringLiteral("Global Shortcuts"));
             for (const auto &action : component.actions) {
                 const QList<QKeySequence> shortcutsList(action.activeShortcuts.cbegin(), action.activeShortcuts.cend());
                 group.writeEntry(action.id, QKeySequence::listToString(shortcutsList));
@@ -256,7 +256,7 @@ void GlobalAccelModel::importConfig(const KConfigBase &config)
             qCWarning(KCMKEYS) << "Group" << componentGroupName << "has no shortcuts group";
             continue;
         }
-        KConfigGroup shortcutsGroup(&componentGroup, "Global Shortcuts");
+        KConfigGroup shortcutsGroup(&componentGroup, QStringLiteral("Global Shortcuts"));
         const QStringList keys = shortcutsGroup.keyList();
         for (const auto &key : keys) {
             auto action = std::find_if(component->actions.begin(), component->actions.end(), [&](const Action &a) {

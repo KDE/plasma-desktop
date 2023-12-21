@@ -60,7 +60,7 @@ void init_keyboard_hardware()
 {
     auto inputConfig = KSharedConfig::openConfig(QStringLiteral("kcminputrc"));
     inputConfig->reparseConfiguration();
-    KConfigGroup config(inputConfig, "Keyboard");
+    KConfigGroup config(inputConfig, QStringLiteral("Keyboard"));
 
     QString keyRepeatStr = config.readEntry("KeyRepeat", "accent");
 

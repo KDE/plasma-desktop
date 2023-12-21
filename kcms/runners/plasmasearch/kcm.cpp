@@ -28,7 +28,7 @@ public:
     bool isDefaults() const override
     {
         const QList<KPluginMetaData> runnerData = KRunner::RunnerManager::runnerMetaDataList();
-        KConfigGroup cfgGroup(m_krunnerConfig, "Plugins");
+        KConfigGroup cfgGroup(m_krunnerConfig, QStringLiteral("Plugins"));
         if (cfgGroup.group("Favorites").readEntry("plugins", SearchConfigModule::defaultFavoriteIds()) != SearchConfigModule::defaultFavoriteIds()) {
             return false;
         }
@@ -149,7 +149,7 @@ void SearchConfigModule::showKCM(const KPluginMetaData &data, const QVariantList
 void SearchConfigModule::save()
 {
     KQuickManagedConfigModule::save();
-    KConfigGroup grp = m_config->group("Plugins").group("Favorites");
+    KConfigGroup grp = m_config->group(QStringLiteral("Plugins")).group(QStringLiteral("Favorites"));
     grp.writeEntry("plugins", getFavPluginIds(), KConfigGroup::Notify);
     m_model->save();
 

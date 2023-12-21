@@ -199,7 +199,7 @@ void Dtime::load()
         // The config is actually written to the system config, but the user does not have any local config,
         // since there is nothing writing it.
         KConfig _config(QStringLiteral("kcmclockrc"), KConfig::NoGlobals);
-        KConfigGroup config(&_config, "NTP");
+        KConfigGroup config(&_config, QStringLiteral("NTP"));
         timeServerList->clear();
         timeServerList->addItems(config
                                      .readEntry("servers", i18n("Public Time Server (pool.ntp.org),\

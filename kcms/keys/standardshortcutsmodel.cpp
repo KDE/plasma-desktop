@@ -68,7 +68,7 @@ void StandardShortcutsModel::load()
 
 void StandardShortcutsModel::exportToConfig(const KConfigBase &config)
 {
-    KConfigGroup group(&config, "StandardShortcuts");
+    KConfigGroup group(&config, QStringLiteral("StandardShortcuts"));
     for (const auto &component : std::as_const(m_components)) {
         if (component.checked) {
             for (const auto &action : component.actions) {
@@ -85,7 +85,7 @@ void StandardShortcutsModel::importConfig(const KConfigBase &config)
         qCDebug(KCMKEYS) << "Config has no StandardShortcuts group";
         return;
     }
-    const KConfigGroup group = config.group("StandardShortcuts");
+    const KConfigGroup group = config.group(QStringLiteral("StandardShortcuts"));
     const QStringList keys = group.keyList();
     for (const auto &key : keys) {
         KStandardShortcut::StandardShortcut id = KStandardShortcut::findByName(key);
