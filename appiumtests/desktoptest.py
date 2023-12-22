@@ -4,25 +4,37 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: GPL-2.0-or-later
 
+import base64
 import functools
 import os
 import pathlib
 import stat
 import subprocess
 import sys
+import tempfile
 import time
 import unittest
 from typing import Final
+
+import cv2 as cv
+import gi
+import numpy as np
+
+gi.require_version('Gtk', '4.0')
 
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from appium.webdriver.webelement import WebElement
-from gi.repository import Gio, GLib
+from gi.repository import Gio, GLib, Gtk
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.actions.action_builder import ActionBuilder
+from selenium.webdriver.common.actions.interaction import POINTER_TOUCH
+from selenium.webdriver.common.actions.pointer_input import PointerInput
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import TimeoutException
 
 CMAKE_BINARY_DIR: Final = os.environ.get("CMAKE_BINARY_DIR", os.path.join(pathlib.Path.home(), "kde/build/plasma-desktop/bin"))
 KACTIVITYMANAGERD_PATH: Final = os.environ.get("KACTIVITYMANAGERD_PATH", os.path.join(pathlib.Path.home(), "kde/usr/lib64/libexec/kactivitymanagerd"))
@@ -208,7 +220,44 @@ class DesktopTest(unittest.TestCase):
 
         self._exit_edit_mode()
 
-    def test_4_bug477185_meta_number_shortcut(self) -> None:
+    def test_4_bug477220_touch_long_press_on_desktop(self) -> None:
+        """
+        Long press on the desktop to enter the edit mode
+        """
+        time.sleep(3)
+        screen_geometry = Gtk.Window().get_display().get_monitors()[0].get_geometry()
+        long_press_time_ms: int = Gtk.Settings.get_default().get_property("gtk-long-press-time") * 2 + 1000
+        self.assertGreater(screen_geometry.width, 0)
+        self.assertGreater(screen_geometry.height, 0)
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+        action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
+        action.perform()
+        # Click "More" to open the desktop context menu
+        wait = WebDriverWait(self.driver, 10)
+        try:
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "More"))).click()
+        except TimeoutException:
+            action.perform()
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "More"))).click()
+
+        time.sleep(3)  # Wait until the menu appears
+        with tempfile.TemporaryDirectory() as temp_dir:
+            saved_image_path: str = os.path.join(temp_dir, "desktop.png")
+            self.assertTrue(self.driver.get_screenshot_as_file(saved_image_path))
+
+            cv_first_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
+            first_image = base64.b64encode(cv.imencode('.png', cv_first_image)[1].tobytes()).decode()
+
+        cv_expected_image = cv.imread(os.path.join(os.path.dirname(os.path.abspath(__file__)), "resources", "bug478958_new_file_menu_item_icon.png"), cv.IMREAD_COLOR)
+        expected_image = base64.b64encode(cv.imencode('.png', cv_expected_image)[1].tobytes()).decode()
+        self.driver.find_image_occurrence(first_image, expected_image, threshold=1e-7)
+
+        # Click an empty area to close the menu
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+        action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).click()
+        action.perform()
+
+    def test_5_bug477185_meta_number_shortcut(self) -> None:
         """
         Meta+1 should activate the first launcher item
         """
@@ -244,7 +293,7 @@ class DesktopTest(unittest.TestCase):
         session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Install Software")))
 
-    def test_5_sentry_3516_load_layout(self) -> None:
+    def test_6_sentry_3516_load_layout(self) -> None:
         """
         ShellCorona::loadLookAndFeelDefaultLayout -> ShellCorona::unload() -> qDeleteAll(panelViews) -> QWindow::visibleChanged -> rectNotify() -> 💣
         @see https://bugreports.qt.io/browse/QTBUG-118841
@@ -258,7 +307,7 @@ class DesktopTest(unittest.TestCase):
         self.assertFalse(kickoff_element.is_displayed())
         self.driver.find_element(AppiumBy.NAME, "Application Launcher")
 
-    def test_6_bug_query_accent_color_binding_loop(self) -> None:
+    def test_7_bug_query_accent_color_binding_loop(self) -> None:
         """
         Don't use binding as usedInAccentColor may be disabled immediately after a query from kcm_colors.
 
