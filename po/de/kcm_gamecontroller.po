@@ -4,69 +4,71 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # Automatically generated, 2023.
 #
+# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 01:38+0000\n"
-"PO-Revision-Date: 2023-11-07 17:16+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-12-17 18:49+0100\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: axesmodel.cpp:63
 #, kde-format
 msgctxt "@label Axis value"
 msgid "Value"
-msgstr ""
+msgstr "Wert"
 
 #: buttonmodel.cpp:74
 #, kde-format
 msgctxt "Status of a gamepad button"
 msgid "PRESSED"
-msgstr ""
+msgstr "GEDRÜCKT"
 
 #: buttonmodel.cpp:84
 #, kde-format
 msgctxt "@label Button state"
 msgid "State"
-msgstr ""
+msgstr "Status"
 
 #: devicemodel.cpp:51
 #, kde-format
 msgctxt "Device name and path"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: ui/main.qml:22
 #, kde-format
 msgid "No game controllers found"
-msgstr ""
+msgstr "Es wurde kein Spiel-Controller gefunden"
 
 #: ui/main.qml:54
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
-msgstr ""
+msgstr "Gerät:"
 
 #: ui/main.qml:80
 #, kde-format
 msgctxt "@label Visual representation of an axis position"
 msgid "Position:"
-msgstr ""
+msgstr "Position:"
 
 #: ui/main.qml:98
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
-msgstr ""
+msgstr "Knöpfe:"
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"
-msgstr ""
+msgstr "Achsen:"
