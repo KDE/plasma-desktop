@@ -163,11 +163,14 @@ ColumnLayout {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Set Position...")
                 checkable: true
 
-                function moveTo(newLocation: int) {
+                function moveTo(newLocation: int, screenToFollow = null) {
                     if (!setPositionButton.checked) {
                         return;
                     }
                     panel.location = newLocation;
+                    if (screenToFollow !== null) {
+                        panel.screenToFollow = screenToFollow;
+                    }
                     setPositionButton.checked = false;
                 }
 
@@ -464,11 +467,7 @@ ColumnLayout {
 
                     KQuickControlsAddons.MouseEventListener {
                         anchors.fill: parent
-                        onClicked: mouse => {
-                            setPositionButton.moveTo(root.onClickedLocation);
-                            panel.screenToFollow = mouse.screen;
-                            setPositionButton.checked = false;
-                        }
+                        onClicked: mouse => setPositionButton.moveTo(root.onClickedLocation, mouse.screen)
                     }
                 }
             }
