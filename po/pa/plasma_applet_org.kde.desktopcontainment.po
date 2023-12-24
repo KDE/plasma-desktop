@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2014, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2020, 2021, 2022, 2023 A S Alam <aalam@users.sf.net>
 # Aman Alam <alam.yellow@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:34+0000\n"
-"PO-Revision-Date: 2022-11-19 06:25-0800\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-22 21:38-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -70,14 +70,12 @@ msgid "File types:"
 msgstr "ਫਾਈਲ ਟਾਈਪਾਂ:"
 
 #: package/contents/ui/ConfigFilter.qml:82
-#, fuzzy, kde-format
-#| msgid "Show All Files"
+#, kde-format
 msgid "Show hidden files:"
-msgstr "ਸਭ ਫਾਈਲਾਂ ਵੇਖੋ"
+msgstr "ਲੁਕਵੀਆਂ ਫਾਇਲਾਂ ਵੇਖੋ:"
 
 #: package/contents/ui/ConfigFilter.qml:132
-#, fuzzy, kde-format
-#| msgid "File type"
+#, kde-format
 msgid "File Type"
 msgstr "ਫਾਇਲ ਕਿਸਮ"
 
@@ -284,15 +282,14 @@ msgid "Show tooltips"
 msgstr "ਟੂਲ-ਟਿਪ ਵੇਖੋ"
 
 #: package/contents/ui/ConfigIcons.qml:304
-#, fuzzy, kde-format
-#| msgid "Selection markers"
+#, kde-format
 msgid "Show selection markers"
-msgstr "ਚੋਣ ਨਿਸ਼ਾਨ"
+msgstr "ਚੋਣ ਨਿਸ਼ਾਨ ਵੇਖੋ"
 
 #: package/contents/ui/ConfigIcons.qml:311
 #, kde-format
 msgid "Show folder preview popups"
-msgstr "ਫੋਲਡਰ ਝਲਕ ਪੋਪਅਪ ਵੇਖੋ"
+msgstr "ਫੋਲਡਰ ਝਲਕ ਪੌਪਅੱਪ ਵੇਖੋ"
 
 #: package/contents/ui/ConfigIcons.qml:321
 #, kde-format
@@ -310,10 +307,9 @@ msgid "Previews:"
 msgstr "ਝਲਕਾਂ:"
 
 #: package/contents/ui/ConfigIcons.qml:338
-#, fuzzy, kde-format
-#| msgid "Preview thumbnails"
+#, kde-format
 msgid "Show preview thumbnails"
-msgstr "ਥੰਮਨੇਲ ਝਲਕ"
+msgstr "ਥੰਮਨੇਲ ਝਲਕ ਵੇਖੋ"
 
 #: package/contents/ui/ConfigIcons.qml:346
 #, kde-format
@@ -383,7 +379,7 @@ msgstr "ਪਸੰਦੀਦਾ ਟਾਈਟਲ ਦਿਓ…"
 #: package/contents/ui/ConfigOverlay.qml:86
 #, kde-format
 msgid "Click and drag to rotate"
-msgstr ""
+msgstr "ਘੁੰਮਾਉਣ ਲਈ ਕਲਿੱਕ ਕਰਕੇ ਖਿੱਚੋ"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format

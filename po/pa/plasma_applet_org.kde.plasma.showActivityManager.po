@@ -1,20 +1,20 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2011, 2018, 2020, 2021.
+# SPDX-FileCopyrightText: 2011, 2018, 2020, 2021, 2023 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-17 01:38+0000\n"
-"PO-Revision-Date: 2021-01-23 14:30-0800\n"
-"Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-22 21:39-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:13
@@ -48,11 +48,10 @@ msgid "Show the current activity name"
 msgstr "ਮੌਜੂਦਾ ਸਰਗਰਮੀ ਦਾ ਨਾਂ ਵੇਖਾਓ"
 
 #: package/contents/ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Show the current activity icon"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
-msgstr "ਮੌਜੂਦਾ ਸਰਗਰਮੀ ਦਾ ਆਈਕਾਨ ਵੇਖਾਓ"
+msgstr "ਮੌਜੂਦਾ ਸਰਗਰਮੀ %1 ਹੈ"
 
 #: package/contents/ui/main.qml:77
 #, kde-format

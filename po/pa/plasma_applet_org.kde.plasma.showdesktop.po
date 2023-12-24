@@ -2,20 +2,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Amanpreet Singh Alam <aalam@users.sf.net>, 2008, 2015.
-# A S Alam <alam.yellow@gmail.com>, 2018, 2021, 2022.
+# SPDX-FileCopyrightText: 2018, 2021, 2022, 2023 A S Alam <alam.yellow@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-11-19 06:18-0800\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-22 21:39-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
@@ -37,23 +37,22 @@ msgid "Restores the previously minimized windows"
 msgstr ""
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgid "Show the desktop by moving windows aside"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr "ਵਿੰਡੋਆਂ ਨੂੰ ਆਸੇ ਪਾਸੇ ਕਰਕੇ ਡੈਸਕਟਾਪ ਵੇਖਾਓ"
+msgstr "ਸਾਰੀਆਂ ਵਿੰਡੋਆਂ ਨੂੰ ਘੱਟੋ-ਘੱਟ ਕਰਕੇ ਡੈਸਕਟਾਪ ਵੇਖਾਓ"
 
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
-msgstr ""
+msgstr "ਡੈਸਕਟਾਪ ਦੀ ਝਲਕ"
 
 #: package/contents/ui/PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
-msgstr ""
+msgstr "ਡੈਸਕਟਾਪ ਦੀ ਝਲਕ ਰੋਕੋ"
 
 #: package/contents/ui/PeekController.qml:17
 #, kde-format
@@ -62,11 +61,10 @@ msgid "Moves windows back to their original positions"
 msgstr ""
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgid "Show the desktop by moving windows aside"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr "ਵਿੰਡੋਆਂ ਨੂੰ ਆਸੇ ਪਾਸੇ ਕਰਕੇ ਡੈਸਕਟਾਪ ਵੇਖਾਓ"
+msgstr "ਸਾਰੀਆਂ ਵਿੰਡੋਆਂ ਨੂੰ ਹਿਲਾ ਕੇ ਡੈਸਕਟਾਪ ਨੂੰ ਆਰਜ਼ੀ ਤੌਰ ਉੱਤੇ ਵੇਖਾਓ"
 
 #~ msgid "Show Desktop"
 #~ msgstr "ਡੈਸਕਟਾਪ ਦਿਖਾਓ"

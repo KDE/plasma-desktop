@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2014, 2015, 2018, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2018, 2020, 2021, 2022, 2023 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-21 02:00+0000\n"
-"PO-Revision-Date: 2022-11-19 06:16-0800\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-22 21:44-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -106,7 +106,7 @@ msgstr "ਲਸੰਸ:"
 #: contents/configuration/AboutPlugin.qml:155
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "ਲਸੰਸ ਲਿਖਤ ਵੇਖੋ"
 
 #: contents/configuration/AboutPlugin.qml:169
 msgid "Authors"
@@ -204,8 +204,6 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
-#, fuzzy
-#| msgid "About"
 msgctxt "@title"
 msgid "About"
 msgstr "ਇਸ ਬਾਰੇ"
@@ -260,10 +258,8 @@ msgid "Input Here"
 msgstr "ਇੱਥੇ ਇਨਪੁਟ ਕਰੋ"
 
 #: contents/configuration/PanelConfiguration.qml:91
-#, fuzzy
-#| msgid "Apply Settings"
 msgid "Panel Settings"
-msgstr "ਸੈਟਿੰਗ ਲਾਗੂ ਕਰੋ"
+msgstr "ਪੈਨਲ ਸੈਟਿੰਗਾਂ"
 
 #: contents/configuration/PanelConfiguration.qml:97
 msgid "Add Spacer"
@@ -271,7 +267,7 @@ msgstr "ਸਪੇਸਰ ਜੋੜੋ"
 
 #: contents/configuration/PanelConfiguration.qml:100
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "ਪੈਨਲ ਵਿੱਚ ਸਪੇਸਰ ਵਿਜੈੱਟ ਜੋੜੋ"
 
 #: contents/configuration/PanelConfiguration.qml:107
 msgid "Add Widgets…"
@@ -283,7 +279,7 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:139
 msgid "Position"
-msgstr ""
+msgstr "ਸਥਿਤੀ"
 
 #: contents/configuration/PanelConfiguration.qml:143
 #: contents/configuration/PanelConfiguration.qml:251
@@ -310,10 +306,8 @@ msgid "Set Position..."
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:187
-#, fuzzy
-#| msgid "Panel Alignment"
 msgid "Alignment"
-msgstr "ਪੈਨਲ ਸਫ਼ਬੰਦੀ"
+msgstr "ਸਫ਼ਬੰਦੀ"
 
 #: contents/configuration/PanelConfiguration.qml:252
 msgid "Center"
@@ -321,43 +315,33 @@ msgstr "ਕੇਂਦਰ"
 
 #: contents/configuration/PanelConfiguration.qml:275
 msgid "Length"
-msgstr ""
+msgstr "ਲੰਬਾਈ"
 
 #: contents/configuration/PanelConfiguration.qml:293
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "ਪੈਨਲ ਦੀ ਉਚਾਈ:"
+msgstr "ਉਚਾਈ ਭਰੋ"
 
 #: contents/configuration/PanelConfiguration.qml:293
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ:"
+msgstr "ਚੌੜਾਈ ਭਰੋ"
 
 #: contents/configuration/PanelConfiguration.qml:294
 msgid "Fit content"
-msgstr ""
+msgstr "ਸਮੱਗਰੀ ਫਿੱਟ ਕਰੋ"
 
 #: contents/configuration/PanelConfiguration.qml:295
 msgid "Custom"
-msgstr ""
+msgstr "ਕਸਟਮ"
 
 #: contents/configuration/PanelConfiguration.qml:325
-#, fuzzy
-#| msgid "Visibility"
 msgid "Visibility"
 msgstr "ਦਿੱਖ"
 
 #: contents/configuration/PanelConfiguration.qml:337
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
-msgstr "ਹਮੇਸ਼ਾ ਦਿਖਾਉ"
+msgstr "ਹਮੇਸ਼ਾ ਦਿਖਾਓ"
 
 #: contents/configuration/PanelConfiguration.qml:338
-#, fuzzy
-#| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "ਆਪੇ ਓਹਲੇ"
 
@@ -366,14 +350,10 @@ msgid "Dodge windows"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:340
-#, fuzzy
-#| msgid "Windows Go Below"
 msgid "Windows Go Below"
-msgstr "ਵਿੰਡੋ ਹੇਠਾਂ ਜਾ ਸਕਦੀਆਂ ਹਨ"
+msgstr "ਵਿੰਡੋ ਹੇਠਾਂ ਕਰੋ"
 
 #: contents/configuration/PanelConfiguration.qml:383
-#, fuzzy
-#| msgid "Opacity"
 msgid "Opacity"
 msgstr "ਪਾਰਦਰਸ਼ਤਾ"
 
@@ -395,40 +375,32 @@ msgstr "ਬਲੌਰੀ"
 
 #: contents/configuration/PanelConfiguration.qml:422
 msgid "Style"
-msgstr ""
+msgstr "ਸਟਾਈਲ"
 
 #: contents/configuration/PanelConfiguration.qml:433
 msgid "Floating"
-msgstr ""
+msgstr "ਤਰਦਾ"
 
 #: contents/configuration/PanelConfiguration.qml:511
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ:"
 
 #: contents/configuration/PanelConfiguration.qml:511
-#, fuzzy
-#| msgid "Height"
 msgid "Height:"
-msgstr "ਉਚਾਈ"
+msgstr "ਉਚਾਈ:"
 
 #: contents/configuration/PanelConfiguration.qml:545
-#, fuzzy
-#| msgid "Shortcut"
 msgid "Focus shortcut:"
-msgstr "ਸ਼ਾਰਟਕੱਟ"
+msgstr "ਫੋਕਸ ਸ਼ਾਰਟਕੱਟ:"
 
 #: contents/configuration/PanelConfiguration.qml:555
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:571
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "ਪੈਨਲ ਹਟਾਓ"
+msgstr "ਪੈਨਲ ਨੂੰ ਹਟਾਓ"
 
 #: contents/configuration/PanelConfiguration.qml:574
 msgid "Remove this panel; this action is undo-able"
@@ -483,14 +455,12 @@ msgid "Move to Screen %1"
 msgstr "ਸਕਰੀਨ %1 ਉੱਤੇ ਭੇਜੋ"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
-#, fuzzy
-#| msgid "Remove Panel"
 msgid "Remove Desktop"
-msgstr "ਪੈਨਲ ਹਟਾਓ"
+msgstr "ਡੈਸਕਟਾਪ ਨੂੰ ਹਟਾਓ"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:195
 msgid "Remove Panel"
-msgstr "ਪੈਨਲ ਹਟਾਓ"
+msgstr "ਪੈਨਲ ਨੂੰ ਹਟਾਓ"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:268
 msgid "%1 (primary)"
@@ -502,7 +472,7 @@ msgstr "ਬਦਲਵੇਂ ਵਿਜੈੱਟ"
 
 #: contents/explorer/AppletDelegate.qml:42
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "ਗ਼ੈਰ-ਸਹਾਇਕ ਵਿਜੈੱਟ"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
