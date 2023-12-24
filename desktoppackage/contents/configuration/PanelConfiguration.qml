@@ -12,7 +12,6 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PC3
-import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.plasma.shell.panel 0.1 as Panel
 import org.kde.kquickcontrols 2.0
 import "panelconfiguration"
@@ -175,13 +174,13 @@ ColumnLayout {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Set Position…")
                 checkable: true
 
-                function moveTo(newLocation: int, screenToFollow = null) {
+                function moveTo(newLocation: int, associatedWindow = null) {
                     if (!setPositionButton.checked) {
                         return;
                     }
                     panel.location = newLocation;
-                    if (screenToFollow !== null) {
-                        panel.screenToFollow = screenToFollow;
+                    if (associatedWindow !== null) {
+                        panel.screenToFollow = dialogRoot.panelConfiguration.screenFromWindow(associatedWindow);
                     }
                     setPositionButton.checked = false;
                 }
@@ -479,10 +478,7 @@ ColumnLayout {
                     height: Kirigami.Units.iconSizes.enormous
                     icon.name: root.iconSource
 
-                    KQuickControlsAddons.MouseEventListener {
-                        anchors.fill: parent
-                        onClicked: mouse => setPositionButton.moveTo(root.onClickedLocation, mouse.screen)
-                    }
+                    onClicked: setPositionButton.moveTo(root.onClickedLocation, Window.window)
                 }
             }
 
