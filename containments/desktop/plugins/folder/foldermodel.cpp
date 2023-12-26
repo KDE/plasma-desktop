@@ -32,42 +32,41 @@
 #include <QTimer>
 #include <qplatformdefs.h>
 
-#include <PlasmaActivities/Consumer>
 #include <KAuthorized>
 #include <KConfigGroup>
+#include <KCoreDirLister>
+#include <KDesktopFile>
+#include <KDirModel>
 #include <KDirWatch>
 #include <KFileCopyToMenu>
 #include <KFileItemActions>
 #include <KFileItemListProperties>
+#include <KIO/CopyJob>
 #include <KIO/DeleteJob>
+#include <KIO/DeleteOrTrashJob>
 #include <KIO/DropJob>
 #include <KIO/EmptyTrashJob>
 #include <KIO/FileUndoManager>
 #include <KIO/JobUiDelegate>
+#include <KIO/JobUiDelegateFactory>
+#include <KIO/OpenUrlJob>
 #include <KIO/Paste>
 #include <KIO/PasteJob>
+#include <KIO/PreviewJob>
 #include <KIO/RestoreJob>
+#include <KIO/StatJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KPropertiesDialog>
+#include <KProtocolInfo>
 #include <KSharedConfig>
 #include <KShell>
-
-#include <KCoreDirLister>
-#include <KDesktopFile>
-#include <KDirModel>
-#include <KIO/CopyJob>
-#include <KIO/DeleteOrTrashJob>
-#include <KIO/Job>
-#include <KIO/JobUiDelegateFactory>
-#include <KIO/OpenUrlJob>
-#include <KIO/PreviewJob>
-#include <KProtocolInfo>
 #include <KStringHandler>
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>
 #include <Plasma/Corona>
+#include <PlasmaActivities/Consumer>
 
 #include <chrono>
 #include <sys/stat.h>
@@ -77,7 +76,6 @@
 using namespace std::chrono_literals;
 
 Q_LOGGING_CATEGORY(FOLDERMODEL, "plasma.containments.desktop.folder.foldermodel")
-
 
 class DragTrackerSingleton
 {
@@ -126,7 +124,6 @@ DragTracker *DragTracker::self()
 {
     return &privateDragTrackerSelf()->self;
 }
-
 
 DirLister::DirLister(QObject *parent)
     : KDirLister(parent)
