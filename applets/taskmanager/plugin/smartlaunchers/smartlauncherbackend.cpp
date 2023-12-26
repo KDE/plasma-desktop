@@ -25,8 +25,8 @@ using namespace NotificationManager;
 Backend::Backend(QObject *parent)
     : QObject(parent)
     , m_watcher(new QDBusServiceWatcher(this))
-    , m_settings(new Settings(this))
     , m_jobsModel(nullptr)
+    , m_settings(new Settings(this))
 {
     setupUnity();
 
