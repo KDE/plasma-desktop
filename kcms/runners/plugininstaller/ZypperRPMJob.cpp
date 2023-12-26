@@ -12,10 +12,8 @@
 #include <QProcess>
 #include <QRegularExpression>
 
-void ZypperRPMJob::executeOperation(const QFileInfo &fileInfo, const QString &mimeType, bool install)
+void ZypperRPMJob::executeOperation(const QFileInfo &fileInfo, const QString & /*mimeType*/, bool install)
 {
-    Q_UNUSED(mimeType)
-
     if (install) {
         const QString command = QStringLiteral("sudo zypper install %1").arg(KShell::quoteArg(fileInfo.absoluteFilePath()));
         const QString bashCommand = QStringLiteral("echo %1;%1").arg(command, KShell::quoteArg(terminalCloseMessage(install)));
