@@ -1,31 +1,31 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2009, 2010, 2012, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2009, 2010, 2012, 2017, 2020, 2021, 2023 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2021-10-09 09:00-0700\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2023-12-26 11:07-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ਅ.ਸ.ਆਲਮ. ੨੦੦੯-੨੦੨੦"
+msgstr "ਅ.ਸ.ਆਲਮ. ੨੦੦੯-੨੦੨੩"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "alam.yellow@gmail.com"
+msgstr "aalam@punlinux.org"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -73,10 +73,9 @@ msgid "Automatically mount removable media that have never been mounted before"
 msgstr "ਹਟਾਉਣਯੋਗ ਮੀਡੀਏ ਨੂੰ ਆਪਣੇ-ਆਪ ਹੀ ਮਾਊਂਟ ਕਰੋ, ਜੋ ਪਹਿਲਾਂ ਕਦੇ ਮਾਊਂਟ ਨਾ ਕੀਤੇ ਗਏ ਹੋਣ"
 
 #: DeviceModel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Automount on Login"
+#, kde-format
 msgid "Automount Device"
-msgstr "ਲਾਗਇਨ ਕਰਨ ਸਮੇਂ ਆਟੋਮਾਊਂਟ"
+msgstr "ਡਿਵਾਈਸ ਆਪਣੇ-ਆਪ ਮਾਊਂਟ ਕਰੋ"
 
 #: DeviceModel.cpp:54
 #, kde-format
@@ -91,15 +90,14 @@ msgid "On Attach"
 msgstr "ਜੋੜਨ ਸਮੇਂ"
 
 #: DeviceModel.cpp:258
-#, fuzzy, kde-format
-#| msgid "Device"
+#, kde-format
 msgid "All Devices"
-msgstr "ਡਿਵਾਈਸ"
+msgstr "ਸਭ ਡਿਵਾਈਸ"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr ""
+msgstr "ਸਭ ਜਾਣੇ-ਪਛਾਣੇ ਡਿਵਾਈਸ"
 
 #: DeviceModel.cpp:260
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-12-27 01:35+0000\n"
 "PO-Revision-Date: 2023-10-08 23:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -273,13 +273,13 @@ msgctxt "@action:button"
 msgid "View %1"
 msgstr "%1 보기"
 
-#: plugininstaller/ZypperRPMJob.cpp:30
+#: plugininstaller/ZypperRPMJob.cpp:28
 #, kde-format
 msgctxt "@info"
 msgid "Could not resolve package name of %1"
 msgstr "%1의 패키지 이름을 확인할 수 없음"
 
-#: plugininstaller/ZypperRPMJob.cpp:37
+#: plugininstaller/ZypperRPMJob.cpp:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
