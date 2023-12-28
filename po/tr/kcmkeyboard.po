@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2023-09-30 11:39+0300\n"
+"PO-Revision-Date: 2023-12-27 13:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.01.85\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -185,7 +185,7 @@ msgid ""
 "allows modifier-only shortcuts."
 msgstr ""
 "Bu, X.org tarafından ele alınan düzenleri değiştirmek için bir kısayoldur. "
-"Yalnızca değiştirici kısayollarına izin verir."
+"Niteleyiciye özel kısayollara izin verir."
 
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
 #. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
@@ -216,7 +216,7 @@ msgid ""
 "it has one) which is handled by X.org. It allows modifier-only shortcuts."
 msgstr ""
 "Bu, X.org tarafından ele alınan geçerli düzenin üçüncü düzeyine (eğer varsa) "
-"geçiş için bir kısayoldur. Yalnızca değiştirici kısayollarına izin verir."
+"geçiş için bir kısayoldur. Niteleyiciye özel kısayollara izin verir."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm_keyboard.ui:223
@@ -232,9 +232,9 @@ msgid ""
 "shortcuts and also may not work in some situations (e.g. if popup is active "
 "or from screensaver)."
 msgstr ""
-"Bu, düzenleri değiştirmek için bir kısayoldur. Yalnızca değiştirici "
-"kısayollarını desteklemez ve bazı durumlarda çalışmayabilir (örn. bir açılır "
-"pencere etkinse veya bir ekran koruyucusunda)."
+"Bu, düzenleri değiştirmek için bir kısayoldur. Niteleyiciye özel kısayolları "
+"desteklemez ve bazı durumlarda çalışmayabilir (örn. bir açılır pencere "
+"etkinse veya bir ekran koruyucusunda)."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:246
