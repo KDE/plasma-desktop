@@ -8,13 +8,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
 # Volkan Gezer <volkangezer@gmail.com>, 2017, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:45+0000\n"
-"PO-Revision-Date: 2023-11-12 01:09+0300\n"
+"PO-Revision-Date: 2023-12-27 13:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.01.85\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -429,7 +429,7 @@ msgstr ""
 #: kaccess.cpp:847
 #, kde-format
 msgid "Slow keys has been disabled."
-msgstr "Yavaş düğmeler etkisizleştirildi."
+msgstr "Yavaş düğmeler devre dışı bırakıldı."
 
 #: kaccess.cpp:851
 #, kde-format
@@ -443,7 +443,7 @@ msgstr ""
 #: kaccess.cpp:853
 #, kde-format
 msgid "Bounce keys has been disabled."
-msgstr "Sıçrama düğmeleri etkisizleştirildi."
+msgstr "Sıçrama düğmeleri devre dışı bırakıldı."
 
 #: kaccess.cpp:857
 #, kde-format
@@ -451,13 +451,13 @@ msgid ""
 "Sticky keys has been enabled. From now on, modifier keys will stay latched "
 "after you have released them."
 msgstr ""
-"Yapışkan düğmeler etkinleştirildi. Şu andan itibaren değiştirici düğmeler "
+"Yapışkan düğmeler etkinleştirildi. Şu andan itibaren niteleyici düğmeler "
 "bırakıldıktan sonrada etkin kalacaklar."
 
 #: kaccess.cpp:859
 #, kde-format
 msgid "Sticky keys has been disabled."
-msgstr "Yapışkan düğmeler etkisizleştirildi."
+msgstr "Yapışkan düğmeler devre dışı bırakıldı."
 
 #: kaccess.cpp:863
 #, kde-format
@@ -471,7 +471,7 @@ msgstr ""
 #: kaccess.cpp:865
 #, kde-format
 msgid "Mouse keys has been disabled."
-msgstr "Fare düğmeleri etkisizleştirildi."
+msgstr "Fare düğmeleri devre dışı bırakıldı."
 
 #: main.cpp:49
 #, kde-format
