@@ -92,7 +92,6 @@ KCMUtils.ScrollViewKCM {
                 ]
                 onConfigTriggered: kcm.showKCM(model.config, [], model.metaData)
                 highlighted: false
-                hoverEnabled: false
             }
         }
     }
