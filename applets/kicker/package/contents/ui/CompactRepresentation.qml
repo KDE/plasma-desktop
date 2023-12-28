@@ -16,10 +16,6 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 Item {
     id: root
 
-    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
-        || Plasmoid.location === PlasmaCore.Types.RightEdge
-        || Plasmoid.location === PlasmaCore.Types.BottomEdge
-        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
     readonly property bool vertical: (Plasmoid.formFactor === PlasmaCore.Types.Vertical)
     readonly property bool useCustomButtonImage: (Plasmoid.configuration.useCustomButtonImage
         && Plasmoid.configuration.customButtonImage.length !== 0)
