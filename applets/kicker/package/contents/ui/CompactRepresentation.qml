@@ -33,16 +33,16 @@ Item {
                 const scaledHeight = Math.floor(parent.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
                 root.Layout.minimumHeight = scaledHeight;
                 root.Layout.maximumHeight = scaledHeight;
-                root.Layout.minimumWidth = Kirigami.Units.iconSizes.small;
+                root.Layout.minimumWidth = -1;
             } else {
                 const scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
                 root.Layout.minimumWidth = scaledWidth;
                 root.Layout.maximumWidth = scaledWidth;
-                root.Layout.minimumHeight = Kirigami.Units.iconSizes.small;
+                root.Layout.minimumHeight = -1;
             }
         } else {
-            root.Layout.minimumWidth = Kirigami.Units.iconSizes.small;
-            root.Layout.minimumHeight = Kirigami.Units.iconSizes.small;
+            root.Layout.minimumWidth = -1;
+            root.Layout.minimumHeight = -1;
         }
     }
 
