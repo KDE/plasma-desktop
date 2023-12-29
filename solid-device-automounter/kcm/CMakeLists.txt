@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_device_automounter\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_device_automounter\")
 
 set(kcm_device_automounter_SRCS DeviceAutomounterKCM.cpp DeviceModel.cpp DeviceAutomounterKCM.h DeviceModel.h)
 
