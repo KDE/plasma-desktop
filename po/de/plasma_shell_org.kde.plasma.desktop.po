@@ -1,13 +1,13 @@
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2020, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-25 01:34+0000\n"
-"PO-Revision-Date: 2023-12-18 01:45+0100\n"
+"PO-Revision-Date: 2023-12-21 18:14+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -273,7 +273,7 @@ msgstr "Abstandhalter hinzufügen"
 
 #: contents/configuration/PanelConfiguration.qml:100
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Abstandhalter-Miniprogramm zur Kontrollleiste hinzufügen"
 
 #: contents/configuration/PanelConfiguration.qml:107
 msgid "Add Widgets…"
@@ -281,7 +281,7 @@ msgstr "Miniprogramme hinzufügen ..."
 
 #: contents/configuration/PanelConfiguration.qml:110
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "Die Miniprogramm-Auswahl zum Hinzufügen zur Kontrollleiste öffnen"
 
 #: contents/configuration/PanelConfiguration.qml:139
 msgid "Position"
@@ -309,7 +309,7 @@ msgstr "Unten"
 
 #: contents/configuration/PanelConfiguration.qml:163
 msgid "Set Position..."
-msgstr ""
+msgstr "Position festlegen …"
 
 #: contents/configuration/PanelConfiguration.qml:190
 msgid "Alignment"
@@ -324,24 +324,20 @@ msgid "Length"
 msgstr "Länge"
 
 #: contents/configuration/PanelConfiguration.qml:296
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Höhe der Kontrollleiste:"
+msgstr "Höhe ausfüllen"
 
 #: contents/configuration/PanelConfiguration.qml:296
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Breite der Kontrollleiste:"
+msgstr "Breite ausfüllen"
 
 #: contents/configuration/PanelConfiguration.qml:297
 msgid "Fit content"
-msgstr ""
+msgstr "Inhalt anpassen"
 
 #: contents/configuration/PanelConfiguration.qml:298
 msgid "Custom"
-msgstr ""
+msgstr "Benutzerdefiniert"
 
 #: contents/configuration/PanelConfiguration.qml:328
 msgid "Visibility"
@@ -381,7 +377,7 @@ msgstr "Durchscheinend"
 
 #: contents/configuration/PanelConfiguration.qml:425
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: contents/configuration/PanelConfiguration.qml:436
 msgid "Floating"
@@ -487,7 +483,7 @@ msgstr "Alternative Miniprogramme"
 
 #: contents/explorer/AppletDelegate.qml:42
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Nicht unterstütztes Miniprogramm"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
