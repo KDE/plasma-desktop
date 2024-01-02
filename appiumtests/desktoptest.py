@@ -229,14 +229,17 @@ class DesktopTest(unittest.TestCase):
         long_press_time_ms: int = Gtk.Settings.get_default().get_property("gtk-long-press-time") * 2 + 1000
         self.assertGreater(screen_geometry.width, 0)
         self.assertGreater(screen_geometry.height, 0)
-        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
-        action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
-        action.perform()
+
         # Click "More" to open the desktop context menu
         wait = WebDriverWait(self.driver, 10)
         try:
+            action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+            action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
+            action.perform()
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, "More"))).click()
         except TimeoutException:
+            action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+            action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
             action.perform()
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, "More"))).click()
 
