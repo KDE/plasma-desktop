@@ -323,7 +323,7 @@ ContainmentItem {
             cellWidth: Kirigami.Units.iconSizes.small
             cellHeight: cellWidth
 
-            eventManagerToFilter: folderViewLayer.item?.view ?? null
+            eventManagerToFilter: folderViewLayer.item?.view.view ?? null
 
             appletContainerComponent: ContainmentLayoutManager.BasicAppletContainer {
                 id: appletContainer
