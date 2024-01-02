@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2020, 2021, 2023 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014, 2020, 2021, 2023, 2024 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 12:20+0000\n"
-"PO-Revision-Date: 2023-12-26 11:06-0600\n"
+"PO-Revision-Date: 2024-01-01 11:44-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
-msgstr ""
+msgstr "ਮਿਡਸ-ਕਲਿੱਕ ਚੇਪਣ ਸੈਟਿੰਗਾਂ ਦੇ ਪ੍ਰਭਾਵੀ ਹੋਣ ਲਈ ਸਿਸਟਮ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
 
 #: ui/main.qml:30
 #, kde-format
@@ -103,7 +103,7 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr ""
+msgstr "ਕਲਿੱਕ ਕੀਤੇ ਟਿਕਾਣੇ ਲਈ ਸਕਰੋਲ ਕਰਦਾ ਹੈ"
 
 #: ui/main.qml:203
 #, kde-format
@@ -111,7 +111,7 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr ""
+msgstr "ਇੱਕ ਸਫ਼ਾ ਉੱਤੇ ਜਾਂ ਹੇਠਾਂ ਲਈ ਸਕਰੋਲ ਕਰਦਾ ਹੈ"
 
 #: ui/main.qml:216
 #, kde-format
@@ -135,7 +135,7 @@ msgstr "ਚੁਣੀ ਲਿਖਤ ਨੂੰ ਛਾਪਦਾ ਹੈ"
 #: ui/main.qml:248
 #, kde-format
 msgid "Touch Mode:"
-msgstr ""
+msgstr "ਟੱਚ ਮੋਡ:"
 
 #: ui/main.qml:250
 #, kde-format
@@ -171,10 +171,9 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double-click interval:"
-msgstr "ਇਸ ਦੀ ਬਜਾਏ ਦੋ ਵਾਰ ਕਲਿੱਕ ਕਰਕੇ ਖੋਲ੍ਹੋ"
+msgstr "ਡਬਲ ਕਲਿੱਕ ਇੰਟਰਵਲ:"
 
 #: ui/main.qml:343
 #, kde-format
@@ -215,10 +214,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double click interval"
-msgstr "ਇਸ ਦੀ ਬਜਾਏ ਦੋ ਵਾਰ ਕਲਿੱਕ ਕਰਕੇ ਖੋਲ੍ਹੋ"
+msgstr "ਡਬਲ ਕਲਿੱਕ ਇੰਟਰਵਲ"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

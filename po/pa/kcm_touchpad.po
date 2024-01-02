@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2015, 2021.
+# SPDX-FileCopyrightText: 2015, 2021, 2024 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-08 01:39+0000\n"
-"PO-Revision-Date: 2021-10-09 08:21-0700\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2024-01-01 11:42-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -100,7 +100,7 @@ msgstr "ਲਿਖਣ ਦੇ ਦੌਰਾਨ ਅਸਮਰੱਥ ਕਰੋ"
 #: kcm/libinput/touchpad.qml:167
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr ""
+msgstr "ਗਲਤੀ ਨਾਲ ਇਨਪੁੱਟ ਨੂੰ ਰੋਕਣ ਲਈ ਲਿਖਣ ਦੌਰਾਨ ਟੱਚਪੈਡ ਨੂੰ ਅਸਮਰੱਥ ਕਰੋ।"
 
 #: kcm/libinput/touchpad.qml:191
 #, kde-format
@@ -121,13 +121,12 @@ msgstr "ਵਿਚਲੇ ਬਟਨ ਕਲਿੱਕ ਲਈ ਖੱਬੇ ਅਤੇ 
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
-msgstr ""
+msgstr "ਮਿਡਲ ਬਟਨ ਕਲਿੱਕ ਕਰਨ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਇਕੱਠੇ ਕਲਿੱਕ ਕਰੋ।"
 
 #: kcm/libinput/touchpad.qml:254
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgid "Pointer speed:"
-msgstr "ਸਰਕਾਉਣ ਦੀ ਗਤੀ:"
+msgstr "ਪੁਆਇੰਟਰ ਦੀ ਗਤੀ:"
 
 #: kcm/libinput/touchpad.qml:352
 #, kde-format
@@ -137,22 +136,22 @@ msgstr "ਪੁਆਇੰਟਰ ਐਕਸਰਲੇਸ਼ਨ:"
 #: kcm/libinput/touchpad.qml:383
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "ਕੋਈ ਨਹੀਂ"
 
 #: kcm/libinput/touchpad.qml:387
 #, kde-format
 msgid "Cursor moves the same distance as finger."
-msgstr ""
+msgstr "ਕਰਸਰ ਉਂਗਲ ਵਾਂਗ ਉਸ ਜਿੰਨੀ ਦੂਰੀ ਹੀ ਚੱਲੇ।"
 
 #: kcm/libinput/touchpad.qml:396
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "ਸਟੈਂਡਰਡ"
 
 #: kcm/libinput/touchpad.qml:400
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
-msgstr ""
+msgstr "ਕਰਸਰ ਹਿਲਜੁਲ ਦੀ ਦੂਰੀ ਉਂਗਲ ਦੀ ਹਿਲਜੁਲ ਦੀ ਸਪੀਡ ਉੱਤੇ ਨਿਰਭਰ ਕਰਦੀ ਹੈ।"
 
 #: kcm/libinput/touchpad.qml:415
 #, kde-format
@@ -182,7 +181,7 @@ msgstr ""
 #: kcm/libinput/touchpad.qml:480
 #, kde-format
 msgid "Tap-and-drag lock"
-msgstr ""
+msgstr "ਟੈਪ ਤੇ ਖਿੱਚੋ ਲਾਕ"
 
 #: kcm/libinput/touchpad.qml:484
 #, kde-format
@@ -192,7 +191,7 @@ msgstr ""
 #: kcm/libinput/touchpad.qml:504
 #, kde-format
 msgid "Two-finger tap:"
-msgstr ""
+msgstr "ਦੋ-ਉਂਗਲ ਨਾਲ ਟੈਪ:"
 
 #: kcm/libinput/touchpad.qml:515
 #, kde-format
@@ -203,18 +202,18 @@ msgstr "ਸੱਜਾ ਕਲਿੱਕ (ਮੱਧ-ਕਲਿੱਕ ਲਈ ਤਿੰ
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr ""
+msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ, ਮਿਡਲ ਕਲਿੱਕ ਲਈ ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ।"
 
 #: kcm/libinput/touchpad.qml:518
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
-msgstr ""
+msgstr "ਮਿਡਲ-ਕਲਿੱਕ (ਤਿੰਨ-ਉਂਗਲ ਟੈਪ ਸੱਜਾ ਕਲਿੱਕ)"
 
 #: kcm/libinput/touchpad.qml:519
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr ""
+msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ, ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ।"
 
 #: kcm/libinput/touchpad.qml:521
 #, kde-format
@@ -224,7 +223,7 @@ msgstr "ਸੱਜਾ-ਕਲਿੱਕ"
 #: kcm/libinput/touchpad.qml:522
 #, kde-format
 msgid "Tap with two fingers to right-click."
-msgstr ""
+msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
 
 #: kcm/libinput/touchpad.qml:524
 #, kde-format
@@ -234,7 +233,7 @@ msgstr "ਮੱਧ-ਕਲਿੱਕ"
 #: kcm/libinput/touchpad.qml:525
 #, kde-format
 msgid "Tap with two fingers to middle-click."
-msgstr ""
+msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
 
 #: kcm/libinput/touchpad.qml:584
 #, kde-format
@@ -259,17 +258,17 @@ msgstr "ਟੱਚਪੈਡ ਕਿਨਾਰੇ"
 #: kcm/libinput/touchpad.qml:629
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
-msgstr ""
+msgstr "ਟੱਚ-ਪੈਡ ਕੰਢਿਆਂ ਉੱਤੇ ਸਕਰੋਲ ਕਾਲ ਸਰਕਾਓ।"
 
 #: kcm/libinput/touchpad.qml:639
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr ""
+msgstr "ਉਲਟ ਸਕਰੋਲ ਦੀ ਦਿਸ਼ਾ (ਕੁਦਰਤੀ ਸਕਰੋਲਿੰਗ)"
 
 #: kcm/libinput/touchpad.qml:655
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr ""
+msgstr "ਟੱਚ ਸਕਰੀਨ ਵਾਂਗ ਸਕਰੋਲਿੰਗ"
 
 #: kcm/libinput/touchpad.qml:663 kcm/libinput/touchpad.qml:680
 #, kde-format
@@ -301,7 +300,7 @@ msgstr "ਸੱਜਾ-ਕਲਿੱਕ:"
 #: kcm/libinput/touchpad.qml:789
 #, kde-format
 msgid "Press bottom-right corner"
-msgstr ""
+msgstr "ਹੇਠਾਂ-ਸੱਜਾ ਕੋਨਾ ਦਬਾਓ"
 
 #: kcm/libinput/touchpad.qml:793
 #, kde-format
@@ -312,22 +311,22 @@ msgstr ""
 #: kcm/libinput/touchpad.qml:801
 #, kde-format
 msgid "Press anywhere with two fingers"
-msgstr ""
+msgstr "ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ"
 
 #: kcm/libinput/touchpad.qml:805
 #, kde-format
 msgid "Tap with two finger to enable right click."
-msgstr ""
+msgstr "ਸੱਜਾ ਕਲਿੱਕ ਸਮਰੱਥ ਕਰਨ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ।"
 
 #: kcm/libinput/touchpad.qml:819
 #, kde-format
 msgid "Middle-click: "
-msgstr "ਮੱਧ-ਕਲਿੱਕ:"
+msgstr "ਮਿਡਲ-ਕਲਿੱਕ:"
 
 #: kcm/libinput/touchpad.qml:848
 #, kde-format
 msgid "Press bottom-middle"
-msgstr ""
+msgstr "ਹੇਠਾਂ-ਮਿਡਲ ਦਬਾਓ"
 
 #: kcm/libinput/touchpad.qml:852
 #, kde-format
@@ -344,12 +343,12 @@ msgstr ""
 #: kcm/libinput/touchpad.qml:873
 #, kde-format
 msgid "Press anywhere with three fingers"
-msgstr ""
+msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ"
 
 #: kcm/libinput/touchpad.qml:879
 #, kde-format
 msgid "Press anywhere with three fingers."
-msgstr ""
+msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ।"
 
 #: kcm/touchpadconfig.cpp:99
 #, kde-format
@@ -369,6 +368,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"ਸਾਰੀਆਂ ਤਬਦੀਲੀਆਂ ਸੰਭਾਲਣ ਲਈ ਸਮਰੱਥ ਨਹੀਂ ਹੈ। ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ ਲਾਗ ਨੂੰ ਵੇਖੋ। ਇਸ ਸੰਰਚਨਾ ਮੋਡੀਊਲ ਨੂੰ "
+"ਮੁੜ-ਚਾਲੂ ਕਰਕੇ ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
 #: kcm/touchpadconfig.cpp:130
 #, kde-format
@@ -383,6 +384,8 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"ਨਵੇਂ ਕਨੈਕਟ ਕੀਤੇ ਡਿਵਾਈਸ ਨੂੰ ਜੋੜਨ ਦੌਰਾਨ ਗਲਤੀ ਹੈ। ਇਸ ਨੂੰ ਮੁੜ-ਕਨੈਕਟ ਕਰੋ ਅਤੇ ਇਸ ਸੰਰਚਨਾ ਮੋਡੀਊਲ ਨੂੰ ਮੁੜ-"
+"ਚਾਲੂ ਕਰੋ।"
 
 #: kcm/touchpadconfig.cpp:173
 #, kde-format
@@ -397,12 +400,12 @@ msgstr "ਟੱਚਪੈਡ ਕਨੈਕਟ ਨਹੀਂ ਹੈ। ਕੋਈ ਹ�
 #: kded/kded.cpp:201
 #, kde-format
 msgid "Touchpad was disabled because a mouse was plugged in"
-msgstr ""
+msgstr "ਮਾਊਸ ਦਾ ਪਲੱਗ ਲੱਗਾ ਹੋਣ ਕਰਕੇ ਟੱਚ-ਪੈਡ ਅਸਮਰੱਥ ਸੀ"
 
 #: kded/kded.cpp:204
 #, kde-format
 msgid "Touchpad was enabled because the mouse was unplugged"
-msgstr "ਟੱਚਪੈਡ ਸਮਰੱਥ ਸੀ, ਕਿਉਂਕਿ ਮਾਊਂਸ ਦਾ ਪਲੱਗ ਨਹੀਂ ਲੱਗਾ ਸੀ"
+msgstr "ਮਾਊਂਸ ਦਾ ਪਲੱਗ ਨਹੀਂ ਲੱਗਾ ਹੋਣ ਕਰਕੇ ਟੱਚਪੈਡ ਸਮਰੱਥ ਸੀ"
 
 #. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
 #: touchpadparameters.kcfg:27
@@ -423,7 +426,7 @@ msgstr "ਖੱਬਾ ਬਟਨ"
 #, kde-format
 msgctxt "Emulated mouse button"
 msgid "Middle button"
-msgstr "ਮੱਧ ਬਟਨ"
+msgstr "ਮਿਡਲ ਬਟਨ"
 
 #. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
 #: touchpadparameters.kcfg:36

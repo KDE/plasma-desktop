@@ -2,14 +2,14 @@
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
 # Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
 # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
-# SPDX-FileCopyrightText: 2007, 2008, 2010, 2011, 2019, 2021, 2023 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2007, 2008, 2010, 2011, 2019, 2021, 2023, 2024 A S Alam <aalam@users.sf.net>
 # Amanpreet Singh <aalam@users.sf.net>, 2008, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-13 01:35+0000\n"
-"PO-Revision-Date: 2023-12-26 11:08-0600\n"
+"PO-Revision-Date: 2024-01-01 11:50-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -57,6 +57,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"ਸਾਰੀਆਂ ਤਬਦੀਲੀਆਂ ਸੰਭਾਲਣ ਲਈ ਸਮਰੱਥ ਨਹੀਂ ਹੈ। ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ ਲਾਗ ਨੂੰ ਵੇਖੋ। ਇਸ ਸੰਰਚਨਾ ਮੋਡੀਊਲ ਨੂੰ "
+"ਮੁੜ-ਚਾਲੂ ਕਰਕੇ ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
 #: kcm/libinput/libinput_config.cpp:136
 #, kde-format
@@ -71,6 +73,8 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"ਨਵੇਂ ਕਨੈਕਟ ਕੀਤੇ ਡਿਵਾਈਸ ਨੂੰ ਜੋੜਨ ਦੌਰਾਨ ਗਲਤੀ ਹੈ। ਇਸ ਨੂੰ ਮੁੜ-ਕਨੈਕਟ ਕਰੋ ਅਤੇ ਇਸ ਸੰਰਚਨਾ ਮੋਡੀਊਲ ਨੂੰ ਮੁੜ-"
+"ਚਾਲੂ ਕਰੋ।"
 
 #: kcm/libinput/libinput_config.cpp:182
 #, kde-format
@@ -115,18 +119,18 @@ msgstr "ਖੱਬੇ ਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਬਦਲੋ�
 #: kcm/libinput/main.qml:148 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
-msgstr ""
+msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਦੋਵੇਂ ਬਟਨਾਂ ਨੂੰ ਦਬਾਓ"
 
 #: kcm/libinput/main.qml:168 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
-msgstr ""
+msgstr "ਮਿਡਲ ਬਟਨ ਕਲਿੱਕ ਕਰਨ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਇਕੱਠੇ ਕਲਿੱਕ ਕਰੋ।"
 
 #: kcm/libinput/main.qml:178 kcm/libinput/main_deviceless.qml:106
 #, kde-format
 msgid "Pointer speed:"
-msgstr "ਪੁਆਇੰਟਰ ਗਤੀ:"
+msgstr "ਪੁਆਇੰਟਰ ਦੀ ਗਤੀ:"
 
 #: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
 #, kde-format
@@ -141,7 +145,7 @@ msgstr "ਕੋਈ ਨਹੀਂ"
 #: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:173
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
-msgstr ""
+msgstr "ਕਰਸਰ ਮਾਊਸ ਦੀ ਹਿਲਜੁਲ ਵਾਂਗ ਉਸ ਜਿੰਨੀ ਦੂਰੀ ਹੀ ਚੱਲੇ।"
 
 #: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:179
 #, kde-format
@@ -151,7 +155,7 @@ msgstr "ਸਟੈਂਡਰਡ"
 #: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:183
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
-msgstr ""
+msgstr "ਕਰਸਰ ਹਿਲਜੁਲ ਦੀ ਦੂਰੀ ਮਾਊਸ ਦੀ ਹਿਲਜੁਲ ਦੀ ਸਪੀਡ ਉੱਤੇ ਨਿਰਭਰ ਕਰਦੀ ਹੈ।"
 
 #: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:195
 #, kde-format
@@ -161,7 +165,7 @@ msgstr "ਸਰਕਾਉਣਾ:"
 #: kcm/libinput/main.qml:268 kcm/libinput/main_deviceless.qml:196
 #, kde-format
 msgid "Invert scroll direction"
-msgstr "ਉਲੱਟ ਸਕਰੋਲ ਦਿਸ਼ਾ"
+msgstr "ਉਲਟ ਸਕਰੋਲ ਦਿਸ਼ਾ"
 
 #: kcm/libinput/main.qml:284 kcm/libinput/main_deviceless.qml:212
 #, kde-format

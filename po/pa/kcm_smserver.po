@@ -1,96 +1,90 @@
 # translation of kcmsmserver.po to Punjabi
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
-# A S Alam <aalam@users.sf.net>, 2007, 2009.
+# SPDX-FileCopyrightText: 2007, 2009, 2024 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-05 02:15+0000\n"
-"PO-Revision-Date: 2009-12-13 14:20+0530\n"
-"Last-Translator: A S Alam <aalam@users.sf.net>\n"
-"Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2024-01-01 11:32-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Conf&irm logout"
+#, kde-format
 msgid "Confirm logout"
-msgstr "ਲਾਗਆਉਟ ਪੁਸ਼ਟੀ(&i)"
+msgstr "ਲਾਗਆਉਟ ਦੀ ਪੁਸ਼ਟੀ"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Default Leave Option"
+#, kde-format
 msgid "Default leave option"
 msgstr "ਡਿਫਾਲਟ ਛੱਡੋ ਚੋਣ"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
 #: smserversettings.kcfg:22
-#, fuzzy, kde-format
-#| msgid "On Login"
+#, kde-format
 msgid "On login"
-msgstr "ਲਾਗਇਨ ਸਮੇਂ"
+msgstr "ਲਾਗਇਨ ਉੱਤੇ"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
 #: smserversettings.kcfg:26
-#, fuzzy, kde-format
-#| msgid "Applications to be e&xcluded from sessions:"
+#, kde-format
 msgid "Applications to be excluded from session"
-msgstr "ਸ਼ੈਸ਼ਨ ਵਿੱਚੋਂ ਕੱਢਣ ਵਾਲੇ ਐਪਲੀਕੇਸ਼ਨ(&x):"
+msgstr "ਸ਼ੈਸ਼ਨ ਵਿੱਚੋਂ ਅਲਹਿਦਾ ਰੱਖਣ ਵਾਲੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
 #: ui/main.qml:30
 #, kde-format
 msgid ""
 "The system must be restarted before manual session saving becomes active."
-msgstr ""
+msgstr "ਖੁਦ ਸ਼ੈਸ਼ਨ ਸੰਭਾਲਣ ਨੂੰ ਸਰਗਰਮ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਸਿਸਟਮ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
+#, kde-format
 msgid "Restart"
-msgstr "ਕੰਪਿਊਟਰ ਮੁੜ ਚਾਲੂ ਕਰੋ(&R)"
+msgstr "ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
-msgstr ""
+msgstr "ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਕਰਨ ਲਈ ਮੁੜ-ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਅਸਫ਼ਲ ਹੈ: %1"
 
 #: ui/main.qml:58
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr ""
+msgstr "ਅਗਲੀ ਵਾਰ ਜਦੋਂ ਕੰਪਿਊਟਰ ਮੁੜ-ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ ਤਾਂ ਇਹ UEFI ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਏਗਾ।"
 
 #: ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
-msgstr ""
+msgstr "ਅਗਲੀ ਵਾਰ ਜਦੋਂ ਕੰਪਿਊਟਰ ਮੁੜ-ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ ਤਾਂ ਇਹ ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਏਗਾ।"
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
+#, kde-format
 msgid "Restart Now"
-msgstr "ਕੰਪਿਊਟਰ ਮੁੜ ਚਾਲੂ ਕਰੋ(&R)"
+msgstr "ਹੁਣੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "ਲਾਗ-ਆਉਟ ਸਕਰੀਨ"
 
 #: ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "ਵੇਖਾਓ:"
 
 #: ui/main.qml:89
 #, kde-kuit-format
@@ -102,29 +96,27 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Session Manager"
+#, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr "ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ"
+msgstr "ਸ਼ੈਸ਼ਨ ਬਹਾਲ ਕਰੋ"
 
 #: ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "ਲਾਗਇਨ ਸਮੇਂ ਖੁੱਲ੍ਹੀਆਂ ਐਪਾਂ ਨੂੰ ਚਲਾਓ:"
 
 #: ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "ਪਿਛਲੀ ਵਾਰ ਲਾਗ ਆਉਟ ਸਮੇਂ"
 
 #: ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Restore &manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "ਖੁਦ ਸੰਭਾਲਿਆ ਸ਼ੈਸ਼ਨ ਮੁੜ-ਸਟੋਰ ਕਰੋ(&m)"
+msgstr "ਜਦੋਂ ਸ਼ੈਸ਼ਨ ਨੂੰ ਖੁਦ ਸੰਭਾਲਿਆ ਗਿਆ ਹੈ"
 
 #: ui/main.qml:127
 #, kde-kuit-format
@@ -137,19 +129,18 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid "Start with an empty &session"
+#, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr "ਇੱਕ ਖਾਲੀ ਸ਼ੈਸ਼ਨ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ(&s) "
+msgstr "ਇੱਕ ਖਾਲੀ ਸ਼ੈਸ਼ਨ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ"
 
 #: ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
-msgstr ""
+msgstr "ਅਣਡਿੱਠੀਆਂ ਕੀਤੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ:"
 
 #: ui/main.qml:169
 #, kde-format
@@ -163,7 +154,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "ਫਿਰਮਵੇਅਰ"
 
 #: ui/main.qml:183
 #, kde-format
@@ -171,19 +162,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "ਅਗਲੀ ਵਾਰ ਮੁੜ-ਚਾਲੂ ਹੋਣ ਦੇ ਬਾਅਦ:"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr ""
+msgstr "UEFI ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਓ"
 
 #: ui/main.qml:185
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
+msgstr "ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਓ"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "

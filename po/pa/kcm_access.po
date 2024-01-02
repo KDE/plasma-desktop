@@ -2,21 +2,21 @@
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
 # Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
 # Amanpreet Singh Brar <aalam@redhat.com>, 2005.
-# A S Alam <aalam@users.sf.net>, 2007, 2008, 2021.
+# SPDX-FileCopyrightText: 2007, 2008, 2021, 2024 A S Alam <aalam@users.sf.net>
 # Amanpreet Singh Alam <aalam@users.sf.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:39+0000\n"
-"PO-Revision-Date: 2021-10-09 09:10-0700\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2024-01-01 11:11-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
@@ -295,11 +295,10 @@ msgid "Please choose an audio file"
 msgstr "ਆਡੀਓ ਫਾਇਲ ਚੁਣੋ"
 
 #: ui/Bell.qml:20
-#, fuzzy, kde-format
-#| msgid "Audio Files (*.mp3 *.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog"
 msgid "Audio Files (*.ogg *.wav)"
-msgstr "ਆਡੀਓ ਫਾਇਲਾਂ (*.mp3 *.ogg *.wav)"
+msgstr "ਆਡੀਓ ਫਾਇਲਾਂ (*.ogg *.wav)"
 
 #: ui/Bell.qml:29
 #, kde-format
@@ -392,28 +391,22 @@ msgid "Ring system bell:"
 msgstr "ਸਿਸਟਮ ਘੰਟੀ ਵਜਾਓ:"
 
 #: ui/KeyboardFilters.qml:58
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is pressed"
-#| msgid "&when any key is pressed"
+#, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "ਜਦੋਂ ਵੀ ਸਵਿੱਚ ਦਬਾਈ ਜਾਵੇ(&w)"
+msgstr "ਜਦੋਂ ਵੀ ਸਵਿੱਚ ਦਬਾਈ ਜਾਵੇ(&p)"
 
 #: ui/KeyboardFilters.qml:72
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is accepted"
-#| msgid "&when any key is accepted"
+#, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "ਜਦੋਂ ਵੀ ਸਵਿੱਚ ਸਵੀਕਾਰ ਕੀਤੀ ਜਾਵੇ(&w)"
+msgstr "ਜਦੋਂ ਵੀ ਸਵਿੱਚ ਮਨਜ਼ੂਰ ਕੀਤੀ ਜਾਵੇ(&a)"
 
 #: ui/KeyboardFilters.qml:86
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is rejected"
-#| msgid "&when any key is rejected"
+#, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "ਜਦੋਂ ਕੁੰਜੀ ਨਾ-ਮਨਜ਼ੂਰ ਕੀਤੀ ਜਾਵੇ(&w)"
+msgstr "ਜਦੋਂ ਸਵਿੱਚ ਨਾ-ਮਨਜ਼ੂਰ ਕੀਤੀ ਜਾਵੇ(&r)"
 
 #: ui/KeyboardFilters.qml:103
 #, kde-format
@@ -570,10 +563,9 @@ msgid "Maximum speed:"
 msgstr "ਵੱਧੋ-ਵੱਧ ਗਤੀ:"
 
 #: ui/MouseNavigation.qml:124
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgid "Pointer acceleration:"
-msgstr "ਐਕਸਰਲੇਸ਼ਨ ਸਮਾਂ:"
+msgstr "ਪੁਆਇੰਟਰ ਐਕਸਰਲੇਸ਼ਨ:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -586,6 +578,8 @@ msgid ""
 "Please note that you may have to log out or reboot once to allow the screen "
 "reader to work properly."
 msgstr ""
+"ਯਾਦ ਰੱਖੋ ਕਿ ਸਕਰੀਨ ਰੀਡਰ ਦੇ ਠੀਕ ਤਰ੍ਹਾਂ ਕੰਮ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਇੱਕ ਵਾਰ ਲਾਗ ਆਉਟ ਜਾਂ ਮੁੜ-ਚਾਲੂ ਕਰਨਾ "
+"ਪੈ ਸਕਦਾ ਹੈ।"
 
 #: ui/ScreenReader.qml:42
 #, kde-format
