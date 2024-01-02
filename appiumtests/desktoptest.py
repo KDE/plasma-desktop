@@ -232,16 +232,18 @@ class DesktopTest(unittest.TestCase):
 
         # Click "More" to open the desktop context menu
         wait = WebDriverWait(self.driver, 10)
-        try:
-            action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
-            action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
-            action.perform()
-            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "More"))).click()
-        except TimeoutException:
-            action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
-            action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
-            action.perform()
-            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "More"))).click()
+        success = False
+        for _ in range(5):
+            try:
+                action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+                action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
+                action.perform()
+                wait.until(EC.presence_of_element_located((AppiumBy.NAME, "More"))).click()
+                success = True
+                break
+            except TimeoutException:
+                continue
+        self.assertTrue(success)
 
         time.sleep(3)  # Wait until the menu appears
         with tempfile.TemporaryDirectory() as temp_dir:
