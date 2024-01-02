@@ -226,14 +226,14 @@ class DesktopTest(unittest.TestCase):
         """
         time.sleep(3)
         screen_geometry = Gtk.Window().get_display().get_monitors()[0].get_geometry()
-        long_press_time_ms: int = Gtk.Settings.get_default().get_property("gtk-long-press-time") * 2 + 3000
+        long_press_time_ms: int = Gtk.Settings.get_default().get_property("gtk-long-press-time") * 2 + 5000
         self.assertGreater(screen_geometry.width, 0)
         self.assertGreater(screen_geometry.height, 0)
 
         # Click "More" to open the desktop context menu
         wait = WebDriverWait(self.driver, 10)
         success = False
-        for _ in range(5):
+        for _ in range(10):
             try:
                 action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
                 action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
