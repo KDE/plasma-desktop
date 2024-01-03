@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2024-01-03 01:37+0000\n"
 "PO-Revision-Date: 2023-12-27 13:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -85,25 +85,25 @@ msgstr "Etiket:"
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:338
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:341
 #, kde-format
 msgid "Preview"
 msgstr "Önizleme"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
-#: kcm_keyboard.ui:18
+#: kcm_keyboard.ui:21
 #, kde-format
 msgid "Hardware"
 msgstr "Donanım"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm_keyboard.ui:33
+#: kcm_keyboard.ui:36
 #, kde-format
 msgid "Keyboard &model:"
 msgstr "Klavye &modeli:"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
-#: kcm_keyboard.ui:53
+#: kcm_keyboard.ui:56
 #, kde-format
 msgid ""
 "Here you can choose a keyboard model. This setting is independent of your "
@@ -120,13 +120,13 @@ msgstr ""
 "tür klavyeye sahip olduğunuzu bilmiyorsanız istediğiniz seçenek budur.\n"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
-#: kcm_keyboard.ui:94
+#: kcm_keyboard.ui:97
 #, kde-format
 msgid "Layouts"
 msgstr "Düzenler"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:102
+#: kcm_keyboard.ui:105
 #, kde-format
 msgid ""
 "If you select \"Application\" or \"Window\" switching policy, changing the "
@@ -136,49 +136,49 @@ msgstr ""
 "düzenini değiştirmek yalnızca geçerli uygulama veya pencereyi etkileyecektir."
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:105
+#: kcm_keyboard.ui:108
 #, kde-format
 msgid "Switching Policy"
 msgstr "Değiştirme Politikası"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
-#: kcm_keyboard.ui:111
+#: kcm_keyboard.ui:114
 #, kde-format
 msgid "&Global"
 msgstr "&Genel"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
-#: kcm_keyboard.ui:124
+#: kcm_keyboard.ui:127
 #, kde-format
 msgid "&Desktop"
 msgstr "&Masaüstü"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
-#: kcm_keyboard.ui:134
+#: kcm_keyboard.ui:137
 #, kde-format
 msgid "&Application"
 msgstr "&Uygulama"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
-#: kcm_keyboard.ui:144
+#: kcm_keyboard.ui:147
 #, kde-format
 msgid "&Window"
 msgstr "&Pencere"
 
 #. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
-#: kcm_keyboard.ui:157
+#: kcm_keyboard.ui:160
 #, kde-format
 msgid "Shortcuts for Switching Layout"
 msgstr "Düzen Değiştirme Kısayolları"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm_keyboard.ui:163
+#: kcm_keyboard.ui:166
 #, kde-format
 msgid "Main shortcuts:"
 msgstr "Ana kısayollar:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
-#: kcm_keyboard.ui:176
+#: kcm_keyboard.ui:179
 #, kde-format
 msgid ""
 "This is a shortcut for switching layouts which is handled by X.org. It "
@@ -189,7 +189,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
 #. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:179 kcm_keyboard.ui:209
+#: kcm_keyboard.ui:182 kcm_keyboard.ui:212
 #, kde-format
 msgctxt "no shortcut defined"
 msgid "None"
@@ -197,19 +197,19 @@ msgstr "Yok"
 
 #. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
 #. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
-#: kcm_keyboard.ui:186 kcm_keyboard.ui:216
+#: kcm_keyboard.ui:189 kcm_keyboard.ui:219
 #, kde-format
 msgid "…"
 msgstr "…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm_keyboard.ui:193
+#: kcm_keyboard.ui:196
 #, kde-format
 msgid "3rd level shortcuts:"
 msgstr "3. düzey kısayollar:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:206
+#: kcm_keyboard.ui:209
 #, kde-format
 msgid ""
 "This is a shortcut for switching to a third level of the active layout (if "
@@ -219,13 +219,13 @@ msgstr ""
 "geçiş için bir kısayoldur. Niteleyiciye özel kısayollara izin verir."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm_keyboard.ui:223
+#: kcm_keyboard.ui:226
 #, kde-format
 msgid "Alternative shortcut:"
 msgstr "Alternatif kısayol:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
-#: kcm_keyboard.ui:236
+#: kcm_keyboard.ui:239
 #, kde-format
 msgid ""
 "This is a shortcut for switching layouts. It does not support modifier-only "
@@ -237,13 +237,13 @@ msgstr ""
 "etkinse veya bir ekran koruyucusunda)."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm_keyboard.ui:246
+#: kcm_keyboard.ui:249
 #, kde-format
 msgid "Last used shortcut:"
 msgstr "Son kullanılan kısayol:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
-#: kcm_keyboard.ui:259
+#: kcm_keyboard.ui:262
 #, kde-format
 msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
@@ -253,55 +253,55 @@ msgstr ""
 "geçiş yapmanızı sağlar."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:284
+#: kcm_keyboard.ui:287
 #, kde-format
 msgid "Configure layouts"
 msgstr "Düzenleri yapılandır"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:298
+#: kcm_keyboard.ui:301
 #, kde-format
 msgid "Add"
 msgstr "Ekle"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:308
+#: kcm_keyboard.ui:311
 #, kde-format
 msgid "Remove"
 msgstr "Kaldır"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:318
+#: kcm_keyboard.ui:321
 #, kde-format
 msgid "Move Up"
 msgstr "Yukarı Taşı"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:328
+#: kcm_keyboard.ui:331
 #, kde-format
 msgid "Move Down"
 msgstr "Aşağı Taşı"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:373
+#: kcm_keyboard.ui:376
 #, kde-format
 msgid "Spare layouts"
 msgstr "Yedek düzenler"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:405
+#: kcm_keyboard.ui:408
 #, kde-format
 msgid "Main layout count:"
 msgstr "Ana düzen sayısı:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:435
+#: kcm_keyboard.ui:438
 #, kde-format
 msgid "Advanced"
 msgstr "Gelişmiş"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:441
+#: kcm_keyboard.ui:444
 #, kde-format
 msgid "&Configure keyboard options"
 msgstr "&Klavye seçeneklerini yapılandır"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2024-01-03 01:37+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -83,25 +83,25 @@ msgstr "Etiketa:"
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:338
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:341
 #, kde-format
 msgid "Preview"
 msgstr "Pregled"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
-#: kcm_keyboard.ui:18
+#: kcm_keyboard.ui:21
 #, kde-format
 msgid "Hardware"
 msgstr "Hardver"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm_keyboard.ui:33
+#: kcm_keyboard.ui:36
 #, kde-format
 msgid "Keyboard &model:"
 msgstr "&Model tastature:"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
-#: kcm_keyboard.ui:53
+#: kcm_keyboard.ui:56
 #, kde-format
 msgid ""
 "Here you can choose a keyboard model. This setting is independent of your "
@@ -118,13 +118,13 @@ msgstr ""
 "kakvu tastaturu imate.\n"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
-#: kcm_keyboard.ui:94
+#: kcm_keyboard.ui:97
 #, kde-format
 msgid "Layouts"
 msgstr "Rasporedi"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:102
+#: kcm_keyboard.ui:105
 #, kde-format
 msgid ""
 "If you select \"Application\" or \"Window\" switching policy, changing the "
@@ -134,49 +134,49 @@ msgstr ""
 "rasporeda će uticati samo na tekući program ili prozor."
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:105
+#: kcm_keyboard.ui:108
 #, kde-format
 msgid "Switching Policy"
 msgstr "Smernica menjanja"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
-#: kcm_keyboard.ui:111
+#: kcm_keyboard.ui:114
 #, kde-format
 msgid "&Global"
 msgstr "&Globalno"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
-#: kcm_keyboard.ui:124
+#: kcm_keyboard.ui:127
 #, kde-format
 msgid "&Desktop"
 msgstr "Po po&vrši"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
-#: kcm_keyboard.ui:134
+#: kcm_keyboard.ui:137
 #, kde-format
 msgid "&Application"
 msgstr "Po &programu"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
-#: kcm_keyboard.ui:144
+#: kcm_keyboard.ui:147
 #, kde-format
 msgid "&Window"
 msgstr "Po pro&zoru"
 
 #. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
-#: kcm_keyboard.ui:157
+#: kcm_keyboard.ui:160
 #, kde-format
 msgid "Shortcuts for Switching Layout"
 msgstr "Prečice za prebacivanje rasporeda"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm_keyboard.ui:163
+#: kcm_keyboard.ui:166
 #, kde-format
 msgid "Main shortcuts:"
 msgstr "Glavne prečice:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
-#: kcm_keyboard.ui:176
+#: kcm_keyboard.ui:179
 #, kde-format
 msgid ""
 "This is a shortcut for switching layouts which is handled by X.org. It "
@@ -187,7 +187,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
 #. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:179 kcm_keyboard.ui:209
+#: kcm_keyboard.ui:182 kcm_keyboard.ui:212
 #, kde-format
 msgctxt "no shortcut defined"
 msgid "None"
@@ -195,19 +195,19 @@ msgstr "Nikakva"
 
 #. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
 #. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
-#: kcm_keyboard.ui:186 kcm_keyboard.ui:216
+#: kcm_keyboard.ui:189 kcm_keyboard.ui:219
 #, kde-format
 msgid "…"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm_keyboard.ui:193
+#: kcm_keyboard.ui:196
 #, kde-format
 msgid "3rd level shortcuts:"
 msgstr "Prečice za treći nivo:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:206
+#: kcm_keyboard.ui:209
 #, kde-format
 msgid ""
 "This is a shortcut for switching to a third level of the active layout (if "
@@ -217,13 +217,13 @@ msgstr ""
 "koju obrađuje X. Dopušta čisto modifikatorske prečice."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm_keyboard.ui:223
+#: kcm_keyboard.ui:226
 #, kde-format
 msgid "Alternative shortcut:"
 msgstr "Alternativna prečica:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
-#: kcm_keyboard.ui:236
+#: kcm_keyboard.ui:239
 #, kde-format
 msgid ""
 "This is a shortcut for switching layouts. It does not support modifier-only "
@@ -235,14 +235,14 @@ msgstr ""
 "ili na čuvaru ekrana)."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm_keyboard.ui:246
+#: kcm_keyboard.ui:249
 #, fuzzy, kde-format
 #| msgid "Alternative shortcut:"
 msgid "Last used shortcut:"
 msgstr "Alternativna prečica:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
-#: kcm_keyboard.ui:259
+#: kcm_keyboard.ui:262
 #, kde-format
 msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
@@ -250,55 +250,55 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:284
+#: kcm_keyboard.ui:287
 #, kde-format
 msgid "Configure layouts"
 msgstr "Podesi rasporede"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:298
+#: kcm_keyboard.ui:301
 #, kde-format
 msgid "Add"
 msgstr "Dodaj"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:308
+#: kcm_keyboard.ui:311
 #, kde-format
 msgid "Remove"
 msgstr "Ukloni"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:318
+#: kcm_keyboard.ui:321
 #, kde-format
 msgid "Move Up"
 msgstr "Pomeri nagore"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:328
+#: kcm_keyboard.ui:331
 #, kde-format
 msgid "Move Down"
 msgstr "Pomeri nadole"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:373
+#: kcm_keyboard.ui:376
 #, kde-format
 msgid "Spare layouts"
 msgstr "Rezervni rasporedi"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:405
+#: kcm_keyboard.ui:408
 #, kde-format
 msgid "Main layout count:"
 msgstr "Broj glavnih rasporeda:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:435
+#: kcm_keyboard.ui:438
 #, kde-format
 msgid "Advanced"
 msgstr "Napredno"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:441
+#: kcm_keyboard.ui:444
 #, kde-format
 msgid "&Configure keyboard options"
 msgstr "&Podesi opcije tastature"
