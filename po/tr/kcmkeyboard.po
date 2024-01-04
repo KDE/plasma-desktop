@@ -7,13 +7,13 @@
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011, 2013.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2021.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-03 01:37+0000\n"
-"PO-Revision-Date: 2023-12-27 13:08+0300\n"
+"PO-Revision-Date: 2024-01-03 22:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -36,22 +36,22 @@ msgstr "tulliana@gmail.com, ibrahim@pardus.org.tr"
 #: bindings.cpp:24
 #, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "Klavye Düzeni Değiştirici"
+msgstr "Klavye Yerleşimi Değiştiricisi"
 
 #: bindings.cpp:26
 #, kde-format
 msgid "Switch to Next Keyboard Layout"
-msgstr "Sonraki Klavye Düzenine Geç"
+msgstr "Sonraki Klavye Yerleşimine Geç"
 
 #: bindings.cpp:30
 #, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Son Kullanılan Klavye Düzenine Geç"
+msgstr "Son Kullanılan Klavye Yerleşimine Geç"
 
 #: bindings.cpp:60
 #, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "Klavye düzenini '%1' yap"
+msgstr "'%1' klavye yerleşimine geç"
 
 #: flags.cpp:77
 #, kde-format
@@ -63,7 +63,7 @@ msgstr "%1 - %2"
 #: kcm_add_layout_dialog.ui:14
 #, kde-format
 msgid "Add Layout"
-msgstr "Düzen Ekle"
+msgstr "Yerleşim Ekle"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
 #: kcm_add_layout_dialog.ui:20
@@ -88,7 +88,7 @@ msgstr "Etiket:"
 #: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:341
 #, kde-format
 msgid "Preview"
-msgstr "Önizleme"
+msgstr "Önizle"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:21
@@ -113,17 +113,17 @@ msgid ""
 "is probably what you want if you do not know what kind of keyboard you "
 "have.\n"
 msgstr ""
-"Burada bir klavye modeli seçebilirsiniz. Bu seçenek klavye düzeninizden "
-"bağımsızdır ve \"donanım\" modelinize başvurur (örn. klavyenizin üretildiği "
-"gibi). Bilgisayarınızla gelen çağdaş klavyeler genellikle iki ek düğme "
-"içerir ve bunlar \"104 düğme\" modelleri olarak adlandırılırlar. Eğer hangi "
-"tür klavyeye sahip olduğunuzu bilmiyorsanız istediğiniz seçenek budur.\n"
+"Burada klavye modelinizi ayarlayabilirsiniz. Bu ayar klavye yerleşiminizden "
+"bağımsızdır ve \"donanım\" modeli; yani, klavyenizin üretilme biçimidir. "
+"Bilgisayarınızla birlikte gelen çağdaş klavyelerde genellikle fazladan iki "
+"düğme bulunur ve bunlara \"104 düğmeli\" denir. Ne tür bir klavyeye sahip "
+"olduğunuzu bilmiyorsanız en iyisi bu ayara dokunmayın.\n"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
 #: kcm_keyboard.ui:97
 #, kde-format
 msgid "Layouts"
-msgstr "Düzenler"
+msgstr "Yerleşimler"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:105
@@ -133,7 +133,7 @@ msgid ""
 "keyboard layout will only affect the current application or window."
 msgstr ""
 "Eğer \"Uygulama\" veya \"Pencere\" değiştirme ilkesini seçerseniz, klavye "
-"düzenini değiştirmek yalnızca geçerli uygulama veya pencereyi etkileyecektir."
+"yerleşimini değiştirmek yalnızca geçerli uygulama veya pencereyi etkiler."
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:108
@@ -169,7 +169,7 @@ msgstr "&Pencere"
 #: kcm_keyboard.ui:160
 #, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "Düzen Değiştirme Kısayolları"
+msgstr "Yerleşim Değiştirme Kısayolları"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:166
@@ -184,8 +184,8 @@ msgid ""
 "This is a shortcut for switching layouts which is handled by X.org. It "
 "allows modifier-only shortcuts."
 msgstr ""
-"Bu, X.org tarafından ele alınan düzenleri değiştirmek için bir kısayoldur. "
-"Niteleyiciye özel kısayollara izin verir."
+"Bu, X.org tarafından ele alınan yerleşimleri değiştirmek için bir "
+"kısayoldur. Niteleyiciye özel kısayollara izin verir."
 
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
 #. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
@@ -215,8 +215,8 @@ msgid ""
 "This is a shortcut for switching to a third level of the active layout (if "
 "it has one) which is handled by X.org. It allows modifier-only shortcuts."
 msgstr ""
-"Bu, X.org tarafından ele alınan geçerli düzenin üçüncü düzeyine (eğer varsa) "
-"geçiş için bir kısayoldur. Niteleyiciye özel kısayollara izin verir."
+"Bu, X.org tarafından ele alınan geçerli yerleşimin üçüncü düzeyine (eğer "
+"varsa) geçiş için bir kısayoldur. Niteleyiciye özel kısayollara izin verir."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm_keyboard.ui:226
@@ -232,9 +232,9 @@ msgid ""
 "shortcuts and also may not work in some situations (e.g. if popup is active "
 "or from screensaver)."
 msgstr ""
-"Bu, düzenleri değiştirmek için bir kısayoldur. Niteleyiciye özel kısayolları "
-"desteklemez ve bazı durumlarda çalışmayabilir (örn. bir açılır pencere "
-"etkinse veya bir ekran koruyucusunda)."
+"Bu, yerleşimleri değiştirmek için bir kısayoldur. Niteleyiciye özel "
+"kısayolları desteklemez ve bazı durumlarda çalışmayabilir (örn. bir açılır "
+"pencere etkinse veya bir ekran koruyucusundansa)."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:249
@@ -249,14 +249,14 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
-"Bu kısayol, her zaman son kullanılan düzene geçerek iki düzen arasında hızlı "
-"geçiş yapmanızı sağlar."
+"Bu kısayol, her zaman son kullanılan yerleşime geçerek iki yerleşim arasında "
+"hızlı geçiş yapmanızı sağlar."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:287
 #, kde-format
 msgid "Configure layouts"
-msgstr "Düzenleri yapılandır"
+msgstr "Yerleşimleri yapılandır"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
 #: kcm_keyboard.ui:301
@@ -286,13 +286,13 @@ msgstr "Aşağı Taşı"
 #: kcm_keyboard.ui:376
 #, kde-format
 msgid "Spare layouts"
-msgstr "Yedek düzenler"
+msgstr "Yedek yerleşimler"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm_keyboard.ui:408
 #, kde-format
 msgid "Main layout count:"
-msgstr "Ana düzen sayısı:"
+msgstr "Ana yerleşim sayısı:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
 #: kcm_keyboard.ui:438
@@ -340,7 +340,7 @@ msgstr "Eşlem"
 #: kcm_view_models.cpp:200
 #, kde-format
 msgid "Layout"
-msgstr "Düzen"
+msgstr "Yerleşim"
 
 #: kcm_view_models.cpp:200
 #, kde-format
@@ -497,7 +497,7 @@ msgstr "Klavye Önizlemesi"
 #, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "Klavye düzeni görselleştirmesi"
+msgstr "Klavye yerleşimi görselleştirmesi"
 
 #: tastenbrett/main.cpp:139
 #, kde-format
@@ -509,19 +509,6 @@ msgid ""
 "layout and variant."
 msgstr ""
 "Klavye geometrisi yüklenemedi. Bu genellikle seçilen modelin belirli bir "
-"düzeni veya düzen çeşidini desteklemediğini gösterir. Bu sorun, bu model, "
-"düzen ve çeşidinin kombinasyonunu kullanmaya çalıştığınızda da ortaya "
-"çıkacaktır."
-
-#~ msgid "KDE Keyboard Control Module"
-#~ msgstr "KDE Klavye Denetim Modülü"
-
-#~ msgid "(c) 2010 Andriy Rysin"
-#~ msgstr "(c) 2010 Andriy Rysin"
-
-#~ msgid ""
-#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
-#~ "parameters and layouts."
-#~ msgstr ""
-#~ "<h1>Klavye</h1> Bu denetim modülü, klavye parametrelerinin ve düzeninin "
-#~ "yapılandırılması için kullanılır."
+"yerleşimi veya yerleşim çeşidini desteklemediğini gösterir. Bu sorun, bu "
+"model, yerleşim ve çeşidinin kombinasyonunu kullanmaya çalıştığınızda da "
+"ortaya çıkacaktır."
