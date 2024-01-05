@@ -74,9 +74,9 @@ class Bug477220Test(unittest.TestCase):
         self.assertGreater(screen_geometry.height, 0)
 
         # Click "More" to open the desktop context menu
-        wait = WebDriverWait(self.driver, 10)
+        wait = WebDriverWait(self.driver, 5)
         success = False
-        for _ in range(10):
+        for _ in range(20):
             try:
                 action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
                 action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
