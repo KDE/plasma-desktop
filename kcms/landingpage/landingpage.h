@@ -85,7 +85,6 @@ public:
     LookAndFeelGroup *defaultLightLookAndFeel() const;
     LookAndFeelGroup *defaultDarkLookAndFeel() const;
 
-    Q_INVOKABLE void openWallpaperDialog();
     Q_INVOKABLE void openKCM(const QString &kcm);
 
 public Q_SLOTS:

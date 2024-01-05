@@ -224,50 +224,6 @@ LookAndFeelGroup *KCMLandingPage::defaultDarkLookAndFeel() const
     return m_defaultDarkLookAndFeel;
 }
 
-void KCMLandingPage::openWallpaperDialog()
-{
-    QString connector;
-
-    QQuickItem *item = mainUi();
-    if (!item) {
-        return;
-    }
-
-    QQuickWindow *quickWindow = item->window();
-    if (!quickWindow) {
-        return;
-    }
-
-    QWindow *window = QQuickRenderControl::renderWindowFor(quickWindow);
-    if (!window) {
-        return;
-    }
-
-    QScreen *screen = window->screen();
-    if (screen) {
-        connector = screen->name();
-    }
-
-    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
-                                                          QStringLiteral("/PlasmaShell"),
-                                                          QStringLiteral("org.kde.PlasmaShell"),
-                                                          QStringLiteral("evaluateScript"));
-
-    QList<QVariant> args;
-    args << QStringLiteral(R"(
-        let id = screenForConnector("%1");
-
-        if (id >= 0) {
-            let desktop = desktopForScreen(id);
-            desktop.showConfigurationInterface();
-        })")
-                .arg(connector);
-
-    message.setArguments(args);
-
-    QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
-}
-
 Q_INVOKABLE void KCMLandingPage::openKCM(const QString &kcm)
 {
     QProcess::startDetached(QStringLiteral("systemsettings"), QStringList({kcm}));
