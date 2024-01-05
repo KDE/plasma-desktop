@@ -51,7 +51,8 @@ Kirigami.ApplicationItem {
         deviceEnabled.load()
         leftHanded.load()
         middleEmulation.load()
-        accelSpeed.load()
+        accelSpeedSpinbox.load()
+        accelSpeedSlider.load()
         accelProfile.load()
         naturalScroll.load()
         scrollFactor.load()
@@ -173,33 +174,99 @@ Kirigami.ApplicationItem {
             }
 
             // Acceleration
-            QQC2.Slider {
-                id: accelSpeed
+            RowLayout {
                 Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
+                id: accelSpeed
                 Layout.fillWidth: true
 
-                from: 1
-                to: 11
-                stepSize: 1
-
-                function load() {
-                    enabled = device.supportsPointerAcceleration
-                    if (!enabled) {
-                        value = 0.2
-                        return
+                function onAccelSpeedChanged(val) {
+                    // check slider
+                    if (val != accelSpeedSlider.accelSpeedValue) {
+                        accelSpeedSlider.accelSpeedValue = val
+                        accelSpeedSlider.value = Math.round(6 + (val / 100) / 0.2)
                     }
-                    // transform libinput's pointer acceleration range [-1, 1] to slider range [1, 11]
-                    //value = 4.5 * device.pointerAcceleration + 5.5
-                    value = 6 + device.pointerAcceleration / 0.2
+
+                    // check spinbox
+                    if (val != accelSpeedSpinbox.value) {
+                        accelSpeedSpinbox.value = val
+                    }
+
+                    // check libinput accelspeed
+                    if ((val / 1000) != device.pointerAcceleration) {
+                        device.pointerAcceleration = val / 100
+                        root.changeSignal()
+                    }
                 }
 
-                onValueChanged: {
-                    if (device != undefined && enabled && !root.loading) {
-                        // transform slider range [1, 10] to libinput's pointer acceleration range [-1, 1]
-                        // by *10 and /10, we ignore the floating points after 1 digit. This prevents from
-                        // having a libinput value like 0.60000001
-                        device.pointerAcceleration = Math.round(((value-6) * 0.2) * 10) / 10
-                        root.changeSignal()
+                QQC2.Slider {
+                    id: accelSpeedSlider
+                    Layout.fillWidth: true
+
+                    from: 1
+                    to: 11
+                    stepSize: 1
+                    property int accelSpeedValue: 0 // [-100, 100]
+
+                    function load() {
+                        enabled = device.supportsPointerAcceleration
+                        if (!enabled) {
+                            return
+                        }
+
+                        accelSpeedValue = Math.round(device.pointerAcceleration * 100)
+
+                        // convert libinput pointer acceleration range [-1, 1] to slider range [1, 11]
+                        value = Math.round(6 + device.pointerAcceleration / 0.2)
+                    }
+
+                    onValueChanged: {
+                        if (device != undefined && enabled && !root.loading) {
+                            // convert slider range [1, 11] to accelSpeedValue range [-100, 100]
+                            accelSpeedValue = Math.round(((value - 6) * 0.2) * 100)
+
+                            accelSpeed.onAccelSpeedChanged(accelSpeedValue)
+                        }
+                    }
+                }
+
+                QQC2.SpinBox {
+                    id: accelSpeedSpinbox
+
+                    Layout.minimumWidth: Kirigami.Units.gridUnit * 5
+
+                    from: -100
+                    to: 100
+                    stepSize: 1
+                    editable: true
+
+                    validator: DoubleValidator {
+                        bottom: accelSpeedSpinbox.from
+                        top: accelSpeedSpinbox.to
+                    }
+
+                    function load() {
+                        enabled = device.supportsPointerAcceleration
+                        if (!enabled) {
+                            return
+                        }
+
+                        // if existing configuration or another application set a value with more than 2 decimals
+                        // we reduce the precision to 2
+                        value = Math.round(device.pointerAcceleration * 100)
+                    }
+
+                    onValueChanged: {
+                        if (device != undefined && enabled && !root.loading) {
+                            accelSpeed.onAccelSpeedChanged(value)
+                        }
+                    }
+
+                    textFromValue: function(val, locale) {
+                        return Number(val / 100).toLocaleString(locale, "f", 2)
+                    }
+
+                    valueFromText: function(text, locale) {
+                        return Number.fromLocaleString(locale, text) * 100
                     }
                 }
             }
