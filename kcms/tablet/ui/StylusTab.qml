@@ -233,6 +233,64 @@ Item {
                 }
             }
 
+            // Click behavior settings
+            QQC2.ButtonGroup { id: isRelativeGroup }
+
+            ColumnLayout {
+                Kirigami.FormData.label: i18nc("'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)", "Mode:")
+                Kirigami.FormData.buddyFor: absoluteMode
+
+                Layout.fillWidth: true
+                spacing: 0
+
+                QQC2.RadioButton {
+                    id: absoluteMode
+                    text: i18nc("Pen mode, where the point on the screen is always where you touch the stylus", "Pen")
+                    checked: root.device && !root.device.relative
+                    onToggled: root.device.relative = false
+                    QQC2.ButtonGroup.group: isRelativeGroup
+
+                    Accessible.description: i18n("The cursor follows where you touch the pen on the surface")
+                }
+
+                QQC2.Label {
+                    // Layout.fillWidth: true
+                    leftPadding: absoluteMode.indicator.width
+                    text: absoluteMode.Accessible.description
+                    textFormat: Text.PlainText
+                    elide: Text.ElideRight
+                    font: Kirigami.Theme.smallFont
+                    Layout.maximumWidth: 300
+                    wrapMode: Text.Wrap
+                }
+            }
+
+            ColumnLayout {
+                Layout.fillWidth: true
+                spacing: 0
+
+                QQC2.RadioButton {
+                    id: relativeMode
+                    text: i18nc("Mouse mode, or like using the tablet like a giant touchpad", "Mouse")
+                    checked: root.device && root.device.relative
+                    onToggled: root.device.relative = true
+                    QQC2.ButtonGroup.group: isRelativeGroup
+
+                    Accessible.description: i18n("Moving the pen on the surface moves the cursor relative to where it was, like a mouse")
+                }
+
+                QQC2.Label {
+                    Layout.fillWidth: true
+                    leftPadding: relativeMode.indicator.width
+                    text: relativeMode.Accessible.description
+                    textFormat: Text.PlainText
+                    elide: Text.ElideRight
+                    font: Kirigami.Theme.smallFont
+                    Layout.maximumWidth: 300
+                    wrapMode: Text.Wrap
+                }
+            }
+
             Repeater {
                 id: buttonRepeater
 
