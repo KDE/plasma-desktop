@@ -169,6 +169,61 @@ SimpleKCM {
                 toolTipText: xi18nc("@info", "Tells the device to accommodate left-handed users. Effects will vary by device, but often it reverses the pad buttonsʼ functionality so the tablet can be used upside-down.")
             }
         }
+
+        // Click behavior settings
+        QQC2.ButtonGroup { id: isRelativeGroup }
+
+        ColumnLayout {
+            Kirigami.FormData.label: i18nc("'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)", "Mode:")
+            Kirigami.FormData.buddyFor: absoluteMode
+
+            Layout.fillWidth: true
+            spacing: 0
+
+            QQC2.RadioButton {
+                id: absoluteMode
+                text: i18nc("Pen mode, where the point on the screen is always where you touch the stylus", "Pen")
+                checked: form.device && !form.device.relative
+                onToggled: form.device.relative = false
+                QQC2.ButtonGroup.group: isRelativeGroup
+
+                Accessible.description: i18n("The cursor follows where you touch the pen on the device")
+            }
+
+            QQC2.Label {
+                Layout.fillWidth: true
+                leftPadding: absoluteMode.indicator.width
+                text: absoluteMode.Accessible.description
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+            }
+        }
+
+        ColumnLayout {
+            Layout.fillWidth: true
+            spacing: 0
+
+            QQC2.RadioButton {
+                id: relativeMode
+                text: i18nc("Mouse mouse, or like using the tablet like a giant touchpad", "Mouse")
+                checked: form.device && form.device.relative
+                onToggled: form.device.relative = true
+                QQC2.ButtonGroup.group: isRelativeGroup
+
+                Accessible.description: i18n("Moving the pen on the device moves the cursor relative to where it was, like a mouse")
+            }
+
+            QQC2.Label {
+                Layout.fillWidth: true
+                leftPadding: relativeMode.indicator.width
+                text: relativeMode.Accessible.description
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+            }
+        }
+
         QQC2.ComboBox {
             id: outputAreaCombo
             Layout.fillWidth: true
