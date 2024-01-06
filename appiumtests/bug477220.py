@@ -117,6 +117,9 @@ class Bug477220Test(unittest.TestCase):
         action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).click()
         action.perform()
 
+    def test_3_bug479418_second_time_press_and_hold(self) -> None:
+        self.test_1_bug478958_touch_long_press_on_desktop()
+
 
 if __name__ == '__main__':
     unittest.main()
