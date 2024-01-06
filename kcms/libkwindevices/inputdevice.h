@@ -40,6 +40,7 @@ class InputDevice : public QObject
     Q_PROPERTY(double pressureRangeMin READ pressureRangeMin WRITE setPressureRangeMin NOTIFY pressureRangeMinChanged)
     Q_PROPERTY(double pressureRangeMax READ pressureRangeMax WRITE setPressureRangeMax NOTIFY pressureRangeMaxChanged)
     Q_PROPERTY(bool supportsPressureRange READ supportsPressureRange CONSTANT)
+    Q_PROPERTY(bool relative READ isRelative WRITE setRelative NOTIFY relativeChanged)
 
 public:
     InputDevice(const QString &dbusName, QObject *parent);
@@ -190,6 +191,13 @@ public:
         return m_tabletTool.value();
     }
 
+    bool isRelative() const
+    {
+        return m_relative.value();
+    }
+
+    void setRelative(bool relative);
+
 Q_SIGNALS:
     void needsSaveChanged();
 
@@ -203,6 +211,7 @@ Q_SIGNALS:
     void inputAreaChanged();
     void pressureRangeMinChanged();
     void pressureRangeMaxChanged();
+    void relativeChanged();
 
 private:
     template<typename T>
@@ -323,6 +332,7 @@ private:
                                             &OrgKdeKWinInputDeviceInterface::defaultInputArea,
                                             &OrgKdeKWinInputDeviceInterface::supportsInputArea,
                                             &InputDevice::inputAreaChanged);
+    Prop<bool> m_relative = Prop<bool>(this, "relative", nullptr, nullptr, &InputDevice::relativeChanged);
 
     Prop<bool> m_mapToWorkspace =
         Prop<bool>(this, "mapToWorkspace", &OrgKdeKWinInputDeviceInterface::defaultMapToWorkspace, nullptr, &InputDevice::mapToWorkspaceChanged);
