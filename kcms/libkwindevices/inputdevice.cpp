@@ -26,6 +26,7 @@ InputDevice::InputDevice(const QString &dbusName, QObject *parent)
     connect(this, &InputDevice::pressureRangeMinChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::pressureRangeMaxChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::calibrationMatrixChanged, this, &InputDevice::needsSaveChanged);
+    connect(this, &InputDevice::relativeChanged, this, &InputDevice::needsSaveChanged);
 }
 
 void InputDevice::save()
@@ -41,12 +42,15 @@ void InputDevice::save()
     m_pressureRangeMin.save();
     m_pressureRangeMax.save();
     m_calibrationMatrix.save();
+    m_relative.save();
 }
 
 bool InputDevice::isSaveNeeded() const
 {
     return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed() || m_enabled.changed()
-        || m_mapToWorkspace.changed() || m_pressureCurve.changed() || m_inputArea.changed() || m_pressureRangeMin.changed() || m_pressureRangeMax.changed() || m_calibrationMatrix.changed();
+        || m_mapToWorkspace.changed() || m_pressureCurve.changed() || m_inputArea.changed() || m_pressureRangeMin.changed() || m_pressureRangeMax.changed()
+        || m_mapToWorkspace.changed() || m_pressureCurve.changed() || m_inputArea.changed() || m_mapToWorkspace.changed() || m_pressureCurve.changed()
+        || m_calibrationMatrix.changed() || m_relative.changed();
 }
 
 void InputDevice::defaults()
@@ -62,12 +66,13 @@ void InputDevice::defaults()
     m_pressureRangeMin.resetFromDefaults();
     m_pressureRangeMax.resetFromDefaults();
     m_calibrationMatrix.resetFromDefaults();
+    m_relative.resetFromDefaults();
 }
 
 bool InputDevice::isDefaults() const
 {
     return m_leftHanded.isDefaults() && m_orientation.isDefaults() && m_outputName.isDefaults() && m_outputArea.isDefaults() && m_enabled.isDefaults()
-        && m_mapToWorkspace.isDefaults() && m_pressureCurve.isDefaults() && m_inputArea.isDefaults() && m_pressureRangeMin.isDefaults() && m_pressureRangeMax.isDefaults() && m_calibrationMatrix.isDefaults();
+        && m_mapToWorkspace.isDefaults() && m_pressureCurve.isDefaults() && m_inputArea.isDefaults() && m_pressureRangeMin.isDefaults() && m_pressureRangeMax.isDefaults() && m_calibrationMatrix.isDefaults() && m_relative.isDefaults();
 }
 
 void InputDevice::load()
@@ -83,6 +88,7 @@ void InputDevice::load()
     m_pressureRangeMin.resetFromSaved();
     m_pressureRangeMax.resetFromSaved();
     m_calibrationMatrix.resetFromSaved();
+    m_relative.resetFromSaved();
 }
 
 void InputDevice::setOrientation(int ori)
@@ -156,6 +162,11 @@ QMatrix4x4 InputDevice::deserializeMatrix(const QString &matrix)
     }
 
     return QMatrix4x4{};
+}
+
+void InputDevice::setRelative(bool relative)
+{
+    m_relative.set(relative);
 }
 
 #include "moc_inputdevice.cpp"
