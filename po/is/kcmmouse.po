@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-13 01:35+0000\n"
+"POT-Creation-Date: 2024-01-06 01:34+0000\n"
 "PO-Revision-Date: 2023-09-12 12:20+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -96,42 +96,42 @@ msgstr "Benditæki aftengt. Stillingaglugga tækisins var lokað."
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Benditæki aftengt. Engin önnur tæki fundust."
 
-#: kcm/libinput/main.qml:73
+#: kcm/libinput/main.qml:74
 #, kde-format
 msgid "Device:"
 msgstr "Tæki:"
 
-#: kcm/libinput/main.qml:97 kcm/libinput/main_deviceless.qml:50
+#: kcm/libinput/main.qml:98 kcm/libinput/main_deviceless.qml:50
 #, kde-format
 msgid "General:"
 msgstr "Almennt:"
 
-#: kcm/libinput/main.qml:98
+#: kcm/libinput/main.qml:99
 #, kde-format
 msgid "Device enabled"
 msgstr "Tæki virkt"
 
-#: kcm/libinput/main.qml:118
+#: kcm/libinput/main.qml:119
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Samþykkja inntak frá þessu tæki."
 
-#: kcm/libinput/main.qml:123 kcm/libinput/main_deviceless.qml:51
+#: kcm/libinput/main.qml:124 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "Snið fyrir örvhenta"
 
-#: kcm/libinput/main.qml:143 kcm/libinput/main_deviceless.qml:71
+#: kcm/libinput/main.qml:144 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Víxla hægri og vinstri hnöppum."
 
-#: kcm/libinput/main.qml:148 kcm/libinput/main_deviceless.qml:76
+#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Ýta á vinstri og hægri hnappa til að gera miðjusmell."
 
-#: kcm/libinput/main.qml:168 kcm/libinput/main_deviceless.qml:96
+#: kcm/libinput/main.qml:169 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -144,106 +144,106 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Hraði bendils:"
 
-#: kcm/libinput/main.qml:210 kcm/libinput/main_deviceless.qml:138
+#: kcm/libinput/main.qml:277 kcm/libinput/main_deviceless.qml:138
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Hröðun bendils:"
 
-#: kcm/libinput/main.qml:241 kcm/libinput/main_deviceless.qml:169
+#: kcm/libinput/main.qml:308 kcm/libinput/main_deviceless.qml:169
 #, kde-format
 msgid "None"
 msgstr "Engin"
 
-#: kcm/libinput/main.qml:245 kcm/libinput/main_deviceless.qml:173
+#: kcm/libinput/main.qml:312 kcm/libinput/main_deviceless.qml:173
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Bendillinn færist um jafnlanga vegalengd og músin."
 
-#: kcm/libinput/main.qml:251 kcm/libinput/main_deviceless.qml:179
+#: kcm/libinput/main.qml:318 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Standard"
 msgstr "Stöðluð"
 
-#: kcm/libinput/main.qml:255 kcm/libinput/main_deviceless.qml:183
+#: kcm/libinput/main.qml:322 kcm/libinput/main_deviceless.qml:183
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "Færsluvegalengd bendils veltur á hraða músarhreyfingarinnar."
 
-#: kcm/libinput/main.qml:267 kcm/libinput/main_deviceless.qml:195
+#: kcm/libinput/main.qml:334 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Scrolling:"
 msgstr "Skrun:"
 
-#: kcm/libinput/main.qml:268 kcm/libinput/main_deviceless.qml:196
+#: kcm/libinput/main.qml:335 kcm/libinput/main_deviceless.qml:196
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Snúa við skrunstefnu"
 
-#: kcm/libinput/main.qml:284 kcm/libinput/main_deviceless.qml:212
+#: kcm/libinput/main.qml:351 kcm/libinput/main_deviceless.qml:212
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Skrun eins og á snertiskjá."
 
-#: kcm/libinput/main.qml:289
+#: kcm/libinput/main.qml:356
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Skrunhraði:"
 
-#: kcm/libinput/main.qml:339
+#: kcm/libinput/main.qml:406
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Hægar"
 
-#: kcm/libinput/main.qml:345
+#: kcm/libinput/main.qml:412
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Hraðar"
 
-#: kcm/libinput/main.qml:355
+#: kcm/libinput/main.qml:422
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Endurtengja viðbótarmúsarhnappa..."
 
-#: kcm/libinput/main.qml:393
+#: kcm/libinput/main.qml:460
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Aukahnappur %1:"
 
-#: kcm/libinput/main.qml:423
+#: kcm/libinput/main.qml:490
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "Ýttu á músarhnappinn sem þú vilt tengja við lyklabindingu"
 
-#: kcm/libinput/main.qml:424
+#: kcm/libinput/main.qml:491
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Sláðu inn nýja lyklasamsetningu fyrir %1"
 
-#: kcm/libinput/main.qml:428
+#: kcm/libinput/main.qml:495
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: kcm/libinput/main.qml:445
+#: kcm/libinput/main.qml:512
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "Ýttu á músarhnapp "
 
-#: kcm/libinput/main.qml:446
+#: kcm/libinput/main.qml:513
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Bæta við lyklabindingu..."
 
-#: kcm/libinput/main.qml:475
+#: kcm/libinput/main.qml:542
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
