@@ -1,10 +1,11 @@
+# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-09 02:14+0000\n"
-"PO-Revision-Date: 2021-12-16 09:16-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2024-01-06 01:20+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -13,133 +14,134 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Primary (default)"
-msgstr ""
+msgstr "プライマリ (デフォルト)"
 
 #: kcmtablet.cpp:33
 #, kde-format
 msgid "Portrait"
-msgstr ""
+msgstr "縦"
 
 #: kcmtablet.cpp:34
 #, kde-format
 msgid "Landscape"
-msgstr ""
+msgstr "横"
 
 #: kcmtablet.cpp:35
 #, kde-format
 msgid "Inverted Portrait"
-msgstr ""
+msgstr "縦 (反転)"
 
 #: kcmtablet.cpp:36
 #, kde-format
 msgid "Inverted Landscape"
-msgstr ""
+msgstr "横 (反転)"
 
 #: kcmtablet.cpp:86
 #, kde-format
 msgid "Follow the active screen"
-msgstr ""
+msgstr "アクティブなスクリーンに従う"
 
 #: kcmtablet.cpp:94
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr ""
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:137
 #, kde-format
 msgid "Fit to Output"
-msgstr ""
+msgstr "出力に合わせる"
 
 #: kcmtablet.cpp:138
 #, kde-format
 msgid "Fit Output in tablet"
-msgstr ""
+msgstr "タブレットに合わせる"
 
 #: kcmtablet.cpp:139
 #, kde-format
 msgid "Custom size"
-msgstr ""
+msgstr "指定されたサイズ"
 
 #: ui/main.qml:31
 #, kde-format
 msgid "No drawing tablets found."
-msgstr ""
+msgstr "お絵描きタブレットが見つかりませんでした。"
 
 #: ui/main.qml:39
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
-msgstr ""
+msgstr "デバイス:"
 
 #: ui/main.qml:77
 #, kde-format
 msgid "Target display:"
-msgstr ""
+msgstr "使用するディスプレイ:"
 
 #: ui/main.qml:96
 #, kde-format
 msgid "Orientation:"
-msgstr ""
+msgstr "向き:"
 
 #: ui/main.qml:108
 #, kde-format
 msgid "Left-handed mode:"
-msgstr ""
+msgstr "左手モード:"
 
 #: ui/main.qml:118
 #, kde-format
 msgid "Area:"
-msgstr ""
+msgstr "エリア:"
 
 #: ui/main.qml:206
 #, kde-format
 msgid "Resize the tablet area"
-msgstr ""
+msgstr "タブレットエリアのサイズを変更"
 
 #: ui/main.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "アスペクト比を固定"
 
 #: ui/main.qml:238
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr ""
+msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:246
 #, kde-format
 msgid "Tool Button 1"
-msgstr ""
+msgstr "ツールボタン 1"
 
 #: ui/main.qml:247
 #, kde-format
 msgid "Tool Button 2"
-msgstr ""
+msgstr "ツールボタン 2"
 
 #: ui/main.qml:248
 #, kde-format
 msgid "Tool Button 3"
-msgstr ""
+msgstr "ツールボタン 3"
 
 #: ui/main.qml:291
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
-msgstr ""
+msgstr "パッド:"
 
 #: ui/main.qml:302
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "なし"
 
 #: ui/main.qml:324
 #, kde-format
 msgid "Button %1:"
-msgstr ""
+msgstr "ボタン %1:"

@@ -1,4 +1,5 @@
 # Translation of kcmcomponentchooser into Japanese.
+# SPDX-FileCopyrightText: 2022, 2023 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2002.
 # UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2004.
@@ -7,21 +8,20 @@
 # Shinichi Tsunoda <tsuno@ngy.1st.ne.jp>, 2005.
 # Fumiaki Okushi <fumiaki@okushi.com>, 2006.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2007, 2008.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2022-08-12 21:46+0900\n"
+"PO-Revision-Date: 2023-12-29 17:17+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -32,10 +32,9 @@ msgid "Other…"
 msgstr "その他..."
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "デフォルトのファイルマネージャを選択"
+msgstr "デフォルトのアーカイブマネージャを選択"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
@@ -58,22 +57,19 @@ msgid "Select default map"
 msgstr "デフォルトのマップを選択"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "デフォルトのファイルマネージャを選択"
+msgstr "デフォルトの画像ビューアを選択"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "デフォルトのマップを選択"
+msgstr "デフォルトの音楽プレーヤーを選択"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "デフォルトのブラウザを選択"
+msgstr "デフォルトの PDF ビューアを選択"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -86,38 +82,36 @@ msgid "Select default terminal emulator"
 msgstr "デフォルトのターミナルエミュレータを選択"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "デフォルトのターミナルエミュレータを選択"
+msgstr "デフォルトのテキストエディタを選択"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "デフォルトのファイルマネージャを選択"
+msgstr "デフォルトの動画プレーヤーを選択"
 
 #: ui/ComponentOverlay.qml:52
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "詳細"
 
 #: ui/ComponentOverlay.qml:82
 #, kde-format
 msgid "This application can also open these file types:"
-msgstr ""
+msgstr "このアプリケーションはこれらのファイルタイプも開けます:"
 
 #: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (現在 %2 で開かれるように設定されています)"
 
 #: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "すべてを %1 で開く"
 
 #: ui/ComponentOverlay.qml:127
 #, kde-format
@@ -125,17 +119,19 @@ msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
 msgstr ""
+"このアプリケーションは以下のファイルタイプのサポートを明示していませんが、そ"
+"れでも開けるかもしれません:"
 
 #: ui/ComponentOverlay.qml:143
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr ""
+msgstr "すべてを強制的に %1 で開く"
 
 #: ui/ComponentOverlay.qml:155
 #, kde-format
 msgid "Configure Manually…"
-msgstr ""
+msgstr "手動で設定..."
 
 #: ui/main.qml:17
 #, kde-format
@@ -143,12 +139,14 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"'%1' はこの種類のアプリケーションに関連付けられている以下の MIME タイプをサ"
+"ポートしていないようです: %2"
 
 #: ui/main.qml:46
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "インターネット"
 
 #: ui/main.qml:50
 #, kde-format
@@ -164,50 +162,50 @@ msgstr "メールクライアント:"
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
-msgstr ""
+msgstr "電話番号:"
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "マルチメディア"
 
 #: ui/main.qml:121
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "画像ビューア:"
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "音楽プレーヤー:"
 
 #: ui/main.qml:168
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "動画プレーヤー:"
 
 #: ui/main.qml:190
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "文書"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "テキストエディタ:"
 
 #: ui/main.qml:217
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF ビューア:"
 
 #: ui/main.qml:239
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "ユーティリティ"
 
 #: ui/main.qml:244
 #, kde-format
@@ -220,14 +218,12 @@ msgid "Terminal emulator:"
 msgstr "ターミナルエミュレータ:"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "ファイルマネージャ:"
+msgstr "アーカイブマネージャ:"
 
 #: ui/main.qml:301
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "マップ:"
