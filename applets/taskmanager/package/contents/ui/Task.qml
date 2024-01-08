@@ -190,10 +190,10 @@ PlasmaCore.ToolTipArea {
 
     Keys.onMenuPressed: contextMenuTimer.start()
     Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task, Plasmoid, tasks)
-    Keys.onEnterPressed: Keys.onReturnPressed(event);
-    Keys.onSpacePressed: Keys.onReturnPressed(event);
-    Keys.onUpPressed: Keys.onLeftPressed(event)
-    Keys.onDownPressed: Keys.onRightPressed(event)
+    Keys.onEnterPressed: Keys.returnPressed(event);
+    Keys.onSpacePressed: Keys.returnPressed(event);
+    Keys.onUpPressed: Keys.leftPressed(event)
+    Keys.onDownPressed: Keys.rightPressed(event)
     Keys.onLeftPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
         tasksModel.move(task.index, task.index - 1);
     } else {

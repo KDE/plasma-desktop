@@ -95,8 +95,8 @@ MouseArea {
     visible: opacity > 0
 
     Keys.onReturnPressed: toggleMuted()
-    Keys.onEnterPressed: Keys.onReturnPressed(event);
-    Keys.onSpacePressed: Keys.onReturnPressed(event);
+    Keys.onEnterPressed: Keys.returnPressed(event);
+    Keys.onSpacePressed: Keys.returnPressed(event);
 
     Accessible.checkable: true
     Accessible.checked: task.muted
