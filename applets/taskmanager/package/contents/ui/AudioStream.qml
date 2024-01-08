@@ -4,13 +4,13 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQuick
 
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
 
-MouseArea {
+Item {
     id: audioStreamIconBox
 
     width: Math.min(Math.min(iconBox.width, iconBox.height) * 0.4, Kirigami.Units.iconSizes.smallMedium)
@@ -25,8 +25,6 @@ MouseArea {
     readonly property real indicatorScale: 1.2
 
     activeFocusOnTab: true
-    hoverEnabled: true
-    onClicked: toggleMuted()
 
     // Using States rather than a simple Behavior we can apply different transitions,
     // which allows us to delay showing the icon but hide it instantly still.
@@ -104,10 +102,20 @@ MouseArea {
     Accessible.description: task.muted ? i18nc("@info:tooltip %1 is the window title", "Unmute %1", model.display) : i18nc("@info:tooltip %1 is the window title", "Mute %1", model.display)
     Accessible.role: Accessible.Button
 
+    HoverHandler {
+        id: hoverHandler
+    }
+
+    TapHandler {
+        id: tapHandler
+        gesturePolicy: TapHandler.ReleaseWithinBounds // Exclusive grab
+        onTapped: toggleMuted()
+    }
+
     PlasmaExtras.Highlight {
         anchors.fill: audioStreamIcon
-        hovered: audioStreamIconBox.containsMouse || parent.activeFocus
-        pressed: audioStreamIconBox.pressed
+        hovered: hoverHandler.hovered || parent.activeFocus
+        pressed: tapHandler.pressed
     }
 
     Kirigami.Icon {
@@ -117,7 +125,7 @@ MouseArea {
         readonly property var requiredSpace: Math.min(iconBox.width, iconBox.height)
                                              + Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium) * 2
         source: "audio-volume-high-symbolic"
-        selected: audioStreamIconBox.pressed
+        selected: tapHandler.pressed
 
         height: Math.round(Math.min(parent.height * indicatorScale, Kirigami.Units.iconSizes.smallMedium))
         width: height
