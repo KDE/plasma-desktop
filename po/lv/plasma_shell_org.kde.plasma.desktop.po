@@ -1,113 +1,113 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022, 2023, 2024.
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
 #
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-25 01:34+0000\n"
-"PO-Revision-Date: 2024-01-07 18:37+0000\n"
-"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
-"Language: ro\n"
+"PO-Revision-Date: 2023-11-15 11:50+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
-msgstr "Folosită acum"
+msgstr "Šobrīd tiek izmantots"
 
 #: contents/activitymanager/ActivityItem.qml:245
 msgid ""
 "Move to\n"
 "this activity"
 msgstr ""
-"Mută la\n"
-"această activitate"
+"Pārvietot uz\n"
+"šo aktivitāti"
 
 #: contents/activitymanager/ActivityItem.qml:275
 msgid ""
 "Show also\n"
 "in this activity"
 msgstr ""
-"Arată și în\n"
-"această activitate"
+"Parādīt arī\n"
+"šajā aktivitātē"
 
 #: contents/activitymanager/ActivityItem.qml:337
 msgid "Configure"
-msgstr "Configurează"
+msgstr "Pārvaldīt"
 
 #: contents/activitymanager/ActivityItem.qml:356
 msgid "Stop activity"
-msgstr "Oprește activitatea"
+msgstr "Apturēt aktivitāti"
 
 #: contents/activitymanager/ActivityList.qml:142
 msgid "Stopped activities:"
-msgstr "Activități oprite:"
+msgstr "Apturētās aktivitātes:"
 
 #: contents/activitymanager/ActivityManager.qml:122
 msgid "Create activity…"
-msgstr "Creează activitate…"
+msgstr "Izveidot aktivitāti..."
 
 #: contents/activitymanager/Heading.qml:59
 msgid "Activities"
-msgstr "Activități"
+msgstr "Aktivitātes"
 
 #: contents/activitymanager/StoppedActivityItem.qml:137
 msgid "Configure activity"
-msgstr "Configurează activitatea"
+msgstr "Pārvaldīt aktivitāti"
 
 #: contents/activitymanager/StoppedActivityItem.qml:154
 msgid "Delete"
-msgstr "Șterge"
+msgstr "Dzēst"
 
 #: contents/applet/AppletError.qml:128
 msgid "Sorry! There was an error loading %1."
-msgstr "Scuze! A avut loc o eroare la încărcarea %1."
+msgstr "Atvainojamies! Ir notikusi kļūda, ielādējot %1."
 
 #: contents/applet/AppletError.qml:166
 msgid "Copy to Clipboard"
-msgstr "Copiază în clipboard"
+msgstr "Kopēt starpliktuvē"
 
 #: contents/applet/AppletError.qml:189
 msgid "View Error Details…"
-msgstr "Vezi detalii eroare…"
+msgstr "Skatīt kļūdas informāciju..."
 
 #: contents/applet/CompactApplet.qml:76
 msgid "Open %1"
-msgstr "Deschide %1"
+msgstr "Atvērt %1"
 
 #: contents/configuration/AboutPlugin.qml:21
 #: contents/configuration/AppletConfiguration.qml:304
 msgid "About"
-msgstr "Despre"
+msgstr "Par"
 
 #: contents/configuration/AboutPlugin.qml:49
 msgid "Send an email to %1"
-msgstr "Trimite scrisoare către %1"
+msgstr "Sūtīt e-pastu uz %1"
 
 #: contents/configuration/AboutPlugin.qml:63
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr "Deschide saitul %1"
+msgstr "Atvērt vietni %1"
 
 #: contents/configuration/AboutPlugin.qml:134
 msgid "Copyright"
-msgstr "Drept de autor"
+msgstr "Autortiesības"
 
 #: contents/configuration/AboutPlugin.qml:152 contents/explorer/Tooltip.qml:92
 msgid "License:"
-msgstr "Licență:"
+msgstr "Licence:"
 
 #: contents/configuration/AboutPlugin.qml:155
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr "Vezi textul licenței"
+msgstr "Skatīt licences tekstu"
 
 #: contents/configuration/AboutPlugin.qml:169
 msgid "Authors"
@@ -115,75 +115,75 @@ msgstr "Autori"
 
 #: contents/configuration/AboutPlugin.qml:180
 msgid "Credits"
-msgstr "Mulțumiri"
+msgstr "Veidotāji"
 
 #: contents/configuration/AboutPlugin.qml:192
 msgid "Translators"
-msgstr "Traducători"
+msgstr "Tulkotāji"
 
 #: contents/configuration/AboutPlugin.qml:209
 msgid "Report a Bug…"
-msgstr "Raportează defect…"
+msgstr "Ziņot par kļūdu..."
 
 #: contents/configuration/AppletConfiguration.qml:76
 msgid "Keyboard Shortcuts"
-msgstr "Scurtături de tastatură"
+msgstr "Tastatūras saīsnes"
 
 #: contents/configuration/AppletConfiguration.qml:352
 msgid "Apply Settings"
-msgstr "Aplică configurările"
+msgstr "Pielietot iestatījumus"
 
 #: contents/configuration/AppletConfiguration.qml:353
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
 msgstr ""
-"Configurările modulului actual s-au modificat. Doriți să aplicați "
-"modificările sau să le aruncați?"
+"Pašreizējā moduļa iestatījumi ir izmainījušies. Apstiprināt vai atcelt "
+"izmaiņas?"
 
 #: contents/configuration/AppletConfiguration.qml:384
 msgid "OK"
-msgstr "Bine"
+msgstr "Labi"
 
 #: contents/configuration/AppletConfiguration.qml:392
 msgid "Apply"
-msgstr "Aplică"
+msgstr "Pielietot"
 
 #: contents/configuration/AppletConfiguration.qml:398
 msgid "Cancel"
-msgstr "Renunță"
+msgstr "Atcelt"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:27
 msgid "Open configuration page"
-msgstr "Deschide pagina de configurare"
+msgstr "Atvērt konfigurēšanas lapu"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
 msgid "Left-Button"
-msgstr "Buton stâng"
+msgstr "Kreisais taustiņš"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
 msgid "Right-Button"
-msgstr "Buton drept"
+msgstr "Labais taustiņš"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
 msgid "Middle-Button"
-msgstr "Buton mijlociu"
+msgstr "Vidējais taustiņš"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:24
 msgid "Back-Button"
-msgstr "Butonul Înapoi"
+msgstr "Atpakaļ poga"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
 msgid "Forward-Button"
-msgstr "Butonul Înainte"
+msgstr "Uz priekš poga"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:27
 msgid "Vertical-Scroll"
-msgstr "Derulare verticală"
+msgstr "Vertikālais rullītis"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
 msgid "Horizontal-Scroll"
-msgstr "Derulare orizontală"
+msgstr "Horizontālais rullītis"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
 msgid "Shift"
@@ -209,400 +209,422 @@ msgstr "+"
 #: contents/configuration/ConfigurationContainmentActions.qml:167
 msgctxt "@title"
 msgid "About"
-msgstr "Despre"
+msgstr "Par"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:182
 #: contents/configuration/MouseEventInputButton.qml:13
 msgid "Add Action"
-msgstr "Adaugă acțiune"
+msgstr "Pievienot darbību"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:69
 msgid "Layout changes have been restricted by the system administrator"
-msgstr ""
-"Modificările aranjamentului au fost restricționate de către administratorul "
-"sistemului"
+msgstr "Sistēmas administrators ir ierobežojies izkārtojuma izmaiņas"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:84
 msgid "Layout:"
-msgstr "Aranjament:"
+msgstr "Izkārtojums:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:98
 msgid "Wallpaper type:"
-msgstr "Tip tapet:"
+msgstr "Darbvirsmas tapetes veids:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:119
 msgid "Get New Plugins…"
-msgstr "Obține extensii noi…"
+msgstr "Iegūt jaunus papildinājumus..."
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:189
 msgid "Layout changes must be applied before other changes can be made"
-msgstr ""
-"Modificările de aranjament trebuiesc aplicate înainte de a putea face alte "
-"modificări"
+msgstr "Tastatūras izmaiņas ir jāpielieto pirms citu izmaiņu veikšanas"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:193
 msgid "Apply Now"
-msgstr "Aplică acum"
+msgstr "Pielietot"
 
 #: contents/configuration/ConfigurationShortcuts.qml:18
 msgid "Shortcuts"
-msgstr "Scurtături"
+msgstr "Saīsnes"
 
 #: contents/configuration/ConfigurationShortcuts.qml:30
 msgid "This shortcut will activate the applet as though it had been clicked."
-msgstr ""
-"Această scurtătură va activa miniaplicația de parcă ar fi fost apăsată."
+msgstr "Šī saīsne aktivizēs sīklietotni it kā uz tās tiktu uzklikšķināts."
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 msgid "Wallpaper"
-msgstr "Tapet"
+msgstr "Darbvirsmas tapete"
 
 #: contents/configuration/ContainmentConfiguration.qml:32
 msgid "Mouse Actions"
-msgstr "Acțiuni maus"
+msgstr "Peles darbības"
 
 #: contents/configuration/MouseEventInputButton.qml:20
 msgid "Input Here"
-msgstr "Introduceți aici"
+msgstr "Ievadiet te"
 
 #: contents/configuration/PanelConfiguration.qml:91
 msgid "Panel Settings"
-msgstr "Configurări panou"
+msgstr "Paneļa iestatījumi"
 
 #: contents/configuration/PanelConfiguration.qml:97
 msgid "Add Spacer"
-msgstr "Adaugă spațiator"
+msgstr "Pievienot sadalītāju"
 
 #: contents/configuration/PanelConfiguration.qml:100
 msgid "Add spacer widget to the panel"
-msgstr "Adaugă control de spațiere la panou"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:107
 msgid "Add Widgets…"
-msgstr "Adaugă controale…"
+msgstr "Pievienot logdaļas..."
 
 #: contents/configuration/PanelConfiguration.qml:110
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr "Deschide selectorul de controale grafice ce pot fi trase pe panou"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:139
 msgid "Position"
-msgstr "Poziție"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:143
 #: contents/configuration/PanelConfiguration.qml:254
 msgid "Top"
-msgstr "Sus"
+msgstr "Augšpuse"
 
 #: contents/configuration/PanelConfiguration.qml:144
 #: contents/configuration/PanelConfiguration.qml:256
 msgid "Right"
-msgstr "Dreapta"
+msgstr "Labā puse"
 
 #: contents/configuration/PanelConfiguration.qml:145
 #: contents/configuration/PanelConfiguration.qml:254
 msgid "Left"
-msgstr "Stânga"
+msgstr "Kreisā puse"
 
 #: contents/configuration/PanelConfiguration.qml:146
 #: contents/configuration/PanelConfiguration.qml:256
 msgid "Bottom"
-msgstr "Jos"
+msgstr "Apakša"
 
 #: contents/configuration/PanelConfiguration.qml:163
 msgid "Set Position..."
-msgstr "Stabilește poziția…"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:190
+#, fuzzy
+#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "Aliniere"
+msgstr "Novietojums:"
 
 #: contents/configuration/PanelConfiguration.qml:255
 msgid "Center"
-msgstr "Centru"
+msgstr "Centrs"
 
 #: contents/configuration/PanelConfiguration.qml:278
 msgid "Length"
-msgstr "Lungime"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:296
+#, fuzzy
+#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Umple înălțimea"
+msgstr "Paneļa augstums:"
 
 #: contents/configuration/PanelConfiguration.qml:296
+#, fuzzy
+#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Umple lățimea"
+msgstr "Paneļa platums:"
 
 #: contents/configuration/PanelConfiguration.qml:297
 msgid "Fit content"
-msgstr "Potrivește conținutul"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:298
 msgid "Custom"
-msgstr "Personalizat"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:328
+#, fuzzy
+#| msgid "Visibility:"
 msgid "Visibility"
-msgstr "Vizibilitate"
+msgstr "Redzamība:"
 
 #: contents/configuration/PanelConfiguration.qml:340
+#, fuzzy
+#| msgid "Always Visible"
 msgid "Always visible"
-msgstr "Vizibil întotdeauna"
+msgstr "Vienmēr redzams"
 
 #: contents/configuration/PanelConfiguration.qml:341
+#, fuzzy
+#| msgid "Auto-Hide"
 msgid "Auto hide"
-msgstr "Ascunde automat"
+msgstr "Automātiski paslēpt"
 
 #: contents/configuration/PanelConfiguration.qml:342
 msgid "Dodge windows"
-msgstr "Ocolește ferestrele"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:343
 msgid "Windows Go Below"
-msgstr "Ferestrele merg dedesubt"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:386
+#, fuzzy
+#| msgid "Opacity:"
 msgid "Opacity"
-msgstr "Opacitate"
+msgstr "Caurspīdīgums:"
 
 #: contents/configuration/PanelConfiguration.qml:399
 msgid "Adaptive"
-msgstr "Adaptivă"
+msgstr "Pielāgojas"
 
 #: contents/configuration/PanelConfiguration.qml:400
+#, fuzzy
+#| msgid "Always Opaque"
 msgid "Opaque"
-msgstr "Opac"
+msgstr "Vienmēr necaurspīdīgs"
 
 #: contents/configuration/PanelConfiguration.qml:401
+#, fuzzy
+#| msgid "Always Translucent"
 msgid "Translucent"
-msgstr "Translucid"
+msgstr "Vienmēr caurspīdīgs"
 
 #: contents/configuration/PanelConfiguration.qml:425
 msgid "Style"
-msgstr "Stil"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:436
 msgid "Floating"
-msgstr "Flotant"
+msgstr "Peldošs"
 
 #: contents/configuration/PanelConfiguration.qml:510
+#, fuzzy
+#| msgid "Panel width:"
 msgid "Panel Width:"
-msgstr "Lățime panou:"
+msgstr "Paneļa platums:"
 
 #: contents/configuration/PanelConfiguration.qml:510
+#, fuzzy
+#| msgid "Right"
 msgid "Height:"
-msgstr "Înălțime:"
+msgstr "Labā puse"
 
 #: contents/configuration/PanelConfiguration.qml:544
+#, fuzzy
+#| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
-msgstr "Scurtătură pentru focalizare:"
+msgstr "Saīsne fokusam:"
 
 #: contents/configuration/PanelConfiguration.qml:554
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
-"Apăsați această scurtătură de taste pentru a muta focalizarea asupra panoului"
+msgstr "Nospiest tastatūras saīsni, lai fokusu pārvietotu uz paneli"
 
 #: contents/configuration/PanelConfiguration.qml:570
+#, fuzzy
+#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "Șterge panoul"
+msgstr "Noņemt paneli"
 
 #: contents/configuration/PanelConfiguration.qml:573
 msgid "Remove this panel; this action is undo-able"
-msgstr "Elimină acest panou. Acțiunea nu poate fi desfăcută."
+msgstr "Noņemt paneli. Šo darbību ir iespējams atsaukt"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
-msgstr "Trageți pentru a schimba înălțimea maximă."
+msgstr "Velciet, lai mainītu maksimālo augstumu."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum width."
-msgstr "Trageți pentru a schimba lățimea maximă."
+msgstr "Velciet, lai mainītu maksimālo platumu."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 #: contents/configuration/panelconfiguration/Ruler.qml:31
 msgid "Double click to reset."
-msgstr "Dublu-clic pentru reinițializare."
+msgstr "Dubultklikšķis, lai atstatītu."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:31
 msgid "Drag to change minimum height."
-msgstr "Trageți pentru a schimba înălțimea minimă."
+msgstr "Velciet, lai mainītu minimālo augstumu."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:31
 msgid "Drag to change minimum width."
-msgstr "Trageți pentru a schimba lățimea minimă."
+msgstr "Velciet, lai mainītu minimālo platumu."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:78
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
-"Trageți pentru a schimba poziția pe această muchie a ecranului.\n"
-"Dublu-clic pentru reinițializare."
+"Velciet, lai mainītu atrašanās vietu pie ekrāna malas.\n"
+"Dubultklikšķis atsauc darbību."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
-msgstr "Gestiune panouri și birouri"
+msgstr "Paneļi un darbvirsmas pārvaldība"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
-"Puteți trage panourile și birourile în jur pentru a le muta pe alte ecrane."
+"Varat vilk paneļus un darbvirsmas, lai tās pārvietotu uz citiem ekrāniem."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:43
 msgid "Close"
-msgstr "Închide"
+msgstr "Aizvērt"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
-msgstr "Schimbă cu biroul de pe ecranul %1"
+msgstr "Samainīt vietām ar ekrānā %1 redzamo darbvirsmu"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
-msgstr "Mută pe ecranul %1"
+msgstr "Pārvietot uz ekrānu %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 msgid "Remove Desktop"
-msgstr "Elimină biroul"
+msgstr "Noņemt darbvirsmu"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:195
 msgid "Remove Panel"
-msgstr "Elimină panoul"
+msgstr "Noņemt paneli"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:268
 msgid "%1 (primary)"
-msgstr "%1 (primar)"
+msgstr "%1 (primārais)"
 
 #: contents/explorer/AppletAlternatives.qml:65
 msgid "Alternative Widgets"
-msgstr "Controale grafice alternative"
+msgstr "Alternatīvas logdaļas"
 
 #: contents/explorer/AppletDelegate.qml:42
 msgid "Unsupported Widget"
-msgstr "Control grafic nesusținut"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
-msgstr "Desfă dezinstalarea"
+msgstr "Atsaukt atinstalēšanu"
 
 #: contents/explorer/AppletDelegate.qml:189
 msgid "Uninstall widget"
-msgstr "Dezinstalează controlul grafic"
+msgstr "Atinstalēt logdaļu"
 
 #: contents/explorer/Tooltip.qml:101
 msgid "Author:"
-msgstr "Autor:"
+msgstr "Autors:"
 
 #: contents/explorer/Tooltip.qml:109
 msgid "Email:"
-msgstr "Email:"
+msgstr "E-pasts:"
 
 #: contents/explorer/Tooltip.qml:128
 msgid "Uninstall"
-msgstr "Dezinstalează"
+msgstr "Atinstalēt"
 
 #: contents/explorer/WidgetExplorer.qml:118
 #: contents/explorer/WidgetExplorer.qml:192
 msgid "All Widgets"
-msgstr "Toate controalele grafice"
+msgstr "Visas logdaļas"
 
 #: contents/explorer/WidgetExplorer.qml:144
 msgid "Widgets"
-msgstr "Controale grafice"
+msgstr "Logdaļas"
 
 #: contents/explorer/WidgetExplorer.qml:152
 msgid "Get New Widgets…"
-msgstr "Obține controale noi…"
+msgstr "Iegūt jaunas logdaļas..."
 
 #: contents/explorer/WidgetExplorer.qml:203
 msgid "Categories"
-msgstr "Categorii"
+msgstr "Kategorijas"
 
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets matched the search terms"
-msgstr "Niciun control nu se potrivește termenilor căutării"
+msgstr "Meklēšanas vārdiem neatbilst neviena logdaļa"
 
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
-msgstr "Niciun control grafic disponibil"
+msgstr "Nav pieejamu logdaļu"
 
-#, fuzzy
-#~| msgid "Maximize Panel"
 #~ msgctxt "@action:button Make the panel as big as it can be"
 #~ msgid "Maximize"
-#~ msgstr "Maximizează panoul"
+#~ msgstr "Maksimizēt"
 
-#, fuzzy
-#~| msgid "Delete"
+#~ msgid "Make this panel as tall as possible"
+#~ msgstr "Padarīt paneli maksimāli garu"
+
+#~ msgid "Make this panel as wide as possible"
+#~ msgstr "Padarīt paneli maksimāli platu"
+
 #~ msgctxt "@action:button Delete the panel"
 #~ msgid "Delete"
-#~ msgstr "Șterge"
+#~ msgstr "Dzēst"
 
-#, fuzzy
-#~| msgid "Floating Panel"
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the top; no effect when panel is maximized"
+#~ msgstr ""
+#~ "Paneli, kas nav maksimizēts, novieto augšpusē. Neko nemaina, ja panelis "
+#~ "ir maksimizēts"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the left; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Paneli, kas nav maksimizēts, novieto kreisajā pusē. Neko nemaina, ja "
+#~ "panelis ir maksimizēts"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the center; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Paneli, kas nav maksimizēts, novieto centrā. Neko nemaina, ja panelis ir "
+#~ "maksimizēts"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the bottom; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Paneli, kas nav maksimizēts, novieto apakšā. Neko nemaina, ja panelis ir "
+#~ "maksimizēts"
+
+#~ msgid ""
+#~ "Aligns a non-maximized panel to the right; no effect when panel is "
+#~ "maximized"
+#~ msgstr ""
+#~ "Paneli, kas nav maksimizēts, novieto labajā pusē. Neko nemaina, ja "
+#~ "panelis ir maksimizēts"
+
+#~ msgid ""
+#~ "Panel is hidden, but reveals itself when the cursor touches the panel's "
+#~ "screen edge"
+#~ msgstr ""
+#~ "Panelis ir paslēpts un parādās, kad kursors pieskaras paneļa ekrāna malai"
+
+#~ msgid ""
+#~ "Panel is opaque when any windows are touching it, and translucent at "
+#~ "other times"
+#~ msgstr "Panelis kļūst caurspīdīgs, kad tam nepieskaras neviens logs"
+
 #~ msgid "Floating:"
-#~ msgstr "Panou flotant"
+#~ msgstr "Peldošs:"
+
+#~ msgid "Panel visibly floats away from its screen edge"
+#~ msgstr "Panelis vizuāli nepieskaras ekrāna malai"
+
+#~ msgid "Attached"
+#~ msgstr "Piestiprināts"
+
+#~ msgid "Panel is attached to its screen edge"
+#~ msgstr "Panelis ir piestiprināts ekrāna malai"
 
 #~ msgid "More Options…"
-#~ msgstr "Opțiuni suplimentare…"
+#~ msgstr "Vairāk iespēju..."
 
 #~ msgctxt "Minimize the length of this string as much as possible"
 #~ msgid "Drag to move"
-#~ msgstr "Trage pentru mutare"
+#~ msgstr "Velciet, lai pārvietotu"
 
-#~ msgid "Switch"
-#~ msgstr "Schimbă"
-
-#, fuzzy
-#~| msgid "Windows Go Below"
-#~ msgid "Windows Above"
-#~ msgstr "Ferestrele merg dedesubt"
-
-#, fuzzy
-#~| msgid "Windows Can Cover"
-#~ msgid "Windows In Front"
-#~ msgstr "Ferestrele pot acoperi"
-
-#~ msgid "%1 (disabled)"
-#~ msgstr "%1 (dezactivat)"
-
-#~ msgid "Appearance"
-#~ msgstr "Aspect"
-
-#~ msgid "Search…"
-#~ msgstr "Caută…"
-
-#~ msgid "Screen Edge"
-#~ msgstr "Margine ecran"
-
-#~ msgid "Click and drag the button to a screen edge to move the panel there."
-#~ msgstr ""
-#~ "Faceți clic și trageți butonul spre marginea ecranului pentru a muta "
-#~ "panoul acolo."
-
-#~ msgid "Width"
-#~ msgstr "Lățime"
-
-#~ msgid "Lock Widgets"
-#~ msgstr "Blochează controalele"
-
-#~ msgid ""
-#~ "This shortcut will activate the applet: it will give the keyboard focus "
-#~ "to it, and if the applet has a popup (such as the start menu), the popup "
-#~ "will be open."
-#~ msgstr ""
-#~ "Acest accelerator va activa miniaplicația: îi va transfera focalizarea "
-#~ "tastaturii și dacă miniaplicația are o fereastră-balon (cum ar fi meniul "
-#~ "de pornire), fereastra-balon se va deschide."
-
-#~ msgid "Activity name:"
-#~ msgstr "Denumire activitate:"
-
-#~ msgid "Create"
-#~ msgstr "Creează"
-
-#, fuzzy
-#~| msgid "Are you sure you want to delete the activity?"
-#~ msgid "Are you sure you want to delete this activity?"
-#~ msgstr "Sigur doriți să ștergeți activitatea?"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use arrow keys to move the panel"
+#~ msgstr "Izmantojiet tastatūras bultiņas, lai paneli pārvietotu"

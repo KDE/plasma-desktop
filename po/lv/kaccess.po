@@ -6,31 +6,34 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Maris Nartiss <maris.kde@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-30 01:42+0000\n"
-"PO-Revision-Date: 2019-12-07 14:00+0200\n"
-"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
+"PO-Revision-Date: 2023-10-19 20:41+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Andris Maziks, Anita Reitere, Viesturs Zariņš"
+msgstr "Andris Maziks, Anita Reitere, Viesturs Zariņš, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "andris.m@delfi.lv, nita@cc.lv, viesturs.zarins@mii.lu.lv"
+msgstr ""
+"andris.m@delfi.lv, nita@cc.lv, viesturs.zarins@mii.lu.lv, toms."
+"trasuns@posteo.net"
 
 #: kaccess.cpp:65
 msgid ""
@@ -263,83 +266,80 @@ msgstr "Peles taustiņi"
 #: kaccess.cpp:757
 #, kde-format
 msgid "Do you really want to deactivate \"%1\"?"
-msgstr "Vai tiešām vēlaties atslēgt \"%1\"?"
+msgstr "Vai tiešām vēlaties atslēgt „%1“?"
 
 #: kaccess.cpp:760
 #, kde-format
 msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr "Vai tiešām vēlaties atslēgt \"%1\" un \"%2\"?"
+msgstr "Vai tiešām vēlaties atslēgt „%1“ un „%2“?"
 
 #: kaccess.cpp:764
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Vai tiešām vēlaties atslēgt \"%1\", \"%2\" un \"%3\"?"
+msgstr "Vai tiešām vēlaties atslēgt „%1“, „%2“ un „%3“?"
 
 #: kaccess.cpp:767
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Vai tiešām vēlaties atslēgt \"%1\", \"%2\", \"%3\" un \"%4\"?"
+msgstr "Vai tiešām vēlaties atslēgt „%1“, „%2“, „%3“ un „%4“?"
 
 #: kaccess.cpp:778
 #, kde-format
 msgid "Do you really want to activate \"%1\"?"
-msgstr "Vai tiešām vēlaties aktivizēt \"%1\"?"
+msgstr "Vai tiešām vēlaties aktivizēt „%1“?"
 
 #: kaccess.cpp:781
 #, kde-format
 msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr "Vai tiešām vēlaties aktivizēt \"%1\" un atslēgt \"%2\"?"
+msgstr "Vai tiešām vēlaties aktivizēt „%1“ un atslēgt „%2“?"
 
 #: kaccess.cpp:784
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr "Vai tiešām vēlaties aktivizēt \"%1\" un atslēgt \"%2\"un \"%3\"?"
+msgstr "Vai tiešām vēlaties aktivizēt „%1“ un atslēgt „%2“un „%3“?"
 
 #: kaccess.cpp:790
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
 "\"%4\"?"
-msgstr ""
-"Vai tiešām vēlaties aktivizēt \"%1\" un atslēgt \"%2\", \"%3\" un \"%4\"?"
+msgstr "Vai tiešām vēlaties aktivizēt „%1“ un atslēgt „%2“, „%3“ un „%4“?"
 
 #: kaccess.cpp:801
 #, kde-format
 msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr "Vai tiešām vēlaties aktivizēt \"%1\" un \"%2\"?"
+msgstr "Vai tiešām vēlaties aktivizēt „%1“ un „%2“?"
 
 #: kaccess.cpp:804
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr "Vai tiešām vēlaties aktivizēt \"%1\" un \"%2\" un atslēgt \"%3\"?"
+msgstr "Vai tiešām vēlaties aktivizēt „%1“ un „%2“ un atslēgt „%3“?"
 
 #: kaccess.cpp:810
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
 "and \"%4\"?"
-msgstr ""
-"Vai tiešām vēlaties aktivizēt \"%1\" un \"%2\" un atslēgt \"%3\" un \"%4\"?"
+msgstr "Vai tiešām vēlaties aktivizēt „%1“ un „%2“ un atslēgt „%3“ un „%4“?"
 
 #: kaccess.cpp:821
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Vai tiešām vēlaties aktivizēt \"%1\", \"%2\" un \"%3\"?"
+msgstr "Vai tiešām vēlaties aktivizēt „%1“, „%2“ un „%3“?"
 
 #: kaccess.cpp:824
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
 "\"%4\"?"
-msgstr ""
-"Vai tiešām vēlaties aktivizēt \"%1\", \"%2\" un \"%3\" un atslēgt \"%4\"?"
+msgstr "Vai tiešām vēlaties aktivizēt „%1“, „%2“ un „%3“ un atslēgt „%4“?"
 
 #: kaccess.cpp:833
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Vai tiešām vēlaties aktivizēt \"%1\", \"%2\", \"%3\" un \"%4\"?"
+msgstr "Vai tiešām vēlaties aktivizēt „%1“, „%2“, „%3“ un „%4“?"
 
 #: kaccess.cpp:842
 #, kde-format
@@ -352,8 +352,8 @@ msgid ""
 "You held down the Shift key for 8 seconds or an application has requested to "
 "change this setting."
 msgstr ""
-"Jūs turējāt Shift taustiņu nospiestu 8 sekundes, vai kāda programma prasa "
-"mainīt šo iestatījumu."
+"Jūs turējāt Shift taustiņu nospiestu 8 sekundes, vai arī kāda programma "
+"prasa mainīt šo iestatījumu."
 
 #: kaccess.cpp:848
 #, kde-format
@@ -361,13 +361,13 @@ msgid ""
 "You pressed the Shift key 5 consecutive times or an application has "
 "requested to change this setting."
 msgstr ""
-"Jūs nospiedāt Shift taustiņu 5 reizes pēc kārtas, vai kāda programma prasa "
-"mainīt šo iestatījumu."
+"Jūs nospiedāt Shift taustiņu 5 reizes pēc kārtas, vai arī kāda programma "
+"prasa mainīt šo iestatījumu."
 
 #: kaccess.cpp:852
 #, kde-format
 msgid "You pressed %1 or an application has requested to change this setting."
-msgstr "Jūs nospiedāt %1, vai kāda programma prasa mainīt šo iestatījumu."
+msgstr "Jūs nospiedāt %1, vai arī kāda programma prasa mainīt šo iestatījumu."
 
 #: kaccess.cpp:857
 #, kde-format
@@ -397,8 +397,8 @@ msgstr ""
 "traucējumiem, un tos var konfigurēt KDE sistēmas iestatījumos. Tos var arī "
 "ieslēgt un izslēgt ar standarta tastatūras žestiem.\n"
 "\n"
-"Ja tie jums nav vajadzīgi, varat izvēlēties \"Atslēgt visas AccessX iespējas "
-"un žestus\"."
+"Ja tie jums nav vajadzīgi, varat izvēlēties „Atslēgt visas AccessX iespējas "
+"un žestus“."
 
 #: kaccess.cpp:885
 #, kde-format
@@ -434,8 +434,8 @@ msgid ""
 "Sticky keys has been enabled. From now on, modifier keys will stay latched "
 "after you have released them."
 msgstr ""
-"Lipīgie taustiņi ir ieslēgti. Tagad modificējošie taustiņi paliks fiksēti "
-"pēc to atlaišanas."
+"Lipīgie taustiņi ir ieslēgti. Tagad mēmie taustiņi tiks reģistrēti arī pēc "
+"to atlaišanas."
 
 #: kaccess.cpp:899
 #, kde-format
@@ -454,12 +454,10 @@ msgstr ""
 #: kaccess.cpp:905
 #, kde-format
 msgid "Mouse keys has been disabled."
-msgstr "Peles taustiņi ir atslēgti"
+msgstr "Peles taustiņi ir izslēgti"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "Name for kaccess shortcuts category"
-#| msgid "Accessibility"
+#, kde-format
 msgid "Accessibility"
 msgstr "Pieejamība"
 

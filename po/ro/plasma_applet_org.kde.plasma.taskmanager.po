@@ -4,7 +4,7 @@
 # This file is distributed under the same license as the plasma_applet_tasks package.
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
 # Sergiu Bivol <sergiu@cip.md>, 2008.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2011, 2013, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2011, 2013, 2020, 2021, 2022, 2023, 2024.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 #
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-16 01:38+0000\n"
-"PO-Revision-Date: 2022-12-28 21:23+0000\n"
+"PO-Revision-Date: 2024-01-07 18:33+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -75,16 +75,15 @@ msgid "General:"
 msgstr "Generale:"
 
 #: package/contents/ui/ConfigAppearance.qml:46
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Evidențiază ferestrele la planarea deasupra miniaturilor sarcinilor"
+msgstr ""
+"Arată previzualizări mici ale ferestrelor la planarea deasupra sarcinilor"
 
 #: package/contents/ui/ConfigAppearance.qml:51
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Evidențiază ferestrele la planarea deasupra miniaturilor sarcinilor"
+msgstr "Ascunde celelalte ferestre la planarea deasupra sarcinilor"
 
 #: package/contents/ui/ConfigAppearance.qml:56
 #, kde-format
@@ -101,42 +100,40 @@ msgstr "Umple spațiul gol de pe panou"
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "Folosește vizualizare cu multe coloane:"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "Folosește vizualizare cu multe rânduri:"
 
 #: package/contents/ui/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "Niciodată"
 
 #: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
-msgstr ""
+msgstr "Când panoul nu mai are spațiu și e suficient de lat"
 
 #: package/contents/ui/ConfigAppearance.qml:99
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
-msgstr ""
+msgstr "Mereu când panoul e suficient de lat"
 
 #: package/contents/ui/ConfigAppearance.qml:105
-#, fuzzy, kde-format
-#| msgid "Maximum columns:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Maxim coloane:"
 
 #: package/contents/ui/ConfigAppearance.qml:105
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Maxim rânduri:"
@@ -197,25 +194,19 @@ msgid "Cycles through tasks"
 msgstr "Ciclează printre sarcini"
 
 #: package/contents/ui/ConfigBehavior.qml:62
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Arată ferestrele una lângă alta"
+msgstr "Arată previzualizări mici ale ferestrelor"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Arată ferestrele una lângă alta"
+msgstr "Arată previzualizări mari ale ferestrelor"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -394,7 +385,7 @@ msgstr "Sarcinile noi apar:"
 #: package/contents/ui/ConfigBehavior.qml:208
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "La fund"
 
 #: package/contents/ui/ConfigBehavior.qml:212
 #: package/contents/ui/ConfigBehavior.qml:232
@@ -411,7 +402,7 @@ msgstr "La stânga"
 #: package/contents/ui/ConfigBehavior.qml:226
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "La vârf"
 
 #: package/contents/ui/ContextMenu.qml:100
 #, kde-format
@@ -598,11 +589,10 @@ msgid "Allow this program to be grouped"
 msgstr "Permite acestui program să fie grupat"
 
 #: package/contents/ui/ContextMenu.qml:773
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "În&chide"
+msgstr "În&chide toate"
 
 #: package/contents/ui/ContextMenu.qml:773
 #, kde-format

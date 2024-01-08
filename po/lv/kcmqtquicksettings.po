@@ -1,32 +1,32 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2023.
 #
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-07 02:03+0000\n"
-"PO-Revision-Date: 2023-04-10 18:49+0100\n"
-"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
-"Language: ro\n"
+"PO-Revision-Date: 2023-12-05 09:47+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Sergiu Bivol"
+msgstr "Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sergiu@cip.md"
+msgstr "toms.trasuns@posteo.net"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
@@ -35,21 +35,21 @@ msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
 "you know what you are doing."
 msgstr ""
-"Aceste configurări ajustează parametrii QtQuick folosiți de Plasma. Ajustați "
-"doar dacă știți ce faceți."
+"Šie iestatījumi maina „Plasma“ izmantotos „QtQuick“ iestatījumus. Tos "
+"mainiet tikai tad, ja zināt, kas jādara."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:38
 #, kde-format
 msgid "Rendering Backend:"
-msgstr "Platformă de randare:"
+msgstr "Renderēšanas aizmugursistēma"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:84
 #, kde-format
 msgid "Automatic"
-msgstr "Automată"
+msgstr "Automātiska"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:51
@@ -61,7 +61,7 @@ msgstr "Open GL"
 #: kcmqtquicksettingswidget.ui:56
 #, kde-format
 msgid "Software"
-msgstr "Programe"
+msgstr "Programmatūras"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:61
@@ -73,40 +73,28 @@ msgstr "Vulkan"
 #: kcmqtquicksettingswidget.ui:69
 #, kde-format
 msgid "GL Core Profile:"
-msgstr "Profil GL Core"
+msgstr "GL Core profils:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcmqtquicksettingswidget.ui:76
 #, kde-format
 msgid "Render Loop:"
-msgstr "Buclă de randare:"
+msgstr "Renderēšanas cilpa:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:89
 #, kde-format
 msgid "Basic"
-msgstr "Simplă"
+msgstr "Pamata"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:94
 #, kde-format
 msgid "Threaded"
-msgstr "Cu fire"
+msgstr "Pavedienu"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
 #: kcmqtquicksettingswidget.ui:102
 #, kde-format
 msgid "Force"
-msgstr "Forțează"
-
-#~ msgid "Plasma QtQuick Settings"
-#~ msgstr "Configurări QtQuick Plasma"
-
-#~ msgid "Configure Plasma QtQuick Settings"
-#~ msgstr "Configurează parametrii QtQuick Plasma"
-
-#~ msgid "David Edmundson"
-#~ msgstr "David Edmundson"
-
-#~ msgid "Maintainer"
-#~ msgstr "Responsabil"
+msgstr "Piespiedu"

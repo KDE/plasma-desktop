@@ -1,0 +1,289 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-12-27 01:35+0000\n"
+"PO-Revision-Date: 2023-10-20 12:15+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.1\n"
+
+#: plasmasearch/kcm.h:70
+#, kde-format
+msgid "Favorite Plugins"
+msgstr "Iecienītākie papildinājumi"
+
+#: plasmasearch/kcm.h:71
+#, kde-format
+msgid "Available Plugins"
+msgstr "Pieejamie papildinājumi"
+
+#: plasmasearch/ui/main.qml:25
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "Konfigurēt KRunner..."
+
+#: plasmasearch/ui/main.qml:29
+#, kde-format
+msgid "Get New Plugins…"
+msgstr "Iegūt jaunus papildinājumus..."
+
+#: plasmasearch/ui/main.qml:44
+#, kde-format
+msgid ""
+"Enable or disable plugins (used in KRunner, Application Launcher, and the "
+"Overview effect). Mark plugins as favorites and arrange them in order you "
+"want to see them."
+msgstr ""
+"Ieslēgt vai izslēgt papildinājumus (izmantoti KRunner, Programmu palaidējā "
+"un Pārskata efektā). Atzīmējiet papildinājumus kā iecienītākos un "
+"izkārtojiet tādā secībā, kādā vēlaties, lai tie parādās."
+
+#: plasmasearch/ui/main.qml:88
+#, kde-format
+msgid "Remove from favorites"
+msgstr "Noņemt no iecienītāko saraksta"
+
+#: plasmasearch/ui/main.qml:88
+#, kde-format
+msgid "Add to favorites"
+msgstr "Pievienot iecienītākajiem"
+
+#: plugininstaller/AbstractJob.cpp:18
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "Failed to run install script in terminal <message>%1</message>"
+msgstr "Neizdevās terminālī palaist instalācijas skriptu <message>%1</message>"
+
+#: plugininstaller/AbstractJob.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Installation executed successfully, you may now close this window"
+msgstr "Instalācija ir veiksmīgi pabeigta, varat aizvērt šo logu"
+
+#: plugininstaller/AbstractJob.cpp:31
+#, kde-format
+msgctxt "@info"
+msgid "Uninstallation executed successfully, you may now close this window"
+msgstr "Atinstalēšana ir veiksmīgi pabeigta, varat aizvērt šo logu"
+
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
+#, kde-format
+msgid "Failed to copy file %1 to %2"
+msgstr "Neizdevās nokopēt datni %1 uz %2"
+
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
+#: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to remove file %1:<nl/>%2"
+msgstr "Neizdevās noņemt datni %1:<nl/>%2"
+
+#: plugininstaller/main.cpp:33
+#, kde-format
+msgctxt "@info"
+msgid "KRunner plugin installation failed"
+msgstr "KRunner papildinājuma instalācija neizdevās"
+
+#: plugininstaller/main.cpp:48
+#, kde-format
+msgctxt "@info:shell"
+msgid "Command to execute: install or uninstall."
+msgstr "Izpildāmā komanda: instalēt vai atinstalēt."
+
+#: plugininstaller/main.cpp:49
+#, kde-format
+msgctxt "@info:shell"
+msgid "Path to archive."
+msgstr "Ceļš uz arhīvu."
+
+#: plugininstaller/main.cpp:50
+#, kde-format
+msgctxt "@info:shell"
+msgid "Do not show a visual confirmation dialog"
+msgstr "Nerādīt apstiprināšanas lodziņu"
+
+#: plugininstaller/main.cpp:91
+#, kde-format
+msgctxt "@info"
+msgid "No PackageKit support"
+msgstr "Nav PackegeKit atbalsta"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:23
+#: plugininstaller/ScriptConfirmationDialog.h:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Installation"
+msgstr "Apstiprināt instalāciju"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You are about to install a binary package. You should only install these "
+"from a trusted author/packager."
+msgstr ""
+"Jūs grasāties instalēt bināru pakotni. Dariet to tikai tad, ja uzticieties "
+"tās autoram un izveidotājam."
+
+#: plugininstaller/PackageKitConfirmationDialog.h:33
+#: plugininstaller/ScriptConfirmationDialog.h:94
+#, kde-format
+msgctxt "@action:button"
+msgid "Accept Risk And Continue"
+msgstr "Pieņemt risku un turpināt"
+
+#: plugininstaller/PackageKitConfirmationDialog.h:37
+#, kde-format
+msgctxt "@action:button"
+msgid "View File"
+msgstr "Skatīt datni"
+
+#: plugininstaller/PackageKitJob.cpp:24
+#, kde-format
+msgctxt "@info"
+msgid "The mime type %1 is not supported by the packagekit backend"
+msgstr "MIME tipu %1 neatbalsta packagekit aizmugursistēmu"
+
+#: plugininstaller/ScriptConfirmationDialog.h:44
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin executes the following command for starting the \"%1\" service:"
+"<nl/>%2"
+msgstr "Šis papildinājums izpilde šo komandu „%1“ servisa ieslēgšanai:<nl/>%2"
+
+#: plugininstaller/ScriptConfirmationDialog.h:47
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Šis papildinājums nepiedāvā atinstalēšanas skriptu. Lūdzu, sazinieties ar tā "
+"autoru. Pielikumu varat atinstalēt manuāli.<nl/>Ja nejūtaties komfortabli to "
+"darīt, spiediet <interface>Atcelt</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:52
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an uninstallation script. Please contact the "
+"author. You can try to uninstall the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Šis papildinājums nepiedāvā atinstalēšanas skriptu. Lūdzu, sazinieties ar tā "
+"autoru. Varat mēģināt to atinstalēt manuāli. Lai to izdarītu, skatiet "
+"LASIMANI (README) datnē autora pievienotās instrukcijas.<nl/>Ja tas šķiet "
+"par sarežģītu vai nejūtaties komfortabli mēģināt, spiediet "
+"<interface>Atcelt</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:58
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Šis papildinājums nepiedāvā instalācijas skriptu. Lūdzu, sazinieties ar tā "
+"autoru. Varat mēģināt pielikumu instalēt manuāli.<nl/>Ja tas šķiet par "
+"sarežģītu vai nejūtaties komfortabli to darīt, spiediet <interface>Atcelt</"
+"interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:63
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin does not provide an installation script. Please contact the "
+"author. You can try to install the plugin manually. Please have a look at "
+"the README for instructions from the author.<nl/>If you do not feel capable "
+"or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Šis papildinājums nepiedāvā instalācijas skriptu. Lūdzu, sazinieties ar tā "
+"autoru. Varat mēģināt pielikumu instalēt manuāli. Lai to izdarītu, apskatiet "
+"autora pievienotās LASIMANI (README) instrukcijas.<nl/>Ja jums tas šķiet "
+"pārāk sarežģīti vai nejūtaties komfortabli to darīt, spiediet "
+"<interface>Atcelt</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:69
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the script's source code.<nl/>If you do not feel capable or comfortable "
+"with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Šis papildinājums izmanto instalācijas skriptu, kas rada drošības risku. "
+"Lūdzam pirms instalācijas pārbaudīt papildinājuma saturu vai vismaz izlasīt "
+"skripta pirmkodu.<nl/>Ja tas šķiet par sarežģītu vai nejūtaties komfortabli "
+"to darīt, spiediet <interface>Atcelt</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:75
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"This plugin uses a script for installation which can pose a security risk. "
+"Please examine the entire plugin's contents before installing, or at least "
+"read the README file and the script's source code.<nl/>If you do not feel "
+"capable or comfortable with this, click <interface>Cancel</interface>  now."
+msgstr ""
+"Šis papildinājums izmanto instalācijas skriptu, kas rada drošības risku. "
+"Lūdzam pirms instalācijas pārbaudīt papildinājuma saturu vai vismaz izlasīt "
+"LASIMANI (README) datni un skripta pirmkodu.<nl/>Ja tas šķiet par sarežģītu "
+"vai nejūtaties komfortabli to darīt, spiediet <interface>Atcelt</interface>."
+
+#: plugininstaller/ScriptConfirmationDialog.h:90
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as uninstalled"
+msgstr "Atzīmēt ierakstu kā atinstalēts"
+
+#: plugininstaller/ScriptConfirmationDialog.h:92
+#, kde-format
+msgctxt "@action:button"
+msgid "Mark entry as installed"
+msgstr "Atzīmēt ierakstu kā instalēts"
+
+#: plugininstaller/ScriptConfirmationDialog.h:100
+#, kde-format
+msgctxt "@action:button"
+msgid "View Script"
+msgstr "Skatīt skriptu"
+
+#: plugininstaller/ScriptConfirmationDialog.h:106
+#, kde-format
+msgctxt "@action:button"
+msgid "View Source Directory"
+msgstr "Skatīt avota direktoriju"
+
+#: plugininstaller/ScriptConfirmationDialog.h:117
+#, kde-format
+msgctxt "@action:button"
+msgid "View %1"
+msgstr "Skatīt %1"
+
+#: plugininstaller/ZypperRPMJob.cpp:28
+#, kde-format
+msgctxt "@info"
+msgid "Could not resolve package name of %1"
+msgstr "Neizdevās atrisināt pakotnes %1 nosaukumu"
+
+#: plugininstaller/ZypperRPMJob.cpp:35
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Failed to run install command: <message>%1</message>"
+msgstr "Neizdevās palaist instalācijas komandu: <message>%1</message>"

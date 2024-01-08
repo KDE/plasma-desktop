@@ -5,19 +5,20 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 01:43+0000\n"
-"PO-Revision-Date: 2009-11-28 21:15+0200\n"
-"Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2023-10-19 20:32+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -33,7 +34,7 @@ msgid ""
 "change the location of this folder if you want to, and the contents will "
 "move automatically to the new location as well."
 msgstr ""
-"Šī mape satur visus failus, kurus jūs redzat uz darbvirsmas. Ja vēlaties, "
+"Šī mape satur visas datnes, kurus jūs redzat uz darbvirsmas. Ja vēlaties, "
 "varat mainīt šīs mapes atrašanās vietu, un tās saturs automātiski "
 "pārvietosies uz jauno vietu."
 
@@ -46,12 +47,12 @@ msgstr "Dokumentu ceļš:"
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
-msgstr "Šī mape būs noklusētā mape dokumentu ielādēšanai vai saglabāšanai."
+msgstr "Šī mape būs noklusētā mape dokumentu ielādēšanai un saglabāšanai."
 
 #: ui/main.qml:80
 #, kde-format
 msgid "Downloads path:"
-msgstr "Dokumentu ceļš:"
+msgstr "Lejupielāžu ceļš:"
 
 #: ui/main.qml:86
 #, kde-format
@@ -59,15 +60,14 @@ msgid "This folder will be used by default to save your downloaded items."
 msgstr "Šī mape būs noklusētā mape lejupielādēto dokumentu saglabāšanai."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Movies path:"
+#, kde-format
 msgid "Videos path:"
-msgstr "Filmu ceļš:"
+msgstr "Video ceļš:"
 
 #: ui/main.qml:100 ui/main.qml:142
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
-msgstr "Šī mape būs noklusētā mape filmu ielādēšanai vai saglabāšanai."
+msgstr "Šī mape būs noklusētā mape video datņu ielādēšanai vai saglabāšanai."
 
 #: ui/main.qml:108
 #, kde-format
@@ -78,7 +78,7 @@ msgstr "Attēlu ceļš:"
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
-msgstr "Šī mape būs noklusētā mape attēlu ielādēšanai vai saglabāšanai."
+msgstr "Šī mape būs noklusētā mape attēlu ielādēšanai un saglabāšanai."
 
 #: ui/main.qml:122
 #, kde-format
@@ -88,33 +88,29 @@ msgstr "Mūzikas ceļš:"
 #: ui/main.qml:128
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
-msgstr "Šī mape būs noklusētā mape mūzikas ielādēšanai vai saglabāšanai."
+msgstr "Šī mape būs noklusētā mape mūzikas ielādēšanai un saglabāšanai."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Mūzikas ceļš:"
+msgstr "Publiskais ceļš:"
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Attēlu ceļš:"
+msgstr "Veidņu ceļš:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
-msgstr "Šī mape būs noklusētā mape attēlu ielādēšanai vai saglabāšanai."
+msgstr "Šī mape būs noklusētā mape veidņu ielādēšanai un saglabāšanai."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"
-msgstr ""
+msgstr "Izvēlēties jaunu vietu"
 
 #~ msgid "Desktop"
 #~ msgstr "Darbvirsma"

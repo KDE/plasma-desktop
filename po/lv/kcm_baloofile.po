@@ -1,0 +1,163 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"PO-Revision-Date: 2023-12-28 16:26+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#: ui/main.qml:44
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Pauzēt indeksētāju"
+
+#: ui/main.qml:44
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Atsākt indeksētāja darbību"
+
+#: ui/main.qml:72
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Šādā gadījumā nedarbosies „KRunner“ datņu meklēšana un palaišanas izvēlnes, "
+"kā arī vairs netiks rādīti KDE programmu paplašinātie metadati."
+
+#: ui/main.qml:81
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Vai vēlaties dzēst saglabātos indeksa datus? Tiks atbrīvota %1 vieta, bet, "
+"ja indeksētāju atkal ieslēgsiet, visam indeksam būs jātiek izveidotam no "
+"jauna. Tas aizņems laiku atkarībā no tā, cik daudz datņu ir sistēmā."
+
+#: ui/main.qml:83
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Dzēst indeksa datus"
+
+#: ui/main.qml:93
+#, kde-format
+msgid ""
+"File Search helps you quickly locate your files. You can choose which "
+"folders and what types of file data are indexed."
+msgstr ""
+"Datņu meklētājs palīdz atrast jūsu datnes. Varat izvēlēties, kuras mapes un "
+"kāda tipa dati ir indeksējami."
+
+#: ui/main.qml:108
+#, kde-format
+msgctxt "@title:group"
+msgid "File indexing:"
+msgstr "Datņu indeksācija:"
+
+#: ui/main.qml:109
+#, kde-format
+msgctxt "@action:check"
+msgid "Enabled"
+msgstr "Ieslēgts"
+
+#: ui/main.qml:123
+#, kde-format
+msgctxt "@label indexing status"
+msgid "Status:"
+msgstr "Statuss:"
+
+#: ui/main.qml:127
+#, kde-format
+msgctxt "State and a percentage of progress"
+msgid "%1, %2% complete"
+msgstr "%1, %2% pabeigts"
+
+#: ui/main.qml:140
+#, kde-format
+msgctxt "@label file currently being indexed"
+msgid "Currently indexing:"
+msgstr "Šobrīd indeksē:"
+
+#: ui/main.qml:150
+#, kde-kuit-format
+msgctxt "@info Currently Indexing"
+msgid "<filename>%1</filename>"
+msgstr "<filename>%1</filename>"
+
+#: ui/main.qml:166
+#, kde-format
+msgctxt "@title:group"
+msgid "Data to index:"
+msgstr "Indeksējamie dati:"
+
+#: ui/main.qml:168
+#, kde-format
+msgid "File names and contents"
+msgstr "Datņu nosaukumi un saturs"
+
+#: ui/main.qml:181
+#, kde-format
+msgid "File names only"
+msgstr "Tikai datņu nosaukumi"
+
+#: ui/main.qml:200
+#, kde-format
+msgid "Hidden files and folders"
+msgstr "Paslēptas datnes un mapes"
+
+#: ui/main.qml:226
+#, kde-format
+msgctxt "@title:table Locations to include or exclude from indexing"
+msgid "Locations"
+msgstr "Atrašanās vietas"
+
+#: ui/main.qml:229
+#, kde-format
+msgctxt "@action:button"
+msgid "Start Indexing a Folder…"
+msgstr "Sākt mapes indeksāciju..."
+
+#: ui/main.qml:237
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Indexing a Folder…"
+msgstr "Apturēt mapes indeksāciju..."
+
+#: ui/main.qml:296
+#, kde-format
+msgid "Not indexed"
+msgstr "Nav indeksēts"
+
+#: ui/main.qml:297
+#, kde-format
+msgid "Indexed"
+msgstr "Indeksēts"
+
+#: ui/main.qml:327
+#, kde-format
+msgid "Delete entry"
+msgstr "Dzēst ierakstu"
+
+#: ui/main.qml:342
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Izvēlēties iekļaujamo mapi"
+
+#: ui/main.qml:342
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Izvēlēties ignorējamo mapi"

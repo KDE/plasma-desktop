@@ -1,27 +1,27 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023.
 #
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:34+0000\n"
-"PO-Revision-Date: 2023-04-10 18:49+0100\n"
-"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
-"Language: ro\n"
+"PO-Revision-Date: 2023-12-28 16:57+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: app/emojier.cpp:75 app/emojier.cpp:77
 #, kde-format
 msgid "Emoji Selector"
-msgstr "Selector de emoji"
+msgstr "Emocijzīmju pārlūkotājs"
 
 #: app/emojier.cpp:79
 #, kde-format
@@ -32,119 +32,113 @@ msgstr "(C) 2019 Aleix Pol i Gonzalez"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Sergiu Bivol"
+msgstr "Toms Trasūns"
 
 #: app/emojier.cpp:81
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sergiu@cip.md"
+msgstr "toms.trasuns@posteo.net"
 
 #: app/emojier.cpp:96
 #, kde-format
 msgid "Replace an existing instance"
-msgstr "Înlocuiește o instanță existentă"
+msgstr "Aizvietot eksistējošu instanci"
 
 #: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:49
 #, kde-format
 msgid "Search"
-msgstr "Caută"
+msgstr "Meklēt"
 
 #: app/ui/CategoryPage.qml:80
 #, kde-format
 msgid "Clear History"
-msgstr "Curăță istoricul"
+msgstr "Notīrīt vēsturi"
 
 #: app/ui/CategoryPage.qml:104
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
-msgstr "Copiază caracterul"
+msgstr "Kopēt zīmi"
 
 #: app/ui/CategoryPage.qml:107 app/ui/CategoryPage.qml:115
 #: app/ui/Emojier.qml:33
 #, kde-format
 msgid "%1 copied to the clipboard"
-msgstr "%1 copiat în clipboard"
+msgstr "%1 nokopēts starpliktuvē"
 
 #: app/ui/CategoryPage.qml:112
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
-msgstr "Copiază descrierea"
+msgstr "Kopēt aprakstu"
 
 #: app/ui/CategoryPage.qml:207
 #, kde-format
 msgid "No recent Emojis"
-msgstr "Niciun emoji recent"
+msgstr "Nav pēdējo lietoto emocijzīmju"
 
 #: app/ui/Emojier.qml:39
 #, kde-format
 msgid "Recent"
-msgstr "Recente"
+msgstr "Pēdējās"
 
 #: app/ui/Emojier.qml:60
 #, kde-format
 msgid "All"
-msgstr "Toate"
+msgstr "Visas"
 
 #: app/ui/Emojier.qml:71
 #, kde-format
 msgid "Categories"
-msgstr "Categorii"
+msgstr "Kategorijas"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
 msgid "Smileys and Emotion"
-msgstr "Zâmbăreți și emoție"
+msgstr "Smaidiņi un emocijas"
 
 #: emojicategory.cpp:15
 msgctxt "Emoji Category"
 msgid "People and Body"
-msgstr "Oameni și corp"
+msgstr "Cilvēks un ķermenis"
 
 #: emojicategory.cpp:16
 msgctxt "Emoji Category"
 msgid "Component"
-msgstr "Componentă"
+msgstr "Sastāvdaļa"
 
 #: emojicategory.cpp:17
 msgctxt "Emoji Category"
 msgid "Animals and Nature"
-msgstr "Animale și natură"
+msgstr "Dzīvnieki un daba"
 
 #: emojicategory.cpp:18
 msgctxt "Emoji Category"
 msgid "Food and Drink"
-msgstr "Băutură și mâncare"
+msgstr "Pārtika un dzērieni"
 
 #: emojicategory.cpp:19
 msgctxt "Emoji Category"
 msgid "Travel and Places"
-msgstr "Călătorie și locuri"
+msgstr "Ceļošana un vietas"
 
 #: emojicategory.cpp:20
 msgctxt "Emoji Category"
 msgid "Activities"
-msgstr "Activități"
+msgstr "Aktivitātes"
 
 #: emojicategory.cpp:21
 msgctxt "Emoji Category"
 msgid "Objects"
-msgstr "Obiecte"
+msgstr "Objekti"
 
 #: emojicategory.cpp:22
 msgctxt "Emoji Category"
 msgid "Symbols"
-msgstr "Simboluri"
+msgstr "Simboli"
 
 #: emojicategory.cpp:23
 msgctxt "Emoji Category"
 msgid "Flags"
-msgstr "Drapele"
-
-#~ msgid "Search…"
-#~ msgstr "Caută…"
-
-#~ msgid "Search..."
-#~ msgstr "Caută..."
+msgstr "Karogi"

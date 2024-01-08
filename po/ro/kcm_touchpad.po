@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2014, 2015, 2020, 2021.
+# Sergiu Bivol <sergiu@cip.md>, 2014, 2015, 2020, 2021, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-08 01:39+0000\n"
-"PO-Revision-Date: 2021-07-25 14:02+0100\n"
+"PO-Revision-Date: 2024-01-07 18:27+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -133,10 +133,9 @@ msgstr ""
 "mijloc."
 
 #: kcm/libinput/touchpad.qml:254
-#, fuzzy, kde-format
-#| msgid "Minimum pointer speed"
+#, kde-format
 msgid "Pointer speed:"
-msgstr "Viteza minimă a indicatorului"
+msgstr "Viteză indicator:"
 
 #: kcm/libinput/touchpad.qml:352
 #, kde-format
@@ -146,7 +145,7 @@ msgstr "Accelerație indicator:"
 #: kcm/libinput/touchpad.qml:383
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Niciunul"
 
 #: kcm/libinput/touchpad.qml:387
 #, kde-format
@@ -156,7 +155,7 @@ msgstr "Cursorul se mișcă pe aceeași distanță ca degetul."
 #: kcm/libinput/touchpad.qml:396
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Standard"
 
 #: kcm/libinput/touchpad.qml:400
 #, kde-format

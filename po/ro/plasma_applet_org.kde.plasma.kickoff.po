@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2013, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2013, 2020, 2021, 2022, 2023, 2024.
 # Ovidiu-Florin Bogdan <ovidiu.b13@gmail.com>, 2015.
 #
 # Viorel-Cătălin Răpițeanu <rapiteanu DOT catalin AT gmail DOT com>, 2015.
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-25 01:35+0000\n"
-"PO-Revision-Date: 2022-12-28 21:19+0000\n"
+"PO-Revision-Date: 2024-01-07 18:32+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -56,11 +56,10 @@ msgid "Icon:"
 msgstr "Pictogramă:"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Application Launcher"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr "Lansator de aplicații"
+msgstr "Schimbă pictograma lansatorului aplicației"
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -69,12 +68,14 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Pictograma actuală e %1. Apăsați pentru a deschide meniul pentru schimbarea "
+"pictogramei actuale sau reinițializarea la cea implicită."
 
 #: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "Denumirea pictogramei e „%1”"
 
 #: package/contents/ui/ConfigGeneral.qml:85
 #, kde-format
@@ -83,11 +84,10 @@ msgid "Choose…"
 msgstr "Alege…"
 
 #: package/contents/ui/ConfigGeneral.qml:87
-#, fuzzy, kde-format
-#| msgid "Application Launcher"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr "Lansator de aplicații"
+msgstr "Alege o pictogramă pentru lansatorul de aplicații"
 
 #: package/contents/ui/ConfigGeneral.qml:91
 #, kde-format
@@ -117,7 +117,7 @@ msgstr "Tastați aici pentru a adăuga o etichetă textuală"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Reinițializează eticheta meniului"
 
 #: package/contents/ui/ConfigGeneral.qml:139
 #, kde-format
@@ -156,19 +156,19 @@ msgstr "Configurează extensiile de căutare active…"
 #: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgid "Sidebar position:"
-msgstr ""
+msgstr "Poziția barei laterale:"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Right"
-msgstr ""
+msgstr "Dreapta"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Left"
-msgstr ""
+msgstr "Stânga"
 
 #: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format
@@ -244,7 +244,7 @@ msgstr "Locuri"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Nicio potrivire"
 
 #: package/contents/ui/Header.qml:80
 #, kde-format

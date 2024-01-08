@@ -1,0 +1,517 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-10-08 01:39+0000\n"
+"PO-Revision-Date: 2023-11-15 12:36+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.1\n"
+
+#: actions.cpp:19
+#, kde-format
+msgid "Touchpad"
+msgstr "Skārienpaliktnis"
+
+#: actions.cpp:22
+#, kde-format
+msgid "Enable Touchpad"
+msgstr "Ieslēgt skārienpaliktni"
+
+#: actions.cpp:30
+#, kde-format
+msgid "Disable Touchpad"
+msgstr "Izslēgt skārienpaliktni"
+
+#: actions.cpp:38
+#, kde-format
+msgid "Toggle Touchpad"
+msgstr "Ieslēgt/izslēgt skārienpaliktni"
+
+#: backends/kwin_wayland/kwinwaylandbackend.cpp:59
+#, kde-format
+msgid "Querying input devices failed. Please reopen this settings module."
+msgstr ""
+"Iegūt ievades ierīču informāciju neizdevās. Atveriet iestatījumu moduli no "
+"jauna."
+
+#: backends/kwin_wayland/kwinwaylandbackend.cpp:74
+#, kde-format
+msgid "Critical error on reading fundamental device infos for touchpad %1."
+msgstr "Kritiska kļūda, nolasot skārienpaliktņa %1 pamata ierīces informāciju."
+
+#: backends/x11/xlibbackend.cpp:71
+#, kde-format
+msgid "Cannot connect to X server"
+msgstr "Neizdodas savienoties ar X serveri"
+
+#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:94
+#, kde-format
+msgid "No touchpad found"
+msgstr "Skārienpaliktnis nav atrasts"
+
+#: backends/x11/xlibbackend.cpp:124 backends/x11/xlibbackend.cpp:138
+#, kde-format
+msgid "Cannot apply touchpad configuration"
+msgstr "Neizdodas apstiprināt skārienpaliktņa konfigurāciju"
+
+#: backends/x11/xlibbackend.cpp:152 backends/x11/xlibbackend.cpp:165
+#, kde-format
+msgid "Cannot read touchpad configuration"
+msgstr "Neizdodas nolasīt skārienpaliktņa konfigurāciju"
+
+#: backends/x11/xlibbackend.cpp:178
+#, kde-format
+msgid "Cannot read default touchpad configuration"
+msgstr "Neizdodas nolasīt noklusējuma skārienpaliktņa konfigurāciju"
+
+#: kcm/libinput/touchpad.qml:108
+#, kde-format
+msgid "Device:"
+msgstr "Ierīce:"
+
+#: kcm/libinput/touchpad.qml:134
+#, kde-format
+msgid "General:"
+msgstr "Vispārīgi:"
+
+#: kcm/libinput/touchpad.qml:135
+#, kde-format
+msgid "Device enabled"
+msgstr "Ierīce ir ieslēgta"
+
+#: kcm/libinput/touchpad.qml:139
+#, kde-format
+msgid "Accept input through this device."
+msgstr "Pieņemt ievadi no šīs ierīces."
+
+#: kcm/libinput/touchpad.qml:163
+#, kde-format
+msgid "Disable while typing"
+msgstr "Izslēgt rakstīšanas laikā"
+
+#: kcm/libinput/touchpad.qml:167
+#, kde-format
+msgid "Disable touchpad while typing to prevent accidental inputs."
+msgstr ""
+"Izslēgt skārienpaliktni rakstīšanas laikā, lai novērstu nejaušu ievadi."
+
+#: kcm/libinput/touchpad.qml:191
+#, kde-format
+msgid "Left handed mode"
+msgstr "Kreisās rokas režīms"
+
+#: kcm/libinput/touchpad.qml:195
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr "Samaina vietā labo un kreiso taustiņu."
+
+#: kcm/libinput/touchpad.qml:219
+#, kde-format
+msgid "Press left and right buttons for middle click"
+msgstr "Spiest kopā kreiso un labo taustiņu kā peles vidējo pogu"
+
+#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:864
+#, kde-format
+msgid ""
+"Clicking left and right button simultaneously sends middle button click."
+msgstr ""
+"Kreisā un labā taustiņa nospiešana nosūta peles vidējā klikšķa signālu."
+
+#: kcm/libinput/touchpad.qml:254
+#, kde-format
+msgid "Pointer speed:"
+msgstr "Rādītāja ātrums:"
+
+#: kcm/libinput/touchpad.qml:352
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Rādītāja paātrinājums:"
+
+#: kcm/libinput/touchpad.qml:383
+#, kde-format
+msgid "None"
+msgstr "Nav"
+
+#: kcm/libinput/touchpad.qml:387
+#, kde-format
+msgid "Cursor moves the same distance as finger."
+msgstr "Kursors pārvietojas tikpat tālu, cik pirksts."
+
+#: kcm/libinput/touchpad.qml:396
+#, kde-format
+msgid "Standard"
+msgstr "Standarta"
+
+#: kcm/libinput/touchpad.qml:400
+#, kde-format
+msgid "Cursor travel distance depends on movement speed of finger."
+msgstr "Kursora pārvietošanās attālums ir atkarīgs no pirksta kustības ātruma."
+
+#: kcm/libinput/touchpad.qml:415
+#, kde-format
+msgid "Tapping:"
+msgstr "Uzsitiens:"
+
+#: kcm/libinput/touchpad.qml:416
+#, kde-format
+msgid "Tap-to-click"
+msgstr "Uzsitiens nozīmē klikšķi"
+
+#: kcm/libinput/touchpad.qml:420
+#, kde-format
+msgid "Single tap is left button click."
+msgstr "Viena uzsišana nozīmē kreisās pogas spiedienu."
+
+#: kcm/libinput/touchpad.qml:449
+#, kde-format
+msgid "Tap-and-drag"
+msgstr "Uzsist un vilkt"
+
+#: kcm/libinput/touchpad.qml:453
+#, kde-format
+msgid "Sliding over touchpad directly after tap drags."
+msgstr ""
+"Pirksta vilkšana pāri skārienpaliktnim pēc uzsitiena uzsāk vilkšanas darbību."
+
+#: kcm/libinput/touchpad.qml:480
+#, kde-format
+msgid "Tap-and-drag lock"
+msgstr "Uzsitiena un vilkšanas fiksēšana"
+
+#: kcm/libinput/touchpad.qml:484
+#, kde-format
+msgid "Dragging continues after a short finger lift."
+msgstr "Vilkšana turpinās arī pēc pirksta īsas pacelšanas."
+
+#: kcm/libinput/touchpad.qml:504
+#, kde-format
+msgid "Two-finger tap:"
+msgstr "Divu pirkstu uzsitiens:"
+
+#: kcm/libinput/touchpad.qml:515
+#, kde-format
+msgid "Right-click (three-finger tap to middle-click)"
+msgstr "Labais klikšķis (trīs pirkstu uzsišanas kā vidējā taustiņa nospiešana)"
+
+#: kcm/libinput/touchpad.qml:516
+#, kde-format
+msgid ""
+"Tap with two fingers to right-click, tap with three fingers to middle-click."
+msgstr ""
+"Uzsitiens a diviem pirkstiem atdarina peles kreisā taustiņa klikšķi, ar trīs "
+"— vidējā."
+
+#: kcm/libinput/touchpad.qml:518
+#, kde-format
+msgid "Middle-click (three-finger tap right-click)"
+msgstr "Vidējais klikšķis (trīs pirkstu uzsitiens ir labais taustiņš)"
+
+#: kcm/libinput/touchpad.qml:519
+#, kde-format
+msgid ""
+"Tap with two fingers to middle-click, tap with three fingers to right-click."
+msgstr ""
+"Uzsitiens ar diviem pirkstiem atdarina peles vidējā taustiņa nosiešanu, bet "
+"uzsitiens ar trim pirkstiem kā peles labās pogas klikšķis."
+
+#: kcm/libinput/touchpad.qml:521
+#, kde-format
+msgid "Right-click"
+msgstr "Labais klikšķis"
+
+#: kcm/libinput/touchpad.qml:522
+#, kde-format
+msgid "Tap with two fingers to right-click."
+msgstr "Uzsitiens ar diviem pirkstiem nozīmē peles labās pogas nospiešanu."
+
+#: kcm/libinput/touchpad.qml:524
+#, kde-format
+msgid "Middle-click"
+msgstr "Vidējais klikšķis"
+
+#: kcm/libinput/touchpad.qml:525
+#, kde-format
+msgid "Tap with two fingers to middle-click."
+msgstr "Uzsitiens ar diviem pirkstiem nozīmē peles vidējās pogas nospiešanu"
+
+#: kcm/libinput/touchpad.qml:584
+#, kde-format
+msgid "Scrolling:"
+msgstr "Ritināšana:"
+
+#: kcm/libinput/touchpad.qml:613
+#, kde-format
+msgid "Two fingers"
+msgstr "Divu pirkstu"
+
+#: kcm/libinput/touchpad.qml:617
+#, kde-format
+msgid "Slide with two fingers scrolls."
+msgstr "Ritināt ar diviem pirkstiem."
+
+#: kcm/libinput/touchpad.qml:625
+#, kde-format
+msgid "Touchpad edges"
+msgstr "Skārienpaliktņa malas"
+
+#: kcm/libinput/touchpad.qml:629
+#, kde-format
+msgid "Slide on the touchpad edges scrolls."
+msgstr "Ritināt, velkot gar skārienpaliktņa malām."
+
+#: kcm/libinput/touchpad.qml:639
+#, kde-format
+msgid "Invert scroll direction (Natural scrolling)"
+msgstr "Apgriezt ritināšanas virzienu (dabiskā ritināšana)"
+
+#: kcm/libinput/touchpad.qml:655
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Ritināšana līdzīgi skārienekrānam."
+
+#: kcm/libinput/touchpad.qml:663 kcm/libinput/touchpad.qml:680
+#, kde-format
+msgid "Disable horizontal scrolling"
+msgstr "Izslēgt horizontālo ritināšanu"
+
+#: kcm/libinput/touchpad.qml:688
+#, kde-format
+msgid "Scrolling speed:"
+msgstr "Ritināšanas ātrums:"
+
+#: kcm/libinput/touchpad.qml:739
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr "Lēnāks"
+
+#: kcm/libinput/touchpad.qml:745
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr "Ātrāks"
+
+#: kcm/libinput/touchpad.qml:755
+#, kde-format
+msgid "Right-click:"
+msgstr "Labais klikšķis:"
+
+#: kcm/libinput/touchpad.qml:789
+#, kde-format
+msgid "Press bottom-right corner"
+msgstr "Nospiest apakšējā labajā stūrī"
+
+#: kcm/libinput/touchpad.qml:793
+#, kde-format
+msgid ""
+"Software enabled buttons will be added to bottom portion of your touchpad."
+msgstr ""
+"Skārienpaliktņa apakšējai daļai tiks pievienotas programmatūras „iedomātas“ "
+"pogas."
+
+#: kcm/libinput/touchpad.qml:801
+#, kde-format
+msgid "Press anywhere with two fingers"
+msgstr "Nospiest jebkur ar diviem pirkstiem"
+
+#: kcm/libinput/touchpad.qml:805
+#, kde-format
+msgid "Tap with two finger to enable right click."
+msgstr "Uzsitiens ar diviem pirkstiem nozīmē labo klikšķi."
+
+#: kcm/libinput/touchpad.qml:819
+#, kde-format
+msgid "Middle-click: "
+msgstr "Vidējais klikšķis: "
+
+#: kcm/libinput/touchpad.qml:848
+#, kde-format
+msgid "Press bottom-middle"
+msgstr "Nospiest apakšējās daļas vidū"
+
+#: kcm/libinput/touchpad.qml:852
+#, kde-format
+msgid ""
+"Software enabled middle-button will be added to bottom portion of your "
+"touchpad."
+msgstr ""
+"Skārienpaliktņa apakšējai daļai tiks pievienota programmatūras „iedomāta“ "
+"vidējā klikšķa poga."
+
+#: kcm/libinput/touchpad.qml:860
+#, kde-format
+msgid "Press bottom left and bottom right corners simultaneously"
+msgstr "Nospiest reizē apakšējā labajā un apakšējā kreisajā stūrī"
+
+#: kcm/libinput/touchpad.qml:873
+#, kde-format
+msgid "Press anywhere with three fingers"
+msgstr "Nospiest jebkur ar trim pirkstiem"
+
+#: kcm/libinput/touchpad.qml:879
+#, kde-format
+msgid "Press anywhere with three fingers."
+msgstr "Nospiest jebkur ar trim pirkstiem.."
+
+#: kcm/touchpadconfig.cpp:99
+#, kde-format
+msgid ""
+"Error while loading values. See logs for more information. Please restart "
+"this configuration module."
+msgstr ""
+"Kļūda, ielādējot vērtības. Skatīt žurnālu, lai iegūtu vairāk informācijas. "
+"Pārstartējiet šo konfigurācijas moduli."
+
+#: kcm/touchpadconfig.cpp:102
+#, kde-format
+msgid "No touchpad found. Connect touchpad now."
+msgstr "Skārienpaliktņi nav atrasti. Pievienojiet skārienpaliktni."
+
+#: kcm/touchpadconfig.cpp:111
+#, kde-format
+msgid ""
+"Not able to save all changes. See logs for more information. Please restart "
+"this configuration module and try again."
+msgstr ""
+"Neizdevās saglabāt izmaiņas. Skatīt žurnālu, lai iegūtu vairāk informācijas. "
+"Pārstartējiet konfigurācijas moduli un mēģiniet vēlreiz."
+
+#: kcm/touchpadconfig.cpp:130
+#, kde-format
+msgid ""
+"Error while loading default values. Failed to set some options to their "
+"default values."
+msgstr ""
+"Kļūda, ielādējot noklusējuma vērtības. Neizdevās iestatīt to noklusējuma "
+"vērtības."
+
+#: kcm/touchpadconfig.cpp:150
+#, kde-format
+msgid ""
+"Error while adding newly connected device. Please reconnect it and restart "
+"this configuration module."
+msgstr ""
+"Kļūda, pievienojot tikko pieslēgtu ierīci. Pieslēdziet to atkal un "
+"pārstartējiet šo konfigurācijas moduli."
+
+#: kcm/touchpadconfig.cpp:173
+#, kde-format
+msgid "Touchpad disconnected. Closed its setting dialog."
+msgstr "Skārienpaliktnis ir atvienots. Aizvērts tā iestatījumu lodziņš."
+
+#: kcm/touchpadconfig.cpp:175
+#, kde-format
+msgid "Touchpad disconnected. No other touchpads found."
+msgstr "Skārienpaliktnis ir atvienots. Citas ierīces nav atrastas."
+
+#: kded/kded.cpp:201
+#, kde-format
+msgid "Touchpad was disabled because a mouse was plugged in"
+msgstr "Skārienpaliktnis tika izslēgts, pieslēdzot peli"
+
+#: kded/kded.cpp:204
+#, kde-format
+msgid "Touchpad was enabled because the mouse was unplugged"
+msgstr "Skārienpaliktnis tika ieslēgts, atvienojot peli"
+
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:27
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "No action"
+msgstr "Nav darbības"
+
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:30
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "Left button"
+msgstr "Kreisā poga"
+
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:33
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "Middle button"
+msgstr "Vidējā poga"
+
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:36
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "Right button"
+msgstr "Labā poga"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:285
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "All edges"
+msgstr "Visas malas"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:288
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Top edge"
+msgstr "Augšējā mala"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:291
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Top right corner"
+msgstr "Augšējais labais stūris"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:294
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Right edge"
+msgstr "Labā mala"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:297
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Bottom right corner"
+msgstr "Apakšējais labais stūris"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:300
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Bottom edge"
+msgstr "Apakšējā mala"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:303
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Bottom left corner"
+msgstr "Apakšējais kreisais stūris"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:306
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Left edge"
+msgstr "Kreisā mala"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:309
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Top left corner"
+msgstr "Augšējais kreisais stūris"

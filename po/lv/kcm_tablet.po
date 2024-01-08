@@ -1,163 +1,149 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2022, 2023.
 #
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-09 02:14+0000\n"
-"PO-Revision-Date: 2023-04-10 18:59+0100\n"
-"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
-"Language: ro\n"
+"PO-Revision-Date: 2023-11-12 14:55+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Primary (default)"
-msgstr "Primar (implicit)"
+msgstr "Primārais (noklusējums)"
 
 #: kcmtablet.cpp:33
 #, kde-format
 msgid "Portrait"
-msgstr "Portret"
+msgstr "Portreta"
 
 #: kcmtablet.cpp:34
 #, kde-format
 msgid "Landscape"
-msgstr "Peisaj"
+msgstr "Ainavas"
 
 #: kcmtablet.cpp:35
 #, kde-format
 msgid "Inverted Portrait"
-msgstr "Portret inversat"
+msgstr "Apgriezta portreta"
 
 #: kcmtablet.cpp:36
 #, kde-format
 msgid "Inverted Landscape"
-msgstr "Peisaj inversat"
+msgstr "Apgrieztas ainavas"
 
 #: kcmtablet.cpp:86
 #, kde-format
 msgid "Follow the active screen"
-msgstr "Urmează ecranul activ"
+msgstr "Sekot aktīvajam ekrānam"
 
 #: kcmtablet.cpp:94
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr "%1 - (%2,%3 %4×%5)"
+msgstr "%1 – (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:137
 #, kde-format
 msgid "Fit to Output"
-msgstr "Potrivește la ieșire"
+msgstr "Atbilstošs izvadei"
 
 #: kcmtablet.cpp:138
 #, kde-format
 msgid "Fit Output in tablet"
-msgstr "Potrivește ieșirea în tabletă"
+msgstr "Atbilstošs planšetes izvadei"
 
 #: kcmtablet.cpp:139
 #, kde-format
 msgid "Custom size"
-msgstr "Dimensiune personalizată"
+msgstr "Pielāgots izmērs"
 
 #: ui/main.qml:31
 #, kde-format
 msgid "No drawing tablets found."
-msgstr "Nicio tabletă grafică găsită."
+msgstr "Nav atrastas zīmēšanas planšetes"
 
 #: ui/main.qml:39
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
-msgstr "Dispozitiv:"
+msgstr "Ierīce:"
 
 #: ui/main.qml:77
 #, kde-format
 msgid "Target display:"
-msgstr "Afișaj țintă:"
+msgstr "Mērķa displejs:"
 
 #: ui/main.qml:96
 #, kde-format
 msgid "Orientation:"
-msgstr "Orientare:"
+msgstr "Orientācija:"
 
 #: ui/main.qml:108
 #, kde-format
 msgid "Left-handed mode:"
-msgstr "Regim pentru stângaci:"
+msgstr "Kreisās rokas režīms:"
 
 #: ui/main.qml:118
 #, kde-format
 msgid "Area:"
-msgstr "Zonă:"
+msgstr "Zona:"
 
 #: ui/main.qml:206
 #, kde-format
 msgid "Resize the tablet area"
-msgstr "Redimensionează zona tabletei"
+msgstr "Mainīt planšetes zonas izmēru"
 
 #: ui/main.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr "Blochează raportul de aspect"
+msgstr "Slēgt malu attiecību"
 
 #: ui/main.qml:238
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1,%2 – %3×%4"
 
 #: ui/main.qml:246
 #, kde-format
 msgid "Tool Button 1"
-msgstr "Buton unealtă 1"
+msgstr "Rīka taustiņš 1"
 
 #: ui/main.qml:247
 #, kde-format
 msgid "Tool Button 2"
-msgstr "Buton unealtă 2"
+msgstr "Rīka taustiņš 2"
 
 #: ui/main.qml:248
 #, kde-format
 msgid "Tool Button 3"
-msgstr "Buton unealtă 3"
+msgstr "Rīka taustiņš 3"
 
 #: ui/main.qml:291
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
-msgstr "Planșetă"
+msgstr "Planšete"
 
 #: ui/main.qml:302
 #, kde-format
 msgid "None"
-msgstr "Niciuna"
+msgstr "Nav"
 
 #: ui/main.qml:324
 #, kde-format
 msgid "Button %1:"
-msgstr "Buton %1:"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Sergiu Bivol"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "sergiu@cip.md"
-
-#~ msgid "Tablet"
-#~ msgstr "Tabletă"
-
-#~ msgid "Configure drawing tablets"
-#~ msgstr "Configurează tabletele grafice"
+msgstr "Poga %1:"

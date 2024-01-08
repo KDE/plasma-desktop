@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2022-02-04 16:21+0000\n"
+"PO-Revision-Date: 2024-01-07 18:20+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
@@ -24,10 +24,9 @@ msgid "Other…"
 msgstr "Altul…"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "Alegeți gestionarul de fișiere implicit"
+msgstr "Alege gestionarul de arhive implicit"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
@@ -50,66 +49,61 @@ msgid "Select default map"
 msgstr "Alegeți harta implicită"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "Alegeți gestionarul de fișiere implicit"
+msgstr "Alege vizualizorul de imagini implicit"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "Alegeți harta implicită"
+msgstr "Alege lectorul audio implicit"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "Alege navigatorul implicit"
+msgstr "Alege vizualizorul PDF implicit"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
 msgid "Select default dialer application"
-msgstr "Alegeți aplicația de apelare implicită"
+msgstr "Alege aplicația de apelare implicită"
 
 #: components/componentchooserterminal.cpp:25
 #, kde-format
 msgid "Select default terminal emulator"
-msgstr "Alegeți emulatorul de terminal implicit"
+msgstr "Alege emulatorul de terminal implicit"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "Alegeți emulatorul de terminal implicit"
+msgstr "Alege redactorul de text implicit"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "Alegeți gestionarul de fișiere implicit"
+msgstr "Alege lectorul video implicit"
 
 #: ui/ComponentOverlay.qml:52
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Detalii"
 
 #: ui/ComponentOverlay.qml:82
 #, kde-format
 msgid "This application can also open these file types:"
-msgstr ""
+msgstr "Această aplicație poate deschide și aceste tipuri de fișiere:"
 
 #: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (acum se deschide în %2)"
 
 #: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Deschide toate în %1"
 
 #: ui/ComponentOverlay.qml:127
 #, kde-format
@@ -117,18 +111,19 @@ msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
 msgstr ""
+"Această aplicație nu anunță suport pentru următoarele tipuri de fișier, dar "
+"s-ar putea să le poată deschide oricum:"
 
 #: ui/ComponentOverlay.qml:143
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr ""
+msgstr "Forțează deschiderea tuturor în %1"
 
 #: ui/ComponentOverlay.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Manually…"
-msgstr "Configurează"
+msgstr "Configurează manual…"
 
 #: ui/main.qml:17
 #, kde-format
@@ -136,12 +131,14 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"„%1” pare să nu susțină următoarele tipuri MIME asociate cu acest tip de "
+"aplicații: %2"
 
 #: ui/main.qml:46
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: ui/main.qml:50
 #, kde-format
@@ -157,50 +154,50 @@ msgstr "Client de poștă:"
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
-msgstr ""
+msgstr "Numere de telefon:"
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 #: ui/main.qml:121
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Vizualizor de imagini:"
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Lector audio:"
 
 #: ui/main.qml:168
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Lector video:"
 
 #: ui/main.qml:190
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Documente"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Redactor de text:"
 
 #: ui/main.qml:217
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "Vizualizor PDF:"
 
 #: ui/main.qml:239
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Utilitare"
 
 #: ui/main.qml:244
 #, kde-format
@@ -213,14 +210,12 @@ msgid "Terminal emulator:"
 msgstr "Emulator de terminal:"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "Gestionar de fișiere:"
+msgstr "Gestionar de arhive:"
 
 #: ui/main.qml:301
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Hartă:"

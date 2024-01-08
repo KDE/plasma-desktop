@@ -1,0 +1,81 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+# Māris Nartišs <maris.kde@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"PO-Revision-Date: 2024-01-07 14:08+0200\n"
+"Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
+"Language-Team: \n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 22.12.3\n"
+
+#: sortedactivitiesmodel.cpp:301
+#, kde-format
+msgid "Used some time ago"
+msgstr "Izmantots pirms kāda laika"
+
+#: sortedactivitiesmodel.cpp:317
+#, kde-format
+msgid "Used more than a year ago"
+msgstr "Izmantots pirms vairāk nekā gada"
+
+#: sortedactivitiesmodel.cpp:318
+#, kde-format
+msgctxt "amount in months"
+msgid "Used a month ago"
+msgid_plural "Used %1 months ago"
+msgstr[0] "Izmantots pirms %1 mēneša"
+msgstr[1] "Izmantots pirms %1 mēnešiem"
+msgstr[2] "Izmantots pirms %1 mēnešiem"
+
+#: sortedactivitiesmodel.cpp:319
+#, kde-format
+msgctxt "amount in days"
+msgid "Used a day ago"
+msgid_plural "Used %1 days ago"
+msgstr[0] "Izmantots pirms %1 dienas"
+msgstr[1] "Izmantots pirms %1 dienām"
+msgstr[2] "Izmantots pirms %1 dienām"
+
+#: sortedactivitiesmodel.cpp:320
+#, kde-format
+msgctxt "amount in hours"
+msgid "Used an hour ago"
+msgid_plural "Used %1 hours ago"
+msgstr[0] "Izmantots pirms %1 stundas"
+msgstr[1] "Izmantots pirms %1 stundām"
+msgstr[2] "Izmantots pirms %1 stundām"
+
+#: sortedactivitiesmodel.cpp:321
+#, kde-format
+msgctxt "amount in minutes"
+msgid "Used a minute ago"
+msgid_plural "Used %1 minutes ago"
+msgstr[0] "Izmantots pirms %1 minūtes"
+msgstr[1] "Izmantots pirms %1 minūtēm"
+msgstr[2] "Izmantots pirms %1 minūtēm"
+
+#: sortedactivitiesmodel.cpp:322
+#, kde-format
+msgid "Used a moment ago"
+msgstr "Izmantots pirms brīža"
+
+#: switcherbackend.cpp:168
+#, kde-format
+msgid "Walk through activities"
+msgstr "Iet cauri aktivitātēm"
+
+#: switcherbackend.cpp:173
+#, kde-format
+msgid "Walk through activities (Reverse)"
+msgstr "Iet cauri aktivitātēm (apgrieztā secībā)"

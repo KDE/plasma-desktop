@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2011.
-# Sergiu Bivol <sergiu@cip.md>, 2009, 2010, 2012, 2013, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2009, 2010, 2012, 2013, 2020, 2021, 2022, 2023, 2024.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011, 2012.
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-27 01:35+0000\n"
-"PO-Revision-Date: 2022-12-28 21:17+0000\n"
+"PO-Revision-Date: 2024-01-07 18:31+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -72,16 +72,14 @@ msgid "File types:"
 msgstr "Tipuri de fișier:"
 
 #: package/contents/ui/ConfigFilter.qml:82
-#, fuzzy, kde-format
-#| msgid "Show All Files"
+#, kde-format
 msgid "Show hidden files:"
-msgstr "Arată toate fișierele"
+msgstr "Arată fișierele ascunse:"
 
 #: package/contents/ui/ConfigFilter.qml:132
-#, fuzzy, kde-format
-#| msgid "File type"
+#, kde-format
 msgid "File Type"
-msgstr "Tip fișier"
+msgstr "Tip de fișier"
 
 #: package/contents/ui/ConfigFilter.qml:133
 #, kde-format
@@ -101,7 +99,7 @@ msgstr "Deselectează tot"
 #: package/contents/ui/ConfigFilter.qml:223
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "Schimbă ordinea sortării"
 
 #: package/contents/ui/ConfigIcons.qml:64
 #, kde-format
@@ -383,7 +381,7 @@ msgstr "Introdu titlu personalizat…"
 #: package/contents/ui/ConfigOverlay.qml:86
 #, kde-format
 msgid "Click and drag to rotate"
-msgstr ""
+msgstr "Apasă și trage pentru rotire"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format
@@ -412,6 +410,9 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"Sunt multe fișiere și dosare pe birou. Aceasta poate provoca defecțiuni și "
+"probleme de performanță. Încercați să mutați unele dintre acestea în altă "
+"parte."
 
 #: package/contents/ui/main.qml:390
 #, kde-format

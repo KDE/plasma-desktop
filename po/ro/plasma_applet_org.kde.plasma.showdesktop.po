@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2009, 2015, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2009, 2015, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2022-12-28 21:21+0000\n"
+"PO-Revision-Date: 2023-04-10 18:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -25,9 +25,7 @@ msgid "Restore All Minimized Windows"
 msgstr "Restaurează toate ferestrele minimizate"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
 msgstr "Minimizează toate ferestrele"
@@ -39,11 +37,10 @@ msgid "Restores the previously minimized windows"
 msgstr "Restaurează ferestrele minimizate anterior"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgid "Show the desktop by moving windows aside"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr "Arată biroul prin mutarea ferestrelor într-o parte"
+msgstr "Arată biroul prin minimizarea tuturor ferestrelor"
 
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
@@ -64,11 +61,10 @@ msgid "Moves windows back to their original positions"
 msgstr "Mută ferestrele înapoi la pozițiile lor originale"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgid "Show the desktop by moving windows aside"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr "Arată biroul prin mutarea ferestrelor într-o parte"
+msgstr "Arată temporar biroul prin mutarea ferestrelor din cale"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Arată biroul"

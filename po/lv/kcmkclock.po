@@ -5,31 +5,32 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-08 08:48+0000\n"
-"PO-Revision-Date: 2011-07-07 23:13+0300\n"
-"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2023-11-21 17:32+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Andris Maziks, Māris Nartišs"
+msgstr "Andris Maziks, Māris Nartišs, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "andzha@latnet.lv, maris.kde@gmail.com"
+msgstr "andzha@latnet.lv, maris.kde@gmail.com, toms.trasuns@posteo.net"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: dateandtime.ui:22
@@ -39,17 +40,15 @@ msgstr "Datums un laiks"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
 #: dateandtime.ui:30
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically:"
+#, kde-format
 msgid "Set date and time &automatically"
-msgstr "Automātiski iest&atīt datumu un laiku:"
+msgstr "&Automātiski iestatīt datumu un laiku"
 
 #. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
 #: dateandtime.ui:53
-#, fuzzy, kde-format
-#| msgid "Time server:"
+#, kde-format
 msgid "&Time server:"
-msgstr "Laika serveris:"
+msgstr "&Laika serveris:"
 
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
 #: dateandtime.ui:86
@@ -68,7 +67,7 @@ msgstr "Laika josla"
 #, kde-format
 msgid "To change the local time zone, select your area from the list below."
 msgstr ""
-"Lai izmainītu laika joslu, izvēlieties jūsu reģionu no zemāk esošā saraksta."
+"Lai mainītu laika joslu, izvēlieties jūsu reģionu no zemāk esošā saraksta."
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
 #: dateandtime.ui:151
@@ -80,7 +79,7 @@ msgstr "Pašreizējā laika josla:"
 #: dateandtime.ui:161
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Meklēt..."
 
 #: dtime.cpp:60
 #, kde-format
@@ -88,8 +87,8 @@ msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
-"Nav atrasta NTP utilīta. Instalējiet 'ntpdate' vai 'rdate' komandu, lai "
-"aktivētu automātisko datumu un laiku atjaunināšanu."
+"Nav atrasts NTP rīks. Instalējiet „ntpdate“ vai „rdate“ komandu, lai "
+"ieslēgtu automātisku datumu un laiku atjaunināšanu."
 
 #: dtime.cpp:89
 #, kde-format
@@ -98,35 +97,31 @@ msgid ""
 "seconds field to change the relevant value, either using the up and down "
 "buttons to the right or by entering a new value."
 msgstr ""
-"Šeit jūs varat mainīt sistēmas laiku. Ieklikšķiniet stundu, minūšu vai "
-"sekunžu logā, lai mainītu atbilstošo lielumu, vai nu izmantojot augšup un "
-"lejup pogas pa labi vai ievadiet jaunu vērtību."
+"Šeit varat mainīt sistēmas laiku. Ieklikšķiniet stundu, minūšu vai sekunžu "
+"logā, lai mainītu atbilstošo lielumu, vai nu izmantojot augšup un lejup "
+"pogas pa labi vai ievadiet jaunu vērtību."
 
 #: dtime.cpp:118
-#, fuzzy, kde-format
-#| msgid "Current local time zone:"
+#, kde-format
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
-msgstr "Pašreizējā laika josla:"
+msgstr "Pašreizējā laika josla: %1"
 
 #: dtime.cpp:120
-#, fuzzy, kde-format
-#| msgid "Current local time zone: %1 (%2)"
+#, kde-format
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
-msgstr "Pašreizējā laika josla: %1 (%2)"
+msgstr "Pašreizējā vietējā laika josla: %1 (%2)"
 
 #: dtime.cpp:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
-#| "north-america.pool.ntp.org,oceania.pool.ntp.org"
+#, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
 "pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
 msgstr ""
-"Publisks laika serveris (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
-"north-america.pool.ntp.org,oceania.pool.ntp.org"
+"Publisks laika serveris (pool.ntp.org),        asia.pool.ntp.org,        "
+"europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool."
+"ntp.org"
 
 #: dtime.cpp:276
 #, kde-format
@@ -159,10 +154,10 @@ msgid ""
 "administrator."
 msgstr ""
 "<h1>Datums un laiks</h1> Šajā sistēmas iestatījumu modulī var iestatīt "
-"sistēmas datumu un laiku. Tādēļ, ka šie iestatījumi ietekmē ne tikai jūs kā "
+"sistēmas datumu un laiku. Tā kā šie iestatījumi ietekmē ne tikai jūs kā "
 "lietotāju, bet arī visu sistēmu, jūs varat mainīt šos iestatījumus tikai "
-"administratora režīmā. Ja jums nav root paroles, bet vēlaties koriģēt "
-"sistēmas laiku, lūdzu sazinieties ar jūsu sistēmas administratoru."
+"administratora režīmā. Ja jums nav administratora piekļuves paroles, bet "
+"vēlaties koriģēt sistēmas laiku, sazinieties ar jūsu sistēmas administratoru."
 
 #: k4timezonewidget.cpp:65
 #, kde-format
@@ -189,19 +184,17 @@ msgstr "Neizdevās autentificēties/izpildīt darbību: %1, %2"
 #: main.cpp:109
 #, kde-format
 msgid "Unable to change NTP settings"
-msgstr ""
+msgstr "Neizdodas mainīt NTP iestatījumus"
 
 #: main.cpp:120
-#, fuzzy, kde-format
-#| msgid "Unable to contact time server: %1."
+#, kde-format
 msgid "Unable to set current time"
-msgstr "Nav iespējams pieslēgties laika serverim: %1."
+msgstr "Nav iespējams pieslēgties laika serverim."
 
 #: main.cpp:130
-#, fuzzy, kde-format
-#| msgid "Unable to contact time server: %1."
+#, kde-format
 msgid "Unable to set timezone"
-msgstr "Nav iespējams pieslēgties laika serverim: %1."
+msgstr "Neizdodas saglabāt laika zonu"
 
 #~ msgid "KDE Clock Control Module"
 #~ msgstr "KDE pulksteņa vadības modulis"
@@ -236,7 +229,7 @@ msgstr "Nav iespējams pieslēgties laika serverim: %1."
 #~ "administrator."
 #~ msgstr ""
 #~ "<h1>Datums un laiks</h1> Šis vadības modulis var tikt izmantots, lai "
-#~ "iestatītu sistēmas datumu un laiku. Tādēļ, ka šie iestatījumi ietekmē ne "
+#~ "iestatītu sistēmas datumu un laiku. Tā kā ka šie iestatījumi ietekmē ne "
 #~ "tikai jūs kā lietotāju, bet arī visu sistēmu, jūs varat mainīt šos "
 #~ "iestatījumus tikai administratora režīmā. Ja jums nav root paroles, bet "
 #~ "vēlaties koriģēt sistēmas laiku, lūdzu sazinieties ar jūsu sistēmas "

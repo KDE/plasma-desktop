@@ -1,0 +1,97 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-07-02 02:36+0000\n"
+"PO-Revision-Date: 2023-10-20 10:10+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.1\n"
+
+#: ui/main.qml:31
+#, kde-format
+msgid "Position on screen:"
+msgstr "Pozīcija ekrānā:"
+
+#: ui/main.qml:35
+#, kde-format
+msgid "Top"
+msgstr "Augša"
+
+#: ui/main.qml:42
+#, kde-format
+msgid "Center"
+msgstr "Centrs"
+
+#: ui/main.qml:55
+#, kde-format
+msgid "Activation:"
+msgstr "Parādīšana:"
+
+#: ui/main.qml:58
+#, kde-format
+msgctxt "@option:check"
+msgid "Activate when pressing any key on the desktop"
+msgstr "Parādīt „KRunner“ logu, nospiežot jebkuru tastatūras taustiņu"
+
+#: ui/main.qml:71
+#, kde-format
+msgid "History:"
+msgstr "Vēsture:"
+
+#: ui/main.qml:74
+#, kde-format
+msgctxt "@option:check"
+msgid "Disabled"
+msgstr "Izslēgts"
+
+#: ui/main.qml:79
+#, kde-format
+msgctxt "@option:check The thing being enabled is search history"
+msgid "Enable suggestions"
+msgstr "Ieslēgt ieteikumus"
+
+#: ui/main.qml:84
+#, kde-format
+msgctxt "@option:check The thing being enabled is search history"
+msgid "Enabled auto-complete"
+msgstr "Ieslēgt automātisko pabeigšanu"
+
+#: ui/main.qml:92
+#, kde-format
+msgid "Clear History…"
+msgstr "Dzēst vēsturi..."
+
+#: ui/main.qml:115
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for all activities"
+msgid "For all activities"
+msgstr "Visām aktivitātēm"
+
+#: ui/main.qml:127
+#, kde-format
+msgctxt "@item:inmenu delete krunner history for this activity"
+msgid "For activity \"%1\""
+msgstr "Aktivitātei „%1“"
+
+#: ui/main.qml:144
+#, kde-format
+msgctxt "@label"
+msgid "Plugins:"
+msgstr "Papildinājumi:"
+
+#: ui/main.qml:148
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Enabled Search Plugins…"
+msgstr "Konfigurēt ieslēgtos meklēšanas papildinājumus..."

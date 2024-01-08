@@ -1,0 +1,122 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"PO-Revision-Date: 2023-12-28 16:32+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Krāsu shēmas nosaukums"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "Datnes atvērt ar vienu klikšķi"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "Izskata un uzvedības vispārīgā pakotne"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "Izskata un uzvedības vispārīgās pakotnes, alternatīvas"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "Animāciju ātrums"
+
+#: ui/main.qml:33
+#, kde-format
+msgid "Theme:"
+msgstr "Motīvs:"
+
+#: ui/main.qml:90
+#, kde-format
+msgid "Animation speed:"
+msgstr "Animāciju ātrums:"
+
+#: ui/main.qml:99
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "Lēns"
+
+#: ui/main.qml:105
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "Zibenīgs"
+
+#: ui/main.qml:119
+#, kde-format
+msgid "Change Wallpaper…"
+msgstr "Mainīt darbvirsmas tapeti..."
+
+#: ui/main.qml:126
+#, kde-format
+msgid "More Appearance Settings…"
+msgstr "Vairāk izskata iestatījumu..."
+
+#: ui/main.qml:140
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "Klikšķis uz datnes vai mapes:"
+
+#: ui/main.qml:148
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "Tās atlasa"
+
+#: ui/main.qml:153
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "Lai atvērtu, jāizmanto dubultklikšķis"
+
+#: ui/main.qml:177
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Tās atver"
+
+#: ui/main.qml:182
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "Atlasa, klikšķinot uz vienības atlasīšanas marķiera"
+
+#: ui/main.qml:206
+#, kde-format
+msgid "More Behavior Settings…"
+msgstr "Vairāk uzvedības iestatījumu..."
+
+#: ui/main.qml:218
+#, kde-format
+msgid "Most Used Pages:"
+msgstr "Visbiežāk atvērtās lapas:"

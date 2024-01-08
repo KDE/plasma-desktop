@@ -1,26 +1,22 @@
-# Traducerea kcmkded.po în Română
-# translation of kcmkded.po to Romanian
-# translation of @PACKAGE.po to @LANGUAGE
-# Copyright (C) 2003, 2004, 2008 Free Software Foundation, Inc.
-# Claudiu Costin <claudiuc@kde.org>, 2003, 2004.
-# Sergiu Bivol <sergiu@cip.md>, 2008.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2020.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Sergiu Bivol <sergiu@cip.md>, 2023, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmkded\n"
+"Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2020-09-20 11:46+0100\n"
+"PO-Revision-Date: 2024-01-07 18:23+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -43,23 +39,19 @@ msgid "Failed to start service."
 msgstr "Pornirea serviciului a eșuat."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"Notificarea gestionarului de servicii KDE (kded5) despre modificări salvate "
+"Notificarea gestionarului de servicii KDE (kded6) despre modificări salvate "
 "a eșuat: %1"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Gestionarul de servicii de fundal (kded5) nu rulează momentan. Asigurați-vă "
+"Gestionarul de servicii de fundal (kded6) nu rulează momentan. Asigurați-vă "
 "că e instalat corect."
 
 #: ui/main.qml:46
@@ -72,16 +64,13 @@ msgstr ""
 "utile în mediul actual."
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Unele servicii au fost pornite/oprite automat când gestionarul de servicii "
-"de fundal (kded5) a fost repornit pentru a vă aplica modificările."
+"de fundal (kded6) a fost repornit pentru a vă aplica modificările."
 
 #: ui/main.qml:97
 #, kde-format

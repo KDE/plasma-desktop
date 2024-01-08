@@ -1,30 +1,28 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-07 01:42+0000\n"
-"PO-Revision-Date: 2021-07-25 13:44+0100\n"
+"PO-Revision-Date: 2024-01-07 18:17+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: ui/ActivityEditor.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Activity Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings for %1"
-msgstr "Configurări activitate"
+msgstr "Configurări activitate pentru %1"
 
 #: ui/ActivityEditor.qml:23
 #, kde-format
@@ -36,25 +34,22 @@ msgstr "Creează activitate nouă"
 #, kde-format
 msgctxt "@action:button as in, 'save changes'"
 msgid "Save"
-msgstr ""
+msgstr "Salvează"
 
 #: ui/ActivityEditor.qml:57
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label:chooser"
 msgid "Icon:"
 msgstr "Pictogramă:"
 
 #: ui/ActivityEditor.qml:68
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Denumire:"
 
 #: ui/ActivityEditor.qml:74
-#, fuzzy, kde-format
-#| msgid "Description:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Description:"
 msgstr "Descriere:"
@@ -63,29 +58,29 @@ msgstr "Descriere:"
 #, kde-format
 msgctxt "@option:check"
 msgid "While on this activity, allow:"
-msgstr ""
+msgstr "În timpul aflării în această activitate, permite:"
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
 msgid "Tracking file and app use"
-msgstr ""
+msgstr "Evidența utilizării fișierelor și aplicațiilor"
 
 #: ui/ActivityEditor.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically turning off the screen"
-msgstr ""
+msgstr "Deconectarea automată a ecranului"
 
 #: ui/ActivityEditor.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically shutting down or sleeping"
-msgstr ""
+msgstr "Oprirea sau adormirea automată"
 
 #: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
-msgstr "Scurtătură pentru comutare:"
+msgstr "Scurtătură pentru schimbare:"
 
 #: ui/main.qml:57
 #, kde-format
@@ -105,16 +100,13 @@ msgid "Delete Activity"
 msgstr "Șterge activitatea"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to delete '%1'?"
+#, kde-format
 msgctxt "%1 is an activity name"
 msgid "Do you want to delete activity '%1'?"
-msgstr "Sigur doriți să ștergeți „%1”?"
+msgstr "Sigur doriți să ștergeți activitatea „%1”?"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete Activity"
+#, kde-format
 msgid "Delete Activity"
 msgstr "Șterge activitatea"
 
