@@ -1,12 +1,12 @@
+# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 12:20+0000\n"
-"PO-Revision-Date: 2023-02-23 18:20+0900\n"
+"PO-Revision-Date: 2024-01-09 19:23+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: ui/main.qml:24
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "ホバー時に情報ツールチップを表示"
 #: ui/main.qml:59 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
-msgstr "状態の変更時の視覚フィードバックを表示"
+msgstr "状態変更時に視覚フィードバックを表示"
 
 #: ui/main.qml:77
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "即時"
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr "ファイルやフォルダをクリックした際の挙動:"
+msgstr "ファイル/フォルダをクリックした際の挙動:"
 
 #: ui/main.qml:130
 #, kde-format
@@ -119,19 +119,17 @@ msgstr "1ページ分上下にスクロール"
 #: ui/main.qml:216
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr "中クリックでクリックした位置にスクロール"
+msgstr "中クリックされた位置にスクロール"
 
 #: ui/main.qml:229
-#, fuzzy, kde-format
-#| msgid "Middle Click:"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "中クリック:"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid "Paste selected text"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
@@ -181,21 +179,20 @@ msgstr ""
 "やすくなります。"
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double-click interval:"
-msgstr "ダブルクリックで開く"
+msgstr "ダブルクリックの間隔:"
 
 #: ui/main.qml:343
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] ""
+msgstr[0] "%1 ミリ秒"
 
 #: ui/main.qml:347
 #, kde-format
 msgid "msec"
-msgstr ""
+msgstr "ミリ秒"
 
 #: ui/main.qml:361
 #, kde-format
@@ -203,6 +200,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"この期間にされた2回のクリックがダブルクリックと見なされます。いくつかのアプリ"
+"ケーションはこの設定を尊重しないかもしれません。"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -220,16 +219,13 @@ msgstr "アニメーションの速度"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr ""
-"スクロールバーのスクロールエリアを左クリックしてスクロールバーを1ページ分動か"
-"す"
+msgstr "スクロールエリアを左クリックしてスクロールバーを1ページ分動かす"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double click interval"
-msgstr "ダブルクリックで開く"
+msgstr "ダブルクリックの間隔"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
