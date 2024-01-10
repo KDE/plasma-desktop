@@ -41,6 +41,9 @@ class Bug477220Test(unittest.TestCase):
 
         options = AppiumOptions()
         options.set_capability("app", "plasmashell -p org.kde.plasma.desktop --no-respawn")
+        options.set_capability("environ", {
+            "QT_LOGGING_RULES": "kf.kirigami.platform.warning=false",
+        })
         options.set_capability("timeouts", {'implicit': 30000})
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
