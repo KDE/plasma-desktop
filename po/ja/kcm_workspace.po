@@ -1,12 +1,12 @@
+# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 00:51+0000\n"
-"PO-Revision-Date: 2023-02-23 18:20+0900\n"
+"PO-Revision-Date: 2024-01-09 19:23+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/main.qml:27
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "ホバー時に情報ツールチップを表示"
 #: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
-msgstr "状態の変更時の視覚フィードバックを表示"
+msgstr "状態変更時に視覚フィードバックを表示"
 
 #: package/contents/ui/main.qml:80
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "即時"
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr "ファイルやフォルダをクリックした際の挙動:"
+msgstr "ファイル/フォルダをクリックした際の挙動:"
 
 #: package/contents/ui/main.qml:125
 #, kde-format
@@ -111,7 +111,7 @@ msgstr "1ページ分上下にスクロール"
 #: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr "中クリックでクリックした位置にスクロール"
+msgstr "中クリックされた位置にスクロール"
 
 #: package/contents/ui/main.qml:198
 #, kde-format
@@ -190,9 +190,7 @@ msgstr "アニメーションの速度"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr ""
-"スクロールバーのスクロールエリアを左クリックしてスクロールバーを1ページ分動か"
-"す"
+msgstr "スクロールエリアを左クリックしてスクロールバーを1ページ分動かす"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

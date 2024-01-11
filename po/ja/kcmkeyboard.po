@@ -1,4 +1,5 @@
 # translation of kcmkeyboard.po to Japanese
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2002.
 # Ryuichi Kakuda <ryuk@user.script.nu>, 2004.
@@ -9,14 +10,14 @@
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2007.
 # Jumpei Ogawa <phanective@gmail.com>, 2010.
 # Jumpei Ogawa (phanect) <phanective@gmail.com>, 2010.
-# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2006, 2015.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2006, 2015, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-05 00:46+0000\n"
-"PO-Revision-Date: 2015-05-22 22:19-0700\n"
+"PO-Revision-Date: 2024-01-09 22:19-0800\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -26,41 +27,35 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Jumpei Ogawa"
+msgstr "Jumpei Ogawa, Ryuichi Yamada"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "phanective@gmail.com"
+msgstr "phanective@gmail.com, ryuichi_ya220@outlook.jp"
 
 #: bindings.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "tooltip title"
-#| msgid "Keyboard Layout"
+#, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "キーボード配列"
+msgstr "キーボードレイアウトスイッチャー"
 
 #: bindings.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "tooltip title"
-#| msgid "Keyboard Layout"
+#, kde-format
 msgid "Switch to Next Keyboard Layout"
-msgstr "キーボード配列"
+msgstr "次のキーボードレイアウトに切り替え"
 
 #: bindings.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "tooltip title"
-#| msgid "Keyboard Layout"
+#, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "キーボード配列"
+msgstr "キーボードレイアウト %1 に切り替え"
 
 #: flags.cpp:122
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "layout - variant"
 msgid "%1 - %2"
 msgstr "%1 - %2"
@@ -75,34 +70,34 @@ msgstr "レイアウトを追加"
 #: kcm_add_layout_dialog.ui:20
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "検索…"
 
 #. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
 #: kcm_add_layout_dialog.ui:45
 #, kde-format
 msgid "Shortcut:"
-msgstr ""
+msgstr "ショートカット:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelLabel)
 #: kcm_add_layout_dialog.ui:55
 #, kde-format
 msgid "Label:"
-msgstr ""
+msgstr "ラベル:"
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
 #: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "プレビュー"
 
 #: kcm_keyboard.cpp:32
-#, fuzzy, kde-format
+#, kde-format
 msgid "KDE Keyboard Control Module"
-msgstr "KDE キーボードコントロールモジュール"
+msgstr "KDE キーボード制御モジュール"
 
 #: kcm_keyboard.cpp:36
-#, fuzzy, kde-format
+#, kde-format
 msgid "(c) 2010 Andriy Rysin"
 msgstr "(c) 2010 Andriy Rysin"
 
@@ -152,49 +147,50 @@ msgid ""
 "If you select \"Application\" or \"Window\" switching policy, changing the "
 "keyboard layout will only affect the current application or window."
 msgstr ""
+"「アプリケーション」か「ウィンドウ」を選択した場合、キーボードレイアウトの変"
+"更は使用中のアプリケーションもしくはウィンドウにのみ適用されます。"
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:105
 #, kde-format
 msgid "Switching Policy"
-msgstr ""
+msgstr "切り替えポリシー"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
 #: kcm_keyboard.ui:111
 #, kde-format
 msgid "&Global"
-msgstr ""
+msgstr "グローバル(&G)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
 #: kcm_keyboard.ui:124
 #, kde-format
 msgid "&Desktop"
-msgstr ""
+msgstr "デスクトップ(&D)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
 #: kcm_keyboard.ui:134
 #, kde-format
 msgid "&Application"
-msgstr ""
+msgstr "アプリケーション(&A)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
 #: kcm_keyboard.ui:144
 #, kde-format
 msgid "&Window"
-msgstr ""
+msgstr "ウィンドウ(&W)"
 
 #. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
 #: kcm_keyboard.ui:157
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "レイアウトを設定"
+msgstr "レイアウトを切り替えるショートカット"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:163
 #, kde-format
 msgid "Main shortcuts:"
-msgstr ""
+msgstr "メイン:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
 #: kcm_keyboard.ui:176
@@ -217,13 +213,13 @@ msgstr "なし"
 #: kcm_keyboard.ui:186 kcm_keyboard.ui:216
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm_keyboard.ui:193
 #, kde-format
 msgid "3rd level shortcuts:"
-msgstr ""
+msgstr "第三階層のレイアウト:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
 #: kcm_keyboard.ui:206
@@ -237,7 +233,7 @@ msgstr ""
 #: kcm_keyboard.ui:223
 #, kde-format
 msgid "Alternative shortcut:"
-msgstr ""
+msgstr "代替:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
 #: kcm_keyboard.ui:236
@@ -258,39 +254,37 @@ msgstr "レイアウトを設定"
 #: kcm_keyboard.ui:275
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "追加"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
 #: kcm_keyboard.ui:285
-#, fuzzy, kde-format
-#| msgid "Remove Layout"
+#, kde-format
 msgid "Remove"
-msgstr "レイアウトを破棄"
+msgstr "削除"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
 #: kcm_keyboard.ui:295
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "上へ移動"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
 #: kcm_keyboard.ui:305
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "下へ移動"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
 #: kcm_keyboard.ui:350
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgid "Spare layouts"
-msgstr "レイアウトを設定"
+msgstr "予備のレイアウト"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm_keyboard.ui:382
 #, kde-format
 msgid "Main layout count:"
-msgstr ""
+msgstr "メインのレイアウトの数:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
 #: kcm_keyboard.ui:412
@@ -305,13 +299,13 @@ msgid "&Configure keyboard options"
 msgstr "キーボードオプションを設定(&C)"
 
 #: kcm_keyboard_widget.cpp:211
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "不明"
 
 #: kcm_keyboard_widget.cpp:213
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
@@ -326,10 +320,10 @@ msgstr "なし"
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
-msgstr[0] ""
+msgstr[0] "%1 ショートカット"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "layout map name"
 msgid "Map"
 msgstr "マップ"
@@ -340,57 +334,55 @@ msgid "Layout"
 msgstr "レイアウト"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
+#, kde-format
 msgid "Variant"
-msgstr "バリアント"
+msgstr "変種"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
+#, kde-format
 msgid "Label"
 msgstr "ラベル"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "%1 shortcut"
-#| msgid_plural "%1 shortcuts"
+#, kde-format
 msgid "Shortcut"
-msgstr "%1 個のショートカット"
+msgstr "ショートカット"
 
 #: kcm_view_models.cpp:273
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "variant"
 msgid "Default"
-msgstr "標準"
+msgstr "デフォルト"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcmmiscwidget.ui:31
 #, kde-format
 msgid "When a key is held:"
-msgstr ""
+msgstr "キーが押し続けられたとき:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
 #: kcmmiscwidget.ui:38
 #, kde-format
 msgid "&Show accented and similar characters "
-msgstr ""
+msgstr "アクセント付きの文字と類似の文字を表示(&S)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
 #: kcmmiscwidget.ui:45
 #, kde-format
 msgid "&Repeat the key"
-msgstr ""
+msgstr "キーを繰り返す(&R)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
 #: kcmmiscwidget.ui:52
 #, kde-format
 msgid "&Do nothing"
-msgstr ""
+msgstr "何もしない(&D)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmmiscwidget.ui:66
 #, kde-format
 msgid "Test area:"
-msgstr ""
+msgstr "テスト領域:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
 #: kcmmiscwidget.ui:73
@@ -402,26 +394,21 @@ msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "If supported, this option allows you to setup the state of NumLock after "
-#| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
-#| "configure KDE not to set NumLock state."
+#, kde-format
 msgid ""
 "If supported, this option allows you to setup the state of NumLock after "
 "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
 "configure Plasma not to set NumLock state."
 msgstr ""
-"<p>システムが対応している場合、このオプションで KDE 起動後の NumLock の状態を"
-"設定することができます。</p><p>NumLock をオンまたはオフに設定したり、あるい"
-"は KDE がその状態を変更しないようにすることもできます。</p>"
+"システムが対応している場合、このオプションで Plasma 起動後の NumLock の状態を"
+"設定することができます。<p>NumLock をオンまたはオフに設定したり、あるいは "
+"Plasma がその状態を変更しないようにすることもできます。"
 
 #. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:85
-#, fuzzy, kde-format
-#| msgid "NumLock on KDE Startup"
+#, kde-format
 msgid "NumLock on Plasma Startup"
-msgstr "KDE 起動時の NumLock"
+msgstr "Plasma 起動時の NumLock"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
 #: kcmmiscwidget.ui:97
@@ -440,7 +427,7 @@ msgstr "オフ(&N)"
 #: kcmmiscwidget.ui:111
 #, kde-format
 msgid "Leave unchan&ged"
-msgstr "変更に関与しない(&G)"
+msgstr "変更しない(&G)"
 
 # ACCELERATOR changed by translator
 #. i18n: ectx: property (text), widget (QLabel, lblRate)
@@ -477,13 +464,13 @@ msgstr ""
 #: kcmmiscwidget.ui:195
 #, kde-format
 msgid " repeats/s"
-msgstr ""
+msgstr " 回/秒"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
 #: kcmmiscwidget.ui:205
 #, kde-format
 msgid " ms"
-msgstr " ms"
+msgstr " ミリ秒"
 
 # ACCELERATOR changed by translator
 #. i18n: ectx: property (text), widget (QLabel, lblDelay)
@@ -493,19 +480,16 @@ msgid "&Delay:"
 msgstr "遅延(&Y):"
 
 #: tastenbrett/main.cpp:57
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr "キーボードリピート"
+msgstr "キーボードのプレビュー"
 
 #: tastenbrett/main.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "tooltip title"
-#| msgid "Keyboard Layout"
+#, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "キーボード配列"
+msgstr "キーボードレイアウトの可視化"
 
 #: tastenbrett/main.cpp:144
 #, kde-format
