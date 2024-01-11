@@ -243,9 +243,9 @@ SimpleKCM {
 
         Repeater {
             model: [
-                { value: 0x14b, text: i18nd("kcm_tablet", "Tool Button 1") },
-                { value: 0x14c, text: i18nd("kcm_tablet", "Tool Button 2") },
-                { value: 0x149, text: i18nd("kcm_tablet", "Tool Button 3") }
+                { value: 0x14b, text: i18nd("kcm_tablet", "Pen Button 1") },
+                { value: 0x14c, text: i18nd("kcm_tablet", "Pen Button 2") },
+                { value: 0x149, text: i18nd("kcm_tablet", "Pen Button 3") }
             ] // BTN_STYLUS, BTN_STYLUS2, BTN_STYLUS3
 
             delegate: KeySequenceItem {
