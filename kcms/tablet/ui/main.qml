@@ -32,6 +32,22 @@ SimpleKCM {
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
     }
 
+    actions: [
+        Kirigami.Action {
+            text: i18ndc("kcm_tablet", "Tests tablet functionality like the pen", "Test Tablet…")
+            icon.name: "tool_pen-symbolic"
+            onTriggered: {
+                const component = Qt.createComponent("Tester.qml");
+                if (component.status === Component.Ready) {
+                    const window = component.createObject(root, {tabletEvents});
+                    window.show();
+                } else {
+                    console.error(component.errorString());
+                }
+            }
+        }
+    ]
+
     Kirigami.FormLayout {
         id: form
         visible: combo.count > 0
