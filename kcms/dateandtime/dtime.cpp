@@ -43,7 +43,6 @@ Dtime::Dtime(QWidget *parent, bool haveTimeDated)
 {
     setupUi(this);
 
-    connect(setDateTimeAuto, &QCheckBox::toggled, this, &Dtime::serverTimeCheck);
     connect(setDateTimeAuto, &QCheckBox::toggled, this, &Dtime::configChanged);
 
     timeServerList->setEditable(false);
@@ -119,15 +118,6 @@ void Dtime::currentZone()
     } else {
         m_local->setText(i18nc("%1 is name of time zone, %2 is its abbreviation", "Current local time zone: %1 (%2)", displayName, abbreviation));
     }
-}
-
-void Dtime::serverTimeCheck()
-{
-    // Enable time and date if the ntp utility is missing
-    bool enabled = ntpUtility.isEmpty() || !setDateTimeAuto->isChecked();
-    cal->setEnabled(enabled);
-    timeEdit->setEnabled(enabled);
-    // kclock->setEnabled(enabled);
 }
 
 void Dtime::findNTPutility()

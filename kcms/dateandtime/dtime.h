@@ -47,7 +47,6 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void configChanged();
-    void serverTimeCheck();
     void timeout();
     void set_time();
     void changeDate(const QDate &);
