@@ -341,6 +341,37 @@ InputSequence Tablet::toolButtonMapping(const QString &deviceName, uint button) 
     return InputSequence(sequence);
 }
 
+QString Tablet::toSerializedCurve(const QPointF &controlPoint1, const QPointF &controlPoint2)
+{
+    // Turn (0,0) (1,1) to 0.0,0.0;1.0,1.0;
+    QString sCurve;
+    sCurve += QString::number(controlPoint1.x());
+    sCurve += ",";
+    sCurve += QString::number(controlPoint1.y());
+    sCurve += ";";
+
+    sCurve += QString::number(controlPoint2.x());
+    sCurve += ",";
+    sCurve += QString::number(controlPoint2.y());
+    sCurve += ";";
+
+    return sCurve;
+}
+
+QList<QPointF> Tablet::fromSerializedCurve(const QString &curve)
+{
+    const QStringList data = curve.split(';');
+
+    QList<QPointF> points;
+    for (const QString &pair : data) {
+        if (pair.indexOf(',') > -1) {
+            points.append({pair.section(',', 0, 0).toDouble(), pair.section(',', 1, 1).toDouble()});
+        }
+    }
+
+    return points;
+}
+
 DevicesModel *Tablet::toolsModel() const
 {
     return m_toolsModel;

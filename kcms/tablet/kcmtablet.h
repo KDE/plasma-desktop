@@ -40,6 +40,10 @@ public:
     Q_SCRIPTABLE InputSequence padButtonMapping(const QString &deviceName, uint button) const;
     Q_SCRIPTABLE InputSequence toolButtonMapping(const QString &deviceName, uint button) const;
 
+    Q_SCRIPTABLE QString toSerializedCurve(const QPointF &controlPoint1, const QPointF &controlPoint2);
+    // QML does not support QPair, so let's use a QList as a workaround
+    Q_SCRIPTABLE QList<QPointF> fromSerializedCurve(const QString &curve);
+
 Q_SIGNALS:
     void settingsRestored();
 
