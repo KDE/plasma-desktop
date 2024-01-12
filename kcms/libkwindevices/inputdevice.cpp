@@ -63,6 +63,7 @@ InputDevice::InputDevice(const QString &dbusName, QObject *parent)
     connect(this, &InputDevice::outputAreaChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::enabledChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::mapToWorkspaceChanged, this, &InputDevice::needsSaveChanged);
+    connect(this, &InputDevice::pressureCurveChanged, this, &InputDevice::needsSaveChanged);
 }
 
 void InputDevice::save()
@@ -73,12 +74,13 @@ void InputDevice::save()
     m_outputArea.save();
     m_enabled.save();
     m_mapToWorkspace.save();
+    m_pressureCurve.save();
 }
 
 bool InputDevice::isSaveNeeded() const
 {
     return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed() || m_enabled.changed()
-        || m_mapToWorkspace.changed();
+        || m_mapToWorkspace.changed() || m_pressureCurve.changed();
 }
 
 void InputDevice::defaults()
@@ -89,12 +91,13 @@ void InputDevice::defaults()
     m_outputArea.resetFromDefaults();
     m_enabled.resetFromDefaults();
     m_mapToWorkspace.resetFromDefaults();
+    m_pressureCurve.resetFromDefaults();
 }
 
 bool InputDevice::isDefaults() const
 {
     return m_leftHanded.isDefaults() && m_orientation.isDefaults() && m_outputName.isDefaults() && m_outputArea.isDefaults() && m_enabled.isDefaults()
-        && m_mapToWorkspace.isDefaults();
+        && m_mapToWorkspace.isDefaults() && m_pressureCurve.isDefaults();
 }
 
 void InputDevice::load()
@@ -105,6 +108,7 @@ void InputDevice::load()
     m_outputArea.resetFromSaved();
     m_enabled.resetFromSaved();
     m_mapToWorkspace.resetFromSaved();
+    m_pressureCurve.resetFromSaved();
 }
 
 void InputDevice::setOrientation(int ori)
@@ -135,4 +139,9 @@ void InputDevice::setEnabled(bool enabled)
 void InputDevice::setMapToWorkspace(bool mapToWorkspace)
 {
     m_mapToWorkspace.set(mapToWorkspace);
+}
+
+void InputDevice::setPressureCurve(const QString &curve)
+{
+    m_pressureCurve.set(curve);
 }
