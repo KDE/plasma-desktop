@@ -137,6 +137,7 @@ PlasmaCore.ToolTipArea {
     onIsWindowChanged: {
         if (model.IsWindow) {
             taskInitComponent.createObject(task);
+            updateAudioStreams({delay: false});
         }
     }
 
@@ -225,7 +226,7 @@ PlasmaCore.ToolTipArea {
         }
 
         var pa = pulseAudio.item;
-        if (!pa) {
+        if (!pa || !task.isWindow) {
             task.audioStreams = [];
             return;
         }
@@ -575,12 +576,11 @@ PlasmaCore.ToolTipArea {
             var component = Qt.createComponent("GroupExpanderOverlay.qml");
             component.createObject(task);
             component.destroy();
+            updateAudioStreams({delay: false});
         }
 
         if (!inPopup && !model.IsWindow) {
             taskInitComponent.createObject(task);
         }
-
-        updateAudioStreams({delay: false})
     }
 }
