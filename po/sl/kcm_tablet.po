@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2024-01-13 00:39+0000\n"
 "PO-Revision-Date: 2022-12-12 07:05+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -118,18 +118,21 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:246
-#, kde-format
-msgid "Tool Button 1"
-msgstr "Orodni gumb 1"
+#, fuzzy, kde-format
+#| msgid "Button %1:"
+msgid "Pen Button 1"
+msgstr "Gumb %1:"
 
 #: ui/main.qml:247
-#, kde-format
-msgid "Tool Button 2"
+#, fuzzy, kde-format
+#| msgid "Tool Button 2"
+msgid "Pen Button 2"
 msgstr "Orodni gumb 2"
 
 #: ui/main.qml:248
-#, kde-format
-msgid "Tool Button 3"
+#, fuzzy, kde-format
+#| msgid "Tool Button 3"
+msgid "Pen Button 3"
 msgstr "Orodni gumb 3"
 
 #: ui/main.qml:291
@@ -147,6 +150,9 @@ msgstr "Noben"
 #, kde-format
 msgid "Button %1:"
 msgstr "Gumb %1:"
+
+#~ msgid "Tool Button 1"
+#~ msgstr "Orodni gumb 1"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

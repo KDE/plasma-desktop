@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2021-02-04 18:23+0200\n"
+"PO-Revision-Date: 2024-01-11 17:11+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -39,22 +39,18 @@ msgid "Failed to start service."
 msgstr "Nepavyko paleisti tarnybos."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"Nepavyko pranešti KDE tarnybų tvarkytuvei (kded5) apie įrašytą pakeitimą: %1"
+"Nepavyko pranešti KDE tarnybų tvarkytuvei (kded6) apie įrašytą pakeitimą: %1"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Foninių tarnybų tvarkytuvė (kded5) šiuo metu neveikia. Įsitikinkite, kad ji "
+"Foninių tarnybų tvarkytuvė (kded6) šiuo metu neveikia. Įsitikinkite, kad ji "
 "teisingai įdiegta."
 
 #: ui/main.qml:46
@@ -67,16 +63,13 @@ msgstr ""
 "atveju, jei jos nėra naudingos esamoje aplinkoje."
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Kai kurios tarnybos buvo automatiškai paleistos/sustabdytos, kai foninių "
-"tarnybų tvarkytuvė (kded5) buvo paleista iš naujo, kad pritaikytų jūsų "
+"tarnybų tvarkytuvė (kded6) buvo paleista iš naujo, kad pritaikytų jūsų "
 "pakeitimus."
 
 #: ui/main.qml:97

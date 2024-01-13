@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2024-01-13 00:39+0000\n"
 "PO-Revision-Date: 2023-12-09 22:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -118,18 +118,21 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:246
-#, kde-format
-msgid "Tool Button 1"
-msgstr "Araç Düğmesi 1"
+#, fuzzy, kde-format
+#| msgid "Button %1:"
+msgid "Pen Button 1"
+msgstr "Düğme %1:"
 
 #: ui/main.qml:247
-#, kde-format
-msgid "Tool Button 2"
+#, fuzzy, kde-format
+#| msgid "Tool Button 2"
+msgid "Pen Button 2"
 msgstr "Araç Düğmesi 2"
 
 #: ui/main.qml:248
-#, kde-format
-msgid "Tool Button 3"
+#, fuzzy, kde-format
+#| msgid "Tool Button 3"
+msgid "Pen Button 3"
 msgstr "Araç Düğmesi 3"
 
 #: ui/main.qml:291
@@ -147,3 +150,6 @@ msgstr "Yok"
 #, kde-format
 msgid "Button %1:"
 msgstr "Düğme %1:"
+
+#~ msgid "Tool Button 1"
+#~ msgstr "Araç Düğmesi 1"

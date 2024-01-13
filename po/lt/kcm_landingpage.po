@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 01:43+0000\n"
-"PO-Revision-Date: 2022-12-12 00:48+0000\n"
+"PO-Revision-Date: 2024-01-11 17:24+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,24 +17,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Color scheme name"
-msgstr ""
+msgstr "Spalvų rinkinio pavadinimas"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:15
 #, kde-format
 msgid "Single click to open files"
-msgstr ""
+msgstr "Failų atvėrimui naudoti vienkartį spustelėjimą"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Global Look and Feel package"
-msgstr ""
+msgstr "Visuotinės išvaizdos ir turinio paketas"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
@@ -42,81 +43,81 @@ msgstr ""
 #: landingpage_kdeglobalssettings.kcfg:27
 #, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr ""
+msgstr "Visuotinės išvaizdos ir turinio paketas, papildomas"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:31
 #, kde-format
 msgid "Animation speed"
-msgstr ""
+msgstr "Animacijų greitis"
 
 #: ui/main.qml:33
 #, kde-format
 msgid "Theme:"
-msgstr ""
+msgstr "Apipavidalinimas:"
 
 #: ui/main.qml:90
 #, kde-format
 msgid "Animation speed:"
-msgstr ""
+msgstr "Animacijų greitis:"
 
 #: ui/main.qml:99
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
-msgstr ""
+msgstr "Lėtas"
 
 #: ui/main.qml:105
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
-msgstr ""
+msgstr "Žaibiškas"
 
 #: ui/main.qml:119
 #, kde-format
 msgid "Change Wallpaper…"
-msgstr ""
+msgstr "Keisti darbalaukio foną…"
 
 #: ui/main.qml:126
 #, kde-format
 msgid "More Appearance Settings…"
-msgstr ""
+msgstr "Daugiau išvaizdos nuostatų…"
 
 #: ui/main.qml:140
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr ""
+msgstr "Spustelėjimas ant failų ar aplankų:"
 
 #: ui/main.qml:148
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr ""
+msgstr "Juos žymės"
 
 #: ui/main.qml:153
 #, kde-format
 msgid "Open by double-clicking instead"
-msgstr ""
+msgstr "Vietoj to, jie bus atveriami spustelėjant du kartus"
 
 #: ui/main.qml:177
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr ""
+msgstr "Juos atvers"
 
 #: ui/main.qml:182
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr ""
+msgstr "Žymėti spustelėjant ant elemento žymėjimo žymės"
 
 #: ui/main.qml:206
 #, kde-format
 msgid "More Behavior Settings…"
-msgstr ""
+msgstr "Daugiau elgsenos nuostatų…"
 
 #: ui/main.qml:218
 #, kde-format
 msgid "Most Used Pages:"
-msgstr ""
+msgstr "Daugiausiai naudojami puslapiai:"
