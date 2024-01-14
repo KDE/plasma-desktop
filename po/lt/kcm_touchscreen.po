@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 01:37+0000\n"
-"PO-Revision-Date: 2022-12-19 00:48+0000\n"
+"PO-Revision-Date: 2024-01-13 11:32+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,35 +17,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: kcmtouchscreen.cpp:46
 #, kde-format
 msgid "Automatic"
-msgstr ""
+msgstr "Automatinis"
 
 #: kcmtouchscreen.cpp:52
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr ""
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: ui/main.qml:28
 #, kde-format
 msgid "No touchscreens found"
-msgstr ""
+msgstr "Nerasta jokio jutiklinio ekrano"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
-msgstr ""
+msgstr "Įrenginys:"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "Enabled:"
-msgstr ""
+msgstr "Įjungtas:"
 
 #: ui/main.qml:65
 #, kde-format
 msgid "Target display:"
-msgstr ""
+msgstr "Paskirties ekranas:"

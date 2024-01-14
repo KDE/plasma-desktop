@@ -1,24 +1,24 @@
 # Translation for kcm_tablet.po to Euskara/Basque (eu).
-# Copyright (C) 2022 This file is copyright:
+# Copyright (C) 2022-2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-13 00:39+0000\n"
-"PO-Revision-Date: 2022-12-11 17:36+0100\n"
+"PO-Revision-Date: 2024-01-13 10:26+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -120,22 +120,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pen Button 1"
-msgstr "%1 botoia:"
+msgstr "Arkatzaren 1. botoia"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Tool Button 2"
+#, kde-format
 msgid "Pen Button 2"
-msgstr "Tresnaren botoia 2"
+msgstr "Arkatzaren 2. botoia"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Tool Button 3"
+#, kde-format
 msgid "Pen Button 3"
-msgstr "Tresnaren botoia 3"
+msgstr "Arkatzaren 3. botoia"
 
 #: ui/main.qml:291
 #, kde-format

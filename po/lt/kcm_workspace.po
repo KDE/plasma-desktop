@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 12:20+0000\n"
-"PO-Revision-Date: 2022-12-28 01:06+0200\n"
+"PO-Revision-Date: 2024-01-13 11:50+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ui/main.qml:24
 #, kde-format
@@ -124,20 +124,18 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "Viduriniojo mygtuko spustelėjimas slenka į spustelėtą vietą"
 
 #: ui/main.qml:229
-#, fuzzy, kde-format
-#| msgid "Middle Click:"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "Viduriniojo mygtuko spustelėjimas:"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid "Paste selected text"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
-msgstr "Įdėti žymėtą tekstą"
+msgstr "Įdeda žymėtą tekstą"
 
 #: ui/main.qml:248
 #, kde-format
@@ -184,24 +182,23 @@ msgstr ""
 "būtų lengviau pritaikyti lietimo integraciją."
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double-click interval:"
-msgstr "Vietoj to, atverti naudojant dvikartį spustelėjimą"
+msgstr "Dvikarčio spustelėjimo intervalas:"
 
 #: ui/main.qml:343
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 msek."
+msgstr[1] "%1 msek."
+msgstr[2] "%1 msek."
+msgstr[3] "%1 msek."
 
 #: ui/main.qml:347
 #, kde-format
 msgid "msec"
-msgstr ""
+msgstr "msek."
 
 #: ui/main.qml:361
 #, kde-format
@@ -209,6 +206,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"Per šį laikotarpį du spustelėti spustelėjimai bus laikomi dvikarčiu "
+"spustelėjimu. Kai kurios programos gali nepaisyti šios nuostatos."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -232,10 +231,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double click interval"
-msgstr "Vietoj to, atverti naudojant dvikartį spustelėjimą"
+msgstr "Dvikarčio spustelėjimo intervalas"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

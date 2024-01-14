@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-13 00:39+0000\n"
-"PO-Revision-Date: 2022-12-19 00:48+0000\n"
+"PO-Revision-Date: 2024-01-13 12:43+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,133 +17,134 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Primary (default)"
-msgstr ""
+msgstr "Pirminė (numatytoji)"
 
 #: kcmtablet.cpp:33
 #, kde-format
 msgid "Portrait"
-msgstr ""
+msgstr "Stačiai"
 
 #: kcmtablet.cpp:34
 #, kde-format
 msgid "Landscape"
-msgstr ""
+msgstr "Gulsčiai"
 
 #: kcmtablet.cpp:35
 #, kde-format
 msgid "Inverted Portrait"
-msgstr ""
+msgstr "Invertuotai stačiai"
 
 #: kcmtablet.cpp:36
 #, kde-format
 msgid "Inverted Landscape"
-msgstr ""
+msgstr "Invertuotai gulsčiai"
 
 #: kcmtablet.cpp:86
 #, kde-format
 msgid "Follow the active screen"
-msgstr ""
+msgstr "Sekti paskui aktyvų ekraną"
 
 #: kcmtablet.cpp:94
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr ""
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:137
 #, kde-format
 msgid "Fit to Output"
-msgstr ""
+msgstr "Talpinti į išvestį"
 
 #: kcmtablet.cpp:138
 #, kde-format
 msgid "Fit Output in tablet"
-msgstr ""
+msgstr "Talpinti išvestį planšetėje"
 
 #: kcmtablet.cpp:139
 #, kde-format
 msgid "Custom size"
-msgstr ""
+msgstr "Tinkintas dydis"
 
 #: ui/main.qml:31
 #, kde-format
 msgid "No drawing tablets found."
-msgstr ""
+msgstr "Nerasta jokios piešimo planšetės."
 
 #: ui/main.qml:39
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
-msgstr ""
+msgstr "Įrenginys:"
 
 #: ui/main.qml:77
 #, kde-format
 msgid "Target display:"
-msgstr ""
+msgstr "Paskirties ekranas:"
 
 #: ui/main.qml:96
 #, kde-format
 msgid "Orientation:"
-msgstr ""
+msgstr "Orientacija:"
 
 #: ui/main.qml:108
 #, kde-format
 msgid "Left-handed mode:"
-msgstr ""
+msgstr "Kairės rankos veiksena:"
 
 #: ui/main.qml:118
 #, kde-format
 msgid "Area:"
-msgstr ""
+msgstr "Sritis:"
 
 #: ui/main.qml:206
 #, kde-format
 msgid "Resize the tablet area"
-msgstr ""
+msgstr "Keisti planšetės srities dydį"
 
 #: ui/main.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Užrakinti proporcijas"
 
 #: ui/main.qml:238
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr ""
+msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:246
 #, kde-format
 msgid "Pen Button 1"
-msgstr ""
+msgstr "Rašiklio mygtukas 1"
 
 #: ui/main.qml:247
 #, kde-format
 msgid "Pen Button 2"
-msgstr ""
+msgstr "Rašiklio mygtukas 2"
 
 #: ui/main.qml:248
 #, kde-format
 msgid "Pen Button 3"
-msgstr ""
+msgstr "Rašiklio mygtukas 3"
 
 #: ui/main.qml:291
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
-msgstr ""
+msgstr "Kilimėlis:"
 
 #: ui/main.qml:302
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Nėra"
 
 #: ui/main.qml:324
 #, kde-format
 msgid "Button %1:"
-msgstr ""
+msgstr "Mygtukas %1:"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-13 00:39+0000\n"
-"PO-Revision-Date: 2023-04-09 22:11+0000\n"
+"PO-Revision-Date: 2024-01-13 09:04+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -118,22 +118,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pen Button 1"
-msgstr "Butono %1:"
+msgstr "Skribilbutono 1"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Tool Button 2"
+#, kde-format
 msgid "Pen Button 2"
-msgstr "Ila Butono 2"
+msgstr "Skribilbutono 2"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Tool Button 3"
+#, kde-format
 msgid "Pen Button 3"
-msgstr "Ila Butono 3"
+msgstr "Skribilbutono 3"
 
 #: ui/main.qml:291
 #, kde-format
@@ -150,6 +147,3 @@ msgstr "Neniu"
 #, kde-format
 msgid "Button %1:"
 msgstr "Butono %1:"
-
-#~ msgid "Tool Button 1"
-#~ msgstr "Ila Butono 1"

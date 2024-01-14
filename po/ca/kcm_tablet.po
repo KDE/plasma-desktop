@@ -1,15 +1,15 @@
 # Translation of kcm_tablet.po to Catalan
-# Copyright (C) 2021-2022 This_file_is_part_of_KDE
+# Copyright (C) 2021-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-13 00:39+0000\n"
-"PO-Revision-Date: 2022-12-11 08:51+0100\n"
+"PO-Revision-Date: 2024-01-13 16:31+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -119,22 +119,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pen Button 1"
-msgstr "Botó %1:"
+msgstr "Botó 1 del llapis"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Tool Button 2"
+#, kde-format
 msgid "Pen Button 2"
-msgstr "Botó d'eina 2"
+msgstr "Botó 2 del llapis"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Tool Button 3"
+#, kde-format
 msgid "Pen Button 3"
-msgstr "Botó d'eina 3"
+msgstr "Botó 3 del llapis"
 
 #: ui/main.qml:291
 #, kde-format

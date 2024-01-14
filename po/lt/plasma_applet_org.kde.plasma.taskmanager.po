@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-10 01:35+0000\n"
-"PO-Revision-Date: 2022-12-28 00:59+0200\n"
+"PO-Revision-Date: 2024-01-13 12:16+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -100,42 +100,40 @@ msgstr "Užpildyti laisvą vietą skydelyje"
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "Naudoti kelių stulpelių rodinį:"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "Naudoti kelių eilučių rodinį:"
 
 #: package/contents/ui/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "Niekada"
 
 #: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
-msgstr ""
+msgstr "Kai skydelyje trūksta vietos ir jis yra pakankamai storas"
 
 #: package/contents/ui/ConfigAppearance.qml:99
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
-msgstr ""
+msgstr "Visada, kai skydelis yra pakankamai storas"
 
 #: package/contents/ui/ConfigAppearance.qml:105
-#, fuzzy, kde-format
-#| msgid "Maximum columns:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Daugiausia stulpelių:"
 
 #: package/contents/ui/ConfigAppearance.qml:105
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Daugiausia eilučių:"
@@ -591,11 +589,10 @@ msgid "Allow this program to be grouped"
 msgstr "Leisti grupuoti šią programą"
 
 #: package/contents/ui/ContextMenu.qml:773
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "&Užverti"
+msgstr "&Užverti visus"
 
 #: package/contents/ui/ContextMenu.qml:773
 #, kde-format
