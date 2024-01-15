@@ -1207,7 +1207,7 @@ FocusScope {
             anchors.fill: parent
 
             enabled: root.isContainment && !gridView.overflowing
-            destination: Plasmoid
+            destination: root
         }
 
         Folder.FolderModel {
