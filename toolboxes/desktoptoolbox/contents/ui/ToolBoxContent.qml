@@ -52,7 +52,7 @@ MouseArea {
     }
 
     width: buttonRow.width
-    height: buttonRow.height + (menuButton.visible ? backgroundFrame.margins.top + backgroundFrame.margins.bottom : 0)
+    height: buttonRow.height + (touchMode ? backgroundFrame.margins.top + backgroundFrame.margins.bottom : 0)
 
     state: "topcenter"
 
@@ -62,6 +62,7 @@ MouseArea {
     property int snapStartX
     property bool snapX: false;
     property bool dragging: false
+    readonly property bool touchMode: Kirigami.Settings.hasTransientTouchInput || Kirigami.Settings.tabletMode
 
     drag {
         filterChildren: true
@@ -217,9 +218,9 @@ MouseArea {
         anchors {
             fill: parent
             leftMargin: -backgroundFrame.margins.left
-            topMargin: menuButton.visible ? 0 : -backgroundFrame.margins.top
+            topMargin: touchMode ? 0 : -backgroundFrame.margins.top
             rightMargin: -backgroundFrame.margins.right
-            bottomMargin: menuButton.visible ? 0 : -backgroundFrame.margins.bottom
+            bottomMargin: touchMode ? 0 : -backgroundFrame.margins.bottom
         }
         imagePath: "widgets/background"
         width: Math.round(buttonLayout.width + margins.horizontal)
@@ -242,7 +243,7 @@ MouseArea {
                 + themeButton.implicitWidth
                 + displaySettingsButton.implicitWidth
                 + manageContainmentsButton.implicitWidth
-                + (menuButton.visible ? menuButton.implicitWidth : 0)
+                + (touchMode ? menuButton.implicitWidth : 0)
                 + closeButton.implicitWidth
             rows: Math.ceil(buttonWidth / (Screen.width * 0.8))
 
@@ -289,7 +290,7 @@ MouseArea {
                 id: menuButton
 
                 height: addWidgetButton.height
-                visible: Kirigami.Settings.hasTransientTouchInput || Kirigami.Settings.tabletMode
+                visible: touchMode
 
                 icon.name: "overflow-menu"
                 text: i18ndc("plasma_toolbox_org.kde.desktoptoolbox", "@action:button", "More")
