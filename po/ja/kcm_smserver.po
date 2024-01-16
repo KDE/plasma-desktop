@@ -1,24 +1,25 @@
 # Translation of kcmsmserver into Japanese.
+# SPDX-FileCopyrightText: 2022, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Yoichiro Takehora <takehora@kde.gr.jp>, 2004.
 # Kenshi Muto <kmuto@debian.org>, 2004.
 # Shinichi Tsunoda <tsuno@ngy.1st.ne.jp>, 2005.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2007, 2008.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-05 02:15+0000\n"
-"PO-Revision-Date: 2022-08-18 11:21+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"PO-Revision-Date: 2024-01-14 21:03-0800\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -52,13 +53,12 @@ msgstr "セッションから除外するアプリケーション"
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"手動でのセッションの保存を有効にするにはシステムを再起動する必要があります。"
 
-# ACCELERATOR changed by translator
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "今すぐコンピュータを再起動"
+msgstr "再起動"
 
 #: ui/main.qml:57
 #, kde-format
@@ -77,7 +77,6 @@ msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr "次回の再起動時にファームウェア設定画面に入ります。"
 
-# ACCELERATOR changed by translator
 #: ui/main.qml:64
 #, kde-format
 msgid "Restart Now"
@@ -87,12 +86,12 @@ msgstr "今すぐコンピュータを再起動"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr ""
+msgstr "ログアウト画面"
 
 #: ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "表示:"
 
 #: ui/main.qml:89
 #, kde-kuit-format
@@ -102,34 +101,32 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
+"この設定がオンの場合、ログアウト、シャットダウン、再起動時や、電源ボタンを押"
+"したとき、<interface>終了…</interface>ボタンをクリックしたときにログアウト確"
+"認画面が表示されます。"
 
 #: ui/main.qml:96
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "セッション復元"
 
 #: ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "ログイン時:"
 
 #: ui/main.qml:105
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "最後のログアウト時に開かれていたアプリケーションを開く"
 
 #: ui/main.qml:118
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "最後の手動で保存したセッションを復元"
+msgstr "手動で保存したセッションを復元する"
 
 #: ui/main.qml:127
 #, kde-kuit-format
@@ -140,6 +137,10 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"<interface>セッションを保存</interface>ボタンが<interface>アプリケーションラ"
+"ンチャー</interface>のメニューに表示されるようになります。このボタンをクリッ"
+"クすると、Plasma は開かれているアプリケーションを記憶し、次のログイン時に復元"
+"します。もう一度クリックすると、記憶が上書きされます。"
 
 #: ui/main.qml:132
 #, kde-format
@@ -151,10 +152,9 @@ msgid "Start with an empty session"
 msgstr "空のセッションで開始"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "これらのアプリケーションを復元しない:"
+msgstr "復元しないアプリケーション:"
 
 #: ui/main.qml:169
 #, kde-format
@@ -163,12 +163,15 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"アプリケーションの実行ファイルの名前 (コンマもしくはコロンで区切ることができ"
+"ます。例: 'xterm:konsole' もしくは 'xterm,konsole') を入力してください。セッ"
+"ションが復元される際に、自動的に起動されないようになります。"
 
 #: ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "ファームウェア"
 
 #: ui/main.qml:183
 #, kde-format
@@ -176,20 +179,16 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "次の再起動後:"
 
 #: ui/main.qml:184
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "次の再起動時ファームウェア設定画面に入る"
+msgstr "UEFI 設定画面に入る"
 
 #: ui/main.qml:185
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "次の再起動時ファームウェア設定画面に入る"
+msgstr "ファームウェア設定画面に入る"

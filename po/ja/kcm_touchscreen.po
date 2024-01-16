@@ -1,10 +1,11 @@
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 01:37+0000\n"
-"PO-Revision-Date: 2022-11-25 19:35-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2024-01-14 11:37+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -13,35 +14,36 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcmtouchscreen.cpp:46
 #, kde-format
 msgid "Automatic"
-msgstr ""
+msgstr "自動"
 
 #: kcmtouchscreen.cpp:52
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr ""
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: ui/main.qml:28
 #, kde-format
 msgid "No touchscreens found"
-msgstr ""
+msgstr "タッチスクリーンが見つかりません"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
-msgstr ""
+msgstr "デバイス:"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "Enabled:"
-msgstr ""
+msgstr "有効:"
 
 #: ui/main.qml:65
 #, kde-format
 msgid "Target display:"
-msgstr ""
+msgstr "使用するディスプレイ:"

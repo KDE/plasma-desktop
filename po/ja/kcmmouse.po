@@ -1,4 +1,5 @@
 # Translation of kcminput into Japanese.
+# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2002.
 # Taiki Komoda <kom@kde.gr.jp>, 2003, 2004.
@@ -7,21 +8,20 @@
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2008.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2005, 2007, 2011, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-06 01:34+0000\n"
-"PO-Revision-Date: 2023-08-12 01:47+0900\n"
+"PO-Revision-Date: 2024-01-14 22:35+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -154,7 +154,7 @@ msgstr "加速(&P):"
 #: kcm/libinput/main.qml:308 kcm/libinput/main_deviceless.qml:169
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "なし"
 
 #: kcm/libinput/main.qml:312 kcm/libinput/main_deviceless.qml:173
 #, kde-format
@@ -164,7 +164,7 @@ msgstr "カーソルはマウスが動いた距離と同じ長さだけ動きま
 #: kcm/libinput/main.qml:318 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "標準"
 
 #: kcm/libinput/main.qml:322 kcm/libinput/main_deviceless.qml:183
 #, kde-format
@@ -184,7 +184,7 @@ msgstr "スクロール方向を反転"
 #: kcm/libinput/main.qml:351 kcm/libinput/main_deviceless.qml:212
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr "タッチスクリーンのようなスクロール。"
+msgstr "タッチスクリーンのようなスクロールです。"
 
 #: kcm/libinput/main.qml:356
 #, kde-format
