@@ -88,7 +88,7 @@ Item {
                     border.color: "transparent"
                     visible: panelRepresentation.panelVisible
                     clip: panelRepresentation.adaptivePanel
-                    radius: clip ? 2 : 5 // Use very small radius when clip is true since clip cannot clip it. Zero radius will make it look too sharp
+                    radius: 5
 
                     z: 1
 
