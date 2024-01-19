@@ -75,7 +75,7 @@ AbstractKickoffItemDelegate {
                         return root.compact ? implicitHeight : Math.round(implicitHeight * 1.5);
                     }
                     if (!root.compact && !descriptionLabel.visible) {
-                        return implicitHeight * 2;
+                        return implicitHeight + descriptionLabel.implicitHeight
                     }
                     return implicitHeight;
                 }
