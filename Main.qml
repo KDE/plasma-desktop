@@ -10,7 +10,7 @@ import QtQuick.Controls 2.15 as QQC2
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.plasma5support 2.0 as P5Support
+import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.breeze.components
@@ -38,10 +38,9 @@ Item {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    P5Support.DataSource {
-        id: keystateSource
-        engine: "keystate"
-        connectedSources: "Caps Lock"
+    KeyboardIndicator.KeyState {
+        id: capsLockState
+        key: Qt.Key_CapsLock
     }
 
     Item {
@@ -197,7 +196,7 @@ Item {
 
                 notificationMessage: {
                     const parts = [];
-                    if (keystateSource.data["Caps Lock"]["Locked"]) {
+                    if (capsLockState.locked) {
                         parts.push(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Caps Lock is on"));
                     }
                     if (root.notificationMessage) {
