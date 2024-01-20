@@ -95,7 +95,9 @@ Item {
         id: visibleWindowsModel
         filterByVirtualDesktop: true
         filterByActivity: true
-        filterByScreen: true
+        // TODO: Having region filtering without screen filtering might
+        // currently cause problems on X11.
+        filterByScreen: !KWindowSystem.isPlatformWayland
         filterByRegion: TaskManager.RegionFilterMode.Intersect
         filterHidden: true
         filterMinimized: true
@@ -130,7 +132,7 @@ Item {
         function onActivated() {
             // BUG 472909: status changes to PassiveStatus or ActiveStatus after applet shortcut is pressed for the second time
             if (root.containment.plasmoid.status === PlasmaCore.Types.PassiveStatus /*After pressing panel shortcut*/ || root.containment.plasmoid.status === PlasmaCore.Types.ActiveStatus) {
-                root.containment.plasmoid.status = PlasmaCore.Types.AcceptingInputStatus;
+                //root.containment.plasmoid.status = PlasmaCore.Types.AcceptingInputStatus;
                 // BUG 472909: if applet shortcut is pressed, panel also gets activated, but status will change to RequiresAttentionStatus after applet has focus
             } else /* Panel has focus, or applet has focus */ {
                 root.containment.plasmoid.status = PlasmaCore.Types.PassiveStatus;
