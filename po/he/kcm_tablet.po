@@ -1,21 +1,20 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-13 00:39+0000\n"
-"PO-Revision-Date: 2023-10-01 09:33+0300\n"
-"Last-Translator: \n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-01-19 08:32+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
@@ -119,22 +118,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pen Button 1"
-msgstr "כפתור %1:"
+msgstr "כפתור עט 1"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Tool Button 2"
+#, kde-format
 msgid "Pen Button 2"
-msgstr "כפתור כלי 2"
+msgstr "כפתור עט 2"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Tool Button 3"
+#, kde-format
 msgid "Pen Button 3"
-msgstr "כפתור כלי 3"
+msgstr "כפתור עט 3"
 
 #: ui/main.qml:291
 #, kde-format
