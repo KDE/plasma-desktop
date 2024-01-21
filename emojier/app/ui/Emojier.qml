@@ -82,6 +82,7 @@ Kirigami.ApplicationWindow
                 Kirigami.Heading {
                     level: 1
                     text: drawer.title
+                    textFormat: Text.PlainText
                     Layout.fillWidth: true
                 }
             }

@@ -28,7 +28,7 @@ PC3.Page {
     opacity: draggingWidget ? 0.3 : 1
 
     property QtObject containment
-    
+
     property PlasmaCore.Dialog sidePanel
 
     //external drop events can cause a raise event causing us to lose focus and
@@ -142,6 +142,7 @@ PC3.Page {
                     id: heading
                     level: 1
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Widgets")
+                    textFormat: Text.PlainText
                     elide: Text.ElideRight
 
                     Layout.fillWidth: true

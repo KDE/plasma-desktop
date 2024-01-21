@@ -91,6 +91,7 @@ KCM.ScrollViewKCM {
 
             QQC2.Label {
                 text: i18n("File Search helps you quickly locate your files. You can choose which folders and what types of file data are indexed.")
+                textFormat: Text.PlainText
                 Layout.fillWidth: true
                 Layout.maximumWidth: Kirigami.Units.gridUnit * 24
                 Layout.alignment: Qt.AlignHCenter
@@ -125,6 +126,7 @@ KCM.ScrollViewKCM {
                     leftPadding: fileSearchEnabled.indicator.width
                     visible: fileSearchEnabled.checked
                     text: i18nc("State and a percentage of progress", "%1, %2% complete", monitor.stateString, monitor.completionPercentage)
+                    textFormat: Text.PlainText
                     elide: Text.ElideLeft
                 }
             }
@@ -138,6 +140,7 @@ KCM.ScrollViewKCM {
             QQC2.Label {
                 Layout.fillWidth: true
                 text: i18nc("@label file currently being indexed", "Currently indexing:")
+                textFormat: Text.PlainText
                 horizontalAlignment: Text.AlignHCenter
                 visible: fileBeingIndexed.visible
             }
@@ -278,6 +281,7 @@ KCM.ScrollViewKCM {
                 // The folder's path
                 QQC2.Label {
                     text: indexingModel.folder
+                    textFormat: Text.PlainText
                     elide: Text.ElideRight
 
                     Layout.fillWidth: true

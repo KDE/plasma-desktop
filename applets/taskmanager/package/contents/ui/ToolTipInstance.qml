@@ -396,6 +396,7 @@ ColumnLayout {
                 Layout.minimumWidth: percentMetrics.advanceWidth
                 horizontalAlignment: Qt.AlignRight
                 text: i18nc("volume percentage", "%1%", slider.displayValue)
+                textFormat: Text.PlainText
                 TextMetrics {
                     id: percentMetrics
                     text: i18nc("only used for sizing, should be widest possible string", "100%")

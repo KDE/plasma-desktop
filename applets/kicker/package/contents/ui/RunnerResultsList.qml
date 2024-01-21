@@ -57,6 +57,7 @@ FocusScope {
         font.weight: Font.Bold
 
         text: (runnerMatches.model !== null) ? runnerMatches.model.name : ""
+        textFormat: Text.PlainText
     }
 
     ItemListView {

@@ -58,6 +58,7 @@ QQC2.ScrollView {
                 anchors.top: parent.verticalCenter
                 width: parent.width - 20
                 text: model.title
+                textFormat: Text.PlainText
                 horizontalAlignment: Text.AlignHCenter
                 elide: Text.ElideRight
                 maximumLineCount: 2

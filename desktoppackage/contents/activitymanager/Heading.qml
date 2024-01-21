@@ -57,6 +57,7 @@ Item {
 
                 level: 1
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Activities")
+                textFormat: Text.PlainText
                 elide: Text.ElideRight
 
                 visible: !root.showingSearch

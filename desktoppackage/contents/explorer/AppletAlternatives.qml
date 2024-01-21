@@ -63,7 +63,8 @@ PlasmaCore.Dialog {
         PlasmaExtras.PlasmoidHeading {
             Kirigami.Heading {
                 id: heading
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternative Widgets");
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternative Widgets")
+                textFormat: Text.PlainText
             }
         }
 
@@ -175,6 +176,7 @@ PlasmaCore.Dialog {
                                 level: 4
                                 Layout.fillWidth: true
                                 text: model.name
+                                textFormat: Text.PlainText
                                 elide: Text.ElideRight
                                 type: model.pluginName === alternativesHelper.currentPlugin ? PlasmaExtras.Heading.Type.Primary : PlasmaExtras.Heading.Type.Normal
                                 color: labelLayout.textColor
@@ -183,6 +185,7 @@ PlasmaCore.Dialog {
                             PlasmaComponents3.Label {
                                 Layout.fillWidth: true
                                 text: model.description
+                                textFormat: Text.PlainText
                                 font.pointSize: Kirigami.Theme.smallFont.pointSize
                                 font.family: Kirigami.Theme.smallFont.family
                                 font.bold: model.pluginName === alternativesHelper.currentPlugin

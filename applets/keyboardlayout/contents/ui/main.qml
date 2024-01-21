@@ -98,6 +98,7 @@ PlasmoidItem {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text: layoutNames.displayName || layoutNames.shortName
+            textFormat: Text.PlainText
         }
     }
 

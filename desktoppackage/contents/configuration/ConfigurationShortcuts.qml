@@ -28,6 +28,7 @@ KCM.SimpleKCM {
         QQC2.Label {
             Layout.fillWidth: true
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "This shortcut will activate the applet as though it had been clicked.")
+            textFormat: Text.PlainText
             wrapMode: Text.WordWrap
         }
 

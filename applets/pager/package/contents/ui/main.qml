@@ -189,6 +189,7 @@ PlasmoidItem {
             }
 
             text: Plasmoid.configuration.displayedText ? model.display : index + 1
+            textFormat: Text.PlainText
 
             wrapMode: Text.NoWrap
             elide: Text.ElideRight

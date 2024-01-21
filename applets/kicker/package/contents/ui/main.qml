@@ -206,6 +206,7 @@ PlasmoidItem {
         property Item toolTip
 
         text: toolTip ? toolTip.text : ""
+        textFormat: Text.PlainText
     }
 
     Timer {

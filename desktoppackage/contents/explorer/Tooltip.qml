@@ -72,10 +72,12 @@ MouseArea {
             anchors.left: parent.left
             anchors.right: parent.right
             height: paintedHeight
+            textFormat: Text.PlainText
             wrapMode: Text.Wrap
         }
         PlasmaComponents.Label {
             text: description
+            textFormat: Text.PlainText
             anchors.left: parent.left
             anchors.right: parent.right
             wrapMode: Text.Wrap
@@ -90,27 +92,33 @@ MouseArea {
         }
         PlasmaComponents.Label {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:")
+            textFormat: Text.PlainText
             Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
         PlasmaComponents.Label {
             id: licenseText
             text: license
+            textFormat: Text.PlainText
             wrapMode: Text.Wrap
         }
         PlasmaComponents.Label {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Author:")
+            textFormat: Text.PlainText
             Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
         PlasmaComponents.Label {
             text: author
+            textFormat: Text.PlainText
             wrapMode: Text.Wrap
         }
         PlasmaComponents.Label {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Email:")
+            textFormat: Text.PlainText
             Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
         PlasmaComponents.Label {
             text: email
+            textFormat: Text.PlainText
         }
     }
 

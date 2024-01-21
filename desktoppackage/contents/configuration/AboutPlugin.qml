@@ -36,6 +36,7 @@ KCM.SimpleKCM {
             }
             QQC2.Label {
                 text: modelData.name
+                textFormat: Text.PlainText
             }
             Row {
                 // Group action buttons together
@@ -114,6 +115,7 @@ KCM.SimpleKCM {
                 Kirigami.Heading {
                     Layout.fillWidth: true
                     text: page.metaData.name + " " + page.metaData.version
+                    textFormat: Text.PlainText
                 }
 
                 Kirigami.Heading {
@@ -122,6 +124,7 @@ KCM.SimpleKCM {
                     level: 2
                     wrapMode: Text.WordWrap
                     text: page.metaData.description
+                    textFormat: Text.PlainText
                 }
             }
 
@@ -132,6 +135,7 @@ KCM.SimpleKCM {
             Kirigami.Heading {
                 Layout.topMargin: Kirigami.Units.smallSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Copyright")
+                textFormat: Text.PlainText
             }
 
             ColumnLayout {
@@ -140,6 +144,7 @@ KCM.SimpleKCM {
 
                 QQC2.Label {
                     text: page.metaData.copyrightText
+                    textFormat: Text.PlainText
                     visible: text.length > 0
                 }
                 Kirigami.UrlButton {
@@ -149,7 +154,10 @@ KCM.SimpleKCM {
 
                 RowLayout {
                     spacing: Kirigami.Units.smallSpacing
-                    QQC2.Label { text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:") }
+                    QQC2.Label {
+                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:")
+                        textFormat: Text.PlainText
+                    }
                     Kirigami.LinkButton {
                         text: page.metaData.license
                         Accessible.description: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:whatsthis", "View license text")
@@ -167,6 +175,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 Layout.topMargin: Kirigami.Units.smallSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Authors")
+                textFormat: Text.PlainText
                 visible: page.metaData.authors.length > 0
             }
             Repeater {
@@ -178,6 +187,7 @@ KCM.SimpleKCM {
                 height: visible ? implicitHeight : 0
                 Layout.topMargin: Kirigami.Units.smallSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Credits")
+                textFormat: Text.PlainText
                 visible: repCredits.count > 0
             }
             Repeater {
@@ -190,6 +200,7 @@ KCM.SimpleKCM {
                 height: visible ? implicitHeight : 0
                 Layout.topMargin: Kirigami.Units.smallSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translators")
+                textFormat: Text.PlainText
                 visible: repTranslators.count > 0
             }
             Repeater {

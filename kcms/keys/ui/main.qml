@@ -420,6 +420,7 @@ KCM.AbstractKCM {
 
             QQC2.Label {
                 text: i18n("Enter a command or choose a script file:")
+                textFormat: Text.PlainText
             }
             RowLayout {
                 Layout.fillWidth: true
@@ -470,6 +471,7 @@ KCM.AbstractKCM {
 
             QQC2.Label {
                 text: i18n("Select the scheme to import:")
+                textFormat: Text.PlainText
                 Layout.margins: Kirigami.Units.largeSpacing
             }
 

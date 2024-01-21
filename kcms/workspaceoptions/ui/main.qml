@@ -101,12 +101,14 @@ KCM.SimpleKCM {
                 spacing: 0
                 QQC2.Label {
                     text: i18nc("Animation speed", "Slow")
+                    textFormat: Text.PlainText
                 }
                 Item {
                     Layout.fillWidth: true
                 }
                 QQC2.Label {
                     text: i18nc("Animation speed", "Instant")
+                    textFormat: Text.PlainText
                 }
             }
         }
@@ -142,6 +144,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 leftPadding: singleClick.indicator.width
                 text: i18n("Open by double-clicking instead")
+                textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
             }
@@ -167,6 +170,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 leftPadding: singleClick.indicator.width
                 text: i18n("Select by clicking on item's selection marker")
+                textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
             }
@@ -214,6 +218,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 leftPadding: scrollbarLeftClickNavigatesByPage.indicator.width
                 text: i18n("Middle-click to scroll to clicked location")
+                textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
             }
@@ -309,6 +314,7 @@ KCM.SimpleKCM {
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 20
                 leftPadding: touchModeAlwaysOffRadioButton.indicator.width
                 text: i18n("In Touch Mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
+                textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
                 wrapMode: Text.WordWrap

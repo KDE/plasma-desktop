@@ -128,6 +128,7 @@ PlasmoidItem {
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Sorry! There was an error loading %1.", root.errorInformation.appletName)
                     // This is just to suppress warnings. Users should never see this.
                     : "No error information."
+                textFormat: Text.PlainText
                 level: 2
                 wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter

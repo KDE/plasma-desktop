@@ -97,12 +97,14 @@ KCM.SimpleKCM {
             RowLayout {
                 QQC2.Label {
                     text: i18nc("Animation speed", "Slow")
+                    textFormat: Text.PlainText
                 }
                 Item {
                     Layout.fillWidth: true
                 }
                 QQC2.Label {
                     text: i18nc("Animation speed", "Instant")
+                    textFormat: Text.PlainText
                 }
             }
         }
@@ -163,6 +165,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 leftPadding: doubleClick.indicator.width
                 text: doubleClick.Accessible.description
+                textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
             }
@@ -191,6 +194,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 leftPadding: singleClick.indicator.width
                 text: singleClick.Accessible.description
+                textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
             }

@@ -42,6 +42,7 @@ KCMUtils.ScrollViewKCM {
 
         QQC2.Label {
             text: i18n("Enable or disable plugins (used in KRunner, Application Launcher, and the Overview effect). Mark plugins as favorites and arrange them in order you want to see them.")
+            textFormat: Text.PlainText
             wrapMode: Text.WordWrap
             Layout.fillWidth: true
         }

@@ -53,6 +53,7 @@ KickoffGridView {
             fontSizeMode: Text.VerticalFit
 
             text: model.section
+            textFormat: Text.PlainText
         }
 
         onClicked: {

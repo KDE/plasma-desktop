@@ -89,6 +89,7 @@ ColumnLayout {
             Kirigami.Heading {
                 Layout.leftMargin: Kirigami.Units.smallSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Settings")
+                textFormat: Text.PlainText
             }
 
             Item { Layout.fillWidth: true }
@@ -137,6 +138,7 @@ ColumnLayout {
                 Layout.alignment: Qt.AlignHCenter
                 level: dialogRoot.headingLevel
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Position")
+                textFormat: Text.PlainText
             }
             PanelRepresentation {
                 id: positionRepresentation
@@ -188,6 +190,7 @@ ColumnLayout {
                 Layout.alignment: Qt.AlignHCenter
                 level: dialogRoot.headingLevel
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alignment")
+                textFormat: Text.PlainText
             }
             PanelRepresentation {
                 id: alignmentRepresentation
@@ -276,6 +279,7 @@ ColumnLayout {
                 level: dialogRoot.headingLevel
                 Layout.alignment: Qt.AlignHCenter
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Length")
+                textFormat: Text.PlainText
             }
             PanelRepresentation {
                 id: lengthRepresentation
@@ -326,6 +330,7 @@ ColumnLayout {
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 level: dialogRoot.headingLevel
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Visibility")
+                textFormat: Text.PlainText
             }
             PanelRepresentation {
                 id: visibilityRepresentation
@@ -384,6 +389,7 @@ ColumnLayout {
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 level: dialogRoot.headingLevel
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity")
+                textFormat: Text.PlainText
             }
             PanelRepresentation {
                 id: opacityRepresentation
@@ -423,6 +429,7 @@ ColumnLayout {
                 level: dialogRoot.headingLevel
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Style")
+                textFormat: Text.PlainText
             }
             PanelRepresentation {
                 Layout.alignment: Qt.AlignHCenter
@@ -508,6 +515,7 @@ ColumnLayout {
             wrapMode: Text.Wrap
 
             text: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Width:") : i18nd("plasma_shell_org.kde.plasma.desktop", "Height:")
+            textFormat: Text.PlainText
         }
         PC3.SpinBox {
             id: spinBox
@@ -542,6 +550,7 @@ ColumnLayout {
 
             PC3.Label {
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus shortcut:")
+                textFormat: Text.PlainText
                 visible: panel.adaptiveOpacityEnabled
 
                 MouseArea {

@@ -47,6 +47,7 @@ QQC2.ToolButton {
             id: label
             Layout.fillWidth: true
             elide: Text.ElideRight
+            textFormat: Text.PlainText
         }
     }
 }

@@ -48,6 +48,7 @@ KCM.ScrollViewKCM {
                 QQC2.Label {
                     Layout.fillWidth: true
                     text: model.name
+                    textFormat: Text.PlainText
                 }
 
                 QQC2.ToolButton {

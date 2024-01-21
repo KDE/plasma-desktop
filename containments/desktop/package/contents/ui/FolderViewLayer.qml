@@ -138,6 +138,7 @@ FocusScope {
         anchors.fill: parent
 
         text: folderView.errorString
+        textFormat: Text.PlainText
 
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -330,6 +331,7 @@ FocusScope {
                 verticalAlignment: Text.AlignTop
                 elide: Text.ElideMiddle
                 text: labelGenerator.displayLabel
+                textFormat: Text.PlainText
                 font.underline: labelMouseArea.containsMouse
             }
 

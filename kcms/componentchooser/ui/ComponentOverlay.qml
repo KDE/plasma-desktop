@@ -71,6 +71,7 @@ Kirigami.OverlaySheet {
 
             Kirigami.Heading {
                 text: root.componentChooser?.applicationName() ?? ""
+                textFormat: Text.PlainText
                 level: 1
                 wrapMode: Text.Wrap
                 Layout.fillWidth: true
@@ -80,6 +81,7 @@ Kirigami.OverlaySheet {
 
         Kirigami.Heading {
             text: i18n("This application can also open these file types:")
+            textFormat: Text.PlainText
             visible: root.mimeTypesNotAssociated.length > 0
             level: 3
             wrapMode: Text.Wrap
@@ -125,6 +127,7 @@ Kirigami.OverlaySheet {
 
         Kirigami.Heading {
             text: i18n("This application does not advertise support for the following file types, but may be able to open them anyway:")
+            textFormat: Text.PlainText
             visible: root.unsupportedMimeTypes.length > 0
             level: 3
             wrapMode: Text.Wrap

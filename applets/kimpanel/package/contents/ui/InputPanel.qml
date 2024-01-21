@@ -61,6 +61,7 @@ PlasmaCore.Dialog {
                     anchors.baseline: parent.baseline
                     font: preferredFont
                     text: helper.auxText
+                    textFormat: Text.PlainText
                     visible: helper.auxVisible
                 }
                 Item {
@@ -75,6 +76,7 @@ PlasmaCore.Dialog {
                         anchors.baseline: parent.baseline
                         anchors.left: parent.left
                         font: preferredFont
+                        textFormat: Text.PlainText
                     }
                     Rectangle {
                         color: Kirigami.Theme.textColor
@@ -90,6 +92,7 @@ PlasmaCore.Dialog {
                         anchors.baseline: parent.baseline
                         anchors.left: preeditLabel1.right
                         font: preferredFont
+                        textFormat: Text.PlainText
                     }
                 }
             }
@@ -126,6 +129,7 @@ PlasmaCore.Dialog {
                             PlasmaComponents3.Label {
                                 id: tableLabel
                                 text: model.label
+                                textFormat: Text.PlainText
                                 font: preferredFont
                                 opacity: 0.8
                                 color: Kirigami.Theme.textColor
@@ -134,6 +138,7 @@ PlasmaCore.Dialog {
                             PlasmaComponents3.Label {
                                 id: textLabel
                                 text: model.text
+                                textFormat: Text.PlainText
                                 font: preferredFont
                                 color: Kirigami.Theme.textColor
                                 anchors.baseline: parent.baseline

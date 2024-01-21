@@ -58,5 +58,6 @@ Rectangle {
                 return badgeRect.number.toLocaleString(Qt.locale(), 'f', 0);
             }
         }
+        textFormat: Text.PlainText
     }
 }

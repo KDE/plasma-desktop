@@ -64,6 +64,7 @@ QQC2.RadioButton {
             Layout.fillWidth: true
             Layout.topMargin: Kirigami.Units.smallSpacing
             text: delegate.text
+            textFormat: Text.PlainText
             horizontalAlignment: Text.AlignHCenter
         }
 

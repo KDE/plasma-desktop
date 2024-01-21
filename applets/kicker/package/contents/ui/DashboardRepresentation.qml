@@ -137,6 +137,7 @@ Kicker.DashboardWindow {
             width: 0
 
             level: 1
+            textFormat: Text.PlainText
         }
 
         TextMetrics {
@@ -328,6 +329,7 @@ Kicker.DashboardWindow {
                     level: 1
 
                     text: i18n("Favorites")
+                    textFormat: Text.PlainText
 
                     opacity: enabled ? 1.0 : 0.3
 
@@ -543,6 +545,7 @@ Kicker.DashboardWindow {
                         level: 1
 
                         text: funnelModel.description
+                        textFormat: Text.PlainText
                     }
 
                     KSvg.SvgItem {
@@ -879,6 +882,7 @@ Kicker.DashboardWindow {
                                 level: 1
 
                                 text: model.display
+                                textFormat: Text.PlainText
                             }
                         }
 

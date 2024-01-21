@@ -48,6 +48,7 @@ KCM.SimpleKCM {
                 i18n("Only icons can be shown when the Panel is vertical.") :
                 // On the desktop
                 i18n("Not applicable when the widget is on the Desktop.")
+            textFormat: Text.PlainText
             wrapMode: Text.Wrap
             font: Kirigami.Theme.smallFont
         }

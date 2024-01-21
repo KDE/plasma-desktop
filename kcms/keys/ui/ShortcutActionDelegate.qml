@@ -48,6 +48,7 @@ QQC2.ItemDelegate {
                 Kirigami.Heading {
                     id: displayLabel
                     text: i18nc("%1 is the name action that is triggered by the key sequences following after :", "%1:", model.display)
+                    textFormat: Text.PlainText
                     level: 5
                 }
                 QQC2.Label {
@@ -73,6 +74,7 @@ QQC2.ItemDelegate {
                             return i18n("No active shortcuts")
                         }
                     }
+                    textFormat: Text.PlainText
                 }
                 Rectangle {
                     id: defaultIndicator
@@ -114,6 +116,7 @@ QQC2.ItemDelegate {
                             i18ncp("%1 decides if singular or plural will be used", "Default shortcut",
                             "Default shortcuts", model.defaultShortcuts.length) :
                             i18n("No default shortcuts")
+                        textFormat: Text.PlainText
                     }
                     Kirigami.Separator {
                         Layout.fillWidth: true
@@ -144,6 +147,7 @@ QQC2.ItemDelegate {
                         level: 4
                         Layout.alignment: Qt.AlignRight
                         text: i18n("Custom shortcuts")
+                        textFormat: Text.PlainText
                     }
                     Kirigami.Separator {
                         Layout.fillWidth: true

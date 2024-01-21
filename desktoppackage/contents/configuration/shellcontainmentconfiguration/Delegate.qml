@@ -267,6 +267,7 @@ QQC2.Control {
             text: model.isPrimary
                 ? i18nd("plasma_shell_org.kde.plasma.desktop", "%1 (primary)", model.screenName)
                 : model.screenName
+            textFormat: Text.PlainText
         }
     }
 }

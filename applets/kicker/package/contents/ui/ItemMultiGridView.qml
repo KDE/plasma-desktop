@@ -114,6 +114,7 @@ PlasmaComponents.ScrollView {
                         level: 1
 
                         text: repeater.model.modelForRow(index).description
+                        textFormat: Text.PlainText
                     }
 
                     KSvg.SvgItem {

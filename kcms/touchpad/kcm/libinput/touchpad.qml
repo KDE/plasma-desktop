@@ -737,12 +737,14 @@ KCM.SimpleKCM {
             //row 2
             QQC2.Label {
                 text: i18ndc("kcm_touchpad", "Slower Scroll", "Slower")
+                textFormat: Text.PlainText
             }
             Item {
                 Layout.fillWidth: true
             }
             QQC2.Label {
                 text: i18ndc("kcm_touchpad", "Faster Scroll Speed", "Faster")
+                textFormat: Text.PlainText
             }
         }
 

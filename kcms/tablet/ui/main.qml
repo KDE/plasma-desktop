@@ -239,6 +239,7 @@ SimpleKCM {
                                                                                     , String(Math.floor(outputAreaView.outputAreaSetting.y * outputItem.outputSize.height))
                                                                                     , String(Math.floor(outputAreaView.outputAreaSetting.width * outputItem.outputSize.width))
                                                                                     , String(Math.floor(outputAreaView.outputAreaSetting.height * outputItem.outputSize.height)))
+            textFormat: Text.PlainText
         }
 
         Repeater {

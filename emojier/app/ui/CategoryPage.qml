@@ -40,6 +40,7 @@ Kirigami.ScrollablePage
         Layout.preferredWidth: view.width
         Kirigami.Heading {
             text: view.title
+            textFormat: Text.PlainText
             Layout.fillWidth: true
         }
 
@@ -148,6 +149,7 @@ Kirigami.ScrollablePage
             fontSizeMode: model.display.length > 5 ? Text.Fit : Text.FixedSize
             minimumPointSize: 10
             text: model.display
+            textFormat: Text.PlainText
             horizontalAlignment: Text.AlignHCenter
 
             Accessible.name: model.toolTip

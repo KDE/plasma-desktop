@@ -32,6 +32,7 @@ Kirigami.AbstractApplicationWindow {
         contentItem: QQC2.Label {
             Layout.fillWidth: parent
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "You can drag Panels and Desktops around to move them to different screens.")
+            textFormat: Text.PlainText
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap
         }

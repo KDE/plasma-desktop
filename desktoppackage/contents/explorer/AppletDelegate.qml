@@ -170,6 +170,7 @@ Item {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     text: running
+                    textFormat: Text.PlainText
                 }
             }
 
@@ -221,6 +222,7 @@ Item {
             Layout.fillWidth: true
             level: 4
             text: model.name
+            textFormat: Text.PlainText
             elide: Text.ElideRight
             wrapMode: Text.WordWrap
             maximumLineCount: 2
@@ -233,6 +235,7 @@ Item {
             // otherwise causes binding loop due to the way the Plasma sets the height
             height: implicitHeight
             text: model.description
+            textFormat: Text.PlainText
             font: Kirigami.Theme.smallFont
             wrapMode: Text.WordWrap
             elide: Text.ElideRight

@@ -52,6 +52,7 @@ KCM.SimpleKCM {
 
             QQC2.Label {
                 text: i18nc("@label:textbox", "Device:")
+                textFormat: Text.PlainText
             }
 
             QQC2.ComboBox {
@@ -78,6 +79,7 @@ KCM.SimpleKCM {
 
                 QQC2.Label {
                     text: i18nc("@label Visual representation of an axis position", "Position:")
+                    textFormat: Text.PlainText
                 }
 
                 PositionWidget {
@@ -96,6 +98,7 @@ KCM.SimpleKCM {
 
                 QQC2.Label {
                     text: i18nc("@label Gamepad buttons", "Buttons:")
+                    textFormat: Text.PlainText
                 }
 
                 Table {
@@ -117,6 +120,7 @@ KCM.SimpleKCM {
 
                 QQC2.Label {
                     text: i18nc("@label Gamepad axes (sticks)", "Axes:")
+                    textFormat: Text.PlainText
                 }
 
                 Table {

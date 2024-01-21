@@ -122,6 +122,7 @@ PlasmaExtras.PlasmoidHeading {
                 color: Kirigami.Theme.textColor
                 level: 4
                 text: kuser.fullName
+                textFormat: Text.PlainText
                 elide: Text.ElideRight
                 horizontalAlignment: kickoff.paneSwap ? Text.AlignRight : Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
@@ -141,6 +142,7 @@ PlasmaExtras.PlasmoidHeading {
                 opacity: parent.containsMouse ? 1 : 0
                 color: Kirigami.Theme.textColor
                 text: kuser.os !== "" ? `${kuser.loginName}@${kuser.host} (${kuser.os})` : `${kuser.loginName}@${kuser.host}`
+                textFormat: Text.PlainText
                 elide: Text.ElideRight
                 horizontalAlignment: kickoff.paneSwap ? Text.AlignRight : Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter

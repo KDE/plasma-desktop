@@ -82,6 +82,7 @@ Item {
                 margins : root.innerPadding * 2
                 verticalCenter: parent.verticalCenter
             }
+            textFormat: Text.PlainText
         }
 
         // Controls

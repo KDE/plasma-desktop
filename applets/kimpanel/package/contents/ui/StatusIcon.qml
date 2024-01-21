@@ -55,6 +55,7 @@ Item {
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
         text: extractLabelString(label)
+        textFormat: Text.PlainText
         visible: icon.length == 0
     }
 

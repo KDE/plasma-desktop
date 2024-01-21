@@ -62,6 +62,7 @@ PlasmoidItem {
                     PlasmaComponents.Label {
                         Layout.fillWidth: true
                         text: model.display
+                        textFormat: Text.PlainText
                         elide: Text.ElideRight
                     }
                 }

@@ -201,6 +201,7 @@ KCM.ScrollViewKCM {
                             }
                             return "";
                         }
+                        textFormat: Text.PlainText
                     }
 
                     QQC2.Button {

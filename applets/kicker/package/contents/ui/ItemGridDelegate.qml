@@ -87,6 +87,7 @@ Item {
         color: "white" // FIXME TODO: Respect theming?
 
         text: ("name" in model ? model.name : model.display)
+        textFormat: Text.PlainText
     }
 
     PlasmaCore.ToolTipArea {

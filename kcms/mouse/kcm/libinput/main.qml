@@ -404,12 +404,14 @@ Kirigami.ApplicationItem {
                 //row 2
                 QQC2.Label {
                     text: i18ndc("kcmmouse", "Slower Scroll", "Slower")
+                    textFormat: Text.PlainText
                 }
                 Item {
                     Layout.fillWidth: true
                 }
                 QQC2.Label {
                     text: i18ndc("kcmmouse", "Faster Scroll Speed", "Faster")
+                    textFormat: Text.PlainText
                 }
 
             }

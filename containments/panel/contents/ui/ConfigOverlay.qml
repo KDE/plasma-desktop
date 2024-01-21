@@ -263,6 +263,7 @@ MouseArea {
                         id: label
                         level: 3
                         horizontalAlignment: Text.AlignHCenter
+                        textFormat: Text.PlainText
                     }
                 }
 
@@ -319,6 +320,7 @@ MouseArea {
                     Layout.fillWidth: true
                     visible: panelSpacerWidth.visible
                     text: i18n("Spacer width")
+                    textFormat: Text.PlainText
                     level: 3
                     horizontalAlignment: Text.AlignHCenter
                 }
