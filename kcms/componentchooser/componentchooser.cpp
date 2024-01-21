@@ -274,7 +274,7 @@ bool ComponentChooser::serviceSupportsMimeType(KService::Ptr service, const QStr
         }
     }
 
-    if (targetMimeType.startsWith(QLatin1String("x-scheme-handler/")) && service->supportedProtocols().contains(targetMimeType.mid(17))) {
+    if (targetMimeType.startsWith(QLatin1String("x-scheme-handler/")) && service->schemeHandlers().contains(targetMimeType.mid(17))) {
         return true;
     }
 
