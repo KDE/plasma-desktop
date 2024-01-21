@@ -50,7 +50,7 @@ QQC2.ComboBox {
     delegate: QQC2.ItemDelegate {
         width: ListView.view.width
         text: model.name
-        highlighted: index === comboBox.currentIndex
+        highlighted: comboBox.highlightedIndex == index
         icon.name: model.icon
     }
 
