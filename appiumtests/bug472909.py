@@ -49,10 +49,13 @@ class Bug472909Test(unittest.TestCase):
         Make sure to terminate the driver again, lest it dangles.
         """
         subprocess.check_output(["kquitapp6", "plasmashell"], stderr=sys.stderr)
+        cls.plasmashell.wait()
         if cls.kded:
-            cls.kded.kill()
+            cls.kded.terminate()
+            cls.kded.wait()
         if cls.kactivitymanagerd:
-            cls.kactivitymanagerd.kill()
+            cls.kactivitymanagerd.terminate()
+            cls.kactivitymanagerd.wait()
         cls.driver.quit()
 
     def test_bug472909(self) -> None:
@@ -92,6 +95,9 @@ class Bug472909Test(unittest.TestCase):
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Inactive Window")))
         activate_shortcut()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Active Window")))
+
+        test_window.terminate()
+        test_window.wait()
 
 
 if __name__ == '__main__':
