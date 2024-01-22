@@ -93,7 +93,7 @@ class FolderViewTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             # Take desktop screenshot
             saved_image_path: str = os.path.join(temp_dir, "desktop.png")
-            self.assertTrue(self.driver.get_screenshot_as_file(saved_image_path))
+            subprocess.check_call(["import", "-window", "root", saved_image_path])
             cv_first_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
             first_image = base64.b64encode(cv.imencode('.png', cv_first_image)[1].tobytes()).decode()
         cv_second_image = np.zeros((16, 16, 3), dtype=np.uint8)
