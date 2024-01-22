@@ -155,7 +155,10 @@ ColumnLayout {
                 mainIconSource: (panel.location === PlasmaCore.Types.TopEdge ? "arrow-up" :
                                  panel.location === PlasmaCore.Types.RightEdge ? "arrow-right" :
                                  panel.location === PlasmaCore.Types.LeftEdge ? "arrow-left": "arrow-down")
-                onClicked: setPositionButton.checked = !setPositionButton.checked
+                onClicked: {
+                    setPositionButton.checked = !setPositionButton.checked
+                    setPositionButton.forceActiveFocus()
+                }
             }
             PC3.Button {
                 id: setPositionButton
