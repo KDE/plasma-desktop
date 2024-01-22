@@ -160,7 +160,7 @@ ColumnLayout {
                 Layout.minimumHeight: transparencyBox.height
                 Layout.minimumWidth: positionRepresentation.width
                 Layout.alignment: Qt.AlignHCenter
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Set Position...")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Set Position…")
                 checkable: true
 
                 function moveTo(newLocation: int, screenToFollow = null) {
