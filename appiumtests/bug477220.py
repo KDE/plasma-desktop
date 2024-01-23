@@ -102,7 +102,8 @@ class Bug477220Test(unittest.TestCase):
         time.sleep(3)  # Wait until the menu appears
         with tempfile.TemporaryDirectory() as temp_dir:
             saved_image_path: str = os.path.join(temp_dir, "desktop.png")
-            self.assertTrue(self.driver.get_screenshot_as_file(saved_image_path))
+            subprocess.check_call(["import", "-window", "root", saved_image_path])
+            subprocess.check_call(["import", "-window", "root", "failed_test_shot_bug476968.png"])
 
             cv_first_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
             first_image = base64.b64encode(cv.imencode('.png', cv_first_image)[1].tobytes()).decode()
