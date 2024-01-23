@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2023-11-23 20:33+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -59,11 +59,11 @@ msgstr "Crear actividad..."
 msgid "Activities"
 msgstr "Actividades"
 
-#: contents/activitymanager/StoppedActivityItem.qml:137
+#: contents/activitymanager/StoppedActivityItem.qml:138
 msgid "Configure activity"
 msgstr "Configurar actividad"
 
-#: contents/activitymanager/StoppedActivityItem.qml:154
+#: contents/activitymanager/StoppedActivityItem.qml:155
 msgid "Delete"
 msgstr "Borrar"
 
@@ -71,11 +71,11 @@ msgstr "Borrar"
 msgid "Sorry! There was an error loading %1."
 msgstr "Ha ocurrido un error al cargar %1."
 
-#: contents/applet/AppletError.qml:166
+#: contents/applet/AppletError.qml:167
 msgid "Copy to Clipboard"
 msgstr "Copiar en el portapapeles"
 
-#: contents/applet/AppletError.qml:189
+#: contents/applet/AppletError.qml:190
 msgid "View Error Details…"
 msgstr "Ver detalles del error..."
 
@@ -88,41 +88,41 @@ msgstr "Abrir %1"
 msgid "About"
 msgstr "Acerca de"
 
-#: contents/configuration/AboutPlugin.qml:49
+#: contents/configuration/AboutPlugin.qml:50
 msgid "Send an email to %1"
 msgstr "Enviar correo electrónico a %1"
 
-#: contents/configuration/AboutPlugin.qml:63
+#: contents/configuration/AboutPlugin.qml:64
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Abrir sitio web %1"
 
-#: contents/configuration/AboutPlugin.qml:134
+#: contents/configuration/AboutPlugin.qml:137
 msgid "Copyright"
 msgstr "Copyright"
 
-#: contents/configuration/AboutPlugin.qml:152 contents/explorer/Tooltip.qml:92
+#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
 msgid "License:"
 msgstr "Licencia:"
 
-#: contents/configuration/AboutPlugin.qml:155
+#: contents/configuration/AboutPlugin.qml:163
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Ver texto de la licencia"
 
-#: contents/configuration/AboutPlugin.qml:169
+#: contents/configuration/AboutPlugin.qml:177
 msgid "Authors"
 msgstr "Autores"
 
-#: contents/configuration/AboutPlugin.qml:180
+#: contents/configuration/AboutPlugin.qml:189
 msgid "Credits"
 msgstr "Créditos"
 
-#: contents/configuration/AboutPlugin.qml:192
+#: contents/configuration/AboutPlugin.qml:202
 msgid "Translators"
 msgstr "Traductores"
 
-#: contents/configuration/AboutPlugin.qml:209
+#: contents/configuration/AboutPlugin.qml:220
 msgid "Report a Bug…"
 msgstr "Informar de fallo..."
 
@@ -271,145 +271,147 @@ msgstr "Escriba aquí"
 msgid "Panel Settings"
 msgstr "Preferencias del panel"
 
-#: contents/configuration/PanelConfiguration.qml:97
+#: contents/configuration/PanelConfiguration.qml:98
 msgid "Add Spacer"
 msgstr "Añadir separador"
 
-#: contents/configuration/PanelConfiguration.qml:100
+#: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
 msgstr "Añadir un separador al panel"
 
-#: contents/configuration/PanelConfiguration.qml:107
+#: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
 msgstr "Añadir elementos gráficos..."
 
-#: contents/configuration/PanelConfiguration.qml:110
+#: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
 "Abrir el selector de elementos gráficos para arrastrar componentes al panel"
 
-#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:140
 msgid "Position"
 msgstr "Posición"
 
-#: contents/configuration/PanelConfiguration.qml:143
-#: contents/configuration/PanelConfiguration.qml:254
+#: contents/configuration/PanelConfiguration.qml:145
+#: contents/configuration/PanelConfiguration.qml:260
 msgid "Top"
 msgstr "Arriba"
 
-#: contents/configuration/PanelConfiguration.qml:144
-#: contents/configuration/PanelConfiguration.qml:256
+#: contents/configuration/PanelConfiguration.qml:146
+#: contents/configuration/PanelConfiguration.qml:262
 msgid "Right"
 msgstr "Derecha"
 
-#: contents/configuration/PanelConfiguration.qml:145
-#: contents/configuration/PanelConfiguration.qml:254
+#: contents/configuration/PanelConfiguration.qml:147
+#: contents/configuration/PanelConfiguration.qml:260
 msgid "Left"
 msgstr "Izquierda"
 
-#: contents/configuration/PanelConfiguration.qml:146
-#: contents/configuration/PanelConfiguration.qml:256
+#: contents/configuration/PanelConfiguration.qml:148
+#: contents/configuration/PanelConfiguration.qml:262
 msgid "Bottom"
 msgstr "Abajo"
 
-#: contents/configuration/PanelConfiguration.qml:163
-msgid "Set Position..."
+#: contents/configuration/PanelConfiguration.qml:168
+#, fuzzy
+#| msgid "Set Position..."
+msgid "Set Position…"
 msgstr "Definir la posición..."
 
-#: contents/configuration/PanelConfiguration.qml:190
+#: contents/configuration/PanelConfiguration.qml:195
 msgid "Alignment"
 msgstr "Alineación"
 
-#: contents/configuration/PanelConfiguration.qml:255
+#: contents/configuration/PanelConfiguration.qml:261
 msgid "Center"
 msgstr "Centro"
 
-#: contents/configuration/PanelConfiguration.qml:278
+#: contents/configuration/PanelConfiguration.qml:284
 msgid "Length"
 msgstr "Longitud"
 
-#: contents/configuration/PanelConfiguration.qml:296
+#: contents/configuration/PanelConfiguration.qml:303
 msgid "Fill height"
 msgstr "Rellenar la altura"
 
-#: contents/configuration/PanelConfiguration.qml:296
+#: contents/configuration/PanelConfiguration.qml:303
 msgid "Fill width"
 msgstr "Rellenar la anchura"
 
-#: contents/configuration/PanelConfiguration.qml:297
+#: contents/configuration/PanelConfiguration.qml:304
 msgid "Fit content"
 msgstr "Ajustar el contenido"
 
-#: contents/configuration/PanelConfiguration.qml:298
+#: contents/configuration/PanelConfiguration.qml:305
 msgid "Custom"
 msgstr "Personalizado"
 
-#: contents/configuration/PanelConfiguration.qml:328
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Visibility"
 msgstr "Visibilidad"
 
-#: contents/configuration/PanelConfiguration.qml:340
+#: contents/configuration/PanelConfiguration.qml:348
 msgid "Always visible"
 msgstr "Siempre visible"
 
-#: contents/configuration/PanelConfiguration.qml:341
+#: contents/configuration/PanelConfiguration.qml:349
 msgid "Auto hide"
 msgstr "Ocultar automáticamente"
 
-#: contents/configuration/PanelConfiguration.qml:342
+#: contents/configuration/PanelConfiguration.qml:350
 msgid "Dodge windows"
 msgstr "Esquivar ventanas"
 
-#: contents/configuration/PanelConfiguration.qml:343
+#: contents/configuration/PanelConfiguration.qml:351
 msgid "Windows Go Below"
 msgstr "Las ventanas van por detrás"
 
-#: contents/configuration/PanelConfiguration.qml:386
+#: contents/configuration/PanelConfiguration.qml:394
 msgid "Opacity"
 msgstr "Opacidad"
 
-#: contents/configuration/PanelConfiguration.qml:399
+#: contents/configuration/PanelConfiguration.qml:408
 msgid "Adaptive"
 msgstr "Adaptable"
 
-#: contents/configuration/PanelConfiguration.qml:400
+#: contents/configuration/PanelConfiguration.qml:409
 msgid "Opaque"
 msgstr "Opaco"
 
-#: contents/configuration/PanelConfiguration.qml:401
+#: contents/configuration/PanelConfiguration.qml:410
 msgid "Translucent"
 msgstr "Transparente"
 
-#: contents/configuration/PanelConfiguration.qml:425
+#: contents/configuration/PanelConfiguration.qml:434
 msgid "Style"
 msgstr "Estilo"
 
-#: contents/configuration/PanelConfiguration.qml:436
+#: contents/configuration/PanelConfiguration.qml:446
 msgid "Floating"
 msgstr "Flotante"
 
-#: contents/configuration/PanelConfiguration.qml:510
+#: contents/configuration/PanelConfiguration.qml:520
 msgid "Panel Width:"
 msgstr "Anchura del panel:"
 
-#: contents/configuration/PanelConfiguration.qml:510
+#: contents/configuration/PanelConfiguration.qml:520
 msgid "Height:"
 msgstr "Altura:"
 
-#: contents/configuration/PanelConfiguration.qml:544
+#: contents/configuration/PanelConfiguration.qml:555
 msgid "Focus shortcut:"
 msgstr "Atajo de teclado para enfocar:"
 
-#: contents/configuration/PanelConfiguration.qml:554
+#: contents/configuration/PanelConfiguration.qml:566
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pulse este atajo de teclado de teclado para mover el foco al panel"
 
-#: contents/configuration/PanelConfiguration.qml:570
+#: contents/configuration/PanelConfiguration.qml:582
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Borrar el panel"
 
-#: contents/configuration/PanelConfiguration.qml:573
+#: contents/configuration/PanelConfiguration.qml:585
 msgid "Remove this panel; this action is undo-able"
 msgstr "Eliminar este panel (esta acción se puede deshacer)"
 
@@ -451,7 +453,7 @@ msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr "Puede arrastrar paneles y escritorios para moverlos a otras pantallas."
 
-#: contents/configuration/ShellContainmentConfiguration.qml:43
+#: contents/configuration/ShellContainmentConfiguration.qml:44
 msgid "Close"
 msgstr "Cerrar"
 
@@ -483,28 +485,28 @@ msgstr "Elementos gráficos alternativos"
 msgid "Unsupported Widget"
 msgstr "Elemento gráfico no reconocido"
 
-#: contents/explorer/AppletDelegate.qml:187
+#: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
 msgstr "Deshacer la instalación"
 
-#: contents/explorer/AppletDelegate.qml:188
+#: contents/explorer/AppletDelegate.qml:189
 msgid "Uninstall widget"
 msgstr "Desinstalar elemento gráfico"
 
-#: contents/explorer/Tooltip.qml:101
+#: contents/explorer/Tooltip.qml:105
 msgid "Author:"
 msgstr "Autor:"
 
-#: contents/explorer/Tooltip.qml:109
+#: contents/explorer/Tooltip.qml:115
 msgid "Email:"
 msgstr "Correo electrónico:"
 
-#: contents/explorer/Tooltip.qml:128
+#: contents/explorer/Tooltip.qml:136
 msgid "Uninstall"
 msgstr "Desinstalar"
 
 #: contents/explorer/WidgetExplorer.qml:118
-#: contents/explorer/WidgetExplorer.qml:192
+#: contents/explorer/WidgetExplorer.qml:193
 msgid "All Widgets"
 msgstr "Todos los elementos gráficos"
 
@@ -512,19 +514,19 @@ msgstr "Todos los elementos gráficos"
 msgid "Widgets"
 msgstr "Elementos gráficos"
 
-#: contents/explorer/WidgetExplorer.qml:152
+#: contents/explorer/WidgetExplorer.qml:153
 msgid "Get New Widgets…"
 msgstr "Obtener nuevos elementos gráficos..."
 
-#: contents/explorer/WidgetExplorer.qml:203
+#: contents/explorer/WidgetExplorer.qml:204
 msgid "Categories"
 msgstr "Categorías"
 
-#: contents/explorer/WidgetExplorer.qml:285
+#: contents/explorer/WidgetExplorer.qml:286
 msgid "No widgets matched the search terms"
 msgstr "Ningún widget satisface la búsqueda"
 
-#: contents/explorer/WidgetExplorer.qml:285
+#: contents/explorer/WidgetExplorer.qml:286
 msgid "No widgets available"
 msgstr "Ningún widget disponible"
 

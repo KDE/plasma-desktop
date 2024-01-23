@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2023-11-10 23:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -201,7 +201,7 @@ msgstr "從列表選取項目後在這檢視它的快捷鍵"
 msgid "Export Shortcut Scheme"
 msgstr "匯出快捷鍵方案"
 
-#: ui/main.qml:348 ui/main.qml:465
+#: ui/main.qml:348 ui/main.qml:466
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "匯入快捷鍵方案"
@@ -237,40 +237,40 @@ msgstr "新增"
 msgid "Enter a command or choose a script file:"
 msgstr "輸入命令或選擇一個文稿檔案："
 
-#: ui/main.qml:436
+#: ui/main.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "選擇…"
 
-#: ui/main.qml:449
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "選擇文稿檔案"
 
-#: ui/main.qml:451
+#: ui/main.qml:452
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "文稿檔案 (*.*sh)"
 
-#: ui/main.qml:472
+#: ui/main.qml:473
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "選取要匯入的方案："
 
-#: ui/main.qml:489
+#: ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "自訂方案"
 
-#: ui/main.qml:494
+#: ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "選擇檔案…"
 
-#: ui/main.qml:494
+#: ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "匯入"
@@ -288,49 +288,49 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:73
+#: ui/ShortcutActionDelegate.qml:74
 #, kde-format
 msgid "No active shortcuts"
 msgstr "無作用中快捷鍵"
 
-#: ui/ShortcutActionDelegate.qml:114
+#: ui/ShortcutActionDelegate.qml:116
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "預設快捷鍵"
 
-#: ui/ShortcutActionDelegate.qml:116
+#: ui/ShortcutActionDelegate.qml:118
 #, kde-format
 msgid "No default shortcuts"
 msgstr "無預設快捷鍵"
 
-#: ui/ShortcutActionDelegate.qml:124
+#: ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "預設快捷鍵 %1 已啟用。"
 
-#: ui/ShortcutActionDelegate.qml:124
+#: ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "預設快捷鍵 %1 已停用。"
 
-#: ui/ShortcutActionDelegate.qml:146
+#: ui/ShortcutActionDelegate.qml:149
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "自訂快捷鍵"
 
-#: ui/ShortcutActionDelegate.qml:172
+#: ui/ShortcutActionDelegate.qml:176
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "刪除這個快捷鍵"
 
-#: ui/ShortcutActionDelegate.qml:178
+#: ui/ShortcutActionDelegate.qml:182
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "新增自訂快捷鍵"
 
-#: ui/ShortcutActionDelegate.qml:215
+#: ui/ShortcutActionDelegate.qml:219
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "取消記錄新快捷鍵"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2023-12-10 14:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -199,7 +199,7 @@ msgstr "ஒன்றன் சுருக்குவழிகளை இங்�
 msgid "Export Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை ஏற்றுமதி செய்"
 
-#: ui/main.qml:348 ui/main.qml:465
+#: ui/main.qml:348 ui/main.qml:466
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை இறக்குமதி செய்"
@@ -235,40 +235,40 @@ msgstr "சேர்"
 msgid "Enter a command or choose a script file:"
 msgstr "கட்டளையையோ சிறுநிரல்கோப்பையோ தேர்ந்தெடுக்கவும்:"
 
-#: ui/main.qml:436
+#: ui/main.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "தேர்ந்தெடு…"
 
-#: ui/main.qml:449
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "சிறுநிரல் கோப்பைத் தேர்ந்தெடுப்பது"
 
-#: ui/main.qml:451
+#: ui/main.qml:452
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "சிறுநிரல் கோப்பு (*.*sh)"
 
-#: ui/main.qml:472
+#: ui/main.qml:473
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "இறக்குமதி செய்யவேண்டியதை தேர்வு செய்யவும்:"
 
-#: ui/main.qml:489
+#: ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "தனிப்பட்ட திட்டம்"
 
-#: ui/main.qml:494
+#: ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "கோப்பை தேர்ந்தெடு…"
 
-#: ui/main.qml:494
+#: ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "இறக்குமதி"
@@ -286,12 +286,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:73
+#: ui/ShortcutActionDelegate.qml:74
 #, kde-format
 msgid "No active shortcuts"
 msgstr "சுருக்குவழிகள் செயலில் இல்லை"
 
-#: ui/ShortcutActionDelegate.qml:114
+#: ui/ShortcutActionDelegate.qml:116
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -299,37 +299,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "இயல்பிருப்பு சுருக்குவழி"
 msgstr[1] "இயல்பிருப்பு சுருக்குவழிகள்"
 
-#: ui/ShortcutActionDelegate.qml:116
+#: ui/ShortcutActionDelegate.qml:118
 #, kde-format
 msgid "No default shortcuts"
 msgstr "இயல்பிருப்பு சுருக்குவழிகள் இல்லை"
 
-#: ui/ShortcutActionDelegate.qml:124
+#: ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "இயல்பிருப்பு சுருக்குவழி %1 செயலில் உள்ளது."
 
-#: ui/ShortcutActionDelegate.qml:124
+#: ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "இயல்பிருப்பு சுருக்குவழி %1 முடங்கியுள்ளது."
 
-#: ui/ShortcutActionDelegate.qml:146
+#: ui/ShortcutActionDelegate.qml:149
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "தனிப்பட்ட சுருக்குவழிகள்"
 
-#: ui/ShortcutActionDelegate.qml:172
+#: ui/ShortcutActionDelegate.qml:176
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "இந்த சுருக்குவழியை நீக்கு"
 
-#: ui/ShortcutActionDelegate.qml:178
+#: ui/ShortcutActionDelegate.qml:182
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "தனிப்பட்ட சுருக்குவழியை சேர்"
 
-#: ui/ShortcutActionDelegate.qml:215
+#: ui/ShortcutActionDelegate.qml:219
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "புதிய சுருக்குவழியை பதிவு செய்தலை ரத்து செய்"

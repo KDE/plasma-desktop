@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2024-01-21 14:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -199,7 +199,7 @@ msgstr "在列表中选择一项以查看其快捷键"
 msgid "Export Shortcut Scheme"
 msgstr "导出快捷键方案"
 
-#: ui/main.qml:348 ui/main.qml:465
+#: ui/main.qml:348 ui/main.qml:466
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "导入快捷键方案"
@@ -235,40 +235,40 @@ msgstr "添加"
 msgid "Enter a command or choose a script file:"
 msgstr "输入命令或者选择脚本文件："
 
-#: ui/main.qml:436
+#: ui/main.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "选择…"
 
-#: ui/main.qml:449
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "选择脚本文件"
 
-#: ui/main.qml:451
+#: ui/main.qml:452
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "脚本文件 (*.*sh)"
 
-#: ui/main.qml:472
+#: ui/main.qml:473
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "选择要导入的方案："
 
-#: ui/main.qml:489
+#: ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "自定义方案"
 
-#: ui/main.qml:494
+#: ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "选择文件…"
 
-#: ui/main.qml:494
+#: ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "导入"
@@ -286,49 +286,49 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1："
 
-#: ui/ShortcutActionDelegate.qml:73
+#: ui/ShortcutActionDelegate.qml:74
 #, kde-format
 msgid "No active shortcuts"
 msgstr "没有活动快捷键"
 
-#: ui/ShortcutActionDelegate.qml:114
+#: ui/ShortcutActionDelegate.qml:116
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "默认快捷键"
 
-#: ui/ShortcutActionDelegate.qml:116
+#: ui/ShortcutActionDelegate.qml:118
 #, kde-format
 msgid "No default shortcuts"
 msgstr "没有默认快捷键"
 
-#: ui/ShortcutActionDelegate.qml:124
+#: ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "默认快捷键 %1 已启用。"
 
-#: ui/ShortcutActionDelegate.qml:124
+#: ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "默认快捷键 %1 已禁用。"
 
-#: ui/ShortcutActionDelegate.qml:146
+#: ui/ShortcutActionDelegate.qml:149
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "自定义快捷键"
 
-#: ui/ShortcutActionDelegate.qml:172
+#: ui/ShortcutActionDelegate.qml:176
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "删除此快捷键"
 
-#: ui/ShortcutActionDelegate.qml:178
+#: ui/ShortcutActionDelegate.qml:182
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "添加自定义快捷键"
 
-#: ui/ShortcutActionDelegate.qml:215
+#: ui/ShortcutActionDelegate.qml:219
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "取消捕获新快捷键"

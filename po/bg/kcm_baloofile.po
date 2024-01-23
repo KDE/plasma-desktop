@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2023-06-08 19:08+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -64,102 +64,102 @@ msgstr ""
 "Търсене на файлове ви помага бързо да откривате файловете си. Можете да "
 "изберете кои папки и какви типове файлови данни да бъдат индексирани."
 
-#: ui/main.qml:108
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Индексиране на файлове:"
 
-#: ui/main.qml:109
+#: ui/main.qml:110
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr "Активирано"
 
-#: ui/main.qml:123
+#: ui/main.qml:124
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
 msgstr "Състояние:"
 
-#: ui/main.qml:127
+#: ui/main.qml:128
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% завършено"
 
-#: ui/main.qml:140
+#: ui/main.qml:142
 #, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "Текущо индексиране:"
 
-#: ui/main.qml:150
+#: ui/main.qml:153
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
 msgstr "<filename>%1</filename>"
 
-#: ui/main.qml:166
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Данни за индексиране"
 
-#: ui/main.qml:168
+#: ui/main.qml:171
 #, kde-format
 msgid "File names and contents"
 msgstr "Име на файл и съдържание"
 
-#: ui/main.qml:181
+#: ui/main.qml:184
 #, kde-format
 msgid "File names only"
 msgstr "Само име на файл"
 
-#: ui/main.qml:200
+#: ui/main.qml:203
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "Скрити файлове и папки"
 
-#: ui/main.qml:226
+#: ui/main.qml:229
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Местоположение"
 
-#: ui/main.qml:229
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Започване на индексиране на папка…"
 
-#: ui/main.qml:237
+#: ui/main.qml:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Спиране на индексиране на папка…"
 
-#: ui/main.qml:296
+#: ui/main.qml:300
 #, kde-format
 msgid "Not indexed"
 msgstr "Не е индексирано"
 
-#: ui/main.qml:297
+#: ui/main.qml:301
 #, kde-format
 msgid "Indexed"
 msgstr "Индексирано"
 
-#: ui/main.qml:327
+#: ui/main.qml:331
 #, kde-format
 msgid "Delete entry"
 msgstr "Изтриване на записа"
 
-#: ui/main.qml:342
+#: ui/main.qml:346
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Избиране на папка за включване"
 
-#: ui/main.qml:342
+#: ui/main.qml:346
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Избиране на папка за изключване"

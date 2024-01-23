@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 12:20+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2023-07-15 14:43+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -61,47 +61,47 @@ msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Sakte"
 
-#: ui/main.qml:109
+#: ui/main.qml:110
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Med ein gong"
 
-#: ui/main.qml:123
+#: ui/main.qml:125
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Trykk på filer og mapper:"
 
-#: ui/main.qml:130
+#: ui/main.qml:132
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Merkjer dei"
 
-#: ui/main.qml:144
+#: ui/main.qml:146
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Opna berre med dobbeltklikking"
 
-#: ui/main.qml:156
+#: ui/main.qml:159
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Opnar dei"
 
-#: ui/main.qml:169
+#: ui/main.qml:172
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Merk element ved å trykkja på markerings­ikonet"
 
-#: ui/main.qml:184
+#: ui/main.qml:188
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Klikking i rullefelt:"
 
-#: ui/main.qml:185
+#: ui/main.qml:189
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -109,7 +109,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Rullar til vald plass"
 
-#: ui/main.qml:203
+#: ui/main.qml:207
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -117,44 +117,44 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Rullar ei side opp/ned"
 
-#: ui/main.qml:216
+#: ui/main.qml:220
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Midtklikk for å rulla til vald plass"
 
-#: ui/main.qml:229
+#: ui/main.qml:234
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "Midtklikk:"
 
-#: ui/main.qml:231
+#: ui/main.qml:236
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
 msgstr "Lim inn merkt tekst"
 
-#: ui/main.qml:248
+#: ui/main.qml:253
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Trykkskjerm-modus:"
 
-#: ui/main.qml:250
+#: ui/main.qml:255
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Ta automatisk i bruk ved behov"
 
 # Vert lettare å lesa/forstå om denne og teksten nedanfor begge brukar ordet «alltid».
-#: ui/main.qml:250 ui/main.qml:293
+#: ui/main.qml:255 ui/main.qml:298
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Alltid av"
 
-#: ui/main.qml:266
+#: ui/main.qml:271
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -165,13 +165,13 @@ msgstr ""
 "trykkskjerm, men inga mus eller styreplate. Eit eksempel er når eit "
 "fleksibelt tastatur på ei berbar maskin vert snudd eller kopla frå."
 
-#: ui/main.qml:271
+#: ui/main.qml:276
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Alltid på"
 
-#: ui/main.qml:311
+#: ui/main.qml:316
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -180,25 +180,25 @@ msgstr ""
 "I trykkskjerm-modus vert mange av elementa i brukarflate større, slik at dei "
 "vert lettare å treffa med fingeren."
 
-#: ui/main.qml:328
+#: ui/main.qml:334
 #, fuzzy, kde-format
 #| msgid "Open by double-clicking instead"
 msgid "Double-click interval:"
 msgstr "Opna berre med dobbeltklikking"
 
-#: ui/main.qml:343
+#: ui/main.qml:349
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:347
+#: ui/main.qml:353
 #, kde-format
 msgid "msec"
 msgstr ""
 
-#: ui/main.qml:361
+#: ui/main.qml:367
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "

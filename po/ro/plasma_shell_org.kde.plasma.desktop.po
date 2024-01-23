@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:39+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2024-01-07 18:37+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -58,11 +58,11 @@ msgstr "Creează activitate…"
 msgid "Activities"
 msgstr "Activități"
 
-#: contents/activitymanager/StoppedActivityItem.qml:137
+#: contents/activitymanager/StoppedActivityItem.qml:138
 msgid "Configure activity"
 msgstr "Configurează activitatea"
 
-#: contents/activitymanager/StoppedActivityItem.qml:154
+#: contents/activitymanager/StoppedActivityItem.qml:155
 msgid "Delete"
 msgstr "Șterge"
 
@@ -70,11 +70,11 @@ msgstr "Șterge"
 msgid "Sorry! There was an error loading %1."
 msgstr "Scuze! A avut loc o eroare la încărcarea %1."
 
-#: contents/applet/AppletError.qml:166
+#: contents/applet/AppletError.qml:167
 msgid "Copy to Clipboard"
 msgstr "Copiază în clipboard"
 
-#: contents/applet/AppletError.qml:189
+#: contents/applet/AppletError.qml:190
 msgid "View Error Details…"
 msgstr "Vezi detalii eroare…"
 
@@ -87,41 +87,41 @@ msgstr "Deschide %1"
 msgid "About"
 msgstr "Despre"
 
-#: contents/configuration/AboutPlugin.qml:49
+#: contents/configuration/AboutPlugin.qml:50
 msgid "Send an email to %1"
 msgstr "Trimite scrisoare către %1"
 
-#: contents/configuration/AboutPlugin.qml:63
+#: contents/configuration/AboutPlugin.qml:64
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Deschide saitul %1"
 
-#: contents/configuration/AboutPlugin.qml:134
+#: contents/configuration/AboutPlugin.qml:137
 msgid "Copyright"
 msgstr "Drept de autor"
 
-#: contents/configuration/AboutPlugin.qml:152 contents/explorer/Tooltip.qml:92
+#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
 msgid "License:"
 msgstr "Licență:"
 
-#: contents/configuration/AboutPlugin.qml:155
+#: contents/configuration/AboutPlugin.qml:163
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Vezi textul licenței"
 
-#: contents/configuration/AboutPlugin.qml:169
+#: contents/configuration/AboutPlugin.qml:177
 msgid "Authors"
 msgstr "Autori"
 
-#: contents/configuration/AboutPlugin.qml:180
+#: contents/configuration/AboutPlugin.qml:189
 msgid "Credits"
 msgstr "Mulțumiri"
 
-#: contents/configuration/AboutPlugin.qml:192
+#: contents/configuration/AboutPlugin.qml:202
 msgid "Translators"
 msgstr "Traducători"
 
-#: contents/configuration/AboutPlugin.qml:209
+#: contents/configuration/AboutPlugin.qml:220
 msgid "Report a Bug…"
 msgstr "Raportează defect…"
 
@@ -269,145 +269,147 @@ msgstr "Introduceți aici"
 msgid "Panel Settings"
 msgstr "Configurări panou"
 
-#: contents/configuration/PanelConfiguration.qml:97
+#: contents/configuration/PanelConfiguration.qml:98
 msgid "Add Spacer"
 msgstr "Adaugă spațiator"
 
-#: contents/configuration/PanelConfiguration.qml:100
+#: contents/configuration/PanelConfiguration.qml:101
 msgid "Add spacer widget to the panel"
 msgstr "Adaugă control de spațiere la panou"
 
-#: contents/configuration/PanelConfiguration.qml:107
+#: contents/configuration/PanelConfiguration.qml:108
 msgid "Add Widgets…"
 msgstr "Adaugă controale…"
 
-#: contents/configuration/PanelConfiguration.qml:110
+#: contents/configuration/PanelConfiguration.qml:111
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr "Deschide selectorul de controale grafice ce pot fi trase pe panou"
 
-#: contents/configuration/PanelConfiguration.qml:139
+#: contents/configuration/PanelConfiguration.qml:140
 msgid "Position"
 msgstr "Poziție"
 
-#: contents/configuration/PanelConfiguration.qml:143
-#: contents/configuration/PanelConfiguration.qml:254
+#: contents/configuration/PanelConfiguration.qml:145
+#: contents/configuration/PanelConfiguration.qml:260
 msgid "Top"
 msgstr "Sus"
 
-#: contents/configuration/PanelConfiguration.qml:144
-#: contents/configuration/PanelConfiguration.qml:256
+#: contents/configuration/PanelConfiguration.qml:146
+#: contents/configuration/PanelConfiguration.qml:262
 msgid "Right"
 msgstr "Dreapta"
 
-#: contents/configuration/PanelConfiguration.qml:145
-#: contents/configuration/PanelConfiguration.qml:254
+#: contents/configuration/PanelConfiguration.qml:147
+#: contents/configuration/PanelConfiguration.qml:260
 msgid "Left"
 msgstr "Stânga"
 
-#: contents/configuration/PanelConfiguration.qml:146
-#: contents/configuration/PanelConfiguration.qml:256
+#: contents/configuration/PanelConfiguration.qml:148
+#: contents/configuration/PanelConfiguration.qml:262
 msgid "Bottom"
 msgstr "Jos"
 
-#: contents/configuration/PanelConfiguration.qml:163
-msgid "Set Position..."
+#: contents/configuration/PanelConfiguration.qml:168
+#, fuzzy
+#| msgid "Set Position..."
+msgid "Set Position…"
 msgstr "Stabilește poziția…"
 
-#: contents/configuration/PanelConfiguration.qml:190
+#: contents/configuration/PanelConfiguration.qml:195
 msgid "Alignment"
 msgstr "Aliniere"
 
-#: contents/configuration/PanelConfiguration.qml:255
+#: contents/configuration/PanelConfiguration.qml:261
 msgid "Center"
 msgstr "Centru"
 
-#: contents/configuration/PanelConfiguration.qml:278
+#: contents/configuration/PanelConfiguration.qml:284
 msgid "Length"
 msgstr "Lungime"
 
-#: contents/configuration/PanelConfiguration.qml:296
+#: contents/configuration/PanelConfiguration.qml:303
 msgid "Fill height"
 msgstr "Umple înălțimea"
 
-#: contents/configuration/PanelConfiguration.qml:296
+#: contents/configuration/PanelConfiguration.qml:303
 msgid "Fill width"
 msgstr "Umple lățimea"
 
-#: contents/configuration/PanelConfiguration.qml:297
+#: contents/configuration/PanelConfiguration.qml:304
 msgid "Fit content"
 msgstr "Potrivește conținutul"
 
-#: contents/configuration/PanelConfiguration.qml:298
+#: contents/configuration/PanelConfiguration.qml:305
 msgid "Custom"
 msgstr "Personalizat"
 
-#: contents/configuration/PanelConfiguration.qml:328
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Visibility"
 msgstr "Vizibilitate"
 
-#: contents/configuration/PanelConfiguration.qml:340
+#: contents/configuration/PanelConfiguration.qml:348
 msgid "Always visible"
 msgstr "Vizibil întotdeauna"
 
-#: contents/configuration/PanelConfiguration.qml:341
+#: contents/configuration/PanelConfiguration.qml:349
 msgid "Auto hide"
 msgstr "Ascunde automat"
 
-#: contents/configuration/PanelConfiguration.qml:342
+#: contents/configuration/PanelConfiguration.qml:350
 msgid "Dodge windows"
 msgstr "Ocolește ferestrele"
 
-#: contents/configuration/PanelConfiguration.qml:343
+#: contents/configuration/PanelConfiguration.qml:351
 msgid "Windows Go Below"
 msgstr "Ferestrele merg dedesubt"
 
-#: contents/configuration/PanelConfiguration.qml:386
+#: contents/configuration/PanelConfiguration.qml:394
 msgid "Opacity"
 msgstr "Opacitate"
 
-#: contents/configuration/PanelConfiguration.qml:399
+#: contents/configuration/PanelConfiguration.qml:408
 msgid "Adaptive"
 msgstr "Adaptivă"
 
-#: contents/configuration/PanelConfiguration.qml:400
+#: contents/configuration/PanelConfiguration.qml:409
 msgid "Opaque"
 msgstr "Opac"
 
-#: contents/configuration/PanelConfiguration.qml:401
+#: contents/configuration/PanelConfiguration.qml:410
 msgid "Translucent"
 msgstr "Translucid"
 
-#: contents/configuration/PanelConfiguration.qml:425
+#: contents/configuration/PanelConfiguration.qml:434
 msgid "Style"
 msgstr "Stil"
 
-#: contents/configuration/PanelConfiguration.qml:436
+#: contents/configuration/PanelConfiguration.qml:446
 msgid "Floating"
 msgstr "Flotant"
 
-#: contents/configuration/PanelConfiguration.qml:510
+#: contents/configuration/PanelConfiguration.qml:520
 msgid "Panel Width:"
 msgstr "Lățime panou:"
 
-#: contents/configuration/PanelConfiguration.qml:510
+#: contents/configuration/PanelConfiguration.qml:520
 msgid "Height:"
 msgstr "Înălțime:"
 
-#: contents/configuration/PanelConfiguration.qml:544
+#: contents/configuration/PanelConfiguration.qml:555
 msgid "Focus shortcut:"
 msgstr "Scurtătură pentru focalizare:"
 
-#: contents/configuration/PanelConfiguration.qml:554
+#: contents/configuration/PanelConfiguration.qml:566
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Apăsați această scurtătură de taste pentru a muta focalizarea asupra panoului"
 
-#: contents/configuration/PanelConfiguration.qml:570
+#: contents/configuration/PanelConfiguration.qml:582
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Șterge panoul"
 
-#: contents/configuration/PanelConfiguration.qml:573
+#: contents/configuration/PanelConfiguration.qml:585
 msgid "Remove this panel; this action is undo-able"
 msgstr "Elimină acest panou. Acțiunea nu poate fi desfăcută."
 
@@ -450,7 +452,7 @@ msgid ""
 msgstr ""
 "Puteți trage panourile și birourile în jur pentru a le muta pe alte ecrane."
 
-#: contents/configuration/ShellContainmentConfiguration.qml:43
+#: contents/configuration/ShellContainmentConfiguration.qml:44
 msgid "Close"
 msgstr "Închide"
 
@@ -482,28 +484,28 @@ msgstr "Controale grafice alternative"
 msgid "Unsupported Widget"
 msgstr "Control grafic nesusținut"
 
-#: contents/explorer/AppletDelegate.qml:187
+#: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
 msgstr "Desfă dezinstalarea"
 
-#: contents/explorer/AppletDelegate.qml:188
+#: contents/explorer/AppletDelegate.qml:189
 msgid "Uninstall widget"
 msgstr "Dezinstalează controlul grafic"
 
-#: contents/explorer/Tooltip.qml:101
+#: contents/explorer/Tooltip.qml:105
 msgid "Author:"
 msgstr "Autor:"
 
-#: contents/explorer/Tooltip.qml:109
+#: contents/explorer/Tooltip.qml:115
 msgid "Email:"
 msgstr "Email:"
 
-#: contents/explorer/Tooltip.qml:128
+#: contents/explorer/Tooltip.qml:136
 msgid "Uninstall"
 msgstr "Dezinstalează"
 
 #: contents/explorer/WidgetExplorer.qml:118
-#: contents/explorer/WidgetExplorer.qml:192
+#: contents/explorer/WidgetExplorer.qml:193
 msgid "All Widgets"
 msgstr "Toate controalele grafice"
 
@@ -511,19 +513,19 @@ msgstr "Toate controalele grafice"
 msgid "Widgets"
 msgstr "Controale grafice"
 
-#: contents/explorer/WidgetExplorer.qml:152
+#: contents/explorer/WidgetExplorer.qml:153
 msgid "Get New Widgets…"
 msgstr "Obține controale noi…"
 
-#: contents/explorer/WidgetExplorer.qml:203
+#: contents/explorer/WidgetExplorer.qml:204
 msgid "Categories"
 msgstr "Categorii"
 
-#: contents/explorer/WidgetExplorer.qml:285
+#: contents/explorer/WidgetExplorer.qml:286
 msgid "No widgets matched the search terms"
 msgstr "Niciun control nu se potrivește termenilor căutării"
 
-#: contents/explorer/WidgetExplorer.qml:285
+#: contents/explorer/WidgetExplorer.qml:286
 msgid "No widgets available"
 msgstr "Niciun control grafic disponibil"
 

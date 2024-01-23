@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2023-12-16 11:31+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -88,24 +88,24 @@ msgstr "Wybierz domyślny odtwarzacz filmów"
 msgid "Details"
 msgstr "Szczegóły"
 
-#: ui/ComponentOverlay.qml:82
+#: ui/ComponentOverlay.qml:83
 #, kde-format
 msgid "This application can also open these file types:"
 msgstr "Ta aplikacja nie może otworzyć tych rodzajów plików:"
 
-#: ui/ComponentOverlay.qml:95
+#: ui/ComponentOverlay.qml:97
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
 msgstr "%1 (Obecnie otwierane w %2)"
 
-#: ui/ComponentOverlay.qml:108
+#: ui/ComponentOverlay.qml:110
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
 msgstr "Otwórz wszystkie w %1"
 
-#: ui/ComponentOverlay.qml:127
+#: ui/ComponentOverlay.qml:129
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
@@ -114,13 +114,13 @@ msgstr ""
 "Ta aplikacja nie zgłasza obsługi następujących rodzajów plików, lecz "
 "istnieje szansa, że da radę je otworzyć:"
 
-#: ui/ComponentOverlay.qml:143
+#: ui/ComponentOverlay.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
 msgstr "Wymuś otwieranie wszystkich w %1"
 
-#: ui/ComponentOverlay.qml:155
+#: ui/ComponentOverlay.qml:158
 #, kde-format
 msgid "Configure Manually…"
 msgstr "Ustaw ręcznie…"

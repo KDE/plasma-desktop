@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2023-01-15 12:36+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -215,7 +215,7 @@ msgstr "Vel eit element frå lista for å visa snøggtastane her"
 msgid "Export Shortcut Scheme"
 msgstr "Eksporter snøggtastoppsett"
 
-#: ui/main.qml:348 ui/main.qml:465
+#: ui/main.qml:348 ui/main.qml:466
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importer snøggtastoppsett"
@@ -251,40 +251,40 @@ msgstr "Legg til"
 msgid "Enter a command or choose a script file:"
 msgstr "Skriv inn kommando eller vel skriptfil:"
 
-#: ui/main.qml:436
+#: ui/main.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Vel …"
 
-#: ui/main.qml:449
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Vel skriptfil"
 
-#: ui/main.qml:451
+#: ui/main.qml:452
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Skriptfil (*.*sh)"
 
-#: ui/main.qml:472
+#: ui/main.qml:473
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Vel oppsett å importera:"
 
-#: ui/main.qml:489
+#: ui/main.qml:491
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Tilpassa oppsett"
 
-#: ui/main.qml:494
+#: ui/main.qml:496
 #, kde-format
 msgid "Select File…"
 msgstr "Vel fil …"
 
-#: ui/main.qml:494
+#: ui/main.qml:496
 #, kde-format
 msgid "Import"
 msgstr "Importer"
@@ -302,12 +302,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:73
+#: ui/ShortcutActionDelegate.qml:74
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Ingen verksame snøggtastar"
 
-#: ui/ShortcutActionDelegate.qml:114
+#: ui/ShortcutActionDelegate.qml:116
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -315,37 +315,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Standard snøggtast"
 msgstr[1] "Standard snøggtastar"
 
-#: ui/ShortcutActionDelegate.qml:116
+#: ui/ShortcutActionDelegate.qml:118
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Ingen standard snøggtastar"
 
-#: ui/ShortcutActionDelegate.qml:124
+#: ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Standard snøggtast %1 er slått på."
 
-#: ui/ShortcutActionDelegate.qml:124
+#: ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Standard snøggtast %1 er slått av."
 
-#: ui/ShortcutActionDelegate.qml:146
+#: ui/ShortcutActionDelegate.qml:149
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Tilpassa snøggtastar"
 
-#: ui/ShortcutActionDelegate.qml:172
+#: ui/ShortcutActionDelegate.qml:176
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Fjern snøggtasten"
 
-#: ui/ShortcutActionDelegate.qml:178
+#: ui/ShortcutActionDelegate.qml:182
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Tilordna eigen snøggtast"
 
-#: ui/ShortcutActionDelegate.qml:215
+#: ui/ShortcutActionDelegate.qml:219
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Avbryt tilordning av ny snøggtast"

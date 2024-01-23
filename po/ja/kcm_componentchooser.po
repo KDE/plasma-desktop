@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2023-12-29 17:17+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -96,24 +96,24 @@ msgstr "デフォルトの動画プレーヤーを選択"
 msgid "Details"
 msgstr "詳細"
 
-#: ui/ComponentOverlay.qml:82
+#: ui/ComponentOverlay.qml:83
 #, kde-format
 msgid "This application can also open these file types:"
 msgstr "このアプリケーションはこれらのファイルタイプも開けます:"
 
-#: ui/ComponentOverlay.qml:95
+#: ui/ComponentOverlay.qml:97
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
 msgstr "%1 (現在 %2 で開かれるように設定されています)"
 
-#: ui/ComponentOverlay.qml:108
+#: ui/ComponentOverlay.qml:110
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
 msgstr "すべてを %1 で開く"
 
-#: ui/ComponentOverlay.qml:127
+#: ui/ComponentOverlay.qml:129
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
@@ -122,13 +122,13 @@ msgstr ""
 "このアプリケーションは以下のファイルタイプのサポートを明示していませんが、そ"
 "れでも開けるかもしれません:"
 
-#: ui/ComponentOverlay.qml:143
+#: ui/ComponentOverlay.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
 msgstr "すべてを強制的に %1 で開く"
 
-#: ui/ComponentOverlay.qml:155
+#: ui/ComponentOverlay.qml:158
 #, kde-format
 msgid "Configure Manually…"
 msgstr "手動で設定..."

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-07 02:44+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2023-10-20 00:43-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -66,102 +66,102 @@ msgstr ""
 "A Pesquisa de arquivos ajuda você a localizar rapidamente seus arquivos. "
 "Você pode escolher quais pastas e tipos de dados de arquivo são indexados."
 
-#: ui/main.qml:108
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Indexando arquivos:"
 
-#: ui/main.qml:109
+#: ui/main.qml:110
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr "Habilitado"
 
-#: ui/main.qml:123
+#: ui/main.qml:124
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
 msgstr "Status:"
 
-#: ui/main.qml:127
+#: ui/main.qml:128
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% concluídos"
 
-#: ui/main.qml:140
+#: ui/main.qml:142
 #, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "Indexando atualmente: "
 
-#: ui/main.qml:150
+#: ui/main.qml:153
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
 msgstr "<filename>%1</filename>"
 
-#: ui/main.qml:166
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Dados a indexar:"
 
-#: ui/main.qml:168
+#: ui/main.qml:171
 #, kde-format
 msgid "File names and contents"
 msgstr "Nomes dos arquivos e conteúdos"
 
-#: ui/main.qml:181
+#: ui/main.qml:184
 #, kde-format
 msgid "File names only"
 msgstr "Nomes dos arquivos apenas"
 
-#: ui/main.qml:200
+#: ui/main.qml:203
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "Arquivos e pastas ocultas"
 
-#: ui/main.qml:226
+#: ui/main.qml:229
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Locais"
 
-#: ui/main.qml:229
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Iniciar a indexação de uma pasta..."
 
-#: ui/main.qml:237
+#: ui/main.qml:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Parar a indexação de uma pasta..."
 
-#: ui/main.qml:296
+#: ui/main.qml:300
 #, kde-format
 msgid "Not indexed"
 msgstr "Não indexada"
 
-#: ui/main.qml:297
+#: ui/main.qml:301
 #, kde-format
 msgid "Indexed"
 msgstr "Indexado"
 
-#: ui/main.qml:327
+#: ui/main.qml:331
 #, kde-format
 msgid "Delete entry"
 msgstr "Excluir registro"
 
-#: ui/main.qml:342
+#: ui/main.qml:346
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Selecione uma pasta para incluir"
 
-#: ui/main.qml:342
+#: ui/main.qml:346
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Selecione uma pasta para excluir"

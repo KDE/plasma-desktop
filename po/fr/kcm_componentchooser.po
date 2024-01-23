@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2024-01-23 00:38+0000\n"
 "PO-Revision-Date: 2023-11-20 09:52+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -104,24 +104,24 @@ msgstr "Sélectionner le lecteur de vidéo par défaut"
 msgid "Details"
 msgstr "Détails"
 
-#: ui/ComponentOverlay.qml:82
+#: ui/ComponentOverlay.qml:83
 #, kde-format
 msgid "This application can also open these file types:"
 msgstr "Cette application peut aussi ouvrir ces types de fichiers :"
 
-#: ui/ComponentOverlay.qml:95
+#: ui/ComponentOverlay.qml:97
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
 msgstr "%1 (Actuellement ouvert dans %2)"
 
-#: ui/ComponentOverlay.qml:108
+#: ui/ComponentOverlay.qml:110
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
 msgstr "Tout ouvrir dans %1"
 
-#: ui/ComponentOverlay.qml:127
+#: ui/ComponentOverlay.qml:129
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
@@ -130,13 +130,13 @@ msgstr ""
 "Cette application n'annonce pas la prise en charge pour les types de "
 "fichiers suivants mais elle en est malgré tout capable :"
 
-#: ui/ComponentOverlay.qml:143
+#: ui/ComponentOverlay.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
 msgstr "Forcer toutes les ouvertures dans %1"
 
-#: ui/ComponentOverlay.qml:155
+#: ui/ComponentOverlay.qml:158
 #, kde-format
 msgid "Configure Manually…"
 msgstr "Configurer manuellement..."
