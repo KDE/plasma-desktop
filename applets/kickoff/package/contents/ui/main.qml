@@ -196,31 +196,25 @@ PlasmoidItem {
             if (shouldHaveLabel) {
                 impWidth += labelTextField.contentWidth + labelTextField.Layout.leftMargin + labelTextField.Layout.rightMargin;
             }
-            const impHeight = Math.max(iconSize, displayedIcon.height);
+            const impHeight = displayedIcon.height > 0 ? displayedIcon.height : iconSize
 
             // at least square, but can be wider/taller
             if (kickoff.inPanel) {
                 if (kickoff.vertical) {
                     return {
-                        minimumWidth: -1,
-                        maximumWidth: iconSize,
-                        minimumHeight: impHeight,
-                        maximumHeight: impHeight,
+                        preferredWidth: iconSize,
+                        preferredHeight: impHeight
                     };
                 } else { // horizontal
                     return {
-                        minimumWidth: impWidth,
-                        maximumWidth: impWidth,
-                        minimumHeight: -1,
-                        maximumHeight: iconSize,
+                        preferredWidth: impWidth,
+                        preferredHeight: iconSize
                     };
                 }
             } else {
                 return {
-                    minimumWidth: impWidth,
-                    maximumWidth: -1,
-                    minimumHeight: Kirigami.Units.iconSizes.small,
-                    maximumHeight: -1,
+                    preferredWidth: impWidth,
+                    preferredHeight: Kirigami.Units.iconSizes.small,
                 };
             }
         }
@@ -228,10 +222,10 @@ PlasmoidItem {
         implicitWidth: iconSize
         implicitHeight: iconSize
 
-        Layout.minimumWidth: sizing.minimumWidth
-        Layout.maximumWidth: sizing.maximumWidth
-        Layout.minimumHeight: sizing.minimumHeight
-        Layout.maximumHeight: sizing.maximumHeight
+        Layout.preferredWidth: sizing.preferredWidth
+        Layout.preferredHeight: sizing.preferredHeight
+        Layout.minimumWidth: Layout.preferredWidth
+        Layout.minimumHeight: Layout.preferredHeight
 
         hoverEnabled: true
 
