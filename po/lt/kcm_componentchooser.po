@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-02-04 23:30+0200\n"
+"PO-Revision-Date: 2024-01-23 01:17+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
@@ -88,46 +88,41 @@ msgid "Details"
 msgstr "Išsamiau"
 
 #: ui/ComponentOverlay.qml:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid "This application can also open these file types:"
-msgstr "Ši programa neskelbia palaikanti šiuos failų tipus:"
+msgstr "Ši programa taip pat gali atverti šiuos failo tipus:"
 
 #: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (Šiuo metu atveriamas programoje %2)"
 
 #: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Atverti visus programoje %1"
 
 #: ui/ComponentOverlay.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
-msgstr "Ši programa neskelbia palaikanti šiuos failų tipus:"
+msgstr ""
+"Ši programa neskelbia palaikanti šiuos failo tipus, bet vis tiek, tikėtina, "
+"jog gali juos atverti:"
 
 #: ui/ComponentOverlay.qml:143
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Force Open Anyway"
+#, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr "Vis tiek priverstinai atverti"
+msgstr "Priverstinai atverti visus programoje %1"
 
 #: ui/ComponentOverlay.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Manually…"
-msgstr "Konfigūruoti"
+msgstr "Konfigūruoti rankiniu būdu…"
 
 #: ui/main.qml:17
 #, kde-format
@@ -157,7 +152,7 @@ msgstr "El. pašto kliento programa:"
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
-msgstr ""
+msgstr "Telefono numeriai:"
 
 #: ui/main.qml:116
 #, kde-format

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-27 01:35+0000\n"
-"PO-Revision-Date: 2022-12-12 22:19+0200\n"
+"PO-Revision-Date: 2024-01-23 01:05+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -81,8 +81,7 @@ msgid "Show hidden files:"
 msgstr "Rodyti paslėptus failus:"
 
 #: package/contents/ui/ConfigFilter.qml:132
-#, fuzzy, kde-format
-#| msgid "File type"
+#, kde-format
 msgid "File Type"
 msgstr "Failo tipas"
 
@@ -104,7 +103,7 @@ msgstr "Nuimti žymėjimą nuo visų"
 #: package/contents/ui/ConfigFilter.qml:223
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "Perjungti rikiavimo tvarką"
 
 #: package/contents/ui/ConfigIcons.qml:64
 #, kde-format
@@ -386,7 +385,7 @@ msgstr "Įveskite tinkintą pavadinimą…"
 #: package/contents/ui/ConfigOverlay.qml:86
 #, kde-format
 msgid "Click and drag to rotate"
-msgstr ""
+msgstr "Spustelėkite ir tempkite norėdami pasukti"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format
@@ -415,6 +414,9 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"Darbalaukyje yra daug failų ir aplankų. Tai gali sąlygoti klaidas ir našumo "
+"problemas. Apsvarstykite galimybę perkelti kai kuriuos iš šių failų ar "
+"aplankų į kitą vietą."
 
 #: package/contents/ui/main.qml:390
 #, kde-format

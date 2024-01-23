@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-07 02:44+0000\n"
-"PO-Revision-Date: 2022-12-28 01:05+0200\n"
+"PO-Revision-Date: 2024-01-23 01:18+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -58,93 +58,85 @@ msgid "Delete Index Data"
 msgstr "Ištrinti indeksavimo duomenis"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their "
-#| "content."
+#, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
-msgstr "Failų paieška leidžia jums greitai rasti failus pagal jų turinį."
+msgstr ""
+"Failų paieška jums leidžia greitai nustatyti failų vietą. Galite pasirinkti, "
+"kokie aplankai ir kokio tipo failų duomenys bus indeksuojami."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Disable indexing"
+#, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
-msgstr "Išjungti indeksavimą"
+msgstr "Failų indeksavimas:"
 
 #: ui/main.qml:109
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
-msgstr ""
+msgstr "Įjungta"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
-msgstr ""
+msgstr "Būsena:"
 
 #: ui/main.qml:127
-#, fuzzy, kde-format
-#| msgid "Status: %1, %2% complete"
+#, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr "Būsena: %1, %2% užbaigta"
+msgstr "%1, %2% užbaigta"
 
 #: ui/main.qml:140
-#, fuzzy, kde-format
-#| msgid "Currently indexing: %1"
+#, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
-msgstr "Šiuo metu indeksuojama: %1"
+msgstr "Šiuo metu indeksuojama:"
 
 #: ui/main.qml:150
-#, fuzzy, kde-kuit-format
-#| msgid "Currently indexing: %1"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
-msgstr "Šiuo metu indeksuojama: %1"
+msgstr "<filename>%1</filename>"
 
 #: ui/main.qml:166
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "Duomenys, kuriuos indeksuoti:"
 
 #: ui/main.qml:168
 #, kde-format
 msgid "File names and contents"
-msgstr ""
+msgstr "Failų pavadinimai ir turinys"
 
 #: ui/main.qml:181
 #, kde-format
 msgid "File names only"
-msgstr ""
+msgstr "Tik failų pavadinimai"
 
 #: ui/main.qml:200
-#, fuzzy, kde-format
-#| msgid "Index hidden files and folders"
+#, kde-format
 msgid "Hidden files and folders"
-msgstr "Indeksuoti paslėptus failus ir aplankus"
+msgstr "Paslėpti failai ir aplankai"
 
 #: ui/main.qml:226
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
+msgstr "Vietos"
 
 #: ui/main.qml:229
-#, fuzzy, kde-format
-#| msgid "Start indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Pradėti aplanko indeksavimą…"
 
 #: ui/main.qml:237
-#, fuzzy, kde-format
-#| msgid "Stop indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stabdyti aplanko indeksavimą…"

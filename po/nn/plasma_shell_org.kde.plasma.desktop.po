@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-14 03:08+0000\n"
+"POT-Creation-Date: 2024-01-23 02:30+0000\n"
 "PO-Revision-Date: 2023-07-12 11:31+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -287,141 +287,141 @@ msgid "Position"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:143
-#: contents/configuration/PanelConfiguration.qml:254
+#: contents/configuration/PanelConfiguration.qml:257
 msgid "Top"
 msgstr "Oppe"
 
 #: contents/configuration/PanelConfiguration.qml:144
-#: contents/configuration/PanelConfiguration.qml:256
+#: contents/configuration/PanelConfiguration.qml:259
 msgid "Right"
 msgstr "Til høgre"
 
 #: contents/configuration/PanelConfiguration.qml:145
-#: contents/configuration/PanelConfiguration.qml:254
+#: contents/configuration/PanelConfiguration.qml:257
 msgid "Left"
 msgstr "Til venstre"
 
 #: contents/configuration/PanelConfiguration.qml:146
-#: contents/configuration/PanelConfiguration.qml:256
+#: contents/configuration/PanelConfiguration.qml:259
 msgid "Bottom"
 msgstr "Nede"
 
-#: contents/configuration/PanelConfiguration.qml:163
+#: contents/configuration/PanelConfiguration.qml:166
 msgid "Set Position..."
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:190
+#: contents/configuration/PanelConfiguration.qml:193
 #, fuzzy
 #| msgid "Alignment:"
 msgid "Alignment"
 msgstr "Plassering:"
 
-#: contents/configuration/PanelConfiguration.qml:255
+#: contents/configuration/PanelConfiguration.qml:258
 msgid "Center"
 msgstr "I midten"
 
-#: contents/configuration/PanelConfiguration.qml:278
+#: contents/configuration/PanelConfiguration.qml:281
 msgid "Length"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:296
+#: contents/configuration/PanelConfiguration.qml:299
 #, fuzzy
 #| msgid "Panel height:"
 msgid "Fill height"
 msgstr "Panelhøgd:"
 
-#: contents/configuration/PanelConfiguration.qml:296
+#: contents/configuration/PanelConfiguration.qml:299
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Fill width"
 msgstr "Panelbreidd:"
 
-#: contents/configuration/PanelConfiguration.qml:297
+#: contents/configuration/PanelConfiguration.qml:300
 msgid "Fit content"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:298
+#: contents/configuration/PanelConfiguration.qml:301
 msgid "Custom"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:328
+#: contents/configuration/PanelConfiguration.qml:331
 msgid "Visibility"
 msgstr "Synlegheit"
 
-#: contents/configuration/PanelConfiguration.qml:340
+#: contents/configuration/PanelConfiguration.qml:343
 #, fuzzy
 #| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Alltid synleg"
 
-#: contents/configuration/PanelConfiguration.qml:341
+#: contents/configuration/PanelConfiguration.qml:344
 #, fuzzy
 #| msgid "Auto-Hide"
 msgid "Auto hide"
 msgstr "Gøym automatisk"
 
-#: contents/configuration/PanelConfiguration.qml:342
+#: contents/configuration/PanelConfiguration.qml:345
 msgid "Dodge windows"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:343
+#: contents/configuration/PanelConfiguration.qml:346
 msgid "Windows Go Below"
 msgstr "Vindauge kan liggja under"
 
-#: contents/configuration/PanelConfiguration.qml:386
+#: contents/configuration/PanelConfiguration.qml:389
 msgid "Opacity"
 msgstr "Gjennomsikt"
 
-#: contents/configuration/PanelConfiguration.qml:399
+#: contents/configuration/PanelConfiguration.qml:402
 msgid "Adaptive"
 msgstr "Adaptiv"
 
-#: contents/configuration/PanelConfiguration.qml:400
+#: contents/configuration/PanelConfiguration.qml:403
 msgid "Opaque"
 msgstr "Ugjennomsiktig"
 
-#: contents/configuration/PanelConfiguration.qml:401
+#: contents/configuration/PanelConfiguration.qml:404
 msgid "Translucent"
 msgstr "Gjennomsiktig"
 
-#: contents/configuration/PanelConfiguration.qml:425
+#: contents/configuration/PanelConfiguration.qml:428
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:436
+#: contents/configuration/PanelConfiguration.qml:439
 msgid "Floating"
 msgstr "Flytande"
 
-#: contents/configuration/PanelConfiguration.qml:510
+#: contents/configuration/PanelConfiguration.qml:513
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Panelbreidd:"
 
-#: contents/configuration/PanelConfiguration.qml:510
+#: contents/configuration/PanelConfiguration.qml:513
 #, fuzzy
 #| msgid "Right"
 msgid "Height:"
 msgstr "Til høgre"
 
-#: contents/configuration/PanelConfiguration.qml:544
+#: contents/configuration/PanelConfiguration.qml:547
 #, fuzzy
 #| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
 msgstr "Fokussnarveg:"
 
-#: contents/configuration/PanelConfiguration.qml:554
+#: contents/configuration/PanelConfiguration.qml:557
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Bruk snøggtasten til å flytta fokuset til panelet"
 
-#: contents/configuration/PanelConfiguration.qml:570
+#: contents/configuration/PanelConfiguration.qml:573
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Fjern panelet"
 
-#: contents/configuration/PanelConfiguration.qml:573
+#: contents/configuration/PanelConfiguration.qml:576
 msgid "Remove this panel; this action is undo-able"
 msgstr "Fjern panelet (kan ikkje angrast)"
 
