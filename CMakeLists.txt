@@ -5,6 +5,7 @@ project(plasma-desktop)
 set(PROJECT_VERSION "6.0.80")
 set(PROJECT_VERSION_MAJOR 6)
 
+set(PROJECT_DEP_VERSION "6.0.80")
 set(QT_MIN_VERSION "6.6.0")
 set(KF6_MIN_VERSION "5.240.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.85")
@@ -77,11 +78,11 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Svg
 )
 
-find_package(Plasma5Support ${PROJECT_VERSION} REQUIRED)
-find_package(Plasma ${PROJECT_VERSION} REQUIRED)
-find_package(PlasmaQuick ${PROJECT_VERSION} REQUIRED)
-find_package(PlasmaActivities ${PROJECT_VERSION} REQUIRED)
-find_package(PlasmaActivitiesStats ${PROJECT_VERSION} REQUIRED)
+find_package(Plasma5Support ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(Plasma ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(PlasmaQuick ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(PlasmaActivities ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(PlasmaActivitiesStats ${PROJECT_DEP_VERSION} REQUIRED)
 
 if(BUILD_TESTING)
     find_package(Qt6Test ${QT_MIN_VERSION} CONFIG REQUIRED)
@@ -154,10 +155,10 @@ set_package_properties(SDL2 PROPERTIES
         PURPOSE "Required for building Game Controller KCM"
 )
 
-find_package(LibKWorkspace ${PROJECT_VERSION} CONFIG REQUIRED)
-find_package(LibNotificationManager ${PROJECT_VERSION} CONFIG REQUIRED)
-find_package(LibTaskManager ${PROJECT_VERSION} CONFIG REQUIRED)
-find_package(LibColorCorrect ${PROJECT_VERSION} CONFIG REQUIRED)
+find_package(LibKWorkspace ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
+find_package(LibNotificationManager ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
+find_package(LibTaskManager ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
+find_package(LibColorCorrect ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KRunnerAppDBusInterface CONFIG REQUIRED)

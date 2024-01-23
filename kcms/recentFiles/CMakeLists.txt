@@ -2,10 +2,10 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_recentFiles\")
 
 find_package (Qt6 REQUIRED NO_MODULE COMPONENTS Core Quick Sql Qml DBus)
-find_package (KF6KCMUtils ${KF6_DEP_VERSION} CONFIG REQUIRED)
-find_package (KF6XmlGui ${KF6_DEP_VERSION} CONFIG REQUIRED)
-find_package (KF6GlobalAccel ${KF6_DEP_VERSION} CONFIG REQUIRED)
-find_package (PlasmaActivities ${PROJECT_VERSION} CONFIG REQUIRED)
+find_package (KF6KCMUtils ${KF6_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF6XmlGui ${KF6_MIN_VERSION} CONFIG REQUIRED)
+find_package (KF6GlobalAccel ${KF6_MIN_VERSION} CONFIG REQUIRED)
+find_package (PlasmaActivities ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 
 set (KAMD_KCM_DATADIR
    ${KDE_INSTALL_DATADIR}/kcm_recentFiles/workspace/settings/
