@@ -57,7 +57,7 @@ class EmojiParser(object):
             metadata = segments[1].split(b"#")
             if len(metadata) != 2:
                 continue;
-            desc = metadata[1].strip().split(b" E")
+            desc = metadata[1].strip().split(b" E", 1)
             if len(desc) != 2:
                 continue
             description = desc[1]
