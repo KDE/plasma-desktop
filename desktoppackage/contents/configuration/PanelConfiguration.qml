@@ -79,6 +79,13 @@ ColumnLayout {
         }
     }
 
+    Component.onCompleted: {
+        if (panel.lengthMode === Panel.Global.Custom) {
+            Qt.callLater(()=> {
+                panelConfiguration.panelRulerView.visible = true
+            })
+        }
+    }
 
 
     PlasmaExtras.PlasmoidHeading {
@@ -318,11 +325,7 @@ ColumnLayout {
                         panelConfiguration.panelRulerView.visible = true
                     }
                 }
-                Component.onCompleted: {
-                    if (panel.lengthMode === Panel.Global.Custom) {
-                        panelConfiguration.panelRulerView.visible = true
-                    }
-                }
+
             }
         }
 
