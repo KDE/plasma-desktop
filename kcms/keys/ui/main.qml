@@ -177,7 +177,6 @@ KCM.AbstractKCM {
                     delegate: QQC2.ItemDelegate {
                         id: componentDelegate
                         width: ListView.view.width
-                        height: deleteButton.height + (Kirigami.Units.smallSpacing * 2)
 
                         KeyNavigation.right: shortcutsList
 
@@ -187,6 +186,8 @@ KCM.AbstractKCM {
                         contentItem: RowLayout {
                             spacing: Kirigami.Units.smallSpacing
                             Kirigami.IconTitleSubtitle {
+                                id: label
+
                                 icon.name: model.decoration
                                 title: model.display
                                 Layout.fillWidth: true
@@ -202,7 +203,7 @@ KCM.AbstractKCM {
                             QQC2.Button {
                                 id: editButton
 
-                                implicitHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
+                                implicitHeight: label.implicitHeight
                                 implicitWidth: implicitHeight
 
                                 visible: model.section === Private.ComponentType.Command
@@ -225,7 +226,7 @@ KCM.AbstractKCM {
                             QQC2.Button {
                                 id: deleteButton
 
-                                implicitHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
+                                implicitHeight: label.implicitHeight
                                 implicitWidth: implicitHeight
 
                                 visible: model.section !== Private.ComponentType.CommonAction
@@ -239,7 +240,7 @@ KCM.AbstractKCM {
                                 }
                             }
                             QQC2.Button {
-                                implicitHeight: Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.smallSpacing
+                                implicitHeight: label.implicitHeight
                                 implicitWidth: implicitHeight
 
                                 visible: !exportActive && model.pendingDeletion
