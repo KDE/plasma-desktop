@@ -138,6 +138,7 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
         {"ActivityManager", "preferences-desktop-activities"},
         {"KDE Keyboard Layout Switcher", "input-keyboard"},
         {"org_kde_powerdevil", "preferences-system-power-management"},
+        {"wacomtablet", "preferences-desktop-tablet"},
     };
 
     if (service && !service->icon().isEmpty()) {
