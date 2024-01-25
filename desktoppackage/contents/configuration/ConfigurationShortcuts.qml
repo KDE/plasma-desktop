@@ -35,6 +35,7 @@ KCM.SimpleKCM {
         KeySequenceItem {
             id: button
             keySequence: Plasmoid.globalShortcut
+            modifierOnlyAllowed: true
             onCaptureFinished: {
                 if (keySequence !== Plasmoid.globalShortcut) {
                     root.configurationChanged();
