@@ -66,11 +66,11 @@ KCM.SimpleKCM {
         }
         Kirigami.FormLayout {
 
-            Kirigami.Separator {
-                Layout.fillWidth: true
+            Item {
                 Kirigami.FormData.isSection: true
                 Kirigami.FormData.label: i18nc("@title:group", "Logout Screen")
             }
+
             RowLayout {
                 Kirigami.FormData.label: i18n("Show:")
                 Kirigami.FormData.buddyFor: logoutScreenCheckbox
@@ -90,8 +90,7 @@ KCM.SimpleKCM {
                 }
             }
 
-            Kirigami.Separator {
-                Layout.fillWidth: true
+            Item {
                 Kirigami.FormData.isSection: true
                 Kirigami.FormData.label: i18nc("@title:group", "Session Restore")
             }
@@ -171,8 +170,7 @@ KCM.SimpleKCM {
                 }
             }
 
-            Kirigami.Separator {
-                Layout.fillWidth: true
+            Item {
                 Kirigami.FormData.isSection: true
                 Kirigami.FormData.label: i18nc("@title:group", "Firmware")
                 visible: uefi.visible
