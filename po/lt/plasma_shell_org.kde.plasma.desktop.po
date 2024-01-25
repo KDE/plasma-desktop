@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2024-01-13 12:26+0200\n"
+"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"PO-Revision-Date: 2024-01-24 14:14+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -265,151 +265,149 @@ msgstr "Pelės veiksmai"
 msgid "Input Here"
 msgstr "Įveskite čia"
 
-#: contents/configuration/PanelConfiguration.qml:91
+#: contents/configuration/PanelConfiguration.qml:98
 msgid "Panel Settings"
 msgstr "Skydelio nuostatos"
 
-#: contents/configuration/PanelConfiguration.qml:98
+#: contents/configuration/PanelConfiguration.qml:105
 msgid "Add Spacer"
 msgstr "Pridėti skirtuką"
 
-#: contents/configuration/PanelConfiguration.qml:101
+#: contents/configuration/PanelConfiguration.qml:108
 msgid "Add spacer widget to the panel"
 msgstr "Pridėti į skydelį skirtuko valdiklį"
 
-#: contents/configuration/PanelConfiguration.qml:108
+#: contents/configuration/PanelConfiguration.qml:115
 msgid "Add Widgets…"
 msgstr "Pridėti valdiklius…"
 
-#: contents/configuration/PanelConfiguration.qml:111
+#: contents/configuration/PanelConfiguration.qml:118
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
 "Atverti valdiklių parinkiklį, kad galėtumėte tempti valdiklius į skydelį"
 
-#: contents/configuration/PanelConfiguration.qml:140
+#: contents/configuration/PanelConfiguration.qml:147
 msgid "Position"
 msgstr "Pozicija"
 
-#: contents/configuration/PanelConfiguration.qml:145
-#: contents/configuration/PanelConfiguration.qml:260
+#: contents/configuration/PanelConfiguration.qml:152
+#: contents/configuration/PanelConfiguration.qml:267
 msgid "Top"
 msgstr "Viršuje"
 
-#: contents/configuration/PanelConfiguration.qml:146
-#: contents/configuration/PanelConfiguration.qml:262
+#: contents/configuration/PanelConfiguration.qml:153
+#: contents/configuration/PanelConfiguration.qml:269
 msgid "Right"
 msgstr "Dešinėje"
 
-#: contents/configuration/PanelConfiguration.qml:147
-#: contents/configuration/PanelConfiguration.qml:260
+#: contents/configuration/PanelConfiguration.qml:154
+#: contents/configuration/PanelConfiguration.qml:267
 msgid "Left"
 msgstr "Kairėje"
 
-#: contents/configuration/PanelConfiguration.qml:148
-#: contents/configuration/PanelConfiguration.qml:262
+#: contents/configuration/PanelConfiguration.qml:155
+#: contents/configuration/PanelConfiguration.qml:269
 msgid "Bottom"
 msgstr "Apačioje"
 
-#: contents/configuration/PanelConfiguration.qml:168
-#, fuzzy
-#| msgid "Set Position..."
+#: contents/configuration/PanelConfiguration.qml:175
 msgid "Set Position…"
-msgstr "Nustatyti poziciją..."
+msgstr "Nustatyti poziciją…"
 
-#: contents/configuration/PanelConfiguration.qml:195
+#: contents/configuration/PanelConfiguration.qml:202
 msgid "Alignment"
 msgstr "Lygiavimas"
 
-#: contents/configuration/PanelConfiguration.qml:261
+#: contents/configuration/PanelConfiguration.qml:268
 msgid "Center"
 msgstr "Centre"
 
-#: contents/configuration/PanelConfiguration.qml:284
+#: contents/configuration/PanelConfiguration.qml:291
 msgid "Length"
 msgstr "Ilgis"
 
-#: contents/configuration/PanelConfiguration.qml:303
+#: contents/configuration/PanelConfiguration.qml:310
 msgid "Fill height"
 msgstr "Užpildyti aukštį"
 
-#: contents/configuration/PanelConfiguration.qml:303
+#: contents/configuration/PanelConfiguration.qml:310
 msgid "Fill width"
 msgstr "Užpildyti plotį"
 
-#: contents/configuration/PanelConfiguration.qml:304
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Fit content"
 msgstr "Talpinti turinį"
 
-#: contents/configuration/PanelConfiguration.qml:305
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Custom"
 msgstr "Tinkintas"
 
-#: contents/configuration/PanelConfiguration.qml:335
+#: contents/configuration/PanelConfiguration.qml:338
 msgid "Visibility"
 msgstr "Matomumas"
 
-#: contents/configuration/PanelConfiguration.qml:348
+#: contents/configuration/PanelConfiguration.qml:351
 msgid "Always visible"
 msgstr "Visada matomas"
 
-#: contents/configuration/PanelConfiguration.qml:349
+#: contents/configuration/PanelConfiguration.qml:352
 msgid "Auto hide"
 msgstr "Automatiškai slėpti"
 
-#: contents/configuration/PanelConfiguration.qml:350
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Dodge windows"
 msgstr "Vengti langų"
 
-#: contents/configuration/PanelConfiguration.qml:351
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Windows Go Below"
 msgstr "Langai palenda"
 
-#: contents/configuration/PanelConfiguration.qml:394
+#: contents/configuration/PanelConfiguration.qml:397
 msgid "Opacity"
 msgstr "Nepermatomumas"
 
-#: contents/configuration/PanelConfiguration.qml:408
+#: contents/configuration/PanelConfiguration.qml:411
 msgid "Adaptive"
 msgstr "Prisitaikantis"
 
-#: contents/configuration/PanelConfiguration.qml:409
+#: contents/configuration/PanelConfiguration.qml:412
 msgid "Opaque"
 msgstr "Nepermatomas"
 
-#: contents/configuration/PanelConfiguration.qml:410
+#: contents/configuration/PanelConfiguration.qml:413
 msgid "Translucent"
 msgstr "Pusiau permatomas"
 
-#: contents/configuration/PanelConfiguration.qml:434
+#: contents/configuration/PanelConfiguration.qml:437
 msgid "Style"
 msgstr "Stilius"
 
-#: contents/configuration/PanelConfiguration.qml:446
+#: contents/configuration/PanelConfiguration.qml:449
 msgid "Floating"
 msgstr "Slankus"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Panel Width:"
 msgstr "Skydelio plotis:"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:523
 msgid "Height:"
 msgstr "Aukštis:"
 
-#: contents/configuration/PanelConfiguration.qml:555
+#: contents/configuration/PanelConfiguration.qml:558
 msgid "Focus shortcut:"
 msgstr "Spartusis klavišas:"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:569
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Paspauskite šį spartųjį klavišą norėdami perkelti fokusą į skydelį"
 
-#: contents/configuration/PanelConfiguration.qml:582
+#: contents/configuration/PanelConfiguration.qml:585
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Ištrinti skydelį"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:588
 msgid "Remove this panel; this action is undo-able"
 msgstr "Šalinti šį skydelį; šį veiksmą galima bus atšaukti"
 
