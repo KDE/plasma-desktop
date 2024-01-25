@@ -24,7 +24,7 @@ KCM.AbstractKCM {
     framedView: false
 
     // order must be in sync with ComponentType enum in basemodel.h
-    readonly property var sectionNames: [i18n("Applications"), i18n("Commands"), i18n("System Settings"), i18n("Common Actions")]
+    readonly property var sectionNames: [i18n("Applications"), i18n("Commands"), i18n("System Services"), i18n("Common Actions")]
 
     property alias exportActive: exportInfo.visible
     readonly property bool errorOccured: kcm.lastError !== ""
