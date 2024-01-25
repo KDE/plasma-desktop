@@ -129,9 +129,25 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
         const KService::List services = KApplicationTrader::query(filter);
         service = services.value(0, KService::Ptr());
     }
-    bool isCommandShortcut = service && service->property<bool>(QStringLiteral("X-KDE-GlobalAccel-CommandShortcut"));
-    const ComponentType type =
-        service && service->isApplication() ? (isCommandShortcut ? ComponentType::Command : ComponentType::Application) : ComponentType::SystemService;
+
+    ComponentType type;
+
+    if (service && service->isApplication()) {
+        if (service->property<bool>(QStringLiteral("X-KDE-GlobalAccel-CommandShortcut"))) {
+            type = ComponentType::Command;
+        } else {
+            if (service->noDisplay() || service->property<QString>(QStringLiteral("X-KDE-GlobalShortcutType")) == QLatin1String("Service")) {
+                // services with noDisplay are typically KCMs or implementation details
+                // don't show them as "Application"
+                type = ComponentType::SystemService;
+            } else {
+                type = ComponentType::Application;
+            }
+        }
+    } else {
+        type = ComponentType::SystemService;
+    }
+
     QString icon;
 
     static const QHash<QString, QString> hardCodedIcons = {
