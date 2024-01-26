@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2024-01-26 02:28+0000\n"
 "PO-Revision-Date: 2024-01-06 03:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -74,7 +74,7 @@ msgstr "下次重新启动计算机时，它将进入固件设置。"
 msgid "Restart Now"
 msgstr "立即重新启动"
 
-#: ui/main.qml:72
+#: ui/main.qml:71
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
@@ -96,30 +96,30 @@ msgstr ""
 "启用此设置后，当您注销、关机、重启、按下电源键、点击标签为 <interface>离开…</"
 "interface> 的菜单项时，将显示注销确认屏幕。"
 
-#: ui/main.qml:96
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "会话恢复"
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "登录时自动启动应用程序："
 
-#: ui/main.qml:105
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "上次注销时正在打开的应用程序"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "手动保存会话时正在打开的应用程序"
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -132,7 +132,7 @@ msgstr ""
 "interface> 菜单。当您点击该按钮时，Plasma 将记住当前打开的应用程序，并在下次"
 "登录时恢复它们。再次点击该按钮以替换记忆的应用程序组合。"
 
-#: ui/main.qml:132
+#: ui/main.qml:131
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -141,12 +141,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "启动为空会话"
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-format
 msgid "Ignored applications:"
 msgstr "忽略的应用程序："
 
-#: ui/main.qml:169
+#: ui/main.qml:168
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -157,13 +157,13 @@ msgstr ""
 "者“xterm,konsole”)，可以防止这些应用程序和其他会话恢复的应用程序一起自动启"
 "动。"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "固件"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -171,13 +171,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "下次重启时："
 
-#: ui/main.qml:184
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "进入 UEFI 设置屏幕"
 
-#: ui/main.qml:185
+#: ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"

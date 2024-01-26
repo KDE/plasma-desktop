@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-26 02:28+0000\n"
 "PO-Revision-Date: 2023-10-26 10:27+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,20 +17,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.2\n"
 
-#: globalaccelmodel.cpp:218
+#: globalaccelmodel.cpp:235
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Fout bij opslaan van sneltoets %1: %2"
 
-#: globalaccelmodel.cpp:330
+#: globalaccelmodel.cpp:347
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Fout tijdens toevoegen van %1, er lijken geen acties te zijn."
 
-#: globalaccelmodel.cpp:380
+#: globalaccelmodel.cpp:397
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Fout bij communicatie met de globale sneltoetsservice"
@@ -170,107 +170,107 @@ msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr "Commando of script…"
 
-#: ui/main.qml:222
+#: ui/main.qml:223
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Commando voor %1 bewerken"
 
-#: ui/main.qml:238
+#: ui/main.qml:239
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "Alle sneltoetsen voor %1 verwijderen"
 
-#: ui/main.qml:249
+#: ui/main.qml:250
 #, kde-format
 msgid "Undo deletion"
 msgstr "Verwijdering ongedaan maken"
 
-#: ui/main.qml:303
+#: ui/main.qml:304
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Geen items komen overeen met de zoektermen"
 
-#: ui/main.qml:336
+#: ui/main.qml:337
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Een item uit de lijst selecteren om hier zijn sneltoets te bekijken"
 
-#: ui/main.qml:348
+#: ui/main.qml:349
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Sneltoetsschema exporteren"
 
-#: ui/main.qml:348 ui/main.qml:465
+#: ui/main.qml:349 ui/main.qml:466
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Sneltoetsschema importeren"
 
-#: ui/main.qml:350
+#: ui/main.qml:351
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Sneltoetsschema (*.kksrc)"
 
-#: ui/main.qml:378
+#: ui/main.qml:379
 #, kde-format
 msgid "Edit Command"
 msgstr "Commando bewerken"
 
-#: ui/main.qml:378
+#: ui/main.qml:379
 #, kde-format
 msgid "Add Command"
 msgstr "Commando toevoegen"
 
-#: ui/main.qml:396
+#: ui/main.qml:397
 #, kde-format
 msgid "Save"
 msgstr "Opslaan"
 
-#: ui/main.qml:396
+#: ui/main.qml:397
 #, kde-format
 msgid "Add"
 msgstr "Toevoegen"
 
-#: ui/main.qml:422
+#: ui/main.qml:423
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Voer een commando in of kies een scriptbestand:"
 
-#: ui/main.qml:436
+#: ui/main.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Kiezen…"
 
-#: ui/main.qml:449
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Kies een scriptbestand"
 
-#: ui/main.qml:451
+#: ui/main.qml:452
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Scriptbestand (*.*sh)"
 
-#: ui/main.qml:472
+#: ui/main.qml:473
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Het te importeren schema selecteren:"
 
-#: ui/main.qml:489
+#: ui/main.qml:490
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Aangepast schema"
 
-#: ui/main.qml:494
+#: ui/main.qml:495
 #, kde-format
 msgid "Select File…"
 msgstr "Bestand selecteren…"
 
-#: ui/main.qml:494
+#: ui/main.qml:495
 #, kde-format
 msgid "Import"
 msgstr "Importeren"

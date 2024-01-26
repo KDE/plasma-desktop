@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2024-01-26 02:28+0000\n"
 "PO-Revision-Date: 2023-09-29 00:30+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -84,7 +84,7 @@ msgstr "בפעם הבאה שהמחשב יופעל מחדש, הוא ייכנס ל
 msgid "Restart Now"
 msgstr "הפעלה מחדש כעת"
 
-#: ui/main.qml:72
+#: ui/main.qml:71
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
@@ -107,30 +107,30 @@ msgstr ""
 "לחיצה על כפתור הכיבוי או לחיצה על כפתורים או פריטים תפריט שכתוב עליהם "
 "<interface>עזיבה…</interface>."
 
-#: ui/main.qml:96
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "שחזור הפעלה"
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "עם הכניסה, להפעיל את היישומים שהיו פתוחים:"
 
-#: ui/main.qml:105
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "ביציאה הקודמת"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "כאשר ההפעלה נשמרה ידנית"
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -144,7 +144,7 @@ msgstr ""
 "ולשחזר אותם עם הכניסה הבאה למערכת. לחיצה עליו שוב תחליף את ערכת היישומים "
 "שייזכרו."
 
-#: ui/main.qml:132
+#: ui/main.qml:131
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -153,12 +153,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "עלייה עם הפעלה ריקה"
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-format
 msgid "Ignored applications:"
 msgstr "יישומים בהתעלמות:"
 
-#: ui/main.qml:169
+#: ui/main.qml:168
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -169,13 +169,13 @@ msgstr ""
 "למשל: ‚xterm:konsole’ או ‚xterm,konsole’) כדי למנוע מהם להיטען אוטומטית יחד "
 "עם יישומים אחרים שמשוחזרים עם ההפעלה."
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "קושחה"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -183,13 +183,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "אחרי ההפעלה הבאה מחדש:"
 
-#: ui/main.qml:184
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "כניסה למסך הגדרות UEFI"
 
-#: ui/main.qml:185
+#: ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"

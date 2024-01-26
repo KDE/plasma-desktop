@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-26 02:28+0000\n"
 "PO-Revision-Date: 2020-05-03 20:07-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -14,20 +14,20 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: globalaccelmodel.cpp:218
+#: globalaccelmodel.cpp:235
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr ""
 
-#: globalaccelmodel.cpp:330
+#: globalaccelmodel.cpp:347
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr ""
 
-#: globalaccelmodel.cpp:380
+#: globalaccelmodel.cpp:397
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr ""
@@ -161,107 +161,107 @@ msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr ""
 
-#: ui/main.qml:222
+#: ui/main.qml:223
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr ""
 
-#: ui/main.qml:238
+#: ui/main.qml:239
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr ""
 
-#: ui/main.qml:249
+#: ui/main.qml:250
 #, kde-format
 msgid "Undo deletion"
 msgstr ""
 
-#: ui/main.qml:303
+#: ui/main.qml:304
 #, kde-format
 msgid "No items matched the search terms"
 msgstr ""
 
-#: ui/main.qml:336
+#: ui/main.qml:337
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
 
-#: ui/main.qml:348
+#: ui/main.qml:349
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr ""
 
-#: ui/main.qml:348 ui/main.qml:465
+#: ui/main.qml:349 ui/main.qml:466
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr ""
 
-#: ui/main.qml:350
+#: ui/main.qml:351
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr ""
 
-#: ui/main.qml:378
+#: ui/main.qml:379
 #, kde-format
 msgid "Edit Command"
 msgstr ""
 
-#: ui/main.qml:378
+#: ui/main.qml:379
 #, kde-format
 msgid "Add Command"
 msgstr ""
 
-#: ui/main.qml:396
+#: ui/main.qml:397
 #, kde-format
 msgid "Save"
 msgstr ""
 
-#: ui/main.qml:396
+#: ui/main.qml:397
 #, kde-format
 msgid "Add"
 msgstr ""
 
-#: ui/main.qml:422
+#: ui/main.qml:423
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr ""
 
-#: ui/main.qml:436
+#: ui/main.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr ""
 
-#: ui/main.qml:449
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr ""
 
-#: ui/main.qml:451
+#: ui/main.qml:452
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr ""
 
-#: ui/main.qml:472
+#: ui/main.qml:473
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr ""
 
-#: ui/main.qml:489
+#: ui/main.qml:490
 #, kde-format
 msgid "Custom Scheme"
 msgstr ""
 
-#: ui/main.qml:494
+#: ui/main.qml:495
 #, kde-format
 msgid "Select File…"
 msgstr ""
 
-#: ui/main.qml:494
+#: ui/main.qml:495
 #, kde-format
 msgid "Import"
 msgstr ""

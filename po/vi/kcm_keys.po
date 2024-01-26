@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"POT-Creation-Date: 2024-01-26 02:28+0000\n"
 "PO-Revision-Date: 2023-01-08 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -17,20 +17,20 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#: globalaccelmodel.cpp:218
+#: globalaccelmodel.cpp:235
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Lỗi khi lưu phím tắt %1: %2"
 
-#: globalaccelmodel.cpp:330
+#: globalaccelmodel.cpp:347
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Lỗi khi thêm %1, có vẻ là nó không có hành động nào."
 
-#: globalaccelmodel.cpp:380
+#: globalaccelmodel.cpp:397
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Lỗi khi liên lạc với dịch vụ phím tắt toàn cục"
@@ -175,108 +175,108 @@ msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr ""
 
-#: ui/main.qml:222
+#: ui/main.qml:223
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Sửa lệnh cho %1"
 
-#: ui/main.qml:238
+#: ui/main.qml:239
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "Xoá tất cả phím tắt cho %1"
 
-#: ui/main.qml:249
+#: ui/main.qml:250
 #, kde-format
 msgid "Undo deletion"
 msgstr "Đảo ngược việc xoá"
 
-#: ui/main.qml:303
+#: ui/main.qml:304
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Không có mục nào khớp với các từ khoá tìm kiếm"
 
-#: ui/main.qml:336
+#: ui/main.qml:337
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Chọn một mục trong danh sách để xem các phím tắt của nó tại đây"
 
-#: ui/main.qml:348
+#: ui/main.qml:349
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Xuất khẩu quy hoạch phím tắt"
 
-#: ui/main.qml:348 ui/main.qml:465
+#: ui/main.qml:349 ui/main.qml:466
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Nhập khẩu quy hoạch phím tắt"
 
-#: ui/main.qml:350
+#: ui/main.qml:351
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Quy hoạch phím tắt (*.kksrc)"
 
-#: ui/main.qml:378
+#: ui/main.qml:379
 #, kde-format
 msgid "Edit Command"
 msgstr "Sửa lệnh"
 
-#: ui/main.qml:378
+#: ui/main.qml:379
 #, kde-format
 msgid "Add Command"
 msgstr "Thêm lệnh"
 
-#: ui/main.qml:396
+#: ui/main.qml:397
 #, kde-format
 msgid "Save"
 msgstr "Lưu"
 
-#: ui/main.qml:396
+#: ui/main.qml:397
 #, kde-format
 msgid "Add"
 msgstr "Thêm"
 
-#: ui/main.qml:422
+#: ui/main.qml:423
 #, fuzzy, kde-format
 #| msgid "Enter a command or the full path to a script file:"
 msgid "Enter a command or choose a script file:"
 msgstr "Nhập một lệnh hoặc đường dẫn đầy đủ đến một tệp kịch bản:"
 
-#: ui/main.qml:436
+#: ui/main.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr ""
 
-#: ui/main.qml:449
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr ""
 
-#: ui/main.qml:451
+#: ui/main.qml:452
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr ""
 
-#: ui/main.qml:472
+#: ui/main.qml:473
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Chọn quy hoạch để nhập khẩu:"
 
-#: ui/main.qml:489
+#: ui/main.qml:490
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Quy hoạch tự chọn"
 
-#: ui/main.qml:494
+#: ui/main.qml:495
 #, kde-format
 msgid "Select File…"
 msgstr "Chọn tệp…"
 
-#: ui/main.qml:494
+#: ui/main.qml:495
 #, kde-format
 msgid "Import"
 msgstr "Nhập khẩu"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2024-01-26 02:28+0000\n"
 "PO-Revision-Date: 2022-12-26 11:49+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -87,7 +87,7 @@ msgstr ""
 msgid "Restart Now"
 msgstr "Reiniciar ahora"
 
-#: ui/main.qml:72
+#: ui/main.qml:71
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
@@ -111,30 +111,30 @@ msgstr ""
 "encendido o haga clic en los botones o entradas de menú con la etiqueta "
 "<interface>Salir...</interface>."
 
-#: ui/main.qml:96
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Restaurar sesión"
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Al iniciar sesión, lanzar las aplicaciones que estaban abiertas:"
 
-#: ui/main.qml:105
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Durante el último cierre de sesión"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Cuando se guardó la sesión manualmente"
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -149,7 +149,7 @@ msgstr ""
 "siguiente inicio de sesión. Vuelva a pulsarlo para sustituir el conjunto de "
 "aplicaciones que se deben recordar."
 
-#: ui/main.qml:132
+#: ui/main.qml:131
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -158,12 +158,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Comenzar con una sesión vacía"
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Aplicaciones ignoradas:"
 
-#: ui/main.qml:169
+#: ui/main.qml:168
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -175,13 +175,13 @@ msgstr ""
 "inicien automáticamente junto al resto de aplicaciones de la sesión que se "
 "deben restaurar."
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Firmware"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -189,13 +189,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Tras el siguiente reinicio:"
 
-#: ui/main.qml:184
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Entrar en la pantalla de configuración de UEFI"
 
-#: ui/main.qml:185
+#: ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
