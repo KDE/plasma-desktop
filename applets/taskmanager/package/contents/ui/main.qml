@@ -495,6 +495,8 @@ PlasmoidItem {
     readonly property Component groupDialogComponent: Qt.createComponent("GroupDialog.qml")
     property GroupDialog groupDialog: null
 
+    readonly property bool supportsLaunchers: true
+
     function hasLauncher(url) {
         return tasksModel.launcherPosition(url) != -1;
     }
@@ -502,6 +504,12 @@ PlasmoidItem {
     function addLauncher(url) {
         if (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
             tasksModel.requestAddLauncher(url);
+        }
+    }
+
+    function removeLauncher(url) {
+        if (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
+            tasksModel.requestRemoveLauncher(url);
         }
     }
 
