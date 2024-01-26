@@ -393,12 +393,26 @@ PlasmaCore.ToolTipArea {
             id: dragHandler
             grabPermissions: PointerHandler.TakeOverForbidden
 
+            function setRequestedInhibitDnd(value) {
+                // This is modifying the value in the panel containment that
+                // inhibits accepting drag and drop, so that we don't accidentally
+                // drop the task on this panel.
+                let item = this;
+                while (item.parent) {
+                    item = item.parent;
+                    if (item.appletRequestsInhibitDnD !== undefined) {
+                        item.appletRequestsInhibitDnD = value
+                    }
+                }
+            }
+
             onActiveChanged: if (active) {
                 icon.grabToImage((result) => {
                     if (!dragHandler.active) {
                         // BUG 466675 grabToImage is async, so avoid updating dragSource when active is false
                         return;
                     }
+                    setRequestedInhibitDnd(true);
                     tasks.dragSource = task;
                     dragHelper.Drag.imageSource = result.url;
                     dragHelper.Drag.mimeData = {
@@ -409,6 +423,7 @@ PlasmaCore.ToolTipArea {
                     dragHelper.Drag.active = dragHandler.active;
                 });
             } else {
+                setRequestedInhibitDnd(false);
                 dragHelper.Drag.active = false;
                 dragHelper.Drag.imageSource = "";
             }
