@@ -333,6 +333,14 @@ void Kclock::resizeEvent(QResizeEvent *)
     setClockSize(size());
 }
 
+bool Kclock::event(QEvent *event)
+{
+    if (event->type() == QEvent::DevicePixelRatioChange) {
+        setClockSize(size());
+    }
+    return QWidget::event(event);
+}
+
 void Kclock::setClockSize(const QSize &size)
 {
     int dim = qMin(size.width(), size.height());

@@ -86,6 +86,7 @@ protected:
     void paintEvent(QPaintEvent *event) override;
     void showEvent(QShowEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
+    bool event(QEvent *event) override;
 
 private:
     void setClockSize(const QSize &size);
