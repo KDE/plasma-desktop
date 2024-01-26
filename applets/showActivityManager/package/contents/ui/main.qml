@@ -101,7 +101,7 @@ PlasmoidItem {
 
             verticalAlignment: Text.AlignVCenter
 
-            text: currentActivity.name,
+            text: currentActivity.name
             textFormat: Text.PlainText
         }
     }
