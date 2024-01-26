@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:38+0000\n"
-"PO-Revision-Date: 2023-10-20 11:50+0200\n"
+"PO-Revision-Date: 2024-01-22 21:25+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,13 +16,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:10
 #, kde-format
 msgid "How many months keep the activity history"
-msgstr "Cik ilgi paturēt aktivitāšu vēsturi"
+msgstr "Cik mēnešu paturēt aktivitāšu vēsturi"
 
 #. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:17
@@ -111,7 +111,7 @@ msgstr "&Visām programmām"
 #: ui/RecentFiles.ui:78
 #, kde-format
 msgid "&Do not remember"
-msgstr "%Neatcerēties"
+msgstr "&Neatcerēties"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
 #: ui/RecentFiles.ui:85
@@ -129,4 +129,4 @@ msgstr "Atcerēties atvērtos dokumentus:"
 #: ui/RecentFiles.ui:128
 #, kde-format
 msgid "Blacklist applications not on the list"
-msgstr "Noraidīt programmas, kas nav sarakstā"
+msgstr "Ievietot melnajā sarakstā programmas, kas nav šajā sarakstā"

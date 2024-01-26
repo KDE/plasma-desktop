@@ -3,37 +3,37 @@
 #
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2011-07-08 13:33+0300\n"
-"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-01-22 22:50+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Viesturs Zariņš"
+msgstr "Viesturs Zariņš, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "viesturs.zarins@mii.lu.lv"
+msgstr "viesturs.zarins@mii.lu.lv, toms.trasuns@posteo.net"
 
 #: ActionEditor.cpp:60
-#, fuzzy, kde-format
-#| msgid "Editing Action %1"
+#, kde-format
 msgid "Editing Action '%1'"
-msgstr "Rediģē darbību %1"
+msgstr "Rediģē darbību „%1“"
 
 #: ActionEditor.cpp:162
 #, kde-format
@@ -41,8 +41,7 @@ msgid ""
 "It appears that the action name, command, icon or condition are not valid.\n"
 "Therefore, changes will not be applied."
 msgstr ""
-"Izskatās, ka vai nu darbības nosaukums, komanda, ikona vai nosacījumi nav "
-"derīgi.\n"
+"Darbības nosaukums, komanda, ikona vai nosacījumi nav derīgs.\n"
 "Tāpēc izmaiņas netiks saglabātas."
 
 #: ActionEditor.cpp:163
@@ -152,11 +151,11 @@ msgid ""
 "%i: The identifier of the device"
 msgstr ""
 "Komanda, kas veiks darbību\n"
-"Tā var saturēt šādus reģistrnejūtīgus aizvietotājus:\n"
+"Tā var saturēt kādu vai visus sekojošus reģistrnejūtīgos aizvietotājus:\n"
 "\n"
-"%f: Ierīces montēšanas punkts - tikai glabāšanas ierīcēm\n"
-"%d: Ierīces mezgla ceļš - tika bloka ierīcēm\n"
-"%i: Ierīces identifikators "
+"%f: Ierīces montēšanas punkts — tikai glabāšanas ierīcēm\n"
+"%d: Ierīces mezgla ceļš — tikai bloka ierīcēm\n"
+"%i: Ierīces identifikators"
 
 #. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
 #: ActionEditor.ui:300
@@ -168,7 +167,7 @@ msgstr "Ierīcēm ir jāatbilst šiem parametriem, lai varētu veikt darbību:"
 #: AddAction.ui:19
 #, kde-format
 msgid "Action name:"
-msgstr "Darbības nosaukums: "
+msgstr "Darbības nosaukums:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
 #: AddAction.ui:26
@@ -179,7 +178,7 @@ msgstr "Ievadiet jaunās darbības nosaukumu"
 #: DesktopFileGenerator.cpp:25
 #, kde-format
 msgid "Solid Action Desktop File Generator"
-msgstr "Solid darbību Dekstop failu ģenerators"
+msgstr "„Solid“ darbību darbvirsmas datņu ģenerators"
 
 #: DesktopFileGenerator.cpp:27
 #, kde-format
@@ -187,8 +186,8 @@ msgid ""
 "Tool to automatically generate Desktop Files from Solid DeviceInterface "
 "classes for translation"
 msgstr ""
-"Rīks automātiskai Desktop failu ģenerēšanai no Solid DeviceInterface klasēm "
-"tulkošanai"
+"Rīks automātiskai darbvirsmas datņu ģenerēšanai tulkošanai no „Solid "
+"DeviceInterface“ klasēm"
 
 #: DesktopFileGenerator.cpp:29
 #, kde-format
@@ -208,7 +207,7 @@ msgstr "Uzturētājs"
 #: PredicateItem.cpp:119
 #, kde-format
 msgid "The device must be of the type %1"
-msgstr "Ierīcei 1 jābūt ar tipu %1"
+msgstr "Ierīcei jābūt ar tipu „%1“"
 
 #: PredicateItem.cpp:122
 #, kde-format
@@ -221,20 +220,19 @@ msgid "All of the contained properties must match"
 msgstr "Visām apakšīpašībām jābūt apmierinātām"
 
 #: PredicateItem.cpp:134
-#, fuzzy, kde-format
-#| msgid "The devices property %1 must equal %2"
+#, kde-format
 msgid "The device property %1 must equal %2"
-msgstr "Ierīces īpašībai %1 jābūt vienādai ar %2"
+msgstr "Ierīces īpašībai „%1“ jābūt vienādai ar „%2“"
 
 #: PredicateItem.cpp:137
 #, kde-format
 msgid "The device property %1 must contain %2"
-msgstr "Ierīces īpašībai %1 jāsatur %2"
+msgstr "Ierīces īpašībai „%1“ jāsatur „%2“"
 
 #: SolidActions.cpp:137
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
-msgstr "Izskatās ka šīs darbības nosacījums nav derīgs."
+msgstr "Izskatās, ka šīs darbības nosacījums nav derīgs."
 
 #: SolidActions.cpp:137
 #, kde-format
@@ -255,19 +253,19 @@ msgstr "Nevar izdzēst"
 #: SolidActions.ui:22
 #, kde-format
 msgid "Remove"
-msgstr "Izņemt"
+msgstr "Noņemt"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
 #: SolidActions.ui:29
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "Rediģēt..."
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Pievienot..."
 
 #~ msgid "Solid Device Actions Editor"
 #~ msgstr "Solid ierīču darbību redaktors"

@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2023-11-15 12:36+0200\n"
+"PO-Revision-Date: 2024-01-23 08:08+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -48,7 +48,8 @@ msgstr ""
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:74
 #, kde-format
 msgid "Critical error on reading fundamental device infos for touchpad %1."
-msgstr "Kritiska kļūda, nolasot skārienpaliktņa %1 pamata ierīces informāciju."
+msgstr ""
+"Kritiska kļūda, nolasot skārienpaliktņa „%1“ pamata ierīces informāciju."
 
 #: backends/x11/xlibbackend.cpp:71
 #, kde-format
@@ -202,7 +203,7 @@ msgstr "Divu pirkstu uzsitiens:"
 #: kcm/libinput/touchpad.qml:515
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr "Labais klikšķis (trīs pirkstu uzsišanas kā vidējā taustiņa nospiešana)"
+msgstr "Labais klikšķis (trīs pirkstu uzsišana kā vidējā taustiņa nospiešana)"
 
 #: kcm/libinput/touchpad.qml:516
 #, kde-format

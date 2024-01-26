@@ -5,31 +5,32 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008, 2019.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008, 2009.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2019-11-10 12:47+0200\n"
-"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
+"PO-Revision-Date: 2024-01-23 15:42+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.08.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "General"
-msgstr "Vispārēji"
+msgstr "Pamata"
 
 #: package/contents/ui/configGeneral.qml:38
 #, kde-format
 msgid "General:"
-msgstr "Vispārēji:"
+msgstr "Pamata:"
 
 #: package/contents/ui/configGeneral.qml:40
 #, kde-format
@@ -44,7 +45,7 @@ msgstr "Rādīt tikai pašreizējo ekrānu"
 #: package/contents/ui/configGeneral.qml:50
 #, kde-format
 msgid "Navigation wraps around"
-msgstr "Navigācija apgriežas apkārt"
+msgstr "Navigācija iet uz riņķi"
 
 #: package/contents/ui/configGeneral.qml:62
 #, kde-format
@@ -118,14 +119,12 @@ msgid "Shows the desktop"
 msgstr "Parāda darbvirsmu"
 
 #: package/contents/ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "...and %1 other window"
-#| msgid_plural "...and %1 other windows"
+#, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "... un %1 cits logs"
 msgstr[1] "... un %1 citi logi"
-msgstr[2] "... un %1 citu logu"
+msgstr[2] "... un %1 citu logs"
 
 #: package/contents/ui/main.qml:353
 #, kde-format
@@ -144,20 +143,18 @@ msgstr[1] "%1 minimizēti logi:"
 msgstr[2] "%1 minimizētu logu:"
 
 #: package/contents/ui/main.qml:442
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgid "Desktop %1"
-msgstr "Darbvirsmas nosaukums"
+msgstr "Darbvirsma %1"
 
 #: package/contents/ui/main.qml:443
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
-msgstr ""
+msgstr "Pārslēgties uz %1"
 
 #: package/contents/ui/main.qml:588
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager..."
+#, kde-format
 msgid "Show Activity Manager…"
 msgstr "Rādīt aktivitāšu pārvaldnieku..."
 
@@ -172,8 +169,7 @@ msgid "Remove Virtual Desktop"
 msgstr "Noņemt virtuālo darbvirsmu"
 
 #: package/contents/ui/main.qml:607
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops..."
+#, kde-format
 msgid "Configure Virtual Desktops…"
 msgstr "Konfigurēt virtuālās darbvirsmas..."
 

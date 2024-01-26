@@ -5,38 +5,37 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Einars Sprugis <einars8@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2024 Toms Trasūns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-03 01:37+0000\n"
-"PO-Revision-Date: 2011-07-01 23:59+0300\n"
-"Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-01-23 08:44+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Einārs Sprūģis"
+msgstr "Einārs Sprūģis, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "einars8@gmail.com"
+msgstr "einars8@gmail.com, toms.trasuns@posteo.net"
 
 #: bindings.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "tooltip title"
-#| msgid "Keyboard Layout"
+#, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "Tastatūras izkārtojums"
+msgstr "Tastatūras izkārtojuma pārslēdzējs"
 
 #: bindings.cpp:26
 #, kde-format
@@ -44,22 +43,20 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "Pārslēgt uz nākamo izkārtojumu"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Pārslēgt uz nākamo izkārtojumu"
+msgstr "Pārslēgt uz pēdējo lietoto tastatūras izkārtojumu"
 
 #: bindings.cpp:60
-#, fuzzy, kde-format
-#| msgid "Error changing keyboard layout to '%1'"
+#, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "Kļūda mainot izkārtojumu uz '%1'"
+msgstr "Kļūda, mainot izkārtojumu uz „%1“"
 
 #: flags.cpp:77
 #, kde-format
 msgctxt "layout - variant"
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "%1 — %2"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
 #: kcm_add_layout_dialog.ui:14
@@ -71,13 +68,13 @@ msgstr "Pievienot izkārtojumu"
 #: kcm_add_layout_dialog.ui:20
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Meklēt..."
 
 #. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
 #: kcm_add_layout_dialog.ui:45
 #, kde-format
 msgid "Shortcut:"
-msgstr "Īsceļš:"
+msgstr "Saīsne:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelLabel)
 #: kcm_add_layout_dialog.ui:55
@@ -90,7 +87,7 @@ msgstr "Etiķete:"
 #: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:341
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "Priekšskatījums"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:21
@@ -102,7 +99,7 @@ msgstr "Aparatūra"
 #: kcm_keyboard.ui:36
 #, kde-format
 msgid "Keyboard &model:"
-msgstr "Tastatūras &modelis:"
+msgstr "&Tastatūras modelis:"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
 #: kcm_keyboard.ui:56
@@ -116,11 +113,11 @@ msgid ""
 "have.\n"
 msgstr ""
 "Šeit varat izvēlēties tastatūras modeli. Šis iestatījums nav atkarīgs no "
-"jūsu tastatūras izvietojuma un attiecas uz aparatūras modeli, t.i., veidu, "
-"kādā ražota jūsu tastatūra. Modernajām tastatūrām, kas nāk kopā ar jūsu "
+"jūsu tastatūras izkārtojuma un attiecas uz aparatūras modeli, t.i., veidu, "
+"kādā ražota jūsu tastatūra. Modernām tastatūrām, kas nāk kopā ar jūsu "
 "datoru, parasti ir divi papildu taustiņi — šīs tastatūras tiek dēvētas par "
-"\"104-taustiņu\" modeļiem. Ja precīzi nezināt savas tastatūras veidu, "
-"iestatiet to uz iepriekšminēto modeli.\n"
+"„104 taustiņu“ modeļiem. Ja precīzi nezināt savas tastatūras veidu, "
+"iestatiet to uz šo modeli.\n"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
 #: kcm_keyboard.ui:97
@@ -135,14 +132,14 @@ msgid ""
 "If you select \"Application\" or \"Window\" switching policy, changing the "
 "keyboard layout will only affect the current application or window."
 msgstr ""
-"Ja izvēlēsieties \"Programma\" vai \"Logs\" pārslēgšanās politiku, "
-"tastatūras izkārtojuma nomaiņa ietekmēs tikai pašreizējo programmu vai logu."
+"Ja izvēlēsieties „Programma“ vai „Logs“ pārslēgšanās politiku, tastatūras "
+"izkārtojuma nomaiņa ietekmēs tikai pašreizējo programmu vai logu."
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:108
 #, kde-format
 msgid "Switching Policy"
-msgstr "Pārslēgšanās politika"
+msgstr "Pārslēgšanas politika"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
 #: kcm_keyboard.ui:114
@@ -172,13 +169,13 @@ msgstr "&Logs"
 #: kcm_keyboard.ui:160
 #, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "Īsceļi izkārtojuma pārslēgšanai"
+msgstr "Saīsnes izkārtojuma pārslēgšanai"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:166
 #, kde-format
 msgid "Main shortcuts:"
-msgstr "Galvenie īsceļi:"
+msgstr "Galvenās saīsnes:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
 #: kcm_keyboard.ui:179
@@ -187,8 +184,8 @@ msgid ""
 "This is a shortcut for switching layouts which is handled by X.org. It "
 "allows modifier-only shortcuts."
 msgstr ""
-"Šis ir īsceļš izkārtojumu pārslēgšanai, to apstrādā X.org. Tas pieļauj "
-"īsceļus, kuri satur tikai modificētājtaustiņus."
+"Šī tastatūras taustiņu kombinācija pārslēdz izkārtojumu un to apstrādā X."
+"org. Atļautas ir tika modificētājtaustiņu saturošas saīsnes."
 
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
 #. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
@@ -203,13 +200,13 @@ msgstr "Nav"
 #: kcm_keyboard.ui:189 kcm_keyboard.ui:219
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm_keyboard.ui:196
 #, kde-format
 msgid "3rd level shortcuts:"
-msgstr "3. līmeņa īsceļi:"
+msgstr "3. līmeņa saīsnes:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
 #: kcm_keyboard.ui:209
@@ -218,38 +215,33 @@ msgid ""
 "This is a shortcut for switching to a third level of the active layout (if "
 "it has one) which is handled by X.org. It allows modifier-only shortcuts."
 msgstr ""
-"Šis ir īsceļš aktīvā izkārtojuma pārslēgšanai uz trešo līmeni (ja tam tāds "
-"ir), to apstrādā X.org. Tas pieļauj īsceļus, kuri satur tikai "
-"modificētājtaustiņus."
+"Šī ir saīsne aktīvā izkārtojuma pārslēgšanai uz trešo līmeni (ja tam tāds "
+"ir), to apstrādā X.org. Ir atļautas tikai modificētājtaustiņu saturošas "
+"saīsnes."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm_keyboard.ui:226
 #, kde-format
 msgid "Alternative shortcut:"
-msgstr "Alternatīvais īsceļš:"
+msgstr "Alternatīvā saīsne:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
 #: kcm_keyboard.ui:239
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is a shortcut for switching layouts which is handled by KDE. It does "
-#| "not support modifier-only shortcuts and also may not work in some "
-#| "situations (e.g. if popup is active or from screensaver)."
+#, kde-format
 msgid ""
 "This is a shortcut for switching layouts. It does not support modifier-only "
 "shortcuts and also may not work in some situations (e.g. if popup is active "
 "or from screensaver)."
 msgstr ""
-"Šis ir īsceļš īsceļu pārslēgšanai, to apstrādā KDE. Tas neatbalsta īsceļus, "
-"kuri satur tikai modificētājtaustiņus un var nedarboties dažās situācijās "
-"(piem., ja ir aktivēts uznirstošais logs no ekrānsaudzētāja)."
+"Šī ir saīsne izkārtojumu pārslēgšanai. Tā neatbalsta saīsnes, kas satur "
+"tikai modificētājtaustiņu, kā arī noteiktās situācijās var nedarboties "
+"(piemēram, ja ir aktīvs uzlecošais lodziņā vai ieslēdzies ekrānsaudzētājs)."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:249
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "Alternatīvais īsceļš:"
+msgstr "Pēdējā izmantotā izkārtojuma saīsne:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:262
@@ -258,6 +250,8 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
+"Šī saīsne ļauj ātri pārslēgties starp diviem izkārtojumiem, jo katru reizi "
+"pārslēgsities uz iepriekšējo."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:287
@@ -275,7 +269,7 @@ msgstr "Pievienot"
 #: kcm_keyboard.ui:311
 #, kde-format
 msgid "Remove"
-msgstr "Izņemt"
+msgstr "Noņemt"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
 #: kcm_keyboard.ui:321
@@ -326,21 +320,18 @@ msgid "%1 | %2"
 msgstr "%1 | %2"
 
 #: kcm_keyboard_widget.cpp:655
-#, fuzzy, kde-format
-#| msgctxt "no shortcut defined"
-#| msgid "None"
+#, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
-msgstr "Nav"
+msgstr "Nekāds"
 
 #: kcm_keyboard_widget.cpp:669
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
-msgstr[0] "Īsceļš:"
-msgstr[1] "Īsceļš:"
-msgstr[2] "Īsceļš:"
+msgstr[0] "%1 saīsne"
+msgstr[1] "%1 saīsnes"
+msgstr[2] "%1 saīšņu"
 
 #: kcm_view_models.cpp:200
 #, kde-format
@@ -349,28 +340,24 @@ msgid "Map"
 msgstr "Karte"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgid "Layout"
-msgstr "Izkārtojums:"
+msgstr "Izkārtojums"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Variant:"
+#, kde-format
 msgid "Variant"
-msgstr "Variants:"
+msgstr "Variants"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Label:"
+#, kde-format
 msgid "Label"
-msgstr "Etiķete:"
+msgstr "Etiķete"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgid "Shortcut"
-msgstr "Īsceļš:"
+msgstr "Īsceļš"
 
 #: kcm_view_models.cpp:273
 #, kde-format
@@ -382,25 +369,25 @@ msgstr "Noklusētais"
 #: kcmmiscwidget.ui:31
 #, kde-format
 msgid "When a key is held:"
-msgstr ""
+msgstr "Kad ir nospiests taustiņš:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
 #: kcmmiscwidget.ui:38
 #, kde-format
 msgid "&Show accented and similar characters "
-msgstr ""
+msgstr "&Rādīt rakstzīmes ar diakritiskām vai līdzīgām zīmes "
 
 #. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
 #: kcmmiscwidget.ui:45
 #, kde-format
 msgid "&Repeat the key"
-msgstr ""
+msgstr "&Atkārtot taustiņu"
 
 #. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
 #: kcmmiscwidget.ui:52
 #, kde-format
 msgid "&Do nothing"
-msgstr ""
+msgstr "&Nedarīt neko"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmmiscwidget.ui:66
@@ -420,26 +407,21 @@ msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "If supported, this option allows you to setup the state of NumLock after "
-#| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
-#| "configure KDE not to set NumLock state."
+#, kde-format
 msgid ""
 "If supported, this option allows you to setup the state of NumLock after "
 "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
 "configure Plasma not to set NumLock state."
 msgstr ""
-"Ja atbalstīts, tad šī opcija atļauj iestatīt NumLock stāvokli pēc KDE "
-"palaišanas.<p>Jūs varat norādīt, vai NumLock būs ieslēgts, izslēgts vai arī "
-"KDE nemainīs NumLock statusu."
+"Ja atbalstīts, šī opcija atļauj iestatīt „NumLock“ stāvokli pēc „Plasma“ "
+"palaišanas.<p>Varat norādīt, vai „NumLock“ būs ieslēgts, izslēgts vai arī "
+"„Plasma“ nemainīs „NumLock“ statusu."
 
 #. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:85
-#, fuzzy, kde-format
-#| msgid "NumLock on KDE Startup"
+#, kde-format
 msgid "NumLock on Plasma Startup"
-msgstr "NumLock statuss, palaižot KDE"
+msgstr "„NumLock“ statuss, palaižot „Plasma“"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
 #: kcmmiscwidget.ui:97
@@ -449,8 +431,7 @@ msgstr "I&eslēgts"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
 #: kcmmiscwidget.ui:104
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgid "&Turn off"
 msgstr "I&zslēgts"
 
@@ -475,9 +456,9 @@ msgid ""
 "key will start generating keycodes. The 'Repeat rate' option controls the "
 "frequency of these keycodes."
 msgstr ""
-"Ja ir atbalstīta, tad šī opcija ļauj iestatīt aizturi, pēc kuras taustiņš, "
-"kurš ir nospiestā stāvoklī, sāks ģenerēt tam atbilstošos kodus. "
-"'Atkārtošanas ātrums' opcija kontrolē šo kodu ģenerēšanas ātrumu."
+"Ja ir atbalstīta, tad šī opcija ļauj noteikt aizturi, pēc kuras nospiests "
+"taustiņš, sāks ģenerēt tam atbilstošo signālu. „Atkārtošanas ātruma“ opcija "
+"kontrolē šo signālu ģenerēšanas ātrumu."
 
 #. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
 #. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
@@ -488,7 +469,7 @@ msgid ""
 "generated while a key is pressed."
 msgstr ""
 "Ja ir atbalstīta, tad šī opcija ļauj jums iestatīt ātrumu, ar kādu tiek "
-"ģenerēti taustiņa nospiešanas kodi tā nospiešanas un turēšanas laikā."
+"ģenerēti taustiņa nospiešanas signāli tā nospiešanas un turēšanas laikā."
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
 #: kcmmiscwidget.ui:195
@@ -509,19 +490,16 @@ msgid "&Delay:"
 msgstr "&Aizture:"
 
 #: tastenbrett/main.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr "Tastatūras atkārtošana"
+msgstr "Tastatūras priekšskatījums"
 
 #: tastenbrett/main.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "tooltip title"
-#| msgid "Keyboard Layout"
+#, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "Tastatūras izkārtojums"
+msgstr "Tastatūras izkārtojuma vizualizācija"
 
 #: tastenbrett/main.cpp:139
 #, kde-format
@@ -532,6 +510,9 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+"Tastatūras ģeometrija neielādējās. Tas bieži nozīmē, ka atlasītajam modelim "
+"trūkst attiecīgā izkārtojuma vai tā varianta. Šī problēma var rasties, "
+"mēģinot izmantot citu modeļa, izkārtojuma un varianta kombināciju."
 
 #~ msgid "KDE Keyboard Control Module"
 #~ msgstr "KDE tastatūras vadības modulis"

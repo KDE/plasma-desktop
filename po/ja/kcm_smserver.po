@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2024-01-26 00:38+0000\n"
 "PO-Revision-Date: 2024-01-14 21:03-0800\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -82,7 +82,7 @@ msgstr "次回の再起動時にファームウェア設定画面に入ります
 msgid "Restart Now"
 msgstr "今すぐコンピュータを再起動"
 
-#: ui/main.qml:72
+#: ui/main.qml:71
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
@@ -105,30 +105,30 @@ msgstr ""
 "したとき、<interface>終了…</interface>ボタンをクリックしたときにログアウト確"
 "認画面が表示されます。"
 
-#: ui/main.qml:96
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "セッション復元"
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "ログイン時:"
 
-#: ui/main.qml:105
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "最後のログアウト時に開かれていたアプリケーションを開く"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "手動で保存したセッションを復元する"
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -142,7 +142,7 @@ msgstr ""
 "クすると、Plasma は開かれているアプリケーションを記憶し、次のログイン時に復元"
 "します。もう一度クリックすると、記憶が上書きされます。"
 
-#: ui/main.qml:132
+#: ui/main.qml:131
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -151,12 +151,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "空のセッションで開始"
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-format
 msgid "Ignored applications:"
 msgstr "復元しないアプリケーション:"
 
-#: ui/main.qml:169
+#: ui/main.qml:168
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -167,13 +167,13 @@ msgstr ""
 "ます。例: 'xterm:konsole' もしくは 'xterm,konsole') を入力してください。セッ"
 "ションが復元される際に、自動的に起動されないようになります。"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "ファームウェア"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -181,13 +181,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "次の再起動後:"
 
-#: ui/main.qml:184
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "UEFI 設定画面に入る"
 
-#: ui/main.qml:185
+#: ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"

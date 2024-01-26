@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2023-11-12 14:55+0200\n"
+"PO-Revision-Date: 2024-01-23 08:07+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -52,7 +52,7 @@ msgstr "Sekot aktīvajam ekrānam"
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr "%1 – (%2,%3 %4×%5)"
+msgstr "%1 — (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:137
 #, kde-format
@@ -115,31 +115,28 @@ msgstr "Slēgt malu attiecību"
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr "%1,%2 – %3×%4"
+msgstr "%1,%2 — %3×%4"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pen Button 1"
-msgstr "Poga %1:"
+msgstr "Zīmuļa poga 2"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Tool Button 2"
+#, kde-format
 msgid "Pen Button 2"
-msgstr "Rīka taustiņš 2"
+msgstr "Zīmuļa poga 2"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Tool Button 3"
+#, kde-format
 msgid "Pen Button 3"
-msgstr "Rīka taustiņš 3"
+msgstr "Zīmuļa poga 3"
 
 #: ui/main.qml:293
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
-msgstr "Planšete"
+msgstr "Planšete:"
 
 #: ui/main.qml:304
 #, kde-format

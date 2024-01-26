@@ -6,119 +6,109 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2009-05-18 20:46+0300\n"
-"Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-01-22 21:00+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
 msgid "Other…"
-msgstr ""
+msgstr "Citi..."
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "Izvēlieties vēlamo e-pasta klientu:"
+msgstr "Atlasīt noklusējuma arhīva pārvaldnieku"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
-msgstr ""
+msgstr "Atlasīt noklusējuma pārlūku"
 
 #: components/componentchooseremail.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use a different &email client:"
+#, kde-format
 msgid "Select default e-mail client"
-msgstr "Lietot citu &epasta klientu:"
+msgstr "Atlasīt noklusējuma e-pasta klientu"
 
 #: components/componentchooserfilemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default file manager"
-msgstr "Izvēlieties vēlamo e-pasta klientu:"
+msgstr "Atlasīt noklusējuma datņu pārvaldnieki"
 
 #: components/componentchoosergeo.cpp:13
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default map"
-msgstr "Izvēlieties vēlamo e-pasta klientu:"
+msgstr "Atlasīt noklusējuma karti"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "Izvēlieties vēlamo e-pasta klientu:"
+msgstr "Atlasīt noklusējuma attēlu skatītāju"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default music player"
-msgstr "Izvēlieties vēlamo e-pasta klientu:"
+msgstr "Atlasīt noklusējuma mūzikas atskaņotāju"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "Izvēlieties vēlamo e-pasta klientu:"
+msgstr "Atlasīt noklusējuma PDF skatītāju"
 
 #: components/componentchoosertel.cpp:17
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default dialer application"
-msgstr "Izvēlies vēlamo termināļa programmu:"
+msgstr "Atlasīt noklusējuma zvanīšanas programmu"
 
 #: components/componentchooserterminal.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default terminal emulator"
-msgstr "Izvēlies vēlamo termināļa programmu:"
+msgstr "Atlasīt noklusējuma termināļa emulatoru"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default text editor"
-msgstr "Izvēlies vēlamo termināļa programmu:"
+msgstr "Atlasīt noklusējuma teksta redaktoru"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default video player"
-msgstr "Izvēlieties vēlamo e-pasta klientu:"
+msgstr "Atlasīt noklusējuma video atskaņotāju"
 
 #: ui/ComponentOverlay.qml:52
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Informācija"
 
 #: ui/ComponentOverlay.qml:83
 #, kde-format
 msgid "This application can also open these file types:"
-msgstr ""
+msgstr "Šī programma var atvērt arī šādas datnes:"
 
 #: ui/ComponentOverlay.qml:97
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (šobrīd atver „%2“)"
 
 #: ui/ComponentOverlay.qml:110
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Atvērt visu „%1“"
 
 #: ui/ComponentOverlay.qml:129
 #, kde-format
@@ -126,18 +116,19 @@ msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
 msgstr ""
+"Šī programma neziņo, ka atbalsta šāda tipa datnes, bet, iespējams, ka tāpat "
+"atvērs:"
 
 #: ui/ComponentOverlay.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr ""
+msgstr "Piespiest visiem atvērties „%1“"
 
 #: ui/ComponentOverlay.qml:158
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Manually…"
-msgstr "Konfigurēt"
+msgstr "Konfigurēt manuāli..."
 
 #: ui/main.qml:17
 #, kde-format
@@ -145,93 +136,94 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"Izskatās, ka „%1“ neatbalsta šos MIME tipus, kas ir saistīti ar šāda veida "
+"programmu: %2"
 
 #: ui/main.qml:46
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Internets"
 
 #: ui/main.qml:50
 #, kde-format
 msgid "Web browser:"
-msgstr ""
+msgstr "Tīmekļa pārlūkprogramma:"
 
 #: ui/main.qml:72
 #, kde-format
 msgid "Email client:"
-msgstr ""
+msgstr "E-pasta klients:"
 
 #: ui/main.qml:94
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
-msgstr ""
+msgstr "Tālruņa numuri"
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multivide"
 
 #: ui/main.qml:121
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Attēlu skatītājs:"
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Mūzikas atskaņotājs:"
 
 #: ui/main.qml:168
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Video atskaņotājs:"
 
 #: ui/main.qml:190
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Dokumenti"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Teksta redaktors:"
 
 #: ui/main.qml:217
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF skatītājs:"
 
 #: ui/main.qml:239
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Utilītprogrammas:"
 
 #: ui/main.qml:244
 #, kde-format
 msgid "File manager:"
-msgstr ""
+msgstr "Datņu pārvaldnieks:"
 
 #: ui/main.qml:266
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Terminal emulator:"
-msgstr "Izvēlies vēlamo termināļa programmu:"
+msgstr "Termināļa emulators:"
 
 #: ui/main.qml:279
 #, kde-format
 msgid "Archive manager:"
-msgstr ""
+msgstr "Arhīvu pārvaldnieks:"
 
 #: ui/main.qml:301
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
-msgstr ""
+msgstr "Karte:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

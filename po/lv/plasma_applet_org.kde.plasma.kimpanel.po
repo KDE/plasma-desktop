@@ -2,109 +2,105 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Einars Sprugis <einars8@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-26 02:00+0000\n"
-"PO-Revision-Date: 2012-07-07 01:41+0300\n"
-"Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-01-23 15:15+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "Izskats"
 
 #: package/contents/ui/ActionMenu.qml:93
 #, kde-format
 msgid "(Empty)"
-msgstr ""
+msgstr "(Tukšs)"
 
 #: package/contents/ui/ConfigAppearance.qml:29
-#, fuzzy, kde-format
-#| msgid "Input Method"
+#, kde-format
 msgid "Input method list:"
-msgstr "Ievades metode"
+msgstr "Ievades metožu saraksts:"
 
 #: package/contents/ui/ConfigAppearance.qml:30
-#, fuzzy, kde-format
-#| msgid "Vertical List"
+#, kde-format
 msgid "Vertical"
-msgstr "Vertikāls saraksts"
+msgstr "Vertikāls"
 
 #: package/contents/ui/ConfigAppearance.qml:36
 #, kde-format
 msgid "Horizontal"
-msgstr ""
+msgstr "Horizontāls"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Font"
+#, kde-format
 msgid "Font:"
-msgstr "Fonts"
+msgstr "Fonts:"
 
 #: package/contents/ui/ConfigAppearance.qml:49
 #, kde-format
 msgid "Use custom:"
-msgstr ""
+msgstr "Lietot pielāgotu:"
 
 #: package/contents/ui/ConfigAppearance.qml:55
 #, kde-format
 msgctxt "The selected font family and font size"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: package/contents/ui/ConfigAppearance.qml:67
-#, fuzzy, kde-format
-#| msgid "Select Font"
+#, kde-format
 msgid "Select Font…"
-msgstr "Izvēlieties fontu"
+msgstr "Atlasīt fontu..,"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "The arrangement of icons in the Panel"
 msgid "Panel icon size:"
-msgstr ""
+msgstr "Paneļa ikonu izmērs:"
 
 #: package/contents/ui/ConfigAppearance.qml:74
 #, kde-format
 msgid "Small"
-msgstr ""
+msgstr "Mazs"
 
 #: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgid "Scale with Panel height"
-msgstr ""
+msgstr "Mainīt izmēru atbilstoši paneļa augstumam"
 
 #: package/contents/ui/ConfigAppearance.qml:82
 #, kde-format
 msgid "Scale with Panel width"
-msgstr ""
+msgstr "Mainīt izmēru atbilstoši paneļa platumam"
 
 #: package/contents/ui/ConfigAppearance.qml:90
-#, fuzzy, kde-format
-#| msgid "Select Font"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Font"
-msgstr "Izvēlieties fontu"
+msgstr "Atlasīt fontu"
 
 #: package/contents/ui/ContextMenu.qml:83
 #, kde-format
 msgid "Show"
-msgstr ""
+msgstr "Rādīt"
 
 #: package/contents/ui/ContextMenu.qml:98
 #, kde-format
 msgid "Hide %1"
-msgstr ""
+msgstr "Paslēpt %1"
 
 #: package/contents/ui/ContextMenu.qml:107
 #, kde-format
@@ -122,10 +118,9 @@ msgid "Exit Input Method"
 msgstr "Iziet no ievades metodes"
 
 #: package/contents/ui/main.qml:239
-#, fuzzy, kde-format
-#| msgid "Input Method"
+#, kde-format
 msgid "Input Method Panel"
-msgstr "Ievades metode"
+msgstr "Ievades metodes panelis"
 
 #, fuzzy
 #~| msgid "Select Font"

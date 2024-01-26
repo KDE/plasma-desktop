@@ -4,20 +4,20 @@
 # Aleksejs Zosims <locale@aleksejs.id.lv>, 2007.
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
-# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2023-10-19 20:42+0200\n"
+"PO-Revision-Date: 2024-01-22 20:46+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -29,7 +29,7 @@ msgstr "AltGraph"
 #: kcmaccess.cpp:114
 #, kde-format
 msgid "Hyper"
-msgstr "Hiper"
+msgstr "Hyper"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -39,52 +39,52 @@ msgstr "Super"
 #: kcmaccess.cpp:126
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
-msgstr "Nospied %1, kamēr ir aktīvi NumLock, CapsLock un ScrollLock"
+msgstr "Nospiediet %1, kamēr ir ieslēgts „NumLock“, „CapsLock“ un „ScrollLock“"
 
 #: kcmaccess.cpp:127
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
-msgstr "Nospied %1, kamēr  ir aktīvi CapsLock un ScrollLock"
+msgstr "Nospiediet %1, kamēr ir ieslēgts „CapsLock“ un „ScrollLock“"
 
 #: kcmaccess.cpp:128
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
-msgstr "Nospied %1, kamēr  ir aktīvi NumLock un ScrollLock"
+msgstr "Nospiediet %1, kamēr ir ieslēgts „NumLock“ un „ScrollLock“"
 
 #: kcmaccess.cpp:129
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
-msgstr "Nospied %1, kamēr  ir aktīvs ScrollLock"
+msgstr "Nospiediet %1, kamēr ir ieslēgts „ScrollLock“"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
-msgstr "Nospied %1, kamēr  ir aktīvi NumLock un CapsLock"
+msgstr "Nospiediet %1, kamēr ir ieslēgts „NumLock“ un „CapsLock“"
 
 #: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock is active"
-msgstr "Nospied %1, kamēr  ir aktīvs CapsLock"
+msgstr "Nospiediet %1, kamēr ir ieslēgts „CapsLock“"
 
 #: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock is active"
-msgstr "Nospied %1, kamēr  ir aktīvs NumLock"
+msgstr "Nospiediet %1, kamēr ir aktīvs „NumLock“"
 
 #: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1"
-msgstr "Nospied %1"
+msgstr "Nospiediet %1"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
-msgstr "Neizdevās iestatīt gsettings priekš Orca: „%1“ neizdevās"
+msgstr "Neizdevās iestatīt „gsettings“ priekš „Orca“: „%1“ neizdevās"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
-msgstr "Kļūda: Neizdevās palaist „orca --setup“"
+msgstr "Kļūda: neizdevās palaist „orca --setup“"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -96,7 +96,7 @@ msgstr "Lietot sistēmas zvanu"
 #: kcmaccessibilitybell.kcfg:13
 #, kde-format
 msgid "Customize system bell"
-msgstr "Lietot sistēmas zvanu"
+msgstr "Pielāgot sistēmas zvanu"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
@@ -138,14 +138,13 @@ msgstr "Lietot lipīgos taustiņus"
 #: kcmaccessibilitykeyboard.kcfg:13
 #, kde-format
 msgid "Lock the sticky keys"
-msgstr "Nofiksēt lipīgos taustiņus"
+msgstr "Fiksēt lipīgos taustiņus"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr ""
-"Atslēgt taustiņu slēdža režīmu, kad vienlaicīgi nospiesti divi taustiņi"
+msgstr "Izslēgt lipīgos taustiņus, kad vienlaicīgi ir nospiesti divi taustiņi"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
@@ -502,14 +501,15 @@ msgstr "Atgriezeniskā saite:"
 #: ui/ModifierKeys.qml:72
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
-msgstr "Lietot sistēmas zvanu ikreiz, kad tiek pārslēgts nofiksēšanas taustiņš"
+msgstr ""
+"Lietot sistēmas zvanu ikreiz, kad tiek ieslēgti vai izslēgti fiksēšanas "
+"taustiņi"
 
 #: ui/ModifierKeys.qml:83
 #, kde-format
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
-"Parādīt paziņojumu, kad tiek lietots mēmais taustiņš vai nofiksēšanas "
-"taustiņš"
+"Parādīt paziņojumu, kad tiek lietots mēmais taustiņš vai fiksēšanas taustiņš"
 
 #: ui/ModifierKeys.qml:95
 #, kde-format
@@ -574,7 +574,7 @@ msgstr "Peles rādītāja paātrinājums:"
 #: ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr "Atvērt Orca ekrāna lasītāja konfigurāciju..."
+msgstr "Atvērt „Orca“ ekrāna lasītāja konfigurāciju..."
 
 #: ui/ScreenReader.qml:42
 #, kde-format
@@ -591,7 +591,7 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
-"Izskatās, ka Orca ekrāna lasītājs nav ieinstalēts. Pirms šīs iespējas "
+"Izskatās, ka „Orca“ ekrāna lasītājs nav ieinstalēts. Pirms šīs iespējas "
 "izmantošanas to ieinstalējiet un ierakstieties no jauna vai pārstartējiet "
 "sistēmu"
 

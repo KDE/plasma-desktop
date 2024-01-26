@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2023-10-19 20:22+0200\n"
+"PO-Revision-Date: 2024-01-22 20:47+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,13 +16,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings for %1"
-msgstr "Aktivitāšu iestatījumi priekš %1"
+msgstr "„%1“ aktivitāšu iestatījumi"
 
 #: ui/ActivityEditor.qml:23
 #, kde-format
@@ -58,29 +58,29 @@ msgstr "Apraksts:"
 #, kde-format
 msgctxt "@option:check"
 msgid "While on this activity, allow:"
-msgstr ""
+msgstr "Esot šajā aktivitātē, ļaut:"
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
 msgid "Tracking file and app use"
-msgstr ""
+msgstr "Sekot datņu un programmu lietojumam"
 
 #: ui/ActivityEditor.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically turning off the screen"
-msgstr ""
+msgstr "Automātiski izslēgt ekrānu"
 
 #: ui/ActivityEditor.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically shutting down or sleeping"
-msgstr ""
+msgstr "Automātiski izslēgt vai iesnaudināt"
 
 #: ui/ActivityEditor.qml:103
 #, kde-format
 msgid "Shortcut for switching:"
-msgstr "Īsceļš pārslēgšanai"
+msgstr "Saīsne pārslēgšanai:"
 
 #: ui/main.qml:58
 #, kde-format

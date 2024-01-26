@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2024-01-26 00:38+0000\n"
 "PO-Revision-Date: 2023-03-01 00:26+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -76,7 +76,7 @@ msgstr "컴퓨터를 다음에 다시 시작할 때 펌웨어 설정 화면으�
 msgid "Restart Now"
 msgstr "지금 다시 시작"
 
-#: ui/main.qml:72
+#: ui/main.qml:71
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
@@ -99,30 +99,30 @@ msgstr ""
 "<interface>떠나기…</interface> 단추나 메뉴 항목을 클릭했을 때 로그아웃 확인 "
 "대화 상자를 표시합니다."
 
-#: ui/main.qml:96
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "세션 복원"
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "로그인할 때 열려 있었던 앱 실행:"
 
-#: ui/main.qml:105
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "마지막 로그아웃 시"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "세션을 수동으로 저장했을 때"
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -135,7 +135,7 @@ msgstr ""
 "이 표시됩니다. 이 항목을 클릭하면 Plasma에서 현재 열린 앱을 기억하고 다음 로"
 "그인 시에 복원합니다. 다시 클릭하면 열린 앱 목록을 변경합니다."
 
-#: ui/main.qml:132
+#: ui/main.qml:131
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -144,12 +144,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "빈 세션으로 시작"
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-format
 msgid "Ignored applications:"
 msgstr "무시할 앱:"
 
-#: ui/main.qml:169
+#: ui/main.qml:168
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -159,13 +159,13 @@ msgstr ""
 "세션에서 앱을 복원할 때 자동으로 시작하지 않을 앱의 실행 파일 이름을 쉼표나 "
 "쌍점으로 구분하여 입력하십시오(예: 'xterm:console' 또는 'xterm,konsole')."
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "펌웨어"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -173,13 +173,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "다음에 다시 시작할 때:"
 
-#: ui/main.qml:184
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "UEFI 설정 화면 진입"
 
-#: ui/main.qml:185
+#: ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"

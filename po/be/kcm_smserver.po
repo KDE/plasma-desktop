@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2024-01-26 00:38+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -82,7 +82,7 @@ msgstr "Пасля перазапуску камп'ютара адкрыецца
 msgid "Restart Now"
 msgstr "Перазапусціць"
 
-#: ui/main.qml:72
+#: ui/main.qml:71
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
@@ -105,30 +105,30 @@ msgstr ""
 "выхадзе з сістэмы, выключэнні, перазапуску, націсканні кнопкі сілкавання або "
 "націсканні кнопак ці пунктаў меню з надпісам <interface>Выйсці…</interface>."
 
-#: ui/main.qml:96
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Аднаўленне сеанса"
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Пры ўваходзе ў сістэму запускаць праграмы, якія былі адкрытыя:"
 
-#: ui/main.qml:105
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Пры апошнім уваходзе"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Калі сеанс быў уласнаручна захаваны"
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -142,7 +142,7 @@ msgstr ""
 "запомніць адкрытыя праграмы і адновіць іх пры наступным уваходзе. Каб "
 "замяніць набор праграм, націсніце кнопку яшчэ раз."
 
-#: ui/main.qml:132
+#: ui/main.qml:131
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -151,12 +151,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Пачаць новы сеанс"
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Праграмы, якія ігнаруюцца:"
 
-#: ui/main.qml:169
+#: ui/main.qml:168
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -167,13 +167,13 @@ msgstr ""
 "двукроп'ямі, напрыклад, 'xterm:konsole' або 'xterm,konsole'), каб пры "
 "аднаўленні сеанса яны не запускаліся разам з іншымі праграмамі."
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Прашыўка"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -181,13 +181,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Пасля наступнага перазапуску:"
 
-#: ui/main.qml:184
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Увайсці ў праграму кіравання UEFI"
 
-#: ui/main.qml:185
+#: ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"

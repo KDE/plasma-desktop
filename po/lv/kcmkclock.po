@@ -5,20 +5,20 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
-# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-08 08:48+0000\n"
-"PO-Revision-Date: 2023-11-21 17:32+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2024-01-23 08:29+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -67,7 +67,7 @@ msgstr "Laika josla"
 #, kde-format
 msgid "To change the local time zone, select your area from the list below."
 msgstr ""
-"Lai mainītu laika joslu, izvēlieties jūsu reģionu no zemāk esošā saraksta."
+"Lai mainītu laika joslu, izvēlieties savu reģionu no zemāk esošā saraksta."
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
 #: dateandtime.ui:151
@@ -157,24 +157,24 @@ msgstr ""
 "sistēmas datumu un laiku. Tā kā šie iestatījumi ietekmē ne tikai jūs kā "
 "lietotāju, bet arī visu sistēmu, jūs varat mainīt šos iestatījumus tikai "
 "administratora režīmā. Ja jums nav administratora piekļuves paroles, bet "
-"vēlaties koriģēt sistēmas laiku, sazinieties ar jūsu sistēmas administratoru."
+"vēlaties koriģēt sistēmas laiku, sazinieties ar sistēmas administratoru."
 
 #: k4timezonewidget.cpp:65
 #, kde-format
 msgctxt "Define an area in the time zone, like a town area"
 msgid "Area"
-msgstr ""
+msgstr "Zona"
 
 #: k4timezonewidget.cpp:65
 #, kde-format
 msgctxt "Time zone"
 msgid "Region"
-msgstr ""
+msgstr "Reģions"
 
 #: k4timezonewidget.cpp:65
 #, kde-format
 msgid "Comment"
-msgstr ""
+msgstr "Komentārs"
 
 #: main.cpp:89
 #, kde-format

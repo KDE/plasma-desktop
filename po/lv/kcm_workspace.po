@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2023-11-15 13:37+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2024-01-23 08:20+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: ui/main.qml:24
 #, kde-format
@@ -71,13 +71,13 @@ msgstr "Tūlītējas"
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr "Klikšķis uz datnes vai mapes:"
+msgstr "Klikšķis uz datnēm vai mapēm:"
 
 #: ui/main.qml:132
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr "To atlasa"
+msgstr "Tās atlasa"
 
 #: ui/main.qml:146
 #, kde-format
@@ -88,7 +88,7 @@ msgstr "Atver ar dubultklikšķi"
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr "To atver"
+msgstr "Tās atver"
 
 #: ui/main.qml:172
 #, kde-format
@@ -176,27 +176,26 @@ msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
-"Skārienjutīgajā režīmā daudzi lietotāja saskarnes elementi tiek palielinātu, "
+"Skārienjutīgajā režīmā daudzi lietotāja saskarnes elementi kļūst lielāki, "
 "lai tos būtu vieglāk izmantot pieskaroties."
 
 #: ui/main.qml:334
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double-click interval:"
-msgstr "Atver ar dubultklikšķi"
+msgstr "Dubultklikšķa intervāls:"
 
 #: ui/main.qml:349
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
 
 #: ui/main.qml:353
 #, kde-format
 msgid "msec"
-msgstr ""
+msgstr "ms"
 
 #: ui/main.qml:367
 #, kde-format
@@ -204,6 +203,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"Divi klikšķi šī intervāla ietvaros ir uzskatāmi par dubultklikšķi. "
+"Atsevišķas programmas šos iestatījumus var ignorēt."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -225,10 +226,9 @@ msgstr "Kreisais klikšķis uz ritjoslas pārvieto pa vienu lapu"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double click interval"
-msgstr "Atver ar dubultklikšķi"
+msgstr "Dubultklikšķa intervāls"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
@@ -256,10 +256,10 @@ msgstr ""
 #: workspaceoptions_plasmasettings.kcfg:20
 #, kde-format
 msgid "OSD on layout change"
-msgstr "Virsekrāns, parādot izkārtojuma izmaiņas"
+msgstr "Virsekrāna logs, parādot izkārtojuma izmaiņas"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr "Parādīt uznirstošu logu, izmanot izkārtojumu"
+msgstr "Parādīt uznirstošu logu, izmainot izkārtojumu"

@@ -5,56 +5,46 @@
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Maris Nartiss <maris.kde@gmail.com>, 2010.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2011-07-08 13:47+0300\n"
-"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
-"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"PO-Revision-Date: 2024-01-22 21:10+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Viesturs Zariņš"
+msgstr "Viesturs Zariņš, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "viesturs.zarins@mii.lu.lv"
+msgstr "viesturs.zarins@mii.lu.lv, toms.trasuns@posteo.net"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\".\n"
-#| "\n"
-#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
-#| "overrides do not apply and no devices will be automatically mounted."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, the device will be automatically mounted even though "
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
-"Šis saraksts satur zināmās glabāšanas ierīces. Ja ir ieslēgts \"Automātiski "
-"montēt pieslēdzoties\", ierīce tiks automātiski piemontēta arī ja, "
-"\"Piesakoties piemontēt visas noņemamās ierīces\" ir izslēgts. Tas pats "
-"attiecas uz \"Automātiski piemontēt pieslēdzot\".\n"
-"\n"
-"Ja nav ieslēgts \"Ieslēgt automātisku noņemamo datu nesēju montēšanu\", "
-"definējumi nestrādā un neviena ierīce netiks automātiski montēta."
+"Šis saraksts satur zināmās glabāšanas ierīces. Ja ir ieslēgts „Automātiski "
+"montēt ierakstoties, ierīce tiks automātiski piemontēta arī ja, Ierakstoties "
+"piemontēt visas noņemamās ierīces“ ir izslēgts. Tas pats attiecas uz "
+"„Automātiski piemontēt pieslēdzot“."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -66,11 +56,11 @@ msgid ""
 "system is set to only automatically mount familiar devices, the device will "
 "not be automatically mounted."
 msgstr ""
-"Nospiežot šo pogu, tiks 'aizmirsīs', ka šīs ierīces jebkad bijušas "
-"pieslēgtas. Tas ir noderīgi tikai, ja ir ieslēgts \"Automātiski montēt tikai "
-"tos noņemamos datu nesējus, kas iepriekš pašrocīgi piemontēti\". Ja reiz "
-"ierīce ir aizmirsta, tiks iestatīts automātiski montēt tikai pazīstamas "
-"ierīces un ierīce vairs netiks automātiski montēta."
+"Nospiežot šo pogu, tiks „aizmirsts“, ka šīs ierīces jebkad bijušas "
+"pieslēgtas. Tas ir noderīgi tikai, ja ir ieslēgts „Automātiski montēt tikai "
+"tos noņemamos datu nesējus, kas iepriekš pašrocīgi piemontēti“. Līdzko "
+"ierīce ir aizmirsta un ir iestatīta tikai pazīstamu ierīču automātiska "
+"montēšana, šī ierīce vairs netiks automātiski montēta."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
@@ -80,15 +70,7 @@ msgstr "Aizmirst ierīci"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:67
-#, fuzzy, kde-format
-#| msgid ""
-#| "When this is checked, only remembered devices will be automatically "
-#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#| "instance, plugging in a USB media player to charge is not sufficient to "
-#| "'remember' it - if the files are not accessed, it will not be "
-#| "automatically mounted the next time it is seen. Once they have been "
-#| "accessed, however, the device's contents will be automatically made "
-#| "available to the system."
+#, kde-format
 msgid ""
 "When this is not checked, only remembered devices will be automatically "
 "mounted. A device is 'remembered' if it has ever been mounted before. For "
@@ -97,50 +79,47 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"Kas šis ieslēgts, automātiski tiks montēs tikai pazīstamās ierīces. Ierīce "
-"ir 'pazīstama', ja tā kādreiz iepriekš ir bijusi piemontēta. Piemēram, "
-"iespraužot USB atskaņotāju, lai to uzlādētu, ja netika piekļūts failiem, "
-"netiks veikta automātiskā montēšana. Bet ja failiem ir piekļūts, ierīces "
-"saturs būs automātiski pieejams sistēmai."
+"Kad šis nav atzīmēts, automātiski piemontētas tiks tikai ierīces, kuras "
+"sistēma „atceras“. Ierīci „atceras“, ja tā kādreiz iepriekš ir bijusi "
+"piemontēta. Piemēram, USB mūzikas atskaņotāja iespraušana, lai tu uzlādētu, "
+"nav pietiekama, lai šo ierīci „atcerētos“ — ja jūs nepiekļuvāt ierīcē "
+"esošajiem datiem, tā netiks piemontēta nākamo reizi pēc iespraušanas. Kad "
+"reiz datiem piekļūstat, tad ierīces saturs arī nākamreiz būs automātiski "
+"pieejams sistēmai."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Only automatically mount removable media that has been manually mounted "
-#| "before"
+#, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
 msgstr ""
-"Automātiski montēt noņemamos datu nesējus, kas iepriekš pašrocīgi piemontēti"
+"Automātiski montēt noņemamos datu nesējus, kas nekad iepriekš nav piemontēti"
 
 #: DeviceModel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Automount on Login"
+#, kde-format
 msgid "Automount Device"
-msgstr "Piesakoties automātiski piemontēt"
+msgstr "Automātiski piemontēt ierīci"
 
 #: DeviceModel.cpp:54
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
-msgstr ""
+msgstr "Ierakstoties"
 
 #: DeviceModel.cpp:56
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr ""
+msgstr "Pievienojot"
 
 #: DeviceModel.cpp:258
-#, fuzzy, kde-format
-#| msgid "Device"
+#, kde-format
 msgid "All Devices"
-msgstr "Ierīce"
+msgstr "Visas ierīces"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr ""
+msgstr "Visas zināmās ierīces"
 
 #: DeviceModel.cpp:260
 #, kde-format
@@ -160,12 +139,12 @@ msgstr "UDI: %1"
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will be automatically mounted at login."
-msgstr "Šī ierīce tiks automātiski piemontēta piesakoties."
+msgstr "Šī ierīce tiks automātiski piemontēta ierakstoties."
 
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will not be automatically mounted at login."
-msgstr "Šī ierīce netiks automātiski piemontēta piesakoties."
+msgstr "Šī ierīce netiks automātiski piemontēta ierakstoties."
 
 #: DeviceModel.cpp:326
 #, kde-format

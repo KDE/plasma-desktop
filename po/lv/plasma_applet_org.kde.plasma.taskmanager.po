@@ -5,19 +5,20 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008, 2009, 2010, 2012, 2016.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2016-10-18 10:20+0200\n"
-"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
+"PO-Revision-Date: 2024-01-23 17:15+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -35,166 +36,161 @@ msgstr "Izturēšanās"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr ""
+msgstr "Noņemt klusumu"
 
 #: package/contents/ui/AudioStream.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
-msgstr ""
+msgstr "Apklusināt"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr ""
+msgstr "Noņemt klusumu „%1“"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
-msgstr ""
+msgstr "Apklusināt „%1“"
 
 #: package/contents/ui/Badge.qml:54
 #, kde-format
 msgctxt "Invalid number of new messages, overlay, keep short"
 msgid "—"
-msgstr ""
+msgstr "—"
 
 #: package/contents/ui/Badge.qml:56
 #, kde-format
 msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
-msgstr ""
+msgstr "9,999+"
 
 #: package/contents/ui/ConfigAppearance.qml:45
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "Pamata"
+msgstr "Pamata:"
 
 #: package/contents/ui/ConfigAppearance.qml:46
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr ""
+msgstr "Rādīt priekšskatījumus mazā lokā, uzliekot peles rādītāju uzdevumiem"
 
 #: package/contents/ui/ConfigAppearance.qml:51
 #, kde-format
 msgid "Hide other windows when hovering over previews"
 msgstr ""
+"Paslēpt citus logus, rādot loga priekšskatījumu, uzliekot peles rādītāju"
 
 #: package/contents/ui/ConfigAppearance.qml:56
 #, kde-format
 msgid "Mark applications that play audio"
-msgstr ""
+msgstr "Atzīmēt programmas, kas atskaņo skaņu"
 
 #: package/contents/ui/ConfigAppearance.qml:64
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "Aizpildīt brīvo vietu panelī"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "Izmantot vairāku kolonnu skatu:"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "Izmantot vairāku rindu skatu:"
 
 #: package/contents/ui/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "Nekad"
 
 #: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
-msgstr ""
+msgstr "Kad panelī trūkst vietas un pietiek tā biezums"
 
 #: package/contents/ui/ConfigAppearance.qml:99
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
-msgstr ""
+msgstr "Vienmēr, kad panelis ir pietiekami biezs"
 
 #: package/contents/ui/ConfigAppearance.qml:105
-#, fuzzy, kde-format
-#| msgid "Maximum columns:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
-msgstr "Maksimums kolonu:"
+msgstr "Maksimālais kolonnu skaits:"
 
 #: package/contents/ui/ConfigAppearance.qml:105
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
-msgstr "Maksimums rindu:"
+msgstr "Maksimālais rindu skaits:"
 
 #: package/contents/ui/ConfigAppearance.qml:115
 #, kde-format
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "Atstarpe starp ikonām:"
 
 #: package/contents/ui/ConfigAppearance.qml:119
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "Maza"
 
 #: package/contents/ui/ConfigAppearance.qml:123
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Normāla"
 
 #: package/contents/ui/ConfigAppearance.qml:127
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "Liela"
 
 #: package/contents/ui/ConfigAppearance.qml:151
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "Automātiski iestatīt uz lielām, atrodoties skārienekrāna režīmā"
 
 #: package/contents/ui/ConfigBehavior.qml:46
-#, fuzzy, kde-format
-#| msgid "Grouping:"
+#, kde-format
 msgid "Group:"
 msgstr "Grupēšana:"
 
 #: package/contents/ui/ConfigBehavior.qml:49
-#, fuzzy, kde-format
-#| msgid "Do Not Group"
+#, kde-format
 msgid "Do not group"
 msgstr "Negrupēt"
 
 #: package/contents/ui/ConfigBehavior.qml:49
-#, fuzzy, kde-format
-#| msgid "By Program Name"
+#, kde-format
 msgid "By program name"
 msgstr "Pēc programmas nosaukuma"
 
 #: package/contents/ui/ConfigBehavior.qml:54
 #, kde-format
 msgid "Clicking grouped task:"
-msgstr ""
+msgstr "Klikšķinot uz grupēta uzdevuma:"
 
 #: package/contents/ui/ConfigBehavior.qml:61
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "Iet cauri uzdevumiem"
 
 #: package/contents/ui/ConfigBehavior.qml:62
 #, kde-format
@@ -202,20 +198,20 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr ""
+msgstr "Parāda mazu logu priekšskatījumu"
 
 #: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr ""
+msgstr "Parāda lielu logu priekšskatījumu"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
-msgstr ""
+msgstr "Parāda tekstuālu sarakstu"
 
 #: package/contents/ui/ConfigBehavior.qml:72
 #, kde-format
@@ -223,28 +219,28 @@ msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
+"Kompozitors neatbalsta logu novietošanu vienu otram blakus, tāpēc tā vietā "
+"tiks parādīts teksta veida saraksts."
 
 #: package/contents/ui/ConfigBehavior.qml:82
 #, kde-format
 msgid "Combine into single button"
-msgstr ""
+msgstr "Kombinēt vienā pogā"
 
 #: package/contents/ui/ConfigBehavior.qml:89
-#, fuzzy, kde-format
-#| msgid "Only group when the task manager is full"
+#, kde-format
 msgid "Group only when the Task Manager is full"
-msgstr "Grupēt tikai tad, kad uzdevumjosla ir pilna"
+msgstr "Grupēt tikai tad, kad uzdevumu pārvaldnieks ir pilns"
 
 #: package/contents/ui/ConfigBehavior.qml:100
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort:"
-msgstr "Kārtošana:"
+msgstr "Kārtot:"
 
 #: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "Do not sort"
-msgstr ""
+msgstr "Nekārtot"
 
 #: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
@@ -257,55 +253,54 @@ msgid "Alphabetically"
 msgstr "Alfabētiski"
 
 #: package/contents/ui/ConfigBehavior.qml:103
-#, fuzzy, kde-format
-#| msgid "By Desktop"
+#, kde-format
 msgid "By desktop"
 msgstr "Pēc darbvirsmas"
 
 #: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "By activity"
-msgstr ""
+msgstr "Pēc aktivitātes"
 
 #: package/contents/ui/ConfigBehavior.qml:109
 #, kde-format
 msgid "Keep launchers separate"
-msgstr ""
+msgstr "Palaidējus turēt atsevišķi"
 
 #: package/contents/ui/ConfigBehavior.qml:120
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
-msgstr ""
+msgstr "Klikšķinot uz aktīvā uzdevuma:"
 
 #: package/contents/ui/ConfigBehavior.qml:121
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr ""
+msgstr "Uzdevumu minimizē"
 
 #: package/contents/ui/ConfigBehavior.qml:126
 #, kde-format
 msgid "Middle-clicking any task:"
-msgstr ""
+msgstr "Klikšķinot ar vidējo pogu uz jebkura uzdevuma:"
 
 #: package/contents/ui/ConfigBehavior.qml:130
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
-msgstr ""
+msgstr "Neko nedara"
 
 #: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
-msgstr ""
+msgstr "Aizver logu vai grupu"
 
 #: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
-msgstr ""
+msgstr "Atver jaunu logu"
 
 #: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
@@ -313,177 +308,170 @@ msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
 "group'"
 msgid "Minimizes/Restores window or group"
-msgstr ""
+msgstr "Minimizē/atjauno logu vai grupu"
 
 #: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
-msgstr ""
+msgstr "Ieslēdz/izslēdz grupēšanu"
 
 #: package/contents/ui/ConfigBehavior.qml:135
-#, fuzzy, kde-format
-#| msgid "Show only tasks from the current desktop"
+#, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
 "virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr "Rādīt tikai no pašreizējās darbvirsmas"
+msgstr "Pārvieto uz aktīvo virtuālo darbvirsmu"
 
 #: package/contents/ui/ConfigBehavior.qml:145
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
-msgstr ""
+msgstr "Peles rullītis:"
 
 #: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "Iet cauri uzdevumiem"
 
 #: package/contents/ui/ConfigBehavior.qml:155
 #, kde-format
 msgid "Skip minimized tasks"
-msgstr ""
+msgstr "Izlaiž minimizētos uzdevumus"
 
 #: package/contents/ui/ConfigBehavior.qml:166
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgid "Show only tasks:"
-msgstr "Rādīt paskaidres"
+msgstr "Rādīt tikai uzdevumus:"
 
 #: package/contents/ui/ConfigBehavior.qml:167
-#, fuzzy, kde-format
-#| msgid "Show only tasks from the current screen"
+#, kde-format
 msgid "From current screen"
-msgstr "Rādīt tikai no pašreizējā ekrāna"
+msgstr "No aktīvā ekrāna"
 
 #: package/contents/ui/ConfigBehavior.qml:172
-#, fuzzy, kde-format
-#| msgid "Move &To Current Desktop"
+#, kde-format
 msgid "From current desktop"
-msgstr "Pārvietot uz &pašreizējo darbvirsmu"
+msgstr "No aktīvās darbvirsmas"
 
 #: package/contents/ui/ConfigBehavior.qml:177
-#, fuzzy, kde-format
-#| msgid "Show only tasks from the current activity"
+#, kde-format
 msgid "From current activity"
-msgstr "Rādīt tikai no pašreizējās aktivitātes"
+msgstr "No pašreizējās aktivitātes"
 
 #: package/contents/ui/ConfigBehavior.qml:182
-#, fuzzy, kde-format
-#| msgid "Show only tasks that are minimized"
+#, kde-format
 msgid "That are minimized"
-msgstr "Rādīt tikai minimizētos"
+msgstr "Kas ir minimizēti"
 
 #: package/contents/ui/ConfigBehavior.qml:191
 #, kde-format
 msgid "When panel is hidden:"
-msgstr ""
+msgstr "Kad panelis ir paslēpts:"
 
 #: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgid "Unhide when a window wants attention"
-msgstr ""
+msgstr "Parādīt logu, kad tas prasa uzmanību"
 
 #: package/contents/ui/ConfigBehavior.qml:204
 #, kde-format
 msgid "New tasks appear:"
-msgstr ""
+msgstr "Jauni uzdevumi parādās:"
 
 #: package/contents/ui/ConfigBehavior.qml:208
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "Apakšā"
 
 #: package/contents/ui/ConfigBehavior.qml:212
 #: package/contents/ui/ConfigBehavior.qml:232
 #, kde-format
 msgid "To the right"
-msgstr ""
+msgstr "Labajā pusē"
 
 #: package/contents/ui/ConfigBehavior.qml:214
 #: package/contents/ui/ConfigBehavior.qml:230
 #, kde-format
 msgid "To the left"
-msgstr ""
+msgstr "Kreisajā pusē"
 
 #: package/contents/ui/ConfigBehavior.qml:226
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "Augšā"
 
 #: package/contents/ui/ContextMenu.qml:100
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "Vietas"
 
 #: package/contents/ui/ContextMenu.qml:106
 #, kde-format
 msgid "Recent Files"
-msgstr ""
+msgstr "Nesenās datnes"
 
 #: package/contents/ui/ContextMenu.qml:113
 #, kde-format
 msgid "Actions"
-msgstr ""
+msgstr "Darbības"
 
 #: package/contents/ui/ContextMenu.qml:174
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
-msgstr ""
+msgstr "Iepriekšējais celiņš"
 
 #: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
-msgstr ""
+msgstr "Pauze"
 
 #: package/contents/ui/ContextMenu.qml:188
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
-msgstr ""
+msgstr "Atskaņot"
 
 #: package/contents/ui/ContextMenu.qml:206
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
-msgstr ""
+msgstr "Nākamais celiņš"
 
 #: package/contents/ui/ContextMenu.qml:217
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
-msgstr ""
+msgstr "Apturēt"
 
 #: package/contents/ui/ContextMenu.qml:237
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
-msgstr ""
+msgstr "Iziet"
 
 #: package/contents/ui/ContextMenu.qml:252
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
-msgstr ""
+msgstr "Atjaunot"
 
 #: package/contents/ui/ContextMenu.qml:277
 #, kde-format
 msgid "Mute"
-msgstr ""
+msgstr "Apklusināt"
 
 #: package/contents/ui/ContextMenu.qml:288
 #, kde-format
 msgid "Open New Window"
-msgstr ""
+msgstr "Atvērt jaunu logu"
 
 #: package/contents/ui/ContextMenu.qml:304
-#, fuzzy, kde-format
-#| msgid "Move To &Desktop"
+#, kde-format
 msgid "Move to &Desktop"
 msgstr "Pārvietot uz &darbvirsmu"
 
@@ -495,273 +483,266 @@ msgstr "Pārvietot uz &pašreizējo darbvirsmu"
 #: package/contents/ui/ContextMenu.qml:337
 #, kde-format
 msgid "&All Desktops"
-msgstr "Vis&as darbvirsmas"
+msgstr "&Uz visām darbvirsmām"
 
 #: package/contents/ui/ContextMenu.qml:351
-#, fuzzy, kde-format
-#| msgctxt "1 = number of desktop, 2 = desktop name"
-#| msgid "&%1 Desktop %2"
+#, kde-format
 msgctxt "1 = number of desktop, 2 = desktop name"
 msgid "&%1 %2"
-msgstr "&%1 darbvirsma %2"
+msgstr "&%1. uz „%2“"
 
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
-msgstr "Jau&na darbvirsma"
+msgstr "Uz &jaunu darbvirsmu"
 
 #: package/contents/ui/ContextMenu.qml:385
 #, kde-format
 msgid "Show in &Activities"
-msgstr ""
+msgstr "Rādīt &aktivitātēs"
 
 #: package/contents/ui/ContextMenu.qml:409
 #, kde-format
 msgid "Add To Current Activity"
-msgstr ""
+msgstr "Pievienot aktīvajai aktivitātei"
 
 #: package/contents/ui/ContextMenu.qml:419
 #, kde-format
 msgid "All Activities"
-msgstr ""
+msgstr "Visās aktivitātēs"
 
 #: package/contents/ui/ContextMenu.qml:477
-#, fuzzy, kde-format
-#| msgid "Move To &Desktop"
+#, kde-format
 msgid "Move to %1"
-msgstr "Pārvietot uz &darbvirsmu"
+msgstr "Pārvietot uz „%1“"
 
 #: package/contents/ui/ContextMenu.qml:505
 #: package/contents/ui/ContextMenu.qml:522
 #, kde-format
 msgid "&Pin to Task Manager"
-msgstr ""
+msgstr "&Piespraust uzdevumu pārvaldniekam"
 
 #: package/contents/ui/ContextMenu.qml:575
 #, kde-format
 msgid "On All Activities"
-msgstr ""
+msgstr "Visās aktivitātēs"
 
 #: package/contents/ui/ContextMenu.qml:581
 #, kde-format
 msgid "On The Current Activity"
-msgstr ""
+msgstr "Pašreizējā aktivitātē"
 
 #: package/contents/ui/ContextMenu.qml:606
 #, kde-format
 msgid "Unpin from Task Manager"
-msgstr ""
+msgstr "Noņemt no uzdevumu pārvaldnieka"
 
 #: package/contents/ui/ContextMenu.qml:621
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Vairāk"
 
 #: package/contents/ui/ContextMenu.qml:630
 #, kde-format
 msgid "&Move"
-msgstr ""
+msgstr "&Pārvietot"
 
 #: package/contents/ui/ContextMenu.qml:639
 #, kde-format
 msgid "Re&size"
-msgstr ""
+msgstr "&Mainīt izmēru"
 
 #: package/contents/ui/ContextMenu.qml:653
 #, kde-format
 msgid "Ma&ximize"
-msgstr ""
+msgstr "M&aksimizēt"
 
 #: package/contents/ui/ContextMenu.qml:667
 #, kde-format
 msgid "Mi&nimize"
-msgstr ""
+msgstr "Minimi&zēt"
 
 #: package/contents/ui/ContextMenu.qml:677
 #, kde-format
 msgid "Keep &Above Others"
-msgstr ""
+msgstr "Patu&rēt virs citiem"
 
 #: package/contents/ui/ContextMenu.qml:687
 #, kde-format
 msgid "Keep &Below Others"
-msgstr ""
+msgstr "Pa&turēt zem citiem"
 
 #: package/contents/ui/ContextMenu.qml:699
 #, kde-format
 msgid "&Fullscreen"
-msgstr ""
+msgstr "Piln&ekrāna"
 
 #: package/contents/ui/ContextMenu.qml:711
 #, kde-format
 msgid "&Shade"
-msgstr ""
+msgstr "&Saritināt"
 
 #: package/contents/ui/ContextMenu.qml:727
 #, kde-format
 msgid "Allow this program to be grouped"
-msgstr ""
+msgstr "Ļaut programmu grupēt"
 
 #: package/contents/ui/ContextMenu.qml:773
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr ""
+msgstr "&Aizvērt visus"
 
 #: package/contents/ui/ContextMenu.qml:773
 #, kde-format
 msgid "&Close"
-msgstr ""
+msgstr "&Aizvērt"
 
 #: package/contents/ui/Task.qml:80
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "Palaist „%1“"
 
 #: package/contents/ui/Task.qml:85
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Pienācis %1 ziņojums."
+msgstr[1] "Pienākuši %1 ziņojumi."
+msgstr[2] "Pienākuši %1 ziņojumi."
 
 #: package/contents/ui/Task.qml:94
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Rādīt paskaidres"
+msgstr "Rādīt „%1“ uzdevuma paskaidri"
 
 #: package/contents/ui/Task.qml:100
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "Rādīt „%1“ logus vienu otram blakus"
 
 #: package/contents/ui/Task.qml:105
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "Atvērt „%1“ logu tekstuālu sarakstu"
 
 #: package/contents/ui/Task.qml:109
 #, kde-format
 msgid "Activate %1"
-msgstr ""
+msgstr "Aktivizēt „%1“"
 
 #: package/contents/ui/ToolTipInstance.qml:358
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr ""
+msgstr "Noņemt klusumu „%1“"
 
 #: package/contents/ui/ToolTipInstance.qml:359
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
-msgstr ""
+msgstr "Apklusināt „%1“"
 
 #: package/contents/ui/ToolTipInstance.qml:382
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr ""
+msgstr "Mainīt „%1“ skaļumu"
 
 #: package/contents/ui/ToolTipInstance.qml:398
-#, fuzzy, kde-format
-#| msgctxt "@title:group Name of a group of windows"
-#| msgid "%1"
+#, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr "%1"
+msgstr "%1%"
 
 #: package/contents/ui/ToolTipInstance.qml:402
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: package/contents/ui/ToolTipInstance.qml:426
-#, fuzzy, kde-format
-#| msgid "On %1"
+#, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
-msgstr "Uz %1"
+msgstr "Uz „%1“"
 
 #: package/contents/ui/ToolTipInstance.qml:429
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
-msgstr ""
+msgstr "Piesprausts visām darbvirsmām"
 
 #: package/contents/ui/ToolTipInstance.qml:440
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
-msgstr ""
+msgstr "Pieejams visās aktivitātēs"
 
 #: package/contents/ui/ToolTipInstance.qml:462
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
-msgstr ""
+msgstr "Tāpat pieejams „%1“"
 
 #: package/contents/ui/ToolTipInstance.qml:466
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
-msgstr ""
+msgstr "Pieejams „%1“"
 
 #: plugin/backend.cpp:312
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
 msgid_plural "%1 more Places"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Vēl %1 vietu"
+msgstr[1] "Vēl %1 vietas"
+msgstr[2] "Vēl %1 vietu"
 
 #: plugin/backend.cpp:408
 #, kde-format
 msgid "Recent Downloads"
-msgstr ""
+msgstr "Nesenās lejupielādes"
 
 #: plugin/backend.cpp:410
 #, kde-format
 msgid "Recent Connections"
-msgstr ""
+msgstr "Nesenie savienojumi"
 
 #: plugin/backend.cpp:412
 #, kde-format
 msgid "Recent Places"
-msgstr ""
+msgstr "Nesen apmeklētās vietas"
 
 #: plugin/backend.cpp:421
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr ""
+msgstr "Aizmirst nesenās lejupielādes"
 
 #: plugin/backend.cpp:423
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr ""
+msgstr "Aizmirst nesenos savienojumus"
 
 #: plugin/backend.cpp:425
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr ""
+msgstr "Aizmirst nesen apmeklētās vietas"
 
 #: plugin/backend.cpp:427
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
-msgstr ""
+msgstr "Aizmirst nesenās datnes"
 
 #~ msgid "Show tooltips"
 #~ msgstr "Rādīt paskaidres"

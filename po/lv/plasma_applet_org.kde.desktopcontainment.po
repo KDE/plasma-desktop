@@ -6,28 +6,25 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2008, 2012.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2024 Toms Trasūns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2012-01-07 08:48+0200\n"
-"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
-"Language-Team: Latvian\n"
+"PO-Revision-Date: 2024-01-23 14:18+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #: package/contents/config/config.qml:16
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Title of the page that lets the user choose which location should the "
-#| "folderview show"
-#| msgid "Location"
+#, kde-format
 msgid "Location"
 msgstr "Vieta"
 
@@ -38,197 +35,168 @@ msgid "Icons"
 msgstr "Ikonas"
 
 #: package/contents/config/config.qml:30
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Title of the page that lets the user choose how to filter the folderview "
-#| "contents"
-#| msgid "Filter"
+#, kde-format
 msgid "Filter"
 msgstr "Filtrs"
 
 #: package/contents/ui/BackButtonItem.qml:104
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Atpakaļ"
 
 #: package/contents/ui/ConfigFilter.qml:63
-#, fuzzy, kde-format
-#| msgid "File types:"
+#, kde-format
 msgid "Files:"
-msgstr "Failu tipi:"
+msgstr "Datņu tipi:"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Show a place:"
+#, kde-format
 msgid "Show all"
-msgstr "Rādīt vietu:"
+msgstr "Rādīt visus"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Show Files Matching"
+#, kde-format
 msgid "Show matching"
-msgstr "Rādīt failus, kas atbilst"
+msgstr "Rādīt atbilstošās"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Hide Files Matching"
+#, kde-format
 msgid "Hide matching"
-msgstr "Slēpt failus, kas atbilst"
+msgstr "Paslēpt atbilstošās"
 
 #: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
-msgstr "Faila nosaukuma paraugs:"
+msgstr "Datnes nosaukuma paraugs:"
 
 #: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
 msgid "File types:"
-msgstr "Failu tipi:"
+msgstr "Datņu tipi:"
 
 #: package/contents/ui/ConfigFilter.qml:82
-#, fuzzy, kde-format
-#| msgid "Show All Files"
+#, kde-format
 msgid "Show hidden files:"
-msgstr "Rādīt visus failus"
+msgstr "Rādīt slēptās datnes"
 
 #: package/contents/ui/ConfigFilter.qml:132
-#, fuzzy, kde-format
-#| msgid "File types:"
+#, kde-format
 msgid "File Type"
-msgstr "Failu tipi:"
+msgstr "Datnes tips"
 
 #: package/contents/ui/ConfigFilter.qml:133
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Apraksts"
 
 #: package/contents/ui/ConfigFilter.qml:204
 #, kde-format
 msgid "Select All"
-msgstr "Izvēlēties visu"
+msgstr "Atlasīt visu"
 
 #: package/contents/ui/ConfigFilter.qml:214
 #, kde-format
 msgid "Deselect All"
-msgstr "Noņemt izvēli"
+msgstr "Noņemt atlasi visam"
 
 #: package/contents/ui/ConfigFilter.qml:223
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "Mainīt kārtošanas secību"
 
 #: package/contents/ui/ConfigIcons.qml:64
 #, kde-format
 msgid "Panel button:"
-msgstr ""
+msgstr "Paneļa poga:"
 
 #: package/contents/ui/ConfigIcons.qml:70
-#, fuzzy, kde-format
-#| msgid "Custom title:"
+#, kde-format
 msgid "Use a custom icon"
-msgstr "Pielāgots nosaukums:"
+msgstr "Izmantot pielāgotu ikonu"
 
 #: package/contents/ui/ConfigIcons.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@title:menu in Copy To or Move To submenu"
-#| msgid "Browse..."
+#, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Pārlūkot..."
+msgstr "Izvēlēties..."
 
 #: package/contents/ui/ConfigIcons.qml:109
-#, fuzzy, kde-format
-#| msgid "Sort Icons"
+#, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
-msgstr "Sakārtot ikonas"
+msgstr "Atiestatīt ikonu"
 
 #: package/contents/ui/ConfigIcons.qml:129
-#, fuzzy, kde-format
-#| msgid "Arrangement:"
+#, kde-format
 msgid "Arrangement:"
 msgstr "Izkārtojums:"
 
 #: package/contents/ui/ConfigIcons.qml:133
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
-msgstr "No augšas uz apakšu, no kreisās uz labo"
+msgstr "No kreisās uz labo"
 
 #: package/contents/ui/ConfigIcons.qml:134
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Right to Left"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
-msgstr "No augšas uz apakšu, no labās uz kreiso"
+msgstr "No labās uz kreiso"
 
 #: package/contents/ui/ConfigIcons.qml:135
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
-msgstr "No augšas uz apakšu, no kreisās uz labo"
+msgstr "No augšas uz leju"
 
 #: package/contents/ui/ConfigIcons.qml:144
-#, fuzzy, kde-format
-#| msgid "Align to grid:"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
-msgstr "Izkārtot režģī:"
+msgstr "Līdzināt pa kreisi"
 
 #: package/contents/ui/ConfigIcons.qml:145
-#, fuzzy, kde-format
-#| msgid "Align to grid:"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
-msgstr "Izkārtot režģī:"
+msgstr "Līdzināt pa labi"
 
 #: package/contents/ui/ConfigIcons.qml:160
-#, fuzzy, kde-format
-#| msgid "Lock in place:"
+#, kde-format
 msgid "Lock in place"
-msgstr "Slēgt izvietojumu:"
+msgstr "Slēgt vietā"
 
 #: package/contents/ui/ConfigIcons.qml:174
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sorting:"
-msgstr "Kārtība:"
+msgstr "Kārtošana:"
 
 #: package/contents/ui/ConfigIcons.qml:182
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
-msgstr ""
+msgstr "Manuāla"
 
 #: package/contents/ui/ConfigIcons.qml:183
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Name"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Pēc nosaukuma"
 
 #: package/contents/ui/ConfigIcons.qml:184
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
-msgstr "Izmērs:"
+msgstr "Pēc izmēra"
 
 #: package/contents/ui/ConfigIcons.qml:185
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Type"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Pēc tipa"
 
 #: package/contents/ui/ConfigIcons.qml:186
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Date"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Pēc datuma"
@@ -237,12 +205,10 @@ msgstr "Pēc datuma"
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
-msgstr ""
+msgstr "Dilstoši"
 
 #: package/contents/ui/ConfigIcons.qml:205
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "Folders First"
+#, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Mapes vispirms"
@@ -251,36 +217,33 @@ msgstr "Mapes vispirms"
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
-msgstr ""
+msgstr "Skata režīms:"
 
 #: package/contents/ui/ConfigIcons.qml:221
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
-msgstr ""
+msgstr "Saraksts"
 
 #: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
-msgstr ""
+msgstr "Režģis"
 
 #: package/contents/ui/ConfigIcons.qml:233
-#, fuzzy, kde-format
-#| msgid "Icon Text"
+#, kde-format
 msgid "Icon size:"
-msgstr "Ikonas teksts"
+msgstr "Ikonu izmērs:"
 
 #: package/contents/ui/ConfigIcons.qml:248
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Mazas"
 
 #: package/contents/ui/ConfigIcons.qml:257
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Lielas"
@@ -288,120 +251,108 @@ msgstr "Lielas"
 #: package/contents/ui/ConfigIcons.qml:266
 #, kde-format
 msgid "Label width:"
-msgstr ""
+msgstr "Nosaukuma platums:"
 
 #: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
-msgstr ""
+msgstr "Šaurs"
 
 #: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
-msgstr ""
+msgstr "Vidējs"
 
 #: package/contents/ui/ConfigIcons.qml:271
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
-msgstr ""
+msgstr "Plats"
 
 #: package/contents/ui/ConfigIcons.qml:279
-#, fuzzy, kde-format
-#| msgid " lines"
+#, kde-format
 msgid "Text lines:"
-msgstr " rindas"
+msgstr "Teksta rindiņas:"
 
 #: package/contents/ui/ConfigIcons.qml:295
 #, kde-format
 msgid "When hovering over icons:"
-msgstr ""
+msgstr "Velkot peli pāri ikonām"
 
 #: package/contents/ui/ConfigIcons.qml:297
 #, kde-format
 msgid "Show tooltips"
-msgstr ""
+msgstr "Rādīt paskaidres"
 
 #: package/contents/ui/ConfigIcons.qml:304
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgid "Show selection markers"
-msgstr "Izvēlēties visu"
+msgstr "Rādīt atlases marķierus"
 
 #: package/contents/ui/ConfigIcons.qml:311
-#, fuzzy, kde-format
-#| msgid "Previews:"
+#, kde-format
 msgid "Show folder preview popups"
-msgstr "Iepriekšējais:"
+msgstr "Rādīt mapju priekšskatījuma uzlecošos logus"
 
 #: package/contents/ui/ConfigIcons.qml:321
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgid "Rename:"
-msgstr "Pā&rdēvēt"
+msgstr "Pārdēvēt:"
 
 #: package/contents/ui/ConfigIcons.qml:325
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
-msgstr ""
+msgstr "Pārdēvēt rindiņā, klikšķinot uz atlasītā vienuma teksta"
 
 #: package/contents/ui/ConfigIcons.qml:336
-#, fuzzy, kde-format
-#| msgid "Previews:"
+#, kde-format
 msgid "Previews:"
-msgstr "Iepriekšējais:"
+msgstr "Priekšskatījumi:"
 
 #: package/contents/ui/ConfigIcons.qml:338
-#, fuzzy, kde-format
-#| msgid "Previews:"
+#, kde-format
 msgid "Show preview thumbnails"
-msgstr "Iepriekšējais:"
+msgstr "Rādīt priekšskatījumu sīktēlus"
 
 #: package/contents/ui/ConfigIcons.qml:346
-#, fuzzy, kde-format
-#| msgid "More Preview Options..."
+#, kde-format
 msgid "Configure Preview Plugins…"
-msgstr "Vairāk priekšskatījuma iespējas..."
+msgstr "Konfigurēt priekšskatījuma spraudņus..."
 
 #: package/contents/ui/ConfigLocation.qml:80
 #, kde-format
 msgid "Show:"
-msgstr ""
+msgstr "Rādīt:"
 
 #: package/contents/ui/ConfigLocation.qml:82
-#, fuzzy, kde-format
-#| msgid "Show the Desktop folder"
+#, kde-format
 msgid "Desktop folder"
-msgstr "Rādīt darbvirsmas mapi"
+msgstr "Darbvirsmas mapi"
 
 #: package/contents/ui/ConfigLocation.qml:89
 #, kde-format
 msgid "Files linked to the current activity"
-msgstr ""
+msgstr "Datnes, kas ir saistītas ar aktīvo aktivitāti"
 
 #: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgid "Places panel item:"
-msgstr ""
+msgstr "Vietu paneļa vienība:"
 
 #: package/contents/ui/ConfigLocation.qml:129
-#, fuzzy, kde-format
-#| msgid "Custom title:"
+#, kde-format
 msgid "Custom location:"
-msgstr "Pielāgots nosaukums:"
+msgstr "Pielāgota vieta:"
 
 #: package/contents/ui/ConfigLocation.qml:137
-#, fuzzy, kde-format
-#| msgid "Type a path or a URL here"
+#, kde-format
 msgid "Type path or URL…"
-msgstr "Šeit ievadiet ceļu vai URL"
+msgstr "Ievadiet ceļu vai URL..."
 
 #: package/contents/ui/ConfigLocation.qml:180
-#, fuzzy, kde-format
-#| msgctxt "Music"
-#| msgid "Title:"
+#, kde-format
 msgid "Title:"
 msgstr "Nosaukums:"
 
@@ -416,48 +367,44 @@ msgid "Default"
 msgstr "Noklusētais"
 
 #: package/contents/ui/ConfigLocation.qml:182
-#, fuzzy, kde-format
-#| msgid "Full path"
+#, kde-format
 msgid "Full path"
-msgstr "Pilnais ceļš"
+msgstr "Pilns ceļš"
 
 #: package/contents/ui/ConfigLocation.qml:182
-#, fuzzy, kde-format
-#| msgid "Custom title:"
+#, kde-format
 msgid "Custom title"
-msgstr "Pielāgots nosaukums:"
+msgstr "Pielāgots nosaukums"
 
 #: package/contents/ui/ConfigLocation.qml:197
-#, fuzzy, kde-format
-#| msgid "Custom title:"
+#, kde-format
 msgid "Enter custom title…"
-msgstr "Pielāgots nosaukums:"
+msgstr "Ievadiet pielāgotu nosaukumu..."
 
 #: package/contents/ui/ConfigOverlay.qml:86
 #, kde-format
 msgid "Click and drag to rotate"
-msgstr ""
+msgstr "Spiediet un velciet, lai rotētu"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format
 msgid "Hide Background"
-msgstr ""
+msgstr "Slēpt fonu"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format
 msgid "Show Background"
-msgstr ""
+msgstr "Rādīt fonu"
 
 #: package/contents/ui/ConfigOverlay.qml:222
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Noņemt"
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
-#, fuzzy, kde-format
-#| msgid "Previews:"
+#, kde-format
 msgid "Preview Plugins"
-msgstr "Iepriekšējais:"
+msgstr "Priekšskatīt spraudņus"
 
 #: package/contents/ui/FolderView.qml:1200
 #, kde-format
@@ -466,41 +413,39 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"Uz darbvirsmas ir daudz mapju un datņu. Tas var samazināt ierīces "
+"veiktspēju, tāpēc ir ieteicams tos pārvietot citur."
 
 #: package/contents/ui/main.qml:390
-#, fuzzy, kde-format
-#| msgid "&Refresh Desktop"
+#, kde-format
 msgid "Configure Desktop and Wallpaper…"
-msgstr "&Atsvaidzināt darbvirsmu"
+msgstr "Konfigurēt darbvirsmu un tapeti..."
 
 #: plugins/folder/directorypicker.cpp:32
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgid "Select Folder"
-msgstr "Izvēlēties visu"
+msgstr "Atlasīt mapi"
 
 #: plugins/folder/foldermodel.cpp:466
 #, kde-format
 msgid "&Refresh Desktop"
-msgstr "&Atsvaidzināt darbvirsmu"
+msgstr "&Pārlādēt darbvirsmu"
 
 #: plugins/folder/foldermodel.cpp:466 plugins/folder/foldermodel.cpp:1630
 #, kde-format
 msgid "&Refresh View"
-msgstr "&Atsvaidzināt skatu"
+msgstr "&Pārlādēt skatu"
 
 #: plugins/folder/foldermodel.cpp:1639
-#, fuzzy, kde-format
-#| msgid "&Empty Trash Bin"
+#, kde-format
 msgid "&Empty Trash"
-msgstr "&Iztukšot miskasti"
+msgstr "&Iztukšot atkritni"
 
 #: plugins/folder/foldermodel.cpp:1642
-#, fuzzy, kde-format
-#| msgid "&Restore"
+#, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
-msgstr "A&tjaunot"
+msgstr "Atjaunot"
 
 #: plugins/folder/foldermodel.cpp:1645
 #, kde-format
@@ -518,46 +463,36 @@ msgid "&Properties"
 msgstr "Ī&pašības"
 
 #: plugins/folder/viewpropertiesmenu.cpp:21
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort By"
-msgstr "Kārtība:"
+msgstr "Kārtot pēc"
 
 #: plugins/folder/viewpropertiesmenu.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "Sort Icons"
-#| msgid "Unsorted"
+#, kde-format
 msgctxt "@item:inmenu Sort icons manually"
 msgid "Unsorted"
 msgstr "Nekārtots"
 
 #: plugins/folder/viewpropertiesmenu.cpp:28
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Name"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by name"
 msgid "Name"
 msgstr "Pēc nosaukuma"
 
 #: plugins/folder/viewpropertiesmenu.cpp:32
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by size"
 msgid "Size"
-msgstr "Izmērs:"
+msgstr "Pēc izmēra"
 
 #: plugins/folder/viewpropertiesmenu.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Type"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by file type"
 msgid "Type"
 msgstr "Pēc tipa"
 
 #: plugins/folder/viewpropertiesmenu.cpp:40
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Date"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by date"
 msgid "Date"
 msgstr "Pēc datuma"
@@ -566,38 +501,33 @@ msgstr "Pēc datuma"
 #, kde-format
 msgctxt "@item:inmenu Sort icons in descending order"
 msgid "Descending"
-msgstr ""
+msgstr "Dilstoši"
 
 #: plugins/folder/viewpropertiesmenu.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "Folders First"
+#, kde-format
 msgctxt "@item:inmenu Sort icons with folders first"
 msgid "Folders First"
-msgstr "Mapes vispirms"
+msgstr "Mapes rādīt pirmās"
 
 #: plugins/folder/viewpropertiesmenu.cpp:50
-#, fuzzy, kde-format
-#| msgid "Icon Text"
+#, kde-format
 msgid "Icon Size"
-msgstr "Ikonas teksts"
+msgstr "Ikonu izmērs"
 
 #: plugins/folder/viewpropertiesmenu.cpp:53
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Tiny"
-msgstr ""
+msgstr "Sīkas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Very Small"
-msgstr "Mazas"
+msgstr "Ļoti mazas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small"
 msgstr "Mazas"
@@ -606,17 +536,16 @@ msgstr "Mazas"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small-Medium"
-msgstr ""
+msgstr "Vidēji mazas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Medium"
-msgstr ""
+msgstr "Vidējas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Large"
 msgstr "Lielas"
@@ -625,65 +554,59 @@ msgstr "Lielas"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Huge"
-msgstr ""
+msgstr "Milzīgas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:67
-#, fuzzy, kde-format
-#| msgid "Arrangement:"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
-msgstr "Izkārtojums:"
+msgstr "Izkārtojums"
 
 #: plugins/folder/viewpropertiesmenu.cpp:71
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Left to Right"
-msgstr "No augšas uz apakšu, no kreisās uz labo"
+msgstr "No kreisās uz labo"
 
 #: plugins/folder/viewpropertiesmenu.cpp:72
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Right to Left"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Right to Left"
-msgstr "No augšas uz apakšu, no labās uz kreiso"
+msgstr "No labās uz kreiso"
 
 #: plugins/folder/viewpropertiesmenu.cpp:76
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Top to Bottom"
-msgstr "No augšas uz apakšu, no kreisās uz labo"
+msgstr "No augšas uz apakšu"
 
 #: plugins/folder/viewpropertiesmenu.cpp:81
-#, fuzzy, kde-format
-#| msgid "Align to grid:"
+#, kde-format
 msgid "Align"
-msgstr "Izkārtot režģī:"
+msgstr "Līdzināt"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left"
-msgstr ""
+msgstr "Pa kreisi"
 
 #: plugins/folder/viewpropertiesmenu.cpp:88
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right"
-msgstr ""
+msgstr "Pa labi"
 
 #: plugins/folder/viewpropertiesmenu.cpp:93
-#, fuzzy, kde-format
-#| msgid "Previews:"
+#, kde-format
 msgid "Show Previews"
-msgstr "Iepriekšējais:"
+msgstr "Rādīt priekšskatījumus"
 
 #: plugins/folder/viewpropertiesmenu.cpp:97
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
-msgstr ""
+msgstr "Slēgts"
 
 #, fuzzy
 #~| msgctxt "On a camera"

@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-25 00:38+0000\n"
-"PO-Revision-Date: 2023-11-15 11:50+0200\n"
+"PO-Revision-Date: 2024-01-23 17:08+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
-msgstr "Šobrīd tiek izmantots"
+msgstr "Izmanto šobrīd"
 
 #: contents/activitymanager/ActivityItem.qml:245
 msgid ""
@@ -68,7 +68,7 @@ msgstr "Dzēst"
 
 #: contents/applet/AppletError.qml:128
 msgid "Sorry! There was an error loading %1."
-msgstr "Atvainojamies! Ir notikusi kļūda, ielādējot %1."
+msgstr "Diemžēl ir notikusi kļūda, ielādējot „%1“."
 
 #: contents/applet/AppletError.qml:167
 msgid "Copy to Clipboard"
@@ -218,7 +218,7 @@ msgstr "Pievienot darbību"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:69
 msgid "Layout changes have been restricted by the system administrator"
-msgstr "Sistēmas administrators ir ierobežojies izkārtojuma izmaiņas"
+msgstr "Sistēmas administrators ir ierobežojis izkārtojuma izmaiņas"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:84
 msgid "Layout:"
@@ -230,7 +230,7 @@ msgstr "Darbvirsmas tapetes veids:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:119
 msgid "Get New Plugins…"
-msgstr "Iegūt jaunus papildinājumus..."
+msgstr "Iegūt jaunus spraudņus..."
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:189
 msgid "Layout changes must be applied before other changes can be made"
@@ -270,7 +270,7 @@ msgstr "Pievienot sadalītāju"
 
 #: contents/configuration/PanelConfiguration.qml:108
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Pievienot panelim atdalītāja logdaļu"
 
 #: contents/configuration/PanelConfiguration.qml:115
 msgid "Add Widgets…"
@@ -278,11 +278,11 @@ msgstr "Pievienot logdaļas..."
 
 #: contents/configuration/PanelConfiguration.qml:118
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "Atvērt logdaļu atlasītāju, lai panelī ievilktu logdaļas"
 
 #: contents/configuration/PanelConfiguration.qml:147
 msgid "Position"
-msgstr ""
+msgstr "Novietojums"
 
 #: contents/configuration/PanelConfiguration.qml:152
 #: contents/configuration/PanelConfiguration.qml:267
@@ -306,15 +306,13 @@ msgstr "Apakša"
 
 #: contents/configuration/PanelConfiguration.qml:175
 #, fuzzy
-#| msgid "More Options…"
+#| msgid "Set Position..."
 msgid "Set Position…"
-msgstr "Vairāk iespēju..."
+msgstr "Mainīt novietojumu..."
 
 #: contents/configuration/PanelConfiguration.qml:202
-#, fuzzy
-#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "Novietojums:"
+msgstr "Līdzinājums"
 
 #: contents/configuration/PanelConfiguration.qml:268
 msgid "Center"
@@ -322,116 +320,92 @@ msgstr "Centrs"
 
 #: contents/configuration/PanelConfiguration.qml:291
 msgid "Length"
-msgstr ""
+msgstr "Garums"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Paneļa augstums:"
+msgstr "Piepildīt augstumu"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Paneļa platums:"
+msgstr "Piepildīt platumu"
 
 #: contents/configuration/PanelConfiguration.qml:311
 msgid "Fit content"
-msgstr ""
+msgstr "Piepildīt pēc satura"
 
 #: contents/configuration/PanelConfiguration.qml:312
 msgid "Custom"
-msgstr ""
+msgstr "Pielāgots"
 
 #: contents/configuration/PanelConfiguration.qml:338
-#, fuzzy
-#| msgid "Visibility:"
 msgid "Visibility"
-msgstr "Redzamība:"
+msgstr "Redzamība"
 
 #: contents/configuration/PanelConfiguration.qml:351
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Vienmēr redzams"
 
 #: contents/configuration/PanelConfiguration.qml:352
-#, fuzzy
-#| msgid "Auto-Hide"
 msgid "Auto hide"
 msgstr "Automātiski paslēpt"
 
 #: contents/configuration/PanelConfiguration.qml:353
 msgid "Dodge windows"
-msgstr ""
+msgstr "Izvairīties no logiem"
 
 #: contents/configuration/PanelConfiguration.qml:354
 msgid "Windows Go Below"
-msgstr ""
+msgstr "Logi paslīd zem"
 
 #: contents/configuration/PanelConfiguration.qml:397
-#, fuzzy
-#| msgid "Opacity:"
 msgid "Opacity"
-msgstr "Caurspīdīgums:"
+msgstr "Caurspīdīgums"
 
 #: contents/configuration/PanelConfiguration.qml:411
 msgid "Adaptive"
 msgstr "Pielāgojas"
 
 #: contents/configuration/PanelConfiguration.qml:412
-#, fuzzy
-#| msgid "Always Opaque"
 msgid "Opaque"
-msgstr "Vienmēr necaurspīdīgs"
+msgstr "Necaurspīdīgs"
 
 #: contents/configuration/PanelConfiguration.qml:413
-#, fuzzy
-#| msgid "Always Translucent"
 msgid "Translucent"
-msgstr "Vienmēr caurspīdīgs"
+msgstr "Caurspīdīgs"
 
 #: contents/configuration/PanelConfiguration.qml:437
 msgid "Style"
-msgstr ""
+msgstr "Stils"
 
 #: contents/configuration/PanelConfiguration.qml:449
 msgid "Floating"
 msgstr "Peldošs"
 
 #: contents/configuration/PanelConfiguration.qml:523
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Paneļa platums:"
 
 #: contents/configuration/PanelConfiguration.qml:523
-#, fuzzy
-#| msgid "Right"
 msgid "Height:"
-msgstr "Labā puse"
+msgstr "Augstums:"
 
 #: contents/configuration/PanelConfiguration.qml:558
-#, fuzzy
-#| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
-msgstr "Saīsne fokusam:"
+msgstr "Fokusa saīsne:"
 
 #: contents/configuration/PanelConfiguration.qml:569
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Nospiest tastatūras saīsni, lai fokusu pārvietotu uz paneli"
 
 #: contents/configuration/PanelConfiguration.qml:585
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "Noņemt paneli"
+msgstr "Dzēst paneli"
 
 #: contents/configuration/PanelConfiguration.qml:588
 msgid "Remove this panel; this action is undo-able"
-msgstr "Noņemt paneli. Šo darbību ir iespējams atsaukt"
+msgstr "Noņem paneli. Šo darbību ir iespējams atsaukt"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -478,11 +452,11 @@ msgstr "Aizvērt"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
-msgstr "Samainīt vietām ar ekrānā %1 redzamo darbvirsmu"
+msgstr "Samainīt vietām ar „%1“ ekrānā redzamo darbvirsmu"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
-msgstr "Pārvietot uz ekrānu %1"
+msgstr "Pārvietot uz „%1“ ekrānu"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 msgid "Remove Desktop"
@@ -502,7 +476,7 @@ msgstr "Alternatīvas logdaļas"
 
 #: contents/explorer/AppletDelegate.qml:41
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Neatbalstīta logdaļa"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
@@ -619,6 +593,9 @@ msgstr "Nav pieejamu logdaļu"
 
 #~ msgid "Panel is attached to its screen edge"
 #~ msgstr "Panelis ir piestiprināts ekrāna malai"
+
+#~ msgid "More Options…"
+#~ msgstr "Vairāk iespēju..."
 
 #~ msgctxt "Minimize the length of this string as much as possible"
 #~ msgid "Drag to move"
