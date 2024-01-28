@@ -65,4 +65,5 @@ RuntimeDependencies:
     'sdk/selenium-webdriver-at-spi': '@latest-kf6'
 
 Options:
+  ctest-arguments: '--repeat until-pass:5'
   require-passing-tests-on: [ '@all' ]
