@@ -234,8 +234,8 @@ ContainmentItem {
                 Layout.fillHeight: true
                 property bool wantsToFillWidth: applet?.Layout.fillWidth
                 property bool wantsToFillHeight: applet?.Layout.fillHeight
-                property bool wantsToFillSpace: [wantsToFillHeight, wantsToFillWidth]
-                onWantsToFillSpaceChanged: checkLastSpacer()
+                onWantsToFillWidthChanged: checkLastSpacer()
+                onWantsToFillHeightChanged: checkLastSpacer()
 
                 property int availWidth: root.width - Layout.leftMargin - Layout.rightMargin
                 property int availHeight: root.height - Layout.topMargin - Layout.bottomMargin
