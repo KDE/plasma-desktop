@@ -208,6 +208,15 @@ PC3.Page {
         }
     }
 
+    footer: PlasmaExtras.PlasmoidHeading {
+        position: PC3.ToolBar.Footer
+        visible: pendingUninstallTimer.applets.length > 0
+        contentItem: PC3.Button {
+            text: i18ndp("plasma_shell_org.kde.plasma.desktop", "Confirm Removal Of One Widget", "Confirm Removal Of %1 Widgets", pendingUninstallTimer.applets.length)
+            onClicked: pendingUninstallTimer.uninstall()
+        }
+    }
+
     Timer {
         id: setModelTimer
         interval: 20
