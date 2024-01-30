@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-01-30 00:38+0000\n"
 "PO-Revision-Date: 2023-12-17 23:25+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -517,10 +517,15 @@ msgstr "新しいウィジェットを入手..."
 msgid "Categories"
 msgstr "カテゴリ"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:215
+msgid "Confirm Removal Of One Widget"
+msgid_plural "Confirm Removal Of %1 Widgets"
+msgstr[0] ""
+
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
 msgstr "検索語に一致するウィジェットはありません"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "利用可能なウィジェットはありません"

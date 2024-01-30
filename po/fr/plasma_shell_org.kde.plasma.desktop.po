@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-01-30 00:38+0000\n"
 "PO-Revision-Date: 2023-11-24 14:18+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: \n"
@@ -530,11 +530,17 @@ msgstr "Plus de composants graphiques…"
 msgid "Categories"
 msgstr "Catégories"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:215
+msgid "Confirm Removal Of One Widget"
+msgid_plural "Confirm Removal Of %1 Widgets"
+msgstr[0] ""
+msgstr[1] ""
+
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
 msgstr "Aucun composant graphique ne correspond aux mots clés de la recherche"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "Aucun composant graphique disponible"
 

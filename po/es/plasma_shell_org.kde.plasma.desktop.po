@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-01-30 00:38+0000\n"
 "PO-Revision-Date: 2024-01-25 02:29+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -520,11 +520,17 @@ msgstr "Obtener nuevos elementos gráficos..."
 msgid "Categories"
 msgstr "Categorías"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:215
+msgid "Confirm Removal Of One Widget"
+msgid_plural "Confirm Removal Of %1 Widgets"
+msgstr[0] ""
+msgstr[1] ""
+
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
 msgstr "Ningún widget satisface la búsqueda"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "Ningún widget disponible"
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-01-30 00:38+0000\n"
 "PO-Revision-Date: 2024-01-26 17:10+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -512,11 +512,16 @@ msgstr "取得新元件…"
 msgid "Categories"
 msgstr "類別"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:215
+msgid "Confirm Removal Of One Widget"
+msgid_plural "Confirm Removal Of %1 Widgets"
+msgstr[0] ""
+
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
 msgstr "沒有元件符合搜尋字詞"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "沒有可用元件"
 

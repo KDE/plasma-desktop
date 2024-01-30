@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-01-30 00:38+0000\n"
 "PO-Revision-Date: 2024-01-23 18:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -514,11 +514,17 @@ msgstr "Yeni Araç Takımları Al…"
 msgid "Categories"
 msgstr "Kategoriler"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:215
+msgid "Confirm Removal Of One Widget"
+msgid_plural "Confirm Removal Of %1 Widgets"
+msgstr[0] ""
+msgstr[1] ""
+
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
 msgstr "Aranan terimler ile eşleşen araç takımı bulunamadı"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "Kullanılabilir araç takımı yok"
 

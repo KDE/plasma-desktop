@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2020, 2021, 2022, 2023 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2020, 2021, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 # Paolo Zamponi <feus73@gmail.com>, 2018, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
-"PO-Revision-Date: 2023-11-23 14:12+0100\n"
+"POT-Creation-Date: 2024-01-30 00:38+0000\n"
+"PO-Revision-Date: 2024-01-24 10:28+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -312,10 +312,8 @@ msgid "Bottom"
 msgstr "Basso"
 
 #: contents/configuration/PanelConfiguration.qml:175
-#, fuzzy
-#| msgid "Set Position..."
 msgid "Set Position…"
-msgstr "Imposta la posizione..."
+msgstr "Imposta la posizione…"
 
 #: contents/configuration/PanelConfiguration.qml:202
 msgid "Alignment"
@@ -522,11 +520,17 @@ msgstr "Ottieni nuovi oggetti..."
 msgid "Categories"
 msgstr "Categorie"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:215
+msgid "Confirm Removal Of One Widget"
+msgid_plural "Confirm Removal Of %1 Widgets"
+msgstr[0] ""
+msgstr[1] ""
+
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
 msgstr "Nessun oggetto ha verificato i termini di ricerca"
 
-#: contents/explorer/WidgetExplorer.qml:286
+#: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "Nessun oggetto disponibile"
 
