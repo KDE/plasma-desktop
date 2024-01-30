@@ -287,7 +287,7 @@ FocusScope {
                     currentIndex = -1;
                 }
 
-                Keys.onLeftPressed: {
+                Keys.onLeftPressed: event => {
                     if (itemGrid.currentCol() !== 0) {
                         event.accepted = true;
                         moveCurrentIndexLeft();
@@ -296,7 +296,7 @@ FocusScope {
                     }
                 }
 
-                Keys.onRightPressed: {
+                Keys.onRightPressed: event => {
                     var columns = Math.floor(width / cellWidth);
 
                     if (itemGrid.currentCol() !== columns - 1 && currentIndex !== count -1) {
@@ -307,7 +307,7 @@ FocusScope {
                     }
                 }
 
-                Keys.onUpPressed: {
+                Keys.onUpPressed: event => {
                     if (itemGrid.currentRow() !== 0) {
                         event.accepted = true;
                         moveCurrentIndexUp();
@@ -317,7 +317,7 @@ FocusScope {
                     }
                 }
 
-                Keys.onDownPressed: {
+                Keys.onDownPressed: event => {
                     if (itemGrid.currentRow() < itemGrid.lastRow()) {
                         // Fix moveCurrentIndexDown()'s lack of proper spatial nav down
                         // into partial columns.
@@ -331,7 +331,7 @@ FocusScope {
                     }
                 }
 
-                onItemContainsMouseChanged: {
+                onItemContainsMouseChanged: containsMouse => {
                     if (!containsMouse) {
                         if (!actionMenu.opened) {
                             gridView.currentIndex = -1;
