@@ -249,6 +249,24 @@ PlasmoidItem {
             onTriggered: kickoff.expanded = true
         }
 
+        Kicker.ContainmentInterface {
+            id: containmentInterface
+        }
+
+        Timer {
+            id: resizeTimer
+            interval: 500
+            repeat: true
+            running: true
+            onTriggered: {
+                var w = containmentInterface.getIconItemSize(kickoff);
+                if (w > 0) {
+                    w -= 12; // compensate for margins
+                    compactRoot.Layout.preferredWidth = w;
+                }
+            }
+        }
+
         RowLayout {
             id: iconLabelRow
             anchors.fill: parent

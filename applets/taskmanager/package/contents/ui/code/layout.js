@@ -233,4 +233,8 @@ function layout(container) {
         item.height = height;
         item.visible = true;
     }
+
+    if (tasks.iconsOnly) {
+        tasks.iconItemSize = width;
+    }
 }

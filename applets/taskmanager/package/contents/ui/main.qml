@@ -535,6 +535,13 @@ PlasmoidItem {
         return contextMenuComponent.createObject(rootTask, initialArgs);
     }
 
+    property int iconItemSize : -1;
+
+    function getIconItemSize() {
+        //print("getIconItemSize", tasks.iconItemSize);
+        return tasks.iconItemSize;
+    }
+
     Component.onCompleted: {
         TaskTools.taskManagerInstanceCount += 1;
         tasks.requestLayout.connect(layoutTimer.restart);
