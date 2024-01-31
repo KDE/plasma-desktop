@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-03 01:37+0000\n"
-"PO-Revision-Date: 2023-03-13 22:22+0200\n"
+"PO-Revision-Date: 2023-11-19 20:53+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -50,10 +50,9 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "Vaihda seuraavaan näppäinasetteluun"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Vaihda seuraavaan näppäinasetteluun"
+msgstr "Vaihda viimeksi käytettyyn näppäimistöasetteluun"
 
 # Lainausmerkit auttavat, koska %1 alkaa isolla alkukirjaimella (esim. ”Venäläinen”)
 #: bindings.cpp:60
@@ -254,10 +253,9 @@ msgstr ""
 # Id on outo: näppäin, jolla vaihdetaan näppäimistöasettelua (oletuksena Ctrl-Alt-K)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:249
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "Asettelunvaihtonäppäin:"
+msgstr "Viimeksi käytetty pikanäppäin:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:262
@@ -266,6 +264,8 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
+"Tämä pikanäppäin sallii nopean vaihdon kahden asettelun välillä vaihtamalla "
+"aina viimeksi käytettyyn."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:287
