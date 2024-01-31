@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2023-06-27 15:54+0300\n"
+"PO-Revision-Date: 2023-11-19 20:52+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -184,22 +184,21 @@ msgstr ""
 "helpompi käyttää kosketuksella."
 
 #: ui/main.qml:334
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double-click interval:"
-msgstr "Avaaminen tapahtuu kaksoisnapsautuksella"
+msgstr "Kaksoisnapsautusväli:"
 
 #: ui/main.qml:349
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/main.qml:353
 #, kde-format
 msgid "msec"
-msgstr ""
+msgstr "ms"
 
 #: ui/main.qml:367
 #, kde-format
@@ -207,6 +206,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"Tämän keston sisällä kaksi napsautusta tulkitaan kaksoisnapsautukseksi. "
+"Kaikki sovellukset eivät ehkä noudata asetusta."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -228,10 +229,9 @@ msgstr "Vierityspalkin napsauttaminen siirtää näytön verran annettuun suunta
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgid "Double click interval"
-msgstr "Avaaminen tapahtuu kaksoisnapsautuksella"
+msgstr "Kaksoisnapsautusväli"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

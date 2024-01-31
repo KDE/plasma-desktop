@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2016, 2017, 2022.
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2022, 2024 Lasse Liehu <lasse.liehu@gmail.com>
 # Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 #
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:38+0000\n"
-"PO-Revision-Date: 2023-05-28 16:55+0300\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2024-01-31 01:09+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -235,7 +235,8 @@ msgstr "Hae uusia liitännäisiä…"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:189
 msgid "Layout changes must be applied before other changes can be made"
-msgstr "Asettelumuutoksia täytyy käyttää ennen muiden muutosten tekemistä"
+msgstr ""
+"Asettelut on otettava käyttöön ennen kuin muita muutoksia voidaan tehdä"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:193
 msgid "Apply Now"
@@ -271,7 +272,7 @@ msgstr "Lisää erotin"
 
 #: contents/configuration/PanelConfiguration.qml:108
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Lisää välilevy paneeliin"
 
 #: contents/configuration/PanelConfiguration.qml:115
 msgid "Add Widgets…"
@@ -279,11 +280,11 @@ msgstr "Lisää sovelmia…"
 
 #: contents/configuration/PanelConfiguration.qml:118
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "Avaa sovelmat valikoima, vedä ja pudota sovelmat paneeliin"
 
 #: contents/configuration/PanelConfiguration.qml:147
 msgid "Position"
-msgstr ""
+msgstr "Sijainti"
 
 #: contents/configuration/PanelConfiguration.qml:152
 #: contents/configuration/PanelConfiguration.qml:267
@@ -306,16 +307,12 @@ msgid "Bottom"
 msgstr "Alhaalla"
 
 #: contents/configuration/PanelConfiguration.qml:175
-#, fuzzy
-#| msgid "More Options…"
 msgid "Set Position…"
-msgstr "Lisää valintoja…"
+msgstr "Aseta sijainti…"
 
 #: contents/configuration/PanelConfiguration.qml:202
-#, fuzzy
-#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "Tasaus:"
+msgstr "Tasaus"
 
 #: contents/configuration/PanelConfiguration.qml:268
 msgid "Center"
@@ -323,111 +320,85 @@ msgstr "Keskellä"
 
 #: contents/configuration/PanelConfiguration.qml:291
 msgid "Length"
-msgstr ""
+msgstr "Pituus"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Paneelin korkeus:"
+msgstr "Koko korkeuteen"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Paneelin leveys:"
+msgstr "Koko leveyteen"
 
 #: contents/configuration/PanelConfiguration.qml:311
 msgid "Fit content"
-msgstr ""
+msgstr "Sovita keskelle"
 
 #: contents/configuration/PanelConfiguration.qml:312
 msgid "Custom"
-msgstr ""
+msgstr "Mukautettu"
 
 #: contents/configuration/PanelConfiguration.qml:338
-#, fuzzy
-#| msgid "Visibility:"
 msgid "Visibility"
-msgstr "Näkyvyys:"
+msgstr "Näkyvyys"
 
 #: contents/configuration/PanelConfiguration.qml:351
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Aina näkyvissä"
 
 #: contents/configuration/PanelConfiguration.qml:352
-#, fuzzy
-#| msgid "Auto-Hide"
 msgid "Auto hide"
 msgstr "Piilota automaattisesti"
 
 #: contents/configuration/PanelConfiguration.qml:353
 msgid "Dodge windows"
-msgstr ""
+msgstr "Välttele ikkunoita"
 
 #: contents/configuration/PanelConfiguration.qml:354
-#, fuzzy
-#| msgid "Windows Go Below"
 msgid "Windows Go Below"
-msgstr "Ikkunat jäävät alle"
+msgstr "Ikkunat menevät alle"
 
 #: contents/configuration/PanelConfiguration.qml:397
-#, fuzzy
-#| msgid "Opacity:"
 msgid "Opacity"
-msgstr "Peittävyys:"
+msgstr "Peittävyys"
 
 #: contents/configuration/PanelConfiguration.qml:411
 msgid "Adaptive"
 msgstr "Mukautuva"
 
 #: contents/configuration/PanelConfiguration.qml:412
-#, fuzzy
-#| msgid "Always Opaque"
 msgid "Opaque"
 msgstr "Aina peittävä"
 
 #: contents/configuration/PanelConfiguration.qml:413
-#, fuzzy
-#| msgid "Always Translucent"
 msgid "Translucent"
-msgstr "Aina läpikuultava"
+msgstr "Läpikuultava"
 
 #: contents/configuration/PanelConfiguration.qml:437
 msgid "Style"
-msgstr ""
+msgstr "Tyyli"
 
 #: contents/configuration/PanelConfiguration.qml:449
 msgid "Floating"
 msgstr "Kelluva"
 
 #: contents/configuration/PanelConfiguration.qml:523
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Paneelin leveys:"
 
 #: contents/configuration/PanelConfiguration.qml:523
-#, fuzzy
-#| msgid "Height"
 msgid "Height:"
-msgstr "Korkeus"
+msgstr "Korkeus:"
 
 #: contents/configuration/PanelConfiguration.qml:558
-#, fuzzy
-#| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
-msgstr "Kohdistuspikanäppäin:"
+msgstr "Kohdistuksen pikanäppäin:"
 
 #: contents/configuration/PanelConfiguration.qml:569
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr "Siirrä kohdistus paneeliin tällä pikanäppäimellä"
+msgstr "Siirrä kohdistus paneeliin painamalla tätä pikanäppäintä"
 
 #: contents/configuration/PanelConfiguration.qml:585
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Poista paneeli"
@@ -471,7 +442,7 @@ msgstr "Paneeli- ja työpöytähallinta"
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
-msgstr "Paneelit ja työpöydät voi vetämällä siirtää eri näytöille."
+msgstr "Paneelit ja työpöydät voi siirtää vetämällä eri näytöille."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
 msgid "Close"
@@ -503,7 +474,7 @@ msgstr "Vaihtoehtoiset sovelmat"
 
 #: contents/explorer/AppletDelegate.qml:41
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Sovelmat joita ei tueta"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
@@ -545,12 +516,12 @@ msgstr "Luokat"
 #: contents/explorer/WidgetExplorer.qml:215
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Vahvista yhden sovelman poisto"
+msgstr[1] "Vahvista %1 sovelman poisto"
 
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
-msgstr "Ei hakuehtoja vastaavia sovelmia"
+msgstr "Ei hakua vastaavia sovelmia"
 
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:38+0000\n"
-"PO-Revision-Date: 2023-03-04 18:29+0200\n"
+"PO-Revision-Date: 2023-11-19 20:51+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -106,10 +106,9 @@ msgid "Commands"
 msgstr "Komennot"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "System Services"
-msgstr "Järjestelmäasetukset"
+msgstr "Järjestelmäpalvelut"
 
 #: ui/main.qml:27
 #, kde-format
@@ -117,25 +116,22 @@ msgid "Common Actions"
 msgstr "Yleiset toiminnot"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action: button Import shortcut scheme"
 msgid "Import…"
-msgstr "Tuo"
+msgstr "Tuo…"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Cancel Export"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
 msgstr "Peru vienti"
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr "Vie teema…"
+msgstr "Vie…"
 
 #: ui/main.qml:75
 #, kde-format
@@ -149,8 +145,7 @@ msgid ""
 msgstr "Valitse alta osat, joiden tulisi sisältyä vietävään teemaan"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid "Save scheme"
+#, kde-format
 msgctxt "@action:button Save shortcut scheme"
 msgid "Save Scheme"
 msgstr "Tallenna teema"
@@ -159,21 +154,19 @@ msgstr "Tallenna teema"
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
-msgstr ""
+msgstr "Lisää uusi"
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep translated text as short as possible"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr "Lisää sovellus…"
+msgstr "Sovellus…"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr ""
+msgstr "Komento tai skripti…"
 
 #: ui/main.qml:223
 #, kde-format
