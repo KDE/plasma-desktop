@@ -826,7 +826,7 @@ Kicker.DashboardWindow {
                             }
 
                             onAboutToShowActionMenu: {
-                                var actionList = hasActionList ? model.actionList : [];
+                                var actionList = hasActionList ? ListView.view.model.actionList(index) : [];
                                 Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
                             }
 

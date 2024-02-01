@@ -27,7 +27,7 @@ Item {
     property int itemIndex: model.index
 
     onAboutToShowActionMenu: actionMenu => {
-        const actionList = (model.hasActionList !== null) ? model.actionList : [];
+        const actionList = (model.hasActionList !== null) ? repeater.model.actionList(index) : [];
         Tools.fillActionMenu(i18n, actionMenu, actionList, repeater.model, model.favoriteId);
     }
 
