@@ -104,7 +104,8 @@ BasePage {
                 objectName: "applicationsListView"
                 mainContentView: true
                 model: stackView.appsModel
-                section.property: model && model.description === "KICKER_ALL_MODEL" ? "group" : ""
+                // we want to semantically switch between group and "", disabling grouping, workaround for QTBUG-121797
+                section.property: model && model.description === "KICKER_ALL_MODEL" ? "group" : "_unset"
                 section.criteria: ViewSection.FirstCharacter
                 hasSectionView: stackView.appsModelRow === 1
 
