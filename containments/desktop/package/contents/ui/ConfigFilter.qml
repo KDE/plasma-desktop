@@ -28,9 +28,7 @@ ColumnLayout {
             id: mimeTypesModel
         }
 
-        // SortFilterModel doesn't have a case-sensitivity option
-        // but filterRegExp always causes case-insensitive sorting.
-        filterRegularExpression: RegExp(mimeFilter.text)
+        filterRegularExpression: RegExp(mimeFilter.text, "i")
         filterRoleName: "name"
 
         sortRoleName: "name"
