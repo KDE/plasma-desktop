@@ -146,12 +146,13 @@ ColumnLayout {
                 delegate: ItemDelegate {
                     id: delegate
                     width: mimeTypesView.width
-                    height: Kirigami.Units.iconSizes.small + padding * 2
                     required property string name
                     required property string comment
                     required property var decoration
 
                     contentItem: RowLayout {
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
                         RowLayout {
                             Layout.preferredWidth: mimeTypesView.columnSize
                             Layout.maximumWidth: mimeTypesView.columnSize
