@@ -95,7 +95,6 @@ class Bug477220Test(unittest.TestCase):
                 continue
         self.assertTrue(success)
 
-    @unittest.expectedFailure  # get_screenshot_as_file is broken in the CI
     def test_2_bug477220_open_context_menu(self) -> None:
         """
         "More" button in the desktop toolbox does not open the context menu
