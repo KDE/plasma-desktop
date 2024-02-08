@@ -288,6 +288,7 @@ if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
     add_subdirectory(kaccess)
 endif()
 install(FILES org.kde.plasmashell.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+install(FILES kde-mimeapps.list DESTINATION ${KDE_INSTALL_APPDIR})
 
 # add clang-format target for all our real source files
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
