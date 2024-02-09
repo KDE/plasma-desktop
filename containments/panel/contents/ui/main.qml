@@ -38,8 +38,6 @@ ContainmentItem {
     property bool hasSpacer
     // True when a widget is being drag and dropped within the panel.
     property bool dragAndDropping: false
-    // True when e.g. the task manager is drag and dropping tasks.
-    property bool appletRequestsInhibitDnD: false
 
 //END properties
 
@@ -155,7 +153,7 @@ ContainmentItem {
         }
 
         onDragEnter: event => {
-            if (Plasmoid.immutable || root.appletRequestsInhibitDnD) {
+            if (Plasmoid.immutable) {
                 event.ignore();
                 return;
             }
