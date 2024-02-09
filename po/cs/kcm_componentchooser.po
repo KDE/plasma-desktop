@@ -90,11 +90,9 @@ msgid "Details"
 msgstr "Podrobnosti"
 
 #: ui/ComponentOverlay.qml:83
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid "This application can also open these file types:"
-msgstr "Tato aplikace nehlásí podporu následujících typů souborů:"
+msgstr ""
 
 #: ui/ComponentOverlay.qml:97
 #, kde-format
@@ -109,21 +107,17 @@ msgid "Open All in %1"
 msgstr ""
 
 #: ui/ComponentOverlay.qml:129
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
-msgstr "Tato aplikace nehlásí podporu následujících typů souborů:"
+msgstr ""
 
 #: ui/ComponentOverlay.qml:146
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Force Open Anyway"
+#, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr "Vynutit otevření i tak"
+msgstr ""
 
 #: ui/ComponentOverlay.qml:158
 #, kde-format
@@ -224,19 +218,3 @@ msgstr "Správce archivů:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapa:"
-
-#~ msgid ""
-#~ "The following file types are still associated with a different "
-#~ "application:"
-#~ msgstr "Následující typy souborů jsou stále přiřazené jiné aplikaci:"
-
-#~ msgctxt "@label %1 is a MIME type and %2 is an application name"
-#~ msgid "%1 associated with %2"
-#~ msgstr "%1 přiřazená k %2"
-
-#~ msgctxt "@action:button %1 is an application name"
-#~ msgid "Re-assign-all to %1"
-#~ msgstr "Přiřadit vše k %1"
-
-#~ msgid "Change file type association manually"
-#~ msgstr "Ručně změnit asociaci typu souboru"
