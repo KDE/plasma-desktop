@@ -1,7 +1,7 @@
 # Translation of plasma_applet_tasks to Korean.
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2019, 2021.
 # 김태경 <kim@taekyeong.me>, 2022.
 #
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-22 03:07+0000\n"
-"PO-Revision-Date: 2023-03-01 00:37+0100\n"
+"PO-Revision-Date: 2024-02-09 19:26+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -95,12 +95,12 @@ msgstr "패널의 빈 공간 채우기"
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum columns:"
-msgstr "최대 행 개수:"
+msgstr "최대 열 개수:"
 
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum rows:"
-msgstr "최대 열 개수:"
+msgstr "최대 행 개수:"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
@@ -239,7 +239,7 @@ msgstr "활동별로"
 #: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgid "Keep launchers separate"
-msgstr "실행기 분리하기"
+msgstr "실행기 분리 유지"
 
 #: package/contents/ui/ConfigBehavior.qml:121
 #, kde-format
@@ -256,7 +256,7 @@ msgstr "작업 최소화"
 #: package/contents/ui/ConfigBehavior.qml:127
 #, kde-format
 msgid "Middle-clicking any task:"
-msgstr "활성 작업 가운데 단추 클릭 시:"
+msgstr "임의의 작업 가운데 단추 클릭 시:"
 
 #: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
