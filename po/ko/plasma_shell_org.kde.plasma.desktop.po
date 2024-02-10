@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:38+0000\n"
-"PO-Revision-Date: 2023-07-25 23:20+0200\n"
+"PO-Revision-Date: 2024-02-09 19:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -270,7 +270,7 @@ msgstr "공백 추가"
 
 #: contents/configuration/PanelConfiguration.qml:108
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "패널에 공백 위젯 추가"
 
 #: contents/configuration/PanelConfiguration.qml:115
 msgid "Add Widgets…"
@@ -278,11 +278,11 @@ msgstr "위젯 추가…"
 
 #: contents/configuration/PanelConfiguration.qml:118
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "패널로 위젯을 드래그 앤 드롭할 수 있는 위젯 선택기 열기"
 
 #: contents/configuration/PanelConfiguration.qml:147
 msgid "Position"
-msgstr ""
+msgstr "위치"
 
 #: contents/configuration/PanelConfiguration.qml:152
 #: contents/configuration/PanelConfiguration.qml:267
@@ -305,16 +305,12 @@ msgid "Bottom"
 msgstr "아래"
 
 #: contents/configuration/PanelConfiguration.qml:175
-#, fuzzy
-#| msgid "More Options…"
 msgid "Set Position…"
-msgstr "옵션 더 보기…"
+msgstr "위치 설정…"
 
 #: contents/configuration/PanelConfiguration.qml:202
-#, fuzzy
-#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "정렬:"
+msgstr "정렬"
 
 #: contents/configuration/PanelConfiguration.qml:268
 msgid "Center"
@@ -322,47 +318,39 @@ msgstr "가운데"
 
 #: contents/configuration/PanelConfiguration.qml:291
 msgid "Length"
-msgstr ""
+msgstr "길이"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "패널 높이:"
+msgstr "높이 채우기"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "패널 너비:"
+msgstr "너비 채우기"
 
 #: contents/configuration/PanelConfiguration.qml:311
 msgid "Fit content"
-msgstr ""
+msgstr "내용에 맞춤"
 
 #: contents/configuration/PanelConfiguration.qml:312
 msgid "Custom"
-msgstr ""
+msgstr "사용자 정의"
 
 #: contents/configuration/PanelConfiguration.qml:338
 msgid "Visibility"
 msgstr "표시 여부"
 
 #: contents/configuration/PanelConfiguration.qml:351
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
 msgstr "항상 표시"
 
 #: contents/configuration/PanelConfiguration.qml:352
-#, fuzzy
-#| msgid "Auto-Hide"
 msgid "Auto hide"
 msgstr "자동 숨기기"
 
 #: contents/configuration/PanelConfiguration.qml:353
 msgid "Dodge windows"
-msgstr ""
+msgstr "창이 있을 때 숨기기"
 
 #: contents/configuration/PanelConfiguration.qml:354
 msgid "Windows Go Below"
@@ -386,27 +374,21 @@ msgstr "반투명"
 
 #: contents/configuration/PanelConfiguration.qml:437
 msgid "Style"
-msgstr ""
+msgstr "스타일"
 
 #: contents/configuration/PanelConfiguration.qml:449
 msgid "Floating"
 msgstr "떠다님"
 
 #: contents/configuration/PanelConfiguration.qml:523
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "패널 너비:"
 
 #: contents/configuration/PanelConfiguration.qml:523
-#, fuzzy
-#| msgid "Height"
 msgid "Height:"
-msgstr "높이"
+msgstr "높이:"
 
 #: contents/configuration/PanelConfiguration.qml:558
-#, fuzzy
-#| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
 msgstr "포커스 단축키:"
 
@@ -415,8 +397,6 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "패널에 포커스를 맞추려면 이 키보드 단축키를 누르십시오"
 
 #: contents/configuration/PanelConfiguration.qml:585
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "패널 삭제"
@@ -493,7 +473,7 @@ msgstr "대안 위젯"
 
 #: contents/explorer/AppletDelegate.qml:41
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "지원하지 않는 위젯"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
@@ -535,7 +515,7 @@ msgstr "분류"
 #: contents/explorer/WidgetExplorer.qml:215
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
+msgstr[0] "위젯 %1개 삭제 확인"
 
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
