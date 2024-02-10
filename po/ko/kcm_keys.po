@@ -1,6 +1,6 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Shinjo Park <kde@peremen.name>, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-26 02:28+0000\n"
-"PO-Revision-Date: 2023-03-01 00:27+0100\n"
+"PO-Revision-Date: 2024-02-09 19:22+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -117,25 +117,22 @@ msgid "Common Actions"
 msgstr "공통 동작"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action: button Import shortcut scheme"
 msgid "Import…"
-msgstr "가져오기"
+msgstr "가져오기…"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Cancel Export"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
 msgstr "내보내기 취소"
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr "구성표 내보내기…"
+msgstr "내보내기…"
 
 #: ui/main.qml:75
 #, kde-format
@@ -149,8 +146,7 @@ msgid ""
 msgstr "내보낼 구성표에 포함할 구성 요소 선택"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid "Save scheme"
+#, kde-format
 msgctxt "@action:button Save shortcut scheme"
 msgid "Save Scheme"
 msgstr "구성표 저장"
@@ -159,21 +155,19 @@ msgstr "구성표 저장"
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
-msgstr ""
+msgstr "추가: "
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep translated text as short as possible"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr "앱 추가…"
+msgstr "앱…"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr ""
+msgstr "명령이나 스크립트…"
 
 #: ui/main.qml:223
 #, kde-format

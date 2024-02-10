@@ -6,7 +6,7 @@
 # Hongsoo Byun <hsbyun@haansoft.com>, 2005.
 # Youngbin Park <shrike@nate.com>, 2005.
 # Sung-Jae, Cho <jachin@hanafos.com>, 2005.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2016, 2017, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2016, 2017, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-03-01 00:21+0100\n"
+"PO-Revision-Date: 2024-02-09 19:20+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
@@ -95,46 +95,41 @@ msgid "Details"
 msgstr "자세히"
 
 #: ui/ComponentOverlay.qml:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid "This application can also open these file types:"
-msgstr "이 앱은 다음 파일 형식을 지원하지 않습니다:"
+msgstr "이 앱은 다음 파일 형식도 열 수 있습니다:"
 
 #: ui/ComponentOverlay.qml:95
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1(현재 %2에서 열림)"
 
 #: ui/ComponentOverlay.qml:108
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "모두 %1에서 열기"
 
 #: ui/ComponentOverlay.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not advertise support for the following file types:"
+#, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
-msgstr "이 앱은 다음 파일 형식을 지원하지 않습니다:"
+msgstr ""
+"이 앱은 다음 파일 형식 지원을 지원한다는 것을 안내하지 않지만 그래도 열기를 "
+"시도해 볼 수 있습니다:"
 
 #: ui/ComponentOverlay.qml:143
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Force Open Anyway"
+#, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr "그래도 열기"
+msgstr "모두 %1에서 열기 강제"
 
 #: ui/ComponentOverlay.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Manually…"
-msgstr "설정"
+msgstr "수동 설정…"
 
 #: ui/main.qml:17
 #, kde-format
@@ -165,7 +160,7 @@ msgstr "이메일 클라이언트:"
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
-msgstr ""
+msgstr "전화번호:"
 
 #: ui/main.qml:116
 #, kde-format
