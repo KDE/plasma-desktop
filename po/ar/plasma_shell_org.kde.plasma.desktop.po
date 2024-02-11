@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:38+0000\n"
-"PO-Revision-Date: 2024-01-17 19:07+0400\n"
+"PO-Revision-Date: 2024-02-10 17:55+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -304,10 +304,8 @@ msgid "Bottom"
 msgstr "الأسفل"
 
 #: contents/configuration/PanelConfiguration.qml:175
-#, fuzzy
-#| msgid "Set Position..."
 msgid "Set Position…"
-msgstr "عين موضع..."
+msgstr "عين موضع…"
 
 #: contents/configuration/PanelConfiguration.qml:202
 msgid "Alignment"
@@ -466,7 +464,7 @@ msgstr "أزل اللوحة"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:268
 msgid "%1 (primary)"
-msgstr "‏%1 (أولي)"
+msgstr "‏%1 (أساسي)"
 
 #: contents/explorer/AppletAlternatives.qml:66
 msgid "Alternative Widgets"
@@ -516,12 +514,12 @@ msgstr "الفئات"
 #: contents/explorer/WidgetExplorer.qml:215
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "أكد حذف الودجة"
+msgstr[1] "أكد حذف ودجة واحدة"
+msgstr[2] "أكد حذف ودجتين"
+msgstr[3] "أكد حذف %1 ودجات"
+msgstr[4] "أكد حذف %1 ودجة"
+msgstr[5] "أكد حذف %1 ودجة"
 
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
