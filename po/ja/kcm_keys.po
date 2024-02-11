@@ -1,10 +1,11 @@
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-29 02:54+0000\n"
-"PO-Revision-Date: 2020-05-03 20:07-0700\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2024-02-09 22:38+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -13,29 +14,31 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: globalaccelmodel.cpp:202
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
-msgstr ""
+msgstr "ショートカット %1 の保存中にエラーが発生しました: %2"
 
 #: globalaccelmodel.cpp:314
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr ""
+"%1 の追加中にエラーが発生しました。アクションが設定されていないようです。"
 
 #: globalaccelmodel.cpp:357
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
-msgstr ""
+msgstr "グローバルショートカットサービスとのやり取り中にエラーが発生しました"
 
 #: kcm_keys.cpp:57
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
-msgstr ""
+msgstr "グローバルショートカットデーモンとのやり取りに失敗しました"
 
 #: kcm_keys.cpp:312
 #, kde-format
@@ -44,6 +47,8 @@ msgid ""
 "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
 "Do you want to reassign it?"
 msgstr ""
+"ショートカット %1 は既に共通アクション %2 の '%3' に割り当てられています。\n"
+"再割り当てしますか？"
 
 #: kcm_keys.cpp:316
 #, kde-format
@@ -51,185 +56,187 @@ msgid ""
 "Shortcut %1 is already assigned to action '%2' of %3.\n"
 "Do you want to reassign it?"
 msgstr ""
+"ショートカット %1 は既に %3 の '%2' に割り当てられています。\n"
+"再割り当てしますか？"
 
 #: kcm_keys.cpp:317
 #, kde-format
 msgctxt "@title:window"
 msgid "Found conflict"
-msgstr ""
+msgstr "競合が検出されました"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "アプリケーション"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "コマンド"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgid "System Settings"
-msgstr ""
+msgstr "システム設定"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Common Actions"
-msgstr ""
+msgstr "共通アクション"
 
 #: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
-msgstr ""
+msgstr "保存されていない変更があるため、スキームをエクスポートできません。"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
-msgstr ""
+msgstr "エクスポートされるスキームに含むコンポーネントを選択"
 
 #: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Save scheme"
-msgstr ""
+msgstr "スキームを保存"
 
 #: package/contents/ui/main.qml:168
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "%1 のコマンドを編集"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Remove all shortcuts for %1"
-msgstr ""
+msgstr "すべての %1 のショートカットを削除"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Undo deletion"
-msgstr ""
+msgstr "削除を取り消し"
 
 #: package/contents/ui/main.qml:246
 #, kde-format
 msgid "No items matched the search terms"
-msgstr ""
+msgstr "検索語に一致するアイテムはありません"
 
 #: package/contents/ui/main.qml:279
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
-msgstr ""
+msgstr "ショートカットを表示するためにリストからアイテムを選択"
 
 #: package/contents/ui/main.qml:304
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
-msgstr ""
+msgstr "アプリケーションを追加..."
 
 #: package/contents/ui/main.qml:314
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "コマンドを追加…"
 
 #: package/contents/ui/main.qml:333
 #, kde-format
 msgid "Import Scheme…"
-msgstr ""
+msgstr "スキームをインポート…"
 
 #: package/contents/ui/main.qml:338
 #, kde-format
 msgid "Cancel Export"
-msgstr ""
+msgstr "エクスポートをキャンセル"
 
 #: package/contents/ui/main.qml:338
 #, kde-format
 msgid "Export Scheme…"
-msgstr ""
+msgstr "スキームをエクスポート…"
 
 #: package/contents/ui/main.qml:358
 #, kde-format
 msgid "Export Shortcut Scheme"
-msgstr ""
+msgstr "ショートカットスキームをエクスポート"
 
 #: package/contents/ui/main.qml:358 package/contents/ui/main.qml:468
 #, kde-format
 msgid "Import Shortcut Scheme"
-msgstr ""
+msgstr "ショートカットスキームをインポート"
 
 #: package/contents/ui/main.qml:360
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
-msgstr ""
+msgstr "ショートカットスキーム (*.kksrc)"
 
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "コマンドを編集"
 
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "コマンドを追加"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "追加"
 
 #: package/contents/ui/main.qml:426
 #, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr ""
+msgstr "コマンドを入力もしくはスクリプトファイルを選択:"
 
 #: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "選択..."
 
 #: package/contents/ui/main.qml:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "スクリプトファイルを選択"
 
 #: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "スクリプトファイル (*.*sh)"
 
 #: package/contents/ui/main.qml:475
 #, kde-format
 msgid "Select the scheme to import:"
-msgstr ""
+msgstr "インポートするスキームを選択:"
 
 #: package/contents/ui/main.qml:489
 #, kde-format
 msgid "Custom Scheme"
-msgstr ""
+msgstr "カスタム"
 
 #: package/contents/ui/main.qml:494
 #, kde-format
 msgid "Select File…"
-msgstr ""
+msgstr "ファイルを選択…"
 
 #: package/contents/ui/main.qml:494
 #, kde-format
 msgid "Import"
-msgstr ""
+msgstr "インポート"
 
 #: package/contents/ui/ShortcutActionDelegate.qml:31
 #, kde-format
 msgid "Editing shortcut: %1"
-msgstr ""
+msgstr "ショートカットを編集中: %1"
 
 #: package/contents/ui/ShortcutActionDelegate.qml:43
 #, kde-format
@@ -237,81 +244,81 @@ msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
 "after :"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: package/contents/ui/ShortcutActionDelegate.qml:56
 #, kde-format
 msgid "No active shortcuts"
-msgstr ""
+msgstr "アクティブなショートカットはありません"
 
 #: package/contents/ui/ShortcutActionDelegate.qml:96
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
-msgstr[0] ""
+msgstr[0] "既定のショートカット"
 
 #: package/contents/ui/ShortcutActionDelegate.qml:98
 #, kde-format
 msgid "No default shortcuts"
-msgstr ""
+msgstr "既定のショートカットはありません"
 
 #: package/contents/ui/ShortcutActionDelegate.qml:106
 #, kde-format
 msgid "Default shortcut %1 is enabled."
-msgstr ""
+msgstr "既定のショートカット %1 が有効化されました。"
 
 #: package/contents/ui/ShortcutActionDelegate.qml:106
 #, kde-format
 msgid "Default shortcut %1 is disabled."
-msgstr ""
+msgstr "既定のショートカット %1 が無効化されました。"
 
 #: package/contents/ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "Custom shortcuts"
-msgstr ""
+msgstr "カスタムショートカット"
 
 #: package/contents/ui/ShortcutActionDelegate.qml:152
 #, kde-format
 msgid "Delete this shortcut"
-msgstr ""
+msgstr "このショートカットを削除"
 
 #: package/contents/ui/ShortcutActionDelegate.qml:158
 #, kde-format
 msgid "Add custom shortcut"
-msgstr ""
+msgstr "カスタムショートカットを追加"
 
 #: package/contents/ui/ShortcutActionDelegate.qml:193
 #, kde-format
 msgid "Cancel capturing of new shortcut"
-msgstr ""
+msgstr "新しいショートカットの設定を中止"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
 msgid "File"
-msgstr ""
+msgstr "ファイル"
 
 #: standardshortcutsmodel.cpp:35
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 #: standardshortcutsmodel.cpp:37
 #, kde-format
 msgid "Navigation"
-msgstr ""
+msgstr "ナビゲーション"
 
 #: standardshortcutsmodel.cpp:38
 #, kde-format
 msgid "View"
-msgstr ""
+msgstr "ビュー"
 
 #: standardshortcutsmodel.cpp:39
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: standardshortcutsmodel.cpp:40
 #, kde-format
 msgid "Help"
-msgstr ""
+msgstr "ヘルプ"

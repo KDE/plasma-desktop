@@ -1,14 +1,14 @@
 # Translation of plasma_applet_showdesktop into Japanese.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdeplasma-addons package.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2008.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-26 00:54+0000\n"
-"PO-Revision-Date: 2023-02-23 11:07+0900\n"
+"PO-Revision-Date: 2024-02-09 02:54+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -30,13 +30,13 @@ msgstr "すべての最小化されたウィンドウを復元する"
 #, kde-format
 msgctxt "@action:button"
 msgid "Minimize All Windows"
-msgstr "すべてのウィンドウを最小化する"
+msgstr "ウィンドウ最小化"
 
 #: package/contents/ui/MinimizeAllController.qml:20
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Restores the previously minimized windows"
-msgstr "前回最小化したウィンドウを復元する"
+msgstr "最小化したウィンドウを復元する"
 
 #: package/contents/ui/MinimizeAllController.qml:21
 #, kde-format
@@ -48,7 +48,7 @@ msgstr "すべてのウィンドウを最小化してデスクトップを表示
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
-msgstr "デスクトップを覗く"
+msgstr "ウィンドウを隠す"
 
 #: package/contents/ui/PeekController.qml:15
 #, kde-format
@@ -66,4 +66,4 @@ msgstr "ウィンドウを元の位置に戻す"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr "ウィンドウを一時的に移動させてデスクトップを表示"
+msgstr "ウィンドウを移動して一時的にデスクトップを表示"
