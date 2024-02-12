@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2022, 2023 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015, 2022.
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:38+0000\n"
-"PO-Revision-Date: 2023-12-17 23:25+0900\n"
+"PO-Revision-Date: 2024-02-08 15:20+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -308,10 +308,8 @@ msgid "Bottom"
 msgstr "下"
 
 #: contents/configuration/PanelConfiguration.qml:175
-#, fuzzy
-#| msgid "Set Position..."
 msgid "Set Position…"
-msgstr "位置を設定..."
+msgstr "設定..."
 
 #: contents/configuration/PanelConfiguration.qml:202
 msgid "Alignment"
@@ -520,7 +518,7 @@ msgstr "カテゴリ"
 #: contents/explorer/WidgetExplorer.qml:215
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
+msgstr[0] "%1 のウィジェットの削除を確認"
 
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
