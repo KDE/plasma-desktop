@@ -58,7 +58,7 @@ T.ItemDelegate {
     function openActionMenu(x = undefined, y = undefined) {
         if (!hasActionList) { return; }
 
-        let actions = model.actionList;
+        let actions = Array.from(model.actionList);
         const favoriteActions = Tools.createFavoriteActions(
             i18n, //i18n() function callback
             view.model.favoritesModel,
