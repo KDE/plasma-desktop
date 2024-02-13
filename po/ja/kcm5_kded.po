@@ -1,4 +1,5 @@
 # Translation of kcmkded into Japanese.
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Taiki Komoda <kom@kde.gr.jp>, 2004.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2008.
@@ -9,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-04 00:47+0000\n"
-"PO-Revision-Date: 2008-07-15 23:26+0900\n"
-"Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
+"PO-Revision-Date: 2024-02-12 18:24+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -24,24 +25,22 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Noboru Sinohara"
+msgstr "Noboru Sinohara, Ryuichi Yamada"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "shinobo@leo.bekkoame.ne.jp"
+msgstr "shinobo@leo.bekkoame.ne.jp, ryuichi_ya220@outlook.jp"
 
 #: kcmkded.cpp:48
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Background Services"
-msgstr "起動時に開始するサービス"
+msgstr "バックグラウンドサービス"
 
 #: kcmkded.cpp:52
-#, fuzzy, kde-format
-#| msgid "(c) 2002 Daniel Molkentin"
+#, kde-format
 msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-msgstr "(c) 2002 Daniel Molkentin"
+msgstr "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
 
 #: kcmkded.cpp:53
 #, kde-format
@@ -51,36 +50,33 @@ msgstr "Daniel Molkentin"
 #: kcmkded.cpp:54
 #, kde-format
 msgid "Kai Uwe Broulik"
-msgstr ""
+msgstr "Kai Uwe Broulik"
 
 #: kcmkded.cpp:125
-#, fuzzy, kde-format
-#| msgid "Unable to stop server <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service: %1"
-msgstr "サーバ <resource>%1</resource> を停止できません。"
+msgstr "サービスの停止に失敗しました: %1"
 
 #: kcmkded.cpp:127
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service: %1"
-msgstr "サーバ “%1” を起動できません。"
+msgstr "サービスの開始に失敗しました: %1"
 
 #: kcmkded.cpp:134
-#, fuzzy, kde-format
-#| msgid "Unable to stop server <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service."
-msgstr "サーバ <resource>%1</resource> を停止できません。"
+msgstr "サービスの停止に失敗しました:。"
 
 #: kcmkded.cpp:136
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service."
-msgstr "サーバ “%1” を起動できません。"
+msgstr "サービスの開始に失敗しました。"
 
 #: kcmkded.cpp:234
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
+"KDE サービスマネージャ (kded5) に保存された変更を通知できませんでした: %1"
 
 #: package/contents/ui/main.qml:19
 #, kde-format
@@ -94,6 +90,14 @@ msgid ""
 "vital for Plasma; do not deactivate services if you  do not know what you "
 "are doing.</b></p>"
 msgstr ""
+"<p>このモジュールで「KDE サービス」と呼ばれる KDE デーモンのすべてのプラグイ"
+"ンを概観することができます。サービスには大きく分けて二種類あります。</"
+"p><ul><li>起動時に開始するサービス</li><li>要求時に開始するサービス</li></"
+"ul><p>後者は参考のために表示しています。起動時に開始するサービスは、随時開始"
+"したり停止したりできます。管理者モードでは、これらのサービスを Plasma の起動"
+"時に開始するかどうかも設定できます。</p><p><b>【注意】 この操作は慎重に行って"
+"ください。いくつかのサービスは Plasma の動作に必須です。よく理解したうえでな"
+"ければ、サービスを無効にしないでください。</b></p>"
 
 #: package/contents/ui/main.qml:38
 #, kde-format
@@ -101,6 +105,8 @@ msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
+"バックグラウンドサービスマネージャ (kded5) が実行されていません。正しくインス"
+"トールされているか確認してください。"
 
 #: package/contents/ui/main.qml:47
 #, kde-format
@@ -108,6 +114,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
+"いくつかのサービスは、手動で開始されても実行される必要がないと判断した場合自"
+"ら再び停止します。"
 
 #: package/contents/ui/main.qml:56
 #, kde-format
@@ -115,23 +123,25 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
+"変更を適用するためにバックグラウンドサービスマネージャ (kded5) が再起動された"
+"際、いくつかのサービスが自動的に開始/停止されました。"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "All Services"
-msgstr ""
+msgstr "すべてのサービス"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
-msgstr ""
+msgstr "実行中"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
-msgstr ""
+msgstr "停止中"
 
 #: package/contents/ui/main.qml:136
 #, kde-format
@@ -146,7 +156,7 @@ msgstr "要求時に開始するサービス"
 #: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "起動時に自動的にこのサービスを読み込む/読み込まない"
 
 #: package/contents/ui/main.qml:221
 #, kde-format
@@ -161,10 +171,9 @@ msgstr "実行中"
 #: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Stop Service"
-msgstr ""
+msgstr "サービスを停止"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Start Service"
-msgstr "起動時に開始するサービス"
+msgstr "サービスを開始"
