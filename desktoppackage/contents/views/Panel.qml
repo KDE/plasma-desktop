@@ -120,8 +120,16 @@ Item {
             property int dodgeDistance: -1
             // We don't have to worry about dealing with both at the same time since
             // dodge-window panels never de-float.
+            
+            function intersection(rect1, rect2) {
+                var left = Math.max(rect1.left, rect2.left);
+                var right = Math.min(rect1.right, rect2.right);
+                var top = Math.max(rect1.top, rect2.top);
+                var bottom = Math.min(rect1.bottom, rect2.bottom);
+                return Qt.rect(left, top, right - left, bottom - top);
+            }
 
-            value: floatingness, panel.width, panel.height, panel.x, panel.y, panel.geometryByDistance(panel.visibilityMode === Panel.Global.DodgeWindows ? dodgeDistance : defloatDistance)
+            value: floatingness, panel.width, panel.height, panel.x, panel.y, intersection(panel.geometryByDistance(panel.visibilityMode === Panel.Global.DodgeWindows ? dodgeDistance : defloatDistance), panel.screenGeometry)
         }
     }
 
