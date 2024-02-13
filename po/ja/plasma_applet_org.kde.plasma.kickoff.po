@@ -1,13 +1,13 @@
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015, 2021.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-24 00:38+0000\n"
-"PO-Revision-Date: 2023-02-04 01:43+0900\n"
+"PO-Revision-Date: 2024-02-12 18:35+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "パネルが垂直なときはテキストラベルを設定できませ
 #, kde-format
 msgctxt "General options"
 msgid "General:"
-msgstr "一般:"
+msgstr "全般:"
 
 #: package/contents/ui/ConfigGeneral.qml:151
 #, kde-format
@@ -155,19 +155,19 @@ msgstr "検索プラグインを設定..."
 #: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
 msgid "Sidebar position:"
-msgstr ""
+msgstr "サイドバーの位置:"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Right"
-msgstr ""
+msgstr "右"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Left"
-msgstr ""
+msgstr "左"
 
 #: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format
@@ -291,4 +291,4 @@ msgstr "履歴"
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
-msgstr "最近使用したもの"
+msgstr "よく使用するもの"
