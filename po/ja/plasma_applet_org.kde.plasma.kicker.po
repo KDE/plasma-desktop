@@ -1,13 +1,13 @@
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015, 2017.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-17 01:38+0000\n"
-"PO-Revision-Date: 2023-02-09 22:53+0900\n"
+"PO-Revision-Date: 2024-02-10 23:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -176,8 +176,7 @@ msgid "Searching for '%1'"
 msgstr "'%1' で検索中"
 
 #: package/contents/ui/DashboardRepresentation.qml:234
-#, fuzzy, kde-format
-#| msgid "Type to search…"
+#, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "タイプして検索..."
