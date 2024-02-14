@@ -16,10 +16,12 @@ function fillActionMenu(i18n, actionMenu, actionList, favoriteModel, favoriteId)
 
     if (actions) {
         if (actionList && actionList.length > 0) {
+            var actionListCopy = Array.from(actionList);
             var separator = { "type": "separator" };
-            actionList.push(separator);
+            actionListCopy.push(separator);
             // actionList = actions.concat(actionList); // this crashes Qt O.o
-            actionList.push.apply(actionList, actions);
+            actionListCopy.push.apply(actionListCopy, actions);
+            actionList = actionListCopy;
         } else {
             actionList = actions;
         }
