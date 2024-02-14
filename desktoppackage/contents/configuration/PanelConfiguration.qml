@@ -285,7 +285,8 @@ ColumnLayout {
             Kirigami.Heading {
                 level: dialogRoot.headingLevel
                 Layout.alignment: Qt.AlignHCenter
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Length")
+                text: dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Height")
+                                          : i18nd("plasma_shell_org.kde.plasma.desktop", "Width")
             }
             PanelRepresentation {
                 id: lengthRepresentation
