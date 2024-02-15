@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 02:22+0000\n"
+"POT-Creation-Date: 2024-02-15 02:22+0000\n"
 "PO-Revision-Date: 2023-12-03 00:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -319,91 +319,97 @@ msgid "Center"
 msgstr "Orta"
 
 #: contents/configuration/PanelConfiguration.qml:288
-msgid "Length"
-msgstr "Uzunluk"
+#, fuzzy
+#| msgid "Height:"
+msgid "Height"
+msgstr "Yükseklik:"
 
-#: contents/configuration/PanelConfiguration.qml:306
+#: contents/configuration/PanelConfiguration.qml:289
+msgid "Width"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:307
 msgid "Fill height"
 msgstr "Yüksekliği doldur"
 
-#: contents/configuration/PanelConfiguration.qml:306
+#: contents/configuration/PanelConfiguration.qml:307
 msgid "Fill width"
 msgstr "Genişliği doldur"
 
-#: contents/configuration/PanelConfiguration.qml:307
+#: contents/configuration/PanelConfiguration.qml:308
 msgid "Fit content"
 msgstr "İçeriği sığdır"
 
-#: contents/configuration/PanelConfiguration.qml:308
+#: contents/configuration/PanelConfiguration.qml:309
 msgid "Custom"
 msgstr "Özel"
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Visibility"
 msgstr "Görünürlük"
 
-#: contents/configuration/PanelConfiguration.qml:346
+#: contents/configuration/PanelConfiguration.qml:347
 msgid "Always visible"
 msgstr "Her zaman görünür"
 
-#: contents/configuration/PanelConfiguration.qml:347
+#: contents/configuration/PanelConfiguration.qml:348
 msgid "Auto hide"
 msgstr "Kendiliğinden gizle"
 
-#: contents/configuration/PanelConfiguration.qml:348
+#: contents/configuration/PanelConfiguration.qml:349
 msgid "Dodge windows"
 msgstr "Pencereleri kaçır"
 
-#: contents/configuration/PanelConfiguration.qml:349
+#: contents/configuration/PanelConfiguration.qml:350
 msgid "Windows Go Below"
 msgstr "Pencereler alta gider"
 
-#: contents/configuration/PanelConfiguration.qml:392
+#: contents/configuration/PanelConfiguration.qml:393
 msgid "Opacity"
 msgstr "Matlık"
 
-#: contents/configuration/PanelConfiguration.qml:405
+#: contents/configuration/PanelConfiguration.qml:406
 msgid "Adaptive"
 msgstr "Uyarlanabilir"
 
-#: contents/configuration/PanelConfiguration.qml:406
+#: contents/configuration/PanelConfiguration.qml:407
 msgid "Opaque"
 msgstr "Mat"
 
-#: contents/configuration/PanelConfiguration.qml:407
+#: contents/configuration/PanelConfiguration.qml:408
 msgid "Translucent"
 msgstr "Yarısaydam"
 
-#: contents/configuration/PanelConfiguration.qml:431
+#: contents/configuration/PanelConfiguration.qml:432
 msgid "Style"
 msgstr "Biçem"
 
-#: contents/configuration/PanelConfiguration.qml:442
+#: contents/configuration/PanelConfiguration.qml:443
 msgid "Floating"
 msgstr "Yüzer"
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:517
 msgid "Panel Width:"
 msgstr "Panel genişliği:"
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:517
 msgid "Height:"
 msgstr "Yükseklik:"
 
-#: contents/configuration/PanelConfiguration.qml:550
+#: contents/configuration/PanelConfiguration.qml:551
 msgid "Focus shortcut:"
 msgstr "Odak kısayolu:"
 
-#: contents/configuration/PanelConfiguration.qml:560
+#: contents/configuration/PanelConfiguration.qml:561
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Odağı panele taşımak için bu klavye kısayolunu kullan"
 
-#: contents/configuration/PanelConfiguration.qml:576
+#: contents/configuration/PanelConfiguration.qml:577
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Paneli Sil"
 
-#: contents/configuration/PanelConfiguration.qml:579
+#: contents/configuration/PanelConfiguration.qml:580
 msgid "Remove this panel; this action is undo-able"
 msgstr "Bu paneli kaldır; bu eylem geri alınabilir"
 
@@ -521,6 +527,9 @@ msgstr "Aranan terimler ile eşleşen araç takımı bulunamadı"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "Kullanılabilir araç takımı yok"
+
+#~ msgid "Length"
+#~ msgstr "Uzunluk"
 
 #~ msgctxt "@action:button Make the panel as big as it can be"
 #~ msgid "Maximize"

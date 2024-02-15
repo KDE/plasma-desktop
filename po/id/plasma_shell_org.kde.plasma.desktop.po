@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 02:22+0000\n"
+"POT-Creation-Date: 2024-02-15 02:22+0000\n"
 "PO-Revision-Date: 2023-01-15 13:12+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -327,109 +327,115 @@ msgid "Center"
 msgstr "Tengah"
 
 #: contents/configuration/PanelConfiguration.qml:288
-msgid "Length"
-msgstr ""
+#, fuzzy
+#| msgid "Height"
+msgid "Height"
+msgstr "Tinggi"
 
-#: contents/configuration/PanelConfiguration.qml:306
+#: contents/configuration/PanelConfiguration.qml:289
+msgid "Width"
+msgstr "Lebar"
+
+#: contents/configuration/PanelConfiguration.qml:307
 #, fuzzy
 #| msgid "Panel height:"
 msgid "Fill height"
 msgstr "Tinggi Panel:"
 
-#: contents/configuration/PanelConfiguration.qml:306
+#: contents/configuration/PanelConfiguration.qml:307
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Fill width"
 msgstr "Lebar Panel:"
 
-#: contents/configuration/PanelConfiguration.qml:307
+#: contents/configuration/PanelConfiguration.qml:308
 msgid "Fit content"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:308
+#: contents/configuration/PanelConfiguration.qml:309
 msgid "Custom"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Visibility"
 msgstr "Keterlihatan"
 
-#: contents/configuration/PanelConfiguration.qml:346
+#: contents/configuration/PanelConfiguration.qml:347
 #, fuzzy
 #| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Selalu Terlihat"
 
-#: contents/configuration/PanelConfiguration.qml:347
+#: contents/configuration/PanelConfiguration.qml:348
 #, fuzzy
 #| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "Auto Sembunyi"
 
-#: contents/configuration/PanelConfiguration.qml:348
+#: contents/configuration/PanelConfiguration.qml:349
 msgid "Dodge windows"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:349
+#: contents/configuration/PanelConfiguration.qml:350
 msgid "Windows Go Below"
 msgstr "Jendela Di Bawahnya"
 
-#: contents/configuration/PanelConfiguration.qml:392
+#: contents/configuration/PanelConfiguration.qml:393
 msgid "Opacity"
 msgstr "Opasitas"
 
-#: contents/configuration/PanelConfiguration.qml:405
+#: contents/configuration/PanelConfiguration.qml:406
 msgid "Adaptive"
 msgstr "Adaptif"
 
-#: contents/configuration/PanelConfiguration.qml:406
+#: contents/configuration/PanelConfiguration.qml:407
 msgid "Opaque"
 msgstr "Kekusaman"
 
-#: contents/configuration/PanelConfiguration.qml:407
+#: contents/configuration/PanelConfiguration.qml:408
 msgid "Translucent"
 msgstr "Bening"
 
-#: contents/configuration/PanelConfiguration.qml:431
+#: contents/configuration/PanelConfiguration.qml:432
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:442
+#: contents/configuration/PanelConfiguration.qml:443
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating"
 msgstr "Panel Mengambang"
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:517
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Lebar Panel:"
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:517
 #, fuzzy
 #| msgid "Height"
 msgid "Height:"
 msgstr "Tinggi"
 
-#: contents/configuration/PanelConfiguration.qml:550
+#: contents/configuration/PanelConfiguration.qml:551
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Pintasan"
 
-#: contents/configuration/PanelConfiguration.qml:560
+#: contents/configuration/PanelConfiguration.qml:561
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:576
+#: contents/configuration/PanelConfiguration.qml:577
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Hapus Panel"
 
-#: contents/configuration/PanelConfiguration.qml:579
+#: contents/configuration/PanelConfiguration.qml:580
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
@@ -603,9 +609,6 @@ msgstr "Tidak ada widget yang tersedia"
 
 #~ msgid "Click and drag the button to a screen edge to move the panel there."
 #~ msgstr "Klik dan seret tombol tepi layar untuk memindah panel ke sana-sini."
-
-#~ msgid "Width"
-#~ msgstr "Lebar"
 
 #~ msgid "Click and drag the button to resize the panel."
 #~ msgstr "Klik dan seret tombol untuk mengubah ukuran panel."

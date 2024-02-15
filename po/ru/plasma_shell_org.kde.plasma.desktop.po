@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 02:22+0000\n"
+"POT-Creation-Date: 2024-02-15 02:22+0000\n"
 "PO-Revision-Date: 2023-12-20 14:00+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -331,92 +331,98 @@ msgid "Center"
 msgstr "По центру"
 
 #: contents/configuration/PanelConfiguration.qml:288
-msgid "Length"
-msgstr "Длина"
+#, fuzzy
+#| msgid "Height:"
+msgid "Height"
+msgstr "Высота:"
 
-#: contents/configuration/PanelConfiguration.qml:306
+#: contents/configuration/PanelConfiguration.qml:289
+msgid "Width"
+msgstr "Ширина"
+
+#: contents/configuration/PanelConfiguration.qml:307
 msgid "Fill height"
 msgstr "Во всю высоту"
 
-#: contents/configuration/PanelConfiguration.qml:306
+#: contents/configuration/PanelConfiguration.qml:307
 msgid "Fill width"
 msgstr "Во всю ширину"
 
-#: contents/configuration/PanelConfiguration.qml:307
+#: contents/configuration/PanelConfiguration.qml:308
 msgid "Fit content"
 msgstr "По содержимому"
 
-#: contents/configuration/PanelConfiguration.qml:308
+#: contents/configuration/PanelConfiguration.qml:309
 msgid "Custom"
 msgstr "Другое"
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Visibility"
 msgstr "Видимость"
 
-#: contents/configuration/PanelConfiguration.qml:346
+#: contents/configuration/PanelConfiguration.qml:347
 msgid "Always visible"
 msgstr "Показывать всегда"
 
-#: contents/configuration/PanelConfiguration.qml:347
+#: contents/configuration/PanelConfiguration.qml:348
 msgid "Auto hide"
 msgstr "Автосокрытие"
 
-#: contents/configuration/PanelConfiguration.qml:348
+#: contents/configuration/PanelConfiguration.qml:349
 msgid "Dodge windows"
 msgstr "Скрывать под окнами"
 
-#: contents/configuration/PanelConfiguration.qml:349
+#: contents/configuration/PanelConfiguration.qml:350
 msgid "Windows Go Below"
 msgstr "Поверх окон"
 
-#: contents/configuration/PanelConfiguration.qml:392
+#: contents/configuration/PanelConfiguration.qml:393
 msgid "Opacity"
 msgstr "Непрозрачность"
 
-#: contents/configuration/PanelConfiguration.qml:405
+#: contents/configuration/PanelConfiguration.qml:406
 msgid "Adaptive"
 msgstr "Адаптивно"
 
-#: contents/configuration/PanelConfiguration.qml:406
+#: contents/configuration/PanelConfiguration.qml:407
 msgid "Opaque"
 msgstr "Непрозрачно"
 
-#: contents/configuration/PanelConfiguration.qml:407
+#: contents/configuration/PanelConfiguration.qml:408
 msgid "Translucent"
 msgstr "Полупрозрачно"
 
-#: contents/configuration/PanelConfiguration.qml:431
+#: contents/configuration/PanelConfiguration.qml:432
 msgid "Style"
 msgstr "Оформление"
 
-#: contents/configuration/PanelConfiguration.qml:442
+#: contents/configuration/PanelConfiguration.qml:443
 msgid "Floating"
 msgstr "Плавающее"
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:517
 msgid "Panel Width:"
 msgstr "Ширина панели:"
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:517
 msgid "Height:"
 msgstr "Высота:"
 
-#: contents/configuration/PanelConfiguration.qml:550
+#: contents/configuration/PanelConfiguration.qml:551
 msgid "Focus shortcut:"
 msgstr "Комбинация переключения в панель:"
 
-#: contents/configuration/PanelConfiguration.qml:560
+#: contents/configuration/PanelConfiguration.qml:561
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Используйте эту комбинацию клавиш для переключения фокуса ввода в панель"
 
-#: contents/configuration/PanelConfiguration.qml:576
+#: contents/configuration/PanelConfiguration.qml:577
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Удалить панель"
 
-#: contents/configuration/PanelConfiguration.qml:579
+#: contents/configuration/PanelConfiguration.qml:580
 msgid "Remove this panel; this action is undo-able"
 msgstr "Удалить панель, необратимое действие"
 
@@ -535,6 +541,9 @@ msgstr "Не найдено ни одного виджета, удовлетво
 msgid "No widgets available"
 msgstr "Виджеты не найдены"
 
+#~ msgid "Length"
+#~ msgstr "Длина"
+
 #, fuzzy
 #~| msgid "Maximize Panel"
 #~ msgctxt "@action:button Make the panel as big as it can be"
@@ -592,9 +601,6 @@ msgstr "Виджеты не найдены"
 #~ msgstr ""
 #~ "Нажмите и потяните за кнопку, чтобы перетащить панель к другому краю "
 #~ "экрана."
-
-#~ msgid "Width"
-#~ msgstr "Ширина"
 
 #~ msgid "Click and drag the button to resize the panel."
 #~ msgstr "Нажмите и потяните за кнопку, чтобы изменить размер панели."

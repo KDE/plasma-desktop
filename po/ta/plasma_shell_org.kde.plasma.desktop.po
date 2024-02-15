@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 02:22+0000\n"
+"POT-Creation-Date: 2024-02-15 02:22+0000\n"
 "PO-Revision-Date: 2023-12-17 16:46+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -316,91 +316,97 @@ msgid "Center"
 msgstr "நடுவில்"
 
 #: contents/configuration/PanelConfiguration.qml:288
-msgid "Length"
-msgstr "நீளம்"
+#, fuzzy
+#| msgid "Height:"
+msgid "Height"
+msgstr "உயரம்:"
 
-#: contents/configuration/PanelConfiguration.qml:306
+#: contents/configuration/PanelConfiguration.qml:289
+msgid "Width"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:307
 msgid "Fill height"
 msgstr "உயரத்தை நிரப்பு"
 
-#: contents/configuration/PanelConfiguration.qml:306
+#: contents/configuration/PanelConfiguration.qml:307
 msgid "Fill width"
 msgstr "அகலத்தை நிரப்பு"
 
-#: contents/configuration/PanelConfiguration.qml:307
+#: contents/configuration/PanelConfiguration.qml:308
 msgid "Fit content"
 msgstr "உள்ளடக்கத்தைப் பொறுத்து"
 
-#: contents/configuration/PanelConfiguration.qml:308
+#: contents/configuration/PanelConfiguration.qml:309
 msgid "Custom"
 msgstr "விருப்பமானது"
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Visibility"
 msgstr "காட்டப்படுவது"
 
-#: contents/configuration/PanelConfiguration.qml:346
+#: contents/configuration/PanelConfiguration.qml:347
 msgid "Always visible"
 msgstr "எப்போது காட்டப்படும்"
 
-#: contents/configuration/PanelConfiguration.qml:347
+#: contents/configuration/PanelConfiguration.qml:348
 msgid "Auto hide"
 msgstr "தானாக மறை"
 
-#: contents/configuration/PanelConfiguration.qml:348
+#: contents/configuration/PanelConfiguration.qml:349
 msgid "Dodge windows"
 msgstr "சாளரங்களைத் தவிர்"
 
-#: contents/configuration/PanelConfiguration.qml:349
+#: contents/configuration/PanelConfiguration.qml:350
 msgid "Windows Go Below"
 msgstr "சாளரங்கள் அடியில் இருக்கலாம்"
 
-#: contents/configuration/PanelConfiguration.qml:392
+#: contents/configuration/PanelConfiguration.qml:393
 msgid "Opacity"
 msgstr "ஒளிபுகாமை"
 
-#: contents/configuration/PanelConfiguration.qml:405
+#: contents/configuration/PanelConfiguration.qml:406
 msgid "Adaptive"
 msgstr "மாறக்கூடியது"
 
-#: contents/configuration/PanelConfiguration.qml:406
+#: contents/configuration/PanelConfiguration.qml:407
 msgid "Opaque"
 msgstr "ஒளி புகாத‍து"
 
-#: contents/configuration/PanelConfiguration.qml:407
+#: contents/configuration/PanelConfiguration.qml:408
 msgid "Translucent"
 msgstr "ஒளிபுகக்கூடியது"
 
-#: contents/configuration/PanelConfiguration.qml:431
+#: contents/configuration/PanelConfiguration.qml:432
 msgid "Style"
 msgstr "வகை"
 
-#: contents/configuration/PanelConfiguration.qml:442
+#: contents/configuration/PanelConfiguration.qml:443
 msgid "Floating"
 msgstr "மிதப்பது"
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:517
 msgid "Panel Width:"
 msgstr "பலகையின் அகலம்:"
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:517
 msgid "Height:"
 msgstr "உயரம்:"
 
-#: contents/configuration/PanelConfiguration.qml:550
+#: contents/configuration/PanelConfiguration.qml:551
 msgid "Focus shortcut:"
 msgstr "குவியப்படுத்தும் சுருக்குவழி:"
 
-#: contents/configuration/PanelConfiguration.qml:560
+#: contents/configuration/PanelConfiguration.qml:561
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "பலகையை குவியப்படுத்த இந்த விசைச் சுருக்குவழியை அழுத்துங்கள்"
 
-#: contents/configuration/PanelConfiguration.qml:576
+#: contents/configuration/PanelConfiguration.qml:577
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "பலகையை நீக்கு"
 
-#: contents/configuration/PanelConfiguration.qml:579
+#: contents/configuration/PanelConfiguration.qml:580
 msgid "Remove this panel; this action is undo-able"
 msgstr "பலகையை நீக்கும்; இச்செயலை செயல்நீக்கலாம்"
 
@@ -518,6 +524,9 @@ msgstr "தேடலுக்கு எந்த பிளாஸ்மாய்�
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "பிளாஸ்மாய்டுகள் ஏதுமில்லை"
+
+#~ msgid "Length"
+#~ msgstr "நீளம்"
 
 #~ msgctxt "@action:button Make the panel as big as it can be"
 #~ msgid "Maximize"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 02:22+0000\n"
+"POT-Creation-Date: 2024-02-15 02:22+0000\n"
 "PO-Revision-Date: 2023-11-29 17:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -317,91 +317,97 @@ msgid "Center"
 msgstr "置中"
 
 #: contents/configuration/PanelConfiguration.qml:288
-msgid "Length"
-msgstr "長度"
+#, fuzzy
+#| msgid "Height:"
+msgid "Height"
+msgstr "高度："
 
-#: contents/configuration/PanelConfiguration.qml:306
+#: contents/configuration/PanelConfiguration.qml:289
+msgid "Width"
+msgstr "寬度"
+
+#: contents/configuration/PanelConfiguration.qml:307
 msgid "Fill height"
 msgstr "填滿高度"
 
-#: contents/configuration/PanelConfiguration.qml:306
+#: contents/configuration/PanelConfiguration.qml:307
 msgid "Fill width"
 msgstr "填滿寬度"
 
-#: contents/configuration/PanelConfiguration.qml:307
+#: contents/configuration/PanelConfiguration.qml:308
 msgid "Fit content"
 msgstr "符合內容"
 
-#: contents/configuration/PanelConfiguration.qml:308
+#: contents/configuration/PanelConfiguration.qml:309
 msgid "Custom"
 msgstr "自訂"
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:335
 msgid "Visibility"
 msgstr "可見度"
 
-#: contents/configuration/PanelConfiguration.qml:346
+#: contents/configuration/PanelConfiguration.qml:347
 msgid "Always visible"
 msgstr "永遠可見"
 
-#: contents/configuration/PanelConfiguration.qml:347
+#: contents/configuration/PanelConfiguration.qml:348
 msgid "Auto hide"
 msgstr "自動隱藏"
 
-#: contents/configuration/PanelConfiguration.qml:348
+#: contents/configuration/PanelConfiguration.qml:349
 msgid "Dodge windows"
 msgstr "躲避視窗"
 
-#: contents/configuration/PanelConfiguration.qml:349
+#: contents/configuration/PanelConfiguration.qml:350
 msgid "Windows Go Below"
 msgstr "視窗在下面"
 
-#: contents/configuration/PanelConfiguration.qml:392
+#: contents/configuration/PanelConfiguration.qml:393
 msgid "Opacity"
 msgstr "透明度"
 
-#: contents/configuration/PanelConfiguration.qml:405
+#: contents/configuration/PanelConfiguration.qml:406
 msgid "Adaptive"
 msgstr "自動調整"
 
-#: contents/configuration/PanelConfiguration.qml:406
+#: contents/configuration/PanelConfiguration.qml:407
 msgid "Opaque"
 msgstr "不透明"
 
-#: contents/configuration/PanelConfiguration.qml:407
+#: contents/configuration/PanelConfiguration.qml:408
 msgid "Translucent"
 msgstr "半透明"
 
-#: contents/configuration/PanelConfiguration.qml:431
+#: contents/configuration/PanelConfiguration.qml:432
 msgid "Style"
 msgstr "風格"
 
-#: contents/configuration/PanelConfiguration.qml:442
+#: contents/configuration/PanelConfiguration.qml:443
 msgid "Floating"
 msgstr "浮動"
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:517
 msgid "Panel Width:"
 msgstr "面板寬度："
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:517
 msgid "Height:"
 msgstr "高度："
 
-#: contents/configuration/PanelConfiguration.qml:550
+#: contents/configuration/PanelConfiguration.qml:551
 msgid "Focus shortcut:"
 msgstr "取得焦點快捷鍵："
 
-#: contents/configuration/PanelConfiguration.qml:560
+#: contents/configuration/PanelConfiguration.qml:561
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按這個鍵盤快捷鍵來移動焦點到面板上"
 
-#: contents/configuration/PanelConfiguration.qml:576
+#: contents/configuration/PanelConfiguration.qml:577
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "刪除面板"
 
-#: contents/configuration/PanelConfiguration.qml:579
+#: contents/configuration/PanelConfiguration.qml:580
 msgid "Remove this panel; this action is undo-able"
 msgstr "移除這個面板；這個動作是可以復原的"
 
@@ -519,6 +525,9 @@ msgstr "沒有元件符合搜尋字詞"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "沒有可用元件"
+
+#~ msgid "Length"
+#~ msgstr "長度"
 
 #~ msgctxt "@action:button Make the panel as big as it can be"
 #~ msgid "Maximize"
@@ -656,9 +665,6 @@ msgstr "沒有可用元件"
 
 #~ msgid "Click and drag the button to a screen edge to move the panel there."
 #~ msgstr "把按鈕長按拖曳到一螢幕邊緣，以移動面板至該位置。"
-
-#~ msgid "Width"
-#~ msgstr "寬度"
 
 #~ msgid "Click and drag the button to resize the panel."
 #~ msgstr "長按拖曳按鈕來縮放面板。"
