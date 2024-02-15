@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:38+0000\n"
 "PO-Revision-Date: 2024-01-30 06:17+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -314,92 +314,98 @@ msgid "Center"
 msgstr "ცენტრი"
 
 #: contents/configuration/PanelConfiguration.qml:291
-msgid "Length"
-msgstr "სიგრძე"
+#, fuzzy
+#| msgid "Height:"
+msgid "Height"
+msgstr "სიმაღლე:"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:292
+msgid "Width"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill height"
 msgstr "სიმაღლის შევსება"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill width"
 msgstr "სიგანის შევსება"
 
-#: contents/configuration/PanelConfiguration.qml:311
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Fit content"
 msgstr "შემცველობის ჩატევა"
 
-#: contents/configuration/PanelConfiguration.qml:312
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Custom"
 msgstr "ხელით"
 
-#: contents/configuration/PanelConfiguration.qml:338
+#: contents/configuration/PanelConfiguration.qml:339
 msgid "Visibility"
 msgstr "ხილვადობა"
 
-#: contents/configuration/PanelConfiguration.qml:351
+#: contents/configuration/PanelConfiguration.qml:352
 msgid "Always visible"
 msgstr "ყოველთვის ხილული"
 
-#: contents/configuration/PanelConfiguration.qml:352
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Auto hide"
 msgstr "ავტოდამალვა"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Dodge windows"
 msgstr "ფანჯრების აცილება"
 
-#: contents/configuration/PanelConfiguration.qml:354
+#: contents/configuration/PanelConfiguration.qml:355
 msgid "Windows Go Below"
 msgstr "ფანჯრებს ქვეშ შეძრომა შეუძლიათ"
 
-#: contents/configuration/PanelConfiguration.qml:397
+#: contents/configuration/PanelConfiguration.qml:398
 msgid "Opacity"
 msgstr "გაუმჭვირვალობა"
 
-#: contents/configuration/PanelConfiguration.qml:411
+#: contents/configuration/PanelConfiguration.qml:412
 msgid "Adaptive"
 msgstr "შეგუებადი"
 
-#: contents/configuration/PanelConfiguration.qml:412
+#: contents/configuration/PanelConfiguration.qml:413
 msgid "Opaque"
 msgstr "გაუმჭვირვალე"
 
-#: contents/configuration/PanelConfiguration.qml:413
+#: contents/configuration/PanelConfiguration.qml:414
 msgid "Translucent"
 msgstr "ნახევრადგამჭვირვალე"
 
-#: contents/configuration/PanelConfiguration.qml:437
+#: contents/configuration/PanelConfiguration.qml:438
 msgid "Style"
 msgstr "სტილი"
 
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:450
 msgid "Floating"
 msgstr "მცურავი"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 msgid "Panel Width:"
 msgstr "პანელის სიგანე:"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 msgid "Height:"
 msgstr "სიმაღლე:"
 
-#: contents/configuration/PanelConfiguration.qml:558
+#: contents/configuration/PanelConfiguration.qml:559
 msgid "Focus shortcut:"
 msgstr "ფოკუსის მალსახმობი:"
 
-#: contents/configuration/PanelConfiguration.qml:569
+#: contents/configuration/PanelConfiguration.qml:570
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "ფოკუსის პანელზე გადასატანად ეს კლავიატურის მალსახმობი შეგიძლიათ, გამოიყენოთ"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:586
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "პანელის წაშლა"
 
-#: contents/configuration/PanelConfiguration.qml:588
+#: contents/configuration/PanelConfiguration.qml:589
 msgid "Remove this panel; this action is undo-able"
 msgstr "ამ პანელის წაშლა. ეს ქმედება დაბრუნებადია"
 
@@ -524,6 +530,9 @@ msgstr "ვიჯეტების თქვენს ძებნას პა
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "ვიჯეტების გარეშე"
+
+#~ msgid "Length"
+#~ msgstr "სიგრძე"
 
 #~ msgctxt "@action:button Make the panel as big as it can be"
 #~ msgid "Maximize"

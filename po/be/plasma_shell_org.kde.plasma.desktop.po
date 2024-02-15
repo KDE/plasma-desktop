@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:38+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -329,119 +329,125 @@ msgid "Center"
 msgstr "Пасярэдзіне"
 
 #: contents/configuration/PanelConfiguration.qml:291
-msgid "Length"
+#, fuzzy
+#| msgid "Right"
+msgid "Height"
+msgstr "Справа"
+
+#: contents/configuration/PanelConfiguration.qml:292
+msgid "Width"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:311
 #, fuzzy
 #| msgid "Panel height:"
 msgid "Fill height"
 msgstr "Вышыня панэлі:"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:311
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Fill width"
 msgstr "Шырыня панэлі:"
 
-#: contents/configuration/PanelConfiguration.qml:311
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Fit content"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:312
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Custom"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:338
+#: contents/configuration/PanelConfiguration.qml:339
 #, fuzzy
 #| msgid "Visibility"
 msgid "Visibility"
 msgstr "Бачнасць"
 
-#: contents/configuration/PanelConfiguration.qml:351
+#: contents/configuration/PanelConfiguration.qml:352
 #, fuzzy
 #| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Заўсёды бачная"
 
-#: contents/configuration/PanelConfiguration.qml:352
+#: contents/configuration/PanelConfiguration.qml:353
 #, fuzzy
 #| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "Аўтаматычнае хаванне"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Dodge windows"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:354
+#: contents/configuration/PanelConfiguration.qml:355
 #, fuzzy
 #| msgid "Windows Go Below"
 msgid "Windows Go Below"
 msgstr "Вокны не могуць быць зверху"
 
-#: contents/configuration/PanelConfiguration.qml:397
+#: contents/configuration/PanelConfiguration.qml:398
 #, fuzzy
 #| msgid "Opacity"
 msgid "Opacity"
 msgstr "Непразрыстасць"
 
-#: contents/configuration/PanelConfiguration.qml:411
+#: contents/configuration/PanelConfiguration.qml:412
 msgid "Adaptive"
 msgstr "Прыстасавальная"
 
-#: contents/configuration/PanelConfiguration.qml:412
+#: contents/configuration/PanelConfiguration.qml:413
 #, fuzzy
 #| msgid "Opaque"
 msgid "Opaque"
 msgstr "Непразрыстая"
 
-#: contents/configuration/PanelConfiguration.qml:413
+#: contents/configuration/PanelConfiguration.qml:414
 #, fuzzy
 #| msgid "Translucent"
 msgid "Translucent"
 msgstr "Паўпразрыстая"
 
-#: contents/configuration/PanelConfiguration.qml:437
+#: contents/configuration/PanelConfiguration.qml:438
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:450
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating"
 msgstr "Плывучая панэль"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Шырыня панэлі:"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 #, fuzzy
 #| msgid "Right"
 msgid "Height:"
 msgstr "Справа"
 
-#: contents/configuration/PanelConfiguration.qml:558
+#: contents/configuration/PanelConfiguration.qml:559
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Спалучэнне клавіш"
 
-#: contents/configuration/PanelConfiguration.qml:569
+#: contents/configuration/PanelConfiguration.qml:570
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Націснуць гэтае спалучэнне клавіш, каб перамясціць фокус на панэль"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:586
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Выдаліць панэль"
 
-#: contents/configuration/PanelConfiguration.qml:588
+#: contents/configuration/PanelConfiguration.qml:589
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 

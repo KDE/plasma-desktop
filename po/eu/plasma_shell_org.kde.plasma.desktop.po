@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:38+0000\n"
 "PO-Revision-Date: 2024-01-30 19:14+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -321,91 +321,97 @@ msgid "Center"
 msgstr "Erdian"
 
 #: contents/configuration/PanelConfiguration.qml:291
-msgid "Length"
-msgstr "Luzera"
+#, fuzzy
+#| msgid "Height:"
+msgid "Height"
+msgstr "Altuera:"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:292
+msgid "Width"
+msgstr "Zabalera"
+
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill height"
 msgstr "Bete altuera"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill width"
 msgstr "Bete zabalera"
 
-#: contents/configuration/PanelConfiguration.qml:311
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Fit content"
 msgstr "Egokitu edukia"
 
-#: contents/configuration/PanelConfiguration.qml:312
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Custom"
 msgstr "Neurrira"
 
-#: contents/configuration/PanelConfiguration.qml:338
+#: contents/configuration/PanelConfiguration.qml:339
 msgid "Visibility"
 msgstr "Ikusgaitasuna"
 
-#: contents/configuration/PanelConfiguration.qml:351
+#: contents/configuration/PanelConfiguration.qml:352
 msgid "Always visible"
 msgstr "Beti ikusgai"
 
-#: contents/configuration/PanelConfiguration.qml:352
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Auto hide"
 msgstr "Automatikoki ezkutatzea"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Dodge windows"
 msgstr "Saihestu leihoak"
 
-#: contents/configuration/PanelConfiguration.qml:354
+#: contents/configuration/PanelConfiguration.qml:355
 msgid "Windows Go Below"
 msgstr "Leihoak azpira doaz"
 
-#: contents/configuration/PanelConfiguration.qml:397
+#: contents/configuration/PanelConfiguration.qml:398
 msgid "Opacity"
 msgstr "Opakutasuna"
 
-#: contents/configuration/PanelConfiguration.qml:411
+#: contents/configuration/PanelConfiguration.qml:412
 msgid "Adaptive"
 msgstr "Moldakorra"
 
-#: contents/configuration/PanelConfiguration.qml:412
+#: contents/configuration/PanelConfiguration.qml:413
 msgid "Opaque"
 msgstr "Opakua"
 
-#: contents/configuration/PanelConfiguration.qml:413
+#: contents/configuration/PanelConfiguration.qml:414
 msgid "Translucent"
 msgstr "Zeharrargitsua"
 
-#: contents/configuration/PanelConfiguration.qml:437
+#: contents/configuration/PanelConfiguration.qml:438
 msgid "Style"
 msgstr "Estiloa"
 
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:450
 msgid "Floating"
 msgstr "Higikorra"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 msgid "Panel Width:"
 msgstr "Panelaren zabalera:"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 msgid "Height:"
 msgstr "Altuera:"
 
-#: contents/configuration/PanelConfiguration.qml:558
+#: contents/configuration/PanelConfiguration.qml:559
 msgid "Focus shortcut:"
 msgstr "Fokuratzeko lasterbidea:"
 
-#: contents/configuration/PanelConfiguration.qml:569
+#: contents/configuration/PanelConfiguration.qml:570
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Sakatu teklatuko lasterbide hau fokua Panelera eramateko"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:586
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Ezabatu panela"
 
-#: contents/configuration/PanelConfiguration.qml:588
+#: contents/configuration/PanelConfiguration.qml:589
 msgid "Remove this panel; this action is undo-able"
 msgstr "Kendu panel hau; ekintza hau desegin daiteke"
 
@@ -531,6 +537,9 @@ msgstr "Ez dago bilatutako terminoekin bat datorren trepetarik"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "Ez dago trepeta erabilgarririk"
+
+#~ msgid "Length"
+#~ msgstr "Luzera"
 
 #~ msgctxt "@action:button Make the panel as big as it can be"
 #~ msgid "Maximize"
@@ -691,9 +700,6 @@ msgstr "Ez dago trepeta erabilgarririk"
 #~ msgstr ""
 #~ "Egin klik eta arrastatu botoia pantailako ertz batera panela hara "
 #~ "eramateko."
-
-#~ msgid "Width"
-#~ msgstr "Zabalera"
 
 #~ msgid "Click and drag the button to resize the panel."
 #~ msgstr "Egin klik eta arrastatu botoia panelaren neurria aldatzeko."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:38+0000\n"
 "PO-Revision-Date: 2024-01-30 18:21+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -325,91 +325,97 @@ msgid "Center"
 msgstr "Centro"
 
 #: contents/configuration/PanelConfiguration.qml:291
-msgid "Length"
-msgstr "Longitud"
+#, fuzzy
+#| msgid "Height:"
+msgid "Height"
+msgstr "Altura:"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:292
+msgid "Width"
+msgstr "Anchura"
+
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill height"
 msgstr "Rellenar la altura"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill width"
 msgstr "Rellenar la anchura"
 
-#: contents/configuration/PanelConfiguration.qml:311
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Fit content"
 msgstr "Ajustar el contenido"
 
-#: contents/configuration/PanelConfiguration.qml:312
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Custom"
 msgstr "Personalizado"
 
-#: contents/configuration/PanelConfiguration.qml:338
+#: contents/configuration/PanelConfiguration.qml:339
 msgid "Visibility"
 msgstr "Visibilidad"
 
-#: contents/configuration/PanelConfiguration.qml:351
+#: contents/configuration/PanelConfiguration.qml:352
 msgid "Always visible"
 msgstr "Siempre visible"
 
-#: contents/configuration/PanelConfiguration.qml:352
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Auto hide"
 msgstr "Ocultar automáticamente"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Dodge windows"
 msgstr "Esquivar ventanas"
 
-#: contents/configuration/PanelConfiguration.qml:354
+#: contents/configuration/PanelConfiguration.qml:355
 msgid "Windows Go Below"
 msgstr "Las ventanas van por detrás"
 
-#: contents/configuration/PanelConfiguration.qml:397
+#: contents/configuration/PanelConfiguration.qml:398
 msgid "Opacity"
 msgstr "Opacidad"
 
-#: contents/configuration/PanelConfiguration.qml:411
+#: contents/configuration/PanelConfiguration.qml:412
 msgid "Adaptive"
 msgstr "Adaptable"
 
-#: contents/configuration/PanelConfiguration.qml:412
+#: contents/configuration/PanelConfiguration.qml:413
 msgid "Opaque"
 msgstr "Opaco"
 
-#: contents/configuration/PanelConfiguration.qml:413
+#: contents/configuration/PanelConfiguration.qml:414
 msgid "Translucent"
 msgstr "Transparente"
 
-#: contents/configuration/PanelConfiguration.qml:437
+#: contents/configuration/PanelConfiguration.qml:438
 msgid "Style"
 msgstr "Estilo"
 
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:450
 msgid "Floating"
 msgstr "Flotante"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 msgid "Panel Width:"
 msgstr "Anchura del panel:"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 msgid "Height:"
 msgstr "Altura:"
 
-#: contents/configuration/PanelConfiguration.qml:558
+#: contents/configuration/PanelConfiguration.qml:559
 msgid "Focus shortcut:"
 msgstr "Atajo de teclado para enfocar:"
 
-#: contents/configuration/PanelConfiguration.qml:569
+#: contents/configuration/PanelConfiguration.qml:570
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pulse este atajo de teclado de teclado para mover el foco al panel"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:586
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Borrar el panel"
 
-#: contents/configuration/PanelConfiguration.qml:588
+#: contents/configuration/PanelConfiguration.qml:589
 msgid "Remove this panel; this action is undo-able"
 msgstr "Eliminar este panel (esta acción se puede deshacer)"
 
@@ -533,6 +539,9 @@ msgstr "Ningún elemento gráfico satisface la búsqueda"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "Ningún elemento gráfico disponible"
+
+#~ msgid "Length"
+#~ msgstr "Longitud"
 
 #~ msgctxt "@action:button Make the panel as big as it can be"
 #~ msgid "Maximize"
@@ -698,9 +707,6 @@ msgstr "Ningún elemento gráfico disponible"
 #~ msgstr ""
 #~ "Pulse y arrastre el botón a un borde de la pantalla para mover el panel "
 #~ "allí."
-
-#~ msgid "Width"
-#~ msgstr "Anchura"
 
 #~ msgid "Click and drag the button to resize the panel."
 #~ msgstr "Pulse y arrastre el botón para cambiar el tamaño del panel."

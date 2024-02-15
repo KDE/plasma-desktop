@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:38+0000\n"
 "PO-Revision-Date: 2023-11-21 15:07+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -319,92 +319,98 @@ msgid "Center"
 msgstr "Střed"
 
 #: contents/configuration/PanelConfiguration.qml:291
-msgid "Length"
-msgstr "Délka"
+#, fuzzy
+#| msgid "Height:"
+msgid "Height"
+msgstr "Výška:"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:292
+msgid "Width"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill height"
 msgstr "Vyplnit víšku"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill width"
 msgstr "Vyplnit šířku"
 
-#: contents/configuration/PanelConfiguration.qml:311
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Fit content"
 msgstr "Přizpůsob obsah"
 
-#: contents/configuration/PanelConfiguration.qml:312
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Custom"
 msgstr "Vlastní"
 
-#: contents/configuration/PanelConfiguration.qml:338
+#: contents/configuration/PanelConfiguration.qml:339
 msgid "Visibility"
 msgstr "Viditelnost"
 
-#: contents/configuration/PanelConfiguration.qml:351
+#: contents/configuration/PanelConfiguration.qml:352
 msgid "Always visible"
 msgstr "Vždy viditelný"
 
 # 55051 AttribValues/label
-#: contents/configuration/PanelConfiguration.qml:352
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Auto hide"
 msgstr "Automatické schovávání"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Dodge windows"
 msgstr "Vyhýbat se oknům"
 
-#: contents/configuration/PanelConfiguration.qml:354
+#: contents/configuration/PanelConfiguration.qml:355
 msgid "Windows Go Below"
 msgstr "Okna jdou pod"
 
-#: contents/configuration/PanelConfiguration.qml:397
+#: contents/configuration/PanelConfiguration.qml:398
 msgid "Opacity"
 msgstr "Krytí"
 
-#: contents/configuration/PanelConfiguration.qml:411
+#: contents/configuration/PanelConfiguration.qml:412
 msgid "Adaptive"
 msgstr "Adaptivní"
 
-#: contents/configuration/PanelConfiguration.qml:412
+#: contents/configuration/PanelConfiguration.qml:413
 msgid "Opaque"
 msgstr "Neprůhledné"
 
-#: contents/configuration/PanelConfiguration.qml:413
+#: contents/configuration/PanelConfiguration.qml:414
 msgid "Translucent"
 msgstr "Průhledné"
 
-#: contents/configuration/PanelConfiguration.qml:437
+#: contents/configuration/PanelConfiguration.qml:438
 msgid "Style"
 msgstr "Styl"
 
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:450
 msgid "Floating"
 msgstr "Plovoucí"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 msgid "Panel Width:"
 msgstr "Šířka panelu:"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 msgid "Height:"
 msgstr "Výška:"
 
-#: contents/configuration/PanelConfiguration.qml:558
+#: contents/configuration/PanelConfiguration.qml:559
 msgid "Focus shortcut:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:569
+#: contents/configuration/PanelConfiguration.qml:570
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Touto klávesovou zkratkou se přepnete na panel7"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:586
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Smazat panel"
 
-#: contents/configuration/PanelConfiguration.qml:588
+#: contents/configuration/PanelConfiguration.qml:589
 msgid "Remove this panel; this action is undo-able"
 msgstr "Odstranit tento panel, tento krok nelze vzít zpět"
 
@@ -529,3 +535,6 @@ msgstr "Vyhledávacím kritériím neodpovídá žádný widget"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "Nejsou dostupné žádné widgety"
+
+#~ msgid "Length"
+#~ msgstr "Délka"

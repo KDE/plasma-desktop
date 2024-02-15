@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:38+0000\n"
 "PO-Revision-Date: 2024-02-10 17:55+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -316,91 +316,97 @@ msgid "Center"
 msgstr "الوسط"
 
 #: contents/configuration/PanelConfiguration.qml:291
-msgid "Length"
-msgstr "الطّول"
+#, fuzzy
+#| msgid "Height:"
+msgid "Height"
+msgstr "الارتفاع:"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:292
+msgid "Width"
+msgstr "العرض"
+
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill height"
 msgstr "ارتفاع الملء"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill width"
 msgstr "عرض الملء"
 
-#: contents/configuration/PanelConfiguration.qml:311
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Fit content"
 msgstr "لائم المحتوى"
 
-#: contents/configuration/PanelConfiguration.qml:312
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Custom"
 msgstr "مخصّص"
 
-#: contents/configuration/PanelConfiguration.qml:338
+#: contents/configuration/PanelConfiguration.qml:339
 msgid "Visibility"
 msgstr "الظّهور"
 
-#: contents/configuration/PanelConfiguration.qml:351
+#: contents/configuration/PanelConfiguration.qml:352
 msgid "Always visible"
 msgstr "ظاهرة دائمًا"
 
-#: contents/configuration/PanelConfiguration.qml:352
+#: contents/configuration/PanelConfiguration.qml:353
 msgid "Auto hide"
 msgstr "إخفاء آلي"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Dodge windows"
 msgstr "تجنب النوافذ"
 
-#: contents/configuration/PanelConfiguration.qml:354
+#: contents/configuration/PanelConfiguration.qml:355
 msgid "Windows Go Below"
 msgstr "النّوافذ تذهب تحته"
 
-#: contents/configuration/PanelConfiguration.qml:397
+#: contents/configuration/PanelConfiguration.qml:398
 msgid "Opacity"
 msgstr "الشّفافيّة"
 
-#: contents/configuration/PanelConfiguration.qml:411
+#: contents/configuration/PanelConfiguration.qml:412
 msgid "Adaptive"
 msgstr "متكيفة"
 
-#: contents/configuration/PanelConfiguration.qml:412
+#: contents/configuration/PanelConfiguration.qml:413
 msgid "Opaque"
 msgstr "معتم"
 
-#: contents/configuration/PanelConfiguration.qml:413
+#: contents/configuration/PanelConfiguration.qml:414
 msgid "Translucent"
 msgstr "شفاف"
 
-#: contents/configuration/PanelConfiguration.qml:437
+#: contents/configuration/PanelConfiguration.qml:438
 msgid "Style"
 msgstr "النّمط"
 
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:450
 msgid "Floating"
 msgstr "التعويم"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 msgid "Panel Width:"
 msgstr "عرض اللوح:"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 msgid "Height:"
 msgstr "الارتفاع:"
 
-#: contents/configuration/PanelConfiguration.qml:558
+#: contents/configuration/PanelConfiguration.qml:559
 msgid "Focus shortcut:"
 msgstr "اختصار التركيز:"
 
-#: contents/configuration/PanelConfiguration.qml:569
+#: contents/configuration/PanelConfiguration.qml:570
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "اضغط على اختصار لوحة المفاتيح هذا لتنقل التركيز للوحة"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:586
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "احذف اللوح"
 
-#: contents/configuration/PanelConfiguration.qml:588
+#: contents/configuration/PanelConfiguration.qml:589
 msgid "Remove this panel; this action is undo-able"
 msgstr "أزِل هذه اللوحة؛ لا يمكن التراجع عن هذا الإجراء"
 
@@ -528,6 +534,9 @@ msgstr "لا توجد ودجات مطابقة لشروط البحث"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "لا تتوفر ودجات"
+
+#~ msgid "Length"
+#~ msgstr "الطّول"
 
 #~ msgctxt "@action:button Make the panel as big as it can be"
 #~ msgid "Maximize"
@@ -676,9 +685,6 @@ msgstr "لا تتوفر ودجات"
 
 #~ msgid "Click and drag the button to a screen edge to move the panel there."
 #~ msgstr "انقر واسحب الزر إلى حافة الشاشة لتحريك اللوحة هناك."
-
-#~ msgid "Width"
-#~ msgstr "العرض"
 
 #, fuzzy
 #~| msgid "Layout cannot be changed whilst widgets are locked"

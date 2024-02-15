@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:38+0000\n"
 "PO-Revision-Date: 2023-01-09 09:58+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -327,120 +327,126 @@ msgid "Center"
 msgstr "Centro"
 
 #: contents/configuration/PanelConfiguration.qml:291
-msgid "Length"
+#, fuzzy
+#| msgid "Right"
+msgid "Height"
+msgstr "Direita"
+
+#: contents/configuration/PanelConfiguration.qml:292
+msgid "Width"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:311
 #, fuzzy
 #| msgid "Panel height:"
 msgid "Fill height"
 msgstr "Altura do painel:"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:311
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Fill width"
 msgstr "Largura do painel:"
 
-#: contents/configuration/PanelConfiguration.qml:311
+#: contents/configuration/PanelConfiguration.qml:312
 msgid "Fit content"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:312
+#: contents/configuration/PanelConfiguration.qml:313
 msgid "Custom"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:338
+#: contents/configuration/PanelConfiguration.qml:339
 #, fuzzy
 #| msgid "Visibility"
 msgid "Visibility"
 msgstr "Visibilidade"
 
-#: contents/configuration/PanelConfiguration.qml:351
+#: contents/configuration/PanelConfiguration.qml:352
 #, fuzzy
 #| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Sempre Visível"
 
-#: contents/configuration/PanelConfiguration.qml:352
+#: contents/configuration/PanelConfiguration.qml:353
 #, fuzzy
 #| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "Auto-Esconder"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:354
 msgid "Dodge windows"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:354
+#: contents/configuration/PanelConfiguration.qml:355
 #, fuzzy
 #| msgid "Windows Go Below"
 msgid "Windows Go Below"
 msgstr "As Janelas Vão Para Baixo"
 
-#: contents/configuration/PanelConfiguration.qml:397
+#: contents/configuration/PanelConfiguration.qml:398
 #, fuzzy
 #| msgid "Opacity"
 msgid "Opacity"
 msgstr "Opacidade"
 
-#: contents/configuration/PanelConfiguration.qml:411
+#: contents/configuration/PanelConfiguration.qml:412
 msgid "Adaptive"
 msgstr "Adaptativo"
 
-#: contents/configuration/PanelConfiguration.qml:412
+#: contents/configuration/PanelConfiguration.qml:413
 #, fuzzy
 #| msgid "Opaque"
 msgid "Opaque"
 msgstr "Opaco"
 
-#: contents/configuration/PanelConfiguration.qml:413
+#: contents/configuration/PanelConfiguration.qml:414
 #, fuzzy
 #| msgid "Translucent"
 msgid "Translucent"
 msgstr "Translúcido"
 
-#: contents/configuration/PanelConfiguration.qml:437
+#: contents/configuration/PanelConfiguration.qml:438
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:450
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating"
 msgstr "Painel Flutuante"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Largura do painel:"
 
-#: contents/configuration/PanelConfiguration.qml:523
+#: contents/configuration/PanelConfiguration.qml:524
 #, fuzzy
 #| msgid "Right"
 msgid "Height:"
 msgstr "Direita"
 
-#: contents/configuration/PanelConfiguration.qml:558
+#: contents/configuration/PanelConfiguration.qml:559
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Atalho"
 
-#: contents/configuration/PanelConfiguration.qml:569
+#: contents/configuration/PanelConfiguration.qml:570
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Carregue nesta combinação de teclas para colocar o Painel em primeiro plano"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:586
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Remover o Painel"
 
-#: contents/configuration/PanelConfiguration.qml:588
+#: contents/configuration/PanelConfiguration.qml:589
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
