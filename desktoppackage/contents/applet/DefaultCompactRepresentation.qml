@@ -50,6 +50,7 @@ Kirigami.Icon {
         case Qt.Key_Return:
         case Qt.Key_Select:
             Plasmoid.activated();
+            event.accepted = true; // BUG 481393: Prevent system tray from receiving the event
             break;
         }
     }
