@@ -4,13 +4,13 @@
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2013, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
-# SPDX-FileCopyrightText: 2022, 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 02:22+0000\n"
-"PO-Revision-Date: 2023-11-29 17:53+0900\n"
+"PO-Revision-Date: 2024-02-15 16:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -317,10 +317,8 @@ msgid "Center"
 msgstr "置中"
 
 #: contents/configuration/PanelConfiguration.qml:288
-#, fuzzy
-#| msgid "Height:"
 msgid "Height"
-msgstr "高度："
+msgstr "高度"
 
 #: contents/configuration/PanelConfiguration.qml:289
 msgid "Width"
