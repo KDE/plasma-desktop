@@ -19,7 +19,9 @@ KCM.SimpleKCM {
     readonly property var device: deviceModel.device(deviceCombo.currentIndex)
 
     Kirigami.PlaceholderMessage {
+        icon.name: "input-gamepad"
         text: i18n("No game controllers found")
+        explanation: i18n("Connect a wired or wireless controller")
         anchors.centerIn: parent
         visible: deviceModel.count === 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
