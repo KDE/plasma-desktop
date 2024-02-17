@@ -25,7 +25,9 @@ KCMUtils.SimpleKCM {
     implicitHeight: Kirigami.Units.gridUnit * 35
 
     Kirigami.PlaceholderMessage {
+        icon.name: "input-touchscreen"
         text: i18n("No touchscreens found")
+        explanation: i18n("Connect an external touchscreen")
         anchors.centerIn: parent
         visible: combo.count === 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
