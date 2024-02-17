@@ -23,16 +23,18 @@ SimpleKCM {
     // So it doesn't scroll while dragging
     flickable.interactive: Kirigami.Settings.hasTransientTouchInput
 
-    header: Kirigami.InlineMessage {
-        Layout.fillWidth: true
-
-        type: Kirigami.MessageType.Information
+    Kirigami.PlaceholderMessage {
+        icon.name: "input-tablet"
+        text: i18nd("kcm_tablet", "No drawing tablets found")
+        explanation: i18n("Connect a drawing tablet")
+        anchors.centerIn: parent
         visible: combo.count === 0
-        text: i18nd("kcm_tablet", "No drawing tablets found.")
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
     }
 
     Kirigami.FormLayout {
         id: form
+        visible: combo.count > 0
         enabled: combo.count > 0
         QQC2.ComboBox {
             id: combo
