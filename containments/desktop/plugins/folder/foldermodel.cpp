@@ -62,6 +62,7 @@
 #include <KSharedConfig>
 #include <KShell>
 #include <KStringHandler>
+#include <KUrlMimeData>
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>
@@ -1058,7 +1059,9 @@ void FolderModel::dragSelectedInternal(int x, int y)
         sourceDragIndexes.append(mapToSource(index));
     }
 
-    drag->setMimeData(m_dirModel->mimeData(sourceDragIndexes));
+    QMimeData *mimeData = m_dirModel->mimeData(sourceDragIndexes);
+    KUrlMimeData::exportUrlsToPortal(mimeData);
+    drag->setMimeData(mimeData);
 
     // Due to spring-loading (aka auto-expand), the URL might change
     // while the drag is in-flight - in that case we don't want to
@@ -1967,6 +1970,7 @@ void FolderModel::copy()
     }
 
     QMimeData *mimeData = QSortFilterProxyModel::mimeData(m_selectionModel->selectedIndexes());
+    KUrlMimeData::exportUrlsToPortal(mimeData);
     QApplication::clipboard()->setMimeData(mimeData);
 }
 
@@ -1983,6 +1987,7 @@ void FolderModel::cut()
     }
 
     QMimeData *mimeData = QSortFilterProxyModel::mimeData(m_selectionModel->selectedIndexes());
+    KUrlMimeData::exportUrlsToPortal(mimeData);
     KIO::setClipboardDataCut(mimeData, true);
     QApplication::clipboard()->setMimeData(mimeData);
 }
