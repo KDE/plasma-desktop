@@ -4,6 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 #include "xkblayoutmanager.h"
+
+#include <ranges>
+
 #include <QDir>
 #include <QProcess>
 #include <QStringList>
@@ -33,21 +36,20 @@ void XkbLayoutManager::getLayout()
     process.start(QString::fromLatin1(XKB_COMMAND), QStringList(QString::fromLatin1(XKB_QUERY_ARG)));
     process.waitForFinished();
     const QByteArray output = process.readAllStandardOutput();
-    const QList<QByteArray> lines = output.split('\n');
-    for (const QByteArray &line : lines) {
-        QByteArray element("layout:");
+    for (const QByteArrayView line : std::views::split(output, '\n')) {
+        constexpr QByteArrayView element("layout:");
         if (line.startsWith(element)) {
-            m_defaultLayout = QString::fromLatin1(line.mid(element.length(), line.length())).trimmed();
+            m_defaultLayout = QString::fromLatin1(line.sliced(element.length())).trimmed();
         }
 
-        element = "variant:";
-        if (line.startsWith(element)) {
-            m_defaultVariant = QString::fromLatin1(line.mid(element.length(), line.length())).trimmed();
+        constexpr QByteArrayView element2("variant:");
+        if (line.startsWith(element2)) {
+            m_defaultVariant = QString::fromLatin1(line.sliced(element2.length())).trimmed();
         }
 
-        element = "options:";
-        if (line.startsWith(element)) {
-            m_defaultOption = QString::fromLatin1(line.mid(element.length(), line.length())).trimmed();
+        constexpr QByteArrayView element3 = "options:";
+        if (line.startsWith(element3)) {
+            m_defaultOption = QString::fromLatin1(line.sliced(element3.length())).trimmed();
         }
     }
 }
