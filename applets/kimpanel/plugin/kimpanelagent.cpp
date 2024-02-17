@@ -107,16 +107,16 @@ void PanelAgent::selectCandidate(int idx)
     Q_EMIT SelectCandidate(idx);
 }
 
-static QList<TextAttribute> String2AttrList(const QString &str)
+static QList<TextAttribute> String2AttrList(QStringView str)
 {
     QList<TextAttribute> result;
     if (str.isEmpty()) {
         return result;
     }
-    const QStringList semicolons = str.split(QLatin1Char(';'));
-    for (const QString &s : semicolons) {
+    const QList<QStringView> semicolons = str.split(QLatin1Char(';'));
+    for (const QStringView s : semicolons) {
         TextAttribute attr;
-        const QStringList colons = s.split(QLatin1Char(':'));
+        const QList<QStringView> colons = s.split(QLatin1Char(':'));
         if (colons.size() < 4)
             continue;
         switch (colons.at(0).toInt()) {
