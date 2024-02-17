@@ -58,7 +58,7 @@ class Bug476968Test(unittest.TestCase):
 
     def test_bug476968(self) -> None:
         wait = WebDriverWait(self.driver, 30)
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Expand System Tray"))).click()  # plasma-workspace/applets/systemtray/package/contents/ui/ExpanderArrow.qml
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Show hidden icons"))).click()  # plasma-workspace/applets/systemtray/package/contents/ui/ExpanderArrow.qml
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Configure System Tray..."))).click()
         entries = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Entries")))
         entries.click()
