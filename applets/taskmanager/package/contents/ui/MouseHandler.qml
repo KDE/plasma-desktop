@@ -44,6 +44,7 @@ DropArea {
         if (event.formats.indexOf("text/x-plasmoidservicename") >= 0) {
             event.accepted = false;
         }
+        target.animating = false;
     }
 
     onPositionChanged: event => {
