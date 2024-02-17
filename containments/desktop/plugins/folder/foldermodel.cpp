@@ -666,14 +666,12 @@ void FolderModel::setFilterPattern(const QString &pattern)
     m_filterPattern = pattern;
     m_filterPatternMatchAll = (pattern == QLatin1String("*"));
 
-    const QStringList patterns = pattern.split(QLatin1Char(' '));
+    const QList<QStringView> patterns = QStringView(pattern).split(QLatin1Char(' '));
     m_regExps.clear();
     m_regExps.reserve(patterns.count());
-
-    for (const QString &pattern : patterns) {
-        auto rx = QRegularExpression::fromWildcard(pattern);
-        m_regExps.append(rx);
-    }
+    std::transform(patterns.cbegin(), patterns.cend(), std::back_inserter(m_regExps), [](QStringView pattern) {
+        return QRegularExpression::fromWildcard(pattern);
+    });
 
     invalidateFilterIfComplete();
 
