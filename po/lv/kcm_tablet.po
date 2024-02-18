@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2024-01-23 08:07+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -69,81 +69,88 @@ msgstr "Atbilstošs planšetes izvadei"
 msgid "Custom size"
 msgstr "Pielāgots izmērs"
 
-#: ui/main.qml:31
-#, kde-format
-msgid "No drawing tablets found."
+#: ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found."
+msgid "No drawing tablets found"
 msgstr "Nav atrastas zīmēšanas planšetes"
 
-#: ui/main.qml:39
+#: ui/main.qml:29
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found."
+msgid "Connect a drawing tablet"
+msgstr "Nav atrastas zīmēšanas planšetes"
+
+#: ui/main.qml:41
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Ierīce:"
 
-#: ui/main.qml:77
+#: ui/main.qml:79
 #, kde-format
 msgid "Target display:"
 msgstr "Mērķa displejs:"
 
-#: ui/main.qml:96
+#: ui/main.qml:98
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientācija:"
 
-#: ui/main.qml:108
+#: ui/main.qml:110
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Kreisās rokas režīms:"
 
-#: ui/main.qml:118
+#: ui/main.qml:120
 #, kde-format
 msgid "Area:"
 msgstr "Zona:"
 
-#: ui/main.qml:206
+#: ui/main.qml:208
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Mainīt planšetes zonas izmēru"
 
-#: ui/main.qml:230
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Slēgt malu attiecību"
 
-#: ui/main.qml:238
+#: ui/main.qml:240
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 — %3×%4"
 
-#: ui/main.qml:247
+#: ui/main.qml:249
 #, kde-format
 msgid "Pen Button 1"
 msgstr "Zīmuļa poga 2"
 
-#: ui/main.qml:248
+#: ui/main.qml:250
 #, kde-format
 msgid "Pen Button 2"
 msgstr "Zīmuļa poga 2"
 
-#: ui/main.qml:249
+#: ui/main.qml:251
 #, kde-format
 msgid "Pen Button 3"
 msgstr "Zīmuļa poga 3"
 
-#: ui/main.qml:293
+#: ui/main.qml:295
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Planšete:"
 
-#: ui/main.qml:304
+#: ui/main.qml:306
 #, kde-format
 msgid "None"
 msgstr "Nav"
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgid "Button %1:"
 msgstr "Poga %1:"

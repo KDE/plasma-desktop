@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2024-01-22 22:10+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -65,81 +65,88 @@ msgstr "Faire correspondre à la sortie pour une tablette"
 msgid "Custom size"
 msgstr "Taille personnalisée"
 
-#: ui/main.qml:31
-#, kde-format
-msgid "No drawing tablets found."
+#: ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found."
+msgid "No drawing tablets found"
 msgstr "Aucune tablette de dessin n'a été trouvée."
 
-#: ui/main.qml:39
+#: ui/main.qml:29
+#, fuzzy, kde-format
+#| msgid "Configure drawing tablets"
+msgid "Connect a drawing tablet"
+msgstr "Configurer les tablettes de dessin"
+
+#: ui/main.qml:41
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Périphérique :"
 
-#: ui/main.qml:77
+#: ui/main.qml:79
 #, kde-format
 msgid "Target display:"
 msgstr "Affichage cible :"
 
-#: ui/main.qml:96
+#: ui/main.qml:98
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientation :"
 
-#: ui/main.qml:108
+#: ui/main.qml:110
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Mode gaucher :"
 
-#: ui/main.qml:118
+#: ui/main.qml:120
 #, kde-format
 msgid "Area:"
 msgstr "Zone :"
 
-#: ui/main.qml:206
+#: ui/main.qml:208
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Redimensionner la zone de tablette"
 
-#: ui/main.qml:230
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Verrouiller le ration d'affichage"
 
-#: ui/main.qml:238
+#: ui/main.qml:240
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1, %2 - %3 × %4"
 
-#: ui/main.qml:247
+#: ui/main.qml:249
 #, kde-format
 msgid "Pen Button 1"
 msgstr "Bouton du stylet 1"
 
-#: ui/main.qml:248
+#: ui/main.qml:250
 #, kde-format
 msgid "Pen Button 2"
 msgstr "Bouton du stylet 2"
 
-#: ui/main.qml:249
+#: ui/main.qml:251
 #, kde-format
 msgid "Pen Button 3"
 msgstr "Bouton du stylet 3"
 
-#: ui/main.qml:293
+#: ui/main.qml:295
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Pavé :"
 
-#: ui/main.qml:304
+#: ui/main.qml:306
 #, kde-format
 msgid "None"
 msgstr "Aucun"
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgid "Button %1:"
 msgstr "Bouton %1 :"
@@ -157,6 +164,3 @@ msgstr "Bouton %1 :"
 
 #~ msgid "Tablet"
 #~ msgstr "Tablette"
-
-#~ msgid "Configure drawing tablets"
-#~ msgstr "Configurer les tablettes de dessin"

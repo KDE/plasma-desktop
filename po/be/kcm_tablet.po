@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2023-02-08 13:47\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -72,84 +72,91 @@ msgstr "Падладзіць да вываду планшэта"
 msgid "Custom size"
 msgstr "Адвольны памер"
 
-#: ui/main.qml:31
-#, kde-format
-msgid "No drawing tablets found."
+#: ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found."
+msgid "No drawing tablets found"
 msgstr "Не знойдзена планшэтаў для малявання."
 
-#: ui/main.qml:39
+#: ui/main.qml:29
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found."
+msgid "Connect a drawing tablet"
+msgstr "Не знойдзена планшэтаў для малявання."
+
+#: ui/main.qml:41
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Прылада:"
 
-#: ui/main.qml:77
+#: ui/main.qml:79
 #, kde-format
 msgid "Target display:"
 msgstr "Мэтавы дысплэй:"
 
-#: ui/main.qml:96
+#: ui/main.qml:98
 #, kde-format
 msgid "Orientation:"
 msgstr "Арыентацыя:"
 
-#: ui/main.qml:108
+#: ui/main.qml:110
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Рэжым для ляўшэй:"
 
-#: ui/main.qml:118
+#: ui/main.qml:120
 #, kde-format
 msgid "Area:"
 msgstr "Вобласць:"
 
-#: ui/main.qml:206
+#: ui/main.qml:208
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Змяніць памер вобласці планшэта"
 
-#: ui/main.qml:230
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Заблакаваць суадносіны бакоў"
 
-#: ui/main.qml:238
+#: ui/main.qml:240
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:247
+#: ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Button %1:"
 msgid "Pen Button 1"
 msgstr "Кнопка %1:"
 
-#: ui/main.qml:248
+#: ui/main.qml:250
 #, fuzzy, kde-format
 #| msgid "Tool Button 2"
 msgid "Pen Button 2"
 msgstr "Кнопка інструмента 2"
 
-#: ui/main.qml:249
+#: ui/main.qml:251
 #, fuzzy, kde-format
 #| msgid "Tool Button 3"
 msgid "Pen Button 3"
 msgstr "Кнопка інструмента 3"
 
-#: ui/main.qml:293
+#: ui/main.qml:295
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Планшэт:"
 
-#: ui/main.qml:304
+#: ui/main.qml:306
 #, kde-format
 msgid "None"
 msgstr "Няма"
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgid "Button %1:"
 msgstr "Кнопка %1:"

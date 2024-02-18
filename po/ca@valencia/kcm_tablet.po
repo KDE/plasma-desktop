@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2024-01-13 16:31+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -70,81 +70,88 @@ msgstr "Ajusta a l'eixida en una tauleta"
 msgid "Custom size"
 msgstr "Mida personalitzada"
 
-#: ui/main.qml:31
-#, kde-format
-msgid "No drawing tablets found."
+#: ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found."
+msgid "No drawing tablets found"
 msgstr "No s'ha trobat cap tauleta de dibuix."
 
-#: ui/main.qml:39
+#: ui/main.qml:29
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found."
+msgid "Connect a drawing tablet"
+msgstr "No s'ha trobat cap tauleta de dibuix."
+
+#: ui/main.qml:41
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Dispositiu:"
 
-#: ui/main.qml:77
+#: ui/main.qml:79
 #, kde-format
 msgid "Target display:"
 msgstr "Pantalla de destinació:"
 
-#: ui/main.qml:96
+#: ui/main.qml:98
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientació:"
 
-#: ui/main.qml:108
+#: ui/main.qml:110
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Mode esquerrà:"
 
-#: ui/main.qml:118
+#: ui/main.qml:120
 #, kde-format
 msgid "Area:"
 msgstr "Àrea:"
 
-#: ui/main.qml:206
+#: ui/main.qml:208
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Redimensiona l'àrea de la tauleta"
 
-#: ui/main.qml:230
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Bloqueja la relació d'aspecte"
 
-#: ui/main.qml:238
+#: ui/main.qml:240
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:247
+#: ui/main.qml:249
 #, kde-format
 msgid "Pen Button 1"
 msgstr "Botó 1 del llapis"
 
-#: ui/main.qml:248
+#: ui/main.qml:250
 #, kde-format
 msgid "Pen Button 2"
 msgstr "Botó 2 del llapis"
 
-#: ui/main.qml:249
+#: ui/main.qml:251
 #, kde-format
 msgid "Pen Button 3"
 msgstr "Botó 3 del llapis"
 
-#: ui/main.qml:293
+#: ui/main.qml:295
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Teclat:"
 
-#: ui/main.qml:304
+#: ui/main.qml:306
 #, kde-format
 msgid "None"
 msgstr "Sense"
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgid "Button %1:"
 msgstr "Botó %1:"

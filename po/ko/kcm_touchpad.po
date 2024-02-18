@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2023-08-25 23:14+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -52,7 +52,7 @@ msgstr "터치패드 %1의 기초 장치 정보를 읽는 중 치명적 오류�
 msgid "Cannot connect to X server"
 msgstr "X 서버에 연결할 수 없음"
 
-#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:94
+#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:95
 #, kde-format
 msgid "No touchpad found"
 msgstr "터치패드 없음"
@@ -72,134 +72,139 @@ msgstr "터치패드 설정을 읽을 수 없음"
 msgid "Cannot read default touchpad configuration"
 msgstr "기본 터치패드 설정을 읽을 수 없음"
 
-#: kcm/libinput/touchpad.qml:108
+#: kcm/libinput/touchpad.qml:96
+#, kde-format
+msgid "Connect an external touchpad"
+msgstr ""
+
+#: kcm/libinput/touchpad.qml:110
 #, kde-format
 msgid "Device:"
 msgstr "장치:"
 
-#: kcm/libinput/touchpad.qml:134
+#: kcm/libinput/touchpad.qml:136
 #, kde-format
 msgid "General:"
 msgstr "일반:"
 
-#: kcm/libinput/touchpad.qml:135
+#: kcm/libinput/touchpad.qml:137
 #, kde-format
 msgid "Device enabled"
 msgstr "장치 활성화됨"
 
-#: kcm/libinput/touchpad.qml:139
+#: kcm/libinput/touchpad.qml:141
 #, kde-format
 msgid "Accept input through this device."
 msgstr "이 장치를 통해서 입력합니다."
 
-#: kcm/libinput/touchpad.qml:163
+#: kcm/libinput/touchpad.qml:165
 #, kde-format
 msgid "Disable while typing"
 msgstr "입력할 때 끄기"
 
-#: kcm/libinput/touchpad.qml:167
+#: kcm/libinput/touchpad.qml:169
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr "입력할 때 터치패드를 꺼서 커서 튐을 방지합니다."
 
-#: kcm/libinput/touchpad.qml:191
+#: kcm/libinput/touchpad.qml:193
 #, kde-format
 msgid "Left handed mode"
 msgstr "왼손잡이 모드"
 
-#: kcm/libinput/touchpad.qml:195
+#: kcm/libinput/touchpad.qml:197
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "왼쪽과 오른쪽 단추를 바꿉니다."
 
-#: kcm/libinput/touchpad.qml:219
+#: kcm/libinput/touchpad.qml:221
 #, kde-format
 msgid "Press left and right buttons for middle click"
 msgstr "왼쪽과 오른쪽 단추를 같이 클릭해서 가운데 단추 클릭"
 
-#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:866
+#: kcm/libinput/touchpad.qml:225 kcm/libinput/touchpad.qml:868
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
 "왼쪽과 오른쪽 단추를 같이 클릭하면 가운데 단추를 클릭한 것으로 취급합니다."
 
-#: kcm/libinput/touchpad.qml:254
+#: kcm/libinput/touchpad.qml:256
 #, kde-format
 msgid "Pointer speed:"
 msgstr "포인터 속도:"
 
-#: kcm/libinput/touchpad.qml:352
+#: kcm/libinput/touchpad.qml:354
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "포인터 가속:"
 
-#: kcm/libinput/touchpad.qml:383
+#: kcm/libinput/touchpad.qml:385
 #, kde-format
 msgid "None"
 msgstr "없음"
 
-#: kcm/libinput/touchpad.qml:387
+#: kcm/libinput/touchpad.qml:389
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "커서와 손가락 이동 거리는 동일합니다."
 
-#: kcm/libinput/touchpad.qml:396
+#: kcm/libinput/touchpad.qml:398
 #, kde-format
 msgid "Standard"
 msgstr "표준"
 
-#: kcm/libinput/touchpad.qml:400
+#: kcm/libinput/touchpad.qml:402
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "커서 이동 거리가 손가락 속도에 비례합니다."
 
-#: kcm/libinput/touchpad.qml:415
+#: kcm/libinput/touchpad.qml:417
 #, kde-format
 msgid "Tapping:"
 msgstr "탭:"
 
-#: kcm/libinput/touchpad.qml:416
+#: kcm/libinput/touchpad.qml:418
 #, kde-format
 msgid "Tap-to-click"
 msgstr "탭으로 클릭"
 
-#: kcm/libinput/touchpad.qml:420
+#: kcm/libinput/touchpad.qml:422
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "한 번 탭으로 왼쪽 단추를 누릅니다."
 
-#: kcm/libinput/touchpad.qml:449
+#: kcm/libinput/touchpad.qml:451
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "탭 후 드래그"
 
-#: kcm/libinput/touchpad.qml:453
+#: kcm/libinput/touchpad.qml:455
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "탭 직후 손가락을 터치패드 위에서 움직이면 드래그합니다."
 
-#: kcm/libinput/touchpad.qml:480
+#: kcm/libinput/touchpad.qml:482
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "탭 후 드래그 잠금"
 
-#: kcm/libinput/touchpad.qml:484
+#: kcm/libinput/touchpad.qml:486
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "손가락을 잠깐 들어올린 후에도 드래그를 계속합니다."
 
-#: kcm/libinput/touchpad.qml:504
+#: kcm/libinput/touchpad.qml:506
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "두 손가락 탭:"
 
-#: kcm/libinput/touchpad.qml:515
+#: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "오른쪽 단추 누름(세 손가락으로 탭하여 가운데 단추)"
 
-#: kcm/libinput/touchpad.qml:516
+#: kcm/libinput/touchpad.qml:518
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -207,12 +212,12 @@ msgstr ""
 "두 손가락으로 탭하여 오른쪽 단추, 세 손가락으로 탭하여 가운데 단추를 클릭합니"
 "다."
 
-#: kcm/libinput/touchpad.qml:518
+#: kcm/libinput/touchpad.qml:520
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "가운데 단추(세 손가락으로 탭하여 오른쪽 단추)"
 
-#: kcm/libinput/touchpad.qml:519
+#: kcm/libinput/touchpad.qml:521
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -220,137 +225,137 @@ msgstr ""
 "두 손가락으로 탭하여 가운데 단추, 세 손가락으로 탭하여 오른쪽 단추를 클릭합니"
 "다."
 
-#: kcm/libinput/touchpad.qml:521
+#: kcm/libinput/touchpad.qml:523
 #, kde-format
 msgid "Right-click"
 msgstr "오른쪽 단추"
 
-#: kcm/libinput/touchpad.qml:522
+#: kcm/libinput/touchpad.qml:524
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "두 손가락으로 탭하여 오른쪽 단추를 클릭합니다."
 
-#: kcm/libinput/touchpad.qml:524
+#: kcm/libinput/touchpad.qml:526
 #, kde-format
 msgid "Middle-click"
 msgstr "가운데 단추"
 
-#: kcm/libinput/touchpad.qml:525
+#: kcm/libinput/touchpad.qml:527
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "두 손가락으로 탭하여 가운데 단추를 클릭합니다."
 
-#: kcm/libinput/touchpad.qml:584
+#: kcm/libinput/touchpad.qml:586
 #, kde-format
 msgid "Scrolling:"
 msgstr "스크롤:"
 
-#: kcm/libinput/touchpad.qml:613
+#: kcm/libinput/touchpad.qml:615
 #, kde-format
 msgid "Two fingers"
 msgstr "두 손가락"
 
-#: kcm/libinput/touchpad.qml:617
+#: kcm/libinput/touchpad.qml:619
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "두 손가락으로 밀어서 스크롤합니다."
 
-#: kcm/libinput/touchpad.qml:625
+#: kcm/libinput/touchpad.qml:627
 #, kde-format
 msgid "Touchpad edges"
 msgstr "터치패드 경계"
 
-#: kcm/libinput/touchpad.qml:629
+#: kcm/libinput/touchpad.qml:631
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "터치패드 경계에서 손가락을 밀어서 스크롤합니다."
 
-#: kcm/libinput/touchpad.qml:639
+#: kcm/libinput/touchpad.qml:641
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "스크롤 방향 반전(자연 스크롤)"
 
-#: kcm/libinput/touchpad.qml:655
+#: kcm/libinput/touchpad.qml:657
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "터치스크린과 같은 방식으로 스크롤합니다."
 
-#: kcm/libinput/touchpad.qml:663 kcm/libinput/touchpad.qml:680
+#: kcm/libinput/touchpad.qml:665 kcm/libinput/touchpad.qml:682
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "수평 스크롤 비활성화"
 
-#: kcm/libinput/touchpad.qml:688
+#: kcm/libinput/touchpad.qml:690
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "스크롤 속도:"
 
-#: kcm/libinput/touchpad.qml:739
+#: kcm/libinput/touchpad.qml:741
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "느리게"
 
-#: kcm/libinput/touchpad.qml:746
+#: kcm/libinput/touchpad.qml:748
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "빠르게"
 
-#: kcm/libinput/touchpad.qml:757
+#: kcm/libinput/touchpad.qml:759
 #, kde-format
 msgid "Right-click:"
 msgstr "오른쪽 단추 클릭:"
 
-#: kcm/libinput/touchpad.qml:791
+#: kcm/libinput/touchpad.qml:793
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "오른쪽 아래 꼭짓점 누르기"
 
-#: kcm/libinput/touchpad.qml:795
+#: kcm/libinput/touchpad.qml:797
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr "터치패드 아래쪽에 소프트웨어로 활성화된 단추를 추가합니다."
 
-#: kcm/libinput/touchpad.qml:803
+#: kcm/libinput/touchpad.qml:805
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "어디든지 두 손가락으로 누르기"
 
-#: kcm/libinput/touchpad.qml:807
+#: kcm/libinput/touchpad.qml:809
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "두 손가락으로 탭할 때 오른쪽으로 누릅니다."
 
-#: kcm/libinput/touchpad.qml:821
+#: kcm/libinput/touchpad.qml:823
 #, kde-format
 msgid "Middle-click: "
 msgstr "가운데 단추:"
 
-#: kcm/libinput/touchpad.qml:850
+#: kcm/libinput/touchpad.qml:852
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "아래쪽 가운데 누르기"
 
-#: kcm/libinput/touchpad.qml:854
+#: kcm/libinput/touchpad.qml:856
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
 msgstr "터치패드 아래쪽에 소프트웨어로 활성화된 가운데 단추를 추가합니다."
 
-#: kcm/libinput/touchpad.qml:862
+#: kcm/libinput/touchpad.qml:864
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "터치패드 왼쪽과 오른쪽 아래 꼭짓점 같이 누르기"
 
-#: kcm/libinput/touchpad.qml:875
+#: kcm/libinput/touchpad.qml:877
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "어디든지 세 손가락으로 누르기"
 
-#: kcm/libinput/touchpad.qml:881
+#: kcm/libinput/touchpad.qml:883
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "어디든지 세 손가락으로 누릅니다."

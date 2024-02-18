@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-09 01:37+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2023-04-09 22:11+0000\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -29,23 +29,28 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: ui/main.qml:28
+#: ui/main.qml:29
 #, kde-format
 msgid "No touchscreens found"
 msgstr "Neniuj tuŝekranoj trovitaj"
 
-#: ui/main.qml:44
+#: ui/main.qml:30
+#, kde-format
+msgid "Connect an external touchscreen"
+msgstr ""
+
+#: ui/main.qml:46
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Aparato:"
 
-#: ui/main.qml:57
+#: ui/main.qml:59
 #, kde-format
 msgid "Enabled:"
 msgstr "Ebligita:"
 
-#: ui/main.qml:65
+#: ui/main.qml:67
 #, kde-format
 msgid "Target display:"
 msgstr "Cel-ekrano:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2021-09-09 16:18+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -53,7 +53,7 @@ msgstr "Lỗi nguy cấp khi đọc các thông tin thiết bị cơ bản cho b
 msgid "Cannot connect to X server"
 msgstr "Không thể kết nối đến máy chủ X"
 
-#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:94
+#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:95
 #, kde-format
 msgid "No touchpad found"
 msgstr "Không tìm thấy bàn cảm ứng nào"
@@ -73,283 +73,288 @@ msgstr "Không thể đọc cấu hình bàn cảm ứng"
 msgid "Cannot read default touchpad configuration"
 msgstr "Không thể đọc cấu hình bàn cảm ứng mặc định"
 
-#: kcm/libinput/touchpad.qml:108
+#: kcm/libinput/touchpad.qml:96
+#, kde-format
+msgid "Connect an external touchpad"
+msgstr ""
+
+#: kcm/libinput/touchpad.qml:110
 #, kde-format
 msgid "Device:"
 msgstr "Thiết bị:"
 
-#: kcm/libinput/touchpad.qml:134
+#: kcm/libinput/touchpad.qml:136
 #, kde-format
 msgid "General:"
 msgstr "Chung:"
 
-#: kcm/libinput/touchpad.qml:135
+#: kcm/libinput/touchpad.qml:137
 #, kde-format
 msgid "Device enabled"
 msgstr "Thiết bị được bật"
 
-#: kcm/libinput/touchpad.qml:139
+#: kcm/libinput/touchpad.qml:141
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Nhận đầu vào qua thiết bị này."
 
-#: kcm/libinput/touchpad.qml:163
+#: kcm/libinput/touchpad.qml:165
 #, kde-format
 msgid "Disable while typing"
 msgstr "Tắt khi đang gõ"
 
-#: kcm/libinput/touchpad.qml:167
+#: kcm/libinput/touchpad.qml:169
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr "Tắt bàn cảm ứng khi đang gõ để tránh nhập sai"
 
-#: kcm/libinput/touchpad.qml:191
+#: kcm/libinput/touchpad.qml:193
 #, kde-format
 msgid "Left handed mode"
 msgstr "Chế độ thuận tay trái"
 
-#: kcm/libinput/touchpad.qml:195
+#: kcm/libinput/touchpad.qml:197
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Hoán đổi nút trái và phải."
 
-#: kcm/libinput/touchpad.qml:219
+#: kcm/libinput/touchpad.qml:221
 #, kde-format
 msgid "Press left and right buttons for middle click"
 msgstr "Nhấn nút trái và phải để thành bấm giữa"
 
-#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:866
+#: kcm/libinput/touchpad.qml:225 kcm/libinput/touchpad.qml:868
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "Bấm nút trái và phải đồng thời sẽ tạo ra cú bấm nút giữa."
 
-#: kcm/libinput/touchpad.qml:254
+#: kcm/libinput/touchpad.qml:256
 #, fuzzy, kde-format
 #| msgid "Minimum pointer speed"
 msgid "Pointer speed:"
 msgstr "Tốc độ con trỏ tối thiểu"
 
-#: kcm/libinput/touchpad.qml:352
+#: kcm/libinput/touchpad.qml:354
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Gia tốc con trỏ:"
 
-#: kcm/libinput/touchpad.qml:383
+#: kcm/libinput/touchpad.qml:385
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: kcm/libinput/touchpad.qml:387
+#: kcm/libinput/touchpad.qml:389
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "Con trỏ di chuyển cùng khoảng cách với ngón tay."
 
-#: kcm/libinput/touchpad.qml:396
+#: kcm/libinput/touchpad.qml:398
 #, kde-format
 msgid "Standard"
 msgstr ""
 
-#: kcm/libinput/touchpad.qml:400
+#: kcm/libinput/touchpad.qml:402
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr ""
 "Khoảng cách di chuyển của con trỏ phụ thuộc vào tốc độ di chuyển của ngón "
 "tay."
 
-#: kcm/libinput/touchpad.qml:415
+#: kcm/libinput/touchpad.qml:417
 #, kde-format
 msgid "Tapping:"
 msgstr "Vỗ:"
 
-#: kcm/libinput/touchpad.qml:416
+#: kcm/libinput/touchpad.qml:418
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Vỗ để bấm"
 
-#: kcm/libinput/touchpad.qml:420
+#: kcm/libinput/touchpad.qml:422
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "Vỗ đơn là bấm nút trái."
 
-#: kcm/libinput/touchpad.qml:449
+#: kcm/libinput/touchpad.qml:451
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Vỗ và kéo"
 
-#: kcm/libinput/touchpad.qml:453
+#: kcm/libinput/touchpad.qml:455
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "Lướt trên bàn cảm ứng ngay sau khi vỗ sẽ thực hiện việc kéo."
 
-#: kcm/libinput/touchpad.qml:480
+#: kcm/libinput/touchpad.qml:482
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Khoá vỗ và kéo"
 
-#: kcm/libinput/touchpad.qml:484
+#: kcm/libinput/touchpad.qml:486
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Việc kéo tiếp tục sau khi nhấc ngón tay một khoảng thời gian ngắn."
 
-#: kcm/libinput/touchpad.qml:504
+#: kcm/libinput/touchpad.qml:506
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Vỗ hai ngón:"
 
-#: kcm/libinput/touchpad.qml:515
+#: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Bấm phải (vỗ ba ngón để bấm giữa)"
 
-#: kcm/libinput/touchpad.qml:516
+#: kcm/libinput/touchpad.qml:518
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr "Vỗ bằng hai ngón để bấm phải, vỗ bằng ba ngón để bấm giữa."
 
-#: kcm/libinput/touchpad.qml:518
+#: kcm/libinput/touchpad.qml:520
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Bấm giữa (vỗ hai ngón để bấm phải)"
 
-#: kcm/libinput/touchpad.qml:519
+#: kcm/libinput/touchpad.qml:521
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
 msgstr "Vỗ bằng hai ngón để bấm giữa, vỗ bằng ba ngón để bấm phải."
 
-#: kcm/libinput/touchpad.qml:521
+#: kcm/libinput/touchpad.qml:523
 #, kde-format
 msgid "Right-click"
 msgstr "Bấm phải"
 
-#: kcm/libinput/touchpad.qml:522
+#: kcm/libinput/touchpad.qml:524
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Vỗ bằng hai ngón để bấm phải."
 
-#: kcm/libinput/touchpad.qml:524
+#: kcm/libinput/touchpad.qml:526
 #, kde-format
 msgid "Middle-click"
 msgstr "Bấm giữa"
 
-#: kcm/libinput/touchpad.qml:525
+#: kcm/libinput/touchpad.qml:527
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Vỗ bằng hai ngón để bấm giữa."
 
-#: kcm/libinput/touchpad.qml:584
+#: kcm/libinput/touchpad.qml:586
 #, kde-format
 msgid "Scrolling:"
 msgstr "Cuộn:"
 
-#: kcm/libinput/touchpad.qml:613
+#: kcm/libinput/touchpad.qml:615
 #, kde-format
 msgid "Two fingers"
 msgstr "Hai ngón"
 
-#: kcm/libinput/touchpad.qml:617
+#: kcm/libinput/touchpad.qml:619
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Lướt bằng hai ngón sẽ thực hiện việc cuộn."
 
-#: kcm/libinput/touchpad.qml:625
+#: kcm/libinput/touchpad.qml:627
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Các cạnh bàn cảm ứng"
 
-#: kcm/libinput/touchpad.qml:629
+#: kcm/libinput/touchpad.qml:631
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Lướt trên các cạnh bàn cảm ứng sẽ thực hiện việc cuộn."
 
-#: kcm/libinput/touchpad.qml:639
+#: kcm/libinput/touchpad.qml:641
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Đảo hướng cuộn (cuộn tự nhiên)"
 
-#: kcm/libinput/touchpad.qml:655
+#: kcm/libinput/touchpad.qml:657
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Cuộn như màn hình cảm ứng."
 
-#: kcm/libinput/touchpad.qml:663 kcm/libinput/touchpad.qml:680
+#: kcm/libinput/touchpad.qml:665 kcm/libinput/touchpad.qml:682
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Tắt cuộn ngang"
 
-#: kcm/libinput/touchpad.qml:688
+#: kcm/libinput/touchpad.qml:690
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Tốc độ cuộn:"
 
-#: kcm/libinput/touchpad.qml:739
+#: kcm/libinput/touchpad.qml:741
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Chậm"
 
-#: kcm/libinput/touchpad.qml:746
+#: kcm/libinput/touchpad.qml:748
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Nhanh"
 
-#: kcm/libinput/touchpad.qml:757
+#: kcm/libinput/touchpad.qml:759
 #, kde-format
 msgid "Right-click:"
 msgstr "Bấm phải:"
 
-#: kcm/libinput/touchpad.qml:791
+#: kcm/libinput/touchpad.qml:793
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "Nhấn góc dưới phải"
 
-#: kcm/libinput/touchpad.qml:795
+#: kcm/libinput/touchpad.qml:797
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr "Các nút do phần mềm bật sẽ được thêm vào phần dưới của bàn cảm ứng."
 
-#: kcm/libinput/touchpad.qml:803
+#: kcm/libinput/touchpad.qml:805
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "Nhấn bất kì đâu bằng hai ngón"
 
-#: kcm/libinput/touchpad.qml:807
+#: kcm/libinput/touchpad.qml:809
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "Vỗ bằng hai ngón để bấm phải."
 
-#: kcm/libinput/touchpad.qml:821
+#: kcm/libinput/touchpad.qml:823
 #, kde-format
 msgid "Middle-click: "
 msgstr "Bấm giữa: "
 
-#: kcm/libinput/touchpad.qml:850
+#: kcm/libinput/touchpad.qml:852
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Nhấn phần dưới giữa"
 
-#: kcm/libinput/touchpad.qml:854
+#: kcm/libinput/touchpad.qml:856
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
 msgstr "Nút giữa do phần mềm bật sẽ được thêm vào phần dưới của bàn cảm ứng."
 
-#: kcm/libinput/touchpad.qml:862
+#: kcm/libinput/touchpad.qml:864
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Nhấn đồng thời góc dưới trái và dưới phải"
 
-#: kcm/libinput/touchpad.qml:875
+#: kcm/libinput/touchpad.qml:877
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Nhấn bất kì đâu bằng ba ngón"
 
-#: kcm/libinput/touchpad.qml:881
+#: kcm/libinput/touchpad.qml:883
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Nhấn bất kì đâu bằng ba ngón."

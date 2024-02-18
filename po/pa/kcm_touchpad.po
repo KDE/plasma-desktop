@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2024-01-01 11:42-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -52,7 +52,7 @@ msgstr ""
 msgid "Cannot connect to X server"
 msgstr ""
 
-#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:94
+#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:95
 #, kde-format
 msgid "No touchpad found"
 msgstr "ਕੋਈ ਟੱਚਪੈਡ ਨਹੀਂ ਲੱਭਿਆ"
@@ -72,280 +72,285 @@ msgstr "ਟੱਚਪੈਡ ਸੰਰਚਨਾ ਪੜ੍ਹੀ ਨਹੀਂ ਜ�
 msgid "Cannot read default touchpad configuration"
 msgstr "ਮੂਲ ਟੱਚਪੈਡ ਸੰਰਚਨਾ ਪੜ੍ਹੀ ਨਹੀਂ ਜਾ ਸਕਦੀ"
 
-#: kcm/libinput/touchpad.qml:108
+#: kcm/libinput/touchpad.qml:96
+#, kde-format
+msgid "Connect an external touchpad"
+msgstr ""
+
+#: kcm/libinput/touchpad.qml:110
 #, kde-format
 msgid "Device:"
 msgstr "ਡਿਵਾਈਸ:"
 
-#: kcm/libinput/touchpad.qml:134
+#: kcm/libinput/touchpad.qml:136
 #, kde-format
 msgid "General:"
 msgstr "ਆਮ:"
 
-#: kcm/libinput/touchpad.qml:135
+#: kcm/libinput/touchpad.qml:137
 #, kde-format
 msgid "Device enabled"
 msgstr "ਡਿਵਾਈਸ ਸਮਰੱਥ ਹੈ"
 
-#: kcm/libinput/touchpad.qml:139
+#: kcm/libinput/touchpad.qml:141
 #, kde-format
 msgid "Accept input through this device."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਰਾਹੀਂ ਇਨਪੁੱਟ ਮਨਜ਼ੂਰ ਕਰੋ"
 
-#: kcm/libinput/touchpad.qml:163
+#: kcm/libinput/touchpad.qml:165
 #, kde-format
 msgid "Disable while typing"
 msgstr "ਲਿਖਣ ਦੇ ਦੌਰਾਨ ਅਸਮਰੱਥ ਕਰੋ"
 
-#: kcm/libinput/touchpad.qml:167
+#: kcm/libinput/touchpad.qml:169
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr "ਗਲਤੀ ਨਾਲ ਇਨਪੁੱਟ ਨੂੰ ਰੋਕਣ ਲਈ ਲਿਖਣ ਦੌਰਾਨ ਟੱਚਪੈਡ ਨੂੰ ਅਸਮਰੱਥ ਕਰੋ।"
 
-#: kcm/libinput/touchpad.qml:191
+#: kcm/libinput/touchpad.qml:193
 #, kde-format
 msgid "Left handed mode"
 msgstr "ਖੱਬੇ ਹੱਥਾ ਢੰਗ"
 
-#: kcm/libinput/touchpad.qml:195
+#: kcm/libinput/touchpad.qml:197
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "ਖੱਬੇ ਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਆਪਸ ਵਿੱਚ ਬਦਲੋ।"
 
-#: kcm/libinput/touchpad.qml:219
+#: kcm/libinput/touchpad.qml:221
 #, kde-format
 msgid "Press left and right buttons for middle click"
 msgstr "ਵਿਚਲੇ ਬਟਨ ਕਲਿੱਕ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਦੋਵੇਂ ਬਟਨਾਂ ਨੂੰ ਦਬਾਓ"
 
-#: kcm/libinput/touchpad.qml:223 kcm/libinput/touchpad.qml:866
+#: kcm/libinput/touchpad.qml:225 kcm/libinput/touchpad.qml:868
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "ਮਿਡਲ ਬਟਨ ਕਲਿੱਕ ਕਰਨ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਇਕੱਠੇ ਕਲਿੱਕ ਕਰੋ।"
 
-#: kcm/libinput/touchpad.qml:254
+#: kcm/libinput/touchpad.qml:256
 #, kde-format
 msgid "Pointer speed:"
 msgstr "ਪੁਆਇੰਟਰ ਦੀ ਗਤੀ:"
 
-#: kcm/libinput/touchpad.qml:352
+#: kcm/libinput/touchpad.qml:354
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "ਪੁਆਇੰਟਰ ਐਕਸਰਲੇਸ਼ਨ:"
 
-#: kcm/libinput/touchpad.qml:383
+#: kcm/libinput/touchpad.qml:385
 #, kde-format
 msgid "None"
 msgstr "ਕੋਈ ਨਹੀਂ"
 
-#: kcm/libinput/touchpad.qml:387
+#: kcm/libinput/touchpad.qml:389
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "ਕਰਸਰ ਉਂਗਲ ਵਾਂਗ ਉਸ ਜਿੰਨੀ ਦੂਰੀ ਹੀ ਚੱਲੇ।"
 
-#: kcm/libinput/touchpad.qml:396
+#: kcm/libinput/touchpad.qml:398
 #, kde-format
 msgid "Standard"
 msgstr "ਸਟੈਂਡਰਡ"
 
-#: kcm/libinput/touchpad.qml:400
+#: kcm/libinput/touchpad.qml:402
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "ਕਰਸਰ ਹਿਲਜੁਲ ਦੀ ਦੂਰੀ ਉਂਗਲ ਦੀ ਹਿਲਜੁਲ ਦੀ ਸਪੀਡ ਉੱਤੇ ਨਿਰਭਰ ਕਰਦੀ ਹੈ।"
 
-#: kcm/libinput/touchpad.qml:415
+#: kcm/libinput/touchpad.qml:417
 #, kde-format
 msgid "Tapping:"
 msgstr "ਛੋਹਣਾ:"
 
-#: kcm/libinput/touchpad.qml:416
+#: kcm/libinput/touchpad.qml:418
 #, kde-format
 msgid "Tap-to-click"
 msgstr "ਕਲਿੱਕ ਕਰਨ ਲਈ ਛੋਹੋ"
 
-#: kcm/libinput/touchpad.qml:420
+#: kcm/libinput/touchpad.qml:422
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "ਖੱਬਾ ਬਟਨ ਕਲਿੱਕ ਕਰਨ ਲਈ ਇੱਕ ਵਾਰ ਛੋਹੋ"
 
-#: kcm/libinput/touchpad.qml:449
+#: kcm/libinput/touchpad.qml:451
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "ਛੋਹੋ-ਤੇ-ਖਿੱਚੋ"
 
-#: kcm/libinput/touchpad.qml:453
+#: kcm/libinput/touchpad.qml:455
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr ""
 
-#: kcm/libinput/touchpad.qml:480
+#: kcm/libinput/touchpad.qml:482
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "ਟੈਪ ਤੇ ਖਿੱਚੋ ਲਾਕ"
 
-#: kcm/libinput/touchpad.qml:484
+#: kcm/libinput/touchpad.qml:486
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr ""
 
-#: kcm/libinput/touchpad.qml:504
+#: kcm/libinput/touchpad.qml:506
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "ਦੋ-ਉਂਗਲ ਨਾਲ ਟੈਪ:"
 
-#: kcm/libinput/touchpad.qml:515
+#: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "ਸੱਜਾ ਕਲਿੱਕ (ਮੱਧ-ਕਲਿੱਕ ਲਈ ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਛੋਹਣਾ)"
 
-#: kcm/libinput/touchpad.qml:516
+#: kcm/libinput/touchpad.qml:518
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ, ਮਿਡਲ ਕਲਿੱਕ ਲਈ ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ।"
 
-#: kcm/libinput/touchpad.qml:518
+#: kcm/libinput/touchpad.qml:520
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "ਮਿਡਲ-ਕਲਿੱਕ (ਤਿੰਨ-ਉਂਗਲ ਟੈਪ ਸੱਜਾ ਕਲਿੱਕ)"
 
-#: kcm/libinput/touchpad.qml:519
+#: kcm/libinput/touchpad.qml:521
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
 msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ, ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ।"
 
-#: kcm/libinput/touchpad.qml:521
+#: kcm/libinput/touchpad.qml:523
 #, kde-format
 msgid "Right-click"
 msgstr "ਸੱਜਾ-ਕਲਿੱਕ"
 
-#: kcm/libinput/touchpad.qml:522
+#: kcm/libinput/touchpad.qml:524
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
 
-#: kcm/libinput/touchpad.qml:524
+#: kcm/libinput/touchpad.qml:526
 #, kde-format
 msgid "Middle-click"
 msgstr "ਮੱਧ-ਕਲਿੱਕ"
 
-#: kcm/libinput/touchpad.qml:525
+#: kcm/libinput/touchpad.qml:527
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
 
-#: kcm/libinput/touchpad.qml:584
+#: kcm/libinput/touchpad.qml:586
 #, kde-format
 msgid "Scrolling:"
 msgstr "ਸਰਕਾਉਣਾ:"
 
-#: kcm/libinput/touchpad.qml:613
+#: kcm/libinput/touchpad.qml:615
 #, kde-format
 msgid "Two fingers"
 msgstr "ਦੋ ਉਂਗਲਾਂ"
 
-#: kcm/libinput/touchpad.qml:617
+#: kcm/libinput/touchpad.qml:619
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "ਦੋ ਉਂਗਲਾਂ ਸਰਕਾਉਣ ਨਾਲ ਸਕਰੋਲ ਕਰਨਾ।"
 
-#: kcm/libinput/touchpad.qml:625
+#: kcm/libinput/touchpad.qml:627
 #, kde-format
 msgid "Touchpad edges"
 msgstr "ਟੱਚਪੈਡ ਕਿਨਾਰੇ"
 
-#: kcm/libinput/touchpad.qml:629
+#: kcm/libinput/touchpad.qml:631
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "ਟੱਚ-ਪੈਡ ਕੰਢਿਆਂ ਉੱਤੇ ਸਕਰੋਲ ਕਾਲ ਸਰਕਾਓ।"
 
-#: kcm/libinput/touchpad.qml:639
+#: kcm/libinput/touchpad.qml:641
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "ਉਲਟ ਸਕਰੋਲ ਦੀ ਦਿਸ਼ਾ (ਕੁਦਰਤੀ ਸਕਰੋਲਿੰਗ)"
 
-#: kcm/libinput/touchpad.qml:655
+#: kcm/libinput/touchpad.qml:657
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "ਟੱਚ ਸਕਰੀਨ ਵਾਂਗ ਸਕਰੋਲਿੰਗ"
 
-#: kcm/libinput/touchpad.qml:663 kcm/libinput/touchpad.qml:680
+#: kcm/libinput/touchpad.qml:665 kcm/libinput/touchpad.qml:682
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "ਲੇਟਵੇ ਸਰਕਾਉਣਾ ਅਸਮਰੱਥ ਕਰੋ"
 
-#: kcm/libinput/touchpad.qml:688
+#: kcm/libinput/touchpad.qml:690
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "ਸਰਕਾਉਣ ਦੀ ਗਤੀ:"
 
-#: kcm/libinput/touchpad.qml:739
+#: kcm/libinput/touchpad.qml:741
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "ਵੱਧ ਹੌਲੀ"
 
-#: kcm/libinput/touchpad.qml:746
+#: kcm/libinput/touchpad.qml:748
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "ਵੱਧ ਤੇਜ਼"
 
-#: kcm/libinput/touchpad.qml:757
+#: kcm/libinput/touchpad.qml:759
 #, kde-format
 msgid "Right-click:"
 msgstr "ਸੱਜਾ-ਕਲਿੱਕ:"
 
-#: kcm/libinput/touchpad.qml:791
+#: kcm/libinput/touchpad.qml:793
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "ਹੇਠਾਂ-ਸੱਜਾ ਕੋਨਾ ਦਬਾਓ"
 
-#: kcm/libinput/touchpad.qml:795
+#: kcm/libinput/touchpad.qml:797
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr ""
 
-#: kcm/libinput/touchpad.qml:803
+#: kcm/libinput/touchpad.qml:805
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ"
 
-#: kcm/libinput/touchpad.qml:807
+#: kcm/libinput/touchpad.qml:809
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "ਸੱਜਾ ਕਲਿੱਕ ਸਮਰੱਥ ਕਰਨ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ।"
 
-#: kcm/libinput/touchpad.qml:821
+#: kcm/libinput/touchpad.qml:823
 #, kde-format
 msgid "Middle-click: "
 msgstr "ਮਿਡਲ-ਕਲਿੱਕ:"
 
-#: kcm/libinput/touchpad.qml:850
+#: kcm/libinput/touchpad.qml:852
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "ਹੇਠਾਂ-ਮਿਡਲ ਦਬਾਓ"
 
-#: kcm/libinput/touchpad.qml:854
+#: kcm/libinput/touchpad.qml:856
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
 msgstr ""
 
-#: kcm/libinput/touchpad.qml:862
+#: kcm/libinput/touchpad.qml:864
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr ""
 
-#: kcm/libinput/touchpad.qml:875
+#: kcm/libinput/touchpad.qml:877
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ"
 
-#: kcm/libinput/touchpad.qml:881
+#: kcm/libinput/touchpad.qml:883
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ।"

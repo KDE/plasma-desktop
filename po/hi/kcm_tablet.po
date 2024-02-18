@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2022-02-26 14:11+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -70,82 +70,89 @@ msgstr ""
 msgid "Custom size"
 msgstr ""
 
-#: ui/main.qml:31
-#, kde-format
-msgid "No drawing tablets found."
+#: ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found."
+msgid "No drawing tablets found"
 msgstr "कोई चित्रकारी टेबलेट नही मिले ।"
 
-#: ui/main.qml:39
+#: ui/main.qml:29
+#, fuzzy, kde-format
+#| msgid "Configure drawing tablets"
+msgid "Connect a drawing tablet"
+msgstr "चित्रकारी टेबलेट विन्यस्त करें"
+
+#: ui/main.qml:41
 #, fuzzy, kde-format
 #| msgid "Device:"
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "उपकरण :"
 
-#: ui/main.qml:77
+#: ui/main.qml:79
 #, kde-format
 msgid "Target display:"
 msgstr "नियोजित प्रदर्शक :"
 
-#: ui/main.qml:96
+#: ui/main.qml:98
 #, kde-format
 msgid "Orientation:"
 msgstr "दिशा निर्धारण :"
 
-#: ui/main.qml:108
+#: ui/main.qml:110
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "बाएँ हाथ वाला मोड :"
 
-#: ui/main.qml:118
+#: ui/main.qml:120
 #, kde-format
 msgid "Area:"
 msgstr ""
 
-#: ui/main.qml:206
+#: ui/main.qml:208
 #, kde-format
 msgid "Resize the tablet area"
 msgstr ""
 
-#: ui/main.qml:230
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr ""
 
-#: ui/main.qml:238
+#: ui/main.qml:240
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr ""
 
-#: ui/main.qml:247
+#: ui/main.qml:249
 #, kde-format
 msgid "Pen Button 1"
 msgstr ""
 
-#: ui/main.qml:248
+#: ui/main.qml:250
 #, kde-format
 msgid "Pen Button 2"
 msgstr ""
 
-#: ui/main.qml:249
+#: ui/main.qml:251
 #, kde-format
 msgid "Pen Button 3"
 msgstr ""
 
-#: ui/main.qml:293
+#: ui/main.qml:295
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr ""
 
-#: ui/main.qml:304
+#: ui/main.qml:306
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgid "Button %1:"
 msgstr ""
@@ -160,6 +167,3 @@ msgstr ""
 
 #~ msgid "Tablet"
 #~ msgstr "टेबलेट"
-
-#~ msgid "Configure drawing tablets"
-#~ msgstr "चित्रकारी टेबलेट विन्यस्त करें"

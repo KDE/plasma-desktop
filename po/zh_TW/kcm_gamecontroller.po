@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2023-11-29 17:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -41,30 +41,35 @@ msgctxt "Device name and path"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/main.qml:22
+#: ui/main.qml:23
 #, kde-format
 msgid "No game controllers found"
 msgstr "找不到遊戲控制器"
 
-#: ui/main.qml:54
+#: ui/main.qml:24
+#, kde-format
+msgid "Connect a wired or wireless controller"
+msgstr ""
+
+#: ui/main.qml:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
 msgstr "裝置："
 
-#: ui/main.qml:81
+#: ui/main.qml:83
 #, kde-format
 msgctxt "@label Visual representation of an axis position"
 msgid "Position:"
 msgstr "位置："
 
-#: ui/main.qml:100
+#: ui/main.qml:102
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
 msgstr "按鍵："
 
-#: ui/main.qml:122
+#: ui/main.qml:124
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"

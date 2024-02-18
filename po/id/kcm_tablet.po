@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
 "PO-Revision-Date: 2023-01-13 08:52+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -69,84 +69,91 @@ msgstr "Pas Keluaran dalam tablet"
 msgid "Custom size"
 msgstr "Ukuran kustom"
 
-#: ui/main.qml:31
-#, kde-format
-msgid "No drawing tablets found."
+#: ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found."
+msgid "No drawing tablets found"
 msgstr "Tidak ada tablet gambar yang ditemukan."
 
-#: ui/main.qml:39
+#: ui/main.qml:29
+#, fuzzy, kde-format
+#| msgid "Configure drawing tablets"
+msgid "Connect a drawing tablet"
+msgstr "Konfugurasi tablet gambar"
+
+#: ui/main.qml:41
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Peranti:"
 
-#: ui/main.qml:77
+#: ui/main.qml:79
 #, kde-format
 msgid "Target display:"
 msgstr "Target layar:"
 
-#: ui/main.qml:96
+#: ui/main.qml:98
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientasi:"
 
-#: ui/main.qml:108
+#: ui/main.qml:110
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Mode tangan kiri:"
 
-#: ui/main.qml:118
+#: ui/main.qml:120
 #, kde-format
 msgid "Area:"
 msgstr "Area:"
 
-#: ui/main.qml:206
+#: ui/main.qml:208
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Ubah ukuran area tablet"
 
-#: ui/main.qml:230
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Kuncu rasio aspek"
 
-#: ui/main.qml:238
+#: ui/main.qml:240
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:247
+#: ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Button %1:"
 msgid "Pen Button 1"
 msgstr "Tombol %1:"
 
-#: ui/main.qml:248
+#: ui/main.qml:250
 #, fuzzy, kde-format
 #| msgid "Tool Button 2"
 msgid "Pen Button 2"
 msgstr "Tombol Alat 2"
 
-#: ui/main.qml:249
+#: ui/main.qml:251
 #, fuzzy, kde-format
 #| msgid "Tool Button 3"
 msgid "Pen Button 3"
 msgstr "Tombol Alat 3"
 
-#: ui/main.qml:293
+#: ui/main.qml:295
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Pad:"
 
-#: ui/main.qml:304
+#: ui/main.qml:306
 #, kde-format
 msgid "None"
 msgstr "Nihil"
 
-#: ui/main.qml:326
+#: ui/main.qml:328
 #, kde-format
 msgid "Button %1:"
 msgstr "Tombol %1:"
@@ -164,6 +171,3 @@ msgstr "Tombol %1:"
 
 #~ msgid "Tablet"
 #~ msgstr "Tablet"
-
-#~ msgid "Configure drawing tablets"
-#~ msgstr "Konfugurasi tablet gambar"
