@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Matjaž Jeran <matjaz.jeran@amis.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:39+0000\n"
-"PO-Revision-Date: 2024-01-13 07:22+0100\n"
+"PO-Revision-Date: 2024-02-18 21:39+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -70,16 +70,14 @@ msgid "Custom size"
 msgstr "Velikost po meri"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found."
+#, kde-format
 msgid "No drawing tablets found"
-msgstr "Ni najdenih tablic za risanje."
+msgstr "Ni najdenih risalnih tablic"
 
 #: ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "Configure drawing tablets"
+#, kde-format
 msgid "Connect a drawing tablet"
-msgstr "Nastavi tablice za risanje"
+msgstr "Priklopi risalno tablico"
 
 #: ui/main.qml:41
 #, kde-format

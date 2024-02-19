@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Kishore G <kishore96@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:39+0000\n"
-"PO-Revision-Date: 2022-12-13 19:53+0530\n"
+"PO-Revision-Date: 2024-02-18 18:14+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -69,16 +69,14 @@ msgid "Custom size"
 msgstr "விருப்ப அளவு"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found."
+#, kde-format
 msgid "No drawing tablets found"
-msgstr "வரைகலை பலகைகளேதும் கண்டுபிடிக்கப்படவில்லை."
+msgstr "வரைபலகைகளேதும் கண்டுபிடிக்கப்படவில்லை"
 
 #: ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "Configure drawing tablets"
+#, kde-format
 msgid "Connect a drawing tablet"
-msgstr "வரைகலை பலகைகளை அமையுங்கள்"
+msgstr "வரைபலகையை இணைக்கவும்"
 
 #: ui/main.qml:41
 #, kde-format
@@ -124,22 +122,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pen Button 1"
-msgstr "பட்டன் %1:"
+msgstr "பேனா பட்டன் 1"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Tool Button 2"
+#, kde-format
 msgid "Pen Button 2"
-msgstr "கருவி பட்டன் 2"
+msgstr "பேனா பட்டன் 2"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Tool Button 3"
+#, kde-format
 msgid "Pen Button 3"
-msgstr "கருவி பட்டன் 3"
+msgstr "பேனா பட்டன் 3"
 
 #: ui/main.qml:295
 #, kde-format

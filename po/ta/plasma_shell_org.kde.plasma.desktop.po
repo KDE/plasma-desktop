@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 00:38+0000\n"
-"PO-Revision-Date: 2023-12-17 16:46+0530\n"
+"PO-Revision-Date: 2024-02-18 18:14+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -304,8 +304,6 @@ msgid "Bottom"
 msgstr "கீழே"
 
 #: contents/configuration/PanelConfiguration.qml:175
-#, fuzzy
-#| msgid "Set Position..."
 msgid "Set Position…"
 msgstr "இருப்பிடத்தை அமை…"
 
@@ -318,14 +316,12 @@ msgid "Center"
 msgstr "நடுவில்"
 
 #: contents/configuration/PanelConfiguration.qml:291
-#, fuzzy
-#| msgid "Height:"
 msgid "Height"
-msgstr "உயரம்:"
+msgstr "உயரம்"
 
 #: contents/configuration/PanelConfiguration.qml:292
 msgid "Width"
-msgstr ""
+msgstr "அகலம்"
 
 #: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill height"
@@ -522,8 +518,8 @@ msgstr "வகைகள்"
 #: contents/explorer/WidgetExplorer.qml:215
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ஒரு பிளாஸ்மாய்டை நீக்கியதை உறுதிப்படுத்தவும்"
+msgstr[1] "%1 பிளாஸ்மாய்டுகளை நீக்கியதை உறுதிப்படுத்தவும்"
 
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"

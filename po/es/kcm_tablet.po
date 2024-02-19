@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:39+0000\n"
-"PO-Revision-Date: 2024-01-14 23:59+0100\n"
+"PO-Revision-Date: 2024-02-18 19:39+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -71,16 +71,14 @@ msgid "Custom size"
 msgstr "Tamaño personalizado"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found."
+#, kde-format
 msgid "No drawing tablets found"
-msgstr "No se han encontrado tabletas de dibujo."
+msgstr "No se han encontrado tabletas de dibujo"
 
 #: ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "Configure drawing tablets"
+#, kde-format
 msgid "Connect a drawing tablet"
-msgstr "Configurar las tabletas de dibujo"
+msgstr "Conectar una tableta de dibujo"
 
 #: ui/main.qml:41
 #, kde-format
