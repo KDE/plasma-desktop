@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1665655 2023-11-23 02:03:28Z scripty $
+# $Id: kcm_access.po 1673565 2024-02-19 02:51:30Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -9,13 +9,13 @@
 # Gregor Rakar <gregor.rakar@kiss.si>, 2003, 2005.
 # Jure Repinc <jlp@holodeck1.com>, 2006, 2007, 2008.
 # Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014, 2015, 2018.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2022, 2023, 2024 Matjaž Jeran <matjaz.jeran@amis.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:39+0000\n"
-"PO-Revision-Date: 2023-08-24 06:40+0200\n"
+"PO-Revision-Date: 2024-02-18 21:41+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: kcmaccess.cpp:112
 #, kde-format
@@ -401,7 +401,7 @@ msgstr "Pozvoni sistemski zvonec:"
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "ob pritisnjena katerakoli tipka"
+msgstr "ob pritisnjeni katerikoli tipki"
 
 #: ui/KeyboardFilters.qml:72
 #, kde-format
