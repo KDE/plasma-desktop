@@ -348,7 +348,7 @@ PlasmaExtras.Menu {
 
                 for (var i = 0; i < virtualDesktopInfo.desktopNames.length; ++i) {
                     menuItem = menu.newMenuItem(virtualDesktopsMenu);
-                    menuItem.text = i18nc("1 = number of desktop, 2 = desktop name", "&%1 %2", i + 1, virtualDesktopInfo.desktopNames[i]);
+                    menuItem.text = virtualDesktopInfo.desktopNames[i];
                     menuItem.checkable = true;
                     menuItem.checked = Qt.binding((function(i) {
                         return function() { return menu.visualParent && menu.get(atm.VirtualDesktops).indexOf(virtualDesktopInfo.desktopIds[i]) > -1 };
