@@ -866,6 +866,8 @@ Kicker.DashboardWindow {
 
                                 anchors {
                                     fill: parent
+                                    topMargin: highlightItemSvg.margins.top
+                                    bottomMargin: highlightItemSvg.margins.bottom
                                     leftMargin: highlightItemSvg.margins.left
                                     rightMargin: highlightItemSvg.margins.right
                                 }
