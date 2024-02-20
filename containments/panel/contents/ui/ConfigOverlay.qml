@@ -274,7 +274,7 @@ MouseArea {
                     visible: tooltip.location !== PlasmaCore.Types.TopEdge
                              && (configurationArea.currentApplet?.applet.plasmoid.internalAction("remove")?.enabled ?? false)
                     icon.name: "delete"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove")
+                    text: i18n("Remove")
                     onClicked: {
                         configurationArea.currentApplet.applet.plasmoid.internalAction("remove").trigger();
                         configurationArea.currentApplet = null;
@@ -284,7 +284,7 @@ MouseArea {
                     id: configureButton
                     Layout.fillWidth: true
                     icon.name: "configure"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Configure…")
+                    text: i18n("Configure…")
                     visible: configurationArea.currentApplet.applet.plasmoid.hasConfigurationInterface
                     onClicked: {
                         configurationArea.currentApplet.applet.plasmoid.internalAction("configure").trigger();
@@ -295,7 +295,7 @@ MouseArea {
                     id: alternativesButton
                     Layout.fillWidth: true
                     icon.name: "widget-alternatives"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Show Alternatives…")
+                    text: i18n("Show Alternatives…")
                     onClicked: {
                         configurationArea.currentApplet.applet.plasmoid.internalAction("alternatives").trigger();
                         configurationArea.currentApplet = null;
@@ -308,7 +308,7 @@ MouseArea {
                     visible: tooltip.location === PlasmaCore.Types.TopEdge
                              && (configurationArea.currentApplet?.applet.plasmoid.internalAction("remove")?.enabled ?? false)
                     icon.name: "delete"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove")
+                    text: i18n("Remove")
                     onClicked: {
                         configurationArea.currentApplet.applet.plasmoid.internalAction("remove").trigger();
                         configurationArea.currentApplet = null;
@@ -318,7 +318,7 @@ MouseArea {
                 Kirigami.Heading {
                     Layout.fillWidth: true
                     visible: panelSpacerWidth.visible
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Spacer width")
+                    text: i18n("Spacer width")
                     level: 3
                     horizontalAlignment: Text.AlignHCenter
                 }
