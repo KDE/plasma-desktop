@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:39+0000\n"
-"PO-Revision-Date: 2024-02-09 19:22+0100\n"
+"PO-Revision-Date: 2024-02-19 21:39+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -69,16 +69,14 @@ msgid "Custom size"
 msgstr "사용자 정의 크기"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found."
+#, kde-format
 msgid "No drawing tablets found"
-msgstr "그래픽 태블릿을 찾을 수 없습니다."
+msgstr "그래픽 태블릿을 찾을 수 없음"
 
 #: ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "Configure drawing tablets"
+#, kde-format
 msgid "Connect a drawing tablet"
-msgstr "그래픽 태블릿 설정"
+msgstr "그래픽 태블릿을 연결하십시오"
 
 #: ui/main.qml:41
 #, kde-format
