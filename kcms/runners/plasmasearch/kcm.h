@@ -47,7 +47,7 @@ public Q_SLOTS:
     };
     void addToFavorites(const KPluginMetaData &data);
     void removeFromFavorites(const KPluginMetaData &data);
-    void movePlugin(const KPluginMetaData &data, int destIndex);
+    void movePlugin(const KPluginMetaData &data, qsizetype destIndex);
 
 private:
     void setDefaultIndicatorVisible(QWidget *widget, bool visible);

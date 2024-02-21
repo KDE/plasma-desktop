@@ -114,8 +114,13 @@ void SearchConfigModule::removeFromFavorites(const KPluginMetaData &data)
     checkNeedsSave();
 }
 
-void SearchConfigModule::movePlugin(const KPluginMetaData &data, int destIndex)
+void SearchConfigModule::movePlugin(const KPluginMetaData &data, qsizetype destIndex)
 {
+    if (destIndex >= m_favoriteMetaDataList.size()) {
+        // Dragged outside favorties section, snap it back to the end.
+        destIndex = m_favoriteMetaDataList.size() - 1;
+    }
+
     m_favoriteMetaDataList.removeOne(data);
     m_favoriteMetaDataList.insert(destIndex, data);
     checkNeedsSave();
