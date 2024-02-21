@@ -124,10 +124,10 @@ PlasmoidItem {
                 // Add descent to the sides to make the spacing around Latin text look more even.
                 leftPadding: headingFontMetrics.descent
                 rightPadding: headingFontMetrics.descent
-                text: root.errorInformation && root.errorInformation.appletName ?
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Sorry! There was an error loading %1.", root.errorInformation.appletName)
+                text: (root.errorInformation && root.errorInformation.appletName ?
+                    (compactContentLoader.active ? root.errorInformation.compactError : i18nd("plasma_shell_org.kde.plasma.desktop", "Sorry! There was an error loading %1.", root.errorInformation.appletName))
                     // This is just to suppress warnings. Users should never see this.
-                    : "No error information."
+                    : "No error information.")
                 textFormat: Text.PlainText
                 level: 2
                 wrapMode: Text.Wrap
