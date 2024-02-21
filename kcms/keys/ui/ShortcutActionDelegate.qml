@@ -171,7 +171,7 @@ QQC2.ItemDelegate {
                                 keySequence: modelData
                                 showClearButton: false
                                 modifierOnlyAllowed: true
-                                multiKeyShortcutsAllowed: supportsMultipleKeys
+                                multiKeyShortcutsAllowed: true
                                 checkForConflictsAgainst: ShortcutType.None
                                 onCaptureFinished: {
                                     kcm.requestKeySequence(this, originalIndex, keySequence, modelData)
@@ -219,7 +219,7 @@ QQC2.ItemDelegate {
                             KeySequenceItem {
                                 showClearButton: false
                                 modifierOnlyAllowed: true
-                                multiKeyShortcutsAllowed: model.supportsMultipleKeys
+                                multiKeyShortcutsAllowed: true
                                 checkForConflictsAgainst: ShortcutType.None
                                 onCaptureFinished: {
                                     kcm.requestKeySequence(this, originalIndex, keySequence)

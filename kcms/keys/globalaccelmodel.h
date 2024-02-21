@@ -25,8 +25,6 @@ class GlobalAccelModel : public BaseModel
 public:
     GlobalAccelModel(KGlobalAccelInterface *interface, QObject *parent = nullptr);
 
-    QVariant data(const QModelIndex &index, int role) const override;
-
     void addApplication(const QString &desktopFileName, const QString &displayName);
 
     void exportToConfig(KConfigBase &config) override;
