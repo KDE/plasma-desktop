@@ -89,7 +89,7 @@ KCM.SimpleKCM {
             id: fontDialog
             title: i18nc("@title:window", "Select Font")
 
-            font: !cfg_font || cfg_font.family === "" ? Kirigami.Theme.defaultFont : cfg_font
+            selectedFont: !cfg_font || cfg_font.family === "" ? Kirigami.Theme.defaultFont : cfg_font
 
             onAccepted: {
                 cfg_font = font
