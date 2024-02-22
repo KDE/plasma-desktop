@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-02-22 02:24+0000\n"
 "PO-Revision-Date: 2023-01-08 16:15+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -482,12 +482,6 @@ msgstr "Di chu&yển đến bàn làm việc hiện tại"
 msgid "&All Desktops"
 msgstr "&Tất cả các bàn làm việc"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, kde-format
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "&%1 %2"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
@@ -737,6 +731,10 @@ msgstr "Quên các địa điểm gần đây đi"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Quên các tệp gần đây đi"
+
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "&%1 %2"
 
 #~ msgid "Always arrange tasks in rows of as many columns"
 #~ msgstr "Luôn sắp xếp tác vụ thành hàng của từng đó cột"

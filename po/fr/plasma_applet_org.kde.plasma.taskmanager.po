@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-02-22 02:24+0000\n"
 "PO-Revision-Date: 2023-11-17 10:19+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -492,12 +492,6 @@ msgstr "Déplacer vers le bureau &courant"
 msgid "&All Desktops"
 msgstr "&Tous les bureaux"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, kde-format
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "&%1 %2"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
@@ -748,6 +742,10 @@ msgstr "Oublier les emplacements récents"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Oublier les fichiers récents"
+
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "&%1 %2"
 
 #~ msgid "Always arrange tasks in rows of as many columns"
 #~ msgstr "Toujours organiser les tâches en lignes d'autant de colonnes"

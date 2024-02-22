@@ -3,14 +3,15 @@
 #
 # Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017, 2018.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022, 2023.
+# Jure Repinc <jlp@holodeck1.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-17 02:27+0000\n"
-"PO-Revision-Date: 2023-09-13 07:47+0200\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
-"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"PO-Revision-Date: 2024-02-20 03:09+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
+"Language-Team: LUGOS\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -151,7 +152,7 @@ msgstr "Samodejno onemogočeno v načinu dotikanja"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr "Nastavi omogočene vtičnike za iskanje…"
+msgstr "Nastavi omogočene vtičnike iskanja …"
 
 #: package/contents/ui/ConfigGeneral.qml:181
 #, kde-format
@@ -213,7 +214,7 @@ msgstr "Prikaži gumbe za:"
 #: package/contents/ui/LeaveButtons.qml:129
 #, kde-format
 msgid "Power"
-msgstr "Moč"
+msgstr "Napajanje"
 
 #: package/contents/ui/ConfigGeneral.qml:246
 #, kde-format
@@ -223,12 +224,12 @@ msgstr "Sejo"
 #: package/contents/ui/ConfigGeneral.qml:255
 #, kde-format
 msgid "Power and session"
-msgstr "Izklop in sejo"
+msgstr "Napajanje in sejo"
 
 #: package/contents/ui/ConfigGeneral.qml:264
 #, kde-format
 msgid "Show action button captions"
-msgstr "Prikaži napise gumbov aktivnosti"
+msgstr "Prikaži napise gumbov dejanj"
 
 #: package/contents/ui/Footer.qml:97
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-02-22 02:24+0000\n"
 "PO-Revision-Date: 2024-02-09 19:26+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -481,12 +481,6 @@ msgstr "현재 바탕 화면으로 이동(&T)"
 msgid "&All Desktops"
 msgstr "모든 바탕 화면(&A)"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, kde-format
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "%1 %2(&%1)"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
@@ -735,6 +729,10 @@ msgstr "최근 위치 비우기"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "최근 파일 비우기"
+
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "%1 %2(&%1)"
 
 #~ msgid "Always arrange tasks in rows of as many columns"
 #~ msgstr "창을 열 우선으로 정렬"

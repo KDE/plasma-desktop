@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-02-22 02:24+0000\n"
 "PO-Revision-Date: 2023-11-16 13:11+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -482,12 +482,6 @@ msgstr "העברה לשולחן העבודה ה&נוכחי"
 msgid "&All Desktops"
 msgstr "&כל שולחנות העבודה"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, kde-format
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "&%1 %2"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
@@ -742,6 +736,10 @@ msgstr "פינוי מקומות אחרונים"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "פינוי קבצים אחרונים"
+
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "&%1 %2"
 
 #~ msgid "Always arrange tasks in rows of as many columns"
 #~ msgstr "תמיד לסדר משימות בשורות של כמה שיותר עמודות"

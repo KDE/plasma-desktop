@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-02-22 02:24+0000\n"
 "PO-Revision-Date: 2022-10-19 22:48+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -490,12 +490,6 @@ msgstr "Liiguta &aktiivsele töölauale"
 msgid "&All Desktops"
 msgstr "Kõik tööl&auad"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, kde-format
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "&%1. %2"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
@@ -748,6 +742,10 @@ msgstr "Unusta viimati avatud kohad"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Unusta viimati kasutatud failid"
+
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "&%1. %2"
 
 #~ msgid "Always arrange tasks in rows of as many columns"
 #~ msgstr "Ülesanded paigutatakse alati nii mitme veeruga ridadesse"

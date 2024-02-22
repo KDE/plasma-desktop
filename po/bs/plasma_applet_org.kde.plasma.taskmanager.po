@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-02-22 02:24+0000\n"
 "PO-Revision-Date: 2014-10-21 17:48+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -499,13 +499,6 @@ msgstr "Po radnoj površini"
 msgid "&All Desktops"
 msgstr "Po radnoj površini"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, fuzzy, kde-format
-#| msgid "By Desktop"
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "Po radnoj površini"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, fuzzy, kde-format
 #| msgid "By Desktop"
@@ -766,6 +759,12 @@ msgstr ""
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr ""
+
+#, fuzzy
+#~| msgid "By Desktop"
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "Po radnoj površini"
 
 #~ msgid "Show tooltips"
 #~ msgstr "Prikaži savjete"

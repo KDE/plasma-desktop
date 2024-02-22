@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-02-22 02:24+0000\n"
 "PO-Revision-Date: 2023-11-16 20:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -483,12 +483,6 @@ msgstr "&Geçerli Masaüstüne Taşı"
 msgid "&All Desktops"
 msgstr "&Tüm Masaüstleri"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, kde-format
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "&%1 %2"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
@@ -739,6 +733,10 @@ msgstr "Son Yerleri Unut"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Son Dosyaları Unut"
+
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "&%1 %2"
 
 #~ msgid "Always arrange tasks in rows of as many columns"
 #~ msgstr "Sütunlardaki görevleri her zaman satır sayısı kadar ayarla"

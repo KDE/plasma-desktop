@@ -1,16 +1,17 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017, 2018.
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Matjaž Jeran <matjaz.jeran@amis.net>
+# Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017, 2018.
+# Jure Repinc <jlp@holodeck1.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
-"PO-Revision-Date: 2023-11-16 13:33+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
-"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"POT-Creation-Date: 2024-02-22 02:24+0000\n"
+"PO-Revision-Date: 2024-02-20 03:38+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
+"Language-Team: LUGOS\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -74,7 +75,7 @@ msgstr "Splošno:"
 #: package/contents/ui/ConfigAppearance.qml:46
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Prikazuj mahne predoglede oken, kadar je miška nad namigi opravil"
+msgstr "Prikazuj majhne predoglede oken, ko je miška nad opravili"
 
 #: package/contents/ui/ConfigAppearance.qml:51
 #, kde-format
@@ -132,7 +133,7 @@ msgstr "Maksimimum stolpcev:"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
-msgstr "Maksimimum vrstic:"
+msgstr "Največ vrstic:"
 
 #: package/contents/ui/ConfigAppearance.qml:115
 #, kde-format
@@ -181,7 +182,7 @@ msgstr "Po imenu programa"
 #: package/contents/ui/ConfigBehavior.qml:54
 #, kde-format
 msgid "Clicking grouped task:"
-msgstr "Ob kliku na grupirano opravilo:"
+msgstr "Ob kliku na združena opravila:"
 
 #: package/contents/ui/ConfigBehavior.qml:61
 #, kde-format
@@ -195,20 +196,20 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Prikazuje majhne predoglede oken"
+msgstr "Prikaži majhne predoglede oken"
 
 #: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Prikazuje velike predoglede oken"
+msgstr "Prikaži velike predoglede oken"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
-msgstr "Prikaže kontekstni seznam"
+msgstr "Prikaži besedilni seznam"
 
 #: package/contents/ui/ConfigBehavior.qml:72
 #, kde-format
@@ -222,7 +223,7 @@ msgstr ""
 #: package/contents/ui/ConfigBehavior.qml:82
 #, kde-format
 msgid "Combine into single button"
-msgstr "Sestavi v en gumb"
+msgstr "Združi v en gumb"
 
 #: package/contents/ui/ConfigBehavior.qml:89
 #, kde-format
@@ -274,7 +275,7 @@ msgstr "Ob kliku na dejavno opravilo:"
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr "Strni opravilo"
+msgstr "Skrči opravilo"
 
 #: package/contents/ui/ConfigBehavior.qml:126
 #, kde-format
@@ -311,7 +312,7 @@ msgstr "Skrči/obnovi okno ali skupino"
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
-msgstr "Preklaplja grupiranje"
+msgstr "Preklaplja združevanje"
 
 #: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
@@ -336,7 +337,7 @@ msgstr "Kroži skozi opravila"
 #: package/contents/ui/ConfigBehavior.qml:155
 #, kde-format
 msgid "Skip minimized tasks"
-msgstr "Preskoči strnjena opravila"
+msgstr "Preskoči skrčena opravila"
 
 #: package/contents/ui/ConfigBehavior.qml:166
 #, kde-format
@@ -481,12 +482,6 @@ msgstr "Premakni na &trenutno namizje"
 #, kde-format
 msgid "&All Desktops"
 msgstr "Vs&a namizja"
-
-#: package/contents/ui/ContextMenu.qml:351
-#, kde-format
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "&%1 %2"
 
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
@@ -742,6 +737,10 @@ msgstr "Pozabi nedavne lokacije"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Pozabi nedavne datoteke"
+
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "&%1 %2"
 
 #~ msgid "Always arrange tasks in rows of as many columns"
 #~ msgstr "Vedno razvrsti opravila v vrstice s kolikor stolpci je mogoče"

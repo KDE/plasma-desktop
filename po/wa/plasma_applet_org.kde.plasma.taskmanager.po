@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-02-22 02:24+0000\n"
 "PO-Revision-Date: 2011-01-14 09:37+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -497,13 +497,6 @@ msgstr "Pa scribanne"
 msgid "&All Desktops"
 msgstr "Pa scribanne"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, fuzzy, kde-format
-#| msgid "By Desktop"
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "Pa scribanne"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, fuzzy, kde-format
 #| msgid "By Desktop"
@@ -760,6 +753,12 @@ msgstr ""
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr ""
+
+#, fuzzy
+#~| msgid "By Desktop"
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "Pa scribanne"
 
 #~ msgid "Show tooltips"
 #~ msgstr "Mostrer bouyes d' aidance"

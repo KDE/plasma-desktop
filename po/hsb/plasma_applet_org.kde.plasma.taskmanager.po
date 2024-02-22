@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-02-22 02:24+0000\n"
 "PO-Revision-Date: 2021-11-04 09:14+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -491,13 +491,6 @@ msgstr "Po dźěłowych powjerchach"
 msgid "&All Desktops"
 msgstr "Po dźěłowych powjerchach"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, fuzzy, kde-format
-#| msgid "By Desktop"
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "Po dźěłowych powjerchach"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, fuzzy, kde-format
 #| msgid "By Desktop"
@@ -758,6 +751,12 @@ msgstr ""
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr ""
+
+#, fuzzy
+#~| msgid "By Desktop"
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "Po dźěłowych powjerchach"
 
 #~ msgid "Show tooltips"
 #~ msgstr "Tooltips pokazać"

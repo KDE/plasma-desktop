@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:35+0000\n"
+"POT-Creation-Date: 2024-02-22 02:24+0000\n"
 "PO-Revision-Date: 2008-12-29 15:50+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -494,13 +494,6 @@ msgstr "ডেস্কটপ অনুযায়ী"
 msgid "&All Desktops"
 msgstr "ডেস্কটপ অনুযায়ী"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, fuzzy, kde-format
-#| msgid "By Desktop"
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "ডেস্কটপ অনুযায়ী"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, fuzzy, kde-format
 #| msgid "By Desktop"
@@ -757,6 +750,12 @@ msgstr ""
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr ""
+
+#, fuzzy
+#~| msgid "By Desktop"
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "ডেস্কটপ অনুযায়ী"
 
 #, fuzzy
 #~| msgid "Show tooltips:"
