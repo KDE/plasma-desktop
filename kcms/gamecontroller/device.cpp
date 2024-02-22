@@ -6,6 +6,7 @@
 
 #include "device.h"
 
+#include "gamepadbutton.h"
 #include "logging.h"
 
 Device::Device(int deviceIndex, QObject *parent)
@@ -36,6 +37,12 @@ bool Device::open()
         m_leftTrigger = SDL_GameControllerGetAxis(m_controller, SDL_CONTROLLER_AXIS_TRIGGERLEFT);
         m_rightTrigger = SDL_GameControllerGetAxis(m_controller, SDL_CONTROLLER_AXIS_TRIGGERRIGHT);
     }
+
+    for (int i = 0; i < buttonCount(); ++i) {
+        GamepadButton *button = new GamepadButton(this);
+        m_buttons.insert(i, button);
+    }
+
     return m_joystick != nullptr;
 }
 
@@ -93,6 +100,14 @@ bool Device::buttonState(int index) const
     return SDL_JoystickGetButton(m_joystick, index) != 0;
 }
 
+GamepadButton *Device::button(int index)
+{
+    if (m_buttons.contains(index)) {
+        return m_buttons.value(index);
+    }
+    return nullptr;
+}
+
 int Device::axisCount() const
 {
     return SDL_JoystickNumAxes(m_joystick);
@@ -146,11 +161,19 @@ QVector2D Device::hatPosition(int index) const
 void Device::onButtonEvent(const SDL_JoyButtonEvent &event)
 {
     Q_EMIT buttonStateChanged(event.button);
+    if (m_buttons.contains(event.button)) {
+        qDebug() << "Setting button " << event.button << " to state: " << event.state;
+        m_buttons.value(event.button)->setState(event.state);
+    }
 }
 
 void Device::onControllerButtonEvent(const SDL_ControllerButtonEvent &event)
 {
     Q_EMIT buttonStateChanged(event.button);
+    if (m_buttons.contains(event.button)) {
+        qDebug() << "Setting button " << event.button << " to state: " << event.state;
+        m_buttons.value(event.button)->setState(event.state);
+    }
 }
 
 void Device::onAxisEvent(const SDL_JoyAxisEvent &event)

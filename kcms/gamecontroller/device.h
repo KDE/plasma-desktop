@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QMap>
 #include <QObject>
 #include <QVector2D>
 #include <QVector>
@@ -13,6 +14,8 @@
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_gamecontroller.h>
 #include <SDL2/SDL_joystick.h>
+
+class GamepadButton;
 
 class Device : public QObject
 {
@@ -40,6 +43,7 @@ public:
 
     int buttonCount() const;
     bool buttonState(int index) const;
+    Q_INVOKABLE GamepadButton *button(int index);
 
     int axisCount() const;
     QVector2D leftAxisValue() const;
@@ -75,4 +79,5 @@ private:
     float m_rightTrigger;
     SDL_Joystick *m_joystick = nullptr;
     SDL_GameController *m_controller = nullptr;
+    QMap<int, GamepadButton *> m_buttons;
 };
