@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-22 00:38+0000\n"
 "PO-Revision-Date: 2017-04-07 00:51+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -523,13 +523,6 @@ msgid "&All Desktops"
 msgstr "&све површи"
 
 # >> @item:inmenu Move To Desktop
-#: package/contents/ui/ContextMenu.qml:351
-#, kde-format
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "&%1 — %2"
-
-# >> @item:inmenu Move To Desktop
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
@@ -802,6 +795,11 @@ msgstr "Заборави недавне документе"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Заборави недавне документе"
+
+# >> @item:inmenu Move To Desktop
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "&%1 — %2"
 
 #, fuzzy
 #~| msgid "Always arrange tasks in rows of as many columns"

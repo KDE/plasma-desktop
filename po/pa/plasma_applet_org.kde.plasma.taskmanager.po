@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-22 00:38+0000\n"
 "PO-Revision-Date: 2024-02-05 08:06-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -477,12 +477,6 @@ msgstr "ਮੌਜੂਦਾ ਡੈਸਕਟਾਪ ਉੱਤੇ ਭੇਜੋ(&T)"
 msgid "&All Desktops"
 msgstr "ਸਭ ਡੈਸਕਟਾਪ(&A)"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, kde-format
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "&%1 %2"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
@@ -733,6 +727,10 @@ msgstr "ਸੱਜਰੀਆਂ ਥਾਵਾਂ ਭੁੱਲ ਜਾਓ"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "ਸੱਜਰੀਆਂ ਫ਼ਾਇਲਾਂ ਨੂੰ ਭੁਲਾਓ"
+
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "&%1 %2"
 
 #~ msgid "Show tooltips"
 #~ msgstr "ਟੂਲ-ਟਿੱਪ ਵੇਖੋ"

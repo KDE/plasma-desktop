@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-22 00:38+0000\n"
 "PO-Revision-Date: 2023-11-29 17:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -484,12 +484,6 @@ msgstr "移到目前桌面(&T)"
 msgid "&All Desktops"
 msgstr "所有的桌面(&A)"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, kde-format
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "%1 %2(&%1)"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
@@ -738,6 +732,10 @@ msgstr "忘掉最近的位置"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "忘掉最近的檔案"
+
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "%1 %2(&%1)"
 
 #~ msgid "Always arrange tasks in rows of as many columns"
 #~ msgstr "總是將工作安排在與列數一樣多的行中"

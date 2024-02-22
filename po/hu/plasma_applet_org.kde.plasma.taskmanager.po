@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-02-22 00:38+0000\n"
 "PO-Revision-Date: 2023-12-15 20:51+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -482,12 +482,6 @@ msgstr "Mozgatás a &jelenlegi asztalra"
 msgid "&All Desktops"
 msgstr "Az összes &asztalra"
 
-#: package/contents/ui/ContextMenu.qml:351
-#, kde-format
-msgctxt "1 = number of desktop, 2 = desktop name"
-msgid "&%1 %2"
-msgstr "&%1. %2"
-
 #: package/contents/ui/ContextMenu.qml:365
 #, kde-format
 msgid "&New Desktop"
@@ -738,6 +732,10 @@ msgstr "Legutóbbi helyek elfelejtése"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Legutóbbi fájlok elfelejtése"
+
+#~ msgctxt "1 = number of desktop, 2 = desktop name"
+#~ msgid "&%1 %2"
+#~ msgstr "&%1. %2"
 
 #~ msgid "Always arrange tasks in rows of as many columns"
 #~ msgstr "Legfeljebb annyi sorba rendezés, ahány oszlop van"
