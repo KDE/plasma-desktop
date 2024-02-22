@@ -28,9 +28,11 @@ ecm_qt_install_logging_categories(
 target_sources(kcm_gamecontroller PRIVATE
     devicemodel.cpp
     device.cpp
+    devicetypemodel.cpp
     axesmodel.cpp
     axesproxymodel.cpp
     buttonmodel.cpp
+    gamepadbutton.cpp
     hatmodel.cpp
     kcm.cpp
     udevmatcher.cpp
@@ -41,6 +43,7 @@ target_link_libraries(kcm_gamecontroller PRIVATE
     KF6::KCMUtils
     KF6::KCMUtilsQuick
     KF6::I18n
+    KF6::Svg
     Qt6::Quick
     Qt6::QuickWidgets
     SDL2::SDL2

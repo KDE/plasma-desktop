@@ -1,5 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2023 Joshua Goins <josh@redstrate.com>
+    SPDX-FileCopyrightText: 2023 Niccolò Venerandi <niccolo@venerandi.com>
+    SPDX-FileCopyrightText: 2023 Jeremy Whiting <jpwhiting@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -20,6 +22,23 @@ KCM.SimpleKCM {
     readonly property var deviceType: device?.type ?? ""
     readonly property var deviceControllerType: device?.controllerTypeName ?? ""
     readonly property var deviceConnectionType: device?.connectionType ?? ""
+
+    implicitWidth: Kirigami.Units.gridUnit * 40
+    implicitHeight: Kirigami.Units.gridUnit * 35
+
+    actions: [
+//        Kirigami.Action {
+//            id: typesToPopulate
+ 
+//            text: i18nc("@action:button Change type of gamepad preview", "Preview Type")
+//            icon.name: "view-preview"
+//        },
+        Kirigami.Action {
+            text: i18nc("@action:button", "Controller Information")
+            icon.name: "input-gamepad-symbolic"
+            onTriggered: kcm.push("AdvancedPage.qml", { device: root.device })
+        }
+    ]
 
     Kirigami.PlaceholderMessage {
         icon.name: "input-gamepad"
@@ -47,6 +66,10 @@ KCM.SimpleKCM {
         }
     }
 
+    DeviceTypeModel {
+        id: deviceTypeModel
+    }
+
     ColumnLayout {
         anchors.fill: parent
 
@@ -72,6 +95,35 @@ KCM.SimpleKCM {
                 valueRole: "id"
 
                 Layout.fillWidth: true
+            }
+        }
+
+        RowLayout {
+            Layout.fillWidth: true
+
+            visible: deviceCombo.count !== 0
+            spacing: Kirigami.Units.largeSpacing
+
+            RowLayout {
+                spacing: Kirigami.Units.largeSpacing
+
+                Layout.fillWidth: true
+
+                QQC2.Label {
+                    text: i18nc("@label:textbox", "Gamepad Type:")
+                    textFormat: Text.PlainText
+                }
+
+                QQC2.ComboBox {
+                    id: deviceTypeCombo
+
+                    model: deviceTypeModel
+
+                    textRole: "name"
+                    valueRole: "type"
+
+                    Layout.fillWidth: true
+                }
             }
         }
 
@@ -128,77 +180,17 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            ColumnLayout {
-                spacing: Kirigami.Units.largeSpacing
-
-                Layout.alignment: Qt.AlignTop
-
-                QQC2.Label {
-                    text: i18nc("@label Visual representation of the axis position for the left axis", "Left position:")
-                    textFormat: Text.PlainText
-                }
-
-                PositionWidget {
-                    id: leftPosWidget
-
-                    device: root.device
-                    leftAxis: true
-                }
-                
-                QQC2.Label {
-                    text: i18nc("@label Visual representation of the axis position for the right axis", "Right position:")
-                    textFormat: Text.PlainText
-                }
-
-                PositionWidget {
-                    id: rightPosWidget
-                    device: root.device
-                    leftAxis: false
-                }
-            }
-
-            ColumnLayout {
-                spacing: Kirigami.Units.largeSpacing
+            GamepadRoot {
+                id: gamepadgui
 
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                Layout.preferredWidth: 50 // Same space for the two columns
 
-                QQC2.Label {
-                    text: i18nc("@label Gamepad buttons", "Buttons:")
-                    textFormat: Text.PlainText
-                }
+                width: Kirigami.Units.gridUnit * 20
+                height: Kirigami.Units.gridUnit * 20
 
-                Table {
-                    model: ButtonModel {
-                        device: root.device
-                    }
-
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                }
-            }
-
-            ColumnLayout {
-                spacing: Kirigami.Units.largeSpacing
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                Layout.preferredWidth: 50 // Same space for the two columns
-
-                QQC2.Label {
-                    text: i18nc("@label Gamepad axes (sticks)", "Axes:")
-                    textFormat: Text.PlainText
-                }
-
-                Table {
-                    model: AxesProxyModel {
-                        device: root.device
-                    }
-
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                }
+                device: root.device
+                svgPath: deviceTypeModel.pathFromRow(deviceTypeCombo.currentIndex)
             }
         }
     }
