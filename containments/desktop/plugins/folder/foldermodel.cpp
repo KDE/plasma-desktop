@@ -1796,7 +1796,6 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("paste")));
         menu->addAction(m_actionCollection.action(QStringLiteral("undo")));
-        menu->addAction(m_actionCollection.action(QStringLiteral("refresh")));
         menu->addAction(m_actionCollection.action(QStringLiteral("emptyTrash")));
         menu->addSeparator();
 
