@@ -166,3 +166,5 @@ QString KWinWaylandDevice::valueWriter(const Prop<T> &prop)
     }
     return QString();
 }
+
+#include "moc_kwin_wl_device.cpp"

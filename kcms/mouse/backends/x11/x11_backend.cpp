@@ -114,3 +114,5 @@ void X11Backend::kcmInit()
 
     applyCursorTheme(theme, size);
 }
+
+#include "moc_x11_backend.cpp"

@@ -1,14 +1,10 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmmouse\")
 
-add_subdirectory( misc )
+add_subdirectory(misc)
+add_subdirectory(kcm)
 
-## Add common files here.
-set(common_SRCS
-    inputbackend.cpp
-)
-
-ecm_qt_declare_logging_category(common_SRCS
+ecm_qt_declare_logging_category(mouse_logging_SRCS
     HEADER
         logging.h
     IDENTIFIER
@@ -25,6 +21,18 @@ ecm_qt_declare_logging_category(common_SRCS
 ecm_qt_install_logging_categories(
     EXPORT kcm_mouse
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
+)
+
+add_library(mouse_common STATIC inputbackend.cpp ${mouse_logging_SRCS})
+
+set_property(TARGET mouse_common PROPERTY POSITION_INDEPENDENT_CODE ON)
+
+target_link_libraries(mouse_common
+    PUBLIC
+        KF6::ConfigCore
+        KF6::I18n
+        KF6::WindowSystem
+        PW::KWorkspace
 )
 
 if (BUILD_KCM_MOUSE_KWIN_WAYLAND)
@@ -49,56 +57,11 @@ if (BUILD_KCM_MOUSE_X11)
     endif()
 
     include(backends/x11.cmake)
-
-    # kapplymousetheme is an X11-only tool, called by startplasma-x11 but not startplasma-wayland
-    add_executable(kapplymousetheme
-        kapplymousetheme.cpp
-        ${common_SRCS}
-        ${backend_SRCS}
-    )
-    target_link_libraries(kapplymousetheme
-        ${backend_LIBS}
-        Qt::Gui
-        Qt::DBus
-        KF6::CoreAddons
-        KF6::ConfigCore
-        KF6::I18n
-        KF6::WindowSystem
-        PW::KWorkspace
-    )
-    install(TARGETS kapplymousetheme ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
 
-qt_add_resources( common_SRCS kcm/resources.qrc )
-
-add_library(kcm_mouse MODULE
-    ${common_SRCS}
-    ${backend_SRCS}
-    plugin.cpp
-    kcm/configcontainer.cpp
-    kcm/configplugin.cpp
-    kcm/libinput/libinput_config.cpp
-)
-kcmutils_generate_desktop_file(kcm_mouse)
-
-target_link_libraries(kcm_mouse
-    ${backend_LIBS}
-    KF6::KCMUtils
-    KF6::I18n
-    KF6::KIOCore
-    KF6::KIOWidgets
-    KF6::WindowSystem
-    PW::KWorkspace
-    Qt::DBus
-    Qt::QuickWidgets
-)
-
-install(TARGETS kcm_mouse DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
-
-########### install files ###############
-
-
-add_custom_command(TARGET kcm_mouse POST_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E create_symlink "../kcms/systemsettings/kcm_mouse.so" "kcm_mouse_init.so")
-
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_mouse_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)
+if (BUILD_KCM_MOUSE_X11)
+    # kapplymousetheme is an X11-only tool, called by startplasma-x11 but not startplasma-wayland
+    add_executable(kapplymousetheme kapplymousetheme.cpp)
+    target_link_libraries(kapplymousetheme Qt::Gui KF6::CoreAddons mouse_common)
+    install(TARGETS kapplymousetheme ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+endif()
