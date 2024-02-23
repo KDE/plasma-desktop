@@ -2,20 +2,20 @@
 # Copyright (C) 2014 This_file_is_part_of_KDE
 # This file is distributed under the same license as the KDE package.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2015, 2016.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 02:22+0000\n"
-"PO-Revision-Date: 2023-05-21 10:03+0400\n"
+"PO-Revision-Date: 2024-02-22 13:52+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
+"Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
@@ -269,7 +269,7 @@ msgstr "أضف مُباعد"
 
 #: contents/configuration/PanelConfiguration.qml:107
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "أضف مُباعد إلى اللوح"
 
 #: contents/configuration/PanelConfiguration.qml:114
 msgid "Add Widgets…"
@@ -277,11 +277,11 @@ msgstr "أضف ودجات..."
 
 #: contents/configuration/PanelConfiguration.qml:117
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "افتح محدد الودجات لسحب وإفلات الودجات إلى اللوح"
 
 #: contents/configuration/PanelConfiguration.qml:146
 msgid "Position"
-msgstr ""
+msgstr "الموضع"
 
 #: contents/configuration/PanelConfiguration.qml:150
 #: contents/configuration/PanelConfiguration.qml:264
@@ -305,21 +305,17 @@ msgstr "الأسفل"
 
 #: contents/configuration/PanelConfiguration.qml:173
 msgid "Set Position..."
-msgstr ""
+msgstr "عين الموضع"
 
 #: contents/configuration/PanelConfiguration.qml:200
-#, fuzzy
-#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "المحاذاة:"
+msgstr "المحاذاة"
 
 #: contents/configuration/PanelConfiguration.qml:265
 msgid "Center"
 msgstr "الوسط"
 
 #: contents/configuration/PanelConfiguration.qml:288
-#, fuzzy
-#| msgid "Height"
 msgid "Height"
 msgstr "الارتفاع"
 
@@ -328,98 +324,74 @@ msgid "Width"
 msgstr "العرض"
 
 #: contents/configuration/PanelConfiguration.qml:307
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "ارتفاع اللوحة:"
+msgstr "املأ الارتفاع"
 
 #: contents/configuration/PanelConfiguration.qml:307
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "عرضة اللوحة:"
+msgstr "املأ العرض"
 
 #: contents/configuration/PanelConfiguration.qml:308
 msgid "Fit content"
-msgstr ""
+msgstr "لائم المحتوى"
 
 #: contents/configuration/PanelConfiguration.qml:309
 msgid "Custom"
-msgstr ""
+msgstr "مخصّص"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, fuzzy
-#| msgid "Visibility:"
 msgid "Visibility"
-msgstr "الوضوح:"
+msgstr "الرؤية"
 
 #: contents/configuration/PanelConfiguration.qml:347
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
-msgstr "أظهر دائمًا"
+msgstr "ظاهرة دائمًا"
 
 #: contents/configuration/PanelConfiguration.qml:348
-#, fuzzy
-#| msgid "Auto-Hide"
 msgid "Auto hide"
 msgstr "إخفاء آلي"
 
 #: contents/configuration/PanelConfiguration.qml:349
 msgid "Dodge windows"
-msgstr ""
+msgstr "تجنب النوافذ"
 
 #: contents/configuration/PanelConfiguration.qml:350
-#, fuzzy
-#| msgid "Windows Behind"
 msgid "Windows Go Below"
-msgstr "النّوافذ في الخلف"
+msgstr "النّوافذ تذهب تحتها"
 
 #: contents/configuration/PanelConfiguration.qml:393
-#, fuzzy
-#| msgid "Opacity:"
 msgid "Opacity"
-msgstr "العتمة:"
+msgstr "العتمة"
 
 #: contents/configuration/PanelConfiguration.qml:406
 msgid "Adaptive"
 msgstr "متكيفة"
 
 #: contents/configuration/PanelConfiguration.qml:407
-#, fuzzy
-#| msgid "Always Opaque"
 msgid "Opaque"
-msgstr "تعتيم دائم"
+msgstr "معتم"
 
 #: contents/configuration/PanelConfiguration.qml:408
-#, fuzzy
-#| msgid "Always Translucent"
 msgid "Translucent"
-msgstr "شفافة دائما"
+msgstr "شفاف"
 
 #: contents/configuration/PanelConfiguration.qml:432
 msgid "Style"
-msgstr ""
+msgstr "النمط"
 
 #: contents/configuration/PanelConfiguration.qml:443
 msgid "Floating"
 msgstr "التعويم"
 
 #: contents/configuration/PanelConfiguration.qml:517
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
-msgstr "عرضة اللوحة:"
+msgstr "عرض اللوح:"
 
 #: contents/configuration/PanelConfiguration.qml:517
-#, fuzzy
-#| msgid "Height"
 msgid "Height:"
-msgstr "الارتفاع"
+msgstr "الارتفاع:"
 
 #: contents/configuration/PanelConfiguration.qml:551
-#, fuzzy
-#| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
 msgstr "اختصار التركيز:"
 
@@ -428,11 +400,9 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "اضغط على اختصار لوحة المفاتيح هذا لتنقل التركيز للوحة"
 
 #: contents/configuration/PanelConfiguration.qml:577
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "أزل اللوحة"
+msgstr "احذف اللوح"
 
 #: contents/configuration/PanelConfiguration.qml:580
 msgid "Remove this panel; this action is undo-able"
@@ -506,7 +476,7 @@ msgstr "ودجات بديلة"
 
 #: contents/explorer/AppletDelegate.qml:41
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "ودجة غير مدعومة"
 
 #: contents/explorer/AppletDelegate.qml:187
 msgid "Undo uninstall"

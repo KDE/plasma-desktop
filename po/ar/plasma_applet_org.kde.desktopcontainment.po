@@ -2,22 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2016, 2017.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-06 03:08+0000\n"
-"PO-Revision-Date: 2022-11-22 19:50+0400\n"
+"PO-Revision-Date: 2024-02-22 13:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
+"Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -76,10 +76,9 @@ msgid "Show hidden files:"
 msgstr "أظهر الملفات المخفية:"
 
 #: package/contents/ui/ConfigFilter.qml:130
-#, fuzzy, kde-format
-#| msgid "File type"
+#, kde-format
 msgid "File Type"
-msgstr "نوع الملفّات"
+msgstr "نوع الملف"
 
 #: package/contents/ui/ConfigFilter.qml:131
 #, kde-format
@@ -99,7 +98,7 @@ msgstr "ألغِ تحديد الكلّ"
 #: package/contents/ui/ConfigFilter.qml:222
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "بدل ترتيب الفرز"
 
 #: package/contents/ui/ConfigIcons.qml:64
 #, kde-format
@@ -381,7 +380,7 @@ msgstr "أدخِل عنوان المخصّص"
 #: package/contents/ui/ConfigOverlay.qml:86
 #, kde-format
 msgid "Click and drag to rotate"
-msgstr ""
+msgstr "انقر واسحب للتدوير"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format
@@ -410,6 +409,8 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"يوجد الكثير من الملفات والمجلدات على سطح المكتب. قد يؤدي هذا إلى علل ومشاكل "
+"في الأداء. رجاء انقل بعضها إلى مكان آخر."
 
 #: package/contents/ui/main.qml:390
 #, kde-format
