@@ -42,3 +42,5 @@ void X11LibinputBackend::kcmInit()
     applyConfig();
     X11Backend::kcmInit();
 }
+
+#include "moc_x11_libinput_backend.cpp"

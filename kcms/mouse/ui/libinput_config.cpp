@@ -69,9 +69,9 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     bool deviceless = false;
 #endif
     if (deviceless) {
-        m_view->setSource(QUrl(QStringLiteral("qrc:/libinput/main_deviceless.qml")));
+        m_view->setSource(QUrl(QStringLiteral("qrc:/ui/main_deviceless.qml")));
     } else {
-        m_view->setSource(QUrl(QStringLiteral("qrc:/libinput/main.qml")));
+        m_view->setSource(QUrl(QStringLiteral("qrc:/ui/main.qml")));
     }
 
     if (m_initError) {

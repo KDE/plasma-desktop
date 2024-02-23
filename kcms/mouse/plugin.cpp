@@ -3,7 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-#include "kcm/configcontainer.h"
+#include "configcontainer.h"
 
 #include <KPluginFactory>
 

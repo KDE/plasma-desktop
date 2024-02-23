@@ -270,3 +270,7 @@ bool X11LibinputDummyDevice::isChangedConfig() const
     return m_leftHanded.changed() || m_pointerAcceleration.changed() || m_pointerAccelerationProfileFlat.changed()
         || m_pointerAccelerationProfileAdaptive.changed() || m_middleEmulation.changed() || m_naturalScroll.changed();
 }
+
+#include <fixx11h.h>
+
+#include "moc_x11_libinput_dummydevice.cpp"

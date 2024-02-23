@@ -205,3 +205,5 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
     m_devices.removeAt(index);
     Q_EMIT deviceRemoved(index);
 }
+
+#include "moc_kwin_wl_backend.cpp"

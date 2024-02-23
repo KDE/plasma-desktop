@@ -7,8 +7,8 @@
 #include "configcontainer.h"
 
 #include "inputbackend.h"
-#include "libinput/libinput_config.h"
 #include "logging.h"
+#include "ui/libinput_config.h"
 
 #include <KWindowSystem>
 
