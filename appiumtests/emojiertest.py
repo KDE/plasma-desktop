@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import subprocess
 import unittest
 
 from appium import webdriver
@@ -36,6 +37,7 @@ class EmojierTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        subprocess.check_call(["kquitapp6", "plasma.emojier"])
         cls.driver.quit()
 
     def test_0_open(self) -> None:
