@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 00:38+0000\n"
-"PO-Revision-Date: 2024-01-07 18:37+0000\n"
+"PO-Revision-Date: 2024-02-24 19:07+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -310,8 +310,6 @@ msgid "Bottom"
 msgstr "Jos"
 
 #: contents/configuration/PanelConfiguration.qml:175
-#, fuzzy
-#| msgid "Set Position..."
 msgid "Set Position…"
 msgstr "Stabilește poziția…"
 
@@ -324,10 +322,8 @@ msgid "Center"
 msgstr "Centru"
 
 #: contents/configuration/PanelConfiguration.qml:291
-#, fuzzy
-#| msgid "Height:"
 msgid "Height"
-msgstr "Înălțime:"
+msgstr "Înălțime"
 
 #: contents/configuration/PanelConfiguration.qml:292
 msgid "Width"
@@ -530,9 +526,9 @@ msgstr "Categorii"
 #: contents/explorer/WidgetExplorer.qml:215
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Confirmă eliminarea unui control grafic"
+msgstr[1] "Confirmă eliminarea a %2 controale grafice"
+msgstr[2] "Confirmă eliminarea a %2 de controale grafice"
 
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
