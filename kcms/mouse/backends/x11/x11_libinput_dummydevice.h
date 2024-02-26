@@ -44,12 +44,12 @@ class X11LibinputDummyDevice : public QObject
     Q_PROPERTY(bool supportsPointerAccelerationProfileFlat READ supportsPointerAccelerationProfileFlat CONSTANT)
     Q_PROPERTY(bool defaultPointerAccelerationProfileFlat READ defaultPointerAccelerationProfileFlat CONSTANT)
     Q_PROPERTY(bool pointerAccelerationProfileFlat READ pointerAccelerationProfileFlat WRITE setPointerAccelerationProfileFlat NOTIFY
-                   pointerAccelerationProfileChanged)
+                   pointerAccelerationProfileFlatChanged)
 
     Q_PROPERTY(bool supportsPointerAccelerationProfileAdaptive READ supportsPointerAccelerationProfileAdaptive CONSTANT)
     Q_PROPERTY(bool defaultPointerAccelerationProfileAdaptive READ defaultPointerAccelerationProfileAdaptive CONSTANT)
     Q_PROPERTY(bool pointerAccelerationProfileAdaptive READ pointerAccelerationProfileAdaptive WRITE setPointerAccelerationProfileAdaptive NOTIFY
-                   pointerAccelerationProfileChanged)
+                   pointerAccelerationProfileAdaptiveChanged)
 
     //
     // scrolling
@@ -202,7 +202,8 @@ public:
 Q_SIGNALS:
     void leftHandedChanged();
     void pointerAccelerationChanged();
-    void pointerAccelerationProfileChanged();
+    void pointerAccelerationProfileFlatChanged();
+    void pointerAccelerationProfileAdaptiveChanged();
     void enabledChanged();
     void middleEmulationChanged();
     void naturalScrollChanged();
@@ -210,9 +211,13 @@ Q_SIGNALS:
 private:
     template<typename T>
     struct Prop {
-        explicit Prop(const QString &_name, const QString &_cfgName = "")
-            : name(_name)
-            , cfgName(_cfgName)
+        using ChangedSignal = void (X11LibinputDummyDevice::*)();
+
+        explicit Prop(X11LibinputDummyDevice *device, const QString &name, ChangedSignal changedSignal = nullptr, const QString &cfgName = "")
+            : name(name)
+            , cfgName(cfgName)
+            , changedSignalFunction(changedSignal)
+            , device(device)
         {
         }
 
@@ -220,12 +225,18 @@ private:
         {
             if (avail && val != newVal) {
                 val = newVal;
+                if (changedSignalFunction) {
+                    (device->*changedSignalFunction)();
+                }
             }
         }
         void set(const Prop<T> &p)
         {
             if (avail && val != p.val) {
                 val = p.val;
+                if (changedSignalFunction) {
+                    (device->*changedSignalFunction)();
+                }
             }
         }
         bool changed() const
@@ -235,14 +246,16 @@ private:
 
         void reset(T newVal)
         {
-            val = newVal;
             old = newVal;
+            set(std::move(newVal));
         }
 
         QString name;
         QString cfgName;
 
         bool avail = true;
+        const ChangedSignal changedSignalFunction;
+        X11LibinputDummyDevice *const device;
         T old;
         T val;
 
@@ -254,42 +267,45 @@ private:
 
     //
     // general
-    Prop<QString> m_name = Prop<QString>("name");
-    Prop<QString> m_sysName = Prop<QString>("sysName");
-    Prop<bool> m_supportsDisableEvents = Prop<bool>("supportsDisableEvents");
-    Prop<bool> m_enabled = Prop<bool>("enabled");
+    Prop<QString> m_name = Prop<QString>(this, "name");
+    Prop<QString> m_sysName = Prop<QString>(this, "sysName");
+    Prop<bool> m_supportsDisableEvents = Prop<bool>(this, "supportsDisableEvents");
+    Prop<bool> m_enabled = Prop<bool>(this, "enabled", &X11LibinputDummyDevice::enabledChanged);
 
     //
     // advanced
-    Prop<Qt::MouseButtons> m_supportedButtons = Prop<Qt::MouseButtons>("supportedButtons");
+    Prop<Qt::MouseButtons> m_supportedButtons = Prop<Qt::MouseButtons>(this, "supportedButtons");
 
-    Prop<bool> m_supportsLeftHanded = Prop<bool>("supportsLeftHanded");
-    Prop<bool> m_leftHandedEnabledByDefault = Prop<bool>("leftHandedEnabledByDefault");
-    Prop<bool> m_leftHanded = Prop<bool>("leftHanded", "XLbInptLeftHanded");
+    Prop<bool> m_supportsLeftHanded = Prop<bool>(this, "supportsLeftHanded");
+    Prop<bool> m_leftHandedEnabledByDefault = Prop<bool>(this, "leftHandedEnabledByDefault");
+    Prop<bool> m_leftHanded = Prop<bool>(this, "leftHanded", &X11LibinputDummyDevice::leftHandedChanged, "XLbInptLeftHanded");
 
-    Prop<bool> m_supportsMiddleEmulation = Prop<bool>("supportsMiddleEmulation");
-    Prop<bool> m_middleEmulationEnabledByDefault = Prop<bool>("middleEmulationEnabledByDefault");
-    Prop<bool> m_middleEmulation = Prop<bool>("middleEmulation", "XLbInptMiddleEmulation");
+    Prop<bool> m_supportsMiddleEmulation = Prop<bool>(this, "supportsMiddleEmulation");
+    Prop<bool> m_middleEmulationEnabledByDefault = Prop<bool>(this, "middleEmulationEnabledByDefault");
+    Prop<bool> m_middleEmulation = Prop<bool>(this, "middleEmulation", &X11LibinputDummyDevice::middleEmulationChanged, "XLbInptMiddleEmulation");
 
     //
     // acceleration speed and profile
-    Prop<bool> m_supportsPointerAcceleration = Prop<bool>("supportsPointerAcceleration");
-    Prop<qreal> m_defaultPointerAcceleration = Prop<qreal>("defaultPointerAcceleration");
-    Prop<qreal> m_pointerAcceleration = Prop<qreal>("pointerAcceleration", "XLbInptPointerAcceleration");
+    Prop<bool> m_supportsPointerAcceleration = Prop<bool>(this, "supportsPointerAcceleration");
+    Prop<qreal> m_defaultPointerAcceleration = Prop<qreal>(this, "defaultPointerAcceleration");
+    Prop<qreal> m_pointerAcceleration =
+        Prop<qreal>(this, "pointerAcceleration", &X11LibinputDummyDevice::pointerAccelerationChanged, "XLbInptPointerAcceleration");
 
-    Prop<bool> m_supportsPointerAccelerationProfileFlat = Prop<bool>("supportsPointerAccelerationProfileFlat");
-    Prop<bool> m_defaultPointerAccelerationProfileFlat = Prop<bool>("defaultPointerAccelerationProfileFlat");
-    Prop<bool> m_pointerAccelerationProfileFlat = Prop<bool>("pointerAccelerationProfileFlat", "XLbInptAccelProfileFlat");
+    Prop<bool> m_supportsPointerAccelerationProfileFlat = Prop<bool>(this, "supportsPointerAccelerationProfileFlat");
+    Prop<bool> m_defaultPointerAccelerationProfileFlat = Prop<bool>(this, "defaultPointerAccelerationProfileFlat");
+    Prop<bool> m_pointerAccelerationProfileFlat =
+        Prop<bool>(this, "pointerAccelerationProfileFlat", &X11LibinputDummyDevice::pointerAccelerationProfileFlatChanged, "XLbInptAccelProfileFlat");
 
-    Prop<bool> m_supportsPointerAccelerationProfileAdaptive = Prop<bool>("supportsPointerAccelerationProfileAdaptive");
-    Prop<bool> m_defaultPointerAccelerationProfileAdaptive = Prop<bool>("defaultPointerAccelerationProfileAdaptive");
-    Prop<bool> m_pointerAccelerationProfileAdaptive = Prop<bool>("pointerAccelerationProfileAdaptive");
+    Prop<bool> m_supportsPointerAccelerationProfileAdaptive = Prop<bool>(this, "supportsPointerAccelerationProfileAdaptive");
+    Prop<bool> m_defaultPointerAccelerationProfileAdaptive = Prop<bool>(this, "defaultPointerAccelerationProfileAdaptive");
+    Prop<bool> m_pointerAccelerationProfileAdaptive =
+        Prop<bool>(this, "pointerAccelerationProfileAdaptive", &X11LibinputDummyDevice::pointerAccelerationProfileAdaptiveChanged);
 
     //
     // scrolling
-    Prop<bool> m_supportsNaturalScroll = Prop<bool>("supportsNaturalScroll");
-    Prop<bool> m_naturalScrollEnabledByDefault = Prop<bool>("naturalScrollEnabledByDefault");
-    Prop<bool> m_naturalScroll = Prop<bool>("naturalScroll", "XLbInptNaturalScroll");
+    Prop<bool> m_supportsNaturalScroll = Prop<bool>(this, "supportsNaturalScroll");
+    Prop<bool> m_naturalScrollEnabledByDefault = Prop<bool>(this, "naturalScrollEnabledByDefault");
+    Prop<bool> m_naturalScroll = Prop<bool>(this, "naturalScroll", &X11LibinputDummyDevice::naturalScrollChanged, "XLbInptNaturalScroll");
 
     LibinputSettings *m_settings;
     Display *m_dpy = nullptr;

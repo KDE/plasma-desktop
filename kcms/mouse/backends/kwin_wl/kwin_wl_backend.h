@@ -16,7 +16,6 @@ class KWinWaylandBackend : public InputBackend
 {
     Q_OBJECT
 
-    Q_PROPERTY(int deviceCount READ deviceCount CONSTANT)
     Q_PROPERTY(QVariantMap buttonMapping READ buttonMapping WRITE setButtonMapping NOTIFY buttonMappingChanged)
 
 public:
@@ -32,11 +31,11 @@ public:
         return m_errorString;
     }
 
-    virtual int deviceCount() const override
+    int deviceCount() const override
     {
         return m_devices.count();
     }
-    virtual QList<QObject *> getDevices() const override
+    QList<QObject *> getDevices() const override
     {
         return m_devices;
     }

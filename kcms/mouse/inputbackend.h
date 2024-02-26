@@ -28,6 +28,9 @@ class InputBackend : public QObject
 {
     Q_OBJECT
 
+    Q_PROPERTY(QList<QObject *> inputDevices READ getDevices NOTIFY devicesChanged)
+    Q_PROPERTY(bool isAnonymousInputDevice READ isAnonymousDevice CONSTANT)
+
 protected:
     explicit InputBackend(QObject *parent)
         : QObject(parent)
@@ -54,15 +57,6 @@ public:
 
     virtual void load()
     {
-    }
-
-    virtual bool applyConfig(const QVariantHash &)
-    {
-        return false;
-    }
-    virtual bool getConfig(QVariantHash &)
-    {
-        return false;
     }
 
     virtual bool applyConfig()
@@ -92,12 +86,17 @@ public:
     {
         return 0;
     }
+    virtual bool isAnonymousDevice() const
+    {
+        return false;
+    }
     virtual QList<QObject *> getDevices() const
     {
         return QList<QObject *>();
     }
 
 Q_SIGNALS:
+    void devicesChanged();
     void deviceAdded(bool success);
     void deviceRemoved(int index);
 };

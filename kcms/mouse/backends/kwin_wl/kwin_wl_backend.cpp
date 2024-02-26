@@ -111,7 +111,8 @@ bool KWinWaylandBackend::applyConfig()
 bool KWinWaylandBackend::getConfig()
 {
     m_loadedButtonMapping.clear();
-    const KConfigGroup buttonGroup = KSharedConfig::openConfig(QStringLiteral("kcminputrc"))->group(QStringLiteral("ButtonRebinds")).group(QStringLiteral("Mouse"));
+    const KConfigGroup buttonGroup =
+        KSharedConfig::openConfig(QStringLiteral("kcminputrc"))->group(QStringLiteral("ButtonRebinds")).group(QStringLiteral("Mouse"));
     for (int i = 1; i <= 24; ++i) {
         const QString buttonName = QLatin1String("ExtraButton%1").arg(QString::number(i));
         auto entry = buttonGroup.readEntry(buttonName, QStringList());
@@ -122,7 +123,7 @@ bool KWinWaylandBackend::getConfig()
             }
         }
     }
-    m_buttonMapping = m_loadedButtonMapping;
+    setButtonMapping(m_loadedButtonMapping);
 
     return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](QObject *t) {
         return static_cast<KWinWaylandDevice *>(t)->init();
@@ -139,8 +140,8 @@ bool KWinWaylandBackend::getDefaultConfig()
 bool KWinWaylandBackend::isChangedConfig() const
 {
     return m_buttonMapping != m_loadedButtonMapping || std::any_of(m_devices.constBegin(), m_devices.constEnd(), [](QObject *t) {
-        return static_cast<KWinWaylandDevice *>(t)->isChangedConfig();
-    });
+               return static_cast<KWinWaylandDevice *>(t)->isChangedConfig();
+           });
 }
 
 QVariantMap KWinWaylandBackend::buttonMapping()
@@ -186,6 +187,7 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
         m_devices.append(dev);
         qCDebug(KCM_MOUSE).nospace() << "Device connected: " << dev->name() << " (" << dev->sysName() << ")";
         Q_EMIT deviceAdded(true);
+        Q_EMIT devicesChanged();
     }
 }
 
@@ -204,6 +206,7 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
     int index = it - m_devices.cbegin();
     m_devices.removeAt(index);
     Q_EMIT deviceRemoved(index);
+    Q_EMIT devicesChanged();
 }
 
 #include "moc_kwin_wl_backend.cpp"

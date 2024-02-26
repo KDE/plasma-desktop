@@ -8,7 +8,6 @@ qt_add_resources(kcm_mouse
     PREFIX "/"
     FILES
         libinput/main.qml
-        libinput/main_deviceless.qml
 )
 kcmutils_generate_desktop_file(kcm_mouse)
 

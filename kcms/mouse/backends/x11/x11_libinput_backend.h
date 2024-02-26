@@ -14,8 +14,6 @@ class X11LibinputBackend : public X11Backend
 {
     Q_OBJECT
 
-    Q_PROPERTY(int deviceCount READ deviceCount CONSTANT)
-
 public:
     explicit X11LibinputBackend(QObject *parent = nullptr);
     ~X11LibinputBackend() = default;
@@ -31,11 +29,15 @@ public:
         return m_errorString;
     }
 
-    virtual int deviceCount() const override
+    int deviceCount() const override
     {
         return 1;
     }
-    virtual QList<QObject *> getDevices() const override
+    bool isAnonymousDevice() const override
+    {
+        return true;
+    }
+    QList<QObject *> getDevices() const override
     {
         return QList<QObject *>(1, m_device);
     }
