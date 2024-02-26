@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 00:38+0000\n"
-"PO-Revision-Date: 2024-02-03 12:31+0200\n"
+"PO-Revision-Date: 2024-02-26 01:39+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -323,10 +323,8 @@ msgid "Center"
 msgstr "Centre"
 
 #: contents/configuration/PanelConfiguration.qml:291
-#, fuzzy
-#| msgid "Height:"
 msgid "Height"
-msgstr "Aukštis:"
+msgstr "Aukštis"
 
 #: contents/configuration/PanelConfiguration.qml:292
 msgid "Width"
