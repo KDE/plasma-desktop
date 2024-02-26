@@ -58,7 +58,7 @@ bool KWinWaylandDevice::init()
         if (QVariant variant = properties.value(prop.dbus); variant.isValid()) {
             prop.avail = true;
             prop.old = valueLoaderPart<typename std::remove_reference_t<decltype(prop)>::value_type>(variant);
-            prop.val = prop.old;
+            prop.set(prop.old);
             return true;
         }
         qCCritical(KCM_MOUSE) << "Device" << m_dbusName << "does not have property on d-bus read of" << prop.dbus;

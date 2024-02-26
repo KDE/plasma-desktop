@@ -41,12 +41,12 @@ class KWinWaylandDevice : public QObject
     Q_PROPERTY(bool supportsPointerAccelerationProfileFlat READ supportsPointerAccelerationProfileFlat CONSTANT)
     Q_PROPERTY(bool defaultPointerAccelerationProfileFlat READ defaultPointerAccelerationProfileFlat CONSTANT)
     Q_PROPERTY(bool pointerAccelerationProfileFlat READ pointerAccelerationProfileFlat WRITE setPointerAccelerationProfileFlat NOTIFY
-                   pointerAccelerationProfileChanged)
+                   pointerAccelerationProfileFlatChanged)
 
     Q_PROPERTY(bool supportsPointerAccelerationProfileAdaptive READ supportsPointerAccelerationProfileAdaptive CONSTANT)
     Q_PROPERTY(bool defaultPointerAccelerationProfileAdaptive READ defaultPointerAccelerationProfileAdaptive CONSTANT)
     Q_PROPERTY(bool pointerAccelerationProfileAdaptive READ pointerAccelerationProfileAdaptive WRITE setPointerAccelerationProfileAdaptive NOTIFY
-                   pointerAccelerationProfileChanged)
+                   pointerAccelerationProfileAdaptiveChanged)
 
     //
     // scrolling
@@ -208,7 +208,8 @@ public:
 Q_SIGNALS:
     void leftHandedChanged();
     void pointerAccelerationChanged();
-    void pointerAccelerationProfileChanged();
+    void pointerAccelerationProfileFlatChanged();
+    void pointerAccelerationProfileAdaptiveChanged();
     void enabledChanged();
     void middleEmulationChanged();
     void naturalScrollChanged();
@@ -218,8 +219,12 @@ private:
     template<typename T>
     struct Prop {
         using value_type = T;
-        explicit Prop(const char *dbusName)
+        using ChangedSignal = void (KWinWaylandDevice::*)();
+
+        explicit Prop(KWinWaylandDevice *device, const char *dbusName, ChangedSignal changedSignal = nullptr)
             : dbus(dbusName)
+            , changedSignalFunction(changedSignal)
+            , device(device)
         {
         }
 
@@ -227,12 +232,18 @@ private:
         {
             if (avail && val != newVal) {
                 val = newVal;
+                if (changedSignalFunction) {
+                    (device->*changedSignalFunction)();
+                }
             }
         }
         void set(const Prop<T> &p)
         {
             if (avail && val != p.val) {
                 val = p.val;
+                if (changedSignalFunction) {
+                    (device->*changedSignalFunction)();
+                }
             }
         }
         bool changed() const
@@ -242,6 +253,8 @@ private:
 
         QLatin1String dbus;
         bool avail;
+        const ChangedSignal changedSignalFunction;
+        KWinWaylandDevice *const device;
         T old;
         T val;
     };
@@ -254,43 +267,44 @@ private:
 
     //
     // general
-    Prop<QString> m_name = Prop<QString>("name");
-    Prop<QString> m_sysName = Prop<QString>("sysName");
-    Prop<bool> m_supportsDisableEvents = Prop<bool>("supportsDisableEvents");
-    Prop<bool> m_enabled = Prop<bool>("enabled");
+    Prop<QString> m_name = Prop<QString>(this, "name");
+    Prop<QString> m_sysName = Prop<QString>(this, "sysName");
+    Prop<bool> m_supportsDisableEvents = Prop<bool>(this, "supportsDisableEvents");
+    Prop<bool> m_enabled = Prop<bool>(this, "enabled", &KWinWaylandDevice::enabledChanged);
 
     //
     // advanced
-    Prop<Qt::MouseButtons> m_supportedButtons = Prop<Qt::MouseButtons>("supportedButtons");
+    Prop<Qt::MouseButtons> m_supportedButtons = Prop<Qt::MouseButtons>(this, "supportedButtons");
 
-    Prop<bool> m_supportsLeftHanded = Prop<bool>("supportsLeftHanded");
-    Prop<bool> m_leftHandedEnabledByDefault = Prop<bool>("leftHandedEnabledByDefault");
-    Prop<bool> m_leftHanded = Prop<bool>("leftHanded");
+    Prop<bool> m_supportsLeftHanded = Prop<bool>(this, "supportsLeftHanded");
+    Prop<bool> m_leftHandedEnabledByDefault = Prop<bool>(this, "leftHandedEnabledByDefault");
+    Prop<bool> m_leftHanded = Prop<bool>(this, "leftHanded", &KWinWaylandDevice::leftHandedChanged);
 
-    Prop<bool> m_supportsMiddleEmulation = Prop<bool>("supportsMiddleEmulation");
-    Prop<bool> m_middleEmulationEnabledByDefault = Prop<bool>("middleEmulationEnabledByDefault");
-    Prop<bool> m_middleEmulation = Prop<bool>("middleEmulation");
+    Prop<bool> m_supportsMiddleEmulation = Prop<bool>(this, "supportsMiddleEmulation");
+    Prop<bool> m_middleEmulationEnabledByDefault = Prop<bool>(this, "middleEmulationEnabledByDefault");
+    Prop<bool> m_middleEmulation = Prop<bool>(this, "middleEmulation", &KWinWaylandDevice::middleEmulationChanged);
 
     //
     // acceleration speed and profile
-    Prop<bool> m_supportsPointerAcceleration = Prop<bool>("supportsPointerAcceleration");
-    Prop<qreal> m_defaultPointerAcceleration = Prop<qreal>("defaultPointerAcceleration");
-    Prop<qreal> m_pointerAcceleration = Prop<qreal>("pointerAcceleration");
+    Prop<bool> m_supportsPointerAcceleration = Prop<bool>(this, "supportsPointerAcceleration");
+    Prop<qreal> m_defaultPointerAcceleration = Prop<qreal>(this, "defaultPointerAcceleration");
+    Prop<qreal> m_pointerAcceleration = Prop<qreal>(this, "pointerAcceleration", &KWinWaylandDevice::pointerAccelerationChanged);
 
-    Prop<bool> m_supportsPointerAccelerationProfileFlat = Prop<bool>("supportsPointerAccelerationProfileFlat");
-    Prop<bool> m_defaultPointerAccelerationProfileFlat = Prop<bool>("defaultPointerAccelerationProfileFlat");
-    Prop<bool> m_pointerAccelerationProfileFlat = Prop<bool>("pointerAccelerationProfileFlat");
+    Prop<bool> m_supportsPointerAccelerationProfileFlat = Prop<bool>(this, "supportsPointerAccelerationProfileFlat");
+    Prop<bool> m_defaultPointerAccelerationProfileFlat = Prop<bool>(this, "defaultPointerAccelerationProfileFlat");
+    Prop<bool> m_pointerAccelerationProfileFlat = Prop<bool>(this, "pointerAccelerationProfileFlat", &KWinWaylandDevice::pointerAccelerationProfileFlatChanged);
 
-    Prop<bool> m_supportsPointerAccelerationProfileAdaptive = Prop<bool>("supportsPointerAccelerationProfileAdaptive");
-    Prop<bool> m_defaultPointerAccelerationProfileAdaptive = Prop<bool>("defaultPointerAccelerationProfileAdaptive");
-    Prop<bool> m_pointerAccelerationProfileAdaptive = Prop<bool>("pointerAccelerationProfileAdaptive");
+    Prop<bool> m_supportsPointerAccelerationProfileAdaptive = Prop<bool>(this, "supportsPointerAccelerationProfileAdaptive");
+    Prop<bool> m_defaultPointerAccelerationProfileAdaptive = Prop<bool>(this, "defaultPointerAccelerationProfileAdaptive");
+    Prop<bool> m_pointerAccelerationProfileAdaptive =
+        Prop<bool>(this, "pointerAccelerationProfileAdaptive", &KWinWaylandDevice::pointerAccelerationProfileAdaptiveChanged);
 
     //
     // scrolling
-    Prop<bool> m_supportsNaturalScroll = Prop<bool>("supportsNaturalScroll");
-    Prop<bool> m_naturalScrollEnabledByDefault = Prop<bool>("naturalScrollEnabledByDefault");
-    Prop<bool> m_naturalScroll = Prop<bool>("naturalScroll");
-    Prop<qreal> m_scrollFactor = Prop<qreal>("scrollFactor");
+    Prop<bool> m_supportsNaturalScroll = Prop<bool>(this, "supportsNaturalScroll");
+    Prop<bool> m_naturalScrollEnabledByDefault = Prop<bool>(this, "naturalScrollEnabledByDefault");
+    Prop<bool> m_naturalScroll = Prop<bool>(this, "naturalScroll", &KWinWaylandDevice::naturalScrollChanged);
+    Prop<qreal> m_scrollFactor = Prop<qreal>(this, "scrollFactor", &KWinWaylandDevice::scrollFactorChanged);
 
     QString m_dbusName;
 };

@@ -70,7 +70,6 @@ qt_add_resources(kcm_mouse
     PREFIX "/"
     FILES
         ui/main.qml
-        ui/main_deviceless.qml
 )
 kcmutils_generate_desktop_file(kcm_mouse)
 

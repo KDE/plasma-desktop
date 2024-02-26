@@ -22,11 +22,6 @@
 
 #include "inputbackend.h"
 
-static QVariant getDeviceList(InputBackend *backend)
-{
-    return QVariant::fromValue(backend->getDevices().toList());
-}
-
 LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     : QWidget(parent->widget())
     , m_parent(parent)
@@ -53,7 +48,6 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     m_view->setAttribute(Qt::WA_AlwaysStackOnTop);
 
     m_view->rootContext()->setContextProperty("backend", m_backend);
-    m_view->rootContext()->setContextProperty("deviceModel", getDeviceList(m_backend));
 
     QObject::connect(m_view, &QQuickWidget::statusChanged, [&](QQuickWidget::Status status) {
         if (status == QQuickWidget::Ready) {
@@ -62,17 +56,7 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     });
 
     m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
-
-#if BUILD_KCM_MOUSE_X11
-    bool deviceless = m_backend->mode() == InputBackendMode::XLibinput;
-#else
-    bool deviceless = false;
-#endif
-    if (deviceless) {
-        m_view->setSource(QUrl(QStringLiteral("qrc:/ui/main_deviceless.qml")));
-    } else {
-        m_view->setSource(QUrl(QStringLiteral("qrc:/ui/main.qml")));
-    }
+    m_view->setSource(QUrl(QStringLiteral("qrc:/ui/main.qml")));
 
     if (m_initError) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
@@ -107,7 +91,7 @@ void LibinputConfig::load()
             m_errorMessage->animatedShow();
         }
     }
-    QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
+    m_parent->setNeedsSave(false);
 }
 
 void LibinputConfig::save()
@@ -137,39 +121,27 @@ void LibinputConfig::defaults()
         m_errorMessage->setText(i18n("Error while loading default values. Failed to set some options to their default values."));
         m_errorMessage->animatedShow();
     }
-    QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
     m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::onChange()
 {
-    if (!m_backend->deviceCount()) {
-        return;
+    if (m_backend->deviceCount() > 0) {
+        hideErrorMessage();
     }
-    hideErrorMessage();
     m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::onDeviceAdded(bool success)
 {
-    QQuickItem *rootObj = m_view->rootObject();
-
     if (!success) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
         m_errorMessage->setText(i18n("Error while adding newly connected device. Please reconnect it and restart this configuration module."));
     }
 
-    int activeIndex;
     if (m_backend->deviceCount() == 1) {
-        // if no pointer device was connected previously, show the new device and hide the no-device-message
-        activeIndex = 0;
         hideErrorMessage();
-    } else {
-        activeIndex = QQmlProperty::read(rootObj, "deviceIndex").toInt();
     }
-    m_view->rootContext()->setContextProperty("deviceModel", getDeviceList(m_backend));
-    QMetaObject::invokeMethod(rootObj, "resetModel", Q_ARG(QVariant, activeIndex));
-    QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
 }
 
 void LibinputConfig::onDeviceRemoved(int index)
@@ -185,15 +157,7 @@ void LibinputConfig::onDeviceRemoved(int index)
             m_errorMessage->setText(i18n("Pointer device disconnected. No other devices found."));
         }
         m_errorMessage->animatedShow();
-        activeIndex = 0;
-    } else {
-        if (index < activeIndex) {
-            activeIndex--;
-        }
     }
-    m_view->rootContext()->setContextProperty("deviceModel", getDeviceList(m_backend));
-    QMetaObject::invokeMethod(m_view->rootObject(), "resetModel", Q_ARG(QVariant, activeIndex));
-    QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
 
     m_parent->setNeedsSave(m_backend->isChangedConfig());
 }

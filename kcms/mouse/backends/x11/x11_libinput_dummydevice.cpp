@@ -175,10 +175,9 @@ bool X11LibinputDummyDevice::getConfig()
 
     reset(m_middleEmulation, false);
     reset(m_naturalScroll, false);
-    auto flatDefault = m_defaultPointerAccelerationProfileFlat.val;
-    reset(m_pointerAccelerationProfileFlat, flatDefault);
+    reset(m_pointerAccelerationProfileFlat, m_defaultPointerAccelerationProfileFlat.val);
+    m_pointerAccelerationProfileAdaptive.reset(!m_pointerAccelerationProfileFlat.val);
 
-    m_pointerAccelerationProfileAdaptive.reset(!m_settings->load(m_pointerAccelerationProfileFlat.cfgName, flatDefault));
     m_pointerAcceleration.reset(m_settings->load(m_pointerAcceleration.cfgName, 0.));
 
     return true;
