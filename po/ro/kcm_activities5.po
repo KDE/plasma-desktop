@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2023.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-24 00:47+0000\n"
-"PO-Revision-Date: 2023-06-18 19:05+0100\n"
+"PO-Revision-Date: 2024-01-07 18:17+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -19,8 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 
 #: ExtraActivitiesInterface.cpp:34 MainConfigurationWidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Activities"
+#, kde-format
 msgid "Activities"
 msgstr "Activități"
 
@@ -31,16 +30,12 @@ msgid "Delete Activity"
 msgstr "Șterge activitatea"
 
 #: imports/activitysettings.cpp:52
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to delete '%1'?"
+#, kde-format
 msgid "Are you sure you want to delete '%1'?"
 msgstr "Sigur doriți să ștergeți „%1”?"
 
 #: imports/dialog.cpp:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "Error loading the QML files. Check your installation.\n"
-#| "Missing %1"
+#, kde-format
 msgid ""
 "Error loading the QML files. Check your installation.\n"
 "Missing %1"
@@ -49,8 +44,7 @@ msgstr ""
 "Lipsește %1"
 
 #: imports/dialog.cpp:146
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgid "General"
 msgstr "Generale"
 
@@ -61,42 +55,34 @@ msgid "Create a New Activity"
 msgstr "Creează activitate nouă"
 
 #: imports/dialog.cpp:161
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Activity Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings"
-msgstr "Configurări activitate"
+msgstr "Configurări pentru activitate"
 
 #: imports/dialog.cpp:163
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Create"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create"
 msgstr "Creează"
 
 #: imports/qml/activityDialog/GeneralTab.qml:41
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgid "Icon:"
 msgstr "Pictogramă:"
 
 #: imports/qml/activityDialog/GeneralTab.qml:55
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgid "Name:"
 msgstr "Denumire:"
 
 #: imports/qml/activityDialog/GeneralTab.qml:60
-#, fuzzy, kde-format
-#| msgid "Description:"
+#, kde-format
 msgid "Description:"
 msgstr "Descriere:"
 
 #: imports/qml/activityDialog/GeneralTab.qml:69
-#, fuzzy, kde-format
-#| msgid "Privacy:"
+#, kde-format
 msgid "Privacy:"
 msgstr "Intimitate:"
 
@@ -112,35 +98,30 @@ msgstr "Scurtătură pentru schimbare:"
 
 #. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:10
-#, fuzzy, kde-format
-#| msgid "How many months keep the activity history"
+#, kde-format
 msgid "How many months keep the activity history"
 msgstr "Câte luni să fie păstrat istoricul activității"
 
 #. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Which data to keep in activity history"
+#, kde-format
 msgid "Which data to keep in activity history"
 msgstr "Ce date să fie păstrate în istoricul activității"
 
 #. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "List of Applications whose activity history to save"
+#, kde-format
 msgid "List of Applications whose activity history to save"
 msgstr "Lista aplicațiilor al căror istoric de activitate să fie salvat"
 
 #. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:24
-#, fuzzy, kde-format
-#| msgid "List of Applications whose activity history not to save"
+#, kde-format
 msgid "List of Applications whose activity history not to save"
 msgstr "Lista aplicațiilor al căror istoric de activitate să nu fie salvat"
 
 #: MainConfigurationWidget.cpp:33
-#, fuzzy, kde-format
-#| msgid "Switching"
+#, kde-format
 msgid "Switching"
 msgstr "Schimbare"
 
@@ -162,45 +143,37 @@ msgid "Create New…"
 msgstr "Creează nouă…"
 
 #: SwitchingTab.cpp:52
-#, fuzzy, kde-format
-#| msgid "Activity switching"
+#, kde-format
 msgid "Activity switching"
 msgstr "Schimbare activități"
 
 #: SwitchingTab.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Walk through activities"
+#, kde-format
 msgctxt "@action"
 msgid "Walk through activities"
 msgstr "Traversează activitățile"
 
 #: SwitchingTab.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Walk through activities (Reverse)"
+#, kde-format
 msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "Traversează activitățile (invers)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
 #: ui/SwitchingTabBase.ui:22
-#, fuzzy, kde-format
-#| msgid "Remember for each activity (needs restart)"
+#, kde-format
 msgid "Remember for each activity (needs restart)"
 msgstr "Reține pentru fiecare activitate (necesită repornire)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/SwitchingTabBase.ui:29
-#, fuzzy, kde-format
-#| msgid "Current virtual desktop:"
+#, kde-format
 msgid "Current virtual desktop:"
 msgstr "Biroul virtual actual:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_1)
 #: ui/SwitchingTabBase.ui:38
-#, fuzzy, kde-format
-#| msgid "Shortcuts:"
+#, kde-format
 msgid "Shortcuts:"
 msgstr "Scurtături:"
 
