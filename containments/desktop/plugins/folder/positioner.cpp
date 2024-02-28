@@ -600,7 +600,6 @@ void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int star
         }
     } else {
         beginInsertRows(parent, start, end);
-        beginInsertRows(parent, start, end);
         m_beginInsertRowsCalled = true;
     }
 }
@@ -621,7 +620,7 @@ void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first
 
         for (int i = first; i <= last; ++i) {
             int proxyRow = m_sourceToProxy.take(i);
-            m_proxyToSource.remove(proxyRow);
+            // Don't touch m_proxyToSource yet, as beginRemoveRows was not emitted yet
             m_pendingChanges << createIndex(proxyRow, 0);
         }
 
@@ -642,10 +641,13 @@ void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first
             }
         }
 
-        m_proxyToSource = newProxyToSource;
-        m_sourceToProxy = newSourceToProxy;
-
-        int newLast = lastRow();
+        int newLast = 0;
+        // Duplicate lastRow instead of assigning m_proxyToSource now as rowCount() can't be changed before beginRemoveRows
+        if (!newProxyToSource.isEmpty()) {
+            QList<int> keys(newProxyToSource.keys());
+            std::sort(keys.begin(), keys.end());
+            newLast = keys.last();
+        }
 
         if (oldLast > newLast) {
             int diff = oldLast - newLast;
@@ -653,6 +655,9 @@ void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first
         } else {
             m_ignoreNextTransaction = true;
         }
+
+        m_proxyToSource = newProxyToSource;
+        m_sourceToProxy = newSourceToProxy;
     } else {
         beginRemoveRows(parent, first, last);
     }

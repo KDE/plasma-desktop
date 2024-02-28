@@ -205,18 +205,25 @@ FolderModel::FolderModel(QObject *parent)
     });
 
     // Position dropped items at the desired target position.
-    connect(this, &QAbstractItemModel::rowsInserted, this, [this](const QModelIndex &parent, int first, int last) {
-        for (int i = first; i <= last; ++i) {
-            const auto idx = index(i, 0, parent);
-            const auto url = itemForIndex(idx).url();
-            auto it = m_dropTargetPositions.find(url.fileName());
-            if (it != m_dropTargetPositions.end()) {
-                const auto pos = it.value();
-                m_dropTargetPositions.erase(it);
-                Q_EMIT move(pos.x(), pos.y(), {url});
+    // It's queued because we need it to be executed after any connection to rowsInserted by proxy models
+    // See BUG:481254
+    connect(
+        this,
+        &QAbstractItemModel::rowsInserted,
+        this,
+        [this](const QModelIndex &parent, int first, int last) {
+            for (int i = first; i <= last; ++i) {
+                const auto idx = index(i, 0, parent);
+                const auto url = itemForIndex(idx).url();
+                auto it = m_dropTargetPositions.find(url.fileName());
+                if (it != m_dropTargetPositions.end()) {
+                    const auto pos = it.value();
+                    m_dropTargetPositions.erase(it);
+                    Q_EMIT move(pos.x(), pos.y(), {url});
+                }
             }
-        }
-    });
+        },
+        Qt::QueuedConnection);
 
     /*
      * Dropped files may not actually show up as new files, e.g. when we overwrite
