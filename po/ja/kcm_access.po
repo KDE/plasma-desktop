@@ -1,4 +1,5 @@
 # Translation of kcmaccess into Japanese.
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2002.
 # Shinsaku Nakagawa <shinsaku@users.sourceforge.jp>, 2004.
@@ -12,9 +13,9 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:45+0000\n"
-"PO-Revision-Date: 2015-05-22 22:11-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2024-02-25 23:32+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"Language-Team: ja\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,6 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -81,87 +83,78 @@ msgstr "%1 を押す"
 #: kcmaccess.cpp:182
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
-msgstr ""
+msgstr "Orca のために gsetttings を設定できませんでした: \"%1\" が失敗しました"
 
 #: kcmaccess.cpp:189
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
-msgstr ""
+msgstr "エラー: \"orca --setup\" を起動できませんでした"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Use System Bell"
-msgstr "システムベルを使う(&S)"
+msgstr "システムベルを使う"
 
 #. i18n: ectx: label, entry (CustomBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Customize system bell"
-msgstr "システムベルを使う(&S)"
+msgstr "システムベルをカスタマイズ"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
 #, kde-format
 msgid "Sound file for the Bell"
-msgstr ""
+msgstr "ベルの音声ファイル"
 
 #. i18n: ectx: label, entry (VisibleBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:20
 #, kde-format
 msgid "Use a visual bell instead of a sound"
-msgstr ""
+msgstr "音声の代わりに視覚的ベルを使用する"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
 #: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
-msgstr ""
+msgstr "ベルが鳴ったときシステムの色を反転させる"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Color of the Visible Bell"
-msgstr "システムベルを使う(&S)"
+msgstr "視覚的ベルの色"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
 #, kde-format
 msgid "Duration of the Visible Bell"
-msgstr ""
+msgstr "視覚的ベルの持続時間"
 
-# ACCELERATOR changed by translator
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Use &sticky keys"
+#, kde-format
 msgid "Use sticky Keys"
-msgstr "スティッキーキーを使う(&U)"
+msgstr "スティッキーキーを使う"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
-#, fuzzy, kde-format
-#| msgid "&Lock sticky keys"
+#, kde-format
 msgid "Lock the sticky keys"
-msgstr "スティッキーキーをロックする(&L)"
+msgstr "スティッキーキーをロック"
 
-# ACCELERATOR added by translator
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "二つのキーが同時に押されたらスティッキーキーを無効にする(&T)"
+msgstr "二つのキーが同時に押されたときスティッキーキーを無効にする"
 
-# ACCELERATOR changed by translator
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Use &sticky keys"
+#, kde-format
 msgid "Beep on a sticky key press"
-msgstr "スティッキーキーを使う(&U)"
+msgstr "スティッキーキーが押されたときビープ音を鳴らす"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
@@ -173,7 +166,7 @@ msgstr ""
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr ""
+msgstr "修飾キーが押されたとき通知する"
 
 #. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:33
@@ -195,10 +188,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
-#, fuzzy, kde-format
-#| msgid "&Use slow keys"
+#, kde-format
 msgid "Use slow keypresses"
-msgstr "スローキーを使う(&U)"
+msgstr "スローキーを使う"
 
 #. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:13
@@ -210,19 +202,19 @@ msgstr ""
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr ""
+msgstr "スローキーが押されたときビープ音を鳴らす"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr ""
+msgstr "キー押下が受け付けられたときビープ音を鳴らす"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr ""
+msgstr "キー押下が拒否されたときビープ音を鳴らす"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
@@ -234,25 +226,25 @@ msgstr "バウンスキー (二度打ち防止機能)"
 #: kcmaccessibilitykeyboardfilters.kcfg:33
 #, kde-format
 msgid "Use a delay for bouncing"
-msgstr ""
+msgstr "二度打ち防止のために入力の間隔を設定"
 
 #. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:37
 #, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr ""
+msgstr "バウンスキーイベントが拒否されたときビープ音を鳴らす"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
 #, kde-format
 msgid "Use keys to control the mouse"
-msgstr ""
+msgstr "キーを使用してポインタを移動"
 
 #. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:13
 #, kde-format
 msgid "Delay for the mouse movement"
-msgstr ""
+msgstr "ポインタ移動の遅延"
 
 #. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:17
@@ -264,13 +256,13 @@ msgstr ""
 #: kcmaccessibilitymouse.kcfg:21
 #, kde-format
 msgid "Time to hit maximum velocity"
-msgstr ""
+msgstr "最大速度に到達するまでの時間"
 
 #. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:25
 #, kde-format
 msgid "Maximum Velocity"
-msgstr ""
+msgstr "最大速度"
 
 #. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:29
@@ -282,185 +274,172 @@ msgstr ""
 #: kcmaccessibilitymouse.kcfg:35
 #, kde-format
 msgid "Use Gestures"
-msgstr ""
+msgstr "ジェスチャーを使用"
 
 #. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:39
 #, kde-format
 msgid "Ask for Confirmation for a gesture"
-msgstr ""
+msgstr "ジェスチャー実行の確認を求める"
 
 #. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:43
 #, kde-format
 msgid "Confirm access to the Keyboard"
-msgstr ""
+msgstr "キーボードへのアクセスを確認"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
 #, kde-format
 msgid "Enable Screen Reader"
-msgstr ""
+msgstr "スクリーンリーダを有効化"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
 msgid "Please choose an audio file"
-msgstr ""
+msgstr "音声ファイルを選択してください"
 
 #: package/contents/ui/Bell.qml:22
 #, kde-format
 msgid "Audio Files (*.mp3 *.ogg *.wav)"
-msgstr ""
+msgstr "音声ファイル (*.mp3 *.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31
-#, fuzzy, kde-format
-#| msgid "Audible Bell"
+#, kde-format
 msgid "Audible bell:"
-msgstr "音声ベル"
+msgstr "音声ベル:"
 
 #: package/contents/ui/Bell.qml:32
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
-msgstr ""
+msgstr "有効"
 
 #: package/contents/ui/Bell.qml:43
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
-msgstr ""
+msgstr "カスタムサウンド:"
 
 #: package/contents/ui/Bell.qml:76
 #, kde-format
 msgid "Search audio file for the system bell"
-msgstr ""
+msgstr "システムベルとして使用する音声ファイルを検索"
 
 #: package/contents/ui/Bell.qml:77
 #, kde-format
 msgid "Button search audio file"
-msgstr ""
+msgstr "音声ファイル検索ボタン"
 
 #: package/contents/ui/Bell.qml:93
-#, fuzzy, kde-format
-#| msgid "Visible Bell"
+#, kde-format
 msgid "Visual bell:"
-msgstr "視覚的ベル"
+msgstr "視覚的ベル:"
 
 #: package/contents/ui/Bell.qml:94
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
-msgstr ""
+msgstr "有効"
 
 #: package/contents/ui/Bell.qml:108
-#, fuzzy, kde-format
-#| msgid "I&nvert screen"
+#, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
-msgstr "スクリーンの色を反転させる(&N)"
+msgstr "スクリーンの色を反転させる"
 
 #: package/contents/ui/Bell.qml:125
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
-msgstr ""
+msgstr "点滅する"
 
 #: package/contents/ui/Bell.qml:136
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
-msgstr ""
+msgstr "色"
 
+# ACCELERATOR added by translator
 #: package/contents/ui/Bell.qml:147
-#, fuzzy, kde-format
-#| msgid "&Duration:"
+#, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
-msgstr "持続時間(&D):"
+msgstr "持続時間:"
 
 #: package/contents/ui/KeyboardFilters.qml:18
-#, fuzzy, kde-format
-#| msgid "&Use slow keys"
+#, kde-format
 msgid "Slow keys:"
-msgstr "スローキーを使う(&U)"
+msgstr "スローキー:"
 
 #: package/contents/ui/KeyboardFilters.qml:19
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
-msgstr ""
+msgstr "有効"
 
 #: package/contents/ui/KeyboardFilters.qml:22
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
+"キーの入力が受け付けられるまでに押し続けなければならない時間を設定できます。"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
-msgstr ""
+msgstr "遅延:"
 
 #: package/contents/ui/KeyboardFilters.qml:54
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Ring system bell:"
-msgstr "システムベルを使う(&S)"
+msgstr "システムベルを鳴らす:"
 
-# ACCELERATOR changed by translator
 #: package/contents/ui/KeyboardFilters.qml:55
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
+#, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "キーが押されたらシステムベルを使う(&T)"
+msgstr "キーが押されたとき(&P)"
 
-# ACCELERATOR changed by translator
 #: package/contents/ui/KeyboardFilters.qml:69
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is accepted"
+#, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "キー押下が受け付けられたらシステムベルを使う(&L)"
+msgstr "キー押下が受け付けられたとき(&A)"
 
-# ACCELERATOR changed by translator
 #: package/contents/ui/KeyboardFilters.qml:83
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is rejected"
+#, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "キー押下が拒否されたらシステムベルを使う(&W)"
+msgstr "キー押下が拒否されたとき(&R)"
 
 #: package/contents/ui/KeyboardFilters.qml:100
-#, fuzzy, kde-format
-#| msgid "Bounce Keys"
+#, kde-format
 msgid "Bounce keys:"
-msgstr "バウンスキー (二度打ち防止機能)"
+msgstr "バウンスキー (二度打ち防止機能):"
 
 #: package/contents/ui/KeyboardFilters.qml:101
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
-msgstr ""
+msgstr "有効"
 
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "短期間に繰り返された同じキーの押下を無視"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
-msgstr ""
+msgstr "遅延:"
 
-# ACCELERATOR changed by translator
 #: package/contents/ui/KeyboardFilters.qml:134
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is rejected"
+#, kde-format
 msgid "Ring system bell when rejected"
-msgstr "キー押下が拒否されたらシステムベルを使う(&W)"
+msgstr "キー押下が拒否されたときシステムベルを鳴らす"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -468,159 +447,146 @@ msgid ""
 "This module lets you configure the accessibility features such as a screen "
 "reader."
 msgstr ""
+"このモジュールでスクリーンリーダなどのアクセシビリティ機能を設定できます。"
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Bell"
+#, kde-format
 msgctxt "System Bell"
 msgid "Bell"
-msgstr "ベル(&B)"
+msgstr "ベル"
 
 #: package/contents/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "&Modifier Keys"
+#, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
-msgstr "修飾キー(&M)"
+msgstr "修飾キー"
 
 #: package/contents/ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "&Keyboard Filters"
+#, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
-msgstr "キーボードフィルタ(&K)"
+msgstr "キーボードフィルタ"
 
 #: package/contents/ui/main.qml:41
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
-msgstr ""
+msgstr "マウスナビゲーション"
 
 #: package/contents/ui/main.qml:46
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
-msgstr ""
+msgstr "スクリーンリーダ"
 
-# ACCELERATOR removed by translator
 #: package/contents/ui/ModifierKeys.qml:16
-#, fuzzy, kde-format
-#| msgid "Sticky Keys"
+#, kde-format
 msgid "Sticky keys:"
-msgstr "スティッキーキー (順次入力機能)"
+msgstr "スティッキーキー (順次入力機能):"
 
 #: package/contents/ui/ModifierKeys.qml:17
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
-msgstr ""
+msgstr "有効"
 
 #: package/contents/ui/ModifierKeys.qml:28
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
-msgstr ""
+msgstr "ロック"
 
 #: package/contents/ui/ModifierKeys.qml:42
 #, kde-format
 msgid "Disable when two keys are held down"
-msgstr ""
+msgstr "2つのキーが同時に押されたときは無効化"
 
 # ACCELERATOR changed by translator
 #: package/contents/ui/ModifierKeys.qml:54
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
+#, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr "キーが押されたらシステムベルを使う(&T)"
+msgstr "修飾キーが押されたときシステムベルを鳴らす"
 
 #: package/contents/ui/ModifierKeys.qml:71
 #, kde-format
 msgid "Feedback:"
-msgstr ""
+msgstr "フィードバック:"
 
 # ACCELERATOR changed by translator
 #: package/contents/ui/ModifierKeys.qml:72
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is accepted"
+#, kde-format
 msgid "Ring system bell when locking keys are toggled"
-msgstr "キー押下が受け付けられたらシステムベルを使う(&L)"
+msgstr "ロックキーが押されたときシステムベルを鳴らす"
 
-# ACCELERATOR added by translator
 #: package/contents/ui/ModifierKeys.qml:83
-#, fuzzy, kde-format
-#| msgid ""
-#| "Use Plasma's system notification mechanism whenever a modifier or locking "
-#| "key changes its state"
+#, kde-format
 msgid "Show notification when modifier or locking keys are used"
-msgstr "修飾キーやロックキーの状態が変わったら Plasma のシステム通知を使う(&W)"
+msgstr "修飾キーやロックキーが押されたとき通知を表示"
 
 #: package/contents/ui/ModifierKeys.qml:95
-#, fuzzy, kde-format
-#| msgid "Configure &Notifications..."
+#, kde-format
 msgid "Configure Notifications…"
-msgstr "通知を設定(&N)..."
+msgstr "通知を設定..."
 
 #: package/contents/ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
-msgstr ""
+msgstr "テンキーでカーソルを動かす:"
 
 #: package/contents/ui/MouseNavigation.qml:18
 #, kde-format
 msgid "Enable"
-msgstr ""
+msgstr "有効"
 
 #: package/contents/ui/MouseNavigation.qml:29
 #, kde-format
 msgid "When a gesture is used:"
-msgstr ""
+msgstr "ジェスチャーが使用されたとき:"
 
 #: package/contents/ui/MouseNavigation.qml:30
 #, kde-format
 msgid "Display a confirmation dialog"
-msgstr ""
+msgstr "確認ダイアログを表示"
 
 #: package/contents/ui/MouseNavigation.qml:41
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Ring the System Bell"
-msgstr "システムベルを使う(&S)"
+msgstr "システムベルを鳴らす"
 
 #: package/contents/ui/MouseNavigation.qml:52
-#, fuzzy, kde-format
-#| msgid "Notification"
+#, kde-format
 msgid "Show a notification"
-msgstr "通知"
+msgstr "通知を表示"
 
 #: package/contents/ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
-msgstr ""
+msgstr "加速の遅延:"
 
 #: package/contents/ui/MouseNavigation.qml:82
 #, kde-format
 msgid "Repeat interval:"
-msgstr ""
+msgstr "繰り返しの間隔:"
 
 #: package/contents/ui/MouseNavigation.qml:96
 #, kde-format
 msgid "Acceleration time:"
-msgstr ""
+msgstr "加速時間:"
 
 #: package/contents/ui/MouseNavigation.qml:110
 #, kde-format
 msgid "Maximum speed:"
-msgstr ""
+msgstr "最大速度:"
 
 #: package/contents/ui/MouseNavigation.qml:124
 #, kde-format
 msgid "Acceleration profile:"
-msgstr ""
+msgstr "加速プロファイル:"
 
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr ""
+msgstr "Orca スクリーンリーダを設定..."
 
 #: package/contents/ui/ScreenReader.qml:41
 #, kde-format
@@ -628,6 +594,8 @@ msgid ""
 "Please note that you may have to log out or reboot once to allow the screen "
 "reader to work properly."
 msgstr ""
+"スクリーンリーダを正常に機能させるためには、ログアウトもしくは再起動する必要"
+"があるかもしれません。"
 
 #: package/contents/ui/ScreenReader.qml:42
 #, kde-format
@@ -635,3 +603,5 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
+"Orca スクリーンリーダがインストールされていないようです。この機能を使用するに"
+"は、Orca をインストールして再ログイン/再起動してください。"
