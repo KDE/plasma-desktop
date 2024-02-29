@@ -178,6 +178,9 @@ KCM.AbstractKCM {
                         id: componentDelegate
                         width: ListView.view.width
 
+                        text: model.display
+                        icon.name: model.decoration
+
                         KeyNavigation.right: shortcutsList
 
                         onClicked: ListView.view.currentIndex = index
@@ -188,8 +191,8 @@ KCM.AbstractKCM {
                             Kirigami.IconTitleSubtitle {
                                 id: label
 
-                                icon.name: model.decoration
-                                title: model.display
+                                icon.name: componentDelegate.icon.name
+                                title: componentDelegate.text
                                 Layout.fillWidth: true
                                 opacity: model.pendingDeletion ? 0.5 : 1.0
                                 selected: componentDelegate.highlighted || componentDelegate.down
@@ -401,7 +404,7 @@ KCM.AbstractKCM {
                 if (addCommandDialog.editing) {
                     const newLabel = kcm.editCommand(addCommandDialog.componentName, cmdField.text);
                     if (addCommandDialog.commandListItemDelegate) {
-                        addCommandDialog.commandListItemDelegate.label = newLabel;
+                        addCommandDialog.commandListItemDelegate.text = newLabel;
                     }
                 } else {
                     kcm.addCommand(cmdField.text);
