@@ -6,7 +6,7 @@
 # Ilpo Kantonen <ilpo@iki.fi>, 2005.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2022.
+# SPDX-FileCopyrightText: 2011, 2012, 2022, 2024 Lasse Liehu <lasse.liehu@gmail.com>
 # Tommi Nieminen <translator@legisign.org>, 2019, 2020, 2021, 2022, 2023.
 #
 # KDE Finnish translation sprint participants:
@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2023-03-04 18:36+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2024-02-29 19:54+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:24+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmsmserver.cpp:49
 #, kde-format
@@ -180,19 +180,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr "Seuraavassa uudelleenkäynnistyksessä:"
+msgstr "Seuraavan käynnistyksen jälkeen:"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Siirry UEFI-asetusnäyttöön"
+msgstr "Siirry UEFI-asetuksiin"
 
 #: package/contents/ui/main.qml:185
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Siirry laiteohjelmiston asetusnäyttöön"
+msgstr "Siirry laiteohjelmiston asetuksiin"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
