@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 00:38+0000\n"
-"PO-Revision-Date: 2024-02-05 11:37\n"
+"PO-Revision-Date: 2024-02-29 12:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -244,7 +244,7 @@ msgstr "快捷键"
 
 #: contents/configuration/ConfigurationShortcuts.qml:30
 msgid "This shortcut will activate the applet as though it had been clicked."
-msgstr "此快捷键将激活小程序，和该小程序被点击时的效果一样。"
+msgstr "此快捷键将激活这个小程序 (相当于直接点击它的效果)。"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 msgid "Wallpaper"
@@ -315,14 +315,12 @@ msgid "Center"
 msgstr "居中"
 
 #: contents/configuration/PanelConfiguration.qml:291
-#, fuzzy
-#| msgid "Height:"
 msgid "Height"
-msgstr "高度："
+msgstr "高度"
 
 #: contents/configuration/PanelConfiguration.qml:292
 msgid "Width"
-msgstr ""
+msgstr "宽度"
 
 #: contents/configuration/PanelConfiguration.qml:311
 msgid "Fill height"
@@ -528,6 +526,3 @@ msgstr "没有匹配搜索条件的挂件"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "没有可用的挂件"
-
-#~ msgid "Length"
-#~ msgstr "长度"

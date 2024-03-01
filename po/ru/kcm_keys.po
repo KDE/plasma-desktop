@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:38+0000\n"
+"POT-Creation-Date: 2024-03-01 00:39+0000\n"
 "PO-Revision-Date: 2024-02-04 19:26+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -172,28 +172,28 @@ msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr "команду или сценарий…"
 
-#: ui/main.qml:223
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Изменить команду для %1"
 
-#: ui/main.qml:239
+#: ui/main.qml:242
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "Удалить все комбинации клавиш для %1"
 
-#: ui/main.qml:250
+#: ui/main.qml:253
 #, kde-format
 msgid "Undo deletion"
 msgstr "Отменить удаление"
 
-#: ui/main.qml:304
+#: ui/main.qml:307
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Не найдено ни одного объекта, удовлетворяющего критериям поиска"
 
-#: ui/main.qml:337
+#: ui/main.qml:340
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
@@ -201,81 +201,81 @@ msgstr ""
 "клавиш выберите объект из списка слева."
 
 # BUGME: please add 'title:window' context --ayavorsky 20200502
-#: ui/main.qml:349
+#: ui/main.qml:352
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Экспорт схемы комбинаций клавиш"
 
-#: ui/main.qml:349 ui/main.qml:467
+#: ui/main.qml:352 ui/main.qml:470
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Импорт схемы комбинаций клавиш"
 
-#: ui/main.qml:351
+#: ui/main.qml:354
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Схема комбинаций клавиш (*.kksrc)"
 
-#: ui/main.qml:379
+#: ui/main.qml:382
 #, kde-format
 msgid "Edit Command"
 msgstr "Изменение команды"
 
-#: ui/main.qml:379
+#: ui/main.qml:382
 #, kde-format
 msgid "Add Command"
 msgstr "Добавление команды"
 
-#: ui/main.qml:397
+#: ui/main.qml:400
 #, kde-format
 msgid "Save"
 msgstr "Сохранить"
 
-#: ui/main.qml:397
+#: ui/main.qml:400
 #, kde-format
 msgid "Add"
 msgstr "Добавить"
 
-#: ui/main.qml:423
+#: ui/main.qml:426
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Введите команду или выберите файл сценария:"
 
-#: ui/main.qml:438
+#: ui/main.qml:441
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Выбрать…"
 
-#: ui/main.qml:451
+#: ui/main.qml:454
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Выбор файла сценария"
 
-#: ui/main.qml:453
+#: ui/main.qml:456
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Файл сценария (*.*.sh)"
 
-#: ui/main.qml:474
+#: ui/main.qml:477
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Выберите файл схемы для импорта:"
 
-#: ui/main.qml:492
+#: ui/main.qml:495
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Пользовательская схема"
 
-#: ui/main.qml:497
+#: ui/main.qml:500
 #, kde-format
 msgid "Select File…"
 msgstr "Выбрать файл..."
 
-#: ui/main.qml:497
+#: ui/main.qml:500
 #, kde-format
 msgid "Import"
 msgstr "Импорт"
