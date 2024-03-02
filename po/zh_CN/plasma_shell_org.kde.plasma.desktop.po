@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:38+0000\n"
+"POT-Creation-Date: 2024-03-02 00:38+0000\n"
 "PO-Revision-Date: 2024-02-29 12:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -66,15 +66,11 @@ msgstr "配置活动"
 msgid "Delete"
 msgstr "删除"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "对不起，加载 %1 时发生错误。"
-
-#: contents/applet/AppletError.qml:167
+#: contents/applet/AppletError.qml:164
 msgid "Copy to Clipboard"
 msgstr "复制到剪贴板"
 
-#: contents/applet/AppletError.qml:190
+#: contents/applet/AppletError.qml:187
 msgid "View Error Details…"
 msgstr "查看错误详情…"
 
@@ -526,3 +522,6 @@ msgstr "没有匹配搜索条件的挂件"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "没有可用的挂件"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "对不起，加载 %1 时发生错误。"

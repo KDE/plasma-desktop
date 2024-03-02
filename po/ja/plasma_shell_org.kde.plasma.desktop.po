@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:38+0000\n"
+"POT-Creation-Date: 2024-03-02 00:38+0000\n"
 "PO-Revision-Date: 2024-02-08 15:20+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -67,15 +67,11 @@ msgstr "アクティビティを設定"
 msgid "Delete"
 msgstr "削除"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "すみません。%1 の読み込み中にエラーが発生しました。"
-
-#: contents/applet/AppletError.qml:167
+#: contents/applet/AppletError.qml:164
 msgid "Copy to Clipboard"
 msgstr "クリップボードにコピー"
 
-#: contents/applet/AppletError.qml:190
+#: contents/applet/AppletError.qml:187
 msgid "View Error Details…"
 msgstr "エラーの詳細を表示..."
 
@@ -533,6 +529,9 @@ msgstr "検索語に一致するウィジェットはありません"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "利用可能なウィジェットはありません"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "すみません。%1 の読み込み中にエラーが発生しました。"
 
 #~ msgid "Length"
 #~ msgstr "長さ"

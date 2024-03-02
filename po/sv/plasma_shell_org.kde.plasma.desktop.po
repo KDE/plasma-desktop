@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:38+0000\n"
+"POT-Creation-Date: 2024-03-02 00:38+0000\n"
 "PO-Revision-Date: 2022-09-30 18:07+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -65,15 +65,11 @@ msgstr "Anpassa aktivitet"
 msgid "Delete"
 msgstr "Ta bort"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "Tyvärr uppstod ett fel vid inläsning av %1."
-
-#: contents/applet/AppletError.qml:167
+#: contents/applet/AppletError.qml:164
 msgid "Copy to Clipboard"
 msgstr "Kopiera till klippbordet"
 
-#: contents/applet/AppletError.qml:190
+#: contents/applet/AppletError.qml:187
 msgid "View Error Details…"
 msgstr "Visa felinformation…"
 
@@ -570,6 +566,9 @@ msgstr "Inga grafiska komponenter motsvarade sökbegreppen"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "Inga grafiska komponenter tillgängliga"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "Tyvärr uppstod ett fel vid inläsning av %1."
 
 #, fuzzy
 #~| msgid "Maximize Panel"

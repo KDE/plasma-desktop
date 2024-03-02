@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:38+0000\n"
+"POT-Creation-Date: 2024-03-02 00:38+0000\n"
 "PO-Revision-Date: 2023-05-21 14:52+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -65,15 +65,11 @@ msgstr "Configure activity"
 msgid "Delete"
 msgstr "Delete"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "Sorry! There was an error loading %1."
-
-#: contents/applet/AppletError.qml:167
+#: contents/applet/AppletError.qml:164
 msgid "Copy to Clipboard"
 msgstr "Copy to Clipboard"
 
-#: contents/applet/AppletError.qml:190
+#: contents/applet/AppletError.qml:187
 msgid "View Error Details…"
 msgstr "View Error Details…"
 
@@ -561,6 +557,9 @@ msgstr "No widgets matched the search terms"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "No widgets available"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "Sorry! There was an error loading %1."
 
 #~ msgctxt "@action:button Make the panel as big as it can be"
 #~ msgid "Maximize"

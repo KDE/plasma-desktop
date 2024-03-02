@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:38+0000\n"
+"POT-Creation-Date: 2024-03-02 00:38+0000\n"
 "PO-Revision-Date: 2024-02-16 10:22+0100\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -67,15 +67,11 @@ msgstr "Nastavit aktivitu"
 msgid "Delete"
 msgstr "Smazat"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "Při načítání došlo k chybě %1."
-
-#: contents/applet/AppletError.qml:167
+#: contents/applet/AppletError.qml:164
 msgid "Copy to Clipboard"
 msgstr "Zkopírovat do schránky"
 
-#: contents/applet/AppletError.qml:190
+#: contents/applet/AppletError.qml:187
 msgid "View Error Details…"
 msgstr "Zobrazit podrobnosti chyby..."
 
@@ -533,3 +529,6 @@ msgstr "Vyhledávacím kritériím neodpovídá žádný widget"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "Nejsou dostupné žádné widgety"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "Při načítání došlo k chybě %1."

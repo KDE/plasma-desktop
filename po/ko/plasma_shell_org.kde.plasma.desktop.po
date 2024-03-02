@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:38+0000\n"
+"POT-Creation-Date: 2024-03-02 00:38+0000\n"
 "PO-Revision-Date: 2024-02-17 15:11+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -66,15 +66,11 @@ msgstr "활동 설정"
 msgid "Delete"
 msgstr "삭제"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "죄송합니다! %1을(를) 불러오는 동안 오류가 발생했습니다."
-
-#: contents/applet/AppletError.qml:167
+#: contents/applet/AppletError.qml:164
 msgid "Copy to Clipboard"
 msgstr "클립보드에 복사"
 
-#: contents/applet/AppletError.qml:190
+#: contents/applet/AppletError.qml:187
 msgid "View Error Details…"
 msgstr "자세한 오류 정보 표시…"
 
@@ -528,6 +524,9 @@ msgstr "검색어와 일치하는 위젯 없음"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "사용 가능한 위젯 없음"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "죄송합니다! %1을(를) 불러오는 동안 오류가 발생했습니다."
 
 #~ msgid "Length"
 #~ msgstr "길이"

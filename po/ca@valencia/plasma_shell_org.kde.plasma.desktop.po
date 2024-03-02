@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:38+0000\n"
+"POT-Creation-Date: 2024-03-02 00:38+0000\n"
 "PO-Revision-Date: 2024-02-15 12:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -70,15 +70,11 @@ msgstr "Configura l'activitat"
 msgid "Delete"
 msgstr "Suprimix"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "S'ha produït un error en carregar %1."
-
-#: contents/applet/AppletError.qml:167
+#: contents/applet/AppletError.qml:164
 msgid "Copy to Clipboard"
 msgstr "Copia a dins del porta-retalls"
 
-#: contents/applet/AppletError.qml:190
+#: contents/applet/AppletError.qml:187
 msgid "View Error Details…"
 msgstr "Visualitza els detalls de l'error…"
 
@@ -536,3 +532,6 @@ msgstr "No hi ha cap giny que coincidisca amb els termes de la busca"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "No hi ha cap giny disponible"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "S'ha produït un error en carregar %1."

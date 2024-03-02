@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:38+0000\n"
+"POT-Creation-Date: 2024-03-02 00:38+0000\n"
 "PO-Revision-Date: 2023-01-09 09:58+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -67,15 +67,11 @@ msgstr "Configurar a actividade"
 msgid "Delete"
 msgstr "Apagar"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "Infelizmente, ocorreu um erro ao carregar o %1."
-
-#: contents/applet/AppletError.qml:167
+#: contents/applet/AppletError.qml:164
 msgid "Copy to Clipboard"
 msgstr "Copiar para a Área de Transferência"
 
-#: contents/applet/AppletError.qml:190
+#: contents/applet/AppletError.qml:187
 msgid "View Error Details…"
 msgstr "Ver os Detalhes do Erro…"
 
@@ -574,6 +570,9 @@ msgstr "Não existem elementos correspondentes aos termos da pesquisa"
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets available"
 msgstr "Sem elementos disponíveis"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "Infelizmente, ocorreu um erro ao carregar o %1."
 
 #, fuzzy
 #~| msgid "Maximize Panel"
