@@ -4,30 +4,31 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2014, 2015, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2020-12-13 20:08+0100\n"
-"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2024-03-01 22:02+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.03.70\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Kiszel Kristóf,Szántó Tamás"
+msgstr "Kiszel Kristóf"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ulysses@kubuntu.org,tszanto@interware.hu"
+msgstr "ulysses@fsf.hu"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:66
 #, kde-format
@@ -225,50 +226,49 @@ msgstr "Gyorsabb"
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr ""
+msgstr "További egérgombok újra hozzárendelése…"
 
 #: kcm/libinput/main.qml:396
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "Extra gomb %1:"
 
 #: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr ""
+msgstr "Nyomja meg azt az egérgombot, amelyhez billentyűt szeretne rendelni"
 
 #: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "Új billetyűkombináció megadása ehhez: %1"
 
 #: kcm/libinput/main.qml:431
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Mégsem"
 
 #: kcm/libinput/main.qml:448
-#, fuzzy, kde-format
-#| msgid "Press Connect Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
-msgstr "Nyomja meg a Csatlakozás gombot"
+msgstr "Nyomjon meg egy egérgombot "
 
 #: kcm/libinput/main.qml:449
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "Parancs hozzáadása…"
 
 #: kcm/libinput/main.qml:478
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
-msgstr ""
+msgstr "Vissza"
 
 #. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
 #: kcm/xlib/kcmmouse.ui:14

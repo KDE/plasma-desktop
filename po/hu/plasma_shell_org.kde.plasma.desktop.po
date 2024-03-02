@@ -4,13 +4,13 @@
 # Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# Kristof Kiszel <ulysses@fsf.hu>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-28 02:41+0000\n"
-"PO-Revision-Date: 2022-02-07 11:00+0100\n"
+"PO-Revision-Date: 2024-03-01 22:05+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -94,11 +94,9 @@ msgid "Send an email to %1"
 msgstr "E-mail küldése neki: %1"
 
 #: contents/configuration/AboutPlugin.qml:61
-#, fuzzy
-#| msgid "Open %1"
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr "%1 megnyitása"
+msgstr "Weboldal megnyitása: %1"
 
 #: contents/configuration/AboutPlugin.qml:125
 msgid "Copyright"
@@ -111,7 +109,7 @@ msgstr "Licenc:"
 #: contents/configuration/AboutPlugin.qml:148
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "Licencszöveg megtekintése"
 
 #: contents/configuration/AboutPlugin.qml:160
 msgid "Authors"
@@ -127,7 +125,7 @@ msgstr "Fordítók"
 
 #: contents/configuration/AboutPlugin.qml:195
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Hibabejelentés…"
 
 #: contents/configuration/AppletConfiguration.qml:56
 msgid "Keyboard Shortcuts"
@@ -212,8 +210,6 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
-#, fuzzy
-#| msgid "About"
 msgctxt "@title"
 msgid "About"
 msgstr "Névjegy"
@@ -244,8 +240,6 @@ msgid "Layout changes must be applied before other changes can be made"
 msgstr "A felület változtatásait alkalmazni kell a további módosítások előtt"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:199
-#, fuzzy
-#| msgid "Apply now"
 msgid "Apply Now"
 msgstr "Alkalmazás most"
 
@@ -342,7 +336,7 @@ msgstr "Panel maximalizálása"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
 msgid "Floating Panel"
-msgstr ""
+msgstr "Lebegő panel"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:200
 msgid "Shortcut"
@@ -350,34 +344,36 @@ msgstr "Gyorsbillentyű"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:213
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
+msgstr "Nyomja meg ezt a billentyűparancsot a fókusz áthelyezéséhez a panelre"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum height."
-msgstr ""
+msgstr "Húzza a maximális magasság módosításához."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum width."
-msgstr ""
+msgstr "Húzza a maximális szélesség módosításához."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Double click to reset."
-msgstr ""
+msgstr "Kattintson duplán a visszaállításhoz."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum height."
-msgstr ""
+msgstr "Húzza a minimális magasság módosításához."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum width."
-msgstr ""
+msgstr "Húzza a minimális szélesség módosításához."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:69
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
+"Húzzza a pozíció megváltoztatásához ezen a képernyőszélen.\n"
+"Kattintson duplán a visszaállításhoz."
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:24
 msgid "Add Widgets…"
@@ -399,7 +395,7 @@ msgstr "Húzza az áthelyezéshez"
 #: contents/configuration/panelconfiguration/ToolBar.qml:261
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
-msgstr ""
+msgstr "Használja a nyíl billentyűket a panel mozgatásához"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel width:"
@@ -433,10 +429,8 @@ msgid "Move to Screen %1"
 msgstr "Áthelyezés a(z) %1. képernyőre"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
-#, fuzzy
-#| msgid "Empty Desktop"
 msgid "Remove Desktop"
-msgstr "Üres asztal"
+msgstr "Asztal eltávolítása"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
 msgid "%1 (primary)"

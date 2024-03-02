@@ -4,13 +4,13 @@
 # Tamas Szanto <tszanto@interware.hu>, 2007.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2014, 2019, 2021.
 # Balázs Úr <urbalazs@gmail.com>, 2014.
-# Kristof Kiszel <ulysses@fsf.hu>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-18 00:46+0000\n"
-"PO-Revision-Date: 2022-02-07 10:59+0100\n"
+"PO-Revision-Date: 2024-03-01 22:03+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -146,7 +146,7 @@ msgstr "%1. asztal"
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
-msgstr ""
+msgstr "Váltás erre: %1"
 
 #: package/contents/ui/main.qml:595
 #, kde-format

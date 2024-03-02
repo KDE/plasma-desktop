@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Kristóf Kiszel <kiszel.kristof@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-29 02:54+0000\n"
-"PO-Revision-Date: 2021-10-17 16:22+0200\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2024-03-01 21:59+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: globalaccelmodel.cpp:202
 #, kde-format
@@ -75,13 +76,12 @@ msgstr "Alkalmazások"
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Parancsok"
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgid "System Settings"
-msgstr "Rendszerszolgáltatások"
+msgstr "Rendszerbeállítások"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "Séma mentése"
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "A(z) %1 parancsának szerkesztése"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
@@ -132,8 +132,7 @@ msgid "Select an item from the list to view its shortcuts here"
 msgstr "Válasszon egy elemet a listából a gyorsbillentyűi megtekintéséhez"
 
 #: package/contents/ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Application…"
 msgstr "Alkalmazás hozzáadása…"
@@ -142,7 +141,7 @@ msgstr "Alkalmazás hozzáadása…"
 #, kde-format
 msgctxt "@action:button Keep translated text as short as possible"
 msgid "Add Command…"
-msgstr ""
+msgstr "Parancs hozzáadása…"
 
 #: package/contents/ui/main.qml:333
 #, kde-format
@@ -178,45 +177,45 @@ msgstr "Gyorsbillentyűséma (*.kksrc)"
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "Parancs szerkesztése"
 
 #: package/contents/ui/main.qml:388
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "Parancs hozzáadása"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Mentés"
 
 #: package/contents/ui/main.qml:401
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Hozzáadás"
 
 #: package/contents/ui/main.qml:426
 #, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr ""
+msgstr "Adjon meg egy parancsot, vagy válasszon egy szkriptfájlt:"
 
 #: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Kiválasztás…"
 
 #: package/contents/ui/main.qml:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Szkriptfájl kiválasztása"
 
 #: package/contents/ui/main.qml:455
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
-msgstr ""
+msgstr "Szkriptfájl (*.*sh)"
 
 #: package/contents/ui/main.qml:475
 #, kde-format

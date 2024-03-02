@@ -3,13 +3,13 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# Kristof Kiszel <ulysses@fsf.hu>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-02 00:50+0000\n"
-"PO-Revision-Date: 2021-12-09 08:03+0100\n"
+"PO-Revision-Date: 2024-03-01 22:00+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/ui/main.qml:29
 #, kde-format
@@ -37,13 +37,13 @@ msgstr "Középen"
 #: package/contents/ui/main.qml:53
 #, kde-format
 msgid "Activation:"
-msgstr ""
+msgstr "Aktiválás:"
 
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Activate when pressing any key on the desktop"
-msgstr ""
+msgstr "Aktiválás bármely billentyű megnyomásakor az asztalon"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
@@ -54,20 +54,19 @@ msgstr "Előzmények:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Remember past searches"
-msgstr ""
+msgstr "Korábbi keresések megjegyzése"
 
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgctxt "@option:check"
 msgid "Retain last search when re-opening"
-msgstr ""
+msgstr "Legutolsó keresés megtartása újra megnyitáskor"
 
 #: package/contents/ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Activity aware (previous search and history)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activity-aware (last search and history)"
-msgstr "Aktivitásfüggő (előző keresés és előzmények)"
+msgstr "Aktivitásfüggő (legutolsó keresés és előzmények)"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -75,12 +74,10 @@ msgid "Clear History"
 msgstr "Előzmények törlése"
 
 #: package/contents/ui/main.qml:110
-#, fuzzy, kde-format
-#| msgctxt "delete history for this activity"
-#| msgid "For activity \"%1\""
+#, kde-format
 msgctxt "@action:button %1 activity name"
 msgid "Clear History for Activity \"%1\""
-msgstr "A(z) „%1” aktivitásról"
+msgstr "A(z) „%1” aktivitás előzményeinek törlése"
 
 #: package/contents/ui/main.qml:111
 #, kde-format
@@ -88,17 +85,13 @@ msgid "Clear History…"
 msgstr "Előzmények törlése…"
 
 #: package/contents/ui/main.qml:140
-#, fuzzy, kde-format
-#| msgctxt "delete history for all activities"
-#| msgid "For all activities"
+#, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "Az összes aktivitásról"
 
 #: package/contents/ui/main.qml:153
-#, fuzzy, kde-format
-#| msgctxt "delete history for this activity"
-#| msgid "For activity \"%1\""
+#, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "A(z) „%1” aktivitásról"
@@ -107,15 +100,13 @@ msgstr "A(z) „%1” aktivitásról"
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
-msgstr ""
+msgstr "Bővítmények:"
 
 #: package/contents/ui/main.qml:174
-#, fuzzy, kde-format
-#| msgctxt "kcm name for About dialog"
-#| msgid "Configure search settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr "Keresési beállítások módosítása"
+msgstr "Engedélyezett keresési bővítmények beállítása…"
 
 #~ msgid "Available Plugins"
 #~ msgstr "Elérhető bővítmények"

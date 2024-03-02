@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Kristof Kiszel <ulysses@fsf.hu>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-19 00:48+0000\n"
-"PO-Revision-Date: 2021-12-17 11:42+0100\n"
+"PO-Revision-Date: 2024-03-01 22:01+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -48,27 +48,25 @@ msgid "Follow the active screen"
 msgstr "Aktív képernyő követése"
 
 #: kcmtablet.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "model - (x,y widthxheight)"
-#| msgid "%1 - (%2,%3 %4x%5)"
+#, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr "%1 - (%2,%3 %4x%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:137
 #, kde-format
 msgid "Fit to Output"
-msgstr ""
+msgstr "Kimenethez illesztés"
 
 #: kcmtablet.cpp:138
 #, kde-format
 msgid "Fit Output in tablet"
-msgstr ""
+msgstr "Tablet kimenetének illesztése"
 
 #: kcmtablet.cpp:139
 #, kde-format
 msgid "Custom size"
-msgstr ""
+msgstr "Egyéni méret"
 
 #: package/contents/ui/main.qml:31
 #, kde-format
@@ -76,8 +74,7 @@ msgid "No drawing tablets found."
 msgstr "Nem található rajztábla."
 
 #: package/contents/ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Eszköz:"
@@ -100,55 +97,55 @@ msgstr "Balkezes mód:"
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Area:"
-msgstr ""
+msgstr "Terület:"
 
 #: package/contents/ui/main.qml:206
 #, kde-format
 msgid "Resize the tablet area"
-msgstr ""
+msgstr "Tabletterület átméretezése"
 
 #: package/contents/ui/main.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Méretarány rögzítése"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr ""
+msgstr "%1,%2 - %3×%4"
 
 #: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Tool Button 1"
-msgstr ""
+msgstr "Eszközgomb 1"
 
 #: package/contents/ui/main.qml:247
 #, kde-format
 msgid "Tool Button 2"
-msgstr ""
+msgstr "Eszközgomb 2"
 
 #: package/contents/ui/main.qml:248
 #, kde-format
 msgid "Tool Button 3"
-msgstr ""
+msgstr "Eszközgomb 3"
 
 #: package/contents/ui/main.qml:291
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
-msgstr ""
+msgstr "Tábla:"
 
 #: package/contents/ui/main.qml:302
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Nincs"
 
 #: package/contents/ui/main.qml:324
 #, kde-format
 msgid "Button %1:"
-msgstr ""
+msgstr "%1. gomb:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -4,13 +4,13 @@
 # Tamas Szanto <tszanto@interware.hu>, 2007.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2019, 2020, 2021, 2022.
 # Balázs Úr <urbalazs@gmail.com>, 2013.
-# Kristof Kiszel <kiszel.kristof@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-22 03:07+0000\n"
-"PO-Revision-Date: 2022-02-07 11:00+0100\n"
+"PO-Revision-Date: 2024-03-01 22:04+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -31,32 +31,25 @@ msgid "Behavior"
 msgstr "Működés"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgctxt "button to unmute app"
-#| msgid "Unmute %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr "%1 visszahangosítása"
+msgstr "Visszahangosítás"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "Némítás"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to unmute app"
-#| msgid "Unmute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "%1 visszahangosítása"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to mute app"
-#| msgid "Mute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
 msgstr "%1 némítása"
@@ -79,16 +72,14 @@ msgid "General:"
 msgstr "Általános:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Ablakok kiemelése a feladat buboréksúgójára mutatáskor"
+msgstr "Ablakok előnézetének megjelenítése az ikonokra rámutatáskor"
 
 #: package/contents/ui/ConfigAppearance.qml:39
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Ablakok kiemelése a feladat buboréksúgójára mutatáskor"
+msgstr "Egyéb ablakok elrejtése az előnézetekre mutatáskor"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
@@ -99,7 +90,7 @@ msgstr "Hangot lejátszó alkalmazások jelölése"
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "Szabad hely kitöltése a panelen"
 
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
@@ -124,11 +115,10 @@ msgstr "Legfeljebb annyi oszlopba rendezés, ahány sor van"
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "Ikonok közötti térköz:"
 
 #: package/contents/ui/ConfigAppearance.qml:81
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Kicsi"
@@ -137,11 +127,10 @@ msgstr "Kicsi"
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Normál"
 
 #: package/contents/ui/ConfigAppearance.qml:89
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Nagy"
@@ -150,7 +139,7 @@ msgstr "Nagy"
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "Automatikus nagyra állítás Érintés módban"
 
 #: package/contents/ui/ConfigBehavior.qml:47
 #, kde-format
@@ -184,14 +173,14 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr ""
+msgstr "Kis ablakelőnézetek megjelenítése"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr ""
+msgstr "Nagy ablakelőnézetek megjelenítése"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
@@ -200,16 +189,13 @@ msgid "Shows textual list"
 msgstr "Szöveges lista megjelenítése"
 
 #: package/contents/ui/ConfigBehavior.qml:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "The 'Present Windows' effect is not enabled or otherwise available right "
-#| "now, so a textual list will be displayed instead."
+#, kde-format
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
-"Az Ablakáttekintő sincs bekapcsolva, vagy más okból nem érhető el, így a "
-"szöveges lista jelenik meg helyette."
+"A kompozitor nem támogatja az ablakok egymás melletti megjelenítését, ezért "
+"egy szöveges lista jelenik meg helyette."
 
 #: package/contents/ui/ConfigBehavior.qml:83
 #, kde-format
@@ -326,11 +312,9 @@ msgid "Cycles through tasks"
 msgstr "Váltás az alkalmazások között"
 
 #: package/contents/ui/ConfigBehavior.qml:156
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
-#| msgid "Minimizes the task"
+#, kde-format
 msgid "Skip minimized tasks"
-msgstr "Alkalmazás minimalizálása"
+msgstr "Minimalizált alkalmazások átugrása"
 
 #: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
@@ -375,7 +359,7 @@ msgstr "Új feladatok helye:"
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "Lent"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #: package/contents/ui/ConfigBehavior.qml:233
@@ -392,7 +376,7 @@ msgstr "Balra"
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "Fent"
 
 #: package/contents/ui/ContextMenu.qml:93
 #, kde-format
@@ -587,34 +571,33 @@ msgstr "&Bezárás"
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "%1 indítása"
 
 #: package/contents/ui/Task.qml:88
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 új üzenet érkezett."
+msgstr[1] "%1 új üzenet érkezett."
 
 #: package/contents/ui/Task.qml:97
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Tippek megjelenítése"
+msgstr "A(z) %1 buboréksúgójának megjelenítése"
 
 #: package/contents/ui/Task.qml:103
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "A(z) %1 ablakainak megjelenítése egymás mellett"
 
 #: package/contents/ui/Task.qml:108
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "A(z) %1 ablakai szöveges listájának megjelenítése"
 
 #: package/contents/ui/Task.qml:112
 #, kde-format
@@ -690,47 +673,40 @@ msgstr[0] "%1 további hely"
 msgstr[1] "%1 további hely"
 
 #: plugin/backend.cpp:447
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Downloads"
-msgstr "Legutóbbi fájlok"
+msgstr "Legutóbbi letöltések"
 
 #: plugin/backend.cpp:449
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Connections"
-msgstr "Legutóbbi fájlok"
+msgstr "Legutóbbi kapcsolatok"
 
 #: plugin/backend.cpp:451
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Legutóbbi fájlok"
+msgstr "Legutóbbi helyek"
 
 #: plugin/backend.cpp:460
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr "Legutóbbi fájlok elfelejtése"
+msgstr "Legutóbbi letöltések elfelejtése"
 
 #: plugin/backend.cpp:462
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr "Legutóbbi fájlok elfelejtése"
+msgstr "Legutóbbi kapcsolatok elfelejtése"
 
 #: plugin/backend.cpp:464
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr "Legutóbbi fájlok elfelejtése"
+msgstr "Legutóbbi helyek elfelejtése"
 
 #: plugin/backend.cpp:466
-#, fuzzy, kde-format
-#| msgid "Forget Recent Files"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Legutóbbi fájlok elfelejtése"

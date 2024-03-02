@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 00:51+0000\n"
-"PO-Revision-Date: 2021-09-04 09:26+0200\n"
-"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2024-03-01 22:02+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/ui/main.qml:27
 #, kde-format
@@ -23,11 +24,13 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
+"A rendszert újra kell indítani a középső gomb beillesztési beállításai "
+"módosításainak életbe lépéséhez."
 
 #: package/contents/ui/main.qml:33
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "Újraindítás"
 
 #: package/contents/ui/main.qml:50
 #, kde-format
@@ -121,29 +124,29 @@ msgstr "Görgetés a kattintott helyre"
 #: package/contents/ui/main.qml:217
 #, kde-format
 msgid "Middle Click:"
-msgstr ""
+msgstr "Középső gomb:"
 
 #: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Paste selected text"
-msgstr ""
+msgstr "Kijelölt szöveg beillesztése"
 
 #: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Touch Mode:"
-msgstr ""
+msgstr "Érintés mód:"
 
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "Automatikus bekapcsolás szükség szerint"
 
 #: package/contents/ui/main.qml:238 package/contents/ui/main.qml:267
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "Soha ne kapcsolódjon be"
 
 #: package/contents/ui/main.qml:250
 #, kde-format
@@ -152,12 +155,15 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"Az Érintés mód automatikusan aktiválódik, ha a rendszer érintőképernyőt "
+"érzékel, de nem talál egeret vagy érintőtáblát. Például ha egy átalakítható "
+"laptop billentyűzete körbe van fordítva, vagy leválasztva."
 
 #: package/contents/ui/main.qml:255
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
-msgstr ""
+msgstr "Mindig bekapcsolva"
 
 #: package/contents/ui/main.qml:280
 #, kde-format
@@ -165,6 +171,8 @@ msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
+"Érintés módban a felhasználói felület számos eleme nagyobb lesz, hogy "
+"könnyebben alkalmazkodjon az érintéses interakcióhoz."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -189,13 +197,13 @@ msgstr ""
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr ""
+msgstr "Automatikus váltás érintésre optimalizált módra"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr ""
+msgstr "Középső gombos kijelölés beillesztésének bekapcsolása"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
