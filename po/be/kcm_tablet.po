@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:39+0000\n"
-"PO-Revision-Date: 2023-02-08 13:47\n"
+"PO-Revision-Date: 2024-03-01 19:50\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.1\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-desktop/kcm_tablet.po\n"
-"X-Crowdin-File-ID: 8647\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-desktop/"
+"kcm_tablet.po\n"
+"X-Crowdin-File-ID: 10624\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -73,16 +74,14 @@ msgid "Custom size"
 msgstr "Адвольны памер"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found."
+#, kde-format
 msgid "No drawing tablets found"
-msgstr "Не знойдзена планшэтаў для малявання."
+msgstr "Не знойдзена планшэтаў для малявання"
 
 #: ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found."
+#, kde-format
 msgid "Connect a drawing tablet"
-msgstr "Не знойдзена планшэтаў для малявання."
+msgstr "Падлучыць планшэт для малявання"
 
 #: ui/main.qml:41
 #, kde-format
@@ -128,22 +127,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pen Button 1"
-msgstr "Кнопка %1:"
+msgstr "Кнопка алоўка 1"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Tool Button 2"
+#, kde-format
 msgid "Pen Button 2"
-msgstr "Кнопка інструмента 2"
+msgstr "Кнопка алоўка 2"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Tool Button 3"
+#, kde-format
 msgid "Pen Button 3"
-msgstr "Кнопка інструмента 3"
+msgstr "Кнопка алоўка 3"
 
 #: ui/main.qml:295
 #, kde-format

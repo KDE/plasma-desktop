@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2023-02-08 13:47\n"
+"PO-Revision-Date: 2024-03-01 19:50\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.1\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-desktop/kcm_baloofile.po\n"
-"X-Crowdin-File-ID: 8631\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-desktop/"
+"kcm_baloofile.po\n"
+"X-Crowdin-File-ID: 10598\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -58,94 +59,85 @@ msgid "Delete Index Data"
 msgstr "Выдаліць даныя індэкса"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their "
-#| "content."
+#, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
-"Пошук файлаў дапамагае хутка знаходзіць усе вашыя файлы па іх змесціву."
+"Пошук файлаў дапамагае хутка знаходзіць файлы. Вы можаце абраць, якія "
+"каталогі і тыпы файлавых даных будуць індэксавацца."
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Currently indexing: %1"
+#, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
-msgstr "Бягучае індэксаванне: %1"
+msgstr "Індэксаванне файлаў:"
 
 #: ui/main.qml:110
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
-msgstr ""
+msgstr "Уключана"
 
 #: ui/main.qml:124
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
-msgstr ""
+msgstr "Стан:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Status: %1, %2% complete"
+#, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr "Стан: %1, %2% завершана"
+msgstr "%1, %2% скончана"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid "Currently indexing: %1"
+#, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
-msgstr "Бягучае індэксаванне: %1"
+msgstr "Бягучае індэксаванне:"
 
 #: ui/main.qml:153
-#, fuzzy, kde-kuit-format
-#| msgid "Currently indexing: %1"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
-msgstr "Бягучае індэксаванне: %1"
+msgstr "<filename>%1</filename>"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "Даныя для індэксавання:"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "File names and contents"
-msgstr ""
+msgstr "Назвы і змесціва файлаў"
 
 #: ui/main.qml:184
 #, kde-format
 msgid "File names only"
-msgstr ""
+msgstr "Толькі назвы файлаў"
 
 #: ui/main.qml:203
-#, fuzzy, kde-format
-#| msgid "Index hidden files and folders"
+#, kde-format
 msgid "Hidden files and folders"
-msgstr "Індэксаваць схаваныя файлы і каталогі"
+msgstr "Схаваныя файлы і каталогі"
 
 #: ui/main.qml:229
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
+msgstr "Размяшчэнні"
 
 #: ui/main.qml:232
-#, fuzzy, kde-format
-#| msgid "Start indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Пачаць індэксаванне каталога…"
 
 #: ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Stop indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Спыніць індэксаванне каталога…"

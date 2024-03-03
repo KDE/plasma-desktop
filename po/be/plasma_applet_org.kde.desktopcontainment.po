@@ -4,10 +4,10 @@
 # Darafei Praliaskouski <komzpa@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-29 00:39+0000\n"
-"PO-Revision-Date: 2023-02-08 13:46\n"
+"PO-Revision-Date: 2024-03-01 19:50\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-desktop/plasma_applet_org.kde."
-"desktopcontainment.po\n"
-"X-Crowdin-File-ID: 8525\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-desktop/"
+"plasma_applet_org.kde.desktopcontainment.po\n"
+"X-Crowdin-File-ID: 10650\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -82,10 +82,9 @@ msgid "Show hidden files:"
 msgstr "Паказваць схаваныя файлы:"
 
 #: package/contents/ui/ConfigFilter.qml:130
-#, fuzzy, kde-format
-#| msgid "File type"
+#, kde-format
 msgid "File Type"
-msgstr "Тып файла"
+msgstr "Тып файлаў"
 
 #: package/contents/ui/ConfigFilter.qml:131
 #, kde-format
@@ -105,7 +104,7 @@ msgstr "Скасаваць выбар усіх"
 #: package/contents/ui/ConfigFilter.qml:222
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "Пераключыць парадак сартавання"
 
 #: package/contents/ui/ConfigIcons.qml:64
 #, kde-format
@@ -387,7 +386,7 @@ msgstr "Увядзіце адвольны подпіс…"
 #: package/contents/ui/ConfigOverlay.qml:86
 #, kde-format
 msgid "Click and drag to rotate"
-msgstr ""
+msgstr "Пстрыкніце і перацягніце, каб павярнуць"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format
@@ -416,6 +415,8 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"На працоўным стале шмат файлаў і каталогаў. Праз гэта могуць узнікаць "
+"памылкі і праблемы з прадукцыйнасцю. Перамясціце частку з іх у іншае месца."
 
 #: package/contents/ui/main.qml:390
 #, kde-format

@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:39+0000\n"
-"PO-Revision-Date: 2022-10-12 04:09\n"
+"PO-Revision-Date: 2024-03-01 19:50\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.1\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-desktop/kcm_touchpad.po\n"
-"X-Crowdin-File-ID: 8649\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-desktop/"
+"kcm_touchpad.po\n"
+"X-Crowdin-File-ID: 10626\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -83,7 +84,7 @@ msgstr "Не ўдалося прачытаць канфігурацыю прад
 #: kcm/libinput/touchpad.qml:96
 #, kde-format
 msgid "Connect an external touchpad"
-msgstr ""
+msgstr "Падлучыць вонкавы тачпад"
 
 #: kcm/libinput/touchpad.qml:110
 #, kde-format
@@ -140,10 +141,9 @@ msgstr ""
 "кнопкі."
 
 #: kcm/libinput/touchpad.qml:256
-#, fuzzy, kde-format
-#| msgid "Minimum pointer speed"
+#, kde-format
 msgid "Pointer speed:"
-msgstr "Мінімальная хуткасць паказальніка"
+msgstr "Хуткасць паказальніка:"
 
 #: kcm/libinput/touchpad.qml:354
 #, kde-format
@@ -153,7 +153,7 @@ msgstr "Паскарэнне паказальніка:"
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Няма"
 
 #: kcm/libinput/touchpad.qml:389
 #, kde-format
@@ -163,7 +163,7 @@ msgstr "Курсор перамяшчаецца на такую ​​ж адл�
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Стандартны"
 
 #: kcm/libinput/touchpad.qml:402
 #, kde-format

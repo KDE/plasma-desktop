@@ -2,10 +2,10 @@
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2022-10-09 05:49\n"
+"PO-Revision-Date: 2024-03-01 19:50\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -16,11 +16,12 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-desktop/kcm5_kded.po\n"
-"X-Crowdin-File-ID: 8501\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-desktop/"
+"kcm_kded.po\n"
+"X-Crowdin-File-ID: 10606\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -43,22 +44,18 @@ msgid "Failed to start service."
 msgstr "Не ўдалося запусціць службу."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"Не ўдалося апавясціць кіраўніка службаў KDE (kded5) пра захаваныя змены: %1"
+"Не ўдалося апавясціць кіраўніка службаў KDE (kded6) пра захаваныя змены: %1"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Кіраўнік фонавых службаў (kded5) не запушчаны. Пераканайцеся, што ён "
+"Кіраўнік фонавых службаў (kded6) не запушчаны. Пераканайцеся, што ён "
 "усталяваны правільна."
 
 #: ui/main.qml:46
@@ -71,16 +68,13 @@ msgstr ""
 "бескарысныя ў бягучым працоўным асяроддзі."
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Некаторыя службы былі аўтаматычна запушчаныя/спыненыя, калі кіраўнік фонавых "
-"службаў (kded5) быў перазапушчаны, каб ужыць вашыя змены."
+"службаў (kded6) быў перазапушчаны, каб ужыць вашыя змены."
 
 #: ui/main.qml:97
 #, kde-format
