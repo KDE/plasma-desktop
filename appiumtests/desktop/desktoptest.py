@@ -221,7 +221,7 @@ class DesktopTest(unittest.TestCase):
                 "Type=Application\n",
                 "Icon=preferences-system\n",
                 "Name=Software Center\n",
-                f"Exec=python3 {os.path.join(os.getcwd(), 'resources', 'org.kde.testwindow.py')}\n",
+                f"Exec=python3 {os.path.join(os.path.dirname(os.path.abspath(__file__)), 'desktoptest_testwindow.py')}\n",
             ])
             file_handler.flush()
         os.chmod(desktopfile_path, os.stat(desktopfile_path).st_mode | stat.S_IEXEC)
