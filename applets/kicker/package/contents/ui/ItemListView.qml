@@ -132,7 +132,7 @@ FocusScope {
                 boundsBehavior: Flickable.StopAtBounds
                 snapMode: ListView.SnapToItem
                 spacing: 0
-                keyNavigationWraps: (dialog != null)
+                keyNavigationEnabled: false
 
                 delegate: ItemListDelegate {
                     onFullTextWidthChanged: {
@@ -190,7 +190,16 @@ FocusScope {
             }
 
             Keys.onPressed: event => {
-                if (event.key === Qt.Key_Up) {
+                if (event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+                    if (itemList.childDialog === null && currentItem != null && currentItem.hasChildren) {
+                        dialogSpawnTimer.focusOnSpawn = true;
+                        dialogSpawnTimer.restart();
+                    } else if (currentItem != null && currentItem.hasChildren) {
+                        windowSystem.forceActive(itemList.childDialog.mainItem);
+                        itemList.childDialog.mainItem.focus = true;
+                        itemList.childDialog.mainItem.currentIndex = 0;
+                    }
+                } else if (event.key === Qt.Key_Up) {
                     event.accepted = true;
 
                     if (!keyNavigationWraps && currentIndex == 0) {
@@ -205,6 +214,7 @@ FocusScope {
                     if (currentItem.isSeparator) {
                         listView.decrementCurrentIndex();
                     }
+                    listView.currentItem.forceActiveFocus()
 
                     showChildDialogs = true;
                 } else if (event.key === Qt.Key_Down) {
@@ -222,16 +232,9 @@ FocusScope {
                     if (currentItem.isSeparator) {
                         listView.incrementCurrentIndex();
                     }
+                    listView.currentItem.forceActiveFocus()
 
                     showChildDialogs = true;
-                } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && itemList.childDialog != null) {
-                    windowSystem.forceActive(itemList.childDialog.mainItem);
-                    itemList.childDialog.mainItem.focus = true;
-                    itemList.childDialog.mainItem.currentIndex = 0;
-                } else if ((event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && itemList.childDialog == null
-                    && currentItem != null && currentItem.hasChildren) {
-                    dialogSpawnTimer.focusOnSpawn = true;
-                    dialogSpawnTimer.restart();
                 } else if (event.key === Qt.Key_Left && dialog != null) {
                     dialog.destroy();
                 } else if (event.key === Qt.Key_Escape) {
