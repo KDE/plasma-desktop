@@ -233,7 +233,7 @@ PlasmoidItem {
     }
 
     function enableHideOnWindowDeactivate() {
-        Plasmoid.hideOnWindowDeactivate = true;
+        kicker.hideOnWindowDeactivate = true;
     }
 
     Plasmoid.contextualActions: [
