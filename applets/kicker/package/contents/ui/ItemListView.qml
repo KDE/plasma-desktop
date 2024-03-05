@@ -149,7 +149,11 @@ FocusScope {
                 highlightMoveDuration: 0
 
                 onCountChanged: {
-                    currentIndex = -1;
+                    if (currentIndex == 0) {
+                        currentItem.forceActiveFocus();
+                    } else {
+                        currentIndex = -1;
+                    }
                 }
 
                 onCurrentIndexChanged: {
