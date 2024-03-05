@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 02:22+0000\n"
+"POT-Creation-Date: 2024-03-05 02:20+0000\n"
 "PO-Revision-Date: 2024-02-15 11:01+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -68,15 +68,11 @@ msgstr "Aktivitás beállítása"
 msgid "Delete"
 msgstr "Törlés"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "Hiba történt a(z) %1 betöltésekor."
-
-#: contents/applet/AppletError.qml:166
+#: contents/applet/AppletError.qml:163
 msgid "Copy to Clipboard"
 msgstr "Másolás a vágólapra"
 
-#: contents/applet/AppletError.qml:189
+#: contents/applet/AppletError.qml:186
 msgid "View Error Details…"
 msgstr "Hiba részleteinek megjelenítése…"
 
@@ -528,6 +524,9 @@ msgstr "Nincs a keresési kifejezésekre illő elem"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "Nincsenek widgetek"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "Hiba történt a(z) %1 betöltésekor."
 
 #~ msgid "Length"
 #~ msgstr "Hossz"

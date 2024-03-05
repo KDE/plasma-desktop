@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 02:22+0000\n"
+"POT-Creation-Date: 2024-03-05 02:20+0000\n"
 "PO-Revision-Date: 2024-02-16 10:16+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -73,15 +73,11 @@ msgstr "Configurer l'activité"
 msgid "Delete"
 msgstr "Supprimer"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "Désolé ! Une erreur est survenue durant le chargement de %1."
-
-#: contents/applet/AppletError.qml:166
+#: contents/applet/AppletError.qml:163
 msgid "Copy to Clipboard"
 msgstr "Copier dans le presse-papier"
 
-#: contents/applet/AppletError.qml:189
+#: contents/applet/AppletError.qml:186
 msgid "View Error Details…"
 msgstr "Afficher le détail des erreurs..."
 
@@ -539,6 +535,9 @@ msgstr "Aucun composant graphique ne correspond aux mots clés de la recherche"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "Aucun composant graphique disponible"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "Désolé ! Une erreur est survenue durant le chargement de %1."
 
 #~ msgid "Length"
 #~ msgstr "Longueur"

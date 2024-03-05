@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 02:22+0000\n"
+"POT-Creation-Date: 2024-03-05 02:20+0000\n"
 "PO-Revision-Date: 2024-02-20 02:34+0100\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: LUGOS\n"
@@ -69,15 +69,11 @@ msgstr "Nastavi dejavnost"
 msgid "Delete"
 msgstr "Izbriši"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "Oprostite! Prišlo je do napake pri nalaganju %1."
-
-#: contents/applet/AppletError.qml:166
+#: contents/applet/AppletError.qml:163
 msgid "Copy to Clipboard"
 msgstr "Kopiraj na odložišče"
 
-#: contents/applet/AppletError.qml:189
+#: contents/applet/AppletError.qml:186
 msgid "View Error Details…"
 msgstr "Poglej podrobnosti napake…"
 
@@ -530,6 +526,9 @@ msgstr "Noben gradnik se ne ujema z iskalnimi izrazi"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "Gradnikov ni na voljo"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "Oprostite! Prišlo je do napake pri nalaganju %1."
 
 #~ msgid "Length"
 #~ msgstr "Dolžina"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 02:22+0000\n"
+"POT-Creation-Date: 2024-03-05 02:20+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -65,15 +65,11 @@ msgstr "Cấu hình Hoạt động"
 msgid "Delete"
 msgstr "Xoá"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "Rất tiếc! Có lỗi khi tải %1."
-
-#: contents/applet/AppletError.qml:166
+#: contents/applet/AppletError.qml:163
 msgid "Copy to Clipboard"
 msgstr "Chép vào bảng nháp"
 
-#: contents/applet/AppletError.qml:189
+#: contents/applet/AppletError.qml:186
 msgid "View Error Details…"
 msgstr "Xem chi tiết về lỗi…"
 
@@ -561,6 +557,9 @@ msgstr "Không có phụ kiện nào khớp với các từ khoá tìm kiếm"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "Không có phụ kiện nào"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "Rất tiếc! Có lỗi khi tải %1."
 
 #, fuzzy
 #~| msgid "Maximize Panel"

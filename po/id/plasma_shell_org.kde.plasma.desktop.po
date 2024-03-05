@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 02:22+0000\n"
+"POT-Creation-Date: 2024-03-05 02:20+0000\n"
 "PO-Revision-Date: 2023-01-15 13:12+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -67,15 +67,11 @@ msgstr "Konfigurasikan aktivitas"
 msgid "Delete"
 msgstr "Hapus"
 
-#: contents/applet/AppletError.qml:128
-msgid "Sorry! There was an error loading %1."
-msgstr "Maaf! Ada sebuah galat pemuatan %1."
-
-#: contents/applet/AppletError.qml:166
+#: contents/applet/AppletError.qml:163
 msgid "Copy to Clipboard"
 msgstr "Salin ke Papan Klip"
 
-#: contents/applet/AppletError.qml:189
+#: contents/applet/AppletError.qml:186
 msgid "View Error Details…"
 msgstr "Tampilan Detail Galat..."
 
@@ -555,6 +551,9 @@ msgstr "Tidak ada widget yang cocok dengan butir yang dicari"
 #: contents/explorer/WidgetExplorer.qml:285
 msgid "No widgets available"
 msgstr "Tidak ada widget yang tersedia"
+
+#~ msgid "Sorry! There was an error loading %1."
+#~ msgstr "Maaf! Ada sebuah galat pemuatan %1."
 
 #, fuzzy
 #~| msgid "Maximize Panel"
