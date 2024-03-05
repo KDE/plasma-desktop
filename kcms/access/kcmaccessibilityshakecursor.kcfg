@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kwinrc" />
+  <group name="Plugins">
+    <entry name="ShakeCursor" key="shakecursorEnabled" type="Bool">
+      <label>Whether Shake Cursor is enabled</label>
+      <default>true</default>
+    </entry>
+  </group>
+  <group name="Effect-shakecursor">
+    <entry name="ShakeCursorMagnification" key="Magnification" type="Double">
+      <label>Magnification</label>
+      <default>3</default>
+      <min>1</min>
+    </entry>
+  </group>
+</kcfg>

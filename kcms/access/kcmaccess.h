@@ -17,6 +17,7 @@ class KeyboardSettings;
 class KeyboardFiltersSettings;
 class ScreenReaderSettings;
 class AccessibilityData;
+class ShakeCursorSettings;
 
 class KAccessConfig : public KQuickManagedConfigModule
 {
@@ -26,6 +27,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(KeyboardSettings *keyboardSettings READ keyboardSettings CONSTANT)
     Q_PROPERTY(KeyboardFiltersSettings *keyboardFiltersSettings READ keyboardFiltersSettings CONSTANT)
     Q_PROPERTY(ScreenReaderSettings *screenReaderSettings READ screenReaderSettings CONSTANT)
+    Q_PROPERTY(ShakeCursorSettings *shakeCursorSettings READ shakeCursorSettings CONSTANT)
     Q_PROPERTY(QString orcaLaunchFeedback READ orcaLaunchFeedback WRITE setOrcaLaunchFeedback NOTIFY orcaLaunchFeedbackChanged)
     Q_PROPERTY(QString desktopShortcutInfo MEMBER m_desktopShortcutInfo CONSTANT)
     Q_PROPERTY(bool screenReaderInstalled MEMBER m_screenReaderInstalled CONSTANT)
@@ -34,6 +36,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(bool keyboardFiltersIsDefaults READ keyboardFiltersIsDefaults NOTIFY keyboardFiltersIsDefaultsChanged)
     Q_PROPERTY(bool keyboardModifiersIsDefaults READ keyboardModifiersIsDefaults NOTIFY keyboardModifiersIsDefaultsChanged)
     Q_PROPERTY(bool screenReaderIsDefaults READ screenReaderIsDefaults NOTIFY screenReaderIsDefaultsChanged)
+    Q_PROPERTY(bool shakeCursorIsDefaults READ shakeCursorIsDefaults NOTIFY shakeCursorIsDefaultsChanged)
 
 public:
     KAccessConfig(QObject *parent, const KPluginMetaData &);
@@ -52,12 +55,14 @@ public:
     KeyboardSettings *keyboardSettings() const;
     KeyboardFiltersSettings *keyboardFiltersSettings() const;
     ScreenReaderSettings *screenReaderSettings() const;
+    ShakeCursorSettings *shakeCursorSettings() const;
 
     bool bellIsDefaults() const;
     bool mouseIsDefaults() const;
     bool keyboardFiltersIsDefaults() const;
     bool keyboardModifiersIsDefaults() const;
     bool screenReaderIsDefaults() const;
+    bool shakeCursorIsDefaults() const;
 
 Q_SIGNALS:
     void orcaLaunchFeedbackChanged();
@@ -66,6 +71,7 @@ Q_SIGNALS:
     void keyboardFiltersIsDefaultsChanged();
     void keyboardModifiersIsDefaultsChanged();
     void screenReaderIsDefaultsChanged();
+    void shakeCursorIsDefaultsChanged();
 
 private:
     void setOrcaLaunchFeedback(const QString &value);

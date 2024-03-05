@@ -11,6 +11,8 @@
 #include <stdlib.h>
 
 #include <QApplication>
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QFileDialog>
 #include <QProcess>
 #include <QQuickItem>
@@ -37,6 +39,7 @@
 #include "kcmaccessibilitykeyboardfilters.h"
 #include "kcmaccessibilitymouse.h"
 #include "kcmaccessibilityscreenreader.h"
+#include "kcmaccessibilityshakecursor.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMAccessFactory, "kcm_access.json", registerPlugin<KAccessConfig>(); registerPlugin<AccessibilityData>();)
 
@@ -143,6 +146,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterAnonymousType<KeyboardSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<KeyboardFiltersSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ScreenReaderSettings>("org.kde.plasma.access.kcm", 0);
+    qmlRegisterAnonymousType<ShakeCursorSettings>("org.kde.plasma.access.kcm", 0);
 
     int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
     m_screenReaderInstalled = tryOrcaRun != -2;
@@ -154,6 +158,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     connect(m_data->keyboardFiltersSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::keyboardFiltersIsDefaultsChanged);
     connect(m_data->keyboardSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::keyboardModifiersIsDefaultsChanged);
     connect(m_data->screenReaderSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::screenReaderIsDefaultsChanged);
+    connect(m_data->shakeCursorSettings(), &ShakeCursorSettings::configChanged, this, &KAccessConfig::shakeCursorIsDefaultsChanged);
 }
 
 KAccessConfig::~KAccessConfig()
@@ -188,6 +193,9 @@ void KAccessConfig::launchOrcaConfiguration()
 
 void KAccessConfig::save()
 {
+    const bool shakeCursorSaveNeeded = m_data->shakeCursorSettings()->findItem(QStringLiteral("ShakeCursor"))->isSaveNeeded();
+    const bool shakeCursorMagnificationSaveNeeded = m_data->shakeCursorSettings()->findItem(QStringLiteral("ShakeCursorMagnification"))->isSaveNeeded();
+
     KQuickManagedConfigModule::save();
 
     if (bellSettings()->systemBell() || bellSettings()->customBell() || bellSettings()->visibleBell()) {
@@ -201,6 +209,24 @@ void KAccessConfig::save()
     // turning a11y features off needs to be done by kaccess
     // so run it to clear any enabled features and it will exit if it should
     QProcess::startDetached(QStringLiteral("kaccess"), {});
+
+    if (shakeCursorSaveNeeded) {
+        QDBusMessage reloadMessage =
+            QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                           QStringLiteral("/Effects"),
+                                           QStringLiteral("org.kde.kwin.Effects"),
+                                           shakeCursorSettings()->shakeCursor() ? QStringLiteral("loadEffect") : QStringLiteral("unloadEffect"));
+        reloadMessage.setArguments({QStringLiteral("shakecursor")});
+        QDBusConnection::sessionBus().call(reloadMessage);
+    }
+    if (shakeCursorMagnificationSaveNeeded) {
+        QDBusMessage reconfigureMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                                         QStringLiteral("/Effects"),
+                                                                         QStringLiteral("org.kde.kwin.Effects"),
+                                                                         QStringLiteral("reconfigureEffect"));
+        reconfigureMessage.setArguments({QStringLiteral("shakecursor")});
+        QDBusConnection::sessionBus().call(reconfigureMessage);
+    }
 }
 
 QString KAccessConfig::orcaLaunchFeedback() const
@@ -248,6 +274,11 @@ ScreenReaderSettings *KAccessConfig::screenReaderSettings() const
     return m_data->screenReaderSettings();
 }
 
+ShakeCursorSettings *KAccessConfig::shakeCursorSettings() const
+{
+    return m_data->shakeCursorSettings();
+}
+
 bool KAccessConfig::bellIsDefaults() const
 {
     return bellSettings()->isDefaults();
@@ -271,6 +302,11 @@ bool KAccessConfig::keyboardModifiersIsDefaults() const
 bool KAccessConfig::screenReaderIsDefaults() const
 {
     return screenReaderSettings()->isDefaults();
+}
+
+bool KAccessConfig::shakeCursorIsDefaults() const
+{
+    return shakeCursorSettings()->isDefaults();
 }
 
 #include "kcmaccess.moc"

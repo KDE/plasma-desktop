@@ -11,6 +11,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kirigami.delegates as KD
 import org.kde.kcmutils as KCM
+import org.kde.kwindowsystem
 
 KCM.AbstractKCM {
     id: root
@@ -45,6 +46,12 @@ KCM.AbstractKCM {
             icon: "audio-input-microphone",
             title: i18nc("System mouse navigation", "Screen Reader"),
             defaultnessKey: "screenReaderIsDefaults"
+        },
+        {
+            icon: "cursor-arrow",
+            title: i18nc("Shake cursor to find it", "Shake Cursor"),
+            defaultnessKey: "shakeCursorIsDefaults",
+            available: KWindowSystem.isPlatformWayland
         }
     ]
 
@@ -75,6 +82,7 @@ KCM.AbstractKCM {
 
                     icon.name: modelData.icon
                     text: modelData.title
+                    visible: modelData.available === undefined || modelData.available
 
                     onClicked: {
                         listView.currentIndex = index
@@ -148,6 +156,10 @@ KCM.AbstractKCM {
                         Layout.fillHeight: true
                     }
                 }
+            }
+            ShakeCursor {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
             }
         }
     }
