@@ -2,7 +2,7 @@ if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
 
-ecm_add_qml_module(folderplugin URI org.kde.private.desktopcontainment.folder VERSION 0.1 CLASS_NAME FolderPlugin)
+ecm_add_qml_module(folderplugin URI org.kde.private.desktopcontainment.folder CLASS_NAME FolderPlugin)
 
 target_sources(folderplugin PRIVATE
     applauncher.cpp

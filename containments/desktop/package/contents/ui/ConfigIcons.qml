@@ -16,7 +16,7 @@ import org.kde.iconthemes as KIconThemes
 import org.kde.config // for KAuthorized
 import org.kde.kirigami 2.20 as Kirigami
 
-import org.kde.private.desktopcontainment.folder 0.1 as Folder
+import org.kde.private.desktopcontainment.folder as Folder
 
 Item {
     id: configIcons
