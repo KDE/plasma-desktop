@@ -6,13 +6,12 @@
 
 #pragma once
 
-#include "folderplugin_private_export.h"
 #include <QObject>
 class QAction;
 class QActionGroup;
 class QMenu;
 
-class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
+class ViewPropertiesMenu : public QObject
 {
     Q_OBJECT
 

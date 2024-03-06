@@ -9,13 +9,11 @@
 #include <Plasma/Applet>
 #include <QAbstractItemModel>
 
-#include "folderplugin_private_export.h"
-
 class FolderModel;
 
 class QTimer;
 
-class FOLDERPLUGIN_TESTS_EXPORT Positioner : public QAbstractItemModel
+class Positioner : public QAbstractItemModel
 {
     Q_OBJECT
 

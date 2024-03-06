@@ -15,11 +15,9 @@
 
 #include <Plasma/Corona>
 
-#include "folderplugin_private_export.h"
-
 class QTimer;
 
-class FOLDERPLUGIN_TESTS_EXPORT ScreenMapper : public QObject
+class ScreenMapper : public QObject
 {
     Q_OBJECT
 

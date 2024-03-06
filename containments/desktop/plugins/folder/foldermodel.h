@@ -27,8 +27,6 @@
 
 #include <Plasma/Applet>
 
-#include "folderplugin_private_export.h"
-
 class QDrag;
 class QItemSelectionModel;
 class QQuickItem;
@@ -63,7 +61,7 @@ private:
     void handleJobError(KIO::Job *job);
 };
 
-class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, public QQmlParserStatus
+class FolderModel : public QSortFilterProxyModel, public QQmlParserStatus
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)

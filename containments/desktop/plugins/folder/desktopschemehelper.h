@@ -7,12 +7,11 @@
 #ifndef DESKTOPSCHEMEHELPER_H
 #define DESKTOPSCHEMEHELPER_H
 
-#include "folderplugin_private_export.h"
 #include <QObject>
 #include <QStandardPaths>
 #include <QString>
 
-class FOLDERPLUGIN_TESTS_EXPORT DesktopSchemeHelper : public QObject
+class DesktopSchemeHelper : public QObject
 {
     Q_OBJECT
 
