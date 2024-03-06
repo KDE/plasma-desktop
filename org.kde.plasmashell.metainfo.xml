@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component>
   <id>org.kde.plasmashell</id>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+  </developer>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KDE Plasma Desktop</name>
@@ -111,6 +114,7 @@
   <summary xml:lang="zh-TW">KDE 的完整桌面體驗。預設簡潔，需要時足夠強大</summary>
   <url type="homepage">https://www.kde.org/plasma-desktop</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=plasmashell</url>
+  <url type="vcs-browser">https://invent.kde.org/plasma/plasma-desktop</url>
   <project_group>KDE</project_group>
   <provides>
     <binary>plasmashell</binary>
@@ -175,8 +179,8 @@
   </screenshots>
   <compulsory_for_desktop>KDE</compulsory_for_desktop>
   <releases>
+    <release version="6.0.0" date="2024-02-28"/>
     <release version="5.27.11" date="2024-03-06"/>
-    <release version="5.93.0" date="2024-01-31"/>
     <release version="5.27.10" date="2023-12-05"/>
     <release version="5.27.9" date="2023-10-24"/>
   </releases>
