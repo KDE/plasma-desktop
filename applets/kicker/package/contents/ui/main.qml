@@ -143,11 +143,12 @@ PlasmoidItem {
         favoritesModel: globalFavorites
 
         runners: {
-            const results = ["krunner_services", "krunner_systemsettings"];
-
-            if (kicker.isDash) {
-                results.push("krunner_sessions", "krunner_powerdevil", "calculator", "unitconverter");
-            }
+            const results = ["krunner_services",
+                             "krunner_systemsettings",
+                             "krunner_sessions",
+                             "krunner_powerdevil",
+                             "calculator",
+                             "unitconverter"];
 
             if (Plasmoid.configuration.useExtraRunners) {
                 results.push(...Plasmoid.configuration.extraRunners);
