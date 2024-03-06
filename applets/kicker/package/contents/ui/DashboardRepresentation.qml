@@ -192,7 +192,7 @@ Kicker.DashboardWindow {
             id: containmentInterface
         }
 
-        TextEdit {
+        TextInput {
             id: searchField
 
             width: 0
@@ -208,6 +208,11 @@ Kicker.DashboardWindow {
 
             function clear() {
                 text = "";
+            }
+
+            onAccepted: {
+                runnerModel.modelForRow(0).trigger(0, "", null)
+                root.toggle();
             }
 
             onSelectionStartChanged: Qt.callLater(searchHeading.updateSelection)
