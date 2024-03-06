@@ -7,11 +7,14 @@
 #pragma once
 
 #include <QObject>
+#include <QQmlEngine>
 #include <QUrl>
 
 class Trash : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
 public:
     explicit Trash(QObject *parent = nullptr);

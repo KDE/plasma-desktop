@@ -8,6 +8,7 @@
 
 #include <KDirModel>
 #include <KSharedDataCache>
+#include <QQmlEngine>
 #include <QSize>
 #include <QVariant>
 #include <kimagecache.h>
@@ -23,6 +24,7 @@ class QTimer;
 class DirModel : public KDirModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     /**
      * @property string The url we want to browse. it may be an absolute path or a correct url of any protocol KIO supports

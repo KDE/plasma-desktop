@@ -1,11 +1,11 @@
-set(trashplugin_SRCS
+ecm_add_qml_module(trashplugin URI "org.kde.plasma.private.trash" GENERATE_PLUGIN_SOURCE)
+
+target_sources(trashplugin PRIVATE
     dirmodel.cpp
     trash.cpp
-    trashplugin.cpp
     )
 
-add_library(trashplugin SHARED ${trashplugin_SRCS})
-target_link_libraries(trashplugin
+target_link_libraries(trashplugin PRIVATE
         Qt::Core
         Qt::Qml
         KF6::KIOCore
@@ -15,5 +15,4 @@ target_link_libraries(trashplugin
         Qt::DBus
         )
 
-install(TARGETS trashplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/trash)
-install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/trash)
+ecm_finalize_qml_module(trashplugin)

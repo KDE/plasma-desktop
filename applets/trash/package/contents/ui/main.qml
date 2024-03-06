@@ -12,7 +12,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.draganddrop 2.0 as DragDrop
-import org.kde.plasma.private.trash 1.0 as TrashPrivate
+import org.kde.plasma.private.trash as TrashPrivate
 import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.kcmutils as KCM
