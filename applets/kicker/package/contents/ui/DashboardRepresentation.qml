@@ -210,6 +210,11 @@ Kicker.DashboardWindow {
                 text = "";
             }
 
+            onAccepted: {
+                runnerModel.modelForRow(0).trigger(0, "", null)
+                root.toggle();
+            }
+
             onSelectionStartChanged: Qt.callLater(searchHeading.updateSelection)
             onSelectionEndChanged: Qt.callLater(searchHeading.updateSelection)
         }
