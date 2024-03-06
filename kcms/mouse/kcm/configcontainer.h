@@ -17,10 +17,6 @@ class ConfigContainer : public KCModule
 public:
     explicit ConfigContainer(QObject *parent, const KPluginMetaData &data);
 
-    /*QSize minimumSizeHint() const override;
-    QSize sizeHint() const override;
-    void resizeEvent(QResizeEvent *event) override;*/
-
     void load() override;
     void save() override;
     void defaults() override;
@@ -37,11 +33,6 @@ public:
     {
         KCModule::defaults();
     }
-
-    /*
-    protected:
-        void hideEvent(QHideEvent *) override;
-    */
 
 private:
     ConfigPlugin *m_plugin = nullptr;
