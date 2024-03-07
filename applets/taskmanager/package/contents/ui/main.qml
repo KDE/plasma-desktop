@@ -273,6 +273,7 @@ PlasmoidItem {
         anchors.fill: parent
 
         hoverEnabled: true
+        acceptedButtons: Qt.NoButton
         onExited: {
             if (needLayoutRefresh) {
                 LayoutManager.layout(taskRepeater)
