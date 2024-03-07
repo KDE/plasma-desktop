@@ -9,8 +9,10 @@
 #pragma once
 
 #include <QList>
+#include <QPointer>
 #include <QStandardItemModel>
 
+class QTimer;
 class Gamepad;
 
 class DeviceModel : public QAbstractListModel
@@ -40,4 +42,5 @@ private:
 
     // Map of sdl indexes to Gamepad devices
     QMap<int, Gamepad *> m_devices;
+    QPointer<QTimer> m_timer;
 };

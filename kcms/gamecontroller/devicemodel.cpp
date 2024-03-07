@@ -17,11 +17,18 @@
 #include "gamepad.h"
 #include "logging.h"
 
+// 100 ms while we have devices
+const int kShortPollTime = 100;
+// 2 seconds while we don't have any devices
+const int kLongPollTime = 2000;
+
 DeviceModel::DeviceModel()
 {
-    auto timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &DeviceModel::poll);
-    timer->start(1);
+    m_timer = new QTimer(this);
+    connect(m_timer, &QTimer::timeout, this, &DeviceModel::poll);
+    // Only poll once per 2 seconds until we have a device
+    m_timer->start(kLongPollTime);
+    poll();
 }
 
 Gamepad *DeviceModel::device(int index) const
@@ -96,6 +103,8 @@ void DeviceModel::addDevice(const int deviceIndex)
     m_devices.insert(id, new Gamepad(joystick, gamepad, this));
     endInsertRows();
 
+    // Now that we have a device poll every short poll time
+    m_timer->start(kShortPollTime);
     Q_EMIT devicesChanged();
 }
 
@@ -113,6 +122,10 @@ void DeviceModel::removeDevice(const int deviceIndex)
     m_devices.remove(deviceIndex);
     endRemoveRows();
 
+    if (m_devices.count() == 0) {
+        // Go back to long timeout polling now that we don't have a device
+        m_timer->start(kLongPollTime);
+    }
     Q_EMIT devicesChanged();
 }
 
