@@ -8,12 +8,14 @@
 
 #include <QObject>
 #include <QUrl>
+#include <qqmlregistration.h>
 
 class QFileDialog;
 
 class DirectoryPicker : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QUrl url READ url NOTIFY urlChanged)
 

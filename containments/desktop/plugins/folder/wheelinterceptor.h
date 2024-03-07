@@ -8,10 +8,12 @@
 
 #include <QPointer>
 #include <QQuickItem>
+#include <qqmlregistration.h>
 
 class WheelInterceptor : public QQuickItem
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QObject *destination READ destination WRITE setDestination NOTIFY destinationChanged)
 

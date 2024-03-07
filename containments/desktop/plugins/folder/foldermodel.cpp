@@ -174,8 +174,6 @@ FolderModel::FolderModel(QObject *parent)
 {
     connect(DragTracker::self(), &DragTracker::dragInProgressChanged, this, &FolderModel::draggingChanged);
     connect(DragTracker::self(), &DragTracker::dragInProgressChanged, this, &FolderModel::dragInProgressAnywhereChanged);
-    // needed to pass the job around with qml
-    qmlRegisterAnonymousType<KIO::DropJob>("org.kde.private.desktopcontainment.folder", 0);
     DirLister *dirLister = new DirLister(this);
     dirLister->setDelayedMimeTypes(true);
     dirLister->setAutoErrorHandlingEnabled(false);

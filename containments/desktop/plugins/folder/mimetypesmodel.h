@@ -9,10 +9,12 @@
 #include <QAbstractListModel>
 #include <QMimeType>
 #include <QStringList>
+#include <qqmlregistration.h>
 
 class MimeTypesModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QStringList checkedTypes READ checkedTypes WRITE setCheckedTypes NOTIFY checkedTypesChanged)
 

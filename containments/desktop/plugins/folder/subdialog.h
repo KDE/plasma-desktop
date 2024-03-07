@@ -8,10 +8,12 @@
 #pragma once
 
 #include <PlasmaQuick/Dialog>
+#include <qqmlregistration.h>
 
 class SubDialog : public PlasmaQuick::Dialog
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit SubDialog(QQuickItem *parent = nullptr);

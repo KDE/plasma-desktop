@@ -10,10 +10,12 @@
 #include <KPluginMetaData>
 #include <QAbstractListModel>
 #include <QStringList>
+#include <qqmlregistration.h>
 
 class PreviewPluginsModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QStringList checkedPlugins READ checkedPlugins WRITE setCheckedPlugins NOTIFY checkedPluginsChanged)
 

@@ -9,19 +9,24 @@
 #pragma once
 
 #include <QFileSystemWatcher>
+#include <QAction>
 #include <QImage>
 #include <QItemSelection>
+#include <QMimeData>
 #include <QPointer>
 #include <QQmlParserStatus>
+#include <QQuickItem>
 #include <QRegularExpression>
 #include <QSet>
 #include <QSortFilterProxyModel>
 #include <QStringList>
+#include <qqmlregistration.h>
 
 #include <KAbstractViewAdapter>
 #include <KActionCollection>
 #include <KDirLister>
 #include <KFilePreviewGenerator>
+#include <KIO/DropJob>
 
 #include <KNewFileMenu>
 
@@ -40,7 +45,6 @@ class KJob;
 
 namespace KIO
 {
-class DropJob;
 class StatJob;
 }
 
@@ -64,6 +68,7 @@ private:
 class FolderModel : public QSortFilterProxyModel, public QQmlParserStatus
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(QString url READ url WRITE setUrl NOTIFY urlChanged)

@@ -7,6 +7,8 @@
 #pragma once
 
 #include <QObject>
+#include <qqmlregistration.h>
+
 class QAction;
 class QActionGroup;
 class QMenu;
@@ -14,6 +16,7 @@ class QMenu;
 class ViewPropertiesMenu : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QObject *menu READ menu CONSTANT)
 

@@ -7,11 +7,14 @@
 #pragma once
 
 #include <QObject>
+#include <QQmlEngine>
 #include <QUrl>
 
 class AppLauncher : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 public:
     Q_INVOKABLE void openUrl(const QUrl &url);
 

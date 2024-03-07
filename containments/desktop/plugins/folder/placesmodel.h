@@ -7,12 +7,14 @@
 #pragma once
 
 #include <QSortFilterProxyModel>
+#include <qqmlregistration.h>
 
 class KFilePlacesModel;
 
 class PlacesModel : public QSortFilterProxyModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(bool activityLinkingEnabled READ activityLinkingEnabled CONSTANT)
     Q_PROPERTY(bool showDesktopEntry READ showDesktopEntry WRITE setShowDesktopEntry NOTIFY showDesktopEntryChanged)

@@ -8,6 +8,7 @@
 
 #include <Plasma/Applet>
 #include <QAbstractItemModel>
+#include <qqmlregistration.h>
 
 class FolderModel;
 
@@ -16,6 +17,7 @@ class QTimer;
 class Positioner : public QAbstractItemModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(Plasma::Applet *applet READ applet WRITE setApplet NOTIFY appletChanged)
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)

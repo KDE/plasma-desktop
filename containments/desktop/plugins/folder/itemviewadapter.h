@@ -7,12 +7,14 @@
 #pragma once
 
 #include <QRect>
+#include <qqmlregistration.h>
 
 #include <KAbstractViewAdapter>
 
 class ItemViewAdapter : public KAbstractViewAdapter
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QObject *adapterView READ adapterView WRITE setAdapterView NOTIFY adapterViewChanged)
     Q_PROPERTY(QAbstractItemModel *adapterModel READ adapterModel WRITE setAdapterModel NOTIFY adapterModelChanged)

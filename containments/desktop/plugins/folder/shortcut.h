@@ -8,6 +8,7 @@
 #pragma once
 
 #include <QObject>
+#include <qqmlregistration.h>
 
 /**
  * TODO: ShortCut is a stopgap solution and should be dropped when Qt's StandardKey
@@ -23,6 +24,7 @@
 class ShortCut : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit ShortCut(QObject *parent = nullptr);

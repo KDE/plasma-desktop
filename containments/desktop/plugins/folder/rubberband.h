@@ -7,10 +7,12 @@
 #pragma once
 
 #include <QQuickPaintedItem>
+#include <qqmlregistration.h>
 
 class RubberBand : public QQuickPaintedItem
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit RubberBand(QQuickItem *parent = nullptr);

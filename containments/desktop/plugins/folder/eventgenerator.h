@@ -9,12 +9,14 @@
 #define EventGenerator_H
 
 #include <QObject>
+#include <qqmlregistration.h>
 
 class QQuickItem;
 
 class EventGenerator : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     enum MouseEvent {

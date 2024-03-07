@@ -8,6 +8,7 @@
 
 #include <QObject>
 #include <QPointer>
+#include <qqmlregistration.h>
 
 class KFilePlacesModel;
 class FolderModel;
@@ -15,6 +16,7 @@ class FolderModel;
 class LabelGenerator : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(FolderModel *folderModel READ folderModel WRITE setFolderModel NOTIFY folderModelChanged)
     Q_PROPERTY(bool rtl READ rtl WRITE setRtl NOTIFY rtlChanged)

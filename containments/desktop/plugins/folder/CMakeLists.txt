@@ -2,14 +2,13 @@ if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
 
-ecm_add_qml_module(folderplugin URI org.kde.private.desktopcontainment.folder CLASS_NAME FolderPlugin)
+ecm_add_qml_module(folderplugin URI org.kde.private.desktopcontainment.folder GENERATE_PLUGIN_SOURCE DEPENDENCIES "QtCore" "QtQuick")
 
 target_sources(folderplugin PRIVATE
     applauncher.cpp
     desktopschemehelper.cpp
     directorypicker.cpp
     foldermodel.cpp
-    folderplugin.cpp
     itemviewadapter.cpp
     labelgenerator.cpp
     menuhelper.cpp
@@ -25,6 +24,7 @@ target_sources(folderplugin PRIVATE
     screenmapper.cpp
     removeaction.cpp
     eventgenerator.cpp
+    types.h
 )
 
 target_link_libraries(folderplugin PUBLIC
