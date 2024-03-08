@@ -1404,6 +1404,9 @@ bool FolderModel::isDir(const QModelIndex &index, const KDirModel *dirModel) con
         }
 
         const QUrl url(file.readUrl());
+        if (!url.isValid()) {
+            return false;
+        }
 
         // Check if we already have a running StatJob for this URL.
         if (m_isDirJobs.contains(item.url())) {
@@ -1417,7 +1420,7 @@ bool FolderModel::isDir(const QModelIndex &index, const KDirModel *dirModel) con
             return true;
         }
 
-        if (KProtocolInfo::protocolClass(url.scheme()) != QLatin1String(":local")) {
+        if (!url.scheme().isEmpty() && KProtocolInfo::protocolClass(url.scheme()) != QLatin1String(":local")) {
             return false;
         }
 
