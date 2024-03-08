@@ -22,6 +22,7 @@ class DeviceModel : public QAbstractListModel
 
 public:
     DeviceModel();
+    virtual ~DeviceModel();
 
     Q_INVOKABLE Gamepad *device(int index) const;
 

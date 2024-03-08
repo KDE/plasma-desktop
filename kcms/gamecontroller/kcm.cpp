@@ -9,7 +9,6 @@
 #include "kcm.h"
 
 #include <KPluginFactory>
-#include <SDL.h>
 
 #include "axesmodel.h"
 #include "buttonmodel.h"
@@ -20,8 +19,6 @@ K_PLUGIN_CLASS_WITH_JSON(KCMGameController, "kcm_gamecontroller.json")
 KCMGameController::KCMGameController(QObject *parent, const KPluginMetaData &metaData)
     : KQuickManagedConfigModule(parent, metaData)
 {
-    SDL_Init(SDL_INIT_GAMECONTROLLER);
-
     setButtons(Help);
 
     constexpr const char *uri{"org.kde.plasma.gamecontroller.kcm"};
@@ -33,7 +30,6 @@ KCMGameController::KCMGameController(QObject *parent, const KPluginMetaData &met
 
 KCMGameController::~KCMGameController()
 {
-    SDL_Quit();
 }
 
 #include "kcm.moc"
