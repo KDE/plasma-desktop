@@ -25,16 +25,17 @@ FocusScope {
     Accessible.name: header.text
     Accessible.role: Accessible.MenuItem
 
+    readonly property bool firstVisible: parent.visibleChildren[0] === this
     KSvg.SvgItem {
         id: vertLine
 
         anchors.left: parent.left
-        anchors.leftMargin: (index > 0 ) ? Kirigami.Units.smallSpacing : 0
+        anchors.leftMargin: firstVisible ? 0 : Kirigami.Units.smallSpacing
 
-        width: (index > 0 ) ? lineSvg.vertLineWidth : 0
+        width: firstVisible ? 0 : lineSvg.vertLineWidth
         height: parent.height
 
-        visible: (index > 0)
+        visible: !firstVisible
 
         svg: lineSvg
         elementId: "vertical-line"
@@ -64,12 +65,12 @@ FocusScope {
 
         anchors.top: Plasmoid.configuration.alignResultsToBottom ? undefined : header.bottom
         anchors.bottom: Plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
-        anchors.bottomMargin: (index == 0 && anchors.bottom !== undefined) ? searchField.height + (2 * Kirigami.Units.smallSpacing) : undefined
+        anchors.bottomMargin: (firstVisible && anchors.bottom !== undefined) ? searchField.height + (2 * Kirigami.Units.smallSpacing) : undefined
         anchors.left: vertLine.right
-        anchors.leftMargin: (index > 0) ? Kirigami.Units.smallSpacing : 0
+        anchors.leftMargin: firstVisible ? 0 : Kirigami.Units.smallSpacing
 
         height: {
-            var listHeight = (((index == 0)
+            var listHeight = ((firstVisible
                 ? rootList.height : runnerColumns.height) - header.height);
 
             if (model && model.count) {
@@ -96,7 +97,7 @@ FocusScope {
         }
 
         onCountChanged: {
-            if (index == 0 && searchField.focus) {
+            if (firstVisible && searchField.focus) {
                 currentIndex = 0;
             }
         }
