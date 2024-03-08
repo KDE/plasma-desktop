@@ -28,9 +28,7 @@ EmptyPage {
     readonly property var appletInterface: kickoff
 
     Layout.minimumWidth: implicitWidth
-    Layout.maximumWidth: Kirigami.Units.gridUnit * 80
     Layout.minimumHeight: implicitHeight
-    Layout.maximumHeight: Kirigami.Units.gridUnit * 40
     Layout.preferredWidth: Math.max(implicitWidth, width)
     Layout.preferredHeight: Math.max(implicitHeight, height)
 
