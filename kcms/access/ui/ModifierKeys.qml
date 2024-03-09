@@ -14,6 +14,7 @@ import org.kde.kirigami 2.3 as Kirigami
 Kirigami.FormLayout {
     QQC2.CheckBox {
         Kirigami.FormData.label: i18n("Sticky keys:")
+        Layout.fillWidth: true
         text: i18nc("Enable sticky keys", "Enable")
 
         KCM.SettingStateBinding {
@@ -25,6 +26,7 @@ Kirigami.FormLayout {
         onToggled: kcm.keyboardSettings.stickyKeys = checked
     }
     QQC2.CheckBox {
+        Layout.fillWidth: true
         text: i18nc("Lock sticky keys", "Lock")
 
         KCM.SettingStateBinding {
@@ -38,7 +40,7 @@ Kirigami.FormLayout {
     }
     QQC2.CheckBox {
         id: stickyKeysAutoOff
-
+        Layout.fillWidth: true
         text: i18n("Disable when two keys are held down")
 
         KCM.SettingStateBinding {
@@ -51,6 +53,7 @@ Kirigami.FormLayout {
         onToggled: kcm.keyboardSettings.stickyKeysAutoOff = checked
     }
     QQC2.CheckBox {
+        Layout.fillWidth: true
         text: i18n("Ring system bell when modifier keys are used")
 
         KCM.SettingStateBinding {
@@ -69,6 +72,7 @@ Kirigami.FormLayout {
 
     QQC2.CheckBox {
         Kirigami.FormData.label: i18n("Feedback:")
+        Layout.fillWidth: true
         text: i18n("Ring system bell when locking keys are toggled")
 
         KCM.SettingStateBinding {
@@ -81,6 +85,7 @@ Kirigami.FormLayout {
     }
     QQC2.CheckBox {
         text: i18n("Show notification when modifier or locking keys are used")
+        Layout.fillWidth: true
 
         KCM.SettingStateBinding {
             configObject: kcm.keyboardSettings
@@ -91,7 +96,6 @@ Kirigami.FormLayout {
         onToggled: kcm.keyboardSettings.keyboardNotifyModifiers = checked
     }
     QQC2.Button {
-        id: this
         text: i18n("Configure Notifications…")
         icon.name: "preferences-desktop-notification"
 
