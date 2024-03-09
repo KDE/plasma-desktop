@@ -54,6 +54,7 @@ QQC2.RadioButton {
                     fill: parent
                     margins: Kirigami.Units.smallSpacing
                 }
+                asynchronous: true
                 sourceSize: Qt.size(width * Screen.devicePixelRatio,
                                     height * Screen.devicePixelRatio)
             }
