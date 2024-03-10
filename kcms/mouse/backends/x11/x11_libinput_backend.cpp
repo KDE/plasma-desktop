@@ -11,7 +11,9 @@ X11LibinputBackend::X11LibinputBackend(QObject *parent)
     : X11Backend(parent)
 {
     m_mode = InputBackendMode::XLibinput;
-    m_device = new X11LibinputDummyDevice(this, m_dpy);
+    auto device = new X11LibinputDummyDevice(this, m_dpy);
+    m_device = device; // store as QObject*
+    connect(device, &X11LibinputDummyDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);
 }
 
 bool X11LibinputBackend::applyConfig()
@@ -29,9 +31,9 @@ bool X11LibinputBackend::getDefaultConfig()
     return static_cast<X11LibinputDummyDevice *>(m_device)->getDefaultConfig();
 }
 
-bool X11LibinputBackend::isChangedConfig() const
+bool X11LibinputBackend::isSaveNeeded() const
 {
-    return static_cast<X11LibinputDummyDevice *>(m_device)->isChangedConfig();
+    return static_cast<X11LibinputDummyDevice *>(m_device)->isSaveNeeded();
 }
 
 void X11LibinputBackend::kcmInit()

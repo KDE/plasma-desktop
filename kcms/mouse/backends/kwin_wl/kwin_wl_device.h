@@ -63,7 +63,7 @@ public:
 
     bool getDefaultConfig();
     bool applyConfig();
-    bool isChangedConfig() const;
+    bool isSaveNeeded() const;
 
     //
     // general
@@ -206,6 +206,8 @@ public:
     }
 
 Q_SIGNALS:
+    void needsSaveChanged();
+
     void leftHandedChanged();
     void pointerAccelerationChanged();
     void pointerAccelerationProfileFlatChanged();
@@ -226,6 +228,9 @@ private:
             , changedSignalFunction(changedSignal)
             , device(device)
         {
+            if (changedSignalFunction) {
+                QObject::connect(device, changedSignalFunction, device, &KWinWaylandDevice::needsSaveChanged);
+            }
         }
 
         void set(T newVal)

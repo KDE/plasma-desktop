@@ -264,7 +264,7 @@ bool X11LibinputDummyDevice::valueWriter(Prop<T> &prop)
     return true;
 }
 
-bool X11LibinputDummyDevice::isChangedConfig() const
+bool X11LibinputDummyDevice::isSaveNeeded() const
 {
     return m_leftHanded.changed() || m_pointerAcceleration.changed() || m_pointerAccelerationProfileFlat.changed()
         || m_pointerAccelerationProfileAdaptive.changed() || m_middleEmulation.changed() || m_naturalScroll.changed();

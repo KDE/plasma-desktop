@@ -47,13 +47,6 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     m_view->setAttribute(Qt::WA_AlwaysStackOnTop);
 
     m_view->rootContext()->setContextProperty("backend", m_backend);
-
-    QObject::connect(m_view, &QQuickWidget::statusChanged, [&](QQuickWidget::Status status) {
-        if (status == QQuickWidget::Ready) {
-            connect(m_view->rootObject(), SIGNAL(changeSignal()), this, SLOT(onChange()));
-        }
-    });
-
     m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
     m_view->setSource(QUrl(QStringLiteral("qrc:/libinput/main.qml")));
 
@@ -62,8 +55,9 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
         m_errorMessage->setText(m_backend->errorString());
         QMetaObject::invokeMethod(m_errorMessage, "animatedShow", Qt::QueuedConnection);
     } else {
-        connect(m_backend, SIGNAL(deviceAdded(bool)), this, SLOT(onDeviceAdded(bool)));
-        connect(m_backend, SIGNAL(deviceRemoved(int)), this, SLOT(onDeviceRemoved(int)));
+        connect(m_backend, &InputBackend::needsSaveChanged, this, &LibinputConfig::onChange);
+        connect(m_backend, &InputBackend::deviceAdded, this, &LibinputConfig::onDeviceAdded);
+        connect(m_backend, &InputBackend::deviceRemoved, this, &LibinputConfig::onDeviceRemoved);
     }
 
     // Just set it to a reasonable default size
@@ -105,7 +99,7 @@ void LibinputConfig::save()
     // load newly written values
     load();
     // in case of error, config still in changed state
-    m_parent->setNeedsSave(m_backend->isChangedConfig());
+    m_parent->setNeedsSave(m_backend->isSaveNeeded());
 }
 
 void LibinputConfig::defaults()
@@ -120,7 +114,6 @@ void LibinputConfig::defaults()
         m_errorMessage->setText(i18n("Error while loading default values. Failed to set some options to their default values."));
         m_errorMessage->animatedShow();
     }
-    m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::onChange()
@@ -128,7 +121,7 @@ void LibinputConfig::onChange()
     if (m_backend->deviceCount() > 0) {
         hideErrorMessage();
     }
-    m_parent->setNeedsSave(m_backend->isChangedConfig());
+    m_parent->setNeedsSave(m_backend->isSaveNeeded());
 }
 
 void LibinputConfig::onDeviceAdded(bool success)
@@ -157,8 +150,6 @@ void LibinputConfig::onDeviceRemoved(int index)
         }
         m_errorMessage->animatedShow();
     }
-
-    m_parent->setNeedsSave(m_backend->isChangedConfig());
 }
 
 void LibinputConfig::hideErrorMessage()

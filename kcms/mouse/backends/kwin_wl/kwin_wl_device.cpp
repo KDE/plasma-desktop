@@ -142,7 +142,7 @@ bool KWinWaylandDevice::applyConfig()
     return success;
 }
 
-bool KWinWaylandDevice::isChangedConfig() const
+bool KWinWaylandDevice::isSaveNeeded() const
 {
     return m_enabled.changed() || m_leftHanded.changed() || m_pointerAcceleration.changed() || m_pointerAccelerationProfileFlat.changed()
         || m_pointerAccelerationProfileAdaptive.changed() || m_middleEmulation.changed() || m_scrollFactor.changed() || m_naturalScroll.changed();

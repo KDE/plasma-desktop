@@ -64,7 +64,7 @@ public:
     bool getConfig();
     bool getDefaultConfig();
     bool applyConfig();
-    bool isChangedConfig() const;
+    bool isSaveNeeded() const;
 
     void getDefaultConfigFromX();
 
@@ -200,6 +200,8 @@ public:
     }
 
 Q_SIGNALS:
+    void needsSaveChanged();
+
     void leftHandedChanged();
     void pointerAccelerationChanged();
     void pointerAccelerationProfileFlatChanged();
@@ -219,6 +221,9 @@ private:
             , changedSignalFunction(changedSignal)
             , device(device)
         {
+            if (changedSignalFunction) {
+                QObject::connect(device, changedSignalFunction, device, &X11LibinputDummyDevice::needsSaveChanged);
+            }
         }
 
         void set(T newVal)
