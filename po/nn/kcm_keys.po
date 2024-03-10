@@ -1,12 +1,11 @@
 # Translation of kcm_keys to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-01 03:07+0000\n"
-"PO-Revision-Date: 2023-01-15 12:36+0100\n"
+"PO-Revision-Date: 2024-03-09 19:01+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -126,25 +125,22 @@ msgid "Common Actions"
 msgstr "Vanlege handlingar"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action: button Import shortcut scheme"
 msgid "Import…"
-msgstr "Importer"
+msgstr "Importer …"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Cancel Export"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
 msgstr "Avbryt eksport"
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr "Eksporter oppsett …"
+msgstr "Eksporter …"
 
 #: ui/main.qml:75
 #, kde-format
@@ -158,8 +154,7 @@ msgid ""
 msgstr "Vel komponentane nedanfor som skal takast med i eksporten"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid "Save scheme"
+#, kde-format
 msgctxt "@action:button Save shortcut scheme"
 msgid "Save Scheme"
 msgstr "Lagra oppsett"
@@ -168,21 +163,19 @@ msgstr "Lagra oppsett"
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
-msgstr ""
+msgstr "Legg til ny"
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep translated text as short as possible"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr "Legg til program …"
+msgstr "Program …"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr ""
+msgstr "Kommando eller skript …"
 
 #: ui/main.qml:226
 #, kde-format

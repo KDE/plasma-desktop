@@ -1,20 +1,19 @@
 # Translation of kcmkeyboard to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2007, 2008, 2015, 2016, 2018, 2020, 2021, 2023.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-03 01:37+0000\n"
-"PO-Revision-Date: 2023-03-11 23:28+0100\n"
+"PO-Revision-Date: 2024-03-09 18:55+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -41,10 +40,9 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "Byt til neste tastaturoppsett"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Byt til neste tastaturoppsett"
+msgstr "Byt til sist brukte tastaturoppsett"
 
 #: bindings.cpp:60
 #, kde-format
@@ -240,10 +238,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:249
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "Alternativ snarveg:"
+msgstr "«Sist brukt»-snøggtast:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:262
@@ -252,6 +249,8 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
+"Med denne snøggtasten kan du kjapt byta mellom to tastatur­oppsett. Bruk han "
+"for å byta til det siste brukte oppsettet."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:287

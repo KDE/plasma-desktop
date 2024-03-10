@@ -1,13 +1,12 @@
 # Translation of plasma_shell_org.kde.plasma.desktop to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-05 02:20+0000\n"
-"PO-Revision-Date: 2023-07-12 11:31+0200\n"
+"PO-Revision-Date: 2024-03-09 19:13+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -18,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -268,7 +267,7 @@ msgstr "Legg til mellomrom"
 
 #: contents/configuration/PanelConfiguration.qml:107
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Legg til mellomrom på panelet"
 
 #: contents/configuration/PanelConfiguration.qml:114
 msgid "Add Widgets…"
@@ -276,11 +275,11 @@ msgstr "Legg til element …"
 
 #: contents/configuration/PanelConfiguration.qml:117
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "Opna elementveljaren for å dra og sleppa skjermelement til panelet"
 
 #: contents/configuration/PanelConfiguration.qml:146
 msgid "Position"
-msgstr ""
+msgstr "Plassering"
 
 #: contents/configuration/PanelConfiguration.qml:150
 #: contents/configuration/PanelConfiguration.qml:264
@@ -304,13 +303,11 @@ msgstr "Nede"
 
 #: contents/configuration/PanelConfiguration.qml:173
 msgid "Set Position..."
-msgstr ""
+msgstr "Vel plassering ..."
 
 #: contents/configuration/PanelConfiguration.qml:200
-#, fuzzy
-#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "Plassering:"
+msgstr "Justering"
 
 #: contents/configuration/PanelConfiguration.qml:265
 msgid "Center"
@@ -325,44 +322,36 @@ msgid "Width"
 msgstr "Breidd"
 
 #: contents/configuration/PanelConfiguration.qml:307
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Panelhøgd:"
+msgstr "Fyll høgda"
 
 #: contents/configuration/PanelConfiguration.qml:307
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Panelbreidd:"
+msgstr "Fyll breidda"
 
 #: contents/configuration/PanelConfiguration.qml:308
 msgid "Fit content"
-msgstr ""
+msgstr "Tilpass til innhaldet"
 
 #: contents/configuration/PanelConfiguration.qml:309
 msgid "Custom"
-msgstr ""
+msgstr "Tilpassa"
 
 #: contents/configuration/PanelConfiguration.qml:335
 msgid "Visibility"
 msgstr "Synlegheit"
 
 #: contents/configuration/PanelConfiguration.qml:347
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Alltid synleg"
 
 #: contents/configuration/PanelConfiguration.qml:348
-#, fuzzy
-#| msgid "Auto-Hide"
 msgid "Auto hide"
 msgstr "Gøym automatisk"
 
 #: contents/configuration/PanelConfiguration.qml:349
 msgid "Dodge windows"
-msgstr ""
+msgstr "Vik unna vindauge"
 
 #: contents/configuration/PanelConfiguration.qml:350
 msgid "Windows Go Below"
@@ -386,27 +375,21 @@ msgstr "Gjennomsiktig"
 
 #: contents/configuration/PanelConfiguration.qml:432
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: contents/configuration/PanelConfiguration.qml:443
 msgid "Floating"
 msgstr "Flytande"
 
 #: contents/configuration/PanelConfiguration.qml:517
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Panelbreidd:"
 
 #: contents/configuration/PanelConfiguration.qml:517
-#, fuzzy
-#| msgid "Right"
 msgid "Height:"
-msgstr "Til høgre"
+msgstr "Høgd:"
 
 #: contents/configuration/PanelConfiguration.qml:551
-#, fuzzy
-#| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
 msgstr "Fokussnarveg:"
 
@@ -415,11 +398,9 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Bruk snøggtasten til å flytta fokuset til panelet"
 
 #: contents/configuration/PanelConfiguration.qml:577
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "Fjern panelet"
+msgstr "Fjern panel"
 
 #: contents/configuration/PanelConfiguration.qml:580
 msgid "Remove this panel; this action is undo-able"
@@ -493,7 +474,7 @@ msgstr "Alternative element"
 
 #: contents/explorer/AppletDelegate.qml:41
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Ikkje-støtta skjermelement"
 
 #: contents/explorer/AppletDelegate.qml:187
 msgid "Undo uninstall"
