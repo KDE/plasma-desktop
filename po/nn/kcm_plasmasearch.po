@@ -1,12 +1,11 @@
 # Translation of kcm_plasmasearch to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2023-07-27 21:59+0200\n"
+"PO-Revision-Date: 2024-03-09 18:56+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,16 +13,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Tilgjengelege programtillegg"
+msgstr "Favoritt-tillegg"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -41,27 +39,25 @@ msgid "Get New Plugins…"
 msgstr "Hent nye programtillegg …"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
 msgstr ""
 "Slå på/av programtillegg (brukt i både KRunner, programstartar og "
-"oversiktseffekten)"
+"oversiktseffekten). Merk tillegg som favorittar, og ordna dei i rekkjefølgja "
+"du ønskjer å sjå dei."
 
 #: plasmasearch/ui/main.qml:89
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Fjern frå favorittar"
 
 #: plasmasearch/ui/main.qml:89
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Legg til i favorittar"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
