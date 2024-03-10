@@ -155,11 +155,11 @@ KCM.AbstractKCM {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                     }
+                    ShakeCursor {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                    }
                 }
-            }
-            ShakeCursor {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
             }
         }
     }
