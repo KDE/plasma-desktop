@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-22 03:07+0000\n"
-"PO-Revision-Date: 2024-02-29 13:00\n"
+"PO-Revision-Date: 2024-03-09 04:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -72,17 +72,17 @@ msgstr "常规："
 #: package/contents/ui/ConfigAppearance.qml:34
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "悬停在任务图标上时显示窗口的缩略图"
+msgstr "光标悬停在任务图标上时显示窗口预览"
 
 #: package/contents/ui/ConfigAppearance.qml:39
 #, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "悬停在窗口缩略图时隐藏其他窗口"
+msgstr "光标悬停在窗口预览上时隐藏其他窗口"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
 msgid "Mark applications that play audio"
-msgstr "为正在播放音频的应用程序显示角标"
+msgstr "标记正在播放音频的应用程序"
 
 #: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
@@ -171,14 +171,14 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "显示窗口小型预览"
+msgstr "显示窗口预览 (小)"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "显示窗口大型预览"
+msgstr "显示窗口预览 (大)"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
@@ -191,7 +191,7 @@ msgstr "显示文字列表"
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
-msgstr "显示特效合成器不支持并排显示窗口，因此将改为显示文本式窗口列表"
+msgstr "显示特效合成器不支持并排显示窗口，将改为显示文本式窗口列表"
 
 #: package/contents/ui/ConfigBehavior.qml:83
 #, kde-format
@@ -556,7 +556,7 @@ msgstr "折叠(&S)"
 #: package/contents/ui/ContextMenu.qml:722
 #, kde-format
 msgid "Allow this program to be grouped"
-msgstr "允许将此程序的窗口显示为分组"
+msgstr "允许将此程序的所有窗口合并为一个分组"
 
 #: package/contents/ui/ContextMenu.qml:770
 #, kde-format
