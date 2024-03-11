@@ -151,6 +151,7 @@ QQC2.ItemDelegate {
                     Repeater {
                         model: customShortcuts
                         RowLayout {
+                            Layout.alignment: Qt.AlignRight
                             KeySequenceItem {
                                 Layout.alignment: Qt.AlignRight
                                 keySequence: modelData
