@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1673554 2024-02-19 01:06:58Z scripty $
+# $Id: kcm_access.po 1675312 2024-03-11 01:07:18Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-03-11 00:39+0000\n"
 "PO-Revision-Date: 2024-02-18 21:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -27,67 +27,67 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: kcmaccess.cpp:112
+#: kcmaccess.cpp:115
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:114
+#: kcmaccess.cpp:117
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:119
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:126
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko so vključeni NumLock, CapsLock in ScrollLock"
 
-#: kcmaccess.cpp:127
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko sta vključena CapsLock in ScrollLock"
 
-#: kcmaccess.cpp:128
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko sta vključena NumLock in ScrollLock"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Pritisnite %1, ko je vključen ScrollLock"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Pritisnite %1, ko sta vključena NumLock in CapsLock"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Pritisnite %1, ko je vključen CapsLock"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Pritisnite %1, ko je vključen NumLock"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1"
 msgstr "Pritisnite %1"
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:183
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Ni bilo mogoče nastaviti gsettings za Orco: \"%1\" ni uspelo"
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:190
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Napaka: ni bilo mogoče zagnati »orca --setup«"
@@ -296,6 +296,19 @@ msgstr "Potrdi dostop do tipkovnice"
 msgid "Enable Screen Reader"
 msgstr "Omogoči bralnik zaslona"
 
+#. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
+#: kcmaccessibilityshakecursor.kcfg:9
+#, kde-format
+msgid "Whether Shake Cursor is enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
+#: kcmaccessibilityshakecursor.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgid "Magnification"
+msgstr "Prikaži obvestilo"
+
 #: ui/Bell.qml:19
 #, kde-format
 msgid "Please choose an audio file"
@@ -442,80 +455,86 @@ msgstr "Zamuda:"
 msgid "Ring system bell when rejected"
 msgstr "Pozvoni sistemski zvonec ob zavrnitvi"
 
-#: ui/main.qml:24
+#: ui/main.qml:27
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Zvonec"
 
-#: ui/main.qml:29
+#: ui/main.qml:32
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Spremenilne tipke"
 
-#: ui/main.qml:34
+#: ui/main.qml:37
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Filtri za tipkovnico"
 
-#: ui/main.qml:39
+#: ui/main.qml:42
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Krmarjenje miške"
 
-#: ui/main.qml:44
+#: ui/main.qml:47
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "Bralnik zaslona"
+
+#: ui/main.qml:52
+#, kde-format
+msgctxt "Shake cursor to find it"
+msgid "Shake Cursor"
+msgstr ""
 
 #: ui/ModifierKeys.qml:16
 #, kde-format
 msgid "Sticky keys:"
 msgstr "Lepljive tipke:"
 
-#: ui/ModifierKeys.qml:17
+#: ui/ModifierKeys.qml:18
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
 msgstr "Omogoči"
 
-#: ui/ModifierKeys.qml:28
+#: ui/ModifierKeys.qml:30
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
 msgstr "Zakleni"
 
-#: ui/ModifierKeys.qml:42
+#: ui/ModifierKeys.qml:44
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr "Onemogoči, kadar sta pritisnjeni dve tipki"
 
-#: ui/ModifierKeys.qml:54
+#: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
 msgstr "Pozvoni s sistemskim zvoncem, kadar so uporabljene spremenilne tipke"
 
-#: ui/ModifierKeys.qml:71
+#: ui/ModifierKeys.qml:74
 #, kde-format
 msgid "Feedback:"
 msgstr "Povratni odziv:"
 
-#: ui/ModifierKeys.qml:72
+#: ui/ModifierKeys.qml:76
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
 msgstr "Pozvoni s sistemskim zvoncem, kadar so preklopljene tipke za zaklep"
 
-#: ui/ModifierKeys.qml:83
+#: ui/ModifierKeys.qml:87
 #, kde-format
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "Prikaži obvestilo kadar so uporabljene spremenilne tipke ali tipke za zaklep"
 
-#: ui/ModifierKeys.qml:95
+#: ui/ModifierKeys.qml:99
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "Nastavi obvestila…"
@@ -597,6 +616,38 @@ msgid ""
 msgstr ""
 "Vse kaže, da bralnik zaslona Orca ni nameščen. Namestite ga pred poskusom "
 "uporabe te možnosti, potem se odjavite in ponovno zaženite računalnik"
+
+#: ui/ShakeCursor.qml:15
+#, kde-format
+msgctxt "@label"
+msgid "Shake cursor to find it:"
+msgstr ""
+
+#: ui/ShakeCursor.qml:16
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option check, Enable shake cursor effect"
+msgid "Enable"
+msgstr "Omogoči"
+
+#: ui/ShakeCursor.qml:28
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgctxt "@label Cursor magnification level"
+msgid "Magnification:"
+msgstr "Prikaži obvestilo"
+
+#: ui/ShakeCursor.qml:55
+#, kde-format
+msgctxt "@label Normal cursor size"
+msgid "Normal"
+msgstr ""
+
+#: ui/ShakeCursor.qml:62
+#, kde-format
+msgctxt "@label Large cursor size"
+msgid "Large"
+msgstr ""
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Profil pospeševanja:"

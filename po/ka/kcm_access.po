@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-03-11 00:39+0000\n"
 "PO-Revision-Date: 2023-08-25 07:12+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,67 +18,67 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: kcmaccess.cpp:112
+#: kcmaccess.cpp:115
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:114
+#: kcmaccess.cpp:117
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:119
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:126
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "დააწექით %1-ს, როცა NumLock, CapsLock და ScrollLock აქტიურია"
 
-#: kcmaccess.cpp:127
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "დააწექით %1-ს, როცა CapsLock და ScrollLock აქტიურია"
 
-#: kcmaccess.cpp:128
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "დააწექით %1-ს, როცა NumLock დაScrollLock აქტიურია"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "დააწექით %1-ს, როცა ScrollLock აქტიურია"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "დააწექით %1-ს, როცა NumLock და CapsLock აქტიურია"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "დააწექით %1-ს, როცა CapsLock აქტიურია"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "დააწექით %1-ს, როცა NumLock აქტიურია"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1"
 msgstr "დააწექით %1-ს"
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:183
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Orca-სთვის gsettings-ის დაყენების შეცდომა: \"%1\"-ის შეცდომა"
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:190
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "შეცდომა: \"orca --setup\" -ის გაშვების შეცდომა"
@@ -287,6 +287,19 @@ msgstr "კლავიატურასთან წვდომის და�
 msgid "Enable Screen Reader"
 msgstr "ეკრანის მკითხველის ჩართვა"
 
+#. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
+#: kcmaccessibilityshakecursor.kcfg:9
+#, kde-format
+msgid "Whether Shake Cursor is enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
+#: kcmaccessibilityshakecursor.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgid "Magnification"
+msgstr "გაფრთხილების ჩვენება"
+
 #: ui/Bell.qml:19
 #, kde-format
 msgid "Please choose an audio file"
@@ -433,79 +446,85 @@ msgstr "დაყოვნება:"
 msgid "Ring system bell when rejected"
 msgstr "უარყოფისას სისტემური ზარის დარეკვა"
 
-#: ui/main.qml:24
+#: ui/main.qml:27
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "ზარი"
 
-#: ui/main.qml:29
+#: ui/main.qml:32
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "მოდიფიკატორი ღილაკები"
 
-#: ui/main.qml:34
+#: ui/main.qml:37
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "კლავიატურის ფილტრები"
 
-#: ui/main.qml:39
+#: ui/main.qml:42
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "თაგუნით ნავიგაცა"
 
-#: ui/main.qml:44
+#: ui/main.qml:47
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "ეკრანის მკითხველი"
+
+#: ui/main.qml:52
+#, kde-format
+msgctxt "Shake cursor to find it"
+msgid "Shake Cursor"
+msgstr ""
 
 #: ui/ModifierKeys.qml:16
 #, kde-format
 msgid "Sticky keys:"
 msgstr "წებოვანი ღილაკები:"
 
-#: ui/ModifierKeys.qml:17
+#: ui/ModifierKeys.qml:18
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
 msgstr "ჩართვა"
 
-#: ui/ModifierKeys.qml:28
+#: ui/ModifierKeys.qml:30
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
 msgstr "დაბლოკვა"
 
-#: ui/ModifierKeys.qml:42
+#: ui/ModifierKeys.qml:44
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr "გამორთვა, როცა დაწოლილია ორ ღილაკზე"
 
-#: ui/ModifierKeys.qml:54
+#: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
 msgstr "სისტემური ზარის დარეკვა მოდიფიკატორი ღილაკების გამოყენებისას"
 
-#: ui/ModifierKeys.qml:71
+#: ui/ModifierKeys.qml:74
 #, kde-format
 msgid "Feedback:"
 msgstr "უკუკავშირი:"
 
-#: ui/ModifierKeys.qml:72
+#: ui/ModifierKeys.qml:76
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
 msgstr "სისტემური ზარის დარეკვა ღილაკების ბლოკირების გადართვისას"
 
-#: ui/ModifierKeys.qml:83
+#: ui/ModifierKeys.qml:87
 #, kde-format
 msgid "Show notification when modifier or locking keys are used"
 msgstr "მოდიფიკატორი ან ჩამკეტი ღილაკების გამოყენებისას შეტყობინების ჩვენება"
 
-#: ui/ModifierKeys.qml:95
+#: ui/ModifierKeys.qml:99
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "შეტყობინებების მორგება…"
@@ -588,6 +607,38 @@ msgstr ""
 "როგორც ჩანს, Orca - ეკრანი წამკითხველი დაყენებული არაა. სანამ ცდით, ეს "
 "ფუნქცია გამოიყენოთ, დააყენეთ ის და ან გადით და თავიდან შემოდით, ან "
 "გადატვირთეთ კომპიუტერი"
+
+#: ui/ShakeCursor.qml:15
+#, kde-format
+msgctxt "@label"
+msgid "Shake cursor to find it:"
+msgstr ""
+
+#: ui/ShakeCursor.qml:16
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option check, Enable shake cursor effect"
+msgid "Enable"
+msgstr "ჩართვა"
+
+#: ui/ShakeCursor.qml:28
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgctxt "@label Cursor magnification level"
+msgid "Magnification:"
+msgstr "გაფრთხილების ჩვენება"
+
+#: ui/ShakeCursor.qml:55
+#, kde-format
+msgctxt "@label Normal cursor size"
+msgid "Normal"
+msgstr ""
+
+#: ui/ShakeCursor.qml:62
+#, kde-format
+msgctxt "@label Large cursor size"
+msgid "Large"
+msgstr ""
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "აჩქარების პროფილი:"

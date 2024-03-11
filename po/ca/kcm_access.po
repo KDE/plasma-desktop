@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-03-11 00:39+0000\n"
 "PO-Revision-Date: 2023-09-24 17:13+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -24,67 +24,67 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: kcmaccess.cpp:112
+#: kcmaccess.cpp:115
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGr"
 
-#: kcmaccess.cpp:114
+#: kcmaccess.cpp:117
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:119
 #, kde-format
 msgid "Super"
 msgstr "Súper"
 
-#: kcmaccess.cpp:126
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Premeu %1 mentre Bloq Núm, Bloq Maj i Bloq Despl estan actives"
 
-#: kcmaccess.cpp:127
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Premeu %1 mentre Bloq Maj i Bloq Despl estan actives"
 
-#: kcmaccess.cpp:128
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Premeu %1 mentre Bloq Núm i Bloq Despl estan actives"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Premeu %1 mentre Bloq Despl està activa"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Premeu %1 mentre Bloq Núm i Bloq Maj estan actives"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Premeu %1 mentre Bloq Maj està activa"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Premeu %1 mentre Bloq Núm està activa"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1"
 msgstr "Premeu %1"
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:183
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "No s'han pogut definir els paràmetres de l'Orca: «%1» ha fallat"
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:190
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Error: No s'ha pogut llançar «orca --setup»"
@@ -294,6 +294,19 @@ msgstr "Confirma l'accés al teclat"
 msgid "Enable Screen Reader"
 msgstr "Activa el lector de pantalla"
 
+#. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
+#: kcmaccessibilityshakecursor.kcfg:9
+#, kde-format
+msgid "Whether Shake Cursor is enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
+#: kcmaccessibilityshakecursor.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgid "Magnification"
+msgstr "Mostra una notificació"
+
 #: ui/Bell.qml:19
 #, kde-format
 msgid "Please choose an audio file"
@@ -440,80 +453,86 @@ msgstr "Retard:"
 msgid "Ring system bell when rejected"
 msgstr "Fes sonar el timbre quan es rebutgi"
 
-#: ui/main.qml:24
+#: ui/main.qml:27
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Timbre"
 
-#: ui/main.qml:29
+#: ui/main.qml:32
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Tecles modificadores"
 
-#: ui/main.qml:34
+#: ui/main.qml:37
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Filtres de teclat"
 
-#: ui/main.qml:39
+#: ui/main.qml:42
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Navegació amb el ratolí"
 
-#: ui/main.qml:44
+#: ui/main.qml:47
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "Lector de pantalla"
+
+#: ui/main.qml:52
+#, kde-format
+msgctxt "Shake cursor to find it"
+msgid "Shake Cursor"
+msgstr ""
 
 #: ui/ModifierKeys.qml:16
 #, kde-format
 msgid "Sticky keys:"
 msgstr "Tecles apegaloses:"
 
-#: ui/ModifierKeys.qml:17
+#: ui/ModifierKeys.qml:18
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
 msgstr "Activa"
 
-#: ui/ModifierKeys.qml:28
+#: ui/ModifierKeys.qml:30
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
 msgstr "Bloqueja"
 
-#: ui/ModifierKeys.qml:42
+#: ui/ModifierKeys.qml:44
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr "Desactiva quan es mantinguin premudes dues tecles"
 
-#: ui/ModifierKeys.qml:54
+#: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
 msgstr "Fes sonar el timbre del sistema quan s'usin les tecles modificadores"
 
-#: ui/ModifierKeys.qml:71
+#: ui/ModifierKeys.qml:74
 #, kde-format
 msgid "Feedback:"
 msgstr "Retroalimentació:"
 
-#: ui/ModifierKeys.qml:72
+#: ui/ModifierKeys.qml:76
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
 msgstr "Fes sonar el timbre del sistema quan es commuti el bloqueig de tecles"
 
-#: ui/ModifierKeys.qml:83
+#: ui/ModifierKeys.qml:87
 #, kde-format
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "Mostra una notificació quan s'usi un modificador o les tecles de bloqueig"
 
-#: ui/ModifierKeys.qml:95
+#: ui/ModifierKeys.qml:99
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "Configura les notificacions…"
@@ -596,3 +615,35 @@ msgstr ""
 "Sembla que el lector de pantalla Orca no està instal·lat. Instal·leu-lo "
 "abans d'intentar usar aquesta funcionalitat, i després sortiu de la sessió o "
 "reinicieu"
+
+#: ui/ShakeCursor.qml:15
+#, kde-format
+msgctxt "@label"
+msgid "Shake cursor to find it:"
+msgstr ""
+
+#: ui/ShakeCursor.qml:16
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option check, Enable shake cursor effect"
+msgid "Enable"
+msgstr "Activa"
+
+#: ui/ShakeCursor.qml:28
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgctxt "@label Cursor magnification level"
+msgid "Magnification:"
+msgstr "Mostra una notificació"
+
+#: ui/ShakeCursor.qml:55
+#, kde-format
+msgctxt "@label Normal cursor size"
+msgid "Normal"
+msgstr ""
+
+#: ui/ShakeCursor.qml:62
+#, kde-format
+msgctxt "@label Large cursor size"
+msgid "Large"
+msgstr ""

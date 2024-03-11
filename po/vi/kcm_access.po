@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-03-11 00:39+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -19,67 +19,67 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#: kcmaccess.cpp:112
+#: kcmaccess.cpp:115
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:114
+#: kcmaccess.cpp:117
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:119
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:126
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Nhấn %1 khi NumLock, CapsLock và ScrollLock đang bật"
 
-#: kcmaccess.cpp:127
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Nhấn %1 khi CapsLock và ScrollLock đang bật"
 
-#: kcmaccess.cpp:128
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Nhấn %1 khi NumLock và ScrollLock đang bật"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Nhấn %1 khi ScrollLock đang bật"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Nhấn %1 khi NumLock và CapsLock đang bật"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Nhấn %1 khi CapsLock đang bật"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Nhấn %1 khi NumLock đang bật"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1"
 msgstr "Nhấn %1"
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:183
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Không đặt được gsettings cho Orca: \"%1\" thất bại"
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:190
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Lỗi: Không khởi chạy được \"orca --setup\""
@@ -289,6 +289,19 @@ msgstr "Xác nhận truy cập bàn phím"
 msgid "Enable Screen Reader"
 msgstr "Bật trình đọc màn hình"
 
+#. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
+#: kcmaccessibilityshakecursor.kcfg:9
+#, kde-format
+msgid "Whether Shake Cursor is enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
+#: kcmaccessibilityshakecursor.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgid "Magnification"
+msgstr "Hiện một thông báo"
+
 #: ui/Bell.qml:19
 #, kde-format
 msgid "Please choose an audio file"
@@ -437,79 +450,85 @@ msgstr "Độ trễ:"
 msgid "Ring system bell when rejected"
 msgstr "Rung chuông hệ thống khi bị từ chối"
 
-#: ui/main.qml:24
+#: ui/main.qml:27
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "Chuông"
 
-#: ui/main.qml:29
+#: ui/main.qml:32
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Phím bổ trợ"
 
-#: ui/main.qml:34
+#: ui/main.qml:37
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Bộ lọc bàn phím"
 
-#: ui/main.qml:39
+#: ui/main.qml:42
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Điều hướng chuột"
 
-#: ui/main.qml:44
+#: ui/main.qml:47
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "Trình đọc màn hình"
+
+#: ui/main.qml:52
+#, kde-format
+msgctxt "Shake cursor to find it"
+msgid "Shake Cursor"
+msgstr ""
 
 #: ui/ModifierKeys.qml:16
 #, kde-format
 msgid "Sticky keys:"
 msgstr "Phím dính:"
 
-#: ui/ModifierKeys.qml:17
+#: ui/ModifierKeys.qml:18
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
 msgstr "Bật"
 
-#: ui/ModifierKeys.qml:28
+#: ui/ModifierKeys.qml:30
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
 msgstr "Khoá"
 
-#: ui/ModifierKeys.qml:42
+#: ui/ModifierKeys.qml:44
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr "Vô hiệu hoá khi có hai phím được giữ"
 
-#: ui/ModifierKeys.qml:54
+#: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
 msgstr "Rung chuông hệ thống khi phím bổ trợ được dùng"
 
-#: ui/ModifierKeys.qml:71
+#: ui/ModifierKeys.qml:74
 #, kde-format
 msgid "Feedback:"
 msgstr "Phản hồi:"
 
-#: ui/ModifierKeys.qml:72
+#: ui/ModifierKeys.qml:76
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
 msgstr "Rung chuông hệ thống khi phím khoá được bật/tắt"
 
-#: ui/ModifierKeys.qml:83
+#: ui/ModifierKeys.qml:87
 #, kde-format
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Hiện thông báo khi phím bổ trợ hoặc phím khoá được dùng"
 
-#: ui/ModifierKeys.qml:95
+#: ui/ModifierKeys.qml:99
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "Cấu hình thông báo…"
@@ -592,6 +611,38 @@ msgid ""
 msgstr ""
 "Có vẻ là trình đọc màn hình Orca chưa được cài đặt. Vui lòng cài đặt nó "
 "trước khi thử dùng tính năng này, rồi đăng xuất hoặc khởi động lại"
+
+#: ui/ShakeCursor.qml:15
+#, kde-format
+msgctxt "@label"
+msgid "Shake cursor to find it:"
+msgstr ""
+
+#: ui/ShakeCursor.qml:16
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option check, Enable shake cursor effect"
+msgid "Enable"
+msgstr "Bật"
+
+#: ui/ShakeCursor.qml:28
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgctxt "@label Cursor magnification level"
+msgid "Magnification:"
+msgstr "Hiện một thông báo"
+
+#: ui/ShakeCursor.qml:55
+#, kde-format
+msgctxt "@label Normal cursor size"
+msgid "Normal"
+msgstr ""
+
+#: ui/ShakeCursor.qml:62
+#, kde-format
+msgctxt "@label Large cursor size"
+msgid "Large"
+msgstr ""
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Hồ sơ gia tốc:"

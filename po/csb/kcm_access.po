@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-03-11 00:39+0000\n"
 "PO-Revision-Date: 2009-01-08 18:50+0100\n"
 "Last-Translator: Mark Kwidzińsczi <mark@linuxcsb.org>\n"
 "Language-Team: Kashubian <i18n-csb@linuxcsb.org>\n"
@@ -18,67 +18,67 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
-#: kcmaccess.cpp:112
+#: kcmaccess.cpp:115
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:114
+#: kcmaccess.cpp:117
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:119
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:126
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Wcësni %1, ga włączoné są NumLock, CapsLock ë ScrollLock"
 
-#: kcmaccess.cpp:127
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Wcësni %1, ga włączoné są CapsLock ë ScrollLock"
 
-#: kcmaccess.cpp:128
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Wcësni %1, ga włączoné są NumLock ë ScrollLock"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Wcësni %1, ga włączony je ScrollLock"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Wcësni %1, ga włączoné są NumLock ë CapsLock"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Wcësni %1, ga włączony je CapsLock"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Wcësni %1, ga włączony je NumLock"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1"
 msgstr "Wcësni %1"
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:183
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr ""
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:190
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr ""
@@ -295,6 +295,19 @@ msgstr ""
 msgid "Enable Screen Reader"
 msgstr ""
 
+#. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
+#: kcmaccessibilityshakecursor.kcfg:9
+#, kde-format
+msgid "Whether Shake Cursor is enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
+#: kcmaccessibilityshakecursor.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Notification"
+msgid "Magnification"
+msgstr "Pòwiadomienié"
+
 #: ui/Bell.qml:19
 #, kde-format
 msgid "Please choose an audio file"
@@ -452,37 +465,43 @@ msgstr ""
 msgid "Ring system bell when rejected"
 msgstr "&Brëkùjë systemòwegò brzãczka przë kòżdim òdrzuceniô klawiszë"
 
-#: ui/main.qml:24
+#: ui/main.qml:27
 #, fuzzy, kde-format
 #| msgid "&Bell"
 msgctxt "System Bell"
 msgid "Bell"
 msgstr "&Zwónk"
 
-#: ui/main.qml:29
+#: ui/main.qml:32
 #, fuzzy, kde-format
 #| msgid "&Modifier Keys"
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Klawisze &zjinaczi"
 
-#: ui/main.qml:34
+#: ui/main.qml:37
 #, fuzzy, kde-format
 #| msgid "&Keyboard Filters"
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Filtrë &klawiaturë"
 
-#: ui/main.qml:39
+#: ui/main.qml:42
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr ""
 
-#: ui/main.qml:44
+#: ui/main.qml:47
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
+msgstr ""
+
+#: ui/main.qml:52
+#, kde-format
+msgctxt "Shake cursor to find it"
+msgid "Shake Cursor"
 msgstr ""
 
 #: ui/ModifierKeys.qml:16
@@ -491,41 +510,41 @@ msgstr ""
 msgid "Sticky keys:"
 msgstr "Klawisza &przëlepieniô"
 
-#: ui/ModifierKeys.qml:17
+#: ui/ModifierKeys.qml:18
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
 msgstr ""
 
-#: ui/ModifierKeys.qml:28
+#: ui/ModifierKeys.qml:30
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
 msgstr ""
 
-#: ui/ModifierKeys.qml:42
+#: ui/ModifierKeys.qml:44
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr ""
 
-#: ui/ModifierKeys.qml:54
+#: ui/ModifierKeys.qml:57
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is pressed"
 msgid "Ring system bell when modifier keys are used"
 msgstr "&Brëkùjë systemòwegò brzãczka przë kòżdim wcësniãcô klawiszë"
 
-#: ui/ModifierKeys.qml:71
+#: ui/ModifierKeys.qml:74
 #, kde-format
 msgid "Feedback:"
 msgstr ""
 
-#: ui/ModifierKeys.qml:72
+#: ui/ModifierKeys.qml:76
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is accepted"
 msgid "Ring system bell when locking keys are toggled"
 msgstr "&Brëkùjë systemòwegò brzãczka przë kòżdi akceptacëji klawiszë"
 
-#: ui/ModifierKeys.qml:83
+#: ui/ModifierKeys.qml:87
 #, fuzzy, kde-format
 #| msgid ""
 #| "Use KDE's system notification mechanism whenever a modifier or locking "
@@ -535,7 +554,7 @@ msgstr ""
 "Brëkùjë systemòwegò pòwiadomienia KDE, czéj klawisza zjinaczi abò blokadë "
 "zmieniô stón"
 
-#: ui/ModifierKeys.qml:95
+#: ui/ModifierKeys.qml:99
 #, fuzzy, kde-format
 #| msgid "Configure &Notifications..."
 msgid "Configure Notifications…"
@@ -618,6 +637,37 @@ msgstr ""
 msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
+msgstr ""
+
+#: ui/ShakeCursor.qml:15
+#, kde-format
+msgctxt "@label"
+msgid "Shake cursor to find it:"
+msgstr ""
+
+#: ui/ShakeCursor.qml:16
+#, kde-format
+msgctxt "@option check, Enable shake cursor effect"
+msgid "Enable"
+msgstr ""
+
+#: ui/ShakeCursor.qml:28
+#, fuzzy, kde-format
+#| msgid "Notification"
+msgctxt "@label Cursor magnification level"
+msgid "Magnification:"
+msgstr "Pòwiadomienié"
+
+#: ui/ShakeCursor.qml:55
+#, kde-format
+msgctxt "@label Normal cursor size"
+msgid "Normal"
+msgstr ""
+
+#: ui/ShakeCursor.qml:62
+#, kde-format
+msgctxt "@label Large cursor size"
+msgid "Large"
 msgstr ""
 
 #, fuzzy
