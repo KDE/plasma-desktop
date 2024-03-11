@@ -38,6 +38,8 @@ QQC2.ItemDelegate {
         Kirigami.Theme.textColor: root.selected ? root.Kirigami.Theme.highlightedTextColor : undefined
         Kirigami.Theme.inherit: !root.selected
 
+        spacing: Kirigami.Units.smallSpacing
+
         Item {
             Layout.alignment: Qt.AlignTop
             Layout.preferredHeight: topRow.implicitHeight
@@ -45,6 +47,7 @@ QQC2.ItemDelegate {
             RowLayout {
                 id: topRow
                 anchors.fill: parent
+                spacing: Kirigami.Units.smallSpacing
                 Kirigami.Heading {
                     id: displayLabel
                     text: i18nc("%1 is the name action that is triggered by the key sequences following after :", "%1:", model.display)
@@ -110,6 +113,7 @@ QQC2.ItemDelegate {
                 ColumnLayout {
                     Layout.alignment: Qt.AlignTop
                     Layout.preferredWidth: parent.width * 0.5
+                    spacing: Kirigami.Units.smallSpacing
                     Kirigami.Heading {
                         level: 4
                         text: model.defaultShortcuts &&  model.defaultShortcuts.length !== 0 ?
@@ -143,6 +147,7 @@ QQC2.ItemDelegate {
 
                 ColumnLayout {
                     Layout.alignment: Qt.AlignTop | Qt.AlignRight
+                    spacing: Kirigami.Units.smallSpacing
                     Kirigami.Heading {
                         level: 4
                         Layout.alignment: Qt.AlignRight
@@ -155,6 +160,7 @@ QQC2.ItemDelegate {
                     Repeater {
                         model: customShortcuts
                         RowLayout {
+                            spacing: Kirigami.Units.smallSpacing
                             Layout.alignment: Qt.AlignRight
                             KeySequenceItem {
                                 Layout.alignment: Qt.AlignRight
@@ -203,6 +209,7 @@ QQC2.ItemDelegate {
                         RowLayout {
                             signal finished
                             Layout.alignment: Qt.AlignRight
+                            spacing: Kirigami.Units.smallSpacing
                             KeySequenceItem {
                                 showClearButton: false
                                 modifierOnlyAllowed: true
