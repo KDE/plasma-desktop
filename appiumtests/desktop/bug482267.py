@@ -11,12 +11,16 @@ from __future__ import annotations
 import os
 import subprocess
 import sys
+import tempfile
 import threading
 import time
 import unittest
 from typing import Final
 
+import numpy as np
+
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+import cv2 as cv
 from desktoptest import name_has_owner, start_plasmashell
 from gi.repository import Gio, GLib
 
@@ -118,6 +122,8 @@ class Bug482267Test(unittest.TestCase):
     Startup slow with Picture of the day
     """
 
+    temp_home: tempfile.TemporaryDirectory
+
     kactivitymanagerd: subprocess.Popen | None = None
     kded: subprocess.Popen | None = None
     plasmashell: subprocess.Popen | None = None
@@ -126,6 +132,19 @@ class Bug482267Test(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
+        # create a throw-away XDG home, so the test starts with a clean slate
+        # with every run, and doesn't mess with your local installation
+        cls.temp_home = tempfile.TemporaryDirectory()
+        cls.addClassCleanup(cls.temp_home.cleanup)
+        os.environ["XDG_CACHE_HOME"] = os.path.join(cls.temp_home.name, ".cache")
+        os.makedirs(os.environ["XDG_CACHE_HOME"])
+        os.environ["XDG_CONFIG_HOME"] = os.path.join(cls.temp_home.name, ".config")
+        os.makedirs(os.environ["XDG_CONFIG_HOME"])
+        os.environ["XDG_DATA_HOME"] = os.path.join(cls.temp_home.name, ".local", "share")
+        os.makedirs(os.environ["XDG_DATA_HOME"])
+        os.environ["XDG_STATE_HOME"] = os.path.join(cls.temp_home.name, ".local", "state")
+        os.makedirs(os.environ["XDG_STATE_HOME"])
+
         cls.kactivitymanagerd, cls.kded, cls.plasmashell = start_plasmashell()
         cls.session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
 
@@ -160,12 +179,29 @@ class Bug482267Test(unittest.TestCase):
         assert self.session_bus is not None and self.plasmashell is not None
         message: Gio.DBusMessage = Gio.DBusMessage.new_method_call(PLASMASHELL_SERVICE_NAME, "/PlasmaShell", "org.kde.PlasmaShell", "setWallpaper")
         params: dict[str, GLib.Variant] = {
-            "Color": GLib.Variant("u", 4294927203),  # RGBA value
+            "Color": GLib.Variant("(u)", [4294901760]),  # RGBA value
         }
         # wallpaperPlugin(s), parameters(a{sv}), screenNum(u)
         message.set_body(GLib.Variant("(sa{sv}u)", ["org.kde.color", params, 0]))
         reply, _ = self.session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 10000)
         self.assertEqual(reply.get_message_type(), Gio.DBusMessageType.METHOD_RETURN)
+
+        time.sleep(3)  # Desktop animation
+
+        # Match the red area in the screenshot
+        with tempfile.TemporaryDirectory() as temp_dir:
+            saved_image_path: str = os.path.join(temp_dir, "desktop_screenshot.png")
+            subprocess.check_call(["import", "-window", "root", saved_image_path])
+            cv_image1 = cv.imread(saved_image_path, cv.IMREAD_COLOR)
+
+            # Create a red square
+            cv_image2 = np.zeros((100, 100, 3), dtype=np.uint8)
+            cv_image2[:, :] = [0, 0, 255]
+
+            matched = cv.matchTemplate(cv_image1, cv_image2, cv.TM_SQDIFF_NORMED)
+            min_val, max_val, min_loc, max_loc = cv.minMaxLoc(matched)
+            self.assertAlmostEqual(min_val, 0.0)
+
         # Prepare to restart plasmashell
         subprocess.check_output([f"kquitapp{KDE_VERSION}", "plasmashell"], stderr=sys.stderr)
         self.assertEqual(self.plasmashell.wait(5), 0)
