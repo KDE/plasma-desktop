@@ -192,7 +192,7 @@ Kicker.DashboardWindow {
             id: containmentInterface
         }
 
-        TextEdit {
+        TextInput {
             id: searchField
 
             width: 0
