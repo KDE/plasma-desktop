@@ -212,6 +212,12 @@ Kicker.DashboardWindow {
 
             onSelectionStartChanged: Qt.callLater(searchHeading.updateSelection)
             onSelectionEndChanged: Qt.callLater(searchHeading.updateSelection)
+
+            Keys.onPressed: event => {
+                if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
+                    event.accepted = true;
+                }
+            }
         }
 
         TextEdit {
