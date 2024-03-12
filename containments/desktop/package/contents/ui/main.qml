@@ -341,6 +341,8 @@ ContainmentItem {
                     if (newCont && newCont.plasmoid !== Plasmoid) {
                         const newPos = newCont.mapFromApplet(Plasmoid, pos.x, pos.y);
 
+                        // First go out of applet edit mode, get rid of the config overlay, release mouse grabs in preparation of applet reparenting
+                        cancelEdit();
                         newCont.Plasmoid.addApplet(appletContainer.applet.plasmoid, Qt.rect(newPos.x, newPos.y, appletContainer.applet.width, appletContainer.applet.height));
                         appletsLayout.hidePlaceHolder();
                     }
