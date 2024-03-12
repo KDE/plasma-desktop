@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-01 00:39+0000\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-11 18:46+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -278,7 +278,7 @@ msgstr "インポート"
 msgid "Editing shortcut: %1"
 msgstr "ショートカットを編集中: %1"
 
-#: ui/ShortcutActionDelegate.qml:50
+#: ui/ShortcutActionDelegate.qml:53
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -286,49 +286,49 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:74
+#: ui/ShortcutActionDelegate.qml:77
 #, kde-format
 msgid "No active shortcuts"
 msgstr "アクティブなショートカットはありません"
 
-#: ui/ShortcutActionDelegate.qml:116
+#: ui/ShortcutActionDelegate.qml:120
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "既定のショートカット"
 
-#: ui/ShortcutActionDelegate.qml:118
+#: ui/ShortcutActionDelegate.qml:122
 #, kde-format
 msgid "No default shortcuts"
 msgstr "既定のショートカットはありません"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "既定のショートカット %1 が有効化されました。"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "既定のショートカット %1 が無効化されました。"
 
-#: ui/ShortcutActionDelegate.qml:149
+#: ui/ShortcutActionDelegate.qml:154
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "カスタムショートカット"
 
-#: ui/ShortcutActionDelegate.qml:176
+#: ui/ShortcutActionDelegate.qml:183
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "このショートカットを削除"
 
-#: ui/ShortcutActionDelegate.qml:182
+#: ui/ShortcutActionDelegate.qml:189
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "カスタムショートカットを追加"
 
-#: ui/ShortcutActionDelegate.qml:219
+#: ui/ShortcutActionDelegate.qml:227
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "新しいショートカットの設定を中止"

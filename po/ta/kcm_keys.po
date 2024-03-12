@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-01 00:39+0000\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-18 18:15+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -278,7 +278,7 @@ msgstr "இறக்குமதி"
 msgid "Editing shortcut: %1"
 msgstr "சுருக்குவழியை திருத்துதல்: %1"
 
-#: ui/ShortcutActionDelegate.qml:50
+#: ui/ShortcutActionDelegate.qml:53
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -286,12 +286,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:74
+#: ui/ShortcutActionDelegate.qml:77
 #, kde-format
 msgid "No active shortcuts"
 msgstr "சுருக்குவழிகள் செயலில் இல்லை"
 
-#: ui/ShortcutActionDelegate.qml:116
+#: ui/ShortcutActionDelegate.qml:120
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -299,37 +299,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "இயல்பிருப்பு சுருக்குவழி"
 msgstr[1] "இயல்பிருப்பு சுருக்குவழிகள்"
 
-#: ui/ShortcutActionDelegate.qml:118
+#: ui/ShortcutActionDelegate.qml:122
 #, kde-format
 msgid "No default shortcuts"
 msgstr "இயல்பிருப்பு சுருக்குவழிகள் இல்லை"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "இயல்பிருப்பு சுருக்குவழி %1 செயலில் உள்ளது."
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "இயல்பிருப்பு சுருக்குவழி %1 முடங்கியுள்ளது."
 
-#: ui/ShortcutActionDelegate.qml:149
+#: ui/ShortcutActionDelegate.qml:154
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "தனிப்பட்ட சுருக்குவழிகள்"
 
-#: ui/ShortcutActionDelegate.qml:176
+#: ui/ShortcutActionDelegate.qml:183
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "இந்த சுருக்குவழியை நீக்கு"
 
-#: ui/ShortcutActionDelegate.qml:182
+#: ui/ShortcutActionDelegate.qml:189
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "தனிப்பட்ட சுருக்குவழியை சேர்"
 
-#: ui/ShortcutActionDelegate.qml:219
+#: ui/ShortcutActionDelegate.qml:227
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "புதிய சுருக்குவழியை பதிவு செய்தலை ரத்து செய்"

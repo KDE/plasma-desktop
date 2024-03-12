@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-01 00:39+0000\n"
-"PO-Revision-Date: 2024-01-28 18:00-0600\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
+"PO-Revision-Date: 2024-03-11 07:45-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -102,10 +102,9 @@ msgid "Commands"
 msgstr "ਕਮਾਂਡਾਂ ਚਲਾਓ"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "System Services"
-msgstr "ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ"
+msgstr "ਸਿਸਟਮ ਸੇਵਾਵਾਂ"
 
 #: ui/main.qml:27
 #, kde-format
@@ -275,7 +274,7 @@ msgstr "ਇੰਪੋਰਟ ਕਰੋ"
 msgid "Editing shortcut: %1"
 msgstr "ਸ਼ਾਰਟਕੱਟ ਨੂੰ ਸੋਧਿਆ ਜਾ ਰਿਹਾ ਹੈ: %1"
 
-#: ui/ShortcutActionDelegate.qml:50
+#: ui/ShortcutActionDelegate.qml:53
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -283,12 +282,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:74
+#: ui/ShortcutActionDelegate.qml:77
 #, kde-format
 msgid "No active shortcuts"
 msgstr "ਕੋਈ ਸਰਗਰਮ ਸ਼ਾਰਟਕੱਟ ਨਹੀਂ ਹੈ"
 
-#: ui/ShortcutActionDelegate.qml:116
+#: ui/ShortcutActionDelegate.qml:120
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -296,37 +295,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ"
 msgstr[1] "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ"
 
-#: ui/ShortcutActionDelegate.qml:118
+#: ui/ShortcutActionDelegate.qml:122
 #, kde-format
 msgid "No default shortcuts"
 msgstr "ਕੋਈ ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ ਨਹੀਂ ਹੈ"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ %1 ਸਮਰੱਥ ਹੈ।"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ %1 ਅਸਮਰੱਥ ਹੈ।"
 
-#: ui/ShortcutActionDelegate.qml:149
+#: ui/ShortcutActionDelegate.qml:154
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "ਪਸੰਦੀਦਾ ਸ਼ਾਰਟਕੱਟ"
 
-#: ui/ShortcutActionDelegate.qml:176
+#: ui/ShortcutActionDelegate.qml:183
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "ਇਹ ਸ਼ਾਰਟਕੱਟ ਹਟਾਓ"
 
-#: ui/ShortcutActionDelegate.qml:182
+#: ui/ShortcutActionDelegate.qml:189
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "ਕਸਟਮ ਸ਼ਾਰਟਕੱਟ ਨੂੰ ਜੋੜੋ"
 
-#: ui/ShortcutActionDelegate.qml:219
+#: ui/ShortcutActionDelegate.qml:227
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr ""

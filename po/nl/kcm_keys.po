@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-01 00:39+0000\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-30 13:31+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -280,7 +280,7 @@ msgstr "Importeren"
 msgid "Editing shortcut: %1"
 msgstr "Sneltoets wordt bewerkt: %1"
 
-#: ui/ShortcutActionDelegate.qml:50
+#: ui/ShortcutActionDelegate.qml:53
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -288,12 +288,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:74
+#: ui/ShortcutActionDelegate.qml:77
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Geen actieve sneltoetsen"
 
-#: ui/ShortcutActionDelegate.qml:116
+#: ui/ShortcutActionDelegate.qml:120
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -301,37 +301,37 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Standaard sneltoets"
 msgstr[1] "Standaard sneltoetsen"
 
-#: ui/ShortcutActionDelegate.qml:118
+#: ui/ShortcutActionDelegate.qml:122
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Geen standaard sneltoetsen"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Standaard sneltoets %1 is ingeschakeld"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Standaard sneltoets %1 is uitgeschakeld"
 
-#: ui/ShortcutActionDelegate.qml:149
+#: ui/ShortcutActionDelegate.qml:154
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Aangepaste sneltoetsen"
 
-#: ui/ShortcutActionDelegate.qml:176
+#: ui/ShortcutActionDelegate.qml:183
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Deze sneltoets verwijderen"
 
-#: ui/ShortcutActionDelegate.qml:182
+#: ui/ShortcutActionDelegate.qml:189
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Aangepaste sneltoets toevoegen"
 
-#: ui/ShortcutActionDelegate.qml:219
+#: ui/ShortcutActionDelegate.qml:227
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Vangen van nieuwe sneltoets annuleren"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-01 00:39+0000\n"
+"POT-Creation-Date: 2024-03-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-04 19:26+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -285,7 +285,7 @@ msgstr "Импорт"
 msgid "Editing shortcut: %1"
 msgstr "Редактирование комбинации: %1"
 
-#: ui/ShortcutActionDelegate.qml:50
+#: ui/ShortcutActionDelegate.qml:53
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -293,12 +293,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:74
+#: ui/ShortcutActionDelegate.qml:77
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Не назначено"
 
-#: ui/ShortcutActionDelegate.qml:116
+#: ui/ShortcutActionDelegate.qml:120
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -308,37 +308,37 @@ msgstr[1] "Комбинации по умолчанию"
 msgstr[2] "Комбинации по умолчанию"
 msgstr[3] "Комбинация по умолчанию"
 
-#: ui/ShortcutActionDelegate.qml:118
+#: ui/ShortcutActionDelegate.qml:122
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Отсутствуют комбинации по умолчанию"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Комбинация клавиш по умолчанию %1 включена."
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Комбинация клавиш по %1 отключена."
 
-#: ui/ShortcutActionDelegate.qml:149
+#: ui/ShortcutActionDelegate.qml:154
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Пользовательские комбинации"
 
-#: ui/ShortcutActionDelegate.qml:176
+#: ui/ShortcutActionDelegate.qml:183
 #, kde-format
 msgid "Delete this shortcut"
 msgstr "Удалить эту комбинацию клавиш"
 
-#: ui/ShortcutActionDelegate.qml:182
+#: ui/ShortcutActionDelegate.qml:189
 #, kde-format
 msgid "Add custom shortcut"
 msgstr "Назначить свою комбинацию"
 
-#: ui/ShortcutActionDelegate.qml:219
+#: ui/ShortcutActionDelegate.qml:227
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Отменить назначение комбинации клавиш"
