@@ -90,6 +90,50 @@ KCM.SimpleKCM {
                 }
             }
 
+            ButtonGroup {
+                buttons: [leaveEnd, leaveRestart, leaveOff]
+            }
+            RowLayout {
+                Kirigami.FormData.label: i18nc("What to do when generic \"Leave\" is clicked instead of shutdown/restart/logout", "When no option is selected:")
+
+                RadioButton {
+                    id: leaveEnd
+
+                    text: i18nc("@option:radio", "Log Out")
+                    checked: Settings.shutdownType === 0
+                    enabled: logoutScreenCheckbox.checked
+                    onToggled: Settings.shutdownType = 0
+                    KCM.SettingStateBinding {
+                        configObject: Settings
+                        settingName: "shutdownType"
+                    }
+                }
+
+                KCM.ContextualHelpButton {
+                    toolTipText: xi18nc("@info", "For example, when clicking buttons or menu items labeled <interface>Leave…</interface> or pressing the power button.")
+                }
+            }
+            RadioButton {
+                id: leaveRestart
+                text: i18nc("@option:radio", "Restart")
+                checked: Settings.shutdownType === 1
+                onToggled: Settings.shutdownType = 1
+                KCM.SettingStateBinding {
+                    configObject: Settings
+                    settingName: "shutdownType"
+                }
+            }
+            RadioButton {
+                id: leaveOff
+                text: i18nc("@option:radio", "Shut Down")
+                checked: Settings.shutdownType === 2
+                onToggled: Settings.shutdownType = 2
+                KCM.SettingStateBinding {
+                    configObject: Settings
+                    settingName: "shutdownType"
+                }
+            }
+
             Item {
                 Kirigami.FormData.isSection: true
                 Kirigami.FormData.label: i18nc("@title:group", "Session Restore")
