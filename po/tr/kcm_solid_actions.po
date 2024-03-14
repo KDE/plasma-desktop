@@ -4,13 +4,13 @@
 # Serdar Soytetir <tulliana@gmail.com>, 2009, 2010, 2012.
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Volkan Gezer <volkangezer@gmail.com>, 2014, 2017, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2023-11-11 23:31+0300\n"
+"PO-Revision-Date: 2024-03-13 20:35+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -33,7 +33,7 @@ msgstr "tulliana@gmail.com"
 #: ActionEditor.cpp:60
 #, kde-format
 msgid "Editing Action '%1'"
-msgstr "'%1' Eylemi Düzenleniyor"
+msgstr "‘%1’ Eylemi Düzenleniyor"
 
 #: ActionEditor.cpp:162
 #, kde-format
@@ -153,9 +153,9 @@ msgstr ""
 "Eylemi tetikleyecek komut\n"
 "Aşağıdakilerden birini veya hepsini kapsayabilir:\n"
 "\n"
-"%f: Aygıtın bağlanma noktası - Yalnızca depolama aygıtları\n"
-"%d: Aygıt düğümü konumu - Yalnızca blok aygıtlar\n"
-"%i: Aygıt tanımlayıcı"
+"%f: Aygıtın bağlanma noktası — Yalnızca depolama aygıtları\n"
+"%d: Aygıt düğümü konumu — Yalnızca blok aygıtlar\n"
+"%i: Aygıt tanımlayıcısı"
 
 #. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
 #: ActionEditor.ui:300
@@ -186,7 +186,7 @@ msgid ""
 "Tool to automatically generate Desktop Files from Solid DeviceInterface "
 "classes for translation"
 msgstr ""
-"Çeviri için Solid'in Aygıt Arayüzü sınıflarından kendiliğinden desktop "
+"Çeviri için Solid’in Aygıt Arayüzü sınıflarından kendiliğinden desktop "
 "dosyası oluşturmak için bir araç"
 
 #: DesktopFileGenerator.cpp:29
