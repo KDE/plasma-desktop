@@ -138,15 +138,12 @@ Item {
     }
 
     // Floatingness is a value in [0, 1] that's multiplied to the floating margin; 0: not floating, 1: floating, between 0 and 1: animation between the two states
-    property double floatingness
+    readonly property int floatingnessAnimationDuration: Kirigami.Units.longDuration
+    property double floatingnessTarget: 0.0 // The animation is handled in panelview.cpp for efficiency
+    property double floatingness: 0.0
+
     // PanelOpacity is a value in [0, 1] that's used as the opacity of the opaque elements over the transparent ones; values between 0 and 1 are used for animations
     property double panelOpacity
-    Behavior on floatingness {
-        NumberAnimation {
-            duration: Kirigami.Units.longDuration
-            easing.type: Easing.OutCubic
-        }
-    }
     Behavior on panelOpacity {
         NumberAnimation {
             duration: Kirigami.Units.longDuration
@@ -158,9 +155,8 @@ Item {
     property bool hasShadows: floatingness < 0.5
     property var panelMask: floatingness === 0 ? (panelOpacity === 1 ? opaqueItem.mask : translucentItem.mask) : (panelOpacity === 1 ? floatingOpaqueItem.mask : floatingTranslucentItem.mask)
 
-    // These two values are read from panelview.cpp and are used as an offset for the mask
-    property int maskOffsetX: floatingTranslucentItem.x
-    property int maskOffsetY: floatingTranslucentItem.y
+    // The point is read from panelview.cpp and is used as an offset for the mask
+    readonly property point floatingTranslucentItemOffset: Qt.point(floatingTranslucentItem.x, floatingTranslucentItem.y)
 
     KSvg.FrameSvgItem {
         id: translucentItem
@@ -226,18 +222,18 @@ Item {
         if ((!floating || screenCovered) && (isOpaque || (screenCovered && isAdaptive))) {
             panelOpacity = 1
             opaqueApplets = true
-            floatingness = 0
+            floatingnessTarget = 0
         } else if ((!floating || screenCovered) && (isTransparent || (!screenCovered && isAdaptive))) {
             panelOpacity = 0
-            floatingness = 0
+            floatingnessTarget = 0
         } else if ((floating && !screenCovered) && (isTransparent || isAdaptive)) {
             panelOpacity = 0
-            floatingness = 1
+            floatingnessTarget = 1
             floatingApplets = true
         } else if (floating && !screenCovered && isOpaque) {
             panelOpacity = 1
             opaqueApplets = true
-            floatingness = 1
+            floatingnessTarget = 1
             floatingApplets = true
         }
         if (!KWindowSystem.isPlatformWayland && !KX11Extras.compositingActive) {
