@@ -1,0 +1,376 @@
+# Translation of plasma_lookandfeel_org.kde.lookandfeel.po to Brazilian Portuguese
+# Copyright (C) 2014-2019 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2016, 2019.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2018, 2019, 2020, 2021, 2022.
+# Camila Moura <camila.moura@kde.org>, 2017.
+# Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2024 Igor Moreira Padua <igorpadua@discente.ufg.br>
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-12-08 01:36+0000\n"
+"PO-Revision-Date: 2024-03-15 23:22-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 24.02.0\n"
+
+#: ../sddm-theme/KeyboardButton.qml:19
+#, kde-format
+msgid "Keyboard Layout: %1"
+msgstr "Layout do teclado: %1"
+
+#: ../sddm-theme/Login.qml:85
+#, kde-format
+msgid "Username"
+msgstr "Nome de usuário"
+
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:64
+#, kde-format
+msgid "Password"
+msgstr "Senha"
+
+#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
+#, kde-format
+msgid "Log In"
+msgstr "Iniciar sessão"
+
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:277
+#, kde-format
+msgid "Caps Lock is on"
+msgstr "Caps Lock está ligado"
+
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:357
+#: contents/logout/Logout.qml:167
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Suspender"
+
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:364
+#: contents/logout/Logout.qml:188 contents/logout/Logout.qml:199
+#, kde-format
+msgid "Restart"
+msgstr "Reiniciar"
+
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:371
+#: contents/logout/Logout.qml:212
+#, kde-format
+msgid "Shut Down"
+msgstr "Desligar"
+
+#: ../sddm-theme/Main.qml:234
+#, kde-format
+msgctxt "For switching to a username and password prompt"
+msgid "Other…"
+msgstr "Outro..."
+
+#: ../sddm-theme/Main.qml:343
+#, kde-format
+msgid "Type in Username and Password"
+msgstr "Digite o nome de usuário e senha"
+
+#: ../sddm-theme/Main.qml:378
+#, kde-format
+msgid "List Users"
+msgstr "Listar usuários"
+
+#: ../sddm-theme/Main.qml:453 contents/lockscreen/LockScreenUi.qml:364
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Teclado virtual"
+
+#: ../sddm-theme/Main.qml:527
+#, kde-format
+msgid "Login Failed"
+msgstr "Falha na autenticação"
+
+#: ../sddm-theme/SessionButton.qml:18
+#, kde-format
+msgid "Desktop Session: %1"
+msgstr "Sessão da área de trabalho: %1"
+
+#: contents/lockscreen/config.qml:19
+#, kde-format
+msgctxt "@title: group"
+msgid "Clock:"
+msgstr "Relógio:"
+
+#: contents/lockscreen/config.qml:22
+#, kde-format
+msgctxt "@option:check"
+msgid "Keep visible when unlocking prompt disappears"
+msgstr "Manter visível quando a solicitação de desbloqueio desaparece"
+
+#: contents/lockscreen/config.qml:33
+#, kde-format
+msgctxt "@title: group"
+msgid "Media controls:"
+msgstr "Controles de mídia:"
+
+#: contents/lockscreen/config.qml:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Show under unlocking prompt"
+msgstr "Mostrar na solicitação de desbloqueio"
+
+#: contents/lockscreen/LockScreenUi.qml:50
+#, kde-format
+msgid "Unlocking failed"
+msgstr "Falha no desbloqueio"
+
+#: contents/lockscreen/LockScreenUi.qml:291
+#, kde-format
+msgid "Sleep"
+msgstr "Suspender"
+
+#: contents/lockscreen/LockScreenUi.qml:297 contents/logout/Logout.qml:177
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernar"
+
+#: contents/lockscreen/LockScreenUi.qml:303
+#, kde-format
+msgid "Switch User"
+msgstr "Trocar usuário"
+
+#: contents/lockscreen/LockScreenUi.qml:388
+#, kde-format
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Trocar o layout"
+
+#: contents/lockscreen/MainBlock.qml:107
+#: contents/lockscreen/NoPasswordUnlock.qml:17
+#, kde-format
+msgid "Unlock"
+msgstr "Desbloquear"
+
+#: contents/lockscreen/MainBlock.qml:155
+#, kde-format
+msgid "(or scan your fingerprint on the reader)"
+msgstr "(ou escaneie sua impressão digital no leitor)"
+
+#: contents/lockscreen/MainBlock.qml:159
+#, kde-format
+msgid "(or scan your smartcard)"
+msgstr "(ou escaneie seu cartão inteligente)"
+
+#: contents/lockscreen/MediaControls.qml:59
+#, kde-format
+msgid "No title"
+msgstr "Sem título"
+
+#: contents/lockscreen/MediaControls.qml:60
+#, kde-format
+msgid "No media playing"
+msgstr "Nenhuma mídia em reprodução"
+
+#: contents/lockscreen/MediaControls.qml:88
+#, kde-format
+msgid "Previous track"
+msgstr "Faixa anterior"
+
+#: contents/lockscreen/MediaControls.qml:100
+#, kde-format
+msgid "Play or Pause media"
+msgstr "Reproduzir ou pausar mídia"
+
+#: contents/lockscreen/MediaControls.qml:110
+#, kde-format
+msgid "Next track"
+msgstr "Próxima faixa"
+
+#: contents/logout/Logout.qml:142
+#, kde-format
+msgid ""
+"One other user is currently logged in. If the computer is shut down or "
+"restarted, that user may lose work."
+msgid_plural ""
+"%1 other users are currently logged in. If the computer is shut down or "
+"restarted, those users may lose work."
+msgstr[0] ""
+"Um outro usuário está atualmente autenticado. Se o computador for desligado "
+"ou reiniciado, aquele usuário poderá perder seu trabalho."
+msgstr[1] ""
+"%1 outros usuários estão atualmente autenticados. Se o computador for "
+"desligado ou reiniciado, aqueles usuários poderão perder seu trabalho."
+
+#: contents/logout/Logout.qml:156
+#, kde-format
+msgid "When restarted, the computer will enter the firmware setup screen."
+msgstr ""
+"Quando reiniciar, o computador irá entrar na tela de configuração do "
+"firmware."
+
+#: contents/logout/Logout.qml:187
+#, kde-format
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Restart"
+msgstr "Instalar atualizações & reiniciar"
+
+#: contents/logout/Logout.qml:223
+#, kde-format
+msgid "Log Out"
+msgstr "Encerrar sessão"
+
+#: contents/logout/Logout.qml:247
+#, kde-format
+msgid "Installing software updates and restarting in 1 second"
+msgid_plural "Installing software updates and restarting in %1 seconds"
+msgstr[0] "Instalando atualizações de software e reiniciando em 1 segundo"
+msgstr[1] "Instalando atualizações de software e reiniciando em %1 segundos"
+
+#: contents/logout/Logout.qml:248
+#, kde-format
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "Reiniciando em 1 segundo"
+msgstr[1] "Reiniciando em %1 segundos"
+
+#: contents/logout/Logout.qml:250
+#, kde-format
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Desligando em 1 segundo"
+msgstr[1] "Desligando em %1 segundos"
+
+#: contents/logout/Logout.qml:252
+#, kde-format
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "Encerrando sessão em 1 segundo"
+msgstr[1] "Encerrando sessão em %1 segundos"
+
+#: contents/logout/Logout.qml:263
+#, kde-format
+msgid "OK"
+msgstr "OK"
+
+#: contents/logout/Logout.qml:275
+#, kde-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: contents/osd/OsdItem.qml:32
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/splash/Splash.qml:79
+#, kde-format
+msgctxt ""
+"This is the first text the user sees while starting in the splash screen, "
+"should be translated as something short, is a form that can be seen on a "
+"product. Plasma is the project name so shouldn't be translated."
+msgid "Plasma made by KDE"
+msgstr "Plasma feito pelo KDE"
+
+#~ msgid "Switch to This Session"
+#~ msgstr "Trocar para esta sessão"
+
+#~ msgid "Start New Session"
+#~ msgstr "Iniciar nova sessão"
+
+#~ msgid "Back"
+#~ msgstr "Voltar"
+
+#~ msgid "%1%"
+#~ msgstr "%1%"
+
+#~ msgid "Battery at %1%"
+#~ msgstr "Bateria em %1%"
+
+#~ msgctxt "Nobody logged in on that session"
+#~ msgid "Unused"
+#~ msgstr "Não usado"
+
+#~ msgctxt "User logged in on console number"
+#~ msgid "TTY %1"
+#~ msgstr "TTY %1"
+
+#~ msgctxt "User logged in on console (X display number)"
+#~ msgid "on TTY %1 (Display %2)"
+#~ msgstr "em TTY %1 (Monitor %2)"
+
+#~ msgctxt "Username (location)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "Configure"
+#~ msgstr "Configurar"
+
+#~ msgid "Configure KRunner Behavior"
+#~ msgstr "Configurar comportamento do KRunner"
+
+#~ msgid "Configure KRunner…"
+#~ msgstr "Configurar KRunner..."
+
+#~ msgctxt "Textfield placeholder text, query specific KRunner"
+#~ msgid "Search '%1'…"
+#~ msgstr "Pesquisar '%1'..."
+
+#~ msgctxt "Textfield placeholder text"
+#~ msgid "Search…"
+#~ msgstr "Pesquisar..."
+
+#~ msgid "Show Usage Help"
+#~ msgstr "Mostrar ajuda de uso"
+
+#~ msgid "Pin"
+#~ msgstr "PIN"
+
+#~ msgid "Pin Search"
+#~ msgstr "Pesquisar PIN"
+
+#~ msgid "Keep Open"
+#~ msgstr "Manter aberto"
+
+#~ msgid "Recent Queries"
+#~ msgstr "Pesquisas recentes"
+
+#~ msgid "Remove"
+#~ msgstr "Remover"
+
+#~ msgid "in category recent queries"
+#~ msgstr "na categoria pesquisas recentes"
+
+#~ msgctxt "verb, to show something"
+#~ msgid "Show:"
+#~ msgstr "Mostrar:"
+
+#~ msgid "Configure Search Plugins"
+#~ msgstr "Configurar plugins de pesquisa"
+
+#~ msgctxt ""
+#~ "This is the first text the user sees while starting in the splash screen, "
+#~ "should be translated as something short, is a form that can be seen on a "
+#~ "product. Plasma is the project name so shouldn't be translated."
+#~ msgid "Plasma 25th Anniversary Edition by KDE"
+#~ msgstr "Edição de aniversário de 25 anos do KDE"
+
+#~ msgid "Close"
+#~ msgstr "Fechar"
+
+#~ msgctxt "verb, to show something"
+#~ msgid "Show always"
+#~ msgstr "Mostrar sempre"
+
+#~ msgctxt "verb, to show something"
+#~ msgid "Always show"
+#~ msgstr "Mostrar sempre"
+
+

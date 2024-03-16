@@ -4,24 +4,25 @@
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2016, 2019, 2020.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-05 02:20+0000\n"
-"PO-Revision-Date: 2023-11-14 14:07-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2024-03-15 11:41-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
-msgstr "Em uso"
+msgstr "Em uso atualmente"
 
 #: contents/activitymanager/ActivityItem.qml:245
 msgid ""
@@ -270,7 +271,7 @@ msgstr "Adicionar espaçador"
 
 #: contents/configuration/PanelConfiguration.qml:107
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Adicione widget espaçador ao painel"
 
 #: contents/configuration/PanelConfiguration.qml:114
 msgid "Add Widgets…"
@@ -278,7 +279,7 @@ msgstr "Adicionar widgets..."
 
 #: contents/configuration/PanelConfiguration.qml:117
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "Abra o seletor de widgets para arrastar e soltar widgets no painel"
 
 #: contents/configuration/PanelConfiguration.qml:146
 msgid "Position"
@@ -317,8 +318,6 @@ msgid "Center"
 msgstr "Centro"
 
 #: contents/configuration/PanelConfiguration.qml:288
-#, fuzzy
-#| msgid "Height:"
 msgid "Height"
 msgstr "Altura:"
 
@@ -347,8 +346,6 @@ msgid "Visibility"
 msgstr "Visibilidade"
 
 #: contents/configuration/PanelConfiguration.qml:347
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Sempre visível"
 
@@ -358,11 +355,9 @@ msgstr "Ocultar automaticamente"
 
 #: contents/configuration/PanelConfiguration.qml:349
 msgid "Dodge windows"
-msgstr ""
+msgstr "Desviar das janelas"
 
 #: contents/configuration/PanelConfiguration.qml:350
-#, fuzzy
-#| msgid "Windows Go Below"
 msgid "Windows Go Below"
 msgstr "As janelas passam para trás"
 
@@ -387,10 +382,8 @@ msgid "Style"
 msgstr "Estilo"
 
 #: contents/configuration/PanelConfiguration.qml:443
-#, fuzzy
-#| msgid "Floating Panel"
 msgid "Floating"
-msgstr "Painel flutuante"
+msgstr "Flutuante"
 
 #: contents/configuration/PanelConfiguration.qml:517
 msgid "Panel Width:"
@@ -401,10 +394,8 @@ msgid "Height:"
 msgstr "Altura:"
 
 #: contents/configuration/PanelConfiguration.qml:551
-#, fuzzy
-#| msgid "Shortcut"
 msgid "Focus shortcut:"
-msgstr "Atalho"
+msgstr "Atalho em foco:"
 
 #: contents/configuration/PanelConfiguration.qml:561
 msgid "Press this keyboard shortcut to move focus to the Panel"
@@ -489,7 +480,7 @@ msgstr "Widgets alternativos"
 
 #: contents/explorer/AppletDelegate.qml:41
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Widget não suportado"
 
 #: contents/explorer/AppletDelegate.qml:187
 msgid "Undo uninstall"

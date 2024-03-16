@@ -1,0 +1,153 @@
+# Translation of krunner.po to Brazilian Portuguese
+# Copyright (C) 2014-2019 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2019.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2016, 2017, 2019, 2022.
+# SPDX-FileCopyrightText: 2024 Igor Moreira Padua <igorpadua@discente.ufg.br>
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-12-09 01:37+0000\n"
+"PO-Revision-Date: 2024-03-14 11:57-0300\n"
+"Last-Translator: Igor Moreira Padua <igorpadua@discente.ufg.br>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 24.02.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "André Marcelo Alvarenga"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "alvarenga@kde.org"
+
+#: main.cpp:57 view.cpp:49
+#, kde-format
+msgid "KRunner"
+msgstr "KRunner"
+
+#: main.cpp:57
+#, kde-format
+msgid "Run Command interface"
+msgstr "Interface de execução de comandos"
+
+#: main.cpp:63
+#, kde-format
+msgid "Use the clipboard contents as query for KRunner"
+msgstr "Use o conteúdo da área de transferência como consulta do KRunner"
+
+#: main.cpp:64
+#, kde-format
+msgid "Start KRunner in the background, don't show it."
+msgstr "Iniciar o KRunner em segundo plano, não mostrá-lo."
+
+#: main.cpp:65
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Substituir uma instância existente"
+
+#: main.cpp:66
+#, kde-format
+msgid "Show only results from the given plugin"
+msgstr "Mostrar apenas resultados do plugin fornecido"
+
+#: main.cpp:67
+#, kde-format
+msgid "List available plugins"
+msgstr "Listar plug-ins disponíveis"
+
+#: main.cpp:74
+#, kde-format
+msgid "The query to run, only used if -c is not provided"
+msgstr "A consulta a executar, usada apenas se -c não for fornecido"
+
+#: main.cpp:83
+#, kde-format
+msgctxt "Header for command line output"
+msgid "Available KRunner plugins, pluginId"
+msgstr "Plug-ins disponíveis do KRunner, pluginId"
+
+#: qml/RunCommand.qml:100
+#, kde-format
+msgid "Configure"
+msgstr "Configurar"
+
+#: qml/RunCommand.qml:101
+#, kde-format
+msgid "Configure KRunner Behavior"
+msgstr "Configurar comportamento do KRunner"
+
+#: qml/RunCommand.qml:104
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "Configurar KRunner..."
+
+#: qml/RunCommand.qml:117
+#, kde-format
+msgid "Showing only results from %1"
+msgstr "A mostrar apenas os resultados de %1"
+
+#: qml/RunCommand.qml:131
+#, kde-format
+msgctxt "Textfield placeholder text, query specific KRunner plugin"
+msgid "Search '%1'…"
+msgstr "Pesquisar '%1'..."
+
+#: qml/RunCommand.qml:132
+#, kde-format
+msgctxt "Textfield placeholder text"
+msgid "Search…"
+msgstr "Pesquisar..."
+
+#: qml/RunCommand.qml:305 qml/RunCommand.qml:306 qml/RunCommand.qml:308
+#, kde-format
+msgid "Show Usage Help"
+msgstr "Mostrar ajuda de uso"
+
+#: qml/RunCommand.qml:316
+#, kde-format
+msgid "Pin"
+msgstr "PIN"
+
+#: qml/RunCommand.qml:317
+#, kde-format
+msgid "Pin Search"
+msgstr "Pesquisar PIN"
+
+#: qml/RunCommand.qml:319
+#, kde-format
+msgid "Keep Open"
+msgstr "Manter aberto"
+
+#: qml/RunCommand.qml:397 qml/RunCommand.qml:402
+#, kde-format
+msgid "Recent Queries"
+msgstr "Pesquisas recentes"
+
+#: qml/RunCommand.qml:400
+#, kde-format
+msgid "Remove"
+msgstr "Remover"
+
+#~ msgid "krunner"
+#~ msgstr "krunner"
+
+#~ msgid "Show KRunner"
+#~ msgstr "Mostrar o KRunner"
+
+#~ msgctxt "Name for krunner shortcuts category"
+#~ msgid "KRunner"
+#~ msgstr "KRunner"
+
+#~ msgid "Run Command on clipboard contents"
+#~ msgstr "Executar comando no conteúdo da área de transferência"
+

@@ -1,0 +1,375 @@
+# Translation of plasmashell.po to Brazilian Portuguese
+# Copyright (C) 2014-2020 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2016, 2020.
+# Aracele Torres <aracele@kde.org>, 2017.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2018, 2020, 2022.
+# SPDX-FileCopyrightText: 2024 Igor Moreira Padua <igorpadua@discente.ufg.br>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-03-13 02:24+0000\n"
+"PO-Revision-Date: 2024-03-14 12:28-0300\n"
+"Last-Translator: Igor Moreira Padua <igorpadua@discente.ufg.br>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 24.02.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "André Marcelo Alvarenga"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "alvarenga@kde.org"
+
+#: currentcontainmentactionsmodel.cpp:206
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "Configurar o plugin de ações do mouse"
+
+#: desktopview.cpp:211
+#, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Dev"
+msgstr "KDE Plasma 6.0 Desenvolvimento"
+
+#: desktopview.cpp:214
+#, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Alpha"
+msgstr "KDE Plasma 6.0 Alfa"
+
+#: desktopview.cpp:217
+#, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Beta 1"
+msgstr "KDE Plasma 6.0 Beta 1"
+
+#: desktopview.cpp:220
+#, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Beta 2"
+msgstr "KDE Plasma 6.0 Beta 2"
+
+#: desktopview.cpp:223
+#, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
+msgid "KDE Plasma 6.0 RC1"
+msgstr "KDE Plasma 6.0 RC1"
+
+#: desktopview.cpp:226
+#, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
+msgid "KDE Plasma 6.0 RC2"
+msgstr "KDE Plasma 6.0 RC2"
+
+#: desktopview.cpp:252
+#, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Dev"
+msgstr "KDE Plasma %1 Dev"
+
+#: desktopview.cpp:256
+#, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Beta"
+msgstr "KDE Plasma %1 Beta"
+
+#: desktopview.cpp:259
+#, kde-format
+msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
+msgid "KDE Plasma %1 Beta %2"
+msgstr "KDE Plasma %1 Beta %2"
+
+#: desktopview.cpp:263
+#, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1"
+msgstr "KDE Plasma %1"
+
+#: desktopview.cpp:269
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Visit bugs.kde.org to report issues"
+msgstr "Visite bugs.kde.org para relatar problemas"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma Shell"
+msgstr "Plasma Shell"
+
+#: main.cpp:100
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "Ativar o depurador QML Javascript"
+
+#: main.cpp:103
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "Não reiniciar o plasma-shell automaticamente após uma falha"
+
+#: main.cpp:106
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "Forçar o carregamento do plugin indicado"
+
+#: main.cpp:110
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Substitui uma instância existente"
+
+#: main.cpp:113
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+"Ativa o modo de teste e indica o layout do arquivo javascript para "
+"configurar o ambiente de testes"
+
+#: main.cpp:114
+#, kde-format
+msgid "file"
+msgstr "arquivo"
+
+#: main.cpp:118
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "Lista as opções disponíveis para os comentários dos usuários"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "Não foi possível iniciar o Plasma"
+
+#: main.cpp:201
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"Não é possível iniciar o Plasma porque ele não consegue usar corretamente o "
+"OpenGL 2 ou a alternativa via software.\n"
+"Verifique se os seus drivers de vídeo estão devidamente configurados."
+
+#: osd.cpp:53
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "Sem áudio"
+
+#: osd.cpp:75
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "Microfone sem som"
+
+#: osd.cpp:91
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 sem áudio"
+
+#: osd.cpp:113
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "Touchpad ligado"
+
+#: osd.cpp:115
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "Touchpad desligado"
+
+#: osd.cpp:122
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "Wi-Fi ligado"
+
+#: osd.cpp:124
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "Wi-Fi desligado"
+
+#: osd.cpp:131
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "Bluetooth ligado"
+
+#: osd.cpp:133
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "Bluetooth desligado"
+
+#: osd.cpp:140
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "Internet móvel ligada"
+
+#: osd.cpp:142
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "Internet móvel desligada"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "Teclado virtual ativado"
+
+#: osd.cpp:153
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "Teclado virtual desativado"
+
+#: shellcontainmentconfig.cpp:105
+#, kde-format
+msgid "Internal Screen on %1"
+msgstr "Tela interna em %1"
+
+#: shellcontainmentconfig.cpp:109
+#, kde-format
+msgctxt "Screen manufacturer and model on connector"
+msgid "%1 %2 on %3"
+msgstr "%1 %2 em %3"
+
+#: shellcontainmentconfig.cpp:132
+#, kde-format
+msgid "Disconnected Screen %1"
+msgstr "Tela desconectada %1"
+
+#: shellcorona.cpp:204 shellcorona.cpp:206
+#, kde-format
+msgid "Show Desktop"
+msgstr "Mostrar a Área de Trabalho"
+
+#: shellcorona.cpp:206
+#, kde-format
+msgid "Hide Desktop"
+msgstr "Ocultar a Área de Trabalho"
+
+#: shellcorona.cpp:222
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "Mostrar seletor de atividade"
+
+#: shellcorona.cpp:233
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "Parar a atividade atual"
+
+#: shellcorona.cpp:241
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "Trocar para a atividade anterior"
+
+#: shellcorona.cpp:249
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "Trocar para a próxima atividade"
+
+#: shellcorona.cpp:264
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "Ativar entrada %1 do gerenciador de tarefas"
+
+#: shellcorona.cpp:291
+#, kde-format
+msgid "Manage Desktops And Panels..."
+msgstr "Gerenciar áreas de trabalho e painéis..."
+
+#: shellcorona.cpp:313
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "Mover o foco do teclado entre os painéis"
+
+#: shellcorona.cpp:2061
+#, kde-format
+msgid "Add Panel"
+msgstr "Adicionar painel"
+
+#: shellcorona.cpp:2103
+#, kde-format
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "%1 vazio"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "Renderizador de software em uso"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "Renderizador de software em uso"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "A renderização pode ser degradada"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "Não mostrar novamente"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "Número de painéis"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "Conta os painéis"
+
+#~ msgid ""
+#~ "Load plasmashell as a standalone application, needs the shell-plugin "
+#~ "option to be specified"
+#~ msgstr ""
+#~ "Carregar o plasmashell como um aplicativo independente. Será necessário "
+#~ "indicar a opção shell-plugin"
+
+#~ msgid "Unknown %1"
+#~ msgstr "Desconhecido %1"
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "Não foi possível carregar o arquivo de script: %1"
+
+#~ msgid "Activities..."
+#~ msgstr "Atividades..."
+
