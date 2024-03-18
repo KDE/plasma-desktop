@@ -98,6 +98,7 @@ EmptyPage {
                     width: view.availableWidth
                     isSearchResult: true
                 }
+                section.property: "group"
                 activeFocusOnTab: true
                 property var interceptedPosition: null
                 Keys.onTabPressed: event => {
