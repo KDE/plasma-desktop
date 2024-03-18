@@ -1,12 +1,12 @@
 # Copyright (C) 2021 Free Software Foundation, Inc.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-11 00:39+0000\n"
-"PO-Revision-Date: 2023-09-10 19:13+0530\n"
+"PO-Revision-Date: 2024-03-17 18:11+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: kcmaccess.cpp:115
 #, kde-format
@@ -294,10 +294,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgid "Magnification"
-msgstr "அறிவிப்பை காட்டு"
+msgstr "பெரிதாக்குவது"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -611,33 +610,31 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Shake cursor to find it:"
-msgstr ""
+msgstr "சுட்டிக்குறியைக் கண்டுபிடிக்க அதை ஆட்டுவது:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake cursor effect"
 msgid "Enable"
 msgstr "இயக்கு"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgctxt "@label Cursor magnification level"
 msgid "Magnification:"
-msgstr "அறிவிப்பை காட்டு"
+msgstr "சுட்டிக்குறியின் அளவு:"
 
 #: ui/ShakeCursor.qml:55
 #, kde-format
 msgctxt "@label Normal cursor size"
 msgid "Normal"
-msgstr ""
+msgstr "இயல்பானது"
 
 #: ui/ShakeCursor.qml:62
 #, kde-format
 msgctxt "@label Large cursor size"
 msgid "Large"
-msgstr ""
+msgstr "பெரியது"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "வேகவளர்ச்சி முறை:"
