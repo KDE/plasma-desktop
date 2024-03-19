@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kde-runtime-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2024-03-13 20:33+0300\n"
+"PO-Revision-Date: 2024-03-18 19:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -42,10 +42,10 @@ msgid ""
 "\"Automount on Attach\"."
 msgstr ""
 "Bu liste, sistem tarafından bilinen depolama aygıtlarını gösterir. Eğer, "
-"\"Oturum açılışında otomatik bağla\" seçiliyse \"Tüm çıkarılabilir ortamları "
-"oturum açılışında kendiliğinden bağla\" seçili olmasa dahi aygıt otomatik "
-"olarak bağlanacaktır. Aynı şey \"Takıldığında otomatik bağla\" seçeneği için "
-"de geçerlidir."
+"‘Oturum açılışında kendiliğinden bağla’ seçiliyse ‘Tüm kaldırılabilir "
+"ortamları oturum açılışında kendiliğinden bağla’ seçili olmasa dahi aygıt "
+"kendiliğinden bağlanacaktır. Aynı şey ‘Takıldığında kendiliğinden bağla’ "
+"seçeneği için de geçerlidir."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -61,7 +61,7 @@ msgstr ""
 "daha önce takılmış olan çıkarılabilir ortamları takıldıklarında "
 "kendiliğinden bağla’ seçildiğinde işe yarar. Bir aygıt bir kere unutulduysa "
 "ve sistem yalnızca daha önceden takılı aygıtları bağlayacak şekilde "
-"ayarlandıysa aygıt otomatik bağlanmayacaktır."
+"ayarlandıysa aygıt kendiliğinden bağlanmayacaktır."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57

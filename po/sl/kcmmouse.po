@@ -1,13 +1,13 @@
 # translation of kcminput.po to Slovenian
 # Translation of kcminput.po to Slovenian
 # KCMINPUT TRANSLATION TO SLOVENE LANGUAGE.
-# $Id: kcmmouse.po 1669148 2024-01-06 01:59:55Z scripty $
+# $Id: kcmmouse.po 1675997 2024-03-19 02:54:03Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
 # Marko Samastur <markos@elite.org>, 2000.
 # Gregor Rakar <gregor.rakar@kiss.si>, 2003, 2004, 2005.
-# Jure Repinc <jlp@holodeck1.com>, 2006, 2007, 2008, 2010, 2011.
+# SPDX-FileCopyrightText: 2006, 2007, 2008, 2010, 2011, 2024 Jure Repinc <jlp@holodeck1.com>
 # Andrej Vernekar <andrej.vernekar@moj.net>, 2007, 2010, 2011.
 # Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014, 2015, 2016, 2018.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-06 01:34+0000\n"
-"PO-Revision-Date: 2023-08-24 06:38+0200\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"PO-Revision-Date: 2024-03-17 02:46+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -44,8 +44,7 @@ msgstr ""
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
-"Poizvedba vhodnih naprav ni uspela. Prosim ponovno odprite ta nastavitveni "
-"modul."
+"Poizvedba vhodnih naprav ni uspela. Ponovno odprite ta nastavitveni modul."
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:86
 #, kde-format
@@ -72,8 +71,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
-"Vseh sprememb ni mogoče shraniti. Za več informacij oglejte dnevnike. "
-"Ponovno zaženite ta nastavitveni modul in spet poskusite."
+"Vseh sprememb ni mogoče shraniti. Za več informacij glejte dnevnike. Ponovno "
+"zaženite ta nastavitveni modul in spet poskusite."
 
 #: kcm/libinput/libinput_config.cpp:136
 #, kde-format
@@ -91,7 +90,7 @@ msgid ""
 "this configuration module."
 msgstr ""
 "Napaka pri dodajanju na novo povezane naprave. Ponovno jo povežite in "
-"zaženite ta nastavitveni modul."
+"ponovno zaženite ta nastavitveni modul."
 
 #: kcm/libinput/libinput_config.cpp:182
 #, kde-format
@@ -158,17 +157,17 @@ msgstr "Pospešek kazalke:"
 #: kcm/libinput/main.qml:308 kcm/libinput/main_deviceless.qml:169
 #, kde-format
 msgid "None"
-msgstr "Noben"
+msgstr "Brez"
 
 #: kcm/libinput/main.qml:312 kcm/libinput/main_deviceless.qml:173
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
-msgstr "Kazalec prepotuje enako razdaljo kot gibanje miške."
+msgstr "Kazalka prepotuje enako razdaljo kot gibanje miške."
 
 #: kcm/libinput/main.qml:318 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Standard"
-msgstr "Standardno"
+msgstr "Običajno"
 
 #: kcm/libinput/main.qml:322 kcm/libinput/main_deviceless.qml:183
 #, kde-format
@@ -183,7 +182,7 @@ msgstr "Drsenje zaslona:"
 #: kcm/libinput/main.qml:335 kcm/libinput/main_deviceless.qml:196
 #, kde-format
 msgid "Invert scroll direction"
-msgstr "V obrnjeno smer drsenja zaslona"
+msgstr "Obrni smer drsenja zaslona"
 
 #: kcm/libinput/main.qml:351 kcm/libinput/main_deviceless.qml:212
 #, kde-format
@@ -211,13 +210,13 @@ msgstr "Hitreje"
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Ponovno poveži dodatne gumbe na miški…"
+msgstr "Ponovno poveži dodatne gumbe na miški …"
 
 #: kcm/libinput/main.qml:460
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr "Dodatni gumb %1:"
+msgstr "%1. dodatni gumb:"
 
 #: kcm/libinput/main.qml:490
 #, kde-format
@@ -247,7 +246,7 @@ msgstr "Pritisnite gumb na miški "
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr "Dodaj povezavo…"
+msgstr "Dodaj povezavo …"
 
 #: kcm/libinput/main.qml:542
 #, kde-format

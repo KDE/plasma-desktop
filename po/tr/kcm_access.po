@@ -7,13 +7,13 @@
 # Adil Yıldız <adil@kde.org.tr>, 2005.
 # Serdar Soytetir <tulliana@gmail.com>, 2007, 2008, 2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2017, 2021, 2022.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:39+0000\n"
-"PO-Revision-Date: 2023-12-27 13:05+0300\n"
+"PO-Revision-Date: 2024-03-18 19:27+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: kcmaccess.cpp:112
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "Orca için gsettings ayarlanamadı: \"%1\" başarısız oldu"
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
-msgstr "Hata: \"orca --setup\" başlatılamadı"
+msgstr "Hata: “orca --setup” başlatılamadı"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
