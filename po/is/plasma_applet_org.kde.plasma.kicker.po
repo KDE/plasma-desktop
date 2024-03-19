@@ -1,204 +1,190 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
 #
-# Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017, 2021.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-09 00:39+0000\n"
-"PO-Revision-Date: 2024-03-18 18:50+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
-"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
-"Language: tr\n"
+"PO-Revision-Date: 2024-03-18 15:43+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
-"X-POOTLE-MTIME: 1413102230.000000\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "General"
-msgstr "Genel"
+msgstr "Almennt"
 
 #: package/contents/ui/code/tools.js:44
 #, kde-format
 msgid "Remove from Favorites"
-msgstr "Sık Kullanılanlardan Kaldır"
+msgstr "Fjarlægja úr eftirlætum"
 
 #: package/contents/ui/code/tools.js:48
 #, kde-format
 msgid "Add to Favorites"
-msgstr "Sık Kullanılanlara Ekle"
+msgstr "Bæta við eftirlæti"
 
 #: package/contents/ui/code/tools.js:72
 #, kde-format
 msgid "On All Activities"
-msgstr "Tüm Etkinliklerde"
+msgstr "Í öllum athöfnum"
 
 #: package/contents/ui/code/tools.js:122
 #, kde-format
 msgid "On the Current Activity"
-msgstr "Yalnızca Geçerli Etkinlikte"
+msgstr "Í núverandi athöfn"
 
 #: package/contents/ui/code/tools.js:136
 #, kde-format
 msgid "Show in Favorites"
-msgstr "Sık Kullanılanlarda Göster"
+msgstr "Sýna í eftirlætum"
 
 #: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Icon:"
-msgstr "Simge:"
+msgstr "Tákn:"
 
 #: package/contents/ui/ConfigGeneral.qml:127
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Seç…"
+msgstr "Velja…"
 
 #: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
-msgstr "Simgeyi Temizle"
+msgstr "Hreinsa tákn"
 
 #: package/contents/ui/ConfigGeneral.qml:150
 #, kde-format
 msgid "Show applications as:"
-msgstr "Uygulamaları göster:"
+msgstr "Sýna forrit sem:"
 
 #: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Name only"
-msgstr "Yalnızca ad"
+msgstr "Einungis heiti"
 
 #: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Description only"
-msgstr "Yalnızca tanım"
+msgstr "Einungis lýsing"
 
 #: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Name (Description)"
-msgstr "Ad (Açıklama)"
+msgstr "Heiti (lýsing)"
 
 #: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Description (Name)"
-msgstr "Açıklama (Ad)"
+msgstr "Lýsing (heiti)"
 
 #: package/contents/ui/ConfigGeneral.qml:162
 #, kde-format
 msgid "Behavior:"
-msgstr "Davranış:"
+msgstr "Hegðun:"
 
 #: package/contents/ui/ConfigGeneral.qml:164
 #, kde-format
 msgid "Sort applications alphabetically"
-msgstr "Uygulamaları abecesel olarak sırala"
+msgstr "Raða forritum í stafrófsröð"
 
 #: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgid "Flatten sub-menus to a single level"
-msgstr "Tek bir düzeyde düzleştirilmiş alt menüler"
+msgstr "Fletja undirvalmyndir í flata valmynd"
 
 #: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
 msgid "Show icons on the root level of the menu"
-msgstr "Menünün kök düzeyindeki simgeleri göster"
+msgstr "Sýna tákn í rót valmyndar"
 
 #: package/contents/ui/ConfigGeneral.qml:190
 #, kde-format
 msgid "Show categories:"
-msgstr "Kategorileri göster:"
+msgstr "Sýna flokka:"
 
 #: package/contents/ui/ConfigGeneral.qml:193
 #, kde-format
 msgid "Recent applications"
-msgstr "Son uygulamalar"
+msgstr "Nýleg forrit"
 
 #: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Often used applications"
-msgstr "Sık kullanılan uygulamalar"
+msgstr "Oft notuð forrit"
 
 #: package/contents/ui/ConfigGeneral.qml:201
 #, kde-format
 msgid "Recent files"
-msgstr "Son dosyalar"
+msgstr "Nýlegar skrár"
 
 #: package/contents/ui/ConfigGeneral.qml:202
 #, kde-format
 msgid "Often used files"
-msgstr "Sık kullanılan dosyalar"
+msgstr "Oft notaðar skrár"
 
 #: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format
 msgid "Sort items in categories by:"
-msgstr "Ögeleri kategorilerde şuna göre sırala:"
+msgstr "Raða atriðum í flokka eftir:"
 
 #: package/contents/ui/ConfigGeneral.qml:209
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
-msgstr "Son kullanılanlar"
+msgstr "Nýlega notað"
 
 #: package/contents/ui/ConfigGeneral.qml:209
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
-msgstr "Sık kullanılan"
+msgstr "Oft notað"
 
 #: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Search:"
-msgstr "Ara:"
+msgstr "Leita:"
 
 #: package/contents/ui/ConfigGeneral.qml:221
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
-msgstr "Aramayı yer imlerine, dosyalara ve e-postalara genişlet"
+msgstr "Víkka út leit til bókamerkja, skráa og tölvupósts"
 
 #: package/contents/ui/ConfigGeneral.qml:229
 #, kde-format
 msgid "Align search results to bottom"
-msgstr "Arama sonuçlarını aşağıya hizala"
+msgstr "Jafna leitarniðurstöður neðst"
 
 #: package/contents/ui/DashboardRepresentation.qml:235
 #, kde-format
 msgid "Searching for '%1'"
-msgstr "“%1” aranıyor"
+msgstr "Leita að '%1'"
 
 #: package/contents/ui/DashboardRepresentation.qml:235
 #, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
-msgstr "Aramak için yaz…"
+msgstr "Sláðu inn hér til að leita..."
 
 #: package/contents/ui/DashboardRepresentation.qml:331
 #, kde-format
 msgid "Favorites"
-msgstr "Sık Kullanılanlar"
+msgstr "Eftirlæti"
 
 #: package/contents/ui/main.qml:243
 #, kde-format
 msgid "Edit Applications…"
-msgstr "Uygulamaları Düzenle…"
-
-#~ msgid "Widgets"
-#~ msgstr "Araç Takımları"
-
-#~ msgid "Apps & Docs"
-#~ msgstr "Uygulamalar ve Belgeler"
-
-#~ msgid "Recent contacts"
-#~ msgstr "Son kullanılan kişiler"
-
-#~ msgid "Often used contacts"
-#~ msgstr "Sık kullanılan kişiler"
+msgstr "Breyta forritum…"

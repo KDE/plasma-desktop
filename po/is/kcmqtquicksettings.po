@@ -1,0 +1,99 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-04-07 02:03+0000\n"
+"PO-Revision-Date: 2024-03-16 00:19+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Guðmundur Erlingsson"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "gudmundure@gmail.com"
+
+#. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
+#: kcmqtquicksettingswidget.ui:23
+#, kde-format
+msgid ""
+"These settings adjust the QtQuick settings used by Plasma. Only adjust if "
+"you know what you are doing."
+msgstr ""
+"Þessar stillingar breyta stillingum Plasma fyrir QtQuick. Breyttu þeim "
+"eingöngu ef þú veist hvað þú ert að gera."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmqtquicksettingswidget.ui:38
+#, kde-format
+msgid "Rendering Backend:"
+msgstr "Bakendi myndgerðar:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:84
+#, kde-format
+msgid "Automatic"
+msgstr "Sjálfvirkt"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:51
+#, kde-format
+msgid "Open GL"
+msgstr "Open GL"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:56
+#, kde-format
+msgid "Software"
+msgstr "Hugbúnaður"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:61
+#, kde-format
+msgid "Vulkan"
+msgstr "Vulkan-tæki"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcmqtquicksettingswidget.ui:69
+#, kde-format
+msgid "GL Core Profile:"
+msgstr "GL Core-forstilling:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcmqtquicksettingswidget.ui:76
+#, kde-format
+msgid "Render Loop:"
+msgstr "Myndgerðarlúppa:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:89
+#, kde-format
+msgid "Basic"
+msgstr "Einföld"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:94
+#, kde-format
+msgid "Threaded"
+msgstr "Þrædd"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
+#: kcmqtquicksettingswidget.ui:102
+#, kde-format
+msgid "Force"
+msgstr "Þvinga"

@@ -1,0 +1,529 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-03-09 00:39+0000\n"
+"PO-Revision-Date: 2024-03-18 15:50+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.3\n"
+
+#: contents/activitymanager/ActivityItem.qml:205
+msgid "Currently being used"
+msgstr "Í notkun sem stendur"
+
+#: contents/activitymanager/ActivityItem.qml:245
+msgid ""
+"Move to\n"
+"this activity"
+msgstr ""
+"Færa í\n"
+"þessa athöfn"
+
+#: contents/activitymanager/ActivityItem.qml:275
+msgid ""
+"Show also\n"
+"in this activity"
+msgstr ""
+"Sýna líka\n"
+"í þessari athöfn"
+
+#: contents/activitymanager/ActivityItem.qml:337
+msgid "Configure"
+msgstr "Grunnstilla"
+
+#: contents/activitymanager/ActivityItem.qml:356
+msgid "Stop activity"
+msgstr "Stöðva athöfn"
+
+#: contents/activitymanager/ActivityList.qml:142
+msgid "Stopped activities:"
+msgstr "Stöðvaðar athafnir:"
+
+#: contents/activitymanager/ActivityManager.qml:122
+msgid "Create activity…"
+msgstr "Búa til athöfn..."
+
+#: contents/activitymanager/Heading.qml:59
+msgid "Activities"
+msgstr "Athafnir"
+
+#: contents/activitymanager/StoppedActivityItem.qml:138
+msgid "Configure activity"
+msgstr "Grunnstilla athöfn"
+
+#: contents/activitymanager/StoppedActivityItem.qml:155
+msgid "Delete"
+msgstr "Eyða"
+
+#: contents/applet/AppletError.qml:164
+msgid "Copy to Clipboard"
+msgstr "Afrita á klippispjald"
+
+#: contents/applet/AppletError.qml:187
+msgid "View Error Details…"
+msgstr "Skoða villuupplýsingar..."
+
+#: contents/applet/CompactApplet.qml:76
+msgid "Open %1"
+msgstr "Opna %1"
+
+#: contents/configuration/AboutPlugin.qml:21
+#: contents/configuration/AppletConfiguration.qml:304
+msgid "About"
+msgstr "Um hugbúnaðinn"
+
+#: contents/configuration/AboutPlugin.qml:50
+msgid "Send an email to %1"
+msgstr "Senda tölvupóst á %1"
+
+#: contents/configuration/AboutPlugin.qml:64
+msgctxt "@info:tooltip %1 url"
+msgid "Open website %1"
+msgstr "Opna vefsíðu %1"
+
+#: contents/configuration/AboutPlugin.qml:137
+msgid "Copyright"
+msgstr "Höfundarréttur"
+
+#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+msgid "License:"
+msgstr "Notkunarleyfi:"
+
+#: contents/configuration/AboutPlugin.qml:163
+msgctxt "@info:whatsthis"
+msgid "View license text"
+msgstr "Skoða texta notkunarleyfis"
+
+#: contents/configuration/AboutPlugin.qml:177
+msgid "Authors"
+msgstr "Höfundar"
+
+#: contents/configuration/AboutPlugin.qml:189
+msgid "Credits"
+msgstr "Þátttakendur"
+
+#: contents/configuration/AboutPlugin.qml:202
+msgid "Translators"
+msgstr "Þýðendur"
+
+#: contents/configuration/AboutPlugin.qml:220
+msgid "Report a Bug…"
+msgstr "Senda villutilkynningu…"
+
+#: contents/configuration/AppletConfiguration.qml:76
+msgid "Keyboard Shortcuts"
+msgstr "Flýtilyklar"
+
+#: contents/configuration/AppletConfiguration.qml:352
+msgid "Apply Settings"
+msgstr "Virkja stillingar"
+
+#: contents/configuration/AppletConfiguration.qml:353
+msgid ""
+"The settings of the current module have changed. Do you want to apply the "
+"changes or discard them?"
+msgstr ""
+"Stillingarnar í þessari einingu hafa breyst. Viltu virkja þær eða fleygja "
+"þeim?"
+
+#: contents/configuration/AppletConfiguration.qml:384
+msgid "OK"
+msgstr "Í lagi"
+
+#: contents/configuration/AppletConfiguration.qml:392
+msgid "Apply"
+msgstr "Virkja"
+
+#: contents/configuration/AppletConfiguration.qml:398
+msgid "Cancel"
+msgstr "Hætta við"
+
+#: contents/configuration/ConfigCategoryDelegate.qml:27
+msgid "Open configuration page"
+msgstr "Opna grunnstillingasíðu"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:21
+msgid "Left-Button"
+msgstr "Vinstri hnappur"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:22
+msgid "Right-Button"
+msgstr "Hægri hnappur"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:23
+msgid "Middle-Button"
+msgstr "Miðjuhnappur"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:24
+msgid "Back-Button"
+msgstr "Bakhnappur"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:25
+msgid "Forward-Button"
+msgstr "Áfram-hnappur"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:27
+msgid "Vertical-Scroll"
+msgstr "Lóðrétt skrun"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:28
+msgid "Horizontal-Scroll"
+msgstr "Lárétt skrun"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:30
+msgid "Shift"
+msgstr "Shift"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:31
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:32
+msgid "Alt"
+msgstr "Alt"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:33
+msgid "Meta"
+msgstr "Meta"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:95
+msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
+msgid "+"
+msgstr "+"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:167
+msgctxt "@title"
+msgid "About"
+msgstr "Um hugbúnaðinn"
+
+#: contents/configuration/ConfigurationContainmentActions.qml:182
+#: contents/configuration/MouseEventInputButton.qml:13
+msgid "Add Action"
+msgstr "Bæta við aðgerð"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:69
+msgid "Layout changes have been restricted by the system administrator"
+msgstr "Kerfisstjórinn hefur takmarkað breytingar á útliti"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:84
+msgid "Layout:"
+msgstr "Útlit:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:98
+msgid "Wallpaper type:"
+msgstr "Gerð veggfóðurs:"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:119
+msgid "Get New Plugins…"
+msgstr "Sækja nýjar viðbætur…"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:189
+msgid "Layout changes must be applied before other changes can be made"
+msgstr ""
+"Breytingar á útliti verður að virkja áður en hægt er að gera aðrar breytingar"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:193
+msgid "Apply Now"
+msgstr "Virkja núna"
+
+#: contents/configuration/ConfigurationShortcuts.qml:18
+msgid "Shortcuts"
+msgstr "Flýtilyklar"
+
+#: contents/configuration/ConfigurationShortcuts.qml:30
+msgid "This shortcut will activate the applet as though it had been clicked."
+msgstr "Þessi flýtilykill virkjar smáforritið eins og smellt hafi verið á það."
+
+#: contents/configuration/ContainmentConfiguration.qml:27
+msgid "Wallpaper"
+msgstr "Veggfóður"
+
+#: contents/configuration/ContainmentConfiguration.qml:32
+msgid "Mouse Actions"
+msgstr "Músaraðgerðir"
+
+#: contents/configuration/MouseEventInputButton.qml:20
+msgid "Input Here"
+msgstr "Inntak hér"
+
+#: contents/configuration/PanelConfiguration.qml:97
+msgid "Panel Settings"
+msgstr "Stillingar skjáborðsstiku"
+
+#: contents/configuration/PanelConfiguration.qml:104
+msgid "Add Spacer"
+msgstr "Bæta við bili"
+
+#: contents/configuration/PanelConfiguration.qml:107
+msgid "Add spacer widget to the panel"
+msgstr "Bæta bili á skjáborðsstikuna"
+
+#: contents/configuration/PanelConfiguration.qml:114
+msgid "Add Widgets…"
+msgstr "Bæta við græjum..."
+
+#: contents/configuration/PanelConfiguration.qml:117
+msgid "Open the widget selector to drag and drop widgets to the panel"
+msgstr "Opna græjuvalið til að draga og sleppa græjum á skjáborðsstikuna"
+
+#: contents/configuration/PanelConfiguration.qml:146
+msgid "Position"
+msgstr "Staðsetning"
+
+#: contents/configuration/PanelConfiguration.qml:151
+#: contents/configuration/PanelConfiguration.qml:266
+msgid "Top"
+msgstr "Efst"
+
+#: contents/configuration/PanelConfiguration.qml:152
+#: contents/configuration/PanelConfiguration.qml:268
+msgid "Right"
+msgstr "Hægra megin"
+
+#: contents/configuration/PanelConfiguration.qml:153
+#: contents/configuration/PanelConfiguration.qml:266
+msgid "Left"
+msgstr "Vinstra megin"
+
+#: contents/configuration/PanelConfiguration.qml:154
+#: contents/configuration/PanelConfiguration.qml:268
+msgid "Bottom"
+msgstr "Neðst"
+
+#: contents/configuration/PanelConfiguration.qml:174
+msgid "Set Position…"
+msgstr "Stilla staðsetningu..."
+
+#: contents/configuration/PanelConfiguration.qml:201
+msgid "Alignment"
+msgstr "Jöfnun"
+
+#: contents/configuration/PanelConfiguration.qml:267
+msgid "Center"
+msgstr "Miðjuð"
+
+#: contents/configuration/PanelConfiguration.qml:290
+msgid "Height"
+msgstr "Hæð"
+
+#: contents/configuration/PanelConfiguration.qml:291
+msgid "Width"
+msgstr "Breidd"
+
+#: contents/configuration/PanelConfiguration.qml:310
+msgid "Fill height"
+msgstr "Fylla hæð"
+
+#: contents/configuration/PanelConfiguration.qml:310
+msgid "Fill width"
+msgstr "Fylla breidd"
+
+#: contents/configuration/PanelConfiguration.qml:311
+msgid "Fit content"
+msgstr "Sníða að innihaldi"
+
+#: contents/configuration/PanelConfiguration.qml:312
+msgid "Custom"
+msgstr "Sérsniðið"
+
+#: contents/configuration/PanelConfiguration.qml:338
+msgid "Visibility"
+msgstr "Sýnileiki"
+
+#: contents/configuration/PanelConfiguration.qml:351
+msgid "Always visible"
+msgstr "Alltaf sýnileg"
+
+#: contents/configuration/PanelConfiguration.qml:352
+msgid "Auto hide"
+msgstr "Fela sjálfkrafa"
+
+#: contents/configuration/PanelConfiguration.qml:353
+msgid "Dodge windows"
+msgstr "Víkja fyrir gluggum"
+
+#: contents/configuration/PanelConfiguration.qml:354
+msgid "Windows Go Below"
+msgstr "Gluggar fara undir"
+
+#: contents/configuration/PanelConfiguration.qml:397
+msgid "Opacity"
+msgstr "Gagnsæi"
+
+#: contents/configuration/PanelConfiguration.qml:411
+msgid "Adaptive"
+msgstr "Aðlögun"
+
+#: contents/configuration/PanelConfiguration.qml:412
+msgid "Opaque"
+msgstr "Ógagnsæ"
+
+#: contents/configuration/PanelConfiguration.qml:413
+msgid "Translucent"
+msgstr "Gagnsæ"
+
+#: contents/configuration/PanelConfiguration.qml:437
+msgid "Style"
+msgstr "Stílsnið"
+
+#: contents/configuration/PanelConfiguration.qml:449
+msgid "Floating"
+msgstr "Fljótandi"
+
+#: contents/configuration/PanelConfiguration.qml:520
+msgid "Panel Width:"
+msgstr "Breidd skjáborðsstiku:"
+
+#: contents/configuration/PanelConfiguration.qml:520
+msgid "Height:"
+msgstr "Hæð:"
+
+#: contents/configuration/PanelConfiguration.qml:555
+msgid "Focus shortcut:"
+msgstr "Flýtilykill fyrir fókus:"
+
+#: contents/configuration/PanelConfiguration.qml:566
+msgid "Press this keyboard shortcut to move focus to the Panel"
+msgstr "Sláðu inn þennan flýtilykil til að gefa skjáborðsstikunni fókus"
+
+#: contents/configuration/PanelConfiguration.qml:582
+msgctxt "@action:button Delete the panel"
+msgid "Delete Panel"
+msgstr "Eyða skjáborðsstiku"
+
+#: contents/configuration/PanelConfiguration.qml:585
+msgid "Remove this panel; this action is undo-able"
+msgstr "Eyða þessari skjáborðsstiku. Ekki er hægt að afturkalla aðgerðina"
+
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+msgid "Drag to change maximum height."
+msgstr "Dragðu til að breyta hámarkshæð."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+msgid "Drag to change maximum width."
+msgstr "Dragðu til að breyta hámarksbreidd."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:30
+#: contents/configuration/panelconfiguration/Ruler.qml:31
+msgid "Double click to reset."
+msgstr "Tvísmelltu til að endurstilla."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:31
+msgid "Drag to change minimum height."
+msgstr "Dragðu til að breyta lágmarkshæð."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:31
+msgid "Drag to change minimum width."
+msgstr "Dragðu til að breyta lágmarksbreidd."
+
+#: contents/configuration/panelconfiguration/Ruler.qml:78
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double click to reset."
+msgstr ""
+"Dragðu til að breyta staðsetningu á þessari skjábrún.\n"
+"Tvísmelltu til að endurstilla."
+
+#: contents/configuration/ShellContainmentConfiguration.qml:19
+msgid "Panels and Desktops Management"
+msgstr "Umsjón með skjáborðum og skjáborðsstikum"
+
+#: contents/configuration/ShellContainmentConfiguration.qml:34
+msgid ""
+"You can drag Panels and Desktops around to move them to different screens."
+msgstr ""
+"Þú getur dregið til skjáborð og skjáborðsstikur til að færa þau á aðra "
+"skjái. "
+
+#: contents/configuration/ShellContainmentConfiguration.qml:44
+msgid "Close"
+msgstr "Loka"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
+msgid "Swap with Desktop on Screen %1"
+msgstr "Skipta við skjáborð á skjá %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
+msgid "Move to Screen %1"
+msgstr "Færa á skjá %1"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
+msgid "Remove Desktop"
+msgstr "Fjarlægja skjáborð"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:195
+msgid "Remove Panel"
+msgstr "Fjarlægja skjáborðsstiku"
+
+#: contents/configuration/shellcontainmentconfiguration/Delegate.qml:268
+msgid "%1 (primary)"
+msgstr "%1 (aðal)"
+
+#: contents/explorer/AppletAlternatives.qml:66
+msgid "Alternative Widgets"
+msgstr "Varagræjur"
+
+#: contents/explorer/AppletDelegate.qml:41
+msgid "Unsupported Widget"
+msgstr "Óstuddar græjur"
+
+#: contents/explorer/AppletDelegate.qml:188
+msgid "Undo uninstall"
+msgstr "Afturkalla fjarlægingu"
+
+#: contents/explorer/AppletDelegate.qml:189
+msgid "Uninstall widget"
+msgstr "Fjarlægja græju"
+
+#: contents/explorer/Tooltip.qml:105
+msgid "Author:"
+msgstr "Höfundur:"
+
+#: contents/explorer/Tooltip.qml:115
+msgid "Email:"
+msgstr "Netfang:"
+
+#: contents/explorer/Tooltip.qml:136
+msgid "Uninstall"
+msgstr "Fjarlægja"
+
+#: contents/explorer/WidgetExplorer.qml:118
+#: contents/explorer/WidgetExplorer.qml:193
+msgid "All Widgets"
+msgstr "Allar græjur"
+
+#: contents/explorer/WidgetExplorer.qml:144
+msgid "Widgets"
+msgstr "Græjur"
+
+#: contents/explorer/WidgetExplorer.qml:153
+msgid "Get New Widgets…"
+msgstr "Sækja nýjar græjur…"
+
+#: contents/explorer/WidgetExplorer.qml:204
+msgid "Categories"
+msgstr "Flokkar"
+
+#: contents/explorer/WidgetExplorer.qml:215
+msgid "Confirm Removal Of One Widget"
+msgid_plural "Confirm Removal Of %1 Widgets"
+msgstr[0] "Staðfestu að fjarlægja eigi eina græju"
+msgstr[1] "Staðfestu að fjarlægja eigi %1 græjur"
+
+#: contents/explorer/WidgetExplorer.qml:295
+msgid "No widgets matched the search terms"
+msgstr "Engar græjur passa við leitarorðin"
+
+#: contents/explorer/WidgetExplorer.qml:295
+msgid "No widgets available"
+msgstr "Engar græjur í boði"

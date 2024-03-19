@@ -5,20 +5,20 @@
 # Richard Allen <ra@ra.is>, 2000.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2008.
-# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-11 00:39+0000\n"
-"PO-Revision-Date: 2023-09-08 10:14+0000\n"
+"PO-Revision-Date: 2024-03-14 20:23+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -296,14 +296,13 @@ msgstr "Virkja skjálesara"
 #: kcmaccessibilityshakecursor.kcfg:9
 #, kde-format
 msgid "Whether Shake Cursor is enabled"
-msgstr ""
+msgstr "Hvort hristibendill sé virkur"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgid "Magnification"
-msgstr "Birta tilkynningu"
+msgstr "Stækkun"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -487,7 +486,7 @@ msgstr "Skjálesari"
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
-msgstr ""
+msgstr "Hrista bendil"
 
 #: ui/ModifierKeys.qml:16
 #, kde-format
@@ -618,33 +617,31 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Shake cursor to find it:"
-msgstr ""
+msgstr "Hrista bendil til að finna hann:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake cursor effect"
 msgid "Enable"
 msgstr "Virkja"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgctxt "@label Cursor magnification level"
 msgid "Magnification:"
-msgstr "Birta tilkynningu"
+msgstr "Stækkun:"
 
 #: ui/ShakeCursor.qml:55
 #, kde-format
 msgctxt "@label Normal cursor size"
 msgid "Normal"
-msgstr ""
+msgstr "Venjuleg"
 
 #: ui/ShakeCursor.qml:62
 #, kde-format
 msgctxt "@label Large cursor size"
 msgid "Large"
-msgstr ""
+msgstr "Mikil"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Hröðunarsnið:"

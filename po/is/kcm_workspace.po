@@ -1,23 +1,21 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
-# Volkan Gezer <volkangezer@gmail.com>, 2014, 2017, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2023.
+# SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2024-03-18 19:41+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
-"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
-"Language: tr\n"
+"PO-Revision-Date: 2024-03-18 15:40+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: ui/main.qml:24
 #, kde-format
@@ -25,81 +23,81 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
-"Orta tık yapıştır ayarına yapılan değişikliklerin etkili olabilmesi için "
-"sistemin yeniden başlatılması gerekiyor."
+"Það verður að endurræsa tölvuna til að breytingar á límingu með miðjusmelli "
+"verði virkar."
 
 #: ui/main.qml:30
 #, kde-format
 msgid "Restart"
-msgstr "Yeniden Başlat"
+msgstr "Endurræsa"
 
 #: ui/main.qml:47
 #, kde-format
 msgid "Visual behavior:"
-msgstr "Görsel davranış:"
+msgstr "Sjónræn hegðun:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
 #: ui/main.qml:48 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
-msgstr "Fareyle üzerine gelindiğinde bilgi amaçlı araç ipuçlarını göster"
+msgstr "Birta upplýsandi vísbendingar þegar mús sveimar yfir"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: ui/main.qml:59 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
-msgstr "Durum değişiklikleri için görsel geri bildirim göster"
+msgstr "Birta sjónræna svörun við stöðubreytingar"
 
 #: ui/main.qml:77
 #, kde-format
 msgid "Animation speed:"
-msgstr "Canlandırma hızı:"
+msgstr "Hraði hreyfiáhrifa:"
 
 #: ui/main.qml:103
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
-msgstr "Yavaş"
+msgstr "Hægur"
 
 #: ui/main.qml:110
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
-msgstr "Anında"
+msgstr "Tafarlaus"
 
 #: ui/main.qml:125
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr "Dosyalara ve klasörlere tıklamak:"
+msgstr "Að smella á skrár eða möppur:"
 
 #: ui/main.qml:132
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr "Onları seçer"
+msgstr "Velur þær"
 
 #: ui/main.qml:146
 #, kde-format
 msgid "Open by double-clicking instead"
-msgstr "Ögeleri açmak için çift tıklayın"
+msgstr "Opna í staðinn með því að tvísmella"
 
 #: ui/main.qml:159
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr "Onları açar"
+msgstr "Opnar þær"
 
 #: ui/main.qml:172
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr "Seçmek için ögenin seçim imleyicisine tıklayın"
+msgstr "Velja með því að smella á valmerkingu atriðis"
 
 #: ui/main.qml:188
 #, kde-format
 msgid "Clicking in scrollbar track:"
-msgstr "Sarma çubuğu alanına tıklamak:"
+msgstr "Smellt í skrunstikubrautina:"
 
 #: ui/main.qml:189
 #, kde-format
@@ -107,7 +105,7 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr "Tıklanan konuma sarar"
+msgstr "Skrunar á smellta staðinn"
 
 #: ui/main.qml:207
 #, kde-format
@@ -115,43 +113,43 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr "Bir sayfa yukarı veya aşağı sarar"
+msgstr "Skrunar upp eða niður um síðu"
 
 #: ui/main.qml:220
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr "Tıklanan konuma sarmak için orta fare düğmesini kullan"
+msgstr "Miðjusmella til að skruna á smellta staðinn"
 
 #: ui/main.qml:234
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
-msgstr "Orta tık:"
+msgstr "Miðjusmellur:"
 
 #: ui/main.qml:236
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
-msgstr "Seçili metni yapıştırır"
+msgstr "Límir valinn texta"
 
 #: ui/main.qml:253
 #, kde-format
 msgid "Touch Mode:"
-msgstr "Dokunmatik Kip:"
+msgstr "Snertistilling:"
 
 #: ui/main.qml:255
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr "Gerektiğinde kendiliğinden etkinleştir"
+msgstr "Gera sjálfkrafa virka eftir þörfum"
 
 #: ui/main.qml:255 ui/main.qml:298
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr "Asla etkin değil"
+msgstr "Aldrei virk"
 
 #: ui/main.qml:271
 #, kde-format
@@ -160,16 +158,15 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"Dokunmatik Kip, sistem bir dokunmatik ekran algıladığında; ancak bir fare "
-"veya dokunmatik yüzey bulamazsa kendiliğinden etkinleştirilecektir. Örneğin: "
-"Dönüştürülebilir bir dizüstü bilgisayarın ekranı defter kipine alındığında "
-"veya çıkarıldığında."
+"Snertistilling verður sjálfkrafa virk þegar kerfið greinir snertiskjá en "
+"engamús eða snertiplatta. Til dæmis í fartölvu sem hægt er að breyta í "
+"spjaldtölvu með því að snúa lyklaborðinu eða losa það af."
 
 #: ui/main.qml:276
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
-msgstr "Her zaman etkin"
+msgstr "Alltaf virk"
 
 #: ui/main.qml:316
 #, kde-format
@@ -177,25 +174,25 @@ msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
-"Dokunmatik Kip’te, kullanıcı arayüzünün birçok ögesi dokunmatik kullanımı "
-"kolaylaştırmak adına daha büyük olacaktır."
+"Í snertistillingu stækka margir hlutir í notandaviðmótinu til að auðveldara "
+"sé að nota snertiskipanir."
 
 #: ui/main.qml:334
 #, kde-format
 msgid "Double-click interval:"
-msgstr "Çift tık aralığı:"
+msgstr "Bil á milli tvísmella:"
 
 #: ui/main.qml:349
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] "%1 msan"
-msgstr[1] "%1 msan"
+msgstr[0] "%1 msek."
+msgstr[1] "%1 msek."
 
 #: ui/main.qml:353
 #, kde-format
 msgid "msec"
-msgstr "msan"
+msgstr "msek."
 
 #: ui/main.qml:367
 #, kde-format
@@ -203,44 +200,44 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
-"Bu süre içindeki iki tıklama çift tık olarak kabul edilir. Bazı uygulamalar "
-"bu ayarı dikkate almayabilir"
+"Tveir smellir með þessu millibili teljast vera tvísmellur. Sum forrit kunna "
+"að fara ekki eftir þessari stillingu."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Single click to open files"
-msgstr "Dosyaları açmak için tek tıkla"
+msgstr "Einn smellur til að opna skrár"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
 #, kde-format
 msgid "Animation speed"
-msgstr "Canlandırma hızı"
+msgstr "Hraði hreyfinga"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr "Sarma çubuğu alanında sol tık bir sayfa hareket ettirir"
+msgstr "Vinstrismellt í skrunstikubrautina færir skrunstikuna um eina síðu"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Double click interval"
-msgstr "Çift tık aralığı"
+msgstr "Bil á milli tvísmella:"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr "Dokunmatik kipe kendiğinden geç"
+msgstr "Skipta sjálfkrafa í snertistillingu"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr "Orta tıklama seçim yapıştırmayı etkinleştir"
+msgstr "Virkja límingu á vali með miðjusmelli"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
@@ -249,17 +246,17 @@ msgid ""
 "Show an on-screen display to indicate status changes such as brightness or "
 "volume"
 msgstr ""
-"Parlaklık veya ses düzeyi gibi durum değişikliklerini ekran üzerinde (OSD) "
-"gösterin"
+"Sýna yfirlag á skjá til að sýna stöðubreytingu eins og á birtustigi eða "
+"hljóðstyrk."
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:20
 #, kde-format
 msgid "OSD on layout change"
-msgstr "Yerleşim değişikliğinde Ekran Üzeri Görüntü"
+msgstr "Yfirlag á skjá við breytingu á útliti"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr "Yerleşim değişikliklerinde açılır bir pencere göster"
+msgstr "Sýna sprettiglugga við breytingu á útliti"

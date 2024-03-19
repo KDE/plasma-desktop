@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-11 00:39+0000\n"
-"PO-Revision-Date: 2024-03-11 14:08+0300\n"
+"PO-Revision-Date: 2024-03-18 19:27+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -81,12 +81,12 @@ msgstr "%1 düğmesine bas"
 #: kcmaccess.cpp:183
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
-msgstr "Orca için gsettings ayarlanamadı: \"%1\" başarısız oldu"
+msgstr "Orca için gsettings ayarlanamadı: “%1” başarısız oldu"
 
 #: kcmaccess.cpp:190
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
-msgstr "Hata: \"orca --setup\" başlatılamadı"
+msgstr "Hata: “orca --setup” başlatılamadı"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9

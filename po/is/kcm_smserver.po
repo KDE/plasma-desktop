@@ -4,20 +4,20 @@
 #
 # Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003.
 # Sveinn í Felli <sveinki@nett.is>, 2009.
-# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-26 00:38+0000\n"
-"PO-Revision-Date: 2023-03-12 21:48+0000\n"
-"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-03-15 09:17+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -89,7 +89,7 @@ msgstr "Útskráningarskjár"
 #: ui/main.qml:75
 #, kde-format
 msgid "Show:"
-msgstr "Sýna:"
+msgstr "Birta:"
 
 #: ui/main.qml:89
 #, kde-kuit-format
@@ -99,20 +99,20 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
-"Þegar kveikt er á þessari stillingu birtist staðfestingarskjár útskráningar "
-"þegar þú skráir þig út, slekkur, endurræir, ýtir á rofann eða smellir á "
-"hnappa eða valmyndaratriði sem merkt eru <interface>Hætta...</interface>."
+"Þegar kveikt er á þessari stillingu birtist staðfestingarskjár þegar þú "
+"skráir þig út, slekkur, endurræsir, ýtir á rofann eða smellir á hnappa eða "
+"valmyndaratriði sem merkt eru <interface>Hætta...</interface>"
 
 #: ui/main.qml:95
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr "Endurheimta setu"
+msgstr "Endurheimt setu"
 
 #: ui/main.qml:103
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr "Keyra forrit sem voru opin áður þegar skráð er inn:"
+msgstr "Þegar þú skráir þig inn á að keyra forrit sem voru opin:"
 
 #: ui/main.qml:104
 #, kde-format
@@ -135,9 +135,9 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
-"Hnappurinn <interface>Vista setu</interface> birtist í valmyndinni "
-"<interface>Forritaræsi</interface>. Þegar þú smellir á hann leggur Plasma á "
-"minnið hvaða forrit eru opin og opnar þau aftur næst þegar þú skráir þig "
+"Hnappurinn <interface>Vista setu</interface> birtist í  "
+"<interface>Forritaræsinum</interface>. Þegar þú smellir á hann leggur Plasma "
+"á minnið hvaða forrit eru opin og opnar þau aftur næst þegar þú skráir þig "
 "inn. Smelltu aftur á hnappinn til að skipta út forritunum sem eru geymd í "
 "minninu."
 
@@ -162,8 +162,8 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
-"Skrifaðu keyrsluheiti forrita hér (aðskilin með kommum eða tvípunkti, til. "
-"dæmi 'xterm:konsole' eða 'xterm,konsole') til að koma í veg fyrir að þau "
+"Skrifaðu keyrsluheiti forrita hér (aðskilin með kommum eða tvípunkti, til "
+"dæmis 'xterm:konsole' eða 'xterm,konsole') til að koma í veg fyrir að þau "
 "ræsist sjálfkrafa ásamt öðrum forritum sem verða opnuð í setunni."
 
 #: ui/main.qml:175
