@@ -241,6 +241,9 @@
            <property name="multiKeyShortcutsAllowed">
             <bool>false</bool>
            </property>
+           <property name="modifierOnlyAllowed">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item row="3" column="0">
@@ -263,6 +266,9 @@
            </property>
            <property name="multiKeyShortcutsAllowed">
             <bool>false</bool>
+           </property>
+           <property name="modifierOnlyAllowed">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
