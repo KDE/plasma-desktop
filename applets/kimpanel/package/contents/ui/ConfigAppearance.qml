@@ -92,7 +92,7 @@ KCM.SimpleKCM {
             selectedFont: !cfg_font || cfg_font.family === "" ? Kirigami.Theme.defaultFont : cfg_font
 
             onAccepted: {
-                cfg_font = font
+                cfg_font = selectedFont
             }
         }
     }
