@@ -9,6 +9,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols
 
@@ -144,29 +145,36 @@ Kirigami.ApplicationItem {
                 QQC2.ToolTip.text: i18nd("kcmmouse", "Swap left and right buttons.")
             }
 
-            QQC2.CheckBox {
-                id: middleEmulation
-                text: i18nd("kcmmouse", "Press left and right buttons for middle-click")
+            RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+                QQC2.CheckBox {
+                    id: middleEmulation
+                    text: i18nd("kcmmouse", "Press left and right buttons for middle-click")
 
-                function load() {
-                    if (!formLayout.enabled) {
-                        checked = false
-                        return
+                    function load() {
+                        if (!formLayout.enabled) {
+                            checked = false
+                            return
+                        }
+                        enabled = device.supportsMiddleEmulation
+                        checked = enabled && device.middleEmulation
                     }
-                    enabled = device.supportsMiddleEmulation
-                    checked = enabled && device.middleEmulation
+
+                    onCheckedChanged: {
+                        if (enabled && !root.loading) {
+                            device.middleEmulation = checked
+                            root.changeSignal()
+                        }
+                    }
+
+                    QQC2.ToolTip.delay: 1000
+                    QQC2.ToolTip.visible: hovered
+                    QQC2.ToolTip.text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
                 }
 
-                onCheckedChanged: {
-                    if (enabled && !root.loading) {
-                        device.middleEmulation = checked
-                        root.changeSignal()
-                    }
+                KCM.ContextualHelpButton {
+                    toolTipText: i18nd("kcmmouse", "Activating this setting increases mouse click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right mouse clicks.")
                 }
-
-                QQC2.ToolTip.delay: 1000
-                QQC2.ToolTip.visible: hovered
-                QQC2.ToolTip.text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
             }
 
             Item {

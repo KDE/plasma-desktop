@@ -216,34 +216,41 @@ KCM.SimpleKCM {
             }
         }
 
-        QQC2.CheckBox {
-            id: middleEmulation
-            text: i18nd("kcm_touchpad", "Press left and right buttons for middle click")
+        RowLayout {
+            spacing: Kirigami.Units.smallSpacing
+            QQC2.CheckBox {
+                id: middleEmulation
+                text: i18nd("kcm_touchpad", "Press left and right buttons for middle click")
 
-            hoverEnabled: true
-            QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Clicking left and right button simultaneously sends middle button click.")
-                visible: parent.hovered
-                delay: 1000
+                hoverEnabled: true
+                QQC2.ToolTip {
+                    text: i18nd("kcm_touchpad", "Clicking left and right button simultaneously sends middle button click.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+
+                function load() {
+                    if (!formLayout.enabled) {
+                        checked = false
+                        return
+                    }
+                    enabled = touchpad.supportsMiddleEmulation
+                    checked = enabled && touchpad.middleEmulation
+                }
+
+                onCheckedChanged: {
+                    if (enabled && !root.loading) {
+                        touchpad.middleEmulation = checked
+                        root.changeSignal()
+                    }
+                    loading = true
+                    middleClickMethod.load()
+                    loading = false
+                }
             }
 
-            function load() {
-                if (!formLayout.enabled) {
-                    checked = false
-                    return
-                }
-                enabled = touchpad.supportsMiddleEmulation
-                checked = enabled && touchpad.middleEmulation
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.middleEmulation = checked
-                    root.changeSignal()
-                }
-                loading = true
-                middleClickMethod.load()
-                loading = false
+            KCM.ContextualHelpButton {
+                toolTipText: i18nd("kcm_touchpad", "Activating this setting increases mouse click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right mouse clicks.")
             }
         }
 
