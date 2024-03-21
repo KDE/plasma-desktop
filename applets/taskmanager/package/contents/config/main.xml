@@ -58,6 +58,10 @@
       <label>Whether launcher tasks are sorted separately at the left side of the widget or can be mixed with other tasks.</label>
       <default>true</default>
     </entry>
+    <entry name="hideLauncherOnStart" type="Bool">
+      <label>Whether launcher tasks should be hidden when their application is launched.</label>
+      <default>true</default>
+    </entry>
     <entry name="maxStripes" type="Int">
       <label>The maximum number of rows (in a horizontal-orientation containment, i.e. panel) or columns (in a vertical-orientation containment) to layout task buttons in.</label>
       <default>1</default>
