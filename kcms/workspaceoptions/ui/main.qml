@@ -266,7 +266,7 @@ KCM.SimpleKCM {
                     settingName: "tabletMode"
                 }
             }
-            KCM.ContextualHelpButton {
+            Kirigami.ContextualHelpButton {
                 visible: KWindowSystem.isPlatformWayland
                 toolTipText: i18n("Touch Mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
             }
@@ -363,7 +363,7 @@ KCM.SimpleKCM {
                 }
             }
 
-            KCM.ContextualHelpButton {
+            Kirigami.ContextualHelpButton {
                 toolTipText: i18n("Two clicks within this duration are considered a double-click. Some applications may not honor this setting.")
             }
         }

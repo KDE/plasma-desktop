@@ -7,7 +7,7 @@
 import QtQuick 2.10
 import QtQuick.Controls 2.10
 import QtQuick.Layouts 1.11
-import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kirigami as Kirigami
 import QtQuick.Dialogs 6.3
 import org.kde.desktopsession.private 1.0
 import org.kde.kcmutils as KCM
@@ -85,7 +85,7 @@ KCM.SimpleKCM {
                         settingName: "confirmLogout"
                     }
                 }
-                KCM.ContextualHelpButton {
+                Kirigami.ContextualHelpButton {
                     toolTipText: xi18nc("@info", "When this setting is turned on, the logout confirmation screen will be shown when you log out, shut down, restart, press the power button, or click on buttons or menu items labeled <interface>Leave…</interface>.")
                 }
             }
@@ -122,7 +122,7 @@ KCM.SimpleKCM {
                         settingName: "loginMode"
                     }
                 }
-                KCM.ContextualHelpButton {
+                Kirigami.ContextualHelpButton {
                     toolTipText: xi18nc("@info", "A <interface>Save Session</interface> button will appear in the <interface>Application Launcher</interface> menu. When you click it, Plasma will remember the apps that are open and restore them on the next login. Click it again to replace the set of remembered apps.")
                 }
             }
@@ -164,7 +164,7 @@ KCM.SimpleKCM {
                             settingName: "excludeApps"
                         }
                     }
-                    KCM.ContextualHelpButton {
+                    Kirigami.ContextualHelpButton {
                         toolTipText: i18n("Write apps' executable names here (separated by commas or colons, for example 'xterm:konsole' or 'xterm,konsole') to prevent them from autostarting along with other session-restored apps.")
                     }
                 }

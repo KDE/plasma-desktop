@@ -249,7 +249,7 @@ KCM.SimpleKCM {
                 }
             }
 
-            KCM.ContextualHelpButton {
+            Kirigami.ContextualHelpButton {
                 toolTipText: i18nd("kcm_touchpad", "Activating this setting increases mouse click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right mouse clicks.")
             }
         }

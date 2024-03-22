@@ -172,7 +172,7 @@ Kirigami.ApplicationItem {
                     QQC2.ToolTip.text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
                 }
 
-                KCM.ContextualHelpButton {
+                Kirigami.ContextualHelpButton {
                     toolTipText: i18nd("kcmmouse", "Activating this setting increases mouse click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right mouse clicks.")
                 }
             }
