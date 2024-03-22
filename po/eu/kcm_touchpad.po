@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-18 00:39+0000\n"
+"POT-Creation-Date: 2024-03-22 00:39+0000\n"
 "PO-Revision-Date: 2024-02-18 19:44+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -125,96 +125,103 @@ msgstr "Ezkertiarrentzako modua"
 msgid "Swap left and right buttons."
 msgstr "Trukatu ezker eta eskuin botoiak"
 
-#: kcm/libinput/touchpad.qml:221
+#: kcm/libinput/touchpad.qml:223
 #, kde-format
 msgid "Press left and right buttons for middle click"
 msgstr "Sakatu ezker eta eskuin botoiak erdiko-klik egiteko"
 
-#: kcm/libinput/touchpad.qml:225 kcm/libinput/touchpad.qml:868
+#: kcm/libinput/touchpad.qml:227 kcm/libinput/touchpad.qml:875
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
 "Ezker eta eskuin botoiak batera sakatzea erdiko botoiaren klik bidaltzen du."
 
-#: kcm/libinput/touchpad.qml:256
+#: kcm/libinput/touchpad.qml:253
+#, kde-format
+msgid ""
+"Activating this setting increases mouse click latency by 50ms. The extra "
+"delay is needed to correctly detect simultaneous left and right mouse clicks."
+msgstr ""
+
+#: kcm/libinput/touchpad.qml:263
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Erakuslearen abiadura:"
 
-#: kcm/libinput/touchpad.qml:354
+#: kcm/libinput/touchpad.qml:361
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Erakuslearen azelerazioa:"
 
-#: kcm/libinput/touchpad.qml:385
+#: kcm/libinput/touchpad.qml:392
 #, kde-format
 msgid "None"
 msgstr "Bat ere ez"
 
-#: kcm/libinput/touchpad.qml:389
+#: kcm/libinput/touchpad.qml:396
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "Kurtsorea higitzen da hatza higitutako distantzia bera."
 
-#: kcm/libinput/touchpad.qml:398
+#: kcm/libinput/touchpad.qml:405
 #, kde-format
 msgid "Standard"
 msgstr "Estandarra"
 
-#: kcm/libinput/touchpad.qml:402
+#: kcm/libinput/touchpad.qml:409
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr ""
 "Kurtsore-ibilbidearen distantzia hatzaren higidura abiaduraren araberakoa da."
 
-#: kcm/libinput/touchpad.qml:417
+#: kcm/libinput/touchpad.qml:424
 #, kde-format
 msgid "Tapping:"
 msgstr "Tak-egitea:"
 
-#: kcm/libinput/touchpad.qml:418
+#: kcm/libinput/touchpad.qml:425
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Tak egin klik egiteko"
 
-#: kcm/libinput/touchpad.qml:422
+#: kcm/libinput/touchpad.qml:429
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "Tak bakarra ezker botoiaren klika da."
 
-#: kcm/libinput/touchpad.qml:451
+#: kcm/libinput/touchpad.qml:458
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Egin tak eta arrastatu"
 
-#: kcm/libinput/touchpad.qml:455
+#: kcm/libinput/touchpad.qml:462
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr ""
 "Ukipen-saguan tak egin ondoren zuzenean irristatzea arrastatu egiten du."
 
-#: kcm/libinput/touchpad.qml:482
+#: kcm/libinput/touchpad.qml:489
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Egin tak eta arrastatzea giltzatu"
 
-#: kcm/libinput/touchpad.qml:486
+#: kcm/libinput/touchpad.qml:493
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Arrastatzea jarraitu hatz altxatze labur baten ondoren."
 
-#: kcm/libinput/touchpad.qml:506
+#: kcm/libinput/touchpad.qml:513
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Bi hatzetako tak:"
 
-#: kcm/libinput/touchpad.qml:517
+#: kcm/libinput/touchpad.qml:524
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Eskuineko klik (hiru hatzetako tak erdiko klik egiteko)"
 
-#: kcm/libinput/touchpad.qml:518
+#: kcm/libinput/touchpad.qml:525
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -222,12 +229,12 @@ msgstr ""
 "Egin tak bi hatzekin eskuineko klik egiteko, egin tak hiru hatzekin erdiko "
 "klik egiteko."
 
-#: kcm/libinput/touchpad.qml:520
+#: kcm/libinput/touchpad.qml:527
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Erdiko klik (hiru hatzetako tak eskuineko klika)"
 
-#: kcm/libinput/touchpad.qml:521
+#: kcm/libinput/touchpad.qml:528
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -235,94 +242,94 @@ msgstr ""
 "Egin tak bi hatzekin erdiko klik egiteko, egin tak hiru hatzekin eskuineko "
 "klik egiteko."
 
-#: kcm/libinput/touchpad.qml:523
+#: kcm/libinput/touchpad.qml:530
 #, kde-format
 msgid "Right-click"
 msgstr "Eskuineko klik"
 
-#: kcm/libinput/touchpad.qml:524
+#: kcm/libinput/touchpad.qml:531
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Egin tak bi hatzekin erdiko klik egiteko."
 
-#: kcm/libinput/touchpad.qml:526
+#: kcm/libinput/touchpad.qml:533
 #, kde-format
 msgid "Middle-click"
 msgstr "Erdiko klik"
 
-#: kcm/libinput/touchpad.qml:527
+#: kcm/libinput/touchpad.qml:534
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Egin tak bi hatzekin erdiko klik egiteko."
 
-#: kcm/libinput/touchpad.qml:586
+#: kcm/libinput/touchpad.qml:593
 #, kde-format
 msgid "Scrolling:"
 msgstr "Labaintzea:"
 
-#: kcm/libinput/touchpad.qml:615
+#: kcm/libinput/touchpad.qml:622
 #, kde-format
 msgid "Two fingers"
 msgstr "Bi hatz"
 
-#: kcm/libinput/touchpad.qml:619
+#: kcm/libinput/touchpad.qml:626
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Bi hatzekin irristatzea labaintzen du."
 
-#: kcm/libinput/touchpad.qml:627
+#: kcm/libinput/touchpad.qml:634
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Ukipen-saguaren ertzak"
 
-#: kcm/libinput/touchpad.qml:631
+#: kcm/libinput/touchpad.qml:638
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Ukipen-saguaren ertzetan irristatzea labaintzen du."
 
-#: kcm/libinput/touchpad.qml:641
+#: kcm/libinput/touchpad.qml:648
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Alderantzizko labaintze-noranzkoa (labaintze naturala)"
 
-#: kcm/libinput/touchpad.qml:657
+#: kcm/libinput/touchpad.qml:664
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Ukipen-pantailakoa bezalako labaintzea."
 
-#: kcm/libinput/touchpad.qml:665 kcm/libinput/touchpad.qml:682
+#: kcm/libinput/touchpad.qml:672 kcm/libinput/touchpad.qml:689
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Ezgaitu labaintze horizontala"
 
-#: kcm/libinput/touchpad.qml:690
+#: kcm/libinput/touchpad.qml:697
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Kiribiltze abiadura:"
 
-#: kcm/libinput/touchpad.qml:741
+#: kcm/libinput/touchpad.qml:748
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mantsoago"
 
-#: kcm/libinput/touchpad.qml:748
+#: kcm/libinput/touchpad.qml:755
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Bizkorrago"
 
-#: kcm/libinput/touchpad.qml:759
+#: kcm/libinput/touchpad.qml:766
 #, kde-format
 msgid "Right-click:"
 msgstr "Eskuineko klik:"
 
-#: kcm/libinput/touchpad.qml:793
+#: kcm/libinput/touchpad.qml:800
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "Sakatu beheko eskuineko izkina"
 
-#: kcm/libinput/touchpad.qml:797
+#: kcm/libinput/touchpad.qml:804
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
@@ -330,27 +337,27 @@ msgstr ""
 "Software bidez gaitutako botoiak gehituko dira zure Ukipen-saguaren beheko "
 "atalera."
 
-#: kcm/libinput/touchpad.qml:805
+#: kcm/libinput/touchpad.qml:812
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "Sakatu edonon bi hatzekin"
 
-#: kcm/libinput/touchpad.qml:809
+#: kcm/libinput/touchpad.qml:816
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "Egin tak bi hatzekin eskuineko klik egiteko."
 
-#: kcm/libinput/touchpad.qml:823
+#: kcm/libinput/touchpad.qml:830
 #, kde-format
 msgid "Middle-click: "
 msgstr "Erdiko klik: "
 
-#: kcm/libinput/touchpad.qml:852
+#: kcm/libinput/touchpad.qml:859
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Sakatu beheko erdialdea"
 
-#: kcm/libinput/touchpad.qml:856
+#: kcm/libinput/touchpad.qml:863
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
@@ -359,17 +366,17 @@ msgstr ""
 "Software bidez gaitutako erdiko botoia gehitu da zure Ukipen-saguaren beheko "
 "atalera."
 
-#: kcm/libinput/touchpad.qml:864
+#: kcm/libinput/touchpad.qml:871
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Sakatu beheko ezkerreko eta beheko eskuinek izkinak batera"
 
-#: kcm/libinput/touchpad.qml:877
+#: kcm/libinput/touchpad.qml:884
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Sakatu edonon hiru hatzekin"
 
-#: kcm/libinput/touchpad.qml:883
+#: kcm/libinput/touchpad.qml:890
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Sakatu edonon hiru hatzekin."
