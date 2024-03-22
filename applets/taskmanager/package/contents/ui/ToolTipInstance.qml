@@ -151,8 +151,8 @@ ColumnLayout {
     Item {
         id: thumbnailSourceItem
 
-        Layout.minimumWidth: header.width
-        Layout.preferredHeight: header.width / 2
+        Layout.fillWidth: true
+        Layout.preferredHeight: Kirigami.Units.gridUnit * 8
 
         clip: true
         visible: toolTipDelegate.isWin
