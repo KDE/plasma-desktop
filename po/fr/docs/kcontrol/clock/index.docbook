@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % French "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Date et Heure</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+&traducteurGerardDelafond; 
+</authorgroup>
+
+<date
+>25-03-2018</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configuration du système</keyword>
+<keyword
+>Horloge</keyword>
+<keyword
+>date</keyword>
+<keyword
+>heure</keyword>
+<keyword
+>régler</keyword>
+<keyword
+>configuration</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Date et Heure</title>
+
+<para
+>Vous pouvez utiliser ce module pour modifier la date et l'heure système au moyen d'une interface graphique pratique.</para>
+
+<note
+><para
+>Étant donné que ces réglages ne vous affectent pas en tant qu'utilisateur, mais concernent tout le système, vous devez avoir les droits d'administrateur (<systemitem class="username"
+>administrateur</systemitem
+>) pour modifier la date et l'heure système. Si vous n'avez pas cet accès, ce module ne fera que vous afficher les réglages actuels et aucune de vos modifications ne sera pas enregistrée.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Date et Heure</title>
+
+<para
+>Si vous cochez l'option <guilabel
+>Définir automatiquement la date et l'heure</guilabel
+>, ce module utilisera le processus <acronym
+>systemd</acronym
+> pour obtenir l'heure et la date.</para>
+
+<para
+>Sur un ordinateur sans processus <acronym
+>systemd</acronym
+>, les utilitaires <acronym
+>NTP</acronym
+> comme <command
+>rdate</command
+> ou <command
+>ntpdate</command
+> sont utilisés. Si ces utilitaires sont absents, veuillez les installer. </para>
+
+<para
+>Lorsque vous vous connectez à la session de &plasma; en étant en ligne ou lorsque vous connextez plus tard à Internet, l’accès à un ou plusieurs serveurs <acronym
+>NTP</acronym
+> s'effectuera.</para>
+<para
+>Cependant, ceci n'est pas suffisant pour entretenir une horloge précise sur le long terme. C'est en revanche utile pour régler l'heure de manière occasionnelle sur des machines n'ayant aucun accès permanent au réseau, comme les ordinateurs portables. </para>
+
+<para
+>Si vous n’utilisez aucun serveur de temps, vous pouvez définir la date manuellement dans le calendrier.</para>
+<para
+>Utilisez les contrôles en bas du calendrier pour choisir la date actuelle, saisissez la date dans la boîte d'édition ou choisissez la semaine de l'année depuis la liste déroulante.</para>
+
+<para
+>Réglez l'heure en utilisant les compteurs en bas de l'horloge analogique. Vous pouvez également saisir directement la valeur.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Fuseau horaire</title>
+<para
+>Pour régler un nouveau fuseau horaire, choisissez simplement votre zone dans la liste en-dessous. Utilisez la boîte de filtrage pour trouver la <guilabel
+>zone</guilabel
+> ou la <guilabel
+>région</guilabel
+> voulue.</para>
+</sect2>
+
+</sect1>
+
+</article>
