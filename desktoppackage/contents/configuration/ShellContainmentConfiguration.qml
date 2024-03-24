@@ -16,7 +16,7 @@ import "shellcontainmentconfiguration"
 Kirigami.AbstractApplicationWindow {
     id: root
 
-    title: i18nd("plasma_shell_org.kde.plasma.desktop", "Panels and Desktops Management")
+    title: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel and Desktop Management")
 
     width: Kirigami.Units.gridUnit * 40
     height: Kirigami.Units.gridUnit * 32

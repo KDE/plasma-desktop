@@ -388,7 +388,7 @@ ContainmentItem {
 
         PlasmaCore.Action {
             id: configAction
-            text: i18n("Configure Desktop and Wallpaper…")
+            text: i18n("Desktop and Wallpaper")
             icon.name: "preferences-desktop-wallpaper"
             shortcut: "alt+d,alt+s"
             onTriggered: Plasmoid.containment.configureRequested(Plasmoid)

@@ -132,7 +132,7 @@ class DesktopTest(unittest.TestCase):
         """
         Finds the close button and clicks it
         """
-        global_theme_button = self.driver.find_element(AppiumBy.NAME, "Choose Global Theme…")
+        global_theme_button = self.driver.find_element(AppiumBy.NAME, "Global Themes")
         self.driver.find_element(AppiumBy.NAME, "Exit Edit Mode").click()
         WebDriverWait(self.driver, 30).until_not(lambda _: global_theme_button.is_displayed())
 

@@ -279,14 +279,14 @@ Item {
 
                 PlasmaComponents3.ToolButton {
                     id: themeButton
-                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Choose Global Theme…")
+                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Global Themes")
                     icon.name: "preferences-desktop-theme-global"
                     onClicked: KCM.KCMLauncher.openSystemSettings("kcm_lookandfeel")
                 }
 
                 PlasmaComponents3.ToolButton {
                     id: displaySettingsButton
-                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Configure Display Settings…")
+                    text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Display Configuration")
                     icon.name: "preferences-desktop-display"
                     onClicked: KCM.KCMLauncher.openSystemSettings("kcm_kscreen")
                 }
