@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % French "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Emplacements</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+&traducteurLudovicGrossard; &relecteurPierreBuard; 
+</authorgroup>
+
+<date
+>05-09-2021</date>
+<releaseinfo
+>Plasma 5.22</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>bureau</keyword>
+<keyword
+>emplacements </keyword>
+<keyword
+>Emplacement</keyword>
+<keyword
+>Configuration du système</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Ceci est un module permettant de configurer les emplacements essentiels du bureau &plasma;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Configuration de quelques emplacements pour &kde;.</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Configuration de quelques emplacements pour &kde;.</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note>
+    <para
+>Les lecteurs montés automatiquement à l'ouverture de session ne peuvent pas être utilisés comme emplacements. Ces lecteurs seront rétablis aux valeurs par défaut lors du redémarrage de &plasma;. </para>
+</note>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Dossier Bureau : </guilabel
+></term>
+<listitem
+><para
+>Le dossier du bureau contient tous les fichiers présents que vous pouvez afficher dans le composant graphique <guilabel
+>Affichage en dossiers</guilabel
+> de votre bureau. L'emplacement par défaut est habituellement <filename class="directory"
+>~/Bureau</filename
+> mais vous pouvez le modifier ici. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Dossier Documents : </guilabel
+></term>
+<listitem
+><para
+>Ce dossier est utilisé par défaut pour charger ou enregistrer les documents.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Emplacement des téléchargements : </guilabel
+></term>
+<listitem
+><para
+>Ce dossier est utilisé par défaut pour enregistrer les documents téléchargés.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Emplacement des vidéos : </guilabel
+></term>
+<listitem
+><para
+>Ce dossier est utilisé par défaut pour ouvrir ou enregistrer des films.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Dossier Photos : </guilabel
+></term>
+<listitem
+><para
+>Ce dossier est utilisé par défaut pour ouvrir ou enregistrer des images.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Dossier Musique : </guilabel
+></term>
+<listitem
+><para
+>Ce dossier est utilisé par défaut pour ouvrir ou enregistrer de la musique.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Si vous modifiez un emplacement et cliquez sur <guibutton
+>Appliquer</guibutton
+>, une boîte de dialogue vous proposera de migrer vos contenus vers les nouveaux dossiers ou d'utiliser ces derniers sans déplacer de fichiers.</para>
+
+</article>

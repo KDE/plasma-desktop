@@ -1,0 +1,383 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname "&knetattach;">
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % French "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>Manuel de &knetattach;</title>
+
+<authorgroup>
+<author
+>&Orville.Bennett; &Orville.Bennett.mail;  </author>
+&traducteurPierreHecart;&relecteurLudovicGrossard; 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>&Orville.Bennett;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>10-04-2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<abstract>
+<para
+>&knetattach; est un assistant qui facilite l'intégration des ressources réseaux avec votre environnement de bureau &kde;. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>knetattach</keyword>
+<keyword
+>Dossiers distants</keyword>
+<keyword
+>Assistant d'ajout de dossiers distants</keyword>
+<keyword
+>Assistant d'ajout de dossiers distants pour KDE</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>Introduction</title>
+
+<para
+>L'assistant &knetattach;, affectueusement connu ici sous le nom d'assistant de création de dossiers réseau, permet d'ajouter et d'intégrer facilement différents dossiers réseaux à votre environnement de bureau &kde;. Merci de signaler tout problème ou tout nouveau besoin sur le site internet des bogues de &kde;. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>Utilisation de &knetattach;</title>
+
+<para
+>Comme vous pouvez le voir sur la copie d'écran ci-dessous, l'assistant de dossiers réseau vous permet actuellement d'ajouter quatre types de dossiers : &FTP;, WebDav, &Microsoft; &Windows; (Samba) et SSH. Vous pouvez également sélectionner une connexion récente dans la boîte de dialogue en liste déroulante. <screenshot>
+<screeninfo
+>Voici une capture d'écran de &knetattach;.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Capture d'écran</phrase>
+</textobject>
+<caption>
+<para
+>Écran principal de l'assistant de création de dossiers réseaux.</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>Ajouter des dossier réseaux</title>
+
+<para
+>Les dossiers réseau sont visibles dans un endroit spécial de &konqueror; et &dolphin; appelé <emphasis
+>dossier virtuel</emphasis
+>. Ce dossier virtuel est accessible en saisissant <userinput
+>remote:/</userinput
+> dans la barre d'emplacement ou en choisissant <guilabel
+>Réseau</guilabel
+> dans le panneau <guilabel
+>Emplacements</guilabel
+>. Vous verrez alors les dossiers précédemment ajoutés et vous pourrez utiliser l'assistant pour en ajouter d'autres. <screenshot>
+<screeninfo
+>Voici une capture d'écran de &knetattach;.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Capture d'écran</phrase>
+</textobject>
+<caption>
+<para
+>Le dossier virtuel et l'assistant de création de dossiers réseau.</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>L'assistant de création d'emplacements réseau vise à être très facile d'utilisation. Après avoir lancé l'assistant, vous devez choisir le type d'emplacement réseau désiré. Sur le second écran, vous devez compléter les informations requises. La dernière étape consiste à saisir le nom d'utilisateur et le mot de passe correspondant au dossier réseau auquel vous voulez accéder. </para>
+<para
+>La liste ci-dessous présente les informations nécessaires pour l'assistant de création de dossiers réseau. Si une option est indisponible pour un type particulier de dossier, cela signifie qu'il n'est pas nécessaire de la saisir. &eg;, les partages Samba ne nécessitent pas de spécifier un paramètre de <guilabel
+>Port</guilabel
+>. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Nom :</guilabel
+></term>
+<listitem>
+<para
+>C'est ici que vous nommez votre connexion réseau. Vous n'êtes limité que par votre imagination (et par l'alphabet)  </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Utilisateur :</guilabel
+></term>
+<listitem>
+<para
+>Il s'agit du nom de l'utilisateur qui sera utilisé pour établir la connexion. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Serveur :</guilabel
+></term>
+<listitem>
+<para
+>C'est ici que vous mettez l'adresse du serveur à atteindre. Ce peut être une adresse IP ou un nom de domaine. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Port :</guilabel
+></term>
+<listitem>
+<para
+>Vous pouvez saisir ici le numéro de port par lequel vous voulez vous connecter. La valeur par défaut est souvent suffisante. <note
+> <para
+>Non disponible pour les dossiers &Microsoft; &Windows; (&Samba;) </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Dossier :</guilabel
+></term>
+<listitem>
+<para
+>L'emplacement du dossier réseau auquel vous voulez vous connecter devra ce trouver ici. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Encodage :</guilabel
+></term>
+<listitem>
+<para
+>Utilisez les éléments dans la liste pour choisir un encodage pour les connexions &FTP; et ssh. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Créer une icône de raccourci pour le dossier distant</guilabel
+></term>
+<listitem>
+<para
+>Si cette case est cochée, une icône de raccourci sera créée et permettra l'accès par dossier virtuel remote:/. Si non cochée, une connexion reste possible mais pas accessible par remote:/. <note
+> <para
+>L'option <guilabel
+>Connexion récente :</guilabel
+> vous permet de vous reconnecter au dernier point de montage réseau auquel vous vous êtes connecté par l'assistant, qu'il y ait un raccourci ou pas. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Utiliser le chiffrement</guilabel
+></term>
+<listitem>
+<para
+>Si cette case est cochée, vous aurez la possibilité d'utiliser une connexion sécurisée. <note
+> <para
+>Disponible uniquement pour les dossiers WebDav.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>Description de &knetattach;</title>
+
+
+<para
+>Il s'agit d'une rapide description de l'assistant de création de dossiers réseau. Gardez cela bien en mémoire car vous pourriez en avoir à nouveau besoin. </para>
+
+<para
+>Ci-dessous vous avez la fenêtre principale de l'assistant. C'est ici que nous choisissons le type de dossier réseau auquel nous voulons accéder. Pour les besoins de cette description, nous utiliserons &FTP;. Il contient la majorité des fonctions que l'on peut rencontrer en utilisant l'assistant. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Voici une capture d'écran de la fenêtre principale de &knetattach;.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Capture d'écran</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Donc, comme mentionné ci-dessus, nous avons choisi d'ajouter un dossier réseau &FTP;. Vous allez voir un exemple des types d'informations à saisir pour ajouter votre serveur &FTP; en question. Après avoir saisi les informations, nous pressons <guibutton
+>Enregistrer et connecter</guibutton
+> et la magie opère. Bien sûr, si votre serveur exige des authentifications, il vous faudra les renseigner ici pour être connecté. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Capture d'écran montrant l'ajout d'un dossier distant &FTP; en utilisant &knetattach;.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Capture d'écran</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Nous sommes maintenant connectés et capables de naviguer à travers notre partage tout juste ajouté. Cool ! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Capture d'écran du dossier &FTP; connecté.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Capture d'écran</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Pour revenir a nos dossiers réseau il suffit de saisir <action
+>remote:/</action
+> dans la barre d'adresse de &konqueror; ou &dolphin;, ou choisir <guilabel
+>Réseau</guilabel
+> depuis le panneau <guilabel
+>Emplacements</guilabel
+>. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Une capture d'écran du dossier virtuel remote:/ contenant le connexion créée.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Capture d'écran</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Vous pouvez ajouter d'autres dossiers à partir du même endroit en utilisant le lien <guilabel
+>Ajouter un dossier réseau</guilabel
+>. Ce qui nous amène à la fin de notre description (je vous avez bien dit que c'était rapide). Je vous souhaite bonne chance dans vos futures aventures au travers de vos propres dossier réseau ! </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Remerciements et licence</title>
+
+<para
+>&knetattach; </para>
+<para
+>Programme sous copyright 2004 &George.Staikos; &George.Staikos.mail; </para>
+
+<para
+>Documentation sous copyright &copy; 2005 &Orville.Bennett; &Orville.Bennett.mail; </para>
+
+<para
+>Traduction française par &PierreHecart;, relecture par &LudovicGrossard;.</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

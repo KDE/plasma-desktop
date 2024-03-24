@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % French "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Écran de démarrage</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+&traducteurStanislasZeller; 
+</authorgroup>
+
+<date
+>08-04-2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configuration du système</keyword>
+<keyword
+>écran de démarrage</keyword>
+<keyword
+>thème</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Ce module fournit une interface pour afficher et sélectionner les thèmes d'écran de démarrage.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Voici une capture d'écran du gestionnaire d'écran de démarrage</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Le module de gestion d'écran de démarrage</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Sur cette page, vous pouvez voir des aperçus des écrans de démarrage déjà installés. L'aperçu de l'écran de démarrage courant est mis en évidence.</para>
+
+<para
+>Survolez une image d'aperçu avec le curseur de la souris, puis le bouton <guilabel
+>Aperçu de l'écran de démarrage</guilabel
+> apparaît en bas à droite de l'image. Appuyez sur ce bouton pour afficher l'écran de démarrage en action.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Obtenir de nouveaux écrans de démarrage...</guilabel
+></term>
+<listitem>
+<para
+>Vous devez être connecté à Internet pour utiliser cette action. Une boîte de dialogue affichera une liste de thèmes depuis le site Internet <ulink url="https://store.kde.org"
+>https://store.kde.org</ulink
+>. Un clic sur le bouton <guibutton
+>Installer</guibutton
+> associé à un thème installera ce thème localement. </para>
+<para>
+<screenshot>
+<screeninfo
+>Installation d'un nouveau thème</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Installation d'un nouveau thème</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ce nouveau thème est immédiatement disponible après la fermeture de la boîte de dialogue « Télécharger de nouveaux écrans de démarrage » de la &systemsettings; et sera mis en évidence. L'aperçu affiche l'image. Vous devez cliquer sur le bouton <guibutton
+>Appliquer</guibutton
+> pour faire de ce thème votre thème courant. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

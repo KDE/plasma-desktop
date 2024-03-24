@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-22 00:39+0000\n"
-"PO-Revision-Date: 2024-02-18 19:40+0100\n"
+"PO-Revision-Date: 2024-03-23 12:21+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -143,6 +143,9 @@ msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
+"La activación de este ajuste aumenta la latencia del clic del ratón en 50 "
+"ms. Este retardo adicional es necesario para detectar correctamente los "
+"clics derecho e izquierdo simultáneos del ratón."
 
 #: kcm/libinput/touchpad.qml:263
 #, kde-format
