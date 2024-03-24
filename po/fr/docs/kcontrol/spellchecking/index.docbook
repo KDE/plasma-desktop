@@ -1,0 +1,166 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % French "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Correcteur orthographique</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+&traducteurLudovicGrossard; 
+</authorgroup>
+
+<date
+>08-04-2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Orthographe</keyword>
+<keyword
+>dictionnaire</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Correcteur orthographique</title>
+<para
+>Les options de configuration disponibles ici sont utilisées par défaut par toutes les applications &kde; qui font appel à &sonnet;, une interface vers divers correcteurs orthographiques libres.</para>
+
+<para
+>Pour utiliser &sonnet;, vous devez installer un vérificateur orthographique, comme &eg; <ulink url="http://aspell.net/"
+>&GNU; Aspell</ulink
+>, <ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+> ou <ulink url="https://hunspell.github.io/"
+>Hunspell</ulink
+> , ainsi que les dictionnaires correspondants à votre langue.</para>
+
+<para
+>Les options de configuration choisies ici peuvent être écrasées par chaque application.</para>
+
+<para
+>Dans la liste déroulante <guilabel
+>Langue par défaut</guilabel
+>, choisissez le dictionnaire à utiliser pour &sonnet; parmi les dictionnaires disponibles. </para>
+
+<sect2 id="spell-options">
+<title
+>Options</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Activer la détection automatique de la langue</guilabel
+></term>
+<listitem>
+<para
+>Cette fonctionnalité repose sur plusieurs heuristiques (Script utilisé, correspondance de trigrammes et classement des langues disponibles dans le moteur de vérification orthographique). Cela lui permet de basculer automatiquement dans une autre langue dans un document multilingue. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Vérification orthographique automatique activée par défaut</guilabel
+></term>
+<listitem>
+<para
+>Si cette case est cochée, l'orthographe sera vérifiée dans vos documents pendant que vous les saisissez. Les fautes d'orthographe seront soulignées en rouge. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Ignorer les mots en majuscules</guilabel
+></term>
+<listitem>
+<para
+>Si cette case est cochée, l'orthographe des mots entièrement en majuscule ne sera pas vérifiée.</para>
+<tip
+><para
+>Ceci est particulièrement utile pour les documents qui utilisent beaucoup d'acronymes. Si la case n'est pas cochée, la plupart de ces acronymes sera incorrectement marqué. En cochant la case, les acronymes ne seront pas marqué comme mal orthographiés.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Ignorer les mots accolés</guilabel
+></term>
+<listitem
+><para
+>Si cette case est cochée, les mots qui apparaissent séparément dans le dictionnaire, mais qui ont été accolés, sont considérés comme des fautes d'orthographe. Par exemple, bien que les mots <quote
+>réveil</quote
+> et <quote
+>matin</quote
+> se trouvent dans votre dictionnaire, si <quote
+>réveilmatin</quote
+> n'y figure pas, il sera signalé comme une faute d'orthographe. </para>
+
+<tip
+><para
+>Cocher cette case empêche les applications de marque comme incorrect les sites web et les adresses électroniques, Ces adresses contiennent souvent des mots accolés.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Mots ignorés</title>
+<para
+>La moitié inférieure de la boîte de dialogue vous permet de désigner des mots spécifiques (terminologies spécialisées, noms propres. &etc;) qui doivent être ignorés par le correcteur orthographique.</para>
+
+<sect3
+><title
+>Ajouter un mot à la liste</title>
+<para
+>Pour ajouter un mot, saisissez le mot dans la zone de texte et cliquez sur le bouton <guibutton
+>Ajouter</guibutton
+>.</para>
+</sect3>
+
+<sect3
+><title
+>Supprimer un mot de la liste</title>
+<para
+>Pour enlever un mot, choisissez-le dans la liste contenant les mots à ignorer en cliquant dessus avec le &BGS;. Cliquez ensuite sur le bouton <guibutton
+>Supprimer</guibutton
+>.</para>
+
+<para
+>Lorsque les modifications vous conviennent, cliquez simplement sur <guibutton
+>Appliquer</guibutton
+>.</para>
+
+<para
+>Cliquer sur le bouton <guibutton
+>Réglages par défaut</guibutton
+> restaure tous les paramètres à leurs valeurs par défaut.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

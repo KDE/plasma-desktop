@@ -1,0 +1,281 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % French "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Actions du périphérique</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+&traducteurStanislasZeller; &traducteurPierreBuard; 
+</authorgroup>
+
+<date
+>10-12-2018</date>
+<releaseinfo
+>&plasma; 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Configuration du système</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>actions</keyword>
+<keyword
+>périphériques</keyword>
+<keyword
+>matériel</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Actions pour les nouveaux périphériques</title>
+<sect2 id="icons-intro">
+<title
+>Introduction</title>
+
+<para
+>Ce module vous permet de définir les actions à associer aux périphériques nouvellement branchés.</para>
+<para>
+<screenshot>
+<screeninfo
+>Capture d'écran du gestionnaire des actions périphériques</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Copie d'écran du gestionnaire des actions du périphérique</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Liste toutes les actions possibles lorsqu'un périphérique est connecté. Remarquez que ces actions ne seront disponibles que sous certaines conditions.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Ajouter</guibutton
+> vous demandera de fournir un nom pour la nouvelle action avant de vous permettre de la configurer. Si vous n'indiquez pas tous les éléments requis dans cette boîte de dialogue, votre action sera supprimée. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Modifier</guibutton
+> vous permettra de changer le nom, l'icône, la commande à exécuter et les conditions auxquelles l'action doit correspondre pour être affichées. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Abandonner / Suppression impossible / Supprimer</guibutton
+>. Ces actions réalisent différentes opérations en fonction de ce qui a été fourni avec votre système ou créé par vous-même. Seules les modifications aux actions système peuvent être abandonnées. S'il aucune modification n'a été apporté, ces actions ne peuvent pas être supprimées. Les actions créées par l'utilisateur sont définitivement supprimées, y compris leurs modifications. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Ajouter une action</title>
+
+<para
+>Le bouton <guibutton
+>Ajouter</guibutton
+> affiche une boîte de dialogue pour saisir le nouveau nom de l'action. </para>
+<para>
+<screenshot>
+<screeninfo
+>Copie d'écran de la boîte de dialogue « Ajouter une action » </screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Copie d'écran de la boîte de dialogue « Ajouter une action » </phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Le nom de l'action doit décrire clairement l'action. Après avoir saisi un nom et cliqué sur <guibutton
+>Ok</guibutton
+>, la boîte de dialogue de modification s'affichera et vous permettra de définir les propriétés de l'action. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Modifier une action</title>
+
+<para
+>Cette boîte de dialogue vous permet de modifier la configuration de l'action sélectionnée.</para>
+<para>
+<screenshot>
+<screeninfo
+>Copie d'écran de la boîte de dialogue « Modifier une action » </screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Copie d'écran de la boîte de dialogue « Modifier une action » </phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Cela inclut l'icône, le nom de l'action, sa commande et les différents paramètres. Vous pouvez changer l'icône en cliquant dessus.</para>
+<para
+>Les paramètres sont affichés sous forme d'arbre, la première entrée devant être « vrai » afin d'afficher l'action.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Modifier un paramètre</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Type de paramètre</guilabel
+></term>
+<listitem>
+<para
+>Contrôle ce qui peut y être contenu ou le type de test de correspondance à effectuer. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Correspondance de la propriété</guilabel
+></term>
+<listitem>
+<para
+>Compare à l'aide de l'évaluateur la propriété spécifiée du périphérique (en utilisant <guilabel
+>Type de périphérique</guilabel
+> et <guilabel
+>Nom de la valeur</guilabel
+>) au texte fourni.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Conjonction du contenu</guilabel
+></term>
+<listitem>
+<para
+>Toutes les sous-propriétés de cette option doivent être « vraies » afin qu'elle le soit aussi.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Disjonction du contenu</guilabel
+></term>
+<listitem>
+<para
+>Si une des sous-propriétés de cette option est « vraie », elle le sera aussi.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Correspondance de l'interface du périphérique</guilabel
+></term>
+<listitem>
+<para
+>Vérifie si le périphérique entre dans la même catégorie que celle sélectionnée.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Type de périphérique</guilabel
+></term>
+<listitem>
+<para
+>Voici les différents types possibles de périphériques pris en charge par &kde; sur votre système. Ils sont utilisés pour les correspondances de propriétés et d’interface de périphérique. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Nom de la valeur</guilabel
+></term>
+<listitem>
+<para
+>Une liste de tous les noms de propriétés possibles pour le type de périphérique sélectionné. Elle permet également de définir le mode de l'évaluateur de valeur (qui peut être soit <guilabel
+>Égal</guilabel
+> soit <guilabel
+>Contient</guilabel
+>) et propose de saisir le texte a employé lors de la comparaison.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Réinitialiser un paramètre</guibutton
+></term>
+<listitem>
+<para
+>Réinitialise les modifications non-enregistrées apportées à ce paramètre.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Enregistrer les modifications des paramètres</guibutton
+></term>
+<listitem>
+<para
+>Enregistre les modifications apportées au paramètre.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
