@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % French "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Applications par défaut</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+&traducteurLudovicGrossard; 
+</authorgroup>
+
+<date
+>12-01-2022</date>
+<releaseinfo
+>Plasma 5.24</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configuration du système</keyword>
+<keyword
+>composant</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Dans ce module, vous pouvez modifier les composants par défaut de &kde;.</para>
+
+<para
+>Les composants sont des programmes prenant en charge des tâches fondamentales, comme le navigateur Internet, l'émulateur de terminal, le gestionnaire de fichiers, le client de messagerie, la carte électronique et le composeur de numéros. Différentes applications de &kde; ont parfois besoin de lancer un émulateur de terminal, envoyer un courrier électronique , gérer des fichiers ou des dossiers, afficher une carte ou composer un numéro sur votre téléphone.</para
+> 
+
+<para
+>Pour des raisons de cohérence, ces applications appellent toujours les mêmes composants. Vous pouvez choisir ici à quels programmes ces composants correspondent.</para>
+
+<para
+>La liste sur la gauche montre les types de composants configurables :</para>
+<itemizedlist>
+<listitem>
+<para
+>Navigateur Web</para>
+</listitem>
+<listitem>
+<para
+>Gestionnaire de fichiers</para>
+</listitem>
+<listitem>
+<para
+>Client de courrier électronique</para>
+</listitem>
+<listitem>
+<para
+>Émulateur de terminal</para>
+</listitem>
+<listitem>
+<para
+>Carte</para>
+</listitem>
+<listitem>
+<para
+>Composeur de numéros</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Cliquez sur la boîte de dialogue à liste déroulante du composant que vous souhaitez configurer. Dans la liste, sélectionnez votre navigateur Internet, gestionnaire de fichiers, client de messagerie, émulateur de terminal, carte et votre composeur de numéros préférés. Sélectionnez <guimenuitem
+>Autre...</guimenuitem
+> pour ouvrir la boîte de dialogue <guilabel
+>Choisir une application</guilabel
+> et sélectionner votre application manuellement.</para>
+
+</article>
