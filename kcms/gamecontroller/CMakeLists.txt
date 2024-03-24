@@ -33,7 +33,7 @@ target_sources(kcm_gamecontroller PRIVATE
     kcm.cpp
 )
 
-target_link_libraries(kcm_gamecontroller
+target_link_libraries(kcm_gamecontroller PRIVATE
     KF6::CoreAddons
     KF6::KCMUtils
     KF6::KCMUtilsQuick
