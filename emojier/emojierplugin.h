@@ -32,7 +32,7 @@ protected:
 class EmojiModel : public AbstractEmojiModel
 {
     Q_OBJECT
-    QML_ELEMENT
+    QML_NAMED_ELEMENT(EmojiModel)
     Q_PROPERTY(QStringList categories MEMBER m_categories CONSTANT)
 public:
     enum EmojiRole { CategoryRole = Qt::UserRole + 1 };
