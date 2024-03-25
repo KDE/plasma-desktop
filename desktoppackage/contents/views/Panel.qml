@@ -129,10 +129,7 @@ Item {
         function onActivated() {
             if (root.containment.plasmoid.status === PlasmaCore.Types.AcceptingInputStatus) {
                 root.containment.plasmoid.status = PlasmaCore.Types.PassiveStatus;
-            // Workaround: we don't want to accept input status when the panel is activated due to
-            // a single applet being activated; when that happens, the panel status is set to
-            // NeedsAttention, so we avoid it.
-            } else if (root.containment.plasmoid.status !== PlasmaCore.Types.NeedsAttentionStatus) {
+            } else {
                 root.containment.plasmoid.status = PlasmaCore.Types.AcceptingInputStatus;
             }
         }
