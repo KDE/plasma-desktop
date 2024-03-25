@@ -347,7 +347,7 @@ Item {
                     ]
 
                     color: {
-                        if (!root.useListViewMode) {
+                        if (Plasmoid.isContainment) {
                             // In this situation there's a shadow or a background rect, both of which are always black
                             return "white";
                         }
@@ -359,7 +359,7 @@ Item {
                         return Kirigami.Theme.textColor;
 
                     }
-                    renderShadow: (!editor || editor.targetItem !== main) && !root.useListViewMode
+                    renderShadow: Plasmoid.isContainment && (!editor || editor.targetItem !== main)
                     opacity: model.isHidden ? 0.6 : 1
 
                     text: main.nameWrapped
