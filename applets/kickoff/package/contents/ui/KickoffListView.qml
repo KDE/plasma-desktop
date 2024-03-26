@@ -145,7 +145,7 @@ EmptyPage {
                 width: view.availableWidth
                 height: KickoffSingleton.compactListDelegateHeight
 
-                PC3.Label {
+                Kirigami.Heading {
                     id: contentLabel
                     anchors.left: parent.left
                     width: section.length === 1
@@ -160,14 +160,13 @@ EmptyPage {
                     verticalAlignment: Text.AlignVCenter
                     maximumLineCount: 1
                     elide: Text.ElideRight
-                    font.pixelSize: KickoffSingleton.compactListDelegateContentHeight
-                    enabled: hoverHandler.hovered
+                    opacity: 0.8
+                    level: 3
                     text: section.length === 1 ? section.toUpperCase() : section
                     textFormat: Text.PlainText
                 }
 
                 HoverHandler {
-                    id: hoverHandler
                     enabled: root.hasSectionView
                     cursorShape: enabled ? Qt.PointingHandCursor : undefined
                 }
