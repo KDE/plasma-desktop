@@ -158,8 +158,7 @@ ColumnLayout {
         visible: toolTipDelegate.isWin
 
         readonly property bool isMinimized: isGroup ? IsMinimized : isMinimizedParent
-        // TODO: this causes XCB error message when being visible the first time
-        readonly property var winId: toolTipDelegate.isWin && toolTipDelegate.windows[flatIndex] !== undefined ? toolTipDelegate.windows[flatIndex] : 0
+        readonly property var winId: toolTipDelegate.isWin ? toolTipDelegate.windows[flatIndex] : undefined
 
         // There's no PlasmaComponents3 version
         PlasmaExtras.Highlight {
