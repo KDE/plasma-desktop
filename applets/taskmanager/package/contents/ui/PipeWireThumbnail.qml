@@ -11,7 +11,7 @@ import org.kde.taskmanager 0.1 as TaskManager
 PipeWire.PipeWireSourceItem {
     id: pipeWireSourceItem
 
-    readonly property alias hasThumbnail: pipeWireSourceItem.enabled
+    readonly property alias hasThumbnail: pipeWireSourceItem.ready
 
     anchors.fill: parent
     nodeId: waylandItem.nodeId
