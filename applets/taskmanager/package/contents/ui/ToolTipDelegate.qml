@@ -54,12 +54,6 @@ Loader {
     // These properties are required to make tooltip interactive when there is a player but no window is present.
     readonly property QtObject playerData: mpris2Source.playerForLauncherUrl(launcherUrl, pidParent)
 
-    Layout.minimumWidth: implicitWidth
-    Layout.maximumWidth: Layout.minimumWidth
-
-    Layout.minimumHeight: implicitHeight
-    Layout.maximumHeight: Layout.minimumHeight
-
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
