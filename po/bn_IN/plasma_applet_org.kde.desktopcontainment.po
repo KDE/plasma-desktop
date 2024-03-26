@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-15 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2008-12-29 16:21+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -460,9 +460,10 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:391
-#, kde-format
-msgid "Configure Desktop and Wallpaper…"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Set as &Wallpaper"
+msgid "Desktop and Wallpaper"
+msgstr "ওয়াল-পেপার রূপে নির্ধারণ করুন (&W)"
 
 #: plugins/folder/directorypicker.cpp:32
 #, fuzzy, kde-format
@@ -800,9 +801,6 @@ msgstr ""
 
 #~ msgid "C&ancel"
 #~ msgstr "বাতিল করুন (&a)"
-
-#~ msgid "Set as &Wallpaper"
-#~ msgstr "ওয়াল-পেপার রূপে নির্ধারণ করুন (&W)"
 
 #, fuzzy
 #~| msgid "Create New"

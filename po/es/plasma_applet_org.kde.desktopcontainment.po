@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-15 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-08-30 12:08+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -413,8 +413,9 @@ msgstr ""
 "y problemas de rendimiento. Considere mover algunos de ellos a otro lugar."
 
 #: package/contents/ui/main.qml:391
-#, kde-format
-msgid "Configure Desktop and Wallpaper…"
+#, fuzzy, kde-format
+#| msgid "Configure Desktop and Wallpaper…"
+msgid "Desktop and Wallpaper"
 msgstr "Configurar el escritorio y la imagen de fondo..."
 
 #: plugins/folder/directorypicker.cpp:32

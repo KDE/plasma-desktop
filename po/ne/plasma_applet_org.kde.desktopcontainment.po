@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-15 00:39+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2007-11-01 14:06+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -429,9 +429,10 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:391
-#, kde-format
-msgid "Configure Desktop and Wallpaper…"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Set as &Wallpaper"
+msgid "Desktop and Wallpaper"
+msgstr "वालपेपरको रुपमा सेट गर्नुहोस्"
 
 #: plugins/folder/directorypicker.cpp:32
 #, fuzzy, kde-format
@@ -725,9 +726,6 @@ msgstr ""
 
 #~ msgid "C&ancel"
 #~ msgstr "रद्द गर्नुहोस्"
-
-#~ msgid "Set as &Wallpaper"
-#~ msgstr "वालपेपरको रुपमा सेट गर्नुहोस्"
 
 #, fuzzy
 #~| msgid "Creating directory"

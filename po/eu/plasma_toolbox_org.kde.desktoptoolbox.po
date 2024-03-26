@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-01-06 20:14+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -21,14 +21,15 @@ msgstr ""
 "X-Generator: Lokalize 22.12.1\n"
 
 #: contents/ui/ToolBoxContent.qml:282
-#, kde-format
-msgid "Choose Global Theme…"
+#, fuzzy, kde-format
+#| msgid "Choose Global Theme…"
+msgid "Global Themes"
 msgstr "Hautatu gai orokorra..."
 
 #: contents/ui/ToolBoxContent.qml:289
 #, kde-format
-msgid "Configure Display Settings…"
-msgstr "Konfiguratu bistaratzeko ezarpenak..."
+msgid "Display Configuration"
+msgstr ""
 
 #: contents/ui/ToolBoxContent.qml:310
 #, kde-format
@@ -40,6 +41,9 @@ msgstr "Gehiago"
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Irten editatzeko modutik"
+
+#~ msgid "Configure Display Settings…"
+#~ msgstr "Konfiguratu bistaratzeko ezarpenak..."
 
 #~ msgid "Finish Customizing Layout"
 #~ msgstr "Amaitu antolamendua norbere erara egokitzea"

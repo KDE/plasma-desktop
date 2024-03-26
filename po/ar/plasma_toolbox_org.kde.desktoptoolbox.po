@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-01-07 17:00+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -20,14 +20,15 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 
 #: contents/ui/ToolBoxContent.qml:282
-#, kde-format
-msgid "Choose Global Theme…"
+#, fuzzy, kde-format
+#| msgid "Choose Global Theme…"
+msgid "Global Themes"
 msgstr "اختار سمة العامة"
 
 #: contents/ui/ToolBoxContent.qml:289
 #, kde-format
-msgid "Configure Display Settings…"
-msgstr "اضبط إعدادات العرض…"
+msgid "Display Configuration"
+msgstr ""
 
 #: contents/ui/ToolBoxContent.qml:310
 #, kde-format
@@ -39,6 +40,9 @@ msgstr "المزيد"
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "اخرج من نمط التحرير"
+
+#~ msgid "Configure Display Settings…"
+#~ msgstr "اضبط إعدادات العرض…"
 
 #~ msgid "Lock Screen"
 #~ msgstr "اقفل الشّاشة"

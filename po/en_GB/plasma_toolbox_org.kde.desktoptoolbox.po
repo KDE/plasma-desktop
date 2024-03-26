@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-02-27 21:02+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -18,14 +18,15 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 
 #: contents/ui/ToolBoxContent.qml:282
-#, kde-format
-msgid "Choose Global Theme…"
+#, fuzzy, kde-format
+#| msgid "Choose Global Theme…"
+msgid "Global Themes"
 msgstr "Choose Global Theme…"
 
 #: contents/ui/ToolBoxContent.qml:289
 #, kde-format
-msgid "Configure Display Settings…"
-msgstr "Configure Display Settings…"
+msgid "Display Configuration"
+msgstr ""
 
 #: contents/ui/ToolBoxContent.qml:310
 #, kde-format
@@ -37,6 +38,9 @@ msgstr "More"
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Exit Edit Mode"
+
+#~ msgid "Configure Display Settings…"
+#~ msgstr "Configure Display Settings…"
 
 #~ msgid "Finish Customizing Layout"
 #~ msgstr "Finish Customising Layout"

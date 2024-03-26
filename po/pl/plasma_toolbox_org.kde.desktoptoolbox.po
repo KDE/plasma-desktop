@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-01-21 10:11+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -19,14 +19,15 @@ msgstr ""
 "X-Generator: Lokalize 22.12.1\n"
 
 #: contents/ui/ToolBoxContent.qml:282
-#, kde-format
-msgid "Choose Global Theme…"
+#, fuzzy, kde-format
+#| msgid "Choose Global Theme…"
+msgid "Global Themes"
 msgstr "Wybierz globalny wygląd..."
 
 #: contents/ui/ToolBoxContent.qml:289
 #, kde-format
-msgid "Configure Display Settings…"
-msgstr "Ustawienia wyświetlacza…"
+msgid "Display Configuration"
+msgstr ""
 
 #: contents/ui/ToolBoxContent.qml:310
 #, kde-format
@@ -38,6 +39,9 @@ msgstr "Więcej"
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Wyjdź z trybu edycji"
+
+#~ msgid "Configure Display Settings…"
+#~ msgstr "Ustawienia wyświetlacza…"
 
 #~ msgid "Finish Customizing Layout"
 #~ msgstr "Ukończ dostosowywanie układu"

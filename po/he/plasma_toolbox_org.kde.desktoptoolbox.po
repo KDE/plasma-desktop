@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_toolbox_org.kde.desktoptoolbox\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2023-09-30 22:03+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -20,14 +20,15 @@ msgstr ""
 "X-Generator: Poedit 3.3.2\n"
 
 #: contents/ui/ToolBoxContent.qml:282
-#, kde-format
-msgid "Choose Global Theme…"
+#, fuzzy, kde-format
+#| msgid "Choose Global Theme…"
+msgid "Global Themes"
 msgstr "בחירת ערכת עיצוב כללית…"
 
 #: contents/ui/ToolBoxContent.qml:289
 #, kde-format
-msgid "Configure Display Settings…"
-msgstr "הגדרת תצורת תצוגה…"
+msgid "Display Configuration"
+msgstr ""
 
 #: contents/ui/ToolBoxContent.qml:310
 #, kde-format
@@ -39,6 +40,9 @@ msgstr "עוד"
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "יציאה ממצב עריכה"
+
+#~ msgid "Configure Display Settings…"
+#~ msgstr "הגדרת תצורת תצוגה…"
 
 #~ msgid "Lock Screen"
 #~ msgstr "מסך נעילה"

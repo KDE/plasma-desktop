@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
-"PO-Revision-Date: 2024-03-24 18:59\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"PO-Revision-Date: 2024-03-25 19:39\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -19,14 +19,15 @@ msgstr ""
 "X-Crowdin-File-ID: 43333\n"
 
 #: contents/ui/ToolBoxContent.qml:282
-#, kde-format
-msgid "Choose Global Theme…"
+#, fuzzy, kde-format
+#| msgid "Choose Global Theme…"
+msgid "Global Themes"
 msgstr "选择全局主题…"
 
 #: contents/ui/ToolBoxContent.qml:289
 #, kde-format
-msgid "Configure Display Settings…"
-msgstr "配置显示设置…"
+msgid "Display Configuration"
+msgstr ""
 
 #: contents/ui/ToolBoxContent.qml:310
 #, kde-format
@@ -38,3 +39,6 @@ msgstr "更多"
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "退出编辑模式"
+
+#~ msgid "Configure Display Settings…"
+#~ msgstr "配置显示设置…"

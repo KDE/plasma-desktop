@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-25 00:38+0000\n"
+"POT-Creation-Date: 2024-03-26 00:39+0000\n"
 "PO-Revision-Date: 2024-02-20 02:21+0100\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: LUGOS\n"
@@ -22,14 +22,15 @@ msgstr ""
 "X-Generator: Lokalize 23.11.70\n"
 
 #: contents/ui/ToolBoxContent.qml:282
-#, kde-format
-msgid "Choose Global Theme…"
+#, fuzzy, kde-format
+#| msgid "Choose Global Theme…"
+msgid "Global Themes"
 msgstr "Izbor globalne teme …"
 
 #: contents/ui/ToolBoxContent.qml:289
 #, kde-format
-msgid "Configure Display Settings…"
-msgstr "Nastavitve zaslonov …"
+msgid "Display Configuration"
+msgstr ""
 
 #: contents/ui/ToolBoxContent.qml:310
 #, kde-format
@@ -41,6 +42,9 @@ msgstr "Več"
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Izhod iz urejevalnega načina"
+
+#~ msgid "Configure Display Settings…"
+#~ msgstr "Nastavitve zaslonov …"
 
 #~ msgid "Finish Customizing Layout"
 #~ msgstr "Končaj prilagoditev postavitve"
