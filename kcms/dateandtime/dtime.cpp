@@ -70,7 +70,7 @@ Dtime::Dtime(QWidget *parent, bool haveTimeDated)
 
     kclock = new Kclock(timeBox);
     kclock->setObjectName(QStringLiteral("Kclock"));
-    kclock->setMinimumSize(150, 150);
+    kclock->setMinimumSize(200, 200);
     v2->addWidget(kclock);
 
     QHBoxLayout *v3 = new QHBoxLayout();
