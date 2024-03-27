@@ -141,37 +141,17 @@ EmptyPage {
         section {
             property: "group"
             criteria: ViewSection.FullString
-            delegate: PC3.AbstractButton {
+            delegate: PlasmaExtras.ListSectionHeader {
                 width: view.availableWidth
                 height: KickoffSingleton.compactListDelegateHeight
-
-                Kirigami.Heading {
-                    id: contentLabel
-                    anchors.left: parent.left
-                    width: section.length === 1
-                        ? KickoffSingleton.compactListDelegateContentHeight + leftPadding + rightPadding
-                        : parent.width
-                    height: parent.height
-                    leftPadding: view.effectiveLayoutDirection === Qt.LeftToRight
-                        ? KickoffSingleton.listItemMetrics.margins.left : 0
-                    rightPadding: view.effectiveLayoutDirection === Qt.RightToLeft
-                        ? KickoffSingleton.listItemMetrics.margins.right : 0
-                    horizontalAlignment: section.length === 1 ? Text.AlignHCenter : Text.AlignLeft
-                    verticalAlignment: Text.AlignVCenter
-                    maximumLineCount: 1
-                    elide: Text.ElideRight
-                    opacity: 0.8
-                    level: 3
-                    text: section.length === 1 ? section.toUpperCase() : section
-                    textFormat: Text.PlainText
-                }
+                text: section.length === 1 ? section.toUpperCase() : section
 
                 HoverHandler {
                     enabled: root.hasSectionView
                     cursorShape: enabled ? Qt.PointingHandCursor : undefined
                 }
 
-                onClicked: root.showSectionViewRequested(contentLabel.text)
+                onClicked: root.showSectionViewRequested(text)
             }
         }
 
