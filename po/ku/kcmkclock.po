@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-08 08:48+0000\n"
+"POT-Creation-Date: 2024-03-27 09:15+0000\n"
 "PO-Revision-Date: 2008-12-25 11:12+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <de@li.org>\n"
@@ -43,52 +43,52 @@ msgid "Set date and time &automatically"
 msgstr "Dîrok û demê &bixwe veava bike:"
 
 #. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
+#: dateandtime.ui:47
 #, kde-format
 msgid "&Time server:"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
+#: dateandtime.ui:87
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
 msgstr "Li vir tu dikarî dîroka pergalê roja mehê, mehê û salê biguherînî."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
+#: dateandtime.ui:130
 #, fuzzy, kde-format
 #| msgid "Time zone Error"
 msgid "Time Zone"
 msgstr "Çewtiya Demê herêmî"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
+#: dateandtime.ui:136
 #, fuzzy, kde-format
 #| msgid "To change the local time zone, select your area from the list below"
 msgid "To change the local time zone, select your area from the list below."
 msgstr "Ji bo guherandina demê herêmî, cihê xwe ji lîsteya jêr hilbijêre"
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
+#: dateandtime.ui:159
 #, fuzzy, kde-format
 #| msgid "Current local time zone: %1 (%2)"
 msgid "Current local time zone:"
 msgstr "Demê herêmî yê heyî: %1 (%2)"
 
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
+#: dateandtime.ui:169
 #, kde-format
 msgid "Search…"
 msgstr ""
 
-#: dtime.cpp:60
+#: dtime.cpp:59
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
 
-#: dtime.cpp:89
+#: dtime.cpp:88
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -99,21 +99,21 @@ msgstr ""
 "çirkeyan bike ku biguherînî, tu hem dikarî bi bijkojkên jor û jêr re jî rast "
 "bikî hem jî dikarî demê nû binivîsî."
 
-#: dtime.cpp:118
+#: dtime.cpp:117
 #, fuzzy, kde-format
 #| msgid "Current local time zone: %1 (%2)"
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
 msgstr "Demê herêmî yê heyî: %1 (%2)"
 
-#: dtime.cpp:120
+#: dtime.cpp:119
 #, fuzzy, kde-format
 #| msgid "Current local time zone: %1 (%2)"
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
 msgstr "Demê herêmî yê heyî: %1 (%2)"
 
-#: dtime.cpp:205
+#: dtime.cpp:195
 #, fuzzy, kde-format
 #| msgid ""
 #| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
@@ -125,27 +125,27 @@ msgstr ""
 "Pêşkêşkera Demê Gelemperî(pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp."
 "org,north-america.pool.ntp.org,oceania.pool.ntp.org"
 
-#: dtime.cpp:276
+#: dtime.cpp:266
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "Nikare bigihîje pêşkêşkerê demê: %1"
 
-#: dtime.cpp:280
+#: dtime.cpp:270
 #, kde-format
 msgid "Can not set date."
 msgstr "Nikare dîrokê ava bike."
 
-#: dtime.cpp:283
+#: dtime.cpp:273
 #, kde-format
 msgid "Error setting new time zone."
 msgstr "Avakirina demê herêmî de çewtî derket."
 
-#: dtime.cpp:283
+#: dtime.cpp:273
 #, kde-format
 msgid "Time zone Error"
 msgstr "Çewtiya Demê herêmî"
 
-#: dtime.cpp:301
+#: dtime.cpp:291
 #, fuzzy, kde-format
 #| msgid ""
 #| "<h1>Date & Time</h1> This control module can be used to set the system "

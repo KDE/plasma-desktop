@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-08 08:48+0000\n"
+"POT-Creation-Date: 2024-03-27 09:15+0000\n"
 "PO-Revision-Date: 2023-11-14 14:01-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -47,42 +47,42 @@ msgid "Set date and time &automatically"
 msgstr "Configurar data e hora &automaticamente"
 
 #. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
+#: dateandtime.ui:47
 #, kde-format
 msgid "&Time server:"
 msgstr "&Servidor de horário:"
 
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
+#: dateandtime.ui:87
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
 msgstr "Aqui você pode alterar o dia, mês e ano do sistema."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
+#: dateandtime.ui:130
 #, kde-format
 msgid "Time Zone"
 msgstr "Fuso horário"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
+#: dateandtime.ui:136
 #, kde-format
 msgid "To change the local time zone, select your area from the list below."
 msgstr "Para alterar o fuso horário local, escolha sua área na lista abaixo."
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
+#: dateandtime.ui:159
 #, kde-format
 msgid "Current local time zone:"
 msgstr "Fuso horário atual:"
 
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
+#: dateandtime.ui:169
 #, kde-format
 msgid "Search…"
 msgstr "Pesquisar..."
 
-#: dtime.cpp:60
+#: dtime.cpp:59
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
@@ -91,7 +91,7 @@ msgstr ""
 "Não foi encontrado nenhum utilitário de NTP. Instale o comando 'ntpdate' ou "
 "'rdate' para habilitar a atualização automática da data e hora."
 
-#: dtime.cpp:89
+#: dtime.cpp:88
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -102,19 +102,19 @@ msgstr ""
 "segundos para mudar conforme o valor, usando os botões para cima e para "
 "baixo à direita ou entrando com um novo valor."
 
-#: dtime.cpp:118
+#: dtime.cpp:117
 #, kde-format
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
 msgstr "Fuso horário atual: %1"
 
-#: dtime.cpp:120
+#: dtime.cpp:119
 #, kde-format
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
 msgstr "Fuso horário atual: %1 (%2)"
 
-#: dtime.cpp:205
+#: dtime.cpp:195
 #, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
@@ -124,27 +124,27 @@ msgstr ""
 "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool."
 "ntp.org"
 
-#: dtime.cpp:276
+#: dtime.cpp:266
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "Não é possível contactar o servidor de hora: %1."
 
-#: dtime.cpp:280
+#: dtime.cpp:270
 #, kde-format
 msgid "Can not set date."
 msgstr "Não foi possível ajustar a data."
 
-#: dtime.cpp:283
+#: dtime.cpp:273
 #, kde-format
 msgid "Error setting new time zone."
 msgstr "Erro na configuração do novo fuso horário."
 
-#: dtime.cpp:283
+#: dtime.cpp:273
 #, kde-format
 msgid "Time zone Error"
 msgstr "Erro de fuso horário"
 
-#: dtime.cpp:301
+#: dtime.cpp:291
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "

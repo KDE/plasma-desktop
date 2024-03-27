@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2023-04-16 17:57+0100\n"
+"PO-Revision-Date: 2024-03-27 09:18+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -21,15 +21,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: contents/ui/ToolBoxContent.qml:282
-#, fuzzy, kde-format
-#| msgid "Choose Global Theme…"
+#, kde-format
 msgid "Global Themes"
-msgstr "Elekti Ĉiean Etoson…"
+msgstr "Ĉieaj Etosoj"
 
 #: contents/ui/ToolBoxContent.qml:289
 #, kde-format
 msgid "Display Configuration"
-msgstr ""
+msgstr "Ekran-Agordo"
 
 #: contents/ui/ToolBoxContent.qml:310
 #, kde-format
@@ -41,6 +40,3 @@ msgstr "Pli"
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Forlasi Redaktoreĝimon"
-
-#~ msgid "Configure Display Settings…"
-#~ msgstr "Agordi Ekranajn Proprecojn…"
