@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2023-08-30 10:09+0200\n"
+"PO-Revision-Date: 2024-03-26 11:15+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -413,10 +413,9 @@ msgstr ""
 "verplaatsen."
 
 #: package/contents/ui/main.qml:391
-#, fuzzy, kde-format
-#| msgid "Configure Desktop and Wallpaper…"
+#, kde-format
 msgid "Desktop and Wallpaper"
-msgstr "Bureaublad en achtergrond configureren…"
+msgstr "Bureaublad en achtergrondafbeelding"
 
 #: plugins/folder/directorypicker.cpp:32
 #, kde-format
