@@ -66,7 +66,12 @@ Kirigami.ApplicationItem {
 
         Kirigami.FormLayout {
             id: formLayout
-            enabled: deviceCount
+            enabled: deviceCount > 0
+            onEnabledChanged: {
+                if (enabled) {
+                    syncValuesFromBackend()
+                }
+            }
 
             // Device
             QQC2.ComboBox {
