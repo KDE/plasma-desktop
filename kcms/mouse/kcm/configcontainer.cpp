@@ -6,8 +6,9 @@
 
 #include "configcontainer.h"
 
-#include "configplugin.h"
 #include "inputbackend.h"
+#include "libinput/libinput_config.h"
+#include "logging.h"
 
 #include <KWindowSystem>
 
@@ -26,26 +27,33 @@ Q_DECL_EXPORT void kcminit()
 ConfigContainer::ConfigContainer(QObject *parent, const KPluginMetaData &data)
     : KCModule(parent, data)
 {
-    m_plugin = ConfigPlugin::implementation(this);
+    InputBackend *backend = InputBackend::implementation(this);
+
+    if (!backend) {
+        qCCritical(KCM_MOUSE) << "Not able to select appropriate backend.";
+        return;
+    }
+
+    m_config = new LibinputConfig(this, backend);
 }
 
 void ConfigContainer::load()
 {
-    if (m_plugin) {
-        m_plugin->load();
+    if (m_config) {
+        m_config->load();
     }
 }
 
 void ConfigContainer::save()
 {
-    if (m_plugin) {
-        m_plugin->save();
+    if (m_config) {
+        m_config->save();
     }
 }
 
 void ConfigContainer::defaults()
 {
-    if (m_plugin) {
-        m_plugin->defaults();
+    if (m_config) {
+        m_config->defaults();
     }
 }

@@ -8,7 +8,7 @@
 
 #include <KCModule>
 
-class ConfigPlugin;
+class LibinputConfig;
 
 class ConfigContainer : public KCModule
 {
@@ -35,5 +35,5 @@ public:
     }
 
 private:
-    ConfigPlugin *m_plugin = nullptr;
+    LibinputConfig *m_config = nullptr;
 };

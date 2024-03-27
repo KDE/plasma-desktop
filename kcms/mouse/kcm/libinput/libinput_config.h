@@ -6,25 +6,27 @@
 
 #pragma once
 
-#include "../configplugin.h"
-
 class QHideEvent;
 class QQuickWidget;
 class KMessageWidget;
+class ConfigContainer;
+class InputBackend;
 
-class LibinputConfig : public ConfigPlugin
+#include <QWidget>
+
+class LibinputConfig : public QWidget
 {
     Q_OBJECT
 
 public:
     explicit LibinputConfig(ConfigContainer *parent, InputBackend *backend);
-    virtual ~LibinputConfig()
+    ~LibinputConfig()
     {
     }
 
-    void load() override;
-    void save() override;
-    void defaults() override;
+    void load();
+    void save();
+    void defaults();
 
 private Q_SLOTS:
     void onChange();
@@ -36,6 +38,8 @@ private:
 
     QQuickWidget *m_view;
     KMessageWidget *m_errorMessage;
+    InputBackend *m_backend;
+    ConfigContainer *m_parent;
 
     bool m_initError;
 };

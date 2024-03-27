@@ -28,7 +28,8 @@ static QVariant getDeviceList(InputBackend *backend)
 }
 
 LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
-    : ConfigPlugin(parent)
+    : QWidget(parent->widget())
+    , m_parent(parent)
 {
     m_backend = backend;
 

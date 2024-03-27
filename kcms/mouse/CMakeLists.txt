@@ -76,7 +76,6 @@ add_library(kcm_mouse MODULE
     ${backend_SRCS}
     plugin.cpp
     kcm/configcontainer.cpp
-    kcm/configplugin.cpp
     kcm/libinput/libinput_config.cpp
 )
 kcmutils_generate_desktop_file(kcm_mouse)
