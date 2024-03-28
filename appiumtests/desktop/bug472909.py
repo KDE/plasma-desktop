@@ -71,10 +71,7 @@ class Bug472909Test(unittest.TestCase):
         for i in range(shortcut_list.n_children()):
             shortcut_info: GLib.Variant = shortcut_list.get_child_value(i)
             shortcut_id: str = shortcut_info.get_child_value(0).get_string()
-            if not shortcut_id.startswith("activate widget"):
-                continue
-            shortcut_name: str = shortcut_info.get_child_value(1).get_string()
-            if not "Application Launcher" in shortcut_name:  # from metadata.json
+            if not shortcut_id.startswith("activate application launcher"):
                 continue
             launcher_shortcut_id = shortcut_id
             break
