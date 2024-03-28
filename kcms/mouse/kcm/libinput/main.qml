@@ -485,6 +485,7 @@ Kirigami.ApplicationItem {
                         keySequence: backend.buttonMapping[modelData.buttonName]
 
                         modifierlessAllowed: true
+                        modifierOnlyAllowed: true
                         multiKeyShortcutsAllowed: false
                         checkForConflictsAgainst: ShortcutType.None
 
@@ -533,6 +534,7 @@ Kirigami.ApplicationItem {
                     visible: false
 
                     modifierlessAllowed: true
+                    modifierOnlyAllowed: true
                     multiKeyShortcutsAllowed: false
                     checkForConflictsAgainst: ShortcutType.None
 
