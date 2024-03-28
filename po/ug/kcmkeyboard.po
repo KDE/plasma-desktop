@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 01:37+0000\n"
+"POT-Creation-Date: 2024-03-28 00:41+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -80,7 +80,7 @@ msgstr "ئەن:"
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:341
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:347
 #, kde-format
 msgid "Preview"
 msgstr "ئالدىن كۆزەت"
@@ -220,14 +220,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm_keyboard.ui:249
+#: kcm_keyboard.ui:252
 #, fuzzy, kde-format
 #| msgid "3rd level shortcuts:"
 msgid "Last used shortcut:"
 msgstr "3- دەرىجىلىك تېزلەتمىلەر:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
-#: kcm_keyboard.ui:262
+#: kcm_keyboard.ui:265
 #, kde-format
 msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
@@ -235,57 +235,57 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:287
+#: kcm_keyboard.ui:293
 #, kde-format
 msgid "Configure layouts"
 msgstr "جايلاشتۇرۇشلارنى سەپلە"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:301
+#: kcm_keyboard.ui:307
 #, kde-format
 msgid "Add"
 msgstr "قوش"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:311
+#: kcm_keyboard.ui:317
 #, kde-format
 msgid "Remove"
 msgstr "چىقىرىۋەت"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:321
+#: kcm_keyboard.ui:327
 #, kde-format
 msgid "Move Up"
 msgstr "ئۈستىگە"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:331
+#: kcm_keyboard.ui:337
 #, kde-format
 msgid "Move Down"
 msgstr "پەسكە"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:376
+#: kcm_keyboard.ui:382
 #, fuzzy, kde-format
 #| msgid "Configure layouts"
 msgid "Spare layouts"
 msgstr "جايلاشتۇرۇشلارنى سەپلە"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:408
+#: kcm_keyboard.ui:414
 #, fuzzy, kde-format
 #| msgid "Main shortcuts:"
 msgid "Main layout count:"
 msgstr "ئاساسىي تېزلەتمىلەر:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:438
+#: kcm_keyboard.ui:444
 #, kde-format
 msgid "Advanced"
 msgstr "ئالىي"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:444
+#: kcm_keyboard.ui:450
 #, kde-format
 msgid "&Configure keyboard options"
 msgstr "ھەرپتاختا تاللانمىلىرىنى سەپلە(&C)"

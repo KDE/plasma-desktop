@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-03-28 00:41+0000\n"
 "PO-Revision-Date: 2023-12-15 13:24+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritikus hiba a(z) %1 eszközinformációinak olvasásakor."
 
-#: kcm/libinput/libinput_config.cpp:100
+#: kcm/libinput/libinput_config.cpp:101
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -49,12 +49,12 @@ msgstr ""
 "Hiba az értékek betöltésekor. Lásd a naplót további információkért. Indítsa "
 "újra a modult."
 
-#: kcm/libinput/libinput_config.cpp:105
+#: kcm/libinput/libinput_config.cpp:106
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nem található mutatóeszköz, csatlakoztasson egyet."
 
-#: kcm/libinput/libinput_config.cpp:116
+#: kcm/libinput/libinput_config.cpp:117
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -63,7 +63,7 @@ msgstr ""
 "Nem lehet minden módosítást menteni. Lásd a naplót további információkért. "
 "Indítsa újra a modult, és próbálja meg újból."
 
-#: kcm/libinput/libinput_config.cpp:136
+#: kcm/libinput/libinput_config.cpp:137
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -72,7 +72,7 @@ msgstr ""
 "Hiba az alapértelmezett értékek betöltésekor. Nem mindegyik vagy egyik "
 "beállítás sem állítható az alapértelmezett értékre."
 
-#: kcm/libinput/libinput_config.cpp:158
+#: kcm/libinput/libinput_config.cpp:159
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -81,12 +81,12 @@ msgstr ""
 "Hiba az újonnan csatlakoztatott eszköz hozzáadásakor. Csatlakoztassa újra és "
 "indítsa újra ezt a modult."
 
-#: kcm/libinput/libinput_config.cpp:182
+#: kcm/libinput/libinput_config.cpp:183
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Mutatóeszköz leválasztva, a beállítóablak bezárul."
 
-#: kcm/libinput/libinput_config.cpp:184
+#: kcm/libinput/libinput_config.cpp:185
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Mutatóeszköz leválasztva, nem található másik eszköz."

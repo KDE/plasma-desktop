@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-03-28 00:41+0000\n"
 "PO-Revision-Date: 2024-03-22 02:19+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -41,7 +41,7 @@ msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
 "კრიტიკული შეცდომა მოწყობილობის ფუნდამენტალური ინფორმაციის მიღებისას: %1."
 
-#: kcm/libinput/libinput_config.cpp:100
+#: kcm/libinput/libinput_config.cpp:101
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -50,12 +50,12 @@ msgstr ""
 "მნიშვნელობების ჩატვირთვის შეცდომა. მეტი ინფორმაციის მისაღებად იხილეთ "
 "ჟურნალი. საჭიროა ამ კონფიგურაციის მოდულის გადატვირთვა."
 
-#: kcm/libinput/libinput_config.cpp:105
+#: kcm/libinput/libinput_config.cpp:106
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "თაგუნა ვერ ვიპოვე. შეაერთეთ."
 
-#: kcm/libinput/libinput_config.cpp:116
+#: kcm/libinput/libinput_config.cpp:117
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -64,7 +64,7 @@ msgstr ""
 "ყველა ცვლილების შენახვა შეუძლებელია. მეტი ინფორმაციისთვის იხილეთ ჟურნალი. "
 "გადატვირთეთ ეს მოდული და თავიდან სცადეთ."
 
-#: kcm/libinput/libinput_config.cpp:136
+#: kcm/libinput/libinput_config.cpp:137
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -73,7 +73,7 @@ msgstr ""
 "ნაგულისხმები მნიშვნელობების ჩატვირთვის შეცდომა. ზოგიერთი პარამეტრის მათ "
 "ნაგულისხმებ მნიშვნელობებზე დაყენების შეცდომა."
 
-#: kcm/libinput/libinput_config.cpp:158
+#: kcm/libinput/libinput_config.cpp:159
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -82,12 +82,12 @@ msgstr ""
 "შეცდომა ახლად შეერთებული მოწყობილობის დამატებისას. თავიდან მიაერთეთ ის და ეს "
 "მოდული თავიდან გაუშვით."
 
-#: kcm/libinput/libinput_config.cpp:182
+#: kcm/libinput/libinput_config.cpp:183
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "თაგუნა გაითიშა. მისი პარამეტრების ფანჯარა დაიხურა."
 
-#: kcm/libinput/libinput_config.cpp:184
+#: kcm/libinput/libinput_config.cpp:185
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "თაგუნა გაითიშა. სხვა მოწყობილობა ნაპოვნი არაა."

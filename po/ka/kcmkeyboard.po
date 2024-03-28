@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 01:37+0000\n"
+"POT-Creation-Date: 2024-03-28 00:41+0000\n"
 "PO-Revision-Date: 2023-10-01 03:56+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -80,7 +80,7 @@ msgstr "ჭდე:"
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:341
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:347
 #, kde-format
 msgid "Preview"
 msgstr "მინიატურა"
@@ -234,13 +234,13 @@ msgstr ""
 "დაცვიდან ან მხტუნავ ფანჯარაზე)."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm_keyboard.ui:249
+#: kcm_keyboard.ui:252
 #, kde-format
 msgid "Last used shortcut:"
 msgstr "ბოლოს გამოყენებული მალსახმობი:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
-#: kcm_keyboard.ui:262
+#: kcm_keyboard.ui:265
 #, kde-format
 msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
@@ -250,55 +250,55 @@ msgstr ""
 "ბოლოს გამოყენებულ განლაგებაზე გადაგრთავთ."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:287
+#: kcm_keyboard.ui:293
 #, kde-format
 msgid "Configure layouts"
 msgstr "განლაგებების მორგება"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:301
+#: kcm_keyboard.ui:307
 #, kde-format
 msgid "Add"
 msgstr "დამატება"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:311
+#: kcm_keyboard.ui:317
 #, kde-format
 msgid "Remove"
 msgstr "წაშლა"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:321
+#: kcm_keyboard.ui:327
 #, kde-format
 msgid "Move Up"
 msgstr "აწევა"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:331
+#: kcm_keyboard.ui:337
 #, kde-format
 msgid "Move Down"
 msgstr "ჩამოწევა"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:376
+#: kcm_keyboard.ui:382
 #, kde-format
 msgid "Spare layouts"
 msgstr "ზედმეტი განლაგებები"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:408
+#: kcm_keyboard.ui:414
 #, kde-format
 msgid "Main layout count:"
 msgstr "მთავარი განლაგების რიცხვი:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:438
+#: kcm_keyboard.ui:444
 #, kde-format
 msgid "Advanced"
 msgstr "დამატებითი"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:444
+#: kcm_keyboard.ui:450
 #, kde-format
 msgid "&Configure keyboard options"
 msgstr "კლავიატურის მალსახმობების &კონფიგურაცია"

@@ -1,26 +1,26 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
+# SPDX-FileCopyrightText: 2023, 2024 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-22 00:39+0000\n"
-"PO-Revision-Date: 2023-11-04 18:39+0100\n"
+"PO-Revision-Date: 2024-03-18 23:42+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
-"Language-Team: \n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: actions.cpp:19
 #, kde-format
 msgid "Touchpad"
-msgstr ""
+msgstr "Panel táctil"
 
 #: actions.cpp:22
 #, kde-format
@@ -55,22 +55,22 @@ msgstr ""
 #: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:95
 #, kde-format
 msgid "No touchpad found"
-msgstr ""
+msgstr "Nun s'atopó'l panel táctil"
 
 #: backends/x11/xlibbackend.cpp:124 backends/x11/xlibbackend.cpp:138
 #, kde-format
 msgid "Cannot apply touchpad configuration"
-msgstr ""
+msgstr "Nun se pue aplicar l'aplicación del panel táctil"
 
 #: backends/x11/xlibbackend.cpp:152 backends/x11/xlibbackend.cpp:165
 #, kde-format
 msgid "Cannot read touchpad configuration"
-msgstr ""
+msgstr "Nun se pue lleer la configuración de la pantalla táctil"
 
 #: backends/x11/xlibbackend.cpp:178
 #, kde-format
 msgid "Cannot read default touchpad configuration"
-msgstr ""
+msgstr "Nun se pue lleer la configuración predeterminada del panel táctil"
 
 #: kcm/libinput/touchpad.qml:96
 #, kde-format
@@ -85,12 +85,12 @@ msgstr "Preséu:"
 #: kcm/libinput/touchpad.qml:136
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Xeneral:"
 
 #: kcm/libinput/touchpad.qml:137
 #, kde-format
 msgid "Device enabled"
-msgstr ""
+msgstr "Preséu activáu"
 
 #: kcm/libinput/touchpad.qml:141
 #, kde-format
@@ -158,7 +158,7 @@ msgstr ""
 #: kcm/libinput/touchpad.qml:405
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Estándar"
 
 #: kcm/libinput/touchpad.qml:409
 #, kde-format
@@ -372,7 +372,7 @@ msgstr ""
 #: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
-msgstr ""
+msgstr "Nun s'atopó nengún panel táctil. Conecta unu agora."
 
 #: kcm/touchpadconfig.cpp:111
 #, kde-format
@@ -427,7 +427,7 @@ msgstr ""
 #, kde-format
 msgctxt "Emulated mouse button"
 msgid "Left button"
-msgstr ""
+msgstr "Botón esquierdu"
 
 #. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
 #: touchpadparameters.kcfg:33
@@ -441,21 +441,21 @@ msgstr ""
 #, kde-format
 msgctxt "Emulated mouse button"
 msgid "Right button"
-msgstr ""
+msgstr "Botón derechu"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:285
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "All edges"
-msgstr ""
+msgstr "Tolos berbesos"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:288
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Top edge"
-msgstr ""
+msgstr "Berbesu cimeru"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:291
@@ -469,7 +469,7 @@ msgstr ""
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Right edge"
-msgstr ""
+msgstr "Berbesu derechu"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:297
@@ -483,7 +483,7 @@ msgstr ""
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Bottom edge"
-msgstr ""
+msgstr "Berbesu baxeru"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:303
@@ -497,7 +497,7 @@ msgstr ""
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Left edge"
-msgstr ""
+msgstr "Berbesu esquierdu"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:309

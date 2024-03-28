@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 01:37+0000\n"
+"POT-Creation-Date: 2024-03-28 00:41+0000\n"
 "PO-Revision-Date: 2012-06-13 15:26+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -91,7 +91,7 @@ msgstr "ស្លាក ៖"
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:341
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:347
 #, kde-format
 msgid "Preview"
 msgstr ""
@@ -245,14 +245,14 @@ msgstr ""
 "ហើយ​អាច​មិន​ដំណើរការ​ក្នុង​ស្ថានភាព​មួយ​ចំនួន (ឧ. ប្រសិន​បើ​ការ​លេចឡើង​សកម្ម ឬ​ពី​ធាតុ​រក្សាអេក្រង់) ។"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm_keyboard.ui:249
+#: kcm_keyboard.ui:252
 #, fuzzy, kde-format
 #| msgid "Alternative shortcut:"
 msgid "Last used shortcut:"
 msgstr "ផ្លូវ​កាត់​ជម្រើស ៖"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
-#: kcm_keyboard.ui:262
+#: kcm_keyboard.ui:265
 #, kde-format
 msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
@@ -260,55 +260,55 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:287
+#: kcm_keyboard.ui:293
 #, kde-format
 msgid "Configure layouts"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ​ប្លង់"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:301
+#: kcm_keyboard.ui:307
 #, kde-format
 msgid "Add"
 msgstr "បន្ថែម"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:311
+#: kcm_keyboard.ui:317
 #, kde-format
 msgid "Remove"
 msgstr "យកចេញ​"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:321
+#: kcm_keyboard.ui:327
 #, kde-format
 msgid "Move Up"
 msgstr "ផ្លាស់​ទី​ឡើងលើ​"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:331
+#: kcm_keyboard.ui:337
 #, kde-format
 msgid "Move Down"
 msgstr "ផ្លាស់ទី​ចុះ​ក្រោម​"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:376
+#: kcm_keyboard.ui:382
 #, kde-format
 msgid "Spare layouts"
 msgstr "ប្លង់​បម្រុង"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:408
+#: kcm_keyboard.ui:414
 #, kde-format
 msgid "Main layout count:"
 msgstr "ចំនួន​ប្លង់​​ចម្បង ៖   "
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:438
+#: kcm_keyboard.ui:444
 #, kde-format
 msgid "Advanced"
 msgstr "កម្រិត​ខ្ពស់"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:444
+#: kcm_keyboard.ui:450
 #, kde-format
 msgid "&Configure keyboard options"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ​ជម្រើស​ក្ដារចុច"

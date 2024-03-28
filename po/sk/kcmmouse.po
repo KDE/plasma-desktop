@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-03-28 00:41+0000\n"
 "PO-Revision-Date: 2023-11-11 15:39+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritická chyba počas čítania základných informácií o zariadení %1."
 
-#: kcm/libinput/libinput_config.cpp:100
+#: kcm/libinput/libinput_config.cpp:101
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -56,12 +56,12 @@ msgstr ""
 "Chyba počas načítavania hodnôt. Pozrite si logy pre viac informácií. Prosím "
 "reštartujte tento konfiguračný modul."
 
-#: kcm/libinput/libinput_config.cpp:105
+#: kcm/libinput/libinput_config.cpp:106
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nenájdené žiadne ukazovacie zariadenie. Pripojte ho teraz."
 
-#: kcm/libinput/libinput_config.cpp:116
+#: kcm/libinput/libinput_config.cpp:117
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -70,7 +70,7 @@ msgstr ""
 "Nebolo možné uložiť zmeny. Pozrite logy pre viac informácií. Prosím "
 "reštarujte teto konfiguračný modul a skúste znova."
 
-#: kcm/libinput/libinput_config.cpp:136
+#: kcm/libinput/libinput_config.cpp:137
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -79,7 +79,7 @@ msgstr ""
 "Chyba počas načítania predvolených hodnôt. Zlyhalo nastavenie niektorých "
 "možností na ich predvolené hodnoty."
 
-#: kcm/libinput/libinput_config.cpp:158
+#: kcm/libinput/libinput_config.cpp:159
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -88,12 +88,12 @@ msgstr ""
 "Chyba počas pridávania nového zariadenia. Prosím pripojte ho znova a "
 "reštarujte tento modul nastavení."
 
-#: kcm/libinput/libinput_config.cpp:182
+#: kcm/libinput/libinput_config.cpp:183
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Ukazovacie zariadenie odpojené. Zatvorte tento dialóg nastavení."
 
-#: kcm/libinput/libinput_config.cpp:184
+#: kcm/libinput/libinput_config.cpp:185
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Ukazovacie zariadenie odpojené. Žiadne iné zariadenie nebolo nájdené."

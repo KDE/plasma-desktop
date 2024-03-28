@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-03-28 00:41+0000\n"
 "PO-Revision-Date: 2024-03-22 08:11+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -51,7 +51,7 @@ msgstr "תשאול התקן הפלט נכשל. נא לפתוח את מודול �
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "שגיאה משמעותית בקריאת פרטי התקן יסודיים של %1."
 
-#: kcm/libinput/libinput_config.cpp:100
+#: kcm/libinput/libinput_config.cpp:101
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -60,12 +60,12 @@ msgstr ""
 "שגיאה בטעינת ערכים. יש מידע נוסף ביומנים. נא להפעיל את מודול ההגדרות הזה "
 "מחדש."
 
-#: kcm/libinput/libinput_config.cpp:105
+#: kcm/libinput/libinput_config.cpp:106
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "לא נמצא התקן הצבעה. יש לחבר כעת."
 
-#: kcm/libinput/libinput_config.cpp:116
+#: kcm/libinput/libinput_config.cpp:117
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -74,7 +74,7 @@ msgstr ""
 "אי אפשר לשמור את כל השינויים. יש מידע נוסף ביומן. נא להפעיל את מודול הגדרות "
 "זה מחדש ולנסות שוב."
 
-#: kcm/libinput/libinput_config.cpp:136
+#: kcm/libinput/libinput_config.cpp:137
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -83,7 +83,7 @@ msgstr ""
 "שגיאה בטעינת ערכי ברירת המחדל. הגדרת אפשרויות מסוימות לברירות המחדל שלהן "
 "נכשלה,"
 
-#: kcm/libinput/libinput_config.cpp:158
+#: kcm/libinput/libinput_config.cpp:159
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -92,12 +92,12 @@ msgstr ""
 "שגיאה בהוספת התקן מחובר חדש. נא לחבר אותו מחדש ולהפעיל את מודול ההגדרות הזה "
 "מחדש."
 
-#: kcm/libinput/libinput_config.cpp:182
+#: kcm/libinput/libinput_config.cpp:183
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "התקן הצבעה מנותק. חלונית ההגדרות שלו נסגרה."
 
-#: kcm/libinput/libinput_config.cpp:184
+#: kcm/libinput/libinput_config.cpp:185
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "התקן הצבעה מנותק. לא נמצאו התקנים אחרים."

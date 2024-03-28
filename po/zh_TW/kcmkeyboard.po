@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-03 01:37+0000\n"
+"POT-Creation-Date: 2024-03-28 00:41+0000\n"
 "PO-Revision-Date: 2023-10-21 17:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -87,7 +87,7 @@ msgstr "標籤："
 
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:341
+#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:347
 #, kde-format
 msgid "Preview"
 msgstr "預覽"
@@ -234,13 +234,13 @@ msgstr ""
 "如有彈出式視窗，或是在螢幕保護程式中）。"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm_keyboard.ui:249
+#: kcm_keyboard.ui:252
 #, kde-format
 msgid "Last used shortcut:"
 msgstr "上次使用的快捷鍵："
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
-#: kcm_keyboard.ui:262
+#: kcm_keyboard.ui:265
 #, kde-format
 msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
@@ -248,55 +248,55 @@ msgid ""
 msgstr "這個快捷鍵讓您可以快速在兩個佈局間切換，它總是會切換到上次使用的佈局。"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:287
+#: kcm_keyboard.ui:293
 #, kde-format
 msgid "Configure layouts"
 msgstr "設定佈局"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:301
+#: kcm_keyboard.ui:307
 #, kde-format
 msgid "Add"
 msgstr "新增"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:311
+#: kcm_keyboard.ui:317
 #, kde-format
 msgid "Remove"
 msgstr "移除"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:321
+#: kcm_keyboard.ui:327
 #, kde-format
 msgid "Move Up"
 msgstr "上移"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:331
+#: kcm_keyboard.ui:337
 #, kde-format
 msgid "Move Down"
 msgstr "下移"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:376
+#: kcm_keyboard.ui:382
 #, kde-format
 msgid "Spare layouts"
 msgstr "外加佈局"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:408
+#: kcm_keyboard.ui:414
 #, kde-format
 msgid "Main layout count:"
 msgstr "主佈局計數："
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:438
+#: kcm_keyboard.ui:444
 #, kde-format
 msgid "Advanced"
 msgstr "進階"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:444
+#: kcm_keyboard.ui:450
 #, kde-format
 msgid "&Configure keyboard options"
 msgstr "開啟鍵盤選項(&C)"

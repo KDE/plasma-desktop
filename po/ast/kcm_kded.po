@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2023-05-03 21:42+0200\n"
+"PO-Revision-Date: 2024-03-20 10:47+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
-"Language-Team: \n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -48,6 +48,8 @@ msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
+"El xestor de ficheros en segundu planu (kded6) nun ta n'execución. Asegúrate "
+"de que ta instaláu correutamente."
 
 #: ui/main.qml:46
 #, kde-format
@@ -62,6 +64,8 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
+"Aniciáronse/paráronse dalgunos servicios cuando'l xestor de servicios en "
+"segundu planu (kded6) se reanició p'aplicar los cambeos."
 
 #: ui/main.qml:97
 #, kde-format
@@ -83,12 +87,12 @@ msgstr ""
 #: ui/main.qml:136
 #, kde-format
 msgid "Startup Services"
-msgstr ""
+msgstr "Servicios del aniciu"
 
 #: ui/main.qml:137
 #, kde-format
 msgid "Load-on-Demand Services"
-msgstr ""
+msgstr "Servicios de carga baxo demanda"
 
 #: ui/main.qml:156
 #, kde-format
@@ -98,19 +102,19 @@ msgstr ""
 #: ui/main.qml:199
 #, kde-format
 msgid "Not running"
-msgstr ""
+msgstr "Nun ta n'execución"
 
 #: ui/main.qml:200
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "N'execución"
 
 #: ui/main.qml:219
 #, kde-format
 msgid "Stop Service"
-msgstr ""
+msgstr "Parar el serviciu"
 
 #: ui/main.qml:219
 #, kde-format
 msgid "Start Service"
-msgstr ""
+msgstr "Aniciar el serviciu"
