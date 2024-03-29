@@ -1,0 +1,149 @@
+# translation of kcm_tablet.pot to Esperanto
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-desktop package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"PO-Revision-Date: 2024-03-28 09:21+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kcmtablet.cpp:32
+#, kde-format
+msgid "Primary (default)"
+msgstr "Ĉefa (defaŭlte)"
+
+#: kcmtablet.cpp:33
+#, kde-format
+msgid "Portrait"
+msgstr "Vertikale"
+
+#: kcmtablet.cpp:34
+#, kde-format
+msgid "Landscape"
+msgstr "Pejzaĝeca (horizontala)"
+
+#: kcmtablet.cpp:35
+#, kde-format
+msgid "Inverted Portrait"
+msgstr "Inversa Portreto"
+
+#: kcmtablet.cpp:36
+#, kde-format
+msgid "Inverted Landscape"
+msgstr "Inversa Pejzaĝo"
+
+#: kcmtablet.cpp:86
+#, kde-format
+msgid "Follow the active screen"
+msgstr "Sekvi la aktivan ekranon"
+
+#: kcmtablet.cpp:94
+#, kde-format
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
+
+#: kcmtablet.cpp:137
+#, kde-format
+msgid "Fit to Output"
+msgstr "Fit to Eligo"
+
+#: kcmtablet.cpp:138
+#, kde-format
+msgid "Fit Output in tablet"
+msgstr "Fit Eligo en tablojdo"
+
+#: kcmtablet.cpp:139
+#, kde-format
+msgid "Custom size"
+msgstr "Propra grandeco"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid "No drawing tablets found."
+msgstr "Neniuj desegnotabuloj trovitaj."
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "Aparato:"
+
+#: package/contents/ui/main.qml:77
+#, kde-format
+msgid "Target display:"
+msgstr "Cel-ekrano:"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Orientation:"
+msgstr "Orientiĝo:"
+
+#: package/contents/ui/main.qml:108
+#, kde-format
+msgid "Left-handed mode:"
+msgstr "Maldekstramana reĝimo:"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Area:"
+msgstr "Areo:"
+
+#: package/contents/ui/main.qml:206
+#, kde-format
+msgid "Resize the tablet area"
+msgstr "Regrandigi la tablojdan areon"
+
+#: package/contents/ui/main.qml:230
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr "Ŝlosi bildformaton"
+
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgctxt "tablet area position - size"
+msgid "%1,%2 - %3×%4"
+msgstr "%1,%2 - %3×%4"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Tool Button 1"
+msgstr "Ila Butono 1"
+
+#: package/contents/ui/main.qml:247
+#, kde-format
+msgid "Tool Button 2"
+msgstr "Ila Butono 2"
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Tool Button 3"
+msgstr "Ila Butono 3"
+
+#: package/contents/ui/main.qml:291
+#, kde-format
+msgctxt "@label:listbox The pad we are configuring"
+msgid "Pad:"
+msgstr "Kuseneto:"
+
+#: package/contents/ui/main.qml:302
+#, kde-format
+msgid "None"
+msgstr "Neniu"
+
+#: package/contents/ui/main.qml:324
+#, kde-format
+msgid "Button %1:"
+msgstr "Butono %1:"

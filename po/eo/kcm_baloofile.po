@@ -1,0 +1,143 @@
+# translation of kcm_baloofile.pot to esperanto
+# Copyright (C) 2016 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-desktop package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_baloofile\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-12-14 00:48+0000\n"
+"PO-Revision-Date: 2023-08-12 20:57+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid ""
+"This module lets you configure the file indexer and search functionality."
+msgstr ""
+
+#: package/contents/ui/main.qml:58
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"Ĉi tio malŝaltos dosierserĉadon en KRunner kaj lanĉilaj menuoj, kaj forigos "
+"etenditajn metadatenojn de ĉiuj KDE-aplikoj."
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"Ĉu vi volas forigi la konservitajn indeksajn datumojn? %1 de spaco estos "
+"liberigita, sed se indeksado estas reebligita poste, la tuta indekso devos "
+"esti rekreita de nulo. Ĉi tio povas preni iom da tempo, depende de kiom da "
+"dosieroj vi havas."
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "Delete Index Data"
+msgstr "Forigi Indeksajn Datumojn"
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "The system must be restarted before these changes will take effect."
+msgstr ""
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "@action:button"
+msgid "Restart"
+msgstr "Restartigi"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid ""
+"File Search helps you quickly locate all your files based on their content."
+msgstr ""
+
+#: package/contents/ui/main.qml:107
+#, kde-format
+msgid "Enable File Search"
+msgstr ""
+
+#: package/contents/ui/main.qml:122
+#, kde-format
+msgid "Also index file content"
+msgstr ""
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Index hidden files and folders"
+msgstr ""
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Status: %1, %2% complete"
+msgstr ""
+
+#: package/contents/ui/main.qml:165
+#, kde-format
+msgid "Pause Indexer"
+msgstr "Paŭzigi Indeksilon"
+
+#: package/contents/ui/main.qml:165
+#, kde-format
+msgid "Resume Indexer"
+msgstr "Rekomenci Indeksilon"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Currently indexing: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:183
+#, kde-format
+msgid "Folder specific configuration:"
+msgstr ""
+
+#: package/contents/ui/main.qml:213
+#, kde-format
+msgid "Start indexing a folder…"
+msgstr ""
+
+#: package/contents/ui/main.qml:224
+#, kde-format
+msgid "Stop indexing a folder…"
+msgstr ""
+
+#: package/contents/ui/main.qml:275
+#, kde-format
+msgid "Not indexed"
+msgstr "Ne indeksita"
+
+#: package/contents/ui/main.qml:276
+#, kde-format
+msgid "Indexed"
+msgstr "Indeksita"
+
+#: package/contents/ui/main.qml:306
+#, kde-format
+msgid "Delete entry"
+msgstr "Forigi eniron"
+
+#: package/contents/ui/main.qml:321
+#, kde-format
+msgid "Select a folder to include"
+msgstr "Elekti dosierujon por inkluzivi"
+
+#: package/contents/ui/main.qml:321
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "Elekti dosierujon por ekskludi"

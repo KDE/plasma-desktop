@@ -1,0 +1,131 @@
+# translation of org.kde.plasma.emojier.pot to esperanto
+# Copyright (C) 2016 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-desktop package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-04-12 02:48+0000\n"
+"PO-Revision-Date: 2024-01-04 19:49+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: app/emojier.cpp:84 app/emojier.cpp:86
+#, kde-format
+msgid "Emoji Selector"
+msgstr "Emoji-Selektilo"
+
+#: app/emojier.cpp:88
+#, kde-format
+msgid "(C) 2019 Aleix Pol i Gonzalez"
+msgstr "(C) 2019 Aleix Pol i Gonzalez"
+
+#: app/emojier.cpp:90
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Oliver Kellogg"
+
+#: app/emojier.cpp:90
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "okellogg@users.sourceforge.net"
+
+#: app/emojier.cpp:105
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Anstataŭigi ekzistantan petskribon"
+
+#: app/ui/CategoryPage.qml:33 app/ui/emojier.qml:50
+#, kde-format
+msgid "Search"
+msgstr "Serĉi"
+
+#: app/ui/CategoryPage.qml:74
+#, kde-format
+msgid "Clear History"
+msgstr "Forviŝi Historion"
+
+#: app/ui/CategoryPage.qml:153
+#, kde-format
+msgid "No recent Emojis"
+msgstr "Neniuj lastatempaj Emojis"
+
+#: app/ui/emojier.qml:34
+#, kde-format
+msgid "%1 copied to the clipboard"
+msgstr "%1 kopiita al la tondujo"
+
+#: app/ui/emojier.qml:40
+#, kde-format
+msgid "Recent"
+msgstr "Lastatempa"
+
+#: app/ui/emojier.qml:61
+#, kde-format
+msgid "All"
+msgstr "Ĉiuj"
+
+#: app/ui/emojier.qml:72
+#, kde-format
+msgid "Categories"
+msgstr "Kategorioj"
+
+#: emojicategory.cpp:14
+msgctxt "Emoji Category"
+msgid "Smileys and Emotion"
+msgstr "Smileys kaj Emocio"
+
+#: emojicategory.cpp:15
+msgctxt "Emoji Category"
+msgid "People and Body"
+msgstr "Homoj kaj Korpo"
+
+#: emojicategory.cpp:16
+msgctxt "Emoji Category"
+msgid "Component"
+msgstr "Komponanto"
+
+#: emojicategory.cpp:17
+msgctxt "Emoji Category"
+msgid "Animals and Nature"
+msgstr "Bestoj kaj Naturo"
+
+#: emojicategory.cpp:18
+msgctxt "Emoji Category"
+msgid "Food and Drink"
+msgstr "Manĝaĵo kaj trinkaĵo"
+
+#: emojicategory.cpp:19
+msgctxt "Emoji Category"
+msgid "Travel and Places"
+msgstr "Vojaĝoj kaj Lokoj"
+
+#: emojicategory.cpp:20
+msgctxt "Emoji Category"
+msgid "Activities"
+msgstr "Aktivecoj"
+
+#: emojicategory.cpp:21
+msgctxt "Emoji Category"
+msgid "Objects"
+msgstr "Objektoj"
+
+#: emojicategory.cpp:22
+msgctxt "Emoji Category"
+msgid "Symbols"
+msgstr "Simboloj"
+
+#: emojicategory.cpp:23
+msgctxt "Emoji Category"
+msgid "Flags"
+msgstr "Flagoj"
