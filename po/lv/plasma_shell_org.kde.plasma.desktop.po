@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-01-23 17:08+0200\n"
+"PO-Revision-Date: 2024-03-27 18:48+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -301,10 +301,8 @@ msgid "Bottom"
 msgstr "Apakša"
 
 #: contents/configuration/PanelConfiguration.qml:174
-#, fuzzy
-#| msgid "Set Position..."
 msgid "Set Position…"
-msgstr "Mainīt novietojumu..."
+msgstr "Iestatīt novietojumu..."
 
 #: contents/configuration/PanelConfiguration.qml:201
 msgid "Alignment"
@@ -315,14 +313,12 @@ msgid "Center"
 msgstr "Centrs"
 
 #: contents/configuration/PanelConfiguration.qml:290
-#, fuzzy
-#| msgid "Height:"
 msgid "Height"
-msgstr "Augstums:"
+msgstr "Augstums"
 
 #: contents/configuration/PanelConfiguration.qml:291
 msgid "Width"
-msgstr ""
+msgstr "Platums"
 
 #: contents/configuration/PanelConfiguration.qml:310
 msgid "Fill height"
@@ -439,10 +435,8 @@ msgstr ""
 "Dubultklikšķis atsauc darbību."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy
-#| msgid "Panels and Desktops Management"
 msgid "Panel and Desktop Management"
-msgstr "Paneļi un darbvirsmas pārvaldība"
+msgstr "Paneļu un darbvirsmas pārvaldība"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
@@ -522,9 +516,9 @@ msgstr "Kategorijas"
 #: contents/explorer/WidgetExplorer.qml:215
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Apstipriniet %1 logdaļas noņemšanu"
+msgstr[1] "Apstipriniet %1 logdaļu noņemšanu"
+msgstr[2] "Apstipriniet %1 logdaļu noņemšanu"
 
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"

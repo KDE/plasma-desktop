@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-12 00:39+0000\n"
-"PO-Revision-Date: 2024-01-22 21:17+0200\n"
+"PO-Revision-Date: 2024-03-27 18:44+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -107,10 +107,9 @@ msgid "Commands"
 msgstr "Komandas"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "System Services"
-msgstr "Sistēmas iestatījumi"
+msgstr "Sistēmas servisi"
 
 #: ui/main.qml:27
 #, kde-format
