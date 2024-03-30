@@ -5,13 +5,13 @@
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2023-10-21 17:17+0900\n"
+"PO-Revision-Date: 2024-03-29 21:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -415,10 +415,9 @@ msgstr ""
 "移動到別處。"
 
 #: package/contents/ui/main.qml:391
-#, fuzzy, kde-format
-#| msgid "Configure Desktop and Wallpaper…"
+#, kde-format
 msgid "Desktop and Wallpaper"
-msgstr "設定桌面…"
+msgstr "桌面與桌布"
 
 #: plugins/folder/directorypicker.cpp:32
 #, kde-format

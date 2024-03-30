@@ -1,23 +1,24 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015, 2015.
 # SPDX-FileCopyrightText: 2021, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015, 2015.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-22 00:39+0000\n"
-"PO-Revision-Date: 2024-02-19 17:51+0400\n"
+"PO-Revision-Date: 2024-03-29 17:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
+"Language-Team: \n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -137,6 +138,9 @@ msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
+"يؤدي تنشيط هذا الإعداد إلى زيادة زمن انتقال النقر بالفأرة بمقدار 50 مللي "
+"ثانية. هناك حاجة إلى تأخير لاكتشاف نقرات الفأرة اليمنى واليسرى المتزامنة "
+"بشكل صحيح."
 
 #: kcm/libinput/touchpad.qml:263
 #, kde-format
