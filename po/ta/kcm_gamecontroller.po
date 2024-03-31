@@ -1,0 +1,76 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-03-28 00:41+0000\n"
+"PO-Revision-Date: 2024-03-30 21:08+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
+
+#: axesmodel.cpp:63
+#, kde-format
+msgctxt "@label Axis value"
+msgid "Value"
+msgstr "மதிப்பு"
+
+#: buttonmodel.cpp:74
+#, kde-format
+msgctxt "Status of a gamepad button"
+msgid "PRESSED"
+msgstr "அழுத்தப்படுகிறது"
+
+#: buttonmodel.cpp:84
+#, kde-format
+msgctxt "@label Button state"
+msgid "State"
+msgstr "நிலை"
+
+#: devicemodel.cpp:72
+#, kde-format
+msgctxt "Device name and path"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/main.qml:23
+#, kde-format
+msgid "No game controllers found"
+msgstr "எந்த விளையாட்டு கட்டுப்படுத்தியும் கண்டுபிடிக்கப்படவில்லை"
+
+#: ui/main.qml:24
+#, kde-format
+msgid "Connect a wired or wireless controller"
+msgstr "கம்பியுள்ள அல்லது கம்பியில்லை விளையாட்டு கட்டுப்படுத்தியை இணைக்கவும்"
+
+#: ui/main.qml:56
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Device:"
+msgstr "சாதனம்:"
+
+#: ui/main.qml:83
+#, kde-format
+msgctxt "@label Visual representation of an axis position"
+msgid "Position:"
+msgstr "இருப்பிடம்:"
+
+#: ui/main.qml:102
+#, kde-format
+msgctxt "@label Gamepad buttons"
+msgid "Buttons:"
+msgstr "பட்டன்கள்"
+
+#: ui/main.qml:124
+#, kde-format
+msgctxt "@label Gamepad axes (sticks)"
+msgid "Axes:"
+msgstr "அச்சுக்கள்:"

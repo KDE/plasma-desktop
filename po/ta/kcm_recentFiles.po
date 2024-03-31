@@ -1,129 +1,130 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-06 01:38+0000\n"
-"PO-Revision-Date: 2024-03-30 19:36\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-03-30 21:06+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcm_recentFiles.pot\n"
-"X-Crowdin-File-ID: 43763\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:10
 #, kde-format
 msgid "How many months keep the activity history"
-msgstr "活动历史记录保留的月数"
+msgstr "எத்தனை மாதங்களுக்கு செயல்பாடு வரலாற்றை வைத்திருக்க வேண்டும்"
 
 #. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:17
 #, kde-format
 msgid "Which data to keep in activity history"
-msgstr "活动历史记录保存的数据"
+msgstr "எந்த விவரங்களை செயல்பாடு வரலாற்றில் வைத்திருக்க வேண்டும்"
 
 #. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:21
 #, kde-format
 msgid "List of Applications whose activity history to save"
-msgstr "保存活动历史的应用程序列表"
+msgstr "எந்த செயலிகளுக்கான செயல்பாடு வரலாற்றை சேமிக்க வேண்டுமோ, அவற்றின் பட்டியல்"
 
 #. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:24
 #, kde-format
 msgid "List of Applications whose activity history not to save"
-msgstr "不保存活动历史的应用程序列表"
+msgstr "எந்த செயலிகளுக்கான செயல்பாடு வரலாற்றை சேமிக்க கூடாதோ, அவற்றின் பட்டியல்"
 
 #: kcm_recentFiles.cpp:77
 #, kde-format
 msgctxt "unlimited number of months"
 msgid "Forever"
-msgstr "永远"
+msgstr "என்றென்றும்"
 
 #: kcm_recentFiles.cpp:86
 #, kde-format
 msgid "Forget the last hour"
-msgstr "忘记最近 1 小时"
+msgstr "கடைசி 1 மணிநேரத்தை மறந்துவிடு"
 
 #: kcm_recentFiles.cpp:87
 #, kde-format
 msgid "Forget the last two hours"
-msgstr "忘记最近 2 小时"
+msgstr "கடைசி 2 மணிநேரத்தை மறந்துவிடு"
 
 #: kcm_recentFiles.cpp:88
 #, kde-format
 msgid "Forget a day"
-msgstr "忘记 1 天"
+msgstr "ஒரு நாளை மறந்துவிடு"
 
 #: kcm_recentFiles.cpp:89
 #, kde-format
 msgid "Forget everything"
-msgstr "忘记所有内容"
+msgstr "அனைத்தையும் மறந்துவிடு"
 
 #: kcm_recentFiles.cpp:232
 #, kde-format
 msgctxt "unit of time. months to keep the history"
 msgid " month"
 msgid_plural " months"
-msgstr[0] " 个月"
+msgstr[0] " மாத‍த்திற்கு"
+msgstr[1] " மாதங்களுக்கு"
 
 #: kcm_recentFiles.cpp:235
 #, kde-format
 msgctxt "for in 'keep history for 5 months'"
 msgid "For "
-msgstr "保存时间 "
+msgstr " "
 
 #. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
 #: ui/RecentFiles.ui:17
 #, kde-format
 msgid "Cleared the activity history."
-msgstr "已清除活动历史记录。"
+msgstr "செயல்பாடு வரலாறு மறக்கப்பட்டது."
 
 #. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
 #: ui/RecentFiles.ui:35
 #, kde-format
 msgid "Keep history:"
-msgstr "保存历史记录："
+msgstr "வரலாற்றை வைத்திருப்பது:"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
 #: ui/RecentFiles.ui:47
 #, kde-format
 msgid "Clear History"
-msgstr "清除历史记录"
+msgstr "வரலாற்றை காலியாக்கு"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
 #: ui/RecentFiles.ui:68
 #, kde-format
 msgid "For a&ll applications"
-msgstr "对所有程序(&L)"
+msgstr "&அனைத்து செயலிகளுக்கும்"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
 #: ui/RecentFiles.ui:78
 #, kde-format
 msgid "&Do not remember"
-msgstr "不要记住(&D)"
+msgstr "&நினைவில் கொள்ளாதே"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
 #: ui/RecentFiles.ui:85
 #, kde-format
 msgid "O&nly for specific applications:"
-msgstr "只对特定程序(&N)："
+msgstr "&குறிப்பிட்ட செயலிகளுக்கு மட்டும்:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
 #: ui/RecentFiles.ui:95
 #, kde-format
 msgid "Remember opened documents:"
-msgstr "记住打开过的文档："
+msgstr "திறக்கும் ஆவணங்களை நினைவில் கொள்:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
 #: ui/RecentFiles.ui:128
 #, kde-format
 msgid "Blacklist applications not on the list"
-msgstr "黑名单中的应用程序不显示在列表中"
+msgstr "பட்டியலில் இல்லாத செயலிகளுக்கு நினைவில் கொள்ளாதே"
