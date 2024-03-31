@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-22 02:24+0000\n"
-"PO-Revision-Date: 2024-01-06 03:31\n"
+"PO-Revision-Date: 2024-03-30 19:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/plasma_applet_org.kde."
+"X-Crowdin-File: /kf6-stable/messages/plasma-desktop/plasma_applet_org.kde."
 "plasma.taskmanager.pot\n"
-"X-Crowdin-File-ID: 43493\n"
+"X-Crowdin-File-ID: 50358\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -72,23 +72,23 @@ msgstr "常规："
 #: package/contents/ui/ConfigAppearance.qml:46
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "悬停在任务上时显示窗口的小型预览"
+msgstr "光标悬停在任务图标上时显示窗口预览"
 
 #: package/contents/ui/ConfigAppearance.qml:51
 #, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "悬停在预览上时隐藏其他窗口"
+msgstr "光标悬停在窗口预览上时隐藏其他窗口"
 
 #: package/contents/ui/ConfigAppearance.qml:56
 #, kde-format
 msgid "Mark applications that play audio"
-msgstr "为正在播放音频的应用程序显示角标"
+msgstr "标记正在播放音频的应用程序"
 
 #: package/contents/ui/ConfigAppearance.qml:64
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr "填充面板的可用空间"
+msgstr "填满面板的可用空间"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
@@ -193,14 +193,14 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "显示窗口小型预览"
+msgstr "显示窗口预览 (小)"
 
 #: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "显示窗口大型预览"
+msgstr "显示窗口预览 (大)"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -213,7 +213,7 @@ msgstr "显示文字列表"
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
-msgstr "显示特效合成器不支持并排显示窗口，因此将改为显示文本式窗口列表"
+msgstr "显示特效合成器不支持并排显示窗口，将改为显示文本式窗口列表"
 
 #: package/contents/ui/ConfigBehavior.qml:82
 #, kde-format
@@ -572,7 +572,7 @@ msgstr "折叠(&S)"
 #: package/contents/ui/ContextMenu.qml:727
 #, kde-format
 msgid "Allow this program to be grouped"
-msgstr "允许将此程序的窗口显示为分组"
+msgstr "允许将此程序的所有窗口合并为一个分组"
 
 #: package/contents/ui/ContextMenu.qml:773
 #, kde-format
@@ -726,7 +726,3 @@ msgstr "忘记最近位置"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "清除最近文件"
-
-#~ msgctxt "1 = number of desktop, 2 = desktop name"
-#~ msgid "&%1 %2"
-#~ msgstr "&%1 %2"
