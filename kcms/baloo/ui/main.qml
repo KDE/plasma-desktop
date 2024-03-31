@@ -47,47 +47,44 @@ KCM.ScrollViewKCM {
         }
     ]
 
-    header: Item {
-        implicitHeight: headerColumn.implicitHeight + headerColumn.anchors.topMargin + Kirigami.Units.smallSpacing
+    headerPaddingEnabled: false // Let the InlineMessages touch the edges
+    header: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
 
-        ColumnLayout {
-            id: headerColumn
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            visible: !fileSearchEnabled.checked && kcm.needsSave
+            type: Kirigami.MessageType.Warning
+            position: Kirigami.InlineMessage.Position.Header
+            showCloseButton: true
+            text: i18n("This will disable file searching in KRunner and launcher menus, and remove extended metadata display from all KDE applications.");
+        }
 
-            anchors {
-                top: parent.top
-                topMargin: Kirigami.Units.largeSpacing
-                left: parent.left
-                leftMargin: Kirigami.Units.largeSpacing
-                right: parent.right
-                rightMargin: Kirigami.Units.largeSpacing
-            }
-
-            spacing: Kirigami.Units.smallSpacing
-
-            Kirigami.InlineMessage {
-                Layout.fillWidth: true
-                visible: !fileSearchEnabled.checked && kcm.needsSave
-                type: Kirigami.MessageType.Warning
-                showCloseButton: true
-                text: i18n("This will disable file searching in KRunner and launcher menus, and remove extended metadata display from all KDE applications.");
-            }
-
-            Kirigami.InlineMessage {
-                id: indexingDisabledWarning
-                Layout.fillWidth: true
-                visible: !kcm.balooSettings.indexingEnabled && !kcm.needsSave && kcm.rawIndexFileSize() > 0
-                type: Kirigami.MessageType.Warning
-                showCloseButton: true
-                text: i18n("Do you want to delete the saved index data? %1 of space will be freed, but if indexing is re-enabled later, the entire index will have to be re-created from scratch. This may take some time, depending on how many files you have.", kcm.prettyIndexFileSize());
-                actions: Kirigami.Action {
-                    text: i18n("Delete Index Data")
-                    icon.name: "edit-delete"
-                    onTriggered: {
-                        kcm.deleteIndex();
-                        indexingDisabledWarning.visible = false;
-                    }
+        Kirigami.InlineMessage {
+            id: indexingDisabledWarning
+            Layout.fillWidth: true
+            visible: !kcm.balooSettings.indexingEnabled && !kcm.needsSave && kcm.rawIndexFileSize() > 0
+            type: Kirigami.MessageType.Warning
+            position: Kirigami.InlineMessage.Position.Header
+            showCloseButton: true
+            text: i18n("Do you want to delete the saved index data? %1 of space will be freed, but if indexing is re-enabled later, the entire index will have to be re-created from scratch. This may take some time, depending on how many files you have.", kcm.prettyIndexFileSize());
+            actions: Kirigami.Action {
+                text: i18n("Delete Index Data")
+                icon.name: "edit-delete"
+                onTriggered: {
+                    kcm.deleteIndex();
+                    indexingDisabledWarning.visible = false;
                 }
             }
+        }
+
+        // By disabling header margins to make the header banners look correct,
+        // we have to re-add some margins for the content area so it doesn't
+        // touch the window edges and look ugly. To make it apply to everything,
+        // we wrap it all in another ColumnLayout with its own margins.
+        ColumnLayout {
+            spacing: Kirigami.Units.smallSpacing
+            Layout.margins: Kirigami.Units.gridUnit
 
             QQC2.Label {
                 text: i18n("File Search helps you quickly locate your files. You can choose which folders and what types of file data are indexed.")
@@ -159,8 +156,6 @@ KCM.ScrollViewKCM {
 
             Kirigami.FormLayout {
                 twinFormLayouts: indexingForm
-
-                Layout.bottomMargin: Kirigami.Units.largeSpacing * 2
 
                 QQC2.ButtonGroup {
                     id: indexingStyleGroup
