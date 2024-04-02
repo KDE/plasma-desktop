@@ -16,6 +16,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
+set(INSTALL_SDDM_THEME TRUE)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -268,6 +269,24 @@ configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 configure_file(config-build-options.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-build-options.h)
 
 plasma_install_package(desktoppackage org.kde.plasma.desktop shells shell)
+
+if (INSTALL_SDDM_THEME)
+    configure_file(sddm-theme/theme.conf.cmake ${CMAKE_CURRENT_BINARY_DIR}/sddm-theme/theme.conf)
+
+# Install the login theme into the SDDM directory
+    #NOTE this trailing slash is important to rename the directory
+    install(DIRECTORY sddm-theme/
+        DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze
+        PATTERN "README.txt" EXCLUDE
+        PATTERN "components" EXCLUDE
+        PATTERN "dummydata" EXCLUDE
+        PATTERN "theme.conf.cmake" EXCLUDE
+    )
+
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/sddm-theme/theme.conf
+        DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze
+    )
+endif()
 
 add_subdirectory(layout-templates)
 
