@@ -57,6 +57,7 @@ KCMUtils.ScrollViewKCM {
         id: pluginSelector
         sourceModel: kcm.model
         query: searchField.text
+        reuseItems: true // delegates are fairly expensive to construct due to their use of ActionToolBar
         delegate: Item { // Needed to avoid visual glitches in ListItemDragHandle
             id: delegateItem
             width: pluginSelector.width
