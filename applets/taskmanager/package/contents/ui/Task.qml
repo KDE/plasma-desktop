@@ -189,7 +189,7 @@ PlasmaCore.ToolTipArea {
     }
     onAudioIndicatorsEnabledChanged: task.hasAudioStreamChanged()
 
-    Keys.onMenuPressed: menuTapHandler.longPressed()
+    Keys.onMenuPressed: contextMenuTimer.start()
     Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task, Plasmoid, tasks)
     Keys.onEnterPressed: Keys.returnPressed(event);
     Keys.onSpacePressed: Keys.returnPressed(event);
@@ -319,8 +319,13 @@ PlasmaCore.ToolTipArea {
         acceptedButtons: Qt.RightButton
         acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad | PointerDevice.Stylus
         gesturePolicy: TapHandler.WithinBounds // Release grab when menu appears
-        longPressThreshold: 0.001 // https://invent.kde.org/qt/qt/qtdeclarative/-/commit/8f6809681ec82da783ae8dcd76fa2c209b28fde6
-        onLongPressed: menuTapHandler.longPressed()
+        onPressedChanged: if (pressed) contextMenuTimer.start()
+    }
+
+    Timer {
+        id: contextMenuTimer
+        interval: 0
+        onTriggered: menuTapHandler.longPressed()
     }
 
     TapHandler {
