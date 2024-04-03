@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2024-03-27 09:02+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -542,6 +542,97 @@ msgstr "Aucun composant graphique ne correspond aux mots clés de la recherche"
 msgid "No widgets available"
 msgstr "Aucun composant graphique disponible"
 
+#: contents/lockscreen/config.qml:19
+msgctxt "@title: group"
+msgid "Clock:"
+msgstr ""
+
+#: contents/lockscreen/config.qml:22
+msgctxt "@option:check"
+msgid "Keep visible when unlocking prompt disappears"
+msgstr ""
+
+#: contents/lockscreen/config.qml:33
+msgctxt "@title: group"
+msgid "Media controls:"
+msgstr ""
+
+#: contents/lockscreen/config.qml:36
+msgctxt "@option:check"
+msgid "Show under unlocking prompt"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:50
+msgid "Unlocking failed"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:276
+msgid "Caps Lock is on"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:290
+msgid "Sleep"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:296
+msgid "Hibernate"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:302
+#, fuzzy
+#| msgid "Switch"
+msgid "Switch User"
+msgstr "Changer"
+
+#: contents/lockscreen/LockScreenUi.qml:363
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:387
+#, fuzzy
+#| msgid "Switch"
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Changer"
+
+#: contents/lockscreen/MainBlock.qml:64
+msgid "Password"
+msgstr ""
+
+#: contents/lockscreen/MainBlock.qml:107
+#: contents/lockscreen/NoPasswordUnlock.qml:17
+msgid "Unlock"
+msgstr ""
+
+#: contents/lockscreen/MainBlock.qml:156
+msgid "(or scan your fingerprint on the reader)"
+msgstr ""
+
+#: contents/lockscreen/MainBlock.qml:160
+msgid "(or scan your smartcard)"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:59
+msgid "No title"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:60
+msgid "No media playing"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:88
+msgid "Previous track"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:100
+msgid "Play or Pause media"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:110
+msgid "Next track"
+msgstr ""
+
 #~ msgid "Sorry! There was an error loading %1."
 #~ msgstr "Désolé ! Une erreur est survenue durant le chargement de %1."
 
@@ -632,9 +723,6 @@ msgstr "Aucun composant graphique disponible"
 #~ msgctxt "@info:tooltip"
 #~ msgid "Use arrow keys to move the panel"
 #~ msgstr "Utiliser les touches de flèche pour déplacer le panneau"
-
-#~ msgid "Switch"
-#~ msgstr "Changer"
 
 #, fuzzy
 #~| msgid "Windows Behind"

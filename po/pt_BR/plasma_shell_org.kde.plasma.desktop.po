@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-11-14 14:07-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -546,6 +546,97 @@ msgstr "Nenhum widget corresponde aos termos da pesquisa"
 msgid "No widgets available"
 msgstr "Nenhum widget disponível"
 
+#: contents/lockscreen/config.qml:19
+msgctxt "@title: group"
+msgid "Clock:"
+msgstr ""
+
+#: contents/lockscreen/config.qml:22
+msgctxt "@option:check"
+msgid "Keep visible when unlocking prompt disappears"
+msgstr ""
+
+#: contents/lockscreen/config.qml:33
+msgctxt "@title: group"
+msgid "Media controls:"
+msgstr ""
+
+#: contents/lockscreen/config.qml:36
+msgctxt "@option:check"
+msgid "Show under unlocking prompt"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:50
+msgid "Unlocking failed"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:276
+msgid "Caps Lock is on"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:290
+msgid "Sleep"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:296
+msgid "Hibernate"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:302
+#, fuzzy
+#| msgid "Switch"
+msgid "Switch User"
+msgstr "Mudar"
+
+#: contents/lockscreen/LockScreenUi.qml:363
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:387
+#, fuzzy
+#| msgid "Switch"
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Mudar"
+
+#: contents/lockscreen/MainBlock.qml:64
+msgid "Password"
+msgstr ""
+
+#: contents/lockscreen/MainBlock.qml:107
+#: contents/lockscreen/NoPasswordUnlock.qml:17
+msgid "Unlock"
+msgstr ""
+
+#: contents/lockscreen/MainBlock.qml:156
+msgid "(or scan your fingerprint on the reader)"
+msgstr ""
+
+#: contents/lockscreen/MainBlock.qml:160
+msgid "(or scan your smartcard)"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:59
+msgid "No title"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:60
+msgid "No media playing"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:88
+msgid "Previous track"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:100
+msgid "Play or Pause media"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:110
+msgid "Next track"
+msgstr ""
+
 #~ msgid "Sorry! There was an error loading %1."
 #~ msgstr "Desculpe! Ocorreu um erro ao carregar %1."
 
@@ -575,9 +666,6 @@ msgstr "Nenhum widget disponível"
 #~ msgctxt "@info:tooltip"
 #~ msgid "Use arrow keys to move the panel"
 #~ msgstr "Use as teclas de seta para mover o painel"
-
-#~ msgid "Switch"
-#~ msgstr "Mudar"
 
 #, fuzzy
 #~| msgid "Windows Go Below"
