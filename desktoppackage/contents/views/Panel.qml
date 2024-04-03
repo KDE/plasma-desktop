@@ -7,7 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Layouts 1.1
-import QtQml 2.15
+import QtQml
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
@@ -139,7 +139,9 @@ Item {
     readonly property int floatingnessAnimationDuration: Kirigami.Units.longDuration
     property double floatingnessTarget: 0.0 // The animation is handled in panelview.cpp for efficiency
     property double floatingness: 0.0
-
+    property rect contentGeom
+    //Qt.size(root.width, root.height)
+onContentGeomChanged: print("AAAAAA"+contentGeom)
     // PanelOpacity is a value in [0, 1] that's used as the opacity of the opaque elements over the transparent ones; values between 0 and 1 are used for animations
     property double panelOpacity
     Behavior on panelOpacity {
@@ -166,10 +168,15 @@ Item {
     KSvg.FrameSvgItem {
         id: floatingTranslucentItem
         visible: floatingness !== 0 && panelOpacity !== 1
-        x: root.leftEdge ? fixedLeftFloatingPadding + fixedRightFloatingPadding * (1 - floatingness) : leftFloatingPadding
+     /*   x: root.leftEdge ? fixedLeftFloatingPadding + fixedRightFloatingPadding * (1 - floatingness) : leftFloatingPadding
         y: root.topEdge ? fixedTopFloatingPadding + fixedBottomFloatingPadding * (1 - floatingness) : topFloatingPadding
         width: verticalPanel ? panel.thickness : parent.width - leftFloatingPadding - rightFloatingPadding
-        height: verticalPanel ? parent.height - topFloatingPadding - bottomFloatingPadding : panel.thickness
+        height: verticalPanel ? parent.height - topFloatingPadding - bottomFloatingPadding : panel.thickness*/
+
+        width: root.contentGeom.width
+        height: root.contentGeom.height
+//anchors.centerIn:parent
+x: root.contentGeom.x
 
         imagePath: containment?.plasmoid?.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
     }
@@ -366,7 +373,7 @@ Item {
     Item {
         id: containmentParent
         anchors.centerIn: isOpaque ? floatingOpaqueItem : floatingTranslucentItem
-        width: root.verticalPanel ? panel.thickness : root.width - fixedLeftFloatingPadding - fixedRightFloatingPadding
-        height: root.verticalPanel ? root.height - fixedBottomFloatingPadding - fixedTopFloatingPadding : panel.thickness
+        width: root.verticalPanel ? panel.thickness : root.contentGeom.width - fixedLeftFloatingPadding - fixedRightFloatingPadding
+        height: root.verticalPanel ? root.contentGeom.height - fixedBottomFloatingPadding - fixedTopFloatingPadding : panel.thickness
     }
 }
