@@ -20,15 +20,8 @@
 #include <KSharedConfig>
 #include <QFile>
 
-#include <X11/X.h>
-#include <X11/Xatom.h>
-#include <X11/Xlib.h>
-#include <X11/Xutil.h>
-#include <X11/extensions/XI.h>
-#include <X11/extensions/XInput2.h>
 #if HAVE_XCURSOR
 #include <X11/Xcursor/Xcursor.h>
-#include <X11/extensions/XInput.h>
 #endif
 
 X11Backend *X11Backend::implementation(QObject *parent)
