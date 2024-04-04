@@ -26,19 +26,9 @@ public:
     bool getConfig() override;
     bool getDefaultConfig() override;
     bool isChangedConfig() const override;
-    QString errorString() const override
-    {
-        return m_errorString;
-    }
-
-    int deviceCount() const override
-    {
-        return m_devices.count();
-    }
-    QList<QObject *> getDevices() const override
-    {
-        return m_devices;
-    }
+    QString errorString() const override;
+    int deviceCount() const override;
+    QList<QObject *> getDevices() const override;
 
     QVariantMap buttonMapping();
     void setButtonMapping(const QVariantMap &mapping);

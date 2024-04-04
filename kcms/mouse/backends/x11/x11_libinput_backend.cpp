@@ -41,4 +41,24 @@ void X11LibinputBackend::kcmInit()
     applyConfig();
 }
 
+QString X11LibinputBackend::errorString() const
+{
+    return m_errorString;
+}
+
+int X11LibinputBackend::deviceCount() const
+{
+    return 1;
+}
+
+bool X11LibinputBackend::isAnonymousDevice() const
+{
+    return true;
+}
+
+QList<QObject *> X11LibinputBackend::getDevices() const
+{
+    return QList<QObject *>(1, m_device);
+}
+
 #include "moc_x11_libinput_backend.cpp"

@@ -24,23 +24,10 @@ public:
     bool getConfig() override;
     bool getDefaultConfig() override;
     bool isChangedConfig() const override;
-    QString errorString() const override
-    {
-        return m_errorString;
-    }
-
-    int deviceCount() const override
-    {
-        return 1;
-    }
-    bool isAnonymousDevice() const override
-    {
-        return true;
-    }
-    QList<QObject *> getDevices() const override
-    {
-        return QList<QObject *>(1, m_device);
-    }
+    QString errorString() const override;
+    int deviceCount() const override;
+    bool isAnonymousDevice() const override;
+    QList<QObject *> getDevices() const override;
 
 private:
     QObject *m_device;
