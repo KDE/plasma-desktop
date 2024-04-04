@@ -6,10 +6,13 @@
 
 #include "configcontainer.h"
 
+#include "cursortheme.h"
 #include "inputbackend.h"
 #include "logging.h"
 #include "ui/libinput_config.h"
 
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <KWindowSystem>
 
 #include <memory> // std::unique_ptr
@@ -20,6 +23,17 @@ Q_DECL_EXPORT void kcminit()
     std::unique_ptr<InputBackend> backend(InputBackend::implementation());
     if (backend) {
         backend->kcmInit();
+    }
+
+    if (KWindowSystem::isPlatformX11()) {
+        auto config = KSharedConfig::openConfig("kcminputrc", KConfig::NoGlobals);
+        KConfigGroup group = config->group(QStringLiteral("Mouse"));
+        const QString theme = group.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
+        const int size = group.readEntry("cursorSize", 24);
+
+        // Note: If you update this code, update kapplymousetheme as well.
+
+        CursorTheme::applyCursorTheme(theme, size);
     }
 }
 }

@@ -53,14 +53,15 @@ add_subdirectory(backends)
 
 if (BUILD_KCM_MOUSE_X11)
     # kapplymousetheme is an X11-only tool, called by startplasma-x11 but not startplasma-wayland
-    add_executable(kapplymousetheme kapplymousetheme.cpp)
-    target_link_libraries(kapplymousetheme Qt::Gui KF6::CoreAddons mouse_common)
+    add_executable(kapplymousetheme kapplymousetheme.cpp cursortheme.cpp)
+    target_link_libraries(kapplymousetheme Qt::Gui Qt::GuiPrivate KF6::CoreAddons KF6::ConfigCore KF6::WindowSystem X11::Xcursor)
     install(TARGETS kapplymousetheme ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
 
 add_library(kcm_mouse MODULE
     plugin.cpp
     configcontainer.cpp
+    cursortheme.cpp
     ui/libinput_config.cpp
 )
 qt_add_resources(kcm_mouse

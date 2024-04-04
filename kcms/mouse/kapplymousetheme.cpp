@@ -7,7 +7,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "backends/x11/x11_backend.h"
+#include "cursortheme.h"
 
 #include <KWindowSystem>
 
@@ -31,15 +31,9 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    std::unique_ptr<X11Backend> backend(X11Backend::implementation());
-
-    if (!backend) {
-        return 2;
-    }
-
     // Note: If you update this code, update main.cpp as well.
 
-    backend->applyCursorTheme(theme, size.toInt());
+    CursorTheme::applyCursorTheme(theme, size.toInt());
 
     return ret;
 }

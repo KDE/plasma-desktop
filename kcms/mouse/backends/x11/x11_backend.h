@@ -20,10 +20,6 @@ class X11Backend : public InputBackend
 public:
     static X11Backend *implementation(QObject *parent = nullptr);
 
-    void kcmInit() override;
-
-    void applyCursorTheme(const QString &name, int size);
-
 protected:
     X11Backend(QObject *parent = nullptr);
 };
