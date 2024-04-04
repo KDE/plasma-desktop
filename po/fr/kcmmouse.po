@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-28 00:41+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2024-03-23 09:10+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -112,43 +112,43 @@ msgstr ""
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Dispositif de pointage déconnecté. Aucun autre dispositif trouvé."
 
-#: kcm/libinput/main.qml:75
+#: kcm/libinput/main.qml:80
 #, kde-format
 msgid "Device:"
 msgstr "Périphérique :"
 
-#: kcm/libinput/main.qml:99 kcm/libinput/main_deviceless.qml:50
+#: kcm/libinput/main.qml:104 kcm/libinput/main_deviceless.qml:50
 #, kde-format
 msgid "General:"
 msgstr "Général :"
 
-#: kcm/libinput/main.qml:100
+#: kcm/libinput/main.qml:105
 #, kde-format
 msgid "Device enabled"
 msgstr "Dispositif activé"
 
-#: kcm/libinput/main.qml:120
+#: kcm/libinput/main.qml:125
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Autoriser l'entrée via ce périphérique."
 
-#: kcm/libinput/main.qml:125 kcm/libinput/main_deviceless.qml:51
+#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "Mode gaucher"
 
-#: kcm/libinput/main.qml:145 kcm/libinput/main_deviceless.qml:71
+#: kcm/libinput/main.qml:150 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Inverser les boutons gauche et droite."
 
-#: kcm/libinput/main.qml:152 kcm/libinput/main_deviceless.qml:78
+#: kcm/libinput/main.qml:157 kcm/libinput/main_deviceless.qml:78
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr ""
 "Appuyez sur les boutons gauche et droite pour effectuer un clic central"
 
-#: kcm/libinput/main.qml:172 kcm/libinput/main_deviceless.qml:98
+#: kcm/libinput/main.qml:177 kcm/libinput/main_deviceless.qml:98
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -156,7 +156,7 @@ msgstr ""
 "Cliquer simultanément sur le bouton gauche et le bouton droit pour envoyer "
 "un clic du bouton central."
 
-#: kcm/libinput/main.qml:176 kcm/libinput/main_deviceless.qml:101
+#: kcm/libinput/main.qml:181 kcm/libinput/main_deviceless.qml:101
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -166,82 +166,82 @@ msgstr ""
 "ms. Ce délai supplémentaire est nécessaire pour la détection correcte des "
 "clics de souris gauche et droit simultanés."
 
-#: kcm/libinput/main.qml:186 kcm/libinput/main_deviceless.qml:112
+#: kcm/libinput/main.qml:191 kcm/libinput/main_deviceless.qml:112
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Vitesse du pointeur :"
 
-#: kcm/libinput/main.qml:285 kcm/libinput/main_deviceless.qml:144
+#: kcm/libinput/main.qml:290 kcm/libinput/main_deviceless.qml:144
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Accélération du pointeur :"
 
-#: kcm/libinput/main.qml:316 kcm/libinput/main_deviceless.qml:175
+#: kcm/libinput/main.qml:321 kcm/libinput/main_deviceless.qml:175
 #, kde-format
 msgid "None"
 msgstr "Aucun"
 
-#: kcm/libinput/main.qml:320 kcm/libinput/main_deviceless.qml:179
+#: kcm/libinput/main.qml:325 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Le curseur parcourt la même distance que la souris."
 
-#: kcm/libinput/main.qml:326 kcm/libinput/main_deviceless.qml:185
+#: kcm/libinput/main.qml:331 kcm/libinput/main_deviceless.qml:185
 #, kde-format
 msgid "Standard"
 msgstr "Standard"
 
-#: kcm/libinput/main.qml:330 kcm/libinput/main_deviceless.qml:189
+#: kcm/libinput/main.qml:335 kcm/libinput/main_deviceless.qml:189
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Le curseur parcourt une distance qui dépend de la vitesse de la souris."
 
-#: kcm/libinput/main.qml:342 kcm/libinput/main_deviceless.qml:201
+#: kcm/libinput/main.qml:347 kcm/libinput/main_deviceless.qml:201
 #, kde-format
 msgid "Scrolling:"
 msgstr "Défilement :"
 
-#: kcm/libinput/main.qml:343 kcm/libinput/main_deviceless.qml:202
+#: kcm/libinput/main.qml:348 kcm/libinput/main_deviceless.qml:202
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Inverser la direction de défilement"
 
-#: kcm/libinput/main.qml:359 kcm/libinput/main_deviceless.qml:218
+#: kcm/libinput/main.qml:364 kcm/libinput/main_deviceless.qml:218
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Défilement en mode écran tactile."
 
-#: kcm/libinput/main.qml:364
+#: kcm/libinput/main.qml:369
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Vitesse de défilement :"
 
-#: kcm/libinput/main.qml:414
+#: kcm/libinput/main.qml:419
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Plus lente"
 
-#: kcm/libinput/main.qml:421
+#: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Plus rapide"
 
-#: kcm/libinput/main.qml:432
+#: kcm/libinput/main.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Re-faire une association pour les boutons supplémentaires de souris..."
 
-#: kcm/libinput/main.qml:470
+#: kcm/libinput/main.qml:475
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Bouton supplémentaire %1 :"
 
-#: kcm/libinput/main.qml:500
+#: kcm/libinput/main.qml:506
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
@@ -249,31 +249,31 @@ msgstr ""
 "Appuyez sur le bouton de la souris pour lequel vous souhaitez ajouter une "
 "association de touches"
 
-#: kcm/libinput/main.qml:501
+#: kcm/libinput/main.qml:507
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Saisissez la nouvelle combinaison de touches pour %1"
 
-#: kcm/libinput/main.qml:505
+#: kcm/libinput/main.qml:511
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: kcm/libinput/main.qml:522
+#: kcm/libinput/main.qml:528
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "Appuyez sur un bouton de souris"
 
-#: kcm/libinput/main.qml:523
+#: kcm/libinput/main.qml:529
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Ajouter une association..."
 
-#: kcm/libinput/main.qml:552
+#: kcm/libinput/main.qml:559
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"

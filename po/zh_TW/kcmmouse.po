@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-28 00:41+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2024-03-29 21:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -93,48 +93,48 @@ msgstr "已取消連結指標裝置。關閉其設定對話框。"
 msgid "Pointer device disconnected. No other devices found."
 msgstr "已取消連結指標裝置。找不到其他任何裝置。"
 
-#: kcm/libinput/main.qml:75
+#: kcm/libinput/main.qml:80
 #, kde-format
 msgid "Device:"
 msgstr "裝置："
 
-#: kcm/libinput/main.qml:99 kcm/libinput/main_deviceless.qml:50
+#: kcm/libinput/main.qml:104 kcm/libinput/main_deviceless.qml:50
 #, kde-format
 msgid "General:"
 msgstr "一般："
 
-#: kcm/libinput/main.qml:100
+#: kcm/libinput/main.qml:105
 #, kde-format
 msgid "Device enabled"
 msgstr "裝置已啟用"
 
-#: kcm/libinput/main.qml:120
+#: kcm/libinput/main.qml:125
 #, kde-format
 msgid "Accept input through this device."
 msgstr "透過此裝置同意輸入"
 
-#: kcm/libinput/main.qml:125 kcm/libinput/main_deviceless.qml:51
+#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "左手模式"
 
-#: kcm/libinput/main.qml:145 kcm/libinput/main_deviceless.qml:71
+#: kcm/libinput/main.qml:150 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "交換左右鍵。"
 
-#: kcm/libinput/main.qml:152 kcm/libinput/main_deviceless.qml:78
+#: kcm/libinput/main.qml:157 kcm/libinput/main_deviceless.qml:78
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "按下左右鍵傳出中鍵"
 
-#: kcm/libinput/main.qml:172 kcm/libinput/main_deviceless.qml:98
+#: kcm/libinput/main.qml:177 kcm/libinput/main_deviceless.qml:98
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "同時按下左右鍵，即送出中鍵點選事件。"
 
-#: kcm/libinput/main.qml:176 kcm/libinput/main_deviceless.qml:101
+#: kcm/libinput/main.qml:181 kcm/libinput/main_deviceless.qml:101
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -142,111 +142,111 @@ msgid ""
 msgstr ""
 "啟用此設定會使滑鼠點擊增加 50 毫秒的延遲。這個延遲用來偵測同時的左右鍵點擊。"
 
-#: kcm/libinput/main.qml:186 kcm/libinput/main_deviceless.qml:112
+#: kcm/libinput/main.qml:191 kcm/libinput/main_deviceless.qml:112
 #, kde-format
 msgid "Pointer speed:"
 msgstr "指標速度："
 
-#: kcm/libinput/main.qml:285 kcm/libinput/main_deviceless.qml:144
+#: kcm/libinput/main.qml:290 kcm/libinput/main_deviceless.qml:144
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "指標加速："
 
-#: kcm/libinput/main.qml:316 kcm/libinput/main_deviceless.qml:175
+#: kcm/libinput/main.qml:321 kcm/libinput/main_deviceless.qml:175
 #, kde-format
 msgid "None"
 msgstr "無"
 
-#: kcm/libinput/main.qml:320 kcm/libinput/main_deviceless.qml:179
+#: kcm/libinput/main.qml:325 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "指標移動與滑鼠移動同距離。"
 
-#: kcm/libinput/main.qml:326 kcm/libinput/main_deviceless.qml:185
+#: kcm/libinput/main.qml:331 kcm/libinput/main_deviceless.qml:185
 #, kde-format
 msgid "Standard"
 msgstr "標準"
 
-#: kcm/libinput/main.qml:330 kcm/libinput/main_deviceless.qml:189
+#: kcm/libinput/main.qml:335 kcm/libinput/main_deviceless.qml:189
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "指標移動距離取決於滑鼠的移動速度。"
 
-#: kcm/libinput/main.qml:342 kcm/libinput/main_deviceless.qml:201
+#: kcm/libinput/main.qml:347 kcm/libinput/main_deviceless.qml:201
 #, kde-format
 msgid "Scrolling:"
 msgstr "捲動："
 
-#: kcm/libinput/main.qml:343 kcm/libinput/main_deviceless.qml:202
+#: kcm/libinput/main.qml:348 kcm/libinput/main_deviceless.qml:202
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "反轉捲動方向"
 
-#: kcm/libinput/main.qml:359 kcm/libinput/main_deviceless.qml:218
+#: kcm/libinput/main.qml:364 kcm/libinput/main_deviceless.qml:218
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "像觸控螢幕的捲動。"
 
-#: kcm/libinput/main.qml:364
+#: kcm/libinput/main.qml:369
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "捲動速度："
 
-#: kcm/libinput/main.qml:414
+#: kcm/libinput/main.qml:419
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "較慢"
 
-#: kcm/libinput/main.qml:421
+#: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "較快"
 
-#: kcm/libinput/main.qml:432
+#: kcm/libinput/main.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "重新綁定額外滑鼠按鍵…"
 
-#: kcm/libinput/main.qml:470
+#: kcm/libinput/main.qml:475
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "額外按鍵 %1："
 
-#: kcm/libinput/main.qml:500
+#: kcm/libinput/main.qml:506
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "按下您想要為其新增組合鍵的滑鼠按鍵"
 
-#: kcm/libinput/main.qml:501
+#: kcm/libinput/main.qml:507
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "輸入%1的新按鍵組合"
 
-#: kcm/libinput/main.qml:505
+#: kcm/libinput/main.qml:511
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "取消"
 
-#: kcm/libinput/main.qml:522
+#: kcm/libinput/main.qml:528
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "按一個滑鼠按鍵"
 
-#: kcm/libinput/main.qml:523
+#: kcm/libinput/main.qml:529
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "新增組合鍵…"
 
-#: kcm/libinput/main.qml:552
+#: kcm/libinput/main.qml:559
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"

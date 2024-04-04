@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-28 00:41+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2022-09-02 17:47+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -89,160 +89,160 @@ msgstr "Thiết bị trỏ bị ngắt kết nối. Đã đóng hộp thoại th
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Thiết bị trỏ bị ngắt kết nối. Không tìm thấy thiết bị trỏ nào khác."
 
-#: kcm/libinput/main.qml:75
+#: kcm/libinput/main.qml:80
 #, kde-format
 msgid "Device:"
 msgstr "Thiết bị:"
 
-#: kcm/libinput/main.qml:99 kcm/libinput/main_deviceless.qml:50
+#: kcm/libinput/main.qml:104 kcm/libinput/main_deviceless.qml:50
 #, kde-format
 msgid "General:"
 msgstr "Chung:"
 
-#: kcm/libinput/main.qml:100
+#: kcm/libinput/main.qml:105
 #, kde-format
 msgid "Device enabled"
 msgstr "Thiết bị được bật"
 
-#: kcm/libinput/main.qml:120
+#: kcm/libinput/main.qml:125
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Nhận đầu vào qua thiết bị này."
 
-#: kcm/libinput/main.qml:125 kcm/libinput/main_deviceless.qml:51
+#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "Chế độ thuận tay trái"
 
-#: kcm/libinput/main.qml:145 kcm/libinput/main_deviceless.qml:71
+#: kcm/libinput/main.qml:150 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Hoán đổi nút trái và phải."
 
-#: kcm/libinput/main.qml:152 kcm/libinput/main_deviceless.qml:78
+#: kcm/libinput/main.qml:157 kcm/libinput/main_deviceless.qml:78
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Nhấn nút trái và phải để thành bấm giữa"
 
-#: kcm/libinput/main.qml:172 kcm/libinput/main_deviceless.qml:98
+#: kcm/libinput/main.qml:177 kcm/libinput/main_deviceless.qml:98
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "Bấm nút trái và phải đồng thời sẽ tạo ra cú bấm nút giữa."
 
-#: kcm/libinput/main.qml:176 kcm/libinput/main_deviceless.qml:101
+#: kcm/libinput/main.qml:181 kcm/libinput/main_deviceless.qml:101
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
 
-#: kcm/libinput/main.qml:186 kcm/libinput/main_deviceless.qml:112
+#: kcm/libinput/main.qml:191 kcm/libinput/main_deviceless.qml:112
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Tốc độ con trỏ:"
 
-#: kcm/libinput/main.qml:285 kcm/libinput/main_deviceless.qml:144
+#: kcm/libinput/main.qml:290 kcm/libinput/main_deviceless.qml:144
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Gia tốc con trỏ:"
 
-#: kcm/libinput/main.qml:316 kcm/libinput/main_deviceless.qml:175
+#: kcm/libinput/main.qml:321 kcm/libinput/main_deviceless.qml:175
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: kcm/libinput/main.qml:320 kcm/libinput/main_deviceless.qml:179
+#: kcm/libinput/main.qml:325 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Con trỏ di chuyển cùng khoảng cách với di chuyển của chuột."
 
-#: kcm/libinput/main.qml:326 kcm/libinput/main_deviceless.qml:185
+#: kcm/libinput/main.qml:331 kcm/libinput/main_deviceless.qml:185
 #, kde-format
 msgid "Standard"
 msgstr ""
 
-#: kcm/libinput/main.qml:330 kcm/libinput/main_deviceless.qml:189
+#: kcm/libinput/main.qml:335 kcm/libinput/main_deviceless.qml:189
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Khoảng cách di chuyển của con trỏ phụ thuộc vào tốc độ di chuyển của chuột."
 
-#: kcm/libinput/main.qml:342 kcm/libinput/main_deviceless.qml:201
+#: kcm/libinput/main.qml:347 kcm/libinput/main_deviceless.qml:201
 #, kde-format
 msgid "Scrolling:"
 msgstr "Cuộn:"
 
-#: kcm/libinput/main.qml:343 kcm/libinput/main_deviceless.qml:202
+#: kcm/libinput/main.qml:348 kcm/libinput/main_deviceless.qml:202
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Đảo hướng cuộn"
 
-#: kcm/libinput/main.qml:359 kcm/libinput/main_deviceless.qml:218
+#: kcm/libinput/main.qml:364 kcm/libinput/main_deviceless.qml:218
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Cuộn như màn hình cảm ứng."
 
-#: kcm/libinput/main.qml:364
+#: kcm/libinput/main.qml:369
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Tốc độ cuộn:"
 
-#: kcm/libinput/main.qml:414
+#: kcm/libinput/main.qml:419
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Chậm"
 
-#: kcm/libinput/main.qml:421
+#: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Nhanh"
 
-#: kcm/libinput/main.qml:432
+#: kcm/libinput/main.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Kết buộc lại các nút chuột bổ sung…"
 
-#: kcm/libinput/main.qml:470
+#: kcm/libinput/main.qml:475
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Nút phụ %1:"
 
-#: kcm/libinput/main.qml:500
+#: kcm/libinput/main.qml:506
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "Ấn nút chuột mà bạn muốn thêm kết buộc phím cho nó"
 
-#: kcm/libinput/main.qml:501
+#: kcm/libinput/main.qml:507
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Nhập tổ hợp phím mới cho %1"
 
-#: kcm/libinput/main.qml:505
+#: kcm/libinput/main.qml:511
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Huỷ"
 
-#: kcm/libinput/main.qml:522
+#: kcm/libinput/main.qml:528
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "Nhấn một nút chuột "
 
-#: kcm/libinput/main.qml:523
+#: kcm/libinput/main.qml:529
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Thêm kết buộc…"
 
-#: kcm/libinput/main.qml:552
+#: kcm/libinput/main.qml:559
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
