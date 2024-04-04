@@ -107,7 +107,7 @@ SimpleKCM {
             }
         }
         QQC2.CheckBox {
-            Kirigami.FormData.label: i18nd("kcm_tablet", "Left-handed mode:")
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Left handed mode:")
             enabled: parent.device && parent.device.supportsLeftHanded
             checked: parent.device && parent.device.leftHanded
             onCheckedChanged: {
@@ -246,9 +246,9 @@ SimpleKCM {
 
         Repeater {
             model: [
-                { value: 0x14b, text: i18nd("kcm_tablet", "Pen Button 1") },
-                { value: 0x14c, text: i18nd("kcm_tablet", "Pen Button 2") },
-                { value: 0x149, text: i18nd("kcm_tablet", "Pen Button 3") }
+                { value: 0x14b, text: i18nd("kcm_tablet", "Pen button 1:") },
+                { value: 0x14c, text: i18nd("kcm_tablet", "Pen button 2:") },
+                { value: 0x149, text: i18nd("kcm_tablet", "Pen button 3:") }
             ] // BTN_STYLUS, BTN_STYLUS2, BTN_STYLUS3
 
             delegate: KeySequenceItem {
@@ -325,7 +325,7 @@ SimpleKCM {
 
             delegate: KeySequenceItem {
                 id: seq
-                Kirigami.FormData.label: (pressed ? "<b>" : "") + i18nd("kcm_tablet", "Button %1:", modelData + 1) + (pressed ? "</b>" : "")
+                Kirigami.FormData.label: (pressed ? "<b>" : "") + i18nd("kcm_tablet", "Pad button %1:", modelData + 1) + (pressed ? "</b>" : "")
                 property bool pressed: false
 
                 Connections {
