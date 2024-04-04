@@ -20,7 +20,6 @@ enum class InputBackendMode {
 #endif
 #if BUILD_KCM_MOUSE_X11
     XLibinput = 1,
-    XEvdev = 2,
 #endif
 };
 

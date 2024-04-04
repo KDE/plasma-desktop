@@ -22,7 +22,6 @@ if (BUILD_KCM_MOUSE_X11)
     target_link_libraries(mouse_common
         PUBLIC
             PkgConfig::XORGLIBINPUT
-            PkgConfig::EVDEV
             X11::X11
             X11::Xi
             X11::Xcursor
