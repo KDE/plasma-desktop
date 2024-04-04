@@ -24,8 +24,6 @@
 KWinWaylandBackend::KWinWaylandBackend(QObject *parent)
     : InputBackend(parent)
 {
-    m_mode = InputBackendMode::KWinWayland;
-
     m_deviceManager = new QDBusInterface(QStringLiteral("org.kde.KWin"),
                                          QStringLiteral("/org/kde/KWin/InputDevice"),
                                          QStringLiteral("org.kde.KWin.InputDeviceManager"),

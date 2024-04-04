@@ -10,7 +10,6 @@
 X11LibinputBackend::X11LibinputBackend(QObject *parent)
     : InputBackend(parent)
 {
-    m_mode = InputBackendMode::XLibinput;
     m_device = new X11LibinputDummyDevice(this, QX11Info::display());
 }
 
