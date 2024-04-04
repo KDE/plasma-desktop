@@ -34,15 +34,6 @@ public:
     {
     }
 
-    virtual bool isValid() const
-    {
-        return false;
-    }
-
-    virtual void load()
-    {
-    }
-
     virtual bool applyConfig()
     {
         return false;
