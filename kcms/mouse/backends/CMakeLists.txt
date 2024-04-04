@@ -13,7 +13,6 @@ endif()
 if (BUILD_KCM_MOUSE_X11)
     target_sources(mouse_common
         PUBLIC
-            x11/x11_backend.cpp
             x11/x11_libinput_backend.cpp
             x11/x11_libinput_dummydevice.cpp
             x11/libinput_settings.cpp

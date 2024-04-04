@@ -8,7 +8,7 @@
 #include "x11_libinput_dummydevice.h"
 
 X11LibinputBackend::X11LibinputBackend(QObject *parent)
-    : X11Backend(parent)
+    : InputBackend(parent)
 {
     m_mode = InputBackendMode::XLibinput;
     m_device = new X11LibinputDummyDevice(this, QX11Info::display());
@@ -40,7 +40,6 @@ void X11LibinputBackend::kcmInit()
 
     getConfig();
     applyConfig();
-    X11Backend::kcmInit();
 }
 
 #include "moc_x11_libinput_backend.cpp"

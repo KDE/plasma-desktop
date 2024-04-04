@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include "x11_backend.h"
+#include "inputbackend.h"
 
 #include <QList>
 
-class X11LibinputBackend : public X11Backend
+class X11LibinputBackend : public InputBackend
 {
     Q_OBJECT
 
