@@ -64,21 +64,6 @@ X11Backend::~X11Backend()
     }
 }
 
-QString X11Backend::currentCursorTheme()
-{
-    if (!m_dpy) {
-        return QString();
-    }
-
-    QByteArray name = XGetDefault(m_dpy, "Xcursor", "theme");
-#if HAVE_XCURSOR
-    if (name.isEmpty()) {
-        name = QByteArray(XcursorGetTheme(m_dpy));
-    }
-#endif
-    return QFile::decodeName(name);
-}
-
 void X11Backend::applyCursorTheme(const QString &theme, int size)
 {
 #if HAVE_XCURSOR

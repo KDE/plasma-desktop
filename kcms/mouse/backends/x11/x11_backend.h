@@ -28,7 +28,6 @@ public:
         return m_dpy != nullptr;
     }
 
-    QString currentCursorTheme();
     void applyCursorTheme(const QString &name, int size);
 
 protected:
