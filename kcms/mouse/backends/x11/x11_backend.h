@@ -19,21 +19,11 @@ class X11Backend : public InputBackend
 
 public:
     static X11Backend *implementation(QObject *parent = nullptr);
-    ~X11Backend();
 
     void kcmInit() override;
-
-    bool isValid() const override
-    {
-        return m_dpy != nullptr;
-    }
 
     void applyCursorTheme(const QString &name, int size);
 
 protected:
     X11Backend(QObject *parent = nullptr);
-
-    // We may still need to do something on non-X11 platform due to Xwayland.
-    Display *m_dpy = nullptr;
-    bool m_platformX11;
 };

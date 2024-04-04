@@ -47,21 +47,6 @@ X11Backend *X11Backend::implementation(QObject *parent)
 X11Backend::X11Backend(QObject *parent)
     : InputBackend(parent)
 {
-    m_platformX11 = QX11Info::isPlatformX11();
-    if (m_platformX11) {
-        m_dpy = QX11Info::display();
-    } else {
-        // TODO: remove this - not needed anymore with Wayland backend!
-        // let's hope we have a compatibility system like Xwayland ready
-        m_dpy = XOpenDisplay(nullptr);
-    }
-}
-
-X11Backend::~X11Backend()
-{
-    if (!m_platformX11 && m_dpy) {
-        XCloseDisplay(m_dpy);
-    }
 }
 
 void X11Backend::applyCursorTheme(const QString &theme, int size)
@@ -69,22 +54,19 @@ void X11Backend::applyCursorTheme(const QString &theme, int size)
 #if HAVE_XCURSOR
 
     // Apply the KDE cursor theme to ourselves
-    if (!m_dpy) {
-        return;
-    }
     if (!theme.isEmpty()) {
-        XcursorSetTheme(m_dpy, QFile::encodeName(theme));
+        XcursorSetTheme(QX11Info::display(), QFile::encodeName(theme));
     }
 
     if (size >= 0) {
-        XcursorSetDefaultSize(m_dpy, size);
+        XcursorSetDefaultSize(QX11Info::display(), size);
     }
 
     // Load the default cursor from the theme and apply it to the root window.
-    Cursor handle = XcursorLibraryLoadCursor(m_dpy, "left_ptr");
-    XDefineCursor(m_dpy, DefaultRootWindow(m_dpy), handle);
-    XFreeCursor(m_dpy, handle); // Don't leak the cursor
-    XFlush(m_dpy);
+    Cursor handle = XcursorLibraryLoadCursor(QX11Info::display(), "left_ptr");
+    XDefineCursor(QX11Info::display(), DefaultRootWindow(QX11Info::display()), handle);
+    XFreeCursor(QX11Info::display(), handle); // Don't leak the cursor
+    XFlush(QX11Info::display());
 #endif
 }
 

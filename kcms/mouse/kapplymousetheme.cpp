@@ -37,10 +37,6 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    if (!backend->isValid()) {
-        return 2;
-    }
-
     // Note: If you update this code, update main.cpp as well.
 
     backend->applyCursorTheme(theme, size.toInt());
