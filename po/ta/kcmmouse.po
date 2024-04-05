@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-06 01:34+0000\n"
+"POT-Creation-Date: 2024-04-05 02:43+0000\n"
 "PO-Revision-Date: 2024-03-10 09:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -89,152 +89,152 @@ msgstr "சுட்டி கழற்றப்பட்டதால் அத�
 msgid "Pointer device disconnected. No other devices found."
 msgstr "சுட்டி கழற்றப்பட்டபின் வேறெந்த சாதனமும் கண்டுபிடிக்கப்படவில்லை."
 
-#: kcm/libinput/main.qml:74
+#: kcm/libinput/main.qml:79
 #, kde-format
 msgid "Device:"
 msgstr "சாதனம்:"
 
-#: kcm/libinput/main.qml:98 kcm/libinput/main_deviceless.qml:50
+#: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:50
 #, kde-format
 msgid "General:"
 msgstr "பொதுவானவை:"
 
-#: kcm/libinput/main.qml:99
+#: kcm/libinput/main.qml:104
 #, kde-format
 msgid "Device enabled"
 msgstr "சாதனத்தை இயக்கு"
 
-#: kcm/libinput/main.qml:119
+#: kcm/libinput/main.qml:124
 #, kde-format
 msgid "Accept input through this device."
 msgstr "இந்த சாதனத்தின் வாயிலாக உள்ளீட்டை ஏற்க."
 
-#: kcm/libinput/main.qml:124 kcm/libinput/main_deviceless.qml:51
+#: kcm/libinput/main.qml:129 kcm/libinput/main_deviceless.qml:51
 #, kde-format
 msgid "Left handed mode"
 msgstr "இடதுகை பயன்முறை"
 
-#: kcm/libinput/main.qml:144 kcm/libinput/main_deviceless.qml:71
+#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:71
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "இடது மற்றும் வலது பட்டன்களை இடமாற்று."
 
-#: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:76
+#: kcm/libinput/main.qml:154 kcm/libinput/main_deviceless.qml:76
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "நடு க்ளிக்குக்கு இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்து"
 
-#: kcm/libinput/main.qml:169 kcm/libinput/main_deviceless.qml:96
+#: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:96
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துதல், நடு க்ளிக்காக கருதப்படும்."
 
-#: kcm/libinput/main.qml:178 kcm/libinput/main_deviceless.qml:106
+#: kcm/libinput/main.qml:183 kcm/libinput/main_deviceless.qml:106
 #, kde-format
 msgid "Pointer speed:"
 msgstr "சுட்டிக்குறியின் வேகம்:"
 
-#: kcm/libinput/main.qml:277 kcm/libinput/main_deviceless.qml:138
+#: kcm/libinput/main.qml:282 kcm/libinput/main_deviceless.qml:138
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "சுட்டி துரிதப்படுத்தல்:"
 
-#: kcm/libinput/main.qml:308 kcm/libinput/main_deviceless.qml:169
+#: kcm/libinput/main.qml:313 kcm/libinput/main_deviceless.qml:169
 #, kde-format
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: kcm/libinput/main.qml:312 kcm/libinput/main_deviceless.qml:173
+#: kcm/libinput/main.qml:317 kcm/libinput/main_deviceless.qml:173
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "சுட்டிக்குறியும் சுட்டியும் ஒரே தூரம் நகரும்."
 
-#: kcm/libinput/main.qml:318 kcm/libinput/main_deviceless.qml:179
+#: kcm/libinput/main.qml:323 kcm/libinput/main_deviceless.qml:179
 #, kde-format
 msgid "Standard"
 msgstr "சாதாரணமானது"
 
-#: kcm/libinput/main.qml:322 kcm/libinput/main_deviceless.qml:183
+#: kcm/libinput/main.qml:327 kcm/libinput/main_deviceless.qml:183
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "சுட்டிக்குறி நகரும் தூரம் சுட்டியின் வேகத்தைப் பொறுத்து மாறும்."
 
-#: kcm/libinput/main.qml:334 kcm/libinput/main_deviceless.qml:195
+#: kcm/libinput/main.qml:339 kcm/libinput/main_deviceless.qml:195
 #, kde-format
 msgid "Scrolling:"
 msgstr "உருளல்:"
 
-#: kcm/libinput/main.qml:335 kcm/libinput/main_deviceless.qml:196
+#: kcm/libinput/main.qml:340 kcm/libinput/main_deviceless.qml:196
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "உருளல் திசையைப் புரட்டு"
 
-#: kcm/libinput/main.qml:351 kcm/libinput/main_deviceless.qml:212
+#: kcm/libinput/main.qml:356 kcm/libinput/main_deviceless.qml:212
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "தொடுதிரையைப் போன்ற உருளல்."
 
-#: kcm/libinput/main.qml:356
+#: kcm/libinput/main.qml:361
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "உருளல் வேகம்:"
 
-#: kcm/libinput/main.qml:406
+#: kcm/libinput/main.qml:411
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "மெதுவாக"
 
-#: kcm/libinput/main.qml:412
+#: kcm/libinput/main.qml:417
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "வேகமாக"
 
-#: kcm/libinput/main.qml:422
+#: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "கூடுதல் சுட்டி பட்டன்களை மாற்றியமை…"
 
-#: kcm/libinput/main.qml:460
+#: kcm/libinput/main.qml:465
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "கூடுதல் பட்டன் %1"
 
-#: kcm/libinput/main.qml:490
+#: kcm/libinput/main.qml:495
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "எந்த பட்டனுக்கு விசைப்பிணைப்பை சேர்க்க வேண்டுமோ, அதை அழுத்துங்கள்"
 
-#: kcm/libinput/main.qml:491
+#: kcm/libinput/main.qml:496
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "%1-க்கான புதிய விசைக்கூட்டை அழுத்துங்கள்"
 
-#: kcm/libinput/main.qml:495
+#: kcm/libinput/main.qml:500
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: kcm/libinput/main.qml:512
+#: kcm/libinput/main.qml:517
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "ஒரு சுட்டி பட்டனை அழுத்துங்கள் "
 
-#: kcm/libinput/main.qml:513
+#: kcm/libinput/main.qml:518
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "பிணைப்பை சேர்…"
 
-#: kcm/libinput/main.qml:542
+#: kcm/libinput/main.qml:547
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
