@@ -8,7 +8,7 @@
 
 #include <QVariantHash>
 
-#include <KConfigSkeleton>
+#include <KCoreConfigSkeleton>
 
 class TouchpadParametersBase : public KCoreConfigSkeleton
 {

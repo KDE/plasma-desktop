@@ -4,9 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "touchpadconfig.h"
+#include "kcm.h"
 
-#include "../logging.h"
+#include "logging.h"
 #include "touchpadbackend.h"
 #include <config-build-options.h>
 
@@ -21,20 +21,20 @@
 #include <QQuickItem>
 #include <QVBoxLayout>
 
-K_PLUGIN_CLASS_WITH_JSON(TouchpadConfig, "kcm_touchpad.json")
+K_PLUGIN_CLASS_WITH_JSON(KCMTouchpad, "kcm_touchpad.json")
 
 extern "C" {
 Q_DECL_EXPORT void kcminit()
 {
 #if BUILD_KCM_TOUCHPAD_X11
     if (KWindowSystem::isPlatformX11()) {
-        TouchpadConfig::kcmInit();
+        KCMTouchpad::kcmInit();
     }
 #endif
 }
 }
 
-TouchpadConfig::TouchpadConfig(QObject *parent, const KPluginMetaData &data)
+KCMTouchpad::KCMTouchpad(QObject *parent, const KPluginMetaData &data)
     : KCModule(parent, data)
 {
     m_backend = TouchpadBackend::implementation();
@@ -61,23 +61,23 @@ TouchpadConfig::TouchpadConfig(QObject *parent, const KPluginMetaData &data)
         }
     });
 
-    qmlRegisterSingletonInstance("org.kde.touchpad.kcm", 1, 0, "TouchpadConfig", this);
+    qmlRegisterSingletonInstance("org.kde.touchpad.kcm", 1, 0, "KCMTouchpad", this);
 
     m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
-    m_view->setSource(QUrl("qrc:/libinput/touchpad.qml"));
+    m_view->setSource(QUrl("qrc:/kcm/kcm_touchpad/main.qml"));
     m_view->resize(QSize(500, 600));
 
     if (m_initError) {
         Q_EMIT showMessage(m_backend->errorString());
     } else {
-        connect(m_backend, &TouchpadBackend::touchpadAdded, this, &TouchpadConfig::onTouchpadAdded);
-        connect(m_backend, &TouchpadBackend::touchpadRemoved, this, &TouchpadConfig::onTouchpadRemoved);
+        connect(m_backend, &TouchpadBackend::touchpadAdded, this, &KCMTouchpad::onTouchpadAdded);
+        connect(m_backend, &TouchpadBackend::touchpadRemoved, this, &KCMTouchpad::onTouchpadRemoved);
     }
 
     setButtons(KCModule::Default | KCModule::Apply);
 }
 
-void TouchpadConfig::kcmInit()
+void KCMTouchpad::kcmInit()
 {
 #if BUILD_KCM_TOUCHPAD_X11
     TouchpadBackend *backend = TouchpadBackend::implementation();
@@ -88,7 +88,7 @@ void TouchpadConfig::kcmInit()
 #endif
 }
 
-void TouchpadConfig::load()
+void KCMTouchpad::load()
 {
     // in case of critical init error in backend, don't try
     if (m_initError) {
@@ -105,7 +105,7 @@ void TouchpadConfig::load()
     QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
 }
 
-void TouchpadConfig::save()
+void KCMTouchpad::save()
 {
     if (!m_backend->applyConfig()) {
         Q_EMIT showMessage(i18n("Not able to save all changes. See logs for more information. Please restart this configuration module and try again."));
@@ -119,7 +119,7 @@ void TouchpadConfig::save()
     setNeedsSave(m_backend->isChangedConfig());
 }
 
-void TouchpadConfig::defaults()
+void KCMTouchpad::defaults()
 {
     // in case of critical init error in backend, don't try
     if (m_initError) {
@@ -133,7 +133,7 @@ void TouchpadConfig::defaults()
     setNeedsSave(m_backend->isChangedConfig());
 }
 
-void TouchpadConfig::onChange()
+void KCMTouchpad::onChange()
 {
     if (!m_backend->touchpadCount()) {
         return;
@@ -142,7 +142,7 @@ void TouchpadConfig::onChange()
     setNeedsSave(m_backend->isChangedConfig());
 }
 
-void TouchpadConfig::onTouchpadAdded(bool success)
+void KCMTouchpad::onTouchpadAdded(bool success)
 {
     QQuickItem *rootObj = m_view->rootObject();
 
@@ -163,7 +163,7 @@ void TouchpadConfig::onTouchpadAdded(bool success)
     QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
 }
 
-void TouchpadConfig::onTouchpadRemoved(int index)
+void KCMTouchpad::onTouchpadRemoved(int index)
 {
     QQuickItem *rootObj = m_view->rootObject();
 
@@ -187,9 +187,10 @@ void TouchpadConfig::onTouchpadRemoved(int index)
     setNeedsSave(m_backend->isChangedConfig());
 }
 
-void TouchpadConfig::hideErrorMessage()
+void KCMTouchpad::hideErrorMessage()
 {
     Q_EMIT showMessage(QString());
 }
 
-#include "touchpadconfig.moc"
+#include "kcm.moc"
+#include "moc_kcm.cpp"

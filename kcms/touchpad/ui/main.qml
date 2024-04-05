@@ -75,7 +75,7 @@ KCM.SimpleKCM {
     }
 
     Connections {
-        target: TouchpadConfig
+        target: KCMTouchpad
 
         function onShowMessage(message, type) {
 

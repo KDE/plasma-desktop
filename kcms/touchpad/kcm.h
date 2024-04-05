@@ -14,16 +14,13 @@
 #include "touchpadbackend.h"
 
 class TouchpadConfigPlugin;
-class TouchpadConfigLibinput;
 
-class TouchpadConfig : public KCModule
+class KCMTouchpad : public KCModule
 {
     Q_OBJECT
 
-    friend TouchpadConfigLibinput;
-
 public:
-    explicit TouchpadConfig(QObject *parent, const KPluginMetaData &data);
+    explicit KCMTouchpad(QObject *parent, const KPluginMetaData &data);
 
     static void kcmInit();
 
