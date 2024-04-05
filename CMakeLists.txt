@@ -116,8 +116,8 @@ set_package_properties(signon-oauth2plugin PROPERTIES
     TYPE RUNTIME
 )
 
-find_package(KF6Kirigami2 ${KF6_MIN_VERSION} CONFIG)
-set_package_properties(KF6Kirigami2 PROPERTIES
+find_package(KF6Kirigami ${KF6_MIN_VERSION} CONFIG)
+set_package_properties(KF6Kirigami PROPERTIES
     DESCRIPTION "A QtQuick based components set"
     PURPOSE "Required at runtime by many KCMs"
     TYPE RUNTIME
