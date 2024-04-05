@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:39+0000\n"
+"POT-Creation-Date: 2024-04-05 00:39+0000\n"
 "PO-Revision-Date: 2024-03-24 23:26+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Sarrera gailuak itauntzea huts egin du. Berrireki ezarpen modulu hau."
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Errore larria %1 gailuaren funtsezko informazioak irakurtzean."
 
-#: kcm/libinput/libinput_config.cpp:101
+#: ui/libinput_config.cpp:85
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -53,12 +53,12 @@ msgstr ""
 "Errorea balioak zamatzean. Begiratu egunkariak informazio zabalagoa izateko. "
 "Berrabiarazi konfiguratze modulu hau."
 
-#: kcm/libinput/libinput_config.cpp:106
+#: ui/libinput_config.cpp:90
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Ez da gailu erakuslerik aurkitu. Konektatu orain."
 
-#: kcm/libinput/libinput_config.cpp:117
+#: ui/libinput_config.cpp:101
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -67,7 +67,7 @@ msgstr ""
 "Ez da aldaketa guztiak gordetzeko gai. Begiratu egunkariak informazio "
 "zabalagoa izateko. Berrabiarazi konfiguratzeko modulu hau eta saiatu berriz."
 
-#: kcm/libinput/libinput_config.cpp:137
+#: ui/libinput_config.cpp:121
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -76,7 +76,7 @@ msgstr ""
 "Errorea balio lehenetsiak zamatzean. Huts egin du aukera batzuk haien balio "
 "lehenetsietara ezartzea."
 
-#: kcm/libinput/libinput_config.cpp:159
+#: ui/libinput_config.cpp:139
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -85,61 +85,61 @@ msgstr ""
 "Errorea gailu konektatu berria gehitzean. Berriz konektatu eta berrabiarazi "
 "konfiguratzeko modulu hau."
 
-#: kcm/libinput/libinput_config.cpp:183
+#: ui/libinput_config.cpp:155
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Gailu erakuslea deskonektatua dago. Itxi egin da bere ezarpen elkarrizketa-"
 "koadroa."
 
-#: kcm/libinput/libinput_config.cpp:185
+#: ui/libinput_config.cpp:157
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Gailu erakuslea deskonektatua dago. Ez da beste gailurik aurkitu."
 
-#: kcm/libinput/main.qml:80
+#: ui/main.qml:44
 #, kde-format
 msgid "Device:"
 msgstr "Gailua:"
 
-#: kcm/libinput/main.qml:104 kcm/libinput/main_deviceless.qml:50
+#: ui/main.qml:68
 #, kde-format
 msgid "General:"
 msgstr "Orokorra:"
 
-#: kcm/libinput/main.qml:105
+#: ui/main.qml:69
 #, kde-format
 msgid "Device enabled"
 msgstr "Gailua gaituta"
 
-#: kcm/libinput/main.qml:125
+#: ui/main.qml:83
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Onartu sarrera gailu honen bidez."
 
-#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:51
+#: ui/main.qml:89
 #, kde-format
 msgid "Left handed mode"
 msgstr "Ezkertiar modua"
 
-#: kcm/libinput/main.qml:150 kcm/libinput/main_deviceless.qml:71
+#: ui/main.qml:102
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Trukatu ezker eta eskuin botoiak"
 
-#: kcm/libinput/main.qml:157 kcm/libinput/main_deviceless.qml:78
+#: ui/main.qml:109
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Sakatu ezker eta eskuin botoiak erdiko-klik gisa"
 
-#: kcm/libinput/main.qml:177 kcm/libinput/main_deviceless.qml:98
+#: ui/main.qml:122
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
 "Ezker eta eskuin botoiak batera sakatzea erdiko botoiaren klik bidaltzen du."
 
-#: kcm/libinput/main.qml:181 kcm/libinput/main_deviceless.qml:101
+#: ui/main.qml:126
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -149,112 +149,112 @@ msgstr ""
 "Atzerapen gehigarria beharrezkoa da saguaren ezker eta eskuineko klikak aldi "
 "berean antzemateko."
 
-#: kcm/libinput/main.qml:191 kcm/libinput/main_deviceless.qml:112
+#: ui/main.qml:136
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Erakuslearen abiadura:"
 
-#: kcm/libinput/main.qml:290 kcm/libinput/main_deviceless.qml:144
+#: ui/main.qml:209
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Erakuslearen azelerazioa:"
 
-#: kcm/libinput/main.qml:321 kcm/libinput/main_deviceless.qml:175
+#: ui/main.qml:225
 #, kde-format
 msgid "None"
 msgstr "Bat ere ez"
 
-#: kcm/libinput/main.qml:325 kcm/libinput/main_deviceless.qml:179
+#: ui/main.qml:230
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Kurtsorea higitzen da sagua higitutako distantzia bera."
 
-#: kcm/libinput/main.qml:331 kcm/libinput/main_deviceless.qml:185
+#: ui/main.qml:234
 #, kde-format
 msgid "Standard"
 msgstr "Estandarra"
 
-#: kcm/libinput/main.qml:335 kcm/libinput/main_deviceless.qml:189
+#: ui/main.qml:239
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Kurtsore-ibilbidearen distantzia saguaren higidura abiaduraren araberakoa da."
 
-#: kcm/libinput/main.qml:347 kcm/libinput/main_deviceless.qml:201
+#: ui/main.qml:250
 #, kde-format
 msgid "Scrolling:"
 msgstr "Kiribiltzea:"
 
-#: kcm/libinput/main.qml:348 kcm/libinput/main_deviceless.qml:202
+#: ui/main.qml:251
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Alderantzizko kiribiltze-noranzkoa"
 
-#: kcm/libinput/main.qml:364 kcm/libinput/main_deviceless.qml:218
+#: ui/main.qml:264
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Ukimen-pantailakoa bezalako kiribiltzea."
 
-#: kcm/libinput/main.qml:369
+#: ui/main.qml:269
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Kiribiltze abiadura:"
 
-#: kcm/libinput/main.qml:419
+#: ui/main.qml:320
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mantsoago"
 
-#: kcm/libinput/main.qml:426
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Bizkorrago"
 
-#: kcm/libinput/main.qml:437
+#: ui/main.qml:338
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Berriz lotu saguaren botoi gehigarriak..."
 
-#: kcm/libinput/main.qml:475
+#: ui/main.qml:383
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "%1 botoi gehigarria:"
 
-#: kcm/libinput/main.qml:506
+#: ui/main.qml:410
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "Sakatu tekla-konbinazioa gehitu nahi diozun saguaren botoia"
 
-#: kcm/libinput/main.qml:507
+#: ui/main.qml:411
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Sartu %1(r)en tekla-konbinazio berria"
 
-#: kcm/libinput/main.qml:511
+#: ui/main.qml:415
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Utzi"
 
-#: kcm/libinput/main.qml:528
+#: ui/main.qml:432
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "Sakatu saguaren botoi bat"
 
-#: kcm/libinput/main.qml:529
+#: ui/main.qml:433
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Gehitu lotura..."
 
-#: kcm/libinput/main.qml:559
+#: ui/main.qml:463
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"

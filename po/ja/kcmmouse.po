@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:39+0000\n"
+"POT-Creation-Date: 2024-04-05 00:39+0000\n"
 "PO-Revision-Date: 2024-01-14 22:35+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "%1 の基本的なデバイス情報の読み込み中に深刻なエラーが発生しました。"
 
-#: kcm/libinput/libinput_config.cpp:101
+#: ui/libinput_config.cpp:85
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -57,12 +57,12 @@ msgstr ""
 "数値の読み込み中にエラーが発生しました。さらなる情報を得るにはログを確認して"
 "ください。この設定モジュールを再起動してください。"
 
-#: kcm/libinput/libinput_config.cpp:106
+#: ui/libinput_config.cpp:90
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "ポインタデバイスが見つかりません。接続してください。"
 
-#: kcm/libinput/libinput_config.cpp:117
+#: ui/libinput_config.cpp:101
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -71,7 +71,7 @@ msgstr ""
 "すべての変更を保存できませんでした。さらなる情報を得るにはログを確認してくだ"
 "さい。この設定モジュールを再起動して再試行してください。"
 
-#: kcm/libinput/libinput_config.cpp:137
+#: ui/libinput_config.cpp:121
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -80,7 +80,7 @@ msgstr ""
 "デフォルトの数値の読み込み中にエラーが発生しました。いくつかのオプションにデ"
 "フォルトの数値を設定できませんでした。"
 
-#: kcm/libinput/libinput_config.cpp:159
+#: ui/libinput_config.cpp:139
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -89,170 +89,170 @@ msgstr ""
 "新しく追加されたデバイスの読み込み中にエラーが発生しました。再接続してこの設"
 "定モジュールを再起動してください。"
 
-#: kcm/libinput/libinput_config.cpp:183
+#: ui/libinput_config.cpp:155
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "ポインタデバイスが切断されました。設定ダイアログを閉じました。"
 
-#: kcm/libinput/libinput_config.cpp:185
+#: ui/libinput_config.cpp:157
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "ポインタデバイスが切断されました。他のデバイスは見つかりませんでした。"
 
-#: kcm/libinput/main.qml:80
+#: ui/main.qml:44
 #, kde-format
 msgid "Device:"
 msgstr "デバイス:"
 
-#: kcm/libinput/main.qml:104 kcm/libinput/main_deviceless.qml:50
+#: ui/main.qml:68
 #, kde-format
 msgid "General:"
 msgstr "全般:"
 
-#: kcm/libinput/main.qml:105
+#: ui/main.qml:69
 #, kde-format
 msgid "Device enabled"
 msgstr "デバイスを有効化"
 
-#: kcm/libinput/main.qml:125
+#: ui/main.qml:83
 #, kde-format
 msgid "Accept input through this device."
 msgstr "このデバイスからの入力を許可します。"
 
-#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:51
+#: ui/main.qml:89
 #, kde-format
 msgid "Left handed mode"
 msgstr "左利きモード"
 
-#: kcm/libinput/main.qml:150 kcm/libinput/main_deviceless.qml:71
+#: ui/main.qml:102
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "左右のボタンを入れ替えます。"
 
-#: kcm/libinput/main.qml:157 kcm/libinput/main_deviceless.qml:78
+#: ui/main.qml:109
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "左右のボタンを押して中クリック"
 
-#: kcm/libinput/main.qml:177 kcm/libinput/main_deviceless.qml:98
+#: ui/main.qml:122
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "左右のボタンを同時に押すと中クリックを送信します。"
 
-#: kcm/libinput/main.qml:181 kcm/libinput/main_deviceless.qml:101
+#: ui/main.qml:126
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
 
-#: kcm/libinput/main.qml:191 kcm/libinput/main_deviceless.qml:112
+#: ui/main.qml:136
 #, kde-format
 msgid "Pointer speed:"
 msgstr "ポインタの速度:"
 
 # ACCELERATOR added by translator
-#: kcm/libinput/main.qml:290 kcm/libinput/main_deviceless.qml:144
+#: ui/main.qml:209
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "加速(&P):"
 
-#: kcm/libinput/main.qml:321 kcm/libinput/main_deviceless.qml:175
+#: ui/main.qml:225
 #, kde-format
 msgid "None"
 msgstr "なし"
 
-#: kcm/libinput/main.qml:325 kcm/libinput/main_deviceless.qml:179
+#: ui/main.qml:230
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "カーソルはマウスが動いた距離と同じ長さだけ動きます。"
 
-#: kcm/libinput/main.qml:331 kcm/libinput/main_deviceless.qml:185
+#: ui/main.qml:234
 #, kde-format
 msgid "Standard"
 msgstr "標準"
 
-#: kcm/libinput/main.qml:335 kcm/libinput/main_deviceless.qml:189
+#: ui/main.qml:239
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "カーソルが動く距離はマウスの動く速さによって変動します。"
 
-#: kcm/libinput/main.qml:347 kcm/libinput/main_deviceless.qml:201
+#: ui/main.qml:250
 #, kde-format
 msgid "Scrolling:"
 msgstr "スクロール:"
 
-#: kcm/libinput/main.qml:348 kcm/libinput/main_deviceless.qml:202
+#: ui/main.qml:251
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "スクロール方向を反転"
 
-#: kcm/libinput/main.qml:364 kcm/libinput/main_deviceless.qml:218
+#: ui/main.qml:264
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "タッチスクリーンのようなスクロールです。"
 
-#: kcm/libinput/main.qml:369
+#: ui/main.qml:269
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "スクロールの速さ:"
 
-#: kcm/libinput/main.qml:419
+#: ui/main.qml:320
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "遅く"
 
-#: kcm/libinput/main.qml:426
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "速く"
 
-#: kcm/libinput/main.qml:437
+#: ui/main.qml:338
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "追加のマウスボタンをリバインド..."
 
-#: kcm/libinput/main.qml:475
+#: ui/main.qml:383
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "追加のボタン %1:"
 
-#: kcm/libinput/main.qml:506
+#: ui/main.qml:410
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "キーバインドを追加するマウスボタンを押してください"
 
-#: kcm/libinput/main.qml:507
+#: ui/main.qml:411
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "%1 に対する新しいキーの組み合わせを入力してください"
 
-#: kcm/libinput/main.qml:511
+#: ui/main.qml:415
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: kcm/libinput/main.qml:528
+#: ui/main.qml:432
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "マウスボタンを押してください"
 
-#: kcm/libinput/main.qml:529
+#: ui/main.qml:433
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "バインディングを追加..."
 
-#: kcm/libinput/main.qml:559
+#: ui/main.qml:463
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:39+0000\n"
+"POT-Creation-Date: 2024-04-05 00:39+0000\n"
 "PO-Revision-Date: 2023-11-11 15:39+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritická chyba počas čítania základných informácií o zariadení %1."
 
-#: kcm/libinput/libinput_config.cpp:101
+#: ui/libinput_config.cpp:85
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -56,12 +56,12 @@ msgstr ""
 "Chyba počas načítavania hodnôt. Pozrite si logy pre viac informácií. Prosím "
 "reštartujte tento konfiguračný modul."
 
-#: kcm/libinput/libinput_config.cpp:106
+#: ui/libinput_config.cpp:90
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nenájdené žiadne ukazovacie zariadenie. Pripojte ho teraz."
 
-#: kcm/libinput/libinput_config.cpp:117
+#: ui/libinput_config.cpp:101
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -70,7 +70,7 @@ msgstr ""
 "Nebolo možné uložiť zmeny. Pozrite logy pre viac informácií. Prosím "
 "reštarujte teto konfiguračný modul a skúste znova."
 
-#: kcm/libinput/libinput_config.cpp:137
+#: ui/libinput_config.cpp:121
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -79,7 +79,7 @@ msgstr ""
 "Chyba počas načítania predvolených hodnôt. Zlyhalo nastavenie niektorých "
 "možností na ich predvolené hodnoty."
 
-#: kcm/libinput/libinput_config.cpp:159
+#: ui/libinput_config.cpp:139
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -88,53 +88,53 @@ msgstr ""
 "Chyba počas pridávania nového zariadenia. Prosím pripojte ho znova a "
 "reštarujte tento modul nastavení."
 
-#: kcm/libinput/libinput_config.cpp:183
+#: ui/libinput_config.cpp:155
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Ukazovacie zariadenie odpojené. Zatvorte tento dialóg nastavení."
 
-#: kcm/libinput/libinput_config.cpp:185
+#: ui/libinput_config.cpp:157
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Ukazovacie zariadenie odpojené. Žiadne iné zariadenie nebolo nájdené."
 
-#: kcm/libinput/main.qml:80
+#: ui/main.qml:44
 #, kde-format
 msgid "Device:"
 msgstr "Zariadenie:"
 
-#: kcm/libinput/main.qml:104 kcm/libinput/main_deviceless.qml:50
+#: ui/main.qml:68
 #, kde-format
 msgid "General:"
 msgstr "&Všeobecné:"
 
-#: kcm/libinput/main.qml:105
+#: ui/main.qml:69
 #, kde-format
 msgid "Device enabled"
 msgstr "Zariadenie povolené"
 
-#: kcm/libinput/main.qml:125
+#: ui/main.qml:83
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Prijímať vstup cez toto zariadenie."
 
-#: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:51
+#: ui/main.qml:89
 #, kde-format
 msgid "Left handed mode"
 msgstr "Pre ľavákov"
 
-#: kcm/libinput/main.qml:150 kcm/libinput/main_deviceless.qml:71
+#: ui/main.qml:102
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Vymeniť ľavé a pravé tlačidlo."
 
-#: kcm/libinput/main.qml:157 kcm/libinput/main_deviceless.qml:78
+#: ui/main.qml:109
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr ""
 "Stlačením ľavého a pravého tlačidla vykonať kliknutie stredným tlačidlom"
 
-#: kcm/libinput/main.qml:177 kcm/libinput/main_deviceless.qml:98
+#: ui/main.qml:122
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -142,118 +142,118 @@ msgstr ""
 "Stlačenie ľavého a pravého tlačidla myši naraz odošle stlačenie stredného "
 "tlačidla."
 
-#: kcm/libinput/main.qml:181 kcm/libinput/main_deviceless.qml:101
+#: ui/main.qml:126
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
 
-#: kcm/libinput/main.qml:191 kcm/libinput/main_deviceless.qml:112
+#: ui/main.qml:136
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Rýchlosť ukazovateľa:"
 
-#: kcm/libinput/main.qml:290 kcm/libinput/main_deviceless.qml:144
+#: ui/main.qml:209
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Zrýchlenie ukazovateľa:"
 
-#: kcm/libinput/main.qml:321 kcm/libinput/main_deviceless.qml:175
+#: ui/main.qml:225
 #, kde-format
 msgid "None"
 msgstr "Žiadne"
 
-#: kcm/libinput/main.qml:325 kcm/libinput/main_deviceless.qml:179
+#: ui/main.qml:230
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Kurzor sa posunie o rovnakú vzdialenosť ako sa hýbe myš."
 
-#: kcm/libinput/main.qml:331 kcm/libinput/main_deviceless.qml:185
+#: ui/main.qml:234
 #, kde-format
 msgid "Standard"
 msgstr "Štandardné"
 
-#: kcm/libinput/main.qml:335 kcm/libinput/main_deviceless.qml:189
+#: ui/main.qml:239
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "Vzdialenosť o akú sa kurzor presunie závisí od rýchlosti pohybu myši."
 
-#: kcm/libinput/main.qml:347 kcm/libinput/main_deviceless.qml:201
+#: ui/main.qml:250
 #, kde-format
 msgid "Scrolling:"
 msgstr "Rolovanie:"
 
-#: kcm/libinput/main.qml:348 kcm/libinput/main_deviceless.qml:202
+#: ui/main.qml:251
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Obrátiť smer rolovania"
 
-#: kcm/libinput/main.qml:364 kcm/libinput/main_deviceless.qml:218
+#: ui/main.qml:264
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Rolovanie ako na dotykovej obrazovke."
 
-#: kcm/libinput/main.qml:369
+#: ui/main.qml:269
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Rýchlosť rolovania:"
 
-#: kcm/libinput/main.qml:419
+#: ui/main.qml:320
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Pomalšie"
 
-#: kcm/libinput/main.qml:426
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Rýchlejšie"
 
-#: kcm/libinput/main.qml:437
+#: ui/main.qml:338
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Nastavenie akcií extra tlačidiel myši"
 
-#: kcm/libinput/main.qml:475
+#: ui/main.qml:383
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Extra tlačidlo %1:"
 
-#: kcm/libinput/main.qml:506
+#: ui/main.qml:410
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "Stlačte tlačidlo myši, pre ktoré chcete pridať novú akciu"
 
-#: kcm/libinput/main.qml:507
+#: ui/main.qml:411
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Zadajte novú kombináciu klávesov pre %1"
 
-#: kcm/libinput/main.qml:511
+#: ui/main.qml:415
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: kcm/libinput/main.qml:528
+#: ui/main.qml:432
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
 msgstr "Stlačte tlačidlo myši "
 
-#: kcm/libinput/main.qml:529
+#: ui/main.qml:433
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Pridať akciu..."
 
-#: kcm/libinput/main.qml:559
+#: ui/main.qml:463
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
