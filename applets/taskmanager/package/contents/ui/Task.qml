@@ -96,7 +96,7 @@ PlasmaCore.ToolTipArea {
                 // fallthrough
             }
             case 2: {
-                if (backend.windowViewAvailable) {
+                if (effectWatcher.registered) {
                     return `${i18nc("@info:usagetip %1 task name", "Show windows side by side for %1", model.display)}; ${smartLauncherDescription}`;
                 }
                 // fallthrough
@@ -190,7 +190,7 @@ PlasmaCore.ToolTipArea {
     onAudioIndicatorsEnabledChanged: task.hasAudioStreamChanged()
 
     Keys.onMenuPressed: contextMenuTimer.start()
-    Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task, Plasmoid, tasks)
+    Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task, Plasmoid, tasks, effectWatcher.registered)
     Keys.onEnterPressed: Keys.returnPressed(event);
     Keys.onSpacePressed: Keys.returnPressed(event);
     Keys.onUpPressed: Keys.leftPressed(event)
@@ -334,7 +334,7 @@ PlasmaCore.ToolTipArea {
             if (Plasmoid.configuration.showToolTips && task.active) {
                 hideToolTip();
             }
-            TaskTools.activateTask(modelIndex(), model, point.modifiers, task, Plasmoid, tasks);
+            TaskTools.activateTask(modelIndex(), model, point.modifiers, task, Plasmoid, tasks, effectWatcher.registered);
         }
     }
 

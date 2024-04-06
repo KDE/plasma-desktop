@@ -28,7 +28,6 @@ class Backend : public QObject
     Q_OBJECT
 
     Q_PROPERTY(bool highlightWindows READ highlightWindows WRITE setHighlightWindows NOTIFY highlightWindowsChanged)
-    Q_PROPERTY(bool windowViewAvailable READ windowViewAvailable NOTIFY windowViewAvailableChanged)
 
 public:
     enum MiddleClickAction {
@@ -55,8 +54,6 @@ public:
 
     Q_INVOKABLE QRect globalRect(QQuickItem *item) const;
 
-    bool windowViewAvailable() const;
-
     Q_INVOKABLE bool isApplication(const QUrl &url) const;
 
     Q_INVOKABLE void cancelHighlightWindows();
@@ -73,7 +70,6 @@ public Q_SLOTS:
 Q_SIGNALS:
     void highlightWindowsChanged() const;
     void addLauncher(const QUrl &url) const;
-    void windowViewAvailableChanged();
 
     void showAllPlaces();
 
@@ -89,5 +85,4 @@ private:
     QStringList m_windowsToHighlight;
     QActionGroup *m_actionGroup = nullptr;
     KActivities::Consumer *m_activitiesConsumer = nullptr;
-    bool m_windowViewAvailable = false;
 };

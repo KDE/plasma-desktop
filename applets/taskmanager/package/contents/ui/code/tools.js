@@ -10,7 +10,6 @@
 .import org.kde.taskmanager 0.1 as TaskManager
 .import org.kde.plasma.core as PlasmaCore // Needed by TaskManager
 
-var windowViewAvailable = false;
 var taskManagerInstanceCount = 0;
 
 function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
@@ -74,7 +73,7 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
     tasks.tasksModel.requestActivate(target);
 }
 
-function activateTask(index, model, modifiers, task, plasmoid, tasks) {
+function activateTask(index, model, modifiers, task, plasmoid, tasks, windowViewAvailable) {
     if (modifiers & Qt.ShiftModifier) {
         tasks.tasksModel.requestNewInstance(index);
         return;

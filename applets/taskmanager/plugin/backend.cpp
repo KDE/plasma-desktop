@@ -66,19 +66,6 @@ Backend::Backend(QObject *parent)
     , m_highlightWindows(false)
     , m_actionGroup(new QActionGroup(this))
 {
-    m_windowViewAvailable = QDBusConnection::sessionBus().interface()->isServiceRegistered(appViewName);
-    auto watcher = new QDBusServiceWatcher(appViewName,
-                                           QDBusConnection::sessionBus(),
-                                           QDBusServiceWatcher::WatchForRegistration | QDBusServiceWatcher::WatchForUnregistration,
-                                           this);
-    connect(watcher, &QDBusServiceWatcher::serviceRegistered, this, [this] {
-        m_windowViewAvailable = true;
-        Q_EMIT windowViewAvailableChanged();
-    });
-    connect(watcher, &QDBusServiceWatcher::serviceUnregistered, this, [this] {
-        m_windowViewAvailable = false;
-        Q_EMIT windowViewAvailableChanged();
-    });
 }
 
 Backend::~Backend()
@@ -509,11 +496,6 @@ QRect Backend::globalRect(QQuickItem *item) const
     iconRect.moveTopLeft(item->window()->mapToGlobal(iconRect.topLeft()));
 
     return iconRect;
-}
-
-bool Backend::windowViewAvailable() const
-{
-    return m_windowViewAvailable;
 }
 
 void Backend::activateWindowView(const QVariant &_winIds)

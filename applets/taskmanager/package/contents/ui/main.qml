@@ -19,6 +19,7 @@ import org.kde.plasma.workspace.trianglemousefilter 1.0
 
 import org.kde.taskmanager 0.1 as TaskManager
 import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
+import org.kde.plasma.workspace.dbus as DBus
 
 import "code/layout.js" as LayoutManager
 import "code/tools.js" as TaskTools
@@ -223,10 +224,12 @@ PlasmoidItem {
         onAddLauncher: {
             tasks.addLauncher(url);
         }
+    }
 
-        onWindowViewAvailableChanged: TaskTools.windowViewAvailable = windowViewAvailable;
-
-        Component.onCompleted: TaskTools.windowViewAvailable = windowViewAvailable;
+    DBus.DBusServiceWatcher {
+        id: effectWatcher
+        busType: DBus.BusType.Session
+        watchedService: "org.kde.KWin.Effect.WindowView1"
     }
 
     property Component taskInitComponent: Component {
@@ -522,7 +525,7 @@ PlasmoidItem {
 
         var task = taskRepeater.itemAt(index);
         if (task) {
-            TaskTools.activateTask(task.modelIndex(), task.model, null, task, Plasmoid, tasks);
+            TaskTools.activateTask(task.modelIndex(), task.model, null, task, Plasmoid, tasks, effectWatcher.registered);
         }
     }
 

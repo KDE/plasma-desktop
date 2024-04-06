@@ -13,7 +13,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kcmutils as KCM
 
-import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
+import org.kde.plasma.workspace.dbus as DBus
 
 KCM.SimpleKCM {
     property alias cfg_groupingStrategy: groupingStrategy.currentIndex
@@ -33,8 +33,10 @@ KCM.SimpleKCM {
     property alias cfg_unhideOnAttention: unhideOnAttention.checked
     property alias cfg_reverseMode: reverseMode.checked
 
-    TaskManagerApplet.Backend {
-        id: backend
+    DBus.DBusServiceWatcher {
+        id: effectWatcher
+        busType: DBus.BusType.Session
+        watchedService: "org.kde.KWin.Effect.WindowView1"
     }
 
     Kirigami.FormLayout {
@@ -67,7 +69,7 @@ KCM.SimpleKCM {
         // "You asked for Window View but Window View is not available" message
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: groupedTaskVisualization.currentIndex === 2 && !backend.windowViewAvailable
+            visible: groupedTaskVisualization.currentIndex === 2 && !effectWatcher.registered
             type: Kirigami.MessageType.Warning
             text: i18n("The compositor does not support displaying windows side by side, so a textual list will be displayed instead.")
         }
