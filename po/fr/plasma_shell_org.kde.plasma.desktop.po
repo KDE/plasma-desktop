@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-03 00:39+0000\n"
-"PO-Revision-Date: 2024-03-27 09:02+0100\n"
+"PO-Revision-Date: 2024-04-04 12:28+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -20,9 +20,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Text-Markup: kde4\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
@@ -545,93 +545,89 @@ msgstr "Aucun composant graphique disponible"
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Horloge :"
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Restez visible lorsque l'invite de déverrouillage disparaît"
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Contrôles multimédia :"
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Afficher sous l'invite de déverrouillage"
 
 #: contents/lockscreen/LockScreenUi.qml:50
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Échec du déverrouillage"
 
 #: contents/lockscreen/LockScreenUi.qml:276
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Le verrouillage en majuscules « Verr. Maj » est activé."
 
 #: contents/lockscreen/LockScreenUi.qml:290
 msgid "Sleep"
-msgstr ""
+msgstr "Veille"
 
 #: contents/lockscreen/LockScreenUi.qml:296
 msgid "Hibernate"
-msgstr ""
+msgstr "Hiberner"
 
 #: contents/lockscreen/LockScreenUi.qml:302
-#, fuzzy
-#| msgid "Switch"
 msgid "Switch User"
-msgstr "Changer"
+msgstr "Changer d'utilisateur"
 
 #: contents/lockscreen/LockScreenUi.qml:363
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Clavier virtuel"
 
 #: contents/lockscreen/LockScreenUi.qml:387
-#, fuzzy
-#| msgid "Switch"
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Changer"
+msgstr "Changer de disposition"
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr ""
+msgstr "Mot de passe"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr ""
+msgstr "Déverrouiller"
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(ou lire votre empreinte digitale sur le lecteur)"
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(ou parcourir votre carte mémoire)"
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr ""
+msgstr "Aucun titre"
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr ""
+msgstr "Aucun média en cours de lecture"
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr ""
+msgstr "Piste précédente"
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Lire ou mettre en pause un média"
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr ""
+msgstr "Piste suivante"
 
 #~ msgid "Sorry! There was an error loading %1."
 #~ msgstr "Désolé ! Une erreur est survenue durant le chargement de %1."
