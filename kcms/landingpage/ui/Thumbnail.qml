@@ -9,7 +9,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 import QtQuick.Window 2.2
-import org.kde.kirigami 2.15 as Kirigami
+import org.kde.kirigami as Kirigami
 
 QQC2.RadioButton {
     id: delegate
@@ -25,7 +25,7 @@ QQC2.RadioButton {
         Kirigami.ShadowedRectangle {
             implicitWidth: implicitHeight * 1.6
             implicitHeight: Kirigami.Units.gridUnit * 5
-            radius: Kirigami.Units.smallSpacing
+            radius: Kirigami.Units.cornerRadius
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.View
 

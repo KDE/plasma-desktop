@@ -7,7 +7,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.shell.panel 0.1 as Panel
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Item {
     id: panelRepresentation
@@ -69,7 +69,7 @@ Item {
             implicitHeight: Math.round(Math.min(Kirigami.Units.gridUnit * 4, Screen.width * 0.1))
             color: Qt.tint(Kirigami.Theme.backgroundColor, Qt.rgba(1, 1, 1, 0.3))
             border.color: Kirigami.Theme.highlightColor
-            radius: 5
+            radius: Kirigami.Units.cornerRadius
             clip: sunkenPanel
 
             RowLayout {
@@ -88,7 +88,7 @@ Item {
                     border.color: "transparent"
                     visible: panelRepresentation.panelVisible
                     clip: panelRepresentation.adaptivePanel
-                    radius: 5
+                    radius: Kirigami.Units.cornerRadius
 
                     z: 1
 

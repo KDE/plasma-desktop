@@ -6,6 +6,7 @@
 */
 
 import QtQuick 2.2
+import org.kde.kirigami as Kirigami
 
 Image {
     id: main
@@ -26,7 +27,7 @@ Image {
         Rectangle {
             anchors.fill: parent
             color: "black"
-            radius: 8
+            radius: Kirigami.Units.cornerRadius
             opacity: .7
         }
 

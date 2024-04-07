@@ -20,7 +20,7 @@ Rectangle {
         width: 1
     }
 
-    radius: Kirigami.Units.smallSpacing
+    radius: Kirigami.Units.cornerRadius
     color: "transparent"
 
     Kirigami.Theme.colorSet: Kirigami.Theme.Window

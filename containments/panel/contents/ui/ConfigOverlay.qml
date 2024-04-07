@@ -14,7 +14,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 MouseArea {
     id: configurationArea
@@ -168,7 +168,7 @@ MouseArea {
         height: configurationArea.currentApplet?.height ?? 0
 
         color: Kirigami.Theme.backgroundColor
-        radius: 3
+        radius: Kirigami.Units.cornerRadius
         opacity: configurationArea.currentApplet && configurationArea.containsMouse ? 0.5 : 0
 
         Kirigami.Icon {
