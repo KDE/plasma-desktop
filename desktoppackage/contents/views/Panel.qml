@@ -326,18 +326,21 @@ Item {
     }
 
     KSvg.FrameSvgItem {
+
+        Accessible.name: i18n("Panel Focus Indicator")
+
         x: root.verticalPanel || !panel.activeFocusItem
-            ? 0
+            ? translucentItem.x
             : Math.max(panel.activeFocusItem.Kirigami.ScenePosition.x, panel.activeFocusItem.Kirigami.ScenePosition.x)
         y: root.verticalPanel && panel.activeFocusItem
             ? Math.max(panel.activeFocusItem.Kirigami.ScenePosition.y, panel.activeFocusItem.Kirigami.ScenePosition.y)
-            : 0
+            : translucentItem.y
 
         width: panel.activeFocusItem
-            ? (root.verticalPanel ? root.width : Math.min(panel.activeFocusItem.width, panel.activeFocusItem.width))
+            ? (root.verticalPanel ? translucentItem.width : Math.min(panel.activeFocusItem.width, panel.activeFocusItem.width))
             : 0
         height: panel.activeFocusItem
-            ? (root.verticalPanel ?  Math.min(panel.activeFocusItem.height, panel.activeFocusItem.height) : root.height)
+            ? (root.verticalPanel ?  Math.min(panel.activeFocusItem.height, panel.activeFocusItem.height) : translucentItem.height)
             : 0
 
         visible: panel.active && panel.activeFocusItem
