@@ -570,10 +570,6 @@ FocusScope {
         onContainsMouseChanged: {
             if (!containsMouse && !main.rubberBand) {
                 clearPressState();
-
-                if (gridView.hoveredItem && !gridView.hoveredItem.popupDialog) {
-                    gridView.hoveredItem = null;
-                }
             }
         }
 
