@@ -16,11 +16,11 @@ LayoutModel::LayoutModel(Rules *rules, QObject *parent) noexcept
     , m_rules(rules)
 {
     if (m_rules) {
-        for (const LayoutInfo *layoutInfo : std::as_const(m_rules->layoutInfos)) {
-            m_data.append(Data(layoutInfo->name, layoutInfo->description, QStringLiteral("")));
+        for (const LayoutInfo &layoutInfo : std::as_const(m_rules->layoutInfos)) {
+            m_data.append(Data(layoutInfo.name, layoutInfo.description, QStringLiteral("")));
 
-            for (const VariantInfo *variantInfo : layoutInfo->variantInfos) {
-                m_data.append(Data(layoutInfo->name, variantInfo->description, variantInfo->name));
+            for (const VariantInfo &variantInfo : layoutInfo.variantInfos) {
+                m_data.append(Data(layoutInfo.name, variantInfo.description, variantInfo.name));
             }
         }
     }

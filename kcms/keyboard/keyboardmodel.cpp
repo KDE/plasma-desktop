@@ -35,17 +35,17 @@ QVariant KeyboardModel::data(const QModelIndex &index, int role) const
     if (index.row() >= m_rules->modelInfos.size())
         return QVariant();
 
-    const ModelInfo *modelInfo = m_rules->modelInfos.at(index.row());
+    const ModelInfo modelInfo = m_rules->modelInfos.at(index.row());
 
-    QString vendor = modelInfo->vendor;
+    QString vendor = modelInfo.vendor;
     if (vendor.isEmpty()) {
         vendor = i18nc("unknown keyboard model vendor", "Unknown");
     }
 
     if (role == Roles::DescriptionRole || role == Qt::DisplayRole) {
-        return QVariant::fromValue(i18nc("vendor | keyboard model", "%1 | %2", vendor, modelInfo->description));
+        return QVariant::fromValue(i18nc("vendor | keyboard model", "%1 | %2", vendor, modelInfo.description));
     } else if (role == Roles::NameRole) {
-        return QVariant::fromValue(modelInfo->name);
+        return QVariant::fromValue(modelInfo.name);
     }
 
     return QVariant();

@@ -8,54 +8,45 @@
 
 #include <QList>
 
-struct ConfigItem {
-    QString name;
-    QString description;
-
-    ConfigItem(const char *name_, const char *description_)
-        : name(QString::fromUtf8(name_))
-        , description(QString::fromUtf8(description_))
-    {
-    }
-};
-
 template<class T>
-inline T *findByName(QList<T *> list, QString name)
+inline std::optional<T> findByName(QList<T> list, QString name)
 {
-    for (T *info : std::as_const(list)) {
-        if (info->name == name)
+    for (T info : std::as_const(list)) {
+        if (info.name == name)
             return info;
     }
-    return nullptr;
+    return std::nullopt;
 }
 
-struct VariantInfo : public ConfigItem {
+struct VariantInfo {
+    QString name;
+    QString description;
     QStringList languages;
-    const bool fromExtras;
+    bool fromExtras = false;
 
     VariantInfo(const char *name_, const char *description_, bool fromExtras_)
-        : ConfigItem(name_, description_)
+        : name(QString::fromUtf8(name_))
+        , description(QString::fromUtf8(description_))
         , fromExtras(fromExtras_)
     {
     }
 };
 
-struct LayoutInfo : public ConfigItem {
-    QList<VariantInfo *> variantInfos;
+struct LayoutInfo {
+    QString name;
+    QString description;
+    QList<VariantInfo> variantInfos;
     QStringList languages;
-    const bool fromExtras;
+    bool fromExtras;
 
     LayoutInfo(const char *name_, const char *description_, bool fromExtras_)
-        : ConfigItem(name_, description_)
+        : name(QString::fromUtf8(name_))
+        , description(QString::fromUtf8(description_))
         , fromExtras(fromExtras_)
     {
     }
-    ~LayoutInfo()
-    {
-        qDeleteAll(variantInfos);
-    }
 
-    VariantInfo *getVariantInfo(const QString &variantName) const
+    std::optional<VariantInfo> getVariantInfo(const QString &variantName) const
     {
         return findByName(variantInfos, variantName);
     }
@@ -66,37 +57,41 @@ struct LayoutInfo : public ConfigItem {
     bool isLanguageSupportedByVariant(const VariantInfo *variantInfo, const QString &lang) const;
 };
 
-struct ModelInfo : public ConfigItem {
+struct ModelInfo {
+    QString name;
+    QString description;
     QString vendor;
     ModelInfo(const char *name_, const char *description_, const char *vendor_)
-        : ConfigItem(name_, description_)
+        : name(QString::fromUtf8(name_))
+        , description(QString::fromUtf8(description_))
         , vendor(QString::fromUtf8(vendor_))
     {
     }
 };
 
-struct OptionInfo : public ConfigItem {
+struct OptionInfo {
+    QString name;
+    QString description;
     OptionInfo(const char *name_, const char *description_)
-        : ConfigItem(name_, description_)
+        : name(QString::fromUtf8(name_))
+        , description(QString::fromUtf8(description_))
     {
     }
 };
 
-struct OptionGroupInfo : public ConfigItem {
-    QList<OptionInfo *> optionInfos;
+struct OptionGroupInfo {
+    QString name;
+    QString description;
+    QList<OptionInfo> optionInfos;
     bool exclusive;
     OptionGroupInfo(const char *name_, const char *description_, bool exclusive_)
-        : ConfigItem(name_, description_)
+        : name(QString::fromUtf8(name_))
+        , description(QString::fromUtf8(description_))
         , exclusive(exclusive_)
     {
     }
 
-    ~OptionGroupInfo()
-    {
-        qDeleteAll(optionInfos);
-    }
-
-    const OptionInfo *getOptionInfo(const QString &optionName) const
+    std::optional<OptionInfo> getOptionInfo(const QString &optionName) const
     {
         return findByName(optionInfos, optionName);
     }
@@ -107,25 +102,16 @@ struct Rules {
 
     static const char XKB_OPTION_GROUP_SEPARATOR;
 
-    QList<LayoutInfo *> layoutInfos;
-    QList<ModelInfo *> modelInfos;
-    QList<OptionGroupInfo *> optionGroupInfos;
+    QList<LayoutInfo> layoutInfos;
+    QList<ModelInfo> modelInfos;
+    QList<OptionGroupInfo> optionGroupInfos;
 
-    Rules() = default;
-
-    ~Rules()
-    {
-        qDeleteAll(layoutInfos);
-        qDeleteAll(modelInfos);
-        qDeleteAll(optionGroupInfos);
-    }
-
-    const LayoutInfo *getLayoutInfo(const QString &layoutName) const
+    std::optional<LayoutInfo> getLayoutInfo(const QString &layoutName) const
     {
         return findByName(layoutInfos, layoutName);
     }
 
-    const OptionGroupInfo *getOptionGroupInfo(const QString &optionGroupName) const
+    std::optional<OptionGroupInfo> getOptionGroupInfo(const QString &optionGroupName) const
     {
         return findByName(optionGroupInfos, optionGroupName);
     }

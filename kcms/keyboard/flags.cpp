@@ -86,13 +86,13 @@ QString Flags::getLongText(const LayoutUnit &layoutUnit, const Rules *rules)
     }
 
     QString layoutText = layoutUnit.layout();
-    const LayoutInfo *layoutInfo = rules->getLayoutInfo(layoutUnit.layout());
-    if (layoutInfo != nullptr) {
+    const std::optional<LayoutInfo> layoutInfo = rules->getLayoutInfo(layoutUnit.layout());
+    if (layoutInfo) {
         layoutText = layoutInfo->description;
 
         if (!layoutUnit.variant().isEmpty()) {
-            const VariantInfo *variantInfo = layoutInfo->getVariantInfo(layoutUnit.variant());
-            QString variantText = variantInfo != nullptr ? variantInfo->description : layoutUnit.variant();
+            const std::optional<VariantInfo> variantInfo = layoutInfo->getVariantInfo(layoutUnit.variant());
+            QString variantText = variantInfo ? variantInfo->description : layoutUnit.variant();
 
             layoutText = getDisplayText(layoutText, variantText, rules);
         }

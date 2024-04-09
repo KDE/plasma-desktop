@@ -48,7 +48,7 @@ int XkbOptionsModel::rowCount(const QModelIndex &parent) const
     }
 
     if (!parent.parent().isValid()) {
-        return m_rules->optionGroupInfos[parent.row()]->optionInfos.count();
+        return m_rules->optionGroupInfos[parent.row()].optionInfos.count();
     }
 
     return 0;
@@ -107,23 +107,23 @@ QVariant XkbOptionsModel::data(const QModelIndex &index, int role) const
 
     if (role == Qt::DisplayRole) {
         if (!index.parent().isValid()) {
-            return m_rules->optionGroupInfos[row]->description;
+            return m_rules->optionGroupInfos[row].description;
         } else {
             int groupRow = index.parent().row();
-            const OptionGroupInfo *xkbGroup = m_rules->optionGroupInfos[groupRow];
-            return xkbGroup->optionInfos[row]->description;
+            const OptionGroupInfo xkbGroup = m_rules->optionGroupInfos[groupRow];
+            return xkbGroup.optionInfos[row].description;
         }
     } else if (role == Qt::CheckStateRole) {
         if (index.parent().isValid()) {
             int groupRow = index.parent().row();
-            const OptionGroupInfo *xkbGroup = m_rules->optionGroupInfos[groupRow];
-            const QString &xkbOptionName = xkbGroup->optionInfos[row]->name;
+            const OptionGroupInfo xkbGroup = m_rules->optionGroupInfos[groupRow];
+            const QString &xkbOptionName = xkbGroup.optionInfos[row].name;
             return m_xkbOptions.indexOf(xkbOptionName) == -1 ? Qt::Unchecked : Qt::Checked;
         } else {
             int groupRow = index.row();
-            const OptionGroupInfo *xkbGroup = m_rules->optionGroupInfos[groupRow];
-            for (const OptionInfo *optionInfo : xkbGroup->optionInfos) {
-                if (m_xkbOptions.indexOf(optionInfo->name) != -1) {
+            const OptionGroupInfo xkbGroup = m_rules->optionGroupInfos[groupRow];
+            for (const OptionInfo &optionInfo : xkbGroup.optionInfos) {
+                if (m_xkbOptions.indexOf(optionInfo.name) != -1) {
                     return Qt::PartiallyChecked;
                 }
             }
@@ -146,10 +146,10 @@ QString XkbOptionsModel::getShortcutName(const QString &group)
 
     if (grpOptions.size() == 1) {
         const QString &option = grpOptions.first();
-        const OptionGroupInfo *optionGroupInfo = m_rules->getOptionGroupInfo(group);
-        const OptionInfo *optionInfo = optionGroupInfo->getOptionInfo(option);
+        const std::optional<OptionGroupInfo> optionGroupInfo = m_rules->getOptionGroupInfo(group);
+        const std::optional<OptionInfo> optionInfo = optionGroupInfo->getOptionInfo(option);
 
-        if (optionInfo == nullptr || optionInfo->description == nullptr) {
+        if (!optionInfo || optionInfo->description == nullptr) {
             qCDebug(KCM_KEYBOARD) << "Could not find option info for " << option;
             return grpOptions.first();
         } else {
@@ -180,8 +180,12 @@ void XkbOptionsModel::clearXkbGroup(const QString &group)
 
 void XkbOptionsModel::navigateToGroup(const QString &group)
 {
-    const OptionGroupInfo *optionGroupInfo = m_rules->getOptionGroupInfo(group);
-    int index = m_rules->optionGroupInfos.indexOf(const_cast<OptionGroupInfo *>(optionGroupInfo));
+    auto it = std::find_if(m_rules->optionGroupInfos.cbegin(), m_rules->optionGroupInfos.cend(), [group](const OptionGroupInfo &groupInfo) {
+        return groupInfo.name == group;
+    });
+
+    int index = std::distance(m_rules->optionGroupInfos.cbegin(), it);
+
     if (index != -1) {
         Q_EMIT navigateTo(createIndex(index, 0));
     }
@@ -210,27 +214,27 @@ bool XkbOptionsModel::setData(const QModelIndex &index, const QVariant &value, i
         return false;
     }
 
-    const OptionGroupInfo *xkbGroup = m_rules->optionGroupInfos[groupRow];
-    const OptionInfo *option = xkbGroup->optionInfos[index.row()];
+    const OptionGroupInfo xkbGroup = m_rules->optionGroupInfos[groupRow];
+    const OptionInfo option = xkbGroup.optionInfos[index.row()];
 
     if (value.toInt() == Qt::Checked) {
-        if (xkbGroup->exclusive) {
+        if (xkbGroup.exclusive) {
             // clear if exclusive (TODO: radiobutton)
-            int idx = m_xkbOptions.indexOf(QRegularExpression(xkbGroup->name + ".*"));
+            int idx = m_xkbOptions.indexOf(QRegularExpression(xkbGroup.name + ".*"));
             if (idx >= 0) {
-                for (int i = 0; i < xkbGroup->optionInfos.count(); i++) {
-                    if (xkbGroup->optionInfos[i]->name == m_xkbOptions.at(idx)) {
+                for (int i = 0; i < xkbGroup.optionInfos.count(); i++) {
+                    if (xkbGroup.optionInfos[i].name == m_xkbOptions.at(idx)) {
                         setData(createIndex(i, index.column(), static_cast<quint32>(index.internalId()) - index.row() + i), Qt::Unchecked, role);
                         break;
                     }
                 }
             }
         }
-        if (m_xkbOptions.indexOf(option->name) < 0) {
-            m_xkbOptions.append(option->name);
+        if (m_xkbOptions.indexOf(option.name) < 0) {
+            m_xkbOptions.append(option.name);
         }
     } else {
-        m_xkbOptions.removeAll(option->name);
+        m_xkbOptions.removeAll(option.name);
     }
 
     Q_EMIT dataChanged(index, index);

@@ -44,20 +44,20 @@ QVariant UserLayoutModel::data(const QModelIndex &index, int role) const
     if (role == Roles::LayoutRole) {
         return QVariant::fromValue(layout.layout());
     } else if (role == Roles::LayoutNameRole) {
-        const LayoutInfo *layoutInfo = m_rules->getLayoutInfo(layout.layout());
-        return layoutInfo != nullptr ? layoutInfo->description : layout.layout();
+        const std::optional<LayoutInfo> layoutInfo = m_rules->getLayoutInfo(layout.layout());
+        return layoutInfo ? layoutInfo->description : layout.layout();
     } else if (role == Roles::VariantRole) {
         return QVariant::fromValue(layout.variant());
     } else if (role == Roles::VariantNameRole) {
         if (layout.variant().isEmpty())
             return QVariant();
 
-        const LayoutInfo *layoutInfo = m_rules->getLayoutInfo(layout.layout());
-        if (layoutInfo == nullptr)
+        const std::optional<LayoutInfo> layoutInfo = m_rules->getLayoutInfo(layout.layout());
+        if (!layoutInfo)
             return QVariant();
 
-        const VariantInfo *variantInfo = layoutInfo->getVariantInfo(layout.variant());
-        return variantInfo != nullptr ? variantInfo->description : layout.variant();
+        const std::optional<VariantInfo> variantInfo = layoutInfo->getVariantInfo(layout.variant());
+        return variantInfo ? variantInfo->description : layout.variant();
     } else if (role == Roles::DisplayNameRole) {
         return QVariant::fromValue(layout.getDisplayName());
     } else if (role == Roles::ShortcutRole) {

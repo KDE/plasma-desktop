@@ -28,20 +28,29 @@ static QString translate_xml_item(const QString &itemText)
         .replace(QLatin1String("&gt;"), QLatin1String(">"));
 }
 
-static QString translate_description(ConfigItem *item)
+template<typename T>
+static QString translate_description(T item)
 {
-    return item->description.isEmpty() ? item->name : translate_xml_item(item->description);
+    return item.description.isEmpty() ? item.name : translate_xml_item(item.description);
 }
 
-static bool notEmpty(const ConfigItem *item)
+template<typename T>
+static bool notEmpty(const T &item)
 {
-    return !item->name.isEmpty();
+    return !item.name.isEmpty();
 }
 
 template<class T>
-void removeEmptyItems(QList<T *> &list)
+void removeEmptyItems(QList<T> &list)
 {
-    QtConcurrent::blockingFilter(list, notEmpty);
+    QMutableListIterator<T> it(list);
+
+    while (it.hasNext()) {
+        T t = it.next();
+        if (!notEmpty(t)) {
+            it.remove();
+        }
+    }
 }
 
 static void postProcess(Rules *rules)
@@ -52,25 +61,25 @@ static void postProcess(Rules *rules)
     removeEmptyItems(rules->optionGroupInfos);
 
     //	bindtextdomain("xkeyboard-config", LOCALE_DIR);
-    for (ModelInfo *modelInfo : std::as_const(rules->modelInfos)) {
-        modelInfo->vendor = translate_xml_item(modelInfo->vendor);
-        modelInfo->description = translate_description(modelInfo);
+    for (ModelInfo &modelInfo : rules->modelInfos) {
+        modelInfo.vendor = translate_xml_item(modelInfo.vendor);
+        modelInfo.description = translate_description(modelInfo);
     }
 
-    for (LayoutInfo *layoutInfo : std::as_const(rules->layoutInfos)) {
-        layoutInfo->description = translate_description(layoutInfo);
+    for (LayoutInfo &layoutInfo : rules->layoutInfos) {
+        layoutInfo.description = translate_description(layoutInfo);
 
-        removeEmptyItems(layoutInfo->variantInfos);
-        for (VariantInfo *variantInfo : std::as_const(layoutInfo->variantInfos)) {
-            variantInfo->description = translate_description(variantInfo);
+        removeEmptyItems(layoutInfo.variantInfos);
+        for (VariantInfo &variantInfo : layoutInfo.variantInfos) {
+            variantInfo.description = translate_description(variantInfo);
         }
     }
-    for (OptionGroupInfo *optionGroupInfo : std::as_const(rules->optionGroupInfos)) {
-        optionGroupInfo->description = translate_description(optionGroupInfo);
+    for (OptionGroupInfo &optionGroupInfo : rules->optionGroupInfos) {
+        optionGroupInfo.description = translate_description(optionGroupInfo);
 
-        removeEmptyItems(optionGroupInfo->optionInfos);
-        for (OptionInfo *optionInfo : std::as_const(optionGroupInfo->optionInfos)) {
-            optionInfo->description = translate_description(optionInfo);
+        removeEmptyItems(optionGroupInfo.optionInfos);
+        for (OptionInfo &optionInfo : optionGroupInfo.optionInfos) {
+            optionInfo.description = translate_description(optionInfo);
         }
     }
 }
@@ -127,13 +136,13 @@ Rules *Rules::readRules(ExtrasFlag extrasFlag)
 
     rxkb_model *m = rxkb_model_first(context);
     while (m != nullptr) {
-        rules->modelInfos << new ModelInfo(rxkb_model_get_name(m), rxkb_model_get_description(m), rxkb_model_get_vendor(m));
+        rules->modelInfos << ModelInfo(rxkb_model_get_name(m), rxkb_model_get_description(m), rxkb_model_get_vendor(m));
         m = rxkb_model_next(m);
     }
 
     rxkb_layout *l = rxkb_layout_first(context);
     rxkb_iso639_code *iso639;
-    LayoutInfo *layout = nullptr;
+    int layoutIndex = -1;
     while (l != nullptr) {
         QStringList languages;
         iso639 = rxkb_layout_get_iso639_first(l);
@@ -144,13 +153,14 @@ Rules *Rules::readRules(ExtrasFlag extrasFlag)
 
         const char *variant = rxkb_layout_get_variant(l);
         if (variant == nullptr) {
-            layout = new LayoutInfo(rxkb_layout_get_name(l), rxkb_layout_get_description(l), rxkb_layout_get_popularity(l) == RXKB_POPULARITY_EXOTIC);
-            layout->languages = languages;
+            LayoutInfo layout(rxkb_layout_get_name(l), rxkb_layout_get_description(l), rxkb_layout_get_popularity(l) == RXKB_POPULARITY_EXOTIC);
+            layout.languages = languages;
+            layoutIndex = rules->layoutInfos.size();
             rules->layoutInfos << layout;
-        } else if (layout != nullptr) {
-            VariantInfo *v = new VariantInfo(variant, rxkb_layout_get_description(l), rxkb_layout_get_popularity(l) == RXKB_POPULARITY_EXOTIC);
-            v->languages = languages;
-            layout->variantInfos << v;
+        } else if (layoutIndex != -1) {
+            VariantInfo v(variant, rxkb_layout_get_description(l), rxkb_layout_get_popularity(l) == RXKB_POPULARITY_EXOTIC);
+            v.languages = languages;
+            rules->layoutInfos[layoutIndex].variantInfos << v;
         }
         l = rxkb_layout_next(l);
     }
@@ -158,12 +168,11 @@ Rules *Rules::readRules(ExtrasFlag extrasFlag)
     rxkb_option_group *g = rxkb_option_group_first(context);
 
     while (g != nullptr) {
-        OptionGroupInfo *group =
-            new OptionGroupInfo(rxkb_option_group_get_name(g), rxkb_option_group_get_description(g), !rxkb_option_group_allows_multiple(g));
+        OptionGroupInfo group(rxkb_option_group_get_name(g), rxkb_option_group_get_description(g), !rxkb_option_group_allows_multiple(g));
 
         rxkb_option *o = rxkb_option_first(g);
         while (o != nullptr) {
-            group->optionInfos << new OptionInfo(rxkb_option_get_name(o), rxkb_option_get_description(o));
+            group.optionInfos << OptionInfo(rxkb_option_get_name(o), rxkb_option_get_description(o));
             o = rxkb_option_next(o);
         }
         rules->optionGroupInfos << group;
@@ -182,8 +191,8 @@ bool LayoutInfo::isLanguageSupportedByLayout(const QString &lang) const
 
 bool LayoutInfo::isLanguageSupportedByVariants(const QString &lang) const
 {
-    for (const VariantInfo *info : std::as_const(variantInfos)) {
-        if (info->languages.contains(lang))
+    for (const VariantInfo &info : std::as_const(variantInfos)) {
+        if (info.languages.contains(lang))
             return true;
     }
     return false;

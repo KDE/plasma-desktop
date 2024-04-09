@@ -39,29 +39,26 @@ private Q_SLOTS:
 
     void testModel()
     {
-        for (const ModelInfo *modelInfo : std::as_const(rules->modelInfos)) {
-            QVERIFY(modelInfo != nullptr);
-            QVERIFY(modelInfo->name.length() > 0);
-            QVERIFY(modelInfo->description.length() > 0);
+        for (const ModelInfo &modelInfo : std::as_const(rules->modelInfos)) {
+            QVERIFY(modelInfo.name.length() > 0);
+            QVERIFY(modelInfo.description.length() > 0);
             //        	QVERIFY( ! modelInfo->vendor.isEmpty() );
         }
     }
 
     void testLayouts()
     {
-        for (const LayoutInfo *layoutInfo : std::as_const(rules->layoutInfos)) {
-            QVERIFY(layoutInfo != nullptr);
-            QVERIFY(!layoutInfo->name.isEmpty());
+        for (const LayoutInfo &layoutInfo : std::as_const(rules->layoutInfos)) {
+            QVERIFY(!layoutInfo.name.isEmpty());
             //        	const char* desc = layoutInfo->name.toUtf8() ;
             //        	qDebug() << layoutInfo->name;
-            QVERIFY(!layoutInfo->description.isEmpty());
+            QVERIFY(!layoutInfo.description.isEmpty());
 
-            for (const VariantInfo *variantInfo : layoutInfo->variantInfos) {
-                QVERIFY(variantInfo != nullptr);
-                QVERIFY(!variantInfo->name.isEmpty());
-                QVERIFY(!variantInfo->description.isEmpty());
+            for (const VariantInfo &variantInfo : layoutInfo.variantInfos) {
+                QVERIFY(!variantInfo.name.isEmpty());
+                QVERIFY(!variantInfo.description.isEmpty());
             }
-            for (const QString &language : layoutInfo->languages) {
+            for (const QString &language : layoutInfo.languages) {
                 QVERIFY(!language.isEmpty());
             }
         }
@@ -69,16 +66,14 @@ private Q_SLOTS:
 
     void testOptionGroups()
     {
-        for (const OptionGroupInfo *optionGroupInfo : std::as_const(rules->optionGroupInfos)) {
-            QVERIFY(optionGroupInfo != nullptr);
-            QVERIFY(!optionGroupInfo->name.isEmpty());
-            QVERIFY(!optionGroupInfo->description.isEmpty());
+        for (const OptionGroupInfo &optionGroupInfo : std::as_const(rules->optionGroupInfos)) {
+            QVERIFY(!optionGroupInfo.name.isEmpty());
+            QVERIFY(!optionGroupInfo.description.isEmpty());
             // optionGroupInfo->exclusive
 
-            for (const OptionInfo *optionInfo : optionGroupInfo->optionInfos) {
-                QVERIFY(optionInfo != nullptr);
-                QVERIFY(!optionInfo->name.isEmpty());
-                QVERIFY(!optionInfo->description.isEmpty());
+            for (const OptionInfo &optionInfo : optionGroupInfo.optionInfos) {
+                QVERIFY(!optionInfo.name.isEmpty());
+                QVERIFY(!optionInfo.description.isEmpty());
             }
         }
     }
@@ -88,18 +83,18 @@ private Q_SLOTS:
         const Rules *rulesWithExtras = Rules::readRules(Rules::READ_EXTRAS);
         QVERIFY2(rulesWithExtras->layoutInfos.size() > rules->layoutInfos.size(), "Rules with extras should have more layouts");
 
-        for (const LayoutInfo *layoutInfo : std::as_const(rules->layoutInfos)) {
-            QVERIFY(!layoutInfo->fromExtras);
+        for (const LayoutInfo &layoutInfo : std::as_const(rules->layoutInfos)) {
+            QVERIFY(!layoutInfo.fromExtras);
         }
 
         bool foundFromExtras = false, foundNonExtras = false;
-        for (const LayoutInfo *layoutInfo : rulesWithExtras->layoutInfos) {
-            if (layoutInfo->fromExtras)
+        for (const LayoutInfo &layoutInfo : rulesWithExtras->layoutInfos) {
+            if (layoutInfo.fromExtras)
                 foundFromExtras = true;
-            if (!layoutInfo->fromExtras)
+            if (!layoutInfo.fromExtras)
                 foundNonExtras = true;
-            layoutInfo->languages.size(); // make sure we can access all merged objects
-            layoutInfo->variantInfos.size(); // make sure we can access all merged objects
+            layoutInfo.languages.size(); // make sure we can access all merged objects
+            layoutInfo.variantInfos.size(); // make sure we can access all merged objects
         }
         QVERIFY(foundNonExtras);
         QVERIFY(foundFromExtras);
@@ -114,22 +109,22 @@ private Q_SLOTS:
 
         QDomElement modelList = doc.createElement(QStringLiteral("modelList"));
         root.appendChild(modelList);
-        for (const ModelInfo *modelInfo : std::as_const(rules->modelInfos)) {
+        for (const ModelInfo &modelInfo : std::as_const(rules->modelInfos)) {
             QDomElement model = doc.createElement(QStringLiteral("model"));
-            model.setAttribute(QStringLiteral("name"), modelInfo->name);
-            model.setAttribute(QStringLiteral("description"), modelInfo->description);
-            model.setAttribute(QStringLiteral("vendor"), modelInfo->vendor);
+            model.setAttribute(QStringLiteral("name"), modelInfo.name);
+            model.setAttribute(QStringLiteral("description"), modelInfo.description);
+            model.setAttribute(QStringLiteral("vendor"), modelInfo.vendor);
             modelList.appendChild(model);
         }
 
         QDomElement layoutList = doc.createElement(QStringLiteral("layoutList"));
-        for (const LayoutInfo *layoutInfo : std::as_const(rules->layoutInfos)) {
+        for (const LayoutInfo &layoutInfo : std::as_const(rules->layoutInfos)) {
             QDomElement layout = doc.createElement(QStringLiteral("layout"));
-            layout.setAttribute(QStringLiteral("name"), layoutInfo->name);
-            layout.setAttribute(QStringLiteral("description"), layoutInfo->description);
+            layout.setAttribute(QStringLiteral("name"), layoutInfo.name);
+            layout.setAttribute(QStringLiteral("description"), layoutInfo.description);
 
             QDomElement langList = doc.createElement(QStringLiteral("languageList"));
-            for (const QString &lang : layoutInfo->languages) {
+            for (const QString &lang : layoutInfo.languages) {
                 QDomElement langNode = doc.createElement(QStringLiteral("lang"));
                 langNode.setAttribute(QStringLiteral("iso639Id"), lang);
                 langList.appendChild(langNode);
@@ -139,13 +134,13 @@ private Q_SLOTS:
             }
 
             QDomElement variantList = doc.createElement(QStringLiteral("variantList"));
-            for (const VariantInfo *variantInfo : layoutInfo->variantInfos) {
+            for (const VariantInfo &variantInfo : layoutInfo.variantInfos) {
                 QDomElement variant = doc.createElement(QStringLiteral("variant"));
-                variant.setAttribute(QStringLiteral("name"), variantInfo->name);
-                variant.setAttribute(QStringLiteral("description"), variantInfo->description);
+                variant.setAttribute(QStringLiteral("name"), variantInfo.name);
+                variant.setAttribute(QStringLiteral("description"), variantInfo.description);
 
                 QDomElement langList = doc.createElement(QStringLiteral("languageList"));
-                for (const QString &lang : variantInfo->languages) {
+                for (const QString &lang : variantInfo.languages) {
                     QDomElement langNode = doc.createElement(QStringLiteral("lang"));
                     langNode.setAttribute(QStringLiteral("iso639Id"), lang);
                     langList.appendChild(langNode);
@@ -165,16 +160,16 @@ private Q_SLOTS:
         root.appendChild(layoutList);
 
         QDomElement optionGroupList = doc.createElement(QStringLiteral("optionList"));
-        for (const OptionGroupInfo *optionGroupInfo : std::as_const(rules->optionGroupInfos)) {
+        for (const OptionGroupInfo &optionGroupInfo : std::as_const(rules->optionGroupInfos)) {
             QDomElement optionGroup = doc.createElement(QStringLiteral("optionGroup"));
-            optionGroup.setAttribute(QStringLiteral("name"), optionGroupInfo->name);
-            optionGroup.setAttribute(QStringLiteral("description"), optionGroupInfo->description);
-            optionGroup.setAttribute(QStringLiteral("exclusive"), optionGroupInfo->exclusive);
+            optionGroup.setAttribute(QStringLiteral("name"), optionGroupInfo.name);
+            optionGroup.setAttribute(QStringLiteral("description"), optionGroupInfo.description);
+            optionGroup.setAttribute(QStringLiteral("exclusive"), optionGroupInfo.exclusive);
 
-            for (const OptionInfo *optionInfo : optionGroupInfo->optionInfos) {
+            for (const OptionInfo &optionInfo : optionGroupInfo.optionInfos) {
                 QDomElement option = doc.createElement(QStringLiteral("option"));
-                option.setAttribute(QStringLiteral("name"), optionInfo->name);
-                option.setAttribute(QStringLiteral("description"), optionInfo->description);
+                option.setAttribute(QStringLiteral("name"), optionInfo.name);
+                option.setAttribute(QStringLiteral("description"), optionInfo.description);
                 optionGroup.appendChild(option);
             }
 
