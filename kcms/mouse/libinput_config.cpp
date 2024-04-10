@@ -5,7 +5,7 @@
 */
 
 #include "libinput_config.h"
-#include "../configcontainer.h"
+#include "configcontainer.h"
 
 #include <KAboutData>
 #include <KLocalizedContext>

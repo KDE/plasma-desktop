@@ -23,7 +23,7 @@ add_library(kcm_mouse MODULE
     configcontainer.cpp
     cursortheme.cpp
     inputbackend.cpp
-    ui/libinput_config.cpp
+    libinput_config.cpp
 )
 
 ecm_qt_declare_logging_category(kcm_mouse

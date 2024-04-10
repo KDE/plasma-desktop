@@ -8,8 +8,8 @@
 
 #include "cursortheme.h"
 #include "inputbackend.h"
+#include "libinput_config.h"
 #include "logging.h"
-#include "ui/libinput_config.h"
 
 #include <KConfigGroup>
 #include <KSharedConfig>
