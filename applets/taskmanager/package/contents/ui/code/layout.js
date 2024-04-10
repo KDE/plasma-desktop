@@ -154,10 +154,11 @@ function preferredMaxHeight() {
     }
 }
 
-// Returns the number of 'm' characters whose joint width must be available in the task button label
-// so that the button text is rendered at all.
-function minimumMColumns() {
-    return tasks.vertical ? 4 : 5;
+function spaceRequiredToShowText() {
+    // gridUnit is the height of the default font, but only one isn't enough to
+    // show anything but the elision character. 2 is too high and results in
+    // text appearing only at excessively high widths.
+    return Math.round(Kirigami.Units.gridUnit * 1.5);
 }
 
 function taskWidth() {
