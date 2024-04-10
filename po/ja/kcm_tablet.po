@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-18 00:39+0000\n"
+"POT-Creation-Date: 2024-04-10 00:39+0000\n"
 "PO-Revision-Date: 2024-03-06 17:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -94,8 +94,9 @@ msgid "Orientation:"
 msgstr "向き:"
 
 #: ui/main.qml:110
-#, kde-format
-msgid "Left-handed mode:"
+#, fuzzy, kde-format
+#| msgid "Left-handed mode:"
+msgid "Left handed mode:"
 msgstr "左手モード:"
 
 #: ui/main.qml:120
@@ -121,18 +122,21 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:249
-#, kde-format
-msgid "Pen Button 1"
+#, fuzzy, kde-format
+#| msgid "Pen Button 1"
+msgid "Pen button 1:"
 msgstr "ペンボタン 1"
 
 #: ui/main.qml:250
-#, kde-format
-msgid "Pen Button 2"
+#, fuzzy, kde-format
+#| msgid "Pen Button 2"
+msgid "Pen button 2:"
 msgstr "ペンボタン 2"
 
 #: ui/main.qml:251
-#, kde-format
-msgid "Pen Button 3"
+#, fuzzy, kde-format
+#| msgid "Pen Button 3"
+msgid "Pen button 3:"
 msgstr "ペンボタン 3"
 
 #: ui/main.qml:295
@@ -147,6 +151,7 @@ msgid "None"
 msgstr "なし"
 
 #: ui/main.qml:328
-#, kde-format
-msgid "Button %1:"
+#, fuzzy, kde-format
+#| msgid "Button %1:"
+msgid "Pad button %1:"
 msgstr "ボタン %1:"

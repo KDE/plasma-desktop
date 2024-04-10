@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-18 00:39+0000\n"
+"POT-Creation-Date: 2024-04-10 00:39+0000\n"
 "PO-Revision-Date: 2024-03-27 18:45+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -96,8 +96,9 @@ msgid "Orientation:"
 msgstr "Orientācija:"
 
 #: ui/main.qml:110
-#, kde-format
-msgid "Left-handed mode:"
+#, fuzzy, kde-format
+#| msgid "Left-handed mode:"
+msgid "Left handed mode:"
 msgstr "Kreisās rokas režīms:"
 
 #: ui/main.qml:120
@@ -123,18 +124,21 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 — %3×%4"
 
 #: ui/main.qml:249
-#, kde-format
-msgid "Pen Button 1"
+#, fuzzy, kde-format
+#| msgid "Pen Button 1"
+msgid "Pen button 1:"
 msgstr "Zīmuļa poga 2"
 
 #: ui/main.qml:250
-#, kde-format
-msgid "Pen Button 2"
+#, fuzzy, kde-format
+#| msgid "Pen Button 2"
+msgid "Pen button 2:"
 msgstr "Zīmuļa poga 2"
 
 #: ui/main.qml:251
-#, kde-format
-msgid "Pen Button 3"
+#, fuzzy, kde-format
+#| msgid "Pen Button 3"
+msgid "Pen button 3:"
 msgstr "Zīmuļa poga 3"
 
 #: ui/main.qml:295
@@ -149,8 +153,9 @@ msgid "None"
 msgstr "Nav"
 
 #: ui/main.qml:328
-#, kde-format
-msgid "Button %1:"
+#, fuzzy, kde-format
+#| msgid "Button %1:"
+msgid "Pad button %1:"
 msgstr "Poga %1:"
 
 #~ msgid "Tool Button 1"

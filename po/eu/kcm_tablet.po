@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-18 00:39+0000\n"
+"POT-Creation-Date: 2024-04-10 00:39+0000\n"
 "PO-Revision-Date: 2024-02-18 19:47+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -98,8 +98,9 @@ msgid "Orientation:"
 msgstr "Orientazioa:"
 
 #: ui/main.qml:110
-#, kde-format
-msgid "Left-handed mode:"
+#, fuzzy, kde-format
+#| msgid "Left-handed mode:"
+msgid "Left handed mode:"
 msgstr "Ezkerti modua:"
 
 #: ui/main.qml:120
@@ -125,18 +126,21 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:249
-#, kde-format
-msgid "Pen Button 1"
+#, fuzzy, kde-format
+#| msgid "Pen Button 1"
+msgid "Pen button 1:"
 msgstr "Arkatzaren 1. botoia"
 
 #: ui/main.qml:250
-#, kde-format
-msgid "Pen Button 2"
+#, fuzzy, kde-format
+#| msgid "Pen Button 2"
+msgid "Pen button 2:"
 msgstr "Arkatzaren 2. botoia"
 
 #: ui/main.qml:251
-#, kde-format
-msgid "Pen Button 3"
+#, fuzzy, kde-format
+#| msgid "Pen Button 3"
+msgid "Pen button 3:"
 msgstr "Arkatzaren 3. botoia"
 
 #: ui/main.qml:295
@@ -151,8 +155,9 @@ msgid "None"
 msgstr "Bat ere ez"
 
 #: ui/main.qml:328
-#, kde-format
-msgid "Button %1:"
+#, fuzzy, kde-format
+#| msgid "Button %1:"
+msgid "Pad button %1:"
 msgstr "%1 botoia:"
 
 #~ msgid "Tool Button 1"

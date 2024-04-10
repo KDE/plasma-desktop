@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-18 00:39+0000\n"
+"POT-Creation-Date: 2024-04-10 00:39+0000\n"
 "PO-Revision-Date: 2022-02-26 14:11+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -100,8 +100,9 @@ msgid "Orientation:"
 msgstr "दिशा निर्धारण :"
 
 #: ui/main.qml:110
-#, kde-format
-msgid "Left-handed mode:"
+#, fuzzy, kde-format
+#| msgid "Left-handed mode:"
+msgid "Left handed mode:"
 msgstr "बाएँ हाथ वाला मोड :"
 
 #: ui/main.qml:120
@@ -128,17 +129,17 @@ msgstr ""
 
 #: ui/main.qml:249
 #, kde-format
-msgid "Pen Button 1"
+msgid "Pen button 1:"
 msgstr ""
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Pen Button 2"
+msgid "Pen button 2:"
 msgstr ""
 
 #: ui/main.qml:251
 #, kde-format
-msgid "Pen Button 3"
+msgid "Pen button 3:"
 msgstr ""
 
 #: ui/main.qml:295
@@ -154,7 +155,7 @@ msgstr ""
 
 #: ui/main.qml:328
 #, kde-format
-msgid "Button %1:"
+msgid "Pad button %1:"
 msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"
