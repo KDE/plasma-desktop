@@ -519,7 +519,7 @@ PlasmaCore.ToolTipArea {
         id: label
 
         visible: (inPopup || !iconsOnly && !model.IsLauncher
-            && (parent.width - iconBox.height - Kirigami.Units.smallSpacing) >= (Kirigami.Units.iconSizes.sizeForLabels * LayoutManager.minimumMColumns()))
+            && (parent.width - iconBox.height - Kirigami.Units.smallSpacing) >= LayoutManager.spaceRequiredToShowText())
 
         anchors {
             fill: parent
