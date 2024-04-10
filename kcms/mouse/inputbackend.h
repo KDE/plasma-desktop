@@ -12,7 +12,6 @@
 #include <QList>
 #include <QObject>
 #include <QVariantHash>
-#include <memory> // std::unique_ptr
 
 class InputBackend : public QObject
 {
