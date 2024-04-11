@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % French "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Montage automatique de périphérique</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+&traducteurPierreBuard; &traducteurXavierBesnard; 
+</authorgroup>
+
+<date
+>08-04-2021</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configuration du système</keyword>
+<keyword
+>montage automatique</keyword>
+<keyword
+>périphérique</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Cette boîte de dialogue vous permet de configurer le montage automatique de média et de volumes. </para>
+
+<para
+>En activant les fonctionnalités de montages automatiques dans ce module, aucune action de votre part ne sera nécessaire pour accéder aux périphériques récemment branchés, que ce soit à partir de l'applet de notification de nouveau périphérique ou par le panneau des emplacements du gestionnaire de fichiers. </para>
+
+<para
+>En haut de cette boîte de dialogue, vous trouverez les paramètres globaux dont les directives pourront être affinés pour chacun des périphériques de la liste <guilabel
+>Le périphérique est prioritaire</guilabel
+>. Il est recommandé aux utilisateurs uniques d'une machine de cocher toutes les cases situées au-dessus de la liste. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Autoriser le montage automatique des média amovibles</guilabel
+></term>
+<listitem
+><para
+>Lorsque cette case est décochée, aucun montage automatique d'un type quelconque n'aura lieu, qu'il y est ou non une sélection dans <guilabel
+>Le périphérique est prioritaire</guilabel
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Ne monter automatiquement que le média amovible ayant été monté manuellement auparavant</guilabel
+></term>
+<listitem
+><para
+>Lorsque cette option est sélectionnée, &plasma; ne montera automatiquement que les périphériques dont il se souvient. Un périphérique est <quote
+>mémorisé</quote
+> s'il a été monté auparavant. &pex;, la connexion à chaud d'un lecteur multimédia sur un port &USB; pour le charger est insuffisant pour qu'il soit <quote
+>mémoriser</quote
+>. Si vous n'accédez pas aux fichiers, &plasma; ne montera pas automatiquement le lecteur la prochaine fois qu'il est détecté. Cependant, dès l'instant où vous accédez aux fichiers, &plasma; se souviendra qu'il doit automatiquement mettre le contenu à la disposition de votre système. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Monter tous les média amovibles lors de la connexion</guilabel
+></term>
+<listitem
+><para
+>Si un média de stockage amovible quelconque est raccordé à votre système lorsque vous vous connectez à votre environnement de bureau, &plasma; mettra automatiquement le contenu à la disposition de votre système pour que d'autres programmes puissent le lire. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Monter automatiquement le média amovible lorsqu'il est attaché</guilabel
+></term>
+<listitem
+><para
+>Quand cette option est sélectionnée, &plasma; mettra automatiquement à la disposition de votre système le contenu de tout périphérique de stockage lorsqu'il est branché à chaud ou raccordé. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Montage automatique</guilabel
+></term>
+<listitem
+><para
+>Cette liste contient les périphériques de stockage connus de &plasma;. Si l'option <guilabel
+>Montage automatique lors de la connexion</guilabel
+> est sélectionnée, le périphérique sera automatiquement monté, même si l'option <guilabel
+>Monter tous les média amovibles lors de la connexion</guilabel
+> est non sélectionnée. Il en va de même pour <guilabel
+>Montage automatique lors du raccordement</guilabel
+>.</para>
+<para
+>Si <guilabel
+>Autoriser le montage automatique des média amovibles</guilabel
+> est décochée, les priorités ne s'appliquent pas et aucun périphérique ne sera monté automatiquement. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Oublier un périphérique</guibutton
+></term>
+<listitem
+><para
+>Un clic sur ce bouton demande &plasma; <quote
+>d'oublier</quote
+> l'existence des périphériques sélectionnés. Cette fonction n'est utile que si l'option <guilabel
+>Ne monter automatiquement que le média amovible ayant été monté manuellement auparavant</guilabel
+> est sélectionnée. Une fois qu'un périphérique est oublié et que &plasma; est paramétré pour ne monter automatiquement que les périphériques habituels, le périphérique ne sera pas monté automatiquement. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>
