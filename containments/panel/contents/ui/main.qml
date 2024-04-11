@@ -383,20 +383,16 @@ ContainmentItem {
             x: Qt.application.layoutDirection === Qt.RightToLeft && isHorizontal ? toolBoxSize : 0;
             readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
 
-            PC3.ToolButton {
-                id: addWidgetsButton
-                Layout.preferredWidth: width
-                Layout.preferredHeight: height
-                Layout.alignment: Qt.AlignHCenter
-                visible: appletsModel.count === 0
-                text: isHorizontal ? i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…") : undefined
-                icon.name: "list-add-symbolic"
-                onClicked: Plasmoid.internalAction("add widgets").trigger()
-            }
-
             property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin + (isHorizontal ? currentLayout.toolBoxSize : 0)
             property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin + (isHorizontal ? 0 : currentLayout.toolBoxSize)
 
+            // This is a placeholder for positioning the actual button that is outside and with an higher z order, in order to always be clickable
+            Item {
+                id: addWidgetsButtonPlaceholder
+                visible: addWidgetsButton.visible
+                Layout.preferredWidth: addWidgetsButton.width
+                Layout.preferredHeight: addWidgetsButton.height
+            }
     // BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
             width: root.width - horizontalDisplacement
             height: root.height - verticalDisplacement
@@ -442,6 +438,15 @@ ContainmentItem {
         Accessible.name: Plasmoid.internalAction("configure").text
         Accessible.description: i18nd("plasma_shell_org.kde.plasma.desktop", "Open Panel configuration ui")
         Accessible.role: Accessible.Button
+    }
+    PC3.ToolButton {
+        id: addWidgetsButton
+        x: addWidgetsButtonPlaceholder.Kirigami.ScenePosition.x
+        y: addWidgetsButtonPlaceholder.Kirigami.ScenePosition.y
+        visible: appletsModel.count === 0
+        text: isHorizontal ? i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…") : undefined
+        icon.name: "list-add-symbolic"
+        onClicked: Plasmoid.internalAction("add widgets").trigger()
     }
 //END UI elements
 }
