@@ -156,7 +156,7 @@ class DesktopTest(unittest.TestCase):
         self._open_containment_config_dialog()
         self.driver.find_element(AppiumBy.NAME, "Add…").click()
         wait = WebDriverWait(self.driver, 30)
-        title_element: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Open Media")))
+        title_element: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Open Image")))
 
         ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
         wait.until_not(lambda _: title_element.is_displayed())
