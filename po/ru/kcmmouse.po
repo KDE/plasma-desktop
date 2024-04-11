@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:39+0000\n"
+"POT-Creation-Date: 2024-04-11 00:39+0000\n"
 "PO-Revision-Date: 2023-12-17 22:18+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -45,19 +45,19 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dyp@perchine.com, Hermann.Zheboldov@shq.ru, leon@asplinux.ru"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:66
+#: backends/kwin_wl/kwin_wl_backend.cpp:64
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Не удалось опросить устройства ввода. Закройте и снова откройте этот модуль "
 "настройки."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:90
+#: backends/kwin_wl/kwin_wl_backend.cpp:88
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Критическая ошибка при чтении основных сведений об устройстве %1."
 
-#: ui/libinput_config.cpp:85
+#: libinput_config.cpp:85
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -66,12 +66,12 @@ msgstr ""
 "Ошибка при загрузке значений Более подробная информация сохранена в "
 "журналах. Закройте и снова откройте этот модуль настройки."
 
-#: ui/libinput_config.cpp:90
+#: libinput_config.cpp:90
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Указывающих устройств не найдено. Подключите устройство."
 
-#: ui/libinput_config.cpp:101
+#: libinput_config.cpp:101
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -81,7 +81,7 @@ msgstr ""
 "журналах. Закройте и снова откройте этот модуль настройки, затем повторите "
 "попытку."
 
-#: ui/libinput_config.cpp:121
+#: libinput_config.cpp:121
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -89,7 +89,7 @@ msgid ""
 msgstr ""
 "Произошла ошибка: не всем параметрам удалось назначить значения по умолчанию."
 
-#: ui/libinput_config.cpp:139
+#: libinput_config.cpp:139
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -98,12 +98,12 @@ msgstr ""
 "При добавлении недавно подключённого устройства возникла ошибка. Отключите и "
 "снова подключите устройство, а также перезапустите этот модуль настройки."
 
-#: ui/libinput_config.cpp:155
+#: libinput_config.cpp:155
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Указывающее устройство отключено, его окно настройки закрыто."
 
-#: ui/libinput_config.cpp:157
+#: libinput_config.cpp:157
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""

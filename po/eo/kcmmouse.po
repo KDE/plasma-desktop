@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:39+0000\n"
+"POT-Creation-Date: 2024-04-11 00:39+0000\n"
 "PO-Revision-Date: 2024-03-22 22:15+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -32,19 +32,19 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pedrotpmx@wanadoo.fr,okellogg@users.sourceforge.net"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:66
+#: backends/kwin_wl/kwin_wl_backend.cpp:64
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Pridemando de enigaparatoj malsukcesis. Bonvolu remalfermi ĉi tiun agordan "
 "modulon."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:90
+#: backends/kwin_wl/kwin_wl_backend.cpp:88
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritika eraro dum legado de fundamentaj aparataj informoj de %1."
 
-#: ui/libinput_config.cpp:85
+#: libinput_config.cpp:85
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -53,12 +53,12 @@ msgstr ""
 "Eraro dum ŝarĝo de valoroj. Vidu protokolojn por pliaj informoj. Bonvolu "
 "rekomenci ĉi tiun agordan modulon."
 
-#: ui/libinput_config.cpp:90
+#: libinput_config.cpp:90
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Neniu montrila aparato trovita. Konektu nun."
 
-#: ui/libinput_config.cpp:101
+#: libinput_config.cpp:101
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -67,7 +67,7 @@ msgstr ""
 "Ne eblas konservi ĉiujn ŝanĝojn. Vidu protokolojn por pliaj informoj. "
 "Bonvolu rekomenci ĉi tiun agordan modulon kaj provi denove."
 
-#: ui/libinput_config.cpp:121
+#: libinput_config.cpp:121
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -76,7 +76,7 @@ msgstr ""
 "Eraro dum ŝargo de defaŭltaj valoroj. Malsukcesis agordi kelkajn opciojn al "
 "iliaj defaŭltaj valoroj."
 
-#: ui/libinput_config.cpp:139
+#: libinput_config.cpp:139
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -85,12 +85,12 @@ msgstr ""
 "Eraro dum aldono de lastatempe konektita aparato. Bonvolu rekonekti ĝin kaj "
 "rekomenci ĉi tiun agordan modulon."
 
-#: ui/libinput_config.cpp:155
+#: libinput_config.cpp:155
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Montrilo malkonektita. Fermis ĝian agordan dialogon."
 
-#: ui/libinput_config.cpp:157
+#: libinput_config.cpp:157
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Montrilo malkonektita. Neniuj aliaj aparatoj trovitaj."

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2024-02-18 19:39+0100\n"
+"PO-Revision-Date: 2024-04-10 12:34+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -97,8 +97,7 @@ msgid "Orientation:"
 msgstr "Orientación:"
 
 #: ui/main.qml:110
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgid "Left handed mode:"
 msgstr "Modo para zurdos:"
 
@@ -125,22 +124,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgid "Pen button 1:"
-msgstr "Botón 1 del lápiz"
+msgstr "Botón 1 del lápiz:"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgid "Pen button 2:"
-msgstr "Botón 2 del lápiz"
+msgstr "Botón 2 del lápiz:"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgid "Pen button 3:"
-msgstr "Botón 3 del lápiz"
+msgstr "Botón 3 del lápiz:"
 
 #: ui/main.qml:295
 #, kde-format
@@ -154,10 +150,9 @@ msgid "None"
 msgstr "Ninguno"
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
-msgstr "Botón %1:"
+msgstr "Botón %1 del panel táctil:"
 
 #~ msgid "Tool Button 1"
 #~ msgstr "Botón de herramienta 1"

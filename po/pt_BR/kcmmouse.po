@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:39+0000\n"
+"POT-Creation-Date: 2024-04-11 00:39+0000\n"
 "PO-Revision-Date: 2023-09-18 11:52-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -37,19 +37,19 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "frederico@teia.bio.br, lisiane@kdemail.net, alvarenga@kde.org"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:66
+#: backends/kwin_wl/kwin_wl_backend.cpp:64
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Não foi possível consultar os dispositivos de entrada. Reabra este módulo de "
 "configurações."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:90
+#: backends/kwin_wl/kwin_wl_backend.cpp:88
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Erro crítico ao ler as informações fundamentais de dispositivo de %1."
 
-#: ui/libinput_config.cpp:85
+#: libinput_config.cpp:85
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -58,12 +58,12 @@ msgstr ""
 "Erro ao carregar valores. Veja os logs para mais informação. Reinicie este "
 "módulo de configuração."
 
-#: ui/libinput_config.cpp:90
+#: libinput_config.cpp:90
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nenhum dispositivo apontador encontrado. Conectar agora."
 
-#: ui/libinput_config.cpp:101
+#: libinput_config.cpp:101
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -72,7 +72,7 @@ msgstr ""
 "Não foi possível salvar as alterações. Veja os logs para maiores informação. "
 "Reinicie este módulo de configuração e tente novamente."
 
-#: ui/libinput_config.cpp:121
+#: libinput_config.cpp:121
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -81,7 +81,7 @@ msgstr ""
 "Erro ao carregar os valores padrão. Não foi possível definir os valores "
 "padrão em algumas opções."
 
-#: ui/libinput_config.cpp:139
+#: libinput_config.cpp:139
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -90,14 +90,14 @@ msgstr ""
 "Erro ao adicionar o dispositivo conectado recentemente. Reconecte-o e "
 "reinicie este módulo de configuração."
 
-#: ui/libinput_config.cpp:155
+#: libinput_config.cpp:155
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "O dispositivo apontador foi desconectado. A sua tela de configurações foi "
 "fechada."
 
-#: ui/libinput_config.cpp:157
+#: libinput_config.cpp:157
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
