@@ -107,24 +107,24 @@ ContainmentItem {
         folderViewLayer.view.linkHere(desktopUrl);
     }
 
-    function preferredWidth(minimum) {
+    function preferredWidth(forMinimumSize: bool): real {
         if (isContainment || !folderViewLayer.ready) {
             return -1;
         } else if (useListViewMode) {
-            return (minimum ? folderViewLayer.view.cellHeight * 4 : Kirigami.Units.gridUnit * 16);
+            return (forMinimumSize ? folderViewLayer.view.cellHeight * 4 : Kirigami.Units.gridUnit * 16);
         }
 
-        return (folderViewLayer.view.cellWidth * (minimum ? 1 : 3)) + (Kirigami.Units.gridUnit * 2);
+        return (folderViewLayer.view.cellWidth * (forMinimumSize ? 1 : 3)) + (Kirigami.Units.gridUnit * 2);
     }
 
-    function preferredHeight(minimum) {
+    function preferredHeight(forMinimumSize: bool): real {
         let height;
         if (isContainment || !folderViewLayer.ready) {
             return -1;
         } else if (useListViewMode) {
-            height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 15)) + Kirigami.Units.smallSpacing;
+            height = (folderViewLayer.view.cellHeight * (forMinimumSize ? 1 : 15)) + Kirigami.Units.smallSpacing;
         } else {
-            height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + Kirigami.Units.gridUnit;
+            height = (folderViewLayer.view.cellHeight * (forMinimumSize ? 1 : 2)) + Kirigami.Units.gridUnit;
         }
 
         if (Plasmoid.configuration.labelMode !== 0) {
