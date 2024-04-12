@@ -344,6 +344,7 @@ PlasmoidItem {
             Drag.dragType: Drag.Automatic
             Drag.supportedActions: Qt.CopyAction | Qt.MoveAction | Qt.LinkAction
             Drag.onDragFinished: tasks.dragSource = null;
+            property bool draggingTask: false
         }
 
         KSvg.FrameSvgItem {

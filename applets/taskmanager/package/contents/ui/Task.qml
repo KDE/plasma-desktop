@@ -65,7 +65,7 @@ PlasmaCore.ToolTipArea {
         || (task.contextMenu && task.contextMenu.status === PlasmaExtras.Menu.Open)
         || (!!tasks.groupDialog && tasks.groupDialog.visualParent === task)
 
-    active: (Plasmoid.configuration.showToolTips || tasks.toolTipOpenedByClick === task) && !inPopup && !tasks.groupDialog
+    active: (Plasmoid.configuration.showToolTips || tasks.toolTipOpenedByClick === task) && !inPopup && !tasks.groupDialog && !dragHelper.draggingTask
     interactive: model.IsWindow || mainItem.playerData
     location: Plasmoid.location
     mainItem: model.IsWindow ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
@@ -397,6 +397,7 @@ PlasmaCore.ToolTipArea {
                 // This is modifying the value in the panel containment that
                 // inhibits accepting drag and drop, so that we don't accidentally
                 // drop the task on this panel.
+                dragHelper.draggingTask = value
                 let item = this;
                 while (item.parent) {
                     item = item.parent;
