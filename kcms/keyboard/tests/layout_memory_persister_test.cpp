@@ -5,8 +5,8 @@
 */
 
 #include <QApplication>
-#include <QTest>
 #include <QTemporaryFile>
+#include <QTest>
 
 #include "../keyboard_config.h"
 #include "../layout_memory.h"

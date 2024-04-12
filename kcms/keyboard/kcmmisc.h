@@ -95,7 +95,7 @@ private:
     KeyBehaviour defaultValueKeyboardRepeat() const;
 
     int sliderMax;
-    KeyBehaviour keyboardRepeat {};
+    KeyBehaviour keyboardRepeat{};
     enum TriState numlockState {};
     bool m_highlightVisible = false;
 

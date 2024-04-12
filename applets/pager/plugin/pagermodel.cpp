@@ -20,8 +20,8 @@
 #include <QDBusPendingCall>
 #include <QGuiApplication>
 #include <QMetaEnum>
-#include <QUuid>
 #include <QScreen>
+#include <QUuid>
 
 #include <KWindowSystem>
 

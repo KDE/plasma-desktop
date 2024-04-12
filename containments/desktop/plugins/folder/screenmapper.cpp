@@ -15,10 +15,10 @@
 #include <QScreen>
 #include <QTimer>
 
-#include <PlasmaActivities/Consumer>
 #include <KConfig>
 #include <KConfigGroup>
 #include <Plasma/Corona>
+#include <PlasmaActivities/Consumer>
 #include <chrono>
 
 #include "debug.h"

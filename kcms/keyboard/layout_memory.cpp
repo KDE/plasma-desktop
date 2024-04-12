@@ -34,7 +34,8 @@ void LayoutMemory::configChanged()
 
 void LayoutMemory::registerListeners()
 {
-    if (keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_WINDOW || keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_APPLICATION) {
+    if (keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_WINDOW
+        || keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_APPLICATION) {
         connect(KX11Extras::self(), &KX11Extras::activeWindowChanged, this, &LayoutMemory::windowChanged);
         //		connect(KWindowSystem::self(), SIGNAL(windowRemoved(WId)), this, SLOT(windowRemoved(WId)));
     }

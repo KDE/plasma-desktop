@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-//#include <kapplication.h>
+// #include <kapplication.h>
 
 #include <QIcon>
 #include <QTest>

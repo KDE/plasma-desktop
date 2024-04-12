@@ -8,10 +8,10 @@
 #include "kcm_activities.h"
 #include "activityconfig.h"
 
-#include <PlasmaActivities/Controller>
 #include <KAuthorized>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <PlasmaActivities/Controller>
 
 #include <QTimer>
 #include <QtQml/QQmlModuleRegistration>

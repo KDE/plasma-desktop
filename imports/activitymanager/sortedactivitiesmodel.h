@@ -36,7 +36,7 @@ public:
 
     QString relativeActivity(int relative) const;
 
-    TaskManager::WindowTasksModel * const m_windowTasksModel;
+    TaskManager::WindowTasksModel *const m_windowTasksModel;
 
 protected:
     uint lastUsedTime(const QString &activity) const;

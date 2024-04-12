@@ -15,13 +15,13 @@
 
 #include <KPluginFactory>
 
+#include "flags.h"
 #include "keyboard_hardware.h"
 #include "layout_memory_persister.h"
 #include "x11_helper.h"
 #include "xinput_helper.h"
 #include "xkb_helper.h"
 #include "xkb_rules.h"
-#include "flags.h"
 
 K_PLUGIN_CLASS_WITH_JSON(KeyboardDaemon, "kded_keyboard.json")
 
@@ -131,7 +131,7 @@ void KeyboardDaemon::registerShortcut()
 
         actionCollection->loadLayoutShortcuts(keyboardConfig->layouts, rules);
         // clang-format off
-		connect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
+    connect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
         // clang-format on
     }
 }
@@ -141,7 +141,7 @@ void KeyboardDaemon::unregisterShortcut()
     // register KDE keyboard shortcut for switching layouts
     if (actionCollection != nullptr) {
         // clang-format off
-		disconnect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
+        disconnect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
         // clang-format on
         disconnect(actionCollection->getToggleAction(), &QAction::triggered, this, &KeyboardDaemon::switchToNextLayout);
 

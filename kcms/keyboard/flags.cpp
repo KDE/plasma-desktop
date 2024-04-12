@@ -7,8 +7,8 @@
 
 #include "flags.h"
 
-#include <KLocalizedString>
 #include <KCountryFlagEmojiIconEngine>
+#include <KLocalizedString>
 
 #include <QPainter>
 #include <QPixmap>

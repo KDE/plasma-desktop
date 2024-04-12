@@ -75,7 +75,7 @@ void InputDevice::save()
 
 bool InputDevice::isSaveNeeded() const
 {
-    return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed() || m_enabled.changed();;
+    return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed() || m_enabled.changed();
 }
 
 void InputDevice::defaults()

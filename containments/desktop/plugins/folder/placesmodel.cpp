@@ -15,7 +15,6 @@ PlacesModel::PlacesModel(QObject *parent)
     : QSortFilterProxyModel(parent)
     , m_sourceModel(new KFilePlacesModel(this))
 {
-
     connect(m_sourceModel, &KFilePlacesModel::rowsInserted, this, &PlacesModel::placesChanged);
     connect(m_sourceModel, &KFilePlacesModel::rowsRemoved, this, &PlacesModel::placesChanged);
 

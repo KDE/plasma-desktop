@@ -55,7 +55,6 @@ static bool localeLessThan(const QString &a, const QString &b)
     return QString::localeAwareCompare(a, b) < 0;
 }
 
-
 K4TimeZoneWidget::K4TimeZoneWidget(QWidget *parent)
     : QTreeWidget(parent)
     , d(new K4TimeZoneWidget::Private)
@@ -250,6 +249,5 @@ QAbstractItemView::SelectionMode K4TimeZoneWidget::selectionMode() const
         return QTreeWidget::selectionMode();
     }
 }
-
 
 #include "moc_k4timezonewidget.cpp"

@@ -6,8 +6,8 @@
 
 #include "kded.h"
 
-#include <KPluginFactory>
 #include <KLocalizedString>
+#include <KPluginFactory>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusMessage>

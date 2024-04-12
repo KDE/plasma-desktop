@@ -6,10 +6,10 @@
 
 #pragma once
 
+#include <QIcon>
 #include <QMap>
 #include <QObject>
 #include <QString>
-#include <QIcon>
 
 class LayoutUnit;
 class KeyboardConfig;
