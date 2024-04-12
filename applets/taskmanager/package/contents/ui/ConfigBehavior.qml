@@ -22,6 +22,7 @@ KCM.SimpleKCM {
     property alias cfg_onlyGroupWhenFull: onlyGroupWhenFull.checked
     property alias cfg_sortingStrategy: sortingStrategy.currentIndex
     property alias cfg_separateLaunchers: separateLaunchers.checked
+    property alias cfg_hideLauncherOnStart: hideLauncherOnStart.checked
     property alias cfg_middleClickAction: middleClickAction.currentIndex
     property alias cfg_wheelEnabled: wheelEnabled.checked
     property alias cfg_wheelSkipMinimized: wheelSkipMinimized.checked
@@ -110,6 +111,12 @@ KCM.SimpleKCM {
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Keep launchers separate")
             enabled: sortingStrategy.currentIndex == 1
+        }
+
+        CheckBox {
+            id: hideLauncherOnStart
+            visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
+            text: i18n("Hide launchers after application startup")
         }
 
         Item {

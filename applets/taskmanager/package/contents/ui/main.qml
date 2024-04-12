@@ -151,7 +151,7 @@ PlasmoidItem {
         filterByActivity: Plasmoid.configuration.showOnlyCurrentActivity
         filterNotMinimized: Plasmoid.configuration.showOnlyMinimized
 
-        hideActivatedLaunchers: tasks.iconsOnly || !Plasmoid.configuration.separateLaunchers
+        hideActivatedLaunchers: tasks.iconsOnly || Plasmoid.configuration.hideLauncherOnStart
         sortMode: sortModeEnumValue(Plasmoid.configuration.sortingStrategy)
         launchInPlace: tasks.iconsOnly && Plasmoid.configuration.sortingStrategy === 1
         separateLaunchers: {
