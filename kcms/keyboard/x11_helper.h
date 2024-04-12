@@ -94,21 +94,6 @@ public:
         , m_variant(variant)
     {
     }
-    /*explicit*/ LayoutUnit(const LayoutUnit &other)
-    {
-        operator=(other);
-    }
-
-    LayoutUnit &operator=(const LayoutUnit &other)
-    {
-        if (this != &other) {
-            m_layout = other.m_layout;
-            m_variant = other.m_variant;
-            displayName = other.displayName;
-            shortcut = other.shortcut;
-        }
-        return *this;
-    }
 
     QString getRawDisplayName() const
     {
@@ -178,15 +163,6 @@ struct LayoutSet {
     QList<LayoutUnit> layouts;
     LayoutUnit currentLayout;
 
-    LayoutSet()
-    {
-    }
-
-    LayoutSet(const LayoutSet &other)
-    {
-        operator=(other);
-    }
-
     bool isValid() const
     {
         return currentLayout.isValid() && layouts.contains(currentLayout);
@@ -195,13 +171,6 @@ struct LayoutSet {
     bool operator==(const LayoutSet &currentLayouts) const
     {
         return this->layouts == currentLayouts.layouts && this->currentLayout == currentLayouts.currentLayout;
-    }
-
-    LayoutSet &operator=(const LayoutSet &currentLayouts)
-    {
-        this->layouts = currentLayouts.layouts;
-        this->currentLayout = currentLayouts.currentLayout;
-        return *this;
     }
 
     QString toString() const
