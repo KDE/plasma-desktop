@@ -92,6 +92,7 @@ const char Rules::XKB_OPTION_GROUP_SEPARATOR = ':';
 
 static void rxkbLogHandler(rxkb_context *context, rxkb_log_level priority, const char *format, va_list args)
 {
+    Q_UNUSED(context)
     char buf[1024];
     int length = std::vsnprintf(buf, 1023, format, args);
     while (length > 0 && std::isspace(buf[length - 1])) {
