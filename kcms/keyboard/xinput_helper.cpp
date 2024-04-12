@@ -75,12 +75,9 @@ bool XInputEventNotifier::nativeEventFilter(const QByteArray &eventType, void *m
 
 void XInputEventNotifier::start()
 {
-    if (QCoreApplication::instance() != nullptr) {
-        registerForNewDeviceEvent(QX11Info::display());
-    }
+    registerForNewDeviceEvent(QX11Info::display());
 
-    qCDebug(KCM_KEYBOARD) << "qCoreApp" << QCoreApplication::instance();
-    if (QCoreApplication::instance() != nullptr && X11Helper::xkbSupported(&xkbOpcode)) {
+    if (X11Helper::xkbSupported(&xkbOpcode)) {
         registerForXkbEvents(QX11Info::display());
 
         // start the event loop
@@ -90,13 +87,7 @@ void XInputEventNotifier::start()
 
 void XInputEventNotifier::stop()
 {
-    if (QCoreApplication::instance() != nullptr) {
-        // TODO: unregister
-        //    XEventNotifier::unregisterForXkbEvents(QX11Info::display());
-
-        // stop the event loop
-        QCoreApplication::instance()->removeNativeEventFilter(this);
-    }
+    QCoreApplication::instance()->removeNativeEventFilter(this);
 }
 
 bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t *event)
