@@ -192,34 +192,6 @@ private Q_SLOTS:
         out << doc.toString();
     }
 
-    void testRulesVersion()
-    {
-        QVERIFY(!rules->version.isEmpty());
-
-        Rules *rules10 = new Rules();
-        Rules::readRules(rules10, QStringLiteral("config/base.xml"), false);
-        QCOMPARE(rules10->version, QString("1.0"));
-        delete rules10;
-
-        Rules *rules11 = new Rules();
-        Rules::readRules(rules11, QStringLiteral("config/base.1.1.xml"), false);
-        QCOMPARE(rules11->version, QString("1.1"));
-
-        for (const LayoutInfo *layoutInfo : std::as_const(rules11->layoutInfos)) {
-            QVERIFY(layoutInfo != nullptr);
-            QVERIFY(!layoutInfo->name.isEmpty());
-            QVERIFY(!layoutInfo->description.isEmpty());
-
-            for (const VariantInfo *variantInfo : layoutInfo->variantInfos) {
-                QVERIFY(variantInfo != nullptr);
-                QVERIFY(!variantInfo->name.isEmpty());
-                QVERIFY(!variantInfo->description.isEmpty());
-            }
-        }
-
-        delete rules11;
-    }
-
     void loadRulesBenchmark()
     {
         QBENCHMARK {

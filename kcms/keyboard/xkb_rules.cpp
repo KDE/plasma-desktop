@@ -25,6 +25,7 @@
 #include <X11/Xlib.h>
 #include <X11/extensions/XKBrules.h>
 #include <fixx11h.h>
+#include <xkbcommon/xkbregistry.h>
 
 static QString translate_xml_item(const QString &itemText)
 {
@@ -87,170 +88,98 @@ static void postProcess(Rules *rules)
     }
 }
 
-Rules::Rules()
-    : version(QStringLiteral("1.0"))
-{
-}
-
-QString Rules::getRulesName()
-{
-    if (!QX11Info::isPlatformX11()) {
-        return QString();
-    }
-    XkbRF_VarDefsRec vd;
-    char *tmp = nullptr;
-
-    if (XkbRF_GetNamesProp(QX11Info::display(), &tmp, &vd) && tmp != nullptr) {
-        // 			qCDebug(KCM_KEYBOARD) << "namesprop" << tmp ;
-        const QString name(tmp);
-        XFree(tmp);
-        return name;
-    }
-
-    return {};
-}
-
-QString Rules::findXkbDir()
-{
-    return QStringLiteral(XKBDIR);
-}
-
-static QString findXkbRulesFile()
-{
-    QString rulesFile;
-    QString rulesName = Rules::getRulesName();
-
-    const QString xkbDir = Rules::findXkbDir();
-    if (!rulesName.isNull()) {
-        rulesFile = QStringLiteral("%1/rules/%2.xml").arg(xkbDir, rulesName);
-    } else {
-        // default to evdev
-        rulesFile = QStringLiteral("%1/rules/evdev.xml").arg(xkbDir);
-    }
-
-    return rulesFile;
-}
-
-static void mergeRules(Rules *rules, Rules *extraRules)
-{
-    rules->modelInfos.append(extraRules->modelInfos);
-    rules->optionGroupInfos.append(extraRules->optionGroupInfos); // need to iterate and merge?
-
-    QList<LayoutInfo *> layoutsToAdd;
-    for (LayoutInfo *extraLayoutInfo : std::as_const(extraRules->layoutInfos)) {
-        LayoutInfo *layoutInfo = findByName(rules->layoutInfos, extraLayoutInfo->name);
-        if (layoutInfo != nullptr) {
-            layoutInfo->variantInfos.append(extraLayoutInfo->variantInfos);
-            layoutInfo->languages.append(extraLayoutInfo->languages);
-        } else {
-            layoutsToAdd.append(extraLayoutInfo);
-        }
-    }
-    rules->layoutInfos.append(layoutsToAdd);
-    qCDebug(KCM_KEYBOARD) << "Merged from extra rules:" << extraRules->layoutInfos.size() << "layouts," << extraRules->modelInfos.size() << "models,"
-                          << extraRules->optionGroupInfos.size() << "option groups";
-
-    // base rules now own the objects - remove them from extra rules so that it does not try to delete them
-    extraRules->layoutInfos.clear();
-    extraRules->modelInfos.clear();
-    extraRules->optionGroupInfos.clear();
-}
-
 const char Rules::XKB_OPTION_GROUP_SEPARATOR = ':';
+
+static void rxkbLogHandler(rxkb_context *context, rxkb_log_level priority, const char *format, va_list args)
+{
+    char buf[1024];
+    int length = std::vsnprintf(buf, 1023, format, args);
+    while (length > 0 && std::isspace(buf[length - 1])) {
+        --length;
+    }
+    if (length <= 0) {
+        return;
+    }
+    switch (priority) {
+    case RXKB_LOG_LEVEL_DEBUG:
+        qCDebug(KCM_KEYBOARD(), "XKB: %.*s", length, buf);
+        break;
+    case RXKB_LOG_LEVEL_INFO:
+        qCInfo(KCM_KEYBOARD(), "XKB: %.*s", length, buf);
+        break;
+    case RXKB_LOG_LEVEL_WARNING:
+        qCWarning(KCM_KEYBOARD(), "XKB: %.*s", length, buf);
+        break;
+    case RXKB_LOG_LEVEL_ERROR:
+    case RXKB_LOG_LEVEL_CRITICAL:
+    default:
+        qCCritical(KCM_KEYBOARD(), "XKB: %.*s", length, buf);
+        break;
+    }
+}
 
 Rules *Rules::readRules(ExtrasFlag extrasFlag)
 {
+    rxkb_context_flags context_flags = extrasFlag == READ_EXTRAS ? RXKB_CONTEXT_LOAD_EXOTIC_RULES : RXKB_CONTEXT_NO_FLAGS;
+
+    rxkb_context *context = rxkb_context_new(context_flags);
+    if (!context) {
+        qCDebug(KCM_KEYBOARD) << "Could not create xkb-registry context";
+        return nullptr;
+    }
+    rxkb_context_set_log_level(context, RXKB_LOG_LEVEL_DEBUG);
+    rxkb_context_set_log_fn(context, &rxkbLogHandler);
+
+    if (!rxkb_context_parse_default_ruleset(context)) {
+        rxkb_context_unref(context);
+        qCDebug(KCM_KEYBOARD) << "Could not parse xkb rules";
+        return nullptr;
+    }
     Rules *rules = new Rules();
-    QString rulesFile = findXkbRulesFile();
-    if (!readRules(rules, rulesFile, false)) {
-        delete rules;
-        return nullptr;
+
+    rxkb_model *m = rxkb_model_first(context);
+    while (m != nullptr) {
+        rules->modelInfos << new ModelInfo(rxkb_model_get_name(m), rxkb_model_get_description(m), rxkb_model_get_vendor(m));
+        m = rxkb_model_next(m);
     }
-    if (extrasFlag == Rules::READ_EXTRAS) {
-        QRegularExpression regex(QStringLiteral("\\.xml$"));
-        Rules *rulesExtra = new Rules();
-        QString extraRulesFile = rulesFile.replace(regex, QStringLiteral(".extras.xml"));
-        if (readRules(rulesExtra, extraRulesFile, true)) { // not fatal if it fails
-            mergeRules(rules, rulesExtra);
+
+    rxkb_layout *l = rxkb_layout_first(context);
+    rxkb_iso639_code *iso639;
+    LayoutInfo *layout = nullptr;
+    while (l != nullptr) {
+        QStringList languages;
+        iso639 = rxkb_layout_get_iso639_first(l);
+        while (iso639 != nullptr) {
+            languages << QString::fromUtf8(rxkb_iso639_code_get_code(iso639));
+            iso639 = rxkb_iso639_code_next(iso639);
         }
-        delete rulesExtra;
-    }
-    return rules;
-}
 
-Rules *Rules::readRules(Rules *rules, const QString &filename, bool fromExtras)
-{
-    QFile file(filename);
-    if (!file.open(QFile::ReadOnly | QFile::Text)) {
-        qCCritical(KCM_KEYBOARD) << "Cannot open the rules file" << file.fileName();
-        return nullptr;
-    }
-
-    QStringList path;
-    QXmlStreamReader reader(&file);
-    while (!reader.atEnd()) {
-        const auto token = reader.readNext();
-        if (token == QXmlStreamReader::StartElement) {
-            path << reader.name().toString();
-            QString strPath = path.join(QLatin1String("/"));
-
-            if (strPath.endsWith(QLatin1String("layoutList/layout/configItem"))) {
-                rules->layoutInfos << new LayoutInfo(fromExtras);
-            } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant"))) {
-                rules->layoutInfos.last()->variantInfos << new VariantInfo(fromExtras);
-            } else if (strPath.endsWith(QLatin1String("modelList/model"))) {
-                rules->modelInfos << new ModelInfo();
-            } else if (strPath.endsWith(QLatin1String("optionList/group"))) {
-                rules->optionGroupInfos << new OptionGroupInfo();
-                rules->optionGroupInfos.last()->exclusive = (reader.attributes().value(QStringLiteral("allowMultipleSelection")) != QLatin1String("true"));
-            } else if (strPath.endsWith(QLatin1String("optionList/group/option"))) {
-                rules->optionGroupInfos.last()->optionInfos << new OptionInfo();
-            } else if (strPath == ("xkbConfigRegistry") && !reader.attributes().value(QStringLiteral("version")).isEmpty()) {
-                rules->version = reader.attributes().value(QStringLiteral("version")).toString();
-                qCDebug(KCM_KEYBOARD) << "xkbConfigRegistry version" << rules->version;
-            }
-
-            if (strPath.endsWith(QLatin1String("layoutList/layout/configItem/name"))) {
-                if (rules->layoutInfos.last() != nullptr) {
-                    rules->layoutInfos.last()->name = reader.readElementText().trimmed();
-                }
-            } else if (strPath.endsWith(QLatin1String("layoutList/layout/configItem/description"))) {
-                rules->layoutInfos.last()->description = reader.readElementText().trimmed();
-            } else if (strPath.endsWith(QLatin1String("layoutList/layout/configItem/languageList/iso639Id"))) {
-                rules->layoutInfos.last()->languages << reader.readElementText().trimmed();
-            } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/name"))) {
-                rules->layoutInfos.last()->variantInfos.last()->name = reader.readElementText().trimmed();
-            } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/description"))) {
-                rules->layoutInfos.last()->variantInfos.last()->description = reader.readElementText().trimmed();
-            } else if (strPath.endsWith(QLatin1String("layoutList/layout/variantList/variant/configItem/languageList/iso639Id"))) {
-                rules->layoutInfos.last()->variantInfos.last()->languages << reader.readElementText().trimmed();
-            } else if (strPath.endsWith(QLatin1String("modelList/model/configItem/name"))) {
-                rules->modelInfos.last()->name = reader.readElementText().trimmed();
-            } else if (strPath.endsWith(QLatin1String("modelList/model/configItem/description"))) {
-                rules->modelInfos.last()->description = reader.readElementText().trimmed();
-            } else if (strPath.endsWith(QLatin1String("modelList/model/configItem/vendor"))) {
-                rules->modelInfos.last()->vendor = reader.readElementText().trimmed();
-            } else if (strPath.endsWith(QLatin1String("optionList/group/configItem/name"))) {
-                rules->optionGroupInfos.last()->name = reader.readElementText().trimmed();
-            } else if (strPath.endsWith(QLatin1String("optionList/group/configItem/description"))) {
-                rules->optionGroupInfos.last()->description = reader.readElementText().trimmed();
-            } else if (strPath.endsWith(QLatin1String("optionList/group/option/configItem/name"))) {
-                rules->optionGroupInfos.last()->optionInfos.last()->name = reader.readElementText().trimmed();
-            } else if (strPath.endsWith(QLatin1String("optionList/group/option/configItem/description"))) {
-                rules->optionGroupInfos.last()->optionInfos.last()->description = reader.readElementText().trimmed();
-            }
+        const char *variant = rxkb_layout_get_variant(l);
+        if (variant == nullptr) {
+            layout = new LayoutInfo(rxkb_layout_get_name(l), rxkb_layout_get_description(l), rxkb_layout_get_popularity(l) == RXKB_POPULARITY_EXOTIC);
+            layout->languages = languages;
+            rules->layoutInfos << layout;
+        } else if (layout != nullptr) {
+            VariantInfo *v = new VariantInfo(variant, rxkb_layout_get_description(l), rxkb_layout_get_popularity(l) == RXKB_POPULARITY_EXOTIC);
+            v->languages = languages;
+            layout->variantInfos << v;
         }
-        // don't use token here, readElementText() above can have moved us forward meanwhile
-        if (reader.tokenType() == QXmlStreamReader::EndElement) {
-            path.removeLast();
-        }
+        l = rxkb_layout_next(l);
     }
 
-    qCDebug(KCM_KEYBOARD) << "Parsing xkb rules from" << file.fileName();
+    rxkb_option_group *g = rxkb_option_group_first(context);
 
-    if (reader.hasError()) {
-        qCCritical(KCM_KEYBOARD) << "Failed to parse the rules file" << file.fileName();
-        return nullptr;
+    while (g != nullptr) {
+        OptionGroupInfo *group =
+            new OptionGroupInfo(rxkb_option_group_get_name(g), rxkb_option_group_get_description(g), !rxkb_option_group_allows_multiple(g));
+
+        rxkb_option *o = rxkb_option_first(g);
+        while (o != nullptr) {
+            group->optionInfos << new OptionInfo(rxkb_option_get_name(o), rxkb_option_get_description(o));
+            o = rxkb_option_next(o);
+        }
+        rules->optionGroupInfos << group;
+        g = rxkb_option_group_next(g);
     }
 
     postProcess(rules);

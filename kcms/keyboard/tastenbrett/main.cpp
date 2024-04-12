@@ -139,7 +139,9 @@ int main(int argc, char *argv[])
                                  "The keyboard geometry failed to load."
                                  " This often indicates that the selected model does not support a specific layout"
                                  " or layout variant."
-                                 " This problem will likely also present when you try to use this combination of model, layout and variant.");
+                                 " This problem will likely also present when you try to use this combination of model, layout and variant."
+                                 "\nPreviewing layouts that are defined outside your systems xkb directory is not supported and "
+                                 " will also trigger this message. These might still work fine if applied");
         errorDetails = xkbcomp.readAllStandardOutput();
     } else {
         Q_ASSERT(xkb);

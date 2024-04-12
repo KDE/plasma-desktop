@@ -12,6 +12,7 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                                      KF6::WindowSystem
                                      X11::xkbfile
                                      X11::X11
+                                     PkgConfig::XKBREGISTRY
                )
                target_link_libraries(${_testname}_test Qt::GuiPrivate)
 endmacro(KEYBOARD_DAEMON_UNIT_TESTS)
@@ -35,6 +36,7 @@ target_link_libraries(flags_test
                       KF6::WindowSystem
                       XCB::XCB
                       XCB::XKB
+                      PkgConfig::XKBREGISTRY
                       X11::xkbfile
                       X11::X11
 )
@@ -77,6 +79,7 @@ if( X11_XTest_FOUND )
                          KF6::XmlGui
                          XCB::XCB
                          XCB::XKB
+                         PkgConfig::XKBREGISTRY
                          X11::xkbfile
                          ${X11_XTest_LIB}
                          X11::X11

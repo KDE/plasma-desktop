@@ -73,7 +73,7 @@ static QString getDisplayText(const QString &layout, const QString &variant, con
 {
     if (variant.isEmpty())
         return layout;
-    if (rules == nullptr || rules->version == QLatin1String("1.0"))
+    if (rules == nullptr)
         return i18nc("layout - variant", "%1 - %2", layout, variant);
     return variant;
 }

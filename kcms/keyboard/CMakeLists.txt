@@ -58,6 +58,7 @@ target_link_libraries(kded_keyboard
     XCB::XKB
     X11::X11
     X11::xkbfile
+    PkgConfig::XKBREGISTRY
  )
 target_link_libraries(kded_keyboard Qt::GuiPrivate)
 
@@ -123,6 +124,7 @@ target_link_libraries(kcm_keyboard_static
     XCB::XKB
     X11::X11
     X11::xkbfile
+    PkgConfig::XKBREGISTRY
 )
 
 kcoreaddons_add_plugin(kcm_keyboard SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasma/kcms/systemsettings")

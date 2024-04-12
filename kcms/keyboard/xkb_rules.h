@@ -7,13 +7,16 @@
 #pragma once
 
 #include <QList>
-#include <QStringList>
-
-#include <config-keyboard.h>
 
 struct ConfigItem {
     QString name;
     QString description;
+
+    ConfigItem(const char *name_, const char *description_)
+        : name(QString::fromUtf8(name_))
+        , description(QString::fromUtf8(description_))
+    {
+    }
 };
 
 template<class T>
@@ -27,23 +30,24 @@ inline T *findByName(QList<T *> list, QString name)
 }
 
 struct VariantInfo : public ConfigItem {
-    QList<QString> languages;
+    QStringList languages;
     const bool fromExtras;
 
-    VariantInfo(bool fromExtras_)
-        : fromExtras(fromExtras_)
+    VariantInfo(const char *name_, const char *description_, bool fromExtras_)
+        : ConfigItem(name_, description_)
+        , fromExtras(fromExtras_)
     {
     }
 };
 
 struct LayoutInfo : public ConfigItem {
     QList<VariantInfo *> variantInfos;
-    QList<QString> languages;
+    QStringList languages;
     const bool fromExtras;
 
-    //	LayoutInfo() {}
-    LayoutInfo(bool fromExtras_)
-        : fromExtras(fromExtras_)
+    LayoutInfo(const char *name_, const char *description_, bool fromExtras_)
+        : ConfigItem(name_, description_)
+        , fromExtras(fromExtras_)
     {
     }
     ~LayoutInfo()
@@ -64,14 +68,28 @@ struct LayoutInfo : public ConfigItem {
 
 struct ModelInfo : public ConfigItem {
     QString vendor;
+    ModelInfo(const char *name_, const char *description_, const char *vendor_)
+        : ConfigItem(name_, description_)
+        , vendor(QString::fromUtf8(vendor_))
+    {
+    }
 };
 
 struct OptionInfo : public ConfigItem {
+    OptionInfo(const char *name_, const char *description_)
+        : ConfigItem(name_, description_)
+    {
+    }
 };
 
 struct OptionGroupInfo : public ConfigItem {
     QList<OptionInfo *> optionInfos;
     bool exclusive;
+    OptionGroupInfo(const char *name_, const char *description_, bool exclusive_)
+        : ConfigItem(name_, description_)
+        , exclusive(exclusive_)
+    {
+    }
 
     ~OptionGroupInfo()
     {
@@ -92,9 +110,8 @@ struct Rules {
     QList<LayoutInfo *> layoutInfos;
     QList<ModelInfo *> modelInfos;
     QList<OptionGroupInfo *> optionGroupInfos;
-    QString version;
 
-    Rules();
+    Rules() = default;
 
     ~Rules()
     {
@@ -114,7 +131,4 @@ struct Rules {
     }
 
     static Rules *readRules(ExtrasFlag extrasFlag);
-    static Rules *readRules(Rules *rules, const QString &filename, bool fromExtras);
-    static QString getRulesName();
-    static QString findXkbDir();
 };
