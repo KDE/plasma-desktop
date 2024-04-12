@@ -36,38 +36,6 @@ typedef union {
 } _xkb_event;
 }
 
-class XEventNotifier : public QObject, public QAbstractNativeEventFilter
-{
-    Q_OBJECT
-
-Q_SIGNALS:
-    void layoutChanged();
-    void layoutMapChanged();
-
-public:
-    XEventNotifier();
-    ~XEventNotifier() override
-    {
-    }
-
-    virtual void start();
-    virtual void stop();
-
-protected:
-    virtual bool processOtherEvents(xcb_generic_event_t *e);
-    virtual bool processXkbEvents(xcb_generic_event_t *e);
-
-    bool nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result) override;
-
-private:
-    int registerForXkbEvents(Display *display);
-    bool isXkbEvent(xcb_generic_event_t *event);
-    bool isGroupSwitchEvent(_xkb_event *event);
-    bool isLayoutSwitchEvent(_xkb_event *event);
-
-    int xkbOpcode;
-};
-
 struct XkbConfig {
     QString keyboardModel;
     QStringList layouts;

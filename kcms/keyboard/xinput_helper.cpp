@@ -14,6 +14,7 @@
 #include <QtGui/private/qtx11extras_p.h>
 
 #include <X11/X.h>
+#include <X11/XKBlib.h>
 #include <X11/Xatom.h>
 
 #if HAVE_XINPUT
@@ -38,16 +39,15 @@ static const int DEVICE_NONE = 0;
 static const int DEVICE_KEYBOARD = 1;
 static const int DEVICE_POINTER = 2;
 
-XInputEventNotifier::XInputEventNotifier(QWidget *parent)
-    : XEventNotifier()
+XInputEventNotifier::XInputEventNotifier()
+    : QObject()
     , // TODO: destruct properly?
-    xinputEventType(-1)
+    xkbOpcode(-1)
+    , xinputEventType(-1)
     , udevNotifier(nullptr)
     , keyboardNotificationTimer(new QTimer(this))
     , mouseNotificationTimer(new QTimer(this))
 {
-    Q_UNUSED(parent)
-
     // Q_EMIT signal only once, even after X11 re-enables N keyboards after resuming from suspend
     keyboardNotificationTimer->setSingleShot(true);
     keyboardNotificationTimer->setInterval(500);
@@ -59,18 +59,44 @@ XInputEventNotifier::XInputEventNotifier(QWidget *parent)
     connect(mouseNotificationTimer, &QTimer::timeout, this, &XInputEventNotifier::newPointerDevice);
 }
 
+bool XInputEventNotifier::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *)
+{
+    //	qDebug() << "event type:" << eventType;
+    if (eventType == "xcb_generic_event_t") {
+        xcb_generic_event_t *ev = static_cast<xcb_generic_event_t *>(message);
+        if (isXkbEvent(ev)) {
+            processXkbEvents(ev);
+        } else {
+            processOtherEvents(ev);
+        }
+    }
+    return false;
+}
+
 void XInputEventNotifier::start()
 {
     if (QCoreApplication::instance() != nullptr) {
         registerForNewDeviceEvent(QX11Info::display());
     }
 
-    XEventNotifier::start();
+    qCDebug(KCM_KEYBOARD) << "qCoreApp" << QCoreApplication::instance();
+    if (QCoreApplication::instance() != nullptr && X11Helper::xkbSupported(&xkbOpcode)) {
+        registerForXkbEvents(QX11Info::display());
+
+        // start the event loop
+        QCoreApplication::instance()->installNativeEventFilter(this);
+    }
 }
 
 void XInputEventNotifier::stop()
 {
-    XEventNotifier::stop();
+    if (QCoreApplication::instance() != nullptr) {
+        // TODO: unregister
+        //    XEventNotifier::unregisterForXkbEvents(QX11Info::display());
+
+        // stop the event loop
+        QCoreApplication::instance()->removeNativeEventFilter(this);
+    }
 }
 
 bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t *event)
@@ -88,6 +114,52 @@ bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t *event)
         if (!keyboardNotificationTimer->isActive()) {
             keyboardNotificationTimer->start();
         }
+    }
+    return true;
+}
+
+bool XInputEventNotifier::isXkbEvent(xcb_generic_event_t *event)
+{
+    //	qDebug() << "event response type:" << (event->response_type & ~0x80) << xkbOpcode << ((event->response_type & ~0x80) == xkbOpcode + XkbEventCode);
+    return (event->response_type & ~0x80) == xkbOpcode + XkbEventCode;
+}
+
+bool XInputEventNotifier::processXkbEvents(xcb_generic_event_t *event)
+{
+    _xkb_event *xkbevt = reinterpret_cast<_xkb_event *>(event);
+    if (isGroupSwitchEvent(xkbevt)) {
+        //		qDebug() << "group switch event";
+        Q_EMIT layoutChanged();
+    } else if (isLayoutSwitchEvent(xkbevt)) {
+        //		qDebug() << "layout switch event";
+        Q_EMIT layoutMapChanged();
+    }
+    return true;
+}
+
+bool XInputEventNotifier::isGroupSwitchEvent(_xkb_event *xkbEvent)
+{
+//    XkbEvent *xkbEvent = (XkbEvent*) event;
+#define GROUP_CHANGE_MASK (XkbGroupStateMask | XkbGroupBaseMask | XkbGroupLatchMask | XkbGroupLockMask)
+
+    return xkbEvent->any.xkbType == XkbStateNotify && (xkbEvent->state_notify.changed & GROUP_CHANGE_MASK);
+}
+
+bool XInputEventNotifier::isLayoutSwitchEvent(_xkb_event *xkbEvent)
+{
+    //    XkbEvent *xkbEvent = (XkbEvent*) event;
+
+    return //( (xkbEvent->any.xkb_type == XkbMapNotify) && (xkbEvent->map.changed & XkbKeySymsMask) ) ||
+        /*    	  || ( (xkbEvent->any.xkb_type == XkbNamesNotify) && (xkbEvent->names.changed & XkbGroupNamesMask) || )*/
+        (xkbEvent->any.xkbType == XkbNewKeyboardNotify);
+}
+
+int XInputEventNotifier::registerForXkbEvents(Display *display)
+{
+    int eventMask = XkbNewKeyboardNotifyMask | XkbStateNotifyMask;
+    if (!XkbSelectEvents(display, XkbUseCoreKbd, eventMask, eventMask)) {
+        qCWarning(KCM_KEYBOARD) << "Couldn't select desired XKB events";
+        return false;
     }
     return true;
 }
