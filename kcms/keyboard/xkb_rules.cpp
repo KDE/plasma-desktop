@@ -10,21 +10,8 @@
 
 #include <KLocalizedString>
 
-#include <QDir>
-#include <QRegularExpression>
-#include <QTextDocument> // for Qt::escape
-#include <QXmlStreamReader>
 #include <QtConcurrentFilter>
 
-#include "x11_helper.h"
-
-// for findXkbRuleFile
-#include <QtGui/private/qtx11extras_p.h>
-#include <X11/XKBlib.h>
-#include <X11/Xatom.h>
-#include <X11/Xlib.h>
-#include <X11/extensions/XKBrules.h>
-#include <fixx11h.h>
 #include <xkbcommon/xkbregistry.h>
 
 static QString translate_xml_item(const QString &itemText)
