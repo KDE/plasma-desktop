@@ -97,24 +97,24 @@ public:
 
     QString getRawDisplayName() const
     {
-        return displayName;
+        return m_displayName;
     }
     QString getDisplayName() const
     {
-        return !displayName.isEmpty() ? displayName : m_layout;
+        return !m_displayName.isEmpty() ? m_displayName : m_layout;
     }
     void setDisplayName(const QString &name)
     {
-        displayName = name;
+        m_displayName = name;
     }
 
     void setShortcut(const QKeySequence &shortcut)
     {
-        this->shortcut = shortcut;
+        this->m_shortcut = shortcut;
     }
     QKeySequence getShortcut() const
     {
-        return shortcut;
+        return m_shortcut;
     }
     QString layout() const
     {
@@ -153,8 +153,8 @@ public:
     QString toString() const;
 
 private:
-    QString displayName;
-    QKeySequence shortcut;
+    QString m_displayName;
+    QKeySequence m_shortcut;
     QString m_layout;
     QString m_variant;
 };
