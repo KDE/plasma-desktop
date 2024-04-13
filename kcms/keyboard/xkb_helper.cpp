@@ -19,6 +19,7 @@
 
 #include "keyboard_config.h"
 #include "keyboardsettings.h"
+#include "x11_helper.h"
 
 static const char SETXKBMAP_EXEC[] = "setxkbmap";
 static const char XMODMAP_EXEC[] = "xmodmap";
@@ -128,15 +129,15 @@ bool XkbHelper::initializeKeyboardLayouts(const QList<LayoutUnit> &layoutUnits)
 bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
 {
     QStringList setxkbmapCommandArguments;
-    if (!config.keyboardModel().isEmpty()) {
+    if (!config.keyboardSettings()->keyboardModel().isEmpty()) {
         XkbConfig xkbConfig;
         X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::MODEL_ONLY);
-        if (xkbConfig.keyboardModel != config.keyboardModel()) {
+        if (xkbConfig.keyboardModel != config.keyboardSettings()->keyboardModel()) {
             setxkbmapCommandArguments.append(QStringLiteral("-model"));
-            setxkbmapCommandArguments.append(config.keyboardModel());
+            setxkbmapCommandArguments.append(config.keyboardSettings()->keyboardModel());
         }
     }
-    if (config.configureLayouts()) {
+    if (config.keyboardSettings()->configureLayouts()) {
         QStringList layouts;
         QStringList variants;
         const QList<LayoutUnit> defaultLayouts = config.getDefaultLayouts();
@@ -152,12 +153,12 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
             setxkbmapCommandArguments.append(variants.join(COMMAND_OPTIONS_SEPARATOR));
         }
     }
-    if (config.resetOldXkbOptions()) {
+    if (config.keyboardSettings()->resetOldXkbOptions()) {
         // Pass -option "" to clear previously set options
         setxkbmapCommandArguments.append(QStringLiteral("-option"));
         setxkbmapCommandArguments.append(QStringLiteral(""));
     }
-    const QStringList xkbOpts = config.xkbOptions();
+    const QStringList xkbOpts = config.keyboardSettings()->xkbOptions();
     for (const auto &option : xkbOpts) {
         setxkbmapCommandArguments.append(QStringLiteral("-option"));
         setxkbmapCommandArguments.append(option);
@@ -165,7 +166,7 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
 
     if (!setxkbmapCommandArguments.isEmpty()) {
         return runConfigLayoutCommand(setxkbmapCommandArguments);
-        if (config.configureLayouts()) {
+        if (config.keyboardSettings()->configureLayouts()) {
             X11Helper::setDefaultLayout();
         }
     }

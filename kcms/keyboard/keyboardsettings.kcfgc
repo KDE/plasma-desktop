@@ -3,7 +3,8 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 File=keyboardsettings.kcfg
-ClassName=KeyboardSettingsBase
+ClassName=KeyboardSettings
 Mutators=true
 DefaultValueGetters=true
 ParentInConstructor=true
+GenerateProperties=true

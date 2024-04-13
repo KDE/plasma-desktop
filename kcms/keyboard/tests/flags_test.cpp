@@ -9,6 +9,8 @@
 
 #include "../flags.h"
 #include "../keyboard_config.h"
+#include "../keyboardsettings.h"
+#include "../x11_helper.h"
 #include "../xkb_rules.h"
 
 class FlagsTest : public QObject
@@ -39,13 +41,14 @@ private Q_SLOTS:
         QVERIFY(!iconUs.isNull());
         QVERIFY(flags->getIcon(QString()).isNull());
 
-        KeyboardConfig *keyboardConfig = new KeyboardConfig(this);
+        KeyboardSettings *keyboardSettings = new KeyboardSettings(this);
+        KeyboardConfig *keyboardConfig = new KeyboardConfig(keyboardSettings, this);
         LayoutUnit layoutUnit(QStringLiteral("us"));
         LayoutUnit layoutUnit1(QStringLiteral("us"), QStringLiteral("intl"));
         layoutUnit1.setDisplayName(QStringLiteral("usi"));
         LayoutUnit layoutUnit2(QStringLiteral("us"), QStringLiteral("other"));
 
-        keyboardConfig->layouts.append(layoutUnit1);
+        keyboardConfig->layouts().append(layoutUnit1);
         QCOMPARE(flags->getShortText(layoutUnit, *keyboardConfig), QString("us"));
         QCOMPARE(flags->getShortText(layoutUnit1, *keyboardConfig), QString("usi"));
         QCOMPARE(flags->getShortText(layoutUnit2, *keyboardConfig), QString("us"));

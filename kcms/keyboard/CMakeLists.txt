@@ -71,22 +71,24 @@ if (HAVE_UDEV)
 endif()
 
 ### kcm keyboard ###
+kcmutils_add_qml_kcm(kcm_keyboard SOURCES kcmmain.cpp)
 
-set(kcm_keyboard_PART_SRCS
-  kcm_keyboard.cpp
-  kcm_keyboard_widget.cpp
-  kcm_view_models.cpp
-  kcm_add_layout_dialog.cpp
-  keyboard_config.cpp
-  keyboardsettingsdata.cpp
-  x11_helper.cpp
-  xkb_helper.cpp
-  xkb_rules.cpp
-  flags.cpp
-  iso_codes.cpp
-  kcmmisc.cpp
-  bindings.cpp
-  tastenbrett.cpp)
+set( kcm_keyboard_PART_SRCS
+    kcm_keyboard.cpp
+    keyboard_config.cpp
+    keyboard_dbus.h
+    bindings.cpp
+    flags.cpp
+    tastenbrett.cpp
+    x11_helper.cpp
+    xkb_helper.cpp
+    xkb_rules.cpp
+    keyboardmodel.cpp
+    shortcuthelper.cpp
+    xkboptionsmodel.cpp
+    layoutmodel.cpp
+    userlayoutmodel.cpp
+)
 
 ecm_qt_declare_logging_category(kcm_keyboard_PART_SRCS
     HEADER debug.h
@@ -94,18 +96,26 @@ ecm_qt_declare_logging_category(kcm_keyboard_PART_SRCS
     CATEGORY_NAME org.kde.kcm_keyboard
     DEFAULT_SEVERITY Warning
     DESCRIPTION "KCM and KDED for keyboard layouts"
-    EXPORT kcm_keyboard)
+    EXPORT kcm_keyboard
+)
+
 ecm_qt_install_logging_categories(
     EXPORT kcm_keyboard
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
-kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS workspace_options.kcfgc keyboardsettings.kcfgc keyboardmiscsettings.kcfgc)
+kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS workspace_options.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS keyboardsettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS keyboardmiscsettings.kcfgc GENERATE_MOC)
 
-ki18n_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kcmmiscwidget.ui)
+kcmutils_generate_module_data(kcm_keyboard
+    MODULE_DATA_HEADER keyboardsettingsdata.h
+    MODULE_DATA_CLASS_NAME KeyboardSettingsData
+    SETTINGS_HEADERS workspace_options.h keyboardmiscsettings.h keyboardsettings.h
+    SETTINGS_CLASSES WorkspaceOptions KeyboardMiscSettings KeyboardSettings
+)
 
 add_library(kcm_keyboard_static STATIC ${kcm_keyboard_PART_SRCS})
-
 set_property(TARGET kcm_keyboard_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 target_link_libraries(kcm_keyboard_static
@@ -126,9 +136,6 @@ target_link_libraries(kcm_keyboard_static
     X11::xkbfile
     PkgConfig::XKBREGISTRY
 )
-
-kcoreaddons_add_plugin(kcm_keyboard SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasma/kcms/systemsettings")
-kcmutils_generate_desktop_file(kcm_keyboard)
 
 target_link_libraries(kcm_keyboard kcm_keyboard_static)
 

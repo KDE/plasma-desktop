@@ -17,6 +17,7 @@
 
 class XInputEventNotifier;
 class KeyboardConfig;
+class KeyboardSettings;
 struct Rules;
 
 class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
@@ -24,6 +25,7 @@ class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.KeyboardLayouts")
 
+    KeyboardSettings *keyboardSettings;
     KeyboardConfig *keyboardConfig;
     KeyboardLayoutActionCollection *actionCollection;
     XInputEventNotifier *xEventNotifier;

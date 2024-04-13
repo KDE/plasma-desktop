@@ -14,12 +14,40 @@
 #include <math.h>
 
 #include "debug.h"
-#include "kcmmisc.h"
 #include "x11_helper.h"
 
 #include <X11/XKBlib.h>
 #include <X11/Xlib.h>
 #include <X11/keysym.h>
+
+namespace
+{
+constexpr int DEFAULT_REPEAT_DELAY = 600;
+constexpr double DEFAULT_REPEAT_RATE = 25.0;
+
+enum TriState {
+    STATE_ON = 0,
+    STATE_OFF = 1,
+    STATE_UNCHANGED = 2,
+};
+
+class TriStateHelper
+{
+public:
+    static TriState getTriState(int state)
+    {
+        return static_cast<TriState>(state);
+    }
+    static int getInt(TriState state)
+    {
+        return static_cast<int>(state);
+    }
+    static const char *getString(TriState state)
+    {
+        return state == STATE_ON ? "0" : state == STATE_OFF ? "1" : "2";
+    }
+};
+}
 
 // This code is taken from xset utility from XFree 4.3 (https://www.xfree86.org/)
 

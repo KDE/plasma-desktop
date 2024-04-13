@@ -17,6 +17,7 @@
 #include <QXmlStreamReader>
 
 #include "keyboard_config.h"
+#include "keyboardsettings.h"
 #include "layout_memory.h"
 
 static const char VERSION[] = "1.0";
@@ -49,7 +50,7 @@ QString LayoutMemoryPersister::getLayoutMapAsString()
     QDomDocument doc(DOC_NAME);
     QDomElement root = doc.createElement(ROOT_NODE);
     root.setAttribute(VERSION_ATTRIBUTE, VERSION);
-    root.setAttribute(SWITCH_MODE_ATTRIBUTE, layoutMemory.keyboardConfig.switchMode());
+    root.setAttribute(SWITCH_MODE_ATTRIBUTE, layoutMemory.keyboardConfig.keyboardSettings()->switchMode());
     doc.appendChild(root);
 
     if (layoutMemory.keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
@@ -242,14 +243,14 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile &file_)
     }
 
     if (layoutMemory.keyboardConfig.switchingPolicy() == KeyboardConfig::SWITCH_POLICY_GLOBAL) {
-        if (mapHandler.globalLayout.isValid() && layoutMemory.keyboardConfig.layouts.contains(mapHandler.globalLayout)) {
+        if (mapHandler.globalLayout.isValid() && layoutMemory.keyboardConfig.layouts().contains(mapHandler.globalLayout)) {
             globalLayout = mapHandler.globalLayout;
             qCDebug(KCM_KEYBOARD) << "Restored global layout" << globalLayout.toString();
         }
     } else {
         layoutMemory.layoutMap.clear();
         for (const QString &key : mapHandler.layoutMap.keys()) {
-            if (containsAll(layoutMemory.keyboardConfig.layouts, mapHandler.layoutMap[key].layouts)) {
+            if (containsAll(layoutMemory.keyboardConfig.layouts(), mapHandler.layoutMap[key].layouts)) {
                 layoutMemory.layoutMap.insert(key, mapHandler.layoutMap[key]);
             }
         }

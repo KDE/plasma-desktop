@@ -17,6 +17,7 @@
 
 // for text handling
 #include "keyboard_config.h"
+#include "x11_helper.h"
 #include "xkb_rules.h"
 
 QIcon Flags::getIcon(const QString &layout)
@@ -54,7 +55,7 @@ QString Flags::getShortText(const LayoutUnit &layoutUnit, const KeyboardConfig &
 
     QString layoutText = layoutUnit.layout();
 
-    for (const LayoutUnit &lu : keyboardConfig.layouts) {
+    for (const auto layouts = keyboardConfig.layouts(); const LayoutUnit &lu : layouts) {
         if (layoutUnit.layout() == lu.layout() && layoutUnit.variant() == lu.variant()) {
             layoutText = lu.getDisplayName();
             break;

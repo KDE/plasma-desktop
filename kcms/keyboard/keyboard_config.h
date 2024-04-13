@@ -7,21 +7,16 @@
 
 #pragma once
 
-#include "x11_helper.h"
+#include <QObject>
 
-#include <QList>
-#include <QMap>
-#include <QPair>
-#include <QString>
-#include <QStringList>
+struct Rules;
+class KeyboardSettings;
+class LayoutUnit;
 
-#include "keyboardsettings.h"
-
-/**
- * This class provides configuration options for keyboard module
- */
-class KeyboardConfig : public KeyboardSettingsBase
+class KeyboardConfig final : public QObject
 {
+    Q_OBJECT
+
 public:
     static const int NO_LOOPING; // = -1;
 
@@ -32,28 +27,48 @@ public:
         SWITCH_POLICY_WINDOW = 3,
     };
 
-    QList<LayoutUnit> layouts;
+public:
+    explicit KeyboardConfig(KeyboardSettings *settings, QObject *parent) noexcept;
 
-    KeyboardConfig(QObject *parent);
-
-    // Getter/setter for switchMode options with SwitchingPolicy enum type values
     SwitchingPolicy switchingPolicy() const;
     void setSwitchingPolicy(SwitchingPolicy switchingPolicy);
-    SwitchingPolicy defaultSwitchingPolicyValue() const;
 
-    bool layoutsSaveNeeded() const;
+    const QList<LayoutUnit> &layouts() const;
+    QList<LayoutUnit> &layouts();
+
+    QList<LayoutUnit> defaultLayouts() const;
+    QList<LayoutUnit> extraLayouts() const;
+
+    KeyboardSettings *keyboardSettings() const;
+    Rules *rules() const;
+
+    bool isDefaults() const;
+    bool isSaveNeeded() const;
 
     // Initialize layouts list when activating 'Configure Layouts' option and there is none.
     QList<LayoutUnit> getDefaultLayouts() const;
     QList<LayoutUnit> getExtraLayouts() const;
 
-    void setDefaults() override;
-    void load();
-    void save();
-
     static QString getSwitchingPolicyString(SwitchingPolicy switchingPolicy);
 
 private:
+    SwitchingPolicy policyFromString(const QString &string) const;
+
+    bool layoutsSaveNeeded() const;
+    bool isDefaultsLayouts() const;
+
+Q_SIGNALS:
+    void switchingPolicyChanged();
+
+public Q_SLOTS:
+    void save();
+    void load();
+    void defaults();
+
+private:
+    KeyboardSettings *const m_settings;
+
+    QList<LayoutUnit> m_layouts;
     QList<LayoutUnit> m_referenceLayouts;
     int m_referenceLayoutLoopCount;
 };
