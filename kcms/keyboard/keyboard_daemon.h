@@ -14,8 +14,8 @@
 #include "keyboard_dbus.h"
 #include "layout_memory.h"
 #include "layoutnames.h"
+#include "xinput_helper.h"
 
-class XInputEventNotifier;
 class KeyboardConfig;
 class KeyboardSettings;
 
@@ -27,13 +27,11 @@ class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
     KeyboardSettings *keyboardSettings;
     KeyboardConfig *keyboardConfig;
     KeyboardLayoutActionCollection *actionCollection;
-    XInputEventNotifier *xEventNotifier;
+    XInputEventNotifier xEventNotifier;
     LayoutMemory layoutMemory;
     std::optional<uint> lastUsedLayout;
 
-    void registerListeners();
     void registerShortcut();
-    void unregisterListeners();
     void unregisterShortcut();
     void setLastUsedLayoutValue(uint newValue);
 

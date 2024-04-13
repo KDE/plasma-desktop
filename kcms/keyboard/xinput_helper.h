@@ -20,9 +20,7 @@ class XInputEventNotifier : public QObject, public QAbstractNativeEventFilter
 
 public:
     explicit XInputEventNotifier();
-
-    void start();
-    void stop();
+    ~XInputEventNotifier();
 
     int registerForNewDeviceEvent(Display *dpy);
 

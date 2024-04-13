@@ -41,8 +41,7 @@ static const int DEVICE_POINTER = 2;
 
 XInputEventNotifier::XInputEventNotifier()
     : QObject()
-    , // TODO: destruct properly?
-    xkbOpcode(-1)
+    , xkbOpcode(-1)
     , xinputEventType(-1)
     , udevNotifier(nullptr)
     , keyboardNotificationTimer(new QTimer(this))
@@ -57,6 +56,20 @@ XInputEventNotifier::XInputEventNotifier()
     mouseNotificationTimer->setSingleShot(true);
     mouseNotificationTimer->setInterval(500);
     connect(mouseNotificationTimer, &QTimer::timeout, this, &XInputEventNotifier::newPointerDevice);
+
+    registerForNewDeviceEvent(QX11Info::display());
+
+    if (X11Helper::xkbSupported(&xkbOpcode)) {
+        registerForXkbEvents(QX11Info::display());
+
+        // start the event loop
+        QCoreApplication::instance()->installNativeEventFilter(this);
+    }
+}
+
+XInputEventNotifier::~XInputEventNotifier()
+{
+    QCoreApplication::instance()->removeNativeEventFilter(this);
 }
 
 bool XInputEventNotifier::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *)
@@ -71,23 +84,6 @@ bool XInputEventNotifier::nativeEventFilter(const QByteArray &eventType, void *m
         }
     }
     return false;
-}
-
-void XInputEventNotifier::start()
-{
-    registerForNewDeviceEvent(QX11Info::display());
-
-    if (X11Helper::xkbSupported(&xkbOpcode)) {
-        registerForXkbEvents(QX11Info::display());
-
-        // start the event loop
-        QCoreApplication::instance()->installNativeEventFilter(this);
-    }
-}
-
-void XInputEventNotifier::stop()
-{
-    QCoreApplication::instance()->removeNativeEventFilter(this);
 }
 
 bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t *event)

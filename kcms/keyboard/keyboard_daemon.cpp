@@ -30,7 +30,6 @@ KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
     , keyboardSettings(new KeyboardSettings(this))
     , keyboardConfig(new KeyboardConfig(keyboardSettings, this))
     , actionCollection(nullptr)
-    , xEventNotifier(nullptr)
     , layoutMemory(*keyboardConfig)
 {
     if (!X11Helper::xkbSupported(nullptr))
@@ -44,7 +43,11 @@ KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
     LayoutNames::registerMetaType();
 
     configureKeyboard();
-    registerListeners();
+
+    connect(&xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureInput);
+    connect(&xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
+    connect(&xEventNotifier, &XInputEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
+    connect(&xEventNotifier, &XInputEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChangedSlot);
 
     LayoutMemoryPersister layoutMemoryPersister(layoutMemory);
     if (layoutMemoryPersister.restore()) {
@@ -65,10 +68,7 @@ KeyboardDaemon::~KeyboardDaemon()
     dbus.unregisterObject(KEYBOARD_DBUS_OBJECT_PATH);
     dbus.unregisterService(KEYBOARD_DBUS_SERVICE_NAME);
 
-    unregisterListeners();
     unregisterShortcut();
-
-    delete xEventNotifier;
 }
 
 void KeyboardDaemon::configureKeyboard()
@@ -146,29 +146,6 @@ void KeyboardDaemon::unregisterShortcut()
 
         delete actionCollection;
         actionCollection = nullptr;
-    }
-}
-
-void KeyboardDaemon::registerListeners()
-{
-    if (xEventNotifier == nullptr) {
-        xEventNotifier = new XInputEventNotifier();
-    }
-    connect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureInput);
-    connect(xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
-    connect(xEventNotifier, &XInputEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
-    connect(xEventNotifier, &XInputEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChangedSlot);
-    xEventNotifier->start();
-}
-
-void KeyboardDaemon::unregisterListeners()
-{
-    if (xEventNotifier != nullptr) {
-        xEventNotifier->stop();
-        disconnect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureInput);
-        disconnect(xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
-        disconnect(xEventNotifier, &XInputEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChangedSlot);
-        disconnect(xEventNotifier, &XInputEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
     }
 }
 
