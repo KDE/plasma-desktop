@@ -157,12 +157,12 @@ Rules Rules::readRules()
 
         const char *variant = rxkb_layout_get_variant(l);
         if (variant == nullptr) {
-            LayoutInfo layout(rxkb_layout_get_name(l), rxkb_layout_get_description(l), rxkb_layout_get_popularity(l) == RXKB_POPULARITY_EXOTIC);
+            LayoutInfo layout(rxkb_layout_get_name(l), rxkb_layout_get_description(l));
             layout.languages = languages;
             layoutIndex = rules.layoutInfos.size();
             rules.layoutInfos << layout;
         } else if (layoutIndex != -1) {
-            VariantInfo v(variant, rxkb_layout_get_description(l), rxkb_layout_get_popularity(l) == RXKB_POPULARITY_EXOTIC);
+            VariantInfo v(variant, rxkb_layout_get_description(l));
             v.languages = languages;
             rules.layoutInfos[layoutIndex].variantInfos << v;
         }

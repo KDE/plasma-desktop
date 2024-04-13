@@ -22,12 +22,10 @@ struct VariantInfo {
     QString name;
     QString description;
     QStringList languages;
-    bool fromExtras = false;
 
-    VariantInfo(const char *name_, const char *description_, bool fromExtras_)
+    VariantInfo(const char *name_, const char *description_)
         : name(QString::fromUtf8(name_))
         , description(QString::fromUtf8(description_))
-        , fromExtras(fromExtras_)
     {
     }
 };
@@ -37,12 +35,10 @@ struct LayoutInfo {
     QString description;
     QList<VariantInfo> variantInfos;
     QStringList languages;
-    bool fromExtras;
 
-    LayoutInfo(const char *name_, const char *description_, bool fromExtras_)
+    LayoutInfo(const char *name_, const char *description_)
         : name(QString::fromUtf8(name_))
         , description(QString::fromUtf8(description_))
-        , fromExtras(fromExtras_)
     {
     }
 
