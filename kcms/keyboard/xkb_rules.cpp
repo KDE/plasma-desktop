@@ -115,11 +115,9 @@ static void rxkbLogHandler(rxkb_context *context, rxkb_log_level priority, const
     }
 }
 
-Rules *Rules::readRules(ExtrasFlag extrasFlag)
+Rules *Rules::readRules()
 {
-    rxkb_context_flags context_flags = extrasFlag == READ_EXTRAS ? RXKB_CONTEXT_LOAD_EXOTIC_RULES : RXKB_CONTEXT_NO_FLAGS;
-
-    rxkb_context *context = rxkb_context_new(context_flags);
+    rxkb_context *context = rxkb_context_new(RXKB_CONTEXT_LOAD_EXOTIC_RULES);
     if (!context) {
         qCDebug(KCM_KEYBOARD) << "Could not create xkb-registry context";
         return nullptr;

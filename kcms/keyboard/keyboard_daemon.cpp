@@ -33,7 +33,7 @@ KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
     , actionCollection(nullptr)
     , xEventNotifier(nullptr)
     , layoutMemory(*keyboardConfig)
-    , rules(Rules::readRules(Rules::READ_EXTRAS))
+    , rules(Rules::readRules())
 {
     if (!X11Helper::xkbSupported(nullptr))
         return;

@@ -33,7 +33,7 @@
 KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
     , m_data(new KeyboardSettingsData(this))
-    , m_rules(Rules::readRules(Rules::READ_EXTRAS))
+    , m_rules(Rules::readRules())
     , m_config(new KeyboardConfig(m_data->keyboardSettings(), this))
     , m_layoutModel(new LayoutModel(m_rules, this))
     , m_userLayoutModel(new UserLayoutModel(m_rules, m_config, this))

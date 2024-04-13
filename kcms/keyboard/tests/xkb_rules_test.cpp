@@ -10,8 +10,6 @@
 
 #include <qdom.h>
 
-static const Rules::ExtrasFlag readExtras = Rules::NO_EXTRAS;
-
 class RulesTest : public QObject
 {
     Q_OBJECT
@@ -21,7 +19,7 @@ class RulesTest : public QObject
 private Q_SLOTS:
     void initTestCase()
     {
-        rules = Rules::readRules(readExtras);
+        rules = Rules::readRules();
     }
 
     void cleanupTestCase()
@@ -80,7 +78,7 @@ private Q_SLOTS:
 
     void testExtras()
     {
-        const Rules *rulesWithExtras = Rules::readRules(Rules::READ_EXTRAS);
+        const Rules *rulesWithExtras = Rules::readRules();
         QVERIFY2(rulesWithExtras->layoutInfos.size() > rules->layoutInfos.size(), "Rules with extras should have more layouts");
 
         for (const LayoutInfo &layoutInfo : std::as_const(rules->layoutInfos)) {
@@ -190,7 +188,7 @@ private Q_SLOTS:
     void loadRulesBenchmark()
     {
         QBENCHMARK {
-            Rules *rules = Rules::readRules(readExtras);
+            Rules *rules = Rules::readRules();
             delete rules;
         }
     }

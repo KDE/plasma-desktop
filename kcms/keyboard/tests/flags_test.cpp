@@ -53,7 +53,7 @@ private Q_SLOTS:
         QCOMPARE(flags->getShortText(layoutUnit1, *keyboardConfig), QString("usi"));
         QCOMPARE(flags->getShortText(layoutUnit2, *keyboardConfig), QString("us"));
 
-        const Rules *rules = Rules::readRules(Rules::NO_EXTRAS);
+        const Rules *rules = Rules::readRules();
         QCOMPARE(flags->getLongText(layoutUnit, rules), QString("English (US)"));
         QCOMPARE(flags->getLongText(layoutUnit2, rules), QString("other"));
 

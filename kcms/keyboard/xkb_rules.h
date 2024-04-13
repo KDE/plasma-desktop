@@ -98,8 +98,6 @@ struct OptionGroupInfo {
 };
 
 struct Rules {
-    enum ExtrasFlag { NO_EXTRAS, READ_EXTRAS };
-
     static const char XKB_OPTION_GROUP_SEPARATOR;
 
     QList<LayoutInfo> layoutInfos;
@@ -116,5 +114,5 @@ struct Rules {
         return findByName(optionGroupInfos, optionGroupName);
     }
 
-    static Rules *readRules(ExtrasFlag extrasFlag);
+    static Rules *readRules();
 };
