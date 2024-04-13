@@ -114,5 +114,8 @@ struct Rules {
         return findByName(optionGroupInfos, optionGroupName);
     }
 
-    static Rules *readRules();
+    static Rules &self();
+
+private:
+    static Rules readRules();
 };

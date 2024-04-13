@@ -8,8 +8,6 @@
 
 #include <QAbstractListModel>
 
-struct Rules;
-
 class LayoutModel final : public QAbstractListModel
 {
     Q_OBJECT
@@ -33,14 +31,12 @@ class LayoutModel final : public QAbstractListModel
     };
 
 public:
-    explicit LayoutModel(Rules *rules, QObject *parent) noexcept;
+    explicit LayoutModel(QObject *parent) noexcept;
 
     Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     Q_INVOKABLE QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
 private:
-    Rules *const m_rules;
-
     QList<Data> m_data;
 };

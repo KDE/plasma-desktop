@@ -25,7 +25,6 @@
 #include "userlayoutmodel.h"
 #include "workspace_options.h"
 #include "x11_helper.h"
-#include "xkb_rules.h"
 #include "xkboptionsmodel.h"
 
 #include "debug.h"
@@ -33,13 +32,12 @@
 KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
     , m_data(new KeyboardSettingsData(this))
-    , m_rules(Rules::readRules())
     , m_config(new KeyboardConfig(m_data->keyboardSettings(), this))
-    , m_layoutModel(new LayoutModel(m_rules, this))
-    , m_userLayoutModel(new UserLayoutModel(m_rules, m_config, this))
-    , m_keyboardModel(new KeyboardModel(m_rules, this))
+    , m_layoutModel(new LayoutModel(this))
+    , m_userLayoutModel(new UserLayoutModel(m_config, this))
+    , m_keyboardModel(new KeyboardModel(this))
     , m_shortcutHelper(new ShortcutHelper(this))
-    , m_xkbOptionsModel(new XkbOptionsModel(m_rules, this))
+    , m_xkbOptionsModel(new XkbOptionsModel(this))
 {
     qmlRegisterAnonymousType<WorkspaceOptions>("org.kde.plasma.keyboard.kcm", 0);
     qmlRegisterAnonymousType<KeyboardMiscSettings>("org.kde.plasma.keyboard.kcm", 0);
@@ -155,7 +153,7 @@ void KCMKeyboard::load()
     m_shortcutHelper->load();
     m_xkbOptionsModel->setXkbOptions(m_data->keyboardSettings()->xkbOptions());
     m_config->load();
-    m_shortcutHelper->actionColletion()->loadLayoutShortcuts(m_config->layouts(), m_rules);
+    m_shortcutHelper->actionColletion()->loadLayoutShortcuts(m_config->layouts());
     m_userLayoutModel->reset();
 }
 
@@ -179,7 +177,7 @@ void KCMKeyboard::save()
     m_data->keyboardSettings()->setXkbOptions(options);
     m_data->keyboardSettings()->save();
 
-    m_shortcutHelper->actionColletion()->setLayoutShortcuts(m_config->layouts(), m_rules);
+    m_shortcutHelper->actionColletion()->setLayoutShortcuts(m_config->layouts());
     m_config->save();
     m_userLayoutModel->reset();
 
@@ -204,7 +202,7 @@ void KCMKeyboard::resetShortcuts()
     settingsChanged();
 
     m_shortcutHelper->actionColletion()->resetLayoutShortcuts();
-    m_shortcutHelper->actionColletion()->setLayoutShortcuts(m_config->layouts(), m_rules);
+    m_shortcutHelper->actionColletion()->setLayoutShortcuts(m_config->layouts());
 }
 
 #include "kcm_keyboard.moc"

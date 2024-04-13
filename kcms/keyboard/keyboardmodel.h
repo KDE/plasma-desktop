@@ -8,8 +8,6 @@
 
 #include <QAbstractListModel>
 
-struct Rules;
-
 class KeyboardModel final : public QAbstractListModel
 {
     Q_OBJECT
@@ -20,12 +18,9 @@ class KeyboardModel final : public QAbstractListModel
     };
 
 public:
-    explicit KeyboardModel(Rules *rules, QObject *parent) noexcept;
+    explicit KeyboardModel(QObject *parent) noexcept;
 
     Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     Q_INVOKABLE QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
-
-private:
-    Rules *const m_rules;
 };

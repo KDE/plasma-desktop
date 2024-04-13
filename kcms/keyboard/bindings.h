@@ -8,7 +8,6 @@
 
 #include <KActionCollection>
 
-struct Rules;
 class LayoutUnit;
 template<typename T>
 class QList;
@@ -21,11 +20,11 @@ public:
 
     QAction *getToggleAction();
     QAction *getLastUsedLayoutAction();
-    QAction *createLayoutShortcutActon(const LayoutUnit &layoutUnit, int layoutIndex, const Rules *rules, bool autoload);
-    void setLayoutShortcuts(QList<LayoutUnit> &layoutUnits, const Rules *rules);
+    QAction *createLayoutShortcutActon(const LayoutUnit &layoutUnit, int layoutIndex, bool autoload);
+    void setLayoutShortcuts(QList<LayoutUnit> &layoutUnits);
     void setToggleShortcut(const QKeySequence &keySequence);
     void setLastUsedLayoutShortcut(const QKeySequence &keySequence);
-    void loadLayoutShortcuts(QList<LayoutUnit> &layoutUnits, const Rules *rules);
+    void loadLayoutShortcuts(QList<LayoutUnit> &layoutUnits);
     void resetLayoutShortcuts();
 
 private:

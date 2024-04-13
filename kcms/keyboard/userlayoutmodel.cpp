@@ -13,10 +13,9 @@
 #include "x11_helper.h"
 #include "xkb_rules.h"
 
-UserLayoutModel::UserLayoutModel(Rules *rules, KeyboardConfig *config, QObject *parent) noexcept
+UserLayoutModel::UserLayoutModel(KeyboardConfig *config, QObject *parent) noexcept
     : QAbstractListModel(parent)
     , m_selectionModel(new QItemSelectionModel(this))
-    , m_rules(rules)
     , m_config(config)
 {
 }
@@ -44,7 +43,7 @@ QVariant UserLayoutModel::data(const QModelIndex &index, int role) const
     if (role == Roles::LayoutRole) {
         return QVariant::fromValue(layout.layout());
     } else if (role == Roles::LayoutNameRole) {
-        const std::optional<LayoutInfo> layoutInfo = m_rules->getLayoutInfo(layout.layout());
+        const std::optional<LayoutInfo> layoutInfo = Rules::self().getLayoutInfo(layout.layout());
         return layoutInfo ? layoutInfo->description : layout.layout();
     } else if (role == Roles::VariantRole) {
         return QVariant::fromValue(layout.variant());
@@ -52,7 +51,7 @@ QVariant UserLayoutModel::data(const QModelIndex &index, int role) const
         if (layout.variant().isEmpty())
             return QVariant();
 
-        const std::optional<LayoutInfo> layoutInfo = m_rules->getLayoutInfo(layout.layout());
+        const std::optional<LayoutInfo> layoutInfo = Rules::self().getLayoutInfo(layout.layout());
         if (!layoutInfo)
             return QVariant();
 

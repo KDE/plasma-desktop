@@ -14,30 +14,17 @@ class RulesTest : public QObject
 {
     Q_OBJECT
 
-    Rules *rules;
-
 private Q_SLOTS:
-    void initTestCase()
-    {
-        rules = Rules::readRules();
-    }
-
-    void cleanupTestCase()
-    {
-        delete rules;
-    }
-
     void testRules()
     {
-        QVERIFY(rules != nullptr);
-        QVERIFY(rules->modelInfos.size() > 0);
-        QVERIFY(rules->layoutInfos.size() > 0);
-        QVERIFY(rules->optionGroupInfos.size() > 0);
+        QVERIFY(Rules::self().modelInfos.size() > 0);
+        QVERIFY(Rules::self().layoutInfos.size() > 0);
+        QVERIFY(Rules::self().optionGroupInfos.size() > 0);
     }
 
     void testModel()
     {
-        for (const ModelInfo &modelInfo : std::as_const(rules->modelInfos)) {
+        for (const ModelInfo &modelInfo : std::as_const(Rules::self().modelInfos)) {
             QVERIFY(modelInfo.name.length() > 0);
             QVERIFY(modelInfo.description.length() > 0);
             //        	QVERIFY( ! modelInfo->vendor.isEmpty() );
@@ -46,7 +33,7 @@ private Q_SLOTS:
 
     void testLayouts()
     {
-        for (const LayoutInfo &layoutInfo : std::as_const(rules->layoutInfos)) {
+        for (const LayoutInfo &layoutInfo : std::as_const(Rules::self().layoutInfos)) {
             QVERIFY(!layoutInfo.name.isEmpty());
             //        	const char* desc = layoutInfo->name.toUtf8() ;
             //        	qDebug() << layoutInfo->name;
@@ -64,7 +51,7 @@ private Q_SLOTS:
 
     void testOptionGroups()
     {
-        for (const OptionGroupInfo &optionGroupInfo : std::as_const(rules->optionGroupInfos)) {
+        for (const OptionGroupInfo &optionGroupInfo : std::as_const(Rules::self().optionGroupInfos)) {
             QVERIFY(!optionGroupInfo.name.isEmpty());
             QVERIFY(!optionGroupInfo.description.isEmpty());
             // optionGroupInfo->exclusive
@@ -76,28 +63,6 @@ private Q_SLOTS:
         }
     }
 
-    void testExtras()
-    {
-        const Rules *rulesWithExtras = Rules::readRules();
-        QVERIFY2(rulesWithExtras->layoutInfos.size() > rules->layoutInfos.size(), "Rules with extras should have more layouts");
-
-        for (const LayoutInfo &layoutInfo : std::as_const(rules->layoutInfos)) {
-            QVERIFY(!layoutInfo.fromExtras);
-        }
-
-        bool foundFromExtras = false, foundNonExtras = false;
-        for (const LayoutInfo &layoutInfo : rulesWithExtras->layoutInfos) {
-            if (layoutInfo.fromExtras)
-                foundFromExtras = true;
-            if (!layoutInfo.fromExtras)
-                foundNonExtras = true;
-            layoutInfo.languages.size(); // make sure we can access all merged objects
-            layoutInfo.variantInfos.size(); // make sure we can access all merged objects
-        }
-        QVERIFY(foundNonExtras);
-        QVERIFY(foundFromExtras);
-    }
-
     void testWriteNewXml()
     {
         QDomDocument doc(QStringLiteral("xkbConfigRegistry"));
@@ -107,7 +72,7 @@ private Q_SLOTS:
 
         QDomElement modelList = doc.createElement(QStringLiteral("modelList"));
         root.appendChild(modelList);
-        for (const ModelInfo &modelInfo : std::as_const(rules->modelInfos)) {
+        for (const ModelInfo &modelInfo : std::as_const(Rules::self().modelInfos)) {
             QDomElement model = doc.createElement(QStringLiteral("model"));
             model.setAttribute(QStringLiteral("name"), modelInfo.name);
             model.setAttribute(QStringLiteral("description"), modelInfo.description);
@@ -116,7 +81,7 @@ private Q_SLOTS:
         }
 
         QDomElement layoutList = doc.createElement(QStringLiteral("layoutList"));
-        for (const LayoutInfo &layoutInfo : std::as_const(rules->layoutInfos)) {
+        for (const LayoutInfo &layoutInfo : std::as_const(Rules::self().layoutInfos)) {
             QDomElement layout = doc.createElement(QStringLiteral("layout"));
             layout.setAttribute(QStringLiteral("name"), layoutInfo.name);
             layout.setAttribute(QStringLiteral("description"), layoutInfo.description);
@@ -158,7 +123,7 @@ private Q_SLOTS:
         root.appendChild(layoutList);
 
         QDomElement optionGroupList = doc.createElement(QStringLiteral("optionList"));
-        for (const OptionGroupInfo &optionGroupInfo : std::as_const(rules->optionGroupInfos)) {
+        for (const OptionGroupInfo &optionGroupInfo : std::as_const(Rules::self().optionGroupInfos)) {
             QDomElement optionGroup = doc.createElement(QStringLiteral("optionGroup"));
             optionGroup.setAttribute(QStringLiteral("name"), optionGroupInfo.name);
             optionGroup.setAttribute(QStringLiteral("description"), optionGroupInfo.description);
@@ -183,14 +148,6 @@ private Q_SLOTS:
 
         QTextStream out(&file);
         out << doc.toString();
-    }
-
-    void loadRulesBenchmark()
-    {
-        QBENCHMARK {
-            Rules *rules = Rules::readRules();
-            delete rules;
-        }
     }
 };
 

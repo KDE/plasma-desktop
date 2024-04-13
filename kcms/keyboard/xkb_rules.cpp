@@ -53,20 +53,20 @@ void removeEmptyItems(QList<T> &list)
     }
 }
 
-static void postProcess(Rules *rules)
+static void postProcess(Rules &rules)
 {
     // TODO remove elements with empty names to safeguard us
-    removeEmptyItems(rules->layoutInfos);
-    removeEmptyItems(rules->modelInfos);
-    removeEmptyItems(rules->optionGroupInfos);
+    removeEmptyItems(rules.layoutInfos);
+    removeEmptyItems(rules.modelInfos);
+    removeEmptyItems(rules.optionGroupInfos);
 
     //	bindtextdomain("xkeyboard-config", LOCALE_DIR);
-    for (ModelInfo &modelInfo : rules->modelInfos) {
+    for (ModelInfo &modelInfo : rules.modelInfos) {
         modelInfo.vendor = translate_xml_item(modelInfo.vendor);
         modelInfo.description = translate_description(modelInfo);
     }
 
-    for (LayoutInfo &layoutInfo : rules->layoutInfos) {
+    for (LayoutInfo &layoutInfo : rules.layoutInfos) {
         layoutInfo.description = translate_description(layoutInfo);
 
         removeEmptyItems(layoutInfo.variantInfos);
@@ -74,7 +74,7 @@ static void postProcess(Rules *rules)
             variantInfo.description = translate_description(variantInfo);
         }
     }
-    for (OptionGroupInfo &optionGroupInfo : rules->optionGroupInfos) {
+    for (OptionGroupInfo &optionGroupInfo : rules.optionGroupInfos) {
         optionGroupInfo.description = translate_description(optionGroupInfo);
 
         removeEmptyItems(optionGroupInfo.optionInfos);
@@ -115,12 +115,18 @@ static void rxkbLogHandler(rxkb_context *context, rxkb_log_level priority, const
     }
 }
 
-Rules *Rules::readRules()
+Rules &Rules::self()
+{
+    static Rules instance = readRules();
+    return instance;
+}
+
+Rules Rules::readRules()
 {
     rxkb_context *context = rxkb_context_new(RXKB_CONTEXT_LOAD_EXOTIC_RULES);
     if (!context) {
         qCDebug(KCM_KEYBOARD) << "Could not create xkb-registry context";
-        return nullptr;
+        return {};
     }
     rxkb_context_set_log_level(context, RXKB_LOG_LEVEL_DEBUG);
     rxkb_context_set_log_fn(context, &rxkbLogHandler);
@@ -128,13 +134,13 @@ Rules *Rules::readRules()
     if (!rxkb_context_parse_default_ruleset(context)) {
         rxkb_context_unref(context);
         qCDebug(KCM_KEYBOARD) << "Could not parse xkb rules";
-        return nullptr;
+        return {};
     }
-    Rules *rules = new Rules();
+    Rules rules;
 
     rxkb_model *m = rxkb_model_first(context);
     while (m != nullptr) {
-        rules->modelInfos << ModelInfo(rxkb_model_get_name(m), rxkb_model_get_description(m), rxkb_model_get_vendor(m));
+        rules.modelInfos << ModelInfo(rxkb_model_get_name(m), rxkb_model_get_description(m), rxkb_model_get_vendor(m));
         m = rxkb_model_next(m);
     }
 
@@ -153,12 +159,12 @@ Rules *Rules::readRules()
         if (variant == nullptr) {
             LayoutInfo layout(rxkb_layout_get_name(l), rxkb_layout_get_description(l), rxkb_layout_get_popularity(l) == RXKB_POPULARITY_EXOTIC);
             layout.languages = languages;
-            layoutIndex = rules->layoutInfos.size();
-            rules->layoutInfos << layout;
+            layoutIndex = rules.layoutInfos.size();
+            rules.layoutInfos << layout;
         } else if (layoutIndex != -1) {
             VariantInfo v(variant, rxkb_layout_get_description(l), rxkb_layout_get_popularity(l) == RXKB_POPULARITY_EXOTIC);
             v.languages = languages;
-            rules->layoutInfos[layoutIndex].variantInfos << v;
+            rules.layoutInfos[layoutIndex].variantInfos << v;
         }
         l = rxkb_layout_next(l);
     }
@@ -173,7 +179,7 @@ Rules *Rules::readRules()
             group.optionInfos << OptionInfo(rxkb_option_get_name(o), rxkb_option_get_description(o));
             o = rxkb_option_next(o);
         }
-        rules->optionGroupInfos << group;
+        rules.optionGroupInfos << group;
         g = rxkb_option_group_next(g);
     }
 

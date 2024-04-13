@@ -70,23 +70,17 @@ QString Flags::getShortText(const LayoutUnit &layoutUnit, const KeyboardConfig &
     return layoutText;
 }
 
-static QString getDisplayText(const QString &layout, const QString &variant, const Rules *rules)
+static QString getDisplayText(const QString &layout, const QString &variant)
 {
     if (variant.isEmpty())
         return layout;
-    if (rules == nullptr)
-        return i18nc("layout - variant", "%1 - %2", layout, variant);
     return variant;
 }
 
-QString Flags::getLongText(const LayoutUnit &layoutUnit, const Rules *rules)
+QString Flags::getLongText(const LayoutUnit &layoutUnit)
 {
-    if (rules == nullptr) {
-        return getDisplayText(layoutUnit.layout(), layoutUnit.variant(), rules);
-    }
-
     QString layoutText = layoutUnit.layout();
-    const std::optional<LayoutInfo> layoutInfo = rules->getLayoutInfo(layoutUnit.layout());
+    const std::optional<LayoutInfo> layoutInfo = Rules::self().getLayoutInfo(layoutUnit.layout());
     if (layoutInfo) {
         layoutText = layoutInfo->description;
 
@@ -94,7 +88,7 @@ QString Flags::getLongText(const LayoutUnit &layoutUnit, const Rules *rules)
             const std::optional<VariantInfo> variantInfo = layoutInfo->getVariantInfo(layoutUnit.variant());
             QString variantText = variantInfo ? variantInfo->description : layoutUnit.variant();
 
-            layoutText = getDisplayText(layoutText, variantText, rules);
+            layoutText = getDisplayText(layoutText, variantText);
         }
     }
 

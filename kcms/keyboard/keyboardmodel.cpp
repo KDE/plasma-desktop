@@ -10,32 +10,25 @@
 
 #include "xkb_rules.h"
 
-KeyboardModel::KeyboardModel(Rules *rules, QObject *parent) noexcept
+KeyboardModel::KeyboardModel(QObject *parent) noexcept
     : QAbstractListModel(parent)
-    , m_rules(rules)
 {
 }
 
 int KeyboardModel::rowCount(const QModelIndex &parent) const
 {
-    if (!m_rules)
-        return 0;
-
-    return m_rules->modelInfos.count();
+    return Rules::self().modelInfos.count();
 }
 
 QVariant KeyboardModel::data(const QModelIndex &index, int role) const
 {
-    if (!m_rules)
-        return QVariant();
-
     if (!index.isValid())
         return QVariant();
 
-    if (index.row() >= m_rules->modelInfos.size())
+    if (index.row() >= Rules::self().modelInfos.size())
         return QVariant();
 
-    const ModelInfo modelInfo = m_rules->modelInfos.at(index.row());
+    const ModelInfo modelInfo = Rules::self().modelInfos.at(index.row());
 
     QString vendor = modelInfo.vendor;
     if (vendor.isEmpty()) {

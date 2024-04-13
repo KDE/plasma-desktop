@@ -9,7 +9,6 @@
 
 #include <QObject>
 
-struct Rules;
 class KeyboardSettings;
 class LayoutUnit;
 
@@ -40,7 +39,6 @@ public:
     QList<LayoutUnit> extraLayouts() const;
 
     KeyboardSettings *keyboardSettings() const;
-    Rules *rules() const;
 
     bool isDefaults() const;
     bool isSaveNeeded() const;

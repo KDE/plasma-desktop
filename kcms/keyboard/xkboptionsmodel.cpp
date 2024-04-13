@@ -16,9 +16,8 @@
 #include "x11_helper.h"
 #include "xkb_rules.h"
 
-XkbOptionsModel::XkbOptionsModel(Rules *rules, QObject *parent)
+XkbOptionsModel::XkbOptionsModel(QObject *parent)
     : QAbstractItemModel(parent)
-    , m_rules(rules)
 {
 }
 
@@ -44,11 +43,11 @@ int XkbOptionsModel::columnCount(const QModelIndex &) const
 int XkbOptionsModel::rowCount(const QModelIndex &parent) const
 {
     if (!parent.isValid()) {
-        return m_rules->optionGroupInfos.count();
+        return Rules::self().optionGroupInfos.count();
     }
 
     if (!parent.parent().isValid()) {
-        return m_rules->optionGroupInfos[parent.row()].optionInfos.count();
+        return Rules::self().optionGroupInfos[parent.row()].optionInfos.count();
     }
 
     return 0;
@@ -107,21 +106,21 @@ QVariant XkbOptionsModel::data(const QModelIndex &index, int role) const
 
     if (role == Qt::DisplayRole) {
         if (!index.parent().isValid()) {
-            return m_rules->optionGroupInfos[row].description;
+            return Rules::self().optionGroupInfos[row].description;
         } else {
             int groupRow = index.parent().row();
-            const OptionGroupInfo xkbGroup = m_rules->optionGroupInfos[groupRow];
+            const OptionGroupInfo xkbGroup = Rules::self().optionGroupInfos[groupRow];
             return xkbGroup.optionInfos[row].description;
         }
     } else if (role == Qt::CheckStateRole) {
         if (index.parent().isValid()) {
             int groupRow = index.parent().row();
-            const OptionGroupInfo xkbGroup = m_rules->optionGroupInfos[groupRow];
+            const OptionGroupInfo xkbGroup = Rules::self().optionGroupInfos[groupRow];
             const QString &xkbOptionName = xkbGroup.optionInfos[row].name;
             return m_xkbOptions.indexOf(xkbOptionName) == -1 ? Qt::Unchecked : Qt::Checked;
         } else {
             int groupRow = index.row();
-            const OptionGroupInfo xkbGroup = m_rules->optionGroupInfos[groupRow];
+            const OptionGroupInfo xkbGroup = Rules::self().optionGroupInfos[groupRow];
             for (const OptionInfo &optionInfo : xkbGroup.optionInfos) {
                 if (m_xkbOptions.indexOf(optionInfo.name) != -1) {
                     return Qt::PartiallyChecked;
@@ -146,7 +145,7 @@ QString XkbOptionsModel::getShortcutName(const QString &group)
 
     if (grpOptions.size() == 1) {
         const QString &option = grpOptions.first();
-        const std::optional<OptionGroupInfo> optionGroupInfo = m_rules->getOptionGroupInfo(group);
+        const std::optional<OptionGroupInfo> optionGroupInfo = Rules::self().getOptionGroupInfo(group);
         const std::optional<OptionInfo> optionInfo = optionGroupInfo->getOptionInfo(option);
 
         if (!optionInfo || optionInfo->description == nullptr) {
@@ -180,11 +179,11 @@ void XkbOptionsModel::clearXkbGroup(const QString &group)
 
 void XkbOptionsModel::navigateToGroup(const QString &group)
 {
-    auto it = std::find_if(m_rules->optionGroupInfos.cbegin(), m_rules->optionGroupInfos.cend(), [group](const OptionGroupInfo &groupInfo) {
+    auto it = std::find_if(Rules::self().optionGroupInfos.cbegin(), Rules::self().optionGroupInfos.cend(), [group](const OptionGroupInfo &groupInfo) {
         return groupInfo.name == group;
     });
 
-    int index = std::distance(m_rules->optionGroupInfos.cbegin(), it);
+    int index = std::distance(Rules::self().optionGroupInfos.cbegin(), it);
 
     if (index != -1) {
         Q_EMIT navigateTo(createIndex(index, 0));
@@ -214,7 +213,7 @@ bool XkbOptionsModel::setData(const QModelIndex &index, const QVariant &value, i
         return false;
     }
 
-    const OptionGroupInfo xkbGroup = m_rules->optionGroupInfos[groupRow];
+    const OptionGroupInfo xkbGroup = Rules::self().optionGroupInfos[groupRow];
     const OptionInfo option = xkbGroup.optionInfos[index.row()];
 
     if (value.toInt() == Qt::Checked) {

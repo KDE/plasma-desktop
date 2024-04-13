@@ -11,17 +11,14 @@
 #include "x11_helper.h"
 #include "xkb_rules.h"
 
-LayoutModel::LayoutModel(Rules *rules, QObject *parent) noexcept
+LayoutModel::LayoutModel(QObject *parent) noexcept
     : QAbstractListModel(parent)
-    , m_rules(rules)
 {
-    if (m_rules) {
-        for (const LayoutInfo &layoutInfo : std::as_const(m_rules->layoutInfos)) {
-            m_data.append(Data(layoutInfo.name, layoutInfo.description, QStringLiteral("")));
+    for (const LayoutInfo &layoutInfo : std::as_const(Rules::self().layoutInfos)) {
+        m_data.append(Data(layoutInfo.name, layoutInfo.description, QStringLiteral("")));
 
-            for (const VariantInfo &variantInfo : layoutInfo.variantInfos) {
-                m_data.append(Data(layoutInfo.name, variantInfo.description, variantInfo.name));
-            }
+        for (const VariantInfo &variantInfo : layoutInfo.variantInfos) {
+            m_data.append(Data(layoutInfo.name, variantInfo.description, variantInfo.name));
         }
     }
 }

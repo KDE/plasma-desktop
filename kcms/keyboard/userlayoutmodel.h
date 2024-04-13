@@ -8,7 +8,6 @@
 
 #include <QAbstractListModel>
 
-struct Rules;
 class KeyboardConfig;
 class LayoutUnit;
 class QItemSelectionModel;
@@ -29,7 +28,7 @@ class UserLayoutModel final : public QAbstractListModel
     };
 
 public:
-    explicit UserLayoutModel(Rules *rules, KeyboardConfig *config, QObject *parent) noexcept;
+    explicit UserLayoutModel(KeyboardConfig *config, QObject *parent) noexcept;
 
     QItemSelectionModel *selectionModel() const;
 
@@ -47,6 +46,5 @@ public:
 
 private:
     QItemSelectionModel *const m_selectionModel;
-    Rules *const m_rules;
     KeyboardConfig *const m_config;
 };

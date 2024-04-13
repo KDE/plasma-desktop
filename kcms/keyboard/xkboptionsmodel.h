@@ -8,7 +8,6 @@
 
 #include <QAbstractItemModel>
 
-struct Rules;
 class KeyboardSettings;
 
 class XkbOptionsModel final : public QAbstractItemModel
@@ -16,7 +15,7 @@ class XkbOptionsModel final : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    XkbOptionsModel(Rules *rules, QObject *parent);
+    XkbOptionsModel(QObject *parent);
 
     void setXkbOptions(const QStringList &options);
     QStringList xkbOptions() const;
@@ -42,6 +41,5 @@ Q_SIGNALS:
     void navigateTo(const QModelIndex &index);
 
 private:
-    Rules *const m_rules;
     QStringList m_xkbOptions;
 };

@@ -19,7 +19,6 @@ class ShortcutHelper;
 class LayoutModel;
 class UserLayoutModel;
 class XkbOptionsModel;
-struct Rules;
 
 class KCMKeyboard final : public KQuickManagedConfigModule
 {
@@ -67,7 +66,6 @@ private Q_SLOTS:
 
 private:
     KeyboardSettingsData *const m_data;
-    Rules *const m_rules;
     KeyboardConfig *const m_config;
 
     LayoutModel *const m_layoutModel;

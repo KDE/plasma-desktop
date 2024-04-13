@@ -22,7 +22,6 @@
 #include "x11_helper.h"
 #include "xinput_helper.h"
 #include "xkb_helper.h"
-#include "xkb_rules.h"
 
 K_PLUGIN_CLASS_WITH_JSON(KeyboardDaemon, "kded_keyboard.json")
 
@@ -33,7 +32,6 @@ KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
     , actionCollection(nullptr)
     , xEventNotifier(nullptr)
     , layoutMemory(*keyboardConfig)
-    , rules(Rules::readRules())
 {
     if (!X11Helper::xkbSupported(nullptr))
         return;
@@ -71,7 +69,6 @@ KeyboardDaemon::~KeyboardDaemon()
     unregisterShortcut();
 
     delete xEventNotifier;
-    delete rules;
 }
 
 void KeyboardDaemon::configureKeyboard()
@@ -109,7 +106,7 @@ void KeyboardDaemon::registerShortcut()
                                                               QStringLiteral("/org/kde/osdService"),
                                                               QStringLiteral("org.kde.osdService"),
                                                               QStringLiteral("kbdLayoutChanged"));
-            msg << Flags::getLongText(newLayout, rules);
+            msg << Flags::getLongText(newLayout);
             QDBusConnection::sessionBus().asyncCall(msg);
         });
 
@@ -127,11 +124,11 @@ void KeyboardDaemon::registerShortcut()
                                                               QStringLiteral("/org/kde/osdService"),
                                                               QStringLiteral("org.kde.osdService"),
                                                               QStringLiteral("kbdLayoutChanged"));
-            msg << Flags::getLongText(newLayout, rules);
+            msg << Flags::getLongText(newLayout);
             QDBusConnection::sessionBus().asyncCall(msg);
         });
 
-        actionCollection->loadLayoutShortcuts(keyboardConfig->layouts(), rules);
+        actionCollection->loadLayoutShortcuts(keyboardConfig->layouts());
         // clang-format off
     connect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
         // clang-format on
@@ -283,7 +280,7 @@ QList<LayoutNames> KeyboardDaemon::getLayoutsList() const
                 displayName = it->getDisplayName();
             }
         }
-        ret.append({layoutUnit.layout(), displayName, Flags::getLongText(layoutUnit, rules)});
+        ret.append({layoutUnit.layout(), displayName, Flags::getLongText(layoutUnit)});
     }
     return ret;
 }

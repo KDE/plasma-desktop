@@ -18,19 +18,16 @@ class FlagsTest : public QObject
     Q_OBJECT
 
     Flags *flags;
-    const Rules *rules;
 
 private Q_SLOTS:
     void initTestCase()
     {
         flags = new Flags();
-        rules = nullptr;
     }
 
     void cleanupTestCase()
     {
         delete flags;
-        delete rules;
     }
 
     void testRules()
@@ -53,12 +50,8 @@ private Q_SLOTS:
         QCOMPARE(flags->getShortText(layoutUnit1, *keyboardConfig), QString("usi"));
         QCOMPARE(flags->getShortText(layoutUnit2, *keyboardConfig), QString("us"));
 
-        const Rules *rules = Rules::readRules();
-        QCOMPARE(flags->getLongText(layoutUnit, rules), QString("English (US)"));
-        QCOMPARE(flags->getLongText(layoutUnit2, rules), QString("other"));
-
-        rules = nullptr; // when no rules found
-        QCOMPARE(flags->getLongText(layoutUnit1, rules), QString("us - intl"));
+        QCOMPARE(flags->getLongText(layoutUnit), QString("English (US)"));
+        QCOMPARE(flags->getLongText(layoutUnit2), QString("other"));
     }
 
     //    void loadRulesBenchmark() {
