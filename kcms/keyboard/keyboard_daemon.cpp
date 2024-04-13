@@ -36,7 +36,7 @@ KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
     , rules(Rules::readRules(Rules::READ_EXTRAS))
 {
     if (!X11Helper::xkbSupported(nullptr))
-        return; // TODO: shut down the daemon?
+        return;
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerService(KEYBOARD_DBUS_SERVICE_NAME);
