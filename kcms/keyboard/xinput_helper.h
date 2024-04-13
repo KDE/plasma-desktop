@@ -12,7 +12,6 @@
 #include <fixx11h.h>
 
 class QTimer;
-class UdevDeviceNotifier;
 
 class XInputEventNotifier : public XEventNotifier
 {
@@ -38,7 +37,6 @@ private:
 
     int xinputEventType;
     Display *display;
-    UdevDeviceNotifier *udevNotifier;
     QTimer *keyboardNotificationTimer;
     QTimer *mouseNotificationTimer;
 };

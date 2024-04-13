@@ -32,8 +32,6 @@ typedef struct xcb_input_device_presence_notify_event_t {
 // FIXME: #include <xcb/xinput.h> once xcb-xinput is stable
 #endif
 
-#include "udev_helper.h"
-
 static const int DEVICE_NONE = 0;
 static const int DEVICE_KEYBOARD = 1;
 static const int DEVICE_POINTER = 2;
@@ -42,7 +40,6 @@ XInputEventNotifier::XInputEventNotifier(QWidget *parent)
     : XEventNotifier()
     , // TODO: destruct properly?
     xinputEventType(-1)
-    , udevNotifier(nullptr)
     , keyboardNotificationTimer(new QTimer(this))
     , mouseNotificationTimer(new QTimer(this))
 {
@@ -150,30 +147,10 @@ int XInputEventNotifier::registerForNewDeviceEvent(Display *display_)
     return xitype;
 }
 
-#elif defined(HAVE_UDEV)
-
-int XInputEventNotifier::registerForNewDeviceEvent(Display * /*display*/)
-{
-    if (!udevNotifier) {
-        udevNotifier = new UdevDeviceNotifier(this);
-        connect(udevNotifier, &UdevDeviceNotifier::newKeyboardDevice, this, &XInputEventNotifier::newKeyboardDevice);
-        connect(udevNotifier, &UdevDeviceNotifier::newPointerDevice, this, &XInputEventNotifier::newPointerDevice);
-        // Same as with XInput notifier, also Q_EMIT newKeyboardDevice when pointer device is found
-        connect(udevNotifier, &UdevDeviceNotifier::newPointerDevice, this, &XInputEventNotifier::newKeyboardDevice);
-    }
-
-    return -1;
-}
-
-int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t * /*event*/)
-{
-    return DEVICE_NONE;
-}
-
 #else
 
 #ifdef __GNUC__
-#warning "Keyboard daemon is compiled without XInput and UDev, keyboard settings will be reset when new keyboard device is plugged in!"
+#warning "Keyboard daemon is compiled without XInput, keyboard settings will be reset when new keyboard device is plugged in!"
 #endif
 
 int XInputEventNotifier::registerForNewDeviceEvent(Display * /*display*/)

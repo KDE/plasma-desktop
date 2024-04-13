@@ -3,14 +3,10 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_keyboard\")
 add_subdirectory(tastenbrett)
 
 option(HAVE_XINPUT "X11 XInput" OFF)
-option(HAVE_UDEV "UDev" OFF)
 
 if (X11_Xinput_FOUND)
     set(HAVE_XINPUT ON)
-elseif (UDEV_FOUND)
-    set(HAVE_UDEV ON)
-else()
-    message(STATUS "X11 XInput and UDev is not found, either is required to keep layouts with keyboard hotplugging")
+    message(STATUS "X11 XInput is not found but required to keep layouts with keyboard hotplugging")
 endif()
 
 ### kded daemon ###
@@ -20,7 +16,6 @@ set( kded_keyboard_SRCS
     keyboard_daemon.cpp
     layout_memory.cpp
     layout_memory_persister.cpp
-    udev_helper.cpp
     x11_helper.cpp
     xinput_helper.cpp
     xkb_helper.cpp
@@ -64,10 +59,6 @@ target_link_libraries(kded_keyboard Qt::GuiPrivate)
 
 if (HAVE_XINPUT)
     target_link_libraries(kded_keyboard X11::Xi)
-endif()
-
-if (HAVE_UDEV)
-    target_link_libraries(kded_keyboard UDev::UDev)
 endif()
 
 ### kcm keyboard ###
