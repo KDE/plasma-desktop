@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-04-13 00:39+0000\n"
 "PO-Revision-Date: 2023-05-31 22:02+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Pausa Indicisator"
 msgid "Resume Indexer"
 msgstr "Recomencia indicisator"
 
-#: ui/main.qml:72
+#: ui/main.qml:60
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -37,7 +37,7 @@ msgstr ""
 "Isto dishabilitara cerca de file in menus de KRunner e lanceator,e removera "
 "monstrator de metadatos extendite ex omne applicationes de KDE. "
 
-#: ui/main.qml:81
+#: ui/main.qml:70
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -48,12 +48,12 @@ msgstr ""
 "ma si indicisar es habilitate depost, le integre indice deber esser recreate "
 "ex nihil. Isto pote prender alcun tempore, dependente de quante files tu ha."
 
-#: ui/main.qml:83
+#: ui/main.qml:72
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Dele Datos de indice"
 
-#: ui/main.qml:93
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -62,102 +62,102 @@ msgstr ""
 "Cerca de File adjuta te localisar rapidemente tu files. Tu pote seliger qual "
 "dossieres e que typos de datos de file es indicisate."
 
-#: ui/main.qml:109
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Indicisation de file:"
 
-#: ui/main.qml:110
+#: ui/main.qml:107
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr "Habilitate"
 
-#: ui/main.qml:124
+#: ui/main.qml:121
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
 msgstr "Stato:"
 
-#: ui/main.qml:128
+#: ui/main.qml:125
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% complete"
 
-#: ui/main.qml:142
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "Indicisante currentemente :"
 
-#: ui/main.qml:153
+#: ui/main.qml:150
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
 msgstr "<filename>%1</filename>"
 
-#: ui/main.qml:169
+#: ui/main.qml:164
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Datos a indice:"
 
-#: ui/main.qml:171
+#: ui/main.qml:166
 #, kde-format
 msgid "File names and contents"
 msgstr "Nomines de files e contentos"
 
-#: ui/main.qml:184
+#: ui/main.qml:179
 #, kde-format
 msgid "File names only"
 msgstr "Solmente nomine de files"
 
-#: ui/main.qml:203
+#: ui/main.qml:198
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "Files e dossieres celate"
 
-#: ui/main.qml:229
+#: ui/main.qml:224
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Locationes"
 
-#: ui/main.qml:232
+#: ui/main.qml:227
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Initia indicisar un dossier..."
 
-#: ui/main.qml:240
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stoppa indicisar un dossier..."
 
-#: ui/main.qml:300
+#: ui/main.qml:295
 #, kde-format
 msgid "Not indexed"
 msgstr "Non indicisate"
 
-#: ui/main.qml:301
+#: ui/main.qml:296
 #, kde-format
 msgid "Indexed"
 msgstr "Indicisate"
 
-#: ui/main.qml:331
+#: ui/main.qml:326
 #, kde-format
 msgid "Delete entry"
 msgstr "Dele entrata"
 
-#: ui/main.qml:346
+#: ui/main.qml:341
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Selige un dossier de includer"
 
-#: ui/main.qml:346
+#: ui/main.qml:341
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Selige un dossier de excluder"

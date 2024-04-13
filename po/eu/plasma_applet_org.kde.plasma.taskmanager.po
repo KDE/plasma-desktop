@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:39+0000\n"
+"POT-Creation-Date: 2024-04-13 00:39+0000\n"
 "PO-Revision-Date: 2023-11-30 10:11+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -164,33 +164,33 @@ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automatikoki handia ezarri ukimen moduan"
 
-#: package/contents/ui/ConfigBehavior.qml:48
+#: package/contents/ui/ConfigBehavior.qml:49
 #, kde-format
 msgid "Group:"
 msgstr "Taldekatu:"
 
-#: package/contents/ui/ConfigBehavior.qml:51
+#: package/contents/ui/ConfigBehavior.qml:52
 #, kde-format
 msgid "Do not group"
 msgstr "Ez taldekatu"
 
-#: package/contents/ui/ConfigBehavior.qml:51
+#: package/contents/ui/ConfigBehavior.qml:52
 #, kde-format
 msgid "By program name"
 msgstr "Programa-izenaren arabera"
 
-#: package/contents/ui/ConfigBehavior.qml:56
+#: package/contents/ui/ConfigBehavior.qml:57
 #, kde-format
 msgid "Clicking grouped task:"
 msgstr "Taldekatutako atazei klik egitea:"
 
-#: package/contents/ui/ConfigBehavior.qml:63
+#: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
 msgstr "Atazen arteko ibilaldia egiten du"
 
-#: package/contents/ui/ConfigBehavior.qml:64
+#: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
@@ -198,20 +198,20 @@ msgctxt ""
 msgid "Shows small window previews"
 msgstr "Aurreikuspegi leiho txikiak erakusten ditu"
 
-#: package/contents/ui/ConfigBehavior.qml:65
+#: package/contents/ui/ConfigBehavior.qml:66
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
 msgstr "Aurreikuspegi leiho handiak erakusten ditu"
 
-#: package/contents/ui/ConfigBehavior.qml:66
+#: package/contents/ui/ConfigBehavior.qml:67
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
 msgstr "Testu zerrenda erakusten du"
 
-#: package/contents/ui/ConfigBehavior.qml:74
+#: package/contents/ui/ConfigBehavior.qml:75
 #, kde-format
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
@@ -220,87 +220,92 @@ msgstr ""
 "Konposatzaileak ez du onartzen leihoak aurrez-aurre aurkeztea, beraz, testu-"
 "zerrenda bat aurkeztuko da."
 
-#: package/contents/ui/ConfigBehavior.qml:84
+#: package/contents/ui/ConfigBehavior.qml:85
 #, kde-format
 msgid "Combine into single button"
 msgstr "Batu botoi bakarrean"
 
-#: package/contents/ui/ConfigBehavior.qml:91
+#: package/contents/ui/ConfigBehavior.qml:92
 #, kde-format
 msgid "Group only when the Task Manager is full"
 msgstr "Taldekatu soilik ataza-kudeatzailea betea dagoenean"
 
-#: package/contents/ui/ConfigBehavior.qml:102
+#: package/contents/ui/ConfigBehavior.qml:103
 #, kde-format
 msgid "Sort:"
 msgstr "Sailkatzea:"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:106
 #, kde-format
 msgid "Do not sort"
 msgstr "Ez sailkatu"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:106
 #, kde-format
 msgid "Manually"
 msgstr "Eskuz"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:106
 #, kde-format
 msgid "Alphabetically"
 msgstr "Alfabetikoki"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:106
 #, kde-format
 msgid "By desktop"
 msgstr "Mahaigainaren arabera"
 
-#: package/contents/ui/ConfigBehavior.qml:105
+#: package/contents/ui/ConfigBehavior.qml:106
 #, kde-format
 msgid "By activity"
 msgstr "Jardueraren arabera"
 
-#: package/contents/ui/ConfigBehavior.qml:111
+#: package/contents/ui/ConfigBehavior.qml:112
 #, kde-format
 msgid "Keep launchers separate"
 msgstr "Mantendu abiarazleak banatuta"
 
-#: package/contents/ui/ConfigBehavior.qml:122
+#: package/contents/ui/ConfigBehavior.qml:119
+#, kde-format
+msgid "Hide launchers after application startup"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:129
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
 msgstr "Ataza aktiboari klik egitea:"
 
-#: package/contents/ui/ConfigBehavior.qml:123
+#: package/contents/ui/ConfigBehavior.qml:130
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "Ataza ikonotzen du"
 
-#: package/contents/ui/ConfigBehavior.qml:128
+#: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
 msgid "Middle-clicking any task:"
 msgstr "Edozein atazari erdiko-klik egitea:"
 
-#: package/contents/ui/ConfigBehavior.qml:132
+#: package/contents/ui/ConfigBehavior.qml:139
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "Ez du ezer egiten"
 
-#: package/contents/ui/ConfigBehavior.qml:133
+#: package/contents/ui/ConfigBehavior.qml:140
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
 msgstr "Leihoa edo taldea ixten du"
 
-#: package/contents/ui/ConfigBehavior.qml:134
+#: package/contents/ui/ConfigBehavior.qml:141
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
 msgstr "Leiho berri bat irekitzen du"
 
-#: package/contents/ui/ConfigBehavior.qml:135
+#: package/contents/ui/ConfigBehavior.qml:142
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
@@ -308,13 +313,13 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "Leihoa edo taldea ikonotzen/lehengoratzen du"
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:143
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
 msgstr "Taldekatzea txandakatzen du"
 
-#: package/contents/ui/ConfigBehavior.qml:137
+#: package/contents/ui/ConfigBehavior.qml:144
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
@@ -322,81 +327,81 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "Uneko alegiazko mahaigainera ekartzen du"
 
-#: package/contents/ui/ConfigBehavior.qml:147
+#: package/contents/ui/ConfigBehavior.qml:154
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "Saguaren gurpila:"
 
-#: package/contents/ui/ConfigBehavior.qml:148
+#: package/contents/ui/ConfigBehavior.qml:155
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "Atazen arteko ibilaldia egiten du"
 
-#: package/contents/ui/ConfigBehavior.qml:157
+#: package/contents/ui/ConfigBehavior.qml:164
 #, kde-format
 msgid "Skip minimized tasks"
 msgstr "Saltatu ikonotutako atazak"
 
-#: package/contents/ui/ConfigBehavior.qml:168
+#: package/contents/ui/ConfigBehavior.qml:175
 #, kde-format
 msgid "Show only tasks:"
 msgstr "Erakutsi atazak soilik:"
 
-#: package/contents/ui/ConfigBehavior.qml:169
+#: package/contents/ui/ConfigBehavior.qml:176
 #, kde-format
 msgid "From current screen"
 msgstr "Uneko pantailatik"
 
-#: package/contents/ui/ConfigBehavior.qml:174
+#: package/contents/ui/ConfigBehavior.qml:181
 #, kde-format
 msgid "From current desktop"
 msgstr "Uneko mahaigainetik"
 
-#: package/contents/ui/ConfigBehavior.qml:179
+#: package/contents/ui/ConfigBehavior.qml:186
 #, kde-format
 msgid "From current activity"
 msgstr "Uneko jardueratik"
 
-#: package/contents/ui/ConfigBehavior.qml:184
+#: package/contents/ui/ConfigBehavior.qml:191
 #, kde-format
 msgid "That are minimized"
 msgstr "Ikonotuta daudenak"
 
-#: package/contents/ui/ConfigBehavior.qml:193
+#: package/contents/ui/ConfigBehavior.qml:200
 #, kde-format
 msgid "When panel is hidden:"
 msgstr "Panela ezkutuan dagoenean:"
 
-#: package/contents/ui/ConfigBehavior.qml:194
+#: package/contents/ui/ConfigBehavior.qml:201
 #, kde-format
 msgid "Unhide when a window wants attention"
 msgstr "Erakutsi leiho batek arreta nahi duenean"
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:213
 #, kde-format
 msgid "New tasks appear:"
 msgstr "Ataza berriak agertzen dira:"
 
-#: package/contents/ui/ConfigBehavior.qml:210
+#: package/contents/ui/ConfigBehavior.qml:217
 #, kde-format
 msgid "On the bottom"
 msgstr "Beheko aldean"
 
-#: package/contents/ui/ConfigBehavior.qml:214
-#: package/contents/ui/ConfigBehavior.qml:234
+#: package/contents/ui/ConfigBehavior.qml:221
+#: package/contents/ui/ConfigBehavior.qml:241
 #, kde-format
 msgid "To the right"
 msgstr "Eskuinean"
 
-#: package/contents/ui/ConfigBehavior.qml:216
-#: package/contents/ui/ConfigBehavior.qml:232
+#: package/contents/ui/ConfigBehavior.qml:223
+#: package/contents/ui/ConfigBehavior.qml:239
 #, kde-format
 msgid "To the left"
 msgstr "Ezkerrean"
 
-#: package/contents/ui/ConfigBehavior.qml:228
+#: package/contents/ui/ConfigBehavior.qml:235
 #, kde-format
 msgid "On the Top"
 msgstr "Goiko aldean"

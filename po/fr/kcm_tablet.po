@@ -4,15 +4,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2024-02-19 10:49+0100\n"
+"PO-Revision-Date: 2024-04-11 09:07+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: fr\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -92,10 +92,9 @@ msgid "Orientation:"
 msgstr "Orientation :"
 
 #: ui/main.qml:110
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgid "Left handed mode:"
-msgstr "Mode gaucher :"
+msgstr "Mode pour gaucher :"
 
 #: ui/main.qml:120
 #, kde-format
@@ -120,22 +119,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1, %2 - %3 × %4"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgid "Pen button 1:"
-msgstr "Bouton du stylet 1"
+msgstr "Bouton 1 du stylet :"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgid "Pen button 2:"
-msgstr "Bouton du stylet 2"
+msgstr "Bouton 2 du stylet :"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgid "Pen button 3:"
-msgstr "Bouton du stylet 3"
+msgstr "Bouton 3 du stylet :"
 
 #: ui/main.qml:295
 #, kde-format
@@ -149,10 +145,9 @@ msgid "None"
 msgstr "Aucun"
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
-msgstr "Bouton %1 :"
+msgstr "Bouton %1 du pavé tactile :"
 
 #~ msgid "Tool Button 1"
 #~ msgstr "Bouton 1 d'outils"
