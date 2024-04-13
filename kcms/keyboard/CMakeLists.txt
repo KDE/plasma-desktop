@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmkeyboard\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_keyboard\")
 
 add_subdirectory(tastenbrett)
 
