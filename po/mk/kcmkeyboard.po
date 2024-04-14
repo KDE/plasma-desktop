@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-04-14 00:39+0000\n"
 "PO-Revision-Date: 2008-12-21 16:38+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -52,462 +52,23 @@ msgstr "Префрли во следниот распоред на тастат�
 msgid "Switch keyboard layout to %1"
 msgstr "Грешка при менување на распоредот на тастатурата во „%1“"
 
-#: flags.cpp:77
+#: flags.cpp:78
 #, kde-format
 msgctxt "layout - variant"
 msgid "%1 - %2"
 msgstr ""
 
-#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
-#: kcm_add_layout_dialog.ui:14
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
-msgid "Add Layout"
-msgstr "Повторување на тастатурата"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
-#: kcm_add_layout_dialog.ui:20
-#, kde-format
-msgid "Search…"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
-#: kcm_add_layout_dialog.ui:45
-#, kde-format
-msgid "Shortcut:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, labelLabel)
-#: kcm_add_layout_dialog.ui:55
-#, kde-format
-msgid "Label:"
-msgstr "Натпис:"
-
-#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
-#. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:347
-#, kde-format
-msgid "Preview"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
-#: kcm_keyboard.ui:21
-#, kde-format
-msgid "Hardware"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm_keyboard.ui:36
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
-msgid "Keyboard &model:"
-msgstr "Повторување на тастатурата"
-
-#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
-#: kcm_keyboard.ui:56
-#, kde-format
-msgid ""
-"Here you can choose a keyboard model. This setting is independent of your "
-"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
-"keyboard is manufactured. Modern keyboards that come with your computer "
-"usually have two extra keys and are referred to as \"104-key\" models, which "
-"is probably what you want if you do not know what kind of keyboard you "
-"have.\n"
-msgstr ""
-"Тука може да изберете модел на тастатура. Ова поставување е независно од "
-"Вашиот распоред на тастатура и се однесува на „хардверскиот“ модел, т.е. на "
-"начинот на кој е произведена вашата тастатура. Модерните тастатури обично "
-"доаѓаат со две дополнителни копчиња и се познати како модели со 104 копчиња. "
-"Изберете го тој модел ако не знаете точно каков вид тастатура имате.\n"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
-#: kcm_keyboard.ui:97
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
-msgid "Layouts"
-msgstr "&Овозможи повторување на тастатура"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:105
-#, kde-format
-msgid ""
-"If you select \"Application\" or \"Window\" switching policy, changing the "
-"keyboard layout will only affect the current application or window."
-msgstr ""
-"Ако изберете политика на менување „Апликација“ или „Прозорец“, менувањето на "
-"распоредот на тастатурата ќе влијае само на активната апликација или "
-"прозорец."
-
-#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:108
-#, kde-format
-msgid "Switching Policy"
-msgstr "Политика на менување"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
-#: kcm_keyboard.ui:114
-#, kde-format
-msgid "&Global"
-msgstr "&Глобална"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
-#: kcm_keyboard.ui:127
-#, kde-format
-msgid "&Desktop"
-msgstr "&Работна површина"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
-#: kcm_keyboard.ui:137
-#, kde-format
-msgid "&Application"
-msgstr "&Апликација"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
-#: kcm_keyboard.ui:147
-#, kde-format
-msgid "&Window"
-msgstr "&Прозорец"
-
-#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
-#: kcm_keyboard.ui:160
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
-msgid "Shortcuts for Switching Layout"
-msgstr "&Овозможи повторување на тастатура"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm_keyboard.ui:166
-#, kde-format
-msgid "Main shortcuts:"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
-#: kcm_keyboard.ui:179
-#, kde-format
-msgid ""
-"This is a shortcut for switching layouts which is handled by X.org. It "
-"allows modifier-only shortcuts."
-msgstr ""
-"Ова е кратенка за менување распореди со која ракува X.org. Таа дозволува "
-"кратенки само со модификатори."
-
-#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
-#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:182 kcm_keyboard.ui:212
-#, kde-format
-msgctxt "no shortcut defined"
-msgid "None"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
-#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
-#: kcm_keyboard.ui:189 kcm_keyboard.ui:219
-#, kde-format
-msgid "…"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm_keyboard.ui:196
-#, kde-format
-msgid "3rd level shortcuts:"
-msgstr "Кратенки за трето ниво:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:209
-#, kde-format
-msgid ""
-"This is a shortcut for switching to a third level of the active layout (if "
-"it has one) which is handled by X.org. It allows modifier-only shortcuts."
-msgstr ""
-"Ова е кратенка за префрлање на трето ниво од активниот распоред (ако има "
-"таков). Со неа ракува X.org. Таа дозволува кратенки само со модификатори."
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm_keyboard.ui:226
-#, kde-format
-msgid "Alternative shortcut:"
-msgstr "Алтернативна кратенка:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
-#: kcm_keyboard.ui:239
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is a shortcut for switching layouts which is handled by KDE. It does "
-#| "not support modifier-only shortcuts and also may not work in some "
-#| "situations (e.g. if popup is active or from screensaver)."
-msgid ""
-"This is a shortcut for switching layouts. It does not support modifier-only "
-"shortcuts and also may not work in some situations (e.g. if popup is active "
-"or from screensaver)."
-msgstr ""
-"Ова е кратенка за менување распореди со која ракува KDE. Таа не поддржува "
-"кратенки само со модификатори и исто така може да не работи во некои "
-"ситуации (пр. ако е активно скок-мени или од чувари на екранот)."
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm_keyboard.ui:252
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
-msgid "Last used shortcut:"
-msgstr "Алтернативна кратенка:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
-#: kcm_keyboard.ui:265
-#, kde-format
-msgid ""
-"This shortcut allows for fast switching between two layouts, by always "
-"switching to the last-used one."
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:293
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
-msgid "Configure layouts"
-msgstr "&Овозможи повторување на тастатура"
-
-#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:307
-#, kde-format
-msgid "Add"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:317
-#, kde-format
-msgid "Remove"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:327
-#, kde-format
-msgid "Move Up"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:337
-#, kde-format
-msgid "Move Down"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:382
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
-msgid "Spare layouts"
-msgstr "&Овозможи повторување на тастатура"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:414
-#, kde-format
-msgid "Main layout count:"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:444
-#, kde-format
-msgid "Advanced"
-msgstr "Напредно"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:450
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
-msgid "&Configure keyboard options"
-msgstr "&Овозможи повторување на тастатура"
-
-#: kcm_keyboard_widget.cpp:209
+#: keyboardmodel.cpp:42
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr ""
 
-#: kcm_keyboard_widget.cpp:211
+#: keyboardmodel.cpp:46
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr ""
-
-#: kcm_keyboard_widget.cpp:655
-#, fuzzy, kde-format
-#| msgctxt "no shortcut defined"
-#| msgid "None"
-msgctxt "no shortcuts defined"
-msgid "None"
-msgstr "Нема"
-
-#: kcm_keyboard_widget.cpp:669
-#, kde-format
-msgid "%1 shortcut"
-msgid_plural "%1 shortcuts"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-#: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Map"
-msgctxt "layout map name"
-msgid "Map"
-msgstr "Мапа"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Layout"
-msgstr "Распоред"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Variant"
-msgstr "Варијанта"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Label"
-msgstr "Натпис"
-
-#: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
-msgid "Shortcut"
-msgstr "Главни кратенки:"
-
-#: kcm_view_models.cpp:273
-#, fuzzy, kde-format
-#| msgctxt "Default variant"
-#| msgid "Default"
-msgctxt "variant"
-msgid "Default"
-msgstr "Стандардна"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcmmiscwidget.ui:31
-#, kde-format
-msgid "When a key is held:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
-#: kcmmiscwidget.ui:38
-#, kde-format
-msgid "&Show accented and similar characters "
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
-#: kcmmiscwidget.ui:45
-#, kde-format
-msgid "&Repeat the key"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
-#: kcmmiscwidget.ui:52
-#, kde-format
-msgid "&Do nothing"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcmmiscwidget.ui:66
-#, kde-format
-msgid "Test area:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
-#: kcmmiscwidget.ui:73
-#, kde-format
-msgid ""
-"Allows to test keyboard repeat and click volume (just don't forget to apply "
-"the changes)."
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "If supported, this option allows you to setup the state of NumLock after "
-#| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
-#| "configure KDE not to set NumLock state."
-msgid ""
-"If supported, this option allows you to setup the state of NumLock after "
-"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
-"configure Plasma not to set NumLock state."
-msgstr ""
-"Ако е поддржана, оваа опција ви овозможува да ја поставите состојбата на "
-"NumLock после стартувањето на KDE.<p>Може да го конфигурирате NumLock да "
-"биде вклучен или исклучен, или да го конфигурирате KDE да не ја менува "
-"состојбата на NumLock."
-
-#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:85
-#, fuzzy, kde-format
-#| msgid "NumLock on KDE Startup"
-msgid "NumLock on Plasma Startup"
-msgstr "NumLock при стартување на KDE:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
-#: kcmmiscwidget.ui:97
-#, kde-format
-msgid "T&urn on"
-msgstr "Вкл&учи го"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
-#: kcmmiscwidget.ui:104
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
-msgid "&Turn off"
-msgstr "Исклучи г&о"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
-#: kcmmiscwidget.ui:111
-#, kde-format
-msgid "Leave unchan&ged"
-msgstr "Остави &го непроменето"
-
-#. i18n: ectx: property (text), widget (QLabel, lblRate)
-#: kcmmiscwidget.ui:148
-#, kde-format
-msgid "&Rate:"
-msgstr "&Брзина:"
-
-#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the delay after which a pressed "
-"key will start generating keycodes. The 'Repeat rate' option controls the "
-"frequency of these keycodes."
-msgstr ""
-"Ако е поддржана, оваа опција ви овозможува да ја поставите паузата после "
-"која притиснатото копче ќе почне да генерира знаци. Опцијата „Брзина на "
-"повторување“ ја контролира фреквенцијата на овие знаци."
-
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
-#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
-#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the rate at which keycodes are "
-"generated while a key is pressed."
-msgstr ""
-"Ако е поддржана, оваа опција ви овозможува да ја поставите брзината со која "
-"се генерираат знаци додека е притиснато копче."
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
-#: kcmmiscwidget.ui:195
-#, kde-format
-msgid " repeats/s"
-msgstr ""
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:205
-#, kde-format
-msgid " ms"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, lblDelay)
-#: kcmmiscwidget.ui:246
-#, kde-format
-msgid "&Delay:"
-msgstr "&Пауза:"
 
 #: tastenbrett/main.cpp:52
 #, fuzzy, kde-format
@@ -535,6 +96,427 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
+
+#: ui/Advanced.qml:38
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard repeat"
+msgctxt "@option:checkbox"
+msgid "Configure keyboard options"
+msgstr "&Овозможи повторување на тастатура"
+
+#: ui/Hardware.qml:34
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "@title:group"
+msgid "Keyboard model:"
+msgstr "Повторување на тастатурата"
+
+#: ui/Hardware.qml:68
+#, fuzzy, kde-format
+#| msgid "NumLock on KDE Startup"
+msgctxt "@title:group"
+msgid "NumLock on Plasma Startup:"
+msgstr "NumLock при стартување на KDE:"
+
+#: ui/Hardware.qml:73
+#, fuzzy, kde-format
+#| msgid "T&urn on"
+msgctxt "@option:radio"
+msgid "Turn On"
+msgstr "Вкл&учи го"
+
+#: ui/Hardware.qml:77
+#, fuzzy, kde-format
+#| msgid "Turn o&ff"
+msgctxt "@option:radio"
+msgid "Turn Off"
+msgstr "Исклучи г&о"
+
+#: ui/Hardware.qml:81
+#, fuzzy, kde-format
+#| msgid "Leave unchan&ged"
+msgctxt "@option:radio"
+msgid "Leave unchanged"
+msgstr "Остави &го непроменето"
+
+#: ui/Hardware.qml:114
+#, kde-format
+msgctxt "@title:group"
+msgid "When key is held:"
+msgstr ""
+
+#: ui/Hardware.qml:119
+#, kde-format
+msgctxt "@option:radio"
+msgid "Repeat the key"
+msgstr ""
+
+#: ui/Hardware.qml:124
+#, kde-format
+msgctxt "@option:radio"
+msgid "Do nothing"
+msgstr ""
+
+#: ui/Hardware.qml:129
+#, kde-format
+msgctxt "@option:radio"
+msgid "Show accented and similar characters"
+msgstr ""
+
+#: ui/Hardware.qml:164
+#, fuzzy, kde-format
+#| msgid "&Delay:"
+msgctxt "@label:slider"
+msgid "Delay:"
+msgstr "&Пауза:"
+
+#: ui/Hardware.qml:199
+#, fuzzy, kde-format
+#| msgid "&Rate:"
+msgctxt "@label:slider"
+msgid "Rate:"
+msgstr "&Брзина:"
+
+#: ui/Hardware.qml:247
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Test area:"
+msgstr ""
+
+#: ui/Hardware.qml:248
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to test settings"
+msgstr ""
+
+#: ui/LayoutDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "@title:window"
+msgid "Add Layout"
+msgstr "Повторување на тастатурата"
+
+#: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "@action:button"
+msgid "Preview"
+msgstr "Повторување на тастатурата"
+
+#: ui/LayoutDialog.qml:124
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Display text:"
+msgstr ""
+
+#: ui/LayoutDialog.qml:143
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgctxt "@option:textbox"
+msgid "Shortcut:"
+msgstr "Главни кратенки:"
+
+#: ui/Layouts.qml:28
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard repeat"
+msgctxt "@title:group"
+msgid "Shortcuts for Switching Layout"
+msgstr "&Овозможи повторување на тастатура"
+
+#: ui/Layouts.qml:34
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgctxt "@option:textbox"
+msgid "Main shortcuts:"
+msgstr "Алтернативна кратенка:"
+
+#: ui/Layouts.qml:61
+#, fuzzy, kde-format
+#| msgid "3rd level shortcuts:"
+msgctxt "@option:textbox"
+msgid "3rd level shortcuts:"
+msgstr "Кратенки за трето ниво:"
+
+#: ui/Layouts.qml:88
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgctxt "@option:textbox"
+msgid "Alternative shortcut:"
+msgstr "Алтернативна кратенка:"
+
+#: ui/Layouts.qml:109
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgctxt "@option:textbox"
+msgid "Last used shortcuts:"
+msgstr "Алтернативна кратенка:"
+
+#: ui/Layouts.qml:129
+#, kde-format
+msgctxt "@option:checkbox"
+msgid "Show a popup on layout changes"
+msgstr ""
+
+#: ui/Layouts.qml:145
+#, fuzzy, kde-format
+#| msgid "Switching Policy"
+msgctxt "@title:group"
+msgid "Switching Policy"
+msgstr "Политика на менување"
+
+#: ui/Layouts.qml:152
+#, fuzzy, kde-format
+#| msgid "&Global"
+msgctxt "@option:radio"
+msgid "Global"
+msgstr "&Глобална"
+
+#: ui/Layouts.qml:156
+#, fuzzy, kde-format
+#| msgid "&Desktop"
+msgctxt "@option:radio"
+msgid "Desktop"
+msgstr "&Работна површина"
+
+#: ui/Layouts.qml:160
+#, fuzzy, kde-format
+#| msgid "&Application"
+msgctxt "@option:radio"
+msgid "Application"
+msgstr "&Апликација"
+
+#: ui/Layouts.qml:164
+#, fuzzy, kde-format
+#| msgid "&Window"
+msgctxt "@option:radio"
+msgid "Window"
+msgstr "&Прозорец"
+
+#: ui/Layouts.qml:185
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard repeat"
+msgctxt "@option:checkbox"
+msgid "Configure Layouts"
+msgstr "&Овозможи повторување на тастатура"
+
+#: ui/Layouts.qml:200
+#, kde-format
+msgctxt "@action:button"
+msgid "Add"
+msgstr ""
+
+#: ui/Layouts.qml:206
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove"
+msgstr ""
+
+#: ui/Layouts.qml:213
+#, kde-format
+msgctxt "@action:button"
+msgid "Move Up"
+msgstr ""
+
+#: ui/Layouts.qml:229
+#, kde-format
+msgctxt "@action:button"
+msgid "Move Down"
+msgstr ""
+
+#: ui/Layouts.qml:316
+#, fuzzy, kde-format
+#| msgid "Map"
+msgctxt "@title:column"
+msgid "Map"
+msgstr "Мапа"
+
+#: ui/Layouts.qml:323
+#, fuzzy, kde-format
+#| msgid "Label"
+msgctxt "@title:column"
+msgid "Label"
+msgstr "Натпис"
+
+#: ui/Layouts.qml:332
+#, fuzzy, kde-format
+#| msgid "Layout"
+msgctxt "@title:column"
+msgid "Layout"
+msgstr "Распоред"
+
+#: ui/Layouts.qml:337
+#, fuzzy, kde-format
+#| msgid "Variant"
+msgctxt "@title:column"
+msgid "Variant"
+msgstr "Варијанта"
+
+#: ui/Layouts.qml:342
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgctxt "@title:column"
+msgid "Shortcut"
+msgstr "Главни кратенки:"
+
+#: ui/Layouts.qml:388
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgctxt "@action:button"
+msgid "Reassign shortcut"
+msgstr "Алтернативна кратенка:"
+
+#: ui/Layouts.qml:404
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel assignment"
+msgstr ""
+
+#: ui/Layouts.qml:417
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard repeat"
+msgctxt "@option:checkbox"
+msgid "Spare layouts"
+msgstr "&Овозможи повторување на тастатура"
+
+#: ui/Layouts.qml:453
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Main layout count:"
+msgstr ""
+
+#: ui/main.qml:41
+#, kde-format
+msgctxt "@title:tab"
+msgid "Hardware"
+msgstr ""
+
+#: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard repeat"
+msgctxt "@title:tab"
+msgid "Layouts"
+msgstr "&Овозможи повторување на тастатура"
+
+#: ui/main.qml:53
+#, kde-format
+msgctxt "@title:tab"
+msgid "Key Bindings"
+msgstr ""
+
+#: xkboptionsmodel.cpp:161
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: xkboptionsmodel.cpp:164
+#, fuzzy, kde-format
+#| msgctxt "no shortcut defined"
+#| msgid "None"
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "Нема"
+
+#~ msgid "Label:"
+#~ msgstr "Натпис:"
+
+#~ msgid ""
+#~ "Here you can choose a keyboard model. This setting is independent of your "
+#~ "keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+#~ "keyboard is manufactured. Modern keyboards that come with your computer "
+#~ "usually have two extra keys and are referred to as \"104-key\" models, "
+#~ "which is probably what you want if you do not know what kind of keyboard "
+#~ "you have.\n"
+#~ msgstr ""
+#~ "Тука може да изберете модел на тастатура. Ова поставување е независно од "
+#~ "Вашиот распоред на тастатура и се однесува на „хардверскиот“ модел, т.е. "
+#~ "на начинот на кој е произведена вашата тастатура. Модерните тастатури "
+#~ "обично доаѓаат со две дополнителни копчиња и се познати како модели со "
+#~ "104 копчиња. Изберете го тој модел ако не знаете точно каков вид "
+#~ "тастатура имате.\n"
+
+#~ msgid ""
+#~ "If you select \"Application\" or \"Window\" switching policy, changing "
+#~ "the keyboard layout will only affect the current application or window."
+#~ msgstr ""
+#~ "Ако изберете политика на менување „Апликација“ или „Прозорец“, менувањето "
+#~ "на распоредот на тастатурата ќе влијае само на активната апликација или "
+#~ "прозорец."
+
+#~ msgid ""
+#~ "This is a shortcut for switching layouts which is handled by X.org. It "
+#~ "allows modifier-only shortcuts."
+#~ msgstr ""
+#~ "Ова е кратенка за менување распореди со која ракува X.org. Таа дозволува "
+#~ "кратенки само со модификатори."
+
+#~ msgid ""
+#~ "This is a shortcut for switching to a third level of the active layout "
+#~ "(if it has one) which is handled by X.org. It allows modifier-only "
+#~ "shortcuts."
+#~ msgstr ""
+#~ "Ова е кратенка за префрлање на трето ниво од активниот распоред (ако има "
+#~ "таков). Со неа ракува X.org. Таа дозволува кратенки само со модификатори."
+
+#, fuzzy
+#~| msgid ""
+#~| "This is a shortcut for switching layouts which is handled by KDE. It "
+#~| "does not support modifier-only shortcuts and also may not work in some "
+#~| "situations (e.g. if popup is active or from screensaver)."
+#~ msgid ""
+#~ "This is a shortcut for switching layouts. It does not support modifier-"
+#~ "only shortcuts and also may not work in some situations (e.g. if popup is "
+#~ "active or from screensaver)."
+#~ msgstr ""
+#~ "Ова е кратенка за менување распореди со која ракува KDE. Таа не поддржува "
+#~ "кратенки само со модификатори и исто така може да не работи во некои "
+#~ "ситуации (пр. ако е активно скок-мени или од чувари на екранот)."
+
+#~ msgid "Advanced"
+#~ msgstr "Напредно"
+
+#, fuzzy
+#~| msgctxt "Default variant"
+#~| msgid "Default"
+#~ msgctxt "variant"
+#~ msgid "Default"
+#~ msgstr "Стандардна"
+
+#, fuzzy
+#~| msgid ""
+#~| "If supported, this option allows you to setup the state of NumLock after "
+#~| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
+#~| "configure KDE not to set NumLock state."
+#~ msgid ""
+#~ "If supported, this option allows you to setup the state of NumLock after "
+#~ "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+#~ "configure Plasma not to set NumLock state."
+#~ msgstr ""
+#~ "Ако е поддржана, оваа опција ви овозможува да ја поставите состојбата на "
+#~ "NumLock после стартувањето на KDE.<p>Може да го конфигурирате NumLock да "
+#~ "биде вклучен или исклучен, или да го конфигурирате KDE да не ја менува "
+#~ "состојбата на NumLock."
+
+#~ msgid "Leave unchan&ged"
+#~ msgstr "Остави &го непроменето"
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the delay after which a "
+#~ "pressed key will start generating keycodes. The 'Repeat rate' option "
+#~ "controls the frequency of these keycodes."
+#~ msgstr ""
+#~ "Ако е поддржана, оваа опција ви овозможува да ја поставите паузата после "
+#~ "која притиснатото копче ќе почне да генерира знаци. Опцијата „Брзина на "
+#~ "повторување“ ја контролира фреквенцијата на овие знаци."
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the rate at which keycodes "
+#~ "are generated while a key is pressed."
+#~ msgstr ""
+#~ "Ако е поддржана, оваа опција ви овозможува да ја поставите брзината со "
+#~ "која се генерираат знаци додека е притиснато копче."
 
 #, fuzzy
 #~| msgid "KDE Keyboard Layout Switcher"
@@ -575,11 +557,6 @@ msgstr ""
 
 #~ msgid "Turn o&ff"
 #~ msgstr "Исклучи г&о"
-
-#, fuzzy
-#~| msgid "Leave unchan&ged"
-#~ msgid "&Leave unchanged"
-#~ msgstr "Остави &го непроменето"
 
 #, fuzzy
 #~| msgid "&Enable keyboard repeat"

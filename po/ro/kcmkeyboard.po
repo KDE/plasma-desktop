@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-04-14 00:39+0000\n"
 "PO-Revision-Date: 2024-01-07 18:30+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -51,443 +51,23 @@ msgstr "Schimbă la ultimul aranjament de tastatură folosit"
 msgid "Switch keyboard layout to %1"
 msgstr "Schimbă aranjamentul de tastatură la %1"
 
-#: flags.cpp:77
+#: flags.cpp:78
 #, kde-format
 msgctxt "layout - variant"
 msgid "%1 - %2"
 msgstr "%1 | %2"
 
-#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
-#: kcm_add_layout_dialog.ui:14
-#, kde-format
-msgid "Add Layout"
-msgstr "Adaugă aranjament"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
-#: kcm_add_layout_dialog.ui:20
-#, kde-format
-msgid "Search…"
-msgstr "Caută…"
-
-#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
-#: kcm_add_layout_dialog.ui:45
-#, kde-format
-msgid "Shortcut:"
-msgstr "Scurtătură:"
-
-#. i18n: ectx: property (text), widget (QLabel, labelLabel)
-#: kcm_add_layout_dialog.ui:55
-#, kde-format
-msgid "Label:"
-msgstr "Etichetă:"
-
-#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
-#. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:347
-#, kde-format
-msgid "Preview"
-msgstr "Previzualizează"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
-#: kcm_keyboard.ui:21
-#, kde-format
-msgid "Hardware"
-msgstr "Echipament"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm_keyboard.ui:36
-#, kde-format
-msgid "Keyboard &model:"
-msgstr "&Model tastatură:"
-
-#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
-#: kcm_keyboard.ui:56
-#, kde-format
-msgid ""
-"Here you can choose a keyboard model. This setting is independent of your "
-"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
-"keyboard is manufactured. Modern keyboards that come with your computer "
-"usually have two extra keys and are referred to as \"104-key\" models, which "
-"is probably what you want if you do not know what kind of keyboard you "
-"have.\n"
-msgstr ""
-"Aici puteți alege modelul de tastatură. Această setare este independentă de "
-"aranjamentul de tastatură ales și se referă la modelul echipamentului adică "
-"la modul în care a fost fabricată tastatura. Tastaturile moderne au de "
-"obicei două taste suplimentare și sunt denumite ca modele cu „104 de taste” "
-"ceea ce probabil ar trebui să alegeți dacă nu știți ce fel de tastatură "
-"aveți.\n"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
-#: kcm_keyboard.ui:97
-#, kde-format
-msgid "Layouts"
-msgstr "Aranjamente"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:105
-#, kde-format
-msgid ""
-"If you select \"Application\" or \"Window\" switching policy, changing the "
-"keyboard layout will only affect the current application or window."
-msgstr ""
-"Dacă alegeți politica de comutare „Aplicație” sau „Fereastră”, atunci "
-"schimbarea aranjamentului de tastatură va afecta doar aplicația sau "
-"fereastra actuală."
-
-#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:108
-#, kde-format
-msgid "Switching Policy"
-msgstr "Politică de schimbare"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
-#: kcm_keyboard.ui:114
-#, kde-format
-msgid "&Global"
-msgstr "&Globală"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
-#: kcm_keyboard.ui:127
-#, kde-format
-msgid "&Desktop"
-msgstr "&Birou"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
-#: kcm_keyboard.ui:137
-#, kde-format
-msgid "&Application"
-msgstr "&Aplicație"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
-#: kcm_keyboard.ui:147
-#, kde-format
-msgid "&Window"
-msgstr "&Fereastră"
-
-#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
-#: kcm_keyboard.ui:160
-#, kde-format
-msgid "Shortcuts for Switching Layout"
-msgstr "Scurtături pentru schimbarea aranjamentului"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm_keyboard.ui:166
-#, kde-format
-msgid "Main shortcuts:"
-msgstr "Scurtături principale:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
-#: kcm_keyboard.ui:179
-#, kde-format
-msgid ""
-"This is a shortcut for switching layouts which is handled by X.org. It "
-"allows modifier-only shortcuts."
-msgstr ""
-"Aceasta este o scurtătură pentru comutarea aranjamentelor care este "
-"manipulată de către X.org. Acesta permite doar scurtături cu modificator."
-
-#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
-#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:182 kcm_keyboard.ui:212
-#, kde-format
-msgctxt "no shortcut defined"
-msgid "None"
-msgstr "Niciuna"
-
-#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
-#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
-#: kcm_keyboard.ui:189 kcm_keyboard.ui:219
-#, kde-format
-msgid "…"
-msgstr "…"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm_keyboard.ui:196
-#, kde-format
-msgid "3rd level shortcuts:"
-msgstr "Scurtături de nivel 3:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:209
-#, kde-format
-msgid ""
-"This is a shortcut for switching to a third level of the active layout (if "
-"it has one) which is handled by X.org. It allows modifier-only shortcuts."
-msgstr ""
-"Aceasta este o scurtătură pentru comutarea la un al treilea nivel de "
-"aranjament activ (dacă există) care este manipulată de X.org. Acesta permite "
-"doar scurtături cu modificator."
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm_keyboard.ui:226
-#, kde-format
-msgid "Alternative shortcut:"
-msgstr "Scurtătură alternativă:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
-#: kcm_keyboard.ui:239
-#, kde-format
-msgid ""
-"This is a shortcut for switching layouts. It does not support modifier-only "
-"shortcuts and also may not work in some situations (e.g. if popup is active "
-"or from screensaver)."
-msgstr ""
-"O scurtătură pentru schimbarea aranjamentelor. Aceasta nu permite scurtături "
-"doar cu modificator și este posibil să nu funcționeze în anumite situații "
-"(de exemplu când este activ un panou contextual sau protecția de ecran)."
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm_keyboard.ui:252
-#, kde-format
-msgid "Last used shortcut:"
-msgstr "Scurtătură pentru ultimul folosit:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
-#: kcm_keyboard.ui:265
-#, kde-format
-msgid ""
-"This shortcut allows for fast switching between two layouts, by always "
-"switching to the last-used one."
-msgstr ""
-"Această scurtătură permite schimbarea rapidă între două aranjamente prin "
-"schimbarea la ultimul aranjament folosit."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:293
-#, kde-format
-msgid "Configure layouts"
-msgstr "Configurează aranjamente"
-
-#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:307
-#, kde-format
-msgid "Add"
-msgstr "Adaugă"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:317
-#, kde-format
-msgid "Remove"
-msgstr "Elimină"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:327
-#, kde-format
-msgid "Move Up"
-msgstr "Mută în sus"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:337
-#, kde-format
-msgid "Move Down"
-msgstr "Mută în jos"
-
-#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:382
-#, kde-format
-msgid "Spare layouts"
-msgstr "Aranjamente de rezervă"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:414
-#, kde-format
-msgid "Main layout count:"
-msgstr "Numărul de aranjamente principale:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:444
-#, kde-format
-msgid "Advanced"
-msgstr "Avansat"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:450
-#, kde-format
-msgid "&Configure keyboard options"
-msgstr "&Configurează opțiunile tastaturii"
-
-#: kcm_keyboard_widget.cpp:209
+#: keyboardmodel.cpp:42
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: kcm_keyboard_widget.cpp:211
+#: keyboardmodel.cpp:46
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
-
-#: kcm_keyboard_widget.cpp:655
-#, kde-format
-msgctxt "no shortcuts defined"
-msgid "None"
-msgstr "Niciuna"
-
-#: kcm_keyboard_widget.cpp:669
-#, kde-format
-msgid "%1 shortcut"
-msgid_plural "%1 shortcuts"
-msgstr[0] "%1 scurtătură"
-msgstr[1] "%1 scurtături"
-msgstr[2] "%1 de scurtături"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgctxt "layout map name"
-msgid "Map"
-msgstr "Hartă"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Layout"
-msgstr "Aranjament"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Variant"
-msgstr "Variantă"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Label"
-msgstr "Etichetă"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Shortcut"
-msgstr "Scurtătură"
-
-#: kcm_view_models.cpp:273
-#, kde-format
-msgctxt "variant"
-msgid "Default"
-msgstr "Implicită"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcmmiscwidget.ui:31
-#, kde-format
-msgid "When a key is held:"
-msgstr "Când o tastă e ținută:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
-#: kcmmiscwidget.ui:38
-#, kde-format
-msgid "&Show accented and similar characters "
-msgstr "Arată caractere accentuate și &similare"
-
-#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
-#: kcmmiscwidget.ui:45
-#, kde-format
-msgid "&Repeat the key"
-msgstr "&Repetă tasta"
-
-#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
-#: kcmmiscwidget.ui:52
-#, kde-format
-msgid "&Do nothing"
-msgstr "&Nu fă nimic"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcmmiscwidget.ui:66
-#, kde-format
-msgid "Test area:"
-msgstr "Zonă de probă:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
-#: kcmmiscwidget.ui:73
-#, kde-format
-msgid ""
-"Allows to test keyboard repeat and click volume (just don't forget to apply "
-"the changes)."
-msgstr ""
-"Permite verificarea repetiției de tastatură și a volumului clicului tastelor "
-"(nu uitați să aplicați modificările)."
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:82
-#, kde-format
-msgid ""
-"If supported, this option allows you to setup the state of NumLock after "
-"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
-"configure Plasma not to set NumLock state."
-msgstr ""
-"Dacă e susținută, această opțiune vă permite să configurați starea NumLock "
-"după pornirea Plasma.<p>Puteți configura NumLock să fie pornit, oprit, sau "
-"Plasma să nu-i modifice starea."
-
-#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:85
-#, kde-format
-msgid "NumLock on Plasma Startup"
-msgstr "NumLock la pornirea Plasma"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
-#: kcmmiscwidget.ui:97
-#, kde-format
-msgid "T&urn on"
-msgstr "A&ctivează"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
-#: kcmmiscwidget.ui:104
-#, kde-format
-msgid "&Turn off"
-msgstr "Dezac&tivează"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
-#: kcmmiscwidget.ui:111
-#, kde-format
-msgid "Leave unchan&ged"
-msgstr "Lasă &neschimbat"
-
-#. i18n: ectx: property (text), widget (QLabel, lblRate)
-#: kcmmiscwidget.ui:148
-#, kde-format
-msgid "&Rate:"
-msgstr "&Rată:"
-
-#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the delay after which a pressed "
-"key will start generating keycodes. The 'Repeat rate' option controls the "
-"frequency of these keycodes."
-msgstr ""
-"Dacă e susținută, această opțiune vă permite să stabiliți întârzierea cu "
-"care o tastă apăsată va începe să genereze simboluri. Opțiunea „Rata de "
-"repetiție” gestionează frecvența acestor simboluri."
-
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
-#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
-#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the rate at which keycodes are "
-"generated while a key is pressed."
-msgstr ""
-"Dacă e susținută, această opțiune vă permite să stabiliți rata la care "
-"caracterele sunt generate când e apăsată o tastă."
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
-#: kcmmiscwidget.ui:195
-#, kde-format
-msgid " repeats/s"
-msgstr " repetări/s"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:205
-#, kde-format
-msgid " ms"
-msgstr " ms"
-
-#. i18n: ectx: property (text), widget (QLabel, lblDelay)
-#: kcmmiscwidget.ui:246
-#, kde-format
-msgid "&Delay:"
-msgstr "În&târziere"
 
 #: tastenbrett/main.cpp:52
 #, kde-format
@@ -523,6 +103,455 @@ msgstr ""
 "ales nu susține un anumit aranjament sau variantă de aranjament. Această "
 "problemă se poate manifesta și când încercați să folosiți această combinație "
 "de model, aranjament și variantă."
+
+#: ui/Advanced.qml:38
+#, fuzzy, kde-format
+#| msgid "&Configure keyboard options"
+msgctxt "@option:checkbox"
+msgid "Configure keyboard options"
+msgstr "&Configurează opțiunile tastaturii"
+
+#: ui/Hardware.qml:34
+#, fuzzy, kde-format
+#| msgid "Keyboard &model:"
+msgctxt "@title:group"
+msgid "Keyboard model:"
+msgstr "&Model tastatură:"
+
+#: ui/Hardware.qml:68
+#, fuzzy, kde-format
+#| msgid "NumLock on Plasma Startup"
+msgctxt "@title:group"
+msgid "NumLock on Plasma Startup:"
+msgstr "NumLock la pornirea Plasma"
+
+#: ui/Hardware.qml:73
+#, fuzzy, kde-format
+#| msgid "T&urn on"
+msgctxt "@option:radio"
+msgid "Turn On"
+msgstr "A&ctivează"
+
+#: ui/Hardware.qml:77
+#, fuzzy, kde-format
+#| msgid "&Turn off"
+msgctxt "@option:radio"
+msgid "Turn Off"
+msgstr "Dezac&tivează"
+
+#: ui/Hardware.qml:81
+#, fuzzy, kde-format
+#| msgid "&Leave unchanged"
+msgctxt "@option:radio"
+msgid "Leave unchanged"
+msgstr "&Lasă neschimbat"
+
+#: ui/Hardware.qml:114
+#, fuzzy, kde-format
+#| msgid "When a key is held:"
+msgctxt "@title:group"
+msgid "When key is held:"
+msgstr "Când o tastă e ținută:"
+
+#: ui/Hardware.qml:119
+#, fuzzy, kde-format
+#| msgid "&Repeat the key"
+msgctxt "@option:radio"
+msgid "Repeat the key"
+msgstr "&Repetă tasta"
+
+#: ui/Hardware.qml:124
+#, fuzzy, kde-format
+#| msgid "&Do nothing"
+msgctxt "@option:radio"
+msgid "Do nothing"
+msgstr "&Nu fă nimic"
+
+#: ui/Hardware.qml:129
+#, fuzzy, kde-format
+#| msgid "&Show accented and similar characters "
+msgctxt "@option:radio"
+msgid "Show accented and similar characters"
+msgstr "Arată caractere accentuate și &similare"
+
+#: ui/Hardware.qml:164
+#, fuzzy, kde-format
+#| msgid "&Delay:"
+msgctxt "@label:slider"
+msgid "Delay:"
+msgstr "În&târziere"
+
+#: ui/Hardware.qml:199
+#, fuzzy, kde-format
+#| msgid "&Rate:"
+msgctxt "@label:slider"
+msgid "Rate:"
+msgstr "&Rată:"
+
+#: ui/Hardware.qml:247
+#, fuzzy, kde-format
+#| msgid "Test area:"
+msgctxt "@label:textbox"
+msgid "Test area:"
+msgstr "Zonă de probă:"
+
+#: ui/Hardware.qml:248
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to test settings"
+msgstr ""
+
+#: ui/LayoutDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "Add Layout"
+msgctxt "@title:window"
+msgid "Add Layout"
+msgstr "Adaugă aranjament"
+
+#: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgctxt "@action:button"
+msgid "Preview"
+msgstr "Previzualizează"
+
+#: ui/LayoutDialog.qml:124
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Display text:"
+msgstr ""
+
+#: ui/LayoutDialog.qml:143
+#, fuzzy, kde-format
+#| msgid "Shortcut:"
+msgctxt "@option:textbox"
+msgid "Shortcut:"
+msgstr "Scurtătură:"
+
+#: ui/Layouts.qml:28
+#, fuzzy, kde-format
+#| msgid "Shortcuts for Switching Layout"
+msgctxt "@title:group"
+msgid "Shortcuts for Switching Layout"
+msgstr "Scurtături pentru schimbarea aranjamentului"
+
+#: ui/Layouts.qml:34
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgctxt "@option:textbox"
+msgid "Main shortcuts:"
+msgstr "Scurtături principale:"
+
+#: ui/Layouts.qml:61
+#, fuzzy, kde-format
+#| msgid "3rd level shortcuts:"
+msgctxt "@option:textbox"
+msgid "3rd level shortcuts:"
+msgstr "Scurtături de nivel 3:"
+
+#: ui/Layouts.qml:88
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgctxt "@option:textbox"
+msgid "Alternative shortcut:"
+msgstr "Scurtătură alternativă:"
+
+#: ui/Layouts.qml:109
+#, fuzzy, kde-format
+#| msgid "Last used shortcut:"
+msgctxt "@option:textbox"
+msgid "Last used shortcuts:"
+msgstr "Scurtătură pentru ultimul folosit:"
+
+#: ui/Layouts.qml:129
+#, kde-format
+msgctxt "@option:checkbox"
+msgid "Show a popup on layout changes"
+msgstr ""
+
+#: ui/Layouts.qml:145
+#, fuzzy, kde-format
+#| msgid "Switching Policy"
+msgctxt "@title:group"
+msgid "Switching Policy"
+msgstr "Politică de schimbare"
+
+#: ui/Layouts.qml:152
+#, fuzzy, kde-format
+#| msgid "&Global"
+msgctxt "@option:radio"
+msgid "Global"
+msgstr "&Globală"
+
+#: ui/Layouts.qml:156
+#, fuzzy, kde-format
+#| msgid "&Desktop"
+msgctxt "@option:radio"
+msgid "Desktop"
+msgstr "&Birou"
+
+#: ui/Layouts.qml:160
+#, fuzzy, kde-format
+#| msgid "&Application"
+msgctxt "@option:radio"
+msgid "Application"
+msgstr "&Aplicație"
+
+#: ui/Layouts.qml:164
+#, fuzzy, kde-format
+#| msgid "&Window"
+msgctxt "@option:radio"
+msgid "Window"
+msgstr "&Fereastră"
+
+#: ui/Layouts.qml:185
+#, fuzzy, kde-format
+#| msgid "Configure layouts"
+msgctxt "@option:checkbox"
+msgid "Configure Layouts"
+msgstr "Configurează aranjamente"
+
+#: ui/Layouts.qml:200
+#, fuzzy, kde-format
+#| msgid "Add"
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Adaugă"
+
+#: ui/Layouts.qml:206
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "Elimină"
+
+#: ui/Layouts.qml:213
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgctxt "@action:button"
+msgid "Move Up"
+msgstr "Mută în sus"
+
+#: ui/Layouts.qml:229
+#, fuzzy, kde-format
+#| msgid "Move Down"
+msgctxt "@action:button"
+msgid "Move Down"
+msgstr "Mută în jos"
+
+#: ui/Layouts.qml:316
+#, fuzzy, kde-format
+#| msgctxt "layout map name"
+#| msgid "Map"
+msgctxt "@title:column"
+msgid "Map"
+msgstr "Hartă"
+
+#: ui/Layouts.qml:323
+#, fuzzy, kde-format
+#| msgid "Label"
+msgctxt "@title:column"
+msgid "Label"
+msgstr "Etichetă"
+
+#: ui/Layouts.qml:332
+#, fuzzy, kde-format
+#| msgid "Layout"
+msgctxt "@title:column"
+msgid "Layout"
+msgstr "Aranjament"
+
+#: ui/Layouts.qml:337
+#, fuzzy, kde-format
+#| msgid "Variant"
+msgctxt "@title:column"
+msgid "Variant"
+msgstr "Variantă"
+
+#: ui/Layouts.qml:342
+#, fuzzy, kde-format
+#| msgid "Shortcut"
+msgctxt "@title:column"
+msgid "Shortcut"
+msgstr "Scurtătură"
+
+#: ui/Layouts.qml:388
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgctxt "@action:button"
+msgid "Reassign shortcut"
+msgstr "Scurtături principale:"
+
+#: ui/Layouts.qml:404
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel assignment"
+msgstr ""
+
+#: ui/Layouts.qml:417
+#, fuzzy, kde-format
+#| msgid "Spare layouts"
+msgctxt "@option:checkbox"
+msgid "Spare layouts"
+msgstr "Aranjamente de rezervă"
+
+#: ui/Layouts.qml:453
+#, fuzzy, kde-format
+#| msgid "Main layout count:"
+msgctxt "@label:spinbox"
+msgid "Main layout count:"
+msgstr "Numărul de aranjamente principale:"
+
+#: ui/main.qml:41
+#, fuzzy, kde-format
+#| msgid "Hardware"
+msgctxt "@title:tab"
+msgid "Hardware"
+msgstr "Echipament"
+
+#: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Layouts"
+msgctxt "@title:tab"
+msgid "Layouts"
+msgstr "Aranjamente"
+
+#: ui/main.qml:53
+#, kde-format
+msgctxt "@title:tab"
+msgid "Key Bindings"
+msgstr ""
+
+#: xkboptionsmodel.cpp:161
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] "%1 scurtătură"
+msgstr[1] "%1 scurtături"
+msgstr[2] "%1 de scurtături"
+
+#: xkboptionsmodel.cpp:164
+#, kde-format
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "Niciuna"
+
+#~ msgid "Search…"
+#~ msgstr "Caută…"
+
+#~ msgid "Label:"
+#~ msgstr "Etichetă:"
+
+#~ msgid ""
+#~ "Here you can choose a keyboard model. This setting is independent of your "
+#~ "keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+#~ "keyboard is manufactured. Modern keyboards that come with your computer "
+#~ "usually have two extra keys and are referred to as \"104-key\" models, "
+#~ "which is probably what you want if you do not know what kind of keyboard "
+#~ "you have.\n"
+#~ msgstr ""
+#~ "Aici puteți alege modelul de tastatură. Această setare este independentă "
+#~ "de aranjamentul de tastatură ales și se referă la modelul echipamentului "
+#~ "adică la modul în care a fost fabricată tastatura. Tastaturile moderne au "
+#~ "de obicei două taste suplimentare și sunt denumite ca modele cu „104 de "
+#~ "taste” ceea ce probabil ar trebui să alegeți dacă nu știți ce fel de "
+#~ "tastatură aveți.\n"
+
+#~ msgid ""
+#~ "If you select \"Application\" or \"Window\" switching policy, changing "
+#~ "the keyboard layout will only affect the current application or window."
+#~ msgstr ""
+#~ "Dacă alegeți politica de comutare „Aplicație” sau „Fereastră”, atunci "
+#~ "schimbarea aranjamentului de tastatură va afecta doar aplicația sau "
+#~ "fereastra actuală."
+
+#~ msgid ""
+#~ "This is a shortcut for switching layouts which is handled by X.org. It "
+#~ "allows modifier-only shortcuts."
+#~ msgstr ""
+#~ "Aceasta este o scurtătură pentru comutarea aranjamentelor care este "
+#~ "manipulată de către X.org. Acesta permite doar scurtături cu modificator."
+
+#~ msgctxt "no shortcut defined"
+#~ msgid "None"
+#~ msgstr "Niciuna"
+
+#~ msgid "…"
+#~ msgstr "…"
+
+#~ msgid ""
+#~ "This is a shortcut for switching to a third level of the active layout "
+#~ "(if it has one) which is handled by X.org. It allows modifier-only "
+#~ "shortcuts."
+#~ msgstr ""
+#~ "Aceasta este o scurtătură pentru comutarea la un al treilea nivel de "
+#~ "aranjament activ (dacă există) care este manipulată de X.org. Acesta "
+#~ "permite doar scurtături cu modificator."
+
+#~ msgid ""
+#~ "This is a shortcut for switching layouts. It does not support modifier-"
+#~ "only shortcuts and also may not work in some situations (e.g. if popup is "
+#~ "active or from screensaver)."
+#~ msgstr ""
+#~ "O scurtătură pentru schimbarea aranjamentelor. Aceasta nu permite "
+#~ "scurtături doar cu modificator și este posibil să nu funcționeze în "
+#~ "anumite situații (de exemplu când este activ un panou contextual sau "
+#~ "protecția de ecran)."
+
+#~ msgid ""
+#~ "This shortcut allows for fast switching between two layouts, by always "
+#~ "switching to the last-used one."
+#~ msgstr ""
+#~ "Această scurtătură permite schimbarea rapidă între două aranjamente prin "
+#~ "schimbarea la ultimul aranjament folosit."
+
+#~ msgid "Advanced"
+#~ msgstr "Avansat"
+
+#~ msgctxt "variant"
+#~ msgid "Default"
+#~ msgstr "Implicită"
+
+#~ msgid ""
+#~ "Allows to test keyboard repeat and click volume (just don't forget to "
+#~ "apply the changes)."
+#~ msgstr ""
+#~ "Permite verificarea repetiției de tastatură și a volumului clicului "
+#~ "tastelor (nu uitați să aplicați modificările)."
+
+#~ msgid ""
+#~ "If supported, this option allows you to setup the state of NumLock after "
+#~ "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+#~ "configure Plasma not to set NumLock state."
+#~ msgstr ""
+#~ "Dacă e susținută, această opțiune vă permite să configurați starea "
+#~ "NumLock după pornirea Plasma.<p>Puteți configura NumLock să fie pornit, "
+#~ "oprit, sau Plasma să nu-i modifice starea."
+
+#~ msgid "Leave unchan&ged"
+#~ msgstr "Lasă &neschimbat"
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the delay after which a "
+#~ "pressed key will start generating keycodes. The 'Repeat rate' option "
+#~ "controls the frequency of these keycodes."
+#~ msgstr ""
+#~ "Dacă e susținută, această opțiune vă permite să stabiliți întârzierea cu "
+#~ "care o tastă apăsată va începe să genereze simboluri. Opțiunea „Rata de "
+#~ "repetiție” gestionează frecvența acestor simboluri."
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the rate at which keycodes "
+#~ "are generated while a key is pressed."
+#~ msgstr ""
+#~ "Dacă e susținută, această opțiune vă permite să stabiliți rata la care "
+#~ "caracterele sunt generate când e apăsată o tastă."
+
+#~ msgid " repeats/s"
+#~ msgstr " repetări/s"
+
+#~ msgid " ms"
+#~ msgstr " ms"
 
 #~ msgid "KDE Keyboard Control Module"
 #~ msgstr "Modul KDE de control al tastaturii"
@@ -595,9 +624,6 @@ msgstr ""
 
 #~ msgid "Turn o&ff"
 #~ msgstr "De&zactivează"
-
-#~ msgid "&Leave unchanged"
-#~ msgstr "&Lasă neschimbat"
 
 #, fuzzy
 #~| msgid "Configure layouts"

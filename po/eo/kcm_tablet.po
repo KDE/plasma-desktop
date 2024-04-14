@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2024-02-18 08:21+0100\n"
+"PO-Revision-Date: 2024-04-13 11:51+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -96,8 +96,7 @@ msgid "Orientation:"
 msgstr "Orientiĝo:"
 
 #: ui/main.qml:110
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgid "Left handed mode:"
 msgstr "Maldekstramana reĝimo:"
 
@@ -124,22 +123,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgid "Pen button 1:"
-msgstr "Skribilbutono 1"
+msgstr "Skribilbutono 1:"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgid "Pen button 2:"
-msgstr "Skribilbutono 2"
+msgstr "Skribilbutono 2:"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgid "Pen button 3:"
-msgstr "Skribilbutono 3"
+msgstr "Skribilbutono 3:"
 
 #: ui/main.qml:295
 #, kde-format
@@ -153,7 +149,6 @@ msgid "None"
 msgstr "Neniu"
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
-msgstr "Butono %1:"
+msgstr "Matbutono %1:"

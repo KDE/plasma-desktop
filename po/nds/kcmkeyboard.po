@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-04-14 00:39+0000\n"
 "PO-Revision-Date: 2014-08-11 12:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -51,453 +51,23 @@ msgstr "Na nakamen Tasttoornen wesseln"
 msgid "Switch keyboard layout to %1"
 msgstr "Na de Tasttoornen „%1“ wesseln"
 
-#: flags.cpp:77
+#: flags.cpp:78
 #, kde-format
 msgctxt "layout - variant"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
-#: kcm_add_layout_dialog.ui:14
-#, kde-format
-msgid "Add Layout"
-msgstr "Toornen tofögen"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
-#: kcm_add_layout_dialog.ui:20
-#, kde-format
-msgid "Search…"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
-#: kcm_add_layout_dialog.ui:45
-#, kde-format
-msgid "Shortcut:"
-msgstr "Tastkombinatschoon:"
-
-#. i18n: ectx: property (text), widget (QLabel, labelLabel)
-#: kcm_add_layout_dialog.ui:55
-#, kde-format
-msgid "Label:"
-msgstr "Beteken:"
-
-#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
-#. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:347
-#, kde-format
-msgid "Preview"
-msgstr "Vöransicht"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
-#: kcm_keyboard.ui:21
-#, kde-format
-msgid "Hardware"
-msgstr "Reedschap"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm_keyboard.ui:36
-#, kde-format
-msgid "Keyboard &model:"
-msgstr "Tastatuur&modell:"
-
-#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
-#: kcm_keyboard.ui:56
-#, kde-format
-msgid ""
-"Here you can choose a keyboard model. This setting is independent of your "
-"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
-"keyboard is manufactured. Modern keyboards that come with your computer "
-"usually have two extra keys and are referred to as \"104-key\" models, which "
-"is probably what you want if you do not know what kind of keyboard you "
-"have.\n"
-msgstr ""
-"Hier kannst Du en Tastatuur-Modell utsöken. Disse Instellen hangt nich vun "
-"Dien Toornen af, man de \"Hardware\" is meent - d.h. wo vele un welk Tasten "
-"Du redig vör Di hest. Modeern Tastaturen, as se opstunns mit Reekners "
-"utlevert warrt, hebbt normalerwies twee Extratasten un warrt 104-Tasten-"
-"Tastaturen nöömt. Dat is wohrschienlich de richtige Instellen, wenn Du nich "
-"nau weetst, vun welk Typ Dien Tastatuur is.\n"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
-#: kcm_keyboard.ui:97
-#, kde-format
-msgid "Layouts"
-msgstr "Toornen"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:105
-#, kde-format
-msgid ""
-"If you select \"Application\" or \"Window\" switching policy, changing the "
-"keyboard layout will only affect the current application or window."
-msgstr ""
-"Wenn Du de Regel \"Programm\" oder \"Finster\" utsöchst, warrt de niege "
-"Toornen bloots för dat aktuelle Programm oder Finster anwendt."
-
-#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:108
-#, kde-format
-msgid "Switching Policy"
-msgstr "Regeln för't Wesseln"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
-#: kcm_keyboard.ui:114
-#, kde-format
-msgid "&Global"
-msgstr "&Globaal"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
-#: kcm_keyboard.ui:127
-#, kde-format
-msgid "&Desktop"
-msgstr "Schrief&disch"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
-#: kcm_keyboard.ui:137
-#, kde-format
-msgid "&Application"
-msgstr "&Programm"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
-#: kcm_keyboard.ui:147
-#, kde-format
-msgid "&Window"
-msgstr "&Finster"
-
-#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
-#: kcm_keyboard.ui:160
-#, kde-format
-msgid "Shortcuts for Switching Layout"
-msgstr "Tastkombinatschonen för't Wesseln"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm_keyboard.ui:166
-#, kde-format
-msgid "Main shortcuts:"
-msgstr "Hööftkombinatschonen:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
-#: kcm_keyboard.ui:179
-#, kde-format
-msgid ""
-"This is a shortcut for switching layouts which is handled by X.org. It "
-"allows modifier-only shortcuts."
-msgstr ""
-"Mit disse Tastkombinatschoon kannst Du de Toornen wesseln, se warrt vun den "
-"X-Server utföhrt. Sodennig funkscheneert ok Kombinatschonen, de bloots "
-"Sünnertasten bargt."
-
-#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
-#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:182 kcm_keyboard.ui:212
-#, kde-format
-msgctxt "no shortcut defined"
-msgid "None"
-msgstr "Keen"
-
-#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
-#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
-#: kcm_keyboard.ui:189 kcm_keyboard.ui:219
-#, kde-format
-msgid "…"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm_keyboard.ui:196
-#, kde-format
-msgid "3rd level shortcuts:"
-msgstr "Kombinatschonen för 3. Evene:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:209
-#, kde-format
-msgid ""
-"This is a shortcut for switching to a third level of the active layout (if "
-"it has one) which is handled by X.org. It allows modifier-only shortcuts."
-msgstr ""
-"Mit disse Tastkombinatschoon kannst Du de 3. Evene vun de aktive Toornen "
-"anstüern, wenn dat een gifft. Se warrt vun den X-Server utföhrt, un sodennig "
-"funkscheneert ok Kombinatschonen, de bloots Sünnertasten bargt."
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm_keyboard.ui:226
-#, kde-format
-msgid "Alternative shortcut:"
-msgstr "Anner Kombinatschoon:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
-#: kcm_keyboard.ui:239
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is a shortcut for switching layouts which is handled by KDE. It does "
-#| "not support modifier-only shortcuts and also may not work in some "
-#| "situations (e.g. if popup is active or from screensaver)."
-msgid ""
-"This is a shortcut for switching layouts. It does not support modifier-only "
-"shortcuts and also may not work in some situations (e.g. if popup is active "
-"or from screensaver)."
-msgstr ""
-"Mit disse Tastkombinatschoon kannst Du de Toornen wesseln, se warrt vun KDE "
-"utföhrt. Kombinatschonen, de bloots Sünnertasten bargt, funkscheneert nich. "
-"Disse Kombinatschonen mag ok bi wiss Ümgeventostänn nich funkscheneren, a.B. "
-"binnen den Pausschirm oder wenn en Opdukfinster aktiev is."
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm_keyboard.ui:252
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
-msgid "Last used shortcut:"
-msgstr "Anner Kombinatschoon:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
-#: kcm_keyboard.ui:265
-#, kde-format
-msgid ""
-"This shortcut allows for fast switching between two layouts, by always "
-"switching to the last-used one."
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:293
-#, kde-format
-msgid "Configure layouts"
-msgstr "Toornen instellen"
-
-#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:307
-#, kde-format
-msgid "Add"
-msgstr "Tofögen"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:317
-#, kde-format
-msgid "Remove"
-msgstr "Wegmaken"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:327
-#, kde-format
-msgid "Move Up"
-msgstr "Na baven"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:337
-#, kde-format
-msgid "Move Down"
-msgstr "Na nerrn"
-
-#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:382
-#, kde-format
-msgid "Spare layouts"
-msgstr "Reserv-Toornen"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:414
-#, kde-format
-msgid "Main layout count:"
-msgstr "Tall Hööfttoornen:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:444
-#, kde-format
-msgid "Advanced"
-msgstr "Verwiedert"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:450
-#, kde-format
-msgid "&Configure keyboard options"
-msgstr "Tastatuur-Optschonen &instellen"
-
-#: kcm_keyboard_widget.cpp:209
+#: keyboardmodel.cpp:42
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "Nich begäng"
 
-#: kcm_keyboard_widget.cpp:211
+#: keyboardmodel.cpp:46
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
-
-#: kcm_keyboard_widget.cpp:655
-#, kde-format
-msgctxt "no shortcuts defined"
-msgid "None"
-msgstr "Keen"
-
-#: kcm_keyboard_widget.cpp:669
-#, kde-format
-msgid "%1 shortcut"
-msgid_plural "%1 shortcuts"
-msgstr[0] "%1 Tastkombinatschoon"
-msgstr[1] "%1 Tastkombinatschonen"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgctxt "layout map name"
-msgid "Map"
-msgstr "Utsehn"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Layout"
-msgstr "Toornen"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Variant"
-msgstr "Ünneroort"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Label"
-msgstr "Beteken"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Shortcut"
-msgstr "Tastkombinatschoon"
-
-#: kcm_view_models.cpp:273
-#, kde-format
-msgctxt "variant"
-msgid "Default"
-msgstr "Standard"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcmmiscwidget.ui:31
-#, kde-format
-msgid "When a key is held:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
-#: kcmmiscwidget.ui:38
-#, kde-format
-msgid "&Show accented and similar characters "
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
-#: kcmmiscwidget.ui:45
-#, kde-format
-msgid "&Repeat the key"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
-#: kcmmiscwidget.ui:52
-#, kde-format
-msgid "&Do nothing"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcmmiscwidget.ui:66
-#, kde-format
-msgid "Test area:"
-msgstr "Utprobeerrebeet:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
-#: kcmmiscwidget.ui:73
-#, kde-format
-msgid ""
-"Allows to test keyboard repeat and click volume (just don't forget to apply "
-"the changes)."
-msgstr ""
-"Tastwedderhalen un Tastluutstärk utproberen (man vergitt nich, dat Du de "
-"Ännern övernehmen muttst.)"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "If supported, this option allows you to setup the state of NumLock after "
-#| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
-#| "configure KDE not to set NumLock state."
-msgid ""
-"If supported, this option allows you to setup the state of NumLock after "
-"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
-"configure Plasma not to set NumLock state."
-msgstr ""
-"Wenn ünnerstütt, kannst Du mit disse Optschoon fastleggen, wat de Tallenrast "
-"na't Hoochfohren vun KDE an- oder utmaakt is.<p>Du kannst fastleggen, dat de "
-"Tallenrast an- oder utmaakt wesen schall, oder ok, dat KDE den Tostand nich "
-"ännert."
-
-#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:85
-#, fuzzy, kde-format
-#| msgid "NumLock on KDE Startup"
-msgid "NumLock on Plasma Startup"
-msgstr "Tallenrast bi't Hoochfohren vun KDE"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
-#: kcmmiscwidget.ui:97
-#, kde-format
-msgid "T&urn on"
-msgstr "&Anmaken"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
-#: kcmmiscwidget.ui:104
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
-msgid "&Turn off"
-msgstr "&Utmaken"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
-#: kcmmiscwidget.ui:111
-#, kde-format
-msgid "Leave unchan&ged"
-msgstr "&Nich ännern"
-
-#. i18n: ectx: property (text), widget (QLabel, lblRate)
-#: kcmmiscwidget.ui:148
-#, kde-format
-msgid "&Rate:"
-msgstr "&Gauheit:"
-
-#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the delay after which a pressed "
-"key will start generating keycodes. The 'Repeat rate' option controls the "
-"frequency of these keycodes."
-msgstr ""
-"Wenn ünnerstütt, kannst Du mit disse Optschoon de Tiet fastleggen, na de en "
-"daalhollen Tast mehr Tekens utgifft. Mit de Wedderhalen giffst Du an, wo "
-"vele Tekens per Sekunn utgeven warrt."
-
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
-#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
-#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the rate at which keycodes are "
-"generated while a key is pressed."
-msgstr ""
-"Wenn ünnerstütt, kannst Du mit disse Optschoon fastleggen, wo vele Tekens "
-"per Sekunn en daalhollen Tast utgifft."
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
-#: kcmmiscwidget.ui:195
-#, kde-format
-msgid " repeats/s"
-msgstr " Wedderhalen/Sek."
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:205
-#, kde-format
-msgid " ms"
-msgstr " ms"
-
-#. i18n: ectx: property (text), widget (QLabel, lblDelay)
-#: kcmmiscwidget.ui:246
-#, kde-format
-msgid "&Delay:"
-msgstr "&Paus:"
 
 #: tastenbrett/main.cpp:52
 #, fuzzy, kde-format
@@ -525,6 +95,449 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
+
+#: ui/Advanced.qml:38
+#, fuzzy, kde-format
+#| msgid "&Configure keyboard options"
+msgctxt "@option:checkbox"
+msgid "Configure keyboard options"
+msgstr "Tastatuur-Optschonen &instellen"
+
+#: ui/Hardware.qml:34
+#, fuzzy, kde-format
+#| msgid "Keyboard &model:"
+msgctxt "@title:group"
+msgid "Keyboard model:"
+msgstr "Tastatuur&modell:"
+
+#: ui/Hardware.qml:68
+#, fuzzy, kde-format
+#| msgid "NumLock on KDE Startup"
+msgctxt "@title:group"
+msgid "NumLock on Plasma Startup:"
+msgstr "Tallenrast bi't Hoochfohren vun KDE"
+
+#: ui/Hardware.qml:73
+#, fuzzy, kde-format
+#| msgid "T&urn on"
+msgctxt "@option:radio"
+msgid "Turn On"
+msgstr "&Anmaken"
+
+#: ui/Hardware.qml:77
+#, fuzzy, kde-format
+#| msgid "Turn o&ff"
+msgctxt "@option:radio"
+msgid "Turn Off"
+msgstr "&Utmaken"
+
+#: ui/Hardware.qml:81
+#, fuzzy, kde-format
+#| msgid "Leave unchan&ged"
+msgctxt "@option:radio"
+msgid "Leave unchanged"
+msgstr "&Nich ännern"
+
+#: ui/Hardware.qml:114
+#, kde-format
+msgctxt "@title:group"
+msgid "When key is held:"
+msgstr ""
+
+#: ui/Hardware.qml:119
+#, kde-format
+msgctxt "@option:radio"
+msgid "Repeat the key"
+msgstr ""
+
+#: ui/Hardware.qml:124
+#, kde-format
+msgctxt "@option:radio"
+msgid "Do nothing"
+msgstr ""
+
+#: ui/Hardware.qml:129
+#, kde-format
+msgctxt "@option:radio"
+msgid "Show accented and similar characters"
+msgstr ""
+
+#: ui/Hardware.qml:164
+#, fuzzy, kde-format
+#| msgid "&Delay:"
+msgctxt "@label:slider"
+msgid "Delay:"
+msgstr "&Paus:"
+
+#: ui/Hardware.qml:199
+#, fuzzy, kde-format
+#| msgid "&Rate:"
+msgctxt "@label:slider"
+msgid "Rate:"
+msgstr "&Gauheit:"
+
+#: ui/Hardware.qml:247
+#, fuzzy, kde-format
+#| msgid "Test area:"
+msgctxt "@label:textbox"
+msgid "Test area:"
+msgstr "Utprobeerrebeet:"
+
+#: ui/Hardware.qml:248
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to test settings"
+msgstr ""
+
+#: ui/LayoutDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "Add Layout"
+msgctxt "@title:window"
+msgid "Add Layout"
+msgstr "Toornen tofögen"
+
+#: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgctxt "@action:button"
+msgid "Preview"
+msgstr "Vöransicht"
+
+#: ui/LayoutDialog.qml:124
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Display text:"
+msgstr ""
+
+#: ui/LayoutDialog.qml:143
+#, fuzzy, kde-format
+#| msgid "Shortcut:"
+msgctxt "@option:textbox"
+msgid "Shortcut:"
+msgstr "Tastkombinatschoon:"
+
+#: ui/Layouts.qml:28
+#, fuzzy, kde-format
+#| msgid "Shortcuts for Switching Layout"
+msgctxt "@title:group"
+msgid "Shortcuts for Switching Layout"
+msgstr "Tastkombinatschonen för't Wesseln"
+
+#: ui/Layouts.qml:34
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgctxt "@option:textbox"
+msgid "Main shortcuts:"
+msgstr "Hööftkombinatschonen:"
+
+#: ui/Layouts.qml:61
+#, fuzzy, kde-format
+#| msgid "3rd level shortcuts:"
+msgctxt "@option:textbox"
+msgid "3rd level shortcuts:"
+msgstr "Kombinatschonen för 3. Evene:"
+
+#: ui/Layouts.qml:88
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgctxt "@option:textbox"
+msgid "Alternative shortcut:"
+msgstr "Anner Kombinatschoon:"
+
+#: ui/Layouts.qml:109
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgctxt "@option:textbox"
+msgid "Last used shortcuts:"
+msgstr "Anner Kombinatschoon:"
+
+#: ui/Layouts.qml:129
+#, kde-format
+msgctxt "@option:checkbox"
+msgid "Show a popup on layout changes"
+msgstr ""
+
+#: ui/Layouts.qml:145
+#, fuzzy, kde-format
+#| msgid "Switching Policy"
+msgctxt "@title:group"
+msgid "Switching Policy"
+msgstr "Regeln för't Wesseln"
+
+#: ui/Layouts.qml:152
+#, fuzzy, kde-format
+#| msgid "&Global"
+msgctxt "@option:radio"
+msgid "Global"
+msgstr "&Globaal"
+
+#: ui/Layouts.qml:156
+#, fuzzy, kde-format
+#| msgid "&Desktop"
+msgctxt "@option:radio"
+msgid "Desktop"
+msgstr "Schrief&disch"
+
+#: ui/Layouts.qml:160
+#, fuzzy, kde-format
+#| msgid "&Application"
+msgctxt "@option:radio"
+msgid "Application"
+msgstr "&Programm"
+
+#: ui/Layouts.qml:164
+#, fuzzy, kde-format
+#| msgid "&Window"
+msgctxt "@option:radio"
+msgid "Window"
+msgstr "&Finster"
+
+#: ui/Layouts.qml:185
+#, fuzzy, kde-format
+#| msgid "Configure layouts"
+msgctxt "@option:checkbox"
+msgid "Configure Layouts"
+msgstr "Toornen instellen"
+
+#: ui/Layouts.qml:200
+#, fuzzy, kde-format
+#| msgid "Add"
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Tofögen"
+
+#: ui/Layouts.qml:206
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "Wegmaken"
+
+#: ui/Layouts.qml:213
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgctxt "@action:button"
+msgid "Move Up"
+msgstr "Na baven"
+
+#: ui/Layouts.qml:229
+#, fuzzy, kde-format
+#| msgid "Move Down"
+msgctxt "@action:button"
+msgid "Move Down"
+msgstr "Na nerrn"
+
+#: ui/Layouts.qml:316
+#, fuzzy, kde-format
+#| msgctxt "layout map name"
+#| msgid "Map"
+msgctxt "@title:column"
+msgid "Map"
+msgstr "Utsehn"
+
+#: ui/Layouts.qml:323
+#, fuzzy, kde-format
+#| msgid "Label"
+msgctxt "@title:column"
+msgid "Label"
+msgstr "Beteken"
+
+#: ui/Layouts.qml:332
+#, fuzzy, kde-format
+#| msgid "Layout"
+msgctxt "@title:column"
+msgid "Layout"
+msgstr "Toornen"
+
+#: ui/Layouts.qml:337
+#, fuzzy, kde-format
+#| msgid "Variant"
+msgctxt "@title:column"
+msgid "Variant"
+msgstr "Ünneroort"
+
+#: ui/Layouts.qml:342
+#, fuzzy, kde-format
+#| msgid "Shortcut"
+msgctxt "@title:column"
+msgid "Shortcut"
+msgstr "Tastkombinatschoon"
+
+#: ui/Layouts.qml:388
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgctxt "@action:button"
+msgid "Reassign shortcut"
+msgstr "Hööftkombinatschonen:"
+
+#: ui/Layouts.qml:404
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel assignment"
+msgstr ""
+
+#: ui/Layouts.qml:417
+#, fuzzy, kde-format
+#| msgid "Spare layouts"
+msgctxt "@option:checkbox"
+msgid "Spare layouts"
+msgstr "Reserv-Toornen"
+
+#: ui/Layouts.qml:453
+#, fuzzy, kde-format
+#| msgid "Main layout count:"
+msgctxt "@label:spinbox"
+msgid "Main layout count:"
+msgstr "Tall Hööfttoornen:"
+
+#: ui/main.qml:41
+#, fuzzy, kde-format
+#| msgid "Hardware"
+msgctxt "@title:tab"
+msgid "Hardware"
+msgstr "Reedschap"
+
+#: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Layouts"
+msgctxt "@title:tab"
+msgid "Layouts"
+msgstr "Toornen"
+
+#: ui/main.qml:53
+#, kde-format
+msgctxt "@title:tab"
+msgid "Key Bindings"
+msgstr ""
+
+#: xkboptionsmodel.cpp:161
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] "%1 Tastkombinatschoon"
+msgstr[1] "%1 Tastkombinatschonen"
+
+#: xkboptionsmodel.cpp:164
+#, kde-format
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "Keen"
+
+#~ msgid "Label:"
+#~ msgstr "Beteken:"
+
+#~ msgid ""
+#~ "Here you can choose a keyboard model. This setting is independent of your "
+#~ "keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+#~ "keyboard is manufactured. Modern keyboards that come with your computer "
+#~ "usually have two extra keys and are referred to as \"104-key\" models, "
+#~ "which is probably what you want if you do not know what kind of keyboard "
+#~ "you have.\n"
+#~ msgstr ""
+#~ "Hier kannst Du en Tastatuur-Modell utsöken. Disse Instellen hangt nich "
+#~ "vun Dien Toornen af, man de \"Hardware\" is meent - d.h. wo vele un welk "
+#~ "Tasten Du redig vör Di hest. Modeern Tastaturen, as se opstunns mit "
+#~ "Reekners utlevert warrt, hebbt normalerwies twee Extratasten un warrt 104-"
+#~ "Tasten-Tastaturen nöömt. Dat is wohrschienlich de richtige Instellen, "
+#~ "wenn Du nich nau weetst, vun welk Typ Dien Tastatuur is.\n"
+
+#~ msgid ""
+#~ "If you select \"Application\" or \"Window\" switching policy, changing "
+#~ "the keyboard layout will only affect the current application or window."
+#~ msgstr ""
+#~ "Wenn Du de Regel \"Programm\" oder \"Finster\" utsöchst, warrt de niege "
+#~ "Toornen bloots för dat aktuelle Programm oder Finster anwendt."
+
+#~ msgid ""
+#~ "This is a shortcut for switching layouts which is handled by X.org. It "
+#~ "allows modifier-only shortcuts."
+#~ msgstr ""
+#~ "Mit disse Tastkombinatschoon kannst Du de Toornen wesseln, se warrt vun "
+#~ "den X-Server utföhrt. Sodennig funkscheneert ok Kombinatschonen, de "
+#~ "bloots Sünnertasten bargt."
+
+#~ msgctxt "no shortcut defined"
+#~ msgid "None"
+#~ msgstr "Keen"
+
+#~ msgid ""
+#~ "This is a shortcut for switching to a third level of the active layout "
+#~ "(if it has one) which is handled by X.org. It allows modifier-only "
+#~ "shortcuts."
+#~ msgstr ""
+#~ "Mit disse Tastkombinatschoon kannst Du de 3. Evene vun de aktive Toornen "
+#~ "anstüern, wenn dat een gifft. Se warrt vun den X-Server utföhrt, un "
+#~ "sodennig funkscheneert ok Kombinatschonen, de bloots Sünnertasten bargt."
+
+#, fuzzy
+#~| msgid ""
+#~| "This is a shortcut for switching layouts which is handled by KDE. It "
+#~| "does not support modifier-only shortcuts and also may not work in some "
+#~| "situations (e.g. if popup is active or from screensaver)."
+#~ msgid ""
+#~ "This is a shortcut for switching layouts. It does not support modifier-"
+#~ "only shortcuts and also may not work in some situations (e.g. if popup is "
+#~ "active or from screensaver)."
+#~ msgstr ""
+#~ "Mit disse Tastkombinatschoon kannst Du de Toornen wesseln, se warrt vun "
+#~ "KDE utföhrt. Kombinatschonen, de bloots Sünnertasten bargt, funkscheneert "
+#~ "nich. Disse Kombinatschonen mag ok bi wiss Ümgeventostänn nich "
+#~ "funkscheneren, a.B. binnen den Pausschirm oder wenn en Opdukfinster "
+#~ "aktiev is."
+
+#~ msgid "Advanced"
+#~ msgstr "Verwiedert"
+
+#~ msgctxt "variant"
+#~ msgid "Default"
+#~ msgstr "Standard"
+
+#~ msgid ""
+#~ "Allows to test keyboard repeat and click volume (just don't forget to "
+#~ "apply the changes)."
+#~ msgstr ""
+#~ "Tastwedderhalen un Tastluutstärk utproberen (man vergitt nich, dat Du de "
+#~ "Ännern övernehmen muttst.)"
+
+#, fuzzy
+#~| msgid ""
+#~| "If supported, this option allows you to setup the state of NumLock after "
+#~| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
+#~| "configure KDE not to set NumLock state."
+#~ msgid ""
+#~ "If supported, this option allows you to setup the state of NumLock after "
+#~ "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+#~ "configure Plasma not to set NumLock state."
+#~ msgstr ""
+#~ "Wenn ünnerstütt, kannst Du mit disse Optschoon fastleggen, wat de "
+#~ "Tallenrast na't Hoochfohren vun KDE an- oder utmaakt is.<p>Du kannst "
+#~ "fastleggen, dat de Tallenrast an- oder utmaakt wesen schall, oder ok, dat "
+#~ "KDE den Tostand nich ännert."
+
+#~ msgid "Leave unchan&ged"
+#~ msgstr "&Nich ännern"
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the delay after which a "
+#~ "pressed key will start generating keycodes. The 'Repeat rate' option "
+#~ "controls the frequency of these keycodes."
+#~ msgstr ""
+#~ "Wenn ünnerstütt, kannst Du mit disse Optschoon de Tiet fastleggen, na de "
+#~ "en daalhollen Tast mehr Tekens utgifft. Mit de Wedderhalen giffst Du an, "
+#~ "wo vele Tekens per Sekunn utgeven warrt."
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the rate at which keycodes "
+#~ "are generated while a key is pressed."
+#~ msgstr ""
+#~ "Wenn ünnerstütt, kannst Du mit disse Optschoon fastleggen, wo vele Tekens "
+#~ "per Sekunn en daalhollen Tast utgifft."
+
+#~ msgid " repeats/s"
+#~ msgstr " Wedderhalen/Sek."
+
+#~ msgid " ms"
+#~ msgstr " ms"
 
 #~ msgid "KDE Keyboard Control Module"
 #~ msgstr "Tastatuur-Kuntrullmoduul för KDE"
@@ -598,11 +611,6 @@ msgstr ""
 
 #~ msgid "Turn o&ff"
 #~ msgstr "&Utmaken"
-
-#, fuzzy
-#~| msgid "Leave unchan&ged"
-#~ msgid "&Leave unchanged"
-#~ msgstr "&Nich ännern"
 
 #~ msgid "Configure..."
 #~ msgstr "Instellen..."

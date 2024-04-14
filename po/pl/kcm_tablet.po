@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2024-02-24 16:53+0100\n"
+"PO-Revision-Date: 2024-04-13 19:20+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -96,10 +96,9 @@ msgid "Orientation:"
 msgstr "Kierunek:"
 
 #: ui/main.qml:110
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgid "Left handed mode:"
-msgstr "Tryb leworęczny:"
+msgstr "Tryb dla leworęcznych:"
 
 #: ui/main.qml:120
 #, kde-format
@@ -124,22 +123,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgid "Pen button 1:"
-msgstr "Przycisk rysika 1"
+msgstr "Przycisk rysika 1:"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgid "Pen button 2:"
-msgstr "Przycisk rysika 2"
+msgstr "Przycisk rysika 2:"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgid "Pen button 3:"
-msgstr "Przycisk rysika 3"
+msgstr "Przycisk rysika 3:"
 
 #: ui/main.qml:295
 #, kde-format
@@ -153,10 +149,9 @@ msgid "None"
 msgstr "Brak"
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
-msgstr "Przycisk %1:"
+msgstr "Przycisk płytki %1:"
 
 #~ msgid "Tool Button 1"
 #~ msgstr "Przycisk narzędziowy 1"

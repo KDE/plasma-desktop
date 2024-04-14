@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-28 00:41+0000\n"
+"POT-Creation-Date: 2024-04-14 00:39+0000\n"
 "PO-Revision-Date: 2023-10-01 03:56+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -48,441 +48,23 @@ msgstr "ბოლოს გამოყენებულ კლავიატ�
 msgid "Switch keyboard layout to %1"
 msgstr "კლავიატურის განლაგების %1-ზე გადართვა"
 
-#: flags.cpp:77
+#: flags.cpp:78
 #, kde-format
 msgctxt "layout - variant"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
-#: kcm_add_layout_dialog.ui:14
-#, kde-format
-msgid "Add Layout"
-msgstr "განლაგების დამატება"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
-#: kcm_add_layout_dialog.ui:20
-#, kde-format
-msgid "Search…"
-msgstr "ძებნა…"
-
-#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
-#: kcm_add_layout_dialog.ui:45
-#, kde-format
-msgid "Shortcut:"
-msgstr "მალსახმობი:"
-
-#. i18n: ectx: property (text), widget (QLabel, labelLabel)
-#: kcm_add_layout_dialog.ui:55
-#, kde-format
-msgid "Label:"
-msgstr "ჭდე:"
-
-#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
-#. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:347
-#, kde-format
-msgid "Preview"
-msgstr "მინიატურა"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
-#: kcm_keyboard.ui:21
-#, kde-format
-msgid "Hardware"
-msgstr "აპარატურა"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm_keyboard.ui:36
-#, kde-format
-msgid "Keyboard &model:"
-msgstr "კლავიატურის &მოდელი:"
-
-#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
-#: kcm_keyboard.ui:56
-#, kde-format
-msgid ""
-"Here you can choose a keyboard model. This setting is independent of your "
-"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
-"keyboard is manufactured. Modern keyboards that come with your computer "
-"usually have two extra keys and are referred to as \"104-key\" models, which "
-"is probably what you want if you do not know what kind of keyboard you "
-"have.\n"
-msgstr ""
-"აქ შეგიძლიათ კლავიატურის მოდელი აირჩიოთ. ეს პარამეტრი დამოუკიდებელია თქვენი "
-"კლავიატურის განლაგებისგან და მიმართავს \"აპარატურულ\" მოდელს, ანუ გზას, "
-"რომლითაც თქვენი კლავიატურაა დამზადებული. თანამედროვე კლავიატურებს, რომლებიც "
-"კომპიუტერს მოჰყვება, ჩვეულებრივ ორი დამატებითი ღილაკი გააჩნია, რომელსაც "
-"\"104-ე ღილაკს\" ეძახიან, რომელიც ალბათ ზუსტად ისაა, რაც გნებავთ, აირჩიოთ, "
-"თუ არ იცით, რომელიც მოდელის კლავიატურა გაგაჩნიათ.\n"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
-#: kcm_keyboard.ui:97
-#, kde-format
-msgid "Layouts"
-msgstr "განლაგებები"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:105
-#, kde-format
-msgid ""
-"If you select \"Application\" or \"Window\" switching policy, changing the "
-"keyboard layout will only affect the current application or window."
-msgstr ""
-"თუ აირჩევთ \"აპლიკაციის\" ან \"ფანჯრის\" გადართვის პოლიტიკას, კლავიატურის "
-"განლაგების ცვლილება მხოლოდ მიმდინარე აპლიკაციას ან ფანჯარას შეეხება."
-
-#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:108
-#, kde-format
-msgid "Switching Policy"
-msgstr "გადართვის პოლიტიკა"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
-#: kcm_keyboard.ui:114
-#, kde-format
-msgid "&Global"
-msgstr "&გლობალური"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
-#: kcm_keyboard.ui:127
-#, kde-format
-msgid "&Desktop"
-msgstr "&სამუშაო მაგიდა"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
-#: kcm_keyboard.ui:137
-#, kde-format
-msgid "&Application"
-msgstr "&აპლიკაცია"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
-#: kcm_keyboard.ui:147
-#, kde-format
-msgid "&Window"
-msgstr "&ფანჯარა"
-
-#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
-#: kcm_keyboard.ui:160
-#, kde-format
-msgid "Shortcuts for Switching Layout"
-msgstr "განლაგების გადართვის მალსახმობები"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm_keyboard.ui:166
-#, kde-format
-msgid "Main shortcuts:"
-msgstr "მთავარი მალსახმობები:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
-#: kcm_keyboard.ui:179
-#, kde-format
-msgid ""
-"This is a shortcut for switching layouts which is handled by X.org. It "
-"allows modifier-only shortcuts."
-msgstr ""
-"ეს არის მალსახმობი იმ განლაგებაზე გადასართავად, რომელიც X.org-ის მიერ "
-"იმართება. მას მხოლოდ-მოდიფიკატორის ტიპის მალსახმობების მხარდაჭერა გააჩნია."
-
-#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
-#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:182 kcm_keyboard.ui:212
-#, kde-format
-msgctxt "no shortcut defined"
-msgid "None"
-msgstr "არაფერი"
-
-#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
-#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
-#: kcm_keyboard.ui:189 kcm_keyboard.ui:219
-#, kde-format
-msgid "…"
-msgstr "…"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm_keyboard.ui:196
-#, kde-format
-msgid "3rd level shortcuts:"
-msgstr "მესამე დონის მალსახმობები:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:209
-#, kde-format
-msgid ""
-"This is a shortcut for switching to a third level of the active layout (if "
-"it has one) which is handled by X.org. It allows modifier-only shortcuts."
-msgstr ""
-"ეს არის მალსახმობი აქტიური განლაგების მესამე დონეზე გადასვლისთვის (თუ მას "
-"აქვს), რომელსაც ამუშავებს X.org. ის იძლევა მხოლოდ-მოდიფიკატორის "
-"მალსახმობების მხარდაჭერასაც."
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm_keyboard.ui:226
-#, kde-format
-msgid "Alternative shortcut:"
-msgstr "ალტერნატიული მალსახმობი:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
-#: kcm_keyboard.ui:239
-#, kde-format
-msgid ""
-"This is a shortcut for switching layouts. It does not support modifier-only "
-"shortcuts and also may not work in some situations (e.g. if popup is active "
-"or from screensaver)."
-msgstr ""
-"განლაგებების გადასართავი მალსახმობი. მას არ აქვს მხოლოდ-მოდიფიკატორის "
-"ღილაკების მხარდაჭერა და შეიძლება ყველა სიტუაციაში არ იმუშაოს (მაგ: ეკრანის "
-"დაცვიდან ან მხტუნავ ფანჯარაზე)."
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm_keyboard.ui:252
-#, kde-format
-msgid "Last used shortcut:"
-msgstr "ბოლოს გამოყენებული მალსახმობი:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
-#: kcm_keyboard.ui:265
-#, kde-format
-msgid ""
-"This shortcut allows for fast switching between two layouts, by always "
-"switching to the last-used one."
-msgstr ""
-"ეს მალსახმობი საშუალებას გაძლევთ, ორ განლაგებას შორის სწრაფად გადაერთოთ. ის "
-"ბოლოს გამოყენებულ განლაგებაზე გადაგრთავთ."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:293
-#, kde-format
-msgid "Configure layouts"
-msgstr "განლაგებების მორგება"
-
-#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:307
-#, kde-format
-msgid "Add"
-msgstr "დამატება"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:317
-#, kde-format
-msgid "Remove"
-msgstr "წაშლა"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:327
-#, kde-format
-msgid "Move Up"
-msgstr "აწევა"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:337
-#, kde-format
-msgid "Move Down"
-msgstr "ჩამოწევა"
-
-#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:382
-#, kde-format
-msgid "Spare layouts"
-msgstr "ზედმეტი განლაგებები"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:414
-#, kde-format
-msgid "Main layout count:"
-msgstr "მთავარი განლაგების რიცხვი:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:444
-#, kde-format
-msgid "Advanced"
-msgstr "დამატებითი"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:450
-#, kde-format
-msgid "&Configure keyboard options"
-msgstr "კლავიატურის მალსახმობების &კონფიგურაცია"
-
-#: kcm_keyboard_widget.cpp:209
+#: keyboardmodel.cpp:42
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "უცნობი"
 
-#: kcm_keyboard_widget.cpp:211
+#: keyboardmodel.cpp:46
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
-
-#: kcm_keyboard_widget.cpp:655
-#, kde-format
-msgctxt "no shortcuts defined"
-msgid "None"
-msgstr "არაფერი"
-
-#: kcm_keyboard_widget.cpp:669
-#, kde-format
-msgid "%1 shortcut"
-msgid_plural "%1 shortcuts"
-msgstr[0] "%1 მალსახმობი"
-msgstr[1] "%1 მალსახმობი"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgctxt "layout map name"
-msgid "Map"
-msgstr "რუკა"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Layout"
-msgstr "განლაგება"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Variant"
-msgstr "ვარიანტი"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Label"
-msgstr "ჭდე"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Shortcut"
-msgstr "მალსახმობი"
-
-#: kcm_view_models.cpp:273
-#, kde-format
-msgctxt "variant"
-msgid "Default"
-msgstr "ნაგულისხმები"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcmmiscwidget.ui:31
-#, kde-format
-msgid "When a key is held:"
-msgstr "როცა ღილაკი დაჭერილია:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
-#: kcmmiscwidget.ui:38
-#, kde-format
-msgid "&Show accented and similar characters "
-msgstr "&აქცენტირებული და მსგავსი სიმბოლოების ჩვენება "
-
-#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
-#: kcmmiscwidget.ui:45
-#, kde-format
-msgid "&Repeat the key"
-msgstr "&ღილაკის გამეორება"
-
-#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
-#: kcmmiscwidget.ui:52
-#, kde-format
-msgid "&Do nothing"
-msgstr "&არაფრის გაკეთება"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcmmiscwidget.ui:66
-#, kde-format
-msgid "Test area:"
-msgstr "სატესტო ადგილი:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
-#: kcmmiscwidget.ui:73
-#, kde-format
-msgid ""
-"Allows to test keyboard repeat and click volume (just don't forget to apply "
-"the changes)."
-msgstr ""
-"საშუალებას გაძლევთ დატესტოთ კლავიატურის გამეორებისა და წკაპის ხმები (არ "
-"დაგავიწყდეთ ჯერ გადაატაროთ თქვენი ცვლილებები)."
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:82
-#, kde-format
-msgid ""
-"If supported, this option allows you to setup the state of NumLock after "
-"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
-"configure Plasma not to set NumLock state."
-msgstr ""
-"თუ მხარდაჭერილია, ეს პარამეტრი საშუალებას გაძლევთ დააყენოთ NumLock-ის "
-"მდგომარეობა Plasma-ის გაშვებისას .<p> შეგიძლიათ ჩართოთ ის, ან გამორთოთ, ან "
-"ხელი არ ახლოთ."
-
-#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:85
-#, kde-format
-msgid "NumLock on Plasma Startup"
-msgstr "NumLock Plasma-ის გაშვებისას"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
-#: kcmmiscwidget.ui:97
-#, kde-format
-msgid "T&urn on"
-msgstr "&ჩართვა"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
-#: kcmmiscwidget.ui:104
-#, kde-format
-msgid "&Turn off"
-msgstr "&გამორთვა"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
-#: kcmmiscwidget.ui:111
-#, kde-format
-msgid "Leave unchan&ged"
-msgstr "&უცვლელად დატოვება"
-
-#. i18n: ectx: property (text), widget (QLabel, lblRate)
-#: kcmmiscwidget.ui:148
-#, kde-format
-msgid "&Rate:"
-msgstr "&სიხშირე:"
-
-#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the delay after which a pressed "
-"key will start generating keycodes. The 'Repeat rate' option controls the "
-"frequency of these keycodes."
-msgstr ""
-"თუ მხარდაჭერილია, ეს პარამეტრი საშუალებას გაძლევთ დააყენოთ დაყოვნება, რომლის "
-"შემდეგაც დაწოლილი ღილაკი კოდების გენერაციას დაიწყებს. პარამეტრი \"გამეორების "
-"სიჩქარე\" ამ კოდების სიხშირეს აკონტროლებს."
-
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
-#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
-#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the rate at which keycodes are "
-"generated while a key is pressed."
-msgstr ""
-"თუ მხარდაჭერილია, ეს პარამეტრი საშუალებას გაძლევთ ღილაკის დაჭერისას მისი "
-"კოდების გენერირების სიჩქარე დააყენოთ."
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
-#: kcmmiscwidget.ui:195
-#, kde-format
-msgid " repeats/s"
-msgstr " გამეორება/წმ"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:205
-#, kde-format
-msgid " ms"
-msgstr " მწმ"
-
-#. i18n: ectx: property (text), widget (QLabel, lblDelay)
-#: kcmmiscwidget.ui:246
-#, kde-format
-msgid "&Delay:"
-msgstr "&დაყოვნება:"
 
 #: tastenbrett/main.cpp:52
 #, kde-format
@@ -497,18 +79,470 @@ msgid "Keyboard layout visualization"
 msgstr "კლავიატურის განლაგების ვიზუალიზაცია"
 
 #: tastenbrett/main.cpp:139
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid ""
+#| "The keyboard geometry failed to load. This often indicates that the "
+#| "selected model does not support a specific layout or layout variant. This "
+#| "problem will likely also present when you try to use this combination of "
+#| "model, layout and variant."
 msgctxt "@label"
 msgid ""
 "The keyboard geometry failed to load. This often indicates that the selected "
 "model does not support a specific layout or layout variant. This problem "
 "will likely also present when you try to use this combination of model, "
-"layout and variant."
+"layout and variant.\n"
+"Previewing layouts that are defined outside your systems xkb directory is "
+"not supported and  will also trigger this message. These might still work "
+"fine if applied"
 msgstr ""
 "კლავიატურის გეომეტრია ვერ ჩაიტვირთა. ეს ხშირად მიუთითებს იმაზე, რომ შერჩეული "
 "მოდელი არ უჭერს მხარს კონკრეტულ განლაგებას ან განლაგების ვარიანტს. ეს "
 "პრობლემა სავარაუდოდ ასევე გამოჩნდება, როდესაც თქვენ ცდილობთ გამოიყენოთ "
 "მოდელის, განლაგებისა და ვარიანტის ეს კომბინაცია."
+
+#: ui/Advanced.qml:38
+#, fuzzy, kde-format
+#| msgid "&Configure keyboard options"
+msgctxt "@option:checkbox"
+msgid "Configure keyboard options"
+msgstr "კლავიატურის მალსახმობების &კონფიგურაცია"
+
+#: ui/Hardware.qml:34
+#, fuzzy, kde-format
+#| msgid "Keyboard &model:"
+msgctxt "@title:group"
+msgid "Keyboard model:"
+msgstr "კლავიატურის &მოდელი:"
+
+#: ui/Hardware.qml:68
+#, fuzzy, kde-format
+#| msgid "NumLock on Plasma Startup"
+msgctxt "@title:group"
+msgid "NumLock on Plasma Startup:"
+msgstr "NumLock Plasma-ის გაშვებისას"
+
+#: ui/Hardware.qml:73
+#, fuzzy, kde-format
+#| msgid "T&urn on"
+msgctxt "@option:radio"
+msgid "Turn On"
+msgstr "&ჩართვა"
+
+#: ui/Hardware.qml:77
+#, fuzzy, kde-format
+#| msgid "&Turn off"
+msgctxt "@option:radio"
+msgid "Turn Off"
+msgstr "&გამორთვა"
+
+#: ui/Hardware.qml:81
+#, fuzzy, kde-format
+#| msgid "Leave unchan&ged"
+msgctxt "@option:radio"
+msgid "Leave unchanged"
+msgstr "&უცვლელად დატოვება"
+
+#: ui/Hardware.qml:114
+#, fuzzy, kde-format
+#| msgid "When a key is held:"
+msgctxt "@title:group"
+msgid "When key is held:"
+msgstr "როცა ღილაკი დაჭერილია:"
+
+#: ui/Hardware.qml:119
+#, fuzzy, kde-format
+#| msgid "&Repeat the key"
+msgctxt "@option:radio"
+msgid "Repeat the key"
+msgstr "&ღილაკის გამეორება"
+
+#: ui/Hardware.qml:124
+#, fuzzy, kde-format
+#| msgid "&Do nothing"
+msgctxt "@option:radio"
+msgid "Do nothing"
+msgstr "&არაფრის გაკეთება"
+
+#: ui/Hardware.qml:129
+#, fuzzy, kde-format
+#| msgid "&Show accented and similar characters "
+msgctxt "@option:radio"
+msgid "Show accented and similar characters"
+msgstr "&აქცენტირებული და მსგავსი სიმბოლოების ჩვენება "
+
+#: ui/Hardware.qml:164
+#, fuzzy, kde-format
+#| msgid "&Delay:"
+msgctxt "@label:slider"
+msgid "Delay:"
+msgstr "&დაყოვნება:"
+
+#: ui/Hardware.qml:199
+#, fuzzy, kde-format
+#| msgid "&Rate:"
+msgctxt "@label:slider"
+msgid "Rate:"
+msgstr "&სიხშირე:"
+
+#: ui/Hardware.qml:247
+#, fuzzy, kde-format
+#| msgid "Test area:"
+msgctxt "@label:textbox"
+msgid "Test area:"
+msgstr "სატესტო ადგილი:"
+
+#: ui/Hardware.qml:248
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to test settings"
+msgstr ""
+
+#: ui/LayoutDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "Add Layout"
+msgctxt "@title:window"
+msgid "Add Layout"
+msgstr "განლაგების დამატება"
+
+#: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgctxt "@action:button"
+msgid "Preview"
+msgstr "მინიატურა"
+
+#: ui/LayoutDialog.qml:124
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Display text:"
+msgstr ""
+
+#: ui/LayoutDialog.qml:143
+#, fuzzy, kde-format
+#| msgid "Shortcut:"
+msgctxt "@option:textbox"
+msgid "Shortcut:"
+msgstr "მალსახმობი:"
+
+#: ui/Layouts.qml:28
+#, fuzzy, kde-format
+#| msgid "Shortcuts for Switching Layout"
+msgctxt "@title:group"
+msgid "Shortcuts for Switching Layout"
+msgstr "განლაგების გადართვის მალსახმობები"
+
+#: ui/Layouts.qml:34
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgctxt "@option:textbox"
+msgid "Main shortcuts:"
+msgstr "მთავარი მალსახმობები:"
+
+#: ui/Layouts.qml:61
+#, fuzzy, kde-format
+#| msgid "3rd level shortcuts:"
+msgctxt "@option:textbox"
+msgid "3rd level shortcuts:"
+msgstr "მესამე დონის მალსახმობები:"
+
+#: ui/Layouts.qml:88
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgctxt "@option:textbox"
+msgid "Alternative shortcut:"
+msgstr "ალტერნატიული მალსახმობი:"
+
+#: ui/Layouts.qml:109
+#, fuzzy, kde-format
+#| msgid "Last used shortcut:"
+msgctxt "@option:textbox"
+msgid "Last used shortcuts:"
+msgstr "ბოლოს გამოყენებული მალსახმობი:"
+
+#: ui/Layouts.qml:129
+#, kde-format
+msgctxt "@option:checkbox"
+msgid "Show a popup on layout changes"
+msgstr ""
+
+#: ui/Layouts.qml:145
+#, fuzzy, kde-format
+#| msgid "Switching Policy"
+msgctxt "@title:group"
+msgid "Switching Policy"
+msgstr "გადართვის პოლიტიკა"
+
+#: ui/Layouts.qml:152
+#, fuzzy, kde-format
+#| msgid "&Global"
+msgctxt "@option:radio"
+msgid "Global"
+msgstr "&გლობალური"
+
+#: ui/Layouts.qml:156
+#, fuzzy, kde-format
+#| msgid "&Desktop"
+msgctxt "@option:radio"
+msgid "Desktop"
+msgstr "&სამუშაო მაგიდა"
+
+#: ui/Layouts.qml:160
+#, fuzzy, kde-format
+#| msgid "&Application"
+msgctxt "@option:radio"
+msgid "Application"
+msgstr "&აპლიკაცია"
+
+#: ui/Layouts.qml:164
+#, fuzzy, kde-format
+#| msgid "&Window"
+msgctxt "@option:radio"
+msgid "Window"
+msgstr "&ფანჯარა"
+
+#: ui/Layouts.qml:185
+#, fuzzy, kde-format
+#| msgid "Configure layouts"
+msgctxt "@option:checkbox"
+msgid "Configure Layouts"
+msgstr "განლაგებების მორგება"
+
+#: ui/Layouts.qml:200
+#, fuzzy, kde-format
+#| msgid "Add"
+msgctxt "@action:button"
+msgid "Add"
+msgstr "დამატება"
+
+#: ui/Layouts.qml:206
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "წაშლა"
+
+#: ui/Layouts.qml:213
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgctxt "@action:button"
+msgid "Move Up"
+msgstr "აწევა"
+
+#: ui/Layouts.qml:229
+#, fuzzy, kde-format
+#| msgid "Move Down"
+msgctxt "@action:button"
+msgid "Move Down"
+msgstr "ჩამოწევა"
+
+#: ui/Layouts.qml:316
+#, fuzzy, kde-format
+#| msgctxt "layout map name"
+#| msgid "Map"
+msgctxt "@title:column"
+msgid "Map"
+msgstr "რუკა"
+
+#: ui/Layouts.qml:323
+#, fuzzy, kde-format
+#| msgid "Label"
+msgctxt "@title:column"
+msgid "Label"
+msgstr "ჭდე"
+
+#: ui/Layouts.qml:332
+#, fuzzy, kde-format
+#| msgid "Layout"
+msgctxt "@title:column"
+msgid "Layout"
+msgstr "განლაგება"
+
+#: ui/Layouts.qml:337
+#, fuzzy, kde-format
+#| msgid "Variant"
+msgctxt "@title:column"
+msgid "Variant"
+msgstr "ვარიანტი"
+
+#: ui/Layouts.qml:342
+#, fuzzy, kde-format
+#| msgid "Shortcut"
+msgctxt "@title:column"
+msgid "Shortcut"
+msgstr "მალსახმობი"
+
+#: ui/Layouts.qml:388
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgctxt "@action:button"
+msgid "Reassign shortcut"
+msgstr "მთავარი მალსახმობები:"
+
+#: ui/Layouts.qml:404
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel assignment"
+msgstr ""
+
+#: ui/Layouts.qml:417
+#, fuzzy, kde-format
+#| msgid "Spare layouts"
+msgctxt "@option:checkbox"
+msgid "Spare layouts"
+msgstr "ზედმეტი განლაგებები"
+
+#: ui/Layouts.qml:453
+#, fuzzy, kde-format
+#| msgid "Main layout count:"
+msgctxt "@label:spinbox"
+msgid "Main layout count:"
+msgstr "მთავარი განლაგების რიცხვი:"
+
+#: ui/main.qml:41
+#, fuzzy, kde-format
+#| msgid "Hardware"
+msgctxt "@title:tab"
+msgid "Hardware"
+msgstr "აპარატურა"
+
+#: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Layouts"
+msgctxt "@title:tab"
+msgid "Layouts"
+msgstr "განლაგებები"
+
+#: ui/main.qml:53
+#, kde-format
+msgctxt "@title:tab"
+msgid "Key Bindings"
+msgstr ""
+
+#: xkboptionsmodel.cpp:161
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] "%1 მალსახმობი"
+msgstr[1] "%1 მალსახმობი"
+
+#: xkboptionsmodel.cpp:164
+#, kde-format
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "არაფერი"
+
+#~ msgid "Search…"
+#~ msgstr "ძებნა…"
+
+#~ msgid "Label:"
+#~ msgstr "ჭდე:"
+
+#~ msgid ""
+#~ "Here you can choose a keyboard model. This setting is independent of your "
+#~ "keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+#~ "keyboard is manufactured. Modern keyboards that come with your computer "
+#~ "usually have two extra keys and are referred to as \"104-key\" models, "
+#~ "which is probably what you want if you do not know what kind of keyboard "
+#~ "you have.\n"
+#~ msgstr ""
+#~ "აქ შეგიძლიათ კლავიატურის მოდელი აირჩიოთ. ეს პარამეტრი დამოუკიდებელია "
+#~ "თქვენი კლავიატურის განლაგებისგან და მიმართავს \"აპარატურულ\" მოდელს, ანუ "
+#~ "გზას, რომლითაც თქვენი კლავიატურაა დამზადებული. თანამედროვე კლავიატურებს, "
+#~ "რომლებიც კომპიუტერს მოჰყვება, ჩვეულებრივ ორი დამატებითი ღილაკი გააჩნია, "
+#~ "რომელსაც \"104-ე ღილაკს\" ეძახიან, რომელიც ალბათ ზუსტად ისაა, რაც "
+#~ "გნებავთ, აირჩიოთ, თუ არ იცით, რომელიც მოდელის კლავიატურა გაგაჩნიათ.\n"
+
+#~ msgid ""
+#~ "If you select \"Application\" or \"Window\" switching policy, changing "
+#~ "the keyboard layout will only affect the current application or window."
+#~ msgstr ""
+#~ "თუ აირჩევთ \"აპლიკაციის\" ან \"ფანჯრის\" გადართვის პოლიტიკას, კლავიატურის "
+#~ "განლაგების ცვლილება მხოლოდ მიმდინარე აპლიკაციას ან ფანჯარას შეეხება."
+
+#~ msgid ""
+#~ "This is a shortcut for switching layouts which is handled by X.org. It "
+#~ "allows modifier-only shortcuts."
+#~ msgstr ""
+#~ "ეს არის მალსახმობი იმ განლაგებაზე გადასართავად, რომელიც X.org-ის მიერ "
+#~ "იმართება. მას მხოლოდ-მოდიფიკატორის ტიპის მალსახმობების მხარდაჭერა გააჩნია."
+
+#~ msgctxt "no shortcut defined"
+#~ msgid "None"
+#~ msgstr "არაფერი"
+
+#~ msgid "…"
+#~ msgstr "…"
+
+#~ msgid ""
+#~ "This is a shortcut for switching to a third level of the active layout "
+#~ "(if it has one) which is handled by X.org. It allows modifier-only "
+#~ "shortcuts."
+#~ msgstr ""
+#~ "ეს არის მალსახმობი აქტიური განლაგების მესამე დონეზე გადასვლისთვის (თუ მას "
+#~ "აქვს), რომელსაც ამუშავებს X.org. ის იძლევა მხოლოდ-მოდიფიკატორის "
+#~ "მალსახმობების მხარდაჭერასაც."
+
+#~ msgid ""
+#~ "This is a shortcut for switching layouts. It does not support modifier-"
+#~ "only shortcuts and also may not work in some situations (e.g. if popup is "
+#~ "active or from screensaver)."
+#~ msgstr ""
+#~ "განლაგებების გადასართავი მალსახმობი. მას არ აქვს მხოლოდ-მოდიფიკატორის "
+#~ "ღილაკების მხარდაჭერა და შეიძლება ყველა სიტუაციაში არ იმუშაოს (მაგ: "
+#~ "ეკრანის დაცვიდან ან მხტუნავ ფანჯარაზე)."
+
+#~ msgid ""
+#~ "This shortcut allows for fast switching between two layouts, by always "
+#~ "switching to the last-used one."
+#~ msgstr ""
+#~ "ეს მალსახმობი საშუალებას გაძლევთ, ორ განლაგებას შორის სწრაფად გადაერთოთ. "
+#~ "ის ბოლოს გამოყენებულ განლაგებაზე გადაგრთავთ."
+
+#~ msgid "Advanced"
+#~ msgstr "დამატებითი"
+
+#~ msgctxt "variant"
+#~ msgid "Default"
+#~ msgstr "ნაგულისხმები"
+
+#~ msgid ""
+#~ "Allows to test keyboard repeat and click volume (just don't forget to "
+#~ "apply the changes)."
+#~ msgstr ""
+#~ "საშუალებას გაძლევთ დატესტოთ კლავიატურის გამეორებისა და წკაპის ხმები (არ "
+#~ "დაგავიწყდეთ ჯერ გადაატაროთ თქვენი ცვლილებები)."
+
+#~ msgid ""
+#~ "If supported, this option allows you to setup the state of NumLock after "
+#~ "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+#~ "configure Plasma not to set NumLock state."
+#~ msgstr ""
+#~ "თუ მხარდაჭერილია, ეს პარამეტრი საშუალებას გაძლევთ დააყენოთ NumLock-ის "
+#~ "მდგომარეობა Plasma-ის გაშვებისას .<p> შეგიძლიათ ჩართოთ ის, ან გამორთოთ, "
+#~ "ან ხელი არ ახლოთ."
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the delay after which a "
+#~ "pressed key will start generating keycodes. The 'Repeat rate' option "
+#~ "controls the frequency of these keycodes."
+#~ msgstr ""
+#~ "თუ მხარდაჭერილია, ეს პარამეტრი საშუალებას გაძლევთ დააყენოთ დაყოვნება, "
+#~ "რომლის შემდეგაც დაწოლილი ღილაკი კოდების გენერაციას დაიწყებს. პარამეტრი "
+#~ "\"გამეორების სიჩქარე\" ამ კოდების სიხშირეს აკონტროლებს."
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the rate at which keycodes "
+#~ "are generated while a key is pressed."
+#~ msgstr ""
+#~ "თუ მხარდაჭერილია, ეს პარამეტრი საშუალებას გაძლევთ ღილაკის დაჭერისას მისი "
+#~ "კოდების გენერირების სიჩქარე დააყენოთ."
+
+#~ msgid " repeats/s"
+#~ msgstr " გამეორება/წმ"
+
+#~ msgid " ms"
+#~ msgstr " მწმ"
 
 #~ msgid "KDE Keyboard Control Module"
 #~ msgstr "KDE-ის კლავიატურის კონტროლის მოდული"

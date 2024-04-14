@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-04-14 00:39+0000\n"
 "PO-Revision-Date: 2023-10-22 18:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -51,437 +51,23 @@ msgstr "கடைசியாக பயன்படுத்திய விச�
 msgid "Switch keyboard layout to %1"
 msgstr "%1 ஆக விசைப்பலகை தளவமைப்பை மாற்று"
 
-#: flags.cpp:77
+#: flags.cpp:78
 #, kde-format
 msgctxt "layout - variant"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
-#: kcm_add_layout_dialog.ui:14
-#, kde-format
-msgid "Add Layout"
-msgstr "தளவமைப்பை சேர்"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
-#: kcm_add_layout_dialog.ui:20
-#, kde-format
-msgid "Search…"
-msgstr "தேடு..."
-
-#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
-#: kcm_add_layout_dialog.ui:45
-#, kde-format
-msgid "Shortcut:"
-msgstr "குறுக்குவழி:"
-
-#. i18n: ectx: property (text), widget (QLabel, labelLabel)
-#: kcm_add_layout_dialog.ui:55
-#, kde-format
-msgid "Label:"
-msgstr "பெயர்:"
-
-#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
-#. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:347
-#, kde-format
-msgid "Preview"
-msgstr "முன்னோட்டம்"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
-#: kcm_keyboard.ui:21
-#, kde-format
-msgid "Hardware"
-msgstr "வன்பொருள்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm_keyboard.ui:36
-#, kde-format
-msgid "Keyboard &model:"
-msgstr "விசைப்பலகை &வகை:"
-
-#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
-#: kcm_keyboard.ui:56
-#, fuzzy, kde-format
-msgid ""
-"Here you can choose a keyboard model. This setting is independent of your "
-"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
-"keyboard is manufactured. Modern keyboards that come with your computer "
-"usually have two extra keys and are referred to as \"104-key\" models, which "
-"is probably what you want if you do not know what kind of keyboard you "
-"have.\n"
-msgstr ""
-"இங்கே நீங்கள் விசைபலகை மாதிரியை தேர்ந்தெடுக்கலாம். இந்த அமைப்பு உங்கள் விசைப்பலகை "
-"இடஅமைவுக்கு சம்பந்தமில்லை மற்றும் \"வன்பொருள்\" மாதிரிக்கு குறிப்பிடும், அதாவது, உங்கள் "
-"விசைபலகை தயாரிக்கபட்டிருக்கும் முறை. உங்கள் கணினியுடன் வரும் தற்காலத்திய விசைபலகைகள் "
-"இரண்டு மிகையான விசைகள் இருக்கும் மாற்றும் அதை \"104-விசை\" மாதிரிகள் என்று "
-"குறிப்பிடபடுகின்றன, உங்களது விசைப்பலகை எந்த வகை என்று தெரியவில்லை என்றால், இது "
-"தேவைபடும்.\n"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
-#: kcm_keyboard.ui:97
-#, kde-format
-msgid "Layouts"
-msgstr "தளவமைப்புகள்"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:105
-#, kde-format
-msgid ""
-"If you select \"Application\" or \"Window\" switching policy, changing the "
-"keyboard layout will only affect the current application or window."
-msgstr ""
-"\"செயலி சார்ந்த\" அல்லது \"சாளரம் சார்ந்த\" கொள்கைகளை நீங்கள் தேர்ந்தெடுத்தால், விசைப்பலகை "
-"தளவமைப்பை மாற்றுதல் நடப்பு செயலியையோ சாளர‍த்தையோ மட்டும் பாதிக்கும்."
-
-#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:108
-#, kde-format
-msgid "Switching Policy"
-msgstr "மாற்ற கொள்கை"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
-#: kcm_keyboard.ui:114
-#, kde-format
-msgid "&Global"
-msgstr "&பொதுவானது"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
-#: kcm_keyboard.ui:127
-#, kde-format
-msgid "&Desktop"
-msgstr "&பணிமேடை சார்ந்த‍து"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
-#: kcm_keyboard.ui:137
-#, kde-format
-msgid "&Application"
-msgstr "&செயலி சார்ந்த‍து"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
-#: kcm_keyboard.ui:147
-#, kde-format
-msgid "&Window"
-msgstr "&சாளரம் சார்ந்த‍து"
-
-#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
-#: kcm_keyboard.ui:160
-#, kde-format
-msgid "Shortcuts for Switching Layout"
-msgstr "தளவமைப்பை மாற்றுவதற்கான சுருக்குவழிகள்"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm_keyboard.ui:166
-#, kde-format
-msgid "Main shortcuts:"
-msgstr "பிரதான சுருக்குவழிகள்:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
-#: kcm_keyboard.ui:179
-#, kde-format
-msgid ""
-"This is a shortcut for switching layouts which is handled by X.org. It "
-"allows modifier-only shortcuts."
-msgstr ""
-"இது, தளவமைப்புகளுக்கிடையே தாவ உதவும், X.org கையாளும் சுருக்குவழியாகும். "
-"மாற்றிவிசையை மட்டும் கொண்ட சுருக்குவழியை கூட இதற்கு பயன்படுத்தலாம்."
-
-#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
-#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:182 kcm_keyboard.ui:212
-#, kde-format
-msgctxt "no shortcut defined"
-msgid "None"
-msgstr "ஒன்றும் இல்லை"
-
-#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
-#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
-#: kcm_keyboard.ui:189 kcm_keyboard.ui:219
-#, kde-format
-msgid "…"
-msgstr "…"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm_keyboard.ui:196
-#, kde-format
-msgid "3rd level shortcuts:"
-msgstr "மூன்றாம் நிலை சுருக்குவழிகள்:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:209
-#, kde-format
-msgid ""
-"This is a shortcut for switching to a third level of the active layout (if "
-"it has one) which is handled by X.org. It allows modifier-only shortcuts."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm_keyboard.ui:226
-#, kde-format
-msgid "Alternative shortcut:"
-msgstr "மாற்று சுருக்குவழி:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
-#: kcm_keyboard.ui:239
-#, kde-format
-msgid ""
-"This is a shortcut for switching layouts. It does not support modifier-only "
-"shortcuts and also may not work in some situations (e.g. if popup is active "
-"or from screensaver)."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: kcm_keyboard.ui:252
-#, kde-format
-msgid "Last used shortcut:"
-msgstr "கடைசியாக பயன்படுத்தியதற்கான சுருக்குவழி:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
-#: kcm_keyboard.ui:265
-#, kde-format
-msgid ""
-"This shortcut allows for fast switching between two layouts, by always "
-"switching to the last-used one."
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:293
-#, kde-format
-msgid "Configure layouts"
-msgstr "தளவமைப்புகளை அமை"
-
-#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:307
-#, kde-format
-msgid "Add"
-msgstr "சேர்"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:317
-#, kde-format
-msgid "Remove"
-msgstr "நீக்கு"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:327
-#, kde-format
-msgid "Move Up"
-msgstr "மேலே நகர்த்து"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:337
-#, kde-format
-msgid "Move Down"
-msgstr "கீழே நகர்த்து"
-
-#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:382
-#, kde-format
-msgid "Spare layouts"
-msgstr "கூடுதல் தளவமைப்புகள்"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:414
-#, kde-format
-msgid "Main layout count:"
-msgstr "பிரதான தளவமைப்புகளின் எண்ணிக்கை:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:444
-#, kde-format
-msgid "Advanced"
-msgstr "மேம்பட்டவை"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:450
-#, kde-format
-msgid "&Configure keyboard options"
-msgstr "&விசைப்பலகை விருப்பங்களை அமை"
-
-#: kcm_keyboard_widget.cpp:209
+#: keyboardmodel.cpp:42
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "தெரியாதது"
 
-#: kcm_keyboard_widget.cpp:211
+#: keyboardmodel.cpp:46
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
-
-#: kcm_keyboard_widget.cpp:655
-#, kde-format
-msgctxt "no shortcuts defined"
-msgid "None"
-msgstr "ஏதுமில்லை"
-
-#: kcm_keyboard_widget.cpp:669
-#, kde-format
-msgid "%1 shortcut"
-msgid_plural "%1 shortcuts"
-msgstr[0] "%1 சுருக்குவழி"
-msgstr[1] "%1 சுருக்குவழிகள்"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgctxt "layout map name"
-msgid "Map"
-msgstr "தளவமைப்பு"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Layout"
-msgstr "தளவமைப்பின் பெயர்"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Variant"
-msgstr "திரிபு"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Label"
-msgstr "காட்சிப்பெயர்"
-
-#: kcm_view_models.cpp:200
-#, kde-format
-msgid "Shortcut"
-msgstr "சுருக்குவழி"
-
-#: kcm_view_models.cpp:273
-#, kde-format
-msgctxt "variant"
-msgid "Default"
-msgstr "இயல்பிருப்பு"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcmmiscwidget.ui:31
-#, kde-format
-msgid "When a key is held:"
-msgstr "ஒரு விசையை அழுத்தியே வைக்கும்போது:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
-#: kcmmiscwidget.ui:38
-#, kde-format
-msgid "&Show accented and similar characters "
-msgstr "&அதை போன்ற மேம்பட்ட எழுத்துகளை காட்டு"
-
-#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
-#: kcmmiscwidget.ui:45
-#, kde-format
-msgid "&Repeat the key"
-msgstr "&அவ்விசையை மீண்டும் செயல்படுத்து"
-
-#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
-#: kcmmiscwidget.ui:52
-#, kde-format
-msgid "&Do nothing"
-msgstr "&ஒன்றும் செய்யாதே"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcmmiscwidget.ui:66
-#, kde-format
-msgid "Test area:"
-msgstr "சோதனைக்கான இடம்:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
-#: kcmmiscwidget.ui:73
-#, kde-format
-msgid ""
-"Allows to test keyboard repeat and click volume (just don't forget to apply "
-"the changes)."
-msgstr ""
-"மீளச்செயல் மற்றும் ஒலியளவு சார்ந்த மாற்றங்களை செயல்படுத்திய பின் அவற்றை இங்கு சோதித்து "
-"பாருங்கள்."
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "If supported, this option allows you to setup the state of NumLock after "
-#| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
-#| "configure KDE not to set NumLock state."
-msgid ""
-"If supported, this option allows you to setup the state of NumLock after "
-"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
-"configure Plasma not to set NumLock state."
-msgstr ""
-"ஆதரிக்கப்படுமாயின், இத்தேர்வானது கேபசூ துவங்கிய பின்னர் நம்லாக் விசையின் நிலையினைத் "
-"தீர்மானிக்க அனுமதியும்.<p>தாங்கள் நம்லாக் விசையை எழவோ அணையவோ செய்யலாம், அ கேபசூவினை "
-"நம்லாக்தனை அமைக்க வேண்டாதவாறும் பணிக்கலாம்."
-
-#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:85
-#, kde-format
-msgid "NumLock on Plasma Startup"
-msgstr "பிளாஸ்மா துவங்கும்போது NumLock-இன் நிலை"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
-#: kcmmiscwidget.ui:97
-#, kde-format
-msgid "T&urn on"
-msgstr "&இயக்கு"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
-#: kcmmiscwidget.ui:104
-#, kde-format
-msgid "&Turn off"
-msgstr "&முடக்கு"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
-#: kcmmiscwidget.ui:111
-#, kde-format
-msgid "Leave unchan&ged"
-msgstr "மா&ற்றாமல் விடு"
-
-#. i18n: ectx: property (text), widget (QLabel, lblRate)
-#: kcmmiscwidget.ui:148
-#, kde-format
-msgid "&Rate:"
-msgstr "&வேகம்:"
-
-#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the delay after which a pressed "
-"key will start generating keycodes. The 'Repeat rate' option controls the "
-"frequency of these keycodes."
-msgstr ""
-"ஆதரிக்கப்படுமாயின், இத்தேர்வானது அழுத்தப்படும் விசையொன்று விசைக்குறியீடுகளை "
-"வெளியிடவாகும் இடைவெளியைத் தீர்மானிக்க அனுமதியும். 'மீள் வேக'த் தேர்வானது இவ்விசைக் "
-"குறியீடுகளின் மீள்தருணத்தை கட்டுப்படுத்தும்."
-
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
-#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
-#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the rate at which keycodes are "
-"generated while a key is pressed."
-msgstr ""
-"ஆதரிக்கப்படுமாயின், இத்தேர்வானது அழுத்தப்படும் விசையொன்று விசைக்குறியீடுகளை "
-"வெளியிடவேண்டிய வேகத்தைத் தீர்மானிக்க அனுமதியும்."
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
-#: kcmmiscwidget.ui:195
-#, kde-format
-msgid " repeats/s"
-msgstr " நிகழ்வுகள் நொடிக்கு"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:205
-#, kde-format
-msgid " ms"
-msgstr " மி.நொ."
-
-#. i18n: ectx: property (text), widget (QLabel, lblDelay)
-#: kcmmiscwidget.ui:246
-#, kde-format
-msgid "&Delay:"
-msgstr "&தாமதம்:"
 
 #: tastenbrett/main.cpp:52
 #, kde-format
@@ -507,6 +93,433 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
+
+#: ui/Advanced.qml:38
+#, fuzzy, kde-format
+#| msgid "&Configure keyboard options"
+msgctxt "@option:checkbox"
+msgid "Configure keyboard options"
+msgstr "&விசைப்பலகை விருப்பங்களை அமை"
+
+#: ui/Hardware.qml:34
+#, fuzzy, kde-format
+#| msgid "Keyboard &model:"
+msgctxt "@title:group"
+msgid "Keyboard model:"
+msgstr "விசைப்பலகை &வகை:"
+
+#: ui/Hardware.qml:68
+#, fuzzy, kde-format
+#| msgid "NumLock on Plasma Startup"
+msgctxt "@title:group"
+msgid "NumLock on Plasma Startup:"
+msgstr "பிளாஸ்மா துவங்கும்போது NumLock-இன் நிலை"
+
+#: ui/Hardware.qml:73
+#, fuzzy, kde-format
+#| msgid "T&urn on"
+msgctxt "@option:radio"
+msgid "Turn On"
+msgstr "&இயக்கு"
+
+#: ui/Hardware.qml:77
+#, fuzzy, kde-format
+#| msgid "&Turn off"
+msgctxt "@option:radio"
+msgid "Turn Off"
+msgstr "&முடக்கு"
+
+#: ui/Hardware.qml:81
+#, fuzzy, kde-format
+#| msgid "Leave unchan&ged"
+msgctxt "@option:radio"
+msgid "Leave unchanged"
+msgstr "&மாற்றாது விடுக"
+
+#: ui/Hardware.qml:114
+#, fuzzy, kde-format
+#| msgid "When a key is held:"
+msgctxt "@title:group"
+msgid "When key is held:"
+msgstr "ஒரு விசையை அழுத்தியே வைக்கும்போது:"
+
+#: ui/Hardware.qml:119
+#, fuzzy, kde-format
+#| msgid "&Repeat the key"
+msgctxt "@option:radio"
+msgid "Repeat the key"
+msgstr "&அவ்விசையை மீண்டும் செயல்படுத்து"
+
+#: ui/Hardware.qml:124
+#, fuzzy, kde-format
+#| msgid "&Do nothing"
+msgctxt "@option:radio"
+msgid "Do nothing"
+msgstr "&ஒன்றும் செய்யாதே"
+
+#: ui/Hardware.qml:129
+#, fuzzy, kde-format
+#| msgid "&Show accented and similar characters "
+msgctxt "@option:radio"
+msgid "Show accented and similar characters"
+msgstr "&அதை போன்ற மேம்பட்ட எழுத்துகளை காட்டு"
+
+#: ui/Hardware.qml:164
+#, fuzzy, kde-format
+#| msgid "&Delay:"
+msgctxt "@label:slider"
+msgid "Delay:"
+msgstr "&தாமதம்:"
+
+#: ui/Hardware.qml:199
+#, fuzzy, kde-format
+#| msgid "&Rate:"
+msgctxt "@label:slider"
+msgid "Rate:"
+msgstr "&வேகம்:"
+
+#: ui/Hardware.qml:247
+#, fuzzy, kde-format
+#| msgid "Test area:"
+msgctxt "@label:textbox"
+msgid "Test area:"
+msgstr "சோதனைக்கான இடம்:"
+
+#: ui/Hardware.qml:248
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to test settings"
+msgstr ""
+
+#: ui/LayoutDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "Add Layout"
+msgctxt "@title:window"
+msgid "Add Layout"
+msgstr "தளவமைப்பை சேர்"
+
+#: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgctxt "@action:button"
+msgid "Preview"
+msgstr "முன்னோட்டம்"
+
+#: ui/LayoutDialog.qml:124
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Display text:"
+msgstr ""
+
+#: ui/LayoutDialog.qml:143
+#, fuzzy, kde-format
+#| msgid "Shortcut:"
+msgctxt "@option:textbox"
+msgid "Shortcut:"
+msgstr "குறுக்குவழி:"
+
+#: ui/Layouts.qml:28
+#, fuzzy, kde-format
+#| msgid "Shortcuts for Switching Layout"
+msgctxt "@title:group"
+msgid "Shortcuts for Switching Layout"
+msgstr "தளவமைப்பை மாற்றுவதற்கான சுருக்குவழிகள்"
+
+#: ui/Layouts.qml:34
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgctxt "@option:textbox"
+msgid "Main shortcuts:"
+msgstr "பிரதான சுருக்குவழிகள்:"
+
+#: ui/Layouts.qml:61
+#, fuzzy, kde-format
+#| msgid "3rd level shortcuts:"
+msgctxt "@option:textbox"
+msgid "3rd level shortcuts:"
+msgstr "மூன்றாம் நிலை சுருக்குவழிகள்:"
+
+#: ui/Layouts.qml:88
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgctxt "@option:textbox"
+msgid "Alternative shortcut:"
+msgstr "மாற்று சுருக்குவழி:"
+
+#: ui/Layouts.qml:109
+#, fuzzy, kde-format
+#| msgid "Last used shortcut:"
+msgctxt "@option:textbox"
+msgid "Last used shortcuts:"
+msgstr "கடைசியாக பயன்படுத்தியதற்கான சுருக்குவழி:"
+
+#: ui/Layouts.qml:129
+#, kde-format
+msgctxt "@option:checkbox"
+msgid "Show a popup on layout changes"
+msgstr ""
+
+#: ui/Layouts.qml:145
+#, fuzzy, kde-format
+#| msgid "Switching Policy"
+msgctxt "@title:group"
+msgid "Switching Policy"
+msgstr "மாற்ற கொள்கை"
+
+#: ui/Layouts.qml:152
+#, fuzzy, kde-format
+#| msgid "&Global"
+msgctxt "@option:radio"
+msgid "Global"
+msgstr "&பொதுவானது"
+
+#: ui/Layouts.qml:156
+#, fuzzy, kde-format
+#| msgid "&Desktop"
+msgctxt "@option:radio"
+msgid "Desktop"
+msgstr "&பணிமேடை சார்ந்த‍து"
+
+#: ui/Layouts.qml:160
+#, fuzzy, kde-format
+#| msgid "&Application"
+msgctxt "@option:radio"
+msgid "Application"
+msgstr "&செயலி சார்ந்த‍து"
+
+#: ui/Layouts.qml:164
+#, fuzzy, kde-format
+#| msgid "&Window"
+msgctxt "@option:radio"
+msgid "Window"
+msgstr "&சாளரம் சார்ந்த‍து"
+
+#: ui/Layouts.qml:185
+#, fuzzy, kde-format
+#| msgid "Configure layouts"
+msgctxt "@option:checkbox"
+msgid "Configure Layouts"
+msgstr "தளவமைப்புகளை அமை"
+
+#: ui/Layouts.qml:200
+#, fuzzy, kde-format
+#| msgid "Add"
+msgctxt "@action:button"
+msgid "Add"
+msgstr "சேர்"
+
+#: ui/Layouts.qml:206
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "நீக்கு"
+
+#: ui/Layouts.qml:213
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgctxt "@action:button"
+msgid "Move Up"
+msgstr "மேலே நகர்த்து"
+
+#: ui/Layouts.qml:229
+#, fuzzy, kde-format
+#| msgid "Move Down"
+msgctxt "@action:button"
+msgid "Move Down"
+msgstr "கீழே நகர்த்து"
+
+#: ui/Layouts.qml:316
+#, fuzzy, kde-format
+#| msgctxt "layout map name"
+#| msgid "Map"
+msgctxt "@title:column"
+msgid "Map"
+msgstr "தளவமைப்பு"
+
+#: ui/Layouts.qml:323
+#, fuzzy, kde-format
+#| msgid "Label"
+msgctxt "@title:column"
+msgid "Label"
+msgstr "காட்சிப்பெயர்"
+
+#: ui/Layouts.qml:332
+#, fuzzy, kde-format
+#| msgid "Layout"
+msgctxt "@title:column"
+msgid "Layout"
+msgstr "தளவமைப்பின் பெயர்"
+
+#: ui/Layouts.qml:337
+#, fuzzy, kde-format
+#| msgid "Variant"
+msgctxt "@title:column"
+msgid "Variant"
+msgstr "திரிபு"
+
+#: ui/Layouts.qml:342
+#, fuzzy, kde-format
+#| msgid "Shortcut"
+msgctxt "@title:column"
+msgid "Shortcut"
+msgstr "சுருக்குவழி"
+
+#: ui/Layouts.qml:388
+#, fuzzy, kde-format
+#| msgid "Main shortcuts:"
+msgctxt "@action:button"
+msgid "Reassign shortcut"
+msgstr "பிரதான சுருக்குவழிகள்:"
+
+#: ui/Layouts.qml:404
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel assignment"
+msgstr ""
+
+#: ui/Layouts.qml:417
+#, fuzzy, kde-format
+#| msgid "Spare layouts"
+msgctxt "@option:checkbox"
+msgid "Spare layouts"
+msgstr "கூடுதல் தளவமைப்புகள்"
+
+#: ui/Layouts.qml:453
+#, fuzzy, kde-format
+#| msgid "Main layout count:"
+msgctxt "@label:spinbox"
+msgid "Main layout count:"
+msgstr "பிரதான தளவமைப்புகளின் எண்ணிக்கை:"
+
+#: ui/main.qml:41
+#, fuzzy, kde-format
+#| msgid "Hardware"
+msgctxt "@title:tab"
+msgid "Hardware"
+msgstr "வன்பொருள்"
+
+#: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Layouts"
+msgctxt "@title:tab"
+msgid "Layouts"
+msgstr "தளவமைப்புகள்"
+
+#: ui/main.qml:53
+#, kde-format
+msgctxt "@title:tab"
+msgid "Key Bindings"
+msgstr ""
+
+#: xkboptionsmodel.cpp:161
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] "%1 சுருக்குவழி"
+msgstr[1] "%1 சுருக்குவழிகள்"
+
+#: xkboptionsmodel.cpp:164
+#, kde-format
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "ஏதுமில்லை"
+
+#~ msgid "Search…"
+#~ msgstr "தேடு..."
+
+#~ msgid "Label:"
+#~ msgstr "பெயர்:"
+
+#, fuzzy
+#~ msgid ""
+#~ "Here you can choose a keyboard model. This setting is independent of your "
+#~ "keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+#~ "keyboard is manufactured. Modern keyboards that come with your computer "
+#~ "usually have two extra keys and are referred to as \"104-key\" models, "
+#~ "which is probably what you want if you do not know what kind of keyboard "
+#~ "you have.\n"
+#~ msgstr ""
+#~ "இங்கே நீங்கள் விசைபலகை மாதிரியை தேர்ந்தெடுக்கலாம். இந்த அமைப்பு உங்கள் விசைப்பலகை "
+#~ "இடஅமைவுக்கு சம்பந்தமில்லை மற்றும் \"வன்பொருள்\" மாதிரிக்கு குறிப்பிடும், அதாவது, "
+#~ "உங்கள் விசைபலகை தயாரிக்கபட்டிருக்கும் முறை. உங்கள் கணினியுடன் வரும் தற்காலத்திய "
+#~ "விசைபலகைகள் இரண்டு மிகையான விசைகள் இருக்கும் மாற்றும் அதை \"104-விசை\" மாதிரிகள் "
+#~ "என்று குறிப்பிடபடுகின்றன, உங்களது விசைப்பலகை எந்த வகை என்று தெரியவில்லை என்றால், "
+#~ "இது தேவைபடும்.\n"
+
+#~ msgid ""
+#~ "If you select \"Application\" or \"Window\" switching policy, changing "
+#~ "the keyboard layout will only affect the current application or window."
+#~ msgstr ""
+#~ "\"செயலி சார்ந்த\" அல்லது \"சாளரம் சார்ந்த\" கொள்கைகளை நீங்கள் தேர்ந்தெடுத்தால், "
+#~ "விசைப்பலகை தளவமைப்பை மாற்றுதல் நடப்பு செயலியையோ சாளர‍த்தையோ மட்டும் பாதிக்கும்."
+
+#~ msgid ""
+#~ "This is a shortcut for switching layouts which is handled by X.org. It "
+#~ "allows modifier-only shortcuts."
+#~ msgstr ""
+#~ "இது, தளவமைப்புகளுக்கிடையே தாவ உதவும், X.org கையாளும் சுருக்குவழியாகும். "
+#~ "மாற்றிவிசையை மட்டும் கொண்ட சுருக்குவழியை கூட இதற்கு பயன்படுத்தலாம்."
+
+#~ msgctxt "no shortcut defined"
+#~ msgid "None"
+#~ msgstr "ஒன்றும் இல்லை"
+
+#~ msgid "…"
+#~ msgstr "…"
+
+#~ msgid "Advanced"
+#~ msgstr "மேம்பட்டவை"
+
+#~ msgctxt "variant"
+#~ msgid "Default"
+#~ msgstr "இயல்பிருப்பு"
+
+#~ msgid ""
+#~ "Allows to test keyboard repeat and click volume (just don't forget to "
+#~ "apply the changes)."
+#~ msgstr ""
+#~ "மீளச்செயல் மற்றும் ஒலியளவு சார்ந்த மாற்றங்களை செயல்படுத்திய பின் அவற்றை இங்கு சோதித்து "
+#~ "பாருங்கள்."
+
+#, fuzzy
+#~| msgid ""
+#~| "If supported, this option allows you to setup the state of NumLock after "
+#~| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
+#~| "configure KDE not to set NumLock state."
+#~ msgid ""
+#~ "If supported, this option allows you to setup the state of NumLock after "
+#~ "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+#~ "configure Plasma not to set NumLock state."
+#~ msgstr ""
+#~ "ஆதரிக்கப்படுமாயின், இத்தேர்வானது கேபசூ துவங்கிய பின்னர் நம்லாக் விசையின் நிலையினைத் "
+#~ "தீர்மானிக்க அனுமதியும்.<p>தாங்கள் நம்லாக் விசையை எழவோ அணையவோ செய்யலாம், அ கேபசூவினை "
+#~ "நம்லாக்தனை அமைக்க வேண்டாதவாறும் பணிக்கலாம்."
+
+#~ msgid "Leave unchan&ged"
+#~ msgstr "மா&ற்றாமல் விடு"
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the delay after which a "
+#~ "pressed key will start generating keycodes. The 'Repeat rate' option "
+#~ "controls the frequency of these keycodes."
+#~ msgstr ""
+#~ "ஆதரிக்கப்படுமாயின், இத்தேர்வானது அழுத்தப்படும் விசையொன்று விசைக்குறியீடுகளை "
+#~ "வெளியிடவாகும் இடைவெளியைத் தீர்மானிக்க அனுமதியும். 'மீள் வேக'த் தேர்வானது இவ்விசைக் "
+#~ "குறியீடுகளின் மீள்தருணத்தை கட்டுப்படுத்தும்."
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the rate at which keycodes "
+#~ "are generated while a key is pressed."
+#~ msgstr ""
+#~ "ஆதரிக்கப்படுமாயின், இத்தேர்வானது அழுத்தப்படும் விசையொன்று விசைக்குறியீடுகளை "
+#~ "வெளியிடவேண்டிய வேகத்தைத் தீர்மானிக்க அனுமதியும்."
+
+#~ msgid " repeats/s"
+#~ msgstr " நிகழ்வுகள் நொடிக்கு"
+
+#~ msgid " ms"
+#~ msgstr " மி.நொ."
 
 #~ msgid "KDE Keyboard Control Module"
 #~ msgstr "கே.டீ.யீ. விசைப்பலகை கட்டுப்பாடு கூறு"
@@ -563,11 +576,6 @@ msgstr ""
 
 #~ msgid "Turn o&ff"
 #~ msgstr "&அணைக்க"
-
-#, fuzzy
-#~| msgid "Leave unchan&ged"
-#~ msgid "&Leave unchanged"
-#~ msgstr "&மாற்றாது விடுக"
 
 #, fuzzy
 #~| msgid "&Enable keyboard repeat"
