@@ -128,7 +128,7 @@ T.ItemDelegate {
 
     Drag.active: mouseArea.drag.active
     Drag.dragType: Drag.Automatic
-    Drag.mimeData: { "text/uri-list" : root.url }
+    Drag.mimeData: { "text/uri-list" : [root.url] }
     Drag.onDragFinished: Drag.imageSource = ""
 
     MouseArea {
