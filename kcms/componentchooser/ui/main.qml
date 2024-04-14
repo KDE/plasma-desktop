@@ -42,7 +42,7 @@ KCM.SimpleKCM {
                                                         dialerCombo.implicitWidth)
 
 
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.label: i18nc("Internet related application’s category’s name", "Internet")
             Kirigami.FormData.isSection: true
         }
@@ -112,7 +112,7 @@ KCM.SimpleKCM {
                 }
             }
         }
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.label: i18nc("Multimedia related application’s category’s name", "Multimedia")
             Kirigami.FormData.isSection: true
         }
@@ -186,7 +186,7 @@ KCM.SimpleKCM {
                 }
             }
         }
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.label: i18nc("Documents related application’s category’s name", "Documents")
             Kirigami.FormData.isSection: true
         }
@@ -235,7 +235,7 @@ KCM.SimpleKCM {
                 }
             }
         }
-        Kirigami.Separator {
+        Item {
             Kirigami.FormData.label: i18nc("Utilities related application’s category’s name", "Utilities")
             Kirigami.FormData.isSection: true
         }
