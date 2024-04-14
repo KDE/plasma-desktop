@@ -48,7 +48,6 @@ ColumnLayout {
     QQC2.ScrollView {
         Layout.fillWidth: true
         Layout.fillHeight: true
-        clip: true
 
         Component.onCompleted: {
             if (background) {
@@ -60,6 +59,7 @@ ColumnLayout {
             id: treeView
             boundsBehavior: Flickable.StopAtBounds
             alternatingRows: false
+            clip: true
 
             onEnabledChanged: {
                 if (!enabled) {
