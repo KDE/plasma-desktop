@@ -27,7 +27,6 @@ ContainmentItem {
     Layout.preferredWidth: fixedWidth || currentLayout.implicitWidth + currentLayout.horizontalDisplacement
     Layout.preferredHeight: fixedHeight || currentLayout.implicitHeight + currentLayout.verticalDisplacement
 
-    property Item toolBox
     property var layoutManager: LayoutManager
 
     property Item configOverlay
@@ -108,8 +107,6 @@ ContainmentItem {
         const component = Qt.createComponent("ConfigOverlay.qml");
         configOverlay = component.createObject(this, {
             "anchors.fill": dropArea,
-            "anchors.rightMargin": Qt.binding(() => isHorizontal ? toolBox.width : 0),
-            "anchors.bottomMargin": Qt.binding(() => !isHorizontal ? toolBox.height : 0),
         });
         component.destroy();
     }
@@ -288,7 +285,7 @@ ContainmentItem {
                                 width = padding;
                             }
                             anchors[left+'Margin'] = - currentLayout.rowSpacing/2 - (appletIndex == 0 ? dropArea.anchors[left + 'Margin'] + currentLayout.x : 0)
-                            anchors[right+'Margin'] = - currentLayout.rowSpacing/2 - (appletIndex == appletsModel.count-1 ? dropArea.anchors[right + 'Margin'] + currentLayout.toolBoxSize : 0)
+                            anchors[right+'Margin'] = - currentLayout.rowSpacing/2 - (appletIndex == appletsModel.count-1 ? dropArea.anchors[right + 'Margin']: 0)
                             anchors[side+'Margin'] = - inset
                         }
                         elementId: fill ? 'fill' : (root.isHorizontal ? side + (inThickArea ? 'left' : 'right') : (inThickArea ? 'top' : 'bottom') + side)
@@ -386,11 +383,8 @@ ContainmentItem {
             rowSpacing: Kirigami.Units.smallSpacing
             columnSpacing: Kirigami.Units.smallSpacing
 
-            x: Qt.application.layoutDirection === Qt.RightToLeft && isHorizontal ? toolBoxSize : 0;
-            readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
-
-            property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin + (isHorizontal ? currentLayout.toolBoxSize : 0)
-            property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin + (isHorizontal ? 0 : currentLayout.toolBoxSize)
+            property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin
+            property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin
 
     // BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
             width: root.width - horizontalDisplacement
