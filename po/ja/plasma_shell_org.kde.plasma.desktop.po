@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 02:45+0000\n"
-"PO-Revision-Date: 2024-02-08 15:20+0900\n"
+"PO-Revision-Date: 2024-04-13 21:31+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -244,8 +244,8 @@ msgstr "ショートカット"
 #: contents/configuration/ConfigurationShortcuts.qml:30
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr ""
-"ここで設定したショートカットで、クリックされたときのようにウィジェットがアク"
-"ティブになります。"
+"ここで設定したショートカットを使用して、ウィジェットをアクティブにすることが"
+"できます。"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 msgid "Wallpaper"
@@ -316,14 +316,12 @@ msgid "Center"
 msgstr "中央"
 
 #: contents/configuration/PanelConfiguration.qml:288
-#, fuzzy
-#| msgid "Height:"
 msgid "Height"
-msgstr "高さ:"
+msgstr "高さ"
 
 #: contents/configuration/PanelConfiguration.qml:289
 msgid "Width"
-msgstr ""
+msgstr "幅"
 
 #: contents/configuration/PanelConfiguration.qml:307
 msgid "Fill height"
@@ -528,9 +526,3 @@ msgstr "利用可能なウィジェットはありません"
 #: contents/views/Panel.qml:330
 msgid "Panel Focus Indicator"
 msgstr ""
-
-#~ msgid "Sorry! There was an error loading %1."
-#~ msgstr "すみません。%1 の読み込み中にエラーが発生しました。"
-
-#~ msgid "Length"
-#~ msgstr "長さ"
