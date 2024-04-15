@@ -4,13 +4,13 @@
 # Diego Iastrubni <elcuco@kde.org>, 2008, 2012.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:39+0000\n"
-"PO-Revision-Date: 2023-10-22 09:02+0300\n"
+"PO-Revision-Date: 2024-04-14 17:38+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -82,13 +82,7 @@ msgid "Keyboard layout visualization"
 msgstr "המחשת פריסת מקלדת"
 
 #: tastenbrett/main.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "The keyboard geometry failed to load. This often indicates that the "
-#| "selected model does not support a specific layout or layout variant. This "
-#| "problem will likely also present when you try to use this combination of "
-#| "model, layout and variant."
+#, kde-format
 msgctxt "@label"
 msgid ""
 "The keyboard geometry failed to load. This often indicates that the selected "
@@ -101,95 +95,84 @@ msgid ""
 msgstr ""
 "טעינת תוואי המקלדת נכשלה. בדרך כלל מציין שהדגם הנבחר לא תומך בפריסה או "
 "בהגוון פריסה מסוים. זה כנראה יקרה גם בעת ניסיון להשתמש בצירוף כזה של דגם, "
-"פריסה והגוון."
+"פריסה והגוון.\n"
+"הצגה מקדימה של הפריסוות שמוגדרות מחוץ לתיקיית ה־xkb של המערכת שלך אינה נתמכת "
+"וגם תציג את ההודעה הזאת. הן יכולות לעבוד היטב אם יוחלו במערכת"
 
 #: ui/Advanced.qml:38
-#, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Configure keyboard options"
-msgstr "ה&גדרת אפשרויות המקלדת"
+msgstr "הגדרת אפשרויות המקלדת"
 
 #: ui/Hardware.qml:34
-#, fuzzy, kde-format
-#| msgid "Keyboard &model:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Keyboard model:"
-msgstr "&דגם המקלדת:"
+msgstr "דגם המקלדת:"
 
 #: ui/Hardware.qml:68
-#, fuzzy, kde-format
-#| msgid "NumLock on Plasma Startup"
+#, kde-format
 msgctxt "@title:group"
 msgid "NumLock on Plasma Startup:"
-msgstr "מצב NumLock בהפעלת פלזמה"
+msgstr "מצב NumLock בהפעלת פלזמה:"
 
 #: ui/Hardware.qml:73
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Turn On"
-msgstr "&פעיל"
+msgstr "פעיל"
 
 #: ui/Hardware.qml:77
-#, fuzzy, kde-format
-#| msgid "&Turn off"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Turn Off"
-msgstr "&כבוי"
+msgstr "כבוי"
 
 #: ui/Hardware.qml:81
-#, fuzzy, kde-format
-#| msgid "&Leave unchanged"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Leave unchanged"
-msgstr "&ללא שינוי"
+msgstr "לא לשנות"
 
 #: ui/Hardware.qml:114
-#, fuzzy, kde-format
-#| msgid "When a key is held:"
+#, kde-format
 msgctxt "@title:group"
 msgid "When key is held:"
-msgstr "מתי שמקש מוחזק:"
+msgstr "כאשר מקש מוחזק:"
 
 #: ui/Hardware.qml:119
-#, fuzzy, kde-format
-#| msgid "&Repeat the key"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Repeat the key"
-msgstr "לח&זור על הלחיצה"
+msgstr "חזרה על ההקשה"
 
 #: ui/Hardware.qml:124
-#, fuzzy, kde-format
-#| msgid "&Do nothing"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Do nothing"
-msgstr "לא לעשות &כלום"
+msgstr "לא לעשות כלום"
 
 #: ui/Hardware.qml:129
-#, fuzzy, kde-format
-#| msgid "&Show accented and similar characters "
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show accented and similar characters"
-msgstr "לה&ציג תווים חלופיים ודומים "
+msgstr "להציג תווים חלופיים ודומים"
 
 #: ui/Hardware.qml:164
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Delay:"
-msgstr "ה&שהיה:"
+msgstr "השהיה:"
 
 #: ui/Hardware.qml:199
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Rate:"
-msgstr "&קצב:"
+msgstr "קצב:"
 
 #: ui/Hardware.qml:247
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr "אזור בדיקה:"
@@ -198,18 +181,16 @@ msgstr "אזור בדיקה:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "נא להקליד כאן כדי לבדוק את ההגדרות"
 
 #: ui/LayoutDialog.qml:21
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "הוספת פריסה"
 
 #: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "תצוגה מקדימה"
@@ -218,199 +199,172 @@ msgstr "תצוגה מקדימה"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display text:"
-msgstr ""
+msgstr "הצגת טקסט:"
 
 #: ui/LayoutDialog.qml:143
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "קיצור דרך:"
 
 #: ui/Layouts.qml:28
-#, fuzzy, kde-format
-#| msgid "Shortcuts for Switching Layout"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts for Switching Layout"
 msgstr "קיצורים להחלפת פריסה"
 
 #: ui/Layouts.qml:34
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Main shortcuts:"
 msgstr "קיצורים ראשיים:"
 
 #: ui/Layouts.qml:61
-#, fuzzy, kde-format
-#| msgid "3rd level shortcuts:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "3rd level shortcuts:"
-msgstr "קיצורי דרך רמה שלישית:"
+msgstr "קיצורים ברמה שלישית:"
 
 #: ui/Layouts.qml:88
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative shortcut:"
-msgstr "פריסה חלופית:"
+msgstr "קיצור חלופי:"
 
 #: ui/Layouts.qml:109
-#, fuzzy, kde-format
-#| msgid "Last used shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Last used shortcuts:"
-msgstr "מקש קיצור אחרון שהיה בשימוש:"
+msgstr "קיצור אחרון שהיה בשימוש:"
 
 #: ui/Layouts.qml:129
 #, kde-format
 msgctxt "@option:checkbox"
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "הצגת חלונית קופצת בעת שינויי פריסות מקלדת"
 
 #: ui/Layouts.qml:145
-#, fuzzy, kde-format
-#| msgid "Switching Policy"
+#, kde-format
 msgctxt "@title:group"
 msgid "Switching Policy"
 msgstr "מדיניות החלפה"
 
 #: ui/Layouts.qml:152
-#, fuzzy, kde-format
-#| msgid "&Global"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Global"
-msgstr "&כללית"
+msgstr "כללי"
 
 #: ui/Layouts.qml:156
-#, fuzzy, kde-format
-#| msgid "&Desktop"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Desktop"
-msgstr "שולחן &עבודה"
+msgstr "שולחן עבודה"
 
 #: ui/Layouts.qml:160
-#, fuzzy, kde-format
-#| msgid "&Application"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Application"
-msgstr "יי&שום"
+msgstr "יישום"
 
 #: ui/Layouts.qml:164
-#, fuzzy, kde-format
-#| msgid "&Window"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Window"
-msgstr "&חלון"
+msgstr "חלון"
 
 #: ui/Layouts.qml:185
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Configure Layouts"
 msgstr "הגדרת פריסות"
 
 #: ui/Layouts.qml:200
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add"
 msgstr "הוספה"
 
 #: ui/Layouts.qml:206
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "הסרה"
 
 #: ui/Layouts.qml:213
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
-msgstr "הזזה מעלה"
+msgstr "העלאה מעלה"
 
 #: ui/Layouts.qml:229
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
-msgstr "הזזה מטה"
+msgstr "הורדה מטה"
 
 #: ui/Layouts.qml:316
-#, fuzzy, kde-format
-#| msgctxt "layout map name"
-#| msgid "Map"
+#, kde-format
 msgctxt "@title:column"
 msgid "Map"
 msgstr "מיפוי"
 
 #: ui/Layouts.qml:323
-#, fuzzy, kde-format
-#| msgid "Label"
+#, kde-format
 msgctxt "@title:column"
 msgid "Label"
 msgstr "תווית"
 
 #: ui/Layouts.qml:332
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:column"
 msgid "Layout"
 msgstr "פריסה"
 
 #: ui/Layouts.qml:337
-#, fuzzy, kde-format
-#| msgid "Variant"
+#, kde-format
 msgctxt "@title:column"
 msgid "Variant"
 msgstr "הגוון"
 
 #: ui/Layouts.qml:342
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:column"
 msgid "Shortcut"
-msgstr "קיצור דרך"
+msgstr "קיצור"
 
 #: ui/Layouts.qml:388
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign shortcut"
-msgstr "קיצורים ראשיים:"
+msgstr "הקצאת קיצור דרך מחדש"
 
 #: ui/Layouts.qml:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel assignment"
-msgstr ""
+msgstr "ביטול הקצאה"
 
 #: ui/Layouts.qml:417
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Spare layouts"
 msgstr "פריסות עודפות"
 
 #: ui/Layouts.qml:453
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Main layout count:"
 msgstr "כמות פריסות ראשיות:"
 
 #: ui/main.qml:41
-#, fuzzy, kde-format
-#| msgid "Hardware"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Hardware"
 msgstr "חומרה"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Layouts"
 msgstr "פריסות"
@@ -419,7 +373,7 @@ msgstr "פריסות"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Key Bindings"
-msgstr ""
+msgstr "איגודי מקשים"
 
 #: xkboptionsmodel.cpp:161
 #, kde-format

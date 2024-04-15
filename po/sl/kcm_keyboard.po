@@ -1,53 +1,56 @@
-# translation of kcmkeyboard.po to Dutch
+# translation of kcmkeyboard.po to Slovenian
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Rinse de Vries <rinsedevries@kde.nl>, 2007, 2008.
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2014, 2016, 2017, 2020, 2021, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# Andrej Vernekar <andrej.vernekar@moj.net>, 2007, 2012.
+# Jure Repinc <jlp@holodeck1.com>, 2007, 2008, 2010, 2011, 2012.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014, 2016, 2018.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:39+0000\n"
-"PO-Revision-Date: 2024-04-13 10:43+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
-"Language: nl\n"
+"PO-Revision-Date: 2024-04-14 07:09+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.1\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - t/m 2024"
+msgstr "Jure Repinc,Andrej Mernik,Matjaž Jeran"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "freekdekruijf@kde.nl"
+msgstr "jlp@holodeck1.com,andrejm@ubuntu.si,matjaz.jeran@amis.net"
 
 #: bindings.cpp:24
 #, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "Omschakelaar van toetsenbordindeling"
+msgstr "Preklopnik za razporeditev tipk"
 
 #: bindings.cpp:26
 #, kde-format
 msgid "Switch to Next Keyboard Layout"
-msgstr "Naar volgende toetsenbordindeling schakelen"
+msgstr "Preklopi na naslednjo razporeditev tipk"
 
 #: bindings.cpp:30
 #, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Naar laatst gebruikte toetsenbordindeling omschakelen"
+msgstr "Preklopi na nedavno uporabljeno razporeditev tipk"
 
 #: bindings.cpp:60
 #, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "Toetsenbordindeling omschakelen naar %1"
+msgstr "Preklopi razporeditev tipk na %1"
 
 #: flags.cpp:78
 #, kde-format
@@ -59,7 +62,7 @@ msgstr "%1 - %2"
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
-msgstr "Onbekend"
+msgstr "Neznan"
 
 #: keyboardmodel.cpp:46
 #, kde-format
@@ -71,13 +74,13 @@ msgstr "%1 | %2"
 #, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr "Voorvertoning toetsenbord"
+msgstr "Predogled tipkovnice"
 
 #: tastenbrett/main.cpp:54
 #, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "Visualisatie van toetsenbordindeling"
+msgstr "Vizualizacija razporeditve tipk na tipkovnici"
 
 #: tastenbrett/main.cpp:139
 #, kde-format
@@ -91,351 +94,310 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
-"Het laden van de geometrie van het toetsenbord is mislukt. Dit geeft vaak "
-"aan dat het geselecteerde model een specifieke indeling of variant van een "
-"indeling niet ondersteunt. Dit probleem zal waarschijnlijk ook aanwezig zijn "
-"wanneer u deze combinatie van model, indeling en variant probeert te "
-"gebruiken.\n"
-"Indelingen die zijn gedefinieerd buiten uw xkb-systeemmap bekijken wordt "
-"niet ondersteund en  zal ook dit bericht starten. Dit zou nog steeds goed "
-"kunnen werken bij toepassen"
+"Geometrije tipkovnice ni bilo mogoče naložiti. To pogosto pomeni, da izbrani "
+"model ne podpira določene postavitve ali različice postavitve. Ta težava se "
+"bo verjetno pojavila tudi, ko boste poskušali uporabiti to kombinacijo "
+"modela, postavitve in različice.\n"
+"Predogled postavitev, ki so definirane zunaj vašega sistemskega imenika xkb, "
+"ni podprt in bo prav tako sprožal to sporočilo. Te morda še vedno dobro "
+"delujejo, če jih uporabite"
 
 #: ui/Advanced.qml:38
-#, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Configure keyboard options"
-msgstr "Toetsenbord-opties &instellen"
+msgstr "Konfiguriraj možnosti tipkovnice"
 
 #: ui/Hardware.qml:34
-#, fuzzy, kde-format
-#| msgid "Keyboard &model:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Keyboard model:"
-msgstr "Toetsenbord&model:"
+msgstr "Model tipkovnice:"
 
 #: ui/Hardware.qml:68
-#, fuzzy, kde-format
-#| msgid "NumLock on Plasma Startup"
+#, kde-format
 msgctxt "@title:group"
 msgid "NumLock on Plasma Startup:"
-msgstr "NumLock bij Plasma-start"
+msgstr "NumLock ob zagonu Plasme:"
 
 #: ui/Hardware.qml:73
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Turn On"
-msgstr "Ins&chakelen"
+msgstr "Vklopi"
 
 #: ui/Hardware.qml:77
-#, fuzzy, kde-format
-#| msgid "&Turn off"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Turn Off"
-msgstr "&Uitschakelen"
+msgstr "Izklopi"
 
 #: ui/Hardware.qml:81
-#, fuzzy, kde-format
-#| msgid "&Leave unchanged"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Leave unchanged"
-msgstr "&Ongewijzigd laten"
+msgstr "Pusti nespremenjeno"
 
 #: ui/Hardware.qml:114
-#, fuzzy, kde-format
-#| msgid "When a key is held:"
+#, kde-format
 msgctxt "@title:group"
 msgid "When key is held:"
-msgstr "Wanneer een toets blijft ingedrukt:"
+msgstr "Ko držite tipko:"
 
 #: ui/Hardware.qml:119
-#, fuzzy, kde-format
-#| msgid "&Repeat the key"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Repeat the key"
-msgstr "De toets he&rhalen"
+msgstr "Ponavljaj tipko"
 
 #: ui/Hardware.qml:124
-#, fuzzy, kde-format
-#| msgid "&Do nothing"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Do nothing"
-msgstr "Niets &doen"
+msgstr "Ne naredi nič"
 
 #: ui/Hardware.qml:129
-#, fuzzy, kde-format
-#| msgid "&Show accented and similar characters "
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show accented and similar characters"
-msgstr "Tekens met accenten en soortgelijke &tonen "
+msgstr "Pokaži naglašene in podobne znake"
 
 #: ui/Hardware.qml:164
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Delay:"
-msgstr "Vertra&ging:"
+msgstr "Zakasnitev:"
 
 #: ui/Hardware.qml:199
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Rate:"
-msgstr "He&rhalingstempo:"
+msgstr "Hitrost:"
 
 #: ui/Hardware.qml:247
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
-msgstr "Testgebied:"
+msgstr "Preizkusno območje:"
 
 #: ui/Hardware.qml:248
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "Tipkajte se za preizkus nastavitev"
 
 #: ui/LayoutDialog.qml:21
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
-msgstr "Indeling toevoegen"
+msgstr "Dodaj razporeditev"
 
 #: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
-msgstr "Voorbeeld"
+msgstr "Predogled"
 
 #: ui/LayoutDialog.qml:124
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display text:"
-msgstr ""
+msgstr "Prikaži besedilo:"
 
 #: ui/LayoutDialog.qml:143
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
-msgstr "Sneltoets:"
+msgstr "Bližnjica:"
 
 #: ui/Layouts.qml:28
-#, fuzzy, kde-format
-#| msgid "Shortcuts for Switching Layout"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts for Switching Layout"
-msgstr "Sneltoetsen voor wisselen van indeling"
+msgstr "Bližnjice za preklapljanje razporeditev"
 
 #: ui/Layouts.qml:34
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Main shortcuts:"
-msgstr "Hoofdsneltoetsen:"
+msgstr "Glavne bližnjice:"
 
 #: ui/Layouts.qml:61
-#, fuzzy, kde-format
-#| msgid "3rd level shortcuts:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "3rd level shortcuts:"
-msgstr "3de niveau sneltoetsen:"
+msgstr "Bližnjice 3. ravni:"
 
 #: ui/Layouts.qml:88
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative shortcut:"
-msgstr "Alternatieve sneltoets:"
+msgstr "Alternativna bližnjica:"
 
 #: ui/Layouts.qml:109
-#, fuzzy, kde-format
-#| msgid "Last used shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Last used shortcuts:"
-msgstr "Laatst gebruikte sneltoets:"
+msgstr "Nedavno uporabljene bližnjice:"
 
 #: ui/Layouts.qml:129
 #, kde-format
 msgctxt "@option:checkbox"
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "Prikaži pojavno okno ob spremembah postavitve"
 
 #: ui/Layouts.qml:145
-#, fuzzy, kde-format
-#| msgid "Switching Policy"
+#, kde-format
 msgctxt "@title:group"
 msgid "Switching Policy"
-msgstr "Wisselbeleid"
+msgstr "Pravilnik preklapljanja"
 
 #: ui/Layouts.qml:152
-#, fuzzy, kde-format
-#| msgid "&Global"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Global"
-msgstr "&Globaal"
+msgstr "Globalno"
 
 #: ui/Layouts.qml:156
-#, fuzzy, kde-format
-#| msgid "&Desktop"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Desktop"
-msgstr "&Bureaublad"
+msgstr "Namizje"
 
 #: ui/Layouts.qml:160
-#, fuzzy, kde-format
-#| msgid "&Application"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Application"
-msgstr "Toep&assing"
+msgstr "Aplikacija"
 
 #: ui/Layouts.qml:164
-#, fuzzy, kde-format
-#| msgid "&Window"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Window"
-msgstr "&Venster"
+msgstr "Okno"
 
 #: ui/Layouts.qml:185
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Configure Layouts"
-msgstr "Indelingen instellen"
+msgstr "Konfiguriraj razporeditve"
 
 #: ui/Layouts.qml:200
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add"
-msgstr "Toevoegen"
+msgstr "Dodaj"
 
 #: ui/Layouts.qml:206
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
-msgstr "Verwijderen"
+msgstr "Odstrani"
 
 #: ui/Layouts.qml:213
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
-msgstr "Omhoog"
+msgstr "Premakni gor"
 
 #: ui/Layouts.qml:229
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
-msgstr "Omlaag"
+msgstr "Premakni dol"
 
 #: ui/Layouts.qml:316
-#, fuzzy, kde-format
-#| msgctxt "layout map name"
-#| msgid "Map"
+#, kde-format
 msgctxt "@title:column"
 msgid "Map"
-msgstr "Naam indeling"
+msgstr "Preslikava"
 
 #: ui/Layouts.qml:323
-#, fuzzy, kde-format
-#| msgid "Label"
+#, kde-format
 msgctxt "@title:column"
 msgid "Label"
-msgstr "Label"
+msgstr "Oznaka"
 
 #: ui/Layouts.qml:332
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:column"
 msgid "Layout"
-msgstr "Indeling"
+msgstr "Razporeditev"
 
 #: ui/Layouts.qml:337
-#, fuzzy, kde-format
-#| msgid "Variant"
+#, kde-format
 msgctxt "@title:column"
 msgid "Variant"
-msgstr "Variant"
+msgstr "Različica"
 
 #: ui/Layouts.qml:342
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:column"
 msgid "Shortcut"
-msgstr "Sneltoets"
+msgstr "Bližnjica"
 
 #: ui/Layouts.qml:388
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign shortcut"
-msgstr "Hoofdsneltoetsen:"
+msgstr "Ponovno dodeli bližnjico"
 
 #: ui/Layouts.qml:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel assignment"
-msgstr ""
+msgstr "Prekliči dodelitev"
 
 #: ui/Layouts.qml:417
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Spare layouts"
-msgstr "Reserve-indelingen"
+msgstr "Rezervne razporeditve"
 
 #: ui/Layouts.qml:453
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Main layout count:"
-msgstr "Aantal hoofdindelingen:"
+msgstr "Število glavnih razporeditev:"
 
 #: ui/main.qml:41
-#, fuzzy, kde-format
-#| msgid "Hardware"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Hardware"
-msgstr "Hardware"
+msgstr "Strojna oprema"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Layouts"
-msgstr "Indelingen"
+msgstr "Razporeditve"
 
 #: ui/main.qml:53
 #, kde-format
 msgctxt "@title:tab"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Vezi tipk"
 
 #: xkboptionsmodel.cpp:161
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
-msgstr[0] "%1 sneltoets"
-msgstr[1] "%1 sneltoetsen"
+msgstr[0] "%1 bližnjica"
+msgstr[1] "%1 bližnjici"
+msgstr[2] "%1 bližnjice"
+msgstr[3] "%1 bližnjic"
 
 #: xkboptionsmodel.cpp:164
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
-msgstr "Geen"
+msgstr "Brez"
 
 #~ msgid "Search…"
-#~ msgstr "Zoeken…"
+#~ msgstr "Išči…"
 
 #~ msgid "Label:"
-#~ msgstr "Label:"
+#~ msgstr "Oznaka:"
 
 #~ msgid ""
 #~ "Here you can choose a keyboard model. This setting is independent of your "
@@ -445,31 +407,29 @@ msgstr "Geen"
 #~ "which is probably what you want if you do not know what kind of keyboard "
 #~ "you have.\n"
 #~ msgstr ""
-#~ "Hier kunt u een toetsenbordmodel uitkiezen. Deze instelling is "
-#~ "onafhankelijk van uw toetsenbordindeling en refereert aan het "
-#~ "\"hardwaremodel\", oftewel de wijze waarop uw toetsenbord is gemaakt. "
-#~ "Moderne toetsenborden die met computers worden meegeleverd hebben twee "
-#~ "extra toetsen en worden \"104-key\" modellen genoemd. Als u niet weet "
-#~ "welk model u hebt, dan is dit waarschijnlijk het juiste type.\n"
+#~ "Tu lahko izberete model tipkovnice. Nastavitev ni odvisna od vaše "
+#~ "razporeditve tipk in se nanaša na »strojni« model, t.j. način izdelave "
+#~ "tipkovnice. Moderne tipkovnice imajo običajno dve dodatni tipki in so "
+#~ "imenovane kot tipkovnice s 104 tipkami. To je tudi model, ki ga "
+#~ "najverjetneje želite izbrati, če ne veste, kakšno tipkovnico imate.\n"
 
 #~ msgid ""
 #~ "If you select \"Application\" or \"Window\" switching policy, changing "
 #~ "the keyboard layout will only affect the current application or window."
 #~ msgstr ""
-#~ "Als u wisselbeleid \"Toepassing\" of \"Venster\" kiest zal het wisselen "
-#~ "van indeling alleen effect hebben binnen de huidige toepassing of venster."
+#~ "Če izberete pravilnik »Program« ali »Okno«, bo sprememba razporeditve "
+#~ "tipk veljala le za trenutni program ali okno."
 
 #~ msgid ""
 #~ "This is a shortcut for switching layouts which is handled by X.org. It "
 #~ "allows modifier-only shortcuts."
 #~ msgstr ""
-#~ "Dit is een sneltoets voor het wisselen van de toetsenbordindeling. Deze "
-#~ "actie wordt afgehandeld door X.org. U kunt ook enkel een modificatietoets "
-#~ "als sneltoets instellen."
+#~ "To je bližnjica za preklapljanje razporeditev, ki jo nadzoruje grafični "
+#~ "strežnik X. Omogoča samo bližnjice s spremenilnimi tipkami."
 
 #~ msgctxt "no shortcut defined"
 #~ msgid "None"
-#~ msgstr "Geen"
+#~ msgstr "Brez"
 
 #~ msgid "…"
 #~ msgstr "…"
@@ -479,108 +439,108 @@ msgstr "Geen"
 #~ "(if it has one) which is handled by X.org. It allows modifier-only "
 #~ "shortcuts."
 #~ msgstr ""
-#~ "Dit is een sneltoets voor het schakelen naar het derde niveau van de "
-#~ "actieve toetsenbordindeling (indien aanwezig). Dit wordt afgehandeld door "
-#~ "X.org. U kunt ook enkel een modificatietoets instellen."
+#~ "To je bližnjica za preklop na tretjo raven dejavne razporeditve (če jo "
+#~ "ima), ki jo nadzoruje grafični strežnik X. Omogoča samo bližnjice s "
+#~ "spremenilnimi tipkami."
 
 #~ msgid ""
 #~ "This is a shortcut for switching layouts. It does not support modifier-"
 #~ "only shortcuts and also may not work in some situations (e.g. if popup is "
 #~ "active or from screensaver)."
 #~ msgstr ""
-#~ "Dit is de toetsencombinatie voor het wisselen van de toetsenbordindeling. "
-#~ "U kunt niet enkel een modificatietoets instellen en deze "
-#~ "toetsencombinatie werkt mogelijk niet in bepaalde situaties (bijv. als "
-#~ "een dialoogvenster of de schermbeveiliging actief is)."
+#~ "To je bližnjica za preklop razporeditev. Ne podpira bližnjic s samo "
+#~ "spremenilnimi tipkami in v nekaterih primerih ne deluje (npr. če je "
+#~ "dejavno pojavno okno ali pa ohranjevalnik zaslona)."
 
 #~ msgid ""
 #~ "This shortcut allows for fast switching between two layouts, by always "
 #~ "switching to the last-used one."
 #~ msgstr ""
-#~ "Deze sneltoets biedt het snel omschakelen tussen twee indelingen, door "
-#~ "altijd omschakelen naar de laatst gebruikte."
+#~ "Ta bližnjica dovoljuje hitro preklapljanje med dvema postavitvama, tako "
+#~ "da vedno preklopi na nedavno uporabljeno."
 
 #~ msgid "Advanced"
-#~ msgstr "Geavanceerd"
+#~ msgstr "Napredno"
 
 #~ msgctxt "variant"
 #~ msgid "Default"
-#~ msgstr "Standaard"
+#~ msgstr "Privzeta"
 
 #~ msgid ""
 #~ "Allows to test keyboard repeat and click volume (just don't forget to "
 #~ "apply the changes)."
 #~ msgstr ""
-#~ "Sta het testen van de herhaalfunctie van het toetsenbord en het volume "
-#~ "van het klikken toe (vergeet niet om de wijzigingen toe te passen)"
+#~ "Omogoča preizkušanje ponavljanja in glasnosti klikanja (ne pozabite "
+#~ "uveljaviti sprememb)."
 
 #~ msgid ""
 #~ "If supported, this option allows you to setup the state of NumLock after "
 #~ "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
 #~ "configure Plasma not to set NumLock state."
 #~ msgstr ""
-#~ "Indien ondersteund, kunt u met deze optie de status van het Numerieke "
-#~ "toetsenbord (NumLock) na het opstarten van Plasma bepalen. <p>U kunt "
-#~ "bepalen of Numlock aan of uit gezet wordt, of dat Plasma de Numlock "
-#~ "ongemoeid dient te laten."
+#~ "Če je podprta, vam ta možnost omogoča nastavitev stanja NumLock po zagonu "
+#~ "Plasme.<p>NumLock lahko prilagodite tako, da je izklopljen ali vklopljen, "
+#~ "ali pa nastavite Plasmo, da ne posega v stanje NumLock."
 
 #~ msgid "Leave unchan&ged"
-#~ msgstr "&Ongewijzigd laten"
+#~ msgstr "Pusti &nespremenjeno"
 
 #~ msgid ""
 #~ "If supported, this option allows you to set the delay after which a "
 #~ "pressed key will start generating keycodes. The 'Repeat rate' option "
 #~ "controls the frequency of these keycodes."
 #~ msgstr ""
-#~ "Indien van toepassing kunt u met deze instelling de vertraging bepalen "
-#~ "waarna de ingedrukte toets begint met het genereren van toetsencodes. Het "
-#~ "herhalingstempo bepaalt de frequentie van deze toetsencodes."
+#~ "Če je podprta, vam bo ta možnost dovolila nastaviti zakasnitev, po "
+#~ "katerem bo pritisnjena tipka začela ponavljati ustrezen znak. Možnost "
+#~ "»Hitrost ponavljanja« nadzoruje frekvenco ponavljanja znakov."
 
 #~ msgid ""
 #~ "If supported, this option allows you to set the rate at which keycodes "
 #~ "are generated while a key is pressed."
 #~ msgstr ""
-#~ "Indien van toepassing kunt u met deze optie bepalen hoeveel toetsencodes "
-#~ "er worden gegenereerd als een u een toets ingedrukt houdt."
+#~ "Če je podprta, vam bo ta možnost dovolila nastaviti hitrost, s katero se "
+#~ "ponavljajo znaki ob pritisku tipke."
 
 #~ msgid " repeats/s"
-#~ msgstr " herhalingen/s"
+#~ msgstr " ponovitev/s"
 
 #~ msgid " ms"
 #~ msgstr " ms"
 
 #~ msgid "KDE Keyboard Control Module"
-#~ msgstr "KDE-Toetsenbordbesturingsprogramma"
+#~ msgstr "KDE-jevo orodje za nadzor tipkovnice"
 
 #~ msgid "(c) 2010 Andriy Rysin"
-#~ msgstr "(c) 2010 Andriy Rysin"
+#~ msgstr "© 2010 Andriy Rysin"
 
 #~ msgid ""
 #~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
 #~ "parameters and layouts."
 #~ msgstr ""
-#~ "<h1>Toetsenbord</h1> Deze besturingsmodule kan worden gebruikt om "
-#~ "toetsenbordparameters en indelingen in te stellen."
+#~ "<h1>Tipkovnica</h1> Ta nadzorni modul lahko uporabite za nastavitev "
+#~ "parametrov in razporeditev tipk."
 
 #~ msgid "KDE Keyboard Layout Switcher"
-#~ msgstr "Omschakelaar van toetsenbordindeling van KDE"
+#~ msgstr "Preklopnik razporeditev tipk za KDE"
 
 #~ msgid "Only up to %1 keyboard layout is supported"
 #~ msgid_plural "Only up to %1 keyboard layouts are supported"
-#~ msgstr[0] "Slechts %1 toetsenbordindeling wordt ondersteund"
-#~ msgstr[1] "Slechts %1 toetsenbordindelingen worden ondersteund"
+#~ msgstr[0] "Podprta je največ %1 razporeditev tipk"
+#~ msgstr[1] "Podprti sta največ %1 razporeditvi tipk"
+#~ msgstr[2] "Podprte so največ %1 razporeditve tipk"
+#~ msgstr[3] "Podprtih je največ %1 razporeditev tipk"
 
 #~ msgid "Any language"
-#~ msgstr "Elke taal"
+#~ msgstr "Katerikoli jezik"
 
 #~ msgid "Layout:"
-#~ msgstr "Indeling:"
+#~ msgstr "Razporeditev:"
 
 #~ msgid "Variant:"
-#~ msgstr "Variant:"
+#~ msgstr "Različica:"
 
 #~ msgid "Limit selection by language:"
-#~ msgstr "Selectie beperken door de taal:"
+#~ msgstr "Omeji izbiro z jezikom:"
 
 #~ msgid "..."
 #~ msgstr "..."
@@ -590,41 +550,41 @@ msgstr "Geen"
 #~ msgstr "%1 - %2"
 
 #~ msgid "Layout Indicator"
-#~ msgstr "Indelingsaanduiding"
+#~ msgstr "Kazalnik razporeditev"
 
 #~ msgid "Show layout indicator"
-#~ msgstr "Indelingsaanduiding tonen"
+#~ msgstr "Pokaži kazalnik razporeditev"
 
 #~ msgid "Show for single layout"
-#~ msgstr "Enkele indeling tonen"
+#~ msgstr "Pokaži za eno razporeditev"
 
 #~ msgid "Show flag"
-#~ msgstr "Vlag tonen"
+#~ msgstr "Pokaži zastavo"
 
 #~ msgid "Show label"
-#~ msgstr "Label tonen"
+#~ msgstr "Pokaži oznako"
 
 #~ msgid "Show label on flag"
-#~ msgstr "Label op vlag tonen"
+#~ msgstr "Pokaži oznako na zastavi"
 
 #~ msgctxt "tooltip title"
 #~ msgid "Keyboard Layout"
-#~ msgstr "Toetsenbordindeling"
+#~ msgstr "Razporeditev tipk"
 
 #~ msgid "Configure Layouts..."
-#~ msgstr "Indelingen instellen..."
+#~ msgstr "Nastavi razporeditve..."
 
 #~ msgid "Keyboard Repeat"
-#~ msgstr "Toetsenbordherhaling"
+#~ msgstr "Ponavljanje tipke"
 
 #~ msgid "Turn o&ff"
-#~ msgstr "&Uitschakelen"
+#~ msgstr "Izklopi"
 
 #~ msgid "Configure..."
-#~ msgstr "Instellen..."
+#~ msgstr "Nastavi ..."
 
 #~ msgid "Key Click"
-#~ msgstr "Toetsenklik"
+#~ msgstr "Klik tipke"
 
 #~ msgid ""
 #~ "If supported, this option allows you to hear audible clicks from your "
@@ -634,35 +594,35 @@ msgstr "Geen"
 #~ "click feedback by dragging the slider button or by clicking the up/down "
 #~ "arrows on the spin box. Setting the volume to 0% turns off the key click."
 #~ msgstr ""
-#~ "Indien ondersteund, zorgt deze optie er voor dat u klikken hoort uit de "
-#~ "speakers van uw computer, telkens als u een toets indrukt. Dit kan handig "
-#~ "zijn als u een toetsenbord gebruikt dat geen mechanische toetsen heeft, "
-#~ "of als het klikgeluid dat de toetsen zelf produceren erg zacht is.<p>U "
-#~ "kunt het volume van de toetsenkliks instellen door de schuifregelaar te "
-#~ "verslepen, of door op de op/neer pijltjes te klikken. U schakelt het "
-#~ "toetsenklikgeluid uit door het volume op 0% te zetten."
+#~ "Če je to podprto in omogočite to možnost, se iz računalniških zvočnikov "
+#~ "ob vsakem pritisku tipke na tipkovnici zasliši klik. To je uporabno, če "
+#~ "vaša tipkovnica nima mehaničnih tipk, ali pa če je pritisk na tipko zelo "
+#~ "tih.<p> Glasnost klika lahko spremenite z uporabo drsnika ali pa z "
+#~ "uporabo puščic v vnosnem polju. Če glasnost nastavite na 0%, se klikanje "
+#~ "izklopi."
 
+#~| msgid "Key click &volume:"
 #~ msgid "&Key click volume:"
-#~ msgstr "&Toetsenklikvolume:"
+#~ msgstr "Glasnost klika tip&ke:"
 
 #~ msgid "No layout selected "
-#~ msgstr "Geen indeling geselecteerd "
+#~ msgstr "Izbrana ni nobena razporeditev"
 
 #~ msgid "XKB extension failed to initialize"
-#~ msgstr "Initialisatie van XKB-extensie is mislukt"
+#~ msgstr "Razširitve XKB ni bilo mogoče začeti"
 
 #~ msgid "Backspace"
-#~ msgstr "Backspace"
+#~ msgstr "Vračalka"
 
 #~ msgctxt "Tab key"
 #~ msgid "Tab"
-#~ msgstr "Tab"
+#~ msgstr "Tabulator"
 
 #~ msgid "Caps Lock"
 #~ msgstr "Caps Lock"
 
 #~ msgid "Enter"
-#~ msgstr "Enter"
+#~ msgstr "Vnesi"
 
 #~ msgid "Ctrl"
 #~ msgstr "Ctrl"
@@ -681,26 +641,10 @@ msgstr "Geen"
 #~ msgstr "F%1"
 
 #~ msgid "Shift"
-#~ msgstr "Shift"
+#~ msgstr "Dvigalka"
 
 #~ msgid "No preview found"
-#~ msgstr "Geen voorbeeld gevonden"
+#~ msgstr "Najden ni bil noben predogled"
 
 #~ msgid "Close"
-#~ msgstr "Sluiten"
-
-#~ msgid ""
-#~ "If you check this option, pressing and holding down a key emits the same "
-#~ "character over and over again. For example, pressing and holding down the "
-#~ "Tab key will have the same effect as that of pressing that key several "
-#~ "times in succession: Tab characters continue to be emitted until you "
-#~ "release the key."
-#~ msgstr ""
-#~ "Als u deze optie inschakelt, dan wordt een teken herhaaldelijk achter "
-#~ "elkaar ingevoegd, wanneer u een toets ingedrukt houdt. Bijv. als u de "
-#~ "toets TAB ingedrukt houdt, dan heeft dit hetzelfde effect als wanneer u "
-#~ "enkele malen achter elkaar op de toets drukt. De tabs worden continue "
-#~ "ingevoegd, totdat u de toets weer los laat."
-
-#~ msgid "&Enable keyboard repeat"
-#~ msgstr "Toetsenbordh&erhaling inschakelen"
+#~ msgstr "Zapri"

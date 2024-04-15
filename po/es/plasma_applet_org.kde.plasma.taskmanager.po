@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Automatically generated, 2014.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:39+0000\n"
-"PO-Revision-Date: 2023-11-17 00:52+0100\n"
+"PO-Revision-Date: 2024-04-14 20:00+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -266,10 +266,9 @@ msgid "Keep launchers separate"
 msgstr "Conservar lanzadores separados"
 
 #: package/contents/ui/ConfigBehavior.qml:119
-#, fuzzy, kde-format
-#| msgid "Use launcher icons for running applications"
+#, kde-format
 msgid "Hide launchers after application startup"
-msgstr "Usar iconos del lanzador para la aplicaciones en ejecución"
+msgstr "Ocultar lanzadores tras iniciar la aplicación"
 
 #: package/contents/ui/ConfigBehavior.qml:129
 #, kde-format

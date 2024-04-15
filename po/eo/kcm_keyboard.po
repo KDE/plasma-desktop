@@ -1,0 +1,390 @@
+# translation of kcmkeyboard.po to esperanto
+# Copyright (C) 2007-2023 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-desktop package.
+# Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
+# Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkeyboard\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-04-14 00:39+0000\n"
+"PO-Revision-Date: 2024-04-14 23:12+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Axel Rousseau,Oliver Kellogg"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "axel@esperanto-jeunes.org,okellogg@users.sourceforge.net"
+
+#: bindings.cpp:24
+#, kde-format
+msgid "Keyboard Layout Switcher"
+msgstr "Klavararanĝilo"
+
+#: bindings.cpp:26
+#, kde-format
+msgid "Switch to Next Keyboard Layout"
+msgstr "Elekti sekvan klavararanĝon"
+
+#: bindings.cpp:30
+#, kde-format
+msgid "Switch to Last-Used Keyboard Layout"
+msgstr "Ŝalti al Laste-Uzita Klavararanĝo"
+
+#: bindings.cpp:60
+#, kde-format
+msgid "Switch keyboard layout to %1"
+msgstr "Ŝanĝi klavararanĝon al '%1'"
+
+#: flags.cpp:78
+#, kde-format
+msgctxt "layout - variant"
+msgid "%1 - %2"
+msgstr "%1 - %2"
+
+#: keyboardmodel.cpp:42
+#, kde-format
+msgctxt "unknown keyboard model vendor"
+msgid "Unknown"
+msgstr "Nekonata"
+
+#: keyboardmodel.cpp:46
+#, kde-format
+msgctxt "vendor | keyboard model"
+msgid "%1 | %2"
+msgstr "%1 | %2"
+
+#: tastenbrett/main.cpp:52
+#, kde-format
+msgctxt "app display name"
+msgid "Keyboard Preview"
+msgstr "Klavara Antaŭrigardo"
+
+#: tastenbrett/main.cpp:54
+#, kde-format
+msgctxt "app description"
+msgid "Keyboard layout visualization"
+msgstr "Klavar-aranĝa montrilo"
+
+#: tastenbrett/main.cpp:139
+#, kde-format
+msgctxt "@label"
+msgid ""
+"The keyboard geometry failed to load. This often indicates that the selected "
+"model does not support a specific layout or layout variant. This problem "
+"will likely also present when you try to use this combination of model, "
+"layout and variant.\n"
+"Previewing layouts that are defined outside your systems xkb directory is "
+"not supported and  will also trigger this message. These might still work "
+"fine if applied"
+msgstr ""
+"La klavargeometrio malsukcesis ŝargiĝi. Ĉi tio ofte indikas, ke la elektita "
+"modelo ne subtenas specifan aranĝon aŭ aranĝan varianton. Ĉi tiu problemo "
+"verŝajne ankaŭ prezentiĝos kiam vi provos uzi ĉi tiun kombinaĵon de modelo, "
+"aranĝo kaj varianto.\n"
+"Antaŭrigardi aranĝojn kiuj estas difinitaj ekster via sistema xkb-dosierujo "
+"estas nesubtenata kaj ankaŭ ekigos ĉi tiun mesaĝon. Ĉi tiuj ankoraŭ povus "
+"funkcii bone se aplikitaj"
+
+#: ui/Advanced.qml:38
+#, kde-format
+msgctxt "@option:checkbox"
+msgid "Configure keyboard options"
+msgstr "Agordi klavarajn elekteblojn"
+
+#: ui/Hardware.qml:34
+#, kde-format
+msgctxt "@title:group"
+msgid "Keyboard model:"
+msgstr "Klavara modelo:"
+
+#: ui/Hardware.qml:68
+#, kde-format
+msgctxt "@title:group"
+msgid "NumLock on Plasma Startup:"
+msgstr "NumLock dum Plasma-Lanĉo:"
+
+#: ui/Hardware.qml:73
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn On"
+msgstr "Aktivigi"
+
+#: ui/Hardware.qml:77
+#, kde-format
+msgctxt "@option:radio"
+msgid "Turn Off"
+msgstr "Malaktivigi"
+
+#: ui/Hardware.qml:81
+#, kde-format
+msgctxt "@option:radio"
+msgid "Leave unchanged"
+msgstr "Lasi senŝanĝe"
+
+#: ui/Hardware.qml:114
+#, kde-format
+msgctxt "@title:group"
+msgid "When key is held:"
+msgstr "Kiam klavo estas tenata:"
+
+#: ui/Hardware.qml:119
+#, kde-format
+msgctxt "@option:radio"
+msgid "Repeat the key"
+msgstr "Ripeti la klavon"
+
+#: ui/Hardware.qml:124
+#, kde-format
+msgctxt "@option:radio"
+msgid "Do nothing"
+msgstr "Fari nenion"
+
+#: ui/Hardware.qml:129
+#, kde-format
+msgctxt "@option:radio"
+msgid "Show accented and similar characters"
+msgstr "Montri supersignitajn kaj similajn signojn"
+
+#: ui/Hardware.qml:164
+#, kde-format
+msgctxt "@label:slider"
+msgid "Delay:"
+msgstr "Prokrasto:"
+
+#: ui/Hardware.qml:199
+#, kde-format
+msgctxt "@label:slider"
+msgid "Rate:"
+msgstr "Frekvenco:"
+
+#: ui/Hardware.qml:247
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Test area:"
+msgstr "Testareo:"
+
+#: ui/Hardware.qml:248
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to test settings"
+msgstr "Tajpu ĉi tie por testi metojn"
+
+#: ui/LayoutDialog.qml:21
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Layout"
+msgstr "Aldoni Aranĝon"
+
+#: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
+#, kde-format
+msgctxt "@action:button"
+msgid "Preview"
+msgstr "Antaŭrigardo"
+
+#: ui/LayoutDialog.qml:124
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Display text:"
+msgstr "Montri tekston:"
+
+#: ui/LayoutDialog.qml:143
+#, kde-format
+msgctxt "@option:textbox"
+msgid "Shortcut:"
+msgstr "Fulmoklavo:"
+
+#: ui/Layouts.qml:28
+#, kde-format
+msgctxt "@title:group"
+msgid "Shortcuts for Switching Layout"
+msgstr "Fulmoklavoj por Ŝanĝi Klavararanĝon"
+
+#: ui/Layouts.qml:34
+#, kde-format
+msgctxt "@option:textbox"
+msgid "Main shortcuts:"
+msgstr "Ĉefaj fulmoklavoj:"
+
+#: ui/Layouts.qml:61
+#, kde-format
+msgctxt "@option:textbox"
+msgid "3rd level shortcuts:"
+msgstr "Fulmoklavoj de la 3a nivelo:"
+
+#: ui/Layouts.qml:88
+#, kde-format
+msgctxt "@option:textbox"
+msgid "Alternative shortcut:"
+msgstr "Alternativa fulmoklavo:"
+
+#: ui/Layouts.qml:109
+#, kde-format
+msgctxt "@option:textbox"
+msgid "Last used shortcuts:"
+msgstr "Laste uzita fulmoklavo:"
+
+#: ui/Layouts.qml:129
+#, kde-format
+msgctxt "@option:checkbox"
+msgid "Show a popup on layout changes"
+msgstr "Montri ŝprucfenestron je aranĝoŝanĝoj"
+
+#: ui/Layouts.qml:145
+#, kde-format
+msgctxt "@title:group"
+msgid "Switching Policy"
+msgstr "Ŝanĝpolitiko"
+
+#: ui/Layouts.qml:152
+#, kde-format
+msgctxt "@option:radio"
+msgid "Global"
+msgstr "Ĉiea"
+
+#: ui/Layouts.qml:156
+#, kde-format
+msgctxt "@option:radio"
+msgid "Desktop"
+msgstr "Labortablo"
+
+#: ui/Layouts.qml:160
+#, kde-format
+msgctxt "@option:radio"
+msgid "Application"
+msgstr "Aplikaĵo"
+
+#: ui/Layouts.qml:164
+#, kde-format
+msgctxt "@option:radio"
+msgid "Window"
+msgstr "Fenestro"
+
+#: ui/Layouts.qml:185
+#, kde-format
+msgctxt "@option:checkbox"
+msgid "Configure Layouts"
+msgstr "Agordi Aranĝojn"
+
+#: ui/Layouts.qml:200
+#, kde-format
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Aldoni"
+
+#: ui/Layouts.qml:206
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove"
+msgstr "Forigi"
+
+#: ui/Layouts.qml:213
+#, kde-format
+msgctxt "@action:button"
+msgid "Move Up"
+msgstr "Movi Supren"
+
+#: ui/Layouts.qml:229
+#, kde-format
+msgctxt "@action:button"
+msgid "Move Down"
+msgstr "Movi Malsupren"
+
+#: ui/Layouts.qml:316
+#, kde-format
+msgctxt "@title:column"
+msgid "Map"
+msgstr "Klavomapo"
+
+#: ui/Layouts.qml:323
+#, kde-format
+msgctxt "@title:column"
+msgid "Label"
+msgstr "Etikedo"
+
+#: ui/Layouts.qml:332
+#, kde-format
+msgctxt "@title:column"
+msgid "Layout"
+msgstr "Aranĝo"
+
+#: ui/Layouts.qml:337
+#, kde-format
+msgctxt "@title:column"
+msgid "Variant"
+msgstr "Devio"
+
+#: ui/Layouts.qml:342
+#, kde-format
+msgctxt "@title:column"
+msgid "Shortcut"
+msgstr "Fulmoklavo"
+
+#: ui/Layouts.qml:388
+#, kde-format
+msgctxt "@action:button"
+msgid "Reassign shortcut"
+msgstr "Ĉefaj fulmoklavoj:"
+
+#: ui/Layouts.qml:404
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel assignment"
+msgstr "Nuligi asignadon"
+
+#: ui/Layouts.qml:417
+#, kde-format
+msgctxt "@option:checkbox"
+msgid "Spare layouts"
+msgstr "Kromaranĝoj"
+
+#: ui/Layouts.qml:453
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Main layout count:"
+msgstr "Nombro de ĉefaj aranĝoj:"
+
+#: ui/main.qml:41
+#, kde-format
+msgctxt "@title:tab"
+msgid "Hardware"
+msgstr "Aparataro"
+
+#: ui/main.qml:47
+#, kde-format
+msgctxt "@title:tab"
+msgid "Layouts"
+msgstr "Aranĝoj"
+
+#: ui/main.qml:53
+#, kde-format
+msgctxt "@title:tab"
+msgid "Key Bindings"
+msgstr "Klavkombinoj"
+
+#: xkboptionsmodel.cpp:161
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] "%1 fulmoklavo"
+msgstr[1] "%1 fulmoklavoj"
+
+#: xkboptionsmodel.cpp:164
+#, kde-format
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr "Neniu"

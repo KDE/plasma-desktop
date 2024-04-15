@@ -7,22 +7,22 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2013.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:39+0000\n"
-"PO-Revision-Date: 2023-11-16 18:45+0100\n"
+"PO-Revision-Date: 2024-04-14 15:15+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -269,10 +269,9 @@ msgid "Keep launchers separate"
 msgstr "Manter os iniciadores separados"
 
 #: package/contents/ui/ConfigBehavior.qml:119
-#, fuzzy, kde-format
-#| msgid "Use launcher icons for running applications"
+#, kde-format
 msgid "Hide launchers after application startup"
-msgstr "Usar iconas de iniciador para os programar en execución."
+msgstr "Agochar os iniciadores tras iniciar a aplicación."
 
 #: package/contents/ui/ConfigBehavior.qml:129
 #, kde-format
