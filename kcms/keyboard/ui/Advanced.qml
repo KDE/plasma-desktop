@@ -37,7 +37,7 @@ ColumnLayout {
     QQC2.CheckBox {
         text: i18nc("@option:checkbox", "Configure keyboard options")
         checked: kcm.keyboardSettings.resetOldXkbOptions
-        onCheckedChanged: kcm.keyboardSettings.resetOldXkbOptions = checked
+        onToggled: kcm.keyboardSettings.resetOldXkbOptions = checked
 
         KCM.SettingStateBinding {
             configObject: kcm.keyboardSettings
