@@ -69,12 +69,19 @@ ColumnLayout {
                 }
             }
 
+            columnWidthProvider: column => {
+                switch (column) {
+                case 0:
+                    return width;
+                default:
+                    return 0;
+                }
+            }
+
             model: xkbOptionsProxy
 
             delegate: QQC2.TreeViewDelegate {
                 id: delegate
-
-                implicitWidth: treeView.width
 
                 // you can't use a CheckDelegate as a TreeViewDelegate. This nests the buttons and is pretty bad for accessible
                 contentItem: RowLayout {
