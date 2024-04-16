@@ -10,11 +10,10 @@
 #include <config-X11.h>
 
 #include <QFile>
+#include <QGuiApplication>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
-
-#include <private/qtx11extras_p.h>
 
 #if HAVE_XCURSOR
 #include <X11/Xcursor/Xcursor.h>
@@ -23,19 +22,24 @@
 void CursorTheme::applyCursorTheme(const QString &theme, int size)
 {
 #if HAVE_XCURSOR
+    QNativeInterface::QX11Application *x11App = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (!x11App) {
+        return;
+    }
+
     // Apply the KDE cursor theme to ourselves
     if (!theme.isEmpty()) {
-        XcursorSetTheme(QX11Info::display(), QFile::encodeName(theme));
+        XcursorSetTheme(x11App->display(), QFile::encodeName(theme));
     }
 
     if (size >= 0) {
-        XcursorSetDefaultSize(QX11Info::display(), size);
+        XcursorSetDefaultSize(x11App->display(), size);
     }
 
     // Load the default cursor from the theme and apply it to the root window.
-    Cursor handle = XcursorLibraryLoadCursor(QX11Info::display(), "left_ptr");
-    XDefineCursor(QX11Info::display(), DefaultRootWindow(QX11Info::display()), handle);
-    XFreeCursor(QX11Info::display(), handle); // Don't leak the cursor
-    XFlush(QX11Info::display());
+    Cursor handle = XcursorLibraryLoadCursor(x11App->display(), "left_ptr");
+    XDefineCursor(x11App->display(), DefaultRootWindow(x11App->display()), handle);
+    XFreeCursor(x11App->display(), handle); // Don't leak the cursor
+    XFlush(x11App->display());
 #endif
 }
