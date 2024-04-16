@@ -695,6 +695,8 @@ Kicker.DashboardWindow {
                         } else {
                             systemFavoritesGrid.tryActivate(0, 0);
                         }
+                    } else {
+                        event.accepted = false;
                     }
                 }
             }

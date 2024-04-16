@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQuick
 
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components as PlasmaComponents
@@ -34,6 +34,34 @@ PlasmaComponents.ScrollView {
     property alias count: repeater.count
     property alias flickableItem: flickable
 
+    function subGridAt(index) {
+        return repeater.itemAt(index).itemGrid;
+    }
+
+    function tryActivate(row, col) { // FIXME TODO: Cleanup messy algo.
+        if (flickable.contentY > 0) {
+            row = 0;
+        }
+
+        var target = null;
+        var rows = 0;
+
+        for (var i = 0; i < repeater.count; i++) {
+            var grid = subGridAt(i);
+
+            if (rows <= row) {
+                target = grid;
+                rows += grid.lastRow() + 2; // Header counts as one.
+            } else {
+                break;
+            }
+        }
+
+        if (target) {
+            rows -= (target.lastRow() + 2);
+            target.tryActivate(row - rows, col);
+        }
+    }
 
     onFocusChanged: {
         if (!focus) {
@@ -48,35 +76,7 @@ PlasmaComponents.ScrollView {
 
         flickableDirection: Flickable.VerticalFlick
         contentHeight: itemColumn.implicitHeight
-
-        function subGridAt(index) {
-            return repeater.itemAt(index).itemGrid;
-        }
-
-        function tryActivate(row, col) { // FIXME TODO: Cleanup messy algo.
-            if (contentY > 0) {
-                row = 0;
-            }
-
-            var target = null;
-            var rows = 0;
-
-            for (var i = 0; i < repeater.count; i++) {
-                var grid = subGridAt(i);
-
-                if (rows <= row) {
-                    target = grid;
-                    rows += grid.lastRow() + 2; // Header counts as one.
-                } else {
-                    break;
-                }
-            }
-
-            if (target) {
-                rows -= (target.lastRow() + 2);
-                target.tryActivate(row - rows, col);
-            }
-        }
+        //focusPolicy: Qt.NoFocus
 
         Column {
             id: itemColumn
@@ -156,12 +156,12 @@ PlasmaComponents.ScrollView {
 
                         onFocusChanged: {
                             if (focus) {
-                                flickable.focus = true;
+                                itemMultiGrid.focus = true;
                             }
                         }
 
                         onCountChanged: {
-                            if (flickable.grabFocus && index == 0 && count > 0) {
+                            if (itemMultiGrid.grabFocus && index == 0 && count > 0) {
                                 currentIndex = 0;
                                 focus = true;
                             }
@@ -194,11 +194,11 @@ PlasmaComponents.ScrollView {
                         }
 
                         onKeyNavLeft: {
-                            flickable.keyNavLeft(index);
+                            itemMultiGrid.keyNavLeft(index);
                         }
 
                         onKeyNavRight: {
-                            flickable.keyNavRight(index);
+                            itemMultiGrid.keyNavRight(index);
                         }
 
                         onKeyNavUp: {
@@ -206,7 +206,7 @@ PlasmaComponents.ScrollView {
                                 var prevGrid = subGridAt(index - 1);
                                 prevGrid.tryActivate(prevGrid.lastRow(), currentCol());
                             } else {
-                                flickable.keyNavUp();
+                                itemMultiGrid.keyNavUp();
                             }
                         }
 
@@ -214,7 +214,7 @@ PlasmaComponents.ScrollView {
                             if (index < repeater.count - 1) {
                                 subGridAt(index + 1).tryActivate(0, currentCol());
                             } else {
-                                flickable.keyNavDown();
+                                itemMultiGrid.keyNavDown();
                             }
                         }
                     }
@@ -225,7 +225,7 @@ PlasmaComponents.ScrollView {
                         anchors.fill: gridView
                         z: 1
 
-                        destination: findWheelArea(flickable)
+                        destination: findWheelArea(itemMultiGrid)
                     }
                 }
             }
