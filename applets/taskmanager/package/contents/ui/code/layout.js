@@ -38,6 +38,15 @@ function launcherLayoutWidthDiff() {
 }
 
 function logicalTaskCount() {
+    // logicalTaskCount used to return only the tasks, minus the launchers.
+    // This got horribly broken on 6.0 and made things to be incorrectly laid out on multi row
+    // as launchers are the samesize as full tasks
+    // long term solution, this custom layout code will be ported to
+    // a normal GridLayout
+    if (tasks.plasmoid.configuration.maxStripes > 1) {
+        return tasksModel.count
+    }
+
     var count = (tasksModel.count - tasksModel.logicalLauncherCount) + launcherLayoutTasks();
 
     return Math.max(tasksModel.count ? 1 : 0, count);
