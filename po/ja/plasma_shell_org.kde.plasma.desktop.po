@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:39+0000\n"
-"PO-Revision-Date: 2024-02-08 15:20+0900\n"
+"PO-Revision-Date: 2024-04-13 21:31+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -244,8 +244,8 @@ msgstr "ショートカット"
 #: contents/configuration/ConfigurationShortcuts.qml:30
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr ""
-"ここで設定したショートカットで、クリックされたときのようにウィジェットがアク"
-"ティブになります。"
+"ここで設定したショートカットを使用して、ウィジェットをアクティブにすることが"
+"できます。"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 msgid "Wallpaper"
@@ -316,14 +316,12 @@ msgid "Center"
 msgstr "中央"
 
 #: contents/configuration/PanelConfiguration.qml:290
-#, fuzzy
-#| msgid "Height:"
 msgid "Height"
-msgstr "高さ:"
+msgstr "高さ"
 
 #: contents/configuration/PanelConfiguration.qml:291
 msgid "Width"
-msgstr ""
+msgstr "幅"
 
 #: contents/configuration/PanelConfiguration.qml:310
 msgid "Fill height"
@@ -440,8 +438,6 @@ msgstr ""
 "ダブルクリックしてリセット"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy
-#| msgid "Panels and Desktops Management"
 msgid "Panel and Desktop Management"
 msgstr "パネルとデスクトップの管理"
 
@@ -535,96 +531,90 @@ msgstr "利用可能なウィジェットはありません"
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "時計:"
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "アンロック画面が消えても表示し続ける"
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "メディア操作:"
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "アンロック画面で表示する"
 
 #: contents/lockscreen/LockScreenUi.qml:50
 msgid "Unlocking failed"
-msgstr ""
+msgstr "ロック解除に失敗"
 
 #: contents/lockscreen/LockScreenUi.qml:276
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Caps Lock が有効です"
 
 #: contents/lockscreen/LockScreenUi.qml:290
 msgid "Sleep"
-msgstr ""
+msgstr "スリープ"
 
 #: contents/lockscreen/LockScreenUi.qml:296
 msgid "Hibernate"
-msgstr ""
+msgstr "ハイバネート"
 
 #: contents/lockscreen/LockScreenUi.qml:302
 msgid "Switch User"
-msgstr ""
+msgstr "ユーザの切り替え"
 
 #: contents/lockscreen/LockScreenUi.qml:363
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "仮想キーボード"
 
 #: contents/lockscreen/LockScreenUi.qml:387
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "レイアウトを切り替え"
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr ""
+msgstr "パスワード"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr ""
+msgstr "ロック解除"
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(もしくは指紋をリーダにスキャンしてください)"
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(もしくはスマートカードをスキャンしてください)"
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr ""
+msgstr "タイトルなし"
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr ""
+msgstr "再生中のメディアはありません"
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr ""
+msgstr "前のトラック"
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr ""
+msgstr "メディアを再生/一時停止"
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr ""
+msgstr "次のトラック"
 
 #: contents/views/Panel.qml:326
 msgid "Panel Focus Indicator"
 msgstr ""
-
-#~ msgid "Sorry! There was an error loading %1."
-#~ msgstr "すみません。%1 の読み込み中にエラーが発生しました。"
-
-#~ msgid "Length"
-#~ msgstr "長さ"

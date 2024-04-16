@@ -1,4 +1,4 @@
-# Translation of kcmkeyboard.po to Catalan (Valencian)
+# Translation of kcm_keyboard.po to Catalan (Valencian)
 # Copyright (C) 2007-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:39+0000\n"
-"PO-Revision-Date: 2024-04-13 12:16+0200\n"
+"PO-Revision-Date: 2024-04-14 09:34+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -103,92 +103,79 @@ msgstr ""
 "funcionar bé si s'apliquen"
 
 #: ui/Advanced.qml:38
-#, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Configure keyboard options"
-msgstr "&Configura les opcions del teclat"
+msgstr "Configura les opcions del teclat"
 
 #: ui/Hardware.qml:34
-#, fuzzy, kde-format
-#| msgid "Keyboard &model:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Keyboard model:"
-msgstr "&Model de teclat:"
+msgstr "Model de teclat:"
 
 #: ui/Hardware.qml:68
-#, fuzzy, kde-format
-#| msgid "NumLock on Plasma Startup"
+#, kde-format
 msgctxt "@title:group"
 msgid "NumLock on Plasma Startup:"
-msgstr "«Bloq Núm» en iniciar Plasma"
+msgstr "«Bloq Núm» en iniciar Plasma:"
 
 #: ui/Hardware.qml:73
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Turn On"
-msgstr "&Iniciat"
+msgstr "Activat"
 
 #: ui/Hardware.qml:77
-#, fuzzy, kde-format
-#| msgid "&Turn off"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Turn Off"
-msgstr "&Apaga"
+msgstr "Desactivat"
 
 #: ui/Hardware.qml:81
-#, fuzzy, kde-format
-#| msgid "Leave unchan&ged"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Leave unchanged"
-msgstr "Deixa &sense canviar"
+msgstr "Deixa sense canviar"
 
 #: ui/Hardware.qml:114
-#, fuzzy, kde-format
-#| msgid "When a key is held:"
+#, kde-format
 msgctxt "@title:group"
 msgid "When key is held:"
 msgstr "Quan es manté premuda una tecla:"
 
 #: ui/Hardware.qml:119
-#, fuzzy, kde-format
-#| msgid "&Repeat the key"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Repeat the key"
-msgstr "Repeti&x la tecla"
+msgstr "Repetix la tecla"
 
 #: ui/Hardware.qml:124
-#, fuzzy, kde-format
-#| msgid "&Do nothing"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Do nothing"
-msgstr "&No faces res"
+msgstr "No faces res"
 
 #: ui/Hardware.qml:129
-#, fuzzy, kde-format
-#| msgid "&Show accented and similar characters "
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show accented and similar characters"
-msgstr "Mo&stra els caràcters accentuats i similars"
+msgstr "Mostra els caràcters accentuats i similars"
 
 #: ui/Hardware.qml:164
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Delay:"
-msgstr "&Retard:"
+msgstr "Retard:"
 
 #: ui/Hardware.qml:199
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Rate:"
-msgstr "&Velocitat:"
+msgstr "Velocitat:"
 
 #: ui/Hardware.qml:247
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr "Àrea de proves:"
@@ -197,18 +184,16 @@ msgstr "Àrea de proves:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "Teclegeu ací per a provar la configuració"
 
 #: ui/LayoutDialog.qml:21
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Afig una disposició"
 
 #: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Vista prèvia"
@@ -217,199 +202,172 @@ msgstr "Vista prèvia"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display text:"
-msgstr ""
+msgstr "Mostra el text:"
 
 #: ui/LayoutDialog.qml:143
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Drecera:"
 
 #: ui/Layouts.qml:28
-#, fuzzy, kde-format
-#| msgid "Shortcuts for Switching Layout"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts for Switching Layout"
 msgstr "Dreceres per a canviar la disposició"
 
 #: ui/Layouts.qml:34
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Main shortcuts:"
 msgstr "Dreceres principals:"
 
 #: ui/Layouts.qml:61
-#, fuzzy, kde-format
-#| msgid "3rd level shortcuts:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "3rd level shortcuts:"
 msgstr "Dreceres de 3r nivell:"
 
 #: ui/Layouts.qml:88
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative shortcut:"
 msgstr "Drecera alternativa:"
 
 #: ui/Layouts.qml:109
-#, fuzzy, kde-format
-#| msgid "Last used shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Last used shortcuts:"
-msgstr "Drecera utilitzada per última vegada:"
+msgstr "Dreceres utilitzades per última vegada:"
 
 #: ui/Layouts.qml:129
 #, kde-format
 msgctxt "@option:checkbox"
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "Mostra un missatge emergent en els canvis de disposició"
 
 #: ui/Layouts.qml:145
-#, fuzzy, kde-format
-#| msgid "Switching Policy"
+#, kde-format
 msgctxt "@title:group"
 msgid "Switching Policy"
 msgstr "Política de canvi"
 
 #: ui/Layouts.qml:152
-#, fuzzy, kde-format
-#| msgid "&Global"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Global"
-msgstr "&Global"
+msgstr "Global"
 
 #: ui/Layouts.qml:156
-#, fuzzy, kde-format
-#| msgid "&Desktop"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Desktop"
-msgstr "&Escriptori"
+msgstr "Escriptori"
 
 #: ui/Layouts.qml:160
-#, fuzzy, kde-format
-#| msgid "&Application"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Application"
-msgstr "&Aplicació"
+msgstr "Aplicació"
 
 #: ui/Layouts.qml:164
-#, fuzzy, kde-format
-#| msgid "&Window"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Window"
-msgstr "&Finestra"
+msgstr "Finestra"
 
 #: ui/Layouts.qml:185
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Configure Layouts"
 msgstr "Configura les disposicions"
 
 #: ui/Layouts.qml:200
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Afig"
 
 #: ui/Layouts.qml:206
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Elimina"
 
 #: ui/Layouts.qml:213
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Mou cap amunt"
 
 #: ui/Layouts.qml:229
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Mou cap avall"
 
 #: ui/Layouts.qml:316
-#, fuzzy, kde-format
-#| msgctxt "layout map name"
-#| msgid "Map"
+#, kde-format
 msgctxt "@title:column"
 msgid "Map"
 msgstr "Mapa"
 
 #: ui/Layouts.qml:323
-#, fuzzy, kde-format
-#| msgid "Label"
+#, kde-format
 msgctxt "@title:column"
 msgid "Label"
 msgstr "Etiqueta"
 
 #: ui/Layouts.qml:332
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:column"
 msgid "Layout"
 msgstr "Disposició"
 
 #: ui/Layouts.qml:337
-#, fuzzy, kde-format
-#| msgid "Variant"
+#, kde-format
 msgctxt "@title:column"
 msgid "Variant"
 msgstr "Variant"
 
 #: ui/Layouts.qml:342
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:column"
 msgid "Shortcut"
 msgstr "Drecera"
 
 #: ui/Layouts.qml:388
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign shortcut"
-msgstr "Dreceres principals:"
+msgstr "Torna a assignar la drecera"
 
 #: ui/Layouts.qml:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel assignment"
-msgstr ""
+msgstr "Cancel·la l'assignació"
 
 #: ui/Layouts.qml:417
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Spare layouts"
 msgstr "Disposicions alternatives"
 
 #: ui/Layouts.qml:453
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Main layout count:"
 msgstr "Nombre de disposicions principals:"
 
 #: ui/main.qml:41
-#, fuzzy, kde-format
-#| msgid "Hardware"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Hardware"
 msgstr "Maquinari"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Layouts"
 msgstr "Disposicions"
@@ -418,7 +376,7 @@ msgstr "Disposicions"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Lligams de tecla"
 
 #: xkboptionsmodel.cpp:161
 #, kde-format
@@ -432,116 +390,3 @@ msgstr[1] "%1 dreceres"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Cap"
-
-#~ msgid "Search…"
-#~ msgstr "Busca…"
-
-#~ msgid "Label:"
-#~ msgstr "Etiqueta:"
-
-#~ msgid ""
-#~ "Here you can choose a keyboard model. This setting is independent of your "
-#~ "keyboard layout and refers to the \"hardware\" model, i.e. the way your "
-#~ "keyboard is manufactured. Modern keyboards that come with your computer "
-#~ "usually have two extra keys and are referred to as \"104-key\" models, "
-#~ "which is probably what you want if you do not know what kind of keyboard "
-#~ "you have.\n"
-#~ msgstr ""
-#~ "Ací podeu triar un model de teclat. Este valor és independent de la "
-#~ "disposició del vostre teclat i fa referència al model «maquinari», p. "
-#~ "ex., la manufactura del teclat. Els teclats moderns que venen amb un "
-#~ "ordinador, usualment tenen dues tecles extres i s'anomenen models de «104-"
-#~ "tecles», açò és el que probablement voleu si no sabeu quina mena de "
-#~ "teclat teniu.\n"
-
-#~ msgid ""
-#~ "If you select \"Application\" or \"Window\" switching policy, changing "
-#~ "the keyboard layout will only affect the current application or window."
-#~ msgstr ""
-#~ "Si seleccioneu les polítiques de canvi «Aplicació» o «Finestra», el canvi "
-#~ "de disposició de teclat només afectarà l'aplicació o finestra actuals."
-
-#~ msgid ""
-#~ "This is a shortcut for switching layouts which is handled by X.org. It "
-#~ "allows modifier-only shortcuts."
-#~ msgstr ""
-#~ "Esta és una drecera per a canviar disposicions gestionades per X.org. "
-#~ "Permet dreceres de només modificador."
-
-#~ msgctxt "no shortcut defined"
-#~ msgid "None"
-#~ msgstr "Cap"
-
-#~ msgid "…"
-#~ msgstr "…"
-
-#~ msgid ""
-#~ "This is a shortcut for switching to a third level of the active layout "
-#~ "(if it has one) which is handled by X.org. It allows modifier-only "
-#~ "shortcuts."
-#~ msgstr ""
-#~ "Esta és una drecera per a canviar al tercer nivell de la disposició "
-#~ "activa (si n'hi ha una) gestionada per X.org. Permet dreceres de només "
-#~ "modificador."
-
-#~ msgid ""
-#~ "This is a shortcut for switching layouts. It does not support modifier-"
-#~ "only shortcuts and also may not work in some situations (e.g. if popup is "
-#~ "active or from screensaver)."
-#~ msgstr ""
-#~ "Esta és una drecera per a canviar les disposicions. No permet dreceres de "
-#~ "només modificador i pot no funcionar en algunes situacions (p. ex., si hi "
-#~ "ha una finestra emergent o des del salvapantalla)."
-
-#~ msgid ""
-#~ "This shortcut allows for fast switching between two layouts, by always "
-#~ "switching to the last-used one."
-#~ msgstr ""
-#~ "Esta drecera permet canviar ràpidament entre dues disposicions, canviant "
-#~ "sempre a l'última utilitzada."
-
-#~ msgid "Advanced"
-#~ msgstr "Avançat"
-
-#~ msgctxt "variant"
-#~ msgid "Default"
-#~ msgstr "Predeterminat"
-
-#~ msgid ""
-#~ "Allows to test keyboard repeat and click volume (just don't forget to "
-#~ "apply the changes)."
-#~ msgstr ""
-#~ "Permet provar la repetició de teclat i el volum del clic (no oblideu "
-#~ "aplicar els canvis)."
-
-#~ msgid ""
-#~ "If supported, this option allows you to setup the state of NumLock after "
-#~ "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
-#~ "configure Plasma not to set NumLock state."
-#~ msgstr ""
-#~ "Si està admesa, esta opció us permet establir l'estat de la fixació del "
-#~ "teclat numèric després d'iniciar Plasma.<p>Podeu configurar que el «Bloq "
-#~ "Núm» estiga iniciat o apagat, o configurar que Plasma no establisca "
-#~ "l'estat del «Bloq Núm»."
-
-#~ msgid ""
-#~ "If supported, this option allows you to set the delay after which a "
-#~ "pressed key will start generating keycodes. The 'Repeat rate' option "
-#~ "controls the frequency of these keycodes."
-#~ msgstr ""
-#~ "Si està admesa, esta opció us permet establir el retard després del que "
-#~ "una tecla premuda començarà a generar codis de tecla. L'opció de la "
-#~ "«velocitat de repetició» controla la freqüència d'estos codis de tecla."
-
-#~ msgid ""
-#~ "If supported, this option allows you to set the rate at which keycodes "
-#~ "are generated while a key is pressed."
-#~ msgstr ""
-#~ "Si està admesa, esta opció us permet establir la velocitat de generació "
-#~ "dels codis de tecla mentre es prem una tecla."
-
-#~ msgid " repeats/s"
-#~ msgstr " repeticions/s"
-
-#~ msgid " ms"
-#~ msgstr " ms"

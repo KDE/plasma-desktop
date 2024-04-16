@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2013, 2022.
-# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:39+0000\n"
-"PO-Revision-Date: 2023-09-08 10:32+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-04-14 18:24+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -415,10 +415,9 @@ msgstr ""
 "og hægri vinnslu. Þú mátt gjarnan færa þær eitthvert annað."
 
 #: package/contents/ui/main.qml:389
-#, fuzzy, kde-format
-#| msgid "Configure Desktop and Wallpaper…"
+#, kde-format
 msgid "Desktop and Wallpaper"
-msgstr "Grunnstilla skjáborð og bakgrunnsmynd…"
+msgstr "Skjáborð og veggfóður"
 
 #: plugins/folder/directorypicker.cpp:32
 #, kde-format

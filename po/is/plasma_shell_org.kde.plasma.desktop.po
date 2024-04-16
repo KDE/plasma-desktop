@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:39+0000\n"
-"PO-Revision-Date: 2024-03-18 15:50+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-04-14 18:29+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
@@ -435,10 +435,8 @@ msgstr ""
 "Tvísmelltu til að endurstilla."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy
-#| msgid "Panels and Desktops Management"
 msgid "Panel and Desktop Management"
-msgstr "Umsjón með skjáborðum og skjáborðsstikum"
+msgstr "Umsjón með skjáborði og skjáborðsstiku"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
@@ -533,90 +531,90 @@ msgstr "Engar græjur í boði"
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Klukka:"
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Halda sýnilegu þegar aflæsingarkvaðning hverfur"
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Miðlastýringar:"
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Sýna undir aflæsingarkvaðningu"
 
 #: contents/lockscreen/LockScreenUi.qml:50
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Aflæsing tókst ekki"
 
 #: contents/lockscreen/LockScreenUi.qml:276
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Kveikt á hástafalás (CapsLock)"
 
 #: contents/lockscreen/LockScreenUi.qml:290
 msgid "Sleep"
-msgstr ""
+msgstr "Svæfa"
 
 #: contents/lockscreen/LockScreenUi.qml:296
 msgid "Hibernate"
-msgstr ""
+msgstr "Leggja í dvala"
 
 #: contents/lockscreen/LockScreenUi.qml:302
 msgid "Switch User"
-msgstr ""
+msgstr "Skipta um notanda"
 
 #: contents/lockscreen/LockScreenUi.qml:363
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Sýndarlyklaborð"
 
 #: contents/lockscreen/LockScreenUi.qml:387
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Skipta um lyklaborðsskipan"
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr ""
+msgstr "Lykilorð"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr ""
+msgstr "Aflæsa"
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(eða skannaðu fingrafarið þitt á lesaranum)"
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(eða skannaðu snjallkortið þitt)"
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr ""
+msgstr "Enginn titill"
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr ""
+msgstr "Ekkert efni í spilun"
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr ""
+msgstr "Fyrra lag"
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Spila eða setja á pásu"
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr ""
+msgstr "Næsta lag"
 
 #: contents/views/Panel.qml:326
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Fókusvísir skjáborðsstiku"

@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2010, 2011, 2016.
-# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:39+0000\n"
-"PO-Revision-Date: 2023-10-17 23:19+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-04-14 18:20+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -82,13 +82,7 @@ msgid "Keyboard layout visualization"
 msgstr "Birting lyklaborðsskipanar"
 
 #: tastenbrett/main.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "The keyboard geometry failed to load. This often indicates that the "
-#| "selected model does not support a specific layout or layout variant. This "
-#| "problem will likely also present when you try to use this combination of "
-#| "model, layout and variant."
+#, kde-format
 msgctxt "@label"
 msgid ""
 "The keyboard geometry failed to load. This often indicates that the selected "
@@ -102,95 +96,85 @@ msgstr ""
 "Ekki tókst að hlaða inn lögun og stærð lyklaborðsins. Það bendir oft til "
 "þess að þessi tegund lyklaborðs styðji ekki tiltekna skipan eða tilbrigði "
 "hennar. Þetta vandamál verður líklega líka til staðar þegar þú reynir að "
-"nota þessa tegund lyklaborðs, uppstillingu og tilbrigði saman."
+"nota þessa tegund lyklaborðs, uppstillingu og tilbrigði saman.\n"
+"Forskoðun skipana sem eru skilgreindar utan xkb-möppu kerfisins þíns er ekki "
+"studd og virkjar einnig þessi skilaboð. Þetta gæti samt virkað rétt ef þetta "
+"er valið"
 
 #: ui/Advanced.qml:38
-#, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Configure keyboard options"
-msgstr "&Grunnstilla valkosti lyklaborðs"
+msgstr "Grunnstilla valkosti lyklaborðs"
 
 #: ui/Hardware.qml:34
-#, fuzzy, kde-format
-#| msgid "Keyboard &model:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Keyboard model:"
-msgstr "Teg&und lyklaborðs:"
+msgstr "Tegund lyklaborðs:"
 
 #: ui/Hardware.qml:68
-#, fuzzy, kde-format
-#| msgid "NumLock on Plasma Startup"
+#, kde-format
 msgctxt "@title:group"
 msgid "NumLock on Plasma Startup:"
-msgstr "Talnalás (NumLock) við ræsingu á Plasma"
+msgstr "Talnalás (NumLock) við ræsingu á Plasma:"
 
 #: ui/Hardware.qml:73
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Turn On"
-msgstr "&Kveikt"
+msgstr "Kveikt"
 
 #: ui/Hardware.qml:77
-#, fuzzy, kde-format
-#| msgid "&Turn off"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Turn Off"
-msgstr "&Slökkt"
+msgstr "Slökkt"
 
 #: ui/Hardware.qml:81
-#, fuzzy, kde-format
-#| msgid "Leave unchan&ged"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Leave unchanged"
-msgstr "&Láta vera"
+msgstr "Halda óbreyttu"
 
 #: ui/Hardware.qml:114
-#, fuzzy, kde-format
-#| msgid "When a key is held:"
+#, kde-format
 msgctxt "@title:group"
 msgid "When key is held:"
 msgstr "Þegar lykli er haldið niðri:"
 
 #: ui/Hardware.qml:119
-#, fuzzy, kde-format
-#| msgid "&Repeat the key"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Repeat the key"
-msgstr "Endu&rtaka lykilinn"
+msgstr "Endurtaka lykilinn"
 
 #: ui/Hardware.qml:124
-#, fuzzy, kde-format
-#| msgid "&Do nothing"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Do nothing"
-msgstr "G&era ekkert"
+msgstr "Gera ekkert"
 
 #: ui/Hardware.qml:129
-#, fuzzy, kde-format
-#| msgid "&Show accented and similar characters "
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show accented and similar characters"
-msgstr "&Sýna broddstafi og áþekka stafi "
+msgstr "Sýna broddstafi og áþekka stafi"
 
 #: ui/Hardware.qml:164
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Delay:"
-msgstr "&Töf:"
+msgstr "Töf:"
 
 #: ui/Hardware.qml:199
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Rate:"
-msgstr "&Hraði:"
+msgstr "Hraði:"
 
 #: ui/Hardware.qml:247
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr "Prufusvæði:"
@@ -199,219 +183,190 @@ msgstr "Prufusvæði:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "Sláðu inn hér til að prófa stillingar"
 
 #: ui/LayoutDialog.qml:21
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Bæta við lyklaborðsskipan"
 
 #: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
-msgstr "Forskoða"
+msgstr "Forskoðun"
 
 #: ui/LayoutDialog.qml:124
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display text:"
-msgstr ""
+msgstr "Texti til birtingar:"
 
 #: ui/LayoutDialog.qml:143
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Flýtilykill:"
 
 #: ui/Layouts.qml:28
-#, fuzzy, kde-format
-#| msgid "Shortcuts for Switching Layout"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts for Switching Layout"
 msgstr "Flýtilyklar til að skipta um lyklaborðsskipan"
 
 #: ui/Layouts.qml:34
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Main shortcuts:"
-msgstr "Aðalflýtilykill:"
+msgstr "Aðalflýtilyklar:"
 
 #: ui/Layouts.qml:61
-#, fuzzy, kde-format
-#| msgid "3rd level shortcuts:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "3rd level shortcuts:"
-msgstr "3. stigs flýtilykill:"
+msgstr "3ja-stigs flýtilyklar:"
 
 #: ui/Layouts.qml:88
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative shortcut:"
-msgstr "Varaflýtilykill:"
+msgstr "Aukaflýtilykill:"
 
 #: ui/Layouts.qml:109
-#, fuzzy, kde-format
-#| msgid "Last used shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Last used shortcuts:"
-msgstr "Flýtilykill sem var notaður síðast:"
+msgstr "Flýtilykill notaður síðast:"
 
 #: ui/Layouts.qml:129
 #, kde-format
 msgctxt "@option:checkbox"
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "Sýna sprettiglugga við breytingu á lyklaborðsskipan"
 
 #: ui/Layouts.qml:145
-#, fuzzy, kde-format
-#| msgid "Switching Policy"
+#, kde-format
 msgctxt "@title:group"
 msgid "Switching Policy"
 msgstr "Skiptiregla"
 
 #: ui/Layouts.qml:152
-#, fuzzy, kde-format
-#| msgid "&Global"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Global"
-msgstr "&Altæk"
+msgstr "Altæk"
 
 #: ui/Layouts.qml:156
-#, fuzzy, kde-format
-#| msgid "&Desktop"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Desktop"
-msgstr "&Skjáborð"
+msgstr "Skjáborð"
 
 #: ui/Layouts.qml:160
-#, fuzzy, kde-format
-#| msgid "&Application"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Application"
-msgstr "&Forrit"
+msgstr "Forrit"
 
 #: ui/Layouts.qml:164
-#, fuzzy, kde-format
-#| msgid "&Window"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Window"
-msgstr "&Gluggi"
+msgstr "Gluggi"
 
 #: ui/Layouts.qml:185
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Configure Layouts"
-msgstr "Grunnstilla lyklaborðsskipan"
+msgstr "Grunnstilla lyklaborðsskipanir"
 
 #: ui/Layouts.qml:200
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Bæta við"
 
 #: ui/Layouts.qml:206
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Fjarlægja"
 
 #: ui/Layouts.qml:213
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Færa upp"
 
 #: ui/Layouts.qml:229
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Færa niður"
 
 #: ui/Layouts.qml:316
-#, fuzzy, kde-format
-#| msgctxt "layout map name"
-#| msgid "Map"
+#, kde-format
 msgctxt "@title:column"
 msgid "Map"
 msgstr "Vörpun"
 
 #: ui/Layouts.qml:323
-#, fuzzy, kde-format
-#| msgid "Label"
+#, kde-format
 msgctxt "@title:column"
 msgid "Label"
-msgstr "Merking"
+msgstr "Skýring"
 
 #: ui/Layouts.qml:332
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:column"
 msgid "Layout"
 msgstr "Lyklaborðsskipan"
 
 #: ui/Layouts.qml:337
-#, fuzzy, kde-format
-#| msgid "Variant"
+#, kde-format
 msgctxt "@title:column"
 msgid "Variant"
 msgstr "Tilbrigði"
 
 #: ui/Layouts.qml:342
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:column"
 msgid "Shortcut"
 msgstr "Flýtilykill"
 
 #: ui/Layouts.qml:388
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign shortcut"
-msgstr "Aðalflýtilykill:"
+msgstr "Endurúthluta flýtilykli:"
 
 #: ui/Layouts.qml:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel assignment"
-msgstr ""
+msgstr "Hætta við úthlutun"
 
 #: ui/Layouts.qml:417
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Spare layouts"
-msgstr "Aukalyklaborðsskipanir"
+msgstr "Varalyklaborðsskipanir"
 
 #: ui/Layouts.qml:453
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Main layout count:"
 msgstr "Fjöldi aðallyklaborðsskipana:"
 
 #: ui/main.qml:41
-#, fuzzy, kde-format
-#| msgid "Hardware"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Hardware"
 msgstr "Vélbúnaður"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Layouts"
 msgstr "Lyklaborðsskipanir"
@@ -420,7 +375,7 @@ msgstr "Lyklaborðsskipanir"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Lyklabindingar"
 
 #: xkboptionsmodel.cpp:161
 #, kde-format
