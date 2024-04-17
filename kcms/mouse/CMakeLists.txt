@@ -21,10 +21,15 @@ add_subdirectory(misc)
 add_library(kcm_mouse MODULE
     plugin.cpp
     configcontainer.cpp
-    cursortheme.cpp
     inputbackend.cpp
     libinput_config.cpp
 )
+
+if (BUILD_KCM_MOUSE_X11)
+    target_sources(kcm_mouse PRIVATE
+        cursortheme.cpp
+    )
+endif()
 
 ecm_qt_declare_logging_category(kcm_mouse
     HEADER

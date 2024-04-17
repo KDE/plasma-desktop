@@ -25,6 +25,7 @@ Q_DECL_EXPORT void kcminit()
         backend->kcmInit();
     }
 
+#if BUILD_KCM_MOUSE_X11
     if (KWindowSystem::isPlatformX11()) {
         auto config = KSharedConfig::openConfig("kcminputrc", KConfig::NoGlobals);
         KConfigGroup group = config->group(QStringLiteral("Mouse"));
@@ -35,6 +36,7 @@ Q_DECL_EXPORT void kcminit()
 
         CursorTheme::applyCursorTheme(theme, size);
     }
+#endif
 }
 }
 
