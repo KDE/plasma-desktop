@@ -15,3 +15,8 @@ ecm_finalize_qml_module(EmojierDeclarativePlugin)
 
 add_subdirectory(data)
 add_subdirectory(app)
+
+ecm_add_test(
+   autotest.cpp
+   LINK_LIBRARIES Qt::Test
+)
