@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
@@ -19,7 +21,7 @@ ColumnLayout {
         target: kcm.xkbOptionsModel
 
         function onNavigateTo(index): void {
-            let modelIndex = xkbOptionsProxy.mapFromSource(index)
+            const modelIndex = xkbOptionsProxy.mapFromSource(index)
             treeView.expand(modelIndex.row)
             treeView.positionViewAtIndex(modelIndex, Qt.AlignCenter)
             treeView.forceActiveFocus()
@@ -28,7 +30,7 @@ ColumnLayout {
 
     KItemModels.KSortFilterProxyModel {
         id: xkbOptionsProxy
-        sourceModel: kcm?.xkbOptionsModel ?? undefined
+        sourceModel: kcm?.xkbOptionsModel ?? null
 
         sortRoleName: "display"
         sortOrder: Qt.AscendingOrder
@@ -90,17 +92,17 @@ ColumnLayout {
                     QQC2.CheckBox {
                         id: checkbox
                         tristate: delegate.isTreeNode && delegate.hasChildren
-                        checkState: model.checkState
-                        onToggled: model.checkState = checkState
+                        checkState: delegate.model.checkState
+                        onToggled: delegate.model.checkState = checkState
 
                         KCM.SettingHighlighter {
-                            highlight: model.checkState !== Qt.Unchecked
+                            highlight: delegate.model.checkState !== Qt.Unchecked
                         }
                     }
 
                     QQC2.Label {
                         Layout.fillWidth: true
-                        text: model.display
+                        text: delegate.model.display
                     }
                 }
 
@@ -108,7 +110,7 @@ ColumnLayout {
                     if (delegate.isTreeNode && delegate.hasChildren) {
                         treeView.toggleExpanded(row)
                     } else {
-                        model.checkState = checkbox.checkState === Qt.Checked ? Qt.Unchecked : Qt.Checked
+                        delegate.model.checkState = checkbox.checkState === Qt.Checked ? Qt.Unchecked : Qt.Checked
                     }
                 }
             }

@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
@@ -28,17 +30,20 @@ Kirigami.Dialog {
 
     standardButtons: QQC2.Dialog.Ok | QQC2.Dialog.Cancel
     Component.onCompleted: {
-        let button = standardButton(QQC2.Dialog.Ok);
+        const button = standardButton(QQC2.Dialog.Ok);
         button.enabled = Qt.binding(() => layoutsView.currentIndex >= 0);
     }
 
     onAccepted: {
-        const layout = layoutsView.currentItem.shortName
-        const variant = layoutsView.currentItem.variantName
+        if (!layoutsView.currentItem) {
+            return;
+        }
+        const layout = layoutsView.currentItem.shortName;
+        const variant = layoutsView.currentItem.variantName;
         const shortcut = sequenceItem.keySequence;
-        const displayName = layout === displayNameField.text ? "" : displayNameField.text
+        const displayName = layout === displayNameField.text ? "" : displayNameField.text;
 
-        kcm.userLayoutModel.addLayout(layout, variant, shortcut, displayName)
+        kcm.userLayoutModel.addLayout(layout, variant, shortcut, displayName);
     }
 
     KItemModels.KSortFilterProxyModel {

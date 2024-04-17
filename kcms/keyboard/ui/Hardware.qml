@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
@@ -23,7 +25,7 @@ Kirigami.FormLayout {
 
     KItemModels.KSortFilterProxyModel {
         id: keyboardsProxy
-        sourceModel: kcm?.keyboards ?? undefined
+        sourceModel: kcm?.keyboards ?? null
 
         sortRoleName: "description"
         sortOrder: Qt.AscendingOrder
@@ -40,7 +42,7 @@ Kirigami.FormLayout {
         Component.onCompleted: selectCurrent()
 
         Connections {
-            target: kcm?.keyboardSettings ?? undefined
+            target: kcm?.keyboardSettings ?? null
 
             function onKeyboardModelChanged(): void {
                 keyboardModelComboBox.selectCurrent()
@@ -84,6 +86,8 @@ Kirigami.FormLayout {
             ]
 
             delegate: QQC2.RadioButton {
+                required property var modelData
+
                 text: modelData.text
                 checked: kcm.miscSettings.numLock == modelData.key
                 onToggled: kcm.miscSettings.numLock = modelData.key
@@ -133,6 +137,8 @@ Kirigami.FormLayout {
             ]
 
             delegate: QQC2.RadioButton {
+                required property var modelData
+
                 text: modelData.text
                 visible: modelData.visible
                 checked: kcm.miscSettings.keyboardRepeat === modelData.key
@@ -168,8 +174,9 @@ Kirigami.FormLayout {
 
             from: 100
             to: 5000
+
             value: kcm.miscSettings.repeatDelay
-            onValueChanged: kcm.miscSettings.repeatDelay = value
+            onMoved: kcm.miscSettings.repeatDelay = value
 
             KCM.SettingStateBinding {
                 configObject: kcm.miscSettings
@@ -179,12 +186,13 @@ Kirigami.FormLayout {
 
         QQC2.SpinBox {
             Layout.preferredWidth: Kirigami.Units.gridUnit * 6
+
             from: 0
             to: 5000
             stepSize: 50
 
             value: kcm.miscSettings.repeatDelay
-            onValueChanged: kcm.miscSettings.repeatDelay = value
+            onValueModified: kcm.miscSettings.repeatDelay = value
 
             KCM.SettingStateBinding {
                 configObject: kcm.miscSettings
@@ -204,7 +212,7 @@ Kirigami.FormLayout {
             from: 20
             to: 10000
             value: kcm.miscSettings.repeatRate * 100
-            onValueChanged: kcm.miscSettings.repeatRate = value / 100
+            onMoved: kcm.miscSettings.repeatRate = value / 100
 
             KCM.SettingStateBinding {
                 configObject: kcm.miscSettings
@@ -219,7 +227,7 @@ Kirigami.FormLayout {
             to: 10000
             stepSize: 500
             value: Math.round(kcm.miscSettings.repeatRate * 100)
-            onValueChanged: kcm.miscSettings.repeatRate = value / 100
+            onValueModified: kcm.miscSettings.repeatRate = value / 100
 
             KCM.SettingStateBinding {
                 configObject: kcm.miscSettings

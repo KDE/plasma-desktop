@@ -167,6 +167,8 @@ ColumnLayout {
                 ]
 
                 delegate: QQC2.RadioButton {
+                    required property var modelData
+
                     text: modelData.text
                     checked: kcm.keyboardSettings.switchMode === modelData.key
                     onToggled: kcm.keyboardSettings.switchMode = modelData.key
@@ -214,14 +216,13 @@ ColumnLayout {
             icon.name: "arrow-up-symbolic"
             onClicked: kcm.userLayoutModel.moveSelectedLayouts(-1)
             enabled: {
-                if (!tableView.selectionModel.hasSelection) {
+                const indices = tableView.selectedIndexesSortedInRowAscendingOrder;
+
+                if (indices.length <= 0) {
                     return false;
                 }
 
-                let selected = Array(...tableView.selectionModel.selectedIndexes);
-                selected.sort();
-
-                return selected[0].row > 0;
+                return indices[0].row > 0;
             }
         }
 
@@ -230,14 +231,13 @@ ColumnLayout {
             icon.name: "arrow-down-symbolic"
             onClicked: kcm.userLayoutModel.moveSelectedLayouts(1)
             enabled: {
-                if (!tableView.selectionModel.hasSelection) {
+                const indices = tableView.selectedIndexesSortedInRowAscendingOrder;
+
+                if (indices.length <= 0) {
                     return false;
                 }
 
-                let selected = Array(...tableView.selectionModel.selectedIndexes);
-                selected.sort();
-
-                return selected[selected.length - 1].row < kcm.userLayoutModel.rowCount() - 1;
+                return indices[indices.length - 1].row < kcm.userLayoutModel.rowCount() - 1;
             }
         }
 
@@ -278,8 +278,14 @@ ColumnLayout {
             enabled: kcm.keyboardSettings.configureLayouts
 
             model: kcm?.userLayoutModel ?? []
-            selectionModel: kcm?.userLayoutModel.selectionModel ?? undefined
+            selectionModel: kcm?.userLayoutModel.selectionModel ?? null
             alternatingRows: false
+
+            readonly property /*QModelIndexList*/var selectedIndexesSortedInRowAscendingOrder: {
+                const indices = [...tableView.selectionModel.selectedIndexes];
+                indices.sort((a, b) => a.row - b.row);
+                return indices;
+            }
 
             function preview() {
                 const selected = selectionModel.selectedIndexes[0];
@@ -472,8 +478,8 @@ ColumnLayout {
                     return __internal.noLooping;
                 }
 
-                if (kcm.keyboardSettings.layoutLoopCount > to){
-                    return to
+                if (kcm.keyboardSettings.layoutLoopCount > to) {
+                    return to;
                 }
 
                 return kcm.keyboardSettings.layoutLoopCount;
