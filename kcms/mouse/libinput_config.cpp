@@ -56,7 +56,7 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     });
 
     m_view->engine()->rootContext()->setContextObject(new KLocalizedContext(m_view->engine()));
-    m_view->setSource(QUrl(QStringLiteral("qrc:/ui/main.qml")));
+    m_view->setSource(QUrl(QStringLiteral("qrc:/kcm/kcm_mouse/main.qml")));
 
     if (m_initError) {
         m_errorMessage->setMessageType(KMessageWidget::Error);

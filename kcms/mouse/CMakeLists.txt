@@ -18,18 +18,21 @@ endif()
 
 add_subdirectory(misc)
 
-add_library(kcm_mouse MODULE
+kcmutils_add_qml_kcm(kcm_mouse)
+target_sources(kcm_mouse PRIVATE
     plugin.cpp
     configcontainer.cpp
     inputbackend.cpp
     libinput_config.cpp
 )
-
-if (BUILD_KCM_MOUSE_X11)
-    target_sources(kcm_mouse PRIVATE
-        cursortheme.cpp
-    )
-endif()
+target_link_libraries(kcm_mouse PRIVATE
+    Qt::QuickWidgets
+    KF6::I18n
+    KF6::KCMUtils
+    KF6::KIOCore
+    KF6::KIOWidgets
+    KF6::WindowSystem
+)
 
 ecm_qt_declare_logging_category(kcm_mouse
     HEADER
@@ -50,32 +53,16 @@ ecm_qt_install_logging_categories(
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
+add_subdirectory(backends)
+
 if (BUILD_KCM_MOUSE_X11)
+    target_sources(kcm_mouse PRIVATE cursortheme.cpp)
+
     # kapplymousetheme is an X11-only tool, called by startplasma-x11 but not startplasma-wayland
     add_executable(kapplymousetheme kapplymousetheme.cpp cursortheme.cpp)
     target_link_libraries(kapplymousetheme Qt::Gui Qt::GuiPrivate KF6::CoreAddons KF6::ConfigCore KF6::WindowSystem X11::Xcursor)
     install(TARGETS kapplymousetheme ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
-
-qt_add_resources(kcm_mouse
-    PREFIX "/"
-    FILES
-        ui/main.qml
-)
-kcmutils_generate_desktop_file(kcm_mouse)
-
-target_link_libraries(kcm_mouse PRIVATE
-    KF6::KCMUtils
-    KF6::KIOCore
-    KF6::KIOWidgets
-    KF6::WindowSystem
-    KF6::I18n
-    Qt::QuickWidgets
-)
-
-add_subdirectory(backends)
-
-install(TARGETS kcm_mouse DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
 
 ########### install files ###############
 
