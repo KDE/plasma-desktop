@@ -4,6 +4,7 @@
     SPDX-FileCopyrightText: 2009 Eckhart Wörner <ewoerner@kde.org>
     SPDX-FileCopyrightText: 2010 Frederik Gladhorn <gladhorn@kde.org>
     SPDX-FileCopyrightText: 2019 Dan Leinir Turthra Jensen <admin@leinir.dk>
+    SPDX-FileCopyrightText: 2024 Harald Sitter <sitter@kde.or>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 
@@ -41,70 +42,12 @@ KdePlatformDependent::KdePlatformDependent()
     cache->setCacheDirectory(cacheDir);
     cache->setMaximumCacheSize(storageInfo.bytesTotal() / 1000);
     m_accessManager->setCache(cache);
+
+    QMetaObject::invokeMethod(this, &KdePlatformDependent::loadAccessToken, Qt::QueuedConnection);
 }
 
 KdePlatformDependent::~KdePlatformDependent()
 {
-}
-
-// TODO Cache the account (so we can call getAccount a WHOLE LOT of times without making the application super slow)
-// TODO Also don't just cache it forever, so reset to nullptr every so often, so we pick up potential new stuff the user's done
-QString KdePlatformDependent::getAccessToken(const QUrl & /*baseUrl*/) const
-{
-    QString accessToken;
-    QString idToken;
-    Accounts::Manager *accountsManager = KAccounts::accountsManager();
-    if (accountsManager) {
-        static const QString serviceType{QStringLiteral("opendesktop-rating")};
-        Accounts::AccountIdList accountIds = accountsManager->accountList(serviceType);
-        // TODO Present the user with a choice in case there's more than one, but for now just pick the first successful one
-        // loop through the accounts, and attempt to get them
-        Accounts::Account *account{nullptr};
-        for (const Accounts::AccountId &accountId : accountIds) {
-            account = accountsManager->account(accountId);
-            if (account) {
-                bool completed{false};
-                qCDebug(ATTICA_PLUGIN_LOG) << "Fetching data for" << accountId;
-                KAccounts::GetCredentialsJob *job = new KAccounts::GetCredentialsJob(accountId, accountsManager);
-                connect(job, &KJob::finished, [&completed, &accessToken, &idToken](KJob *kjob) {
-                    KAccounts::GetCredentialsJob *job = qobject_cast<KAccounts::GetCredentialsJob *>(kjob);
-                    const QVariantMap credentialsData = job->credentialsData();
-                    accessToken = credentialsData[QStringLiteral("AccessToken")].toString();
-                    idToken = credentialsData[QStringLiteral("IdToken")].toString();
-                    // As this can be useful for more heavy duty debugging purposes, leaving this in so it doesn't have to be rewritten
-                    //                     if (!accessToken.isEmpty()) {
-                    //                         qCDebug(ATTICA_PLUGIN_LOG) << "Credentials data was retrieved";
-                    //                         for (const QString& key : credentialsData.keys()) {
-                    //                             qCDebug(ATTICA_PLUGIN_LOG) << key << credentialsData[key];
-                    //                         }
-                    //                     }
-                    completed = true;
-                });
-                connect(job, &KJob::result, [&completed]() {
-                    completed = true;
-                });
-                job->start();
-                while (!completed) {
-                    qApp->processEvents();
-                }
-                if (!idToken.isEmpty()) {
-                    qCDebug(ATTICA_PLUGIN_LOG) << "OpenID Access token retrieved for account" << account->id();
-                    break;
-                }
-            }
-            if (idToken.isEmpty()) {
-                // If we arrived here, we did have an opendesktop account, but without the id token, which means an old version of the signon oauth2 plugin was
-                // used
-                qCWarning(ATTICA_PLUGIN_LOG) << "We got an OpenDesktop account, but it seems to be lacking the id token. This means an old SignOn OAuth2 "
-                                                "plugin was used for logging in. The plugin may have been upgraded in the meantime, but an account created "
-                                                "using the old plugin cannot be used, and you must log out and back in again.";
-            }
-        }
-    } else {
-        qCDebug(ATTICA_PLUGIN_LOG) << "No accounts manager could be fetched, so could not ask it for account details";
-    }
-
-    return idToken;
 }
 
 QUrl baseUrlFromRequest(const QNetworkRequest &request)
@@ -121,7 +64,7 @@ QUrl baseUrlFromRequest(const QNetworkRequest &request)
 QNetworkRequest KdePlatformDependent::addOAuthToRequest(const QNetworkRequest &request)
 {
     QNetworkRequest notConstReq = const_cast<QNetworkRequest &>(request);
-    const QString token{getAccessToken(baseUrlFromRequest(request))};
+    const QString token = m_accessToken;
     if (!token.isEmpty()) {
         const QString bearer_format = QStringLiteral("Bearer %1");
         const QString bearer = bearer_format.arg(token);
@@ -187,20 +130,19 @@ bool KdePlatformDependent::saveCredentials(const QUrl & /*baseUrl*/, const QStri
     return true;
 }
 
-bool KdePlatformDependent::hasCredentials(const QUrl &baseUrl) const
+bool KdePlatformDependent::hasCredentials([[maybe_unused]] const QUrl &baseUrl) const
 {
     qCDebug(ATTICA_PLUGIN_LOG) << Q_FUNC_INFO;
-    return !getAccessToken(baseUrl).isEmpty();
+    return !m_accessToken.isEmpty();
 }
 
-bool KdePlatformDependent::loadCredentials(const QUrl &baseUrl, QString &user, QString & /*password*/)
+bool KdePlatformDependent::loadCredentials([[maybe_unused]] const QUrl &baseUrl, QString &user, QString & /*password*/)
 {
     qCDebug(ATTICA_PLUGIN_LOG) << Q_FUNC_INFO;
-    QString token = getAccessToken(baseUrl);
-    if (!token.isEmpty()) {
-        user = token;
+    if (!m_accessToken.isEmpty()) {
+        user = m_accessToken;
     }
-    return !token.isEmpty();
+    return !m_accessToken.isEmpty();
 }
 
 bool Attica::KdePlatformDependent::askForCredentials(const QUrl &baseUrl, QString &user, QString &password)
@@ -269,4 +211,67 @@ bool KdePlatformDependent::isEnabled(const QUrl &baseUrl) const
 QNetworkAccessManager *Attica::KdePlatformDependent::nam()
 {
     return m_accessManager;
+}
+
+QNetworkReply *Attica::KdePlatformDependent::deleteResource(const QNetworkRequest &request)
+{
+    return m_accessManager->deleteResource(addOAuthToRequest(removeAuthFromRequest(request)));
+}
+
+QNetworkReply *Attica::KdePlatformDependent::put(const QNetworkRequest &request, QIODevice *data)
+{
+    return m_accessManager->put(addOAuthToRequest(removeAuthFromRequest(request)), data);
+}
+
+QNetworkReply *Attica::KdePlatformDependent::put(const QNetworkRequest &request, const QByteArray &data)
+{
+    return m_accessManager->put(addOAuthToRequest(removeAuthFromRequest(request)), data);
+}
+
+bool Attica::KdePlatformDependent::isReady()
+{
+    return !m_accessToken.isEmpty();
+}
+
+// TODO Don't just cache it forever, so reset to nullptr every so often, so we pick up potential new stuff the user's done
+// NOTE The above todo is nonesense. Whatever changes the credentials should broadcast that something changed and then we
+//   should reload. Also reloading shouldn't clear the m_accessToken but simply overwrite with a new one - sitter, 2024
+void Attica::KdePlatformDependent::loadAccessToken()
+{
+    auto accountsManager = KAccounts::accountsManager();
+    if (!accountsManager) {
+        qCDebug(ATTICA_PLUGIN_LOG) << "No accounts manager could be fetched, so could not ask it for account details";
+        return;
+    }
+
+    // TODO Present the user with a choice in case there's more than one, but for now just pick the latest successful one
+    const auto accountIds = accountsManager->accountList(QStringLiteral("opendesktop-rating"));
+    for (const auto &accountId : accountIds) {
+        qCDebug(ATTICA_PLUGIN_LOG) << "Fetching data for" << accountId;
+
+        auto account = accountsManager->account(accountId);
+        if (!account) {
+            qCDebug(ATTICA_PLUGIN_LOG) << "Failed to retrieve account" << accountId;
+            continue;
+        }
+
+        auto job = new KAccounts::GetCredentialsJob(accountId, accountsManager);
+        connect(job, &KJob::finished, [this, job, accountId = account->id()]() {
+            const auto credentialsData = job->credentialsData();
+            const auto idToken = credentialsData[QStringLiteral("IdToken")].toString();
+
+            if (idToken.isEmpty()) {
+                // If we arrived here, we did have an opendesktop account, but without the id token, which means an old version of the signon oauth2 plugin was
+                // used
+                qCWarning(ATTICA_PLUGIN_LOG) << "We got an OpenDesktop account, but it seems to be lacking the id token. This means an old SignOn OAuth2 "
+                                                "plugin was used for logging in. The plugin may have been upgraded in the meantime, but an account created "
+                                                "using the old plugin cannot be used, and you must log out and back in again.";
+                return;
+            }
+
+            qCDebug(ATTICA_PLUGIN_LOG) << "OpenID Access token retrieved for account" << accountId;
+            m_accessToken = idToken;
+            Q_EMIT readyChanged();
+        });
+    }
 }
