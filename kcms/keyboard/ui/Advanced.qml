@@ -80,10 +80,17 @@ ColumnLayout {
                 }
             }
 
+            selectionModel: ItemSelectionModel {}
+            keyNavigationEnabled: true
+
             model: xkbOptionsProxy
 
             delegate: QQC2.TreeViewDelegate {
                 id: delegate
+
+                required current
+
+                activeFocusOnTab: false
 
                 // you can't use a CheckDelegate as a TreeViewDelegate. This nests the buttons and is pretty bad for accessible
                 contentItem: RowLayout {
@@ -91,6 +98,7 @@ ColumnLayout {
 
                     QQC2.CheckBox {
                         id: checkbox
+                        activeFocusOnTab: false
                         tristate: delegate.isTreeNode && delegate.hasChildren
                         checkState: delegate.model.checkState
                         onToggled: delegate.model.checkState = checkState
