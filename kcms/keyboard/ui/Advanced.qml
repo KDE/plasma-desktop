@@ -32,6 +32,27 @@ ColumnLayout {
         id: xkbOptionsProxy
         sourceModel: kcm?.xkbOptionsModel ?? null
 
+        autoAcceptChildRows: true
+        recursiveFilteringEnabled: true
+        filterRoleName: "display"
+        // filterCaseSensitivity: Qt.CaseInsensitive
+        // filterString: searchField.text
+        filterRegularExpression: {
+            function escapeRegex(string) {
+                https://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
+                return string.replace(/[/\-\\^$*+?.()|[\]{}]/g, '\\$&');
+            }
+            return new RegExp(searchField.text.split(/\s+/).map(escapeRegex).join(".*"), "i")
+        }
+
+        onCountChanged: {
+            if (searchField.text.length > 0) {
+                treeView.expandRecursively();
+            } else {
+                treeView.collapseRecursively();
+            }
+        }
+
         sortRoleName: "display"
         sortOrder: Qt.AscendingOrder
     }
@@ -45,6 +66,11 @@ ColumnLayout {
             configObject: kcm.keyboardSettings
             settingName: "resetOldXkbOptions"
         }
+    }
+
+    Kirigami.SearchField {
+        id: searchField
+        Layout.fillWidth: true
     }
 
     QQC2.ScrollView {
