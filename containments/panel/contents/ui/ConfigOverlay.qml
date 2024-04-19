@@ -286,7 +286,7 @@ MouseArea {
                     Layout.fillWidth: true
                     icon.name: "configure"
                     text: i18n("Configure…")
-                    visible: configurationArea.currentApplet?.applet.plasmoid.hasConfigurationInterface
+                    visible: configurationArea.currentApplet?.applet.plasmoid.hasConfigurationInterface ?? false
                     onClicked: {
                         configurationArea.currentApplet.applet.plasmoid.internalAction("configure").trigger();
                         configurationArea.currentApplet = null;
