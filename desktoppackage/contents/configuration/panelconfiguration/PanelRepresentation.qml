@@ -61,9 +61,6 @@ Item {
         Rectangle {
             id: screenRect
 
-            readonly property double margin: Kirigami.Units.smallSpacing * 2
-            readonly property int floatingGap: panelRepresentation.floatingGap > -1 ? panelRepresentation.floatingGap : (panel.floating ? Kirigami.Units.smallSpacing : 0)
-
             Layout.alignment: Qt.AlignHCenter
             implicitWidth: Math.round(Math.min(Kirigami.Units.gridUnit * 6, Screen.width * 0.1))
             implicitHeight: Math.round(Math.min(Kirigami.Units.gridUnit * 4, Screen.width * 0.1))
