@@ -74,10 +74,8 @@ Item {
                 Rectangle {
                     id: panelImage
 
-                    width: isVertical ? Math.round(parent.width / 6) : Math.round(parent.width * (fillAvailable ? 1 : 0.8))
-                    height: isVertical ? Math.round(parent.height * (fillAvailable ? 1 : 0.8)) : Math.round(parent.height / 4)
-                    implicitWidth: width
-                    implicitHeight: height
+                    implicitWidth: isVertical ? Math.round(parent.width / 6) : Math.round(parent.width * (fillAvailable ? 1 : 0.8))
+                    implicitHeight: isVertical ? Math.round(parent.height * (fillAvailable ? 1 : 0.8)) : Math.round(parent.height / 4)
                     Layout.alignment: alignment
                     Layout.bottomMargin: sunkenPanel * -Math.round(height / 2) + floatingGap
                     color: panelRepresentation.translucentPanel ? screenRect.color : Kirigami.Theme.backgroundColor
