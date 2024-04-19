@@ -163,7 +163,7 @@ Item {
 
             Kirigami.Icon {
                 id: mainIcon
-                visible: panelRepresentation.mainIconSource
+                visible: valid
                 anchors.centerIn: parent
                 transform: Translate {
                     y: isVertical ? 0 : Math.round((mainIcon.y - panelImage.y) / 4)
