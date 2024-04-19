@@ -10,7 +10,7 @@ import org.kde.plasma.shell.panel 0.1 as Panel
 import org.kde.kirigami as Kirigami
 
 Item {
-    id: panelRepresentation
+    id: root
 
     property string text: ""
     property var alignment: Qt.AlignHCenter | Qt.AlignBottom
@@ -45,7 +45,7 @@ Item {
         anchors.fill: parent
         anchors.margins: -Kirigami.Units.smallSpacing
         hovered: mouseArea.containsMouse
-        pressed: panelRepresentation.iconAndLabelsShouldlookSelected
+        pressed: root.iconAndLabelsShouldlookSelected
     }
 
     MouseArea {
@@ -78,18 +78,18 @@ Item {
                     implicitHeight: isVertical ? Math.round(parent.height * (fillAvailable ? 1 : 0.8)) : Math.round(parent.height / 4)
                     Layout.alignment: alignment
                     Layout.bottomMargin: sunkenPanel * -Math.round(height / 2) + floatingGap
-                    color: panelRepresentation.translucentPanel ? screenRect.color : Kirigami.Theme.backgroundColor
-                    opacity: panelRepresentation.translucentPanel ? 0.8 : 1.0
+                    color: root.translucentPanel ? screenRect.color : Kirigami.Theme.backgroundColor
+                    opacity: root.translucentPanel ? 0.8 : 1.0
                     border.color: "transparent"
-                    visible: panelRepresentation.panelVisible
-                    clip: panelRepresentation.adaptivePanel
+                    visible: root.panelVisible
+                    clip: root.adaptivePanel
                     radius: Kirigami.Units.cornerRadius
 
                     z: 1
 
                     Loader {
                         id: horizontalAdaptivePanelLoader
-                        active: panelRepresentation.adaptivePanel && !isVertical
+                        active: root.adaptivePanel && !isVertical
                         sourceComponent: Rectangle {
                             anchors.verticalCenter: parent.verticalCenter
                             anchors.left: parent.left
@@ -105,7 +105,7 @@ Item {
 
                     Loader {
                         id: verticalAdaptivePanelLoader
-                        active: panelRepresentation.adaptivePanel && isVertical
+                        active: root.adaptivePanel && isVertical
                         sourceComponent: Rectangle {
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.top: parent.top
@@ -133,14 +133,14 @@ Item {
                 id: window
                 width: Math.round(parent.width / 2)
                 height: Math.round(parent.height / 2)
-                visible: panelRepresentation.windowVisible
+                visible: root.windowVisible
                 radius: 5
                 color: Kirigami.Theme.highlightColor
                 border.color: "transparent"
 
                 x: isVertical ? Math.round(panelImage.x + panelImage.width / 2) : Math.round(screenRect.width / 2 - width / 2) + Kirigami.Units.gridUnit
                 y: isVertical ? Math.round(screenRect.height / 2 - height / 2) : Math.round(panelImage.y - height + panelImage.height / 2)
-                z: panelRepresentation.windowZ
+                z: root.windowZ
 
                 Row {
                     anchors.top: parent.top
@@ -168,7 +168,7 @@ Item {
                     x: isVertical ? Math.round((mainIcon.x - panelImage.x) / 4) : 0
                 }
                 height: parent.height / 2
-                source: panelRepresentation.mainIconSource
+                source: root.mainIconSource
             }
         }
     }
