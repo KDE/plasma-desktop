@@ -31,7 +31,7 @@ KCMUtils.ScrollViewKCM {
             configFile: "krunner.knsrc"
             onEntryEvent: (entry, event) => {
                 if (event === NewStuff.Engine.StatusChangedEvent) {
-                    kcm.reloadPlugin()
+                    kcm.reloadPlugins()
                 }
             }
         }
