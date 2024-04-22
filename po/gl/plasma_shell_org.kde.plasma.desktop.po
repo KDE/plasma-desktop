@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:39+0000\n"
-"PO-Revision-Date: 2024-03-29 10:43+0100\n"
+"PO-Revision-Date: 2024-04-21 09:55+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -534,97 +534,93 @@ msgstr "Non hai trebellos dispoñíbeis."
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Reloxo:"
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Manter visíbel cando desapareza o diálogo de desbloquear."
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Controis de reprodución:"
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Amosar baixo o diálogo de desbloquear."
 
 #: contents/lockscreen/LockScreenUi.qml:50
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Fallou o desbloqueo"
 
 #: contents/lockscreen/LockScreenUi.qml:276
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "As maiúsculas están bloqueadas"
 
 #: contents/lockscreen/LockScreenUi.qml:290
 msgid "Sleep"
-msgstr ""
+msgstr "Durmir"
 
 #: contents/lockscreen/LockScreenUi.qml:296
 msgid "Hibernate"
-msgstr ""
+msgstr "Hibernar"
 
 #: contents/lockscreen/LockScreenUi.qml:302
-#, fuzzy
-#| msgid "Switch"
 msgid "Switch User"
-msgstr "Cambiar"
+msgstr "Cambiar de persoa usuaria"
 
 #: contents/lockscreen/LockScreenUi.qml:363
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Teclado virtual"
 
 #: contents/lockscreen/LockScreenUi.qml:387
-#, fuzzy
-#| msgid "Switch"
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Cambiar"
+msgstr "Cambiar a disposición"
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr ""
+msgstr "Contrasinal"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr ""
+msgstr "Desbloquear"
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(ou escanee a súa pegada no lector)"
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(ou escanee a súa tarxeta intelixente)"
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr ""
+msgstr "Sen título"
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr ""
+msgstr "Non se está a reproducir nada."
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr ""
+msgstr "Pista anterior"
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Reproducir ou deter o contido multimedia"
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr ""
+msgstr "Seguinte pista"
 
 #: contents/views/Panel.qml:326
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Indicador de foco do panel"
 
 #~ msgid "Sorry! There was an error loading %1."
 #~ msgstr "Produciuse un erro ao cargar %1."
