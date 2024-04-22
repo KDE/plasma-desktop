@@ -82,6 +82,7 @@ PlasmoidItem {
         Accessible.name: Plasmoid.title
         Accessible.description: toolTipSubText
         Accessible.role: Accessible.Button
+        Accessible.onPressAction: Plasmoid.activated()
 
         PeekController {
             id: peekController
@@ -112,6 +113,7 @@ PlasmoidItem {
 
         // Active/not active indicator
         KSvg.FrameSvgItem {
+            Accessible.name: i18n("Minimize All Applet Active Indicator")
             property var containerMargins: {
                 let item = this;
                 while (item.parent) {
