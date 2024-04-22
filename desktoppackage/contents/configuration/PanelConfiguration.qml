@@ -431,6 +431,15 @@ ColumnLayout {
         ColumnLayout {
             Layout.alignment: Qt.AlignHCenter
             spacing: Kirigami.Units.mediumSpacing
+            Kirigami.Action {
+                id: floatingAction
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating")
+                checkable: true
+                checked: panel.floating
+                onToggled: source => {
+                    panel.floating = checked;
+                }
+            }
             Kirigami.Heading {
                 level: dialogRoot.headingLevel
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
@@ -440,15 +449,13 @@ ColumnLayout {
             PanelRepresentation {
                 Layout.alignment: Qt.AlignHCenter
                 floatingGap: Kirigami.Units.smallSpacing * floatingSwitch.checked
-                onClicked: floatingSwitch.checked = !floatingSwitch.checked
+                onClicked: floatingAction.toggle(this)
             }
             PC3.Switch {
                 id: floatingSwitch
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumHeight: transparencyBox.height
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Floating")
-                Component.onCompleted: checked = panel.floating
-                onCheckedChanged: panel.floating = checked
+                action: floatingAction
             }
         }
     }
