@@ -517,7 +517,9 @@ ColumnLayout {
             id: spinBoxLabel
             wrapMode: Text.Wrap
 
-            text: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Width:") : i18nd("plasma_shell_org.kde.plasma.desktop", "Height:")
+            text: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge
+                ? i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Width:")
+                : i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Height:")
             textFormat: Text.PlainText
         }
         PC3.SpinBox {
@@ -526,7 +528,9 @@ ColumnLayout {
             editable: true
             focus: !Kirigami.InputMethod.willShowOnActive
             from: Math.max(20, panel.minThickness) // below this size, the panel is mostly unusable
-            to: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge ? panel.screenToFollow.geometry.width / 2 : panel.screenToFollow.geometry.height / 2
+            to: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge
+                ? panel.screenToFollow.geometry.width / 2
+                : panel.screenToFollow.geometry.height / 2
 
             stepSize: 2
 
