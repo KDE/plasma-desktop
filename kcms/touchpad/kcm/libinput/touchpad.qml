@@ -93,7 +93,7 @@ KCM.SimpleKCM {
     Kirigami.PlaceholderMessage {
         icon.name: "input-touchpad"
         text: i18nd("kcm_touchpad", "No touchpad found")
-        explanation: i18n("Connect an external touchpad");
+        explanation: i18nd("kcm_touchpad", "Connect an external touchpad");
         anchors.centerIn: parent
         visible: touchpadCount === 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
