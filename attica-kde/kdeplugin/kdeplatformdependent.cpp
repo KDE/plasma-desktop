@@ -251,7 +251,7 @@ void Attica::KdePlatformDependent::loadAccessToken()
 
         auto account = accountsManager->account(accountId);
         if (!account) {
-            qCDebug(ATTICA_PLUGIN_LOG) << "Failed to retrieve account" << accountId;
+            qCWarning(ATTICA_PLUGIN_LOG) << "Failed to retrieve account" << accountId;
             continue;
         }
 
