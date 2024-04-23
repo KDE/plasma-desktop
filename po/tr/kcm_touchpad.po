@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-22 00:39+0000\n"
-"PO-Revision-Date: 2024-03-22 15:31+0300\n"
+"PO-Revision-Date: 2024-04-23 00:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -59,7 +59,7 @@ msgstr "X sunucusuna bağlanılamadı"
 #: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:95
 #, kde-format
 msgid "No touchpad found"
-msgstr "Dokunmatik yüzey bulunamadı"
+msgstr "Bulunan dokunmatik yüzey yok"
 
 #: backends/x11/xlibbackend.cpp:124 backends/x11/xlibbackend.cpp:138
 #, kde-format
@@ -79,7 +79,7 @@ msgstr "Öntanımlı dokunmatik yüzey yapılandırması okunamıyor"
 #: kcm/libinput/touchpad.qml:96
 #, kde-format
 msgid "Connect an external touchpad"
-msgstr "Dış bir dokunmatik yüzey bağlayın"
+msgstr "Bir dış dokunmatik yüzey bağlayın"
 
 #: kcm/libinput/touchpad.qml:110
 #, kde-format
@@ -94,7 +94,7 @@ msgstr "Genel:"
 #: kcm/libinput/touchpad.qml:137
 #, kde-format
 msgid "Device enabled"
-msgstr "Aygıt etkinleştirildi"
+msgstr "Aygıt etkin"
 
 #: kcm/libinput/touchpad.qml:141
 #, kde-format
