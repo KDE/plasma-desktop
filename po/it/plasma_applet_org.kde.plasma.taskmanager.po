@@ -2,13 +2,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Dario Panico <Dareus_Persarumrex@fastwebnet.it>, 2008.
-# SPDX-FileCopyrightText: 2010, 2011, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2010, 2011, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:39+0000\n"
-"PO-Revision-Date: 2023-11-17 11:36+0100\n"
+"PO-Revision-Date: 2024-04-15 09:52+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -265,10 +265,9 @@ msgid "Keep launchers separate"
 msgstr "Mantieni i lanciatori separati"
 
 #: package/contents/ui/ConfigBehavior.qml:119
-#, fuzzy, kde-format
-#| msgid "Use launcher icons for running applications"
+#, kde-format
 msgid "Hide launchers after application startup"
-msgstr "Utilizza le icone dei lanciatori per le applicazioni in esecuzione"
+msgstr "Nascondi i lanciatori dopo l'avvio delle applicazioni"
 
 #: package/contents/ui/ConfigBehavior.qml:129
 #, kde-format
