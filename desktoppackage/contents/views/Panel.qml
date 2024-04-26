@@ -114,18 +114,13 @@ Item {
             // 12px is chosen to avoid any potential issue with kwin snapping behavior,
             // and it looks like the panel hides away from the active window.
             property int defloatDistance: 12
-            property int floatingPadding: 
-                if (root.leftEdge) root.fixedRightFloatingPadding
-                else if (root.rightEdge) root.fixedLeftFloatingPadding
-                else if (root.topEdge) root.fixedBottomFloatingPadding
-                else root.fixedTopFloatingPadding
             // Instead, we will only dodge an active panel if the panel is covered by it,
             // i.e. if the window touches at least one pixel of the panel
             property int dodgeDistance: -1
             // We don't have to worry about dealing with both at the same time since
             // dodge-window panels never de-float.
 
-            value: panel.width, panel.height, panel.x, panel.y, panel.dogdeGeometryByDistance(panel.visibilityMode === Panel.Global.DodgeWindows ? dodgeDistance : defloatDistance - floatingPadding)
+            value: panel.width, panel.height, panel.x, panel.y, panel.dogdeGeometryByDistance(panel.visibilityMode === Panel.Global.DodgeWindows ? dodgeDistance : defloatDistance)
         }
     }
 
