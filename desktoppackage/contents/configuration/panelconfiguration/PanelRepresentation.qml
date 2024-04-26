@@ -12,8 +12,8 @@ import org.kde.kirigami as Kirigami
 Item {
     id: root
 
-    property string text: ""
-    property var alignment: Qt.AlignHCenter | Qt.AlignBottom
+    property string text
+    property /*Qt::Alignment*/int alignment: Qt.AlignHCenter | Qt.AlignBottom
     property string tooltip
 
     property bool isVertical: false
@@ -37,7 +37,7 @@ Item {
     implicitWidth: mainItem.width
 
     PC3.ToolTip {
-        text: parent.tooltip
+        text: root.tooltip
         visible: mouseArea.containsMouse && text.length > 0
     }
 
@@ -52,7 +52,7 @@ Item {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: parent.clicked()
+        onClicked: root.clicked()
     }
 
     ColumnLayout {
@@ -67,17 +67,17 @@ Item {
             color: Qt.tint(Kirigami.Theme.backgroundColor, Qt.rgba(1, 1, 1, 0.3))
             border.color: Kirigami.Theme.highlightColor
             radius: Kirigami.Units.cornerRadius
-            clip: sunkenPanel
+            clip: root.sunkenPanel
 
             RowLayout {
                 anchors.fill: parent
                 Rectangle {
                     id: panelImage
 
-                    implicitWidth: isVertical ? Math.round(parent.width / 6) : Math.round(parent.width * (fillAvailable ? 1 : 0.8))
-                    implicitHeight: isVertical ? Math.round(parent.height * (fillAvailable ? 1 : 0.8)) : Math.round(parent.height / 4)
-                    Layout.alignment: alignment
-                    Layout.bottomMargin: sunkenPanel * -Math.round(height / 2) + floatingGap
+                    implicitWidth: root.isVertical ? Math.round(parent.width / 6) : Math.round(parent.width * (root.fillAvailable ? 1 : 0.8))
+                    implicitHeight: root.isVertical ? Math.round(parent.height * (root.fillAvailable ? 1 : 0.8)) : Math.round(parent.height / 4)
+                    Layout.alignment: root.alignment
+                    Layout.bottomMargin: root.sunkenPanel * -Math.round(height / 2) + root.floatingGap
                     color: root.translucentPanel ? screenRect.color : Kirigami.Theme.backgroundColor
                     opacity: root.translucentPanel ? 0.8 : 1.0
                     border.color: "transparent"
@@ -89,7 +89,7 @@ Item {
 
                     Loader {
                         id: horizontalAdaptivePanelLoader
-                        active: root.adaptivePanel && !isVertical
+                        active: root.adaptivePanel && !root.isVertical
                         sourceComponent: Rectangle {
                             anchors.verticalCenter: parent.verticalCenter
                             anchors.left: parent.left
@@ -105,7 +105,7 @@ Item {
 
                     Loader {
                         id: verticalAdaptivePanelLoader
-                        active: root.adaptivePanel && isVertical
+                        active: root.adaptivePanel && root.isVertical
                         sourceComponent: Rectangle {
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.top: parent.top
@@ -124,7 +124,7 @@ Item {
                         anchors.fill: parent
                         color: "transparent"
                         border.color: Kirigami.Theme.highlightColor
-                        radius: parent.radius
+                        radius: panelImage.radius
                     }
                 }
             }
@@ -138,8 +138,8 @@ Item {
                 color: Kirigami.Theme.highlightColor
                 border.color: "transparent"
 
-                x: isVertical ? Math.round(panelImage.x + panelImage.width / 2) : Math.round(screenRect.width / 2 - width / 2) + Kirigami.Units.gridUnit
-                y: isVertical ? Math.round(screenRect.height / 2 - height / 2) : Math.round(panelImage.y - height + panelImage.height / 2)
+                x: root.isVertical ? Math.round(panelImage.x + panelImage.width / 2) : Math.round(screenRect.width / 2 - width / 2) + Kirigami.Units.gridUnit
+                y: root.isVertical ? Math.round(screenRect.height / 2 - height / 2) : Math.round(panelImage.y - height + panelImage.height / 2)
                 z: root.windowZ
 
                 Row {
@@ -164,8 +164,8 @@ Item {
                 visible: valid
                 anchors.centerIn: parent
                 transform: Translate {
-                    y: isVertical ? 0 : Math.round((mainIcon.y - panelImage.y) / 4)
-                    x: isVertical ? Math.round((mainIcon.x - panelImage.x) / 4) : 0
+                    y: root.isVertical ? 0 : Math.round((mainIcon.y - panelImage.y) / 4)
+                    x: root.isVertical ? Math.round((mainIcon.x - panelImage.x) / 4) : 0
                 }
                 height: parent.height / 2
                 source: root.mainIconSource
@@ -173,5 +173,3 @@ Item {
         }
     }
 }
-
-
