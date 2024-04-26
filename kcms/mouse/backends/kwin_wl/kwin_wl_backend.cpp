@@ -77,10 +77,6 @@ void KWinWaylandBackend::findDevices()
             if (reply.isValid() && reply.toBool()) {
                 continue;
             }
-            reply = deviceIface.property("keyboard");
-            if (reply.isValid() && reply.toBool()) {
-                continue;
-            }
 
             KWinWaylandDevice *dev = new KWinWaylandDevice(sn);
             if (!dev->init()) {
