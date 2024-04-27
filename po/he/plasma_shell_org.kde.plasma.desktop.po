@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-27 00:39+0000\n"
 "PO-Revision-Date: 2024-04-14 16:42+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -370,36 +370,38 @@ msgstr "אטום"
 msgid "Translucent"
 msgstr "שקוף למחצה"
 
-#: contents/configuration/PanelConfiguration.qml:437
-msgid "Style"
-msgstr "סגנון"
-
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:436
 msgid "Floating"
 msgstr "צף"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:446
+msgid "Style"
+msgstr "סגנון"
+
+#: contents/configuration/PanelConfiguration.qml:528
 msgid "Panel Width:"
 msgstr "רוחב לוח:"
 
-#: contents/configuration/PanelConfiguration.qml:520
-msgid "Height:"
-msgstr "גובה:"
+#: contents/configuration/PanelConfiguration.qml:529
+#, fuzzy
+#| msgid "Panel Width:"
+msgid "Panel Height:"
+msgstr "רוחב לוח:"
 
-#: contents/configuration/PanelConfiguration.qml:555
+#: contents/configuration/PanelConfiguration.qml:566
 msgid "Focus shortcut:"
 msgstr "קיצור מקשים למיקוד:"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:577
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "יש ללחוץ על קיצור מקשים זה כדי להעביר את המיקוד ללוח"
 
-#: contents/configuration/PanelConfiguration.qml:582
+#: contents/configuration/PanelConfiguration.qml:593
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "מחיקת לוח"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:596
 msgid "Remove this panel; this action is undo-able"
 msgstr "הסרת הלוח הזה, זאת פעולה בלתי הפיכה"
 
@@ -616,6 +618,9 @@ msgstr "הרצועה הבאה"
 #: contents/views/Panel.qml:331
 msgid "Panel Focus Indicator"
 msgstr "מחוון מיקוד לוח"
+
+#~ msgid "Height:"
+#~ msgstr "גובה:"
 
 #~ msgid "Sorry! There was an error loading %1."
 #~ msgstr "אירעה שגיאה בטעינת %1, סליחה!"

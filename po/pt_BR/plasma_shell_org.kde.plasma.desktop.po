@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-27 00:39+0000\n"
 "PO-Revision-Date: 2023-11-14 14:07-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -384,40 +384,42 @@ msgstr "Opaco"
 msgid "Translucent"
 msgstr "Transparente"
 
-#: contents/configuration/PanelConfiguration.qml:437
-msgid "Style"
-msgstr "Estilo"
-
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:436
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating"
 msgstr "Painel flutuante"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:446
+msgid "Style"
+msgstr "Estilo"
+
+#: contents/configuration/PanelConfiguration.qml:528
 msgid "Panel Width:"
 msgstr "Largura do painel:"
 
-#: contents/configuration/PanelConfiguration.qml:520
-msgid "Height:"
-msgstr "Altura:"
+#: contents/configuration/PanelConfiguration.qml:529
+#, fuzzy
+#| msgid "Panel Width:"
+msgid "Panel Height:"
+msgstr "Largura do painel:"
 
-#: contents/configuration/PanelConfiguration.qml:555
+#: contents/configuration/PanelConfiguration.qml:566
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Atalho"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:577
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pressione este atalho de teclado para mover o foco para o painel"
 
-#: contents/configuration/PanelConfiguration.qml:582
+#: contents/configuration/PanelConfiguration.qml:593
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Excluir painel"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:596
 msgid "Remove this panel; this action is undo-able"
 msgstr "Exclui este painel; esta ação não pode ser desfeita"
 
@@ -640,6 +642,9 @@ msgstr ""
 #: contents/views/Panel.qml:331
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid "Height:"
+#~ msgstr "Altura:"
 
 #~ msgid "Sorry! There was an error loading %1."
 #~ msgstr "Desculpe! Ocorreu um erro ao carregar %1."

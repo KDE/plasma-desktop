@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-27 00:39+0000\n"
 "PO-Revision-Date: 2024-02-16 10:22+0100\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -375,36 +375,38 @@ msgstr "Neprůhledné"
 msgid "Translucent"
 msgstr "Průhledné"
 
-#: contents/configuration/PanelConfiguration.qml:437
-msgid "Style"
-msgstr "Styl"
-
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:436
 msgid "Floating"
 msgstr "Plovoucí"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:446
+msgid "Style"
+msgstr "Styl"
+
+#: contents/configuration/PanelConfiguration.qml:528
 msgid "Panel Width:"
 msgstr "Šířka panelu:"
 
-#: contents/configuration/PanelConfiguration.qml:520
-msgid "Height:"
-msgstr "Výška:"
+#: contents/configuration/PanelConfiguration.qml:529
+#, fuzzy
+#| msgid "Panel Width:"
+msgid "Panel Height:"
+msgstr "Šířka panelu:"
 
-#: contents/configuration/PanelConfiguration.qml:555
+#: contents/configuration/PanelConfiguration.qml:566
 msgid "Focus shortcut:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:577
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Touto klávesovou zkratkou se přepnete na panel7"
 
-#: contents/configuration/PanelConfiguration.qml:582
+#: contents/configuration/PanelConfiguration.qml:593
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Smazat panel"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:596
 msgid "Remove this panel; this action is undo-able"
 msgstr "Odstranit tento panel, tento krok nelze vzít zpět"
 
@@ -620,3 +622,6 @@ msgstr "Následující skladba"
 #: contents/views/Panel.qml:331
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid "Height:"
+#~ msgstr "Výška:"

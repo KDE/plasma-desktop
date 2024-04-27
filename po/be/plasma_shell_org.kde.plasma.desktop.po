@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-27 00:39+0000\n"
 "PO-Revision-Date: 2024-03-01 19:50\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -378,36 +378,38 @@ msgstr "Непразрыстая"
 msgid "Translucent"
 msgstr "Паўпразрыстая"
 
-#: contents/configuration/PanelConfiguration.qml:437
-msgid "Style"
-msgstr "Стыль"
-
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:436
 msgid "Floating"
 msgstr "Плавае"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:446
+msgid "Style"
+msgstr "Стыль"
+
+#: contents/configuration/PanelConfiguration.qml:528
 msgid "Panel Width:"
 msgstr "Шырыня панэлі:"
 
-#: contents/configuration/PanelConfiguration.qml:520
-msgid "Height:"
-msgstr "Вышыня:"
+#: contents/configuration/PanelConfiguration.qml:529
+#, fuzzy
+#| msgid "Panel Width:"
+msgid "Panel Height:"
+msgstr "Шырыня панэлі:"
 
-#: contents/configuration/PanelConfiguration.qml:555
+#: contents/configuration/PanelConfiguration.qml:566
 msgid "Focus shortcut:"
 msgstr "Спалучэнне клавіш для фокуса:"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:577
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Націснуць гэтае спалучэнне клавіш, каб перамясціць фокус на панэль"
 
-#: contents/configuration/PanelConfiguration.qml:582
+#: contents/configuration/PanelConfiguration.qml:593
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Выдаліць панэль"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:596
 msgid "Remove this panel; this action is undo-able"
 msgstr "Выдаліць гэтую панэль; гэтае дзеянне нельга адрабіць"
 
@@ -630,6 +632,9 @@ msgstr ""
 #: contents/views/Panel.qml:331
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid "Height:"
+#~ msgstr "Вышыня:"
 
 #~ msgid "Sorry! There was an error loading %1."
 #~ msgstr "Выбачайце! Не ўдалося загрузіць %1."

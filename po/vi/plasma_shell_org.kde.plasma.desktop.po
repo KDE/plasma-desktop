@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-27 00:39+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -398,46 +398,46 @@ msgstr "Đục"
 msgid "Translucent"
 msgstr "Trong mờ"
 
-#: contents/configuration/PanelConfiguration.qml:437
-msgid "Style"
-msgstr ""
-
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:436
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating"
 msgstr "Bảng trôi"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:446
+msgid "Style"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:528
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Độ rộng bảng:"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:529
 #, fuzzy
-#| msgid "Right"
-msgid "Height:"
-msgstr "Phải"
+#| msgid "Panel width:"
+msgid "Panel Height:"
+msgstr "Độ rộng bảng:"
 
-#: contents/configuration/PanelConfiguration.qml:555
+#: contents/configuration/PanelConfiguration.qml:566
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Phím tắt"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:577
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Nhấn phím tắt này để chuyển nhắm đến bảng"
 
-#: contents/configuration/PanelConfiguration.qml:582
+#: contents/configuration/PanelConfiguration.qml:593
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Xoá bỏ bảng"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:596
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
@@ -661,6 +661,11 @@ msgstr ""
 #: contents/views/Panel.qml:331
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Right"
+#~ msgid "Height:"
+#~ msgstr "Phải"
 
 #~ msgid "Sorry! There was an error loading %1."
 #~ msgstr "Rất tiếc! Có lỗi khi tải %1."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-27 00:39+0000\n"
 "PO-Revision-Date: 2024-04-17 14:45+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -376,36 +376,38 @@ msgstr "Opaque"
 msgid "Translucent"
 msgstr "Traslucente"
 
-#: contents/configuration/PanelConfiguration.qml:437
-msgid "Style"
-msgstr "Stilo"
-
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:436
 msgid "Floating"
 msgstr "Fluctuante"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:446
+msgid "Style"
+msgstr "Stilo"
+
+#: contents/configuration/PanelConfiguration.qml:528
 msgid "Panel Width:"
 msgstr "Largessa de Pannello:"
 
-#: contents/configuration/PanelConfiguration.qml:520
-msgid "Height:"
-msgstr "Altessa:"
+#: contents/configuration/PanelConfiguration.qml:529
+#, fuzzy
+#| msgid "Panel Width:"
+msgid "Panel Height:"
+msgstr "Largessa de Pannello:"
 
-#: contents/configuration/PanelConfiguration.qml:555
+#: contents/configuration/PanelConfiguration.qml:566
 msgid "Focus shortcut:"
 msgstr "Via Breve de Foco:"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:577
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pressa iste via breve de claviero pro mover foco al Pannello"
 
-#: contents/configuration/PanelConfiguration.qml:582
+#: contents/configuration/PanelConfiguration.qml:593
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Dele pannello"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:596
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 "Remove iste pannello: iste action es sub le commando que on pote annullar"
@@ -623,6 +625,9 @@ msgstr "Proxime tracia"
 #: contents/views/Panel.qml:331
 msgid "Panel Focus Indicator"
 msgstr "Indicator de foco de pannello"
+
+#~ msgid "Height:"
+#~ msgstr "Altessa:"
 
 #~ msgid "Sorry! There was an error loading %1."
 #~ msgstr "Desolate! Il habeva un error a cargar %1"

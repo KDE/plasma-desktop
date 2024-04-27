@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-27 00:39+0000\n"
 "PO-Revision-Date: 2023-12-21 18:14+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -379,40 +379,42 @@ msgstr "Deckend"
 msgid "Translucent"
 msgstr "Durchscheinend"
 
-#: contents/configuration/PanelConfiguration.qml:437
-msgid "Style"
-msgstr "Stil"
-
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:436
 msgid "Floating"
 msgstr "Schwebend"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:446
+msgid "Style"
+msgstr "Stil"
+
+#: contents/configuration/PanelConfiguration.qml:528
 msgid "Panel Width:"
 msgstr "Breite der Kontrollleiste:"
 
-#: contents/configuration/PanelConfiguration.qml:520
-msgid "Height:"
-msgstr "Höhe:"
+#: contents/configuration/PanelConfiguration.qml:529
+#, fuzzy
+#| msgid "Panel Width:"
+msgid "Panel Height:"
+msgstr "Breite der Kontrollleiste:"
 
-#: contents/configuration/PanelConfiguration.qml:555
+#: contents/configuration/PanelConfiguration.qml:566
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Kurzbefehl"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:577
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Drücken Sie diesen Tastatur-Kurzbefehl, um den Fokus auf die Kontrollleiste "
 "zu setzen"
 
-#: contents/configuration/PanelConfiguration.qml:582
+#: contents/configuration/PanelConfiguration.qml:593
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Kontrollleiste entfernen"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:596
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 "Diese Kontrollleiste entfernen; diese Aktion kann rückgängig gemacht werden"
@@ -636,6 +638,9 @@ msgstr ""
 #: contents/views/Panel.qml:331
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid "Height:"
+#~ msgstr "Höhe:"
 
 #~ msgid "Sorry! There was an error loading %1."
 #~ msgstr "Leider ist beim Laden von %1 ein Fehler aufgetreten."

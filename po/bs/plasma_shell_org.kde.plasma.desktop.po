@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-27 00:39+0000\n"
 "PO-Revision-Date: 2014-12-28 11:53+0000\n"
 "Last-Translator: Ajla Alic <aalic2@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -414,44 +414,44 @@ msgstr ""
 msgid "Translucent"
 msgstr "Uvijek vidljivo"
 
-#: contents/configuration/PanelConfiguration.qml:437
-msgid "Style"
-msgstr ""
-
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:436
 msgid "Floating"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:446
+msgid "Style"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:528
 #, fuzzy
 #| msgid "Panel Alignment"
 msgid "Panel Width:"
 msgstr "Ravnanje panela"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:529
 #, fuzzy
-#| msgid "Height"
-msgid "Height:"
-msgstr "Visina"
+#| msgid "Panel Alignment"
+msgid "Panel Height:"
+msgstr "Ravnanje panela"
 
-#: contents/configuration/PanelConfiguration.qml:555
+#: contents/configuration/PanelConfiguration.qml:566
 #, fuzzy
 #| msgid "Keyboard shortcuts"
 msgid "Focus shortcut:"
 msgstr "Prečice na tastaturi"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:577
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:582
+#: contents/configuration/PanelConfiguration.qml:593
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Ukloni panel"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:596
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
@@ -681,6 +681,11 @@ msgstr ""
 #: contents/views/Panel.qml:331
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Height"
+#~ msgid "Height:"
+#~ msgstr "Visina"
 
 #, fuzzy
 #~| msgid "Maximize Panel"

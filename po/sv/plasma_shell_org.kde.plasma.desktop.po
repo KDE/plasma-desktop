@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-27 00:39+0000\n"
 "PO-Revision-Date: 2022-09-30 18:07+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -399,46 +399,46 @@ msgstr "Ogenomskinlig"
 msgid "Translucent"
 msgstr "Halvgenomskinlig"
 
-#: contents/configuration/PanelConfiguration.qml:437
-msgid "Style"
-msgstr ""
-
-#: contents/configuration/PanelConfiguration.qml:449
+#: contents/configuration/PanelConfiguration.qml:436
 #, fuzzy
 #| msgid "Floating Panel"
 msgid "Floating"
 msgstr "Fristående panel"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:446
+msgid "Style"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:528
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Panelbredd:"
 
-#: contents/configuration/PanelConfiguration.qml:520
+#: contents/configuration/PanelConfiguration.qml:529
 #, fuzzy
-#| msgid "Height"
-msgid "Height:"
-msgstr "Höjd"
+#| msgid "Panel width:"
+msgid "Panel Height:"
+msgstr "Panelbredd:"
 
-#: contents/configuration/PanelConfiguration.qml:555
+#: contents/configuration/PanelConfiguration.qml:566
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Genväg"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:577
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:582
+#: contents/configuration/PanelConfiguration.qml:593
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Ta bort panel"
 
-#: contents/configuration/PanelConfiguration.qml:585
+#: contents/configuration/PanelConfiguration.qml:596
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
@@ -663,6 +663,11 @@ msgstr ""
 #: contents/views/Panel.qml:331
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Height"
+#~ msgid "Height:"
+#~ msgstr "Höjd"
 
 #~ msgid "Sorry! There was an error loading %1."
 #~ msgstr "Tyvärr uppstod ett fel vid inläsning av %1."
