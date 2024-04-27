@@ -91,10 +91,14 @@ Kirigami.ApplicationWindow {
                 rightPadding: Kirigami.Units.smallSpacing
 
                 Kirigami.Heading {
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                    }
                     level: 1
+                    elide: Text.ElideRight
                     text: drawer.title
                     textFormat: Text.PlainText
-                    Layout.fillWidth: true
                 }
             }
 
