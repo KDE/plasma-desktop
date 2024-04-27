@@ -27,6 +27,7 @@ AppletConfiguration {
             name: i18nd("plasma_shell_org.kde.plasma.desktop", "Wallpaper")
             icon: "preferences-desktop-wallpaper"
             source: "ConfigurationContainmentAppearance.qml"
+            includeMargins: false
         }
         ConfigCategory {
             name: i18nd("plasma_shell_org.kde.plasma.desktop", "Mouse Actions")

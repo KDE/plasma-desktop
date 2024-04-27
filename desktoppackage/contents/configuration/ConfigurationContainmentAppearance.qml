@@ -172,6 +172,10 @@ Item {
                 }
             }
         }
+
+        Kirigami.Separator {
+            Layout.fillWidth: true
+        }
     }
 
     Component {
