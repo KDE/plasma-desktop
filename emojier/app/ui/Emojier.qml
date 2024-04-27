@@ -4,13 +4,12 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.11
-import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.6 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.emoji
 
-Kirigami.ApplicationWindow
-{
+Kirigami.ApplicationWindow {
     id: window
 
     minimumWidth: Math.round(minimumHeight * 1.25)
@@ -25,9 +24,10 @@ Kirigami.ApplicationWindow
         id: recentEmojiModel
     }
 
-    function report(thing, description) {
-        if (!visible)
+    function report(thing: string, description: string): void {
+        if (!visible) {
             return;
+        }
         CopyHelper.copyTextToClipboard(thing)
         recentEmojiModel.includeRecent(thing, description);
         window.showPassiveNotification(i18n("%1 copied to the clipboard", thing))
@@ -39,10 +39,16 @@ Kirigami.ApplicationWindow
         text: i18n("Recent")
 
         icon.name: "document-open-recent-symbolic"
-        onTriggered: {
-            window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {title: text, category: "", model: recentEmojiModel, showClearHistoryButton: true})
+        onTriggered: source => {
+            window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {
+                title: text,
+                category: "",
+                model: recentEmojiModel,
+                showClearHistoryButton: true,
+            });
         }
     }
+
     Kirigami.Action {
         id: searchAction
         checked: window.pageStack.get(0).title === text
@@ -50,8 +56,13 @@ Kirigami.ApplicationWindow
         icon.name: "search"
         shortcut: StandardKey.Find
 
-        onTriggered: {
-            window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {title: text, category: "", model: emoji, showSearch: true })
+        onTriggered: source => {
+            window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {
+                title: text,
+                category: "",
+                model: emoji,
+                showSearch: true,
+            });
         }
     }
 
@@ -104,26 +115,29 @@ Kirigami.ApplicationWindow
 
             Instantiator {
                 id: instantiator
+
                 property int loadCount: 0
+
                 asynchronous: true
                 model: emoji.categories
+
                 CategoryAction {
                     category: modelData
                     icon.name: drawer.getIcon(category)
                 }
+
                 onObjectAdded: (index, object) => {
                     if (++loadCount !== model.length) {
                         return;
                     }
 
-                    let actions = [recentAction, searchAction, allAction];
+                    const actions = [recentAction, searchAction, allAction];
                     for (let i = 0; i < count; ++i) {
                         actions.push(this.objectAt(i));
                     }
                     drawer.actions = actions;
                     // The extra gridUnit is to account for the header that appears when expanded
                     window.minimumHeight = Qt.binding(() => drawer.contentHeight + Kirigami.Units.gridUnit * 2);
-
                 }
             }
         }

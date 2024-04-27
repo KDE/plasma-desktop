@@ -4,24 +4,26 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.15 as Kirigami
-import QtQuick.Controls 2.11 as QQC2
+import QtQuick
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import QtQuick.Controls as QQC2
 import org.kde.plasma.emoji
 
-Kirigami.ScrollablePage
-{
+Kirigami.ScrollablePage {
     id: view
+
     property alias model: emojiModel.sourceModel
     property string searchText: ""
     property alias category: filter.category
     property bool showSearch: false
     property bool showClearHistoryButton: false
-    leftPadding: 0
-    rightPadding: 0
 
-    Keys.onPressed: {
+    leftPadding: undefined
+    rightPadding: undefined
+    horizontalPadding: 0
+
+    Keys.onPressed: event => {
         if (event.key == Qt.Key_Escape) {
             Qt.quit()
         }
@@ -38,6 +40,7 @@ Kirigami.ScrollablePage
     titleDelegate: RowLayout {
         Layout.fillWidth: true
         Layout.preferredWidth: view.width
+
         Kirigami.Heading {
             text: view.title
             textFormat: Text.PlainText
@@ -50,6 +53,7 @@ Kirigami.ScrollablePage
             text: view.searchText
             visible: view.showSearch
             inputMethodHints: Qt.ImhNoPredictiveText
+
             Keys.onEnterPressed: event => Keys.returnPressed(event)
             Keys.onReturnPressed: event => {
                 if (emojiView.count > 0) {
@@ -65,8 +69,12 @@ Kirigami.ScrollablePage
                     })
                 }
             }
-            Component.onCompleted: if (visible) Qt.callLater(forceActiveFocus)
-            Keys.onEscapePressed: {
+            Component.onCompleted: {
+                if (visible) {
+                    Qt.callLater(forceActiveFocus);
+                }
+            }
+            Keys.onEscapePressed: event => {
                 if (text) {
                     clear()
                 } else {
@@ -80,12 +88,14 @@ Kirigami.ScrollablePage
             visible: view.showClearHistoryButton
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
-            onClicked: { recentEmojiModel.clearHistory(); }
+            onClicked: {
+                recentEmojiModel.clearHistory();
+            }
         }
     }
 
     Shortcut {
-        sequence: StandardKey.Copy
+        sequences: [StandardKey.Copy]
         enabled: emojiView.currentItem
         onActivated: {
             emojiView.currentItem.Keys.returnPressed(null)
@@ -96,7 +106,7 @@ Kirigami.ScrollablePage
         id: menuComponent
 
         QQC2.Menu {
-            required property QQC2.Label label
+            required property Text label
 
             onClosed: destroy()
 
@@ -126,7 +136,7 @@ Kirigami.ScrollablePage
         readonly property int columnsToHave: Math.ceil(width / desiredSize)
         readonly property int delayInterval: Math.min(300, columnsToHave * 10)
 
-        cellWidth: width/columnsToHave
+        cellWidth: width / columnsToHave
         cellHeight: desiredSize
 
         model: CategoryModelFilter {
@@ -141,6 +151,7 @@ Kirigami.ScrollablePage
 
         delegate: QQC2.Label {
             id: emojiLabel
+
             width: emojiView.cellWidth
             height: emojiView.cellHeight
 
@@ -154,6 +165,7 @@ Kirigami.ScrollablePage
 
             Accessible.name: model.toolTip
             Accessible.onPressAction: tapHandler.tapped(null, null)
+
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
             QQC2.ToolTip.text: model.toolTip
             QQC2.ToolTip.visible: hoverHandler.hovered
@@ -161,8 +173,8 @@ Kirigami.ScrollablePage
             opacity: hoverHandler.hovered ? 0.7 : 1
             scale: tapHandler.pressed ? 0.6 : 1
 
-            Keys.onMenuPressed: contextMenuHandler.tapped(null, null)
-            Keys.onReturnPressed: tapHandler.tapped(null, null)
+            Keys.onMenuPressed: event => contextMenuHandler.tapped(null, null)
+            Keys.onReturnPressed: event => tapHandler.tapped(null, null)
 
             HoverHandler {
                 id: hoverHandler
@@ -170,7 +182,9 @@ Kirigami.ScrollablePage
 
             TapHandler {
                 id: tapHandler
-                onTapped: window.report(model.display, model.toolTip)
+                onTapped: (eventPoint, button) => {
+                    window.report(model.display, model.toolTip);
+                }
             }
 
             TapHandler {
@@ -182,7 +196,7 @@ Kirigami.ScrollablePage
             TapHandler {
                 id: contextMenuHandler
                 acceptedButtons: Qt.RightButton
-                onTapped: {
+                onTapped: (eventPoint, button) => {
                     const menu = menuComponent.createObject(emojiLabel, {
                         "label": emojiLabel,
                     });
