@@ -87,7 +87,7 @@ Kirigami.ApplicationWindow
                 }
             }
 
-            function getIcon(category: string) {
+            function getIcon(category: string): string {
                 switch (category.trim()) {
                     case 'Activities': return 'games-highscores'
                     case 'Animals and Nature': return 'animal'
