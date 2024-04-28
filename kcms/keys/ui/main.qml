@@ -60,19 +60,22 @@ KCM.AbstractKCM {
         }
     ]
 
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: ColumnLayout {
-        spacing: Kirigami.Units.smallSpacing
+        spacing: 0
 
         Kirigami.InlineMessage {
             Layout.fillWidth: true
             visible: errorOccured
             text: kcm.lastError
+            position: Kirigami.InlineMessage.Position.Header
             type: Kirigami.MessageType.Error
         }
         Kirigami.InlineMessage {
             id: exportWarning
             Layout.fillWidth: true
             text: i18n("Cannot export scheme while there are unsaved changes")
+            position: Kirigami.InlineMessage.Position.Header
             type: Kirigami.MessageType.Warning
             showCloseButton: true
             Binding on visible {
@@ -85,6 +88,7 @@ KCM.AbstractKCM {
             id: exportInfo
             Layout.fillWidth: true
             text: i18n("Select the components below that should be included in the exported scheme")
+            position: Kirigami.InlineMessage.Position.Header
             type: Kirigami.MessageType.Information
             showCloseButton: true
             actions: [
@@ -103,6 +107,8 @@ KCM.AbstractKCM {
             id: search
             enabled: !errorOccured && !exportActive
             Layout.fillWidth: true
+            // Equal to the margins removed by disabling header padding
+            Layout.margins: Kirigami.Units.mediumSpacing
             Binding {
                 target: kcm.filteredModel
                 property: "filter"

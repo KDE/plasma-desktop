@@ -15,27 +15,25 @@ import org.kde.kwindowsystem
 KCM.SimpleKCM {
     implicitWidth: Kirigami.Units.gridUnit * 40
 
-    header: ColumnLayout {
-        Kirigami.InlineMessage {
-            id: primarySelectionRebootMessage
-            Layout.fillWidth: true
-            Layout.margins: Kirigami.Units.smallSpacing
-            type: Kirigami.MessageType.Information
-            text: i18n("The system must be restarted before changes to the middle-click paste setting can take effect.")
-            visible: false
-            showCloseButton: true
-            actions: [
-                Kirigami.Action {
-                    icon.name: "system-reboot"
-                    text: i18n("Restart")
-                    onTriggered: kcm.requestReboot();
-                }
-            ]
-            Connections {
-                target: kcm
-                function onPrimarySelectionOptionSaved() {
-                    primarySelectionRebootMessage.visible = true;
-                }
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
+    header: Kirigami.InlineMessage {
+        id: primarySelectionRebootMessage
+        position: Kirigami.InlineMessage.Position.Header
+        type: Kirigami.MessageType.Information
+        text: i18n("The system must be restarted before changes to the middle-click paste setting can take effect.")
+        visible: false
+        showCloseButton: true
+        actions: [
+            Kirigami.Action {
+                icon.name: "system-reboot"
+                text: i18n("Restart")
+                onTriggered: kcm.requestReboot();
+            }
+        ]
+        Connections {
+            target: kcm
+            function onPrimarySelectionOptionSaved() {
+                primarySelectionRebootMessage.visible = true;
             }
         }
     }

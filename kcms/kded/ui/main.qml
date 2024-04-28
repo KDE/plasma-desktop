@@ -31,11 +31,15 @@ KCM.ScrollViewKCM {
         restoreMode: Binding.RestoreBinding
     }
 
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: ColumnLayout {
+        spacing: 0
+
         Kirigami.InlineMessage {
             Layout.fillWidth: true
             text: i18n("The background services manager (kded6) is currently not running. Make sure it is installed correctly.");
             type: Kirigami.MessageType.Error
+            position: Kirigami.InlineMessage.Position.Header
             showCloseButton: false
             visible: !kcm.kdedRunning
         }
@@ -45,6 +49,7 @@ KCM.ScrollViewKCM {
             Layout.fillWidth: true
             text: i18n("Some services disable themselves again when manually started if they are not useful in the current environment.")
             type: Kirigami.MessageType.Information
+            position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
             visible: false
         }
@@ -54,6 +59,7 @@ KCM.ScrollViewKCM {
             Layout.fillWidth: true
             text: i18n("Some services were automatically started/stopped when the background services manager (kded6) was restarted to apply your changes.")
             type: Kirigami.MessageType.Information
+            position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
             visible: false
         }
@@ -63,6 +69,7 @@ KCM.ScrollViewKCM {
             Layout.fillWidth: true
 
             type: Kirigami.MessageType.Error
+            position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
             visible: false
 
@@ -83,6 +90,10 @@ KCM.ScrollViewKCM {
 
         RowLayout {
             Layout.fillWidth: true
+            // Equal to the margins removed by disabling header padding
+            Layout.margins: Kirigami.Units.mediumSpacing
+
+            spacing: Kirigami.Units.mediummSpacing
 
             Kirigami.SearchField {
                 id: searchField

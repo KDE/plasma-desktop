@@ -67,8 +67,11 @@ KCM.SimpleKCM {
         loading = false
     }
 
+
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: Kirigami.InlineMessage {
         id: inlineMessage
+        position: Kirigami.InlineMessage.Position.Header
     }
 
     Connections {

@@ -37,27 +37,25 @@ KCM.GridViewKCM {
         }
     }
 
-    // putting the InlineMessage as header item causes it to show up initially despite visible false
-    header: ColumnLayout {
-        Kirigami.InlineMessage {
-            id: testingFailedLabel
-            Layout.fillWidth: true
-            showCloseButton: true
-            type: Kirigami.MessageType.Error
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
+    header: Kirigami.InlineMessage {
+        id: testingFailedLabel
+        showCloseButton: true
+        position: Kirigami.InlineMessage.Position.Header
+        type: Kirigami.MessageType.Error
 
-            Connections {
-                target: kcm
-                function onTestingFailed(processErrorOutput) {
-                    testingFailedLabel.text = i18n("Failed to show the splash screen preview.")
-                    if (processErrorOutput) {
-                        testingFailedLabel.text += "\n" + processErrorOutput
-                    }
-                    testingFailedLabel.visible = true
+        Connections {
+            target: kcm
+            function onTestingFailed(processErrorOutput) {
+                testingFailedLabel.text = i18n("Failed to show the splash screen preview.")
+                if (processErrorOutput) {
+                    testingFailedLabel.text += "\n" + processErrorOutput
                 }
-                function onError(text) {
-                    testingFailedLabel.text = text
-                    testingFailedLabel.visible = true
-                }
+                testingFailedLabel.visible = true
+            }
+            function onError(text) {
+                testingFailedLabel.text = text
+                testingFailedLabel.visible = true
             }
         }
     }
