@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-04-28 00:39+0000\n"
 "PO-Revision-Date: 2023-02-05 19:25+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -46,35 +46,35 @@ msgstr "kekcuha@gmail.com"
 msgid "Replace an existing instance"
 msgstr "Заменить существующий запущенный процесс."
 
-#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:49
+#: app/ui/CategoryPage.qml:35 app/ui/Emojier.qml:55
 #, kde-format
 msgid "Search"
 msgstr "Поиск"
 
-#: app/ui/CategoryPage.qml:81
+#: app/ui/CategoryPage.qml:89
 #, kde-format
 msgid "Clear History"
 msgstr "Очистить журнал"
 
-#: app/ui/CategoryPage.qml:105
+#: app/ui/CategoryPage.qml:115
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "Копировать символ"
 
-#: app/ui/CategoryPage.qml:108 app/ui/CategoryPage.qml:116
+#: app/ui/CategoryPage.qml:118 app/ui/CategoryPage.qml:126
 #: app/ui/Emojier.qml:33
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 скопирован в буфер обмена"
 
-#: app/ui/CategoryPage.qml:113
+#: app/ui/CategoryPage.qml:123
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "Копировать описание"
 
-#: app/ui/CategoryPage.qml:209
+#: app/ui/CategoryPage.qml:223
 #, kde-format
 msgid "No recent Emojis"
 msgstr "Нет недавних эмодзи"
@@ -84,12 +84,12 @@ msgstr "Нет недавних эмодзи"
 msgid "Recent"
 msgstr "Недавно использованные"
 
-#: app/ui/Emojier.qml:60
+#: app/ui/Emojier.qml:71
 #, kde-format
 msgid "All"
 msgstr "Все"
 
-#: app/ui/Emojier.qml:71
+#: app/ui/Emojier.qml:82
 #, kde-format
 msgid "Categories"
 msgstr "Категории"
