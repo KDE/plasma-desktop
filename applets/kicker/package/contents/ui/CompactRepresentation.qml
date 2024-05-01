@@ -31,18 +31,20 @@ Item {
         if (useCustomButtonImage) {
             if (vertical) {
                 const scaledHeight = Math.floor(parent.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
-                root.Layout.minimumHeight = scaledHeight;
-                root.Layout.maximumHeight = scaledHeight;
                 root.Layout.minimumWidth = -1;
+                root.Layout.minimumHeight = scaledHeight;
+                root.Layout.maximumWidth = Kirigami.Units.iconSizes.huge;
+                root.Layout.maximumHeight = scaledHeight;
             } else {
                 const scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
                 root.Layout.minimumWidth = scaledWidth;
-                root.Layout.maximumWidth = scaledWidth;
                 root.Layout.minimumHeight = -1;
+                root.Layout.maximumWidth = scaledWidth;
+                root.Layout.maximumHeight = Kirigami.Units.iconSizes.huge;
             }
         } else {
-            root.Layout.minimumWidth = -1;
-            root.Layout.minimumHeight = -1;
+            root.Layout.minimumWidth = Kirigami.Units.iconSizes.huge;
+            root.Layout.minimumHeight = Kirigami.Units.iconSizes.huge;
         }
     }
 
