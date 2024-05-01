@@ -263,6 +263,8 @@ PlasmoidItem {
                 Layout.fillHeight: !kickoff.vertical
                 Layout.preferredWidth: kickoff.vertical ? -1 : height / (implicitHeight / implicitWidth)
                 Layout.preferredHeight: !kickoff.vertical ? -1 : width * (implicitHeight / implicitWidth)
+                Layout.maximumHeight: Kirigami.Units.iconSizes.huge
+                Layout.maximumWidth: Kirigami.Units.iconSizes.huge
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                 source: Tools.iconOrDefault(Plasmoid.formFactor, Plasmoid.icon)
                 active: compactRoot.containsMouse || compactDragArea.containsDrag
