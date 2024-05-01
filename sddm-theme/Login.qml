@@ -21,7 +21,7 @@ SessionManagementScreen {
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
     onHeightChanged: visibleBoundary = mapFromItem(loginButton, 0, 0).y + loginButton.height + Kirigami.Units.smallSpacing
 
-    property int fontSize: parseInt(config.fontSize)
+    property real fontSize: Kirigami.Theme.defaultFont.pointSize
 
     signal loginRequest(string username, string password)
 

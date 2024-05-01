@@ -15,11 +15,6 @@ import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.breeze.components
 
-// TODO: Once SDDM 0.19 is released and we are setting the font size using the
-// SDDM KCM's syncing feature, remove the `config.fontSize` overrides here and
-// the fontSize properties in various components, because the theme's default
-// font size will be correctly propagated to the login screen
-
 Item {
     id: root
 
@@ -210,28 +205,28 @@ Item {
                     ActionButton {
                         iconSource: "system-suspend"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
-                        fontSize: parseInt(config.fontSize) + 1
+                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                     },
                     ActionButton {
                         iconSource: "system-reboot"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
-                        fontSize: parseInt(config.fontSize) + 1
+                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
                     },
                     ActionButton {
                         iconSource: "system-shutdown"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
-                        fontSize: parseInt(config.fontSize) + 1
+                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                     },
                     ActionButton {
                         iconSource: "system-user-prompt"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "For switching to a username and password prompt", "Other…")
-                        fontSize: parseInt(config.fontSize) + 1
+                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: mainStack.push(userPromptComponent)
                         enabled: true
                         visible: !userListComponent.showUsernamePrompt
@@ -329,7 +324,7 @@ Item {
                 showUsernamePrompt: true
                 notificationMessage: root.notificationMessage
                 loginScreenUiVisible: loginScreenRoot.uiVisible
-                fontSize: parseInt(config.fontSize) + 2
+                fontSize: Kirigami.Theme.defaultFont.pointSize + 2
 
                 // using a model rather than a QObject list to avoid QTBUG-75900
                 userListModel: ListModel {
@@ -354,28 +349,28 @@ Item {
                     ActionButton {
                         iconSource: "system-suspend"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
-                        fontSize: parseInt(config.fontSize) + 1
+                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                     },
                     ActionButton {
                         iconSource: "system-reboot"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
-                        fontSize: parseInt(config.fontSize) + 1
+                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
                     },
                     ActionButton {
                         iconSource: "system-shutdown"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
-                        fontSize: parseInt(config.fontSize) + 1
+                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                     },
                     ActionButton {
                         iconSource: "system-user-list"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "List Users")
-                        fontSize: parseInt(config.fontSize) + 1
+                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: mainStack.pop()
                     }
                 ]
@@ -450,7 +445,6 @@ Item {
                 id: virtualKeyboardButton
 
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to show/hide virtual keyboard", "Virtual Keyboard")
-                font.pointSize: config.fontSize
                 icon.name: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
                 onClicked: {
                     // Otherwise the password field loses focus and virtual keyboard
@@ -472,8 +466,6 @@ Item {
             KeyboardButton {
                 id: keyboardButton
 
-                font.pointSize: config.fontSize
-
                 onKeyboardLayoutChanged: {
                     // Otherwise the password field loses focus and virtual keyboard
                     // keystrokes get eaten
@@ -491,8 +483,6 @@ Item {
 
             SessionButton {
                 id: sessionButton
-
-                font.pointSize: config.fontSize
 
                 onSessionChanged: {
                     // Otherwise the password field loses focus and virtual keyboard
@@ -514,9 +504,7 @@ Item {
                 Layout.fillWidth: true
             }
 
-            Battery {
-                fontSize: config.fontSize
-            }
+            Battery {}
         }
     }
 
