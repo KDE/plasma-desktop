@@ -28,13 +28,11 @@ Rectangle {
 
     // Colored background
     Rectangle {
-        readonly property color color_: Kirigami.Theme.highlightColor
-
         anchors.fill: parent
         radius: height / 2
 
-        color: Qt.rgba(color_.r, color_.g, color_.b, 0.3)
-        border.color: color_
+        color: Qt.alpha(Kirigami.Theme.highlightColor, 0.3)
+        border.color: Kirigami.Theme.highlightColor
         border.width: 1
     }
 
