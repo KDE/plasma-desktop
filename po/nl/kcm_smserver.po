@@ -8,19 +8,20 @@
 # Wilbert Berendsen <wbsoft@xs4all.nl>, 2003.
 # Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2008.
 # Freek de Kruijf <f.de.kruijf@hetnet.nl>, 2009, 2013, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-26 00:38+0000\n"
-"PO-Revision-Date: 2022-12-26 10:48+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2024-04-26 10:29+0200\n"
+"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -63,15 +64,15 @@ msgstr "Opnieuw starten"
 #: ui/main.qml:57
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
-msgstr "Verzoek om te herstarten naar firmware setup is mislukt: %1"
+msgstr "Verzoek om te herstarten naar firmware-instellingen is mislukt: %1"
 
 #: ui/main.qml:58
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
-"De volgende keer dat de computer wordt herstart zal het naar het UEFI setup "
-"scherm gaan."
+"De volgende keer dat de computer wordt herstart zal het naar het UEFI "
+"instellingen-scherm gaan."
 
 #: ui/main.qml:59
 #, kde-format
@@ -79,7 +80,7 @@ msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
 "De volgende keer dat de computer wordt herstart zal het naar het firmware "
-"setup scherm gaan."
+"instellingen-scherm gaan."
 
 #: ui/main.qml:64
 #, kde-format
@@ -105,7 +106,7 @@ msgid ""
 "when you log out, shut down, restart, press the power button, or click on "
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
-"Wanneer deze instelling aan is gezet zal het scherm voor afmeldbevestiging "
+"Wanneer u deze instelling kiest zal het scherm voor afmeldbevestiging "
 "getoond worden wanneer u zich afmeld, systeem afsluiten, herstarten, de "
 "aanknop indrukt of klikt op knoppen of menu-items met label "
 "<interface>Verlaten…</interface>."
@@ -169,9 +170,9 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
-"Schrijf de uitvoeringsnamen van toepassingen hier (gescheiden door komma's "
-"of dubbele punten, bijvoorbeeld 'xterm:konsole' of 'xterm,konsole') om te "
-"voorkomen dat ze automatisch starten samen met andere sessie-herstel "
+"Schrijf de opstart-naam van toepassingen hier (gescheiden door komma's of "
+"dubbele punten, bijvoorbeeld 'xterm:konsole' of 'xterm,konsole') om te "
+"voorkomen dat ze automatisch starten met de andere sessie-herstel "
 "toepassingen."
 
 #: ui/main.qml:175
@@ -192,13 +193,13 @@ msgstr "Na volgende herstart:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Het UEFI setup-scherm starten"
+msgstr "Het UEFI instellingen-scherm starten"
 
 #: ui/main.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Het firmware setup-scherm starten"
+msgstr "Het firmware instellingen-scherm starten"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "

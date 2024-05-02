@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # SPDX-FileCopyrightText: 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-22 00:39+0000\n"
-"PO-Revision-Date: 2024-03-23 23:01+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2024-04-26 11:31+0200\n"
+"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -41,8 +42,7 @@ msgstr "Touchpad omschakelen"
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
-"Afvragen van invoerapparaten is mislukt. Heropen deze module voor "
-"instellingen."
+"Zoeken van invoerapparaten is mislukt. Heropen deze instellingen-module."
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:74
 #, kde-format
@@ -79,7 +79,7 @@ msgstr "Kan de standaard configuratie van het touchpad niet lezen"
 #: kcm/libinput/touchpad.qml:96
 #, kde-format
 msgid "Connect an external touchpad"
-msgstr "Met een extern touchpad verbinden"
+msgstr "Met externe touchpad verbinden"
 
 #: kcm/libinput/touchpad.qml:110
 #, kde-format
@@ -99,7 +99,7 @@ msgstr "Apparaat ingeschakeld"
 #: kcm/libinput/touchpad.qml:141
 #, kde-format
 msgid "Accept input through this device."
-msgstr "Invoer via dit apparaat accepteren."
+msgstr "Gebruik dit apparaat voor invoer."
 
 #: kcm/libinput/touchpad.qml:165
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "Uitschakelen bij typen"
 #: kcm/libinput/touchpad.qml:169
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr "Touchpad uitschakelen bij typen om per ongeluk invoeren te voorkomen"
+msgstr "Touchpad uitschakelen bij typen om invoer-fouten te voorkomen"
 
 #: kcm/libinput/touchpad.qml:193
 #, kde-format
@@ -130,8 +130,7 @@ msgstr "Linker en rechter knoppen indrukken voor middelste muisklik"
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
-msgstr ""
-"Linker en rechter knop tegelijk indrukken verstuurt klik van middelste knop."
+msgstr "Linker en rechter knop tegelijk wordt middenste muis-knop."
 
 #: kcm/libinput/touchpad.qml:253
 #, kde-format
@@ -198,7 +197,7 @@ msgstr "Tik-en-slepen"
 #: kcm/libinput/touchpad.qml:462
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
-msgstr "Vegen over touchpad direct na tik-slepen."
+msgstr "Vegen over touchpad direct na tik sleept."
 
 #: kcm/libinput/touchpad.qml:489
 #, kde-format
@@ -264,7 +263,7 @@ msgstr "Tik met twee vingers voor middel-klik."
 #: kcm/libinput/touchpad.qml:593
 #, kde-format
 msgid "Scrolling:"
-msgstr "Schuiven:"
+msgstr "Scrollen:"
 
 #: kcm/libinput/touchpad.qml:622
 #, kde-format
@@ -289,22 +288,22 @@ msgstr "Veeg aan de rand van het touchpad laat schuiven."
 #: kcm/libinput/touchpad.qml:648
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Schuifrichting omdraaien (natuurlijk schuiven)"
+msgstr "Scroll-richting omdraaien (natuurlijk schuiven)"
 
 #: kcm/libinput/touchpad.qml:664
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr "Schuiven zoals op aanraakscherm."
+msgstr "Scroll zoals op aanraakscherm."
 
 #: kcm/libinput/touchpad.qml:672 kcm/libinput/touchpad.qml:689
 #, kde-format
 msgid "Disable horizontal scrolling"
-msgstr "Horizontaal schuiven uitschakelen"
+msgstr "Horizontaal scrollen uitschakelen"
 
 #: kcm/libinput/touchpad.qml:697
 #, kde-format
 msgid "Scrolling speed:"
-msgstr "Schuifsnelheid:"
+msgstr "Scroll-snelheid:"
 
 #: kcm/libinput/touchpad.qml:748
 #, kde-format
@@ -392,7 +391,7 @@ msgstr ""
 #: kcm/touchpadconfig.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
-msgstr "Geen touchpad gevonden. Maak nu een verbinding met touchpad."
+msgstr "Geen touchpad gevonden. Sluit een touchpad aan."
 
 #: kcm/touchpadconfig.cpp:111
 #, kde-format
@@ -418,14 +417,13 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
-"Fout bij toevoegen van nieuw verbonden apparaat. Maak opnieuw verbinding en "
-"start deze configuratiemodule opnieuw."
+"Fout bij toevoegen van nieuw verbonden apparaat. Verbind het opnieuw en "
+"herstart deze configuratiemodule."
 
 #: kcm/touchpadconfig.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
-msgstr ""
-"Verbinding met touchpad verbroken. Zijn instellingendialoog.is gesloten."
+msgstr "Verbinding met touchpad verbroken. Instellingendialoog is gesloten."
 
 #: kcm/touchpadconfig.cpp:175
 #, kde-format
@@ -440,7 +438,7 @@ msgstr "Touchpad is uitgeschakeld omdat er een muis is ingeplugd"
 #: kded/kded.cpp:204
 #, kde-format
 msgid "Touchpad was enabled because the mouse was unplugged"
-msgstr "Touchpad was ingeschakeld omdat er een muis is uitgetrokken"
+msgstr "Touchpad was ingeschakeld omdat er een muis is afgekoppeld"
 
 #. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
 #: touchpadparameters.kcfg:27
@@ -503,7 +501,7 @@ msgstr "Rechter rand"
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Bottom right corner"
-msgstr "Rechtsonder hoek"
+msgstr "Rechter onder-hoek"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:300
@@ -517,7 +515,7 @@ msgstr "Onderrand"
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Bottom left corner"
-msgstr "Linksonder hoek"
+msgstr "Linker onder-hoek"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:306

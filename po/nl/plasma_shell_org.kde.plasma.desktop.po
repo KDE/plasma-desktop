@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
-# SPDX-FileCopyrightText: 2023 pieter <pieterkristensen@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-27 00:39+0000\n"
-"PO-Revision-Date: 2024-04-27 09:58+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2024-04-27 16:42+0200\n"
+"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -332,7 +332,7 @@ msgstr "Volle breedte"
 
 #: contents/configuration/PanelConfiguration.qml:311
 msgid "Fit content"
-msgstr "Aangepast aan inhoud"
+msgstr "Zoals inhoud"
 
 #: contents/configuration/PanelConfiguration.qml:312
 msgid "Custom"
@@ -348,7 +348,7 @@ msgstr "Altijd zichtbaar"
 
 #: contents/configuration/PanelConfiguration.qml:352
 msgid "Auto hide"
-msgstr "Automatisch verbergen"
+msgstr "Verbergen"
 
 #: contents/configuration/PanelConfiguration.qml:353
 msgid "Dodge windows"
@@ -356,7 +356,7 @@ msgstr "Ontwijk vensters"
 
 #: contents/configuration/PanelConfiguration.qml:354
 msgid "Windows Go Below"
-msgstr "Vensters naar onderen"
+msgstr "Vensters onder"
 
 #: contents/configuration/PanelConfiguration.qml:397
 msgid "Opacity"
@@ -387,8 +387,10 @@ msgid "Panel Width:"
 msgstr "Paneelbreedte:"
 
 #: contents/configuration/PanelConfiguration.qml:529
+#, fuzzy
+#| msgid "Panel Width:"
 msgid "Panel Height:"
-msgstr "Paneelhoogte:"
+msgstr "Paneelbreedte:"
 
 #: contents/configuration/PanelConfiguration.qml:566
 msgid "Focus shortcut:"
@@ -438,7 +440,7 @@ msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panel and Desktop Management"
-msgstr "Beheer van panelen en bureaublad"
+msgstr "Beheer panelen en bureaublad"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
@@ -538,7 +540,7 @@ msgstr "Klok:"
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr "Zichtbaar houden wanneer prompt voor ontsluiten verdwijnt"
+msgstr "Zichtbaar houden wanneer prompt voor ont-sluiten verdwijnt"
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"

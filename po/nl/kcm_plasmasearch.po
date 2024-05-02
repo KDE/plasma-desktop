@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2023-09-03 14:32+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2024-04-26 09:46+0200\n"
+"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: plasmasearch/kcm.h:70
 #, kde-format
@@ -44,9 +45,9 @@ msgid ""
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to see them."
 msgstr ""
-"Plug-ins in- en uitschakelen (gebruikt in KRunner, starter van toepassingen "
-"en het effect Overzicht). Markeer plug-ins als favorieten en arrangeer ze in "
-"de volgorde waarin ui ze wilt zien."
+"Plug-ins in- en uitschakelen (gebruikt in KRunner, Toepassingen-starter en "
+"het effect Overzicht). Markeer plug-ins als favorieten en arrangeer ze in de "
+"volgorde waarin ui ze wilt zien."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -136,7 +137,7 @@ msgid ""
 "You are about to install a binary package. You should only install these "
 "from a trusted author/packager."
 msgstr ""
-"U staat op het punt een binair pakket te installeren. U zou deze alleen "
+"U staat op het punt een binair pakket te installeren. U zou dit alleen "
 "moeten installeren van een vertrouwde auteur/inpakker."
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
@@ -178,8 +179,9 @@ msgid ""
 msgstr ""
 "Deze plug-in levert geen script voor ongedaan maken van een installatie. "
 "Neem contact op met de auteur. U kunt proberen de installatie van de plug-in "
-"handmatig ongedaan te maken.<nl/>Als u zich daarvoor niet in staat of "
-"comfortabel voelt, klik dan nu op <interface>Annuleren</interface>."
+"handmatig ongedaan te maken.<nl/>Als u denkt dat u dat niet kant of als u "
+"zich daarbij ongemakkelijk voelt, klik dan nu op <interface>Annuleren</"
+"interface>."
 
 #: plugininstaller/ScriptConfirmationDialog.h:52
 #, kde-kuit-format
@@ -193,8 +195,8 @@ msgstr ""
 "Deze plug-in levert geen installatie-ongedaan-maken-script. Neem contact op "
 "met de auteur. U kunt proberen de installatie van de plug-in handmatig "
 "ongedaan te maken. Kijk eens in de README voor instructies van de auteur.<nl/"
-">Als u zich daarvoor niet in staat of comfortabel voelt, klik dan nu op "
-"<interface>Annuleren</interface>."
+">Als u denkt dat u dat niet kant of als u zich daarbij ongemakkelijk voelt, "
+"klik dan nu op <interface>Annuleren</interface>. "
 
 #: plugininstaller/ScriptConfirmationDialog.h:58
 #, kde-kuit-format
@@ -205,9 +207,9 @@ msgid ""
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
 "Deze plug-in levert geen installatie-script. Neem contact op met de auteur. "
-"U kunt proberen de plug-in handmatig te installeren.<nl/>Als u zich daarvoor "
-"niet in staat of comfortabel voelt, klik dan nu op <interface>Annuleren</"
-"interface>."
+"U kunt proberen de plug-in handmatig te installeren.<nl/>Als u denkt dat u "
+"dat niet kant of als u zich daarbij ongemakkelijk voelt, klik dan nu op "
+"<interface>Annuleren</interface>."
 
 #: plugininstaller/ScriptConfirmationDialog.h:63
 #, kde-kuit-format
@@ -220,8 +222,9 @@ msgid ""
 msgstr ""
 "Deze plug-in levert geen installatie-script. Neem contact op met de auteur. "
 "U kunt proberen de de plug-in handmatig te installeren. Kijk eens in de "
-"README voor instructies van de auteur.<nl/>Als u zich daarvoor niet in staat "
-"of comfortabel voelt, klik dan nu op <interface>Annuleren</interface>."
+"README voor instructies van de auteur.<nl/>Als u denkt dat u dat niet kant "
+"of als u zich daarbij ongemakkelijk voelt, klik dan nu op "
+"<interface>Annuleren</interface>."
 
 #: plugininstaller/ScriptConfirmationDialog.h:69
 #, kde-kuit-format
@@ -234,8 +237,9 @@ msgid ""
 msgstr ""
 "Deze plug-in gebruikt een script voor installatie die een beveiligingsrisico "
 "kan vormen. Bestudeer de gehele inhoud van de plug-in voor installatie of "
-"lees tenminste de broncode van het script.<nl/>Als u zich daarvoor niet in "
-"staat of comfortabel voelt, klik dan nu op <interface>Annuleren</interface>."
+"lees tenminste de broncode van het script.<nl/>Als u denkt dat u dat niet "
+"kant of als u zich daarbij ongemakkelijk voelt, klik dan nu op "
+"<interface>Annuleren</interface>."
 
 #: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-kuit-format
@@ -249,14 +253,14 @@ msgstr ""
 "Deze plug-in gebruikt een script voor installatie die een beveiligingsrisico "
 "kan vormen. Bestudeer de gehele inhoud van de plug-in voor installatie of "
 "lees tenminste het README-bestand en de broncode van het script.<nl/>Als u "
-"zich daarvoor niet in staat of comfortabel voelt, klik dan nu op "
-"<interface>Annuleren</interface>."
+"denkt dat u dat niet kant of als u zich daarbij ongemakkelijk voelt, klik "
+"dan nu op <interface>Annuleren</interface>."
 
 #: plugininstaller/ScriptConfirmationDialog.h:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as uninstalled"
-msgstr "Item markeren als niet te installeren"
+msgstr "Item markeren als gedéinstalleerd"
 
 #: plugininstaller/ScriptConfirmationDialog.h:92
 #, kde-format

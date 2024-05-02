@@ -4,19 +4,20 @@
 #
 # Freek de Kruijf <f.de.kruijf@hetnet.nl>, 2009.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2010, 2011, 2014, 2021.
+# SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2021-05-26 14:33+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2024-04-26 10:46+0200\n"
+"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.04.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -40,7 +41,7 @@ msgid ""
 "It appears that the action name, command, icon or condition are not valid.\n"
 "Therefore, changes will not be applied."
 msgstr ""
-"Het blijkt dat de actienaam, -commando, -pictogram of -voorwaarde ongeldig "
+"Het lijkt dat de actienaam, -commando, -pictogram of -voorwaarde ongeldig "
 "is.\n"
 "Wijzigingen worden daarom niet toegepast."
 
@@ -151,8 +152,7 @@ msgid ""
 "%i: The identifier of the device"
 msgstr ""
 "Commando dat de actie laat gebeuren\n"
-"Dit kan enig of alle van de volgende hhofdletterongevoelige expansies "
-"inhouden:\n"
+"Dit kan de volgende hoofdletterongevoelige expansies inhouden:\n"
 "\n"
 "%f: Het koppelpunt voor het apparaat - alleen toegang tot opslagapparaten\n"
 "%d: Pad naar de apparaatnode - Alleen blokapparaten\n"
@@ -180,7 +180,7 @@ msgstr "Voer de naam in van uw nieuwe actie"
 #: DesktopFileGenerator.cpp:25
 #, kde-format
 msgid "Solid Action Desktop File Generator"
-msgstr "Bureaubladbestandsgenerator bij Solid-actie"
+msgstr "Bureaublad-bestandsgenerator bij Solid-actie"
 
 #: DesktopFileGenerator.cpp:27
 #, kde-format
@@ -189,7 +189,7 @@ msgid ""
 "classes for translation"
 msgstr ""
 "Hulpmiddel voor het automatisch genereren van bureaubladbestanden uit Solid "
-"DeviceInterface klassen voor vertaling"
+"apparaat-Interface klassen voor vertaling"
 
 #: DesktopFileGenerator.cpp:29
 #, kde-format
@@ -249,7 +249,7 @@ msgstr "Geen actie geselecteerd"
 #: SolidActions.cpp:206
 #, kde-format
 msgid "Cannot be deleted"
-msgstr "Verwijderen kan niet"
+msgstr "Kan niet verwijderd worden"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
 #: SolidActions.ui:22

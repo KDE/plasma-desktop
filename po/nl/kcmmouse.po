@@ -15,19 +15,20 @@
 # SPDX-FileCopyrightText: 2010, 2024 Freek de Kruijf <f.de.kruijf@hetnet.nl>
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-26 00:39+0000\n"
-"PO-Revision-Date: 2024-03-23 23:01+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2024-04-26 13:53+0200\n"
+"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -46,7 +47,7 @@ msgstr "rinsedevries@kde.nl,,wbsoft@xs4all.nl,,freekdekruijf@kde.nl"
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
-"Afvragen van invoerapparaten is mislukt. Heropen deze module voor "
+"Onderzoeken van invoerapparaten is mislukt. Heropen deze module voor "
 "instellingen."
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:84
@@ -99,14 +100,13 @@ msgstr ""
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
-"Verbinding met aanwijsapparaat verbroken. Zijn instellingendialoog is "
-"gesloten."
+"Verbinding met aanwijsapparaat verbroken. Instellingendialoog is gesloten."
 
 #: libinput_config.cpp:157
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
-"Verbinding met aanwijsapparaat verbroken. geen andere apparaten gevonden."
+"Verbinding met aanwijsapparaat verbroken. Geen andere apparaten gevonden."
 
 #: ui/main.qml:44
 #, kde-format
@@ -136,12 +136,12 @@ msgstr "Modus linkshandig"
 #: ui/main.qml:102
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr "Linker en rechter knoppen verwisselen."
+msgstr "Linker en rechter knop verwisselen."
 
 #: ui/main.qml:109
 #, kde-format
 msgid "Press left and right buttons for middle-click"
-msgstr "Linker en rechter knoppen indrukken voor middelste muisklik"
+msgstr "Linker en rechter knop indrukken voor middelste muisklik"
 
 #: ui/main.qml:122
 #, kde-format
@@ -157,8 +157,8 @@ msgid ""
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
 "Deze instelling activeren verhoogt de vertraging van de muisklik met 50ms. "
-"De extra vertraging is nodig om juist gelijktijdig indrukken van de linker "
-"en rechter muis te detecteren."
+"De extra vertraging is nodig om gelijktijdig indrukken van de linker en "
+"rechter muisknop correct te detecteren."
 
 #: ui/main.qml:136
 #, kde-format
@@ -195,22 +195,22 @@ msgstr ""
 #: ui/main.qml:250
 #, kde-format
 msgid "Scrolling:"
-msgstr "Schuiven:"
+msgstr "Scrollen:"
 
 #: ui/main.qml:251
 #, kde-format
 msgid "Invert scroll direction"
-msgstr "Schuifrichting omdraaien"
+msgstr "Scrollrichting omdraaien"
 
 #: ui/main.qml:264
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr "Schuiven zoals op aanraakscherm."
+msgstr "Scrollen zoals op aanraakscherm."
 
 #: ui/main.qml:269
 #, kde-format
 msgid "Scrolling speed:"
-msgstr "Schuifsnelheid:"
+msgstr "Scroll snelheid:"
 
 #: ui/main.qml:320
 #, kde-format
@@ -228,7 +228,7 @@ msgstr "Sneller"
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Maak opnieuw bindingen met additionele muisknoppen…"
+msgstr "Maak opnieuw bindingen met aanvullende muisknoppen…"
 
 #: ui/main.qml:383
 #, kde-format
