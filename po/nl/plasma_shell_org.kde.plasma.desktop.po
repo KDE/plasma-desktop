@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-27 00:39+0000\n"
-"PO-Revision-Date: 2024-04-27 16:42+0200\n"
-"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
+"POT-Creation-Date: 2024-05-03 00:39+0000\n"
+"PO-Revision-Date: 2024-05-02 10:30+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -228,13 +228,13 @@ msgstr "Type achtergrondafbeelding:"
 msgid "Get New Plugins…"
 msgstr "Haal nieuwe plug-ins op…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:189
+#: contents/configuration/ConfigurationContainmentAppearance.qml:193
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Wijzigingen aan indeling moeten worden toegepast alvorens andere wijzigingen "
 "gemaakt kunnen worden"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:193
+#: contents/configuration/ConfigurationContainmentAppearance.qml:197
 msgid "Apply Now"
 msgstr "Nu toepassen"
 
@@ -250,7 +250,7 @@ msgstr "Deze sneltoets zal de applet activeren alsof er op is geklikt."
 msgid "Wallpaper"
 msgstr "Achtergrondafbeelding"
 
-#: contents/configuration/ContainmentConfiguration.qml:32
+#: contents/configuration/ContainmentConfiguration.qml:33
 msgid "Mouse Actions"
 msgstr "Muisacties"
 
@@ -387,10 +387,8 @@ msgid "Panel Width:"
 msgstr "Paneelbreedte:"
 
 #: contents/configuration/PanelConfiguration.qml:529
-#, fuzzy
-#| msgid "Panel Width:"
 msgid "Panel Height:"
-msgstr "Paneelbreedte:"
+msgstr "Paneelhoogte:"
 
 #: contents/configuration/PanelConfiguration.qml:566
 msgid "Focus shortcut:"
