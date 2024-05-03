@@ -20,7 +20,7 @@ function verticalMargins() {
 }
 
 function adjustMargin(height, margin) {
-    var available = height - verticalMargins();
+    const available = height - verticalMargins();
 
     if (available < Kirigami.Units.iconSizes.small) {
         return Math.floor((margin * (Kirigami.Units.iconSizes.small / available)) / 3);
@@ -30,15 +30,15 @@ function adjustMargin(height, margin) {
 }
 
 function maxStripes() {
-    var length = tasks.vertical ? tasks.width : tasks.height;
-    var minimum = tasks.vertical ? preferredMinWidth() : preferredMinHeight();
+    const length = tasks.vertical ? tasks.width : tasks.height;
+    const minimum = tasks.vertical ? preferredMinWidth() : preferredMinHeight();
 
     return Math.min(tasks.plasmoid.configuration.maxStripes, Math.max(1, Math.floor(length / minimum)));
 }
 
 function optimumCapacity(width, height) {
-    var length = tasks.vertical ? height : width;
-    var maximum = tasks.vertical ? preferredMaxHeight() : preferredMaxWidth();
+    const length = tasks.vertical ? height : width;
+    const maximum = tasks.vertical ? preferredMaxHeight() : preferredMaxWidth();
 
     if (!tasks.vertical) {
         //  Fit more tasks in this case, that is possible to cut text, before combining tasks.
@@ -49,7 +49,7 @@ function optimumCapacity(width, height) {
 }
 
 function preferredMinWidth() {
-    var width = preferredMinLauncherWidth();
+    let width = preferredMinLauncherWidth();
 
     if (!tasks.vertical && !tasks.iconsOnly) {
       width +=
@@ -91,18 +91,16 @@ function preferredMaxHeight() {
                                          Kirigami.Units.iconSizes.medium);
         }
         return verticalMargins() +
-             Math.min(
-                 // Do not allow the preferred icon size to exceed the width of
-                 // the vertical task manager.
-                 tasks.width / maxStripes(),
-                 taskPreferredSize
-             );
+            Math.min(
+                // Do not allow the preferred icon size to exceed the width of
+                // the vertical task manager.
+                tasks.width / maxStripes(),
+                taskPreferredSize);
     } else {
         return verticalMargins() +
-             Math.min(
-                 Kirigami.Units.iconSizes.small * 3,
-                 Kirigami.Units.iconSizes.sizeForLabels *
-                     3);
+            Math.min(
+                Kirigami.Units.iconSizes.small * 3,
+                Kirigami.Units.iconSizes.sizeForLabels * 3);
     }
 }
 
@@ -114,7 +112,7 @@ function spaceRequiredToShowText() {
 }
 
 function preferredMinLauncherWidth() {
-    var baseWidth = tasks.vertical ? preferredMinHeight() : Math.min(tasks.height, Kirigami.Units.iconSizes.small * 3);
+    const baseWidth = tasks.vertical ? preferredMinHeight() : Math.min(tasks.height, Kirigami.Units.iconSizes.small * 3);
 
     return (baseWidth + horizontalMargins())
         - (adjustMargin(baseWidth, taskFrame.margins.top) + adjustMargin(baseWidth, taskFrame.margins.bottom));

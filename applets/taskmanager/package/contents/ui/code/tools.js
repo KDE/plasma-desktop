@@ -10,25 +10,26 @@
 .import org.kde.taskmanager 0.1 as TaskManager
 .import org.kde.plasma.core as PlasmaCore // Needed by TaskManager
 
+// Can't be `let`, or else QML counterpart won't be able to assign to it.
 var taskManagerInstanceCount = 0;
 
 function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
     // FIXME TODO: Unnecessarily convoluted and costly; optimize.
 
-    var taskIndexList = [];
-    var activeTaskIndex = tasks.tasksModel.activeTask;
+    let taskIndexList = [];
+    const activeTaskIndex = tasks.tasksModel.activeTask;
 
-    for (var i = 0; i < tasks.taskList.children.length - 1; ++i) {
-        var task = tasks.taskList.children[i];
-        var modelIndex = task.modelIndex(i);
+    for (let i = 0; i < tasks.taskList.children.length - 1; ++i) {
+        const task = tasks.taskList.children[i];
+        const modelIndex = task.modelIndex(i);
 
         if (!task.model.IsLauncher && !task.model.IsStartup) {
             if (task.model.IsGroupParent) {
-                if (task == anchor) { // If the anchor is a group parent, collect only windows within the group.
+                if (task === anchor) { // If the anchor is a group parent, collect only windows within the group.
                     taskIndexList = [];
                 }
 
-                for (var j = 0; j < tasks.tasksModel.rowCount(modelIndex); ++j) {
+                for (let j = 0; j < tasks.tasksModel.rowCount(modelIndex); ++j) {
                     const childModelIndex = tasks.tasksModel.makeModelIndex(i, j);
                     const childHidden = tasks.tasksModel.data(childModelIndex, TaskManager.AbstractTasksModel.IsHidden);
                     if (!wheelSkipMinimized || !childHidden) {
@@ -36,7 +37,7 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
                     }
                 }
 
-                if (task == anchor) { // See above.
+                if (task === anchor) { // See above.
                     break;
                 }
             } else {
@@ -51,9 +52,9 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
         return;
     }
 
-    var target = taskIndexList[0];
+    let target = taskIndexList[0];
 
-    for (var i = 0; i < taskIndexList.length; ++i) {
+    for (let i = 0; i < taskIndexList.length; ++i) {
         if (taskIndexList[i] === activeTaskIndex)
         {
             if (next && i < (taskIndexList.length - 1)) {
@@ -157,7 +158,7 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks, windowView
         // This is also the final fallback option if Window View
         // is chosen but not actually available
         else {
-            if (!!tasks.groupDialog) {
+            if (tasks.groupDialog) {
                 task.hideToolTip();
                 tasks.groupDialog.visible = false;
             } else {
@@ -177,7 +178,7 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks, windowView
 }
 
 function taskPrefix(prefix, location) {
-    var effectivePrefix;
+    let effectivePrefix;
 
     switch (location) {
     case PlasmaCore.Types.LeftEdge:
@@ -199,7 +200,7 @@ function taskPrefixHovered(prefix, location) {
     return [
         ...taskPrefix((prefix || "launcher") + "-hover", location),
         ...prefix ? taskPrefix("hover", location) : [],
-        ...taskPrefix(prefix, location)
+        ...taskPrefix(prefix, location),
     ];
 }
 
@@ -208,14 +209,10 @@ function createGroupDialog(visualParent, tasks) {
         return;
     }
 
-    if (!!tasks.groupDialog) {
+    if (tasks.groupDialog) {
         tasks.groupDialog.visualParent = visualParent;
         return;
     }
 
-    tasks.groupDialog = tasks.groupDialogComponent.createObject(tasks,
-        {
-            visualParent: visualParent,
-        }
-    );
+    tasks.groupDialog = tasks.groupDialogComponent.createObject(tasks, { visualParent });
 }

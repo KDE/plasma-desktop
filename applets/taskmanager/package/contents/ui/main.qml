@@ -44,7 +44,7 @@ PlasmoidItem {
     property var toolTipAreaItem: null
 
     property bool needLayoutRefresh: false;
-    property variant taskClosedWithMouseMiddleButton: []
+    property var taskClosedWithMouseMiddleButton: []
     property alias taskList: taskList
 
     preferredRepresentation: fullRepresentation
