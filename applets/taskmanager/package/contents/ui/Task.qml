@@ -39,8 +39,6 @@ PlasmaCore.ToolTipArea {
         ? -1
         : (model.IsLauncher ? tasksRoot.height / taskList.rows : LayoutMetrics.preferredMaxWidth())
     Layout.maximumHeight: tasksRoot.vertical ? LayoutMetrics.preferredMaxHeight() : -1
-    LayoutMirroring.enabled: (Qt.application.layoutDirection == Qt.RightToLeft)
-    LayoutMirroring.childrenInherit: (Qt.application.layoutDirection == Qt.RightToLeft)
 
     required property var model
     required property int index

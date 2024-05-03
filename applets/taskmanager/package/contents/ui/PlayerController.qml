@@ -74,7 +74,7 @@ RowLayout {
 
     PlasmaComponents3.ToolButton {
         enabled: toolTipDelegate.playerData.canGoPrevious
-        icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
+        icon.name: mirrored ? "media-skip-forward" : "media-skip-backward"
         onClicked: toolTipDelegate.playerData.Previous()
     }
 
@@ -92,7 +92,7 @@ RowLayout {
 
     PlasmaComponents3.ToolButton {
         enabled: toolTipDelegate.playerData.canGoNext
-        icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
+        icon.name: mirrored ? "media-skip-backward" : "media-skip-forward"
         onClicked: toolTipDelegate.playerData.Next()
     }
 }

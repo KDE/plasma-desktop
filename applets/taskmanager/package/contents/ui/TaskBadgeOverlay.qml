@@ -10,6 +10,8 @@ import org.kde.graphicaleffects as KGraphicalEffects
 import org.kde.plasma.plasmoid 2.0
 
 Item {
+    id: root
+
     readonly property int iconWidthDelta: (icon.width - icon.paintedWidth) / 2
     readonly property bool shiftBadgeDown: (Plasmoid.pluginName === "org.kde.plasma.icontasks") && task.audioStreamIcon !== null
 
@@ -19,11 +21,11 @@ Item {
 
         Rectangle {
             readonly property int offset: Math.round(Math.max(Kirigami.Units.smallSpacing / 2, badgeMask.width / 32))
-            anchors.right: Qt.application.layoutDirection === Qt.RightToLeft ? undefined : parent.right
-            anchors.left: Qt.application.layoutDirection === Qt.RightToLeft ? parent.left : undefined
-            anchors.rightMargin: Qt.application.layoutDirection === Qt.RightToLeft ? 0 : -offset
-            anchors.leftMargin: Qt.application.layoutDirection === Qt.RightToLeft ? -offset : 0
-            y: shiftBadgeDown ? (icon.height/2) : 0
+
+            anchors.right: parent.right
+            anchors.rightMargin: -offset
+            y: root.shiftBadgeDown ? (icon.height / 2) : 0
+
             Behavior on y {
                 NumberAnimation { duration: Kirigami.Units.longDuration }
             }
@@ -65,14 +67,18 @@ Item {
     }
 
     Badge {
-        readonly property int offset: Math.round(Math.max(Kirigami.Units.smallSpacing / 2, badgeMask.width / 32))
         id: badgeRect
-        anchors.right: Qt.application.layoutDirection === Qt.RightToLeft ? undefined : parent.right
-        anchors.left: Qt.application.layoutDirection === Qt.RightToLeft ? parent.left : undefined
-        y: offset + (shiftBadgeDown ? (icon.height/2) : 0)
+
+        anchors.right: parent.right
+        y: {
+            const offset = Math.round(Math.max(Kirigami.Units.smallSpacing / 2, badgeMask.width / 32));
+            return offset + (root.shiftBadgeDown ? (icon.height / 2) : 0);
+        }
+
         Behavior on y {
             NumberAnimation { duration: Kirigami.Units.longDuration }
         }
+
         height: Math.round(parent.height * 0.4)
         visible: task.smartLauncherItem.countVisible
         number: task.smartLauncherItem.count
