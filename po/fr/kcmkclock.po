@@ -7,7 +7,7 @@
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2004.
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2005, 2007, 2008, 2010.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008, 2012.
-# Xavier Besnard <xavier.besnard@kde.org>, 2013.
+# SPDX-FileCopyrightText: 2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Maxime Corteel <mcorteel@gmail.com>, 2015.
 # SPDX-FileCopyrightText: 2021, 2023 Xavier Besnard <xavier.besnard@kde.org>
 #
@@ -16,15 +16,15 @@ msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:39+0000\n"
-"PO-Revision-Date: 2023-11-09 12:50+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2024-04-26 11:56+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -166,9 +166,10 @@ msgstr ""
 "<h1>Date et heure</h1> Ce module de configuration vous permet de définir la "
 "date et l'heure du système. Comme ces réglages concernent tout le système et "
 "non pas un unique utilisateur, vous ne pouvez changer ces valeurs que si "
-"vous lancez la configuration du système en tant que superutilisateur. Si "
-"vous n'avez pas le mot de passe du superutilisateur mais que vous estimez "
-"que l'heure est erronée, veuillez contacter votre administrateur système."
+"vous lancez la configuration du système avec les privilèges "
+"d'administrateur. Si vous n'avez pas le mot de passe administrateur mais que "
+"vous estimez que l'heure est erronée, veuillez contacter votre "
+"administrateur système."
 
 #: k4timezonewidget.cpp:64
 #, kde-format
