@@ -95,7 +95,7 @@ public:
         }
         buttonBox->button(QDialogButtonBox::Ok)->setText(okText);
 
-        QHBoxLayout *helpButtonLayout = new QHBoxLayout(this);
+        QHBoxLayout *helpButtonLayout = new QHBoxLayout();
         if (!noInstaller) {
             QPushButton *scriptButton = new QPushButton(QIcon::fromTheme("dialog-scripts"), i18nc("@action:button", "View Script"), this);
             connect(scriptButton, &QPushButton::clicked, this, [installerPath]() {
