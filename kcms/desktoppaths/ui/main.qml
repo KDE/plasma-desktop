@@ -139,7 +139,7 @@ KCM.SimpleKCM {
 
             location: kcm.settings.publicLocation
             defaultLocation: kcm.settings.defaultPublicLocation
-            Accessible.description: i18n("This folder will be used by default to load or save movies from or to.")
+            Accessible.description: i18n("This folder will be used by default for publicly-shared files when network sharing is enabled.")
 
             onNewLocationSelected: (newLocation) => kcm.settings.publicLocation = newLocation
         }
