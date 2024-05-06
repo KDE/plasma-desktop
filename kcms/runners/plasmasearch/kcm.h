@@ -32,7 +32,7 @@ public:
     }
     static QStringList defaultFavoriteIds()
     {
-        return {QStringLiteral("krunner_services")};
+        return {QStringLiteral("krunner_services"), QStringLiteral("krunner_systemsettings")};
     }
 
 public Q_SLOTS:
