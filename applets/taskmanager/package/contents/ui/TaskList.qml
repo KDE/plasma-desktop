@@ -5,10 +5,12 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Layouts
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.plasmoid 2.0
+import "code/layoutmetrics.js" as LayoutMetrics
 
-Grid {
+GridLayout {
     property bool animating: false
 
     layoutDirection: (Plasmoid.configuration.reverseMode && !tasks.vertical)
@@ -17,20 +19,32 @@ Grid {
             : Qt.LeftToRight
         : Qt.application.layoutDirection
 
-    rows: tasks.vertical ? -1 : Math.floor(height / children[0].height)
-    columns: tasks.vertical ? Math.floor(width / children[0].width) : -1
-
-    move: Transition {
-        SequentialAnimation {
-            PropertyAction { target: taskList; property: "animating"; value: true }
-
-            NumberAnimation {
-                properties: "x, y"
-                easing.type: Easing.OutQuad
-                duration: Kirigami.Units.longDuration
+    rowSpacing: 0
+    columnSpacing: 0
+    property int animationsRunning: 0
+    onAnimationsRunningChanged: animating = animationsRunning > 0
+    rows: {
+        if (tasks.vertical) {
+            if (tasks.plasmoid.configuration.maxStripes > 1 && !tasks.plasmoid.configuration.forceStripes) {
+                return Math.max(Math.ceil(tasks.height / LayoutMetrics.preferredMinHeight()),
+                                Math.ceil(tasksModel.count / tasks.plasmoid.configuration.maxStripes));
+            } else {
+                return -1;
             }
-
-            PropertyAction { target: taskList; property: "animating"; value: false }
+        } else {
+            return Math.min(tasks.plasmoid.configuration.maxStripes, Math.max(1, Math.floor(tasks.height / children[0].implicitHeight)));
+        }
+    }
+    columns: {
+        if (tasks.vertical) {
+            return Math.min(tasks.plasmoid.configuration.maxStripes, Math.max(1, Math.floor(tasks.width / children[0].implicitWidth)));
+        } else {
+            if (tasks.plasmoid.configuration.maxStripes > 1 && !tasks.plasmoid.configuration.forceStripes) {
+                return Math.max(Math.ceil(tasks.width / LayoutMetrics.preferredMinWidth()),
+                                Math.ceil(tasksModel.count / tasks.plasmoid.configuration.maxStripes));
+            } else {
+                return -1;
+            }
         }
     }
 }

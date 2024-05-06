@@ -15,7 +15,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.taskmanager 0.1 as TaskManager
 import org.kde.plasma.private.mpris as Mpris
 
-import "code/layout.js" as LayoutManager
+import "code/layoutmetrics.js" as LayoutMetrics
 
 PlasmaExtras.Menu {
     id: menu
@@ -125,7 +125,7 @@ PlasmaExtras.Menu {
         // QMenu does not limit its width automatically. Even if we set a maximumWidth
         // it would just cut off text rather than eliding. So we do this manually.
         var textMetrics = Qt.createQmlObject("import QtQuick 2.4; TextMetrics {}", menu);
-        var maximumWidth = LayoutManager.maximumContextMenuTextWidth();
+        var maximumWidth = LayoutMetrics.maximumContextMenuTextWidth();
 
         sections.forEach(function (section) {
             if (section["actions"].length > 0 || section["group"] == "actions") {

@@ -23,22 +23,6 @@ DropArea {
 
     property alias handleWheelEvents: wheelHandler.handleWheelEvents
 
-    function insertIndexAt(above, x, y) {
-        if (above) {
-            return above.index;
-        } else {
-            var distance = tasks.vertical ? x : y;
-            var step = tasks.vertical ? LayoutManager.taskWidth() : LayoutManager.taskHeight();
-            var stripe = Math.ceil(distance / step);
-
-            if (stripe === LayoutManager.calculateStripes()) {
-                return tasks.tasksModel.count - 1;
-            } else {
-                return stripe * LayoutManager.tasksPerStripe();
-            }
-        }
-    }
-
     //ignore anything that is neither internal to TaskManager or a URL list
     onEntered: event => {
         if (event.formats.indexOf("text/x-plasmoidservicename") >= 0) {
@@ -90,7 +74,7 @@ DropArea {
                 return;
             }
 
-            var insertAt = insertIndexAt(above, event.x, event.y);
+            var insertAt = above.index;
 
             if (tasks.dragSource !== above && tasks.dragSource.index !== insertAt) {
                 if (!!tasks.groupDialog) {

@@ -21,7 +21,7 @@ import org.kde.taskmanager 0.1 as TaskManager
 import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
 import org.kde.plasma.workspace.dbus as DBus
 
-import "code/layout.js" as LayoutManager
+import "code/layoutmetrics.js" as LayoutMetrics
 import "code/tools.js" as TaskTools
 
 PlasmoidItem {
@@ -32,7 +32,7 @@ PlasmoidItem {
     // This mirrors the tasks as well, so we just rotate them again to fix that (see Task.qml).
     rotation: Plasmoid.configuration.reverseMode && Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 180 : 0
 
-    readonly property bool shouldShirnkToZero: !LayoutManager.logicalTaskCount()
+    readonly property bool shouldShrinkToZero: tasksModel.count === 0
     property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     property bool iconsOnly: Plasmoid.pluginName === "org.kde.plasma.icontasks"
 
@@ -60,34 +60,34 @@ PlasmoidItem {
     Layout.fillWidth: tasks.vertical ? true : Plasmoid.configuration.fill
     Layout.fillHeight: !tasks.vertical ? true : Plasmoid.configuration.fill
     Layout.minimumWidth: {
-        if (shouldShirnkToZero) {
+        if (shouldShrinkToZero) {
             return Kirigami.Units.gridUnit; // For edit mode
         }
-        return tasks.vertical ? 0 : LayoutManager.preferredMinWidth();
+        return tasks.vertical ? 0 : LayoutMetrics.preferredMinWidth();
     }
     Layout.minimumHeight: {
-        if (shouldShirnkToZero) {
+        if (shouldShrinkToZero) {
             return Kirigami.Units.gridUnit; // For edit mode
         }
-        return !tasks.vertical ? 0 : LayoutManager.preferredMinHeight();
+        return !tasks.vertical ? 0 : LayoutMetrics.preferredMinHeight();
     }
 
 //BEGIN TODO: this is not precise enough: launchers are smaller than full tasks
     Layout.preferredWidth: {
-        if (shouldShirnkToZero) {
+        if (shouldShrinkToZero) {
             return 0.01;
         }
         if (tasks.vertical) {
             return Kirigami.Units.gridUnit * 10;
         }
-        return (LayoutManager.logicalTaskCount() * LayoutManager.preferredMaxWidth()) / LayoutManager.calculateStripes();
+        return taskList.Layout.maximumWidth
     }
     Layout.preferredHeight: {
-        if (shouldShirnkToZero) {
+        if (shouldShrinkToZero) {
             return 0.01;
         }
         if (tasks.vertical) {
-            return (LayoutManager.logicalTaskCount() * LayoutManager.preferredMaxHeight()) / LayoutManager.calculateStripes();
+            return taskList.Layout.maximumHeight
         }
         return Kirigami.Units.gridUnit * 2;
     }
@@ -166,10 +166,9 @@ PlasmoidItem {
         groupMode: groupModeEnumValue(Plasmoid.configuration.groupingStrategy)
         groupInline: !Plasmoid.configuration.groupPopups && !tasks.iconsOnly
         groupingWindowTasksThreshold: (Plasmoid.configuration.onlyGroupWhenFull && !tasks.iconsOnly
-            ? LayoutManager.optimumCapacity(width, height) + 1 : -1)
+            ? LayoutMetrics.optimumCapacity(width, height) + 1 : -1)
 
         onLauncherListChanged: {
-            layoutTimer.restart();
             Plasmoid.configuration.launchers = launcherList;
         }
 
@@ -272,17 +271,8 @@ PlasmoidItem {
         id: mpris2Source
     }
 
-    MouseArea {
+    Item {
         anchors.fill: parent
-
-        hoverEnabled: true
-        acceptedButtons: Qt.NoButton
-        onExited: {
-            if (needLayoutRefresh) {
-                LayoutManager.layout(taskRepeater)
-                needLayoutRefresh = false;
-            }
-        }
 
         TaskManager.VirtualDesktopInfo {
             id: virtualDesktopInfo
@@ -329,9 +319,6 @@ PlasmoidItem {
             }
             function onGroupingLauncherUrlBlacklistChanged() {
                 tasksModel.groupingLauncherUrlBlacklist = Plasmoid.configuration.groupingLauncherUrlBlacklist;
-            }
-            function onIconSpacingChanged() {
-                taskList.layout();
             }
         }
 
@@ -435,8 +422,8 @@ PlasmoidItem {
                 top: parent.top
             }
 
-            height: taskList.implicitHeight
-            width: taskList.implicitWidth
+            height: taskList.childrenRect.height
+            width: taskList.childrenRect.width
 
             TaskList {
                 id: taskList
@@ -445,8 +432,40 @@ PlasmoidItem {
                     left: parent.left
                     top: parent.top
                 }
-                width: tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutWidth()
-                height: tasks.shouldShirnkToZero ? 0 : LayoutManager.layoutHeight()
+                Layout.maximumWidth: {
+                    return children.reduce((accumulator, child) => {
+                            if (!isFinite(child.Layout.maximumWidth)) {
+                                return accumulator;
+                            }
+                            return accumulator + child.Layout.maximumWidth
+                        }, 0);
+                }
+                Layout.maximumHeight: {
+                    return children.reduce((accumulator, child) => {
+                            if (!isFinite(child.Layout.maximumHeight)) {
+                                return accumulator;
+                            }
+                            return accumulator + child.Layout.maximumHeight
+                        }, 0);
+                }
+                width: {
+                    if (tasks.shouldShrinkToZero) {
+                        return 0;
+                    } else if (tasks.vertical) {
+                        return tasks.width;
+                    } else {
+                        return Math.min(tasks.width, Layout.maximumWidth / rows);
+                    }
+                }
+                height: {
+                    if (tasks.shouldShrinkToZero) {
+                        return 0;
+                    } else if (tasks.vertical) {
+                        return Math.min(tasks.height, Layout.maximumHeight / columns);
+                    } else {
+                        return tasks.height;
+                    }
+                }
 
                 flow: {
                     if (tasks.vertical) {
@@ -460,34 +479,18 @@ PlasmoidItem {
                         tasks.publishIconGeometries(children, tasks);
                     }
                 }
-                onWidthChanged: layoutTimer.restart()
-                onHeightChanged: layoutTimer.restart()
-
-                function layout() {
-                    LayoutManager.layout(taskRepeater);
-                }
-
-                Timer {
-                    id: layoutTimer
-
-                    interval: 0
-                    repeat: false
-
-                    onTriggered: taskList.layout()
-                }
 
                 Repeater {
                     id: taskRepeater
 
-                    delegate: Task {}
-                    onItemAdded: taskList.layout()
+                    delegate: Task {
+                        tasksRoot: tasks
+                    }
                     onItemRemoved: {
                         if (tasks.containsMouse && index != taskRepeater.count &&
                             item.model.WinIdList.length > 0 &&
                             taskClosedWithMouseMiddleButton.indexOf(item.winIdList[0]) > -1) {
                             needLayoutRefresh = true;
-                        } else {
-                            taskList.layout();
                         }
                         taskClosedWithMouseMiddleButton = [];
                     }
@@ -541,7 +544,6 @@ PlasmoidItem {
 
     Component.onCompleted: {
         TaskTools.taskManagerInstanceCount += 1;
-        tasks.requestLayout.connect(layoutTimer.restart);
         tasks.requestLayout.connect(iconGeometryTimer.restart);
         tasks.windowsHovered.connect(backend.windowsHovered);
         tasks.activateWindowView.connect(backend.activateWindowView);

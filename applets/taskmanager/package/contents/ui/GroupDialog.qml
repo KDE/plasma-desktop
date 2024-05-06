@@ -17,7 +17,7 @@ import org.kde.draganddrop 2.0
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.plasmoid 2.0
 
-import "code/layout.js" as LayoutManager
+import "code/layoutmetrics.js" as LayoutMetrics
 
 PlasmaCore.Dialog {
     id: groupDialog
@@ -85,12 +85,12 @@ PlasmaCore.Dialog {
                 id: groupListView
 
                 readonly property real maxWidth: groupFilter.maxTextWidth
-                                                + LayoutManager.horizontalMargins()
+                                                + LayoutMetrics.horizontalMargins()
                                                 + Kirigami.Units.iconSizes.medium
-                                                + 2 * (LayoutManager.labelMargin + LayoutManager.iconMargin)
+                                                + 2 * (LayoutMetrics.labelMargin + LayoutMetrics.iconMargin)
                                                 + scrollView.leftPadding + scrollView.rightPadding
                 // Use groupFilter.count because sometimes count is not updated in time (BUG 446105)
-                readonly property real maxHeight: groupFilter.count * (LayoutManager.verticalMargins() + Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium))
+                readonly property real maxHeight: groupFilter.count * (LayoutMetrics.verticalMargins() + Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium))
 
                 model: DelegateModel {
                     id: groupFilter
