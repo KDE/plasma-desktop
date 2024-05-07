@@ -42,7 +42,7 @@ T.ItemDelegate {
 
     readonly property alias mouseArea: mouseArea
 
-    readonly property bool iconAndLabelsShouldlookSelected: isPressed && !isCategoryListItem
+    readonly property bool iconAndLabelsShouldlookSelected: down && !isCategoryListItem
 
     property bool labelTruncated: false
     property bool descriptionTruncated: false
@@ -50,9 +50,7 @@ T.ItemDelegate {
 
     property Item dragIconItem: null
 
-    // pressed: is read-only and we're not using it here because we have fancy
-    // custom mouse handling
-    readonly property bool isPressed: mouseArea.pressed
+    down: mouseArea.pressed
 
     function openActionMenu(x = undefined, y = undefined) {
         if (!hasActionList) { return; }

@@ -8,6 +8,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 import QtQuick
+import QtQuick.Templates as T
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.components as PC3
@@ -125,9 +126,11 @@ EmptyPage {
         highlight: PlasmaExtras.Highlight {
             // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
             // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
-            z: root.currentItem && root.currentItem.Drag.active ?
-                3 : 0
-            pressed: view.currentItem && view.currentItem.isPressed && !view.currentItem.isCategoryListItem
+            z: (root.currentItem?.Drag.active ?? false) ? 3 : 0
+
+            pressed: ((view.currentItem as T.AbstractButton)?.down ?? false)
+                && !((view.currentItem as AbstractKickoffItemDelegate)?.isCategoryListItem ?? false)
+
             active: view.activeFocus
                 || (kickoff.contentArea === root
                     && kickoff.searchField.activeFocus)
