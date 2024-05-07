@@ -4,10 +4,10 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQml 2.15
+import QtQuick
+import QtQml
 import org.kde.plasma.core as PlasmaCore
-import org.kde.kitemmodels 1.0 as KItemModels
+import org.kde.kitemmodels as KItemModels
 
 KickoffListView {
     id: root

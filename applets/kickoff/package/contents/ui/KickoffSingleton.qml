@@ -4,13 +4,13 @@
 
 pragma Singleton // NOTE: Singletons are shared between all instances of a plasmoid
 
-import QtQml.Models 2.15
-import QtQuick 2.15
-import QtQuick.Templates 2.15 as T
-import QtQml 2.15
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.plasma5support 2.0 as P5Support
+import QtQml.Models
+import QtQuick
+import QtQuick.Templates as T
+import QtQml
+import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
+import org.kde.plasma.plasma5support as P5Support
 
 // Using Item because it has a default property.
 // Trying to create a default property for a QtObject seems to cause segfaults.

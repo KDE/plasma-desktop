@@ -4,15 +4,15 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import org.kde.plasma.private.kicker 0.1 as Kicker
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.components 3.0 as PC3
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.private.kicker as Kicker
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.plasma.components as PC3
 import org.kde.plasma.core as PlasmaCore
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 
 RowLayout {
     id: root

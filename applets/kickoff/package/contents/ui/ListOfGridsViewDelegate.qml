@@ -4,12 +4,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQml 2.15
+import QtQuick
+import QtQml
 
 import org.kde.plasma.extras as PlasmaExtras
 
-import org.kde.ksvg 1.0 as KSvg
+import org.kde.ksvg as KSvg
 
 KickoffGridView {
     id: root
