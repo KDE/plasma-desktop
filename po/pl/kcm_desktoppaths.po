@@ -1,6 +1,6 @@
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
-# Version: $Revision: 1662170 $
+# Version: $Revision: 1679402 $
 # translation of kcmkonq.po to Polish
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-02-11 08:40+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -78,7 +78,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Ścieżka do filmów:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -114,6 +114,18 @@ msgstr ""
 #, kde-format
 msgid "Public path:"
 msgstr "Ścieżka do publicznego:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
+"plików i katalogów udostępnianych publicznie."
 
 #: ui/main.qml:150
 #, kde-format
@@ -168,13 +180,6 @@ msgstr "Wybierz nowe miejsce"
 #~ "Moduł pozwala na konfigurację katalogów, w których\n"
 #~ "przechowywane są różne pliki pulpitu.\n"
 #~ "Użyj \"Co to jest?\" (Shift+F1), by uzyskać pomoc o konkretnych opcjach."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Ten katalog będzie używany jako domyślne miejsce wczytywania i "
-#~ "zapisywania plików i katalogów udostępnianych publicznie."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Ścieżka do programów Autostartu:"

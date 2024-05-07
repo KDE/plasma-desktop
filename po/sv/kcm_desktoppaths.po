@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2021-03-19 09:22+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Sökväg till videor:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -104,6 +104,17 @@ msgstr ""
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Sökväg till musik:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Denna katalog kommer att användas som förval när du laddar eller sparar "
+"bilder."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -156,16 +167,6 @@ msgstr ""
 #~ "filsystemet.\n"
 #~ "Använd \"Vad är det här?\" (Skift+F1) för att få hjälp om specifika "
 #~ "alternativ."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Denna katalog kommer att användas som förval när du laddar eller sparar "
-#~ "bilder."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Sökväg till autostart:"

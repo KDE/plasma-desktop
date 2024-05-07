@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-05-04 19:20+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -56,7 +56,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr ""
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -85,6 +85,13 @@ msgstr ""
 #: ui/main.qml:136
 #, kde-format
 msgid "Public path:"
+msgstr ""
+
+#: ui/main.qml:142
+#, kde-format
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
 msgstr ""
 
 #: ui/main.qml:150

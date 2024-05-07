@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2020-10-07 22:38+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -67,7 +67,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Videote asukoht:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -101,6 +101,16 @@ msgstr ""
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Muusika asukoht:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Seda kataloogi kasutatakse vaikimisi piltide salvestamiseks ning avamiseks."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -154,16 +164,6 @@ msgstr ""
 #~ "failisüsteemis.\n"
 #~ "Üksikute seadistuste kohta abiinfo saamiseks kasuta \"Mis see on?\" (Shift"
 #~ "+F1) abi."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Seda kataloogi kasutatakse vaikimisi piltide salvestamiseks ning "
-#~ "avamiseks."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Autostart kataloogi asukoht:"

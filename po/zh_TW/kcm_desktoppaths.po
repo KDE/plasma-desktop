@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-02-07 19:58+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -67,7 +67,7 @@ msgstr "此目錄是預設用來儲存下載檔案的。"
 msgid "Videos path:"
 msgstr "影片路徑："
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "此目錄是預設用來儲存或載入影片的。"
@@ -97,6 +97,15 @@ msgstr "此目錄是預設用來儲存或載入音樂的。"
 #, kde-format
 msgid "Public path:"
 msgstr "公開路徑："
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "此目錄是預設用來儲存或載入圖片的。"
 
 #: ui/main.qml:150
 #, kde-format
@@ -148,14 +157,6 @@ msgstr "選擇新位置"
 #~ "<h1>路徑</h1>\n"
 #~ "這個模組允許您選擇您桌面上的檔案要儲存在檔案系統的何處。\n"
 #~ "使用「這是什麼？」 (Shift+F1) 以獲取指定選項的說明。"
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "此目錄是預設用來儲存或載入圖片的。"
 
 #~ msgid "Autostart path:"
 #~ msgstr "自動啟動路徑："

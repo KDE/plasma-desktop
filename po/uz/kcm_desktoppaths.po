@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2006-10-01 21:18+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -60,7 +60,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Ish stoli %1:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -93,6 +93,13 @@ msgstr ""
 #| msgid "Autostart"
 msgid "Public path:"
 msgstr "Avto-boshlash"
+
+#: ui/main.qml:142
+#, kde-format
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
 
 #: ui/main.qml:150
 #, fuzzy, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-01-08 16:28+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -60,7 +60,7 @@ msgstr "Thư mục này mặc định sẽ được dùng để lưu các thứ 
 msgid "Videos path:"
 msgstr "Đường dẫn \"Phim\":"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "Thư mục này mặc định sẽ được dùng để tải hoặc lưu phim."
@@ -90,6 +90,17 @@ msgstr "Thư mục này mặc định sẽ được dùng để tải hoặc lư
 #, kde-format
 msgid "Public path:"
 msgstr "Đường dẫn \"Công khai\":"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Thư mục này mặc định sẽ được dùng để tải hoặc lưu các chia sẻ công khai."
 
 #: ui/main.qml:150
 #, kde-format
@@ -143,12 +154,6 @@ msgstr ""
 #~ "trên bàn làm việc của bạn.\n"
 #~ "Dùng \"Đây là cái gì?\" (Shift+F1) để xem trợ giúp về từng lựa chọn cụ "
 #~ "thể."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Thư mục này mặc định sẽ được dùng để tải hoặc lưu các chia sẻ công khai."
 
 #, fuzzy
 #~| msgid "A&utostart path:"

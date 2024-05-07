@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -58,7 +58,7 @@ msgstr "该文件夹默认将被用来保存下载到本机的内容。"
 msgid "Videos path:"
 msgstr "视频路径："
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "该文件夹默认将被用来加载或者保存影片。"
@@ -88,6 +88,14 @@ msgstr "该文件夹默认将被用来加载或者保存音乐。"
 #, kde-format
 msgid "Public path:"
 msgstr "公共路径："
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "该文件夹默认将被用来保存下载到本机的内容。"
 
 #: ui/main.qml:150
 #, kde-format

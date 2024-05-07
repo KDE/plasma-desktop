@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-03-04 18:40+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -74,7 +74,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Videoiden sijainti:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -111,6 +111,17 @@ msgstr ""
 #, kde-format
 msgid "Public path:"
 msgstr "Julkisen tiedon sijainti:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Tätä kansiota käytetään oletuskansiona avattaville tai tallennettaville "
+"kuville."
 
 #: ui/main.qml:150
 #, kde-format
@@ -166,16 +177,6 @@ msgstr "Valitse uusi sijainti"
 #~ "haluat ohjeen tietystä\n"
 #~ "valinnasta, käytä ”Mikä tämä on?” -toimintoa näppäinyhdistelmällä\n"
 #~ "Vaihto+F1."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Tätä kansiota käytetään oletuskansiona avattaville tai tallennettaville "
-#~ "kuville."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Automaattikäynnistyksen sijainti:"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2010-02-23 12:20+0200\n"
 "Last-Translator: Petros <pvidalis@gmail.com>\n"
 "Language-Team: Ελληνικά <i18ngr@lists.hellug.gr>\n"
@@ -71,7 +71,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Διαδρομή ταινιών:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -106,6 +106,16 @@ msgstr ""
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Διαδρομή μουσικής:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Αυτός θα είναι ο προκαθορισμένος φάκελος για τη φόρτωση ή αποθήκευση εικόνων."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -159,16 +169,6 @@ msgstr ""
 #~ "της επιφάνειας εργασίας σας στο σύστημα αρχείων σας.\n"
 #~ "Χρησιμοποιήστε το \"Τι είναι αυτό;\" (Shift+F1) για να πάρετε βοήθεια για "
 #~ "συγκεκριμένες επιλογές."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Αυτός θα είναι ο προκαθορισμένος φάκελος για τη φόρτωση ή αποθήκευση "
-#~ "εικόνων."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Διαδρομή &αυτόματης εκκίνησης:"

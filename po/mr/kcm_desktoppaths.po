@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2013-02-09 16:14+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "मूव्हीज मार्ग :"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "या संचयीकाचा वापर मूलभूतरित्या मूव्हीजचे साठवणी करिता केला जाईल."
@@ -93,6 +93,15 @@ msgstr "या संचयीकाचा वापर मूलभूतरि
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "संगीत मार्ग :"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "या संचयीकाचा वापर मूलभूतरित्या प्रतिमांचे साठवणी करिता केला जाईल."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -133,14 +142,6 @@ msgstr ""
 #~| msgid "Movies path:"
 #~ msgid "Videos"
 #~ msgstr "मूव्हीज मार्ग :"
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "या संचयीकाचा वापर मूलभूतरित्या प्रतिमांचे साठवणी करिता केला जाईल."
 
 #~ msgid "Autostart path:"
 #~ msgstr "स्वयंप्रारंभ मार्ग :"

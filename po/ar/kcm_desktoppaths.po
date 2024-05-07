@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-02-16 12:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -67,7 +67,7 @@ msgstr "سيُستخدم هذا المجلد افتراضياً لحفظ الع�
 msgid "Videos path:"
 msgstr "مسار الفيديوهات:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الأفلام منه أو حفظها فيه."
@@ -97,6 +97,17 @@ msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل ا�
 #, kde-format
 msgid "Public path:"
 msgstr "مسار العام:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"سيُستخدم هذا المجلد بشكل مبدئي لتحميل  أو حفظ المشاركات العامة مع الآخرين."
 
 #: ui/main.qml:150
 #, kde-format
@@ -150,12 +161,6 @@ msgstr "اختر موقع جديداً"
 #~ "نظامك. \n"
 #~ "استخدم خيار \"ما هذا؟\" (Shift+F1) للحصول على المساعدة حول الخيارات "
 #~ "المحددة."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "سيُستخدم هذا المجلد بشكل مبدئي لتحميل  أو حفظ المشاركات العامة مع الآخرين."
 
 #~ msgid "Autostart path:"
 #~ msgstr "مسار البدء التلقائي:"

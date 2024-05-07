@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2024-02-09 22:07+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "ビデオのパス:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "このフォルダはビデオのデフォルトの読み込み/保存先として使われます。"
@@ -99,6 +99,15 @@ msgstr "このフォルダは音楽のデフォルトの読み込み/保存先�
 #, kde-format
 msgid "Public path:"
 msgstr "公開のパス:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"このフォルダはダウンロードしたアイテムのデフォルトの保存先として使われます。"
 
 #: ui/main.qml:150
 #, kde-format

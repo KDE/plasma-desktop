@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2009-12-22 09:17+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -60,7 +60,7 @@ msgstr "ថត​នេះ​នឹង​មិន​ត្រូវ​បាន
 msgid "Videos path:"
 msgstr "ផ្លូវ​ភាពយន្ត ៖"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "ថត​នេះ​នឹង​ត្រូវ​បានប្រើ​​តាម​លំនាំដើម ដើម្បី​ផ្ទុក​ ឬ​រក្សាទុក​ភាពយន្ត​ ។"
@@ -91,6 +91,15 @@ msgstr "ថត​នេះ​នឹង​ត្រូ​វបាន​ប្រ
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "ផ្លូវ​តន្ត្រី ៖"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "ថត​នេះ​នឹង​ត្រូវ​បានប្រើ​តាម​លំនាំដើម ដើម្បី​ផ្ទុក ឬ​រក្សាទុក​រូបភាព ។"
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -141,14 +150,6 @@ msgstr ""
 #~ "<h1>ផ្លូវ</h1>\n"
 #~ "ម៉ូឌុល​នេះ​អនុញ្ញាត​ឲ្យ​អ្នក​ជ្រើស​ទីតាំង​ក្នុង​ប្រព័ន្ធ​ឯកសារ ដែល​ឯកសារ​លើ​ផ្ទៃតុ​របស់​អ្នក​គួរ​ត្រូវ​បាន​ផ្ទុក ។\n"
 #~ "ប្រើ \"នេះ​ជា​អ្វី ?\" (ប្ដូរ (Shift) + F1) ដើម្បី​ទទួល​បាន​ជំនួយ​ពី​​ជម្រើស​ជាក់លាក់ ។"
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "ថត​នេះ​នឹង​ត្រូវ​បានប្រើ​តាម​លំនាំដើម ដើម្បី​ផ្ទុក ឬ​រក្សាទុក​រូបភាព ។"
 
 #~ msgid "Autostart path:"
 #~ msgstr "ផ្លូវ​ចាប់ផ្តើម​ដោយ​​ស្វ័យប្រវត្ដិ ៖"

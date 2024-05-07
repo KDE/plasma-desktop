@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2009-12-26 16:58+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -59,7 +59,7 @@ msgstr "මෙම බහාලුම, බා ගන්නා ගොණු ගබ
 msgid "Videos path:"
 msgstr "විත්‍රපටි මාර්ගය:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "මෙම බහාලුම, චිත්‍රපට ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
@@ -90,6 +90,15 @@ msgstr "මෙම බහාලුම, ගීත ගබඩා කිරීමට 
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "ගීත මාර්ගය:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "මෙම බහාලුම, පින්තූර ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -141,14 +150,6 @@ msgstr ""
 #~ "මෙම මොඩියුලය ඔබට වැඩතලයේ ඇති ගොණු  , ගොණු පද්ධතියේ ගබඩා විය යුතු ස්ථානය සැකසීමට ඉඩ "
 #~ "දෙයි .\n"
 #~ " \"මෙය කුමක් ද?\" (Shift+F1) භාවිත කර එක් එක් විකල්පයන් සඳහා උදච් ලබා ගන්න."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "මෙම බහාලුම, පින්තූර ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
 #~ msgid "Autostart path:"
 #~ msgstr "ස්වයං ආරම්භක මාර්ගය:"

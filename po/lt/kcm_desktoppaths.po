@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2024-01-11 17:10+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Vaizdo įrašų kelias:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -102,6 +102,18 @@ msgstr ""
 #, kde-format
 msgid "Public path:"
 msgstr "Viešinių kelias:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Šis aplankas, pagal numatymą, bus naudojamas tam, kad iš jo būtų įkelti arba "
+"į jį būtų įrašyti viešiniai."
 
 #: ui/main.qml:150
 #, kde-format
@@ -157,13 +169,6 @@ msgstr "Pasirinkti naują vietą"
 #~ "turetų būti saugomi jūsų darbalaukyje esantys failai.\n"
 #~ "Pasinaudokite „Kas tai yra?“ (Lyg2+F1) pagalba, norėdami daugiau sužinoti "
 #~ "apie atskiras parinktis."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Šis aplankas, pagal numatymą, bus naudojamas tam, kad iš jo būtų įkelti "
-#~ "arba į jį būtų įrašyti viešiniai."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Automatinio paleidimo kelias:"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2024-02-11 18:55\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -67,7 +67,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Шлях да каталога \"Відэа\":"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -98,6 +98,18 @@ msgstr "Гэты каталог будзе выкарыстоўвацца для
 #, kde-format
 msgid "Public path:"
 msgstr "Шлях да публічных рэсурсаў:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Гэты каталог будзе прадвызначана выкарыстоўвацца для загрузкі або захавання "
+"абагуленых рэсурсаў."
 
 #: ui/main.qml:150
 #, kde-format
@@ -152,13 +164,6 @@ msgstr "Абраць новае размяшчэнне"
 #~ "захоўвацца файлы на працоўным стале.\n"
 #~ "Скарыстайцеся \"Што гэта?\" (Shift+F1), каб паглядзець даведку па пэўных "
 #~ "параметрах."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Гэты каталог будзе прадвызначана выкарыстоўвацца для загрузкі або "
-#~ "захавання абагуленых рэсурсаў."
 
 #, fuzzy
 #~| msgid "A&utostart path:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2007-11-04 18:19+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -68,7 +68,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "कागजात मार्ग:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -110,6 +110,16 @@ msgstr ""
 #| msgid "D&ocuments path:"
 msgid "Public path:"
 msgstr "कागजात मार्ग:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"यसबाट वा यसमा कागजात लोड वा बचत गर्न पूर्वनिर्धारितद्वारा यो फोल्डर प्रयोग हुनेछ ।"
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -170,15 +180,6 @@ msgstr ""
 #~ "तपाईँको डेस्कटपमा फाइल प्रणालीको कुन ठाउँमा फाइल भण्डारण गर्नुपर्छ रोज्न तपाईँलाई यो "
 #~ "मोड्युलले अनुमति दिन्छ ।\n"
 #~ "निर्दिष्ट विकल्पमा मद्दत प्राप्त गर्न \"यो के हो?\" (Shift+F1) प्रयोग गर्नुहोस् ।"
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save documents from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "यसबाट वा यसमा कागजात लोड वा बचत गर्न पूर्वनिर्धारितद्वारा यो फोल्डर प्रयोग हुनेछ ।"
 
 #, fuzzy
 #~| msgid "A&utostart path:"

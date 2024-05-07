@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-02-20 21:17+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -64,7 +64,7 @@ msgstr "Dette er mappa som nedlasta filer vanlegvis vert lagra i."
 msgid "Videos path:"
 msgstr "Mappe for videoar:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -97,6 +97,14 @@ msgstr ""
 #, kde-format
 msgid "Public path:"
 msgstr "Offentleg mappe:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "Dette er mappa som nedlasta filer vanlegvis vert lagra i."
 
 #: ui/main.qml:150
 #, kde-format

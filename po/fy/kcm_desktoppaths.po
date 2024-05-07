@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2009-12-19 18:43+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -60,7 +60,7 @@ msgstr "Dizze map wurdt standert brûkt om jo ynladen items te bewarjen."
 msgid "Videos path:"
 msgstr "Filmpaad:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "Dizze map wurdt standert brûkt om films yn te bewarjen of te laden."
@@ -91,6 +91,15 @@ msgstr "Dizze map wurdt standert brûkt om musyk yn te bewarjen of te laden."
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Musykpaad:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "Dizze map wurdt standert brûkt om foto's yn te bewarjen of te laden."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -143,15 +152,6 @@ msgstr ""
 #~ "wurde.\n"
 #~ "Brûk de \"Wat is dit?\" (Shift+F1) om mear ynfo oer in\n"
 #~ "bepaalde opsje te krijen."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Dizze map wurdt standert brûkt om foto's yn te bewarjen of te laden."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Autostartpaad:"

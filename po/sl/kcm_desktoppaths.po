@@ -1,7 +1,7 @@
 # translation of kcmkonq.po to Slovenian
 # Translation of kcmkonq.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMKONQ.
-# $Id: kcm_desktoppaths.po 1662170 2023-10-12 02:05:01Z scripty $
+# $Id: kcm_desktoppaths.po 1679402 2024-05-07 01:10:25Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-02-07 08:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -67,7 +67,7 @@ msgstr "To bo privzeta mapa za shranjevanje prejetih datotek."
 msgid "Videos path:"
 msgstr "Pot do videov:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "To bo privzeta mapa za nalaganje in shranjevanje filmov."
@@ -97,6 +97,17 @@ msgstr "To bo privzeta mapa za nalaganje in shranjevanje glasbe."
 #, kde-format
 msgid "Public path:"
 msgstr "Javna pot:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"To bo privzeta mapa za nalaganje in shranjevanje javnih deljenih datotek."
 
 #: ui/main.qml:150
 #, kde-format
@@ -149,12 +160,6 @@ msgstr "Izberite novo lokacijo"
 #~ "Ta modul vam omogoča izbrati, kje v vašem datotečnem sistemu so shranjene "
 #~ "datoteke na vašem namizju.\n"
 #~ "Uporabite »Kaj je to?« (Shift+F1) za pomoč pri posameznih možnostih."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "To bo privzeta mapa za nalaganje in shranjevanje javnih deljenih datotek."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Pot do samodejnega zagona:"

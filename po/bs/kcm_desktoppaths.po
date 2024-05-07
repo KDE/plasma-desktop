@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2015-02-04 15:17+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Putanja filmova:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -102,6 +102,17 @@ msgstr ""
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Putanja muzike:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Ovaj direktorij se koristi kao podrazumijevanij za učitavanje ili upisivanje "
+"slika."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -155,16 +166,6 @@ msgstr ""
 #~ "sistemu smiještaju datoteke na površi.</p><p>Koristite „Šta je "
 #~ "ovo?“ (<shortcut>Shift+F1</shortcut>) za objašnjenja pojedinih opcija.</"
 #~ "p></html>."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Ovaj direktorij se koristi kao podrazumijevanij za učitavanje ili "
-#~ "upisivanje slika."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Putanja samopokretanja:"

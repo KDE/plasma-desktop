@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2008-11-19 23:51+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -65,7 +65,7 @@ msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 msgid "Videos path:"
 msgstr "Puć za &dokumenty:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -104,6 +104,15 @@ msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 #| msgid "D&ocuments path:"
 msgid "Public path:"
 msgstr "Puć za &dokumenty:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -162,14 +171,6 @@ msgstr ""
 #~ "Tutón modul Wam dowoli wubrać, hdź na datajowym systemje so dataje na "
 #~ "Wašim dźěłowym powjerchu składuja.\n"
 #~ "Wužiwajće \"Što to je?\" (Wulkopis+F1) po pomoc za specielne opcije."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save documents from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 
 #, fuzzy
 #~| msgid "A&utostart path:"

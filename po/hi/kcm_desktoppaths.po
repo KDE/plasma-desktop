@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2021-10-11 12:02+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "वीडियो का पथ :"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "यह फ़ोल्डर डिफ़ॉल्ट द्वारा चलचित्रों को लोड करने या सहेजने में उपयोग में लिया जाएगा."
@@ -93,6 +93,15 @@ msgstr "यह फ़ोल्डर डिफ़ॉल्ट द्वारा
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "संगीत का पथः"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "यह फ़ोल्डर डिफ़ॉल्ट द्वारा छवियों को लोड करने या सहेजने में उपयोग में लिया जाएगा."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -142,15 +151,6 @@ msgstr ""
 #~ "यह मॉड्यूल आपको डेस्कटॉप में स्थित फाइलों को फ़ाइल-तंत्र में कहाँ संग्रहीत किया जाना "
 #~ "चाहिए यह चुनने की अनुमति देता है।\"यह क्या है?\" का प्रयोग करें (Shift+F1) विशिष्ट "
 #~ "विकल्पों पर सहायता प्राप्त करने के लिए।"
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "यह फ़ोल्डर डिफ़ॉल्ट द्वारा छवियों को लोड करने या सहेजने में उपयोग में लिया जाएगा."
 
 #~ msgid "Autostart path:"
 #~ msgstr "स्वतः प्रारंभ पथः"

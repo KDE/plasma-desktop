@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2024-02-09 19:26+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -594,38 +594,38 @@ msgstr "모두 닫기(&C)"
 msgid "&Close"
 msgstr "닫기(&C)"
 
-#: package/contents/ui/Task.qml:80
+#: package/contents/ui/Task.qml:155
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "%1 실행"
 
-#: package/contents/ui/Task.qml:85
+#: package/contents/ui/Task.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
 msgstr[0] "새 메시지 %1개가 있습니다."
 
-#: package/contents/ui/Task.qml:94
+#: package/contents/ui/Task.qml:169
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "%1의 작업 풍선 도움말 표시"
 
-#: package/contents/ui/Task.qml:100
+#: package/contents/ui/Task.qml:175
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "%1의 창을 양쪽으로 표시"
 
-#: package/contents/ui/Task.qml:105
+#: package/contents/ui/Task.qml:180
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "%1의 창 텍스트 목록 표시"
 
-#: package/contents/ui/Task.qml:109
+#: package/contents/ui/Task.qml:184
 #, kde-format
 msgid "Activate %1"
 msgstr "%1 활성화"

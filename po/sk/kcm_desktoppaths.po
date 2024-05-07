@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-03-16 18:13+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -68,7 +68,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Cesta k videám:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -104,6 +104,18 @@ msgstr ""
 #, kde-format
 msgid "Public path:"
 msgstr "Verejná cesta:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Tento priečinok bude použitý ako štandardný pre načítavanie a ukladanie "
+"verejne zdieľaných súborov."
 
 #: ui/main.qml:150
 #, kde-format
@@ -158,13 +170,6 @@ msgstr "Vybrať nové umiestenie"
 #~ "Tento modul vám umožňuje vybrať si, kam budú ukladané súbory pracovnej "
 #~ "plochy.\n"
 #~ "Použite \"Čo je to?\" (Shift+F1) ak potrebujete pomoc s niektorou voľbou."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Tento priečinok bude použitý ako štandardný pre načítavanie a ukladanie "
-#~ "verejne zdieľaných súborov."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Cesta k priečinku Autostart:"

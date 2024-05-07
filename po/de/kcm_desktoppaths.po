@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-02-26 01:18+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Pfad für Videos:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -102,6 +102,18 @@ msgstr ""
 #, kde-format
 msgid "Public path:"
 msgstr "Pfad für Öffentlich:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von "
+"öffentlichen Freigaben benutzt."
 
 #: ui/main.qml:150
 #, kde-format
@@ -157,13 +169,6 @@ msgstr "Neuen Ort auswählen"
 #~ "auf Ihrer Arbeitsfläche angezeigt werden. Verwenden Sie die Funktion „Was "
 #~ "ist das?“ (Umschalt+F1), um Hilfe zu bestimmten Einstellungsmöglichkeiten "
 #~ "zu erhalten."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von "
-#~ "öffentlichen Freigaben benutzt."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Pfad zu Autostart:"

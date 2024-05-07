@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2010-10-22 18:26+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -61,7 +61,7 @@ msgstr "Çou ridant srè eployî (prémetou) po schaper vos cayets aberwetés."
 msgid "Videos path:"
 msgstr "Tchimin des fimes:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les fimes."
@@ -92,6 +92,15 @@ msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les muzikes
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Tchimin del muzike:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les imådjes."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -144,15 +153,6 @@ msgstr ""
 #~ "wårdés e sistinme di fitchîs so vosse sicribanne.\n"
 #~ "Siervoz vs do \"Cwè ç' ki c' est d' ça\" (Maj+F1) pos awè d' l' aidance "
 #~ "so des tchuzes di dnêyes."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les imådjes."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Tchimin d' enondaedje otomatike:"

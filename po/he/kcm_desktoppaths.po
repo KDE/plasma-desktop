@@ -13,21 +13,22 @@
 # Diego Iastrubni <elcuco@kde.org>, 2004.
 # Diego Iastrubni <elcuco@kde.org>, 2005, 2007, 2008, 2009, 2012.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
-"PO-Revision-Date: 2023-09-28 22:40+0300\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-he@kde.org>\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"PO-Revision-Date: 2024-05-05 12:11+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ui/main.qml:52
 #, kde-format
@@ -41,9 +42,8 @@ msgid ""
 "change the location of this folder if you want to, and the contents will "
 "move automatically to the new location as well."
 msgstr ""
-"תיקייה זו מכילה את כל הקבצים שאתה רואה על שולחן העבודה שלך. באפשרותך לשנות "
-"את מיקומה של תיקייה זו אם רצונך בכך, ואז גם תועבר תכולתה אוטומטית למיקום "
-"החדש."
+"תיקייה זו מכילה את כל הקבצים שמופיעים על שולחן העבודה שלך. אפשר לשנות את "
+"מקומה של תיקייה זו לבחירתך, ואז גם תועבר תכולתה אוטומטית למקום החדש."
 
 #: ui/main.qml:66
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "תיקייה זו תשמש כברירת מחדל לשמירה של פר�
 msgid "Videos path:"
 msgstr "נתיב סרטונים:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של סרטונים."
@@ -101,6 +101,15 @@ msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמי
 #, kde-format
 msgid "Public path:"
 msgstr "נתיב ציבורי:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של תמונות."
 
 #: ui/main.qml:150
 #, kde-format
@@ -153,14 +162,6 @@ msgstr "נא לבחור במקום חדש"
 #~ "מודול זה מאפשר לך לבחור את המיקומים במערכת הקבצים בהם יאוחסנו הקבצים שעל "
 #~ "שולחן העבודה שלך.\n"
 #~ "השתמש ב\"מה זה?\" (Shift+F1) כדי לקבל עזרה על אפשרויות ספציפיות."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של תמונות."
 
 #~ msgid "Autostart path:"
 #~ msgstr "נתיב להפעלה או&טומטית:"

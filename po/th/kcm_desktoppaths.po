@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2010-02-11 21:34+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -61,7 +61,7 @@ msgstr "โฟลเดอร์นี้จะถูกใช้โดยปร
 msgid "Videos path:"
 msgstr "พาธตำแหน่งเก็บภาพยนตร์:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "โฟลเดอร์นี้จะถูกใช้โดยปริยาย เพื่อเรียกใช้หรือบันทึกภาพยนตร์"
@@ -92,6 +92,15 @@ msgstr "โฟลเดอร์นี้จะถูกใช้โดยปร
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "พาธตำแหน่งเก็บแฟ้มดนตรี:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "โฟลเดอร์นี้จะถูกใช้โดยปริยาย เพื่อเรียกใช้หรือบันทึกรูปภาพ"
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -142,14 +151,6 @@ msgstr ""
 #~ "<h1>พาธ</h1>\n"
 #~ "มอดูลนี้ ให้คุณเลือกที่จะเก็บแฟ้มบนพื้นที่หน้าจอของคุณไว้ที่ไหนในระบบแฟ้ม\n"
 #~ "เลือกใช้เมนู \"นี่คืออะไร ?\" (หรือกด Shift+F1) เพื่อดูความช่วยเหลือของตัวเลือกที่ต้องการ"
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "โฟลเดอร์นี้จะถูกใช้โดยปริยาย เพื่อเรียกใช้หรือบันทึกรูปภาพ"
 
 #~ msgid "Autostart path:"
 #~ msgstr "พาธของโฟลเดอร์เริ่มอัตโนมัติ:"

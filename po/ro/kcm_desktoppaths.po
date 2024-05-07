@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-04-10 18:56+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Cale videoclipuri:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -99,6 +99,16 @@ msgstr ""
 #, kde-format
 msgid "Public path:"
 msgstr "Cale publică:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Acest dosar va fi folosit în mod implicit pentru a încărca sau salva poze."
 
 #: ui/main.qml:150
 #, kde-format
@@ -147,15 +157,6 @@ msgstr "Alege amplasare nouă"
 #~ "de pe biroul dumneavoastră. \n"
 #~ "Folosiți „Ce înseamnă aceasta?” (Shift+F1) pentru a obține ajutor pentru "
 #~ "opțiunile individuale."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Acest dosar va fi folosit în mod implicit pentru a încărca sau salva poze."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Cale autostart:"

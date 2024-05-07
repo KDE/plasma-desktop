@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2006-01-19 21:33+0200\n"
 "Last-Translator: Frikkie Thirion <frikkie.thirion@deneloptronics.co.za>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Dokumente gids soeklys:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -115,6 +115,17 @@ msgstr ""
 #| msgid "D&ocuments path:"
 msgid "Public path:"
 msgstr "Dokumente gids soeklys:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak of "
+"na toe te stoor."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -178,16 +189,6 @@ msgstr ""
 #~ "op jou werkskerm gestoor moet word.\n"
 #~ "Gebruik die \"Wat is Hierdie?\" (Shift+F1) om hulp oor spesifieke opsies "
 #~ "te kry"
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save documents from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Hierdie gids sal by verstek gebruik word om dokumente vanaf oop te maak "
-#~ "of na toe te stoor."
 
 #, fuzzy
 #~| msgid "A&utostart path:"

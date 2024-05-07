@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2009-02-10 12:00+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -58,7 +58,7 @@ msgstr "ये फोल्डर डिफाल्ट से कागद ल 
 msgid "Videos path:"
 msgstr "कागद के रस्ता: (&o)"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, fuzzy, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "ये फोल्डर डिफाल्ट से कागद ल लोड करे या सहेजे मं उपयोग मं ले जाही."
@@ -88,6 +88,13 @@ msgstr "ये फोल्डर डिफाल्ट से कागद ल 
 #, fuzzy, kde-format
 msgid "Public path:"
 msgstr "कागद के रस्ता: (&o)"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "ये फोल्डर डिफाल्ट से कागद ल लोड करे या सहेजे मं उपयोग मं ले जाही."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -128,12 +135,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Videos"
 #~ msgstr "कागद के रस्ता: (&o)"
-
-#, fuzzy
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "ये फोल्डर डिफाल्ट से कागद ल लोड करे या सहेजे मं उपयोग मं ले जाही."
 
 #, fuzzy
 #~ msgid "Autostart path:"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-02-27 21:01+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -63,7 +63,7 @@ msgstr "This folder will be used by default to save your downloaded items."
 msgid "Videos path:"
 msgstr "Videos path:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "This folder will be used by default to load or save movies from or to."
@@ -94,6 +94,17 @@ msgstr "This folder will be used by default to load or save music from or to."
 #, kde-format
 msgid "Public path:"
 msgstr "Public path:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"This folder will be used by default to load or save public shares from or to."
 
 #: ui/main.qml:150
 #, kde-format
@@ -147,13 +158,6 @@ msgstr "Choose new location"
 #~ "This module allows you to choose where in the filesystem the files on "
 #~ "your desktop should be stored.\n"
 #~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Autostart path:"

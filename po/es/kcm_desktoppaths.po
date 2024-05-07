@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-02-06 15:20+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -74,7 +74,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Ruta para los vídeos:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "Esta carpeta será la predeterminada para cargar o guardar películas."
@@ -104,6 +104,18 @@ msgstr "Esta carpeta será la predeterminada para cargar o guardar música."
 #, kde-format
 msgid "Public path:"
 msgstr "Ruta de uso público:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Esta carpeta será la predeterminada para cargar o guardar elementos "
+"compartidos públicamente."
 
 #: ui/main.qml:150
 #, kde-format
@@ -157,13 +169,6 @@ msgstr "Seleccionar nueva ubicación"
 #~ "almacenan los archivos del escritorio.\n"
 #~ "Use «¿Qué es esto?» (Mayúsculas+F1) para obtener ayuda sobre las opciones "
 #~ "específicas."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Esta carpeta será la predeterminada para cargar o guardar elementos "
-#~ "compartidos públicamente."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Ruta de inicio automático:"

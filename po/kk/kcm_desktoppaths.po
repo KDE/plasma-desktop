@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2009-12-27 10:41+0600\n"
 "Last-Translator: \n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -63,7 +63,7 @@ msgstr "Бұл қапшық әдетте жүктеп алынғандарды �
 msgid "Videos path:"
 msgstr "&Фильмдер қапшығы:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -97,6 +97,16 @@ msgstr ""
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "Музыка қапшығы:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Бұл қапшық әдетте суреттерді сақтауға және жүктеп алу/беруге қолданылады."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -150,15 +160,6 @@ msgstr ""
 #~ "таңдауға мүмкіндік береді.\n"
 #~ "Әрбір параметр туралы анықтама алу үшін \"Бұл не?\" (Shift+F1) "
 #~ "мүмкіншілігін пайдаланыңыз."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Бұл қапшық әдетте суреттерді сақтауға және жүктеп алу/беруге қолданылады."
 
 #~ msgid "Autostart path:"
 #~ msgstr "А&втобастау қапшығы:"

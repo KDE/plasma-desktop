@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2004-07-03 17:50+0100\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -76,7 +76,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Llwybr do&gfennau:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -121,6 +121,17 @@ msgstr ""
 #| msgid "D&ocuments path:"
 msgid "Public path:"
 msgstr "Llwybr do&gfennau:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Defnyddir y blygell yma yn ragosod i lwytho dogfennau ohono, neu i gadw "
+"dogfennau ynddo."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -184,16 +195,6 @@ msgstr ""
 #~ "cadw'r ffeiliau ar eich penbwrdd.\n"
 #~ " Defnyddiwch \"Beth yw hyn?\" (Shift+F1) i gael cymorth ar ddewisiadau "
 #~ "penodol."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save documents from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Defnyddir y blygell yma yn ragosod i lwytho dogfennau ohono, neu i gadw "
-#~ "dogfennau ynddo."
 
 #, fuzzy
 #~| msgid "A&utostart path:"

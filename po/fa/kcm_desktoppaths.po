@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2011-08-22 13:08+0430\n"
 "Last-Translator: Mohamad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <kde-i18n-doc@kde.org>\n"
@@ -63,7 +63,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "مسیر فیلمها:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -95,6 +95,15 @@ msgstr "این گزینه به طور پیش‌فرض برای بازخوانی 
 #| msgid "Music path:"
 msgid "Public path:"
 msgstr "مسیر موسیقی‌ها:‌"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "این گزینه به طور پیش‌فرض برای بازخوانی یا ذخیره عکسها استفاده می‌شود."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -147,14 +156,6 @@ msgstr ""
 #~ "شما باید آنجا ذخیره شوند را می‌دهد.\n"
 #~ "برای کمک گرفتن در مورد گزینه‌های مشخص از «این چیست» (کلید تبدیل+F1) "
 #~ "استفاده کنید."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "این گزینه به طور پیش‌فرض برای بازخوانی یا ذخیره عکسها استفاده می‌شود."
 
 #~ msgid "Autostart path:"
 #~ msgstr "مسیر خودآغاز:‌"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2008-12-28 23:57+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -115,6 +115,17 @@ msgstr ""
 #| msgid "D&ocuments path:"
 msgid "Public path:"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
+"ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
 
 #: ui/main.qml:150
 #, fuzzy, kde-format
@@ -176,16 +187,6 @@ msgstr ""
 #~ "ಯಾವಾಗಲೂ ನಿಮ್ಮ ಗಣಕತೆರೆಯಲ್ಲಿನ ಕಡತವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಎಲ್ಲಿ ಕಡತವನ್ನು ಶೇಖರಿಸಡಬೇಕು ಎಂದು "
 #~ "ನೀವು ನಿರ್ಧರಿಸಲು ಈ ಘಟಕವು ಅನುವು ಮಾಡಿಕೊಡುತ್ತದೆ.\n"
 #~ "ನಿಗದಿತ ಆಯ್ಕೆಗಳ ಬಗ್ಗೆ ಸಹಾಯ ಪಡೆಯಲು \"ಏನಿದು?\" (ಶಿಫ್ಟ್+F1) ಅನ್ನು ಬಳಸಿ."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save documents from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
-#~ "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
 
 #, fuzzy
 #~| msgid "A&utostart path:"

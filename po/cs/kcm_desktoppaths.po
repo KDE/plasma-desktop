@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-02-07 09:40+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -60,7 +60,7 @@ msgstr "Tato složka bude použita jako výchozí pro ukládání stažených v�
 msgid "Videos path:"
 msgstr "Cesta k adresáři s videem:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "Tato složka bude použita jako výchozí pro otevírání či ukládání filmů."
@@ -91,6 +91,14 @@ msgstr "Tato složka bude použita jako výchozí pro otevírání či ukládán
 #, kde-format
 msgid "Public path:"
 msgstr "Veřejná cesta:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "Tato složka bude použita jako výchozí pro ukládání stažených věcí."
 
 #: ui/main.qml:150
 #, kde-format

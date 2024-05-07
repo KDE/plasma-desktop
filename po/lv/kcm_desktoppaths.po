@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2024-01-22 19:03+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr "Šī mape būs noklusētā mape lejupielādēto dokumentu saglabāšanai
 msgid "Videos path:"
 msgstr "Video ceļš:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "Šī mape būs noklusētā mape video datņu ielādēšanai vai saglabāšanai."
@@ -94,6 +94,15 @@ msgstr "Šī mape būs noklusētā mape mūzikas ielādēšanai un saglabāšana
 #, kde-format
 msgid "Public path:"
 msgstr "Publiskais ceļš:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "Šī mape būs noklusētā mape attēlu ielādēšanai vai saglabāšanai."
 
 #: ui/main.qml:150
 #, kde-format
@@ -143,14 +152,6 @@ msgstr "Izvēlēties jaunu vietu"
 #~ "faili.\n"
 #~ "Izmantojiet \"Kas tas ir?\" (Shift+F1), lai apskatītu specifikas opcijas "
 #~ "aprakstu."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "Šī mape būs noklusētā mape attēlu ielādēšanai vai saglabāšanai."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Autostarta ceļš:"

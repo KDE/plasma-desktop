@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-03-01 00:22+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "이 폴더는 다운로드한 파일을 저장하는 기본 폴더로 �
 msgid "Videos path:"
 msgstr "동영상 경로:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "이 폴더는 동영상을 저장하는 기본 폴더로 사용됩니다."
@@ -97,6 +97,15 @@ msgstr "이 폴더는 음악을 저장하는 기본 폴더로 사용됩니다."
 #, kde-format
 msgid "Public path:"
 msgstr "공개 경로:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save pictures from or to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "이 폴더는 사진을 저장하는 기본 폴더로 사용됩니다."
 
 #: ui/main.qml:150
 #, kde-format
@@ -156,14 +165,6 @@ msgstr "새 위치 선택"
 #~ "다.\n"
 #~ "특정한 설정에 대한 도움말을 보시려면 \"이것에 대한 설명\" (Shift+F1)을 사"
 #~ "용하십시오."
-
-#, fuzzy
-#~| msgid ""
-#~| "This folder will be used by default to load or save pictures from or to."
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "이 폴더는 사진을 저장하는 기본 폴더로 사용됩니다."
 
 #~ msgid "Autostart path:"
 #~ msgstr "자동 시작 경로:"

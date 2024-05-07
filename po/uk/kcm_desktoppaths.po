@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-02-06 08:11+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr "Тека буде типовою для збереження отрим�
 msgid "Videos path:"
 msgstr "Шлях до відео:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr "Тека буде типовою для завантаження та збереження відео."
@@ -96,6 +96,16 @@ msgstr "Тека буде типовою для завантаження та з
 #, kde-format
 msgid "Public path:"
 msgstr "Шлях до спільного:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr "Тека буде типовою для завантаження та збереження спільних ресурсів."
 
 #: ui/main.qml:150
 #, kde-format
@@ -149,11 +159,6 @@ msgstr "Вибрати інше місце"
 #~ "стільниці.\n"
 #~ "За допомогою можливості «Що це?» (Shift+F1) можна отримати довідку щодо "
 #~ "конкретних параметрів."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr "Тека буде типовою для завантаження та збереження спільних ресурсів."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Шлях автозапуску:"

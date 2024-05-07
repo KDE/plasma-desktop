@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-12 01:43+0000\n"
+"POT-Creation-Date: 2024-05-07 00:40+0000\n"
 "PO-Revision-Date: 2023-02-06 11:25+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -78,7 +78,7 @@ msgstr ""
 msgid "Videos path:"
 msgstr "Pad naar video's:"
 
-#: ui/main.qml:100 ui/main.qml:142
+#: ui/main.qml:100
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
@@ -112,6 +112,18 @@ msgstr ""
 #, kde-format
 msgid "Public path:"
 msgstr "Publiekpad:"
+
+#: ui/main.qml:142
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save public shares from or "
+#| "to."
+msgid ""
+"This folder will be used by default for publicly-shared files when network "
+"sharing is enabled."
+msgstr ""
+"Deze map wordt standaard gebruikt om uit publieke gedeelde mappen te laden "
+"of er in op te slaan."
 
 #: ui/main.qml:150
 #, kde-format
@@ -167,13 +179,6 @@ msgstr "Nieuwe locatie kiezen"
 #~ "worden opgeslagen.\n"
 #~ "Gebruik de \"Wat is dit?\" (Shift+F1) om meer info over een specifieke "
 #~ "optie te krijgen."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save public shares from or "
-#~ "to."
-#~ msgstr ""
-#~ "Deze map wordt standaard gebruikt om uit publieke gedeelde mappen te "
-#~ "laden of er in op te slaan."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Autostartpad:"

@@ -16,13 +16,13 @@
 # Diego Iastrubni <elcuco@kde.org>, 2005, 2008, 2012, 2013.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:39+0000\n"
-"PO-Revision-Date: 2023-11-09 14:05+0200\n"
+"PO-Revision-Date: 2024-05-05 12:08+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -162,11 +162,11 @@ msgid ""
 "feel the system time should be corrected, please contact your system "
 "administrator."
 msgstr ""
-"‏<h1>תאריך ושעה</h1> במודול הגדרות מערכת זה ניתן לעשות שימוש על מנת להגדיר את "
-"התאריך והשעה של המערכת. מכיוון שהגדרות אלה לא משפיעות רק עליך בתור משתמש, "
-"אלא על המערכת כולה, באפשרותך לשנות הגדרות אלה רק אם הגדרות המערכת מופעל "
-"כמשתמש root. אם אין לך את הססמה של המשתמש root, אך אתה סבור כי יש לתקן את "
-"השעה של המערכת, צור קשר עם מנהל המערכת שלך."
+"‏<h1>תאריך ושעה</h1> במודול הגדרות מערכת זה ניתן להשתמש כדי להגדיר את התאריך "
+"והשעה של המערכת. כיוון שהגדרות אלה לא משפיעות רק עליך בתור משתמש, אלא על "
+"המערכת כולה, אפשר לשנות הגדרות אלה רק אם הגדרות המערכת מופעל כמשתמש על "
+"(root). אם אין לך את הסיסמה של root, אך לדעתך יש לתקן את השעה של המערכת, "
+"מוטב ליצור קשר עם הנהלת המערכת שלך."
 
 #: k4timezonewidget.cpp:64
 #, kde-format
