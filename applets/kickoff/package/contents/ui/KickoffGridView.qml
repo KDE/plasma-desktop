@@ -34,7 +34,7 @@ EmptyPage {
         hoverEnabled: true
         onEntered: {
             if (containsMouse) {
-                let targetIndex = view.indexAt(mouseX + view.contentX, view.contentY)
+                const targetIndex = view.indexAt(mouseX + view.contentX, view.contentY)
                 if (targetIndex >= 0) {
                     view.currentIndex = targetIndex
                     view.forceActiveFocus(Qt.MouseFocusReason)
@@ -48,7 +48,7 @@ EmptyPage {
         hoverEnabled: true
         onEntered: {
             if (containsMouse) {
-                let targetIndex = view.indexAt(mouseX + view.contentX, view.height + view.contentY - 1)
+                const targetIndex = view.indexAt(mouseX + view.contentX, view.height + view.contentY - 1)
                 if (targetIndex >= 0) {
                     view.currentIndex = targetIndex
                     view.forceActiveFocus(Qt.MouseFocusReason)
@@ -214,7 +214,7 @@ EmptyPage {
         }
 
         Keys.onPressed: event => {
-            let targetX = currentItem ? currentItem.x : contentX
+            const targetX = currentItem ? currentItem.x : contentX
             let targetY = currentItem ? currentItem.y : contentY
             let targetIndex = currentIndex
             // supports mirroring
@@ -222,7 +222,7 @@ EmptyPage {
             // at the beginning of a line
             const isLeading = currentIndex % columns === 0
             // at the top of a given column and in the top row
-            let atTop = currentIndex < columns
+            const atTop = currentIndex < columns
             // supports mirroring
             const atRight = currentIndex % columns === (Qt.application.layoutDirection == Qt.RightToLeft ? 0 : columns - 1)
             // at the end of a line

@@ -45,7 +45,7 @@ EmptyPage {
         hoverEnabled: true
         onEntered: {
             if (containsMouse) {
-                let targetIndex = view.indexAt(mouseX + view.contentX, view.contentY)
+                const targetIndex = view.indexAt(mouseX + view.contentX, view.contentY)
                 if (targetIndex >= 0) {
                     view.currentIndex = targetIndex
                     view.forceActiveFocus(Qt.MouseFocusReason)
@@ -59,7 +59,7 @@ EmptyPage {
         hoverEnabled: true
         onEntered: {
             if (containsMouse) {
-                let targetIndex = view.indexAt(mouseX + view.contentX, view.height + view.contentY - 1)
+                const targetIndex = view.indexAt(mouseX + view.contentX, view.height + view.contentY - 1)
                 if (targetIndex >= 0) {
                     view.currentIndex = targetIndex
                     view.forceActiveFocus(Qt.MouseFocusReason)
@@ -229,11 +229,11 @@ EmptyPage {
             }
         }
         Keys.onPressed: event => {
-            let targetX = currentItem ? currentItem.x : contentX
+            const targetX = currentItem ? currentItem.x : contentX
             let targetY = currentItem ? currentItem.y : contentY
             let targetIndex = currentIndex
-            let atFirst = currentIndex === 0
-            let atLast = currentIndex === count - 1
+            const atFirst = currentIndex === 0
+            const atLast = currentIndex === count - 1
             if (count > 1) {
                 switch (event.key) {
                     case Qt.Key_Up: if (!atFirst) {

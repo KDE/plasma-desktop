@@ -180,9 +180,9 @@ PlasmaExtras.PlasmoidHeading {
             id: tabScrollHandler
             acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
             onWheel: {
-                let shouldDec = rotation >= 15
-                let shouldInc = rotation <= -15
-                let shouldReset = (rotation > 0 && tabBar.currentIndex === 0) || (rotation < 0 && tabBar.currentIndex === tabBar.count - 1)
+                const shouldDec = rotation >= 15
+                const shouldInc = rotation <= -15
+                const shouldReset = (rotation > 0 && tabBar.currentIndex === 0) || (rotation < 0 && tabBar.currentIndex === tabBar.count - 1)
                 if (shouldDec) {
                     tabBar.decrementCurrentIndex();
                     rotation = 0
