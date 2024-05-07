@@ -74,6 +74,13 @@ BasePage {
         focus: true
         initialItem: preferredFavoritesViewComponent
 
+        function showSectionView(sectionName: string, parentView: KickoffListView): void {
+            stackView.push(applicationsSectionViewComponent, {
+                currentSection: sectionName,
+                parentView,
+            });
+        }
+
         Component {
             id: favoritesListViewComponent
             DropAreaListView {
@@ -109,10 +116,7 @@ BasePage {
                 hasSectionView: stackView.appsModelRow === 1
 
                 onShowSectionViewRequested: sectionName => {
-                    stackView.push(applicationsSectionViewComponent, {
-                        "currentSection": sectionName,
-                        "parentView": applicationsListView
-                    });
+                    stackView.showSectionView(sectionName, this);
                 }
             }
         }
@@ -151,10 +155,7 @@ BasePage {
                 gridModel: stackView.appsModel
 
                 onShowSectionViewRequested: sectionName => {
-                    stackView.push(applicationsSectionViewComponent, {
-                        currentSection: sectionName,
-                        parentView: listOfGridsView
-                    });
+                    stackView.showSectionView(sectionName, this);
                 }
             }
         }
