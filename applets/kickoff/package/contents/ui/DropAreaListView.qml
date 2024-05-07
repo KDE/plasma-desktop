@@ -4,7 +4,6 @@
  */
 
 import QtQuick
-import QtQml
 
 KickoffListView {
     id: root

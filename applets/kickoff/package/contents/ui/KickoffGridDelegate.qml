@@ -10,7 +10,6 @@
     SPDX-License-Identifier: GPL-2.0-or-later
  */
 import QtQuick
-import QtQml
 import QtQuick.Layouts
 import org.kde.plasma.components as PC3
 import org.kde.kirigami as Kirigami

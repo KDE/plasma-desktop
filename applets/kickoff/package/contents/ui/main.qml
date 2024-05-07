@@ -11,8 +11,6 @@
 */
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Window
-import QtQml
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg as KSvg

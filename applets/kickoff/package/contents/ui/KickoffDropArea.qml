@@ -4,7 +4,6 @@
  */
 
 import QtQuick
-import QtQml
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 

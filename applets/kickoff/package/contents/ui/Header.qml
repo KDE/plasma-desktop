@@ -8,7 +8,6 @@
 */
 
 import QtQuick
-import QtQml
 import QtQuick.Layouts
 import QtQuick.Templates as T
 import Qt5Compat.GraphicalEffects

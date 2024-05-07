@@ -10,7 +10,6 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Templates as T
-import QtQml
 import org.kde.ksvg as KSvg
 import org.kde.plasma.workspace.trianglemousefilter
 

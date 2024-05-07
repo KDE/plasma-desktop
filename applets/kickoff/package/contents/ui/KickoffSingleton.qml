@@ -7,7 +7,6 @@ pragma Singleton // NOTE: Singletons are shared between all instances of a plasm
 import QtQml.Models
 import QtQuick
 import QtQuick.Templates as T
-import QtQml
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.plasma5support as P5Support

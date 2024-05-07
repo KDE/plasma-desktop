@@ -7,7 +7,6 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Templates as T
-import QtQml
 
 BasePage {
     id: root

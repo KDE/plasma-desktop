@@ -5,7 +5,6 @@
 */
 
 import QtQuick
-import QtQml
 
 import org.kde.plasma.extras as PlasmaExtras
 

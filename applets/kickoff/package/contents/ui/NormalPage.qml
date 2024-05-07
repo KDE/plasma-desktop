@@ -5,7 +5,6 @@
 
 import QtQuick
 import QtQuick.Templates as T
-import QtQml
 
 EmptyPage {
     id: root

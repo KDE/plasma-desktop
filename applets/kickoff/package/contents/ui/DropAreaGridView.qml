@@ -4,7 +4,6 @@
  */
 
 import QtQuick
-import QtQml
 
 KickoffGridView {
     id: root

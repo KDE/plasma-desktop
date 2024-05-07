@@ -10,7 +10,6 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 import QtQuick
-import QtQml
 import QtQuick.Layouts
 import QtQuick.Templates as T
 import org.kde.plasma.core as PlasmaCore

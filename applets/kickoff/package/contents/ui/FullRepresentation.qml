@@ -12,7 +12,6 @@
 import QtQuick
 import QtQuick.Templates as T
 import QtQuick.Layouts
-import QtQml
 import org.kde.plasma.plasmoid
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.extras as PlasmaExtras
