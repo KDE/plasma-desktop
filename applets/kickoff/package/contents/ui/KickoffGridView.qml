@@ -64,8 +64,16 @@ EmptyPage {
      */
     GridView {
         id: view
-        readonly property real availableWidth: width - leftMargin - rightMargin
-        readonly property real availableHeight: height - topMargin - bottomMargin
+
+        // Not storing them as properties somehow avoids a dubious warning
+        // about *Binding loop detected for property "rows"*
+        function availableWidth(): real {
+            return width - leftMargin - rightMargin;
+        }
+        function availableHeight(): real {
+            return height - topMargin - bottomMargin;
+        }
+
         readonly property int columns: Math.floor(availableWidth / cellWidth)
         readonly property int rows: Math.floor(availableHeight / cellHeight)
         property bool movedWithKeyboard: false
