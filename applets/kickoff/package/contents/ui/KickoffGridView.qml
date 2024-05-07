@@ -206,9 +206,10 @@ EmptyPage {
         }
 
         Keys.onMenuPressed: event => {
-            if (currentItem !== null) {
-                currentItem.forceActiveFocus(Qt.ShortcutFocusReason)
-                currentItem.openActionMenu()
+            const delegate = currentItem as AbstractKickoffItemDelegate;
+            if (delegate !== null) {
+                delegate.forceActiveFocus(Qt.ShortcutFocusReason)
+                delegate.openActionMenu()
             }
         }
 
