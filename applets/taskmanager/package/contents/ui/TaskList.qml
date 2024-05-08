@@ -23,6 +23,15 @@ GridLayout {
     columnSpacing: 0
     property int animationsRunning: 0
     onAnimationsRunningChanged: animating = animationsRunning > 0
+    property real minimumWidth: {
+        let min = Infinity;
+        for (let item of children) {
+            if (item.visible && item.width > 0 && item.width < min) {
+                min = item.width;
+            }
+        }
+        return min;
+    }
     rows: {
         if (tasks.vertical) {
             if (tasks.plasmoid.configuration.maxStripes > 1 && !tasks.plasmoid.configuration.forceStripes) {
