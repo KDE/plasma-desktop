@@ -4,21 +4,29 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
-import org.kde.plasma.core as PlasmaCore
 import org.kde.kitemmodels as KItemModels
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.private.kicker as Kicker
 
 KickoffListView {
     id: root
-    required property var gridModel
+
+    required property Kicker.AppsModel gridModel
 
     highlight: null // highlight off since it otherwise highlights a whole section
     model: gridModel.sections
     section.property: "section"
     delegate: ListOfGridsViewDelegate {
+        id: delegate
+
+        required property int index
+        required property string section
+
         width: root.width
 
-        allAppsSection: section
         isCurrentSectionGrid: ListView.isCurrentItem
         isSearchFieldActive: kickoff.contentArea === root && kickoff.searchField.activeFocus
         parentView: ListView.view
@@ -28,7 +36,7 @@ KickoffListView {
             id: sectionModel
 
             sourceModel: root.gridModel
-            filterString: allAppsSection
+            filterString: delegate.section
             filterRoleName: "group"
 
             function trigger(row, actionId, argument) {

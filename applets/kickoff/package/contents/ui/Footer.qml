@@ -5,6 +5,8 @@
  *    SPDX-License-Identifier: GPL-2.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PC3

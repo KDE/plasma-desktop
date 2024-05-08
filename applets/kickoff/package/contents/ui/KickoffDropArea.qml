@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid

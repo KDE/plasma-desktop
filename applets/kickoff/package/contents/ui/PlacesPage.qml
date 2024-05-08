@@ -4,12 +4,15 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Templates as T
 
 BasePage {
     id: root
+
     sideBarComponent: KickoffListView {
         id: sideBar
         focus: true // needed for Loaders
@@ -21,6 +24,7 @@ BasePage {
             isCategoryListItem: true
         }
     }
+
     contentAreaComponent: KickoffListView {
         id: contentArea
         mainContentView: true

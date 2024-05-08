@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 
 import org.kde.plasma.components as PC3
@@ -30,6 +32,12 @@ KickoffGridView {
     view.cellHeight: view.cellWidth
 
     delegate: PC3.AbstractButton {
+        id: delegate
+
+        required property int index
+        required property int firstIndex
+        required property string section
+
         width: view.cellWidth
         height: view.cellHeight
 
@@ -52,13 +60,13 @@ KickoffGridView {
             font.pixelSize: fontMetrics.font.pixelSize
             fontSizeMode: Text.VerticalFit
 
-            text: model.section
+            text: delegate.section
             textFormat: Text.PlainText
         }
 
         onClicked: {
             const isGridView = Plasmoid.configuration.applicationsDisplay === 0
-            const destinationIndex = isGridView ? index : model.firstIndex
+            const destinationIndex = isGridView ? index : firstIndex
             root.hideSectionViewRequested(destinationIndex)
         }
     }

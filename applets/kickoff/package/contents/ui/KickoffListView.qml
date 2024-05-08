@@ -7,6 +7,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Templates as T
 
@@ -21,6 +24,7 @@ import org.kde.kirigami as Kirigami
 // Using EmptyPage instead.
 EmptyPage {
     id: root
+
     property alias model: view.model
     property alias count: view.count
     property alias currentIndex: view.currentIndex
@@ -144,6 +148,8 @@ EmptyPage {
             property: "group"
             criteria: ViewSection.FullString
             delegate: PlasmaExtras.ListSectionHeader {
+                required property string section
+
                 width: view.availableWidth
                 height: KickoffSingleton.compactListDelegateHeight
                 text: section.length === 1 ? section.toUpperCase() : section

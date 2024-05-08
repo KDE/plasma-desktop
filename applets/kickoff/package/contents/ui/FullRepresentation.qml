@@ -9,6 +9,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Templates as T
 import QtQuick.Layouts

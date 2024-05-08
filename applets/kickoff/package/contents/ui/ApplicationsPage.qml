@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Templates as T
@@ -12,6 +14,7 @@ import org.kde.plasma.plasmoid
 
 BasePage {
     id: root
+
     sideBarComponent: KickoffListView {
         id: sideBar
         focus: true // needed for Loaders
@@ -23,6 +26,7 @@ BasePage {
             isCategoryListItem: true
         }
     }
+
     contentAreaComponent: VerticalStackView {
         id: stackView
 
@@ -182,7 +186,7 @@ BasePage {
                 // Only update row index if the condition is met.
                 // The 0 index modelForRow isn't supposed to be used. That's just how it works.
                 if (root.sideBarItem.currentIndex > 0) {
-                    appsModelRow = root.sideBarItem.currentIndex
+                    stackView.appsModelRow = root.sideBarItem.currentIndex
                 }
                 if (root.sideBarItem.currentIndex === 0
                     && stackView.currentItem.objectName !== stackView.preferredFavoritesViewObjectName) {

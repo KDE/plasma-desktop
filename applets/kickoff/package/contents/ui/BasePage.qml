@@ -7,6 +7,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Templates as T
@@ -15,6 +18,7 @@ import org.kde.plasma.workspace.trianglemousefilter
 
 FocusScope {
     id: root
+
     property real preferredSideBarWidth: implicitSideBarWidth
     property real preferredSideBarHeight: implicitSideBarHeight
 
@@ -26,14 +30,14 @@ FocusScope {
     property alias implicitSideBarWidth: sideBarLoader.implicitWidth
     property alias implicitSideBarHeight: sideBarLoader.implicitHeight
 
-    implicitWidth: root.preferredSideBarWidth + separator.implicitWidth + contentAreaLoader.implicitWidth
-    implicitHeight: Math.max(root.preferredSideBarHeight, contentAreaLoader.implicitHeight)
+    implicitWidth: preferredSideBarWidth + separator.implicitWidth + contentAreaLoader.implicitWidth
+    implicitHeight: Math.max(preferredSideBarHeight, contentAreaLoader.implicitHeight)
 
     TriangleMouseFilter {
         id: sideBarFilter
         anchors {
-            left: parent.left
             top: parent.top
+            left: parent.left
             bottom: parent.bottom
         }
         LayoutMirroring.enabled: kickoff.sideBarOnRight
@@ -76,8 +80,8 @@ FocusScope {
     KSvg.SvgItem {
         id: separator
         anchors {
-            left: sideBarFilter.right
             top: parent.top
+            left: sideBarFilter.right
             bottom: parent.bottom
         }
         LayoutMirroring.enabled: kickoff.sideBarOnRight
@@ -90,9 +94,9 @@ FocusScope {
         id: contentAreaLoader
         focus: true
         anchors {
+            top: parent.top
             left: separator.right
             right: parent.right
-            top: parent.top
             bottom: parent.bottom
         }
         LayoutMirroring.enabled: kickoff.sideBarOnRight

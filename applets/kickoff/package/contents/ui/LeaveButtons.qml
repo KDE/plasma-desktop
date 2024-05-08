@@ -4,6 +4,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import org.kde.plasma.private.kicker as Kicker
@@ -16,6 +19,7 @@ import org.kde.plasma.plasmoid
 
 RowLayout {
     id: root
+
     readonly property alias buttonImplicitWidth: buttonRepeaterRow.implicitWidth
     property bool shouldCollapseButtons: false
     spacing: kickoff.backgroundMetrics.spacing
@@ -78,6 +82,9 @@ RowLayout {
 
             model: filteredButtonsModel
             delegate: PC3.ToolButton {
+                required property int index
+                required property var model
+
                 text: model.display
                 icon.name: model.decoration
                 onClicked: filteredButtonsModel.trigger(index);
@@ -152,6 +159,9 @@ RowLayout {
     Instantiator {
         model: filteredMenuItemsModel
         delegate: PlasmaExtras.MenuItem {
+            required property int index
+            required property var model
+
             text: model.display
             icon: model.decoration
             onClicked: filteredMenuItemsModel.trigger(index)

@@ -2,6 +2,7 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
+pragma ComponentBehavior: Bound
 pragma Singleton // NOTE: Singletons are shared between all instances of a plasmoid
 
 import QtQml.Models
@@ -15,6 +16,7 @@ import org.kde.plasma.plasma5support as P5Support
 // Trying to create a default property for a QtObject seems to cause segfaults.
 Item {
     id: root
+
     visible: false
 
     //BEGIN Models and Data Sources

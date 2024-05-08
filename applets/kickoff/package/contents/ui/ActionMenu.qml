@@ -3,10 +3,12 @@
     SPDX-FileCopyrightText: 2014-2015 Eike Hein <hein@kde.org>
     SPDX-FileCopyrightText: 2021 Mikel Johnson <mikel5764@gmail.com>
     SPDX-FileCopyrightText: 2021 Noah Davis <noahadvs@gmail.com>
+    SPDX-FileCopyrightText: 2024 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
 pragma Singleton // NOTE: Singletons are shared between all instances of a plasmoid
 
 import QtQuick
@@ -54,24 +56,24 @@ Item {
             id: menuItem
 
             required property var modelData
-            property PlasmaExtras.Menu subMenu: modelData.subActions
-                ? menuComponent.createObject(menuItem, { visualParent: menuItem.action })
+            readonly property PlasmaExtras.Menu subMenu: modelData.subActions
+                ? menuComponent.createObject(this, { visualParent: action })
                 : null
 
-            text: modelData.text ? modelData.text : ""
-            enabled: modelData.type !== "title" && ("enabled" in modelData ? modelData.enabled : true)
+            text: modelData.text ?? ""
+            enabled: modelData.type !== "title" && (modelData.enabled ?? true)
             separator: modelData.type === "separator"
             section: modelData.type === "title"
-            icon: modelData.icon ? modelData.icon : null
-            checkable: modelData.hasOwnProperty("checkable") ? modelData.checkable : false
-            checked: modelData.hasOwnProperty("checked") ? modelData.checked : false
+            icon: modelData.icon ?? null
+            checkable: modelData.checkable ?? false
+            checked: modelData.checked ?? false
 
-            property Instantiator _instantiator: Instantiator {
+            readonly property Instantiator __instantiator: Instantiator {
                 active: menuItem.subMenu !== null
-                model: modelData.subActions
+                model: menuItem.modelData.subActions
                 delegate: menuItemComponent
-                onObjectAdded: (index, object) => subMenu.addMenuItem(object)
-                onObjectRemoved: (index, object) => subMenu.removeMenuItem(object)
+                onObjectAdded: (index, object) => menuItem.subMenu.addMenuItem(object)
+                onObjectRemoved: (index, object) => menuItem.subMenu.removeMenuItem(object)
             }
 
             onClicked: {

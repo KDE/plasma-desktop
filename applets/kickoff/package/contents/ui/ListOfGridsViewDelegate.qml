@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Templates as T
 
@@ -14,23 +16,22 @@ import org.kde.ksvg as KSvg
 KickoffGridView {
     id: root
 
-    property string allAppsSection: undefined
     property int gridIndex: -1                  // To know the index of the grid when used inside a listivew
     property bool isCurrentSectionGrid: false
     property bool isSearchFieldActive: false // needed since check doesn't work here when gridview used in all apps
-    property ListView parentView: undefined // neeeded when used inside a listview e.g. all apps view
+    property ListView parentView // neeeded when used inside a listview e.g. all apps view
 
     signal showSectionView(string sectionName)
 
     // When nested insdie a listivew, other items will still treat it as a delegate(because this was the truth always till now), so just call the appropriate function
     readonly property QtObject action: QtObject {
-        function triggered() {
+        function triggered(): void {
             view.currentItem.action.triggered();
             view.currentItem.forceActiveFocus();
         }
     }
 
-    view.height : view.cellHeight * Math.ceil(count / view.columns)
+    view.height: view.cellHeight * Math.ceil(count / view.columns)
     view.implicitHeight: view.contentHeight
     blockTargetWheel: false
     view.highlight: PlasmaExtras.Highlight {
