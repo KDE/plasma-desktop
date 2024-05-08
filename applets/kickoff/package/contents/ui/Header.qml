@@ -80,7 +80,12 @@ PlasmaExtras.PlasmoidHeading {
 
             text: i18n("Open user settings")
             name: kuser.fullName
-            source: kuser.faceIconUrl + "?timestamp=" + Date.now()
+
+            // The icon property emits two signals in a row during which it
+            // changes to an empty URL and probably back to the same
+            // static file path, so we need QtQuick.Image not to cache it.
+            cache: false
+            source: kuser.faceIconUrl
 
             Keys.onTabPressed: event => {
                 tabSetFocus(event, kickoff.firstCentralPane);
