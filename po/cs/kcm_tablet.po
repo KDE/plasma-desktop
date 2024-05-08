@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2024-02-16 10:15+0100\n"
+"PO-Revision-Date: 2024-05-03 16:34+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -71,12 +71,12 @@ msgstr "Vlastní velikost"
 #: ui/main.qml:28
 #, kde-format
 msgid "No drawing tablets found"
-msgstr ""
+msgstr "Nebyl nalezen žádný kreslicí tablet"
 
 #: ui/main.qml:29
 #, kde-format
 msgid "Connect a drawing tablet"
-msgstr ""
+msgstr "Připojit grafický tablet"
 
 #: ui/main.qml:41
 #, kde-format
@@ -97,7 +97,7 @@ msgstr "Orientace:"
 #: ui/main.qml:110
 #, kde-format
 msgid "Left handed mode:"
-msgstr ""
+msgstr "Režim pro leváka:"
 
 #: ui/main.qml:120
 #, kde-format
@@ -124,17 +124,17 @@ msgstr "%1,%2 - %3×%4"
 #: ui/main.qml:249
 #, kde-format
 msgid "Pen button 1:"
-msgstr ""
+msgstr "Tlačítko pera 1:"
 
 #: ui/main.qml:250
 #, kde-format
 msgid "Pen button 2:"
-msgstr ""
+msgstr "Tlačítko pera 2:"
 
 #: ui/main.qml:251
 #, kde-format
 msgid "Pen button 3:"
-msgstr ""
+msgstr "Tlačítko pera 3:"
 
 #: ui/main.qml:295
 #, kde-format
@@ -151,4 +151,4 @@ msgstr "Nic"
 #: ui/main.qml:328
 #, kde-format
 msgid "Pad button %1:"
-msgstr ""
+msgstr "Tlačítko tabletu %1:"

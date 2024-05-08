@@ -1,17 +1,17 @@
 # translation of kcm_desktoppaths.po to Italian
+# SPDX-FileCopyrightText: 2009, 2020, 2021, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005, 2007.
 # Giovanni Venturi <jumpyj@tiscali.it>, 2006.
 # Pino Toscano <toscano.pino@tiscali.it>, 2006.
 # Andrea Celli <andrea.celli@libero.it>, 2006.
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2009, 2020, 2021, 2022, 2023.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2023-02-06 15:10+0100\n"
+"PO-Revision-Date: 2024-05-07 13:13+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: ui/main.qml:52
 #, kde-format
@@ -105,16 +105,13 @@ msgid "Public path:"
 msgstr "Percorso pubblico:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save public shares from or "
-#| "to."
+#, kde-format
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Questa cartella sarà usata in modo predefinito per caricare o salvare le "
-"condivisioni pubbliche."
+"Questa cartella sarà utilizzata in modo predefinito per i file condivisi "
+"pubblicamente quando la condivisione di rete è abilitata."
 
 #: ui/main.qml:150
 #, kde-format

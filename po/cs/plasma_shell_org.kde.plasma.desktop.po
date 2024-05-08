@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-04 00:42+0000\n"
-"PO-Revision-Date: 2024-02-16 10:22+0100\n"
+"PO-Revision-Date: 2024-05-03 16:34+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -388,10 +388,8 @@ msgid "Panel Width:"
 msgstr "Šířka panelu:"
 
 #: contents/configuration/PanelConfiguration.qml:529
-#, fuzzy
-#| msgid "Panel Width:"
 msgid "Panel Height:"
-msgstr "Šířka panelu:"
+msgstr "Výška panelu:"
 
 #: contents/configuration/PanelConfiguration.qml:566
 msgid "Focus shortcut:"
@@ -439,7 +437,7 @@ msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Správa panelů a pracovních ploch"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
@@ -622,6 +620,3 @@ msgstr "Následující skladba"
 #: contents/views/Panel.qml:326
 msgid "Panel Focus Indicator"
 msgstr ""
-
-#~ msgid "Height:"
-#~ msgstr "Výška:"

@@ -1,7 +1,7 @@
 # translation of kcmkonq.po to Slovenian
 # Translation of kcmkonq.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMKONQ.
-# $Id: kcm_desktoppaths.po 1679402 2024-05-07 01:10:25Z scripty $
+# $Id: kcm_desktoppaths.po 1679487 2024-05-08 01:11:05Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2023-02-07 08:36+0100\n"
+"PO-Revision-Date: 2024-05-07 06:21+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ui/main.qml:52
 #, kde-format
@@ -99,15 +99,13 @@ msgid "Public path:"
 msgstr "Javna pot:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save public shares from or "
-#| "to."
+#, kde-format
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"To bo privzeta mapa za nalaganje in shranjevanje javnih deljenih datotek."
+"Ta mapa bo privzeto uporabljena za datoteke v javni skupni rabi, ko je "
+"omogočena skupna raba omrežja."
 
 #: ui/main.qml:150
 #, kde-format

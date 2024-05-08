@@ -12,14 +12,14 @@
 # Juan Manuel Garcia Molina <juanma@superiodico.net>, 2005.
 # Pablo de Vicente <pablo.devicente@gmail.com>, 2005, 2006.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2009, 2014, 2017, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2008, 2009, 2014, 2017, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 # Javier Vinal <fjvinal@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2023-02-06 15:20+0100\n"
+"PO-Revision-Date: 2024-05-08 00:20+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ui/main.qml:52
@@ -106,16 +106,13 @@ msgid "Public path:"
 msgstr "Ruta de uso público:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save public shares from or "
-#| "to."
+#, kde-format
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Esta carpeta será la predeterminada para cargar o guardar elementos "
-"compartidos públicamente."
+"Esta carpeta será la predeterminada para archivos compartidos públicamente "
+"cuando se active el uso de recursos compartidos en red."
 
 #: ui/main.qml:150
 #, kde-format

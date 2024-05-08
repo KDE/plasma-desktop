@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2024-02-16 10:23+0100\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
+"PO-Revision-Date: 2024-05-07 15:32+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -55,13 +55,13 @@ msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
 msgstr "Ztišit %1"
 
-#: package/contents/ui/Badge.qml:54
+#: package/contents/ui/Badge.qml:52
 #, kde-format
 msgctxt "Invalid number of new messages, overlay, keep short"
 msgid "—"
 msgstr "—"
 
-#: package/contents/ui/Badge.qml:56
+#: package/contents/ui/Badge.qml:54
 #, kde-format
 msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
@@ -115,7 +115,7 @@ msgstr "Nikdy"
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
-msgstr ""
+msgstr "Pokud má panel málo místa ale je dostatečně široký"
 
 #: package/contents/ui/ConfigAppearance.qml:99
 #, kde-format
@@ -266,7 +266,7 @@ msgstr "Nechat spouštěče oddělené"
 #: package/contents/ui/ConfigBehavior.qml:119
 #, kde-format
 msgid "Hide launchers after application startup"
-msgstr ""
+msgstr "Skrýt spouštěče po spuštění aplikace"
 
 #: package/contents/ui/ConfigBehavior.qml:129
 #, kde-format
@@ -593,13 +593,13 @@ msgstr "&Zavřít vše"
 msgid "&Close"
 msgstr "&Zavřít"
 
-#: package/contents/ui/Task.qml:155
+#: package/contents/ui/Task.qml:153
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Spustit %1"
 
-#: package/contents/ui/Task.qml:160
+#: package/contents/ui/Task.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -608,25 +608,25 @@ msgstr[0] "Je zde %1 nová zpráva."
 msgstr[1] "Jsou zde %1 nové zprávy."
 msgstr[2] "Je zde %1 nových zpráv."
 
-#: package/contents/ui/Task.qml:169
+#: package/contents/ui/Task.qml:167
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Zobrazit nástrojový tip pro %1"
 
-#: package/contents/ui/Task.qml:175
+#: package/contents/ui/Task.qml:173
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "Pro %1 zobrazit okna vedle sebe"
 
-#: package/contents/ui/Task.qml:180
+#: package/contents/ui/Task.qml:178
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "Pro %1 otevřít textový seznam oken"
 
-#: package/contents/ui/Task.qml:184
+#: package/contents/ui/Task.qml:182
 #, kde-format
 msgid "Activate %1"
 msgstr "Aktivovat %1"
