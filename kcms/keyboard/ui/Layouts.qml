@@ -111,7 +111,7 @@ ColumnLayout {
                 modifierOnlyAllowed: true
 
                 keySequence: kcm.shortcutHelper.lastUsedShortcut
-                onCaptureFinished: kcm.shortcutHelper.lastUsedShortcut = keySequence
+                onKeySequenceModified: kcm.shortcutHelper.lastUsedShortcut = keySequence
 
                 Binding {
                     target: lastUsedShortcut

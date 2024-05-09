@@ -169,7 +169,7 @@ Kirigami.FormLayout {
             from: 100
             to: 5000
             value: kcm.miscSettings.repeatDelay
-            onValueChanged: kcm.miscSettings.repeatDelay = value
+            onMoved: kcm.miscSettings.repeatDelay = value
 
             KCM.SettingStateBinding {
                 configObject: kcm.miscSettings
@@ -184,7 +184,7 @@ Kirigami.FormLayout {
             stepSize: 50
 
             value: kcm.miscSettings.repeatDelay
-            onValueChanged: kcm.miscSettings.repeatDelay = value
+            onValueModified: kcm.miscSettings.repeatDelay = value
 
             KCM.SettingStateBinding {
                 configObject: kcm.miscSettings
@@ -204,7 +204,7 @@ Kirigami.FormLayout {
             from: 20
             to: 10000
             value: kcm.miscSettings.repeatRate * 100
-            onValueChanged: kcm.miscSettings.repeatRate = value / 100
+            onMoved: kcm.miscSettings.repeatRate = value / 100
 
             KCM.SettingStateBinding {
                 configObject: kcm.miscSettings
@@ -219,7 +219,7 @@ Kirigami.FormLayout {
             to: 10000
             stepSize: 500
             value: Math.round(kcm.miscSettings.repeatRate * 100)
-            onValueChanged: kcm.miscSettings.repeatRate = value / 100
+            onValueModified: kcm.miscSettings.repeatRate = value / 100
 
             KCM.SettingStateBinding {
                 configObject: kcm.miscSettings
