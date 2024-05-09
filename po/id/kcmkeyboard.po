@@ -2,7 +2,7 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcmkeyboard package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
-# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2022.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 # Linerly <linerly@protonmail.com>, 2023.
 #
 msgid ""
@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-03 01:37+0000\n"
-"PO-Revision-Date: 2023-01-13 08:49+0700\n"
-"Last-Translator: Linerly <linerly@protonmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-05-09 08:37+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,10 +41,9 @@ msgid "Switch to Next Keyboard Layout"
 msgstr "Alihkan ke Tata Letak Papan Ketik Selanjutnya"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Alihkan ke Tata Letak Papan Ketik Selanjutnya"
+msgstr "Beralih ke Tata Letak Papan Ketik yang Terakhir Digunakan"
 
 #: bindings.cpp:60
 #, kde-format
@@ -61,7 +60,7 @@ msgstr "%1 - %2"
 #: kcm_add_layout_dialog.ui:14
 #, kde-format
 msgid "Add Layout"
-msgstr "Tambah Tataletak"
+msgstr "Tambah Tata Letak"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
 #: kcm_add_layout_dialog.ui:20
@@ -92,7 +91,7 @@ msgstr "Pratinjau"
 #: kcm_keyboard.ui:21
 #, kde-format
 msgid "Hardware"
-msgstr "Hardware"
+msgstr "Perangkat Keras"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm_keyboard.ui:36
@@ -122,7 +121,7 @@ msgstr ""
 #: kcm_keyboard.ui:97
 #, kde-format
 msgid "Layouts"
-msgstr "Tataletak"
+msgstr "Tata Letak"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:105
@@ -169,7 +168,7 @@ msgstr "&Jendela"
 #: kcm_keyboard.ui:160
 #, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "Pintasan untuk Tataletak Pengalihan"
+msgstr "Pintasan untuk Tata Letak Pengalihan"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:166
@@ -238,10 +237,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm_keyboard.ui:249
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Last used shortcut:"
-msgstr "Pintasan alternatif:"
+msgstr "Pintasan yang terakhir digunakan:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, toggleLastUsedLayoutKeySequence)
 #: kcm_keyboard.ui:262
@@ -250,6 +248,8 @@ msgid ""
 "This shortcut allows for fast switching between two layouts, by always "
 "switching to the last-used one."
 msgstr ""
+"Pintasan ini memungkinkan untuk beralih secara cepat antara dua tata letak, "
+"dengan selalu beralih ke yang terakhir digunakan."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:287
@@ -297,7 +297,7 @@ msgstr "Hitungan tata letak utama:"
 #: kcm_keyboard.ui:438
 #, kde-format
 msgid "Advanced"
-msgstr "Tingkat-lanjut"
+msgstr "Tingkat Lanjut"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
 #: kcm_keyboard.ui:444
@@ -339,7 +339,7 @@ msgstr "Peta"
 #: kcm_view_models.cpp:200
 #, kde-format
 msgid "Layout"
-msgstr "Tataletak"
+msgstr "Tata Letak"
 
 #: kcm_view_models.cpp:200
 #, kde-format
