@@ -1,26 +1,26 @@
 # Translation of kcm_desktoppaths.po to Catalan (Valencian)
-# Copyright (C) 1999-2023 This_file_is_part_of_KDE
+# Copyright (C) 1999-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 1999, 2000, 2001, 2002, 2004, 2005, 2006.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2003, 2017, 2020.
 # Albert Astals Cid <aacid@kde.org>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2017, 2018, 2020, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2017, 2018, 2020, 2021, 2022, 2023, 2024.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2023-02-06 13:20+0100\n"
+"PO-Revision-Date: 2024-05-07 11:48+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -50,8 +50,8 @@ msgstr "Camí dels documents:"
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a carregar-hi o "
-"guardar-hi documents."
+"Esta carpeta s'utilitzarà de manera predeterminada per a carregar o guardar "
+"els documents."
 
 #: ui/main.qml:80
 #, kde-format
@@ -62,7 +62,7 @@ msgstr "Camí de les baixades:"
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a guardar-hi els "
+"Esta carpeta s'utilitzarà de manera predeterminada per a guardar els "
 "elements baixats."
 
 #: ui/main.qml:94
@@ -74,8 +74,8 @@ msgstr "Camí dels vídeos:"
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a carregar-hi o "
-"guardar-hi pel·lícules."
+"Esta carpeta s'utilitzarà de manera predeterminada per a carregar o guardar "
+"les pel·lícules."
 
 #: ui/main.qml:108
 #, kde-format
@@ -87,8 +87,8 @@ msgstr "Camí de les imatges:"
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a carregar-hi o "
-"guardar-hi imatges."
+"Esta carpeta s'utilitzarà de manera predeterminada per a carregar o guardar "
+"les imatges."
 
 #: ui/main.qml:122
 #, kde-format
@@ -99,8 +99,8 @@ msgstr "Camí de la música:"
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a carregar-hi o "
-"guardar-hi música."
+"Esta carpeta s'utilitzarà de manera predeterminada per a carregar o guardar "
+"la música."
 
 #: ui/main.qml:136
 #, kde-format
@@ -108,14 +108,13 @@ msgid "Public path:"
 msgstr "Camí públic:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a guardar-hi els "
-"elements baixats."
+"Esta carpeta s'utilitzarà de manera predeterminada per als fitxers "
+"compartits públicament quan estiga activada la compartició de xarxa."
 
 #: ui/main.qml:150
 #, kde-format
@@ -127,8 +126,8 @@ msgstr "Camí de les plantilles:"
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a carregar-hi o "
-"guardar-hi plantilles."
+"Esta carpeta s'utilitzarà de manera predeterminada per a carregar o guardar "
+"plantilles."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
