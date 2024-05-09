@@ -25,7 +25,7 @@ PlasmoidItem {
     Layout.maximumWidth: Infinity
     Layout.maximumHeight: Infinity
 
-    Layout.preferredWidth : icon.width + Kirigami.Units.smallSpacing + (root.showActivityName ? name.implicitWidth + Kirigami.Units.smallSpacing : 0)
+    Layout.preferredWidth : height + (root.showActivityName ? name.implicitWidth + 2 * Kirigami.Units.smallSpacing : 0)
 
     Layout.minimumWidth: 0
     Layout.minimumHeight: 0
@@ -80,6 +80,9 @@ PlasmoidItem {
 
         Kirigami.Icon {
             id: icon
+
+            anchors.verticalCenter: parent.verticalCenter
+
             height: Math.min(parent.height, parent.width)
             width: height
 
@@ -94,10 +97,12 @@ PlasmoidItem {
             anchors {
                 left: icon.right
                 leftMargin: Kirigami.Units.smallSpacing
+                rightMargin: Kirigami.Units.smallSpacing
             }
             height: parent.height
-            width: implicitWidth
+            width: parent.width - icon.width
             visible: root.showActivityName && !root.inVertical
+            elide: Text.ElideRight
 
             verticalAlignment: Text.AlignVCenter
 
