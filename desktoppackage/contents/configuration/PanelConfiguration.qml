@@ -516,12 +516,16 @@ ColumnLayout {
         }
     }
 
-    RowLayout {
+    GridLayout {
         Layout.alignment: Qt.AlignHCenter
-        spacing: Kirigami.Units.largeSpacing
+        rowSpacing: Kirigami.Units.largeSpacing
+        columnSpacing: Kirigami.Units.largeSpacing
+        rows: 2
+        columns: 2
 
         PC3.Label {
             id: spinBoxLabel
+            Layout.alignment: Qt.AlignRight
             wrapMode: Text.Wrap
 
             text: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge
@@ -546,6 +550,31 @@ ColumnLayout {
                 panel.thickness = value
             }
         }
+
+        PC3.Label {
+            Layout.alignment: Qt.AlignRight
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus shortcut:")
+            textFormat: Text.PlainText
+            visible: panel.adaptiveOpacityEnabled
+
+            MouseArea {
+                id: mouseArea
+                anchors.fill: parent
+                hoverEnabled: true
+            }
+
+            PC3.ToolTip {
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Press this keyboard shortcut to move focus to the Panel")
+                visible: mouseArea.containsMouse
+            }
+        }
+        KeySequenceItem {
+            id: button
+            keySequence: plasmoid.globalShortcut
+            onCaptureFinished: {
+                plasmoid.globalShortcut = button.keySequence
+            }
+        }
     }
 
     PlasmaExtras.PlasmoidHeading {
@@ -553,6 +582,7 @@ ColumnLayout {
         Layout.topMargin: Kirigami.Units.smallSpacing
         topPadding: Kirigami.Units.smallSpacing * 2
         leftPadding: Kirigami.Units.smallSpacing
+        rightPadding: Kirigami.Units.smallSpacing
         bottomPadding: Kirigami.Units.smallSpacing
 
         Layout.fillWidth: true
@@ -562,33 +592,6 @@ ColumnLayout {
             anchors.right: parent.right
             spacing: Kirigami.Units.largeSpacing
 
-            PC3.Label {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus shortcut:")
-                textFormat: Text.PlainText
-                visible: panel.adaptiveOpacityEnabled
-
-                MouseArea {
-                    id: mouseArea
-                    anchors.fill: parent
-                    hoverEnabled: true
-                }
-
-                PC3.ToolTip {
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Press this keyboard shortcut to move focus to the Panel")
-                    visible: mouseArea.containsMouse
-                }
-            }
-
-            KeySequenceItem {
-                id: button
-                keySequence: plasmoid.globalShortcut
-                onCaptureFinished: {
-                    plasmoid.globalShortcut = button.keySequence
-                }
-            }
-
-            Item {Layout.fillWidth: true}
-
             PC3.ToolButton {
                 text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Delete the panel", "Delete Panel")
                 icon.name: "delete"
@@ -597,7 +600,21 @@ ColumnLayout {
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PC3.ToolTip.visible: hovered
 
-                onClicked: plasmoid.internalAction("remove").trigger();
+                onClicked: plasmoid.internalAction("remove").trigger()
+            }
+
+
+            Item {Layout.fillWidth: true}
+
+            PC3.ToolButton {
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Done configuring the panel", "Done")
+                icon.name: "dialog-ok-symbolic"
+
+                PC3.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Close Panel Settings window and exit Edit Mode")
+                PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+                PC3.ToolTip.visible: hovered
+
+                onClicked: plasmoid.containment.corona.editMode = false
             }
         }
     }
