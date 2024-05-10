@@ -1,13 +1,13 @@
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 02:45+0000\n"
-"PO-Revision-Date: 2023-02-04 01:42+0900\n"
+"PO-Revision-Date: 2024-05-04 22:45+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -76,8 +76,7 @@ msgid "Show hidden files:"
 msgstr "隠しファイルを表示:"
 
 #: package/contents/ui/ConfigFilter.qml:130
-#, fuzzy, kde-format
-#| msgid "File type"
+#, kde-format
 msgid "File Type"
 msgstr "ファイルタイプ"
 
@@ -99,7 +98,7 @@ msgstr "すべて選択解除"
 #: package/contents/ui/ConfigFilter.qml:222
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "ソート順を変更"
 
 #: package/contents/ui/ConfigIcons.qml:64
 #, kde-format
@@ -276,7 +275,7 @@ msgstr "テキスト行数:"
 #: package/contents/ui/ConfigIcons.qml:295
 #, kde-format
 msgid "When hovering over icons:"
-msgstr "アイコンにカーソルを重ねた時:"
+msgstr "アイコンにカーソルを重ねたとき:"
 
 #: package/contents/ui/ConfigIcons.qml:297
 #, kde-format
@@ -376,12 +375,12 @@ msgstr "カスタムタイトル"
 #: package/contents/ui/ConfigLocation.qml:197
 #, kde-format
 msgid "Enter custom title…"
-msgstr "ここにカスタムタイトルを入力します..."
+msgstr "ここにカスタムタイトルを入力..."
 
 #: package/contents/ui/ConfigOverlay.qml:86
 #, kde-format
 msgid "Click and drag to rotate"
-msgstr ""
+msgstr "クリックしたあとドラッグして回転"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format
@@ -410,6 +409,9 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"デスクトップに大量のファイルとフォルダがあります。これはバグやパフォーマンス"
+"の問題を引き起こす可能性があります。いくつかのファイル/フォルダを他の場所に移"
+"動させることを検討してください。"
 
 #: package/contents/ui/main.qml:392
 #, kde-format
