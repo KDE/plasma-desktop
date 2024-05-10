@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:39+0000\n"
 "PO-Revision-Date: 2023-09-14 08:35+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -48,18 +48,18 @@ msgstr "მიმდინარე აქტივობაზე"
 msgid "Show in Favorites"
 msgstr "რჩეულებში ჩვენება"
 
-#: package/contents/ui/ConfigGeneral.qml:41
+#: package/contents/ui/ConfigGeneral.qml:45
 #, kde-format
 msgid "Icon:"
 msgstr "ხატულა:"
 
-#: package/contents/ui/ConfigGeneral.qml:47
+#: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "აპლიკაციების გამშვების ხატულის შეცვლა"
 
-#: package/contents/ui/ConfigGeneral.qml:48
+#: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -69,224 +69,224 @@ msgstr ""
 "მიმდინარე ხატულაა %1. მიმდინარე ხატულის შესაცვლელად ან ნაგულისხმევზე "
 "დასაბრუნებლად მენიუ გახსენით."
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:56
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "ხატულის სახელია \"%1\""
 
-#: package/contents/ui/ConfigGeneral.qml:85
+#: package/contents/ui/ConfigGeneral.qml:91
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "არჩევა…"
 
-#: package/contents/ui/ConfigGeneral.qml:87
+#: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "აირჩიეთ აპლიკაციების გამშვების ხატულა"
 
-#: package/contents/ui/ConfigGeneral.qml:91
+#: package/contents/ui/ConfigGeneral.qml:97
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "ნაგულისხმებ ხატულაზე დაბრუნება"
 
-#: package/contents/ui/ConfigGeneral.qml:97
+#: package/contents/ui/ConfigGeneral.qml:103
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "ხატულის წაშლა"
 
-#: package/contents/ui/ConfigGeneral.qml:108
+#: package/contents/ui/ConfigGeneral.qml:114
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "ტექსტური ჭდე:"
 
-#: package/contents/ui/ConfigGeneral.qml:110
+#: package/contents/ui/ConfigGeneral.qml:116
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "ტექსტური ჭდის დასამატებლად აკრიფეთ აქ"
 
-#: package/contents/ui/ConfigGeneral.qml:125
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "მენიუს ჭდის საწყის მნიშვნელობაზე დაბრუნება"
 
-#: package/contents/ui/ConfigGeneral.qml:139
+#: package/contents/ui/ConfigGeneral.qml:143
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "ტექსტური ჭდის დაყენება მაშინ, როცა პანელი ვერტიკალურია, შეუძლებელია."
 
-#: package/contents/ui/ConfigGeneral.qml:150
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "ზოგადი:"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:155
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "აპლიკაციების ანბანის მიხედვით დალაგება"
 
-#: package/contents/ui/ConfigGeneral.qml:156
+#: package/contents/ui/ConfigGeneral.qml:160
 #, kde-format
 msgid "Use compact list item style"
 msgstr "ელემენტის კომპაქტური ჩამონათვალის სტილის გამოყენება"
 
-#: package/contents/ui/ConfigGeneral.qml:162
+#: package/contents/ui/ConfigGeneral.qml:166
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "სენსორული ეკრანის  რეჟიმში ავტომატურად ითიშება"
 
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "ძებნის ჩართული დამატებების მორგება…"
 
-#: package/contents/ui/ConfigGeneral.qml:181
+#: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
 msgid "Sidebar position:"
 msgstr "გვერდითი პანელის მდებარეობა:"
 
-#: package/contents/ui/ConfigGeneral.qml:182
-#: package/contents/ui/ConfigGeneral.qml:190
+#: package/contents/ui/ConfigGeneral.qml:186
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Right"
 msgstr "მარჯვენა"
 
-#: package/contents/ui/ConfigGeneral.qml:182
-#: package/contents/ui/ConfigGeneral.qml:190
+#: package/contents/ui/ConfigGeneral.qml:186
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Left"
 msgstr "მარცხენა"
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: package/contents/ui/ConfigGeneral.qml:202
 #, kde-format
 msgid "Show favorites:"
 msgstr "სანიშნების ჩვენება:"
 
-#: package/contents/ui/ConfigGeneral.qml:199
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "ბადეში"
 
-#: package/contents/ui/ConfigGeneral.qml:207
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "სიაში"
 
-#: package/contents/ui/ConfigGeneral.qml:215
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Show other applications:"
 msgstr "სხვა აპლიკაციების ჩვენება:"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:220
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "ბადეში"
 
-#: package/contents/ui/ConfigGeneral.qml:224
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "სიაში"
 
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:240
 #, kde-format
 msgid "Show buttons for:"
 msgstr "ღილაკების ჩვენება:"
 
-#: package/contents/ui/ConfigGeneral.qml:237
-#: package/contents/ui/LeaveButtons.qml:129
+#: package/contents/ui/ConfigGeneral.qml:241
+#: package/contents/ui/LeaveButtons.qml:136
 #, kde-format
 msgid "Power"
 msgstr "კვება"
 
-#: package/contents/ui/ConfigGeneral.qml:246
+#: package/contents/ui/ConfigGeneral.qml:250
 #, kde-format
 msgid "Session"
 msgstr "სესია"
 
-#: package/contents/ui/ConfigGeneral.qml:255
+#: package/contents/ui/ConfigGeneral.qml:259
 #, kde-format
 msgid "Power and session"
 msgstr "კვება და სესია"
 
-#: package/contents/ui/ConfigGeneral.qml:264
+#: package/contents/ui/ConfigGeneral.qml:268
 #, kde-format
 msgid "Show action button captions"
 msgstr "ქმედების ღილაკების აღწერის ჩვენება"
 
-#: package/contents/ui/Footer.qml:97
+#: package/contents/ui/Footer.qml:98
 #, kde-format
 msgid "Applications"
 msgstr "აპლიკაციები"
 
-#: package/contents/ui/Footer.qml:113
+#: package/contents/ui/Footer.qml:114
 #, kde-format
 msgid "Places"
 msgstr "ადგილები"
 
-#: package/contents/ui/FullRepresentation.qml:152
+#: package/contents/ui/FullRepresentation.qml:154
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "დათხვევა არ არსებობს"
 
-#: package/contents/ui/Header.qml:80
+#: package/contents/ui/Header.qml:81
 #, kde-format
 msgid "Open user settings"
 msgstr "მომხმარებლის პარამეტრების გახსნა"
 
-#: package/contents/ui/Header.qml:259
+#: package/contents/ui/Header.qml:265
 #, kde-format
 msgid "Keep Open"
 msgstr "ღიად დატოვება"
 
-#: package/contents/ui/KickoffGridView.qml:92
+#: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "ბადე %1 მწკრივით და %2 სვეტით"
 
-#: package/contents/ui/LeaveButtons.qml:129
+#: package/contents/ui/LeaveButtons.qml:136
 #, kde-format
 msgid "Leave"
 msgstr "გასვლა"
 
-#: package/contents/ui/LeaveButtons.qml:129
+#: package/contents/ui/LeaveButtons.qml:136
 #, kde-format
 msgid "More"
 msgstr "მეტი"
 
-#: package/contents/ui/main.qml:315
+#: package/contents/ui/main.qml:316
 #, kde-format
 msgid "Edit Applications…"
 msgstr "აპლიკაციების ჩასწორება…"
 
-#: package/contents/ui/PlacesPage.qml:48
+#: package/contents/ui/PlacesPage.qml:51
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
 msgstr "კომპიუტერი"
 
-#: package/contents/ui/PlacesPage.qml:49
+#: package/contents/ui/PlacesPage.qml:52
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
 msgstr "ისტორია"
 
-#: package/contents/ui/PlacesPage.qml:50
+#: package/contents/ui/PlacesPage.qml:53
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"

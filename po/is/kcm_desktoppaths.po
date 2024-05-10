@@ -7,21 +7,21 @@
 # Arnar Leósson <leosson@frisurf.no>, 2003.
 # Stígur Snæsson <stigur@vortex.is>, 2004.
 # Arnar Leosson <leosson@frisurf.no>, 2004, 2005.
-# Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2011.
+# Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2011, 2024.
 # Guðmundur Erlingsson <gudmundure@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2023-03-12 21:07+0000\n"
-"Last-Translator: gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-05-09 10:51+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 22.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -107,19 +107,18 @@ msgid "Public path:"
 msgstr "Opinber slóð:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Þessi mappa verður notuð sjálfgefið til að hlaða inn eða vista í myndir."
+"Þessi mappa verður notuð sjálfgefið undir skrár sem deilt er opinberlega "
+"þegar deiling á neti er virkjuð."
 
 #: ui/main.qml:150
 #, kde-format
 msgid "Templates path:"
-msgstr "Slóð fyrir sniðmát:"
+msgstr "Slóð fyrir Sniðmát:"
 
 #: ui/main.qml:156
 #, kde-format

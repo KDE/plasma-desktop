@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:39+0000\n"
 "PO-Revision-Date: 2023-02-17 17:53+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -49,18 +49,18 @@ msgstr "Di Aktivitas Saat Ini"
 msgid "Show in Favorites"
 msgstr "Tampilkan di Favorit"
 
-#: package/contents/ui/ConfigGeneral.qml:41
+#: package/contents/ui/ConfigGeneral.qml:45
 #, kde-format
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: package/contents/ui/ConfigGeneral.qml:47
+#: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Ubah ikon Peluncur Aplikasi"
 
-#: package/contents/ui/ConfigGeneral.qml:48
+#: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -70,224 +70,224 @@ msgstr ""
 "Ikon saat ini adalah %1. Klik untuk membuka menu untuk mengubah ikon saat "
 "ini atau mengatur ulang ke ikon bawaan."
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:56
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Nama ikon adalah \"%1\""
 
-#: package/contents/ui/ConfigGeneral.qml:85
+#: package/contents/ui/ConfigGeneral.qml:91
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Pilih..."
 
-#: package/contents/ui/ConfigGeneral.qml:87
+#: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Pilih ikon untuk Peluncur Aplikasi"
 
-#: package/contents/ui/ConfigGeneral.qml:91
+#: package/contents/ui/ConfigGeneral.qml:97
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Atur ulang ke ikon bawaan"
 
-#: package/contents/ui/ConfigGeneral.qml:97
+#: package/contents/ui/ConfigGeneral.qml:103
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Hapus ikon"
 
-#: package/contents/ui/ConfigGeneral.qml:108
+#: package/contents/ui/ConfigGeneral.qml:114
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Label teks:"
 
-#: package/contents/ui/ConfigGeneral.qml:110
+#: package/contents/ui/ConfigGeneral.qml:116
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Ketik di sini untuk menambahkan sebuah label teks"
 
-#: package/contents/ui/ConfigGeneral.qml:125
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Atur ulang label menu"
 
-#: package/contents/ui/ConfigGeneral.qml:139
+#: package/contents/ui/ConfigGeneral.qml:143
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Teks tidak dapat ditetapkan ketika Panel berada di posisi vertikal."
 
-#: package/contents/ui/ConfigGeneral.qml:150
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Umum:"
 
-#: package/contents/ui/ConfigGeneral.qml:151
+#: package/contents/ui/ConfigGeneral.qml:155
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Selalu urutkan aplikasi berdasarkan alfabet"
 
-#: package/contents/ui/ConfigGeneral.qml:156
+#: package/contents/ui/ConfigGeneral.qml:160
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Gunakan gaya item daftar kecil"
 
-#: package/contents/ui/ConfigGeneral.qml:162
+#: package/contents/ui/ConfigGeneral.qml:166
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Otomatis dinonaktifkan ketika di Mode Sentuh"
 
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Konfigurasikan Plugin Pencarian Yang Difungsikan..."
 
-#: package/contents/ui/ConfigGeneral.qml:181
+#: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
 msgid "Sidebar position:"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:182
-#: package/contents/ui/ConfigGeneral.qml:190
+#: package/contents/ui/ConfigGeneral.qml:186
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Right"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:182
-#: package/contents/ui/ConfigGeneral.qml:190
+#: package/contents/ui/ConfigGeneral.qml:186
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Left"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: package/contents/ui/ConfigGeneral.qml:202
 #, kde-format
 msgid "Show favorites:"
 msgstr "Tampilkan favorit:"
 
-#: package/contents/ui/ConfigGeneral.qml:199
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Dalam sebuah kisi"
 
-#: package/contents/ui/ConfigGeneral.qml:207
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Dalam sebuah daftar"
 
-#: package/contents/ui/ConfigGeneral.qml:215
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Show other applications:"
 msgstr "Tampilkan aplikasi lainnya:"
 
-#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:220
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Dalam sebuah kisi"
 
-#: package/contents/ui/ConfigGeneral.qml:224
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Dalam sebuah daftar"
 
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:240
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Tampilkan tombol untuk:"
 
-#: package/contents/ui/ConfigGeneral.qml:237
-#: package/contents/ui/LeaveButtons.qml:129
+#: package/contents/ui/ConfigGeneral.qml:241
+#: package/contents/ui/LeaveButtons.qml:136
 #, kde-format
 msgid "Power"
 msgstr "Daya"
 
-#: package/contents/ui/ConfigGeneral.qml:246
+#: package/contents/ui/ConfigGeneral.qml:250
 #, kde-format
 msgid "Session"
 msgstr "Sesi"
 
-#: package/contents/ui/ConfigGeneral.qml:255
+#: package/contents/ui/ConfigGeneral.qml:259
 #, kde-format
 msgid "Power and session"
 msgstr "Daya dan sesi"
 
-#: package/contents/ui/ConfigGeneral.qml:264
+#: package/contents/ui/ConfigGeneral.qml:268
 #, kde-format
 msgid "Show action button captions"
 msgstr "Tampilkan bab tombol aksi"
 
-#: package/contents/ui/Footer.qml:97
+#: package/contents/ui/Footer.qml:98
 #, kde-format
 msgid "Applications"
 msgstr "Aplikasi"
 
-#: package/contents/ui/Footer.qml:113
+#: package/contents/ui/Footer.qml:114
 #, kde-format
 msgid "Places"
 msgstr "Tempat"
 
-#: package/contents/ui/FullRepresentation.qml:152
+#: package/contents/ui/FullRepresentation.qml:154
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "Tidak ada yang cocok"
 
-#: package/contents/ui/Header.qml:80
+#: package/contents/ui/Header.qml:81
 #, kde-format
 msgid "Open user settings"
 msgstr "Buka pengaturan pengguna"
 
-#: package/contents/ui/Header.qml:259
+#: package/contents/ui/Header.qml:265
 #, kde-format
 msgid "Keep Open"
 msgstr "Tetap Buka"
 
-#: package/contents/ui/KickoffGridView.qml:92
+#: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Kisikan dengan %1 baris, %2 kolom"
 
-#: package/contents/ui/LeaveButtons.qml:129
+#: package/contents/ui/LeaveButtons.qml:136
 #, kde-format
 msgid "Leave"
 msgstr "Tinggalkan"
 
-#: package/contents/ui/LeaveButtons.qml:129
+#: package/contents/ui/LeaveButtons.qml:136
 #, kde-format
 msgid "More"
 msgstr "Selebihnya"
 
-#: package/contents/ui/main.qml:315
+#: package/contents/ui/main.qml:316
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Edit Aplikasi..."
 
-#: package/contents/ui/PlacesPage.qml:48
+#: package/contents/ui/PlacesPage.qml:51
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
 msgstr "Komputer"
 
-#: package/contents/ui/PlacesPage.qml:49
+#: package/contents/ui/PlacesPage.qml:52
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
 msgstr "Histori"
 
-#: package/contents/ui/PlacesPage.qml:50
+#: package/contents/ui/PlacesPage.qml:53
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"

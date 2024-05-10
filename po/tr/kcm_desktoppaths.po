@@ -12,13 +12,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
 # Volkan Gezer <volkangezer@gmail.com>, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2023-11-11 23:31+0300\n"
+"PO-Revision-Date: 2024-05-09 19:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: ui/main.qml:52
 #, kde-format
@@ -109,16 +109,13 @@ msgid "Public path:"
 msgstr "Genel yol:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save public shares from or "
-#| "to."
+#, kde-format
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Bu klasör, genel paylaşımlardan yüklemek veya paylaşımlara kaydetmek için "
-"öntanımlı konum olarak kullanılır."
+"Bu klasör ağ paylaşımı etkinleştirildiğinde, öntanımlı olarak herkese açık "
+"dosyalar için kullanılır."
 
 #: ui/main.qml:150
 #, kde-format
