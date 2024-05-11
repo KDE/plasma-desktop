@@ -32,28 +32,37 @@ GridLayout {
         }
         return min;
     }
-    rows: {
-        if (tasks.vertical) {
-            if (tasks.plasmoid.configuration.maxStripes > 1 && !tasks.plasmoid.configuration.forceStripes) {
-                return Math.max(Math.ceil(tasks.height / LayoutMetrics.preferredMinHeight()),
-                                Math.ceil(tasksModel.count / tasks.plasmoid.configuration.maxStripes));
-            } else {
-                return -1;
-            }
-        } else {
-            return Math.min(tasks.plasmoid.configuration.maxStripes, Math.max(1, Math.floor(tasks.height / children[0].implicitHeight)));
+
+    readonly property int stripeCount: {
+        if (tasks.plasmoid.configuration.maxStripes == 1) {
+            return 1;
         }
-    }
-    columns: {
-        if (tasks.vertical) {
-            return Math.min(tasks.plasmoid.configuration.maxStripes, Math.max(1, Math.floor(tasks.width / children[0].implicitWidth)));
-        } else {
-            if (tasks.plasmoid.configuration.maxStripes > 1 && !tasks.plasmoid.configuration.forceStripes) {
-                return Math.max(Math.ceil(tasks.width / LayoutMetrics.preferredMinWidth()),
-                                Math.ceil(tasksModel.count / tasks.plasmoid.configuration.maxStripes));
-            } else {
-                return -1;
-            }
+
+        // The maximum number of stripes allowed by the applet's size
+        const stripeSizeLimit = tasks.vertical
+            ? Math.floor(tasks.width / children[0].implicitWidth)
+            : Math.floor(tasks.height / children[0].implicitHeight)
+        const maxStripes = Math.min(tasks.plasmoid.configuration.maxStripes, stripeSizeLimit)
+
+        if (tasks.plasmoid.configuration.forceStripes) {
+            return maxStripes;
         }
+
+        // The number of tasks that will fill a "stripe" before starting the next one
+        const maxTasksPerStripe = tasks.vertical
+            ? Math.ceil(tasks.height / LayoutMetrics.preferredMinHeight())
+            : Math.ceil(tasks.width / LayoutMetrics.preferredMinWidth())
+
+        return Math.min(Math.ceil(tasksModel.count / maxTasksPerStripe), maxStripes)
     }
+
+    readonly property int orthogonalCount: {
+        if (tasks.plasmoid.configuration.maxStripes == 1 || tasks.plasmoid.configuration.forceStripes) {
+            return -1;
+        }
+        return Math.ceil(tasksModel.count / stripeCount);
+    }
+
+    rows: tasks.vertical ? orthogonalCount : stripeCount
+    columns: tasks.vertical ? stripeCount : orthogonalCount
 }
