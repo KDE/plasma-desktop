@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-04 00:42+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2024-04-27 06:37+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -378,30 +378,39 @@ msgstr "צף"
 msgid "Style"
 msgstr "סגנון"
 
-#: contents/configuration/PanelConfiguration.qml:528
+#: contents/configuration/PanelConfiguration.qml:532
 msgid "Panel Width:"
 msgstr "רוחב לוח:"
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:533
 msgid "Panel Height:"
 msgstr "גובה לוח:"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:556
 msgid "Focus shortcut:"
 msgstr "קיצור מקשים למיקוד:"
 
-#: contents/configuration/PanelConfiguration.qml:577
+#: contents/configuration/PanelConfiguration.qml:567
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "יש ללחוץ על קיצור מקשים זה כדי להעביר את המיקוד ללוח"
 
-#: contents/configuration/PanelConfiguration.qml:593
+#: contents/configuration/PanelConfiguration.qml:596
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "מחיקת לוח"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:599
 msgid "Remove this panel; this action is undo-able"
 msgstr "הסרת הלוח הזה, זאת פעולה בלתי הפיכה"
+
+#: contents/configuration/PanelConfiguration.qml:610
+msgctxt "@action:button Done configuring the panel"
+msgid "Done"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:613
+msgid "Close Panel Settings window and exit Edit Mode"
+msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."

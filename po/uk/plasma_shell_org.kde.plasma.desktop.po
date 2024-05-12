@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-04 00:42+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2024-04-27 08:47+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -386,30 +386,39 @@ msgstr "Рухома"
 msgid "Style"
 msgstr "Стиль"
 
-#: contents/configuration/PanelConfiguration.qml:528
+#: contents/configuration/PanelConfiguration.qml:532
 msgid "Panel Width:"
 msgstr "Ширина панелі:"
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:533
 msgid "Panel Height:"
 msgstr "Висота панелі:"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:556
 msgid "Focus shortcut:"
 msgstr "Скорочення фокусування:"
 
-#: contents/configuration/PanelConfiguration.qml:577
+#: contents/configuration/PanelConfiguration.qml:567
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Натисніть цю комбінацію клавіш, щоб передати фокус панелі"
 
-#: contents/configuration/PanelConfiguration.qml:593
+#: contents/configuration/PanelConfiguration.qml:596
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Вилучити панель"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:599
 msgid "Remove this panel; this action is undo-able"
 msgstr "Вилучити цю панель; наслідки цієї дії можна скасувати"
+
+#: contents/configuration/PanelConfiguration.qml:610
+msgctxt "@action:button Done configuring the panel"
+msgid "Done"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:613
+msgid "Close Panel Settings window and exit Edit Mode"
+msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."

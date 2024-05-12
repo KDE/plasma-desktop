@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-04 00:42+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -408,37 +408,46 @@ msgstr "Bảng trôi"
 msgid "Style"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:528
+#: contents/configuration/PanelConfiguration.qml:532
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Độ rộng bảng:"
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:533
 #, fuzzy
 #| msgid "Panel width:"
 msgid "Panel Height:"
 msgstr "Độ rộng bảng:"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:556
 #, fuzzy
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Phím tắt"
 
-#: contents/configuration/PanelConfiguration.qml:577
+#: contents/configuration/PanelConfiguration.qml:567
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Nhấn phím tắt này để chuyển nhắm đến bảng"
 
-#: contents/configuration/PanelConfiguration.qml:593
+#: contents/configuration/PanelConfiguration.qml:596
 #, fuzzy
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Xoá bỏ bảng"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:599
 msgid "Remove this panel; this action is undo-able"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:610
+msgctxt "@action:button Done configuring the panel"
+msgid "Done"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:613
+msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30

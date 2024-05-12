@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-04 00:42+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2024-04-28 12:12+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -379,30 +379,39 @@ msgstr "Pływający"
 msgid "Style"
 msgstr "Wygląd"
 
-#: contents/configuration/PanelConfiguration.qml:528
+#: contents/configuration/PanelConfiguration.qml:532
 msgid "Panel Width:"
 msgstr "Szerokość paska:"
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:533
 msgid "Panel Height:"
 msgstr "Wysokość paska:"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:556
 msgid "Focus shortcut:"
 msgstr "Skrót uaktywniający:"
 
-#: contents/configuration/PanelConfiguration.qml:577
+#: contents/configuration/PanelConfiguration.qml:567
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Naciśnij ten skrót klawiszowy, aby przełączyć skupienie na pasek"
 
-#: contents/configuration/PanelConfiguration.qml:593
+#: contents/configuration/PanelConfiguration.qml:596
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Usuń pasek"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:599
 msgid "Remove this panel; this action is undo-able"
 msgstr "Usuń ten pasek; nie będzie można cofnąć tego działania"
+
+#: contents/configuration/PanelConfiguration.qml:610
+msgctxt "@action:button Done configuring the panel"
+msgid "Done"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:613
+msgid "Close Panel Settings window and exit Edit Mode"
+msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."

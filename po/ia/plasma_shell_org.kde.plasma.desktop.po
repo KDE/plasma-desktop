@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-04 00:42+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2024-04-29 15:33+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -384,31 +384,40 @@ msgstr "Fluctuante"
 msgid "Style"
 msgstr "Stilo"
 
-#: contents/configuration/PanelConfiguration.qml:528
+#: contents/configuration/PanelConfiguration.qml:532
 msgid "Panel Width:"
 msgstr "Largessa de Pannello:"
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:533
 msgid "Panel Height:"
 msgstr "Altessa de pannello:"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:556
 msgid "Focus shortcut:"
 msgstr "Via Breve de Foco:"
 
-#: contents/configuration/PanelConfiguration.qml:577
+#: contents/configuration/PanelConfiguration.qml:567
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pressa iste via breve de claviero pro mover foco al Pannello"
 
-#: contents/configuration/PanelConfiguration.qml:593
+#: contents/configuration/PanelConfiguration.qml:596
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Dele pannello"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:599
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 "Remove iste pannello: iste action es sub le commando que on pote annullar"
+
+#: contents/configuration/PanelConfiguration.qml:610
+msgctxt "@action:button Done configuring the panel"
+msgid "Done"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:613
+msgid "Close Panel Settings window and exit Edit Mode"
+msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."

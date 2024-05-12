@@ -1,10 +1,10 @@
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_toolbox_org.kde.desktoptoolbox\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2023-02-22 18:11+0900\n"
+"PO-Revision-Date: 2024-04-28 18:06+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -14,18 +14,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: contents/ui/ToolBoxContent.qml:282
-#, fuzzy, kde-format
-#| msgid "Choose Global Theme…"
+#, kde-format
 msgid "Global Themes"
-msgstr "グローバルテーマを選択..."
+msgstr "グローバルテーマ"
 
 #: contents/ui/ToolBoxContent.qml:289
 #, kde-format
 msgid "Display Configuration"
-msgstr ""
+msgstr "ディスプレイ設定"
 
 #: contents/ui/ToolBoxContent.qml:310
 #, kde-format
@@ -37,6 +36,3 @@ msgstr "その他"
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "編集モードから出る"
-
-#~ msgid "Configure Display Settings…"
-#~ msgstr "ディスプレイを設定..."

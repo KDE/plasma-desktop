@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-04 00:42+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2024-03-11 07:46-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -377,32 +377,41 @@ msgstr "ਤਰਦਾ"
 msgid "Style"
 msgstr "ਸਟਾਈਲ"
 
-#: contents/configuration/PanelConfiguration.qml:528
+#: contents/configuration/PanelConfiguration.qml:532
 msgid "Panel Width:"
 msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ:"
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:533
 #, fuzzy
 #| msgid "Panel Width:"
 msgid "Panel Height:"
 msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ:"
 
-#: contents/configuration/PanelConfiguration.qml:566
+#: contents/configuration/PanelConfiguration.qml:556
 msgid "Focus shortcut:"
 msgstr "ਫੋਕਸ ਸ਼ਾਰਟਕੱਟ:"
 
-#: contents/configuration/PanelConfiguration.qml:577
+#: contents/configuration/PanelConfiguration.qml:567
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "ਫੋਕਸ ਨੂੰ ਪੈਨਲ ਉੱਤੇ ਭੇਜਣ ਲਈ ਇਸ ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਨੂੰ ਦਬਾਓ"
 
-#: contents/configuration/PanelConfiguration.qml:593
+#: contents/configuration/PanelConfiguration.qml:596
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "ਪੈਨਲ ਨੂੰ ਹਟਾਓ"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:599
 msgid "Remove this panel; this action is undo-able"
 msgstr "ਇਹ ਪੈਨਲ ਹਟਾਓ; ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਲੈਣ ਯੋਗ ਹੈ"
+
+#: contents/configuration/PanelConfiguration.qml:610
+msgctxt "@action:button Done configuring the panel"
+msgid "Done"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:613
+msgid "Close Panel Settings window and exit Edit Mode"
+msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
