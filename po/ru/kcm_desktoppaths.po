@@ -10,13 +10,13 @@
 # Nick Shaforostoff <shafff@ukr.net>, 2004-2005, 2006, 2009.
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2010, 2018.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021, 2022, 2023.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2023-02-17 11:20+0300\n"
+"PO-Revision-Date: 2024-05-12 16:54+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -111,16 +111,13 @@ msgid "Public path:"
 msgstr "Общедоступная папка:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save public shares from or "
-#| "to."
+#, kde-format
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Эта папка будет использоваться по умолчанию для открытия и сохранения "
-"совместно используемых файлов."
+"Эта папка будет использоваться по умолчанию для публикации файлов как место "
+"хранения совместно используемых сетевых ресурсов."
 
 #: ui/main.qml:150
 #, kde-format

@@ -1,6 +1,6 @@
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
-# Version: $Revision: 1679402 $
+# Version: $Revision: 1679945 $
 # translation of kcmkonq.po to Polish
 # translation of kcmkonq.po to
 # translation of kcmkonq.po to
@@ -12,13 +12,13 @@
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2006, 2008, 2009.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005, 2006.
 # Marta Rybczynska <kde-i18n@rybczynska.net>, 2009.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2017, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2017, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2023-02-11 08:40+0100\n"
+"PO-Revision-Date: 2024-05-12 08:36+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -28,7 +28,7 @@ msgstr ""
 ">\n"
 ">\n"
 ">\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -116,16 +116,13 @@ msgid "Public path:"
 msgstr "Ścieżka do publicznego:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save public shares from or "
-#| "to."
+#, kde-format
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Ten katalog będzie używany jako domyślne miejsce wczytywania i zapisywania "
-"plików i katalogów udostępnianych publicznie."
+"Ten katalog będzie używany domyślne do plików udostępnianych publicznie po "
+"włączeniu udostępniania w sieci."
 
 #: ui/main.qml:150
 #, kde-format
