@@ -73,6 +73,7 @@ private:
     KeyboardFiltersSettings m_keyboardFiltersSettings;
     MouseSettings m_mouseSettings;
     ScreenReaderSettings m_screenReaderSettings;
+    KConfig m_kdeglobals;
 
     int xkb_opcode;
     unsigned int features;

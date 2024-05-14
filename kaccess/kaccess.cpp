@@ -120,6 +120,7 @@ KAccessApp::KAccessApp()
     , m_keyboardFiltersSettings(new KeyboardFiltersSettings(this))
     , m_mouseSettings(new MouseSettings(this))
     , m_screenReaderSettings(new ScreenReaderSettings(this))
+    , m_kdeglobals(QStringLiteral("kdeglobals"))
     , overlay(nullptr)
     , toggleScreenReaderAction(new QAction(this))
 {
@@ -549,7 +550,18 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
                             "permanent",
                             nullptr);
         } else {
-            ca_context_play(m_caContext, 0, CA_PROP_EVENT_ID, "bell", CA_PROP_MEDIA_ROLE, "event", CA_PROP_CANBERRA_CACHE_CONTROL, "permanent", nullptr);
+            const QString themeName = m_kdeglobals.group(QStringLiteral("Sounds")).readEntry("Theme", QStringLiteral("ocean"));
+            ca_context_play(m_caContext,
+                            0,
+                            CA_PROP_EVENT_ID,
+                            "bell",
+                            CA_PROP_MEDIA_ROLE,
+                            "event",
+                            CA_PROP_CANBERRA_CACHE_CONTROL,
+                            "permanent",
+                            CA_PROP_CANBERRA_XDG_THEME_NAME,
+                            themeName.toUtf8().constData(),
+                            nullptr);
         }
     }
 }
