@@ -169,15 +169,11 @@ void KAccessApp::newInstance()
 
 void KAccessApp::readSettings()
 {
-    // select bell events if we need them
-    int state = (m_bellSettings.customBell() || m_bellSettings.visibleBell()) ? XkbBellNotifyMask : 0;
-    XkbSelectEvents(QX11Info::display(), XkbUseCoreKbd, XkbBellNotifyMask, state);
+    // select bell events
+    XkbSelectEvents(QX11Info::display(), XkbUseCoreKbd, XkbBellNotifyMask, XkbBellNotifyMask);
 
-    // deactivate system bell if not needed
-    if (!m_bellSettings.systemBell())
-        XkbChangeEnabledControls(QX11Info::display(), XkbUseCoreKbd, XkbAudibleBellMask, 0);
-    else
-        XkbChangeEnabledControls(QX11Info::display(), XkbUseCoreKbd, XkbAudibleBellMask, XkbAudibleBellMask);
+    // deactivate system bell to allow playing our own sound
+    XkbChangeEnabledControls(QX11Info::display(), XkbUseCoreKbd, XkbAudibleBellMask, 0);
 
     // get keyboard state
     XkbDescPtr xkb = XkbGetMap(QX11Info::display(), 0, XkbUseCoreKbd);
@@ -294,8 +290,8 @@ void KAccessApp::readSettings()
     // select AccessX events
     XkbSelectEvents(QX11Info::display(), XkbUseCoreKbd, XkbAllEventsMask, XkbAllEventsMask);
 
-    if (!m_bellSettings.customBell() && !m_bellSettings.visibleBell() && !(m_mouseSettings.gestures() && m_mouseSettings.gestureConfirmation())
-        && !m_keyboardSettings.keyboardNotifyModifiers() && !m_mouseSettings.keyboardNotifyAccess()) {
+    if (!(m_mouseSettings.gestures() && m_mouseSettings.gestureConfirmation()) && !m_keyboardSettings.keyboardNotifyModifiers()
+        && !m_mouseSettings.keyboardNotifyAccess()) {
         uint ctrls = XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbMouseKeysMask | XkbAudibleBellMask | XkbControlsNotifyMask;
         uint values = xkb->ctrls->enabled_ctrls & ctrls;
         XkbSetAutoResetControls(QX11Info::display(), ctrls, &ctrls, &values);
