@@ -238,14 +238,14 @@ void KAccessApp::readSettings()
     xkb->ctrls->debounce_delay = m_keyboardFiltersSettings.bounceKeysDelay();
 
     // gestures for enabling the other features
-    if (m_mouseSettings.gestures())
+    if (m_activationGesturesSettings.gestures())
         xkb->ctrls->enabled_ctrls |= XkbAccessXKeysMask;
     else
         xkb->ctrls->enabled_ctrls &= ~XkbAccessXKeysMask;
 
     // timeout
-    if (m_keyboardSettings.accessXTimeout()) {
-        xkb->ctrls->ax_timeout = m_keyboardSettings.accessXTimeoutDelay() * 60;
+    if (m_activationGesturesSettings.accessXTimeout()) {
+        xkb->ctrls->ax_timeout = m_activationGesturesSettings.accessXTimeoutDelay() * 60;
         xkb->ctrls->axt_opts_mask = 0;
         xkb->ctrls->axt_opts_values = 0;
         xkb->ctrls->axt_ctrls_mask = XkbStickyKeysMask | XkbSlowKeysMask;
@@ -255,7 +255,7 @@ void KAccessApp::readSettings()
         xkb->ctrls->enabled_ctrls &= ~XkbAccessXTimeoutMask;
 
     // gestures for enabling the other features
-    if (m_keyboardSettings.accessXBeep())
+    if (m_activationGesturesSettings.accessXBeep())
         xkb->ctrls->ax_options |= XkbAX_FeatureFBMask | XkbAX_SlowWarnFBMask;
     else
         xkb->ctrls->ax_options &= ~(XkbAX_FeatureFBMask | XkbAX_SlowWarnFBMask);
@@ -291,8 +291,8 @@ void KAccessApp::readSettings()
     // select AccessX events
     XkbSelectEvents(QX11Info::display(), XkbUseCoreKbd, XkbAllEventsMask, XkbAllEventsMask);
 
-    if (!(m_mouseSettings.gestures() && m_mouseSettings.gestureConfirmation()) && !m_keyboardSettings.keyboardNotifyModifiers()
-        && !m_mouseSettings.keyboardNotifyAccess()) {
+    if (!(m_activationGesturesSettings.gestures() && m_activationGesturesSettings.gestureConfirmation()) && !m_keyboardSettings.keyboardNotifyModifiers()
+        && !m_activationGesturesSettings.keyboardNotifyAccess()) {
         uint ctrls = XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbMouseKeysMask | XkbAudibleBellMask | XkbControlsNotifyMask;
         uint values = xkb->ctrls->enabled_ctrls & ctrls;
         XkbSetAutoResetControls(QX11Info::display(), ctrls, &ctrls, &values);
@@ -719,7 +719,7 @@ void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
         unsigned int enabled = newFeatures & ~features;
         unsigned int disabled = features & ~newFeatures;
 
-        if (!m_mouseSettings.gestureConfirmation()) {
+        if (!m_activationGesturesSettings.gestureConfirmation()) {
             requestedFeatures = enabled | (requestedFeatures & ~disabled);
             notifyChanges();
             features = newFeatures;
@@ -848,7 +848,7 @@ void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
             if (enabledFeatures.count() + disabledFeatures.count() == 1) {
                 explanation = i18n("An application has requested to change this setting.");
 
-                if (m_mouseSettings.gestures()) {
+                if (m_activationGesturesSettings.gestures()) {
                     if ((enabled | disabled) == XCB_XKB_BOOL_CTRL_SLOW_KEYS)
                         explanation = i18n("You held down the Shift key for 8 seconds or an application has requested to change this setting.");
                     else if ((enabled | disabled) == XCB_XKB_BOOL_CTRL_STICKY_KEYS)
@@ -860,7 +860,7 @@ void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
                     }
                 }
             } else {
-                if (m_mouseSettings.gestures())
+                if (m_activationGesturesSettings.gestures())
                     explanation = i18n("An application has requested to change these settings, or you used a combination of several keyboard gestures.");
                 else
                     explanation = i18n("An application has requested to change these settings.");
@@ -881,7 +881,7 @@ void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
 
 void KAccessApp::notifyChanges()
 {
-    if (!m_mouseSettings.keyboardNotifyAccess())
+    if (!m_activationGesturesSettings.keyboardNotifyAccess())
         return;
 
     unsigned int enabled = requestedFeatures & ~features;

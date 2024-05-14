@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kaccessrc" />
+  <group name="Keyboard">
+    <entry name="Gestures" key="Gestures" type="Bool">
+      <label>Use Gestures</label>
+      <default>false</default>
+    </entry>
+    <entry name="GestureConfirmation" key="GestureConfirmation" type="Bool">
+      <label>Ask for Confirmation for a gesture</label>
+      <default>false</default>
+    </entry>
+    <entry name="KeyboardNotifyAccess" key="kNotifyAccessX" type="Bool">
+      <label>Confirm access to the Keyboard</label>
+      <default>false</default>
+    </entry>
+    <entry name="AccessXTimeout" key="AccessXTimeout" type="Bool">
+      <label>Use a timeout delay</label>
+      <default>false</default>
+    </entry>
+    <entry name="AccessXTimeoutDelay" key="AccessXTimeoutDelay" type="int">
+      <label>Delay for timeout</label>
+      <default>30</default>
+    </entry>
+    <entry name="AccessXBeep" key="AccessXBeep" type="Bool">
+      <label>Use a beep for access</label>
+      <default>true</default>
+    </entry>
+  </group>
+</kcfg>

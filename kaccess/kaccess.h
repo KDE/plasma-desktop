@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include "kcmaccessibilityactivationgestures.h"
 #include "kcmaccessibilitybell.h"
 #include "kcmaccessibilitykeyboard.h"
 #include "kcmaccessibilitykeyboardfilters.h"
@@ -73,6 +74,7 @@ private:
     KeyboardFiltersSettings m_keyboardFiltersSettings;
     MouseSettings m_mouseSettings;
     ScreenReaderSettings m_screenReaderSettings;
+    ActivationGesturesSettings m_activationGesturesSettings;
     KConfig m_kdeglobals;
 
     int xkb_opcode;

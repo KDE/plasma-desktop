@@ -30,18 +30,4 @@
       <default>0</default>
     </entry>
   </group>
-  <group name="Keyboard">
-    <entry name="Gestures" key="Gestures" type="Bool">
-      <label>Use Gestures</label>
-      <default>false</default>
-    </entry>
-    <entry name="GestureConfirmation" key="GestureConfirmation" type="Bool">
-      <label>Ask for Confirmation for a gesture</label>
-      <default>false</default>
-    </entry>
-    <entry name="KeyboardNotifyAccess" key="kNotifyAccessX" type="Bool">
-      <label>Confirm access to the Keyboard</label>
-      <default>false</default>
-    </entry>
-  </group>
 </kcfg>

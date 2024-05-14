@@ -29,17 +29,5 @@
       <label>Notify when a keyboard modifier is pressed</label>
       <default>false</default>
     </entry>
-    <entry name="AccessXTimeout" key="AccessXTimeout" type="Bool">
-      <label>Use a timeout delay</label>
-      <default>false</default>
-    </entry>
-    <entry name="AccessXTimeoutDelay" key="AccessXTimeoutDelay" type="Bool">
-      <label>Delay for timeout</label>
-      <default>30</default>
-    </entry>
-    <entry name="AccessXBeep" key="AccessXBeep" type="Bool">
-      <label>Use a beep for access</label>
-      <default>true</default>
-    </entry>
   </group>
 </kcfg>

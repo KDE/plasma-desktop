@@ -43,6 +43,11 @@ KCM.AbstractKCM {
             defaultnessKey: "mouseIsDefaults"
         },
         {
+            icon: "input-caps-on",
+            title: i18n("Activation Gestures"),
+            defaultnessKey: "activationGesturesIsDefaults"
+        },
+        {
             icon: "audio-input-microphone",
             title: i18nc("System mouse navigation", "Screen Reader"),
             defaultnessKey: "screenReaderIsDefaults"
@@ -148,6 +153,10 @@ KCM.AbstractKCM {
                         Layout.fillHeight: true
                     }
                     MouseNavigation {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                    }
+                    ActivationGestures {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                     }

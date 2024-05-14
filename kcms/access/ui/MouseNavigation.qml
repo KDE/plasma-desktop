@@ -25,44 +25,6 @@ Kirigami.FormLayout {
         checked: kcm.mouseSettings.mouseKeys
         onToggled: kcm.mouseSettings.mouseKeys = checked
     }
-    QQC2.CheckBox {
-        Kirigami.FormData.label: i18n("When a gesture is used:")
-        text: i18n("Display a confirmation dialog")
-
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "GestureConfirmation"
-        }
-
-        checked: kcm.mouseSettings.gestureConfirmation
-        onToggled: kcm.mouseSettings.gestureConfirmation = checked
-    }
-    QQC2.CheckBox {
-        text: i18n("Ring the System Bell")
-
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "Gestures"
-        }
-
-        checked: kcm.mouseSettings.gestures
-        onToggled: kcm.mouseSettings.gestures = checked
-    }
-    QQC2.CheckBox {
-        text: i18n("Show a notification")
-
-        KCM.SettingStateBinding {
-            configObject: kcm.mouseSettings
-            settingName: "KeyboardNotifyAccess"
-        }
-
-        checked: kcm.mouseSettings.keyboardNotifyAccess
-        onToggled: kcm.mouseSettings.keyboardNotifyAccess = checked
-    }
-
-    Item {
-        Kirigami.FormData.isSection: true
-    }
 
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Acceleration delay:")

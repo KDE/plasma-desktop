@@ -13,6 +13,7 @@ kconfig_add_kcfg_files(kaccess_settings
     kcmaccessibilitykeyboard.kcfgc
     kcmaccessibilitykeyboardfilters.kcfgc
     kcmaccessibilitymouse.kcfgc
+    kcmaccessibilityactivationgestures.kcfgc
     kcmaccessibilityscreenreader.kcfgc
     kcmaccessibilityshakecursor.kcfgc
     GENERATE_MOC)
@@ -20,8 +21,8 @@ kconfig_add_kcfg_files(kaccess_settings
 kcmutils_generate_module_data(kcm_access
     MODULE_DATA_HEADER kcmaccessibilitydata.h
     MODULE_DATA_CLASS_NAME AccessibilityData
-    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityscreenreader.h kcmaccessibilityshakecursor.h
-    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ScreenReaderSettings ShakeCursorSettings
+    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityactivationgestures.h kcmaccessibilityscreenreader.h kcmaccessibilityshakecursor.h
+    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ActivationGesturesSettings ScreenReaderSettings ShakeCursorSettings
 )
 
 target_link_libraries(kcm_access PRIVATE
