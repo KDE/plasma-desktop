@@ -182,22 +182,23 @@ PlasmaCore.ToolTipArea {
         return `${i18n("Activate %1", model.display)}; ${smartLauncherDescription}`;
     }
     Accessible.role: Accessible.Button
+    Accessible.onPressAction: leftTapHandler.leftClick()
 
     onToolTipVisibleChanged: toolTipVisible => {
-        task.toolTipOpen = toolTipVisible;
-        if (!toolTipVisible) {
-            tasksRoot.toolTipOpenedByClick = null;
-        } else {
-            tasksRoot.toolTipAreaItem = task;
-        }
-    }
+                                 task.toolTipOpen = toolTipVisible;
+                                 if (!toolTipVisible) {
+                                     tasksRoot.toolTipOpenedByClick = null;
+                                 } else {
+                                     tasksRoot.toolTipAreaItem = task;
+                                 }
+                             }
 
     onContainsMouseChanged: if (containsMouse) {
-        task.forceActiveFocus(Qt.MouseFocusReason);
-        task.updateMainItemBindings();
-    } else {
-        tasksRoot.toolTipOpenedByClick = null;
-    }
+                                task.forceActiveFocus(Qt.MouseFocusReason);
+                                task.updateMainItemBindings();
+                            } else {
+                                tasksRoot.toolTipOpenedByClick = null;
+                            }
 
     onHighlightedChanged: {
         // ensure it doesn't get stuck with a window highlighted
@@ -226,7 +227,7 @@ PlasmaCore.ToolTipArea {
         hideToolTip();
 
         if (!inPopup && !tasksRoot.vertical
-            && !Plasmoid.configuration.separateLaunchers) {
+                && !Plasmoid.configuration.separateLaunchers) {
             tasksRoot.requestLayout();
         }
     }
@@ -234,10 +235,10 @@ PlasmaCore.ToolTipArea {
     onSmartLauncherEnabledChanged: {
         if (smartLauncherEnabled && !smartLauncherItem) {
             const smartLauncher = Qt.createQmlObject(`
-                import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
+import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
 
-                TaskManagerApplet.SmartLauncherItem { }
-            `, task);
+TaskManagerApplet.SmartLauncherItem { }
+`, task);
 
             smartLauncher.launcherUrl = Qt.binding(() => model.LauncherUrlWithoutIcon);
 
@@ -269,19 +270,19 @@ PlasmaCore.ToolTipArea {
     Keys.onUpPressed: Keys.leftPressed(event)
     Keys.onDownPressed: Keys.rightPressed(event)
     Keys.onLeftPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
-        tasksModel.move(task.index, task.index - 1);
-    } else {
-        event.accepted = false;
-    }
+                            tasksModel.move(task.index, task.index - 1);
+                        } else {
+                            event.accepted = false;
+                        }
     Keys.onRightPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
-        tasksModel.move(task.index, task.index + 1);
-    } else {
-        event.accepted = false;
-    }
+                             tasksModel.move(task.index, task.index + 1);
+                         } else {
+                             event.accepted = false;
+                         }
 
     function modelIndex() {
         return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.index, index)
-            : tasksModel.makeModelIndex(index));
+                        : tasksModel.makeModelIndex(index));
     }
 
     function showContextMenu(args) {
@@ -402,8 +403,11 @@ PlasmaCore.ToolTipArea {
     }
 
     TapHandler {
+        id: leftTapHandler
         acceptedButtons: Qt.LeftButton
-        onTapped: {
+        onTapped: leftClick()
+
+        function leftClick(): void {
             if (Plasmoid.configuration.showToolTips && task.active) {
                 hideToolTip();
             }
@@ -414,34 +418,34 @@ PlasmaCore.ToolTipArea {
     TapHandler {
         acceptedButtons: Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
         onTapped: (eventPoint, button) => {
-            if (button === Qt.MiddleButton) {
-                if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
-                    tasksModel.requestNewInstance(modelIndex());
-                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
-                    tasksRoot.taskClosedWithMouseMiddleButton = model.WinIdList.slice()
-                    tasksModel.requestClose(modelIndex());
-                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
-                    tasksModel.requestToggleMinimized(modelIndex());
-                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
-                    tasksModel.requestToggleGrouping(modelIndex());
-                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.BringToCurrentDesktop) {
-                    tasksModel.requestVirtualDesktops(modelIndex(), [virtualDesktopInfo.currentDesktop]);
-                }
-            } else if (button === Qt.BackButton || button === Qt.ForwardButton) {
-                const playerData = mpris2Source.playerForLauncherUrl(model.LauncherUrlWithoutIcon, model.AppPid);
-                if (playerData) {
-                    if (button === Qt.BackButton) {
-                        playerData.Previous();
-                    } else {
-                        playerData.Next();
-                    }
-                } else {
-                    eventPoint.accepted = false;
-                }
-            }
+                      if (button === Qt.MiddleButton) {
+                          if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
+                              tasksModel.requestNewInstance(modelIndex());
+                          } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
+                              tasksRoot.taskClosedWithMouseMiddleButton = model.WinIdList.slice()
+                              tasksModel.requestClose(modelIndex());
+                          } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
+                              tasksModel.requestToggleMinimized(modelIndex());
+                          } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
+                              tasksModel.requestToggleGrouping(modelIndex());
+                          } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.BringToCurrentDesktop) {
+                              tasksModel.requestVirtualDesktops(modelIndex(), [virtualDesktopInfo.currentDesktop]);
+                          }
+                      } else if (button === Qt.BackButton || button === Qt.ForwardButton) {
+                          const playerData = mpris2Source.playerForLauncherUrl(model.LauncherUrlWithoutIcon, model.AppPid);
+                          if (playerData) {
+                              if (button === Qt.BackButton) {
+                                  playerData.Previous();
+                              } else {
+                                  playerData.Next();
+                              }
+                          } else {
+                              eventPoint.accepted = false;
+                          }
+                      }
 
-            backend.cancelHighlightWindows();
-        }
+                      backend.cancelHighlightWindows();
+                  }
     }
 
     KSvg.FrameSvgItem {
@@ -480,26 +484,26 @@ PlasmaCore.ToolTipArea {
             }
 
             onActiveChanged: if (active) {
-                icon.grabToImage((result) => {
-                    if (!dragHandler.active) {
-                        // BUG 466675 grabToImage is async, so avoid updating dragSource when active is false
-                        return;
-                    }
-                    setRequestedInhibitDnd(true);
-                    tasksRoot.dragSource = task;
-                    dragHelper.Drag.imageSource = result.url;
-                    dragHelper.Drag.mimeData = {
-                        "text/x-orgkdeplasmataskmanager_taskurl": backend.tryDecodeApplicationsUrl(model.LauncherUrlWithoutIcon).toString(),
-                        [model.MimeType]: model.MimeData,
-                        "application/x-orgkdeplasmataskmanager_taskbuttonitem": model.MimeData,
-                    };
-                    dragHelper.Drag.active = dragHandler.active;
-                });
-            } else {
-                setRequestedInhibitDnd(false);
-                dragHelper.Drag.active = false;
-                dragHelper.Drag.imageSource = "";
-            }
+                                 icon.grabToImage((result) => {
+                                                      if (!dragHandler.active) {
+                                                          // BUG 466675 grabToImage is async, so avoid updating dragSource when active is false
+                                                          return;
+                                                      }
+                                                      setRequestedInhibitDnd(true);
+                                                      tasksRoot.dragSource = task;
+                                                      dragHelper.Drag.imageSource = result.url;
+                                                      dragHelper.Drag.mimeData = {
+                                                          "text/x-orgkdeplasmataskmanager_taskurl": backend.tryDecodeApplicationsUrl(model.LauncherUrlWithoutIcon).toString(),
+                                                          [model.MimeType]: model.MimeData,
+                                                          "application/x-orgkdeplasmataskmanager_taskbuttonitem": model.MimeData,
+                                                      };
+                                                      dragHelper.Drag.active = dragHandler.active;
+                                                  });
+                             } else {
+                                 setRequestedInhibitDnd(false);
+                                 dragHelper.Drag.active = false;
+                                 dragHelper.Drag.imageSource = "";
+                             }
         }
     }
 
@@ -523,9 +527,9 @@ PlasmaCore.ToolTipArea {
             topMargin: adjustMargin(false, parent.height, taskFrame.margins.top)
         }
 
-        width: Math.min(task.parent.minimumWidth, tasks.height)
+        width: Math.min(task.parent?.minimumWidth ?? 0, tasks.height)
         height: (parent.height - adjustMargin(false, parent.height, taskFrame.margins.top)
-            - adjustMargin(false, parent.height, taskFrame.margins.bottom))
+                 - adjustMargin(false, parent.height, taskFrame.margins.bottom))
 
         asynchronous: true
         active: height >= Kirigami.Units.iconSizes.small
@@ -562,7 +566,7 @@ PlasmaCore.ToolTipArea {
             // the text label margin, which derives from the icon width.
             State {
                 name: "standalone"
-                when: !label.visible
+                when: !label.visible && task.parent
 
                 AnchorChanges {
                     target: iconBox

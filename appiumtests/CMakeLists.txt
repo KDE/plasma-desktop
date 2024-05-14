@@ -15,6 +15,7 @@ if(NOT SeleniumWebDriverATSPI_FOUND AND NOT DEFINED ENV{KDECI_BUILD})
     return()
 endif()
 
+add_subdirectory(applets)
 add_subdirectory(desktop)
 
 add_test(

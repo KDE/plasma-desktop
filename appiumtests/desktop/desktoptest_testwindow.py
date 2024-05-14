@@ -18,7 +18,7 @@ class TestWindow(Gtk.ApplicationWindow):
         self.button.connect("clicked", self.on_button_clicked)
         self.set_child(self.button)
 
-        GLib.timeout_add_seconds(10, self.close)
+        GLib.timeout_add_seconds(120, self.close)
 
     def on_button_clicked(self, widget) -> None:
         self.close()

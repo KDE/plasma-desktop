@@ -66,6 +66,9 @@ KCM.SimpleKCM {
                 i18nc("Completes the sentence 'Clicking grouped task shows windows side by side' ", "Shows large window previews"),
                 i18nc("Completes the sentence 'Clicking grouped task shows textual list' ", "Shows textual list"),
             ]
+
+            Accessible.name: currentText
+            Accessible.onPressAction: currentIndex = currentIndex === count - 1 ? 0 : (currentIndex + 1)
         }
         // "You asked for Window View but Window View is not available" message
         Kirigami.InlineMessage {
@@ -91,6 +94,7 @@ KCM.SimpleKCM {
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Group only when the Task Manager is full")
             enabled: groupingStrategy.currentIndex > 0 && groupPopups.checked
+            Accessible.onPressAction: toggle()
         }
 
         Item {
