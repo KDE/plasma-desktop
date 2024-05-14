@@ -516,7 +516,7 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
     }
 
     // ask canberra to ring a nice bell
-    if (m_bellSettings.customBell()) {
+    if (m_bellSettings.systemBell()) {
         if (!m_caContext) {
             int ret = ca_context_create(&m_caContext);
             if (ret != CA_SUCCESS) {
@@ -538,7 +538,7 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
             ca_context_cancel(m_caContext, 0);
         }
 
-        if (!m_bellSettings.customBellFile().isEmpty()) {
+        if (m_bellSettings.customBell()) {
             ca_context_play(m_caContext,
                             0,
                             CA_PROP_MEDIA_FILENAME,
