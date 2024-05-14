@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2010.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2023-02-13 11:53+0100\n"
+"PO-Revision-Date: 2024-05-13 19:04+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ui/main.qml:52
@@ -107,14 +107,13 @@ msgid "Public path:"
 msgstr "Директория за Публични:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Тази директория се използва по подразбиране за съхранение на файловете, "
-"които изтегляте от мрежата."
+"Тази папка се използва по подразбиране за публично споделени файлове, когато "
+"е разрешено споделянето в мрежа."
 
 #: ui/main.qml:150
 #, kde-format

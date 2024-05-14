@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:40+0000\n"
-"PO-Revision-Date: 2024-04-29 08:51+0200\n"
+"POT-Creation-Date: 2024-05-14 00:39+0000\n"
+"PO-Revision-Date: 2024-05-13 19:02+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -410,11 +410,11 @@ msgstr "Премахване на този панел; това действие
 #: contents/configuration/PanelConfiguration.qml:610
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr ""
+msgstr "Готово"
 
 #: contents/configuration/PanelConfiguration.qml:613
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "Затваряне на настройките на панела и излизане от режима за редактиране"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -625,6 +625,11 @@ msgstr "Възпроизвеждане или пауза на медия"
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
 msgstr "Следващ запис"
+
+#: contents/osd/OsdItem.qml:32
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr ""
 
 #: contents/views/Panel.qml:326
 msgid "Panel Focus Indicator"
