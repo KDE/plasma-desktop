@@ -542,11 +542,11 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
             ca_context_cancel(m_caContext, 0);
         }
 
-        if (m_currentPlayerSource.isValid()) {
+        if (!m_bellSettings.customBellFile().isEmpty()) {
             ca_context_play(m_caContext,
                             0,
                             CA_PROP_MEDIA_FILENAME,
-                            QFile::encodeName(m_currentPlayerSource.toLocalFile()).constData(),
+                            QFile::encodeName(QUrl(m_bellSettings.customBellFile()).toLocalFile()).constData(),
                             CA_PROP_MEDIA_ROLE,
                             "event",
                             CA_PROP_CANBERRA_CACHE_CONTROL,

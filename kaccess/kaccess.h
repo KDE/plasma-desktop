@@ -81,7 +81,6 @@ private:
     QWidget *overlay;
 
     ca_context *m_caContext = nullptr;
-    QUrl m_currentPlayerSource;
 
     WId _activeWindow;
 
