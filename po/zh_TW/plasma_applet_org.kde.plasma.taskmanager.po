@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-08 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:40+0000\n"
 "PO-Revision-Date: 2024-04-16 19:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -214,99 +214,99 @@ msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
 msgstr "顯示文字型列表"
 
-#: package/contents/ui/ConfigBehavior.qml:75
+#: package/contents/ui/ConfigBehavior.qml:78
 #, kde-format
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr "合成器不支援並排顯示視窗，因此會改為顯示文字型列表。"
 
-#: package/contents/ui/ConfigBehavior.qml:85
+#: package/contents/ui/ConfigBehavior.qml:88
 #, kde-format
 msgid "Combine into single button"
 msgstr "結合成單一按鈕"
 
-#: package/contents/ui/ConfigBehavior.qml:92
+#: package/contents/ui/ConfigBehavior.qml:95
 #, kde-format
 msgid "Group only when the Task Manager is full"
 msgstr "只在工作管理員空間不足時分組"
 
-#: package/contents/ui/ConfigBehavior.qml:103
+#: package/contents/ui/ConfigBehavior.qml:107
 #, kde-format
 msgid "Sort:"
 msgstr "排序："
 
-#: package/contents/ui/ConfigBehavior.qml:106
+#: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgid "Do not sort"
 msgstr "請勿排序"
 
-#: package/contents/ui/ConfigBehavior.qml:106
+#: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgid "Manually"
 msgstr "手動"
 
-#: package/contents/ui/ConfigBehavior.qml:106
+#: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgid "Alphabetically"
 msgstr "依字母順序"
 
-#: package/contents/ui/ConfigBehavior.qml:106
+#: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgid "By desktop"
 msgstr "依桌面"
 
-#: package/contents/ui/ConfigBehavior.qml:106
+#: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgid "By activity"
 msgstr "依活動"
 
-#: package/contents/ui/ConfigBehavior.qml:112
+#: package/contents/ui/ConfigBehavior.qml:116
 #, kde-format
 msgid "Keep launchers separate"
 msgstr "讓啟動器保持獨立"
 
-#: package/contents/ui/ConfigBehavior.qml:119
+#: package/contents/ui/ConfigBehavior.qml:123
 #, kde-format
 msgid "Hide launchers after application startup"
 msgstr "應用程式啟動後隱藏啟動器"
 
-#: package/contents/ui/ConfigBehavior.qml:129
+#: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
 msgstr "點擊作用中的工作時："
 
-#: package/contents/ui/ConfigBehavior.qml:130
+#: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "將工作最小化"
 
-#: package/contents/ui/ConfigBehavior.qml:135
+#: package/contents/ui/ConfigBehavior.qml:139
 #, kde-format
 msgid "Middle-clicking any task:"
 msgstr "中鍵點擊任何工作時："
 
-#: package/contents/ui/ConfigBehavior.qml:139
+#: package/contents/ui/ConfigBehavior.qml:143
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "什麼都不做"
 
-#: package/contents/ui/ConfigBehavior.qml:140
+#: package/contents/ui/ConfigBehavior.qml:144
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
 msgstr "關閉視窗或群組"
 
-#: package/contents/ui/ConfigBehavior.qml:141
+#: package/contents/ui/ConfigBehavior.qml:145
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
 msgstr "開啟新視窗"
 
-#: package/contents/ui/ConfigBehavior.qml:142
+#: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
@@ -314,13 +314,13 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "最小化/復原視窗或群組"
 
-#: package/contents/ui/ConfigBehavior.qml:143
+#: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
 msgstr "切換群組"
 
-#: package/contents/ui/ConfigBehavior.qml:144
+#: package/contents/ui/ConfigBehavior.qml:148
 #, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
@@ -328,81 +328,81 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "將它移至目前虛擬桌面"
 
-#: package/contents/ui/ConfigBehavior.qml:154
+#: package/contents/ui/ConfigBehavior.qml:158
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "滑鼠滾輪："
 
-#: package/contents/ui/ConfigBehavior.qml:155
+#: package/contents/ui/ConfigBehavior.qml:159
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "循環切換工作"
 
-#: package/contents/ui/ConfigBehavior.qml:164
+#: package/contents/ui/ConfigBehavior.qml:168
 #, kde-format
 msgid "Skip minimized tasks"
 msgstr "忽略最小化工作"
 
-#: package/contents/ui/ConfigBehavior.qml:175
+#: package/contents/ui/ConfigBehavior.qml:179
 #, kde-format
 msgid "Show only tasks:"
 msgstr "只顯示哪些工作："
 
-#: package/contents/ui/ConfigBehavior.qml:176
+#: package/contents/ui/ConfigBehavior.qml:180
 #, kde-format
 msgid "From current screen"
 msgstr "目前螢幕上的"
 
-#: package/contents/ui/ConfigBehavior.qml:181
+#: package/contents/ui/ConfigBehavior.qml:185
 #, kde-format
 msgid "From current desktop"
 msgstr "目前桌面上的"
 
-#: package/contents/ui/ConfigBehavior.qml:186
+#: package/contents/ui/ConfigBehavior.qml:190
 #, kde-format
 msgid "From current activity"
 msgstr "目前活動裡的"
 
-#: package/contents/ui/ConfigBehavior.qml:191
+#: package/contents/ui/ConfigBehavior.qml:195
 #, kde-format
 msgid "That are minimized"
 msgstr "已最小化的"
 
-#: package/contents/ui/ConfigBehavior.qml:200
+#: package/contents/ui/ConfigBehavior.qml:204
 #, kde-format
 msgid "When panel is hidden:"
 msgstr "當面板已隱藏時："
 
-#: package/contents/ui/ConfigBehavior.qml:201
+#: package/contents/ui/ConfigBehavior.qml:205
 #, kde-format
 msgid "Unhide when a window wants attention"
 msgstr "有視窗請求注意時取消隱藏"
 
-#: package/contents/ui/ConfigBehavior.qml:213
+#: package/contents/ui/ConfigBehavior.qml:217
 #, kde-format
 msgid "New tasks appear:"
 msgstr "新工作出現在："
 
-#: package/contents/ui/ConfigBehavior.qml:217
+#: package/contents/ui/ConfigBehavior.qml:221
 #, kde-format
 msgid "On the bottom"
 msgstr "底部"
 
-#: package/contents/ui/ConfigBehavior.qml:221
-#: package/contents/ui/ConfigBehavior.qml:241
+#: package/contents/ui/ConfigBehavior.qml:225
+#: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
 msgid "To the right"
 msgstr "右方"
 
-#: package/contents/ui/ConfigBehavior.qml:223
-#: package/contents/ui/ConfigBehavior.qml:239
+#: package/contents/ui/ConfigBehavior.qml:227
+#: package/contents/ui/ConfigBehavior.qml:243
 #, kde-format
 msgid "To the left"
 msgstr "左方"
 
-#: package/contents/ui/ConfigBehavior.qml:235
+#: package/contents/ui/ConfigBehavior.qml:239
 #, kde-format
 msgid "On the Top"
 msgstr "上方"
