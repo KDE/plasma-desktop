@@ -333,7 +333,9 @@ PlasmoidItem {
 
             Drag.dragType: Drag.Automatic
             Drag.supportedActions: Qt.CopyAction | Qt.MoveAction | Qt.LinkAction
-            Drag.onDragFinished: tasks.dragSource = null;
+            Drag.onDragFinished: dropAction => {
+                tasks.dragSource = null;
+            }
         }
 
         KSvg.FrameSvgItem {
@@ -494,7 +496,7 @@ PlasmoidItem {
                     delegate: Task {
                         tasksRoot: tasks
                     }
-                    onItemRemoved: {
+                    onItemRemoved: (index, item) => {
                         if (tasks.containsMouse && index != taskRepeater.count &&
                             item.model.WinIdList.length > 0 &&
                             taskClosedWithMouseMiddleButton.indexOf(item.winIdList[0]) > -1) {

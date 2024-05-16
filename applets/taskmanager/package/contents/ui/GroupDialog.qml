@@ -57,7 +57,9 @@ PlasmaCore.Dialog {
         handleWheelEvents: !scrollView.overflowing
         isGroupDialog: true
 
-        Keys.onEscapePressed: groupDialog.visible = false
+        Keys.onEscapePressed: event => {
+            groupDialog.visible = false;
+        }
 
         function moveRow(event, insertAt) {
             if (!(event.modifiers & Qt.ControlModifier) || !(event.modifiers & Qt.ShiftModifier)) {
@@ -136,8 +138,8 @@ PlasmaCore.Dialog {
 
                 reuseItems: false
 
-                Keys.onUpPressed: mouseHandler.moveRow(event, groupListView.currentIndex - 1);
-                Keys.onDownPressed: mouseHandler.moveRow(event, groupListView.currentIndex + 1);
+                Keys.onUpPressed: event => mouseHandler.moveRow(event, groupListView.currentIndex - 1)
+                Keys.onDownPressed: event => mouseHandler.moveRow(event, groupListView.currentIndex + 1)
 
                 onCountChanged: {
                     if (count > 0) {

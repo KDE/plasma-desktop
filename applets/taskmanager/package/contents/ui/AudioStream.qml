@@ -92,9 +92,9 @@ Item {
     opacity: 0
     visible: opacity > 0
 
-    Keys.onReturnPressed: toggleMuted()
-    Keys.onEnterPressed: Keys.returnPressed(event);
-    Keys.onSpacePressed: Keys.returnPressed(event);
+    Keys.onReturnPressed: event => toggleMuted()
+    Keys.onEnterPressed: event => Keys.returnPressed(event);
+    Keys.onSpacePressed: event => Keys.returnPressed(event);
 
     Accessible.checkable: true
     Accessible.checked: task.muted
@@ -109,7 +109,7 @@ Item {
     TapHandler {
         id: tapHandler
         gesturePolicy: TapHandler.ReleaseWithinBounds // Exclusive grab
-        onTapped: toggleMuted()
+        onTapped: (eventPoint, button) => toggleMuted()
     }
 
     PlasmaExtras.Highlight {

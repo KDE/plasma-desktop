@@ -162,7 +162,9 @@ KCM.SimpleKCM {
                     case 3: return 2; // Large
                 }
             }
-            onActivated: cfg_iconSpacing = model[currentIndex]["spacing"];
+            onActivated: index => {
+                cfg_iconSpacing = model[currentIndex]["spacing"];
+            }
         }
 
         Label {

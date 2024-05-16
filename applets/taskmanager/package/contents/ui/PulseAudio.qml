@@ -106,8 +106,8 @@ QtObject {
             }
         }
 
-        onObjectAdded: pulseAudio.streamsChanged()
-        onObjectRemoved: pulseAudio.streamsChanged()
+        onObjectAdded: (index, object) => pulseAudio.streamsChanged()
+        onObjectRemoved: (index, object) => pulseAudio.streamsChanged()
     }
 
     readonly property int minimalVolume: PulseAudio.MinimalVolume

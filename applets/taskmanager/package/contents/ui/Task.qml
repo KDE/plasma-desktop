@@ -265,22 +265,26 @@ TaskManagerApplet.SmartLauncherItem { }
     }
     onAudioIndicatorsEnabledChanged: task.hasAudioStreamChanged()
 
-    Keys.onMenuPressed: contextMenuTimer.start()
-    Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task, Plasmoid, tasksRoot, effectWatcher.registered)
-    Keys.onEnterPressed: Keys.returnPressed(event);
-    Keys.onSpacePressed: Keys.returnPressed(event);
-    Keys.onUpPressed: Keys.leftPressed(event)
-    Keys.onDownPressed: Keys.rightPressed(event)
-    Keys.onLeftPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
-                            tasksModel.move(task.index, task.index - 1);
-                        } else {
-                            event.accepted = false;
-                        }
-    Keys.onRightPressed: if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
-                             tasksModel.move(task.index, task.index + 1);
-                         } else {
-                             event.accepted = false;
-                         }
+    Keys.onMenuPressed: event => contextMenuTimer.start()
+    Keys.onReturnPressed: event => TaskTools.activateTask(modelIndex(), model, event.modifiers, task, Plasmoid, tasksRoot, effectWatcher.registered)
+    Keys.onEnterPressed: event => Keys.returnPressed(event);
+    Keys.onSpacePressed: event => Keys.returnPressed(event);
+    Keys.onUpPressed: event => Keys.leftPressed(event)
+    Keys.onDownPressed: event => Keys.rightPressed(event)
+    Keys.onLeftPressed: event => {
+        if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
+            tasksModel.move(task.index, task.index - 1);
+        } else {
+            event.accepted = false;
+        }
+    }
+    Keys.onRightPressed: event => {
+        if (!inPopup && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
+            tasksModel.move(task.index, task.index + 1);
+        } else {
+            event.accepted = false;
+        }
+    }
 
     function modelIndex() {
         return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.index, index)
@@ -407,7 +411,7 @@ TaskManagerApplet.SmartLauncherItem { }
     TapHandler {
         id: leftTapHandler
         acceptedButtons: Qt.LeftButton
-        onTapped: leftClick()
+        onTapped: (eventPoint, button) => leftClick()
 
         function leftClick(): void {
             if (Plasmoid.configuration.showToolTips && task.active) {
