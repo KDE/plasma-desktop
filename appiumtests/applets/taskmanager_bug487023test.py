@@ -96,7 +96,9 @@ class Bug487023Test(unittest.TestCase):
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Icons-and-Text Task Manager")))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "python3"))).click()
         time.sleep(3)
-        self.assertEqual(len(self.driver.find_elements(AppiumBy.NAME, "Test Window")), 2)  # 2 tasks in the group dialog
+        self.assertEqual(len(self.driver.find_elements(AppiumBy.NAME, "Test Window")), 4)  # 2 tasks in the group dialog, find_elements will match both the task and the
+        # label inside it, so is expected there will be exactly double entries as
+        # how many tasks there are
 
 
 if __name__ == '__main__':

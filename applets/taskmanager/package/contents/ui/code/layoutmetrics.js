@@ -104,6 +104,11 @@ function preferredMaxHeight() {
     }
 }
 
+function preferredHeightInPopup() {
+    return verticalMargins() + Math.max(Kirigami.Units.iconSizes.sizeForLabels,
+                                        Kirigami.Units.iconSizes.medium);
+}
+
 function spaceRequiredToShowText() {
     // gridUnit is the height of the default font, but only one isn't enough to
     // show anything but the elision character. 2 is too high and results in
