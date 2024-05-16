@@ -91,7 +91,7 @@ ColumnLayout {
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: appName
-                opacity: flatIndex == 0
+                opacity: flatIndex === 0
                 visible: text.length !== 0
                 textFormat: Text.PlainText
             }
@@ -353,8 +353,8 @@ ColumnLayout {
                 checked: parentTask.muted
 
                 PlasmaComponents3.ToolTip {
-                    text: parent.checked ?
-                        i18nc("button to unmute app", "Unmute %1", parentTask.appName)
+                    text: parent.checked
+                        ? i18nc("button to unmute app", "Unmute %1", parentTask.appName)
                         : i18nc("button to mute app", "Mute %1", parentTask.appName)
                 }
             }
@@ -363,13 +363,8 @@ ColumnLayout {
                 id: slider
 
                 readonly property int displayValue: Math.round(value / to * 100)
-                readonly property int loudestVolume: {
-                    let v = 0
-                    parentTask.audioStreams.forEach((stream) => {
-                        v = Math.max(v, stream.volume)
-                    })
-                    return v
-                }
+                readonly property int loudestVolume: parentTask.audioStreams
+                    .reduce((loudestVolume, stream) => Math.max(loudestVolume, stream.volume), 0)
 
                 Layout.fillWidth: true
                 from: pulseAudio.item.minimalVolume
@@ -404,19 +399,19 @@ ColumnLayout {
         }
     }
 
-    function generateSubText() {
+    function generateSubText(): string {
         if (activitiesParent === undefined) {
             return "";
         }
 
-        let subTextEntries = [];
+        const subTextEntries = [];
 
         const onAllDesktops = isGroup ? IsOnAllVirtualDesktops : isOnAllVirtualDesktopsParent;
         if (!Plasmoid.configuration.showOnlyCurrentDesktop && virtualDesktopInfo.numberOfDesktops > 1) {
             const virtualDesktops = isGroup ? VirtualDesktops : virtualDesktopParent;
 
             if (!onAllDesktops && virtualDesktops !== undefined && virtualDesktops.length > 0) {
-                let virtualDesktopNameList = new Array();
+                const virtualDesktopNameList = new Array();
 
                 for (let i = 0; i < virtualDesktops.length; ++i) {
                     virtualDesktopNameList.push(virtualDesktopInfo.desktopNames[virtualDesktopInfo.desktopIds.indexOf(virtualDesktops[i])]);
@@ -438,7 +433,7 @@ ColumnLayout {
             subTextEntries.push(i18nc("Which virtual desktop a window is currently on",
                 "Available on all activities"));
         } else if (act.length > 0) {
-            let activityNames = [];
+            const activityNames = [];
 
             for (let i = 0; i < act.length; i++) {
                 const activity = act[i];

@@ -34,20 +34,27 @@ MouseArea {
     states: [
         State {
             name: ""
-            PropertyChanges { target: textItem; x: 0 }
+            PropertyChanges {
+                target: textItem
+                x: 0
+            }
         },
         State {
             name: "ShowRight"
-            PropertyChanges { target: textItem; x: textWrapper.width - textItem.implicitWidth }
+            PropertyChanges {
+                target: textItem
+                x: textWrapper.width - textItem.implicitWidth
+            }
         }
     ]
 
     transitions: Transition {
         to: "ShowRight"
         NumberAnimation {
-            target: textItem; properties: "x";
+            target: textItem
+            properties: "x"
             easing.type: Easing.Linear;
-            duration: Math.abs(textItem.implicitWidth - textWrapper.width)*25
+            duration: Math.abs(textItem.implicitWidth - textWrapper.width) * 25
         }
     }
 }

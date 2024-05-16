@@ -66,12 +66,8 @@ PlasmaCore.ToolTipArea {
     property bool completed: false
     readonly property bool audioIndicatorsEnabled: Plasmoid.configuration.indicateAudioStreams
     readonly property bool hasAudioStream: audioStreams.length > 0
-    readonly property bool playingAudio: hasAudioStream && audioStreams.some(function (item) {
-        return !item.corked
-    })
-    readonly property bool muted: hasAudioStream && audioStreams.every(function (item) {
-        return item.muted
-    })
+    readonly property bool playingAudio: hasAudioStream && audioStreams.some(item => !item.corked)
+    readonly property bool muted: hasAudioStream && audioStreams.every(item => item.muted)
 
     readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
         || (task.contextMenu && task.contextMenu.status === PlasmaExtras.Menu.Open)
@@ -187,20 +183,22 @@ PlasmaCore.ToolTipArea {
     Accessible.onPressAction: leftTapHandler.leftClick()
 
     onToolTipVisibleChanged: toolTipVisible => {
-                                 task.toolTipOpen = toolTipVisible;
-                                 if (!toolTipVisible) {
-                                     tasksRoot.toolTipOpenedByClick = null;
-                                 } else {
-                                     tasksRoot.toolTipAreaItem = task;
-                                 }
-                             }
+        task.toolTipOpen = toolTipVisible;
+        if (!toolTipVisible) {
+            tasksRoot.toolTipOpenedByClick = null;
+        } else {
+            tasksRoot.toolTipAreaItem = task;
+        }
+    }
 
-    onContainsMouseChanged: if (containsMouse) {
-                                task.forceActiveFocus(Qt.MouseFocusReason);
-                                task.updateMainItemBindings();
-                            } else {
-                                tasksRoot.toolTipOpenedByClick = null;
-                            }
+    onContainsMouseChanged: {
+        if (containsMouse) {
+            task.forceActiveFocus(Qt.MouseFocusReason);
+            task.updateMainItemBindings();
+        } else {
+            tasksRoot.toolTipOpenedByClick = null;
+        }
+    }
 
     onHighlightedChanged: {
         // ensure it doesn't get stuck with a window highlighted
@@ -286,18 +284,19 @@ TaskManagerApplet.SmartLauncherItem { }
         }
     }
 
-    function modelIndex() {
-        return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.index, index)
-                        : tasksModel.makeModelIndex(index));
+    function modelIndex(): /*QModelIndex*/ var {
+        return inPopup
+            ? tasksModel.makeModelIndex(groupDialog.visualParent.index, index)
+            : tasksModel.makeModelIndex(index);
     }
 
-    function showContextMenu(args) {
+    function showContextMenu(args: var): void {
         task.hideImmediately();
         contextMenu = tasksRoot.createContextMenu(task, modelIndex(), args);
         contextMenu.show();
     }
 
-    function updateAudioStreams(args) {
+    function updateAudioStreams(args: var): void {
         if (args) {
             // When the task just appeared (e.g. virtual desktop switch), show the audio indicator
             // right away. Only when audio streams change during the lifetime of this task, delay
@@ -332,23 +331,25 @@ TaskManagerApplet.SmartLauncherItem { }
         task.audioStreams = streams;
     }
 
-    function toggleMuted() {
+    function toggleMuted(): void {
         if (muted) {
-            task.audioStreams.forEach(function (item) { item.unmute(); });
+            task.audioStreams.forEach(item => item.unmute());
         } else {
-            task.audioStreams.forEach(function (item) { item.mute(); });
+            task.audioStreams.forEach(item => item.mute());
         }
     }
 
     // Will also be called in activateTaskAtIndex(index)
-    function updateMainItemBindings() {
-        if ((mainItem.parentTask === task && mainItem.rootIndex.row === task.index) || (tasksRoot.toolTipOpenedByClick === null && !task.active) || (tasksRoot.toolTipOpenedByClick !== null && tasksRoot.toolTipOpenedByClick !== task)) {
+    function updateMainItemBindings(): void {
+        if ((mainItem.parentTask === this && mainItem.rootIndex.row === index)
+            || (tasksRoot.toolTipOpenedByClick === null && !active)
+            || (tasksRoot.toolTipOpenedByClick !== null && tasksRoot.toolTipOpenedByClick !== this)) {
             return;
         }
 
         mainItem.blockingUpdates = (mainItem.isGroup !== model.IsGroupParent); // BUG 464597 Force unload the previous component
 
-        mainItem.parentTask = task;
+        mainItem.parentTask = this;
         mainItem.rootIndex = tasksModel.makeModelIndex(index, -1);
 
         mainItem.appName = Qt.binding(() => model.AppName);
@@ -365,17 +366,17 @@ TaskManagerApplet.SmartLauncherItem { }
         mainItem.isOnAllVirtualDesktopsParent = Qt.binding(() => model.IsOnAllVirtualDesktops);
         mainItem.activitiesParent = Qt.binding(() => model.Activities);
 
-        mainItem.smartLauncherCountVisible = Qt.binding(() => task.smartLauncherItem && task.smartLauncherItem.countVisible);
-        mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? task.smartLauncherItem.count : 0);
+        mainItem.smartLauncherCountVisible = Qt.binding(() => smartLauncherItem?.countVisible ?? false);
+        mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? smartLauncherItem.count : 0);
 
         mainItem.blockingUpdates = false;
-        tasksRoot.toolTipAreaItem = task;
+        tasksRoot.toolTipAreaItem = this;
     }
 
     Connections {
         target: pulseAudio.item
         ignoreUnknownSignals: true // Plasma-PA might not be available
-        function onStreamsChanged() {
+        function onStreamsChanged(): void {
             task.updateAudioStreams({delay: true})
         }
     }
@@ -424,34 +425,34 @@ TaskManagerApplet.SmartLauncherItem { }
     TapHandler {
         acceptedButtons: Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
         onTapped: (eventPoint, button) => {
-                      if (button === Qt.MiddleButton) {
-                          if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
-                              tasksModel.requestNewInstance(modelIndex());
-                          } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
-                              tasksRoot.taskClosedWithMouseMiddleButton = model.WinIdList.slice()
-                              tasksModel.requestClose(modelIndex());
-                          } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
-                              tasksModel.requestToggleMinimized(modelIndex());
-                          } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
-                              tasksModel.requestToggleGrouping(modelIndex());
-                          } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.BringToCurrentDesktop) {
-                              tasksModel.requestVirtualDesktops(modelIndex(), [virtualDesktopInfo.currentDesktop]);
-                          }
-                      } else if (button === Qt.BackButton || button === Qt.ForwardButton) {
-                          const playerData = mpris2Source.playerForLauncherUrl(model.LauncherUrlWithoutIcon, model.AppPid);
-                          if (playerData) {
-                              if (button === Qt.BackButton) {
-                                  playerData.Previous();
-                              } else {
-                                  playerData.Next();
-                              }
-                          } else {
-                              eventPoint.accepted = false;
-                          }
-                      }
+            if (button === Qt.MiddleButton) {
+                if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
+                    tasksModel.requestNewInstance(modelIndex());
+                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
+                    tasksRoot.taskClosedWithMouseMiddleButton = model.WinIdList.slice()
+                    tasksModel.requestClose(modelIndex());
+                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
+                    tasksModel.requestToggleMinimized(modelIndex());
+                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
+                    tasksModel.requestToggleGrouping(modelIndex());
+                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.BringToCurrentDesktop) {
+                    tasksModel.requestVirtualDesktops(modelIndex(), [virtualDesktopInfo.currentDesktop]);
+                }
+            } else if (button === Qt.BackButton || button === Qt.ForwardButton) {
+                const playerData = mpris2Source.playerForLauncherUrl(model.LauncherUrlWithoutIcon, model.AppPid);
+                if (playerData) {
+                    if (button === Qt.BackButton) {
+                        playerData.Previous();
+                    } else {
+                        playerData.Next();
+                    }
+                } else {
+                    eventPoint.accepted = false;
+                }
+            }
 
-                      backend.cancelHighlightWindows();
-                  }
+            backend.cancelHighlightWindows();
+        }
     }
 
     KSvg.FrameSvgItem {
@@ -476,7 +477,7 @@ TaskManagerApplet.SmartLauncherItem { }
             id: dragHandler
             grabPermissions: PointerHandler.TakeOverForbidden
 
-            function setRequestedInhibitDnd(value) {
+            function setRequestedInhibitDnd(value: bool): void {
                 // This is modifying the value in the panel containment that
                 // inhibits accepting drag and drop, so that we don't accidentally
                 // drop the task on this panel.
@@ -489,27 +490,29 @@ TaskManagerApplet.SmartLauncherItem { }
                 }
             }
 
-            onActiveChanged: if (active) {
-                                 icon.grabToImage((result) => {
-                                                      if (!dragHandler.active) {
-                                                          // BUG 466675 grabToImage is async, so avoid updating dragSource when active is false
-                                                          return;
-                                                      }
-                                                      setRequestedInhibitDnd(true);
-                                                      tasksRoot.dragSource = task;
-                                                      dragHelper.Drag.imageSource = result.url;
-                                                      dragHelper.Drag.mimeData = {
-                                                          "text/x-orgkdeplasmataskmanager_taskurl": backend.tryDecodeApplicationsUrl(model.LauncherUrlWithoutIcon).toString(),
-                                                          [model.MimeType]: model.MimeData,
-                                                          "application/x-orgkdeplasmataskmanager_taskbuttonitem": model.MimeData,
-                                                      };
-                                                      dragHelper.Drag.active = dragHandler.active;
-                                                  });
-                             } else {
-                                 setRequestedInhibitDnd(false);
-                                 dragHelper.Drag.active = false;
-                                 dragHelper.Drag.imageSource = "";
-                             }
+            onActiveChanged: {
+                if (active) {
+                    icon.grabToImage(result => {
+                        if (!dragHandler.active) {
+                            // BUG 466675 grabToImage is async, so avoid updating dragSource when active is false
+                            return;
+                        }
+                        setRequestedInhibitDnd(true);
+                        tasksRoot.dragSource = task;
+                        dragHelper.Drag.imageSource = result.url;
+                        dragHelper.Drag.mimeData = {
+                            "text/x-orgkdeplasmataskmanager_taskurl": backend.tryDecodeApplicationsUrl(model.LauncherUrlWithoutIcon).toString(),
+                            [model.MimeType]: model.MimeData,
+                            "application/x-orgkdeplasmataskmanager_taskbuttonitem": model.MimeData,
+                        };
+                        dragHelper.Drag.active = dragHandler.active;
+                    });
+                } else {
+                    setRequestedInhibitDnd(false);
+                    dragHelper.Drag.active = false;
+                    dragHelper.Drag.imageSource = "";
+                }
+            }
         }
     }
 
@@ -542,12 +545,12 @@ TaskManagerApplet.SmartLauncherItem { }
                 && task.smartLauncherItem && task.smartLauncherItem.countVisible
         source: "TaskBadgeOverlay.qml"
 
-        function adjustMargin(vert, size, margin) {
+        function adjustMargin(isVertical: bool, size: real, margin: real): real {
             if (!size) {
                 return margin;
             }
 
-            var margins = vert ? LayoutMetrics.horizontalMargins() : LayoutMetrics.verticalMargins();
+            var margins = isVertical ? LayoutMetrics.horizontalMargins() : LayoutMetrics.verticalMargins();
 
             if ((size - margins) < Kirigami.Units.iconSizes.small) {
                 return Math.ceil((margin * (Kirigami.Units.iconSizes.small / size)) / 2);
@@ -583,8 +586,9 @@ TaskManagerApplet.SmartLauncherItem { }
                 PropertyChanges {
                     target: iconBox
                     anchors.leftMargin: 0
-                    width: Math.min(task.parent.minimumWidth, tasks.height) - adjustMargin(true, task.width, taskFrame.margins.left)
-                                        - adjustMargin(true, task.width, taskFrame.margins.right)
+                    width: Math.min(task.parent.minimumWidth, tasks.height)
+                        - adjustMargin(true, task.width, taskFrame.margins.left)
+                        - adjustMargin(true, task.width, taskFrame.margins.right)
                 }
             }
         ]
@@ -612,7 +616,7 @@ TaskManagerApplet.SmartLauncherItem { }
             bottomMargin: taskFrame.margins.bottom
         }
 
-        wrapMode: (maximumLineCount == 1) ? Text.NoWrap : Text.Wrap
+        wrapMode: (maximumLineCount === 1) ? Text.NoWrap : Text.Wrap
         elide: Text.ElideRight
         textFormat: Text.PlainText
         verticalAlignment: Text.AlignVCenter
@@ -673,7 +677,7 @@ TaskManagerApplet.SmartLauncherItem { }
 
     Component.onCompleted: {
         if (!inPopup && model.IsWindow) {
-            var component = Qt.createComponent("GroupExpanderOverlay.qml");
+            const component = Qt.createComponent("GroupExpanderOverlay.qml");
             component.createObject(task);
             component.destroy();
             updateAudioStreams({delay: false});
@@ -686,7 +690,7 @@ TaskManagerApplet.SmartLauncherItem { }
     }
     Component.onDestruction: {
         if (moveAnim.running) {
-            task.parent.animationsRunning -= 1;
+            (task.parent as TaskList).animationsRunning -= 1;
         }
     }
 }

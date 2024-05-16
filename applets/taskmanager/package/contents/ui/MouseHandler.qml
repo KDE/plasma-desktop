@@ -60,8 +60,9 @@ DropArea {
         // by tracking the cursor movement vector and allowing the drag if
         // the movement direction has reversed, establishing user intent to
         // move back.
-        if (!Plasmoid.configuration.separateLaunchers && tasks.dragSource != null
-                && tasks.dragSource.model.IsLauncher && !above.model.IsLauncher
+        if (!Plasmoid.configuration.separateLaunchers
+                && tasks.dragSource?.model.IsLauncher
+                && !above.model.IsLauncher
                 && above === ignoredItem) {
             return;
         } else {
@@ -74,10 +75,10 @@ DropArea {
                 return;
             }
 
-            var insertAt = above.index;
+            const insertAt = above.index;
 
             if (tasks.dragSource !== above && tasks.dragSource.index !== insertAt) {
-                if (!!tasks.groupDialog) {
+                if (tasks.groupDialog) {
                     tasksModel.move(tasks.dragSource.index, insertAt,
                         tasksModel.makeModelIndex(tasks.groupDialog.visualParent.index));
                 } else {
@@ -120,7 +121,7 @@ DropArea {
     Connections {
         target: tasks
 
-        function onDragSourceChanged() {
+        function onDragSourceChanged(): void {
             if (!dragSource) {
                 ignoredItem = null;
                 ignoreItemTimer.stop();

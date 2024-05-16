@@ -41,7 +41,7 @@ RowLayout {
                 width: parent.width
                 height: undefined
                 lineHeight: 1
-                maximumLineCount: artistText.visible? 1 : 2
+                maximumLineCount: artistText.visible ? 1 : 2
                 wrapMode: Text.NoWrap
                 elide: parent.state ? Text.ElideNone : Text.ElideRight
                 text: toolTipDelegate.playerData.track

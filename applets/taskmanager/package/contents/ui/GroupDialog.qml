@@ -35,7 +35,7 @@ PlasmaCore.Dialog {
     property alias overflowing: scrollView.overflowing
     property var _oldAppletStatus: PlasmaCore.Types.UnknownStatus
 
-    function findActiveTaskIndex() {
+    function findActiveTaskIndex(): void {
         if (!tasksModel.activeTask) {
             return;
         }
@@ -61,7 +61,7 @@ PlasmaCore.Dialog {
             groupDialog.visible = false;
         }
 
-        function moveRow(event, insertAt) {
+        function moveRow(event: KeyEvent, insertAt: int): void {
             if (!(event.modifiers & Qt.ControlModifier) || !(event.modifiers & Qt.ShiftModifier)) {
                 event.accepted = false;
                 return;
@@ -112,7 +112,7 @@ PlasmaCore.Dialog {
                         Connections {
                             enabled: index < 20 // 20 is based on performance considerations.
 
-                            function onLabelTextChanged() { // ListView.onAdd included
+                            function onLabelTextChanged(): void { // ListView.onAdd included
                                 if (groupFilter.maxTextWidth === 0) {
                                     // Update immediately to avoid shrinking
                                     groupFilter.updateMaxTextWidth();
@@ -123,7 +123,7 @@ PlasmaCore.Dialog {
                         }
                     }
 
-                    function updateMaxTextWidth() {
+                    function updateMaxTextWidth(): void {
                         let tempMaxTextWidth = 0;
                         // 20 is based on performance considerations.
                         for (let i = 0; i < Math.min(count, 20); i++) {

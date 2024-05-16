@@ -52,24 +52,24 @@ PlasmoidItem {
     Plasmoid.constraintHints: Plasmoid.CanFillArea
 
     Plasmoid.onUserConfiguringChanged: {
-        if (Plasmoid.userConfiguring && !!tasks.groupDialog) {
-            tasks.groupDialog.visible = false;
+        if (Plasmoid.userConfiguring && groupDialog !== null) {
+            groupDialog.visible = false;
         }
     }
 
-    Layout.fillWidth: tasks.vertical ? true : Plasmoid.configuration.fill
-    Layout.fillHeight: !tasks.vertical ? true : Plasmoid.configuration.fill
+    Layout.fillWidth: vertical ? true : Plasmoid.configuration.fill
+    Layout.fillHeight: !vertical ? true : Plasmoid.configuration.fill
     Layout.minimumWidth: {
         if (shouldShrinkToZero) {
             return Kirigami.Units.gridUnit; // For edit mode
         }
-        return tasks.vertical ? 0 : LayoutMetrics.preferredMinWidth();
+        return vertical ? 0 : LayoutMetrics.preferredMinWidth();
     }
     Layout.minimumHeight: {
         if (shouldShrinkToZero) {
             return Kirigami.Units.gridUnit; // For edit mode
         }
-        return !tasks.vertical ? 0 : LayoutMetrics.preferredMinHeight();
+        return !vertical ? 0 : LayoutMetrics.preferredMinHeight();
     }
 
 //BEGIN TODO: this is not precise enough: launchers are smaller than full tasks
@@ -77,7 +77,7 @@ PlasmoidItem {
         if (shouldShrinkToZero) {
             return 0.01;
         }
-        if (tasks.vertical) {
+        if (vertical) {
             return Kirigami.Units.gridUnit * 10;
         }
         return taskList.Layout.maximumWidth
@@ -86,34 +86,34 @@ PlasmoidItem {
         if (shouldShrinkToZero) {
             return 0.01;
         }
-        if (tasks.vertical) {
+        if (vertical) {
             return taskList.Layout.maximumHeight
         }
         return Kirigami.Units.gridUnit * 2;
     }
 //END TODO
 
-    property Item dragSource: null
+    property Item dragSource
 
     signal requestLayout
-    signal windowsHovered(variant winIds, bool hovered)
-    signal activateWindowView(variant winIds)
+    signal windowsHovered(var winIds, bool hovered)
+    signal activateWindowView(var winIds)
 
     onDragSourceChanged: {
-        if (dragSource == null) {
+        if (dragSource === null) {
             tasksModel.syncLaunchers();
         }
     }
 
-    function publishIconGeometries(taskItems) {
+    function publishIconGeometries(taskItems: /*list<Item>*/var): void {
         if (TaskTools.taskManagerInstanceCount >= 2) {
             return;
         }
-        for (var i = 0; i < taskItems.length - 1; ++i) {
-            var task = taskItems[i];
+        for (let i = 0; i < taskItems.length - 1; ++i) {
+            const task = taskItems[i];
 
             if (!task.model.IsLauncher && !task.model.IsStartup) {
-                tasks.tasksModel.requestPublishDelegateGeometry(tasks.tasksModel.makeModelIndex(task.index),
+                tasksModel.requestPublishDelegateGeometry(tasksModel.makeModelIndex(task.index),
                     backend.globalRect(task), task);
             }
         }
@@ -127,10 +127,10 @@ PlasmoidItem {
                 return launcherCount;
             }
 
-            var startupsWithLaunchers = 0;
+            let startupsWithLaunchers = 0;
 
-            for (var i = 0; i < taskRepeater.count; ++i) {
-                var item = taskRepeater.itemAt(i);
+            for (let i = 0; i < taskRepeater.count; ++i) {
+                const item = taskRepeater.itemAt(i);
 
                 // During destruction required properties such as item.model can go null for a while,
                 // so in paths that can trigger on those moments, they need to be guarded
@@ -180,29 +180,29 @@ PlasmoidItem {
             Plasmoid.configuration.groupingLauncherUrlBlacklist = groupingLauncherUrlBlacklist;
         }
 
-        function sortModeEnumValue(index) {
+        function sortModeEnumValue(index: int): /*TaskManager.TasksModel.SortMode*/ int {
             switch (index) {
-                case 0:
-                    return TaskManager.TasksModel.SortDisabled;
-                case 1:
-                    return TaskManager.TasksModel.SortManual;
-                case 2:
-                    return TaskManager.TasksModel.SortAlpha;
-                case 3:
-                    return TaskManager.TasksModel.SortVirtualDesktop;
-                case 4:
-                    return TaskManager.TasksModel.SortActivity;
-                default:
-                    return TaskManager.TasksModel.SortDisabled;
+            case 0:
+                return TaskManager.TasksModel.SortDisabled;
+            case 1:
+                return TaskManager.TasksModel.SortManual;
+            case 2:
+                return TaskManager.TasksModel.SortAlpha;
+            case 3:
+                return TaskManager.TasksModel.SortVirtualDesktop;
+            case 4:
+                return TaskManager.TasksModel.SortActivity;
+            default:
+                return TaskManager.TasksModel.SortDisabled;
             }
         }
 
-        function groupModeEnumValue(index) {
+        function groupModeEnumValue(index: int): /*TaskManager.TasksModel.GroupMode*/ int {
             switch (index) {
-                case 0:
-                    return TaskManager.TasksModel.GroupDisabled;
-                case 1:
-                    return TaskManager.TasksModel.GroupApplications;
+            case 0:
+                return TaskManager.TasksModel.GroupDisabled;
+            case 1:
+                return TaskManager.TasksModel.GroupApplications;
             }
         }
 
@@ -231,7 +231,7 @@ PlasmoidItem {
         watchedService: "org.kde.KWin.Effect.WindowView1"
     }
 
-    property Component taskInitComponent: Component {
+    readonly property Component taskInitComponent: Component {
         Timer {
             id: timer
 
@@ -248,7 +248,7 @@ PlasmoidItem {
     Connections {
         target: Plasmoid
 
-        function onLocationChanged() {
+        function onLocationChanged(): void {
             if (TaskTools.taskManagerInstanceCount >= 2) {
                 return;
             }
@@ -262,7 +262,7 @@ PlasmoidItem {
     Connections {
         target: Plasmoid.containment
 
-        function onScreenGeometryChanged() {
+        function onScreenGeometryChanged(): void {
             iconGeometryTimer.start();
         }
     }
@@ -311,13 +311,13 @@ PlasmoidItem {
         Connections {
             target: Plasmoid.configuration
 
-            function onLaunchersChanged() {
+            function onLaunchersChanged(): void {
                 tasksModel.launcherList = Plasmoid.configuration.launchers
             }
-            function onGroupingAppIdBlacklistChanged() {
+            function onGroupingAppIdBlacklistChanged(): void {
                 tasksModel.groupingAppIdBlacklist = Plasmoid.configuration.groupingAppIdBlacklist;
             }
-            function onGroupingLauncherUrlBlacklistChanged() {
+            function onGroupingLauncherUrlBlacklistChanged(): void {
                 tasksModel.groupingLauncherUrlBlacklist = Plasmoid.configuration.groupingLauncherUrlBlacklist;
             }
         }
@@ -341,9 +341,9 @@ PlasmoidItem {
         KSvg.FrameSvgItem {
             id: taskFrame
 
-            visible: false;
+            visible: false
 
-            imagePath: "widgets/tasks";
+            imagePath: "widgets/tasks"
             prefix: TaskTools.taskPrefix("normal", Plasmoid.location)
         }
 
@@ -354,16 +354,12 @@ PlasmoidItem {
 
             target: taskList
 
-            onUrlsDropped: (urls) => {
+            onUrlsDropped: urls => {
                 // If all dropped URLs point to application desktop files, we'll add a launcher for each of them.
-                var createLaunchers = urls.every(function (item) {
-                    return backend.isApplication(item)
-                });
+                const createLaunchers = urls.every(item => backend.isApplication(item));
 
                 if (createLaunchers) {
-                    urls.forEach(function (item) {
-                        addLauncher(item);
-                    });
+                    urls.forEach(item => addLauncher(item));
                     return;
                 }
 
@@ -395,16 +391,16 @@ PlasmoidItem {
 
             edge: {
                 switch (Plasmoid.location) {
-                    case PlasmaCore.Types.BottomEdge:
-                        return Qt.TopEdge;
-                    case PlasmaCore.Types.TopEdge:
-                        return Qt.BottomEdge;
-                    case PlasmaCore.Types.LeftEdge:
-                        return Qt.RightEdge;
-                    case PlasmaCore.Types.RightEdge:
-                        return Qt.LeftEdge;
-                    default:
-                        return Qt.TopEdge;
+                case PlasmaCore.Types.BottomEdge:
+                    return Qt.TopEdge;
+                case PlasmaCore.Types.TopEdge:
+                    return Qt.BottomEdge;
+                case PlasmaCore.Types.LeftEdge:
+                    return Qt.RightEdge;
+                case PlasmaCore.Types.RightEdge:
+                    return Qt.LeftEdge;
+                default:
+                    return Qt.TopEdge;
                 }
             }
 
@@ -497,9 +493,9 @@ PlasmoidItem {
                         tasksRoot: tasks
                     }
                     onItemRemoved: (index, item) => {
-                        if (tasks.containsMouse && index != taskRepeater.count &&
+                        if (tasks.containsMouse && index !== taskRepeater.count &&
                             item.model.WinIdList.length > 0 &&
-                            taskClosedWithMouseMiddleButton.indexOf(item.winIdList[0]) > -1) {
+                            taskClosedWithMouseMiddleButton.includes(item.winIdList[0])) {
                             needLayoutRefresh = true;
                         }
                         taskClosedWithMouseMiddleButton = [];
@@ -510,35 +506,36 @@ PlasmoidItem {
     }
 
     readonly property Component groupDialogComponent: Qt.createComponent("GroupDialog.qml")
-    property GroupDialog groupDialog: null
+    property GroupDialog groupDialog
 
     readonly property bool supportsLaunchers: true
 
-    function hasLauncher(url) {
-        return tasksModel.launcherPosition(url) != -1;
+    function hasLauncher(url: url): bool {
+        return tasksModel.launcherPosition(url) !== -1;
     }
 
-    function addLauncher(url) {
+    function addLauncher(url: url): void {
         if (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
             tasksModel.requestAddLauncher(url);
         }
     }
 
-    function removeLauncher(url) {
+    function removeLauncher(url: url): void {
         if (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
             tasksModel.requestRemoveLauncher(url);
         }
     }
 
     // This is called by plasmashell in response to a Meta+number shortcut.
-    function activateTaskAtIndex(index) {
+    // TODO: Change type to int
+    function activateTaskAtIndex(index: var): void {
         if (typeof index !== "number") {
             return;
         }
 
-        var task = taskRepeater.itemAt(index);
+        const task = taskRepeater.itemAt(index);
         if (task) {
-            TaskTools.activateTask(task.modelIndex(), task.model, null, task, Plasmoid, tasks, effectWatcher.registered);
+            TaskTools.activateTask(task.modelIndex(), task.model, null, task, Plasmoid, this, effectWatcher.registered);
         }
     }
 
@@ -554,9 +551,9 @@ PlasmoidItem {
 
     Component.onCompleted: {
         TaskTools.taskManagerInstanceCount += 1;
-        tasks.requestLayout.connect(iconGeometryTimer.restart);
-        tasks.windowsHovered.connect(backend.windowsHovered);
-        tasks.activateWindowView.connect(backend.activateWindowView);
+        requestLayout.connect(iconGeometryTimer.restart);
+        windowsHovered.connect(backend.windowsHovered);
+        activateWindowView.connect(backend.activateWindowView);
     }
 
     Component.onDestruction: {

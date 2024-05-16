@@ -68,17 +68,17 @@ KSvg.SvgItem {
     imagePath: "widgets/tasks"
     elementId: elementForLocation()
 
-    function elementForLocation() {
+    function elementForLocation(): string {
         switch (Plasmoid.location) {
-            case PlasmaCore.Types.LeftEdge:
-                return "group-expander-left";
-            case PlasmaCore.Types.TopEdge:
-                return "group-expander-top";
-            case PlasmaCore.Types.RightEdge:
-                return "group-expander-right";
-            case PlasmaCore.Types.BottomEdge:
-            default:
-                return "group-expander-bottom";
+        case PlasmaCore.Types.LeftEdge:
+            return "group-expander-left";
+        case PlasmaCore.Types.TopEdge:
+            return "group-expander-top";
+        case PlasmaCore.Types.RightEdge:
+            return "group-expander-right";
+        case PlasmaCore.Types.BottomEdge:
+        default:
+            return "group-expander-bottom";
         }
     }
 }

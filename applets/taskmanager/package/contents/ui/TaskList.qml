@@ -21,20 +21,18 @@ GridLayout {
 
     rowSpacing: 0
     columnSpacing: 0
+
     property int animationsRunning: 0
-    onAnimationsRunningChanged: animating = animationsRunning > 0
-    property real minimumWidth: {
-        let min = Infinity;
-        for (let item of children) {
-            if (item.visible && item.width > 0 && item.width < min) {
-                min = item.width;
-            }
-        }
-        return min;
+    onAnimationsRunningChanged: {
+        animating = animationsRunning > 0;
     }
 
+    readonly property real minimumWidth: children
+        .filter(item => item.visible && item.width > 0)
+        .reduce((minimumWidth, item) => Math.min(minimumWidth, item.width), Infinity)
+
     readonly property int stripeCount: {
-        if (tasks.plasmoid.configuration.maxStripes == 1) {
+        if (tasks.plasmoid.configuration.maxStripes === 1) {
             return 1;
         }
 
