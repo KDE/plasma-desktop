@@ -5,17 +5,17 @@
 */
 
 import QtQuick
-import QtQuick.Controls
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
-import org.kde.kcmutils as KCM
 
 import org.kde.plasma.workspace.dbus as DBus
 
-KCM.SimpleKCM {
+KCMUtils.SimpleKCM {
     property alias cfg_groupingStrategy: groupingStrategy.currentIndex
     property alias cfg_groupedTaskVisualization: groupedTaskVisualization.currentIndex
     property alias cfg_groupPopups: groupPopups.checked
@@ -44,7 +44,7 @@ KCM.SimpleKCM {
         anchors.left: parent.left
         anchors.right: parent.right
 
-        ComboBox {
+        QQC2.ComboBox {
             id: groupingStrategy
             Kirigami.FormData.label: i18n("Group:")
             Layout.fillWidth: true
@@ -52,7 +52,7 @@ KCM.SimpleKCM {
             model: [i18n("Do not group"), i18n("By program name")]
         }
 
-        ComboBox {
+        QQC2.ComboBox {
             id: groupedTaskVisualization
             Kirigami.FormData.label: i18n("Clicking grouped task:")
             Layout.fillWidth: true
@@ -82,14 +82,14 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: groupPopups
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Combine into single button")
             enabled: groupingStrategy.currentIndex > 0
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: onlyGroupWhenFull
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Group only when the Task Manager is full")
@@ -102,7 +102,7 @@ KCM.SimpleKCM {
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
         }
 
-        ComboBox {
+        QQC2.ComboBox {
             id: sortingStrategy
             Kirigami.FormData.label: i18n("Sort:")
             Layout.fillWidth: true
@@ -110,14 +110,14 @@ KCM.SimpleKCM {
             model: [i18n("Do not sort"), i18n("Manually"), i18n("Alphabetically"), i18n("By desktop"), i18n("By activity")]
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: separateLaunchers
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Keep launchers separate")
             enabled: sortingStrategy.currentIndex === 1
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: hideLauncherOnStart
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18n("Hide launchers after application startup")
@@ -128,13 +128,13 @@ KCM.SimpleKCM {
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: minimizeActive
             Kirigami.FormData.label: i18nc("Part of a sentence: 'Clicking active task minimizes the task'", "Clicking active task:")
             text: i18nc("Part of a sentence: 'Clicking active task minimizes the task'", "Minimizes the task")
         }
 
-        ComboBox {
+        QQC2.ComboBox {
             id: middleClickAction
             Kirigami.FormData.label: i18n("Middle-clicking any task:")
             Layout.fillWidth: true
@@ -153,7 +153,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: wheelEnabled
             Kirigami.FormData.label: i18nc("Part of a sentence: 'Mouse wheel cycles through tasks'", "Mouse wheel:")
             text: i18nc("Part of a sentence: 'Mouse wheel cycles through tasks'", "Cycles through tasks")
@@ -161,9 +161,9 @@ KCM.SimpleKCM {
 
         RowLayout {
             // HACK: Workaround for Kirigami bug 434625
-            // due to which a simple Layout.leftMargin on CheckBox doesn't work
+            // due to which a simple Layout.leftMargin on QQC2.CheckBox doesn't work
             Item { implicitWidth: Kirigami.Units.gridUnit }
-            CheckBox {
+            QQC2.CheckBox {
                 id: wheelSkipMinimized
                 text: i18n("Skip minimized tasks")
                 enabled: wheelEnabled.checked
@@ -174,23 +174,23 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: showOnlyCurrentScreen
             Kirigami.FormData.label: i18n("Show only tasks:")
             text: i18n("From current screen")
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: showOnlyCurrentDesktop
             text: i18n("From current desktop")
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: showOnlyCurrentActivity
             text: i18n("From current activity")
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: showOnlyMinimized
             text: i18n("That are minimized")
         }
@@ -199,7 +199,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: unhideOnAttention
             Kirigami.FormData.label: i18n("When panel is hidden:")
             text: i18n("Unhide when a window wants attention")
@@ -209,11 +209,11 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        ButtonGroup {
+        QQC2.ButtonGroup {
             id: reverseModeRadioButtonGroup
         }
 
-        RadioButton {
+        QQC2.RadioButton {
             Kirigami.FormData.label: i18n("New tasks appear:")
             checked: !reverseMode.checked
             text: {
@@ -227,11 +227,11 @@ KCM.SimpleKCM {
                     return i18n("To the left")
                 }
             }
-            ButtonGroup.group: reverseModeRadioButtonGroup
+            QQC2.ButtonGroup.group: reverseModeRadioButtonGroup
             visible: reverseMode.visible
         }
 
-        RadioButton {
+        QQC2.RadioButton {
             id: reverseMode
             checked: Plasmoid.configuration.reverseMode === true
             text: {
@@ -245,7 +245,7 @@ KCM.SimpleKCM {
                     return i18n("To the right");
                 }
             }
-            ButtonGroup.group: reverseModeRadioButtonGroup
+            QQC2.ButtonGroup.group: reverseModeRadioButtonGroup
         }
 
     }

@@ -5,15 +5,15 @@
 */
 
 import QtQuick
-import QtQuick.Controls
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
-import org.kde.kcmutils as KCM
 
-KCM.SimpleKCM {
+KCMUtils.SimpleKCM {
     readonly property bool plasmaPaAvailable: Qt.createComponent("PulseAudio.qml").status === Component.Ready
     readonly property bool plasmoidVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool iconOnly: Plasmoid.pluginName === "org.kde.plasma.icontasks"
@@ -41,18 +41,18 @@ KCM.SimpleKCM {
         }
     }
     Kirigami.FormLayout {
-        CheckBox {
+        QQC2.CheckBox {
             id: showToolTips
             Kirigami.FormData.label: i18n("General:")
             text: i18n("Show small window previews when hovering over Tasks")
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: highlightWindows
             text: i18n("Hide other windows when hovering over previews")
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: indicateAudioStreams
             text: i18n("Mark applications that play audio")
             checked: cfg_indicateAudioStreams && plasmaPaAvailable
@@ -60,7 +60,7 @@ KCM.SimpleKCM {
             enabled: plasmaPaAvailable
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: fill
             text: i18nc("@option:check", "Fill free space on Panel")
         }
@@ -70,7 +70,7 @@ KCM.SimpleKCM {
             visible: !iconOnly
         }
 
-        ComboBox {
+        QQC2.ComboBox {
             id: taskMaxWidth
             visible: !iconOnly && !plasmoidVertical
 
@@ -87,7 +87,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        RadioButton {
+        QQC2.RadioButton {
             id: forbidStripes
             Kirigami.FormData.label: plasmoidVertical ? i18nc("@option: radio", "Use multi-column view:") : i18nc("@option:radio", "Use multi-row view:")
             onToggled: {
@@ -98,7 +98,7 @@ KCM.SimpleKCM {
             text: i18nc("Never use multi-column view for Task Manager", "Never")
         }
 
-        RadioButton {
+        QQC2.RadioButton {
             id: allowStripes
             onToggled: {
                 if (checked) {
@@ -108,7 +108,7 @@ KCM.SimpleKCM {
             text: i18nc("When to use multi-row view in Task Manager", "When Panel is low on space and thick enough")
         }
 
-        RadioButton {
+        QQC2.RadioButton {
             id: forceStripes
             onToggled: {
                 if (checked) {
@@ -118,7 +118,7 @@ KCM.SimpleKCM {
             text: i18nc("When to use multi-row view in Task Manager", "Always when Panel is thick enough")
         }
 
-        SpinBox {
+        QQC2.SpinBox {
             id: maxStripes
             enabled: maxStripes.value > 1
             Kirigami.FormData.label: plasmoidVertical ? i18nc("@label:spinbox", "Maximum columns:") : i18nc("@label:spinbox", "Maximum rows:")
@@ -129,7 +129,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        ComboBox {
+        QQC2.ComboBox {
             visible: iconOnly
             Kirigami.FormData.label: i18n("Spacing between icons:")
 
@@ -167,7 +167,7 @@ KCM.SimpleKCM {
             }
         }
 
-        Label {
+        QQC2.Label {
             visible: Kirigami.Settings.tabletMode
             text: i18nc("@info:usagetip under a set of radio buttons when Touch Mode is on", "Automatically set to Large when in Touch Mode")
             font: Kirigami.Theme.smallFont

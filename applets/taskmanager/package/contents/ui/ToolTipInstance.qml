@@ -10,7 +10,7 @@
 
 import QtQuick
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import Qt5Compat.GraphicalEffects as GE
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
@@ -242,7 +242,7 @@ ColumnLayout {
             visible: active
             anchors.fill: pipeWireLoader.active ? pipeWireLoader : thumbnailLoader
 
-            sourceComponent: DropShadow {
+            sourceComponent: GE.DropShadow {
                 horizontalOffset: 0
                 verticalOffset: 3
                 radius: 8
@@ -268,7 +268,7 @@ ColumnLayout {
                 height: Math.round(source.paintedHeight * scaleFactor)
                 layer.enabled: true
                 opacity: 0.25
-                layer.effect: FastBlur {
+                layer.effect: GE.FastBlur {
                     source: albumArtBackground
                     anchors.fill: source
                     radius: 30
