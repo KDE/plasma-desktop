@@ -614,6 +614,8 @@ TaskManagerApplet.SmartLauncherItem { }
         verticalAlignment: Text.AlignVCenter
         maximumLineCount: Plasmoid.configuration.maxTextLines || undefined
 
+        Accessible.ignored: true
+
         // use State to avoid unnecessary re-evaluation when the label is invisible
         states: State {
             name: "labelVisible"
