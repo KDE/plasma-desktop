@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2024-03-09 18:59+0100\n"
+"PO-Revision-Date: 2024-05-15 20:47+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -96,8 +96,7 @@ msgid "Orientation:"
 msgstr "Retning:"
 
 #: ui/main.qml:110
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgid "Left handed mode:"
 msgstr "Venstrehandsmodus:"
 
@@ -124,22 +123,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 – %3 × %4"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgid "Pen button 1:"
-msgstr "Penneknapp 1"
+msgstr "Penneknapp 1:"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgid "Pen button 2:"
-msgstr "Penneknapp 2"
+msgstr "Penneknapp 2:"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgid "Pen button 3:"
-msgstr "Penneknapp 3"
+msgstr "Penneknapp 3:"
 
 #: ui/main.qml:295
 #, kde-format
@@ -153,7 +149,6 @@ msgid "None"
 msgstr "Ingen"
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
-msgstr "Knapp %1:"
+msgstr "Teikneplateknapp %1:"

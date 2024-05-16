@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:39+0000\n"
-"PO-Revision-Date: 2024-03-09 18:53+0100\n"
+"PO-Revision-Date: 2024-05-15 20:45+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -415,10 +415,9 @@ msgstr ""
 
 # Vert vist i menyen når ein høgreklikkar på skrivebordet. Bør derfor vera kort, så brukar «bakgrunn» i staden for «bakgrunnsbilete».
 #: package/contents/ui/main.qml:389
-#, fuzzy, kde-format
-#| msgid "Configure Desktop and Wallpaper…"
+#, kde-format
 msgid "Desktop and Wallpaper"
-msgstr "Set opp skrivebord og bakgrunn …"
+msgstr "Skrivebord og bakgrunn"
 
 #: plugins/folder/directorypicker.cpp:32
 #, kde-format
