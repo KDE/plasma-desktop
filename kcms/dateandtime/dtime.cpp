@@ -37,6 +37,8 @@
 
 #include "helper.h"
 
+using namespace Qt::StringLiterals;
+
 Dtime::Dtime(QWidget *parent, bool haveTimeDated)
     : QWidget(parent)
     , m_haveTimedated(haveTimeDated)
@@ -127,15 +129,14 @@ void Dtime::findNTPutility()
         envpath.remove(0, 1);
     }
 
-    QStringList path = {"/sbin", "/usr/sbin"};
+    QStringList path = {u"/sbin"_s, u"/usr/sbin"_s};
     if (!envpath.isEmpty()) {
         path += QFile::decodeName(envpath).split(QLatin1Char(':'));
     } else {
-        path += {"/bin", "/usr/bin"};
+        path += {u"/bin"_s, u"/usr/bin"_s};
     }
 
-    const auto possible_ntputilities = {"ntpdate", "rdate"};
-    for (const QString &possible_ntputility : possible_ntputilities) {
+    for (const QString &possible_ntputility : {u"ntpdate"_s, u"rdate"_s}) {
         ntpUtility = QStandardPaths::findExecutable(possible_ntputility, path);
         if (!ntpUtility.isEmpty()) {
             qDebug() << "ntpUtility = " << ntpUtility;
