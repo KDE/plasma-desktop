@@ -7,15 +7,15 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+import QtQml.Models
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Window
-import QtQml.Models
-import org.kde.plasma.plasmoid
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
+
+import org.kde.plasma.plasmoid
 
 Loader {
     id: toolTipDelegate

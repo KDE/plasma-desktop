@@ -6,7 +6,6 @@
 
 import QtQuick
 import QtQuick.Layouts
-import QtQml
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.components as PlasmaComponents3

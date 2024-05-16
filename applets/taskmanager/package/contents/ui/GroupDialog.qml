@@ -6,14 +6,10 @@
 */
 
 import QtQuick
-// Deliberately imported after QtQuick to avoid missing restoreMode property in Binding. Fix in Qt 6.
-import QtQml
 import QtQml.Models
-import QtQuick.Window
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents3
-import org.kde.draganddrop
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.plasmoid
 
