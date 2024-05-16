@@ -5,14 +5,14 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQuick
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.extras as PlasmaExtras
 
-import org.kde.taskmanager 0.1 as TaskManager
+import org.kde.taskmanager as TaskManager
 import org.kde.plasma.private.mpris as Mpris
 
 import "code/layoutmetrics.js" as LayoutMetrics
@@ -76,7 +76,7 @@ PlasmaExtras.Menu {
 
     function newMenuItem(parent: QtObject): PlasmaExtras.MenuItem {
         return Qt.createQmlObject(`
-            import org.kde.plasma.extras 2.0 as PlasmaExtras
+            import org.kde.plasma.extras as PlasmaExtras
 
             PlasmaExtras.MenuItem {}
         `, parent);
@@ -84,7 +84,7 @@ PlasmaExtras.Menu {
 
     function newSeparator(parent: QtObject): PlasmaExtras.MenuItem {
         return Qt.createQmlObject(`
-            import org.kde.plasma.extras 2.0 as PlasmaExtras
+            import org.kde.plasma.extras as PlasmaExtras
 
             PlasmaExtras.MenuItem { separator: true }
             `, parent);
@@ -124,7 +124,7 @@ PlasmaExtras.Menu {
 
         // QMenu does not limit its width automatically. Even if we set a maximumWidth
         // it would just cut off text rather than eliding. So we do this manually.
-        const textMetrics = Qt.createQmlObject("import QtQuick 2.4; TextMetrics {}", menu);
+        const textMetrics = Qt.createQmlObject("import QtQuick; TextMetrics {}", menu);
         const maximumWidth = LayoutMetrics.maximumContextMenuTextWidth();
 
         sections.forEach(section => {

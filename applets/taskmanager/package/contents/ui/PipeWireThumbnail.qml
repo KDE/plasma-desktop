@@ -4,9 +4,9 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import org.kde.pipewire 0.1 as PipeWire
-import org.kde.taskmanager 0.1 as TaskManager
+import QtQuick
+import org.kde.pipewire as PipeWire
+import org.kde.taskmanager as TaskManager
 
 PipeWire.PipeWireSourceItem {
     id: pipeWireSourceItem

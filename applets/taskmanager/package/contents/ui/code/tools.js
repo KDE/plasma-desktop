@@ -7,7 +7,7 @@
 
 .pragma library
 
-.import org.kde.taskmanager 0.1 as TaskManager
+.import org.kde.taskmanager as TaskManager
 .import org.kde.plasma.core as PlasmaCore // Needed by TaskManager
 
 // Can't be `let`, or else QML counterpart won't be able to assign to it.

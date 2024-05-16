@@ -6,9 +6,9 @@
 
 pragma ComponentBehavior: Bound
 
-import QtQuick 2.15
+import QtQuick
 
-import org.kde.plasma.private.volume 0.1
+import org.kde.plasma.private.volume
 
 QtObject {
     id: pulseAudio

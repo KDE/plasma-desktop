@@ -5,20 +5,20 @@
 */
 
 import QtQuick
-import QtQuick.Layouts 1.15
-import QtQml 2.15
+import QtQuick.Layouts
+import QtQml
 
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.plasmoid
+import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.core as PlasmaCore
-import org.kde.ksvg 1.0 as KSvg
+import org.kde.ksvg as KSvg
 import org.kde.plasma.private.mpris as Mpris
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
-import org.kde.plasma.workspace.trianglemousefilter 1.0
+import org.kde.plasma.workspace.trianglemousefilter
 
-import org.kde.taskmanager 0.1 as TaskManager
-import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
+import org.kde.taskmanager as TaskManager
+import org.kde.plasma.private.taskmanager as TaskManagerApplet
 import org.kde.plasma.workspace.dbus as DBus
 
 import "code/layoutmetrics.js" as LayoutMetrics
