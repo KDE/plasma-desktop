@@ -8,6 +8,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 
@@ -35,12 +37,8 @@ RowLayout {
             Layout.preferredHeight: songText.height
             implicitWidth: songText.implicitWidth
 
-            PlasmaComponents3.Label {
+            textItem: PlasmaComponents3.Label {
                 id: songText
-                parent: songTextWrapper
-                width: parent.width
-                height: undefined
-                lineHeight: 1
                 maximumLineCount: artistText.visible ? 1 : 2
                 wrapMode: Text.NoWrap
                 elide: parent.state ? Text.ElideNone : Text.ElideRight
@@ -57,13 +55,9 @@ RowLayout {
             implicitWidth: artistText.implicitWidth
             visible: artistText.text.length > 0
 
-            PlasmaExtras.DescriptiveLabel {
+            textItem: PlasmaExtras.DescriptiveLabel {
                 id: artistText
-                parent: artistTextWrapper
-                width: parent.width
-                height: undefined
                 wrapMode: Text.NoWrap
-                lineHeight: 1
                 elide: parent.state ? Text.ElideNone : Text.ElideRight
                 text: toolTipDelegate.playerData.artist
                 font: Kirigami.Theme.smallFont
