@@ -44,7 +44,7 @@ PlasmaCore.ToolTipArea {
 
     required property var model
     required property int index
-    required property Item tasksRoot
+    required property /*main.qml*/ Item tasksRoot
 
     readonly property int pid: model.AppPid
     readonly property string appName: model.AppName

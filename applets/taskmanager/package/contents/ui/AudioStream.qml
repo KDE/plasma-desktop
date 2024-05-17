@@ -122,8 +122,9 @@ Item {
         id: audioStreamIcon
 
         // Need audio indicator twice, to keep iconBox in the center.
-        readonly property var requiredSpace: Math.min(iconBox.width, iconBox.height)
-                                             + Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium) * 2
+        readonly property real requiredSpace: Math.min(iconBox.width, iconBox.height)
+            + Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium) * 2
+
         source: "audio-volume-high-symbolic"
         selected: tapHandler.pressed
 

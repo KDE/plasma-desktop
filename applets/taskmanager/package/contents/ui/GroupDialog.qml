@@ -28,7 +28,7 @@ PlasmaCore.Dialog {
     readonly property real preferredHeight: Screen.height / 2
     readonly property real contentWidth: mainItem.width // No padding here to avoid text elide.
 
-    property var _oldAppletStatus: PlasmaCore.Types.UnknownStatus
+    property /*PlasmaCore.ItemStatus*/int _oldAppletStatus: PlasmaCore.Types.UnknownStatus
 
     function findActiveTaskIndex(): void {
         if (!tasksModel.activeTask) {

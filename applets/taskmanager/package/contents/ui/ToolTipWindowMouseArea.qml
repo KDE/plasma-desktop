@@ -9,14 +9,13 @@
 import QtQuick
 
 MouseArea {
-    property var modelIndex
-    // winId won't be an int wayland
-    property var winId // FIXME Legacy
-    property Item rootTask
+    required property /*QModelIndex*/var modelIndex
+    required property /*undefined|WId where WId = int|string*/ var winId
+    required property Task rootTask
 
     acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
     hoverEnabled: true
-    enabled: winId !== 0
+    enabled: winId !== undefined
 
     onClicked: (mouse) => {
         switch (mouse.button) {

@@ -20,8 +20,8 @@ import org.kde.kirigami as Kirigami
 import org.kde.kwindowsystem
 
 ColumnLayout {
-    property var submodelIndex
-    property int flatIndex: isGroup && index != undefined ? index : 0
+    property /*QModelIndex*/var submodelIndex
+    readonly property int flatIndex: isGroup && index !== undefined ? index : 0
     readonly property int appPid: isGroup ? model.AppPid : pidParent
 
     // HACK: Avoid blank space in the tooltip after closing a window
@@ -158,7 +158,8 @@ ColumnLayout {
         visible: toolTipDelegate.isWin
 
         readonly property bool isMinimized: isGroup ? IsMinimized : isMinimizedParent
-        readonly property var winId: toolTipDelegate.isWin ? toolTipDelegate.windows[flatIndex] : undefined
+        readonly property /*undefined|WId where WId = int|string*/ var winId:
+            toolTipDelegate.isWin ? toolTipDelegate.windows[flatIndex] : undefined
 
         // There's no PlasmaComponents3 version
         PlasmaExtras.Highlight {

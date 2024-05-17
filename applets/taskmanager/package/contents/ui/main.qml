@@ -32,18 +32,17 @@ PlasmoidItem {
     rotation: Plasmoid.configuration.reverseMode && Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 180 : 0
 
     readonly property bool shouldShrinkToZero: tasksModel.count === 0
-    property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
-    property bool iconsOnly: Plasmoid.pluginName === "org.kde.plasma.icontasks"
+    readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
+    readonly property bool iconsOnly: Plasmoid.pluginName === "org.kde.plasma.icontasks"
 
-    property var toolTipOpenedByClick: null
+    property Task toolTipOpenedByClick
+    property Task toolTipAreaItem
 
-    property QtObject contextMenuComponent: Qt.createComponent("ContextMenu.qml")
-    property QtObject pulseAudioComponent: Qt.createComponent("PulseAudio.qml")
+    readonly property Component contextMenuComponent: Qt.createComponent("ContextMenu.qml")
+    readonly property Component pulseAudioComponent: Qt.createComponent("PulseAudio.qml")
 
-    property var toolTipAreaItem: null
-
-    property bool needLayoutRefresh: false;
-    property var taskClosedWithMouseMiddleButton: []
+    property bool needLayoutRefresh: false
+    property /*list<WId> where WId = int|string*/ var taskClosedWithMouseMiddleButton: []
     property alias taskList: taskList
 
     preferredRepresentation: fullRepresentation
@@ -118,7 +117,7 @@ PlasmoidItem {
         }
     }
 
-    property TaskManager.TasksModel tasksModel: TaskManager.TasksModel {
+    readonly property TaskManager.TasksModel tasksModel: TaskManager.TasksModel {
         id: tasksModel
 
         readonly property int logicalLauncherCount: {
@@ -215,7 +214,7 @@ PlasmoidItem {
         }
     }
 
-    property TaskManagerApplet.Backend backend: TaskManagerApplet.Backend {
+    readonly property TaskManagerApplet.Backend backend: TaskManagerApplet.Backend {
         id: backend
         highlightWindows: Plasmoid.configuration.highlightWindows
 
@@ -232,14 +231,15 @@ PlasmoidItem {
 
     readonly property Component taskInitComponent: Component {
         Timer {
-            id: timer
-
             interval: Kirigami.Units.longDuration
             running: true
 
             onTriggered: {
-                tasksModel.requestPublishDelegateGeometry(parent.modelIndex(), backend.globalRect(parent), parent);
-                timer.destroy();
+                const task = parent as Task;
+                if (task) {
+                    tasksModel.requestPublishDelegateGeometry(task.modelIndex(), backend.globalRect(task), task);
+                }
+                destroy();
             }
         }
     }

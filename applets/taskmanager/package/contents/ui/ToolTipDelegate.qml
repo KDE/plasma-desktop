@@ -21,17 +21,17 @@ import org.kde.plasma.plasmoid
 Loader {
     id: toolTipDelegate
 
-    property Item parentTask
-    property var rootIndex
+    property Task parentTask
+    property /*QModelIndex*/var rootIndex
 
     property string appName
     property int pidParent
     property bool isGroup
 
-    property var windows
-    readonly property bool isWin: (windows?.length ?? 0) > 0
+    property /*list<WId> where WId = int|string*/ var windows: []
+    readonly property bool isWin: windows.length > 0
 
-    property var icon
+    property /*QIcon*/ var icon
     property url launcherUrl
     property bool isLauncher
     property bool isMinimizedParent

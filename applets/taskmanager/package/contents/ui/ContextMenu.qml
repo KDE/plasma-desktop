@@ -14,15 +14,17 @@ import org.kde.plasma.extras as PlasmaExtras
 
 import org.kde.taskmanager as TaskManager
 import org.kde.plasma.private.mpris as Mpris
+import org.kde.plasma.private.taskmanager as TaskManagerApplet
 
 import "code/layoutmetrics.js" as LayoutMetrics
 
 PlasmaExtras.Menu {
     id: menu
 
-    property QtObject backend
-    property QtObject mpris2Source
-    property var modelIndex
+    required property TaskManagerApplet.Backend backend
+    required property Mpris.Mpris2Model mpris2Source
+    required property /*QModelIndex*/var modelIndex
+
     readonly property var atm: TaskManager.AbstractTasksModel
 
     property bool showAllPlaces: false
