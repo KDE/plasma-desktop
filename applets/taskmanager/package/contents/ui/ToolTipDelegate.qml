@@ -13,6 +13,7 @@ import QtQuick.Layouts
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.private.mpris as Mpris
 import org.kde.kirigami as Kirigami
 
 import org.kde.plasma.plasmoid
@@ -52,7 +53,7 @@ Loader {
     readonly property int tooltipInstanceMaximumWidth: Kirigami.Units.gridUnit * 16
 
     // These properties are required to make tooltip interactive when there is a player but no window is present.
-    readonly property QtObject playerData: mpris2Source.playerForLauncherUrl(launcherUrl, pidParent)
+    readonly property Mpris.PlayerContainer playerData: mpris2Source.playerForLauncherUrl(launcherUrl, pidParent)
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
