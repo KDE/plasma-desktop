@@ -28,7 +28,6 @@ PlasmaCore.Dialog {
     readonly property real preferredHeight: Screen.height / 2
     readonly property real contentWidth: mainItem.width // No padding here to avoid text elide.
 
-    property alias overflowing: scrollView.overflowing
     property var _oldAppletStatus: PlasmaCore.Types.UnknownStatus
 
     function findActiveTaskIndex(): void {
