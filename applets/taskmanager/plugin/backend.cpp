@@ -500,7 +500,7 @@ QRect Backend::globalRect(QQuickItem *item) const
 
 void Backend::activateWindowView(const QVariant &_winIds)
 {
-    if (m_windowsToHighlight.count()) {
+    if (!m_windowsToHighlight.isEmpty()) {
         m_windowsToHighlight.clear();
         updateWindowHighlight();
     }
