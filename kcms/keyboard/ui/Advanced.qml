@@ -35,6 +35,8 @@ ColumnLayout {
     }
 
     QQC2.CheckBox {
+        id: configureOptionsCheckbox
+
         text: i18nc("@option:checkbox", "Configure keyboard options")
         checked: kcm.keyboardSettings.resetOldXkbOptions
         onToggled: kcm.keyboardSettings.resetOldXkbOptions = checked
@@ -60,6 +62,7 @@ ColumnLayout {
             boundsBehavior: Flickable.StopAtBounds
             alternatingRows: false
             clip: true
+            enabled: configureOptionsCheckbox.checked
 
             onEnabledChanged: {
                 if (!enabled) {
