@@ -419,7 +419,6 @@ KCM.AbstractKCM {
         customFooterActions: [addCommandAction]
 
         ColumnLayout {
-            anchors.centerIn: parent
             spacing: Kirigami.Units.smallSpacing
 
             QQC2.Label {
