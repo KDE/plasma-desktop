@@ -414,7 +414,7 @@ KCM.AbstractKCM {
             }
         }
 
-        standardButtons: Kirigami.Dialog.NoButton
+        standardButtons: Kirigami.Dialog.Cancel
 
         customFooterActions: [addCommandAction]
 
