@@ -463,52 +463,56 @@ KCM.AbstractKCM {
         }
     }
 
-    Kirigami.OverlaySheet {
+    Kirigami.Dialog {
         id: importSheet
 
         title: i18n("Import Shortcut Scheme")
 
+        width: Math.max(Math.round(root.width / 2), Kirigami.Units.gridUnit * 24)
+
         ColumnLayout {
-            anchors.centerIn: parent
             spacing: Kirigami.Units.smallSpacing
 
             QQC2.Label {
                 text: i18n("Select the scheme to import:")
                 textFormat: Text.PlainText
-                Layout.margins: Kirigami.Units.largeSpacing
+                Layout.leftMargin: Kirigami.Units.largeSpacing
+                Layout.rightMargin: Kirigami.Units.largeSpacing
             }
 
-            RowLayout {
-                spacing: Kirigami.Units.smallSpacing
-                Layout.margins: Kirigami.Units.largeSpacing
+            QQC2.ComboBox {
+                id: schemeBox
 
-                QQC2.ComboBox {
-                    id: schemeBox
-                    readonly property bool customSchemeSelected: currentIndex == count - 1
-                    property string url: ""
-                    currentIndex: count - 1
-                    textRole: "name"
-                    onActivated: url = model[index]["url"]
-                    Component.onCompleted: {
-                        var defaultSchemes = kcm.defaultSchemes()
-                        defaultSchemes.push({name: i18n("Custom Scheme"), url: "unused"})
-                        model = defaultSchemes
-                    }
-                }
-                QQC2.Button {
-                    text: schemeBox.customSchemeSelected ? i18n("Select File…") : i18n("Import")
-                    onClicked: {
-                        if (schemeBox.customSchemeSelected) {
-                            shortcutSchemeFileDialogLoader.save = false;
-                            shortcutSchemeFileDialogLoader.active = true;
-                        } else {
-                            kcm.loadScheme(schemeBox.model[schemeBox.currentIndex]["url"])
-                            importSheet.close()
-                        }
-                    }
+                Layout.leftMargin: Kirigami.Units.largeSpacing
+                Layout.rightMargin: Kirigami.Units.largeSpacing
+
+                readonly property bool customSchemeSelected: currentIndex == count - 1
+                property string url: ""
+                currentIndex: count - 1
+                textRole: "name"
+                onActivated: url = model[index]["url"]
+                Component.onCompleted: {
+                    var defaultSchemes = kcm.defaultSchemes()
+                    defaultSchemes.push({name: i18n("Custom Scheme"), url: "unused"})
+                    model = defaultSchemes
                 }
             }
         }
+
+         customFooterActions: [
+             Kirigami.Action {
+                text: schemeBox.customSchemeSelected ? i18n("Select File…") : i18n("Import")
+                onTriggered: {
+                    if (schemeBox.customSchemeSelected) {
+                        shortcutSchemeFileDialogLoader.save = false;
+                        shortcutSchemeFileDialogLoader.active = true;
+                    } else {
+                        kcm.loadScheme(schemeBox.model[schemeBox.currentIndex]["url"])
+                        importSheet.close()
+                    }
+                }
+            }
+        ]
     }
 }
 
