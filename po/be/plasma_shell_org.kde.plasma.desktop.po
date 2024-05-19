@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-14 00:39+0000\n"
-"PO-Revision-Date: 2024-03-01 19:50\n"
+"PO-Revision-Date: 2024-05-18 09:10\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -391,10 +391,8 @@ msgid "Panel Width:"
 msgstr "Шырыня панэлі:"
 
 #: contents/configuration/PanelConfiguration.qml:533
-#, fuzzy
-#| msgid "Panel Width:"
 msgid "Panel Height:"
-msgstr "Шырыня панэлі:"
+msgstr "Вышыня панэлі:"
 
 #: contents/configuration/PanelConfiguration.qml:556
 msgid "Focus shortcut:"
@@ -416,11 +414,11 @@ msgstr "Выдаліць гэтую панэль; гэтае дзеянне не
 #: contents/configuration/PanelConfiguration.qml:610
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr ""
+msgstr "Завершана"
 
 #: contents/configuration/PanelConfiguration.qml:613
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "Закрыць акно налад панэлі і выйсці з рэжыму рэдагавання"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -452,10 +450,8 @@ msgstr ""
 "Двойчы пстрыкніце, каб скінуць."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy
-#| msgid "Panels and Desktops Management"
 msgid "Panel and Desktop Management"
-msgstr "Кіраванне панэлямі і працоўнымі сталамі"
+msgstr "Панэль і кіраванне працоўным сталом"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
@@ -550,102 +546,98 @@ msgstr "Няма даступных віджэтаў"
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Гадзіннік:"
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Пакідаць бачным, калі знікае падказка пра разблакаванне"
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Кіраванне прайграваннем медыяфайлаў:"
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Паказваць пад запытам разблакавання"
 
 #: contents/lockscreen/LockScreenUi.qml:50
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Не ўдалося разблакаваць"
 
 #: contents/lockscreen/LockScreenUi.qml:276
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Caps Lock уключаны"
 
 #: contents/lockscreen/LockScreenUi.qml:290
 msgid "Sleep"
-msgstr ""
+msgstr "Прыпыніць у RAM"
 
 #: contents/lockscreen/LockScreenUi.qml:296
 msgid "Hibernate"
-msgstr ""
+msgstr "Перавесці ў рэжым сну"
 
 #: contents/lockscreen/LockScreenUi.qml:302
-#, fuzzy
-#| msgid "Switch"
 msgid "Switch User"
-msgstr "Пераключэнне"
+msgstr "Пераключыць карыстальніка"
 
 #: contents/lockscreen/LockScreenUi.qml:363
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Віртуальная клавіятура"
 
 #: contents/lockscreen/LockScreenUi.qml:387
-#, fuzzy
-#| msgid "Switch"
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Пераключэнне"
+msgstr "Пераключыць раскладку"
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr ""
+msgstr "Разблакаваць"
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(або адскануйце адбітак пальца на адпаведнай прыладзе)"
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(або адскануйце смарт-картку)"
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr ""
+msgstr "Без назвы"
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr ""
+msgstr "Медыяфайлы не прайграюцца"
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr ""
+msgstr "Папярэдняя кампазіцыя"
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Прайграць або прыпыніць"
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr ""
+msgstr "Наступная кампазіцыя"
 
 #: contents/osd/OsdItem.qml:32
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/views/Panel.qml:326
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Індыкатар фокуса панэлі"
 
 #~ msgid "Height:"
 #~ msgstr "Вышыня:"
