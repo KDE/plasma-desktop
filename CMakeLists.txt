@@ -227,7 +227,6 @@ add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
 add_feature_info("libxft" X11_Xft_FOUND "X FreeType interface library required for font installation")
 
 pkg_check_modules(XORGLIBINPUT xorg-libinput IMPORTED_TARGET)
-pkg_check_modules(EVDEV xorg-evdev>=2.8.99.1 IMPORTED_TARGET)
 pkg_check_modules(XORGSERVER xorg-server IMPORTED_TARGET)
 pkg_check_modules(XKBREGISTRY xkbregistry REQUIRED IMPORTED_TARGET)
 
