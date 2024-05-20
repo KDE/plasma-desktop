@@ -1,7 +1,7 @@
 # translation of kaccess.po to Slovenian
 # Translation of kaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KACCESS.
-# $Id: kaccess.po 1661270 2023-09-30 02:04:22Z scripty $
+# $Id: kaccess.po 1680442 2024-05-20 01:10:51Z scripty $
 # $Source$
 #
 # Copyright (C) 2000, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2024-05-20 00:40+0000\n"
 "PO-Revision-Date: 2020-11-05 09:21+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -172,166 +172,166 @@ msgstr "Tipka Scroll Lock je sedaj vključena."
 msgid "The Scroll Lock key is now inactive."
 msgstr "Tipka Scroll Lock je sedaj izključena."
 
-#: kaccess.cpp:314
+#: kaccess.cpp:311
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "Preklopi bralnik zaslona"
 
-#: kaccess.cpp:316
+#: kaccess.cpp:313
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "Dostopnost"
 
-#: kaccess.cpp:631
+#: kaccess.cpp:639
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kaccess.cpp:633
+#: kaccess.cpp:641
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kaccess.cpp:635
+#: kaccess.cpp:643
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kaccess.cpp:637
+#: kaccess.cpp:645
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: kaccess.cpp:654
+#: kaccess.cpp:662
 #, kde-format
 msgid "Warning"
 msgstr "Opozorilo"
 
-#: kaccess.cpp:682
+#: kaccess.cpp:690
 #, kde-format
 msgid "&When a gesture was used:"
 msgstr "&Kdaj je bila kretnja uporabljena:"
 
-#: kaccess.cpp:688
+#: kaccess.cpp:696
 #, kde-format
 msgid "Change Settings Without Asking"
 msgstr "Spremeni nastavitve brez vprašanja"
 
-#: kaccess.cpp:689
+#: kaccess.cpp:697
 #, kde-format
 msgid "Show This Confirmation Dialog"
 msgstr "Prikaži to potrditveno okno"
 
-#: kaccess.cpp:690
+#: kaccess.cpp:698
 #, kde-format
 msgid "Deactivate All AccessX Features & Gestures"
 msgstr "Izključi vse kretnje in možnosti AccessX"
 
-#: kaccess.cpp:733 kaccess.cpp:735
+#: kaccess.cpp:741 kaccess.cpp:743
 #, kde-format
 msgid "Slow keys"
 msgstr "Počasne tipke"
 
-#: kaccess.cpp:738 kaccess.cpp:740
+#: kaccess.cpp:746 kaccess.cpp:748
 #, kde-format
 msgid "Bounce keys"
 msgstr "Odbijajoče tipke"
 
-#: kaccess.cpp:743 kaccess.cpp:745
+#: kaccess.cpp:751 kaccess.cpp:753
 #, kde-format
 msgid "Sticky keys"
 msgstr "Lepljive tipke"
 
-#: kaccess.cpp:748 kaccess.cpp:750
+#: kaccess.cpp:756 kaccess.cpp:758
 #, kde-format
 msgid "Mouse keys"
 msgstr "Miškine tipke"
 
-#: kaccess.cpp:757
+#: kaccess.cpp:765
 #, kde-format
 msgid "Do you really want to deactivate \"%1\"?"
 msgstr "Ali zares želite izključiti »%1«?"
 
-#: kaccess.cpp:760
+#: kaccess.cpp:768
 #, kde-format
 msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
 msgstr "Ali zares želite izključiti »%1« in »%2«?"
 
-#: kaccess.cpp:764
+#: kaccess.cpp:772
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
 msgstr "Ali zares želite izključiti »%1«, »%2« in »%3«?"
 
-#: kaccess.cpp:767
+#: kaccess.cpp:775
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "Ali zares želite izključiti »%1«, »%2«, »%3« in »%4«?"
 
-#: kaccess.cpp:778
+#: kaccess.cpp:786
 #, kde-format
 msgid "Do you really want to activate \"%1\"?"
 msgstr "Ali zares želite vključiti »%1«?"
 
-#: kaccess.cpp:781
+#: kaccess.cpp:789
 #, kde-format
 msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
 msgstr "Ali zares želite vključiti »%1« in izključiti »%2«?"
 
-#: kaccess.cpp:784
+#: kaccess.cpp:792
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
 msgstr "Ali zares želite vključiti »%1« in izključiti »%2« ter »%3«?"
 
-#: kaccess.cpp:790
+#: kaccess.cpp:798
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
 "\"%4\"?"
 msgstr "Ali zares želite vključiti »%1« in izključiti »%2«, »%3« ter »%4«?"
 
-#: kaccess.cpp:801
+#: kaccess.cpp:809
 #, kde-format
 msgid "Do you really want to activate \"%1\" and \"%2\"?"
 msgstr "Ali zares želite vključiti »%1« in »%2«?"
 
-#: kaccess.cpp:804
+#: kaccess.cpp:812
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
 msgstr "Ali zares želite vključiti »%1« ter »%2« in izključiti »%3«?"
 
-#: kaccess.cpp:810
+#: kaccess.cpp:818
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
 "and \"%4\"?"
 msgstr "Ali zares želite vključiti »%1« ter »%2« in izključiti »%3« ter »%4«?"
 
-#: kaccess.cpp:821
+#: kaccess.cpp:829
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
 msgstr "Ali zares želite vključiti »%1«, »%2« in »%3«?"
 
-#: kaccess.cpp:824
+#: kaccess.cpp:832
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
 "\"%4\"?"
 msgstr "Ali zares želite vključiti »%1«, »%2« ter »%3« in izključiti »%4«?"
 
-#: kaccess.cpp:833
+#: kaccess.cpp:841
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "Ali zares želite vključiti »%1«, »%2«, »%3« in »%4«?"
 
-#: kaccess.cpp:842
+#: kaccess.cpp:850
 #, kde-format
 msgid "An application has requested to change this setting."
 msgstr "Program je zahteval spremembo te nastavitve."
 
-#: kaccess.cpp:846
+#: kaccess.cpp:854
 #, kde-format
 msgid ""
 "You held down the Shift key for 8 seconds or an application has requested to "
@@ -340,7 +340,7 @@ msgstr ""
 "Imeli ste pritisnjeno tipko Shift (dvigalko) 8 sekund ali pa je program "
 "zahteval spremembo te nastavitve."
 
-#: kaccess.cpp:848
+#: kaccess.cpp:856
 #, kde-format
 msgid ""
 "You pressed the Shift key 5 consecutive times or an application has "
@@ -349,13 +349,13 @@ msgstr ""
 "Petkrat ste zaporedno pritisnili tipko Shift (dvigalko) ali pa je program "
 "zahteval spremembo te nastavitve."
 
-#: kaccess.cpp:852
+#: kaccess.cpp:860
 #, kde-format
 msgid "You pressed %1 or an application has requested to change this setting."
 msgstr ""
 "Pritisnili ste tipko %1 ali pa je program zahteval spremembo te nastavitve."
 
-#: kaccess.cpp:857
+#: kaccess.cpp:865
 #, kde-format
 msgid ""
 "An application has requested to change these settings, or you used a "
@@ -364,12 +364,12 @@ msgstr ""
 "Program je zahteval spremembo te nastavitve, ali pa ste uporabili "
 "kombinacijo več tipkovnih kretenj."
 
-#: kaccess.cpp:859
+#: kaccess.cpp:867
 #, kde-format
 msgid "An application has requested to change these settings."
 msgstr "Program je zahteval spremembo teh nastavitev."
 
-#: kaccess.cpp:864
+#: kaccess.cpp:872
 #, kde-format
 msgid ""
 "These AccessX settings are needed for some users with motion impairments and "
@@ -386,7 +386,7 @@ msgstr ""
 "Če jih ne potrebujete, lahko izberete »Izključi vse kretnje in možnosti "
 "AccessX«."
 
-#: kaccess.cpp:885
+#: kaccess.cpp:893
 #, kde-format
 msgid ""
 "Slow keys has been enabled. From now on, you need to press each key for a "
@@ -395,12 +395,12 @@ msgstr ""
 "Omogočene so počasne tipke. Od sedaj dalje morate vsako tipko držati daljši "
 "čas, da učinkuje."
 
-#: kaccess.cpp:887
+#: kaccess.cpp:895
 #, kde-format
 msgid "Slow keys has been disabled."
 msgstr "Počasne tipke so onemogočene."
 
-#: kaccess.cpp:891
+#: kaccess.cpp:899
 #, kde-format
 msgid ""
 "Bounce keys has been enabled. From now on, each key will be blocked for a "
@@ -409,12 +409,12 @@ msgstr ""
 "Omogočene so odbijajoče tipke. Od sedaj dalje bo vsaka tipka po uporabi za "
 "nekaj časa blokirana."
 
-#: kaccess.cpp:893
+#: kaccess.cpp:901
 #, kde-format
 msgid "Bounce keys has been disabled."
 msgstr "Odbijajoče tipke so onemogočene."
 
-#: kaccess.cpp:897
+#: kaccess.cpp:905
 #, kde-format
 msgid ""
 "Sticky keys has been enabled. From now on, modifier keys will stay latched "
@@ -423,12 +423,12 @@ msgstr ""
 "Omogočene so lepljive tipke. Od sedaj dalje bodo spremenilne tipke v veljavi "
 "tudi po tem ko jih sprostite."
 
-#: kaccess.cpp:899
+#: kaccess.cpp:907
 #, kde-format
 msgid "Sticky keys has been disabled."
 msgstr "Spremenilne tipke so onemogočene."
 
-#: kaccess.cpp:903
+#: kaccess.cpp:911
 #, kde-format
 msgid ""
 "Mouse keys has been enabled. From now on, you can use the number pad of your "
@@ -437,7 +437,7 @@ msgstr ""
 "Omogočene so miškine tipke. Od sedaj dalje lahko namesto miške uporabljate "
 "številčni del svoje tipkovnice."
 
-#: kaccess.cpp:905
+#: kaccess.cpp:913
 #, kde-format
 msgid "Mouse keys has been disabled."
 msgstr "Miškine tipke so onemogočene."

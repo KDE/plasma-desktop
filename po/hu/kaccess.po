@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2024-05-20 00:40+0000\n"
 "PO-Revision-Date: 2024-01-06 21:17+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -164,120 +164,120 @@ msgstr "A Scroll Lock most aktív."
 msgid "The Scroll Lock key is now inactive."
 msgstr "A Scroll Lock most inaktív."
 
-#: kaccess.cpp:314
+#: kaccess.cpp:311
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "Képernyőolvasó ki-/bekapcsolása"
 
-#: kaccess.cpp:316
+#: kaccess.cpp:313
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "Akadálymentesítés"
 
-#: kaccess.cpp:631
+#: kaccess.cpp:639
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGr"
 
-#: kaccess.cpp:633
+#: kaccess.cpp:641
 #, kde-format
 msgid "Hyper"
 msgstr "Hiper"
 
-#: kaccess.cpp:635
+#: kaccess.cpp:643
 #, kde-format
 msgid "Super"
 msgstr "Szuper"
 
-#: kaccess.cpp:637
+#: kaccess.cpp:645
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: kaccess.cpp:654
+#: kaccess.cpp:662
 #, kde-format
 msgid "Warning"
 msgstr "Figyelem"
 
-#: kaccess.cpp:682
+#: kaccess.cpp:690
 #, kde-format
 msgid "&When a gesture was used:"
 msgstr "Mo&zdulatsor használatakor:"
 
-#: kaccess.cpp:688
+#: kaccess.cpp:696
 #, kde-format
 msgid "Change Settings Without Asking"
 msgstr "A beállítások módosítása rákérdezés nélkül"
 
-#: kaccess.cpp:689
+#: kaccess.cpp:697
 #, kde-format
 msgid "Show This Confirmation Dialog"
 msgstr "Ez a megerősítés kérő ablak jelenjen meg"
 
-#: kaccess.cpp:690
+#: kaccess.cpp:698
 #, kde-format
 msgid "Deactivate All AccessX Features & Gestures"
 msgstr "Az összes AccessX-funkció és mozdulatsor kikapcsolása"
 
-#: kaccess.cpp:733 kaccess.cpp:735
+#: kaccess.cpp:741 kaccess.cpp:743
 #, kde-format
 msgid "Slow keys"
 msgstr "Lassú billentyűk"
 
-#: kaccess.cpp:738 kaccess.cpp:740
+#: kaccess.cpp:746 kaccess.cpp:748
 #, kde-format
 msgid "Bounce keys"
 msgstr "Visszaugró billentyűk"
 
-#: kaccess.cpp:743 kaccess.cpp:745
+#: kaccess.cpp:751 kaccess.cpp:753
 #, kde-format
 msgid "Sticky keys"
 msgstr "Ragadó billentyűk"
 
-#: kaccess.cpp:748 kaccess.cpp:750
+#: kaccess.cpp:756 kaccess.cpp:758
 #, kde-format
 msgid "Mouse keys"
 msgstr "Egérmozgató billentyűk"
 
-#: kaccess.cpp:757
+#: kaccess.cpp:765
 #, kde-format
 msgid "Do you really want to deactivate \"%1\"?"
 msgstr "Biztosan ki szeretné kapcsolni ezt: „%1”?"
 
-#: kaccess.cpp:760
+#: kaccess.cpp:768
 #, kde-format
 msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
 msgstr "Biztosan ki szeretné kapcsolni ezeket: „%1” és „%2”?"
 
-#: kaccess.cpp:764
+#: kaccess.cpp:772
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
 msgstr "Biztosan ki szeretné kapcsolni ezeket: „%1”, „%2” és „%3”?"
 
-#: kaccess.cpp:767
+#: kaccess.cpp:775
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "Biztosan ki szeretné kapcsolni ezeket: „%1”, „%2”, „%3” és „%4”?"
 
-#: kaccess.cpp:778
+#: kaccess.cpp:786
 #, kde-format
 msgid "Do you really want to activate \"%1\"?"
 msgstr "Biztosan be szeretné kapcsolni ezt: „%1”?"
 
-#: kaccess.cpp:781
+#: kaccess.cpp:789
 #, kde-format
 msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
 msgstr "Biztosan be szeretné kapcsolni ezt: „%1” és kikapcsolni ezt: „%2”?"
 
-#: kaccess.cpp:784
+#: kaccess.cpp:792
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
 msgstr ""
 "Biztosan be szeretné kapcsolni ezt: „%1” és kikapcsolni ezeket: „%2” és „%3”?"
 
-#: kaccess.cpp:790
+#: kaccess.cpp:798
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
@@ -286,19 +286,19 @@ msgstr ""
 "Biztosan be szeretné kapcsolni ezt: „%1” és kikapcsolni ezeket: „%2”, „%3” "
 "és „%4”?"
 
-#: kaccess.cpp:801
+#: kaccess.cpp:809
 #, kde-format
 msgid "Do you really want to activate \"%1\" and \"%2\"?"
 msgstr "Biztosan be szeretné kapcsolni ezeket: „%1” és „%2”?"
 
-#: kaccess.cpp:804
+#: kaccess.cpp:812
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
 msgstr ""
 "Biztosan be szeretné kapcsolni ezeket: „%1”, „%2” és kikapcsolni ezt: „%3”?"
 
-#: kaccess.cpp:810
+#: kaccess.cpp:818
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
@@ -307,12 +307,12 @@ msgstr ""
 "Biztosan be szeretné kapcsolni ezeket: „%1” és „%2” és kikapcsolni ezeket: "
 "„%3” és „%4”?"
 
-#: kaccess.cpp:821
+#: kaccess.cpp:829
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
 msgstr "Biztosan be szeretné kapcsolni ezeket: „%1”, „%2” és „%3”?"
 
-#: kaccess.cpp:824
+#: kaccess.cpp:832
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
@@ -321,17 +321,17 @@ msgstr ""
 "Biztosan be szeretné kapcsolni ezeket: „%1”, „%2” és „%3” és kikapcsolni "
 "ezt: „%4”?"
 
-#: kaccess.cpp:833
+#: kaccess.cpp:841
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "Biztosan be szeretné kapcsolni ezeket: „%1”, „%2”, „%3” és „%4”?"
 
-#: kaccess.cpp:842
+#: kaccess.cpp:850
 #, kde-format
 msgid "An application has requested to change this setting."
 msgstr "Egy alkalmazás ennek a beállításnak a megváltoztatását kérte."
 
-#: kaccess.cpp:846
+#: kaccess.cpp:854
 #, kde-format
 msgid ""
 "You held down the Shift key for 8 seconds or an application has requested to "
@@ -340,7 +340,7 @@ msgstr ""
 "8 másodpercig lenyomva tartotta a Shiftet vagy egy alkalmazás a beállítás "
 "megváltoztatását kérte."
 
-#: kaccess.cpp:848
+#: kaccess.cpp:856
 #, kde-format
 msgid ""
 "You pressed the Shift key 5 consecutive times or an application has "
@@ -349,14 +349,14 @@ msgstr ""
 "Egymás után ötször megnyomta a Shiftet vagy egy alkalmazás a beállítás "
 "megváltoztatását kérte."
 
-#: kaccess.cpp:852
+#: kaccess.cpp:860
 #, kde-format
 msgid "You pressed %1 or an application has requested to change this setting."
 msgstr ""
 "Megnyomta a(z) %1 billentyűt vagy egy alkalmazás a beállítás "
 "megváltoztatását kérte."
 
-#: kaccess.cpp:857
+#: kaccess.cpp:865
 #, kde-format
 msgid ""
 "An application has requested to change these settings, or you used a "
@@ -365,12 +365,12 @@ msgstr ""
 "Egy alkalmazás a beállítás megváltoztatását kérte, vagy valamilyen "
 "mozdulatsort hajtott végre."
 
-#: kaccess.cpp:859
+#: kaccess.cpp:867
 #, kde-format
 msgid "An application has requested to change these settings."
 msgstr "Egy alkalmazás a beállítás megváltoztatását kérte."
 
-#: kaccess.cpp:864
+#: kaccess.cpp:872
 #, kde-format
 msgid ""
 "These AccessX settings are needed for some users with motion impairments and "
@@ -387,7 +387,7 @@ msgstr ""
 "Ha egyik opcióra sincs szüksége, jelölje be „Az összes AccessX-funkció és "
 "mozdulatsor kikapcsolása”."
 
-#: kaccess.cpp:885
+#: kaccess.cpp:893
 #, kde-format
 msgid ""
 "Slow keys has been enabled. From now on, you need to press each key for a "
@@ -396,12 +396,12 @@ msgstr ""
 "A lassú billentyűk funkció aktiválódott. Mostantól nyomva kell egy kicsit "
 "tartani a billentyűket, hogy a gép leütésként fogadja el őket."
 
-#: kaccess.cpp:887
+#: kaccess.cpp:895
 #, kde-format
 msgid "Slow keys has been disabled."
 msgstr "Lassú billentyűk kikapcsolva."
 
-#: kaccess.cpp:891
+#: kaccess.cpp:899
 #, kde-format
 msgid ""
 "Bounce keys has been enabled. From now on, each key will be blocked for a "
@@ -410,12 +410,12 @@ msgstr ""
 "A visszaugró billentyűk funkció aktiválódott. Mostantól minden leütés után "
 "blokkolva lesznek a billentyűk egy rövid ideig."
 
-#: kaccess.cpp:893
+#: kaccess.cpp:901
 #, kde-format
 msgid "Bounce keys has been disabled."
 msgstr "Visszaugró billentyűk kikapcsolva."
 
-#: kaccess.cpp:897
+#: kaccess.cpp:905
 #, kde-format
 msgid ""
 "Sticky keys has been enabled. From now on, modifier keys will stay latched "
@@ -424,12 +424,12 @@ msgstr ""
 "A ragadós billentyűk funkció aktiválódott. Mostantól a módosító billentyűk "
 "lenyomva maradnak elengedés után."
 
-#: kaccess.cpp:899
+#: kaccess.cpp:907
 #, kde-format
 msgid "Sticky keys has been disabled."
 msgstr "Ragadós billentyűk kikapcsolva."
 
-#: kaccess.cpp:903
+#: kaccess.cpp:911
 #, kde-format
 msgid ""
 "Mouse keys has been enabled. From now on, you can use the number pad of your "
@@ -438,7 +438,7 @@ msgstr ""
 "Az egérmozgató billentyűk be lettek kapcsolva. Mostantól a numerikus "
 "billentyűzetről is kezelhető az egér."
 
-#: kaccess.cpp:905
+#: kaccess.cpp:913
 #, kde-format
 msgid "Mouse keys has been disabled."
 msgstr "Egérmozgatás billentyűkkel kikapcsolva."

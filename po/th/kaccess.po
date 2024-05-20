@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-30 01:42+0000\n"
+"POT-Creation-Date: 2024-05-20 00:40+0000\n"
 "PO-Revision-Date: 2010-12-18 09:20+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -165,121 +165,121 @@ msgstr "ปุ่ม Scroll Lock ถูกเปิดให้ทำงาน"
 msgid "The Scroll Lock key is now inactive."
 msgstr "ขณะนี้ปุ่ม Scroll Lock อยู่ในภาวะไม่ได้ใช้งาน"
 
-#: kaccess.cpp:314
+#: kaccess.cpp:311
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr ""
 
-#: kaccess.cpp:316
+#: kaccess.cpp:313
 #, fuzzy, kde-format
 #| msgid "KDE Accessibility Tool"
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "เครื่องมือปรับแต่งการช่วยใช้งานของ KDE"
 
-#: kaccess.cpp:631
+#: kaccess.cpp:639
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kaccess.cpp:633
+#: kaccess.cpp:641
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kaccess.cpp:635
+#: kaccess.cpp:643
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kaccess.cpp:637
+#: kaccess.cpp:645
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: kaccess.cpp:654
+#: kaccess.cpp:662
 #, kde-format
 msgid "Warning"
 msgstr "คำเตือน"
 
-#: kaccess.cpp:682
+#: kaccess.cpp:690
 #, kde-format
 msgid "&When a gesture was used:"
 msgstr "เมื่อใช้&การพิมพ์แป้นพิมพ์:"
 
-#: kaccess.cpp:688
+#: kaccess.cpp:696
 #, kde-format
 msgid "Change Settings Without Asking"
 msgstr "เปลี่ยนการค่าที่ตั้งโดยไม่ต้องถาม"
 
-#: kaccess.cpp:689
+#: kaccess.cpp:697
 #, kde-format
 msgid "Show This Confirmation Dialog"
 msgstr "แสดงกล่องยืนยันนี้"
 
-#: kaccess.cpp:690
+#: kaccess.cpp:698
 #, kde-format
 msgid "Deactivate All AccessX Features & Gestures"
 msgstr "ปิดการใช้งานคุณสมบัติ และการกดแป้นพิมพ์ของ AccessX ทั้งหมด"
 
-#: kaccess.cpp:733 kaccess.cpp:735
+#: kaccess.cpp:741 kaccess.cpp:743
 #, kde-format
 msgid "Slow keys"
 msgstr "การกดปุ่มพิมพ์ช้า"
 
-#: kaccess.cpp:738 kaccess.cpp:740
+#: kaccess.cpp:746 kaccess.cpp:748
 #, kde-format
 msgid "Bounce keys"
 msgstr "การกดปุ่มพิมพ์รัว"
 
-#: kaccess.cpp:743 kaccess.cpp:745
+#: kaccess.cpp:751 kaccess.cpp:753
 #, kde-format
 msgid "Sticky keys"
 msgstr "การกดปุ่มพิมพ์ค้าง"
 
-#: kaccess.cpp:748 kaccess.cpp:750
+#: kaccess.cpp:756 kaccess.cpp:758
 #, kde-format
 msgid "Mouse keys"
 msgstr "การจำลองเมาส์ด้วยแป้นพิมพ์"
 
-#: kaccess.cpp:757
+#: kaccess.cpp:765
 #, kde-format
 msgid "Do you really want to deactivate \"%1\"?"
 msgstr "คุณต้องการจะปิดการทำงาน \"%1\" จริงหรือไม่ ?"
 
-#: kaccess.cpp:760
+#: kaccess.cpp:768
 #, kde-format
 msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
 msgstr "คุณต้องการจะปิดการทำงาน \"%1\" และ \"%2\" จริงหรือไม่ ?"
 
-#: kaccess.cpp:764
+#: kaccess.cpp:772
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
 msgstr "คุณต้องการจะปิดการทำงาน \"%1\", \"%2\" และ \"%3\" จริงหรือไม่ ?"
 
-#: kaccess.cpp:767
+#: kaccess.cpp:775
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "คุณต้องการจะปิดการทำงาน \"%1\", \"%2\", \"%3\" และ \"%4\" จริงหรือไม่ ?"
 
-#: kaccess.cpp:778
+#: kaccess.cpp:786
 #, kde-format
 msgid "Do you really want to activate \"%1\"?"
 msgstr "คุณต้องการจะเปิดใช้งาน \"%1\" จริงหรือไม่ ?"
 
-#: kaccess.cpp:781
+#: kaccess.cpp:789
 #, kde-format
 msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
 msgstr "คุณต้องการจะเปิดใช้งาน \"%1\"และปิดการทำงานของ \"%2\" จริงหรือไม่ ?"
 
-#: kaccess.cpp:784
+#: kaccess.cpp:792
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
 msgstr ""
 "คุณต้องการจะเปิดใช้งาน \"%1\" และปิดการทำงานของ \"%2\" และ \"%3\" จริงหรือไม่ ?"
 
-#: kaccess.cpp:790
+#: kaccess.cpp:798
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
@@ -288,19 +288,19 @@ msgstr ""
 "คุณต้องการจะเปิดใช้งาน \"%1\" และปิดการทำงานของ \"%2\", \"%3\" และ \"%4\" "
 "จริงหรือไม่ ?"
 
-#: kaccess.cpp:801
+#: kaccess.cpp:809
 #, kde-format
 msgid "Do you really want to activate \"%1\" and \"%2\"?"
 msgstr "คุณต้องการจะเปิดใช้งาน \"%1\" และ \"%2\" จริงหรือไม่ ?"
 
-#: kaccess.cpp:804
+#: kaccess.cpp:812
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
 msgstr ""
 "คุณต้องการจะเปิดใช้งาน \"%1\" และ \"%2\" และปิดการทำงานของ \"%3\" จริงหรือไม่ ?"
 
-#: kaccess.cpp:810
+#: kaccess.cpp:818
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
@@ -309,12 +309,12 @@ msgstr ""
 "คุณต้องการจะเปิดใช้งาน \"%1\" และ \"%2\" และปิดการทำงานของ \"%3\" และ \"%4\" "
 "จริงหรือไม่ ?"
 
-#: kaccess.cpp:821
+#: kaccess.cpp:829
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
 msgstr "คุณต้องการจะเปิดใช้งาน \"%1\", \"%2\" และ \"%3\" จริงหรือไม่ ?"
 
-#: kaccess.cpp:824
+#: kaccess.cpp:832
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
@@ -323,36 +323,36 @@ msgstr ""
 "คุณต้องการจะเปิดใช้งาน \"%1\", \"%2\" และ \"%3\" และปิดการทำงานของ \"%4\" "
 "จริงหรือไม่ ?"
 
-#: kaccess.cpp:833
+#: kaccess.cpp:841
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "คุณต้องการจะเปิดใช้งาน \"%1\", \"%2\", \"%3\" และ \"%4\" จริงหรือไม่ ?"
 
-#: kaccess.cpp:842
+#: kaccess.cpp:850
 #, kde-format
 msgid "An application has requested to change this setting."
 msgstr "โปรแกรมได้ร้องขอให้เปลี่ยนค่าที่กำหนดนี้"
 
-#: kaccess.cpp:846
+#: kaccess.cpp:854
 #, kde-format
 msgid ""
 "You held down the Shift key for 8 seconds or an application has requested to "
 "change this setting."
 msgstr "คุณได้กดปุ่ม Shift ค้างไว้ 8 วินาที หรือโปรแกรมได้ทำการร้องขอให้เปลี่ยนค่าที่กำหนดนี้"
 
-#: kaccess.cpp:848
+#: kaccess.cpp:856
 #, kde-format
 msgid ""
 "You pressed the Shift key 5 consecutive times or an application has "
 "requested to change this setting."
 msgstr "คุณได้กดปุ่ม Shift ซ้ำ ติดกัน 5 ครั้ง หรือโปรแกรมได้ทำการร้องขอให้เปลี่ยน ค่าที่กำหนดนี้"
 
-#: kaccess.cpp:852
+#: kaccess.cpp:860
 #, kde-format
 msgid "You pressed %1 or an application has requested to change this setting."
 msgstr "คุณได้กด %1 หรือโปรแกรมได้ทำการร้องขอให้เปลี่ยนค่าที่กำหนดนี้"
 
-#: kaccess.cpp:857
+#: kaccess.cpp:865
 #, kde-format
 msgid ""
 "An application has requested to change these settings, or you used a "
@@ -360,12 +360,12 @@ msgid ""
 msgstr ""
 "โปรแกรมได้ทำการร้องขอให้เปลี่ยนค่าที่ตั้งเหล่านี้ หรือ คุณได้ใช้การพิมพ์แป้นพิมพ์ควบคุมหลายแบบรวมกัน"
 
-#: kaccess.cpp:859
+#: kaccess.cpp:867
 #, kde-format
 msgid "An application has requested to change these settings."
 msgstr "โปรแกรมทำการร้องขอให้เปลี่ยนค่าที่ตั้งเหล่านี้"
 
-#: kaccess.cpp:864
+#: kaccess.cpp:872
 #, kde-format
 msgid ""
 "These AccessX settings are needed for some users with motion impairments and "
@@ -382,7 +382,7 @@ msgstr ""
 "หากคุณไม่ต้องการ คุณสามารถเลือก \"ปิดการทำงานคุณสมบัติและพิมพ์แป้นพิมพ์คำสั่งทั้งหมดของ AccessX"
 "\""
 
-#: kaccess.cpp:885
+#: kaccess.cpp:893
 #, kde-format
 msgid ""
 "Slow keys has been enabled. From now on, you need to press each key for a "
@@ -391,12 +391,12 @@ msgstr ""
 "เปิดการใช้งานการกดปุ่มพิมพ์ช้าแล้ว จากนี้ต่อไป คุณจำเป็นต้องกดแต่ละแป้นค้างไว้ระยะหนึ่งก่อน "
 "จึงจะมีการรับค่าปุ่มพิมพ์"
 
-#: kaccess.cpp:887
+#: kaccess.cpp:895
 #, kde-format
 msgid "Slow keys has been disabled."
 msgstr "ปิดการใช้งานการกดปุ่มพิมพ์ช้าแล้ว"
 
-#: kaccess.cpp:891
+#: kaccess.cpp:899
 #, kde-format
 msgid ""
 "Bounce keys has been enabled. From now on, each key will be blocked for a "
@@ -404,12 +404,12 @@ msgid ""
 msgstr ""
 "เปิดการใช้งานการรัวปุ่มพิมพ์แล้ว จากนี้ต่อไป แต่ละปุ่มจะถูกห้ามใช้งานชั่วระยะหนึ่งหลังจากเพิ่งกด"
 
-#: kaccess.cpp:893
+#: kaccess.cpp:901
 #, kde-format
 msgid "Bounce keys has been disabled."
 msgstr "ปิดการใช้งานการรัวปุ่มพิมพ์แล้ว"
 
-#: kaccess.cpp:897
+#: kaccess.cpp:905
 #, kde-format
 msgid ""
 "Sticky keys has been enabled. From now on, modifier keys will stay latched "
@@ -418,12 +418,12 @@ msgstr ""
 "เปิดการใช้งานการกดปุ่มพิมพ์ค้างแล้ว จากนี้ต่อไป ปุ่มที่ใช้พิมพ์ประกอบกับปุ่มอื่น ๆ "
 "จะยังเหมือนถูกกดค้างอยู่ แม้ว่าคุณจะปล่อยปุ่มนั้นๆ แล้วก็ตาม"
 
-#: kaccess.cpp:899
+#: kaccess.cpp:907
 #, kde-format
 msgid "Sticky keys has been disabled."
 msgstr "ปิดการใช้งานการกดปุ่มพิมพ์ค้างแล้ว"
 
-#: kaccess.cpp:903
+#: kaccess.cpp:911
 #, kde-format
 msgid ""
 "Mouse keys has been enabled. From now on, you can use the number pad of your "
@@ -432,7 +432,7 @@ msgstr ""
 "เปิดการใช้งานการจำลองเมาส์ด้วยแป้นพิมพ์แล้ว "
 "จากนี้ต่อไปคุณสามารถใช้แผงปุ่มตัวเลขในการควบคุมตัวชี้เมาส์ได้"
 
-#: kaccess.cpp:905
+#: kaccess.cpp:913
 #, kde-format
 msgid "Mouse keys has been disabled."
 msgstr "ปิดการใช้งานการจำลองเมาส์ด้วยแป้นพิมพ์แล้ว"
