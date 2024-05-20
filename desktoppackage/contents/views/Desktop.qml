@@ -6,8 +6,11 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Effects
+import QtQuick.Layouts
 
 import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.components as PC
 import org.kde.kwindowsystem 1.0
 import org.kde.plasma.activityswitcher as ActivitySwitcher
 import "../activitymanager"
@@ -54,6 +57,63 @@ Item {
         } else {
             sidePanelStack.state = "activityManager";
             sidePanelStack.setSource(Qt.resolvedUrl("../activitymanager/ActivityManager.qml"));
+        }
+    }
+
+
+    readonly property rect editModeRect: {
+        if (!containment) {
+            return Qt.rect(0,0,0,0);
+        }
+        let screenRect = containment.plasmoid.availableScreenRect;
+        let panelConfigRect = Qt.rect(0,0,0,0);
+
+        if (containment.plasmoid.corona.panelBeingConfigured
+            && containment.plasmoid.corona.panelBeingConfigured.screenToFollow === desktop.screenToFollow) {
+            panelConfigRect = containment.plasmoid.corona.panelBeingConfigured.relativeConfigRect;
+        }
+
+        if (panelConfigRect.width <= 0) {
+            ; // Do nothing
+        } else if (panelConfigRect.x > width - (panelConfigRect.x + panelConfigRect.width)) {
+            screenRect = Qt.rect(screenRect.x, screenRect.y, panelConfigRect.x - screenRect.x, screenRect.height);
+        } else {
+            const diff = Math.max(0, panelConfigRect.x + panelConfigRect.width - screenRect.x);
+            screenRect = Qt.rect(Math.max(screenRect.x, panelConfigRect.x + panelConfigRect.width), screenRect.y, screenRect.width - diff, screenRect.height);
+        }
+
+        if (sidePanel.visible) {
+            screenRect = Qt.rect(screenRect.x + sidePanel.width, screenRect.y, screenRect.width - sidePanel.width, screenRect.height);
+        }
+        return screenRect;
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        onClicked: containment.plasmoid.corona.editMode = false
+    }
+
+    MouseArea {
+        id: containmentParent
+        x: editModeLoader.active ? editModeLoader.item.centerX - width / 2 : 0
+        y: editModeLoader.active ? editModeLoader.item.centerY - height / 2 : 0
+        width: root.width
+        height: root.height
+        readonly property real extraScale: desktop.configuredPanel || sidePanel.visible ? 0.95 : 0.9
+        property real scaleFactor: Math.min(editModeRect.width/root.width, editModeRect.height/root.height) * extraScale
+        scale: containment?.plasmoid.corona.editMode ? scaleFactor : 1
+    }
+
+    Loader {
+        id: editModeLoader
+        anchors.fill: parent
+        sourceComponent: DesktopEditMode {}
+        active: containment?.plasmoid.corona.editMode || editModeUiTimer.running
+        Timer {
+            id: editModeUiTimer
+            property bool editMode: containment?.plasmoid.corona.editMode || false
+            onEditModeChanged: restart()
+            interval: Kirigami.Units.longDuration
         }
     }
 
@@ -149,6 +209,11 @@ Item {
 
         onVisibleChanged: {
             if (!visible) {
+                // If was called from a panel, open the panel config
+                if (sidePanelStack.item && sidePanelStack.item.containment
+                    && sidePanelStack.item.containment != containment.plasmoid) {
+                    Qt.callLater(sidePanelStack.item.containment.internalAction("configure").trigger);
+                }
                 sidePanelStack.state = "closed";
                 ActivitySwitcher.Backend.shouldShowSwitcher = false;
             }
@@ -207,10 +272,13 @@ Item {
         }
     }
 
+
     onContainmentChanged: {
         if (containment == null) {
             return;
         }
+
+        containment.parent = containmentParent
 
         if (switchAnim.running) {
             //If the animation was still running, stop it and reset
@@ -251,18 +319,10 @@ Item {
         ScriptAction {
             script: {
                 if (containment) {
-                    containment.anchors.left = undefined;
-                    containment.anchors.top = undefined;
-                    containment.anchors.right = undefined;
-                    containment.anchors.bottom = undefined;
                     containment.z = 1;
                     containment.x = root.width;
                 }
                 if (internal.oldContainment) {
-                    internal.oldContainment.anchors.left = undefined;
-                    internal.oldContainment.anchors.top = undefined;
-                    internal.oldContainment.anchors.right = undefined;
-                    internal.oldContainment.anchors.bottom = undefined;
                     internal.oldContainment.z = 0;
                     internal.oldContainment.x = 0;
                 }
@@ -290,10 +350,6 @@ Item {
                     internal.oldContainment.visible = false;
                 }
                 if (containment) {
-                    containment.anchors.left = root.left;
-                    containment.anchors.top = root.top;
-                    containment.anchors.right = root.right;
-                    containment.anchors.bottom = root.bottom;
                     internal.oldContainment = containment;
                 }
             }

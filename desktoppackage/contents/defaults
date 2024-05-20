@@ -1,12 +1,12 @@
 [Desktop]
 Containment=org.kde.plasma.folder
-ToolBox=org.kde.desktoptoolbox
+ToolBox=
 RuntimePlatform=Desktop
 
 [Desktop][ContainmentActions]
 RightButton;NoModifier=org.kde.contextmenu
 MiddleButton;NoModifier=org.kde.paste
- 
+
 [Panel]
 Containment=org.kde.panel
 ToolBox=org.kde.paneltoolbox
