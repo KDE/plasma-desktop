@@ -246,7 +246,7 @@ uint SortedActivitiesModel::lastUsedTime(const QString &activity) const
         return ~(uint)0;
 
     } else {
-        KConfig config(QStringLiteral("kactivitymanagerd-switcher"), KConfig::SimpleConfig);
+        KConfig config(QStringLiteral("plasma/activitiesstaterc"), KConfig::SimpleConfig, QStandardPaths::GenericStateLocation);
         KConfigGroup times(&config, QStringLiteral("LastUsed"));
 
         return times.readEntry(activity, (uint)0);

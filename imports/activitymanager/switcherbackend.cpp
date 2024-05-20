@@ -187,6 +187,15 @@ SwitcherBackend::SwitcherBackend(QObject *parent)
 
     connect(&m_activities, &KActivities::Controller::currentActivityChanged, this, &SwitcherBackend::onCurrentActivityChanged);
     m_previousActivity = m_activities.currentActivity();
+
+    // migrate values to state location
+    KConfig oldConfig(QStringLiteral("kactivitymanagerd-switcher"));
+    KConfigGroup oldTimes(&oldConfig, QStringLiteral("LastUsed"));
+
+    KConfig stateConfig(QStringLiteral("plasma/activitiesstaterc"), KConfig::SimpleConfig, QStandardPaths::GenericStateLocation);
+    KConfigGroup times = stateConfig.group(QStringLiteral("LastUsed"));
+
+    oldTimes.moveValuesTo(times);
 }
 
 SwitcherBackend::~SwitcherBackend()
@@ -290,7 +299,7 @@ void SwitcherBackend::onCurrentActivityChanged(const QString &id)
     KActivities::Info activity(id);
     Q_EMIT showSwitchNotification(id, activity.name(), activity.icon());
 
-    KConfig config(QStringLiteral("kactivitymanagerd-switcher"));
+    KConfig config(QStringLiteral("plasma/activitiesstaterc"), KConfig::SimpleConfig, QStandardPaths::GenericStateLocation);
     KConfigGroup times(&config, QStringLiteral("LastUsed"));
 
     const auto now = QDateTime::currentDateTime().toSecsSinceEpoch();
