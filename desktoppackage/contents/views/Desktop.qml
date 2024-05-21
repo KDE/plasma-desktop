@@ -83,7 +83,11 @@ Item {
         }
 
         if (sidePanel.visible) {
-            screenRect = Qt.rect(screenRect.x + sidePanel.width, screenRect.y, screenRect.width - sidePanel.width, screenRect.height);
+            if (Qt.application.layoutDirection === Qt.RightToLeft) {
+                screenRect = Qt.rect(screenRect.x, screenRect.y, screenRect.width - sidePanel.width, screenRect.height);
+            } else {
+                screenRect = Qt.rect(screenRect.x + sidePanel.width, screenRect.y, screenRect.width - sidePanel.width, screenRect.height);
+            }
         }
         return screenRect;
     }

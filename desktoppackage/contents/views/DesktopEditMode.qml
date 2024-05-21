@@ -69,6 +69,8 @@ Item {
             }
             RowLayout {
                 id: toolBar
+                LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+                LayoutMirroring.childrenInherit: true
                 anchors {
                     left: parent.left
                     top: parent.top
