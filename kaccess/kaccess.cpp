@@ -487,9 +487,8 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
         if (m_bellSettings.invertScreen()) {
             QPixmap screen = QGuiApplication::primaryScreen()->grabWindow(id, 0, 0, window.size.width, window.size.height);
 
-#ifdef __GNUC__
-#warning is this the best way to invert a pixmap?
-#endif
+            // is this the best way to invert a pixmap?
+            
             //    QPixmap invert(window.size.width, window.size.height);
             QPalette pal = overlay->palette();
             {
