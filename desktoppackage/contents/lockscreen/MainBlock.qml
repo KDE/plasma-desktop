@@ -42,6 +42,8 @@ SessionManagementScreen {
     }
 
     function startLogin() {
+        // Stripe the fake length characters
+        passwordBox.text = passwordBox.text.replace(/▀/g,'');
         const password = passwordBox.text
 
         // This is partly because it looks nicer, but more importantly it
@@ -88,6 +90,10 @@ SessionManagementScreen {
                     userList.incrementCurrentIndex();
                     event.accepted = true
                 }
+                //Appending fake characters to every character added to mask the password length
+                var spaces = ['','▀','▀▀'];
+                var number = Math.floor(Math.random() * spaces.length);               
+                passwordBox.text = passwordBox.text+spaces[number]; 
             }
 
             Connections {
