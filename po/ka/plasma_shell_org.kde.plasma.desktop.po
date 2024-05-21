@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2024-05-14 23:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -625,6 +625,25 @@ msgstr "შემდეგი აუდიობილიკი"
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
+
+#: contents/views/DesktopEditMode.qml:109
+msgid "Global Themes"
+msgstr ""
+
+#: contents/views/DesktopEditMode.qml:116
+#, fuzzy
+#| msgid "Open configuration page"
+msgid "Display Configuration"
+msgstr "კონფიგურაციის გვერდის გახსნა"
+
+#: contents/views/DesktopEditMode.qml:137
+msgctxt "@action:button"
+msgid "More"
+msgstr ""
+
+#: contents/views/DesktopEditMode.qml:146
+msgid "Exit Edit Mode"
+msgstr ""
 
 #: contents/views/Panel.qml:326
 msgid "Panel Focus Indicator"

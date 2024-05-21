@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2022-12-31 17:00+0000\n"
+"PO-Revision-Date: 2024-05-20 18:57+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -69,16 +69,14 @@ msgid "Custom size"
 msgstr "Custom size"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found."
+#, kde-format
 msgid "No drawing tablets found"
-msgstr "No drawing tablets found."
+msgstr "No drawing tablets found"
 
 #: ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "Configure drawing tablets"
+#, kde-format
 msgid "Connect a drawing tablet"
-msgstr "Configure drawing tablets"
+msgstr "Connect a drawing tablet"
 
 #: ui/main.qml:41
 #, kde-format
@@ -97,10 +95,9 @@ msgid "Orientation:"
 msgstr "Orientation:"
 
 #: ui/main.qml:110
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgid "Left handed mode:"
-msgstr "Left-handed mode:"
+msgstr "Left handed mode:"
 
 #: ui/main.qml:120
 #, kde-format
@@ -125,22 +122,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:249
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pen button 1:"
-msgstr "Button %1:"
+msgstr "Pen button 1:"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Tool Button 2"
+#, kde-format
 msgid "Pen button 2:"
-msgstr "Tool Button 2"
+msgstr "Pen button 2:"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Tool Button 3"
+#, kde-format
 msgid "Pen button 3:"
-msgstr "Tool Button 3"
+msgstr "Pen button 3:"
 
 #: ui/main.qml:295
 #, kde-format
@@ -154,10 +148,9 @@ msgid "None"
 msgstr "None"
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
-msgstr "Button %1:"
+msgstr "Pad button %1:"
 
 #~ msgid "Tool Button 1"
 #~ msgstr "Tool Button 1"

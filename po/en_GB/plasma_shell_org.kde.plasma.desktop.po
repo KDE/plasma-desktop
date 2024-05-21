@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:39+0000\n"
-"PO-Revision-Date: 2023-05-21 14:52+0100\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"PO-Revision-Date: 2024-05-20 18:53+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -265,7 +265,7 @@ msgstr "Add Spacer"
 
 #: contents/configuration/PanelConfiguration.qml:107
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Add spacer widget to the panel"
 
 #: contents/configuration/PanelConfiguration.qml:114
 msgid "Add Widgets…"
@@ -273,11 +273,11 @@ msgstr "Add Widgets…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "Open the widget selector to drag and drop widgets to the panel"
 
 #: contents/configuration/PanelConfiguration.qml:146
 msgid "Position"
-msgstr ""
+msgstr "Position"
 
 #: contents/configuration/PanelConfiguration.qml:151
 #: contents/configuration/PanelConfiguration.qml:266
@@ -300,24 +300,18 @@ msgid "Bottom"
 msgstr "Bottom"
 
 #: contents/configuration/PanelConfiguration.qml:174
-#, fuzzy
-#| msgid "More Options…"
 msgid "Set Position…"
-msgstr "More Options…"
+msgstr "Set Position…"
 
 #: contents/configuration/PanelConfiguration.qml:201
-#, fuzzy
-#| msgid "Alignment:"
 msgid "Alignment"
-msgstr "Alignment:"
+msgstr "Alignment"
 
 #: contents/configuration/PanelConfiguration.qml:267
 msgid "Center"
 msgstr "Centre"
 
 #: contents/configuration/PanelConfiguration.qml:290
-#, fuzzy
-#| msgid "Height"
 msgid "Height"
 msgstr "Height"
 
@@ -326,74 +320,56 @@ msgid "Width"
 msgstr "Width"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Panel height:"
+msgstr "Fill height"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Panel width:"
+msgstr "Fill width"
 
 #: contents/configuration/PanelConfiguration.qml:311
 msgid "Fit content"
-msgstr ""
+msgstr "Fit content"
 
 #: contents/configuration/PanelConfiguration.qml:312
 msgid "Custom"
-msgstr ""
+msgstr "Custom"
 
 #: contents/configuration/PanelConfiguration.qml:338
-#, fuzzy
-#| msgid "Visibility:"
 msgid "Visibility"
-msgstr "Visibility:"
+msgstr "Visibility"
 
 #: contents/configuration/PanelConfiguration.qml:351
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
-msgstr "Always Visible"
+msgstr "Always visible"
 
 #: contents/configuration/PanelConfiguration.qml:352
-#, fuzzy
-#| msgid "Auto-Hide"
 msgid "Auto hide"
-msgstr "Auto-Hide"
+msgstr "Auto hide"
 
 #: contents/configuration/PanelConfiguration.qml:353
 msgid "Dodge windows"
-msgstr ""
+msgstr "Dodge windows"
 
 #: contents/configuration/PanelConfiguration.qml:354
-#, fuzzy
-#| msgid "Windows Behind"
 msgid "Windows Go Below"
-msgstr "Windows Behind"
+msgstr "Windows Go Below"
 
 #: contents/configuration/PanelConfiguration.qml:397
-#, fuzzy
-#| msgid "Opacity:"
 msgid "Opacity"
-msgstr "Opacity:"
+msgstr "Opacity"
 
 #: contents/configuration/PanelConfiguration.qml:411
 msgid "Adaptive"
 msgstr "Adaptive"
 
 #: contents/configuration/PanelConfiguration.qml:412
-#, fuzzy
-#| msgid "Always Opaque"
 msgid "Opaque"
-msgstr "Always Opaque"
+msgstr "Opaque"
 
 #: contents/configuration/PanelConfiguration.qml:413
-#, fuzzy
-#| msgid "Always Translucent"
 msgid "Translucent"
-msgstr "Always Translucent"
+msgstr "Translucent"
 
 #: contents/configuration/PanelConfiguration.qml:436
 msgid "Floating"
@@ -401,36 +377,28 @@ msgstr "Floating"
 
 #: contents/configuration/PanelConfiguration.qml:446
 msgid "Style"
-msgstr ""
+msgstr "Style"
 
 #: contents/configuration/PanelConfiguration.qml:532
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
-msgstr "Panel width:"
+msgstr "Panel Width:"
 
 #: contents/configuration/PanelConfiguration.qml:533
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Height:"
-msgstr "Panel width:"
+msgstr "Panel Height:"
 
 #: contents/configuration/PanelConfiguration.qml:556
-#, fuzzy
-#| msgid "Focus Shortcut:"
 msgid "Focus shortcut:"
-msgstr "Focus Shortcut:"
+msgstr "Focus shortcut:"
 
 #: contents/configuration/PanelConfiguration.qml:567
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Press this keyboard shortcut to move focus to the Panel"
 
 #: contents/configuration/PanelConfiguration.qml:596
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "Remove Panel"
+msgstr "Delete Panel"
 
 #: contents/configuration/PanelConfiguration.qml:599
 msgid "Remove this panel; this action is undo-able"
@@ -439,11 +407,11 @@ msgstr "Remove this panel; this action is undo-able"
 #: contents/configuration/PanelConfiguration.qml:610
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr ""
+msgstr "Done"
 
 #: contents/configuration/PanelConfiguration.qml:613
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "Close Panel Settings window and exit Edit Mode"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -475,10 +443,8 @@ msgstr ""
 "Double click to reset."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy
-#| msgid "Panels and Desktops Management"
 msgid "Panel and Desktop Management"
-msgstr "Panels and Desktops Management"
+msgstr "Panel and Desktop Management"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
@@ -516,7 +482,7 @@ msgstr "Alternative Widgets"
 
 #: contents/explorer/AppletDelegate.qml:41
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Unsupported Widget"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
@@ -558,8 +524,8 @@ msgstr "Categories"
 #: contents/explorer/WidgetExplorer.qml:215
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Confirm Removal Of One Widget"
+msgstr[1] "Confirm Removal Of %1 Widgets"
 
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
@@ -572,102 +538,117 @@ msgstr "No widgets available"
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Clock:"
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Keep visible when unlocking prompt disappears"
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Media controls:"
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Show under unlocking prompt"
 
 #: contents/lockscreen/LockScreenUi.qml:50
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Unlocking failed"
 
 #: contents/lockscreen/LockScreenUi.qml:276
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Caps Lock is on"
 
 #: contents/lockscreen/LockScreenUi.qml:290
 msgid "Sleep"
-msgstr ""
+msgstr "Sleep"
 
 #: contents/lockscreen/LockScreenUi.qml:296
 msgid "Hibernate"
-msgstr ""
+msgstr "Hibernate"
 
 #: contents/lockscreen/LockScreenUi.qml:302
-#, fuzzy
-#| msgid "Switch"
 msgid "Switch User"
-msgstr "Switch"
+msgstr "Switch User"
 
 #: contents/lockscreen/LockScreenUi.qml:363
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Virtual Keyboard"
 
 #: contents/lockscreen/LockScreenUi.qml:387
-#, fuzzy
-#| msgid "Switch"
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Switch"
+msgstr "Switch layout"
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr ""
+msgstr "Unlock"
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(or scan your fingerprint on the reader)"
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(or scan your smartcard)"
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr ""
+msgstr "No title"
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr ""
+msgstr "No media playing"
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr ""
+msgstr "Previous track"
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Play or Pause media"
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr ""
+msgstr "Next track"
 
 #: contents/osd/OsdItem.qml:32
 msgctxt "Percentage value"
 msgid "%1%"
+msgstr "%1%"
+
+#: contents/views/DesktopEditMode.qml:109
+msgid "Global Themes"
+msgstr ""
+
+#: contents/views/DesktopEditMode.qml:116
+#, fuzzy
+#| msgid "Open configuration page"
+msgid "Display Configuration"
+msgstr "Open configuration page"
+
+#: contents/views/DesktopEditMode.qml:137
+msgctxt "@action:button"
+msgid "More"
+msgstr ""
+
+#: contents/views/DesktopEditMode.qml:146
+msgid "Exit Edit Mode"
 msgstr ""
 
 #: contents/views/Panel.qml:326
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Panel Focus Indicator"
 
 #, fuzzy
 #~| msgid "Height"

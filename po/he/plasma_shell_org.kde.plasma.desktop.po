@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-14 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2024-05-14 07:58+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -626,6 +626,25 @@ msgstr "הרצועה הבאה"
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
+
+#: contents/views/DesktopEditMode.qml:109
+msgid "Global Themes"
+msgstr ""
+
+#: contents/views/DesktopEditMode.qml:116
+#, fuzzy
+#| msgid "Open configuration page"
+msgid "Display Configuration"
+msgstr "פתיחת עמוד הגדרות"
+
+#: contents/views/DesktopEditMode.qml:137
+msgctxt "@action:button"
+msgid "More"
+msgstr ""
+
+#: contents/views/DesktopEditMode.qml:146
+msgid "Exit Edit Mode"
+msgstr ""
 
 #: contents/views/Panel.qml:326
 msgid "Panel Focus Indicator"
