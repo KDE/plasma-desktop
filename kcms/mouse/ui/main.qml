@@ -10,9 +10,8 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
-import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
-import org.kde.kquickcontrols
+import org.kde.kquickcontrols as KQuickControls
 
 Kirigami.ApplicationItem {
     id: root
@@ -383,7 +382,7 @@ Kirigami.ApplicationItem {
                         label: i18ndc("kcmmouse", "@label for assigning an action to a numbered button", "Extra Button %1:", index + 1)
                     }))
 
-                    delegate: KeySequenceItem {
+                    delegate: KQuickControls.KeySequenceItem {
                         Kirigami.FormData.label: modelData.label
 
                         keySequence: backend.buttonMapping[modelData.buttonName]
@@ -391,7 +390,7 @@ Kirigami.ApplicationItem {
                         modifierlessAllowed: true
                         modifierOnlyAllowed: true
                         multiKeyShortcutsAllowed: false
-                        checkForConflictsAgainst: ShortcutType.None
+                        checkForConflictsAgainst: KQuickControls.ShortcutType.None
 
                         onCaptureFinished: {
                             const copy = backend.buttonMapping;
@@ -433,14 +432,14 @@ Kirigami.ApplicationItem {
                         i18ndc("kcmmouse", "@action:button, Bind a mousebutton to keyboard key(s)", "Add Binding…")
                     icon.name: "list-add"
                 }
-                KeySequenceItem {
+                KQuickControls.KeySequenceItem {
                     id: newKeySequenceItem
                     visible: false
 
                     modifierlessAllowed: true
                     modifierOnlyAllowed: true
                     multiKeyShortcutsAllowed: false
-                    checkForConflictsAgainst: ShortcutType.None
+                    checkForConflictsAgainst: KQuickControls.ShortcutType.None
 
                     onCaptureFinished: {
                         visible = false
