@@ -382,7 +382,7 @@ Kirigami.ApplicationItem {
             enabled: newBinding.checked
             preventStealing: true
             acceptedButtons: Qt.AllButtons & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton)
-            onClicked: {
+            onClicked: mouse => {
                 lastButton = buttonMappings.extraButtons.find(entry => Qt[entry.buttonName] === mouse.button)
                 newBinding.visible = false
                 newKeySequenceItem.visible = true
@@ -438,7 +438,7 @@ Kirigami.ApplicationItem {
                     Kirigami.Action {
                         icon.name: "dialog-cancel"
                         text: i18ndc("kcmmouse", "@action:button", "Cancel")
-                        onTriggered: {
+                        onTriggered: source => {
                             newKeySequenceItem.visible = false;
                             newBinding.visible = true
                             newBinding.checked = false
