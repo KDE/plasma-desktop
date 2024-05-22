@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
-"PO-Revision-Date: 2024-05-14 07:58+0300\n"
+"POT-Creation-Date: 2024-05-22 00:40+0000\n"
+"PO-Revision-Date: 2024-05-21 07:36+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -627,24 +627,22 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:109
+#: contents/views/DesktopEditMode.qml:111
 msgid "Global Themes"
-msgstr ""
+msgstr "ערכות עיצוב כלליות"
 
-#: contents/views/DesktopEditMode.qml:116
-#, fuzzy
-#| msgid "Open configuration page"
+#: contents/views/DesktopEditMode.qml:118
 msgid "Display Configuration"
-msgstr "פתיחת עמוד הגדרות"
+msgstr "הגדרות תצוגה"
 
-#: contents/views/DesktopEditMode.qml:137
+#: contents/views/DesktopEditMode.qml:139
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "עוד"
 
-#: contents/views/DesktopEditMode.qml:146
+#: contents/views/DesktopEditMode.qml:148
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "יציאה ממצב עריכה"
 
 #: contents/views/Panel.qml:326
 msgid "Panel Focus Indicator"
