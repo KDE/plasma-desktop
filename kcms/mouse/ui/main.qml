@@ -406,8 +406,10 @@ Kirigami.ApplicationItem {
                 id: explanationLabel
                 Layout.fillWidth: true
                 visible: newBinding.checked || newKeySequenceItem.visible
-                text: newBinding.visible ? i18ndc("kcmmouse","@action:button", "Press the mouse button for which you want to add a key binding") :
-                    i18ndc("kcmmouse","@action:button, %1 is the translation of 'Extra Button %1' from above", "Enter the new key combination for %1", buttonCapture.lastButton?.label ?? "")
+                text: newBinding.visible
+                    ? i18ndc("kcmmouse","@action:button", "Press the mouse button for which you want to add a key binding")
+                    : i18ndc("kcmmouse","@action:button, %1 is the translation of 'Extra Button %1' from above",
+                        "Enter the new key combination for %1", buttonCapture.lastButton?.label ?? "")
                 actions: [
                     Kirigami.Action {
                         icon.name: "dialog-cancel"
@@ -428,8 +430,9 @@ Kirigami.ApplicationItem {
                 QQC2.Button {
                     id: newBinding
                     checkable: true
-                    text: checked ? i18ndc("kcmmouse", "@action:button", "Press a mouse button") :
-                        i18ndc("kcmmouse", "@action:button, Bind a mousebutton to keyboard key(s)", "Add Binding…")
+                    text: checked
+                        ? i18ndc("kcmmouse", "@action:button", "Press a mouse button")
+                        : i18ndc("kcmmouse", "@action:button, Bind a mousebutton to keyboard key(s)", "Add Binding…")
                     icon.name: "list-add"
                 }
                 KQuickControls.KeySequenceItem {
