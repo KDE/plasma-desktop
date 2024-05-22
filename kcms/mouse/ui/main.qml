@@ -428,7 +428,7 @@ Kirigami.ApplicationItem {
                 QQC2.Button {
                     id: newBinding
                     checkable: true
-                    text: checked ? i18ndc("kcmmouse", "@action:button", "Press a mouse button ") :
+                    text: checked ? i18ndc("kcmmouse", "@action:button", "Press a mouse button") :
                         i18ndc("kcmmouse", "@action:button, Bind a mousebutton to keyboard key(s)", "Add Binding…")
                     icon.name: "list-add"
                 }
