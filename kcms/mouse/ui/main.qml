@@ -6,6 +6,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
@@ -407,6 +409,8 @@ Kirigami.ApplicationItem {
                     }))
 
                     delegate: KQuickControls.KeySequenceItem {
+                        required property var modelData
+
                         Kirigami.FormData.label: modelData.label
 
                         keySequence: root.backend.buttonMapping[modelData.buttonName]
