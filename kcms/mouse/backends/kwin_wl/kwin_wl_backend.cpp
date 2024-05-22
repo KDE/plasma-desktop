@@ -5,7 +5,6 @@
 */
 
 #include "kwin_wl_backend.h"
-#include "kwin_wl_device.h"
 
 #include <algorithm>
 
@@ -101,8 +100,8 @@ bool KWinWaylandBackend::applyConfig()
         }
     }
 
-    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](QObject *t) {
-        return static_cast<KWinWaylandDevice *>(t)->applyConfig();
+    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](KWinWaylandDevice *t) {
+        return t->applyConfig();
     });
 }
 
@@ -123,22 +122,22 @@ bool KWinWaylandBackend::getConfig()
     }
     setButtonMapping(m_loadedButtonMapping);
 
-    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](QObject *t) {
-        return static_cast<KWinWaylandDevice *>(t)->init();
+    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](KWinWaylandDevice *t) {
+        return t->init();
     });
 }
 
 bool KWinWaylandBackend::getDefaultConfig()
 {
-    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](QObject *t) {
-        return static_cast<KWinWaylandDevice *>(t)->getDefaultConfig();
+    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](KWinWaylandDevice *t) {
+        return t->getDefaultConfig();
     });
 }
 
 bool KWinWaylandBackend::isChangedConfig() const
 {
-    return m_buttonMapping != m_loadedButtonMapping || std::any_of(m_devices.constBegin(), m_devices.constEnd(), [](QObject *t) {
-               return static_cast<KWinWaylandDevice *>(t)->isChangedConfig();
+    return m_buttonMapping != m_loadedButtonMapping || std::any_of(m_devices.constBegin(), m_devices.constEnd(), [](KWinWaylandDevice *t) {
+               return t->isChangedConfig();
            });
 }
 
@@ -157,8 +156,8 @@ void KWinWaylandBackend::setButtonMapping(const QVariantMap &mapping)
 
 void KWinWaylandBackend::onDeviceAdded(QString sysName)
 {
-    if (std::any_of(m_devices.constBegin(), m_devices.constEnd(), [sysName](QObject *t) {
-            return static_cast<KWinWaylandDevice *>(t)->sysName() == sysName;
+    if (std::any_of(m_devices.constBegin(), m_devices.constEnd(), [sysName](KWinWaylandDevice *t) {
+            return t->sysName() == sysName;
         })) {
         return;
     }
@@ -191,14 +190,14 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
 
 void KWinWaylandBackend::onDeviceRemoved(QString sysName)
 {
-    QList<QObject *>::const_iterator it = std::find_if(m_devices.constBegin(), m_devices.constEnd(), [sysName](QObject *t) {
-        return static_cast<KWinWaylandDevice *>(t)->sysName() == sysName;
+    QList<KWinWaylandDevice *>::const_iterator it = std::find_if(m_devices.constBegin(), m_devices.constEnd(), [sysName](KWinWaylandDevice *t) {
+        return t->sysName() == sysName;
     });
     if (it == m_devices.cend()) {
         return;
     }
 
-    KWinWaylandDevice *dev = static_cast<KWinWaylandDevice *>(*it);
+    KWinWaylandDevice *dev = *it;
     qCDebug(KCM_MOUSE).nospace() << "Device disconnected: " << dev->name() << " (" << dev->sysName() << ")";
 
     int index = it - m_devices.cbegin();
@@ -209,7 +208,12 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
 
 QList<QObject *> KWinWaylandBackend::getDevices() const
 {
-    return m_devices;
+    QList<QObject *> devices;
+    devices.reserve(m_devices.count());
+    for (const auto &device : m_devices) {
+        devices.append(device);
+    }
+    return devices;
 }
 
 int KWinWaylandBackend::deviceCount() const

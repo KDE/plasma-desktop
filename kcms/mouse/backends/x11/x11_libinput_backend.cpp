@@ -5,7 +5,6 @@
 */
 
 #include "x11_libinput_backend.h"
-#include "x11_libinput_dummydevice.h"
 
 X11LibinputBackend::X11LibinputBackend(QObject *parent)
     : InputBackend(parent)
@@ -15,27 +14,27 @@ X11LibinputBackend::X11LibinputBackend(QObject *parent)
 
 bool X11LibinputBackend::applyConfig()
 {
-    return static_cast<X11LibinputDummyDevice *>(m_device)->applyConfig();
+    return m_device->applyConfig();
 }
 
 bool X11LibinputBackend::getConfig()
 {
-    return static_cast<X11LibinputDummyDevice *>(m_device)->getConfig();
+    return m_device->getConfig();
 }
 
 bool X11LibinputBackend::getDefaultConfig()
 {
-    return static_cast<X11LibinputDummyDevice *>(m_device)->getDefaultConfig();
+    return m_device->getDefaultConfig();
 }
 
 bool X11LibinputBackend::isChangedConfig() const
 {
-    return static_cast<X11LibinputDummyDevice *>(m_device)->isChangedConfig();
+    return m_device->isChangedConfig();
 }
 
 void X11LibinputBackend::kcmInit()
 {
-    static_cast<X11LibinputDummyDevice *>(m_device)->getDefaultConfigFromX();
+    m_device->getDefaultConfigFromX();
 
     getConfig();
     applyConfig();
@@ -58,7 +57,7 @@ bool X11LibinputBackend::isAnonymousDevice() const
 
 QList<QObject *> X11LibinputBackend::getDevices() const
 {
-    return QList<QObject *>(1, m_device);
+    return QList<QObject *>{m_device};
 }
 
 #include "moc_x11_libinput_backend.cpp"

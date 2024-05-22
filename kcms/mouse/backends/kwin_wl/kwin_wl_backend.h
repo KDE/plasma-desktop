@@ -7,6 +7,7 @@
 #pragma once
 
 #include "inputbackend.h"
+#include "kwin_wl_device.h"
 
 #include <QList>
 
@@ -44,7 +45,7 @@ private:
     void findDevices();
 
     QDBusInterface *m_deviceManager;
-    QList<QObject *> m_devices;
+    QList<KWinWaylandDevice *> m_devices;
     QVariantMap m_buttonMapping;
     QVariantMap m_loadedButtonMapping;
 

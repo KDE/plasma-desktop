@@ -7,6 +7,7 @@
 #pragma once
 
 #include "inputbackend.h"
+#include "x11_libinput_dummydevice.h"
 
 #include <QList>
 
@@ -30,6 +31,6 @@ public:
     QList<QObject *> getDevices() const override;
 
 private:
-    QObject *m_device;
-    QString m_errorString = QString();
+    X11LibinputDummyDevice *m_device = nullptr;
+    QString m_errorString;
 };
