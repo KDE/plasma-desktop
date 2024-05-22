@@ -153,6 +153,8 @@ Kirigami.ApplicationItem {
                 Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
                 Layout.fillWidth: true
 
+                spacing: Kirigami.Units.smallSpacing
+
                 function onAccelSpeedChanged(value: int): void {
                     if (root.device && (value / 1000) !== root.device.pointerAcceleration) {
                         root.device.pointerAcceleration = value / 100
@@ -389,6 +391,8 @@ Kirigami.ApplicationItem {
         }
 
         ColumnLayout {
+            spacing: Kirigami.Units.smallSpacing
+
             Kirigami.FormLayout {
                 id: buttonLayout
                 twinFormLayouts: otherLayout
