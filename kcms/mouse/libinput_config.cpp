@@ -19,13 +19,19 @@
 #include <QQuickItem>
 #include <QQuickWidget>
 #include <QVBoxLayout>
+#include <qqml.h>
 
 #include "inputbackend.h"
+
+using namespace Qt::StringLiterals;
 
 LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     : QWidget(parent->widget())
     , m_parent(parent)
 {
+    const auto uri = "org.kde.plasma.private.kcm_mouse";
+    qmlRegisterUncreatableType<InputBackend>(uri, 1, 0, "InputBackend", u""_s);
+
     m_backend = backend;
 
     m_initError = !m_backend->errorString().isNull();
@@ -47,7 +53,7 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     m_view->setClearColor(Qt::transparent);
     m_view->setAttribute(Qt::WA_AlwaysStackOnTop);
 
-    m_view->rootContext()->setContextProperty("backend", m_backend);
+    m_view->rootContext()->setContextProperty("__backend", m_backend);
 
     QObject::connect(m_view, &QQuickWidget::statusChanged, [&](QQuickWidget::Status status) {
         if (status == QQuickWidget::Ready) {
