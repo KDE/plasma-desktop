@@ -193,7 +193,7 @@ bool KNetAttach::validateCurrentPage()
             url.setUserName(trimmedUser);
         }
         QString path = _path->text().trimmed();
-#ifndef Q_WS_WIN
+#ifndef Q_OS_WINDOWS
         // could a relative path really be made absolute by simply prepending a '/' ?
         if (!path.startsWith(QLatin1Char('/'))) {
             path = QLatin1Char('/') + path;
