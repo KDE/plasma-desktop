@@ -22,6 +22,8 @@ add_library(kcm_mouse MODULE
     plugin.cpp
     configcontainer.cpp
     inputbackend.cpp
+    keycombination.cpp
+    keysmodel.cpp
     libinput_config.cpp
 )
 

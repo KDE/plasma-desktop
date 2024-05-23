@@ -6,6 +6,9 @@
 
 #include "libinput_config.h"
 #include "configcontainer.h"
+#include "inputbackend.h"
+#include "keycombination.h"
+#include "keysmodel.h"
 
 #include <KAboutData>
 #include <KLocalizedContext>
@@ -21,8 +24,6 @@
 #include <QVBoxLayout>
 #include <qqml.h>
 
-#include "inputbackend.h"
-
 using namespace Qt::StringLiterals;
 
 LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
@@ -31,6 +32,8 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
 {
     const auto uri = "org.kde.plasma.private.kcm_mouse";
     qmlRegisterUncreatableType<InputBackend>(uri, 1, 0, "InputBackend", u""_s);
+    qmlRegisterType<KeysModel>(uri, 1, 0, "KeysModel");
+    qmlRegisterType<KeyCombination>(uri, 1, 0, "KeyCombination");
 
     m_backend = backend;
 

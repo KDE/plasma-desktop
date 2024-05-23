@@ -483,6 +483,88 @@ Kirigami.ApplicationItem {
                     }
                 }
 
+                Mouse.KeyCombination {
+                    id: keyCombination
+                    keySequence: newKeySequenceItem.keySequence
+                    onKeySequenceChanged: {
+                        comboBoxKey.updateCurrentIndexFromKeyCombination();
+                    }
+                    onKeySequenceModified: {
+                        newKeySequenceItem.keySequence = keySequence;
+                    }
+                }
+
+                Mouse.KeyCombination {
+                    id: stringsProviderKeyCombination
+
+                    // key: Qt.Key_unknown
+
+                    function modifier(key: /*Qt.Key*/ int): string {
+                        this.key = key;
+                        return display;
+                    }
+
+                    Component.onCompleted: {
+                        checkBoxShift.text = modifier(Qt.Key_Shift);
+                        checkBoxControl.text = modifier(Qt.Key_Control);
+                        checkBoxAlt.text = modifier(Qt.Key_Alt);
+                        checkBoxMeta.text = modifier(Qt.Key_Meta);
+                    }
+                }
+
+                Grid {
+                    Kirigami.FormData.label: i18ndc("kcmmouse", "@label", "Keyboard Modifiers:")
+                    Kirigami.FormData.buddyFor: checkBoxShift
+                    Layout.fillWidth: true
+                    visible: newKeySequenceItem.visible
+                    columns: 2
+
+                    QQC2.Button {
+                        id: checkBoxShift
+                        checkable: true
+                        checked: keyCombination.shift
+                        onToggled: keyCombination.shift = checked
+                    }
+                    QQC2.Button {
+                        id: checkBoxControl
+                        checkable: true
+                        checked: keyCombination.control
+                        onToggled: keyCombination.control = checked
+                    }
+                    QQC2.Button {
+                        id: checkBoxAlt
+                        checkable: true
+                        checked: keyCombination.alt
+                        onToggled: keyCombination.alt = checked
+                    }
+                    QQC2.Button {
+                        id: checkBoxMeta
+                        checkable: true
+                        checked: keyCombination.meta
+                        onToggled: keyCombination.meta = checked
+                    }
+                }
+
+                QQC2.ComboBox {
+                    id: comboBoxKey
+                    visible: newKeySequenceItem.visible
+
+                    Kirigami.FormData.label: i18ndc("kcmmouse", "@label", "Key:")
+
+                    model: Mouse.KeysModel {}
+                    textRole: "display"
+                    valueRole: "key"
+
+                    function updateCurrentIndexFromKeyCombination(): void {
+                        currentIndex = indexOfValue(keyCombination.key);
+                    }
+                    Component.onCompleted: {
+                        updateCurrentIndexFromKeyCombination();
+                    }
+                    onActivated: {
+                        keyCombination.key = currentValue;
+                    }
+                }
 
                 Item {
                     Kirigami.FormData.isSection: true
