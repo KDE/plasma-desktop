@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2019-09-23 21:22+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr ""
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 
 #: plasmasearch/ui/main.qml:90
@@ -95,13 +95,13 @@ msgstr ""
 #: plugininstaller/main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr ""
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
+msgid "Path to archive or extracted folder"
 msgstr ""
 
 #: plugininstaller/main.cpp:50
@@ -110,7 +110,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr ""
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -38,11 +38,15 @@ msgid "Get New Plugins…"
 msgstr "获取新插件…"
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to see them."
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 "启用/禁用插件 (用于 KRunner、应用程序启动器、桌面概览特效)。将插件标记为常用"
 "插件，并按照您想要的顺序对它们进行排序。"
@@ -94,16 +98,18 @@ msgid "KRunner plugin installation failed"
 msgstr "KRunner 插件安装失败"
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "要执行的命令：安装或卸载。"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "压缩文件的路径。"
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -111,7 +117,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr "不显示视觉确认对话框"
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -274,3 +280,7 @@ msgstr "无法解析 %1 的软件包名称"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "无法运行安装命令：<message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "压缩文件的路径。"

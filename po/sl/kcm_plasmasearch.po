@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2023-09-03 08:47+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -39,11 +39,15 @@ msgid "Get New Plugins…"
 msgstr "Pridobi nove vtičnike…"
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to see them."
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 "Omogoči ali onemogoči vtičnike (uporabljeni v KRunnerju, zaganjalniku "
 "aplikacij in učinku pregleda). Označite vtičnike kot priljubljene in jih "
@@ -98,16 +102,18 @@ msgid "KRunner plugin installation failed"
 msgstr "Namestitev vtičnika KRunner ni uspela"
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "Ukaz za izvajanje: namesti ali odnamesti."
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "Pot do arhiva."
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -115,7 +121,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr "Ne prikaži vizualnega potrditvenega dialoga"
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -289,3 +295,7 @@ msgstr "Ni bilo mogoče razrešiti ime paketa %1"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "Ni bilo mogoče pognati ukaza za namestitev: <message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "Pot do arhiva."

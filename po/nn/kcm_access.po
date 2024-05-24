@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2024-03-17 10:02+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -21,70 +21,106 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: kcmaccess.cpp:115
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
 msgstr "Alt Graph"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Trykk %1 mens Num Lock, Caps Lock og Scroll Lock er på"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Trykk %1 mens Caps Lock og Scroll Lock er på"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Trykk %1 mens Num Lock og Scroll Lock er på"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Trykk %1 mens Scroll Lock er på"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Trykk %1 mens Num Lock og Caps Lock er på"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Trykk %1 mens Caps Lock er på"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Trykk %1 mens Num Lock er på"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1"
 msgstr "Trykk %1"
 
-#: kcmaccess.cpp:183
+#: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Klarte ikkje lagra «gsettings» for Orca: Feil ved «%1»"
 
-#: kcmaccess.cpp:190
+#: kcmaccess.cpp:193
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Feil: Klarte ikkje køyra «orca --setup»"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:9
+#, kde-format
+msgid "Use Gestures"
+msgstr "Bruk muserørsler"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:13
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Spør om stadfesting for muserørsle"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:17
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Stadfest tilgang til tastaturet"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:21
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Bruk forseinking på tidsavbrot"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:25
+#, kde-format
+msgid "Delay for timeout"
+msgstr "Tidsgrense"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:29
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Bruk pipelyd for tilgang"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -163,24 +199,6 @@ msgstr "Slå på/av pipelyd ved tastetrykk"
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
 msgstr "Varsling når ein valtast vert trykt"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Bruk forseinking på tidsavbrot"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Tidsgrense"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Bruk pipelyd for tilgang"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
@@ -266,24 +284,6 @@ msgstr "Maksfart"
 msgid "Mouse Key Curve"
 msgstr "Musetast-kurve"
 
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "Bruk muserørsler"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Spør om stadfesting for muserørsle"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Stadfest tilgang til tastaturet"
-
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
@@ -301,6 +301,58 @@ msgstr "Om risting av peikaren skal brukast."
 #, kde-format
 msgid "Magnification"
 msgstr "Forstørring"
+
+#: ui/ActivationGestures.qml:16
+#, kde-format
+msgid "Activation:"
+msgstr ""
+
+#: ui/ActivationGestures.qml:17
+#, kde-format
+msgid "Use gestures for activating sticky keys and slow keys"
+msgstr ""
+
+#: ui/ActivationGestures.qml:29
+#, kde-format
+msgid "Turn sticky keys and slow keys off after inactivity:"
+msgstr ""
+
+#: ui/ActivationGestures.qml:58
+#, kde-format
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/ActivationGestures.qml:62
+#, kde-format
+msgid "min"
+msgstr ""
+
+#: ui/ActivationGestures.qml:70
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "Når ei muserørsle vert brukt:"
+
+#: ui/ActivationGestures.qml:71
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "Vis stadfestings­vindauge"
+
+#: ui/ActivationGestures.qml:82
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "Ring systembjølla"
+
+#: ui/ActivationGestures.qml:93
+#, kde-format
+msgid "Show a notification"
+msgstr "Vis varslings­melding"
+
+#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "Set opp varslingar …"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -476,11 +528,16 @@ msgstr "Musestyring"
 
 #: ui/main.qml:47
 #, kde-format
+msgid "Activation Gestures"
+msgstr ""
+
+#: ui/main.qml:52
+#, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "Skjermlesar"
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -528,11 +585,6 @@ msgstr "Ring systembjølla når låsetastar vert slegne på/av"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Vis varsling når val- eller låsetastar vert brukte"
 
-#: ui/ModifierKeys.qml:99
-#, kde-format
-msgid "Configure Notifications…"
-msgstr "Set opp varslingar …"
-
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
@@ -543,47 +595,27 @@ msgstr "Bruk taltastaturet til å flytta peikaren:"
 msgid "Enable"
 msgstr "Slå på"
 
-#: ui/MouseNavigation.qml:29
-#, kde-format
-msgid "When a gesture is used:"
-msgstr "Når ei muserørsle vert brukt:"
-
 #: ui/MouseNavigation.qml:30
-#, kde-format
-msgid "Display a confirmation dialog"
-msgstr "Vis stadfestings­vindauge"
-
-#: ui/MouseNavigation.qml:41
-#, kde-format
-msgid "Ring the System Bell"
-msgstr "Ring systembjølla"
-
-#: ui/MouseNavigation.qml:52
-#, kde-format
-msgid "Show a notification"
-msgstr "Vis varslings­melding"
-
-#: ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
 msgstr "Forseinking for akselerasjon:"
 
-#: ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:44
 #, kde-format
 msgid "Repeat interval:"
 msgstr "Gjentakingsintervall:"
 
-#: ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:58
 #, kde-format
 msgid "Acceleration time:"
 msgstr "Akselerasjonstid:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:72
 #, kde-format
 msgid "Maximum speed:"
 msgstr "Høgste fart:"
 
-#: ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:86
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Peikarakselerasjon:"

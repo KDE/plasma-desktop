@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2023-09-26 18:03+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -26,70 +26,106 @@ msgstr ""
 "X-POT-Import-Date: 2012-12-01 22:22:20+0000\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: kcmaccess.cpp:115
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGr"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Paina %1 kun NumLock, CapsLock ja ScrollLock ovat aktiivisia"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Paina %1 kun CapsLock ja ScrollLock ovat aktiivisia"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Paina %1 kun NumLock ja ScrollLock ovat aktiivisia"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Paina %1 kun ScrollLock on aktiivinen"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Paina %1 kun NumLock ja CapsLock ovat aktiivisia"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Paina %1 kun CapsLock on aktiivinen"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Paina %1 kun NumLock on aktiivinen"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1"
 msgstr "Paina %1"
 
-#: kcmaccess.cpp:183
+#: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Ei voitu asettaa Orcan gsettings-asetusta: ”%1” epäonnistui"
 
-#: kcmaccess.cpp:190
+#: kcmaccess.cpp:193
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Virhe: Ei voitu käynnistää ”orca --setup”"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:9
+#, kde-format
+msgid "Use Gestures"
+msgstr "Käytä eleitä"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:13
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Pyydä vahvistamaan ele"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:17
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Vahvista näppäimistön käyttöoikeus"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:21
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Käytä aikakatkaisuviivettä"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:25
+#, kde-format
+msgid "Delay for timeout"
+msgstr "Aikakatkaisun viive"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:29
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Anna äänimerkki käyttöoikeudesta"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -170,24 +206,6 @@ msgstr "Käytä/älä käytä näppäinpainallusääniä"
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
 msgstr "Ilmoita painettaessa muuntonäppäintä"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Käytä aikakatkaisuviivettä"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Aikakatkaisun viive"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Anna äänimerkki käyttöoikeudesta"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
@@ -273,24 +291,6 @@ msgstr "Enimmäisnopeus"
 msgid "Mouse Key Curve"
 msgstr "Hiiripainikekäyrä"
 
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "Käytä eleitä"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Pyydä vahvistamaan ele"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Vahvista näppäimistön käyttöoikeus"
-
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
@@ -309,6 +309,64 @@ msgstr ""
 #| msgid "Show a notification"
 msgid "Magnification"
 msgstr "Näytä ilmoitus"
+
+#: ui/ActivationGestures.qml:16
+#, kde-format
+msgid "Activation:"
+msgstr "Aktivointi:"
+
+#: ui/ActivationGestures.qml:17
+#, kde-format
+msgid "Use gestures for activating sticky keys and slow keys"
+msgstr "Käytä toimintatapoja aktivoidaksesi alas jääviä ja hitaita näppäimiä"
+
+#: ui/ActivationGestures.qml:29
+#, fuzzy, kde-format
+#| msgid ""
+#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+msgid "Turn sticky keys and slow keys off after inactivity:"
+msgstr ""
+"Poista alas jäävät ja hitaat näppäimet tietyn ajan jälkeen, jos niitä ei ole "
+"käytetty."
+
+#: ui/ActivationGestures.qml:58
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] " min"
+msgstr[1] " min"
+
+#: ui/ActivationGestures.qml:62
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "min"
+msgstr " min"
+
+#: ui/ActivationGestures.qml:70
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "Elettä käytettäessä:"
+
+#: ui/ActivationGestures.qml:71
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "Näytä vahvistusikkuna"
+
+#: ui/ActivationGestures.qml:82
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "Käytä järjestelmän äänimerkkiä"
+
+#: ui/ActivationGestures.qml:93
+#, kde-format
+msgid "Show a notification"
+msgstr "Näytä ilmoitus"
+
+#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "Ilmoitusasetukset…"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -481,12 +539,18 @@ msgid "Mouse Navigation"
 msgstr "Hiirinavigointi"
 
 #: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "&Activation Gestures"
+msgid "Activation Gestures"
+msgstr "&Aktivointitoimet"
+
+#: ui/main.qml:52
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "Näyttölukija"
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -534,11 +598,6 @@ msgstr "Anna järjestelmän äänimerkki vaihdettaessa lukitusnäppäinten tilaa
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Näytä ilmoitus muunto- tai lukitusnäppäimiä käytettäessä"
 
-#: ui/ModifierKeys.qml:99
-#, kde-format
-msgid "Configure Notifications…"
-msgstr "Ilmoitusasetukset…"
-
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
@@ -549,47 +608,27 @@ msgstr "Liikuta osoitinta numeronäppäimin:"
 msgid "Enable"
 msgstr "Käytä"
 
-#: ui/MouseNavigation.qml:29
-#, kde-format
-msgid "When a gesture is used:"
-msgstr "Elettä käytettäessä:"
-
 #: ui/MouseNavigation.qml:30
-#, kde-format
-msgid "Display a confirmation dialog"
-msgstr "Näytä vahvistusikkuna"
-
-#: ui/MouseNavigation.qml:41
-#, kde-format
-msgid "Ring the System Bell"
-msgstr "Käytä järjestelmän äänimerkkiä"
-
-#: ui/MouseNavigation.qml:52
-#, kde-format
-msgid "Show a notification"
-msgstr "Näytä ilmoitus"
-
-#: ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
 msgstr "Kiihdytysviive:"
 
-#: ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:44
 #, kde-format
 msgid "Repeat interval:"
 msgstr "Toistoväli:"
 
-#: ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:58
 #, kde-format
 msgid "Acceleration time:"
 msgstr "Kiihdytysaika:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:72
 #, kde-format
 msgid "Maximum speed:"
 msgstr "Enimmäisnopeus:"
 
-#: ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:86
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Osoittimen kiihdytys:"
@@ -689,9 +728,6 @@ msgstr ""
 
 #~ msgid "Ring when toggling accessibility features with gestures"
 #~ msgstr "Anna äänimerkki, kun esteettömyysominaisuuksia muutetaan elein"
-
-#~ msgid "Activation:"
-#~ msgstr "Aktivointi:"
 
 #~ msgid "Use gestures to activate"
 #~ msgstr "Aktivoi elein"
@@ -794,19 +830,6 @@ msgstr ""
 #~ msgid "Activation &Gestures"
 #~ msgstr "Aktivointi&eleet"
 
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr ""
-#~ "Käytä toimintatapoja aktivoidaksesi alas jääviä ja hitaita näppäimiä"
-
-#~ msgid ""
-#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
-#~ msgstr ""
-#~ "Poista alas jäävät ja hitaat näppäimet tietyn ajan jälkeen, jos niitä ei "
-#~ "ole käytetty."
-
-#~ msgid " min"
-#~ msgstr " min"
-
 #~ msgid ""
 #~ "Use the system bell whenever a gesture is used to toggle an accessibility "
 #~ "feature"
@@ -869,9 +892,6 @@ msgstr ""
 #~ "Hiirinäppäimet: %1\n"
 #~ "Alas jäävät näppäimet: Paina vaihtonäppäintä 5 kertaa\n"
 #~ "Hitaat näppäimet: Pidä vaihtonäppäintä alhaalla 8 sekuntia"
-
-#~ msgid "&Activation Gestures"
-#~ msgstr "&Aktivointitoimet"
 
 #~ msgid "D&ebounce time:"
 #~ msgstr "Takaisin&kimpoamisaika:"

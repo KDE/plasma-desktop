@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2024-03-29 17:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: \n"
@@ -26,70 +26,106 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: kcmaccess.cpp:115
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "Hyper"
 msgstr "فائق"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Super"
 msgstr "ممتاز"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "اضغط %1 بينما NumLock ، CapsLock  و  ScrollLock في وضع نشط "
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "اضغط %1 بينما CapsLock  و  ScrollLock في وضع نشط"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "اضغط %1 بينما NumLock   و  ScrollLock في وضع نشط"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "اضغط %1 بينما ScrollLock في وضع نشط"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "اضغط %1 بينما NumLock  و CapsLock في وضع نشط"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "اضغط %1 بينما CapsLock في وضع نشط"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "اضغط %1 بينما NumLock  في وضع نشط"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1"
 msgstr "اضغط %1"
 
-#: kcmaccess.cpp:183
+#: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "لا يمكن وضع gsettings لـOrca: فشل \"%1\""
 
-#: kcmaccess.cpp:190
+#: kcmaccess.cpp:193
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "خطأ: لا يمكن تشغيل \"orca --setup\""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:9
+#, kde-format
+msgid "Use Gestures"
+msgstr "استخدم الإيماءات"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:13
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "اطلب تأكيدًا لإيماءة"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:17
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "أكد الوصول إلى لوحة المفاتيح"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:21
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "استخدم تأخير المهلة"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:25
+#, kde-format
+msgid "Delay for timeout"
+msgstr "تأخير للمهلة"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:29
+#, kde-format
+msgid "Use a beep for access"
+msgstr "استخدم صفير للوصول"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -168,24 +204,6 @@ msgstr "صفير تبديل المفاتيح"
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
 msgstr "إعلام عند الضغط على مغيِّر لوحة المفاتيح"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "استخدم تأخير المهلة"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "تأخير للمهلة"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "استخدم صفير للوصول"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
@@ -271,24 +289,6 @@ msgstr "أقصى سرعة"
 msgid "Mouse Key Curve"
 msgstr "منحنى مفتاح الفأرة"
 
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "استخدم الإيماءات"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "اطلب تأكيدًا لإيماءة"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "أكد الوصول إلى لوحة المفاتيح"
-
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
@@ -306,6 +306,67 @@ msgstr "ما إذا مُكّن اهتزاز المؤشر"
 #, kde-format
 msgid "Magnification"
 msgstr "التكبير"
+
+#: ui/ActivationGestures.qml:16
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation:"
+msgstr "حركات التنشيط"
+
+#: ui/ActivationGestures.qml:17
+#, kde-format
+msgid "Use gestures for activating sticky keys and slow keys"
+msgstr "استخدم حركات لتنشيط مثبتات المفاتيح والمفاتيح البطيئة"
+
+#: ui/ActivationGestures.qml:29
+#, fuzzy, kde-format
+#| msgid ""
+#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+msgid "Turn sticky keys and slow keys off after inactivity:"
+msgstr "أوقف مثبتات المفاتيح والمفاتيح البطيئة بعد وقت محقق من الخمول "
+
+#: ui/ActivationGestures.qml:58
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] " دقيقة"
+msgstr[1] " دقيقة"
+msgstr[2] " دقيقة"
+msgstr[3] " دقيقة"
+msgstr[4] " دقيقة"
+msgstr[5] " دقيقة"
+
+#: ui/ActivationGestures.qml:62
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "min"
+msgstr " دقيقة"
+
+#: ui/ActivationGestures.qml:70
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "عند استخدام الإيماءة:"
+
+#: ui/ActivationGestures.qml:71
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "اعرض حواري التأكيد"
+
+#: ui/ActivationGestures.qml:82
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "اقرع جرس النظام"
+
+#: ui/ActivationGestures.qml:93
+#, kde-format
+msgid "Show a notification"
+msgstr "أظهر إشعار"
+
+#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "ضبط الإشعارات..."
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -478,12 +539,18 @@ msgid "Mouse Navigation"
 msgstr "التنقل بالفأرة"
 
 #: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation Gestures"
+msgstr "حركات التنشيط"
+
+#: ui/main.qml:52
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "قارئ الشاشة"
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -531,11 +598,6 @@ msgstr "اقرع جرس النظام عند تبديل مفاتيح القفل"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "أظهر إشعار عند استخدام مفاتيح المغيِّرة أو مفاتيح القفل "
 
-#: ui/ModifierKeys.qml:99
-#, kde-format
-msgid "Configure Notifications…"
-msgstr "ضبط الإشعارات..."
-
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
@@ -546,47 +608,27 @@ msgstr "استخدم لوحة الأرقام لتحريك المؤشر:"
 msgid "Enable"
 msgstr "مكّن"
 
-#: ui/MouseNavigation.qml:29
-#, kde-format
-msgid "When a gesture is used:"
-msgstr "عند استخدام الإيماءة:"
-
 #: ui/MouseNavigation.qml:30
-#, kde-format
-msgid "Display a confirmation dialog"
-msgstr "اعرض حواري التأكيد"
-
-#: ui/MouseNavigation.qml:41
-#, kde-format
-msgid "Ring the System Bell"
-msgstr "اقرع جرس النظام"
-
-#: ui/MouseNavigation.qml:52
-#, kde-format
-msgid "Show a notification"
-msgstr "أظهر إشعار"
-
-#: ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
 msgstr "مهلة التسارع:"
 
-#: ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:44
 #, kde-format
 msgid "Repeat interval:"
 msgstr "فترة التكرار:"
 
-#: ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:58
 #, kde-format
 msgid "Acceleration time:"
 msgstr "وقت التسارع:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:72
 #, kde-format
 msgid "Maximum speed:"
 msgstr "السرعة القصوى:"
 
-#: ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:86
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "تسارع المؤشر:"
@@ -674,11 +716,6 @@ msgstr "عريض"
 
 #~ msgid "Author"
 #~ msgstr "المؤلف"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "Activation:"
-#~ msgstr "حركات التنشيط"
 
 #, fuzzy
 #~| msgid ""
@@ -792,16 +829,6 @@ msgstr "عريض"
 #~ msgid "Activation &Gestures"
 #~ msgstr "حركات التنشيط"
 
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr "استخدم حركات لتنشيط مثبتات المفاتيح والمفاتيح البطيئة"
-
-#~ msgid ""
-#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
-#~ msgstr "أوقف مثبتات المفاتيح والمفاتيح البطيئة بعد وقت محقق من الخمول "
-
-#~ msgid " min"
-#~ msgstr " دقيقة"
-
 #, fuzzy
 #~| msgid ""
 #~| "Use the system bell whenever a gesture is used to turn an accessibility "
@@ -866,11 +893,6 @@ msgstr "عريض"
 #~ "مفاتيح الفأرة: %1\n"
 #~ "مثبتات المفاتيح: اضغط مفتاح Shift خمس مرات متتالية\n"
 #~ "مفاتيح بطيئة: ابقِ ضاغطاً Shift لمدة 8 ثوان"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "&Activation Gestures"
-#~ msgstr "حركات التنشيط"
 
 #~ msgid "D&ebounce time:"
 #~ msgstr "وقت تعطيل القفز:"

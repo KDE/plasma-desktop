@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2020-10-25 18:51+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -45,7 +45,7 @@ msgstr ""
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr "KRunneri ja rakenduste käivitaja pluginate lubamine või keelamine"
 
 #: plasmasearch/ui/main.qml:90
@@ -97,13 +97,13 @@ msgstr ""
 #: plugininstaller/main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr ""
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
+msgid "Path to archive or extracted folder"
 msgstr ""
 
 #: plugininstaller/main.cpp:50
@@ -112,7 +112,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr ""
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"

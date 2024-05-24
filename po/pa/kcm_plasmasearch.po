@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2024-01-28 18:01-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr "…ਨਵੀਆਂ ਪਲੱਗਇਨਾਂ ਲਵੋ"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr "ਪਲੱਗਇਨ ਸਮਰੱਥ ਜਾਂ ਅਸਮਰੱਥ ਕਰੋ (ਕੇ-ਰਨਰ ਤੇ ਐਪਲੀਕੇਸ਼ਨ ਲਾਂਚਰ ਵਿੱਚ ਵਰਤੀਆਂ ਜਾਂਦੀਆਂ)"
 
 #: plasmasearch/ui/main.qml:90
@@ -93,16 +93,18 @@ msgid "KRunner plugin installation failed"
 msgstr "ਕੇ-ਰਨਰ ਪਲੱਗਇਨ ਇੰਸਟਾਲ ਕਰਨੀ ਅਸਫ਼ਲ ਹੈ"
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "ਚਲਾਉਣ ਲਈ ਕਮਾਂਡ: ਇੰਸਟਾਲ ਜਾਂ ਅਣ-ਇੰਸਟਾਲ।"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "ਅਕਾਇਵ ਲਈ ਮਾਰਗ।"
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -110,7 +112,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr ""
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -257,6 +259,10 @@ msgstr ""
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "ਇੰਸਟਾਲ ਕਮਾਂਡ ਚਲਾਉਣ ਲਈ ਅਸਫ਼ਲ: <message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "ਅਕਾਇਵ ਲਈ ਮਾਰਗ।"
 
 #~ msgid "Position on screen:"
 #~ msgstr "ਸਕਰੀਨ ਉੱਤੇ ਥਾਂ:"

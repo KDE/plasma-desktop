@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1675381 2024-03-12 01:07:17Z scripty $
+# $Id: kcm_access.po 1680700 2024-05-24 01:10:57Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2024-03-11 09:01+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -27,70 +27,106 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: kcmaccess.cpp:115
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko so vključeni NumLock, CapsLock in ScrollLock"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko sta vključena CapsLock in ScrollLock"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko sta vključena NumLock in ScrollLock"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Pritisnite %1, ko je vključen ScrollLock"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Pritisnite %1, ko sta vključena NumLock in CapsLock"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Pritisnite %1, ko je vključen CapsLock"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Pritisnite %1, ko je vključen NumLock"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1"
 msgstr "Pritisnite %1"
 
-#: kcmaccess.cpp:183
+#: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Ni bilo mogoče nastaviti gsettings za Orco: \"%1\" ni uspelo"
 
-#: kcmaccess.cpp:190
+#: kcmaccess.cpp:193
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Napaka: ni bilo mogoče zagnati »orca --setup«"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:9
+#, kde-format
+msgid "Use Gestures"
+msgstr "Uporabi geste"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:13
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Prosi za potrditev geste"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:17
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Potrdi dostop do tipkovnice"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:21
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Uporabi zakasnitev"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:25
+#, kde-format
+msgid "Delay for timeout"
+msgstr "Zakasnitev za časovno omejitev"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:29
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Uporabi pisk za dostop"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -169,24 +205,6 @@ msgstr "Preklopi piskanje ob tipkanju"
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
 msgstr "Obvesti kadar je pritisnjen modifikator tipkovnice"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Uporabi zakasnitev"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Zakasnitev za časovno omejitev"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Uporabi pisk za dostop"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
@@ -272,24 +290,6 @@ msgstr "Največja hitrost"
 msgid "Mouse Key Curve"
 msgstr "Krivulja tipke miške"
 
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "Uporabi geste"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Prosi za potrditev geste"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Potrdi dostop do tipkovnice"
-
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
@@ -307,6 +307,64 @@ msgstr "Ali je omogočeno tresenje kazalke"
 #, kde-format
 msgid "Magnification"
 msgstr "Povečanje"
+
+#: ui/ActivationGestures.qml:16
+#, kde-format
+msgid "Activation:"
+msgstr "Aktivacija:"
+
+#: ui/ActivationGestures.qml:17
+#, kde-format
+msgid "Use gestures for activating sticky keys and slow keys"
+msgstr "Uporabi kretnje za vključitev lepljivih in počasnih tipk"
+
+#: ui/ActivationGestures.qml:29
+#, fuzzy, kde-format
+#| msgid ""
+#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+msgid "Turn sticky keys and slow keys off after inactivity:"
+msgstr "Po določenem času nedejavnosti izključi lepljive in počasne tipke."
+
+#: ui/ActivationGestures.qml:58
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] " min"
+msgstr[1] " min"
+msgstr[2] " min"
+msgstr[3] " min"
+
+#: ui/ActivationGestures.qml:62
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "min"
+msgstr " min"
+
+#: ui/ActivationGestures.qml:70
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "Kadar so uporabljene geste:"
+
+#: ui/ActivationGestures.qml:71
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "Prikaži okno s potrdilom"
+
+#: ui/ActivationGestures.qml:82
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "Pozvoni s sistemskim zvoncem"
+
+#: ui/ActivationGestures.qml:93
+#, kde-format
+msgid "Show a notification"
+msgstr "Prikaži obvestilo"
+
+#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "Nastavi obvestila…"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -479,12 +537,18 @@ msgid "Mouse Navigation"
 msgstr "Krmarjenje miške"
 
 #: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "&Activation Gestures"
+msgid "Activation Gestures"
+msgstr "Kretnje z&a vključitev"
+
+#: ui/main.qml:52
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "Bralnik zaslona"
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -533,11 +597,6 @@ msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "Prikaži obvestilo kadar so uporabljene spremenilne tipke ali tipke za zaklep"
 
-#: ui/ModifierKeys.qml:99
-#, kde-format
-msgid "Configure Notifications…"
-msgstr "Nastavi obvestila…"
-
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
@@ -548,47 +607,27 @@ msgstr "Uporabi številsko tipkovnico za premikanje kazalčka:"
 msgid "Enable"
 msgstr "Omogoči"
 
-#: ui/MouseNavigation.qml:29
-#, kde-format
-msgid "When a gesture is used:"
-msgstr "Kadar so uporabljene geste:"
-
 #: ui/MouseNavigation.qml:30
-#, kde-format
-msgid "Display a confirmation dialog"
-msgstr "Prikaži okno s potrdilom"
-
-#: ui/MouseNavigation.qml:41
-#, kde-format
-msgid "Ring the System Bell"
-msgstr "Pozvoni s sistemskim zvoncem"
-
-#: ui/MouseNavigation.qml:52
-#, kde-format
-msgid "Show a notification"
-msgstr "Prikaži obvestilo"
-
-#: ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
 msgstr "Zakasnitev pospeševanja:"
 
-#: ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:44
 #, kde-format
 msgid "Repeat interval:"
 msgstr "Interval ponovitev:"
 
-#: ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:58
 #, kde-format
 msgid "Acceleration time:"
 msgstr "Čas pospeševanja:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:72
 #, kde-format
 msgid "Maximum speed:"
 msgstr "Največja hitrost:"
 
-#: ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:86
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Pospeševanje kazalca:"
@@ -686,9 +725,6 @@ msgstr "Veliko"
 
 #~ msgid "Ring when toggling accessibility features with gestures"
 #~ msgstr "Pozvoni ob preklopu možnosti dostopa s kretnjami"
-
-#~ msgid "Activation:"
-#~ msgstr "Aktivacija:"
 
 #~ msgid "Use gestures to activate"
 #~ msgstr "Uporabi geste za aktivacijo"
@@ -789,16 +825,6 @@ msgstr "Veliko"
 #~ msgid "Activation &Gestures"
 #~ msgstr "Kretnje za vključitev"
 
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr "Uporabi kretnje za vključitev lepljivih in počasnih tipk"
-
-#~ msgid ""
-#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
-#~ msgstr "Po določenem času nedejavnosti izključi lepljive in počasne tipke."
-
-#~ msgid " min"
-#~ msgstr " min"
-
 #~ msgid ""
 #~ "Use the system bell whenever a gesture is used to toggle an accessibility "
 #~ "feature"
@@ -862,9 +888,6 @@ msgstr "Veliko"
 #~ "Miškine tipke: %1\n"
 #~ "Lepljive tipke: pritisnite dvigalko (Shift) petkrat zaporedoma\n"
 #~ "Počasne tipke: držite pritisnjeno dvigalko (Shift) 8 sekund"
-
-#~ msgid "&Activation Gestures"
-#~ msgstr "Kretnje z&a vključitev"
 
 #~ msgid "Form"
 #~ msgstr "Obrazec"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_search\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2023-11-14 14:05-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -41,11 +41,15 @@ msgid "Get New Plugins…"
 msgstr "Baixar novos plugins..."
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to see them."
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 "Habilitar ou desabilitar plugins (usados no KRunner, lançador de aplicativos "
 "e no efeito visão geral). Marcar plugins como favoritos e organize-os na "
@@ -99,16 +103,18 @@ msgid "KRunner plugin installation failed"
 msgstr "Falha na instalação do plugin do KRunner"
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "Comando a executar: install ou uninstall."
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "Caminho para o arquivo."
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -116,7 +122,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr ""
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -288,6 +294,10 @@ msgstr "Não foi possível resolver o nome do pacote de %1"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "Falha ao executar o comando de instalação: <message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "Caminho para o arquivo."
 
 #~ msgid "Position on screen:"
 #~ msgstr "Posição na tela:"

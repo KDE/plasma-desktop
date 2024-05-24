@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2023-08-25 23:13+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -19,70 +19,106 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: kcmaccess.cpp:115
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "NumLock, CapsLock, ScrollLock이 활성화되어 있을 때 %1을(를) 누르십시오"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "CapsLock, ScrollLock이 활성화되어 있을 때 %1을(를) 누르십시오"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "NumLock, ScrollLock이 활성화되어 있을 때 %1을(를) 누르십시오"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "ScrollLock이 활성화되어 있을 때 %1을(를) 누르십시오"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "NumLock, CapsLock이 활성화되어 있을 때 %1을(를) 누르십시오"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "CapsLock이 활성화되어 있을 때 %1을(를) 누르십시오"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "NumLock이 활성화되어 있을 때 %1을(를) 누르십시오"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1"
 msgstr "%1을(를) 누르십시오"
 
-#: kcmaccess.cpp:183
+#: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Orca의 gsettings를 설정할 수 없음: \"%1\" 실패함"
 
-#: kcmaccess.cpp:190
+#: kcmaccess.cpp:193
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "오류: \"orca --setup\"을 실행할 수 없음"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:9
+#, kde-format
+msgid "Use Gestures"
+msgstr "제스처 사용"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:13
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "제스처에 대한 확인 요청"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:17
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "키보드 접근 확인"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:21
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "시간 초과 지연 사용"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:25
+#, kde-format
+msgid "Delay for timeout"
+msgstr "지연 시간 제한"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:29
+#, kde-format
+msgid "Use a beep for access"
+msgstr "접근 시 경고음 사용"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -161,24 +197,6 @@ msgstr "토글 키 경고음"
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
 msgstr "키보드 수정자 키를 누르면 알림"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "시간 초과 지연 사용"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "지연 시간 제한"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "접근 시 경고음 사용"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
@@ -264,24 +282,6 @@ msgstr "최대 속도"
 msgid "Mouse Key Curve"
 msgstr "마우스 키 곡선"
 
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "제스처 사용"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "제스처에 대한 확인 요청"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "키보드 접근 확인"
-
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
@@ -300,6 +300,62 @@ msgstr ""
 #| msgid "Show a notification"
 msgid "Magnification"
 msgstr "알림 표시"
+
+#: ui/ActivationGestures.qml:16
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation:"
+msgstr "활성화 제스처"
+
+#: ui/ActivationGestures.qml:17
+#, kde-format
+msgid "Use gestures for activating sticky keys and slow keys"
+msgstr "느린 키와 고정 키를 활성화시키는 제스처 사용하기"
+
+#: ui/ActivationGestures.qml:29
+#, fuzzy, kde-format
+#| msgid ""
+#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+msgid "Turn sticky keys and slow keys off after inactivity:"
+msgstr "일정한 시간 동안 사용되지 않았을 때 느린 키와 고정 키를 끕니다."
+
+#: ui/ActivationGestures.qml:58
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] " 분"
+
+#: ui/ActivationGestures.qml:62
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "min"
+msgstr " 분"
+
+#: ui/ActivationGestures.qml:70
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "제스처를 사용했을 때:"
+
+#: ui/ActivationGestures.qml:71
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "확인 대화 상자 표시"
+
+#: ui/ActivationGestures.qml:82
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "시스템 벨 울리기"
+
+#: ui/ActivationGestures.qml:93
+#, kde-format
+msgid "Show a notification"
+msgstr "알림 표시"
+
+#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "알림 설정…"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -472,12 +528,18 @@ msgid "Mouse Navigation"
 msgstr "마우스 탐색"
 
 #: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "&Activation Gestures"
+msgid "Activation Gestures"
+msgstr "활성화 제스처(&A)"
+
+#: ui/main.qml:52
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "스크린 리더"
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -525,11 +587,6 @@ msgstr "잠금 키를 전환할 때 시스템 벨 울리기"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "수정자 또는 잠금 키를 사용할 때 알림 표시"
 
-#: ui/ModifierKeys.qml:99
-#, kde-format
-msgid "Configure Notifications…"
-msgstr "알림 설정…"
-
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
@@ -540,47 +597,27 @@ msgstr "숫자 패드를 사용하여 커서 이동:"
 msgid "Enable"
 msgstr "활성화"
 
-#: ui/MouseNavigation.qml:29
-#, kde-format
-msgid "When a gesture is used:"
-msgstr "제스처를 사용했을 때:"
-
 #: ui/MouseNavigation.qml:30
-#, kde-format
-msgid "Display a confirmation dialog"
-msgstr "확인 대화 상자 표시"
-
-#: ui/MouseNavigation.qml:41
-#, kde-format
-msgid "Ring the System Bell"
-msgstr "시스템 벨 울리기"
-
-#: ui/MouseNavigation.qml:52
-#, kde-format
-msgid "Show a notification"
-msgstr "알림 표시"
-
-#: ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
 msgstr "가속 지연:"
 
-#: ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:44
 #, kde-format
 msgid "Repeat interval:"
 msgstr "반복 간격:"
 
-#: ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:58
 #, kde-format
 msgid "Acceleration time:"
 msgstr "가속 시간:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:72
 #, kde-format
 msgid "Maximum speed:"
 msgstr "최대 속도:"
 
-#: ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:86
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "포인터 가속:"
@@ -671,11 +708,6 @@ msgstr ""
 
 #~ msgid "Author"
 #~ msgstr "작성자"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "Activation:"
-#~ msgstr "활성화 제스처"
 
 #~ msgid ""
 #~ "If this option is checked, the default system bell will be used. Usually, "
@@ -768,16 +800,6 @@ msgstr ""
 #~ msgid "Activation &Gestures"
 #~ msgstr "활성화 제스처(&G)"
 
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr "느린 키와 고정 키를 활성화시키는 제스처 사용하기"
-
-#~ msgid ""
-#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
-#~ msgstr "일정한 시간 동안 사용되지 않았을 때 느린 키와 고정 키를 끕니다."
-
-#~ msgid " min"
-#~ msgstr " 분"
-
 #~ msgid ""
 #~ "Use the system bell whenever a gesture is used to toggle an accessibility "
 #~ "feature"
@@ -835,9 +857,6 @@ msgstr ""
 #~ "마우스 키: %1\n"
 #~ "고정 키: Shift 키를 연속 5회 누르기\n"
 #~ "느린 키: Shift 키를 8초간 누르기"
-
-#~ msgid "&Activation Gestures"
-#~ msgstr "활성화 제스처(&A)"
 
 #~ msgid "D&ebounce time:"
 #~ msgstr "되튕김 시간(&E):"

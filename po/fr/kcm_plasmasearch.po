@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2024-04-26 11:54+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -44,11 +44,15 @@ msgid "Get New Plugins…"
 msgstr "Obtenir de nouveaux modules externes..."
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to see them."
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 "Activer ou désactiver les modules externes (Utilisés dans KRunner, le "
 "lanceur d'applications et l'effet d'aperçu). Marquer les modules externes "
@@ -107,16 +111,18 @@ msgid "KRunner plugin installation failed"
 msgstr "L'installation du module externe KRunner a échoué."
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "Commande à exécuter : « install » ou « uninstall »"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "Emplacement vers l'archive."
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -124,7 +130,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr "Ne pas afficher de boîte de dialogue de confirmation"
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -305,3 +311,7 @@ msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr ""
 "Impossible de lancer la commande d'installation : <message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "Emplacement vers l'archive."

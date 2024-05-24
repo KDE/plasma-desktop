@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2023-09-04 10:05+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -38,11 +38,15 @@ msgid "Get New Plugins…"
 msgstr "Obtene nove plugins…"
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to see them."
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 "Habilita o dishabilita plugins (usate in KRunner, Lanceator de "
 "Applicationes, e le effecto de supervision). Marca plugins como favoritos e "
@@ -97,16 +101,18 @@ msgid "KRunner plugin installation failed"
 msgstr "Il falleva le installation de plugin de KRunner"
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "Commando de  executar : install o uninstall"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "Percurso de archivar."
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -114,7 +120,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr "Non monstra un dialogo de confirmation visual"
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -291,6 +297,10 @@ msgstr "non pote resolver nomine de pacchetto de %1"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "Falleva a executar commando de installar: <message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "Percurso de archivar."
 
 #~ msgid "Position on screen:"
 #~ msgstr "Position sur schermo:"

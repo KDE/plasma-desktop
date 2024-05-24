@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2024-03-24 23:38+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -24,70 +24,106 @@ msgstr ""
 "X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: kcmaccess.cpp:115
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "Hyper"
 msgstr "Hiper"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Sakatu %1, BlokZenb, BlokMaius eta BlokKorr aktibo daudenean"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Sakatu %1, BlokMaius eta BlokKorr aktibo daudenean"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Sakatu %1, BlokZenb eta BlokKorr aktibo daudenean"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Sakatu %1, BlokKorr aktibo dagoenean"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Sakatu %1, BlokZenb eta BlokMaius aktibo daudenean"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Sakatu %1, BlokMaius aktibo dagoenean"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Sakatu %1, BlokZenb aktibo dagoenean"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1"
 msgstr "Sakatu %1"
 
-#: kcmaccess.cpp:183
+#: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Ezin izan dira orcarentzako gsettings ezarri: \"%1\" huts egin du"
 
-#: kcmaccess.cpp:190
+#: kcmaccess.cpp:193
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Errorea: Ezin izan da \"orca --setup\" abiarazi"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:9
+#, kde-format
+msgid "Use Gestures"
+msgstr "Erabili keinuak"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:13
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Keinu baten berrespena eskatu"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:17
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Berretsi teklaturako sarbidea"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:21
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Erabili denbora-mugako atzerapen bat"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:25
+#, kde-format
+msgid "Delay for timeout"
+msgstr "Denbora-mugaren atzerapena"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:29
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Erabili bip bat sartzeko"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -166,24 +202,6 @@ msgstr "Txandakatu teklek bip"
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
 msgstr "Jakinarazi teklatuko aldarazle bat  sakatzean"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Erabili denbora-mugako atzerapen bat"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Denbora-mugaren atzerapena"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Erabili bip bat sartzeko"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
@@ -269,24 +287,6 @@ msgstr "Abiadura maximoa"
 msgid "Mouse Key Curve"
 msgstr "Sagu-teklaren kurba"
 
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "Erabili keinuak"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Keinu baten berrespena eskatu"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Berretsi teklaturako sarbidea"
-
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
@@ -304,6 +304,64 @@ msgstr "Kurtsorea astintzea gaituta dagoen edo ez"
 #, kde-format
 msgid "Magnification"
 msgstr "Handiagotzea"
+
+#: ui/ActivationGestures.qml:16
+#, kde-format
+msgid "Activation:"
+msgstr "Aktibatzea:"
+
+#: ui/ActivationGestures.qml:17
+#, kde-format
+msgid "Use gestures for activating sticky keys and slow keys"
+msgstr "Erabili keinuak tekla itsaskorrak eta motelak aktibatzeko"
+
+#: ui/ActivationGestures.qml:29
+#, fuzzy, kde-format
+#| msgid ""
+#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+msgid "Turn sticky keys and slow keys off after inactivity:"
+msgstr ""
+"Desaktibatu tekla itsaskorrak eta motelak, jarduerarik gabeko tarte baten "
+"ondoren."
+
+#: ui/ActivationGestures.qml:58
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] " min"
+msgstr[1] " min"
+
+#: ui/ActivationGestures.qml:62
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "min"
+msgstr " min"
+
+#: ui/ActivationGestures.qml:70
+#, kde-format
+msgid "When a gesture is used:"
+msgstr "Keinu bat erabiltzean:"
+
+#: ui/ActivationGestures.qml:71
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr "Azaldu berresteko elkarrizketa-koadro bat"
+
+#: ui/ActivationGestures.qml:82
+#, kde-format
+msgid "Ring the System Bell"
+msgstr "Jo sistemako txirrina"
+
+#: ui/ActivationGestures.qml:93
+#, kde-format
+msgid "Show a notification"
+msgstr "Erakutsi jakinarazpen bat"
+
+#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#, kde-format
+msgid "Configure Notifications…"
+msgstr "Konfiguratu jakinarazpenak..."
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -477,12 +535,18 @@ msgid "Mouse Navigation"
 msgstr "Sagu bidez nabigatzea"
 
 #: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation Gestures"
+msgstr "Aktibazio-keinuak"
+
+#: ui/main.qml:52
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "Pantaila-irakurgailua"
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -530,11 +594,6 @@ msgstr "Jo sistemako txirrina giltzatzeko teklak txandakatzen direnean"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Erakutsi jakinarazpena tekla aldarazleak edo giltzatzekoak erabiltzean"
 
-#: ui/ModifierKeys.qml:99
-#, kde-format
-msgid "Configure Notifications…"
-msgstr "Konfiguratu jakinarazpenak..."
-
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
@@ -545,47 +604,27 @@ msgstr "Erabili zenbakizko teklatua kurtsorea mugitzeko:"
 msgid "Enable"
 msgstr "Gaitu"
 
-#: ui/MouseNavigation.qml:29
-#, kde-format
-msgid "When a gesture is used:"
-msgstr "Keinu bat erabiltzean:"
-
 #: ui/MouseNavigation.qml:30
-#, kde-format
-msgid "Display a confirmation dialog"
-msgstr "Azaldu berresteko elkarrizketa-koadro bat"
-
-#: ui/MouseNavigation.qml:41
-#, kde-format
-msgid "Ring the System Bell"
-msgstr "Jo sistemako txirrina"
-
-#: ui/MouseNavigation.qml:52
-#, kde-format
-msgid "Show a notification"
-msgstr "Erakutsi jakinarazpen bat"
-
-#: ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
 msgstr "Azelerazioaren atzerapena:"
 
-#: ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:44
 #, kde-format
 msgid "Repeat interval:"
 msgstr "Errepikatze-tartea:"
 
-#: ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:58
 #, kde-format
 msgid "Acceleration time:"
 msgstr "Azelerazio-denbora:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:72
 #, kde-format
 msgid "Maximum speed:"
 msgstr "Gehieneko abiadura:"
 
-#: ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:86
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Erakuslearen azelerazioa:"
@@ -686,9 +725,6 @@ msgstr "Handia"
 
 #~ msgid "Ring when toggling accessibility features with gestures"
 #~ msgstr "Txirrina jo irisgarritasun-ezaugarriak keinuekin txandakatzean"
-
-#~ msgid "Activation:"
-#~ msgstr "Aktibatzea:"
 
 #~ msgid "Use gestures to activate"
 #~ msgstr "Erabili keinuak aktibatzeko"
@@ -801,18 +837,6 @@ msgstr "Handia"
 #~ msgid "Activation &Gestures"
 #~ msgstr "Aktibazio &keinuak"
 
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr "Erabili keinuak tekla itsaskorrak eta motelak aktibatzeko"
-
-#~ msgid ""
-#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
-#~ msgstr ""
-#~ "Desaktibatu tekla itsaskorrak eta motelak, jarduerarik gabeko tarte baten "
-#~ "ondoren."
-
-#~ msgid " min"
-#~ msgstr " min"
-
 #~ msgid ""
 #~ "Use the system bell whenever a gesture is used to toggle an accessibility "
 #~ "feature"
@@ -877,11 +901,6 @@ msgstr "Handia"
 #~ "Saguaren botoiak: %1\n"
 #~ "Tekla itsaskorra: sakatu MAIUS tekla 5 aldiz jarraian\n"
 #~ "Tekla motelak: mantendu MAIUS tekla sakatuta 8 segundoan"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "&Activation Gestures"
-#~ msgstr "Aktibazio-keinuak"
 
 #~ msgid "D&ebounce time:"
 #~ msgstr "Erre&botatzeari uzteko denbora-muga:"

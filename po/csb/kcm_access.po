@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2009-01-08 18:50+0100\n"
 "Last-Translator: Mark Kwidzińsczi <mark@linuxcsb.org>\n"
 "Language-Team: Kashubian <i18n-csb@linuxcsb.org>\n"
@@ -18,69 +18,105 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
-#: kcmaccess.cpp:115
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Wcësni %1, ga włączoné są NumLock, CapsLock ë ScrollLock"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Wcësni %1, ga włączoné są CapsLock ë ScrollLock"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Wcësni %1, ga włączoné są NumLock ë ScrollLock"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Wcësni %1, ga włączony je ScrollLock"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Wcësni %1, ga włączoné są NumLock ë CapsLock"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Wcësni %1, ga włączony je CapsLock"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Wcësni %1, ga włączony je NumLock"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1"
 msgstr "Wcësni %1"
 
-#: kcmaccess.cpp:183
+#: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr ""
 
-#: kcmaccess.cpp:190
+#: kcmaccess.cpp:193
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
+msgstr ""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:9
+#, kde-format
+msgid "Use Gestures"
+msgstr ""
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:13
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:17
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:21
+#, kde-format
+msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:25
+#, kde-format
+msgid "Delay for timeout"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:29
+#, kde-format
+msgid "Use a beep for access"
 msgstr ""
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
@@ -168,24 +204,6 @@ msgstr ""
 msgid "Notify when a keyboard modifier is pressed"
 msgstr ""
 
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr ""
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr ""
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr ""
-
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
 #, fuzzy, kde-format
@@ -271,24 +289,6 @@ msgstr ""
 msgid "Mouse Key Curve"
 msgstr ""
 
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr ""
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr ""
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr ""
-
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
@@ -307,6 +307,67 @@ msgstr ""
 #| msgid "Notification"
 msgid "Magnification"
 msgstr "Pòwiadomienié"
+
+#: ui/ActivationGestures.qml:16
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation:"
+msgstr "Aktiwùjącé gestë"
+
+#: ui/ActivationGestures.qml:17
+#, kde-format
+msgid "Use gestures for activating sticky keys and slow keys"
+msgstr "Brëkùjë gestów do włączaniô przëlepionëch ë pòwólnëch klawiszów"
+
+#: ui/ActivationGestures.qml:29
+#, fuzzy, kde-format
+#| msgid ""
+#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+msgid "Turn sticky keys and slow keys off after inactivity:"
+msgstr "Wëłączë przëlepione ë pòwólne klawisze pò jaczims czasu nieaktiwnoscë."
+
+#: ui/ActivationGestures.qml:58
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] " min"
+msgstr[1] " min"
+msgstr[2] " min"
+
+#: ui/ActivationGestures.qml:62
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "min"
+msgstr " min"
+
+#: ui/ActivationGestures.qml:70
+#, kde-format
+msgid "When a gesture is used:"
+msgstr ""
+
+#: ui/ActivationGestures.qml:71
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr ""
+
+#: ui/ActivationGestures.qml:82
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring the System Bell"
+msgstr "Brëkùjë &systemòwegò zwónka"
+
+#: ui/ActivationGestures.qml:93
+#, fuzzy, kde-format
+#| msgid "Notification"
+msgid "Show a notification"
+msgstr "Pòwiadomienié"
+
+#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#, fuzzy, kde-format
+#| msgid "Configure &Notifications..."
+msgid "Configure Notifications…"
+msgstr "Kònfigùrëjë &pòwiadomianié..."
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -493,12 +554,18 @@ msgid "Mouse Navigation"
 msgstr ""
 
 #: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation Gestures"
+msgstr "Aktiwùjącé gestë"
+
+#: ui/main.qml:52
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr ""
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -554,12 +621,6 @@ msgstr ""
 "Brëkùjë systemòwegò pòwiadomienia KDE, czéj klawisza zjinaczi abò blokadë "
 "zmieniô stón"
 
-#: ui/ModifierKeys.qml:99
-#, fuzzy, kde-format
-#| msgid "Configure &Notifications..."
-msgid "Configure Notifications…"
-msgstr "Kònfigùrëjë &pòwiadomianié..."
-
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
@@ -570,51 +631,29 @@ msgstr ""
 msgid "Enable"
 msgstr ""
 
-#: ui/MouseNavigation.qml:29
-#, kde-format
-msgid "When a gesture is used:"
-msgstr ""
-
 #: ui/MouseNavigation.qml:30
-#, kde-format
-msgid "Display a confirmation dialog"
-msgstr ""
-
-#: ui/MouseNavigation.qml:41
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
-msgid "Ring the System Bell"
-msgstr "Brëkùjë &systemòwegò zwónka"
-
-#: ui/MouseNavigation.qml:52
-#, fuzzy, kde-format
-#| msgid "Notification"
-msgid "Show a notification"
-msgstr "Pòwiadomienié"
-
-#: ui/MouseNavigation.qml:68
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration delay:"
 msgstr "Ò&pòzdzenié pòcwierdzeniô:"
 
-#: ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:44
 #, kde-format
 msgid "Repeat interval:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:58
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration time:"
 msgstr "Ò&pòzdzenié pòcwierdzeniô:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:72
 #, kde-format
 msgid "Maximum speed:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:86
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Pointer acceleration:"
@@ -696,11 +735,6 @@ msgstr ""
 
 #~ msgid "Author"
 #~ msgstr "Ùsôdzca"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "Activation:"
-#~ msgstr "Aktiwùjącé gestë"
 
 #, fuzzy
 #~| msgid ""
@@ -821,17 +855,6 @@ msgstr ""
 #~ msgid "Activation &Gestures"
 #~ msgstr "Aktiwùjącé gestë"
 
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr "Brëkùjë gestów do włączaniô przëlepionëch ë pòwólnëch klawiszów"
-
-#~ msgid ""
-#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
-#~ msgstr ""
-#~ "Wëłączë przëlepione ë pòwólne klawisze pò jaczims czasu nieaktiwnoscë."
-
-#~ msgid " min"
-#~ msgstr " min"
-
 #, fuzzy
 #~| msgid ""
 #~| "Use the system bell whenever a gesture is used to turn an accessibility "
@@ -897,11 +920,6 @@ msgstr ""
 #~ "Emùlacëjô mëszë: %1\n"
 #~ "Klawisze przëlepieniô: Wcësni Shift 5 razë pò se\n"
 #~ "Pòwólne klawisze: Trzëmôj Shift 8 sekùnd wcësniãté"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "&Activation Gestures"
-#~ msgstr "Aktiwùjącé gestë"
 
 #~ msgid "D&ebounce time:"
 #~ msgstr "Czas do &zakùńczeniô òdbijajniô:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -18,69 +18,105 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: kcmaccess.cpp:115
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
 msgstr "ఆల్ట్‌గ్రాఫ్"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "Hyper"
 msgstr "హైపర్"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Super"
 msgstr "సూపర్"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "నమ్‌లాక్, కాప్స్‌లాక్ మరియు స్క్రాల్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1ను వత్తుము"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "కాప్స్‌లాక్ మరియు స్క్రాల్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "నమ్‌లాక్ మరియు స్క్రాల్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "స్క్రాల్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "నమ్‌లాక్ మరియు కాప్స్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "కాప్స్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "నమ్‌లాక్ క్రియాశీలముగా వున్నప్పుడు %1 వత్తుము"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1"
 msgstr "%1 వత్తుము"
 
-#: kcmaccess.cpp:183
+#: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr ""
 
-#: kcmaccess.cpp:190
+#: kcmaccess.cpp:193
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
+msgstr ""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:9
+#, kde-format
+msgid "Use Gestures"
+msgstr ""
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:13
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:17
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:21
+#, kde-format
+msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:25
+#, kde-format
+msgid "Delay for timeout"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:29
+#, kde-format
+msgid "Use a beep for access"
 msgstr ""
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
@@ -165,24 +201,6 @@ msgstr ""
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr ""
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr ""
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr ""
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
 msgstr ""
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
@@ -270,24 +288,6 @@ msgstr ""
 msgid "Mouse Key Curve"
 msgstr ""
 
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr ""
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr ""
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr ""
-
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
@@ -306,6 +306,66 @@ msgstr ""
 #| msgid "Notification"
 msgid "Magnification"
 msgstr "నో‍టీసు"
+
+#: ui/ActivationGestures.qml:16
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation:"
+msgstr "క్రియాశీలపు జెస్టర్స్"
+
+#: ui/ActivationGestures.qml:17
+#, kde-format
+msgid "Use gestures for activating sticky keys and slow keys"
+msgstr "స్టికీ కీలను మరియు స్లో కీలను క్రియాశీలము చేయుటకు జెస్టర్స్‌ను వుపయోగించుము"
+
+#: ui/ActivationGestures.qml:29
+#, fuzzy, kde-format
+#| msgid ""
+#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+msgid "Turn sticky keys and slow keys off after inactivity:"
+msgstr "కొంత కాలంపాటు క్రియాహీనముగావుంటే స్టికీ కీలను మరియు స్లో కీలను ఆఫ్ చేయుము."
+
+#: ui/ActivationGestures.qml:58
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] " ని"
+msgstr[1] " ని"
+
+#: ui/ActivationGestures.qml:62
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "min"
+msgstr " ని"
+
+#: ui/ActivationGestures.qml:70
+#, kde-format
+msgid "When a gesture is used:"
+msgstr ""
+
+#: ui/ActivationGestures.qml:71
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr ""
+
+#: ui/ActivationGestures.qml:82
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring the System Bell"
+msgstr "(&s) సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#: ui/ActivationGestures.qml:93
+#, fuzzy, kde-format
+#| msgid "Notification"
+msgid "Show a notification"
+msgstr "నో‍టీసు"
+
+#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#, fuzzy, kde-format
+#| msgid "Configure &Notifications..."
+msgid "Configure Notifications…"
+msgstr "(&N) నోటిఫికేషన్లను ఆకృతీకరించుము..."
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -492,12 +552,18 @@ msgid "Mouse Navigation"
 msgstr ""
 
 #: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation Gestures"
+msgstr "క్రియాశీలపు జెస్టర్స్"
+
+#: ui/main.qml:52
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr ""
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -552,12 +618,6 @@ msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "సవరణి(మా‍డిఫైర్) లేదా లాకింగ్ కీ దాని స్థితిని మార్చినప్పుడు KDE యొక్క సిస్టమ్ నోటిఫికేషన్ మెకానిజంను వుపయోగించుము"
 
-#: ui/ModifierKeys.qml:99
-#, fuzzy, kde-format
-#| msgid "Configure &Notifications..."
-msgid "Configure Notifications…"
-msgstr "(&N) నోటిఫికేషన్లను ఆకృతీకరించుము..."
-
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
@@ -568,51 +628,29 @@ msgstr ""
 msgid "Enable"
 msgstr ""
 
-#: ui/MouseNavigation.qml:29
-#, kde-format
-msgid "When a gesture is used:"
-msgstr ""
-
 #: ui/MouseNavigation.qml:30
-#, kde-format
-msgid "Display a confirmation dialog"
-msgstr ""
-
-#: ui/MouseNavigation.qml:41
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
-msgid "Ring the System Bell"
-msgstr "(&s) సిస్టమ్ బెల్‌ను వుపయోగించుము"
-
-#: ui/MouseNavigation.qml:52
-#, fuzzy, kde-format
-#| msgid "Notification"
-msgid "Show a notification"
-msgstr "నో‍టీసు"
-
-#: ui/MouseNavigation.qml:68
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration delay:"
 msgstr "(&y) అమోదముకు ఆలస్యము:"
 
-#: ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:44
 #, kde-format
 msgid "Repeat interval:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:58
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration time:"
 msgstr "(&y) అమోదముకు ఆలస్యము:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:72
 #, kde-format
 msgid "Maximum speed:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:86
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Pointer acceleration:"
@@ -696,11 +734,6 @@ msgstr ""
 #~ msgstr "మూలకర్త"
 
 #, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "Activation:"
-#~ msgstr "క్రియాశీలపు జెస్టర్స్"
-
-#, fuzzy
 #~| msgid ""
 #~| "If this option is checked, the default system bell will be used. See the "
 #~| "\"System Bell\" control module for how to customize the system bell. "
@@ -781,16 +814,6 @@ msgstr ""
 #~ msgid "Activation &Gestures"
 #~ msgstr "క్రియాశీలపు జెస్టర్స్"
 
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr "స్టికీ కీలను మరియు స్లో కీలను క్రియాశీలము చేయుటకు జెస్టర్స్‌ను వుపయోగించుము"
-
-#~ msgid ""
-#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
-#~ msgstr "కొంత కాలంపాటు క్రియాహీనముగావుంటే స్టికీ కీలను మరియు స్లో కీలను ఆఫ్ చేయుము."
-
-#~ msgid " min"
-#~ msgstr " ని"
-
 #, fuzzy
 #~| msgid ""
 #~| "Use the system bell whenever a gesture is used to turn an accessibility "
@@ -842,11 +865,6 @@ msgstr ""
 #~ "మౌస్ కీలు: %1\n"
 #~ "స్టికీ కీలు: షిఫ్టు కీను వరుసగా 5 సార్లు నొక్కుము\n"
 #~ "స్లో కీలు: షిఫ్టు కీను 8 సెకనుల పాటు వత్తి వుంచుము"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "&Activation Gestures"
-#~ msgstr "క్రియాశీలపు జెస్టర్స్"
 
 #~ msgid "D&ebounce time:"
 #~ msgstr "(&e) డీబౌన్సు సమయం:"

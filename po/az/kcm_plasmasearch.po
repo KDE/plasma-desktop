@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2023-02-17 01:07+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "Yeni Qoşmalar Almaq…"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 "Qoşmaları aktiv edin və ya söndürün (KRunner və Tətbiq Başladıcısında və "
 "Görünüşdə istifadə olunur)"
@@ -100,16 +100,18 @@ msgid "KRunner plugin installation failed"
 msgstr "KRunner qoşmasının quraşdırılması mümkün olmadı"
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "İcra əmri: quraşdırmaq və ya silmək."
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "Arxivləmə yolu."
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -117,7 +119,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr ""
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -292,6 +294,10 @@ msgstr "%1 paket adı müəyyən edilə bilmədi"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "Quraçdırma əmri başladıla bilmədi: <message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "Arxivləmə yolu."
 
 #~ msgid "Position on screen:"
 #~ msgstr "Ekrandakı mövqeyi:"

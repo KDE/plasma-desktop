@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2023-09-10 19:15+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -38,11 +38,15 @@ msgid "Get New Plugins…"
 msgstr "புதிய செருகுநிரல்களை பதிவிறக்கு…"
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to see them."
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 "செருகுநிரல்களை இயக்கு அல்லது முடக்கு (கேரன்னரில், செயலி ஏவியில், மற்றும் மேலோட்ட "
 "அசைவூட்டத்தில் பயன்படுத்துபவை). குறிப்பிட்ட செருகுநிரல்களை பிடித்தவையாக குறிக்கலாம், "
@@ -95,16 +99,18 @@ msgid "KRunner plugin installation failed"
 msgstr "கேரன்னர் செருகுநிரல் நிறுவல் தோல்வியடைந்தது"
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "இயக்க வேண்டிய கட்டளை: install அல்லது uninstall."
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "பெட்டகத்துக்கான (archive-க்கான) பாதை."
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -112,7 +118,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr "உறுதிப்படுத்துமாறு கேட்கும் சாளரத்தைக் காட்டாதே"
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -283,6 +289,10 @@ msgstr "%1 என்பதன் தொகுப்புப் பெயரை�
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "நிறுவல் கட்டளை தோல்வியடைந்தது: <message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "பெட்டகத்துக்கான (archive-க்கான) பாதை."
 
 #~ msgid "Position on screen:"
 #~ msgstr "திரையில் இருப்பிடம்:"

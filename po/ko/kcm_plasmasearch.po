@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2023-10-08 23:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -40,11 +40,15 @@ msgid "Get New Plugins…"
 msgstr "새 플러그인 가져오기…"
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to see them."
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 "플러그인을 활성화 또는 비활성화합니다(KRunner, 앱 실행기, 한눈에 보기에서 사"
 "용). 플러그인을 책갈피에 등록하여 표시 순서를 사용자 정의할 수 있습니다."
@@ -96,16 +100,18 @@ msgid "KRunner plugin installation failed"
 msgstr "Runner 플러그인 설치 실패"
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "실행할 명령: install 또는 uninstall."
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "압축 파일 경로입니다."
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -113,7 +119,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr "시각적 확인 대화 상자 표시하지 않음"
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -284,6 +290,10 @@ msgstr "%1의 패키지 이름을 확인할 수 없음"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "설치 명령을 실행할 수 없음: <message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "압축 파일 경로입니다."
 
 #~ msgid "Position on screen:"
 #~ msgstr "화면상 위치:"

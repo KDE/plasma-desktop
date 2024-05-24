@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2023-09-26 18:05+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -40,11 +40,15 @@ msgid "Get New Plugins…"
 msgstr "Hae uusia liitännäisiä…"
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to see them."
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 "Ota käyttöön tai poista käytöstä (KRunnerin, sovelluskäynnistimen ja "
 "yleiskuvatehosteen) liitännäisiä. Liitännäisiä voi merkitä suosikeiksi ja "
@@ -98,16 +102,18 @@ msgid "KRunner plugin installation failed"
 msgstr "KRunner-liitännäisen asentaminen epäonnistui"
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "Suoritettava komento: asennus tai asennuksen poisto."
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "Arkiston sijainti."
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -115,7 +121,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr "Älä näytä visuaalista vahvistusikkunaa"
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -288,6 +294,10 @@ msgstr "Kohteen %1 paketin nimeä ei saatu selville"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "Komennon suorittaminen epäonnistui: <message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "Arkiston sijainti."
 
 #~ msgid "Position on screen:"
 #~ msgstr "Sijainti ruudulla:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2024-02-10 21:18+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -40,11 +40,15 @@ msgid "Get New Plugins…"
 msgstr "احصل على ملحقات جديدة..."
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to see them."
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 "مكن أو عطل الملحقات (المستخدمة في مشغل.ك و مطلق التطبيقات و تأثير النظرة "
 "العامة). فضل على المحلقات ورتبها حسب ما تريد أن تراها."
@@ -96,16 +100,18 @@ msgid "KRunner plugin installation failed"
 msgstr "فشل في تثبيت ملحق مشغل.ك"
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "الأمر للتنفيذه: تثبيت أو إلغاء التثبيت"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "المسار للأرشيف."
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -113,7 +119,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr "لا تعرض مربع حوار التأكيد المرئي"
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -283,6 +289,10 @@ msgstr "تعذر حل اسم الحزمة %1"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "فشل في تشغيل سكربت التثبيت : <message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "المسار للأرشيف."
 
 #~ msgid "Position on screen:"
 #~ msgstr "الموضع في الشاشة:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2023-12-14 22:15+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -40,11 +40,15 @@ msgid "Get New Plugins…"
 msgstr "Új bővítmények letöltése…"
 
 #: plasmasearch/ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to see them."
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
-"want to see them."
+"want to prioritize them."
 msgstr ""
 "Bővítmények be- és kikapcsolása (a KRunnerben, az Alkalmazásindítóban és az "
 "Áttekintés effektusban). Jelöljön meg kedvencként bővítményeket, és rendezze "
@@ -101,16 +105,18 @@ msgid "KRunner plugin installation failed"
 msgstr "A KRunner bővítmény telepítése nem sikerült"
 
 #: plugininstaller/main.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Command to execute: install or uninstall."
 msgctxt "@info:shell"
-msgid "Command to execute: install or uninstall."
+msgid "Command to execute: install or uninstall"
 msgstr "Végrehajtandó parancs: telepítés vagy eltávolítás."
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
-msgid "Path to archive."
-msgstr "Az archívum elérési útja."
+msgid "Path to archive or extracted folder"
+msgstr ""
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -118,7 +124,7 @@ msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
 msgstr "Ne jelenjen meg vizuális megerősítő párbeszédablak"
 
-#: plugininstaller/main.cpp:91
+#: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
@@ -295,6 +301,10 @@ msgstr "A(z) %1 csomagnév nem oldható fel"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "A telepítő parancs futtatása sikertelen: <message>%1</message>"
+
+#~ msgctxt "@info:shell"
+#~ msgid "Path to archive."
+#~ msgstr "Az archívum elérési útja."
 
 #~ msgid "Position on screen:"
 #~ msgstr "Pozíció a képernyőn:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -18,69 +18,105 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
-#: kcmaccess.cpp:115
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Brúigh %1 nuair atá NumLock, CapsLock agus ScrollLock gníomhach"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Brúigh %1 nuair atá CapsLock agus ScrollLock gníomhach"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Brúigh %1 nuair atá NumLock agus ScrollLock gníomhach"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Brúigh %1 nuair atá ScrollLock gníomhach"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Brúigh %1 nuair atá NumLock agus CapsLock gníomhach"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Brúigh %1 nuair atá CapsLock gníomhach"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Brúigh %1 nuair atá NumLock gníomhach"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1"
 msgstr "Brúigh %1"
 
-#: kcmaccess.cpp:183
+#: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr ""
 
-#: kcmaccess.cpp:190
+#: kcmaccess.cpp:193
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
+msgstr ""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:9
+#, kde-format
+msgid "Use Gestures"
+msgstr ""
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:13
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:17
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:21
+#, kde-format
+msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:25
+#, kde-format
+msgid "Delay for timeout"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:29
+#, kde-format
+msgid "Use a beep for access"
 msgstr ""
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
@@ -169,24 +205,6 @@ msgstr ""
 msgid "Notify when a keyboard modifier is pressed"
 msgstr ""
 
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr ""
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr ""
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr ""
-
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
 #, fuzzy, kde-format
@@ -272,24 +290,6 @@ msgstr ""
 msgid "Mouse Key Curve"
 msgstr ""
 
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr ""
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr ""
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr ""
-
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
@@ -308,6 +308,73 @@ msgstr ""
 #| msgid "Notification"
 msgid "Magnification"
 msgstr "Fógairt"
+
+#: ui/ActivationGestures.qml:16
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation:"
+msgstr "Gothaí Gníomhachtaithe"
+
+#: ui/ActivationGestures.qml:17
+#, kde-format
+msgid "Use gestures for activating sticky keys and slow keys"
+msgstr ""
+"Úsáid gothaí chun eochracha greamaitheacha agus eochracha malla a "
+"ghníomhachtú"
+
+#: ui/ActivationGestures.qml:29
+#, fuzzy, kde-format
+#| msgid ""
+#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+msgid "Turn sticky keys and slow keys off after inactivity:"
+msgstr ""
+"Díghníomhachtaigh eochracha greamaitheacha agus eochracha malla nuair nach "
+"bhfuil siad in úsáid ar feadh tréimhse áirithe."
+
+#: ui/ActivationGestures.qml:58
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] " nóiméad"
+msgstr[1] " nóiméad"
+msgstr[2] " nóiméad"
+msgstr[3] " nóiméad"
+msgstr[4] " nóiméad"
+
+#: ui/ActivationGestures.qml:62
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "min"
+msgstr " nóiméad"
+
+#: ui/ActivationGestures.qml:70
+#, kde-format
+msgid "When a gesture is used:"
+msgstr ""
+
+#: ui/ActivationGestures.qml:71
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr ""
+
+#: ui/ActivationGestures.qml:82
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring the System Bell"
+msgstr "Ú&sáid cloigín an chórais"
+
+#: ui/ActivationGestures.qml:93
+#, fuzzy, kde-format
+#| msgid "Notification"
+msgid "Show a notification"
+msgstr "Fógairt"
+
+#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#, fuzzy, kde-format
+#| msgid "Configure &Notifications..."
+msgid "Configure Notifications…"
+msgstr "Cumraigh &Fógairt..."
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -494,12 +561,18 @@ msgid "Mouse Navigation"
 msgstr ""
 
 #: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation Gestures"
+msgstr "Gothaí Gníomhachtaithe"
+
+#: ui/main.qml:52
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr ""
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -555,12 +628,6 @@ msgstr ""
 "Úsáid an córas fógartha KDE nuair a athraíonn mionathraitheoir nó eochair "
 "ghlasála a staid"
 
-#: ui/ModifierKeys.qml:99
-#, fuzzy, kde-format
-#| msgid "Configure &Notifications..."
-msgid "Configure Notifications…"
-msgstr "Cumraigh &Fógairt..."
-
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
@@ -571,51 +638,29 @@ msgstr ""
 msgid "Enable"
 msgstr ""
 
-#: ui/MouseNavigation.qml:29
-#, kde-format
-msgid "When a gesture is used:"
-msgstr ""
-
 #: ui/MouseNavigation.qml:30
-#, kde-format
-msgid "Display a confirmation dialog"
-msgstr ""
-
-#: ui/MouseNavigation.qml:41
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
-msgid "Ring the System Bell"
-msgstr "Ú&sáid cloigín an chórais"
-
-#: ui/MouseNavigation.qml:52
-#, fuzzy, kde-format
-#| msgid "Notification"
-msgid "Show a notification"
-msgstr "Fógairt"
-
-#: ui/MouseNavigation.qml:68
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration delay:"
 msgstr "Moill &inghlacthachta:"
 
-#: ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:44
 #, kde-format
 msgid "Repeat interval:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:58
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration time:"
 msgstr "Moill &inghlacthachta:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:72
 #, kde-format
 msgid "Maximum speed:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:86
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Pointer acceleration:"
@@ -697,11 +742,6 @@ msgstr ""
 
 #~ msgid "Author"
 #~ msgstr "Údar"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "Activation:"
-#~ msgstr "Gothaí Gníomhachtaithe"
 
 #, fuzzy
 #~| msgid ""
@@ -827,20 +867,6 @@ msgstr ""
 #~ msgid "Activation &Gestures"
 #~ msgstr "Gothaí Gníomhachtaithe"
 
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr ""
-#~ "Úsáid gothaí chun eochracha greamaitheacha agus eochracha malla a "
-#~ "ghníomhachtú"
-
-#~ msgid ""
-#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
-#~ msgstr ""
-#~ "Díghníomhachtaigh eochracha greamaitheacha agus eochracha malla nuair "
-#~ "nach bhfuil siad in úsáid ar feadh tréimhse áirithe."
-
-#~ msgid " min"
-#~ msgstr " nóiméad"
-
 #, fuzzy
 #~| msgid ""
 #~| "Use the system bell whenever a gesture is used to turn an accessibility "
@@ -909,11 +935,6 @@ msgstr ""
 #~ "Eochracha luiche: %1\n"
 #~ "Eochracha greamaitheacha: Brúigh an eochair Shift 5 huaire as a chéile\n"
 #~ "Eochracha malla: Coinnigh an eochair Shift thíos ar feadh 8 soicind"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "&Activation Gestures"
-#~ msgstr "Gothaí Gníomhachtaithe"
 
 #~ msgid "D&ebounce time:"
 #~ msgstr "Aga &díphreabtha:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
 "PO-Revision-Date: 2009-07-04 05:55+0530\n"
 "Last-Translator: Arindam Ghosh <arindam.foss@gmail.com>\n"
 "Language-Team: Bengali (India) <fedora-trans-bn_IN@redhat.com>\n"
@@ -19,69 +19,105 @@ msgstr ""
 "X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: kcmaccess.cpp:115
+#: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "%1 প্রেস করুন যদি NumLock, CapsLock ও ScrollLock সক্রিয় থাকে"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "%1 প্রেস করুন যদি CapsLock ও ScrollLock সক্রিয় থাকে"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "%1 প্রেস করুন যদি NumLock ও ScrollLock সক্রিয় থাকে"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "%1 প্রেস করুন যদি ScrollLock সক্রিয় থাকে"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "%1 প্রেস করুন যদি NumLock ও CapsLock সক্রিয় থাকে"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "%1 প্রেস করুন যদি CapsLock সক্রিয় থাকে"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "%1 প্রেস করুন যদি NumLock সক্রিয় থাকে"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1"
 msgstr "%1 প্রেস করুনয় থাকে"
 
-#: kcmaccess.cpp:183
+#: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr ""
 
-#: kcmaccess.cpp:190
+#: kcmaccess.cpp:193
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
+msgstr ""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:9
+#, kde-format
+msgid "Use Gestures"
+msgstr ""
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:13
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:17
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:21
+#, kde-format
+msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:25
+#, kde-format
+msgid "Delay for timeout"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilityactivationgestures.kcfg:29
+#, kde-format
+msgid "Use a beep for access"
 msgstr ""
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
@@ -166,24 +202,6 @@ msgstr ""
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr ""
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr ""
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr ""
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
 msgstr ""
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
@@ -271,24 +289,6 @@ msgstr ""
 msgid "Mouse Key Curve"
 msgstr ""
 
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr ""
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr ""
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr ""
-
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
@@ -307,6 +307,68 @@ msgstr ""
 #| msgid "Notification"
 msgid "Magnification"
 msgstr "নোটিফিকেশন"
+
+#: ui/ActivationGestures.qml:16
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation:"
+msgstr "সক্রিয় করার ঈশারা-সমূহ"
+
+#: ui/ActivationGestures.qml:17
+#, kde-format
+msgid "Use gestures for activating sticky keys and slow keys"
+msgstr "ঈশারার মাধ্যমে স্টিকি কী-সমূহ ও ধীর কী-সমূহ সক্রিয় হবে"
+
+#: ui/ActivationGestures.qml:29
+#, fuzzy, kde-format
+#| msgid ""
+#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+msgid "Turn sticky keys and slow keys off after inactivity:"
+msgstr ""
+"একটা নির্দিষ্টকাল অবধি নিষ্ক্রিয় থাকলে স্টিকি কী-সমূহ ও ধীর কী-সমূহ নিষ্ক্রিয় করা "
+"হবে। "
+
+#: ui/ActivationGestures.qml:58
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "%1 min"
+msgid_plural "%1 min"
+msgstr[0] " মিনিট"
+msgstr[1] " মিনিট"
+
+#: ui/ActivationGestures.qml:62
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "min"
+msgstr " মিনিট"
+
+#: ui/ActivationGestures.qml:70
+#, kde-format
+msgid "When a gesture is used:"
+msgstr ""
+
+#: ui/ActivationGestures.qml:71
+#, kde-format
+msgid "Display a confirmation dialog"
+msgstr ""
+
+#: ui/ActivationGestures.qml:82
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Ring the System Bell"
+msgstr "সিস্টেম বেল ব্যবহৃত হবে (&s)"
+
+#: ui/ActivationGestures.qml:93
+#, fuzzy, kde-format
+#| msgid "Notification"
+msgid "Show a notification"
+msgstr "নোটিফিকেশন"
+
+#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#, fuzzy, kde-format
+#| msgid "Configure &Notifications..."
+msgid "Configure Notifications…"
+msgstr "নোটিফিকেশনের বিন্যাস... (&N)"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -493,12 +555,18 @@ msgid "Mouse Navigation"
 msgstr ""
 
 #: ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation Gestures"
+msgstr "সক্রিয় করার ঈশারা-সমূহ"
+
+#: ui/main.qml:52
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr ""
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -554,12 +622,6 @@ msgstr ""
 "KDE সিস্টেম নোটিফিকেশন ব্যবস্থা ব্যবহৃত হবে যখনই একটা মডিফায়র অথবা লকিং কী অবস্থা "
 "পরিবর্তন করে"
 
-#: ui/ModifierKeys.qml:99
-#, fuzzy, kde-format
-#| msgid "Configure &Notifications..."
-msgid "Configure Notifications…"
-msgstr "নোটিফিকেশনের বিন্যাস... (&N)"
-
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
@@ -570,51 +632,29 @@ msgstr ""
 msgid "Enable"
 msgstr ""
 
-#: ui/MouseNavigation.qml:29
-#, kde-format
-msgid "When a gesture is used:"
-msgstr ""
-
 #: ui/MouseNavigation.qml:30
-#, kde-format
-msgid "Display a confirmation dialog"
-msgstr ""
-
-#: ui/MouseNavigation.qml:41
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
-msgid "Ring the System Bell"
-msgstr "সিস্টেম বেল ব্যবহৃত হবে (&s)"
-
-#: ui/MouseNavigation.qml:52
-#, fuzzy, kde-format
-#| msgid "Notification"
-msgid "Show a notification"
-msgstr "নোটিফিকেশন"
-
-#: ui/MouseNavigation.qml:68
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration delay:"
 msgstr "গ্রহন করার বিলম্ব (&y):"
 
-#: ui/MouseNavigation.qml:82
+#: ui/MouseNavigation.qml:44
 #, kde-format
 msgid "Repeat interval:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:96
+#: ui/MouseNavigation.qml:58
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Acceleration time:"
 msgstr "গ্রহন করার বিলম্ব (&y):"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:72
 #, kde-format
 msgid "Maximum speed:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:124
+#: ui/MouseNavigation.qml:86
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgid "Pointer acceleration:"
@@ -696,11 +736,6 @@ msgstr ""
 
 #~ msgid "Author"
 #~ msgstr "লেখক"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "Activation:"
-#~ msgstr "সক্রিয় করার ঈশারা-সমূহ"
 
 #, fuzzy
 #~| msgid ""
@@ -816,18 +851,6 @@ msgstr ""
 #~ msgid "Activation &Gestures"
 #~ msgstr "সক্রিয় করার ঈশারা-সমূহ"
 
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr "ঈশারার মাধ্যমে স্টিকি কী-সমূহ ও ধীর কী-সমূহ সক্রিয় হবে"
-
-#~ msgid ""
-#~ "Turn sticky keys and slow keys off after a certain period of inactivity."
-#~ msgstr ""
-#~ "একটা নির্দিষ্টকাল অবধি নিষ্ক্রিয় থাকলে স্টিকি কী-সমূহ ও ধীর কী-সমূহ নিষ্ক্রিয় করা "
-#~ "হবে। "
-
-#~ msgid " min"
-#~ msgstr " মিনিট"
-
 #, fuzzy
 #~| msgid ""
 #~| "Use the system bell whenever a gesture is used to turn an accessibility "
@@ -895,11 +918,6 @@ msgstr ""
 #~ "মাউস কী-সমুহ: %1\n"
 #~ "স্টিকি কী-সমূহ: পর পর ৫ বার সিফ্ট কী প্রেস করুন\n"
 #~ "ধীর কী-সমূহ: সিফ্ট কী ৮ সেকেন্ড ধরে থাকুন"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "&Activation Gestures"
-#~ msgstr "সক্রিয় করার ঈশারা-সমূহ"
 
 #~ msgid "D&ebounce time:"
 #~ msgstr "ডিবাউন্স সময়কাল (&e):"
