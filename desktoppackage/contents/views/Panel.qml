@@ -109,18 +109,7 @@ Item {
 
         Binding on regionGeometry {
             delayed: true
-
-            // This makes the panel de-float when a window is 12px from it or less.
-            // 12px is chosen to avoid any potential issue with kwin snapping behavior,
-            // and it looks like the panel hides away from the active window.
-            property int defloatDistance: 12
-            // Instead, we will only dodge an active panel if the panel is covered by it,
-            // i.e. if the window touches at least one pixel of the panel
-            property int dodgeDistance: -1
-            // We don't have to worry about dealing with both at the same time since
-            // dodge-window panels never de-float.
-
-            value: panel.width, panel.height, panel.x, panel.y, panel.dogdeGeometryByDistance(panel.visibilityMode === Panel.Global.DodgeWindows ? dodgeDistance : defloatDistance)
+            value: panel.width, panel.height, panel.x, panel.y, panel.dogdeGeometryByDistance(-1)
         }
     }
 
