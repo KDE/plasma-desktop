@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-07-02 16:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr ""
 "சேமிக்கப்பட்ட மாற்றங்களை பற்றி கே.டீ.யீ. சேவை மேலாளரிடம் (kded6-இடம்) தெரியப்படுத்த "
 "முடியவில்லை: %1 "
 
-#: ui/main.qml:37
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
@@ -52,7 +52,7 @@ msgstr ""
 "பின்னணி சேவை மேலாளர் (kded6) தற்போது இயங்கவில்லை. அது சரியாக நிர்வப்பட்டிருக்கிறதா "
 "என்று பாருங்கள்."
 
-#: ui/main.qml:46
+#: ui/main.qml:50
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -60,7 +60,7 @@ msgid ""
 msgstr ""
 "தற்போதைய சூழலில் பயனில்லா சேவைகளை நீங்கள் கைமுறையாக இயக்கிநாளும் தானாக நின்றுவிடும்."
 
-#: ui/main.qml:55
+#: ui/main.qml:60
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -69,54 +69,54 @@ msgstr ""
 "உங்கள் மாற்றங்களை இயக்க பின்னணி சேவை மேலாளரை (kded6) மறுதொடக்கம் செய்யும்போது சில "
 "சேவைகள் தானாக ஆரம்பித்தன/நின்றன."
 
-#: ui/main.qml:97
+#: ui/main.qml:108
 #, kde-format
 msgid "All Services"
 msgstr "அனைத்து சேவைகள்"
 
-#: ui/main.qml:98
+#: ui/main.qml:109
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "இயங்குகிறவை"
 
-#: ui/main.qml:99
+#: ui/main.qml:110
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "இயங்காதவை"
 
-#: ui/main.qml:136
+#: ui/main.qml:147
 #, kde-format
 msgid "Startup Services"
 msgstr "துவக்க சேவைகள்"
 
-#: ui/main.qml:137
+#: ui/main.qml:148
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "தேவைக்கேற்ப இயக்கப்படும் சேவைகளை "
 
-#: ui/main.qml:156
+#: ui/main.qml:167
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "இந்த சேவையை தொடக்கத்தின் போது தானாக இயக்குவதை நிலைமாற்று"
 
-#: ui/main.qml:199
+#: ui/main.qml:210
 #, kde-format
 msgid "Not running"
 msgstr "இயங்கவில்லை"
 
-#: ui/main.qml:200
+#: ui/main.qml:211
 #, kde-format
 msgid "Running"
 msgstr "இயங்குகிறது"
 
-#: ui/main.qml:219
+#: ui/main.qml:230
 #, kde-format
 msgid "Stop Service"
 msgstr "சேவையை நிறுத்து"
 
-#: ui/main.qml:219
+#: ui/main.qml:230
 #, kde-format
 msgid "Start Service"
 msgstr "சேவையை துவக்கு"

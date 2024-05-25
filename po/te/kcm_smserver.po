@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-26 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -46,53 +46,53 @@ msgstr "లాగిన్ నందు"
 msgid "Applications to be excluded from session"
 msgstr "(&x) సెషన్స్ నుండి తీసివేయవలసిన అనువర్తనములు:"
 
-#: ui/main.qml:30
+#: ui/main.qml:31
 #, kde-format
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
 
-#: ui/main.qml:35
+#: ui/main.qml:36
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
 msgid "Restart"
 msgstr "(&R) కంప్యూటర్‌ను పునఃప్రారంభించుము"
 
-#: ui/main.qml:57
-#, kde-format
-msgid "Failed to request restart to firmware setup: %1"
-msgstr ""
-
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
 
 #: ui/main.qml:59
 #, kde-format
 msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr ""
+
+#: ui/main.qml:60
+#, kde-format
+msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
 
-#: ui/main.qml:64
+#: ui/main.qml:65
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
 msgid "Restart Now"
 msgstr "(&R) కంప్యూటర్‌ను పునఃప్రారంభించుము"
 
-#: ui/main.qml:71
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
 msgstr ""
 
-#: ui/main.qml:75
+#: ui/main.qml:78
 #, kde-format
 msgid "Show:"
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:92
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -101,32 +101,32 @@ msgid ""
 "buttons or menu items labeled <interface>Leave…</interface>."
 msgstr ""
 
-#: ui/main.qml:95
+#: ui/main.qml:98
 #, fuzzy, kde-format
 #| msgid "Session Manager"
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "సెషన్ నిర్వాహకి"
 
-#: ui/main.qml:103
+#: ui/main.qml:106
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr ""
 
-#: ui/main.qml:104
+#: ui/main.qml:107
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr ""
 
-#: ui/main.qml:117
+#: ui/main.qml:120
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "(&m) మాన్యువల్‌గా దాచిన సెషన్‌ను తిరిగివుంచుము"
 
-#: ui/main.qml:126
+#: ui/main.qml:129
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -136,7 +136,7 @@ msgid ""
 "Click it again to replace the set of remembered apps."
 msgstr ""
 
-#: ui/main.qml:131
+#: ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -146,12 +146,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "(&s) ఖాళీ సెషన్‌తో ప్రారంభించుము"
 
-#: ui/main.qml:145
+#: ui/main.qml:148
 #, kde-format
 msgid "Ignored applications:"
 msgstr ""
 
-#: ui/main.qml:168
+#: ui/main.qml:171
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -159,13 +159,13 @@ msgid ""
 "autostarting along with other session-restored apps."
 msgstr ""
 
-#: ui/main.qml:175
+#: ui/main.qml:178
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr ""
 
-#: ui/main.qml:181
+#: ui/main.qml:184
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -173,13 +173,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr ""
 
-#: ui/main.qml:182
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr ""
 
-#: ui/main.qml:183
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"

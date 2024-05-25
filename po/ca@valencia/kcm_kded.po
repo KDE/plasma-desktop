@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-06-29 09:12+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr ""
 "No s'ha pogut notificar al Gestor de servei de KDE («kded6») del canvi "
 "guardat: %1"
 
-#: ui/main.qml:37
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
@@ -60,7 +60,7 @@ msgstr ""
 "Actualment el gestor de serveis en segon pla («kded6») no està en execució. "
 "Comproveu que estiga instal·lat correctament."
 
-#: ui/main.qml:46
+#: ui/main.qml:50
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -69,7 +69,7 @@ msgstr ""
 "Alguns serveis es desactiven a si mateixos una altra vegada que s'inicien "
 "manualment si no són útils en l'entorn actual."
 
-#: ui/main.qml:55
+#: ui/main.qml:60
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -78,54 +78,54 @@ msgstr ""
 "Alguns serveis s'han parat/iniciat automàticament quan el gestor de serveis "
 "en segon pla («kded6») s'ha reiniciat per a aplicar els canvis."
 
-#: ui/main.qml:97
+#: ui/main.qml:108
 #, kde-format
 msgid "All Services"
 msgstr "Tots els serveis"
 
-#: ui/main.qml:98
+#: ui/main.qml:109
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "En execució"
 
-#: ui/main.qml:99
+#: ui/main.qml:110
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "No estan en execució"
 
-#: ui/main.qml:136
+#: ui/main.qml:147
 #, kde-format
 msgid "Startup Services"
 msgstr "Serveis d'inicialització"
 
-#: ui/main.qml:137
+#: ui/main.qml:148
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Serveis de càrrega sota demanda"
 
-#: ui/main.qml:156
+#: ui/main.qml:167
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Canvia la càrrega automàtica d'este servei en iniciar"
 
-#: ui/main.qml:199
+#: ui/main.qml:210
 #, kde-format
 msgid "Not running"
 msgstr "Parat"
 
-#: ui/main.qml:200
+#: ui/main.qml:211
 #, kde-format
 msgid "Running"
 msgstr "En execució"
 
-#: ui/main.qml:219
+#: ui/main.qml:230
 #, kde-format
 msgid "Stop Service"
 msgstr "Para el servei"
 
-#: ui/main.qml:219
+#: ui/main.qml:230
 #, kde-format
 msgid "Start Service"
 msgstr "Inicia el servei"

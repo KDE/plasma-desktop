@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-11-04 19:58+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, kde-format
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
@@ -29,80 +29,80 @@ msgstr ""
 "Перш ніж зміни у поведінці у відповідь на клацання середньою кнопкою миші "
 "набудуть чинності, систему доведеться перезапустити."
 
-#: ui/main.qml:30
+#: ui/main.qml:29
 #, kde-format
 msgid "Restart"
 msgstr "Перезапустити"
 
-#: ui/main.qml:47
+#: ui/main.qml:45
 #, kde-format
 msgid "Visual behavior:"
 msgstr "Візуальна поведінка:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: ui/main.qml:48 workspaceoptions_plasmasettings.kcfg:9
+#: ui/main.qml:46 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Показувати інформаційні підказки при наведенні вказівника"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: ui/main.qml:59 workspaceoptions_plasmasettings.kcfg:15
+#: ui/main.qml:57 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Показувати візуальний супровід змін стану"
 
-#: ui/main.qml:77
+#: ui/main.qml:75
 #, kde-format
 msgid "Animation speed:"
 msgstr "Швидкість анімації:"
 
-#: ui/main.qml:103
+#: ui/main.qml:101
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Повільна"
 
-#: ui/main.qml:110
+#: ui/main.qml:108
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Миттєва"
 
-#: ui/main.qml:125
+#: ui/main.qml:123
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Клацання на файлах або теках:"
 
-#: ui/main.qml:132
+#: ui/main.qml:130
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "позначає їх"
 
-#: ui/main.qml:146
+#: ui/main.qml:144
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Відкривати подвійним клацанням"
 
-#: ui/main.qml:159
+#: ui/main.qml:157
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "відкриває їх"
 
-#: ui/main.qml:172
+#: ui/main.qml:170
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Позначення клацанням на маркері позначення елемента"
 
-#: ui/main.qml:188
+#: ui/main.qml:186
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Клацання на смужці гортання:"
 
-#: ui/main.qml:189
+#: ui/main.qml:187
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -110,7 +110,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Гортає до місця клацання"
 
-#: ui/main.qml:207
+#: ui/main.qml:205
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -118,43 +118,43 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Гортає на сторінку вгору чи вниз"
 
-#: ui/main.qml:220
+#: ui/main.qml:218
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Клацання середньою гортає до місця клацання"
 
-#: ui/main.qml:234
+#: ui/main.qml:232
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "Клацання середньою:"
 
-#: ui/main.qml:236
+#: ui/main.qml:234
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
 msgstr "Вставляє позначений текст"
 
-#: ui/main.qml:253
+#: ui/main.qml:251
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Режим сенсорного керування:"
 
-#: ui/main.qml:255
+#: ui/main.qml:253
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Автоматично увімкнути, якщо потрібно"
 
-#: ui/main.qml:255 ui/main.qml:298
+#: ui/main.qml:253 ui/main.qml:296
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Ніколи не вмикати"
 
-#: ui/main.qml:271
+#: ui/main.qml:269
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -165,13 +165,13 @@ msgstr ""
 "сенсорний екран, але не виявить миші або сенсорної панелі. Приклад: "
 "відкинуто або від'єднано клавіатурний модуль ноутбука-трансформера."
 
-#: ui/main.qml:276
+#: ui/main.qml:274
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Увімкнено завжди"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -180,12 +180,12 @@ msgstr ""
 "У режимі сенсорного керування багато елементів інтерфейсу користувача "
 "стануть більшими, щоб ними легше було оперувати за допомогою дотиків."
 
-#: ui/main.qml:334
+#: ui/main.qml:332
 #, kde-format
 msgid "Double-click interval:"
 msgstr "Інтервал подвійного клацання:"
 
-#: ui/main.qml:349
+#: ui/main.qml:347
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
@@ -194,12 +194,12 @@ msgstr[1] "%1 мс"
 msgstr[2] "%1 мс"
 msgstr[3] "%1 мс"
 
-#: ui/main.qml:353
+#: ui/main.qml:351
 #, kde-format
 msgid "msec"
 msgstr "мс"
 
-#: ui/main.qml:367
+#: ui/main.qml:365
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "

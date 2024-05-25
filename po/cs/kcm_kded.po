@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-06-29 11:03+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Spuštění služby selhalo."
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr "Oznámení uložených změn Správci služeb KDE (kded6) se nezdařilo: %1"
 
-#: ui/main.qml:37
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
@@ -53,7 +53,7 @@ msgstr ""
 "Správce služeb na pozadí (kded6) momentálně neběží. Prosím, ujistěte se, že "
 "je správně nainstalován."
 
-#: ui/main.qml:46
+#: ui/main.qml:50
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -62,7 +62,7 @@ msgstr ""
 "Některé služby se samy zase vypnou pokud jsou spuštěny manuálně pokud v "
 "současném prostředí nejsou k ničemu."
 
-#: ui/main.qml:55
+#: ui/main.qml:60
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -71,54 +71,54 @@ msgstr ""
 "Pro provedení vašich změny byly některé služby automaticky spuštěny/"
 "zastaveny při restartu správce služeb na pozadí (kded6)."
 
-#: ui/main.qml:97
+#: ui/main.qml:108
 #, kde-format
 msgid "All Services"
 msgstr "Všechny služby"
 
-#: ui/main.qml:98
+#: ui/main.qml:109
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Spuštěno"
 
-#: ui/main.qml:99
+#: ui/main.qml:110
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Není spuštěno"
 
-#: ui/main.qml:136
+#: ui/main.qml:147
 #, kde-format
 msgid "Startup Services"
 msgstr "Služby při spuštění"
 
-#: ui/main.qml:137
+#: ui/main.qml:148
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Služby na požádání"
 
-#: ui/main.qml:156
+#: ui/main.qml:167
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Zapnout automatické spouštění této služby při spuštění"
 
-#: ui/main.qml:199
+#: ui/main.qml:210
 #, kde-format
 msgid "Not running"
 msgstr "Nespuštěno"
 
-#: ui/main.qml:200
+#: ui/main.qml:211
 #, kde-format
 msgid "Running"
 msgstr "Spuštěno"
 
-#: ui/main.qml:219
+#: ui/main.qml:230
 #, kde-format
 msgid "Stop Service"
 msgstr "Zastavit službu"
 
-#: ui/main.qml:219
+#: ui/main.qml:230
 #, kde-format
 msgid "Start Service"
 msgstr "Spustit službu"

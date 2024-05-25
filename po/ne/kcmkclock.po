@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2007-08-19 16:29+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -80,14 +80,14 @@ msgstr "हालको स्थानीय टाइमजोन: %1 (%2)"
 msgid "Search…"
 msgstr ""
 
-#: dtime.cpp:59
+#: dtime.cpp:61
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
 
-#: dtime.cpp:88
+#: dtime.cpp:90
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -97,21 +97,21 @@ msgstr ""
 "तपाईँले यहाँ प्रणाली समय परिवर्तन गर्न सक्नुहुन्छ । उचित मान परिवर्तन गर्न घण्टा, मिनेट वा "
 "सेकेन्ड फाँटमा या माथि र तल बटन प्रयोग गरेर वा नयाँ मान प्रविष्ट गरी क्लिक गर्नुहोस् ।"
 
-#: dtime.cpp:117
+#: dtime.cpp:119
 #, fuzzy, kde-format
 #| msgid "Current local timezone: %1 (%2)"
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
 msgstr "हालको स्थानीय टाइमजोन: %1 (%2)"
 
-#: dtime.cpp:119
+#: dtime.cpp:121
 #, fuzzy, kde-format
 #| msgid "Current local timezone: %1 (%2)"
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
 msgstr "हालको स्थानीय टाइमजोन: %1 (%2)"
 
-#: dtime.cpp:195
+#: dtime.cpp:196
 #, fuzzy, kde-format
 #| msgid ""
 #| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
@@ -123,29 +123,29 @@ msgstr ""
 "सार्वजनिक समय सर्भर(pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,north-"
 "america.pool.ntp.org,oceania.pool.ntp.org"
 
-#: dtime.cpp:266
+#: dtime.cpp:267
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "समय सर्भर सम्पर्क गर्न असक्षम: %1."
 
-#: dtime.cpp:270
+#: dtime.cpp:271
 #, kde-format
 msgid "Can not set date."
 msgstr "मिति सेट गर्न सकिँदैन ।"
 
-#: dtime.cpp:273
+#: dtime.cpp:274
 #, fuzzy, kde-format
 #| msgid "Error setting new timezone."
 msgid "Error setting new time zone."
 msgstr "नयाँ टाइमजोन सेटिङ गर्दा त्रुटि ।"
 
-#: dtime.cpp:273
+#: dtime.cpp:274
 #, fuzzy, kde-format
 #| msgid "Timezone Error"
 msgid "Time zone Error"
 msgstr "टाइमजोन त्रुटि"
 
-#: dtime.cpp:291
+#: dtime.cpp:292
 #, fuzzy, kde-format
 #| msgid ""
 #| "<h1>Date & Time</h1> This control module can be used to set the system "

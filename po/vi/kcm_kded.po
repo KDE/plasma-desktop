@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2021-07-19 11:40+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr ""
 "Không thông báo được cho trình quản lí dịch vụ KDE (kded5) về các thay đổi "
 "đã lưu: %1"
 
-#: ui/main.qml:37
+#: ui/main.qml:40
 #, fuzzy, kde-format
 #| msgid ""
 #| "The background services manager (kded5) is currently not running. Make "
@@ -58,7 +58,7 @@ msgstr ""
 "Trình quản lí dịch vụ nền (kded5) hiện đang không chạy. Hãy đảm bảo rằng nó "
 "được cài đặt đúng."
 
-#: ui/main.qml:46
+#: ui/main.qml:50
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -67,7 +67,7 @@ msgstr ""
 "Một số dịch vụ sẽ tự tắt khi được chạy thủ công nếu chúng không có tác dụng "
 "trong môi trường hiện tại."
 
-#: ui/main.qml:55
+#: ui/main.qml:60
 #, fuzzy, kde-format
 #| msgid ""
 #| "Some services were automatically started/stopped when the background "
@@ -79,54 +79,54 @@ msgstr ""
 "Một số dịch vụ đã được tự động chạy/dừng khi trình quản lí dịch vụ nền "
 "(kded5) được khởi động lại để áp dụng các thay đổi của bạn."
 
-#: ui/main.qml:97
+#: ui/main.qml:108
 #, kde-format
 msgid "All Services"
 msgstr "Tất cả dịch vụ"
 
-#: ui/main.qml:98
+#: ui/main.qml:109
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Đang chạy"
 
-#: ui/main.qml:99
+#: ui/main.qml:110
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Không chạy"
 
-#: ui/main.qml:136
+#: ui/main.qml:147
 #, kde-format
 msgid "Startup Services"
 msgstr "Dịch vụ khi khởi động"
 
-#: ui/main.qml:137
+#: ui/main.qml:148
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Dịch vụ tải khi có yêu cầu"
 
-#: ui/main.qml:156
+#: ui/main.qml:167
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Bật/tắt việc tải tự động dịch vụ này khi khởi động"
 
-#: ui/main.qml:199
+#: ui/main.qml:210
 #, kde-format
 msgid "Not running"
 msgstr "Không chạy"
 
-#: ui/main.qml:200
+#: ui/main.qml:211
 #, kde-format
 msgid "Running"
 msgstr "Đang chạy"
 
-#: ui/main.qml:219
+#: ui/main.qml:230
 #, kde-format
 msgid "Stop Service"
 msgstr "Dừng dịch vụ"
 
-#: ui/main.qml:219
+#: ui/main.qml:230
 #, kde-format
 msgid "Start Service"
 msgstr "Chạy dịch vụ"

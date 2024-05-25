@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-11-05 06:04+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,87 +18,87 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, kde-format
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr "შუა-წკაპით ჩასმის ჩასართავად აუცილებელია, გადატვირთოთ სისტემა."
 
-#: ui/main.qml:30
+#: ui/main.qml:29
 #, kde-format
 msgid "Restart"
 msgstr "გადატვრთვა"
 
-#: ui/main.qml:47
+#: ui/main.qml:45
 #, kde-format
 msgid "Visual behavior:"
 msgstr "ვიზუალური ქცევა:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: ui/main.qml:48 workspaceoptions_plasmasettings.kcfg:9
+#: ui/main.qml:46 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "თაგუნას გადატარებისას საინფორმაციო მხტუნავების ჩვენება"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: ui/main.qml:59 workspaceoptions_plasmasettings.kcfg:15
+#: ui/main.qml:57 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "სტატუსის ცვლილებისას ვიზუალური ნიშნების მიცემა"
 
-#: ui/main.qml:77
+#: ui/main.qml:75
 #, kde-format
 msgid "Animation speed:"
 msgstr "ანიმაციის სიჩქარე:"
 
-#: ui/main.qml:103
+#: ui/main.qml:101
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "ნელი"
 
-#: ui/main.qml:110
+#: ui/main.qml:108
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "მყისი"
 
-#: ui/main.qml:125
+#: ui/main.qml:123
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "დაწკაპუნება ფაილზე ან საქაღალდეზე:"
 
-#: ui/main.qml:132
+#: ui/main.qml:130
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "მონიშნავს"
 
-#: ui/main.qml:146
+#: ui/main.qml:144
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "გახსნა მხოლოდ ორმაგი წკაპით მოხდება"
 
-#: ui/main.qml:159
+#: ui/main.qml:157
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "გახსნის მათ"
 
-#: ui/main.qml:172
+#: ui/main.qml:170
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "არჩიეთ ჩანაწერის არჩევის სანიშნზე დაწკაპუნებით"
 
-#: ui/main.qml:188
+#: ui/main.qml:186
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "ჩოჩიაზე წკაპი:"
 
-#: ui/main.qml:189
+#: ui/main.qml:187
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -106,7 +106,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "დაწკაპუნებულ ადგლამდე მიწევა"
 
-#: ui/main.qml:207
+#: ui/main.qml:205
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -114,43 +114,43 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "ერთი გვერდით მაღლა ან დაბალ აწევა"
 
-#: ui/main.qml:220
+#: ui/main.qml:218
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "შუა-წკაპი აწევ-ჩამოწევის წკაპის მდებარეობა"
 
-#: ui/main.qml:234
+#: ui/main.qml:232
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "შუა-წკაპი:"
 
-#: ui/main.qml:236
+#: ui/main.qml:234
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
 msgstr "ჩასვამს მონიშნულ ტექსტს"
 
-#: ui/main.qml:253
+#: ui/main.qml:251
 #, kde-format
 msgid "Touch Mode:"
 msgstr "შეხების რეჟიმი:"
 
-#: ui/main.qml:255
+#: ui/main.qml:253
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "საჭიროებისამებრ ჩართვა"
 
-#: ui/main.qml:255 ui/main.qml:298
+#: ui/main.qml:253 ui/main.qml:296
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "არასდროს ჩართულა"
 
-#: ui/main.qml:271
+#: ui/main.qml:269
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -161,13 +161,13 @@ msgstr ""
 "აღმოაჩენს, თაგუნას და თაჩპედს კი ვერა. მაგალითად გარდაქმნადი ლეპტოპის "
 "კლავიატურა გამოძვრა ან შეაბრუნეთ."
 
-#: ui/main.qml:276
+#: ui/main.qml:274
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "ყოველთვის ჩართულია"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -176,24 +176,24 @@ msgstr ""
 "სენსორული ეკრანის რეჟიმში მომხმარებლის ინტერფეისის ძირითადი ნაწილის ზომა "
 "შესამჩნევად იზრდება მათზე თითის მორტყმის გასაადვილებლად."
 
-#: ui/main.qml:334
+#: ui/main.qml:332
 #, kde-format
 msgid "Double-click interval:"
 msgstr "ორმაგი წკაპის ინტერვალი:"
 
-#: ui/main.qml:349
+#: ui/main.qml:347
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
 msgstr[0] "%1 მწმ"
 msgstr[1] "%1 მწმ"
 
-#: ui/main.qml:353
+#: ui/main.qml:351
 #, kde-format
 msgid "msec"
 msgstr "მწმ"
 
-#: ui/main.qml:367
+#: ui/main.qml:365
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "

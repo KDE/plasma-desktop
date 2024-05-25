@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-01-07 18:23+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr ""
 "Notificarea gestionarului de servicii KDE (kded6) despre modificări salvate "
 "a eșuat: %1"
 
-#: ui/main.qml:37
+#: ui/main.qml:40
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
@@ -54,7 +54,7 @@ msgstr ""
 "Gestionarul de servicii de fundal (kded6) nu rulează momentan. Asigurați-vă "
 "că e instalat corect."
 
-#: ui/main.qml:46
+#: ui/main.qml:50
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -63,7 +63,7 @@ msgstr ""
 "Unele servicii se dezactivează iar când sunt pornite manual dacă nu sunt "
 "utile în mediul actual."
 
-#: ui/main.qml:55
+#: ui/main.qml:60
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -72,54 +72,54 @@ msgstr ""
 "Unele servicii au fost pornite/oprite automat când gestionarul de servicii "
 "de fundal (kded6) a fost repornit pentru a vă aplica modificările."
 
-#: ui/main.qml:97
+#: ui/main.qml:108
 #, kde-format
 msgid "All Services"
 msgstr "Toate serviciile"
 
-#: ui/main.qml:98
+#: ui/main.qml:109
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "Rulează"
 
-#: ui/main.qml:99
+#: ui/main.qml:110
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "Nu rulează"
 
-#: ui/main.qml:136
+#: ui/main.qml:147
 #, kde-format
 msgid "Startup Services"
 msgstr "Servicii la pornire"
 
-#: ui/main.qml:137
+#: ui/main.qml:148
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "Servicii încărcate la cerere"
 
-#: ui/main.qml:156
+#: ui/main.qml:167
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Comută încărcarea automată a acestui serviciu la pornire"
 
-#: ui/main.qml:199
+#: ui/main.qml:210
 #, kde-format
 msgid "Not running"
 msgstr "Nu rulează"
 
-#: ui/main.qml:200
+#: ui/main.qml:211
 #, kde-format
 msgid "Running"
 msgstr "Rulează"
 
-#: ui/main.qml:219
+#: ui/main.qml:230
 #, kde-format
 msgid "Stop Service"
 msgstr "Oprește serviciul"
 
-#: ui/main.qml:219
+#: ui/main.qml:230
 #, kde-format
 msgid "Start Service"
 msgstr "Pornește serviciul"

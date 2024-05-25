@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-26 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-01-28 22:44+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -53,7 +53,7 @@ msgstr "При входе в систему"
 msgid "Applications to be excluded from session"
 msgstr "Приложения, которые не следует восстанавливать в следующем сеансе"
 
-#: ui/main.qml:30
+#: ui/main.qml:31
 #, kde-format
 msgid ""
 "The system must be restarted before manual session saving becomes active."
@@ -61,47 +61,47 @@ msgstr ""
 "Для включения возможности сохранять сеансы вручную требуется перезагрузка "
 "системы."
 
-#: ui/main.qml:35
+#: ui/main.qml:36
 #, kde-format
 msgid "Restart"
 msgstr "Перезагрузить"
 
-#: ui/main.qml:57
+#: ui/main.qml:58
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Не удалось запросить перезагрузку в экран настройки прошивки: %1"
 
-#: ui/main.qml:58
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
 "При следующей перезагрузке компьютера будет показан экран настройки UEFI."
 
-#: ui/main.qml:59
+#: ui/main.qml:60
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
 "При следующей перезагрузке компьютера будет показан экран настройки прошивки."
 
-#: ui/main.qml:64
+#: ui/main.qml:65
 #, kde-format
 msgid "Restart Now"
 msgstr "Перезагрузить сейчас"
 
-#: ui/main.qml:71
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
 msgstr "Экран завершения работы"
 
-#: ui/main.qml:75
+#: ui/main.qml:78
 #, kde-format
 msgid "Show:"
 msgstr "Показывать:"
 
-#: ui/main.qml:89
+#: ui/main.qml:92
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -113,30 +113,30 @@ msgstr ""
 "при завершении сеанса, выключении, перезагрузке, нажатии кнопки питания или "
 "нажатии кнопок или пунктов меню <interface>Завершение работы…</interface>."
 
-#: ui/main.qml:95
+#: ui/main.qml:98
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Восстановление сеанса"
 
-#: ui/main.qml:103
+#: ui/main.qml:106
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Восстанавливать приложения, которые были запущены:"
 
-#: ui/main.qml:104
+#: ui/main.qml:107
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Перед последним выходом из системы"
 
-#: ui/main.qml:117
+#: ui/main.qml:120
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "При сохранении сеанса вручную"
 
-#: ui/main.qml:126
+#: ui/main.qml:129
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -151,7 +151,7 @@ msgstr ""
 "систему снова будут запущены. По повторном нажатии на кнопку этот список "
 "будет обновлён."
 
-#: ui/main.qml:131
+#: ui/main.qml:134
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -160,12 +160,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Начинать с пустого сеанса"
 
-#: ui/main.qml:145
+#: ui/main.qml:148
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Исключить приложения:"
 
-#: ui/main.qml:168
+#: ui/main.qml:171
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -176,13 +176,13 @@ msgstr ""
 "автоматически восстанавливаемых приложений. В качестве разделителя "
 "используйте запятую или двоеточие (xterm:konsole или xterm,konsole)."
 
-#: ui/main.qml:175
+#: ui/main.qml:178
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Прошивка"
 
-#: ui/main.qml:181
+#: ui/main.qml:184
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -190,13 +190,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "При следующей перезагрузке:"
 
-#: ui/main.qml:182
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Показать экран настройки UEFI"
 
-#: ui/main.qml:183
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"

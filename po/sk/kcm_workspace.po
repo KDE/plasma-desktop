@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-11-11 15:40+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, kde-format
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
@@ -27,80 +27,80 @@ msgstr ""
 "Systém sa musí reštartovať, aby sa zmeny nastavenia vloženia stredným "
 "kliknutím mohli prejaviť."
 
-#: ui/main.qml:30
+#: ui/main.qml:29
 #, kde-format
 msgid "Restart"
 msgstr "Reštartovať"
 
-#: ui/main.qml:47
+#: ui/main.qml:45
 #, kde-format
 msgid "Visual behavior:"
 msgstr "Vizuálne správanie:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: ui/main.qml:48 workspaceoptions_plasmasettings.kcfg:9
+#: ui/main.qml:46 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Zobraziť informačné tipy pri prechode myšou"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: ui/main.qml:59 workspaceoptions_plasmasettings.kcfg:15
+#: ui/main.qml:57 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Zobraziť vizuálnu odozvu pre zmeny stavu"
 
-#: ui/main.qml:77
+#: ui/main.qml:75
 #, kde-format
 msgid "Animation speed:"
 msgstr "Rýchlosť animácií:"
 
-#: ui/main.qml:103
+#: ui/main.qml:101
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Pomalá"
 
-#: ui/main.qml:110
+#: ui/main.qml:108
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Okamžitá"
 
-#: ui/main.qml:125
+#: ui/main.qml:123
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Kliknutie na súbory alebo priečinky:"
 
-#: ui/main.qml:132
+#: ui/main.qml:130
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Vyberie položku"
 
-#: ui/main.qml:146
+#: ui/main.qml:144
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Otvoriť radšej dvoj-klikom"
 
-#: ui/main.qml:159
+#: ui/main.qml:157
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Otvorí položku"
 
-#: ui/main.qml:172
+#: ui/main.qml:170
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Vybrať kliknutím na značku výberu položky"
 
-#: ui/main.qml:188
+#: ui/main.qml:186
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Kliknutie na dráhu posuvníka:"
 
-#: ui/main.qml:189
+#: ui/main.qml:187
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -108,7 +108,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Posunie obsah na miesto kurzora"
 
-#: ui/main.qml:207
+#: ui/main.qml:205
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -116,43 +116,43 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Posunie obsah o stranu hore alebo dole"
 
-#: ui/main.qml:220
+#: ui/main.qml:218
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Stredný-klik na posunutie na určené miesto"
 
-#: ui/main.qml:234
+#: ui/main.qml:232
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "Kliknutie stredným tlačidlom:"
 
-#: ui/main.qml:236
+#: ui/main.qml:234
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
 msgstr "Vloží vybraný text"
 
-#: ui/main.qml:253
+#: ui/main.qml:251
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Dotykový režim:"
 
-#: ui/main.qml:255
+#: ui/main.qml:253
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Automatické zapnutie podľa potreby"
 
-#: ui/main.qml:255 ui/main.qml:298
+#: ui/main.qml:253 ui/main.qml:296
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nikdy nepovolené"
 
-#: ui/main.qml:271
+#: ui/main.qml:269
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -163,13 +163,13 @@ msgstr ""
 "obrazovku, ale nie myš alebo touchpad. Napríklad: keď otočiteľná klávesnica "
 "prenosného počítača je otočená alebo odpojená."
 
-#: ui/main.qml:276
+#: ui/main.qml:274
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Vždy povolené"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -178,12 +178,12 @@ msgstr ""
 "V dotykovom režime sa mnohé prvky používateľského rozhrania zväčšia, aby sa "
 "ľahšie prispôsobili dotykovej interakcii."
 
-#: ui/main.qml:334
+#: ui/main.qml:332
 #, kde-format
 msgid "Double-click interval:"
 msgstr "Interval dvojitého kliknutia:"
 
-#: ui/main.qml:349
+#: ui/main.qml:347
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
@@ -191,12 +191,12 @@ msgstr[0] "%1 msek"
 msgstr[1] "%1 msek"
 msgstr[2] "%1 msek"
 
-#: ui/main.qml:353
+#: ui/main.qml:351
 #, kde-format
 msgid "msec"
 msgstr "msek"
 
-#: ui/main.qml:367
+#: ui/main.qml:365
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "

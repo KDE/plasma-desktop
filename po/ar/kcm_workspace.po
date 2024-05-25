@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-01-17 18:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,87 +19,87 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.1\n"
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, kde-format
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr "يجب إعادة تشغيل النظام لتأخذ تغييرات اللصق بالزر الأوسط مفعولها."
 
-#: ui/main.qml:30
+#: ui/main.qml:29
 #, kde-format
 msgid "Restart"
 msgstr "أعد التّشغيل"
 
-#: ui/main.qml:47
+#: ui/main.qml:45
 #, kde-format
 msgid "Visual behavior:"
 msgstr "السلوك المرئي:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: ui/main.qml:48 workspaceoptions_plasmasettings.kcfg:9
+#: ui/main.qml:46 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "عرض تلميحات إعلامية عند تحويم الفأرة"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: ui/main.qml:59 workspaceoptions_plasmasettings.kcfg:15
+#: ui/main.qml:57 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "عرض مؤشر مرئي عند تغيير الحالة"
 
-#: ui/main.qml:77
+#: ui/main.qml:75
 #, kde-format
 msgid "Animation speed:"
 msgstr "سرعة التحريك:"
 
-#: ui/main.qml:103
+#: ui/main.qml:101
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "بطيء"
 
-#: ui/main.qml:110
+#: ui/main.qml:108
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "فوري"
 
-#: ui/main.qml:125
+#: ui/main.qml:123
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "النقر على الملفات و المجلدات:"
 
-#: ui/main.qml:132
+#: ui/main.qml:130
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "يحددها"
 
-#: ui/main.qml:146
+#: ui/main.qml:144
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "فتح بواسطة النقر المزدوج  بدلا عن ذلك"
 
-#: ui/main.qml:159
+#: ui/main.qml:157
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "يفتحها"
 
-#: ui/main.qml:172
+#: ui/main.qml:170
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "تحديد بواسطة النقر على علامة التحديد في العنصر"
 
-#: ui/main.qml:188
+#: ui/main.qml:186
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "النقر في شريط التمرير:"
 
-#: ui/main.qml:189
+#: ui/main.qml:187
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -107,7 +107,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "يمرر إلى المكان المنقور عليه"
 
-#: ui/main.qml:207
+#: ui/main.qml:205
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -115,43 +115,43 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "يمرر صفحة واحدة للأعلى أو الأسفل"
 
-#: ui/main.qml:220
+#: ui/main.qml:218
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "انقر بزر الفأرة الأوسط للتمرير إلى الموقع الذي نقر فوقه"
 
-#: ui/main.qml:234
+#: ui/main.qml:232
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "النّقر بالوسط:"
 
-#: ui/main.qml:236
+#: ui/main.qml:234
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
 msgstr "يلصق النص المحدد"
 
-#: ui/main.qml:253
+#: ui/main.qml:251
 #, kde-format
 msgid "Touch Mode:"
 msgstr "وضع اللمس:"
 
-#: ui/main.qml:255
+#: ui/main.qml:253
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "يفعله عند الحاجة آليا"
 
-#: ui/main.qml:255 ui/main.qml:298
+#: ui/main.qml:253 ui/main.qml:296
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "غير ممكن"
 
-#: ui/main.qml:271
+#: ui/main.qml:269
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -162,13 +162,13 @@ msgstr ""
 "فأرة أو لوحة لمس. على سبيل المثال: عند قلب لوحة مفاتيح الحاسوب المحمول "
 "القابل للتحويل أو فصلها."
 
-#: ui/main.qml:276
+#: ui/main.qml:274
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "مفعّل دائمًا"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -177,12 +177,12 @@ msgstr ""
 "في وضع اللمس، ستصبح العديد من عناصر واجهة المستخدم أكبر لاستيعاب تفاعل اللمس "
 "بسهولة أكبر."
 
-#: ui/main.qml:334
+#: ui/main.qml:332
 #, kde-format
 msgid "Double-click interval:"
 msgstr "الفترة الزمنية للنقر المزدوج:"
 
-#: ui/main.qml:349
+#: ui/main.qml:347
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
@@ -193,12 +193,12 @@ msgstr[3] "%1 م.ث"
 msgstr[4] "%1 م.ث"
 msgstr[5] "%1 م.ث"
 
-#: ui/main.qml:353
+#: ui/main.qml:351
 #, kde-format
 msgid "msec"
 msgstr "م.ث"
 
-#: ui/main.qml:367
+#: ui/main.qml:365
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "

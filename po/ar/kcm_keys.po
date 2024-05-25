@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-24 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-02-10 17:22+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -134,142 +134,142 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "صدر..."
 
-#: ui/main.qml:75
+#: ui/main.qml:77
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "لا يمكن تصدير تشكيلة أثناء وجود تغييرات غير محفوظة"
 
-#: ui/main.qml:87
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr "حدد المكونات أدناه التي يجب تضمينها في التشكيلة المصدرة"
 
-#: ui/main.qml:93
+#: ui/main.qml:97
 #, kde-format
 msgctxt "@action:button Save shortcut scheme"
 msgid "Save Scheme"
 msgstr "احفظ التشكيلة"
 
-#: ui/main.qml:158
+#: ui/main.qml:164
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
 msgstr "أضف جديد"
 
-#: ui/main.qml:164
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
 msgstr "التطبيق…"
 
-#: ui/main.qml:170
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr "الأمر أو السكربت…"
 
-#: ui/main.qml:226
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "حرر أمر لـ%1"
 
-#: ui/main.qml:242
+#: ui/main.qml:248
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "أزل كل اختصارات %1"
 
-#: ui/main.qml:253
+#: ui/main.qml:259
 #, kde-format
 msgid "Undo deletion"
 msgstr "تراجع عن الحذف"
 
-#: ui/main.qml:307
+#: ui/main.qml:313
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "لا توجد عناصر مطابقة لبحثك"
 
-#: ui/main.qml:340
+#: ui/main.qml:346
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "حدد عنصرًا من القائمة لعرض اختصاراته هنا"
 
-#: ui/main.qml:352
+#: ui/main.qml:358
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "صدّر تشكيلة الاختصارات"
 
-#: ui/main.qml:352 ui/main.qml:469
+#: ui/main.qml:358 ui/main.qml:475
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "استورد تشكيلة الاختصارات"
 
-#: ui/main.qml:354
+#: ui/main.qml:360
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "تشكيلة اختصارات (*.kksrc)"
 
-#: ui/main.qml:382
+#: ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
 msgstr "حرر أمر"
 
-#: ui/main.qml:382
+#: ui/main.qml:388
 #, kde-format
 msgid "Add Command"
 msgstr "أضف أمر"
 
-#: ui/main.qml:400
+#: ui/main.qml:406
 #, kde-format
 msgid "Save"
 msgstr "احفظ"
 
-#: ui/main.qml:400
+#: ui/main.qml:406
 #, kde-format
 msgid "Add"
 msgstr "أضف"
 
-#: ui/main.qml:425
+#: ui/main.qml:431
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "أدخِل أمرًا أو اختر ملف برمجي نصي:"
 
-#: ui/main.qml:440
+#: ui/main.qml:446
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "اختر..."
 
-#: ui/main.qml:453
+#: ui/main.qml:459
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "اختر ملف برمجي نصي"
 
-#: ui/main.qml:455
+#: ui/main.qml:461
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "ملف برمجي (*.*sh)"
 
-#: ui/main.qml:477
+#: ui/main.qml:483
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "اختر تشكيلة لاستيرادها:"
 
-#: ui/main.qml:496
+#: ui/main.qml:502
 #, kde-format
 msgid "Custom Scheme"
 msgstr "تشكيلة مخصصة"
 
-#: ui/main.qml:504
+#: ui/main.qml:510
 #, kde-format
 msgid "Select File…"
 msgstr "اختر ملف..."
 
-#: ui/main.qml:504
+#: ui/main.qml:510
 #, kde-format
 msgid "Import"
 msgstr "استورد"

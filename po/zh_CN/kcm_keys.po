@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-24 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -133,142 +133,142 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "导出…"
 
-#: ui/main.qml:75
+#: ui/main.qml:77
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "有未保存的更改时无法导出方案"
 
-#: ui/main.qml:87
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr "选择要包含在导出方案中的组件"
 
-#: ui/main.qml:93
+#: ui/main.qml:97
 #, kde-format
 msgctxt "@action:button Save shortcut scheme"
 msgid "Save Scheme"
 msgstr "保存方案"
 
-#: ui/main.qml:158
+#: ui/main.qml:164
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
 msgstr "新增"
 
-#: ui/main.qml:164
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
 msgstr "应用程序…"
 
-#: ui/main.qml:170
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr "命令或者脚本…"
 
-#: ui/main.qml:226
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@tooltip:button %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "编辑 %1 的命令"
 
-#: ui/main.qml:242
+#: ui/main.qml:248
 #, kde-format
 msgid "Remove all shortcuts for %1"
 msgstr "移除 %1 的所有快捷键"
 
-#: ui/main.qml:253
+#: ui/main.qml:259
 #, kde-format
 msgid "Undo deletion"
 msgstr "撤销删除"
 
-#: ui/main.qml:307
+#: ui/main.qml:313
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "没有匹配搜索条件的项目"
 
-#: ui/main.qml:340
+#: ui/main.qml:346
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "在列表中选择一项以查看其快捷键"
 
-#: ui/main.qml:352
+#: ui/main.qml:358
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "导出快捷键方案"
 
-#: ui/main.qml:352 ui/main.qml:469
+#: ui/main.qml:358 ui/main.qml:475
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "导入快捷键方案"
 
-#: ui/main.qml:354
+#: ui/main.qml:360
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "快捷键方案 (*.kksrc)"
 
-#: ui/main.qml:382
+#: ui/main.qml:388
 #, kde-format
 msgid "Edit Command"
 msgstr "编辑命令"
 
-#: ui/main.qml:382
+#: ui/main.qml:388
 #, kde-format
 msgid "Add Command"
 msgstr "添加命令"
 
-#: ui/main.qml:400
+#: ui/main.qml:406
 #, kde-format
 msgid "Save"
 msgstr "保存"
 
-#: ui/main.qml:400
+#: ui/main.qml:406
 #, kde-format
 msgid "Add"
 msgstr "添加"
 
-#: ui/main.qml:425
+#: ui/main.qml:431
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "输入命令或者选择脚本文件："
 
-#: ui/main.qml:440
+#: ui/main.qml:446
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "选择…"
 
-#: ui/main.qml:453
+#: ui/main.qml:459
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "选择脚本文件"
 
-#: ui/main.qml:455
+#: ui/main.qml:461
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "脚本文件 (*.*sh)"
 
-#: ui/main.qml:477
+#: ui/main.qml:483
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "选择要导入的方案："
 
-#: ui/main.qml:496
+#: ui/main.qml:502
 #, kde-format
 msgid "Custom Scheme"
 msgstr "自定义方案"
 
-#: ui/main.qml:504
+#: ui/main.qml:510
 #, kde-format
 msgid "Select File…"
 msgstr "选择文件…"
 
-#: ui/main.qml:504
+#: ui/main.qml:510
 #, kde-format
 msgid "Import"
 msgstr "导入"

@@ -1,15 +1,15 @@
 # Translation of kcm_plasmasearch.po to Catalan (Valencian)
-# Copyright (C) 2022-2023 This_file_is_part_of_KDE
+# Copyright (C) 2022-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2023-09-03 10:27+0200\n"
+"PO-Revision-Date: 2024-05-24 17:57+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: plasmasearch/kcm.h:70
 #, kde-format
@@ -40,11 +40,7 @@ msgid "Get New Plugins…"
 msgstr "Obtín connectors nous…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -52,7 +48,7 @@ msgid ""
 msgstr ""
 "Habilita o inhabilita connectors (utilitzats a KRunner, Iniciador "
 "d'aplicacions i l'efecte Vista general). Marca connectors com a preferits i "
-"els organitza de la manera que els vulgueu veure."
+"els organitza de la manera que els vulgueu prioritzar."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -105,18 +101,16 @@ msgid "KRunner plugin installation failed"
 msgstr "No s'ha pogut instal·lar el connector de KRunner"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Ordre que s'ha d'executar: instal·la o desinstal·la."
+msgstr "Ordre que s'ha d'executar: instal·la o desinstal·la"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Camí fins a l'arxiu o fins a la carpeta extreta"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -298,7 +292,3 @@ msgstr "No s'ha pogut resoldre el nom del paquet de %1"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "No s'ha pogut executar l'ordre d'instal·lació: <message>%1</message>"
-
-#~ msgctxt "@info:shell"
-#~ msgid "Path to archive."
-#~ msgstr "Camí cap a l'arxiu."

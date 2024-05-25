@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-26 00:38+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-03-15 09:17+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -46,52 +46,52 @@ msgstr "Við innskráningu"
 msgid "Applications to be excluded from session"
 msgstr "Forrit sem á að sleppa úr setu:"
 
-#: ui/main.qml:30
+#: ui/main.qml:31
 #, kde-format
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
 "Það verður að endurræsa kerfið til að handvirk vistun á setu verði virk."
 
-#: ui/main.qml:35
+#: ui/main.qml:36
 #, kde-format
 msgid "Restart"
 msgstr "Endurræsa"
 
-#: ui/main.qml:57
+#: ui/main.qml:58
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Mistókst að biðja um endurræsingu til að setja upp fastbúnað: %1"
 
-#: ui/main.qml:58
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr "Næst þegar tölvan er endurræst opnast UEFI-uppsetningarskjárinn."
 
-#: ui/main.qml:59
+#: ui/main.qml:60
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr "Næst þegar tölvan er endurræst opnast uppsetningarskjár fastbúnaðar."
 
-#: ui/main.qml:64
+#: ui/main.qml:65
 #, kde-format
 msgid "Restart Now"
 msgstr "Endurræsa núna"
 
-#: ui/main.qml:71
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
 msgstr "Útskráningarskjár"
 
-#: ui/main.qml:75
+#: ui/main.qml:78
 #, kde-format
 msgid "Show:"
 msgstr "Birta:"
 
-#: ui/main.qml:89
+#: ui/main.qml:92
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -103,30 +103,30 @@ msgstr ""
 "skráir þig út, slekkur, endurræsir, ýtir á rofann eða smellir á hnappa eða "
 "valmyndaratriði sem merkt eru <interface>Hætta...</interface>"
 
-#: ui/main.qml:95
+#: ui/main.qml:98
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Endurheimt setu"
 
-#: ui/main.qml:103
+#: ui/main.qml:106
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Þegar þú skráir þig inn á að keyra forrit sem voru opin:"
 
-#: ui/main.qml:104
+#: ui/main.qml:107
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Við síðustu útskráningu"
 
-#: ui/main.qml:117
+#: ui/main.qml:120
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Þegar setan var vistuð handvirkt"
 
-#: ui/main.qml:126
+#: ui/main.qml:129
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -141,7 +141,7 @@ msgstr ""
 "inn. Smelltu aftur á hnappinn til að skipta út forritunum sem eru geymd í "
 "minninu."
 
-#: ui/main.qml:131
+#: ui/main.qml:134
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -150,12 +150,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Byrja með auða lotu"
 
-#: ui/main.qml:145
+#: ui/main.qml:148
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Hunsuð forrit:"
 
-#: ui/main.qml:168
+#: ui/main.qml:171
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -166,13 +166,13 @@ msgstr ""
 "dæmis 'xterm:konsole' eða 'xterm,konsole') til að koma í veg fyrir að þau "
 "ræsist sjálfkrafa ásamt öðrum forritum sem verða opnuð í setunni."
 
-#: ui/main.qml:175
+#: ui/main.qml:178
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Fastbúnaður"
 
-#: ui/main.qml:181
+#: ui/main.qml:184
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -180,13 +180,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Eftir næstu endurræsingu:"
 
-#: ui/main.qml:182
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Opna UEFI-uppsetningarskjá"
 
-#: ui/main.qml:183
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
