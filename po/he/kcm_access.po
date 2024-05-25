@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-03-11 06:29+0200\n"
+"PO-Revision-Date: 2024-05-24 05:55+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -313,10 +313,9 @@ msgid "Magnification"
 msgstr "הגדלה"
 
 #: ui/ActivationGestures.qml:16
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation:"
-msgstr "מנחות הפעלה"
+msgstr "הפעלה:"
 
 #: ui/ActivationGestures.qml:17
 #, kde-format
@@ -324,27 +323,23 @@ msgid "Use gestures for activating sticky keys and slow keys"
 msgstr "השתמש במנחות להפעלת מקשים דביקים ומקשים איטיים "
 
 #: ui/ActivationGestures.qml:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
-msgstr "כבה מקשים איטיים ומקשים דביקים אחרי זמן מסוים של אי־פעילות."
+msgstr "לכבות מקשים איטיים ומקשים דביקים לאחר זמן מסוים של חוסר פעילות:"
 
 #: ui/ActivationGestures.qml:58
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " דקות"
-msgstr[1] " דקות"
-msgstr[2] " דקות"
-msgstr[3] " דקות"
+msgstr[0] "דק׳"
+msgstr[1] "שתי דק׳"
+msgstr[2] "%1 דק׳"
+msgstr[3] "%1 דק׳"
 
 #: ui/ActivationGestures.qml:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "min"
-msgstr " דקות"
+msgstr "דק׳"
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -542,10 +537,9 @@ msgid "Mouse Navigation"
 msgstr "ניווט עכבר"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "&Activation Gestures"
+#, kde-format
 msgid "Activation Gestures"
-msgstr "מ&חוות הפעלה"
+msgstr "מחוות הפעלה"
 
 #: ui/main.qml:52
 #, kde-format

@@ -1,16 +1,16 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 # SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-04-26 09:46+0200\n"
-"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"PO-Revision-Date: 2024-05-24 11:14+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,11 +39,7 @@ msgid "Get New Plugins…"
 msgstr "Haal nieuwe plug-ins op…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -51,7 +47,7 @@ msgid ""
 msgstr ""
 "Plug-ins in- en uitschakelen (gebruikt in KRunner, Toepassingen-starter en "
 "het effect Overzicht). Markeer plug-ins als favorieten en arrangeer ze in de "
-"volgorde waarin ui ze wilt zien."
+"volgorde waarin u ze prioriteit geeft."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -104,18 +100,16 @@ msgid "KRunner plugin installation failed"
 msgstr "Installatie van krunner-plug-in is mislukt"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Uit te voeren commando: installeren of installatie ongedaan maken."
+msgstr "Uit te voeren commando: installeren of installatie ongedaan maken"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Pad naar archief of uitgepakte map"
 
 #: plugininstaller/main.cpp:50
 #, kde-format

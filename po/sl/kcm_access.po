@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1680700 2024-05-24 01:10:57Z scripty $
+# $Id: kcm_access.po 1680774 2024-05-25 03:02:41Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-03-11 09:01+0100\n"
+"PO-Revision-Date: 2024-05-24 07:01+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -319,27 +319,23 @@ msgid "Use gestures for activating sticky keys and slow keys"
 msgstr "Uporabi kretnje za vključitev lepljivih in počasnih tipk"
 
 #: ui/ActivationGestures.qml:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
-msgstr "Po določenem času nedejavnosti izključi lepljive in počasne tipke."
+msgstr "Izključi lepljive in počasne tipke po nedejavnosti:"
 
 #: ui/ActivationGestures.qml:58
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " min"
-msgstr[1] " min"
-msgstr[2] " min"
-msgstr[3] " min"
+msgstr[0] "%1 min"
+msgstr[1] "%1 min"
+msgstr[2] "%1 min"
+msgstr[3] "%1 min"
 
 #: ui/ActivationGestures.qml:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "min"
-msgstr " min"
+msgstr "min"
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -537,10 +533,9 @@ msgid "Mouse Navigation"
 msgstr "Krmarjenje miške"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "&Activation Gestures"
+#, kde-format
 msgid "Activation Gestures"
-msgstr "Kretnje z&a vključitev"
+msgstr "Ativiranje kretenj"
 
 #: ui/main.qml:52
 #, kde-format
