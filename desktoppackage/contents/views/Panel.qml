@@ -58,11 +58,10 @@ Item {
     readonly property int fixedRightFloatingPadding: floating && (floatingPrefix ? floatingPanelSvg.fixedMargins.right  : 8)
     readonly property int fixedTopFloatingPadding: floating && (floatingPrefix ? floatingPanelSvg.fixedMargins.top    : 8)
 
-    // Not rounded to smoothen the animation
-    readonly property real bottomFloatingPadding: fixedBottomFloatingPadding * floatingness
-    readonly property real leftFloatingPadding: fixedLeftFloatingPadding * floatingness
-    readonly property real rightFloatingPadding: fixedRightFloatingPadding * floatingness
-    readonly property real topFloatingPadding: fixedTopFloatingPadding * floatingness
+    readonly property int bottomFloatingPadding: Math.round(fixedBottomFloatingPadding * floatingness)
+    readonly property int leftFloatingPadding: Math.round(fixedLeftFloatingPadding * floatingness)
+    readonly property int rightFloatingPadding: Math.round(fixedRightFloatingPadding * floatingness)
+    readonly property int topFloatingPadding: Math.round(fixedTopFloatingPadding * floatingness)
 
     readonly property int minPanelHeight: translucentItem.minimumDrawingHeight
     readonly property int minPanelWidth: translucentItem.minimumDrawingWidth
