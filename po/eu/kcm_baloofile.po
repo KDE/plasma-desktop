@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-05-26 02:26+0000\n"
 "PO-Revision-Date: 2023-06-21 16:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "Indexatzailearen etenaldia"
 msgid "Resume Indexer"
 msgstr "Indexatzailea berrekin"
 
-#: ui/main.qml:60
+#: ui/main.qml:72
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -39,7 +39,7 @@ msgstr ""
 "KRunner eta abiarazteko menuetako fitxategi bilaketa ezgaituko du, eta KDE "
 "aplikazio guztietako meta-datu hedatuak kenduko ditu."
 
-#: ui/main.qml:70
+#: ui/main.qml:81
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -51,12 +51,12 @@ msgstr ""
 "beharko litzateke. Fitxategi kopuruaren arabera, denbora pixka bat har "
 "dezake."
 
-#: ui/main.qml:72
+#: ui/main.qml:83
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Ezabatu indize-datuak"
 
-#: ui/main.qml:90
+#: ui/main.qml:93
 #, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -65,102 +65,102 @@ msgstr ""
 "Fitxategi bilaketak zure fitxategiak azkar aurkitzen laguntzen dizu. Zein "
 "karpeta eta zein fitxategi-mota indexatzen diren hauta dezakezu."
 
-#: ui/main.qml:106
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Fitxategi indexatzea:"
 
-#: ui/main.qml:107
+#: ui/main.qml:110
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr "Gaituta"
 
-#: ui/main.qml:121
+#: ui/main.qml:124
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
 msgstr "Egoera:"
 
-#: ui/main.qml:125
+#: ui/main.qml:128
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %%2 osatuta"
 
-#: ui/main.qml:139
+#: ui/main.qml:142
 #, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "Une honetan indexatzen:"
 
-#: ui/main.qml:150
+#: ui/main.qml:153
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
 msgstr "<filename>%1</filename>"
 
-#: ui/main.qml:164
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Indexatu beharreko datuak:"
 
-#: ui/main.qml:166
+#: ui/main.qml:171
 #, kde-format
 msgid "File names and contents"
 msgstr "Fitxategi-izenak eta edukia"
 
-#: ui/main.qml:179
+#: ui/main.qml:184
 #, kde-format
 msgid "File names only"
 msgstr "Fitxategi-izenak bakarrik"
 
-#: ui/main.qml:198
+#: ui/main.qml:203
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "Ezkutuko fitxategiak eta karpetak"
 
-#: ui/main.qml:224
+#: ui/main.qml:229
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Kokalekuak"
 
-#: ui/main.qml:227
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Hasi karpeta bat indexatzen..."
 
-#: ui/main.qml:235
+#: ui/main.qml:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Gelditu karpeta bat indexatzea..."
 
-#: ui/main.qml:295
+#: ui/main.qml:300
 #, kde-format
 msgid "Not indexed"
 msgstr "Indexatu gabe"
 
-#: ui/main.qml:296
+#: ui/main.qml:301
 #, kde-format
 msgid "Indexed"
 msgstr "Indexatuta"
 
-#: ui/main.qml:326
+#: ui/main.qml:331
 #, kde-format
 msgid "Delete entry"
 msgstr "Ezabatu sarrera"
 
-#: ui/main.qml:341
+#: ui/main.qml:346
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Hautatu sartu beharreko karpeta bat"
 
-#: ui/main.qml:341
+#: ui/main.qml:346
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Hautatu kanporatu beharreko karpeta bat"

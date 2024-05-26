@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-05-26 02:26+0000\n"
 "PO-Revision-Date: 2023-06-11 18:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "அட்டவணையாக்கியை இடைநிறுத�
 msgid "Resume Indexer"
 msgstr "அட்டவணையாக்கியை தொடரசெய்"
 
-#: ui/main.qml:60
+#: ui/main.qml:72
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -36,7 +36,7 @@ msgstr ""
 "கேரன்னரிலும் ஏவிகளிலும் கோப்புத் தேடலை இது முடக்கும், மேலும் அனைத்து கே.டீ.யீ. "
 "செயலிகளிலிருந்தும் மேம்பட்ட மேனிலைத் தரவு காட்டிகளை நீக்கும்."
 
-#: ui/main.qml:70
+#: ui/main.qml:81
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -48,12 +48,12 @@ msgstr ""
 "உருவாக்கும் தேவை ஏற்படும். உங்கள் கோப்புகளின் எண்ணிக்கை அதிகமாக இருந்தால், இதற்கு நிறைய "
 "நேரமாகலாம்."
 
-#: ui/main.qml:72
+#: ui/main.qml:83
 #, kde-format
 msgid "Delete Index Data"
 msgstr "அட்டவணையாக்கத் தரவை நீக்கு"
 
-#: ui/main.qml:90
+#: ui/main.qml:93
 #, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -62,102 +62,102 @@ msgstr ""
 "உங்கள் கோப்புகளை, அவற்றின் உள்ளடக்கத்தின் அடிப்படையில் எளிதில் கண்டுபிடிக்க கோப்புத் தேடல் "
 "உதவும். அட்டவணையாக்கப்படும் அடைவுகளையும் கோப்புவகைகளையும் நீங்கள் தேர்ந்தெடுக்கலாம்."
 
-#: ui/main.qml:106
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "கோப்பு அட்டவணையாக்கம்:"
 
-#: ui/main.qml:107
+#: ui/main.qml:110
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr "இயக்கு"
 
-#: ui/main.qml:121
+#: ui/main.qml:124
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
 msgstr "நிலை:"
 
-#: ui/main.qml:125
+#: ui/main.qml:128
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% முடிந்தது"
 
-#: ui/main.qml:139
+#: ui/main.qml:142
 #, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
 msgstr "தற்போது அட்டவணையாக்கப்படுவது:"
 
-#: ui/main.qml:150
+#: ui/main.qml:153
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
 msgstr "<filename>%1</filename>"
 
-#: ui/main.qml:164
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "அட்டவணையாக்கவேண்டிய தரவுகள்:"
 
-#: ui/main.qml:166
+#: ui/main.qml:171
 #, kde-format
 msgid "File names and contents"
 msgstr "கோப்புப்பெயர்களும் உள்ளடக்கமும்"
 
-#: ui/main.qml:179
+#: ui/main.qml:184
 #, kde-format
 msgid "File names only"
 msgstr "கோப்புப்பெயர்கள் மட்டும்"
 
-#: ui/main.qml:198
+#: ui/main.qml:203
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "மறைந்துள்ள கோப்புகளும் அடைவுகளும்"
 
-#: ui/main.qml:224
+#: ui/main.qml:229
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "இடங்கள்"
 
-#: ui/main.qml:227
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "அடைவை அட்டவணையாக்க தொடங்கு…"
 
-#: ui/main.qml:235
+#: ui/main.qml:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "அடைவை அட்டவணையாக்குவதை நிறுத்து…"
 
-#: ui/main.qml:295
+#: ui/main.qml:300
 #, kde-format
 msgid "Not indexed"
 msgstr "அட்டவணையாக்கப்படாது"
 
-#: ui/main.qml:296
+#: ui/main.qml:301
 #, kde-format
 msgid "Indexed"
 msgstr "அட்டவணையாக்கப்படும்"
 
-#: ui/main.qml:326
+#: ui/main.qml:331
 #, kde-format
 msgid "Delete entry"
 msgstr "பதிவை நீக்கு"
 
-#: ui/main.qml:341
+#: ui/main.qml:346
 #, kde-format
 msgid "Select a folder to include"
 msgstr "பொருட்படுத்த வேண்டிய அடைவைத் தேர்ந்தெடுத்தல்"
 
-#: ui/main.qml:341
+#: ui/main.qml:346
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "தவிர்க்க வேண்டிய அடைவைத் தேர்ந்தெடுத்தல்"

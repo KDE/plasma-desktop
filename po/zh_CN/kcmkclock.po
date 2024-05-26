@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-05-26 02:26+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -75,7 +75,7 @@ msgstr "当前本地时区："
 msgid "Search…"
 msgstr "搜索…"
 
-#: dtime.cpp:59
+#: dtime.cpp:61
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
@@ -83,7 +83,7 @@ msgid ""
 msgstr ""
 "未找到 NTP 工具。请安装“ntpdate”或“rdate”命令以启用日期和时间的自动更新功能。"
 
-#: dtime.cpp:88
+#: dtime.cpp:90
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -93,19 +93,19 @@ msgstr ""
 "您可以在这里更改系统时间。点击相应的时、分、秒区域，然后用右边的上下按钮或直"
 "接输入新的数值进行修改。"
 
-#: dtime.cpp:117
+#: dtime.cpp:119
 #, kde-format
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
 msgstr "当前本地时区：%1"
 
-#: dtime.cpp:119
+#: dtime.cpp:121
 #, kde-format
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
 msgstr "当前本地时区：%1 (%2)"
 
-#: dtime.cpp:195
+#: dtime.cpp:196
 #, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
@@ -114,27 +114,27 @@ msgstr ""
 "公共授时服务器 (pool.ntp.org),        asia.pool.ntp.org,        europe.pool."
 "ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
 
-#: dtime.cpp:266
+#: dtime.cpp:267
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "无法连接授时服务器：%1。"
 
-#: dtime.cpp:270
+#: dtime.cpp:271
 #, kde-format
 msgid "Can not set date."
 msgstr "无法设置日期。"
 
-#: dtime.cpp:273
+#: dtime.cpp:274
 #, kde-format
 msgid "Error setting new time zone."
 msgstr "设置新时区时发生错误。"
 
-#: dtime.cpp:273
+#: dtime.cpp:274
 #, kde-format
 msgid "Time zone Error"
 msgstr "时区错误"
 
-#: dtime.cpp:291
+#: dtime.cpp:292
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "

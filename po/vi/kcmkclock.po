@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-05-26 02:26+0000\n"
 "PO-Revision-Date: 2021-05-26 21:17+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -79,7 +79,7 @@ msgstr "Múi giờ địa phương hiện tại:"
 msgid "Search…"
 msgstr "Tìm kiếm…"
 
-#: dtime.cpp:59
+#: dtime.cpp:61
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
@@ -88,7 +88,7 @@ msgstr ""
 "Không tìm thấy tiện ích NTP nào. Cài đặt lệnh 'ntpdate' hoặc 'rdate' để bật "
 "chức năng cập nhật ngày giờ tự động."
 
-#: dtime.cpp:88
+#: dtime.cpp:90
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -99,19 +99,19 @@ msgstr ""
 "giây để thay đổi giá trị tương ứng, dùng các nút lên xuống ở bên phải hoặc "
 "nhập trực tiếp một giá trị mới."
 
-#: dtime.cpp:117
+#: dtime.cpp:119
 #, kde-format
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
 msgstr "Múi giờ địa phương hiện tại: %1"
 
-#: dtime.cpp:119
+#: dtime.cpp:121
 #, kde-format
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
 msgstr "Múi giờ địa phương hiện tại: %1 (%2)"
 
-#: dtime.cpp:195
+#: dtime.cpp:196
 #, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
@@ -121,27 +121,27 @@ msgstr ""
 "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool."
 "ntp.org"
 
-#: dtime.cpp:266
+#: dtime.cpp:267
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "Không thể liên hệ với máy chủ thời gian: %1."
 
-#: dtime.cpp:270
+#: dtime.cpp:271
 #, kde-format
 msgid "Can not set date."
 msgstr "Không đặt được ngày."
 
-#: dtime.cpp:273
+#: dtime.cpp:274
 #, kde-format
 msgid "Error setting new time zone."
 msgstr "Lỗi khi đặt múi giờ mới."
 
-#: dtime.cpp:273
+#: dtime.cpp:274
 #, kde-format
 msgid "Time zone Error"
 msgstr "Lỗi múi giờ"
 
-#: dtime.cpp:291
+#: dtime.cpp:292
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "
