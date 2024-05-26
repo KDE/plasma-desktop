@@ -65,6 +65,32 @@ KCM.SimpleKCM {
             }
         }
 
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
+        RowLayout {
+            id: appearanceButtonsRow
+
+            QQC2.Button {
+                icon.name: "preferences-desktop-wallpaper"
+                text: i18n("Change Wallpaper…")
+                onClicked: kcm.openKCM("kcm_wallpaper")
+            }
+
+            QQC2.Button {
+                // This button deliberately does not start with a verb to save space
+                // so that translations don't overflow, as horizontal space is limited
+                text: i18n("More Appearance Settings…")
+                icon.name: "preferences-desktop-theme-global"
+                onClicked: kcm.openKCM("kcm_lookandfeel")
+            }
+        }
+
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
+        }
+
         // We want to show the slider in a logarithmic way. ie
         // move from 4x, 3x, 2x, 1x, 0.5x, 0.25x, 0.125x
         // 0 is a special case, which means "instant speed / no animations"
@@ -111,28 +137,6 @@ KCM.SimpleKCM {
 
         Item {
             Kirigami.FormData.isSection: false
-        }
-
-        RowLayout {
-            id: appearanceButtonsRow
-
-            QQC2.Button {
-                icon.name: "preferences-desktop-wallpaper"
-                text: i18n("Change Wallpaper…")
-                onClicked: kcm.openKCM("kcm_wallpaper")
-            }
-
-            QQC2.Button {
-                // This button deliberately does not start with a verb to save space
-                // so that translations don't overflow, as horizontal space is limited
-                text: i18n("More Appearance Settings…")
-                icon.name: "preferences-desktop-theme-global"
-                onClicked: kcm.openKCM("kcm_lookandfeel")
-            }
-        }
-
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
         }
 
         // Click behavior settings
