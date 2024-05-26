@@ -93,7 +93,7 @@ KCM.ScrollViewKCM {
             // Equal to the margins removed by disabling header padding
             Layout.margins: Kirigami.Units.mediumSpacing
 
-            spacing: Kirigami.Units.mediummSpacing
+            spacing: Kirigami.Units.mediumSpacing
 
             Kirigami.SearchField {
                 id: searchField
