@@ -17,14 +17,9 @@ endif()
 
 add_subdirectory(applets)
 add_subdirectory(desktop)
+add_subdirectory(kcms)
 
 add_test(
     NAME emojiertest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/emojiertest.py --failfast
 )
-
-add_test(
-    NAME kcm_plasmasearch_test
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_plasmasearch_test.py
-)
-set_tests_properties(kcm_plasmasearch_test PROPERTIES TIMEOUT 120)
