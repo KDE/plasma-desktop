@@ -164,7 +164,9 @@ KCM.ScrollViewKCM {
                 checked: model.autoloadEnabled === true
                 hoverEnabled: checkable
                 focusPolicy: Qt.ClickFocus
+                Accessible.name: checked ? i18nc("@action:button %1 service name", "Disable automatically loading %1 on startup", delegate.text) : i18nc("@action:button %1 service name", "Enable automatically loading %1 on startup", delegate.text)
                 Accessible.description: i18n("Toggle automatically loading this service on startup")
+                Accessible.onPressAction: clicked()
                 onClicked: {
                     if (checkable) {
                         model.autoloadEnabled = !model.autoloadEnabled;
@@ -227,11 +229,11 @@ KCM.ScrollViewKCM {
                                 kcm.startModule(model.moduleName);
                             }
                         }
-                        Accessible.name: model.status === Private.KCM.Running ? i18n("Stop Service") : i18n("Start Service")
 
-                        QQC2.ToolTip {
-                            text: parent.Accessible.name
-                        }
+                        Accessible.name: model.status === Private.KCM.Running ? i18nc("@action:button %1 service name", "Stop %1", delegate.text) : i18nc("@action:button %1 service name", "Start %1", delegate.text)
+                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                        QQC2.ToolTip.visible: hovered
+                        QQC2.ToolTip.text: model.status === Private.KCM.Running ? i18n("Stop Service") : i18n("Start Service")
                     }
                 }
             }
