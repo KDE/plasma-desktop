@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-03-12 02:05+0900\n"
+"PO-Revision-Date: 2024-05-26 16:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -301,33 +301,28 @@ msgid "Magnification"
 msgstr "放大"
 
 #: ui/ActivationGestures.qml:16
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation:"
-msgstr "作用手勢"
+msgstr "觸發："
 
 #: ui/ActivationGestures.qml:17
 #, kde-format
 msgid "Use gestures for activating sticky keys and slow keys"
-msgstr "使用手勢來作用相黏鍵與放慢鍵"
+msgstr "使用手勢來觸發相黏鍵與慢速按鍵"
 
 #: ui/ActivationGestures.qml:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
-msgstr "在一段時間不使用後關閉相黏鍵(sticky)與放慢(slow)鍵"
+msgstr "在未動作一段時間之後關閉相黏鍵與慢速按鍵"
 
 #: ui/ActivationGestures.qml:58
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " 分鐘"
+msgstr[0] "%1 分鐘"
 
 #: ui/ActivationGestures.qml:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "min"
 msgstr " 分鐘"
 
@@ -527,10 +522,9 @@ msgid "Mouse Navigation"
 msgstr "滑鼠導覽"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Activation &Gestures"
+#, kde-format
 msgid "Activation Gestures"
-msgstr "作用手勢 (&G)"
+msgstr "觸發手勢"
 
 #: ui/main.qml:52
 #, kde-format

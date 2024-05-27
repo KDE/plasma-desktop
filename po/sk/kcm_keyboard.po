@@ -3,20 +3,20 @@
 # Miroslav David <mirodav@gmail.com>, 2009.
 # Michal Sulek <misurel@gmail.com>, 2011.
 # Roman Paholík <wizzardsk@gmail.com>, 2012, 2014, 2016, 2017.
-# SPDX-FileCopyrightText: 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-21 00:40+0000\n"
-"PO-Revision-Date: 2023-11-11 15:38+0100\n"
+"PO-Revision-Date: 2024-05-26 12:24+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.05.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -109,88 +109,76 @@ msgstr ""
 #| msgid "&Configure keyboard options"
 msgctxt "@option:checkbox"
 msgid "Configure keyboard options"
-msgstr "&Nastaviť možnosti klávesnice"
+msgstr "Nastaviť možnosti klávesnice"
 
 #: ui/Hardware.qml:34
-#, fuzzy, kde-format
-#| msgid "Keyboard &model:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Keyboard model:"
-msgstr "&Model klávesnice:"
+msgstr "Model klávesnice:"
 
 #: ui/Hardware.qml:68
-#, fuzzy, kde-format
-#| msgid "NumLock on Plasma Startup"
+#, kde-format
 msgctxt "@title:group"
 msgid "NumLock on Plasma Startup:"
-msgstr "NumLock pri štarte Plasma"
+msgstr "NumLock pri štarte Plasma:"
 
 #: ui/Hardware.qml:73
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Turn On"
-msgstr "&Zapnúť"
+msgstr "Zapnúť"
 
 #: ui/Hardware.qml:77
-#, fuzzy, kde-format
-#| msgid "&Turn off"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Turn Off"
-msgstr "&Vypnúť"
+msgstr "Vypnúť"
 
 #: ui/Hardware.qml:81
-#, fuzzy, kde-format
-#| msgid "&Leave unchanged"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Leave unchanged"
-msgstr "Ponechať nez&menené"
+msgstr "Ponechať nezmenené"
 
 #: ui/Hardware.qml:114
-#, fuzzy, kde-format
-#| msgid "When a key is held:"
+#, kde-format
 msgctxt "@title:group"
 msgid "When key is held:"
 msgstr "Keď je stlačený kláves:"
 
 #: ui/Hardware.qml:119
-#, fuzzy, kde-format
-#| msgid "&Repeat the key"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Repeat the key"
 msgstr "Opakovať kláves"
 
 #: ui/Hardware.qml:124
-#, fuzzy, kde-format
-#| msgid "&Do nothing"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Do nothing"
 msgstr "Nerobiť nič"
 
 #: ui/Hardware.qml:129
-#, fuzzy, kde-format
-#| msgid "&Show accented and similar characters "
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show accented and similar characters"
-msgstr "Zobraziť znaky s &diakritikou a podobné znaky "
+msgstr "Zobraziť znaky s diakritikou a podobné znaky"
 
 #: ui/Hardware.qml:164
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Delay:"
-msgstr "O&neskorenie:"
+msgstr "Oneskorenie:"
 
 #: ui/Hardware.qml:199
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Rate:"
-msgstr "&Rýchlosť:"
+msgstr "Rýchlosť:"
 
 #: ui/Hardware.qml:247
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr "Testovacia oblasť:"
@@ -199,18 +187,16 @@ msgstr "Testovacia oblasť:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "Tu si vyskúšajte vaše nastavenia"
 
 #: ui/LayoutDialog.qml:21
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Pridať rozloženie"
 
 #: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Náhľad"
@@ -219,46 +205,40 @@ msgstr "Náhľad"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display text:"
-msgstr ""
+msgstr "Zobraziť text:"
 
 #: ui/LayoutDialog.qml:143
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Skratka:"
 
 #: ui/Layouts.qml:28
-#, fuzzy, kde-format
-#| msgid "Shortcuts for Switching Layout"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts for Switching Layout"
 msgstr "Skratky pre prepínanie rozloženia"
 
 #: ui/Layouts.qml:34
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Main shortcuts:"
 msgstr "Hlavné skratky:"
 
 #: ui/Layouts.qml:61
-#, fuzzy, kde-format
-#| msgid "3rd level shortcuts:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "3rd level shortcuts:"
 msgstr "Skratky 3. úrovne:"
 
 #: ui/Layouts.qml:88
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative shortcut:"
 msgstr "Alternatívne skratky:"
 
 #: ui/Layouts.qml:109
-#, fuzzy, kde-format
-#| msgid "Last used shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Last used shortcuts:"
 msgstr "Posledná použitá skratka:"
@@ -267,151 +247,130 @@ msgstr "Posledná použitá skratka:"
 #, kde-format
 msgctxt "@option:checkbox"
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "Zobraziť vyskakovacie okno pri zmene rozloženia"
 
 #: ui/Layouts.qml:145
-#, fuzzy, kde-format
-#| msgid "Switching Policy"
+#, kde-format
 msgctxt "@title:group"
 msgid "Switching Policy"
 msgstr "Politika prepínania"
 
 #: ui/Layouts.qml:152
-#, fuzzy, kde-format
-#| msgid "&Global"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Global"
-msgstr "&Globálna"
+msgstr "Globálna"
 
 #: ui/Layouts.qml:156
-#, fuzzy, kde-format
-#| msgid "&Desktop"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Desktop"
-msgstr "&Plocha"
+msgstr "Plocha"
 
 #: ui/Layouts.qml:160
-#, fuzzy, kde-format
-#| msgid "&Application"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Application"
-msgstr "&Aplikácia"
+msgstr "Aplikácia"
 
 #: ui/Layouts.qml:164
-#, fuzzy, kde-format
-#| msgid "&Window"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Window"
-msgstr "&Okno"
+msgstr "Okno"
 
 #: ui/Layouts.qml:185
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Configure Layouts"
 msgstr "Nastaviť rozloženia"
 
 #: ui/Layouts.qml:200
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Pridať"
 
 #: ui/Layouts.qml:206
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Odstrániť"
 
 #: ui/Layouts.qml:213
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Presunúť hore"
 
 #: ui/Layouts.qml:229
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Presunúť dole"
 
 #: ui/Layouts.qml:316
-#, fuzzy, kde-format
-#| msgctxt "layout map name"
-#| msgid "Map"
+#, kde-format
 msgctxt "@title:column"
 msgid "Map"
 msgstr "Mapa"
 
 #: ui/Layouts.qml:323
-#, fuzzy, kde-format
-#| msgid "Label"
+#, kde-format
 msgctxt "@title:column"
 msgid "Label"
 msgstr "Štítok"
 
 #: ui/Layouts.qml:332
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:column"
 msgid "Layout"
 msgstr "Rozloženie"
 
 #: ui/Layouts.qml:337
-#, fuzzy, kde-format
-#| msgid "Variant"
+#, kde-format
 msgctxt "@title:column"
 msgid "Variant"
 msgstr "Variant"
 
 #: ui/Layouts.qml:342
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:column"
 msgid "Shortcut"
 msgstr "Skratka"
 
 #: ui/Layouts.qml:388
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reassign shortcut"
-msgstr "Hlavné skratky:"
+msgstr "Znova priradiť skratku"
 
 #: ui/Layouts.qml:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel assignment"
-msgstr ""
+msgstr "Zrušiť priradenie"
 
 #: ui/Layouts.qml:417
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:checkbox"
 msgid "Spare layouts"
 msgstr "Náhradné rozloženia"
 
 #: ui/Layouts.qml:453
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Main layout count:"
 msgstr "Počet hlavných rozložení:"
 
 #: ui/main.qml:41
-#, fuzzy, kde-format
-#| msgid "Hardware"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Hardware"
 msgstr "Hardvér"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Layouts"
 msgstr "Rozloženia"
@@ -420,7 +379,7 @@ msgstr "Rozloženia"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Klávesové skratky"
 
 #: xkboptionsmodel.cpp:161
 #, kde-format

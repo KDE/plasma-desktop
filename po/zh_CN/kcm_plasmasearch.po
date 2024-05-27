@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcm_plasmasearch.pot\n"
-"X-Crowdin-File-ID: 43311\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-desktop/kcm_plasmasearch.pot\n"
+"X-Crowdin-File-ID: 53002\n"
 
 #: plasmasearch/kcm.h:70
 #, kde-format
@@ -38,18 +38,14 @@ msgid "Get New Plugins…"
 msgstr "获取新插件…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
 "启用/禁用插件 (用于 KRunner、应用程序启动器、桌面概览特效)。将插件标记为常用"
-"插件，并按照您想要的顺序对它们进行排序。"
+"插件，并按照您想要的优先顺序对它们进行排序。"
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -98,18 +94,16 @@ msgid "KRunner plugin installation failed"
 msgstr "KRunner 插件安装失败"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "要执行的命令：安装或卸载。"
+msgstr "要执行的命令：安装或者卸载"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "压缩文件或者解压文件夹的路径"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
@@ -280,7 +274,3 @@ msgstr "无法解析 %1 的软件包名称"
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr "无法运行安装命令：<message>%1</message>"
-
-#~ msgctxt "@info:shell"
-#~ msgid "Path to archive."
-#~ msgstr "压缩文件的路径。"
