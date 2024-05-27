@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-04-26 11:54+0200\n"
+"PO-Revision-Date: 2024-05-25 12:17+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -44,19 +44,15 @@ msgid "Get New Plugins…"
 msgstr "Obtenir de nouveaux modules externes..."
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
 "Activer ou désactiver les modules externes (Utilisés dans KRunner, le "
-"lanceur d'applications et l'effet d'aperçu). Marquer les modules externes "
-"comme des favoris et les organiser selon vos besoins."
+"lanceur d'applications et l'effet d'aperçu). Veuillez marquer les modules "
+"externes comme des préférés et les organiser selon vos besoins."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -111,9 +107,7 @@ msgid "KRunner plugin installation failed"
 msgstr "L'installation du module externe KRunner a échoué."
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
 msgstr "Commande à exécuter : « install » ou « uninstall »"
@@ -122,7 +116,7 @@ msgstr "Commande à exécuter : « install » ou « uninstall »"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Emplacement de l'archive ou du dossier extrait"
 
 #: plugininstaller/main.cpp:50
 #, kde-format

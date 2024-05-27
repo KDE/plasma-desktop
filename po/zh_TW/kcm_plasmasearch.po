@@ -4,13 +4,13 @@
 # Franklin, 2014.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2023-10-21 16:41+0900\n"
+"PO-Revision-Date: 2024-05-26 16:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: plasmasearch/kcm.h:70
 #, kde-format
@@ -41,18 +41,14 @@ msgid "Get New Plugins…"
 msgstr "取得新的外掛程式…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
 "啟用或停用外掛程式（在 KRunner、應用程式啟動器以及總覽效果中使用）。可以標記"
-"外掛程式為最愛或是以您希望看到的順序將它們進行排序。"
+"外掛程式為最愛或是以您希望優先看到的順序將它們進行排序。"
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -101,18 +97,16 @@ msgid "KRunner plugin installation failed"
 msgstr "KRunner 外掛程式安裝失敗"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "要執行的命令：安裝或解除安裝。"
+msgstr "要執行的命令：安裝或解除安裝"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "封存檔或解開後的資料夾的路徑"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
