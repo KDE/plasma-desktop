@@ -243,6 +243,7 @@ Kirigami.ApplicationItem {
                         }
                     }
                 }
+
                 QQC2.RadioButton {
                     id: accelProfileFlat
                     text: i18nd("kcmmouse", "None")
@@ -252,6 +253,7 @@ Kirigami.ApplicationItem {
                     QQC2.ToolTip.visible: hovered
                     QQC2.ToolTip.text: i18nd("kcmmouse", "Cursor moves the same distance as the mouse movement.")
                 }
+
                 QQC2.RadioButton {
                     id: accelProfileAdaptive
                     text: i18nd("kcmmouse", "Standard")
@@ -321,7 +323,7 @@ Kirigami.ApplicationItem {
                         9,
                         12,
                         15,
-                        20
+                        20,
                     ]
 
                     function indexOf(val: real): int {
@@ -359,9 +361,15 @@ Kirigami.ApplicationItem {
 
             QQC2.Button  {
                 text: i18ndc("kcmmouse", "@action:button", "Re-bind Additional Mouse Buttons…")
-                visible: !root.backend.isAnonymousInputDevice && (
-                    root.backend.buttonMappingCount > 0 || root.backend.inputDevices.some(supportsExtraButtons)
-                )
+
+                visible: {
+                    if (root.backend.isAnonymousInputDevice) {
+                        return false;
+                    }
+                    return root.backend.buttonMappingCount > 0
+                        || root.backend.inputDevices.some(supportsExtraButtons);
+                }
+
                 onClicked: {
                     const page = root.pageStack.push(Qt.resolvedUrl("./bindings.qml"), {
                         backend: root.backend,

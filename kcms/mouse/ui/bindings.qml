@@ -30,12 +30,14 @@ Kirigami.ScrollablePage {
     MouseArea {
         // Deliberately using MouseArea on the page instead of a TapHandler on the button, so we can capture clicks anywhere
         id: buttonCapture
+
         property var lastButton: undefined
 
         anchors.fill: parent
         enabled: newBinding.checked
         preventStealing: true
         acceptedButtons: Qt.AllButtons & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton)
+
         onClicked: mouse => {
             lastButton = buttonMappings.extraButtons.find(entry => Qt[entry.buttonName] === mouse.button)
             newBinding.visible = false
@@ -49,10 +51,13 @@ Kirigami.ScrollablePage {
 
         Kirigami.FormLayout {
             id: buttonLayout
+
             twinFormLayouts: otherLayout
+
             Repeater {
                 id: buttonMappings
-                model: extraButtons?.filter(entry => entry.buttonName in root.backend.buttonMapping) ?? []
+
+                model: extraButtons.filter(entry => entry.buttonName in root.backend.buttonMapping) ?? []
 
                 readonly property var extraButtons: Array.from({length: 24}, (value, index) => ({
                     buttonName: "ExtraButton" + (index + 1),
@@ -86,25 +91,26 @@ Kirigami.ScrollablePage {
             id: explanationLabel
             Layout.fillWidth: true
             visible: newBinding.checked || newKeySequenceItem.visible
+
             text: newBinding.visible
                 ? i18ndc("kcmmouse","@action:button", "Press the mouse button for which you want to add a key binding")
                 : i18ndc("kcmmouse","@action:button, %1 is the translation of 'Extra Button %1' from above",
                     "Enter the new key combination for %1", buttonCapture.lastButton?.label ?? "")
-            actions: [
-                Kirigami.Action {
-                    icon.name: "dialog-cancel"
-                    text: i18ndc("kcmmouse", "@action:button", "Cancel")
-                    onTriggered: source => {
-                        newKeySequenceItem.visible = false;
-                        newBinding.visible = true
-                        newBinding.checked = false
-                    }
+
+            actions: Kirigami.Action {
+                icon.name: "dialog-cancel"
+                text: i18ndc("kcmmouse", "@action:button", "Cancel")
+                onTriggered: source => {
+                    newKeySequenceItem.visible = false;
+                    newBinding.visible = true
+                    newBinding.checked = false
                 }
-            ]
+            }
         }
 
         Kirigami.FormLayout {
             id: otherLayout
+
             twinFormLayouts: buttonLayout
 
             QQC2.Button {
@@ -115,6 +121,7 @@ Kirigami.ScrollablePage {
                     : i18ndc("kcmmouse", "@action:button, Bind a mousebutton to keyboard key(s)", "Add Binding…")
                 icon.name: "list-add"
             }
+
             KQuickControls.KeySequenceItem {
                 id: newKeySequenceItem
                 visible: false
