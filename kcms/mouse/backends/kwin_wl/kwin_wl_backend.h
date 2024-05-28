@@ -31,7 +31,7 @@ public:
     int deviceCount() const override;
     QList<QObject *> inputDevices() const override;
 
-    QVariantMap buttonMapping();
+    QVariantMap buttonMapping() const;
     void setButtonMapping(const QVariantMap &mapping);
 
 Q_SIGNALS:

@@ -141,7 +141,7 @@ bool KWinWaylandBackend::isChangedConfig() const
            });
 }
 
-QVariantMap KWinWaylandBackend::buttonMapping()
+QVariantMap KWinWaylandBackend::buttonMapping() const
 {
     return m_buttonMapping;
 }
