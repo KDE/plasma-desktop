@@ -28,7 +28,7 @@ public:
     QString errorString() const override;
     int deviceCount() const override;
     bool isAnonymousInputDevice() const override;
-    QList<QObject *> getDevices() const override;
+    QList<QObject *> inputDevices() const override;
 
 private:
     X11LibinputDummyDevice *m_device = nullptr;

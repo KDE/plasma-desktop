@@ -17,7 +17,7 @@ class InputBackend : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QList<QObject *> inputDevices READ getDevices NOTIFY devicesChanged)
+    Q_PROPERTY(QList<QObject *> inputDevices READ inputDevices NOTIFY inputDevicesChanged)
     Q_PROPERTY(bool isAnonymousInputDevice READ isAnonymousInputDevice CONSTANT)
 
 protected:
@@ -64,13 +64,13 @@ public:
     {
         return false;
     }
-    virtual QList<QObject *> getDevices() const
+    virtual QList<QObject *> inputDevices() const
     {
         return QList<QObject *>();
     }
 
 Q_SIGNALS:
-    void devicesChanged();
+    void inputDevicesChanged();
     void deviceAdded(bool success);
     void deviceRemoved(int index);
 };

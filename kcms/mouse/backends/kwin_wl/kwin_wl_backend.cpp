@@ -184,7 +184,7 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
         m_devices.append(dev);
         qCDebug(KCM_MOUSE).nospace() << "Device connected: " << dev->name() << " (" << dev->sysName() << ")";
         Q_EMIT deviceAdded(true);
-        Q_EMIT devicesChanged();
+        Q_EMIT inputDevicesChanged();
     }
 }
 
@@ -203,10 +203,10 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
     int index = it - m_devices.cbegin();
     m_devices.removeAt(index);
     Q_EMIT deviceRemoved(index);
-    Q_EMIT devicesChanged();
+    Q_EMIT inputDevicesChanged();
 }
 
-QList<QObject *> KWinWaylandBackend::getDevices() const
+QList<QObject *> KWinWaylandBackend::inputDevices() const
 {
     QList<QObject *> devices;
     devices.reserve(m_devices.count());
