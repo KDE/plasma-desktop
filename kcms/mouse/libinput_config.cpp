@@ -31,6 +31,7 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
 {
     const auto uri = "org.kde.plasma.private.kcm_mouse";
     qmlRegisterUncreatableType<InputBackend>(uri, 1, 0, "InputBackend", u""_s);
+    InputBackend::registerImplementationTypes(uri);
 
     m_backend = backend;
 

@@ -5,6 +5,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "inputbackend.h"
+#include "logging.h"
+
+#include <KWindowSystem>
+
+#include <qqml.h>
 
 #if BUILD_KCM_MOUSE_KWIN_WAYLAND
 #include "backends/kwin_wl/kwin_wl_backend.h"
@@ -15,10 +20,6 @@
 #include <libinput-properties.h>
 #include <private/qtx11extras_p.h>
 #endif
-
-#include <logging.h>
-
-#include <KWindowSystem>
 
 InputBackend *InputBackend::implementation(QObject *parent)
 {
@@ -44,4 +45,14 @@ InputBackend *InputBackend::implementation(QObject *parent)
 
     qCCritical(KCM_MOUSE) << "Not able to select appropriate backend.";
     return nullptr;
+}
+
+void InputBackend::registerImplementationTypes(const char *uri)
+{
+#if BUILD_KCM_MOUSE_X11
+    qmlRegisterUncreatableType<X11LibinputBackend>(uri, 1, 0, "X11LibinputBackend", QString());
+#endif
+#if BUILD_KCM_MOUSE_KWIN_WAYLAND
+    qmlRegisterUncreatableType<KWinWaylandBackend>(uri, 1, 0, "KWinWaylandBackend", QString());
+#endif
 }

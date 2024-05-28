@@ -30,6 +30,7 @@ protected:
 
 public:
     static InputBackend *implementation(QObject *parent = nullptr);
+    static void registerImplementationTypes(const char *uri);
 
     virtual void kcmInit()
     {
