@@ -19,41 +19,52 @@ endif()
 add_subdirectory(misc)
 
 add_library(kcm_mouse MODULE
-    plugin.cpp
     configcontainer.cpp
+    configcontainer.h
     inputbackend.cpp
+    inputbackend.h
     libinput_config.cpp
+    libinput_config.h
+    plugin.cpp
 )
 
 if (BUILD_KCM_MOUSE_X11)
     target_sources(kcm_mouse PRIVATE
         cursortheme.cpp
+        cursortheme.h
     )
 endif()
 
 ecm_qt_declare_logging_category(kcm_mouse
-    HEADER
-        logging.h
-    IDENTIFIER
-        KCM_MOUSE
-    CATEGORY_NAME
-        kcm_mouse
-    DEFAULT_SEVERITY
-        Critical
-    DESCRIPTION
-        "KCM for mouse input"
-    EXPORT
-        kcm_mouse
+    HEADER logging.h
+    IDENTIFIER KCM_MOUSE
+    CATEGORY_NAME kcm_mouse
+    DEFAULT_SEVERITY Critical
+    DESCRIPTION "KCM for mouse input"
+    EXPORT KCM_MOUSE
 )
+
 ecm_qt_install_logging_categories(
-    EXPORT kcm_mouse
+    EXPORT KCM_MOUSE
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
 if (BUILD_KCM_MOUSE_X11)
     # kapplymousetheme is an X11-only tool, called by startplasma-x11 but not startplasma-wayland
-    add_executable(kapplymousetheme kapplymousetheme.cpp cursortheme.cpp)
-    target_link_libraries(kapplymousetheme Qt::Gui Qt::GuiPrivate KF6::CoreAddons KF6::ConfigCore KF6::WindowSystem X11::Xcursor)
+    add_executable(kapplymousetheme
+        kapplymousetheme.cpp
+
+        cursortheme.cpp
+        cursortheme.h
+    )
+    target_link_libraries(kapplymousetheme
+        KF6::ConfigCore
+        KF6::CoreAddons
+        KF6::WindowSystem
+        Qt::Gui
+        Qt::GuiPrivate
+        X11::Xcursor
+    )
     install(TARGETS kapplymousetheme ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
 
@@ -65,11 +76,11 @@ qt_add_resources(kcm_mouse
 kcmutils_generate_desktop_file(kcm_mouse)
 
 target_link_libraries(kcm_mouse PRIVATE
+    KF6::I18n
     KF6::KCMUtils
     KF6::KIOCore
     KF6::KIOWidgets
     KF6::WindowSystem
-    KF6::I18n
     Qt::QuickWidgets
 )
 
@@ -79,7 +90,10 @@ install(TARGETS kcm_mouse DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/syste
 
 ########### install files ###############
 
-add_custom_command(TARGET kcm_mouse POST_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E create_symlink "../kcms/systemsettings/kcm_mouse.so" "kcm_mouse_init.so")
+add_custom_command(
+    TARGET kcm_mouse
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E create_symlink "../kcms/systemsettings/kcm_mouse.so" "kcm_mouse_init.so"
+)
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_mouse_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)
