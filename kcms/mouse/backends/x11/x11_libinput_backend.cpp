@@ -50,7 +50,7 @@ int X11LibinputBackend::deviceCount() const
     return 1;
 }
 
-bool X11LibinputBackend::isAnonymousDevice() const
+bool X11LibinputBackend::isAnonymousInputDevice() const
 {
     return true;
 }

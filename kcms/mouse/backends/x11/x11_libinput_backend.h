@@ -27,7 +27,7 @@ public:
     bool isChangedConfig() const override;
     QString errorString() const override;
     int deviceCount() const override;
-    bool isAnonymousDevice() const override;
+    bool isAnonymousInputDevice() const override;
     QList<QObject *> getDevices() const override;
 
 private:
