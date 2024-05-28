@@ -160,10 +160,7 @@ X11LibinputDummyDevice::X11LibinputDummyDevice(QObject *parent, Display *dpy)
     s_touchpadAtom = XInternAtom(m_dpy, XI_TOUCHPAD, True);
 }
 
-X11LibinputDummyDevice::~X11LibinputDummyDevice()
-{
-    delete m_settings;
-}
+X11LibinputDummyDevice::~X11LibinputDummyDevice() = default;
 
 bool X11LibinputDummyDevice::getConfig()
 {

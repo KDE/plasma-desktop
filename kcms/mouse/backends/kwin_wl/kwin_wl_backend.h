@@ -11,6 +11,8 @@
 
 #include <QList>
 
+#include <memory>
+
 class QDBusInterface;
 
 class KWinWaylandBackend : public InputBackend
@@ -39,10 +41,10 @@ private Q_SLOTS:
 private:
     void findDevices();
 
-    QDBusInterface *m_deviceManager;
+    std::unique_ptr<QDBusInterface> m_deviceManager;
     QList<KWinWaylandDevice *> m_devices;
     QVariantMap m_buttonMapping;
     QVariantMap m_loadedButtonMapping;
 
-    QString m_errorString = QString();
+    QString m_errorString;
 };

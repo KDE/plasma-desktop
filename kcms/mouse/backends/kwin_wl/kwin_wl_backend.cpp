@@ -22,13 +22,12 @@
 
 KWinWaylandBackend::KWinWaylandBackend(QObject *parent)
     : InputBackend(parent)
-{
-    m_deviceManager = new QDBusInterface(QStringLiteral("org.kde.KWin"),
+    , m_deviceManager(new QDBusInterface(QStringLiteral("org.kde.KWin"),
                                          QStringLiteral("/org/kde/KWin/InputDevice"),
                                          QStringLiteral("org.kde.KWin.InputDeviceManager"),
                                          QDBusConnection::sessionBus(),
-                                         this);
-
+                                         this))
+{
     findDevices();
 
     m_deviceManager->connection().connect(QStringLiteral("org.kde.KWin"),
@@ -48,7 +47,6 @@ KWinWaylandBackend::KWinWaylandBackend(QObject *parent)
 KWinWaylandBackend::~KWinWaylandBackend()
 {
     qDeleteAll(m_devices);
-    delete m_deviceManager;
 }
 
 void KWinWaylandBackend::findDevices()

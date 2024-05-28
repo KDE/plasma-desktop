@@ -14,6 +14,8 @@
 
 #include <X11/Xdefs.h>
 
+#include <memory>
+
 using namespace Qt::StringLiterals;
 
 struct LibinputSettings;
@@ -291,6 +293,6 @@ private:
     Prop<bool> m_naturalScrollEnabledByDefault{this, u"naturalScrollEnabledByDefault"_s};
     Prop<bool> m_naturalScroll{this, u"naturalScroll"_s, &X11LibinputDummyDevice::naturalScrollChanged, u"XLbInptNaturalScroll"_s};
 
-    LibinputSettings *m_settings = nullptr;
+    std::unique_ptr<LibinputSettings> m_settings;
     Display *m_dpy = nullptr;
 };

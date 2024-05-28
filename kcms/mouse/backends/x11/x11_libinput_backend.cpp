@@ -8,8 +8,8 @@
 
 X11LibinputBackend::X11LibinputBackend(QObject *parent)
     : InputBackend(parent)
+    , m_device(new X11LibinputDummyDevice(this, QX11Info::display()))
 {
-    m_device = new X11LibinputDummyDevice(this, QX11Info::display());
 }
 
 bool X11LibinputBackend::applyConfig()
@@ -57,7 +57,7 @@ bool X11LibinputBackend::isAnonymousInputDevice() const
 
 QList<InputDevice *> X11LibinputBackend::inputDevices() const
 {
-    return {m_device};
+    return {m_device.get()};
 }
 
 #include "moc_x11_libinput_backend.cpp"

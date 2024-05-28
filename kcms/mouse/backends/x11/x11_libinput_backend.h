@@ -12,6 +12,8 @@
 
 #include <QList>
 
+#include <memory>
+
 class X11LibinputBackend : public InputBackend
 {
     Q_OBJECT
@@ -32,6 +34,6 @@ public:
     QList<InputDevice *> inputDevices() const override;
 
 private:
-    X11LibinputDummyDevice *m_device = nullptr;
+    std::unique_ptr<X11LibinputDummyDevice> m_device;
     QString m_errorString;
 };
