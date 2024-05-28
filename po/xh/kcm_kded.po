@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2002-10-23 12:39SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -101,26 +101,51 @@ msgstr "Layisha-Kwimfuno Yeenkonzo"
 
 #: ui/main.qml:167
 #, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Disable automatically loading %1 on startup"
+msgstr ""
+
+#: ui/main.qml:167
+#, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Enable automatically loading %1 on startup"
+msgstr ""
+
+#: ui/main.qml:168
+#, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
-#: ui/main.qml:210
+#: ui/main.qml:212
 #, kde-format
 msgid "Not running"
 msgstr "Ayisebenzi"
 
-#: ui/main.qml:211
+#: ui/main.qml:213
 #, kde-format
 msgid "Running"
 msgstr "Iyasebenza"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
+#, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Stop %1"
+msgstr ""
+
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Start"
+msgctxt "@action:button %1 service name"
+msgid "Start %1"
+msgstr "Qala"
+
+#: ui/main.qml:236
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Stop Service"
 msgstr "Inkonzo"
 
-#: ui/main.qml:230
+#: ui/main.qml:236
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Start Service"
@@ -207,9 +232,6 @@ msgstr "Inkonzo"
 
 #~ msgid "Use"
 #~ msgstr "Sebenzisa"
-
-#~ msgid "Start"
-#~ msgstr "Qala"
 
 #, fuzzy
 #~ msgid "Unable to contact KDED."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2022-10-18 12:49+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -27,19 +27,19 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:64
+#: backends/kwin_wl/kwin_wl_backend.cpp:63
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Giriş cihazlarına sorğu göndərilmədi. Lütfən bu ayarlar modulunu yenidən "
 "açın."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:84
+#: backends/kwin_wl/kwin_wl_backend.cpp:83
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "%1 cihazı haqqında əsas məlumatların oxunmasında ciddi xəta."
 
-#: libinput_config.cpp:85
+#: libinput_config.cpp:91
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -48,12 +48,12 @@ msgstr ""
 "Göstəricilərin yüklənməsi zamanı xəta. daha ətraflı məlumatlar jurnalda "
 "saxlanılır. Lütfən bu ayarlar modulunu yenidən başladın."
 
-#: libinput_config.cpp:90
+#: libinput_config.cpp:96
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Göstərici cihaz tapılmadı. Cihazı qoşmaq."
 
-#: libinput_config.cpp:101
+#: libinput_config.cpp:107
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -63,7 +63,7 @@ msgstr ""
 "Xahiş edirəm bu ayarlar modulunu yenidən başladın və bir daha yenidən cəhd "
 "edin."
 
-#: libinput_config.cpp:121
+#: libinput_config.cpp:127
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -72,7 +72,7 @@ msgstr ""
 "Standart göstəricilərin yüklənməsində xəta. Bəzi seçimləri standart "
 "göstəriciləri üçün qurmak mümkün olmadı."
 
-#: libinput_config.cpp:139
+#: libinput_config.cpp:145
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -81,52 +81,52 @@ msgstr ""
 "Yenicə qoşulmuş cihazı əlavə edilərkən xəta baş verdi. Lütfən yenidən qoşun "
 "və bu ayarlar modulunu yenidən başladın."
 
-#: libinput_config.cpp:155
+#: libinput_config.cpp:161
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Göstərici cihazı bağlandı. Ayarlama dialoqu bağlandı."
 
-#: libinput_config.cpp:157
+#: libinput_config.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Göstərici cihazı bağlandı. Başqa cihaz tapılmadı."
 
-#: ui/main.qml:44
+#: ui/main.qml:54
 #, kde-format
 msgid "Device:"
 msgstr "Cihaz:"
 
-#: ui/main.qml:68
+#: ui/main.qml:85
 #, kde-format
 msgid "General:"
 msgstr "Əsas:"
 
-#: ui/main.qml:69
+#: ui/main.qml:86
 #, kde-format
 msgid "Device enabled"
 msgstr "Cihaz aktiv edildi"
 
-#: ui/main.qml:83
+#: ui/main.qml:100
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Girişi bu cihaz vasitəsilə qəbul edin"
 
-#: ui/main.qml:89
+#: ui/main.qml:106
 #, kde-format
 msgid "Left handed mode"
 msgstr "Sol əl rejimi"
 
-#: ui/main.qml:102
+#: ui/main.qml:119
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Sol və Sağ süymələri dəyişmək"
 
-#: ui/main.qml:109
+#: ui/main.qml:126
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Orta düyməni sağ və sol süymələrin birgə basılması kimi qəbul etmək"
 
-#: ui/main.qml:122
+#: ui/main.qml:139
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -134,119 +134,121 @@ msgstr ""
 "Sol və aqğ düymələrin eyni anda basılması orta düymənin basılması kimi qəbul "
 "ediləcək"
 
-#: ui/main.qml:126
+#: ui/main.qml:143
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:155
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Kursorun sürəti:"
 
-#: ui/main.qml:209
+#: ui/main.qml:232
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Kursorun sürətlənməsi"
 
-#: ui/main.qml:225
+#: ui/main.qml:248
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: ui/main.qml:230
+#: ui/main.qml:253
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Kursorun yerdəyişməsi siçanın hərəkər sürətinə bərabərdir."
 
-#: ui/main.qml:234
+#: ui/main.qml:257
 #, kde-format
 msgid "Standard"
 msgstr ""
 
-#: ui/main.qml:239
+#: ui/main.qml:262
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "Kursorun hərəkəti siçanın hərəkətindən asılıdır"
 
-#: ui/main.qml:250
+#: ui/main.qml:273
 #, kde-format
 msgid "Scrolling:"
 msgstr "Sürüçdürmə:"
 
-#: ui/main.qml:251
+#: ui/main.qml:274
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Sürüşdürmənin istiqamətini dəyişmək"
 
-#: ui/main.qml:264
+#: ui/main.qml:287
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Sürüşdürmə sensor ekranda və ya Mac OS-də olduğu kumu."
 
-#: ui/main.qml:269
+#: ui/main.qml:292
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Sürüşdürmə sürəti:"
 
-#: ui/main.qml:320
+#: ui/main.qml:343
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Yavaş"
 
-#: ui/main.qml:327
+#: ui/main.qml:350
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Tez"
 
-#: ui/main.qml:338
+#: ui/main.qml:361
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Əlavə siçan düymələrini yenidən təyin et..."
 
-#: ui/main.qml:383
+#: ui/main.qml:408
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Əlavə %1 düymə:"
 
-#: ui/main.qml:410
+#: ui/main.qml:438
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr ""
 "Düymələr bağı əlavə etmək üçün seçmək istədiyiniz siçan düyməsinə vurun"
 
-#: ui/main.qml:411
+#: ui/main.qml:440
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "%1 üçün yeni düymələr birləşməsi daxil edin"
 
-#: ui/main.qml:415
+#: ui/main.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Ləğv edin"
 
-#: ui/main.qml:432
-#, kde-format
+#: ui/main.qml:462
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Press a mouse button "
 msgctxt "@action:button"
-msgid "Press a mouse button "
+msgid "Press a mouse button"
 msgstr "Siçan düyməsinə vurun "
 
-#: ui/main.qml:433
+#: ui/main.qml:463
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Birləşmə əlavə edin..."
 
-#: ui/main.qml:463
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"

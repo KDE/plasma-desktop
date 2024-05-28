@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2024-05-24 01:09+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -386,37 +386,43 @@ msgstr "Slankus"
 msgid "Style"
 msgstr "Stilius"
 
-#: contents/configuration/PanelConfiguration.qml:532
+#: contents/configuration/PanelConfiguration.qml:486
+msgctxt ""
+"@action:button Revert an unsupported configuration back to the defaults"
+msgid "Fix it"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:564
 msgid "Panel Width:"
 msgstr "Skydelio plotis:"
 
-#: contents/configuration/PanelConfiguration.qml:533
+#: contents/configuration/PanelConfiguration.qml:565
 msgid "Panel Height:"
 msgstr "Skydelio aukštis:"
 
-#: contents/configuration/PanelConfiguration.qml:556
+#: contents/configuration/PanelConfiguration.qml:588
 msgid "Focus shortcut:"
 msgstr "Spartusis klavišas:"
 
-#: contents/configuration/PanelConfiguration.qml:567
+#: contents/configuration/PanelConfiguration.qml:599
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Paspauskite šį spartųjį klavišą norėdami perkelti fokusą į skydelį"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:628
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Ištrinti skydelį"
 
-#: contents/configuration/PanelConfiguration.qml:599
+#: contents/configuration/PanelConfiguration.qml:631
 msgid "Remove this panel; this action is undo-able"
 msgstr "Šalinti šį skydelį; šį veiksmą galima bus atšaukti"
 
-#: contents/configuration/PanelConfiguration.qml:610
+#: contents/configuration/PanelConfiguration.qml:642
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
 msgstr "Atlikta"
 
-#: contents/configuration/PanelConfiguration.qml:613
+#: contents/configuration/PanelConfiguration.qml:645
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Užverti skydelio nuostatų langą ir išeiti iš taisymo veiksenos"
 

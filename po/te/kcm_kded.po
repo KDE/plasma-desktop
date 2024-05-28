@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -101,26 +101,52 @@ msgstr "డిమాండు-పై-లోడగు సేవలు"
 
 #: ui/main.qml:167
 #, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Disable automatically loading %1 on startup"
+msgstr ""
+
+#: ui/main.qml:167
+#, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Enable automatically loading %1 on startup"
+msgstr ""
+
+#: ui/main.qml:168
+#, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
-#: ui/main.qml:210
+#: ui/main.qml:212
 #, kde-format
 msgid "Not running"
 msgstr "నడువని"
 
-#: ui/main.qml:211
+#: ui/main.qml:213
 #, kde-format
 msgid "Running"
 msgstr "నడుస్తున్న"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action:button %1 service name"
+msgid "Stop %1"
+msgstr "ఆపుము"
+
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Start"
+msgctxt "@action:button %1 service name"
+msgid "Start %1"
+msgstr "ప్రారంభించు"
+
+#: ui/main.qml:236
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Stop Service"
 msgstr "సేవ"
 
-#: ui/main.qml:230
+#: ui/main.qml:236
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Start Service"
@@ -161,12 +187,6 @@ msgstr "సేవ"
 
 #~ msgid "Use"
 #~ msgstr "ఉపయోగించు"
-
-#~ msgid "Start"
-#~ msgstr "ప్రారంభించు"
-
-#~ msgid "Stop"
-#~ msgstr "ఆపుము"
 
 #~ msgid "Unable to contact KDED."
 #~ msgstr "KDEDను సంప్రదించ లేకపోయింది."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2008-07-19 17:06+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -102,26 +102,52 @@ msgstr "บริการที่จะโหลดเมื่อต้อง
 
 #: ui/main.qml:167
 #, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Disable automatically loading %1 on startup"
+msgstr ""
+
+#: ui/main.qml:167
+#, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Enable automatically loading %1 on startup"
+msgstr ""
+
+#: ui/main.qml:168
+#, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
-#: ui/main.qml:210
+#: ui/main.qml:212
 #, kde-format
 msgid "Not running"
 msgstr "ยังไม่ทำงาน"
 
-#: ui/main.qml:211
+#: ui/main.qml:213
 #, kde-format
 msgid "Running"
 msgstr "ทำงานอยู่"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action:button %1 service name"
+msgid "Stop %1"
+msgstr "หยุด"
+
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Start"
+msgctxt "@action:button %1 service name"
+msgid "Start %1"
+msgstr "เริ่ม"
+
+#: ui/main.qml:236
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Stop Service"
 msgstr "บริการ"
 
-#: ui/main.qml:230
+#: ui/main.qml:236
 #, fuzzy, kde-format
 #| msgid "Service"
 msgid "Start Service"
@@ -216,12 +242,6 @@ msgstr "บริการ"
 
 #~ msgid "Use"
 #~ msgstr "ใช้"
-
-#~ msgid "Start"
-#~ msgstr "เริ่ม"
-
-#~ msgid "Stop"
-#~ msgstr "หยุด"
 
 #~ msgid "Unable to contact KDED."
 #~ msgstr "ไม่สามารถติดต่อกับ KDED ได้ !"

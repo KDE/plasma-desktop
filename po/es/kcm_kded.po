@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2023-06-30 01:09+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -108,26 +108,54 @@ msgid "Load-on-Demand Services"
 msgstr "Servicios de carga bajo demanda"
 
 #: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Disable automatically loading %1 on startup"
+msgstr "Conmutar la carga automática de este servicio durante el inicio"
+
+#: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Enable automatically loading %1 on startup"
+msgstr "Conmutar la carga automática de este servicio durante el inicio"
+
+#: ui/main.qml:168
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Conmutar la carga automática de este servicio durante el inicio"
 
-#: ui/main.qml:210
+#: ui/main.qml:212
 #, kde-format
 msgid "Not running"
 msgstr "No ejecutándose"
 
-#: ui/main.qml:211
+#: ui/main.qml:213
 #, kde-format
 msgid "Running"
 msgstr "Ejecutándose"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action:button %1 service name"
+msgid "Stop %1"
+msgstr "Detener"
+
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Start"
+msgctxt "@action:button %1 service name"
+msgid "Start %1"
+msgstr "Iniciar"
+
+#: ui/main.qml:236
 #, kde-format
 msgid "Stop Service"
 msgstr "Detener servicio"
 
-#: ui/main.qml:230
+#: ui/main.qml:236
 #, kde-format
 msgid "Start Service"
 msgstr "Iniciar servicio"
@@ -203,12 +231,6 @@ msgstr "Iniciar servicio"
 
 #~ msgid "Use"
 #~ msgstr "Usar"
-
-#~ msgid "Start"
-#~ msgstr "Iniciar"
-
-#~ msgid "Stop"
-#~ msgstr "Detener"
 
 #~ msgid "Unable to contact KDED."
 #~ msgstr "Imposible contactar con KDED."

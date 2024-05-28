@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2024-05-21 07:36+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -378,37 +378,43 @@ msgstr "צף"
 msgid "Style"
 msgstr "סגנון"
 
-#: contents/configuration/PanelConfiguration.qml:532
+#: contents/configuration/PanelConfiguration.qml:486
+msgctxt ""
+"@action:button Revert an unsupported configuration back to the defaults"
+msgid "Fix it"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:564
 msgid "Panel Width:"
 msgstr "רוחב לוח:"
 
-#: contents/configuration/PanelConfiguration.qml:533
+#: contents/configuration/PanelConfiguration.qml:565
 msgid "Panel Height:"
 msgstr "גובה לוח:"
 
-#: contents/configuration/PanelConfiguration.qml:556
+#: contents/configuration/PanelConfiguration.qml:588
 msgid "Focus shortcut:"
 msgstr "קיצור מקשים למיקוד:"
 
-#: contents/configuration/PanelConfiguration.qml:567
+#: contents/configuration/PanelConfiguration.qml:599
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "יש ללחוץ על קיצור מקשים זה כדי להעביר את המיקוד ללוח"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:628
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "מחיקת לוח"
 
-#: contents/configuration/PanelConfiguration.qml:599
+#: contents/configuration/PanelConfiguration.qml:631
 msgid "Remove this panel; this action is undo-able"
 msgstr "הסרת הלוח הזה, זאת פעולה בלתי הפיכה"
 
-#: contents/configuration/PanelConfiguration.qml:610
+#: contents/configuration/PanelConfiguration.qml:642
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
 msgstr "בוצע"
 
-#: contents/configuration/PanelConfiguration.qml:613
+#: contents/configuration/PanelConfiguration.qml:645
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "סגירת חלון הגדרת הלוחות ויציאה ממצב עריכה"
 

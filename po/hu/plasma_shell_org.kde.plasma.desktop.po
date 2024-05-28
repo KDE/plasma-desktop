@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-26 00:39+0000\n"
-"PO-Revision-Date: 2024-05-11 23:05+0200\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"PO-Revision-Date: 2024-05-27 22:48+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -384,39 +384,45 @@ msgstr "Lebegő"
 msgid "Style"
 msgstr "Stílus"
 
-#: contents/configuration/PanelConfiguration.qml:532
+#: contents/configuration/PanelConfiguration.qml:486
+msgctxt ""
+"@action:button Revert an unsupported configuration back to the defaults"
+msgid "Fix it"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:564
 msgid "Panel Width:"
 msgstr "Panelszélesség:"
 
-#: contents/configuration/PanelConfiguration.qml:533
+#: contents/configuration/PanelConfiguration.qml:565
 msgid "Panel Height:"
 msgstr "Panelmagasság:"
 
-#: contents/configuration/PanelConfiguration.qml:556
+#: contents/configuration/PanelConfiguration.qml:588
 msgid "Focus shortcut:"
 msgstr "Fókuszparancs:"
 
-#: contents/configuration/PanelConfiguration.qml:567
+#: contents/configuration/PanelConfiguration.qml:599
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Nyomja meg ezt a billentyűparancsot a fókusz áthelyezéséhez a panelre"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:628
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Panel törlése"
 
-#: contents/configuration/PanelConfiguration.qml:599
+#: contents/configuration/PanelConfiguration.qml:631
 msgid "Remove this panel; this action is undo-able"
 msgstr "Eltávolítja ezt a panelt; a művelet nem vonható vissza"
 
-#: contents/configuration/PanelConfiguration.qml:610
+#: contents/configuration/PanelConfiguration.qml:642
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr ""
+msgstr "Kész"
 
-#: contents/configuration/PanelConfiguration.qml:613
+#: contents/configuration/PanelConfiguration.qml:645
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "Panelbeállítások ablak bezárása és kilépés a szerkesztőmódból"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -630,26 +636,24 @@ msgstr "Következő szám"
 #: contents/osd/OsdItem.qml:32
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/views/DesktopEditMode.qml:111
 msgid "Global Themes"
-msgstr ""
+msgstr "Globális témák"
 
 #: contents/views/DesktopEditMode.qml:118
-#, fuzzy
-#| msgid "Open configuration page"
 msgid "Display Configuration"
-msgstr "Beállítóoldal megnyitása"
+msgstr "Kijelzőbeállítás"
 
 #: contents/views/DesktopEditMode.qml:139
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "Több"
 
 #: contents/views/DesktopEditMode.qml:148
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Kilépés a szerkesztőmódból"
 
 #: contents/views/Panel.qml:314
 msgid "Panel Focus Indicator"

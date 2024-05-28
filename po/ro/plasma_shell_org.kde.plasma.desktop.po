@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2024-02-24 19:07+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -385,40 +385,46 @@ msgstr "Flotant"
 msgid "Style"
 msgstr "Stil"
 
-#: contents/configuration/PanelConfiguration.qml:532
+#: contents/configuration/PanelConfiguration.qml:486
+msgctxt ""
+"@action:button Revert an unsupported configuration back to the defaults"
+msgid "Fix it"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:564
 msgid "Panel Width:"
 msgstr "Lățime panou:"
 
-#: contents/configuration/PanelConfiguration.qml:533
+#: contents/configuration/PanelConfiguration.qml:565
 #, fuzzy
 #| msgid "Panel Width:"
 msgid "Panel Height:"
 msgstr "Lățime panou:"
 
-#: contents/configuration/PanelConfiguration.qml:556
+#: contents/configuration/PanelConfiguration.qml:588
 msgid "Focus shortcut:"
 msgstr "Scurtătură pentru focalizare:"
 
-#: contents/configuration/PanelConfiguration.qml:567
+#: contents/configuration/PanelConfiguration.qml:599
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Apăsați această scurtătură de taste pentru a muta focalizarea asupra panoului"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:628
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Șterge panoul"
 
-#: contents/configuration/PanelConfiguration.qml:599
+#: contents/configuration/PanelConfiguration.qml:631
 msgid "Remove this panel; this action is undo-able"
 msgstr "Elimină acest panou. Acțiunea nu poate fi desfăcută."
 
-#: contents/configuration/PanelConfiguration.qml:610
+#: contents/configuration/PanelConfiguration.qml:642
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:613
+#: contents/configuration/PanelConfiguration.qml:645
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
 

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2023-07-25 13:34+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -108,26 +108,54 @@ msgid "Load-on-Demand Services"
 msgstr "Pyynnöstä ladattavat palvelut"
 
 #: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Disable automatically loading %1 on startup"
+msgstr "Muuta tämän palvelun automaattisen latauksen tilaa"
+
+#: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Enable automatically loading %1 on startup"
+msgstr "Muuta tämän palvelun automaattisen latauksen tilaa"
+
+#: ui/main.qml:168
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Muuta tämän palvelun automaattisen latauksen tilaa"
 
-#: ui/main.qml:210
+#: ui/main.qml:212
 #, kde-format
 msgid "Not running"
 msgstr "Ei käynnissä"
 
-#: ui/main.qml:211
+#: ui/main.qml:213
 #, kde-format
 msgid "Running"
 msgstr "Käynnissä"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action:button %1 service name"
+msgid "Stop %1"
+msgstr "Pysäytä"
+
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Start"
+msgctxt "@action:button %1 service name"
+msgid "Start %1"
+msgstr "Käynnistä"
+
+#: ui/main.qml:236
 #, kde-format
 msgid "Stop Service"
 msgstr "Pysäytä palvelu"
 
-#: ui/main.qml:230
+#: ui/main.qml:236
 #, kde-format
 msgid "Start Service"
 msgstr "Käynnistä palvelu"
@@ -203,12 +231,6 @@ msgstr "Käynnistä palvelu"
 
 #~ msgid "Use"
 #~ msgstr "Käytä"
-
-#~ msgid "Start"
-#~ msgstr "Käynnistä"
-
-#~ msgid "Stop"
-#~ msgstr "Pysäytä"
 
 #~ msgid "Unable to contact KDED."
 #~ msgstr "KDED-palvelimeen ei saatu yhteyttä."

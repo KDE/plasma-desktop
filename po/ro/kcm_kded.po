@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2024-01-07 18:23+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -100,26 +100,54 @@ msgid "Load-on-Demand Services"
 msgstr "Servicii încărcate la cerere"
 
 #: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Disable automatically loading %1 on startup"
+msgstr "Comută încărcarea automată a acestui serviciu la pornire"
+
+#: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Enable automatically loading %1 on startup"
+msgstr "Comută încărcarea automată a acestui serviciu la pornire"
+
+#: ui/main.qml:168
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Comută încărcarea automată a acestui serviciu la pornire"
 
-#: ui/main.qml:210
+#: ui/main.qml:212
 #, kde-format
 msgid "Not running"
 msgstr "Nu rulează"
 
-#: ui/main.qml:211
+#: ui/main.qml:213
 #, kde-format
 msgid "Running"
 msgstr "Rulează"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action:button %1 service name"
+msgid "Stop %1"
+msgstr "Oprește"
+
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Start"
+msgctxt "@action:button %1 service name"
+msgid "Start %1"
+msgstr "Pornește"
+
+#: ui/main.qml:236
 #, kde-format
 msgid "Stop Service"
 msgstr "Oprește serviciul"
 
-#: ui/main.qml:230
+#: ui/main.qml:236
 #, kde-format
 msgid "Start Service"
 msgstr "Pornește serviciul"
@@ -200,12 +228,6 @@ msgstr "Pornește serviciul"
 
 #~ msgid "Use"
 #~ msgstr "Utilizează"
-
-#~ msgid "Start"
-#~ msgstr "Pornește"
-
-#~ msgid "Stop"
-#~ msgstr "Oprește"
 
 #~ msgid "Unable to contact KDED."
 #~ msgstr "Nu am putut contacta KDED."

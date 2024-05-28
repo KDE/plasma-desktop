@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2023-07-16 10:35+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -104,26 +104,54 @@ msgid "Load-on-Demand Services"
 msgstr "Eskatu ahala kargatzeko zerbitzuak"
 
 #: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Disable automatically loading %1 on startup"
+msgstr "Txandakatu zerbitzu hau abioan automatikoki zamatzea"
+
+#: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Enable automatically loading %1 on startup"
+msgstr "Txandakatu zerbitzu hau abioan automatikoki zamatzea"
+
+#: ui/main.qml:168
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Txandakatu zerbitzu hau abioan automatikoki zamatzea"
 
-#: ui/main.qml:210
+#: ui/main.qml:212
 #, kde-format
 msgid "Not running"
 msgstr "Ez da exekutatzen ari"
 
-#: ui/main.qml:211
+#: ui/main.qml:213
 #, kde-format
 msgid "Running"
 msgstr "Exekutatzen"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action:button %1 service name"
+msgid "Stop %1"
+msgstr "Gelditu"
+
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Start"
+msgctxt "@action:button %1 service name"
+msgid "Start %1"
+msgstr "Abiarazi"
+
+#: ui/main.qml:236
 #, kde-format
 msgid "Stop Service"
 msgstr "Geldiarazi zerbitzua"
 
-#: ui/main.qml:230
+#: ui/main.qml:236
 #, kde-format
 msgid "Start Service"
 msgstr "Abiarazi zerbitzua"
@@ -204,12 +232,6 @@ msgstr "Abiarazi zerbitzua"
 
 #~ msgid "Use"
 #~ msgstr "Erabili"
-
-#~ msgid "Start"
-#~ msgstr "Abiarazi"
-
-#~ msgid "Stop"
-#~ msgstr "Gelditu"
 
 #~ msgid "Unable to contact KDED."
 #~ msgstr "Ezin da jarri harremanetan KDEDekin."

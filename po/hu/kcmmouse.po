@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2024-05-11 22:55+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -30,18 +30,18 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@fsf.hu"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:64
+#: backends/kwin_wl/kwin_wl_backend.cpp:63
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Nem sikerült lekérdezni a beviteli eszközöket. Nyissa meg újra ezt a modult."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:84
+#: backends/kwin_wl/kwin_wl_backend.cpp:83
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritikus hiba a(z) %1 eszközinformációinak olvasásakor."
 
-#: libinput_config.cpp:85
+#: libinput_config.cpp:91
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -50,12 +50,12 @@ msgstr ""
 "Hiba az értékek betöltésekor. Lásd a naplót további információkért. Indítsa "
 "újra a modult."
 
-#: libinput_config.cpp:90
+#: libinput_config.cpp:96
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nem található mutatóeszköz, csatlakoztasson egyet."
 
-#: libinput_config.cpp:101
+#: libinput_config.cpp:107
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -64,7 +64,7 @@ msgstr ""
 "Nem lehet minden módosítást menteni. Lásd a naplót további információkért. "
 "Indítsa újra a modult, és próbálja meg újból."
 
-#: libinput_config.cpp:121
+#: libinput_config.cpp:127
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -73,7 +73,7 @@ msgstr ""
 "Hiba az alapértelmezett értékek betöltésekor. Nem mindegyik vagy egyik "
 "beállítás sem állítható az alapértelmezett értékre."
 
-#: libinput_config.cpp:139
+#: libinput_config.cpp:145
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -82,52 +82,52 @@ msgstr ""
 "Hiba az újonnan csatlakoztatott eszköz hozzáadásakor. Csatlakoztassa újra és "
 "indítsa újra ezt a modult."
 
-#: libinput_config.cpp:155
+#: libinput_config.cpp:161
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Mutatóeszköz leválasztva, a beállítóablak bezárul."
 
-#: libinput_config.cpp:157
+#: libinput_config.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Mutatóeszköz leválasztva, nem található másik eszköz."
 
-#: ui/main.qml:44
+#: ui/main.qml:54
 #, kde-format
 msgid "Device:"
 msgstr "Eszköz:"
 
-#: ui/main.qml:68
+#: ui/main.qml:85
 #, kde-format
 msgid "General:"
 msgstr "Általános:"
 
-#: ui/main.qml:69
+#: ui/main.qml:86
 #, kde-format
 msgid "Device enabled"
 msgstr "Eszköz bekapcsolva"
 
-#: ui/main.qml:83
+#: ui/main.qml:100
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Bemenet fogadása erről az eszközről."
 
-#: ui/main.qml:89
+#: ui/main.qml:106
 #, kde-format
 msgid "Left handed mode"
 msgstr "Balkezes mód"
 
-#: ui/main.qml:102
+#: ui/main.qml:119
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Bal és jobb gombok megcserélése."
 
-#: ui/main.qml:109
+#: ui/main.qml:126
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Nyomja meg a bal és jobb gombot a középső kattintáshoz."
 
-#: ui/main.qml:122
+#: ui/main.qml:139
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -135,7 +135,7 @@ msgstr ""
 "A bal és jobb gomb egyszerre történő lenyomása egy középső egérgombos "
 "kattintásnak felel meg."
 
-#: ui/main.qml:126
+#: ui/main.qml:143
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -145,111 +145,113 @@ msgstr ""
 "egérkattintás késleltetését. Az extra késleltetésre az egyidejű bal és jobb "
 "egérkattintások helyes érzékeléséhez van szükség."
 
-#: ui/main.qml:136
+#: ui/main.qml:155
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Mutató sebessége:"
 
-#: ui/main.qml:209
+#: ui/main.qml:232
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Az egérmutató gyorsítása:"
 
-#: ui/main.qml:225
+#: ui/main.qml:248
 #, kde-format
 msgid "None"
 msgstr "Nincs"
 
-#: ui/main.qml:230
+#: ui/main.qml:253
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "A kurzor ugyanannyit mozog, mint az egér."
 
-#: ui/main.qml:234
+#: ui/main.qml:257
 #, kde-format
 msgid "Standard"
 msgstr "Normál"
 
-#: ui/main.qml:239
+#: ui/main.qml:262
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "A kurzor által megtett út az egér mozgási sebességétől függ."
 
-#: ui/main.qml:250
+#: ui/main.qml:273
 #, kde-format
 msgid "Scrolling:"
 msgstr "Görgetés:"
 
-#: ui/main.qml:251
+#: ui/main.qml:274
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Görgetés irányának megfordítása"
 
-#: ui/main.qml:264
+#: ui/main.qml:287
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Érintőképernyő-szerű görgetés."
 
-#: ui/main.qml:269
+#: ui/main.qml:292
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Görgetési sebesség:"
 
-#: ui/main.qml:320
+#: ui/main.qml:343
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Lassabb"
 
-#: ui/main.qml:327
+#: ui/main.qml:350
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Gyorsabb"
 
-#: ui/main.qml:338
+#: ui/main.qml:361
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "További egérgombok újra hozzárendelése…"
 
-#: ui/main.qml:383
+#: ui/main.qml:408
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Extra gomb %1:"
 
-#: ui/main.qml:410
+#: ui/main.qml:438
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "Nyomja meg azt az egérgombot, amelyhez billentyűt szeretne rendelni"
 
-#: ui/main.qml:411
+#: ui/main.qml:440
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Új billetyűkombináció megadása ehhez: %1"
 
-#: ui/main.qml:415
+#: ui/main.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Mégsem"
 
-#: ui/main.qml:432
-#, kde-format
+#: ui/main.qml:462
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Press a mouse button "
 msgctxt "@action:button"
-msgid "Press a mouse button "
+msgid "Press a mouse button"
 msgstr "Nyomjon meg egy egérgombot "
 
-#: ui/main.qml:433
+#: ui/main.qml:463
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Parancs hozzáadása…"
 
-#: ui/main.qml:463
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"

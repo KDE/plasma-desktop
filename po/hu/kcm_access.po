@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-03-11 10:21+0100\n"
+"PO-Revision-Date: 2024-05-27 22:47+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -319,26 +319,21 @@ msgstr ""
 "Mozdulatsorozat használata a ragadós és lassú billentyűk bekapcsolásához"
 
 #: ui/ActivationGestures.qml:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
-msgstr ""
-"A ragadós és lassú billentyűk kikapcsolása adott idejű inaktivitás után."
+msgstr "A ragadós és lassú billentyűk kikapcsolása ennyi inaktivitás után:"
 
 #: ui/ActivationGestures.qml:58
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " perc"
-msgstr[1] " perc"
+msgstr[0] "%1 perc"
+msgstr[1] "%1 perc"
 
 #: ui/ActivationGestures.qml:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "min"
-msgstr " perc"
+msgstr "perc"
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -537,10 +532,9 @@ msgid "Mouse Navigation"
 msgstr "Egeres navigáció"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "&Activation Gestures"
+#, kde-format
 msgid "Activation Gestures"
-msgstr "&Aktiválási sorozat"
+msgstr "Aktiválási sorozat"
 
 #: ui/main.qml:52
 #, kde-format

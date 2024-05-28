@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2023-06-29 16:04+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -100,26 +100,52 @@ msgid "Load-on-Demand Services"
 msgstr "Услуги, зареждани при поискване"
 
 #: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Disable automatically loading %1 on startup"
+msgstr "Превключване на автоматичното зареждане на тази услуга при стартиране"
+
+#: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Enable automatically loading %1 on startup"
+msgstr "Превключване на автоматичното зареждане на тази услуга при стартиране"
+
+#: ui/main.qml:168
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Превключване на автоматичното зареждане на тази услуга при стартиране"
 
-#: ui/main.qml:210
+#: ui/main.qml:212
 #, kde-format
 msgid "Not running"
 msgstr "Спряна"
 
-#: ui/main.qml:211
+#: ui/main.qml:213
 #, kde-format
 msgid "Running"
 msgstr "Стартирана"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
+#, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Stop %1"
+msgstr ""
+
+#: ui/main.qml:233
+#, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Start %1"
+msgstr ""
+
+#: ui/main.qml:236
 #, kde-format
 msgid "Stop Service"
 msgstr "Спиране на услуга"
 
-#: ui/main.qml:230
+#: ui/main.qml:236
 #, kde-format
 msgid "Start Service"
 msgstr "Стартиране на услуга"

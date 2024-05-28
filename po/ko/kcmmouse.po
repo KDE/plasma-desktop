@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2023-08-25 23:14+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,17 +28,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:64
+#: backends/kwin_wl/kwin_wl_backend.cpp:63
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr "입력 장치를 조회할 수 없습니다. 설정 모듈을 다시 여십시오."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:84
+#: backends/kwin_wl/kwin_wl_backend.cpp:83
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "%1의 정보를 조회하는 중 치명적인 오류가 발생했습니다."
 
-#: libinput_config.cpp:85
+#: libinput_config.cpp:91
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -47,12 +47,12 @@ msgstr ""
 "값을 불러오는 중 오류가 발생했습니다. 더 많은 정보를 보려면 로그를 참조하십시"
 "오. 이 설정 모듈을 다시 시작하십시오."
 
-#: libinput_config.cpp:90
+#: libinput_config.cpp:96
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "포인터 장치를 찾을 수 없습니다. 연결해 주십시오."
 
-#: libinput_config.cpp:101
+#: libinput_config.cpp:107
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -61,7 +61,7 @@ msgstr ""
 "모든 설정을 저장할 수 없었습니다. 더 많은 정보를 보려면 로그를 참조하십시오. "
 "이 설정 모듈을 다시 시작한 다음 다시 시도하십시오."
 
-#: libinput_config.cpp:121
+#: libinput_config.cpp:127
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -70,7 +70,7 @@ msgstr ""
 "기본값을 불러오는 중 오류가 발생했습니다. 일부 옵션을 기본값으로 초기화할 수 "
 "없었습니다."
 
-#: libinput_config.cpp:139
+#: libinput_config.cpp:145
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -79,171 +79,173 @@ msgstr ""
 "새로 연결된 장치를 추가하는 중 오류가 발생했습니다. 장치를 다시 연결한 다음 "
 "이 설정 모듈을 다시 시작하십시오."
 
-#: libinput_config.cpp:155
+#: libinput_config.cpp:161
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "포인터 장치가 연결 해제되었습니다. 해당 장치 설정 대화 상자를 닫았습니다."
 
-#: libinput_config.cpp:157
+#: libinput_config.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "포인터 장치가 연결 해제되었습니다. 다른 장치를 찾을 수 없습니다."
 
-#: ui/main.qml:44
+#: ui/main.qml:54
 #, kde-format
 msgid "Device:"
 msgstr "장치:"
 
-#: ui/main.qml:68
+#: ui/main.qml:85
 #, kde-format
 msgid "General:"
 msgstr "일반:"
 
-#: ui/main.qml:69
+#: ui/main.qml:86
 #, kde-format
 msgid "Device enabled"
 msgstr "장치 활성화됨"
 
-#: ui/main.qml:83
+#: ui/main.qml:100
 #, kde-format
 msgid "Accept input through this device."
 msgstr "이 장치가 보내는 입력을 받아 들입니다."
 
-#: ui/main.qml:89
+#: ui/main.qml:106
 #, kde-format
 msgid "Left handed mode"
 msgstr "왼손잡이 모드"
 
-#: ui/main.qml:102
+#: ui/main.qml:119
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "왼쪽과 오른쪽 단추를 전환합니다."
 
-#: ui/main.qml:109
+#: ui/main.qml:126
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "왼쪽과 오른쪽 단추를 같이 클릭해서 가운데 단추 클릭"
 
-#: ui/main.qml:122
+#: ui/main.qml:139
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
 "왼쪽과 오른쪽 단추를 같이 클릭하면 가운데 단추를 클릭한 것으로 취급합니다."
 
-#: ui/main.qml:126
+#: ui/main.qml:143
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:155
 #, kde-format
 msgid "Pointer speed:"
 msgstr "포인터 속도:"
 
-#: ui/main.qml:209
+#: ui/main.qml:232
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "포인터 가속:"
 
-#: ui/main.qml:225
+#: ui/main.qml:248
 #, kde-format
 msgid "None"
 msgstr "없음"
 
-#: ui/main.qml:230
+#: ui/main.qml:253
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "마우스가 이동한 만큼만 커서를 이동합니다."
 
-#: ui/main.qml:234
+#: ui/main.qml:257
 #, kde-format
 msgid "Standard"
 msgstr "표준"
 
-#: ui/main.qml:239
+#: ui/main.qml:262
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "마우스가 이동한 속도에 비례해서 커서 이동 거리를 조정합니다."
 
-#: ui/main.qml:250
+#: ui/main.qml:273
 #, kde-format
 msgid "Scrolling:"
 msgstr "스크롤:"
 
-#: ui/main.qml:251
+#: ui/main.qml:274
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "스크롤 방향 뒤집기"
 
-#: ui/main.qml:264
+#: ui/main.qml:287
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "터치스크린 형태 스크롤을 사용합니다."
 
-#: ui/main.qml:269
+#: ui/main.qml:292
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "스크롤 속도:"
 
-#: ui/main.qml:320
+#: ui/main.qml:343
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "느리게"
 
-#: ui/main.qml:327
+#: ui/main.qml:350
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "빠르게"
 
-#: ui/main.qml:338
+#: ui/main.qml:361
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "추가 마우스 단추 재할당…"
 
-#: ui/main.qml:383
+#: ui/main.qml:408
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "추가 단추 %1:"
 
-#: ui/main.qml:410
+#: ui/main.qml:438
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "키 바인딩을 추가할 마우스 단추를 누르십시오"
 
-#: ui/main.qml:411
+#: ui/main.qml:440
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "%1의 새로운 키 조합 입력"
 
-#: ui/main.qml:415
+#: ui/main.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "취소"
 
-#: ui/main.qml:432
-#, kde-format
+#: ui/main.qml:462
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Press a mouse button "
 msgctxt "@action:button"
-msgid "Press a mouse button "
+msgid "Press a mouse button"
 msgstr "마우스 단추를 누르십시오 "
 
-#: ui/main.qml:433
+#: ui/main.qml:463
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "바인딩 추가…"
 
-#: ui/main.qml:463
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"

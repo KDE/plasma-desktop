@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2023-08-17 17:15+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -116,26 +116,54 @@ msgid "Load-on-Demand Services"
 msgstr "Services chargés à la demande"
 
 #: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Disable automatically loading %1 on startup"
+msgstr "Basculer automatiquement le chargement de ce service au démarrage"
+
+#: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Enable automatically loading %1 on startup"
+msgstr "Basculer automatiquement le chargement de ce service au démarrage"
+
+#: ui/main.qml:168
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Basculer automatiquement le chargement de ce service au démarrage"
 
-#: ui/main.qml:210
+#: ui/main.qml:212
 #, kde-format
 msgid "Not running"
 msgstr "Non lancé"
 
-#: ui/main.qml:211
+#: ui/main.qml:213
 #, kde-format
 msgid "Running"
 msgstr "En fonctionnement"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action:button %1 service name"
+msgid "Stop %1"
+msgstr "Arrêter"
+
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Start"
+msgctxt "@action:button %1 service name"
+msgid "Start %1"
+msgstr "Démarrage"
+
+#: ui/main.qml:236
 #, kde-format
 msgid "Stop Service"
 msgstr "Service avant arrêt"
 
-#: ui/main.qml:230
+#: ui/main.qml:236
 #, kde-format
 msgid "Start Service"
 msgstr "Service au démarrage"
@@ -216,12 +244,6 @@ msgstr "Service au démarrage"
 
 #~ msgid "Use"
 #~ msgstr "Utilisation"
-
-#~ msgid "Start"
-#~ msgstr "Démarrage"
-
-#~ msgid "Stop"
-#~ msgstr "Arrêter"
 
 #~ msgid "Unable to contact KDED."
 #~ msgstr "Impossible de contacter KDED."

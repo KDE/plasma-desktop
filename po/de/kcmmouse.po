@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2024-03-26 19:21+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -32,19 +32,19 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "thd@kde.org"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:64
+#: backends/kwin_wl/kwin_wl_backend.cpp:63
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Die Abfrage der Eingabegeräte ist fehlgeschlagen. Bitte öffnen Sie dieses "
 "Einrichtungsmodul erneut."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:84
+#: backends/kwin_wl/kwin_wl_backend.cpp:83
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritischer Fehler beim Lesen der Basisinformation des Geräts von %1 ."
 
-#: libinput_config.cpp:85
+#: libinput_config.cpp:91
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -53,13 +53,13 @@ msgstr ""
 "Fehler beim Laden von Werten. Im Protokoll finden Sie weitere Informationen "
 "dazu. Bitte starten Sie dieses Einrichtungsmodul erneut."
 
-#: libinput_config.cpp:90
+#: libinput_config.cpp:96
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr ""
 "Es wurde kein Zeigergerät gefunden. Schließen Sie ein Zeigergerät jetzt an."
 
-#: libinput_config.cpp:101
+#: libinput_config.cpp:107
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -69,7 +69,7 @@ msgstr ""
 "weitere Informationen dazu. Bitte starten Sie dieses Einrichtungsmodul neu "
 "und versuchen es nochmal."
 
-#: libinput_config.cpp:121
+#: libinput_config.cpp:127
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -78,7 +78,7 @@ msgstr ""
 "Fehler beim Laden der Standardwerte. Es können nicht alle Einstellungen auf "
 "die Standardwerte zurückgesetzt werden."
 
-#: libinput_config.cpp:139
+#: libinput_config.cpp:145
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -87,55 +87,55 @@ msgstr ""
 "Fehler beim Hinzufügen des neu angeschlossenen Geräts. Schließen Sie es "
 "bitte erneut an und starten dann dieses Einrichtungsmodul neu."
 
-#: libinput_config.cpp:155
+#: libinput_config.cpp:161
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Das Zeigergerät wurde getrennt, der Einstellungsdialog dafür wird "
 "geschlossen."
 
-#: libinput_config.cpp:157
+#: libinput_config.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
 "Das Zeigergerät wurde getrennt, es wurden keine anderen Geräte gefunden."
 
-#: ui/main.qml:44
+#: ui/main.qml:54
 #, kde-format
 msgid "Device:"
 msgstr "Gerät:"
 
-#: ui/main.qml:68
+#: ui/main.qml:85
 #, kde-format
 msgid "General:"
 msgstr "Allgemein:"
 
-#: ui/main.qml:69
+#: ui/main.qml:86
 #, kde-format
 msgid "Device enabled"
 msgstr "Gerät aktiviert"
 
-#: ui/main.qml:83
+#: ui/main.qml:100
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Eingaben über dieses Gerät annehmen"
 
-#: ui/main.qml:89
+#: ui/main.qml:106
 #, kde-format
 msgid "Left handed mode"
 msgstr "Linkshändige Bedienung"
 
-#: ui/main.qml:102
+#: ui/main.qml:119
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Linke und Rechte Taste tauschen"
 
-#: ui/main.qml:109
+#: ui/main.qml:126
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Linke und rechte Taste für Mittelklick drücken"
 
-#: ui/main.qml:122
+#: ui/main.qml:139
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -143,90 +143,90 @@ msgstr ""
 "Gleichzeitiges Klicken mit der linken und rechten Maustaste emuliert das "
 "Klicken mit der mittleren Maustaste."
 
-#: ui/main.qml:126
+#: ui/main.qml:143
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:155
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Zeigergeschwindigkeit:"
 
-#: ui/main.qml:209
+#: ui/main.qml:232
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Zeigerbeschleunigung:"
 
-#: ui/main.qml:225
+#: ui/main.qml:248
 #, kde-format
 msgid "None"
 msgstr "Keines"
 
-#: ui/main.qml:230
+#: ui/main.qml:253
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Die Bewegung des Zeigers entspricht der Bewegung der Maus."
 
-#: ui/main.qml:234
+#: ui/main.qml:257
 #, kde-format
 msgid "Standard"
 msgstr "Standard"
 
-#: ui/main.qml:239
+#: ui/main.qml:262
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Die Bewegung des Zeigers hängt von der Geschwindigkeit der Bewegung der Maus "
 "ab."
 
-#: ui/main.qml:250
+#: ui/main.qml:273
 #, kde-format
 msgid "Scrolling:"
 msgstr "Bildlauf:"
 
-#: ui/main.qml:251
+#: ui/main.qml:274
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Laufrichtung umkehren"
 
-#: ui/main.qml:264
+#: ui/main.qml:287
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Bildlauf wie auf dem Touchscreen."
 
-#: ui/main.qml:269
+#: ui/main.qml:292
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Bildlaufgeschwindigkeit:"
 
-#: ui/main.qml:320
+#: ui/main.qml:343
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Langsamer"
 
-#: ui/main.qml:327
+#: ui/main.qml:350
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Schneller"
 
-#: ui/main.qml:338
+#: ui/main.qml:361
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Zusätzliche Maustasten neu zuordnen ..."
 
-#: ui/main.qml:383
+#: ui/main.qml:408
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Zusatztaste %1:"
 
-#: ui/main.qml:410
+#: ui/main.qml:438
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
@@ -234,31 +234,33 @@ msgstr ""
 "Drücken Sie die Maustaste, der Sie eine Taste auf der Tastatur zuordnen "
 "möchten"
 
-#: ui/main.qml:411
+#: ui/main.qml:440
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Neue Tastenkombination für %1 eingeben"
 
-#: ui/main.qml:415
+#: ui/main.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ui/main.qml:432
-#, kde-format
+#: ui/main.qml:462
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Press a mouse button "
 msgctxt "@action:button"
-msgid "Press a mouse button "
+msgid "Press a mouse button"
 msgstr "Drücken Sie eine Maustaste "
 
-#: ui/main.qml:433
+#: ui/main.qml:463
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Zuordnung hinzufügen ..."
 
-#: ui/main.qml:463
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
