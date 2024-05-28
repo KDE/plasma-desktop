@@ -71,6 +71,7 @@ endif()
 qt_add_resources(kcm_mouse
     PREFIX "/"
     FILES
+        ui/bindings.qml
         ui/main.qml
 )
 kcmutils_generate_desktop_file(kcm_mouse)
