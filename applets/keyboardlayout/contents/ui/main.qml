@@ -51,13 +51,6 @@ PlasmoidItem {
                 Plasmoid.contextualActions.splice(Plasmoid.contextualActions.indexOf(object), 1)
             }
         }
-        Connections {
-            target: switcher.keyboardLayout
-
-            function onLayoutChanged() {
-                root.Plasmoid.activated();
-            }
-        }
 
         Connections {
             target: root
@@ -101,6 +94,8 @@ PlasmoidItem {
             textFormat: Text.PlainText
         }
     }
+
+    Plasmoid.onActivated: fullRepresentationItem.keyboardLayout.switchToNextLayout()
 
     function actionTriggered(actionName) {
         const layoutIndex = parseInt(actionName);
