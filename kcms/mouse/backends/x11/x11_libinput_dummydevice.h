@@ -267,45 +267,47 @@ private:
 
     //
     // general
-    Prop<QString> m_name = Prop<QString>(this, "name");
-    Prop<QString> m_sysName = Prop<QString>(this, "sysName");
-    Prop<bool> m_supportsDisableEvents = Prop<bool>(this, "supportsDisableEvents");
-    Prop<bool> m_enabled = Prop<bool>(this, "enabled", &X11LibinputDummyDevice::enabledChanged);
+    Prop<QString> m_name{this, "name"};
+    Prop<QString> m_sysName{this, "sysName"};
+    Prop<bool> m_supportsDisableEvents{this, "supportsDisableEvents"};
+    Prop<bool> m_enabled{this, "enabled", &X11LibinputDummyDevice::enabledChanged};
 
     //
     // advanced
-    Prop<Qt::MouseButtons> m_supportedButtons = Prop<Qt::MouseButtons>(this, "supportedButtons");
+    Prop<Qt::MouseButtons> m_supportedButtons{this, "supportedButtons"};
 
-    Prop<bool> m_supportsLeftHanded = Prop<bool>(this, "supportsLeftHanded");
-    Prop<bool> m_leftHandedEnabledByDefault = Prop<bool>(this, "leftHandedEnabledByDefault");
-    Prop<bool> m_leftHanded = Prop<bool>(this, "leftHanded", &X11LibinputDummyDevice::leftHandedChanged, "XLbInptLeftHanded");
+    Prop<bool> m_supportsLeftHanded{this, "supportsLeftHanded"};
+    Prop<bool> m_leftHandedEnabledByDefault{this, "leftHandedEnabledByDefault"};
+    Prop<bool> m_leftHanded{this, "leftHanded", &X11LibinputDummyDevice::leftHandedChanged, "XLbInptLeftHanded"};
 
-    Prop<bool> m_supportsMiddleEmulation = Prop<bool>(this, "supportsMiddleEmulation");
-    Prop<bool> m_middleEmulationEnabledByDefault = Prop<bool>(this, "middleEmulationEnabledByDefault");
-    Prop<bool> m_middleEmulation = Prop<bool>(this, "middleEmulation", &X11LibinputDummyDevice::middleEmulationChanged, "XLbInptMiddleEmulation");
+    Prop<bool> m_supportsMiddleEmulation{this, "supportsMiddleEmulation"};
+    Prop<bool> m_middleEmulationEnabledByDefault{this, "middleEmulationEnabledByDefault"};
+    Prop<bool> m_middleEmulation{this, "middleEmulation", &X11LibinputDummyDevice::middleEmulationChanged, "XLbInptMiddleEmulation"};
 
     //
     // acceleration speed and profile
-    Prop<bool> m_supportsPointerAcceleration = Prop<bool>(this, "supportsPointerAcceleration");
-    Prop<qreal> m_defaultPointerAcceleration = Prop<qreal>(this, "defaultPointerAcceleration");
-    Prop<qreal> m_pointerAcceleration =
-        Prop<qreal>(this, "pointerAcceleration", &X11LibinputDummyDevice::pointerAccelerationChanged, "XLbInptPointerAcceleration");
+    Prop<bool> m_supportsPointerAcceleration{this, "supportsPointerAcceleration"};
+    Prop<qreal> m_defaultPointerAcceleration{this, "defaultPointerAcceleration"};
+    Prop<qreal> m_pointerAcceleration{this, "pointerAcceleration", &X11LibinputDummyDevice::pointerAccelerationChanged, "XLbInptPointerAcceleration"};
 
-    Prop<bool> m_supportsPointerAccelerationProfileFlat = Prop<bool>(this, "supportsPointerAccelerationProfileFlat");
-    Prop<bool> m_defaultPointerAccelerationProfileFlat = Prop<bool>(this, "defaultPointerAccelerationProfileFlat");
-    Prop<bool> m_pointerAccelerationProfileFlat =
-        Prop<bool>(this, "pointerAccelerationProfileFlat", &X11LibinputDummyDevice::pointerAccelerationProfileFlatChanged, "XLbInptAccelProfileFlat");
+    Prop<bool> m_supportsPointerAccelerationProfileFlat{this, "supportsPointerAccelerationProfileFlat"};
+    Prop<bool> m_defaultPointerAccelerationProfileFlat{this, "defaultPointerAccelerationProfileFlat"};
+    Prop<bool> m_pointerAccelerationProfileFlat{this,
+                                                "pointerAccelerationProfileFlat",
+                                                &X11LibinputDummyDevice::pointerAccelerationProfileFlatChanged,
+                                                "XLbInptAccelProfileFlat"};
 
-    Prop<bool> m_supportsPointerAccelerationProfileAdaptive = Prop<bool>(this, "supportsPointerAccelerationProfileAdaptive");
-    Prop<bool> m_defaultPointerAccelerationProfileAdaptive = Prop<bool>(this, "defaultPointerAccelerationProfileAdaptive");
-    Prop<bool> m_pointerAccelerationProfileAdaptive =
-        Prop<bool>(this, "pointerAccelerationProfileAdaptive", &X11LibinputDummyDevice::pointerAccelerationProfileAdaptiveChanged);
+    Prop<bool> m_supportsPointerAccelerationProfileAdaptive{this, "supportsPointerAccelerationProfileAdaptive"};
+    Prop<bool> m_defaultPointerAccelerationProfileAdaptive{this, "defaultPointerAccelerationProfileAdaptive"};
+    Prop<bool> m_pointerAccelerationProfileAdaptive{this,
+                                                    "pointerAccelerationProfileAdaptive",
+                                                    &X11LibinputDummyDevice::pointerAccelerationProfileAdaptiveChanged};
 
     //
     // scrolling
-    Prop<bool> m_supportsNaturalScroll = Prop<bool>(this, "supportsNaturalScroll");
-    Prop<bool> m_naturalScrollEnabledByDefault = Prop<bool>(this, "naturalScrollEnabledByDefault");
-    Prop<bool> m_naturalScroll = Prop<bool>(this, "naturalScroll", &X11LibinputDummyDevice::naturalScrollChanged, "XLbInptNaturalScroll");
+    Prop<bool> m_supportsNaturalScroll{this, "supportsNaturalScroll"};
+    Prop<bool> m_naturalScrollEnabledByDefault{this, "naturalScrollEnabledByDefault"};
+    Prop<bool> m_naturalScroll{this, "naturalScroll", &X11LibinputDummyDevice::naturalScrollChanged, "XLbInptNaturalScroll"};
 
     LibinputSettings *m_settings;
     Display *m_dpy = nullptr;
