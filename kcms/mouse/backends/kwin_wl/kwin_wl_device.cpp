@@ -126,11 +126,11 @@ bool KWinWaylandDevice::applyConfig()
     bool success = true;
     QString error_msg;
 
-    for (QString m : msgs) {
+    for (const auto &m : std::as_const(msgs)) {
         if (!m.isNull()) {
             qCCritical(KCM_MOUSE) << "in error:" << m;
             if (!success) {
-                error_msg.append("\n");
+                error_msg.append(u'\n');
             }
             error_msg.append(m);
             success = false;

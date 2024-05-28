@@ -94,7 +94,7 @@ bool KWinWaylandBackend::applyConfig()
     KConfigGroup buttonGroup = KSharedConfig::openConfig(QStringLiteral("kcminputrc"))->group(QStringLiteral("ButtonRebinds")).group(QStringLiteral("Mouse"));
     for (auto it = m_buttonMapping.cbegin(); it != m_buttonMapping.cend(); ++it) {
         if (auto keys = it.value().value<QKeySequence>(); !keys.isEmpty()) {
-            buttonGroup.writeEntry(it.key(), QStringList{"Key", keys.toString(QKeySequence::PortableText)}, KConfig::Notify);
+            buttonGroup.writeEntry(it.key(), QStringList{u"Key"_s, keys.toString(QKeySequence::PortableText)}, KConfig::Notify);
         } else {
             buttonGroup.deleteEntry(it.key(), KConfig::Notify);
         }

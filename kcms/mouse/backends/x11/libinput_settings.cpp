@@ -8,11 +8,13 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+using namespace Qt::StringLiterals;
+
 template<>
 bool LibinputSettings::load(QString key, bool defVal)
 {
-    KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig("kcminputrc");
-    KConfigGroup group(kcminputPtr, QStringLiteral("Mouse"));
+    KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig(u"kcminputrc"_s);
+    KConfigGroup group(kcminputPtr, u"Mouse"_s);
 
     return group.readEntry(key, defVal);
 }
@@ -20,8 +22,8 @@ bool LibinputSettings::load(QString key, bool defVal)
 template<>
 qreal LibinputSettings::load(QString key, qreal defVal)
 {
-    KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig("kcminputrc");
-    KConfigGroup group(kcminputPtr, QStringLiteral("Mouse"));
+    KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig(u"kcminputrc"_s);
+    KConfigGroup group(kcminputPtr, u"Mouse"_s);
 
     return group.readEntry(key, defVal);
 }
@@ -29,8 +31,8 @@ qreal LibinputSettings::load(QString key, qreal defVal)
 template<>
 void LibinputSettings::save(QString key, bool val)
 {
-    KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig("kcminputrc");
-    KConfigGroup group(kcminputPtr, QStringLiteral("Mouse"));
+    KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig(u"kcminputrc"_s);
+    KConfigGroup group(kcminputPtr, u"Mouse"_s);
 
     group.writeEntry(key, val);
 
@@ -41,8 +43,8 @@ void LibinputSettings::save(QString key, bool val)
 template<>
 void LibinputSettings::save(QString key, qreal val)
 {
-    KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig("kcminputrc");
-    KConfigGroup group(kcminputPtr, QStringLiteral("Mouse"));
+    KSharedConfig::Ptr kcminputPtr = KSharedConfig::openConfig(u"kcminputrc"_s);
+    KConfigGroup group(kcminputPtr, u"Mouse"_s);
 
     group.writeEntry(key, val);
 

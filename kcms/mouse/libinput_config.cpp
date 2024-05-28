@@ -56,7 +56,7 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     m_view->setClearColor(Qt::transparent);
     m_view->setAttribute(Qt::WA_AlwaysStackOnTop);
 
-    m_view->rootContext()->setContextProperty("__backend", m_backend);
+    m_view->rootContext()->setContextProperty(u"__backend"_s, m_backend);
 
     QObject::connect(m_view, &QQuickWidget::statusChanged, [&](QQuickWidget::Status status) {
         if (status == QQuickWidget::Ready) {
@@ -157,7 +157,7 @@ void LibinputConfig::onDeviceRemoved(int index)
 {
     QQuickItem *rootObj = m_view->rootObject();
 
-    int activeIndex = QQmlProperty::read(rootObj, "deviceIndex").toInt();
+    int activeIndex = QQmlProperty::read(rootObj, u"deviceIndex"_s).toInt();
     if (activeIndex == index) {
         m_errorMessage->setMessageType(KMessageWidget::Information);
         if (m_backend->deviceCount()) {
