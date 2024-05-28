@@ -56,3 +56,7 @@ void InputBackend::registerImplementationTypes(const char *uri)
     qmlRegisterUncreatableType<KWinWaylandBackend>(uri, 1, 0, "KWinWaylandBackend", QString());
 #endif
 }
+
+#include <fixx11h.h>
+
+#include "moc_inputbackend.cpp"
