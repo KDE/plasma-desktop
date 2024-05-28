@@ -17,7 +17,7 @@ class KWinWaylandBackend : public InputBackend
 {
     Q_OBJECT
 
-    Q_PROPERTY(QVariantMap buttonMapping READ buttonMapping WRITE setButtonMapping NOTIFY buttonMappingChanged)
+    Q_PROPERTY(QVariantMap buttonMapping READ buttonMapping WRITE setButtonMapping NOTIFY buttonMappingChanged FINAL)
 
 public:
     explicit KWinWaylandBackend(QObject *parent = nullptr);

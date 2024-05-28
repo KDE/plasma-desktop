@@ -17,43 +17,43 @@ class KWinWaylandDevice : public QObject
 
     //
     // general
-    Q_PROPERTY(QString name READ name CONSTANT)
-    Q_PROPERTY(bool supportsDisableEvents READ supportsDisableEvents CONSTANT)
-    Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled NOTIFY enabledChanged)
+    Q_PROPERTY(QString name READ name CONSTANT FINAL)
+    Q_PROPERTY(bool supportsDisableEvents READ supportsDisableEvents CONSTANT FINAL)
+    Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled NOTIFY enabledChanged FINAL)
 
     //
     // advanced
-    Q_PROPERTY(Qt::MouseButtons supportedButtons READ supportedButtons CONSTANT)
+    Q_PROPERTY(Qt::MouseButtons supportedButtons READ supportedButtons CONSTANT FINAL)
 
-    Q_PROPERTY(bool supportsLeftHanded READ supportsLeftHanded CONSTANT)
-    Q_PROPERTY(bool leftHandedEnabledByDefault READ leftHandedEnabledByDefault CONSTANT)
-    Q_PROPERTY(bool leftHanded READ isLeftHanded WRITE setLeftHanded NOTIFY leftHandedChanged)
+    Q_PROPERTY(bool supportsLeftHanded READ supportsLeftHanded CONSTANT FINAL)
+    Q_PROPERTY(bool leftHandedEnabledByDefault READ leftHandedEnabledByDefault CONSTANT FINAL)
+    Q_PROPERTY(bool leftHanded READ isLeftHanded WRITE setLeftHanded NOTIFY leftHandedChanged FINAL)
 
-    Q_PROPERTY(bool supportsMiddleEmulation READ supportsMiddleEmulation CONSTANT)
-    Q_PROPERTY(bool middleEmulationEnabledByDefault READ middleEmulationEnabledByDefault CONSTANT)
-    Q_PROPERTY(bool middleEmulation READ isMiddleEmulation WRITE setMiddleEmulation NOTIFY middleEmulationChanged)
+    Q_PROPERTY(bool supportsMiddleEmulation READ supportsMiddleEmulation CONSTANT FINAL)
+    Q_PROPERTY(bool middleEmulationEnabledByDefault READ middleEmulationEnabledByDefault CONSTANT FINAL)
+    Q_PROPERTY(bool middleEmulation READ isMiddleEmulation WRITE setMiddleEmulation NOTIFY middleEmulationChanged FINAL)
 
     //
     // acceleration speed and profile
-    Q_PROPERTY(bool supportsPointerAcceleration READ supportsPointerAcceleration CONSTANT)
-    Q_PROPERTY(qreal pointerAcceleration READ pointerAcceleration WRITE setPointerAcceleration NOTIFY pointerAccelerationChanged)
+    Q_PROPERTY(bool supportsPointerAcceleration READ supportsPointerAcceleration CONSTANT FINAL)
+    Q_PROPERTY(qreal pointerAcceleration READ pointerAcceleration WRITE setPointerAcceleration NOTIFY pointerAccelerationChanged FINAL)
 
-    Q_PROPERTY(bool supportsPointerAccelerationProfileFlat READ supportsPointerAccelerationProfileFlat CONSTANT)
-    Q_PROPERTY(bool defaultPointerAccelerationProfileFlat READ defaultPointerAccelerationProfileFlat CONSTANT)
+    Q_PROPERTY(bool supportsPointerAccelerationProfileFlat READ supportsPointerAccelerationProfileFlat CONSTANT FINAL)
+    Q_PROPERTY(bool defaultPointerAccelerationProfileFlat READ defaultPointerAccelerationProfileFlat CONSTANT FINAL)
     Q_PROPERTY(bool pointerAccelerationProfileFlat READ pointerAccelerationProfileFlat WRITE setPointerAccelerationProfileFlat NOTIFY
-                   pointerAccelerationProfileFlatChanged)
+                   pointerAccelerationProfileFlatChanged FINAL)
 
-    Q_PROPERTY(bool supportsPointerAccelerationProfileAdaptive READ supportsPointerAccelerationProfileAdaptive CONSTANT)
-    Q_PROPERTY(bool defaultPointerAccelerationProfileAdaptive READ defaultPointerAccelerationProfileAdaptive CONSTANT)
+    Q_PROPERTY(bool supportsPointerAccelerationProfileAdaptive READ supportsPointerAccelerationProfileAdaptive CONSTANT FINAL)
+    Q_PROPERTY(bool defaultPointerAccelerationProfileAdaptive READ defaultPointerAccelerationProfileAdaptive CONSTANT FINAL)
     Q_PROPERTY(bool pointerAccelerationProfileAdaptive READ pointerAccelerationProfileAdaptive WRITE setPointerAccelerationProfileAdaptive NOTIFY
-                   pointerAccelerationProfileAdaptiveChanged)
+                   pointerAccelerationProfileAdaptiveChanged FINAL)
 
     //
     // scrolling
-    Q_PROPERTY(bool supportsNaturalScroll READ supportsNaturalScroll CONSTANT)
-    Q_PROPERTY(bool naturalScrollEnabledByDefault READ naturalScrollEnabledByDefault CONSTANT)
-    Q_PROPERTY(bool naturalScroll READ isNaturalScroll WRITE setNaturalScroll NOTIFY naturalScrollChanged)
-    Q_PROPERTY(qreal scrollFactor READ scrollFactor WRITE setScrollFactor NOTIFY scrollFactorChanged)
+    Q_PROPERTY(bool supportsNaturalScroll READ supportsNaturalScroll CONSTANT FINAL)
+    Q_PROPERTY(bool naturalScrollEnabledByDefault READ naturalScrollEnabledByDefault CONSTANT FINAL)
+    Q_PROPERTY(bool naturalScroll READ isNaturalScroll WRITE setNaturalScroll NOTIFY naturalScrollChanged FINAL)
+    Q_PROPERTY(qreal scrollFactor READ scrollFactor WRITE setScrollFactor NOTIFY scrollFactorChanged FINAL)
 
 public:
     KWinWaylandDevice(const QString &dbusName);

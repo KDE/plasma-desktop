@@ -17,8 +17,8 @@ class InputBackend : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QList<QObject *> inputDevices READ inputDevices NOTIFY inputDevicesChanged)
-    Q_PROPERTY(bool isAnonymousInputDevice READ isAnonymousInputDevice CONSTANT)
+    Q_PROPERTY(QList<QObject *> inputDevices READ inputDevices NOTIFY inputDevicesChanged FINAL)
+    Q_PROPERTY(bool isAnonymousInputDevice READ isAnonymousInputDevice CONSTANT FINAL)
 
 protected:
     explicit InputBackend(QObject *parent)
