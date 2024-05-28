@@ -400,7 +400,7 @@ Kirigami.ApplicationItem {
                 twinFormLayouts: otherLayout
                 Repeater {
                     id: buttonMappings
-                    model: extraButtons?.filter(entry => root.backend.buttonMapping?.hasOwnProperty(entry.buttonName)) ?? []
+                    model: extraButtons?.filter(entry => entry.buttonName in root.backend.buttonMapping) ?? []
 
                     readonly property var extraButtons: Array.from({length: 24}, (value, index) => ({
                         buttonName: "ExtraButton" + (index + 1),

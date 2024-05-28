@@ -19,6 +19,7 @@ class InputBackend : public QObject
 
     Q_PROPERTY(QList<QObject *> inputDevices READ inputDevices NOTIFY inputDevicesChanged FINAL)
     Q_PROPERTY(bool isAnonymousInputDevice READ isAnonymousInputDevice CONSTANT FINAL)
+    Q_PROPERTY(QVariantMap buttonMapping READ buttonMapping WRITE setButtonMapping NOTIFY buttonMappingChanged FINAL)
 
 protected:
     explicit InputBackend(QObject *parent)
@@ -69,8 +70,18 @@ public:
         return QList<QObject *>();
     }
 
+    virtual QVariantMap buttonMapping() const
+    {
+        return {};
+    }
+
+    virtual void setButtonMapping([[maybe_unused]] const QVariantMap &mapping)
+    {
+    }
+
 Q_SIGNALS:
     void inputDevicesChanged();
     void deviceAdded(bool success);
     void deviceRemoved(int index);
+    void buttonMappingChanged();
 };

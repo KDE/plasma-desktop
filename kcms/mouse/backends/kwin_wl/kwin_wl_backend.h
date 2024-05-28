@@ -17,8 +17,6 @@ class KWinWaylandBackend : public InputBackend
 {
     Q_OBJECT
 
-    Q_PROPERTY(QVariantMap buttonMapping READ buttonMapping WRITE setButtonMapping NOTIFY buttonMappingChanged FINAL)
-
 public:
     explicit KWinWaylandBackend(QObject *parent = nullptr);
     ~KWinWaylandBackend();
@@ -31,11 +29,8 @@ public:
     int deviceCount() const override;
     QList<QObject *> inputDevices() const override;
 
-    QVariantMap buttonMapping() const;
-    void setButtonMapping(const QVariantMap &mapping);
-
-Q_SIGNALS:
-    void buttonMappingChanged();
+    QVariantMap buttonMapping() const override;
+    void setButtonMapping(const QVariantMap &mapping) override;
 
 private Q_SLOTS:
     void onDeviceAdded(QString);
