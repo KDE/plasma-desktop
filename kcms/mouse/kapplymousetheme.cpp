@@ -14,7 +14,6 @@
 #include <QDebug>
 #include <QFile>
 #include <QGuiApplication>
-#include <memory> // std::unique_ptr
 
 int main(int argc, char *argv[])
 {
