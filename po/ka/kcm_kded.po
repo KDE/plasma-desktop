@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2023-06-29 05:54+0200\n"
+"PO-Revision-Date: 2024-05-28 06:07+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -100,18 +100,16 @@ msgid "Load-on-Demand Services"
 msgstr "საჭიროებისამებრ ჩატვირთვადი სერვისები"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "სერვისის ჩატვირთვისას გაშვების გადართვა"
+msgstr "%1-ის გაშვებისას ავტომატური გაშვების გათიშვა"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "სერვისის ჩატვირთვისას გაშვების გადართვა"
+msgstr "%1-ის გაშვებისას ავტომატური გაშვების ჩართვა"
 
 #: ui/main.qml:168
 #, kde-format
@@ -132,13 +130,13 @@ msgstr "გაშვებული"
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr ""
+msgstr "%1-ის გაჩერება"
 
 #: ui/main.qml:233
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr ""
+msgstr "%1-ის გაშვება"
 
 #: ui/main.qml:236
 #, kde-format

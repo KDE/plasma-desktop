@@ -1,15 +1,15 @@
 # translation of kcmkded.po to Polish
-# Version: $Revision: 1680767 $
+# Version: $Revision: 1681059 $
 # Copyright (C) 2003, 2004, 2008 Free Software Foundation, Inc.
-#
 # Wojciech Milewski <Wojciech Milewski@wp.pl>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2003, 2004, 2008.
 # Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2017, 2020, 2021, 2022, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2023-07-01 07:51+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -17,9 +17,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-">\n"
-">\n"
-"X-Generator: Lokalize 23.04.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -106,26 +103,54 @@ msgid "Load-on-Demand Services"
 msgstr "Usługi na żądanie"
 
 #: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Disable automatically loading %1 on startup"
+msgstr "Przestaw samoczynne uruchamianie tej usług po uruchomieniu systemu"
+
+#: ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@action:button %1 service name"
+msgid "Enable automatically loading %1 on startup"
+msgstr "Przestaw samoczynne uruchamianie tej usług po uruchomieniu systemu"
+
+#: ui/main.qml:168
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "Przestaw samoczynne uruchamianie tej usług po uruchomieniu systemu"
 
-#: ui/main.qml:210
+#: ui/main.qml:212
 #, kde-format
 msgid "Not running"
 msgstr "Nieuruchomiona"
 
-#: ui/main.qml:211
+#: ui/main.qml:213
 #, kde-format
 msgid "Running"
 msgstr "Uruchomiona"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action:button %1 service name"
+msgid "Stop %1"
+msgstr "Zatrzymaj"
+
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Start"
+msgctxt "@action:button %1 service name"
+msgid "Start %1"
+msgstr "Uruchom"
+
+#: ui/main.qml:236
 #, kde-format
 msgid "Stop Service"
 msgstr "Zatrzymaj usługę"
 
-#: ui/main.qml:230
+#: ui/main.qml:236
 #, kde-format
 msgid "Start Service"
 msgstr "Uruchom usługę"
@@ -202,12 +227,6 @@ msgstr "Uruchom usługę"
 
 #~ msgid "Use"
 #~ msgstr "Używana"
-
-#~ msgid "Start"
-#~ msgstr "Uruchom"
-
-#~ msgid "Stop"
-#~ msgstr "Zatrzymaj"
 
 #~ msgid "Unable to contact KDED."
 #~ msgstr "Nie można połączyć się z KDED."

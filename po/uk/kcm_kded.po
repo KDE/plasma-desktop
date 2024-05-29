@@ -6,20 +6,20 @@
 # Eugene Onischenko <oneugene@ukr.net>, 2002, 2003.
 # Andriy Rysin <arysin@bcsii.com>, 2002, 2003, 2004, 2006, 2007.
 # Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2005, 2007, 2008.
-# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2015, 2017, 2020, 2023.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2015, 2017, 2020, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_kded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2023-06-29 23:09+0300\n"
+"PO-Revision-Date: 2024-05-28 09:20+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language-Team: Ukrainian\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
@@ -104,20 +104,16 @@ msgid "Load-on-Demand Services"
 msgstr "Служби, які завантажуються за запитом"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr ""
-"Увімкнути або вимкнути автоматичне завантаження цієї служби під час запуску"
+msgstr "Вимкнути автоматичне завантаження %1 під час запуску"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr ""
-"Увімкнути або вимкнути автоматичне завантаження цієї служби під час запуску"
+msgstr "Увімкнути автоматичне завантаження %1 під час запуску"
 
 #: ui/main.qml:168
 #, kde-format
@@ -136,18 +132,16 @@ msgid "Running"
 msgstr "Запущено"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Stop"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr "Зупинити"
+msgstr "Зупинити %1"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr "Запустити"
+msgstr "Запустити %1"
 
 #: ui/main.qml:236
 #, kde-format

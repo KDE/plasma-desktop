@@ -15,21 +15,22 @@
 # Diego Iastrubni <elcuco@kde.org>, 2008, 2012.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_kded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2023-09-28 23:53+0300\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-05-28 09:23+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -109,18 +110,16 @@ msgid "Load-on-Demand Services"
 msgstr "שירותים הנטענים לפי דרישה"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "החלפת מצב טעינה אוטומטית של השירות הזה עם הפתיחה"
+msgstr "השבתת טעינת %1 אוטומטית עם העלייה"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "החלפת מצב טעינה אוטומטית של השירות הזה עם הפתיחה"
+msgstr "הפעלת טעינת %1 אוטומטית עם העלייה"
 
 #: ui/main.qml:168
 #, kde-format
@@ -138,18 +137,16 @@ msgid "Running"
 msgstr "פועל"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Stop"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr "עצור"
+msgstr "עצירת %1"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr "הפעל"
+msgstr "הפעלת %1"
 
 #: ui/main.qml:236
 #, kde-format

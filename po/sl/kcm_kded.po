@@ -1,6 +1,6 @@
 # Translation of kcmkded.po to Slovenian
 # Copyright (C) 2002, 2003, 2004 Free Software Foundation, Inc.
-# $Id: kcm_kded.po 1681018 2024-05-28 01:09:59Z scripty $
+# $Id: kcm_kded.po 1681083 2024-05-29 01:10:42Z scripty $
 # $Source$
 #
 # Gregor Rakar <gregor.rakar@kiss.si>, 2002, 2003, 2004.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2023-06-29 07:01+0200\n"
+"PO-Revision-Date: 2024-05-28 07:18+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -106,18 +106,16 @@ msgid "Load-on-Demand Services"
 msgstr "Storitve na zahtevo"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "Preklaplja samodejno nalaganje te storitve ob zagonu"
+msgstr "Onemogoči samodejno nalaganje %1 ob zagonu"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "Preklaplja samodejno nalaganje te storitve ob zagonu"
+msgstr "Omogoči samodejno nalaganje %1 ob zagonu"
 
 #: ui/main.qml:168
 #, kde-format
@@ -135,18 +133,16 @@ msgid "Running"
 msgstr "Teče"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Stop"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr "Zaustavi"
+msgstr "Zaustavi %1"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr "Zaženi"
+msgstr "Zaženi %1"
 
 #: ui/main.qml:236
 #, kde-format
