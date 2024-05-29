@@ -16,7 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -88,7 +87,7 @@ msgstr "Oznacz aplikację na pasku zadań, gdy odtwarza dźwięk"
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr "Wypełnij pustą przestrzeń na panelu"
+msgstr "Wypełnij pustą przestrzeń na pasku"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
@@ -369,17 +368,17 @@ msgstr "Zminimalizowane"
 #: package/contents/ui/ConfigBehavior.qml:204
 #, kde-format
 msgid "When panel is hidden:"
-msgstr "Gdy panel jest ukryty:"
+msgstr "Gdy pasek jest schowany:"
 
 #: package/contents/ui/ConfigBehavior.qml:205
 #, kde-format
 msgid "Unhide when a window wants attention"
-msgstr "Odkryj go, gdy okno oczekuje uwagi"
+msgstr "Odkryj go, gdy dowolne zadanie będzie oczekiwało uwagi"
 
 #: package/contents/ui/ConfigBehavior.qml:217
 #, kde-format
 msgid "New tasks appear:"
-msgstr "Nowe zadania pojawiają się:"
+msgstr "Nowe zadania będą pojawiać się:"
 
 #: package/contents/ui/ConfigBehavior.qml:221
 #, kde-format
