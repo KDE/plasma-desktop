@@ -68,9 +68,8 @@ public Q_SLOTS:
     void save() override;
     void defaults() override;
 
-    void checkForChanges();
-
 private Q_SLOTS:
+    void updateKcmNeedsSave();
     void onDeviceAdded(bool success);
     void onDeviceRemoved(int index);
 

@@ -10,6 +10,7 @@ X11LibinputBackend::X11LibinputBackend(QObject *parent)
     : InputBackend(parent)
     , m_device(new X11LibinputDummyDevice(this, QX11Info::display()))
 {
+    connect(m_device.get(), &X11LibinputDummyDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);
 }
 
 bool X11LibinputBackend::save()

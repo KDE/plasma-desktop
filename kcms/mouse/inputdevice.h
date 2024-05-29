@@ -118,6 +118,8 @@ public:
     virtual void setScrollFactor(qreal set) = 0;
 
 Q_SIGNALS:
+    void needsSaveChanged();
+
     void leftHandedChanged();
     void pointerAccelerationChanged();
     void pointerAccelerationProfileFlatChanged();

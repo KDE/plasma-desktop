@@ -94,6 +94,8 @@ public:
     }
 
 Q_SIGNALS:
+    void needsSaveChanged();
+
     void inputDevicesChanged();
     void deviceAdded(bool success);
     void deviceRemoved(int index);

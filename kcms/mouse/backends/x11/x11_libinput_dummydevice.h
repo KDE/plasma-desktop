@@ -216,6 +216,7 @@ private:
                     // clang-format off
                     Q_EMIT (device->*changedSignalFunction)();
                     // clang-format on
+                    Q_EMIT device->needsSaveChanged();
                 }
             }
         }
@@ -227,6 +228,7 @@ private:
                     // clang-format off
                     Q_EMIT (device->*changedSignalFunction)();
                     // clang-format on
+                    Q_EMIT device->needsSaveChanged();
                 }
             }
         }

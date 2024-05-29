@@ -85,7 +85,6 @@ KCMUtils.SimpleKCM {
                         const copy = root.backend.buttonMapping;
                         copy[modelData.buttonName] = keySequence
                         root.backend.buttonMapping = copy
-                        root.KCMUtils.ConfigModule.checkForChanges();
                     }
                 }
             }
@@ -142,7 +141,6 @@ KCMUtils.SimpleKCM {
                     const copy = root.backend.buttonMapping;
                     copy[buttonCapture.lastButton.buttonName] = keySequence
                     root.backend.buttonMapping = copy
-                    root.KCMUtils.ConfigModule.checkForChanges();
                 }
             }
         }
