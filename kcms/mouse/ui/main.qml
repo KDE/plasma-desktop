@@ -360,7 +360,7 @@ Kirigami.ApplicationItem {
             QQC2.Button  {
                 text: i18ndc("kcmmouse", "@action:button", "Re-bind Additional Mouse Buttons…")
                 visible: !root.backend.isAnonymousInputDevice && (
-                    buttonMappings.model.length > 0 || root.backend.inputDevices.some(supportsExtraButtons)
+                    root.backend.buttonMappingCount > 0 || root.backend.inputDevices.some(supportsExtraButtons)
                 )
                 onClicked: root.pageStack.push(buttonPage)
 

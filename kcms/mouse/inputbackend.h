@@ -20,6 +20,7 @@ class InputBackend : public QObject
     Q_PROPERTY(QList<QObject *> inputDevices READ inputDevices NOTIFY inputDevicesChanged FINAL)
     Q_PROPERTY(bool isAnonymousInputDevice READ isAnonymousInputDevice CONSTANT FINAL)
     Q_PROPERTY(QVariantMap buttonMapping READ buttonMapping WRITE setButtonMapping NOTIFY buttonMappingChanged FINAL)
+    Q_PROPERTY(int buttonMappingCount READ buttonMappingCount NOTIFY buttonMappingChanged STORED false FINAL)
 
 protected:
     explicit InputBackend(QObject *parent)
@@ -77,6 +78,12 @@ public:
 
     virtual void setButtonMapping([[maybe_unused]] const QVariantMap &mapping)
     {
+    }
+
+    // Because QML can't QVariantMap::count() on its own.
+    int buttonMappingCount() const
+    {
+        return buttonMapping().count();
     }
 
 Q_SIGNALS:
