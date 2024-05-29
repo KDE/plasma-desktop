@@ -155,7 +155,7 @@ Item {
         id: floatingTranslucentItem
         visible: floatingness !== 0 && panelOpacity !== 1
         x: root.leftEdge ? fixedLeftFloatingPadding + fixedRightFloatingPadding * (1 - floatingness) : leftFloatingPadding
-        y: root.topEdge ? fixedTopFloatingPadding + fixedBottomFloatingPadding * (1 - floatingness) : topFloatingPadding
+        y: topFloatingPadding//root.topEdge ? fixedTopFloatingPadding + fixedBottomFloatingPadding * (1 - floatingness) : topFloatingPadding
         width: verticalPanel ? panel.thickness : parent.width - leftFloatingPadding - rightFloatingPadding
         height: verticalPanel ? parent.height - topFloatingPadding - bottomFloatingPadding : panel.thickness
 
