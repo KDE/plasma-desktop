@@ -56,7 +56,6 @@ ContainmentItem {
     property bool useListViewMode: isPopup && Plasmoid.configuration.viewMode === 0
 
     property Component appletAppearanceComponent
-    property Item toolBox
 
     property int handleDelay: 800
     property real haloOpacity: 0.5
