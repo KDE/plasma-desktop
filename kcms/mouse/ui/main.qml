@@ -22,18 +22,11 @@ import org.kde.plasma.private.kcm_mouse as Mouse
 KCMUtils.SimpleKCM {
     id: root
 
-    // KCMMouse class reads from this property
-    readonly property int deviceIndex: (
-        (deviceSelector.currentIndex >= 0 && deviceSelector.currentIndex < backend.inputDevices.length)
-            ? deviceSelector.currentIndex
-            : -1
-    )
-
     // Would be nice to use a `required` qualifier, but KQuickManagedConfigModule doesn't
     // have an API to provide a mapping of initial properties for the root page.
     readonly property Mouse.InputBackend backend: KCMUtils.ConfigModule.inputBackend
 
-    readonly property Mouse.InputDevice device: backend.inputDevices[deviceIndex] ?? null
+    readonly property Mouse.InputDevice device: backend.inputDevices[KCMUtils.ConfigModule.currentDeviceIndex] ?? null
 
     header: Message {
         message: root.KCMUtils.ConfigModule.message
@@ -50,23 +43,15 @@ KCMUtils.SimpleKCM {
             visible: !root.backend.isAnonymousInputDevice
             enabled: count > 1
             Layout.fillWidth: true
-            model: {
-                const devices = root.backend.inputDevices;
-                if (devices.length > 0) {
-                    return devices;
-                } else {
-                    return [""];
-                }
-            }
+            model: root.backend.inputDevices
             textRole: "name"
 
-            Connections {
-                target: root.backend
-                function onDeviceRemoved(index: int): void {
-                    if (index < deviceSelector.currentIndex) {
-                        --deviceSelector.currentIndex;
-                    }
-                }
+            Component.onCompleted: {
+                currentIndex = Qt.binding(() => root.KCMUtils.ConfigModule.currentDeviceIndex);
+            }
+
+            onActivated: {
+                root.KCMUtils.ConfigModule.currentDeviceIndex = currentIndex;
             }
         }
 

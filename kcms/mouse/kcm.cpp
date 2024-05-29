@@ -94,6 +94,7 @@ KCMMouse::KCMMouse(QObject *parent, const KPluginMetaData &data, [[maybe_unused]
         connect(m_inputBackend.get(), &InputBackend::deviceAdded, this, &KCMMouse::onDeviceAdded);
         connect(m_inputBackend.get(), &InputBackend::deviceRemoved, this, &KCMMouse::onDeviceRemoved);
     }
+    setCurrentDeviceIndex(0);
 }
 
 const Message &KCMMouse::message() const
@@ -104,6 +105,22 @@ const Message &KCMMouse::message() const
 InputBackend *KCMMouse::inputBackend() const
 {
     return m_inputBackend.get();
+}
+
+int KCMMouse::currentDeviceIndex() const
+{
+    return m_currentDeviceIndex;
+}
+
+void KCMMouse::setCurrentDeviceIndex(int index)
+{
+    // Should be at least zero, even if there are no devices. Thus it can't be
+    // a clamp() because that might crash when low is greater than high.
+    index = std::max(0, std::min(index, m_inputBackend->deviceCount() - 1));
+    if (m_currentDeviceIndex != index) {
+        m_currentDeviceIndex = index;
+        Q_EMIT currentDeviceIndexChanged();
+    }
 }
 
 bool KCMMouse::isSaveNeeded() const
@@ -173,6 +190,7 @@ void KCMMouse::onDeviceAdded(bool success)
 {
     if (!success) {
         setMessage(Message::error(i18n("Error while adding newly connected device. Please reconnect it and restart this configuration module.")));
+        return;
     }
 
     if (m_inputBackend->deviceCount() == 1) {
@@ -182,10 +200,7 @@ void KCMMouse::onDeviceAdded(bool success)
 
 void KCMMouse::onDeviceRemoved(int index)
 {
-    const auto *rootObj = mainUi();
-
-    int activeIndex = QQmlProperty::read(rootObj, u"deviceIndex"_s).toInt();
-    if (activeIndex == index) {
+    if (m_currentDeviceIndex == index) {
         QString text;
         if (m_inputBackend->deviceCount()) {
             text = i18n("Pointer device disconnected. Closed its setting dialog.");
@@ -193,6 +208,10 @@ void KCMMouse::onDeviceRemoved(int index)
             text = i18n("Pointer device disconnected. No other devices found.");
         }
         setMessage(Message::information(text));
+    }
+
+    if (m_currentDeviceIndex >= index) {
+        setCurrentDeviceIndex(index - 1);
     }
 
     setNeedsSave(m_inputBackend->isChangedConfig());
