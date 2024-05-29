@@ -6,6 +6,7 @@
 
 #include "libinput_config.h"
 #include "configcontainer.h"
+#include "inputdevice.h"
 
 #include <KAboutData>
 #include <KLocalizedContext>
@@ -32,6 +33,7 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     const auto uri = "org.kde.plasma.private.kcm_mouse";
     qmlRegisterUncreatableType<InputBackend>(uri, 1, 0, "InputBackend", u""_s);
     InputBackend::registerImplementationTypes(uri);
+    qmlRegisterUncreatableType<InputDevice>(uri, 1, 0, "InputDevice", u""_s);
 
     m_backend = backend;
 

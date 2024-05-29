@@ -6,54 +6,16 @@
 
 #pragma once
 
+#include "inputdevice.h"
+
 #include <QObject>
 #include <QString>
 
 class QDBusInterface;
 
-class KWinWaylandDevice : public QObject
+class KWinWaylandDevice : public InputDevice
 {
     Q_OBJECT
-
-    //
-    // general
-    Q_PROPERTY(QString name READ name CONSTANT FINAL)
-    Q_PROPERTY(bool supportsDisableEvents READ supportsDisableEvents CONSTANT FINAL)
-    Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled NOTIFY enabledChanged FINAL)
-
-    //
-    // advanced
-    Q_PROPERTY(Qt::MouseButtons supportedButtons READ supportedButtons CONSTANT FINAL)
-
-    Q_PROPERTY(bool supportsLeftHanded READ supportsLeftHanded CONSTANT FINAL)
-    Q_PROPERTY(bool leftHandedEnabledByDefault READ leftHandedEnabledByDefault CONSTANT FINAL)
-    Q_PROPERTY(bool leftHanded READ isLeftHanded WRITE setLeftHanded NOTIFY leftHandedChanged FINAL)
-
-    Q_PROPERTY(bool supportsMiddleEmulation READ supportsMiddleEmulation CONSTANT FINAL)
-    Q_PROPERTY(bool middleEmulationEnabledByDefault READ middleEmulationEnabledByDefault CONSTANT FINAL)
-    Q_PROPERTY(bool middleEmulation READ isMiddleEmulation WRITE setMiddleEmulation NOTIFY middleEmulationChanged FINAL)
-
-    //
-    // acceleration speed and profile
-    Q_PROPERTY(bool supportsPointerAcceleration READ supportsPointerAcceleration CONSTANT FINAL)
-    Q_PROPERTY(qreal pointerAcceleration READ pointerAcceleration WRITE setPointerAcceleration NOTIFY pointerAccelerationChanged FINAL)
-
-    Q_PROPERTY(bool supportsPointerAccelerationProfileFlat READ supportsPointerAccelerationProfileFlat CONSTANT FINAL)
-    Q_PROPERTY(bool defaultPointerAccelerationProfileFlat READ defaultPointerAccelerationProfileFlat CONSTANT FINAL)
-    Q_PROPERTY(bool pointerAccelerationProfileFlat READ pointerAccelerationProfileFlat WRITE setPointerAccelerationProfileFlat NOTIFY
-                   pointerAccelerationProfileFlatChanged FINAL)
-
-    Q_PROPERTY(bool supportsPointerAccelerationProfileAdaptive READ supportsPointerAccelerationProfileAdaptive CONSTANT FINAL)
-    Q_PROPERTY(bool defaultPointerAccelerationProfileAdaptive READ defaultPointerAccelerationProfileAdaptive CONSTANT FINAL)
-    Q_PROPERTY(bool pointerAccelerationProfileAdaptive READ pointerAccelerationProfileAdaptive WRITE setPointerAccelerationProfileAdaptive NOTIFY
-                   pointerAccelerationProfileAdaptiveChanged FINAL)
-
-    //
-    // scrolling
-    Q_PROPERTY(bool supportsNaturalScroll READ supportsNaturalScroll CONSTANT FINAL)
-    Q_PROPERTY(bool naturalScrollEnabledByDefault READ naturalScrollEnabledByDefault CONSTANT FINAL)
-    Q_PROPERTY(bool naturalScroll READ isNaturalScroll WRITE setNaturalScroll NOTIFY naturalScrollChanged FINAL)
-    Q_PROPERTY(qreal scrollFactor READ scrollFactor WRITE setScrollFactor NOTIFY scrollFactorChanged FINAL)
 
 public:
     KWinWaylandDevice(const QString &dbusName);
@@ -67,153 +29,166 @@ public:
 
     //
     // general
-    QString name() const
+    QString name() const override
     {
         return m_name.val;
     }
+
     QString sysName() const
     {
         return m_sysName.val;
     }
-    bool supportsDisableEvents() const
+
+    bool supportsDisableEvents() const override
     {
         return m_supportsDisableEvents.val;
     }
-    void setEnabled(bool enabled)
+
+    void setEnabled(bool enabled) override
     {
         m_enabled.set(enabled);
     }
-    bool isEnabled() const
+
+    bool isEnabled() const override
     {
         return m_enabled.val;
     }
-    Qt::MouseButtons supportedButtons() const
+
+    Qt::MouseButtons supportedButtons() const override
     {
         return m_supportedButtons.val;
     }
 
     //
     // advanced
-    bool supportsLeftHanded() const
+    bool supportsLeftHanded() const override
     {
         return m_supportsLeftHanded.val;
     }
-    bool leftHandedEnabledByDefault() const
+
+    bool leftHandedEnabledByDefault() const override
     {
         return m_leftHandedEnabledByDefault.val;
     }
-    bool isLeftHanded() const
+
+    bool isLeftHanded() const override
     {
         return m_leftHanded.val;
     }
-    void setLeftHanded(bool set)
+
+    void setLeftHanded(bool set) override
     {
         m_leftHanded.set(set);
     }
 
-    bool supportsMiddleEmulation() const
+    bool supportsMiddleEmulation() const override
     {
         return m_supportsMiddleEmulation.val;
     }
-    bool middleEmulationEnabledByDefault() const
+
+    bool middleEmulationEnabledByDefault() const override
     {
         return m_middleEmulationEnabledByDefault.val;
     }
-    bool isMiddleEmulation() const
+
+    bool isMiddleEmulation() const override
     {
         return m_middleEmulation.val;
     }
-    void setMiddleEmulation(bool set)
+
+    void setMiddleEmulation(bool set) override
     {
         m_middleEmulation.set(set);
     }
 
     //
     // acceleration speed and profile
-    bool supportsPointerAcceleration() const
+    bool supportsPointerAcceleration() const override
     {
         return m_supportsPointerAcceleration.val;
     }
-    qreal pointerAcceleration() const
+
+    qreal pointerAcceleration() const override
     {
         return m_pointerAcceleration.val;
     }
-    void setPointerAcceleration(qreal acceleration)
+
+    void setPointerAcceleration(qreal acceleration) override
     {
         m_pointerAcceleration.set(acceleration);
     }
 
-    bool supportsPointerAccelerationProfileFlat() const
+    bool supportsPointerAccelerationProfileFlat() const override
     {
         return m_supportsPointerAccelerationProfileFlat.val;
     }
-    bool defaultPointerAccelerationProfileFlat() const
+
+    bool defaultPointerAccelerationProfileFlat() const override
     {
         return m_defaultPointerAccelerationProfileFlat.val;
     }
-    bool pointerAccelerationProfileFlat() const
+
+    bool pointerAccelerationProfileFlat() const override
     {
         return m_pointerAccelerationProfileFlat.val;
     }
-    void setPointerAccelerationProfileFlat(bool set)
+
+    void setPointerAccelerationProfileFlat(bool set) override
     {
         m_pointerAccelerationProfileFlat.set(set);
     }
 
-    bool supportsPointerAccelerationProfileAdaptive() const
+    bool supportsPointerAccelerationProfileAdaptive() const override
     {
         return m_supportsPointerAccelerationProfileAdaptive.val;
     }
-    bool defaultPointerAccelerationProfileAdaptive() const
+
+    bool defaultPointerAccelerationProfileAdaptive() const override
     {
         return m_defaultPointerAccelerationProfileAdaptive.val;
     }
-    bool pointerAccelerationProfileAdaptive() const
+
+    bool pointerAccelerationProfileAdaptive() const override
     {
         return m_pointerAccelerationProfileAdaptive.val;
     }
-    void setPointerAccelerationProfileAdaptive(bool set)
+
+    void setPointerAccelerationProfileAdaptive(bool set) override
     {
         m_pointerAccelerationProfileAdaptive.set(set);
     }
 
     //
     // scrolling
-    bool supportsNaturalScroll() const
+    bool supportsNaturalScroll() const override
     {
         return m_supportsNaturalScroll.val;
     }
-    bool naturalScrollEnabledByDefault() const
+
+    bool naturalScrollEnabledByDefault() const override
     {
         return m_naturalScrollEnabledByDefault.val;
     }
-    bool isNaturalScroll() const
+
+    bool isNaturalScroll() const override
     {
         return m_naturalScroll.val;
     }
-    void setNaturalScroll(bool set)
+
+    void setNaturalScroll(bool set) override
     {
         m_naturalScroll.set(set);
     }
 
-    qreal scrollFactor() const
+    qreal scrollFactor() const override
     {
         return m_scrollFactor.val;
     }
-    void setScrollFactor(qreal set)
+
+    void setScrollFactor(qreal set) override
     {
         m_scrollFactor.set(set);
     }
-
-Q_SIGNALS:
-    void leftHandedChanged();
-    void pointerAccelerationChanged();
-    void pointerAccelerationProfileFlatChanged();
-    void pointerAccelerationProfileAdaptiveChanged();
-    void enabledChanged();
-    void middleEmulationChanged();
-    void naturalScrollChanged();
-    void scrollFactorChanged();
 
 private:
     template<typename T>

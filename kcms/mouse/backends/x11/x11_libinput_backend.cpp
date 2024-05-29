@@ -55,9 +55,9 @@ bool X11LibinputBackend::isAnonymousInputDevice() const
     return true;
 }
 
-QList<QObject *> X11LibinputBackend::inputDevices() const
+QList<InputDevice *> X11LibinputBackend::inputDevices() const
 {
-    return QList<QObject *>{m_device};
+    return {m_device};
 }
 
 #include "moc_x11_libinput_backend.cpp"

@@ -27,7 +27,7 @@ public:
     bool isChangedConfig() const override;
     QString errorString() const override;
     int deviceCount() const override;
-    QList<QObject *> inputDevices() const override;
+    QList<InputDevice *> inputDevices() const override;
 
     QVariantMap buttonMapping() const override;
     void setButtonMapping(const QVariantMap &mapping) override;

@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include "inputdevice.h"
+
 #include <config-build-options.h>
 
 #include <QList>
@@ -17,7 +19,7 @@ class InputBackend : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QList<QObject *> inputDevices READ inputDevices NOTIFY inputDevicesChanged FINAL)
+    Q_PROPERTY(QList<InputDevice *> inputDevices READ inputDevices NOTIFY inputDevicesChanged FINAL)
     Q_PROPERTY(bool isAnonymousInputDevice READ isAnonymousInputDevice CONSTANT FINAL)
     Q_PROPERTY(QVariantMap buttonMapping READ buttonMapping WRITE setButtonMapping NOTIFY buttonMappingChanged FINAL)
     Q_PROPERTY(int buttonMappingCount READ buttonMappingCount NOTIFY buttonMappingChanged STORED false FINAL)
@@ -40,6 +42,7 @@ public:
     {
         return false;
     }
+
     virtual bool getConfig()
     {
         return false;
@@ -49,6 +52,7 @@ public:
     {
         return false;
     }
+
     virtual bool isChangedConfig() const
     {
         return false;
@@ -63,13 +67,15 @@ public:
     {
         return 0;
     }
+
     virtual bool isAnonymousInputDevice() const
     {
         return false;
     }
-    virtual QList<QObject *> inputDevices() const
+
+    virtual QList<InputDevice *> inputDevices() const
     {
-        return QList<QObject *>();
+        return {};
     }
 
     virtual QVariantMap buttonMapping() const

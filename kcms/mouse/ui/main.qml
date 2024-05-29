@@ -35,8 +35,7 @@ Kirigami.ApplicationItem {
     // have an API to provide a mapping of initial properties.
     readonly property Mouse.InputBackend backend: __backend
 
-    readonly property /*X11LibinputDummyDevice | KWinWaylandDevice*/QtObject device:
-        deviceIndex >= 0 ? backend.inputDevices[deviceIndex] : null
+    readonly property Mouse.InputDevice device: backend.inputDevices[deviceIndex] ?? null
 
     signal changeSignal()
 
@@ -370,7 +369,7 @@ Kirigami.ApplicationItem {
                     page.changeSignal.connect(root.changeSignal);
                 }
 
-                function supportsExtraButtons(device: QtObject): bool {
+                function supportsExtraButtons(device: Mouse.InputDevice): bool {
                     return (device?.supportedButtons ?? 0) & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton);
                 }
             }

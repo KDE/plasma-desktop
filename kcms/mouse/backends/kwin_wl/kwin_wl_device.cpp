@@ -31,7 +31,8 @@ Qt::MouseButtons valueLoaderPart(QVariant const &reply)
 }
 
 KWinWaylandDevice::KWinWaylandDevice(const QString &dbusName)
-    : m_dbusName(dbusName)
+    : InputDevice()
+    , m_dbusName(dbusName)
 {
 }
 

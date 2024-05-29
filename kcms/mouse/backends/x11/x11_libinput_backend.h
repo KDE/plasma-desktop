@@ -7,6 +7,7 @@
 #pragma once
 
 #include "inputbackend.h"
+#include "inputdevice.h"
 #include "x11_libinput_dummydevice.h"
 
 #include <QList>
@@ -28,7 +29,7 @@ public:
     QString errorString() const override;
     int deviceCount() const override;
     bool isAnonymousInputDevice() const override;
-    QList<QObject *> inputDevices() const override;
+    QList<InputDevice *> inputDevices() const override;
 
 private:
     X11LibinputDummyDevice *m_device = nullptr;

@@ -127,7 +127,7 @@ void valueWriterPart<qreal>(qreal val, Atom valAtom, Display *dpy)
 }
 
 X11LibinputDummyDevice::X11LibinputDummyDevice(QObject *parent, Display *dpy)
-    : QObject(parent)
+    : InputDevice(parent)
     , m_settings(new LibinputSettings())
     , m_dpy(dpy)
 {

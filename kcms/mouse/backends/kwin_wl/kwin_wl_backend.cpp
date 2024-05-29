@@ -206,9 +206,9 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
     Q_EMIT inputDevicesChanged();
 }
 
-QList<QObject *> KWinWaylandBackend::inputDevices() const
+QList<InputDevice *> KWinWaylandBackend::inputDevices() const
 {
-    QList<QObject *> devices;
+    QList<InputDevice *> devices;
     devices.reserve(m_devices.count());
     for (const auto &device : m_devices) {
         devices.append(device);

@@ -23,6 +23,8 @@ add_library(kcm_mouse MODULE
     configcontainer.h
     inputbackend.cpp
     inputbackend.h
+    inputdevice.cpp
+    inputdevice.h
     libinput_config.cpp
     libinput_config.h
     plugin.cpp
