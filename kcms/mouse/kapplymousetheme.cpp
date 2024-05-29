@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    // Note: If you update this code, update main.cpp as well.
+    // Note: If you update this code, update kcm.cpp as well.
 
     CursorTheme::applyCursorTheme(theme, size.toInt());
 

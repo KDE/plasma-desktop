@@ -18,16 +18,14 @@ endif()
 
 add_subdirectory(misc)
 
-add_library(kcm_mouse MODULE
-    configcontainer.cpp
-    configcontainer.h
-    inputbackend.cpp
-    inputbackend.h
-    inputdevice.cpp
-    inputdevice.h
-    libinput_config.cpp
-    libinput_config.h
-    plugin.cpp
+kcmutils_add_qml_kcm(kcm_mouse
+    SOURCES
+        kcm.cpp
+        kcm.h
+        inputbackend.cpp
+        inputbackend.h
+        inputdevice.cpp
+        inputdevice.h
 )
 
 if (BUILD_KCM_MOUSE_X11)
@@ -70,17 +68,9 @@ if (BUILD_KCM_MOUSE_X11)
     install(TARGETS kapplymousetheme ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
 
-qt_add_resources(kcm_mouse
-    PREFIX "/"
-    FILES
-        ui/bindings.qml
-        ui/main.qml
-)
-kcmutils_generate_desktop_file(kcm_mouse)
-
 target_link_libraries(kcm_mouse PRIVATE
     KF6::I18n
-    KF6::KCMUtils
+    KF6::KCMUtilsQuick
     KF6::KIOCore
     KF6::KIOWidgets
     KF6::WindowSystem
@@ -88,8 +78,6 @@ target_link_libraries(kcm_mouse PRIVATE
 )
 
 add_subdirectory(backends)
-
-install(TARGETS kcm_mouse DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
 
 ########### install files ###############
 

@@ -12,20 +12,23 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kcmutils as KCMUtils
 
 import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols as KQuickControls
 
 import org.kde.plasma.private.kcm_mouse as Mouse
 
-Kirigami.ScrollablePage {
+KCMUtils.SimpleKCM {
     id: root
 
-    required property Mouse.KWinWaylandBackend backend
+    readonly property Mouse.KWinWaylandBackend backend: KCMUtils.ConfigModule.inputBackend
 
-    signal changeSignal()
+    title: i18ndc("kcmmouse", "@action:button", "Bindings for Additional Mouse Buttons")
 
-    visible: false
+    header: Message {
+        message: root.KCMUtils.ConfigModule.message
+    }
 
     MouseArea {
         // Deliberately using MouseArea on the page instead of a TapHandler on the button, so we can capture clicks anywhere
@@ -33,6 +36,7 @@ Kirigami.ScrollablePage {
 
         property var lastButton: undefined
 
+        parent: root.contentItem
         anchors.fill: parent
         enabled: newBinding.checked
         preventStealing: true
@@ -81,7 +85,7 @@ Kirigami.ScrollablePage {
                         const copy = root.backend.buttonMapping;
                         copy[modelData.buttonName] = keySequence
                         root.backend.buttonMapping = copy
-                        root.changeSignal()
+                        root.KCMUtils.ConfigModule.checkForChanges();
                     }
                 }
             }
@@ -138,19 +142,8 @@ Kirigami.ScrollablePage {
                     const copy = root.backend.buttonMapping;
                     copy[buttonCapture.lastButton.buttonName] = keySequence
                     root.backend.buttonMapping = copy
-                    root.changeSignal()
+                    root.KCMUtils.ConfigModule.checkForChanges();
                 }
-            }
-
-
-            Item {
-                Kirigami.FormData.isSection: true
-            }
-
-            QQC2.Button  {
-                onClicked: applicationWindow().pageStack.pop()
-                text: i18ndc("kcmmouse", "@action:button", "Go back")
-                icon.name: "go-previous"
             }
         }
     }
