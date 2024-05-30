@@ -40,6 +40,8 @@ private Q_SLOTS:
 
 private:
     void findDevices();
+    // all_of without short-circuiting is like for_each but with an AND-reduced accumulator.
+    bool forAllDevices(bool (KWinWaylandDevice::*f)()) const;
 
     std::unique_ptr<QDBusInterface> m_deviceManager;
     QList<KWinWaylandDevice *> m_devices;
