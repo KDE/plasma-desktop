@@ -61,10 +61,6 @@ ContainmentItem {
     property int handleDelay: 800
     property real haloOpacity: 0.5
 
-    property int iconSize: Kirigami.Units.iconSizes.small
-    property int iconWidth: iconSize
-    property int iconHeight: iconWidth
-
     readonly property int hoverActivateDelay: 750 // Magic number that matches Dolphin's auto-expand folders delay.
 
     readonly property Loader folderViewLayer: fullRepresentationItem.folderViewLayer
@@ -73,8 +69,6 @@ ContainmentItem {
     // Plasmoid.title is set by a Binding {} in FolderViewLayer
     toolTipSubText: ""
     Plasmoid.icon: (!Plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? symbolicizeIconName(folderViewLayer.view.model.iconName) : Plasmoid.configuration.icon
-
-    onIconHeightChanged: updateGridSize()
 
     // We want to do this here rather than in the model because we don't always want
     // symbolic icons everywhere, but we do know that we always want them in this
@@ -86,17 +80,6 @@ ContainmentItem {
         }
 
         return iconName + symbolicSuffix;
-    }
-
-    function updateGridSize() {
-        // onIconHeightChanged can be triggered before this component is complete and all the children are created
-        if (!toolBoxSvg) {
-            return;
-        }
-        appletsLayout.cellWidth = root.iconWidth + toolBoxSvg.elementSize("left").width + toolBoxSvg.elementSize("right").width;
-        appletsLayout.cellHeight = root.iconHeight + toolBoxSvg.elementSize("top").height + toolBoxSvg.elementSize("bottom").height;
-        appletsLayout.defaultItemWidth = appletsLayout.cellWidth * 6;
-        appletsLayout.defaultItemHeight = appletsLayout.cellHeight * 6;
     }
 
     function addLauncher(desktopUrl) {
@@ -319,6 +302,8 @@ ContainmentItem {
 
             cellWidth: Kirigami.Units.iconSizes.small
             cellHeight: cellWidth
+            defaultItemWidth: cellWidth * 6
+            defaultItemHeight: cellHeight * 6
 
             eventManagerToFilter: folderViewLayer.item?.view.view ?? null
 
@@ -398,7 +383,6 @@ ContainmentItem {
             }
 
             Plasmoid.setInternalAction("configure", configAction)
-            updateGridSize();
         }
     }
 }
