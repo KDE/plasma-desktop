@@ -137,8 +137,8 @@ bool KWinWaylandBackend::getDefaultConfig()
 
 bool KWinWaylandBackend::isChangedConfig() const
 {
-    return m_buttonMapping != m_loadedButtonMapping || std::any_of(m_devices.constBegin(), m_devices.constEnd(), [](KWinWaylandDevice *t) {
-               return t->isChangedConfig();
+    return m_buttonMapping != m_loadedButtonMapping || std::ranges::any_of(std::as_const(m_devices), [](KWinWaylandDevice *device) {
+               return device->isChangedConfig();
            });
 }
 
@@ -157,8 +157,8 @@ void KWinWaylandBackend::setButtonMapping(const QVariantMap &mapping)
 
 void KWinWaylandBackend::onDeviceAdded(QString sysName)
 {
-    if (std::any_of(m_devices.constBegin(), m_devices.constEnd(), [sysName](KWinWaylandDevice *t) {
-            return t->sysName() == sysName;
+    if (std::ranges::any_of(std::as_const(m_devices), [sysName](KWinWaylandDevice *device) {
+            return device->sysName() == sysName;
         })) {
         return;
     }
@@ -191,17 +191,17 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
 
 void KWinWaylandBackend::onDeviceRemoved(QString sysName)
 {
-    QList<KWinWaylandDevice *>::const_iterator it = std::find_if(m_devices.constBegin(), m_devices.constEnd(), [sysName](KWinWaylandDevice *t) {
-        return t->sysName() == sysName;
+    const auto it = std::ranges::find_if(std::as_const(m_devices), [sysName](KWinWaylandDevice *device) {
+        return device->sysName() == sysName;
     });
     if (it == m_devices.cend()) {
         return;
     }
 
-    KWinWaylandDevice *dev = *it;
+    const auto dev = *it;
     qCDebug(KCM_MOUSE).nospace() << "Device disconnected: " << dev->name() << " (" << dev->sysName() << ")";
 
-    int index = it - m_devices.cbegin();
+    int index = std::distance(m_devices.cbegin(), it);
     m_devices.removeAt(index);
     Q_EMIT deviceRemoved(index);
     Q_EMIT inputDevicesChanged();
