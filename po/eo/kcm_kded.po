@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2023-06-29 19:35+0100\n"
+"PO-Revision-Date: 2024-05-29 22:04+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -102,18 +102,16 @@ msgid "Load-on-Demand Services"
 msgstr "Laŭpete lanĉitaj servoj"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "Baskuligi aŭtomatan ŝargon de ĉi servo je starto"
+msgstr "Malŝalti aŭtomatan ŝargon de %1 je starto"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "Baskuligi aŭtomatan ŝargon de ĉi servo je starto"
+msgstr "Ŝalti aŭtomatan ŝargon de %1 je starto"
 
 #: ui/main.qml:168
 #, kde-format
@@ -134,13 +132,13 @@ msgstr "Rulanta"
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr ""
+msgstr "Halti %1"
 
 #: ui/main.qml:233
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr ""
+msgstr "Lanĉi %1"
 
 #: ui/main.qml:236
 #, kde-format

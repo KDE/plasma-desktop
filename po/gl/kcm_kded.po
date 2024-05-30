@@ -8,22 +8,22 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
-# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2023-10-12 22:13+0200\n"
+"PO-Revision-Date: 2024-05-29 08:57+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -107,18 +107,16 @@ msgid "Load-on-Demand Services"
 msgstr "Servizos cargados segundo a demanda"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "Conmutar a carga automática deste servizo no inicio"
+msgstr "Desactivar a carga automática de %1 no inicio"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "Conmutar a carga automática deste servizo no inicio"
+msgstr "Activar a carga automática de %1 no inicio"
 
 #: ui/main.qml:168
 #, kde-format
@@ -136,18 +134,16 @@ msgid "Running"
 msgstr "En execución"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Stop"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr "Deter"
+msgstr "Deter %1"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr "Iniciar"
+msgstr "Iniciar %1"
 
 #: ui/main.qml:236
 #, kde-format
