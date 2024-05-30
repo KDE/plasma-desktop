@@ -299,10 +299,10 @@ Item {
         if (internal.oldContainment != null && internal.oldContainment != containment) {
             switchAnim.running = true;
         } else {
-            containment.anchors.left = root.left;
-            containment.anchors.top = root.top;
-            containment.anchors.right = root.right;
-            containment.anchors.bottom = root.bottom;
+            containment.anchors.left = containmentParent.left;
+            containment.anchors.top = containmentParent.top;
+            containment.anchors.right = containmentParent.right;
+            containment.anchors.bottom = containmentParent.bottom;
             if (internal.oldContainment) {
                 internal.oldContainment.visible = false;
             }
