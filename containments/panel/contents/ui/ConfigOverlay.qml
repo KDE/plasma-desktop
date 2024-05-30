@@ -24,6 +24,7 @@ MouseArea {
 
     property Item currentApplet
     property real startDragOffset: 0.0
+    visible: appletsModel.count > 0
 
     onPositionChanged: mouse => {
         if (pressed) {

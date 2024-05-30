@@ -91,12 +91,19 @@ ContainmentItem {
         LayoutManager.save();
     }
 
-    Plasmoid.onUserConfiguringChanged: {
-        if (!Plasmoid.userConfiguring) {
+    Plasmoid.onUserConfiguringChanged: configOverlayCheck()
+    Connections {
+        target: Plasmoid.corona
+        function onEditModeChanged() { configOverlayCheck() }
+    }
+    function configOverlayCheck() {
+        if (!Plasmoid.userConfiguring && !Plasmoid.corona.editMode) {
             if (root.configOverlay) {
                 root.configOverlay.destroy();
                 root.configOverlay = null;
             }
+            return;
+        } else if (root.configOverlay) {
             return;
         }
 
@@ -386,12 +393,12 @@ ContainmentItem {
             property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin + (isHorizontal ? currentLayout.toolBoxSize : 0)
             property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin + (isHorizontal ? 0 : currentLayout.toolBoxSize)
 
-            // This is a placeholder for positioning the actual button that is outside and with an higher z order, in order to always be clickable
-            Item {
-                id: addWidgetsButtonPlaceholder
-                visible: addWidgetsButton.visible
-                Layout.preferredWidth: addWidgetsButton.width
-                Layout.preferredHeight: addWidgetsButton.height
+            PC3.ToolButton {
+                id: addWidgetsButton
+                visible: appletsModel.count === 0
+                text: isHorizontal ? i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…") : undefined
+                icon.name: "list-add-symbolic"
+                onClicked: Plasmoid.internalAction("add widgets").trigger()
             }
     // BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
             width: root.width - horizontalDisplacement
@@ -417,36 +424,6 @@ ContainmentItem {
             flow: isHorizontal ? GridLayout.LeftToRight : GridLayout.TopToBottom
             layoutDirection: Qt.application.layoutDirection
         }
-    }
-    MouseArea {
-        anchors.fill: parent
-        visible: Plasmoid.corona.editMode && !Plasmoid.userConfiguring
-        hoverEnabled: true
-        onClicked: Plasmoid.internalAction("configure").trigger()
-        Rectangle {
-            anchors.fill: parent
-            color: Kirigami.Theme.highlightColor
-            opacity: 0.5
-            visible: parent.containsMouse
-        }
-        PlasmaCore.ToolTipArea {
-            id: toolTipArea
-            anchors.fill: parent
-            mainText: Plasmoid.internalAction("configure").text
-            icon: "configure"
-        }
-        Accessible.name: Plasmoid.internalAction("configure").text
-        Accessible.description: i18nd("plasma_shell_org.kde.plasma.desktop", "Open Panel configuration ui")
-        Accessible.role: Accessible.Button
-    }
-    PC3.ToolButton {
-        id: addWidgetsButton
-        x: addWidgetsButtonPlaceholder.Kirigami.ScenePosition.x
-        y: addWidgetsButtonPlaceholder.Kirigami.ScenePosition.y
-        visible: appletsModel.count === 0
-        text: isHorizontal ? i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…") : undefined
-        icon.name: "list-add-symbolic"
-        onClicked: Plasmoid.internalAction("add widgets").trigger()
     }
 //END UI elements
 }
