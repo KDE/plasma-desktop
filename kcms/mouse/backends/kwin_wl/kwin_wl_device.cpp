@@ -102,16 +102,16 @@ bool KWinWaylandDevice::init()
 
 bool KWinWaylandDevice::getDefaultConfig()
 {
+    // general & advanced
     m_enabled.set(true);
     m_leftHanded.set(false);
-
+    m_middleEmulation.set(m_middleEmulationEnabledByDefault);
+    // acceleration
     m_pointerAcceleration.set(m_defaultPointerAcceleration);
     m_pointerAccelerationProfileFlat.set(m_defaultPointerAccelerationProfileFlat);
     m_pointerAccelerationProfileAdaptive.set(m_defaultPointerAccelerationProfileAdaptive);
-
-    m_middleEmulation.set(m_middleEmulationEnabledByDefault);
+    // scrolling
     m_naturalScroll.set(m_naturalScrollEnabledByDefault);
-
     m_scrollFactor.set(1.0);
 
     return true;
@@ -119,41 +119,43 @@ bool KWinWaylandDevice::getDefaultConfig()
 
 bool KWinWaylandDevice::applyConfig()
 {
-    QList<QString> msgs;
-
-    msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat)
-         << valueWriter(m_pointerAccelerationProfileAdaptive) << valueWriter(m_middleEmulation) << valueWriter(m_naturalScroll) << valueWriter(m_scrollFactor);
     bool success = true;
-    QString error_msg;
 
-    for (const auto &m : std::as_const(msgs)) {
-        if (!m.isNull()) {
-            qCCritical(KCM_MOUSE) << "in error:" << m;
-            if (!success) {
-                error_msg.append(u'\n');
-            }
-            error_msg.append(m);
-            success = false;
-        }
-    }
+    // general & advanced
+    success &= valueWriter(m_enabled);
+    success &= valueWriter(m_leftHanded);
+    success &= valueWriter(m_middleEmulation);
+    // acceleration
+    success &= valueWriter(m_pointerAcceleration);
+    success &= valueWriter(m_pointerAccelerationProfileFlat);
+    success &= valueWriter(m_pointerAccelerationProfileAdaptive);
+    // scrolling
+    success &= valueWriter(m_naturalScroll);
+    success &= valueWriter(m_scrollFactor);
 
-    if (!success) {
-        qCCritical(KCM_MOUSE) << error_msg;
-    }
     return success;
 }
 
 bool KWinWaylandDevice::isChangedConfig() const
 {
-    return m_enabled.changed() || m_leftHanded.changed() || m_pointerAcceleration.changed() || m_pointerAccelerationProfileFlat.changed()
-        || m_pointerAccelerationProfileAdaptive.changed() || m_middleEmulation.changed() || m_scrollFactor.changed() || m_naturalScroll.changed();
+    //     general & advanced
+    return m_enabled.changed() //
+        || m_leftHanded.changed() //
+        || m_middleEmulation.changed() //
+        // acceleration
+        || m_pointerAcceleration.changed() //
+        || m_pointerAccelerationProfileFlat.changed() //
+        || m_pointerAccelerationProfileAdaptive.changed() //
+        // scrolling
+        || m_naturalScroll.changed() //
+        || m_scrollFactor.changed();
 }
 
 template<typename T>
-QString KWinWaylandDevice::valueWriter(const Prop<T> &prop)
+bool KWinWaylandDevice::valueWriter(const Prop<T> &prop)
 {
     if (!prop.changed()) {
-        return QString();
+        return true;
     }
     auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
                                                   QStringLiteral("/org/kde/KWin/InputDevice/") + m_dbusName,
@@ -163,9 +165,9 @@ QString KWinWaylandDevice::valueWriter(const Prop<T> &prop)
     QDBusReply<void> reply = QDBusConnection::sessionBus().call(message);
     if (reply.error().isValid()) {
         qCCritical(KCM_MOUSE) << reply.error().message();
-        return reply.error().message();
+        return false;
     }
-    return QString();
+    return true;
 }
 
 #include "moc_kwin_wl_device.cpp"

@@ -240,7 +240,7 @@ private:
     bool valueLoader(Prop<T> &prop);
 
     template<typename T>
-    QString valueWriter(const Prop<T> &prop);
+    bool valueWriter(const Prop<T> &prop);
 
     //
     // general

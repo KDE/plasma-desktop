@@ -263,8 +263,15 @@ bool X11LibinputDummyDevice::valueWriter(Prop<T> &prop)
 
 bool X11LibinputDummyDevice::isChangedConfig() const
 {
-    return m_leftHanded.changed() || m_pointerAcceleration.changed() || m_pointerAccelerationProfileFlat.changed()
-        || m_pointerAccelerationProfileAdaptive.changed() || m_middleEmulation.changed() || m_naturalScroll.changed();
+    //     general & advanced
+    return m_leftHanded.changed() //
+        || m_middleEmulation.changed() //
+        // acceleration
+        || m_pointerAcceleration.changed() //
+        || m_pointerAccelerationProfileFlat.changed() //
+        // scrolling
+        || m_pointerAccelerationProfileAdaptive.changed() //
+        || m_naturalScroll.changed();
 }
 
 #include <fixx11h.h>
