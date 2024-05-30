@@ -24,10 +24,10 @@ public:
 
     void kcmInit() override;
 
-    bool applyConfig() override;
-    bool getConfig() override;
-    bool getDefaultConfig() override;
-    bool isChangedConfig() const override;
+    bool save() override;
+    bool load() override;
+    bool defaults() override;
+    bool isSaveNeeded() const override;
     QString errorString() const override;
     int deviceCount() const override;
     bool isAnonymousInputDevice() const override;

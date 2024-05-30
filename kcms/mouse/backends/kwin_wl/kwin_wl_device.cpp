@@ -100,7 +100,7 @@ bool KWinWaylandDevice::init()
     return success;
 }
 
-bool KWinWaylandDevice::getDefaultConfig()
+bool KWinWaylandDevice::defaults()
 {
     // general & advanced
     m_enabled.set(true);
@@ -117,7 +117,7 @@ bool KWinWaylandDevice::getDefaultConfig()
     return true;
 }
 
-bool KWinWaylandDevice::applyConfig()
+bool KWinWaylandDevice::save()
 {
     bool success = true;
 
@@ -136,25 +136,25 @@ bool KWinWaylandDevice::applyConfig()
     return success;
 }
 
-bool KWinWaylandDevice::isChangedConfig() const
+bool KWinWaylandDevice::isSaveNeeded() const
 {
     //     general & advanced
-    return m_enabled.changed() //
-        || m_leftHanded.changed() //
-        || m_middleEmulation.changed() //
+    return m_enabled.isSaveNeeded() //
+        || m_leftHanded.isSaveNeeded() //
+        || m_middleEmulation.isSaveNeeded() //
         // acceleration
-        || m_pointerAcceleration.changed() //
-        || m_pointerAccelerationProfileFlat.changed() //
-        || m_pointerAccelerationProfileAdaptive.changed() //
+        || m_pointerAcceleration.isSaveNeeded() //
+        || m_pointerAccelerationProfileFlat.isSaveNeeded() //
+        || m_pointerAccelerationProfileAdaptive.isSaveNeeded() //
         // scrolling
-        || m_naturalScroll.changed() //
-        || m_scrollFactor.changed();
+        || m_naturalScroll.isSaveNeeded() //
+        || m_scrollFactor.isSaveNeeded();
 }
 
 template<typename T>
 bool KWinWaylandDevice::valueWriter(const Prop<T> &prop)
 {
-    if (!prop.changed()) {
+    if (!prop.isSaveNeeded()) {
         return true;
     }
     auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),

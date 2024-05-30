@@ -96,7 +96,7 @@ bool KWinWaylandBackend::forAllDevices(bool (KWinWaylandDevice::*f)()) const
     return ok;
 }
 
-bool KWinWaylandBackend::applyConfig()
+bool KWinWaylandBackend::save()
 {
     KConfigGroup buttonGroup = KSharedConfig::openConfig(QStringLiteral("kcminputrc"))->group(QStringLiteral("ButtonRebinds")).group(QStringLiteral("Mouse"));
     for (auto it = m_buttonMapping.cbegin(); it != m_buttonMapping.cend(); ++it) {
@@ -107,10 +107,10 @@ bool KWinWaylandBackend::applyConfig()
         }
     }
 
-    return forAllDevices(&KWinWaylandDevice::applyConfig);
+    return forAllDevices(&KWinWaylandDevice::save);
 }
 
-bool KWinWaylandBackend::getConfig()
+bool KWinWaylandBackend::load()
 {
     m_loadedButtonMapping.clear();
     const KConfigGroup buttonGroup =
@@ -130,15 +130,15 @@ bool KWinWaylandBackend::getConfig()
     return forAllDevices(&KWinWaylandDevice::init);
 }
 
-bool KWinWaylandBackend::getDefaultConfig()
+bool KWinWaylandBackend::defaults()
 {
-    return forAllDevices(&KWinWaylandDevice::getDefaultConfig);
+    return forAllDevices(&KWinWaylandDevice::defaults);
 }
 
-bool KWinWaylandBackend::isChangedConfig() const
+bool KWinWaylandBackend::isSaveNeeded() const
 {
     return m_buttonMapping != m_loadedButtonMapping || std::ranges::any_of(std::as_const(m_devices), [](KWinWaylandDevice *device) {
-               return device->isChangedConfig();
+               return device->isSaveNeeded();
            });
 }
 

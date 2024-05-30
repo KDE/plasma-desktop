@@ -25,9 +25,9 @@ public:
 
     bool init();
 
-    bool getDefaultConfig();
-    bool applyConfig();
-    bool isChangedConfig() const;
+    bool defaults();
+    bool save();
+    bool isSaveNeeded() const;
 
     //
     // general
@@ -223,7 +223,7 @@ private:
                 }
             }
         }
-        bool changed() const
+        bool isSaveNeeded() const
         {
             return avail && (old != val);
         }

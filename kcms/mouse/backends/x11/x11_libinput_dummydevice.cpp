@@ -162,7 +162,7 @@ X11LibinputDummyDevice::X11LibinputDummyDevice(QObject *parent, Display *dpy)
 
 X11LibinputDummyDevice::~X11LibinputDummyDevice() = default;
 
-bool X11LibinputDummyDevice::getConfig()
+bool X11LibinputDummyDevice::load()
 {
     auto reset = [this](Prop<bool> &prop, bool defVal) {
         prop.reset(m_settings->load(prop.cfgName, defVal));
@@ -180,7 +180,7 @@ bool X11LibinputDummyDevice::getConfig()
     return true;
 }
 
-bool X11LibinputDummyDevice::getDefaultConfig()
+bool X11LibinputDummyDevice::defaults()
 {
     m_leftHanded.set(false);
 
@@ -194,7 +194,7 @@ bool X11LibinputDummyDevice::getDefaultConfig()
     return true;
 }
 
-bool X11LibinputDummyDevice::applyConfig()
+bool X11LibinputDummyDevice::save()
 {
     valueWriter(m_leftHanded);
     valueWriter(m_middleEmulation);
@@ -205,7 +205,7 @@ bool X11LibinputDummyDevice::applyConfig()
     return true;
 }
 
-void X11LibinputDummyDevice::getDefaultConfigFromX()
+void X11LibinputDummyDevice::defaultsFromX()
 {
     // The user can override certain values in their X configuration. We want to
     // account for those in our default values, but if we just read this when
@@ -261,17 +261,17 @@ bool X11LibinputDummyDevice::valueWriter(Prop<T> &prop)
     return true;
 }
 
-bool X11LibinputDummyDevice::isChangedConfig() const
+bool X11LibinputDummyDevice::isSaveNeeded() const
 {
     //     general & advanced
-    return m_leftHanded.changed() //
-        || m_middleEmulation.changed() //
+    return m_leftHanded.isSaveNeeded() //
+        || m_middleEmulation.isSaveNeeded() //
         // acceleration
-        || m_pointerAcceleration.changed() //
-        || m_pointerAccelerationProfileFlat.changed() //
+        || m_pointerAcceleration.isSaveNeeded() //
+        || m_pointerAccelerationProfileFlat.isSaveNeeded() //
         // scrolling
-        || m_pointerAccelerationProfileAdaptive.changed() //
-        || m_naturalScroll.changed();
+        || m_pointerAccelerationProfileAdaptive.isSaveNeeded() //
+        || m_naturalScroll.isSaveNeeded();
 }
 
 #include <fixx11h.h>

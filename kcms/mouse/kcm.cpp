@@ -125,7 +125,7 @@ void KCMMouse::setCurrentDeviceIndex(int index)
 
 bool KCMMouse::isSaveNeeded() const
 {
-    return m_inputBackend->isChangedConfig();
+    return m_inputBackend->isSaveNeeded();
 }
 
 bool KCMMouse::isDefaults() const
@@ -140,7 +140,7 @@ void KCMMouse::load()
         return;
     }
 
-    if (!m_inputBackend->getConfig()) {
+    if (!m_inputBackend->load()) {
         setMessage(Message::error(i18n("Error while loading values. See logs for more information. Please restart this configuration module.")));
     } else {
         if (!m_inputBackend->deviceCount()) {
@@ -152,7 +152,7 @@ void KCMMouse::load()
 
 void KCMMouse::save()
 {
-    if (!m_inputBackend->applyConfig()) {
+    if (!m_inputBackend->save()) {
         setMessage(
             Message::error(i18n("Not able to save all changes. See logs for more information. Please restart this configuration module and try again.")));
     } else {
@@ -161,7 +161,7 @@ void KCMMouse::save()
     // load newly written values
     load();
     // in case of error, config still in changed state
-    setNeedsSave(m_inputBackend->isChangedConfig());
+    setNeedsSave(m_inputBackend->isSaveNeeded());
 }
 
 void KCMMouse::defaults()
@@ -171,11 +171,11 @@ void KCMMouse::defaults()
         return;
     }
 
-    if (!m_inputBackend->getDefaultConfig()) {
+    if (!m_inputBackend->defaults()) {
         setMessage(Message::error(i18n("Error while loading default values. Failed to set some options to their default values.")));
     }
 
-    setNeedsSave(m_inputBackend->isChangedConfig());
+    setNeedsSave(m_inputBackend->isSaveNeeded());
 }
 
 void KCMMouse::checkForChanges()
@@ -183,7 +183,7 @@ void KCMMouse::checkForChanges()
     if (m_inputBackend->deviceCount() > 0) {
         setMessage();
     }
-    setNeedsSave(m_inputBackend->isChangedConfig());
+    setNeedsSave(m_inputBackend->isSaveNeeded());
 }
 
 void KCMMouse::onDeviceAdded(bool success)
@@ -214,7 +214,7 @@ void KCMMouse::onDeviceRemoved(int index)
         setCurrentDeviceIndex(index - 1);
     }
 
-    setNeedsSave(m_inputBackend->isChangedConfig());
+    setNeedsSave(m_inputBackend->isSaveNeeded());
 }
 
 void KCMMouse::setMessage(const Message &message)

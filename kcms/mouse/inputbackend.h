@@ -38,22 +38,22 @@ public:
     {
     }
 
-    virtual bool applyConfig()
+    virtual bool save()
     {
         return false;
     }
 
-    virtual bool getConfig()
+    virtual bool load()
     {
         return false;
     }
 
-    virtual bool getDefaultConfig()
+    virtual bool defaults()
     {
         return false;
     }
 
-    virtual bool isChangedConfig() const
+    virtual bool isSaveNeeded() const
     {
         return false;
     }

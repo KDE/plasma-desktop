@@ -12,32 +12,32 @@ X11LibinputBackend::X11LibinputBackend(QObject *parent)
 {
 }
 
-bool X11LibinputBackend::applyConfig()
+bool X11LibinputBackend::save()
 {
-    return m_device->applyConfig();
+    return m_device->save();
 }
 
-bool X11LibinputBackend::getConfig()
+bool X11LibinputBackend::load()
 {
-    return m_device->getConfig();
+    return m_device->load();
 }
 
-bool X11LibinputBackend::getDefaultConfig()
+bool X11LibinputBackend::defaults()
 {
-    return m_device->getDefaultConfig();
+    return m_device->defaults();
 }
 
-bool X11LibinputBackend::isChangedConfig() const
+bool X11LibinputBackend::isSaveNeeded() const
 {
-    return m_device->isChangedConfig();
+    return m_device->isSaveNeeded();
 }
 
 void X11LibinputBackend::kcmInit()
 {
-    m_device->getDefaultConfigFromX();
+    m_device->defaultsFromX();
 
-    getConfig();
-    applyConfig();
+    load();
+    save();
 }
 
 QString X11LibinputBackend::errorString() const
