@@ -44,7 +44,7 @@ bool areModifiersPressed(const QKeySequence &seq)
     if (seq.isEmpty()) {
         return false;
     }
-    int mod = seq[seq.count() - 1] & Qt::KeyboardModifierMask;
+    int mod = seq[seq.count() - 1].keyboardModifiers();
     auto activeMods = qGuiApp->queryKeyboardModifiers();
     return activeMods & mod;
 }
