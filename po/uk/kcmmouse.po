@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-05-31 00:40+0000\n"
 "PO-Revision-Date: 2024-05-28 09:21+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -24,33 +24,20 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-"Dmytro Kovalov,Andriy Rysin,Eugene Onischenko,Іван Петрущак,Юрій Чорноіван"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"kov@tokyo.email.ne.jp,rysin@kde.org,oneugene@ukr.net,ivanpetrouchtchak@yahoo."
-"com,yurchor@ukr.net"
-
-#: backends/kwin_wl/kwin_wl_backend.cpp:63
+#: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Не вдалося опитати пристрої введення. Будь ласка, закрийте це вікно модуля, "
 "а потім знову його відкрийте."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:83
+#: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
 "Критична помилка під час читання основних відомостей щодо пристрою для %1."
 
-#: libinput_config.cpp:91
+#: kcm.cpp:144
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -59,12 +46,12 @@ msgstr ""
 "Помилка під час завантаження значень. Докладнішу інформацію можна знайти у "
 "журналі. Будь ласка, перезапустіть модуль керування сенсорними панелями."
 
-#: libinput_config.cpp:96
+#: kcm.cpp:147
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Не знайдено координатного пристрою. З'єднайте пристрій з комп'ютером."
 
-#: libinput_config.cpp:107
+#: kcm.cpp:157
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -74,7 +61,7 @@ msgstr ""
 "Будь ласка, перезапустіть модуль керування сенсорними панелями, потім "
 "повторіть спробу."
 
-#: libinput_config.cpp:127
+#: kcm.cpp:175
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -83,7 +70,7 @@ msgstr ""
 "Помилка під час спроби завантажити типові значення. Не вдалося встановити "
 "типові значення для усіх параметрів."
 
-#: libinput_config.cpp:145
+#: kcm.cpp:192
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -93,53 +80,98 @@ msgstr ""
 "спробуйте з’єднати його з комп’ютером ще раз, потім перезапустіть модуль "
 "керування сенсорними панелями."
 
-#: libinput_config.cpp:161
+#: kcm.cpp:206
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Координатний пристрій від’єднано. Діалогове вікно його параметрів закрито."
 
-#: libinput_config.cpp:163
+#: kcm.cpp:208
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Координатний пристрій від’єднано. Інших пристроїв не знайдено."
 
-#: ui/main.qml:54
+#: ui/bindings.qml:27
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Re-bind Additional Mouse Buttons…"
+msgctxt "@action:button"
+msgid "Bindings for Additional Mouse Buttons"
+msgstr "Повторно прив'язати додаткові кнопки…"
+
+#: ui/bindings.qml:69
+#, kde-format
+msgctxt "@label for assigning an action to a numbered button"
+msgid "Extra Button %1:"
+msgstr "Додаткова кнопка %1:"
+
+#: ui/bindings.qml:100
+#, kde-format
+msgctxt "@action:button"
+msgid "Press the mouse button for which you want to add a key binding"
+msgstr ""
+"Натисніть кнопку миші, для якої ви хочете додати прив'язку до клавіатури"
+
+#: ui/bindings.qml:102
+#, kde-format
+msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
+msgid "Enter the new key combination for %1"
+msgstr "Введіть нову комбінацію клавіш для %1"
+
+#: ui/bindings.qml:106
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: ui/bindings.qml:124
+#, kde-format
+msgctxt "@action:button"
+msgid "Press a mouse button"
+msgstr "Натисніть кнопку миші"
+
+#: ui/bindings.qml:125
+#, kde-format
+msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
+msgid "Add Binding…"
+msgstr "Додати прив'язку…"
+
+#: ui/main.qml:42
 #, kde-format
 msgid "Device:"
 msgstr "Пристрій:"
 
-#: ui/main.qml:85
+#: ui/main.qml:65
 #, kde-format
 msgid "General:"
 msgstr "Загальне:"
 
-#: ui/main.qml:86
+#: ui/main.qml:66
 #, kde-format
 msgid "Device enabled"
 msgstr "Пристрій увімкнено"
 
-#: ui/main.qml:100
+#: ui/main.qml:80
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Приймати вхідні дані з цього пристрою."
 
-#: ui/main.qml:106
+#: ui/main.qml:86
 #, kde-format
 msgid "Left handed mode"
 msgstr "Режим шульги"
 
-#: ui/main.qml:119
+#: ui/main.qml:99
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Поміняти місцями ліву і праву кнопки."
 
-#: ui/main.qml:126
+#: ui/main.qml:106
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Натискати ліву і праву кнопки для клацання середньою"
 
-#: ui/main.qml:139
+#: ui/main.qml:119
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -147,7 +179,7 @@ msgstr ""
 "Одночасне натискання лівої і правої кнопок надсилатиме сигнал клацання "
 "середньою кнопкою."
 
-#: ui/main.qml:143
+#: ui/main.qml:123
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -157,117 +189,89 @@ msgstr ""
 "мс. Додаткова затримка потрібна для належного виявлення одночасного клацання "
 "лівою і правою кнопками миші."
 
-#: ui/main.qml:155
+#: ui/main.qml:135
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Швидкість вказівника:"
 
-#: ui/main.qml:232
+#: ui/main.qml:212
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Прискорення вказівника:"
 
-#: ui/main.qml:248
+#: ui/main.qml:229
 #, kde-format
 msgid "None"
 msgstr "Немає"
 
-#: ui/main.qml:253
+#: ui/main.qml:234
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Вказівник зсувається на ту саму відстань, що і миша."
 
-#: ui/main.qml:257
+#: ui/main.qml:239
 #, kde-format
 msgid "Standard"
 msgstr "Стандартне"
 
-#: ui/main.qml:262
+#: ui/main.qml:244
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Вказівник зсувається на відстань, яка залежить від швидкості руху мишею."
 
-#: ui/main.qml:273
+#: ui/main.qml:255
 #, kde-format
 msgid "Scrolling:"
 msgstr "Гортання:"
 
-#: ui/main.qml:274
+#: ui/main.qml:256
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Інвертувати напрямок гортання"
 
-#: ui/main.qml:287
+#: ui/main.qml:269
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Гортання як на сенсорній панелі."
 
-#: ui/main.qml:292
+#: ui/main.qml:274
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Швидкість гортання:"
 
-#: ui/main.qml:343
+#: ui/main.qml:325
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Повільніше"
 
-#: ui/main.qml:350
+#: ui/main.qml:332
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Швидше"
 
-#: ui/main.qml:361
+#: ui/main.qml:343
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Повторно прив'язати додаткові кнопки…"
 
-#: ui/main.qml:408
-#, kde-format
-msgctxt "@label for assigning an action to a numbered button"
-msgid "Extra Button %1:"
-msgstr "Додаткова кнопка %1:"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Dmytro Kovalov,Andriy Rysin,Eugene Onischenko,Іван Петрущак,Юрій Чорноіван"
 
-#: ui/main.qml:438
-#, kde-format
-msgctxt "@action:button"
-msgid "Press the mouse button for which you want to add a key binding"
-msgstr ""
-"Натисніть кнопку миші, для якої ви хочете додати прив'язку до клавіатури"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "kov@tokyo.email.ne.jp,rysin@kde.org,oneugene@ukr.net,"
+#~ "ivanpetrouchtchak@yahoo.com,yurchor@ukr.net"
 
-#: ui/main.qml:440
-#, kde-format
-msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
-msgid "Enter the new key combination for %1"
-msgstr "Введіть нову комбінацію клавіш для %1"
-
-#: ui/main.qml:444
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel"
-msgstr "Скасувати"
-
-#: ui/main.qml:462
-#, kde-format
-msgctxt "@action:button"
-msgid "Press a mouse button"
-msgstr "Натисніть кнопку миші"
-
-#: ui/main.qml:463
-#, kde-format
-msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
-msgid "Add Binding…"
-msgstr "Додати прив'язку…"
-
-#: ui/main.qml:493
-#, kde-format
-msgctxt "@action:button"
-msgid "Go back"
-msgstr "Назад"
+#~ msgctxt "@action:button"
+#~ msgid "Go back"
+#~ msgstr "Назад"
 
 #~ msgid ""
 #~ "<h1>Mouse</h1> This module allows you to choose various options for the "

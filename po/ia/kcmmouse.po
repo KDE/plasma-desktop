@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-05-31 00:40+0000\n"
 "PO-Revision-Date: 2024-05-29 14:29+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -17,29 +17,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Giovanni Sora"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "g.sora@tiscali.it"
-
-#: backends/kwin_wl/kwin_wl_backend.cpp:63
+#: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Demandar dispositivos de ingresso falleva. Pro favor reaperi iste modulo"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:83
+#: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
 "Error critic quando il lege informationes de dispositivo fundamental de %1."
 
-#: libinput_config.cpp:91
+#: kcm.cpp:144
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -48,12 +38,12 @@ msgstr ""
 "Error durante que il incarga valores. Tu vide registros (logs) per ulterior "
 "information. Pro favor reinitia iste modulo de configuration."
 
-#: libinput_config.cpp:96
+#: kcm.cpp:147
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Necun dispositico de punctar esseva trovate. Nunc connecte."
 
-#: libinput_config.cpp:107
+#: kcm.cpp:157
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -63,7 +53,7 @@ msgstr ""
 "information. Pro favor tu restarta iste modulo de configuration e essaya de "
 "novo."
 
-#: libinput_config.cpp:127
+#: kcm.cpp:175
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -72,7 +62,7 @@ msgstr ""
 "Error quando il cargava valores predefinite. Il falleva a fixar alcun "
 "optiones a lor valor predefinite."
 
-#: libinput_config.cpp:145
+#: kcm.cpp:192
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -81,54 +71,98 @@ msgstr ""
 "Error durante que il adde dispositivos connectite recentemente. Pro favor "
 "reconnecte lo e restarta iste modulo de configuration."
 
-#: libinput_config.cpp:161
+#: kcm.cpp:206
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Dispositivo de punctar disconnectite. Claudite su dialogo de preferentias."
 
-#: libinput_config.cpp:163
+#: kcm.cpp:208
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
 "Dispositivo de punctar disconnectite. Necun altere dispositivos trovate.."
 
-#: ui/main.qml:54
+#: ui/bindings.qml:27
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Re-bind Additional Mouse Buttons…"
+msgctxt "@action:button"
+msgid "Bindings for Additional Mouse Buttons"
+msgstr "Re-liga Buttones de Mus Additional..."
+
+#: ui/bindings.qml:69
+#, kde-format
+msgctxt "@label for assigning an action to a numbered button"
+msgid "Extra Button %1:"
+msgstr "Button extra %1:"
+
+#: ui/bindings.qml:100
+#, kde-format
+msgctxt "@action:button"
+msgid "Press the mouse button for which you want to add a key binding"
+msgstr "Pressa le button de mus per le qual tu vole adder un ligatura de clave"
+
+#: ui/bindings.qml:102
+#, kde-format
+msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
+msgid "Enter the new key combination for %1"
+msgstr "Inserta le nove combination de clave per %1"
+
+#: ui/bindings.qml:106
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Cancella"
+
+#: ui/bindings.qml:124
+#, kde-format
+msgctxt "@action:button"
+msgid "Press a mouse button"
+msgstr "Pressa un button de mus"
+
+#: ui/bindings.qml:125
+#, kde-format
+msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
+msgid "Add Binding…"
+msgstr "Adde ligatura (Binding) ..."
+
+#: ui/main.qml:42
 #, kde-format
 msgid "Device:"
 msgstr "Dispositivo:"
 
-#: ui/main.qml:85
+#: ui/main.qml:65
 #, kde-format
 msgid "General:"
 msgstr "General:"
 
-#: ui/main.qml:86
+#: ui/main.qml:66
 #, kde-format
 msgid "Device enabled"
 msgstr "Dispositivo habilitate"
 
-#: ui/main.qml:100
+#: ui/main.qml:80
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Accepta ingresso per iste dispositivo"
 
-#: ui/main.qml:106
+#: ui/main.qml:86
 #, kde-format
 msgid "Left handed mode"
 msgstr "Modo pro usator de mano sinistre"
 
-#: ui/main.qml:119
+#: ui/main.qml:99
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Excambia buttones de sinistra e dextera."
 
-#: ui/main.qml:126
+#: ui/main.qml:106
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Pressa buttones de sinistra e dextera per pulsar in le medio"
 
-#: ui/main.qml:139
+#: ui/main.qml:119
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -136,7 +170,7 @@ msgstr ""
 "Pulsar buttones de sinistra e dextera simultaneemente invia click al button "
 "medie."
 
-#: ui/main.qml:143
+#: ui/main.qml:123
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -146,116 +180,86 @@ msgstr ""
 "extra es necessitate per relavar correctemente le clicks simultanee sinistre "
 "e dextere de mus."
 
-#: ui/main.qml:155
+#: ui/main.qml:135
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Velocitate de punctator:"
 
-#: ui/main.qml:232
+#: ui/main.qml:212
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Acceleration de punctator:"
 
-#: ui/main.qml:248
+#: ui/main.qml:229
 #, kde-format
 msgid "None"
 msgstr "Necun"
 
-#: ui/main.qml:253
+#: ui/main.qml:234
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Cursor move le mesme distantia que le movimento del mus"
 
-#: ui/main.qml:257
+#: ui/main.qml:239
 #, kde-format
 msgid "Standard"
 msgstr "Standard"
 
-#: ui/main.qml:262
+#: ui/main.qml:244
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Distantia de viage de cursor depende del velocitate de movimento del mus."
 
-#: ui/main.qml:273
+#: ui/main.qml:255
 #, kde-format
 msgid "Scrolling:"
 msgstr "Rolar:"
 
-#: ui/main.qml:274
+#: ui/main.qml:256
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Reverte direction de rolar"
 
-#: ui/main.qml:287
+#: ui/main.qml:269
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Schermo tactile como rolar."
 
-#: ui/main.qml:292
+#: ui/main.qml:274
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocitate de Rolar:"
 
-#: ui/main.qml:343
+#: ui/main.qml:325
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Lisie (plus lente)"
 
-#: ui/main.qml:350
+#: ui/main.qml:332
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Plus rapide"
 
-#: ui/main.qml:361
+#: ui/main.qml:343
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Re-liga Buttones de Mus Additional..."
 
-#: ui/main.qml:408
-#, kde-format
-msgctxt "@label for assigning an action to a numbered button"
-msgid "Extra Button %1:"
-msgstr "Button extra %1:"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Giovanni Sora"
 
-#: ui/main.qml:438
-#, kde-format
-msgctxt "@action:button"
-msgid "Press the mouse button for which you want to add a key binding"
-msgstr "Pressa le button de mus per le qual tu vole adder un ligatura de clave"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "g.sora@tiscali.it"
 
-#: ui/main.qml:440
-#, kde-format
-msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
-msgid "Enter the new key combination for %1"
-msgstr "Inserta le nove combination de clave per %1"
-
-#: ui/main.qml:444
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel"
-msgstr "Cancella"
-
-#: ui/main.qml:462
-#, kde-format
-msgctxt "@action:button"
-msgid "Press a mouse button"
-msgstr "Pressa un button de mus"
-
-#: ui/main.qml:463
-#, kde-format
-msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
-msgid "Add Binding…"
-msgstr "Adde ligatura (Binding) ..."
-
-#: ui/main.qml:493
-#, kde-format
-msgctxt "@action:button"
-msgid "Go back"
-msgstr "Vade retro"
+#~ msgctxt "@action:button"
+#~ msgid "Go back"
+#~ msgstr "Vade retro"
 
 #~ msgid ""
 #~ "<h1>Mouse</h1> This module allows you to choose various options for the "

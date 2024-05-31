@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2010.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2023-06-29 16:04+0200\n"
+"PO-Revision-Date: 2024-05-30 10:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmkded.cpp:115
@@ -100,18 +100,16 @@ msgid "Load-on-Demand Services"
 msgstr "Услуги, зареждани при поискване"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "Превключване на автоматичното зареждане на тази услуга при стартиране"
+msgstr "Изключване на автоматичното зареждане на %1 при стартиране"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "Превключване на автоматичното зареждане на тази услуга при стартиране"
+msgstr "Включване на автоматичното зареждане на %1 при стартиране"
 
 #: ui/main.qml:168
 #, kde-format
@@ -132,13 +130,13 @@ msgstr "Стартирана"
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr ""
+msgstr "Спиране на %1"
 
 #: ui/main.qml:233
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr ""
+msgstr "Стартиране на %1"
 
 #: ui/main.qml:236
 #, kde-format

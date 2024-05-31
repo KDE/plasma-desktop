@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2024-05-20 19:00+0100\n"
+"PO-Revision-Date: 2024-05-30 16:18+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -99,18 +99,16 @@ msgid "Load-on-Demand Services"
 msgstr "Load-on-Demand Services"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "Toggle automatically loading this service on startup"
+msgstr "Disable automatically loading %1 on startup"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "Toggle automatically loading this service on startup"
+msgstr "Enable automatically loading %1 on startup"
 
 #: ui/main.qml:168
 #, kde-format
@@ -128,18 +126,16 @@ msgid "Running"
 msgstr "Running"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Stop"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr "Stop"
+msgstr "Stop %1"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr "Start"
+msgstr "Start %1"
 
 #: ui/main.qml:236
 #, kde-format

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-05-31 00:40+0000\n"
 "PO-Revision-Date: 2008-11-13 22:59+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -15,232 +15,230 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Edward Wornar"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "edi.werner@gmx.de"
-
-#: backends/kwin_wl/kwin_wl_backend.cpp:63
+#: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:83
+#: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
 
-#: libinput_config.cpp:91
+#: kcm.cpp:144
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
 
-#: libinput_config.cpp:96
+#: kcm.cpp:147
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr ""
 
-#: libinput_config.cpp:107
+#: kcm.cpp:157
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
 
-#: libinput_config.cpp:127
+#: kcm.cpp:175
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
 
-#: libinput_config.cpp:145
+#: kcm.cpp:192
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
 
-#: libinput_config.cpp:161
+#: kcm.cpp:206
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 
-#: libinput_config.cpp:163
+#: kcm.cpp:208
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
 
-#: ui/main.qml:54
-#, kde-format
-msgid "Device:"
-msgstr ""
-
-#: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "&General"
-msgid "General:"
-msgstr "&Powšitkownje"
-
-#: ui/main.qml:86
-#, kde-format
-msgid "Device enabled"
-msgstr ""
-
-#: ui/main.qml:100
-#, kde-format
-msgid "Accept input through this device."
-msgstr ""
-
-#: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Le&ft handed"
-msgid "Left handed mode"
-msgstr "za &lěwu ruku"
-
-#: ui/main.qml:119
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr ""
-
-#: ui/main.qml:126
-#, kde-format
-msgid "Press left and right buttons for middle-click"
-msgstr ""
-
-#: ui/main.qml:139
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
-msgstr ""
-
-#: ui/main.qml:143
-#, kde-format
-msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
-msgstr ""
-
-#: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
-msgid "Pointer speed:"
-msgstr "Minimalna distanca:"
-
-#: ui/main.qml:232
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Pospěšenje pokazowaka:"
-
-#: ui/main.qml:248
-#, kde-format
-msgid "None"
-msgstr ""
-
-#: ui/main.qml:253
-#, kde-format
-msgid "Cursor moves the same distance as the mouse movement."
-msgstr ""
-
-#: ui/main.qml:257
-#, kde-format
-msgid "Standard"
-msgstr ""
-
-#: ui/main.qml:262
-#, kde-format
-msgid "Cursor travel distance depends on the mouse movement speed."
-msgstr ""
-
-#: ui/main.qml:273
-#, kde-format
-msgid "Scrolling:"
-msgstr ""
-
-#: ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Re&verse scroll direction"
-msgid "Invert scroll direction"
-msgstr "směr suwanja wob&roćić"
-
-#: ui/main.qml:287
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr ""
-
-#: ui/main.qml:292
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
-msgid "Scrolling speed:"
-msgstr "Minimalna distanca:"
-
-#: ui/main.qml:343
-#, kde-format
-msgctxt "Slower Scroll"
-msgid "Slower"
-msgstr ""
-
-#: ui/main.qml:350
-#, kde-format
-msgctxt "Faster Scroll Speed"
-msgid "Faster"
-msgstr ""
-
-#: ui/main.qml:361
+#: ui/bindings.qml:27
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
+msgid "Bindings for Additional Mouse Buttons"
 msgstr ""
 
-#: ui/main.qml:408
+#: ui/bindings.qml:69
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr ""
 
-#: ui/main.qml:438
+#: ui/bindings.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr ""
 
-#: ui/main.qml:440
+#: ui/bindings.qml:102
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr ""
 
-#: ui/main.qml:444
+#: ui/bindings.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: ui/main.qml:462
+#: ui/bindings.qml:124
 #, fuzzy, kde-format
 #| msgid "Press Connect Button"
 msgctxt "@action:button"
 msgid "Press a mouse button"
 msgstr "Stłóčće na knefl za zwisk"
 
-#: ui/main.qml:463
+#: ui/bindings.qml:125
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr ""
 
-#: ui/main.qml:493
+#: ui/main.qml:42
+#, kde-format
+msgid "Device:"
+msgstr ""
+
+#: ui/main.qml:65
+#, fuzzy, kde-format
+#| msgid "&General"
+msgid "General:"
+msgstr "&Powšitkownje"
+
+#: ui/main.qml:66
+#, kde-format
+msgid "Device enabled"
+msgstr ""
+
+#: ui/main.qml:80
+#, kde-format
+msgid "Accept input through this device."
+msgstr ""
+
+#: ui/main.qml:86
+#, fuzzy, kde-format
+#| msgid "Le&ft handed"
+msgid "Left handed mode"
+msgstr "za &lěwu ruku"
+
+#: ui/main.qml:99
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr ""
+
+#: ui/main.qml:106
+#, kde-format
+msgid "Press left and right buttons for middle-click"
+msgstr ""
+
+#: ui/main.qml:119
+#, kde-format
+msgid ""
+"Clicking left and right button simultaneously sends middle button click."
+msgstr ""
+
+#: ui/main.qml:123
+#, kde-format
+msgid ""
+"Activating this setting increases mouse click latency by 50ms. The extra "
+"delay is needed to correctly detect simultaneous left and right mouse clicks."
+msgstr ""
+
+#: ui/main.qml:135
+#, fuzzy, kde-format
+#| msgid "Pointer threshold:"
+msgid "Pointer speed:"
+msgstr "Minimalna distanca:"
+
+#: ui/main.qml:212
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Pospěšenje pokazowaka:"
+
+#: ui/main.qml:229
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: ui/main.qml:234
+#, kde-format
+msgid "Cursor moves the same distance as the mouse movement."
+msgstr ""
+
+#: ui/main.qml:239
+#, kde-format
+msgid "Standard"
+msgstr ""
+
+#: ui/main.qml:244
+#, kde-format
+msgid "Cursor travel distance depends on the mouse movement speed."
+msgstr ""
+
+#: ui/main.qml:255
+#, kde-format
+msgid "Scrolling:"
+msgstr ""
+
+#: ui/main.qml:256
+#, fuzzy, kde-format
+#| msgid "Re&verse scroll direction"
+msgid "Invert scroll direction"
+msgstr "směr suwanja wob&roćić"
+
+#: ui/main.qml:269
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr ""
+
+#: ui/main.qml:274
+#, fuzzy, kde-format
+#| msgid "Pointer threshold:"
+msgid "Scrolling speed:"
+msgstr "Minimalna distanca:"
+
+#: ui/main.qml:325
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr ""
+
+#: ui/main.qml:332
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr ""
+
+#: ui/main.qml:343
 #, kde-format
 msgctxt "@action:button"
-msgid "Go back"
+msgid "Re-bind Additional Mouse Buttons…"
 msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Edward Wornar"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "edi.werner@gmx.de"
 
 #~ msgid ""
 #~ "<h1>Mouse</h1> This module allows you to choose various options for the "

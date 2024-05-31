@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-05-31 00:40+0000\n"
 "PO-Revision-Date: 2024-03-24 18:20+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -16,29 +16,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.1\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "tamilpc team, கோ. கிஷோர்"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "tamilpc@ambalam.com, Kde-l10n-ta@kde.org"
-
-#: backends/kwin_wl/kwin_wl_backend.cpp:63
+#: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "உள்ளீட்டு சாதனங்களை கண்டறிதல் தோல்வியடைந்த‍து. இந்த அமைப்புக்கூறை மூடி மறுபடியும் "
 "திறவுங்கள்."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:83
+#: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "%1 என்பதன் அடிப்படை விவரங்களை கண்டறிவதில் சிக்கல்."
 
-#: libinput_config.cpp:91
+#: kcm.cpp:144
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -47,12 +37,12 @@ msgstr ""
 "மதிப்புகளை ஏற்றுவதில் சிக்கல். மேலும் விவரங்களுக்கு கணினியின் பதிவுகளை பாருங்கள். "
 "இக்கட்டுப்பாட்டுக்கூறை மூடி மறுபடியும் திறவுங்கள்."
 
-#: libinput_config.cpp:96
+#: kcm.cpp:147
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "எந்த சுட்டி சாதனமும் கண்டுபிடிக்கப்படவில்லை. சாதனத்தை இப்போது செருகுங்கள்."
 
-#: libinput_config.cpp:107
+#: kcm.cpp:157
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -61,7 +51,7 @@ msgstr ""
 "சில மாற்றங்களை சேமிக்க முடியவில்லை. மேலும் விவரங்களுக்கு கணினியின் பதிவுகளை பாருங்கள். "
 "இக்கட்டுப்பாட்டுக்கூறை மூடி மறுபடியும் திறவுங்கள்."
 
-#: libinput_config.cpp:127
+#: kcm.cpp:175
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -70,7 +60,7 @@ msgstr ""
 "இயல்பிருப்பு மதிப்புகளை ஏற்றுவதில் சிக்கல். சில விருப்பங்கள் அவற்றின் இயல்பிருப்பு "
 "மதிப்புகளுக்கு மாற்றப்படவில்லை."
 
-#: libinput_config.cpp:145
+#: kcm.cpp:192
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -79,58 +69,104 @@ msgstr ""
 "புதிதாக செருகிய சாதனத்தை சேர்ப்பதில் சிக்கல். அதை கழற்றி, மீண்டும் செருகிய பின் இக்கூறை "
 "மீள்துவக்குங்கள்."
 
-#: libinput_config.cpp:161
+#: kcm.cpp:206
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "சுட்டி கழற்றப்பட்டதால் அதன் அமைப்புச்சாளரம் மூடப்பட்டது."
 
-#: libinput_config.cpp:163
+#: kcm.cpp:208
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "சுட்டி கழற்றப்பட்டபின் வேறெந்த சாதனமும் கண்டுபிடிக்கப்படவில்லை."
 
-#: ui/main.qml:54
+#: ui/bindings.qml:27
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Re-bind Additional Mouse Buttons…"
+msgctxt "@action:button"
+msgid "Bindings for Additional Mouse Buttons"
+msgstr "கூடுதல் சுட்டி பட்டன்களை மாற்றியமை…"
+
+#: ui/bindings.qml:69
+#, kde-format
+msgctxt "@label for assigning an action to a numbered button"
+msgid "Extra Button %1:"
+msgstr "கூடுதல் பட்டன் %1"
+
+#: ui/bindings.qml:100
+#, kde-format
+msgctxt "@action:button"
+msgid "Press the mouse button for which you want to add a key binding"
+msgstr "எந்த பட்டனுக்கு விசைப்பிணைப்பை சேர்க்க வேண்டுமோ, அதை அழுத்துங்கள்"
+
+#: ui/bindings.qml:102
+#, kde-format
+msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
+msgid "Enter the new key combination for %1"
+msgstr "%1-க்கான புதிய விசைக்கூட்டை அழுத்துங்கள்"
+
+#: ui/bindings.qml:106
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "ரத்து செய்"
+
+#: ui/bindings.qml:124
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Press a mouse button "
+msgctxt "@action:button"
+msgid "Press a mouse button"
+msgstr "ஒரு சுட்டி பட்டனை அழுத்துங்கள் "
+
+#: ui/bindings.qml:125
+#, kde-format
+msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
+msgid "Add Binding…"
+msgstr "பிணைப்பை சேர்…"
+
+#: ui/main.qml:42
 #, kde-format
 msgid "Device:"
 msgstr "சாதனம்:"
 
-#: ui/main.qml:85
+#: ui/main.qml:65
 #, kde-format
 msgid "General:"
 msgstr "பொதுவானவை:"
 
-#: ui/main.qml:86
+#: ui/main.qml:66
 #, kde-format
 msgid "Device enabled"
 msgstr "சாதனத்தை இயக்கு"
 
-#: ui/main.qml:100
+#: ui/main.qml:80
 #, kde-format
 msgid "Accept input through this device."
 msgstr "இந்த சாதனத்தின் வாயிலாக உள்ளீட்டை ஏற்க."
 
-#: ui/main.qml:106
+#: ui/main.qml:86
 #, kde-format
 msgid "Left handed mode"
 msgstr "இடதுகை பயன்முறை"
 
-#: ui/main.qml:119
+#: ui/main.qml:99
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "இடது மற்றும் வலது பட்டன்களை இடமாற்று."
 
-#: ui/main.qml:126
+#: ui/main.qml:106
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "நடு க்ளிக்குக்கு இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்து"
 
-#: ui/main.qml:139
+#: ui/main.qml:119
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துதல், நடு க்ளிக்காக கருதப்படும்."
 
-#: ui/main.qml:143
+#: ui/main.qml:123
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -140,117 +176,85 @@ msgstr ""
 "அதிகரிக்கும். ஒரே நேரத்தில் நிகழும் இடது மற்றும் வலது கிளிக்குகளை சரியாக அடையாளங்கான "
 "இந்த கூடுதல் தாமதம் தேவை."
 
-#: ui/main.qml:155
+#: ui/main.qml:135
 #, kde-format
 msgid "Pointer speed:"
 msgstr "சுட்டிக்குறியின் வேகம்:"
 
-#: ui/main.qml:232
+#: ui/main.qml:212
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "சுட்டி துரிதப்படுத்தல்:"
 
-#: ui/main.qml:248
+#: ui/main.qml:229
 #, kde-format
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: ui/main.qml:253
+#: ui/main.qml:234
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "சுட்டிக்குறியும் சுட்டியும் ஒரே தூரம் நகரும்."
 
-#: ui/main.qml:257
+#: ui/main.qml:239
 #, kde-format
 msgid "Standard"
 msgstr "சாதாரணமானது"
 
-#: ui/main.qml:262
+#: ui/main.qml:244
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "சுட்டிக்குறி நகரும் தூரம் சுட்டியின் வேகத்தைப் பொறுத்து மாறும்."
 
-#: ui/main.qml:273
+#: ui/main.qml:255
 #, kde-format
 msgid "Scrolling:"
 msgstr "உருளல்:"
 
-#: ui/main.qml:274
+#: ui/main.qml:256
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "உருளல் திசையைப் புரட்டு"
 
-#: ui/main.qml:287
+#: ui/main.qml:269
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "தொடுதிரையைப் போன்ற உருளல்."
 
-#: ui/main.qml:292
+#: ui/main.qml:274
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "உருளல் வேகம்:"
 
-#: ui/main.qml:343
+#: ui/main.qml:325
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "மெதுவாக"
 
-#: ui/main.qml:350
+#: ui/main.qml:332
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "வேகமாக"
 
-#: ui/main.qml:361
+#: ui/main.qml:343
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "கூடுதல் சுட்டி பட்டன்களை மாற்றியமை…"
 
-#: ui/main.qml:408
-#, kde-format
-msgctxt "@label for assigning an action to a numbered button"
-msgid "Extra Button %1:"
-msgstr "கூடுதல் பட்டன் %1"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "tamilpc team, கோ. கிஷோர்"
 
-#: ui/main.qml:438
-#, kde-format
-msgctxt "@action:button"
-msgid "Press the mouse button for which you want to add a key binding"
-msgstr "எந்த பட்டனுக்கு விசைப்பிணைப்பை சேர்க்க வேண்டுமோ, அதை அழுத்துங்கள்"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "tamilpc@ambalam.com, Kde-l10n-ta@kde.org"
 
-#: ui/main.qml:440
-#, kde-format
-msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
-msgid "Enter the new key combination for %1"
-msgstr "%1-க்கான புதிய விசைக்கூட்டை அழுத்துங்கள்"
-
-#: ui/main.qml:444
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel"
-msgstr "ரத்து செய்"
-
-#: ui/main.qml:462
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Press a mouse button "
-msgctxt "@action:button"
-msgid "Press a mouse button"
-msgstr "ஒரு சுட்டி பட்டனை அழுத்துங்கள் "
-
-#: ui/main.qml:463
-#, kde-format
-msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
-msgid "Add Binding…"
-msgstr "பிணைப்பை சேர்…"
-
-#: ui/main.qml:493
-#, kde-format
-msgctxt "@action:button"
-msgid "Go back"
-msgstr "பின்னே செல்"
+#~ msgctxt "@action:button"
+#~ msgid "Go back"
+#~ msgstr "பின்னே செல்"
 
 #~ msgid ""
 #~ "<h1>Mouse</h1> This module allows you to choose various options for the "
