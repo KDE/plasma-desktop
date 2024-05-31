@@ -20,12 +20,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国"
+msgstr "Guo Yunhe, Tyson Tan"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org"
+msgstr "i@guoyunhe.me, tds00@qq.com"
 
 #: knetattach.cpp:78
 #, kde-format
@@ -33,8 +33,8 @@ msgid ""
 "Enter a name for this <i>WebFolder</i> as well as a server address, port and "
 "folder path to use and press the <b>Save & Connect</b> button."
 msgstr ""
-"输入此 <i>Web 文件夹</i>的名称以及服务器地址、端口及要使用的文件夹路径，然后"
-"按<b>保存并连接</b>按钮。"
+"输入此 <i>WebDav (Web 文件夹)</i>的名称、服务器地址、端口以及要使用的文件夹路"
+"径，然后点击<b>保存并连接</b>按钮。"
 
 #: knetattach.cpp:81
 #, kde-format
@@ -43,8 +43,8 @@ msgid ""
 "address, port and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"输入此<i>安全 Shell 连接</i>的名称以及服务器地址、端口及要使用的文件夹路径，"
-"然后按<b>保存并连接</b>按钮。"
+"输入此 <i>SSH 连接 (安全 Shell 连接)</i>的名称、服务器地址、端口以及要使用的"
+"文件夹路径，然后点击<b>保存并连接</b>按钮。"
 
 #: knetattach.cpp:85
 #, kde-format
@@ -53,8 +53,8 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"输入此<i>文件传送协议连接</i>的名称以及服务器地址、端口及要使用的文件夹路径，"
-"然后按<b>保存并连接</b>按钮。"
+"输入此 <i>FTP 连接 (文件传输协议连接)</i>的名称、服务器地址、端口以及要使用的"
+"文件夹路径，然后点击<b>保存并连接</b>按钮。"
 
 #: knetattach.cpp:89
 #, kde-format
@@ -63,13 +63,13 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"输入此 <i>Microsoft Windows 网络驱动器</i>的名称以及服务器地址、端口及要使用"
-"的文件夹路径，然后按<b>保存并连接</b>按钮。"
+"输入此 <i>Microsoft Windows 网络驱动器</i>的名称、服务器地址、端口以及要使用"
+"的文件夹路径，然后点击<b>保存并连接</b>按钮。"
 
 #: knetattach.cpp:205
 #, kde-format
 msgid "Unable to connect to server.  Please check your settings and try again."
-msgstr "无法连接到服务器。请检查您的设置，然后再试一次。"
+msgstr "无法连接到服务器。请检查您的设置，然后重新尝试连接。"
 
 #: knetattach.cpp:333
 #, kde-format
@@ -99,7 +99,7 @@ msgstr "添加网络文件夹"
 msgid ""
 "Select the type of network folder you wish to connect to and press the Next "
 "button."
-msgstr "选择您想要连接的网络文件夹类型，然后按下一步按钮。"
+msgstr "选择要连接的网络文件夹类型，然后点击下一步按钮。"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _recent)
 #: knetattach.ui:65
@@ -111,13 +111,13 @@ msgstr "最近的连接(&R)："
 #: knetattach.ui:72
 #, kde-format
 msgid "&WebFolder (webdav)"
-msgstr "&Web 文件夹(webdav)"
+msgstr "Webdav (&Web 文件夹)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _fish)
 #: knetattach.ui:82
 #, kde-format
 msgid "&Secure shell (ssh)"
-msgstr "安全 &Shell(ssh)"
+msgstr "SSH (安全 &Shell)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _ftp)
 #: knetattach.ui:111
@@ -129,7 +129,7 @@ msgstr "FT&P"
 #: knetattach.ui:118
 #, kde-format
 msgid "&Microsoft® Windows® network drive"
-msgstr "&Microsoft(R) Windows(R) 网络驱动器"
+msgstr "&Microsoft® Windows® 网络驱动器"
 
 #. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
 #: knetattach.ui:145
@@ -183,13 +183,13 @@ msgstr "编码："
 #: knetattach.ui:351
 #, kde-format
 msgid "Cr&eate an icon for this remote folder"
-msgstr "为此远程文件夹创建图标(&E)"
+msgstr "创建此远程文件夹的图标(&E)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
 #: knetattach.ui:361
 #, kde-format
 msgid "&Use encryption"
-msgstr "使用加密(&U)"
+msgstr "使用加密功能(&U)"
 
 #: main.cpp:21 main.cpp:23
 #, kde-format

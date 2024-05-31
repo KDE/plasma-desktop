@@ -37,9 +37,9 @@ msgid ""
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
-"此列表包含本机系统已知的存储设备。 设备的“登录时”选框被勾选后，它将在系统登录"
-"到桌面时自动挂载，即使“登录时自动挂载所有可移动设备”选框未被勾选。此规则同样"
-"适用于设备的“插入时”选框。"
+"此列表包含了系统已知的所有存储设备。如果勾选了设备的“登录时”选框，系统将在登"
+"录到桌面时自动挂载它，即使您没有勾选“登录时自动挂载所有可移动设备”选框。此规"
+"则同样适用于设备的“插入时”选框。"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -51,9 +51,8 @@ msgid ""
 "system is set to only automatically mount familiar devices, the device will "
 "not be automatically mounted."
 msgstr ""
-"点击此按钮会“忘记”所选的设备。这只有在“仅自动挂载手动挂载过的可移动设备”选中"
-"时有用。设备记录删除后，KDE 将只自动挂载曾经挂载过的设备，不会自动挂载此设"
-"备。"
+"点击此按钮将“忘记”所选的设备。设备被忘记后，如果没有勾选“自动挂载之前没有挂载"
+"过的可移动设备”选项，那么系统将不会自动挂载该设备。"
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
@@ -72,15 +71,16 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"不勾选此项时，只有记录的设备将被挂载。“记录”的设备是指曾被挂载过的设备，例"
-"如，仅插入 USB 媒体播放器进行充电而不访问文件，不会被记录。在下次遇到该播放器"
-"时不会自动挂载它。只要访问过，设备将被自动挂载以使系统能访问其内容。"
+"不勾选此项时，系统将只自动挂载已记住的设备。系统会记住所有之前挂载过的设备。"
+"如果您访问过设备中的文件，系统将在下一次插入该设备时自动挂载它。相反，如果您"
+"插入了一台 USB 媒体播放器进行充电，但没有访问它的文件，系统就不会记住它，在下"
+"一次插入该播放器时也不会自动挂载它。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
 #, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
-msgstr "自动挂载新的可移动设备"
+msgstr "自动挂载之前没有挂载过的可移动设备"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -112,17 +112,17 @@ msgstr "所有已知设备"
 #: DeviceModel.cpp:260
 #, kde-format
 msgid "Attached Devices"
-msgstr "已插入设备"
+msgstr "已插入的设备"
 
 #: DeviceModel.cpp:262
 #, kde-format
 msgid "Disconnected Devices"
-msgstr "已拔出设备"
+msgstr "已拔出的设备"
 
 #: DeviceModel.cpp:298 DeviceModel.cpp:307
 #, kde-format
 msgid "UDI: %1"
-msgstr "通用设备标识符：%1"
+msgstr "UDI：%1"
 
 #: DeviceModel.cpp:318
 #, kde-format
