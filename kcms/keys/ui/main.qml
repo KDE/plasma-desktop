@@ -401,7 +401,8 @@ KCMUtils.AbstractKCM {
             }
         }
 
-        property Kirigami.Action addCommandAction: Kirigami.Action {
+        customFooterActions: Kirigami.Action {
+            id: addCommandAction
             text: addCommandDialog.editing ? i18n("Save") : i18n("Add")
             icon.name: addCommandDialog.editing ? "dialog-ok" : "list-add"
             enabled: cmdField.length > 0
@@ -421,8 +422,6 @@ KCMUtils.AbstractKCM {
 
         standardButtons: Kirigami.Dialog.Cancel
 
-        customFooterActions: [addCommandAction]
-
         ColumnLayout {
             spacing: Kirigami.Units.smallSpacing
 
@@ -438,7 +437,7 @@ KCMUtils.AbstractKCM {
                     id: cmdField
                     Layout.fillWidth: true
                     font.family: "monospace"
-                    onAccepted: addCommandDialog.addCommandAction.triggered()
+                    onAccepted: addCommandAction.triggered()
                 }
                 QQC2.Button {
                     icon.name: "document-open"
