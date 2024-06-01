@@ -5,12 +5,12 @@
 */
 
 import QtQuick
-import QtQuick.Layouts
 import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
+import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
-import org.kde.kquickcontrols
-import org.kde.kcmutils as KCM
+import org.kde.kquickcontrols as KQuickControls
 
 QQC2.ItemDelegate {
     id: root
@@ -138,7 +138,7 @@ QQC2.ItemDelegate {
                                     originalIndex.model.disableShortcut(originalIndex, modelData)
                                 }
                             }
-                            KCM.SettingHighlighter {
+                            KCMUtils.SettingHighlighter {
                                 highlight: !checked
                             }
                         }
@@ -162,17 +162,17 @@ QQC2.ItemDelegate {
                         RowLayout {
                             spacing: Kirigami.Units.smallSpacing
                             Layout.alignment: Qt.AlignRight
-                            KeySequenceItem {
+                            KQuickControls.KeySequenceItem {
                                 Layout.alignment: Qt.AlignRight
                                 keySequence: modelData
                                 showClearButton: false
                                 modifierOnlyAllowed: true
                                 multiKeyShortcutsAllowed: supportsMultipleKeys
-                                checkForConflictsAgainst: ShortcutType.None
+                                checkForConflictsAgainst: KQuickControls.ShortcutType.None
                                 onCaptureFinished: {
                                     kcm.requestKeySequence(this, originalIndex, keySequence, modelData)
                                 }
-                                KCM.SettingHighlighter {
+                                KCMUtils.SettingHighlighter {
                                     highlight: true
                                 }
                             }
@@ -193,7 +193,7 @@ QQC2.ItemDelegate {
                             this.visible = false
                             var newKeySequenceItem = newKeySequenceComponent.createObject(parent)
                             for (var i = 0; i < newKeySequenceItem.children.length; i++) {
-                                if (newKeySequenceItem.children[i] instanceof KeySequenceItem) {
+                                if (newKeySequenceItem.children[i] instanceof KQuickControls.KeySequenceItem) {
                                     var keySequenceItem = newKeySequenceItem.children[i]
                                 }
                             }
@@ -210,11 +210,11 @@ QQC2.ItemDelegate {
                             signal finished
                             Layout.alignment: Qt.AlignRight
                             spacing: Kirigami.Units.smallSpacing
-                            KeySequenceItem {
+                            KQuickControls.KeySequenceItem {
                                 showClearButton: false
                                 modifierOnlyAllowed: true
                                 multiKeyShortcutsAllowed: model.supportsMultipleKeys
-                                checkForConflictsAgainst: ShortcutType.None
+                                checkForConflictsAgainst: KQuickControls.ShortcutType.None
                                 onCaptureFinished: {
                                     kcm.requestKeySequence(this, originalIndex, keySequence)
                                     parent.finished()

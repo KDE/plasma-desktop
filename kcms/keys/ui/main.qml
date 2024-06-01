@@ -5,18 +5,17 @@
 */
 
 import QtCore
-import QtQuick
-import QtQuick.Dialogs
-import QtQuick.Layouts
-import QtQuick.Controls as QQC2
-import QtQml
 import QtQml.Models
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Dialogs as QtDialogs
+import QtQuick.Layouts
 
+import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
-import org.kde.kcmutils as KCM
 import org.kde.private.kcms.keys as Private
 
-KCM.AbstractKCM {
+KCMUtils.AbstractKCM {
     id: root
     implicitWidth: Kirigami.Units.gridUnit * 44
     implicitHeight: Kirigami.Units.gridUnit * 33
@@ -354,12 +353,12 @@ KCM.AbstractKCM {
         id: shortcutSchemeFileDialogLoader
         active: false
         property bool save
-        sourceComponent: FileDialog {
+        sourceComponent: QtDialogs.FileDialog {
             title: save ? i18n("Export Shortcut Scheme") : i18n("Import Shortcut Scheme")
             currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
             nameFilters: [ i18nc("Template for file dialog","Shortcut Scheme (*.kksrc)") ]
             defaultSuffix: ".kksrc"
-            fileMode: shortcutSchemeFileDialogLoader.save ? FileDialog.SaveFile : FileDialog.OpenFile
+            fileMode: shortcutSchemeFileDialogLoader.save ? QtDialogs.FileDialog.SaveFile : QtDialogs.FileDialog.OpenFile
             Component.onCompleted: open()
             onAccepted: {
                 if (save) {
@@ -455,7 +454,7 @@ KCM.AbstractKCM {
     Loader {
         id: openScriptFileDialogLoader
         active: false
-        sourceComponent: FileDialog {
+        sourceComponent: QtDialogs.FileDialog {
             title: i18nc("@title:window", "Choose Script File")
             currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
             nameFilters: [ i18nc("Template for file dialog","Script file (*.*sh)") ]
