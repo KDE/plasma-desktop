@@ -13,6 +13,7 @@ import QtQuick.Layouts
 
 import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
+import org.kde.kirigami.platform as Platform
 import org.kde.private.kcms.keys as Private
 
 KCMUtils.AbstractKCM {
@@ -191,6 +192,10 @@ KCMUtils.AbstractKCM {
                         onClicked: ListView.view.currentIndex = index
                         highlighted: ListView.isCurrentItem
 
+                        QQC2.ToolTip.text: text
+                        QQC2.ToolTip.visible: (Platform.Settings.tabletMode ? down : hovered) && label.truncated
+                        QQC2.ToolTip.delay: Platform.Units.toolTipDelay
+
                         contentItem: RowLayout {
                             spacing: Kirigami.Units.smallSpacing
                             Kirigami.IconTitleSubtitle {
@@ -227,9 +232,10 @@ KCMUtils.AbstractKCM {
                                     addCommandDialog.commandListItemDelegate = componentDelegate;
                                     addCommandDialog.open();
                                 }
-                                QQC2.ToolTip {
-                                    text: i18nc("@tooltip:button %1 is the text of a custom command", "Edit command for %1", model.display)
-                                }
+
+                                QQC2.ToolTip.text: i18nc("@tooltip:button %1 is the text of a custom command", "Edit command for %1", model.display)
+                                QQC2.ToolTip.visible: Platform.Settings.tabletMode ? down : hovered
+                                QQC2.ToolTip.delay: Platform.Units.toolTipDelay
                             }
                             QQC2.Button {
                                 id: deleteButton
@@ -243,9 +249,10 @@ KCMUtils.AbstractKCM {
                                          && (componentDelegate.hovered || componentDelegate.ListView.isCurrentItem)
                                 icon.name: "edit-delete"
                                 onClicked: model.pendingDeletion = true
-                                QQC2.ToolTip {
-                                    text: i18n("Remove all shortcuts for %1", model.display)
-                                }
+
+                                QQC2.ToolTip.text: i18n("Remove all shortcuts for %1", model.display)
+                                QQC2.ToolTip.visible: Platform.Settings.tabletMode ? down : hovered
+                                QQC2.ToolTip.delay: Platform.Units.toolTipDelay
                             }
                             QQC2.Button {
                                 implicitHeight: label.implicitHeight
@@ -254,9 +261,11 @@ KCMUtils.AbstractKCM {
                                 visible: !exportActive && model.pendingDeletion
                                 icon.name: "edit-undo"
                                 onClicked: model.pendingDeletion = false
-                                QQC2.ToolTip {
-                                    text: i18n("Undo deletion")
-                                }
+
+                                QQC2.ToolTip.text: i18n("Undo deletion")
+                                QQC2.ToolTip.visible: Platform.Settings.tabletMode ? down : hovered
+                                QQC2.ToolTip.delay: Platform.Units.toolTipDelay
+
                             }
                             Rectangle {
                                 id: defaultIndicator
