@@ -1,5 +1,5 @@
 # translation of plasma_shell_org.kde.plasma.desktop.po to Slovak
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016, 2017.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-26 02:26+0000\n"
-"PO-Revision-Date: 2023-12-02 20:14+0100\n"
+"PO-Revision-Date: 2024-05-31 12:54+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 24.05.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
@@ -303,10 +303,8 @@ msgid "Bottom"
 msgstr "Spodok"
 
 #: contents/configuration/PanelConfiguration.qml:174
-#, fuzzy
-#| msgid "Set Position..."
 msgid "Set Position…"
-msgstr "Nastaviť pozíciu..."
+msgstr "Nastaviť pozíciu…"
 
 #: contents/configuration/PanelConfiguration.qml:201
 msgid "Alignment"
@@ -317,10 +315,8 @@ msgid "Center"
 msgstr "Vycentrovať"
 
 #: contents/configuration/PanelConfiguration.qml:290
-#, fuzzy
-#| msgid "Height:"
 msgid "Height"
-msgstr "Výška:"
+msgstr "Výška"
 
 #: contents/configuration/PanelConfiguration.qml:291
 msgid "Width"
@@ -391,10 +387,8 @@ msgid "Panel Width:"
 msgstr "Šírka panelu:"
 
 #: contents/configuration/PanelConfiguration.qml:533
-#, fuzzy
-#| msgid "Panel Width:"
 msgid "Panel Height:"
-msgstr "Šírka panelu:"
+msgstr "Výška panela:"
 
 #: contents/configuration/PanelConfiguration.qml:556
 msgid "Focus shortcut:"
@@ -416,11 +410,11 @@ msgstr "Odstrániť tento panel; túto akciu je možné zrušiť"
 #: contents/configuration/PanelConfiguration.qml:610
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr ""
+msgstr "Hotovo"
 
 #: contents/configuration/PanelConfiguration.qml:613
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "Zatvoriť okno nastavení panelu a odísť z režimu úprav"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -452,10 +446,8 @@ msgstr ""
 "Dvojitým kliknutím obnovíte nastavenie."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy
-#| msgid "Panels and Desktops Management"
 msgid "Panel and Desktop Management"
-msgstr "Panely a správa plôch"
+msgstr "Správa panelu a pracovnej plochy"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
@@ -534,9 +526,9 @@ msgstr "Kategórie"
 #: contents/explorer/WidgetExplorer.qml:215
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Potvrdiť odstránenie jedného widgetu"
+msgstr[1] "Potvrdiť odstránenie %1 widgetov"
+msgstr[2] "Potvrdiť odstránenie %1 widgetov"
 
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
@@ -549,121 +541,115 @@ msgstr "Žiadne miniaplikáciw nie sú dostupné"
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Hodiny:"
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Ponechať viditeľné, keď zmizne výzva na odomknutie"
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Ovládanie médií:"
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Zobraziť pod výzvou na odomknutie"
 
 #: contents/lockscreen/LockScreenUi.qml:50
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Odomknutie zlyhalo"
 
 #: contents/lockscreen/LockScreenUi.qml:276
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Funkcia Caps Lock je zapnutá"
 
 #: contents/lockscreen/LockScreenUi.qml:290
 msgid "Sleep"
-msgstr ""
+msgstr "Uspať"
 
 #: contents/lockscreen/LockScreenUi.qml:296
 msgid "Hibernate"
-msgstr ""
+msgstr "Hibernovať"
 
 #: contents/lockscreen/LockScreenUi.qml:302
-#, fuzzy
-#| msgid "Switch"
 msgid "Switch User"
-msgstr "Prepnúť"
+msgstr "Prepnúť používateľa"
 
 #: contents/lockscreen/LockScreenUi.qml:363
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Virtuálna klávesnica"
 
 #: contents/lockscreen/LockScreenUi.qml:387
-#, fuzzy
-#| msgid "Switch"
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Prepnúť"
+msgstr "Prepnúť rozloženie"
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr ""
+msgstr "Odomknúť"
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(alebo naskenujte odtlačok prsta na čítačke)"
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(alebo naskenujte svoju čipovú kartu)"
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr ""
+msgstr "Žiadny názov"
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr ""
+msgstr "Neprehráva sa žiadne médium"
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr ""
+msgstr "Predchádzajúca skladba"
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Prehrať alebo pozastaviť médium"
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr ""
+msgstr "Nasledujúca skladba"
 
 #: contents/osd/OsdItem.qml:32
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/views/DesktopEditMode.qml:111
 msgid "Global Themes"
-msgstr ""
+msgstr "Globálne témy"
 
 #: contents/views/DesktopEditMode.qml:118
-#, fuzzy
-#| msgid "Open configuration page"
 msgid "Display Configuration"
-msgstr "Otvoriť konfiguračnú stránku"
+msgstr "Nastavenie obrazovky"
 
 #: contents/views/DesktopEditMode.qml:139
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "Viac"
 
 #: contents/views/DesktopEditMode.qml:148
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Ukončiť režim úprav"
 
 #: contents/views/Panel.qml:314
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Indikátor zamerania panela"
 
 #~ msgid "Height:"
 #~ msgstr "Výška:"
