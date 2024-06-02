@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 // SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
+#include <QQmlEngine>
 #include <QQmlExtensionPlugin>
-#include <QmlTypeAndRevisionsRegistration>
 
 #include <flags.h>
 
