@@ -28,6 +28,26 @@ KCMUtils.SimpleKCM {
 
     readonly property Mouse.InputDevice device: backend.inputDevices[KCMUtils.ConfigModule.currentDeviceIndex] ?? null
 
+    function supportsExtraButtons(device: Mouse.InputDevice): bool {
+        return (device?.supportedButtons ?? 0) & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton);
+    }
+
+    actions: Kirigami.Action  {
+        text: i18ndc("kcmmouse", "@action:button", "Re-bind Additional Mouse Buttons…")
+
+        visible: {
+            if (root.backend.isAnonymousInputDevice) {
+                return false;
+            }
+            return root.backend.buttonMappingCount > 0
+                || root.backend.inputDevices.some(root.supportsExtraButtons);
+        }
+
+        onTriggered: source => {
+            root.KCMUtils.ConfigModule.push("bindings.qml");
+        }
+    }
+
     header: Message {
         message: root.KCMUtils.ConfigModule.message
     }
@@ -333,30 +353,6 @@ KCMUtils.SimpleKCM {
                 textFormat: Text.PlainText
             }
 
-        }
-
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        QQC2.Button  {
-            text: i18ndc("kcmmouse", "@action:button", "Re-bind Additional Mouse Buttons…")
-
-            visible: {
-                if (root.backend.isAnonymousInputDevice) {
-                    return false;
-                }
-                return root.backend.buttonMappingCount > 0
-                    || root.backend.inputDevices.some(supportsExtraButtons);
-            }
-
-            onClicked: {
-                root.KCMUtils.ConfigModule.push("bindings.qml");
-            }
-
-            function supportsExtraButtons(device: Mouse.InputDevice): bool {
-                return (device?.supportedButtons ?? 0) & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton);
-            }
         }
     }
 }
