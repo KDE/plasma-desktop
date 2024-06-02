@@ -213,7 +213,9 @@ private:
             if (val != newVal) {
                 val = newVal;
                 if (changedSignalFunction) {
-                    (device->*changedSignalFunction)();
+                    // clang-format off
+                    Q_EMIT (device->*changedSignalFunction)();
+                    // clang-format on
                 }
             }
         }
@@ -222,7 +224,9 @@ private:
             if (val != other.val) {
                 val = other.val;
                 if (changedSignalFunction) {
-                    (device->*changedSignalFunction)();
+                    // clang-format off
+                    Q_EMIT (device->*changedSignalFunction)();
+                    // clang-format on
                 }
             }
         }
