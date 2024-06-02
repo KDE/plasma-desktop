@@ -139,9 +139,6 @@ X11LibinputDummyDevice::X11LibinputDummyDevice(QObject *parent, Display *dpy)
 
     m_enabled.val = true;
 
-    m_supportsPointerAccelerationProfileAdaptive.val = true;
-    m_supportsPointerAccelerationProfileFlat.val = true;
-
     auto x11DefaultFlat = m_settings->load(QStringLiteral("X11LibInputXAccelProfileFlat"), false);
     m_defaultPointerAccelerationProfileFlat.val = x11DefaultFlat;
     m_defaultPointerAccelerationProfileAdaptive.val = !x11DefaultFlat;
@@ -176,7 +173,7 @@ bool X11LibinputDummyDevice::defaults()
 {
     m_leftHanded.set(false);
 
-    m_pointerAcceleration.set(m_defaultPointerAcceleration);
+    m_pointerAcceleration.set(s_defaultPointerAcceleration);
     m_pointerAccelerationProfileFlat.set(m_defaultPointerAccelerationProfileFlat);
     m_pointerAccelerationProfileAdaptive.set(m_defaultPointerAccelerationProfileAdaptive);
 

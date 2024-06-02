@@ -124,7 +124,7 @@ public:
 
     bool supportsPointerAccelerationProfileFlat() const override
     {
-        return m_supportsPointerAccelerationProfileFlat.val;
+        return s_supportsPointerAccelerationProfileFlat;
     }
 
     bool defaultPointerAccelerationProfileFlat() const override
@@ -144,7 +144,7 @@ public:
 
     bool supportsPointerAccelerationProfileAdaptive() const override
     {
-        return m_supportsPointerAccelerationProfileAdaptive.val;
+        return s_supportsPointerAccelerationProfileAdaptive;
     }
 
     bool defaultPointerAccelerationProfileAdaptive() const override
@@ -279,11 +279,11 @@ private:
 
     Prop<qreal> m_pointerAcceleration{this, &X11LibinputDummyDevice::pointerAccelerationChanged, u"XLbInptPointerAcceleration"_s};
 
-    Prop<bool> m_supportsPointerAccelerationProfileFlat{this};
+    static constexpr bool s_supportsPointerAccelerationProfileFlat = true;
     Prop<bool> m_defaultPointerAccelerationProfileFlat{this};
     Prop<bool> m_pointerAccelerationProfileFlat{this, &X11LibinputDummyDevice::pointerAccelerationProfileFlatChanged, u"XLbInptAccelProfileFlat"_s};
 
-    Prop<bool> m_supportsPointerAccelerationProfileAdaptive{this};
+    static constexpr bool s_supportsPointerAccelerationProfileAdaptive = true;
     Prop<bool> m_defaultPointerAccelerationProfileAdaptive{this};
     Prop<bool> m_pointerAccelerationProfileAdaptive{this, &X11LibinputDummyDevice::pointerAccelerationProfileAdaptiveChanged};
 
