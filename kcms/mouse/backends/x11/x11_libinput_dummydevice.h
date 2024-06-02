@@ -217,10 +217,10 @@ private:
                 }
             }
         }
-        void set(const Prop<T> &p)
+        void set(const Prop<T> &other)
         {
-            if (val != p.val) {
-                val = p.val;
+            if (val != other.val) {
+                val = other.val;
                 if (changedSignalFunction) {
                     (device->*changedSignalFunction)();
                 }
