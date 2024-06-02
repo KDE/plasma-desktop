@@ -208,7 +208,7 @@ private:
         {
         }
 
-        void set(T newVal)
+        void set(const T &newVal)
         {
             if (val != newVal) {
                 val = newVal;
@@ -231,10 +231,10 @@ private:
             return old != val;
         }
 
-        void reset(T newVal)
+        void reset(const T &newVal)
         {
             old = newVal;
-            set(std::move(newVal));
+            set(newVal);
         }
 
         QString cfgName;

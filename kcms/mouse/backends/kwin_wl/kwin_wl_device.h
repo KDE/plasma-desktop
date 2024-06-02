@@ -208,7 +208,7 @@ private:
         {
         }
 
-        void set(T newVal)
+        void set(const T &newVal)
         {
             if (avail && val != newVal) {
                 val = newVal;
