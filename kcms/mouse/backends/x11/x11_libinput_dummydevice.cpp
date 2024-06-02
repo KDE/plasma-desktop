@@ -137,7 +137,6 @@ X11LibinputDummyDevice::X11LibinputDummyDevice(QObject *parent, Display *dpy)
     m_pointerAcceleration.atom = XInternAtom(dpy, LIBINPUT_PROP_ACCEL, True);
     m_pointerAccelerationProfileFlat.atom = XInternAtom(dpy, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED, True);
 
-    m_supportsDisableEvents.val = false;
     m_enabled.val = true;
     m_supportedButtons.val = Qt::LeftButton | Qt::MiddleButton | Qt::RightButton;
     m_supportsLeftHanded.val = true;
