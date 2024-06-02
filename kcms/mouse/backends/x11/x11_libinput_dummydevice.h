@@ -87,12 +87,12 @@ public:
 
     bool supportsMiddleEmulation() const override
     {
-        return m_supportsMiddleEmulation.val;
+        return s_supportsMiddleEmulation;
     }
 
     bool middleEmulationEnabledByDefault() const override
     {
-        return m_middleEmulationEnabledByDefault.val;
+        return s_middleEmulationEnabledByDefault;
     }
 
     bool isMiddleEmulation() const override
@@ -268,8 +268,8 @@ private:
     static constexpr bool s_leftHandedEnabledByDefault = false;
     Prop<bool> m_leftHanded{this, &X11LibinputDummyDevice::leftHandedChanged, u"XLbInptLeftHanded"_s};
 
-    Prop<bool> m_supportsMiddleEmulation{this};
-    Prop<bool> m_middleEmulationEnabledByDefault{this};
+    static constexpr bool s_supportsMiddleEmulation = true;
+    static constexpr bool s_middleEmulationEnabledByDefault = false;
     Prop<bool> m_middleEmulation{this, &X11LibinputDummyDevice::middleEmulationChanged, u"XLbInptMiddleEmulation"_s};
 
     //

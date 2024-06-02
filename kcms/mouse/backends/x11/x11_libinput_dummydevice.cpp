@@ -138,8 +138,6 @@ X11LibinputDummyDevice::X11LibinputDummyDevice(QObject *parent, Display *dpy)
     m_pointerAccelerationProfileFlat.atom = XInternAtom(dpy, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED, True);
 
     m_enabled.val = true;
-    m_supportsMiddleEmulation.val = true;
-    m_middleEmulationEnabledByDefault.val = false;
 
     m_supportsPointerAcceleration.val = true;
     m_defaultPointerAcceleration.val = 0;
@@ -185,7 +183,7 @@ bool X11LibinputDummyDevice::defaults()
     m_pointerAccelerationProfileFlat.set(m_defaultPointerAccelerationProfileFlat);
     m_pointerAccelerationProfileAdaptive.set(m_defaultPointerAccelerationProfileAdaptive);
 
-    m_middleEmulation.set(m_middleEmulationEnabledByDefault);
+    m_middleEmulation.set(s_middleEmulationEnabledByDefault);
     m_naturalScroll.set(m_naturalScrollEnabledByDefault);
 
     return true;
