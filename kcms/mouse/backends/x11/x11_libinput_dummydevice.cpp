@@ -139,9 +139,6 @@ X11LibinputDummyDevice::X11LibinputDummyDevice(QObject *parent, Display *dpy)
 
     m_enabled.val = true;
 
-    m_supportsPointerAcceleration.val = true;
-    m_defaultPointerAcceleration.val = 0;
-
     m_supportsPointerAccelerationProfileAdaptive.val = true;
     m_supportsPointerAccelerationProfileFlat.val = true;
 

@@ -109,7 +109,7 @@ public:
     // acceleration speed and profile
     bool supportsPointerAcceleration() const override
     {
-        return m_supportsPointerAcceleration.val;
+        return s_supportsPointerAcceleration;
     }
 
     qreal pointerAcceleration() const override
@@ -274,8 +274,9 @@ private:
 
     //
     // acceleration speed and profile
-    Prop<bool> m_supportsPointerAcceleration{this};
-    Prop<qreal> m_defaultPointerAcceleration{this};
+    static constexpr bool s_supportsPointerAcceleration = true;
+    static constexpr qreal s_defaultPointerAcceleration = 0;
+
     Prop<qreal> m_pointerAcceleration{this, &X11LibinputDummyDevice::pointerAccelerationChanged, u"XLbInptPointerAcceleration"_s};
 
     Prop<bool> m_supportsPointerAccelerationProfileFlat{this};
