@@ -195,7 +195,6 @@ public:
 private:
     template<typename T>
     struct Prop {
-        using value_type = T;
         using ChangedSignal = void (KWinWaylandDevice::*)();
 
         explicit Prop(KWinWaylandDevice *device, const QString &dbusName, ChangedSignal changedSignal = nullptr)
@@ -244,7 +243,7 @@ private:
     };
 
     template<typename T>
-    bool valueLoader(Prop<T> &prop);
+    bool valueLoader(const QVariantMap &properties, Prop<T> &prop);
 
     template<typename T>
     bool valueWriter(const Prop<T> &prop);

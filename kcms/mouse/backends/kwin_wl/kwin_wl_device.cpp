@@ -17,13 +17,13 @@
 namespace
 {
 template<typename T>
-T valueLoaderPart(QVariant const &reply)
+T valueLoaderPart(const QVariant &reply)
 {
     return reply.value<T>();
 }
 
 template<>
-Qt::MouseButtons valueLoaderPart(QVariant const &reply)
+Qt::MouseButtons valueLoaderPart(const QVariant &reply)
 {
     return static_cast<Qt::MouseButtons>(reply.toInt());
 }
@@ -55,16 +55,10 @@ bool KWinWaylandDevice::init()
         return false;
     }
 
-    auto valueLoader = [properties = reply.value(), this](auto &prop) {
-        if (QVariant variant = properties.value(prop.dbus); variant.isValid()) {
-            prop.avail = true;
-            prop.old = valueLoaderPart<typename std::remove_reference_t<decltype(prop)>::value_type>(variant);
-            prop.set(prop.old);
-            return true;
-        }
-        qCCritical(KCM_MOUSE) << "Device" << m_dbusName << "does not have property on d-bus read of" << prop.dbus;
-        prop.avail = false;
-        return false;
+    const auto properties = reply.value();
+
+    const auto valueLoader = [&]<typename T>(Prop<T> &prop) {
+        return this->valueLoader(properties, prop);
     };
 
     // general
@@ -150,6 +144,21 @@ bool KWinWaylandDevice::isSaveNeeded() const
         || m_naturalScroll.isSaveNeeded() //
         || m_scrollFactor.isSaveNeeded();
 }
+
+template<typename T>
+bool KWinWaylandDevice::valueLoader(const QVariantMap &properties, Prop<T> &prop)
+{
+    if (const auto variant = properties.value(prop.dbus); variant.isValid()) {
+        prop.avail = true;
+        prop.old = valueLoaderPart<T>(variant);
+        prop.set(prop.old);
+        return true;
+    } else {
+        qCCritical(KCM_MOUSE) << "Device" << m_dbusName << "does not have property on d-bus read of" << prop.dbus;
+        prop.avail = false;
+        return false;
+    }
+};
 
 template<typename T>
 bool KWinWaylandDevice::valueWriter(const Prop<T> &prop)
