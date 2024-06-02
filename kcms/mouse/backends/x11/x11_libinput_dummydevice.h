@@ -207,7 +207,7 @@ private:
 
         void set(T newVal)
         {
-            if (avail && val != newVal) {
+            if (val != newVal) {
                 val = newVal;
                 if (changedSignalFunction) {
                     (device->*changedSignalFunction)();
@@ -216,7 +216,7 @@ private:
         }
         void set(const Prop<T> &p)
         {
-            if (avail && val != p.val) {
+            if (val != p.val) {
                 val = p.val;
                 if (changedSignalFunction) {
                     (device->*changedSignalFunction)();
@@ -225,7 +225,7 @@ private:
         }
         bool isSaveNeeded() const
         {
-            return avail && (old != val);
+            return old != val;
         }
 
         void reset(T newVal)
@@ -237,7 +237,6 @@ private:
         QString name;
         QString cfgName;
 
-        bool avail = true;
         const ChangedSignal changedSignalFunction;
         X11LibinputDummyDevice *const device;
         T old;
