@@ -12,6 +12,7 @@
 #include <QString>
 #include <QtGui/private/qtx11extras_p.h>
 
+#include <X11/X.h>
 #include <X11/Xdefs.h>
 
 #include <memory>
@@ -201,6 +202,9 @@ private:
             : cfgName(cfgName)
             , changedSignalFunction(changedSignal)
             , device(device)
+            , old(T())
+            , val(T())
+            , atom(None)
         {
         }
 

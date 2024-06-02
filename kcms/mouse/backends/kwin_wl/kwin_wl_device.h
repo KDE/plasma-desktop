@@ -200,8 +200,11 @@ private:
 
         explicit Prop(KWinWaylandDevice *device, const QString &dbusName, ChangedSignal changedSignal = nullptr)
             : dbus(dbusName)
+            , avail(false)
             , changedSignalFunction(changedSignal)
             , device(device)
+            , old(T())
+            , val(T())
         {
         }
 
