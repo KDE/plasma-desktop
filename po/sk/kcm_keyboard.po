@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-02 00:40+0000\n"
 "PO-Revision-Date: 2023-11-11 15:38+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -51,19 +51,13 @@ msgstr "Prepnutie na naposledy použité rozloženie klávesnice"
 msgid "Switch keyboard layout to %1"
 msgstr "Prepnúť rozloženie klávesnice na %1"
 
-#: flags.cpp:78
-#, kde-format
-msgctxt "layout - variant"
-msgid "%1 - %2"
-msgstr "%1 - %2"
-
-#: keyboardmodel.cpp:42
+#: keyboardmodel.cpp:35
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "Neznáme"
 
-#: keyboardmodel.cpp:46
+#: keyboardmodel.cpp:39
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
@@ -422,7 +416,7 @@ msgctxt "@title:tab"
 msgid "Key Bindings"
 msgstr ""
 
-#: xkboptionsmodel.cpp:161
+#: xkboptionsmodel.cpp:160
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
@@ -430,11 +424,15 @@ msgstr[0] "%1 skratka"
 msgstr[1] "%1 skratky"
 msgstr[2] "%1 skratiek"
 
-#: xkboptionsmodel.cpp:164
+#: xkboptionsmodel.cpp:163
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Žiadna"
+
+#~ msgctxt "layout - variant"
+#~ msgid "%1 - %2"
+#~ msgstr "%1 - %2"
 
 #~ msgid "Search…"
 #~ msgstr "Vyhľadajte…"

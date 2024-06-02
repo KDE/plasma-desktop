@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-02 00:40+0000\n"
 "PO-Revision-Date: 2012-06-13 15:26+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -59,19 +59,13 @@ msgstr "ប្លង់​ក្ដារចុច​"
 msgid "Switch keyboard layout to %1"
 msgstr "ប្លង់​ក្ដារចុច​"
 
-#: flags.cpp:78
-#, kde-format
-msgctxt "layout - variant"
-msgid "%1 - %2"
-msgstr "%1 - %2"
-
-#: keyboardmodel.cpp:42
+#: keyboardmodel.cpp:35
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "មិន​ស្គាល់"
 
-#: keyboardmodel.cpp:46
+#: keyboardmodel.cpp:39
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
@@ -419,20 +413,24 @@ msgctxt "@title:tab"
 msgid "Key Bindings"
 msgstr ""
 
-#: xkboptionsmodel.cpp:161
+#: xkboptionsmodel.cpp:160
 #, fuzzy, kde-format
 #| msgid "Shortcut:"
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
 msgstr[0] "ផ្លូវកាត់​ ៖"
 
-#: xkboptionsmodel.cpp:164
+#: xkboptionsmodel.cpp:163
 #, fuzzy, kde-format
 #| msgctxt "no shortcut defined"
 #| msgid "None"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "គ្មាន"
+
+#~ msgctxt "layout - variant"
+#~ msgid "%1 - %2"
+#~ msgstr "%1 - %2"
 
 #~ msgid "Label:"
 #~ msgstr "ស្លាក ៖"

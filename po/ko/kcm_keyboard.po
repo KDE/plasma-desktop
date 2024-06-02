@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-02 00:40+0000\n"
 "PO-Revision-Date: 2023-10-08 23:47+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -49,19 +49,13 @@ msgstr "마지막으로 사용한 키보드 레이아웃으로 전환"
 msgid "Switch keyboard layout to %1"
 msgstr "키보드 레이아웃을 %1(으)로 전환"
 
-#: flags.cpp:78
-#, kde-format
-msgctxt "layout - variant"
-msgid "%1 - %2"
-msgstr "%1 - %2"
-
-#: keyboardmodel.cpp:42
+#: keyboardmodel.cpp:35
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: keyboardmodel.cpp:46
+#: keyboardmodel.cpp:39
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
@@ -419,17 +413,21 @@ msgctxt "@title:tab"
 msgid "Key Bindings"
 msgstr ""
 
-#: xkboptionsmodel.cpp:161
+#: xkboptionsmodel.cpp:160
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
 msgstr[0] "%1 단축키"
 
-#: xkboptionsmodel.cpp:164
+#: xkboptionsmodel.cpp:163
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "없음"
+
+#~ msgctxt "layout - variant"
+#~ msgid "%1 - %2"
+#~ msgstr "%1 - %2"
 
 #~ msgid "Search…"
 #~ msgstr "찾기…"

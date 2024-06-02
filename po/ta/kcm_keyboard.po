@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-02 00:40+0000\n"
 "PO-Revision-Date: 2024-04-21 22:26+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -51,19 +51,13 @@ msgstr "கடைசியாக பயன்படுத்திய விச�
 msgid "Switch keyboard layout to %1"
 msgstr "%1 ஆக விசைப்பலகை தளவமைப்பை மாற்று"
 
-#: flags.cpp:78
-#, kde-format
-msgctxt "layout - variant"
-msgid "%1 - %2"
-msgstr "%1 - %2"
-
-#: keyboardmodel.cpp:42
+#: keyboardmodel.cpp:35
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "தெரியாதது"
 
-#: keyboardmodel.cpp:46
+#: keyboardmodel.cpp:39
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
@@ -372,18 +366,22 @@ msgctxt "@title:tab"
 msgid "Key Bindings"
 msgstr "விசைப்பிணைப்புகள்"
 
-#: xkboptionsmodel.cpp:161
+#: xkboptionsmodel.cpp:160
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
 msgstr[0] "%1 சுருக்குவழி"
 msgstr[1] "%1 சுருக்குவழிகள்"
 
-#: xkboptionsmodel.cpp:164
+#: xkboptionsmodel.cpp:163
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "ஏதுமில்லை"
+
+#~ msgctxt "layout - variant"
+#~ msgid "%1 - %2"
+#~ msgstr "%1 - %2"
 
 #~ msgid "Search…"
 #~ msgstr "தேடு..."

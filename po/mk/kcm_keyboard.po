@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-02 00:40+0000\n"
 "PO-Revision-Date: 2008-12-21 16:38+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -52,19 +52,13 @@ msgstr "Префрли во следниот распоред на тастат�
 msgid "Switch keyboard layout to %1"
 msgstr "Грешка при менување на распоредот на тастатурата во „%1“"
 
-#: flags.cpp:78
-#, kde-format
-msgctxt "layout - variant"
-msgid "%1 - %2"
-msgstr ""
-
-#: keyboardmodel.cpp:42
+#: keyboardmodel.cpp:35
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr ""
 
-#: keyboardmodel.cpp:46
+#: keyboardmodel.cpp:39
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
@@ -403,7 +397,7 @@ msgctxt "@title:tab"
 msgid "Key Bindings"
 msgstr ""
 
-#: xkboptionsmodel.cpp:161
+#: xkboptionsmodel.cpp:160
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
@@ -411,7 +405,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: xkboptionsmodel.cpp:164
+#: xkboptionsmodel.cpp:163
 #, fuzzy, kde-format
 #| msgctxt "no shortcut defined"
 #| msgid "None"

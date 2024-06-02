@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-02 00:40+0000\n"
 "PO-Revision-Date: 2024-04-28 12:12+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -49,19 +49,13 @@ msgstr "Przełącz na ostatnio używany układ klawiatury"
 msgid "Switch keyboard layout to %1"
 msgstr "Przełącz układ klawiatury na %1"
 
-#: flags.cpp:78
-#, kde-format
-msgctxt "layout - variant"
-msgid "%1 - %2"
-msgstr "%1 - %2"
-
-#: keyboardmodel.cpp:42
+#: keyboardmodel.cpp:35
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "Nieznany"
 
-#: keyboardmodel.cpp:46
+#: keyboardmodel.cpp:39
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
@@ -375,7 +369,7 @@ msgctxt "@title:tab"
 msgid "Key Bindings"
 msgstr "Skróty klawiszowe"
 
-#: xkboptionsmodel.cpp:161
+#: xkboptionsmodel.cpp:160
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
@@ -383,11 +377,15 @@ msgstr[0] "%1 skrót"
 msgstr[1] "%1 skróty"
 msgstr[2] "%1 skrótów"
 
-#: xkboptionsmodel.cpp:164
+#: xkboptionsmodel.cpp:163
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Brak"
+
+#~ msgctxt "layout - variant"
+#~ msgid "%1 - %2"
+#~ msgstr "%1 - %2"
 
 #~ msgid "Search…"
 #~ msgstr "Poszukaj..."

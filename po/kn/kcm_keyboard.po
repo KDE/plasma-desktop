@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxkb\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-02 00:40+0000\n"
 "PO-Revision-Date: 2009-01-09 16:21+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -51,19 +51,13 @@ msgstr "ಮುಂದಿನ ಕೀಲಿಮಣೆ ವಿನ್ಯಾಸಕ್ಕ�
 msgid "Switch keyboard layout to %1"
 msgstr "ಕೀಲಿ ಮಣೆ ವಿನ್ಯಾಸವನ್ನು '%1' ಗೆ ಬದಲಾಯಿಸುವಲ್ಲಿ ದೋಷ ಉಂಟಾಗಿದೆ"
 
-#: flags.cpp:78
-#, kde-format
-msgctxt "layout - variant"
-msgid "%1 - %2"
-msgstr ""
-
-#: keyboardmodel.cpp:42
+#: keyboardmodel.cpp:35
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr ""
 
-#: keyboardmodel.cpp:46
+#: keyboardmodel.cpp:39
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
@@ -397,7 +391,7 @@ msgctxt "@title:tab"
 msgid "Key Bindings"
 msgstr ""
 
-#: xkboptionsmodel.cpp:161
+#: xkboptionsmodel.cpp:160
 #, fuzzy, kde-format
 #| msgid "Main shortcuts:"
 msgid "%1 shortcut"
@@ -405,7 +399,7 @@ msgid_plural "%1 shortcuts"
 msgstr[0] "ಪ್ರಮುಖ ಸಮೀಪಮಾರ್ಗಗಳು:"
 msgstr[1] "ಪ್ರಮುಖ ಸಮೀಪಮಾರ್ಗಗಳು:"
 
-#: xkboptionsmodel.cpp:164
+#: xkboptionsmodel.cpp:163
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "no shortcuts defined"

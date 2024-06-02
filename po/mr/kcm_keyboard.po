@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-02 00:40+0000\n"
 "PO-Revision-Date: 2013-02-23 17:39+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -51,19 +51,13 @@ msgstr "पुढील कळफलक रचनेवर जा"
 msgid "Switch keyboard layout to %1"
 msgstr "%1 या कळफलक रचनेवर जा"
 
-#: flags.cpp:78
-#, kde-format
-msgctxt "layout - variant"
-msgid "%1 - %2"
-msgstr "%1 - %2"
-
-#: keyboardmodel.cpp:42
+#: keyboardmodel.cpp:35
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "अपरिचीत"
 
-#: keyboardmodel.cpp:46
+#: keyboardmodel.cpp:39
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
@@ -410,7 +404,7 @@ msgctxt "@title:tab"
 msgid "Key Bindings"
 msgstr ""
 
-#: xkboptionsmodel.cpp:161
+#: xkboptionsmodel.cpp:160
 #, fuzzy, kde-format
 #| msgid "Shortcut:"
 msgid "%1 shortcut"
@@ -418,13 +412,17 @@ msgid_plural "%1 shortcuts"
 msgstr[0] "शॉर्टकट :"
 msgstr[1] "शॉर्टकट :"
 
-#: xkboptionsmodel.cpp:164
+#: xkboptionsmodel.cpp:163
 #, fuzzy, kde-format
 #| msgctxt "no shortcut defined"
 #| msgid "None"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "काही नाही"
+
+#~ msgctxt "layout - variant"
+#~ msgid "%1 - %2"
+#~ msgstr "%1 - %2"
 
 #~ msgid "Label:"
 #~ msgstr "लेबल :"
