@@ -138,3 +138,5 @@ void XRecordKeyboardMonitor::process(xcb_record_enable_context_reply_t *reply)
         Q_EMIT keyboardActivityFinished();
     }
 }
+
+#include "moc_xrecordkeyboardmonitor.cpp"

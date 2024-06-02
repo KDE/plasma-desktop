@@ -223,3 +223,5 @@ bool KWinWaylandTouchpad::valueLoader(Prop<T> &prop)
     prop.val = replyValue;
     return true;
 }
+
+#include "moc_kwinwaylandtouchpad.cpp"

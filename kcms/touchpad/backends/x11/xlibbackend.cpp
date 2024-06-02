@@ -361,3 +361,5 @@ void XlibBackend::watchForEvents(bool keyboard)
     connect(m_keyboard.get(), &XRecordKeyboardMonitor::keyboardActivityStarted, this, &XlibBackend::keyboardActivityStarted);
     connect(m_keyboard.get(), &XRecordKeyboardMonitor::keyboardActivityFinished, this, &XlibBackend::keyboardActivityFinished);
 }
+
+#include "moc_xlibbackend.cpp"

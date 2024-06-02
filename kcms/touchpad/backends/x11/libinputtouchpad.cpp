@@ -400,3 +400,5 @@ QString LibinputTouchpad::valueWriter(const Prop<T> &prop)
     touchpadConfig.config()->sync();
     return QString();
 }
+
+#include "moc_libinputtouchpad.cpp"

@@ -153,3 +153,5 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
     m_devices.removeAt(index);
     Q_EMIT touchpadRemoved(index);
 }
+
+#include "moc_kwinwaylandbackend.cpp"
