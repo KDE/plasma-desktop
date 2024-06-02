@@ -103,11 +103,13 @@ KConfigGroup KWinWaylandBackend::mouseButtonRebindsConfigGroup()
 bool KWinWaylandBackend::save()
 {
     KConfigGroup buttonGroup = mouseButtonRebindsConfigGroup();
-    for (auto it = m_buttonMapping.cbegin(); it != m_buttonMapping.cend(); ++it) {
-        if (auto keys = it.value().value<QKeySequence>(); !keys.isEmpty()) {
-            buttonGroup.writeEntry(it.key(), QStringList{u"Key"_s, keys.toString(QKeySequence::PortableText)}, KConfig::Notify);
+
+    for (const auto &[buttonName, variant] : std::as_const(m_buttonMapping).asKeyValueRange()) {
+        if (const auto keySequence = variant.value<QKeySequence>(); !keySequence.isEmpty()) {
+            const auto value = QStringList{u"Key"_s, keySequence.toString(QKeySequence::PortableText)};
+            buttonGroup.writeEntry(buttonName, value, KConfig::Notify);
         } else {
-            buttonGroup.deleteEntry(it.key(), KConfig::Notify);
+            buttonGroup.deleteEntry(buttonName, KConfig::Notify);
         }
     }
 
@@ -120,12 +122,11 @@ bool KWinWaylandBackend::load()
     const KConfigGroup buttonGroup = mouseButtonRebindsConfigGroup();
 
     for (int i = 1; i <= 24; ++i) {
-        const QString buttonName = QLatin1String("ExtraButton%1").arg(QString::number(i));
-        auto entry = buttonGroup.readEntry(buttonName, QStringList());
+        const auto buttonName = QLatin1String("ExtraButton%1").arg(QString::number(i));
+        const auto entry = buttonGroup.readEntry(buttonName, QStringList());
         if (entry.size() == 2 && entry.first() == QLatin1String("Key")) {
-            auto keys = QKeySequence::fromString(entry.at(1), QKeySequence::PortableText);
-            if (!keys.isEmpty()) {
-                m_loadedButtonMapping.insert(buttonName, keys);
+            if (const auto keySequence = QKeySequence::fromString(entry.at(1), QKeySequence::PortableText); !keySequence.isEmpty()) {
+                m_loadedButtonMapping.insert(buttonName, keySequence);
             }
         }
     }
