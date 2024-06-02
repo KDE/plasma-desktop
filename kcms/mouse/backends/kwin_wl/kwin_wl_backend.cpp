@@ -8,7 +8,6 @@
 
 #include <algorithm>
 
-#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
 
@@ -96,9 +95,14 @@ bool KWinWaylandBackend::forAllDevices(bool (KWinWaylandDevice::*f)()) const
     return ok;
 }
 
+KConfigGroup KWinWaylandBackend::mouseButtonRebindsConfigGroup()
+{
+    return KSharedConfig::openConfig(u"kcminputrc"_s)->group(u"ButtonRebinds"_s).group(u"Mouse"_s);
+}
+
 bool KWinWaylandBackend::save()
 {
-    KConfigGroup buttonGroup = KSharedConfig::openConfig(QStringLiteral("kcminputrc"))->group(QStringLiteral("ButtonRebinds")).group(QStringLiteral("Mouse"));
+    KConfigGroup buttonGroup = mouseButtonRebindsConfigGroup();
     for (auto it = m_buttonMapping.cbegin(); it != m_buttonMapping.cend(); ++it) {
         if (auto keys = it.value().value<QKeySequence>(); !keys.isEmpty()) {
             buttonGroup.writeEntry(it.key(), QStringList{u"Key"_s, keys.toString(QKeySequence::PortableText)}, KConfig::Notify);
@@ -113,8 +117,8 @@ bool KWinWaylandBackend::save()
 bool KWinWaylandBackend::load()
 {
     m_loadedButtonMapping.clear();
-    const KConfigGroup buttonGroup =
-        KSharedConfig::openConfig(QStringLiteral("kcminputrc"))->group(QStringLiteral("ButtonRebinds")).group(QStringLiteral("Mouse"));
+    const KConfigGroup buttonGroup = mouseButtonRebindsConfigGroup();
+
     for (int i = 1; i <= 24; ++i) {
         const QString buttonName = QLatin1String("ExtraButton%1").arg(QString::number(i));
         auto entry = buttonGroup.readEntry(buttonName, QStringList());
