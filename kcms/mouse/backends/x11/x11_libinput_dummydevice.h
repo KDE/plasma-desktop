@@ -39,7 +39,7 @@ public:
     // general
     QString name() const override
     {
-        return m_name.val;
+        return QString();
     }
 
     bool supportsDisableEvents() const override
@@ -248,8 +248,6 @@ private:
 
     //
     // general
-    Prop<QString> m_name{this};
-    Prop<QString> m_sysName{this};
     Prop<bool> m_supportsDisableEvents{this};
     Prop<bool> m_enabled{this, &X11LibinputDummyDevice::enabledChanged};
 
