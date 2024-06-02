@@ -143,9 +143,6 @@ X11LibinputDummyDevice::X11LibinputDummyDevice(QObject *parent, Display *dpy)
     m_defaultPointerAccelerationProfileFlat.val = x11DefaultFlat;
     m_defaultPointerAccelerationProfileAdaptive.val = !x11DefaultFlat;
 
-    m_supportsNaturalScroll.val = true;
-    m_naturalScrollEnabledByDefault.val = false;
-
     s_touchpadAtom = XInternAtom(m_dpy, XI_TOUCHPAD, True);
 }
 
@@ -178,7 +175,7 @@ bool X11LibinputDummyDevice::defaults()
     m_pointerAccelerationProfileAdaptive.set(m_defaultPointerAccelerationProfileAdaptive);
 
     m_middleEmulation.set(s_middleEmulationEnabledByDefault);
-    m_naturalScroll.set(m_naturalScrollEnabledByDefault);
+    m_naturalScroll.set(s_naturalScrollEnabledByDefault);
 
     return true;
 }

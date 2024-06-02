@@ -166,12 +166,12 @@ public:
     // scrolling
     bool supportsNaturalScroll() const override
     {
-        return m_supportsNaturalScroll.val;
+        return s_supportsNaturalScroll;
     }
 
     bool naturalScrollEnabledByDefault() const override
     {
-        return m_naturalScrollEnabledByDefault.val;
+        return s_naturalScrollEnabledByDefault;
     }
 
     bool isNaturalScroll() const override
@@ -289,8 +289,8 @@ private:
 
     //
     // scrolling
-    Prop<bool> m_supportsNaturalScroll{this};
-    Prop<bool> m_naturalScrollEnabledByDefault{this};
+    static constexpr bool s_supportsNaturalScroll = true;
+    static constexpr bool s_naturalScrollEnabledByDefault = false;
     Prop<bool> m_naturalScroll{this, &X11LibinputDummyDevice::naturalScrollChanged, u"XLbInptNaturalScroll"_s};
 
     std::unique_ptr<LibinputSettings> m_settings;
