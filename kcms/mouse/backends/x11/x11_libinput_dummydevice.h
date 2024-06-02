@@ -67,12 +67,12 @@ public:
     // advanced
     bool supportsLeftHanded() const override
     {
-        return m_supportsLeftHanded.val;
+        return s_supportsLeftHanded;
     }
 
     bool leftHandedEnabledByDefault() const override
     {
-        return m_leftHandedEnabledByDefault.val;
+        return s_leftHandedEnabledByDefault;
     }
 
     bool isLeftHanded() const override
@@ -264,8 +264,8 @@ private:
     // advanced
     static constexpr Qt::MouseButtons s_supportedButtons = Qt::LeftButton | Qt::MiddleButton | Qt::RightButton;
 
-    Prop<bool> m_supportsLeftHanded{this};
-    Prop<bool> m_leftHandedEnabledByDefault{this};
+    static constexpr bool s_supportsLeftHanded = true;
+    static constexpr bool s_leftHandedEnabledByDefault = false;
     Prop<bool> m_leftHanded{this, &X11LibinputDummyDevice::leftHandedChanged, u"XLbInptLeftHanded"_s};
 
     Prop<bool> m_supportsMiddleEmulation{this};
