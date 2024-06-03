@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-03 00:40+0000\n"
 "PO-Revision-Date: 2024-03-22 19:13+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -59,7 +59,7 @@ msgstr ""
 msgid "Cannot connect to X server"
 msgstr "Не вдалося встановити зв’язок з графічним сервером"
 
-#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:98
+#: backends/x11/xlibbackend.cpp:84
 #, kde-format
 msgid "No touchpad found"
 msgstr "Сенсорного пристрою не виявлено"
@@ -79,312 +79,7 @@ msgstr "Не вдалося прочитати дані щодо налашту�
 msgid "Cannot read default touchpad configuration"
 msgstr "Не вдалося прочитати дані щодо типових налаштувань сенсорної панелі"
 
-#: kcm/libinput/touchpad.qml:99
-#, kde-format
-msgid "Connect an external touchpad"
-msgstr "Встановлення з'єднання із зовнішнім сенсорним пристроєм"
-
-#: kcm/libinput/touchpad.qml:113
-#, kde-format
-msgid "Device:"
-msgstr "Пристрій:"
-
-#: kcm/libinput/touchpad.qml:139
-#, kde-format
-msgid "General:"
-msgstr "Загальне:"
-
-#: kcm/libinput/touchpad.qml:140
-#, kde-format
-msgid "Device enabled"
-msgstr "Пристрій увімкнено"
-
-#: kcm/libinput/touchpad.qml:144
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Приймати вхідні дані з цього пристрою."
-
-#: kcm/libinput/touchpad.qml:168
-#, kde-format
-msgid "Disable while typing"
-msgstr "Вимикати під час введення тексту"
-
-#: kcm/libinput/touchpad.qml:172
-#, kde-format
-msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr ""
-"Вимикати сенсорну панель під час введення тексту для запобігання небажаним "
-"ефектам"
-
-#: kcm/libinput/touchpad.qml:196
-#, kde-format
-msgid "Left handed mode"
-msgstr "Режим шульги"
-
-#: kcm/libinput/touchpad.qml:200
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Поміняти місцями ліву і праву кнопки."
-
-#: kcm/libinput/touchpad.qml:226
-#, kde-format
-msgid "Press left and right buttons for middle click"
-msgstr "Натискати ліву і праву кнопки для клацання середньою"
-
-#: kcm/libinput/touchpad.qml:230 kcm/libinput/touchpad.qml:878
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
-msgstr ""
-"Одночасне натискання лівої і правої кнопок надсилатиме сигнал клацання "
-"середньою кнопкою."
-
-#: kcm/libinput/touchpad.qml:256
-#, kde-format
-msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
-msgstr ""
-"Вмикання цього параметра збільшує латентність клацання кнопками миші на 50 "
-"мс. Додаткова затримка потрібна для належного виявлення одночасного клацання "
-"лівою і правою кнопками миші."
-
-#: kcm/libinput/touchpad.qml:266
-#, kde-format
-msgid "Pointer speed:"
-msgstr "Швидкість вказівника:"
-
-#: kcm/libinput/touchpad.qml:364
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Прискорення вказівника:"
-
-#: kcm/libinput/touchpad.qml:395
-#, kde-format
-msgid "None"
-msgstr "Немає"
-
-#: kcm/libinput/touchpad.qml:399
-#, kde-format
-msgid "Cursor moves the same distance as finger."
-msgstr "Вказівник зсувається на ту саму відстань, що і палець."
-
-#: kcm/libinput/touchpad.qml:408
-#, kde-format
-msgid "Standard"
-msgstr "Стандартне"
-
-#: kcm/libinput/touchpad.qml:412
-#, kde-format
-msgid "Cursor travel distance depends on movement speed of finger."
-msgstr ""
-"Вказівник зсувається на відстань, яка залежить від швидкості руху пальцем."
-
-#: kcm/libinput/touchpad.qml:427
-#, kde-format
-msgid "Tapping:"
-msgstr "Дотики:"
-
-#: kcm/libinput/touchpad.qml:428
-#, kde-format
-msgid "Tap-to-click"
-msgstr "Дотик як клацання"
-
-#: kcm/libinput/touchpad.qml:432
-#, kde-format
-msgid "Single tap is left button click."
-msgstr "Одинарний дотик — клацання лівою кнопкою."
-
-#: kcm/libinput/touchpad.qml:461
-#, kde-format
-msgid "Tap-and-drag"
-msgstr "Дотик-і-перетягування"
-
-#: kcm/libinput/touchpad.qml:465
-#, kde-format
-msgid "Sliding over touchpad directly after tap drags."
-msgstr "Проведення пальцем після дотику призводить до перетягування."
-
-#: kcm/libinput/touchpad.qml:492
-#, kde-format
-msgid "Tap-and-drag lock"
-msgstr "Дотик-і-перетягування із блокування"
-
-#: kcm/libinput/touchpad.qml:496
-#, kde-format
-msgid "Dragging continues after a short finger lift."
-msgstr ""
-"Перетягування продовжується після нетривалого зникнення контакту з пальцем."
-
-#: kcm/libinput/touchpad.qml:516
-#, kde-format
-msgid "Two-finger tap:"
-msgstr "Дотик двома пальцями:"
-
-#: kcm/libinput/touchpad.qml:527
-#, kde-format
-msgid "Right-click (three-finger tap to middle-click)"
-msgstr "Клацання правою (дотик трьома пальцями — клацання середньою)"
-
-#: kcm/libinput/touchpad.qml:528
-#, kde-format
-msgid ""
-"Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr ""
-"Дотик двома пальцями — клацання правою, дотик трьома пальцями — клацання "
-"середньою."
-
-#: kcm/libinput/touchpad.qml:530
-#, kde-format
-msgid "Middle-click (three-finger tap right-click)"
-msgstr "Клацання середньою (дотик трьома пальцями — клацання правою)"
-
-#: kcm/libinput/touchpad.qml:531
-#, kde-format
-msgid ""
-"Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr ""
-"Дотик двома пальцями — клацання середньою, дотик трьома пальцями — клацання "
-"правою."
-
-#: kcm/libinput/touchpad.qml:533
-#, kde-format
-msgid "Right-click"
-msgstr "Клацання правою"
-
-#: kcm/libinput/touchpad.qml:534
-#, kde-format
-msgid "Tap with two fingers to right-click."
-msgstr "Дотик двома пальцями — клацання правою."
-
-#: kcm/libinput/touchpad.qml:536
-#, kde-format
-msgid "Middle-click"
-msgstr "Клацання середньою"
-
-#: kcm/libinput/touchpad.qml:537
-#, kde-format
-msgid "Tap with two fingers to middle-click."
-msgstr "Дотик двома пальцями — клацання середньою."
-
-#: kcm/libinput/touchpad.qml:596
-#, kde-format
-msgid "Scrolling:"
-msgstr "Гортання:"
-
-#: kcm/libinput/touchpad.qml:625
-#, kde-format
-msgid "Two fingers"
-msgstr "Два пальці"
-
-#: kcm/libinput/touchpad.qml:629
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "Проведення двома пальцями — гортання."
-
-#: kcm/libinput/touchpad.qml:637
-#, kde-format
-msgid "Touchpad edges"
-msgstr "Краї панелі"
-
-#: kcm/libinput/touchpad.qml:641
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "Проведення на краю панелі — гортання."
-
-#: kcm/libinput/touchpad.qml:651
-#, kde-format
-msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Зворотний напрямок гортання (природне гортання)"
-
-#: kcm/libinput/touchpad.qml:667
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Гортання як на сенсорній панелі."
-
-#: kcm/libinput/touchpad.qml:675 kcm/libinput/touchpad.qml:692
-#, kde-format
-msgid "Disable horizontal scrolling"
-msgstr "Вимкнути горизонтальне гортання"
-
-#: kcm/libinput/touchpad.qml:700
-#, kde-format
-msgid "Scrolling speed:"
-msgstr "Швидкість гортання:"
-
-#: kcm/libinput/touchpad.qml:751
-#, kde-format
-msgctxt "Slower Scroll"
-msgid "Slower"
-msgstr "Повільніше"
-
-#: kcm/libinput/touchpad.qml:758
-#, kde-format
-msgctxt "Faster Scroll Speed"
-msgid "Faster"
-msgstr "Швидше"
-
-#: kcm/libinput/touchpad.qml:769
-#, kde-format
-msgid "Right-click:"
-msgstr "Клацання правою:"
-
-#: kcm/libinput/touchpad.qml:803
-#, kde-format
-msgid "Press bottom-right corner"
-msgstr "Натискання у нижньому правому куті"
-
-#: kcm/libinput/touchpad.qml:807
-#, kde-format
-msgid ""
-"Software enabled buttons will be added to bottom portion of your touchpad."
-msgstr "Програмні кнопки буде додано у нижній частині сенсорної панелі."
-
-#: kcm/libinput/touchpad.qml:815
-#, kde-format
-msgid "Press anywhere with two fingers"
-msgstr "Натискання будь-де двома пальцями"
-
-#: kcm/libinput/touchpad.qml:819
-#, kde-format
-msgid "Tap with two finger to enable right click."
-msgstr "Дотик двома пальцями — клацання правою."
-
-#: kcm/libinput/touchpad.qml:833
-#, kde-format
-msgid "Middle-click: "
-msgstr "Клацання середньою:"
-
-#: kcm/libinput/touchpad.qml:862
-#, kde-format
-msgid "Press bottom-middle"
-msgstr "Натискання внизу посередині"
-
-#: kcm/libinput/touchpad.qml:866
-#, kde-format
-msgid ""
-"Software enabled middle-button will be added to bottom portion of your "
-"touchpad."
-msgstr ""
-"Програмну кнопку середньої кнопки миші буде додано у нижній частині "
-"сенсорної панелі."
-
-#: kcm/libinput/touchpad.qml:874
-#, kde-format
-msgid "Press bottom left and bottom right corners simultaneously"
-msgstr "Натискання у нижньому лівому і нижньому правому куті одночасно"
-
-#: kcm/libinput/touchpad.qml:887
-#, kde-format
-msgid "Press anywhere with three fingers"
-msgstr "Натискання будь-де трьома пальцями"
-
-#: kcm/libinput/touchpad.qml:893
-#, kde-format
-msgid "Press anywhere with three fingers."
-msgstr "Натискання будь-де трьома пальцями."
-
-#: kcm/touchpadconfig.cpp:99
+#: kcm.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -393,13 +88,13 @@ msgstr ""
 "Помилка під час завантаження значень. Докладнішу інформацію можна знайти у "
 "журналі. Будь ласка, перезапустіть модуль керування сенсорними панелями."
 
-#: kcm/touchpadconfig.cpp:102
+#: kcm.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr ""
 "Не знайдено сенсорної панелі. З’єднайте сенсорну панель із комп’ютером."
 
-#: kcm/touchpadconfig.cpp:111
+#: kcm.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -409,7 +104,7 @@ msgstr ""
 "Будь ласка, перезапустіть модуль керування сенсорними панелями, потім "
 "повторіть спробу."
 
-#: kcm/touchpadconfig.cpp:130
+#: kcm.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -418,7 +113,7 @@ msgstr ""
 "Помилка під час спроби завантажити типові значення. Не вдалося встановити "
 "типові значення для усіх параметрів."
 
-#: kcm/touchpadconfig.cpp:150
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -428,12 +123,12 @@ msgstr ""
 "спробуйте з’єднати його з комп’ютером ще раз, потім перезапустіть модуль "
 "керування сенсорними панелями."
 
-#: kcm/touchpadconfig.cpp:173
+#: kcm.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Сенсорну панель від’єднано. Діалогове вікно її параметрів закрито."
 
-#: kcm/touchpadconfig.cpp:175
+#: kcm.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Сенсорну панель від’єднано. Інших сенсорних панелей не виявлено."
@@ -538,6 +233,203 @@ msgstr "Лівий край"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "У верхньому лівому куті"
+
+#~ msgid "Connect an external touchpad"
+#~ msgstr "Встановлення з'єднання із зовнішнім сенсорним пристроєм"
+
+#~ msgid "Device:"
+#~ msgstr "Пристрій:"
+
+#~ msgid "General:"
+#~ msgstr "Загальне:"
+
+#~ msgid "Device enabled"
+#~ msgstr "Пристрій увімкнено"
+
+#~ msgid "Accept input through this device."
+#~ msgstr "Приймати вхідні дані з цього пристрою."
+
+#~ msgid "Disable while typing"
+#~ msgstr "Вимикати під час введення тексту"
+
+#~ msgid "Disable touchpad while typing to prevent accidental inputs."
+#~ msgstr ""
+#~ "Вимикати сенсорну панель під час введення тексту для запобігання "
+#~ "небажаним ефектам"
+
+#~ msgid "Left handed mode"
+#~ msgstr "Режим шульги"
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Поміняти місцями ліву і праву кнопки."
+
+#~ msgid "Press left and right buttons for middle click"
+#~ msgstr "Натискати ліву і праву кнопки для клацання середньою"
+
+#~ msgid ""
+#~ "Clicking left and right button simultaneously sends middle button click."
+#~ msgstr ""
+#~ "Одночасне натискання лівої і правої кнопок надсилатиме сигнал клацання "
+#~ "середньою кнопкою."
+
+#~ msgid ""
+#~ "Activating this setting increases mouse click latency by 50ms. The extra "
+#~ "delay is needed to correctly detect simultaneous left and right mouse "
+#~ "clicks."
+#~ msgstr ""
+#~ "Вмикання цього параметра збільшує латентність клацання кнопками миші на "
+#~ "50 мс. Додаткова затримка потрібна для належного виявлення одночасного "
+#~ "клацання лівою і правою кнопками миші."
+
+#~ msgid "Pointer speed:"
+#~ msgstr "Швидкість вказівника:"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Прискорення вказівника:"
+
+#~ msgid "None"
+#~ msgstr "Немає"
+
+#~ msgid "Cursor moves the same distance as finger."
+#~ msgstr "Вказівник зсувається на ту саму відстань, що і палець."
+
+#~ msgid "Standard"
+#~ msgstr "Стандартне"
+
+#~ msgid "Cursor travel distance depends on movement speed of finger."
+#~ msgstr ""
+#~ "Вказівник зсувається на відстань, яка залежить від швидкості руху пальцем."
+
+#~ msgid "Tapping:"
+#~ msgstr "Дотики:"
+
+#~ msgid "Tap-to-click"
+#~ msgstr "Дотик як клацання"
+
+#~ msgid "Single tap is left button click."
+#~ msgstr "Одинарний дотик — клацання лівою кнопкою."
+
+#~ msgid "Tap-and-drag"
+#~ msgstr "Дотик-і-перетягування"
+
+#~ msgid "Sliding over touchpad directly after tap drags."
+#~ msgstr "Проведення пальцем після дотику призводить до перетягування."
+
+#~ msgid "Tap-and-drag lock"
+#~ msgstr "Дотик-і-перетягування із блокування"
+
+#~ msgid "Dragging continues after a short finger lift."
+#~ msgstr ""
+#~ "Перетягування продовжується після нетривалого зникнення контакту з "
+#~ "пальцем."
+
+#~ msgid "Two-finger tap:"
+#~ msgstr "Дотик двома пальцями:"
+
+#~ msgid "Right-click (three-finger tap to middle-click)"
+#~ msgstr "Клацання правою (дотик трьома пальцями — клацання середньою)"
+
+#~ msgid ""
+#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
+#~ "click."
+#~ msgstr ""
+#~ "Дотик двома пальцями — клацання правою, дотик трьома пальцями — клацання "
+#~ "середньою."
+
+#~ msgid "Middle-click (three-finger tap right-click)"
+#~ msgstr "Клацання середньою (дотик трьома пальцями — клацання правою)"
+
+#~ msgid ""
+#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
+#~ "click."
+#~ msgstr ""
+#~ "Дотик двома пальцями — клацання середньою, дотик трьома пальцями — "
+#~ "клацання правою."
+
+#~ msgid "Right-click"
+#~ msgstr "Клацання правою"
+
+#~ msgid "Tap with two fingers to right-click."
+#~ msgstr "Дотик двома пальцями — клацання правою."
+
+#~ msgid "Middle-click"
+#~ msgstr "Клацання середньою"
+
+#~ msgid "Tap with two fingers to middle-click."
+#~ msgstr "Дотик двома пальцями — клацання середньою."
+
+#~ msgid "Scrolling:"
+#~ msgstr "Гортання:"
+
+#~ msgid "Two fingers"
+#~ msgstr "Два пальці"
+
+#~ msgid "Slide with two fingers scrolls."
+#~ msgstr "Проведення двома пальцями — гортання."
+
+#~ msgid "Touchpad edges"
+#~ msgstr "Краї панелі"
+
+#~ msgid "Slide on the touchpad edges scrolls."
+#~ msgstr "Проведення на краю панелі — гортання."
+
+#~ msgid "Invert scroll direction (Natural scrolling)"
+#~ msgstr "Зворотний напрямок гортання (природне гортання)"
+
+#~ msgid "Touchscreen like scrolling."
+#~ msgstr "Гортання як на сенсорній панелі."
+
+#~ msgid "Disable horizontal scrolling"
+#~ msgstr "Вимкнути горизонтальне гортання"
+
+#~ msgid "Scrolling speed:"
+#~ msgstr "Швидкість гортання:"
+
+#~ msgctxt "Slower Scroll"
+#~ msgid "Slower"
+#~ msgstr "Повільніше"
+
+#~ msgctxt "Faster Scroll Speed"
+#~ msgid "Faster"
+#~ msgstr "Швидше"
+
+#~ msgid "Right-click:"
+#~ msgstr "Клацання правою:"
+
+#~ msgid "Press bottom-right corner"
+#~ msgstr "Натискання у нижньому правому куті"
+
+#~ msgid ""
+#~ "Software enabled buttons will be added to bottom portion of your touchpad."
+#~ msgstr "Програмні кнопки буде додано у нижній частині сенсорної панелі."
+
+#~ msgid "Press anywhere with two fingers"
+#~ msgstr "Натискання будь-де двома пальцями"
+
+#~ msgid "Tap with two finger to enable right click."
+#~ msgstr "Дотик двома пальцями — клацання правою."
+
+#~ msgid "Middle-click: "
+#~ msgstr "Клацання середньою:"
+
+#~ msgid "Press bottom-middle"
+#~ msgstr "Натискання внизу посередині"
+
+#~ msgid ""
+#~ "Software enabled middle-button will be added to bottom portion of your "
+#~ "touchpad."
+#~ msgstr ""
+#~ "Програмну кнопку середньої кнопки миші буде додано у нижній частині "
+#~ "сенсорної панелі."
+
+#~ msgid "Press bottom left and bottom right corners simultaneously"
+#~ msgstr "Натискання у нижньому лівому і нижньому правому куті одночасно"
+
+#~ msgid "Press anywhere with three fingers"
+#~ msgstr "Натискання будь-де трьома пальцями"
+
+#~ msgid "Press anywhere with three fingers."
+#~ msgstr "Натискання будь-де трьома пальцями."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

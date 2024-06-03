@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-03 00:40+0000\n"
 "PO-Revision-Date: 2024-04-04 17:08+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -59,7 +59,7 @@ msgstr ""
 msgid "Cannot connect to X server"
 msgstr "Nepavyksta prisijungti prie X serverio"
 
-#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:98
+#: backends/x11/xlibbackend.cpp:84
 #, kde-format
 msgid "No touchpad found"
 msgstr "Nerasta jokio jutiklinio kilimėlio"
@@ -80,320 +80,7 @@ msgid "Cannot read default touchpad configuration"
 msgstr ""
 "Nepavyksta perskaityti numatytosios jutiklinio kilimėlio konfigūracijos"
 
-#: kcm/libinput/touchpad.qml:99
-#, kde-format
-msgid "Connect an external touchpad"
-msgstr "Prijunkite išorinį jutiklinį kilimėlį"
-
-#: kcm/libinput/touchpad.qml:113
-#, kde-format
-msgid "Device:"
-msgstr "Įrenginys:"
-
-#: kcm/libinput/touchpad.qml:139
-#, kde-format
-msgid "General:"
-msgstr "Bendri:"
-
-#: kcm/libinput/touchpad.qml:140
-#, kde-format
-msgid "Device enabled"
-msgstr "Įrenginys įjungtas"
-
-#: kcm/libinput/touchpad.qml:144
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Priimti įvestį per šį įrenginį."
-
-#: kcm/libinput/touchpad.qml:168
-#, kde-format
-msgid "Disable while typing"
-msgstr "Išjungti renkant tekstą"
-
-#: kcm/libinput/touchpad.qml:172
-#, kde-format
-msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr ""
-"Išjungti jutiklinį kilimėlį, kol yra renkamas tekstas, siekiant neleisti "
-"atsitiktinių įvesčių."
-
-#: kcm/libinput/touchpad.qml:196
-#, kde-format
-msgid "Left handed mode"
-msgstr "Kairės rankos veiksena"
-
-#: kcm/libinput/touchpad.qml:200
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Apkeisti kairįjį ir dešinįjį mygtuką vietomis."
-
-#: kcm/libinput/touchpad.qml:226
-#, kde-format
-msgid "Press left and right buttons for middle click"
-msgstr ""
-"Vidurinio mygtuko spustelėjimo inicijavimui paspausti dešinįjį ir kairįjį "
-"mygtukus kartu"
-
-#: kcm/libinput/touchpad.qml:230 kcm/libinput/touchpad.qml:878
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
-msgstr ""
-"Spustelėjus vienu metu kairįjį ir dešinįjį mygtuką, bus siunčiamas "
-"viduriniojo mygtuko spustelėjimas."
-
-#: kcm/libinput/touchpad.qml:256
-#, kde-format
-msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
-msgstr ""
-"Aktyvavus šią nuostatą pelės delsa padidėja 50 milisekundžių. Ši papildoma "
-"delsa yra reikalinga, kad būtų teisingai aptinkami vienalaikiai kairiojo ir "
-"dešiniojo pelės mygtuko spustelėjimai."
-
-#: kcm/libinput/touchpad.qml:266
-#, kde-format
-msgid "Pointer speed:"
-msgstr "Rodyklės greitis:"
-
-#: kcm/libinput/touchpad.qml:364
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Rodyklės pagreitis:"
-
-#: kcm/libinput/touchpad.qml:395
-#, kde-format
-msgid "None"
-msgstr "Nėra"
-
-#: kcm/libinput/touchpad.qml:399
-#, kde-format
-msgid "Cursor moves the same distance as finger."
-msgstr "Žymeklis persikelia tokiu pačiu atstumu kaip ir pirštas."
-
-#: kcm/libinput/touchpad.qml:408
-#, kde-format
-msgid "Standard"
-msgstr "Standartinis"
-
-#: kcm/libinput/touchpad.qml:412
-#, kde-format
-msgid "Cursor travel distance depends on movement speed of finger."
-msgstr "Žymeklio kelio atstumas priklauso nuo piršto judesio greičio."
-
-#: kcm/libinput/touchpad.qml:427
-#, kde-format
-msgid "Tapping:"
-msgstr "Bakstelėjimas:"
-
-#: kcm/libinput/touchpad.qml:428
-#, kde-format
-msgid "Tap-to-click"
-msgstr "Bakstelėti, norint spustelėti"
-
-#: kcm/libinput/touchpad.qml:432
-#, kde-format
-msgid "Single tap is left button click."
-msgstr "Vienkartis bakstelėjimas yra kairiojo mygtuko spustelėjimas."
-
-#: kcm/libinput/touchpad.qml:461
-#, kde-format
-msgid "Tap-and-drag"
-msgstr "Bakstelėti ir tempti"
-
-#: kcm/libinput/touchpad.qml:465
-#, kde-format
-msgid "Sliding over touchpad directly after tap drags."
-msgstr ""
-"Braukiant per jutiklinį kilimėlį po bakstelėjimo, bus atliekamas tempimas."
-
-#: kcm/libinput/touchpad.qml:492
-#, kde-format
-msgid "Tap-and-drag lock"
-msgstr "Bakstelėjimo ir tempimo užraktas"
-
-#: kcm/libinput/touchpad.qml:496
-#, kde-format
-msgid "Dragging continues after a short finger lift."
-msgstr "Po trumpo piršto pakėlimo, tempimas bus tęsiamas."
-
-#: kcm/libinput/touchpad.qml:516
-#, kde-format
-msgid "Two-finger tap:"
-msgstr "Bakstelėjimas dviem pirštais:"
-
-#: kcm/libinput/touchpad.qml:527
-#, kde-format
-msgid "Right-click (three-finger tap to middle-click)"
-msgstr ""
-"Dešinysis spustelėjimas (viduriniajam spustelėjimui bakstelėti trimis "
-"pirštais)"
-
-#: kcm/libinput/touchpad.qml:528
-#, kde-format
-msgid ""
-"Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr ""
-"Dešiniajam spustelėjimui bakstelėti dviem pirštais, viduriniajam "
-"spustelėjimui bakstelėti trimis pirštais."
-
-#: kcm/libinput/touchpad.qml:530
-#, kde-format
-msgid "Middle-click (three-finger tap right-click)"
-msgstr ""
-"Vidurinysis spustelėjimas (dešiniajam spustelėjimui bakstelėti trimis "
-"pirštais)"
-
-#: kcm/libinput/touchpad.qml:531
-#, kde-format
-msgid ""
-"Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr ""
-"Viduriniajam spustelėjimui bakstelėti dviem pirštais, dešiniajam "
-"spustelėjimui bakstelėti trimis pirštais."
-
-#: kcm/libinput/touchpad.qml:533
-#, kde-format
-msgid "Right-click"
-msgstr "Dešinysis spustelėjimas"
-
-#: kcm/libinput/touchpad.qml:534
-#, kde-format
-msgid "Tap with two fingers to right-click."
-msgstr "Dešiniajam spustelėjimui bakstelėti dviem pirštais."
-
-#: kcm/libinput/touchpad.qml:536
-#, kde-format
-msgid "Middle-click"
-msgstr "Vidurinysis spustelėjimas"
-
-#: kcm/libinput/touchpad.qml:537
-#, kde-format
-msgid "Tap with two fingers to middle-click."
-msgstr "Viduriniam spustelėjimui bakstelėti dviem pirštais."
-
-#: kcm/libinput/touchpad.qml:596
-#, kde-format
-msgid "Scrolling:"
-msgstr "Slinkimas:"
-
-#: kcm/libinput/touchpad.qml:625
-#, kde-format
-msgid "Two fingers"
-msgstr "Du pirštai"
-
-#: kcm/libinput/touchpad.qml:629
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "Slinkti naudojant slinkimą dviem pirštais."
-
-#: kcm/libinput/touchpad.qml:637
-#, kde-format
-msgid "Touchpad edges"
-msgstr "Jutiklinio kilimėlio kraštai"
-
-#: kcm/libinput/touchpad.qml:641
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "Slinkti slenkant jutiklinio kilimėlio kraštuose."
-
-#: kcm/libinput/touchpad.qml:651
-#, kde-format
-msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Invertuoti slinkties kryptį (Natūralus slinkimas)"
-
-#: kcm/libinput/touchpad.qml:667
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Jutiklinio ekrano tipo slinkimas."
-
-#: kcm/libinput/touchpad.qml:675 kcm/libinput/touchpad.qml:692
-#, kde-format
-msgid "Disable horizontal scrolling"
-msgstr "Išjungti horizontalųjį slinkimą"
-
-#: kcm/libinput/touchpad.qml:700
-#, kde-format
-msgid "Scrolling speed:"
-msgstr "Slinkimo greitis:"
-
-#: kcm/libinput/touchpad.qml:751
-#, kde-format
-msgctxt "Slower Scroll"
-msgid "Slower"
-msgstr "Lėtesnis"
-
-#: kcm/libinput/touchpad.qml:758
-#, kde-format
-msgctxt "Faster Scroll Speed"
-msgid "Faster"
-msgstr "Greitesnis"
-
-#: kcm/libinput/touchpad.qml:769
-#, kde-format
-msgid "Right-click:"
-msgstr "Dešinysis spustelėjimas:"
-
-#: kcm/libinput/touchpad.qml:803
-#, kde-format
-msgid "Press bottom-right corner"
-msgstr "Paspausti apatinį dešinyjį kampą"
-
-#: kcm/libinput/touchpad.qml:807
-#, kde-format
-msgid ""
-"Software enabled buttons will be added to bottom portion of your touchpad."
-msgstr ""
-"Į jūsų jutiklinio kilimėlio apatinę dalį bus pridėti programinės įrangos "
-"įgalinti mygtukai."
-
-#: kcm/libinput/touchpad.qml:815
-#, kde-format
-msgid "Press anywhere with two fingers"
-msgstr "Paspausti bet kur dviem pirštais"
-
-#: kcm/libinput/touchpad.qml:819
-#, kde-format
-msgid "Tap with two finger to enable right click."
-msgstr ""
-"Bakstelėti dviem pirštais, kad būtų inicijuotas dešinysis spustelėjimas."
-
-#: kcm/libinput/touchpad.qml:833
-#, kde-format
-msgid "Middle-click: "
-msgstr "Vidurinysis spustelėjimas: "
-
-#: kcm/libinput/touchpad.qml:862
-#, kde-format
-msgid "Press bottom-middle"
-msgstr "Paspausti apačioje per vidurį"
-
-#: kcm/libinput/touchpad.qml:866
-#, kde-format
-msgid ""
-"Software enabled middle-button will be added to bottom portion of your "
-"touchpad."
-msgstr ""
-"Į jūsų jutiklinio kilimėlio apatinę dalį bus pridėtas programinės įrangos "
-"įgalintas vidurinysis mygtukas."
-
-#: kcm/libinput/touchpad.qml:874
-#, kde-format
-msgid "Press bottom left and bottom right corners simultaneously"
-msgstr "Vienu metu paspausti apatinį dešinįjį ir kairįjį kampą"
-
-#: kcm/libinput/touchpad.qml:887
-#, kde-format
-msgid "Press anywhere with three fingers"
-msgstr "Paspausti bet kur trimis pirštais"
-
-#: kcm/libinput/touchpad.qml:893
-#, kde-format
-msgid "Press anywhere with three fingers."
-msgstr "Paspausti bet kur trimis pirštais."
-
-#: kcm/touchpadconfig.cpp:99
+#: kcm.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -402,12 +89,12 @@ msgstr ""
 "Klaida įkeliant reikšmes. Išsamesnei informacijai, žiūrėkite žurnalus. "
 "Paleiskite šį konfigūracijos modulį iš naujo."
 
-#: kcm/touchpadconfig.cpp:102
+#: kcm.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nerasta jokio jutiklinio kilimėlio. Prijunkite jį dabar."
 
-#: kcm/touchpadconfig.cpp:111
+#: kcm.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -417,7 +104,7 @@ msgstr ""
 "žurnalus. Paleiskite šį konfigūracijos modulį iš naujo ir bandykite dar "
 "kartą."
 
-#: kcm/touchpadconfig.cpp:130
+#: kcm.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -426,7 +113,7 @@ msgstr ""
 "Klaida įkeliant numatytąsias reikšmes. Nepavyko nustatyti kai kurių "
 "parinkčių į jų numatytąsias reikšmes."
 
-#: kcm/touchpadconfig.cpp:150
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -435,12 +122,12 @@ msgstr ""
 "Klaida pridedant naujai prijungtą įrenginį. Prijunkite įrenginį iš naujo ir "
 "paleiskite šį konfigūracijos modulį iš naujo."
 
-#: kcm/touchpadconfig.cpp:173
+#: kcm.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Jutiklinis kilimėlis atsijungė. Užvėrė savo nuostatos dialogą."
 
-#: kcm/touchpadconfig.cpp:175
+#: kcm.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""
@@ -546,6 +233,210 @@ msgstr "Kairysis kraštas"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Viršutinis kairysis kampas"
+
+#~ msgid "Connect an external touchpad"
+#~ msgstr "Prijunkite išorinį jutiklinį kilimėlį"
+
+#~ msgid "Device:"
+#~ msgstr "Įrenginys:"
+
+#~ msgid "General:"
+#~ msgstr "Bendri:"
+
+#~ msgid "Device enabled"
+#~ msgstr "Įrenginys įjungtas"
+
+#~ msgid "Accept input through this device."
+#~ msgstr "Priimti įvestį per šį įrenginį."
+
+#~ msgid "Disable while typing"
+#~ msgstr "Išjungti renkant tekstą"
+
+#~ msgid "Disable touchpad while typing to prevent accidental inputs."
+#~ msgstr ""
+#~ "Išjungti jutiklinį kilimėlį, kol yra renkamas tekstas, siekiant neleisti "
+#~ "atsitiktinių įvesčių."
+
+#~ msgid "Left handed mode"
+#~ msgstr "Kairės rankos veiksena"
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Apkeisti kairįjį ir dešinįjį mygtuką vietomis."
+
+#~ msgid "Press left and right buttons for middle click"
+#~ msgstr ""
+#~ "Vidurinio mygtuko spustelėjimo inicijavimui paspausti dešinįjį ir kairįjį "
+#~ "mygtukus kartu"
+
+#~ msgid ""
+#~ "Clicking left and right button simultaneously sends middle button click."
+#~ msgstr ""
+#~ "Spustelėjus vienu metu kairįjį ir dešinįjį mygtuką, bus siunčiamas "
+#~ "viduriniojo mygtuko spustelėjimas."
+
+#~ msgid ""
+#~ "Activating this setting increases mouse click latency by 50ms. The extra "
+#~ "delay is needed to correctly detect simultaneous left and right mouse "
+#~ "clicks."
+#~ msgstr ""
+#~ "Aktyvavus šią nuostatą pelės delsa padidėja 50 milisekundžių. Ši "
+#~ "papildoma delsa yra reikalinga, kad būtų teisingai aptinkami vienalaikiai "
+#~ "kairiojo ir dešiniojo pelės mygtuko spustelėjimai."
+
+#~ msgid "Pointer speed:"
+#~ msgstr "Rodyklės greitis:"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Rodyklės pagreitis:"
+
+#~ msgid "None"
+#~ msgstr "Nėra"
+
+#~ msgid "Cursor moves the same distance as finger."
+#~ msgstr "Žymeklis persikelia tokiu pačiu atstumu kaip ir pirštas."
+
+#~ msgid "Standard"
+#~ msgstr "Standartinis"
+
+#~ msgid "Cursor travel distance depends on movement speed of finger."
+#~ msgstr "Žymeklio kelio atstumas priklauso nuo piršto judesio greičio."
+
+#~ msgid "Tapping:"
+#~ msgstr "Bakstelėjimas:"
+
+#~ msgid "Tap-to-click"
+#~ msgstr "Bakstelėti, norint spustelėti"
+
+#~ msgid "Single tap is left button click."
+#~ msgstr "Vienkartis bakstelėjimas yra kairiojo mygtuko spustelėjimas."
+
+#~ msgid "Tap-and-drag"
+#~ msgstr "Bakstelėti ir tempti"
+
+#~ msgid "Sliding over touchpad directly after tap drags."
+#~ msgstr ""
+#~ "Braukiant per jutiklinį kilimėlį po bakstelėjimo, bus atliekamas tempimas."
+
+#~ msgid "Tap-and-drag lock"
+#~ msgstr "Bakstelėjimo ir tempimo užraktas"
+
+#~ msgid "Dragging continues after a short finger lift."
+#~ msgstr "Po trumpo piršto pakėlimo, tempimas bus tęsiamas."
+
+#~ msgid "Two-finger tap:"
+#~ msgstr "Bakstelėjimas dviem pirštais:"
+
+#~ msgid "Right-click (three-finger tap to middle-click)"
+#~ msgstr ""
+#~ "Dešinysis spustelėjimas (viduriniajam spustelėjimui bakstelėti trimis "
+#~ "pirštais)"
+
+#~ msgid ""
+#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
+#~ "click."
+#~ msgstr ""
+#~ "Dešiniajam spustelėjimui bakstelėti dviem pirštais, viduriniajam "
+#~ "spustelėjimui bakstelėti trimis pirštais."
+
+#~ msgid "Middle-click (three-finger tap right-click)"
+#~ msgstr ""
+#~ "Vidurinysis spustelėjimas (dešiniajam spustelėjimui bakstelėti trimis "
+#~ "pirštais)"
+
+#~ msgid ""
+#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
+#~ "click."
+#~ msgstr ""
+#~ "Viduriniajam spustelėjimui bakstelėti dviem pirštais, dešiniajam "
+#~ "spustelėjimui bakstelėti trimis pirštais."
+
+#~ msgid "Right-click"
+#~ msgstr "Dešinysis spustelėjimas"
+
+#~ msgid "Tap with two fingers to right-click."
+#~ msgstr "Dešiniajam spustelėjimui bakstelėti dviem pirštais."
+
+#~ msgid "Middle-click"
+#~ msgstr "Vidurinysis spustelėjimas"
+
+#~ msgid "Tap with two fingers to middle-click."
+#~ msgstr "Viduriniam spustelėjimui bakstelėti dviem pirštais."
+
+#~ msgid "Scrolling:"
+#~ msgstr "Slinkimas:"
+
+#~ msgid "Two fingers"
+#~ msgstr "Du pirštai"
+
+#~ msgid "Slide with two fingers scrolls."
+#~ msgstr "Slinkti naudojant slinkimą dviem pirštais."
+
+#~ msgid "Touchpad edges"
+#~ msgstr "Jutiklinio kilimėlio kraštai"
+
+#~ msgid "Slide on the touchpad edges scrolls."
+#~ msgstr "Slinkti slenkant jutiklinio kilimėlio kraštuose."
+
+#~ msgid "Invert scroll direction (Natural scrolling)"
+#~ msgstr "Invertuoti slinkties kryptį (Natūralus slinkimas)"
+
+#~ msgid "Touchscreen like scrolling."
+#~ msgstr "Jutiklinio ekrano tipo slinkimas."
+
+#~ msgid "Disable horizontal scrolling"
+#~ msgstr "Išjungti horizontalųjį slinkimą"
+
+#~ msgid "Scrolling speed:"
+#~ msgstr "Slinkimo greitis:"
+
+#~ msgctxt "Slower Scroll"
+#~ msgid "Slower"
+#~ msgstr "Lėtesnis"
+
+#~ msgctxt "Faster Scroll Speed"
+#~ msgid "Faster"
+#~ msgstr "Greitesnis"
+
+#~ msgid "Right-click:"
+#~ msgstr "Dešinysis spustelėjimas:"
+
+#~ msgid "Press bottom-right corner"
+#~ msgstr "Paspausti apatinį dešinyjį kampą"
+
+#~ msgid ""
+#~ "Software enabled buttons will be added to bottom portion of your touchpad."
+#~ msgstr ""
+#~ "Į jūsų jutiklinio kilimėlio apatinę dalį bus pridėti programinės įrangos "
+#~ "įgalinti mygtukai."
+
+#~ msgid "Press anywhere with two fingers"
+#~ msgstr "Paspausti bet kur dviem pirštais"
+
+#~ msgid "Tap with two finger to enable right click."
+#~ msgstr ""
+#~ "Bakstelėti dviem pirštais, kad būtų inicijuotas dešinysis spustelėjimas."
+
+#~ msgid "Middle-click: "
+#~ msgstr "Vidurinysis spustelėjimas: "
+
+#~ msgid "Press bottom-middle"
+#~ msgstr "Paspausti apačioje per vidurį"
+
+#~ msgid ""
+#~ "Software enabled middle-button will be added to bottom portion of your "
+#~ "touchpad."
+#~ msgstr ""
+#~ "Į jūsų jutiklinio kilimėlio apatinę dalį bus pridėtas programinės įrangos "
+#~ "įgalintas vidurinysis mygtukas."
+
+#~ msgid "Press bottom left and bottom right corners simultaneously"
+#~ msgstr "Vienu metu paspausti apatinį dešinįjį ir kairįjį kampą"
+
+#~ msgid "Press anywhere with three fingers"
+#~ msgstr "Paspausti bet kur trimis pirštais"
+
+#~ msgid "Press anywhere with three fingers."
+#~ msgstr "Paspausti bet kur trimis pirštais."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

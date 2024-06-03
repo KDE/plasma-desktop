@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:40+0000\n"
+"POT-Creation-Date: 2024-06-03 00:40+0000\n"
 "PO-Revision-Date: 2024-05-31 09:56+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -134,42 +134,48 @@ msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Додати прив'язку…"
 
-#: ui/main.qml:42
+#: ui/main.qml:37
+#, kde-format
+msgctxt "@action:button"
+msgid "Re-bind Additional Mouse Buttons…"
+msgstr "Повторно прив'язати додаткові кнопки…"
+
+#: ui/main.qml:63
 #, kde-format
 msgid "Device:"
 msgstr "Пристрій:"
 
-#: ui/main.qml:65
+#: ui/main.qml:86
 #, kde-format
 msgid "General:"
 msgstr "Загальне:"
 
-#: ui/main.qml:66
+#: ui/main.qml:87
 #, kde-format
 msgid "Device enabled"
 msgstr "Пристрій увімкнено"
 
-#: ui/main.qml:80
+#: ui/main.qml:101
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Приймати вхідні дані з цього пристрою."
 
-#: ui/main.qml:86
+#: ui/main.qml:107
 #, kde-format
 msgid "Left handed mode"
 msgstr "Режим шульги"
 
-#: ui/main.qml:99
+#: ui/main.qml:120
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Поміняти місцями ліву і праву кнопки."
 
-#: ui/main.qml:106
+#: ui/main.qml:127
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Натискати ліву і праву кнопки для клацання середньою"
 
-#: ui/main.qml:119
+#: ui/main.qml:140
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -177,7 +183,7 @@ msgstr ""
 "Одночасне натискання лівої і правої кнопок надсилатиме сигнал клацання "
 "середньою кнопкою."
 
-#: ui/main.qml:123
+#: ui/main.qml:144
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -187,74 +193,68 @@ msgstr ""
 "мс. Додаткова затримка потрібна для належного виявлення одночасного клацання "
 "лівою і правою кнопками миші."
 
-#: ui/main.qml:135
+#: ui/main.qml:156
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Швидкість вказівника:"
 
-#: ui/main.qml:212
+#: ui/main.qml:233
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Прискорення вказівника:"
 
-#: ui/main.qml:229
+#: ui/main.qml:250
 #, kde-format
 msgid "None"
 msgstr "Немає"
 
-#: ui/main.qml:234
+#: ui/main.qml:255
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Вказівник зсувається на ту саму відстань, що і миша."
 
-#: ui/main.qml:239
+#: ui/main.qml:260
 #, kde-format
 msgid "Standard"
 msgstr "Стандартне"
 
-#: ui/main.qml:244
+#: ui/main.qml:265
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Вказівник зсувається на відстань, яка залежить від швидкості руху мишею."
 
-#: ui/main.qml:255
+#: ui/main.qml:276
 #, kde-format
 msgid "Scrolling:"
 msgstr "Гортання:"
 
-#: ui/main.qml:256
+#: ui/main.qml:277
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Інвертувати напрямок гортання"
 
-#: ui/main.qml:269
+#: ui/main.qml:290
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Гортання як на сенсорній панелі."
 
-#: ui/main.qml:274
+#: ui/main.qml:295
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Швидкість гортання:"
 
-#: ui/main.qml:325
+#: ui/main.qml:346
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Повільніше"
 
-#: ui/main.qml:332
+#: ui/main.qml:353
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Швидше"
-
-#: ui/main.qml:343
-#, kde-format
-msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Повторно прив'язати додаткові кнопки…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

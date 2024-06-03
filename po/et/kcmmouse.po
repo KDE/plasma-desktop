@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:40+0000\n"
+"POT-Creation-Date: 2024-06-03 00:40+0000\n"
 "PO-Revision-Date: 2020-04-10 19:47+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -124,122 +124,122 @@ msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr ""
 
-#: ui/main.qml:42
+#: ui/main.qml:37
+#, kde-format
+msgctxt "@action:button"
+msgid "Re-bind Additional Mouse Buttons…"
+msgstr ""
+
+#: ui/main.qml:63
 #, kde-format
 msgid "Device:"
 msgstr "Seade:"
 
-#: ui/main.qml:65
+#: ui/main.qml:86
 #, kde-format
 msgid "General:"
 msgstr "Üldine:"
 
-#: ui/main.qml:66
+#: ui/main.qml:87
 #, kde-format
 msgid "Device enabled"
 msgstr "Seadme lubamine"
 
-#: ui/main.qml:80
+#: ui/main.qml:101
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Sisendi lubamine selle seadme abil."
 
-#: ui/main.qml:86
+#: ui/main.qml:107
 #, kde-format
 msgid "Left handed mode"
 msgstr "Vasaku käe režiim"
 
-#: ui/main.qml:99
+#: ui/main.qml:120
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Vasaku ja parema nupu vahetamine."
 
-#: ui/main.qml:106
+#: ui/main.qml:127
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Vasaku ja parema nupu klõps asendab keskmise nupu klõpsu"
 
-#: ui/main.qml:119
+#: ui/main.qml:140
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
 "Korraga vasakule ja paremale nupule vajutamine võrdub keskmise nupu klõpsuga."
 
-#: ui/main.qml:123
+#: ui/main.qml:144
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
 
-#: ui/main.qml:135
+#: ui/main.qml:156
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Osutusseadme kiirus:"
 
-#: ui/main.qml:212
+#: ui/main.qml:233
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Kursori kiirendus:"
 
-#: ui/main.qml:229
+#: ui/main.qml:250
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: ui/main.qml:234
+#: ui/main.qml:255
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Kursor liigub sama palju nagu hiir."
 
-#: ui/main.qml:239
+#: ui/main.qml:260
 #, kde-format
 msgid "Standard"
 msgstr ""
 
-#: ui/main.qml:244
+#: ui/main.qml:265
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "Kursori liikumiskaugus sõltub hiire liigutamise kiirusest."
 
-#: ui/main.qml:255
+#: ui/main.qml:276
 #, kde-format
 msgid "Scrolling:"
 msgstr "Kerimine:"
 
-#: ui/main.qml:256
+#: ui/main.qml:277
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Teistpidi kerimissuund"
 
-#: ui/main.qml:269
+#: ui/main.qml:290
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Nagu puuteekraanil kerimine."
 
-#: ui/main.qml:274
+#: ui/main.qml:295
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Kerimiskiirus:"
 
-#: ui/main.qml:325
+#: ui/main.qml:346
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Aeglasem"
 
-#: ui/main.qml:332
+#: ui/main.qml:353
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Kiirem"
-
-#: ui/main.qml:343
-#, kde-format
-msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

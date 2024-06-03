@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-03 00:40+0000\n"
 "PO-Revision-Date: 2024-04-26 11:31+0200\n"
 "Last-Translator: pieter <pieterkristensen@gmail.com>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -56,7 +56,7 @@ msgstr ""
 msgid "Cannot connect to X server"
 msgstr "Kan geen verbinding met de X-server maken"
 
-#: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:98
+#: backends/x11/xlibbackend.cpp:84
 #, kde-format
 msgid "No touchpad found"
 msgstr "Geen touchpad gevonden"
@@ -76,310 +76,7 @@ msgstr "Kan de configuratie van het touchpad niet lezen"
 msgid "Cannot read default touchpad configuration"
 msgstr "Kan de standaard configuratie van het touchpad niet lezen"
 
-#: kcm/libinput/touchpad.qml:99
-#, kde-format
-msgid "Connect an external touchpad"
-msgstr "Met externe touchpad verbinden"
-
-#: kcm/libinput/touchpad.qml:113
-#, kde-format
-msgid "Device:"
-msgstr "Apparaat:"
-
-#: kcm/libinput/touchpad.qml:139
-#, kde-format
-msgid "General:"
-msgstr "Algemeen:"
-
-#: kcm/libinput/touchpad.qml:140
-#, kde-format
-msgid "Device enabled"
-msgstr "Apparaat ingeschakeld"
-
-#: kcm/libinput/touchpad.qml:144
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Gebruik dit apparaat voor invoer."
-
-#: kcm/libinput/touchpad.qml:168
-#, kde-format
-msgid "Disable while typing"
-msgstr "Uitschakelen bij typen"
-
-#: kcm/libinput/touchpad.qml:172
-#, kde-format
-msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr "Touchpad uitschakelen bij typen om invoer-fouten te voorkomen"
-
-#: kcm/libinput/touchpad.qml:196
-#, kde-format
-msgid "Left handed mode"
-msgstr "Modus linkshandig"
-
-#: kcm/libinput/touchpad.qml:200
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Linker en rechter knoppen verwisselen."
-
-#: kcm/libinput/touchpad.qml:226
-#, kde-format
-msgid "Press left and right buttons for middle click"
-msgstr "Linker en rechter knoppen indrukken voor middelste muisklik"
-
-#: kcm/libinput/touchpad.qml:230 kcm/libinput/touchpad.qml:878
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
-msgstr "Linker en rechter knop tegelijk wordt middenste muis-knop."
-
-#: kcm/libinput/touchpad.qml:256
-#, kde-format
-msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
-msgstr ""
-"Deze instelling activeren verhoogt de vertraging van de muisklik met 50ms. "
-"De extra vertraging is nodig om juist gelijktijdig indrukken van de linker "
-"en rechter muis te detecteren."
-
-#: kcm/libinput/touchpad.qml:266
-#, kde-format
-msgid "Pointer speed:"
-msgstr "Snelheid van aanwijzer:"
-
-#: kcm/libinput/touchpad.qml:364
-#, kde-format
-msgid "Pointer acceleration:"
-msgstr "Aanwijzerversnelling:"
-
-#: kcm/libinput/touchpad.qml:395
-#, kde-format
-msgid "None"
-msgstr "Geen"
-
-#: kcm/libinput/touchpad.qml:399
-#, kde-format
-msgid "Cursor moves the same distance as finger."
-msgstr "Cursor verplaatst zich over dezelfde afstand als de vinger."
-
-#: kcm/libinput/touchpad.qml:408
-#, kde-format
-msgid "Standard"
-msgstr "Standaard"
-
-#: kcm/libinput/touchpad.qml:412
-#, kde-format
-msgid "Cursor travel distance depends on movement speed of finger."
-msgstr ""
-"Cursor verplaats zich over een afstand die afhangt van de snelheid van de "
-"vinger."
-
-#: kcm/libinput/touchpad.qml:427
-#, kde-format
-msgid "Tapping:"
-msgstr "Tikken:"
-
-#: kcm/libinput/touchpad.qml:428
-#, kde-format
-msgid "Tap-to-click"
-msgstr "Tikken-om-te-klikken"
-
-#: kcm/libinput/touchpad.qml:432
-#, kde-format
-msgid "Single tap is left button click."
-msgstr "Enkele tik is klik op linker knop."
-
-#: kcm/libinput/touchpad.qml:461
-#, kde-format
-msgid "Tap-and-drag"
-msgstr "Tik-en-slepen"
-
-#: kcm/libinput/touchpad.qml:465
-#, kde-format
-msgid "Sliding over touchpad directly after tap drags."
-msgstr "Vegen over touchpad direct na tik sleept."
-
-#: kcm/libinput/touchpad.qml:492
-#, kde-format
-msgid "Tap-and-drag lock"
-msgstr "Vergrendeling van tik-en-veeg"
-
-#: kcm/libinput/touchpad.qml:496
-#, kde-format
-msgid "Dragging continues after a short finger lift."
-msgstr "Slepen gaat door na een kort opheffen van de vinger."
-
-#: kcm/libinput/touchpad.qml:516
-#, kde-format
-msgid "Two-finger tap:"
-msgstr "Tik met twee vingers:"
-
-#: kcm/libinput/touchpad.qml:527
-#, kde-format
-msgid "Right-click (three-finger tap to middle-click)"
-msgstr "Rechter-klik (tik met drie vingers voor middel-klik)"
-
-#: kcm/libinput/touchpad.qml:528
-#, kde-format
-msgid ""
-"Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr ""
-"Tik met twee vingers voor rechter-klik, tik met drie vingers voor middel-"
-"klik."
-
-#: kcm/libinput/touchpad.qml:530
-#, kde-format
-msgid "Middle-click (three-finger tap right-click)"
-msgstr "Middel-klik (tik met drie vingers rechter-klik)"
-
-#: kcm/libinput/touchpad.qml:531
-#, kde-format
-msgid ""
-"Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr ""
-"Tik met twee vingers voor middel-klik, tik met drie vingers voor rechter-"
-"klik."
-
-#: kcm/libinput/touchpad.qml:533
-#, kde-format
-msgid "Right-click"
-msgstr "Rechter-klik"
-
-#: kcm/libinput/touchpad.qml:534
-#, kde-format
-msgid "Tap with two fingers to right-click."
-msgstr "Tik met twee vingers voor rechter-klik."
-
-#: kcm/libinput/touchpad.qml:536
-#, kde-format
-msgid "Middle-click"
-msgstr "Middel-klik"
-
-#: kcm/libinput/touchpad.qml:537
-#, kde-format
-msgid "Tap with two fingers to middle-click."
-msgstr "Tik met twee vingers voor middel-klik."
-
-#: kcm/libinput/touchpad.qml:596
-#, kde-format
-msgid "Scrolling:"
-msgstr "Scrollen:"
-
-#: kcm/libinput/touchpad.qml:625
-#, kde-format
-msgid "Two fingers"
-msgstr "Twee vingers"
-
-#: kcm/libinput/touchpad.qml:629
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "Veeg met twee vingers laat schuiven."
-
-#: kcm/libinput/touchpad.qml:637
-#, kde-format
-msgid "Touchpad edges"
-msgstr "Randen van touchpad"
-
-#: kcm/libinput/touchpad.qml:641
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "Veeg aan de rand van het touchpad laat schuiven."
-
-#: kcm/libinput/touchpad.qml:651
-#, kde-format
-msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Scroll-richting omdraaien (natuurlijk schuiven)"
-
-#: kcm/libinput/touchpad.qml:667
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Scroll zoals op aanraakscherm."
-
-#: kcm/libinput/touchpad.qml:675 kcm/libinput/touchpad.qml:692
-#, kde-format
-msgid "Disable horizontal scrolling"
-msgstr "Horizontaal scrollen uitschakelen"
-
-#: kcm/libinput/touchpad.qml:700
-#, kde-format
-msgid "Scrolling speed:"
-msgstr "Scroll-snelheid:"
-
-#: kcm/libinput/touchpad.qml:751
-#, kde-format
-msgctxt "Slower Scroll"
-msgid "Slower"
-msgstr "Langzamer"
-
-#: kcm/libinput/touchpad.qml:758
-#, kde-format
-msgctxt "Faster Scroll Speed"
-msgid "Faster"
-msgstr "Sneller"
-
-#: kcm/libinput/touchpad.qml:769
-#, kde-format
-msgid "Right-click:"
-msgstr "Rechter-klik :"
-
-#: kcm/libinput/touchpad.qml:803
-#, kde-format
-msgid "Press bottom-right corner"
-msgstr "Hoek rechtsonder indrukken"
-
-#: kcm/libinput/touchpad.qml:807
-#, kde-format
-msgid ""
-"Software enabled buttons will be added to bottom portion of your touchpad."
-msgstr ""
-"Door software ingeschakelde knoppen zullen toegevoegd worden aan het "
-"onderste gedeelte van uw touchpad."
-
-#: kcm/libinput/touchpad.qml:815
-#, kde-format
-msgid "Press anywhere with two fingers"
-msgstr "Ergens met twee vingers drukken"
-
-#: kcm/libinput/touchpad.qml:819
-#, kde-format
-msgid "Tap with two finger to enable right click."
-msgstr "Tik met twee vingers om rechter-klik in te schakelen."
-
-#: kcm/libinput/touchpad.qml:833
-#, kde-format
-msgid "Middle-click: "
-msgstr "Midden-klik: "
-
-#: kcm/libinput/touchpad.qml:862
-#, kde-format
-msgid "Press bottom-middle"
-msgstr "Midden onder drukken"
-
-#: kcm/libinput/touchpad.qml:866
-#, kde-format
-msgid ""
-"Software enabled middle-button will be added to bottom portion of your "
-"touchpad."
-msgstr ""
-"Met software ingeschakelde midden-knop zal toegevoegd worden aan het "
-"onderste gedeelte van uw touchpad."
-
-#: kcm/libinput/touchpad.qml:874
-#, kde-format
-msgid "Press bottom left and bottom right corners simultaneously"
-msgstr "Hoeken linksonder en rechtsonder tegelijk indrukken"
-
-#: kcm/libinput/touchpad.qml:887
-#, kde-format
-msgid "Press anywhere with three fingers"
-msgstr "Ergens met drie vingers drukken"
-
-#: kcm/libinput/touchpad.qml:893
-#, kde-format
-msgid "Press anywhere with three fingers."
-msgstr "Ergens met drie vingers drukken."
-
-#: kcm/touchpadconfig.cpp:99
+#: kcm.cpp:99
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -388,12 +85,12 @@ msgstr ""
 "Fout bij laden van waarden. Zie logs voor meer informatie. Start deze "
 "configuratiemodule opnieuw."
 
-#: kcm/touchpadconfig.cpp:102
+#: kcm.cpp:102
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Geen touchpad gevonden. Sluit een touchpad aan."
 
-#: kcm/touchpadconfig.cpp:111
+#: kcm.cpp:111
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -402,7 +99,7 @@ msgstr ""
 "Kan niet alle wijzigen opslaan. Zie logs voor meer informatie. Start deze "
 "configuratiemodule opnieuw."
 
-#: kcm/touchpadconfig.cpp:130
+#: kcm.cpp:130
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -411,7 +108,7 @@ msgstr ""
 "Fout bij laden van standaard waarden. Enige opties konden niet ingesteld "
 "worden op hun standaard waarden."
 
-#: kcm/touchpadconfig.cpp:150
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -420,12 +117,12 @@ msgstr ""
 "Fout bij toevoegen van nieuw verbonden apparaat. Verbind het opnieuw en "
 "herstart deze configuratiemodule."
 
-#: kcm/touchpadconfig.cpp:173
+#: kcm.cpp:173
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Verbinding met touchpad verbroken. Instellingendialoog is gesloten."
 
-#: kcm/touchpadconfig.cpp:175
+#: kcm.cpp:175
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Verbinding met touchpad verbroken. Geen andere touchpads gevonden."
@@ -530,6 +227,200 @@ msgstr "Linker rand"
 msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Hoek linksboven"
+
+#~ msgid "Connect an external touchpad"
+#~ msgstr "Met externe touchpad verbinden"
+
+#~ msgid "Device:"
+#~ msgstr "Apparaat:"
+
+#~ msgid "General:"
+#~ msgstr "Algemeen:"
+
+#~ msgid "Device enabled"
+#~ msgstr "Apparaat ingeschakeld"
+
+#~ msgid "Accept input through this device."
+#~ msgstr "Gebruik dit apparaat voor invoer."
+
+#~ msgid "Disable while typing"
+#~ msgstr "Uitschakelen bij typen"
+
+#~ msgid "Disable touchpad while typing to prevent accidental inputs."
+#~ msgstr "Touchpad uitschakelen bij typen om invoer-fouten te voorkomen"
+
+#~ msgid "Left handed mode"
+#~ msgstr "Modus linkshandig"
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Linker en rechter knoppen verwisselen."
+
+#~ msgid "Press left and right buttons for middle click"
+#~ msgstr "Linker en rechter knoppen indrukken voor middelste muisklik"
+
+#~ msgid ""
+#~ "Clicking left and right button simultaneously sends middle button click."
+#~ msgstr "Linker en rechter knop tegelijk wordt middenste muis-knop."
+
+#~ msgid ""
+#~ "Activating this setting increases mouse click latency by 50ms. The extra "
+#~ "delay is needed to correctly detect simultaneous left and right mouse "
+#~ "clicks."
+#~ msgstr ""
+#~ "Deze instelling activeren verhoogt de vertraging van de muisklik met "
+#~ "50ms. De extra vertraging is nodig om juist gelijktijdig indrukken van de "
+#~ "linker en rechter muis te detecteren."
+
+#~ msgid "Pointer speed:"
+#~ msgstr "Snelheid van aanwijzer:"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Aanwijzerversnelling:"
+
+#~ msgid "None"
+#~ msgstr "Geen"
+
+#~ msgid "Cursor moves the same distance as finger."
+#~ msgstr "Cursor verplaatst zich over dezelfde afstand als de vinger."
+
+#~ msgid "Standard"
+#~ msgstr "Standaard"
+
+#~ msgid "Cursor travel distance depends on movement speed of finger."
+#~ msgstr ""
+#~ "Cursor verplaats zich over een afstand die afhangt van de snelheid van de "
+#~ "vinger."
+
+#~ msgid "Tapping:"
+#~ msgstr "Tikken:"
+
+#~ msgid "Tap-to-click"
+#~ msgstr "Tikken-om-te-klikken"
+
+#~ msgid "Single tap is left button click."
+#~ msgstr "Enkele tik is klik op linker knop."
+
+#~ msgid "Tap-and-drag"
+#~ msgstr "Tik-en-slepen"
+
+#~ msgid "Sliding over touchpad directly after tap drags."
+#~ msgstr "Vegen over touchpad direct na tik sleept."
+
+#~ msgid "Tap-and-drag lock"
+#~ msgstr "Vergrendeling van tik-en-veeg"
+
+#~ msgid "Dragging continues after a short finger lift."
+#~ msgstr "Slepen gaat door na een kort opheffen van de vinger."
+
+#~ msgid "Two-finger tap:"
+#~ msgstr "Tik met twee vingers:"
+
+#~ msgid "Right-click (three-finger tap to middle-click)"
+#~ msgstr "Rechter-klik (tik met drie vingers voor middel-klik)"
+
+#~ msgid ""
+#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
+#~ "click."
+#~ msgstr ""
+#~ "Tik met twee vingers voor rechter-klik, tik met drie vingers voor middel-"
+#~ "klik."
+
+#~ msgid "Middle-click (three-finger tap right-click)"
+#~ msgstr "Middel-klik (tik met drie vingers rechter-klik)"
+
+#~ msgid ""
+#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
+#~ "click."
+#~ msgstr ""
+#~ "Tik met twee vingers voor middel-klik, tik met drie vingers voor rechter-"
+#~ "klik."
+
+#~ msgid "Right-click"
+#~ msgstr "Rechter-klik"
+
+#~ msgid "Tap with two fingers to right-click."
+#~ msgstr "Tik met twee vingers voor rechter-klik."
+
+#~ msgid "Middle-click"
+#~ msgstr "Middel-klik"
+
+#~ msgid "Tap with two fingers to middle-click."
+#~ msgstr "Tik met twee vingers voor middel-klik."
+
+#~ msgid "Scrolling:"
+#~ msgstr "Scrollen:"
+
+#~ msgid "Two fingers"
+#~ msgstr "Twee vingers"
+
+#~ msgid "Slide with two fingers scrolls."
+#~ msgstr "Veeg met twee vingers laat schuiven."
+
+#~ msgid "Touchpad edges"
+#~ msgstr "Randen van touchpad"
+
+#~ msgid "Slide on the touchpad edges scrolls."
+#~ msgstr "Veeg aan de rand van het touchpad laat schuiven."
+
+#~ msgid "Invert scroll direction (Natural scrolling)"
+#~ msgstr "Scroll-richting omdraaien (natuurlijk schuiven)"
+
+#~ msgid "Touchscreen like scrolling."
+#~ msgstr "Scroll zoals op aanraakscherm."
+
+#~ msgid "Disable horizontal scrolling"
+#~ msgstr "Horizontaal scrollen uitschakelen"
+
+#~ msgid "Scrolling speed:"
+#~ msgstr "Scroll-snelheid:"
+
+#~ msgctxt "Slower Scroll"
+#~ msgid "Slower"
+#~ msgstr "Langzamer"
+
+#~ msgctxt "Faster Scroll Speed"
+#~ msgid "Faster"
+#~ msgstr "Sneller"
+
+#~ msgid "Right-click:"
+#~ msgstr "Rechter-klik :"
+
+#~ msgid "Press bottom-right corner"
+#~ msgstr "Hoek rechtsonder indrukken"
+
+#~ msgid ""
+#~ "Software enabled buttons will be added to bottom portion of your touchpad."
+#~ msgstr ""
+#~ "Door software ingeschakelde knoppen zullen toegevoegd worden aan het "
+#~ "onderste gedeelte van uw touchpad."
+
+#~ msgid "Press anywhere with two fingers"
+#~ msgstr "Ergens met twee vingers drukken"
+
+#~ msgid "Tap with two finger to enable right click."
+#~ msgstr "Tik met twee vingers om rechter-klik in te schakelen."
+
+#~ msgid "Middle-click: "
+#~ msgstr "Midden-klik: "
+
+#~ msgid "Press bottom-middle"
+#~ msgstr "Midden onder drukken"
+
+#~ msgid ""
+#~ "Software enabled middle-button will be added to bottom portion of your "
+#~ "touchpad."
+#~ msgstr ""
+#~ "Met software ingeschakelde midden-knop zal toegevoegd worden aan het "
+#~ "onderste gedeelte van uw touchpad."
+
+#~ msgid "Press bottom left and bottom right corners simultaneously"
+#~ msgstr "Hoeken linksonder en rechtsonder tegelijk indrukken"
+
+#~ msgid "Press anywhere with three fingers"
+#~ msgstr "Ergens met drie vingers drukken"
+
+#~ msgid "Press anywhere with three fingers."
+#~ msgstr "Ergens met drie vingers drukken."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

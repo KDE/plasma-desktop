@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:40+0000\n"
+"POT-Creation-Date: 2024-06-03 00:40+0000\n"
 "PO-Revision-Date: 2024-04-14 18:23+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -132,42 +132,48 @@ msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Bæta við lyklabindingu..."
 
-#: ui/main.qml:42
+#: ui/main.qml:37
+#, kde-format
+msgctxt "@action:button"
+msgid "Re-bind Additional Mouse Buttons…"
+msgstr "Endurtengja viðbótarmúsarhnappa..."
+
+#: ui/main.qml:63
 #, kde-format
 msgid "Device:"
 msgstr "Tæki:"
 
-#: ui/main.qml:65
+#: ui/main.qml:86
 #, kde-format
 msgid "General:"
 msgstr "Almennt:"
 
-#: ui/main.qml:66
+#: ui/main.qml:87
 #, kde-format
 msgid "Device enabled"
 msgstr "Tæki virkt"
 
-#: ui/main.qml:80
+#: ui/main.qml:101
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Samþykkja inntak frá þessu tæki."
 
-#: ui/main.qml:86
+#: ui/main.qml:107
 #, kde-format
 msgid "Left handed mode"
 msgstr "Snið fyrir örvhenta"
 
-#: ui/main.qml:99
+#: ui/main.qml:120
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Víxla hægri og vinstri hnöppum."
 
-#: ui/main.qml:106
+#: ui/main.qml:127
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Ýta á vinstri og hægri hnappa til að gera miðjusmell."
 
-#: ui/main.qml:119
+#: ui/main.qml:140
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -175,7 +181,7 @@ msgstr ""
 "Ef smellt er á vinstri og hægri hnappana samtímis myndar músin "
 "miðjuhnappssmell."
 
-#: ui/main.qml:123
+#: ui/main.qml:144
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -185,73 +191,67 @@ msgstr ""
 "Töfin sem bætist við er nauðsynleg til að hægt sé að greina rétt þegar "
 "smellt er samtímis með vinstri og hægri músarhnappi."
 
-#: ui/main.qml:135
+#: ui/main.qml:156
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Hraði bendils:"
 
-#: ui/main.qml:212
+#: ui/main.qml:233
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Hröðun bendils:"
 
-#: ui/main.qml:229
+#: ui/main.qml:250
 #, kde-format
 msgid "None"
 msgstr "Engin"
 
-#: ui/main.qml:234
+#: ui/main.qml:255
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Bendillinn færist um jafnlanga vegalengd og músin."
 
-#: ui/main.qml:239
+#: ui/main.qml:260
 #, kde-format
 msgid "Standard"
 msgstr "Stöðluð"
 
-#: ui/main.qml:244
+#: ui/main.qml:265
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "Færsluvegalengd bendils veltur á hraða músarhreyfingarinnar."
 
-#: ui/main.qml:255
+#: ui/main.qml:276
 #, kde-format
 msgid "Scrolling:"
 msgstr "Skrun:"
 
-#: ui/main.qml:256
+#: ui/main.qml:277
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Snúa við skrunstefnu"
 
-#: ui/main.qml:269
+#: ui/main.qml:290
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Skrun eins og á snertiskjá."
 
-#: ui/main.qml:274
+#: ui/main.qml:295
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Skrunhraði:"
 
-#: ui/main.qml:325
+#: ui/main.qml:346
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Hægar"
 
-#: ui/main.qml:332
+#: ui/main.qml:353
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Hraðar"
-
-#: ui/main.qml:343
-#, kde-format
-msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Endurtengja viðbótarmúsarhnappa..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

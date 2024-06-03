@@ -1,4 +1,4 @@
-# Version: $Revision: 1681238 $
+# Version: $Revision: 1681465 $
 # translation of kcminput.po to
 # SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:40+0000\n"
+"POT-Creation-Date: 2024-06-03 00:40+0000\n"
 "PO-Revision-Date: 2024-03-23 11:16+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -131,42 +131,48 @@ msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
 msgstr "Dodaj powiązanie..."
 
-#: ui/main.qml:42
+#: ui/main.qml:37
+#, kde-format
+msgctxt "@action:button"
+msgid "Re-bind Additional Mouse Buttons…"
+msgstr "Ponownie powiąż dodatkowe przyciski myszy..."
+
+#: ui/main.qml:63
 #, kde-format
 msgid "Device:"
 msgstr "Urządzenie:"
 
-#: ui/main.qml:65
+#: ui/main.qml:86
 #, kde-format
 msgid "General:"
 msgstr "Ogólne:"
 
-#: ui/main.qml:66
+#: ui/main.qml:87
 #, kde-format
 msgid "Device enabled"
 msgstr "Urządzenie włączone"
 
-#: ui/main.qml:80
+#: ui/main.qml:101
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Przyjmuj ruchy tego urządzenia."
 
-#: ui/main.qml:86
+#: ui/main.qml:107
 #, kde-format
 msgid "Left handed mode"
 msgstr "Tryb dla leworęcznych"
 
-#: ui/main.qml:99
+#: ui/main.qml:120
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Zamień lewy z prawym przyciskiem."
 
-#: ui/main.qml:106
+#: ui/main.qml:127
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Jednoczesne naciśnięcie lewym i prawym naciska środkowy"
 
-#: ui/main.qml:119
+#: ui/main.qml:140
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -174,7 +180,7 @@ msgstr ""
 "Kliknięcie lewym i prawym przyciskiem jednocześnie emuluje kliknięcie "
 "środkowym przyciskiem."
 
-#: ui/main.qml:123
+#: ui/main.qml:144
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -184,74 +190,68 @@ msgstr ""
 "Dodatkowe opóźnienie jest potrzebne do wykrywania jednoczesnego naciśnięcia "
 "lewego i prawego przycisku myszy."
 
-#: ui/main.qml:135
+#: ui/main.qml:156
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Szybkość wskaźnika:"
 
-#: ui/main.qml:212
+#: ui/main.qml:233
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Przyspieszenie wskaźnika:"
 
-#: ui/main.qml:229
+#: ui/main.qml:250
 #, kde-format
 msgid "None"
 msgstr "Brak"
 
-#: ui/main.qml:234
+#: ui/main.qml:255
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Wskaźnik przesuwa się o tę samą odległość co mysz."
 
-#: ui/main.qml:239
+#: ui/main.qml:260
 #, kde-format
 msgid "Standard"
 msgstr "Standardowy"
 
-#: ui/main.qml:244
+#: ui/main.qml:265
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Odległość o jaką przesuwa się wskaźnik zależy od szybkości przesuwania myszy."
 
-#: ui/main.qml:255
+#: ui/main.qml:276
 #, kde-format
 msgid "Scrolling:"
 msgstr "Przewijanie:"
 
-#: ui/main.qml:256
+#: ui/main.qml:277
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Odwróć kierunek przewijania"
 
-#: ui/main.qml:269
+#: ui/main.qml:290
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Przewijanie jak na ekranie dotykowym."
 
-#: ui/main.qml:274
+#: ui/main.qml:295
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Szybkość przewijania:"
 
-#: ui/main.qml:325
+#: ui/main.qml:346
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Wolniej"
 
-#: ui/main.qml:332
+#: ui/main.qml:353
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Szybciej"
-
-#: ui/main.qml:343
-#, kde-format
-msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Ponownie powiąż dodatkowe przyciski myszy..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
