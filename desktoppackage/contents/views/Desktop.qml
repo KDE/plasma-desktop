@@ -5,17 +5,17 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
+import QtQuick
 import QtQuick.Effects
 import QtQuick.Layouts
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PC
-import org.kde.kwindowsystem 1.0
+import org.kde.kwindowsystem
 import org.kde.plasma.activityswitcher as ActivitySwitcher
 import "../activitymanager"
 import "../explorer"
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Item {
     id: root
@@ -26,14 +26,14 @@ Item {
 
     Connections {
         target: ActivitySwitcher.Backend
-        function onShouldShowSwitcherChanged() {
+        function onShouldShowSwitcherChanged(): void {
             if (ActivitySwitcher.Backend.shouldShowSwitcher) {
-                if (sidePanelStack.state != "activityManager") {
+                if (sidePanelStack.state !== "activityManager") {
                     root.toggleActivityManager();
                 }
 
             } else {
-                if (sidePanelStack.state == "activityManager") {
+                if (sidePanelStack.state === "activityManager") {
                     root.toggleActivityManager();
                 }
 
@@ -43,16 +43,19 @@ Item {
 
     function toggleWidgetExplorer(containment) {
 
-        if (sidePanelStack.state == "widgetExplorer") {
+        if (sidePanelStack.state === "widgetExplorer") {
             sidePanelStack.state = "closed";
         } else {
             sidePanelStack.state = "widgetExplorer";
-            sidePanelStack.setSource(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"), {"containment": containment, "sidePanel": sidePanel});
+            sidePanelStack.setSource(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"), {
+                containment,
+                sidePanel,
+            });
         }
     }
 
     function toggleActivityManager() {
-        if (sidePanelStack.state == "activityManager") {
+        if (sidePanelStack.state === "activityManager") {
             sidePanelStack.state = "closed";
         } else {
             sidePanelStack.state = "activityManager";
@@ -99,12 +102,12 @@ Item {
 
     MouseArea {
         id: containmentParent
-        x: editModeLoader.active ? editModeLoader.item.centerX - width / 2 : 0
-        y: editModeLoader.active ? editModeLoader.item.centerY - height / 2 : 0
+        x: editModeLoader.item ? editModeLoader.item.centerX - width / 2 : 0
+        y: editModeLoader.item ? editModeLoader.item.centerY - height / 2 : 0
         width: root.width
         height: root.height
         readonly property real extraScale: desktop.configuredPanel || sidePanel.visible ? 0.95 : 0.9
-        property real scaleFactor: Math.min(editModeRect.width/root.width, editModeRect.height/root.height) * extraScale
+        property real scaleFactor: Math.min(editModeRect.width / root.width, editModeRect.height / root.height) * extraScale
         scale: containment?.plasmoid.corona.editMode ? scaleFactor : 1
     }
 
@@ -115,7 +118,7 @@ Item {
         active: containment?.plasmoid.corona.editMode || editModeUiTimer.running
         Timer {
             id: editModeUiTimer
-            property bool editMode: containment?.plasmoid.corona.editMode || false
+            property bool editMode: containment?.plasmoid.corona.editMode ?? false
             onEditModeChanged: restart()
             interval: Kirigami.Units.longDuration
         }
@@ -153,7 +156,7 @@ Item {
             onBackgroundColorChanged: Qt.callLater(update)
             onTextColorChanged: Qt.callLater(update)
 
-            property Connections repaintConnection: Connections {
+            readonly property Connections __repaintConnection: Connections {
                 target: root.containment.wallpaper
                 function onAccentColorChanged() {
                     if (Qt.colorEqual(root.containment.wallpaper.accentColor, "transparent")) {
@@ -171,14 +174,14 @@ Item {
         // keeps track of the applets the user wants to uninstall
         property var applets: []
         function uninstall() {
-            for (var i = 0, length = applets.length; i < length; ++i) {
-                widgetExplorer.uninstall(applets[i])
+            for (const applet of applets) {
+                widgetExplorer.uninstall(applet);
             }
-            applets = []
+            applets = [];
 
             if (sidePanelStack.state !== "widgetExplorer" && widgetExplorer) {
-                widgetExplorer.destroy()
-                widgetExplorer = null
+                widgetExplorer.destroy();
+                widgetExplorer = null;
             }
         }
 
@@ -195,12 +198,12 @@ Item {
         hideOnWindowDeactivate: true
 
         x: {
-            var result = desktop.x;
+            let result = desktop.x;
             if (!containment) {
                 return result;
             }
 
-            var rect = containment.plasmoid.availableScreenRect;
+            const rect = containment.plasmoid.availableScreenRect;
             result += rect.x;
 
             if (Qt.application.layoutDirection === Qt.RightToLeft) {
@@ -214,9 +217,9 @@ Item {
         onVisibleChanged: {
             if (!visible) {
                 // If was called from a panel, open the panel config
-                if (sidePanelStack.item && sidePanelStack.item.containment
-                    && sidePanelStack.item.containment != containment.plasmoid) {
-                    Qt.callLater(sidePanelStack.item.containment.internalAction("configure").trigger);
+                const item = sidePanelStack.item;
+                if (item?.containment && item.containment !== containment.plasmoid) {
+                    Qt.callLater(item.containment.internalAction("configure").trigger);
                 }
                 sidePanelStack.state = "closed";
                 ActivitySwitcher.Backend.shouldShowSwitcher = false;
@@ -226,31 +229,43 @@ Item {
         mainItem: Loader {
             id: sidePanelStack
             asynchronous: true
-            width: item ? item.width: 0
+            width: item ? item.width : 0
             height: containment ? containment.plasmoid.availableScreenRect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000
             state: "closed"
+
+            function bindingWithItem(callback: var, defaults: var): var {
+                return Qt.binding(() => {
+                    const item = this.item;
+                    return item !== null ? callback(item) : defaults;
+                });
+            }
 
             LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
             LayoutMirroring.childrenInherit: true
 
             onLoaded: {
-                if (sidePanelStack.item) {
-                    item.closed.connect(function(){sidePanelStack.state = "closed";});
+                if (item) {
+                    item.closed.connect(() => {
+                        state = "closed";
+                    });
 
-                    if (sidePanelStack.state == "activityManager") {
-                        sidePanelStack.item.showSwitcherOnly =
-                            ActivitySwitcher.Backend.shouldShowSwitcher
-                        sidePanel.hideOnWindowDeactivate = Qt.binding(function() {
-                            return !ActivitySwitcher.Backend.shouldShowSwitcher
-                                && !sidePanelStack.item.showingDialog;
-                        })
-                        sidePanelStack.item.forceActiveFocus();
-                    } else if (sidePanelStack.state == "widgetExplorer"){
-                        sidePanel.hideOnWindowDeactivate = Qt.binding(function() { return sidePanelStack.item && !sidePanelStack.item.preventWindowHide; })
-                        sidePanel.opacity = Qt.binding(function() { return sidePanelStack.item ? sidePanelStack.item.opacity : 1 })
-                        sidePanel.outputOnly = Qt.binding(function() { return sidePanelStack.item && sidePanelStack.item.outputOnly })
-                    } else {
+                    switch (state) {
+                    case "activityManager":
+                        item.showSwitcherOnly = ActivitySwitcher.Backend.shouldShowSwitcher;
+                        sidePanel.hideOnWindowDeactivate = bindingWithItem(
+                            item => !ActivitySwitcher.Backend.shouldShowSwitcher && !item.showingDialog,
+                            false,
+                        );
+                        item.forceActiveFocus();
+                        break;
+                    case "widgetExplorer":
+                        sidePanel.hideOnWindowDeactivate = bindingWithItem(item => !item.preventWindowHide, false);
+                        sidePanel.opacity = bindingWithItem(item => item.opacity, 1);
+                        sidePanel.outputOnly = bindingWithItem(item => item.outputOnly, false);
+                        break;
+                    default:
                         sidePanel.hideOnWindowDeactivate = true;
+                        break;
                     }
                 }
                 sidePanel.visible = true;
@@ -259,9 +274,9 @@ Item {
                 }
             }
             onStateChanged: {
-                if (sidePanelStack.state == "closed") {
+                if (state === "closed") {
                     sidePanel.visible = false;
-                    sidePanelStack.source = ""; //unload all elements
+                    source = ""; //unload all elements
                 }
             }
         }
@@ -276,9 +291,8 @@ Item {
         }
     }
 
-
     onContainmentChanged: {
-        if (containment == null) {
+        if (containment === null) {
             return;
         }
 
@@ -296,7 +310,7 @@ Item {
         internal.newContainment = containment;
         containment.visible = true;
 
-        if (internal.oldContainment != null && internal.oldContainment != containment) {
+        if (internal.oldContainment !== null && internal.oldContainment !== containment) {
             switchAnim.running = true;
         } else {
             containment.anchors.left = containmentParent.left;
@@ -312,10 +326,10 @@ Item {
 
     //some properties that shouldn't be accessible from elsewhere
     QtObject {
-        id: internal;
+        id: internal
 
-        property Item oldContainment: null;
-        property Item newContainment: null;
+        property Item oldContainment: null
+        property Item newContainment: null
     }
 
     SequentialAnimation {
@@ -362,17 +376,25 @@ Item {
 
     Loader {
         id: previewBannerLoader
-        readonly property point pos: root.containment?.plasmoid.availableScreenRegion,
-            active ? root.containment.adjustToAvailableScreenRegion(
+
+        function shouldBeActive(): bool {
+            // Loader::active is true by default at the time of creation, so
+            // it shouldn't be used in other bindings as a guard.
+            return root.containment !== null && (desktop.showPreviewBanner ?? false);
+        }
+
+        readonly property point pos: root.containment?.plasmoid.availableScreenRegion, shouldBeActive() && item !== null
+            ? root.containment.adjustToAvailableScreenRegion(
                 root.containment.width + root.containment.x - item.width - Kirigami.Units.largeSpacing,
                 root.containment.height + root.containment.y - item.height - Kirigami.Units.largeSpacing,
                 item.width + Kirigami.Units.largeSpacing,
                 item.height + Kirigami.Units.largeSpacing)
             : Qt.point(0, 0)
+
         x: pos.x
         y: pos.y
-        z: Number(root.containment?.z) + 1
-        active: root.containment && Boolean(desktop.showPreviewBanner)
+        z: (root.containment?.z ?? 0) + 1
+        active: shouldBeActive()
         visible: active
         source: "PreviewBanner.qml"
     }
