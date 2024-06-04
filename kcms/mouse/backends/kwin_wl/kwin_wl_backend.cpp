@@ -47,7 +47,6 @@ KWinWaylandBackend::KWinWaylandBackend(QObject *parent)
 
 KWinWaylandBackend::~KWinWaylandBackend()
 {
-    qDeleteAll(m_devices);
 }
 
 void KWinWaylandBackend::findDevices()
@@ -76,15 +75,15 @@ void KWinWaylandBackend::findDevices()
                 continue;
             }
 
-            KWinWaylandDevice *dev = new KWinWaylandDevice(sn);
+            auto dev = std::make_unique<KWinWaylandDevice>(sn);
             if (!dev->init()) {
                 qCCritical(KCM_MOUSE) << "Error on creating device object" << sn;
                 m_errorString = i18n("Critical error on reading fundamental device infos of %1.", sn);
                 return;
             }
-            m_devices.append(dev);
-            connect(dev, &KWinWaylandDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);
+            connect(dev.get(), &KWinWaylandDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);
             qCDebug(KCM_MOUSE).nospace() << "Device found: " << dev->name() << " (" << dev->sysName() << ")";
+            m_devices.push_back(std::move(dev));
         }
     }
 }
@@ -93,7 +92,7 @@ bool KWinWaylandBackend::forAllDevices(bool (KWinWaylandDevice::*f)()) const
 {
     bool ok = true;
     for (const auto &device : std::as_const(m_devices)) {
-        ok &= (device->*f)();
+        ok &= (device.get()->*f)();
     }
     return ok;
 }
@@ -145,7 +144,7 @@ bool KWinWaylandBackend::defaults()
 
 bool KWinWaylandBackend::isSaveNeeded() const
 {
-    return m_buttonMapping != m_loadedButtonMapping || std::ranges::any_of(std::as_const(m_devices), [](KWinWaylandDevice *device) {
+    return m_buttonMapping != m_loadedButtonMapping || std::ranges::any_of(std::as_const(m_devices), [](const std::unique_ptr<KWinWaylandDevice> &device) {
                return device->isSaveNeeded();
            });
 }
@@ -165,7 +164,7 @@ void KWinWaylandBackend::setButtonMapping(const QVariantMap &mapping)
 
 void KWinWaylandBackend::onDeviceAdded(QString sysName)
 {
-    if (std::ranges::any_of(std::as_const(m_devices), [sysName](KWinWaylandDevice *device) {
+    if (std::ranges::any_of(std::as_const(m_devices), [sysName](const std::unique_ptr<KWinWaylandDevice> &device) {
             return device->sysName() == sysName;
         })) {
         return;
@@ -184,15 +183,15 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
             return;
         }
 
-        KWinWaylandDevice *dev = new KWinWaylandDevice(sysName);
+        auto dev = std::make_unique<KWinWaylandDevice>(sysName);
         if (!dev->init()) {
             Q_EMIT deviceAdded(false);
             return;
         }
 
-        m_devices.append(dev);
-        connect(dev, &KWinWaylandDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);
+        connect(dev.get(), &KWinWaylandDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);
         qCDebug(KCM_MOUSE).nospace() << "Device connected: " << dev->name() << " (" << dev->sysName() << ")";
+        m_devices.push_back(std::move(dev));
         Q_EMIT deviceAdded(true);
         Q_EMIT inputDevicesChanged();
 
@@ -204,7 +203,7 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
 
 void KWinWaylandBackend::onDeviceRemoved(QString sysName)
 {
-    const auto it = std::ranges::find_if(std::as_const(m_devices), [sysName](KWinWaylandDevice *device) {
+    const auto it = std::ranges::find_if(std::as_const(m_devices), [sysName](const std::unique_ptr<KWinWaylandDevice> &device) {
         return device->sysName() == sysName;
     });
     if (it == m_devices.cend()) {
@@ -213,7 +212,8 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
     int index = std::distance(m_devices.cbegin(), it);
 
     // delete at the end of the function, after change signals have been fired
-    std::unique_ptr<KWinWaylandDevice> dev{m_devices.takeAt(index)};
+    std::unique_ptr<KWinWaylandDevice> dev = std::move(m_devices[index]);
+    m_devices.erase(m_devices.cbegin() + index);
 
     bool deviceNeededSave = dev->isSaveNeeded();
     disconnect(dev.get(), nullptr, this, nullptr);
@@ -231,16 +231,16 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
 QList<InputDevice *> KWinWaylandBackend::inputDevices() const
 {
     QList<InputDevice *> devices;
-    devices.reserve(m_devices.count());
+    devices.reserve(m_devices.size());
     for (const auto &device : m_devices) {
-        devices.append(device);
+        devices.append(device.get());
     }
     return devices;
 }
 
 int KWinWaylandBackend::deviceCount() const
 {
-    return m_devices.count();
+    return m_devices.size();
 }
 
 QString KWinWaylandBackend::errorString() const

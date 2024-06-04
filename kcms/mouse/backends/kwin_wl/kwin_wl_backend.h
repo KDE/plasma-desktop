@@ -11,9 +11,8 @@
 
 #include <KConfigGroup>
 
-#include <QList>
-
 #include <memory>
+#include <vector>
 
 class QDBusInterface;
 
@@ -48,7 +47,7 @@ private:
     static KConfigGroup mouseButtonRebindsConfigGroup();
 
     std::unique_ptr<QDBusInterface> m_deviceManager;
-    QList<KWinWaylandDevice *> m_devices;
+    std::vector<std::unique_ptr<KWinWaylandDevice>> m_devices;
     QVariantMap m_buttonMapping;
     QVariantMap m_loadedButtonMapping;
 
