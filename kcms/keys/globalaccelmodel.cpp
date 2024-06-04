@@ -318,7 +318,7 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
     // Register a dummy action to trigger kglobalaccel to parse the desktop file
     QStringList actionId = buildActionId(desktopName, displayName, QString(), QString());
     m_globalAccelInterface->doRegister(actionId);
-    m_globalAccelInterface->unRegister(actionId);
+    m_globalAccelInterface->unregister(desktopName, QString());
     QCollator collator;
     collator.setCaseSensitivity(Qt::CaseInsensitive);
     collator.setNumericMode(true);
