@@ -89,18 +89,13 @@ KCMMouse::KCMMouse(QObject *parent, const KPluginMetaData &data, [[maybe_unused]
     m_initError = !m_inputBackend->errorString().isNull();
 
     if (m_initError) {
-        setMessage(Message::error(m_inputBackend->errorString()));
+        setSaveLoadMessage(Message::error(m_inputBackend->errorString()));
     } else {
         connect(m_inputBackend.get(), &InputBackend::needsSaveChanged, this, &KCMMouse::updateKcmNeedsSave);
         connect(m_inputBackend.get(), &InputBackend::deviceAdded, this, &KCMMouse::onDeviceAdded);
         connect(m_inputBackend.get(), &InputBackend::deviceRemoved, this, &KCMMouse::onDeviceRemoved);
     }
     setCurrentDeviceIndex(0);
-}
-
-const Message &KCMMouse::message() const
-{
-    return m_message;
 }
 
 InputBackend *KCMMouse::inputBackend() const
@@ -142,11 +137,10 @@ void KCMMouse::load()
     }
 
     if (!m_inputBackend->load()) {
-        setMessage(Message::error(i18n("Error while loading values. See logs for more information. Please restart this configuration module.")));
-    } else {
-        if (!m_inputBackend->deviceCount()) {
-            setMessage(Message::information(i18n("No pointer device found. Connect now.")));
-        }
+        setSaveLoadMessage(Message::error(i18n("Error while loading values. See logs for more information. Please restart this configuration module.")));
+    }
+    if (!m_inputBackend->deviceCount()) {
+        setHotplugMessage(Message::information(i18n("No pointer device found. Connect now.")));
     }
     setNeedsSave(false);
 }
@@ -154,10 +148,10 @@ void KCMMouse::load()
 void KCMMouse::save()
 {
     if (!m_inputBackend->save()) {
-        setMessage(
+        setSaveLoadMessage(
             Message::error(i18n("Not able to save all changes. See logs for more information. Please restart this configuration module and try again.")));
     } else {
-        setMessage();
+        setSaveLoadMessage();
     }
     // load newly written values
     load();
@@ -173,14 +167,14 @@ void KCMMouse::defaults()
     }
 
     if (!m_inputBackend->defaults()) {
-        setMessage(Message::error(i18n("Error while loading default values. Failed to set some options to their default values.")));
+        setSaveLoadMessage(Message::error(i18n("Error while loading default values. Failed to set some options to their default values.")));
     }
 }
 
 void KCMMouse::updateKcmNeedsSave()
 {
-    if (m_inputBackend->deviceCount() > 0) {
-        setMessage();
+    if (!m_inputBackend->isSaveNeeded()) {
+        setSaveLoadMessage();
     }
     setNeedsSave(m_inputBackend->isSaveNeeded());
 }
@@ -188,25 +182,23 @@ void KCMMouse::updateKcmNeedsSave()
 void KCMMouse::onDeviceAdded(bool success)
 {
     if (!success) {
-        setMessage(Message::error(i18n("Error while adding newly connected device. Please reconnect it and restart this configuration module.")));
+        setHotplugMessage(Message::error(i18n("Error while adding newly connected device. Please reconnect it and restart this configuration module.")));
         return;
     }
 
-    if (m_inputBackend->deviceCount() == 1) {
-        setMessage();
+    if (m_inputBackend->deviceCount() >= 1) {
+        setHotplugMessage();
     }
 }
 
 void KCMMouse::onDeviceRemoved(int index)
 {
     if (m_currentDeviceIndex == index) {
-        QString text;
         if (m_inputBackend->deviceCount()) {
-            text = i18n("Pointer device disconnected. Closed its setting dialog.");
+            setHotplugMessage(Message::information(i18n("Pointer device disconnected. Closed its setting dialog.")));
         } else {
-            text = i18n("Pointer device disconnected. No other devices found.");
+            setHotplugMessage(Message::information(i18n("Pointer device disconnected. No other devices found.")));
         }
-        setMessage(Message::information(text));
     }
 
     if (m_currentDeviceIndex >= index) {
@@ -214,11 +206,19 @@ void KCMMouse::onDeviceRemoved(int index)
     }
 }
 
-void KCMMouse::setMessage(const Message &message)
+void KCMMouse::setSaveLoadMessage(const Message &message)
 {
-    if (m_message != message) {
-        m_message = message;
-        Q_EMIT messageChanged();
+    if (m_saveLoadMessage != message) {
+        m_saveLoadMessage = message;
+        Q_EMIT saveLoadMessageChanged();
+    }
+}
+
+void KCMMouse::setHotplugMessage(const Message &message)
+{
+    if (m_hotplugMessage != message) {
+        m_hotplugMessage = message;
+        Q_EMIT hotplugMessageChanged();
     }
 }
 

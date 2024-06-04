@@ -47,14 +47,14 @@ public:
 class KCMMouse : public KQuickManagedConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(Message message READ message NOTIFY messageChanged FINAL)
+    Q_PROPERTY(Message saveLoadMessage MEMBER m_saveLoadMessage NOTIFY saveLoadMessageChanged FINAL)
+    Q_PROPERTY(Message hotplugMessage MEMBER m_hotplugMessage NOTIFY hotplugMessageChanged FINAL)
     Q_PROPERTY(InputBackend *inputBackend READ inputBackend CONSTANT FINAL)
     Q_PROPERTY(int currentDeviceIndex READ currentDeviceIndex WRITE setCurrentDeviceIndex NOTIFY currentDeviceIndexChanged FINAL)
 
 public:
     explicit KCMMouse(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
 
-    const Message &message() const;
     InputBackend *inputBackend() const;
 
     int currentDeviceIndex() const;
@@ -74,13 +74,16 @@ private Q_SLOTS:
     void onDeviceRemoved(int index);
 
 Q_SIGNALS:
-    void messageChanged();
+    void saveLoadMessageChanged();
+    void hotplugMessageChanged();
     void currentDeviceIndexChanged();
 
 private:
-    void setMessage(const Message &message = Message());
+    void setSaveLoadMessage(const Message &message = Message());
+    void setHotplugMessage(const Message &message = Message());
 
-    Message m_message;
+    Message m_saveLoadMessage;
+    Message m_hotplugMessage;
     std::unique_ptr<InputBackend> m_inputBackend;
     bool m_initError = false;
     int m_currentDeviceIndex = 0;

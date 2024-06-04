@@ -49,8 +49,9 @@ KCMUtils.SimpleKCM {
         }
     }
 
-    header: Message {
-        message: root.KCMUtils.ConfigModule.message
+    header: Header {
+        saveLoadMessage: root.KCMUtils.ConfigModule.saveLoadMessage
+        hotplugMessage: root.KCMUtils.ConfigModule.hotplugMessage
     }
 
     Kirigami.FormLayout {
