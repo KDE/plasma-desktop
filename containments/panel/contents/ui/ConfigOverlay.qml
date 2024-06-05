@@ -341,6 +341,14 @@ MouseArea {
                         configurationArea.currentApplet.applet.plasmoid.configuration.length = value
                     }
                 }
+
+                PlasmaComponents3.ToolButton {
+                    Layout.fillWidth: true
+                    visible: !Plasmoid.userConfiguring
+                    icon.name: "configure"
+                    text: i18n("Show Panel Configuration")
+                    onClicked: Plasmoid.internalAction("configure").trigger()
+                }
             }
         }
     }
