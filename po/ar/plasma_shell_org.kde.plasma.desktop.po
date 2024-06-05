@@ -9,14 +9,13 @@ msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-26 02:26+0000\n"
-"PO-Revision-Date: 2024-05-25 16:37+0400\n"
+"PO-Revision-Date: 2024-05-30 07:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
@@ -338,7 +337,7 @@ msgstr "مخصّص"
 
 #: contents/configuration/PanelConfiguration.qml:338
 msgid "Visibility"
-msgstr "الظّهور"
+msgstr "الرّؤية"
 
 #: contents/configuration/PanelConfiguration.qml:351
 msgid "Always visible"
@@ -354,15 +353,15 @@ msgstr "تجنب النوافذ"
 
 #: contents/configuration/PanelConfiguration.qml:354
 msgid "Windows Go Below"
-msgstr "النّوافذ تذهب تحته"
+msgstr "النّوافذ تذهب تحتها"
 
 #: contents/configuration/PanelConfiguration.qml:397
 msgid "Opacity"
-msgstr "الشّفافيّة"
+msgstr "العتمة"
 
 #: contents/configuration/PanelConfiguration.qml:411
 msgid "Adaptive"
-msgstr "متكيفة"
+msgstr "متكيف"
 
 #: contents/configuration/PanelConfiguration.qml:412
 msgid "Opaque"
@@ -474,7 +473,7 @@ msgstr "أزل اللوحة"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:268
 msgid "%1 (primary)"
-msgstr "‏%1 (أساسي)"
+msgstr "‏%1 (أولي)"
 
 #: contents/explorer/AppletAlternatives.qml:66
 msgid "Alternative Widgets"
@@ -627,6 +626,9 @@ msgid "Next track"
 msgstr "المقطوعة التالية"
 
 #: contents/osd/OsdItem.qml:32
+#, fuzzy
+#| msgctxt "Percentage value"
+#| msgid "%1%"
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1٪"
