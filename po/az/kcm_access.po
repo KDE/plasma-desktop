@@ -1,21 +1,23 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 X əyyam
+# SPDX-FileCopyrightText: 2024 X əyyam
+# SPDX-FileCopyrightText: 2024 X əyyam
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2023-02-19 16:54+0400\n"
-"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-06-04 18:20+0400\n"
+"Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -108,10 +110,9 @@ msgstr "Gecikmə vaxtı"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:25
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
+#, kde-format
 msgid "Delay for timeout"
-msgstr "Siçanın hərəkəti gecikməsi"
+msgstr "Taym-aut üçün gecikmə"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:29
@@ -291,14 +292,13 @@ msgstr "Ekran Oxuyucunu Aktiv etmək"
 #: kcmaccessibilityshakecursor.kcfg:9
 #, kde-format
 msgid "Whether Shake Cursor is enabled"
-msgstr ""
+msgstr "Kursoru silkələmənin aktiv olub-olmaması"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgid "Magnification"
-msgstr "Bildirişi Göstərmək"
+msgstr "Böyütmə"
 
 #: ui/ActivationGestures.qml:16
 #, kde-format
@@ -312,27 +312,21 @@ msgstr ""
 "Yapışqan və yavaş düymələri aktiv etmək üçün jestlərdən istiafadə etmək"
 
 #: ui/ActivationGestures.qml:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
-msgstr ""
-"Yapışqan və yavaş düymələri müəyyən bir müddətdə hərəkətsizlik olarsa "
-"söndürmək."
+msgstr "Qeyri-aktiv olduqdan sonra yapışqan və yavaş düymələri söndürmək:"
 
 #: ui/ActivationGestures.qml:58
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " dəq"
-msgstr[1] " dəq"
+msgstr[0] "%1 dəq"
+msgstr[1] "%1 dəq"
 
 #: ui/ActivationGestures.qml:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "min"
-msgstr " dəq"
+msgstr "dəq"
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -532,10 +526,9 @@ msgid "Mouse Navigation"
 msgstr "Siçan Naviqasiyası"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Activation &Gestures"
+#, kde-format
 msgid "Activation Gestures"
-msgstr "Aktivetmə &Jestləri"
+msgstr "Aktivetmə Jestləri"
 
 #: ui/main.qml:52
 #, kde-format
@@ -547,7 +540,7 @@ msgstr "Ekran Oxuyucu"
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
-msgstr ""
+msgstr "Kursoru silkələmək"
 
 #: ui/ModifierKeys.qml:16
 #, kde-format
@@ -623,10 +616,9 @@ msgid "Maximum speed:"
 msgstr "Maksimum sütət:"
 
 #: ui/MouseNavigation.qml:86
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgid "Pointer acceleration:"
-msgstr "Sürətlənmə vaxtı:"
+msgstr "Kursorun sürətlənməsi:"
 
 #: ui/ScreenReader.qml:28
 #, kde-format
@@ -656,33 +648,31 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Shake cursor to find it:"
-msgstr ""
+msgstr "Kursoru tapmaq üçün onu silkələmək:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake cursor effect"
 msgid "Enable"
 msgstr "Aktiv etmək"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgctxt "@label Cursor magnification level"
 msgid "Magnification:"
-msgstr "Bildirişi Göstərmək"
+msgstr "Böyütmə:"
 
 #: ui/ShakeCursor.qml:55
 #, kde-format
 msgctxt "@label Normal cursor size"
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: ui/ShakeCursor.qml:62
 #, kde-format
 msgctxt "@label Large cursor size"
 msgid "Large"
-msgstr ""
+msgstr "Böyük"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Sürətlənmə profili:"

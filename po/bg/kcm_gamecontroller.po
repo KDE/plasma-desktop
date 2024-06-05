@@ -1,39 +1,39 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-28 00:41+0000\n"
-"PO-Revision-Date: 2024-02-19 17:51+0400\n"
-"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
-"Language: ar\n"
+"PO-Revision-Date: 2024-06-04 13:26+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: axesmodel.cpp:63
 #, kde-format
 msgctxt "@label Axis value"
 msgid "Value"
-msgstr "القيمة"
+msgstr "Стойност"
 
 #: buttonmodel.cpp:74
 #, kde-format
 msgctxt "Status of a gamepad button"
 msgid "PRESSED"
-msgstr "مضغوط"
+msgstr "НАТИСНАТ"
 
 #: buttonmodel.cpp:84
 #, kde-format
 msgctxt "@label Button state"
 msgid "State"
-msgstr "الحالة"
+msgstr "Състояние"
 
 #: devicemodel.cpp:72
 #, kde-format
@@ -44,33 +44,33 @@ msgstr "%1 (%2)"
 #: ui/main.qml:23
 #, kde-format
 msgid "No game controllers found"
-msgstr "لم يعثر أجهزة التحكم بألعاب الفيديو"
+msgstr "Не са намерени контролери за игри"
 
 #: ui/main.qml:24
 #, kde-format
 msgid "Connect a wired or wireless controller"
-msgstr "صِل متحكم سلكي أو لا سلكي"
+msgstr "Свържете кабелен или безжичен контролер"
 
 #: ui/main.qml:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
-msgstr "الجهاز:"
+msgstr "Устройство:"
 
 #: ui/main.qml:83
 #, kde-format
 msgctxt "@label Visual representation of an axis position"
 msgid "Position:"
-msgstr "الموضع:"
+msgstr "Позиция:"
 
 #: ui/main.qml:102
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
-msgstr "الأزرار:"
+msgstr "Бутони:"
 
 #: ui/main.qml:124
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"
-msgstr "المحاور:"
+msgstr "Оси:"

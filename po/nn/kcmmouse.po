@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-03 00:40+0000\n"
+"POT-Creation-Date: 2024-06-05 00:40+0000\n"
 "PO-Revision-Date: 2024-03-17 09:26+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,14 +20,14 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:61
+#: backends/kwin_wl/kwin_wl_backend.cpp:60
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Feil ved søk etter inn-einingar. Prøv å opna denne innstillingsmodulen på "
 "nytt."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:81
+#: backends/kwin_wl/kwin_wl_backend.cpp:80
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritisk feil ved lesing av fundamental einingsinfo for %1."
@@ -247,15 +247,3 @@ msgstr "Saktare"
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Raskare"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Gaute Hvoslef Kvalnes,Karl Ove Hufthammer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "gaute@verdsveven.com,karl@huftis.org"
-
-#~ msgctxt "@action:button"
-#~ msgid "Go back"
-#~ msgstr "Gå tilbake"

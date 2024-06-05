@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-03 00:40+0000\n"
-"PO-Revision-Date: 2024-03-29 09:16+0100\n"
+"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"PO-Revision-Date: 2024-05-31 15:38+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,16 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:61
+#: backends/kwin_wl/kwin_wl_backend.cpp:60
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Interrogazione del dispositivo di immissione non riuscita. Riapri questo "
 "modulo di configurazione."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:81
+#: backends/kwin_wl/kwin_wl_backend.cpp:80
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
@@ -86,12 +86,10 @@ msgstr ""
 "Dispositivo di puntamento disconnesso; nessun altro dispositivo trovato."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Re-bind Additional Mouse Buttons…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Bindings for Additional Mouse Buttons"
-msgstr "Riassocia i pulsanti supplementari del mouse..."
+msgstr "Associazioni dei pulsanti supplementari del mouse"
 
 #: ui/bindings.qml:69
 #, kde-format
@@ -120,12 +118,10 @@ msgid "Cancel"
 msgstr "Annulla"
 
 #: ui/bindings.qml:124
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Press a mouse button "
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
-msgstr "Premi un pulsante del mouse "
+msgstr "Premi un pulsante del mouse"
 
 #: ui/bindings.qml:125
 #, kde-format

@@ -1,27 +1,28 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 X əyyam
+# SPDX-FileCopyrightText: 2024 X əyyam
+# SPDX-FileCopyrightText: 2024 X əyyam
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2023-02-17 01:07+0400\n"
-"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-06-04 19:18+0400\n"
+"Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Mövcud əlavələr"
+msgstr "Seçilmiş qoşmalar"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -39,27 +40,25 @@ msgid "Get New Plugins…"
 msgstr "Yeni Qoşmalar Almaq…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
 "Qoşmaları aktiv edin və ya söndürün (KRunner və Tətbiq Başladıcısında və "
-"Görünüşdə istifadə olunur)"
+"Görünüş effektində istifadə olunur). Qoşmaları seçilmiş kimi işarələyin və "
+"onları üstünlük vermək istədiyiniz sıra ilə düzün."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Seçilmişlərdən silmək"
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Seçilmişlərə əlavə etmək"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
@@ -84,14 +83,14 @@ msgstr "Silinmə uğurla başa çatdı, bu pəncərəni bağlaya bilərsiniz"
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
 #, kde-format
 msgid "Failed to copy file %1 to %2"
-msgstr ""
+msgstr "%1 faylını %2 daxilinə kopyalamaq mümkün olmadı"
 
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to remove file %1:<nl/>%2"
-msgstr ""
+msgstr "%1 faylını silmək mümkün olmadı:<nl/>%2"
 
 #: plugininstaller/main.cpp:33
 #, kde-format
@@ -100,9 +99,7 @@ msgid "KRunner plugin installation failed"
 msgstr "KRunner qoşmasının quraşdırılması mümkün olmadı"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
 msgstr "İcra əmri: quraşdırmaq və ya silmək."
@@ -111,13 +108,13 @@ msgstr "İcra əmri: quraşdırmaq və ya silmək."
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Arxivə və ya çıxarılan qovluğa yol"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
-msgstr ""
+msgstr "Visual təsdiqləmə dialoqunu göstərməmək"
 
 #: plugininstaller/main.cpp:92
 #, kde-format
@@ -168,6 +165,8 @@ msgid ""
 "This plugin executes the following command for starting the \"%1\" service:"
 "<nl/>%2"
 msgstr ""
+"Bu qoşma \"%1\" xidmətini işə salmaq üçün aşağıdakı əmri yerinə yetirir:<nl/>"
+"%2"
 
 #: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format

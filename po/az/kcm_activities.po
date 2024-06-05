@@ -1,29 +1,28 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2024 X əyyam
+# SPDX-FileCopyrightText: 2024 X əyyam
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2022-07-03 14:23+0400\n"
-"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-06-04 18:23+0400\n"
+"Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: ui/ActivityEditor.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Activity Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings for %1"
-msgstr "İş otağı Ayarları"
+msgstr "%1 üçün İş otağı ayarları"
 
 #: ui/ActivityEditor.qml:23
 #, kde-format
@@ -35,51 +34,48 @@ msgstr "Yeni İş otağı yaratmaq"
 #, kde-format
 msgctxt "@action:button as in, 'save changes'"
 msgid "Save"
-msgstr ""
+msgstr "Saxlamaq"
 
 #: ui/ActivityEditor.qml:57
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label:chooser"
 msgid "Icon:"
-msgstr "İkon:"
+msgstr "Nişan:"
 
 #: ui/ActivityEditor.qml:68
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Adı:"
 
 #: ui/ActivityEditor.qml:74
-#, fuzzy, kde-format
-#| msgid "Description:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Description:"
-msgstr "Təfərrüatı:"
+msgstr "Təsviri:"
 
 #: ui/ActivityEditor.qml:84
 #, kde-format
 msgctxt "@option:check"
 msgid "While on this activity, allow:"
-msgstr ""
+msgstr "Bu iş otağnda icazə vermək:"
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
 msgid "Tracking file and app use"
-msgstr ""
+msgstr "Faylın və tətbiqin istifadəsinin iszlənməsi"
 
 #: ui/ActivityEditor.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically turning off the screen"
-msgstr ""
+msgstr "Ekranı avtomatik söndürmək"
 
 #: ui/ActivityEditor.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatically shutting down or sleeping"
-msgstr ""
+msgstr "Avtomatik söndürmək və ya yuxu rejiminə keçid"
 
 #: ui/ActivityEditor.qml:103
 #, kde-format
@@ -104,16 +100,13 @@ msgid "Delete Activity"
 msgstr "İş otaqlarını silmək"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to delete '%1'?"
+#, kde-format
 msgctxt "%1 is an activity name"
 msgid "Do you want to delete activity '%1'?"
-msgstr "'%1' silmək istədiyinizə əminsiniz?"
+msgstr "\"%1\" iş otağını silmək istədiyinizə əminsiniz?"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete Activity"
+#, kde-format
 msgid "Delete Activity"
 msgstr "İş otaqlarını silmək"
 

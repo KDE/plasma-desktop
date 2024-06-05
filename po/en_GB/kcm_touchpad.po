@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-03 00:40+0000\n"
+"POT-Creation-Date: 2024-06-05 00:40+0000\n"
 "PO-Revision-Date: 2024-05-20 18:59+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -52,7 +52,7 @@ msgstr "Critical error on reading fundamental device infos for touchpad %1."
 msgid "Cannot connect to X server"
 msgstr "Cannot connect to X server"
 
-#: backends/x11/xlibbackend.cpp:84
+#: backends/x11/xlibbackend.cpp:84 ui/main.qml:98
 #, kde-format
 msgid "No touchpad found"
 msgstr "No touchpad found"
@@ -224,197 +224,303 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Top left corner"
 
-#~ msgid "Connect an external touchpad"
-#~ msgstr "Connect an external touchpad"
+#: ui/main.qml:99
+#, kde-format
+msgid "Connect an external touchpad"
+msgstr "Connect an external touchpad"
 
-#~ msgid "Device:"
-#~ msgstr "Device:"
+#: ui/main.qml:113
+#, kde-format
+msgid "Device:"
+msgstr "Device:"
 
-#~ msgid "General:"
-#~ msgstr "General:"
+#: ui/main.qml:139
+#, kde-format
+msgid "General:"
+msgstr "General:"
 
-#~ msgid "Device enabled"
-#~ msgstr "Device enabled"
+#: ui/main.qml:140
+#, kde-format
+msgid "Device enabled"
+msgstr "Device enabled"
 
-#~ msgid "Accept input through this device."
-#~ msgstr "Accept input through this device."
+#: ui/main.qml:144
+#, kde-format
+msgid "Accept input through this device."
+msgstr "Accept input through this device."
 
-#~ msgid "Disable while typing"
-#~ msgstr "Disable while typing"
+#: ui/main.qml:168
+#, kde-format
+msgid "Disable while typing"
+msgstr "Disable while typing"
 
-#~ msgid "Disable touchpad while typing to prevent accidental inputs."
-#~ msgstr "Disable touchpad while typing to prevent accidental inputs."
+#: ui/main.qml:172
+#, kde-format
+msgid "Disable touchpad while typing to prevent accidental inputs."
+msgstr "Disable touchpad while typing to prevent accidental inputs."
 
-#~ msgid "Left handed mode"
-#~ msgstr "Left handed mode"
+#: ui/main.qml:196
+#, kde-format
+msgid "Left handed mode"
+msgstr "Left handed mode"
 
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Swap left and right buttons."
+#: ui/main.qml:200
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr "Swap left and right buttons."
 
-#~ msgid "Press left and right buttons for middle click"
-#~ msgstr "Press left and right buttons for middle click"
+#: ui/main.qml:226
+#, kde-format
+msgid "Press left and right buttons for middle click"
+msgstr "Press left and right buttons for middle click"
 
-#~ msgid ""
-#~ "Clicking left and right button simultaneously sends middle button click."
-#~ msgstr ""
-#~ "Clicking left and right button simultaneously sends middle button click."
+#: ui/main.qml:230 ui/main.qml:878
+#, kde-format
+msgid ""
+"Clicking left and right button simultaneously sends middle button click."
+msgstr ""
+"Clicking left and right button simultaneously sends middle button click."
 
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
+#: ui/main.qml:256
+#, kde-format
+msgid ""
+"Activating this setting increases mouse click latency by 50ms. The extra "
+"delay is needed to correctly detect simultaneous left and right mouse clicks."
+msgstr ""
+"Activating this setting increases mouse click latency by 50ms. The extra "
+"delay is needed to correctly detect simultaneous left and right mouse clicks."
 
-#~ msgid "Pointer speed:"
-#~ msgstr "Pointer speed:"
+#: ui/main.qml:266
+#, kde-format
+msgid "Pointer speed:"
+msgstr "Pointer speed:"
 
-#~ msgid "Pointer acceleration:"
-#~ msgstr "Pointer acceleration:"
+#: ui/main.qml:364
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Pointer acceleration:"
 
-#~ msgid "None"
-#~ msgstr "None"
+#: ui/main.qml:395
+#, kde-format
+msgid "None"
+msgstr "None"
 
-#~ msgid "Cursor moves the same distance as finger."
-#~ msgstr "Cursor moves the same distance as finger."
+#: ui/main.qml:399
+#, kde-format
+msgid "Cursor moves the same distance as finger."
+msgstr "Cursor moves the same distance as finger."
 
-#~ msgid "Standard"
-#~ msgstr "Standard"
+#: ui/main.qml:408
+#, kde-format
+msgid "Standard"
+msgstr "Standard"
 
-#~ msgid "Cursor travel distance depends on movement speed of finger."
-#~ msgstr "Cursor travel distance depends on movement speed of finger."
+#: ui/main.qml:412
+#, kde-format
+msgid "Cursor travel distance depends on movement speed of finger."
+msgstr "Cursor travel distance depends on movement speed of finger."
 
-#~ msgid "Tapping:"
-#~ msgstr "Tapping:"
+#: ui/main.qml:427
+#, kde-format
+msgid "Tapping:"
+msgstr "Tapping:"
 
-#~ msgid "Tap-to-click"
-#~ msgstr "Tap-to-click"
+#: ui/main.qml:428
+#, kde-format
+msgid "Tap-to-click"
+msgstr "Tap-to-click"
 
-#~ msgid "Single tap is left button click."
-#~ msgstr "Single tap is left button click."
+#: ui/main.qml:432
+#, kde-format
+msgid "Single tap is left button click."
+msgstr "Single tap is left button click."
 
-#~ msgid "Tap-and-drag"
-#~ msgstr "Tap-and-drag"
+#: ui/main.qml:461
+#, kde-format
+msgid "Tap-and-drag"
+msgstr "Tap-and-drag"
 
-#~ msgid "Sliding over touchpad directly after tap drags."
-#~ msgstr "Sliding over touchpad directly after tap drags."
+#: ui/main.qml:465
+#, kde-format
+msgid "Sliding over touchpad directly after tap drags."
+msgstr "Sliding over touchpad directly after tap drags."
 
-#~ msgid "Tap-and-drag lock"
-#~ msgstr "Tap-and-drag lock"
+#: ui/main.qml:492
+#, kde-format
+msgid "Tap-and-drag lock"
+msgstr "Tap-and-drag lock"
 
-#~ msgid "Dragging continues after a short finger lift."
-#~ msgstr "Dragging continues after a short finger lift."
+#: ui/main.qml:496
+#, kde-format
+msgid "Dragging continues after a short finger lift."
+msgstr "Dragging continues after a short finger lift."
 
-#~ msgid "Two-finger tap:"
-#~ msgstr "Two-finger tap:"
+#: ui/main.qml:516
+#, kde-format
+msgid "Two-finger tap:"
+msgstr "Two-finger tap:"
 
-#~ msgid "Right-click (three-finger tap to middle-click)"
-#~ msgstr "Right-click (three-finger tap to middle-click)"
+#: ui/main.qml:527
+#, kde-format
+msgid "Right-click (three-finger tap to middle-click)"
+msgstr "Right-click (three-finger tap to middle-click)"
 
-#~ msgid ""
-#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
-#~ "click."
-#~ msgstr ""
-#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
-#~ "click."
+#: ui/main.qml:528
+#, kde-format
+msgid ""
+"Tap with two fingers to right-click, tap with three fingers to middle-click."
+msgstr ""
+"Tap with two fingers to right-click, tap with three fingers to middle-click."
 
-#~ msgid "Middle-click (three-finger tap right-click)"
-#~ msgstr "Middle-click (three-finger tap right-click)"
+#: ui/main.qml:530
+#, kde-format
+msgid "Middle-click (three-finger tap right-click)"
+msgstr "Middle-click (three-finger tap right-click)"
 
-#~ msgid ""
-#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
-#~ "click."
-#~ msgstr ""
-#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
-#~ "click."
+#: ui/main.qml:531
+#, kde-format
+msgid ""
+"Tap with two fingers to middle-click, tap with three fingers to right-click."
+msgstr ""
+"Tap with two fingers to middle-click, tap with three fingers to right-click."
 
-#~ msgid "Right-click"
-#~ msgstr "Right-click"
+#: ui/main.qml:533
+#, kde-format
+msgid "Right-click"
+msgstr "Right-click"
 
-#~ msgid "Tap with two fingers to right-click."
-#~ msgstr "Tap with two fingers to right-click."
+#: ui/main.qml:534
+#, kde-format
+msgid "Tap with two fingers to right-click."
+msgstr "Tap with two fingers to right-click."
 
-#~ msgid "Middle-click"
-#~ msgstr "Middle-click"
+#: ui/main.qml:536
+#, kde-format
+msgid "Middle-click"
+msgstr "Middle-click"
 
-#~ msgid "Tap with two fingers to middle-click."
-#~ msgstr "Tap with two fingers to middle-click."
+#: ui/main.qml:537
+#, kde-format
+msgid "Tap with two fingers to middle-click."
+msgstr "Tap with two fingers to middle-click."
 
-#~ msgid "Scrolling:"
-#~ msgstr "Scrolling:"
+#: ui/main.qml:596
+#, kde-format
+msgid "Scrolling:"
+msgstr "Scrolling:"
 
-#~ msgid "Two fingers"
-#~ msgstr "Two fingers"
+#: ui/main.qml:625
+#, kde-format
+msgid "Two fingers"
+msgstr "Two fingers"
 
-#~ msgid "Slide with two fingers scrolls."
-#~ msgstr "Slide with two fingers scrolls."
+#: ui/main.qml:629
+#, kde-format
+msgid "Slide with two fingers scrolls."
+msgstr "Slide with two fingers scrolls."
 
-#~ msgid "Touchpad edges"
-#~ msgstr "Touchpad edges"
+#: ui/main.qml:637
+#, kde-format
+msgid "Touchpad edges"
+msgstr "Touchpad edges"
 
-#~ msgid "Slide on the touchpad edges scrolls."
-#~ msgstr "Slide on the touchpad edges scrolls."
+#: ui/main.qml:641
+#, kde-format
+msgid "Slide on the touchpad edges scrolls."
+msgstr "Slide on the touchpad edges scrolls."
 
-#~ msgid "Invert scroll direction (Natural scrolling)"
-#~ msgstr "Invert scroll direction (Natural scrolling)"
+#: ui/main.qml:651
+#, kde-format
+msgid "Invert scroll direction (Natural scrolling)"
+msgstr "Invert scroll direction (Natural scrolling)"
 
-#~ msgid "Touchscreen like scrolling."
-#~ msgstr "Touchscreen like scrolling."
+#: ui/main.qml:667
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Touchscreen like scrolling."
 
-#~ msgid "Disable horizontal scrolling"
-#~ msgstr "Disable horizontal scrolling"
+#: ui/main.qml:675 ui/main.qml:692
+#, kde-format
+msgid "Disable horizontal scrolling"
+msgstr "Disable horizontal scrolling"
 
-#~ msgid "Scrolling speed:"
-#~ msgstr "Scrolling speed:"
+#: ui/main.qml:700
+#, kde-format
+msgid "Scrolling speed:"
+msgstr "Scrolling speed:"
 
-#~ msgctxt "Slower Scroll"
-#~ msgid "Slower"
-#~ msgstr "Slower"
+#: ui/main.qml:751
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr "Slower"
 
-#~ msgctxt "Faster Scroll Speed"
-#~ msgid "Faster"
-#~ msgstr "Faster"
+#: ui/main.qml:758
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr "Faster"
 
-#~ msgid "Right-click:"
-#~ msgstr "Right-click:"
+#: ui/main.qml:769
+#, kde-format
+msgid "Right-click:"
+msgstr "Right-click:"
 
-#~ msgid "Press bottom-right corner"
-#~ msgstr "Press bottom-right corner"
+#: ui/main.qml:803
+#, kde-format
+msgid "Press bottom-right corner"
+msgstr "Press bottom-right corner"
 
-#~ msgid ""
-#~ "Software enabled buttons will be added to bottom portion of your touchpad."
-#~ msgstr ""
-#~ "Software enabled buttons will be added to bottom portion of your touchpad."
+#: ui/main.qml:807
+#, kde-format
+msgid ""
+"Software enabled buttons will be added to bottom portion of your touchpad."
+msgstr ""
+"Software enabled buttons will be added to bottom portion of your touchpad."
 
-#~ msgid "Press anywhere with two fingers"
-#~ msgstr "Press anywhere with two fingers"
+#: ui/main.qml:815
+#, kde-format
+msgid "Press anywhere with two fingers"
+msgstr "Press anywhere with two fingers"
 
-#~ msgid "Tap with two finger to enable right click."
-#~ msgstr "Tap with two finger to enable right click."
+#: ui/main.qml:819
+#, kde-format
+msgid "Tap with two finger to enable right click."
+msgstr "Tap with two finger to enable right click."
 
-#~ msgid "Middle-click: "
-#~ msgstr "Middle-click: "
+#: ui/main.qml:833
+#, kde-format
+msgid "Middle-click: "
+msgstr "Middle-click: "
 
-#~ msgid "Press bottom-middle"
-#~ msgstr "Press bottom-middle"
+#: ui/main.qml:862
+#, kde-format
+msgid "Press bottom-middle"
+msgstr "Press bottom-middle"
 
-#~ msgid ""
-#~ "Software enabled middle-button will be added to bottom portion of your "
-#~ "touchpad."
-#~ msgstr ""
-#~ "Software enabled middle-button will be added to bottom portion of your "
-#~ "touchpad."
+#: ui/main.qml:866
+#, kde-format
+msgid ""
+"Software enabled middle-button will be added to bottom portion of your "
+"touchpad."
+msgstr ""
+"Software enabled middle-button will be added to bottom portion of your "
+"touchpad."
 
-#~ msgid "Press bottom left and bottom right corners simultaneously"
-#~ msgstr "Press bottom left and bottom right corners simultaneously"
+#: ui/main.qml:874
+#, kde-format
+msgid "Press bottom left and bottom right corners simultaneously"
+msgstr "Press bottom left and bottom right corners simultaneously"
 
-#~ msgid "Press anywhere with three fingers"
-#~ msgstr "Press anywhere with three fingers"
+#: ui/main.qml:887
+#, kde-format
+msgid "Press anywhere with three fingers"
+msgstr "Press anywhere with three fingers"
 
-#~ msgid "Press anywhere with three fingers."
-#~ msgstr "Press anywhere with three fingers."
+#: ui/main.qml:893
+#, kde-format
+msgid "Press anywhere with three fingers."
+msgstr "Press anywhere with three fingers."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

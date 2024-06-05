@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-03 00:40+0000\n"
+"POT-Creation-Date: 2024-06-05 00:40+0000\n"
 "PO-Revision-Date: 2024-03-22 22:15+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -56,7 +56,7 @@ msgstr ""
 msgid "Cannot connect to X server"
 msgstr "Ne povas konekti al X-servilo"
 
-#: backends/x11/xlibbackend.cpp:84
+#: backends/x11/xlibbackend.cpp:84 ui/main.qml:98
 #, kde-format
 msgid "No touchpad found"
 msgstr "Neniu tuŝplato trovita"
@@ -228,197 +228,304 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "Supra maldekstra angulo"
 
-#~ msgid "Connect an external touchpad"
-#~ msgstr "Konekti eksternan tuŝplaton"
+#: ui/main.qml:99
+#, kde-format
+msgid "Connect an external touchpad"
+msgstr "Konekti eksternan tuŝplaton"
 
-#~ msgid "Device:"
-#~ msgstr "Aparato:"
+#: ui/main.qml:113
+#, kde-format
+msgid "Device:"
+msgstr "Aparato:"
 
-#~ msgid "General:"
-#~ msgstr "Ĝenerala:"
+#: ui/main.qml:139
+#, kde-format
+msgid "General:"
+msgstr "Ĝenerala:"
 
-#~ msgid "Device enabled"
-#~ msgstr "Aparato ebligita"
+#: ui/main.qml:140
+#, kde-format
+msgid "Device enabled"
+msgstr "Aparato ebligita"
 
-#~ msgid "Accept input through this device."
-#~ msgstr "Akcepti enigon per ĉi tiu aparato."
+#: ui/main.qml:144
+#, kde-format
+msgid "Accept input through this device."
+msgstr "Akcepti enigon per ĉi tiu aparato."
 
-#~ msgid "Disable while typing"
-#~ msgstr "Malebligi dum tajpado"
+#: ui/main.qml:168
+#, kde-format
+msgid "Disable while typing"
+msgstr "Malebligi dum tajpado"
 
-#~ msgid "Disable touchpad while typing to prevent accidental inputs."
-#~ msgstr "Malŝalti tuŝplaton dum tajpado por malhelpi hazardajn enigojn."
+#: ui/main.qml:172
+#, kde-format
+msgid "Disable touchpad while typing to prevent accidental inputs."
+msgstr "Malŝalti tuŝplaton dum tajpado por malhelpi hazardajn enigojn."
 
-#~ msgid "Left handed mode"
-#~ msgstr "Maldekstramana reĝimo"
+#: ui/main.qml:196
+#, kde-format
+msgid "Left handed mode"
+msgstr "Maldekstramana reĝimo"
 
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Interŝanĝi maldekstrajn kaj dekstrajn butonojn."
+#: ui/main.qml:200
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr "Interŝanĝi maldekstrajn kaj dekstrajn butonojn."
 
-#~ msgid "Press left and right buttons for middle click"
-#~ msgstr "Premi maldekstrajn kaj dekstrajn butonojn por meza klako"
+#: ui/main.qml:226
+#, kde-format
+msgid "Press left and right buttons for middle click"
+msgstr "Premi maldekstrajn kaj dekstrajn butonojn por meza klako"
 
-#~ msgid ""
-#~ "Clicking left and right button simultaneously sends middle button click."
-#~ msgstr ""
-#~ "Alklaki maldekstran kaj dekstran butonon samtempe sendas mezan "
-#~ "butonklakon."
+#: ui/main.qml:230 ui/main.qml:878
+#, kde-format
+msgid ""
+"Clicking left and right button simultaneously sends middle button click."
+msgstr ""
+"Alklaki maldekstran kaj dekstran butonon samtempe sendas mezan butonklakon."
 
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "Aktivigi ĉi tiun agordon pliigas la respondotempon de musklako je 50 ms. "
-#~ "La ekstra prokrasto estas necesa por ĝuste detekti samtempajn "
-#~ "maldekstrajn kaj dekstrajn musklakojn."
+#: ui/main.qml:256
+#, kde-format
+msgid ""
+"Activating this setting increases mouse click latency by 50ms. The extra "
+"delay is needed to correctly detect simultaneous left and right mouse clicks."
+msgstr ""
+"Aktivigi ĉi tiun agordon pliigas la respondotempon de musklako je 50 ms. La "
+"ekstra prokrasto estas necesa por ĝuste detekti samtempajn maldekstrajn kaj "
+"dekstrajn musklakojn."
 
-#~ msgid "Pointer speed:"
-#~ msgstr "Montrilsaga rapideco:"
+#: ui/main.qml:266
+#, kde-format
+msgid "Pointer speed:"
+msgstr "Montrilsaga rapideco:"
 
-#~ msgid "Pointer acceleration:"
-#~ msgstr "Montrilsaga akcelo:"
+#: ui/main.qml:364
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "Montrilsaga akcelo:"
 
-#~ msgid "None"
-#~ msgstr "Neniu"
+#: ui/main.qml:395
+#, kde-format
+msgid "None"
+msgstr "Neniu"
 
-#~ msgid "Cursor moves the same distance as finger."
-#~ msgstr "Kursoro movas la saman distancon kiel fingro."
+#: ui/main.qml:399
+#, kde-format
+msgid "Cursor moves the same distance as finger."
+msgstr "Kursoro movas la saman distancon kiel fingro."
 
-#~ msgid "Standard"
-#~ msgstr "Norma"
+#: ui/main.qml:408
+#, kde-format
+msgid "Standard"
+msgstr "Norma"
 
-#~ msgid "Cursor travel distance depends on movement speed of finger."
-#~ msgstr "Kursora vojaĝdistanco dependas de movrapideco de fingro."
+#: ui/main.qml:412
+#, kde-format
+msgid "Cursor travel distance depends on movement speed of finger."
+msgstr "Kursora vojaĝdistanco dependas de movrapideco de fingro."
 
-#~ msgid "Tapping:"
-#~ msgstr "Frapado:"
+#: ui/main.qml:427
+#, kde-format
+msgid "Tapping:"
+msgstr "Frapado:"
 
-#~ msgid "Tap-to-click"
-#~ msgstr "Frapeto-al-klaki"
+#: ui/main.qml:428
+#, kde-format
+msgid "Tap-to-click"
+msgstr "Frapeto-al-klaki"
 
-#~ msgid "Single tap is left button click."
-#~ msgstr "Unuopa frapeto estas maldekstra butono klako."
+#: ui/main.qml:432
+#, kde-format
+msgid "Single tap is left button click."
+msgstr "Unuopa frapeto estas maldekstra butono klako."
 
-#~ msgid "Tap-and-drag"
-#~ msgstr "Frapi kaj treni"
+#: ui/main.qml:461
+#, kde-format
+msgid "Tap-and-drag"
+msgstr "Frapi kaj treni"
 
-#~ msgid "Sliding over touchpad directly after tap drags."
-#~ msgstr "Glitante super tuŝplato rekte post frapeto trenas."
+#: ui/main.qml:465
+#, kde-format
+msgid "Sliding over touchpad directly after tap drags."
+msgstr "Glitante super tuŝplato rekte post frapeto trenas."
 
-#~ msgid "Tap-and-drag lock"
-#~ msgstr "Frap-kaj-trena ŝloso"
+#: ui/main.qml:492
+#, kde-format
+msgid "Tap-and-drag lock"
+msgstr "Frap-kaj-trena ŝloso"
 
-#~ msgid "Dragging continues after a short finger lift."
-#~ msgstr "Trenado kontinuas post mallonga fingrolevo."
+#: ui/main.qml:496
+#, kde-format
+msgid "Dragging continues after a short finger lift."
+msgstr "Trenado kontinuas post mallonga fingrolevo."
 
-#~ msgid "Two-finger tap:"
-#~ msgstr "Dufingra frapeto:"
+#: ui/main.qml:516
+#, kde-format
+msgid "Two-finger tap:"
+msgstr "Dufingra frapeto:"
 
-#~ msgid "Right-click (three-finger tap to middle-click)"
-#~ msgstr "Dekstra alklako (trifingroklaku por mezklako)"
+#: ui/main.qml:527
+#, kde-format
+msgid "Right-click (three-finger tap to middle-click)"
+msgstr "Dekstra alklako (trifingroklaku por mezklako)"
 
-#~ msgid ""
-#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
-#~ "click."
-#~ msgstr ""
-#~ "Frapu per du fingroj por dekstre alklaki, frapeti per tri fingroj por "
-#~ "mezklaki."
+#: ui/main.qml:528
+#, kde-format
+msgid ""
+"Tap with two fingers to right-click, tap with three fingers to middle-click."
+msgstr ""
+"Frapu per du fingroj por dekstre alklaki, frapeti per tri fingroj por "
+"mezklaki."
 
-#~ msgid "Middle-click (three-finger tap right-click)"
-#~ msgstr "Mez-klako (tri-fingroklako dekstre-klako)"
+#: ui/main.qml:530
+#, kde-format
+msgid "Middle-click (three-finger tap right-click)"
+msgstr "Mez-klako (tri-fingroklako dekstre-klako)"
 
-#~ msgid ""
-#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
-#~ "click."
-#~ msgstr ""
-#~ "Frapu per du fingroj por mezklaki, frapeti per tri fingroj por dekstre "
-#~ "alklaki."
+#: ui/main.qml:531
+#, kde-format
+msgid ""
+"Tap with two fingers to middle-click, tap with three fingers to right-click."
+msgstr ""
+"Frapu per du fingroj por mezklaki, frapeti per tri fingroj por dekstre "
+"alklaki."
 
-#~ msgid "Right-click"
-#~ msgstr "Dekstra alklako"
+#: ui/main.qml:533
+#, kde-format
+msgid "Right-click"
+msgstr "Dekstra alklako"
 
-#~ msgid "Tap with two fingers to right-click."
-#~ msgstr "Frapu per du fingroj por dekstre alklaki."
+#: ui/main.qml:534
+#, kde-format
+msgid "Tap with two fingers to right-click."
+msgstr "Frapu per du fingroj por dekstre alklaki."
 
-#~ msgid "Middle-click"
-#~ msgstr "Mezklako"
+#: ui/main.qml:536
+#, kde-format
+msgid "Middle-click"
+msgstr "Mezklako"
 
-#~ msgid "Tap with two fingers to middle-click."
-#~ msgstr "Frapu per du fingroj por mezklaki."
+#: ui/main.qml:537
+#, kde-format
+msgid "Tap with two fingers to middle-click."
+msgstr "Frapu per du fingroj por mezklaki."
 
-#~ msgid "Scrolling:"
-#~ msgstr "Rulumado:"
+#: ui/main.qml:596
+#, kde-format
+msgid "Scrolling:"
+msgstr "Rulumado:"
 
-#~ msgid "Two fingers"
-#~ msgstr "Du fingroj"
+#: ui/main.qml:625
+#, kde-format
+msgid "Two fingers"
+msgstr "Du fingroj"
 
-#~ msgid "Slide with two fingers scrolls."
-#~ msgstr "Gliti kun du fingroj ruliĝas."
+#: ui/main.qml:629
+#, kde-format
+msgid "Slide with two fingers scrolls."
+msgstr "Gliti kun du fingroj ruliĝas."
 
-#~ msgid "Touchpad edges"
-#~ msgstr "Tuŝplat-eĝoj"
+#: ui/main.qml:637
+#, kde-format
+msgid "Touchpad edges"
+msgstr "Tuŝplat-eĝoj"
 
-#~ msgid "Slide on the touchpad edges scrolls."
-#~ msgstr "Glitu sur la randoj de la touchpad ruliĝas."
+#: ui/main.qml:641
+#, kde-format
+msgid "Slide on the touchpad edges scrolls."
+msgstr "Glitu sur la randoj de la touchpad ruliĝas."
 
-#~ msgid "Invert scroll direction (Natural scrolling)"
-#~ msgstr "Inversigi ruldirekton (Natura movo)"
+#: ui/main.qml:651
+#, kde-format
+msgid "Invert scroll direction (Natural scrolling)"
+msgstr "Inversigi ruldirekton (Natura movo)"
 
-#~ msgid "Touchscreen like scrolling."
-#~ msgstr "Tuŝekrano kiel movo."
+#: ui/main.qml:667
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Tuŝekrano kiel movo."
 
-#~ msgid "Disable horizontal scrolling"
-#~ msgstr "Malebligi horizontalan movadon"
+#: ui/main.qml:675 ui/main.qml:692
+#, kde-format
+msgid "Disable horizontal scrolling"
+msgstr "Malebligi horizontalan movadon"
 
-#~ msgid "Scrolling speed:"
-#~ msgstr "Rulumrapido:"
+#: ui/main.qml:700
+#, kde-format
+msgid "Scrolling speed:"
+msgstr "Rulumrapido:"
 
-#~ msgctxt "Slower Scroll"
-#~ msgid "Slower"
-#~ msgstr "Pli malrapide"
+#: ui/main.qml:751
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr "Pli malrapide"
 
-#~ msgctxt "Faster Scroll Speed"
-#~ msgid "Faster"
-#~ msgstr "Pli rapide"
+#: ui/main.qml:758
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr "Pli rapide"
 
-#~ msgid "Right-click:"
-#~ msgstr "Dekstre alklaku:"
+#: ui/main.qml:769
+#, kde-format
+msgid "Right-click:"
+msgstr "Dekstre alklaku:"
 
-#~ msgid "Press bottom-right corner"
-#~ msgstr "Premi malsupran dekstran angulon"
+#: ui/main.qml:803
+#, kde-format
+msgid "Press bottom-right corner"
+msgstr "Premi malsupran dekstran angulon"
 
-#~ msgid ""
-#~ "Software enabled buttons will be added to bottom portion of your touchpad."
-#~ msgstr ""
-#~ "Programaro ebligita butonoj estos aldonitaj al malsupra parto de via "
-#~ "tuŝplato."
+#: ui/main.qml:807
+#, kde-format
+msgid ""
+"Software enabled buttons will be added to bottom portion of your touchpad."
+msgstr ""
+"Programaro ebligita butonoj estos aldonitaj al malsupra parto de via "
+"tuŝplato."
 
-#~ msgid "Press anywhere with two fingers"
-#~ msgstr "Premi ie ajn per du fingroj"
+#: ui/main.qml:815
+#, kde-format
+msgid "Press anywhere with two fingers"
+msgstr "Premi ie ajn per du fingroj"
 
-#~ msgid "Tap with two finger to enable right click."
-#~ msgstr "Frapi per du fingroj por ebligi dekstran klakon."
+#: ui/main.qml:819
+#, kde-format
+msgid "Tap with two finger to enable right click."
+msgstr "Frapi per du fingroj por ebligi dekstran klakon."
 
-#~ msgid "Middle-click: "
-#~ msgstr "Mezklako:"
+#: ui/main.qml:833
+#, kde-format
+msgid "Middle-click: "
+msgstr "Mezklako:"
 
-#~ msgid "Press bottom-middle"
-#~ msgstr "Premi malsupre-meze"
+#: ui/main.qml:862
+#, kde-format
+msgid "Press bottom-middle"
+msgstr "Premi malsupre-meze"
 
-#~ msgid ""
-#~ "Software enabled middle-button will be added to bottom portion of your "
-#~ "touchpad."
-#~ msgstr ""
-#~ "Mezbutono ebligita programaro estos aldonita al la malsupra parto de via "
-#~ "tuŝo."
+#: ui/main.qml:866
+#, kde-format
+msgid ""
+"Software enabled middle-button will be added to bottom portion of your "
+"touchpad."
+msgstr ""
+"Mezbutono ebligita programaro estos aldonita al la malsupra parto de via "
+"tuŝo."
 
-#~ msgid "Press bottom left and bottom right corners simultaneously"
-#~ msgstr ""
-#~ "Premi malsupran maldekstran kaj malsupran dekstran angulojn samtempe"
+#: ui/main.qml:874
+#, kde-format
+msgid "Press bottom left and bottom right corners simultaneously"
+msgstr "Premi malsupran maldekstran kaj malsupran dekstran angulojn samtempe"
 
-#~ msgid "Press anywhere with three fingers"
-#~ msgstr "Premi ie ajn per tri fingroj"
+#: ui/main.qml:887
+#, kde-format
+msgid "Press anywhere with three fingers"
+msgstr "Premi ie ajn per tri fingroj"
 
-#~ msgid "Press anywhere with three fingers."
-#~ msgstr "Premi ie ajn per tri fingroj."
+#: ui/main.qml:893
+#, kde-format
+msgid "Press anywhere with three fingers."
+msgstr "Premi ie ajn per tri fingroj."
