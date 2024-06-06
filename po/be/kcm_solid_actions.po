@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2024-02-29 19:45\n"
+"PO-Revision-Date: 2024-06-03 19:40\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -43,7 +43,7 @@ msgid ""
 "It appears that the action name, command, icon or condition are not valid.\n"
 "Therefore, changes will not be applied."
 msgstr ""
-"Выглядае, што назва дзеяння, загад або значок непрыдатныя, таму змены не "
+"Выглядае, што назва дзеяння, каманда або значок непрыдатныя, таму змены не "
 "будуць ужытыя."
 
 #: ActionEditor.cpp:163
@@ -139,7 +139,7 @@ msgstr "Назва дзеяння"
 #: ActionEditor.ui:271
 #, kde-format
 msgid "Command: "
-msgstr "Загад: "
+msgstr "Каманда: "
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
 #: ActionEditor.ui:283
@@ -152,7 +152,7 @@ msgid ""
 "%d: Path to the device node - Block devices only\n"
 "%i: The identifier of the device"
 msgstr ""
-"Загад, які запускае дзеянне\n"
+"Каманда, якая запускае дзеянне\n"
 "Можа ўключаць любы або ўсе з наступных зменных без уліку рэгістра:\n"
 "\n"
 " %f: пункт мантавання для прылады - толькі назапашвальныя прылады\n"

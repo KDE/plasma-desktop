@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-03-01 07:50\n"
+"PO-Revision-Date: 2024-05-25 23:54\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -302,45 +302,38 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgid "Magnification"
-msgstr "Паказваць апавяшчэнне"
+msgstr "Павелічэнне"
 
 #: ui/ActivationGestures.qml:16
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation:"
-msgstr "Жэсты актывацыі"
+msgstr "Актывацыя:"
 
 #: ui/ActivationGestures.qml:17
 #, kde-format
 msgid "Use gestures for activating sticky keys and slow keys"
-msgstr "Выкарыстаць жэсты для актывацыі заліпаючых і павольных клавіш"
+msgstr ""
 
 #: ui/ActivationGestures.qml:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain time of inactivity"
+#, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
 msgstr ""
-"Адключаць заліпаючыя і запаволеныя клавішы праз некаторы час бяздзейнасці"
 
 #: ui/ActivationGestures.qml:58
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " хв"
-msgstr[1] " хв"
-msgstr[2] " хв"
-msgstr[3] " хв"
+msgstr[0] "%1 хв"
+msgstr[1] "%1 хв"
+msgstr[2] "%1 хв"
+msgstr[3] "%1 хв"
 
 #: ui/ActivationGestures.qml:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "min"
-msgstr " хв"
+msgstr "min"
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -539,10 +532,9 @@ msgid "Mouse Navigation"
 msgstr "Навігацыя мышшу"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Gestures"
-msgstr "Жэсты актывацыі"
+msgstr ""
 
 #: ui/main.qml:52
 #, kde-format
@@ -554,7 +546,7 @@ msgstr "Чытанне з экрана"
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
-msgstr ""
+msgstr "Страсянуць курсор"
 
 #: ui/ModifierKeys.qml:16
 #, kde-format
@@ -669,30 +661,28 @@ msgid "Shake cursor to find it:"
 msgstr ""
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake cursor effect"
 msgid "Enable"
 msgstr "Уключыць"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgctxt "@label Cursor magnification level"
 msgid "Magnification:"
-msgstr "Паказваць апавяшчэнне"
+msgstr ""
 
 #: ui/ShakeCursor.qml:55
 #, kde-format
 msgctxt "@label Normal cursor size"
 msgid "Normal"
-msgstr ""
+msgstr "Звычайны"
 
 #: ui/ShakeCursor.qml:62
 #, kde-format
 msgctxt "@label Large cursor size"
 msgid "Large"
-msgstr ""
+msgstr "Вялікі"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Профіль паскарэння:"

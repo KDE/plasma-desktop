@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-03-01 19:50\n"
+"PO-Revision-Date: 2024-06-03 19:40\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -43,19 +43,12 @@ msgid "Get New Plugins…"
 msgstr "Атрымаць новыя ўбудовы…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
-"Уключыць або адключыць убудовы (выкарыстоўваюцца ў KRunner, сродку запуску "
-"праграм і аглядзе). Пазначце ўбудовы як улюбёныя і ўпарадкуйце іх так, як вы "
-"хочаце іх бачыць."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -105,12 +98,10 @@ msgid "KRunner plugin installation failed"
 msgstr "Не ўдалося ўсталяваць убудову KRunner"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Загад для выканання: install або uninstall."
+msgstr ""
 
 #: plugininstaller/main.cpp:49
 #, kde-format
@@ -144,8 +135,8 @@ msgid ""
 "You are about to install a binary package. You should only install these "
 "from a trusted author/packager."
 msgstr ""
-"Вы збіраецеся ўсталяваць двайковы пакунак. Варта ўсталёўваць пакункі толькі "
-"ад праверанага аўтара."
+"Вы збіраецеся ўсталяваць двайковы пакет. Варта ўсталёўваць пакеты толькі ад "
+"праверанага аўтара."
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
 #: plugininstaller/ScriptConfirmationDialog.h:94
@@ -173,7 +164,7 @@ msgid ""
 "This plugin executes the following command for starting the \"%1\" service:"
 "<nl/>%2"
 msgstr ""
-"Гэтая ўбудова выконвае наступны загад для запуску службы \"%1\":<nl/>%2"
+"Гэтая ўбудова выконвае наступную каманду для запуску службы \"%1\":<nl/>%2"
 
 #: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format
@@ -290,7 +281,7 @@ msgstr "Праглядзець %1"
 #, kde-format
 msgctxt "@info"
 msgid "Could not resolve package name of %1"
-msgstr "Не ўдалося развязаць назву пакунка %1"
+msgstr "Не ўдалося развязаць назву пакета %1"
 
 #: plugininstaller/ZypperRPMJob.cpp:35
 #, kde-kuit-format
