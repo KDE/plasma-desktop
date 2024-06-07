@@ -43,8 +43,10 @@ Item {
                 root.Layout.maximumHeight = Kirigami.Units.iconSizes.huge;
             }
         } else {
-            root.Layout.minimumWidth = Kirigami.Units.iconSizes.huge;
-            root.Layout.minimumHeight = Kirigami.Units.iconSizes.huge;
+            root.Layout.minimumWidth = -1;
+            root.Layout.minimumHeight = -1;
+            root.Layout.maximumWidth = Kirigami.Units.iconSizes.huge;
+            root.Layout.maximumHeight = Kirigami.Units.iconSizes.huge;
         }
     }
 
