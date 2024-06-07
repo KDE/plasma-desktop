@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-06-07 00:40+0000\n"
 "PO-Revision-Date: 2022-09-23 11:13+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -54,68 +54,68 @@ msgstr "Szybkość animacji"
 msgid "Theme:"
 msgstr "Tryb:"
 
-#: ui/main.qml:90
+#: ui/main.qml:77
+#, kde-format
+msgid "Change Wallpaper…"
+msgstr "Zmień tapetę..."
+
+#: ui/main.qml:84
+#, kde-format
+msgid "More Appearance Settings…"
+msgstr "Więcej ustawień wyglądu..."
+
+#: ui/main.qml:116
 #, kde-format
 msgid "Animation speed:"
 msgstr "Szybkość animacji:"
 
-#: ui/main.qml:99
+#: ui/main.qml:125
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Wolne"
 
-#: ui/main.qml:106
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Natychmiastowe"
 
-#: ui/main.qml:121
-#, kde-format
-msgid "Change Wallpaper…"
-msgstr "Zmień tapetę..."
-
-#: ui/main.qml:128
-#, kde-format
-msgid "More Appearance Settings…"
-msgstr "Więcej ustawień wyglądu..."
-
-#: ui/main.qml:142
+#: ui/main.qml:146
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Kliknięcie na plik lub katalog:"
 
-#: ui/main.qml:150
+#: ui/main.qml:154
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Zaznacza je"
 
-#: ui/main.qml:155
+#: ui/main.qml:159
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Otwórz dwukrotnym kliknięciem"
 
-#: ui/main.qml:180
+#: ui/main.qml:184
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Otwiera je"
 
-#: ui/main.qml:185
+#: ui/main.qml:189
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Zaznacz, klikając na znaczniku zaznaczania elementu"
 
-#: ui/main.qml:210
+#: ui/main.qml:214
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "Więcej ustawień zachowania..."
 
-#: ui/main.qml:222
+#: ui/main.qml:226
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Najczęściej używane strony:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-06-07 00:40+0000\n"
 "PO-Revision-Date: 2022-02-12 08:59+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -57,68 +57,68 @@ msgstr "Швидкість анімації"
 msgid "Theme:"
 msgstr "Тема:"
 
-#: ui/main.qml:90
+#: ui/main.qml:77
+#, kde-format
+msgid "Change Wallpaper…"
+msgstr "Змінити зображення тла…"
+
+#: ui/main.qml:84
+#, kde-format
+msgid "More Appearance Settings…"
+msgstr "Додаткові параметри вигляду…"
+
+#: ui/main.qml:116
 #, kde-format
 msgid "Animation speed:"
 msgstr "Швидкість анімації:"
 
-#: ui/main.qml:99
+#: ui/main.qml:125
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Повільна"
 
-#: ui/main.qml:106
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Миттєва"
 
-#: ui/main.qml:121
-#, kde-format
-msgid "Change Wallpaper…"
-msgstr "Змінити зображення тла…"
-
-#: ui/main.qml:128
-#, kde-format
-msgid "More Appearance Settings…"
-msgstr "Додаткові параметри вигляду…"
-
-#: ui/main.qml:142
+#: ui/main.qml:146
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Клацання на файлах або теках:"
 
-#: ui/main.qml:150
+#: ui/main.qml:154
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "позначає їх"
 
-#: ui/main.qml:155
+#: ui/main.qml:159
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Відкривати подвійним клацанням"
 
-#: ui/main.qml:180
+#: ui/main.qml:184
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "відкриває їх"
 
-#: ui/main.qml:185
+#: ui/main.qml:189
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Позначення клацанням на маркері позначення елемента"
 
-#: ui/main.qml:210
+#: ui/main.qml:214
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "Додаткові параметри поведінки…"
 
-#: ui/main.qml:222
+#: ui/main.qml:226
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Найвикористовуваніші сторінки:"

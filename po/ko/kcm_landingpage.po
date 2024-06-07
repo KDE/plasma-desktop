@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-06-07 00:40+0000\n"
 "PO-Revision-Date: 2022-02-20 20:55+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -54,68 +54,68 @@ msgstr "애니메이션 속도"
 msgid "Theme:"
 msgstr "테마:"
 
-#: ui/main.qml:90
+#: ui/main.qml:77
+#, kde-format
+msgid "Change Wallpaper…"
+msgstr "배경 그림 바꾸기…"
+
+#: ui/main.qml:84
+#, kde-format
+msgid "More Appearance Settings…"
+msgstr "더 많은 모양 설정…"
+
+#: ui/main.qml:116
 #, kde-format
 msgid "Animation speed:"
 msgstr "애니메이션 속도:"
 
-#: ui/main.qml:99
+#: ui/main.qml:125
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "느리게"
 
-#: ui/main.qml:106
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "즉시"
 
-#: ui/main.qml:121
-#, kde-format
-msgid "Change Wallpaper…"
-msgstr "배경 그림 바꾸기…"
-
-#: ui/main.qml:128
-#, kde-format
-msgid "More Appearance Settings…"
-msgstr "더 많은 모양 설정…"
-
-#: ui/main.qml:142
+#: ui/main.qml:146
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "파일이나 폴더를 클릭할 때:"
 
-#: ui/main.qml:150
+#: ui/main.qml:154
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "선택"
 
-#: ui/main.qml:155
+#: ui/main.qml:159
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "두 번 클릭해서 열기"
 
-#: ui/main.qml:180
+#: ui/main.qml:184
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "열기"
 
-#: ui/main.qml:185
+#: ui/main.qml:189
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "항목의 선택 마커를 클릭해서 선택"
 
-#: ui/main.qml:210
+#: ui/main.qml:214
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "더 많은 행동 설정…"
 
-#: ui/main.qml:222
+#: ui/main.qml:226
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "자주 사용하는 페이지:"

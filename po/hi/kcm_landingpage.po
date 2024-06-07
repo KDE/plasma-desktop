@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-06-07 00:40+0000\n"
 "PO-Revision-Date: 2022-02-26 14:20+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -54,68 +54,68 @@ msgstr "एनिमेशन गति"
 msgid "Theme:"
 msgstr "प्रसंगः"
 
-#: ui/main.qml:90
+#: ui/main.qml:77
+#, kde-format
+msgid "Change Wallpaper…"
+msgstr "वाॅलपेपर बदलें..."
+
+#: ui/main.qml:84
+#, kde-format
+msgid "More Appearance Settings…"
+msgstr "अधिक दिखावट विन्यास..."
+
+#: ui/main.qml:116
 #, kde-format
 msgid "Animation speed:"
 msgstr "एनिमेशन गति :"
 
-#: ui/main.qml:99
+#: ui/main.qml:125
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "धीमा"
 
-#: ui/main.qml:106
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "त्वरित"
 
-#: ui/main.qml:121
-#, kde-format
-msgid "Change Wallpaper…"
-msgstr "वाॅलपेपर बदलें..."
-
-#: ui/main.qml:128
-#, kde-format
-msgid "More Appearance Settings…"
-msgstr "अधिक दिखावट विन्यास..."
-
-#: ui/main.qml:142
+#: ui/main.qml:146
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "फ़ाइलों या फ़ोल्डरों पर क्लिक करना :"
 
-#: ui/main.qml:150
+#: ui/main.qml:154
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "उन्हें चुनता है"
 
-#: ui/main.qml:155
+#: ui/main.qml:159
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "इसके बजाय डबल-क्लिक करके खोलें"
 
-#: ui/main.qml:180
+#: ui/main.qml:184
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "उन्हें खोलता है"
 
-#: ui/main.qml:185
+#: ui/main.qml:189
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "वस्तु के चयन चिन्ह पर क्लिक करके चयन करें"
 
-#: ui/main.qml:210
+#: ui/main.qml:214
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "अधिक बर्ताव विन्यास..."
 
-#: ui/main.qml:222
+#: ui/main.qml:226
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "सर्वाधिक प्रयुक्त पृष्ठ :"

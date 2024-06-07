@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-06-07 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -54,68 +54,68 @@ msgstr "动效速度"
 msgid "Theme:"
 msgstr "主题："
 
-#: ui/main.qml:90
+#: ui/main.qml:77
+#, kde-format
+msgid "Change Wallpaper…"
+msgstr "更换壁纸…"
+
+#: ui/main.qml:84
+#, kde-format
+msgid "More Appearance Settings…"
+msgstr "更多外观设置…"
+
+#: ui/main.qml:116
 #, kde-format
 msgid "Animation speed:"
 msgstr "动效速度："
 
-#: ui/main.qml:99
+#: ui/main.qml:125
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "缓慢"
 
-#: ui/main.qml:106
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "即时"
 
-#: ui/main.qml:121
-#, kde-format
-msgid "Change Wallpaper…"
-msgstr "更换壁纸…"
-
-#: ui/main.qml:128
-#, kde-format
-msgid "More Appearance Settings…"
-msgstr "更多外观设置…"
-
-#: ui/main.qml:142
+#: ui/main.qml:146
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "单击文件、文件夹时："
 
-#: ui/main.qml:150
+#: ui/main.qml:154
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "选中"
 
-#: ui/main.qml:155
+#: ui/main.qml:159
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "提示：双击可以打开对象"
 
-#: ui/main.qml:180
+#: ui/main.qml:184
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "打开"
 
-#: ui/main.qml:185
+#: ui/main.qml:189
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "提示：单击对象的选择框可以选中"
 
-#: ui/main.qml:210
+#: ui/main.qml:214
 #, kde-format
 msgid "More Behavior Settings…"
 msgstr "更多行为设置…"
 
-#: ui/main.qml:222
+#: ui/main.qml:226
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "最常用页面："
