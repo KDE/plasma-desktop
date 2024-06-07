@@ -104,7 +104,7 @@ QQC2.ItemDelegate {
             visible: false
             Layout.fillWidth: true
             sourceComponent: RowLayout {
-                readonly property var originalIndex : {
+                readonly property var originalIndex: {
                     const concatenatedIndex = kcm.filteredModel.mapToSource(dm.modelIndex(index))
                     return kcm.shortcutsModel.mapToSource(concatenatedIndex)
                 }
@@ -116,10 +116,10 @@ QQC2.ItemDelegate {
                     spacing: Kirigami.Units.smallSpacing
                     Kirigami.Heading {
                         level: 4
-                        text: model.defaultShortcuts &&  model.defaultShortcuts.length !== 0 ?
-                            i18ncp("%1 decides if singular or plural will be used", "Default shortcut",
-                            "Default shortcuts", model.defaultShortcuts.length) :
-                            i18n("No default shortcuts")
+                        text: model.defaultShortcuts && model.defaultShortcuts.length !== 0
+                            ? i18ncp("%1 decides if singular or plural will be used", "Default shortcut",
+                                "Default shortcuts", model.defaultShortcuts.length)
+                            : i18n("No default shortcuts")
                         textFormat: Text.PlainText
                     }
                     Kirigami.Separator {
@@ -190,39 +190,47 @@ QQC2.ItemDelegate {
                         icon.name: "list-add-symbolic"
                         Layout.alignment: Qt.AlignRight
                         onClicked: {
-                            this.visible = false
-                            var newKeySequenceItem = newKeySequenceComponent.createObject(parent)
-                            for (var i = 0; i < newKeySequenceItem.children.length; i++) {
-                                if (newKeySequenceItem.children[i] instanceof KQuickControls.KeySequenceItem) {
-                                    var keySequenceItem = newKeySequenceItem.children[i]
-                                }
-                            }
-                            newKeySequenceItem.finished.connect(() => {
-                                newKeySequenceItem.destroy()
-                                this.visible = true
-                            })
-                            keySequenceItem.startCapturing()
+                            visible = false;
+                            const newKeySequenceItem = newKeySequenceComponent.createObject(parent);
+                            newKeySequenceItem.captureFinished.connect(() => {
+                                newKeySequenceItem.destroy();
+                                visible = true;
+                            });
+                            newKeySequenceItem.startCapturing();
                         }
                     }
                     Component {
                         id: newKeySequenceComponent
                         RowLayout {
-                            signal finished
+                            id: keySequenceComponent
+
+                            readonly property alias keySequenceItem: keySequenceItem
+
+                            function startCapturing(): void {
+                                keySequenceItem.startCapturing();
+                            }
+
+                            signal captureFinished()
+
                             Layout.alignment: Qt.AlignRight
                             spacing: Kirigami.Units.smallSpacing
+
                             KQuickControls.KeySequenceItem {
+                                id: keySequenceItem
+
                                 showClearButton: false
                                 modifierOnlyAllowed: true
                                 multiKeyShortcutsAllowed: model.supportsMultipleKeys
                                 checkForConflictsAgainst: KQuickControls.ShortcutType.None
+
                                 onCaptureFinished: {
                                     kcm.requestKeySequence(this, originalIndex, keySequence)
-                                    parent.finished()
+                                    keySequenceComponent.captureFinished()
                                 }
                             }
                             QQC2.Button {
                                 icon.name: "dialog-cancel"
-                                onClicked: parent.finished()
+                                onClicked: keySequenceComponent.captureFinished()
                                 QQC2.ToolTip {
                                     text: i18n("Cancel capturing of new shortcut")
                                 }
@@ -236,7 +244,7 @@ QQC2.ItemDelegate {
     states: [
         State {
             name: "expanded"
-            when: shortcutsList.selectedIndex === index || shortcutsList.count == 1
+            when: shortcutsList.selectedIndex === index || shortcutsList.count === 1
             PropertyChanges {
                 target: root
                 hoverEnabled: false
