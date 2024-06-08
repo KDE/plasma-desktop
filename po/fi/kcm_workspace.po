@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the kde-workspace package.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lliehu@kolumbus.fi>, 2010, 2011.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 # Author: Artnay
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2023-11-19 20:52+0200\n"
+"PO-Revision-Date: 2024-04-07 11:20+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:24+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -111,7 +111,7 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr "Vierittää napsautuskohtaan"
+msgstr "vierittää napsautuskohtaan"
 
 #: ui/main.qml:205
 #, kde-format
@@ -119,12 +119,12 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr "Vierittää näytöllisen ylös- tai alaspäin"
+msgstr "vierittää ylös- tai alaspäin näytön verran"
 
 #: ui/main.qml:218
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr "Vieritä määräkohtaan keskipainikkeen napsautuksella"
+msgstr "Vieritä keskipainikkeella napsautettuun kohtaan"
 
 #: ui/main.qml:232
 #, kde-format
@@ -138,7 +138,7 @@ msgstr "Keskinapsautus:"
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
-msgstr "Liittää valittu teksti"
+msgstr "liittää valitun tekstin"
 
 #: ui/main.qml:251
 #, kde-format
@@ -225,7 +225,7 @@ msgstr "Animointinopeus"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr "Vierityspalkin napsauttaminen siirtää näytön verran annettuun suuntaan"
+msgstr "Vierityspalkin napsautus siirtää näytön verran annettuun suuntaan"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
