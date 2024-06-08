@@ -13,6 +13,10 @@
       <label>Animation speed</label>
       <default>1.0</default>
     </entry>
+    <entry name="smoothScroll" key="SmoothScroll" type="Bool">
+      <label>Smooth scrolling</label>
+      <default>true</default>
+    </entry>
     <entry name="scrollbarLeftClickNavigatesByPage" key="ScrollbarLeftClickNavigatesByPage" type="Bool">
       <label>Left-click in scrollbar track moves scrollbar by one page</label>
       <default>false</default>

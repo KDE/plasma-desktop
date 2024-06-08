@@ -12,6 +12,7 @@
 
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDBusMetaType>
 #include <QDBusPendingCall>
 
 #include "workspaceoptions_kdeglobalssettings.h"
@@ -50,6 +51,7 @@ WorkspaceOptionsKwinSettings *KCMWorkspaceOptions::kwinSettings() const
 void KCMWorkspaceOptions::save()
 {
     const bool primarySelectionSaved = m_data->workspaceOptionsKwinSettings()->findItem(QStringLiteral("primarySelection"))->isSaveNeeded();
+    const bool smoothScrollSaved = m_data->workspaceOptionsGlobalsSettings()->findItem(QStringLiteral("smoothScroll"))->isSaveNeeded();
 
     KQuickManagedConfigModule::save();
 
@@ -73,6 +75,15 @@ void KCMWorkspaceOptions::save()
 
     if (primarySelectionSaved) {
         Q_EMIT primarySelectionOptionSaved();
+    }
+
+    if (smoothScrollSaved) {
+        QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/SmoothScroll"),
+                                                          QStringLiteral("org.kde.SmoothScroll"),
+                                                          QStringLiteral("notifyChange"));
+        bool enabled = m_data->workspaceOptionsGlobalsSettings()->smoothScroll();
+        message.setArguments({QVariant(enabled)});
+        QDBusConnection::sessionBus().send(message);
     }
 }
 

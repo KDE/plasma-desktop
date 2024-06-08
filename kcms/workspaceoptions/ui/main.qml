@@ -115,6 +115,29 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: false
         }
 
+        RowLayout {
+            Kirigami.FormData.label: i18nc("@label", "Scrolling:")
+            spacing: 0
+
+            QQC2.CheckBox {
+                text: i18nc("@option:check", "Prefer smooth scrolling")
+                checked: kcm.globalsSettings.smoothScroll
+                onToggled: kcm.globalsSettings.smoothScroll = checked
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.globalsSettings
+                    settingName: "smoothScroll"
+                }
+            }
+            Kirigami.ContextualHelpButton {
+                toolTipText: i18nc("@info:tooltip", "This setting enables or disables animated transitions when scrolling with a mouse wheel or the keyboard. Some applications may not honor this setting because they either do not support smooth scrolling, or have their own setting for enabling and disabling it.")
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
         // Click behavior settings
 
         QQC2.ButtonGroup { id: singleClickGroup }
