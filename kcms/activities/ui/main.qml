@@ -86,6 +86,8 @@ KCM.ScrollViewKCM {
         subtitle: i18nc("%1 is an activity name",
                          "Do you want to delete activity '%1'?", activityName)
 
+        dialogType: Kirigami.PromptDialog.Warning
+
         standardButtons: Kirigami.Dialog.Cancel
         customFooterActions: [
             Kirigami.Action {

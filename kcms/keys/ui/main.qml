@@ -386,6 +386,7 @@ KCM.AbstractKCM {
         width: Math.max(root.width / 2, Kirigami.Units.gridUnit * 24)
 
         title: editing ? i18n("Edit Command") : i18n("Add Command")
+        iconName: 'folder-script-symbolic'
 
         onVisibleChanged: {
             if (visible) {
