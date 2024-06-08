@@ -421,6 +421,180 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: false
         }
 
+        // Scroll Speed aka scroll Factor
+        GridLayout {
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
+            Kirigami.FormData.buddyFor: scrollFactor
+            Layout.fillWidth: true
+            visible: touchpad.supportsScrollFactor
+
+            columns: 3
+
+            QQC2.Slider {
+                id: scrollFactor
+                Layout.fillWidth: true
+
+                from: 0
+                to: 14
+                stepSize: 1
+
+                readonly property list<real> values: [
+                    0.1,
+                    0.3,
+                    0.5,
+                    0.75,
+                    1, // default
+                    1.5,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    9,
+                    12,
+                    15,
+                    20
+                ]
+
+                Layout.columnSpan: 3
+
+                function load() {
+                    let index = values.indexOf(touchpad.scrollFactor)
+                    if (index === -1) {
+                        index = values.indexOf(1);
+                    }
+                    value = index
+                }
+
+                onMoved: {
+                    touchpad.scrollFactor = values[value]
+                    root.changeSignal()
+                }
+            }
+
+            //row 2
+            QQC2.Label {
+                text: i18ndc("kcm_touchpad", "Slower Scroll", "Slower")
+                textFormat: Text.PlainText
+            }
+            Item {
+                Layout.fillWidth: true
+            }
+            QQC2.Label {
+                text: i18ndc("kcm_touchpad", "Faster Scroll Speed", "Faster")
+                textFormat: Text.PlainText
+            }
+        }
+
+        // Scrolling
+        ColumnLayout {
+            id: scrollMethod
+            Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling:")
+            Kirigami.FormData.buddyFor: scrollMethodTwoFingers
+
+            spacing: Kirigami.Units.smallSpacing
+
+            function load() {
+                scrollMethodTwoFingers.enabled = touchpad.supportsScrollTwoFinger
+                scrollMethodTouchpadEdges.enabled = touchpad.supportsScrollEdge
+
+                if(scrollMethodTouchpadEdges.enabled && touchpad.scrollEdge) {
+                    scrollMethodTouchpadEdges.checked = formLayout.enabled
+                } else {
+                    scrollMethodTwoFingers.checked = formLayout.enabled
+                }
+            }
+
+            function syncCurrent() {
+                if (enabled && !root.loading) {
+                    touchpad.scrollTwoFinger = scrollMethodTwoFingers.checked
+                    touchpad.scrollEdge = scrollMethodTouchpadEdges.checked
+                    root.changeSignal()
+                }
+                loading = true
+                naturalScroll.load()
+                loading = false
+            }
+
+            QQC2.RadioButton {
+                id: scrollMethodTwoFingers
+                text: i18nd("kcm_touchpad", "Two fingers")
+
+                hoverEnabled: true
+                QQC2.ToolTip {
+                    text: i18nd("kcm_touchpad", "Slide with two fingers scrolls.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+            }
+
+            QQC2.RadioButton {
+                id: scrollMethodTouchpadEdges
+                text: i18nd("kcm_touchpad", "Touchpad edges")
+
+                hoverEnabled: true
+                QQC2.ToolTip {
+                    text: i18nd("kcm_touchpad", "Slide on the touchpad edges scrolls.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+                onCheckedChanged: scrollMethod.syncCurrent()
+            }
+        }
+
+        QQC2.CheckBox {
+            id: naturalScroll
+            text: i18nd("kcm_touchpad", "Invert scroll direction (Natural scrolling)")
+
+            function load() {
+                enabled = touchpad.supportsNaturalScroll
+                checked = enabled && touchpad.naturalScroll
+            }
+
+            onCheckedChanged: {
+                if (enabled && !root.loading) {
+                    touchpad.naturalScroll = checked
+                    root.changeSignal()
+                }
+            }
+
+            hoverEnabled: true
+            QQC2.ToolTip {
+                text: i18nd("kcm_touchpad", "Touchscreen like scrolling.")
+                visible: parent.hovered
+                delay: 1000
+            }
+        }
+
+        QQC2.CheckBox {
+            id: disableHorizontalScrolling
+            text: i18nd("kcm_touchpad", "Disable horizontal scrolling")
+
+            function load() {
+                visible = touchpad.supportsHorizontalScrolling
+                enabled = touchpad.supportsHorizontalScrolling
+                checked = enabled && !touchpad.horizontalScrolling
+            }
+
+            onCheckedChanged: {
+                if (enabled && !root.loading) {
+                    touchpad.horizontalScrolling = !checked
+                    root.changeSignal()
+                }
+            }
+
+            hoverEnabled: true
+            QQC2.ToolTip {
+                text: i18nd("kcm_touchpad", "Disable horizontal scrolling")
+                visible: parent.hovered
+                delay: 1000
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
         // Tapping
         QQC2.CheckBox {
             id: tapToClick
@@ -590,180 +764,6 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: false
         }
 
-        // Scrolling
-        ColumnLayout {
-            id: scrollMethod
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling:")
-            Kirigami.FormData.buddyFor: scrollMethodTwoFingers
-
-            spacing: Kirigami.Units.smallSpacing
-
-            function load() {
-                scrollMethodTwoFingers.enabled = touchpad.supportsScrollTwoFinger
-                scrollMethodTouchpadEdges.enabled = touchpad.supportsScrollEdge
-
-                if(scrollMethodTouchpadEdges.enabled && touchpad.scrollEdge) {
-                    scrollMethodTouchpadEdges.checked = formLayout.enabled
-                } else {
-                    scrollMethodTwoFingers.checked = formLayout.enabled
-                }
-            }
-
-            function syncCurrent() {
-                if (enabled && !root.loading) {
-                    touchpad.scrollTwoFinger = scrollMethodTwoFingers.checked
-                    touchpad.scrollEdge = scrollMethodTouchpadEdges.checked
-                    root.changeSignal()
-                }
-                loading = true
-                naturalScroll.load()
-                loading = false
-            }
-
-            QQC2.RadioButton {
-                id: scrollMethodTwoFingers
-                text: i18nd("kcm_touchpad", "Two fingers")
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Slide with two fingers scrolls.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
-            }
-
-            QQC2.RadioButton {
-                id: scrollMethodTouchpadEdges
-                text: i18nd("kcm_touchpad", "Touchpad edges")
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Slide on the touchpad edges scrolls.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
-                onCheckedChanged: scrollMethod.syncCurrent()
-            }
-        }
-
-        QQC2.CheckBox {
-            id: naturalScroll
-            text: i18nd("kcm_touchpad", "Invert scroll direction (Natural scrolling)")
-
-            function load() {
-                enabled = touchpad.supportsNaturalScroll
-                checked = enabled && touchpad.naturalScroll
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.naturalScroll = checked
-                    root.changeSignal()
-                }
-            }
-
-            hoverEnabled: true
-            QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Touchscreen like scrolling.")
-                visible: parent.hovered
-                delay: 1000
-            }
-        }
-
-        QQC2.CheckBox {
-            id: disableHorizontalScrolling
-            text: i18nd("kcm_touchpad", "Disable horizontal scrolling")
-
-            function load() {
-                visible = touchpad.supportsHorizontalScrolling
-                enabled = touchpad.supportsHorizontalScrolling
-                checked = enabled && !touchpad.horizontalScrolling
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.horizontalScrolling = !checked
-                    root.changeSignal()
-                }
-            }
-
-            hoverEnabled: true
-            QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Disable horizontal scrolling")
-                visible: parent.hovered
-                delay: 1000
-            }
-        }
-
-        // Scroll Speed aka scroll Factor
-        GridLayout {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
-            Kirigami.FormData.buddyFor: scrollFactor
-            Layout.fillWidth: true
-            visible: touchpad.supportsScrollFactor
-
-            columns: 3
-
-            QQC2.Slider {
-                id: scrollFactor
-                Layout.fillWidth: true
-
-                from: 0
-                to: 14
-                stepSize: 1
-
-                readonly property list<real> values: [
-                    0.1,
-                    0.3,
-                    0.5,
-                    0.75,
-                    1, // default
-                    1.5,
-                    2,
-                    3,
-                    4,
-                    5,
-                    7,
-                    9,
-                    12,
-                    15,
-                    20
-                ]
-
-                Layout.columnSpan: 3
-
-                function load() {
-                    let index = values.indexOf(touchpad.scrollFactor)
-                    if (index === -1) {
-                        index = values.indexOf(1);
-                    }
-                    value = index
-                }
-
-                onMoved: {
-                    touchpad.scrollFactor = values[value]
-                    root.changeSignal()
-                }
-            }
-
-            //row 2
-            QQC2.Label {
-                text: i18ndc("kcm_touchpad", "Slower Scroll", "Slower")
-                textFormat: Text.PlainText
-            }
-            Item {
-                Layout.fillWidth: true
-            }
-            QQC2.Label {
-                text: i18ndc("kcm_touchpad", "Faster Scroll Speed", "Faster")
-                textFormat: Text.PlainText
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: false
-        }
-
         ColumnLayout {
             id: rightClickMethod
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Right-click:")
@@ -822,10 +822,6 @@ KCM.SimpleKCM {
                 }
                 onCheckedChanged: rightClickMethod.syncCurrent()
             }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: false
         }
 
         ColumnLayout {

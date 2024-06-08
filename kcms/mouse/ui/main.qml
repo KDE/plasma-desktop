@@ -270,26 +270,6 @@ KCMUtils.SimpleKCM {
             Kirigami.FormData.isSection: false
         }
 
-        // Scrolling
-        QQC2.CheckBox {
-            id: naturalScroll
-            Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
-            text: i18nd("kcmmouse", "Invert scroll direction")
-            enabled: root.device?.supportsNaturalScroll ?? false
-            checked: enabled && (root.device?.naturalScroll ?? false)
-
-            onToggled: {
-                if (root.device) {
-                    root.device.naturalScroll = checked
-                    root.KCMUtils.ConfigModule.checkForChanges();
-                }
-            }
-
-            QQC2.ToolTip.delay: 1000
-            QQC2.ToolTip.visible: hovered
-            QQC2.ToolTip.text: i18nd("kcmmouse", "Touchscreen like scrolling.")
-        }
-
         // Scroll Speed aka scroll Factor
         GridLayout {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
@@ -346,14 +326,35 @@ KCMUtils.SimpleKCM {
                 text: i18ndc("kcmmouse", "Slower Scroll", "Slower")
                 textFormat: Text.PlainText
             }
+
             Item {
                 Layout.fillWidth: true
             }
+
             QQC2.Label {
                 text: i18ndc("kcmmouse", "Faster Scroll Speed", "Faster")
                 textFormat: Text.PlainText
             }
+        }
 
+        // Scrolling
+        QQC2.CheckBox {
+            id: naturalScroll
+            Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
+            text: i18nd("kcmmouse", "Invert scroll direction")
+            enabled: root.device?.supportsNaturalScroll ?? false
+            checked: enabled && (root.device?.naturalScroll ?? false)
+
+            onToggled: {
+                if (root.device) {
+                    root.device.naturalScroll = checked
+                    root.KCMUtils.ConfigModule.checkForChanges();
+                }
+            }
+
+            QQC2.ToolTip.delay: 1000
+            QQC2.ToolTip.visible: hovered
+            QQC2.ToolTip.text: i18nd("kcmmouse", "Touchscreen like scrolling.")
         }
     }
 }
