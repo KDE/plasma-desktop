@@ -6,8 +6,6 @@
 
 import QtQuick 2.15
 import Qt5Compat.GraphicalEffects
-// Deliberately imported after QtQuick to avoid missing restoreMode property in Binding. Fix in Qt 6.
-import QtQml 2.15
 
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kwindowsystem 1.0
