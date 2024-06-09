@@ -76,9 +76,9 @@ FocusScope {
 
                 model: globalFavorites
 
-                states: [ State {
+                states: State {
                     name: "top"
-                    when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
+                    when: Plasmoid.location === PlasmaCore.Types.TopEdge
 
                     AnchorChanges {
                         target: favoriteApps
@@ -91,7 +91,7 @@ FocusScope {
                         anchors.topMargin: undefined
                         anchors.bottomMargin: sideBar.margins.bottom
                     }
-                }]
+                }
 
                 Binding {
                     target: globalFavorites
@@ -117,9 +117,9 @@ FocusScope {
                 svg: lineSvg
                 elementId: "horizontal-line"
 
-                states: [ State {
+                states: State {
                     name: "top"
-                    when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
+                    when: Plasmoid.location === PlasmaCore.Types.TopEdge
 
                     AnchorChanges {
                         target: sidebarSeparator
@@ -133,7 +133,7 @@ FocusScope {
                         anchors.topMargin: (2 * Kirigami.Units.smallSpacing)
                         anchors.bottomMargin: undefined
                     }
-                }]
+                }
             }
 
             SideBarSection {
@@ -144,9 +144,9 @@ FocusScope {
 
                 model: systemFavorites
 
-                states: [ State {
+                states: State {
                     name: "top"
-                    when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
+                    when: Plasmoid.location === PlasmaCore.Types.TopEdge
 
                     AnchorChanges {
                         target: favoriteSystemActions
@@ -159,7 +159,7 @@ FocusScope {
                         anchors.topMargin: sideBar.margins.top
                         anchors.bottomMargin: undefined
                     }
-                }]
+                }
             }
         }
 
@@ -181,15 +181,15 @@ FocusScope {
                 searchField.focus = true;
             }
 
-            states: [ State {
+            states: State {
                 name: "top"
-                when: (Plasmoid.location === PlasmaCore.Types.TopEdge)
+                when: Plasmoid.location === PlasmaCore.Types.TopEdge
 
                 AnchorChanges {
                     target: rootList
                     anchors.top: parent.top
                 }
-            }]
+            }
 
             Component.onCompleted: {
                 rootList.exited.connect(root.reset);
@@ -325,43 +325,45 @@ FocusScope {
             }
         }
 
-        states: [ State {
-            name: "top"
-            when: Plasmoid.location === PlasmaCore.Types.TopEdge
+        states: [
+            State {
+                name: "top"
+                when: Plasmoid.location === PlasmaCore.Types.TopEdge
 
-            AnchorChanges {
-                target: searchField
-                anchors.top: undefined
-                anchors.bottom: mainRow.bottom
-                anchors.left: parent.left
-                anchors.right: undefined
-            }
+                AnchorChanges {
+                    target: searchField
+                    anchors.top: undefined
+                    anchors.bottom: mainRow.bottom
+                    anchors.left: parent.left
+                    anchors.right: undefined
+                }
 
-            PropertyChanges {
-                target: searchField
-                anchors.leftMargin: sideBar.width + mainRow.spacing + Kirigami.Units.smallSpacing
-                anchors.rightMargin: undefined
-            }
-        },
-        State {
-            name: "right"
-            when: (Plasmoid.location === PlasmaCore.Types.RightEdge && Qt.application.layoutDirection === Qt.LeftToRight)
-                || (Plasmoid.location === PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection === Qt.RightToLeft)
+                PropertyChanges {
+                    target: searchField
+                    anchors.leftMargin: sideBar.width + mainRow.spacing + Kirigami.Units.smallSpacing
+                    anchors.rightMargin: undefined
+                }
+            },
+            State {
+                name: "right"
+                when: (Plasmoid.location === PlasmaCore.Types.RightEdge && Qt.application.layoutDirection === Qt.LeftToRight)
+                    || (Plasmoid.location === PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection === Qt.RightToLeft)
 
-            AnchorChanges {
-                target: searchField
-                anchors.top: undefined
-                anchors.bottom: mainRow.bottom
-                anchors.left: undefined
-                anchors.right: parent.right
-            }
+                AnchorChanges {
+                    target: searchField
+                    anchors.top: undefined
+                    anchors.bottom: mainRow.bottom
+                    anchors.left: undefined
+                    anchors.right: parent.right
+                }
 
-            PropertyChanges {
-                target: searchField
-                anchors.leftMargin: undefined
-                anchors.rightMargin: sideBar.width + mainRow.spacing + Kirigami.Units.smallSpacing
+                PropertyChanges {
+                    target: searchField
+                    anchors.leftMargin: undefined
+                    anchors.rightMargin: sideBar.width + mainRow.spacing + Kirigami.Units.smallSpacing
+                }
             }
-        }]
+        ]
 
         Keys.onPressed: event => {
             if (event.key === Qt.Key_Up) {
