@@ -93,7 +93,7 @@ SimpleKCM {
 
         QQC2.ComboBox {
             id: outputsCombo
-            Kirigami.FormData.label: i18nd("kcm_tablet", "Target display:")
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Map to screen:")
             model: OutputsModel {
                 id: outputsModel
             }
@@ -141,7 +141,7 @@ SimpleKCM {
         QQC2.ComboBox {
             id: outputAreaCombo
             Layout.fillWidth: true
-            Kirigami.FormData.label: i18nd("kcm_tablet", "Area:")
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Mapped Area:")
             model: OutputsFittingModel {}
             onActivated: {
                 outputAreaView.changed = true
