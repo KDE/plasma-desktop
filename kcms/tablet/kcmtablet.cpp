@@ -29,7 +29,7 @@ public:
             appendRow(item);
         };
 
-        addOrientation(i18n("Primary (default)"), Qt::PrimaryOrientation);
+        addOrientation(i18n("Default"), Qt::PrimaryOrientation);
         addOrientation(i18n("Portrait"), Qt::PortraitOrientation);
         addOrientation(i18n("Landscape"), Qt::LandscapeOrientation);
         addOrientation(i18n("Inverted Portrait"), Qt::InvertedPortraitOrientation);
