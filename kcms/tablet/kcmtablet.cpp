@@ -83,7 +83,7 @@ public:
         clear();
 
         auto screens = qGuiApp->screens();
-        auto it = new QStandardItem(i18n("Follow the active screen"));
+        auto it = new QStandardItem(i18n("Follow the Current Screen"));
         it->setData(screens[0]->physicalSize(), Qt::UserRole + 1); // we use the first display to give an idea
         it->setData(screens[0]->size(), Qt::UserRole + 2);
         appendRow(it);
