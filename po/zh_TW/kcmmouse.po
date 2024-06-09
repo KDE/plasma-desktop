@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-06-02 17:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -208,37 +208,37 @@ msgstr "標準"
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "指標移動距離取決於滑鼠的移動速度。"
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Scrolling:"
-msgstr "捲動："
-
-#: ui/main.qml:277
-#, kde-format
-msgid "Invert scroll direction"
-msgstr "反轉捲動方向"
-
-#: ui/main.qml:290
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "像觸控螢幕的捲動。"
-
-#: ui/main.qml:295
+#: ui/main.qml:275
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "捲動速度："
 
-#: ui/main.qml:346
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "較慢"
 
-#: ui/main.qml:353
+#: ui/main.qml:335
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "較快"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "Scrolling:"
+msgstr "捲動："
+
+#: ui/main.qml:344
+#, kde-format
+msgid "Invert scroll direction"
+msgstr "反轉捲動方向"
+
+#: ui/main.qml:357
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "像觸控螢幕的捲動。"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

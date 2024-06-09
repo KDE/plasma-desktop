@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-05-31 18:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -216,37 +216,37 @@ msgstr "قياسي"
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "تعتمد مسافة انتقال المؤشر على سرعة حركة الفأرة."
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Scrolling:"
-msgstr "التمرير:"
-
-#: ui/main.qml:277
-#, kde-format
-msgid "Invert scroll direction"
-msgstr "اعكس اتّجاه التّمرير"
-
-#: ui/main.qml:290
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "تمرير مثل الشاشة العاملة باللمس."
-
-#: ui/main.qml:295
+#: ui/main.qml:275
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "سرعة المؤشر:"
 
-#: ui/main.qml:346
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "أبطأ"
 
-#: ui/main.qml:353
+#: ui/main.qml:335
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "أسرع"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "Scrolling:"
+msgstr "التمرير:"
+
+#: ui/main.qml:344
+#, kde-format
+msgid "Invert scroll direction"
+msgstr "اعكس اتّجاه التّمرير"
+
+#: ui/main.qml:357
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "تمرير مثل الشاشة العاملة باللمس."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

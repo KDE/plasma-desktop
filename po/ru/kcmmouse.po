@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2023-12-17 22:18+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -233,37 +233,37 @@ msgstr "Обычное"
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "Перемещение курсора зависит от скорости движения мыши."
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Scrolling:"
-msgstr "Прокрутка:"
-
-#: ui/main.qml:277
-#, kde-format
-msgid "Invert scroll direction"
-msgstr "Изменить направление прокрутки"
-
-#: ui/main.qml:290
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Прокрутка как на сенсорном экране или в Mac OS X."
-
-#: ui/main.qml:295
+#: ui/main.qml:275
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Скорость прокрутки:"
 
-#: ui/main.qml:346
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Медленнее"
 
-#: ui/main.qml:353
+#: ui/main.qml:335
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Быстрее"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "Scrolling:"
+msgstr "Прокрутка:"
+
+#: ui/main.qml:344
+#, kde-format
+msgid "Invert scroll direction"
+msgstr "Изменить направление прокрутки"
+
+#: ui/main.qml:357
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Прокрутка как на сенсорном экране или в Mac OS X."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

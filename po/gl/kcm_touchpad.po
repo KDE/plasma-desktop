@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-03-23 21:00+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -280,7 +280,7 @@ msgstr "Intercambiar os botóns esquerdo e dereito."
 msgid "Press left and right buttons for middle click"
 msgstr "Prema os botóns esquerdo e dereito para facer un clic central"
 
-#: ui/main.qml:230 ui/main.qml:878
+#: ui/main.qml:230 ui/main.qml:874
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -329,53 +329,110 @@ msgstr ""
 "A distancia de movemento do cursor depende da velocidade de movemento do "
 "dedo."
 
-#: ui/main.qml:427
+#: ui/main.qml:426
+#, kde-format
+msgid "Scrolling speed:"
+msgstr "Velocidade de desprazamento:"
+
+#: ui/main.qml:477
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr "Máis amodo"
+
+#: ui/main.qml:484
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr "Veloz"
+
+#: ui/main.qml:492
+#, kde-format
+msgid "Scrolling:"
+msgstr "Desprazamento:"
+
+#: ui/main.qml:521
+#, kde-format
+msgid "Two fingers"
+msgstr "Dous dedos"
+
+#: ui/main.qml:525
+#, kde-format
+msgid "Slide with two fingers scrolls."
+msgstr "Arrastrar con dous dedos despraza."
+
+#: ui/main.qml:533
+#, kde-format
+msgid "Touchpad edges"
+msgstr "Bordos da área táctil"
+
+#: ui/main.qml:537
+#, kde-format
+msgid "Slide on the touchpad edges scrolls."
+msgstr "Arrastrar nos bordos da área táctil despraza."
+
+#: ui/main.qml:547
+#, kde-format
+msgid "Invert scroll direction (Natural scrolling)"
+msgstr "Inverter a dirección de desprazamento (desprazamento natural)"
+
+#: ui/main.qml:563
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Desprazamento como o dunha pantalla táctil."
+
+#: ui/main.qml:571 ui/main.qml:588
+#, kde-format
+msgid "Disable horizontal scrolling"
+msgstr "Desactivar o desprazamento horizontal"
+
+#: ui/main.qml:601
 #, kde-format
 msgid "Tapping:"
 msgstr "Toques:"
 
-#: ui/main.qml:428
+#: ui/main.qml:602
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Tocar para premer"
 
-#: ui/main.qml:432
+#: ui/main.qml:606
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "Un toque é un clic do botón esquerdo."
 
-#: ui/main.qml:461
+#: ui/main.qml:635
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Tocar e arrastrar"
 
-#: ui/main.qml:465
+#: ui/main.qml:639
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr ""
 "Arrastrando pola área táctil directamente despois de arrastres de toque."
 
-#: ui/main.qml:492
+#: ui/main.qml:666
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Bloqueo de tocar e arrastrar"
 
-#: ui/main.qml:496
+#: ui/main.qml:670
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "O arrastre continúa tras levantar brevemente o dedo."
 
-#: ui/main.qml:516
+#: ui/main.qml:690
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Toque con dous dedos:"
 
-#: ui/main.qml:527
+#: ui/main.qml:701
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Clic dereito (toque con tres dedos para clic central)"
 
-#: ui/main.qml:528
+#: ui/main.qml:702
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -383,12 +440,12 @@ msgstr ""
 "Tocar con dous dedos para facer clic dereito, tocar con tres dedos para "
 "facer clic central."
 
-#: ui/main.qml:530
+#: ui/main.qml:704
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Clic central (toque con tres dedos para clic dereito)"
 
-#: ui/main.qml:531
+#: ui/main.qml:705
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -396,82 +453,25 @@ msgstr ""
 "Tocar con dous dedos para facer clic central, tocar con tres dedos para "
 "facer clic dereito."
 
-#: ui/main.qml:533
+#: ui/main.qml:707
 #, kde-format
 msgid "Right-click"
 msgstr "Clic dereito"
 
-#: ui/main.qml:534
+#: ui/main.qml:708
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Tocar con dous dedos para facer clic dereito."
 
-#: ui/main.qml:536
+#: ui/main.qml:710
 #, kde-format
 msgid "Middle-click"
 msgstr "Clic central"
 
-#: ui/main.qml:537
+#: ui/main.qml:711
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Tocar con dous dedos para facer clic central."
-
-#: ui/main.qml:596
-#, kde-format
-msgid "Scrolling:"
-msgstr "Desprazamento:"
-
-#: ui/main.qml:625
-#, kde-format
-msgid "Two fingers"
-msgstr "Dous dedos"
-
-#: ui/main.qml:629
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "Arrastrar con dous dedos despraza."
-
-#: ui/main.qml:637
-#, kde-format
-msgid "Touchpad edges"
-msgstr "Bordos da área táctil"
-
-#: ui/main.qml:641
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "Arrastrar nos bordos da área táctil despraza."
-
-#: ui/main.qml:651
-#, kde-format
-msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Inverter a dirección de desprazamento (desprazamento natural)"
-
-#: ui/main.qml:667
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Desprazamento como o dunha pantalla táctil."
-
-#: ui/main.qml:675 ui/main.qml:692
-#, kde-format
-msgid "Disable horizontal scrolling"
-msgstr "Desactivar o desprazamento horizontal"
-
-#: ui/main.qml:700
-#, kde-format
-msgid "Scrolling speed:"
-msgstr "Velocidade de desprazamento:"
-
-#: ui/main.qml:751
-#, kde-format
-msgctxt "Slower Scroll"
-msgid "Slower"
-msgstr "Máis amodo"
-
-#: ui/main.qml:758
-#, kde-format
-msgctxt "Faster Scroll Speed"
-msgid "Faster"
-msgstr "Veloz"
 
 #: ui/main.qml:769
 #, kde-format
@@ -500,17 +500,17 @@ msgstr "Prema en calquera lugar con dous dedos"
 msgid "Tap with two finger to enable right click."
 msgstr "Tocar con dous dedos para activar o clic dereito."
 
-#: ui/main.qml:833
+#: ui/main.qml:829
 #, kde-format
 msgid "Middle-click: "
 msgstr "Clic central: "
 
-#: ui/main.qml:862
+#: ui/main.qml:858
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Premer o inferior medio"
 
-#: ui/main.qml:866
+#: ui/main.qml:862
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
@@ -519,17 +519,17 @@ msgstr ""
 "O botón central activado por software engadirase á parte inferior da zona "
 "táctil."
 
-#: ui/main.qml:874
+#: ui/main.qml:870
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Prema as esquinas inferior esquerda e inferior dereita simultaneamente"
 
-#: ui/main.qml:887
+#: ui/main.qml:883
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Prema en calquera lugar con tres dedos"
 
-#: ui/main.qml:893
+#: ui/main.qml:889
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Prema en calquera lugar con tres dedos."

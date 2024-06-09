@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-03-24 23:26+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -220,37 +220,37 @@ msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 "Kurtsore-ibilbidearen distantzia saguaren higidura abiaduraren araberakoa da."
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Scrolling:"
-msgstr "Kiribiltzea:"
-
-#: ui/main.qml:277
-#, kde-format
-msgid "Invert scroll direction"
-msgstr "Alderantzizko kiribiltze-noranzkoa"
-
-#: ui/main.qml:290
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Ukimen-pantailakoa bezalako kiribiltzea."
-
-#: ui/main.qml:295
+#: ui/main.qml:275
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Kiribiltze abiadura:"
 
-#: ui/main.qml:346
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mantsoago"
 
-#: ui/main.qml:353
+#: ui/main.qml:335
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Bizkorrago"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "Scrolling:"
+msgstr "Kiribiltzea:"
+
+#: ui/main.qml:344
+#, kde-format
+msgid "Invert scroll direction"
+msgstr "Alderantzizko kiribiltze-noranzkoa"
+
+#: ui/main.qml:357
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Ukimen-pantailakoa bezalako kiribiltzea."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

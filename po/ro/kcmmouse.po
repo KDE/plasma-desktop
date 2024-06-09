@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
-"PO-Revision-Date: 2024-01-07 18:30+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"PO-Revision-Date: 2024-06-08 17:06+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -122,12 +122,10 @@ msgid "Cancel"
 msgstr "Renunță"
 
 #: ui/bindings.qml:124
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Press a mouse button "
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
-msgstr "Apăsați un buton al mausului "
+msgstr "Apăsați un buton al mausului"
 
 #: ui/bindings.qml:125
 #, kde-format
@@ -221,37 +219,37 @@ msgstr "Standard"
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "Distanța traversată de cursor depinde de viteza de mișcare a mausului."
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Scrolling:"
-msgstr "Derulare:"
-
-#: ui/main.qml:277
-#, kde-format
-msgid "Invert scroll direction"
-msgstr "Inversează direcția derulării"
-
-#: ui/main.qml:290
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Derulare ca pe ecran tactil."
-
-#: ui/main.qml:295
+#: ui/main.qml:275
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Viteză de derulare:"
 
-#: ui/main.qml:346
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mai lentă"
 
-#: ui/main.qml:353
+#: ui/main.qml:335
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Mai rapidă"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "Scrolling:"
+msgstr "Derulare:"
+
+#: ui/main.qml:344
+#, kde-format
+msgid "Invert scroll direction"
+msgstr "Inversează direcția derulării"
+
+#: ui/main.qml:357
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Derulare ca pe ecran tactil."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

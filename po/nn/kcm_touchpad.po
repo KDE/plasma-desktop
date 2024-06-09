@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-03-09 18:55+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -230,60 +230,60 @@ msgstr "Øvre venstre hjørne"
 #: ui/main.qml:99
 #, kde-format
 msgid "Connect an external touchpad"
-msgstr ""
+msgstr "Kopla til ekstern styreplate"
 
 #: ui/main.qml:113
 #, kde-format
 msgid "Device:"
-msgstr ""
+msgstr "Eining:"
 
 #: ui/main.qml:139
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Generelt:"
 
 #: ui/main.qml:140
 #, kde-format
 msgid "Device enabled"
-msgstr ""
+msgstr "Eining tilgjengeleg"
 
 #: ui/main.qml:144
 #, kde-format
 msgid "Accept input through this device."
-msgstr ""
+msgstr "Ta imot inndata frå eininga."
 
 #: ui/main.qml:168
 #, kde-format
 msgid "Disable while typing"
-msgstr ""
+msgstr "Slå av styreplata under tasting"
 
 #: ui/main.qml:172
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr ""
+msgstr "Slå av styreplata under tasting, for å unngå utilsikta peikarrørsler."
 
 #: ui/main.qml:196
-#, fuzzy, kde-format
-#| msgctxt "Touchpad Edge"
-#| msgid "Left edge"
+#, kde-format
 msgid "Left handed mode"
-msgstr "Venstre kant"
+msgstr "Venstrehandsmodus"
 
 #: ui/main.qml:200
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr ""
+msgstr "Byt verknad av venstre og høgre knapp."
 
 #: ui/main.qml:226
 #, kde-format
 msgid "Press left and right buttons for middle click"
-msgstr ""
+msgstr "Trykk venstre og høgre knapp samtidig for midtklikk"
 
-#: ui/main.qml:230 ui/main.qml:878
+#: ui/main.qml:230 ui/main.qml:874
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
+"Trykk venstre og høgre knapp samtidig for å senda klikksignal tilsvarande "
+"midtknapp."
 
 #: ui/main.qml:256
 #, kde-format
@@ -295,229 +295,230 @@ msgstr ""
 #: ui/main.qml:266
 #, kde-format
 msgid "Pointer speed:"
-msgstr ""
+msgstr "Peikarfart:"
 
 #: ui/main.qml:364
 #, kde-format
 msgid "Pointer acceleration:"
-msgstr ""
+msgstr "Peikarakselerasjon:"
 
 #: ui/main.qml:395
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: ui/main.qml:399
 #, kde-format
 msgid "Cursor moves the same distance as finger."
-msgstr ""
+msgstr "Peikaren flyttar seg like langt som fingeren."
 
 #: ui/main.qml:408
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Standard"
 
 #: ui/main.qml:412
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr ""
+"Kor langt peikaren flyttar seg, avheng av kor fort fingeren vert flytta."
 
-#: ui/main.qml:427
+#: ui/main.qml:426
 #, kde-format
-msgid "Tapping:"
-msgstr ""
+msgid "Scrolling speed:"
+msgstr "Rullefart:"
 
-#: ui/main.qml:428
+#: ui/main.qml:477
 #, kde-format
-msgid "Tap-to-click"
-msgstr ""
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr "Saktare"
 
-#: ui/main.qml:432
+#: ui/main.qml:484
 #, kde-format
-msgid "Single tap is left button click."
-msgstr ""
-
-#: ui/main.qml:461
-#, kde-format
-msgid "Tap-and-drag"
-msgstr ""
-
-#: ui/main.qml:465
-#, kde-format
-msgid "Sliding over touchpad directly after tap drags."
-msgstr ""
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr "Raskare"
 
 #: ui/main.qml:492
 #, kde-format
-msgid "Tap-and-drag lock"
-msgstr ""
+msgid "Scrolling:"
+msgstr "Rulling:"
 
-#: ui/main.qml:496
+#: ui/main.qml:521
+#, kde-format
+msgid "Two fingers"
+msgstr "To fingrar"
+
+#: ui/main.qml:525
+#, kde-format
+msgid "Slide with two fingers scrolls."
+msgstr "Gli med to fingrar for å rulla."
+
+#: ui/main.qml:533
+#, kde-format
+msgid "Touchpad edges"
+msgstr "Styreplate-kantar"
+
+#: ui/main.qml:537
+#, kde-format
+msgid "Slide on the touchpad edges scrolls."
+msgstr "Gli fingeren langs kantane av styreplata for å rulla."
+
+#: ui/main.qml:547
+#, kde-format
+msgid "Invert scroll direction (Natural scrolling)"
+msgstr "Omvend rulleretning  (naturleg rulling)"
+
+#: ui/main.qml:563
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Rulling som på ein peikeskjerm."
+
+#: ui/main.qml:571 ui/main.qml:588
+#, kde-format
+msgid "Disable horizontal scrolling"
+msgstr "Slå av vassrett rulling"
+
+#: ui/main.qml:601
+#, kde-format
+msgid "Tapping:"
+msgstr "Tapping:"
+
+#: ui/main.qml:602
+#, kde-format
+msgid "Tap-to-click"
+msgstr "Tapp for å klikka"
+
+#: ui/main.qml:606
+#, kde-format
+msgid "Single tap is left button click."
+msgstr "Enkelttapp er venstre museklikk."
+
+#: ui/main.qml:635
+#, kde-format
+msgid "Tap-and-drag"
+msgstr "Tapp-og-dra-rørsle"
+
+#: ui/main.qml:639
+#, kde-format
+msgid "Sliding over touchpad directly after tap drags."
+msgstr ""
+"Fingergliding over styreplata rett etter tapping skal fungera som draging."
+
+#: ui/main.qml:666
+#, kde-format
+msgid "Tap-and-drag lock"
+msgstr "Tapp-og-dra-lås"
+
+#: ui/main.qml:670
 #, kde-format
 msgid "Dragging continues after a short finger lift."
-msgstr ""
+msgstr "Draging held fram etter eit kort fingerløft."
 
-#: ui/main.qml:516
+#: ui/main.qml:690
 #, kde-format
 msgid "Two-finger tap:"
-msgstr ""
+msgstr "Tofingertrykk:"
 
-#: ui/main.qml:527
+#: ui/main.qml:701
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr ""
+msgstr "Høgreklikk (trefingertrykk for midtklikk)"
 
-#: ui/main.qml:528
+#: ui/main.qml:702
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr ""
+"Tapp med to fingrar på å høgreklikk og med tre fingrar for å midtklikka."
 
-#: ui/main.qml:530
+#: ui/main.qml:704
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
-msgstr ""
+msgstr "Midtklikk (trefingertrykk for høgreklikk)"
 
-#: ui/main.qml:531
+#: ui/main.qml:705
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
 msgstr ""
+"Tapp med to fingrar for å midtklikka og med tre fingrar for å høgreklikka."
 
-#: ui/main.qml:533
+#: ui/main.qml:707
 #, kde-format
 msgid "Right-click"
-msgstr ""
+msgstr "Høgreklikk"
 
-#: ui/main.qml:534
+#: ui/main.qml:708
 #, kde-format
 msgid "Tap with two fingers to right-click."
-msgstr ""
+msgstr "Tapp med to fingrar for å høgreklikka."
 
-#: ui/main.qml:536
+#: ui/main.qml:710
 #, kde-format
 msgid "Middle-click"
-msgstr ""
+msgstr "Midtklikk"
 
-#: ui/main.qml:537
+#: ui/main.qml:711
 #, kde-format
 msgid "Tap with two fingers to middle-click."
-msgstr ""
-
-#: ui/main.qml:596
-#, kde-format
-msgid "Scrolling:"
-msgstr ""
-
-#: ui/main.qml:625
-#, kde-format
-msgid "Two fingers"
-msgstr ""
-
-#: ui/main.qml:629
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr ""
-
-#: ui/main.qml:637
-#, fuzzy, kde-format
-#| msgid "Touchpad"
-msgid "Touchpad edges"
-msgstr "Styreplate"
-
-#: ui/main.qml:641
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr ""
-
-#: ui/main.qml:651
-#, kde-format
-msgid "Invert scroll direction (Natural scrolling)"
-msgstr ""
-
-#: ui/main.qml:667
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr ""
-
-#: ui/main.qml:675 ui/main.qml:692
-#, kde-format
-msgid "Disable horizontal scrolling"
-msgstr ""
-
-#: ui/main.qml:700
-#, kde-format
-msgid "Scrolling speed:"
-msgstr ""
-
-#: ui/main.qml:751
-#, kde-format
-msgctxt "Slower Scroll"
-msgid "Slower"
-msgstr ""
-
-#: ui/main.qml:758
-#, kde-format
-msgctxt "Faster Scroll Speed"
-msgid "Faster"
-msgstr ""
+msgstr "Tapp med to fingrar for å midtklikka."
 
 #: ui/main.qml:769
 #, kde-format
 msgid "Right-click:"
-msgstr ""
+msgstr "Høgreklikk:"
 
 #: ui/main.qml:803
-#, fuzzy, kde-format
-#| msgctxt "Touchpad Edge"
-#| msgid "Bottom right corner"
+#, kde-format
 msgid "Press bottom-right corner"
-msgstr "Nedre høgre hjørne"
+msgstr "Trykk i hjørnet nede til høgre"
 
 #: ui/main.qml:807
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
-msgstr ""
+msgstr "Programvarebaserte knappar vert lagde til nedre delen av styreplata."
 
 #: ui/main.qml:815
 #, kde-format
 msgid "Press anywhere with two fingers"
-msgstr ""
+msgstr "Trykk med to fingrar kor som helst"
 
 #: ui/main.qml:819
 #, kde-format
 msgid "Tap with two finger to enable right click."
-msgstr ""
+msgstr "Tapp med to fingrar for bruka høgreklikking."
 
-#: ui/main.qml:833
+#: ui/main.qml:829
 #, kde-format
 msgid "Middle-click: "
-msgstr ""
+msgstr "Midtklikk: "
 
-#: ui/main.qml:862
+#: ui/main.qml:858
 #, kde-format
 msgid "Press bottom-middle"
-msgstr ""
+msgstr "Trykk nede i midten"
 
-#: ui/main.qml:866
+#: ui/main.qml:862
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
-msgstr ""
+msgstr "Programvarebasert midtknapp vert lagd til nedre delen av styreplata."
 
-#: ui/main.qml:874
+#: ui/main.qml:870
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
-msgstr ""
+msgstr "Trykk i nedre venstre og høgre hjørne samtidig"
 
-#: ui/main.qml:887
+#: ui/main.qml:883
 #, kde-format
 msgid "Press anywhere with three fingers"
-msgstr ""
+msgstr "Trykk med tre fingrar kor som helst"
 
-#: ui/main.qml:893
+#: ui/main.qml:889
 #, kde-format
 msgid "Press anywhere with three fingers."
-msgstr ""
+msgstr "Trykk med tre fingrar kor som helst."

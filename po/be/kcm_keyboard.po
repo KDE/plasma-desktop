@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-02 00:40+0000\n"
-"PO-Revision-Date: 2024-06-04 19:03\n"
+"PO-Revision-Date: 2024-06-06 19:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -88,24 +88,31 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
+"Не ўдалося загрузіць геаметрыю клавіятуры. Часта гэта сведчыць пра тое, што "
+"абраная мадэль не падтрымлівае пэўную раскладку або варыянт раскладкі. Гэтая "
+"праблема таксама можа паўстаць, калі вы паспрабуеце выкарыстаць гэтае "
+"спалучэнне мадэлі, раскладкі і варыянту.\n"
+"Папярэдні прагляд раскладак, якія вызначаны па-за каталогам xkb вашай "
+"сістэмы, не падтрымліваецца і таксама выкліча гэтае паведамленне. Яны ўсё "
+"яшчэ могуць працаваць нармальна, калі іх ужыць"
 
 #: ui/Advanced.qml:40
 #, kde-format
 msgctxt "@option:checkbox"
 msgid "Configure keyboard options"
-msgstr ""
+msgstr "Наладжванне параметраў клавіятуры"
 
 #: ui/Hardware.qml:34
 #, kde-format
 msgctxt "@title:group"
 msgid "Keyboard model:"
-msgstr ""
+msgstr "Мадэль клавіятуры:"
 
 #: ui/Hardware.qml:68
 #, kde-format
 msgctxt "@title:group"
 msgid "NumLock on Plasma Startup:"
-msgstr ""
+msgstr "NumLock падчас запуску Plasma:"
 
 #: ui/Hardware.qml:73
 #, kde-format
@@ -129,13 +136,13 @@ msgstr "Пакінуць без зменаў"
 #, kde-format
 msgctxt "@title:group"
 msgid "When key is held:"
-msgstr ""
+msgstr "Калі клавіша ўтрымліваецца:"
 
 #: ui/Hardware.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Repeat the key"
-msgstr ""
+msgstr "Паўторнае націсканне клавішы"
 
 #: ui/Hardware.qml:124
 #, kde-format
@@ -147,7 +154,7 @@ msgstr "Нічога не рабіць"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Show accented and similar characters"
-msgstr ""
+msgstr "Паказваць дыякрытычныя і падобныя знакі"
 
 #: ui/Hardware.qml:164
 #, kde-format
@@ -171,7 +178,7 @@ msgstr "Тэставая вобласць:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "Радок уводу для правярання налад"
 
 #: ui/LayoutDialog.qml:21
 #, kde-format
@@ -189,7 +196,7 @@ msgstr "Папярэдні прагляд"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display text:"
-msgstr ""
+msgstr "Выводзіць тэкст:"
 
 #: ui/LayoutDialog.qml:143
 #, kde-format
@@ -225,7 +232,7 @@ msgstr "Альтэрнатыўнае спалучэнне клавіш:"
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Last used shortcuts:"
-msgstr ""
+msgstr "Апошнія выкарыстаныя спалучэнні клавіш:"
 
 #: ui/Layouts.qml:129
 #, kde-format
@@ -267,7 +274,7 @@ msgstr "Акно"
 #, kde-format
 msgctxt "@option:checkbox"
 msgid "Configure Layouts"
-msgstr ""
+msgstr "Наладжванне раскладак клавіятуры"
 
 #: ui/Layouts.qml:200
 #, kde-format
@@ -327,13 +334,13 @@ msgstr "Спалучэнне клавіш"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign shortcut"
-msgstr ""
+msgstr "Перапрызначыць спалучэнне клавіш"
 
 #: ui/Layouts.qml:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel assignment"
-msgstr ""
+msgstr "Скасаваць прызначэнне"
 
 #: ui/Layouts.qml:417
 #, kde-format

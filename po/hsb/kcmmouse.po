@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2008-11-13 22:59+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -198,38 +198,38 @@ msgstr ""
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Scrolling:"
-msgstr ""
-
-#: ui/main.qml:277
-#, fuzzy, kde-format
-#| msgid "Re&verse scroll direction"
-msgid "Invert scroll direction"
-msgstr "směr suwanja wob&roćić"
-
-#: ui/main.qml:290
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr ""
-
-#: ui/main.qml:295
+#: ui/main.qml:275
 #, fuzzy, kde-format
 #| msgid "Pointer threshold:"
 msgid "Scrolling speed:"
 msgstr "Minimalna distanca:"
 
-#: ui/main.qml:346
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr ""
 
-#: ui/main.qml:353
+#: ui/main.qml:335
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
+msgstr ""
+
+#: ui/main.qml:343
+#, kde-format
+msgid "Scrolling:"
+msgstr ""
+
+#: ui/main.qml:344
+#, fuzzy, kde-format
+#| msgid "Re&verse scroll direction"
+msgid "Invert scroll direction"
+msgstr "směr suwanja wob&roćić"
+
+#: ui/main.qml:357
+#, kde-format
+msgid "Touchscreen like scrolling."
 msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"

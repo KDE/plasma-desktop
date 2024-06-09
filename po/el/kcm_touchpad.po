@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2017-03-24 14:43+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -290,7 +290,7 @@ msgstr ""
 msgid "Press left and right buttons for middle click"
 msgstr ""
 
-#: ui/main.qml:230 ui/main.qml:878
+#: ui/main.qml:230 ui/main.qml:874
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -336,155 +336,155 @@ msgstr ""
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr ""
 
-#: ui/main.qml:427
-#, kde-format
-msgid "Tapping:"
-msgstr ""
-
-#: ui/main.qml:428
-#, kde-format
-msgid "Tap-to-click"
-msgstr ""
-
-#: ui/main.qml:432
-#, kde-format
-msgid "Single tap is left button click."
-msgstr ""
-
-#: ui/main.qml:461
+#: ui/main.qml:426
 #, fuzzy, kde-format
-#| msgid "Tap-and-Drag Gesture"
-msgid "Tap-and-drag"
-msgstr "Χειρονομία χτυπήματος και συρσίματος"
+#| msgid "Scrolling"
+msgid "Scrolling speed:"
+msgstr "Κύλιση"
 
-#: ui/main.qml:465
+#: ui/main.qml:477
 #, kde-format
-msgid "Sliding over touchpad directly after tap drags."
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr ""
+
+#: ui/main.qml:484
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
 msgstr ""
 
 #: ui/main.qml:492
-#, fuzzy, kde-format
-#| msgid "Tap-and-Drag Gesture"
-msgid "Tap-and-drag lock"
-msgstr "Χειρονομία χτυπήματος και συρσίματος"
-
-#: ui/main.qml:496
-#, kde-format
-msgid "Dragging continues after a short finger lift."
-msgstr ""
-
-#: ui/main.qml:516
-#, fuzzy, kde-format
-#| msgctxt "Tapping"
-#| msgid "Two fingers:"
-msgid "Two-finger tap:"
-msgstr "Δύο δάχτυλα:"
-
-#: ui/main.qml:527
-#, kde-format
-msgid "Right-click (three-finger tap to middle-click)"
-msgstr ""
-
-#: ui/main.qml:528
-#, kde-format
-msgid ""
-"Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr ""
-
-#: ui/main.qml:530
-#, kde-format
-msgid "Middle-click (three-finger tap right-click)"
-msgstr ""
-
-#: ui/main.qml:531
-#, kde-format
-msgid ""
-"Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr ""
-
-#: ui/main.qml:533
-#, kde-format
-msgid "Right-click"
-msgstr ""
-
-#: ui/main.qml:534
-#, kde-format
-msgid "Tap with two fingers to right-click."
-msgstr ""
-
-#: ui/main.qml:536
-#, kde-format
-msgid "Middle-click"
-msgstr ""
-
-#: ui/main.qml:537
-#, kde-format
-msgid "Tap with two fingers to middle-click."
-msgstr ""
-
-#: ui/main.qml:596
 #, fuzzy, kde-format
 #| msgid "Scrolling"
 msgid "Scrolling:"
 msgstr "Κύλιση"
 
-#: ui/main.qml:625
+#: ui/main.qml:521
 #, fuzzy, kde-format
 #| msgctxt "Tapping"
 #| msgid "Two fingers:"
 msgid "Two fingers"
 msgstr "Δύο δάχτυλα:"
 
-#: ui/main.qml:629
+#: ui/main.qml:525
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr ""
 
-#: ui/main.qml:637
+#: ui/main.qml:533
 #, fuzzy, kde-format
 #| msgctxt "Touchpad Edge"
 #| msgid "Top edge"
 msgid "Touchpad edges"
 msgstr "Πάνω ακμή"
 
-#: ui/main.qml:641
+#: ui/main.qml:537
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr ""
 
-#: ui/main.qml:651
+#: ui/main.qml:547
 #, fuzzy, kde-format
 #| msgid "Reverse horizontal scrolling"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Αντίστροφη οριζόντια κύλιση"
 
-#: ui/main.qml:667
+#: ui/main.qml:563
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr ""
 
-#: ui/main.qml:675 ui/main.qml:692
+#: ui/main.qml:571 ui/main.qml:588
 #, fuzzy, kde-format
 #| msgid "Reverse horizontal scrolling"
 msgid "Disable horizontal scrolling"
 msgstr "Αντίστροφη οριζόντια κύλιση"
 
-#: ui/main.qml:700
-#, fuzzy, kde-format
-#| msgid "Scrolling"
-msgid "Scrolling speed:"
-msgstr "Κύλιση"
-
-#: ui/main.qml:751
+#: ui/main.qml:601
 #, kde-format
-msgctxt "Slower Scroll"
-msgid "Slower"
+msgid "Tapping:"
 msgstr ""
 
-#: ui/main.qml:758
+#: ui/main.qml:602
 #, kde-format
-msgctxt "Faster Scroll Speed"
-msgid "Faster"
+msgid "Tap-to-click"
+msgstr ""
+
+#: ui/main.qml:606
+#, kde-format
+msgid "Single tap is left button click."
+msgstr ""
+
+#: ui/main.qml:635
+#, fuzzy, kde-format
+#| msgid "Tap-and-Drag Gesture"
+msgid "Tap-and-drag"
+msgstr "Χειρονομία χτυπήματος και συρσίματος"
+
+#: ui/main.qml:639
+#, kde-format
+msgid "Sliding over touchpad directly after tap drags."
+msgstr ""
+
+#: ui/main.qml:666
+#, fuzzy, kde-format
+#| msgid "Tap-and-Drag Gesture"
+msgid "Tap-and-drag lock"
+msgstr "Χειρονομία χτυπήματος και συρσίματος"
+
+#: ui/main.qml:670
+#, kde-format
+msgid "Dragging continues after a short finger lift."
+msgstr ""
+
+#: ui/main.qml:690
+#, fuzzy, kde-format
+#| msgctxt "Tapping"
+#| msgid "Two fingers:"
+msgid "Two-finger tap:"
+msgstr "Δύο δάχτυλα:"
+
+#: ui/main.qml:701
+#, kde-format
+msgid "Right-click (three-finger tap to middle-click)"
+msgstr ""
+
+#: ui/main.qml:702
+#, kde-format
+msgid ""
+"Tap with two fingers to right-click, tap with three fingers to middle-click."
+msgstr ""
+
+#: ui/main.qml:704
+#, kde-format
+msgid "Middle-click (three-finger tap right-click)"
+msgstr ""
+
+#: ui/main.qml:705
+#, kde-format
+msgid ""
+"Tap with two fingers to middle-click, tap with three fingers to right-click."
+msgstr ""
+
+#: ui/main.qml:707
+#, kde-format
+msgid "Right-click"
+msgstr ""
+
+#: ui/main.qml:708
+#, kde-format
+msgid "Tap with two fingers to right-click."
+msgstr ""
+
+#: ui/main.qml:710
+#, kde-format
+msgid "Middle-click"
+msgstr ""
+
+#: ui/main.qml:711
+#, kde-format
+msgid "Tap with two fingers to middle-click."
 msgstr ""
 
 #: ui/main.qml:769
@@ -515,36 +515,36 @@ msgstr ""
 msgid "Tap with two finger to enable right click."
 msgstr ""
 
-#: ui/main.qml:833
+#: ui/main.qml:829
 #, kde-format
 msgid "Middle-click: "
 msgstr ""
 
-#: ui/main.qml:862
+#: ui/main.qml:858
 #, fuzzy, kde-format
 #| msgctxt "Touchpad Edge"
 #| msgid "Bottom right corner"
 msgid "Press bottom-middle"
 msgstr "Κάτω δεξιά γωνία"
 
-#: ui/main.qml:866
+#: ui/main.qml:862
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
 msgstr ""
 
-#: ui/main.qml:874
+#: ui/main.qml:870
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr ""
 
-#: ui/main.qml:887
+#: ui/main.qml:883
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr ""
 
-#: ui/main.qml:893
+#: ui/main.qml:889
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr ""

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-03-24 18:20+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -212,37 +212,37 @@ msgstr "சாதாரணமானது"
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "சுட்டிக்குறி நகரும் தூரம் சுட்டியின் வேகத்தைப் பொறுத்து மாறும்."
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Scrolling:"
-msgstr "உருளல்:"
-
-#: ui/main.qml:277
-#, kde-format
-msgid "Invert scroll direction"
-msgstr "உருளல் திசையைப் புரட்டு"
-
-#: ui/main.qml:290
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "தொடுதிரையைப் போன்ற உருளல்."
-
-#: ui/main.qml:295
+#: ui/main.qml:275
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "உருளல் வேகம்:"
 
-#: ui/main.qml:346
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "மெதுவாக"
 
-#: ui/main.qml:353
+#: ui/main.qml:335
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "வேகமாக"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "Scrolling:"
+msgstr "உருளல்:"
+
+#: ui/main.qml:344
+#, kde-format
+msgid "Invert scroll direction"
+msgstr "உருளல் திசையைப் புரட்டு"
+
+#: ui/main.qml:357
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "தொடுதிரையைப் போன்ற உருளல்."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

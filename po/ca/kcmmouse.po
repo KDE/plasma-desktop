@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-05-31 09:41+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -225,37 +225,37 @@ msgstr ""
 "La distància que recorre el cursor depèn de la velocitat de moviment del "
 "ratolí."
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Scrolling:"
-msgstr "Desplaçament:"
-
-#: ui/main.qml:277
-#, kde-format
-msgid "Invert scroll direction"
-msgstr "Inverteix la direcció de desplaçament"
-
-#: ui/main.qml:290
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Pantalla tàctil com el desplaçament."
-
-#: ui/main.qml:295
+#: ui/main.qml:275
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocitat de desplaçament:"
 
-#: ui/main.qml:346
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Més lenta"
 
-#: ui/main.qml:353
+#: ui/main.qml:335
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Més ràpida"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "Scrolling:"
+msgstr "Desplaçament:"
+
+#: ui/main.qml:344
+#, kde-format
+msgid "Invert scroll direction"
+msgstr "Inverteix la direcció de desplaçament"
+
+#: ui/main.qml:357
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Pantalla tàctil com el desplaçament."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

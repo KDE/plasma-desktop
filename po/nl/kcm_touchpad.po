@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-04-26 11:31+0200\n"
 "Last-Translator: pieter <pieterkristensen@gmail.com>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -278,7 +278,7 @@ msgstr "Linker en rechter knoppen verwisselen."
 msgid "Press left and right buttons for middle click"
 msgstr "Linker en rechter knoppen indrukken voor middelste muisklik"
 
-#: ui/main.qml:230 ui/main.qml:878
+#: ui/main.qml:230 ui/main.qml:874
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -326,52 +326,109 @@ msgstr ""
 "Cursor verplaats zich over een afstand die afhangt van de snelheid van de "
 "vinger."
 
-#: ui/main.qml:427
+#: ui/main.qml:426
+#, kde-format
+msgid "Scrolling speed:"
+msgstr "Scroll-snelheid:"
+
+#: ui/main.qml:477
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr "Langzamer"
+
+#: ui/main.qml:484
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr "Sneller"
+
+#: ui/main.qml:492
+#, kde-format
+msgid "Scrolling:"
+msgstr "Scrollen:"
+
+#: ui/main.qml:521
+#, kde-format
+msgid "Two fingers"
+msgstr "Twee vingers"
+
+#: ui/main.qml:525
+#, kde-format
+msgid "Slide with two fingers scrolls."
+msgstr "Veeg met twee vingers laat schuiven."
+
+#: ui/main.qml:533
+#, kde-format
+msgid "Touchpad edges"
+msgstr "Randen van touchpad"
+
+#: ui/main.qml:537
+#, kde-format
+msgid "Slide on the touchpad edges scrolls."
+msgstr "Veeg aan de rand van het touchpad laat schuiven."
+
+#: ui/main.qml:547
+#, kde-format
+msgid "Invert scroll direction (Natural scrolling)"
+msgstr "Scroll-richting omdraaien (natuurlijk schuiven)"
+
+#: ui/main.qml:563
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Scroll zoals op aanraakscherm."
+
+#: ui/main.qml:571 ui/main.qml:588
+#, kde-format
+msgid "Disable horizontal scrolling"
+msgstr "Horizontaal scrollen uitschakelen"
+
+#: ui/main.qml:601
 #, kde-format
 msgid "Tapping:"
 msgstr "Tikken:"
 
-#: ui/main.qml:428
+#: ui/main.qml:602
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Tikken-om-te-klikken"
 
-#: ui/main.qml:432
+#: ui/main.qml:606
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "Enkele tik is klik op linker knop."
 
-#: ui/main.qml:461
+#: ui/main.qml:635
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Tik-en-slepen"
 
-#: ui/main.qml:465
+#: ui/main.qml:639
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "Vegen over touchpad direct na tik sleept."
 
-#: ui/main.qml:492
+#: ui/main.qml:666
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Vergrendeling van tik-en-veeg"
 
-#: ui/main.qml:496
+#: ui/main.qml:670
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Slepen gaat door na een kort opheffen van de vinger."
 
-#: ui/main.qml:516
+#: ui/main.qml:690
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Tik met twee vingers:"
 
-#: ui/main.qml:527
+#: ui/main.qml:701
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Rechter-klik (tik met drie vingers voor middel-klik)"
 
-#: ui/main.qml:528
+#: ui/main.qml:702
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -379,12 +436,12 @@ msgstr ""
 "Tik met twee vingers voor rechter-klik, tik met drie vingers voor middel-"
 "klik."
 
-#: ui/main.qml:530
+#: ui/main.qml:704
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Middel-klik (tik met drie vingers rechter-klik)"
 
-#: ui/main.qml:531
+#: ui/main.qml:705
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -392,82 +449,25 @@ msgstr ""
 "Tik met twee vingers voor middel-klik, tik met drie vingers voor rechter-"
 "klik."
 
-#: ui/main.qml:533
+#: ui/main.qml:707
 #, kde-format
 msgid "Right-click"
 msgstr "Rechter-klik"
 
-#: ui/main.qml:534
+#: ui/main.qml:708
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Tik met twee vingers voor rechter-klik."
 
-#: ui/main.qml:536
+#: ui/main.qml:710
 #, kde-format
 msgid "Middle-click"
 msgstr "Middel-klik"
 
-#: ui/main.qml:537
+#: ui/main.qml:711
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Tik met twee vingers voor middel-klik."
-
-#: ui/main.qml:596
-#, kde-format
-msgid "Scrolling:"
-msgstr "Scrollen:"
-
-#: ui/main.qml:625
-#, kde-format
-msgid "Two fingers"
-msgstr "Twee vingers"
-
-#: ui/main.qml:629
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "Veeg met twee vingers laat schuiven."
-
-#: ui/main.qml:637
-#, kde-format
-msgid "Touchpad edges"
-msgstr "Randen van touchpad"
-
-#: ui/main.qml:641
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "Veeg aan de rand van het touchpad laat schuiven."
-
-#: ui/main.qml:651
-#, kde-format
-msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Scroll-richting omdraaien (natuurlijk schuiven)"
-
-#: ui/main.qml:667
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Scroll zoals op aanraakscherm."
-
-#: ui/main.qml:675 ui/main.qml:692
-#, kde-format
-msgid "Disable horizontal scrolling"
-msgstr "Horizontaal scrollen uitschakelen"
-
-#: ui/main.qml:700
-#, kde-format
-msgid "Scrolling speed:"
-msgstr "Scroll-snelheid:"
-
-#: ui/main.qml:751
-#, kde-format
-msgctxt "Slower Scroll"
-msgid "Slower"
-msgstr "Langzamer"
-
-#: ui/main.qml:758
-#, kde-format
-msgctxt "Faster Scroll Speed"
-msgid "Faster"
-msgstr "Sneller"
 
 #: ui/main.qml:769
 #, kde-format
@@ -497,17 +497,17 @@ msgstr "Ergens met twee vingers drukken"
 msgid "Tap with two finger to enable right click."
 msgstr "Tik met twee vingers om rechter-klik in te schakelen."
 
-#: ui/main.qml:833
+#: ui/main.qml:829
 #, kde-format
 msgid "Middle-click: "
 msgstr "Midden-klik: "
 
-#: ui/main.qml:862
+#: ui/main.qml:858
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Midden onder drukken"
 
-#: ui/main.qml:866
+#: ui/main.qml:862
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
@@ -516,17 +516,17 @@ msgstr ""
 "Met software ingeschakelde midden-knop zal toegevoegd worden aan het "
 "onderste gedeelte van uw touchpad."
 
-#: ui/main.qml:874
+#: ui/main.qml:870
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Hoeken linksonder en rechtsonder tegelijk indrukken"
 
-#: ui/main.qml:887
+#: ui/main.qml:883
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Ergens met drie vingers drukken"
 
-#: ui/main.qml:893
+#: ui/main.qml:889
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Ergens met drie vingers drukken."

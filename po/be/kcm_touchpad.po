@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-06-04 19:02\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -284,7 +284,7 @@ msgstr "Памяняць левую і правую кнопкі."
 msgid "Press left and right buttons for middle click"
 msgstr "Націсканне левай і правай кнопкі для імітацыі сярэдняй кнопкі"
 
-#: ui/main.qml:230 ui/main.qml:878
+#: ui/main.qml:230 ui/main.qml:874
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -329,54 +329,111 @@ msgstr "Стандартны"
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "Адлегласць перамяшчэння курсора залежыць ад хуткасці руху пальца."
 
-#: ui/main.qml:427
+#: ui/main.qml:426
+#, kde-format
+msgid "Scrolling speed:"
+msgstr "Хуткасць пракручвання:"
+
+#: ui/main.qml:477
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr "Павольна"
+
+#: ui/main.qml:484
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr "Хутка"
+
+#: ui/main.qml:492
+#, kde-format
+msgid "Scrolling:"
+msgstr "Пракручванне:"
+
+#: ui/main.qml:521
+#, kde-format
+msgid "Two fingers"
+msgstr "Вядзенне двума пальцамі"
+
+#: ui/main.qml:525
+#, kde-format
+msgid "Slide with two fingers scrolls."
+msgstr "Пракручванне з дапамогай вядзення двума пальцамі па сэнсарнай панэлі."
+
+#: ui/main.qml:533
+#, kde-format
+msgid "Touchpad edges"
+msgstr "Вядзенне па краях сэнсарнай панэлі"
+
+#: ui/main.qml:537
+#, kde-format
+msgid "Slide on the touchpad edges scrolls."
+msgstr "Пракручванне з дапамогай вядзення пальцам па краях сэнсарнай панэлі."
+
+#: ui/main.qml:547
+#, kde-format
+msgid "Invert scroll direction (Natural scrolling)"
+msgstr "Адваротны кірунак пракручвання (звычайнае пракручванне)"
+
+#: ui/main.qml:563
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Пракручванне на сэнсарным экране."
+
+#: ui/main.qml:571 ui/main.qml:588
+#, kde-format
+msgid "Disable horizontal scrolling"
+msgstr "Адключыць гарызантальнае пракручванне"
+
+#: ui/main.qml:601
 #, kde-format
 msgid "Tapping:"
 msgstr "Дакрананне:"
 
-#: ui/main.qml:428
+#: ui/main.qml:602
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Дакрананне як пстрыканне"
 
-#: ui/main.qml:432
+#: ui/main.qml:606
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "Адзіночнае дакрананне - пстрыканне левай кнопкай."
 
-#: ui/main.qml:461
+#: ui/main.qml:635
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Дакрананне і перацягванне"
 
-#: ui/main.qml:465
+#: ui/main.qml:639
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr ""
 "Вядзенне пальцам па сэнсарнай панэлі непасрэдна пасля націскання прыводзіць "
 "да перацягвання."
 
-#: ui/main.qml:492
+#: ui/main.qml:666
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Дакрананне і перацягванне з блакаваннем"
 
-#: ui/main.qml:496
+#: ui/main.qml:670
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Перацягванне працягваецца пасля кароткага ўзнімання пальца."
 
-#: ui/main.qml:516
+#: ui/main.qml:690
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Дакрананне двума пальцамі:"
 
-#: ui/main.qml:527
+#: ui/main.qml:701
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Правая кнопка мышы (дакрананне трыма пальцамі - сярэдняя кнопка мышы)"
 
-#: ui/main.qml:528
+#: ui/main.qml:702
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -384,12 +441,12 @@ msgstr ""
 "Дакрананне двума пальцамі імітуе правую кнопку мышы, а трыма пальцамі - "
 "сярэднюю."
 
-#: ui/main.qml:530
+#: ui/main.qml:704
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Сярэдняя кнопка мышы (дакрананне трыма пальцамі - правая кнопка мышы)"
 
-#: ui/main.qml:531
+#: ui/main.qml:705
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -397,82 +454,25 @@ msgstr ""
 "Дакрананне двума пальцамі імітуе сярэднюю кнопку мышы, а трыма пальцамі - "
 "правую."
 
-#: ui/main.qml:533
+#: ui/main.qml:707
 #, kde-format
 msgid "Right-click"
 msgstr "Правая кнопка мышы"
 
-#: ui/main.qml:534
+#: ui/main.qml:708
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Націсканне двума пальцамі імітуе правую кнопку мышы."
 
-#: ui/main.qml:536
+#: ui/main.qml:710
 #, kde-format
 msgid "Middle-click"
 msgstr "Сярэдняя кнопка мышы"
 
-#: ui/main.qml:537
+#: ui/main.qml:711
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Націсканне двума пальцамі імітуе сярэднюю кнопку мышы."
-
-#: ui/main.qml:596
-#, kde-format
-msgid "Scrolling:"
-msgstr "Пракручванне:"
-
-#: ui/main.qml:625
-#, kde-format
-msgid "Two fingers"
-msgstr "Вядзенне двума пальцамі"
-
-#: ui/main.qml:629
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "Пракручванне з дапамогай вядзення двума пальцамі па сэнсарнай панэлі."
-
-#: ui/main.qml:637
-#, kde-format
-msgid "Touchpad edges"
-msgstr "Вядзенне па краях сэнсарнай панэлі"
-
-#: ui/main.qml:641
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "Пракручванне з дапамогай вядзення пальцам па краях сэнсарнай панэлі."
-
-#: ui/main.qml:651
-#, kde-format
-msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Адваротны кірунак пракручвання (звычайнае пракручванне)"
-
-#: ui/main.qml:667
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Пракручванне на сэнсарным экране."
-
-#: ui/main.qml:675 ui/main.qml:692
-#, kde-format
-msgid "Disable horizontal scrolling"
-msgstr "Адключыць гарызантальнае пракручванне"
-
-#: ui/main.qml:700
-#, kde-format
-msgid "Scrolling speed:"
-msgstr "Хуткасць пракручвання:"
-
-#: ui/main.qml:751
-#, kde-format
-msgctxt "Slower Scroll"
-msgid "Slower"
-msgstr "Павольна"
-
-#: ui/main.qml:758
-#, kde-format
-msgctxt "Faster Scroll Speed"
-msgid "Faster"
-msgstr "Хутка"
 
 #: ui/main.qml:769
 #, kde-format
@@ -500,17 +500,17 @@ msgstr "Націсканне двума пальцамі ў любым месц�
 msgid "Tap with two finger to enable right click."
 msgstr "Дакрананне двума пальцамі лічыцца пстрыканнем правай кнопкай мышы."
 
-#: ui/main.qml:833
+#: ui/main.qml:829
 #, kde-format
 msgid "Middle-click: "
 msgstr "Сярэдняя кнопка мышы: "
 
-#: ui/main.qml:862
+#: ui/main.qml:858
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Націсканне пасярэдзіне ўнізе"
 
-#: ui/main.qml:866
+#: ui/main.qml:862
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
@@ -519,17 +519,17 @@ msgstr ""
 "У ніжняй частцы сэнсарнай панэлі будзе дададзена праграмная сярэдняя кнопка "
 "мышы."
 
-#: ui/main.qml:874
+#: ui/main.qml:870
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Адначасовае націсканне ў левым і правым кутах"
 
-#: ui/main.qml:887
+#: ui/main.qml:883
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Націсканне трыма пальцамі ў любым месцы"
 
-#: ui/main.qml:893
+#: ui/main.qml:889
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Націсканне трыма пальцамі ў любым месцы."

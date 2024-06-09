@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-02-29 18:53+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -275,7 +275,7 @@ msgstr "Vaihda vasen ja oikea painike keskenään."
 msgid "Press left and right buttons for middle click"
 msgstr "Vasen ja oikea painike toimivat yhdessä keskipainikkeena"
 
-#: ui/main.qml:230 ui/main.qml:878
+#: ui/main.qml:230 ui/main.qml:874
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -320,52 +320,109 @@ msgstr "Vakio"
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "Osoittimen kulkema matka riippuu sormen liikenopeudesta."
 
-#: ui/main.qml:427
+#: ui/main.qml:426
+#, kde-format
+msgid "Scrolling speed:"
+msgstr "Vieritysnopeus:"
+
+#: ui/main.qml:477
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr "Hitaampi"
+
+#: ui/main.qml:484
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr "Nopeampi"
+
+#: ui/main.qml:492
+#, kde-format
+msgid "Scrolling:"
+msgstr "Vieritys:"
+
+#: ui/main.qml:521
+#, kde-format
+msgid "Two fingers"
+msgstr "Kaksi sormea"
+
+#: ui/main.qml:525
+#, kde-format
+msgid "Slide with two fingers scrolls."
+msgstr "Vieritä pyyhkäisemällä kahdella sormella."
+
+#: ui/main.qml:533
+#, kde-format
+msgid "Touchpad edges"
+msgstr "Kosketuslevyn reunat"
+
+#: ui/main.qml:537
+#, kde-format
+msgid "Slide on the touchpad edges scrolls."
+msgstr "Vieritä pyyhkäisemällä kosketuslevyn reunaa."
+
+#: ui/main.qml:547
+#, kde-format
+msgid "Invert scroll direction (Natural scrolling)"
+msgstr "Käänteinen vierityssuunta (”luonnollinen” vieritys)"
+
+#: ui/main.qml:563
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Kosketusnäyttömäinen vieritys."
+
+#: ui/main.qml:571 ui/main.qml:588
+#, kde-format
+msgid "Disable horizontal scrolling"
+msgstr "Poista vaakavieritys käytöstä"
+
+#: ui/main.qml:601
 #, kde-format
 msgid "Tapping:"
 msgstr "Napauttaminen:"
 
-#: ui/main.qml:428
+#: ui/main.qml:602
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Napsauta napauttamalla"
 
-#: ui/main.qml:432
+#: ui/main.qml:606
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "Vasemman painikkeen napsautus yksittäisellä napautuksella."
 
-#: ui/main.qml:461
+#: ui/main.qml:635
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Napauta ja vedä"
 
-#: ui/main.qml:465
+#: ui/main.qml:639
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "Välittömästi kosketuslevyn napautuksen jälkeinen pyyhkäisy vetää."
 
-#: ui/main.qml:492
+#: ui/main.qml:666
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Napauta ja vedä -lukitus"
 
-#: ui/main.qml:496
+#: ui/main.qml:670
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Vetäminen jatkuu, vaikka lyhyttä sormea nostetaan"
 
-#: ui/main.qml:516
+#: ui/main.qml:690
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Kahden sormen napautus:"
 
-#: ui/main.qml:527
+#: ui/main.qml:701
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Oikean painikkeen napsautus (kolmella sormella keskipainikkeen)"
 
-#: ui/main.qml:528
+#: ui/main.qml:702
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -373,12 +430,12 @@ msgstr ""
 "Oikean painikkeen napsautus kahden sormen, keskipainikkeen napsautus kolmen "
 "sormen napautuksella."
 
-#: ui/main.qml:530
+#: ui/main.qml:704
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Keskipainikkeen napsautus (kolmella sormella oikean)"
 
-#: ui/main.qml:531
+#: ui/main.qml:705
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -386,82 +443,25 @@ msgstr ""
 "Keskipainikkeen napsautus kahden sormen, oikean painikkeen napsautus kolmen "
 "sormen napautuksella."
 
-#: ui/main.qml:533
+#: ui/main.qml:707
 #, kde-format
 msgid "Right-click"
 msgstr "Oikean painikkeen napsautus"
 
-#: ui/main.qml:534
+#: ui/main.qml:708
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Kahden sormen napautus vastaa oikean painikkeen napsautusta."
 
-#: ui/main.qml:536
+#: ui/main.qml:710
 #, kde-format
 msgid "Middle-click"
 msgstr "Keskipainikkeen napsautus"
 
-#: ui/main.qml:537
+#: ui/main.qml:711
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Kahden sormen napautus vastaa keskipainikkeen napsautusta."
-
-#: ui/main.qml:596
-#, kde-format
-msgid "Scrolling:"
-msgstr "Vieritys:"
-
-#: ui/main.qml:625
-#, kde-format
-msgid "Two fingers"
-msgstr "Kaksi sormea"
-
-#: ui/main.qml:629
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "Vieritä pyyhkäisemällä kahdella sormella."
-
-#: ui/main.qml:637
-#, kde-format
-msgid "Touchpad edges"
-msgstr "Kosketuslevyn reunat"
-
-#: ui/main.qml:641
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "Vieritä pyyhkäisemällä kosketuslevyn reunaa."
-
-#: ui/main.qml:651
-#, kde-format
-msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Käänteinen vierityssuunta (”luonnollinen” vieritys)"
-
-#: ui/main.qml:667
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Kosketusnäyttömäinen vieritys."
-
-#: ui/main.qml:675 ui/main.qml:692
-#, kde-format
-msgid "Disable horizontal scrolling"
-msgstr "Poista vaakavieritys käytöstä"
-
-#: ui/main.qml:700
-#, kde-format
-msgid "Scrolling speed:"
-msgstr "Vieritysnopeus:"
-
-#: ui/main.qml:751
-#, kde-format
-msgctxt "Slower Scroll"
-msgid "Slower"
-msgstr "Hitaampi"
-
-#: ui/main.qml:758
-#, kde-format
-msgctxt "Faster Scroll Speed"
-msgid "Faster"
-msgstr "Nopeampi"
 
 #: ui/main.qml:769
 #, kde-format
@@ -489,34 +489,34 @@ msgstr "Paina minne vain kahdella sormella"
 msgid "Tap with two finger to enable right click."
 msgstr "Jäljittele oikeanpuoleista painiketta napauttamalla kahdella sormella."
 
-#: ui/main.qml:833
+#: ui/main.qml:829
 #, kde-format
 msgid "Middle-click: "
 msgstr "Keskipainikkeen napsautus:"
 
-#: ui/main.qml:862
+#: ui/main.qml:858
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Paina alalaidan keskelle"
 
-#: ui/main.qml:866
+#: ui/main.qml:862
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
 msgstr "Ohjelmallinen keskipainike lisätään kosketuslevysi alalaitaan"
 
-#: ui/main.qml:874
+#: ui/main.qml:870
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Paina vasenta ja oikeaa alakulmaa yhtä aikaa"
 
-#: ui/main.qml:887
+#: ui/main.qml:883
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Paina minne vain kolmella sormella"
 
-#: ui/main.qml:893
+#: ui/main.qml:889
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Paina minne vain kolmella sormella."

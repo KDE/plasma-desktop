@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
-"PO-Revision-Date: 2024-06-04 19:02\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"PO-Revision-Date: 2024-06-06 19:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -92,7 +92,7 @@ msgstr "Прылада для кіравання курсорам адлучан
 #, kde-format
 msgctxt "@action:button"
 msgid "Bindings for Additional Mouse Buttons"
-msgstr ""
+msgstr "Прывязванне дадатковых кнопак мышы"
 
 #: ui/bindings.qml:69
 #, kde-format
@@ -122,7 +122,7 @@ msgstr "Скасаваць"
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
-msgstr ""
+msgstr "Націсніце кнопку мышы"
 
 #: ui/bindings.qml:125
 #, kde-format
@@ -185,6 +185,9 @@ msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
+"Калі актываваць гэтую наладу, то затрымліванне пстрыкання мышшу павялічыцца "
+"на 50 мс. Дадатковае затрымліванне патрэбна для правільнага вызначэння "
+"адначасовага націскання левай і правай кнопкай мышы."
 
 #: ui/main.qml:156
 #, kde-format
@@ -216,37 +219,37 @@ msgstr "Стандартны"
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "Адлегласць перамяшчэння курсора залежыць ад хуткасці руху мышы."
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Scrolling:"
-msgstr "Пракручванне:"
-
-#: ui/main.qml:277
-#, kde-format
-msgid "Invert scroll direction"
-msgstr "Адваротны кірунак пракручвання"
-
-#: ui/main.qml:290
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Пракручванне на сэнсарным экране."
-
-#: ui/main.qml:295
+#: ui/main.qml:275
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Хуткасць пракручвання:"
 
-#: ui/main.qml:346
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Павольна"
 
-#: ui/main.qml:353
+#: ui/main.qml:335
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Хутка"
+
+#: ui/main.qml:343
+#, kde-format
+msgid "Scrolling:"
+msgstr "Пракручванне:"
+
+#: ui/main.qml:344
+#, kde-format
+msgid "Invert scroll direction"
+msgstr "Адваротны кірунак пракручвання"
+
+#: ui/main.qml:357
+#, kde-format
+msgid "Touchscreen like scrolling."
+msgstr "Пракручванне на сэнсарным экране."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

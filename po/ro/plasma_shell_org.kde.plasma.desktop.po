@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2024-02-24 19:07+0000\n"
+"PO-Revision-Date: 2024-06-08 17:09+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -389,17 +389,15 @@ msgstr "Stil"
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
-msgstr ""
+msgstr "Repară"
 
 #: contents/configuration/PanelConfiguration.qml:564
 msgid "Panel Width:"
 msgstr "Lățime panou:"
 
 #: contents/configuration/PanelConfiguration.qml:565
-#, fuzzy
-#| msgid "Panel Width:"
 msgid "Panel Height:"
-msgstr "Lățime panou:"
+msgstr "Înălțime panou:"
 
 #: contents/configuration/PanelConfiguration.qml:588
 msgid "Focus shortcut:"
@@ -422,11 +420,13 @@ msgstr "Elimină acest panou. Acțiunea nu poate fi desfăcută."
 #: contents/configuration/PanelConfiguration.qml:642
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr ""
+msgstr "Gata"
 
 #: contents/configuration/PanelConfiguration.qml:645
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
+"Închide fereastra cu configurări ale panoului și iese din regimul de "
+"modificare"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -458,8 +458,6 @@ msgstr ""
 "Dublu-clic pentru reinițializare."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy
-#| msgid "Panels and Desktops Management"
 msgid "Panel and Desktop Management"
 msgstr "Gestiune panouri și birouri"
 
@@ -556,121 +554,115 @@ msgstr "Niciun control grafic disponibil"
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Ceas:"
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Păstrează vizibil când dispare dialogul de deblocare"
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Controale multimedia:"
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Arată sub dialogul de deblocare"
 
 #: contents/lockscreen/LockScreenUi.qml:50
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Deblocare eșuată"
 
 #: contents/lockscreen/LockScreenUi.qml:276
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Caps Lock e activ"
 
 #: contents/lockscreen/LockScreenUi.qml:290
 msgid "Sleep"
-msgstr ""
+msgstr "Adormi"
 
 #: contents/lockscreen/LockScreenUi.qml:296
 msgid "Hibernate"
-msgstr ""
+msgstr "Hibernează"
 
 #: contents/lockscreen/LockScreenUi.qml:302
-#, fuzzy
-#| msgid "Switch"
 msgid "Switch User"
-msgstr "Schimbă"
+msgstr "Schimbă utilizatorul"
 
 #: contents/lockscreen/LockScreenUi.qml:363
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Tastatură virtuală"
 
 #: contents/lockscreen/LockScreenUi.qml:387
-#, fuzzy
-#| msgid "Switch"
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Schimbă"
+msgstr "Schimbă aranjamentul"
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr ""
+msgstr "Parolă"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr ""
+msgstr "Deblochează"
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(sau scanați amprenta pe cititor)"
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(sau scanați smartcard-ul)"
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr ""
+msgstr "Fără titlu"
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr ""
+msgstr "Nimic în redare"
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr ""
+msgstr "Pista precedentă"
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Redă sau întrerupe multimedia"
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr ""
+msgstr "Pista următoare"
 
 #: contents/osd/OsdItem.qml:32
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/views/DesktopEditMode.qml:111
 msgid "Global Themes"
-msgstr ""
+msgstr "Tematici globale"
 
 #: contents/views/DesktopEditMode.qml:118
-#, fuzzy
-#| msgid "Open configuration page"
 msgid "Display Configuration"
-msgstr "Deschide pagina de configurare"
+msgstr "Configurare afișaj"
 
 #: contents/views/DesktopEditMode.qml:139
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "Mai mult"
 
 #: contents/views/DesktopEditMode.qml:148
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Ieși din regim de modificare"
 
 #: contents/views/Panel.qml:314
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Indicator de focalizare a panoului"
 
 #~ msgid "Height:"
 #~ msgstr "Înălțime:"

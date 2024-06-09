@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2023-11-11 13:54+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -65,41 +65,63 @@ msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Natychmiastowe"
 
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@label"
+msgid "Scrolling:"
+msgstr ""
+
 #: ui/main.qml:123
+#, kde-format
+msgctxt "@option:check"
+msgid "Prefer smooth scrolling"
+msgstr ""
+
+#: ui/main.qml:133
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"This setting enables or disables animated transitions when scrolling with a "
+"mouse wheel or the keyboard. Some applications may not honor this setting "
+"because they either do not support smooth scrolling, or have their own "
+"setting for enabling and disabling it."
+msgstr ""
+
+#: ui/main.qml:146
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Kliknięcie na plik lub katalog:"
 
-#: ui/main.qml:130
+#: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Zaznacza je"
 
-#: ui/main.qml:144
+#: ui/main.qml:167
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Otwórz dwukrotnym kliknięciem"
 
-#: ui/main.qml:157
+#: ui/main.qml:180
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Otwiera je"
 
-#: ui/main.qml:170
+#: ui/main.qml:193
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Zaznacz, klikając na znaczniku zaznaczania elementu"
 
-#: ui/main.qml:186
+#: ui/main.qml:209
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Kliknięcie na szynie paska przewijania:"
 
-#: ui/main.qml:187
+#: ui/main.qml:210
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -107,7 +129,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Przewija do naciśniętego miejsca"
 
-#: ui/main.qml:205
+#: ui/main.qml:228
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -115,43 +137,43 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Przewija jedną stronę w górę lub dół"
 
-#: ui/main.qml:218
+#: ui/main.qml:241
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Kliknięcie środkowym przewija do naciśniętego miejsca"
 
-#: ui/main.qml:232
+#: ui/main.qml:255
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
 msgstr "Środkowy przycisk:"
 
-#: ui/main.qml:234
+#: ui/main.qml:257
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
 msgstr "Wkleja zaznaczony tekst"
 
-#: ui/main.qml:251
+#: ui/main.qml:274
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Tryb dotykowy:"
 
-#: ui/main.qml:253
+#: ui/main.qml:276
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Włącz sam, gdy zajdzie potrzeba"
 
-#: ui/main.qml:253 ui/main.qml:296
+#: ui/main.qml:276 ui/main.qml:319
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Zawsze wyłączony"
 
-#: ui/main.qml:269
+#: ui/main.qml:292
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -162,13 +184,13 @@ msgstr ""
 "i nie wykryje myszy, czy gładzika. Na przykład: gdy klawiatura "
 "przekształcalnego laptopa zostanie obrócona lub odłączona."
 
-#: ui/main.qml:274
+#: ui/main.qml:297
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Zawsze włączony"
 
-#: ui/main.qml:314
+#: ui/main.qml:337
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -177,12 +199,12 @@ msgstr ""
 "W trybie dotykowym, wiele składników obsługi stanie się większa, aby ułatwić "
 "ich dotykanie."
 
-#: ui/main.qml:332
+#: ui/main.qml:355
 #, kde-format
 msgid "Double-click interval:"
 msgstr "Okres dwukrotnego kliknięcia:"
 
-#: ui/main.qml:347
+#: ui/main.qml:370
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
@@ -190,12 +212,12 @@ msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 msgstr[2] "%1 ms"
 
-#: ui/main.qml:351
+#: ui/main.qml:374
 #, kde-format
 msgid "msec"
 msgstr "ms"
 
-#: ui/main.qml:365
+#: ui/main.qml:388
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
@@ -216,8 +238,14 @@ msgstr "Jednokrotne kliknięcie otwiera pliki"
 msgid "Animation speed"
 msgstr "Szybkość animacji"
 
-#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Smooth scrolling"
+msgstr ""
+
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr ""
@@ -225,7 +253,7 @@ msgstr ""
 "jedną stronę"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:21
+#: workspaceoptions_kdeglobalssettings.kcfg:25
 #, kde-format
 msgid "Double click interval"
 msgstr "Okres dwukrotnego kliknięcia"
