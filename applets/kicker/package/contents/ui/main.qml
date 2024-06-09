@@ -30,8 +30,8 @@ PlasmoidItem {
     // this is a bit of a hack to prevent Plasma from spawning a dialog on its own when we're Dash
     preferredRepresentation: isDash ? fullRepresentation : null
 
-    compactRepresentation: isDash ? null : compactRepresentation
-    fullRepresentation: isDash ? compactRepresentation : menuRepresentation
+    compactRepresentation: isDash ? null : compactRepresentationComponent
+    fullRepresentation: isDash ? compactRepresentationComponent : menuRepresentationComponent
 
     property Component itemListDialogComponent: Qt.createComponent(Qt.resolvedUrl("./ItemListDialog.qml"))
     property Item dragSource: null
@@ -57,12 +57,12 @@ PlasmoidItem {
     }
 
     Component {
-        id: compactRepresentation
+        id: compactRepresentationComponent
         CompactRepresentation {}
     }
 
     Component {
-        id: menuRepresentation
+        id: menuRepresentationComponent
         MenuRepresentation {}
     }
 
