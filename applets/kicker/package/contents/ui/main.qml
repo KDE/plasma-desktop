@@ -42,7 +42,9 @@ PlasmoidItem {
     Plasmoid.icon: Plasmoid.configuration.useCustomButtonImage ? Plasmoid.configuration.customButtonImage : Plasmoid.configuration.icon
 
     onSystemFavoritesChanged: {
-        systemFavorites.favorites = Plasmoid.configuration.favoriteSystemActions;
+        if (systemFavorites) {
+            systemFavorites.favorites = Plasmoid.configuration.favoriteSystemActions;
+        }
     }
 
     function action_menuedit() {
