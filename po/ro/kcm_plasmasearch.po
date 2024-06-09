@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-01-07 18:26+0000\n"
+"PO-Revision-Date: 2024-06-08 17:06+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -39,11 +39,7 @@ msgid "Get New Plugins…"
 msgstr "Obține extensii noi…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -51,7 +47,7 @@ msgid ""
 msgstr ""
 "Activați sau dezactivați extensii (folosite în KRunner, lansatorul de "
 "aplicații, și efectul de prezentare generală). Marcați extensiile ca "
-"favorite și le aranjați în ordinea în care doriți să le vedeți."
+"favorite și le aranjați în ordinea în care doriți să le prioritizați."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -101,18 +97,16 @@ msgid "KRunner plugin installation failed"
 msgstr "Instalarea extensiei KRunner a eșuat"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Comanda de executat: „install” sau „uninstall”."
+msgstr "Comanda de executat: „install” sau „uninstall”"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Calea spre arhivă sau dosarul extras"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
