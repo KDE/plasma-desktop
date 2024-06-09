@@ -434,7 +434,7 @@ FocusScope {
             }
 
             onPositionChanged: mouse => {
-                var item = pressedItem? pressedItem : updatePositionProperties(mouse.x, mouse.y);
+                var item = pressedItem ? pressedItem : updatePositionProperties(mouse.x, mouse.y);
 
                 if (gridView.currentIndex !== -1) {
                     if (itemGrid.dragEnabled && pressX !== -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {

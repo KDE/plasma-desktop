@@ -136,7 +136,9 @@ FocusScope {
 
                 delegate: ItemListDelegate {
                     onFullTextWidthChanged: {
-                        if (fullTextWidth > itemList.width) itemList.width = Math.min(fullTextWidth, itemList.maximumWidth);
+                        if (fullTextWidth > itemList.width) {
+                            itemList.width = Math.min(fullTextWidth, itemList.maximumWidth);
+                        }
                     }
                 }
 

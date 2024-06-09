@@ -301,8 +301,10 @@ FocusScope {
         anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : Kirigami.Units.smallSpacing)
 
         readonly property real defaultWidth: Kirigami.Units.gridUnit * 14
-        width: (runnerColumns.visibleChildren.length > 1 ? runnerColumns.visibleChildren[0].width
-                                                  : (rootList.visible ? rootList.width : defaultWidth))
+
+        width: runnerColumns.visibleChildren.length > 1
+            ? runnerColumns.visibleChildren[0].width
+            : (rootList.visible ? rootList.width : defaultWidth)
 
         focus: !Kirigami.InputMethod.willShowOnActive
 

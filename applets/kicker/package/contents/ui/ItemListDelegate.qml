@@ -36,7 +36,7 @@ Item {
     readonly property bool iconAndLabelsShouldlookSelected: mouseArea.pressed && !hasChildren
     readonly property alias hovered: mouseArea.containsMouse
 
-    Accessible.role: isSeparator ? Accessible.Separator: Accessible.MenuItem
+    Accessible.role: isSeparator ? Accessible.Separator : Accessible.MenuItem
     Accessible.name: label.text
 
     onHasChildrenChanged: {

@@ -24,14 +24,14 @@ PlasmoidItem {
 
     property bool isDash: Plasmoid.pluginName === "org.kde.plasma.kickerdash"
 
-    switchWidth: isDash || !fullRepresentationItem ? 0 :fullRepresentationItem.Layout.minimumWidth
-    switchHeight: isDash || !fullRepresentationItem ? 0 :fullRepresentationItem.Layout.minimumHeight
+    switchWidth: isDash || !fullRepresentationItem ? 0 : fullRepresentationItem.Layout.minimumWidth
+    switchHeight: isDash || !fullRepresentationItem ? 0 : fullRepresentationItem.Layout.minimumHeight
 
     // this is a bit of a hack to prevent Plasma from spawning a dialog on its own when we're Dash
-   preferredRepresentation: isDash ?fullRepresentation : null
+    preferredRepresentation: isDash ? fullRepresentation : null
 
-   compactRepresentation: isDash ? null : compactRepresentation
-   fullRepresentation: isDash ? compactRepresentation : menuRepresentation
+    compactRepresentation: isDash ? null : compactRepresentation
+    fullRepresentation: isDash ? compactRepresentation : menuRepresentation
 
     property Component itemListDialogComponent: Qt.createComponent(Qt.resolvedUrl("./ItemListDialog.qml"))
     property Item dragSource: null
