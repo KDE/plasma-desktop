@@ -165,9 +165,8 @@ SimpleKCM {
 
             Output {
                 id: outputItem
-                readonly property size outputPhysicalSize: outputsModel.data(outputsModel.index(outputsCombo.currentIndex, 0), Qt.UserRole + 1)
                 readonly property size outputSize: outputsModel.data(outputsModel.index(outputsCombo.currentIndex, 0), Qt.UserRole + 2)
-                readonly property real aspectRatio: outputPhysicalSize.width / outputPhysicalSize.height
+                readonly property real aspectRatio: outputSize.width / outputSize.height
                 width: parent.width * 0.7
                 height: width / aspectRatio
             }
