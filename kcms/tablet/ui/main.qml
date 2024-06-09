@@ -143,7 +143,7 @@ SimpleKCM {
             Layout.fillWidth: true
             Kirigami.FormData.label: i18nd("kcm_tablet", "Mapped Area:")
             model: OutputsFittingModel {}
-            onActivated: {
+            onActivated: index => {
                 outputAreaView.changed = true
                 keepAspectRatio.checked = true
                 outputAreaView.resetOutputArea(index, index === 0 ? Qt.rect(0,0, 1,1) : Qt.rect(0, 0, 1, outputItem.aspectRatio/tabletItem.aspectRatio))
