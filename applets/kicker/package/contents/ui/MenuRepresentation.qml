@@ -199,8 +199,6 @@ FocusScope {
 
             height: parent.height
 
-            signal focusChanged()
-
             visible: searchField.text !== "" && runnerModel.count > 0
 
             Repeater {
@@ -210,6 +208,7 @@ FocusScope {
 
                 delegate: RunnerResultsList {
                     id: runnerMatches
+
                     visible: runnerModel.modelForRow(index).count > 0
 
                     onKeyNavigationAtListEnd: {
@@ -218,19 +217,13 @@ FocusScope {
 
                     onContainsMouseChanged: {
                         if (containsMouse) {
-                            runnerMatches.focus = true;
+                            focus = true;
                         }
                     }
 
                     onFocusChanged: {
-                        if (focus) {
-                            runnerColumns.focusChanged();
-                        }
-                    }
-
-                    function focusChanged() {
-                        if (!runnerMatches.focus && runnerMatches.currentIndex != -1) {
-                            runnerMatches.currentIndex = -1;
+                        if (!focus) {
+                            currentIndex = -1;
                         }
                     }
 
@@ -280,14 +273,6 @@ FocusScope {
                             target.currentIndex = 0;
                             target.focus = true;
                         }
-                    }
-
-                    Component.onCompleted: {
-                        runnerColumns.focusChanged.connect(focusChanged);
-                    }
-
-                    Component.onDestruction: {
-                        runnerColumns.focusChanged.disconnect(focusChanged);
                     }
                 }
             }
