@@ -93,7 +93,7 @@ FocusScope {
     ActionMenu {
         id: actionMenu
 
-        onActionClicked: {
+        onActionClicked: (actionId, actionArgument) => {
             visualParent.actionTriggered(actionId, actionArgument);
         }
     }
@@ -150,7 +150,7 @@ FocusScope {
             }
         }
 
-        onDropped: {
+        onDropped: drop => {
             if (kicker.dragSource && kicker.dragSource.parent !== gridView.contentItem && kicker.dragSource.GridView.view.model.favoritesModel === itemGrid.model) {
                 itemGrid.model.addFavorite(kicker.dragSource.favoriteId, itemGrid.model.dropPlaceholderIndex);
                 gridView.currentIndex = -1;

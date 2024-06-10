@@ -79,7 +79,7 @@ Item {
         activeFocusOnTab: true
         hoverEnabled: !root.dashWindow || !root.dashWindow.visible
 
-        Keys.onPressed: {
+        Keys.onPressed: event => {
             switch (event.key) {
             case Qt.Key_Space:
             case Qt.Key_Enter:
@@ -93,13 +93,13 @@ Item {
         Accessible.description: toolTipSubText
         Accessible.role: Accessible.Button
 
-        onPressed: {
+        onPressed: mouse => {
             if (!kicker.isDash) {
                 wasExpanded = kicker.expanded
             }
         }
 
-        onClicked: {
+        onClicked: mouse => {
             if (kicker.isDash) {
                 root.dashWindow.toggle();
                 justOpenedTimer.start();

@@ -386,7 +386,7 @@ Kicker.DashboardWindow {
                         preloadAllAppsTimer.defer();
                     }
 
-                    onKeyNavRight: {
+                    onKeyNavRight: subGridIndex => {
                         mainColumn.tryActivate(currentRow(), 0);
                     }
 
@@ -618,7 +618,7 @@ Kicker.DashboardWindow {
                         }
                     }
 
-                    onKeyNavLeft: {
+                    onKeyNavLeft: subGridIndex => {
                         var row = 0;
 
                         for (var i = 0; i < subGridIndex; i++) {
@@ -632,7 +632,7 @@ Kicker.DashboardWindow {
                         target.tryActivate(targetRow, favoritesColumn.columns - 1);
                     }
 
-                    onKeyNavRight: {
+                    onKeyNavRight: subGridIndex => {
                         filterListScrollArea.focus = true;
                     }
                 }
@@ -662,7 +662,7 @@ Kicker.DashboardWindow {
                         }
                     }
 
-                    onKeyNavLeft: {
+                    onKeyNavLeft: subGridIndex => {
                         var row = 0;
 
                         for (var i = 0; i < subGridIndex; i++) {
@@ -825,12 +825,12 @@ Kicker.DashboardWindow {
                                 }
                             }
 
-                            onAboutToShowActionMenu: {
+                            onAboutToShowActionMenu: actionMenu => {
                                 var actionList = hasActionList ? model.actionList : [];
                                 Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
                             }
 
-                            onActionTriggered: {
+                            onActionTriggered: (actionId, actionArgument) => {
                                 if (Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument) === true) {
                                     kicker.expanded = false;
                                 }
@@ -850,7 +850,7 @@ Kicker.DashboardWindow {
                             ActionMenu {
                                 id: actionMenu
 
-                                onActionClicked: {
+                                onActionClicked: (actionId, actionArgument) => {
                                     actionTriggered(actionId, actionArgument);
                                 }
                             }

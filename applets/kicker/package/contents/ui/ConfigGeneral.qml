@@ -63,7 +63,7 @@ KCM.SimpleKCM {
 
                 anchors.fill: parent
 
-                onDragEnter: {
+                onDragEnter: event => {
                     // Cannot use string operations (e.g. indexOf()) on "url" basic type.
                     var urlString = event.mimeData.url.toString();
 
@@ -77,9 +77,11 @@ KCM.SimpleKCM {
                         event.ignore();
                     }
                 }
-                onDragLeave: containsAcceptableDrag = false
+                onDragLeave: event => {
+                    containsAcceptableDrag = false
+                }
 
-                onDrop: {
+                onDrop: event => {
                     if (containsAcceptableDrag) {
                         // Strip file:// prefix, we already verified in onDragEnter that we have only local URLs.
                         iconDialog.setCustomButtonImage(event.mimeData.url.toString().substr("file://".length));
@@ -96,7 +98,9 @@ KCM.SimpleKCM {
                     configGeneral.cfg_useCustomButtonImage = true;
                 }
 
-                onIconNameChanged: setCustomButtonImage(iconName);
+                onIconNameChanged: iconName => {
+                    setCustomButtonImage(iconName);
+                }
             }
 
             KSvg.FrameSvgItem {

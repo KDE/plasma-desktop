@@ -45,12 +45,12 @@ Item {
         }
     }
 
-    onAboutToShowActionMenu: {
+    onAboutToShowActionMenu: actionMenu => {
         var actionList = item.hasActionList ? model.actionList : [];
         Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
     }
 
-    onActionTriggered: {
+    onActionTriggered: (actionId, actionArgument) => {
         if (Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument) === true) {
             kicker.expanded = false;
         }
@@ -65,7 +65,7 @@ Item {
     ActionMenu {
         id: actionMenu
 
-        onActionClicked: {
+        onActionClicked: (actionId, actionArgument) => {
             item.actionTriggered(actionId, actionArgument);
         }
     }
@@ -264,7 +264,7 @@ Item {
         sourceComponent: separatorComponent
     }
 
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         if (event.key === Qt.Key_Menu && item.hasActionList) {
             event.accepted = true;
             item.openActionMenu(mouseArea);

@@ -46,7 +46,7 @@ Item {
     ActionMenu {
         id: actionMenu
 
-        onActionClicked: {
+        onActionClicked: (actionId, actionArgument) => {
             actionTriggered(actionId, actionArgument);
         }
     }
@@ -77,7 +77,7 @@ Item {
         hoverEnabled: true
         acceptedButtons: Qt.LeftButton | Qt.RightButton
 
-        onPressed: {
+        onPressed: mouse => {
             if (mouse.buttons & Qt.RightButton) {
                 if (item.hasActionList) {
                     item.openActionMenu(item, mouse.x, mouse.y);
@@ -89,7 +89,7 @@ Item {
             }
         }
 
-        onReleased: {
+        onReleased: mouse => {
             if (pressed) {
                 repeater.model.trigger(index, "", null);
                 kicker.expanded = false;
@@ -100,7 +100,7 @@ Item {
             pressY = -1;
         }
 
-        onContainsMouseChanged: {
+        onContainsMouseChanged: containsMouseChanged => {
             if (!containsMouse) {
                 pressed = false;
                 pressX = -1;
@@ -108,7 +108,7 @@ Item {
             }
         }
 
-        onPositionChanged: {
+        onPositionChanged: mouse => {
             if (pressX !== -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                 kicker.dragSource = item;
                 dragHelper.startDrag(kicker, model.url, model.icon);

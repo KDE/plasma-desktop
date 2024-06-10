@@ -104,7 +104,7 @@ FocusScope {
 
         hoverEnabled: true
 
-        onContainsMouseChanged: {
+        onContainsMouseChanged: containsMouseChanged => {
             listView.eligibleWidth = listView.width;
 
             if (containsMouse) {
