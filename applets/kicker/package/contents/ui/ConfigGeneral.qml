@@ -5,7 +5,7 @@
 */
 
 import QtQuick
-import QtQuick.Controls
+import QtQuick.Controls as QQC2
 
 import org.kde.draganddrop as DragDrop
 import org.kde.kirigami as Kirigami
@@ -14,9 +14,9 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.plasmoid
-import org.kde.kcmutils as KCM
+import org.kde.kcmutils as KCMUtils
 
-KCM.SimpleKCM {
+KCMUtils.SimpleKCM {
     id: configGeneral
 
     property bool isDash: (Plasmoid.pluginName === "org.kde.plasma.kickerdash")
@@ -41,7 +41,7 @@ KCM.SimpleKCM {
         anchors.left: parent.left
         anchors.right: parent.right
 
-        Button {
+        QQC2.Button {
             id: iconButton
 
             Kirigami.FormData.label: i18n("Icon:")
@@ -118,20 +118,20 @@ KCM.SimpleKCM {
                 }
             }
 
-            Menu {
+            QQC2.Menu {
                 id: iconMenu
 
                 // Appear below the button
-                y: +parent.height
+                y: parent.height
 
                 onClosed: iconButton.checked = false;
 
-                MenuItem {
+                QQC2.MenuItem {
                     text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
                     icon.name: "document-open-folder"
                     onClicked: iconDialog.open()
                 }
-                MenuItem {
+                QQC2.MenuItem {
                     text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
                     icon.name: "edit-clear"
                     onClicked: {
@@ -147,7 +147,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        ComboBox {
+        QQC2.ComboBox {
             id: appNameFormat
 
             Kirigami.FormData.label: i18n("Show applications as:")
@@ -159,7 +159,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: alphaSort
 
             Kirigami.FormData.label: i18n("Behavior:")
@@ -167,7 +167,7 @@ KCM.SimpleKCM {
             text: i18n("Sort applications alphabetically")
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: limitDepth
 
             visible: !isDash
@@ -175,7 +175,7 @@ KCM.SimpleKCM {
             text: i18n("Flatten sub-menus to a single level")
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: showIconsRootLevel
 
             visible: !configGeneral.isDash
@@ -187,7 +187,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: showRecentApps
 
             Kirigami.FormData.label: i18n("Show categories:")
@@ -197,7 +197,7 @@ KCM.SimpleKCM {
                     : i18n("Often used applications")
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: showRecentDocs
 
             text: recentOrdering.currentIndex == 0
@@ -205,7 +205,7 @@ KCM.SimpleKCM {
                     : i18n("Often used files")
         }
 
-        ComboBox {
+        QQC2.ComboBox {
             id: recentOrdering
 
             Kirigami.FormData.label: i18n("Sort items in categories by:")
@@ -216,7 +216,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: useExtraRunners
 
             Kirigami.FormData.label: i18n("Search:")
@@ -224,7 +224,7 @@ KCM.SimpleKCM {
             text: i18n("Expand search to bookmarks, files and emails")
         }
 
-        CheckBox {
+        QQC2.CheckBox {
             id: alignResultsToBottom
 
             visible: !configGeneral.isDash

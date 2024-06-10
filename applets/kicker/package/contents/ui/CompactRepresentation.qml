@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 
@@ -27,7 +29,7 @@ Item {
     onWidthChanged: updateSizeHints()
     onHeightChanged: updateSizeHints()
 
-    function updateSizeHints() {
+    function updateSizeHints(): void {
         if (useCustomButtonImage) {
             if (vertical) {
                 const scaledHeight = Math.floor(parent.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
@@ -113,7 +115,7 @@ Item {
         target: Plasmoid
         enabled: kicker.isDash && root.dashWindow !== null
 
-        function onActivated() {
+        function onActivated(): void {
             root.dashWindow.toggle();
             justOpenedTimer.start();
         }
