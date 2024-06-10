@@ -67,13 +67,13 @@ msgstr "即时"
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "滚动："
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "首选使用平滑滚动"
 
 #: ui/main.qml:133
 #, kde-format
@@ -84,6 +84,9 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"此设置用于启用或者禁用使用鼠标滚轮或者键盘进行滚动时的动画过渡。某些应用程序"
+"可能不会遵守此设置，因为它们可能不支持平滑滚动，或者它们本身有启用或者禁用平"
+"滑滚动的设置。"
 
 #: ui/main.qml:146
 #, kde-format
@@ -235,7 +238,7 @@ msgstr "动效速度"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "平滑滚动"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

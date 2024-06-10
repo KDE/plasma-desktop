@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_workspace.\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2023-11-04 19:37+0100\n"
+"PO-Revision-Date: 2024-06-09 06:15+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -70,13 +70,13 @@ msgstr "Tuj"
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "Rulumado:"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "Preferi glatan rulumadon"
 
 #: ui/main.qml:133
 #, kde-format
@@ -87,6 +87,10 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Ĉi tiu agordo ebligas aŭ malebligas viglajn transirojn rulumante per musrado "
+"aŭ klavaro. Iuj aplikaĵoj eble ne honoras ĉi tiun agordon ĉar ili aŭ ne "
+"subtenas glatan movadon aŭ havas sian propran agordon por ŝalti kaj malŝalti "
+"ĝin."
 
 #: ui/main.qml:146
 #, kde-format
@@ -242,7 +246,7 @@ msgstr "Animacia rapideco"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "Glata rulumado"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

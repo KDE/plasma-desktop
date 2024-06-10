@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-03-18 19:41+0300\n"
+"PO-Revision-Date: 2024-06-09 21:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -71,13 +71,13 @@ msgstr "Anında"
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "Sarma:"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "Pürüzsüz sarmayı yeğle"
 
 #: ui/main.qml:133
 #, kde-format
@@ -88,6 +88,10 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Bu seçenek, fare tekerleği veya klavyeyle sararken canlandırmaları "
+"etkinleştirir veya devre dışı bırakır. Kimi uygulamalar bu ayarı dikkate "
+"almayabilirler; çünkü ya pürüzsüz sarmayı desteklemiyorlardır ya da "
+"etkinleştirmek veya devre dışı bırakmak için kendi ayarları bulunur."
 
 #: ui/main.qml:146
 #, kde-format
@@ -244,7 +248,7 @@ msgstr "Canlandırma hızı"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "Pürüzsüz sarma"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

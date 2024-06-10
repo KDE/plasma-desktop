@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:39+0000\n"
+"POT-Creation-Date: 2024-06-10 00:40+0000\n"
 "PO-Revision-Date: 2023-02-19 16:39+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -68,96 +68,147 @@ msgstr "Planşetdə çıxışa uyğun"
 msgid "Custom size"
 msgstr "Xüsusi ölçü"
 
-#: ui/main.qml:28
+#: ui/main.qml:29
 #, fuzzy, kde-format
 #| msgid "No drawing tablets found."
 msgid "No drawing tablets found"
 msgstr "Rəsm planşetləri tapılmadı."
 
-#: ui/main.qml:29
+#: ui/main.qml:30
 #, fuzzy, kde-format
 #| msgid "Configure drawing tablets"
 msgid "Connect a drawing tablet"
 msgstr "Rəsm olanşetlərini tənzimləyin"
 
-#: ui/main.qml:41
+#: ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "Tablet"
+msgctxt "Tests tablet functionality like the pen"
+msgid "Test Tablet…"
+msgstr "Planşet"
+
+#: ui/main.qml:58
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Cihaz:"
 
-#: ui/main.qml:79
+#: ui/main.qml:96
 #, kde-format
 msgid "Target display:"
 msgstr "Hədəf ekranı:"
 
-#: ui/main.qml:98
+#: ui/main.qml:115
 #, kde-format
 msgid "Orientation:"
 msgstr "İstiqamət:"
 
-#: ui/main.qml:110
+#: ui/main.qml:127
 #, fuzzy, kde-format
 #| msgid "Left-handed mode:"
-msgid "Left handed mode:"
+msgid "Left-handed mode:"
 msgstr "Sol əl rejimi:"
 
-#: ui/main.qml:120
+#: ui/main.qml:138
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Tells the device to to accommodate left-handed users. Effects will vary by "
+"device, but often it reverses the pad buttonsʼ functionality so the tablet "
+"can be used upside-down."
+msgstr ""
+
+#: ui/main.qml:144
 #, kde-format
 msgid "Area:"
 msgstr "Sahə:"
 
-#: ui/main.qml:208
+#: ui/main.qml:232
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Planşet sahəsininin ölçüsünü dəyişin"
 
-#: ui/main.qml:232
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Tərəflərin nisbətini kilidləyin"
 
-#: ui/main.qml:240
+#: ui/main.qml:264
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:249
+#: ui/main.qml:273
 #, fuzzy, kde-format
 #| msgid "Button %1:"
 msgid "Pen button 1:"
 msgstr "Düymə %1:"
 
-#: ui/main.qml:250
+#: ui/main.qml:274
 #, fuzzy, kde-format
 #| msgid "Tool Button 2"
 msgid "Pen button 2:"
 msgstr "Alət düyməsi 2"
 
-#: ui/main.qml:251
+#: ui/main.qml:275
 #, fuzzy, kde-format
 #| msgid "Tool Button 3"
 msgid "Pen button 3:"
 msgstr "Alət düyməsi 3"
 
-#: ui/main.qml:295
+#: ui/main.qml:319
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Panel:"
 
-#: ui/main.qml:306
+#: ui/main.qml:330
 #, kde-format
 msgid "None"
 msgstr "Heç nə"
 
-#: ui/main.qml:328
+#: ui/main.qml:352
 #, fuzzy, kde-format
 #| msgid "Button %1:"
 msgid "Pad button %1:"
 msgstr "Düymə %1:"
+
+#: ui/Tester.qml:27
+#, fuzzy, kde-format
+#| msgid "Tablet"
+msgctxt "@title"
+msgid "Tablet Tester"
+msgstr "Planşet"
+
+#: ui/Tester.qml:48
+#, kde-format
+msgid "Stylus press X=%1 Y=%2"
+msgstr ""
+
+#: ui/Tester.qml:56
+#, kde-format
+msgid "Stylus release X=%1 Y=%2"
+msgstr ""
+
+#: ui/Tester.qml:64
+#, kde-format
+msgid "Stylus move X=%1 Y=%2"
+msgstr ""
+
+#: ui/Tester.qml:186
+#, kde-format
+msgid ""
+"## Legend:\n"
+"# X, Y - event coordinate\n"
+msgstr ""
+
+#: ui/Tester.qml:193
+#, kde-format
+msgctxt "Clear the event log"
+msgid "Clear"
+msgstr ""
 
 #~ msgid "Tool Button 1"
 #~ msgstr "Alət düyməsi 1"
@@ -169,6 +220,3 @@ msgstr "Düymə %1:"
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "xxmn77@gmail.com"
-
-#~ msgid "Tablet"
-#~ msgstr "Planşet"

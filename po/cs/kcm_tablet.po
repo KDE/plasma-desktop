@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:39+0000\n"
+"POT-Creation-Date: 2024-06-10 00:40+0000\n"
 "PO-Revision-Date: 2024-05-03 16:34+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -68,87 +68,137 @@ msgstr "Uzpůsobit výstup v tabletu"
 msgid "Custom size"
 msgstr "Vlastní velikost"
 
-#: ui/main.qml:28
+#: ui/main.qml:29
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "Nebyl nalezen žádný kreslicí tablet"
 
-#: ui/main.qml:29
+#: ui/main.qml:30
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "Připojit grafický tablet"
 
-#: ui/main.qml:41
+#: ui/main.qml:38
+#, kde-format
+msgctxt "Tests tablet functionality like the pen"
+msgid "Test Tablet…"
+msgstr ""
+
+#: ui/main.qml:58
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Zařízení:"
 
-#: ui/main.qml:79
+#: ui/main.qml:96
 #, kde-format
 msgid "Target display:"
 msgstr "Cílová obrazovka:"
 
-#: ui/main.qml:98
+#: ui/main.qml:115
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientace:"
 
-#: ui/main.qml:110
-#, kde-format
-msgid "Left handed mode:"
+#: ui/main.qml:127
+#, fuzzy, kde-format
+#| msgid "Left handed mode:"
+msgid "Left-handed mode:"
 msgstr "Režim pro leváka:"
 
-#: ui/main.qml:120
+#: ui/main.qml:138
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Tells the device to to accommodate left-handed users. Effects will vary by "
+"device, but often it reverses the pad buttonsʼ functionality so the tablet "
+"can be used upside-down."
+msgstr ""
+
+#: ui/main.qml:144
 #, kde-format
 msgid "Area:"
 msgstr "Oblast:"
 
-#: ui/main.qml:208
+#: ui/main.qml:232
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Změnit velikost oblasti tabletu"
 
-#: ui/main.qml:232
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Uzamknout poměr stran"
 
-#: ui/main.qml:240
+#: ui/main.qml:264
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:249
+#: ui/main.qml:273
 #, kde-format
 msgid "Pen button 1:"
 msgstr "Tlačítko pera 1:"
 
-#: ui/main.qml:250
+#: ui/main.qml:274
 #, kde-format
 msgid "Pen button 2:"
 msgstr "Tlačítko pera 2:"
 
-#: ui/main.qml:251
+#: ui/main.qml:275
 #, kde-format
 msgid "Pen button 3:"
 msgstr "Tlačítko pera 3:"
 
-#: ui/main.qml:295
+#: ui/main.qml:319
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr ""
 
 # žádné parametry funkce v inspektoru funkcí
-#: ui/main.qml:306
+#: ui/main.qml:330
 #, kde-format
 msgid "None"
 msgstr "Nic"
 
-#: ui/main.qml:328
+#: ui/main.qml:352
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Tlačítko tabletu %1:"
+
+#: ui/Tester.qml:27
+#, kde-format
+msgctxt "@title"
+msgid "Tablet Tester"
+msgstr ""
+
+#: ui/Tester.qml:48
+#, kde-format
+msgid "Stylus press X=%1 Y=%2"
+msgstr ""
+
+#: ui/Tester.qml:56
+#, kde-format
+msgid "Stylus release X=%1 Y=%2"
+msgstr ""
+
+#: ui/Tester.qml:64
+#, kde-format
+msgid "Stylus move X=%1 Y=%2"
+msgstr ""
+
+#: ui/Tester.qml:186
+#, kde-format
+msgid ""
+"## Legend:\n"
+"# X, Y - event coordinate\n"
+msgstr ""
+
+#: ui/Tester.qml:193
+#, kde-format
+msgctxt "Clear the event log"
+msgid "Clear"
+msgstr ""

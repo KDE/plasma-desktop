@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2023-11-05 06:04+0100\n"
+"PO-Revision-Date: 2024-06-09 06:24+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -68,13 +68,13 @@ msgstr "მყისი"
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "აწევ-ჩამოწევა:"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "მირჩევნია გლუვი გადახვევა"
 
 #: ui/main.qml:133
 #, kde-format
@@ -85,6 +85,10 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"ეს პარამეტრი ჩართავს ან გამორთავს ანიმირებულ გადასვლებს, როცა კლავიატურით ან "
+"თაგუნას ბორბლით ახვევთ. ზოგიერთი აპლიკაცია, შეიძლება, ამ პარამეტრს არ "
+"ითვალისწინებდეს, რადგან მათ ან არ აქვთ გლუვი გადახვევის მხარდაჭერა, ან ამის "
+"ჩასართავ/გამოსართავად თავისი საკუთარი პარამეტრი გააჩნიათ."
 
 #: ui/main.qml:146
 #, kde-format
@@ -240,7 +244,7 @@ msgstr "ანიმაციის სიჩქარე"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "გლუვი გადახვევა"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:39+0000\n"
+"POT-Creation-Date: 2024-06-10 00:40+0000\n"
 "PO-Revision-Date: 2024-04-16 19:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -71,89 +71,139 @@ msgstr "符合繪圖板輸出"
 msgid "Custom size"
 msgstr "自訂大小"
 
-#: ui/main.qml:28
+#: ui/main.qml:29
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "沒有找到繪圖平板"
 
-#: ui/main.qml:29
+#: ui/main.qml:30
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "請連線一個繪圖平板"
 
-#: ui/main.qml:41
+#: ui/main.qml:38
+#, kde-format
+msgctxt "Tests tablet functionality like the pen"
+msgid "Test Tablet…"
+msgstr ""
+
+#: ui/main.qml:58
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "裝置："
 
-#: ui/main.qml:79
+#: ui/main.qml:96
 #, kde-format
 msgid "Target display:"
 msgstr "目標顯示器："
 
-#: ui/main.qml:98
+#: ui/main.qml:115
 #, kde-format
 msgid "Orientation:"
 msgstr "方向："
 
-#: ui/main.qml:110
-#, kde-format
-msgid "Left handed mode:"
+#: ui/main.qml:127
+#, fuzzy, kde-format
+#| msgid "Left handed mode:"
+msgid "Left-handed mode:"
 msgstr "左手模式："
 
-#: ui/main.qml:120
+#: ui/main.qml:138
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Tells the device to to accommodate left-handed users. Effects will vary by "
+"device, but often it reverses the pad buttonsʼ functionality so the tablet "
+"can be used upside-down."
+msgstr ""
+
+#: ui/main.qml:144
 #, kde-format
 msgid "Area:"
 msgstr "區域："
 
-#: ui/main.qml:208
+#: ui/main.qml:232
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "調整繪圖板區域"
 
-#: ui/main.qml:232
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "鎖定寬高比"
 
-#: ui/main.qml:240
+#: ui/main.qml:264
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:249
+#: ui/main.qml:273
 #, kde-format
 msgid "Pen button 1:"
 msgstr "畫筆按鈕 1："
 
-#: ui/main.qml:250
+#: ui/main.qml:274
 #, kde-format
 msgid "Pen button 2:"
 msgstr "畫筆按鈕 2："
 
-#: ui/main.qml:251
+#: ui/main.qml:275
 #, kde-format
 msgid "Pen button 3:"
 msgstr "畫筆按鈕 3："
 
-#: ui/main.qml:295
+#: ui/main.qml:319
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "繪圖板："
 
-#: ui/main.qml:306
+#: ui/main.qml:330
 #, kde-format
 msgid "None"
 msgstr "無"
 
-#: ui/main.qml:328
+#: ui/main.qml:352
 #, kde-format
 msgid "Pad button %1:"
 msgstr "繪圖板按鈕 %1："
+
+#: ui/Tester.qml:27
+#, kde-format
+msgctxt "@title"
+msgid "Tablet Tester"
+msgstr ""
+
+#: ui/Tester.qml:48
+#, kde-format
+msgid "Stylus press X=%1 Y=%2"
+msgstr ""
+
+#: ui/Tester.qml:56
+#, kde-format
+msgid "Stylus release X=%1 Y=%2"
+msgstr ""
+
+#: ui/Tester.qml:64
+#, kde-format
+msgid "Stylus move X=%1 Y=%2"
+msgstr ""
+
+#: ui/Tester.qml:186
+#, kde-format
+msgid ""
+"## Legend:\n"
+"# X, Y - event coordinate\n"
+msgstr ""
+
+#: ui/Tester.qml:193
+#, kde-format
+msgctxt "Clear the event log"
+msgid "Clear"
+msgstr ""
 
 #~ msgid "Tool Button 1"
 #~ msgstr "工具按鈕 1"
