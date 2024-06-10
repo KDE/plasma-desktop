@@ -152,7 +152,7 @@ FocusScope {
 
                 onCountChanged: {
                     if (currentIndex == 0) {
-                        currentItem.forceActiveFocus();
+                        currentItem?.forceActiveFocus();
                     } else {
                         currentIndex = -1;
                     }
