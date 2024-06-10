@@ -5,9 +5,9 @@
 */
 
 import QtQuick
-import QtQuick.Controls
 
 import org.kde.kquickcontrolsaddons
+import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 
@@ -116,7 +116,7 @@ FocusScope {
             }
         }
 
-        ScrollView {
+        PlasmaComponents3.ScrollView {
             anchors.fill: parent
 
             focus: true
