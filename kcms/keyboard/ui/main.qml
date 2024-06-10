@@ -34,6 +34,8 @@ KCM.AbstractKCM {
         Kirigami.NavigationTabBar {
             Layout.fillWidth: true
             currentIndex: 0
+            Kirigami.Theme.inherit: false
+            Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
             actions: [
                 Kirigami.Action {
