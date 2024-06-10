@@ -235,42 +235,43 @@ FocusScope {
                     }
 
                     Keys.onPressed: event => {
-                        var target = null;
+                        let target = null;
+                        const targets = [];
 
-                        if (event.key === Qt.Key_Right) {
-                            var targets = new Array();
-
-                            for (var i = index + 1; i < runnerModel.count; ++i) {
-                                targets[targets.length] = i;
+                        switch (event.key) {
+                        case Qt.Key_Right:
+                            for (let i = index + 1; i < runnerModel.count; ++i) {
+                                targets.push(i);
                             }
 
-                            for (var i = 0; i < index; ++i) {
-                                targets[targets.length] = i;
+                            for (let i = 0; i < index; ++i) {
+                                targets.push(i);
                             }
 
-                            for (var i = 0; i < targets.length; ++i) {
-                                if (runnerModel.modelForRow(targets[i]).count) {
-                                    target = runnerColumnsRepeater.itemAt(targets[i]);
+                            for (const i of targets) {
+                                if (runnerModel.modelForRow(i).count) {
+                                    target = runnerColumnsRepeater.itemAt(i);
                                     break;
                                 }
                             }
-                        } else if (event.key === Qt.Key_Left) {
-                            var targets = new Array();
+                            break;
 
-                            for (var i = index - 1; i >= 0; --i) {
-                                targets[targets.length] = i;
+                        case Qt.Key_Left:
+                            for (let i = index - 1; i >= 0; --i) {
+                                targets.push(i);
                             }
 
-                            for (var i = runnerModel.count - 1; i > index; --i) {
-                                targets[targets.length] = i;
+                            for (let i = runnerModel.count - 1; i > index; --i) {
+                                targets.push(i);
                             }
 
-                            for (var i = 0; i < targets.length; ++i) {
-                                if (runnerModel.modelForRow(targets[i]).count) {
-                                    target = runnerColumnsRepeater.itemAt(targets[i]);
+                            for (const i of targets) {
+                                if (runnerModel.modelForRow(i).count) {
+                                    target = runnerColumnsRepeater.itemAt(i);
                                     break;
                                 }
                             }
+                            break;
                         }
 
                         if (target) {
@@ -375,9 +376,9 @@ FocusScope {
                 }
 
                 if (runnerColumns.visible) {
-                    for (var i = 0; i < runnerModel.count; ++i) {
+                    for (let i = 0; i < runnerModel.count; ++i) {
                         if (runnerModel.modelForRow(i).count) {
-                            var targetList = runnerColumnsRepeater.itemAt(i);
+                            const targetList = runnerColumnsRepeater.itemAt(i);
                             targetList.currentIndex = runnerModel.modelForRow(i).count - 1;
                             targetList.forceActiveFocus();
                             break;
@@ -393,9 +394,9 @@ FocusScope {
                 }
 
                 if (runnerColumns.visible) {
-                    for (var i = 0; i < runnerModel.count; ++i) {
+                    for (let i = 0; i < runnerModel.count; ++i) {
                         if (runnerModel.modelForRow(i).count) {
-                            var targetList = runnerColumnsRepeater.itemAt(i);
+                            const targetList = runnerColumnsRepeater.itemAt(i);
                             targetList.currentIndex = Math.min(1, targetList.count);
                             targetList.forceActiveFocus();
                             break;
@@ -403,18 +404,18 @@ FocusScope {
                     }
                 }
             } else if (event.key === Qt.Key_Left && cursorPosition === 0) {
-                    for (var i = runnerModel.count; i >= 0; --i) {
-                        if (runnerModel.modelForRow(i).count) {
-                            var targetList = runnerColumnsRepeater.itemAt(i);
-                            targetList.currentIndex = 0;
-                            targetList.forceActiveFocus();
-                            break;
-                        }
-                    }
-            } else if (event.key === Qt.Key_Right && cursorPosition === length) {
-                for (var i = 1; i < runnerModel.count; ++i) {
+                for (let i = runnerModel.count; i >= 0; --i) {
                     if (runnerModel.modelForRow(i).count) {
-                        var targetList = runnerColumnsRepeater.itemAt(i);
+                        const targetList = runnerColumnsRepeater.itemAt(i);
+                        targetList.currentIndex = 0;
+                        targetList.forceActiveFocus();
+                        break;
+                    }
+                }
+            } else if (event.key === Qt.Key_Right && cursorPosition === length) {
+                for (let i = 1; i < runnerModel.count; ++i) {
+                    if (runnerModel.modelForRow(i).count) {
+                        const targetList = runnerColumnsRepeater.itemAt(i);
                         targetList.currentIndex = 0;
                         targetList.forceActiveFocus();
                         break;
