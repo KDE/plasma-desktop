@@ -26,12 +26,12 @@ DropArea {
             return;
         }
 
-        var above = flow.childAt(event.x, event.y);
+        const above = flow.childAt(event.x, event.y),
+              source = kicker.dragSource;
 
-        if (above && above !== kicker.dragSource && dragSource.parent == flow) {
-            repeater.model.moveRow(dragSource.itemIndex, above.itemIndex);
+        if (above && source && above !== source && source.parent === flow) {
+            repeater.model.moveRow(source.itemIndex, above.itemIndex);
         }
-
     }
 
     Flow {
