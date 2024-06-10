@@ -50,7 +50,7 @@ FocusScope {
         height: runnerMatches.itemHeight + Kirigami.Units.smallSpacing
 
         horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVTop
+        verticalAlignment: Text.AlignVCenter
 
         textFormat: Text.PlainText
         wrapMode: Text.NoWrap
