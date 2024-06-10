@@ -21,8 +21,8 @@ Item {
     // if it's not disabled and is either a leaf node or a node with children
     enabled: !isSeparator && !model.disabled && (!isParent || (isParent && hasChildren))
 
-    signal actionTriggered(string actionId, variant actionArgument)
-    signal aboutToShowActionMenu(variant actionMenu)
+    signal actionTriggered(string actionId, var actionArgument)
+    signal aboutToShowActionMenu(var actionMenu)
 
     readonly property real fullTextWidth: Math.ceil(icon.width + label.implicitWidth + arrow.width + row.anchors.leftMargin + row.anchors.rightMargin + row.actualSpacing)
     property bool isSeparator: (model.isSeparator === true)

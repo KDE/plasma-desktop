@@ -14,10 +14,10 @@ Item {
 
     property QtObject menu
     property Item visualParent
-    property variant actionList
+    property var actionList
     property bool opened: menu ? (menu.status !== PlasmaExtras.Menu.Closed) : false
 
-    signal actionClicked(string actionId, variant actionArgument)
+    signal actionClicked(string actionId, var actionArgument)
     signal closed
 
     onActionListChanged: refreshMenu();
@@ -89,7 +89,7 @@ Item {
         PlasmaExtras.MenuItem {
             id: submenuItem
 
-            property variant actionItem
+            property var actionItem
 
             text: actionItem.text ? actionItem.text : ""
             icon: actionItem.icon ? actionItem.icon : null
@@ -104,7 +104,7 @@ Item {
         id: contextMenuItemComponent
 
         PlasmaExtras.MenuItem {
-            property variant actionItem
+            property var actionItem
 
             text      : actionItem.text ? actionItem.text : ""
             enabled   : actionItem.type !== "title" && ("enabled" in actionItem ? actionItem.enabled : true)

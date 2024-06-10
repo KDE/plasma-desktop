@@ -766,8 +766,8 @@ Kicker.DashboardWindow {
                         delegate: MouseArea {
                             id: item
 
-                            signal actionTriggered(string actionId, variant actionArgument)
-                            signal aboutToShowActionMenu(variant actionMenu)
+                            signal actionTriggered(string actionId, var actionArgument)
+                            signal aboutToShowActionMenu(var actionMenu)
 
                             property var m: model
                             property int textWidth: label.contentWidth

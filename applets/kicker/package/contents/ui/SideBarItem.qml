@@ -19,8 +19,8 @@ Item {
     width: root.width
     height: root.width
 
-    signal actionTriggered(string actionId, variant actionArgument)
-    signal aboutToShowActionMenu(variant actionMenu)
+    signal actionTriggered(string actionId, var actionArgument)
+    signal aboutToShowActionMenu(var actionMenu)
 
     property bool hasActionList: ((model.favoriteId !== null)
         || (("hasActionList" in model) && (model.hasActionList !== null)))
