@@ -216,7 +216,7 @@ Item {
             elide: Text.ElideRight
             color: item.iconAndLabelsShouldlookSelected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
 
-            text: model.display
+            text: model?.display ?? ""
         }
 
         Kirigami.Icon {

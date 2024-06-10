@@ -31,7 +31,7 @@ Item {
         || (("hasActionList" in model) && (model.hasActionList === true)))
 
     Accessible.role: Accessible.MenuItem
-    Accessible.name: model.display
+    Accessible.name: model.display ?? ""
 
     function openActionMenu(x, y) {
         var actionList = hasActionList ? model.actionList : [];
@@ -86,17 +86,17 @@ Item {
 
         color: "white" // FIXME TODO: Respect theming?
 
-        text: ("name" in model ? model.name : model.display)
+        text: model?.name ?? model.display ?? ""
         textFormat: Text.PlainText
     }
 
     PlasmaCore.ToolTipArea {
         id: toolTip
 
-        property string text: model.display
+        mainText: model.display ?? ""
 
         anchors.fill: parent
-        active: root.visible && label.truncated
+        active: root.visible && mainText !== "" && label.truncated
         mainItem: toolTipDelegate
 
         onContainsMouseChanged: item.GridView.view.itemContainsMouseChanged(containsMouse)
