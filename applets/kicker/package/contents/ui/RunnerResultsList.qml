@@ -89,13 +89,6 @@ FocusScope {
 
         model: runnerModel.modelForRow(index)
 
-        onModelChanged: {
-            if (model === undefined || model === null) {
-                enabled: false;
-                visible: false;
-            }
-        }
-
         onCountChanged: {
             if (firstVisible && searchField.focus) {
                 currentIndex = 0;
