@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-26 02:26+0000\n"
-"PO-Revision-Date: 2021-05-27 18:53+0200\n"
+"PO-Revision-Date: 2024-06-09 14:18+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -53,95 +53,85 @@ msgid "Delete Index Data"
 msgstr "Ta bort indexerad data"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their "
-#| "content."
+#, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
-"Filsökning hjälper dig att snabbt lokalisera alla dina filer baserat på "
-"innehåll."
+"Filsökning hjälper dig att snabbt lokalisera dina filer. Du kan välja vilka "
+"kataloger och vilken typ av fildata som indexeras."
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Disable indexing"
+#, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
-msgstr "Inaktivera indexering"
+msgstr "Filindexering"
 
 #: ui/main.qml:110
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
-msgstr ""
+msgstr "Aktiverad"
 
 #: ui/main.qml:124
 #, kde-format
 msgctxt "@label indexing status"
 msgid "Status:"
-msgstr ""
+msgstr "Status:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Status: %1, %2% complete"
+#, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr "Status: %1, %2% färdiga"
+msgstr "%1, %2% färdiga"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid "Currently indexing: %1"
+#, kde-format
 msgctxt "@label file currently being indexed"
 msgid "Currently indexing:"
-msgstr "Indexerar för närvarande: %1"
+msgstr "Indexerar för närvarande:"
 
 #: ui/main.qml:153
-#, fuzzy, kde-kuit-format
-#| msgid "Currently indexing: %1"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "<filename>%1</filename>"
-msgstr "Indexerar för närvarande: %1"
+msgstr "<filename>%1</filename>"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "Data att indexera:"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "File names and contents"
-msgstr ""
+msgstr "Filnamn och innehåll"
 
 #: ui/main.qml:184
 #, kde-format
 msgid "File names only"
-msgstr ""
+msgstr "Bara filnamn"
 
 #: ui/main.qml:203
-#, fuzzy, kde-format
-#| msgid "Index hidden files and folders"
+#, kde-format
 msgid "Hidden files and folders"
-msgstr "Indexera dolda filer och kataloger"
+msgstr "Dolda filer och kataloger"
 
 #: ui/main.qml:229
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
+msgstr "Platser"
 
 #: ui/main.qml:232
-#, fuzzy, kde-format
-#| msgid "Start indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Starta indexering av en katalog…"
 
 #: ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Stop indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stoppa indexering av en katalog…"
@@ -190,7 +180,7 @@ msgstr "Välj en katalog att undanta"
 
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
-#~ msgstr "stefan.asserhall@bredband.net"
+#~ msgstr "stefan.asserhall@gmail.com"
 
 #~ msgid "File Search"
 #~ msgstr "Filsökning"
