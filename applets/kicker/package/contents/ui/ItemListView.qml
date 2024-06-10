@@ -198,13 +198,15 @@ FocusScope {
 
             Keys.onPressed: event => {
                 if (event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
-                    if (itemList.childDialog === null && currentItem != null && currentItem.hasChildren) {
-                        dialogSpawnTimer.focusOnSpawn = true;
-                        dialogSpawnTimer.restart();
-                    } else if (currentItem != null && currentItem.hasChildren) {
-                        windowSystem.forceActive(itemList.childDialog.mainItem);
-                        itemList.childDialog.mainItem.focus = true;
-                        itemList.childDialog.mainItem.currentIndex = 0;
+                    if (listView.currentItem !== null && listView.currentItem.hasChildren) {
+                        if (itemList.childDialog === null) {
+                            dialogSpawnTimer.focusOnSpawn = true;
+                            dialogSpawnTimer.restart();
+                        } else {
+                            windowSystem.forceActive(itemList.childDialog.mainItem);
+                            itemList.childDialog.mainItem.focus = true;
+                            itemList.childDialog.mainItem.currentIndex = 0;
+                        }
                     }
                 } else if (event.key === Qt.Key_Up) {
                     event.accepted = true;
@@ -218,10 +220,12 @@ FocusScope {
                     showChildDialogs = false;
                     listView.decrementCurrentIndex();
 
-                    if (currentItem.isSeparator) {
-                        listView.decrementCurrentIndex();
+                    if (listView.currentItem !== null) {
+                        if (listView.currentItem.isSeparator) {
+                            listView.decrementCurrentIndex();
+                        }
+                        listView.currentItem.forceActiveFocus();
                     }
-                    listView.currentItem.forceActiveFocus()
 
                     showChildDialogs = true;
                 } else if (event.key === Qt.Key_Down) {
@@ -236,10 +240,12 @@ FocusScope {
                     showChildDialogs = false;
                     listView.incrementCurrentIndex();
 
-                    if (currentItem.isSeparator) {
-                        listView.incrementCurrentIndex();
+                    if (listView.currentItem !== null) {
+                        if (listView.currentItem.isSeparator) {
+                            listView.incrementCurrentIndex();
+                        }
+                        listView.currentItem.forceActiveFocus();
                     }
-                    listView.currentItem.forceActiveFocus()
 
                     showChildDialogs = true;
                 } else if (event.key === Qt.Key_Left && dialog != null) {
