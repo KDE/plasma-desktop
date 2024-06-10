@@ -188,7 +188,7 @@ FocusScope {
                 property int animationDuration: itemGrid.dropEnabled ? resetAnimationDurationTimer.interval : 0
 
                 focus: true
-
+                clip: height < contentHeight + topMargin + bottomMargin
                 currentIndex: -1
 
                 move: Transition {

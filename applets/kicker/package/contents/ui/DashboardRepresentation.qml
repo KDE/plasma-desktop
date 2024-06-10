@@ -757,6 +757,7 @@ Kicker.DashboardWindow {
 
                         model: rootModel
 
+                        clip: height < contentHeight + topMargin + bottomMargin
                         boundsBehavior: Flickable.StopAtBounds
                         snapMode: ListView.SnapToItem
                         spacing: 0

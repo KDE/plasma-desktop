@@ -129,6 +129,7 @@ FocusScope {
 
                 currentIndex: -1
 
+                clip: height < contentHeight + topMargin + bottomMargin
                 boundsBehavior: Flickable.StopAtBounds
                 snapMode: ListView.SnapToItem
                 spacing: 0
