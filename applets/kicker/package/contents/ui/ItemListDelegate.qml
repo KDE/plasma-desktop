@@ -31,7 +31,7 @@ Item {
     property bool hasActionList: ((model.favoriteId !== null)
         || (("hasActionList" in model) && (model.hasActionList === true)))
     property QtObject childDialog: null
-    property Item menu: actionMenu
+    property ActionMenu menu: actionMenu
     readonly property bool pressed: mouseArea.pressed
     readonly property bool iconAndLabelsShouldlookSelected: mouseArea.pressed && !hasChildren
     readonly property alias hovered: mouseArea.containsMouse
