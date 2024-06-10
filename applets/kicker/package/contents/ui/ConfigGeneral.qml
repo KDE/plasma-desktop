@@ -65,13 +65,12 @@ KCM.SimpleKCM {
 
                 onDragEnter: event => {
                     // Cannot use string operations (e.g. indexOf()) on "url" basic type.
-                    var urlString = event.mimeData.url.toString();
+                    const urlString = event.mimeData.url.toString();
 
                     // This list is also hardcoded in KIconDialog.
-                    var extensions = [".png", ".xpm", ".svg", ".svgz"];
-                    containsAcceptableDrag = urlString.indexOf("file:///") === 0 && extensions.some(function (extension) {
-                        return urlString.indexOf(extension) === urlString.length - extension.length; // "endsWith"
-                    });
+                    const extensions = [".png", ".xpm", ".svg", ".svgz"];
+                    containsAcceptableDrag = urlString.startsWith("file:///")
+                        && extensions.some(extension => urlString.endsWith(extension));
 
                     if (!containsAcceptableDrag) {
                         event.ignore();
