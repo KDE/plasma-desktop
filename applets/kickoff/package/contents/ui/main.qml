@@ -133,11 +133,11 @@ PlasmoidItem {
     //BEGIN Metrics
     readonly property KSvg.FrameSvgItem backgroundMetrics: KSvg.FrameSvgItem {
         // Inset defaults to a negative value when not set by margin hints
-        readonly property real leftPadding: margins.left - Math.max(inset.left, 0)
-        readonly property real rightPadding: margins.right - Math.max(inset.right, 0)
-        readonly property real topPadding: margins.top - Math.max(inset.top, 0)
-        readonly property real bottomPadding: margins.bottom - Math.max(inset.bottom, 0)
-        readonly property real spacing: leftPadding
+        readonly property real leftPadding: Math.round(margins.left - Math.max(inset.left, 0))
+        readonly property real rightPadding: Math.round(margins.right - Math.max(inset.right, 0))
+        readonly property real topPadding: Math.round(margins.top - Math.max(inset.top, 0))
+        readonly property real bottomPadding: Math.round(margins.bottom - Math.max(inset.bottom, 0))
+        readonly property real spacing: Math.round(leftPadding)
         visible: false
         imagePath: Plasmoid.formFactor === PlasmaCore.Types.Planar ? "widgets/background" : "dialogs/background"
     }
