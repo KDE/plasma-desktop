@@ -135,7 +135,7 @@ SimpleKCM {
                 onCheckedChanged: form.device.leftHanded = checked
             }
             Kirigami.ContextualHelpButton {
-                toolTipText: xi18nc("@info", "Tells the device to to accommodate left-handed users. Effects will vary by device, but often it reverses the pad buttonsʼ functionality so the tablet can be used upside-down.")
+                toolTipText: xi18nc("@info", "Tells the device to accommodate left-handed users. Effects will vary by device, but often it reverses the pad buttonsʼ functionality so the tablet can be used upside-down.")
             }
         }
         QQC2.ComboBox {
