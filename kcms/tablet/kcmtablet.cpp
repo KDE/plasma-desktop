@@ -88,7 +88,7 @@ public:
         it->setData(screens[0]->size(), Qt::UserRole + 2);
         appendRow(it);
 
-        it = new QStandardItem(i18n("All Displays"));
+        it = new QStandardItem(i18n("All Screens"));
         it->setData(screens[0]->virtualSize(), Qt::UserRole + 1);
         it->setData(screens[0]->virtualSize(), Qt::UserRole + 2);
         appendRow(it);
