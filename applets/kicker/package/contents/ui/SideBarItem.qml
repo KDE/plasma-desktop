@@ -6,9 +6,9 @@
 
 import QtQuick
 
-import org.kde.kquickcontrolsaddons
-import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
+import org.kde.kquickcontrolsaddons as KQuickControlsAddons
+import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 
 import "code/tools.js" as Tools
@@ -59,7 +59,7 @@ Item {
         source: model.decoration
     }
 
-    MouseEventListener {
+    KQuickControlsAddons.MouseEventListener {
         id: listener
 
         anchors {

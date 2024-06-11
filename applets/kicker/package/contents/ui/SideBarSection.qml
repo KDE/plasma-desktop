@@ -6,10 +6,10 @@
 
 import QtQuick
 
-import org.kde.draganddrop
+import org.kde.draganddrop as DnD
 import org.kde.kirigami as Kirigami
 
-DropArea {
+DnD.DropArea {
     id: root
 
     width: Kirigami.Units.iconSizes.medium

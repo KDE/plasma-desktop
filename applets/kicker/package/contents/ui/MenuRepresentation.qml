@@ -7,10 +7,10 @@
 import QtQuick
 import QtQuick.Layouts
 
-import org.kde.plasma.core as PlasmaCore
-import org.kde.ksvg as KSvg
-import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.plasmoid
 
 FocusScope {

@@ -6,9 +6,9 @@
 
 import QtQuick
 
-import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
+import org.kde.plasma.components as PlasmaComponents3
 
 import "code/tools.js" as Tools
 

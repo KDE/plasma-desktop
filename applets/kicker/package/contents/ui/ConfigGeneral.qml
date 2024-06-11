@@ -8,13 +8,12 @@ import QtQuick
 import QtQuick.Controls as QQC2
 
 import org.kde.draganddrop as DragDrop
-import org.kde.kirigami as Kirigami
 import org.kde.iconthemes as KIconThemes
-import org.kde.plasma.core as PlasmaCore
+import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
+import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
-import org.kde.kcmutils as KCMUtils
 
 KCMUtils.SimpleKCM {
     id: configGeneral
