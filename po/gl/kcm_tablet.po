@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:40+0000\n"
-"PO-Revision-Date: 2024-04-18 18:25+0200\n"
+"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"PO-Revision-Date: 2024-06-10 21:27+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
-msgid "Primary (default)"
-msgstr "Principal (predeterminada)"
+msgid "Default"
+msgstr ""
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -43,30 +43,36 @@ msgid "Inverted Landscape"
 msgstr "Horizontal invertida"
 
 #: kcmtablet.cpp:86
-#, kde-format
-msgid "Follow the active screen"
+#, fuzzy, kde-format
+#| msgid "Follow the active screen"
+msgid "Follow the Current Screen"
 msgstr "Seguir a pantalla activa"
 
-#: kcmtablet.cpp:94
+#: kcmtablet.cpp:91
+#, kde-format
+msgid "All Screens"
+msgstr ""
+
+#: kcmtablet.cpp:100
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:137
+#: kcmtablet.cpp:160
 #, kde-format
-msgid "Fit to Output"
-msgstr "Axustar á saída"
+msgid "Fit to Screen"
+msgstr ""
 
-#: kcmtablet.cpp:138
+#: kcmtablet.cpp:161
 #, kde-format
-msgid "Fit Output in tablet"
-msgstr "Axustar a saída na tableta"
+msgid "Keep Aspect Ratio and Fit Within Screen"
+msgstr ""
 
-#: kcmtablet.cpp:139
+#: kcmtablet.cpp:162
 #, kde-format
-msgid "Custom size"
-msgstr "Tamaño personalizado"
+msgid "Map to Portion of Screen"
+msgstr ""
 
 #: ui/main.qml:29
 #, kde-format
@@ -82,7 +88,7 @@ msgstr "Conecte unha tableta de debuxo"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Probar a tableta…"
 
 #: ui/main.qml:58
 #, kde-format
@@ -92,33 +98,40 @@ msgstr "Dispositivo:"
 
 #: ui/main.qml:96
 #, kde-format
-msgid "Target display:"
-msgstr "Pantalla de destino:"
+msgid "Map to screen:"
+msgstr ""
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientación:"
 
-#: ui/main.qml:127
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#: ui/main.qml:128
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Modo zurdo:"
 
-#: ui/main.qml:138
-#, kde-kuit-format
+#: ui/main.qml:139
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Tells the device to to accommodate left-handed users. Effects will vary "
+#| "by device, but often it reverses the pad buttonsʼ functionality so the "
+#| "tablet can be used upside-down."
 msgctxt "@info"
 msgid ""
-"Tells the device to to accommodate left-handed users. Effects will vary by "
+"Tells the device to accommodate left-handed users. Effects will vary by "
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Solicita ao dispositivo que se configure para persoas zurdas. O resultado "
+"depende do dispositivo, pero normalmente invértense os botóns da zona táctil "
+"para que a tableta poida usarse de abaixo a arriba."
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
-msgid "Area:"
-msgstr "Área:"
+msgid "Mapped Area:"
+msgstr ""
 
 #: ui/main.qml:232
 #, kde-format
@@ -172,22 +185,22 @@ msgstr "Botón de panel %1:"
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "Probador de tableta"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Prema de lapis X=%1 Y=%2"
 
 #: ui/Tester.qml:56
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Solta de lapis X=%1 Y=%2"
 
 #: ui/Tester.qml:64
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Movemento de lapis X=%1 Y=%2"
 
 #: ui/Tester.qml:186
 #, kde-format
@@ -195,12 +208,32 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Lenda:\n"
+"# X, Y: coordenadas do evento\n"
 
 #: ui/Tester.qml:193
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Baleirar"
+
+#~ msgid "Primary (default)"
+#~ msgstr "Principal (predeterminada)"
+
+#~ msgid "Fit to Output"
+#~ msgstr "Axustar á saída"
+
+#~ msgid "Fit Output in tablet"
+#~ msgstr "Axustar a saída na tableta"
+
+#~ msgid "Custom size"
+#~ msgstr "Tamaño personalizado"
+
+#~ msgid "Target display:"
+#~ msgstr "Pantalla de destino:"
+
+#~ msgid "Area:"
+#~ msgstr "Área:"
 
 #~ msgid "Tool Button 1"
 #~ msgstr "Botón de ferramenta 1"

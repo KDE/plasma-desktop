@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:40+0000\n"
+"POT-Creation-Date: 2024-06-11 00:40+0000\n"
 "PO-Revision-Date: 2024-04-16 19:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -22,8 +22,8 @@ msgstr ""
 
 #: kcmtablet.cpp:32
 #, kde-format
-msgid "Primary (default)"
-msgstr "主要（預設）"
+msgid "Default"
+msgstr ""
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -46,30 +46,36 @@ msgid "Inverted Landscape"
 msgstr "橫向反轉"
 
 #: kcmtablet.cpp:86
-#, kde-format
-msgid "Follow the active screen"
+#, fuzzy, kde-format
+#| msgid "Follow the active screen"
+msgid "Follow the Current Screen"
 msgstr "跟隨作用中螢幕"
 
-#: kcmtablet.cpp:94
+#: kcmtablet.cpp:91
+#, kde-format
+msgid "All Screens"
+msgstr ""
+
+#: kcmtablet.cpp:100
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:137
+#: kcmtablet.cpp:160
 #, kde-format
-msgid "Fit to Output"
-msgstr "符合輸出"
+msgid "Fit to Screen"
+msgstr ""
 
-#: kcmtablet.cpp:138
+#: kcmtablet.cpp:161
 #, kde-format
-msgid "Fit Output in tablet"
-msgstr "符合繪圖板輸出"
+msgid "Keep Aspect Ratio and Fit Within Screen"
+msgstr ""
 
-#: kcmtablet.cpp:139
+#: kcmtablet.cpp:162
 #, kde-format
-msgid "Custom size"
-msgstr "自訂大小"
+msgid "Map to Portion of Screen"
+msgstr ""
 
 #: ui/main.qml:29
 #, kde-format
@@ -95,33 +101,33 @@ msgstr "裝置："
 
 #: ui/main.qml:96
 #, kde-format
-msgid "Target display:"
-msgstr "目標顯示器："
+msgid "Map to screen:"
+msgstr ""
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Orientation:"
 msgstr "方向："
 
-#: ui/main.qml:127
+#: ui/main.qml:128
 #, fuzzy, kde-format
 #| msgid "Left handed mode:"
 msgid "Left-handed mode:"
 msgstr "左手模式："
 
-#: ui/main.qml:138
+#: ui/main.qml:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"Tells the device to to accommodate left-handed users. Effects will vary by "
+"Tells the device to accommodate left-handed users. Effects will vary by "
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
-msgid "Area:"
-msgstr "區域："
+msgid "Mapped Area:"
+msgstr ""
 
 #: ui/main.qml:232
 #, kde-format
@@ -204,6 +210,24 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr ""
+
+#~ msgid "Primary (default)"
+#~ msgstr "主要（預設）"
+
+#~ msgid "Fit to Output"
+#~ msgstr "符合輸出"
+
+#~ msgid "Fit Output in tablet"
+#~ msgstr "符合繪圖板輸出"
+
+#~ msgid "Custom size"
+#~ msgstr "自訂大小"
+
+#~ msgid "Target display:"
+#~ msgstr "目標顯示器："
+
+#~ msgid "Area:"
+#~ msgstr "區域："
 
 #~ msgid "Tool Button 1"
 #~ msgstr "工具按鈕 1"

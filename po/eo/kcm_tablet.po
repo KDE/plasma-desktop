@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:40+0000\n"
-"PO-Revision-Date: 2024-04-13 11:51+0100\n"
+"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"PO-Revision-Date: 2024-06-10 23:33+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -20,8 +20,8 @@ msgstr ""
 
 #: kcmtablet.cpp:32
 #, kde-format
-msgid "Primary (default)"
-msgstr "Ĉefa (defaŭlte)"
+msgid "Default"
+msgstr ""
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -44,30 +44,36 @@ msgid "Inverted Landscape"
 msgstr "Inversa Pejzaĝo"
 
 #: kcmtablet.cpp:86
-#, kde-format
-msgid "Follow the active screen"
+#, fuzzy, kde-format
+#| msgid "Follow the active screen"
+msgid "Follow the Current Screen"
 msgstr "Sekvi la aktivan ekranon"
 
-#: kcmtablet.cpp:94
+#: kcmtablet.cpp:91
+#, kde-format
+msgid "All Screens"
+msgstr ""
+
+#: kcmtablet.cpp:100
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:137
+#: kcmtablet.cpp:160
 #, kde-format
-msgid "Fit to Output"
-msgstr "Fit to Eligo"
+msgid "Fit to Screen"
+msgstr ""
 
-#: kcmtablet.cpp:138
+#: kcmtablet.cpp:161
 #, kde-format
-msgid "Fit Output in tablet"
-msgstr "Fit Eligo en tablojdo"
+msgid "Keep Aspect Ratio and Fit Within Screen"
+msgstr ""
 
-#: kcmtablet.cpp:139
+#: kcmtablet.cpp:162
 #, kde-format
-msgid "Custom size"
-msgstr "Propra grandeco"
+msgid "Map to Portion of Screen"
+msgstr ""
 
 #: ui/main.qml:29
 #, kde-format
@@ -93,33 +99,40 @@ msgstr "Aparato:"
 
 #: ui/main.qml:96
 #, kde-format
-msgid "Target display:"
-msgstr "Cel-ekrano:"
+msgid "Map to screen:"
+msgstr ""
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientiĝo:"
 
-#: ui/main.qml:127
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#: ui/main.qml:128
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Maldekstramana reĝimo:"
 
-#: ui/main.qml:138
-#, kde-kuit-format
+#: ui/main.qml:139
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Tells the device to to accommodate left-handed users. Effects will vary "
+#| "by device, but often it reverses the pad buttonsʼ functionality so the "
+#| "tablet can be used upside-down."
 msgctxt "@info"
 msgid ""
-"Tells the device to to accommodate left-handed users. Effects will vary by "
+"Tells the device to accommodate left-handed users. Effects will vary by "
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"instruas la aparaton akomodi maldekstramanajn uzantojn. Efikoj varios laŭ "
+"aparato, sed ofte ĝi inversigas la funkciecon de la platbutonoj por ke la "
+"tabuleto povu esti uzata renverse."
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
-msgid "Area:"
-msgstr "Areo:"
+msgid "Mapped Area:"
+msgstr ""
 
 #: ui/main.qml:232
 #, kde-format
@@ -173,22 +186,22 @@ msgstr "Matbutono %1:"
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "Tabulet-Testilo"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Grifelpremo X=%1 Y=%2"
 
 #: ui/Tester.qml:56
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Grifelmalpremo X=%1 Y=%2"
 
 #: ui/Tester.qml:64
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Grifelmovo X=%1 Y=%2"
 
 #: ui/Tester.qml:186
 #, kde-format
@@ -196,9 +209,29 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Klarigeto:\n"
+"# X, Y - eventkoordinato\n"
 
 #: ui/Tester.qml:193
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Malplenigi"
+
+#~ msgid "Primary (default)"
+#~ msgstr "Ĉefa (defaŭlte)"
+
+#~ msgid "Fit to Output"
+#~ msgstr "Fit to Eligo"
+
+#~ msgid "Fit Output in tablet"
+#~ msgstr "Fit Eligo en tablojdo"
+
+#~ msgid "Custom size"
+#~ msgstr "Propra grandeco"
+
+#~ msgid "Target display:"
+#~ msgstr "Cel-ekrano:"
+
+#~ msgid "Area:"
+#~ msgstr "Areo:"

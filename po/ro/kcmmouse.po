@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-06-08 17:06+0100\n"
+"PO-Revision-Date: 2024-06-09 15:00+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -89,12 +89,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Dispozitiv de indicare deconectat. Nu au fost găsite alte dispozitive."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Re-bind Additional Mouse Buttons…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Bindings for Additional Mouse Buttons"
-msgstr "Leagă butoane de maus suplimentare…"
+msgstr "Legături pentru butoane de maus suplimentare"
 
 #: ui/bindings.qml:69
 #, kde-format
@@ -188,6 +186,9 @@ msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
+"Activarea acestei opțiuni mărește latența clicului de maus cu 50ms. Latența "
+"suplimentară e necesară pentru a depista corect apăsarea simultană a "
+"clicului stâng și drept."
 
 #: ui/main.qml:156
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:40+0000\n"
+"POT-Creation-Date: 2024-06-11 00:40+0000\n"
 "PO-Revision-Date: 2024-02-25 09:26-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 
 #: kcmtablet.cpp:32
 #, kde-format
-msgid "Primary (default)"
-msgstr "ਪ੍ਰਾਇਮਰੀ (ਡਿਫਾਲਟ)"
+msgid "Default"
+msgstr ""
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -43,30 +43,36 @@ msgid "Inverted Landscape"
 msgstr "ਉਲਟ ਲੈਂਡਸਕੇਪ"
 
 #: kcmtablet.cpp:86
-#, kde-format
-msgid "Follow the active screen"
+#, fuzzy, kde-format
+#| msgid "Follow the active screen"
+msgid "Follow the Current Screen"
 msgstr "ਸਰਗਰਮ ਸਕਰੀਨ ਮੁਤਾਬਕ"
 
-#: kcmtablet.cpp:94
+#: kcmtablet.cpp:91
+#, kde-format
+msgid "All Screens"
+msgstr ""
+
+#: kcmtablet.cpp:100
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:137
+#: kcmtablet.cpp:160
 #, kde-format
-msgid "Fit to Output"
-msgstr "ਆਉਟਪੁੱਟ ਲਈ ਫਿੱਟ"
+msgid "Fit to Screen"
+msgstr ""
 
-#: kcmtablet.cpp:138
+#: kcmtablet.cpp:161
 #, kde-format
-msgid "Fit Output in tablet"
-msgstr "ਟੈਬਲੇਟ ਵਿੱਚ ਆਉਟਪੁ਼ਟ ਨੂੰ ਫਿੱਟ ਕਰੋ"
+msgid "Keep Aspect Ratio and Fit Within Screen"
+msgstr ""
 
-#: kcmtablet.cpp:139
+#: kcmtablet.cpp:162
 #, kde-format
-msgid "Custom size"
-msgstr "ਕਸਟਮ ਆਕਾਰ"
+msgid "Map to Portion of Screen"
+msgstr ""
 
 #: ui/main.qml:29
 #, kde-format
@@ -92,33 +98,33 @@ msgstr "ਡਿਵਾਈਸ:"
 
 #: ui/main.qml:96
 #, kde-format
-msgid "Target display:"
-msgstr "ਟਾਰਗੇਟ ਡਿਸਪਲੇਅ:"
+msgid "Map to screen:"
+msgstr ""
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Orientation:"
 msgstr "ਸਥਿਤੀ:"
 
-#: ui/main.qml:127
+#: ui/main.qml:128
 #, fuzzy, kde-format
 #| msgid "Left-handed mode:"
 msgid "Left-handed mode:"
 msgstr "ਖੱਬੇ ਹੱਥਾ ਢੰਗ:"
 
-#: ui/main.qml:138
+#: ui/main.qml:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"Tells the device to to accommodate left-handed users. Effects will vary by "
+"Tells the device to accommodate left-handed users. Effects will vary by "
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
-msgid "Area:"
-msgstr "ਖੇਤਰ:"
+msgid "Mapped Area:"
+msgstr ""
 
 #: ui/main.qml:232
 #, kde-format
@@ -205,3 +211,21 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr ""
+
+#~ msgid "Primary (default)"
+#~ msgstr "ਪ੍ਰਾਇਮਰੀ (ਡਿਫਾਲਟ)"
+
+#~ msgid "Fit to Output"
+#~ msgstr "ਆਉਟਪੁੱਟ ਲਈ ਫਿੱਟ"
+
+#~ msgid "Fit Output in tablet"
+#~ msgstr "ਟੈਬਲੇਟ ਵਿੱਚ ਆਉਟਪੁ਼ਟ ਨੂੰ ਫਿੱਟ ਕਰੋ"
+
+#~ msgid "Custom size"
+#~ msgstr "ਕਸਟਮ ਆਕਾਰ"
+
+#~ msgid "Target display:"
+#~ msgstr "ਟਾਰਗੇਟ ਡਿਸਪਲੇਅ:"
+
+#~ msgid "Area:"
+#~ msgstr "ਖੇਤਰ:"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:40+0000\n"
-"PO-Revision-Date: 2024-04-10 14:09+0300\n"
+"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"PO-Revision-Date: 2024-06-10 10:34+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
-msgid "Primary (default)"
-msgstr "Birincil (öntanımlı)"
+msgid "Default"
+msgstr ""
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -44,30 +44,36 @@ msgid "Inverted Landscape"
 msgstr "Ters Çevrilmiş Yatay"
 
 #: kcmtablet.cpp:86
-#, kde-format
-msgid "Follow the active screen"
+#, fuzzy, kde-format
+#| msgid "Follow the active screen"
+msgid "Follow the Current Screen"
 msgstr "Etkin ekranı izle"
 
-#: kcmtablet.cpp:94
+#: kcmtablet.cpp:91
+#, kde-format
+msgid "All Screens"
+msgstr ""
+
+#: kcmtablet.cpp:100
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 — (%2, %3 %4 × %5)"
 
-#: kcmtablet.cpp:137
+#: kcmtablet.cpp:160
 #, kde-format
-msgid "Fit to Output"
-msgstr "Çıktıya Sığdır"
+msgid "Fit to Screen"
+msgstr ""
 
-#: kcmtablet.cpp:138
+#: kcmtablet.cpp:161
 #, kde-format
-msgid "Fit Output in tablet"
-msgstr "Tablette Çıktıya Sığdır"
+msgid "Keep Aspect Ratio and Fit Within Screen"
+msgstr ""
 
-#: kcmtablet.cpp:139
+#: kcmtablet.cpp:162
 #, kde-format
-msgid "Custom size"
-msgstr "Özel Boyut"
+msgid "Map to Portion of Screen"
+msgstr ""
 
 #: ui/main.qml:29
 #, kde-format
@@ -83,7 +89,7 @@ msgstr "Bir çizim tableti bağlayın"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Tableti Sına…"
 
 #: ui/main.qml:58
 #, kde-format
@@ -93,33 +99,41 @@ msgstr "Aygıt:"
 
 #: ui/main.qml:96
 #, kde-format
-msgid "Target display:"
-msgstr "Hedef görüntü:"
+msgid "Map to screen:"
+msgstr ""
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Orientation:"
 msgstr "Yönelim:"
 
-#: ui/main.qml:127
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#: ui/main.qml:128
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Sol el kipi:"
 
-#: ui/main.qml:138
-#, kde-kuit-format
+#: ui/main.qml:139
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Tells the device to to accommodate left-handed users. Effects will vary "
+#| "by device, but often it reverses the pad buttonsʼ functionality so the "
+#| "tablet can be used upside-down."
 msgctxt "@info"
 msgid ""
-"Tells the device to to accommodate left-handed users. Effects will vary by "
+"Tells the device to accommodate left-handed users. Effects will vary by "
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Aygıta, sol elini kullanan kullanıcıları da dikkate almasını söyler. "
+"Etkileri aygıta göre değiştir; ancak genelde ped düğmelerininin "
+"işlevselliğini birbirleriyle değiştirir; böylece tablet diğer yönde de "
+"kullanılabilir."
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
-msgid "Area:"
-msgstr "Alan:"
+msgid "Mapped Area:"
+msgstr ""
 
 #: ui/main.qml:232
 #, kde-format
@@ -173,22 +187,22 @@ msgstr "Ped düğmesi %1:"
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "Tablet Sınayıcısı"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Kalem basışı X = %1 Y = %2"
 
 #: ui/Tester.qml:56
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Kalem bırakışı X = %1 Y = %2"
 
 #: ui/Tester.qml:64
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Kalem hareketi X = %1 Y = %2"
 
 #: ui/Tester.qml:186
 #, kde-format
@@ -196,12 +210,32 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Gösterge:\n"
+"# X, Y — Olay koordinatı\n"
 
 #: ui/Tester.qml:193
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Temizle"
+
+#~ msgid "Primary (default)"
+#~ msgstr "Birincil (öntanımlı)"
+
+#~ msgid "Fit to Output"
+#~ msgstr "Çıktıya Sığdır"
+
+#~ msgid "Fit Output in tablet"
+#~ msgstr "Tablette Çıktıya Sığdır"
+
+#~ msgid "Custom size"
+#~ msgstr "Özel Boyut"
+
+#~ msgid "Target display:"
+#~ msgstr "Hedef görüntü:"
+
+#~ msgid "Area:"
+#~ msgstr "Alan:"
 
 #~ msgid "Tool Button 1"
 #~ msgstr "Araç Düğmesi 1"

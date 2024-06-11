@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:40+0000\n"
+"POT-Creation-Date: 2024-06-11 00:40+0000\n"
 "PO-Revision-Date: 2023-05-03 21:44+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: kcmtablet.cpp:32
 #, kde-format
-msgid "Primary (default)"
+msgid "Default"
 msgstr ""
 
 #: kcmtablet.cpp:33
@@ -44,28 +44,33 @@ msgstr ""
 
 #: kcmtablet.cpp:86
 #, kde-format
-msgid "Follow the active screen"
+msgid "Follow the Current Screen"
 msgstr ""
 
-#: kcmtablet.cpp:94
+#: kcmtablet.cpp:91
+#, kde-format
+msgid "All Screens"
+msgstr ""
+
+#: kcmtablet.cpp:100
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr ""
 
-#: kcmtablet.cpp:137
+#: kcmtablet.cpp:160
 #, kde-format
-msgid "Fit to Output"
+msgid "Fit to Screen"
 msgstr ""
 
-#: kcmtablet.cpp:138
+#: kcmtablet.cpp:161
 #, kde-format
-msgid "Fit Output in tablet"
+msgid "Keep Aspect Ratio and Fit Within Screen"
 msgstr ""
 
-#: kcmtablet.cpp:139
+#: kcmtablet.cpp:162
 #, kde-format
-msgid "Custom size"
+msgid "Map to Portion of Screen"
 msgstr ""
 
 #: ui/main.qml:29
@@ -92,31 +97,31 @@ msgstr ""
 
 #: ui/main.qml:96
 #, kde-format
-msgid "Target display:"
+msgid "Map to screen:"
 msgstr ""
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Orientation:"
 msgstr ""
 
-#: ui/main.qml:127
+#: ui/main.qml:128
 #, kde-format
 msgid "Left-handed mode:"
 msgstr ""
 
-#: ui/main.qml:138
+#: ui/main.qml:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"Tells the device to to accommodate left-handed users. Effects will vary by "
+"Tells the device to accommodate left-handed users. Effects will vary by "
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
-msgid "Area:"
+msgid "Mapped Area:"
 msgstr ""
 
 #: ui/main.qml:232

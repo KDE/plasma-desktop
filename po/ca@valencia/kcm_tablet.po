@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:40+0000\n"
-"PO-Revision-Date: 2024-04-10 12:20+0200\n"
+"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"PO-Revision-Date: 2024-06-10 10:50+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -21,8 +21,8 @@ msgstr ""
 
 #: kcmtablet.cpp:32
 #, kde-format
-msgid "Primary (default)"
-msgstr "Primari (predeterminat)"
+msgid "Default"
+msgstr ""
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -45,30 +45,36 @@ msgid "Inverted Landscape"
 msgstr "Apaïsat invertit"
 
 #: kcmtablet.cpp:86
-#, kde-format
-msgid "Follow the active screen"
+#, fuzzy, kde-format
+#| msgid "Follow the active screen"
+msgid "Follow the Current Screen"
 msgstr "Seguix la pantalla activa"
 
-#: kcmtablet.cpp:94
+#: kcmtablet.cpp:91
+#, kde-format
+msgid "All Screens"
+msgstr ""
+
+#: kcmtablet.cpp:100
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:137
+#: kcmtablet.cpp:160
 #, kde-format
-msgid "Fit to Output"
-msgstr "Ajusta a l'eixida"
+msgid "Fit to Screen"
+msgstr ""
 
-#: kcmtablet.cpp:138
+#: kcmtablet.cpp:161
 #, kde-format
-msgid "Fit Output in tablet"
-msgstr "Ajusta a l'eixida en una tauleta"
+msgid "Keep Aspect Ratio and Fit Within Screen"
+msgstr ""
 
-#: kcmtablet.cpp:139
+#: kcmtablet.cpp:162
 #, kde-format
-msgid "Custom size"
-msgstr "Mida personalitzada"
+msgid "Map to Portion of Screen"
+msgstr ""
 
 #: ui/main.qml:29
 #, kde-format
@@ -84,7 +90,7 @@ msgstr "Connecta una tauleta de dibuix"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Prova la tauleta…"
 
 #: ui/main.qml:58
 #, kde-format
@@ -94,33 +100,40 @@ msgstr "Dispositiu:"
 
 #: ui/main.qml:96
 #, kde-format
-msgid "Target display:"
-msgstr "Pantalla de destinació:"
+msgid "Map to screen:"
+msgstr ""
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientació:"
 
-#: ui/main.qml:127
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#: ui/main.qml:128
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Mode esquerrà:"
 
-#: ui/main.qml:138
-#, kde-kuit-format
+#: ui/main.qml:139
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Tells the device to to accommodate left-handed users. Effects will vary "
+#| "by device, but often it reverses the pad buttonsʼ functionality so the "
+#| "tablet can be used upside-down."
 msgctxt "@info"
 msgid ""
-"Tells the device to to accommodate left-handed users. Effects will vary by "
+"Tells the device to accommodate left-handed users. Effects will vary by "
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Li diu al dispositiu que s'adapte als usuaris esquerrans. Els efectes "
+"variaran segons el dispositiu, però sovint s'invertix la funcionalitat dels "
+"botons del teclat perquè la tauleta es puga utilitzar cap per avall."
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
-msgid "Area:"
-msgstr "Àrea:"
+msgid "Mapped Area:"
+msgstr ""
 
 #: ui/main.qml:232
 #, kde-format
@@ -174,22 +187,22 @@ msgstr "Botó de teclat %1:"
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "Provador de la tauleta"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Llapis premut X=%1 Y=%2"
 
 #: ui/Tester.qml:56
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Llapis deixat anar X=%1 Y=%2"
 
 #: ui/Tester.qml:64
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Moviment del llapis X=%1 Y=%2"
 
 #: ui/Tester.qml:186
 #, kde-format
@@ -197,9 +210,29 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Llegenda:\n"
+"# X, Y - coordenades de l'esdeveniment\n"
 
 #: ui/Tester.qml:193
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Neteja"
+
+#~ msgid "Primary (default)"
+#~ msgstr "Primari (predeterminat)"
+
+#~ msgid "Fit to Output"
+#~ msgstr "Ajusta a l'eixida"
+
+#~ msgid "Fit Output in tablet"
+#~ msgstr "Ajusta a l'eixida en una tauleta"
+
+#~ msgid "Custom size"
+#~ msgstr "Mida personalitzada"
+
+#~ msgid "Target display:"
+#~ msgstr "Pantalla de destinació:"
+
+#~ msgid "Area:"
+#~ msgstr "Àrea:"

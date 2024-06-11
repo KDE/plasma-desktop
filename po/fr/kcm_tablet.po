@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:40+0000\n"
+"POT-Creation-Date: 2024-06-11 00:40+0000\n"
 "PO-Revision-Date: 2024-04-11 09:07+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -16,8 +16,8 @@ msgstr ""
 
 #: kcmtablet.cpp:32
 #, kde-format
-msgid "Primary (default)"
-msgstr "Primaire (Par défaut)"
+msgid "Default"
+msgstr ""
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -40,30 +40,36 @@ msgid "Inverted Landscape"
 msgstr "Paysage inversé"
 
 #: kcmtablet.cpp:86
-#, kde-format
-msgid "Follow the active screen"
+#, fuzzy, kde-format
+#| msgid "Follow the active screen"
+msgid "Follow the Current Screen"
 msgstr "Suivre l'écran actif"
 
-#: kcmtablet.cpp:94
+#: kcmtablet.cpp:91
+#, kde-format
+msgid "All Screens"
+msgstr ""
+
+#: kcmtablet.cpp:100
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2, %3 %4 × %5)"
 
-#: kcmtablet.cpp:137
+#: kcmtablet.cpp:160
 #, kde-format
-msgid "Fit to Output"
-msgstr "Faire correspondre à la sortie"
+msgid "Fit to Screen"
+msgstr ""
 
-#: kcmtablet.cpp:138
+#: kcmtablet.cpp:161
 #, kde-format
-msgid "Fit Output in tablet"
-msgstr "Faire correspondre à la sortie pour une tablette"
+msgid "Keep Aspect Ratio and Fit Within Screen"
+msgstr ""
 
-#: kcmtablet.cpp:139
+#: kcmtablet.cpp:162
 #, kde-format
-msgid "Custom size"
-msgstr "Taille personnalisée"
+msgid "Map to Portion of Screen"
+msgstr ""
 
 #: ui/main.qml:29
 #, kde-format
@@ -90,33 +96,32 @@ msgstr "Périphérique :"
 
 #: ui/main.qml:96
 #, kde-format
-msgid "Target display:"
-msgstr "Affichage cible :"
+msgid "Map to screen:"
+msgstr ""
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientation :"
 
-#: ui/main.qml:127
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#: ui/main.qml:128
+#, kde-format
 msgid "Left-handed mode:"
-msgstr "Mode pour gaucher :"
+msgstr "Mode gaucher :"
 
-#: ui/main.qml:138
+#: ui/main.qml:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"Tells the device to to accommodate left-handed users. Effects will vary by "
+"Tells the device to accommodate left-handed users. Effects will vary by "
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
-msgid "Area:"
-msgstr "Zone :"
+msgid "Mapped Area:"
+msgstr ""
 
 #: ui/main.qml:232
 #, kde-format
@@ -200,6 +205,24 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr ""
+
+#~ msgid "Primary (default)"
+#~ msgstr "Primaire (Par défaut)"
+
+#~ msgid "Fit to Output"
+#~ msgstr "Faire correspondre à la sortie"
+
+#~ msgid "Fit Output in tablet"
+#~ msgstr "Faire correspondre à la sortie pour une tablette"
+
+#~ msgid "Custom size"
+#~ msgstr "Taille personnalisée"
+
+#~ msgid "Target display:"
+#~ msgstr "Affichage cible :"
+
+#~ msgid "Area:"
+#~ msgstr "Zone :"
 
 #~ msgid "Tool Button 1"
 #~ msgstr "Bouton 1 d'outils"
