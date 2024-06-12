@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2024-04-10 04:44+0200\n"
+"PO-Revision-Date: 2024-06-11 04:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "ნაგულისხმევი"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -44,15 +44,14 @@ msgid "Inverted Landscape"
 msgstr "აყირავებული ლანდშაფტი"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "აქტიურ ეკრანზე მიყოლება"
+msgstr "მიმდნარე ეკრანზე მიყოლება"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "ყველა ეკრანი"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -63,17 +62,17 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "ეკრანზე ჩატევა"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "ასპექტის ფარდობის შენარჩუნება და ეკრანზე ჩატევა"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "ასახვა ეკრანის ნაწილზე"
 
 #: ui/main.qml:29
 #, kde-format
@@ -89,7 +88,7 @@ msgstr "მიუერთეთ სახატავი ტაბლეტი"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "ტაბლეტის შემოწმება…"
 
 #: ui/main.qml:58
 #, kde-format
@@ -100,7 +99,7 @@ msgstr "მოწყობილობა:"
 #: ui/main.qml:96
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "ასახვა ეკრანზე:"
 
 #: ui/main.qml:116
 #, kde-format
@@ -108,8 +107,7 @@ msgid "Orientation:"
 msgstr "ორიენტაცია:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "ცაციის რეჟიმი:"
 
@@ -121,11 +119,14 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"ეტყვის მოწყობილობას, ცაცია მომხმარებელთან იმუშაოს. ეფექტი იცვლება "
+"მოწყობილობიდან მოწყობილობამდე, მაგრამ ის ხშირად შეაბრუნებს პადის ღილაკების "
+"ფუნქციებს ისე, რომ ტაბლეტი, შეგიძლიათ, უკუღმა დაიჭიროთ."
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "ასახული ალაგი:"
 
 #: ui/main.qml:232
 #, kde-format
@@ -179,22 +180,22 @@ msgstr "პადის ღილაკი %1:"
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "ტაბლეტის შემმოწმებელი"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "სტილუსის დაჭერის X=%1 Y=%2"
 
 #: ui/Tester.qml:56
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "სტილუსის აშვების X=%1 Y=%2"
 
 #: ui/Tester.qml:64
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "სტილუსის გადაადგილების X=%1 Y=%2"
 
 #: ui/Tester.qml:186
 #, kde-format
@@ -202,12 +203,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## ახსნა:\n"
+"# X, Y - მოვლენის კოორდინატები\n"
 
 #: ui/Tester.qml:193
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "გასუფთავება"
 
 #~ msgid "Primary (default)"
 #~ msgstr "ძირითადი (ნაგულისხმები)"

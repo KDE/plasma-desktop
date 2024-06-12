@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2024-05-03 16:34+0200\n"
+"PO-Revision-Date: 2024-06-11 09:27+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -43,10 +43,9 @@ msgid "Inverted Landscape"
 msgstr "Obrácené na šířku"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Následovat aktivní obrazovku"
+msgstr ""
 
 #: kcmtablet.cpp:91
 #, kde-format
@@ -88,7 +87,7 @@ msgstr "Připojit grafický tablet"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Tabulka testů"
 
 #: ui/main.qml:58
 #, kde-format
@@ -107,8 +106,7 @@ msgid "Orientation:"
 msgstr "Orientace:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Režim pro leváka:"
 
@@ -207,22 +205,4 @@ msgstr ""
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
-
-#~ msgid "Primary (default)"
-#~ msgstr "Primární (výchozí)"
-
-#~ msgid "Fit to Output"
-#~ msgstr "Uzpůsobit výstupu"
-
-#~ msgid "Fit Output in tablet"
-#~ msgstr "Uzpůsobit výstup v tabletu"
-
-#~ msgid "Custom size"
-#~ msgstr "Vlastní velikost"
-
-#~ msgid "Target display:"
-#~ msgstr "Cílová obrazovka:"
-
-#~ msgid "Area:"
-#~ msgstr "Oblast:"
+msgstr "Vyprázdnit"

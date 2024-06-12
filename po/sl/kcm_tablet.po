@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2024-06-10 07:28+0200\n"
+"PO-Revision-Date: 2024-06-11 07:51+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Privzeto"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -44,15 +44,14 @@ msgid "Inverted Landscape"
 msgstr "Obrnjena pokrajina"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Sledi aktivnemu zaslonu"
+msgstr "Sledi trenutnemu zaslonu"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Vsi zasloni"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -63,17 +62,17 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Prilagodi zaslonu"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Ohrani razmerja stranic in prilagodi zaslonu"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Preslikaj na del zaslona"
 
 #: ui/main.qml:29
 #, kde-format
@@ -100,7 +99,7 @@ msgstr "Naprava:"
 #: ui/main.qml:96
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Preslikaj na zaslon:"
 
 #: ui/main.qml:116
 #, kde-format
@@ -113,12 +112,7 @@ msgid "Left-handed mode:"
 msgstr "Način za levičarje:"
 
 #: ui/main.qml:139
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tells the device to to accommodate left-handed users. Effects will vary "
-#| "by device, but often it reverses the pad buttonsʼ functionality so the "
-#| "tablet can be used upside-down."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tells the device to accommodate left-handed users. Effects will vary by "
@@ -132,7 +126,7 @@ msgstr ""
 #: ui/main.qml:145
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Preslikano območje:"
 
 #: ui/main.qml:232
 #, kde-format
