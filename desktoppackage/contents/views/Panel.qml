@@ -138,7 +138,11 @@ Item {
     }
 
     // This value is read from panelview.cpp and disables shadow for floating panels, as they'd be detached from the panel
-    property bool hasShadows: floatingness < 0.5
+    property real topShadowMargin: -floatingTranslucentItem.y
+    property real leftShadowMargin: -floatingTranslucentItem.x
+    property real rightShadowMargin: -(width - floatingTranslucentItem.width - floatingTranslucentItem.x)
+    property real bottomShadowMargin: -(height - floatingTranslucentItem.height - floatingTranslucentItem.y)
+
     property var panelMask: floatingness === 0 ? (panelOpacity === 1 ? opaqueItem.mask : translucentItem.mask) : (panelOpacity === 1 ? floatingOpaqueItem.mask : floatingTranslucentItem.mask)
 
     // The point is read from panelview.cpp and is used as an offset for the mask
@@ -154,8 +158,8 @@ Item {
     KSvg.FrameSvgItem {
         id: floatingTranslucentItem
         visible: floatingness !== 0 && panelOpacity !== 1
-        x: root.leftEdge ? fixedLeftFloatingPadding + fixedRightFloatingPadding * (1 - floatingness) : leftFloatingPadding
-        y: root.topEdge ? fixedTopFloatingPadding + fixedBottomFloatingPadding * (1 - floatingness) : topFloatingPadding
+        x: root.rightEdge ? fixedLeftFloatingPadding + fixedRightFloatingPadding * (1 - floatingness) : leftFloatingPadding
+        y: root.bottomEdge ? fixedTopFloatingPadding + fixedBottomFloatingPadding * (1 - floatingness) : topFloatingPadding
         width: verticalPanel ? panel.thickness : parent.width - leftFloatingPadding - rightFloatingPadding
         height: verticalPanel ? parent.height - topFloatingPadding - bottomFloatingPadding : panel.thickness
 
