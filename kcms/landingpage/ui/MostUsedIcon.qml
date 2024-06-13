@@ -11,7 +11,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.kirigami 2.5 as Kirigami
 
-QQC2.ToolButton {
+QQC2.Button {
     // We're using custom properties rather than plain old icon.name: and text:
     // because this would cause the icon and text to be rendered twice with
     // qqc2-desktop-style since it does all its rendering in the background item
@@ -25,10 +25,10 @@ QQC2.ToolButton {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              implicitContentHeight + topPadding + bottomPadding)
 
-    leftPadding: Kirigami.Units.smallSpacing
-    rightPadding: Kirigami.Units.smallSpacing
-    topPadding: Kirigami.Units.smallSpacing
-    bottomPadding: Kirigami.Units.smallSpacing
+    leftPadding: Kirigami.Units.largeSpacing
+    rightPadding: Kirigami.Units.largeSpacing
+    topPadding: Kirigami.Units.largeSpacing
+    bottomPadding: Kirigami.Units.largeSpacing
     spacing: Kirigami.Units.smallSpacing
 
     Accessible.name: label.text
@@ -39,8 +39,8 @@ QQC2.ToolButton {
         Kirigami.Icon {
             id: iconItem
             Layout.alignment: Qt.AlignCenter
-            implicitWidth: Kirigami.Units.iconSizes.smallMedium
-            implicitHeight: Kirigami.Units.iconSizes.smallMedium
+            implicitWidth: Kirigami.Units.iconSizes.small
+            implicitHeight: Kirigami.Units.iconSizes.small
         }
 
         QQC2.Label {

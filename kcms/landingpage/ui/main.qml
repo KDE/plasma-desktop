@@ -229,8 +229,8 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             rows: 3
             columns: 2
-            rowSpacing: 0
-            columnSpacing: 0
+            rowSpacing: Kirigami.Units.smallSpacing
+            columnSpacing: Kirigami.Units.smallSpacing
 
             Kirigami.SizeGroup {
                 id: mostUsedPagesSizeGroup
