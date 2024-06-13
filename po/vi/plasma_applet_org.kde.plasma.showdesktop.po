@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2024-06-13 00:40+0000\n"
 "PO-Revision-Date: 2023-01-08 16:23+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -16,6 +16,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.0\n"
+
+#: package/contents/ui/main.qml:116
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Minimize All Windows"
+msgid "Minimize All Applet Active Indicator"
+msgstr "Thu nhỏ tất cả các cửa sổ"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format

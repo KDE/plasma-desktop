@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2024-04-16 19:31+0900\n"
+"PO-Revision-Date: 2024-06-13 03:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "預設"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -46,15 +46,14 @@ msgid "Inverted Landscape"
 msgstr "橫向反轉"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "跟隨作用中螢幕"
+msgstr "跟隨目前螢幕"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "所有螢幕"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -65,17 +64,17 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "符合螢幕"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "維持寬高比並調整為適合螢幕大小"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "映射到螢幕的一部分"
 
 #: ui/main.qml:29
 #, kde-format
@@ -91,7 +90,7 @@ msgstr "請連線一個繪圖平板"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "測試繪圖板…"
 
 #: ui/main.qml:58
 #, kde-format
@@ -102,7 +101,7 @@ msgstr "裝置："
 #: ui/main.qml:96
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "映射到螢幕："
 
 #: ui/main.qml:116
 #, kde-format
@@ -110,8 +109,7 @@ msgid "Orientation:"
 msgstr "方向："
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "左手模式："
 
@@ -123,11 +121,13 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"告訴裝置使用為慣用左手使用者設計的模式。每個裝置的效果不同，但通常會反轉按鈕"
+"功能的順序讓繪圖板能夠反過來使用。"
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "映射區域："
 
 #: ui/main.qml:232
 #, kde-format
@@ -181,22 +181,22 @@ msgstr "繪圖板按鈕 %1："
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "繪圖板測試器"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "畫筆按下 X=%1 Y=%2"
 
 #: ui/Tester.qml:56
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "畫筆釋放 X=%1 Y=%2"
 
 #: ui/Tester.qml:64
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "畫筆移動 X=%1 Y=%2"
 
 #: ui/Tester.qml:186
 #, kde-format
@@ -204,12 +204,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## 圖例：\n"
+"# X, Y - 事件座標\n"
 
 #: ui/Tester.qml:193
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "清除"
 
 #~ msgid "Primary (default)"
 #~ msgstr "主要（預設）"

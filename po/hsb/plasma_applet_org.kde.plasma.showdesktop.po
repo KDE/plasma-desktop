@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2024-06-13 00:40+0000\n"
 "PO-Revision-Date: 2021-10-26 19:17+0200\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
+
+#: package/contents/ui/main.qml:116
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Minimize All Windows"
+msgid "Minimize All Applet Active Indicator"
+msgstr "Wšitke wokna dopomjeńšić"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, fuzzy, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2024-06-13 00:40+0000\n"
 "PO-Revision-Date: 2022-09-24 15:59+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
+
+#: package/contents/ui/main.qml:116
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Minimize All Windows"
+msgid "Minimize All Applet Active Indicator"
+msgstr "Minimera alla fönster"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format

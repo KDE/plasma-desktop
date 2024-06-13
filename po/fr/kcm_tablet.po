@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2024-04-11 09:07+0200\n"
+"PO-Revision-Date: 2024-06-11 09:20+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -82,11 +82,10 @@ msgid "Connect a drawing tablet"
 msgstr "Configurer une tablette graphique"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Tablette"
+msgstr "Teste la tablette..."
 
 #: ui/main.qml:58
 #, kde-format
@@ -172,26 +171,25 @@ msgid "Pad button %1:"
 msgstr "Bouton %1 du pavé tactile :"
 
 #: ui/Tester.qml:27
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr "Tablette"
+msgstr "Testeur de tablettes"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Appui du stylet X = %1 Y = %2"
 
 #: ui/Tester.qml:56
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Relâchement du stylet X = %1 Y = %2"
 
 #: ui/Tester.qml:64
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Déplacement du stylet X = %1 Y = %2"
 
 #: ui/Tester.qml:186
 #, kde-format
@@ -199,12 +197,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Légende :\n"
+"# X, Y - coordonnée de l'événement\n"
 
 #: ui/Tester.qml:193
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Effacer"
 
 #~ msgid "Primary (default)"
 #~ msgstr "Primaire (Par défaut)"

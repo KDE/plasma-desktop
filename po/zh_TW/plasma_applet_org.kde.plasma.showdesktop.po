@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-26 00:54+0000\n"
+"POT-Creation-Date: 2024-06-13 00:40+0000\n"
 "PO-Revision-Date: 2023-02-09 00:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -21,6 +21,13 @@ msgstr ""
 "dot tw>\n"
 "X-Generator: Lokalize 23.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: package/contents/ui/main.qml:116
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Minimize All Windows"
+msgid "Minimize All Applet Active Indicator"
+msgstr "最小化所有視窗"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
