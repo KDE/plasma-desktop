@@ -1,16 +1,16 @@
 # Translation of plasma_applet_org.kde.plasma.showdesktop.po to Catalan
-# Copyright (C) 2008-2023 This_file_is_part_of_KDE
+# Copyright (C) 2008-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2015, 2016, 2018, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2015, 2016, 2018, 2021, 2022, 2023, 2024.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-13 00:40+0000\n"
-"PO-Revision-Date: 2023-09-24 17:18+0200\n"
+"PO-Revision-Date: 2024-06-13 14:04+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -22,11 +22,9 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 
 #: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgid "Minimize All Applet Active Indicator"
-msgstr "Minimitza totes les finestres"
+msgstr "Minimitza tots els indicadors actius de miniaplicació"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format

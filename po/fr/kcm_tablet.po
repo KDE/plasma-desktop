@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2024-06-11 09:20+0200\n"
+"PO-Revision-Date: 2024-06-12 09:09+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Par défaut"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -40,15 +40,14 @@ msgid "Inverted Landscape"
 msgstr "Paysage inversé"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Suivre l'écran actif"
+msgstr "Suivre l'écran courant"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Tous les écrans"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -59,17 +58,17 @@ msgstr "%1 - (%2, %3 %4 × %5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "S'adapter à la taille de l’écran"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Conserver le rapport d'aspect et ajuster à l'écran"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Faire correspondre à une partie de l'écran"
 
 #: ui/main.qml:29
 #, kde-format
@@ -96,7 +95,7 @@ msgstr "Périphérique :"
 #: ui/main.qml:96
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Faire correspondre à l'écran :"
 
 #: ui/main.qml:116
 #, kde-format
@@ -116,11 +115,15 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Indique au périphérique de s'adapter aux personnes gauchères. Les effets "
+"varieront selon le périphérique. Mais souvent, la fonctionnalité des boutons "
+"du pavé tactile est inversée afin que la tablette puisse être utilisée à "
+"l'envers."
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Zone correspondante :"
 
 #: ui/main.qml:232
 #, kde-format
