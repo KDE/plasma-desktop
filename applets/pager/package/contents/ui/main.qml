@@ -393,7 +393,7 @@ PlasmoidItem {
                     anchors.fill: parent
                     imagePath: "widgets/pager"
                     opacity: desktop.state === usedPrefix ? 1 : 0
-                    Behavior on opacity { OpacityAnimator { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
+                    Behavior on opacity { NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
                 }
 
                 PagerFrame {
