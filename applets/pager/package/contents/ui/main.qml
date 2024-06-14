@@ -505,8 +505,6 @@ PlasmoidItem {
                             border.color: (model.IsActive === true) ? windowActiveBorderColor
                                                     : windowInactiveBorderColor
 
-                            Behavior on width  { NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
-                            Behavior on height { NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
                             Behavior on color        { ColorAnimation  { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
                             Behavior on border.color { ColorAnimation  { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
 
