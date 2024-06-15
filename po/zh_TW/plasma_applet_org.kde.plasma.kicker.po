@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-09 00:39+0000\n"
+"POT-Creation-Date: 2024-06-15 00:40+0000\n"
 "PO-Revision-Date: 2023-05-17 03:47+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -26,169 +26,169 @@ msgstr ""
 msgid "General"
 msgstr "一般"
 
-#: package/contents/ui/code/tools.js:44
+#: package/contents/ui/code/tools.js:43
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "從我的最愛中移除"
 
-#: package/contents/ui/code/tools.js:48
+#: package/contents/ui/code/tools.js:47
 #, kde-format
 msgid "Add to Favorites"
 msgstr "新增到我的最愛"
 
-#: package/contents/ui/code/tools.js:72
+#: package/contents/ui/code/tools.js:73
 #, kde-format
 msgid "On All Activities"
 msgstr "所有活動"
 
-#: package/contents/ui/code/tools.js:122
+#: package/contents/ui/code/tools.js:123
 #, kde-format
 msgid "On the Current Activity"
 msgstr "在目前的活動"
 
-#: package/contents/ui/code/tools.js:136
+#: package/contents/ui/code/tools.js:137
 #, kde-format
 msgid "Show in Favorites"
 msgstr "在我的最愛顯示"
 
-#: package/contents/ui/ConfigGeneral.qml:47
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgid "Icon:"
 msgstr "圖示："
 
-#: package/contents/ui/ConfigGeneral.qml:127
+#: package/contents/ui/ConfigGeneral.qml:129
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "選擇…"
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: package/contents/ui/ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "清除圖示"
 
-#: package/contents/ui/ConfigGeneral.qml:150
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Show applications as:"
 msgstr "顯示應用程式方式："
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Name only"
 msgstr "只有名稱"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Description only"
 msgstr "只有描述"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Name (Description)"
 msgstr "名稱（描述）"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Description (Name)"
 msgstr "描述（名稱）"
 
-#: package/contents/ui/ConfigGeneral.qml:162
+#: package/contents/ui/ConfigGeneral.qml:164
 #, kde-format
 msgid "Behavior:"
 msgstr "行為："
 
-#: package/contents/ui/ConfigGeneral.qml:164
+#: package/contents/ui/ConfigGeneral.qml:166
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "依應用程式字母排序"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:174
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "將子選單攤平成一個階級"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:182
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "在選單最上層顯示圖示"
 
-#: package/contents/ui/ConfigGeneral.qml:190
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgid "Show categories:"
 msgstr "顯示類別："
 
-#: package/contents/ui/ConfigGeneral.qml:193
+#: package/contents/ui/ConfigGeneral.qml:195
 #, kde-format
 msgid "Recent applications"
 msgstr "最近使用的應用程式"
 
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:196
 #, kde-format
 msgid "Often used applications"
 msgstr "經常使用的應用程式"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgid "Recent files"
 msgstr "最近使用的文件"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:204
 #, kde-format
 msgid "Often used files"
 msgstr "經常使用的檔案"
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: package/contents/ui/ConfigGeneral.qml:210
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "類別項目排序方式："
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "最近使用"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "經常使用"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:221
 #, kde-format
 msgid "Search:"
 msgstr "搜尋："
 
-#: package/contents/ui/ConfigGeneral.qml:221
+#: package/contents/ui/ConfigGeneral.qml:223
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "將搜尋擴展到書籤、檔案與電子郵件"
 
-#: package/contents/ui/ConfigGeneral.qml:229
+#: package/contents/ui/ConfigGeneral.qml:231
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "將搜尋結果置於底部"
 
-#: package/contents/ui/DashboardRepresentation.qml:235
+#: package/contents/ui/DashboardRepresentation.qml:227
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "正在搜尋「%1」"
 
-#: package/contents/ui/DashboardRepresentation.qml:235
+#: package/contents/ui/DashboardRepresentation.qml:227
 #, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "輸入以搜尋…"
 
-#: package/contents/ui/DashboardRepresentation.qml:331
+#: package/contents/ui/DashboardRepresentation.qml:323
 #, kde-format
 msgid "Favorites"
 msgstr "我的最愛"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:247
 #, kde-format
 msgid "Edit Applications…"
 msgstr "編輯應用程式…"

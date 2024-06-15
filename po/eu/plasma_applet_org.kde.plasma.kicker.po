@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-09 00:39+0000\n"
+"POT-Creation-Date: 2024-06-15 00:40+0000\n"
 "PO-Revision-Date: 2023-04-12 16:10+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -25,169 +25,169 @@ msgstr ""
 msgid "General"
 msgstr "Orokorra"
 
-#: package/contents/ui/code/tools.js:44
+#: package/contents/ui/code/tools.js:43
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Ezabatu gogokoen artetik"
 
-#: package/contents/ui/code/tools.js:48
+#: package/contents/ui/code/tools.js:47
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Erantsi gogokoetara"
 
-#: package/contents/ui/code/tools.js:72
+#: package/contents/ui/code/tools.js:73
 #, kde-format
 msgid "On All Activities"
 msgstr "Jarduera guztietan"
 
-#: package/contents/ui/code/tools.js:122
+#: package/contents/ui/code/tools.js:123
 #, kde-format
 msgid "On the Current Activity"
 msgstr "Uneko jardueran"
 
-#: package/contents/ui/code/tools.js:136
+#: package/contents/ui/code/tools.js:137
 #, kde-format
 msgid "Show in Favorites"
 msgstr "Erakutsi gogokoetan"
 
-#: package/contents/ui/ConfigGeneral.qml:47
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgid "Icon:"
 msgstr "Ikonoa:"
 
-#: package/contents/ui/ConfigGeneral.qml:127
+#: package/contents/ui/ConfigGeneral.qml:129
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Hautatu..."
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: package/contents/ui/ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Berrezarri ikonoa"
 
-#: package/contents/ui/ConfigGeneral.qml:150
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Show applications as:"
 msgstr "Erakutsi aplikazioak honela:"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Name only"
 msgstr "Izena soilik"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Description only"
 msgstr "Deskribapena soilik"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Name (Description)"
 msgstr "Izena (deskribapena)"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Description (Name)"
 msgstr "Deskribapena (Izena)"
 
-#: package/contents/ui/ConfigGeneral.qml:162
+#: package/contents/ui/ConfigGeneral.qml:164
 #, kde-format
 msgid "Behavior:"
 msgstr "Jokabidea:"
 
-#: package/contents/ui/ConfigGeneral.qml:164
+#: package/contents/ui/ConfigGeneral.qml:166
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "Sailkatu aplikazioak alfabetikoki"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:174
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "Lautu azpi-menuak maila bakarrera"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:182
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "Erakutsi ikonoak menuaren erroko mailan"
 
-#: package/contents/ui/ConfigGeneral.qml:190
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgid "Show categories:"
 msgstr "Erakutsi kategoriak:"
 
-#: package/contents/ui/ConfigGeneral.qml:193
+#: package/contents/ui/ConfigGeneral.qml:195
 #, kde-format
 msgid "Recent applications"
 msgstr "Berriki erabilitako aplikazioak"
 
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:196
 #, kde-format
 msgid "Often used applications"
 msgstr "Maiz erabilitako aplikazioak"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgid "Recent files"
 msgstr "Azken aldiko fitxategiak"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:204
 #, kde-format
 msgid "Often used files"
 msgstr "Maiz erabilitako fitxategiak"
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: package/contents/ui/ConfigGeneral.qml:210
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "Sailkatu elementuak kategoriatan honen arabera:"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Berriki erabilia"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "Maiz erabilia"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:221
 #, kde-format
 msgid "Search:"
 msgstr "Bilatu:"
 
-#: package/contents/ui/ConfigGeneral.qml:221
+#: package/contents/ui/ConfigGeneral.qml:223
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Zabaldu bilaketa laster-marka, fitxategi eta posta-elektronikoetara"
 
-#: package/contents/ui/ConfigGeneral.qml:229
+#: package/contents/ui/ConfigGeneral.qml:231
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Lerrokatu bilaketa emaitzak behean"
 
-#: package/contents/ui/DashboardRepresentation.qml:235
+#: package/contents/ui/DashboardRepresentation.qml:227
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "'%1' bilatzen"
 
-#: package/contents/ui/DashboardRepresentation.qml:235
+#: package/contents/ui/DashboardRepresentation.qml:227
 #, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Bilatu beharreko mota..."
 
-#: package/contents/ui/DashboardRepresentation.qml:331
+#: package/contents/ui/DashboardRepresentation.qml:323
 #, kde-format
 msgid "Favorites"
 msgstr "Gogokoak"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:247
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Editatu aplikazioak..."

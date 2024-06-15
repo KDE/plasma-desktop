@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-09 00:39+0000\n"
+"POT-Creation-Date: 2024-06-15 00:40+0000\n"
 "PO-Revision-Date: 2023-04-15 10:27+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -22,169 +22,169 @@ msgstr ""
 msgid "General"
 msgstr "Ogólne"
 
-#: package/contents/ui/code/tools.js:44
+#: package/contents/ui/code/tools.js:43
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Usuń z ulubionych"
 
-#: package/contents/ui/code/tools.js:48
+#: package/contents/ui/code/tools.js:47
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Dodaj do ulubionych"
 
-#: package/contents/ui/code/tools.js:72
+#: package/contents/ui/code/tools.js:73
 #, kde-format
 msgid "On All Activities"
 msgstr "Na wszystkch aktywnościach"
 
-#: package/contents/ui/code/tools.js:122
+#: package/contents/ui/code/tools.js:123
 #, kde-format
 msgid "On the Current Activity"
 msgstr "Na bieżącej aktywności"
 
-#: package/contents/ui/code/tools.js:136
+#: package/contents/ui/code/tools.js:137
 #, kde-format
 msgid "Show in Favorites"
 msgstr "Pokaż w ulubionych"
 
-#: package/contents/ui/ConfigGeneral.qml:47
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: package/contents/ui/ConfigGeneral.qml:127
+#: package/contents/ui/ConfigGeneral.qml:129
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Wybierz..."
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: package/contents/ui/ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Wyczyść ikonę"
 
-#: package/contents/ui/ConfigGeneral.qml:150
+#: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Show applications as:"
 msgstr "Pokazuj programy jako:"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Name only"
 msgstr "Tylko nazwy"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Description only"
 msgstr "Tylko opisy"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Name (Description)"
 msgstr "Nazwa (opis)"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Description (Name)"
 msgstr "Opis (nazwa)"
 
-#: package/contents/ui/ConfigGeneral.qml:162
+#: package/contents/ui/ConfigGeneral.qml:164
 #, kde-format
 msgid "Behavior:"
 msgstr "Zachowanie:"
 
-#: package/contents/ui/ConfigGeneral.qml:164
+#: package/contents/ui/ConfigGeneral.qml:166
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "Uszereguj aplikacje alfabetycznie"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:174
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "Spłaszcz podmenu do jednego poziomu"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: package/contents/ui/ConfigGeneral.qml:182
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "Pokaż ikony na poziomie głównym menu"
 
-#: package/contents/ui/ConfigGeneral.qml:190
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgid "Show categories:"
 msgstr "Pokaż kategorie:"
 
-#: package/contents/ui/ConfigGeneral.qml:193
+#: package/contents/ui/ConfigGeneral.qml:195
 #, kde-format
 msgid "Recent applications"
 msgstr "Ostatnie programy"
 
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:196
 #, kde-format
 msgid "Often used applications"
 msgstr "Najczęściej używane programy"
 
-#: package/contents/ui/ConfigGeneral.qml:201
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgid "Recent files"
 msgstr "Ostatnio używane pliki"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:204
 #, kde-format
 msgid "Often used files"
 msgstr "Często używane pliki"
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: package/contents/ui/ConfigGeneral.qml:210
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "Uszereguj elementy w kategoriach wg:"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Ostatnio używanych"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "Najczęściej używanych"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:221
 #, kde-format
 msgid "Search:"
 msgstr "Szukaj:"
 
-#: package/contents/ui/ConfigGeneral.qml:221
+#: package/contents/ui/ConfigGeneral.qml:223
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Rozszerz wyszukiwanie na zakładki, pliki i pocztę"
 
-#: package/contents/ui/ConfigGeneral.qml:229
+#: package/contents/ui/ConfigGeneral.qml:231
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Wyrównaj wyniki wyszukiwania do dołu"
 
-#: package/contents/ui/DashboardRepresentation.qml:235
+#: package/contents/ui/DashboardRepresentation.qml:227
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "Szukanie '%1'"
 
-#: package/contents/ui/DashboardRepresentation.qml:235
+#: package/contents/ui/DashboardRepresentation.qml:227
 #, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Zacznij pisać, aby zacząć szukać..."
 
-#: package/contents/ui/DashboardRepresentation.qml:331
+#: package/contents/ui/DashboardRepresentation.qml:323
 #, kde-format
 msgid "Favorites"
 msgstr "Ulubione"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:247
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Edytuj programy..."
