@@ -299,30 +299,17 @@ SimpleKCM {
         }
 
         Repeater {
-            model: [
-                {
-                    value: 0x14b, // BTN_STYLUS
-                    text: i18nd("kcm_tablet", "Pen button 1:"),
-                    name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pen button 1'", "pen button 1")
-                },
-                {
-                    value: 0x14c, // BTN_STYLUS2
-                    text: i18nd("kcm_tablet", "Pen button 2:"),
-                    name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pen button 2'", "pen button 2")
-                },
-                {
-                    value: 0x149, // BTN_STYLUS3
-                    text: i18nd("kcm_tablet", "Pen button 3:"),
-                    name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pen button 3'", "pen button 3")
-                }
-            ]
+            model: StylusButtonsModel {
+                device: form.device
+                db: kcm.db
+            }
 
             delegate: ActionBinding {
                 id: seq
 
                 required property var modelData
 
-                Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + modelData.text + (buttonPressed ? "</b>" : "")
+                Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + modelData.label + (buttonPressed ? "</b>" : "")
                 property bool buttonPressed: false
 
                 name: modelData.name
