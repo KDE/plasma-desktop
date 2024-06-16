@@ -19,8 +19,6 @@ QQC2.ApplicationWindow {
     required property var tabletEvents
     property bool toolDown: false
 
-    width: 730
-
     minimumWidth: 400
     minimumHeight: 200
 
@@ -202,4 +200,7 @@ QQC2.ApplicationWindow {
             }
         }
     }
+
+    // FIXME: For some reason, setting this declaratively ends up with a broken window until it's resized.
+    Component.onCompleted: width = 730
 }
