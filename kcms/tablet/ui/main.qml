@@ -16,6 +16,8 @@ import org.kde.kquickcontrols
 SimpleKCM {
     id: root
 
+    property bool testerWindowOpen: false
+
     ConfigModule.buttons: ConfigModule.Default | ConfigModule.Apply
 
     implicitWidth: Kirigami.Units.gridUnit * 38
@@ -37,11 +39,17 @@ SimpleKCM {
         Kirigami.Action {
             text: i18ndc("kcm_tablet", "Tests tablet functionality like the pen", "Test Tablet…")
             icon.name: "tool_pen-symbolic"
+            enabled: !root.testerWindowOpen
             onTriggered: {
                 const component = Qt.createComponent("Tester.qml");
                 if (component.status === Component.Ready) {
                     const window = component.createObject(root, {tabletEvents});
-                    window.show();
+                    window.showNormal();
+                    window.closing.connect((close) => {
+                        root.testerWindowOpen = false;
+                    });
+
+                    root.testerWindowOpen = true;
                 } else {
                     console.error(component.errorString());
                 }
