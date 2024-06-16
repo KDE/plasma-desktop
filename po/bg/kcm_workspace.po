@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2023-11-11 16:48+0100\n"
+"PO-Revision-Date: 2024-06-15 23:16+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: \n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -24,7 +24,7 @@ msgid ""
 "setting can take effect."
 msgstr ""
 "Системата трябва да бъде рестартирана, за да влязат в сила промените за "
-"постяване със средния бутон на мишката."
+"поставяне със средния бутон на мишката."
 
 #: ui/main.qml:29
 #, kde-format
@@ -69,13 +69,13 @@ msgstr "Незабавно"
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "Превъртане:"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "Предпочитане за плавно превъртане"
 
 #: ui/main.qml:133
 #, kde-format
@@ -86,6 +86,10 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Тази настройка разрешава или забранява анимираните преходи при превъртане с "
+"колелцето на мишката или с клавиатурата. Някои приложения може да не зачитат "
+"тази настройка, тъй като или не поддържат плавно превъртане, или имат "
+"собствена настройка за това."
 
 #: ui/main.qml:146
 #, kde-format
@@ -241,7 +245,7 @@ msgstr "Скорост на анимация"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "Плавно превъртане"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

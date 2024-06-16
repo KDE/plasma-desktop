@@ -20,7 +20,7 @@ msgstr ""
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "默认"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -45,12 +45,12 @@ msgstr "横向 (翻转)"
 #: kcmtablet.cpp:86
 #, kde-format
 msgid "Follow the Current Screen"
-msgstr ""
+msgstr "跟随当前屏幕"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "所有屏幕"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -61,17 +61,17 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "适合屏幕"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "保持宽高比并适合屏幕"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "映射到屏幕区域"
 
 #: ui/main.qml:29
 #, kde-format
@@ -87,7 +87,7 @@ msgstr "连接数位板"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "测试数位板…"
 
 #: ui/main.qml:58
 #, kde-format
@@ -98,7 +98,7 @@ msgstr "设备："
 #: ui/main.qml:96
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "映射到屏幕："
 
 #: ui/main.qml:116
 #, kde-format
@@ -118,11 +118,13 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"要求设备针对左手用户进行相应调整。效果因设备而异，但一般都会翻转数位板板面按"
+"钮的方向，以便在翻转 180 度后使用。"
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "映射区域："
 
 #: ui/main.qml:232
 #, kde-format
@@ -176,22 +178,22 @@ msgstr "板面按钮 %1："
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "数位板测试工具"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "压感笔按下 X=%1 Y=%2"
 
 #: ui/Tester.qml:56
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "压感笔释放 X=%1 Y=%2"
 
 #: ui/Tester.qml:64
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "压感笔移动 X=%1 Y=%2"
 
 #: ui/Tester.qml:186
 #, kde-format
@@ -199,9 +201,11 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## 图例：\n"
+"# X、Y - 事件坐标\n"
 
 #: ui/Tester.qml:193
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "清除"

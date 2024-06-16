@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2024-04-11 11:28+0200\n"
+"PO-Revision-Date: 2024-06-15 23:26+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "По подразбиране"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -43,15 +43,14 @@ msgid "Inverted Landscape"
 msgstr "Хоризонтално обърнато"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
 msgstr "Последване на активния екран"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Всички екрани"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -62,17 +61,17 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Напасване в екрана"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Запазване на съотношението на страните и напасване в рамките на екрана"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Свързване към част от екрана"
 
 #: ui/main.qml:29
 #, kde-format
@@ -88,7 +87,7 @@ msgstr "Свързване на таблет за чертане."
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Тестване на таблета…"
 
 #: ui/main.qml:58
 #, kde-format
@@ -99,7 +98,7 @@ msgstr "Устройство:"
 #: ui/main.qml:96
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Свързване към екрана:"
 
 #: ui/main.qml:116
 #, kde-format
@@ -107,8 +106,7 @@ msgid "Orientation:"
 msgstr "Ориентация:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Режим за лява ръка:"
 
@@ -120,11 +118,15 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Указва на устройството, че трябва да се адаптира към употреба с лява ръка. "
+"Ефектът варира в зависимост от устройството, но често той обръща "
+"функционалността на бутоните на панела, така че таблетът да може да се "
+"използва обърнат надолу."
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Свързана област:"
 
 #: ui/main.qml:232
 #, kde-format
@@ -178,22 +180,22 @@ msgstr "Бутон на таблет%1:"
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "Тестване на таблет"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Натиск с писец X=%1 Y=%2"
 
 #: ui/Tester.qml:56
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Отпускане на писец X=%1 Y=%2"
 
 #: ui/Tester.qml:64
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Преместване с писец X=%1 Y=%2"
 
 #: ui/Tester.qml:186
 #, kde-format
@@ -201,12 +203,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Легенда:\n"
+"# X, Y - координати на събитие\n"
 
 #: ui/Tester.qml:193
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Изчистване"
 
 #~ msgid "Primary (default)"
 #~ msgstr "Основен (по подразбиране)"

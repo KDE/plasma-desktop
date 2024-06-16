@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2024-06-10 21:27+0200\n"
+"PO-Revision-Date: 2024-06-15 15:02+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Predeterminada"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -43,15 +43,14 @@ msgid "Inverted Landscape"
 msgstr "Horizontal invertida"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Seguir a pantalla activa"
+msgstr "Seguir a pantalla actual"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Todas as pantallas"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -62,17 +61,17 @@ msgstr "%1 (%2,%3 %4×%5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Axustar á pantalla"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Manter as proporcións e axustar á anchura da pantalla"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Asociar a unha parte da pantalla"
 
 #: ui/main.qml:29
 #, kde-format
@@ -99,7 +98,7 @@ msgstr "Dispositivo:"
 #: ui/main.qml:96
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Asociar á pantalla:"
 
 #: ui/main.qml:116
 #, kde-format
@@ -112,12 +111,7 @@ msgid "Left-handed mode:"
 msgstr "Modo zurdo:"
 
 #: ui/main.qml:139
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tells the device to to accommodate left-handed users. Effects will vary "
-#| "by device, but often it reverses the pad buttonsʼ functionality so the "
-#| "tablet can be used upside-down."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tells the device to accommodate left-handed users. Effects will vary by "
@@ -131,7 +125,7 @@ msgstr ""
 #: ui/main.qml:145
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Zona asociada:"
 
 #: ui/main.qml:232
 #, kde-format
