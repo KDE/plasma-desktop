@@ -50,6 +50,7 @@ target_link_libraries(kcm_tablet PRIVATE
     Wayland::Client
     kwindevices
     Canberra::Canberra
+    PkgConfig::LIBWACOM
 )
 
 if(BUILD_TESTING)

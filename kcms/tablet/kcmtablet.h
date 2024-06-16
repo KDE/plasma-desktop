@@ -10,8 +10,14 @@
 
 #include <KSharedConfig>
 
+extern "C" {
+#include <libwacom/libwacom.h>
+}
+
 #include "devicesmodel.h"
 #include "inputsequence.h"
+
+Q_DECLARE_OPAQUE_POINTER(WacomDeviceDatabase *)
 
 class TabletSettings;
 class TabletData;
@@ -21,6 +27,7 @@ class Tablet : public KQuickManagedConfigModule
     Q_OBJECT
     Q_PROPERTY(DevicesModel *toolsModel READ toolsModel CONSTANT)
     Q_PROPERTY(DevicesModel *padsModel READ padsModel CONSTANT)
+    Q_PROPERTY(WacomDeviceDatabase *db READ db CONSTANT)
 
 public:
     explicit Tablet(QObject *parent, const KPluginMetaData &metaData);
@@ -44,6 +51,8 @@ public:
     // QML does not support QPair, so let's use a QList as a workaround
     Q_SCRIPTABLE QList<QPointF> fromSerializedCurve(const QString &curve);
 
+    WacomDeviceDatabase *db() const;
+
 Q_SIGNALS:
     void settingsRestored();
 
@@ -53,4 +62,5 @@ private:
     DevicesModel *const m_toolsModel;
     DevicesModel *const m_padsModel;
     QHash<QString, QHash<QString, QHash<uint, InputSequence>>> m_unsavedMappings;
+    WacomDeviceDatabase *m_db = nullptr;
 };
