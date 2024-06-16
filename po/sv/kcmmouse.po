@@ -4,7 +4,7 @@
 # Mattias Newzella <newzella@linux.nu>, 2000, 2001, 2002,2003, 2005.
 # Karl Backström <backstrom@kde.org>, 2000.
 # Anders Widell <awl@hem.passagen.se>, 2000.
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2004, 2005, 2006, 2007, 2008, 2010.
+# SPDX-FileCopyrightText: 2004, 2005, 2006, 2007, 2008, 2010, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 # Stefan Asserhall <stefan.asserhall@gmail.com>, 2010, 2011, 2014, 2015, 2016, 2017, 2018, 2020, 2022.
 # Arve Eriksson <031299870@telia.com>, 2011.
 msgid ""
@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-26 00:39+0000\n"
-"PO-Revision-Date: 2022-09-24 16:00+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"PO-Revision-Date: 2024-06-15 13:58+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -146,6 +146,9 @@ msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
+"Om inställningen aktiveras ökar fördröjningen för musklick med 50 ms. Den "
+"extra fördröjningen behövs för att korrekt upptäcka samtidiga vänster- och "
+"högerklick."
 
 #: ui/main.qml:136
 #, kde-format
@@ -160,7 +163,7 @@ msgstr "Acceleration för pekare:"
 #: ui/main.qml:225
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: ui/main.qml:230
 #, kde-format
@@ -170,7 +173,7 @@ msgstr "Pekaren flyttas samma avstånd som musrörelsen."
 #: ui/main.qml:234
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Normal"
 
 #: ui/main.qml:239
 #, kde-format

@@ -1,27 +1,26 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2022-06-01 19:30+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"PO-Revision-Date: 2024-06-15 10:20+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Tillgängliga insticksprogram"
+msgstr "Favoritinsticksprogram"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -39,27 +38,25 @@ msgid "Get New Plugins…"
 msgstr "Hämta nya insticksprogram…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
-"Aktivera eller inaktivera insticksprogram (använda i Kör program, Starta "
-"program och översiktseffekten)"
+"Aktivera eller inaktivera insticksprogram (används i Kör program, "
+"Programstart och Översiktseffekten). Markera insticksprogram som favoriter "
+"och ordna dem i den ordning du vill prioritera dem."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Ta bort från favoriter"
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Lägg till i favoriter"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
@@ -83,14 +80,14 @@ msgstr ""
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
 #, kde-format
 msgid "Failed to copy file %1 to %2"
-msgstr ""
+msgstr "Misslyckades kopiera filen %1 till %2"
 
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to remove file %1:<nl/>%2"
-msgstr ""
+msgstr "Misslyckades ta bort filen %1: <nl/>%2"
 
 #: plugininstaller/main.cpp:33
 #, kde-format
@@ -99,24 +96,22 @@ msgid "KRunner plugin installation failed"
 msgstr "Installation av insticksprogram för Kör program misslyckades"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Kommando att köra: installera eller avinstallera."
+msgstr "Kommando att köra: installera eller avinstallera"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Sökväg till arkiv eller uppackad katalog"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
-msgstr ""
+msgstr "Visa inte en visuell bekräftelsedialogruta"
 
 #: plugininstaller/main.cpp:92
 #, kde-format
@@ -167,6 +162,8 @@ msgid ""
 "This plugin executes the following command for starting the \"%1\" service:"
 "<nl/>%2"
 msgstr ""
+"Insticksprogrammet kör följande kommando för att starta tjänsten \"%1\":<nl/>"
+"%2"
 
 #: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format

@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-26 02:26+0000\n"
-"PO-Revision-Date: 2022-09-30 18:07+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"PO-Revision-Date: 2024-06-15 11:17+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -102,7 +102,7 @@ msgstr "Licens:"
 #: contents/configuration/AboutPlugin.qml:163
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "Visa licenstext"
 
 #: contents/configuration/AboutPlugin.qml:177
 msgid "Authors"
@@ -202,8 +202,6 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
-#, fuzzy
-#| msgid "About"
 msgctxt "@title"
 msgid "About"
 msgstr "Om"
@@ -258,10 +256,8 @@ msgid "Input Here"
 msgstr "Skriv in här"
 
 #: contents/configuration/PanelConfiguration.qml:97
-#, fuzzy
-#| msgid "Settings"
 msgid "Panel Settings"
-msgstr "Inställningar"
+msgstr "Panelinställningar"
 
 #: contents/configuration/PanelConfiguration.qml:104
 msgid "Add Spacer"
@@ -269,7 +265,7 @@ msgstr "Lägg till mellanrum"
 
 #: contents/configuration/PanelConfiguration.qml:107
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Lägg till mellanrum i panelen"
 
 #: contents/configuration/PanelConfiguration.qml:114
 msgid "Add Widgets…"
@@ -277,11 +273,11 @@ msgstr "Lägg till grafiska komponenter…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "Öppna komponentväljaren för att dra och släppa komponenter på panelen"
 
 #: contents/configuration/PanelConfiguration.qml:146
 msgid "Position"
-msgstr ""
+msgstr "Position"
 
 #: contents/configuration/PanelConfiguration.qml:151
 #: contents/configuration/PanelConfiguration.qml:266
@@ -304,24 +300,18 @@ msgid "Bottom"
 msgstr "Längst ner"
 
 #: contents/configuration/PanelConfiguration.qml:174
-#, fuzzy
-#| msgid "More Options…"
 msgid "Set Position…"
-msgstr "Fler alternativ…"
+msgstr "Ange position…"
 
 #: contents/configuration/PanelConfiguration.qml:201
-#, fuzzy
-#| msgid "Panel Alignment"
 msgid "Alignment"
-msgstr "Paneljustering"
+msgstr "Justera"
 
 #: contents/configuration/PanelConfiguration.qml:267
 msgid "Center"
 msgstr "Centrera"
 
 #: contents/configuration/PanelConfiguration.qml:290
-#, fuzzy
-#| msgid "Height"
 msgid "Height"
 msgstr "Höjd"
 
@@ -330,56 +320,42 @@ msgid "Width"
 msgstr "Bredd"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy
-#| msgid "Panel height:"
 msgid "Fill height"
-msgstr "Panelhöjd:"
+msgstr "Fyll höjd"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Fill width"
-msgstr "Panelbredd:"
+msgstr "Fyll bredd"
 
 #: contents/configuration/PanelConfiguration.qml:311
 msgid "Fit content"
-msgstr ""
+msgstr "Anpassa till innehåll"
 
 #: contents/configuration/PanelConfiguration.qml:312
 msgid "Custom"
-msgstr ""
+msgstr "Egen"
 
 #: contents/configuration/PanelConfiguration.qml:338
-#, fuzzy
-#| msgid "Visibility"
 msgid "Visibility"
 msgstr "Synlighet"
 
 #: contents/configuration/PanelConfiguration.qml:351
-#, fuzzy
-#| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Alltid synlig"
 
 #: contents/configuration/PanelConfiguration.qml:352
-#, fuzzy
-#| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "Dölj automatiskt"
 
 #: contents/configuration/PanelConfiguration.qml:353
 msgid "Dodge windows"
-msgstr ""
+msgstr "Undvik fönster"
 
 #: contents/configuration/PanelConfiguration.qml:354
-#, fuzzy
-#| msgid "Windows Go Below"
 msgid "Windows Go Below"
 msgstr "Fönster hamnar under"
 
 #: contents/configuration/PanelConfiguration.qml:397
-#, fuzzy
-#| msgid "Opacity"
 msgid "Opacity"
 msgstr "Ogenomskinlighet"
 
@@ -388,68 +364,54 @@ msgid "Adaptive"
 msgstr "Adaptiv"
 
 #: contents/configuration/PanelConfiguration.qml:412
-#, fuzzy
-#| msgid "Opaque"
 msgid "Opaque"
 msgstr "Ogenomskinlig"
 
 #: contents/configuration/PanelConfiguration.qml:413
-#, fuzzy
-#| msgid "Translucent"
 msgid "Translucent"
 msgstr "Halvgenomskinlig"
 
 #: contents/configuration/PanelConfiguration.qml:436
-#, fuzzy
-#| msgid "Floating Panel"
 msgid "Floating"
-msgstr "Fristående panel"
+msgstr "Fristående"
 
 #: contents/configuration/PanelConfiguration.qml:446
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: contents/configuration/PanelConfiguration.qml:532
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Panelbredd:"
 
 #: contents/configuration/PanelConfiguration.qml:533
-#, fuzzy
-#| msgid "Panel width:"
 msgid "Panel Height:"
-msgstr "Panelbredd:"
+msgstr "Panelhöjd:"
 
 #: contents/configuration/PanelConfiguration.qml:556
-#, fuzzy
-#| msgid "Shortcut"
 msgid "Focus shortcut:"
-msgstr "Genväg"
+msgstr "Fokuseringsgenväg:"
 
 #: contents/configuration/PanelConfiguration.qml:567
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
+msgstr "Håll nere snabbtangenten för att flytta fokus till panelen"
 
 #: contents/configuration/PanelConfiguration.qml:596
-#, fuzzy
-#| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Ta bort panel"
 
 #: contents/configuration/PanelConfiguration.qml:599
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "Ta bort panelen. Åtgärden går inte att ångra."
 
 #: contents/configuration/PanelConfiguration.qml:610
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr ""
+msgstr "Klar"
 
 #: contents/configuration/PanelConfiguration.qml:613
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "Stäng panelinställningsfönstret och avsluta redigeringsläge"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -481,10 +443,8 @@ msgstr ""
 "Dubbelklicka för att återställa."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy
-#| msgid "Panels and Desktops Management"
 msgid "Panel and Desktop Management"
-msgstr "Hantering av paneler och skrivbord"
+msgstr "Panel och skrivbordshantering"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
@@ -506,10 +466,8 @@ msgid "Move to Screen %1"
 msgstr "Flytta till skärm %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
-#, fuzzy
-#| msgid "Remove Panel"
 msgid "Remove Desktop"
-msgstr "Ta bort panel"
+msgstr "Ta bort skrivbord"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:195
 msgid "Remove Panel"
@@ -525,7 +483,7 @@ msgstr "Alternativa grafiska komponenter"
 
 #: contents/explorer/AppletDelegate.qml:41
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Komponenten stöds inte"
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
@@ -567,8 +525,8 @@ msgstr "Kategorier"
 #: contents/explorer/WidgetExplorer.qml:215
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Bekräfta borttagning av en komponent"
+msgstr[1] "Bekräfta borttagning av %1 komponenter"
 
 #: contents/explorer/WidgetExplorer.qml:295
 msgid "No widgets matched the search terms"
@@ -581,121 +539,115 @@ msgstr "Inga grafiska komponenter tillgängliga"
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Klocka:"
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Behåll synlig när upplåsningsfrågan försvinner"
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Mediekontroller:"
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Visa under upplåsningsfråga"
 
 #: contents/lockscreen/LockScreenUi.qml:50
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Upplåsning misslyckades"
 
 #: contents/lockscreen/LockScreenUi.qml:276
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Caps Lock aktiverad"
 
 #: contents/lockscreen/LockScreenUi.qml:290
 msgid "Sleep"
-msgstr ""
+msgstr "Viloläge"
 
 #: contents/lockscreen/LockScreenUi.qml:296
 msgid "Hibernate"
-msgstr ""
+msgstr "Dvala"
 
 #: contents/lockscreen/LockScreenUi.qml:302
-#, fuzzy
-#| msgid "Switch"
 msgid "Switch User"
-msgstr "Byt"
+msgstr "Byt användare"
 
 #: contents/lockscreen/LockScreenUi.qml:363
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Virtuellt tangentbord"
 
 #: contents/lockscreen/LockScreenUi.qml:387
-#, fuzzy
-#| msgid "Switch"
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Byt"
+msgstr "Byt layout"
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr ""
+msgstr "Lösenord"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr ""
+msgstr "Lås upp"
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(eller läs av fingeravtryck på läsaren)"
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(eller läs av smartkort)"
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr ""
+msgstr "Namnlös"
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr ""
+msgstr "Inga media spelar"
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr ""
+msgstr "Föregående spår"
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Spela eller pausa media"
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr ""
+msgstr "Nästa spår"
 
 #: contents/osd/OsdItem.qml:32
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: contents/views/DesktopEditMode.qml:111
 msgid "Global Themes"
-msgstr ""
+msgstr "Globala teman"
 
 #: contents/views/DesktopEditMode.qml:118
-#, fuzzy
-#| msgid "Open configuration page"
 msgid "Display Configuration"
-msgstr "Öppna inställningssida"
+msgstr "Bildskärmsinställning"
 
 #: contents/views/DesktopEditMode.qml:139
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "Mer"
 
 #: contents/views/DesktopEditMode.qml:148
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Avsluta redigeringsläge"
 
 #: contents/views/Panel.qml:314
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Panelfokuseringsindikator"
 
 #, fuzzy
 #~| msgid "Height"

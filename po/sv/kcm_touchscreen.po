@@ -1,0 +1,55 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2024 Stefan Asserhäll <stefan.asserhall@bredband.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-02-18 00:39+0000\n"
+"PO-Revision-Date: 2024-06-15 14:35+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: kcmtouchscreen.cpp:46
+#, kde-format
+msgid "Automatic"
+msgstr "Automatisk"
+
+#: kcmtouchscreen.cpp:52
+#, kde-format
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
+
+#: ui/main.qml:29
+#, kde-format
+msgid "No touchscreens found"
+msgstr "Inga pekskärmar hittades"
+
+#: ui/main.qml:30
+#, kde-format
+msgid "Connect an external touchscreen"
+msgstr "Anslut en extern pekskärm"
+
+#: ui/main.qml:46
+#, kde-format
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "Enhet:"
+
+#: ui/main.qml:59
+#, kde-format
+msgid "Enabled:"
+msgstr "Aktiverad:"
+
+#: ui/main.qml:67
+#, kde-format
+msgid "Target display:"
+msgstr "Målskärm:"

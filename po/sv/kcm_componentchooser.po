@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2022-01-09 15:35+0100\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"PO-Revision-Date: 2024-06-15 10:36+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
@@ -23,10 +23,9 @@ msgid "Other…"
 msgstr "Annan…"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "Använd standardfilhanterare"
+msgstr "Använd standardarkiveringshanterare"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
@@ -49,22 +48,19 @@ msgid "Select default map"
 msgstr "Använd standardkarta"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "Använd standardfilhanterare"
+msgstr "Använd standardbildvisare"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default map"
+#, kde-format
 msgid "Select default music player"
-msgstr "Använd standardkarta"
+msgstr "Använd standardmusikspelare"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select default browser"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "Använd standardwebbläsare"
+msgstr "Använd PDF-standardvisare"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -77,38 +73,36 @@ msgid "Select default terminal emulator"
 msgstr "Använd standardterminalprogram"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default terminal emulator"
+#, kde-format
 msgid "Select default text editor"
-msgstr "Använd standardterminalprogram"
+msgstr "Använd standardtexteditor"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select default file manager"
+#, kde-format
 msgid "Select default video player"
-msgstr "Använd standardfilhanterare"
+msgstr "Använd standardvideospelare"
 
 #: ui/ComponentOverlay.qml:52
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Detaljinformation"
 
 #: ui/ComponentOverlay.qml:83
 #, kde-format
 msgid "This application can also open these file types:"
-msgstr ""
+msgstr "Programmet kan också öppna följande filtyper:"
 
 #: ui/ComponentOverlay.qml:97
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (öppnas för närvarande med %2)"
 
 #: ui/ComponentOverlay.qml:110
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Öppna alla med %1"
 
 #: ui/ComponentOverlay.qml:129
 #, kde-format
@@ -116,17 +110,19 @@ msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
 msgstr ""
+"Programmet rapporterar inte stöd för följande filtyper, men kan kanske öppna "
+"dem ändå:"
 
 #: ui/ComponentOverlay.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr ""
+msgstr "Tvinga alla att öppnas med %1"
 
 #: ui/ComponentOverlay.qml:158
 #, kde-format
 msgid "Configure Manually…"
-msgstr ""
+msgstr "Anpassa manuellt…"
 
 #: ui/main.qml:17
 #, kde-format
@@ -134,12 +130,14 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"'%1' verkar inte stödja följande Mime-typer som är associerade med den här "
+"typen av program: %2"
 
 #: ui/main.qml:46
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: ui/main.qml:50
 #, kde-format
@@ -155,50 +153,50 @@ msgstr "E-postprogram:"
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
-msgstr ""
+msgstr "Telefonnummer:"
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 #: ui/main.qml:121
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Bildvisare:"
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Musikspelare:"
 
 #: ui/main.qml:168
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Videospelare:"
 
 #: ui/main.qml:190
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Dokument"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Texteditor:"
 
 #: ui/main.qml:217
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF-visare:"
 
 #: ui/main.qml:239
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Verktyg"
 
 #: ui/main.qml:244
 #, kde-format
@@ -211,14 +209,12 @@ msgid "Terminal emulator:"
 msgstr "Terminalemulator:"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "File manager:"
+#, kde-format
 msgid "Archive manager:"
-msgstr "Filhanterare:"
+msgstr "Arkiveringshanterare:"
 
 #: ui/main.qml:301
-#, fuzzy, kde-format
-#| msgid "Map:"
+#, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Karta:"
