@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-03-17 18:11+0530\n"
+"PO-Revision-Date: 2024-06-16 18:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -188,7 +188,7 @@ msgstr "ஒட்டும் விசைகளை பயன்படுத்�
 #: kcmaccessibilitykeyboard.kcfg:25
 #, kde-format
 msgid "Toggle keys beep"
-msgstr ""
+msgstr "நிலைமாறு விசைகளை பயன்படுத்தும்போது மணியை ஒலிக்கச்செய்"
 
 #. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:29
@@ -260,7 +260,7 @@ msgstr "சுட்டியை நகர்த்துவதற்கான �
 #: kcmaccessibilitymouse.kcfg:17
 #, kde-format
 msgid "Repetition interval for the mouse movement"
-msgstr ""
+msgstr "சுட்டி அசைவுக்கான மறுநிகழ்வு இடைவெளி"
 
 #. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:21
@@ -290,7 +290,7 @@ msgstr "திரை வாசிப்பானை இயக்கு"
 #: kcmaccessibilityshakecursor.kcfg:9
 #, kde-format
 msgid "Whether Shake Cursor is enabled"
-msgstr ""
+msgstr "சுட்டிக்குறியை ஆட்டுவது இயக்கப்பட்டுள்ளதா"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
@@ -299,10 +299,9 @@ msgid "Magnification"
 msgstr "பெரிதாக்குவது"
 
 #: ui/ActivationGestures.qml:16
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation:"
-msgstr "செயல்பாட்டு குறிப்புகள்"
+msgstr "தூண்டுவது:"
 
 #: ui/ActivationGestures.qml:17
 #, fuzzy, kde-format
@@ -318,13 +317,13 @@ msgstr ""
 #, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 நிமி"
+msgstr[1] "%1 நிமி"
 
 #: ui/ActivationGestures.qml:62
 #, kde-format
 msgid "min"
-msgstr ""
+msgstr "நிமி"
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -523,10 +522,9 @@ msgid "Mouse Navigation"
 msgstr "சுட்டிவழி உலாவல்"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Gestures"
-msgstr "செயல்பாட்டு குறிப்புகள்"
+msgstr "தூண்டுவதற்கான சைகைகள்"
 
 #: ui/main.qml:52
 #, kde-format
@@ -538,7 +536,7 @@ msgstr "திரை வாசிப்பான்"
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
-msgstr ""
+msgstr "சுட்டிக்குறியை ஆட்டு"
 
 #: ui/ModifierKeys.qml:16
 #, kde-format

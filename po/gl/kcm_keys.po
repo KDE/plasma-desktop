@@ -1,0 +1,335 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"PO-Revision-Date: 2024-06-16 10:53+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.05.0\n"
+
+#: globalaccelmodel.cpp:235
+#, kde-format
+msgctxt ""
+"%1 is the name of the component, %2 is the action for which saving failed"
+msgid "Error while saving shortcut %1: %2"
+msgstr "Erro ao gardar o atallo %1: %2"
+
+#: globalaccelmodel.cpp:347
+#, kde-format
+msgctxt "%1 is the name of an application"
+msgid "Error while adding %1, it seems it has no actions."
+msgstr "Erro ao engadir %1, non parece ter accións."
+
+#: globalaccelmodel.cpp:397
+#, kde-format
+msgid "Error while communicating with the global shortcuts service"
+msgstr "Erro ao comunicar co servizo de atallos globais."
+
+#: kcm_keys.cpp:57
+#, kde-format
+msgid "Failed to communicate with global shortcuts daemon"
+msgstr "Non foi posíbel comunicar co servizo de atallos globais."
+
+#: kcm_keys.cpp:312
+#, kde-format
+msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+msgid ""
+"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+"Do you want to reassign it?"
+msgstr ""
+"O atallo %1 xa está asignado á acción común «%3» de %2.\n"
+"Quere reasignalo?"
+
+#: kcm_keys.cpp:316
+#, kde-format
+msgid ""
+"Shortcut %1 is already assigned to action '%2' of %3.\n"
+"Do you want to reassign it?"
+msgstr ""
+"O atallo %1 xa está asignado á acción «%2» de %3.\n"
+"Quere reasignalo?"
+
+#: kcm_keys.cpp:317
+#, kde-format
+msgctxt "@title:window"
+msgid "Found conflict"
+msgstr "Atopouse un conflito"
+
+#: standardshortcutsmodel.cpp:34
+#, kde-format
+msgid "File"
+msgstr "Ficheiro"
+
+#: standardshortcutsmodel.cpp:35
+#, kde-format
+msgid "Edit"
+msgstr "Editar"
+
+#: standardshortcutsmodel.cpp:37
+#, kde-format
+msgid "Navigation"
+msgstr "Navegación"
+
+#: standardshortcutsmodel.cpp:38
+#, kde-format
+msgid "View"
+msgstr "Vista"
+
+#: standardshortcutsmodel.cpp:39
+#, kde-format
+msgid "Settings"
+msgstr "Configuración"
+
+#: standardshortcutsmodel.cpp:40
+#, kde-format
+msgid "Help"
+msgstr "Axuda"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Applications"
+msgstr "Aplicacións"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Commands"
+msgstr "Ordes"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "System Services"
+msgstr "Servizos do sistema"
+
+#: ui/main.qml:27
+#, kde-format
+msgid "Common Actions"
+msgstr "Accións comúns"
+
+#: ui/main.qml:43
+#, kde-format
+msgctxt "@action: button Import shortcut scheme"
+msgid "Import…"
+msgstr "Importar…"
+
+#: ui/main.qml:48
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Export"
+msgstr "Cancelar a exportación"
+
+#: ui/main.qml:49
+#, kde-format
+msgctxt "@action:button Export shortcut scheme"
+msgid "Export…"
+msgstr "Exportar…"
+
+#: ui/main.qml:77
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "Non é posíbel exportar o esquema mentres haxa cambios sen gardar."
+
+#: ui/main.qml:90
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr "Seleccione embaixo os compoñentes para incluír no esquema exportado."
+
+#: ui/main.qml:97
+#, kde-format
+msgctxt "@action:button Save shortcut scheme"
+msgid "Save Scheme"
+msgstr "Gardar o esquema"
+
+#: ui/main.qml:164
+#, kde-format
+msgctxt "@action:button Add new shortcut"
+msgid "Add New"
+msgstr "Engadir un novo"
+
+#: ui/main.qml:170
+#, kde-format
+msgctxt "@action:menu End of the sentence 'Add New Application…'"
+msgid "Application…"
+msgstr "Aplicación…"
+
+#: ui/main.qml:176
+#, kde-format
+msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
+msgid "Command or Script…"
+msgstr "Orde ou guión…"
+
+#: ui/main.qml:232
+#, kde-format
+msgctxt "@tooltip:button %1 is the text of a custom command"
+msgid "Edit command for %1"
+msgstr "Editar a orde de %1"
+
+#: ui/main.qml:248
+#, kde-format
+msgid "Remove all shortcuts for %1"
+msgstr "Retirar todos os atallos de %1"
+
+#: ui/main.qml:259
+#, kde-format
+msgid "Undo deletion"
+msgstr "Desfacer a eliminación"
+
+#: ui/main.qml:313
+#, kde-format
+msgid "No items matched the search terms"
+msgstr "Ningún elemento coincide cos termos de busca."
+
+#: ui/main.qml:346
+#, kde-format
+msgid "Select an item from the list to view its shortcuts here"
+msgstr "Seleccione un elemento da lista para ver aquí os seus atallos."
+
+#: ui/main.qml:358
+#, kde-format
+msgid "Export Shortcut Scheme"
+msgstr "Exportar o esquema de atallos"
+
+#: ui/main.qml:358 ui/main.qml:476
+#, kde-format
+msgid "Import Shortcut Scheme"
+msgstr "Importar o esquema de atallos"
+
+#: ui/main.qml:360
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr "Esquema de atallos (*.kksrc)"
+
+#: ui/main.qml:388
+#, kde-format
+msgid "Edit Command"
+msgstr "Editar a orde"
+
+#: ui/main.qml:388
+#, kde-format
+msgid "Add Command"
+msgstr "Engadir unha orde"
+
+#: ui/main.qml:407
+#, kde-format
+msgid "Save"
+msgstr "Gardar"
+
+#: ui/main.qml:407
+#, kde-format
+msgid "Add"
+msgstr "Engadir"
+
+#: ui/main.qml:432
+#, kde-format
+msgid "Enter a command or choose a script file:"
+msgstr "Introduza unha orde ou escolla un ficheiro de guión:"
+
+#: ui/main.qml:447
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose…"
+msgstr "Escoller…"
+
+#: ui/main.qml:460
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Script File"
+msgstr "Escolla un ficheiro de guión"
+
+#: ui/main.qml:462
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Script file (*.*sh)"
+msgstr "Ficheiro de guión (*.*sh)"
+
+#: ui/main.qml:484
+#, kde-format
+msgid "Select the scheme to import:"
+msgstr "Seleccione o esquema a importar:"
+
+#: ui/main.qml:503
+#, kde-format
+msgid "Custom Scheme"
+msgstr "Esquema personalizado"
+
+#: ui/main.qml:511
+#, kde-format
+msgid "Select File…"
+msgstr "Seleccionar un ficheiro…"
+
+#: ui/main.qml:511
+#, kde-format
+msgid "Import"
+msgstr "Importar"
+
+#: ui/ShortcutActionDelegate.qml:34
+#, kde-format
+msgid "Editing shortcut: %1"
+msgstr "Editando un atallo: %1"
+
+#: ui/ShortcutActionDelegate.qml:53
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: ui/ShortcutActionDelegate.qml:77
+#, kde-format
+msgid "No active shortcuts"
+msgstr "Non hai atallos activos."
+
+#: ui/ShortcutActionDelegate.qml:120
+#, kde-format
+msgctxt "%1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "Atallo predeterminado"
+msgstr[1] "Atallos predeterminados"
+
+#: ui/ShortcutActionDelegate.qml:122
+#, kde-format
+msgid "No default shortcuts"
+msgstr "Non hai atallos predeterminados"
+
+#: ui/ShortcutActionDelegate.qml:131
+#, kde-format
+msgid "Default shortcut %1 is enabled."
+msgstr "O atallo predeterminado %1 está activado."
+
+#: ui/ShortcutActionDelegate.qml:131
+#, kde-format
+msgid "Default shortcut %1 is disabled."
+msgstr "O atallo predeterminado %1 está desactivado."
+
+#: ui/ShortcutActionDelegate.qml:154
+#, kde-format
+msgid "Custom shortcuts"
+msgstr "Atallos personalizados"
+
+#: ui/ShortcutActionDelegate.qml:183
+#, kde-format
+msgid "Delete this shortcut"
+msgstr "Eliminar este atallo"
+
+#: ui/ShortcutActionDelegate.qml:189
+#, kde-format
+msgid "Add custom shortcut"
+msgstr "Engadir un atallo personalizado"
+
+#: ui/ShortcutActionDelegate.qml:227
+#, kde-format
+msgid "Cancel capturing of new shortcut"
+msgstr "Cancelar a captura do novo atallo"

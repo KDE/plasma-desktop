@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-03-24 18:20+0530\n"
+"PO-Revision-Date: 2024-06-16 17:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:60
 #, kde-format
@@ -80,12 +80,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "சுட்டி கழற்றப்பட்டபின் வேறெந்த சாதனமும் கண்டுபிடிக்கப்படவில்லை."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Re-bind Additional Mouse Buttons…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Bindings for Additional Mouse Buttons"
-msgstr "கூடுதல் சுட்டி பட்டன்களை மாற்றியமை…"
+msgstr "கூடுதல் சுட்டி பட்டன்களை அமை…"
 
 #: ui/bindings.qml:69
 #, kde-format
@@ -112,12 +110,10 @@ msgid "Cancel"
 msgstr "ரத்து செய்"
 
 #: ui/bindings.qml:124
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Press a mouse button "
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
-msgstr "ஒரு சுட்டி பட்டனை அழுத்துங்கள் "
+msgstr "ஒரு சுட்டி பட்டனை அழுத்தவும்"
 
 #: ui/bindings.qml:125
 #, kde-format

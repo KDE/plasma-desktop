@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2024-04-21 22:29+0530\n"
+"PO-Revision-Date: 2024-06-16 18:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
@@ -43,15 +43,14 @@ msgid "Inverted Landscape"
 msgstr "புரட்டி கிடைமட்டமாக"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "செயலிலுள்ள திரையை பயன்படுத்து"
+msgstr "குவியமுள்ள திரையை பயன்படுத்து"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "அனைத்து திரைகள்"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -62,17 +61,17 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "திரைக்கு பொருத்து"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "உருவ விகிதத்தை மாற்றாமல் திரைக்குள் பொருத்து"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "திரையின் பகுதிக்கு இணை"
 
 #: ui/main.qml:29
 #, kde-format
@@ -85,11 +84,10 @@ msgid "Connect a drawing tablet"
 msgstr "வரைபலகையை இணைக்கவும்"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "வரைகலை பலகை"
+msgstr "வரைபலகையை சோதி…"
 
 #: ui/main.qml:58
 #, kde-format
@@ -100,7 +98,7 @@ msgstr "சாதனம்:"
 #: ui/main.qml:96
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "திரைக்கு இணை:"
 
 #: ui/main.qml:116
 #, kde-format
@@ -108,8 +106,7 @@ msgid "Orientation:"
 msgstr "நோக்குநிலை:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "இடதுகை பயன்முறை:"
 
@@ -125,7 +122,7 @@ msgstr ""
 #: ui/main.qml:145
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "இணைக்கப்படும் பரப்பளவு:"
 
 #: ui/main.qml:232
 #, kde-format
@@ -160,7 +157,7 @@ msgid "Pen button 3:"
 msgstr "பேனா பட்டன் 3:"
 
 #: ui/main.qml:319
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "வரைபலகை:"
@@ -171,32 +168,30 @@ msgid "None"
 msgstr "ஏதுமில்லை"
 
 #: ui/main.qml:352
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
 msgstr "வரைபலகை பட்டன் %1:"
 
 #: ui/Tester.qml:27
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr "வரைகலை பலகை"
+msgstr "வரைபலகை சோதிப்பிடம்"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "எழுதுகோல் அழுத்தப்பட்டது: X=%1 Y=%2"
 
 #: ui/Tester.qml:56
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "எழுதுகோல் தூக்கப்பட்டது: X=%1 Y=%2"
 
 #: ui/Tester.qml:64
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "எழுதுகோல் நகர்த்தப்பட்டது: X=%1 Y=%2"
 
 #: ui/Tester.qml:186
 #, kde-format
@@ -204,12 +199,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## விளக்கம்:\n"
+"# X, Y - நிகழ்வின் ஆயங்கள்\n"
 
 #: ui/Tester.qml:193
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "காலியாக்கு"
 
 #~ msgid "Primary (default)"
 #~ msgstr "முதன்மையானது (இயல்பிருப்பு)"
