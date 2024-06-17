@@ -230,9 +230,6 @@ FolderModel::FolderModel(QObject *parent)
 
     setSourceModel(m_dirModel);
 
-    // Position dropped items at the desired target position.
-    // The connection is established after setSourceModel because we need it to be executed after any connection to rowsInserted by proxy models
-    // See BUG:481254
     connect(this, &QAbstractItemModel::rowsInserted, this, [this](const QModelIndex &parent, int first, int last) {
         for (int i = first; i <= last; ++i) {
             const auto idx = index(i, 0, parent);
@@ -241,7 +238,16 @@ FolderModel::FolderModel(QObject *parent)
             if (it != m_dropTargetPositions.end()) {
                 const auto pos = it.value();
                 m_dropTargetPositions.erase(it);
-                Q_EMIT move(pos.x(), pos.y(), {url});
+
+                // Deferred to allow proxies of this to also handle the rowsInserted
+                // we're dealing with URLs here so it's safe to defer here
+                // See BUG:481254
+                QMetaObject::invokeMethod(
+                    this,
+                    [this, pos, url]() {
+                        Q_EMIT move(pos.x(), pos.y(), {url});
+                    },
+                    Qt::QueuedConnection);
             }
         }
     });
