@@ -180,20 +180,6 @@ Item {
         anchors.fill: floatingTranslucentItem
         imagePath: containment?.plasmoid?.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
     }
-    KSvg.FrameSvgItem {
-        id: floatingShadow
-        visible: !hasShadows
-        z: -100
-        imagePath: containment?.plasmoid?.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
-        prefix: "shadow"
-        anchors {
-            fill: floatingTranslucentItem
-            topMargin: -floatingShadow.margins.top
-            leftMargin: -floatingShadow.margins.left
-            rightMargin: -floatingShadow.margins.right
-            bottomMargin: -floatingShadow.margins.bottom
-        }
-    }
 
     Keys.onEscapePressed: {
         root.parent.focus = false
