@@ -178,11 +178,15 @@ ColumnLayout {
                     if (!setPositionButton.checked) {
                         return;
                     }
+                    // Use center alignment when moving to avoid Plasmashell crashing BUG:488174
+                    var oldAlignment = panel.alignment;
+                    panel.alignment = Qt.AlignCenter;
                     panel.location = newLocation;
                     if (associatedWindow !== null) {
                         panel.screenToFollow = dialogRoot.panelConfiguration.screenFromWindow(associatedWindow);
                     }
                     setPositionButton.checked = false;
+                    panel.alignment = oldAlignment;
                 }
 
                 Keys.onLeftPressed: moveTo(PlasmaCore.Types.LeftEdge)
