@@ -451,19 +451,23 @@ PlasmoidItem {
                 width: {
                     if (tasks.shouldShrinkToZero) {
                         return 0;
-                    } else if (tasks.vertical) {
-                        return tasks.width;
+                    }
+                    const occupation = taskRepeater.count / columns;
+                    if (tasks.vertical) {
+                        return tasks.width * Math.min(1, occupation);
                     } else {
-                        return Math.min(tasks.width, Layout.maximumWidth / rows);
+                        return Math.min(tasks.width, Layout.maximumWidth / occupation);
                     }
                 }
                 height: {
                     if (tasks.shouldShrinkToZero) {
                         return 0;
-                    } else if (tasks.vertical) {
-                        return Math.min(tasks.height, Layout.maximumHeight / columns);
+                    }
+                    const occupation = taskRepeater.count / rows;
+                    if (tasks.vertical) {
+                        return Math.min(tasks.height, Layout.maximumHeight / occupation);
                     } else {
-                        return tasks.height;
+                        return tasks.height * Math.min(1, occupation);
                     }
                 }
 
