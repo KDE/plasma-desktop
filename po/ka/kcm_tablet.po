@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"POT-Creation-Date: 2024-06-19 00:40+0000\n"
 "PO-Revision-Date: 2024-06-11 04:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -74,44 +74,44 @@ msgstr "ასპექტის ფარდობის შენარჩუ�
 msgid "Map to Portion of Screen"
 msgstr "ასახვა ეკრანის ნაწილზე"
 
-#: ui/main.qml:29
+#: ui/main.qml:31
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "სახატავი ტაბლეტები ვერ ვიპოვე"
 
-#: ui/main.qml:30
+#: ui/main.qml:32
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "მიუერთეთ სახატავი ტაბლეტი"
 
-#: ui/main.qml:38
+#: ui/main.qml:40
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "ტაბლეტის შემოწმება…"
 
-#: ui/main.qml:58
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "მოწყობილობა:"
 
-#: ui/main.qml:96
+#: ui/main.qml:104
 #, kde-format
 msgid "Map to screen:"
 msgstr "ასახვა ეკრანზე:"
 
-#: ui/main.qml:116
+#: ui/main.qml:124
 #, kde-format
 msgid "Orientation:"
 msgstr "ორიენტაცია:"
 
-#: ui/main.qml:128
+#: ui/main.qml:136
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "ცაციის რეჟიმი:"
 
-#: ui/main.qml:139
+#: ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -123,60 +123,60 @@ msgstr ""
 "მოწყობილობიდან მოწყობილობამდე, მაგრამ ის ხშირად შეაბრუნებს პადის ღილაკების "
 "ფუნქციებს ისე, რომ ტაბლეტი, შეგიძლიათ, უკუღმა დაიჭიროთ."
 
-#: ui/main.qml:145
+#: ui/main.qml:153
 #, kde-format
 msgid "Mapped Area:"
 msgstr "ასახული ალაგი:"
 
-#: ui/main.qml:232
+#: ui/main.qml:240
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "ტაბლეტის ფართობში ჩატევა"
 
-#: ui/main.qml:256
+#: ui/main.qml:264
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "გადიდების კოეფიციენტის დაბლოკვა"
 
-#: ui/main.qml:264
+#: ui/main.qml:272
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:273
+#: ui/main.qml:281
 #, kde-format
 msgid "Pen button 1:"
 msgstr "კალმის ღილაკი 1:"
 
-#: ui/main.qml:274
+#: ui/main.qml:282
 #, kde-format
 msgid "Pen button 2:"
 msgstr "კალმის ღილაკი 2:"
 
-#: ui/main.qml:275
+#: ui/main.qml:283
 #, kde-format
 msgid "Pen button 3:"
 msgstr "კალმის ღილაკი 3:"
 
-#: ui/main.qml:319
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "პედი:"
 
-#: ui/main.qml:330
+#: ui/main.qml:338
 #, kde-format
 msgid "None"
 msgstr "არაფერი"
 
-#: ui/main.qml:352
+#: ui/main.qml:360
 #, kde-format
 msgid "Pad button %1:"
 msgstr "პადის ღილაკი %1:"
 
-#: ui/Tester.qml:27
+#: ui/Tester.qml:25
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
@@ -187,17 +187,17 @@ msgstr "ტაბლეტის შემმოწმებელი"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "სტილუსის დაჭერის X=%1 Y=%2"
 
-#: ui/Tester.qml:56
+#: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
 msgstr "სტილუსის აშვების X=%1 Y=%2"
 
-#: ui/Tester.qml:64
+#: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
 msgstr "სტილუსის გადაადგილების X=%1 Y=%2"
 
-#: ui/Tester.qml:186
+#: ui/Tester.qml:194
 #, kde-format
 msgid ""
 "## Legend:\n"
@@ -206,7 +206,7 @@ msgstr ""
 "## ახსნა:\n"
 "# X, Y - მოვლენის კოორდინატები\n"
 
-#: ui/Tester.qml:193
+#: ui/Tester.qml:201
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"

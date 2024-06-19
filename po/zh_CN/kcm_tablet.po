@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"POT-Creation-Date: 2024-06-19 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -73,44 +73,44 @@ msgstr "保持宽高比并适合屏幕"
 msgid "Map to Portion of Screen"
 msgstr "映射到屏幕区域"
 
-#: ui/main.qml:29
+#: ui/main.qml:31
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "没有找到数位板"
 
-#: ui/main.qml:30
+#: ui/main.qml:32
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "连接数位板"
 
-#: ui/main.qml:38
+#: ui/main.qml:40
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "测试数位板…"
 
-#: ui/main.qml:58
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "设备："
 
-#: ui/main.qml:96
+#: ui/main.qml:104
 #, kde-format
 msgid "Map to screen:"
 msgstr "映射到屏幕："
 
-#: ui/main.qml:116
+#: ui/main.qml:124
 #, kde-format
 msgid "Orientation:"
 msgstr "方向："
 
-#: ui/main.qml:128
+#: ui/main.qml:136
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "左手模式："
 
-#: ui/main.qml:139
+#: ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -121,60 +121,60 @@ msgstr ""
 "要求设备针对左手用户进行相应调整。效果因设备而异，但一般都会翻转数位板板面按"
 "钮的方向，以便在旋转 180 度后使用。"
 
-#: ui/main.qml:145
+#: ui/main.qml:153
 #, kde-format
 msgid "Mapped Area:"
 msgstr "映射区域："
 
-#: ui/main.qml:232
+#: ui/main.qml:240
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "调整数位板有效区域大小"
 
-#: ui/main.qml:256
+#: ui/main.qml:264
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "锁定宽高比"
 
-#: ui/main.qml:264
+#: ui/main.qml:272
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:273
+#: ui/main.qml:281
 #, kde-format
 msgid "Pen button 1:"
 msgstr "笔身按钮 1："
 
-#: ui/main.qml:274
+#: ui/main.qml:282
 #, kde-format
 msgid "Pen button 2:"
 msgstr "笔身按钮 2："
 
-#: ui/main.qml:275
+#: ui/main.qml:283
 #, kde-format
 msgid "Pen button 3:"
 msgstr "笔身按钮 3："
 
-#: ui/main.qml:319
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "数位板："
 
-#: ui/main.qml:330
+#: ui/main.qml:338
 #, kde-format
 msgid "None"
 msgstr "无"
 
-#: ui/main.qml:352
+#: ui/main.qml:360
 #, kde-format
 msgid "Pad button %1:"
 msgstr "板面按钮 %1："
 
-#: ui/Tester.qml:27
+#: ui/Tester.qml:25
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
@@ -185,17 +185,17 @@ msgstr "数位板测试工具"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "压感笔按压 X=%1 Y=%2"
 
-#: ui/Tester.qml:56
+#: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
 msgstr "压感笔释放 X=%1 Y=%2"
 
-#: ui/Tester.qml:64
+#: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
 msgstr "压感笔移动 X=%1 Y=%2"
 
-#: ui/Tester.qml:186
+#: ui/Tester.qml:194
 #, kde-format
 msgid ""
 "## Legend:\n"
@@ -204,7 +204,7 @@ msgstr ""
 "## 图例：\n"
 "# X、Y - 事件坐标\n"
 
-#: ui/Tester.qml:193
+#: ui/Tester.qml:201
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"POT-Creation-Date: 2024-06-19 00:40+0000\n"
 "PO-Revision-Date: 2024-06-10 23:33+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -75,44 +75,44 @@ msgstr ""
 msgid "Map to Portion of Screen"
 msgstr ""
 
-#: ui/main.qml:29
+#: ui/main.qml:31
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "Trovis neniujn desegnotabulojn"
 
-#: ui/main.qml:30
+#: ui/main.qml:32
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "Konekti desegnotabulon"
 
-#: ui/main.qml:38
+#: ui/main.qml:40
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr ""
 
-#: ui/main.qml:58
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Aparato:"
 
-#: ui/main.qml:96
+#: ui/main.qml:104
 #, kde-format
 msgid "Map to screen:"
 msgstr ""
 
-#: ui/main.qml:116
+#: ui/main.qml:124
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientiĝo:"
 
-#: ui/main.qml:128
+#: ui/main.qml:136
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Maldekstramana reĝimo:"
 
-#: ui/main.qml:139
+#: ui/main.qml:147
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -129,60 +129,60 @@ msgstr ""
 "aparato, sed ofte ĝi inversigas la funkciecon de la platbutonoj por ke la "
 "tabuleto povu esti uzata renverse."
 
-#: ui/main.qml:145
+#: ui/main.qml:153
 #, kde-format
 msgid "Mapped Area:"
 msgstr ""
 
-#: ui/main.qml:232
+#: ui/main.qml:240
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Regrandigi la tablojdan areon"
 
-#: ui/main.qml:256
+#: ui/main.qml:264
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Ŝlosi bildformaton"
 
-#: ui/main.qml:264
+#: ui/main.qml:272
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:273
+#: ui/main.qml:281
 #, kde-format
 msgid "Pen button 1:"
 msgstr "Skribilbutono 1:"
 
-#: ui/main.qml:274
+#: ui/main.qml:282
 #, kde-format
 msgid "Pen button 2:"
 msgstr "Skribilbutono 2:"
 
-#: ui/main.qml:275
+#: ui/main.qml:283
 #, kde-format
 msgid "Pen button 3:"
 msgstr "Skribilbutono 3:"
 
-#: ui/main.qml:319
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Kuseneto:"
 
-#: ui/main.qml:330
+#: ui/main.qml:338
 #, kde-format
 msgid "None"
 msgstr "Neniu"
 
-#: ui/main.qml:352
+#: ui/main.qml:360
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Matbutono %1:"
 
-#: ui/Tester.qml:27
+#: ui/Tester.qml:25
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
@@ -193,17 +193,17 @@ msgstr "Tabulet-Testilo"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "Grifelpremo X=%1 Y=%2"
 
-#: ui/Tester.qml:56
+#: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
 msgstr "Grifelmalpremo X=%1 Y=%2"
 
-#: ui/Tester.qml:64
+#: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
 msgstr "Grifelmovo X=%1 Y=%2"
 
-#: ui/Tester.qml:186
+#: ui/Tester.qml:194
 #, kde-format
 msgid ""
 "## Legend:\n"
@@ -212,7 +212,7 @@ msgstr ""
 "## Klarigeto:\n"
 "# X, Y - eventkoordinato\n"
 
-#: ui/Tester.qml:193
+#: ui/Tester.qml:201
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
