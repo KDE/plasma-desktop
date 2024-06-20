@@ -61,7 +61,7 @@ SessionManagementScreen {
             font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
             Layout.fillWidth: true
 
-            placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
+            placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Password")
             focus: true
             enabled: !authenticator.graceLocked
 
@@ -104,7 +104,7 @@ SessionManagementScreen {
 
         PlasmaComponents3.Button {
             id: loginButton
-            Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlock")
+            Accessible.name: i18nd("plasma_shell_org.kde.plasma.desktop", "Unlock")
             Layout.preferredHeight: passwordBox.implicitHeight
             Layout.preferredWidth: loginButton.Layout.preferredHeight
 
@@ -153,10 +153,10 @@ SessionManagementScreen {
 
     FailableLabel {
         kind: ScreenLocker.Authenticator.Fingerprint
-        label: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "(or scan your fingerprint on the reader)")
+        label: i18nd("plasma_shell_org.kde.plasma.desktop", "(or scan your fingerprint on the reader)")
     }
     FailableLabel {
         kind: ScreenLocker.Authenticator.Smartcard
-        label: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "(or scan your smartcard)")
+        label: i18nd("plasma_shell_org.kde.plasma.desktop", "(or scan your smartcard)")
     }
 }

@@ -47,7 +47,7 @@ Item {
             if (kind != 0) { // if this is coming from the noninteractive authenticators
                 return;
             }
-            const msg = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlocking failed");
+            const msg = i18nd("plasma_shell_org.kde.plasma.desktop", "Unlocking failed");
             lockScreenUi.handleMessage(msg);
             graceLockTimer.restart();
             notificationRemoveTimer.restart();
@@ -273,7 +273,7 @@ Item {
                 notificationMessage: {
                     const parts = [];
                     if (capsLockState.locked) {
-                        parts.push(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Caps Lock is on"));
+                        parts.push(i18nd("plasma_shell_org.kde.plasma.desktop", "Caps Lock is on"));
                     }
                     if (root.notification) {
                         parts.push(root.notification);
@@ -287,19 +287,19 @@ Item {
 
                 actionItems: [
                     ActionButton {
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Sleep")
+                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Sleep")
                         iconSource: "system-suspend"
                         onClicked: root.suspendToRam()
                         visible: root.suspendToRamSupported
                     },
                     ActionButton {
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Hibernate")
+                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Hibernate")
                         iconSource: "system-suspend-hibernate"
                         onClicked: root.suspendToDisk()
                         visible: root.suspendToDiskSupported
                     },
                     ActionButton {
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
+                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Switch User")
                         iconSource: "system-switch-user"
                         onClicked: {
                             sessionManagement.switchUser();
@@ -360,7 +360,7 @@ Item {
                 id: virtualKeyboardButton
 
                 focusPolicy: Qt.TabFocus
-                text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to show/hide virtual keyboard", "Virtual Keyboard")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "Button to show/hide virtual keyboard", "Virtual Keyboard")
                 icon.name: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
                 onClicked: {
                     // Otherwise the password field loses focus and virtual keyboard
@@ -384,7 +384,7 @@ Item {
                 id: keyboardButton
 
                 focusPolicy: Qt.TabFocus
-                Accessible.description: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")
+                Accessible.description: i18ndc("plasma_shell_org.kde.plasma.desktop", "Button to change keyboard layout", "Switch layout")
                 icon.name: "input-keyboard"
 
                 PW.KeyboardLayoutSwitcher {
