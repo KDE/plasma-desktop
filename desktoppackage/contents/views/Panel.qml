@@ -108,7 +108,7 @@ Item {
 
         Binding on regionGeometry {
             delayed: true
-            value: panel.width, panel.height, panel.x, panel.y, panel.dogdeGeometryByDistance(-1)
+            value: panel.width, panel.height, panel.x, panel.y, panel.dogdeGeometryByDistance(panel.visibilityMode === Panel.Global.DodgeWindows ? -1 : 1) // +1 is for overlap detection, -1 is for snapping to panel
         }
     }
 
