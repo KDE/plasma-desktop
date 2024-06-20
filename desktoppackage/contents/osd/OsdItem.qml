@@ -29,7 +29,7 @@ RowLayout {
     property bool showingProgress: false
 
     function formatPercent(number) {
-        return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Percentage value", "%1%", number);
+        return i18ndc("plasma_shell_org.kde.plasma.desktop", "Percentage value", "%1%", number);
     }
 
     spacing: Kirigami.Units.largeSpacing

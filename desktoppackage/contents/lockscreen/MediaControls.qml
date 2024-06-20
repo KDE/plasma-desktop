@@ -56,8 +56,8 @@ Item {
                     text: model.track.length > 0
                             ? model.track
                             : (model.playbackStatus > Mpris.PlaybackStatus.Stopped
-                                ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "No title")
-                                : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "No media playing"))
+                                ? i18nd("plasma_shell_org.kde.plasma.desktop", "No title")
+                                : i18nd("plasma_shell_org.kde.plasma.desktop", "No media playing"))
                     textFormat: Text.PlainText
                     wrapMode: Text.NoWrap
                 }
@@ -85,7 +85,7 @@ Item {
                     fadeoutTimer.running = false
                     model.container.Previous()
                 }
-                Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Previous track")
+                Accessible.name: i18nd("plasma_shell_org.kde.plasma.desktop", "Previous track")
             }
 
             PlasmaComponents3.ToolButton {
@@ -97,7 +97,7 @@ Item {
                     fadeoutTimer.running = false
                     model.container.PlayPause()
                 }
-                Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Play or Pause media")
+                Accessible.name: i18nd("plasma_shell_org.kde.plasma.desktop", "Play or Pause media")
             }
 
             PlasmaComponents3.ToolButton {
@@ -107,7 +107,7 @@ Item {
                 enabled: model.canGoNext
                 focusPolicy: Qt.TabFocus
                 icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
-                Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Next track")
+                Accessible.name: i18nd("plasma_shell_org.kde.plasma.desktop", "Next track")
                 onClicked: {
                     fadeoutTimer.running = false
                     model.container.Next()

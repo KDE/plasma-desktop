@@ -14,10 +14,10 @@ Kirigami.FormLayout {
 
     QQC2.CheckBox {
         id: alwaysClock
-        Kirigami.FormData.label: i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
+        Kirigami.FormData.label: i18ndc("plasma_shell_org.kde.plasma.desktop",
                                         "@title: group",
                                         "Clock:")
-        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
+        text: i18ndc("plasma_shell_org.kde.plasma.desktop",
                      "@option:check",
                      "Keep visible when unlocking prompt disappears")
 
@@ -28,10 +28,10 @@ Kirigami.FormLayout {
 
     QQC2.CheckBox {
         id: showMediaControls
-        Kirigami.FormData.label: i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
+        Kirigami.FormData.label: i18ndc("plasma_shell_org.kde.plasma.desktop",
                                         "@title: group",
                                         "Media controls:")
-        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
+        text: i18ndc("plasma_shell_org.kde.plasma.desktop",
                      "@option:check",
                      "Show under unlocking prompt")
 
