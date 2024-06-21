@@ -97,9 +97,7 @@ KCM.ScrollViewKCM {
                 wrapMode: Text.WordWrap
             }
 
-
             Kirigami.FormLayout {
-                id: indexingForm
 
                 QQC2.CheckBox {
                     id: fileSearchEnabled
@@ -115,47 +113,6 @@ KCM.ScrollViewKCM {
                         settingName: "indexingEnabled"
                     }
                 }
-
-                // Current status
-                QQC2.Label {
-                    Kirigami.FormData.label: i18nc("@label indexing status", "Status:")
-                    Layout.fillWidth: true
-                    leftPadding: fileSearchEnabled.indicator.width
-                    visible: fileSearchEnabled.checked
-                    text: i18nc("State and a percentage of progress", "%1, %2% complete", monitor.stateString, monitor.completionPercentage)
-                    textFormat: Text.PlainText
-                    elide: Text.ElideLeft
-                }
-            }
-
-            Item {
-                visible: fileBeingIndexed.visible
-                implicitHeight: Kirigami.Units.smallSpacing
-            }
-
-            // Current file being indexed
-            QQC2.Label {
-                Layout.fillWidth: true
-                text: i18nc("@label file currently being indexed", "Currently indexing:")
-                textFormat: Text.PlainText
-                horizontalAlignment: Text.AlignHCenter
-                visible: fileBeingIndexed.visible
-            }
-
-            // File being indexed, if indexing
-            Kirigami.SelectableLabel {
-                id: fileBeingIndexed
-                Layout.fillWidth: true
-                visible: fileSearchEnabled.checked && monitor.currentlyIndexing && monitor.completionPercentage !== 100 && monitor.filePath.length > 0
-                text: xi18nc("@info Currently Indexing", "<filename>%1</filename>", monitor.filePath)
-            }
-
-            Item {
-                implicitHeight: Kirigami.Units.smallSpacing
-            }
-
-            Kirigami.FormLayout {
-                twinFormLayouts: indexingForm
 
                 QQC2.ButtonGroup {
                     id: indexingStyleGroup
@@ -240,6 +197,24 @@ KCM.ScrollViewKCM {
                     }
                 }
             ]
+        }
+    }
+
+    extraFooterTopPadding: true // re-add separator line
+    footer: ColumnLayout {
+        visible: fileSearchEnabled.checked
+        spacing: Kirigami.Units.smallSpacing
+
+        QQC2.Label {
+            Layout.fillWidth: true
+            text: i18nc("State and a percentage of progress", "%1, %2% complete", monitor.stateString, monitor.completionPercentage)
+            textFormat: Text.PlainText
+        }
+
+        Kirigami.SelectableLabel {
+            Layout.fillWidth: true
+            visible: monitor.currentlyIndexing && monitor.completionPercentage !== 100 && monitor.filePath.length > 0
+            text: xi18nc("@info Currently Indexing", "Currently indexing: <filename>%1</filename>", monitor.filePath)
         }
     }
 
