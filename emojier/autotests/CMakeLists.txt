@@ -1,5 +1,5 @@
-# SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
-# SPDX-License-Identifier: BSD-3-Clause
+# SPDX-FileCopyrightText: 2024 Fushan Wen <qydwhotmail@gmail.com>
+# SPDX-License-Identifier: BSD-2-Clause
 
 if(NOT BUILD_TESTING OR NOT CMAKE_SYSTEM_NAME MATCHES "Linux")
     return()
@@ -15,6 +15,7 @@ if(NOT SeleniumWebDriverATSPI_FOUND AND NOT DEFINED ENV{KDECI_BUILD})
     return()
 endif()
 
-add_subdirectory(applets)
-add_subdirectory(desktop)
-add_subdirectory(kcms)
+add_test(
+    NAME emojiertest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/emojiertest.py --failfast
+)
