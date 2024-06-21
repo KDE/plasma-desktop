@@ -5,20 +5,21 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2019.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2020, 2021, 2022, 2023.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_search\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2023-11-14 14:05-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2024-06-20 00:50-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: plasmasearch/kcm.h:70
 #, kde-format
@@ -41,11 +42,7 @@ msgid "Get New Plugins…"
 msgstr "Baixar novos plugins..."
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -53,7 +50,7 @@ msgid ""
 msgstr ""
 "Habilitar ou desabilitar plugins (usados no KRunner, lançador de aplicativos "
 "e no efeito visão geral). Marcar plugins como favoritos e organize-os na "
-"ordem que você quer ver eles."
+"ordem que você quiser dar prioridade a eles."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -103,24 +100,22 @@ msgid "KRunner plugin installation failed"
 msgstr "Falha na instalação do plugin do KRunner"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Comando a executar: install ou uninstall."
+msgstr "Comando a executar: instalar ou desinstalar."
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Caminho para o arquivo ou pasta extraída"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
-msgstr ""
+msgstr "Não mostrar uma janela de confirmação"
 
 #: plugininstaller/main.cpp:92
 #, kde-format
@@ -171,6 +166,7 @@ msgid ""
 "This plugin executes the following command for starting the \"%1\" service:"
 "<nl/>%2"
 msgstr ""
+"Este plugin executa o seguinte comando para iniciar o serviço \"%1\":<nl/>%2"
 
 #: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format

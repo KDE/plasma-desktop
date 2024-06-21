@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-05-25 23:54\n"
+"PO-Revision-Date: 2024-06-20 17:30\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -74,13 +74,13 @@ msgstr "Імгненна"
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "Пракручванне:"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "Аддаваць перавагу плаўнаму пракручванню"
 
 #: ui/main.qml:133
 #, kde-format
@@ -91,6 +91,10 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Гэтая налада ўключае або адключае анімаваныя пераходы пры пракручванні колам "
+"мышы або клавіятурай. Некаторыя праграмы могуць ігнараваць гэтую наладу, бо "
+"яны альбо не падтрымліваюць плаўнае пракручванне, альбо маюць уласныя налады "
+"для яго ўключэння і адключэння."
 
 #: ui/main.qml:146
 #, kde-format
@@ -249,7 +253,7 @@ msgstr "Хуткасць анімацыі"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "Плаўнае пракручванне"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

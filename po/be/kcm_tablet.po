@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:40+0000\n"
-"PO-Revision-Date: 2024-06-06 19:00\n"
+"PO-Revision-Date: 2024-06-20 17:30\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Прадвызначана"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -48,15 +48,14 @@ msgid "Inverted Landscape"
 msgstr "Адваротная альбомная"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Пільнавацца актыўнага экрана"
+msgstr "Пільнавацца бягучага экрана"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Усе экраны"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -67,17 +66,17 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Па памеры экрана"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Захоўваць суадносіны бакоў і адпавядаць памеру экрану"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Суадносіны з часткай экрана"
 
 #: ui/main.qml:31
 #, kde-format
@@ -93,7 +92,7 @@ msgstr "Падлучыць планшэт для малявання"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Праверыць планшэт…"
 
 #: ui/main.qml:66
 #, kde-format
@@ -104,7 +103,7 @@ msgstr "Прылада:"
 #: ui/main.qml:104
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Суадносіны з экранам:"
 
 #: ui/main.qml:124
 #, kde-format
@@ -112,8 +111,7 @@ msgid "Orientation:"
 msgstr "Арыентацыя:"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Рэжым для ляўшэй:"
 
@@ -125,11 +123,14 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Паказвае, што прылада можа быць прыстасавана да ляўшэй. Эфекты будуць "
+"адрознівацца ў залежнасці ад прылады, але часта функцыянальнасць кнопак "
+"панэлі змяняецца, таму планшэт можна выкарыстоўваць перавернутым."
 
 #: ui/main.qml:153
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Вобласць суадносін:"
 
 #: ui/main.qml:240
 #, kde-format
@@ -183,22 +184,22 @@ msgstr "Кнопка планшэта %1:"
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "Правяранне планшэтаў"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Націсканне стылусам X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Вызваленне стылуса X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Перамяшчэнне стылуса X=%1 Y=%2"
 
 #: ui/Tester.qml:194
 #, kde-format
@@ -206,12 +207,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Легенда:\n"
+"# X, Y - каардынаты\n"
 
 #: ui/Tester.qml:201
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Ачысціць"
 
 #~ msgid "Primary (default)"
 #~ msgstr "Асноўны (прадвызначана)"
