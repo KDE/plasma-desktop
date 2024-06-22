@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2021-05-27 18:51+0200\n"
+"PO-Revision-Date: 2024-06-21 11:40+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -231,7 +231,7 @@ msgstr "Övre vänstra hörnet"
 #: ui/main.qml:99
 #, kde-format
 msgid "Connect an external touchpad"
-msgstr ""
+msgstr "Anslut en extern tryckplatta"
 
 #: ui/main.qml:113
 #, kde-format
@@ -294,6 +294,9 @@ msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
+"Om inställningen aktiveras ökar fördröjningen för musklick med 50 ms. Den "
+"extra fördröjningen behövs för att korrekt upptäcka samtidiga vänster- och "
+"högerklick."
 
 #: ui/main.qml:266
 #, kde-format
@@ -308,7 +311,7 @@ msgstr "Acceleration för pekare:"
 #: ui/main.qml:395
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: ui/main.qml:399
 #, kde-format
@@ -318,7 +321,7 @@ msgstr "Pekaren flyttas samma avstånd som fingret."
 #: ui/main.qml:408
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Standard"
 
 #: ui/main.qml:412
 #, kde-format

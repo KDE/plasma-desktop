@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:41+0000\n"
-"PO-Revision-Date: 2022-08-03 10:18+0200\n"
+"POT-Creation-Date: 2024-06-22 00:40+0000\n"
+"PO-Revision-Date: 2024-06-21 11:46+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -69,14 +69,12 @@ msgid "File types:"
 msgstr "Filtyper:"
 
 #: package/contents/ui/ConfigFilter.qml:80
-#, fuzzy, kde-format
-#| msgid "Show All Files"
+#, kde-format
 msgid "Show hidden files:"
-msgstr "Visa alla filer"
+msgstr "Visa dolda filer:"
 
 #: package/contents/ui/ConfigFilter.qml:130
-#, fuzzy, kde-format
-#| msgid "File type"
+#, kde-format
 msgid "File Type"
 msgstr "Filtyp"
 
@@ -98,7 +96,7 @@ msgstr "Avmarkera alla"
 #: package/contents/ui/ConfigFilter.qml:222
 #, kde-format
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "Ändra sorteringsordning"
 
 #: package/contents/ui/ConfigIcons.qml:64
 #, kde-format
@@ -380,7 +378,7 @@ msgstr "Skriv in egen rubrik…"
 #: package/contents/ui/ConfigOverlay.qml:86
 #, kde-format
 msgid "Click and drag to rotate"
-msgstr ""
+msgstr "Klicka och dra för att rotera"
 
 #: package/contents/ui/ConfigOverlay.qml:174
 #, kde-format
@@ -402,19 +400,20 @@ msgstr "Ta bort"
 msgid "Preview Plugins"
 msgstr "Insticksprogram för förhandsgranskning"
 
-#: package/contents/ui/FolderView.qml:1196
+#: package/contents/ui/FolderView.qml:1197
 #, kde-format
 msgctxt "@info"
 msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"Det finns många filer och kataloger på skrivbordet. Det kan orsaka fel och "
+"prestandaproblem. Överväg att flytta några av dem till en annan plats."
 
 #: package/contents/ui/main.qml:374
-#, fuzzy, kde-format
-#| msgid "Configure Desktop and Wallpaper…"
+#, kde-format
 msgid "Desktop and Wallpaper"
-msgstr "Anpassa skrivbord och skrivbordsunderlägg…"
+msgstr "Skrivbord och skrivbordsunderlägg"
 
 #: plugins/folder/directorypicker.cpp:32
 #, kde-format

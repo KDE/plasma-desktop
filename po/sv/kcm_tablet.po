@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:40+0000\n"
-"PO-Revision-Date: 2022-09-24 16:00+0200\n"
+"PO-Revision-Date: 2024-06-21 11:40+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Förval"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -43,15 +43,14 @@ msgid "Inverted Landscape"
 msgstr "Inverterat liggande"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Följ den aktiva skärmen"
+msgstr "Följ nuvarande skärm"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Alla skärmar"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -62,36 +61,33 @@ msgstr "%1 - (%2,%3 %4 × %5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Anpassa till skärm"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Behåll proportion och anpassa inom skärm"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Avbilda till del av skärm"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found."
+#, kde-format
 msgid "No drawing tablets found"
-msgstr "Inga ritplattor hittades."
+msgstr "Inga ritplattor hittades"
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid "Configure drawing tablets"
+#, kde-format
 msgid "Connect a drawing tablet"
-msgstr "Anpassa ritplattor"
+msgstr "Anslut en ritplatta"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Ritplatta"
+msgstr "Testa ritplatta…"
 
 #: ui/main.qml:66
 #, kde-format
@@ -102,7 +98,7 @@ msgstr "Enhet:"
 #: ui/main.qml:104
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Avbilda på skärm:"
 
 #: ui/main.qml:124
 #, kde-format
@@ -110,8 +106,7 @@ msgid "Orientation:"
 msgstr "Orientering:"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Vänsterhänt läge:"
 
@@ -123,11 +118,14 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Talar om för enheten att hantera vänsterhänta användare. Effekten varierar "
+"beroende på enhet, men ofta vänder det på knapparnas funktion så att "
+"ritplattan kan användas upp och ner."
 
 #: ui/main.qml:153
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Avbildat område:"
 
 #: ui/main.qml:240
 #, kde-format
@@ -147,22 +145,19 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3 × %4"
 
 #: ui/main.qml:281
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pen button 1:"
-msgstr "Knapp %1:"
+msgstr "Pennknapp 1:"
 
 #: ui/main.qml:282
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pen button 2:"
-msgstr "Knapp %1:"
+msgstr "Pennknapp 2:"
 
 #: ui/main.qml:283
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pen button 3:"
-msgstr "Knapp %1:"
+msgstr "Pennknapp 3:"
 
 #: ui/main.qml:327
 #, kde-format
@@ -173,35 +168,33 @@ msgstr "Vaddering:"
 #: ui/main.qml:338
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: ui/main.qml:360
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
-msgstr "Knapp %1:"
+msgstr "Plattans knapp %1:"
 
 #: ui/Tester.qml:25
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr "Ritplatta"
+msgstr "Testa ritplatta"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Tryck penna X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Släpp penna X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Flytta penna X=%1 Y=%2"
 
 #: ui/Tester.qml:194
 #, kde-format
@@ -209,12 +202,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Förklaring:\n"
+"# X, Y - händelsekoordinat\n"
 
 #: ui/Tester.qml:201
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Rensa"
 
 #~ msgid "Primary (default)"
 #~ msgstr "Primär (förval)"

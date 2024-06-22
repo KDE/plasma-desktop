@@ -5,21 +5,21 @@
 # Anders Widell <awl@hem.passagen.se>, 1999-2000.
 # Per Lindström <pelinsr@algonet.se>, 2000.
 # Mattias Newzella <newzella@linux.nu>, 2000, 2001, 2002,2003, 2004.
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2002.
+# SPDX-FileCopyrightText: 2002, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 # Stefan Asserhäll <stefan.asserhall@gmail.com>, 2004, 2005, 2006, 2007, 2008, 2009, 2017, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2021-03-19 09:22+0100\n"
+"PO-Revision-Date: 2024-06-21 11:32+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ui/main.qml:52
@@ -100,43 +100,37 @@ msgstr ""
 "musik."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Sökväg till musik:"
+msgstr "Öppen sökväg:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Denna katalog kommer att användas som förval när du laddar eller sparar "
-"bilder."
+"Denna katalog kommer att användas som förval för öppna delade filer när "
+"nätverksdelning är aktiverad."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Sökväg till bilder:"
+msgstr "Sökväg till mallar:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
 "Denna katalog kommer att användas som förval när du laddar eller sparar "
-"bilder."
+"mallar."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"
-msgstr ""
+msgstr "Välj ny plats"
 
 #~ msgid "Desktop"
 #~ msgstr "Skrivbord"

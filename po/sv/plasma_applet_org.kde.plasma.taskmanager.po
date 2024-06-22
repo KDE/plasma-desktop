@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-17 00:40+0000\n"
-"PO-Revision-Date: 2022-08-03 10:21+0200\n"
+"PO-Revision-Date: 2024-06-21 11:44+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -69,16 +69,15 @@ msgid "General:"
 msgstr "Allmänt:"
 
 #: package/contents/ui/ConfigAppearance.qml:46
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "Markera fönster när musen hålls över aktiviteternas verktygstips"
+msgstr ""
+"Visa små förhandsgranskningar av fönster när musen hålls över aktiviteter"
 
 #: package/contents/ui/ConfigAppearance.qml:51
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "Markera fönster när musen hålls över aktiviteternas verktygstips"
+msgstr "Dölj andra fönster när musen hålls över förhandsgranskningar"
 
 #: package/contents/ui/ConfigAppearance.qml:56
 #, kde-format
@@ -95,42 +94,40 @@ msgstr "Fyll fritt utrymme i panel"
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "Visa flera kolumner:"
 
 #: package/contents/ui/ConfigAppearance.qml:73
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "Visa flera rader:"
 
 #: package/contents/ui/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "Aldrig"
 
 #: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
-msgstr ""
+msgstr "När panelen har ont om utrymme och är tillräckligt stor"
 
 #: package/contents/ui/ConfigAppearance.qml:99
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
-msgstr ""
+msgstr "Alltid när panelen är tillräckligt stor"
 
 #: package/contents/ui/ConfigAppearance.qml:105
-#, fuzzy, kde-format
-#| msgid "Maximum columns:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Maximalt antal kolumner:"
 
 #: package/contents/ui/ConfigAppearance.qml:105
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Maximalt antal rader:"
@@ -191,25 +188,19 @@ msgid "Cycles through tasks"
 msgstr "Går igenom aktiviteter"
 
 #: package/contents/ui/ConfigBehavior.qml:65
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "Visar fönster sida vid sida"
+msgstr "Visar små förhandsgranskningar av fönster"
 
 #: package/contents/ui/ConfigBehavior.qml:66
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "Visar fönster sida vid sida"
+msgstr "Visar stora förhandsgranskningar av fönster"
 
 #: package/contents/ui/ConfigBehavior.qml:67
 #, kde-format
@@ -272,10 +263,9 @@ msgid "Keep launchers separate"
 msgstr "Behåll startprogram separerade"
 
 #: package/contents/ui/ConfigBehavior.qml:123
-#, fuzzy, kde-format
-#| msgid "Use launcher icons for running applications"
+#, kde-format
 msgid "Hide launchers after application startup"
-msgstr "Använd startikoner för att köra program"
+msgstr "Dölj startprogram efter programstart"
 
 #: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
@@ -394,7 +384,7 @@ msgstr "Nya aktiviteter visas:"
 #: package/contents/ui/ConfigBehavior.qml:221
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "Längst ner"
 
 #: package/contents/ui/ConfigBehavior.qml:225
 #: package/contents/ui/ConfigBehavior.qml:245
@@ -411,7 +401,7 @@ msgstr "Till vänster"
 #: package/contents/ui/ConfigBehavior.qml:239
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "Längst upp"
 
 #: package/contents/ui/ContextMenu.qml:100
 #, kde-format
@@ -592,11 +582,10 @@ msgid "Allow this program to be grouped"
 msgstr "Tillåt att programmet grupperas"
 
 #: package/contents/ui/ContextMenu.qml:773
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "Stän&g"
+msgstr "&Stäng alla"
 
 #: package/contents/ui/ContextMenu.qml:773
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2015, 2016, 2018, 2021, 2022.
+# SPDX-FileCopyrightText: 2015, 2016, 2018, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-13 00:40+0000\n"
-"PO-Revision-Date: 2022-09-24 15:59+0200\n"
+"PO-Revision-Date: 2024-06-21 11:44+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,14 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgid "Minimize All Applet Active Indicator"
-msgstr "Minimera alla fönster"
+msgstr "Minimera alla miniprogram aktiv indikering"
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
@@ -67,14 +65,10 @@ msgid "Moves windows back to their original positions"
 msgstr "Flyttar tillbaka fönster till sina ursprungliga positioner"
 
 #: package/contents/ui/PeekController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Temporarily reveals the Desktop by moving open windows into screen corners"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
-"Visar tillfälligt skrivbordet genom att flytta öppna fönster till skärmhörn"
+msgstr "Visar skrivbordet tillfälligt genom att flytta bort fönster"
 
 #~ msgid "Show Desktop"
 #~ msgstr "Visa skrivbord"

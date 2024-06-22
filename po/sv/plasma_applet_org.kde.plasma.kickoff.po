@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:39+0000\n"
-"PO-Revision-Date: 2022-09-24 15:58+0200\n"
+"PO-Revision-Date: 2024-06-21 11:46+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "Ikon:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Ändra startprogrammets ikon"
 
 #: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
@@ -65,12 +65,14 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Nuvarande ikon är %1. Klicka för att visa menyn för att ändra nuvarande ikon "
+"eller återställa till standardikonen."
 
 #: package/contents/ui/ConfigGeneral.qml:56
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "Ikonnamnet är \"%1\""
 
 #: package/contents/ui/ConfigGeneral.qml:91
 #, kde-format
@@ -82,7 +84,7 @@ msgstr "Välj…"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Välj en ikon för startprogrammet"
 
 #: package/contents/ui/ConfigGeneral.qml:97
 #, kde-format
@@ -112,7 +114,7 @@ msgstr "Skriv här för att lägga till en textetikett"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Återställ menybeteckning"
 
 #: package/contents/ui/ConfigGeneral.qml:143
 #, kde-format
@@ -151,19 +153,19 @@ msgstr "Anpassa aktiverade sökinsticksprogram…"
 #: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
 msgid "Sidebar position:"
-msgstr ""
+msgstr "Sidoradens position:"
 
 #: package/contents/ui/ConfigGeneral.qml:186
 #: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Right"
-msgstr ""
+msgstr "Höger"
 
 #: package/contents/ui/ConfigGeneral.qml:186
 #: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Left"
-msgstr ""
+msgstr "Vänster"
 
 #: package/contents/ui/ConfigGeneral.qml:202
 #, kde-format
@@ -239,7 +241,7 @@ msgstr "Platser"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Inga träffar"
 
 #: package/contents/ui/Header.qml:81
 #, kde-format
