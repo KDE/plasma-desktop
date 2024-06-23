@@ -1,0 +1,78 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2024 Matjaž Jeran <matjaz.jeran@amis.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-06-22 02:39+0000\n"
+"PO-Revision-Date: 2024-06-22 08:06+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: KeyboardButton.qml:19
+msgid "Keyboard Layout: %1"
+msgstr "Razporeditev tipkovnice: %1"
+
+#: Login.qml:85
+msgid "Username"
+msgstr "Uporabniško ime"
+
+#: Login.qml:102
+msgid "Password"
+msgstr "Geslo"
+
+#: Login.qml:144 Login.qml:150
+msgid "Log In"
+msgstr "Prijavi se"
+
+#: Main.qml:195
+msgid "Caps Lock is on"
+msgstr "Velike črke vklopljene"
+
+#: Main.qml:207 Main.qml:351
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Zaspi"
+
+#: Main.qml:214 Main.qml:358
+msgid "Restart"
+msgstr "Ponovni zagon"
+
+#: Main.qml:221 Main.qml:365
+msgid "Shut Down"
+msgstr "Izklop"
+
+#: Main.qml:228
+msgctxt "For switching to a username and password prompt"
+msgid "Other…"
+msgstr "Ostalo…"
+
+#: Main.qml:337
+msgid "Type in Username and Password"
+msgstr "Vnesite uporabniško ime in geslo"
+
+#: Main.qml:372
+msgid "List Users"
+msgstr "Seznam uporabnikov"
+
+#: Main.qml:447
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Navidezna tipkovnica"
+
+#: Main.qml:514
+msgid "Login Failed"
+msgstr "Neuspela prijava"
+
+#: SessionButton.qml:18
+msgid "Desktop Session: %1"
+msgstr "Namizja seja: %1"

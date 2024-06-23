@@ -1,0 +1,77 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-06-22 02:39+0000\n"
+"PO-Revision-Date: 2024-06-23 00:18+0200\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.0\n"
+
+#: KeyboardButton.qml:19
+msgid "Keyboard Layout: %1"
+msgstr "Billentyűzetkiosztás: %1"
+
+#: Login.qml:85
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: Login.qml:102
+msgid "Password"
+msgstr "Jelszó"
+
+#: Login.qml:144 Login.qml:150
+msgid "Log In"
+msgstr "Bejelentkezés"
+
+#: Main.qml:195
+msgid "Caps Lock is on"
+msgstr "A Caps Lock be van kapcsolva"
+
+#: Main.qml:207 Main.qml:351
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Alvó állapot"
+
+#: Main.qml:214 Main.qml:358
+msgid "Restart"
+msgstr "Újraindítás"
+
+#: Main.qml:221 Main.qml:365
+msgid "Shut Down"
+msgstr "Leállítás"
+
+#: Main.qml:228
+msgctxt "For switching to a username and password prompt"
+msgid "Other…"
+msgstr "Egyéb…"
+
+#: Main.qml:337
+msgid "Type in Username and Password"
+msgstr "Adja meg a felhasználónevet és a jelszót"
+
+#: Main.qml:372
+msgid "List Users"
+msgstr "Felhasználólista"
+
+#: Main.qml:447
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Virtuális billentyűzet"
+
+#: Main.qml:514
+msgid "Login Failed"
+msgstr "Sikertelen bejelentkezés"
+
+#: SessionButton.qml:18
+msgid "Desktop Session: %1"
+msgstr "Asztali munkamenet: %1"
