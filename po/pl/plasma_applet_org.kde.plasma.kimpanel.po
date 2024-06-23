@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2017, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:46+0000\n"
-"PO-Revision-Date: 2021-10-30 09:11+0200\n"
+"PO-Revision-Date: 2024-06-22 09:08+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -30,7 +31,7 @@ msgstr "(Pusty)"
 #: package/contents/ui/ConfigAppearance.qml:29
 #, kde-format
 msgid "Input method list:"
-msgstr "Wykaz metod wprowadzania:"
+msgstr "Wykaz sposobów wprowadzania:"
 
 #: package/contents/ui/ConfigAppearance.qml:30
 #, kde-format
@@ -67,7 +68,7 @@ msgstr "Wybierz czcionkę..."
 #, kde-format
 msgctxt "The arrangement of icons in the Panel"
 msgid "Panel icon size:"
-msgstr "Rozmiar ikon na panelu:"
+msgstr "Rozmiar ikon na pasku:"
 
 #: package/contents/ui/ConfigAppearance.qml:74
 #, kde-format
@@ -77,12 +78,12 @@ msgstr "Mały"
 #: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgid "Scale with Panel height"
-msgstr "Zmieniający się wraz z wysokością panelu"
+msgstr "Zmieniający się wraz z wysokością paska"
 
 #: package/contents/ui/ConfigAppearance.qml:82
 #, kde-format
 msgid "Scale with Panel width"
-msgstr "Zmieniający się wraz z szerokością panelu"
+msgstr "Zmieniający się wraz z szerokością paska"
 
 #: package/contents/ui/ConfigAppearance.qml:90
 #, kde-format
@@ -113,12 +114,12 @@ msgstr "Ponownie wczytaj ustawienia"
 #: package/contents/ui/ContextMenu.qml:123
 #, kde-format
 msgid "Exit Input Method"
-msgstr "Wyjdź z metody wprowadzania"
+msgstr "Wyjdź ze sposobu wprowadzania"
 
 #: package/contents/ui/main.qml:237
 #, kde-format
 msgid "Input Method Panel"
-msgstr "Panel metody wprowadzania"
+msgstr "Pasek sposobu wprowadzania"
 
 #~ msgid "Search"
 #~ msgstr "Szukaj"
