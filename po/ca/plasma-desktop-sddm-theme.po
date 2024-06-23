@@ -1,0 +1,79 @@
+# Translation of plasma-desktop-sddm-theme.po to Catalan
+# Copyright (C) 2024 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-06-22 00:40+0000\n"
+"PO-Revision-Date: 2024-06-22 10:12+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.3\n"
+
+#: KeyboardButton.qml:19
+msgid "Keyboard Layout: %1"
+msgstr "Disposició del teclat: %1"
+
+#: Login.qml:85
+msgid "Username"
+msgstr "Nom d'usuari"
+
+#: Login.qml:102
+msgid "Password"
+msgstr "Contrasenya"
+
+#: Login.qml:144 Login.qml:150
+msgid "Log In"
+msgstr "Inici de sessió"
+
+#: Main.qml:195
+msgid "Caps Lock is on"
+msgstr "El bloqueig de majúscules està activat"
+
+#: Main.qml:207 Main.qml:351
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Suspèn"
+
+#: Main.qml:214 Main.qml:358
+msgid "Restart"
+msgstr "Reinicia"
+
+#: Main.qml:221 Main.qml:365
+msgid "Shut Down"
+msgstr "Atura"
+
+#: Main.qml:228
+msgctxt "For switching to a username and password prompt"
+msgid "Other…"
+msgstr "Altres…"
+
+#: Main.qml:337
+msgid "Type in Username and Password"
+msgstr "Introduïu el nom d'usuari i la contrasenya"
+
+#: Main.qml:372
+msgid "List Users"
+msgstr "Llista d'usuaris"
+
+#: Main.qml:447
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Teclat virtual"
+
+#: Main.qml:514
+msgid "Login Failed"
+msgstr "Ha fallat l'inici de la sessió"
+
+#: SessionButton.qml:18
+msgid "Desktop Session: %1"
+msgstr "Sessió d'escriptori: %1"
