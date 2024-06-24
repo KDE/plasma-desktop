@@ -1,77 +1,78 @@
-# Copyright (C) 2024 This file is copyright:
-# This file is distributed under the same license as the plasma-desktop package.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
+# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
 #
-# SPDX-FileCopyrightText: 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-desktop\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-22 02:39+0000\n"
-"PO-Revision-Date: 2024-06-22 07:51+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
-"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
-"Language: sv\n"
+"PO-Revision-Date: 2024-02-04 12:54+0100\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: KeyboardButton.qml:19
 msgid "Keyboard Layout: %1"
-msgstr "Tangentbordslayout: %1"
+msgstr "Disposición do teclado: %1"
 
 #: Login.qml:85
 msgid "Username"
-msgstr "Användarnamn"
+msgstr "Nome de usuaria"
 
 #: Login.qml:102
 msgid "Password"
-msgstr "Lösenord"
+msgstr "Contrasinal"
 
 #: Login.qml:144 Login.qml:150
 msgid "Log In"
-msgstr "Inloggning"
+msgstr "Acceder"
 
 #: Main.qml:195
 msgid "Caps Lock is on"
-msgstr "Caps Lock aktiverad"
+msgstr "As maiúsculas están bloqueadas"
 
 #: Main.qml:207 Main.qml:351
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Viloläge"
+msgstr "Durmir"
 
 #: Main.qml:214 Main.qml:358
 msgid "Restart"
-msgstr "Omstart"
+msgstr "Reiniciar"
 
 #: Main.qml:221 Main.qml:365
 msgid "Shut Down"
-msgstr "Avstängning"
+msgstr "Apagar"
 
 #: Main.qml:228
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
-msgstr "Annan…"
+msgstr "Máis…"
 
 #: Main.qml:337
 msgid "Type in Username and Password"
-msgstr "Skriv in användarnamn och lösenord"
+msgstr "Escriba o usuario e o contrasinal"
 
 #: Main.qml:372
 msgid "List Users"
-msgstr "Lista användare"
+msgstr "Listar os usuarios"
 
 #: Main.qml:447
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr "Virtuellt tangentbord"
+msgstr "Teclado virtual"
 
 #: Main.qml:514
 msgid "Login Failed"
-msgstr "Inloggning misslyckades"
+msgstr "Fallou o acceso"
 
 #: SessionButton.qml:18
 msgid "Desktop Session: %1"
-msgstr "Skrivbordssession: %1"
+msgstr "Sesión de escritorio: %1"
