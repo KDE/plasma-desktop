@@ -71,25 +71,18 @@ KCM.SimpleKCM {
 
         Item {
             Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18nc("@title:group", "Logout Screen")
+            Kirigami.FormData.label: i18nc("@title:group", "General")
         }
 
-        RowLayout {
-            Kirigami.FormData.label: i18n("Show:")
-            Kirigami.FormData.buddyFor: logoutScreenCheckbox
-            spacing: 0
-
-            CheckBox {
-                id: logoutScreenCheckbox
-                checked: Settings.confirmLogout
-                onToggled: Settings.confirmLogout = checked
-                KCM.SettingStateBinding {
-                    configObject: Settings
-                    settingName: "confirmLogout"
-                }
-            }
-            Kirigami.ContextualHelpButton {
-                toolTipText: xi18nc("@info", "When this setting is turned on, the logout confirmation screen will be shown when you log out, shut down, or restart the system.")
+        CheckBox {
+            id: logoutScreenCheckbox
+        Kirigami.FormData.label: i18nc("@label beginning of the logical sentence 'Ask for confirmation on shutdown, restart, and logout.'", "Ask for confirmation:")
+            text: i18nc("@option:check end of the logical sentence 'Ask for confirmation on shutdown, restart, and logout.'", "On shutdown, restart, and logout")
+            checked: Settings.confirmLogout
+            onToggled: Settings.confirmLogout = checked
+            KCM.SettingStateBinding {
+                configObject: Settings
+                settingName: "confirmLogout"
             }
         }
 
