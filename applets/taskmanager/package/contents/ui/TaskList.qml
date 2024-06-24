@@ -57,9 +57,6 @@ GridLayout {
     }
 
     readonly property int orthogonalCount: {
-        if (tasks.plasmoid.configuration.maxStripes == 1 || tasks.plasmoid.configuration.forceStripes) {
-            return -1;
-        }
         return Math.ceil(tasksModel.count / stripeCount);
     }
 
