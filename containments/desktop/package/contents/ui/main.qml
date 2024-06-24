@@ -316,17 +316,44 @@ ContainmentItem {
 
                 configOverlaySource: "ConfigOverlay.qml"
 
+                onAppletChanged: {
+                    applet.visible = true
+                    console.log(applet.visible)
+                }
+
+                Drag.dragType: Drag.Automatic
+                Drag.active: false
+                Drag.supportedActions: Qt.MoveAction
+                Drag.mimeData: {
+                    "text/x-plasmoidinstanceid": Plasmoid.containment.id+':'+appletContainer.applet.plasmoid.id
+                }
+                Drag.onDragFinished: dropEvent => {
+                    if (dropEvent == Qt.MoveAction) {
+                        appletContainer.visible = true
+                        appletContainer.applet.visible = true
+                        //currentApplet.applet.plasmoid.internalAction("remove").trigger()
+                    } else {
+                        appletContainer.visible = true
+                        //appletsModel.insert(configurationArea.draggedItemIndex - 1, {applet: appletContainer.applet});
+                    }
+                    //appletContainer.destroy()
+                    //root.dragAndDropping = false
+                    //root.layoutManager.save()
+                }
+
                 onUserDrag: (newPosition, dragCenter) => {
                     const pos = mapToItem(root.parent, dragCenter.x, dragCenter.y);
                     const newCont = root.containmentItemAt(pos.x, pos.y);
 
-                    if (newCont && newCont.plasmoid !== Plasmoid) {
-                        const newPos = newCont.mapFromApplet(Plasmoid, pos.x, pos.y);
-
+                    if (!newCont || newCont.plasmoid !== Plasmoid) {
                         // First go out of applet edit mode, get rid of the config overlay, release mouse grabs in preparation of applet reparenting
                         cancelEdit();
-                        newCont.Plasmoid.addApplet(appletContainer.applet.plasmoid, Qt.rect(newPos.x, newPos.y, appletContainer.applet.width, appletContainer.applet.height));
                         appletsLayout.hidePlaceHolder();
+                        appletContainer.grabToImage(result => {
+                            appletContainer.Drag.imageSource = result.url
+                            appletContainer.visible = false
+                            appletContainer.Drag.active = true
+                        })
                     }
                 }
 

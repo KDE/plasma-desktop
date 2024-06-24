@@ -177,7 +177,7 @@ ContainmentItem {
             * without dragEnter, and in this case parent.index is undefined, so also
             * check if dndSpacer is in appletsModel.
             */
-            if (typeof(dndSpacer.parent.index) === "number") {
+            if (typeof(dndSpacer.parent.index) === "number" && dndSpacer.parent.index > -1) {
                 appletsModel.remove(dndSpacer.parent.index);
                 root.fixedWidth = root.fixedHeight = 0;
             }
