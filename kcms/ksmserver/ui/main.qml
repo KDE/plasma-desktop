@@ -89,7 +89,7 @@ KCM.SimpleKCM {
                 }
             }
             Kirigami.ContextualHelpButton {
-                toolTipText: xi18nc("@info", "When this setting is turned on, the logout confirmation screen will be shown when you log out, shut down, or restart the system")
+                toolTipText: xi18nc("@info", "When this setting is turned on, the logout confirmation screen will be shown when you log out, shut down, or restart the system.")
             }
         }
 
