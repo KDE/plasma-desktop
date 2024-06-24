@@ -255,10 +255,10 @@ PlasmaCore.ToolTipArea {
                 visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
                     .includes(Plasmoid.location) && !dialog.margin
                 anchors {
-                    topMargin: -dialog.topMargin
-                    leftMargin: -dialog.leftMargin
-                    rightMargin: -dialog.rightMargin
-                    bottomMargin: -dialog.bottomMargin
+                    topMargin: -dialog.topPadding
+                    leftMargin: -dialog.leftPadding
+                    rightMargin: -dialog.rightPadding
+                    bottomMargin: -dialog.bottomPadding
                 }
                 z: 999 /* Draw the line on top of the applet */
                 elementId: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
