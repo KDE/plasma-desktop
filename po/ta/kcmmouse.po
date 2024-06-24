@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-06-24 00:39+0000\n"
 "PO-Revision-Date: 2024-06-16 17:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.1\n"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:60
+#: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "உள்ளீட்டு சாதனங்களை கண்டறிதல் தோல்வியடைந்த‍து. இந்த அமைப்புக்கூறை மூடி மறுபடியும் "
 "திறவுங்கள்."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:80
+#: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "%1 என்பதன் அடிப்படை விவரங்களை கண்டறிவதில் சிக்கல்."
 
-#: kcm.cpp:144
+#: kcm.cpp:140
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -37,12 +37,12 @@ msgstr ""
 "மதிப்புகளை ஏற்றுவதில் சிக்கல். மேலும் விவரங்களுக்கு கணினியின் பதிவுகளை பாருங்கள். "
 "இக்கட்டுப்பாட்டுக்கூறை மூடி மறுபடியும் திறவுங்கள்."
 
-#: kcm.cpp:147
+#: kcm.cpp:143
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "எந்த சுட்டி சாதனமும் கண்டுபிடிக்கப்படவில்லை. சாதனத்தை இப்போது செருகுங்கள்."
 
-#: kcm.cpp:157
+#: kcm.cpp:152
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -51,7 +51,7 @@ msgstr ""
 "சில மாற்றங்களை சேமிக்க முடியவில்லை. மேலும் விவரங்களுக்கு கணினியின் பதிவுகளை பாருங்கள். "
 "இக்கட்டுப்பாட்டுக்கூறை மூடி மறுபடியும் திறவுங்கள்."
 
-#: kcm.cpp:175
+#: kcm.cpp:170
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -60,7 +60,7 @@ msgstr ""
 "இயல்பிருப்பு மதிப்புகளை ஏற்றுவதில் சிக்கல். சில விருப்பங்கள் அவற்றின் இயல்பிருப்பு "
 "மதிப்புகளுக்கு மாற்றப்படவில்லை."
 
-#: kcm.cpp:192
+#: kcm.cpp:185
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -69,12 +69,12 @@ msgstr ""
 "புதிதாக செருகிய சாதனத்தை சேர்ப்பதில் சிக்கல். அதை கழற்றி, மீண்டும் செருகிய பின் இக்கூறை "
 "மீள்துவக்குங்கள்."
 
-#: kcm.cpp:206
+#: kcm.cpp:198
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "சுட்டி கழற்றப்பட்டதால் அதன் அமைப்புச்சாளரம் மூடப்பட்டது."
 
-#: kcm.cpp:208
+#: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "சுட்டி கழற்றப்பட்டபின் வேறெந்த சாதனமும் கண்டுபிடிக்கப்படவில்லை."
@@ -85,7 +85,7 @@ msgctxt "@action:button"
 msgid "Bindings for Additional Mouse Buttons"
 msgstr "கூடுதல் சுட்டி பட்டன்களை அமை…"
 
-#: ui/bindings.qml:69
+#: ui/bindings.qml:70
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
@@ -127,17 +127,17 @@ msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "கூடுதல் சுட்டி பட்டன்களை மாற்றியமை…"
 
-#: ui/main.qml:63
+#: ui/main.qml:64
 #, kde-format
 msgid "Device:"
 msgstr "சாதனம்:"
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, kde-format
 msgid "General:"
 msgstr "பொதுவானவை:"
 
-#: ui/main.qml:87
+#: ui/main.qml:88
 #, kde-format
 msgid "Device enabled"
 msgstr "சாதனத்தை இயக்கு"
@@ -152,23 +152,23 @@ msgstr "இந்த சாதனத்தின் வாயிலாக உள
 msgid "Left handed mode"
 msgstr "இடதுகை பயன்முறை"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "இடது மற்றும் வலது பட்டன்களை இடமாற்று."
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "நடு க்ளிக்குக்கு இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்து"
 
-#: ui/main.qml:140
+#: ui/main.qml:138
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துதல், நடு க்ளிக்காக கருதப்படும்."
 
-#: ui/main.qml:144
+#: ui/main.qml:142
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -178,64 +178,64 @@ msgstr ""
 "அதிகரிக்கும். ஒரே நேரத்தில் நிகழும் இடது மற்றும் வலது கிளிக்குகளை சரியாக அடையாளங்கான "
 "இந்த கூடுதல் தாமதம் தேவை."
 
-#: ui/main.qml:156
+#: ui/main.qml:154
 #, kde-format
 msgid "Pointer speed:"
 msgstr "சுட்டிக்குறியின் வேகம்:"
 
-#: ui/main.qml:233
+#: ui/main.qml:230
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "சுட்டி துரிதப்படுத்தல்:"
 
-#: ui/main.qml:250
+#: ui/main.qml:246
 #, kde-format
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: ui/main.qml:255
+#: ui/main.qml:251
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "சுட்டிக்குறியும் சுட்டியும் ஒரே தூரம் நகரும்."
 
-#: ui/main.qml:260
+#: ui/main.qml:256
 #, kde-format
 msgid "Standard"
 msgstr "சாதாரணமானது"
 
-#: ui/main.qml:265
+#: ui/main.qml:261
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "சுட்டிக்குறி நகரும் தூரம் சுட்டியின் வேகத்தைப் பொறுத்து மாறும்."
 
-#: ui/main.qml:275
+#: ui/main.qml:271
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "உருளல் வேகம்:"
 
-#: ui/main.qml:326
+#: ui/main.qml:321
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "மெதுவாக"
 
-#: ui/main.qml:335
+#: ui/main.qml:330
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "வேகமாக"
 
-#: ui/main.qml:343
+#: ui/main.qml:338
 #, kde-format
 msgid "Scrolling:"
 msgstr "உருளல்:"
 
-#: ui/main.qml:344
+#: ui/main.qml:339
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "உருளல் திசையைப் புரட்டு"
 
-#: ui/main.qml:357
+#: ui/main.qml:351
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "தொடுதிரையைப் போன்ற உருளல்."

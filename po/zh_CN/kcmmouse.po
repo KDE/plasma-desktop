@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-06-24 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,29 +17,29 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcmmouse.pot\n"
 "X-Crowdin-File-ID: 42937\n"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:60
+#: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr "查询输入设备失败。请重新打开此设置模块。"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:80
+#: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "读取 %1 的基本设备信息时发生致命错误。"
 
-#: kcm.cpp:144
+#: kcm.cpp:140
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr "加载数值时发生错误。请查看日志文件获取更多信息。请重启此设置模块。"
 
-#: kcm.cpp:147
+#: kcm.cpp:143
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "没有检测到指针设备。请立即连接。"
 
-#: kcm.cpp:157
+#: kcm.cpp:152
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -47,26 +47,26 @@ msgid ""
 msgstr ""
 "无法保存全部更改。请查看日志文件获取更多信息。请重启此设置模块，然后重试。"
 
-#: kcm.cpp:175
+#: kcm.cpp:170
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr "加载默认值时出错。设置某些选项为默认值时失败。"
 
-#: kcm.cpp:192
+#: kcm.cpp:185
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr "添加新连接的设备时出错。请重新连接，并重启此设置模块。"
 
-#: kcm.cpp:206
+#: kcm.cpp:198
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "指针设备已断开。已关闭它的设置对话框。"
 
-#: kcm.cpp:208
+#: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "指针设备已断开。没有检测到其他设备。"
@@ -77,7 +77,7 @@ msgctxt "@action:button"
 msgid "Bindings for Additional Mouse Buttons"
 msgstr "额外鼠标键的绑定"
 
-#: ui/bindings.qml:69
+#: ui/bindings.qml:70
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
@@ -119,17 +119,17 @@ msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "重新绑定额外鼠标键…"
 
-#: ui/main.qml:63
+#: ui/main.qml:64
 #, kde-format
 msgid "Device:"
 msgstr "设备："
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, kde-format
 msgid "General:"
 msgstr "常规："
 
-#: ui/main.qml:87
+#: ui/main.qml:88
 #, kde-format
 msgid "Device enabled"
 msgstr "设备已启用"
@@ -144,23 +144,23 @@ msgstr "接受这个设备的输入。"
 msgid "Left handed mode"
 msgstr "左手模式"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "交换左键和右键"
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "同时按左键和右键模拟中键点击"
 
-#: ui/main.qml:140
+#: ui/main.qml:138
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "同时点击左键和右键时将发送中键点击信号。"
 
-#: ui/main.qml:144
+#: ui/main.qml:142
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -169,64 +169,64 @@ msgstr ""
 "激活此设置将增加鼠标点击延迟 50 毫秒。正确检测鼠标左键和右键的同时点击需要额"
 "外的延迟。"
 
-#: ui/main.qml:156
+#: ui/main.qml:154
 #, kde-format
 msgid "Pointer speed:"
 msgstr "光标速度："
 
-#: ui/main.qml:233
+#: ui/main.qml:230
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "光标加速："
 
-#: ui/main.qml:250
+#: ui/main.qml:246
 #, kde-format
 msgid "None"
 msgstr "无"
 
-#: ui/main.qml:255
+#: ui/main.qml:251
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "光标移动的距离与鼠标移动的距离相同。"
 
-#: ui/main.qml:260
+#: ui/main.qml:256
 #, kde-format
 msgid "Standard"
 msgstr "标准"
 
-#: ui/main.qml:265
+#: ui/main.qml:261
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "光标移动的距离受鼠标的移动速度影响。"
 
-#: ui/main.qml:275
+#: ui/main.qml:271
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "滚动速度："
 
-#: ui/main.qml:326
+#: ui/main.qml:321
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "慢"
 
-#: ui/main.qml:335
+#: ui/main.qml:330
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "快"
 
-#: ui/main.qml:343
+#: ui/main.qml:338
 #, kde-format
 msgid "Scrolling:"
 msgstr "滚动："
 
-#: ui/main.qml:344
+#: ui/main.qml:339
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "反转滚动方向"
 
-#: ui/main.qml:357
+#: ui/main.qml:351
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "采用类似触摸屏的滚动方式。"

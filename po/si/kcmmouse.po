@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-06-24 00:39+0000\n"
 "PO-Revision-Date: 2009-12-31 01:24+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 0.3\n"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:60
+#: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:80
+#: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
 
-#: kcm.cpp:144
+#: kcm.cpp:140
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
 
-#: kcm.cpp:147
+#: kcm.cpp:143
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr ""
 
-#: kcm.cpp:157
+#: kcm.cpp:152
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
 
-#: kcm.cpp:175
+#: kcm.cpp:170
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
 
-#: kcm.cpp:192
+#: kcm.cpp:185
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
 
-#: kcm.cpp:206
+#: kcm.cpp:198
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 
-#: kcm.cpp:208
+#: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
@@ -76,7 +76,7 @@ msgctxt "@action:button"
 msgid "Bindings for Additional Mouse Buttons"
 msgstr ""
 
-#: ui/bindings.qml:69
+#: ui/bindings.qml:70
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
@@ -119,18 +119,18 @@ msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr ""
 
-#: ui/main.qml:63
+#: ui/main.qml:64
 #, kde-format
 msgid "Device:"
 msgstr ""
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, fuzzy, kde-format
 #| msgid "&General"
 msgid "General:"
 msgstr "සාමාන්‍ය (&G)"
 
-#: ui/main.qml:87
+#: ui/main.qml:88
 #, kde-format
 msgid "Device enabled"
 msgstr ""
@@ -146,90 +146,90 @@ msgstr ""
 msgid "Left handed mode"
 msgstr "වමත් (&f)"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr ""
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr ""
 
-#: ui/main.qml:140
+#: ui/main.qml:138
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
 
-#: ui/main.qml:144
+#: ui/main.qml:142
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
 
-#: ui/main.qml:156
+#: ui/main.qml:154
 #, fuzzy, kde-format
 #| msgid "Pointer threshold:"
 msgid "Pointer speed:"
 msgstr "ලක්‍ෂක පර්යන්තය:"
 
-#: ui/main.qml:233
+#: ui/main.qml:230
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "ලක්‍ෂක ත්වරණය:"
 
-#: ui/main.qml:250
+#: ui/main.qml:246
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: ui/main.qml:255
+#: ui/main.qml:251
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr ""
 
-#: ui/main.qml:260
+#: ui/main.qml:256
 #, kde-format
 msgid "Standard"
 msgstr ""
 
-#: ui/main.qml:265
+#: ui/main.qml:261
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
 
-#: ui/main.qml:275
+#: ui/main.qml:271
 #, fuzzy, kde-format
 #| msgid "Pointer threshold:"
 msgid "Scrolling speed:"
 msgstr "ලක්‍ෂක පර්යන්තය:"
 
-#: ui/main.qml:326
+#: ui/main.qml:321
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr ""
 
-#: ui/main.qml:335
+#: ui/main.qml:330
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr ""
 
-#: ui/main.qml:343
+#: ui/main.qml:338
 #, kde-format
 msgid "Scrolling:"
 msgstr ""
 
-#: ui/main.qml:344
+#: ui/main.qml:339
 #, fuzzy, kde-format
 #| msgid "Re&verse scroll direction"
 msgid "Invert scroll direction"
 msgstr "ප්‍රතිස්ක්‍රෝල් දිශාව(&v)"
 
-#: ui/main.qml:357
+#: ui/main.qml:351
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr ""

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-06-24 00:39+0000\n"
 "PO-Revision-Date: 2024-05-31 08:58+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -31,17 +31,17 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 24.02.2\n"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:60
+#: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr "תשאול התקן הפלט נכשל. נא לפתוח את מודול ההגדרות הזה מחדש."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:80
+#: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "שגיאה משמעותית בקריאת פרטי התקן יסודיים של %1."
 
-#: kcm.cpp:144
+#: kcm.cpp:140
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -50,12 +50,12 @@ msgstr ""
 "שגיאה בטעינת ערכים. יש מידע נוסף ביומנים. נא להפעיל את מודול ההגדרות הזה "
 "מחדש."
 
-#: kcm.cpp:147
+#: kcm.cpp:143
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "לא נמצא התקן הצבעה. יש לחבר כעת."
 
-#: kcm.cpp:157
+#: kcm.cpp:152
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -64,7 +64,7 @@ msgstr ""
 "אי אפשר לשמור את כל השינויים. יש מידע נוסף ביומן. נא להפעיל את מודול הגדרות "
 "זה מחדש ולנסות שוב."
 
-#: kcm.cpp:175
+#: kcm.cpp:170
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -73,7 +73,7 @@ msgstr ""
 "שגיאה בטעינת ערכי ברירת המחדל. הגדרת אפשרויות מסוימות לברירות המחדל שלהן "
 "נכשלה,"
 
-#: kcm.cpp:192
+#: kcm.cpp:185
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -82,12 +82,12 @@ msgstr ""
 "שגיאה בהוספת התקן מחובר חדש. נא לחבר אותו מחדש ולהפעיל את מודול ההגדרות הזה "
 "מחדש."
 
-#: kcm.cpp:206
+#: kcm.cpp:198
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "התקן הצבעה מנותק. חלונית ההגדרות שלו נסגרה."
 
-#: kcm.cpp:208
+#: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "התקן הצבעה מנותק. לא נמצאו התקנים אחרים."
@@ -98,7 +98,7 @@ msgctxt "@action:button"
 msgid "Bindings for Additional Mouse Buttons"
 msgstr "איגוד כפתורי עכבר נוספים"
 
-#: ui/bindings.qml:69
+#: ui/bindings.qml:70
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
@@ -140,17 +140,17 @@ msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "איגוד מחדש כפתורי עכבר נוספים…"
 
-#: ui/main.qml:63
+#: ui/main.qml:64
 #, kde-format
 msgid "Device:"
 msgstr "התקן:"
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, kde-format
 msgid "General:"
 msgstr "כללי:"
 
-#: ui/main.qml:87
+#: ui/main.qml:88
 #, kde-format
 msgid "Device enabled"
 msgstr "התקן פעיל"
@@ -165,23 +165,23 @@ msgstr "קבלת קלט דרך ההתקן הזה."
 msgid "Left handed mode"
 msgstr "מצב ש&מאלי"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "החלפה בין הכפתורים השמאלי והימני."
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "לחיצה על הכפתורים השמאלי והימני תייצר לחיצה אמצעית"
 
-#: ui/main.qml:140
+#: ui/main.qml:138
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "לחיצה על הכפתורים השמאלי והימני בו־זמנית תשלח לחיצה על כפתור אמצעי."
 
-#: ui/main.qml:144
+#: ui/main.qml:142
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -190,64 +190,64 @@ msgstr ""
 "הפעלת ההגדרה הזאת מגבירה את עיכוב לחיצת העכבר ב־50 מילישניות. העיכוב הנוסף "
 "הזה נחוץ כדי לזהות בצורה נכונה לחיצות מקביליות על הכפתור השמאלי והימני יחד."
 
-#: ui/main.qml:156
+#: ui/main.qml:154
 #, kde-format
 msgid "Pointer speed:"
 msgstr "מהירות מצביע:"
 
-#: ui/main.qml:233
+#: ui/main.qml:230
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "האצת מצביע:"
 
-#: ui/main.qml:250
+#: ui/main.qml:246
 #, kde-format
 msgid "None"
 msgstr "ללא"
 
-#: ui/main.qml:255
+#: ui/main.qml:251
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "הסמן זז את אותו המרחק כמו תנועת העכבר."
 
-#: ui/main.qml:260
+#: ui/main.qml:256
 #, kde-format
 msgid "Standard"
 msgstr "רגיל"
 
-#: ui/main.qml:265
+#: ui/main.qml:261
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "הסמן מטייל מרחק שתלוי במהירות תנועת העכבר."
 
-#: ui/main.qml:275
+#: ui/main.qml:271
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "מהירות גלילה:"
 
-#: ui/main.qml:326
+#: ui/main.qml:321
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "איטית יותר"
 
-#: ui/main.qml:335
+#: ui/main.qml:330
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "מהירה יותר"
 
-#: ui/main.qml:343
+#: ui/main.qml:338
 #, kde-format
 msgid "Scrolling:"
 msgstr "גלילה:"
 
-#: ui/main.qml:344
+#: ui/main.qml:339
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "היפוך כיוון הגלילה"
 
-#: ui/main.qml:357
+#: ui/main.qml:351
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "גלילה כמו מסך מגע."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-06-24 00:39+0000\n"
 "PO-Revision-Date: 2024-03-17 09:26+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:60
+#: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
 "Feil ved søk etter inn-einingar. Prøv å opna denne innstillingsmodulen på "
 "nytt."
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:80
+#: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritisk feil ved lesing av fundamental einingsinfo for %1."
 
-#: kcm.cpp:144
+#: kcm.cpp:140
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -41,12 +41,12 @@ msgstr ""
 "Feil ved innlesing av data. Sjå loggen for meir informasjon, og prøv å "
 "starta oppsettmodulen på nytt."
 
-#: kcm.cpp:147
+#: kcm.cpp:143
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Fann inga peikareining. Prøv å kopla til ei eining no."
 
-#: kcm.cpp:157
+#: kcm.cpp:152
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -55,7 +55,7 @@ msgstr ""
 "Klarte ikkje lagra alle endringane. Sjå loggen for meir informasjon. Prøv å "
 "starta oppsettmodulen på nytt og prøv igjen."
 
-#: kcm.cpp:175
+#: kcm.cpp:170
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -64,7 +64,7 @@ msgstr ""
 "Klarte ikkje lasta standardverdiane. Nokre av verdiane kunne ikkje setjast "
 "til standardverdiar."
 
-#: kcm.cpp:192
+#: kcm.cpp:185
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -73,13 +73,13 @@ msgstr ""
 "Klarte ikkje leggja til nyleg tilkopla eining. Prøv å kopla ho til ein gong "
 "til, og start så oppsettmodulen på nytt."
 
-#: kcm.cpp:206
+#: kcm.cpp:198
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Peikareininga er kopla frå, og innstillingsvindauget vart derfor lukka."
 
-#: kcm.cpp:208
+#: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Peikareininga er kopla frå. Fann ingen andre einingar."
@@ -92,7 +92,7 @@ msgctxt "@action:button"
 msgid "Bindings for Additional Mouse Buttons"
 msgstr "Tilknyt fleire museknappar …"
 
-#: ui/bindings.qml:69
+#: ui/bindings.qml:70
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
@@ -136,17 +136,17 @@ msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
 msgstr "Tilknyt fleire museknappar …"
 
-#: ui/main.qml:63
+#: ui/main.qml:64
 #, kde-format
 msgid "Device:"
 msgstr "Eining:"
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, kde-format
 msgid "General:"
 msgstr "Generelt:"
 
-#: ui/main.qml:87
+#: ui/main.qml:88
 #, kde-format
 msgid "Device enabled"
 msgstr "Eining tilgjengeleg"
@@ -161,17 +161,17 @@ msgstr "Ta imot inndata frå eininga."
 msgid "Left handed mode"
 msgstr "Venstrehandsmodus"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Byt verknad av venstre og høgre knapp."
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-format
 msgid "Press left and right buttons for middle-click"
 msgstr "Trykk venstre og høgre knapp samtidig for midtklikk"
 
-#: ui/main.qml:140
+#: ui/main.qml:138
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -179,71 +179,71 @@ msgstr ""
 "Trykk venstre og høgre knapp samtidig for å senda klikksignal tilsvarande "
 "midtknapp."
 
-#: ui/main.qml:144
+#: ui/main.qml:142
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
 
-#: ui/main.qml:156
+#: ui/main.qml:154
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Peikarfart:"
 
-#: ui/main.qml:233
+#: ui/main.qml:230
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Peikarakselerasjon:"
 
-#: ui/main.qml:250
+#: ui/main.qml:246
 #, kde-format
 msgid "None"
 msgstr "Ingen"
 
-#: ui/main.qml:255
+#: ui/main.qml:251
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
 msgstr "Peikaren flyttar seg like langt som musa."
 
-#: ui/main.qml:260
+#: ui/main.qml:256
 #, kde-format
 msgid "Standard"
 msgstr "Standard"
 
-#: ui/main.qml:265
+#: ui/main.qml:261
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr "Kor langt peikaren flyttar seg, avheng av kor fort musa vert flytta."
 
-#: ui/main.qml:275
+#: ui/main.qml:271
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Rullefart:"
 
-#: ui/main.qml:326
+#: ui/main.qml:321
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Saktare"
 
-#: ui/main.qml:335
+#: ui/main.qml:330
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Raskare"
 
-#: ui/main.qml:343
+#: ui/main.qml:338
 #, kde-format
 msgid "Scrolling:"
 msgstr "Rulling:"
 
-#: ui/main.qml:344
+#: ui/main.qml:339
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Omvend rulleretning"
 
-#: ui/main.qml:357
+#: ui/main.qml:351
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Rulling som på ein peikeskjerm."
