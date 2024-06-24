@@ -38,6 +38,17 @@ PC3.Page {
     property bool preventWindowHide: draggingWidget || categoriesDialog.status !== PlasmaExtras.Menu.Closed
                                   || getWidgetsDialog.status !== PlasmaExtras.Menu.Closed
 
+    // We might've lost focus during the widget drag and drop or whilst using
+    // the "get widgets" dialog; however we prevented the sidebar to hide.
+    // This might get the sidebar stuck, since we only hide when losing focus.
+    // To avoid this we reclaim focus as soon as the drag and drop is done,
+    // or the get widgets window is closed.
+    onPreventWindowHideChanged: {
+        if (!preventWindowHide && !sidePanel.active) {
+            sidePanel.requestActivate()
+        }
+    }
+
     property bool outputOnly: draggingWidget
 
     property Item categoryButton
