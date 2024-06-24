@@ -21,12 +21,15 @@ static QString xkbKeysymToName(xkb_keysym_t keysym)
     QVarLengthArray<char, 32> chars(32);
     Q_ASSERT(chars.size() >= 0); // ensure cast to size_t
 
+    // xkb_keysym_get_name returns the size of the name _excluding_ the ending NUL byte.
     const int size = xkb_keysym_get_name(keysym, chars.data(), static_cast<size_t>(chars.size()));
-    if (Q_UNLIKELY(size > chars.size())) {
-        chars.resize(size);
+    // Make sure to have enough space for the name plus the ending NUL byte, to avoid truncation.
+    if (Q_UNLIKELY(size >= chars.size())) {
+        chars.resize(size + 1);
         xkb_keysym_get_name(keysym, chars.data(), static_cast<size_t>(chars.size()));
     }
 
+    // size already excludes the ending NUL byte, so no further adjustment needed.
     return QString::fromUtf8(chars.constData(), size);
 }
 
@@ -35,13 +38,15 @@ static QString xkbKeysymToUtf8(xkb_keysym_t keysym)
     QVarLengthArray<char, 32> chars(32);
     Q_ASSERT(chars.size() >= 0); // ensure cast to size_t
 
+    // xkb_keysym_to_utf8 return value _includes_ the ending NUL byte.
     const int size = xkb_keysym_to_utf8(keysym, chars.data(), static_cast<size_t>(chars.size()));
-    if (Q_UNLIKELY(size > chars.size())) {
-        chars.resize(size);
-        xkb_keysym_to_utf8(keysym, chars.data(), static_cast<size_t>(chars.size()));
+    // A non-empty string return would have a size of at least 1 byte + 1 ending NUL byte.
+    if (size < 2) {
+        return QString();
     }
 
-    return QString::fromUtf8(chars.constData(), size);
+    // Return as a QString without the ending NUL byte.
+    return QString::fromUtf8(chars.constData(), size - 1);
 }
 
 static QString keySymToString(KeySym keysym)
