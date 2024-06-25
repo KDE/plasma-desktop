@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2023-02-28 10:59-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -88,53 +88,52 @@ msgid "Restart Now"
 msgstr "Reiniciar agora"
 
 #: ui/main.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
 msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr "Tela de saída"
+msgid "General"
+msgstr "Geral:"
 
-#: ui/main.qml:78
+#: ui/main.qml:79
 #, kde-format
-msgid "Show:"
-msgstr "Mostrar:"
-
-#: ui/main.qml:92
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
+msgctxt ""
+"@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "Ask for confirmation:"
 msgstr ""
-"Quando esta configuração estiver ativada, a tela de confirmação de saída "
-"será exibida quando você sair, desligar, reiniciar, pressionar o botão liga/"
-"desliga ou clicar em botões ou itens de menu rotulados como <interface>Sair…"
-"</interface>."
 
-#: ui/main.qml:98
+#: ui/main.qml:80
+#, kde-format
+msgctxt ""
+"@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "On shutdown, restart, and logout"
+msgstr ""
+
+#: ui/main.qml:91
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Restauração da sessão"
 
-#: ui/main.qml:106
+#: ui/main.qml:99
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Ao iniciar, lançar aplicativos que estavam abertos:"
 
-#: ui/main.qml:107
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Na última saída"
 
-#: ui/main.qml:120
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Quando a sessão foi salva manualmente"
 
-#: ui/main.qml:129
+#: ui/main.qml:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -149,7 +148,7 @@ msgstr ""
 "próximo login. Clique novamente para substituir o conjunto de aplicativos "
 "lembrados."
 
-#: ui/main.qml:134
+#: ui/main.qml:127
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -158,12 +157,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Iniciar com uma sessão vazia"
 
-#: ui/main.qml:148
+#: ui/main.qml:141
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Aplicativos ignorados:"
 
-#: ui/main.qml:171
+#: ui/main.qml:164
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -175,13 +174,13 @@ msgstr ""
 "para preveni-los de iniciar automaticamente junto com os outros aplicativos "
 "restaurados na sessão."
 
-#: ui/main.qml:178
+#: ui/main.qml:171
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Firmware"
 
-#: ui/main.qml:184
+#: ui/main.qml:177
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -189,17 +188,35 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Após a próxima reinicialização:"
 
-#: ui/main.qml:185
+#: ui/main.qml:178
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Entrar na tela de configuração do UEFI"
 
-#: ui/main.qml:186
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Entrar na tela de configuração do firmware"
+
+#~ msgctxt "@title:group"
+#~ msgid "Logout Screen"
+#~ msgstr "Tela de saída"
+
+#~ msgid "Show:"
+#~ msgstr "Mostrar:"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When this setting is turned on, the logout confirmation screen will be "
+#~ "shown when you log out, shut down, restart, press the power button, or "
+#~ "click on buttons or menu items labeled <interface>Leave…</interface>."
+#~ msgstr ""
+#~ "Quando esta configuração estiver ativada, a tela de confirmação de saída "
+#~ "será exibida quando você sair, desligar, reiniciar, pressionar o botão "
+#~ "liga/desliga ou clicar em botões ou itens de menu rotulados como "
+#~ "<interface>Sair…</interface>."
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "
@@ -223,9 +240,6 @@ msgstr "Entrar na tela de configuração do firmware"
 #~ msgctxt "@option:radio"
 #~ msgid "Restart"
 #~ msgstr "Reiniciar agora"
-
-#~ msgid "General:"
-#~ msgstr "Geral:"
 
 #~ msgctxt "@option:check"
 #~ msgid "Confirm logout"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2024-02-29 19:54+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -90,54 +90,53 @@ msgid "Restart Now"
 msgstr "Käynnistä uudelleen nyt"
 
 #: ui/main.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
 msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr "Uloskirjautumisnäkymä"
+msgid "General"
+msgstr "Perusasetukset:"
 
-#: ui/main.qml:78
+#: ui/main.qml:79
 #, kde-format
-msgid "Show:"
-msgstr "Näytä:"
-
-#: ui/main.qml:92
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
+msgctxt ""
+"@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "Ask for confirmation:"
 msgstr ""
-"Kun asetus on valittu, uloskirjautumisvahvistus näytetään ulos "
-"kirjauduttaessa, sammutettaessa, käynnistettäessä uudelleen, tai "
-"painettaessa virtakytkintä tai painikkeita, joiden selite on "
-"<interface>Lopeta…</interface>."
 
-#: ui/main.qml:98
+#: ui/main.qml:80
+#, kde-format
+msgctxt ""
+"@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "On shutdown, restart, and logout"
+msgstr ""
+
+#: ui/main.qml:91
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Istunnon palautus"
 
 # Tämä jatkuu eri ehdoin, mikä pakottaa relatiivisivulauseen käyttöön
-#: ui/main.qml:106
+#: ui/main.qml:99
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Käynnistä kirjauduttaessa sovellukset, jotka olivat auki:"
 
-#: ui/main.qml:107
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "viimeksi ulos kirjauduttaessa"
 
-#: ui/main.qml:120
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "käyttäjän tallentaessa istunnon"
 
-#: ui/main.qml:129
+#: ui/main.qml:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -152,7 +151,7 @@ msgstr ""
 "kirjautumiskerralla. Muistettujen sovellusten joukon voi korvata painamalla "
 "painiketta uudelleen."
 
-#: ui/main.qml:134
+#: ui/main.qml:127
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -161,12 +160,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "aloita tyhjä istunto"
 
-#: ui/main.qml:148
+#: ui/main.qml:141
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Sivuutetut sovellukset:"
 
-#: ui/main.qml:171
+#: ui/main.qml:164
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -178,13 +177,13 @@ msgstr ""
 "estääksesi niitä käynnistymistä automaattisesti istunnosta palautettujen "
 "kanssa."
 
-#: ui/main.qml:178
+#: ui/main.qml:171
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Laiteohjelmisto"
 
-#: ui/main.qml:184
+#: ui/main.qml:177
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -192,17 +191,35 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Seuraavan käynnistyksen jälkeen:"
 
-#: ui/main.qml:185
+#: ui/main.qml:178
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Siirry UEFI-asetuksiin"
 
-#: ui/main.qml:186
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Siirry laiteohjelmiston asetuksiin"
+
+#~ msgctxt "@title:group"
+#~ msgid "Logout Screen"
+#~ msgstr "Uloskirjautumisnäkymä"
+
+#~ msgid "Show:"
+#~ msgstr "Näytä:"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When this setting is turned on, the logout confirmation screen will be "
+#~ "shown when you log out, shut down, restart, press the power button, or "
+#~ "click on buttons or menu items labeled <interface>Leave…</interface>."
+#~ msgstr ""
+#~ "Kun asetus on valittu, uloskirjautumisvahvistus näytetään ulos "
+#~ "kirjauduttaessa, sammutettaessa, käynnistettäessä uudelleen, tai "
+#~ "painettaessa virtakytkintä tai painikkeita, joiden selite on "
+#~ "<interface>Lopeta…</interface>."
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "
@@ -226,9 +243,6 @@ msgstr "Siirry laiteohjelmiston asetuksiin"
 #~ msgctxt "@option:radio"
 #~ msgid "Restart"
 #~ msgstr "Käynnistä uudelleen nyt"
-
-#~ msgid "General:"
-#~ msgstr "Perusasetukset:"
 
 #~ msgctxt "@option:check"
 #~ msgid "Confirm logout"

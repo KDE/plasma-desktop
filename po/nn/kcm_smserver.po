@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2023-02-20 21:12+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -86,50 +86,49 @@ msgstr "Start på nytt"
 #: ui/main.qml:74
 #, kde-format
 msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr "Utloggings­bilete"
-
-#: ui/main.qml:78
-#, kde-format
-msgid "Show:"
-msgstr "Vis:"
-
-#: ui/main.qml:92
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
+msgid "General"
 msgstr ""
-"Viss det er kryssa av her, vert det vist ein stadfestings­skjerm når du "
-"loggar ut, slår av, startar på nytt, trykkjer på på/av-knappen eller knappar "
-"eller menyval merkte med <interface>Avslutt</interface>."
 
-#: ui/main.qml:98
+#: ui/main.qml:79
+#, kde-format
+msgctxt ""
+"@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "Ask for confirmation:"
+msgstr ""
+
+#: ui/main.qml:80
+#, kde-format
+msgctxt ""
+"@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "On shutdown, restart, and logout"
+msgstr ""
+
+#: ui/main.qml:91
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Øktgjenoppretting"
 
-#: ui/main.qml:106
+#: ui/main.qml:99
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Opna ved innlogging program som var opne:"
 
-#: ui/main.qml:107
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Ved siste utlogging"
 
-#: ui/main.qml:120
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Når økta vart manuelt lagra"
 
-#: ui/main.qml:129
+#: ui/main.qml:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -144,7 +143,7 @@ msgstr ""
 "innlogging. Trykk på knappen att når du vil oppdatera kva program som skal "
 "hugsast."
 
-#: ui/main.qml:134
+#: ui/main.qml:127
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -153,12 +152,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Start med tom økt"
 
-#: ui/main.qml:148
+#: ui/main.qml:141
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Ignorerte program:"
 
-#: ui/main.qml:171
+#: ui/main.qml:164
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -169,13 +168,13 @@ msgstr ""
 "«xterm:konsole» eller «xterm,konsole») du vil hindra at skal startast "
 "automatisk saman med andre program autostarta frå tidlegare økter."
 
-#: ui/main.qml:178
+#: ui/main.qml:171
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Fastvare"
 
-#: ui/main.qml:184
+#: ui/main.qml:177
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -183,14 +182,31 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Etter neste omstart:"
 
-#: ui/main.qml:185
+#: ui/main.qml:178
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Gå inn i UEFI-oppsettmenyen"
 
-#: ui/main.qml:186
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Gå til fastvareoppsett-skjermen"
+
+#~ msgctxt "@title:group"
+#~ msgid "Logout Screen"
+#~ msgstr "Utloggings­bilete"
+
+#~ msgid "Show:"
+#~ msgstr "Vis:"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When this setting is turned on, the logout confirmation screen will be "
+#~ "shown when you log out, shut down, restart, press the power button, or "
+#~ "click on buttons or menu items labeled <interface>Leave…</interface>."
+#~ msgstr ""
+#~ "Viss det er kryssa av her, vert det vist ein stadfestings­skjerm når du "
+#~ "loggar ut, slår av, startar på nytt, trykkjer på på/av-knappen eller "
+#~ "knappar eller menyval merkte med <interface>Avslutt</interface>."

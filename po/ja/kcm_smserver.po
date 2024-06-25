@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2024-01-14 21:03-0800\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -85,50 +85,49 @@ msgstr "今すぐコンピュータを再起動"
 #: ui/main.qml:74
 #, kde-format
 msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr "ログアウト画面"
-
-#: ui/main.qml:78
-#, kde-format
-msgid "Show:"
-msgstr "表示:"
-
-#: ui/main.qml:92
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
+msgid "General"
 msgstr ""
-"この設定がオンの場合、ログアウト、シャットダウン、再起動時や、電源ボタンを押"
-"したとき、<interface>終了…</interface>ボタンをクリックしたときにログアウト確"
-"認画面が表示されます。"
 
-#: ui/main.qml:98
+#: ui/main.qml:79
+#, kde-format
+msgctxt ""
+"@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "Ask for confirmation:"
+msgstr ""
+
+#: ui/main.qml:80
+#, kde-format
+msgctxt ""
+"@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "On shutdown, restart, and logout"
+msgstr ""
+
+#: ui/main.qml:91
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "セッション復元"
 
-#: ui/main.qml:106
+#: ui/main.qml:99
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "ログイン時:"
 
-#: ui/main.qml:107
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "最後のログアウト時に開かれていたアプリケーションを開く"
 
-#: ui/main.qml:120
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "手動で保存したセッションを復元する"
 
-#: ui/main.qml:129
+#: ui/main.qml:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -142,7 +141,7 @@ msgstr ""
 "クすると、Plasma は開かれているアプリケーションを記憶し、次のログイン時に復元"
 "します。もう一度クリックすると、記憶が上書きされます。"
 
-#: ui/main.qml:134
+#: ui/main.qml:127
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -151,12 +150,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "空のセッションで開始"
 
-#: ui/main.qml:148
+#: ui/main.qml:141
 #, kde-format
 msgid "Ignored applications:"
 msgstr "復元しないアプリケーション:"
 
-#: ui/main.qml:171
+#: ui/main.qml:164
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -167,13 +166,13 @@ msgstr ""
 "ます。例: 'xterm:konsole' もしくは 'xterm,konsole') を入力してください。セッ"
 "ションが復元される際に、自動的に起動されないようになります。"
 
-#: ui/main.qml:178
+#: ui/main.qml:171
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "ファームウェア"
 
-#: ui/main.qml:184
+#: ui/main.qml:177
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -181,14 +180,31 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "次の再起動後:"
 
-#: ui/main.qml:185
+#: ui/main.qml:178
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "UEFI 設定画面に入る"
 
-#: ui/main.qml:186
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "ファームウェア設定画面に入る"
+
+#~ msgctxt "@title:group"
+#~ msgid "Logout Screen"
+#~ msgstr "ログアウト画面"
+
+#~ msgid "Show:"
+#~ msgstr "表示:"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When this setting is turned on, the logout confirmation screen will be "
+#~ "shown when you log out, shut down, restart, press the power button, or "
+#~ "click on buttons or menu items labeled <interface>Leave…</interface>."
+#~ msgstr ""
+#~ "この設定がオンの場合、ログアウト、シャットダウン、再起動時や、電源ボタンを"
+#~ "押したとき、<interface>終了…</interface>ボタンをクリックしたときにログアウ"
+#~ "ト確認画面が表示されます。"

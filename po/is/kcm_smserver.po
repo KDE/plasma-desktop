@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2024-03-15 09:17+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -81,52 +81,52 @@ msgid "Restart Now"
 msgstr "Endurræsa núna"
 
 #: ui/main.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
 msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr "Útskráningarskjár"
+msgid "General"
+msgstr "Almennt:"
 
-#: ui/main.qml:78
+#: ui/main.qml:79
 #, kde-format
-msgid "Show:"
-msgstr "Birta:"
-
-#: ui/main.qml:92
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
+msgctxt ""
+"@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "Ask for confirmation:"
 msgstr ""
-"Þegar kveikt er á þessari stillingu birtist staðfestingarskjár þegar þú "
-"skráir þig út, slekkur, endurræsir, ýtir á rofann eða smellir á hnappa eða "
-"valmyndaratriði sem merkt eru <interface>Hætta...</interface>"
 
-#: ui/main.qml:98
+#: ui/main.qml:80
+#, kde-format
+msgctxt ""
+"@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "On shutdown, restart, and logout"
+msgstr ""
+
+#: ui/main.qml:91
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Endurheimt setu"
 
-#: ui/main.qml:106
+#: ui/main.qml:99
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Þegar þú skráir þig inn á að keyra forrit sem voru opin:"
 
-#: ui/main.qml:107
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Við síðustu útskráningu"
 
-#: ui/main.qml:120
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Þegar setan var vistuð handvirkt"
 
-#: ui/main.qml:129
+#: ui/main.qml:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -141,7 +141,7 @@ msgstr ""
 "inn. Smelltu aftur á hnappinn til að skipta út forritunum sem eru geymd í "
 "minninu."
 
-#: ui/main.qml:134
+#: ui/main.qml:127
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -150,12 +150,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Byrja með auða lotu"
 
-#: ui/main.qml:148
+#: ui/main.qml:141
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Hunsuð forrit:"
 
-#: ui/main.qml:171
+#: ui/main.qml:164
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -166,13 +166,13 @@ msgstr ""
 "dæmis 'xterm:konsole' eða 'xterm,konsole') til að koma í veg fyrir að þau "
 "ræsist sjálfkrafa ásamt öðrum forritum sem verða opnuð í setunni."
 
-#: ui/main.qml:178
+#: ui/main.qml:171
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Fastbúnaður"
 
-#: ui/main.qml:184
+#: ui/main.qml:177
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -180,17 +180,34 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Eftir næstu endurræsingu:"
 
-#: ui/main.qml:185
+#: ui/main.qml:178
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Opna UEFI-uppsetningarskjá"
 
-#: ui/main.qml:186
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Opna uppsetningarskjá fyrir fastbúnað"
+
+#~ msgctxt "@title:group"
+#~ msgid "Logout Screen"
+#~ msgstr "Útskráningarskjár"
+
+#~ msgid "Show:"
+#~ msgstr "Birta:"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When this setting is turned on, the logout confirmation screen will be "
+#~ "shown when you log out, shut down, restart, press the power button, or "
+#~ "click on buttons or menu items labeled <interface>Leave…</interface>."
+#~ msgstr ""
+#~ "Þegar kveikt er á þessari stillingu birtist staðfestingarskjár þegar þú "
+#~ "skráir þig út, slekkur, endurræsir, ýtir á rofann eða smellir á hnappa "
+#~ "eða valmyndaratriði sem merkt eru <interface>Hætta...</interface>"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "
@@ -204,10 +221,6 @@ msgstr "Opna uppsetningarskjá fyrir fastbúnað"
 #~ "(útskráning), hvort eigi að endurheimta stöðu setunnar þegar notandinn "
 #~ "skráði sig aftur inn og hvort slökkva eigi sjálfkrafa á tölvunni þegar "
 #~ "setu er hætt."
-
-#~| msgid "General"
-#~ msgid "General:"
-#~ msgstr "Almennt:"
 
 #~| msgid "Conf&irm logout"
 #~ msgctxt "@option:check"

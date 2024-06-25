@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2023-02-07 20:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -81,51 +81,52 @@ msgid "Restart Now"
 msgstr "立即重新啟動"
 
 #: ui/main.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
 msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr "登出畫面"
+msgid "General"
+msgstr "一般："
 
-#: ui/main.qml:78
+#: ui/main.qml:79
 #, kde-format
-msgid "Show:"
-msgstr "顯示："
-
-#: ui/main.qml:92
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
+msgctxt ""
+"@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "Ask for confirmation:"
 msgstr ""
-"開啟此設定時，登出確認畫面會在您登出、關機、重新啟動、按下電源鍵，或點擊標記"
-"<interface>離開…</interface>的按鈕或選單項目時顯示。"
 
-#: ui/main.qml:98
+#: ui/main.qml:80
+#, kde-format
+msgctxt ""
+"@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "On shutdown, restart, and logout"
+msgstr ""
+
+#: ui/main.qml:91
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "工作階段回復"
 
-#: ui/main.qml:106
+#: ui/main.qml:99
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "登入時，啟動何時曾經開啟的應用程式："
 
-#: ui/main.qml:107
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "上次登出時"
 
-#: ui/main.qml:120
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "手動儲存工作階段時"
 
-#: ui/main.qml:129
+#: ui/main.qml:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -138,7 +139,7 @@ msgstr ""
 "</interface>按鈕。當您點擊它，Plasma 會記住當下開啟的應用程式，並且下次登入時"
 "會回復它們。再點擊一次時會取代掉目前記住的應用程式。"
 
-#: ui/main.qml:134
+#: ui/main.qml:127
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -147,12 +148,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "使用空白的工作階段來啟動"
 
-#: ui/main.qml:148
+#: ui/main.qml:141
 #, kde-format
 msgid "Ignored applications:"
 msgstr "忽略應用程式："
 
-#: ui/main.qml:171
+#: ui/main.qml:164
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -162,13 +163,13 @@ msgstr ""
 "在此輸入應用程式的執行檔名稱（用半形逗號或冒號分隔，例如 'xterm:konsole' 或 "
 "'xterm,konsole'）來讓它們不會跟著其他被工作階段回復的應用程式自動啟動。"
 
-#: ui/main.qml:178
+#: ui/main.qml:171
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "韌體"
 
-#: ui/main.qml:184
+#: ui/main.qml:177
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -176,17 +177,33 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "下次重新啟動："
 
-#: ui/main.qml:185
+#: ui/main.qml:178
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "進入 UEFI 設定介面"
 
-#: ui/main.qml:186
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "進入韌體設定介面"
+
+#~ msgctxt "@title:group"
+#~ msgid "Logout Screen"
+#~ msgstr "登出畫面"
+
+#~ msgid "Show:"
+#~ msgstr "顯示："
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When this setting is turned on, the logout confirmation screen will be "
+#~ "shown when you log out, shut down, restart, press the power button, or "
+#~ "click on buttons or menu items labeled <interface>Leave…</interface>."
+#~ msgstr ""
+#~ "開啟此設定時，登出確認畫面會在您登出、關機、重新啟動、按下電源鍵，或點擊標"
+#~ "記<interface>離開…</interface>的按鈕或選單項目時顯示。"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "
@@ -209,9 +226,6 @@ msgstr "進入韌體設定介面"
 #~ msgctxt "@option:radio"
 #~ msgid "Restart"
 #~ msgstr "立即重新啟動"
-
-#~ msgid "General:"
-#~ msgstr "一般："
 
 #, fuzzy
 #~| msgid "Confirm logout"

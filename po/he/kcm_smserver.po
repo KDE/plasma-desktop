@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2023-09-29 00:30+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -85,52 +85,52 @@ msgid "Restart Now"
 msgstr "הפעלה מחדש כעת"
 
 #: ui/main.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
 msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr "מסך יציאה"
+msgid "General"
+msgstr "כללי"
 
-#: ui/main.qml:78
+#: ui/main.qml:79
 #, kde-format
-msgid "Show:"
-msgstr "הצגה:"
-
-#: ui/main.qml:92
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
+msgctxt ""
+"@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "Ask for confirmation:"
 msgstr ""
-"כאשר הגדרה זו פעילה, מסך אישור היציאה יופיע עם יציאה, כיבוי, הפעלה מחדש, "
-"לחיצה על כפתור הכיבוי או לחיצה על כפתורים או פריטים תפריט שכתוב עליהם "
-"<interface>עזיבה…</interface>."
 
-#: ui/main.qml:98
+#: ui/main.qml:80
+#, kde-format
+msgctxt ""
+"@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "On shutdown, restart, and logout"
+msgstr ""
+
+#: ui/main.qml:91
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "שחזור הפעלה"
 
-#: ui/main.qml:106
+#: ui/main.qml:99
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "עם הכניסה, להפעיל את היישומים שהיו פתוחים:"
 
-#: ui/main.qml:107
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "ביציאה הקודמת"
 
-#: ui/main.qml:120
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "כאשר ההפעלה נשמרה ידנית"
 
-#: ui/main.qml:129
+#: ui/main.qml:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -144,7 +144,7 @@ msgstr ""
 "ולשחזר אותם עם הכניסה הבאה למערכת. לחיצה עליו שוב תחליף את ערכת היישומים "
 "שייזכרו."
 
-#: ui/main.qml:134
+#: ui/main.qml:127
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -153,12 +153,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "עלייה עם הפעלה ריקה"
 
-#: ui/main.qml:148
+#: ui/main.qml:141
 #, kde-format
 msgid "Ignored applications:"
 msgstr "יישומים בהתעלמות:"
 
-#: ui/main.qml:171
+#: ui/main.qml:164
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -169,13 +169,13 @@ msgstr ""
 "למשל: ‚xterm:konsole’ או ‚xterm,konsole’) כדי למנוע מהם להיטען אוטומטית יחד "
 "עם יישומים אחרים שמשוחזרים עם ההפעלה."
 
-#: ui/main.qml:178
+#: ui/main.qml:171
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "קושחה"
 
-#: ui/main.qml:184
+#: ui/main.qml:177
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -183,17 +183,34 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "אחרי ההפעלה הבאה מחדש:"
 
-#: ui/main.qml:185
+#: ui/main.qml:178
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "כניסה למסך הגדרות UEFI"
 
-#: ui/main.qml:186
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "כניסה למסך הגדרות קושחה"
+
+#~ msgctxt "@title:group"
+#~ msgid "Logout Screen"
+#~ msgstr "מסך יציאה"
+
+#~ msgid "Show:"
+#~ msgstr "הצגה:"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When this setting is turned on, the logout confirmation screen will be "
+#~ "shown when you log out, shut down, restart, press the power button, or "
+#~ "click on buttons or menu items labeled <interface>Leave…</interface>."
+#~ msgstr ""
+#~ "כאשר הגדרה זו פעילה, מסך אישור היציאה יופיע עם יציאה, כיבוי, הפעלה מחדש, "
+#~ "לחיצה על כפתור הכיבוי או לחיצה על כפתורים או פריטים תפריט שכתוב עליהם "
+#~ "<interface>עזיבה…</interface>."
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "
@@ -217,11 +234,6 @@ msgstr "כניסה למסך הגדרות קושחה"
 #~ msgctxt "@option:radio"
 #~ msgid "Restart"
 #~ msgstr "הפעל מח&דש את המחשב"
-
-#, fuzzy
-#~| msgid "General"
-#~ msgid "General:"
-#~ msgstr "כללי"
 
 #, fuzzy
 #~| msgid "Conf&irm logout"

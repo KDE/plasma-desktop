@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2009-02-09 18:15+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -82,51 +82,54 @@ msgid "Restart Now"
 msgstr "कम्प्यूटर फिर से  चालू करव (&R)"
 
 #: ui/main.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
 msgctxt "@title:group"
-msgid "Logout Screen"
-msgstr ""
+msgid "General"
+msgstr "सामान्य"
 
-#: ui/main.qml:78
+#: ui/main.qml:79
 #, kde-format
-msgid "Show:"
+msgctxt ""
+"@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "Ask for confirmation:"
 msgstr ""
 
-#: ui/main.qml:92
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When this setting is turned on, the logout confirmation screen will be shown "
-"when you log out, shut down, restart, press the power button, or click on "
-"buttons or menu items labeled <interface>Leave…</interface>."
+#: ui/main.qml:80
+#, kde-format
+msgctxt ""
+"@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "On shutdown, restart, and logout"
 msgstr ""
 
-#: ui/main.qml:98
+#: ui/main.qml:91
 #, fuzzy, kde-format
 #| msgid "Session Manager"
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "सत्र प्रबंधक"
 
-#: ui/main.qml:106
+#: ui/main.qml:99
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr ""
 
-#: ui/main.qml:107
+#: ui/main.qml:100
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr ""
 
-#: ui/main.qml:120
+#: ui/main.qml:113
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "हाथ से सहेजे गे सत्र ल बहाल करव (&m)"
 
-#: ui/main.qml:129
+#: ui/main.qml:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -136,7 +139,7 @@ msgid ""
 "Click it again to replace the set of remembered apps."
 msgstr ""
 
-#: ui/main.qml:134
+#: ui/main.qml:127
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -146,12 +149,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "खाली सत्र के साथ सुरू करव (&s)"
 
-#: ui/main.qml:148
+#: ui/main.qml:141
 #, kde-format
 msgid "Ignored applications:"
 msgstr ""
 
-#: ui/main.qml:171
+#: ui/main.qml:164
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -159,13 +162,13 @@ msgid ""
 "autostarting along with other session-restored apps."
 msgstr ""
 
-#: ui/main.qml:178
+#: ui/main.qml:171
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr ""
 
-#: ui/main.qml:184
+#: ui/main.qml:177
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -173,13 +176,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr ""
 
-#: ui/main.qml:185
+#: ui/main.qml:178
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr ""
 
-#: ui/main.qml:186
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
@@ -205,11 +208,6 @@ msgstr ""
 #~ msgctxt "@option:radio"
 #~ msgid "Restart"
 #~ msgstr "कम्प्यूटर फिर से  चालू करव (&R)"
-
-#, fuzzy
-#~| msgid "General"
-#~ msgid "General:"
-#~ msgstr "सामान्य"
 
 #, fuzzy
 #~| msgid "Conf&irm logout"
