@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2024-06-21 11:35+0200\n"
+"PO-Revision-Date: 2024-06-25 19:09+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -81,11 +81,10 @@ msgid "Restart Now"
 msgstr "Starta om nu"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr "Allmänt:"
+msgstr "Allmänt"
 
 #: ui/main.qml:79
 #, kde-format
@@ -93,7 +92,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Fråga efter bekräftelse:"
 
 #: ui/main.qml:80
 #, kde-format
@@ -101,7 +100,7 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "Vid avstängning, omstart och utloggning"
 
 #: ui/main.qml:91
 #, kde-format

@@ -7,21 +7,21 @@
 # Rinse de Vries <rinse@kde.nl>, 2003, 2004.
 # Wilbert Berendsen <wbsoft@xs4all.nl>, 2003.
 # Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2008.
-# Freek de Kruijf <f.de.kruijf@hetnet.nl>, 2009, 2013, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2009, 2013, 2019, 2020, 2021, 2022, 2024 Freek de Kruijf <f.de.kruijf@hetnet.nl>
 # SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2024-04-26 10:29+0200\n"
-"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"PO-Revision-Date: 2024-06-25 12:10+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -88,11 +88,10 @@ msgid "Restart Now"
 msgstr "Nu herstarten"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr "Algemeen:"
+msgstr "Algemeen"
 
 #: ui/main.qml:79
 #, kde-format
@@ -100,7 +99,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Om bevestiging vragen:"
 
 #: ui/main.qml:80
 #, kde-format
@@ -108,7 +107,7 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "Bij afsluiten, herstarten en afmelden"
 
 #: ui/main.qml:91
 #, kde-format
