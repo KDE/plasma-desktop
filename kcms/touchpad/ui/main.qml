@@ -190,6 +190,14 @@ KCM.SimpleKCM {
                 }
             }
         }
+        QQC2.Label {
+            Layout.fillWidth: true
+            leftPadding: dwt.indicator.width
+            text: i18nc("@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
+            textFormat: Text.PlainText
+            elide: Text.ElideRight
+            font: Kirigami.Theme.smallFont
+        }
 
         QQC2.CheckBox {
             id: leftHanded
