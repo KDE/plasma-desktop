@@ -202,7 +202,7 @@ Kirigami.FormLayout {
             Layout.preferredWidth: Kirigami.Units.gridUnit * 15
 
             from: 20
-            to: 10000
+            to: 20000
             value: kcm.miscSettings.repeatRate * 100
             onMoved: kcm.miscSettings.repeatRate = value / 100
 
@@ -216,7 +216,7 @@ Kirigami.FormLayout {
             Layout.preferredWidth: Kirigami.Units.gridUnit * 6
 
             from: 20
-            to: 10000
+            to: 20000
             stepSize: 500
             value: Math.round(kcm.miscSettings.repeatRate * 100)
             onValueModified: kcm.miscSettings.repeatRate = value / 100
