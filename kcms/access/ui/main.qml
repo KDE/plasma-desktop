@@ -13,6 +13,8 @@ import org.kde.kirigami.delegates as KD
 import org.kde.kcmutils as KCM
 import org.kde.kwindowsystem
 
+pragma ComponentBehavior: Bound
+
 KCM.AbstractKCM {
     id: root
 
@@ -78,9 +80,12 @@ KCM.AbstractKCM {
                 activeFocusOnTab: true
                 clip: true
                 keyNavigationEnabled: true
-                model: elements
+                model: root.elements
 
                 delegate: QQC2.ItemDelegate {
+                    required property int index
+                    required property var modelData
+
                     id: baseDelegate
 
                     width: listView.width
