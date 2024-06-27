@@ -90,6 +90,8 @@ KCM.AbstractKCM {
 
                     width: listView.width
 
+                    highlighted: listView.currentIndex == index
+
                     icon.name: modelData.icon
                     text: modelData.title
                     visible: modelData.available === undefined || modelData.available
