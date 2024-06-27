@@ -26,8 +26,6 @@ Item {
     // See https://bugs.kde.org/show_bug.cgi?id=398317
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
-    property bool hadPrompt: false
-
     function handleMessage(msg) {
         if (!root.notification) {
             root.notification += msg;
@@ -52,11 +50,10 @@ Item {
             graceLockTimer.restart();
             notificationRemoveTimer.restart();
             rejectPasswordAnimation.start();
-            lockScreenUi.hadPrompt = false;
         }
 
         function onSucceeded() {
-            if (lockScreenUi.hadPrompt) {
+            if (authenticator.hadPrompt) {
                 Qt.quit();
             } else {
                 mainStack.replace(null, Qt.resolvedUrl("NoPasswordUnlock.qml"),
@@ -71,7 +68,6 @@ Item {
 
         function onInfoMessageChanged() {
             lockScreenUi.handleMessage(authenticator.infoMessage);
-            lockScreenUi.hadPrompt = true;
         }
 
         function onErrorMessageChanged() {
@@ -84,7 +80,6 @@ Item {
         function onPromptForSecretChanged(msg) {
             mainBlock.showPassword = false;
             mainBlock.mainPasswordBox.forceActiveFocus();
-            lockScreenUi.hadPrompt = true;
         }
     }
 
