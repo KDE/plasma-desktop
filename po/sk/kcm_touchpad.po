@@ -1,20 +1,20 @@
 # translation of kcm_touchpad.po Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2015, 2017.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2023-11-11 15:41+0100\n"
+"POT-Creation-Date: 2024-06-27 00:40+0000\n"
+"PO-Revision-Date: 2024-06-26 14:07+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.05.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: actions.cpp:19
@@ -230,7 +230,7 @@ msgstr "Ľavý horný roh"
 #: ui/main.qml:99
 #, kde-format
 msgid "Connect an external touchpad"
-msgstr ""
+msgstr "Pripojiť externý touchpad"
 
 #: ui/main.qml:113
 #, kde-format
@@ -264,258 +264,267 @@ msgstr "Zakázať touchpad pri písaní na zabránenie nechcených vstupov."
 
 #: ui/main.qml:196
 #, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr ""
+
+#: ui/main.qml:204
+#, kde-format
 msgid "Left handed mode"
 msgstr "Režim ľavej ruky"
 
-#: ui/main.qml:200
+#: ui/main.qml:208
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Vymeniť ľavé a pravé tlačidlo."
 
-#: ui/main.qml:226
+#: ui/main.qml:234
 #, kde-format
 msgid "Press left and right buttons for middle click"
 msgstr "Stlačte naraz ľavé a pravé tlačidlo na kliknutie stredným tlačidlom"
 
-#: ui/main.qml:230 ui/main.qml:874
+#: ui/main.qml:238 ui/main.qml:882
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
 "Kliknutie ľavým a oravým tlačidlom naraz pošle kliknutie stredným tlačidlom."
 
-#: ui/main.qml:256
+#: ui/main.qml:264
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
+"Aktivácia tohto nastavenia zvyšuje oneskorenie kliknutia myšou o 50 ms. "
+"Dodatočné oneskorenie je potrebné na správne rozpoznanie súčasných kliknutí "
+"ľavým a pravým tlačidlom myši."
 
-#: ui/main.qml:266
+#: ui/main.qml:274
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Rýchlosť ukazovateľa:"
 
-#: ui/main.qml:364
+#: ui/main.qml:372
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Zrýchlenie ukazovateľa:"
 
-#: ui/main.qml:395
+#: ui/main.qml:403
 #, kde-format
 msgid "None"
 msgstr "Žiadne"
 
-#: ui/main.qml:399
+#: ui/main.qml:407
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "Kurzor sa pohne o rovnakú vzdialenosť ako prst."
 
-#: ui/main.qml:408
+#: ui/main.qml:416
 #, kde-format
 msgid "Standard"
 msgstr "Štandardné"
 
-#: ui/main.qml:412
+#: ui/main.qml:420
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "Kurzor sa pohne o vzdialenosť závislú od rýchlosti pohybu prstu."
 
-#: ui/main.qml:426
+#: ui/main.qml:434
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Rýchlosť rolovania:"
 
-#: ui/main.qml:477
+#: ui/main.qml:485
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Pomalšie"
 
-#: ui/main.qml:484
+#: ui/main.qml:492
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Rýchlejšie"
 
-#: ui/main.qml:492
+#: ui/main.qml:500
 #, kde-format
 msgid "Scrolling:"
 msgstr "Rolovanie:"
 
-#: ui/main.qml:521
+#: ui/main.qml:529
 #, kde-format
 msgid "Two fingers"
 msgstr "Dva prsty"
 
-#: ui/main.qml:525
+#: ui/main.qml:533
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Kĺzanie dvoma prstami roluje."
 
-#: ui/main.qml:533
+#: ui/main.qml:541
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Okraje touchpadu"
 
-#: ui/main.qml:537
+#: ui/main.qml:545
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Kĺzanie na okraji touchpadu roluje."
 
-#: ui/main.qml:547
+#: ui/main.qml:555
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Otočiť smer rolovania (Prirodzené rolovanie)"
 
-#: ui/main.qml:563
+#: ui/main.qml:571
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Rolovanie ako na dotykovej obrazovke."
 
-#: ui/main.qml:571 ui/main.qml:588
+#: ui/main.qml:579 ui/main.qml:596
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Zakázať horizontálne rolovanie"
 
-#: ui/main.qml:601
+#: ui/main.qml:609
 #, kde-format
 msgid "Tapping:"
 msgstr "Ťukanie:"
 
-#: ui/main.qml:602
+#: ui/main.qml:610
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Ťuknite na kliknutie"
 
-#: ui/main.qml:606
+#: ui/main.qml:614
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "Jedno ťuknutie je kliknutie ľavým tlačidlom."
 
-#: ui/main.qml:635
+#: ui/main.qml:643
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Gesto Tap-and-Drag"
 
-#: ui/main.qml:639
+#: ui/main.qml:647
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "Posúvajte sa po touchpade hneď po presúvaní."
 
-#: ui/main.qml:666
+#: ui/main.qml:674
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Zámok gest Tap-and-Drag"
 
-#: ui/main.qml:670
+#: ui/main.qml:678
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Presúvanie pokračuje po krátkom zdvihu prsta."
 
-#: ui/main.qml:690
+#: ui/main.qml:698
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Ťuknutie dvoma prstami:"
 
-#: ui/main.qml:701
+#: ui/main.qml:709
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Pravý klik (troj-klik na stredný klik)"
 
-#: ui/main.qml:702
+#: ui/main.qml:710
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr ""
 "Ťuknite dvoma prstami na pravý klik, ťuknite troma prstami na stredný klik."
 
-#: ui/main.qml:704
+#: ui/main.qml:712
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Stredný klik (troj-klik na pravý klik)"
 
-#: ui/main.qml:705
+#: ui/main.qml:713
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
 msgstr ""
 "Ťuknite dvoma prstami na stredný klik, ťuknite troma prstami na pravý klik."
 
-#: ui/main.qml:707
+#: ui/main.qml:715
 #, kde-format
 msgid "Right-click"
 msgstr "Pravý klik"
 
-#: ui/main.qml:708
+#: ui/main.qml:716
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Ťuknite dvoma prstami na pravý klik."
 
-#: ui/main.qml:710
+#: ui/main.qml:718
 #, kde-format
 msgid "Middle-click"
 msgstr "Stredný klik"
 
-#: ui/main.qml:711
+#: ui/main.qml:719
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Ťuknite dvoma prstami na stredný klik."
 
-#: ui/main.qml:769
+#: ui/main.qml:777
 #, kde-format
 msgid "Right-click:"
 msgstr "Pravý klik:"
 
-#: ui/main.qml:803
+#: ui/main.qml:811
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "Stlačte pravý dolný roh"
 
-#: ui/main.qml:807
+#: ui/main.qml:815
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr "Pridá virtuálne tlačidlá na spodok vášho touchpadu."
 
-#: ui/main.qml:815
+#: ui/main.qml:823
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "Stlačte hocikde s dvoma prstami"
 
-#: ui/main.qml:819
+#: ui/main.qml:827
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "Ťuknite dvoma prstami na pravý klik."
 
-#: ui/main.qml:829
+#: ui/main.qml:837
 #, kde-format
 msgid "Middle-click: "
 msgstr "Stredný klik:"
 
-#: ui/main.qml:858
+#: ui/main.qml:866
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Stlačte na spodu v strede"
 
-#: ui/main.qml:862
+#: ui/main.qml:870
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
 msgstr "Pridá virtuálne stredné tlačidlo na spodok vášho touchpadu."
 
-#: ui/main.qml:870
+#: ui/main.qml:878
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Stlačte naraz dolný ľavý a dolný pravý roh"
 
-#: ui/main.qml:883
+#: ui/main.qml:891
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Stlačte hocikde s troma prstami"
 
-#: ui/main.qml:889
+#: ui/main.qml:897
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Stlačte hocikde s troma prstami."

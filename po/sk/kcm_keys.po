@@ -1,19 +1,19 @@
 # translation of kcm_keys.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2023-11-11 15:44+0100\n"
+"PO-Revision-Date: 2024-06-26 14:09+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.05.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: globalaccelmodel.cpp:235
@@ -105,10 +105,9 @@ msgid "Commands"
 msgstr "Príkazy"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "System Services"
-msgstr "Systémové nastavenia"
+msgstr "Systémové služby"
 
 #: ui/main.qml:27
 #, kde-format

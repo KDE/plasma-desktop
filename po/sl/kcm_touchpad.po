@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-06-27 00:40+0000\n"
 "PO-Revision-Date: 2024-03-22 07:23+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -269,26 +269,32 @@ msgstr ""
 
 #: ui/main.qml:196
 #, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr ""
+
+#: ui/main.qml:204
+#, kde-format
 msgid "Left handed mode"
 msgstr "Način za levičarje"
 
-#: ui/main.qml:200
+#: ui/main.qml:208
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Preklopi leve in desne gumbe."
 
-#: ui/main.qml:226
+#: ui/main.qml:234
 #, kde-format
 msgid "Press left and right buttons for middle click"
 msgstr "Pritisnite levi in desni gumb za klik sredinskega"
 
-#: ui/main.qml:230 ui/main.qml:874
+#: ui/main.qml:238 ui/main.qml:882
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr "Hkratni klik levega in desnega gumba pomeni klik sredinskega gumba."
 
-#: ui/main.qml:256
+#: ui/main.qml:264
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -298,139 +304,139 @@ msgstr ""
 "zakasnitev je potrebna za pravilno zaznavanje istočasnih levih in desnih "
 "klikov miške."
 
-#: ui/main.qml:266
+#: ui/main.qml:274
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Hitrost kazalke:"
 
-#: ui/main.qml:364
+#: ui/main.qml:372
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Pospešek kazalke:"
 
-#: ui/main.qml:395
+#: ui/main.qml:403
 #, kde-format
 msgid "None"
 msgstr "Noben"
 
-#: ui/main.qml:399
+#: ui/main.qml:407
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "Kazalka se pomika enako daleč kot prst."
 
-#: ui/main.qml:408
+#: ui/main.qml:416
 #, kde-format
 msgid "Standard"
 msgstr "Standardno"
 
-#: ui/main.qml:412
+#: ui/main.qml:420
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "Dolžina poti kazalke je odvisna od hitrosti pomikanja prsta."
 
-#: ui/main.qml:426
+#: ui/main.qml:434
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Hitrost drsenja:"
 
-#: ui/main.qml:477
+#: ui/main.qml:485
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Počasneje"
 
-#: ui/main.qml:484
+#: ui/main.qml:492
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Hitreje"
 
-#: ui/main.qml:492
+#: ui/main.qml:500
 #, kde-format
 msgid "Scrolling:"
 msgstr "Drsenje:"
 
-#: ui/main.qml:521
+#: ui/main.qml:529
 #, kde-format
 msgid "Two fingers"
 msgstr "Dva prsta"
 
-#: ui/main.qml:525
+#: ui/main.qml:533
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Drsenje z dvema prstoma drsi zaslon."
 
-#: ui/main.qml:533
+#: ui/main.qml:541
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Robovi sledilne ploščice"
 
-#: ui/main.qml:537
+#: ui/main.qml:545
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Drsenje po robovih sledilne ploščice drsi zaslon."
 
-#: ui/main.qml:547
+#: ui/main.qml:555
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Obrni smer drsenja (naravno drsenje zaslona)"
 
-#: ui/main.qml:563
+#: ui/main.qml:571
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Drsi kot da je zaslon z dotikom."
 
-#: ui/main.qml:571 ui/main.qml:588
+#: ui/main.qml:579 ui/main.qml:596
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Onemogoči vodoravno drsenje"
 
-#: ui/main.qml:601
+#: ui/main.qml:609
 #, kde-format
 msgid "Tapping:"
 msgstr "Trepljanje:"
 
-#: ui/main.qml:602
+#: ui/main.qml:610
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Trepljanje za klikanje"
 
-#: ui/main.qml:606
+#: ui/main.qml:614
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "Eno trepljanje je klik levega gumba."
 
-#: ui/main.qml:635
+#: ui/main.qml:643
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Potrepljaj in povleci"
 
-#: ui/main.qml:639
+#: ui/main.qml:647
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "Drsenje čez sledilno ploščico neposredno trepljanju je vlečenje."
 
-#: ui/main.qml:666
+#: ui/main.qml:674
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Zaklep trepljanja in vlečenja"
 
-#: ui/main.qml:670
+#: ui/main.qml:678
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Vlečenje se nadaljuje po kratkem dvigu prsta."
 
-#: ui/main.qml:690
+#: ui/main.qml:698
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Trepljanje z dvema prstoma:"
 
-#: ui/main.qml:701
+#: ui/main.qml:709
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Desni klik (trepljanje s tremi prsti je klik sredine)"
 
-#: ui/main.qml:702
+#: ui/main.qml:710
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -438,12 +444,12 @@ msgstr ""
 "Trepljanje z dvema prstoma je desni klik, trepljanje s tremi prsti je "
 "srednji klik."
 
-#: ui/main.qml:704
+#: ui/main.qml:712
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Srednji klik (trepljanje s tremi prsti je desni klik)"
 
-#: ui/main.qml:705
+#: ui/main.qml:713
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -451,64 +457,64 @@ msgstr ""
 "Trepljanje z dvema prstoma za srednji klik, trepljanje s tremi prsti za "
 "desni klik."
 
-#: ui/main.qml:707
+#: ui/main.qml:715
 #, kde-format
 msgid "Right-click"
 msgstr "Desni klik"
 
-#: ui/main.qml:708
+#: ui/main.qml:716
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Trepljaj z dvema prstoma za desni klik."
 
-#: ui/main.qml:710
+#: ui/main.qml:718
 #, kde-format
 msgid "Middle-click"
 msgstr "Srednji klik"
 
-#: ui/main.qml:711
+#: ui/main.qml:719
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Trepljaj z dvema prstoma za srednji klik."
 
-#: ui/main.qml:769
+#: ui/main.qml:777
 #, kde-format
 msgid "Right-click:"
 msgstr "Desni klik:"
 
-#: ui/main.qml:803
+#: ui/main.qml:811
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "Pritisni spodnji desni kot"
 
-#: ui/main.qml:807
+#: ui/main.qml:815
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr ""
 "Programsko omogočeni gumbi bodo dodano na spodnji del sledilne ploščice."
 
-#: ui/main.qml:815
+#: ui/main.qml:823
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "Pritisni kamorkoli z dvema prstoma"
 
-#: ui/main.qml:819
+#: ui/main.qml:827
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "Trepljaj z dvema prstoma za omogočanje desnega klika."
 
-#: ui/main.qml:829
+#: ui/main.qml:837
 #, kde-format
 msgid "Middle-click: "
 msgstr "Srednji klik: "
 
-#: ui/main.qml:858
+#: ui/main.qml:866
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Pritisni spodaj v sredini"
 
-#: ui/main.qml:862
+#: ui/main.qml:870
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
@@ -517,17 +523,17 @@ msgstr ""
 "Programsko omogočen srednji gumb bo dodan na spodnji del vaše sledilne "
 "ploščice."
 
-#: ui/main.qml:870
+#: ui/main.qml:878
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Sočasno pritisnite spodnji levi in spodnji desni kot ploščice"
 
-#: ui/main.qml:883
+#: ui/main.qml:891
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Kamorkoli pritisnite s tremi prsti"
 
-#: ui/main.qml:889
+#: ui/main.qml:897
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Kamorkoli pritisnite s tremi prsti."

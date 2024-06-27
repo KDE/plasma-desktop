@@ -7,21 +7,21 @@
 # Richard Fric <Richard.Fric@kdemail.net>, 2006, 2009.
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2017, 2021.
 # Mthw <jari_45@hotmail.com>, 2018.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2023-11-11 15:45+0100\n"
+"PO-Revision-Date: 2024-06-26 14:10+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.05.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: kcmaccess.cpp:116
@@ -297,14 +297,13 @@ msgstr "Povoliť čítačku obrazovky"
 #: kcmaccessibilityshakecursor.kcfg:9
 #, kde-format
 msgid "Whether Shake Cursor is enabled"
-msgstr ""
+msgstr "Či zatriasť kurzorom je zapnuté"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgid "Magnification"
-msgstr "Zobraziť notifikáciu"
+msgstr "Zväčšenie"
 
 #: ui/ActivationGestures.qml:16
 #, kde-format
@@ -317,26 +316,22 @@ msgid "Use gestures for activating sticky keys and slow keys"
 msgstr "Použiť gestá pre aktivovanie lepkavých a pomalých kláves"
 
 #: ui/ActivationGestures.qml:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
-msgstr "Vypnúť lepkavé a pomalé klávesy po určitom čase neaktivity."
+msgstr "Vypnúť lepkavé a pomalé klávesy po určitom čase neaktivity:"
 
 #: ui/ActivationGestures.qml:58
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " min"
-msgstr[1] " min"
-msgstr[2] " min"
+msgstr[0] "%1 min"
+msgstr[1] "%1 min"
+msgstr[2] "%1 min"
 
 #: ui/ActivationGestures.qml:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "min"
-msgstr " min"
+msgstr "min"
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -536,8 +531,7 @@ msgid "Mouse Navigation"
 msgstr "Navigácia myšou"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "&Activation Gestures"
+#, kde-format
 msgid "Activation Gestures"
 msgstr "Aktivačné gestá"
 
@@ -551,7 +545,7 @@ msgstr "Čítačka obrazovky"
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
-msgstr ""
+msgstr "Zatriasť kurzorom"
 
 #: ui/ModifierKeys.qml:16
 #, kde-format
@@ -658,33 +652,31 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Shake cursor to find it:"
-msgstr ""
+msgstr "Zatriasť kurzorom na jeho nájdenie:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake cursor effect"
 msgid "Enable"
 msgstr "Povoliť"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgctxt "@label Cursor magnification level"
 msgid "Magnification:"
-msgstr "Zobraziť notifikáciu"
+msgstr "Zväčšenie:"
 
 #: ui/ShakeCursor.qml:55
 #, kde-format
 msgctxt "@label Normal cursor size"
 msgid "Normal"
-msgstr ""
+msgstr "Normálne"
 
 #: ui/ShakeCursor.qml:62
 #, kde-format
 msgctxt "@label Large cursor size"
 msgid "Large"
-msgstr ""
+msgstr "Veľké"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Profil zrýchlenia:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-06-27 00:40+0000\n"
 "PO-Revision-Date: 2024-03-22 14:47+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -266,21 +266,27 @@ msgstr ""
 
 #: ui/main.qml:196
 #, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr ""
+
+#: ui/main.qml:204
+#, kde-format
 msgid "Left handed mode"
 msgstr "Режим за лява ръка"
 
-#: ui/main.qml:200
+#: ui/main.qml:208
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Размяна на левия и десния бутон."
 
-#: ui/main.qml:226
+#: ui/main.qml:234
 #, kde-format
 msgid "Press left and right buttons for middle click"
 msgstr ""
 "Натискане на левия и десния бутон за емулация на кликване със среден бутон"
 
-#: ui/main.qml:230 ui/main.qml:874
+#: ui/main.qml:238 ui/main.qml:882
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -288,7 +294,7 @@ msgstr ""
 "Кликването на левия и десния бутон едновременно изпраща сигнал за кликване "
 "със среден бутон."
 
-#: ui/main.qml:256
+#: ui/main.qml:264
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -298,141 +304,141 @@ msgstr ""
 "с 50ms.Това е необходимо, за да се откриват правилно едновременни щраквания "
 "с левия и десния бутон на мишката."
 
-#: ui/main.qml:266
+#: ui/main.qml:274
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Скорост на показалеца:"
 
-#: ui/main.qml:364
+#: ui/main.qml:372
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Ускорение на показалеца:"
 
-#: ui/main.qml:395
+#: ui/main.qml:403
 #, kde-format
 msgid "None"
 msgstr "Без"
 
-#: ui/main.qml:399
+#: ui/main.qml:407
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "Курсорът се движи на същото разстояние като пръста."
 
-#: ui/main.qml:408
+#: ui/main.qml:416
 #, kde-format
 msgid "Standard"
 msgstr "Стандартно"
 
-#: ui/main.qml:412
+#: ui/main.qml:420
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "Разстоянието на курсора зависи от скоростта на движение на пръста."
 
-#: ui/main.qml:426
+#: ui/main.qml:434
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Скорост на превъртане:"
 
-#: ui/main.qml:477
+#: ui/main.qml:485
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "По-бавно"
 
-#: ui/main.qml:484
+#: ui/main.qml:492
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "По-бързо"
 
-#: ui/main.qml:492
+#: ui/main.qml:500
 #, kde-format
 msgid "Scrolling:"
 msgstr "Превъртане:"
 
-#: ui/main.qml:521
+#: ui/main.qml:529
 #, kde-format
 msgid "Two fingers"
 msgstr "Два пръста"
 
-#: ui/main.qml:525
+#: ui/main.qml:533
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Превъртания с плъзгане на два пръста."
 
-#: ui/main.qml:533
+#: ui/main.qml:541
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Краища на тъчпад"
 
-#: ui/main.qml:537
+#: ui/main.qml:545
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Превъртания с плъзгане по краищата на тъчпада."
 
-#: ui/main.qml:547
+#: ui/main.qml:555
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Обръщане на посоката на превъртане (Естествено превъртане)"
 
-#: ui/main.qml:563
+#: ui/main.qml:571
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Превъртане като при сензорен екран ."
 
-#: ui/main.qml:571 ui/main.qml:588
+#: ui/main.qml:579 ui/main.qml:596
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Деактивиране на хоризонтално превъртане"
 
-#: ui/main.qml:601
+#: ui/main.qml:609
 #, kde-format
 msgid "Tapping:"
 msgstr "Докосване:"
 
-#: ui/main.qml:602
+#: ui/main.qml:610
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Докосване за кликване"
 
-#: ui/main.qml:606
+#: ui/main.qml:614
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "Еднократно докосване е кликване с левия бутон."
 
-#: ui/main.qml:635
+#: ui/main.qml:643
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Докосване и влачене"
 
-#: ui/main.qml:639
+#: ui/main.qml:647
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "Плъзгане по тъчпада директно след захващане."
 
-#: ui/main.qml:666
+#: ui/main.qml:674
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Заключване на  докосване и влачене"
 
-#: ui/main.qml:670
+#: ui/main.qml:678
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Влаченето продължава след кратко повдигане на пръста."
 
-#: ui/main.qml:690
+#: ui/main.qml:698
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Докосване с два пръста:"
 
-#: ui/main.qml:701
+#: ui/main.qml:709
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr ""
 "Кликване  с десния бутон на мишката (докосване с три пръста за средно "
 "кликване)"
 
-#: ui/main.qml:702
+#: ui/main.qml:710
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -440,12 +446,12 @@ msgstr ""
 "Докосване с два пръста, за щракване с десния бутон, докосване с три пръста, "
 "за  кликване със средния бутон."
 
-#: ui/main.qml:704
+#: ui/main.qml:712
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Средно кликване (докосване с три пръста за кликване на десен бутон)"
 
-#: ui/main.qml:705
+#: ui/main.qml:713
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -453,64 +459,64 @@ msgstr ""
 "Докосване с два пръста за кликване със среден бутон, докосване с три пръста, "
 "за кликване с десния бутон."
 
-#: ui/main.qml:707
+#: ui/main.qml:715
 #, kde-format
 msgid "Right-click"
 msgstr "Кликване с десен бутон"
 
-#: ui/main.qml:708
+#: ui/main.qml:716
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Докосване с два пръста за кликване с десния бутон."
 
-#: ui/main.qml:710
+#: ui/main.qml:718
 #, kde-format
 msgid "Middle-click"
 msgstr "Кликване със среден бутон"
 
-#: ui/main.qml:711
+#: ui/main.qml:719
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Докосване с два пръста за кликване със среден бутон."
 
-#: ui/main.qml:769
+#: ui/main.qml:777
 #, kde-format
 msgid "Right-click:"
 msgstr "Кликване с десния бутон:"
 
-#: ui/main.qml:803
+#: ui/main.qml:811
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "Натискане на долния десен ъгъл"
 
-#: ui/main.qml:807
+#: ui/main.qml:815
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr ""
 "Софтуерно активираните бутони ще бъдат добавени към долната част на тъчпада."
 
-#: ui/main.qml:815
+#: ui/main.qml:823
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "Натискане на навсякъде с два пръста"
 
-#: ui/main.qml:819
+#: ui/main.qml:827
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "Докосване с два пръста, за да активирате десния бутон."
 
-#: ui/main.qml:829
+#: ui/main.qml:837
 #, kde-format
 msgid "Middle-click: "
 msgstr "Кликване със среден бутон: "
 
-#: ui/main.qml:858
+#: ui/main.qml:866
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Натискане долу в средата"
 
-#: ui/main.qml:862
+#: ui/main.qml:870
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
@@ -518,17 +524,17 @@ msgid ""
 msgstr ""
 "Софтуерно активиран среден бутон ще бъде добавен към долната част на тъчпада."
 
-#: ui/main.qml:870
+#: ui/main.qml:878
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Натискане на едновременно долния ляв и долния десен ъгъл"
 
-#: ui/main.qml:883
+#: ui/main.qml:891
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Натискане навсякъде с три пръста"
 
-#: ui/main.qml:889
+#: ui/main.qml:897
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Натискане навсякъде с три пръста."

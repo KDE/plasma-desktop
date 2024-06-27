@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-06-27 00:40+0000\n"
 "PO-Revision-Date: 2024-03-22 19:13+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -273,20 +273,26 @@ msgstr ""
 
 #: ui/main.qml:196
 #, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr ""
+
+#: ui/main.qml:204
+#, kde-format
 msgid "Left handed mode"
 msgstr "Режим шульги"
 
-#: ui/main.qml:200
+#: ui/main.qml:208
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Поміняти місцями ліву і праву кнопки."
 
-#: ui/main.qml:226
+#: ui/main.qml:234
 #, kde-format
 msgid "Press left and right buttons for middle click"
 msgstr "Натискати ліву і праву кнопки для клацання середньою"
 
-#: ui/main.qml:230 ui/main.qml:874
+#: ui/main.qml:238 ui/main.qml:882
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
@@ -294,7 +300,7 @@ msgstr ""
 "Одночасне натискання лівої і правої кнопок надсилатиме сигнал клацання "
 "середньою кнопкою."
 
-#: ui/main.qml:256
+#: ui/main.qml:264
 #, kde-format
 msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -304,141 +310,141 @@ msgstr ""
 "мс. Додаткова затримка потрібна для належного виявлення одночасного клацання "
 "лівою і правою кнопками миші."
 
-#: ui/main.qml:266
+#: ui/main.qml:274
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Швидкість вказівника:"
 
-#: ui/main.qml:364
+#: ui/main.qml:372
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "Прискорення вказівника:"
 
-#: ui/main.qml:395
+#: ui/main.qml:403
 #, kde-format
 msgid "None"
 msgstr "Немає"
 
-#: ui/main.qml:399
+#: ui/main.qml:407
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "Вказівник зсувається на ту саму відстань, що і палець."
 
-#: ui/main.qml:408
+#: ui/main.qml:416
 #, kde-format
 msgid "Standard"
 msgstr "Стандартне"
 
-#: ui/main.qml:412
+#: ui/main.qml:420
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr ""
 "Вказівник зсувається на відстань, яка залежить від швидкості руху пальцем."
 
-#: ui/main.qml:426
+#: ui/main.qml:434
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Швидкість гортання:"
 
-#: ui/main.qml:477
+#: ui/main.qml:485
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Повільніше"
 
-#: ui/main.qml:484
+#: ui/main.qml:492
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Швидше"
 
-#: ui/main.qml:492
+#: ui/main.qml:500
 #, kde-format
 msgid "Scrolling:"
 msgstr "Гортання:"
 
-#: ui/main.qml:521
+#: ui/main.qml:529
 #, kde-format
 msgid "Two fingers"
 msgstr "Два пальці"
 
-#: ui/main.qml:525
+#: ui/main.qml:533
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Проведення двома пальцями — гортання."
 
-#: ui/main.qml:533
+#: ui/main.qml:541
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Краї панелі"
 
-#: ui/main.qml:537
+#: ui/main.qml:545
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Проведення на краю панелі — гортання."
 
-#: ui/main.qml:547
+#: ui/main.qml:555
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Зворотний напрямок гортання (природне гортання)"
 
-#: ui/main.qml:563
+#: ui/main.qml:571
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Гортання як на сенсорній панелі."
 
-#: ui/main.qml:571 ui/main.qml:588
+#: ui/main.qml:579 ui/main.qml:596
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Вимкнути горизонтальне гортання"
 
-#: ui/main.qml:601
+#: ui/main.qml:609
 #, kde-format
 msgid "Tapping:"
 msgstr "Дотики:"
 
-#: ui/main.qml:602
+#: ui/main.qml:610
 #, kde-format
 msgid "Tap-to-click"
 msgstr "Дотик як клацання"
 
-#: ui/main.qml:606
+#: ui/main.qml:614
 #, kde-format
 msgid "Single tap is left button click."
 msgstr "Одинарний дотик — клацання лівою кнопкою."
 
-#: ui/main.qml:635
+#: ui/main.qml:643
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Дотик-і-перетягування"
 
-#: ui/main.qml:639
+#: ui/main.qml:647
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "Проведення пальцем після дотику призводить до перетягування."
 
-#: ui/main.qml:666
+#: ui/main.qml:674
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Дотик-і-перетягування із блокування"
 
-#: ui/main.qml:670
+#: ui/main.qml:678
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr ""
 "Перетягування продовжується після нетривалого зникнення контакту з пальцем."
 
-#: ui/main.qml:690
+#: ui/main.qml:698
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Дотик двома пальцями:"
 
-#: ui/main.qml:701
+#: ui/main.qml:709
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Клацання правою (дотик трьома пальцями — клацання середньою)"
 
-#: ui/main.qml:702
+#: ui/main.qml:710
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -446,12 +452,12 @@ msgstr ""
 "Дотик двома пальцями — клацання правою, дотик трьома пальцями — клацання "
 "середньою."
 
-#: ui/main.qml:704
+#: ui/main.qml:712
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
 msgstr "Клацання середньою (дотик трьома пальцями — клацання правою)"
 
-#: ui/main.qml:705
+#: ui/main.qml:713
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -459,63 +465,63 @@ msgstr ""
 "Дотик двома пальцями — клацання середньою, дотик трьома пальцями — клацання "
 "правою."
 
-#: ui/main.qml:707
+#: ui/main.qml:715
 #, kde-format
 msgid "Right-click"
 msgstr "Клацання правою"
 
-#: ui/main.qml:708
+#: ui/main.qml:716
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Дотик двома пальцями — клацання правою."
 
-#: ui/main.qml:710
+#: ui/main.qml:718
 #, kde-format
 msgid "Middle-click"
 msgstr "Клацання середньою"
 
-#: ui/main.qml:711
+#: ui/main.qml:719
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Дотик двома пальцями — клацання середньою."
 
-#: ui/main.qml:769
+#: ui/main.qml:777
 #, kde-format
 msgid "Right-click:"
 msgstr "Клацання правою:"
 
-#: ui/main.qml:803
+#: ui/main.qml:811
 #, kde-format
 msgid "Press bottom-right corner"
 msgstr "Натискання у нижньому правому куті"
 
-#: ui/main.qml:807
+#: ui/main.qml:815
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
 msgstr "Програмні кнопки буде додано у нижній частині сенсорної панелі."
 
-#: ui/main.qml:815
+#: ui/main.qml:823
 #, kde-format
 msgid "Press anywhere with two fingers"
 msgstr "Натискання будь-де двома пальцями"
 
-#: ui/main.qml:819
+#: ui/main.qml:827
 #, kde-format
 msgid "Tap with two finger to enable right click."
 msgstr "Дотик двома пальцями — клацання правою."
 
-#: ui/main.qml:829
+#: ui/main.qml:837
 #, kde-format
 msgid "Middle-click: "
 msgstr "Клацання середньою:"
 
-#: ui/main.qml:858
+#: ui/main.qml:866
 #, kde-format
 msgid "Press bottom-middle"
 msgstr "Натискання внизу посередині"
 
-#: ui/main.qml:862
+#: ui/main.qml:870
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
@@ -524,17 +530,17 @@ msgstr ""
 "Програмну кнопку середньої кнопки миші буде додано у нижній частині "
 "сенсорної панелі."
 
-#: ui/main.qml:870
+#: ui/main.qml:878
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
 msgstr "Натискання у нижньому лівому і нижньому правому куті одночасно"
 
-#: ui/main.qml:883
+#: ui/main.qml:891
 #, kde-format
 msgid "Press anywhere with three fingers"
 msgstr "Натискання будь-де трьома пальцями"
 
-#: ui/main.qml:889
+#: ui/main.qml:897
 #, kde-format
 msgid "Press anywhere with three fingers."
 msgstr "Натискання будь-де трьома пальцями."

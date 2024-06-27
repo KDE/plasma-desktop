@@ -8,13 +8,13 @@
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022.
+# SPDX-FileCopyrightText: 2008, 2021, 2022, 2024 zayed <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2022-12-27 20:38+0400\n"
+"PO-Revision-Date: 2024-06-26 18:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -23,6 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -85,11 +86,10 @@ msgid "Restart Now"
 msgstr "أعِد التشغيل الآن"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr "عام:"
+msgstr "عام"
 
 #: ui/main.qml:79
 #, kde-format
@@ -97,7 +97,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "اطلب تأكيد عند:"
 
 #: ui/main.qml:80
 #, kde-format
@@ -105,7 +105,7 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "الإطفاء وإعادة التشغيل والخروج"
 
 #: ui/main.qml:91
 #, kde-format
