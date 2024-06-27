@@ -1,78 +1,77 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-22 02:39+0000\n"
-"PO-Revision-Date: 2024-06-25 19:20\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-01-31 08:50+0100\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-stable/messages/plasma-desktop/plasma-desktop-sddm-"
-"theme.pot\n"
-"X-Crowdin-File-ID: 54390\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: KeyboardButton.qml:19
 msgid "Keyboard Layout: %1"
-msgstr "键盘布局：%1"
+msgstr "Mappatura della tastiera: %1"
 
 #: Login.qml:85
 msgid "Username"
-msgstr "用户名"
+msgstr "Nome utente"
 
 #: Login.qml:102
 msgid "Password"
-msgstr "密码"
+msgstr "Password"
 
 #: Login.qml:144 Login.qml:150
 msgid "Log In"
-msgstr "登录"
+msgstr "Accedi"
 
 #: Main.qml:195
 msgid "Caps Lock is on"
-msgstr "大写锁定处于打开状态"
+msgstr "Il blocco maiuscole è attivo"
 
 #: Main.qml:207 Main.qml:351
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "睡眠"
+msgstr "Sospendi"
 
 #: Main.qml:214 Main.qml:358
 msgid "Restart"
-msgstr "重启"
+msgstr "Riavvia"
 
 #: Main.qml:221 Main.qml:365
 msgid "Shut Down"
-msgstr "关机"
+msgstr "Spegni"
 
 #: Main.qml:228
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
-msgstr "其他…"
+msgstr "Altro…"
 
 #: Main.qml:337
 msgid "Type in Username and Password"
-msgstr "输入用户名和密码"
+msgstr "Digita nome utente e password"
 
 #: Main.qml:372
 msgid "List Users"
-msgstr "列出用户"
+msgstr "Elenca utenti"
 
 #: Main.qml:447
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr "虚拟键盘"
+msgstr "Tastiera virtuale"
 
 #: Main.qml:514
 msgid "Login Failed"
-msgstr "登录失败"
+msgstr "Accesso non riuscito"
 
 #: SessionButton.qml:18
 msgid "Desktop Session: %1"
-msgstr "桌面会话：%1"
+msgstr "Sessione del desktop: %1"
