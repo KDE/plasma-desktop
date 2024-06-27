@@ -57,14 +57,15 @@ target_link_libraries(layout_memory_persister_test
 
 if( X11_XTest_FOUND )
    add_executable(keyboard_daemon_test keyboard_daemon_test.cpp ../keyboard_daemon.cpp ../layout_memory.cpp ../layout_memory_persister.cpp ../flags.cpp ../udev_helper.cpp ../x11_helper.cpp ../xkb_helper.cpp ../xinput_helper.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../keyboard_hardware.cpp ../bindings.cpp ../debug.cpp ../layoutnames.cpp)
+   kconfig_add_kcfg_files(keyboard_daemon_test ../keyboardsettings.kcfgc GENERATE_MOC)
    add_test(NAME kcm-keyboard-keyboard_daemon_test COMMAND keyboard_daemon_test)
    add_dependencies(keyboard_daemon_test kded_keyboard)
    ecm_mark_nongui_executable(keyboard_daemon_test)
    ecm_mark_as_test(keyboard_daemon_test)
    target_link_libraries(keyboard_daemon_test
-                         kcm_keyboard_static
                          Qt::Concurrent
                          Qt::Xml
+                         Qt::GuiPrivate
                          Qt::Test
                          KF6::ConfigCore
                          KF6::CoreAddons

@@ -32,7 +32,7 @@ set( kded_keyboard_SRCS
     layoutnames.cpp
 )
 
-kconfig_add_kcfg_files(kded_keyboard_SRCS keyboardsettings.kcfgc)
+kconfig_add_kcfg_files(kded_keyboard_SRCS keyboardsettings.kcfgc GENERATE_MOC)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
