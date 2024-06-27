@@ -36,6 +36,21 @@ KCM.ScrollViewKCM {
         spacing: 0
 
         Kirigami.InlineMessage {
+            readonly property string bugsURL: "https://bugs.kde.org/enter_bug.cgi"
+
+            Layout.fillWidth: true
+
+            type: Kirigami.MessageType.Warning
+            position: Kirigami.InlineMessage.Position.Header
+            showCloseButton: false
+            visible: true
+
+            text: xi18nc("@info", "If you're disabling something here to work around an issue, please <link url='%1'>submit a bug report about it as well.</link>", bugsURL);
+
+            onLinkActivated: Qt.openUrlExternally(bugsURL)
+        }
+
+        Kirigami.InlineMessage {
             Layout.fillWidth: true
             text: i18n("The background services manager (kded6) is currently not running. Make sure it is installed correctly.");
             type: Kirigami.MessageType.Error
