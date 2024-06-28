@@ -69,7 +69,27 @@ function preferredMaxWidth() {
         }
     }
 
-    return Math.floor(preferredMinWidth() * 1.6);
+    // Avoid doing a bunch of unnecessary work below in vertical mode
+    if (tasks.vertical) {
+        return preferredMinWidth();
+    }
+
+    // Visually, a large max item width on a tall panel looks cluttered even
+    // with just a task or two open. This clutter is less pronounced on panels
+    // lower in height, as there is generally more horizontal space.
+    //
+    // This allows for one default value for max item width where clutter is
+    // reduced at low task counts for tall panels, while leaving low height
+    // panels less affected (unaffected at 20px).
+    const laneHeight = tasks.height / maxStripes(); // correct for multiple rows
+    // For every pixel of height above 20, knock the factor down by 0.01. This
+    // produces nice results for 20~50 pixels. Above 50, it suddenly feels like
+    // it's shrinking a lot, so don't apply further reduction above 50.
+    const factorReduction = (Math.min(50, laneHeight) - 20) * 0.01;
+    // Clamp the minimum factor to 1 to ensure max width is always >= min width.
+    // and the factor reduction to 0 so we don't ever increase the factor
+    const factor = Math.max(1, 1.6 - Math.max(0, factorReduction));
+    return Math.floor(preferredMinWidth() * factor);
 }
 
 function preferredMinHeight() {
