@@ -40,7 +40,7 @@ Kirigami.FormLayout {
                 extraEnabledConditions: kcm.shakeCursorSettings.shakeCursor
             }
 
-            from: 1
+            from: 2
             to: 10
             stepSize: 1
             snapMode: QQC2.Slider.SnapAlways
