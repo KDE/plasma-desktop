@@ -69,10 +69,6 @@ function preferredMaxWidth() {
         }
     }
 
-    if (tasks.plasmoid.configuration.groupingStrategy != 0 && !tasks.plasmoid.configuration.groupPopups && !tasks.iconsOnly) {
-        return preferredMinWidth();
-    }
-
     return Math.floor(preferredMinWidth() * 1.6);
 }
 
