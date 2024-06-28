@@ -75,6 +75,15 @@
       <label>Whether to show tooltips when hovering task buttons.</label>
       <default>true</default>
     </entry>
+    <entry name="taskMaxWidth" type="Enum">
+      <label>Tune the max width of task items.</label>
+      <choices>
+        <choice name="Narrow"/>
+        <choice name="Medium"/>
+        <choice name="Wide"/>
+      </choices>
+      <default>1</default>
+    </entry>
     <entry name="wheelEnabled" type="Bool">
       <label>Whether using the mouse wheel with the mouse pointer above the widget should switch between tasks.</label>
       <default>true</default>

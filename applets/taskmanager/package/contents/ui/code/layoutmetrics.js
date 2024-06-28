@@ -82,13 +82,26 @@ function preferredMaxWidth() {
     // reduced at low task counts for tall panels, while leaving low height
     // panels less affected (unaffected at 20px).
     const laneHeight = tasks.height / maxStripes(); // correct for multiple rows
+    let baseFactor = 1; // sane default in case something goes wrong
+    switch (tasks.plasmoid.configuration.taskMaxWidth) {
+    case 0: // narrow
+        baseFactor = 1.2;
+        break;
+    case 1: // medium
+        baseFactor = 1.6;
+        break;
+    case 2: // wide
+        baseFactor = 2;
+        break;
+    }
     // For every pixel of height above 20, knock the factor down by 0.01. This
     // produces nice results for 20~50 pixels. Above 50, it suddenly feels like
-    // it's shrinking a lot, so don't apply further reduction above 50.
+    // it's shrinking a lot, and above 80 the Medium and Narrow settings would
+    // end up setting the same width, so don't apply further reduction above 50.
     const factorReduction = (Math.min(50, laneHeight) - 20) * 0.01;
     // Clamp the minimum factor to 1 to ensure max width is always >= min width.
     // and the factor reduction to 0 so we don't ever increase the factor
-    const factor = Math.max(1, 1.6 - Math.max(0, factorReduction));
+    const factor = Math.max(1, baseFactor - Math.max(0, factorReduction));
     return Math.floor(preferredMinWidth() * factor);
 }
 

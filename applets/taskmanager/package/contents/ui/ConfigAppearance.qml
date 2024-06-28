@@ -24,6 +24,7 @@ KCM.SimpleKCM {
     property alias cfg_fill: fill.checked
     property alias cfg_maxStripes: maxStripes.value
     property alias cfg_forceStripes: forceStripes.checked
+    property alias cfg_taskMaxWidth: taskMaxWidth.currentIndex
     property int cfg_iconSpacing: 0
 
     Component.onCompleted: {
@@ -62,6 +63,24 @@ KCM.SimpleKCM {
         CheckBox {
             id: fill
             text: i18nc("@option:check", "Fill free space on Panel")
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+            visible: !iconOnly
+        }
+
+        ComboBox {
+            id: taskMaxWidth
+            visible: !iconOnly && !plasmoidVertical
+
+            Kirigami.FormData.label: i18n("Maximum task width:")
+
+            model: [
+                i18nc("@item:inlistbox how wide a task item should be", "Narrow"),
+                i18nc("@item:inlistbox how wide a task item should be", "Medium"),
+                i18nc("@item:inlistbox how wide a task item should be", "Wide")
+            ]
         }
 
         Item {
