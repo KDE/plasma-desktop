@@ -248,6 +248,7 @@ MouseArea {
 
         onVisualParentChanged: {
             if (visualParent) {
+                tooltip.requestActivate()
                 const thisPlasmoid = configurationArea.currentApplet.applet.plasmoid;
                 thisPlasmoid.contextualActionsAboutToShow();
                 alternativesButton.visible = thisPlasmoid.internalAction("alternatives")?.enabled ?? false;
