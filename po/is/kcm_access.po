@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-03-14 20:23+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-06-27 16:12+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -81,7 +81,7 @@ msgstr "Ýttu á %1"
 #: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
-msgstr "Tókst ekki að velja gsettings-stillingar fyrir Orca: \"%1\" mistókst."
+msgstr "Gat ekki stillt gsettings fyrir Orca: \"%1\" mistókst."
 
 #: kcmaccess.cpp:193
 #, kde-format
@@ -122,7 +122,7 @@ msgstr "Töf fyrir tímamörk"
 #: kcmaccessibilityactivationgestures.kcfg:29
 #, kde-format
 msgid "Use a beep for access"
-msgstr "Nota píp fyrir aðgang"
+msgstr "Nota píphljóð fyrir aðgang"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -188,7 +188,7 @@ msgstr "Slökkva á festilyklum þegar ýtt er samtímis á tvo lykla"
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr "Píp heyrist þegar ýtt er á festilykla"
+msgstr "Píphljóð heyrist þegar ýtt er á festilykla"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
@@ -218,19 +218,19 @@ msgstr "Töf þegar ýtt er á lykil"
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr "Píp heyrist þegar ýtt er á hæga lykla"
+msgstr "Píphljóð heyrist þegar ýtt er á hæga lykla"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr "Píp við samþykkta lyklaborðsaðgerð"
+msgstr "Píphljóð við samþykkta lyklaborðsaðgerð"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr "Píp við ósamþykkta lyklaborðsaðgerð"
+msgstr "Píphljóð við ósamþykkta lyklaborðsaðgerð"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
@@ -248,7 +248,7 @@ msgstr "Nota töf fyrir hopp"
 #: kcmaccessibilitykeyboardfilters.kcfg:37
 #, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr "Píp ef hopplyklaaðgerð er hafnað"
+msgstr "Píphljóð ef hopplyklaaðgerð er hafnað"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
@@ -305,36 +305,31 @@ msgid "Magnification"
 msgstr "Stækkun"
 
 #: ui/ActivationGestures.qml:16
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation:"
-msgstr "Virkjunarbendingar"
+msgstr "Virkjun:"
 
 #: ui/ActivationGestures.qml:17
 #, kde-format
 msgid "Use gestures for activating sticky keys and slow keys"
-msgstr "Nota bendingar til að virkja klístraða og hæga lykla"
+msgstr "Nota hreyfiskipanir til að virkja festilykla og hæga lykla"
 
 #: ui/ActivationGestures.qml:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
-msgstr "Slökkva á klístruðum og hægum lyklum eftir aðgerðaleysi um stund"
+msgstr "Slökkva á festilyklum og hægum lyklum eftir aðgerðaleysi í:"
 
 #: ui/ActivationGestures.qml:58
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " mínútur"
-msgstr[1] " mínútur"
+msgstr[0] "%1 mín."
+msgstr[1] "%1 mín."
 
 #: ui/ActivationGestures.qml:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "min"
-msgstr " mínútur"
+msgstr "mín."
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -437,7 +432,7 @@ msgstr "Tímalengd:"
 #: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
-msgstr "Nota hæga lykla:"
+msgstr "Hægir lyklar:"
 
 #: ui/KeyboardFilters.qml:19
 #, kde-format
@@ -534,10 +529,9 @@ msgid "Mouse Navigation"
 msgstr "Músarstjórnun"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Gestures"
-msgstr "Virkjunarbendingar"
+msgstr "Virkjunarhreyfiskipanir"
 
 #: ui/main.qml:52
 #, kde-format
@@ -649,7 +643,7 @@ msgid ""
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
 "Orca skjálesarinn virðist ekki vera uppsettur. Settu forritið upp áður en þú "
-"reynir að nota þennan eiginleika og skráðu þig svo út eða endurræstu"
+"notar þennan eiginleika, og skráðu þig svo út eða endurræstu"
 
 #: ui/ShakeCursor.qml:15
 #, kde-format

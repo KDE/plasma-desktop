@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-04-04 17:36+0300\n"
+"PO-Revision-Date: 2024-06-29 00:46+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -302,10 +302,9 @@ msgid "Magnification"
 msgstr "Didinimas"
 
 #: ui/ActivationGestures.qml:16
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation:"
-msgstr "Aktyvavimo gestai"
+msgstr "Aktyvinimas:"
 
 #: ui/ActivationGestures.qml:17
 #, kde-format
@@ -313,28 +312,23 @@ msgid "Use gestures for activating sticky keys and slow keys"
 msgstr "Naudoti gestus atmeniųjų ir lėtųjų klavišų aktyvavimui"
 
 #: ui/ActivationGestures.qml:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
-msgstr ""
-"Išjungti atmeniuosius ir lėtuosius klavišus po tam tikro neveiklumo laiko."
+msgstr "Išjungti atmeniuosius ir lėtuosius klavišus po neveiklumo:"
 
 #: ui/ActivationGestures.qml:58
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " min."
-msgstr[1] " min."
-msgstr[2] " min."
-msgstr[3] " min."
+msgstr[0] "%1 min."
+msgstr[1] "%1 min."
+msgstr[2] "%1 min."
+msgstr[3] "%1 min."
 
 #: ui/ActivationGestures.qml:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "min"
-msgstr " min."
+msgstr "min."
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -534,10 +528,9 @@ msgid "Mouse Navigation"
 msgstr "Naršymas pele"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Gestures"
-msgstr "Aktyvavimo veiksmai"
+msgstr "Aktyvinimo gestai"
 
 #: ui/main.qml:52
 #, kde-format
