@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-06-29 00:40+0000\n"
 "PO-Revision-Date: 2023-09-17 16:45+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -64,13 +64,13 @@ msgstr ""
 "La ricerca nei file ti aiuta a trovare velocemente i tuoi file. Puoi "
 "scegliere le cartelle e i tipi di dati dei file che vengono indicizzati."
 
-#: ui/main.qml:106
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Indicizzazione dei file:"
 
-#: ui/main.qml:107
+#: ui/main.qml:105
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
@@ -78,91 +78,89 @@ msgstr "Abilitata"
 
 #: ui/main.qml:121
 #, kde-format
-msgctxt "@label indexing status"
-msgid "Status:"
-msgstr "Stato:"
-
-#: ui/main.qml:125
-#, kde-format
-msgctxt "State and a percentage of progress"
-msgid "%1, %2% complete"
-msgstr "%1, completa al %2%"
-
-#: ui/main.qml:139
-#, kde-format
-msgctxt "@label file currently being indexed"
-msgid "Currently indexing:"
-msgstr "Sto attualmente indicizzando:"
-
-#: ui/main.qml:150
-#, kde-kuit-format
-msgctxt "@info Currently Indexing"
-msgid "<filename>%1</filename>"
-msgstr "<filename>%1</filename>"
-
-#: ui/main.qml:164
-#, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Dati da indicizzare:"
 
-#: ui/main.qml:166
+#: ui/main.qml:123
 #, kde-format
 msgid "File names and contents"
 msgstr "Nomi e contenuti dei file"
 
-#: ui/main.qml:179
+#: ui/main.qml:136
 #, kde-format
 msgid "File names only"
 msgstr "Solo i nomi dei file"
 
-#: ui/main.qml:198
+#: ui/main.qml:155
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "File e cartelle nascosti"
 
-#: ui/main.qml:224
+#: ui/main.qml:181
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Posizioni"
 
-#: ui/main.qml:227
+#: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Inizia a indicizzare una cartella…"
 
-#: ui/main.qml:235
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Interrompi l'indicizzazione di una cartella…"
 
-#: ui/main.qml:295
+#: ui/main.qml:210
+#, kde-format
+msgctxt "State and a percentage of progress"
+msgid "%1, %2% complete"
+msgstr "%1, completa al %2%"
+
+#: ui/main.qml:217
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info Currently Indexing"
+#| msgid "<filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "Currently indexing: <filename>%1</filename>"
+msgstr "<filename>%1</filename>"
+
+#: ui/main.qml:270
 #, kde-format
 msgid "Not indexed"
 msgstr "Non indicizzata"
 
-#: ui/main.qml:296
+#: ui/main.qml:271
 #, kde-format
 msgid "Indexed"
 msgstr "Indicizzata"
 
-#: ui/main.qml:326
+#: ui/main.qml:301
 #, kde-format
 msgid "Delete entry"
 msgstr "Elimina voce"
 
-#: ui/main.qml:341
+#: ui/main.qml:316
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Seleziona una cartella da includere"
 
-#: ui/main.qml:341
+#: ui/main.qml:316
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Seleziona una cartella da escludere"
+
+#~ msgctxt "@label indexing status"
+#~ msgid "Status:"
+#~ msgstr "Stato:"
+
+#~ msgctxt "@label file currently being indexed"
+#~ msgid "Currently indexing:"
+#~ msgstr "Sto attualmente indicizzando:"
 
 #~ msgid "The system must be restarted before these changes will take effect."
 #~ msgstr ""

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:40+0000\n"
-"PO-Revision-Date: 2024-04-15 07:09+0200\n"
+"PO-Revision-Date: 2024-06-28 12:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Lehenetsia"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -46,15 +46,14 @@ msgid "Inverted Landscape"
 msgstr "Alderantzizko paisaia"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Jarraitu pantaila aktiboari"
+msgstr "Jarraitu uneko pantailari"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Pantaila guztiak"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -65,17 +64,17 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Pantailara egokitu"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Mantendu itxura-proportzioa eta egokitu pantaila barruan"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Mapatu pantailaren zatira"
 
 #: ui/main.qml:31
 #, kde-format
@@ -88,11 +87,10 @@ msgid "Connect a drawing tablet"
 msgstr "Konektatu marrazteko tableta bat"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Tableta"
+msgstr "Tableta probatu..."
 
 #: ui/main.qml:66
 #, kde-format
@@ -103,7 +101,7 @@ msgstr "Gailua:"
 #: ui/main.qml:104
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Mapatu pantailara:"
 
 #: ui/main.qml:124
 #, kde-format
@@ -111,10 +109,9 @@ msgid "Orientation:"
 msgstr "Orientazioa:"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
-msgstr "Ezkerreko esku modua:"
+msgstr "Ezkerti modua:"
 
 #: ui/main.qml:147
 #, kde-kuit-format
@@ -124,11 +121,15 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Gailuari, erabiltzaile ezkertiarrentzako egokitzeko esaten dio. Gailuaren "
+"arabera ondorioak aldatuko dira, baina askotan, teklatuko botoien "
+"funtzionaltasuna atzekoz aurrera ipintzen du tableta buruz behera erabili "
+"ahal izan dadin."
 
 #: ui/main.qml:153
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Mapatutako azalera:"
 
 #: ui/main.qml:240
 #, kde-format
@@ -179,26 +180,25 @@ msgid "Pad button %1:"
 msgstr "Teklatuko %1 botoia:"
 
 #: ui/Tester.qml:25
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr "Tableta"
+msgstr "Tableta probatzailea"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Arkatza estutzea X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Arkatza laxatzea X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Arkatza mugitzea X=%1 Y=%2"
 
 #: ui/Tester.qml:194
 #, kde-format
@@ -206,12 +206,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Legenda:\n"
+"# X, Y - gertakariaren koordenatuak\n"
 
 #: ui/Tester.qml:201
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Hustu"
 
 #~ msgid "Primary (default)"
 #~ msgstr "Nagusia (lehenetsia)"

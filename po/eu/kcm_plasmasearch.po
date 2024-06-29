@@ -1,16 +1,16 @@
 # Translation for kcm_search.po to Euskara/Basque (eu).
-# Copyright (C) 2018-2023 This file is copyright:
+# Copyright (C) 2018-2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2023-09-03 09:54+0200\n"
+"PO-Revision-Date: 2024-06-28 09:42+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: plasmasearch/kcm.h:70
 #, kde-format
@@ -41,19 +41,15 @@ msgid "Get New Plugins…"
 msgstr "Lortu plugin berriak..."
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
-"Gaitu edo ezgaitu pluginak (KRunner, Aplikazio abiarazlea, eta Ikuspegi "
-"orokorra efektuan erabilia). Markatu pluginak gogokoen gisa eta "
-"antolatuhaiek ikusi nahi dituzun ordenan."
+"Pluginak gaitu edo ezgaitu (KRunner, Aplikazio abiarazlea, eta Ikuspegi "
+"orokorra efektuan erabilia). Markatu pluginak gogoko gisa eta ipin itzazu "
+"ordenean eman nahi diezun lehentasunaren arabera."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -104,18 +100,16 @@ msgid "KRunner plugin installation failed"
 msgstr "KRunner plugina instalatzea huts egin du"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Exekutatu beharreko komandoa: «install» edo «uninstall»."
+msgstr "Exekutatu beharreko komandoa: «install» edo «uninstall»"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Artxiboaren edo erauzitako karpetaren bide-izena"
 
 #: plugininstaller/main.cpp:50
 #, kde-format

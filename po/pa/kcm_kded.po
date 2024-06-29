@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-06-29 00:40+0000\n"
 "PO-Revision-Date: 2021-10-09 09:02-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -42,103 +42,111 @@ msgstr "ਸਰਵਿਸ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਅਸਫ਼ਲ ਹੈ।"
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
 
-#: ui/main.qml:40
+#: ui/main.qml:48
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"If you're disabling something here to work around an issue, please <link "
+"url='%1'>submit a bug report about it as well.</link>"
+msgstr ""
+
+#: ui/main.qml:55
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
 
-#: ui/main.qml:50
+#: ui/main.qml:65
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
 
-#: ui/main.qml:60
+#: ui/main.qml:75
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 
-#: ui/main.qml:108
+#: ui/main.qml:123
 #, kde-format
 msgid "All Services"
 msgstr "ਸਾਰੀਆਂ ਸਰਵਿਸਾਂ"
 
-#: ui/main.qml:109
+#: ui/main.qml:124
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "ਚੱਲ ਰਹੀ ਹੈ"
 
-#: ui/main.qml:110
+#: ui/main.qml:125
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "ਚੱਲ ਨਹੀਂ ਰਹੀ"
 
-#: ui/main.qml:147
+#: ui/main.qml:162
 #, kde-format
 msgid "Startup Services"
 msgstr "ਸਟਾਰਟਅੱਪ ਸਰਵਿਸਾਂ"
 
-#: ui/main.qml:148
+#: ui/main.qml:163
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "ਲੋੜ 'ਤੇ ਲੋਡ ਸਰਵਿਸਾਂ"
 
-#: ui/main.qml:167
+#: ui/main.qml:182
 #, fuzzy, kde-format
 #| msgid "Toggle automatically loading this service on startup"
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
 msgstr "ਸ਼ੁਰੂ ਵੇਲੇ ਇਸ ਸਰਵਿਸ ਨੂੰ ਆਪਣੇ-ਆਪ ਲੋਡ ਕਰਨ ਲਈ ਤਬਦੀਲ ਕਰੋ"
 
-#: ui/main.qml:167
+#: ui/main.qml:182
 #, fuzzy, kde-format
 #| msgid "Toggle automatically loading this service on startup"
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
 msgstr "ਸ਼ੁਰੂ ਵੇਲੇ ਇਸ ਸਰਵਿਸ ਨੂੰ ਆਪਣੇ-ਆਪ ਲੋਡ ਕਰਨ ਲਈ ਤਬਦੀਲ ਕਰੋ"
 
-#: ui/main.qml:168
+#: ui/main.qml:183
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "ਸ਼ੁਰੂ ਵੇਲੇ ਇਸ ਸਰਵਿਸ ਨੂੰ ਆਪਣੇ-ਆਪ ਲੋਡ ਕਰਨ ਲਈ ਤਬਦੀਲ ਕਰੋ"
 
-#: ui/main.qml:212
+#: ui/main.qml:227
 #, kde-format
 msgid "Not running"
 msgstr "ਚੱਲ ਨਹੀਂ ਰਹੀ"
 
-#: ui/main.qml:213
+#: ui/main.qml:228
 #, kde-format
 msgid "Running"
 msgstr "ਚੱਲ ਰਹੀ ਹੈ"
 
-#: ui/main.qml:233
+#: ui/main.qml:248
 #, fuzzy, kde-format
 #| msgid "Stop"
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
 msgstr "ਰੋਕੋ"
 
-#: ui/main.qml:233
+#: ui/main.qml:248
 #, fuzzy, kde-format
 #| msgid "Start"
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
 msgstr "ਸਟਾਰਟ"
 
-#: ui/main.qml:236
+#: ui/main.qml:251
 #, kde-format
 msgid "Stop Service"
 msgstr "ਸਰਵਿਸ ਰੋਕੋ"
 
-#: ui/main.qml:236
+#: ui/main.qml:251
 #, kde-format
 msgid "Start Service"
 msgstr "ਸਰਵਿਸ ਸ਼ੁਰੂ ਕਰੋ"

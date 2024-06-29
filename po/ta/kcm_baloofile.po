@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-06-29 00:40+0000\n"
 "PO-Revision-Date: 2023-06-11 18:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -62,13 +62,13 @@ msgstr ""
 "உங்கள் கோப்புகளை, அவற்றின் உள்ளடக்கத்தின் அடிப்படையில் எளிதில் கண்டுபிடிக்க கோப்புத் தேடல் "
 "உதவும். அட்டவணையாக்கப்படும் அடைவுகளையும் கோப்புவகைகளையும் நீங்கள் தேர்ந்தெடுக்கலாம்."
 
-#: ui/main.qml:106
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "கோப்பு அட்டவணையாக்கம்:"
 
-#: ui/main.qml:107
+#: ui/main.qml:105
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
@@ -76,91 +76,89 @@ msgstr "இயக்கு"
 
 #: ui/main.qml:121
 #, kde-format
-msgctxt "@label indexing status"
-msgid "Status:"
-msgstr "நிலை:"
-
-#: ui/main.qml:125
-#, kde-format
-msgctxt "State and a percentage of progress"
-msgid "%1, %2% complete"
-msgstr "%1, %2% முடிந்தது"
-
-#: ui/main.qml:139
-#, kde-format
-msgctxt "@label file currently being indexed"
-msgid "Currently indexing:"
-msgstr "தற்போது அட்டவணையாக்கப்படுவது:"
-
-#: ui/main.qml:150
-#, kde-kuit-format
-msgctxt "@info Currently Indexing"
-msgid "<filename>%1</filename>"
-msgstr "<filename>%1</filename>"
-
-#: ui/main.qml:164
-#, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "அட்டவணையாக்கவேண்டிய தரவுகள்:"
 
-#: ui/main.qml:166
+#: ui/main.qml:123
 #, kde-format
 msgid "File names and contents"
 msgstr "கோப்புப்பெயர்களும் உள்ளடக்கமும்"
 
-#: ui/main.qml:179
+#: ui/main.qml:136
 #, kde-format
 msgid "File names only"
 msgstr "கோப்புப்பெயர்கள் மட்டும்"
 
-#: ui/main.qml:198
+#: ui/main.qml:155
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "மறைந்துள்ள கோப்புகளும் அடைவுகளும்"
 
-#: ui/main.qml:224
+#: ui/main.qml:181
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "இடங்கள்"
 
-#: ui/main.qml:227
+#: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "அடைவை அட்டவணையாக்க தொடங்கு…"
 
-#: ui/main.qml:235
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "அடைவை அட்டவணையாக்குவதை நிறுத்து…"
 
-#: ui/main.qml:295
+#: ui/main.qml:210
+#, kde-format
+msgctxt "State and a percentage of progress"
+msgid "%1, %2% complete"
+msgstr "%1, %2% முடிந்தது"
+
+#: ui/main.qml:217
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info Currently Indexing"
+#| msgid "<filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "Currently indexing: <filename>%1</filename>"
+msgstr "<filename>%1</filename>"
+
+#: ui/main.qml:270
 #, kde-format
 msgid "Not indexed"
 msgstr "அட்டவணையாக்கப்படாது"
 
-#: ui/main.qml:296
+#: ui/main.qml:271
 #, kde-format
 msgid "Indexed"
 msgstr "அட்டவணையாக்கப்படும்"
 
-#: ui/main.qml:326
+#: ui/main.qml:301
 #, kde-format
 msgid "Delete entry"
 msgstr "பதிவை நீக்கு"
 
-#: ui/main.qml:341
+#: ui/main.qml:316
 #, kde-format
 msgid "Select a folder to include"
 msgstr "பொருட்படுத்த வேண்டிய அடைவைத் தேர்ந்தெடுத்தல்"
 
-#: ui/main.qml:341
+#: ui/main.qml:316
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "தவிர்க்க வேண்டிய அடைவைத் தேர்ந்தெடுத்தல்"
+
+#~ msgctxt "@label indexing status"
+#~ msgid "Status:"
+#~ msgstr "நிலை:"
+
+#~ msgctxt "@label file currently being indexed"
+#~ msgid "Currently indexing:"
+#~ msgstr "தற்போது அட்டவணையாக்கப்படுவது:"
 
 #~ msgid "The system must be restarted before these changes will take effect."
 #~ msgstr "இம்மாற்றங்கள் செயல்பட, கணினியை மீள்துவக்க வேண்டும்."

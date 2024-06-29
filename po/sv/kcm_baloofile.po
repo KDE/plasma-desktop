@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-06-29 00:40+0000\n"
 "PO-Revision-Date: 2024-06-21 11:31+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -61,13 +61,13 @@ msgstr ""
 "Filsökning hjälper dig att snabbt lokalisera dina filer. Du kan välja vilka "
 "kataloger och vilken typ av fildata som indexeras."
 
-#: ui/main.qml:106
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Filindexering"
 
-#: ui/main.qml:107
+#: ui/main.qml:105
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
@@ -75,91 +75,89 @@ msgstr "Aktiverad"
 
 #: ui/main.qml:121
 #, kde-format
-msgctxt "@label indexing status"
-msgid "Status:"
-msgstr "Status:"
-
-#: ui/main.qml:125
-#, kde-format
-msgctxt "State and a percentage of progress"
-msgid "%1, %2% complete"
-msgstr "%1, %2% färdiga"
-
-#: ui/main.qml:139
-#, kde-format
-msgctxt "@label file currently being indexed"
-msgid "Currently indexing:"
-msgstr "Indexerar för närvarande:"
-
-#: ui/main.qml:150
-#, kde-kuit-format
-msgctxt "@info Currently Indexing"
-msgid "<filename>%1</filename>"
-msgstr "<filename>%1</filename>"
-
-#: ui/main.qml:164
-#, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Data att indexera:"
 
-#: ui/main.qml:166
+#: ui/main.qml:123
 #, kde-format
 msgid "File names and contents"
 msgstr "Filnamn och innehåll"
 
-#: ui/main.qml:179
+#: ui/main.qml:136
 #, kde-format
 msgid "File names only"
 msgstr "Bara filnamn"
 
-#: ui/main.qml:198
+#: ui/main.qml:155
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "Dolda filer och kataloger"
 
-#: ui/main.qml:224
+#: ui/main.qml:181
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Platser"
 
-#: ui/main.qml:227
+#: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Starta indexering av en katalog…"
 
-#: ui/main.qml:235
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stoppa indexering av en katalog…"
 
-#: ui/main.qml:295
+#: ui/main.qml:210
+#, kde-format
+msgctxt "State and a percentage of progress"
+msgid "%1, %2% complete"
+msgstr "%1, %2% färdiga"
+
+#: ui/main.qml:217
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info Currently Indexing"
+#| msgid "<filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "Currently indexing: <filename>%1</filename>"
+msgstr "<filename>%1</filename>"
+
+#: ui/main.qml:270
 #, kde-format
 msgid "Not indexed"
 msgstr "Inte indexerad"
 
-#: ui/main.qml:296
+#: ui/main.qml:271
 #, kde-format
 msgid "Indexed"
 msgstr "Indexerad"
 
-#: ui/main.qml:326
+#: ui/main.qml:301
 #, kde-format
 msgid "Delete entry"
 msgstr "Ta bort post"
 
-#: ui/main.qml:341
+#: ui/main.qml:316
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Välj en katalog att inkludera"
 
-#: ui/main.qml:341
+#: ui/main.qml:316
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Välj en katalog att undanta"
+
+#~ msgctxt "@label indexing status"
+#~ msgid "Status:"
+#~ msgstr "Status:"
+
+#~ msgctxt "@label file currently being indexed"
+#~ msgid "Currently indexing:"
+#~ msgstr "Indexerar för närvarande:"
 
 #~ msgid "Enable File Search"
 #~ msgstr "Aktivera filsökning"

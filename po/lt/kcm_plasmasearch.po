@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-02-03 00:56+0200\n"
+"PO-Revision-Date: 2024-06-29 01:33+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: plasmasearch/kcm.h:70
 #, kde-format
@@ -42,11 +42,7 @@ msgid "Get New Plugins…"
 msgstr "Gauti naujų įskiepių…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -54,7 +50,7 @@ msgid ""
 msgstr ""
 "Įjungti ar išjungti įskiepius (naudojamus KRunner, programų paleidyklėje ir "
 "apžvalgos efekte). Žymėkite įskiepius kaip mėgstamus ir pertvarkykite juos "
-"norima tvarka."
+"norima pirmenybės tvarka."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -103,18 +99,16 @@ msgid "KRunner plugin installation failed"
 msgstr "KRunner įskiepio diegimas patyrė nesėkmę"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Komanda, kurią vykdyti: įdiegti (install) ar šalinti (uninstall)."
+msgstr "Komanda, kurią vykdyti: įdiegti (install) ar šalinti (uninstall)"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Kelias į archyvą ar išskleistą aplanką"
 
 #: plugininstaller/main.cpp:50
 #, kde-format

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2023-04-08 22:44+0100\n"
+"PO-Revision-Date: 2024-06-28 16:51+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -87,7 +87,7 @@ msgstr "Restartigi Nun"
 #, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr ""
+msgstr "Ĝenerala"
 
 #: ui/main.qml:79
 #, kde-format
@@ -95,7 +95,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Postuli konfirmon:"
 
 #: ui/main.qml:80
 #, kde-format
@@ -103,7 +103,7 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "Je sistemfermo, restartigo kaj elsaluto"
 
 #: ui/main.qml:91
 #, kde-format
@@ -192,21 +192,3 @@ msgstr "Eniri UEFI-agordan ekranon"
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Eniri la ekranon de agordo de firmware"
-
-#~ msgctxt "@title:group"
-#~ msgid "Logout Screen"
-#~ msgstr "Elsaulta Ekrano"
-
-#~ msgid "Show:"
-#~ msgstr "Montri:"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "When this setting is turned on, the logout confirmation screen will be "
-#~ "shown when you log out, shut down, restart, press the power button, or "
-#~ "click on buttons or menu items labeled <interface>Leave…</interface>."
-#~ msgstr ""
-#~ "Kiam ĉi tiu agordo estas ŝaltita, la ekrano de konfirmo de elsalutiĝo "
-#~ "estos montrata kiam vi elsalutas, malŝaltas, rekomencas, premas la "
-#~ "ŝaltilon aŭ alklakas butonojn aŭ menueroj etikeditaj <interface>Forlasi…</"
-#~ "interface>."

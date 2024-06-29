@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-06-29 00:40+0000\n"
 "PO-Revision-Date: 2024-05-30 03:04+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -50,21 +50,29 @@ msgstr "無法啟動服務。"
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr "無法通知 KDE 服務管理員 (kded6) 儲存變更：%1"
 
-#: ui/main.qml:40
+#: ui/main.qml:48
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"If you're disabling something here to work around an issue, please <link "
+"url='%1'>submit a bug report about it as well.</link>"
+msgstr ""
+
+#: ui/main.qml:55
 #, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr "背景服務管理員 (kded6) 目前沒有在執行。請確定它已正確安裝。"
 
-#: ui/main.qml:50
+#: ui/main.qml:65
 #, kde-format
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr "某些服務若目前環境下沒用時會在被手動啟動後自己又把自己停用。"
 
-#: ui/main.qml:60
+#: ui/main.qml:75
 #, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -72,78 +80,78 @@ msgid ""
 msgstr ""
 "某些服務已在背景服務管理員 (kded6) 重新啟動以套用您的變更時被自動啟動或停止。"
 
-#: ui/main.qml:108
+#: ui/main.qml:123
 #, kde-format
 msgid "All Services"
 msgstr "所有服務"
 
-#: ui/main.qml:109
+#: ui/main.qml:124
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
 msgstr "執行中"
 
-#: ui/main.qml:110
+#: ui/main.qml:125
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
 msgstr "並非執行中"
 
-#: ui/main.qml:147
+#: ui/main.qml:162
 #, kde-format
 msgid "Startup Services"
 msgstr "自動啟動服務"
 
-#: ui/main.qml:148
+#: ui/main.qml:163
 #, kde-format
 msgid "Load-on-Demand Services"
 msgstr "需要時載入的服務"
 
-#: ui/main.qml:167
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
 msgstr "系統啟動時不要自動載入 %1"
 
-#: ui/main.qml:167
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
 msgstr "系統啟動時自動載入 %1"
 
-#: ui/main.qml:168
+#: ui/main.qml:183
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
 msgstr "切換系統啟動時是否自動載入此服務"
 
-#: ui/main.qml:212
+#: ui/main.qml:227
 #, kde-format
 msgid "Not running"
 msgstr "並非執行中"
 
-#: ui/main.qml:213
+#: ui/main.qml:228
 #, kde-format
 msgid "Running"
 msgstr "執行中"
 
-#: ui/main.qml:233
+#: ui/main.qml:248
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
 msgstr "停止 %1"
 
-#: ui/main.qml:233
+#: ui/main.qml:248
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
 msgstr "啟動 %1"
 
-#: ui/main.qml:236
+#: ui/main.qml:251
 #, kde-format
 msgid "Stop Service"
 msgstr "停止服務"
 
-#: ui/main.qml:236
+#: ui/main.qml:251
 #, kde-format
 msgid "Start Service"
 msgstr "啟動服務"

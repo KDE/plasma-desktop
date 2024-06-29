@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-06-29 00:40+0000\n"
 "PO-Revision-Date: 2017-06-12 16:44+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -61,14 +61,14 @@ msgstr ""
 "Η αναζήτηση αρχείων σας βοηθά να εντοπίσετε γρήγορα όλα τα αρχεία σας με "
 "βάση το περιεχόμενό τους"
 
-#: ui/main.qml:106
+#: ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "File Indexing"
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Δεικτοδότηση αρχείων"
 
-#: ui/main.qml:107
+#: ui/main.qml:105
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
@@ -76,97 +76,90 @@ msgstr ""
 
 #: ui/main.qml:121
 #, kde-format
-msgctxt "@label indexing status"
-msgid "Status:"
-msgstr ""
-
-#: ui/main.qml:125
-#, kde-format
-msgctxt "State and a percentage of progress"
-msgid "%1, %2% complete"
-msgstr ""
-
-#: ui/main.qml:139
-#, fuzzy, kde-format
-#| msgid "File Indexing"
-msgctxt "@label file currently being indexed"
-msgid "Currently indexing:"
-msgstr "Δεικτοδότηση αρχείων"
-
-#: ui/main.qml:150
-#, fuzzy, kde-kuit-format
-#| msgid "File Indexing"
-msgctxt "@info Currently Indexing"
-msgid "<filename>%1</filename>"
-msgstr "Δεικτοδότηση αρχείων"
-
-#: ui/main.qml:164
-#, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr ""
 
-#: ui/main.qml:166
+#: ui/main.qml:123
 #, kde-format
 msgid "File names and contents"
 msgstr ""
 
-#: ui/main.qml:179
+#: ui/main.qml:136
 #, kde-format
 msgid "File names only"
 msgstr ""
 
-#: ui/main.qml:198
+#: ui/main.qml:155
 #, fuzzy, kde-format
 #| msgid "Show hidden folders"
 msgid "Hidden files and folders"
 msgstr "Εμφάνιση κρυφών φακέλων"
 
-#: ui/main.qml:224
+#: ui/main.qml:181
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr ""
 
-#: ui/main.qml:227
+#: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr ""
 
-#: ui/main.qml:235
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr ""
 
-#: ui/main.qml:295
+#: ui/main.qml:210
+#, kde-format
+msgctxt "State and a percentage of progress"
+msgid "%1, %2% complete"
+msgstr ""
+
+#: ui/main.qml:217
+#, fuzzy, kde-kuit-format
+#| msgid "File Indexing"
+msgctxt "@info Currently Indexing"
+msgid "Currently indexing: <filename>%1</filename>"
+msgstr "Δεικτοδότηση αρχείων"
+
+#: ui/main.qml:270
 #, kde-format
 msgid "Not indexed"
 msgstr ""
 
-#: ui/main.qml:296
+#: ui/main.qml:271
 #, fuzzy, kde-format
 #| msgid "Index Audio"
 msgid "Indexed"
 msgstr "Δεικτοδότηση ήχου"
 
-#: ui/main.qml:326
+#: ui/main.qml:301
 #, kde-format
 msgid "Delete entry"
 msgstr ""
 
-#: ui/main.qml:341
+#: ui/main.qml:316
 #, fuzzy, kde-format
 #| msgid "Select the folder which should be excluded"
 msgid "Select a folder to include"
 msgstr "Επιλέξτε τους φακέλους που θα πρέπει να εξαιρεθούν"
 
-#: ui/main.qml:341
+#: ui/main.qml:316
 #, fuzzy, kde-format
 #| msgid "Select the folder which should be excluded"
 msgid "Select a folder to exclude"
 msgstr "Επιλέξτε τους φακέλους που θα πρέπει να εξαιρεθούν"
+
+#, fuzzy
+#~| msgid "File Indexing"
+#~ msgctxt "@label file currently being indexed"
+#~ msgid "Currently indexing:"
+#~ msgstr "Δεικτοδότηση αρχείων"
 
 #, fuzzy
 #~| msgid "Enable File Search"

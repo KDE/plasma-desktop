@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:39+0000\n"
+"POT-Creation-Date: 2024-06-29 00:40+0000\n"
 "PO-Revision-Date: 2023-07-25 22:49+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -62,13 +62,13 @@ msgstr ""
 "파일 검색을 사용하면 파일을 빠르게 찾을 수 있습니다. 색인을 생성할 폴더와 파"
 "일 형식을 선택할 수 있습니다."
 
-#: ui/main.qml:106
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "파일 색인:"
 
-#: ui/main.qml:107
+#: ui/main.qml:105
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
@@ -76,91 +76,89 @@ msgstr "사용함"
 
 #: ui/main.qml:121
 #, kde-format
-msgctxt "@label indexing status"
-msgid "Status:"
-msgstr "상태:"
-
-#: ui/main.qml:125
-#, kde-format
-msgctxt "State and a percentage of progress"
-msgid "%1, %2% complete"
-msgstr "%1, %2% 완료"
-
-#: ui/main.qml:139
-#, kde-format
-msgctxt "@label file currently being indexed"
-msgid "Currently indexing:"
-msgstr "현재 색인 중"
-
-#: ui/main.qml:150
-#, kde-kuit-format
-msgctxt "@info Currently Indexing"
-msgid "<filename>%1</filename>"
-msgstr "<filename>%1</filename>"
-
-#: ui/main.qml:164
-#, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "색인할 데이터:"
 
-#: ui/main.qml:166
+#: ui/main.qml:123
 #, kde-format
 msgid "File names and contents"
 msgstr "파일 이름과 내용"
 
-#: ui/main.qml:179
+#: ui/main.qml:136
 #, kde-format
 msgid "File names only"
 msgstr "파일 이름만"
 
-#: ui/main.qml:198
+#: ui/main.qml:155
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "숨김 파일과 폴더"
 
-#: ui/main.qml:224
+#: ui/main.qml:181
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "위치"
 
-#: ui/main.qml:227
+#: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "폴더 색인 시작하는 중…"
 
-#: ui/main.qml:235
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "폴더 색인 정지하는 중…"
 
-#: ui/main.qml:295
+#: ui/main.qml:210
+#, kde-format
+msgctxt "State and a percentage of progress"
+msgid "%1, %2% complete"
+msgstr "%1, %2% 완료"
+
+#: ui/main.qml:217
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info Currently Indexing"
+#| msgid "<filename>%1</filename>"
+msgctxt "@info Currently Indexing"
+msgid "Currently indexing: <filename>%1</filename>"
+msgstr "<filename>%1</filename>"
+
+#: ui/main.qml:270
 #, kde-format
 msgid "Not indexed"
 msgstr "색인에 포함되지 않음"
 
-#: ui/main.qml:296
+#: ui/main.qml:271
 #, kde-format
 msgid "Indexed"
 msgstr "색인에 포함됨"
 
-#: ui/main.qml:326
+#: ui/main.qml:301
 #, kde-format
 msgid "Delete entry"
 msgstr "항목 삭제"
 
-#: ui/main.qml:341
+#: ui/main.qml:316
 #, kde-format
 msgid "Select a folder to include"
 msgstr "포함할 폴더 선택"
 
-#: ui/main.qml:341
+#: ui/main.qml:316
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "제외할 폴더 선택"
+
+#~ msgctxt "@label indexing status"
+#~ msgid "Status:"
+#~ msgstr "상태:"
+
+#~ msgctxt "@label file currently being indexed"
+#~ msgid "Currently indexing:"
+#~ msgstr "현재 색인 중"
 
 #~ msgid "The system must be restarted before these changes will take effect."
 #~ msgstr "변경 사항을 적용하려면 시스템을 다시 시작해야 합니다."
