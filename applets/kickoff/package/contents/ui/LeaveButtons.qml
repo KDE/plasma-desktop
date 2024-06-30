@@ -144,12 +144,12 @@ RowLayout {
             kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason);
         }
         Keys.onLeftPressed: event => {
-            if (Qt.application.layoutDirection == Qt.LeftToRight) {
+            if (!mirrored) {
                 nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
             }
         }
         Keys.onRightPressed: event => {
-            if (Qt.application.layoutDirection == Qt.RightToLeft) {
+            if (mirrored) {
                 nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
             }
         }
