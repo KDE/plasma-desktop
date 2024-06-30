@@ -1,80 +1,78 @@
-# Translation for plasma-desktop-sddm-theme.po to Euskara/Basque (eu).
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# Translators:
-# SPDX-FileCopyrightText: 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-22 02:39+0000\n"
-"PO-Revision-Date: 2024-06-28 13:42+0200\n"
-"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
-"Language: eu\n"
+"PO-Revision-Date: 2024-06-29 09:11+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: KeyboardButton.qml:19
 msgid "Keyboard Layout: %1"
-msgstr "Teklatu-antolaera: %1"
+msgstr "Układ klawiatury: %1"
 
 #: Login.qml:85
 msgid "Username"
-msgstr "Erabiltzaile-izena"
+msgstr "Nazwa użytkownika"
 
 #: Login.qml:102
 msgid "Password"
-msgstr "Pasahitza"
+msgstr "Hasło"
 
 #: Login.qml:144 Login.qml:150
 msgid "Log In"
-msgstr "Saioa ireki"
+msgstr "Zaloguj"
 
 #: Main.qml:195
 msgid "Caps Lock is on"
-msgstr "Maius Blok piztuta"
+msgstr "Caps Lock jest włączony"
 
 #: Main.qml:207 Main.qml:351
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Egin lo"
+msgstr "Uśpij"
 
 #: Main.qml:214 Main.qml:358
 msgid "Restart"
-msgstr "Berrabiarazi"
+msgstr "Uruchom ponownie"
 
 #: Main.qml:221 Main.qml:365
 msgid "Shut Down"
-msgstr "Itzali"
+msgstr "Wyłącz"
 
 #: Main.qml:228
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
-msgstr "Beste bat..."
+msgstr "Inne…"
 
 #: Main.qml:337
 msgid "Type in Username and Password"
-msgstr "Tekleatu erabiltzaile-izena eta pasahitza"
+msgstr "Wpisz nazwę użytkownika i hasło"
 
 #: Main.qml:372
 msgid "List Users"
-msgstr "Zerrendatu erabiltzaileak"
+msgstr "Pokaż dostępnych użytkowników"
 
 #: Main.qml:447
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr "Alegiazko teklatua"
+msgstr "Klawiatura ekranowa"
 
 #: Main.qml:514
 msgid "Login Failed"
-msgstr "Saio-irekitzea huts egin du"
+msgstr "Nie udało się zalogować"
 
 #: SessionButton.qml:18
 msgid "Desktop Session: %1"
-msgstr "Mahaigaineko saioa: %1"
+msgstr "Rodzaj pulpitu: %1"
