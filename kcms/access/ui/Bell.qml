@@ -17,7 +17,8 @@ Kirigami.FormLayout {
     Dialogs.FileDialog {
         id: fileDialog
         title: i18n("Please choose an audio file")
-        nameFilters: [i18nc("Name filters in a file dialog", "Audio Files (*.ogg *.wav)")]
+        nameFilters: [i18nc("Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`",
+                            "ogg, oga, and wav audio files (*.ogg *.oga *.wav)")]
         onAccepted: {
             kcm.bellSettings.customBellFile = fileDialog.selectedFile
         }
