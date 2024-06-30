@@ -20,7 +20,7 @@ PlasmaExtras.PlasmoidHeading {
     property real preferredTabBarWidth: 0
     readonly property alias leaveButtons: leaveButtons
 
-    contentWidth: tabBar.implicitWidth + root.spacing
+    contentWidth: tabBar.implicitWidth + spacing
     contentHeight: leaveButtons.implicitHeight
 
     // We use an increased vertical padding to improve touch usability
@@ -29,9 +29,9 @@ PlasmaExtras.PlasmoidHeading {
     topPadding: Kirigami.Units.smallSpacing * 2
     bottomPadding: Kirigami.Units.smallSpacing * 2
 
+    topInset: 0
     leftInset: 0
     rightInset: 0
-    topInset: 0
     bottomInset: 0
 
     spacing: kickoff.backgroundMetrics.spacing
@@ -39,9 +39,12 @@ PlasmaExtras.PlasmoidHeading {
 
     PC3.TabBar {
         id: tabBar
+
         property real tabWidth: Math.max(applicationsTab.implicitWidth, placesTab.implicitWidth)
+
         focus: true
-        width: root.preferredTabBarWidth > 0 ? root.preferredTabBarWidth : implicitWidth
+
+        width: root.preferredTabBarWidth > 0 ? root.preferredTabBarWidth : undefined
         implicitWidth: contentWidth + leftPadding + rightPadding
         implicitHeight: contentHeight + topPadding + bottomPadding
 
@@ -50,9 +53,9 @@ PlasmaExtras.PlasmoidHeading {
         rightPadding: !mirrored ? root.spacing : 0
 
         anchors {
-            left: parent.left
             top: parent.top
-            bottom:parent.bottom
+            left: parent.left
+            bottom: parent.bottom
         }
 
         position: PC3.TabBar.Footer
@@ -147,13 +150,16 @@ PlasmaExtras.PlasmoidHeading {
 
     LeaveButtons {
         id: leaveButtons
+
         anchors {
-            right: parent.right
             top: parent.top
+            right: parent.right
             bottom: parent.bottom
-            leftMargin: root.spacing
         }
-        shouldCollapseButtons: root.contentWidth + root.spacing + buttonImplicitWidth > root.width
+
+        // available width for leaveButtons
+        maximumWidth: root.availableWidth - tabBar.width - root.spacing
+
         Keys.onUpPressed: event => {
             kickoff.lastCentralPane.forceActiveFocus(Qt.BacktabFocusReason);
         }
