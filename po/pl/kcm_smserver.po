@@ -2,17 +2,17 @@
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to Polish
-# Version: $Revision: 1683183 $
+# Version: $Revision: 1683507 $
+# SPDX-FileCopyrightText: 2014, 2019, 2020, 2021, 2022, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2008, 2009.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2009.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2022-12-29 11:33+0100\n"
+"PO-Revision-Date: 2024-06-29 10:07+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -21,6 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -32,7 +33,7 @@ msgstr "Potwierdź wylogowanie"
 #: smserversettings.kcfg:13
 #, kde-format
 msgid "Default leave option"
-msgstr "Domyślny sposób wyjścia"
+msgstr "Domyślny sposób opuszczania"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
 #: smserversettings.kcfg:22
@@ -86,11 +87,10 @@ msgid "Restart Now"
 msgstr "Uruchom ponownie teraz"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr "Ogólne:"
+msgstr "Ogólne"
 
 #: ui/main.qml:79
 #, kde-format
@@ -98,7 +98,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Zapytaj o potwierdzenie:"
 
 #: ui/main.qml:80
 #, kde-format
@@ -106,7 +106,7 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "Przy zamykaniu, ponownym uruchamianiu i wylogowywaniu"
 
 #: ui/main.qml:91
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "Przy wejściu, uruchom aplikacje, które były otwarte:"
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr "Przy ostatnim wyjściu"
+msgstr "Gdy wylogowuje się ostatni"
 
 #: ui/main.qml:113
 #, kde-format

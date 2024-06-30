@@ -118,12 +118,10 @@ msgid "%1, %2% complete"
 msgstr "%1，%2% 已完成"
 
 #: ui/main.qml:217
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info Currently Indexing"
-#| msgid "<filename>%1</filename>"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr "<filename>%1</filename>"
+msgstr ""
 
 #: ui/main.qml:270
 #, kde-format
@@ -149,11 +147,3 @@ msgstr "选择要索引的文件夹"
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "选择不索引的文件夹"
-
-#~ msgctxt "@label indexing status"
-#~ msgid "Status:"
-#~ msgstr "状态："
-
-#~ msgctxt "@label file currently being indexed"
-#~ msgid "Currently indexing:"
-#~ msgstr "正在索引："

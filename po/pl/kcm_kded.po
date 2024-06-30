@@ -1,16 +1,16 @@
 # translation of kcmkded.po to Polish
-# Version: $Revision: 1683479 $
+# Version: $Revision: 1683559 $
 # Copyright (C) 2003, 2004, 2008 Free Software Foundation, Inc.
 # Wojciech Milewski <Wojciech Milewski@wp.pl>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2003, 2004, 2008.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2017, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2023-07-01 07:51+0200\n"
+"PO-Revision-Date: 2024-06-29 09:14+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -19,6 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -54,6 +55,8 @@ msgid ""
 "If you're disabling something here to work around an issue, please <link "
 "url='%1'>submit a bug report about it as well.</link>"
 msgstr ""
+"Jeśli wyłączasz tutaj coś po to, aby obejść jakiś błąd, to proszę <link "
+"url='%1'>submit zgłoś to też jako błąd.</link>"
 
 #: ui/main.qml:55
 #, kde-format
@@ -111,18 +114,16 @@ msgid "Load-on-Demand Services"
 msgstr "Usługi na żądanie"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "Przestaw samoczynne uruchamianie tej usług po uruchomieniu systemu"
+msgstr "Nie wczytuj sam %1 po zalogowaniu"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "Przestaw samoczynne uruchamianie tej usług po uruchomieniu systemu"
+msgstr "Wczytuj sam %1 po zalogowaniu"
 
 #: ui/main.qml:183
 #, kde-format
@@ -140,18 +141,16 @@ msgid "Running"
 msgstr "Uruchomiona"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Stop"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr "Zatrzymaj"
+msgstr "Zatrzymaj %1"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr "Uruchom"
+msgstr "Uruchom %1"
 
 #: ui/main.qml:251
 #, kde-format
