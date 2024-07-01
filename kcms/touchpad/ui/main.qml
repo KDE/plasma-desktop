@@ -709,7 +709,7 @@ KCM.SimpleKCM {
                     multiTapRightClick.text = i18nd("kcm_touchpad", "Right-click (three-finger tap to middle-click)")
                     multiTapRightClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to right-click, tap with three fingers to middle-click.")
 
-                    multiTapMiddleClick.text = i18nd("kcm_touchpad", "Middle-click (three-finger tap right-click)")
+                    multiTapMiddleClick.text = i18nd("kcm_touchpad", "Middle-click (three-finger tap to right-click)")
                     multiTapMiddleClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to middle-click, tap with three fingers to right-click.")
                 } else {
                     multiTapRightClick.text = i18nd("kcm_touchpad", "Right-click")
