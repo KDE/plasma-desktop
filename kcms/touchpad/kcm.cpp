@@ -41,7 +41,12 @@ KCMTouchpad::KCMTouchpad(QObject *parent, const KPluginMetaData &data)
 
     m_initError = !m_backend->errorString().isNull();
 
-    m_view = new QQuickWidget(widget());
+    QQmlEngine *engine = qApp->property("__qmlEngine").value<QQmlEngine *>();
+    if (engine) {
+        m_view = new QQuickWidget(engine, widget());
+    } else {
+        m_view = new QQuickWidget(widget());
+    }
 
     QVBoxLayout *layout = new QVBoxLayout(widget());
 
