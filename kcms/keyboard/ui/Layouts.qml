@@ -310,15 +310,15 @@ ColumnLayout {
                     }
                 },
                 TableView.HeaderComponent {
-                    width: 60
-                    resizable: false
+                    width: 70
+                    resizable: true
                     draggable: false
                     title: i18nc("@title:column", "Map")
                     textRole: "layout"
                 },
                 TableView.HeaderComponent {
-                    width: 70
-                    resizable: false
+                    width: 100
+                    resizable: true
                     draggable: false
                     title: i18nc("@title:column", "Label")
                     textRole: "layout"
