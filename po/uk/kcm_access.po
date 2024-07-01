@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-28 00:40+0000\n"
+"POT-Creation-Date: 2024-07-01 00:40+0000\n"
 "PO-Revision-Date: 2024-05-24 15:37+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -363,69 +363,71 @@ msgstr "Налаштувати сповіщення…"
 msgid "Please choose an audio file"
 msgstr "Будь ласка, виберіть звуковий файл"
 
-#: ui/Bell.qml:20
-#, kde-format
-msgctxt "Name filters in a file dialog"
-msgid "Audio Files (*.ogg *.wav)"
+#: ui/Bell.qml:21
+#, fuzzy, kde-format
+#| msgctxt "Name filters in a file dialog"
+#| msgid "Audio Files (*.ogg *.wav)"
+msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
+msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "звукові файли (*.ogg *.wav)"
 
-#: ui/Bell.qml:29
+#: ui/Bell.qml:30
 #, kde-format
 msgid "Audible bell:"
 msgstr "Аудіодзвінок:"
 
-#: ui/Bell.qml:30
+#: ui/Bell.qml:31
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr "Увімкнути"
 
-#: ui/Bell.qml:41
+#: ui/Bell.qml:42
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Нетиповий звук:"
 
-#: ui/Bell.qml:74
+#: ui/Bell.qml:75
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "Шукати звуковий файл для системного дзвінка"
 
-#: ui/Bell.qml:75
+#: ui/Bell.qml:76
 #, kde-format
 msgid "Button search audio file"
 msgstr "Кнопка пошуку звукового файла"
 
-#: ui/Bell.qml:91
+#: ui/Bell.qml:92
 #, kde-format
 msgid "Visual bell:"
 msgstr "Видимий дзвінок:"
 
-#: ui/Bell.qml:92
+#: ui/Bell.qml:93
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "Увімкнути"
 
-#: ui/Bell.qml:106
+#: ui/Bell.qml:107
 #, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
 msgstr "Інверсія екрана"
 
-#: ui/Bell.qml:123
+#: ui/Bell.qml:124
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
 msgstr "Спалах"
 
-#: ui/Bell.qml:134
+#: ui/Bell.qml:135
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Колір"
 
-#: ui/Bell.qml:148
+#: ui/Bell.qml:149
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"

@@ -3,20 +3,21 @@
 #
 # SPDX-FileCopyrightText: 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 # Luc Castermans <luc.castermans@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-06-09 15:49+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2024-06-30 14:33+0200\n"
+"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -25,7 +26,7 @@ msgid ""
 "setting can take effect."
 msgstr ""
 "Het systeem moet opnieuw gestart worden voordat wijzigingen aan de "
-"instellingen voor het plakken met de midden-klik effect hebben."
+"instellingen van middenklik-plakken effect hebben."
 
 #: ui/main.qml:29
 #, kde-format
@@ -64,19 +65,19 @@ msgstr "Traag"
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
-msgstr "Snel"
+msgstr "Onmiddellijk"
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr "Schuiven:"
+msgstr "Scrollen:"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr "Vloeiend schuiven heeft voorkeur"
+msgstr "Vloeiend scrollen heeft voorkeur"
 
 #: ui/main.qml:133
 #, kde-format
@@ -87,23 +88,23 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
-"Deze instelling schakelt in of uit geanimeerde overgangen bij schuiven met "
-"een muiswiel of het toetsenbord. Sommige toepassingen kunnen deze instelling "
-"niet honoreren omdat ze ofwel vloeiend schuiven niet ondersteunen of hebben "
-"hun eigen instelling om het in of uit te schakelen."
+"Hiermee schakelt u geanimeerde overgangen bij schuiven met een muiswiel of "
+"het toetsenbord aan of uit. Sommige toepassingen volgen deze  instelling "
+"niet omdat ze ofwel vloeiend schuiven niet ondersteunen of  hun eigen "
+"instelling om het in of uit te schakelen."
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr "Op bestanden of mappen klikken:"
+msgstr "Klik op bestand of map:"
 
 #: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr "Ze selecteren"
+msgstr "Selecteren"
 
 #: ui/main.qml:167
 #, kde-format
@@ -114,17 +115,17 @@ msgstr "In plaats daarvan door dubbelklikken openen"
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr "Ze openen"
+msgstr "Openen"
 
 #: ui/main.qml:193
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr "Selecteren door te klikken op de selectiemarkering van het item"
+msgstr "Selecteer door te klikken op de selectiemarkering van het item"
 
 #: ui/main.qml:209
 #, kde-format
 msgid "Clicking in scrollbar track:"
-msgstr "Klikken in schuifbalktrack:"
+msgstr "Klikken in scrollbalk-ruimte:"
 
 #: ui/main.qml:210
 #, kde-format
@@ -132,7 +133,7 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr "Schuift naar de locatie waarop is geklikt"
+msgstr "Scrollt naar de locatie waarop is geklikt"
 
 #: ui/main.qml:228
 #, kde-format
@@ -140,26 +141,26 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr "Schuift één pagina omhoog of omlaag"
+msgstr "Scrollt één pagina omhoog of omlaag"
 
 #: ui/main.qml:241
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr "Middelste muisklik om te schuiven naar locatie waarop is geklikt"
+msgstr "Middenklik scrollt naar de locatie waarop is geklikt"
 
 #: ui/main.qml:255
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Middle Click:"
-msgstr "Midden-klik:"
+msgstr "Middenklik:"
 
 #: ui/main.qml:257
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Middle click pastes selected text'"
 msgid "Pastes selected text"
-msgstr "Plakt geselecteerde tekst"
+msgstr "Plakt de geselecteerde tekst"
 
 #: ui/main.qml:274
 #, kde-format
@@ -170,7 +171,7 @@ msgstr "Aanraakmodus:"
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr "Automatisch inschakelen zoals nodig"
+msgstr "Automatisch inschakelen indien nodig"
 
 #: ui/main.qml:276 ui/main.qml:319
 #, kde-format
@@ -187,7 +188,7 @@ msgid ""
 msgstr ""
 "Aanraakmodus zal automatisch geactiveerd worden wanneer het systeem een "
 "aanraakscherm detecteert maar geen muis of touchpad. Bijvoorbeeld: wanneer "
-"een te transformeren toetsenbord van een laptop wordt afgekoppeld."
+"een toetsenbord van een laptop wordt afgekoppeld."
 
 #: ui/main.qml:297
 #, kde-format
@@ -202,7 +203,7 @@ msgid ""
 "more easily accommodate touch interaction."
 msgstr ""
 "In aanraakmodus zullen veel elementen van het gebruikersinterface groter "
-"worden om gemakkelijker aanraakinteractie te kunnen doen."
+"worden om de aanraakinteractie gemakkelijker te maken."
 
 #: ui/main.qml:355
 #, kde-format
@@ -228,7 +229,7 @@ msgid ""
 "applications may not honor this setting."
 msgstr ""
 "Twee kliks binnen deze tijdsduur worden als een dubbelklik beschouwd. "
-"Sommige toepassingen kunnen deze instelling niet honoreren."
+"Sommige toepassingen volgen deze instelling niet."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -246,14 +247,13 @@ msgstr "Animatiesnelheid"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr "Vloeiend schuiven"
+msgstr "Vloeiend scrollen"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr ""
-"Linkerklik in het schuifbalkvak verplaatst de schuifbalk met een pagina"
+msgstr "Linker muisknopklik in de scrollbalk-ruimte verplaatst met één pagina"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:25
@@ -271,7 +271,7 @@ msgstr "Automatisch naar aanraakmodus omschakelen"
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr "Plakken van selectie met middelste muisklik inschakelen"
+msgstr "Plakken van selectie met middenklik inschakelen"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
@@ -280,14 +280,14 @@ msgid ""
 "Show an on-screen display to indicate status changes such as brightness or "
 "volume"
 msgstr ""
-"Toon iets op het scherm (IoS) om statuswijzigingen aan te geven zoals "
-"helderheid of volume"
+"Meld statuswijzigingen zoals bijvoorbeeld van helderheid of volume op het "
+"scherm"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:20
 #, kde-format
 msgid "OSD on layout change"
-msgstr "IoS bij wijziging van indeling"
+msgstr "Meld wijziging van indeling op het scherm"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

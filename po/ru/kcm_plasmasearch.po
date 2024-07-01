@@ -4,13 +4,13 @@
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 # Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2017, 2019.
 # Дронова Ю <juliette.tux@gmail.com>, 2020.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2023.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-01-10 21:44+0300\n"
+"PO-Revision-Date: 2024-06-27 20:41+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 21.08.3\n"
 
 #: plasmasearch/kcm.h:70
 #, kde-format
@@ -42,11 +42,7 @@ msgid "Get New Plugins…"
 msgstr "Загрузить новые модули…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -105,18 +101,16 @@ msgid "KRunner plugin installation failed"
 msgstr "Сбой установки расширения KRunner"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Команда для выполнения: install или uninstall."
+msgstr "Команда для выполнения: install или uninstall"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Путь к архиву или папке для извлечения"
 
 #: plugininstaller/main.cpp:50
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-28 00:40+0000\n"
+"POT-Creation-Date: 2024-07-01 00:40+0000\n"
 "PO-Revision-Date: 2023-08-25 23:13+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -362,69 +362,71 @@ msgstr "알림 설정…"
 msgid "Please choose an audio file"
 msgstr "오디오 파일을 선택하십시오"
 
-#: ui/Bell.qml:20
-#, kde-format
-msgctxt "Name filters in a file dialog"
-msgid "Audio Files (*.ogg *.wav)"
+#: ui/Bell.qml:21
+#, fuzzy, kde-format
+#| msgctxt "Name filters in a file dialog"
+#| msgid "Audio Files (*.ogg *.wav)"
+msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
+msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "오디오 파일 (*.ogg *.wav)"
 
-#: ui/Bell.qml:29
+#: ui/Bell.qml:30
 #, kde-format
 msgid "Audible bell:"
 msgstr "들리는 벨:"
 
-#: ui/Bell.qml:30
+#: ui/Bell.qml:31
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr "활성화"
 
-#: ui/Bell.qml:41
+#: ui/Bell.qml:42
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "사용자 정의 사운드:"
 
-#: ui/Bell.qml:74
+#: ui/Bell.qml:75
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "시스템 벨로 사용할 오디오 파일 검색"
 
-#: ui/Bell.qml:75
+#: ui/Bell.qml:76
 #, kde-format
 msgid "Button search audio file"
 msgstr "오디오 파일 검색 단추"
 
-#: ui/Bell.qml:91
+#: ui/Bell.qml:92
 #, kde-format
 msgid "Visual bell:"
 msgstr "벨 시각화:"
 
-#: ui/Bell.qml:92
+#: ui/Bell.qml:93
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "활성화"
 
-#: ui/Bell.qml:106
+#: ui/Bell.qml:107
 #, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
 msgstr "화면 반전"
 
-#: ui/Bell.qml:123
+#: ui/Bell.qml:124
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
 msgstr "반짝임"
 
-#: ui/Bell.qml:134
+#: ui/Bell.qml:135
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "색상"
 
-#: ui/Bell.qml:148
+#: ui/Bell.qml:149
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
