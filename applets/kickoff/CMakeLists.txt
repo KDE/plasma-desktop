@@ -1,5 +1,39 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.kickoff\")
+set_source_files_properties(KickoffSingleton.qml ActionMenu.qml PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 
-#######################################################################################
-# Package
-plasma_install_package(package org.kde.plasma.kickoff)
+plasma_add_applet(org.kde.plasma.kickoff
+QML_SOURCES
+    config.qml
+    main.xml
+    AbstractKickoffItemDelegate.qml
+    ActionMenu.qml
+    ApplicationsPage.qml
+    BasePage.qml
+    Badge.qml
+    ConfigGeneral.qml
+    DropAreaGridView.qml
+    DropAreaListView.qml
+    EmptyPage.qml
+    Footer.qml
+    FullRepresentation.qml
+    Header.qml
+    HorizontalStackView.qml
+    KickoffDropArea.qml
+    KickoffGridDelegate.qml
+    KickoffGridView.qml
+    KickoffListDelegate.qml
+    KickoffListView.qml
+    KickoffSingleton.qml
+    LeaveButtons.qml
+    ListOfGridsView.qml
+    ListOfGridsViewDelegate.qml
+    NormalPage.qml
+    PlacesPage.qml
+    SectionView.qml
+    VerticalStackView.qml
+    main.qml
+RESOURCES
+    main.xml
+GENERATE_APPLET_CLASS
+)
+
+ecm_target_qml_sources(org.kde.plasma.kickoff SOURCES code/tools.js PATH code)
