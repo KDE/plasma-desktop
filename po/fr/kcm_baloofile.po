@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2023-11-01 14:42+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
+"PO-Revision-Date: 2024-06-30 11:18+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -130,12 +130,10 @@ msgid "%1, %2% complete"
 msgstr "%1, %2 % terminé"
 
 #: ui/main.qml:217
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info Currently Indexing"
-#| msgid "<filename>%1</filename>"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr "<filename>%1</filename>"
+msgstr "Indexation en cours : <filename>%1</filename>"
 
 #: ui/main.qml:270
 #, kde-format

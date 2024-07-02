@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Giovanni Sora <g.sora@tioscali.it>, 2014.
-# G.Sora <g.sora@tiscali.it>, 2014, 2016, 2017, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2014, 2016, 2017, 2020, 2021, 2023, 2024 G.Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2023-05-31 22:02+0200\n"
+"PO-Revision-Date: 2024-07-01 11:07+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -120,12 +120,10 @@ msgid "%1, %2% complete"
 msgstr "%1, %2% complete"
 
 #: ui/main.qml:217
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info Currently Indexing"
-#| msgid "<filename>%1</filename>"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr "<filename>%1</filename>"
+msgstr "Indicisante currentemente <filename>%1</filename>"
 
 #: ui/main.qml:270
 #, kde-format

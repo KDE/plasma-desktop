@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-01 00:40+0000\n"
-"PO-Revision-Date: 2024-05-24 06:16+0300\n"
+"PO-Revision-Date: 2024-07-01 14:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -362,12 +362,10 @@ msgid "Please choose an audio file"
 msgstr "Lütfen bir ses dosyası seçin"
 
 #: ui/Bell.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Name filters in a file dialog"
-#| msgid "Audio Files (*.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
-msgstr "Ses Dosyaları (*.ogg *.wav)"
+msgstr "OGG, OGA ve WAV ses dosyaları (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
 #, kde-format
