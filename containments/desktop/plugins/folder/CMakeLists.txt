@@ -6,6 +6,7 @@ endif(BUILD_TESTING)
 
 set(folderplugin_SRCS
     applauncher.cpp
+    desktopschemehelper.cpp
     directorypicker.cpp
     foldermodel.cpp
     folderplugin.cpp

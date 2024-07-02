@@ -9,6 +9,7 @@
 */
 
 #include "foldermodel.h"
+#include "desktopschemehelper.h"
 #include "itemviewadapter.h"
 #include "positioner.h"
 #include "removeaction.h"
@@ -17,6 +18,7 @@
 #include <QApplication>
 #include <QClipboard>
 #include <QCollator>
+#include <QDir>
 #include <QDrag>
 #include <QImage>
 #include <QItemSelectionModel>
@@ -29,6 +31,7 @@
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QScreen>
+#include <QStack>
 #include <QTimer>
 #include <qplatformdefs.h>
 
@@ -390,6 +393,10 @@ void FolderModel::setUrl(const QString &url)
         m_dirWatch->addFile(resolvedNewUrl.toLocalFile() + QStringLiteral("/.directory"));
     }
 
+    watcher = new QFileSystemWatcher(this);
+    addDirectoriesRecursively(resolvedNewUrl.toString(), watcher);
+    connect(watcher, &QFileSystemWatcher::directoryChanged, this, &FolderModel::refresh);
+
     if (dragging()) {
         m_urlChangedWhileDragging = true;
     }
@@ -399,6 +406,36 @@ void FolderModel::setUrl(const QString &url)
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         m_screenMapper->removeScreen(m_screen, m_currentActivity, oldUrl);
         m_screenMapper->addScreen(m_screen, m_currentActivity, resolvedUrl());
+    }
+}
+
+void FolderModel::addDirectoriesRecursively(const QString &resolvedNewUrl, QFileSystemWatcher *watcher)
+{
+    QStack<QString> directoryStack;
+    directoryStack.push(resolvedNewUrl);
+
+    while (!directoryStack.isEmpty()) {
+        QString currentDir = directoryStack.pop();
+
+        // Add current directory to watcher
+        watcher->addPath(DesktopSchemeHelper::getFileUrl(currentDir));
+
+        QDir dir(currentDir);
+        dir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot);
+        QList<QFileInfo> subdirInfoList = dir.entryInfoList();
+
+        // Extract file paths and add them to subdirs list
+        QStringList subdirs;
+        for (const QFileInfo &subdirInfo : subdirInfoList) {
+            if (subdirInfo.isDir()) {
+                subdirs.append(subdirInfo.filePath());
+            }
+        }
+
+        // Push subdirectories onto the stack for further processing
+        for (const QString &subdir : subdirs) {
+            directoryStack.push(subdir);
+        }
     }
 }
 

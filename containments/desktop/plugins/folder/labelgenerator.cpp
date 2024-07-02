@@ -6,6 +6,7 @@
 */
 
 #include "labelgenerator.h"
+#include "desktopschemehelper.h"
 
 #include <KFilePlacesModel>
 #include <KShell>
@@ -116,7 +117,7 @@ QString LabelGenerator::generatedDisplayLabel()
         return QString();
     }
 
-    QUrl url = m_folderModel->resolvedUrl();
+    QUrl url = QUrl(DesktopSchemeHelper::getFileUrl(m_folderModel->resolvedUrl().toString()));
 
     if (m_labelMode == 1 /* Default */) {
         if (url.path().length() <= 1) {

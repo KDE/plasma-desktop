@@ -112,12 +112,12 @@ Item {
 
                 onEnabledChanged: {
                     if (enabled && currentIndex !== -1) {
-                        cfg_url = placesModel.urlForIndex(currentIndex);
+                        cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(currentIndex));
                     }
                 }
 
                 onActivated: {
-                    cfg_url = placesModel.urlForIndex(index);
+                    cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(index));
                 }
             }
         }
@@ -140,13 +140,13 @@ Item {
 
                 onEnabledChanged: {
                     if (enabled && text !== "") {
-                        cfg_url = text;
+                        cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
                     }
                 }
 
                 onTextChanged: {
                     if (enabled) {
-                        cfg_url = text;
+                        cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
                     }
                 }
             }
@@ -163,7 +163,7 @@ Item {
                 id: directoryPicker
 
                 onUrlChanged: {
-                    locationCustomValue.text = url;
+                    locationCustomValue.text = Folder.DesktopSchemeHelper.getDesktopUrl(url);
                 }
             }
         }

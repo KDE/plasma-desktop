@@ -16,6 +16,8 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.kquickcontrolsaddons 2.0
 
+import org.kde.private.desktopcontainment.folder 0.1 as Folder
+
 Item {
     id: main
 
@@ -157,7 +159,7 @@ Item {
                 if (folderViewDialogComponent.status === Component.Ready) {
                     impl.popupDialog = folderViewDialogComponent.createObject(impl);
                     impl.popupDialog.visualParent = icon;
-                    impl.popupDialog.url = model.linkDestinationUrl;
+                    impl.popupDialog.url = Folder.DesktopSchemeHelper.getDesktopUrl(model.linkDestinationUrl);
                     impl.popupDialog.visible = true;
                 }
             }
