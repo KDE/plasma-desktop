@@ -16,8 +16,10 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcmutils as KCM
 
 Item {
-    property real centerX: editModeUi.x + editModeUi.width/2
-    property real centerY: editModeUi.y + editModeUi.height/2
+    property real centerX: Math.round(editModeUi.x + editModeUi.width/2)
+    property real centerY: Math.round(editModeUi.y + editModeUi.height/2)
+    property real roundedRootWidth: Math.round(root.width)
+    property real roundedRootHeight: Math.round(root.height)
 
     property bool open: false
     Component.onCompleted: {
@@ -41,17 +43,17 @@ Item {
     Item {
         id: editModeUi
         visible: open || xAnim.running
-        x: open ? editModeRect.x + editModeRect.width/2 - zoomedWidth/2 : 0
-        y: open ? editModeRect.y + editModeRect.height/2 - zoomedHeight/2 + toolBar.height/2 : 0
-        width: open ? zoomedWidth : root.width
-        height: open ? zoomedHeight : root.height
-        property real zoomedWidth: root.width * containmentParent.scaleFactor
-        property real zoomedHeight: root.height * containmentParent.scaleFactor
+        x: Math.round(open ? editModeRect.x + editModeRect.width/2 - zoomedWidth/2 : 0)
+        y: Math.round(open ? editModeRect.y + editModeRect.height/2 - zoomedHeight/2 + toolBar.height/2 : 0)
+        width: open ? zoomedWidth : roundedRootWidth
+        height: open ? zoomedHeight : roundedRootHeight
+        property real zoomedWidth: Math.round(root.width * containmentParent.scaleFactor)
+        property real zoomedHeight: Math.round(root.height * containmentParent.scaleFactor)
 
         Kirigami.ShadowedRectangle {
             color: Kirigami.Theme.backgroundColor
-            width: parent.width
-            height: parent.height + toolBar.height + Kirigami.Units.largeSpacing
+            width: Math.round(parent.width)
+            height: Math.round(parent.height + toolBar.height + Kirigami.Units.largeSpacing)
             y: - toolBar.height - Kirigami.Units.largeSpacing
 
             radius: open ? Kirigami.Units.cornerRadius : 0
@@ -183,9 +185,8 @@ Item {
             layer.enabled: true
             layer.smooth: true
             layer.effect: Kirigami.ShadowedTexture {
-                width: root.width
-                height: root.height
-
+                width: roundedRootWidth
+                height: roundedRootHeight
                 color: "transparent"
 
                 radius: open ? Kirigami.Units.cornerRadius : 0
