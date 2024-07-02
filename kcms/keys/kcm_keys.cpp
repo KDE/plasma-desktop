@@ -8,6 +8,7 @@
 
 #include <QDBusMetaType>
 #include <QFile>
+#include <QPushButton>
 #include <QQuickItem>
 #include <QQuickRenderControl>
 #include <QWindow>
@@ -304,18 +305,29 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
 
     qCDebug(KCMKEYS) << "Found conflict for" << newSequence << conflict;
     const bool isStandardAction = conflict.parent().data(BaseModel::SectionRole) == ComponentType::CommonAction;
-    const QString actionName = conflict.data().toString();
-    const QString componentName = conflict.parent().data().toString();
+    const QString currentActionName = conflict.data().toString();
+    const QString currentComponentName = conflict.parent().data().toString();
+    const QString newActionName = index.data().toString();
+    const QString newComponentName = index.parent().data().toString();
     const QString keysString = newSequence.toString(QKeySequence::NativeText);
     const QString message = isStandardAction
-        ? i18nc("%2 is the name of a category inside the 'Common Actions' section",
-                "Shortcut %1 is already assigned to the common %2 action '%3'.\nDo you want to reassign it?",
-                keysString,
-                componentName,
-                actionName)
-        : i18n("Shortcut %1 is already assigned to action '%2' of %3.\nDo you want to reassign it?", keysString, actionName, componentName);
-    const QString title = i18nc("@title:window", "Found conflict");
+        ? xi18nc("@info %2 is the name of a category inside the 'Common Actions' section",
+                 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?",
+                 keysString,
+                 currentComponentName,
+                 currentActionName,
+                 newActionName)
+        : xi18nc("@info",
+                 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>%2</interface> of <application>%3</application>.<nl/><nl/>Reassign "
+                 "it to action <interface>%4</interface> of <application>%4</application>?",
+                 keysString,
+                 currentActionName,
+                 currentComponentName,
+                 newActionName,
+                 newComponentName);
+
     auto dialog = new QDialog;
+    const QString title = i18nc("@title:window", "Resolve Shortcut Conflict");
     dialog->setWindowTitle(title);
     if (context && context->window()) {
         dialog->winId(); // so it creates windowHandle
@@ -323,19 +335,15 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
     }
     dialog->setWindowModality(Qt::WindowModal);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
-    KMessageBox::createKMessageBox(dialog,
-                                   new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No, dialog),
-                                   QMessageBox::Question,
-                                   message,
-                                   {},
-                                   QString(),
-                                   nullptr,
-                                   KMessageBox::NoExec);
+
+    auto *dialogButtons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, dialog);
+    dialogButtons->button(QDialogButtonBox::Ok)->setText(i18nc("@action:button", "Reassign"));
+    KMessageBox::createKMessageBox(dialog, dialogButtons, QMessageBox::Warning, message, {}, QString(), nullptr, KMessageBox::NoExec);
     dialog->show();
 
     connect(dialog, &QDialog::finished, this, [index, conflict, newSequence, oldSequence](int result) {
         auto model = const_cast<BaseModel *>(static_cast<const BaseModel *>(index.model()));
-        if (result != QDialogButtonBox::Yes) {
+        if (result != QDialogButtonBox::Ok) {
             // Also Q_EMIT if we are not changing anything, to force the frontend to update and be consistent
             // with the model. It is currently out of sync because it reflects the user input that
             // was rejected now.
