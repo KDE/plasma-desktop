@@ -186,7 +186,8 @@ QQC2.ItemDelegate {
                         }
                     }
                     QQC2.Button {
-                        text: i18n("Add custom shortcut")
+                        text: i18nc("@action:button Add custom shortcut", "Add…")
+                        Accessible.name: i18n("Add custom shortcut")
                         icon.name: "list-add-symbolic"
                         Layout.alignment: Qt.AlignRight
                         onClicked: {
