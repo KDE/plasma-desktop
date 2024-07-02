@@ -628,6 +628,14 @@ TaskManagerApplet.SmartLauncherItem { }
         }
     }
 
+    Rectangle {
+        color: "transparent"
+        anchors.fill: label
+        visible: label.visible
+        Accessible.ignored: !visible
+        Accessible.name: parent.Accessible.name + "-labelhint"
+    }
+
     states: [
         State {
             name: "launcher"

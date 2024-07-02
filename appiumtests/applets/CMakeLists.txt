@@ -6,3 +6,9 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/taskmanager_bug487023test.py
 )
 set_tests_properties(taskmanager_groupdialogtest PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME taskmanager_visiblelabeltest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/taskmanager_visiblelabel.py
+)
+set_tests_properties(taskmanager_visiblelabeltest PROPERTIES TIMEOUT 120)
