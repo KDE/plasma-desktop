@@ -2,22 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Marce Villarino <mvillarino@kde-espana.org>, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2023-05-31 09:32+0200\n"
+"PO-Revision-Date: 2024-07-02 17:41+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -122,12 +122,10 @@ msgid "%1, %2% complete"
 msgstr "%1, %2% completo"
 
 #: ui/main.qml:217
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info Currently Indexing"
-#| msgid "<filename>%1</filename>"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr "<filename>%1</filename>"
+msgstr "Indexando: <filename>%1</filename>"
 
 #: ui/main.qml:270
 #, kde-format

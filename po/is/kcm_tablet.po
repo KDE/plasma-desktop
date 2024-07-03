@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:40+0000\n"
-"PO-Revision-Date: 2024-04-14 18:22+0000\n"
+"PO-Revision-Date: 2024-06-28 15:57+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Sjálfgefið"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -43,15 +43,14 @@ msgid "Inverted Landscape"
 msgstr "Umsnúið langsnið"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Fylgja virka skjánum"
+msgstr "Fylgja núverandi skjá"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Allir skjáir"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -62,17 +61,17 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Passa á skjá"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Halda myndhlutfalli og láta passa innan skjásins"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Varpa á hluta skjásins"
 
 #: ui/main.qml:31
 #, kde-format
@@ -88,7 +87,7 @@ msgstr "Tengja teikniborð"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Teikniborð til prufu..."
 
 #: ui/main.qml:66
 #, kde-format
@@ -99,7 +98,7 @@ msgstr "Tæki:"
 #: ui/main.qml:104
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Varpa á skjá"
 
 #: ui/main.qml:124
 #, kde-format
@@ -107,8 +106,7 @@ msgid "Orientation:"
 msgstr "Stefna:"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Snið fyrir örvhenta:"
 
@@ -120,11 +118,14 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Segir tækinu að laga sig að örvhentum notendum. Áhrifin eru breytileg eftir "
+"tæki, en oft er virkni bakkahnappanna snúið við þannig að hægt sé að hafa "
+"teikniborðið á hvolfi."
 
 #: ui/main.qml:153
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Varpað svæði:"
 
 #: ui/main.qml:240
 #, kde-format
@@ -178,22 +179,22 @@ msgstr "Bakkahnappur %1:"
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "Teikniborðsprófun"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Pennaþrýstingur X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Pennaslepping X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Pennahreyfing X=%1 Y=%2"
 
 #: ui/Tester.qml:194
 #, kde-format
@@ -201,12 +202,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Skýring:\n"
+"# X, Y - atvikshnit\n"
 
 #: ui/Tester.qml:201
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Hreinsa"
 
 #~ msgid "Primary (default)"
 #~ msgstr "Aðal (sjálfgefið)"

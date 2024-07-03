@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-01 00:40+0000\n"
-"PO-Revision-Date: 2024-06-21 11:31+0200\n"
+"PO-Revision-Date: 2024-07-02 21:47+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -359,12 +359,10 @@ msgid "Please choose an audio file"
 msgstr "Välj en ljudfil"
 
 #: ui/Bell.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Name filters in a file dialog"
-#| msgid "Audio Files (*.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
-msgstr "Ljudfiler (*.ogg *.wav)"
+msgstr "ogg-, oga- och wav-ljudfiler (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
 #, kde-format

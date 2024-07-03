@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-07-03 00:40+0000\n"
 "PO-Revision-Date: 2023-02-19 16:39+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -334,10 +334,16 @@ msgstr "Bu qısayolu silmək"
 
 #: ui/ShortcutActionDelegate.qml:189
 #, kde-format
+msgctxt "@action:button Add custom shortcut"
+msgid "Add…"
+msgstr ""
+
+#: ui/ShortcutActionDelegate.qml:190
+#, kde-format
 msgid "Add custom shortcut"
 msgstr "Fərdi qısayol əlavə etmək"
 
-#: ui/ShortcutActionDelegate.qml:227
+#: ui/ShortcutActionDelegate.qml:228
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Yeni qısayol tutulmasından imtina etmək"

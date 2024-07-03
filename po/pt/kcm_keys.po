@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-07-03 00:40+0000\n"
 "PO-Revision-Date: 2023-01-11 09:27+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -331,10 +331,16 @@ msgstr "Apagar este atalho"
 
 #: ui/ShortcutActionDelegate.qml:189
 #, kde-format
+msgctxt "@action:button Add custom shortcut"
+msgid "Add…"
+msgstr ""
+
+#: ui/ShortcutActionDelegate.qml:190
+#, kde-format
 msgid "Add custom shortcut"
 msgstr "Adicionar um atalho personalizado"
 
-#: ui/ShortcutActionDelegate.qml:227
+#: ui/ShortcutActionDelegate.qml:228
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Cancelar a captura do novo atalho"
