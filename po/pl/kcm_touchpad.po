@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 02:27+0000\n"
 "PO-Revision-Date: 2024-03-23 11:16+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -375,7 +375,7 @@ msgstr "Naciśnij w dowolnym miejscu trzema palcami"
 msgid "Press anywhere with three fingers."
 msgstr "Naciśnij w dowolnym miejscu trzema palcami."
 
-#: kcm/touchpadconfig.cpp:99
+#: kcm/touchpadconfig.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -384,12 +384,12 @@ msgstr ""
 "Błąd podczas wczytywania wartości. Zajrzyj do dziennika po szczegóły. "
 "Uruchom moduł ustawień ponownie."
 
-#: kcm/touchpadconfig.cpp:102
+#: kcm/touchpadconfig.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nie znaleziono gładzika, więc podłącz go teraz."
 
-#: kcm/touchpadconfig.cpp:111
+#: kcm/touchpadconfig.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -398,7 +398,7 @@ msgstr ""
 "Nie można zapisać wszystkich zmian. Zajrzyj do dziennika po szczegóły. "
 "Uruchom moduł ustawień ponownie."
 
-#: kcm/touchpadconfig.cpp:130
+#: kcm/touchpadconfig.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -407,7 +407,7 @@ msgstr ""
 "Błąd wczytywania wartości domyślnych. Nie można ustawić wszystkich lub "
 "części opcji do wartości domyślnych."
 
-#: kcm/touchpadconfig.cpp:150
+#: kcm/touchpadconfig.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -416,12 +416,12 @@ msgstr ""
 "Błąd podczas dodawania nowopodłączonego urządzenia. Podłącz je ponownie i "
 "uruchom moduł ustawień ponownie."
 
-#: kcm/touchpadconfig.cpp:173
+#: kcm/touchpadconfig.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Rozłączono gładzik. Zamknięto okno dialogowe jego ustawień."
 
-#: kcm/touchpadconfig.cpp:175
+#: kcm/touchpadconfig.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Rozłączono gładzik. Nie znaleziono innych gładzików."

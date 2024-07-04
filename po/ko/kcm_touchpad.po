@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 02:27+0000\n"
 "PO-Revision-Date: 2024-02-19 21:39+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -367,7 +367,7 @@ msgstr "어디든지 세 손가락으로 누르기"
 msgid "Press anywhere with three fingers."
 msgstr "어디든지 세 손가락으로 누릅니다."
 
-#: kcm/touchpadconfig.cpp:99
+#: kcm/touchpadconfig.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -376,12 +376,12 @@ msgstr ""
 "값을 불러오는 중 오류가 발생했습니다. 더 많은 정보를 보려면 로그를 참조하십시"
 "오. 이 설정 모듈을 다시 시작하십시오."
 
-#: kcm/touchpadconfig.cpp:102
+#: kcm/touchpadconfig.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "터치패드를 찾을 수 없습니다. 터치패드를 연결하십시오."
 
-#: kcm/touchpadconfig.cpp:111
+#: kcm/touchpadconfig.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -390,7 +390,7 @@ msgstr ""
 "모든 설정을 저장할 수 없었습니다. 더 많은 정보를 보려면 로그를 참조하십시오. "
 "이 설정 모듈을 다시 시작한 다음 다시 시도하십시오."
 
-#: kcm/touchpadconfig.cpp:130
+#: kcm/touchpadconfig.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -399,7 +399,7 @@ msgstr ""
 "기본값을 불러오는 중 오류가 발생했습니다. 일부 옵션을 기본값으로 초기화할 수 "
 "없습니다."
 
-#: kcm/touchpadconfig.cpp:150
+#: kcm/touchpadconfig.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -408,12 +408,12 @@ msgstr ""
 "새로 연결된 장치를 추가하는 중 오류가 발생했습니다. 장치를 다시 연결한 후 이 "
 "설정 모듈을 다시 시작하십시오."
 
-#: kcm/touchpadconfig.cpp:173
+#: kcm/touchpadconfig.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "터치패드 연결이 끊겼습니다. 설정 대화 상자를 닫습니다."
 
-#: kcm/touchpadconfig.cpp:175
+#: kcm/touchpadconfig.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "터치패드 연결이 끊겼습니다. 다른 터치패드가 없습니다."

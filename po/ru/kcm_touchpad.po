@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 02:27+0000\n"
 "PO-Revision-Date: 2024-02-27 21:35+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -387,7 +387,7 @@ msgstr "Нажмите тремя пальцами"
 msgid "Press anywhere with three fingers."
 msgstr "Нажмите тремя пальцами."
 
-#: kcm/touchpadconfig.cpp:99
+#: kcm/touchpadconfig.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -396,12 +396,12 @@ msgstr ""
 "Ошибка при загрузке значений. Более подробная информация сохранена в "
 "журналах. Закройте и снова откройте этот модуль настройки."
 
-#: kcm/touchpadconfig.cpp:102
+#: kcm/touchpadconfig.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Сенсорная панель не найдена. Подключите сенсорную панель."
 
-#: kcm/touchpadconfig.cpp:111
+#: kcm/touchpadconfig.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -411,7 +411,7 @@ msgstr ""
 "журналах. Закройте и снова откройте этот модуль настройки, затем повторите "
 "попытку."
 
-#: kcm/touchpadconfig.cpp:130
+#: kcm/touchpadconfig.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -419,7 +419,7 @@ msgid ""
 msgstr ""
 "Произошла ошибка: не всем параметрам удалось назначить значения по умолчанию."
 
-#: kcm/touchpadconfig.cpp:150
+#: kcm/touchpadconfig.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -428,12 +428,12 @@ msgstr ""
 "При добавлении недавно подключённого устройства возникла ошибка. Отключите и "
 "снова подключите устройство, а также перезапустите этот модуль настройки."
 
-#: kcm/touchpadconfig.cpp:173
+#: kcm/touchpadconfig.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Сенсорная панель отключена, её окно настройки закрыто."
 
-#: kcm/touchpadconfig.cpp:175
+#: kcm/touchpadconfig.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Сенсорная панель отключена. Других сенсорных панелей не найдено."

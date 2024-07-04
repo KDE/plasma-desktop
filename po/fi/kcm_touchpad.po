@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 02:27+0000\n"
 "PO-Revision-Date: 2024-02-29 18:53+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -369,7 +369,7 @@ msgstr "Paina minne vain kolmella sormella"
 msgid "Press anywhere with three fingers."
 msgstr "Paina minne vain kolmella sormella."
 
-#: kcm/touchpadconfig.cpp:99
+#: kcm/touchpadconfig.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -378,12 +378,12 @@ msgstr ""
 "Virhe ladattaessa arvoja. Katso lisätietoa lokista. Käynnistä tämä "
 "asetusmoduuli uudelleen."
 
-#: kcm/touchpadconfig.cpp:102
+#: kcm/touchpadconfig.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Kosketuslevyä ei löydy. Kytke kosketuslevy nyt."
 
-#: kcm/touchpadconfig.cpp:111
+#: kcm/touchpadconfig.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -392,7 +392,7 @@ msgstr ""
 "Kaikkia muutoksia ei voitu tallentaa. Katso lisätietoa lokista. Käynnistä "
 "tämä asetusmoduuli uudelleen."
 
-#: kcm/touchpadconfig.cpp:130
+#: kcm/touchpadconfig.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -401,7 +401,7 @@ msgstr ""
 "Virhe ladattaessa oletusarvoja. Joitain tai kaikkia asetuksia ei onnistuttu "
 "asettamaan oletusarvoihin."
 
-#: kcm/touchpadconfig.cpp:150
+#: kcm/touchpadconfig.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -410,12 +410,12 @@ msgstr ""
 "Virhe lisättäessä vasta kytkettyä laitetta. Kytke se toistamiseen ja "
 "käynnistä tämä asetusosio uudelleen."
 
-#: kcm/touchpadconfig.cpp:173
+#: kcm/touchpadconfig.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Kosketuslevy irrotettiin. Sen asetusikkuna suljettiin."
 
-#: kcm/touchpadconfig.cpp:175
+#: kcm/touchpadconfig.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Kosketuslevy irrotettiin. Muita kosketuslevyjä ei löytynyt."

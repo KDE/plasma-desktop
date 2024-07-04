@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 02:27+0000\n"
 "PO-Revision-Date: 2024-03-09 18:55+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -371,7 +371,7 @@ msgstr "Trykk med tre fingrar kor som helst"
 msgid "Press anywhere with three fingers."
 msgstr "Trykk med tre fingrar kor som helst."
 
-#: kcm/touchpadconfig.cpp:99
+#: kcm/touchpadconfig.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -380,12 +380,12 @@ msgstr ""
 "Feil ved innlesing av data. Sjå loggen for meir informasjon, og prøv å "
 "starta oppsettmodulen på nytt."
 
-#: kcm/touchpadconfig.cpp:102
+#: kcm/touchpadconfig.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Fann ikkje noka styreplate. Prøv å kopla ho til."
 
-#: kcm/touchpadconfig.cpp:111
+#: kcm/touchpadconfig.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -394,7 +394,7 @@ msgstr ""
 "Klarte ikkje lagra alle endringane. Sjå loggen for meir informasjon. Prøv å "
 "starta oppsettmodulen på nytt og prøv igjen."
 
-#: kcm/touchpadconfig.cpp:130
+#: kcm/touchpadconfig.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -403,7 +403,7 @@ msgstr ""
 "Klarte ikkje lasta standardverdiane. Nokre av verdiane kunne ikkje setjast "
 "til standardverdiar."
 
-#: kcm/touchpadconfig.cpp:150
+#: kcm/touchpadconfig.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -412,12 +412,12 @@ msgstr ""
 "Klarte ikkje leggja til nyleg tilkopla eining. Prøv å kopla ho til ein gong "
 "til, og start så oppsettmodulen på nytt."
 
-#: kcm/touchpadconfig.cpp:173
+#: kcm/touchpadconfig.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Styreplata er kopla frå, og innstillingsvindauget vart derfor lukka."
 
-#: kcm/touchpadconfig.cpp:175
+#: kcm/touchpadconfig.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Styreplata er kopla frå. Finn ingen andre styreplater."
