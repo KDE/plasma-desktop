@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2014, 2017.
+# SPDX-FileCopyrightText: 2014, 2017, 2024 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
-"PO-Revision-Date: 2024-05-03 16:35+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"PO-Revision-Date: 2024-07-03 10:42+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -77,7 +77,7 @@ msgstr "Nelze přečíst nastavení touchpadu"
 msgid "Cannot read default touchpad configuration"
 msgstr "Výchozí konfiguraci touchpadu nelze načíst"
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -86,12 +86,12 @@ msgstr ""
 "Chyba při načítání hodnot.Více informací naleznete v záznamech činnosti. "
 "Prosím restartujte tento nastavovací modul."
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nebyl nalezen žádný touchpad. Připojte touchpad."
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -100,7 +100,7 @@ msgstr ""
 "Nebylo možné uložit všechny změny. Více informací naleznete v záznamu. "
 "Restartujte tento konfigurační modul a zkuste to znovu."
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -109,7 +109,7 @@ msgstr ""
 "Chyba při načítání výchozích hodnot. Nastavení některých voleb na výchozí "
 "hodnotu selhalo."
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -118,12 +118,12 @@ msgstr ""
 "Při přidávání nově připojeného zařízení došlo k chybě. Připojte zařízení "
 "znovu a restartujte tento konfigurační modul."
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Touchpad byl odpojen. Jeho nastavovací dialog byl uzavřen."
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Touchpad odpojen. Žádné další touchpady nebyly nalezeny."
@@ -441,8 +441,7 @@ msgstr ""
 "tlačítko."
 
 #: ui/main.qml:712
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap right-click)"
+#, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Prostřední tlačítko (dotyk třemi prsty je pravé tlačítko)"
 

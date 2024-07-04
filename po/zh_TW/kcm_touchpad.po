@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2024-06-30 11:13+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -76,19 +76,19 @@ msgstr "無法讀取觸控板設定"
 msgid "Cannot read default touchpad configuration"
 msgstr "無法讀取預設觸控板設定"
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr "載入值時發生錯誤。請見紀錄檔以取得更多資訊。請重新啟動本設定模組。"
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "找不到觸控板。請接上觸控板。"
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -96,26 +96,26 @@ msgid ""
 msgstr ""
 "無法儲存所有變更。請見紀錄檔以取得更多資訊。請重新啟動本設定模組並再次嘗試。"
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr "載入預設值時發生錯誤。將部份選項設定為它們的預設值時失敗。"
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr "加入新連線的裝置時發生錯誤。請重新連接它並重新啟動本設定模組。"
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "觸控板已斷線。關閉此設定對話框。"
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "觸控板已斷線。找不到其他的觸控板。"

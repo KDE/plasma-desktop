@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2024-03-27 18:46+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -76,7 +76,7 @@ msgstr "Neizdodas nolasīt skārienpaliktņa konfigurāciju"
 msgid "Cannot read default touchpad configuration"
 msgstr "Neizdodas nolasīt noklusējuma skārienpaliktņa konfigurāciju"
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -85,12 +85,12 @@ msgstr ""
 "Kļūda, ielādējot vērtības. Skatīt žurnālu, lai iegūtu vairāk informācijas. "
 "Pārstartējiet šo konfigurācijas moduli."
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Skārienpaliktņi nav atrasti. Pievienojiet skārienpaliktni."
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -99,7 +99,7 @@ msgstr ""
 "Neizdevās saglabāt izmaiņas. Skatīt žurnālu, lai iegūtu vairāk informācijas. "
 "Pārstartējiet konfigurācijas moduli un mēģiniet vēlreiz."
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -108,7 +108,7 @@ msgstr ""
 "Kļūda, ielādējot noklusējuma vērtības. Neizdevās iestatīt to noklusējuma "
 "vērtības."
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -117,12 +117,12 @@ msgstr ""
 "Kļūda, pievienojot tikko pieslēgtu ierīci. Pieslēdziet to atkal un "
 "pārstartējiet šo konfigurācijas moduli."
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Skārienpaliktnis ir atvienots. Aizvērts tā iestatījumu lodziņš."
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Skārienpaliktnis ir atvienots. Citas ierīces nav atrastas."

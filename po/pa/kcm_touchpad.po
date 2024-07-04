@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2024-02-25 09:27-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -72,19 +72,19 @@ msgstr "ਟੱਚਪੈਡ ਸੰਰਚਨਾ ਪੜ੍ਹੀ ਨਹੀਂ ਜ�
 msgid "Cannot read default touchpad configuration"
 msgstr "ਮੂਲ ਟੱਚਪੈਡ ਸੰਰਚਨਾ ਪੜ੍ਹੀ ਨਹੀਂ ਜਾ ਸਕਦੀ"
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "ਕੋਈ ਟੱਚਪੈਡ ਨਹੀਂ ਲੱਭਿਆ। ਟੱਚਪੈਡ ਨਾਲ ਹੁਣ ਕਨੈਕਟ ਕਰੋ।"
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -93,14 +93,14 @@ msgstr ""
 "ਸਾਰੀਆਂ ਤਬਦੀਲੀਆਂ ਸੰਭਾਲਣ ਲਈ ਸਮਰੱਥ ਨਹੀਂ ਹੈ। ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ ਲਾਗ ਨੂੰ ਵੇਖੋ। ਇਸ ਸੰਰਚਨਾ ਮੋਡੀਊਲ ਨੂੰ "
 "ਮੁੜ-ਚਾਲੂ ਕਰਕੇ ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -109,12 +109,12 @@ msgstr ""
 "ਨਵੇਂ ਕਨੈਕਟ ਕੀਤੇ ਡਿਵਾਈਸ ਨੂੰ ਜੋੜਨ ਦੌਰਾਨ ਗਲਤੀ ਹੈ। ਇਸ ਨੂੰ ਮੁੜ-ਕਨੈਕਟ ਕਰੋ ਅਤੇ ਇਸ ਸੰਰਚਨਾ ਮੋਡੀਊਲ ਨੂੰ ਮੁੜ-"
 "ਚਾਲੂ ਕਰੋ।"
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "ਟੱਚਪੈਡ ਕਨੈਕਟ ਨਹੀਂ ਹੈ। ਇਸ ਦਾ ਸੈਟਿੰਗ ਡਾਈਲਾਗ ਬੰਦ ਹੈ।"
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "ਟੱਚਪੈਡ ਕਨੈਕਟ ਨਹੀਂ ਹੈ। ਕੋਈ ਹੋਰ ਟੱਚਪੈਡ ਨਹੀਂ ਲੱਭੇ।"

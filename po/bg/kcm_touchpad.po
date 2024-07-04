@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
-"PO-Revision-Date: 2024-06-27 18:37+0200\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"PO-Revision-Date: 2024-07-03 23:05+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -76,7 +76,7 @@ msgstr "Не може да се прочете конфигурацията на
 msgid "Cannot read default touchpad configuration"
 msgstr "Не може да се прочете конфигурацията на тъчпада по подразбиране"
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -85,12 +85,12 @@ msgstr ""
 "Грешка при зареждане на стойности. Вижте дневниците за повече информация. "
 "Моля, рестартирайте този конфигурационен модул."
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Не е намерен тъчпад. Свържете тъчпада сега."
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -99,7 +99,7 @@ msgstr ""
 "Не може да се запазят всички промени. Вижте дневниците за повече информация. "
 "Моля, рестартирайте този конфигурационен модул и опитайте отново."
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -108,7 +108,7 @@ msgstr ""
 "Грешка при зареждането на стойностите по подразбиране. Неуспешно задаване на "
 "някои опции и на техните стойности по подразбиране."
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -117,12 +117,12 @@ msgstr ""
 "Грешка при добавяне на ново свързано устройство. Моля, свържете го отново и "
 "рестартирайте този конфигурационен модул."
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Тъчпадът е изключен. Затворете диалоговия прозорец за настройка."
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Тъчпадът е изключен. Не са намерени други устройства."
@@ -447,8 +447,7 @@ msgstr ""
 "за  кликване със средния бутон."
 
 #: ui/main.qml:712
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap right-click)"
+#, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Средно кликване (докосване с три пръста за кликване на десен бутон)"
 

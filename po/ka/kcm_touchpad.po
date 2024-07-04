@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2024-07-02 06:07+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -77,7 +77,7 @@ msgstr "თაჩპედის კონფიგურაციის წა�
 msgid "Cannot read default touchpad configuration"
 msgstr "ნაგულისხმები თაჩპედის კონფიგურაციის წაკითხვის შეცდომა"
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -86,12 +86,12 @@ msgstr ""
 "მნიშვნელობების ჩატვირთვის შეცდომა. მეტი ინფორმაციის მისაღებად იხილეთ "
 "ჟურნალი. საჭიროა ამ კონფიგურაციის მოდულის გადატვირთვა."
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "თაჩპედი ვერ ვიპოვე. შეაერთეთ."
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -100,7 +100,7 @@ msgstr ""
 "ყველა ცვლილების შენახვა შეუძლებელია. მეტი ინფორმაციისთვის იხილეთ ჟურნალი. "
 "გადატვირთეთ ეს მოდული და თავიდან სცადეთ."
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -109,7 +109,7 @@ msgstr ""
 "ნაგულისხმები მნიშვნელობების ჩატვირთვის შეცდომა. ზოგიერთი პარამეტრის მათ "
 "ნაგულისხმებ მნიშვნელობებზე დაყენების შეცდომა."
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -118,12 +118,12 @@ msgstr ""
 "შეცდომა ახლად შეერთებული მოწყობილობის დამატებისას. თავიდან მიაერთეთ ის და ეს "
 "მოდული თავიდან გაუშვით."
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "თაჩპედი გაითიშა. მისი პარამეტრების ფანჯარა დაიხურა."
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "თაჩპედი გაითიშა. სხვა თაჩპედები ვერ ვიპოვე."

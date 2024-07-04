@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2024-06-28 13:49+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -83,7 +83,7 @@ msgstr "Impossible de lire la configuration du pavé tactile"
 msgid "Cannot read default touchpad configuration"
 msgstr "Impossible de lire la configuration par défaut du pavé tactile"
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -93,12 +93,12 @@ msgstr ""
 "évènements pour plus d'informations. Veuillez redémarrer ce module de "
 "configuration."
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Aucun pavé tactile trouvé. Connectez un pavé tactile maintenant."
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -108,7 +108,7 @@ msgstr ""
 "l'historique des évènements pour plus d'informations. Veuillez redémarrer ce "
 "module de configuration et essayer à nouveau."
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -117,7 +117,7 @@ msgstr ""
 "Erreur lors du chargement des valeurs par défaut. Impossible de définir "
 "certaines options à leurs valeurs d'origines."
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -126,13 +126,13 @@ msgstr ""
 "Erreur lors de l'ajout du périphérique nouvellement connecté. Veuillez le "
 "reconnecter et redémarrer ce module de configuration."
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr ""
 "Pavé tactile déconnecté. Sa boîte de dialogue de configuration a été fermée."
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Pavé tactile déconnecté. Aucun autre pavé tactile trouvé."

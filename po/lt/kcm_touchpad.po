@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2024-04-04 17:08+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -80,7 +80,7 @@ msgid "Cannot read default touchpad configuration"
 msgstr ""
 "Nepavyksta perskaityti numatytosios jutiklinio kilimėlio konfigūracijos"
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -89,12 +89,12 @@ msgstr ""
 "Klaida įkeliant reikšmes. Išsamesnei informacijai, žiūrėkite žurnalus. "
 "Paleiskite šį konfigūracijos modulį iš naujo."
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nerasta jokio jutiklinio kilimėlio. Prijunkite jį dabar."
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -104,7 +104,7 @@ msgstr ""
 "žurnalus. Paleiskite šį konfigūracijos modulį iš naujo ir bandykite dar "
 "kartą."
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -113,7 +113,7 @@ msgstr ""
 "Klaida įkeliant numatytąsias reikšmes. Nepavyko nustatyti kai kurių "
 "parinkčių į jų numatytąsias reikšmes."
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -122,12 +122,12 @@ msgstr ""
 "Klaida pridedant naujai prijungtą įrenginį. Prijunkite įrenginį iš naujo ir "
 "paleiskite šį konfigūracijos modulį iš naujo."
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Jutiklinis kilimėlis atsijungė. Užvėrė savo nuostatos dialogą."
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""

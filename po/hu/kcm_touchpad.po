@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2024-05-11 22:55+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -76,7 +76,7 @@ msgstr "Nem lehet olvasni az érintőtábla beállításait"
 msgid "Cannot read default touchpad configuration"
 msgstr "Nem lehet olvasni az érintőtábla alapértelmezett beállításait"
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -85,12 +85,12 @@ msgstr ""
 "Hiba az értékek betöltésekor. Lásd a naplót további információkért. Indítsa "
 "újra a modult."
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nem található érintőtábla. Csatlakoztassa az érintőtáblát."
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -99,7 +99,7 @@ msgstr ""
 "Nem lehet minden módosítást menteni. Lásd a naplót további információkért. "
 "Indítsa újra a modult, és próbálja meg újból."
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -108,7 +108,7 @@ msgstr ""
 "Hiba az alapértelmezett értékek betöltésekor. Nem mindegyik vagy egyik "
 "beállítás sem állítható az alapértelmezett értékre."
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -117,12 +117,12 @@ msgstr ""
 "Hiba az újonnan csatlakoztatott eszköz hozzáadásakor. Csatlakoztassa újra és "
 "indítsa újra ezt a modult."
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Az értintőpárna nincs csatlakoztatva. A beállítóablak bezárva."
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Az értintőtábla nincs csatlakoztatva. Nem található másik érintőtábla."

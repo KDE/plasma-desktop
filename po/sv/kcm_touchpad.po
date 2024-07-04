@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2024-07-02 21:48+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -76,7 +76,7 @@ msgstr "Kan inte läsa tryckplattans inställning"
 msgid "Cannot read default touchpad configuration"
 msgstr "Kan inte läsa tryckplattans standardinställning"
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -85,12 +85,12 @@ msgstr ""
 "Fel vid inläsning av värden. Se loggar för mer information. Starta om "
 "inställningsmodulen."
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Ingen tryckplatta hittades. Anslut tryckplatta nu."
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -99,7 +99,7 @@ msgstr ""
 "Kunde inte spara alla ändringar. Se loggar för mer information. Starta om "
 "inställningsmodulen och försök igen."
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -108,7 +108,7 @@ msgstr ""
 "Fel vid inläsning av förvalda värden. Några alternativ kunde inte ställas in "
 "till sina förvalda värden."
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -117,12 +117,12 @@ msgstr ""
 "Fel vid tillägg av nyansluten enhet. Anslut den igen och starta om "
 "inställningsmodulen."
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Tryckplatta bortkopplad. Stäng dess inställningsdialogruta."
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Tryckplatta bortkopplad. Inga andra tryckplattor hittades."

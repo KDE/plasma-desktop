@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -76,7 +76,7 @@ msgstr "Ne mogu da pročitam postavu dodirnika."
 msgid "Cannot read default touchpad configuration"
 msgstr "Ne mogu da pročitam postavu dodirnika."
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, fuzzy, kde-format
 #| msgid ""
 #| "Error while loading values. See logs for more informations. Please "
@@ -88,12 +88,12 @@ msgstr ""
 "Greška pri učitavanju vrednosti. Pogledajte dnevnik za više detalja. "
 "Pokrenite ponovo ovaj postavni modul."
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nema nijednog dodirnika. Povežite ga sada."
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, fuzzy, kde-format
 #| msgid ""
 #| "Not able to save all changes. See logs for more informations. Please "
@@ -105,7 +105,7 @@ msgstr ""
 "Ne mogu da sačuvam sve izmene. Pogledajte dnevnik za više detalja. Pokrenite "
 "ponovo ovaj postavni modul pa pokušajte još opet."
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -114,7 +114,7 @@ msgstr ""
 "Greška pri učitavanju podrazumevanih vrednosti. Neke od opcija ne mogu da se "
 "postave na podrazumevane vrednosti."
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -123,12 +123,12 @@ msgstr ""
 "Greška pri dodavanju novog povezanog uređaja. Povežite ga opet i pokrenite "
 "ponovo ovaj postavni modul."
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Dodirnik otkačen. Zatvorite njegov dijalog postavki."
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Dodirnik otkačen. Nema drugih dodirnika."

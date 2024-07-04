@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2024-03-29 17:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: \n"
@@ -74,7 +74,7 @@ msgstr "تعذّرت قراءة ضبط لوحة اللمس"
 msgid "Cannot read default touchpad configuration"
 msgstr "تعذّرت قراءة ضبط لوحة اللمس المبدئي"
 
-#: kcm.cpp:99
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -83,12 +83,12 @@ msgstr ""
 "خطأ أثناء تحميل القيم. انظر السجلات لمزيد من المعلومات. يرجى إعادة تشغيل "
 "وحدة الضبط هذه."
 
-#: kcm.cpp:102
+#: kcm.cpp:107
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "لم يُعثر على لوحة لمس. صِل لوحة اللمس الآن."
 
-#: kcm.cpp:111
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -97,7 +97,7 @@ msgstr ""
 "غير قادر على حفظ كل التغييرات. انظر السجلات لمزيد من المعلومات. يرجى إعادة "
 "تشغيل وحدة الضبط هذه والمحاولة مرة أخرى."
 
-#: kcm.cpp:130
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -105,7 +105,7 @@ msgid ""
 msgstr ""
 "خطأ أثناء تحميل القيم المبدئية. فشل في تعيين بعض الخيارات لقيمها المبدئية."
 
-#: kcm.cpp:150
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -114,12 +114,12 @@ msgstr ""
 "خطأ أثناء إضافة جهاز متصل حديثًا. يرجى إعادة توصيله وإعادة تشغيل وحدة الضبط "
 "هذه. "
 
-#: kcm.cpp:173
+#: kcm.cpp:178
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "لوح اللمس غير متصل. أغلقت مربع حوار الإعداد الخاص به."
 
-#: kcm.cpp:175
+#: kcm.cpp:180
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "لوح اللمس غير متصل. لم يتم العثور على أجهزة لمس أخرى."
