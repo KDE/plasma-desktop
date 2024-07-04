@@ -192,6 +192,26 @@ public:
         m_scrollFactor.set(set);
     }
 
+    bool supportsScrollOnButtonDown() const override
+    {
+        return m_supportsScrollOnButtonDown.val;
+    }
+
+    bool scrollOnButtonDownEnabledByDefault() const override
+    {
+        return m_scrollOnButtonDownEnabledByDefault.val;
+    }
+
+    bool isScrollOnButtonDown() const override
+    {
+        return m_scrollOnButtonDown.val;
+    }
+
+    void setScrollOnButtonDown(bool set) override
+    {
+        m_scrollOnButtonDown.set(set);
+    }
+
 private:
     template<typename T>
     struct Prop {
@@ -291,6 +311,9 @@ private:
     Prop<bool> m_naturalScrollEnabledByDefault{this, u"naturalScrollEnabledByDefault"_s};
     Prop<bool> m_naturalScroll{this, u"naturalScroll"_s, &KWinWaylandDevice::naturalScrollChanged};
     Prop<qreal> m_scrollFactor{this, u"scrollFactor"_s, &KWinWaylandDevice::scrollFactorChanged};
+    Prop<bool> m_supportsScrollOnButtonDown{this, u"supportsScrollOnButtonDown"_s};
+    Prop<bool> m_scrollOnButtonDownEnabledByDefault{this, u"scrollOnButtonDownEnabledByDefault"_s};
+    Prop<bool> m_scrollOnButtonDown{this, u"scrollOnButtonDown"_s, &KWinWaylandDevice::scrollOnButtonDownChanged};
 
     QString m_dbusName;
 };

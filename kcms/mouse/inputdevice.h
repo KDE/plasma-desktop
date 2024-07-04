@@ -51,6 +51,9 @@ class InputDevice : public QObject
     Q_PROPERTY(bool supportsNaturalScroll READ supportsNaturalScroll CONSTANT FINAL)
     Q_PROPERTY(bool naturalScrollEnabledByDefault READ naturalScrollEnabledByDefault CONSTANT FINAL)
     Q_PROPERTY(bool naturalScroll READ isNaturalScroll WRITE setNaturalScroll NOTIFY naturalScrollChanged FINAL)
+    Q_PROPERTY(bool supportsScrollOnButtonDown READ supportsScrollOnButtonDown CONSTANT FINAL)
+    Q_PROPERTY(bool scrollOnButtonDownEnabledByDefault READ scrollOnButtonDownEnabledByDefault CONSTANT FINAL)
+    Q_PROPERTY(bool scrollOnButtonDown READ isScrollOnButtonDown WRITE setScrollOnButtonDown NOTIFY scrollOnButtonDownChanged FINAL)
     // The only unique property to the Wayland backend
     Q_PROPERTY(qreal scrollFactor READ scrollFactor WRITE setScrollFactor NOTIFY scrollFactorChanged FINAL)
 
@@ -114,6 +117,13 @@ public:
     virtual bool isNaturalScroll() const = 0;
     virtual void setNaturalScroll(bool set) = 0;
 
+    virtual bool supportsScrollOnButtonDown() const = 0;
+
+    virtual bool scrollOnButtonDownEnabledByDefault() const = 0;
+
+    virtual bool isScrollOnButtonDown() const = 0;
+    virtual void setScrollOnButtonDown(bool set) = 0;
+
     virtual qreal scrollFactor() const = 0;
     virtual void setScrollFactor(qreal set) = 0;
 
@@ -127,6 +137,7 @@ Q_SIGNALS:
     void enabledChanged();
     void middleEmulationChanged();
     void naturalScrollChanged();
+    void scrollOnButtonDownChanged();
     // The only unique property to the Wayland backend
     void scrollFactorChanged();
 };

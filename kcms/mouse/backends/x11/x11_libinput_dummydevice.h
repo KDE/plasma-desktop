@@ -193,6 +193,26 @@ public:
     {
     }
 
+    bool supportsScrollOnButtonDown() const override
+    {
+        return s_supportsScrollOnButtonDown;
+    }
+
+    bool scrollOnButtonDownEnabledByDefault() const override
+    {
+        return s_scrollOnButtonDownEnabledByDefault;
+    }
+
+    bool isScrollOnButtonDown() const override
+    {
+        return m_scrollOnButtonDown.val;
+    }
+
+    void setScrollOnButtonDown(bool set) override
+    {
+        m_scrollOnButtonDown.set(set);
+    }
+
 private:
     template<typename T>
     struct Prop {
@@ -294,6 +314,10 @@ private:
     static constexpr bool s_supportsNaturalScroll = true;
     static constexpr bool s_naturalScrollEnabledByDefault = false;
     Prop<bool> m_naturalScroll{this, &X11LibinputDummyDevice::naturalScrollChanged, u"XLbInptNaturalScroll"_s};
+
+    static constexpr bool s_supportsScrollOnButtonDown = true;
+    static constexpr bool s_scrollOnButtonDownEnabledByDefault = false;
+    Prop<bool> m_scrollOnButtonDown{this, &X11LibinputDummyDevice::scrollOnButtonDownChanged, u"XLbInptScrollOnButtonDown"_s};
 
     std::unique_ptr<LibinputSettings> m_settings;
     Display *m_dpy = nullptr;

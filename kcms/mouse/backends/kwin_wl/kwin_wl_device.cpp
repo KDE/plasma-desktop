@@ -90,6 +90,9 @@ bool KWinWaylandDevice::init()
     success &= valueLoader(m_naturalScroll);
 
     success &= valueLoader(m_scrollFactor);
+    success &= valueLoader(m_supportsScrollOnButtonDown);
+    success &= valueLoader(m_scrollOnButtonDownEnabledByDefault);
+    success &= valueLoader(m_scrollOnButtonDown);
 
     return success;
 }
@@ -107,6 +110,7 @@ bool KWinWaylandDevice::defaults()
     // scrolling
     m_naturalScroll.set(m_naturalScrollEnabledByDefault);
     m_scrollFactor.set(1.0);
+    m_scrollOnButtonDown.set(m_scrollOnButtonDownEnabledByDefault);
 
     return true;
 }
@@ -126,6 +130,7 @@ bool KWinWaylandDevice::save()
     // scrolling
     success &= valueWriter(m_naturalScroll);
     success &= valueWriter(m_scrollFactor);
+    success &= valueWriter(m_scrollOnButtonDown);
 
     return success;
 }
@@ -142,7 +147,8 @@ bool KWinWaylandDevice::isSaveNeeded() const
         || m_pointerAccelerationProfileAdaptive.isSaveNeeded() //
         // scrolling
         || m_naturalScroll.isSaveNeeded() //
-        || m_scrollFactor.isSaveNeeded();
+        || m_scrollFactor.isSaveNeeded() //
+        || m_scrollOnButtonDown.isSaveNeeded();
 }
 
 template<typename T>
