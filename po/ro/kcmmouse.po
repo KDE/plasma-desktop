@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:39+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2024-06-09 15:00+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -251,6 +251,16 @@ msgstr "Inversează direcția derulării"
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Derulare ca pe ecran tactil."
+
+#: ui/main.qml:356
+#, kde-format
+msgid "Press middle button and move mouse to scroll"
+msgstr ""
+
+#: ui/main.qml:368
+#, kde-format
+msgid "Scrolling with the mouse while the middle button is pressed."
+msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

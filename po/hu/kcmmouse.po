@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:39+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2024-05-11 22:55+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -248,6 +248,16 @@ msgstr "Görgetés irányának megfordítása"
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Érintőképernyő-szerű görgetés."
+
+#: ui/main.qml:356
+#, kde-format
+msgid "Press middle button and move mouse to scroll"
+msgstr ""
+
+#: ui/main.qml:368
+#, kde-format
+msgid "Scrolling with the mouse while the middle button is pressed."
+msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
