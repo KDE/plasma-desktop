@@ -16,7 +16,6 @@ import org.kde.plasma.tablet.kcm
 QQC2.ApplicationWindow {
     id: root
 
-    required property var tabletEvents
     property bool toolDown: false
 
     minimumWidth: 400
@@ -68,6 +67,19 @@ QQC2.ApplicationWindow {
                 penLogText.append(i18nd("kcm_tablet", "Stylus move X=%1 Y=%2", local.x, local.y));
                 scrollLogToBottom();
             }
+        }
+    }
+
+    TabletEvents {
+        id: tabletEvents
+
+        anchors.fill: parent
+
+        onPadButtonsChanged: {
+            if (!path.endsWith(form.padDevice.sysName)) {
+                return;
+            }
+            buttonsRepeater.model = buttonCount
         }
     }
 
