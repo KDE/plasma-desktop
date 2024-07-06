@@ -5,20 +5,20 @@
 # Richard Allen <ra@ra.is>, 2000.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2009, 2022.
-# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:40+0000\n"
-"PO-Revision-Date: 2023-03-12 20:56+0000\n"
-"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-07-04 09:20+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -53,16 +53,15 @@ msgid ""
 "The Control key has been locked and is now active for all of the following "
 "keypresses."
 msgstr ""
-"Control-lykillinn er nú læstur og virkur fyrir eftirfarandi "
-"lyklaborðsaðgerðir."
+"Ctrl-lykillinn er nú læstur og virkur fyrir eftirfarandi lyklaborðsaðgerðir."
 
 #: kaccess.cpp:72
 msgid "The Control key is now active."
-msgstr "Control-lykillinn er virkur."
+msgstr "Ctrl-lykillinn er virkur."
 
 #: kaccess.cpp:73
 msgid "The Control key is now inactive."
-msgstr "Control-lykillinn er óvirkur."
+msgstr "Ctrl-lykillinn er óvirkur."
 
 #: kaccess.cpp:77
 msgid ""
@@ -218,12 +217,12 @@ msgstr "Viðvörun"
 #: kaccess.cpp:689
 #, kde-format
 msgid "&When a gesture was used:"
-msgstr "Þ&egar hreyfiskipun var notuð:"
+msgstr "&Þegar hreyfiskipun var notuð:"
 
 #: kaccess.cpp:695
 #, kde-format
 msgid "Change Settings Without Asking"
-msgstr "Breyta stillingum án staðfestingar"
+msgstr "Breyta stillingum án þess að spyrja"
 
 #: kaccess.cpp:696
 #, kde-format
@@ -233,7 +232,7 @@ msgstr "Sýna þennan staðfestingarglugga"
 #: kaccess.cpp:697
 #, kde-format
 msgid "Deactivate All AccessX Features & Gestures"
-msgstr "Slökkva á öllum AccessX eiginleikum og hreyfiskipunum"
+msgstr "Slökkva á öllum AccessX-eiginleikum og -hreyfiskipunum"
 
 #: kaccess.cpp:740 kaccess.cpp:742
 #, kde-format
@@ -389,8 +388,8 @@ msgstr ""
 "hreyfihömlun og er hægt að breyta þeim í KDE stjórnborðinu. Þú getur einnig "
 "kveikt og slökkt á þeim með stöðluðum lyklaborðsskipunum.\n"
 "\n"
-"Ef þú þarft ekki á þeim að halda skaltu velja \"Slökkva á öllum AccessX "
-"eiginleikum og hreyfiskipunum\"."
+"Ef þú þarft ekki á þeim að halda skaltu velja \"Slökkva á öllum AccessX-"
+"eiginleikum og -hreyfiskipunum\"."
 
 #: kaccess.cpp:892
 #, kde-format
@@ -398,8 +397,8 @@ msgid ""
 "Slow keys has been enabled. From now on, you need to press each key for a "
 "certain length of time before it gets accepted."
 msgstr ""
-"Hægir lyklar eru virkir. Þú verður að halda hverjum lykli inni í ákveðna "
-"stund til að virkja hann."
+"Hægir lyklar eru virkir. Þú verður að ýta á hvern lykil í ákveðið langan "
+"tímatil að hann verði samþykktur."
 
 #: kaccess.cpp:894
 #, kde-format
@@ -412,7 +411,7 @@ msgid ""
 "Bounce keys has been enabled. From now on, each key will be blocked for a "
 "certain length of time after it was used."
 msgstr ""
-"Hopplyklar eru virkir. Framvegis verður lokað á hvern lykil í ákveðinn tíma "
+"Hopplyklar eru virkir. Framvegis verður lokað á hvern lykil í tiltekinn tíma "
 "eftir að ýtt er á hann."
 
 #: kaccess.cpp:900

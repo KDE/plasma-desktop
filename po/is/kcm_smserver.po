@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-26 00:38+0000\n"
-"PO-Revision-Date: 2024-03-15 09:17+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-07-04 11:32+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -44,7 +44,7 @@ msgstr "Við innskráningu"
 #: smserversettings.kcfg:26
 #, kde-format
 msgid "Applications to be excluded from session"
-msgstr "Forrit sem á að sleppa úr setu:"
+msgstr "Forrit sem á að útiloka úr setu:"
 
 #: ui/main.qml:30
 #, kde-format
@@ -118,13 +118,13 @@ msgstr "Þegar þú skráir þig inn á að keyra forrit sem voru opin:"
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr "Við síðustu útskráningu"
+msgstr "við síðustu útskráningu"
 
 #: ui/main.qml:117
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Þegar setan var vistuð handvirkt"
+msgstr "þegar setan var vistuð handvirkt"
 
 #: ui/main.qml:126
 #, kde-kuit-format
@@ -148,7 +148,7 @@ msgctxt ""
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr "Byrja með auða lotu"
+msgstr "Byrja með auða setu"
 
 #: ui/main.qml:145
 #, kde-format

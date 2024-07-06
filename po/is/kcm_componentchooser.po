@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2024-03-16 18:21+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-07-04 09:55+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -86,7 +86,7 @@ msgstr "Velja sjálfgefinn textaritil"
 #: components/componentchooservideoplayer.cpp:15
 #, kde-format
 msgid "Select default video player"
-msgstr "Velja sjálfgefinn myndspilara"
+msgstr "Velja sjálfgefinn myndskeiðaspilara"
 
 #: ui/ComponentOverlay.qml:52
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "Þetta forrit getur einnig opnað þessar skrárgerðir:"
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr "%1 (Opnast núna í %2)"
+msgstr "%1 (opnast núna í %2)"
 
 #: ui/ComponentOverlay.qml:110
 #, kde-format
@@ -116,8 +116,8 @@ msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
 msgstr ""
-"Þetta forrit býður ekki upp á stuðning við eftirfarandi skrárgerðir, en "
-"getur hugsanlega opnað þær samt sem áður:"
+"Þetta forrit býður ekki upp á stuðning við eftirfarandi skrárgerðir en getur "
+"hugsanlega opnað þær samt sem áður:"
 
 #: ui/ComponentOverlay.qml:146
 #, kde-format
@@ -180,7 +180,7 @@ msgstr "Tónlistarspilari:"
 #: ui/main.qml:168
 #, kde-format
 msgid "Video player:"
-msgstr "Myndspilari:"
+msgstr "Myndskeiðaspilari:"
 
 #: ui/main.qml:190
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 02:27+0000\n"
-"PO-Revision-Date: 2024-04-14 18:22+0000\n"
+"PO-Revision-Date: 2024-07-04 12:54+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -30,12 +30,12 @@ msgstr "Virkja snertiplatta"
 #: actions.cpp:30
 #, kde-format
 msgid "Disable Touchpad"
-msgstr "Afvirkja snertiplatta"
+msgstr "Slökkva á snertiplatta"
 
 #: actions.cpp:38
 #, kde-format
 msgid "Toggle Touchpad"
-msgstr "Virkja/afvirkja snertiplatta"
+msgstr "Virkja/slökkva á snertiplatta"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -140,9 +140,9 @@ msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
-"Ef þessi stilling er virkjuð eykur það biðtíma eftir músarsmell um 50 msek. "
-"Töfin sem bætist við er nauðsynleg til að hægt sé að greina rétt þegar "
-"smellt er samtímis með vinstri og hægri músarhnappi."
+"Ef þessi stilling er virkjuð eykur það biðtíma eftir að smellt er með "
+"músinni um 50 msek. Töfin sem bætist við er nauðsynleg til að hægt sé að "
+"greina rétt þegar smellt er samtímis með vinstri og hægri músarhnappi."
 
 #: kcm/libinput/touchpad.qml:263
 #, kde-format
@@ -173,7 +173,7 @@ msgstr "Hefðbundin"
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr ""
-"Fjarlægðin sem bendillinn fer miðast við hversu hratt fingurinn er færður."
+"Fjarlægðin sem bendillinn fer eftir því hversu hratt fingurinn er færður."
 
 #: kcm/libinput/touchpad.qml:424
 #, kde-format
@@ -220,7 +220,7 @@ msgstr "Pikkað með tveimur fingrum:"
 #: kcm/libinput/touchpad.qml:524
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr "Hægrismellur (pikkað með þremur fingrum er miðjusmellur)"
+msgstr "Hægrismellur (þriggja fingra pikk er miðjusmellur)"
 
 #: kcm/libinput/touchpad.qml:525
 #, kde-format
@@ -276,7 +276,7 @@ msgstr "Tveir fingur"
 #: kcm/libinput/touchpad.qml:626
 #, kde-format
 msgid "Slide with two fingers scrolls."
-msgstr "Rennt með tveimur fingrum til að skruna."
+msgstr "Renna með tveimur fingrum til að skruna."
 
 #: kcm/libinput/touchpad.qml:634
 #, kde-format
@@ -286,7 +286,7 @@ msgstr "Brúnir snertiplatta"
 #: kcm/libinput/touchpad.qml:638
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
-msgstr "Rennt meðfram brúnum snertiplatta til að skruna."
+msgstr "Renna meðfram brúnum snertiplatta til að skruna."
 
 #: kcm/libinput/touchpad.qml:648
 #, kde-format
@@ -433,7 +433,7 @@ msgstr "Snertiplatti aftengdur. Engir aðrir snertiplattar fundust."
 #: kded/kded.cpp:201
 #, kde-format
 msgid "Touchpad was disabled because a mouse was plugged in"
-msgstr "Snertiplatti var gerður óvirkur þar sem mús var stungið í samband"
+msgstr "Slökkt var á snertiplattanum þar sem mús var stungið í samband"
 
 #: kded/kded.cpp:204
 #, kde-format
