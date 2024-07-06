@@ -8,6 +8,7 @@
 
 #include <KConfigGroup>
 #include <KDesktopFile>
+#include <KLocalizedString>
 
 #include "kcmkeys_debug.h"
 
@@ -151,6 +152,9 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
             KConfigGroup cg = desktopFile.desktopGroup();
             if (cg.readEntry<bool>("X-KDE-GlobalAccel-CommandShortcut", false)) {
                 return cg.readEntry("Exec");
+            }
+            if (action.id == "_launch") {
+                return i18nc("@title:group Launch app", "Launch");
             }
             return action.displayName.isEmpty() ? action.id : action.displayName;
         }
