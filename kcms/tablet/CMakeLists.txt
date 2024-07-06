@@ -26,6 +26,7 @@ target_sources(kcm_tablet PRIVATE
     kcmtablet.cpp
     tabletevents.cpp
     calibrationtool.cpp
+    tabletsmodel.cpp
 )
 
 target_link_libraries(kcm_tablet PRIVATE
@@ -40,6 +41,7 @@ target_link_libraries(kcm_tablet PRIVATE
     Wayland::Client
     kwindevices
     Canberra::Canberra
+    PkgConfig::LIBWACOM
 )
 
 if(BUILD_TESTING)

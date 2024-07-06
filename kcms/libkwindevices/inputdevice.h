@@ -117,6 +117,21 @@ public:
     }
     void setMapToWorkspace(bool mapToWorkspace);
 
+    QString deviceGroup() const
+    {
+        return m_deviceGroup.value();
+    }
+
+    bool tabletPad() const
+    {
+        return m_tabletPad.value();
+    }
+
+    bool tabletTool() const
+    {
+        return m_tabletTool.value();
+    }
+
 Q_SIGNALS:
     void needsSaveChanged();
 
@@ -244,6 +259,9 @@ private:
 
     Prop<bool> m_mapToWorkspace =
         Prop<bool>(this, "mapToWorkspace", &OrgKdeKWinInputDeviceInterface::defaultMapToWorkspace, nullptr, &InputDevice::mapToWorkspaceChanged);
+    Prop<QString> m_deviceGroup = Prop<QString>(this, "deviceGroupId");
+    Prop<bool> m_tabletPad = Prop<bool>(this, "tabletPad");
+    Prop<bool> m_tabletTool = Prop<bool>(this, "tabletTool");
 
     Prop<bool> m_supportsCalibrationMatrix =
         Prop<bool>(this, "supportsCalibrationMatrix", nullptr, &OrgKdeKWinInputDeviceInterface::supportsCalibrationMatrix, nullptr);
