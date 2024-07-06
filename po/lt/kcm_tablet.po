@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:40+0000\n"
-"PO-Revision-Date: 2024-04-19 22:09+0300\n"
+"PO-Revision-Date: 2024-07-05 23:10+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: kcmtablet.cpp:32
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Numatytasis"
 
 #: kcmtablet.cpp:33
 #, kde-format
@@ -45,15 +45,14 @@ msgid "Inverted Landscape"
 msgstr "Invertuotai gulsčiai"
 
 #: kcmtablet.cpp:86
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Sekti paskui aktyvų ekraną"
+msgstr "Sekti paskui dabartinį ekraną"
 
 #: kcmtablet.cpp:91
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Visi ekranai"
 
 #: kcmtablet.cpp:100
 #, kde-format
@@ -64,17 +63,17 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:160
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Įtalpinti į ekraną"
 
 #: kcmtablet.cpp:161
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Išlaikyti proporcijas ir įtalpinti į ekraną"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Susieti su ekrano dalimi"
 
 #: ui/main.qml:31
 #, kde-format
@@ -90,7 +89,7 @@ msgstr "Prijunkite piešimo planšetę"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Išbandyti planšetę…"
 
 #: ui/main.qml:66
 #, kde-format
@@ -101,7 +100,7 @@ msgstr "Įrenginys:"
 #: ui/main.qml:104
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Susieti su ekranu:"
 
 #: ui/main.qml:124
 #, kde-format
@@ -109,8 +108,7 @@ msgid "Orientation:"
 msgstr "Orientacija:"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Kairės rankos veiksena:"
 
@@ -122,11 +120,14 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Nurodo įrenginiui prisitaikyti prie kairiarankių naudotojų. Poveikis "
+"kiekviename įrenginyje skirtingas, bet dažnu atveju tai apkeičia kilimėlio "
+"mygtukų funkcionalumą taip, kad planšetę galima būtų naudoti aukštyn kojomis."
 
 #: ui/main.qml:153
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Susiejimo sritis:"
 
 #: ui/main.qml:240
 #, kde-format
@@ -180,22 +181,22 @@ msgstr "Kilimėlio mygtukas %1:"
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "Planšetės testeris"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Rašiklio paspaudimas X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Rašiklio atleidimas X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Rašiklio perkėlimas X=%1 Y=%2"
 
 #: ui/Tester.qml:194
 #, kde-format
@@ -203,12 +204,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Legenda:\n"
+"# X, Y – įvykio koordinatė\n"
 
 #: ui/Tester.qml:201
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Išvalyti"
 
 #~ msgid "Primary (default)"
 #~ msgstr "Pirminė (numatytoji)"

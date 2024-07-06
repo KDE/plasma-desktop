@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2024-01-11 17:06+0200\n"
+"PO-Revision-Date: 2024-07-05 21:32+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -124,12 +124,10 @@ msgid "%1, %2% complete"
 msgstr "%1, %2% užbaigta"
 
 #: ui/main.qml:217
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info Currently Indexing"
-#| msgid "<filename>%1</filename>"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr "<filename>%1</filename>"
+msgstr "Šiuo metu indeksuojama: <filename>%1</filename>"
 
 #: ui/main.qml:270
 #, kde-format

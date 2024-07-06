@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-06-28 15:23+0000\n"
+"PO-Revision-Date: 2024-07-04 11:10+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: plasmasearch/kcm.h:70
 #, kde-format
 msgid "Favorite Plugins"
-msgstr "Eftirlætis viðbætur"
+msgstr "Eftirlætisviðbætur"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -44,13 +44,14 @@ msgid ""
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
-"Virkjaðu eða afvirkjaðu viðbætur (notaðar í KRunner, forritavalmynd og á "
-"yfirlitsskjánum). Merktu viðbætur sem eftirlæti og raðaðu þeim í forgangsröð."
+"Virkjaðu eða afvirkjaðu viðbætur (notaðar í KRunner, forritaræsinum og á "
+"yfirlitsskjánum). Merktu viðbætur sem eftirlæti og raðaðu þeim í þá "
+"forgangsröð sem þér hentar."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
 msgid "Remove from favorites"
-msgstr "Fjarlægja úr eftirlæti"
+msgstr "Fjarlægja úr eftirlætum"
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -92,7 +93,7 @@ msgstr "Mistókst að fjarlægja skrá %1:<nl/>%2"
 #, kde-format
 msgctxt "@info"
 msgid "KRunner plugin installation failed"
-msgstr "Uppsetning á KRunner-viðbót mistókst"
+msgstr "Tókst ekki að setja upp KRunner-viðbót"
 
 #: plugininstaller/main.cpp:48
 #, kde-format
@@ -110,7 +111,7 @@ msgstr "Slóð að safnskrá eða afþjappaðri möppu"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
-msgstr "Ekki sýna staðfestingarglugga"
+msgstr "Ekki sýna sýnilegan staðfestingarglugga"
 
 #: plugininstaller/main.cpp:92
 #, kde-format
@@ -283,7 +284,7 @@ msgstr "Skoða %1"
 #, kde-format
 msgctxt "@info"
 msgid "Could not resolve package name of %1"
-msgstr "Tókst ekki að leysa pakkaheiti fyrir %1"
+msgstr "Tókst ekki að leysa úr pakkaheiti fyrir %1"
 
 #: plugininstaller/ZypperRPMJob.cpp:35
 #, kde-kuit-format

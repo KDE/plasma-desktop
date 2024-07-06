@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-01 00:40+0000\n"
-"PO-Revision-Date: 2024-03-14 20:23+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-07-04 09:25+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -81,7 +81,7 @@ msgstr "Ýttu á %1"
 #: kcmaccess.cpp:186
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
-msgstr "Tókst ekki að velja gsettings-stillingar fyrir Orca: \"%1\" mistókst."
+msgstr "Gat ekki stillt gsettings fyrir Orca: \"%1\" mistókst."
 
 #: kcmaccess.cpp:193
 #, kde-format
@@ -122,7 +122,7 @@ msgstr "Töf fyrir tímamörk"
 #: kcmaccessibilityactivationgestures.kcfg:29
 #, kde-format
 msgid "Use a beep for access"
-msgstr "Nota píp fyrir aðgang"
+msgstr "Nota píphljóð fyrir aðgang"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -152,7 +152,7 @@ msgstr "Nota sjónræna bjöllu í staðinn fyrir hljóð"
 #: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
-msgstr "Umsnúa kerfislitum með bjöllu"
+msgstr "Umsnúa kerfislitum þegar bjallan virkjast"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
@@ -188,7 +188,7 @@ msgstr "Slökkva á festilyklum þegar ýtt er samtímis á tvo lykla"
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr "Píp heyrist þegar ýtt er á festilykla"
+msgstr "Píphljóð þegar ýtt er á festilykla"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
@@ -218,19 +218,19 @@ msgstr "Töf þegar ýtt er á lykil"
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr "Píp heyrist þegar ýtt er á hæga lykla"
+msgstr "Píphljóð þegar ýtt er á hæga lykla"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr "Píp við samþykkta lyklaborðsaðgerð"
+msgstr "Píphljóð við samþykkta lyklaborðsaðgerð"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr "Píp við ósamþykkta lyklaborðsaðgerð"
+msgstr "Píphljóð við ósamþykkta lyklaborðsaðgerð"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
@@ -248,7 +248,7 @@ msgstr "Nota töf fyrir hopp"
 #: kcmaccessibilitykeyboardfilters.kcfg:37
 #, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr "Píp ef hopplyklaaðgerð er hafnað"
+msgstr "Píphljóð ef hopplyklaaðgerð er hafnað"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
@@ -272,7 +272,7 @@ msgstr "Endurtekningarbil fyrir músarhreyfingu"
 #: kcmaccessibilitymouse.kcfg:21
 #, kde-format
 msgid "Time to hit maximum velocity"
-msgstr "Tími þegar hámarkshraða er náð"
+msgstr "Tími þar til hámarkshraða er náð"
 
 #. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:25
@@ -305,36 +305,31 @@ msgid "Magnification"
 msgstr "Stækkun"
 
 #: ui/ActivationGestures.qml:16
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation:"
-msgstr "Virkjunarbendingar"
+msgstr "Virkjun:"
 
 #: ui/ActivationGestures.qml:17
 #, kde-format
 msgid "Use gestures for activating sticky keys and slow keys"
-msgstr "Nota bendingar til að virkja klístraða og hæga lykla"
+msgstr "Nota hreyfiskipanir til að virkja festilykla og hæga lykla"
 
 #: ui/ActivationGestures.qml:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
-msgstr "Slökkva á klístruðum og hægum lyklum eftir aðgerðaleysi um stund"
+msgstr "Slökkva á festilyklum og hægum lyklum eftir aðgerðaleysi í:"
 
 #: ui/ActivationGestures.qml:58
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " mínútur"
-msgstr[1] " mínútur"
+msgstr[0] "%1 mín."
+msgstr[1] "%1 mín."
 
 #: ui/ActivationGestures.qml:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "min"
-msgstr " mínútur"
+msgstr "mín."
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -367,12 +362,10 @@ msgid "Please choose an audio file"
 msgstr "Veldu hljóðskrá"
 
 #: ui/Bell.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Name filters in a file dialog"
-#| msgid "Audio Files (*.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
-msgstr "Hljóðskrár (*.ogg *.wav)"
+msgstr "ogg-, oga-, og wav-hljóðskrár (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
 #, kde-format
@@ -439,7 +432,7 @@ msgstr "Tímalengd:"
 #: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
-msgstr "Nota hæga lykla:"
+msgstr "Hægir lyklar:"
 
 #: ui/KeyboardFilters.qml:19
 #, kde-format
@@ -453,7 +446,7 @@ msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
 msgstr ""
 "Til að lykill sé samþykktur þarf að halda honum niðri í þann tíma sem er "
-"tiltekinn"
+"tilgreindur"
 
 #: ui/KeyboardFilters.qml:37
 #, kde-format
@@ -464,7 +457,7 @@ msgstr "Töf:"
 #: ui/KeyboardFilters.qml:57
 #, kde-format
 msgid "Ring system bell:"
-msgstr "Nota kerfisbjölluna:"
+msgstr "Hringja kerfisbjöllu:"
 
 #: ui/KeyboardFilters.qml:58
 #, kde-format
@@ -498,7 +491,7 @@ msgstr "Virkja"
 #: ui/KeyboardFilters.qml:107
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr "Hunsa þegar ýtt er snöggt og endurtekið á sama lykil"
+msgstr "Hunsa ef ýtt er snöggt og endurtekið á sama lykil"
 
 #: ui/KeyboardFilters.qml:122
 #, kde-format
@@ -509,7 +502,7 @@ msgstr "Töf:"
 #: ui/KeyboardFilters.qml:140
 #, kde-format
 msgid "Ring system bell when rejected"
-msgstr "Nota kerfisbjöllu við höfnun"
+msgstr "Hringja kerfisbjöllu við höfnun"
 
 #: ui/main.qml:29
 #, kde-format
@@ -536,10 +529,9 @@ msgid "Mouse Navigation"
 msgstr "Músarstjórnun"
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Gestures"
-msgstr "Virkjunarbendingar"
+msgstr "Virkjunarhreyfiskipanir"
 
 #: ui/main.qml:54
 #, kde-format
@@ -578,7 +570,7 @@ msgstr "Gera óvirkt þegar tveimur lyklum er haldið niðri"
 #: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr "Nota kerfisbjölluna þegar breytilyklar eru notaðir"
+msgstr "Hringja kerfisbjöllu þegar breytilyklar eru notaðir"
 
 #: ui/ModifierKeys.qml:74
 #, kde-format
@@ -588,7 +580,7 @@ msgstr "Svörun:"
 #: ui/ModifierKeys.qml:76
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
-msgstr "Nota kerfisbjölluna þegar læsilyklum er víxlað"
+msgstr "Hringja kerfisbjöllu þegar læsilyklum er víxlað af/á"
 
 #: ui/ModifierKeys.qml:87
 #, kde-format
@@ -608,7 +600,7 @@ msgstr "Virkja"
 #: ui/MouseNavigation.qml:30
 #, kde-format
 msgid "Acceleration delay:"
-msgstr "Töf á hröðun:"
+msgstr "Seinkun á hröðun:"
 
 #: ui/MouseNavigation.qml:44
 #, kde-format

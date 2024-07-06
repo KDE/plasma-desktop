@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Yasen Pramatarov <yasen@lindeas.com>, 2010.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2022-08-17 10:37+0200\n"
+"PO-Revision-Date: 2024-07-05 15:58+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -118,8 +118,8 @@ msgstr "Показва работния плот"
 #, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
-msgstr[0] "... и още %1 прозорец"
-msgstr[1] "... и още %1 прозорци"
+msgstr[0] "… и още %1 прозорец"
+msgstr[1] "… и още %1 прозорци"
 
 #: package/contents/ui/main.qml:353
 #, kde-format

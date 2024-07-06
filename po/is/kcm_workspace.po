@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-06-28 16:03+0000\n"
+"PO-Revision-Date: 2024-07-04 13:16+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -40,7 +40,7 @@ msgstr "Sjónræn hegðun:"
 #: ui/main.qml:46 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
-msgstr "Birta upplýsandi vísbendingar þegar mús sveimar yfir"
+msgstr "Birta vísbendingar með upplýsingum þegar mús sveimar yfir"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: ui/main.qml:57 workspaceoptions_plasmasettings.kcfg:15
@@ -63,7 +63,7 @@ msgstr "Hægur"
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
-msgstr "Tafarlaus"
+msgstr "Án tafar"
 
 #: ui/main.qml:119
 #, kde-format
@@ -87,43 +87,43 @@ msgid ""
 "setting for enabling and disabling it."
 msgstr ""
 "Þessi stilling kveikir eða slekkur á hreyfiáhrifum þegar skrunað er með "
-"músarhjóli eða lyklaborðinu. Sum forrit hunsa hugsanlega þessa stillingum "
-"þar sem þau styðja annað hvort ekki mjúkt skrun eða eru með eigin stillingar "
-"til að kveikja og slökkva á því."
+"músarhjóli eða lyklaborðinu. Sum forrit hunsa hugsanlega þessa stillingu þar "
+"sem þau styðja annað hvort ekki mjúkt skrun eða eru með eigin stillingar til "
+"að kveikja og slökkva á því."
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr "Að smella á skrár eða möppur:"
+msgstr "Smellt á skrár eða möppur:"
 
 #: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr "Velur þær"
+msgstr "velur þær"
 
 #: ui/main.qml:167
 #, kde-format
 msgid "Open by double-clicking instead"
-msgstr "Opna í staðinn með því að tvísmella"
+msgstr "Opnaðu í staðinn með því að tvísmella"
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr "Opnar þær"
+msgstr "opnar þær"
 
 #: ui/main.qml:193
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr "Velja með því að smella á valmerkingu atriðis"
+msgstr "Veldu með því að smella á valmerkingu atriðis"
 
 #: ui/main.qml:209
 #, kde-format
 msgid "Clicking in scrollbar track:"
-msgstr "Að smella í skrunstikubrautina:"
+msgstr "Smellt í skrunstikubrautina:"
 
 #: ui/main.qml:210
 #, kde-format
@@ -131,7 +131,7 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr "Skrunar á smellta staðinn"
+msgstr "skrunar á smellta staðinn"
 
 #: ui/main.qml:228
 #, kde-format
@@ -139,12 +139,12 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr "Skrunar upp eða niður um síðu"
+msgstr "skrunar upp eða niður um síðu"
 
 #: ui/main.qml:241
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr "Miðjusmella til að skruna á smellta staðinn"
+msgstr "miðjusmella til að skruna á smellta staðinn"
 
 #: ui/main.qml:255
 #, kde-format
@@ -233,7 +233,7 @@ msgstr ""
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Single click to open files"
-msgstr "Smella einu sinni til að opna skrár"
+msgstr "Einn smellur til að opna skrár"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
@@ -251,7 +251,7 @@ msgstr "Mjúkt skrun"
 #: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr "Vinstrismellt í skrunstikubrautina færir skrunstikuna um eina síðu"
+msgstr "Vinstrismellur í skrunstikubrautinni færir skrunstikuna um eina síðu"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:25
@@ -278,7 +278,7 @@ msgid ""
 "Show an on-screen display to indicate status changes such as brightness or "
 "volume"
 msgstr ""
-"Sýna yfirlag á skjá til að sýna stöðubreytingu eins og á birtustigi eða "
+"Sýna yfirlag á skjá sem sýnir stöðubreytingu, t.d. á birtustigi eða "
 "hljóðstyrk."
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)

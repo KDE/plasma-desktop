@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2024-01-27 14:24+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-07-04 13:26+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -27,12 +27,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Richard Allen, Sveinn í Felli,Guðmundur Erlingsson"
+msgstr "Richard Allen, Sveinn í Felli, Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ra@ra.is, sv1@fellsnet.is,gudmundure@gmail.com"
+msgstr "ra@ra.is, sv1@fellsnet.is, gudmundure@gmail.com"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: dateandtime.ui:22
@@ -44,7 +44,7 @@ msgstr "Dagsetning og tími"
 #: dateandtime.ui:30
 #, kde-format
 msgid "Set date and time &automatically"
-msgstr "Stilla klukku og d&agsetningu sjálfkrafa"
+msgstr "Stilla d&agsetningu og tíma sjálfkrafa"
 
 #. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
 #: dateandtime.ui:47
@@ -69,8 +69,8 @@ msgstr "Tímabelti"
 #, kde-format
 msgid "To change the local time zone, select your area from the list below."
 msgstr ""
-"Til að breyta tímabeltinu velurðu svæðið sem þú býrð í úr listanum fyrir "
-"neðan."
+"Veldu landsvæðið þar sem þú býrð úr listanum fyrir neðan til að breyta "
+"tímabeltinu."
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
 #: dateandtime.ui:159
@@ -102,7 +102,7 @@ msgid ""
 msgstr ""
 "Hér getur þú breytt klukku tölvunnar. Smelltu á reitina fyrir klukkustund, "
 "mínútur eða sekúndur til að breyta viðeigandi gildi, annað hvort með því að "
-"nota upp- og niðurtakkana hægra megin eða að slá inn nýtt gildi."
+"nota upp- og niðurtakkana hægra megin eða slá inn nýtt gildi."
 
 #: dtime.cpp:119
 #, kde-format
@@ -138,7 +138,7 @@ msgstr "Get ekki stillt dagssetningu."
 #: dtime.cpp:274
 #, kde-format
 msgid "Error setting new time zone."
-msgstr "Villa við að stilla nýtt tímabelti."
+msgstr "Villa við að velja nýtt tímabelti."
 
 #: dtime.cpp:274
 #, kde-format
@@ -182,7 +182,7 @@ msgstr "Athugasemd"
 #: main.cpp:89
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
-msgstr "Tókst ekki að sannvotta/framkvæma aðgerðina: %1, %2"
+msgstr "Tókst ekki að auðkenna/framkvæma aðgerðina: %1, %2"
 
 #: main.cpp:109
 #, kde-format

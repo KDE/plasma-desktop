@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:40+0000\n"
-"PO-Revision-Date: 2024-06-28 15:58+0000\n"
+"PO-Revision-Date: 2024-07-04 12:49+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -30,12 +30,12 @@ msgstr "Virkja snertiplatta"
 #: actions.cpp:30
 #, kde-format
 msgid "Disable Touchpad"
-msgstr "Afvirkja snertiplatta"
+msgstr "Slökkva á snertiplatta"
 
 #: actions.cpp:38
 #, kde-format
 msgid "Toggle Touchpad"
-msgstr "Virkja/afvirkja snertiplatta"
+msgstr "Virkja/slökkva á snertiplatta"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -260,8 +260,8 @@ msgstr "Gera óvirkan við innslátt"
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr ""
-"Gera snertiplatta óvirkan þegar slegið er inn á lyklaborðið til að koma í "
-"veg fyrir villur í innslætti."
+"Gera snertiplatta óvirkan þegar lyklaborðið er notað til að koma í veg fyrir "
+"villur í innslætti."
 
 #: ui/main.qml:196
 #, kde-format
@@ -298,9 +298,9 @@ msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
-"Ef þessi stilling er virkjuð eykur það biðtíma eftir músarsmell um 50 msek. "
-"Töfin sem bætist við er nauðsynleg til að hægt sé að greina rétt þegar "
-"smellt er samtímis með vinstri og hægri músarhnappi."
+"Ef þessi stilling er virkjuð eykur það biðtíma eftir að smellt er með "
+"músinni um 50 msek. Töfin sem bætist við er nauðsynleg til að hægt sé að "
+"greina rétt þegar smellt er samtímis með vinstri og hægri músarhnappi."
 
 #: ui/main.qml:274
 #, kde-format
@@ -363,7 +363,7 @@ msgstr "Tveir fingur"
 #: ui/main.qml:533
 #, kde-format
 msgid "Slide with two fingers scrolls."
-msgstr "Rennt með tveimur fingrum til að skruna."
+msgstr "Renna með tveimur fingrum til að skruna."
 
 #: ui/main.qml:541
 #, kde-format
@@ -373,7 +373,7 @@ msgstr "Brúnir snertiplatta"
 #: ui/main.qml:545
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
-msgstr "Rennt meðfram brúnum snertiplatta til að skruna."
+msgstr "Renna meðfram brúnum snertiplatta til að skruna."
 
 #: ui/main.qml:555
 #, kde-format
@@ -446,8 +446,7 @@ msgstr ""
 "miðjusmella."
 
 #: ui/main.qml:712
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap right-click)"
+#, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Miðjusmellur (þriggja fingra pikk er hægri smellur)"
 
