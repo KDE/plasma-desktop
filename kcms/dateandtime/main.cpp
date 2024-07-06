@@ -68,8 +68,8 @@ bool KclockModule::kauthSave()
         QDateTime newTime = dtime->userTime();
         qDebug() << "Set date to " << dtime->userTime();
         helperargs[QStringLiteral("date")] = true;
-        helperargs[QStringLiteral("newdate")] = QString::number(newTime.currentSecsSinceEpoch());
-        helperargs[QStringLiteral("olddate")] = QString::number(::time(nullptr));
+        helperargs[QStringLiteral("newdate")] = QString::number(newTime.toSecsSinceEpoch());
+        helperargs[QStringLiteral("olddate")] = QString::number(QDateTime::currentSecsSinceEpoch());
     }
 
     QString selectedTimeZone = dtime->selectedTimeZone();
@@ -81,6 +81,7 @@ bool KclockModule::kauthSave()
     }
 
     Action action(authActionName());
+    action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmclock"));
     action.setArguments(helperargs);
 
     ExecuteJob *job = action.execute();
