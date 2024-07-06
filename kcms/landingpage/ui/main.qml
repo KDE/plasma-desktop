@@ -71,18 +71,24 @@ KCM.SimpleKCM {
 
         RowLayout {
             id: appearanceButtonsRow
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
+            Kirigami.FormData.label: i18nc("@title:group translate as short as possible", "More appearance settings:")
 
-            QQC2.Button {
-                icon.name: "preferences-desktop-wallpaper"
-                text: i18n("Change Wallpaper…")
+            MostUsedIcon {
+                id: wallpaperKCMButton
+                Layout.fillWidth: true
+                Layout.preferredWidth: 50 // 50% of the available width
+                kcmIcon: "preferences-desktop-wallpaper"
+                kcmName: i18nc("@action:button as in, 'this will take you to the Wallpaper KCM'", "Wallpaper")
                 onClicked: kcm.openKCM("kcm_wallpaper")
             }
 
-            QQC2.Button {
-                // This button deliberately does not start with a verb to save space
-                // so that translations don't overflow, as horizontal space is limited
-                text: i18n("More Appearance Settings…")
-                icon.name: "preferences-desktop-theme-global"
+            MostUsedIcon {
+                Layout.fillWidth: true
+                Layout.preferredWidth: 50 // 50% of the available width
+                kcmIcon: "preferences-desktop-theme-global"
+                kcmName: i18nc("@action:button as in, 'this will take you to the first KCM in the Colors & Themes group'", "Colors & Themes")
                 onClicked: kcm.openKCM("kcm_lookandfeel")
             }
         }
@@ -208,11 +214,12 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: false
         }
 
-        QQC2.Button {
-            // This button deliberately does not start with a verb to save space
-            // so that translations don't overflow, as horizontal space is limited
-            text: i18n("More Behavior Settings…")
-            icon.name: "preferences-desktop"
+
+        MostUsedIcon {
+            Kirigami.FormData.label: i18nc("@title:group translate as short as possible", "More behavior settings:")
+            Layout.preferredWidth: wallpaperKCMButton.width
+            kcmName: i18nc("@action:button as in, 'this will take you to the General Behavior KCM'", "General Behavior")
+            kcmIcon: "preferences-desktop"
             onClicked: kcm.openKCM("kcm_workspace")
         }
 
