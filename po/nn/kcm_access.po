@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-01 00:40+0000\n"
-"PO-Revision-Date: 2024-03-17 10:02+0100\n"
+"PO-Revision-Date: 2024-07-06 14:48+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -315,19 +315,19 @@ msgstr "Bruk muserørsler for å slå på faste valtastar og trege tastar"
 #: ui/ActivationGestures.qml:29
 #, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
-msgstr ""
+msgstr "Slå faste valtastar og trege tastar av etter inaktivitet."
 
 #: ui/ActivationGestures.qml:58
 #, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 minutt"
+msgstr[1] "%1 minutt"
 
 #: ui/ActivationGestures.qml:62
 #, kde-format
 msgid "min"
-msgstr ""
+msgstr "min"
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -360,12 +360,10 @@ msgid "Please choose an audio file"
 msgstr "Vel lydfil"
 
 #: ui/Bell.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Name filters in a file dialog"
-#| msgid "Audio Files (*.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
-msgstr "Lydfiler (*.ogg *.wav)"
+msgstr "ogg-, oga- og wav-lydfiler (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
 #, kde-format

@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-06 00:40+0000\n"
-"PO-Revision-Date: 2024-03-09 19:13+0100\n"
+"PO-Revision-Date: 2024-07-06 15:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -385,17 +385,15 @@ msgstr "Stil"
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
-msgstr ""
+msgstr "Rett det"
 
 #: contents/configuration/PanelConfiguration.qml:564
 msgid "Panel Width:"
 msgstr "Panelbreidd:"
 
 #: contents/configuration/PanelConfiguration.qml:565
-#, fuzzy
-#| msgid "Panel Width:"
 msgid "Panel Height:"
-msgstr "Panelbreidd:"
+msgstr "Panelhøgd:"
 
 #: contents/configuration/PanelConfiguration.qml:588
 msgid "Focus shortcut:"
@@ -417,11 +415,11 @@ msgstr "Fjern panelet (kan ikkje angrast)"
 #: contents/configuration/PanelConfiguration.qml:647
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr ""
+msgstr "Fullført"
 
 #: contents/configuration/PanelConfiguration.qml:650
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "Lukk panelinnstillingane og avslutt tilpassingsmodus"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -453,8 +451,6 @@ msgstr ""
 "Dobbeltklikk for å tilbakestilla."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy
-#| msgid "Panels and Desktops Management"
 msgid "Panel and Desktop Management"
 msgstr "Handsaming av panel og skrivebord"
 
@@ -549,89 +545,89 @@ msgstr "Ingen element er tilgjengelege"
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Klokke:"
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Hald synleg når opplåsingsfeltet forsvinn"
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Mediestyring:"
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Vis under opplåsingsfeltet"
 
 #: contents/lockscreen/LockScreenUi.qml:48
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Klarte ikkje låsa opp"
 
 #: contents/lockscreen/LockScreenUi.qml:271
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "«Caps Lock» er på"
 
 #: contents/lockscreen/LockScreenUi.qml:285
 msgid "Sleep"
-msgstr ""
+msgstr "Kvilemodus"
 
 #: contents/lockscreen/LockScreenUi.qml:291
 msgid "Hibernate"
-msgstr ""
+msgstr "Dvalemodus"
 
 #: contents/lockscreen/LockScreenUi.qml:297
 msgid "Switch User"
-msgstr ""
+msgstr "Byt brukar"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Virtuelt tastatur"
 
 #: contents/lockscreen/LockScreenUi.qml:382
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Byt utforming"
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr ""
+msgstr "Passord"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr ""
+msgstr "Lås opp"
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(eller les av fingeravtrykket ditt)"
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(eller les av smartkortet ditt)"
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr ""
+msgstr "Utan tittel"
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr ""
+msgstr "Inkje medium vert spela av"
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr ""
+msgstr "Førre spor"
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Spel/pause"
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr ""
+msgstr "Neste spor"
 
 #: contents/osd/OsdItem.qml:32
 msgctxt "Percentage value"
@@ -640,23 +636,21 @@ msgstr ""
 
 #: contents/views/DesktopEditMode.qml:113
 msgid "Global Themes"
-msgstr ""
+msgstr "Globale tema"
 
 #: contents/views/DesktopEditMode.qml:120
-#, fuzzy
-#| msgid "Open configuration page"
 msgid "Display Configuration"
-msgstr "Opnar oppsettsida"
+msgstr "Skjermoppsett"
 
 #: contents/views/DesktopEditMode.qml:141
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "Meir"
 
 #: contents/views/DesktopEditMode.qml:150
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Avslutt tilpassing"
 
 #: contents/views/Panel.qml:302
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Panelfokus-markør"

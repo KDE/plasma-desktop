@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-03 00:40+0000\n"
-"PO-Revision-Date: 2024-02-18 18:15+0530\n"
+"POT-Creation-Date: 2024-07-07 00:40+0000\n"
+"PO-Revision-Date: 2024-07-06 21:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
+
+#: basemodel.cpp:157
+#, kde-format
+msgctxt "@title:group Launch app"
+msgid "Launch"
+msgstr ""
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -328,7 +334,7 @@ msgstr "இந்த சுருக்குவழியை நீக்கு"
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
-msgstr ""
+msgstr "சேர்…"
 
 #: ui/ShortcutActionDelegate.qml:190
 #, kde-format
