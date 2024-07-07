@@ -651,7 +651,7 @@ ColumnLayout {
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PC3.ToolTip.visible: hovered
 
-                onClicked: plasmoid.containment.corona.editMode = false
+                onClicked: plasmoid.internalAction("configure").trigger()
             }
         }
     }
