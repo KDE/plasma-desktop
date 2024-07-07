@@ -1,7 +1,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_tablet\")
 
-find_package(LayerShellQt REQUIRED)
-
 kcmutils_add_qml_kcm(kcm_tablet INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 ecm_qt_declare_logging_category(kcm_tablet
@@ -42,7 +40,6 @@ target_link_libraries(kcm_tablet PRIVATE
     Wayland::Client
     kwindevices
     Canberra::Canberra
-    LayerShellQt::Interface
 )
 if (Qt${QT_MAJOR_VERSION}_VERSION VERSION_LESS "6.5.0")
     target_link_libraries(kcm_tablet PRIVATE Qt::GuiPrivate)

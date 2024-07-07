@@ -12,7 +12,6 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <LayerShellQt/shell.h>
 #include <QGuiApplication>
 #include <QMatrix4x4>
 #include <QScreen>
@@ -200,8 +199,6 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData)
     , m_toolsModel(new DevicesModel("tabletTool", this))
     , m_padsModel(new DevicesModel("tabletPad", this))
 {
-    LayerShellQt::Shell::useLayerShell();
-
     qDBusRegisterMetaType<QMatrix4x4>();
 
     qmlRegisterType<OutputsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OutputsModel");
