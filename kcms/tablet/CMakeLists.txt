@@ -41,9 +41,6 @@ target_link_libraries(kcm_tablet PRIVATE
     kwindevices
     Canberra::Canberra
 )
-if (Qt${QT_MAJOR_VERSION}_VERSION VERSION_LESS "6.5.0")
-    target_link_libraries(kcm_tablet PRIVATE Qt::GuiPrivate)
-endif()
 
 if(BUILD_TESTING)
     add_subdirectory(tests)
