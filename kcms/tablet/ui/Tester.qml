@@ -173,6 +173,11 @@ QQC2.ApplicationWindow {
                         }
                     }
                 }
+
+                // This is here just to catch events from going to the window, nothing more
+                MouseArea {
+                    anchors.fill: parent
+                }
             }
 
             ColumnLayout {
