@@ -20,7 +20,9 @@ QQC2.ApplicationWindow {
     required property var tabletEvents
 
     property CalibrationTool tool: CalibrationTool {
-        device: root.device
+        onFinished: matrix => {
+            tool.setCalibrationMatrix(device, matrix);
+        }
     }
 
     property real currentPenToolX: -1
@@ -102,7 +104,7 @@ QQC2.ApplicationWindow {
             visible: tool.finishedCalibration
 
             onClicked: {
-                tool.restoreDefaults();
+                tool.restoreDefaults(root.device);
                 tool.reset();
             }
 

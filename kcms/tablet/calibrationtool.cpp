@@ -12,18 +12,30 @@
 #include <KSharedConfig>
 #include <canberra.h>
 
-InputDevice *CalibrationTool::device() const
+void CalibrationTool::setWidth(const float width)
 {
-    return m_device;
+    if (m_width != width) {
+        m_width = width;
+        Q_EMIT widthChanged();
+    }
 }
 
-void CalibrationTool::setDevice(InputDevice *device)
+float CalibrationTool::width() const
 {
-    if (device != m_device) {
-        m_device = device;
+    return m_width;
+}
 
-        Q_EMIT deviceChanged();
+void CalibrationTool::setHeight(const float height)
+{
+    if (m_height != height) {
+        m_height = height;
+        Q_EMIT heightChanged();
     }
+}
+
+float CalibrationTool::height()
+{
+    return m_height;
 }
 
 bool CalibrationTool::finishedCalibration() const
@@ -50,9 +62,14 @@ void CalibrationTool::calibrate(const double touchX, const double touchY, const 
     playSound(QStringLiteral("completion-partial"));
 }
 
-void CalibrationTool::restoreDefaults()
+void CalibrationTool::setCalibrationMatrix(InputDevice *device, const QMatrix4x4 &matrix)
 {
-    m_device->setCalibrationMatrix(m_device->defaultCalibrationMatrix());
+    device->setCalibrationMatrix(matrix);
+}
+
+void CalibrationTool::restoreDefaults(InputDevice *device)
+{
+    device->setCalibrationMatrix(device->defaultCalibrationMatrix());
     playSound(QStringLiteral("dialog-information"));
 }
 
@@ -62,7 +79,7 @@ void CalibrationTool::reset()
     Q_EMIT currentTargetChanged();
 
     m_finishedCalibration = false;
-    Q_EMIT finished();
+    Q_EMIT finishedCalibrationChanged();
 }
 
 void ca_finish_callback(ca_context *c, uint32_t id, int error_code, void *userdata)
@@ -168,10 +185,9 @@ void CalibrationTool::checkIfFinished()
         average(2, 0) = 0.0f;
         average(2, 1) = 0.0f;
 
-        m_device->setCalibrationMatrix(QMatrix4x4(average));
-
         m_finishedCalibration = true;
-        Q_EMIT finished();
+        Q_EMIT finishedCalibrationChanged();
+        Q_EMIT finished(QMatrix4x4(average));
 
         playSound(QStringLiteral("completion-success"));
     }
