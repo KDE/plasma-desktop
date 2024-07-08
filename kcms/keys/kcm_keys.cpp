@@ -312,7 +312,7 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
     const QString keysString = newSequence.toString(QKeySequence::NativeText);
     const QString message = isStandardAction
         ? xi18nc("@info %2 is the name of a category inside the 'Common Actions' section",
-                 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?",
+                 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action <interface>%3</interface>.<nl/><nl/>Re-assign it to %4?",
                  keysString,
                  currentComponentName,
                  currentActionName,
