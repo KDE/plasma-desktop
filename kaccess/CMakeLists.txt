@@ -19,7 +19,6 @@ target_link_libraries(kaccess
     KF6::DBusAddons
     KF6::Crash
     X11::X11
-    Canberra::Canberra
 )
 target_link_libraries(kaccess Qt::GuiPrivate)
 
