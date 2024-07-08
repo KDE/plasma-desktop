@@ -203,32 +203,27 @@ Item {
                 actionItemsVisible: !inputPanel.keyboardActive
                 actionItems: [
                     ActionButton {
-                        iconSource: "system-suspend"
+                        icon.name: "system-suspend"
                         text: i18ndc("plasma-desktop-sddm-theme", "Suspend to RAM", "Sleep")
-                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                     },
                     ActionButton {
-                        iconSource: "system-reboot"
+                        icon.name: "system-reboot"
                         text: i18nd("plasma-desktop-sddm-theme", "Restart")
-                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
                     },
                     ActionButton {
-                        iconSource: "system-shutdown"
+                        icon.name: "system-shutdown"
                         text: i18nd("plasma-desktop-sddm-theme", "Shut Down")
-                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                     },
                     ActionButton {
-                        iconSource: "system-user-prompt"
+                        icon.name: "system-user-prompt"
                         text: i18ndc("plasma-desktop-sddm-theme", "For switching to a username and password prompt", "Other…")
-                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: mainStack.push(userPromptComponent)
-                        enabled: true
                         visible: !userListComponent.showUsernamePrompt
                     }]
 
@@ -347,30 +342,26 @@ Item {
                 actionItemsVisible: !inputPanel.keyboardActive
                 actionItems: [
                     ActionButton {
-                        iconSource: "system-suspend"
+                        icon.name: "system-suspend"
                         text: i18ndc("plasma-desktop-sddm-theme", "Suspend to RAM", "Sleep")
-                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                     },
                     ActionButton {
-                        iconSource: "system-reboot"
+                        icon.name: "system-reboot"
                         text: i18nd("plasma-desktop-sddm-theme", "Restart")
-                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
                     },
                     ActionButton {
-                        iconSource: "system-shutdown"
+                        icon.name: "system-shutdown"
                         text: i18nd("plasma-desktop-sddm-theme", "Shut Down")
-                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                     },
                     ActionButton {
-                        iconSource: "system-user-list"
+                        icon.name: "system-user-list"
                         text: i18nd("plasma-desktop-sddm-theme", "List Users")
-                        fontSize: Kirigami.Theme.defaultFont.pointSize + 1
                         onClicked: mainStack.pop()
                     }
                 ]
