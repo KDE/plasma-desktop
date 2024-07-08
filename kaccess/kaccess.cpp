@@ -12,6 +12,8 @@
 
 #include <QAction>
 #include <QApplication>
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QFile>
@@ -44,8 +46,6 @@
 #define XK_MISCELLANY
 #define XK_XKB_KEYS
 #include <X11/keysymdef.h>
-
-#include <canberra.h>
 
 Q_LOGGING_CATEGORY(logKAccess, "kcm_kaccess")
 
@@ -121,7 +121,6 @@ KAccessApp::KAccessApp()
     , m_mouseSettings(new MouseSettings(this))
     , m_screenReaderSettings(new ScreenReaderSettings(this))
     , m_kdeglobals(QStringLiteral("kdeglobals"))
-    , overlay(nullptr)
     , toggleScreenReaderAction(new QAction(this))
 {
     m_error = false;
@@ -134,8 +133,6 @@ KAccessApp::KAccessApp()
         m_error = true;
         return;
     }
-    _activeWindow = KX11Extras::activeWindow();
-    connect(KX11Extras::self(), &KX11Extras::activeWindowChanged, this, &KAccessApp::activeWindowChanged);
 
     initMasks();
     XkbStateRec state_return;
@@ -152,9 +149,6 @@ KAccessApp::KAccessApp()
 
 KAccessApp::~KAccessApp()
 {
-    if (m_caContext) {
-        ca_context_destroy(m_caContext);
-    }
 }
 
 void KAccessApp::newInstance()
@@ -303,9 +297,6 @@ void KAccessApp::readSettings()
         XkbSetAutoResetControls(QX11Info::display(), ctrls, &ctrls, &values);
     }
 
-    delete overlay;
-    overlay = nullptr;
-
     setScreenReaderEnabled(m_screenReaderSettings.enabled());
 
     toggleScreenReaderAction->setText(i18n("Toggle Screen Reader On and Off"));
@@ -419,17 +410,6 @@ bool KAccessApp::nativeEventFilter(const QByteArray &eventType, void *message, q
     return false;
 }
 
-void VisualBell::paintEvent(QPaintEvent *event)
-{
-    QWidget::paintEvent(event);
-    QTimer::singleShot(_pause, this, &QWidget::hide);
-}
-
-void KAccessApp::activeWindowChanged(WId wid)
-{
-    _activeWindow = wid;
-}
-
 void KAccessApp::xkbStateNotify()
 {
     // On Wayland kaccess runs as XWayland app.
@@ -477,100 +457,12 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
     if (event->eventOnly)
         return;
 
-    // flash the visible bell
-    if (m_bellSettings.visibleBell()) {
-        // create overlay widget
-        if (!overlay)
-            overlay = new VisualBell(m_bellSettings.visibleBellPause());
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                      QStringLiteral("/org/kde/KWin/Effect/SystemBell1"),
+                                                      QStringLiteral("org.kde.KWin.Effect.SystemBell1"),
+                                                      QStringLiteral("triggerScreen"));
 
-        WId id = _activeWindow;
-
-        NETRect frame, window;
-        NETWinInfo net(QX11Info::connection(), id, QX11Info::appRootWindow(), NET::Properties(), NET::Properties2());
-
-        net.kdeGeometry(frame, window);
-
-        overlay->setGeometry(window.pos.x, window.pos.y, window.size.width, window.size.height);
-
-        if (m_bellSettings.invertScreen()) {
-            QPixmap screen = QGuiApplication::primaryScreen()->grabWindow(id, 0, 0, window.size.width, window.size.height);
-
-            // is this the best way to invert a pixmap?
-
-            //    QPixmap invert(window.size.width, window.size.height);
-            QPalette pal = overlay->palette();
-            {
-                QImage i = screen.toImage();
-                i.invertPixels();
-                pal.setBrush(overlay->backgroundRole(), QBrush(QPixmap::fromImage(std::move(i))));
-            }
-            overlay->setPalette(pal);
-            /*
-                  QPainter p(&invert);
-                  p.setRasterOp(QPainter::NotCopyROP);
-                  p.drawPixmap(0, 0, screen);
-                  overlay->setBackgroundPixmap(invert);
-            */
-        } else {
-            QPalette pal = overlay->palette();
-            pal.setColor(overlay->backgroundRole(), m_bellSettings.visibleBellColor());
-            overlay->setPalette(pal);
-        }
-
-        // flash the overlay widget
-        overlay->raise();
-        overlay->show();
-        QCoreApplication::sendPostedEvents();
-    }
-
-    // ask canberra to ring a nice bell
-    if (m_bellSettings.systemBell()) {
-        if (!m_caContext) {
-            int ret = ca_context_create(&m_caContext);
-            if (ret != CA_SUCCESS) {
-                qCWarning(logKAccess) << "Failed to initialize canberra context for audio notification:" << ca_strerror(ret);
-                m_caContext = nullptr;
-                return;
-            }
-
-            ret = ca_context_change_props(m_caContext,
-                                          CA_PROP_APPLICATION_NAME,
-                                          qApp->applicationDisplayName().toUtf8().constData(),
-                                          CA_PROP_APPLICATION_ID,
-                                          qApp->desktopFileName().toUtf8().constData(),
-                                          nullptr);
-            if (ret != CA_SUCCESS) {
-                qCWarning(logKAccess) << "Failed to set application properties on canberra context for audio notification:" << ca_strerror(ret);
-            }
-        } else {
-            ca_context_cancel(m_caContext, 0);
-        }
-
-        if (m_bellSettings.customBell()) {
-            ca_context_play(m_caContext,
-                            0,
-                            CA_PROP_MEDIA_FILENAME,
-                            QFile::encodeName(QUrl(m_bellSettings.customBellFile()).toLocalFile()).constData(),
-                            CA_PROP_MEDIA_ROLE,
-                            "event",
-                            CA_PROP_CANBERRA_CACHE_CONTROL,
-                            "permanent",
-                            nullptr);
-        } else {
-            const QString themeName = m_kdeglobals.group(QStringLiteral("Sounds")).readEntry("Theme", QStringLiteral("ocean"));
-            ca_context_play(m_caContext,
-                            0,
-                            CA_PROP_EVENT_ID,
-                            "bell",
-                            CA_PROP_MEDIA_ROLE,
-                            "event",
-                            CA_PROP_CANBERRA_CACHE_CONTROL,
-                            "permanent",
-                            CA_PROP_CANBERRA_XDG_THEME_NAME,
-                            themeName.toUtf8().constData(),
-                            nullptr);
-        }
-    }
+    QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
 }
 
 QString mouseKeysShortcut(Display *display)

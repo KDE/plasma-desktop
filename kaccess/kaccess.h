@@ -28,8 +28,6 @@
 #include <fixx11h.h>
 
 class KComboBox;
-struct ca_context;
-struct ca_proplist;
 
 class KAccessApp : public QObject, public QAbstractNativeEventFilter
 {
@@ -56,7 +54,6 @@ protected:
 
 private Q_SLOTS:
 
-    void activeWindowChanged(WId wid);
     void notifyChanges();
     void applyChanges();
     void yesClicked();
@@ -81,12 +78,6 @@ private:
     unsigned int features;
     unsigned int requestedFeatures;
 
-    QWidget *overlay;
-
-    ca_context *m_caContext = nullptr;
-
-    WId _activeWindow;
-
     QDialog *dialog;
     QLabel *featuresLabel;
     KComboBox *showModeCombobox;
@@ -96,22 +87,4 @@ private:
 
     QAction *toggleScreenReaderAction;
     bool m_error;
-};
-
-class VisualBell : public QWidget
-{
-    Q_OBJECT
-
-public:
-    VisualBell(int pause)
-        : QWidget((QWidget *)nullptr, Qt::X11BypassWindowManagerHint)
-        , _pause(pause)
-    {
-    }
-
-protected:
-    void paintEvent(QPaintEvent *) override;
-
-private:
-    int _pause;
 };
