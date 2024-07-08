@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 00:40+0000\n"
-"PO-Revision-Date: 2024-07-03 05:50+0200\n"
+"POT-Creation-Date: 2024-07-08 00:40+0000\n"
+"PO-Revision-Date: 2024-07-07 06:23+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "გაშვება"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -42,35 +42,46 @@ msgstr "შეცდომა %1-ის დამატებისას. რ�
 msgid "Error while communicating with the global shortcuts service"
 msgstr "გლობალური მალსახმობის სერვისთან ურთიერთობის შეცდომა"
 
-#: kcm_keys.cpp:57
+#: kcm_keys.cpp:58
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "გლობალური მალსახმობის სერვისთან დაკავშირების შეცდომა"
 
-#: kcm_keys.cpp:312
-#, kde-format
-msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#: kcm_keys.cpp:315
+#, fuzzy, kde-format
+#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#| msgid ""
+#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+#| "Do you want to reassign it?"
+msgctxt ""
+"@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
-"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
+"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "მალსახმობი %1 უკვე მინიჭებულია ჩვეულებრივ %2 ქმედებაზე %3.\n"
 "გნებავთ მისი თავიდან მინიჭება?"
 
-#: kcm_keys.cpp:316
-#, kde-format
+#: kcm_keys.cpp:321
+#, kde-kuit-format
+msgctxt "@info"
 msgid ""
-"Shortcut %1 is already assigned to action '%2' of %3.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
+"%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
+"action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
-"მალსახმობი %1 უკვე მინიჭებულია %3-ის ქმედებაზე %2.\n"
-"გნებავთ მისი თავიდან მინიჭება?"
 
-#: kcm_keys.cpp:317
+#: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
-msgid "Found conflict"
-msgstr "კონფლიქტი"
+msgid "Resolve Shortcut Conflict"
+msgstr ""
+
+#: kcm_keys.cpp:340
+#, kde-format
+msgctxt "@action:button"
+msgid "Reassign"
+msgstr ""
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -337,7 +348,7 @@ msgstr "ამ მალსახმობის წაშლა"
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
-msgstr "დამატება..."
+msgstr "დამატება…"
 
 #: ui/ShortcutActionDelegate.qml:190
 #, kde-format
@@ -348,6 +359,17 @@ msgstr "საკუთარი მალსახმობის დამა�
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "ახალი მალსახმობის ჩაჭერის გაუქმება"
+
+#~ msgid ""
+#~ "Shortcut %1 is already assigned to action '%2' of %3.\n"
+#~ "Do you want to reassign it?"
+#~ msgstr ""
+#~ "მალსახმობი %1 უკვე მინიჭებულია %3-ის ქმედებაზე %2.\n"
+#~ "გნებავთ მისი თავიდან მინიჭება?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Found conflict"
+#~ msgstr "კონფლიქტი"
 
 #~ msgctxt "@action:button Keep translated text as short as possible"
 #~ msgid "Add Command…"

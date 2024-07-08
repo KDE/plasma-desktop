@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 00:40+0000\n"
+"POT-Creation-Date: 2024-07-08 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -41,35 +41,46 @@ msgstr "添加 %1 时出错，它似乎没有关联的操作。"
 msgid "Error while communicating with the global shortcuts service"
 msgstr "与全局快捷键服务通信时出错"
 
-#: kcm_keys.cpp:57
+#: kcm_keys.cpp:58
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "与全局快捷键守护进程通信失败"
 
-#: kcm_keys.cpp:312
-#, kde-format
-msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#: kcm_keys.cpp:315
+#, fuzzy, kde-format
+#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#| msgid ""
+#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+#| "Do you want to reassign it?"
+msgctxt ""
+"@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
-"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
+"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "快捷键 %1 已经分配给了通用的 %2 操作“%3”。\n"
 "您想要重新分配吗？"
 
-#: kcm_keys.cpp:316
-#, kde-format
+#: kcm_keys.cpp:321
+#, kde-kuit-format
+msgctxt "@info"
 msgid ""
-"Shortcut %1 is already assigned to action '%2' of %3.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
+"%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
+"action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
-"快捷键 %1 已经分配给了 %3 的操作“%2”。\n"
-"您想要重新分配吗？"
 
-#: kcm_keys.cpp:317
+#: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
-msgid "Found conflict"
-msgstr "发现冲突"
+msgid "Resolve Shortcut Conflict"
+msgstr ""
+
+#: kcm_keys.cpp:340
+#, kde-format
+msgctxt "@action:button"
+msgid "Reassign"
+msgstr ""
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -344,3 +355,14 @@ msgstr "添加自定义快捷键"
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "取消捕获新快捷键"
+
+#~ msgid ""
+#~ "Shortcut %1 is already assigned to action '%2' of %3.\n"
+#~ "Do you want to reassign it?"
+#~ msgstr ""
+#~ "快捷键 %1 已经分配给了 %3 的操作“%2”。\n"
+#~ "您想要重新分配吗？"
+
+#~ msgctxt "@title:window"
+#~ msgid "Found conflict"
+#~ msgstr "发现冲突"

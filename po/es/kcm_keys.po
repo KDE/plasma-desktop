@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 00:40+0000\n"
-"PO-Revision-Date: 2024-07-03 17:30+0200\n"
+"POT-Creation-Date: 2024-07-08 00:40+0000\n"
+"PO-Revision-Date: 2024-07-07 12:12+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "Lanzar"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -45,36 +45,47 @@ msgstr ""
 "Ha ocurrido un error durante la comunicación con el servicio de atajos de "
 "teclado globales"
 
-#: kcm_keys.cpp:57
+#: kcm_keys.cpp:58
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr ""
 "Ha fallado la comunicación con el demonio de atajos de teclado globales"
 
-#: kcm_keys.cpp:312
-#, kde-format
-msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#: kcm_keys.cpp:315
+#, fuzzy, kde-format
+#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#| msgid ""
+#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+#| "Do you want to reassign it?"
+msgctxt ""
+"@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
-"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
+"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "El atajo de teclado %1 ya está asignado a la acción común de %2 «%3».\n"
 "¿Desea cambiar la asignación?"
 
-#: kcm_keys.cpp:316
-#, kde-format
+#: kcm_keys.cpp:321
+#, kde-kuit-format
+msgctxt "@info"
 msgid ""
-"Shortcut %1 is already assigned to action '%2' of %3.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
+"%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
+"action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
-"El atajo de teclado %1 ya está asignado a la acción «%2» de %3.\n"
-"¿Desea cambiar la asignación?"
 
-#: kcm_keys.cpp:317
+#: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
-msgid "Found conflict"
-msgstr "Se ha encontrado un conflicto"
+msgid "Resolve Shortcut Conflict"
+msgstr ""
+
+#: kcm_keys.cpp:340
+#, kde-format
+msgctxt "@action:button"
+msgid "Reassign"
+msgstr ""
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -352,6 +363,17 @@ msgstr "Añadir atajo de teclado personalizado"
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Cancelar la captura del nuevo atajo de teclado"
+
+#~ msgid ""
+#~ "Shortcut %1 is already assigned to action '%2' of %3.\n"
+#~ "Do you want to reassign it?"
+#~ msgstr ""
+#~ "El atajo de teclado %1 ya está asignado a la acción «%2» de %3.\n"
+#~ "¿Desea cambiar la asignación?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Found conflict"
+#~ msgstr "Se ha encontrado un conflicto"
 
 #~ msgctxt "@action:button Keep translated text as short as possible"
 #~ msgid "Add Command…"

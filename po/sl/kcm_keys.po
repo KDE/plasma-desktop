@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 00:40+0000\n"
-"PO-Revision-Date: 2024-07-03 07:29+0200\n"
+"POT-Creation-Date: 2024-07-08 00:40+0000\n"
+"PO-Revision-Date: 2024-07-07 06:03+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "Zaženi"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -42,35 +42,46 @@ msgstr "Napaka pri dodajanju %1, kot kaže nima nobene dejavnosti."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Napaka pri komunikacij z globalno storitvijo bližnjic"
 
-#: kcm_keys.cpp:57
+#: kcm_keys.cpp:58
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Neuspela komunikacija z demonom globalnih bližnjic"
 
-#: kcm_keys.cpp:312
-#, kde-format
-msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#: kcm_keys.cpp:315
+#, fuzzy, kde-format
+#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#| msgid ""
+#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+#| "Do you want to reassign it?"
+msgctxt ""
+"@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
-"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
+"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "Bližnjica %1 je že dodeljena običajnemu dejanju %2 '%3'.\n"
 "Ali jo želite dodeliti drugam?"
 
-#: kcm_keys.cpp:316
-#, kde-format
+#: kcm_keys.cpp:321
+#, kde-kuit-format
+msgctxt "@info"
 msgid ""
-"Shortcut %1 is already assigned to action '%2' of %3.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
+"%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
+"action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
-"Bližnjica %1 je že dodeljena dejanju '%2' od %3.\n"
-"Ali jo želite dodeliti drugam?"
 
-#: kcm_keys.cpp:317
+#: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
-msgid "Found conflict"
-msgstr "Najden spor"
+msgid "Resolve Shortcut Conflict"
+msgstr ""
+
+#: kcm_keys.cpp:340
+#, kde-format
+msgctxt "@action:button"
+msgid "Reassign"
+msgstr ""
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -348,6 +359,17 @@ msgstr "Dodaj bližnjico po meri"
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Prekliči zajem nove bližnjice"
+
+#~ msgid ""
+#~ "Shortcut %1 is already assigned to action '%2' of %3.\n"
+#~ "Do you want to reassign it?"
+#~ msgstr ""
+#~ "Bližnjica %1 je že dodeljena dejanju '%2' od %3.\n"
+#~ "Ali jo želite dodeliti drugam?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Found conflict"
+#~ msgstr "Najden spor"
 
 #~ msgctxt "@action:button Keep translated text as short as possible"
 #~ msgid "Add Command…"

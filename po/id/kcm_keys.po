@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 00:40+0000\n"
+"POT-Creation-Date: 2024-07-08 00:40+0000\n"
 "PO-Revision-Date: 2022-05-09 20:24+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -41,35 +41,46 @@ msgstr "Galat ketika menambahkan %1, tampaknya tidak memiliki aksi."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Galat ketika sedang berkomunikasi dengan layanan pintasan global"
 
-#: kcm_keys.cpp:57
+#: kcm_keys.cpp:58
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Gagal untuk berkomunikasi dengan daemon pintasan global"
 
-#: kcm_keys.cpp:312
-#, kde-format
-msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#: kcm_keys.cpp:315
+#, fuzzy, kde-format
+#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#| msgid ""
+#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+#| "Do you want to reassign it?"
+msgctxt ""
+"@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
-"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
+"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "Pintasan %1 sudah ditetapkan ke %2 umum aksi '%3'.\n"
 "Apakah kamu ingin menetapkannya ulang?"
 
-#: kcm_keys.cpp:316
-#, kde-format
+#: kcm_keys.cpp:321
+#, kde-kuit-format
+msgctxt "@info"
 msgid ""
-"Shortcut %1 is already assigned to action '%2' of %3.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
+"%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
+"action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
-"Pintasan %1 sudah ditetapkan ke aksi '%2' dari %3.\n"
-"Apakah kamu ingin menetapkannya ulang?"
 
-#: kcm_keys.cpp:317
+#: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
-msgid "Found conflict"
-msgstr "Ditemukan bentrok"
+msgid "Resolve Shortcut Conflict"
+msgstr ""
+
+#: kcm_keys.cpp:340
+#, kde-format
+msgctxt "@action:button"
+msgid "Reassign"
+msgstr ""
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -352,6 +363,17 @@ msgstr "Tambahkan pintasan kustom"
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Batal menangkap pintasan baru"
+
+#~ msgid ""
+#~ "Shortcut %1 is already assigned to action '%2' of %3.\n"
+#~ "Do you want to reassign it?"
+#~ msgstr ""
+#~ "Pintasan %1 sudah ditetapkan ke aksi '%2' dari %3.\n"
+#~ "Apakah kamu ingin menetapkannya ulang?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Found conflict"
+#~ msgstr "Ditemukan bentrok"
 
 #~ msgid "Import Scheme…"
 #~ msgstr "Impor Skema..."

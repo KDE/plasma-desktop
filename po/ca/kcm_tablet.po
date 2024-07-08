@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 00:40+0000\n"
+"POT-Creation-Date: 2024-07-08 00:40+0000\n"
 "PO-Revision-Date: 2024-06-11 11:35+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -19,100 +19,146 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: kcmtablet.cpp:32
+#: kcmtablet.cpp:34
 #, kde-format
 msgid "Default"
 msgstr "Predeterminada"
 
-#: kcmtablet.cpp:33
+#: kcmtablet.cpp:35
 #, kde-format
 msgid "Portrait"
 msgstr "Vertical"
 
-#: kcmtablet.cpp:34
+#: kcmtablet.cpp:36
 #, kde-format
 msgid "Landscape"
 msgstr "Apaïsada"
 
-#: kcmtablet.cpp:35
+#: kcmtablet.cpp:37
 #, kde-format
 msgid "Inverted Portrait"
 msgstr "Vertical invertida"
 
-#: kcmtablet.cpp:36
+#: kcmtablet.cpp:38
 #, kde-format
 msgid "Inverted Landscape"
 msgstr "Apaïsada invertida"
 
-#: kcmtablet.cpp:86
+#: kcmtablet.cpp:88
 #, kde-format
 msgid "Follow the Current Screen"
 msgstr "Segueix la pantalla actual"
 
-#: kcmtablet.cpp:91
+#: kcmtablet.cpp:93
 #, kde-format
 msgid "All Screens"
 msgstr "Totes les pantalles"
 
-#: kcmtablet.cpp:100
+#: kcmtablet.cpp:102
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:160
+#: kcmtablet.cpp:162
 #, kde-format
 msgid "Fit to Screen"
 msgstr "Ajusta a la pantalla"
 
-#: kcmtablet.cpp:161
+#: kcmtablet.cpp:163
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
 msgstr "Mantén la relació d'aspecte i ajusta en la pantalla"
 
-#: kcmtablet.cpp:162
+#: kcmtablet.cpp:164
 #, kde-format
 msgid "Map to Portion of Screen"
 msgstr "Associa a una porció de la pantalla"
 
-#: ui/main.qml:31
+#: ui/Calibration.qml:29
+#, kde-format
+msgctxt "@title"
+msgid "Pen Calibration"
+msgstr ""
+
+#: ui/Calibration.qml:83
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
+"or close the window."
+msgstr ""
+
+#: ui/Calibration.qml:84
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
+"tip lands, and ignore the cursor position on the screen."
+msgstr ""
+
+#: ui/Calibration.qml:90
+#, kde-format
+msgctxt "@action:button"
+msgid "Refine Existing Calibration"
+msgstr ""
+
+#: ui/Calibration.qml:99
+#, kde-format
+msgctxt "@action:button"
+msgid "Calibrate from Scratch"
+msgstr ""
+
+#: ui/Calibration.qml:113
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr ""
+
+#: ui/Calibration.qml:113
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr ""
+
+#: ui/main.qml:32
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "No s'ha trobat cap tauleta de dibuix"
 
-#: ui/main.qml:32
+#: ui/main.qml:33
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "Connecta una tauleta de dibuix"
 
-#: ui/main.qml:40
+#: ui/main.qml:41
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "Prova la tauleta…"
 
-#: ui/main.qml:66
+#: ui/main.qml:67
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Dispositiu:"
 
-#: ui/main.qml:104
+#: ui/main.qml:105
 #, kde-format
 msgid "Map to screen:"
 msgstr "Associa a la pantalla:"
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientació:"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Mode esquerrà:"
 
-#: ui/main.qml:147
+#: ui/main.qml:148
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -124,55 +170,79 @@ msgstr ""
 "variaran segons el dispositiu, però sovint s'inverteix la funcionalitat dels "
 "botons del teclat perquè la tauleta es pugui utilitzar cap per avall."
 
-#: ui/main.qml:153
+#: ui/main.qml:154
 #, kde-format
 msgid "Mapped Area:"
 msgstr "Àrea associada:"
 
-#: ui/main.qml:240
+#: ui/main.qml:241
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Redimensiona l'àrea de la tauleta"
 
-#: ui/main.qml:264
+#: ui/main.qml:265
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Bloqueja la relació d'aspecte"
 
-#: ui/main.qml:272
+#: ui/main.qml:273
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:281
+#: ui/main.qml:282
 #, kde-format
 msgid "Pen button 1:"
 msgstr "Botó 1 del llapis:"
 
-#: ui/main.qml:282
+#: ui/main.qml:283
 #, kde-format
 msgid "Pen button 2:"
 msgstr "Botó 2 del llapis:"
 
-#: ui/main.qml:283
+#: ui/main.qml:284
 #, kde-format
 msgid "Pen button 3:"
 msgstr "Botó 3 del llapis:"
 
-#: ui/main.qml:327
+#: ui/main.qml:329
+#, kde-format
+msgctxt "@action:button Calibration in progress"
+msgid "Calibration in Progress"
+msgstr ""
+
+#: ui/main.qml:331
+#, kde-format
+msgctxt "@action:button Calibrate the pen display"
+msgid "Calibrate"
+msgstr ""
+
+#: ui/main.qml:334
+#, kde-format
+msgctxt "@action:button Pen display doesn't support calibration"
+msgid "Calibration Not Supported"
+msgstr ""
+
+#: ui/main.qml:361
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Calibration across multiple screens is not supported."
+msgstr ""
+
+#: ui/main.qml:371
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Teclat:"
 
-#: ui/main.qml:338
+#: ui/main.qml:382
 #, kde-format
 msgid "None"
 msgstr "Sense"
 
-#: ui/main.qml:360
+#: ui/main.qml:404
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Botó de teclat %1:"
@@ -198,7 +268,7 @@ msgstr "Llapis deixat anar X=%1 Y=%2"
 msgid "Stylus move X=%1 Y=%2"
 msgstr "Moviment del llapis X=%1 Y=%2"
 
-#: ui/Tester.qml:194
+#: ui/Tester.qml:199
 #, kde-format
 msgid ""
 "## Legend:\n"
@@ -207,7 +277,7 @@ msgstr ""
 "## Llegenda:\n"
 "# X, Y - coordenades de l'esdeveniment\n"
 
-#: ui/Tester.qml:201
+#: ui/Tester.qml:206
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 00:40+0000\n"
+"POT-Creation-Date: 2024-07-08 00:40+0000\n"
 "PO-Revision-Date: 2023-12-21 17:57+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -44,36 +44,47 @@ msgstr "Fehler beim Hinzufügen von %1, es gibt anscheinen keine Aktionen."
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Fehler bei der Kommunikation mit dem Dienst für globale Kurzbefehle"
 
-#: kcm_keys.cpp:57
+#: kcm_keys.cpp:58
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr ""
 "Die Kommunikation mit dem Dienst für globale Kurzbefehle ist fehlgeschlagen"
 
-#: kcm_keys.cpp:312
-#, kde-format
-msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#: kcm_keys.cpp:315
+#, fuzzy, kde-format
+#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#| msgid ""
+#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+#| "Do you want to reassign it?"
+msgctxt ""
+"@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
-"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
+"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "Der Kurzbefehl %1 ist bereits der Aktion „%3“ in Kategorie %2 zugewiesen.\n"
 "Möchten Sie ihn neu zuweisen?"
 
-#: kcm_keys.cpp:316
-#, kde-format
+#: kcm_keys.cpp:321
+#, kde-kuit-format
+msgctxt "@info"
 msgid ""
-"Shortcut %1 is already assigned to action '%2' of %3.\n"
-"Do you want to reassign it?"
+"Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
+"%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
+"action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
-"Der Kurzbefehl %1 ist bereits der Aktion „%2“ von %3 zugewiesen.\n"
-"Möchten Sie ihn neu zuweisen?"
 
-#: kcm_keys.cpp:317
+#: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
-msgid "Found conflict"
-msgstr "Konflikt aufgetreten"
+msgid "Resolve Shortcut Conflict"
+msgstr ""
+
+#: kcm_keys.cpp:340
+#, kde-format
+msgctxt "@action:button"
+msgid "Reassign"
+msgstr ""
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -354,6 +365,17 @@ msgstr "Eigenen Kurzbefehl hinzufügen"
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Aufzeichnung des neuen Kurzbefehls abbrechen"
+
+#~ msgid ""
+#~ "Shortcut %1 is already assigned to action '%2' of %3.\n"
+#~ "Do you want to reassign it?"
+#~ msgstr ""
+#~ "Der Kurzbefehl %1 ist bereits der Aktion „%2“ von %3 zugewiesen.\n"
+#~ "Möchten Sie ihn neu zuweisen?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Found conflict"
+#~ msgstr "Konflikt aufgetreten"
 
 #~ msgctxt "@action:button Keep translated text as short as possible"
 #~ msgid "Add Command…"

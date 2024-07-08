@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-05 00:40+0000\n"
-"PO-Revision-Date: 2024-07-06 14:52+0200\n"
+"PO-Revision-Date: 2024-07-07 14:53+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -85,12 +85,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Peikareininga er kopla frå. Fann ingen andre einingar."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Re-bind Additional Mouse Buttons…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Bindings for Additional Mouse Buttons"
-msgstr "Tilknyt fleire museknappar …"
+msgstr "Tilknyt fleire museknappar"
 
 #: ui/bindings.qml:70
 #, kde-format
