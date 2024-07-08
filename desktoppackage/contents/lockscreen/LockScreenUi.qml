@@ -283,19 +283,19 @@ Item {
                 actionItems: [
                     ActionButton {
                         text: i18nd("plasma_shell_org.kde.plasma.desktop", "Sleep")
-                        iconSource: "system-suspend"
+                        icon.name: "system-suspend"
                         onClicked: root.suspendToRam()
                         visible: root.suspendToRamSupported
                     },
                     ActionButton {
                         text: i18nd("plasma_shell_org.kde.plasma.desktop", "Hibernate")
-                        iconSource: "system-suspend-hibernate"
+                        icon.name: "system-suspend-hibernate"
                         onClicked: root.suspendToDisk()
                         visible: root.suspendToDiskSupported
                     },
                     ActionButton {
                         text: i18nd("plasma_shell_org.kde.plasma.desktop", "Switch User")
-                        iconSource: "system-switch-user"
+                        icon.name: "system-switch-user"
                         onClicked: {
                             sessionManagement.switchUser();
                         }
