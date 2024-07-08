@@ -432,6 +432,14 @@ void KAccessApp::activeWindowChanged(WId wid)
 
 void KAccessApp::xkbStateNotify()
 {
+    // On Wayland kaccess runs as XWayland app.
+    // Depending on the key sniffing settings we may or may not get key
+    // events from XWayland.
+    // On Wayland KWin shows these notifications, so don't do anything here
+    if (qEnvironmentVariable("XDG_SESSION_TYPE") == QLatin1String("wayland")) {
+        return;
+    }
+
     XkbStateRec state_return;
     XkbGetState(QX11Info::display(), XkbUseCoreKbd, &state_return);
     unsigned char latched = XkbStateMods(&state_return);
