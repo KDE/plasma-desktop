@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-21 00:40+0000\n"
-"PO-Revision-Date: 2024-07-06 14:43+0200\n"
+"PO-Revision-Date: 2024-07-07 14:58+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -80,13 +80,7 @@ msgid "Keyboard layout visualization"
 msgstr "Visualisering av tastaturutforming"
 
 #: tastenbrett/main.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "The keyboard geometry failed to load. This often indicates that the "
-#| "selected model does not support a specific layout or layout variant. This "
-#| "problem will likely also present when you try to use this combination of "
-#| "model, layout and variant."
+#, kde-format
 msgctxt "@label"
 msgid ""
 "The keyboard geometry failed to load. This often indicates that the selected "
@@ -100,7 +94,10 @@ msgstr ""
 "Klarte ikkje lasta tastatur­geometrien. Denne tyder vanlegvis at den valde "
 "modellen ikkje støttar ei viss utforming eller ein viss utformings­variant. "
 "Dette problemet vil truleg òg oppstå når du prøver å bruka denne "
-"kombinasjonen av modell, utforming og utformingsvariant."
+"kombinasjonen av modell, utforming og utformingsvariant.\n"
+"Førehandsvising av utformingar som er definerte utanfor xkb-mappa, er ikkje "
+"støtta, og vil òg utløysa denne feilmeldinga. Men det kan vera utformingane "
+"likevel vil fungera."
 
 #: ui/Advanced.qml:40
 #, kde-format
