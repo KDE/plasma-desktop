@@ -22,9 +22,13 @@ target_link_libraries(kaccess
 )
 target_link_libraries(kaccess Qt::GuiPrivate)
 
-install(TARGETS kaccess ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+ecm_install_configured_files(
+    INPUT plasma-kaccess.service.in
+    @ONLY
+    DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR}
+)
 
-########### install files ###############
+install(TARGETS kaccess ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES kaccess.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install( FILES kaccess.desktop  DESTINATION  ${KDE_INSTALL_AUTOSTARTDIR} )

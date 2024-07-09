@@ -1,0 +1,7 @@
+[Unit]
+Description=KAccess
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/kaccess
+Slice=background.slice
