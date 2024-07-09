@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-06-11 04:55+0200\n"
+"PO-Revision-Date: 2024-07-08 05:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -78,7 +78,7 @@ msgstr "ასახვა ეკრანის ნაწილზე"
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "კალმის კალიბრაცია"
 
 #: ui/Calibration.qml:83
 #, kde-kuit-format
@@ -87,6 +87,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"კალიბრაცია დასრულდა და შენახულია.<nl/><nl/>შეგიძლიათ, კალიბრაცია კიდევ უფრო "
+"ზუსტი გახადოთ, ან დახუროთ ფანჯარა."
 
 #: ui/Calibration.qml:84
 #, kde-kuit-format
@@ -95,30 +97,33 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"დაატყაპუნეთ თითოეული სამიზნის ცენტრში.<nl/><nl/>დაუმიზნეთ წერტილს, სადაც "
+"სტილუსის წვერი შეეხება და ნუ მიაქცევთ ეკრანზე კურსორის მდებარეობას "
+"ყურადღებას."
 
 #: ui/Calibration.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "არსებული კალიბრაციის დაზუსტება"
 
 #: ui/Calibration.qml:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "კალიბრაცია ნულიდან"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "დახურვა"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "გაუქმება"
 
 #: ui/main.qml:32
 #, kde-format
@@ -210,25 +215,25 @@ msgstr "კალმის ღილაკი 3:"
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "კალიბრაციის მიმდინარეობა"
 
 #: ui/main.qml:331
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "კალიბრაცია"
 
 #: ui/main.qml:334
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "კალიბრაცია მხარდაჭერილი არაა"
 
 #: ui/main.qml:361
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "კალიბრაცია ერთზე მეტ ეკრანზე მხარდაჭერილი არაა."
 
 #: ui/main.qml:371
 #, kde-format

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-07-07 06:23+0200\n"
+"POT-Creation-Date: 2024-07-09 00:40+0000\n"
+"PO-Revision-Date: 2024-07-08 05:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -48,19 +48,20 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "გლობალური მალსახმობის სერვისთან დაკავშირების შეცდომა"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#, fuzzy, kde-kuit-format
+#| msgctxt ""
+#| "@info %2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
+#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
-"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+"<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"მალსახმობი %1 უკვე მინიჭებულია ჩვეულებრივ %2 ქმედებაზე %3.\n"
-"გნებავთ მისი თავიდან მინიჭება?"
+"მალსახმობი <shortcut>%1</shortcut> უკვე მინიჭებულია ჩვეულებრივ %2 ქმედებაზე "
+"<interface>%3</interface>.<nl/><nl/>გნებავთ მისი თავიდან მინიჭება %4-ზე?"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -70,18 +71,22 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
+"მალსახმობი <shortcut>%1</shortcut> უკვე მინიჭებულია ქმედებაზე <interface>%2</"
+"interface> აპლიკაციისთვის <application>%3</application>.<nl/><nl/>მოვხსნა და "
+"მივანიჭო ის ქმედებას <interface>%4</interface> აპლიკაციისთვის <application>"
+"%4</application>?"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "მალსახმობის კონფლიქტის გადაჭრა"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "თავიდან მინიჭება"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format

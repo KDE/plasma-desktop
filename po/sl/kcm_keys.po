@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-07-07 06:03+0200\n"
+"POT-Creation-Date: 2024-07-09 00:40+0000\n"
+"PO-Revision-Date: 2024-07-08 07:15+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -48,19 +48,20 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Neuspela komunikacija z demonom globalnih bližnjic"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#, fuzzy, kde-kuit-format
+#| msgctxt ""
+#| "@info %2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
+#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
-"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+"<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"Bližnjica %1 je že dodeljena običajnemu dejanju %2 '%3'.\n"
-"Ali jo želite dodeliti drugam?"
+"Bližnjica <shortcut>%1</shortcut> je že dodeljena običajnemu dejanju %2 "
+"<interface>%3<interface>.<nl/><nl/>Naj jo znova dodelim %4?"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -70,18 +71,21 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
+"Bližnjica <shortcut>%1</shortcut> je že dodeljena dejanju <interface>%2</"
+"interface> od <application>%3</application>.<nl/><nl/>Naj jo znovadodelim "
+"dejanju <interface> %4</interface> od <application>%4</application>?"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Razreši spor bližnjic"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Ponovno dodeli"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format

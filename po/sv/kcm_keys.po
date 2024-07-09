@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-07-07 08:45+0200\n"
+"POT-Creation-Date: 2024-07-09 00:40+0000\n"
+"PO-Revision-Date: 2024-07-08 17:06+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -47,19 +47,20 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Misslyckades kommunicera med global genvägsdemon"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#, fuzzy, kde-kuit-format
+#| msgctxt ""
+#| "@info %2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
+#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
-"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+"<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"Genvägen %1 är redan tilldelad till den vanliga %2-åtgärden '%3'.\n"
-"Vill du ändra tilldelningen?"
+"Genvägen <shortcut>%1</shortcut> är redan tilldelad till den vanliga %2-"
+"åtgärden <interface>%3<interface>.<nl/><nl/>Ändra tilldelningen till %4?"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -69,18 +70,21 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
+"Genvägen <shortcut>%1</shortcut> är redan tilldelad till åtgärden <interface>"
+"%2</interface> i <application>%3</application>.<nl/><nl/>Ändra den till "
+"åtgärden <interface>%4</interface> i <application>%4</application>?"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Lös upp genvägskonflikter"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Ändra tilldelning"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-07-03 16:55+0200\n"
+"POT-Creation-Date: 2024-07-09 00:40+0000\n"
+"PO-Revision-Date: 2024-07-08 18:21+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: basemodel.cpp:157
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "Iniciar"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -47,19 +47,20 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Non foi posíbel comunicar co servizo de atallos globais."
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#, fuzzy, kde-kuit-format
+#| msgctxt ""
+#| "@info %2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
+#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
-"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+"<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"O atallo %1 xa está asignado á acción común «%3» de %2.\n"
-"Quere reasignalo?"
+"O atallo <shortcut>%1</shortcut> xa está asignado á acción común <interface>"
+"%3</interface> de %2.<nl/> <nl/>Quere reasignalo a %4?"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -69,18 +70,21 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
+"O atallo <shortcut>%1</shortcut> xa está asignado á acción <interface>%2</"
+"interface> de <application>%3</application>.<nl/> <nl/>Quere reasignalo á "
+"acción <interface>%4</interface> de <application>%4</application>?"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Resolver un conflito de atallos"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Reasignar"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format

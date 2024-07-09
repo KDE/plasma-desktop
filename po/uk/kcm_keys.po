@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-07-07 08:39+0300\n"
+"POT-Creation-Date: 2024-07-09 00:40+0000\n"
+"PO-Revision-Date: 2024-07-08 09:40+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -51,19 +51,20 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Не вдалося встановити зв'язок із фоновою службою загальних скорочень"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#, fuzzy, kde-kuit-format
+#| msgctxt ""
+#| "@info %2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
+#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
-"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+"<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"Скорочення %1 вже пов'язано із типовою дією %2 «%3».\n"
-"Хочете змінити його прив'язку?"
+"Скорочення <shortcut>%1</shortcut> вже пов'язано із загальною дією %2 у "
+"<interface>%3<interface>.<nl/><nl/>Перепризначити його до %4?"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -73,18 +74,21 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
+"Скорочення <shortcut>%1</shortcut> вже пов'язано із дією <interface>%2</"
+"interface> у <application>%3</application>.<nl/><nl/>Перепризначити його до "
+"дії <interface>%4</interface> у <application>%4</application>?"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Розв'язання конфлікту скорочень"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Перепризначити"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format

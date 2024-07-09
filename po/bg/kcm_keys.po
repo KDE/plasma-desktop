@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-07-07 22:27+0200\n"
+"POT-Creation-Date: 2024-07-09 00:40+0000\n"
+"PO-Revision-Date: 2024-07-08 22:36+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -47,19 +47,21 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Неуспешна комуникация с демона за глобални клавишни комбинации"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#, fuzzy, kde-kuit-format
+#| msgctxt ""
+#| "@info %2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
+#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
-"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+"<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"Клавишна комбинация %1 вече е присвоена на общото %2 действие '%3'. \n"
-"Искате ли да го пренасочите?"
+"Клавишна комбинация <shortcut>%1</shortcut> вече е присвоена на общото %2 "
+"действие <interface>%3<interface>.<nl/><nl/>Искате ли да го пренасочите към "
+"%4?"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -69,18 +71,22 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
+"Клавишна комбинация <shortcut>%1</shortcut> вече е присвоена на действие "
+"<interface>%2 </interface> от <application>%3</application>.<nl/><nl/>Искате "
+"ли да го пренасочите към действие <interface>%4</interface> на<application>"
+"%4</application>?"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Корекция на конфликт с клавишна комбинация"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Преназначаване"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format

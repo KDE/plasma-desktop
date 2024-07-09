@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-06-12 00:41+0300\n"
+"PO-Revision-Date: 2024-07-08 14:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -78,7 +78,7 @@ msgstr "Ekranın Bir Kısmına Eşlemle"
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Kalem Kalibrasyonu"
 
 #: ui/Calibration.qml:83
 #, kde-kuit-format
@@ -87,6 +87,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Kalibrasyon tamamlandı ve kaydedildi.<nl/><nl/>İsterseniz kalibrasyonda ince "
+"ayar yapmayı sürdürün veya bu pencereyi kapatın."
 
 #: ui/Calibration.qml:84
 #, kde-kuit-format
@@ -95,30 +97,32 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Her bir hedefin merkezine dokunun.<nl/><nl/>Kalem ucunun iniş yaptığı "
+"noktayı hedef alın ve ekrandaki imleç konumunu yok sayın."
 
 #: ui/Calibration.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Var Olan Kalibrasyonu Geliştir"
 
 #: ui/Calibration.qml:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Sıfırdan Kalibre Et"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Kapat"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 #: ui/main.qml:32
 #, kde-format
@@ -211,25 +215,25 @@ msgstr "Kalem düğmesi 3:"
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Kalibrasyon Sürüyor"
 
 #: ui/main.qml:331
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Kalibre Et"
 
 #: ui/main.qml:334
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Kalibrasyon Desteklenmiyor"
 
 #: ui/main.qml:361
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "Birden çok ekran arasında kalibrasyon yapmak desteklenmiyor."
 
 #: ui/main.qml:371
 #, kde-format

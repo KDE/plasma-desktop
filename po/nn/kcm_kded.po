@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2024-07-06 14:48+0200\n"
+"PO-Revision-Date: 2024-07-08 21:45+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -53,6 +53,8 @@ msgid ""
 "If you're disabling something here to work around an issue, please <link "
 "url='%1'>submit a bug report about it as well.</link>"
 msgstr ""
+"Viss du slår av noko her for å omgå eit problem, <link url='%1'>legg òg "
+"helst inn ein feilrapport om problemet</link>."
 
 #: ui/main.qml:55
 #, kde-format
@@ -109,18 +111,16 @@ msgid "Load-on-Demand Services"
 msgstr "Når-det-trengst-tenester"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "Slå på/av automatisk lasting av tenesta ved oppstart"
+msgstr "Slå av automatisk lasting av %1 ved oppstart"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "Slå på/av automatisk lasting av tenesta ved oppstart"
+msgstr "Slå på automatisk lasting av %1 ved oppstart"
 
 #: ui/main.qml:183
 #, kde-format

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-07-07 17:03+0300\n"
+"POT-Creation-Date: 2024-07-09 00:40+0000\n"
+"PO-Revision-Date: 2024-07-08 14:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -49,19 +49,21 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Global kısayollar ardalan süreci ile iletişim kurulamadı"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+#, fuzzy, kde-kuit-format
+#| msgctxt ""
+#| "@info %2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
+#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
-"<interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+"<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"%1 kısayolu halihazırda ortak %2 “%3” eylemine atanmış.\n"
-"Yeniden atamak istiyor musunuz?"
+"<shortcut>%1</shortcut> kısayolu halihazırda ortak %2 <interface>"
+"%3<interface> eylemine atanmış.<nl/><nl/>%4 eylemine yeniden atamak istiyor "
+"musunuz?"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -71,18 +73,22 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
+"<shortcut>%1</shortcut> kısayolu halihazırda <application>%3</application> "
+"uygulamasının <interface>%2</interface> eylemine atanmış.<nl/><nl/"
+"><application>%4</application> uygulamasının <interface>%4</interface> "
+"eylemine yeniden atansın mı?"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Kısayol Çakışmasını Çöz"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Yeniden Ata"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format

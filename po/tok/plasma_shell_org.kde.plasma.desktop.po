@@ -1,871 +1,646 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-# Joëlle Cornavin <jcorn@free.fr>, 2013, 2014.
-# Yoann Laissus <yoann.laissus@gmail.com>, 2015, 2016, 2017.
-# Vincent Pinon <vpinon@kde.org>, 2016, 2017.
-# Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
-# Xavier Besnard <xavier.besnard@kde.org>, 2023.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
 #
+# SPDX-FileCopyrightText: 2024 Janet Blackquill <uhhadd@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-06 00:40+0000\n"
-"PO-Revision-Date: 2024-07-07 20:17+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
-"Language: fr\n"
+"PO-Revision-Date: 2024-07-07 20:41-0400\n"
+"Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
+"Language-Team: C <kde-i18n-doc@kde.org>\n"
+"Language: tok\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Accelerator-Marker: &\n"
-"X-Environment: kde\n"
-"X-Generator: Lokalize 23.08.5\n"
-"X-Text-Markup: kde4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
-msgstr "En cours d'utilisation"
+msgstr "ni li kepeken"
 
 #: contents/activitymanager/ActivityItem.qml:245
 msgid ""
 "Move to\n"
 "this activity"
 msgstr ""
-"Déplacer vers\n"
-"cette activité"
 
 #: contents/activitymanager/ActivityItem.qml:275
 msgid ""
 "Show also\n"
 "in this activity"
 msgstr ""
-"Afficher aussi\n"
-"dans cette activité"
 
 #: contents/activitymanager/ActivityItem.qml:337
 msgid "Configure"
-msgstr "Configurer"
+msgstr ""
 
 #: contents/activitymanager/ActivityItem.qml:356
 msgid "Stop activity"
-msgstr "Arrêter l'activité"
+msgstr ""
 
 #: contents/activitymanager/ActivityList.qml:142
 msgid "Stopped activities:"
-msgstr "Activités arrêtées :"
+msgstr ""
 
 #: contents/activitymanager/ActivityManager.qml:122
 msgid "Create activity…"
-msgstr "Créer une activité..."
+msgstr ""
 
 #: contents/activitymanager/Heading.qml:59
 msgid "Activities"
-msgstr "Activités"
+msgstr ""
 
 #: contents/activitymanager/StoppedActivityItem.qml:138
 msgid "Configure activity"
-msgstr "Configurer l'activité"
+msgstr ""
 
 #: contents/activitymanager/StoppedActivityItem.qml:155
 msgid "Delete"
-msgstr "Supprimer"
+msgstr ""
 
 #: contents/applet/AppletError.qml:164
 msgid "Copy to Clipboard"
-msgstr "Copier dans le presse-papier"
+msgstr "o pana tawa poki jo"
 
 #: contents/applet/AppletError.qml:187
 msgid "View Error Details…"
-msgstr "Afficher le détail des erreurs..."
+msgstr "o lukin e sona pakala…"
 
 #: contents/applet/CompactApplet.qml:76
 msgid "Open %1"
-msgstr "Ouvrir %1"
+msgstr "o open %1"
 
 #: contents/configuration/AboutPlugin.qml:21
 #: contents/configuration/AppletConfiguration.qml:304
 msgid "About"
-msgstr "À propos"
+msgstr "sona"
 
 #: contents/configuration/AboutPlugin.qml:50
 msgid "Send an email to %1"
-msgstr "Envoyer un courriel à %1"
+msgstr "o pana e lipu Email tawa %1"
 
 #: contents/configuration/AboutPlugin.qml:64
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr "Ouvrir la page Internet %1"
+msgstr "o open e lipu linluwi %1"
 
 #: contents/configuration/AboutPlugin.qml:137
 msgid "Copyright"
-msgstr "Droit d'auteur"
+msgstr "jan lawa"
 
 #: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
 msgid "License:"
-msgstr "Licence :"
+msgstr "lipu lawa:"
 
 #: contents/configuration/AboutPlugin.qml:163
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr "Afficher le texte de licence"
+msgstr "o lukin e lipu lawa"
 
 #: contents/configuration/AboutPlugin.qml:177
 msgid "Authors"
-msgstr "Auteurs"
+msgstr "jan pali"
 
 #: contents/configuration/AboutPlugin.qml:189
 msgid "Credits"
-msgstr "Remerciements"
+msgstr "jan ante"
 
 #: contents/configuration/AboutPlugin.qml:202
 msgid "Translators"
-msgstr "Traducteurs"
+msgstr "jan pi ante toki"
 
 #: contents/configuration/AboutPlugin.qml:220
 msgid "Report a Bug…"
-msgstr "Signaler un bogue…"
+msgstr "o toki e pakala…"
 
 #: contents/configuration/AppletConfiguration.qml:76
 msgid "Keyboard Shortcuts"
-msgstr "Raccourcis clavier"
+msgstr "nasin nena"
 
 #: contents/configuration/AppletConfiguration.qml:352
 msgid "Apply Settings"
-msgstr "Appliquer les paramètres"
+msgstr "o &ni e ale"
 
 #: contents/configuration/AppletConfiguration.qml:353
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
-msgstr ""
-"Les paramètres du module actuel ont changé. Voulez-vous appliquer les "
-"changements ou les abandonner ?"
+msgstr "sina ante e lawa pi ilo ni. sina wile weka anu awen e ante sina?"
 
 #: contents/configuration/AppletConfiguration.qml:384
 msgid "OK"
-msgstr "Ok"
+msgstr "o ni o weka"
 
 #: contents/configuration/AppletConfiguration.qml:392
 msgid "Apply"
-msgstr "Appliquer"
+msgstr "o &ni"
 
 #: contents/configuration/AppletConfiguration.qml:398
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "o &ni ala"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:27
 msgid "Open configuration page"
-msgstr "Ouvrir une page de configuration"
+msgstr "o lukin e lipu lawa ilo"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
 msgid "Left-Button"
-msgstr "Bouton gauche"
+msgstr "nena lawa pi ilo luka"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
 msgid "Right-Button"
-msgstr "Bouton droit"
+msgstr "nena #2 pi ilo luka"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
 msgid "Middle-Button"
-msgstr "Bouton central"
+msgstr "nena sike pi ilo luka"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:24
 msgid "Back-Button"
-msgstr "Bouton retour"
+msgstr "nena majuna pi ilo luka"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
 msgid "Forward-Button"
-msgstr "Bouton avance"
+msgstr "nena sin pi ilo luka"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:27
 msgid "Vertical-Scroll"
-msgstr "Défilement vertical"
+msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
 msgid "Horizontal-Scroll"
-msgstr "Défilement horizontal"
+msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
 msgid "Shift"
-msgstr "Maj"
+msgstr "nena suli"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
 msgid "Ctrl"
-msgstr "Ctrl"
+msgstr "nena lawa"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:32
 msgid "Alt"
-msgstr "Alt"
+msgstr "nena ante"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:33
 msgid "Meta"
-msgstr "Méta"
+msgstr "nena open"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:95
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
-msgstr "+"
+msgstr " en "
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
 msgctxt "@title"
 msgid "About"
-msgstr "À propos"
+msgstr "sona"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:182
 #: contents/configuration/MouseEventInputButton.qml:13
 msgid "Add Action"
-msgstr "Ajouter une action"
+msgstr ""
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:69
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
-"Les changements de disposition ont été restreints par l'administrateur "
-"système"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:84
 msgid "Layout:"
-msgstr "Disposition :"
+msgstr ""
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:98
 msgid "Wallpaper type:"
-msgstr "Type de fond d'écran :"
+msgstr ""
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:119
 msgid "Get New Plugins…"
-msgstr "Obtenir de nouveaux modules externes..."
+msgstr ""
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:193
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
-"Les changements de disposition doivent être appliqués avant de pouvoir faire "
-"d'autres changements"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:197
 msgid "Apply Now"
-msgstr "Appliquer maintenant"
+msgstr ""
 
 #: contents/configuration/ConfigurationShortcuts.qml:18
 msgid "Shortcuts"
-msgstr "Raccourcis"
+msgstr ""
 
 #: contents/configuration/ConfigurationShortcuts.qml:30
 msgid "This shortcut will activate the applet as though it had been clicked."
-msgstr "Ce raccourci activera l'applet comme si vous aviez cliqué dessus."
+msgstr ""
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 msgid "Wallpaper"
-msgstr "Fond d'écran"
+msgstr ""
 
 #: contents/configuration/ContainmentConfiguration.qml:33
 msgid "Mouse Actions"
-msgstr "Actions de la souris"
+msgstr ""
 
 #: contents/configuration/MouseEventInputButton.qml:20
 msgid "Input Here"
-msgstr "Saisir ici"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:97
 msgid "Panel Settings"
-msgstr "Configuration des panneaux"
+msgstr "wile tawa palisa ilo"
 
 #: contents/configuration/PanelConfiguration.qml:104
 msgid "Add Spacer"
-msgstr "Ajouter un élément séparateur"
+msgstr "o lon e kon"
 
 #: contents/configuration/PanelConfiguration.qml:107
 msgid "Add spacer widget to the panel"
-msgstr "Ajouter un composant graphique séparateur au panneau"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:114
 msgid "Add Widgets…"
-msgstr "Ajouter des composants graphiques..."
+msgstr "o lon e ilo lili…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr ""
-"Ouvrir le sélecteur de composants graphiques pour en faire glisser et "
-"déposer sur le panneau"
 
 #: contents/configuration/PanelConfiguration.qml:146
 msgid "Position"
-msgstr "Position"
+msgstr "poka sinpin"
 
 #: contents/configuration/PanelConfiguration.qml:151
 #: contents/configuration/PanelConfiguration.qml:266
 msgid "Top"
-msgstr "Haut"
+msgstr "sewi"
 
 #: contents/configuration/PanelConfiguration.qml:152
 #: contents/configuration/PanelConfiguration.qml:268
 msgid "Right"
-msgstr "Droite"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:153
 #: contents/configuration/PanelConfiguration.qml:266
 msgid "Left"
-msgstr "Gauche"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:154
 #: contents/configuration/PanelConfiguration.qml:268
 msgid "Bottom"
-msgstr "Bas"
+msgstr "anpa"
 
 #: contents/configuration/PanelConfiguration.qml:174
 msgid "Set Position…"
-msgstr "Définir une position..."
+msgstr "o ante e poka…"
 
 #: contents/configuration/PanelConfiguration.qml:201
 msgid "Alignment"
-msgstr "Alignement"
+msgstr "poka poka"
 
 #: contents/configuration/PanelConfiguration.qml:267
 msgid "Center"
-msgstr "Centre"
+msgstr "insa"
 
 #: contents/configuration/PanelConfiguration.qml:290
 msgid "Height"
-msgstr "Hauteur"
+msgstr "suli sewi"
 
 #: contents/configuration/PanelConfiguration.qml:291
 msgid "Width"
-msgstr "Largeur"
+msgstr "suli poka"
 
 #: contents/configuration/PanelConfiguration.qml:310
 msgid "Fill height"
-msgstr "Hauteur de remplissage :"
+msgstr "o suli sewi"
 
 #: contents/configuration/PanelConfiguration.qml:310
 msgid "Fill width"
-msgstr "Largeur du remplissage :"
+msgstr "o suli poka"
 
 #: contents/configuration/PanelConfiguration.qml:311
 msgid "Fit content"
-msgstr "Ajuster au contenu"
+msgstr "o suli pi poki taso"
 
 #: contents/configuration/PanelConfiguration.qml:312
 msgid "Custom"
-msgstr "Personnalisé"
+msgstr "ijo ante"
 
 #: contents/configuration/PanelConfiguration.qml:338
 msgid "Visibility"
-msgstr "Visibilité"
+msgstr "nasin lukin"
 
 #: contents/configuration/PanelConfiguration.qml:351
 msgid "Always visible"
-msgstr "Toujours visible"
+msgstr "lukin lon ale"
 
 #: contents/configuration/PanelConfiguration.qml:352
 msgid "Auto hide"
-msgstr "Masquer automatiquement"
+msgstr "weka lon ale"
 
 #: contents/configuration/PanelConfiguration.qml:353
 msgid "Dodge windows"
-msgstr "Escamoter les fenêtres"
+msgstr "weka lon anpa lupa"
 
 #: contents/configuration/PanelConfiguration.qml:354
 msgid "Windows Go Below"
-msgstr "Les fenêtres se placent dessous"
+msgstr "lupa li lon monsi"
 
 #: contents/configuration/PanelConfiguration.qml:397
 msgid "Opacity"
-msgstr "Opacité"
+msgstr "ijo"
 
 #: contents/configuration/PanelConfiguration.qml:411
 msgid "Adaptive"
-msgstr "Adaptatif"
+msgstr "ijo pi ken ante"
 
 #: contents/configuration/PanelConfiguration.qml:412
 msgid "Opaque"
-msgstr "Opaque"
+msgstr "ijo pi suno ala"
 
 #: contents/configuration/PanelConfiguration.qml:413
 msgid "Translucent"
-msgstr "Translucide"
+msgstr "ijo suno"
 
 #: contents/configuration/PanelConfiguration.qml:436
 msgid "Floating"
-msgstr "Flottant"
+msgstr "o kon"
 
 #: contents/configuration/PanelConfiguration.qml:446
 msgid "Style"
-msgstr "Style"
+msgstr "nasin kon"
 
 #: contents/configuration/PanelConfiguration.qml:486
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
-msgstr "Corriger cela"
+msgstr "o pona e pakala"
 
 #: contents/configuration/PanelConfiguration.qml:564
 msgid "Panel Width:"
-msgstr "Largeur du panneau :"
+msgstr "suli poka palisa:"
 
 #: contents/configuration/PanelConfiguration.qml:565
 msgid "Panel Height:"
-msgstr "Hauteur de panneau :"
+msgstr "suli sewi palisa:"
 
 #: contents/configuration/PanelConfiguration.qml:588
 msgid "Focus shortcut:"
-msgstr "Raccourci pour le focus :"
+msgstr "nasin nena"
 
 #: contents/configuration/PanelConfiguration.qml:599
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
-"Appuyez sur ce raccourci clavier pour déplacer le focus vers le panneau"
+msgstr "o luka e nena ni tawa kepeken palisa"
 
 #: contents/configuration/PanelConfiguration.qml:633
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "Supprimer un panneau"
+msgstr "o weka e palisa"
 
 #: contents/configuration/PanelConfiguration.qml:636
 msgid "Remove this panel; this action is undo-able"
-msgstr "Supprimer ce panneau. Cette action peut être annulée."
+msgstr "o weka e ni (sina ken sin e ona)"
 
 #: contents/configuration/PanelConfiguration.qml:647
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr "Terminé"
+msgstr "o pini"
 
 #: contents/configuration/PanelConfiguration.qml:650
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
-"Fermer la fenêtre « Paramètres du panneau » et quitter le mode « Édition »"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
-msgstr "Faire glisser pour modifier la hauteur maximale."
+msgstr "o tawa e palisa tawa ni: sina ante e suli sewi pini"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum width."
-msgstr "Faire glisser pour modifier la largeur maximale."
+msgstr "o tawa e palisa tawa ni: sina ante e suli poka pini"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 #: contents/configuration/panelconfiguration/Ruler.qml:31
 msgid "Double click to reset."
-msgstr "Double-cliquer pour ré-initialiser."
+msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:31
 msgid "Drag to change minimum height."
-msgstr "Faire glisser pour modifier la hauteur minimale."
+msgstr "o tawa e palisa tawa ni: sina ante e suli sewi open"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:31
 msgid "Drag to change minimum width."
-msgstr "Faire glisser pour modifier la largeur minimale."
+msgstr "o tawa e palisa tawa ni: sina ante e suli poka open"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:78
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
-"Faire glisser pour modifier la position sur ce bord d'écran.\n"
-"Faire un double clic pour ré-initialiser."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panel and Desktop Management"
-msgstr "Gestion des panneaux et des bureaux"
+msgstr "lipu lawa pi palisa ilo en monsi pali"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
-"Vous pouvez faire glisser les panneaux et les bureaux pour les déplacer vers "
-"d'autres écrans."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
 msgid "Close"
-msgstr "Fermer"
+msgstr "o weka"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Swap with Desktop on Screen %1"
-msgstr "Permutation avec le bureau sur l'écran %1"
+msgstr ""
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
 msgid "Move to Screen %1"
-msgstr "Déplacement vers l'écran %1"
+msgstr ""
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 msgid "Remove Desktop"
-msgstr "Supprimer un bureau"
+msgstr ""
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:195
 msgid "Remove Panel"
-msgstr "Supprimer le tableau de bord"
+msgstr ""
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:268
 msgid "%1 (primary)"
-msgstr "%1 (primaire)"
+msgstr ""
 
 #: contents/explorer/AppletAlternatives.qml:66
 msgid "Alternative Widgets"
-msgstr "Composants graphiques alternatifs"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:41
 msgid "Unsupported Widget"
-msgstr "Composant graphique non pris en charge"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188
 msgid "Undo uninstall"
-msgstr "Annuler la désinstallation"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:189
 msgid "Uninstall widget"
-msgstr "Désinstaller le composant graphique"
+msgstr ""
 
 #: contents/explorer/Tooltip.qml:105
 msgid "Author:"
-msgstr "Auteur :"
+msgstr ""
 
 #: contents/explorer/Tooltip.qml:115
 msgid "Email:"
-msgstr "Adresse électronique :"
+msgstr ""
 
 #: contents/explorer/Tooltip.qml:136
 msgid "Uninstall"
-msgstr "Désinstaller"
+msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:129
 #: contents/explorer/WidgetExplorer.qml:204
 msgid "All Widgets"
-msgstr "Tous les composants graphiques"
+msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:155
 msgid "Widgets"
-msgstr "Composants graphiques"
+msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:164
 msgid "Get New Widgets…"
-msgstr "Plus de composants graphiques…"
+msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:215
 msgid "Categories"
-msgstr "Catégories"
+msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:226
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] "Confirmer la suppression de un composant graphique"
-msgstr[1] "Confirmer la suppression de %1 composants graphiques"
+msgstr[0] ""
+msgstr[1] ""
 
 #: contents/explorer/WidgetExplorer.qml:306
 msgid "No widgets matched the search terms"
-msgstr "Aucun composant graphique ne correspond aux mots clés de la recherche"
+msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:306
 msgid "No widgets available"
-msgstr "Aucun composant graphique disponible"
+msgstr ""
 
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr "Horloge :"
+msgstr ""
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr "Restez visible lorsque l'invite de déverrouillage disparaît"
+msgstr ""
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr "Contrôles multimédia :"
+msgstr ""
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr "Afficher sous l'invite de déverrouillage"
+msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:48
 msgid "Unlocking failed"
-msgstr "Échec du déverrouillage"
+msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:271
 msgid "Caps Lock is on"
-msgstr "Le verrouillage en majuscules « Verr. Maj » est activé."
+msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:285
 msgid "Sleep"
-msgstr "Veille"
+msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:291
 msgid "Hibernate"
-msgstr "Hiberner"
+msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:297
 msgid "Switch User"
-msgstr "Changer d'utilisateur"
+msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:358
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr "Clavier virtuel"
+msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:382
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Changer de disposition"
+msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr "Mot de passe"
+msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr "Déverrouiller"
+msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr "(ou lire votre empreinte digitale sur le lecteur)"
+msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr "(ou parcourir votre carte mémoire)"
+msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr "Aucun titre"
+msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr "Aucun média en cours de lecture"
+msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr "Piste précédente"
+msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr "Lire ou mettre en pause un média"
+msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr "Piste suivante"
+msgstr ""
 
 #: contents/osd/OsdItem.qml:32
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr "%1 %"
+msgstr ""
 
 #: contents/views/DesktopEditMode.qml:113
 msgid "Global Themes"
-msgstr "Thèmes globaux"
+msgstr "nasin lukin"
 
 #: contents/views/DesktopEditMode.qml:120
 msgid "Display Configuration"
-msgstr "Configuration d'affichage"
+msgstr "lawa pi sinpin sitelen"
 
 #: contents/views/DesktopEditMode.qml:141
 msgctxt "@action:button"
 msgid "More"
-msgstr "Plus"
+msgstr ""
 
 #: contents/views/DesktopEditMode.qml:150
 msgid "Exit Edit Mode"
-msgstr "Quitter le mode d'édition"
+msgstr "o weka tan tomo ante"
 
 #: contents/views/Panel.qml:302
 msgid "Panel Focus Indicator"
-msgstr "Indicateur de focus pour les panneaux"
-
-#~ msgid "Height:"
-#~ msgstr "Hauteur :"
-
-#~ msgid "Sorry! There was an error loading %1."
-#~ msgstr "Désolé ! Une erreur est survenue durant le chargement de %1."
-
-#~ msgid "Length"
-#~ msgstr "Longueur"
-
-#~ msgctxt "@action:button Make the panel as big as it can be"
-#~ msgid "Maximize"
-#~ msgstr "Maximiser"
-
-#~ msgid "Make this panel as tall as possible"
-#~ msgstr "Rendre ce panneau aussi haut que possible."
-
-#~ msgid "Make this panel as wide as possible"
-#~ msgstr "Rendre ce panneau aussi large que possible."
-
-#~ msgctxt "@action:button Delete the panel"
-#~ msgid "Delete"
-#~ msgstr "Supprimer"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the top; no effect when panel is maximized"
-#~ msgstr ""
-#~ "Aligne le panneau sur le haut s'il n'est pas maximisé. Cela n'a aucun "
-#~ "effet si le panneau est maximisé."
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the left; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Aligne le panneau sur la gauche s'il n'est pas maximisé. Cela n'a aucun "
-#~ "effet si le panneau est maximisé."
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the center; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Aligne le panneau sur le centre s'il n'est pas maximisé. Cela n'a aucun "
-#~ "effet si le panneau est maximisé."
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the bottom; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Aligne le panneau sur le bas s'il n'est pas maximisé. Cela n'a aucun "
-#~ "effet si le panneau est maximisé."
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the right; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Aligne le panneau sur la droite s'il n'est pas maximisé. Cela n'a aucun "
-#~ "effet si le panneau est maximisé."
-
-#~ msgid ""
-#~ "Panel is hidden, but reveals itself when the cursor touches the panel's "
-#~ "screen edge"
-#~ msgstr ""
-#~ "Le panneau est masqué mais ré-apparaît lorsque le curseur touche le bord "
-#~ "d'écran du panneau."
-
-#~ msgid ""
-#~ "Panel is opaque when any windows are touching it, and translucent at "
-#~ "other times"
-#~ msgstr ""
-#~ "Le panneau est transparent lorsqu'aucune fenêtre ne le touche et "
-#~ "translucide dans le cas contraire."
-
-#~ msgid "Floating:"
-#~ msgstr "Flottant :"
-
-#~ msgid "Panel visibly floats away from its screen edge"
-#~ msgstr "Le panneau flotte visiblement loin du bord de son écran."
-
-#~ msgid "Attached"
-#~ msgstr "Attaché"
-
-#~ msgid "Panel is attached to its screen edge"
-#~ msgstr "Le panneau est attaché à son bord d'écran."
-
-#~ msgid "More Options…"
-#~ msgstr "Plus d'options..."
-
-#~ msgctxt "Minimize the length of this string as much as possible"
-#~ msgid "Drag to move"
-#~ msgstr "Faire glisser pour déplacer"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use arrow keys to move the panel"
-#~ msgstr "Utiliser les touches de flèche pour déplacer le panneau"
-
-#, fuzzy
-#~| msgid "Windows Behind"
-#~ msgid "Windows Above"
-#~ msgstr "Les fenêtres derrière"
-
-#, fuzzy
-#~| msgid ""
-#~| "Makes the panel remain visible always but part of the maximized windows "
-#~| "shall go below the panel as though the panel did not exist."
-#~ msgid ""
-#~ "Like \"Always Visible\", but maximized and tiled windows go under the "
-#~ "panel as though it didn't exist"
-#~ msgstr ""
-#~ "Rend le panneau toujours visible, mais une partie des fenêtres maximisées "
-#~ "doit aller sous le panneau comme si le panneau n’existait pas."
-
-#~ msgid "Windows In Front"
-#~ msgstr "Les fenêtres de front"
-
-#~ msgid "Aligns the panel"
-#~ msgstr "Aligne le panneau"
-
-#~ msgid "Center aligns the panel if the panel is not maximized."
-#~ msgstr "Aligne le panneau au centre s'il n'est pas maximisé."
-
-#~ msgid ""
-#~ "Makes the panel hidden always but reveals it when mouse enters the area "
-#~ "where the panel would have been if it were not hidden."
-#~ msgstr ""
-#~ "Rend le panneau toujours masqué mais le révèle lorsque la souris entre "
-#~ "dans la zone où le panneau aurait été non masqué."
-
-#~ msgid ""
-#~ "Makes the panel remain visible always but maximized windows shall cover "
-#~ "it. It is revealed when mouse enters the area where the panel would have "
-#~ "been if it were not covered."
-#~ msgstr ""
-#~ "Rend le panneau toujours visible, mais les fenêtres maximisées doivent le "
-#~ "recouvrir. Il est révélé lorsque la souris entre dans la zone où le "
-#~ "panneau aurait été si non recouvert."
-
-#~ msgid "Makes the panel translucent except when some windows touch it."
-#~ msgstr ""
-#~ "Rend le panneau transparent, sauf lorsque certaines fenêtres le touchent."
-
-#~ msgid "Makes the panel translucent always."
-#~ msgstr "Rend le panneau toujours transparent."
-
-#~ msgid "Makes the panel float from the edge of the screen."
-#~ msgstr "Rend le panneau flottant à partir d'un bord de l'écran."
-
-#~ msgid "Makes the panel remain attached to the edge of the screen."
-#~ msgstr "Rend le panneau attaché à un bord de l'écran."
-
-#~ msgid "%1 (disabled)"
-#~ msgstr "%1 (désactivé)"
-
-#~ msgid "Appearance"
-#~ msgstr "Apparence"
-
-#~ msgid "Search…"
-#~ msgstr "Rechercher..."
-
-#~ msgid "Screen Edge"
-#~ msgstr "Bord de l'écran"
-
-#~ msgid "Click and drag the button to a screen edge to move the panel there."
-#~ msgstr ""
-#~ "Cliquer et faire glisser le bouton vers le bord de l'écran afin d'y "
-#~ "déplacer le panneau"
-
-#~ msgid "Click and drag the button to resize the panel."
-#~ msgstr "Cliquer et faire glisser pour re-dimensionner le panneau."
-
-#~ msgid "Layout cannot be changed while widgets are locked"
-#~ msgstr ""
-#~ "Impossible de changer la disposition tant que les composants graphiques "
-#~ "sont verrouillés"
-
-#~ msgid "Lock Widgets"
-#~ msgstr "Verrouiller les composants graphiques"
-
-#~ msgid ""
-#~ "This shortcut will activate the applet: it will give the keyboard focus "
-#~ "to it, and if the applet has a popup (such as the start menu), the popup "
-#~ "will be open."
-#~ msgstr ""
-#~ "Ce raccourci va activer l'applet : Cela placera le focus sur celle-ci, "
-#~ "et, si l'applet possède un menu contextuel (comme le menu de démarrage), "
-#~ "celui-ci sera ouvert."
-
-#~ msgid "Stop"
-#~ msgstr "Arrêter"
-
-#~ msgid "Activity name:"
-#~ msgstr "Nom de l'activité :"
-
-#~ msgid "Create"
-#~ msgstr "Créer"
-
-#, fuzzy
-#~| msgid "Are you sure you want to delete the activity?"
-#~ msgid "Are you sure you want to delete this activity?"
-#~ msgstr "Voulez-vous vraiment supprimer cette activité ?"
+msgstr ""
