@@ -280,15 +280,32 @@ SimpleKCM {
 
         Repeater {
             model: [
-                { value: 0x14b, text: i18nd("kcm_tablet", "Pen button 1:") },
-                { value: 0x14c, text: i18nd("kcm_tablet", "Pen button 2:") },
-                { value: 0x149, text: i18nd("kcm_tablet", "Pen button 3:") }
-            ] // BTN_STYLUS, BTN_STYLUS2, BTN_STYLUS3
+                {
+                    value: 0x14b, // BTN_STYLUS
+                    text: i18nd("kcm_tablet", "Pen button 1:"),
+                    name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pen button 1'", "pen button 1")
+                },
+                {
+                    value: 0x14c, // BTN_STYLUS2
+                    text: i18nd("kcm_tablet", "Pen button 2:"),
+                    name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pen button 2'", "pen button 2")
+                },
+                {
+                    value: 0x149, // BTN_STYLUS3
+                    text: i18nd("kcm_tablet", "Pen button 3:"),
+                    name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pen button 3'", "pen button 3")
+                }
+            ]
 
-            delegate: KeySequenceItem {
+            delegate: ActionBinding {
                 id: seq
-                Kirigami.FormData.label: (pressed ? "<b>" : "") + modelData.text + (pressed ? "</b>" : "")
-                property bool pressed: false
+
+                required property var modelData
+
+                Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + modelData.text + (buttonPressed ? "</b>" : "")
+                property bool buttonPressed: false
+
+                name: modelData.name
 
                 Connections {
                     target: tabletEvents
@@ -296,26 +313,30 @@ SimpleKCM {
                         if (button !== modelData.value) {
                             return;
                         }
-                        seq.pressed = pressed
+                        seq.buttonPressed = pressed
                     }
                 }
 
-                keySequence: kcm.toolButtonMapping(form.device.name, modelData.value)
                 Connections {
                     target: kcm
                     function onSettingsRestored() {
-                        seq.keySequence = kcm.toolButtonMapping(form.device.name, modelData.value)
+                        refreshInputSequence();
                     }
                 }
 
-                showCancelButton: true
-                modifierlessAllowed: true
-                modifierOnlyAllowed: true
-                multiKeyShortcutsAllowed: false
-                checkForConflictsAgainst: ShortcutType.None
+                Connections {
+                    target: form
+                    function onDeviceChanged() {
+                        refreshInputSequence();
+                    }
+                }
 
-                onCaptureFinished: {
-                    kcm.assignToolButtonMapping(form.device.name, modelData.value, keySequence)
+                function refreshInputSequence(): void {
+                    seq.inputSequence = kcm.toolButtonMapping(form.device.name, modelData.value)
+                }
+
+                onGotInputSequence: sequence => {
+                    kcm.assignToolButtonMapping(form.device.name, modelData.value, sequence)
                 }
             }
         }
@@ -400,10 +421,15 @@ SimpleKCM {
             id: buttonsRepeater
             model: tabletEvents.padButtons
 
-            delegate: KeySequenceItem {
+            delegate: ActionBinding {
                 id: seq
-                Kirigami.FormData.label: (pressed ? "<b>" : "") + i18nd("kcm_tablet", "Pad button %1:", modelData + 1) + (pressed ? "</b>" : "")
-                property bool pressed: false
+
+                required property var modelData
+
+                Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + i18nd("kcm_tablet", "Pad button %1:", modelData + 1) + (buttonPressed ? "</b>" : "")
+                property bool buttonPressed: false
+
+                name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pad button 0'", "pad button %1", modelData + 1)
 
                 Connections {
                     target: tabletEvents
@@ -411,28 +437,30 @@ SimpleKCM {
                         if (button !== modelData || !path.endsWith(form.padDevice.sysName)) {
                             return;
                         }
-                        seq.pressed = pressed
+                        seq.buttonPressed = pressed
                     }
                 }
 
-                keySequence: kcm.padButtonMapping(form.padDevice.name, modelData)
+                function refreshInputSequence(): void {
+                    seq.inputSequence = kcm.padButtonMapping(form.padDevice.name, modelData)
+                }
+
+                inputSequence: kcm.padButtonMapping(form.padDevice.name, modelData)
                 Connections {
                     target: kcm
                     function onSettingsRestored() {
-                        seq.keySequence = kcm.padButtonMapping(form.padDevice.name, modelData)
+                        refreshInputSequence();
                     }
                 }
 
-                showCancelButton: true
-                modifierlessAllowed: true
-                modifierOnlyAllowed: true
-                multiKeyShortcutsAllowed: false
-                checkForConflictsAgainst: ShortcutType.None
-
-                onCaptureFinished: {
-                    kcm.assignPadButtonMapping(form.padDevice.name, modelData, keySequence)
+                onGotInputSequence: sequence => {
+                    kcm.assignPadButtonMapping(form.padDevice.name, modelData, sequence)
                 }
             }
         }
+    }
+
+    ActionDialog {
+        id: actionDialog
     }
 }

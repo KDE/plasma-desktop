@@ -9,9 +9,9 @@
 #include <KQuickManagedConfigModule>
 
 #include <KSharedConfig>
-#include <QKeySequence>
 
 #include "devicesmodel.h"
+#include "inputsequence.h"
 
 class TabletSettings;
 class TabletData;
@@ -35,10 +35,10 @@ public:
     DevicesModel *toolsModel() const;
     DevicesModel *padsModel() const;
 
-    Q_SCRIPTABLE void assignPadButtonMapping(const QString &deviceName, uint button, const QKeySequence &keySequence);
-    Q_SCRIPTABLE void assignToolButtonMapping(const QString &deviceName, uint button, const QKeySequence &keySequence);
-    Q_SCRIPTABLE QKeySequence padButtonMapping(const QString &deviceName, uint button) const;
-    Q_SCRIPTABLE QKeySequence toolButtonMapping(const QString &deviceName, uint button) const;
+    Q_SCRIPTABLE void assignPadButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence);
+    Q_SCRIPTABLE void assignToolButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence);
+    Q_SCRIPTABLE InputSequence padButtonMapping(const QString &deviceName, uint button) const;
+    Q_SCRIPTABLE InputSequence toolButtonMapping(const QString &deviceName, uint button) const;
 
 Q_SIGNALS:
     void settingsRestored();
@@ -48,5 +48,5 @@ private:
 
     DevicesModel *const m_toolsModel;
     DevicesModel *const m_padsModel;
-    QHash<QString, QHash<QString, QHash<uint, QKeySequence>>> m_unsavedMappings;
+    QHash<QString, QHash<QString, QHash<uint, InputSequence>>> m_unsavedMappings;
 };

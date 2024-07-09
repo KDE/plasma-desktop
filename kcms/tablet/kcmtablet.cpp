@@ -207,6 +207,10 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterType<TabletEvents>("org.kde.plasma.tablet.kcm", 1, 1, "TabletEvents");
     qmlRegisterAnonymousType<InputDevice>("org.kde.plasma.tablet.kcm", 1);
     qmlRegisterType<CalibrationTool>("org.kde.plasma.tablet.kcm", 1, 1, "CalibrationTool");
+    // This looks weird, but the first type here is the value type. The second type is here is just for the enumerations.
+    // Yes, this IS what they suggest you do: https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html#value-types-with-enumerations
+    qmlRegisterType<InputSequence>("org.kde.plasma.tablet.kcm", 1, 1, "inputSequence");
+    qmlRegisterUncreatableMetaObject(InputSequence::staticMetaObject, "org.kde.plasma.tablet.kcm", 1, 1, "InputSequence", "Access to enums & flags only");
 
     connect(m_toolsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
     connect(m_padsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
@@ -259,12 +263,12 @@ void Tablet::save()
         for (auto it = m_unsavedMappings[device].cbegin(), itEnd = m_unsavedMappings[device].cend(); it != itEnd; ++it) {
             auto group = generalGroup.group(device).group(it.key());
             for (auto itDevice = it->cbegin(), itDeviceEnd = it->cend(); itDevice != itDeviceEnd; ++itDevice) {
-                const auto key = itDevice->toString(QKeySequence::PortableText);
+                const auto key = itDevice->toConfigFormat();
                 const auto button = QString::number(itDevice.key());
                 if (key.isEmpty()) {
                     group.deleteEntry(button, KConfig::Notify);
                 } else {
-                    group.writeEntry(button, QStringList{"Key", key}, KConfig::Notify);
+                    group.writeEntry(button, key, KConfig::Notify);
                 }
             }
         }
@@ -293,19 +297,19 @@ void Tablet::defaults()
     Q_EMIT settingsRestored();
 }
 
-void Tablet::assignPadButtonMapping(const QString &deviceName, uint button, const QKeySequence &keySequence)
+void Tablet::assignPadButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence)
 {
     m_unsavedMappings["Tablet"][deviceName][button] = keySequence;
     Q_EMIT settingsRestored();
 }
 
-void Tablet::assignToolButtonMapping(const QString &deviceName, uint button, const QKeySequence &keySequence)
+void Tablet::assignToolButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence)
 {
     m_unsavedMappings["TabletTool"][deviceName][button] = keySequence;
     Q_EMIT settingsRestored();
 }
 
-QKeySequence Tablet::padButtonMapping(const QString &deviceName, uint button) const
+InputSequence Tablet::padButtonMapping(const QString &deviceName, uint button) const
 {
     if (deviceName.isEmpty()) {
         return {};
@@ -318,13 +322,10 @@ QKeySequence Tablet::padButtonMapping(const QString &deviceName, uint button) co
     const auto cfg = KSharedConfig::openConfig("kcminputrc");
     const auto group = cfg->group("ButtonRebinds").group("Tablet").group(deviceName);
     const auto sequence = group.readEntry(QString::number(button), QStringList());
-    if (sequence.size() != 2) {
-        return {};
-    }
-    return QKeySequence(sequence.constLast());
+    return InputSequence(sequence);
 }
 
-QKeySequence Tablet::toolButtonMapping(const QString &deviceName, uint button) const
+InputSequence Tablet::toolButtonMapping(const QString &deviceName, uint button) const
 {
     if (deviceName.isEmpty()) {
         return {};
@@ -337,10 +338,7 @@ QKeySequence Tablet::toolButtonMapping(const QString &deviceName, uint button) c
     const auto cfg = KSharedConfig::openConfig("kcminputrc");
     const auto group = cfg->group("ButtonRebinds").group("TabletTool").group(deviceName);
     const auto sequence = group.readEntry(QString::number(button), QStringList());
-    if (sequence.size() != 2) {
-        return {};
-    }
-    return QKeySequence(sequence.constLast());
+    return InputSequence(sequence);
 }
 
 DevicesModel *Tablet::toolsModel() const
