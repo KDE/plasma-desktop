@@ -147,6 +147,9 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         Kirigami.FormData.label: i18nc("Duration of the system bell", "Duration:")
 
+        from: 100
+        to: 2000
+
         KCM.SettingStateBinding {
             configObject: kcm.bellSettings
             settingName: "VisibleBellPause"
