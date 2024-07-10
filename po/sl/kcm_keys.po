@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Matjaž Jeran <matjaz.jeran@amis.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 07:15+0200\n"
+"PO-Revision-Date: 2024-07-09 06:56+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: basemodel.cpp:157
 #, kde-format
@@ -48,12 +48,7 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Neuspela komunikacija z demonom globalnih bližnjic"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "@info %2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
-#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -61,7 +56,7 @@ msgid ""
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "Bližnjica <shortcut>%1</shortcut> je že dodeljena običajnemu dejanju %2 "
-"<interface>%3<interface>.<nl/><nl/>Naj jo znova dodelim %4?"
+"<interface>%3</interface>.<nl/><nl/>Naj jo znova dodelim %4?"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -72,7 +67,7 @@ msgid ""
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
 "Bližnjica <shortcut>%1</shortcut> je že dodeljena dejanju <interface>%2</"
-"interface> od <application>%3</application>.<nl/><nl/>Naj jo znovadodelim "
+"interface> od <application>%3</application>.<nl/><nl/>Naj jo znova dodelim "
 "dejanju <interface> %4</interface> od <application>%4</application>?"
 
 #: kcm_keys.cpp:330

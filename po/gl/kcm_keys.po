@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 18:21+0200\n"
+"PO-Revision-Date: 2024-07-09 19:36+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -47,12 +47,7 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Non foi posíbel comunicar co servizo de atallos globais."
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "@info %2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
-#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""

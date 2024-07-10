@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 09:40+0300\n"
+"PO-Revision-Date: 2024-07-09 07:33+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -51,12 +51,7 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Не вдалося встановити зв'язок із фоновою службою загальних скорочень"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "@info %2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
-#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -64,7 +59,7 @@ msgid ""
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "Скорочення <shortcut>%1</shortcut> вже пов'язано із загальною дією %2 у "
-"<interface>%3<interface>.<nl/><nl/>Перепризначити його до %4?"
+"<interface>%3</interface>.<nl/><nl/>Перепризначити його до %4?"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format

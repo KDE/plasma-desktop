@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-03 10:42+0200\n"
+"PO-Revision-Date: 2024-07-09 16:31+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: basemodel.cpp:157
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "Spustit"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -47,19 +47,15 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Komunikace s globálním démon klávesových zkratek se nezdařila"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"Zkratka %1 je již přiřazena společné %2 činnosti '%3'.\n"
-"Chcete ji přeřadit?"
+"Zkratka <shortcut>%1</shortcut> je již přiřazena běžné činnosti %2 "
+"<interface>%3</interface>.<nl/><nl/>Přeřadit ji %4?"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -69,18 +65,21 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
+"Zkratka <shortcut>%1</shortcut> je již přiřazena činnosti <interface>%2</"
+"interface> z <application>%3</application>.<nl/><nl/>Přeřadit ji činnosti "
+"<interface>%4</interface> z <application>%4</application>?"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Vyřešit konflikt zkratek"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Přeřadit"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -358,14 +357,3 @@ msgstr "Přidat vlastní klávesovou zkratku"
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "Zrušit zadání nové klávesové zkratky"
-
-#~ msgid ""
-#~ "Shortcut %1 is already assigned to action '%2' of %3.\n"
-#~ "Do you want to reassign it?"
-#~ msgstr ""
-#~ "Zkratka %1 je již přiřazena činnosti '%2' of %3.\n"
-#~ "Chcete ji přeřadit?"
-
-#~ msgctxt "@title:window"
-#~ msgid "Found conflict"
-#~ msgstr "Nalezen konflikt"

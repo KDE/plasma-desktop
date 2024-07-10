@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 16:07+0200\n"
+"PO-Revision-Date: 2024-07-09 12:38+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: basemodel.cpp:157
 #, kde-format
@@ -48,12 +48,7 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Communiceren met de globale daemon voor sneltoetsen is mislukt"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "@info %2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
-#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 10:18+0200\n"
+"PO-Revision-Date: 2024-07-09 11:22+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -51,12 +51,7 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Ha fallat en comunicar amb el domini de dreceres globals"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "@info %2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
-#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -64,7 +59,7 @@ msgid ""
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "La drecera <shortcut>%1</shortcut> ja està assignada a l'acció %2 comuna "
-"<interface>%3<interface>.<nl/><nl/>La voleu reassignar a %4?"
+"<interface>%3</interface>.<nl/><nl/>La voleu reassignar a %4?"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format

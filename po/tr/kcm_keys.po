@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 14:28+0300\n"
+"PO-Revision-Date: 2024-07-10 00:37+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -49,20 +49,15 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Global kısayollar ardalan süreci ile iletişim kurulamadı"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "@info %2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
-#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"<shortcut>%1</shortcut> kısayolu halihazırda ortak %2 <interface>"
-"%3<interface> eylemine atanmış.<nl/><nl/>%4 eylemine yeniden atamak istiyor "
+"<shortcut>%1</shortcut> kısayolu halihazırda ortak %2 <interface>%3</"
+"interface> eylemine atanmış.<nl/><nl/>%4 eylemine yeniden atamak istiyor "
 "musunuz?"
 
 #: kcm_keys.cpp:321

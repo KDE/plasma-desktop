@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# giovanni <g.sora@tiscali.it>, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-06-11 11:30+0200\n"
+"PO-Revision-Date: 2024-07-09 11:28+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmtablet.cpp:34
 #, kde-format
@@ -77,7 +77,7 @@ msgstr "Mappa al portion de schermo"
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Calibration de Penna"
 
 #: ui/Calibration.qml:83
 #, kde-kuit-format
@@ -86,6 +86,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Calibration es completate e salveguardate.<nl/><nl/>Raffina le calibration "
+"ulteriormente o claude le fenestra."
 
 #: ui/Calibration.qml:84
 #, kde-kuit-format
@@ -94,30 +96,33 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Tocca le centro de cata objectivo.<nl/><nl/>Puncta ubi le extremitate del "
+"stilo atterra the stylus, e ignora le position de cursor position sur le "
+"schermo."
 
 #: ui/Calibration.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Raffina Calibration Existente"
 
 #: ui/Calibration.qml:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Calibra ab nihil"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Claude"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancella"
 
 #: ui/main.qml:32
 #, kde-format
@@ -209,25 +214,25 @@ msgstr "Button de penna 3:"
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Calibration in progresso"
 
 #: ui/main.qml:331
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Calibrar"
 
 #: ui/main.qml:334
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Calibration non supportate"
 
 #: ui/main.qml:361
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "Calibration trans multiple schermos non es supportate."
 
 #: ui/main.qml:371
 #, kde-format

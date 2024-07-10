@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-06-11 07:18+0300\n"
+"PO-Revision-Date: 2024-07-08 15:22+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
@@ -78,7 +78,7 @@ msgstr "מיפוי לחלק מהמסך"
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "כיול עט"
 
 #: ui/Calibration.qml:83
 #, kde-kuit-format
@@ -87,6 +87,7 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"הכיול הושלם ונשמר.<nl/><nl/>אפשר לכוון את הכיול עוד יותר או לסגור את החלון."
 
 #: ui/Calibration.qml:84
 #, kde-kuit-format
@@ -95,30 +96,32 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"נא לגעת במרכז של כל מטרה.<nl/><nl/>לכוון לנקודה בה נוחת חוד עט המגע, ולהתעלם "
+"ממקום סמן העכבר על המסך."
 
 #: ui/Calibration.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "כוונון כיול קיים"
 
 #: ui/Calibration.qml:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "כיול מאפס"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "סגירה"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: ui/main.qml:32
 #, kde-format
@@ -209,25 +212,25 @@ msgstr "כפתור עט 3:"
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "מתבצע כיול"
 
 #: ui/main.qml:331
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "כיול"
 
 #: ui/main.qml:334
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "אין תמיכה בכיול"
 
 #: ui/main.qml:361
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "אין תמיכה בכיול על פני מספר מסכים."
 
 #: ui/main.qml:371
 #, kde-format
