@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 02:27+0000\n"
-"PO-Revision-Date: 2024-03-09 18:55+0100\n"
+"PO-Revision-Date: 2024-07-10 21:51+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -75,10 +75,11 @@ msgstr "Klarte ikkje lesa styreplate-oppsettet"
 msgid "Cannot read default touchpad configuration"
 msgstr "Klarte ikkje lesa standard styreplate-oppsett"
 
+# Bør ha med artikkelen «ei» her for å gjera det (litt) klarare at det er snakk om imperativ (og at teksten altså ikkje tyder at ei styreplate *er* tilkopla). Jamfør og med tilsvarande tekst «Kopla til ein kabla/trådlaus spelkontrollar», som bør vera på same form.
 #: kcm/libinput/touchpad.qml:96
 #, kde-format
 msgid "Connect an external touchpad"
-msgstr "Kopla til ekstern styreplate"
+msgstr "Kopla til ei ekstern styreplate"
 
 #: kcm/libinput/touchpad.qml:110
 #, kde-format
@@ -139,6 +140,9 @@ msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
+"Viss du slår på denne funksjonen, vert alle museklikk forseinka med 50 ms. "
+"Denne forseinkinga trengst for å kunna oppdaga «samtidige» venstre- og "
+"høgreklikk."
 
 #: kcm/libinput/touchpad.qml:263
 #, kde-format
