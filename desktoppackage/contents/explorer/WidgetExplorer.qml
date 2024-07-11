@@ -161,7 +161,9 @@ PC3.Page {
                 PC3.ToolButton {
                     id: getWidgetsButton
                     icon.name: "get-hot-new-stuff"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Widgets…")
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button The word 'new' refers to widgets", "Get New…")
+                    Accessible.name: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Get New Widgets…")
+
 
                     KeyNavigation.right: closeButton
                     KeyNavigation.down: searchInput
