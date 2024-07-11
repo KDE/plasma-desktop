@@ -34,7 +34,7 @@ KCMUtils.SimpleKCM {
 
     actions: Kirigami.Action  {
         icon.name: "input-mouse-click-left-symbolic"
-        text: i18ndc("kcmmouse", "@action:button", "Re-bind Additional Mouse Buttons…")
+        text: i18ndc("kcmmouse", "@action:button", "Configure Extra Buttons…")
 
         visible: {
             if (root.backend.isAnonymousInputDevice) {

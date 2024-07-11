@@ -24,7 +24,7 @@ KCMUtils.SimpleKCM {
 
     readonly property Mouse.KWinWaylandBackend backend: KCMUtils.ConfigModule.inputBackend
 
-    title: i18ndc("kcmmouse", "@action:button", "Bindings for Additional Mouse Buttons")
+    title: i18ndc("kcmmouse", "@title", "Extra Mouse Buttons")
 
     header: Header {
         saveLoadMessage: root.KCMUtils.ConfigModule.saveLoadMessage
