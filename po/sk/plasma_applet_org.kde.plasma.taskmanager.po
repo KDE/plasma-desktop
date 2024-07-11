@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-17 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2023-12-02 20:15+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -65,98 +65,123 @@ msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
 msgstr "9999+"
 
-#: package/contents/ui/ConfigAppearance.qml:45
+#: package/contents/ui/ConfigAppearance.qml:46
 #, kde-format
 msgid "General:"
 msgstr "Všeobecné:"
 
-#: package/contents/ui/ConfigAppearance.qml:46
+#: package/contents/ui/ConfigAppearance.qml:47
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
 msgstr "Zobraziť malé náhľady okien pri prejdení myšou nad úlohami"
 
-#: package/contents/ui/ConfigAppearance.qml:51
+#: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
 msgid "Hide other windows when hovering over previews"
 msgstr "Skryť ostatné okná pri prejdení nad náhľadmi"
 
-#: package/contents/ui/ConfigAppearance.qml:56
+#: package/contents/ui/ConfigAppearance.qml:57
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr "Označiť aplikácie, ktoré prehrávajú zvuk"
 
-#: package/contents/ui/ConfigAppearance.qml:64
+#: package/contents/ui/ConfigAppearance.qml:65
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "Vyplniť voľné miesto na paneli"
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:77
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox"
+#| msgid "Maximum rows:"
+msgid "Maximum task width:"
+msgstr "Maximálny počet riadkov:"
+
+#: package/contents/ui/ConfigAppearance.qml:80
+#, kde-format
+msgctxt "@item:inlistbox how wide a task item should be"
+msgid "Narrow"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:81
+#, kde-format
+msgctxt "@item:inlistbox how wide a task item should be"
+msgid "Medium"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:82
+#, kde-format
+msgctxt "@item:inlistbox how wide a task item should be"
+msgid "Wide"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:92
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
 msgstr "Použite viacstĺpcové zobrazenie:"
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:92
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
 msgstr "Použite viacriadkové zobrazenie:"
 
-#: package/contents/ui/ConfigAppearance.qml:79
+#: package/contents/ui/ConfigAppearance.qml:98
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "Nikdy"
 
-#: package/contents/ui/ConfigAppearance.qml:89
+#: package/contents/ui/ConfigAppearance.qml:108
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
 msgstr "Keď má panel málo miesta a je dostatočne hrubý"
 
-#: package/contents/ui/ConfigAppearance.qml:99
+#: package/contents/ui/ConfigAppearance.qml:118
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
 msgstr "Vždy, keď je panel dostatočne hrubý"
 
-#: package/contents/ui/ConfigAppearance.qml:105
+#: package/contents/ui/ConfigAppearance.qml:124
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Maximálny počet stĺpcov:"
 
-#: package/contents/ui/ConfigAppearance.qml:105
+#: package/contents/ui/ConfigAppearance.qml:124
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Maximálny počet riadkov:"
 
-#: package/contents/ui/ConfigAppearance.qml:115
+#: package/contents/ui/ConfigAppearance.qml:134
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "Medzery medzi ikonami:"
 
-#: package/contents/ui/ConfigAppearance.qml:119
+#: package/contents/ui/ConfigAppearance.qml:138
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Malé"
 
-#: package/contents/ui/ConfigAppearance.qml:123
+#: package/contents/ui/ConfigAppearance.qml:142
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normálne"
 
-#: package/contents/ui/ConfigAppearance.qml:127
+#: package/contents/ui/ConfigAppearance.qml:146
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Veľké"
 
-#: package/contents/ui/ConfigAppearance.qml:151
+#: package/contents/ui/ConfigAppearance.qml:170
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"

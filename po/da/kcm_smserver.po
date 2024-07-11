@@ -3,19 +3,20 @@
 #
 # Erik Kjær Pedersen <erik@binghamton.edu>, 2000, 2002, 2003, 2004, 2005.
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2019, 2020, 2022.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2022-08-20 17:45+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"PO-Revision-Date: 2024-07-08 13:08+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -46,13 +47,12 @@ msgstr "Programmer der skal udelukkes fra session"
 #, kde-format
 msgid ""
 "The system must be restarted before manual session saving becomes active."
-msgstr ""
+msgstr "Systemet skal genstartes før manuel sessiongemning bliver aktiv."
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Genstart nu"
+msgstr "Genstart"
 
 #: ui/main.qml:58
 #, kde-format
@@ -79,11 +79,10 @@ msgid "Restart Now"
 msgstr "Genstart nu"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr "Generelt:"
+msgstr "Generelt"
 
 #: ui/main.qml:79
 #, kde-format
@@ -91,7 +90,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Bed om bekræftelse:"
 
 #: ui/main.qml:80
 #, kde-format
@@ -99,36 +98,30 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "Når der lukkes ned, genstartes og logges ud"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Session Manager"
+#, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr "Sessionshåndtering"
+msgstr "Sessiongendannelse"
 
 #: ui/main.qml:99
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Start apps, der var åbne, når der logges ind:"
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "Ved sidste udlogning"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Genskab seneste manuelt gemt session"
+msgstr "Når session var gemt manuelt"
 
 #: ui/main.qml:122
 #, kde-kuit-format
@@ -139,6 +132,10 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"En <interface>Gem session</interface> knap vil vises i "
+"<interface>Programstarteren</interface>-menuen. Når du klikker dne, vil "
+"Plasma huske de apps, der var åbne og gendanne dem ved næste login. Klik på "
+"den igen for at erstatte sættet af huskede apps."
 
 #: ui/main.qml:127
 #, kde-format
@@ -150,10 +147,9 @@ msgid "Start with an empty session"
 msgstr "Start med en tom session"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "Genskab ikke disse programmer:"
+msgstr "Ignorerede applikationer:"
 
 #: ui/main.qml:164
 #, kde-format
@@ -162,13 +158,15 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Skriv apps eksekvertbare navn her (adskilt med komma eller kolon, for "
+"eksempel 'xterm:konsole' eller 'xterm,konsole') for at forhindre dem i at "
+"starte automatisk med de andre sessiongendanelsesapps."
 
 #: ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Firmware Setup"
+#, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr "Opsætning af firmware"
+msgstr "Firmware"
 
 #: ui/main.qml:177
 #, kde-format
@@ -176,22 +174,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Efter næste genstart:"
 
 #: ui/main.qml:178
-#, fuzzy, kde-format
-#| msgid "Enter UEFI setup on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Gå ind i UEFI-opsætningen ved næste genstart"
+msgstr "Gå ind i UEFI-opsætningsskærmen"
 
 #: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Gå ind i firmware-opsætningen ved næste genstart"
+msgstr "Gå ind i firmware-opsætningsskærmen"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "

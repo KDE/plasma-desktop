@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 11:36+0200\n"
+"PO-Revision-Date: 2024-07-09 13:44+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -67,18 +67,22 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
+"Le raccourci <shortcut>%1</shortcut> est déjà affecté à l'action <interface>"
+"%2</interface> de <application>%3</application>. <nl/><nl/>Voulez-vous "
+"vraiment le réaffecter à l'action <interface>%4</interface> sur <application>"
+"%4</application> ?"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Résoudre le conflit de raccourci"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Ré-associer"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format

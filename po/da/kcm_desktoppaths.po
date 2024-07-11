@@ -5,19 +5,20 @@
 # Erik Kjær Pedersen <erik@binghamton.edu>, 1999, 2002, 2003, 2004, 2005, 2006.
 # Lars K. Schunk <lars@schunk.dk>, 2001.
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2017, 2020, 2022.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-07 00:40+0000\n"
-"PO-Revision-Date: 2022-08-20 17:18+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"PO-Revision-Date: 2024-07-08 12:42+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ui/main.qml:52
@@ -94,41 +95,36 @@ msgstr ""
 "Denne mappe vil blive brugt som standard til at indlæse og gemme musik."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "Sti til musik:"
+msgstr "Offentlig sti:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Denne mappe vil blive brugt som standard til at indlæse og gemme billeder."
+"Denne mappe vil blive brugt som standard for offentlige delte filer når "
+"netværksdeling er slået til."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "Sti til billeder:"
+msgstr "Sti til skabeloner:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
-"Denne mappe vil blive brugt som standard til at indlæse og gemme billeder."
+"Denne mappe vil blive brugt som standard til at indlæse og gemme skabeloner."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"
-msgstr ""
+msgstr "Vælg ny lokation"
 
 #~ msgid "Desktop"
 #~ msgstr "Skrivebord"

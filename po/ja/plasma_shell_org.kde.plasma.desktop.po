@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-06 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-04-28 17:39+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -20,10 +20,12 @@ msgstr ""
 "X-Generator: Lokalize 24.02.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
+#, kde-format
 msgid "Currently being used"
 msgstr "現在使用中"
 
 #: contents/activitymanager/ActivityItem.qml:245
+#, kde-format
 msgid ""
 "Move to\n"
 "this activity"
@@ -32,6 +34,7 @@ msgstr ""
 "に移動"
 
 #: contents/activitymanager/ActivityItem.qml:275
+#, kde-format
 msgid ""
 "Show also\n"
 "in this activity"
@@ -40,97 +43,120 @@ msgstr ""
 "にも表示"
 
 #: contents/activitymanager/ActivityItem.qml:337
+#, kde-format
 msgid "Configure"
 msgstr "設定"
 
 #: contents/activitymanager/ActivityItem.qml:356
+#, kde-format
 msgid "Stop activity"
 msgstr "アクティビティを停止"
 
 #: contents/activitymanager/ActivityList.qml:142
+#, kde-format
 msgid "Stopped activities:"
 msgstr "停止したアクティビティ:"
 
 #: contents/activitymanager/ActivityManager.qml:122
+#, kde-format
 msgid "Create activity…"
 msgstr "アクティビティを作成..."
 
 #: contents/activitymanager/Heading.qml:59
+#, kde-format
 msgid "Activities"
 msgstr "アクティビティ"
 
 #: contents/activitymanager/StoppedActivityItem.qml:138
+#, kde-format
 msgid "Configure activity"
 msgstr "アクティビティを設定"
 
 #: contents/activitymanager/StoppedActivityItem.qml:155
+#, kde-format
 msgid "Delete"
 msgstr "削除"
 
 #: contents/applet/AppletError.qml:164
+#, kde-format
 msgid "Copy to Clipboard"
 msgstr "クリップボードにコピー"
 
 #: contents/applet/AppletError.qml:187
+#, kde-format
 msgid "View Error Details…"
 msgstr "エラーの詳細を表示..."
 
 #: contents/applet/CompactApplet.qml:76
+#, kde-format
 msgid "Open %1"
 msgstr "%1 を開く"
 
 #: contents/configuration/AboutPlugin.qml:21
 #: contents/configuration/AppletConfiguration.qml:304
+#, kde-format
 msgid "About"
 msgstr "情報"
 
 #: contents/configuration/AboutPlugin.qml:50
+#, kde-format
 msgid "Send an email to %1"
 msgstr "%1 にメールを送る"
 
 #: contents/configuration/AboutPlugin.qml:64
+#, kde-format
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "ウェブサイト %1 を開く"
 
 #: contents/configuration/AboutPlugin.qml:137
+#, kde-format
 msgid "Copyright"
 msgstr "著作権について"
 
 #: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#, kde-format
 msgid "License:"
 msgstr "ライセンス:"
 
 #: contents/configuration/AboutPlugin.qml:163
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "ライセンスのテキストを表示"
 
 #: contents/configuration/AboutPlugin.qml:177
+#, kde-format
 msgid "Authors"
 msgstr "作者"
 
 #: contents/configuration/AboutPlugin.qml:189
+#, kde-format
 msgid "Credits"
 msgstr "クレジット"
 
 #: contents/configuration/AboutPlugin.qml:202
+#, kde-format
 msgid "Translators"
 msgstr "翻訳者"
 
 #: contents/configuration/AboutPlugin.qml:220
+#, kde-format
 msgid "Report a Bug…"
 msgstr "バグを報告..."
 
 #: contents/configuration/AppletConfiguration.qml:76
+#, kde-format
 msgid "Keyboard Shortcuts"
 msgstr "キーボードショートカット"
 
 #: contents/configuration/AppletConfiguration.qml:352
+#, kde-format
 msgid "Apply Settings"
 msgstr "設定を適用"
 
 #: contents/configuration/AppletConfiguration.qml:353
+#, kde-format
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
@@ -139,314 +165,387 @@ msgstr ""
 "ますか？"
 
 #: contents/configuration/AppletConfiguration.qml:384
+#, kde-format
 msgid "OK"
 msgstr "OK"
 
 #: contents/configuration/AppletConfiguration.qml:392
+#, kde-format
 msgid "Apply"
 msgstr "適用"
 
 #: contents/configuration/AppletConfiguration.qml:398
+#, kde-format
 msgid "Cancel"
 msgstr "キャンセル"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:27
+#, kde-format
 msgid "Open configuration page"
 msgstr "設定ページを開く"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
+#, kde-format
 msgid "Left-Button"
 msgstr "左ボタン"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
+#, kde-format
 msgid "Right-Button"
 msgstr "右ボタン"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
+#, kde-format
 msgid "Middle-Button"
 msgstr "中央ボタン"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:24
+#, kde-format
 msgid "Back-Button"
 msgstr "戻るボタン"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
+#, kde-format
 msgid "Forward-Button"
 msgstr "進むボタン"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:27
+#, kde-format
 msgid "Vertical-Scroll"
 msgstr "縦スクロール"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
+#, kde-format
 msgid "Horizontal-Scroll"
 msgstr "横スクロール"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
+#, kde-format
 msgid "Shift"
 msgstr "Shift"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
+#, kde-format
 msgid "Ctrl"
 msgstr "Ctrl"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:32
+#, kde-format
 msgid "Alt"
 msgstr "Alt"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:33
+#, kde-format
 msgid "Meta"
 msgstr "Meta"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:95
+#, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
+#, kde-format
 msgctxt "@title"
 msgid "About"
 msgstr "情報"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:182
 #: contents/configuration/MouseEventInputButton.qml:13
+#, kde-format
 msgid "Add Action"
 msgstr "アクションを追加"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:69
+#, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "レイアウトの変更はシステムの管理者によって制限されています"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:84
+#, kde-format
 msgid "Layout:"
 msgstr "レイアウト:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:98
+#, kde-format
 msgid "Wallpaper type:"
 msgstr "壁紙の種類:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:119
+#, kde-format
 msgid "Get New Plugins…"
 msgstr "新しいプラグインを入手..."
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:193
+#, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "他の変更を行う前にレイアウトの変更を適用してください。"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:197
+#, kde-format
 msgid "Apply Now"
 msgstr "今すぐ適用"
 
 #: contents/configuration/ConfigurationShortcuts.qml:18
+#, kde-format
 msgid "Shortcuts"
 msgstr "ショートカット"
 
 #: contents/configuration/ConfigurationShortcuts.qml:30
+#, kde-format
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr ""
 "ここで設定したショートカットを使用して、ウィジェットをアクティブにすることが"
 "できます。"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
+#, kde-format
 msgid "Wallpaper"
 msgstr "壁紙"
 
 #: contents/configuration/ContainmentConfiguration.qml:33
+#, kde-format
 msgid "Mouse Actions"
 msgstr "マウスアクション"
 
 #: contents/configuration/MouseEventInputButton.qml:20
+#, kde-format
 msgid "Input Here"
 msgstr "ここに入力"
 
 #: contents/configuration/PanelConfiguration.qml:97
+#, kde-format
 msgid "Panel Settings"
 msgstr "パネル設定"
 
 #: contents/configuration/PanelConfiguration.qml:104
+#, kde-format
 msgid "Add Spacer"
 msgstr "スペーサーを追加"
 
 #: contents/configuration/PanelConfiguration.qml:107
+#, kde-format
 msgid "Add spacer widget to the panel"
 msgstr "スペーサーウィジェットをパネルに追加"
 
 #: contents/configuration/PanelConfiguration.qml:114
+#, kde-format
 msgid "Add Widgets…"
 msgstr "ウィジェットを追加..."
 
 #: contents/configuration/PanelConfiguration.qml:117
+#, kde-format
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr "ウィジェットをセレクタからパネルにドラッグ＆ドロップ"
 
 #: contents/configuration/PanelConfiguration.qml:146
+#, kde-format
 msgid "Position"
 msgstr "位置"
 
 #: contents/configuration/PanelConfiguration.qml:151
 #: contents/configuration/PanelConfiguration.qml:266
+#, kde-format
 msgid "Top"
 msgstr "上"
 
 #: contents/configuration/PanelConfiguration.qml:152
 #: contents/configuration/PanelConfiguration.qml:268
+#, kde-format
 msgid "Right"
 msgstr "右"
 
 #: contents/configuration/PanelConfiguration.qml:153
 #: contents/configuration/PanelConfiguration.qml:266
+#, kde-format
 msgid "Left"
 msgstr "左"
 
 #: contents/configuration/PanelConfiguration.qml:154
 #: contents/configuration/PanelConfiguration.qml:268
+#, kde-format
 msgid "Bottom"
 msgstr "下"
 
 #: contents/configuration/PanelConfiguration.qml:174
+#, kde-format
 msgid "Set Position…"
 msgstr "設定..."
 
 #: contents/configuration/PanelConfiguration.qml:201
+#, kde-format
 msgid "Alignment"
 msgstr "配置"
 
 #: contents/configuration/PanelConfiguration.qml:267
+#, kde-format
 msgid "Center"
 msgstr "中央"
 
 #: contents/configuration/PanelConfiguration.qml:290
+#, kde-format
 msgid "Height"
 msgstr "高さ"
 
 #: contents/configuration/PanelConfiguration.qml:291
+#, kde-format
 msgid "Width"
 msgstr "幅"
 
 #: contents/configuration/PanelConfiguration.qml:310
+#, kde-format
 msgid "Fill height"
 msgstr "高さを埋める"
 
 #: contents/configuration/PanelConfiguration.qml:310
+#, kde-format
 msgid "Fill width"
 msgstr "幅を埋める"
 
 #: contents/configuration/PanelConfiguration.qml:311
+#, kde-format
 msgid "Fit content"
 msgstr "内容に合わせる"
 
 #: contents/configuration/PanelConfiguration.qml:312
+#, kde-format
 msgid "Custom"
 msgstr "カスタム"
 
 #: contents/configuration/PanelConfiguration.qml:338
+#, kde-format
 msgid "Visibility"
 msgstr "表示"
 
 #: contents/configuration/PanelConfiguration.qml:351
+#, kde-format
 msgid "Always visible"
 msgstr "常に表示"
 
 #: contents/configuration/PanelConfiguration.qml:352
+#, kde-format
 msgid "Auto hide"
 msgstr "自動的に隠す"
 
 #: contents/configuration/PanelConfiguration.qml:353
+#, kde-format
 msgid "Dodge windows"
 msgstr "ウィンドウを避ける"
 
 #: contents/configuration/PanelConfiguration.qml:354
+#, kde-format
 msgid "Windows Go Below"
 msgstr "ウィンドウを覆う"
 
 #: contents/configuration/PanelConfiguration.qml:397
+#, kde-format
 msgid "Opacity"
 msgstr "透明度"
 
 #: contents/configuration/PanelConfiguration.qml:411
+#, kde-format
 msgid "Adaptive"
 msgstr "自動調整"
 
 #: contents/configuration/PanelConfiguration.qml:412
+#, kde-format
 msgid "Opaque"
 msgstr "不透明"
 
 #: contents/configuration/PanelConfiguration.qml:413
+#, kde-format
 msgid "Translucent"
 msgstr "透明"
 
 #: contents/configuration/PanelConfiguration.qml:436
+#, kde-format
 msgid "Floating"
 msgstr "フローティング"
 
 #: contents/configuration/PanelConfiguration.qml:446
+#, kde-format
 msgid "Style"
 msgstr "スタイル"
 
 #: contents/configuration/PanelConfiguration.qml:486
+#, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:564
+#, kde-format
 msgid "Panel Width:"
 msgstr "パネルの幅:"
 
 #: contents/configuration/PanelConfiguration.qml:565
-#, fuzzy
+#, fuzzy, kde-format
 #| msgid "Panel Width:"
 msgid "Panel Height:"
 msgstr "パネルの幅:"
 
 #: contents/configuration/PanelConfiguration.qml:588
+#, kde-format
 msgid "Focus shortcut:"
 msgstr "フォーカスショートカット:"
 
 #: contents/configuration/PanelConfiguration.qml:599
+#, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "キーボードショートカットを押してパネルをフォーカス"
 
 #: contents/configuration/PanelConfiguration.qml:633
+#, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "パネルを削除"
 
 #: contents/configuration/PanelConfiguration.qml:636
+#, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "このパネルを削除します。この操作は取り消せません"
 
 #: contents/configuration/PanelConfiguration.qml:647
+#, kde-format
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:650
+#, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
+#, kde-format
 msgid "Drag to change maximum height."
 msgstr "ドラッグして最大の高さを変更"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
+#, kde-format
 msgid "Drag to change maximum width."
 msgstr "ドラッグして最大の幅を変更"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 #: contents/configuration/panelconfiguration/Ruler.qml:31
+#, kde-format
 msgid "Double click to reset."
 msgstr "ダブルクリックしてリセット"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:31
+#, kde-format
 msgid "Drag to change minimum height."
 msgstr "ドラッグして最小の高さを変更"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:31
+#, kde-format
 msgid "Drag to change minimum width."
 msgstr "ドラッグして最小の幅を変更"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:78
+#, kde-format
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
@@ -455,207 +554,254 @@ msgstr ""
 "ダブルクリックしてリセット"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
+#, kde-format
 msgid "Panel and Desktop Management"
 msgstr "パネルとデスクトップの管理"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
+#, kde-format
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr "パネルとデスクトップをドラッグして他のスクリーンに移動できます。"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
+#, kde-format
 msgid "Close"
 msgstr "閉じる"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
+#, kde-format
 msgid "Swap with Desktop on Screen %1"
 msgstr "スクリーン %1 のデスクトップと入れ替える"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
+#, kde-format
 msgid "Move to Screen %1"
 msgstr "スクリーン %1 に移動"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
+#, kde-format
 msgid "Remove Desktop"
 msgstr "デスクトップを削除"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:195
+#, kde-format
 msgid "Remove Panel"
 msgstr "パネルを削除"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:268
+#, kde-format
 msgid "%1 (primary)"
 msgstr "%1 (プライマリ)"
 
 #: contents/explorer/AppletAlternatives.qml:66
+#, kde-format
 msgid "Alternative Widgets"
 msgstr "代替ウィジェット"
 
 #: contents/explorer/AppletDelegate.qml:41
+#, kde-format
 msgid "Unsupported Widget"
 msgstr "サポートされていないウィジェット"
 
 #: contents/explorer/AppletDelegate.qml:188
+#, kde-format
 msgid "Undo uninstall"
 msgstr "アンインストールを取り消し"
 
 #: contents/explorer/AppletDelegate.qml:189
+#, kde-format
 msgid "Uninstall widget"
 msgstr "ウィジェットをアンインストール"
 
 #: contents/explorer/Tooltip.qml:105
+#, kde-format
 msgid "Author:"
 msgstr "作者:"
 
 #: contents/explorer/Tooltip.qml:115
+#, kde-format
 msgid "Email:"
 msgstr "メールアドレス:"
 
 #: contents/explorer/Tooltip.qml:136
+#, kde-format
 msgid "Uninstall"
 msgstr "アンインストール"
 
 #: contents/explorer/WidgetExplorer.qml:129
 #: contents/explorer/WidgetExplorer.qml:204
+#, kde-format
 msgid "All Widgets"
 msgstr "すべてのウィジェット"
 
 #: contents/explorer/WidgetExplorer.qml:155
+#, kde-format
 msgid "Widgets"
 msgstr "ウィジェット"
 
 #: contents/explorer/WidgetExplorer.qml:164
+#, kde-format
 msgid "Get New Widgets…"
 msgstr "新しいウィジェットを入手..."
 
 #: contents/explorer/WidgetExplorer.qml:215
+#, kde-format
 msgid "Categories"
 msgstr "カテゴリ"
 
 #: contents/explorer/WidgetExplorer.qml:226
+#, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
 msgstr[0] "%1 のウィジェットの削除を確認"
 
 #: contents/explorer/WidgetExplorer.qml:306
+#, kde-format
 msgid "No widgets matched the search terms"
 msgstr "検索語に一致するウィジェットはありません"
 
 #: contents/explorer/WidgetExplorer.qml:306
+#, kde-format
 msgid "No widgets available"
 msgstr "利用可能なウィジェットはありません"
 
 #: contents/lockscreen/config.qml:19
+#, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
 msgstr "時計:"
 
 #: contents/lockscreen/config.qml:22
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
 msgstr "アンロック画面が消えても表示し続ける"
 
 #: contents/lockscreen/config.qml:33
+#, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
 msgstr "メディア操作:"
 
 #: contents/lockscreen/config.qml:36
+#, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "アンロック画面で表示する"
 
 #: contents/lockscreen/LockScreenUi.qml:48
+#, kde-format
 msgid "Unlocking failed"
 msgstr "ロック解除に失敗"
 
 #: contents/lockscreen/LockScreenUi.qml:271
+#, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock が有効です"
 
 #: contents/lockscreen/LockScreenUi.qml:285
+#, kde-format
 msgid "Sleep"
 msgstr "スリープ"
 
 #: contents/lockscreen/LockScreenUi.qml:291
+#, kde-format
 msgid "Hibernate"
 msgstr "ハイバネート"
 
 #: contents/lockscreen/LockScreenUi.qml:297
+#, kde-format
 msgid "Switch User"
 msgstr "ユーザの切り替え"
 
 #: contents/lockscreen/LockScreenUi.qml:358
+#, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "仮想キーボード"
 
 #: contents/lockscreen/LockScreenUi.qml:382
+#, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "レイアウトを切り替え"
 
 #: contents/lockscreen/MainBlock.qml:64
+#, kde-format
 msgid "Password"
 msgstr "パスワード"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
+#, kde-format
 msgid "Unlock"
 msgstr "ロック解除"
 
 #: contents/lockscreen/MainBlock.qml:156
+#, kde-format
 msgid "(or scan your fingerprint on the reader)"
 msgstr "(もしくは指紋をリーダにスキャンしてください)"
 
 #: contents/lockscreen/MainBlock.qml:160
+#, kde-format
 msgid "(or scan your smartcard)"
 msgstr "(もしくはスマートカードをスキャンしてください)"
 
 #: contents/lockscreen/MediaControls.qml:59
+#, kde-format
 msgid "No title"
 msgstr "タイトルなし"
 
 #: contents/lockscreen/MediaControls.qml:60
+#, kde-format
 msgid "No media playing"
 msgstr "再生中のメディアはありません"
 
 #: contents/lockscreen/MediaControls.qml:88
+#, kde-format
 msgid "Previous track"
 msgstr "前のトラック"
 
 #: contents/lockscreen/MediaControls.qml:100
+#, kde-format
 msgid "Play or Pause media"
 msgstr "メディアを再生/一時停止"
 
 #: contents/lockscreen/MediaControls.qml:110
+#, kde-format
 msgid "Next track"
 msgstr "次のトラック"
 
 #: contents/osd/OsdItem.qml:32
+#, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr ""
 
 #: contents/views/DesktopEditMode.qml:113
+#, kde-format
 msgid "Global Themes"
 msgstr ""
 
 #: contents/views/DesktopEditMode.qml:120
-#, fuzzy
+#, fuzzy, kde-format
 #| msgid "Open configuration page"
 msgid "Display Configuration"
 msgstr "設定ページを開く"
 
 #: contents/views/DesktopEditMode.qml:141
+#, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr ""
 
 #: contents/views/DesktopEditMode.qml:150
+#, kde-format
 msgid "Exit Edit Mode"
 msgstr ""
 
 #: contents/views/Panel.qml:302
+#, kde-format
 msgid "Panel Focus Indicator"
 msgstr "パネルフォーカスインジケータ"

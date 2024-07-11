@@ -5,19 +5,20 @@
 # Erik Kjær Pedersen <erik@binghamton.edu>, 2002, 2003, 2004.
 # Keld Simonsen <keld@dkuug.dk>, 2008.
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2015, 2017, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2020-07-22 20:22+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"PO-Revision-Date: 2024-07-08 12:34+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmkded.cpp:115
@@ -41,11 +42,10 @@ msgid "Failed to start service."
 msgstr "Kunne ikke starte tjenesten."
 
 #: kcmkded.cpp:224
-#, fuzzy, kde-format
-#| msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
+#, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"Kunne ikke give KDE Service Manager (kded5) besked om gemte ændringer: %1"
+"Kunne ikke give KDE Service Manager (kded6) besked om gemte ændringer: %1"
 
 #: ui/main.qml:48
 #, kde-kuit-format
@@ -56,15 +56,12 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded5) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Håndteringen af baggrundstjenester (kded5) kører ikke i øjeblikket. "
+"Håndteringen af baggrundstjenester (kded6) kører ikke i øjeblikket. "
 "Kontrollér at den er installeret korrekt."
 
 #: ui/main.qml:65
@@ -77,16 +74,13 @@ msgstr ""
 "ikke er nyttige i det aktuelle miljø."
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded5) was restarted to apply your changes."
+#, kde-format
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Nogle tjenester blev automatisk startet/stoppet når håndteringen af "
-"baggrundstjenester (kded5) blev genstartet for at anvende dine ændringer."
+"baggrundstjenester (kded6) blev genstartet for at anvende dine ændringer."
 
 #: ui/main.qml:123
 #, kde-format
@@ -120,14 +114,14 @@ msgstr "Load-on-Demand tjenester"
 #| msgid "Toggle automatically loading this service on startup"
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "Slå automatisk indlæsning af denne tjeneste ved opstart til/fra"
+msgstr "Slå automatisk indlæsning af denne tjeneste ved opstart fra"
 
 #: ui/main.qml:182
 #, fuzzy, kde-format
 #| msgid "Toggle automatically loading this service on startup"
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "Slå automatisk indlæsning af denne tjeneste ved opstart til/fra"
+msgstr "Slå automatisk indlæsning af denne tjeneste ved opstart til"
 
 #: ui/main.qml:183
 #, kde-format
@@ -145,18 +139,16 @@ msgid "Running"
 msgstr "Kører"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Stop"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr "Stop"
+msgstr "Stop %1"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr "Start"
+msgstr "Start %1"
 
 #: ui/main.qml:251
 #, kde-format

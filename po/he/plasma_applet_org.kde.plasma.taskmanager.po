@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-17 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-04-14 16:42+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -67,98 +67,123 @@ msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
 msgstr "‎9,999+‎"
 
-#: package/contents/ui/ConfigAppearance.qml:45
+#: package/contents/ui/ConfigAppearance.qml:46
 #, kde-format
 msgid "General:"
 msgstr "כללי:"
 
-#: package/contents/ui/ConfigAppearance.qml:46
+#: package/contents/ui/ConfigAppearance.qml:47
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
 msgstr "הצגת חלוניות תצוגת מקדימה בעת ריחוף מעל משימות"
 
-#: package/contents/ui/ConfigAppearance.qml:51
+#: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
 msgid "Hide other windows when hovering over previews"
 msgstr "הסתרת חלונות אחרים בעת ריחוף מעל תצוגות מקדימות"
 
-#: package/contents/ui/ConfigAppearance.qml:56
+#: package/contents/ui/ConfigAppearance.qml:57
 #, kde-format
 msgid "Mark applications that play audio"
 msgstr "סימון יישומים שמשמיעים קול"
 
-#: package/contents/ui/ConfigAppearance.qml:64
+#: package/contents/ui/ConfigAppearance.qml:65
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
 msgstr "מילוי המקום הפנוי בלוח"
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:77
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox"
+#| msgid "Maximum rows:"
+msgid "Maximum task width:"
+msgstr "כמות שורות מרבית:"
+
+#: package/contents/ui/ConfigAppearance.qml:80
+#, kde-format
+msgctxt "@item:inlistbox how wide a task item should be"
+msgid "Narrow"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:81
+#, kde-format
+msgctxt "@item:inlistbox how wide a task item should be"
+msgid "Medium"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:82
+#, kde-format
+msgctxt "@item:inlistbox how wide a task item should be"
+msgid "Wide"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:92
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
 msgstr "להשתמש בתצוגה מרובת עמודות:"
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:92
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
 msgstr "להשתמש בתצוגה מרובת שורות:"
 
-#: package/contents/ui/ConfigAppearance.qml:79
+#: package/contents/ui/ConfigAppearance.qml:98
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "אף פעם"
 
-#: package/contents/ui/ConfigAppearance.qml:89
+#: package/contents/ui/ConfigAppearance.qml:108
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
 msgstr "כאשר אין מספיק מקום בלוח והוא עבה מספיק"
 
-#: package/contents/ui/ConfigAppearance.qml:99
+#: package/contents/ui/ConfigAppearance.qml:118
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
 msgstr "תמיד כאשר הלוח עבה מספיק"
 
-#: package/contents/ui/ConfigAppearance.qml:105
+#: package/contents/ui/ConfigAppearance.qml:124
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "כמות עמודות מרבית:"
 
-#: package/contents/ui/ConfigAppearance.qml:105
+#: package/contents/ui/ConfigAppearance.qml:124
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "כמות שורות מרבית:"
 
-#: package/contents/ui/ConfigAppearance.qml:115
+#: package/contents/ui/ConfigAppearance.qml:134
 #, kde-format
 msgid "Spacing between icons:"
 msgstr "ריווח בין סמלים:"
 
-#: package/contents/ui/ConfigAppearance.qml:119
+#: package/contents/ui/ConfigAppearance.qml:138
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "קטן"
 
-#: package/contents/ui/ConfigAppearance.qml:123
+#: package/contents/ui/ConfigAppearance.qml:142
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "רגיל"
 
-#: package/contents/ui/ConfigAppearance.qml:127
+#: package/contents/ui/ConfigAppearance.qml:146
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "גדול"
 
-#: package/contents/ui/ConfigAppearance.qml:151
+#: package/contents/ui/ConfigAppearance.qml:170
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"

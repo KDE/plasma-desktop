@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-06 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-06-21 11:45+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -18,10 +18,12 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
+#, kde-format
 msgid "Currently being used"
 msgstr "Används för närvarande"
 
 #: contents/activitymanager/ActivityItem.qml:245
+#, kde-format
 msgid ""
 "Move to\n"
 "this activity"
@@ -30,6 +32,7 @@ msgstr ""
 "här aktiviteten"
 
 #: contents/activitymanager/ActivityItem.qml:275
+#, kde-format
 msgid ""
 "Show also\n"
 "in this activity"
@@ -38,97 +41,120 @@ msgstr ""
 "här aktiviteten"
 
 #: contents/activitymanager/ActivityItem.qml:337
+#, kde-format
 msgid "Configure"
 msgstr "Anpassa"
 
 #: contents/activitymanager/ActivityItem.qml:356
+#, kde-format
 msgid "Stop activity"
 msgstr "Stoppa aktivitet"
 
 #: contents/activitymanager/ActivityList.qml:142
+#, kde-format
 msgid "Stopped activities:"
 msgstr "Stoppade aktiviteter:"
 
 #: contents/activitymanager/ActivityManager.qml:122
+#, kde-format
 msgid "Create activity…"
 msgstr "Skapa aktivitet…"
 
 #: contents/activitymanager/Heading.qml:59
+#, kde-format
 msgid "Activities"
 msgstr "Aktiviteter"
 
 #: contents/activitymanager/StoppedActivityItem.qml:138
+#, kde-format
 msgid "Configure activity"
 msgstr "Anpassa aktivitet"
 
 #: contents/activitymanager/StoppedActivityItem.qml:155
+#, kde-format
 msgid "Delete"
 msgstr "Ta bort"
 
 #: contents/applet/AppletError.qml:164
+#, kde-format
 msgid "Copy to Clipboard"
 msgstr "Kopiera till klippbordet"
 
 #: contents/applet/AppletError.qml:187
+#, kde-format
 msgid "View Error Details…"
 msgstr "Visa felinformation…"
 
 #: contents/applet/CompactApplet.qml:76
+#, kde-format
 msgid "Open %1"
 msgstr "Öppna %1"
 
 #: contents/configuration/AboutPlugin.qml:21
 #: contents/configuration/AppletConfiguration.qml:304
+#, kde-format
 msgid "About"
 msgstr "Om"
 
 #: contents/configuration/AboutPlugin.qml:50
+#, kde-format
 msgid "Send an email to %1"
 msgstr "Skicka e-post till %1"
 
 #: contents/configuration/AboutPlugin.qml:64
+#, kde-format
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Öppna webbplats %1"
 
 #: contents/configuration/AboutPlugin.qml:137
+#, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
 #: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#, kde-format
 msgid "License:"
 msgstr "Licens:"
 
 #: contents/configuration/AboutPlugin.qml:163
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Visa licenstext"
 
 #: contents/configuration/AboutPlugin.qml:177
+#, kde-format
 msgid "Authors"
 msgstr "Upphovsmän"
 
 #: contents/configuration/AboutPlugin.qml:189
+#, kde-format
 msgid "Credits"
 msgstr "Tack till"
 
 #: contents/configuration/AboutPlugin.qml:202
+#, kde-format
 msgid "Translators"
 msgstr "Översättare"
 
 #: contents/configuration/AboutPlugin.qml:220
+#, kde-format
 msgid "Report a Bug…"
 msgstr "Rapportera ett fel…"
 
 #: contents/configuration/AppletConfiguration.qml:76
+#, kde-format
 msgid "Keyboard Shortcuts"
 msgstr "Snabbtangenter"
 
 #: contents/configuration/AppletConfiguration.qml:352
+#, kde-format
 msgid "Apply Settings"
 msgstr "Verkställ inställningar"
 
 #: contents/configuration/AppletConfiguration.qml:353
+#, kde-format
 msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
@@ -137,310 +163,384 @@ msgstr ""
 "ändringarna eller kasta dem?"
 
 #: contents/configuration/AppletConfiguration.qml:384
+#, kde-format
 msgid "OK"
 msgstr "Ok"
 
 #: contents/configuration/AppletConfiguration.qml:392
+#, kde-format
 msgid "Apply"
 msgstr "Verkställ"
 
 #: contents/configuration/AppletConfiguration.qml:398
+#, kde-format
 msgid "Cancel"
 msgstr "Avbryt"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:27
+#, kde-format
 msgid "Open configuration page"
 msgstr "Öppna inställningssida"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
+#, kde-format
 msgid "Left-Button"
 msgstr "Vänsterknapp"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
+#, kde-format
 msgid "Right-Button"
 msgstr "Högerknapp"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
+#, kde-format
 msgid "Middle-Button"
 msgstr "Mittenknapp"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:24
+#, kde-format
 msgid "Back-Button"
 msgstr "Bakåtknapp"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
+#, kde-format
 msgid "Forward-Button"
 msgstr "Framåtknapp"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:27
+#, kde-format
 msgid "Vertical-Scroll"
 msgstr "Vertikal rullning"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
+#, kde-format
 msgid "Horizontal-Scroll"
 msgstr "Horisontell rullning"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
+#, kde-format
 msgid "Shift"
 msgstr "Skift"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
+#, kde-format
 msgid "Ctrl"
 msgstr "Ctrl"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:32
+#, kde-format
 msgid "Alt"
 msgstr "Alt"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:33
+#, kde-format
 msgid "Meta"
 msgstr "Meta"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:95
+#, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
+#, kde-format
 msgctxt "@title"
 msgid "About"
 msgstr "Om"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:182
 #: contents/configuration/MouseEventInputButton.qml:13
+#, kde-format
 msgid "Add Action"
 msgstr "Lägg till åtgärd"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:69
+#, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Layoutändringar har begränsats av systemadministratören"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:84
+#, kde-format
 msgid "Layout:"
 msgstr "Layout:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:98
+#, kde-format
 msgid "Wallpaper type:"
 msgstr "Typ av skrivbordsunderlägg:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:119
+#, kde-format
 msgid "Get New Plugins…"
 msgstr "Hämta nya insticksprogram…"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:193
+#, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Layoutändringar måste verkställas innan andra ändringar kan göras"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:197
+#, kde-format
 msgid "Apply Now"
 msgstr "Verkställ nu"
 
 #: contents/configuration/ConfigurationShortcuts.qml:18
+#, kde-format
 msgid "Shortcuts"
 msgstr "Genvägar"
 
 #: contents/configuration/ConfigurationShortcuts.qml:30
+#, kde-format
 msgid "This shortcut will activate the applet as though it had been clicked."
 msgstr "Genvägen aktiverar miniprogrammet som om det hade klickats på"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
+#, kde-format
 msgid "Wallpaper"
 msgstr "Skrivbordsunderlägg"
 
 #: contents/configuration/ContainmentConfiguration.qml:33
+#, kde-format
 msgid "Mouse Actions"
 msgstr "Musåtgärder"
 
 #: contents/configuration/MouseEventInputButton.qml:20
+#, kde-format
 msgid "Input Here"
 msgstr "Skriv in här"
 
 #: contents/configuration/PanelConfiguration.qml:97
+#, kde-format
 msgid "Panel Settings"
 msgstr "Panelinställningar"
 
 #: contents/configuration/PanelConfiguration.qml:104
+#, kde-format
 msgid "Add Spacer"
 msgstr "Lägg till mellanrum"
 
 #: contents/configuration/PanelConfiguration.qml:107
+#, kde-format
 msgid "Add spacer widget to the panel"
 msgstr "Lägg till mellanrum i panelen"
 
 #: contents/configuration/PanelConfiguration.qml:114
+#, kde-format
 msgid "Add Widgets…"
 msgstr "Lägg till grafiska komponenter…"
 
 #: contents/configuration/PanelConfiguration.qml:117
+#, kde-format
 msgid "Open the widget selector to drag and drop widgets to the panel"
 msgstr "Öppna komponentväljaren för att dra och släppa komponenter på panelen"
 
 #: contents/configuration/PanelConfiguration.qml:146
+#, kde-format
 msgid "Position"
 msgstr "Position"
 
 #: contents/configuration/PanelConfiguration.qml:151
 #: contents/configuration/PanelConfiguration.qml:266
+#, kde-format
 msgid "Top"
 msgstr "Längst upp"
 
 #: contents/configuration/PanelConfiguration.qml:152
 #: contents/configuration/PanelConfiguration.qml:268
+#, kde-format
 msgid "Right"
 msgstr "Höger"
 
 #: contents/configuration/PanelConfiguration.qml:153
 #: contents/configuration/PanelConfiguration.qml:266
+#, kde-format
 msgid "Left"
 msgstr "Vänster"
 
 #: contents/configuration/PanelConfiguration.qml:154
 #: contents/configuration/PanelConfiguration.qml:268
+#, kde-format
 msgid "Bottom"
 msgstr "Längst ner"
 
 #: contents/configuration/PanelConfiguration.qml:174
+#, kde-format
 msgid "Set Position…"
 msgstr "Ange position…"
 
 #: contents/configuration/PanelConfiguration.qml:201
+#, kde-format
 msgid "Alignment"
 msgstr "Justera"
 
 #: contents/configuration/PanelConfiguration.qml:267
+#, kde-format
 msgid "Center"
 msgstr "Centrera"
 
 #: contents/configuration/PanelConfiguration.qml:290
+#, kde-format
 msgid "Height"
 msgstr "Höjd"
 
 #: contents/configuration/PanelConfiguration.qml:291
+#, kde-format
 msgid "Width"
 msgstr "Bredd"
 
 #: contents/configuration/PanelConfiguration.qml:310
+#, kde-format
 msgid "Fill height"
 msgstr "Fyll höjd"
 
 #: contents/configuration/PanelConfiguration.qml:310
+#, kde-format
 msgid "Fill width"
 msgstr "Fyll bredd"
 
 #: contents/configuration/PanelConfiguration.qml:311
+#, kde-format
 msgid "Fit content"
 msgstr "Anpassa till innehåll"
 
 #: contents/configuration/PanelConfiguration.qml:312
+#, kde-format
 msgid "Custom"
 msgstr "Egen"
 
 #: contents/configuration/PanelConfiguration.qml:338
+#, kde-format
 msgid "Visibility"
 msgstr "Synlighet"
 
 #: contents/configuration/PanelConfiguration.qml:351
+#, kde-format
 msgid "Always visible"
 msgstr "Alltid synlig"
 
 #: contents/configuration/PanelConfiguration.qml:352
+#, kde-format
 msgid "Auto hide"
 msgstr "Dölj automatiskt"
 
 #: contents/configuration/PanelConfiguration.qml:353
+#, kde-format
 msgid "Dodge windows"
 msgstr "Undvik fönster"
 
 #: contents/configuration/PanelConfiguration.qml:354
+#, kde-format
 msgid "Windows Go Below"
 msgstr "Fönster hamnar under"
 
 #: contents/configuration/PanelConfiguration.qml:397
+#, kde-format
 msgid "Opacity"
 msgstr "Ogenomskinlighet"
 
 #: contents/configuration/PanelConfiguration.qml:411
+#, kde-format
 msgid "Adaptive"
 msgstr "Adaptiv"
 
 #: contents/configuration/PanelConfiguration.qml:412
+#, kde-format
 msgid "Opaque"
 msgstr "Ogenomskinlig"
 
 #: contents/configuration/PanelConfiguration.qml:413
+#, kde-format
 msgid "Translucent"
 msgstr "Halvgenomskinlig"
 
 #: contents/configuration/PanelConfiguration.qml:436
+#, kde-format
 msgid "Floating"
 msgstr "Fristående"
 
 #: contents/configuration/PanelConfiguration.qml:446
+#, kde-format
 msgid "Style"
 msgstr "Stil"
 
 #: contents/configuration/PanelConfiguration.qml:486
+#, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Rätta det"
 
 #: contents/configuration/PanelConfiguration.qml:564
+#, kde-format
 msgid "Panel Width:"
 msgstr "Panelbredd:"
 
 #: contents/configuration/PanelConfiguration.qml:565
+#, kde-format
 msgid "Panel Height:"
 msgstr "Panelhöjd:"
 
 #: contents/configuration/PanelConfiguration.qml:588
+#, kde-format
 msgid "Focus shortcut:"
 msgstr "Fokuseringsgenväg:"
 
 #: contents/configuration/PanelConfiguration.qml:599
+#, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Håll nere snabbtangenten för att flytta fokus till panelen"
 
 #: contents/configuration/PanelConfiguration.qml:633
+#, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Ta bort panel"
 
 #: contents/configuration/PanelConfiguration.qml:636
+#, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Ta bort panelen. Åtgärden går inte att ångra."
 
 #: contents/configuration/PanelConfiguration.qml:647
+#, kde-format
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
 msgstr "Klar"
 
 #: contents/configuration/PanelConfiguration.qml:650
+#, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Stäng panelinställningsfönstret och avsluta redigeringsläge"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
+#, kde-format
 msgid "Drag to change maximum height."
 msgstr "Dra för att ändra maximal höjd."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
+#, kde-format
 msgid "Drag to change maximum width."
 msgstr "Dra för att ändra maximal bredd."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 #: contents/configuration/panelconfiguration/Ruler.qml:31
+#, kde-format
 msgid "Double click to reset."
 msgstr "Dubbelklicka för att återställa."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:31
+#, kde-format
 msgid "Drag to change minimum height."
 msgstr "Dra för att ändra minimal höjd."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:31
+#, kde-format
 msgid "Drag to change minimum width."
 msgstr "Dra för att ändra minimal bredd."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:78
+#, kde-format
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
@@ -449,10 +549,12 @@ msgstr ""
 "Dubbelklicka för att återställa."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
+#, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Panel och skrivbordshantering"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
+#, kde-format
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
@@ -460,198 +562,244 @@ msgstr ""
 "skärmar."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
+#, kde-format
 msgid "Close"
 msgstr "Stäng"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
+#, kde-format
 msgid "Swap with Desktop on Screen %1"
 msgstr "Byt med skrivbord på skärm %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:180
+#, kde-format
 msgid "Move to Screen %1"
 msgstr "Flytta till skärm %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
+#, kde-format
 msgid "Remove Desktop"
 msgstr "Ta bort skrivbord"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:195
+#, kde-format
 msgid "Remove Panel"
 msgstr "Ta bort panel"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:268
+#, kde-format
 msgid "%1 (primary)"
 msgstr "%1 (primär)"
 
 #: contents/explorer/AppletAlternatives.qml:66
+#, kde-format
 msgid "Alternative Widgets"
 msgstr "Alternativa grafiska komponenter"
 
 #: contents/explorer/AppletDelegate.qml:41
+#, kde-format
 msgid "Unsupported Widget"
 msgstr "Komponenten stöds inte"
 
 #: contents/explorer/AppletDelegate.qml:188
+#, kde-format
 msgid "Undo uninstall"
 msgstr "Ångra avinstallera"
 
 #: contents/explorer/AppletDelegate.qml:189
+#, kde-format
 msgid "Uninstall widget"
 msgstr "Avinstallera grafisk komponent"
 
 #: contents/explorer/Tooltip.qml:105
+#, kde-format
 msgid "Author:"
 msgstr "Upphovsman:"
 
 #: contents/explorer/Tooltip.qml:115
+#, kde-format
 msgid "Email:"
 msgstr "E-post:"
 
 #: contents/explorer/Tooltip.qml:136
+#, kde-format
 msgid "Uninstall"
 msgstr "Avinstallera"
 
 #: contents/explorer/WidgetExplorer.qml:129
 #: contents/explorer/WidgetExplorer.qml:204
+#, kde-format
 msgid "All Widgets"
 msgstr "Alla grafiska komponenter"
 
 #: contents/explorer/WidgetExplorer.qml:155
+#, kde-format
 msgid "Widgets"
 msgstr "Grafiska komponenter"
 
 #: contents/explorer/WidgetExplorer.qml:164
+#, kde-format
 msgid "Get New Widgets…"
 msgstr "Hämta nya grafiska komponenter…"
 
 #: contents/explorer/WidgetExplorer.qml:215
+#, kde-format
 msgid "Categories"
 msgstr "Kategorier"
 
 #: contents/explorer/WidgetExplorer.qml:226
+#, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
 msgstr[0] "Bekräfta borttagning av en komponent"
 msgstr[1] "Bekräfta borttagning av %1 komponenter"
 
 #: contents/explorer/WidgetExplorer.qml:306
+#, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Inga grafiska komponenter motsvarade sökbegreppen"
 
 #: contents/explorer/WidgetExplorer.qml:306
+#, kde-format
 msgid "No widgets available"
 msgstr "Inga grafiska komponenter tillgängliga"
 
 #: contents/lockscreen/config.qml:19
+#, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
 msgstr "Klocka:"
 
 #: contents/lockscreen/config.qml:22
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
 msgstr "Behåll synlig när upplåsningsfrågan försvinner"
 
 #: contents/lockscreen/config.qml:33
+#, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
 msgstr "Mediekontroller:"
 
 #: contents/lockscreen/config.qml:36
+#, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Visa under upplåsningsfråga"
 
 #: contents/lockscreen/LockScreenUi.qml:48
+#, kde-format
 msgid "Unlocking failed"
 msgstr "Upplåsning misslyckades"
 
 #: contents/lockscreen/LockScreenUi.qml:271
+#, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock aktiverad"
 
 #: contents/lockscreen/LockScreenUi.qml:285
+#, kde-format
 msgid "Sleep"
 msgstr "Viloläge"
 
 #: contents/lockscreen/LockScreenUi.qml:291
+#, kde-format
 msgid "Hibernate"
 msgstr "Dvala"
 
 #: contents/lockscreen/LockScreenUi.qml:297
+#, kde-format
 msgid "Switch User"
 msgstr "Byt användare"
 
 #: contents/lockscreen/LockScreenUi.qml:358
+#, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Virtuellt tangentbord"
 
 #: contents/lockscreen/LockScreenUi.qml:382
+#, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "Byt layout"
 
 #: contents/lockscreen/MainBlock.qml:64
+#, kde-format
 msgid "Password"
 msgstr "Lösenord"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
+#, kde-format
 msgid "Unlock"
 msgstr "Lås upp"
 
 #: contents/lockscreen/MainBlock.qml:156
+#, kde-format
 msgid "(or scan your fingerprint on the reader)"
 msgstr "(eller läs av fingeravtryck på läsaren)"
 
 #: contents/lockscreen/MainBlock.qml:160
+#, kde-format
 msgid "(or scan your smartcard)"
 msgstr "(eller läs av smartkort)"
 
 #: contents/lockscreen/MediaControls.qml:59
+#, kde-format
 msgid "No title"
 msgstr "Namnlös"
 
 #: contents/lockscreen/MediaControls.qml:60
+#, kde-format
 msgid "No media playing"
 msgstr "Inga media spelar"
 
 #: contents/lockscreen/MediaControls.qml:88
+#, kde-format
 msgid "Previous track"
 msgstr "Föregående spår"
 
 #: contents/lockscreen/MediaControls.qml:100
+#, kde-format
 msgid "Play or Pause media"
 msgstr "Spela eller pausa media"
 
 #: contents/lockscreen/MediaControls.qml:110
+#, kde-format
 msgid "Next track"
 msgstr "Nästa spår"
 
 #: contents/osd/OsdItem.qml:32
+#, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1 %"
 
 #: contents/views/DesktopEditMode.qml:113
+#, kde-format
 msgid "Global Themes"
 msgstr "Globala teman"
 
 #: contents/views/DesktopEditMode.qml:120
+#, kde-format
 msgid "Display Configuration"
 msgstr "Bildskärmsinställning"
 
 #: contents/views/DesktopEditMode.qml:141
+#, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Mer"
 
 #: contents/views/DesktopEditMode.qml:150
+#, kde-format
 msgid "Exit Edit Mode"
 msgstr "Avsluta redigeringsläge"
 
 #: contents/views/Panel.qml:302
+#, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelfokuseringsindikator"
 

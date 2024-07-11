@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "启动"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -47,19 +47,15 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "与全局快捷键守护进程通信失败"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"快捷键 %1 已经分配给了通用的 %2 操作“%3”。\n"
-"您想要重新分配吗？"
+"快捷键 <shortcut>%1</shortcut> 已经分配到了 %2 通用操作<interface>%3</"
+"interface>。<nl/><nl/>您想要将它重新分配到 %4 吗？"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -69,18 +65,21 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
+"快捷键 <shortcut>%1</shortcut> 已经分配到了 <application>%3</application> 的 "
+"<interface>%2</interface> 操作。<nl/><nl/>您想要将它重新分配到 <application>"
+"%4</application> 的 <interface>%4</interface> 操作吗？"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "解决快捷键冲突"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "重新分配"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -355,14 +354,3 @@ msgstr "添加自定义快捷键"
 #, kde-format
 msgid "Cancel capturing of new shortcut"
 msgstr "取消捕获新快捷键"
-
-#~ msgid ""
-#~ "Shortcut %1 is already assigned to action '%2' of %3.\n"
-#~ "Do you want to reassign it?"
-#~ msgstr ""
-#~ "快捷键 %1 已经分配给了 %3 的操作“%2”。\n"
-#~ "您想要重新分配吗？"
-
-#~ msgctxt "@title:window"
-#~ msgid "Found conflict"
-#~ msgstr "发现冲突"

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 21:40+0200\n"
+"PO-Revision-Date: 2024-07-10 21:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -50,12 +50,7 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Klarte ikkje kommunisera med tenesta for globale snarvegar"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "@info %2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
-#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -63,7 +58,7 @@ msgid ""
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "Snøggtasten <shortcut>%1</shortcut> er alt tildelt den vanlege «%2»-"
-"handlinga <interface>%3<interface>.<nl/><nl/>Vil du tildela han på nytt til "
+"handlinga <interface>%3</interface>.<nl/><nl/>Vil du tildela han på nytt til "
 "%4?"
 
 # %1 er for eksempel «Meta + Pil venstre» (utan hermeteikn).
@@ -80,8 +75,8 @@ msgid ""
 msgstr ""
 "Snøggtasten <shortcut>%1</shortcut> er alt tildelt <application>%3</"
 "application>-handlinga <interface>%2</interface>.<nl/><nl/>Vil du tildela "
-"han på nytt til <interface>%4</interface>-handlinga til <application>%4</"
-"application>?"
+"han på nytt til <application>%4</application>-handlinga <interface>%4</"
+"interface>?"
 
 #: kcm_keys.cpp:330
 #, kde-format

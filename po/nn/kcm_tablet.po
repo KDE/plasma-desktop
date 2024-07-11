@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-07-06 14:51+0200\n"
+"PO-Revision-Date: 2024-07-10 21:46+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -78,7 +78,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Pennekalibrering"
 
 #: ui/Calibration.qml:83
 #, kde-kuit-format
@@ -87,6 +87,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Kalibreringa er fullført og lagra.<nl/><nl/>Du kan no finjustera "
+"kalibreringa eller lukka vindauget."
 
 #: ui/Calibration.qml:84
 #, kde-kuit-format
@@ -100,25 +102,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Finjuster kalibrering"
 
 #: ui/Calibration.qml:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Kalibrer på nytt"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Lukk"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: ui/main.qml:32
 #, kde-format
@@ -134,7 +136,7 @@ msgstr "Kopla til teikneplate"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Prøv ut teikneplata …"
 
 #: ui/main.qml:67
 #, kde-format
@@ -145,7 +147,7 @@ msgstr "Eining:"
 #: ui/main.qml:105
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Avbild til skjerm:"
 
 #: ui/main.qml:125
 #, kde-format
@@ -169,7 +171,7 @@ msgstr ""
 #: ui/main.qml:154
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Avbilda område:"
 
 #: ui/main.qml:241
 #, kde-format
@@ -207,25 +209,25 @@ msgstr "Penneknapp 3:"
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Kalibrering pågår"
 
 #: ui/main.qml:331
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Kalibrer"
 
 #: ui/main.qml:334
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Kalibrering er ikkje støtta"
 
 #: ui/main.qml:361
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "Kalibrering over fleire skjermar er ikkje støtta."
 
 #: ui/main.qml:371
 #, kde-format

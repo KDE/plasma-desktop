@@ -2,26 +2,26 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2017, 2018, 2019, 2020, 2022.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2022-05-14 17:05+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-08 14:18+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Tilgængelige plugins"
+msgstr "Favoritplugins"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -31,12 +31,12 @@ msgstr "Tilgængelige plugins"
 #: plasmasearch/ui/main.qml:25
 #, kde-format
 msgid "Configure KRunner…"
-msgstr ""
+msgstr "Konfigurér KRunner..."
 
 #: plasmasearch/ui/main.qml:29
 #, kde-format
 msgid "Get New Plugins…"
-msgstr ""
+msgstr "Hent nye plugins..."
 
 #: plasmasearch/ui/main.qml:44
 #, kde-format
@@ -45,83 +45,87 @@ msgid ""
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
+"Slå plugins til/fra (brugt i KRunner, Programstarter og oversigtseffekten). "
+"Markér plugins som favoritter, og arrangér dem i den rækkefølge, du vil "
+"prioritere dem."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Fjern fra favoritter"
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Føj til favoritter"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Failed to run install script in terminal <message>%1</message>"
 msgstr ""
+"Kunne ikke kører installationsscript i terminalen <message>%1</message>"
 
 #: plugininstaller/AbstractJob.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Installation executed successfully, you may now close this window"
-msgstr ""
+msgstr "Installationen eksekverede korrekt, du kan nu lukke dette vindue"
 
 #: plugininstaller/AbstractJob.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Uninstallation executed successfully, you may now close this window"
-msgstr ""
+msgstr "Afinstallationen eksekverede korrekt, du kan nu lukke dette vindue"
 
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
 #, kde-format
 msgid "Failed to copy file %1 to %2"
-msgstr ""
+msgstr "Kunne ikke kopiere fil %1 til %2"
 
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to remove file %1:<nl/>%2"
-msgstr ""
+msgstr "Kunne ikke fjerne fil %1:<nl/>%2"
 
 #: plugininstaller/main.cpp:33
 #, kde-format
 msgctxt "@info"
 msgid "KRunner plugin installation failed"
-msgstr ""
+msgstr "Installation af KRunner-plugin fejlede"
 
 #: plugininstaller/main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr ""
+msgstr "Kommando til eksekvering: installér eller afinstallér"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Sti til arkiv eller udpakket mappe"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
-msgstr ""
+msgstr "Vis ikke en visuel bekræftelsesdialog"
 
 #: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
-msgstr ""
+msgstr "Ingen PackageKit-understøttelse"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:23
 #: plugininstaller/ScriptConfirmationDialog.h:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Installation"
-msgstr ""
+msgstr "Bekræft installation"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:26
 #, kde-kuit-format
@@ -130,25 +134,27 @@ msgid ""
 "You are about to install a binary package. You should only install these "
 "from a trusted author/packager."
 msgstr ""
+"Du er ved at installere en binær pakke. Du bør kun installere disse fra en "
+"udvikler/pakker du stoler på."
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
 #: plugininstaller/ScriptConfirmationDialog.h:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept Risk And Continue"
-msgstr ""
+msgstr "Acceptér risiko og fortsæt"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:37
 #, kde-format
 msgctxt "@action:button"
 msgid "View File"
-msgstr ""
+msgstr "Vis fil"
 
 #: plugininstaller/PackageKitJob.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "The mime type %1 is not supported by the packagekit backend"
-msgstr ""
+msgstr "Mimetypen %1 er ikke understøttet af packagekit-backended"
 
 #: plugininstaller/ScriptConfirmationDialog.h:44
 #, kde-kuit-format
@@ -157,6 +163,8 @@ msgid ""
 "This plugin executes the following command for starting the \"%1\" service:"
 "<nl/>%2"
 msgstr ""
+"Dette plugin eksekvere følgende kommando ved start af \"%1\"-tjeneste: <nl/>"
+"%2"
 
 #: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format
@@ -166,6 +174,9 @@ msgid ""
 "author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Pluginet angiver ikke et afinstallationsscript. Kontakt venligst udvikleren. "
+"Du kan prøve at afinstallere pluginet manuelt.<nl/>Hvis du ikke føler dig i "
+"stand til eller tryg ved det, klik <interface>Annullér</interface> nu."
 
 #: plugininstaller/ScriptConfirmationDialog.h:52
 #, kde-kuit-format
@@ -176,6 +187,10 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Pluginet angiver ikke et afinstallationsscript. Kontakt venligst udvikleren. "
+"Du kan prøve at afinstallere pluginet manuelt. Venligst kig på README'en for "
+"instruktioner fra udvikleren.<nl/>Hvis du ikke føler dig i stand til eller "
+"tryg ved det, klik <interface>Annullér</interface> nu."
 
 #: plugininstaller/ScriptConfirmationDialog.h:58
 #, kde-kuit-format
@@ -185,6 +200,9 @@ msgid ""
 "author. You can try to install the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Pluginet angiver ikke et installationsscript. Kontakt venligst udvikleren. "
+"Du kan prøve at installere pluginet manuelt.<nl/>Hvis du ikke føler dig i "
+"stand til eller tryg ved det, klik <interface>Annullér</interface> nu."
 
 #: plugininstaller/ScriptConfirmationDialog.h:63
 #, kde-kuit-format
@@ -195,6 +213,10 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Pluginet angiver ikke et installationsscript. Kontakt venligst udvikleren. "
+"Du kan prøve at installere pluginet manuelt. Venligst kig på README'en for "
+"instruktioner fra udvikleren.<nl/>Hvis du ikke føler dig i stand til eller "
+"tryg ved det, klik <interface>Annullér</interface> nu."
 
 #: plugininstaller/ScriptConfirmationDialog.h:69
 #, kde-kuit-format
@@ -205,6 +227,10 @@ msgid ""
 "read the script's source code.<nl/>If you do not feel capable or comfortable "
 "with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Dette plugin bruger et script til installationen, som kan udgøre en "
+"sikkerhedsrisiko. Undersøg venligt hele pluginets indhold før du installerer "
+"det eller, i det mindste, læs scriptets kildekode.<nl/>Hvis du ikke føler "
+"dig i stand til eller tryg ved det, klik <interface>Annullér</interface> nu."
 
 #: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-kuit-format
@@ -215,48 +241,53 @@ msgid ""
 "read the README file and the script's source code.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Dette plugin bruger et script til installationen, som kan udgøre en "
+"sikkerhedsrisiko. Undersøg venligt hele pluginets indhold før du installerer "
+"det eller, i det mindste, læs scriptets README og kildekode. <nl/>Hvis du "
+"ikke føler dig i stand til eller tryg ved det, klik <interface>Annullér</"
+"interface> nu."
 
 #: plugininstaller/ScriptConfirmationDialog.h:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as uninstalled"
-msgstr ""
+msgstr "Markér indgang som afinstalleret"
 
 #: plugininstaller/ScriptConfirmationDialog.h:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as installed"
-msgstr ""
+msgstr "Markér indgang som installeret"
 
 #: plugininstaller/ScriptConfirmationDialog.h:100
 #, kde-format
 msgctxt "@action:button"
 msgid "View Script"
-msgstr ""
+msgstr "Se script"
 
 #: plugininstaller/ScriptConfirmationDialog.h:106
 #, kde-format
 msgctxt "@action:button"
 msgid "View Source Directory"
-msgstr ""
+msgstr "Vis kildemappe"
 
 #: plugininstaller/ScriptConfirmationDialog.h:117
 #, kde-format
 msgctxt "@action:button"
 msgid "View %1"
-msgstr ""
+msgstr "Vis %1"
 
 #: plugininstaller/ZypperRPMJob.cpp:28
 #, kde-format
 msgctxt "@info"
 msgid "Could not resolve package name of %1"
-msgstr ""
+msgstr "Kunne ikke løse pakkenavnet %1"
 
 #: plugininstaller/ZypperRPMJob.cpp:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
-msgstr ""
+msgstr "Kunne ikke køre installationskommando: <message>%1</message>"
 
 #~ msgid "Position on screen:"
 #~ msgstr "Placering på skærmen:"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-06-28 12:44+0200\n"
+"PO-Revision-Date: 2024-07-10 20:10+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: kcmtablet.cpp:34
 #, kde-format
@@ -80,7 +80,7 @@ msgstr "Mapatu pantailaren zatira"
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Arkatzaren kalibrazioa"
 
 #: ui/Calibration.qml:83
 #, kde-kuit-format
@@ -89,6 +89,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Kalibrazioa osatu eta gorde da.<nl/><nl/>Kalibrazioa gehiago birfindu edo "
+"itxi leihoa."
 
 #: ui/Calibration.qml:84
 #, kde-kuit-format
@@ -97,30 +99,33 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Egin tak jomuga bakoitzaren erdigunean.<nl/><nl/>Xedea arkatzaren puntak "
+"pantaila ukitzen duen puntuan ipini, eta ez egin jaramon pantailan "
+"kurtsoreak duen kokalekuari."
 
 #: ui/Calibration.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Dagoen kalibrazioa birfindu"
 
 #: ui/Calibration.qml:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Kalibratu hutsetik abiatuta"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Itxi"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Utzi"
 
 #: ui/main.qml:32
 #, kde-format
@@ -213,25 +218,25 @@ msgstr "Arkatzaren 3. botoia:"
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Kalibratzen ari da"
 
 #: ui/main.qml:331
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Kalibratu"
 
 #: ui/main.qml:334
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Kalibratzea ez da onartzen"
 
 #: ui/main.qml:361
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "Pantaila anizkoitzen artean kalibratzea ez da onartzen."
 
 #: ui/main.qml:371
 #, kde-format

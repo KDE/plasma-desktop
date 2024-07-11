@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Martin Schlander <mschlander@opensuse.org>, 2013, 2014, 2015, 2017, 2019, 2020, 2021.
 # scootergrisen, 2017.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2021-09-05 20:53+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-08 13:01+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -54,85 +55,78 @@ msgid "Delete Index Data"
 msgstr "Slet indekseringsdata"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their "
-#| "content."
+#, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
-"Filsøgning hjælper dig med hurtigt at finde alle dine filer baseret på deres "
-"indhold."
+"Filsøgning hjælper dig med hurtigt at finde dine filer. Du kan vælge hvilke "
+"mapper og hvilken type data der indekses."
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "File Indexing"
+#, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
-msgstr "Filindeksering"
+msgstr "Filindeksering:"
 
 #: ui/main.qml:105
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
-msgstr ""
+msgstr "Slået til"
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "Data, der skal indekses:"
 
 #: ui/main.qml:123
 #, kde-format
 msgid "File names and contents"
-msgstr ""
+msgstr "Filnavne og indhold"
 
 #: ui/main.qml:136
 #, kde-format
 msgid "File names only"
-msgstr ""
+msgstr "Kun filnavne"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Index hidden files and folders"
+#, kde-format
 msgid "Hidden files and folders"
-msgstr "Indeksér skjulte filer og mapper"
+msgstr "Skjulte filer og mapper"
 
 #: ui/main.qml:181
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
+msgstr "Placeringer"
 
 #: ui/main.qml:184
-#, fuzzy, kde-format
-#| msgid "Start indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Start indeksering af en mappe..."
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "Stop indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stop indeksering af en mappe..."
 
 #: ui/main.qml:210
-#, fuzzy, kde-format
-#| msgid "Status: %1, %2% complete"
+#, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr "Status: %1, %2% gennemført"
+msgstr "%1, %2% gennemført"
 
 #: ui/main.qml:217
 #, fuzzy, kde-kuit-format
-#| msgid "Currently indexing: %1"
+#| msgctxt "@info Currently Indexing"
+#| msgid "<filename>%1</filename>"
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr "Indekserer aktuelt: %1"
+msgstr "<filename>%1</filename>"
 
 #: ui/main.qml:270
 #, kde-format
@@ -159,11 +153,14 @@ msgstr "Vælg en mappe der skal medtages"
 msgid "Select a folder to exclude"
 msgstr "Vælg en mappe der skal udelades"
 
-#, fuzzy
+#~ msgctxt "@label indexing status"
+#~ msgid "Status:"
+#~ msgstr "Status:"
+
 #~| msgid "Currently indexing: %1"
 #~ msgctxt "@label file currently being indexed"
 #~ msgid "Currently indexing:"
-#~ msgstr "Indekserer aktuelt: %1"
+#~ msgstr "Indekserer i øjeblikket:"
 
 #~ msgid "Enable File Search"
 #~ msgstr "Aktivér filsøgning"
