@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2014-08-11 12:37+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -649,7 +649,7 @@ msgid "Uninstall"
 msgstr "Wegmaken"
 
 #: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:204
+#: contents/explorer/WidgetExplorer.qml:206
 #, fuzzy, kde-format
 #| msgid "Widgets"
 msgid "All Widgets"
@@ -663,27 +663,35 @@ msgstr "Lüttprogrammen"
 #: contents/explorer/WidgetExplorer.qml:164
 #, fuzzy, kde-format
 #| msgid "Get new widgets"
+msgctxt "@action:button The word 'new' refers to widgets"
+msgid "Get New…"
+msgstr "Nieg Lüttprogrammen halen"
+
+#: contents/explorer/WidgetExplorer.qml:165
+#, fuzzy, kde-format
+#| msgid "Get new widgets"
+msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Nieg Lüttprogrammen halen"
 
-#: contents/explorer/WidgetExplorer.qml:215
+#: contents/explorer/WidgetExplorer.qml:217
 #, kde-format
 msgid "Categories"
 msgstr "Kategorien"
 
-#: contents/explorer/WidgetExplorer.qml:226
+#: contents/explorer/WidgetExplorer.qml:228
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr ""
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets available"
 msgstr ""

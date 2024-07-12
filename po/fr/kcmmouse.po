@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-07-06 09:30+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -103,10 +103,12 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Dispositif de pointage déconnecté. Aucun autre dispositif trouvé."
 
 #: ui/bindings.qml:27
-#, kde-format
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr "Associations pour les boutons supplémentaires de souris"
+#, fuzzy, kde-format
+#| msgctxt "@label for assigning an action to a numbered button"
+#| msgid "Extra Button %1:"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "Bouton supplémentaire %1 :"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -149,8 +151,8 @@ msgstr "Ajouter une association..."
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Re-faire une association pour les boutons supplémentaires de souris..."
+msgid "Configure Extra Buttons…"
+msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
@@ -279,6 +281,15 @@ msgstr "Appuyez sur le bouton central et déplacez la souris pour faire défiler
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr ""
 "Défilement avec la souris pendant que vous appuyez sur le bouton central."
+
+#~ msgctxt "@action:button"
+#~ msgid "Bindings for Additional Mouse Buttons"
+#~ msgstr "Associations pour les boutons supplémentaires de souris"
+
+#~ msgctxt "@action:button"
+#~ msgid "Re-bind Additional Mouse Buttons…"
+#~ msgstr ""
+#~ "Re-faire une association pour les boutons supplémentaires de souris..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

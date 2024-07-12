@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-07-05 16:00+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -84,10 +84,12 @@ msgstr ""
 "Dispositivo de punctar disconnectite. Necun altere dispositivos trovate.."
 
 #: ui/bindings.qml:27
-#, kde-format
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr "Ligaturas per Buttones de Mus Additional"
+#, fuzzy, kde-format
+#| msgctxt "@label for assigning an action to a numbered button"
+#| msgid "Extra Button %1:"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "Button extra %1:"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -128,8 +130,8 @@ msgstr "Adde ligatura (Binding) ..."
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Re-liga Buttones de Mus Additional..."
+msgid "Configure Extra Buttons…"
+msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
@@ -256,6 +258,14 @@ msgstr "Pressa button in le medie e move le mus per rolar"
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Rolar con le mus durante que le buttoin de medie es pressate."
+
+#~ msgctxt "@action:button"
+#~ msgid "Bindings for Additional Mouse Buttons"
+#~ msgstr "Ligaturas per Buttones de Mus Additional"
+
+#~ msgctxt "@action:button"
+#~ msgid "Re-bind Additional Mouse Buttons…"
+#~ msgstr "Re-liga Buttones de Mus Additional..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-07-05 15:47+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -86,10 +86,12 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Указателното устройство е изключено. Не са намерени други устройства."
 
 #: ui/bindings.qml:27
-#, kde-format
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr "Повторно свързване на допълнителни бутони на мишката…"
+#, fuzzy, kde-format
+#| msgctxt "@label for assigning an action to a numbered button"
+#| msgid "Extra Button %1:"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "Допълнителен бутон %1:"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -131,8 +133,8 @@ msgstr "Добавяне на свързване…"
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Повторно свързване на допълнителни бутони на мишката…"
+msgid "Configure Extra Buttons…"
+msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
@@ -262,6 +264,14 @@ msgstr "Натиснете средния бутон и преместете м�
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Превъртане с мишката, докато средният бутон е натиснат."
+
+#~ msgctxt "@action:button"
+#~ msgid "Bindings for Additional Mouse Buttons"
+#~ msgstr "Повторно свързване на допълнителни бутони на мишката…"
+
+#~ msgctxt "@action:button"
+#~ msgid "Re-bind Additional Mouse Buttons…"
+#~ msgstr "Повторно свързване на допълнителни бутони на мишката…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

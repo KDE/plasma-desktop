@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-06-08 17:09+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -635,7 +635,7 @@ msgid "Uninstall"
 msgstr "Dezinstalează"
 
 #: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:204
+#: contents/explorer/WidgetExplorer.qml:206
 #, kde-format
 msgid "All Widgets"
 msgstr "Toate controalele grafice"
@@ -646,16 +646,25 @@ msgid "Widgets"
 msgstr "Controale grafice"
 
 #: contents/explorer/WidgetExplorer.qml:164
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button The word 'new' refers to widgets"
+msgid "Get New…"
+msgstr "Obține extensii noi…"
+
+#: contents/explorer/WidgetExplorer.qml:165
+#, fuzzy, kde-format
+#| msgid "Get New Widgets…"
+msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Obține controale noi…"
 
-#: contents/explorer/WidgetExplorer.qml:215
+#: contents/explorer/WidgetExplorer.qml:217
 #, kde-format
 msgid "Categories"
 msgstr "Categorii"
 
-#: contents/explorer/WidgetExplorer.qml:226
+#: contents/explorer/WidgetExplorer.qml:228
 #, fuzzy, kde-format
 #| msgid "Confirm Removal Of One Widget"
 #| msgid_plural "Confirm Removal Of %1 Widgets"
@@ -665,12 +674,12 @@ msgstr[0] "Confirmă eliminarea unui control grafic"
 msgstr[1] "Confirmă eliminarea a %2 controale grafice"
 msgstr[2] "Confirmă eliminarea a %2 de controale grafice"
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Niciun control nu se potrivește termenilor căutării"
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets available"
 msgstr "Niciun control grafic disponibil"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-06-11 20:15\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -89,10 +89,12 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Прылада для кіравання курсорам адлучаная. Іншыя прылады не знойдзеныя."
 
 #: ui/bindings.qml:27
-#, kde-format
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr "Прывязванне дадатковых кнопак мышы"
+#, fuzzy, kde-format
+#| msgctxt "@label for assigning an action to a numbered button"
+#| msgid "Extra Button %1:"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "Дадатковая кнопка %1:"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -133,8 +135,8 @@ msgstr "Дадаць прывязванне…"
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Паўторнае прывязванне дадатковых кнопак мышы…"
+msgid "Configure Extra Buttons…"
+msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
@@ -260,6 +262,14 @@ msgstr ""
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "Bindings for Additional Mouse Buttons"
+#~ msgstr "Прывязванне дадатковых кнопак мышы"
+
+#~ msgctxt "@action:button"
+#~ msgid "Re-bind Additional Mouse Buttons…"
+#~ msgstr "Паўторнае прывязванне дадатковых кнопак мышы…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

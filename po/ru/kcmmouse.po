@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2023-12-17 22:18+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -101,11 +101,11 @@ msgstr ""
 
 #: ui/bindings.qml:27
 #, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Re-bind Additional Mouse Buttons…"
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr "Переназначить доп. кнопки мыши…"
+#| msgctxt "@label for assigning an action to a numbered button"
+#| msgid "Extra Button %1:"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "Доп. кнопка %1:"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -148,8 +148,8 @@ msgstr "Добавить привязку…"
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Переназначить доп. кнопки мыши…"
+msgid "Configure Extra Buttons…"
+msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
@@ -274,6 +274,17 @@ msgstr ""
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Re-bind Additional Mouse Buttons…"
+#~ msgctxt "@action:button"
+#~ msgid "Bindings for Additional Mouse Buttons"
+#~ msgstr "Переназначить доп. кнопки мыши…"
+
+#~ msgctxt "@action:button"
+#~ msgid "Re-bind Additional Mouse Buttons…"
+#~ msgstr "Переназначить доп. кнопки мыши…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

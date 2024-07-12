@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2023-09-26 18:05+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -93,11 +93,11 @@ msgstr "Osoitinlaitetta ei ole kytketty. Muita laitteita ei löytynyt."
 
 #: ui/bindings.qml:27
 #, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Re-bind Additional Mouse Buttons…"
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr "Kytke hiiren lisäpainikkeet…"
+#| msgctxt "@label for assigning an action to a numbered button"
+#| msgid "Extra Button %1:"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "Lisäpainike %1:"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -140,8 +140,8 @@ msgstr "Lisää kytkös…"
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Kytke hiiren lisäpainikkeet…"
+msgid "Configure Extra Buttons…"
+msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
@@ -264,6 +264,17 @@ msgstr ""
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Re-bind Additional Mouse Buttons…"
+#~ msgctxt "@action:button"
+#~ msgid "Bindings for Additional Mouse Buttons"
+#~ msgstr "Kytke hiiren lisäpainikkeet…"
+
+#~ msgctxt "@action:button"
+#~ msgid "Re-bind Additional Mouse Buttons…"
+#~ msgstr "Kytke hiiren lisäpainikkeet…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

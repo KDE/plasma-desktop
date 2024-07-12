@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-05 15:40+0900\n"
+"PO-Revision-Date: 2024-07-12 02:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -23,7 +23,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "啟動"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -49,19 +49,15 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "與全域捷徑服務聯繫失敗"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"快捷鍵「%1」已經指定為通用「%2」動作「%3」。\n"
-"您要重新指定它嗎？"
+"快捷鍵 <shortcut>%1</shortcut> 已經指派給通用 %2 動作 <interface>%3</"
+"interface>。<nl/><nl/>要將它重新指派給 %4 嗎？"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -71,18 +67,21 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%4</application>?"
 msgstr ""
+"快捷鍵 <shortcut>%1</shortcut> 已經指派給 <application>%3</application> 的動"
+"作 <interface>%2</interface>。<nl/><nl/>要將它重新指派給 <application>%4</"
+"application> 的動作 <interface>%4</interface> 嗎？"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "解決快捷鍵衝突"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "重新指派"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format

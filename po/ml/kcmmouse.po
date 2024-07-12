@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2019-12-12 22:36+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -73,10 +73,11 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr ""
 
 #: ui/bindings.qml:27
-#, kde-format
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Press Connect Button"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "കണക്റ്റ് ബട്ടണ്‍ അമര്‍ത്തൂ"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -118,7 +119,7 @@ msgstr ""
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
+msgid "Configure Extra Buttons…"
 msgstr ""
 
 #: ui/main.qml:64

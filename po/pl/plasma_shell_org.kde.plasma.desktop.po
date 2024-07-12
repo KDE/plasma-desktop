@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-06-16 10:42+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -625,7 +625,7 @@ msgid "Uninstall"
 msgstr "Usuń "
 
 #: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:204
+#: contents/explorer/WidgetExplorer.qml:206
 #, kde-format
 msgid "All Widgets"
 msgstr "Wszystkie elementy interfejsu"
@@ -636,16 +636,25 @@ msgid "Widgets"
 msgstr "Elementy interfejsu"
 
 #: contents/explorer/WidgetExplorer.qml:164
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button The word 'new' refers to widgets"
+msgid "Get New…"
+msgstr "Pobierz nową wtyczkę..."
+
+#: contents/explorer/WidgetExplorer.qml:165
+#, fuzzy, kde-format
+#| msgid "Get New Widgets…"
+msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Pobierz nowe elementy interfejsu..."
 
-#: contents/explorer/WidgetExplorer.qml:215
+#: contents/explorer/WidgetExplorer.qml:217
 #, kde-format
 msgid "Categories"
 msgstr "Kategorie"
 
-#: contents/explorer/WidgetExplorer.qml:226
+#: contents/explorer/WidgetExplorer.qml:228
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
@@ -653,12 +662,12 @@ msgstr[0] "Potwierdź usunięcie jednego elementu interfejsu"
 msgstr[1] "Potwierdź usunięcie jednego %1 elementów interfejsu"
 msgstr[2] "Potwierdź usunięcie jednego %1 elementów interfejsu"
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Żaden z elementów interfejsu nie pasuje do wyszukiwanego wyrażenia"
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets available"
 msgstr "Brak elementów interfejsu"

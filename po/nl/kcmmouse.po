@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-07-05 11:38+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -97,10 +97,12 @@ msgstr ""
 "Verbinding met aanwijsapparaat verbroken. Geen andere apparaten gevonden."
 
 #: ui/bindings.qml:27
-#, kde-format
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr "Bindingen voor extra muisknoppen"
+#, fuzzy, kde-format
+#| msgctxt "@label for assigning an action to a numbered button"
+#| msgid "Extra Button %1:"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "Extra knop %1:"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -141,8 +143,8 @@ msgstr "Binding toevoegen…"
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Maak opnieuw bindingen met aanvullende muisknoppen…"
+msgid "Configure Extra Buttons…"
+msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
@@ -269,6 +271,14 @@ msgstr "Middelste muisknop indrukken en muis verplaatsen om te schuiven"
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Schuiven met de muis terwijl de middelste knop is ingedrukt."
+
+#~ msgctxt "@action:button"
+#~ msgid "Bindings for Additional Mouse Buttons"
+#~ msgstr "Bindingen voor extra muisknoppen"
+
+#~ msgctxt "@action:button"
+#~ msgid "Re-bind Additional Mouse Buttons…"
+#~ msgstr "Maak opnieuw bindingen met aanvullende muisknoppen…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

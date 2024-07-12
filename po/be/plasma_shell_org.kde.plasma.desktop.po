@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-06-17 08:06\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -632,7 +632,7 @@ msgid "Uninstall"
 msgstr "Выдаліць"
 
 #: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:204
+#: contents/explorer/WidgetExplorer.qml:206
 #, kde-format
 msgid "All Widgets"
 msgstr "Усе віджэты"
@@ -643,16 +643,25 @@ msgid "Widgets"
 msgstr "Віджэты"
 
 #: contents/explorer/WidgetExplorer.qml:164
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button The word 'new' refers to widgets"
+msgid "Get New…"
+msgstr "Атрымаць новыя ўбудовы…"
+
+#: contents/explorer/WidgetExplorer.qml:165
+#, fuzzy, kde-format
+#| msgid "Get New Widgets…"
+msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Атрымаць новыя віджэты…"
 
-#: contents/explorer/WidgetExplorer.qml:215
+#: contents/explorer/WidgetExplorer.qml:217
 #, kde-format
 msgid "Categories"
 msgstr "Катэгорыі"
 
-#: contents/explorer/WidgetExplorer.qml:226
+#: contents/explorer/WidgetExplorer.qml:228
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
@@ -661,12 +670,12 @@ msgstr[1] "Пацвердзіць выдаленне %1 віджэтаў"
 msgstr[2] "Пацвердзіць выдаленне %1 віджэтаў"
 msgstr[3] "Пацвердзіць выдаленне %1 віджэтаў"
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Няма віджэтаў, якія адпавядаюць умовам пошуку"
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets available"
 msgstr "Няма даступных віджэтаў"

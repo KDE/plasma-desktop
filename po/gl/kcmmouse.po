@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-07-05 18:37+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -100,10 +100,12 @@ msgstr ""
 "dispositivo."
 
 #: ui/bindings.qml:27
-#, kde-format
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr "Asociacións de botóns adicionais do rato"
+#, fuzzy, kde-format
+#| msgctxt "@label for assigning an action to a numbered button"
+#| msgid "Extra Button %1:"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "Botón adicional %1:"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -145,8 +147,8 @@ msgstr "Engadir unha asociación…"
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Cambiar a asociación de botóns adicionais do rato…"
+msgid "Configure Extra Buttons…"
+msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
@@ -273,6 +275,14 @@ msgstr "Prema o botón central e mova o rato para desprazar."
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Desprazamento co rato mentres se preme o botón central."
+
+#~ msgctxt "@action:button"
+#~ msgid "Bindings for Additional Mouse Buttons"
+#~ msgstr "Asociacións de botóns adicionais do rato"
+
+#~ msgctxt "@action:button"
+#~ msgid "Re-bind Additional Mouse Buttons…"
+#~ msgstr "Cambiar a asociación de botóns adicionais do rato…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

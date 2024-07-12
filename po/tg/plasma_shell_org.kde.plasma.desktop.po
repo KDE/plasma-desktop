@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2021-09-05 11:54-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -645,7 +645,7 @@ msgid "Uninstall"
 msgstr "Лағв кардани насб"
 
 #: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:204
+#: contents/explorer/WidgetExplorer.qml:206
 #, kde-format
 msgid "All Widgets"
 msgstr "Ҳамаи виҷетҳо"
@@ -656,28 +656,37 @@ msgid "Widgets"
 msgstr "Виҷетҳо"
 
 #: contents/explorer/WidgetExplorer.qml:164
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button The word 'new' refers to widgets"
+msgid "Get New…"
+msgstr "Гирифтани васлкунакҳои нав..."
+
+#: contents/explorer/WidgetExplorer.qml:165
+#, fuzzy, kde-format
+#| msgid "Get New Widgets…"
+msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Гирифтани виҷетҳои нав..."
 
-#: contents/explorer/WidgetExplorer.qml:215
+#: contents/explorer/WidgetExplorer.qml:217
 #, kde-format
 msgid "Categories"
 msgstr "Намунаҳо"
 
-#: contents/explorer/WidgetExplorer.qml:226
+#: contents/explorer/WidgetExplorer.qml:228
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr ""
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets available"
 msgstr ""

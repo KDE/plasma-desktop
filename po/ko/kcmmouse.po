@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2023-08-25 23:14+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -82,11 +82,11 @@ msgstr "포인터 장치가 연결 해제되었습니다. 다른 장치를 찾�
 
 #: ui/bindings.qml:27
 #, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Re-bind Additional Mouse Buttons…"
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr "추가 마우스 단추 재할당…"
+#| msgctxt "@label for assigning an action to a numbered button"
+#| msgid "Extra Button %1:"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "추가 단추 %1:"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -129,8 +129,8 @@ msgstr "바인딩 추가…"
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "추가 마우스 단추 재할당…"
+msgid "Configure Extra Buttons…"
+msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
@@ -252,6 +252,17 @@ msgstr ""
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Re-bind Additional Mouse Buttons…"
+#~ msgctxt "@action:button"
+#~ msgid "Bindings for Additional Mouse Buttons"
+#~ msgstr "추가 마우스 단추 재할당…"
+
+#~ msgctxt "@action:button"
+#~ msgid "Re-bind Additional Mouse Buttons…"
+#~ msgstr "추가 마우스 단추 재할당…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

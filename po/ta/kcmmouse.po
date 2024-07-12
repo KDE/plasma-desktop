@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-07-06 21:10+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -80,10 +80,12 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "சுட்டி கழற்றப்பட்டபின் வேறெந்த சாதனமும் கண்டுபிடிக்கப்படவில்லை."
 
 #: ui/bindings.qml:27
-#, kde-format
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr "கூடுதல் சுட்டி பட்டன்களை அமை…"
+#, fuzzy, kde-format
+#| msgctxt "@label for assigning an action to a numbered button"
+#| msgid "Extra Button %1:"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "கூடுதல் பட்டன் %1"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -124,8 +126,8 @@ msgstr "பிணைப்பை சேர்…"
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "கூடுதல் சுட்டி பட்டன்களை மாற்றியமை…"
+msgid "Configure Extra Buttons…"
+msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
@@ -249,6 +251,14 @@ msgstr "உருள நடு பட்டனை அழுத்தி சு�
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "நடு பட்டனை அழுத்தம்போது சுட்டியைக் கொண்டு உருள்வது."
+
+#~ msgctxt "@action:button"
+#~ msgid "Bindings for Additional Mouse Buttons"
+#~ msgstr "கூடுதல் சுட்டி பட்டன்களை அமை…"
+
+#~ msgctxt "@action:button"
+#~ msgid "Re-bind Additional Mouse Buttons…"
+#~ msgstr "கூடுதல் சுட்டி பட்டன்களை மாற்றியமை…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

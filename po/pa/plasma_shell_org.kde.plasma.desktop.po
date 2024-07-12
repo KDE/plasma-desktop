@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-03-11 07:46-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -623,7 +623,7 @@ msgid "Uninstall"
 msgstr "ਅਣ-ਇੰਸਟਾਲ"
 
 #: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:204
+#: contents/explorer/WidgetExplorer.qml:206
 #, kde-format
 msgid "All Widgets"
 msgstr "ਸਾਰੇ ਵਿਜੈਟ"
@@ -634,28 +634,37 @@ msgid "Widgets"
 msgstr "ਵਿਦਜੈਟ"
 
 #: contents/explorer/WidgetExplorer.qml:164
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button The word 'new' refers to widgets"
+msgid "Get New…"
+msgstr "…ਨਵੀਆਂ ਪਲੱਗਇਨਾਂ ਲਵੋ"
+
+#: contents/explorer/WidgetExplorer.qml:165
+#, fuzzy, kde-format
+#| msgid "Get New Widgets…"
+msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "…ਨਵੇਂ ਵਿਜੈਟ ਲਵੋ"
 
-#: contents/explorer/WidgetExplorer.qml:215
+#: contents/explorer/WidgetExplorer.qml:217
 #, kde-format
 msgid "Categories"
 msgstr "ਕੈਟਾਗਰੀਆਂ"
 
-#: contents/explorer/WidgetExplorer.qml:226
+#: contents/explorer/WidgetExplorer.qml:228
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
 msgstr[0] "ਇੱਕ ਵਿਜੈਟ ਨੂੰ ਹਟਾਉਣ ਦੀ ਤਸਦੀਕ"
 msgstr[1] "%1 ਵਿਜੈਟਾਂ ਨੂੰ ਹਟਾਉਣ ਦੀ ਤਸਦੀਕ"
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "ਖੋਜੇ ਸ਼ਬਦਾਂ ਨਾਲ ਮਿਲਦਾ ਕੋਈ ਵਿਜੈਟ ਨਹੀਂ ਹੈ"
 
-#: contents/explorer/WidgetExplorer.qml:306
+#: contents/explorer/WidgetExplorer.qml:308
 #, kde-format
 msgid "No widgets available"
 msgstr "ਕੋਈ ਵਿਜੈਟ ਮੌਜੂਦ ਨਹੀਂ ਹੈ"

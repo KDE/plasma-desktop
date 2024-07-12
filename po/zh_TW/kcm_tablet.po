@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-06-13 03:12+0900\n"
+"PO-Revision-Date: 2024-07-08 17:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -80,7 +80,7 @@ msgstr "映射到螢幕的一部分"
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "畫筆校準"
 
 #: ui/Calibration.qml:83
 #, kde-kuit-format
@@ -88,7 +88,7 @@ msgctxt "@info"
 msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
-msgstr ""
+msgstr "校準已完成並已儲存。<nl/><nl/>可以繼續加強校準或是關閉視窗。"
 
 #: ui/Calibration.qml:84
 #, kde-kuit-format
@@ -97,30 +97,31 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"輕點各個目標的中心。<nl/><nl/>請瞄準筆尖落下的位置，並忽略螢幕上的游標位置。"
 
 #: ui/Calibration.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "加強現有校準"
 
 #: ui/Calibration.qml:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "從頭開始校準"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #: ui/Calibration.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: ui/main.qml:32
 #, kde-format
@@ -211,25 +212,25 @@ msgstr "畫筆按鈕 3："
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "校準進行中"
 
 #: ui/main.qml:331
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "校準"
 
 #: ui/main.qml:334
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "不支援校準"
 
 #: ui/main.qml:361
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "不支援跨越多個螢幕的校準。"
 
 #: ui/main.qml:371
 #, kde-format

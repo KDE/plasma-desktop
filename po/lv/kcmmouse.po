@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-12 00:40+0000\n"
 "PO-Revision-Date: 2024-03-27 18:46+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -87,11 +87,11 @@ msgstr "Rādītājierīce ir atvienota. Citas ierīces nav atrastas."
 
 #: ui/bindings.qml:27
 #, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Re-bind Additional Mouse Buttons…"
-msgctxt "@action:button"
-msgid "Bindings for Additional Mouse Buttons"
-msgstr "Sasaistīt citas darbības peles pogām..."
+#| msgctxt "@label for assigning an action to a numbered button"
+#| msgid "Extra Button %1:"
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr "Papildu poga %1:"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -134,8 +134,8 @@ msgstr "Pievienot sasaisti..."
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
-msgid "Re-bind Additional Mouse Buttons…"
-msgstr "Sasaistīt citas darbības peles pogām..."
+msgid "Configure Extra Buttons…"
+msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
@@ -260,6 +260,17 @@ msgstr ""
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Re-bind Additional Mouse Buttons…"
+#~ msgctxt "@action:button"
+#~ msgid "Bindings for Additional Mouse Buttons"
+#~ msgstr "Sasaistīt citas darbības peles pogām..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Re-bind Additional Mouse Buttons…"
+#~ msgstr "Sasaistīt citas darbības peles pogām..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
