@@ -5,17 +5,9 @@
 
 #pragma once
 
-#include <config-X11.h>
-
 #include <QAbstractListModel>
 #include <QQmlParserStatus>
 #include <memory>
-#include <qwindowdefs.h>
-
-#if HAVE_X11
-#include <QtGui/private/qtx11extras_p.h>
-#include <netwm.h>
-#endif
 
 class QMimeData;
 

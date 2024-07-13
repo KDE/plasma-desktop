@@ -25,8 +25,12 @@
 
 #include <KWindowSystem>
 
+#include <config-X11.h>
+
 #if HAVE_X11
 #include <KX11Extras>
+
+#include <QtGui/private/qtx11extras_p.h>
 #endif
 
 #include <PlasmaActivities/Controller>
