@@ -1,14 +1,18 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.pager\")
 plasma_install_package(package org.kde.plasma.pager)
 
-set(pager_SRCS
-    plugin/pagermodel.cpp
-    plugin/pagerplugin.cpp
-    plugin/windowmodel.cpp)
+ecm_add_qml_module(pagerplugin
+    URI "org.kde.plasma.private.pager"
+    VERSION 2.0
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES QtCore
+)
 
-add_library(pagerplugin SHARED ${pager_SRCS})
+target_sources(pagerplugin PRIVATE
+    pagermodel.cpp
+    windowmodel.cpp)
 
-target_link_libraries(pagerplugin
+target_link_libraries(pagerplugin PRIVATE
                       KF6::KIOCore
                       KF6::WindowSystem
                       Plasma::Plasma
@@ -20,8 +24,7 @@ target_link_libraries(pagerplugin
                       Qt::Quick)
 
 if (X11_FOUND)
-    target_link_libraries(pagerplugin Qt::GuiPrivate)
+    target_link_libraries(pagerplugin PRIVATE Qt::GuiPrivate)
 endif()
 
-install(TARGETS pagerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/pager)
-install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/pager)
+ecm_finalize_qml_module(pagerplugin)

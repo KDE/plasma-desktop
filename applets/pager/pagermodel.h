@@ -8,12 +8,14 @@
 #include <QAbstractListModel>
 #include <QQmlParserStatus>
 #include <memory>
+#include <qqmlregistration.h>
 
 class QMimeData;
 
 class PagerModel : public QAbstractListModel, public QQmlParserStatus
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_INTERFACES(QQmlParserStatus)
 
