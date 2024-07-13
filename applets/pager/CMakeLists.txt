@@ -13,7 +13,6 @@ target_sources(pagerplugin PRIVATE
     windowmodel.cpp)
 
 target_link_libraries(pagerplugin PRIVATE
-                      KF6::KIOCore
                       KF6::WindowSystem
                       Plasma::Plasma
                       Plasma::Activities
