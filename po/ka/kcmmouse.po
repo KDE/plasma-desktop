@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-12 00:40+0000\n"
-"PO-Revision-Date: 2024-07-05 05:36+0200\n"
+"PO-Revision-Date: 2024-07-12 04:49+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -83,12 +83,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "თაგუნა გაითიშა. სხვა მოწყობილობა ნაპოვნი არაა."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "დამატებითი ღილაკი %1:"
+msgstr "თაგუნას დამატებითი ღილაკები"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -130,7 +128,7 @@ msgstr "მიბმის დამატება…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "დამატებითი ღილაკების მორგება…"
 
 #: ui/main.qml:64
 #, kde-format

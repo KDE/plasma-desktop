@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-12 00:40+0000\n"
-"PO-Revision-Date: 2024-05-31 13:26+0200\n"
+"PO-Revision-Date: 2024-07-12 22:08+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -86,12 +86,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Montrilo malkonektita. Neniuj aliaj aparatoj trovitaj."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Plua Butono %1:"
+msgstr "Pluaj Musbutonoj"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -133,7 +131,7 @@ msgstr "Aldoni bindaĵon…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Agordi Ekstrajn Butonojn…"
 
 #: ui/main.qml:64
 #, kde-format
@@ -252,29 +250,9 @@ msgstr "Rulumado kvazaŭ tuŝekrana."
 #: ui/main.qml:356
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
-msgstr ""
+msgstr "Premu mezan butonon kaj movu muson por rulumi"
 
 #: ui/main.qml:368
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
-
-#~ msgctxt "@action:button"
-#~ msgid "Bindings for Additional Mouse Buttons"
-#~ msgstr "Kunordigoj for Pliaj Musbutonoj"
-
-#~ msgctxt "@action:button"
-#~ msgid "Re-bind Additional Mouse Buttons…"
-#~ msgstr "Religi Pluajn Musbutonojn…"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Pierre-Marie Pédrot,Oliver Kellogg"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "pedrotpmx@wanadoo.fr,olivermkellogg@gmail.com"
-
-#~ msgctxt "@action:button"
-#~ msgid "Go back"
-#~ msgstr "Reiri"
+msgstr "Rulumante per la muso dum kiam meza butono estas premata."

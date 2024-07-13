@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:40+0000\n"
+"POT-Creation-Date: 2024-07-13 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -73,13 +73,13 @@ msgstr "保持宽高比并适合屏幕"
 msgid "Map to Portion of Screen"
 msgstr "映射到屏幕区域"
 
-#: ui/Calibration.qml:29
+#: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
 msgstr "压感笔校准"
 
-#: ui/Calibration.qml:83
+#: ui/Calibration.qml:85
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -88,7 +88,7 @@ msgid ""
 msgstr ""
 "校准已经完成并保存。<nl/><nl/>您可以进一步优化现有校准，或者关闭此窗口。"
 
-#: ui/Calibration.qml:84
+#: ui/Calibration.qml:86
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -98,25 +98,25 @@ msgstr ""
 "请点击每个目标的中心点。<nl/><nl/>请以笔尖的物理落点为准，不要理会屏幕显示的"
 "光标位置。"
 
-#: ui/Calibration.qml:90
+#: ui/Calibration.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
 msgstr "优化现有校准"
 
-#: ui/Calibration.qml:99
+#: ui/Calibration.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
 msgstr "重新校准"
 
-#: ui/Calibration.qml:113
+#: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "关闭"
 
-#: ui/Calibration.qml:113
+#: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

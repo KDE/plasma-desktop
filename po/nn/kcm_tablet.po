@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:40+0000\n"
-"PO-Revision-Date: 2024-07-10 21:46+0200\n"
+"POT-Creation-Date: 2024-07-13 00:40+0000\n"
+"PO-Revision-Date: 2024-07-12 21:03+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -67,20 +67,20 @@ msgstr "Tilpass til skjermen"
 #: kcmtablet.cpp:163
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Hald på høgd/breidd-forholdet og få plass innanfor skjermen"
 
 #: kcmtablet.cpp:164
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Avbild til delar av skjermen"
 
-#: ui/Calibration.qml:29
+#: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
 msgstr "Pennekalibrering"
 
-#: ui/Calibration.qml:83
+#: ui/Calibration.qml:85
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -90,33 +90,35 @@ msgstr ""
 "Kalibreringa er fullført og lagra.<nl/><nl/>Du kan no finjustera "
 "kalibreringa eller lukka vindauget."
 
-#: ui/Calibration.qml:84
+#: ui/Calibration.qml:86
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Trykk i midten av kvart mål.<nl/><nl/>Sikt på punket der pennespissen "
+"landar, og sjå vekk frå peikaren på skjermen."
 
-#: ui/Calibration.qml:90
+#: ui/Calibration.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
 msgstr "Finjuster kalibrering"
 
-#: ui/Calibration.qml:99
+#: ui/Calibration.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
 msgstr "Kalibrer på nytt"
 
-#: ui/Calibration.qml:113
+#: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Lukk"
 
-#: ui/Calibration.qml:113
+#: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -167,6 +169,9 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Ber teikneplata om å ta omsyn til venstrehendte brukarar. Kva resultatet "
+"vert, kjem an på kva teikneplate du har, men ofte vert funksjonane til "
+"plateknappane snudde, slik at teikneplata kan brukast opp ned."
 
 #: ui/main.qml:154
 #, kde-format

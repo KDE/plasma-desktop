@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-12 00:40+0000\n"
-"PO-Revision-Date: 2024-07-05 04:30+0200\n"
+"PO-Revision-Date: 2024-07-12 20:51+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -86,12 +86,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Pekarenhet bortkopplad. Inga andra enheter hittades."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Extraknapp %1:"
+msgstr "Extra  musknappar"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -133,7 +131,7 @@ msgstr "Lägg till bindning…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Anpassa extra knappar…"
 
 #: ui/main.qml:64
 #, kde-format

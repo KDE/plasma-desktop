@@ -1,7 +1,7 @@
 # translation of kcminput.po to Slovenian
 # Translation of kcminput.po to Slovenian
 # KCMINPUT TRANSLATION TO SLOVENE LANGUAGE.
-# $Id: kcmmouse.po 1684514 2024-07-12 01:11:42Z scripty $
+# $Id: kcmmouse.po 1684595 2024-07-13 01:12:05Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-12 00:40+0000\n"
-"PO-Revision-Date: 2024-07-05 07:25+0200\n"
+"PO-Revision-Date: 2024-07-12 06:55+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -92,12 +92,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Kazalna naprava je izključena. Ni najti nobene druge naprave."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "%1. dodatni gumb:"
+msgstr "Dodatni miškini gumbi."
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -139,7 +137,7 @@ msgstr "Dodaj povezavo …"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Konfiguriraj dodatne gumbe…"
 
 #: ui/main.qml:64
 #, kde-format

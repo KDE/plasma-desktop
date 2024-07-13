@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-08 00:40+0000\n"
+"POT-Creation-Date: 2024-07-13 00:40+0000\n"
 "PO-Revision-Date: 2024-07-09 00:33+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -75,13 +75,13 @@ msgstr "Mantener las proporciones y ajustar a la pantalla"
 msgid "Map to Portion of Screen"
 msgstr "Mapear a una porción de la pantalla"
 
-#: ui/Calibration.qml:29
+#: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
 msgstr "Calibración del lápiz"
 
-#: ui/Calibration.qml:83
+#: ui/Calibration.qml:85
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -91,7 +91,7 @@ msgstr ""
 "La calibración se ha completado y se ha guardado.<nl/><nl/>Puede afinar la "
 "calibración todavía más o cerrar la ventana."
 
-#: ui/Calibration.qml:84
+#: ui/Calibration.qml:86
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -101,25 +101,25 @@ msgstr ""
 "Toque el centro de cada objetivo.<nl/><nl/>Apunte al punto donde aterriza la "
 "punta del lápiz e ignore la posición del cursor en la pantalla."
 
-#: ui/Calibration.qml:90
+#: ui/Calibration.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
 msgstr "Afinar la calibración existente"
 
-#: ui/Calibration.qml:99
+#: ui/Calibration.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
 msgstr "Calibrar desde cero"
 
-#: ui/Calibration.qml:113
+#: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Cerrar"
 
-#: ui/Calibration.qml:113
+#: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
