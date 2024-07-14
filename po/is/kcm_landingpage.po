@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-07 00:40+0000\n"
+"POT-Creation-Date: 2024-07-14 00:39+0000\n"
 "PO-Revision-Date: 2024-07-04 11:01+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -55,68 +55,90 @@ msgstr "Hraði hreyfiáhrifa"
 msgid "Theme:"
 msgstr "Þema:"
 
-#: ui/main.qml:77
-#, kde-format
-msgid "Change Wallpaper…"
-msgstr "Skipta um veggfóður..."
-
-#: ui/main.qml:84
-#, kde-format
-msgid "More Appearance Settings…"
+#: ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "More Appearance Settings…"
+msgctxt "@title:group translate as short as possible"
+msgid "More appearance settings:"
 msgstr "Fleiri útlitsstillingar…"
 
-#: ui/main.qml:116
+#: ui/main.qml:83
+#, fuzzy, kde-format
+#| msgid "Change Wallpaper…"
+msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
+msgid "Wallpaper"
+msgstr "Skipta um veggfóður..."
+
+#: ui/main.qml:91
+#, fuzzy, kde-format
+#| msgid "Color scheme name"
+msgctxt ""
+"@action:button as in, 'this will take you to the first KCM in the Colors & "
+"Themes group'"
+msgid "Colors & Themes"
+msgstr "Heiti litastefs"
+
+#: ui/main.qml:122
 #, kde-format
 msgid "Animation speed:"
 msgstr "Hraði hreyfiáhrifa:"
 
-#: ui/main.qml:125
+#: ui/main.qml:131
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Hægur"
 
-#: ui/main.qml:132
+#: ui/main.qml:138
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Án tafar"
 
-#: ui/main.qml:146
+#: ui/main.qml:152
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Smellt á skrár eða möppur:"
 
-#: ui/main.qml:154
+#: ui/main.qml:160
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "velur þær"
 
-#: ui/main.qml:159
+#: ui/main.qml:165
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Opnaðu í staðinn með því að tvísmella"
 
-#: ui/main.qml:184
+#: ui/main.qml:190
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "opnar þær"
 
-#: ui/main.qml:189
+#: ui/main.qml:195
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Veldu með því að smella á valmerkingu atriðis"
 
-#: ui/main.qml:214
-#, kde-format
-msgid "More Behavior Settings…"
+#: ui/main.qml:219
+#, fuzzy, kde-format
+#| msgid "More Behavior Settings…"
+msgctxt "@title:group translate as short as possible"
+msgid "More behavior settings:"
 msgstr "Fleiri hegðunarstillingar…"
 
-#: ui/main.qml:226
+#: ui/main.qml:221
+#, kde-format
+msgctxt ""
+"@action:button as in, 'this will take you to the General Behavior KCM'"
+msgid "General Behavior"
+msgstr ""
+
+#: ui/main.qml:233
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Mest notuðu síðurnar:"
