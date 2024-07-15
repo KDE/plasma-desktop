@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-11 00:40+0000\n"
-"PO-Revision-Date: 2024-04-15 09:41+0200\n"
+"PO-Revision-Date: 2024-07-14 21:57+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.07.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:13
@@ -94,29 +94,27 @@ msgid "Fill free space on Panel"
 msgstr "Изпълване на свободното пространство на панела"
 
 #: package/contents/ui/ConfigAppearance.qml:77
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum rows:"
+#, kde-format
 msgid "Maximum task width:"
-msgstr "Максимален брой редове:"
+msgstr "Максимална ширина на полетата:"
 
 #: package/contents/ui/ConfigAppearance.qml:80
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Narrow"
-msgstr ""
+msgstr "Тесни"
 
 #: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
-msgstr ""
+msgstr "Средни"
 
 #: package/contents/ui/ConfigAppearance.qml:82
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
-msgstr ""
+msgstr "Широки"
 
 #: package/contents/ui/ConfigAppearance.qml:92
 #, kde-format

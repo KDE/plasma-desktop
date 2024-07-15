@@ -1,4 +1,4 @@
-# Version: $Revision: 1684514 $
+# Version: $Revision: 1684772 $
 # translation of kcminput.po to
 # SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-12 00:40+0000\n"
-"PO-Revision-Date: 2024-06-29 09:21+0200\n"
+"PO-Revision-Date: 2024-07-14 12:47+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -87,12 +87,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Odłączono urządzenie wskazujące. Nie znaleziono innych urządzeń."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Dodatkowy przycisk %1:"
+msgstr "Dodatkowe przyciski myszy"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -134,7 +132,7 @@ msgstr "Dodaj powiązanie..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Ustawienia dodatkowych przycisków…"
 
 #: ui/main.qml:64
 #, kde-format
@@ -255,12 +253,12 @@ msgstr "Przewijanie jak na ekranie dotykowym."
 #: ui/main.qml:356
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
-msgstr ""
+msgstr "Naciśnij środkowy przycisk i przesuń myszą, aby przewinąć"
 
 #: ui/main.qml:368
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
+msgstr "Przewijanie myszą, przy naciśniętym jej środkowym przycisku."
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

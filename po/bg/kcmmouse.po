@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-12 00:40+0000\n"
-"PO-Revision-Date: 2024-07-05 15:47+0200\n"
+"PO-Revision-Date: 2024-07-14 21:59+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
@@ -86,12 +86,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Указателното устройство е изключено. Не са намерени други устройства."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Допълнителен бутон %1:"
+msgstr "Допълнителен бутони на мишката"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -134,7 +132,7 @@ msgstr "Добавяне на свързване…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Конфигуриране на допълнителни бутони…"
 
 #: ui/main.qml:64
 #, kde-format

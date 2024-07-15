@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 22:36+0200\n"
+"PO-Revision-Date: 2024-07-14 21:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: basemodel.cpp:157
 #, kde-format
@@ -47,12 +47,7 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Неуспешна комуникация с демона за глобални клавишни комбинации"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "@info %2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 "
-#| "action <interface>%3<interface>.<nl/><nl/>Re-assign it to %4?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
@@ -60,7 +55,7 @@ msgid ""
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "Клавишна комбинация <shortcut>%1</shortcut> вече е присвоена на общото %2 "
-"действие <interface>%3<interface>.<nl/><nl/>Искате ли да го пренасочите към "
+"действие <interface>%3</interface>.<nl/><nl/>Искате ли да го пренасочите към "
 "%4?"
 
 #: kcm_keys.cpp:321

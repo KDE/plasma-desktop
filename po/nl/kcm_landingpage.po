@@ -1,22 +1,22 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 # SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-14 00:39+0000\n"
-"PO-Revision-Date: 2024-04-27 07:21+0200\n"
-"Last-Translator: pieter <pieterkristensen@gmail.com>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"PO-Revision-Date: 2024-07-14 14:31+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -56,27 +56,24 @@ msgid "Theme:"
 msgstr "Thema:"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "More Appearance Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr "Meer instellingen uiterlijk…"
+msgstr "Meer instellingen voor uiterlijk:"
 
 #: ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Change Wallpaper…"
+#, kde-format
 msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
 msgid "Wallpaper"
-msgstr "Achtergrond wijzigen…"
+msgstr "Achtergrondafbeelding"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Color scheme name"
+#, kde-format
 msgctxt ""
 "@action:button as in, 'this will take you to the first KCM in the Colors & "
 "Themes group'"
 msgid "Colors & Themes"
-msgstr "Naam kleurenschema"
+msgstr "Kleuren & thema's"
 
 #: ui/main.qml:122
 #, kde-format
@@ -125,18 +122,17 @@ msgid "Select by clicking on item's selection marker"
 msgstr "Selecteer door te klikken op de selectiemarkering van het item"
 
 #: ui/main.qml:219
-#, fuzzy, kde-format
-#| msgid "More Behavior Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr "Meer instellingen gedrag…"
+msgstr "Meer instellingen voor gedrag:"
 
 #: ui/main.qml:221
 #, kde-format
 msgctxt ""
 "@action:button as in, 'this will take you to the General Behavior KCM'"
 msgid "General Behavior"
-msgstr ""
+msgstr "Algemeen gedrag"
 
 #: ui/main.qml:233
 #, kde-format

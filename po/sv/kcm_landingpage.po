@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-14 00:39+0000\n"
-"PO-Revision-Date: 2022-02-12 09:51+0100\n"
+"PO-Revision-Date: 2024-07-14 08:38+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -55,27 +55,24 @@ msgid "Theme:"
 msgstr "Tema:"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "More Appearance Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr "Fler utseendeinställningar..."
+msgstr "Fler utseendeinställningar:"
 
 #: ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Change Wallpaper…"
+#, kde-format
 msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
 msgid "Wallpaper"
-msgstr "Ändra skrivbordsunderlägg…"
+msgstr "Skrivbordsunderlägg"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Color scheme name"
+#, kde-format
 msgctxt ""
 "@action:button as in, 'this will take you to the first KCM in the Colors & "
 "Themes group'"
 msgid "Colors & Themes"
-msgstr "Namn på färgschema"
+msgstr "Färger och teman"
 
 #: ui/main.qml:122
 #, kde-format
@@ -124,18 +121,17 @@ msgid "Select by clicking on item's selection marker"
 msgstr "Markera genom att klicka på objektets markeringsindikering"
 
 #: ui/main.qml:219
-#, fuzzy, kde-format
-#| msgid "More Behavior Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr "Fler beteendeinställningar…"
+msgstr "Fler beteendeinställningar:"
 
 #: ui/main.qml:221
 #, kde-format
 msgctxt ""
 "@action:button as in, 'this will take you to the General Behavior KCM'"
 msgid "General Behavior"
-msgstr ""
+msgstr "Allmänt beteende"
 
 #: ui/main.qml:233
 #, kde-format

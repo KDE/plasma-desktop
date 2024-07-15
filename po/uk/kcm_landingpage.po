@@ -3,14 +3,14 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-14 00:39+0000\n"
-"PO-Revision-Date: 2022-02-12 08:59+0200\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"PO-Revision-Date: 2024-07-14 08:46+0300\n"
+"Last-Translator: Fracture dept <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -58,27 +58,24 @@ msgid "Theme:"
 msgstr "Тема:"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "More Appearance Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr "Додаткові параметри вигляду…"
+msgstr "Додаткові параметри вигляду:"
 
 #: ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Change Wallpaper…"
+#, kde-format
 msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
 msgid "Wallpaper"
-msgstr "Змінити зображення тла…"
+msgstr "Зображення тла"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Color scheme name"
+#, kde-format
 msgctxt ""
 "@action:button as in, 'this will take you to the first KCM in the Colors & "
 "Themes group'"
 msgid "Colors & Themes"
-msgstr "Назва схеми кольорів"
+msgstr "Кольори і теми"
 
 #: ui/main.qml:122
 #, kde-format
@@ -127,18 +124,17 @@ msgid "Select by clicking on item's selection marker"
 msgstr "Позначення клацанням на маркері позначення елемента"
 
 #: ui/main.qml:219
-#, fuzzy, kde-format
-#| msgid "More Behavior Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr "Додаткові параметри поведінки…"
+msgstr "Додаткові параметри поведінки:"
 
 #: ui/main.qml:221
 #, kde-format
 msgctxt ""
 "@action:button as in, 'this will take you to the General Behavior KCM'"
 msgid "General Behavior"
-msgstr ""
+msgstr "Загальна поведінка"
 
 #: ui/main.qml:233
 #, kde-format

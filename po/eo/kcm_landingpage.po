@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-14 00:39+0000\n"
-"PO-Revision-Date: 2023-04-09 22:11+0000\n"
+"PO-Revision-Date: 2024-07-14 22:18+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -56,27 +56,24 @@ msgid "Theme:"
 msgstr "Etoso:"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "More Appearance Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr "Pli da Aspektaj Agordoj…"
+msgstr "Pli da aspektaj agordoj…"
 
 #: ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Change Wallpaper…"
+#, kde-format
 msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
 msgid "Wallpaper"
-msgstr "Ŝanĝi tapeton…"
+msgstr "Ekranfono"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Color scheme name"
+#, kde-format
 msgctxt ""
 "@action:button as in, 'this will take you to the first KCM in the Colors & "
 "Themes group'"
 msgid "Colors & Themes"
-msgstr "Kolorskemo nomo"
+msgstr "Koloroj & Etosoj"
 
 #: ui/main.qml:122
 #, kde-format
@@ -125,18 +122,17 @@ msgid "Select by clicking on item's selection marker"
 msgstr "Elektu klakante sur la elekta markilo de ero"
 
 #: ui/main.qml:219
-#, fuzzy, kde-format
-#| msgid "More Behavior Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr "Pliaj Kondut-Agordoj…"
+msgstr "Pliaj kondut-agordoj:"
 
 #: ui/main.qml:221
 #, kde-format
 msgctxt ""
 "@action:button as in, 'this will take you to the General Behavior KCM'"
 msgid "General Behavior"
-msgstr ""
+msgstr "Ĝenerala Konduto"
 
 #: ui/main.qml:233
 #, kde-format
