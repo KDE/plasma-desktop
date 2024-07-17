@@ -207,6 +207,7 @@ KCM.AbstractKCM {
                             QQC2.CheckBox {
                                 checked: model.checked
                                 visible: exportActive
+                                Accessible.name: i18nc("@option:check accessible export shortcuts %1 is application/group name", "Export %1", model.display)
                                 onToggled: model.checked = checked
                             }
                             QQC2.Button {
@@ -214,6 +215,8 @@ KCM.AbstractKCM {
 
                                 implicitHeight: label.implicitHeight
                                 implicitWidth: implicitHeight
+                                
+                                Accessible.name: i18nc("@action:button accessible %1 is the name of a custom command", "Edit command for %1", model.display)
 
                                 visible: model.section === Private.ComponentType.Command
                                          && !exportActive
@@ -237,6 +240,7 @@ KCM.AbstractKCM {
 
                                 implicitHeight: label.implicitHeight
                                 implicitWidth: implicitHeight
+                                Accessible.name: i18nc("@action:button accessible %1 is the name of a shortcut category", "Remove all shortcuts for %1", model.display)
 
                                 visible: model.section !== Private.ComponentType.CommonAction
                                          && !exportActive
@@ -252,6 +256,7 @@ KCM.AbstractKCM {
                                 implicitHeight: label.implicitHeight
                                 implicitWidth: implicitHeight
 
+                                Accessible.name: i18nc("@action:button accessible", "Undo deletion")
                                 visible: !exportActive && model.pendingDeletion
                                 icon.name: "edit-undo"
                                 onClicked: model.pendingDeletion = false
@@ -439,12 +444,14 @@ KCM.AbstractKCM {
                 QQC2.TextField {
                     id: cmdField
                     Layout.fillWidth: true
+                    Accessible.name: i18nc("@label:textbox accessible","Command")
                     font.family: "monospace"
                     onAccepted: addCommandDialog.addCommandAction.triggered()
                 }
                 QQC2.Button {
                     icon.name: "document-open"
                     text: i18nc("@action:button", "Choose…")
+                    Accessible.name: i18nc("@action:button accessible","Choose script file")
                     onClicked: {
                         openScriptFileDialogLoader.active = true
                     }

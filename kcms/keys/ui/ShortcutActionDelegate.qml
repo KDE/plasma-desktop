@@ -177,6 +177,7 @@ QQC2.ItemDelegate {
                                 }
                             }
                             QQC2.Button {
+                                Accessible.name: i18nc("@action:button accessible", "Delete shortcut")
                                 icon.name: "edit-delete"
                                 onClicked: originalIndex.model.disableShortcut(originalIndex, modelData)
                                 QQC2.ToolTip {
@@ -187,7 +188,7 @@ QQC2.ItemDelegate {
                     }
                     QQC2.Button {
                         text: i18nc("@action:button Add custom shortcut", "Add…")
-                        Accessible.name: i18n("Add custom shortcut")
+                        Accessible.name: i18nc("@action:button accessible", "Add custom shortcut")
                         icon.name: "list-add-symbolic"
                         Layout.alignment: Qt.AlignRight
                         onClicked: {
@@ -222,6 +223,7 @@ QQC2.ItemDelegate {
                                 }
                             }
                             QQC2.Button {
+                                Accessible.name: i18nc("@action:button accessible", "Cancel capturing shortcut")
                                 icon.name: "dialog-cancel"
                                 onClicked: parent.finished()
                                 QQC2.ToolTip {
