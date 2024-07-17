@@ -414,6 +414,7 @@ KCM.AbstractKCM {
                 cmdField.forceActiveFocus();
                 if (editing) {
                     cmdField.text = oldExec;
+                    cmdField.selectAll();
                 }
             }
         }
