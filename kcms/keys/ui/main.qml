@@ -40,7 +40,7 @@ KCM.AbstractKCM {
         Kirigami.Action {
             enabled: !exportActive
             icon.name: "document-import-symbolic"
-            text: i18nc("@action: button Import shortcut scheme", "Import…")
+            text: i18nc("@action:button Import shortcut scheme", "Import…")
             // TODO: enable once Kirigami actions can have Accessible.name set (QT 6.8)
             // Accessible.name: i18nc("@action:button accessible", "Import shortcut scheme")
             onTriggered: importSheet.open()
