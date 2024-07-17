@@ -100,7 +100,7 @@ KCM.AbstractKCM {
             actions: [
                 Kirigami.Action {
                     icon.name: "document-save"
-                    text: i18nc("@action:button Save shortcut scheme", "Save Scheme")
+                    text: i18nc("@action:button Export shortcut scheme", "Export")
                     // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
                     // Accessible.name: i18nc("@action:button accessible", "Export shortcut scheme")
 
