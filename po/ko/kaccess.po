@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:40+0000\n"
 "PO-Revision-Date: 2021-05-16 23:11+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -178,155 +178,155 @@ msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "접근성"
 
-#: kaccess.cpp:638
+#: kaccess.cpp:646
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGr"
 
-#: kaccess.cpp:640
+#: kaccess.cpp:648
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kaccess.cpp:642
+#: kaccess.cpp:650
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kaccess.cpp:644
+#: kaccess.cpp:652
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: kaccess.cpp:661
+#: kaccess.cpp:669
 #, kde-format
 msgid "Warning"
 msgstr "경고"
 
-#: kaccess.cpp:689
+#: kaccess.cpp:697
 #, kde-format
 msgid "&When a gesture was used:"
 msgstr "제스처가 사용되었을 때(&W):"
 
-#: kaccess.cpp:695
+#: kaccess.cpp:703
 #, kde-format
 msgid "Change Settings Without Asking"
 msgstr "물어보지 않고 설정 바꾸기"
 
-#: kaccess.cpp:696
+#: kaccess.cpp:704
 #, kde-format
 msgid "Show This Confirmation Dialog"
 msgstr "이 확인 대화 상자 표시하기"
 
-#: kaccess.cpp:697
+#: kaccess.cpp:705
 #, kde-format
 msgid "Deactivate All AccessX Features & Gestures"
 msgstr "모든 AccessX 기능과 제스처 끄기"
 
-#: kaccess.cpp:740 kaccess.cpp:742
+#: kaccess.cpp:748 kaccess.cpp:750
 #, kde-format
 msgid "Slow keys"
 msgstr "느린 키"
 
-#: kaccess.cpp:745 kaccess.cpp:747
+#: kaccess.cpp:753 kaccess.cpp:755
 #, kde-format
 msgid "Bounce keys"
 msgstr "튕김 키"
 
-#: kaccess.cpp:750 kaccess.cpp:752
+#: kaccess.cpp:758 kaccess.cpp:760
 #, kde-format
 msgid "Sticky keys"
 msgstr "끈적이 키"
 
-#: kaccess.cpp:755 kaccess.cpp:757
+#: kaccess.cpp:763 kaccess.cpp:765
 #, kde-format
 msgid "Mouse keys"
 msgstr "마우스 키"
 
-#: kaccess.cpp:764
+#: kaccess.cpp:772
 #, kde-format
 msgid "Do you really want to deactivate \"%1\"?"
 msgstr "\"%1\"을(를) 끄시겠습니까?"
 
-#: kaccess.cpp:767
+#: kaccess.cpp:775
 #, kde-format
 msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
 msgstr "\"%1\"와(과) \"%2\"을(를) 끄시겠습니까?"
 
-#: kaccess.cpp:771
+#: kaccess.cpp:779
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
 msgstr "\"%1\", \"%2\", \"%3\"을(를) 끄시겠습니까?"
 
-#: kaccess.cpp:774
+#: kaccess.cpp:782
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "\"%1\", \"%2\", \"%3\", \"%4\"을(를) 끄시겠습니까?"
 
-#: kaccess.cpp:785
+#: kaccess.cpp:793
 #, kde-format
 msgid "Do you really want to activate \"%1\"?"
 msgstr "\"%1\"을(를) 켜시겠습니까?"
 
-#: kaccess.cpp:788
+#: kaccess.cpp:796
 #, kde-format
 msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
 msgstr "\"%1\"을(를) 켜고 \"%2\"을(를) 끄시겠습니까?"
 
-#: kaccess.cpp:791
+#: kaccess.cpp:799
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
 msgstr "\"%1\"을(를) 켜고 \"%2\", \"%3\"을(를) 끄시겠습니까?"
 
-#: kaccess.cpp:797
+#: kaccess.cpp:805
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
 "\"%4\"?"
 msgstr "\"%1\"을(를) 켜고 \"%2\", \"%3\", \"%4\"을(를) 끄시겠습니까?"
 
-#: kaccess.cpp:808
+#: kaccess.cpp:816
 #, kde-format
 msgid "Do you really want to activate \"%1\" and \"%2\"?"
 msgstr "\"%1\", \"%2\"을(를) 켜시겠습니까?"
 
-#: kaccess.cpp:811
+#: kaccess.cpp:819
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
 msgstr "\"%1\", \"%2\"을(를) 켜고 \"%3\"을(를) 끄시겠습니까?"
 
-#: kaccess.cpp:817
+#: kaccess.cpp:825
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
 "and \"%4\"?"
 msgstr "\"%1\", \"%2\"을(를) 켜고 \"%3\", \"%4\"을(를) 끄시겠습니까?"
 
-#: kaccess.cpp:828
+#: kaccess.cpp:836
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
 msgstr "\"%1\", \"%2\", \"%3\"을(를) 켜시겠습니까?"
 
-#: kaccess.cpp:831
+#: kaccess.cpp:839
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
 "\"%4\"?"
 msgstr "\"%1\", \"%2\", \"%3\"을(를) 켜고 \"%4\"을(를) 끄시겠습니까?"
 
-#: kaccess.cpp:840
+#: kaccess.cpp:848
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
 msgstr "\"%1\", \"%2\", \"%3\", \"%4\"을(를) 켜시겠습니까?"
 
-#: kaccess.cpp:849
+#: kaccess.cpp:857
 #, kde-format
 msgid "An application has requested to change this setting."
 msgstr "앱이 이 설정을 변경하기를 요청했습니다."
 
-#: kaccess.cpp:853
+#: kaccess.cpp:861
 #, kde-format
 msgid ""
 "You held down the Shift key for 8 seconds or an application has requested to "
@@ -334,7 +334,7 @@ msgid ""
 msgstr ""
 "Shift 키를 8초 동안 누르고 있었거나 앱이 이 설정을 변경하기를 요청했습니다."
 
-#: kaccess.cpp:855
+#: kaccess.cpp:863
 #, kde-format
 msgid ""
 "You pressed the Shift key 5 consecutive times or an application has "
@@ -342,24 +342,24 @@ msgid ""
 msgstr ""
 "Shift 키를 연속으로 5번 눌렀거나 앱이 이 설정을 변경하기를 요청했습니다."
 
-#: kaccess.cpp:859
+#: kaccess.cpp:867
 #, kde-format
 msgid "You pressed %1 or an application has requested to change this setting."
 msgstr "%1 키를 눌렀거나 앱이 이 설정을 변경하기를 요청했습니다."
 
-#: kaccess.cpp:864
+#: kaccess.cpp:872
 #, kde-format
 msgid ""
 "An application has requested to change these settings, or you used a "
 "combination of several keyboard gestures."
 msgstr "여러 키 조합을 눌렀거나 앱이 이 설정을 변경하기를 요청했습니다."
 
-#: kaccess.cpp:866
+#: kaccess.cpp:874
 #, kde-format
 msgid "An application has requested to change these settings."
 msgstr "앱이 이 설정을 변경하기를 요청했습니다."
 
-#: kaccess.cpp:871
+#: kaccess.cpp:879
 #, kde-format
 msgid ""
 "These AccessX settings are needed for some users with motion impairments and "
@@ -374,7 +374,7 @@ msgstr ""
 "\n"
 "이 설정이 필요하지 않으면 \"모든 AccessX 기능과 제스처 끄기\"를 선택하십시오."
 
-#: kaccess.cpp:892
+#: kaccess.cpp:900
 #, kde-format
 msgid ""
 "Slow keys has been enabled. From now on, you need to press each key for a "
@@ -383,12 +383,12 @@ msgstr ""
 "느린 키가 켜졌습니다. 지금부터 키가 일정 시간 동안 눌려야만 눌린 것으로 인식"
 "됩니다."
 
-#: kaccess.cpp:894
+#: kaccess.cpp:902
 #, kde-format
 msgid "Slow keys has been disabled."
 msgstr "느린 키가 꺼졌습니다."
 
-#: kaccess.cpp:898
+#: kaccess.cpp:906
 #, kde-format
 msgid ""
 "Bounce keys has been enabled. From now on, each key will be blocked for a "
@@ -397,12 +397,12 @@ msgstr ""
 "튕김 키가 켜졌습니다. 지금부터 키가 눌리면 일정 시간 동안은 같은 키를 누를 "
 "수 없습니다."
 
-#: kaccess.cpp:900
+#: kaccess.cpp:908
 #, kde-format
 msgid "Bounce keys has been disabled."
 msgstr "튕김 키가 꺼졌습니다."
 
-#: kaccess.cpp:904
+#: kaccess.cpp:912
 #, kde-format
 msgid ""
 "Sticky keys has been enabled. From now on, modifier keys will stay latched "
@@ -411,12 +411,12 @@ msgstr ""
 "끈적이 키가 켜졌습니다. 지금부터 수정자 키를 눌렀다 놓아도 눌린 채로 있습니"
 "다."
 
-#: kaccess.cpp:906
+#: kaccess.cpp:914
 #, kde-format
 msgid "Sticky keys has been disabled."
 msgstr "끈적이 키가 꺼졌습니다."
 
-#: kaccess.cpp:910
+#: kaccess.cpp:918
 #, kde-format
 msgid ""
 "Mouse keys has been enabled. From now on, you can use the number pad of your "
@@ -425,7 +425,7 @@ msgstr ""
 "마우스 키가 켜졌습니다. 지금부터 키보드의 숫자 키로 마우스를 제어할 수 있습니"
 "다."
 
-#: kaccess.cpp:912
+#: kaccess.cpp:920
 #, kde-format
 msgid "Mouse keys has been disabled."
 msgstr "마우스 키가 꺼졌습니다."
