@@ -229,7 +229,7 @@ KCM.AbstractKCM {
                                     addCommandDialog.open();
                                 }
                                 QQC2.ToolTip {
-                                    text: i18nc("@tooltip:button %1 is the text of a custom command", "Edit command for %1", model.display)
+                                    text: i18nc("@info:tooltip %1 is the text of a custom command", "Edit command for %1", model.display)
                                 }
                             }
                             QQC2.Button {
@@ -245,7 +245,7 @@ KCM.AbstractKCM {
                                 icon.name: "edit-delete"
                                 onClicked: model.pendingDeletion = true
                                 QQC2.ToolTip {
-                                    text: i18n("Remove all shortcuts for %1", model.display)
+                                    text: i18nc("@info:tooltip %1 is the text of a shortcut category", "Remove all shortcuts for %1", model.display)
                                 }
                             }
                             QQC2.Button {
@@ -256,7 +256,7 @@ KCM.AbstractKCM {
                                 icon.name: "edit-undo"
                                 onClicked: model.pendingDeletion = false
                                 QQC2.ToolTip {
-                                    text: i18n("Undo deletion")
+                                    text: i18nc("@info:tooltip", "Undo deletion")
                                 }
                             }
                             Rectangle {

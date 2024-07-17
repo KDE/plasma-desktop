@@ -180,7 +180,7 @@ QQC2.ItemDelegate {
                                 icon.name: "edit-delete"
                                 onClicked: originalIndex.model.disableShortcut(originalIndex, modelData)
                                 QQC2.ToolTip {
-                                    text: i18n("Delete this shortcut")
+                                    text: i18nc("@info:tooltip", "Delete this shortcut")
                                 }
                             }
                         }
@@ -225,7 +225,7 @@ QQC2.ItemDelegate {
                                 icon.name: "dialog-cancel"
                                 onClicked: parent.finished()
                                 QQC2.ToolTip {
-                                    text: i18n("Cancel capturing of new shortcut")
+                                    text: i18nc("@info:tooltip", "Cancel capturing of new shortcut")
                                 }
                             }
                         }
