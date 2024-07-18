@@ -11,6 +11,8 @@ set(taskmanagerplugin_SRCS
     plugin/smartlaunchers/smartlauncheritem.cpp
 )
 
+kconfig_add_kcfg_files(taskmanagerplugin_SRCS ${CMAKE_SOURCE_DIR}/kcms/recentFiles/kactivitymanagerd_plugins_settings.kcfgc)
+
 ecm_qt_declare_logging_category(taskmanagerplugin_SRCS
     HEADER log_settings.h
     IDENTIFIER TASKMANAGER_DEBUG

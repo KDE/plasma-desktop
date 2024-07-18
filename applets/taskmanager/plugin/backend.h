@@ -6,11 +6,15 @@
 
 #pragma once
 
+#include <KConfigWatcher>
+
 #include <QObject>
 #include <QRect>
 
 #include <netwm.h>
 #include <qwindowdefs.h>
+
+#include "kactivitymanagerd_plugins_settings.h"
 
 class QAction;
 class QActionGroup;
@@ -103,4 +107,7 @@ private:
     QActionGroup *m_actionGroup = nullptr;
     KActivities::Consumer *m_activitiesConsumer = nullptr;
     bool m_windowViewAvailable = false;
+
+    KActivityManagerdPluginsSettings m_activityManagerPluginsSettings;
+    KConfigWatcher::Ptr m_activityManagerPluginsSettingsWatcher;
 };

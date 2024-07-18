@@ -61,10 +61,13 @@ static const QString appViewName = QStringLiteral("org.kde.KWin.Effect.WindowVie
 static const QString appViewPath = QStringLiteral("/org/kde/KWin/Effect/WindowView1");
 static const QString &appViewInterface = appViewName;
 
+static constexpr int NoApplications = 2; // kactivitymanager StatsPlugin WhatToRemember.
+
 Backend::Backend(QObject *parent)
     : QObject(parent)
     , m_highlightWindows(false)
     , m_actionGroup(new QActionGroup(this))
+    , m_activityManagerPluginsSettingsWatcher(KConfigWatcher::create(m_activityManagerPluginsSettings.sharedConfig()))
 {
     m_windowViewAvailable = QDBusConnection::sessionBus().interface()->isServiceRegistered(appViewName);
     auto watcher = new QDBusServiceWatcher(appViewName,
@@ -79,6 +82,16 @@ Backend::Backend(QObject *parent)
         m_windowViewAvailable = false;
         Q_EMIT windowViewAvailableChanged();
     });
+
+    connect(m_activityManagerPluginsSettingsWatcher.get(),
+            &KConfigWatcher::configChanged,
+            this,
+            [this](const KConfigGroup &group, const QByteArrayList &names) {
+                if (group.name() == QLatin1String("Plugin-org.kde.ActivityManager.Resources.Scoring")
+                    && names.contains(QByteArrayLiteral("what-to-remember"))) {
+                    m_activityManagerPluginsSettings.load();
+                }
+            });
 }
 
 Backend::~Backend()
@@ -225,6 +238,10 @@ QVariantList Backend::systemSettingsActions(QObject *parent) const
 {
     QVariantList actions;
 
+    if (m_activityManagerPluginsSettings.whatToRemember() == NoApplications) {
+        return actions;
+    }
+
     auto query = AllResources | Agent(QStringLiteral("org.kde.systemsettings")) | HighScoredFirst | Limit(5);
 
     ResultSet results(query);
@@ -360,6 +377,10 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
 {
     QVariantList actions;
     if (!parent) {
+        return actions;
+    }
+
+    if (m_activityManagerPluginsSettings.whatToRemember() == NoApplications) {
         return actions;
     }
 
