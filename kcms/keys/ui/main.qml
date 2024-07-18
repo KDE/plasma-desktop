@@ -99,7 +99,7 @@ KCM.AbstractKCM {
             showCloseButton: true
             actions: [
                 Kirigami.Action {
-                    icon.name: "document-save"
+                    icon.name: "document-export-symbolic"
                     text: i18nc("@action:button Export shortcut scheme", "Export")
                     // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
                     // Accessible.name: i18nc("@action:button accessible", "Export shortcut scheme")
@@ -464,14 +464,14 @@ KCM.AbstractKCM {
                 QQC2.TextField {
                     id: cmdField
                     Layout.fillWidth: true
-                    Accessible.name: i18nc("@label:textbox accessible","Command")
+                    Accessible.name: i18nc("@label:textbox accessible", "Command")
                     font.family: "monospace"
                     onAccepted: addCommandDialog.addCommandAction.triggered()
                 }
                 QQC2.Button {
                     icon.name: "document-open"
                     text: i18nc("@action:button", "Choose…")
-                    Accessible.name: i18nc("@action:button accessible","Choose script file")
+                    Accessible.name: i18nc("@action:button accessible", "Choose script file")
                     onClicked: {
                         openScriptFileDialogLoader.active = true
                     }
