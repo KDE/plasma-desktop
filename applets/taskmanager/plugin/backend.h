@@ -6,11 +6,15 @@
 
 #pragma once
 
+#include <KConfigWatcher>
+
 #include <QObject>
 #include <QRect>
 
 #include <netwm.h>
 #include <qwindowdefs.h>
+
+#include "kactivitymanagerd_plugins_settings.h"
 
 class QAction;
 class QActionGroup;
@@ -85,4 +89,7 @@ private:
     QStringList m_windowsToHighlight;
     QActionGroup *m_actionGroup = nullptr;
     KActivities::Consumer *m_activitiesConsumer = nullptr;
+
+    KActivityManagerdPluginsSettings m_activityManagerPluginsSettings;
+    KConfigWatcher::Ptr m_activityManagerPluginsSettingsWatcher;
 };
