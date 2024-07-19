@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-13 00:40+0000\n"
-"PO-Revision-Date: 2024-05-06 09:23+0300\n"
+"PO-Revision-Date: 2024-06-30 17:36+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 21.08.3\n"
 
 #: kcmtablet.cpp:34
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "По умолчанию"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -45,15 +45,14 @@ msgid "Inverted Landscape"
 msgstr "Перевёрнутая альбомная"
 
 #: kcmtablet.cpp:88
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Как на активном экране"
+msgstr "Следовать за текущим экраном"
 
 #: kcmtablet.cpp:93
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Все экраны"
 
 #: kcmtablet.cpp:102
 #, kde-format
@@ -64,17 +63,17 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "По размеру экрана"
 
 #: kcmtablet.cpp:163
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Соблюдать соотношение сторон и растянуть по размеру экрану"
 
 #: kcmtablet.cpp:164
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Спроецировать на часть экрана"
 
 #: ui/Calibration.qml:31
 #, kde-format
@@ -133,11 +132,10 @@ msgid "Connect a drawing tablet"
 msgstr "Подключите планшет для рисования"
 
 #: ui/main.qml:41
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Планшет"
+msgstr "Проверить планшет…"
 
 #: ui/main.qml:67
 #, kde-format
@@ -148,7 +146,7 @@ msgstr "Устройство:"
 #: ui/main.qml:105
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Спроецировать на экран:"
 
 #: ui/main.qml:125
 #, kde-format
@@ -156,8 +154,7 @@ msgid "Orientation:"
 msgstr "Ориентация:"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Для левшей:"
 
@@ -173,7 +170,7 @@ msgstr ""
 #: ui/main.qml:154
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Область для проецирования:"
 
 #: ui/main.qml:241
 #, kde-format
@@ -248,21 +245,20 @@ msgid "Pad button %1:"
 msgstr "Кнопка устройства %1:"
 
 #: ui/Tester.qml:25
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr "Планшет"
+msgstr "Проверка графического планшета"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Нажатие пером: X=%1, Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Прекращение нажатия пером: X=%1, Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
