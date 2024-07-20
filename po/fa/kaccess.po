@@ -5,30 +5,31 @@
 # Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
 # Mohamad Reza Mirdamadi <mohi@linuxshop.ir>, 2011, 2012.
 # SPDX-FileCopyrightText: 2023 Alosra <Aleomoeini@gmail.com>
+# SPDX-FileCopyrightText: 2024 Mohi Mirdamadi <mohi.pub@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:40+0000\n"
-"PO-Revision-Date: 2023-10-09 13:41+0300\n"
-"Last-Translator: Alosra <Aleomoeini@gmail.com>\n"
+"PO-Revision-Date: 2024-07-19 23:41+0330\n"
+"Last-Translator: Mohi Mirdamadi <mohi.pub@gmail.com>\n"
 "Language-Team: fa\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "محمدرضا میردامادی , نازنین کاظمی"
+msgstr "محمدرضا(موهی) میردامادی , نازنین کاظمی"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "mohi@linuxshop.ir , kazemi@itland.ir"
+msgstr "mohi.pub@gmail.com , kazemi@itland.ir"
 
 #: kaccess.cpp:65
 msgid ""
@@ -173,11 +174,10 @@ msgid "Toggle Screen Reader On and Off"
 msgstr "نمایشگر خوان را روشن و خاموش کن"
 
 #: kaccess.cpp:313
-#, fuzzy, kde-format
-#| msgid "KDE Accessibility Tool"
+#, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
-msgstr "ابزار دستیابی‌پذیری KDE"
+msgstr "دستیابی‌پذیری"
 
 #: kaccess.cpp:638
 #, kde-format
@@ -438,10 +438,9 @@ msgid "Mouse keys has been disabled."
 msgstr "کلیدهای موشی غیرفعال شده‌اند."
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid "KDE Accessibility Tool"
+#, kde-format
 msgid "Accessibility"
-msgstr "ابزار دستیابی‌پذیری KDE"
+msgstr "دستیابی‌پذیری"
 
 #: main.cpp:36
 #, kde-format
