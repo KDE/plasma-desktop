@@ -319,7 +319,7 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
                  newActionName)
         : xi18nc("@info",
                  "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>%2</interface> of <application>%3</application>.<nl/><nl/>Reassign "
-                 "it to action <interface>%4</interface> of <application>%4</application>?",
+                 "it to action <interface>%4</interface> of <application>%5</application>?",
                  keysString,
                  currentActionName,
                  currentComponentName,
