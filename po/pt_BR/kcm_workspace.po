@@ -5,20 +5,21 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2019, 2020.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2018, 2019, 2020, 2022, 2023.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2023-11-14 14:03-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-20 23:40-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -72,13 +73,13 @@ msgstr "Instantânea"
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "Rolagem:"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "Preferir rolagem suave"
 
 #: ui/main.qml:133
 #, kde-format
@@ -89,6 +90,10 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Esta configuração ativa ou desativa transições animadas ao rolar com a roda "
+"do mouse ou o teclado. Alguns aplicativos podem não respeitar essa "
+"configuração porque não oferecem suporte à rolagem suave ou têm sua própria "
+"configuração para ativá-la e desativá-la."
 
 #: ui/main.qml:146
 #, kde-format
@@ -225,6 +230,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"Dois cliques dentro do deste intervalo de duração são considerados um clique "
+"duplo. Alguns aplicativos podem não respeitar essa configuração."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -242,7 +249,7 @@ msgstr "Velocidade da animação"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "Rolagem suave"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
