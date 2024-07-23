@@ -9,6 +9,7 @@
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KLocalizedString>
+#include <KService>
 
 #include "kcmkeys_debug.h"
 
@@ -183,6 +184,7 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
         if (cg.readEntry<bool>("X-KDE-GlobalAccel-CommandShortcut", false)) {
             return cg.readEntry("Name");
         }
+
         return component.displayName;
     }
     case Qt::DecorationRole:
@@ -199,6 +201,50 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
         return std::all_of(component.actions.begin(), component.actions.end(), [](const Action &action) {
             return action.activeShortcuts == action.defaultShortcuts;
         });
+    case IsRemovableRole: {
+        // commands can always be removed
+        if (component.type == ComponentNS::Command) {
+            return true;
+        }
+
+        if (component.id.endsWith(".desktop")) {
+            // desktopfile-based system services cannot be removed
+            // ideally we also wouldn't allow removing runtime-registered
+            // system service components, but we cannot reliably detect those
+            // and it would make it impossible to remove shortcuts from no longer
+            // installed third-party components
+            if (component.type == ComponentNS::SystemService) {
+                return false;
+            }
+
+            auto service = KService::serviceByStorageId(component.id);
+
+            if (!service) {
+                // no desktop file in the applications folder, it's a system service, so don't remove
+                return false;
+            }
+
+            // Check whether the app has shortcuts by default
+            // If yes then don't allow removing it or it will reappear automatically
+            // If no the user added it explicitly and should be able to remove it again
+            bool hasShortcutByDefault = [](const KService::Ptr &service) {
+                if (!service->property<QString>(QStringLiteral("X-KDE-Shortcuts")).isEmpty()) {
+                    return true;
+                }
+
+                const auto actions = service->actions();
+                return std::any_of(actions.cbegin(), actions.cend(), [](const KServiceAction &action) {
+                    return !action.property<QStringList>(QStringLiteral("X-KDE-Shortcuts")).isEmpty();
+                });
+            }(service);
+
+            return !hasShortcutByDefault;
+        } else {
+            // TODO find a way to determine whether runtime registered shortcuts
+            // are from core system components and should not be removable
+            return true;
+        }
+    }
     }
     return QVariant();
 }
@@ -230,15 +276,18 @@ bool BaseModel::setData(const QModelIndex &index, const QVariant &value, int rol
 
 QHash<int, QByteArray> BaseModel::roleNames() const
 {
-    return {{Qt::DisplayRole, QByteArrayLiteral("display")},
-            {Qt::DecorationRole, QByteArrayLiteral("decoration")},
-            {SectionRole, QByteArrayLiteral("section")},
-            {ComponentRole, QByteArrayLiteral("component")},
-            {ActiveShortcutsRole, QByteArrayLiteral("activeShortcuts")},
-            {DefaultShortcutsRole, QByteArrayLiteral("defaultShortcuts")},
-            {CustomShortcutsRole, QByteArrayLiteral("customShortcuts")},
-            {CheckedRole, QByteArrayLiteral("checked")},
-            {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},
-            {IsDefaultRole, QByteArrayLiteral("isDefault")},
-            {SupportsMultipleKeysRole, QByteArrayLiteral("supportsMultipleKeys")}};
+    return {
+        {Qt::DisplayRole, QByteArrayLiteral("display")},
+        {Qt::DecorationRole, QByteArrayLiteral("decoration")},
+        {SectionRole, QByteArrayLiteral("section")},
+        {ComponentRole, QByteArrayLiteral("component")},
+        {ActiveShortcutsRole, QByteArrayLiteral("activeShortcuts")},
+        {DefaultShortcutsRole, QByteArrayLiteral("defaultShortcuts")},
+        {CustomShortcutsRole, QByteArrayLiteral("customShortcuts")},
+        {CheckedRole, QByteArrayLiteral("checked")},
+        {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},
+        {IsDefaultRole, QByteArrayLiteral("isDefault")},
+        {SupportsMultipleKeysRole, QByteArrayLiteral("supportsMultipleKeys")},
+        {IsRemovableRole, QByteArrayLiteral("isRemovable")},
+    };
 }
