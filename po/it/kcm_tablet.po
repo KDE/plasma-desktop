@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-13 00:40+0000\n"
-"PO-Revision-Date: 2024-06-19 19:04+0200\n"
+"PO-Revision-Date: 2024-07-22 09:25+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: kcmtablet.cpp:34
 #, kde-format
@@ -77,7 +77,7 @@ msgstr "Associa a una porzione dello schermo"
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Calibrazione del pennino"
 
 #: ui/Calibration.qml:85
 #, kde-kuit-format
@@ -86,6 +86,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"La calibrazione è stata completata e salvata.<nl/><nl/>Raffinala "
+"ulteriormente o chiudi la finestra."
 
 #: ui/Calibration.qml:86
 #, kde-kuit-format
@@ -94,30 +96,32 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Tocca il centro di ogni bersaglio.<nl/><nl/>Mira il punto in cui cade la "
+"punta dello stilo, e ignora la posizione del cursore sullo schermo."
 
 #: ui/Calibration.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Raffina calibrazione esistente"
 
 #: ui/Calibration.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Calibra da zero"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Chiudi"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #: ui/main.qml:32
 #, kde-format
@@ -193,41 +197,41 @@ msgstr "%1,%2 - %3×%4"
 #: ui/main.qml:282
 #, kde-format
 msgid "Pen button 1:"
-msgstr "Pulsante 1 della penna:"
+msgstr "Pulsante 1 del pennino:"
 
 #: ui/main.qml:283
 #, kde-format
 msgid "Pen button 2:"
-msgstr "Pulsante 2 della penna:"
+msgstr "Pulsante 2 del pennino:"
 
 #: ui/main.qml:284
 #, kde-format
 msgid "Pen button 3:"
-msgstr "Pulsante 3 della penna:"
+msgstr "Pulsante 3 del pennino:"
 
 #: ui/main.qml:329
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Calibrazione in corso"
 
 #: ui/main.qml:331
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Calibra"
 
 #: ui/main.qml:334
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Calibrazione non supportata"
 
 #: ui/main.qml:361
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "La calibrazione tra più schermi non è supportata."
 
 #: ui/main.qml:371
 #, kde-format

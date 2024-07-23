@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-09 00:40+0000\n"
+"POT-Creation-Date: 2024-07-23 00:40+0000\n"
 "PO-Revision-Date: 2024-07-12 02:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -60,12 +60,17 @@ msgstr ""
 "interface>。<nl/><nl/>要將它重新指派給 %4 嗎？"
 
 #: kcm_keys.cpp:321
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
+#| "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
+#| "action <interface>%4</interface> of <application>%4</application>?"
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
-"action <interface>%4</interface> of <application>%4</application>?"
+"action <interface>%4</interface> of <application>%5</application>?"
 msgstr ""
 "快捷鍵 <shortcut>%1</shortcut> 已經指派給 <application>%3</application> 的動"
 "作 <interface>%2</interface>。<nl/><nl/>要將它重新指派給 <application>%4</"
@@ -134,159 +139,215 @@ msgid "Common Actions"
 msgstr "通用動作"
 
 #: ui/main.qml:43
-#, kde-format
-msgctxt "@action: button Import shortcut scheme"
+#, fuzzy, kde-format
+#| msgctxt "@action: button Import shortcut scheme"
+#| msgid "Import…"
+msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "匯入…"
 
-#: ui/main.qml:48
+#: ui/main.qml:50
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
 msgstr "取消匯出"
 
-#: ui/main.qml:49
+#: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "匯出…"
 
-#: ui/main.qml:77
+#: ui/main.qml:83
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "有未儲存的變更時無法匯出方案"
 
-#: ui/main.qml:90
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr "選取要包含在匯出的方案裡的組件"
 
-#: ui/main.qml:97
-#, kde-format
-msgctxt "@action:button Save shortcut scheme"
-msgid "Save Scheme"
-msgstr "儲存方案"
+#: ui/main.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@action:button Export shortcut scheme"
+#| msgid "Export…"
+msgctxt "@action:button Export shortcut scheme"
+msgid "Export"
+msgstr "匯出…"
 
-#: ui/main.qml:164
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
 msgstr "新增"
 
-#: ui/main.qml:170
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
 msgstr "應用程式…"
 
-#: ui/main.qml:176
+#: ui/main.qml:188
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr "命令或文稿…"
 
-#: ui/main.qml:232
-#, kde-format
-msgctxt "@tooltip:button %1 is the text of a custom command"
+#: ui/main.qml:225
+#, fuzzy, kde-format
+#| msgctxt "@action:button Export shortcut scheme"
+#| msgid "Export…"
+msgctxt ""
+"@option:check accessible export shortcuts %1 is application/group name"
+msgid "Export %1"
+msgstr "匯出…"
+
+#: ui/main.qml:234
+#, fuzzy, kde-format
+#| msgctxt "@tooltip:button %1 is the text of a custom command"
+#| msgid "Edit command for %1"
+msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "編輯 %1 的命令"
 
-#: ui/main.qml:248
-#, kde-format
+#: ui/main.qml:250
+#, fuzzy, kde-format
+#| msgctxt "@tooltip:button %1 is the text of a custom command"
+#| msgid "Edit command for %1"
+msgctxt "@info:tooltip %1 is the text of a custom command"
+msgid "Edit command for %1"
+msgstr "編輯 %1 的命令"
+
+#: ui/main.qml:258
+#, fuzzy, kde-format
+#| msgid "Remove all shortcuts for %1"
+msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "移除所有 %1 的快捷鍵"
 
-#: ui/main.qml:259
-#, kde-format
+#: ui/main.qml:267
+#, fuzzy, kde-format
+#| msgid "Remove all shortcuts for %1"
+msgctxt "@info:tooltip %1 is the text of a shortcut category"
+msgid "Remove all shortcuts for %1"
+msgstr "移除所有 %1 的快捷鍵"
+
+#: ui/main.qml:274
+#, fuzzy, kde-format
+#| msgid "Undo deletion"
+msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "復原刪除"
 
-#: ui/main.qml:313
+#: ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Undo deletion"
+msgctxt "@info:tooltip"
+msgid "Undo deletion"
+msgstr "復原刪除"
+
+#: ui/main.qml:333
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "沒有項目符合搜尋字詞"
 
-#: ui/main.qml:346
+#: ui/main.qml:366
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "從列表選取項目後在這檢視它的快捷鍵"
 
-#: ui/main.qml:358
+#: ui/main.qml:378
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "匯出快捷鍵方案"
 
-#: ui/main.qml:358 ui/main.qml:476
+#: ui/main.qml:378 ui/main.qml:503
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "匯入快捷鍵方案"
 
-#: ui/main.qml:360
+#: ui/main.qml:380
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "快捷鍵方案 (*.kksrc)"
 
-#: ui/main.qml:388
+#: ui/main.qml:408
 #, kde-format
 msgid "Edit Command"
 msgstr "編輯命令"
 
-#: ui/main.qml:388
+#: ui/main.qml:408
 #, kde-format
 msgid "Add Command"
 msgstr "新增命令"
 
-#: ui/main.qml:407
+#: ui/main.qml:428
 #, kde-format
 msgid "Save"
 msgstr "儲存"
 
-#: ui/main.qml:407
+#: ui/main.qml:428
 #, kde-format
 msgid "Add"
 msgstr "新增"
 
-#: ui/main.qml:432
+#: ui/main.qml:457
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "輸入命令或選擇一個文稿檔案："
 
-#: ui/main.qml:447
+#: ui/main.qml:467
+#, fuzzy, kde-format
+#| msgid "Commands"
+msgctxt "@label:textbox accessible"
+msgid "Command"
+msgstr "命令"
+
+#: ui/main.qml:473
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "選擇…"
 
-#: ui/main.qml:460
+#: ui/main.qml:474
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Choose Script File"
+msgctxt "@action:button accessible"
+msgid "Choose script file"
+msgstr "選擇文稿檔案"
+
+#: ui/main.qml:487
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "選擇文稿檔案"
 
-#: ui/main.qml:462
+#: ui/main.qml:489
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "文稿檔案 (*.*sh)"
 
-#: ui/main.qml:484
+#: ui/main.qml:511
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "選取要匯入的方案："
 
-#: ui/main.qml:503
+#: ui/main.qml:530
 #, kde-format
 msgid "Custom Scheme"
 msgstr "自訂方案"
 
-#: ui/main.qml:511
+#: ui/main.qml:538
 #, kde-format
 msgid "Select File…"
 msgstr "選擇檔案…"
 
-#: ui/main.qml:511
+#: ui/main.qml:538
 #, kde-format
 msgid "Import"
 msgstr "匯入"
@@ -336,26 +397,50 @@ msgstr "預設快捷鍵 %1 已停用。"
 msgid "Custom shortcuts"
 msgstr "自訂快捷鍵"
 
-#: ui/ShortcutActionDelegate.qml:183
-#, kde-format
+#: ui/ShortcutActionDelegate.qml:180
+#, fuzzy, kde-format
+#| msgid "Delete this shortcut"
+msgctxt "@action:button accessible"
+msgid "Delete shortcut"
+msgstr "刪除這個快捷鍵"
+
+#: ui/ShortcutActionDelegate.qml:184
+#, fuzzy, kde-format
+#| msgid "Delete this shortcut"
+msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "刪除這個快捷鍵"
 
-#: ui/ShortcutActionDelegate.qml:189
+#: ui/ShortcutActionDelegate.qml:190
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "新增…"
 
-#: ui/ShortcutActionDelegate.qml:190
-#, kde-format
+#: ui/ShortcutActionDelegate.qml:191
+#, fuzzy, kde-format
+#| msgid "Add custom shortcut"
+msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "新增自訂快捷鍵"
 
-#: ui/ShortcutActionDelegate.qml:228
-#, kde-format
+#: ui/ShortcutActionDelegate.qml:226
+#, fuzzy, kde-format
+#| msgid "Cancel capturing of new shortcut"
+msgctxt "@action:button accessible"
+msgid "Cancel capturing shortcut"
+msgstr "取消記錄新快捷鍵"
+
+#: ui/ShortcutActionDelegate.qml:230
+#, fuzzy, kde-format
+#| msgid "Cancel capturing of new shortcut"
+msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "取消記錄新快捷鍵"
+
+#~ msgctxt "@action:button Save shortcut scheme"
+#~ msgid "Save Scheme"
+#~ msgstr "儲存方案"
 
 #~ msgid ""
 #~ "Shortcut %1 is already assigned to action '%2' of %3.\n"

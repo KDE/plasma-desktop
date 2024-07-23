@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-12 00:40+0000\n"
-"PO-Revision-Date: 2024-03-11 07:46-0500\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"PO-Revision-Date: 2024-07-21 22:16-0500\n"
+"Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -467,7 +467,7 @@ msgstr "ਸਟਾਈਲ"
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
-msgstr ""
+msgstr "ਇਹ ਠੀਕ ਕਰੋ"
 
 #: contents/configuration/PanelConfiguration.qml:564
 #, kde-format
@@ -475,8 +475,7 @@ msgid "Panel Width:"
 msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ:"
 
 #: contents/configuration/PanelConfiguration.qml:565
-#, fuzzy, kde-format
-#| msgid "Panel Width:"
+#, kde-format
 msgid "Panel Height:"
 msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ:"
 
@@ -505,7 +504,7 @@ msgstr "ਇਹ ਪੈਨਲ ਹਟਾਓ; ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ
 #, kde-format
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr ""
+msgstr "ਮੁਕੰਮਲ"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
@@ -546,8 +545,7 @@ msgid ""
 msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panels and Desktops Management"
+#, kde-format
 msgid "Panel and Desktop Management"
 msgstr "ਪੈਨਲ ਅਤੇ ਡੈਸਕਟਾਪ ਇੰਤਜ਼ਾਮ"
 
@@ -673,7 +671,7 @@ msgstr "ਕੋਈ ਵਿਜੈਟ ਮੌਜੂਦ ਨਹੀਂ ਹੈ"
 #, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "ਘੜੀ:"
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
@@ -701,52 +699,50 @@ msgstr ""
 #: contents/lockscreen/LockScreenUi.qml:271
 #, kde-format
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "ਕੈਪਸ ਲਾਕ ਚਾਲੂ ਹੈ"
 
 #: contents/lockscreen/LockScreenUi.qml:285
 #, kde-format
 msgid "Sleep"
-msgstr ""
+msgstr "ਸਲੀਪ"
 
 #: contents/lockscreen/LockScreenUi.qml:291
 #, kde-format
 msgid "Hibernate"
-msgstr ""
+msgstr "ਹਾਈਬਰਨੇਟ"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch"
+#, kde-format
 msgid "Switch User"
-msgstr "ਬਦਲੋ"
+msgstr "ਵਰਤੋਂਕਾਰ ਨੂੰ ਬਦਲੋ"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "ਵਰਚੁਅਲ ਕੀਬੋਰਡ"
 
 #: contents/lockscreen/LockScreenUi.qml:382
-#, fuzzy, kde-format
-#| msgid "Switch"
+#, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "ਬਦਲੋ"
+msgstr "ਲੇਆਉਟ ਨੂੰ ਬਦਲੋ"
 
 #: contents/lockscreen/MainBlock.qml:64
 #, kde-format
 msgid "Password"
-msgstr ""
+msgstr "ਪਾਸਵਰਡ"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
-msgstr ""
+msgstr "ਅਣ-ਲਾਕ"
 
 #: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(ਜਾਂ ਰੀਡਰ ਉੱਤੇ ਆਪਣੇ ਫਿੰਗਰ-ਪਰਿੰਟ ਨੂੰ ਸਕੈਨ ਕਰੋ)"
 
 #: contents/lockscreen/MainBlock.qml:160
 #, kde-format
@@ -782,24 +778,23 @@ msgstr ""
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/views/DesktopEditMode.qml:113
 #, kde-format
 msgid "Global Themes"
-msgstr ""
+msgstr "ਗਲੋਬਲ ਥੀਮ"
 
 #: contents/views/DesktopEditMode.qml:120
-#, fuzzy, kde-format
-#| msgid "Open configuration page"
+#, kde-format
 msgid "Display Configuration"
-msgstr "ਸੰਰਚਨਾ ਸਫ਼ਾ ਖੋਲ੍ਹੋ"
+msgstr "ਡਿਸਪਲੇਅ ਦੀ ਸੰਰਚਨਾ"
 
 #: contents/views/DesktopEditMode.qml:141
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "ਹੋਰ"
 
 #: contents/views/DesktopEditMode.qml:150
 #, kde-format

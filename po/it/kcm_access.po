@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-01 00:40+0000\n"
-"PO-Revision-Date: 2024-05-25 15:40+0200\n"
+"PO-Revision-Date: 2024-07-01 17:52+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -363,12 +363,10 @@ msgid "Please choose an audio file"
 msgstr "Scegli un file audio"
 
 #: ui/Bell.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Name filters in a file dialog"
-#| msgid "Audio Files (*.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
-msgstr "File audio (*.ogg *.wav)"
+msgstr "File audio ogg, oga, e wav (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
 #, kde-format

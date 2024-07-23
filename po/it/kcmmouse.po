@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-12 00:40+0000\n"
-"PO-Revision-Date: 2024-05-31 15:38+0200\n"
+"PO-Revision-Date: 2024-07-19 19:15+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -86,12 +86,10 @@ msgstr ""
 "Dispositivo di puntamento disconnesso; nessun altro dispositivo trovato."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Pulsante supplementare %1:"
+msgstr "Pulsanti supplementari del mouse"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -135,7 +133,7 @@ msgstr "Aggiungi associazione..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Configura i pulsanti supplementari..."
 
 #: ui/main.qml:64
 #, kde-format
@@ -257,12 +255,12 @@ msgstr "Touchscreen come scorrimento."
 #: ui/main.qml:356
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
-msgstr ""
+msgstr "Premi il pulsante centrale e sposta il mouse per scorrere"
 
 #: ui/main.qml:368
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
+msgstr "Scorrimento col mouse mentre il pulsante centrale premuto."
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"
