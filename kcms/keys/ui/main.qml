@@ -258,6 +258,7 @@ KCM.AbstractKCM {
                                 Accessible.name: i18nc("@action:button accessible %1 is the name of a shortcut category", "Remove all shortcuts for %1", model.display)
 
                                 visible: model.section !== Private.ComponentType.CommonAction
+                                         && model.isRemovable
                                          && !exportActive
                                          && !model.pendingDeletion
                                          && (componentDelegate.hovered || componentDelegate.ListView.isCurrentItem)
