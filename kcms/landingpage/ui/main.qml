@@ -101,7 +101,7 @@ KCM.SimpleKCM {
         // move from 4x, 3x, 2x, 1x, 0.5x, 0.25x, 0.125x
         // 0 is a special case, which means "instant speed / no animations"
         ColumnLayout {
-            Layout.preferredWidth: appearanceButtonsRow.width
+            Layout.fillWidth: true
 
             Kirigami.FormData.label: slider.Accessible.name
             Kirigami.FormData.buddyFor: slider
