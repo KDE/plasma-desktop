@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-23 00:40+0000\n"
-"PO-Revision-Date: 2024-07-09 16:34+0200\n"
+"PO-Revision-Date: 2024-07-23 20:23+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: basemodel.cpp:157
 #, kde-format
@@ -58,12 +58,7 @@ msgstr ""
 "åtgärden <interface>%3</interface>.<nl/><nl/>Ändra tilldelningen till %4?"
 
 #: kcm_keys.cpp:321
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
-#| "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
-#| "action <interface>%4</interface> of <application>%4</application>?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
@@ -72,7 +67,7 @@ msgid ""
 msgstr ""
 "Genvägen <shortcut>%1</shortcut> är redan tilldelad till åtgärden <interface>"
 "%2</interface> i <application>%3</application>.<nl/><nl/>Ändra den till "
-"åtgärden <interface>%4</interface> i <application>%4</application>?"
+"åtgärden <interface>%4</interface> i <application>%5</application>?"
 
 #: kcm_keys.cpp:330
 #, kde-format
@@ -137,9 +132,7 @@ msgid "Common Actions"
 msgstr "Vanliga åtgärder"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@action: button Import shortcut scheme"
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "Importera…"
@@ -168,12 +161,10 @@ msgid ""
 msgstr "Markera komponenterna nedan som ska ingå i det exporterade schemat"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr "Exportera..."
+msgstr "Exportera"
 
 #: ui/main.qml:173
 #, kde-format
@@ -194,54 +185,44 @@ msgid "Command or Script…"
 msgstr "Kommando eller skript…"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "Exportera..."
+msgstr "Exportera %1"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Redigera kommando för %1"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Redigera kommando för %1"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Ta bort alla genvägar för %1"
 
 #: ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Ta bort alla genvägar för %1"
 
 #: ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Ångra borttagning"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Ångra borttagning"
@@ -298,11 +279,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Ange ett kommando eller välj en skriptfil:"
 
 #: ui/main.qml:467
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr "Kommandon"
+msgstr "Kommando"
 
 #: ui/main.qml:473
 #, kde-format
@@ -311,9 +291,7 @@ msgid "Choose…"
 msgstr "Välj…"
 
 #: ui/main.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Choose Script File"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Välj skriptfil"
@@ -397,15 +375,13 @@ msgid "Custom shortcuts"
 msgstr "Egna genvägar"
 
 #: ui/ShortcutActionDelegate.qml:180
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr "Ta bort genvägen"
+msgstr "Ta bort genväg"
 
 #: ui/ShortcutActionDelegate.qml:184
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Ta bort genvägen"
@@ -417,22 +393,19 @@ msgid "Add…"
 msgstr "Lägg till…"
 
 #: ui/ShortcutActionDelegate.qml:191
-#, fuzzy, kde-format
-#| msgid "Add custom shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Lägg till egen genväg"
 
 #: ui/ShortcutActionDelegate.qml:226
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr "Avbryt definition av ny genväg"
+msgstr "Avbryt definition av genväg"
 
 #: ui/ShortcutActionDelegate.qml:230
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Avbryt definition av ny genväg"

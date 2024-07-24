@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-23 00:40+0000\n"
-"PO-Revision-Date: 2024-07-10 00:37+0300\n"
+"PO-Revision-Date: 2024-07-23 14:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -61,12 +61,7 @@ msgstr ""
 "musunuz?"
 
 #: kcm_keys.cpp:321
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
-#| "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
-#| "action <interface>%4</interface> of <application>%4</application>?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
@@ -75,7 +70,7 @@ msgid ""
 msgstr ""
 "<shortcut>%1</shortcut> kısayolu halihazırda <application>%3</application> "
 "uygulamasının <interface>%2</interface> eylemine atanmış.<nl/><nl/"
-"><application>%4</application> uygulamasının <interface>%4</interface> "
+"><application>%4</application> uygulamasının <interface>%5</interface> "
 "eylemine yeniden atansın mı?"
 
 #: kcm_keys.cpp:330
@@ -141,9 +136,7 @@ msgid "Common Actions"
 msgstr "Ortak Eylemler"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@action: button Import shortcut scheme"
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "İçe Aktar…"
@@ -173,12 +166,10 @@ msgstr ""
 "Dışa aktarılan şemaya dahil edilmesi gereken bileşenleri aşağıdan seçin"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr "Dışa Aktar…"
+msgstr "Dışa Aktar"
 
 #: ui/main.qml:173
 #, kde-format
@@ -199,54 +190,44 @@ msgid "Command or Script…"
 msgstr "Komut veya Betik…"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "Dışa Aktar…"
+msgstr "Dışa Aktar: %1"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
-msgstr "%1 düzenleme komutu"
+msgstr "%1 için düzenleme komutu"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr "%1 düzenleme komutu"
+msgstr "%1 için düzenleme komutu"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
-msgstr "%1 için bütün kısayolları kaldır"
+msgstr "%1 için olan bütün kısayolları kaldır"
 
 #: ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
-msgstr "%1 için bütün kısayolları kaldır"
+msgstr "%1 için olan bütün kısayolları kaldır"
 
 #: ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Silme işlemini geri al"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Silme işlemini geri al"
@@ -303,11 +284,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Bir komut gir veya bir betik dosyası seç:"
 
 #: ui/main.qml:467
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr "Komutlar"
+msgstr "Komut"
 
 #: ui/main.qml:473
 #, kde-format
@@ -316,12 +296,10 @@ msgid "Choose…"
 msgstr "Seç…"
 
 #: ui/main.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Choose Script File"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
-msgstr "Betik Dosyası Seç"
+msgstr "Betik dosyası seç"
 
 #: ui/main.qml:487
 #, kde-format
@@ -402,15 +380,13 @@ msgid "Custom shortcuts"
 msgstr "Özel kısayollar"
 
 #: ui/ShortcutActionDelegate.qml:180
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr "Bu kısayolu sil"
+msgstr "Kısayolu sil"
 
 #: ui/ShortcutActionDelegate.qml:184
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Bu kısayolu sil"
@@ -422,22 +398,19 @@ msgid "Add…"
 msgstr "Ekle…"
 
 #: ui/ShortcutActionDelegate.qml:191
-#, fuzzy, kde-format
-#| msgid "Add custom shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
-msgstr "Özel Kısayol Ekle"
+msgstr "Özel kısayol ekle"
 
 #: ui/ShortcutActionDelegate.qml:226
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr "Yeni kısayol yakalamayı iptal et"
+msgstr "Kısayol yakalamayı iptal et"
 
 #: ui/ShortcutActionDelegate.qml:230
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Yeni kısayol yakalamayı iptal et"

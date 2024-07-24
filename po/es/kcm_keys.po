@@ -1,4 +1,4 @@
-# Spanish translations for kcm_keys.po package.
+# Translation of kcm_keys to Spanish
 # Copyright (C) 2020 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-23 00:40+0000\n"
-"PO-Revision-Date: 2024-07-09 12:13+0200\n"
+"PO-Revision-Date: 2024-07-23 18:29+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -64,12 +64,7 @@ msgstr ""
 "a %4?"
 
 #: kcm_keys.cpp:321
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
-#| "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
-#| "action <interface>%4</interface> of <application>%4</application>?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
@@ -78,7 +73,7 @@ msgid ""
 msgstr ""
 "El atajo de teclado <shortcut>%1</shortcut> ya está asignado a la acción "
 "<interface>%2</interface> de <application>%3</application>.<nl/><nl/>¿Quiere "
-"reasignarlo a la acción <interface>%4</interface> de <application>%4</"
+"reasignarlo a la acción <interface>%4</interface> de <application>%5</"
 "application>?"
 
 #: kcm_keys.cpp:330
@@ -144,9 +139,7 @@ msgid "Common Actions"
 msgstr "Acciones comunes"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@action: button Import shortcut scheme"
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "Importar..."
@@ -177,12 +170,10 @@ msgstr ""
 "exportar"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr "Exportar..."
+msgstr "Exportar"
 
 #: ui/main.qml:173
 #, kde-format
@@ -203,54 +194,44 @@ msgid "Command or Script…"
 msgstr "Orden o guion..."
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "Exportar..."
+msgstr "Exportar %1"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
-msgstr "Editar orden para %1"
+msgstr "Editar la orden para %1"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr "Editar orden para %1"
+msgstr "Editar la orden para %1"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Eliminar todos los atajos de teclado para %1"
 
 #: ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Eliminar todos los atajos de teclado para %1"
 
 #: ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Deshacer borrado"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Deshacer borrado"
@@ -307,11 +288,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Introduzca una orden o escoja un archivo de guion:"
 
 #: ui/main.qml:467
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr "Órdenes"
+msgstr "Orden"
 
 #: ui/main.qml:473
 #, kde-format
@@ -320,9 +300,7 @@ msgid "Choose…"
 msgstr "Escoger..."
 
 #: ui/main.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Choose Script File"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Escoger archivo de guion"
@@ -406,15 +384,13 @@ msgid "Custom shortcuts"
 msgstr "Atajos de teclado personalizados"
 
 #: ui/ShortcutActionDelegate.qml:180
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr "Borrar este atajo de teclado"
+msgstr "Borrar atajo de teclado"
 
 #: ui/ShortcutActionDelegate.qml:184
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Borrar este atajo de teclado"
@@ -426,22 +402,19 @@ msgid "Add…"
 msgstr "Añadir..."
 
 #: ui/ShortcutActionDelegate.qml:191
-#, fuzzy, kde-format
-#| msgid "Add custom shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Añadir atajo de teclado personalizado"
 
 #: ui/ShortcutActionDelegate.qml:226
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr "Cancelar la captura del nuevo atajo de teclado"
+msgstr "Cancelar captura de atajo de teclado"
 
 #: ui/ShortcutActionDelegate.qml:230
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Cancelar la captura del nuevo atajo de teclado"
