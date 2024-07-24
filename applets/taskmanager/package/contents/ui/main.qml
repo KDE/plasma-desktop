@@ -432,42 +432,46 @@ PlasmoidItem {
                     left: parent.left
                     top: parent.top
                 }
+
+                readonly property real widthOccupation: taskRepeater.count / columns
+                readonly property real heightOccupation: taskRepeater.count / rows
+
                 Layout.maximumWidth: {
-                    return children.reduce((accumulator, child) => {
+                    const totalMaxWidth = children.reduce((accumulator, child) => {
                             if (!isFinite(child.Layout.maximumWidth)) {
                                 return accumulator;
                             }
                             return accumulator + child.Layout.maximumWidth
                         }, 0);
+                    return Math.round(totalMaxWidth / widthOccupation);
                 }
                 Layout.maximumHeight: {
-                    return children.reduce((accumulator, child) => {
+                    const totalMaxHeight = children.reduce((accumulator, child) => {
                             if (!isFinite(child.Layout.maximumHeight)) {
                                 return accumulator;
                             }
                             return accumulator + child.Layout.maximumHeight
                         }, 0);
+                    return Math.round(totalMaxHeight / heightOccupation);
                 }
                 width: {
                     if (tasks.shouldShrinkToZero) {
                         return 0;
                     }
-                    const occupation = taskRepeater.count / columns;
                     if (tasks.vertical) {
-                        return tasks.width * Math.min(1, occupation);
+                        return tasks.width * Math.min(1, widthOccupation);
                     } else {
-                        return Math.min(tasks.width, Layout.maximumWidth / occupation);
+                        return Math.min(tasks.width, Layout.maximumWidth);
                     }
                 }
                 height: {
                     if (tasks.shouldShrinkToZero) {
                         return 0;
                     }
-                    const occupation = taskRepeater.count / rows;
                     if (tasks.vertical) {
-                        return Math.min(tasks.height, Layout.maximumHeight / occupation);
+                        return Math.min(tasks.height, Layout.maximumHeight);
                     } else {
-                        return tasks.height * Math.min(1, occupation);
+                        return tasks.height * Math.min(1, heightOccupation);
                     }
                 }
 
