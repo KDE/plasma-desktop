@@ -128,6 +128,7 @@ SimpleKCM {
             }
             enabled: parent.device && parent.device.supportsOrientation
             currentIndex: orientationsModel.rowForOrientation(parent.device.orientation)
+            displayText: parent.device.supportsOrientation ? currentText : i18nd("kcm_tablet", "Not Supported")
             textRole: "display"
             onActivated: {
                 parent.device.orientation = orientationsModel.orientationAt(currentIndex)
