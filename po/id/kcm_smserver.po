@@ -2,40 +2,40 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcmsmserver package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010.
-# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2022.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2022-03-24 18:44+0700\n"
+"PO-Revision-Date: 2024-07-25 01:38+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
 #, kde-format
 msgid "Confirm logout"
-msgstr "Konfirmasi logout"
+msgstr "Konfirmasi keluar log"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:13
 #, kde-format
 msgid "Default leave option"
-msgstr "Opsi tinggalkan default"
+msgstr "Opsi baku meninggalkan"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
 #: smserversettings.kcfg:22
 #, kde-format
 msgid "On login"
-msgstr "Saat login"
+msgstr "Saat masuk log"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
 #: smserversettings.kcfg:26
@@ -48,24 +48,24 @@ msgstr "Aplikasi yang dekecualikan dari sesi:"
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"Sistem harus dinyalakan ulang sebelum penyimpanan sesi manual menjadi aktif."
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "Restart"
-msgstr "Nyalakan Ulang Sekarang"
+msgstr "Nyalakan ulang"
 
 #: ui/main.qml:58
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
-msgstr "Gagal meminta penyalaan-ulang untuk pengesetan firmware: %1"
+msgstr "Gagal meminta penyalaan ulang untuk pengesetan firmware: %1"
 
 #: ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
-"Di kemudian nanti komputer dinyalakan-ulang, itu akan memasuki layar "
+"Di kemudian nanti komputer dinyalakan ulang, itu akan memasuki layar "
 "pengesetan UEFI."
 
 #: ui/main.qml:60
@@ -73,7 +73,7 @@ msgstr ""
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
-"Di kemudian nanti komputer dinyalakan-ulang, itu akan memasuki layar "
+"Di kemudian nanti komputer dinyalakan ulang, itu akan memasuki layar "
 "pengesetan firmware."
 
 #: ui/main.qml:65
@@ -82,11 +82,10 @@ msgid "Restart Now"
 msgstr "Nyalakan Ulang Sekarang"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr "Umum:"
+msgstr "Umum"
 
 #: ui/main.qml:79
 #, kde-format
@@ -94,7 +93,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Tanya untuk konfirmasi:"
 
 #: ui/main.qml:80
 #, kde-format
@@ -102,35 +101,30 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "Saat mematikan, menyalakan ulang, dan keluar log"
 
 #: ui/main.qml:91
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "Pulihkan Sesi"
 
 #: ui/main.qml:99
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Saat masuk log, luncurkan aplikasi yang kebuka:"
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "Saat keluar log terakhir"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Kembalikan sesi yang disimpan secara manual yang terakhir"
+msgstr "Ketika sesi yang disimpan secara manual"
 
 #: ui/main.qml:122
 #, kde-kuit-format
@@ -141,6 +135,10 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Sebuah tombol <interface>Simpan Sesi</interface> akan muncul di menu "
+"<interface>Peluncur Aplikasi</interface>. Ketika Anda mengekliknya, Plasma "
+"akan mengingat aplikasi yang dibuka dan memulihkannya pada saat masuk log "
+"dikemudian nanti. Mengekliknya kembali untuk mengganti set aplikasi diingat."
 
 #: ui/main.qml:127
 #, kde-format
@@ -152,10 +150,9 @@ msgid "Start with an empty session"
 msgstr "Mulai dengan sesi kosong"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Don't restore these applications:"
+#, kde-format
 msgid "Ignored applications:"
-msgstr "Jangan kembalikan aplikasi tersebut:"
+msgstr "Aplikasi yang diabaikan:"
 
 #: ui/main.qml:164
 #, kde-format
@@ -164,13 +161,16 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Tulis nama-nama aplikasi yang dapat dieksekusi di sini (dipisahkan dengan "
+"koma atau titik dua, contohnya 'xterm:konsole' atau 'xterm,konsole') untuk "
+"mencegah mereka dari auto memulai bersama dengan aplikasi yang dipulihkan "
+"pada sesi lainnya."
 
 #: ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Firmware Setup"
+#, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr "Pengesetan Firmware"
+msgstr "Firmware"
 
 #: ui/main.qml:177
 #, kde-format
@@ -178,22 +178,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Sesudah penyalaan ulang selanjutnya:"
 
 #: ui/main.qml:178
-#, fuzzy, kde-format
-#| msgid "Enter UEFI setup on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Memasuki pengesetan UEFI saat menyalakan-ulang nanti"
+msgstr "Masuk layar pengesetan UEFI"
 
 #: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen on next restart"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Masuk layar pengesetan firmware saat menyalakan ulang nanti"
+msgstr "Masuk layar pengesetan firmware"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "
