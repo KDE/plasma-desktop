@@ -3,81 +3,82 @@
 # This file is distributed under the same license as the kdebase-workspace package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 #
+# SPDX-FileCopyrightText: 2024 Agron Selimaj <as9902613@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:40+0000\n"
-"PO-Revision-Date: 2009-08-08 18:05+0000\n"
-"Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
-"Language-Team: Albanian <sq@li.org>\n"
+"PO-Revision-Date: 2024-07-24 23:17-0400\n"
+"Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
+"Language-Team: sq\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2011-05-06 01:47+0000\n"
-"X-Generator: Launchpad (build 12959)\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE Shqip, Launchpad Contributions: Vilson Gjeci"
+msgstr "KDE Shqip, Launchpad Contributions: Vilson Gjeci, Agron Selimaj"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-shqip@yahoogroups.com,vilsongjeci@gmail.com"
+msgstr "kde-i18n-sq@kde.org,vilsongjeci@gmail.com"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: dateandtime.ui:22
 #, kde-format
 msgid "Date and Time"
-msgstr ""
+msgstr "Data dhe ora"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
 #: dateandtime.ui:30
 #, kde-format
 msgid "Set date and time &automatically"
-msgstr ""
+msgstr "Cakto datën dhe orën &automatikisht"
 
 #. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
 #: dateandtime.ui:47
 #, kde-format
 msgid "&Time server:"
-msgstr ""
+msgstr "&Serveri i orës:"
 
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
 #: dateandtime.ui:87
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
-msgstr ""
+msgstr "Këtu mund të ndyshoni ditën, muajin dhe vitin e sistemit."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: dateandtime.ui:130
-#, fuzzy, kde-format
-#| msgid "Time zone Error"
+#, kde-format
 msgid "Time Zone"
-msgstr "Gabim në zonën kohore"
+msgstr "Zona Kohore"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dateandtime.ui:136
 #, kde-format
 msgid "To change the local time zone, select your area from the list below."
 msgstr ""
+"Për të ndyshuar zonën lokale kohore, zgjedhni zonën tuaj nga lista këtu "
+"poshtë."
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
 #: dateandtime.ui:159
-#, fuzzy, kde-format
-#| msgid "Current Maintainer"
+#, kde-format
 msgid "Current local time zone:"
-msgstr "Mirëmbajtësi i Tanishëm"
+msgstr "Zona Kohore e tashme lokale:"
 
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
 #: dateandtime.ui:169
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Kërko..."
 
 #: dtime.cpp:61
 #, kde-format
@@ -121,7 +122,7 @@ msgstr ""
 #: dtime.cpp:271
 #, kde-format
 msgid "Can not set date."
-msgstr ""
+msgstr "Data nuk mund të caktohet."
 
 #: dtime.cpp:274
 #, kde-format
@@ -154,12 +155,12 @@ msgstr ""
 #, kde-format
 msgctxt "Time zone"
 msgid "Region"
-msgstr ""
+msgstr "Rajoni"
 
 #: k4timezonewidget.cpp:64
 #, kde-format
 msgid "Comment"
-msgstr ""
+msgstr "Komento"
 
 #: main.cpp:90
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-13 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:40+0000\n"
 "PO-Revision-Date: 2024-07-08 15:22+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -155,12 +155,19 @@ msgstr "מיפוי למסך:"
 msgid "Orientation:"
 msgstr "כיוון:"
 
-#: ui/main.qml:137
+#: ui/main.qml:131
+#, fuzzy, kde-format
+#| msgctxt "@action:button Pen display doesn't support calibration"
+#| msgid "Calibration Not Supported"
+msgid "Not Supported"
+msgstr "אין תמיכה בכיול"
+
+#: ui/main.qml:138
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "מצב לשמאליים:"
 
-#: ui/main.qml:148
+#: ui/main.qml:149
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -171,79 +178,79 @@ msgstr ""
 "הנחיית המכשיר להסתגל לשמאליים. ההשפעה תשתנה בהתאם למכשיר אך בדרך כלל מקשי "
 "הלוח מתהפכים כך שאפשר להשתמש בלוח הציור הפוך."
 
-#: ui/main.qml:154
+#: ui/main.qml:155
 #, kde-format
 msgid "Mapped Area:"
 msgstr "אזור ממופה:"
 
-#: ui/main.qml:241
+#: ui/main.qml:242
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "שינוי גודל אזור לוח הציור"
 
-#: ui/main.qml:265
+#: ui/main.qml:266
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "נעילת יחס גובה רוחב"
 
-#: ui/main.qml:273
+#: ui/main.qml:274
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:282
+#: ui/main.qml:283
 #, kde-format
 msgid "Pen button 1:"
 msgstr "כפתור עט 1:"
 
-#: ui/main.qml:283
+#: ui/main.qml:284
 #, kde-format
 msgid "Pen button 2:"
 msgstr "כפתור עט 2:"
 
-#: ui/main.qml:284
+#: ui/main.qml:285
 #, kde-format
 msgid "Pen button 3:"
 msgstr "כפתור עט 3:"
 
-#: ui/main.qml:329
+#: ui/main.qml:330
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "מתבצע כיול"
 
-#: ui/main.qml:331
+#: ui/main.qml:332
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "כיול"
 
-#: ui/main.qml:334
+#: ui/main.qml:335
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "אין תמיכה בכיול"
 
-#: ui/main.qml:361
+#: ui/main.qml:362
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "אין תמיכה בכיול על פני מספר מסכים."
 
-#: ui/main.qml:371
+#: ui/main.qml:372
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "לוח:"
 
-#: ui/main.qml:382
+#: ui/main.qml:383
 #, kde-format
 msgid "None"
 msgstr "ללא"
 
-#: ui/main.qml:404
+#: ui/main.qml:405
 #, kde-format
 msgid "Pad button %1:"
 msgstr "כפתור לוח %1:"

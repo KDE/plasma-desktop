@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-13 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:40+0000\n"
 "PO-Revision-Date: 2024-07-08 22:43+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -155,12 +155,19 @@ msgstr "Свързване към екрана:"
 msgid "Orientation:"
 msgstr "Ориентация:"
 
-#: ui/main.qml:137
+#: ui/main.qml:131
+#, fuzzy, kde-format
+#| msgctxt "@action:button Pen display doesn't support calibration"
+#| msgid "Calibration Not Supported"
+msgid "Not Supported"
+msgstr "Калибрирането не се поддържа"
+
+#: ui/main.qml:138
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Режим за лява ръка:"
 
-#: ui/main.qml:148
+#: ui/main.qml:149
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -173,79 +180,79 @@ msgstr ""
 "функционалността на бутоните на панела, така че таблетът да може да се "
 "използва обърнат надолу."
 
-#: ui/main.qml:154
+#: ui/main.qml:155
 #, kde-format
 msgid "Mapped Area:"
 msgstr "Свързана област:"
 
-#: ui/main.qml:241
+#: ui/main.qml:242
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Преоразмеряване на областта на таблета"
 
-#: ui/main.qml:265
+#: ui/main.qml:266
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Заключване на съотношението на страните"
 
-#: ui/main.qml:273
+#: ui/main.qml:274
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:282
+#: ui/main.qml:283
 #, kde-format
 msgid "Pen button 1:"
 msgstr "Бутон за показалец 1"
 
-#: ui/main.qml:283
+#: ui/main.qml:284
 #, kde-format
 msgid "Pen button 2:"
 msgstr "Бутон за показалец 2"
 
-#: ui/main.qml:284
+#: ui/main.qml:285
 #, kde-format
 msgid "Pen button 3:"
 msgstr "Бутон за показалец 3"
 
-#: ui/main.qml:329
+#: ui/main.qml:330
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Извършва се калибриране"
 
-#: ui/main.qml:331
+#: ui/main.qml:332
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Калибриране"
 
-#: ui/main.qml:334
+#: ui/main.qml:335
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Калибрирането не се поддържа"
 
-#: ui/main.qml:361
+#: ui/main.qml:362
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "Калибриране в множество екрани не се поддържа."
 
-#: ui/main.qml:371
+#: ui/main.qml:372
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Екран:"
 
-#: ui/main.qml:382
+#: ui/main.qml:383
 #, kde-format
 msgid "None"
 msgstr "Без"
 
-#: ui/main.qml:404
+#: ui/main.qml:405
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Бутон на таблет%1:"

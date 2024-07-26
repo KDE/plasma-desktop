@@ -54,8 +54,8 @@ msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"快捷键 <shortcut>%1</shortcut> 已经分配到了 %2 通用操作<interface>%3</"
-"interface>。<nl/><nl/>您想要将它重新分配到 %4 吗？"
+"快捷键 <shortcut>%1</shortcut> 已经分配给了 %2 通用操作<interface>%3</"
+"interface>。<nl/><nl/>您想要将它重新分配给 %4 吗？"
 
 #: kcm_keys.cpp:321
 #, kde-kuit-format
@@ -65,6 +65,9 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%5</application>?"
 msgstr ""
+"快捷键 <shortcut>%1</shortcut> 已经分配给了 <application>%3</application> 的 "
+"<interface>%2</interface> 操作。<nl/><nl/>您想要将它重新分配给 <application>"
+"%4</application> 的 <interface>%5</interface> 操作吗？"
 
 #: kcm_keys.cpp:330
 #, kde-format
@@ -132,7 +135,7 @@ msgstr "通用操作"
 #, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
-msgstr ""
+msgstr "导入…"
 
 #: ui/main.qml:50
 #, kde-format
@@ -161,7 +164,7 @@ msgstr "选择要包含在导出方案中的组件"
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr ""
+msgstr "导出"
 
 #: ui/main.qml:173
 #, kde-format
@@ -186,7 +189,7 @@ msgstr "命令或者脚本…"
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr ""
+msgstr "导出 %1"
 
 #: ui/main.qml:234
 #, kde-format
@@ -279,7 +282,7 @@ msgstr "输入命令或者选择脚本文件："
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr ""
+msgstr "命令"
 
 #: ui/main.qml:473
 #, kde-format
@@ -291,7 +294,7 @@ msgstr "选择…"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
-msgstr ""
+msgstr "选择脚本文件"
 
 #: ui/main.qml:487
 #, kde-format
@@ -374,7 +377,7 @@ msgstr "自定义快捷键"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr ""
+msgstr "删除快捷键"
 
 #: ui/ShortcutActionDelegate.qml:184
 #, kde-format
@@ -398,7 +401,7 @@ msgstr "添加自定义快捷键"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr ""
+msgstr "取消捕获快捷键"
 
 #: ui/ShortcutActionDelegate.qml:230
 #, kde-format
