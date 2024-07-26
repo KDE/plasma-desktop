@@ -23,9 +23,12 @@
 #include <KAuth/Action>
 #include <KAuth/ExecuteJob>
 
+#include "kded_interface.h"
 #include "timedated_interface.h"
 
 K_PLUGIN_CLASS_WITH_JSON(KclockModule, "kcm_clock.json")
+
+using namespace Qt::Literals::StringLiterals;
 
 KclockModule::KclockModule(QObject *parent, const KPluginMetaData &metaData)
     : KCModule(parent, metaData)
@@ -153,6 +156,20 @@ void KclockModule::save()
                                                       QStringLiteral("org.kde.kcmshell_clock"),
                                                       QStringLiteral("clockUpdated"));
         QDBusConnection::sessionBus().send(msg);
+    }
+
+    if (dtime->hasGeoTimeZoned()) {
+        OrgKdeKded6Interface kdedInterface(u"org.kde.kded6"_s, u"/kded"_s, QDBusConnection::sessionBus());
+        const QString geotimezoned = u"geotimezoned"_s;
+        auto reply = kdedInterface.setModuleAutoloading(geotimezoned, dtime->autoTimeZoneChecked());
+        reply.waitForFinished();
+
+        if (dtime->autoTimeZoneChecked()) {
+            reply = kdedInterface.loadModule(geotimezoned);
+        } else {
+            reply = kdedInterface.unloadModule(geotimezoned);
+        }
+        reply.waitForFinished(); // the (un)load call can be fire-and-forget, do we still need to wait in case app exits?
     }
 
     // NOTE: super nasty hack #1
