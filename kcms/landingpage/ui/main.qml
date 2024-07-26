@@ -79,17 +79,15 @@ KCM.SimpleKCM {
                 id: wallpaperKCMButton
                 Layout.fillWidth: true
                 Layout.preferredWidth: 50 // 50% of the available width
-                kcmIcon: "preferences-desktop-wallpaper"
-                kcmName: i18nc("@action:button as in, 'this will take you to the Wallpaper KCM'", "Wallpaper")
-                onClicked: kcm.openKCM("kcm_wallpaper")
+                kcmId: "kcm_wallpaper"
+                visible: kcmAction !== null
             }
 
             MostUsedIcon {
                 Layout.fillWidth: true
                 Layout.preferredWidth: 50 // 50% of the available width
-                kcmIcon: "preferences-desktop-theme-global"
-                kcmName: i18nc("@action:button as in, 'this will take you to the first KCM in the Colors & Themes group'", "Colors & Themes")
-                onClicked: kcm.openKCM("kcm_lookandfeel")
+                kcmId: "kcm_lookandfeel"
+                visible: kcmAction !== null
             }
         }
 
@@ -214,13 +212,11 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: false
         }
 
-
         MostUsedIcon {
             Kirigami.FormData.label: i18nc("@title:group translate as short as possible", "More behavior settings:")
             Layout.preferredWidth: wallpaperKCMButton.width
-            kcmName: i18nc("@action:button as in, 'this will take you to the General Behavior KCM'", "General Behavior")
-            kcmIcon: "preferences-desktop"
-            onClicked: kcm.openKCM("kcm_workspace")
+            kcmId: "kcm_workspace"
+            visible: kcmAction !== null
         }
 
         Kirigami.Separator {

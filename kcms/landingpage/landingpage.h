@@ -10,6 +10,7 @@
 #include <KPackage/Package>
 #include <KQuickManagedConfigModule>
 
+#include <QAction>
 #include <QJsonArray>
 #include <QJsonValue>
 #include <QSortFilterProxyModel>
@@ -86,6 +87,8 @@ public:
     LookAndFeelGroup *defaultDarkLookAndFeel() const;
 
     Q_INVOKABLE void openKCM(const QString &kcm);
+
+    Q_INVOKABLE QAction *kcmAction(const QString &storageId);
 
 public Q_SLOTS:
     void save() override;

@@ -12,6 +12,9 @@ import QtQuick.Layouts 1.1
 import org.kde.kirigami 2.5 as Kirigami
 
 QQC2.Button {
+    id: button
+
+    property string kcmId
     // We're using custom properties rather than plain old icon.name: and text:
     // because this would cause the icon and text to be rendered twice with
     // qqc2-desktop-style since it does all its rendering in the background item
@@ -19,6 +22,8 @@ QQC2.Button {
     // as we're doing here doesn't completely replace those things as expected.
     property alias kcmIcon: iconItem.source
     property alias kcmName: label.text
+
+    readonly property QtObject kcmAction: kcmId ? kcm.kcmAction(kcmId) : null
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             implicitContentWidth + leftPadding + rightPadding)
@@ -33,6 +38,12 @@ QQC2.Button {
 
     Accessible.name: label.text
 
+    onClicked: {
+        if (kcmAction) {
+            kcmAction.trigger();
+        }
+    }
+
     contentItem: RowLayout {
         spacing: parent.spacing
 
@@ -41,6 +52,7 @@ QQC2.Button {
             Layout.alignment: Qt.AlignCenter
             implicitWidth: Kirigami.Units.iconSizes.small
             implicitHeight: Kirigami.Units.iconSizes.small
+            source: button.kcmAction?.icon ?? ""
         }
 
         QQC2.Label {
@@ -48,6 +60,7 @@ QQC2.Button {
             Layout.fillWidth: true
             elide: Text.ElideRight
             textFormat: Text.PlainText
+            text: button.kcmAction?.text ?? ""
         }
     }
 }

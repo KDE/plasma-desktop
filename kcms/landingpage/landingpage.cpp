@@ -229,5 +229,18 @@ Q_INVOKABLE void KCMLandingPage::openKCM(const QString &kcm)
     QProcess::startDetached(QStringLiteral("systemsettings"), QStringList({kcm}));
 }
 
+QAction *KCMLandingPage::kcmAction(const QString &storageId)
+{
+    if (KService::Ptr kcm = KService::serviceByStorageId(storageId)) {
+        // Returning parent-less QObject from Q_INVOKABLE, QmlEngine will adopt it.
+        auto *action = new QAction(QIcon::fromTheme(kcm->icon()), kcm->name());
+        connect(action, &QAction::triggered, this, [this, storageId] {
+            openKCM(storageId);
+        });
+        return action;
+    }
+    return nullptr;
+}
+
 #include "landingpage.moc"
 #include "moc_landingpage.cpp"
