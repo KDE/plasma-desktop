@@ -41,7 +41,8 @@ public:
 
     void zwp_tablet_pad_v2_done() override
     {
-        m_events->padButtonsChanged(m_path, m_buttons);
+        m_events->m_sysPathButtonCount.insert(m_path, m_buttons);
+        Q_EMIT m_events->padButtonsChanged(m_path, m_buttons);
     }
 
     void zwp_tablet_pad_v2_button(uint32_t /*time*/, uint32_t button, uint32_t state) override
@@ -169,4 +170,14 @@ TabletEvents::TabletEvents(QQuickItem *parent)
     auto tabletClient = new TabletManager(this);
     auto _seat = tabletClient->get_tablet_seat(seat);
     new TabletSeat(this, _seat);
+}
+
+int TabletEvents::getButtons(const QString &sysName)
+{
+    for (const auto &[sysPath, buttonName] : m_sysPathButtonCount.asKeyValueRange()) {
+        if (sysPath.endsWith(sysName)) {
+            return buttonName;
+        }
+    }
+    return 0;
 }

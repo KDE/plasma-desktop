@@ -14,6 +14,8 @@ class TabletEvents : public QQuickItem
 public:
     TabletEvents(QQuickItem *parent = nullptr);
 
+    Q_SCRIPTABLE int getButtons(const QString &sysName);
+
 Q_SIGNALS:
     void padButtonsChanged(const QString &path, uint buttonCount);
     void padButtonReceived(const QString &path, uint button, bool pressed);
@@ -21,4 +23,9 @@ Q_SIGNALS:
     void toolDown(uint32_t hardware_serial_hi, uint32_t hardware_serial_lo, double x, double y);
     void toolMotion(uint32_t hardware_serial_hi, uint32_t hardware_serial_lo, double x, double y);
     void toolUp(uint32_t hardware_serial_hi, uint32_t hardware_serial_lo, double x, double y);
+
+protected:
+    QMap<QString, int> m_sysPathButtonCount;
+
+    friend class TabletPad;
 };
