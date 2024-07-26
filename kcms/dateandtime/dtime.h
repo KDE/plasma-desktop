@@ -40,6 +40,9 @@ public:
     bool ntpEnabled() const;
     QDateTime userTime() const;
 
+    bool hasGeoTimeZoned() const;
+    bool autoTimeZoneChecked() const;
+
     QString quickHelp() const;
 
 Q_SIGNALS:
@@ -69,6 +72,7 @@ private:
     bool refresh;
     bool ontimeout;
     bool m_haveTimedated;
+    bool m_haveGeoTimeZoned = false;
 };
 
 class Kclock : public QWidget

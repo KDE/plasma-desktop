@@ -153,6 +153,29 @@
         </widget>
        </item>
        <item>
+        <widget class="QCheckBox" name="setTimeZoneAuto">
+         <property name="text">
+          <string>Select time zone automatically based on &amp;location</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="geoTimeZoneDisclaimer">
+         <property name="text">
+          <string notr="true">Geoip disclaimer goes here</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+         <property name="buddy">
+          <cstring>setTimeZoneAuto</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
         <spacer name="verticalSpacer_2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>

@@ -7,6 +7,7 @@ set(kcm_clock_PART_SRCS dtime.cpp main.cpp k4timezonewidget.cpp)
 ki18n_wrap_ui(kcm_clock_PART_SRCS dateandtime.ui)
 
 qt_add_dbus_interface(kcm_clock_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
+qt_add_dbus_interface(kcm_clock_PART_SRCS ${KDED_DBUS_INTERFACE} kded_interface)
 
 add_library(kcm_clock MODULE ${kcm_clock_PART_SRCS})
 kcmutils_generate_desktop_file(kcm_clock)

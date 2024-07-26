@@ -24,15 +24,19 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KMessageBox>
+#include <KPluginMetaData>
 #include <KProcess>
 #include <KTreeWidgetSearchLine>
+
 #include <QDebug>
+#include <QFontDatabase>
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 
 #include <KSvg/Svg>
 
+#include "kded_interface.h"
 #include "timedated_interface.h"
 
 #include "helper.h"
@@ -104,6 +108,26 @@ Dtime::Dtime(QWidget *parent, bool haveTimeDated)
     // Timezone
     connect(tzonelist, &K4TimeZoneWidget::itemSelectionChanged, this, &Dtime::configChanged);
     tzonesearch->setTreeWidget(tzonelist);
+
+    geoTimeZoneDisclaimer->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
+    geoTimeZoneDisclaimer->setText(
+        i18n("When enabled, the time zone will be updated periodically by sending requests to the <a href=\"%1\">KDE GeoIP service</a>.",
+             u"https://kde.org/privacypolicy/#regular-server-logging"_s));
+
+    // Check whether geotimezoned kded module is available, it also depends on timedated.
+    if (haveTimeDated) {
+        const auto modules = KPluginMetaData::findPlugins(QStringLiteral("kf6/kded"), [](const KPluginMetaData &metaData) {
+            return metaData.pluginId() == "geotimezoned"_L1;
+        });
+        m_haveGeoTimeZoned = !modules.isEmpty();
+    }
+    setTimeZoneAuto->setVisible(m_haveGeoTimeZoned);
+    geoTimeZoneDisclaimer->setVisible(m_haveGeoTimeZoned);
+    // TODO don't update system time when just toggling geotimezone.
+    connect(setTimeZoneAuto, &QCheckBox::clicked, this, [this] {
+        // Lambda, otherwise checked state will be forwarded.
+        Q_EMIT timeChanged(true);
+    });
 }
 
 void Dtime::currentZone()
@@ -224,6 +248,11 @@ void Dtime::load()
 
     tzonelist->setSelected(currentTimeZone, true);
     Q_EMIT timeChanged(false);
+
+    if (m_haveGeoTimeZoned) {
+        OrgKdeKded6Interface kdedInterface(u"org.kde.kded6"_s, u"/kded"_s, QDBusConnection::sessionBus());
+        setTimeZoneAuto->setChecked(kdedInterface.isModuleAutoloaded(u"geotimezoned"_s));
+    }
 }
 
 QString Dtime::selectedTimeZone() const
@@ -261,6 +290,16 @@ bool Dtime::ntpEnabled() const
 QDateTime Dtime::userTime() const
 {
     return QDateTime(date, QTime(timeEdit->time()));
+}
+
+bool Dtime::hasGeoTimeZoned() const
+{
+    return m_haveGeoTimeZoned;
+}
+
+bool Dtime::autoTimeZoneChecked() const
+{
+    return setTimeZoneAuto->isChecked();
 }
 
 void Dtime::processHelperErrors(int code)
