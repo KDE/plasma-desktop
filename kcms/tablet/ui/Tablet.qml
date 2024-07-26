@@ -16,7 +16,8 @@ import org.kde.kirigami as Kirigami
 Item {
     id: output
 
-    default property alias children: orientationPanel.children
+    default property alias children: childrenContainer.children
+    property alias internalRect: rect
 
     required property real outputWidth
     required property real outputHeight
@@ -44,22 +45,66 @@ Item {
         }
 
         Rectangle {
-            id: orientationPanel
             anchors {
                 left: parent.left
-                right: parent.right
+                leftMargin: Kirigami.Units.largeSpacing
                 top: parent.top
-                margins: Kirigami.Units.smallSpacing
+                topMargin: Kirigami.Units.smallSpacing
             }
 
-            height: outputHeight
-            width: outputWidth
+            width: 35
+            height: 5
             color: "transparent"
 
             border {
                 color: Kirigami.Theme.disabledTextColor
                 width: 1
             }
+        }
+
+        Rectangle {
+            id: rightButton
+
+            anchors {
+                right: parent.right
+                rightMargin: Kirigami.Units.largeSpacing
+                top: parent.top
+                topMargin: Kirigami.Units.smallSpacing
+            }
+
+            width: 35
+            height: 5
+            color: "transparent"
+
+            border {
+                color: Kirigami.Theme.disabledTextColor
+                width: 1
+            }
+        }
+
+        Rectangle {
+            id: rect
+            anchors {
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
+                top: rightButton.bottom
+                margins: Kirigami.Units.smallSpacing
+            }
+
+            height: outputHeight
+            width: outputWidth
+            color: Kirigami.Theme.activeBackgroundColor
+            opacity: 0.8
+
+            border {
+                color: Kirigami.Theme.highlightColor
+                width: 1
+            }
+        }
+
+        Item {
+            id: childrenContainer
         }
     }
 }
