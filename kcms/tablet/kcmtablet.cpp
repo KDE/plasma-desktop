@@ -324,7 +324,6 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData)
 
     qmlRegisterType<OutputsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OutputsModel");
     qmlRegisterType<OrientationsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OrientationsModel");
-    qmlRegisterType<OutputsFittingModel>("org.kde.plasma.tablet.kcm", 1, 1, "OutputsFittingModel");
     qmlRegisterType<StylusButtonsModel>("org.kde.plasma.tablet.kcm", 1, 1, "StylusButtonsModel");
     qmlRegisterType<TabletEvents>("org.kde.plasma.tablet.kcm", 1, 1, "TabletEvents");
     qmlRegisterAnonymousType<InputDevice>("org.kde.plasma.tablet.kcm", 1);
