@@ -187,7 +187,7 @@ PlasmoidItem {
         readonly property bool shouldHaveIcon: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.icon !== ""
         readonly property bool shouldHaveLabel: Plasmoid.formFactor !== PlasmaCore.Types.Vertical && Plasmoid.configuration.menuLabel !== ""
 
-        readonly property int iconSize: 48
+        readonly property int iconSize: Kirigami.Units.iconSizes.large
 
         readonly property var sizing: {
             const displayedIcon = buttonIcon.valid ? buttonIcon : buttonIconFallback;
