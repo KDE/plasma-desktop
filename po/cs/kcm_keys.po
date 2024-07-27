@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-23 00:40+0000\n"
-"PO-Revision-Date: 2024-07-09 16:31+0200\n"
+"PO-Revision-Date: 2024-07-23 14:24+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -58,12 +58,7 @@ msgstr ""
 "<interface>%3</interface>.<nl/><nl/>Přeřadit ji %4?"
 
 #: kcm_keys.cpp:321
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
-#| "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
-#| "action <interface>%4</interface> of <application>%4</application>?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
@@ -72,7 +67,7 @@ msgid ""
 msgstr ""
 "Zkratka <shortcut>%1</shortcut> je již přiřazena činnosti <interface>%2</"
 "interface> z <application>%3</application>.<nl/><nl/>Přeřadit ji činnosti "
-"<interface>%4</interface> z <application>%4</application>?"
+"<interface>%4</interface> z <application>%5</application>?"
 
 #: kcm_keys.cpp:330
 #, kde-format
@@ -137,9 +132,7 @@ msgid "Common Actions"
 msgstr "Obvyklé činnosti"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@action: button Import shortcut scheme"
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "Importovat…"
@@ -169,12 +162,10 @@ msgstr ""
 "Níže vyberte komponenty, které chcete zahrnout do exportovaného schématu"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr "Exportovat…"
+msgstr "Exportovat"
 
 #: ui/main.qml:173
 #, kde-format
@@ -195,54 +186,44 @@ msgid "Command or Script…"
 msgstr "Příkaz nebo skript..."
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "Exportovat…"
+msgstr "Exportovat %1"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Upravit příkaz pro %1"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Upravit příkaz pro %1"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Odstranit všechny klávesové zkratky pro %1"
 
 #: ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Odstranit všechny klávesové zkratky pro %1"
 
 #: ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Vrátit zpět smazání"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Vrátit zpět smazání"
@@ -299,11 +280,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Zadejte příkaz nebo vyberte soubor skriptu:"
 
 #: ui/main.qml:467
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr "Příkazy"
+msgstr "Příkaz"
 
 #: ui/main.qml:473
 #, kde-format
@@ -312,9 +292,7 @@ msgid "Choose…"
 msgstr "Vybrat…"
 
 #: ui/main.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Choose Script File"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Vyberte soubor skriptu"
@@ -399,15 +377,13 @@ msgid "Custom shortcuts"
 msgstr "Vlastní zkratky"
 
 #: ui/ShortcutActionDelegate.qml:180
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr "Odstranit tuto klávesovou zkratku"
+msgstr "Smazat zkratku"
 
 #: ui/ShortcutActionDelegate.qml:184
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Odstranit tuto klávesovou zkratku"
@@ -419,26 +395,19 @@ msgid "Add…"
 msgstr "Přidat…"
 
 #: ui/ShortcutActionDelegate.qml:191
-#, fuzzy, kde-format
-#| msgid "Add custom shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Přidat vlastní klávesovou zkratku"
 
 #: ui/ShortcutActionDelegate.qml:226
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr "Zrušit zadání nové klávesové zkratky"
+msgstr "Zrušit zadání klávesové zkratky"
 
 #: ui/ShortcutActionDelegate.qml:230
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Zrušit zadání nové klávesové zkratky"
-
-#~ msgctxt "@action:button Save shortcut scheme"
-#~ msgid "Save Scheme"
-#~ msgstr "Uložit schéma"

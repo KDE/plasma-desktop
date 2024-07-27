@@ -10,20 +10,21 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>,  2009, 2010, 2011, 2012, 2014, 2015.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2016, 2017, 2018, 2020, 2022, 2023.
 # Frederico Gonçalves Guimarães <frederico@teia.bio.br>, 2018.
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-12 00:40+0000\n"
-"PO-Revision-Date: 2023-09-18 11:52-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-26 12:21-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -111,12 +112,14 @@ msgstr "Botão extra %1:"
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr ""
+"Pressione o botão do mouse para o qual você deseja adicionar um vínculo de "
+"tecla"
 
 #: ui/bindings.qml:102
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "Indique a nova combinação de teclas para %1"
 
 #: ui/bindings.qml:106
 #, kde-format
@@ -136,7 +139,7 @@ msgstr "Pressione um botão do mouse"
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "Adicionar vinculação…"
 
 #: ui/main.qml:37
 #, kde-format
@@ -193,6 +196,9 @@ msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
+"Ativar esta configuração aumenta a latência do clique do mouse em 50 ms. O "
+"atraso extra é necessário para detectar corretamente cliques simultâneos "
+"esquerdo e direito do mouse."
 
 #: ui/main.qml:154
 #, kde-format
