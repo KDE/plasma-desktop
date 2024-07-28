@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-23 00:40+0000\n"
-"PO-Revision-Date: 2024-07-14 12:42+0200\n"
+"PO-Revision-Date: 2024-07-27 09:14+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -59,12 +59,7 @@ msgstr ""
 "<interface>%3</interface>.<nl/> <nl/>Czy przypisać go ponownie do %4?"
 
 #: kcm_keys.cpp:321
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
-#| "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
-#| "action <interface>%4</interface> of <application>%4</application>?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
@@ -74,7 +69,7 @@ msgstr ""
 "Skrót <shortcut>%1</shortcut> jest już przypisany do działania <interface>"
 "%2</interface> programu <application>%3</application>.<nl/><nl/>Czy zmienić "
 "jego przypisanie do działania <interface>%4</interface> programu "
-"<application>%4</application>?"
+"<application>%5</application>?"
 
 #: kcm_keys.cpp:330
 #, kde-format
@@ -139,9 +134,7 @@ msgid "Common Actions"
 msgstr "Częste działania"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@action: button Import shortcut scheme"
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "Zaimportuj…"
@@ -171,12 +164,10 @@ msgstr ""
 "Poniżej zaznacz składniki, które mają znaleźć się w eksportowanym zestawie."
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr "Wyeksportuj..."
+msgstr "Wyeksportuj"
 
 #: ui/main.qml:173
 #, kde-format
@@ -197,54 +188,44 @@ msgid "Command or Script…"
 msgstr "Polecenie lub skrypt…"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "Wyeksportuj..."
+msgstr "Wyeksportuj %1"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Edytuj polecenie dla %1"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Edytuj polecenie dla %1"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Usuń wszystkie skróty dla %1"
 
 #: ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Usuń wszystkie skróty dla %1"
 
 #: ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Wycofaj usuwanie"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Wycofaj usuwanie"
@@ -301,11 +282,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Wpisz polecenie lub wybierz plik skryptu:"
 
 #: ui/main.qml:467
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr "Polecenia"
+msgstr "Polecenie"
 
 #: ui/main.qml:473
 #, kde-format
@@ -314,9 +294,7 @@ msgid "Choose…"
 msgstr "Wybierz…"
 
 #: ui/main.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Choose Script File"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Wybierz plik skryptu"
@@ -401,15 +379,13 @@ msgid "Custom shortcuts"
 msgstr "Własne skróty"
 
 #: ui/ShortcutActionDelegate.qml:180
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr "Usuń ten skrót"
+msgstr "Usuń skrót"
 
 #: ui/ShortcutActionDelegate.qml:184
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Usuń ten skrót"
@@ -421,22 +397,19 @@ msgid "Add…"
 msgstr "Dodaj…"
 
 #: ui/ShortcutActionDelegate.qml:191
-#, fuzzy, kde-format
-#| msgid "Add custom shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Dodaj własny skrót"
 
 #: ui/ShortcutActionDelegate.qml:226
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Przerwij nadawanie nowego skrótu"
 
 #: ui/ShortcutActionDelegate.qml:230
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Przerwij nadawanie nowego skrótu"

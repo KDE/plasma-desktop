@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-14 00:39+0000\n"
-"PO-Revision-Date: 2024-01-11 17:24+0200\n"
+"PO-Revision-Date: 2024-07-27 18:52+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -57,27 +57,24 @@ msgid "Theme:"
 msgstr "Apipavidalinimas:"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "More Appearance Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr "Daugiau išvaizdos nuostatų…"
+msgstr "Daugiau išvaizdos nuostatų:"
 
 #: ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Change Wallpaper…"
+#, kde-format
 msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
 msgid "Wallpaper"
-msgstr "Keisti darbalaukio foną…"
+msgstr "Darbalaukio fonas"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Color scheme name"
+#, kde-format
 msgctxt ""
 "@action:button as in, 'this will take you to the first KCM in the Colors & "
 "Themes group'"
 msgid "Colors & Themes"
-msgstr "Spalvų rinkinio pavadinimas"
+msgstr "Spalvos ir apipavidalinimai"
 
 #: ui/main.qml:122
 #, kde-format
@@ -126,18 +123,17 @@ msgid "Select by clicking on item's selection marker"
 msgstr "Žymėti spustelėjant ant elemento žymėjimo žymės"
 
 #: ui/main.qml:219
-#, fuzzy, kde-format
-#| msgid "More Behavior Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr "Daugiau elgsenos nuostatų…"
+msgstr "Daugiau elgsenos nuostatų:"
 
 #: ui/main.qml:221
 #, kde-format
 msgctxt ""
 "@action:button as in, 'this will take you to the General Behavior KCM'"
 msgid "General Behavior"
-msgstr ""
+msgstr "Bendra elgsena"
 
 #: ui/main.qml:233
 #, kde-format

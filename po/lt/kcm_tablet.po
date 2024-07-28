@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-26 00:40+0000\n"
-"PO-Revision-Date: 2024-07-05 23:10+0300\n"
+"PO-Revision-Date: 2024-07-27 18:51+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -79,7 +79,7 @@ msgstr "Susieti su ekrano dalimi"
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Rašiklio kalibravimas"
 
 #: ui/Calibration.qml:85
 #, kde-kuit-format
@@ -88,6 +88,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Kalibravimas yra užbaigtas ir įrašytas.<nl/><nl/>Tobulinkite kalibravimą "
+"toliau arba užverkite langą."
 
 #: ui/Calibration.qml:86
 #, kde-kuit-format
@@ -96,30 +98,32 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Bakstelėkite ant kiekvieno objekto centro.<nl/><nl/>Taikykitės į tašką, "
+"kuriame nusileidžia rašiklio galiukas ir nepaisykite žymeklio vietos ekrane."
 
 #: ui/Calibration.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Tobulinti esamą kalibravimą"
 
 #: ui/Calibration.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Kalibruoti nuo nulio"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Užverti"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #: ui/main.qml:32
 #, kde-format
@@ -156,7 +160,7 @@ msgstr "Orientacija:"
 #: ui/main.qml:131
 #, kde-format
 msgid "Not Supported"
-msgstr ""
+msgstr "Nepalaikoma"
 
 #: ui/main.qml:138
 #, kde-format
@@ -216,25 +220,25 @@ msgstr "Rašiklio mygtukas 3:"
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Vyksta kalibravimas"
 
 #: ui/main.qml:332
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Kalibruoti"
 
 #: ui/main.qml:335
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Kalibravimas nepalaikomas"
 
 #: ui/main.qml:362
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "Kalibravimas per kelis ekranus yra nepalaikomas."
 
 #: ui/main.qml:372
 #, kde-format

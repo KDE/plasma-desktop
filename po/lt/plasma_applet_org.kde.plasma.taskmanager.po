@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-11 00:40+0000\n"
-"PO-Revision-Date: 2024-04-20 00:51+0300\n"
+"PO-Revision-Date: 2024-07-27 18:44+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -97,29 +97,27 @@ msgid "Fill free space on Panel"
 msgstr "Užpildyti laisvą vietą skydelyje"
 
 #: package/contents/ui/ConfigAppearance.qml:77
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum rows:"
+#, kde-format
 msgid "Maximum task width:"
-msgstr "Daugiausia eilučių:"
+msgstr "Didžiausias užduoties plotis:"
 
 #: package/contents/ui/ConfigAppearance.qml:80
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Narrow"
-msgstr ""
+msgstr "Siauras"
 
 #: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
-msgstr ""
+msgstr "Vidutinis"
 
 #: package/contents/ui/ConfigAppearance.qml:82
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
-msgstr ""
+msgstr "Platus"
 
 #: package/contents/ui/ConfigAppearance.qml:92
 #, kde-format

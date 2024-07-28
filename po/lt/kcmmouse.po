@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-12 00:40+0000\n"
-"PO-Revision-Date: 2024-07-05 23:01+0300\n"
+"PO-Revision-Date: 2024-07-27 18:45+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -86,12 +86,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Rodomasis įrenginys atsijungė. Jokių kitų įrenginių nerasta."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Papildomas mygtukas %1:"
+msgstr "Papildomi pelės mygtukai"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -133,7 +131,7 @@ msgstr "Pridėti susiejimą…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Konfigūruoti papildomus mygtukus…"
 
 #: ui/main.qml:64
 #, kde-format
@@ -260,7 +258,7 @@ msgstr "Paspausti vidurinįjį mygtuką ir judinti pelę, kad būtų slenkama"
 #: ui/main.qml:368
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr "Slinkimas naudojant pelę, kol yra nuspaustas vidurinysis mygtukas"
+msgstr "Slinkimas naudojant pelę, kol yra nuspaustas vidurinysis mygtukas."
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

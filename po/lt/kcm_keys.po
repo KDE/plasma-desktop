@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-23 00:40+0000\n"
-"PO-Revision-Date: 2024-07-05 21:31+0300\n"
+"PO-Revision-Date: 2024-07-27 19:00+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -23,7 +23,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "Paleisti"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -49,46 +49,41 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Nepavyko susisiekti su visuotinių sparčiųjų klavišų tarnyba"
 
 #: kcm_keys.cpp:315
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"Spartusis klavišas %1 jau yra priskirtas bendram %2 veiksmui „%3“.\n"
-"Ar norite priskirti jį iš naujo?"
+"Spartusis klavišas <shortcut>%1</shortcut> jau yra priskirtas bendram %2 "
+"veiksmui <interface>%3</interface>.<nl/><nl/>Ar norite priskirti jį iš naujo "
+"veiksmui %4?"
 
 #: kcm_keys.cpp:321
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%5</application>?"
 msgstr ""
-"Spartusis klavišas %1 jau yra priskirtas bendram %2 veiksmui „%3“.\n"
-"Ar norite priskirti jį iš naujo?"
+"Spartusis klavišas <shortcut>%1</shortcut> jau yra priskirtas programos "
+"<application>%3</application> veiksmui <interface>%2</interface>.<nl/><nl/"
+">Ar priskirti jį iš naujo programos <application>%5</application> veiksmui "
+"<interface>%4</interface>?"
 
 #: kcm_keys.cpp:330
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Išspręsti sparčiųjų klavišų konfliktą"
 
 #: kcm_keys.cpp:340
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Priskirti iš naujo"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -141,9 +136,7 @@ msgid "Common Actions"
 msgstr "Bendri veiksmai"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@action: button Import shortcut scheme"
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "Importuoti…"
@@ -174,12 +167,10 @@ msgstr ""
 "schemą"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr "Eksportuoti…"
+msgstr "Eksportuoti"
 
 #: ui/main.qml:173
 #, kde-format
@@ -200,54 +191,44 @@ msgid "Command or Script…"
 msgstr "komandą ar scenarijų…"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "Eksportuoti…"
+msgstr "Eksportuoti %1"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Taisyti komandą, skirtą %1"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Taisyti komandą, skirtą %1"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Šalinti visus sparčiuosius klavišus, skirtus %1"
 
 #: ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Šalinti visus sparčiuosius klavišus, skirtus %1"
 
 #: ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Atšaukti ištrynimą"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Atšaukti ištrynimą"
@@ -306,11 +287,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Įveskite komandą arba pasirinkite scenarijaus failą:"
 
 #: ui/main.qml:467
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr "Komandos"
+msgstr "Komanda"
 
 #: ui/main.qml:473
 #, kde-format
@@ -319,9 +299,7 @@ msgid "Choose…"
 msgstr "Pasirinkti…"
 
 #: ui/main.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Choose Script File"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Pasirinkti scenarijaus failą"
@@ -407,15 +385,13 @@ msgid "Custom shortcuts"
 msgstr "Tinkinti spartieji klavišai"
 
 #: ui/ShortcutActionDelegate.qml:180
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr "Ištrinti šį spartųjį klavišą"
+msgstr "Ištrinti spartųjį klavišą"
 
 #: ui/ShortcutActionDelegate.qml:184
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Ištrinti šį spartųjį klavišą"
@@ -427,22 +403,19 @@ msgid "Add…"
 msgstr "Pridėti…"
 
 #: ui/ShortcutActionDelegate.qml:191
-#, fuzzy, kde-format
-#| msgid "Add custom shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Pridėti tinkintą spartųjį klavišą"
 
 #: ui/ShortcutActionDelegate.qml:226
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Atsisakyti naujo sparčiojo klavišo pagavimą"
 
 #: ui/ShortcutActionDelegate.qml:230
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Atsisakyti naujo sparčiojo klavišo pagavimą"

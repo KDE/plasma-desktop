@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-26 00:40+0000\n"
-"PO-Revision-Date: 2024-07-14 22:18+0200\n"
+"PO-Revision-Date: 2024-07-27 14:20+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -157,11 +157,9 @@ msgid "Orientation:"
 msgstr "Orientiĝo:"
 
 #: ui/main.qml:131
-#, fuzzy, kde-format
-#| msgctxt "@action:button Pen display doesn't support calibration"
-#| msgid "Calibration Not Supported"
+#, kde-format
 msgid "Not Supported"
-msgstr "Kalibrado Ne Subtenata"
+msgstr "Ne Subtenata"
 
 #: ui/main.qml:138
 #, kde-format

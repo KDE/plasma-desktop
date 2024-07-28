@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-26 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 22:43+0200\n"
+"PO-Revision-Date: 2024-07-27 21:45+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: kcmtablet.cpp:34
 #, kde-format
@@ -156,11 +156,9 @@ msgid "Orientation:"
 msgstr "Ориентация:"
 
 #: ui/main.qml:131
-#, fuzzy, kde-format
-#| msgctxt "@action:button Pen display doesn't support calibration"
-#| msgid "Calibration Not Supported"
+#, kde-format
 msgid "Not Supported"
-msgstr "Калибрирането не се поддържа"
+msgstr "Не се поддържа"
 
 #: ui/main.qml:138
 #, kde-format
