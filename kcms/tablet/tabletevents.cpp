@@ -9,9 +9,6 @@
 #include <QQuickWindow>
 #include <QWaylandClientExtensionTemplate>
 #include <qguiapplication.h>
-#if QT_VERSION < QT_VERSION_CHECK(6, 5, 0)
-#include <qpa/qplatformnativeinterface.h>
-#endif
 #include <qtwaylandclientversion.h>
 
 class TabletPad : public QObject, public QtWayland::zwp_tablet_pad_v2
@@ -156,15 +153,11 @@ public:
 TabletEvents::TabletEvents(QQuickItem *parent)
     : QQuickItem(parent)
 {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
     auto waylandApp = qGuiApp->nativeInterface<QNativeInterface::QWaylandApplication>();
     if (!waylandApp) {
         return;
     }
     auto seat = waylandApp->seat();
-#else
-    auto seat = static_cast<wl_seat *>(QGuiApplication::platformNativeInterface()->nativeResourceForIntegration("wl_seat"));
-#endif
 
     auto tabletClient = new TabletManager(this);
     auto _seat = tabletClient->get_tablet_seat(seat);
