@@ -28,8 +28,8 @@ PlasmaCore.Dialog {
     hideOnWindowDeactivate: true
     location: Plasmoid.location
 
-    readonly property real preferredWidth: Screen.width / (3 * Screen.devicePixelRatio)
-    readonly property real preferredHeight: Screen.height / (2 * Screen.devicePixelRatio)
+    readonly property real preferredWidth: Screen.width / 3
+    readonly property real preferredHeight: Screen.height / 2
     readonly property real contentWidth: mainItem.width // No padding here to avoid text elide.
 
     property alias overflowing: scrollView.overflowing
