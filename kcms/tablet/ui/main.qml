@@ -40,7 +40,7 @@ SimpleKCM {
         Kirigami.Action {
             text: i18ndc("kcm_tablet", "Tests tablet functionality like the pen", "Test Tablet…")
             icon.name: "tool_pen-symbolic"
-            enabled: !root.testerWindowOpen
+            enabled: !root.testerWindowOpen && combo.count !== 0
             onTriggered: {
                 const component = Qt.createComponent("Tester.qml");
                 if (component.status === Component.Ready) {
