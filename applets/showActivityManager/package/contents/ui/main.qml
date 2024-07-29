@@ -81,9 +81,11 @@ PlasmoidItem {
         Kirigami.Icon {
             id: icon
 
-            anchors.verticalCenter: parent.verticalCenter
+            anchors.centerIn: parent
 
-            height: Math.min(parent.height, parent.width)
+            height: Math.min(parent.height,
+                             parent.width,
+                             Kirigami.Units.iconSizes.huge)
             width: height
 
             source: !root.showActivityIcon ? "activities" :
