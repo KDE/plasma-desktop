@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-23 00:40+0000\n"
-"PO-Revision-Date: 2024-07-23 20:23+0200\n"
+"PO-Revision-Date: 2024-07-28 07:50+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -152,13 +152,13 @@ msgstr "Exportera..."
 #: ui/main.qml:83
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
-msgstr "Kan inte exportera schema medan det finns osparade ändringar"
+msgstr "Kan inte exportera system medan det finns osparade ändringar"
 
 #: ui/main.qml:96
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
-msgstr "Markera komponenterna nedan som ska ingå i det exporterade schemat"
+msgstr "Markera komponenterna nedan som ska ingå i det exporterade systemet"
 
 #: ui/main.qml:103
 #, kde-format
@@ -240,18 +240,18 @@ msgstr "Välj ett objekt i listan för att visa dess genvägar här"
 #: ui/main.qml:378
 #, kde-format
 msgid "Export Shortcut Scheme"
-msgstr "Exportera genvägsschema"
+msgstr "Exportera genvägssystem"
 
 #: ui/main.qml:378 ui/main.qml:503
 #, kde-format
 msgid "Import Shortcut Scheme"
-msgstr "Importera genvägsschema"
+msgstr "Importera genvägssystem"
 
 #: ui/main.qml:380
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
-msgstr "Genvägsschema (*.kksrc)"
+msgstr "Genvägssystem (*.kksrc)"
 
 #: ui/main.qml:408
 #, kde-format
@@ -311,12 +311,12 @@ msgstr "Skriptfil (*.*sh)"
 #: ui/main.qml:511
 #, kde-format
 msgid "Select the scheme to import:"
-msgstr "Välj schema att importera:"
+msgstr "Välj system att importera:"
 
 #: ui/main.qml:530
 #, kde-format
 msgid "Custom Scheme"
-msgstr "Eget schema"
+msgstr "Eget system"
 
 #: ui/main.qml:538
 #, kde-format

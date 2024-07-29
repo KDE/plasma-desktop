@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-26 00:40+0000\n"
-"PO-Revision-Date: 2024-07-12 21:03+0200\n"
+"PO-Revision-Date: 2024-07-28 00:18+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -157,11 +157,9 @@ msgid "Orientation:"
 msgstr "Retning:"
 
 #: ui/main.qml:131
-#, fuzzy, kde-format
-#| msgctxt "@action:button Pen display doesn't support calibration"
-#| msgid "Calibration Not Supported"
+#, kde-format
 msgid "Not Supported"
-msgstr "Kalibrering er ikkje støtta"
+msgstr "Ikkje støtta"
 
 #: ui/main.qml:138
 #, kde-format
