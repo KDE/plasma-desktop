@@ -7,6 +7,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQml.Models
 import QtQuick
 import QtQuick.Layouts
@@ -34,15 +36,15 @@ Loader {
     property /*QIcon*/ var icon
     property url launcherUrl
     property bool isLauncher
-    property bool isMinimizedParent
+    property bool isMinimized
 
     // Needed for generateSubtext()
-    property string displayParent
+    property string display
     property string genericName
-    property var virtualDesktopParent
-    property bool isOnAllVirtualDesktopsParent
-    property var activitiesParent
-    //
+    property /*list<var>*/ var virtualDesktops: [] // Can't use list<var> because of QTBUG-127600
+    property bool isOnAllVirtualDesktops
+    property list<string> activities: []
+
     property bool smartLauncherCountVisible
     property int smartLauncherCount
 
@@ -67,7 +69,14 @@ Loader {
         id: singleTooltip
 
         ToolTipInstance {
+            index: 0 // TODO: maybe set to -1, because that's what the component checks against?
             submodelIndex: toolTipDelegate.rootIndex
+            appPid: toolTipDelegate.pidParent
+            display: toolTipDelegate.display
+            isMinimized: toolTipDelegate.isMinimized
+            isOnAllVirtualDesktops: toolTipDelegate.isOnAllVirtualDesktops
+            virtualDesktops: toolTipDelegate.virtualDesktops
+            activities: toolTipDelegate.activities
         }
     }
 
@@ -102,7 +111,15 @@ Loader {
                 onRootIndexChanged: groupToolTipListView.positionViewAtBeginning() // Fix a visual glitch (when the mouse moves from a tooltip with a moved scrollbar to another tooltip without a scrollbar)
 
                 delegate: ToolTipInstance {
+                    required property var model
+
                     submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
+                    appPid: model.AppPid
+                    // 'display' is required already
+                    isMinimized: model.IsMinimized
+                    isOnAllVirtualDesktops: model.IsOnAllVirtualDesktops
+                    virtualDesktops: model.VirtualDesktops
+                    activities: model.Activities
                 }
             }
         }

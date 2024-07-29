@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 
@@ -357,12 +359,12 @@ PlasmaCore.ToolTipArea {
         mainItem.icon = Qt.binding(() => model.decoration);
         mainItem.launcherUrl = Qt.binding(() => model.LauncherUrlWithoutIcon);
         mainItem.isLauncher = Qt.binding(() => model.IsLauncher);
-        mainItem.isMinimizedParent = Qt.binding(() => model.IsMinimized);
-        mainItem.displayParent = Qt.binding(() => model.display);
+        mainItem.isMinimized = Qt.binding(() => model.IsMinimized);
+        mainItem.display = Qt.binding(() => model.display);
         mainItem.genericName = Qt.binding(() => model.GenericName);
-        mainItem.virtualDesktopParent = Qt.binding(() => model.VirtualDesktops);
-        mainItem.isOnAllVirtualDesktopsParent = Qt.binding(() => model.IsOnAllVirtualDesktops);
-        mainItem.activitiesParent = Qt.binding(() => model.Activities);
+        mainItem.virtualDesktops = Qt.binding(() => model.VirtualDesktops);
+        mainItem.isOnAllVirtualDesktops = Qt.binding(() => model.IsOnAllVirtualDesktops);
+        mainItem.activities = Qt.binding(() => model.Activities);
 
         mainItem.smartLauncherCountVisible = Qt.binding(() => smartLauncherItem?.countVisible ?? false);
         mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? smartLauncherItem.count : 0);

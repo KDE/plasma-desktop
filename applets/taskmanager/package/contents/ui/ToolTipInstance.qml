@@ -8,6 +8,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects as GE
@@ -20,27 +22,29 @@ import org.kde.kirigami as Kirigami
 import org.kde.kwindowsystem
 
 ColumnLayout {
-    property /*QModelIndex*/var submodelIndex
-    readonly property int flatIndex: isGroup && index !== undefined ? index : 0
-    readonly property int appPid: isGroup ? model.AppPid : pidParent
+    id: root
+
+    required property int index
+    required property /*QModelIndex*/ var submodelIndex
+    required property int appPid
+    required property string display
+    required property bool isMinimized
+    required property bool isOnAllVirtualDesktops
+    required property /*list<var>*/ var virtualDesktops // Can't use list<var> because of QTBUG-127600
+    required property list<string> activities
 
     // HACK: Avoid blank space in the tooltip after closing a window
     ListView.onPooled: width = height = 0
     ListView.onReused: width = height = undefined
 
     readonly property string title: {
-        if (!isWin) {
-            return genericName || "";
+        if (!toolTipDelegate.isWin) {
+            return toolTipDelegate.genericName;
         }
 
-        let text;
-        if (isGroup) {
-            if (model.display.length === 0) {
-                return "";
-            }
-            text = model.display;
-        } else {
-            text = displayParent;
+        let text = display;
+        if (toolTipDelegate.isGroup && text === "") {
+            return "";
         }
 
         // Normally the window title will always have " — [app name]" at the end of
@@ -62,7 +66,8 @@ ColumnLayout {
         }
         return text;
     }
-    readonly property bool titleIncludesTrack: toolTipDelegate.playerData && title.includes(toolTipDelegate.playerData.track)
+
+    readonly property bool titleIncludesTrack: toolTipDelegate.playerData !== null && title.includes(toolTipDelegate.playerData.track)
 
     spacing: Kirigami.Units.smallSpacing
 
@@ -70,14 +75,14 @@ ColumnLayout {
     RowLayout {
         id: header
         // match spacing of DefaultToolTip.qml in plasma-framework
-        spacing: isWin ? Kirigami.Units.smallSpacing : Kirigami.Units.gridUnit
+        spacing: toolTipDelegate.isWin ? Kirigami.Units.smallSpacing : Kirigami.Units.gridUnit
 
         // This number controls the overall size of the window tooltips
         Layout.maximumWidth: toolTipDelegate.tooltipInstanceMaximumWidth
-        Layout.minimumWidth: isWin ? Layout.maximumWidth : 0
+        Layout.minimumWidth: toolTipDelegate.isWin ? Layout.maximumWidth : 0
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         // match margins of DefaultToolTip.qml in plasma-framework
-        Layout.margins: isWin ? 0 : Kirigami.Units.gridUnit / 2
+        Layout.margins: toolTipDelegate.isWin ? 0 : Kirigami.Units.gridUnit / 2
 
         // all textlabels
         ColumnLayout {
@@ -87,11 +92,11 @@ ColumnLayout {
                 id: appNameHeading
                 level: 3
                 maximumLineCount: 1
-                lineHeight: isWin ? 1 : appNameHeading.lineHeight
+                lineHeight: toolTipDelegate.isWin ? 1 : appNameHeading.lineHeight
                 Layout.fillWidth: true
                 elide: Text.ElideRight
-                text: appName
-                opacity: flatIndex === 0
+                text: toolTipDelegate.appName
+                opacity: root.index === 0 ? 1 : 0
                 visible: text.length !== 0
                 textFormat: Text.PlainText
             }
@@ -101,9 +106,9 @@ ColumnLayout {
                 maximumLineCount: 1
                 Layout.fillWidth: true
                 elide: Text.ElideRight
-                text: titleIncludesTrack ? "" : title
+                text: root.titleIncludesTrack ? "" : root.title
                 opacity: 0.75
-                visible: title.length !== 0 && title !== appNameHeading.text
+                visible: root.title.length !== 0 && root.title !== appNameHeading.text
                 textFormat: Text.PlainText
             }
             // subtext
@@ -112,7 +117,7 @@ ColumnLayout {
                 maximumLineCount: 1
                 Layout.fillWidth: true
                 elide: Text.ElideRight
-                text: isWin ? generateSubText() : ""
+                text: toolTipDelegate.isWin ? root.generateSubText() : ""
                 opacity: 0.6
                 visible: text.length !== 0 && text !== appNameHeading.text
                 textFormat: Text.PlainText
@@ -125,12 +130,12 @@ ColumnLayout {
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
             Layout.preferredHeight: closeButton.height
             Layout.preferredWidth: closeButton.width
-            visible: flatIndex === 0 && smartLauncherCountVisible
+            visible: root.index === 0 && toolTipDelegate.smartLauncherCountVisible
 
             Badge {
                 anchors.centerIn: parent
                 height: Kirigami.Units.iconSizes.smallMedium
-                number: smartLauncherCount
+                number: toolTipDelegate.smartLauncherCount
             }
         }
 
@@ -138,11 +143,11 @@ ColumnLayout {
         PlasmaComponents3.ToolButton {
             id: closeButton
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
-            visible: isWin
+            visible: toolTipDelegate.isWin
             icon.name: "window-close"
             onClicked: {
                 backend.cancelHighlightWindows();
-                tasksModel.requestClose(submodelIndex);
+                tasksModel.requestClose(root.submodelIndex);
             }
         }
     }
@@ -157,15 +162,14 @@ ColumnLayout {
         clip: true
         visible: toolTipDelegate.isWin
 
-        readonly property bool isMinimized: isGroup ? IsMinimized : isMinimizedParent
         readonly property /*undefined|WId where WId = int|string*/ var winId:
-            toolTipDelegate.isWin ? toolTipDelegate.windows[flatIndex] : undefined
+            toolTipDelegate.isWin ? toolTipDelegate.windows[root.index] : undefined
 
         // There's no PlasmaComponents3 version
         PlasmaExtras.Highlight {
             anchors.fill: hoverHandler
-            visible: Boolean(hoverHandler.item?.containsMouse)
-            pressed: Boolean(hoverHandler.item?.containsPress)
+            visible: (hoverHandler.item as MouseArea)?.containsMouse ?? false
+            pressed: (hoverHandler.item as MouseArea)?.containsPress ?? false
             hovered: true
         }
 
@@ -174,7 +178,7 @@ ColumnLayout {
             active: !toolTipDelegate.isLauncher
                 && !albumArtImage.visible
                 && (Number.isInteger(thumbnailSourceItem.winId) || pipeWireLoader.item && !pipeWireLoader.item.hasThumbnail)
-                && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
+                && root.index !== -1 // Avoid loading when the instance is going to be destroyed
             asynchronous: true
             visible: active
             anchors.fill: hoverHandler
@@ -182,7 +186,7 @@ ColumnLayout {
             // shadow can cover up the highlight
             anchors.margins: Kirigami.Units.smallSpacing * 2
 
-            sourceComponent: thumbnailSourceItem.isMinimized || pipeWireLoader.active ? iconItem : x11Thumbnail
+            sourceComponent: root.isMinimized || pipeWireLoader.active ? iconItem : x11Thumbnail
 
             Component {
                 id: x11Thumbnail
@@ -198,7 +202,7 @@ ColumnLayout {
 
                 Kirigami.Icon {
                     id: realIconItem
-                    source: icon
+                    source: toolTipDelegate.icon
                     animated: false
                     visible: valid
                     opacity: pipeWireLoader.active ? 0 : 1
@@ -231,14 +235,14 @@ ColumnLayout {
             // shadow can cover up the highlight
             anchors.margins: thumbnailLoader.anchors.margins
 
-            active: !toolTipDelegate.isLauncher && !albumArtImage.visible && KWindowSystem.isPlatformWayland && flatIndex !== -1
+            active: !toolTipDelegate.isLauncher && !albumArtImage.visible && KWindowSystem.isPlatformWayland && root.index !== -1
             asynchronous: true
             //In a loader since we might not have PipeWire available yet (WITH_PIPEWIRE could be undefined in plasma-workspace/libtaskmanager/declarative/taskmanagerplugin.cpp)
             source: "PipeWireThumbnail.qml"
         }
 
         Loader {
-            active: (pipeWireLoader.item && pipeWireLoader.item.hasThumbnail) || (thumbnailLoader.status === Loader.Ready && !thumbnailSourceItem.isMinimized)
+            active: (pipeWireLoader.item?.hasThumbnail ?? false) || (thumbnailLoader.status === Loader.Ready && !root.isMinimized)
             asynchronous: true
             visible: active
             anchors.fill: pipeWireLoader.active ? pipeWireLoader : thumbnailLoader
@@ -254,7 +258,7 @@ ColumnLayout {
         }
 
         Loader {
-            active: albumArtImage.visible && albumArtImage.status === Image.Ready && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
+            active: albumArtImage.visible && albumArtImage.status === Image.Ready && root.index !== -1 // Avoid loading when the instance is going to be destroyed
             asynchronous: true
             visible: active
             anchors.centerIn: hoverHandler
@@ -284,7 +288,7 @@ ColumnLayout {
             // if this app is a browser, we also check the title, so album art is not shown when the user is on some other tab
             // in all other cases we can safely show the album art without checking the title
             readonly property bool available: (status === Image.Ready || status === Image.Loading)
-                && (!(isGroup || backend.applicationCategories(launcherUrl).includes("WebBrowser")) || titleIncludesTrack)
+                && (!(toolTipDelegate.isGroup || backend.applicationCategories(launcherUrl).includes("WebBrowser")) || root.titleIncludesTrack)
 
             anchors.fill: hoverHandler
             // Indent by one pixel to make sure we never cover up the entire highlight
@@ -300,11 +304,11 @@ ColumnLayout {
         // hoverHandler has to be unloaded after the instance is pooled in order to avoid getting the old containsMouse status when the same instance is reused, so put it in a Loader.
         Loader {
             id: hoverHandler
-            active: flatIndex !== -1
+            active: root.index !== -1
             anchors.fill: parent
             sourceComponent: ToolTipWindowMouseArea {
-                rootTask: parentTask
-                modelIndex: submodelIndex
+                rootTask: toolTipDelegate.parentTask
+                modelIndex: root.submodelIndex
                 winId: thumbnailSourceItem.winId
             }
         }
@@ -313,7 +317,7 @@ ColumnLayout {
     // Player controls row, load on demand so group tooltips could be loaded faster
     Loader {
         id: playerController
-        active: toolTipDelegate.playerData && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
+        active: toolTipDelegate.playerData && root.index !== -1 // Avoid loading when the instance is going to be destroyed
         asynchronous: true
         visible: active
         Layout.fillWidth: true
@@ -326,11 +330,11 @@ ColumnLayout {
 
     // Volume controls
     Loader {
-        active: parentTask
-             && pulseAudio.item
-             && parentTask.audioIndicatorsEnabled
-             && parentTask.hasAudioStream
-             && flatIndex !== -1 // Avoid loading when the instance is going to be destroyed
+        active: toolTipDelegate.parentTask !== null
+             && pulseAudio.item !== null
+             && toolTipDelegate.parentTask.audioIndicatorsEnabled
+             && toolTipDelegate.parentTask.hasAudioStream
+             && root.index !== -1 // Avoid loading when the instance is going to be destroyed
         asynchronous: true
         visible: active
         Layout.fillWidth: true
@@ -350,13 +354,13 @@ ColumnLayout {
                 } else {
                     "audio-volume-high"
                 }
-                onClicked: parentTask.toggleMuted()
-                checked: parentTask.muted
+                onClicked: toolTipDelegate.parentTask.toggleMuted()
+                checked: toolTipDelegate.parentTask.muted
 
                 PlasmaComponents3.ToolTip {
                     text: parent.checked
-                        ? i18nc("button to unmute app", "Unmute %1", parentTask.appName)
-                        : i18nc("button to mute app", "Mute %1", parentTask.appName)
+                        ? i18nc("button to unmute app", "Unmute %1", toolTipDelegate.parentTask.appName)
+                        : i18nc("button to mute app", "Mute %1", toolTipDelegate.parentTask.appName)
                 }
             }
 
@@ -364,7 +368,7 @@ ColumnLayout {
                 id: slider
 
                 readonly property int displayValue: Math.round(value / to * 100)
-                readonly property int loudestVolume: parentTask.audioStreams
+                readonly property int loudestVolume: toolTipDelegate.parentTask.audioStreams
                     .reduce((loudestVolume, stream) => Math.max(loudestVolume, stream.volume), 0)
 
                 Layout.fillWidth: true
@@ -372,11 +376,11 @@ ColumnLayout {
                 to: pulseAudio.item.normalVolume
                 value: loudestVolume
                 stepSize: to / 100
-                opacity: parentTask.muted ? 0.5 : 1
+                opacity: toolTipDelegate.parentTask.muted ? 0.5 : 1
 
-                Accessible.name: i18nc("Accessibility data on volume slider", "Adjust volume for %1", parentTask.appName)
+                Accessible.name: i18nc("Accessibility data on volume slider", "Adjust volume for %1", toolTipDelegate.parentTask.appName)
 
-                onMoved: parentTask.audioStreams.forEach((stream) => {
+                onMoved: toolTipDelegate.parentTask.audioStreams.forEach((stream) => {
                     let v = Math.max(from, value)
                     if (v > 0 && loudestVolume > 0) { // prevent divide by 0
                         // adjust volume relative to the loudest stream
@@ -401,55 +405,30 @@ ColumnLayout {
     }
 
     function generateSubText(): string {
-        if (activitiesParent === undefined) {
-            return "";
-        }
-
         const subTextEntries = [];
 
-        const onAllDesktops = isGroup ? IsOnAllVirtualDesktops : isOnAllVirtualDesktopsParent;
         if (!Plasmoid.configuration.showOnlyCurrentDesktop && virtualDesktopInfo.numberOfDesktops > 1) {
-            const virtualDesktops = isGroup ? VirtualDesktops : virtualDesktopParent;
-
-            if (!onAllDesktops && virtualDesktops !== undefined && virtualDesktops.length > 0) {
-                const virtualDesktopNameList = new Array();
-
-                for (let i = 0; i < virtualDesktops.length; ++i) {
-                    virtualDesktopNameList.push(virtualDesktopInfo.desktopNames[virtualDesktopInfo.desktopIds.indexOf(virtualDesktops[i])]);
-                }
+            if (!isOnAllVirtualDesktops && virtualDesktops.length > 0) {
+                const virtualDesktopNameList = virtualDesktops.map(virtualDesktop => {
+                    const index = virtualDesktopInfo.desktopIds.indexOf(virtualDesktop);
+                    return virtualDesktopInfo.desktopNames[index];
+                });
 
                 subTextEntries.push(i18nc("Comma-separated list of desktops", "On %1",
                     virtualDesktopNameList.join(", ")));
-            } else if (onAllDesktops) {
+            } else if (isOnAllVirtualDesktops) {
                 subTextEntries.push(i18nc("Comma-separated list of desktops", "Pinned to all desktops"));
             }
         }
 
-        const act = isGroup ? Activities : activitiesParent;
-        if (act === undefined) {
-            return subTextEntries.join("\n");
-        }
-
-        if (act.length === 0 && activityInfo.numberOfRunningActivities > 1) {
+        if (activities.length === 0 && activityInfo.numberOfRunningActivities > 1) {
             subTextEntries.push(i18nc("Which virtual desktop a window is currently on",
                 "Available on all activities"));
-        } else if (act.length > 0) {
-            const activityNames = [];
-
-            for (let i = 0; i < act.length; i++) {
-                const activity = act[i];
-                const activityName = activityInfo.activityName(act[i]);
-                if (activityName === "") {
-                    continue;
-                }
-                if (Plasmoid.configuration.showOnlyCurrentActivity) {
-                    if (activity !== activityInfo.currentActivity) {
-                        activityNames.push(activityName);
-                    }
-                } else if (activity !== activityInfo.currentActivity) {
-                    activityNames.push(activityName);
-                }
-            }
+        } else if (activities.length > 0) {
+            const activityNames = activities
+                .filter(activity => activity !== activityInfo.currentActivity)
+                .map(activity => activityInfo.activityName(activity))
+                .filter(activityName => activityName !== "");
 
             if (Plasmoid.configuration.showOnlyCurrentActivity) {
                 if (activityNames.length > 0) {
