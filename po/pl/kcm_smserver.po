@@ -2,7 +2,7 @@
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to Polish
-# Version: $Revision: 1683507 $
+# Version: $Revision: 1685739 $
 # SPDX-FileCopyrightText: 2014, 2019, 2020, 2021, 2022, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2008, 2009.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2024-06-29 10:07+0200\n"
+"PO-Revision-Date: 2024-07-28 10:23+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -32,9 +32,10 @@ msgid ""
 "whether the computer should be automatically shut down after session exit by "
 "default."
 msgstr ""
-"<h1>Zarządzanie posiedzeniami</h1> Człon zarządzania posiedzeniami umożliwia "
-"określenie, czy potwierdzać wylogowanie, czy odtwarzać poprzednie "
-"posiedzenie przy zalogowaniu i czy wyłączać komputer przy zakończeniu pracy."
+"<h1>Zarządzanie posiedzeniami</h1> Tu możesz zarządzać posiedzeniami. "
+"Wchodzi w to pytanie o potwierdzenie przed zakończeniem posiedzenia "
+"(wylogowywanie), to czy posiedzenie przywrócić po zalogowaniu oraz to czy "
+"domyślnie wyłączyć komputer po zakończeniu posiedzenia."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -79,7 +80,7 @@ msgstr "Uruchom ponownie teraz"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr "Ekran wychodzenia"
+msgstr "Ekran wylogowywania"
 
 #: package/contents/ui/main.qml:75
 #, kde-format
@@ -108,7 +109,7 @@ msgstr "Przywracanie posiedzenia"
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr "Przy wejściu, uruchom aplikacje, które były otwarte:"
+msgstr "Po zalogowaniu, uruchom aplikacje, które były otwarte:"
 
 #: package/contents/ui/main.qml:105
 #, kde-format
@@ -149,7 +150,7 @@ msgstr "Rozpocznij puste posiedzenie"
 #: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Ignored applications:"
-msgstr "Pomijane aplikacje:"
+msgstr "Pomiń aplikacje:"
 
 #: package/contents/ui/main.qml:169
 #, kde-format
@@ -174,7 +175,7 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr "Po kolejnym uruchomieniu:"
+msgstr "Po następnym uruchomieniu:"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
@@ -198,7 +199,7 @@ msgstr "Potwierdź wylogowanie"
 #: smserversettings.kcfg:13
 #, kde-format
 msgid "Default leave option"
-msgstr "Domyślny sposób opuszczania"
+msgstr "Domyślny sposób wyłączania"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
 #: smserversettings.kcfg:22
