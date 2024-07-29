@@ -2,7 +2,7 @@
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to Polish
-# Version: $Revision: 1683507 $
+# Version: $Revision: 1685739 $
 # SPDX-FileCopyrightText: 2014, 2019, 2020, 2021, 2022, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2008, 2009.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-26 00:38+0000\n"
-"PO-Revision-Date: 2024-06-29 10:07+0200\n"
+"PO-Revision-Date: 2024-07-28 10:23+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -33,7 +33,7 @@ msgstr "Potwierdź wylogowanie"
 #: smserversettings.kcfg:13
 #, kde-format
 msgid "Default leave option"
-msgstr "Domyślny sposób opuszczania"
+msgstr "Domyślny sposób wyłączania"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
 #: smserversettings.kcfg:22
@@ -90,7 +90,7 @@ msgstr "Uruchom ponownie teraz"
 #, kde-format
 msgctxt "@title:group"
 msgid "Logout Screen"
-msgstr "Ekran wychodzenia"
+msgstr "Ekran wylogowywania"
 
 #: ui/main.qml:75
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "Przywracanie posiedzenia"
 #: ui/main.qml:103
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr "Przy wejściu, uruchom aplikacje, które były otwarte:"
+msgstr "Po zalogowaniu, uruchom aplikacje, które były otwarte:"
 
 #: ui/main.qml:104
 #, kde-format
@@ -160,7 +160,7 @@ msgstr "Rozpocznij puste posiedzenie"
 #: ui/main.qml:145
 #, kde-format
 msgid "Ignored applications:"
-msgstr "Pomijane aplikacje:"
+msgstr "Pomiń aplikacje:"
 
 #: ui/main.qml:168
 #, kde-format
@@ -185,7 +185,7 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr "Po kolejnym uruchomieniu:"
+msgstr "Po następnym uruchomieniu:"
 
 #: ui/main.qml:182
 #, kde-format
