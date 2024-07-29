@@ -114,7 +114,7 @@ ColumnLayout {
             // subtext
             PlasmaComponents3.Label {
                 id: subtext
-                maximumLineCount: 1
+                maximumLineCount: 2
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: toolTipDelegate.isWin ? root.generateSubText() : ""
