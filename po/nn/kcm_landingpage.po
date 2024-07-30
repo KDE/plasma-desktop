@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-14 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2024-07-17 17:12+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -61,80 +61,74 @@ msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
 msgstr "Fleire innstillingar for utsjånad:"
 
-#: ui/main.qml:83
-#, kde-format
-msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
-msgid "Wallpaper"
-msgstr "Bakgrunnsbilete"
-
-#: ui/main.qml:91
-#, kde-format
-msgctxt ""
-"@action:button as in, 'this will take you to the first KCM in the Colors & "
-"Themes group'"
-msgid "Colors & Themes"
-msgstr "Fargar og tema"
-
-#: ui/main.qml:122
+#: ui/main.qml:120
 #, kde-format
 msgid "Animation speed:"
 msgstr "Animasjonsfart:"
 
-#: ui/main.qml:131
+#: ui/main.qml:129
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Sakte"
 
-#: ui/main.qml:138
+#: ui/main.qml:136
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Med ein gong"
 
-#: ui/main.qml:152
+#: ui/main.qml:150
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Trykk på filer og mapper:"
 
-#: ui/main.qml:160
+#: ui/main.qml:158
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Merkjer dei"
 
-#: ui/main.qml:165
+#: ui/main.qml:163
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Opna berre med dobbeltklikking"
 
-#: ui/main.qml:190
+#: ui/main.qml:188
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Opnar dei"
 
-#: ui/main.qml:195
+#: ui/main.qml:193
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Merk element ved å trykkja på markerings­ikonet"
 
-#: ui/main.qml:219
+#: ui/main.qml:216
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
 msgstr "Fleire innstillingar for programåtferd:"
 
-#: ui/main.qml:221
-#, kde-format
-msgctxt ""
-"@action:button as in, 'this will take you to the General Behavior KCM'"
-msgid "General Behavior"
-msgstr "Generell åtferd"
-
-#: ui/main.qml:233
+#: ui/main.qml:229
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Mest brukte sider:"
+
+#~ msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
+#~ msgid "Wallpaper"
+#~ msgstr "Bakgrunnsbilete"
+
+#~ msgctxt ""
+#~ "@action:button as in, 'this will take you to the first KCM in the Colors "
+#~ "& Themes group'"
+#~ msgid "Colors & Themes"
+#~ msgstr "Fargar og tema"
+
+#~ msgctxt ""
+#~ "@action:button as in, 'this will take you to the General Behavior KCM'"
+#~ msgid "General Behavior"
+#~ msgstr "Generell åtferd"

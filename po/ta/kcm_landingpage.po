@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-14 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2022-04-02 21:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -61,86 +61,77 @@ msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
 msgstr "கூடுதல் தோற்ற அமைப்புகள்…"
 
-#: ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Change Wallpaper…"
-msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
-msgid "Wallpaper"
-msgstr "பின்னணிப் படத்தை மாற்று…"
-
-#: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Color scheme name"
-msgctxt ""
-"@action:button as in, 'this will take you to the first KCM in the Colors & "
-"Themes group'"
-msgid "Colors & Themes"
-msgstr "நிறத் திட்டமுறையின் பெயர்"
-
-#: ui/main.qml:122
+#: ui/main.qml:120
 #, kde-format
 msgid "Animation speed:"
 msgstr "அசைவூட்டத்தின் வேகம்:"
 
-#: ui/main.qml:131
+#: ui/main.qml:129
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "மெதுவானது"
 
-#: ui/main.qml:138
+#: ui/main.qml:136
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "உடனடியானது"
 
-#: ui/main.qml:152
+#: ui/main.qml:150
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "கோப்புகள் அல்லது அடைவுகளை க்ளிக் செய்தல்:"
 
-#: ui/main.qml:160
+#: ui/main.qml:158
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "அவற்றைத் தேர்ந்தெடுக்கும்"
 
-#: ui/main.qml:165
+#: ui/main.qml:163
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "இரண்டு முறை க்ளிக் செய்தால் அதைத் திற"
 
-#: ui/main.qml:190
+#: ui/main.qml:188
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "அவற்றைத் திறக்கும்"
 
-#: ui/main.qml:195
+#: ui/main.qml:193
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "ஒன்றன் தேர்வுக் குறிப்பை க்ளிக் செய்தால் அதைத் தேர்ந்தெடு"
 
-#: ui/main.qml:219
+#: ui/main.qml:216
 #, fuzzy, kde-format
 #| msgid "More Behavior Settings…"
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
 msgstr "நடத்தை சம்பந்தப்பட்ட கூடுதல் அமைப்புகள்…"
 
-#: ui/main.qml:221
-#, kde-format
-msgctxt ""
-"@action:button as in, 'this will take you to the General Behavior KCM'"
-msgid "General Behavior"
-msgstr ""
-
-#: ui/main.qml:233
+#: ui/main.qml:229
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "அடிக்கடி பயன்படுத்தப்படும் பக்கங்கள்:"
+
+#, fuzzy
+#~| msgid "Change Wallpaper…"
+#~ msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
+#~ msgid "Wallpaper"
+#~ msgstr "பின்னணிப் படத்தை மாற்று…"
+
+#, fuzzy
+#~| msgid "Color scheme name"
+#~ msgctxt ""
+#~ "@action:button as in, 'this will take you to the first KCM in the Colors "
+#~ "& Themes group'"
+#~ msgid "Colors & Themes"
+#~ msgstr "நிறத் திட்டமுறையின் பெயர்"
 
 #~ msgid "Plasma"
 #~ msgstr "பிளாஸ்மா"

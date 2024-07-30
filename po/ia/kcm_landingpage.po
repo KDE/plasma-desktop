@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-14 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2024-07-15 09:46+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -60,83 +60,77 @@ msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
 msgstr "Altere preferentias de apparentia:"
 
-#: ui/main.qml:83
-#, kde-format
-msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
-msgid "Wallpaper"
-msgstr "Tapete de papiro"
-
-#: ui/main.qml:91
-#, kde-format
-msgctxt ""
-"@action:button as in, 'this will take you to the first KCM in the Colors & "
-"Themes group'"
-msgid "Colors & Themes"
-msgstr "Colores & Themas"
-
-#: ui/main.qml:122
+#: ui/main.qml:120
 #, kde-format
 msgid "Animation speed:"
 msgstr "Velocitate de animation:"
 
-#: ui/main.qml:131
+#: ui/main.qml:129
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Lente"
 
-#: ui/main.qml:138
+#: ui/main.qml:136
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Instante"
 
-#: ui/main.qml:152
+#: ui/main.qml:150
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Pulsante files e dossieres:"
 
-#: ui/main.qml:160
+#: ui/main.qml:158
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Selige illos"
 
-#: ui/main.qml:165
+#: ui/main.qml:163
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Aperi in vice per duple cliccar"
 
-#: ui/main.qml:190
+#: ui/main.qml:188
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Aperi illos"
 
-#: ui/main.qml:195
+#: ui/main.qml:193
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Selige per cliccar sur le marcator de selection del elemento"
 
-#: ui/main.qml:219
+#: ui/main.qml:216
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
 msgstr "Altere preferentias de comportamento:"
 
-#: ui/main.qml:221
-#, kde-format
-msgctxt ""
-"@action:button as in, 'this will take you to the General Behavior KCM'"
-msgid "General Behavior"
-msgstr "Comportamento general"
-
-#: ui/main.qml:233
+#: ui/main.qml:229
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Paginas plus usate"
+
+#~ msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
+#~ msgid "Wallpaper"
+#~ msgstr "Tapete de papiro"
+
+#~ msgctxt ""
+#~ "@action:button as in, 'this will take you to the first KCM in the Colors "
+#~ "& Themes group'"
+#~ msgid "Colors & Themes"
+#~ msgstr "Colores & Themas"
+
+#~ msgctxt ""
+#~ "@action:button as in, 'this will take you to the General Behavior KCM'"
+#~ msgid "General Behavior"
+#~ msgstr "Comportamento general"
 
 #~ msgid "Plasma"
 #~ msgstr "Plasma"

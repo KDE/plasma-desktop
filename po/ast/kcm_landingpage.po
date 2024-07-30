@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-14 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2024-03-18 00:52+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -61,82 +61,66 @@ msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
 msgstr "Más opciones del aspeutu…"
 
-#: ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Change Wallpaper…"
-msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
-msgid "Wallpaper"
-msgstr "Camudar el fondu de pantalla…"
-
-#: ui/main.qml:91
-#, kde-format
-msgctxt ""
-"@action:button as in, 'this will take you to the first KCM in the Colors & "
-"Themes group'"
-msgid "Colors & Themes"
-msgstr ""
-
-#: ui/main.qml:122
+#: ui/main.qml:120
 #, kde-format
 msgid "Animation speed:"
 msgstr "Velocidá de les animaciones"
 
-#: ui/main.qml:131
+#: ui/main.qml:129
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr ""
 
-#: ui/main.qml:138
+#: ui/main.qml:136
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr ""
 
-#: ui/main.qml:152
+#: ui/main.qml:150
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Al calcar en ficheros o carpetes:"
 
-#: ui/main.qml:160
+#: ui/main.qml:158
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Seleicionalos"
 
-#: ui/main.qml:165
+#: ui/main.qml:163
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr ""
 
-#: ui/main.qml:190
+#: ui/main.qml:188
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Abrilos"
 
-#: ui/main.qml:195
+#: ui/main.qml:193
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr ""
 
-#: ui/main.qml:219
+#: ui/main.qml:216
 #, fuzzy, kde-format
 #| msgid "More Behavior Settings…"
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
 msgstr "Más opciones del comportamientu…"
 
-#: ui/main.qml:221
-#, kde-format
-msgctxt ""
-"@action:button as in, 'this will take you to the General Behavior KCM'"
-msgid "General Behavior"
-msgstr ""
-
-#: ui/main.qml:233
+#: ui/main.qml:229
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Les páxines más usaes:"
+
+#, fuzzy
+#~| msgid "Change Wallpaper…"
+#~ msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
+#~ msgid "Wallpaper"
+#~ msgstr "Camudar el fondu de pantalla…"
