@@ -18,6 +18,11 @@ import org.kde.kirigami as Kirigami
 
 MouseArea {
     id: configurationArea
+    anchors {
+        fill: parent
+        rightMargin: parent.isHorizontal ? parent.toolBox.width : 0
+        bottomMargin: !parent.isHorizontal ? parent.toolBox.height : 0
+    }
 
     z: 1000
     hoverEnabled: true
