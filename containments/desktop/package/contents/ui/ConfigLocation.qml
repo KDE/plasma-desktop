@@ -19,7 +19,7 @@ Item {
     property string cfg_url
     property alias cfg_labelMode: labelMode.currentIndex
     property alias cfg_labelText: labelText.text
-    property bool titleVisible: !("containmentType" in plasmoid)
+    property bool titleVisible: Plasmoid.containment != Plasmoid
 
     onCfg_urlChanged: applyConfig()
 
