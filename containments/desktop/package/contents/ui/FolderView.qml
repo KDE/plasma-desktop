@@ -1334,6 +1334,7 @@ FocusScope {
                     if (targetItem) {
                         dir.rename(positioner.map(targetItem.index), text);
                         targetItem = null;
+                        gridView.forceActiveFocus();
                     }
                 }
 
