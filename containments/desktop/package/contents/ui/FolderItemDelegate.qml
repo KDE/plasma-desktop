@@ -309,6 +309,8 @@ Item {
                 PlasmaExtras.ShadowedLabel {
                     id: label
 
+                    readonly property bool renaming: (editor && editor.targetItem === main)
+
                     z: 2 // So it's always above the highlight effect
 
                     states: [
@@ -360,7 +362,8 @@ Item {
                         return Kirigami.Theme.textColor;
 
                     }
-                    renderShadow: Plasmoid.isContainment && (!editor || editor.targetItem !== main)
+                    visible: !renaming
+                    renderShadow: Plasmoid.isContainment && !renaming
                     opacity: model.isHidden ? 0.6 : 1
 
                     text: main.nameWrapped
