@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QColor>
 #include <QObject>
 
 #include <X11/XKBlib.h>
@@ -32,4 +33,7 @@ protected:
     XkbObject(XkbDescPtr xkb_, QObject *parent = nullptr);
 
     XkbDescPtr xkb = nullptr;
+
+    QColor colorFromName(const QString &colorName) const;
+    QColor colorFromIndex(int index) const;
 };

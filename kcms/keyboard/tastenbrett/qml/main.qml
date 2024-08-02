@@ -102,6 +102,8 @@ Window {
                     Key {
                         id: keyItem
                         key: root.key
+                        lineWidth: 4
+                        strokeStyle: activePalette.shadow
                     }
                 }
 

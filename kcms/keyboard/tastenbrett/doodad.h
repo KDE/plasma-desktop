@@ -85,10 +85,14 @@ public:                                                                         
     TD_P(short, height)
     TD_P(QString, text)
     TD_P(QString, font)
+
+    Q_PROPERTY(QColor color MEMBER color CONSTANT)
+
 public:
     TextDoodad(XkbDoodadPtr doodad_, XkbDescPtr xkb_, QObject *parent = nullptr);
 
     Shape *shape = nullptr;
+    QColor color;
 };
 
 // NB: This is technically kind of like a shape doodad, but in reality
@@ -116,12 +120,16 @@ public:                                                                         
     ID_P(short, angle)
 
     Q_PROPERTY(Shape *shape MEMBER shape CONSTANT)
+    Q_PROPERTY(QColor onColor MEMBER onColor CONSTANT)
+    Q_PROPERTY(QColor offColor MEMBER offColor CONSTANT)
     Q_PROPERTY(bool on MEMBER on NOTIFY onChanged)
 public:
     IndicatorDoodad(XkbDoodadPtr doodad_, XkbDescPtr xkb_, QObject *parent = nullptr);
 
     Shape *shape = nullptr;
     bool on = false;
+    QColor onColor;
+    QColor offColor;
 
 Q_SIGNALS:
     void onChanged();

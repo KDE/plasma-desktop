@@ -16,6 +16,8 @@ Geometry::Geometry(XkbGeometryPtr geom_, XkbDescPtr xkb_, QObject *parent)
     , geom(geom_)
     , widthMM(geom->width_mm)
     , heightMM(geom->height_mm)
+    , baseColor(colorFromName(geom->base_color->spec))
+    , labelColor(colorFromName(geom->label_color->spec))
 {
     for (int i = 0; i < geom->num_doodads; ++i) {
         Doodad *o = Doodad::factorize(geom->doodads + i, xkb, this);

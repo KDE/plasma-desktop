@@ -9,7 +9,7 @@ import QtQuick.Controls 2.5
 
 Canvas {
     property QtObject shape
-    property variant strokeSyle: "yellow"
+    property variant strokeStyle: "yellow"
     property variant fillStyle: "steelblue"
     // Only draw one outline. Outlines are tricky because xkb has no
     // concept of displaying text on top of the shapes. IOW: it
@@ -28,14 +28,14 @@ Canvas {
     id: canvas
     width: shape.bounds.width
     height: shape.bounds.height
-    onStrokeSyleChanged: requestPaint()
+    onStrokeStyleChanged: requestPaint()
     onFillStyleChanged: requestPaint()
 
     onPaint: {
         var ctx = getContext("2d")
         ctx.reset()
         ctx.lineWidth = lineWidth
-        ctx.strokeStyle = strokeSyle
+        ctx.strokeStyle = strokeStyle
         ctx.fillStyle = fillStyle
         // Transform the context a bunch. The way strokes work is that
         // they extend to the left and right of the path, so with a

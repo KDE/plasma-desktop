@@ -190,6 +190,8 @@ Key::Key(XkbKeyPtr key_, XkbDescPtr xkb_, QObject *parent)
     , name(key_->name.name, XkbKeyNameLength)
     , nativeScanCode(nativeScanCodeFromName(name))
     , cap(resolveCap())
+    , color(colorFromIndex(key->color_ndx))
+    , textColor(colorFromName(xkb->geom->label_color->spec))
     , pressed(false)
 {
     qRegisterMetaType<Shape *>();

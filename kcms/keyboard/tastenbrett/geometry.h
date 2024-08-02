@@ -15,6 +15,9 @@ class Geometry : public XkbObject
     Q_PROPERTY(QList<QObject *> sections MEMBER sections CONSTANT)
     Q_PROPERTY(qreal widthMM MEMBER widthMM CONSTANT)
     Q_PROPERTY(qreal heightMM MEMBER heightMM CONSTANT)
+    Q_PROPERTY(QColor baseColor MEMBER baseColor CONSTANT)
+    Q_PROPERTY(QColor labelColor MEMBER labelColor CONSTANT)
+
 public:
     Geometry(XkbGeometryPtr geom_, XkbDescPtr xkb_, QObject *parent = nullptr);
     ~Geometry() override;
@@ -26,4 +29,7 @@ public:
 
     qreal widthMM = -1;
     qreal heightMM = -1;
+
+    QColor baseColor;
+    QColor labelColor;
 };

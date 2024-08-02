@@ -19,7 +19,7 @@ Label {
     height: doodad.height
     rotation: doodad.angle
     text: doodad.text
-    color: disabledPalette.buttonText
+    color: doodad.color
 
     fontSizeMode: Text.Fit
     minimumPixelSize: 6

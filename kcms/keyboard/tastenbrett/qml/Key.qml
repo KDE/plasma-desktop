@@ -4,18 +4,19 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.5
+import QtQuick
+import QtQuick.Controls
 
 ShapeCanvas {
     id: root
 
     property QtObject key
-    property variant keyColor: key.pressed ? activePalette.highlight : activePalette.button
-    property variant labelColor: key.pressed ? activePalette.highlightedText : activePalette.buttonText
+    property color keyColor: key.pressed ? activePalette.highlight : key.color || activePalette.button
+    property color labelColor: key.pressed ? activePalette.highlightedText : key.textColor || activePalette.buttonText
 
     shape: key ? key.shape : null
-    strokeSyle: activePalette.shadow
+    lineWidth: 1
+    strokeStyle: "transparent"
     fillStyle: keyColor
 
     onKeyColorChanged: requestPaint()

@@ -39,18 +39,22 @@ Doodad::Doodad(XkbDoodadPtr doodad_, XkbDescPtr xkb_, QObject *parent)
 ShapeDoodad::ShapeDoodad(XkbDoodadPtr doodad_, XkbDescPtr xkb_, QObject *parent)
     : Doodad(doodad_, xkb_, parent)
     , shape(new Shape(xkb->geom->shapes + doodad_->shape.shape_ndx, xkb, this))
+    , color(colorFromIndex(doodad->shape.color_ndx))
     , outlineOnly(doodad->any.type == XkbOutlineDoodad)
 {
 }
 
 TextDoodad::TextDoodad(XkbDoodadPtr doodad_, XkbDescPtr xkb_, QObject *parent)
     : Doodad(doodad_, xkb_, parent)
+    , color(colorFromIndex(doodad->text.color_ndx))
 {
 }
 
 IndicatorDoodad::IndicatorDoodad(XkbDoodadPtr doodad_, XkbDescPtr xkb_, QObject *parent)
     : Doodad(doodad_, xkb_, parent)
     , shape(new Shape(xkb->geom->shapes + doodad_->indicator.shape_ndx, xkb, this))
+    , onColor(colorFromIndex(doodad->indicator.on_color_ndx))
+    , offColor(colorFromIndex(doodad->indicator.off_color_ndx))
 {
     connect(Application::instance(), &Application::keyEvent, this, &IndicatorDoodad::refreshState);
     refreshState();

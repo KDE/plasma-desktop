@@ -8,5 +8,6 @@ import QtQuick 2.12
 
 ShapeDoodad {
     lineWidth: 0 // indicators can be tiny. don't draw the stroke, it may overlap the fill
-    fillStyle: doodad.on ? activePalette.highlight : disabledPalette.light
+    fillStyle: doodad.on ? doodad.onColor || activePalette.highlight
+                         : doodad.offColor || disabledPalette.light
 }
