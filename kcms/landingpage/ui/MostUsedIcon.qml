@@ -10,6 +10,7 @@ import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.1
 
 import org.kde.kirigami 2.5 as Kirigami
+import org.kde.plasma.core as PlasmaCore
 
 QQC2.Button {
     id: button
@@ -23,7 +24,7 @@ QQC2.Button {
     property alias kcmIcon: iconItem.source
     property alias kcmName: label.text
 
-    readonly property QtObject kcmAction: kcmId ? kcm.kcmAction(kcmId) : null
+    readonly property PlasmaCore.Action kcmAction: kcm.kcmAction(kcmId)
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             implicitContentWidth + leftPadding + rightPadding)
