@@ -8,14 +8,14 @@
 
 pragma ComponentBehavior: Bound
 
-import QtQuick 2.7
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Layouts 1.3
-import QtQuick.Window 2.2
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kcmutils as KCM
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
-KCM.SimpleKCM {
+import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCMUtils
+
+KCMUtils.SimpleKCM {
     id: root
 
     implicitWidth: Kirigami.Units.gridUnit * 44
@@ -45,7 +45,7 @@ KCM.SimpleKCM {
 
                 onToggled: kcm.globalsSettings.lookAndFeelPackage = kcm.defaultLightLookAndFeel.id
 
-                KCM.SettingStateBinding {
+                KCMUtils.SettingStateBinding {
                     configObject: kcm.globalsSettings
                     settingName: "lookAndFeelPackage"
                 }
@@ -58,7 +58,7 @@ KCM.SimpleKCM {
 
                 onToggled: kcm.globalsSettings.lookAndFeelPackage = kcm.defaultDarkLookAndFeel.id
 
-                KCM.SettingStateBinding {
+                KCMUtils.SettingStateBinding {
                     configObject: kcm.globalsSettings
                     settingName: "lookAndFeelPackage"
                 }
@@ -119,7 +119,7 @@ KCM.SimpleKCM {
 
                 Accessible.name: i18n("Animation speed:")
 
-                KCM.SettingStateBinding {
+                KCMUtils.SettingStateBinding {
                     configObject: kcm.globalsSettings
                     settingName: "animationDurationFactor"
                 }
@@ -162,7 +162,7 @@ KCM.SimpleKCM {
 
                 Accessible.description: i18n("Open by double-clicking instead")
 
-                KCM.SettingStateBinding {
+                KCMUtils.SettingStateBinding {
                     configObject: kcm.globalsSettings
                     settingName: "singleClick"
                     extraEnabledConditions: singleClick.enabled
@@ -192,7 +192,7 @@ KCM.SimpleKCM {
 
                 Accessible.description: i18n("Select by clicking on item's selection marker")
 
-                KCM.SettingStateBinding {
+                KCMUtils.SettingStateBinding {
                     configObject: kcm.globalsSettings
                     settingName: "singleClick"
                 }
