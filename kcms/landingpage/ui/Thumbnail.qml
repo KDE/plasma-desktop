@@ -5,10 +5,13 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.7
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Layouts 1.3
-import QtQuick.Window 2.2
+
+pragma ComponentBehavior: Bound
+
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+
 import org.kde.kirigami as Kirigami
 
 QQC2.RadioButton {
