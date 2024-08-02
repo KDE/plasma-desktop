@@ -106,7 +106,11 @@ ContainmentItem {
 
         Plasmoid.applets.forEach(applet => applet.expanded = false);
         const component = Qt.createComponent("ConfigOverlay.qml");
-        root.configOverlay = component.createObject(root);
+        root.configOverlay = component.createObject(root, {
+            "anchors.fill": dropArea,
+            "anchors.rightMargin": root.isHorizontal ? toolBox.width : 0,
+            "anchors.bottomMargin": !root.isHorizontal ? toolBox.height : 0,
+        });
         component.destroy();
     }
 //END connections
