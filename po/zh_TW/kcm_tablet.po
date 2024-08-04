@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-07-08 17:33+0900\n"
+"PO-Revision-Date: 2024-08-03 14:35+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -24,11 +24,10 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "已停用"
 
 #: inputsequence.cpp:138
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "無"
@@ -37,25 +36,25 @@ msgstr "無"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "滑鼠左鍵"
 
 #: inputsequence.cpp:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "滑鼠右鍵"
 
 #: inputsequence.cpp:149
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "滑鼠中鍵"
 
 #: inputsequence.cpp:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "由應用程式定義"
 
 #: kcmtablet.cpp:34
 #, kde-format
@@ -117,37 +116,37 @@ msgstr "映射到螢幕的一部分"
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "選擇按鈕動作"
 
 #: ui/ActionDialog.qml:70
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "選擇按下 %1 時要進行什麼動作："
 
 #: ui/ActionDialog.qml:84
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "交給應用程式決定"
 
 #: ui/ActionDialog.qml:99
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "傳送鍵盤按鍵"
 
 #: ui/ActionDialog.qml:113
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "傳送滑鼠按鍵點擊"
 
 #: ui/ActionDialog.qml:129
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "什麼都不做"
 
 #: ui/ActionDialog.qml:149
 #, kde-format
@@ -155,55 +154,55 @@ msgctxt "@info"
 msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
-msgstr ""
+msgstr "這個平板按鍵按下時會轉交給聚焦的應用程式，讓它決定如何處理它。"
 
 #: ui/ActionDialog.qml:177
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left Click"
-msgstr ""
+msgstr "左鍵點擊"
 
 #: ui/ActionDialog.qml:178
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle Click"
-msgstr ""
+msgstr "中鍵點擊"
 
 #: ui/ActionDialog.qml:179
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right Click"
-msgstr ""
+msgstr "右鍵點擊"
 
 #: ui/ActionDialog.qml:206
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:213
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:220
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:235
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "這個按鍵已停用而不會做任何事。"
 
 #: ui/Calibration.qml:31
 #, kde-format
@@ -285,11 +284,9 @@ msgid "Orientation:"
 msgstr "方向："
 
 #: ui/main.qml:131
-#, fuzzy, kde-format
-#| msgctxt "@action:button Pen display doesn't support calibration"
-#| msgid "Calibration Not Supported"
+#, kde-format
 msgid "Not Supported"
-msgstr "不支援校準"
+msgstr "不支援"
 
 #: ui/main.qml:138
 #, kde-format
@@ -335,13 +332,12 @@ msgid "Pen button 1:"
 msgstr "畫筆按鈕 1："
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 1'"
 msgid "pen button 1"
-msgstr "畫筆按鈕 1："
+msgstr "畫筆按鈕 1"
 
 #: ui/main.qml:290
 #, kde-format
@@ -349,13 +345,12 @@ msgid "Pen button 2:"
 msgstr "畫筆按鈕 2："
 
 #: ui/main.qml:291
-#, fuzzy, kde-format
-#| msgid "Pen button 2:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 2'"
 msgid "pen button 2"
-msgstr "畫筆按鈕 2："
+msgstr "畫筆按鈕 2"
 
 #: ui/main.qml:295
 #, kde-format
@@ -363,13 +358,12 @@ msgid "Pen button 3:"
 msgstr "畫筆按鈕 3："
 
 #: ui/main.qml:296
-#, fuzzy, kde-format
-#| msgid "Pen button 3:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 3'"
 msgid "pen button 3"
-msgstr "畫筆按鈕 3："
+msgstr "畫筆按鈕 3"
 
 #: ui/main.qml:351
 #, kde-format
@@ -412,13 +406,12 @@ msgid "Pad button %1:"
 msgstr "繪圖板按鈕 %1："
 
 #: ui/main.qml:432
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "繪圖板按鈕 %1："
+msgstr "繪圖板按鈕 %1"
 
 #: ui/Tester.qml:25
 #, kde-format
