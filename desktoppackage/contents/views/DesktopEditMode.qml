@@ -73,6 +73,7 @@ Item {
                 id: toolBar
                 LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
                 LayoutMirroring.childrenInherit: true
+                spacing: Kirigami.Units.smallSpacing
                 anchors {
                     left: parent.left
                     top: parent.top
@@ -82,6 +83,7 @@ Item {
                 Flow {
                     Layout.fillWidth: true
                     Layout.minimumHeight: implicitHeight
+                    spacing: Kirigami.Units.smallSpacing
                     PC.ToolButton {
                         id: addWidgetButton
                         property QtObject qAction: containment?.plasmoid.internalAction("add widgets") || null
