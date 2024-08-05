@@ -266,6 +266,8 @@ PC3.Page {
 
             //slide in to view from the left
             add: Transition {
+                // Work around https://bugreports.qt.io/browse/QTBUG-127709
+                enabled: Kirigami.Units.shortDuration > 0
                 NumberAnimation {
                     properties: "x"
                     from: -list.width
@@ -275,6 +277,8 @@ PC3.Page {
 
             //slide out of view to the right
             remove: Transition {
+                // Work around https://bugreports.qt.io/browse/QTBUG-127709
+                enabled: Kirigami.Units.shortDuration > 0
                 NumberAnimation {
                     properties: "x"
                     to: list.width
