@@ -155,7 +155,7 @@ Item {
                     }
                 }
                 QQC2.Button {
-                    icon.name: "dialog-information"
+                    icon.name: "help-about-symbolic"
                     width: height
                     onClicked: {
                         const metaData = configDialog.currentContainmentActionsModel.aboutMetaData(index);
