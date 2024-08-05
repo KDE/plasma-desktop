@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-06-16 18:44+0530\n"
+"PO-Revision-Date: 2024-08-04 17:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,17 +15,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: inputsequence.cpp:135
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "முடக்கப்பட்டுள்ளது"
 
 #: inputsequence.cpp:138
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "ஏதுமில்லை"
@@ -34,30 +33,30 @@ msgstr "ஏதுமில்லை"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "இடது சுட்டி பட்டன்"
 
 #: inputsequence.cpp:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "வலது சுட்டி பட்டன்"
 
 #: inputsequence.cpp:149
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "நடு சுட்டி பட்டன்"
 
 #: inputsequence.cpp:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "செயலியால் வகுக்கப்படுவது"
 
 #: kcmtablet.cpp:34
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "இயல்பிருப்பு"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -114,37 +113,37 @@ msgstr "திரையின் பகுதிக்கு இணை"
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "பட்டன் செயலைத் தெர்ந்தெடுப்பது"
 
 #: ui/ActionDialog.qml:70
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "%1-ஐ அழுத்தம்போது என்ன செய்ய வேண்டும்:"
 
 #: ui/ActionDialog.qml:84
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "செயலியைப் பொறுத்து"
 
 #: ui/ActionDialog.qml:99
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "விசைப்பலகை பட்டனை அனுப்பு"
 
 #: ui/ActionDialog.qml:113
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "சுட்டி கிளிக்கை அனுப்பு"
 
 #: ui/ActionDialog.qml:129
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "ஒன்றும் செய்யாதே"
 
 #: ui/ActionDialog.qml:149
 #, kde-format
@@ -153,60 +152,62 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"குவயத்திலுள்ள செயலிக்கு இப்பட்டன் அனுப்பப்படும்; அச்செயலி இப்பட்டனை எப்படி கையாள்வதென "
+"முடிவு செய்யும்."
 
 #: ui/ActionDialog.qml:177
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left Click"
-msgstr ""
+msgstr "இடது கிளிக்"
 
 #: ui/ActionDialog.qml:178
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle Click"
-msgstr ""
+msgstr "நடு கிளிக்"
 
 #: ui/ActionDialog.qml:179
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right Click"
-msgstr ""
+msgstr "வலது கிளிக்"
 
 #: ui/ActionDialog.qml:206
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:213
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:220
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:235
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "இப்பட்டன் முடக்கப்பட்டுள்ளது; எதுவும் செய்யாது."
 
 #: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "பேனா அளதிருத்தம்"
 
 #: ui/Calibration.qml:85
 #, kde-kuit-format
@@ -215,6 +216,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"அளதிருத்தம் முடிவடைந்து செமிக்கப்பட்டுள்ளது.<nl/><nl/>அளதிருத்தத்தை மேம்படுத்தலாம் அல்லது "
+"இச்சாளரத்தை மூடலாம்."
 
 #: ui/Calibration.qml:86
 #, kde-kuit-format
@@ -223,30 +226,32 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"ஒவ்வொரு இலக்கின் நடுப்பகுதியை தட்டவும்.<nl/><nl/> திரையில் காட்டப்படும் சுட்டிக்குறியை "
+"பொருட்படுத்தாமல் பேனாவின் மீது மட்டும் கவனம் செலுத்தவும்."
 
 #: ui/Calibration.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "ஏற்கனவேயுள்ள அளதிருத்தத்தை மேம்படுத்து"
 
 #: ui/Calibration.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "முதலிலிருந்து அளதிருத்து"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "மூடு"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "ரத்து செய்"
 
 #: ui/main.qml:32
 #, kde-format
@@ -283,7 +288,7 @@ msgstr "நோக்குநிலை:"
 #: ui/main.qml:131
 #, kde-format
 msgid "Not Supported"
-msgstr ""
+msgstr "ஆதரிக்கப்படாதது"
 
 #: ui/main.qml:138
 #, kde-format
@@ -298,6 +303,8 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"இடக்கை பயனர்களுக்கு இணங்குமாறு சாதனத்திறுக் கட்டளையிடும். பெரும்பாலும், இது வரைபலகையைத் "
+"தலைகீழாக பயன்படுத்தும் விதத்தில் பட்டன்களை புரட்டும்."
 
 #: ui/main.qml:155
 #, kde-format
@@ -327,13 +334,12 @@ msgid "Pen button 1:"
 msgstr "பேனா பட்டன் 1:"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 1'"
 msgid "pen button 1"
-msgstr "பேனா பட்டன் 1:"
+msgstr "பேனா பட்டன் 1"
 
 #: ui/main.qml:290
 #, kde-format
@@ -341,13 +347,12 @@ msgid "Pen button 2:"
 msgstr "பேனா பட்டன் 2:"
 
 #: ui/main.qml:291
-#, fuzzy, kde-format
-#| msgid "Pen button 2:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 2'"
 msgid "pen button 2"
-msgstr "பேனா பட்டன் 2:"
+msgstr "பேனா பட்டன் 2"
 
 #: ui/main.qml:295
 #, kde-format
@@ -355,37 +360,36 @@ msgid "Pen button 3:"
 msgstr "பேனா பட்டன் 3:"
 
 #: ui/main.qml:296
-#, fuzzy, kde-format
-#| msgid "Pen button 3:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 3'"
 msgid "pen button 3"
-msgstr "பேனா பட்டன் 3:"
+msgstr "பேனா பட்டன் 3"
 
 #: ui/main.qml:351
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "அளதிருத்தம் செயலிலுள்ளது"
 
 #: ui/main.qml:353
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "அளவொப்புமை"
 
 #: ui/main.qml:356
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "அளதிருத்தம் ஆதரிக்கப்படவில்லை"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "பல திரைகளுடனான அளதிருத்தம் ஆதரிக்கப்படாதது."
 
 #: ui/main.qml:393
 #, kde-format
@@ -404,13 +408,12 @@ msgid "Pad button %1:"
 msgstr "வரைபலகை பட்டன் %1:"
 
 #: ui/main.qml:432
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "வரைபலகை பட்டன் %1:"
+msgstr "வரைபலகை பட்டன் %1"
 
 #: ui/Tester.qml:25
 #, kde-format
