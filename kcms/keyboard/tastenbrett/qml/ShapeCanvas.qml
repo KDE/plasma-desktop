@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2024 Ismael Asensio <isma.af@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
@@ -73,16 +74,23 @@ Canvas {
                                 bottomRightPoint.x, bottomRightPoint.y,
                                 outline.corner_radius, outline.corner_radius)
             } else { // polygon point to point draw (used for doodads and non-rect keys such as Enter)
-                for (var j in outline.points) {
-                    var anyPoint = outline.points[j]
-                    if (j < 1) { // move to first point
-                        ctx.moveTo(anyPoint.x, anyPoint.y)
-                    } else { // from there we draw point to point
-                        ctx.lineTo(anyPoint.x, anyPoint.y)
-                    }
+                // Move to the start of the first arc
+                const firstPoint = outline.points[0]
+                const lastPoint = outline.points[outline.points.length - 1]
+                // Increase the distance by one to avoid artifacts
+                const arcStart = substract(firstPoint, direction(lastPoint, firstPoint, outline.corner_radius + 1))
 
-                    // TODO: should probably draw short of target and then arcTo over the target so we get a round corner?
-                    // Currently shapes are not rounded.
+                ctx.moveTo(arcStart.x, arcStart.y)
+
+                for (let j = 0; j < outline.points.length; j++) {
+                    const point = outline.points[j]  // P
+                    const nextPoint = outline.points[(j + 1) % outline.points.length]  // N
+                    const arcEnd = substract(point, direction(nextPoint, point, outline.corner_radius));  // P - radius · dir(N -> P)
+
+                    // arcTo() first draws a straight line from the current point to the start of the arc, so no need for `lineTo()`
+                    ctx.arcTo(point.x, point.y,
+                              arcEnd.x, arcEnd.y,
+                              outline.corner_radius)
                 }
             }
         }
@@ -92,5 +100,23 @@ Canvas {
             ctx.fill()
         }
         ctx.stroke()
+    }
+
+    // Vector functions to operate with QPoints
+    function substract(P: point, Q : point) : point {
+        return Qt.point(P.x - Q.x, P.y - Q.y)
+    }
+
+    function multiply(P : point, factor : real) : point {
+        return Qt.point(P.x * factor, P.y * factor)
+    }
+
+    // A scaled vector (modulus `scale`) in the direction P -> Q
+    // Ex. if the points are in the same horizontal, Q after P, it will return (scale, 0)
+    function direction(P : point, Q : point, scale : real) : point {
+        const vector = substract(Q, P);
+        const modulus = Math.sqrt(vector.x * vector.x + vector.y * vector.y);
+        const scaled = multiply(vector, scale/modulus);
+        return scaled;
     }
 }
