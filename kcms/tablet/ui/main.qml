@@ -28,7 +28,7 @@ SimpleKCM {
     flickable.interactive: Kirigami.Settings.hasTransientTouchInput
 
     Kirigami.PlaceholderMessage {
-        icon.name: "input-tablet"
+        icon.name: "preferences-desktop-tablet"
         text: i18nd("kcm_tablet", "No drawing tablets found")
         explanation: i18n("Connect a drawing tablet")
         anchors.centerIn: parent
