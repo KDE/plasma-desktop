@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-08-06 00:40+0000\n"
 "PO-Revision-Date: 2024-01-23 17:15+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -185,7 +185,7 @@ msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Liela"
 
-#: package/contents/ui/ConfigAppearance.qml:170
+#: package/contents/ui/ConfigAppearance.qml:172
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
@@ -433,17 +433,17 @@ msgstr "Kreisajā pusē"
 msgid "On the Top"
 msgstr "Augšā"
 
-#: package/contents/ui/ContextMenu.qml:100
+#: package/contents/ui/ContextMenu.qml:102
 #, kde-format
 msgid "Places"
 msgstr "Vietas"
 
-#: package/contents/ui/ContextMenu.qml:106
+#: package/contents/ui/ContextMenu.qml:108
 #, kde-format
 msgid "Recent Files"
 msgstr "Nesenās datnes"
 
-#: package/contents/ui/ContextMenu.qml:113
+#: package/contents/ui/ContextMenu.qml:115
 #, kde-format
 msgid "Actions"
 msgstr "Darbības"
@@ -505,43 +505,43 @@ msgstr "Atvērt jaunu logu"
 msgid "Move to &Desktop"
 msgstr "Pārvietot uz &darbvirsmu"
 
-#: package/contents/ui/ContextMenu.qml:328
+#: package/contents/ui/ContextMenu.qml:334
 #, kde-format
 msgid "Move &To Current Desktop"
 msgstr "Pārvietot uz &pašreizējo darbvirsmu"
 
-#: package/contents/ui/ContextMenu.qml:337
+#: package/contents/ui/ContextMenu.qml:343
 #, kde-format
 msgid "&All Desktops"
 msgstr "&Uz visām darbvirsmām"
 
-#: package/contents/ui/ContextMenu.qml:365
+#: package/contents/ui/ContextMenu.qml:371
 #, kde-format
 msgid "&New Desktop"
 msgstr "Uz &jaunu darbvirsmu"
 
-#: package/contents/ui/ContextMenu.qml:385
+#: package/contents/ui/ContextMenu.qml:391
 #, kde-format
 msgid "Show in &Activities"
 msgstr "Rādīt &aktivitātēs"
 
-#: package/contents/ui/ContextMenu.qml:409
+#: package/contents/ui/ContextMenu.qml:415
 #, kde-format
 msgid "Add To Current Activity"
 msgstr "Pievienot aktīvajai aktivitātei"
 
-#: package/contents/ui/ContextMenu.qml:419
+#: package/contents/ui/ContextMenu.qml:425
 #, kde-format
 msgid "All Activities"
 msgstr "Visās aktivitātēs"
 
-#: package/contents/ui/ContextMenu.qml:477
+#: package/contents/ui/ContextMenu.qml:481
 #, kde-format
 msgid "Move to %1"
 msgstr "Pārvietot uz „%1“"
 
-#: package/contents/ui/ContextMenu.qml:505
-#: package/contents/ui/ContextMenu.qml:522
+#: package/contents/ui/ContextMenu.qml:507
+#: package/contents/ui/ContextMenu.qml:523
 #, kde-format
 msgid "&Pin to Task Manager"
 msgstr "&Piespraust uzdevumu pārvaldniekam"
@@ -556,79 +556,79 @@ msgstr "Visās aktivitātēs"
 msgid "On The Current Activity"
 msgstr "Pašreizējā aktivitātē"
 
-#: package/contents/ui/ContextMenu.qml:606
+#: package/contents/ui/ContextMenu.qml:605
 #, kde-format
 msgid "Unpin from Task Manager"
 msgstr "Noņemt no uzdevumu pārvaldnieka"
 
-#: package/contents/ui/ContextMenu.qml:621
+#: package/contents/ui/ContextMenu.qml:620
 #, kde-format
 msgid "More"
 msgstr "Vairāk"
 
-#: package/contents/ui/ContextMenu.qml:630
+#: package/contents/ui/ContextMenu.qml:629
 #, kde-format
 msgid "&Move"
 msgstr "&Pārvietot"
 
-#: package/contents/ui/ContextMenu.qml:639
+#: package/contents/ui/ContextMenu.qml:638
 #, kde-format
 msgid "Re&size"
 msgstr "&Mainīt izmēru"
 
-#: package/contents/ui/ContextMenu.qml:653
+#: package/contents/ui/ContextMenu.qml:652
 #, kde-format
 msgid "Ma&ximize"
 msgstr "M&aksimizēt"
 
-#: package/contents/ui/ContextMenu.qml:667
+#: package/contents/ui/ContextMenu.qml:666
 #, kde-format
 msgid "Mi&nimize"
 msgstr "Minimi&zēt"
 
-#: package/contents/ui/ContextMenu.qml:677
+#: package/contents/ui/ContextMenu.qml:676
 #, kde-format
 msgid "Keep &Above Others"
 msgstr "Patu&rēt virs citiem"
 
-#: package/contents/ui/ContextMenu.qml:687
+#: package/contents/ui/ContextMenu.qml:686
 #, kde-format
 msgid "Keep &Below Others"
 msgstr "Pa&turēt zem citiem"
 
-#: package/contents/ui/ContextMenu.qml:699
+#: package/contents/ui/ContextMenu.qml:698
 #, kde-format
 msgid "&Fullscreen"
 msgstr "Piln&ekrāna"
 
-#: package/contents/ui/ContextMenu.qml:711
+#: package/contents/ui/ContextMenu.qml:710
 #, kde-format
 msgid "&Shade"
 msgstr "&Saritināt"
 
-#: package/contents/ui/ContextMenu.qml:727
+#: package/contents/ui/ContextMenu.qml:726
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Ļaut programmu grupēt"
 
-#: package/contents/ui/ContextMenu.qml:773
+#: package/contents/ui/ContextMenu.qml:772
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "&Aizvērt visus"
 
-#: package/contents/ui/ContextMenu.qml:773
+#: package/contents/ui/ContextMenu.qml:772
 #, kde-format
 msgid "&Close"
 msgstr "&Aizvērt"
 
-#: package/contents/ui/Task.qml:155
+#: package/contents/ui/Task.qml:153
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Palaist „%1“"
 
-#: package/contents/ui/Task.qml:160
+#: package/contents/ui/Task.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -637,36 +637,36 @@ msgstr[0] "Pienācis %1 ziņojums."
 msgstr[1] "Pienākuši %1 ziņojumi."
 msgstr[2] "Pienākuši %1 ziņojumi."
 
-#: package/contents/ui/Task.qml:169
+#: package/contents/ui/Task.qml:167
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Rādīt „%1“ uzdevuma paskaidri"
 
-#: package/contents/ui/Task.qml:175
+#: package/contents/ui/Task.qml:173
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "Rādīt „%1“ logus vienu otram blakus"
 
-#: package/contents/ui/Task.qml:180
+#: package/contents/ui/Task.qml:178
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "Atvērt „%1“ logu tekstuālu sarakstu"
 
-#: package/contents/ui/Task.qml:184
+#: package/contents/ui/Task.qml:182
 #, kde-format
 msgid "Activate %1"
 msgstr "Aktivizēt „%1“"
 
-#: package/contents/ui/ToolTipInstance.qml:357
+#: package/contents/ui/ToolTipInstance.qml:362
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "Noņemt klusumu „%1“"
 
-#: package/contents/ui/ToolTipInstance.qml:358
+#: package/contents/ui/ToolTipInstance.qml:363
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
@@ -690,31 +690,31 @@ msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100%"
 
-#: package/contents/ui/ToolTipInstance.qml:425
+#: package/contents/ui/ToolTipInstance.qml:417
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "Uz „%1“"
 
-#: package/contents/ui/ToolTipInstance.qml:428
+#: package/contents/ui/ToolTipInstance.qml:420
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "Piesprausts visām darbvirsmām"
 
-#: package/contents/ui/ToolTipInstance.qml:439
+#: package/contents/ui/ToolTipInstance.qml:426
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "Pieejams visās aktivitātēs"
 
-#: package/contents/ui/ToolTipInstance.qml:461
+#: package/contents/ui/ToolTipInstance.qml:436
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Tāpat pieejams „%1“"
 
-#: package/contents/ui/ToolTipInstance.qml:465
+#: package/contents/ui/ToolTipInstance.qml:440
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
