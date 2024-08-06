@@ -23,6 +23,7 @@ ShapeCanvas {
 
     KeyCap {
         key: parent.key
+        complexShape: shape?.outlines[0].points.length > 4 ?? false
 
         anchors.fill: parent
         anchors.margins: 22 // arbitrary spacing to key outlines

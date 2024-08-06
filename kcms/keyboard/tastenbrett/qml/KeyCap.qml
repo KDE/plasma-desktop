@@ -8,6 +8,9 @@ import QtQuick 2.12
 
 Item {
     property QtObject key
+    property bool complexShape: false
+    // Reduce visual impact for 3rd/4th-level symbols
+    property real higherLevelOpacity: 0.4
 
     // NB: we scale height only by a portion of the available space if
     //   some of the levels aren't there. Visually it looks weird when some
@@ -17,7 +20,7 @@ Item {
     KeyCapLabel {
         id: topLeft
         width: topRight.text == "" ? parent.width : parent.width / 2.0
-        horizontalAlignment: Text.AlignLeft
+        horizontalAlignment: parent.complexShape ? Text.Center : Text.AlignLeft
         height: (bottomLeft.text == "" && bottomRight.text == "") ? parent.height / 1.7 : parent.height  /2.0
         anchors.top: parent.top
         anchors.left: parent.left
@@ -31,11 +34,12 @@ Item {
         anchors.top: parent.top
         anchors.right: parent.right
         text: key.cap.topRight
+        opacity: higherLevelOpacity
     }
     KeyCapLabel {
         id: bottomLeft
         width: bottomRight.text == "" ? parent.width : parent.width / 2.0
-        horizontalAlignment: Text.AlignLeft
+        horizontalAlignment: parent.complexShape ? Text.Center : Text.AlignLeft
         height: (topLeft.text == "" && topRight.text == "") ? parent.height / 1.7 : parent.height  /2.0
         anchors.bottom: parent.bottom
         anchors.left: parent.left
@@ -49,5 +53,6 @@ Item {
         anchors.bottom: parent.bottom
         anchors.right: parent.right
         text: key.cap.bottomRight
+        opacity: higherLevelOpacity
     }
 }

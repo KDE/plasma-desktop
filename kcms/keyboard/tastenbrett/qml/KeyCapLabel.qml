@@ -8,10 +8,14 @@ import QtQuick 2.12
 import QtQuick.Controls 2.5
 
 Label {
-    elide: Text.ElideRight
     color: labelColor // from parent scope
+
+    elide: Text.ElideRight
+    wrapMode: Text.WordWrap
+    maximumLineCount: 2
+    textFormat: Text.PlainText
 
     fontSizeMode: Text.Fit
     minimumPixelSize: 6
-    font.pixelSize: parent.height
+    font.pixelSize: text.length === 1 ? 80 : 40
 }

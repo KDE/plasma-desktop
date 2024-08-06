@@ -145,9 +145,6 @@ static QString keySymToString(KeySym keysym)
 
     if (str.isEmpty()) {
         str = XKeysymToString(keysym);
-        // X11 keys can be of the form "Control_L".
-        // Split them so they are easier on the eyes.
-        str = str.replace('_', ' ');
     }
 
     if (deadMap.contains(keysym)) {
@@ -169,6 +166,14 @@ static QString keySymToString(KeySym keysym)
     // But only do that on strings of 3 chars or more to not lose "_"
     if (str.size() > 2) {
         str.replace('_', ' ');
+    }
+
+    // Hide some prefixes
+    for (const auto prefix : {QLatin1String("ISO "), QLatin1String("KP ")}) {
+        if (str.startsWith(prefix)) {
+            str = str.mid(prefix.length());
+            break;
+        }
     }
 
     return str;
