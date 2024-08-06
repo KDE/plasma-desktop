@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import time
 import unittest
 
 from appium import webdriver
@@ -49,6 +50,7 @@ class EmojierTest(unittest.TestCase):
     def test_1_open_category(self) -> None:
         self.driver.find_element(AppiumBy.NAME, "All").click()
         self.driver.find_element(AppiumBy.NAME, "grinning face").click()
+        time.sleep(1)
         self.assertEqual(self.driver.get_clipboard_text(), "😀")
 
     def test_2_recent_usage(self) -> None:

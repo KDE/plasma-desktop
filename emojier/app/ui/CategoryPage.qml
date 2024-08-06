@@ -164,7 +164,7 @@ Kirigami.ScrollablePage {
             horizontalAlignment: Text.AlignHCenter
 
             Accessible.name: model.toolTip
-            Accessible.onPressAction: tapHandler.tapped(null, null)
+            Accessible.onPressAction: tapHandler.action()
 
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
             QQC2.ToolTip.text: model.toolTip
@@ -173,8 +173,8 @@ Kirigami.ScrollablePage {
             opacity: hoverHandler.hovered ? 0.7 : 1
             scale: tapHandler.pressed ? 0.6 : 1
 
-            Keys.onMenuPressed: event => contextMenuHandler.tapped(null, null)
-            Keys.onReturnPressed: event => tapHandler.tapped(null, null)
+            Keys.onMenuPressed: event => contextMenuHandler.action()
+            Keys.onReturnPressed: event => tapHandler.action()
 
             HoverHandler {
                 id: hoverHandler
@@ -182,26 +182,28 @@ Kirigami.ScrollablePage {
 
             TapHandler {
                 id: tapHandler
-                onTapped: (eventPoint, button) => {
+                function action() {
                     window.report(model.display, model.toolTip);
                 }
+                onTapped: (eventPoint, button) => action()
             }
 
             TapHandler {
                 acceptedButtons: Qt.LeftButton
                 acceptedDevices: PointerDevice.TouchScreen | PointerDevice.Stylus
-                onLongPressed: contextMenuHandler.tapped(null, null)
+                onLongPressed: contextMenuHandler.action()
             }
 
             TapHandler {
                 id: contextMenuHandler
                 acceptedButtons: Qt.RightButton
-                onTapped: (eventPoint, button) => {
+                function action() {
                     const menu = menuComponent.createObject(emojiLabel, {
                         "label": emojiLabel,
                     });
                     menu.popup();
                 }
+                onTapped: (eventPoint, button) => action()
             }
 
             Behavior on opacity {
