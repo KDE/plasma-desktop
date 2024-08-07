@@ -104,7 +104,7 @@ Kirigami.FormLayout {
     QQC2.RadioButton {
         id: invertScreen
 
-        text: i18nc("Invert screen on a system bell", "Invert Screen")
+        text: i18n("Invert screen colors")
 
         KCM.SettingStateBinding {
             configObject: kcm.bellSettings
@@ -121,7 +121,7 @@ Kirigami.FormLayout {
         QQC2.RadioButton {
             id: flashScreen
 
-            text: i18nc("Flash screen on a system bell", "Flash")
+            text: i18n("Flash screen")
 
             KCM.SettingStateBinding {
                 configObject: kcm.bellSettings

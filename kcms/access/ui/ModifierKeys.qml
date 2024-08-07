@@ -27,7 +27,7 @@ Kirigami.FormLayout {
     }
     QQC2.CheckBox {
         Layout.fillWidth: true
-        text: i18nc("Lock sticky keys", "Lock")
+        text: i18n("Lock sticky keys")
 
         KCM.SettingStateBinding {
             configObject: kcm.keyboardSettings
