@@ -417,6 +417,7 @@ PlasmoidItem {
                 return Qt.point(x+width/2, height);
             }
 
+            LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
             anchors {
                 left: parent.left
                 top: parent.top
@@ -428,6 +429,7 @@ PlasmoidItem {
             TaskList {
                 id: taskList
 
+                LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
                 anchors {
                     left: parent.left
                     top: parent.top
