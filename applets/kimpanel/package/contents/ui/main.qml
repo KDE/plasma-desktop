@@ -27,7 +27,7 @@ PlasmoidItem {
     Layout.preferredWidth: vertical ? kimpanel.width : mainLayout.implicitWidth
     Layout.preferredHeight: !vertical ? kimpanel.height : mainLayout.implicitHeight
 
-   preferredRepresentation:fullRepresentation
+    preferredRepresentation: fullRepresentation
 
     Component.onCompleted: {
         timer.restart();
@@ -129,9 +129,9 @@ PlasmoidItem {
                     icon: model.icon
                     hint: model.hint
 
-                    onTriggered : {
+                    onTriggered: {
                         if (button === Qt.LeftButton) {
-                            if (model.key == 'kimpanel-placeholder') {
+                            if (model.key === 'kimpanel-placeholder') {
                                 return;
                             }
                             helper.triggerProperty(model.key);
@@ -169,9 +169,14 @@ PlasmoidItem {
     }
 
     function showMenu(menu, menuData) {
-        var actionList = [];
-        for (var i = 0; i < menuData.length; i++ ) {
-            actionList.push({"actionId": menuData[i].key, "icon": menuData[i].icon, "text": menuData[i].label, hint: menuData[i].hint});
+        const actionList = [];
+        for (const /*KimpanelProperty*/ prop of menuData) {
+            actionList.push({
+                actionId: prop.key,
+                icon: prop.icon,
+                text: prop.label,
+                hint: prop.hint,
+            });
         }
         if (actionList.length > 0) {
             menu.actionList = actionList;
@@ -258,4 +263,3 @@ PlasmoidItem {
         }
     }
 }
-

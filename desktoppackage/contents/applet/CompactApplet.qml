@@ -79,12 +79,12 @@ PlasmaCore.ToolTipArea {
 
         Keys.onPressed: {
             switch (event.key) {
-                case Qt.Key_Space:
-                case Qt.Key_Enter:
-                case Qt.Key_Return:
-                case Qt.Key_Select:
-                    Plasmoid.activated();
-                    break;
+            case Qt.Key_Space:
+            case Qt.Key_Enter:
+            case Qt.Key_Return:
+            case Qt.Key_Select:
+                Plasmoid.activated();
+                break;
             }
         }
     }
@@ -109,10 +109,10 @@ PlasmaCore.ToolTipArea {
             property bool returnAllMargins: true
             // The above makes sure margin is returned even for side margins, that
             // would be otherwise turned off.
-            bottomMargin: !vertical && containerMargins ? -containerMargins('bottom', returnAllMargins) : 0;
-            topMargin: !vertical && containerMargins ? -containerMargins('top', returnAllMargins) : 0;
-            leftMargin: vertical && containerMargins ? -containerMargins('left', returnAllMargins) : 0;
-            rightMargin: vertical && containerMargins ? -containerMargins('right', returnAllMargins) : 0;
+            bottomMargin: !vertical && containerMargins ? -containerMargins('bottom', returnAllMargins) : 0
+            topMargin: !vertical && containerMargins ? -containerMargins('top', returnAllMargins) : 0
+            leftMargin: vertical && containerMargins ? -containerMargins('left', returnAllMargins) : 0
+            rightMargin: vertical && containerMargins ? -containerMargins('right', returnAllMargins) : 0
         }
         imagePath: "widgets/tabbar"
         visible: opacity > 0
@@ -169,7 +169,8 @@ PlasmaCore.ToolTipArea {
         id: dialog
         objectName: "popupWindow"
 
-        popupDirection: switch (Plasmoid.location) {
+        popupDirection: {
+            switch (Plasmoid.location) {
             case PlasmaCore.Types.TopEdge:
                 return Qt.BottomEdge
             case PlasmaCore.Types.LeftEdge:
@@ -178,9 +179,10 @@ PlasmaCore.ToolTipArea {
                 return Qt.LeftEdge
             default:
                 return Qt.TopEdge
+            }
         }
         margin: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersFloatingApplets) ? Kirigami.Units.largeSpacing : 0
-        floating: Plasmoid.location == PlasmaCore.Types.Floating
+        floating: Plasmoid.location === PlasmaCore.Types.Floating
         removeBorderStrategy: Plasmoid.location === PlasmaCore.Types.Floating
             ? PlasmaCore.AppletPopup.AtScreenEdges
             : PlasmaCore.AppletPopup.AtScreenEdges | PlasmaCore.AppletPopup.AtPanelEdges

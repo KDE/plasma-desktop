@@ -76,7 +76,7 @@ PlasmaComponents.ScrollView {
         }
 
         Keys.onPressed: event => {
-            switch(event.key) {
+            switch (event.key) {
             case Qt.Key_Return:
             case Qt.Key_Enter:
                 root.commit();

@@ -24,7 +24,7 @@ Kirigami.ScrollablePage {
     horizontalPadding: 0
 
     Keys.onPressed: event => {
-        if (event.key == Qt.Key_Escape) {
+        if (event.key === Qt.Key_Escape) {
             Qt.quit()
         }
         if (event.text.length > 0 && !view.showSearch && event.modifiers === Qt.NoModifier) {

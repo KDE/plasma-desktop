@@ -13,7 +13,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 DND.DropArea {
     id: root
 
-    signal taskDropped(variant mimeData, variant modifiers)
+    signal taskDropped(var mimeData, var modifiers)
     signal clicked()
     signal entered()
 
@@ -75,14 +75,14 @@ DND.DropArea {
     }
 
     MouseArea {
-        anchors.fill : parent
-        onClicked    : root.clicked()
-        hoverEnabled : true
-        onEntered    : root.entered()
+        anchors.fill: parent
+        onClicked: root.clicked()
+        hoverEnabled: true
+        onEntered: root.entered()
 
-        Accessible.name          : root.activityName
-        Accessible.role          : Accessible.Button
-        Accessible.selected      : root.selected
-        Accessible.onPressAction : root.clicked()
+        Accessible.name: root.activityName
+        Accessible.role: Accessible.Button
+        Accessible.selected: root.selected
+        Accessible.onPressAction: root.clicked()
     }
 }

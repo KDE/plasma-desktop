@@ -7,20 +7,17 @@
 
 .pragma library
 
-var currentlyHoveredActivityItem = null
-function showActivityItemActionsBar(
-        activityItem
-    )
-{
-    if (activityItem == currentlyHoveredActivityItem) {
+var currentlyHoveredActivityItem = null;
+
+function showActivityItemActionsBar(activityItem) {
+    if (activityItem === currentlyHoveredActivityItem) {
         return;
     }
 
-    if (currentlyHoveredActivityItem != null) {
-        currentlyHoveredActivityItem.state = "plain"
+    if (currentlyHoveredActivityItem !== null) {
+        currentlyHoveredActivityItem.state = "plain";
     }
 
     currentlyHoveredActivityItem = activityItem;
     currentlyHoveredActivityItem.state = "showingControls";
 }
-

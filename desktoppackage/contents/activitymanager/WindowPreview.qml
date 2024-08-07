@@ -1,11 +1,10 @@
-/*   vim:set foldmethod=marker:
-
+/*
     SPDX-FileCopyrightText: 2014 Ivan Cukic <ivan.cukic(at)kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.2
+import QtQuick
 import org.kde.kirigami as Kirigami
 
 Image {
@@ -19,7 +18,6 @@ Image {
 
     Item {
         id: title
-
 
         width: titleText.width + 32
         height: titleText.height + 32
@@ -39,9 +37,6 @@ Image {
 
             anchors.centerIn: parent
         }
-
-
-
     }
 
     Drag.active: mouseArea.drag.active
@@ -57,5 +52,3 @@ Image {
         }
     }
 }
-
-

@@ -16,7 +16,7 @@ Item {
 
     property QtObject menu
     property Item visualParent
-    property variant actionList
+    property var actionList
 
     signal actionClicked(string actionId)
 
@@ -34,17 +34,15 @@ Item {
         menu = contextMenuComponent.createObject(root);
 
         if (!actionList || actionList.length === 0) {
-            var item = emptyMenuItemComponent.createObject(menu);
+            const item = emptyMenuItemComponent.createObject(menu);
 
             menu.addMenuItem(item);
 
             return;
         }
 
-        actionList.forEach(function(actionItem) {
-            var item = contextMenuItemComponent.createObject(menu, {
-                "actionItem": actionItem,
-            });
+        actionList.forEach(actionItem => {
+            const item = contextMenuItemComponent.createObject(menu, { actionItem });
 
             menu.addMenuItem(item);
         });
@@ -74,7 +72,7 @@ Item {
         id: contextMenuItemComponent
 
         PlasmaExtras.MenuItem {
-            property variant actionItem
+            property var actionItem
 
             text: actionItem.text ? actionItem.text : ""
             icon: actionItem.icon ? actionItem.icon : null

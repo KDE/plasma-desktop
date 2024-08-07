@@ -56,7 +56,7 @@ FocusScope {
             } else if (event.key === Qt.Key_Tab) {
                 // console.log("TAB KEY");
 
-            } else  {
+            } else {
                 // console.log("OTHER KEY");
                 // event.accepted = false;
                 // heading.forceActiveFocus();

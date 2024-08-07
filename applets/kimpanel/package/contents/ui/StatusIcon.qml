@@ -14,20 +14,23 @@ import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     id: statusIcon
-    property string icon;
-    property string label;
-    property string tip;
-    property string hint;
-    signal triggered(variant button);
+
+    required property string icon
+    required property string label
+    required property string tip
+    required property string hint
+
+    signal triggered(int /*Qt::MouseButton*/ button)
+
     property int iconSize: Kirigami.Units.iconSizes.roundedIconSize(Math.min(width, height))
 
-    opacity: 'disable' == hint ? 0.3 : 1
+    opacity: hint === "disable" ? 0.3 : 1
 
-    function extractLabelString(l) {
+    function extractLabelString(l: string): string {
         if (l.length >= 2 && l.charCodeAt(0) < 127 && l.charCodeAt(1) < 127) {
             return l.substring(0, 2);
         } else {
-             return l.substring(0, 1);
+            return l.substring(0, 1);
         }
     }
 
@@ -47,16 +50,16 @@ Item {
         anchors.centerIn: parent
         width: iconSize
         height: iconSize
-        scale: (mouseArea.pressed ? 0.9 : 1)
+        scale: mouseArea.pressed ? 0.9 : 1
         // a reasonable large size to make Text.Fit work
         minimumPointSize: 0
         font.pointSize: 1024
         fontSizeMode: Text.Fit
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
-        text: extractLabelString(label)
+        text: statusIcon.extractLabelString(statusIcon.label)
         textFormat: Text.PlainText
-        visible: icon.length == 0
+        visible: icon.length === 0
     }
 
     MouseArea {
