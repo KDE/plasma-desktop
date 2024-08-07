@@ -24,13 +24,18 @@ Kirigami.FormLayout {
 
         checked: kcm.screenReaderSettings.enabled
         onToggled: kcm.screenReaderSettings.enabled = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: text
     }
     QQC2.Button {
         text: i18n("Launch Orca Screen Reader Configuration…")
-
         enabled: !kcm.screenReaderSettings.isImmutable("Enabled") && screenReaderInstalled
-
         onClicked: kcm.launchOrcaConfiguration()
+
+        Accessible.role: Accessible.Button
+        Accessible.name: text
+        Accessible.description: i18n("Opens the settings for the Orca Screen Reader in a new window.")
     }
     QQC2.Label {
         text: kcm.orcaLaunchFeedback
@@ -47,5 +52,8 @@ Kirigami.FormLayout {
         visible: !screenReaderInstalled
         type: Kirigami.MessageType.Warning
         Layout.fillWidth: true
+
+        Accessible.role: Accessible.StaticText
+        Accessible.name: text
     }
 }
