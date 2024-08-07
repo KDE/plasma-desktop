@@ -24,10 +24,12 @@ Kirigami.FormLayout {
         }
     }
 
+    QQC2.ButtonGroup { id: audibleBellGroup }
     QQC2.CheckBox {
         id: systemBell
 
         Kirigami.FormData.label: i18n("Audible bell:")
+        QQC2.ButtonGroup.group: audibleBellGroup
         text: i18nc("Enable the system bell", "Enable")
         checked: kcm.bellSettings.systemBell
         onToggled: kcm.bellSettings.systemBell = checked
@@ -39,6 +41,15 @@ Kirigami.FormLayout {
         Accessible.role: Accessible.CheckBox
         Accessible.name: i18n("Enable audible bell")
         Accessible.description: i18n("Emits a sound whenever certain keys are pressed")
+    }
+    QQC2.Label {
+        QQC2.ButtonGroup.group: audibleBellGroup
+        Layout.fillWidth: true
+        text: systemBell.Accessible.description
+        leftPadding: systemBell.indicator.width
+        textFormat: Text.PlainText
+        elide: Text.ElideRight
+        font: Kirigami.Theme.smallFont
     }
 
     RowLayout {
@@ -98,9 +109,11 @@ Kirigami.FormLayout {
     Item {
         Kirigami.FormData.isSection: true
     }
+    QQC2.ButtonGroup { id: visibleBellGroup }
     QQC2.CheckBox {
         id: visibleBell
 
+        QQC2.ButtonGroup.group: visibleBellGroup
         Kirigami.FormData.label: i18n("Visual bell:")
         text: i18nc("Enable visual bell", "Enable")
 
@@ -115,6 +128,15 @@ Kirigami.FormLayout {
         Accessible.role: Accessible.CheckBox
         Accessible.name: i18n("Enable visual bell")
         Accessible.description: i18n("Flashes the screen whenever certain keys are pressed")
+    }
+    QQC2.Label {
+        QQC2.ButtonGroup.group: visibleBellGroup
+        Layout.fillWidth: true
+        text: visibleBell.Accessible.description
+        leftPadding: visibleBell.indicator.width
+        textFormat: Text.PlainText
+        elide: Text.ElideRight
+        font: Kirigami.Theme.smallFont
     }
 
     QQC2.RadioButton {
