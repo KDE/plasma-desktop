@@ -8,12 +8,13 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.12 as QQC2
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.3 as Kirigami
+import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.FormLayout {
     property var screenReaderInstalled : null
 
     QQC2.CheckBox {
+        id: enableScreenReader
         text: i18n("Enable Screen Reader")
 
         KCM.SettingStateBinding {
@@ -35,18 +36,22 @@ Kirigami.FormLayout {
         text: kcm.orcaLaunchFeedback
         textFormat: Text.PlainText
     }
-    QQC2.Label {
-        Layout.fillWidth: true
-        wrapMode: Text.Wrap
-        text: screenReaderInstalled
-            ? i18n("Please note that you may have to log out or reboot once to allow the screen reader to work properly.")
-            : i18n("It appears that the Orca Screen Reader is not installed. Please install it before trying to use this feature, and then log out or reboot")
-        textFormat: Text.PlainText
-    }
 
     onVisibleChanged: {
         if (visible === true && screenReaderInstalled === null) {
             screenReaderInstalled = kcm.orcaInstalled()
         }
+    }
+    Kirigami.InlineMessage {
+        text: i18n("You may have to log out or reboot for the screen reader to work properly.")
+        visible: screenReaderInstalled && enableScreenReader.checked
+        type: Kirigami.MessageType.Warning
+        Layout.fillWidth: true
+    }
+    Kirigami.InlineMessage {
+        text: i18n("The Orca Screen Reader is not installed. Please install it before trying to use this feature, then log out or reboot.")
+        visible: !screenReaderInstalled
+        type: Kirigami.MessageType.Warning
+        Layout.fillWidth: true
     }
 }
