@@ -139,6 +139,7 @@ KCM.AbstractKCM {
                 anchors {
                     fill: parent
                     leftMargin: Kirigami.Units.largeSpacing
+                    topMargin: Kirigami.Units.largeSpacing
                 }
                 contentWidth: availableWidth - contentItem.leftMargin - contentItem.rightMargin
 
