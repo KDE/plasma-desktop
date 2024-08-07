@@ -8,7 +8,7 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.12 as QQC2
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 Kirigami.FormLayout {
     property var screenReaderInstalled : null
@@ -49,13 +49,14 @@ Kirigami.FormLayout {
             screenReaderInstalled = kcm.orcaInstalled()
         }
     }
-    Kirigami.InlineMessage {
-        text: i18n("The Orca Screen Reader is not installed. Please install it before trying to use this feature, then log out or reboot.")
+    Kirigami.PlaceholderMessage {
+        icon.name: "preferences-desktop-text-to-speech"
+        text: i18n("The Orca Screen Reader is not installed.")
+        explanation: i18n("Please install it before trying to use this feature, then log out or reboot.")
         visible: !screenReaderInstalled
-        type: Kirigami.MessageType.Warning
-        Layout.fillWidth: true
 
         Accessible.role: Accessible.StaticText
         Accessible.name: text
+        Accessible.description: explanation
     }
 }
