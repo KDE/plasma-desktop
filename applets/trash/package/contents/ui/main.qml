@@ -47,7 +47,7 @@ PlasmoidItem {
 
     Plasmoid.onActivated: Qt.openUrlExternally("trash:/")
 
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         switch (event.key) {
         case Qt.Key_Space:
         case Qt.Key_Enter:
@@ -70,19 +70,19 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18nc("@action:inmenu Open the trash", "Open")
             icon.name: "document-open-symbolic"
-            onTriggered: Plasmoid.activated()
+            onTriggered: checked => Plasmoid.activated()
         },
         PlasmaCore.Action {
             text: i18nc("@action:inmenu Empty the trash", "Empty")
             icon.name: "trash-empty-symbolic"
             enabled: hasContents
-            onTriggered: TrashPrivate.Trash.emptyTrash()
+            onTriggered: checked => TrashPrivate.Trash.emptyTrash()
         },
         PlasmaCore.Action {
             text: i18nc("@action:inmenu", "Trash Settings…")
             icon.name: "configure-symbolic"
             visible: KConfig.KAuthorized.authorizeControlModule("kcm_trash")
-            onTriggered: KCM.KCMLauncher.open("kcm_trash")
+            onTriggered: checked => KCM.KCMLauncher.open("kcm_trash")
         }
     ]
 
@@ -101,18 +101,22 @@ PlasmoidItem {
         activeFocusOnTab: true
         hoverEnabled: true
 
-        onClicked: Plasmoid.activated()
+        onClicked: mouse => Plasmoid.activated()
 
         DragDrop.DropArea {
             anchors.fill: parent
             preventStealing: true
-            onDragEnter: root.containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
-            onDragLeave: root.containsAcceptableDrag = false
+            onDragEnter: event => {
+                root.containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0;
+            }
+            onDragLeave: event => {
+                root.containsAcceptableDrag = false;
+            }
 
-            onDrop: {
-                root.containsAcceptableDrag = false
+            onDrop: event => {
+                root.containsAcceptableDrag = false;
 
-                var trashableUrls = TrashPrivate.Trash.trashableUrls(event.mimeData.urls)
+                const trashableUrls = TrashPrivate.Trash.trashableUrls(event.mimeData.urls)
                 if (trashableUrls.length > 0) {
                     TrashPrivate.Trash.trashUrls(trashableUrls)
                     event.accept(Qt.MoveAction)

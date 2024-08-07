@@ -62,23 +62,24 @@ DND.DropArea {
     preventStealing: true
     enabled: true
 
-    onDrop: {
+    onDrop: event => {
         root.taskDropped(event.mimeData, event.modifiers);
     }
 
-    onDragEnter: {
+    onDragEnter: event => {
         root.isHovered = true;
     }
 
-    onDragLeave: {
+    onDragLeave: event => {
         root.isHovered = false;
     }
 
     MouseArea {
         anchors.fill: parent
-        onClicked: root.clicked()
         hoverEnabled: true
+
         onEntered: root.entered()
+        onClicked: mouse => root.clicked()
 
         Accessible.name: root.activityName
         Accessible.role: Accessible.Button

@@ -36,7 +36,7 @@ FocusScope {
 
         signal closeRequested()
 
-        Keys.onPressed: {
+        Keys.onPressed: event => {
             if (event.key === Qt.Key_Escape) {
                 if (heading.searchString.length > 0) {
                     heading.searchString = "";

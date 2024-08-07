@@ -100,7 +100,7 @@ PlasmoidItem {
 
                 activeFocusOnTab: true
 
-                Keys.onPressed: {
+                Keys.onPressed: event => {
                     switch (event.key) {
                     case Qt.Key_Space:
                     case Qt.Key_Enter:
@@ -129,7 +129,7 @@ PlasmoidItem {
                     icon: model.icon
                     hint: model.hint
 
-                    onTriggered: {
+                    onTriggered: button => {
                         if (button === Qt.LeftButton) {
                             if (model.key === 'kimpanel-placeholder') {
                                 return;
@@ -186,7 +186,7 @@ PlasmoidItem {
 
     ActionMenu {
         id: actionMenu
-        onActionClicked: {
+        onActionClicked: actionId => {
             helper.triggerProperty(actionId);
         }
     }

@@ -218,7 +218,7 @@ PlasmoidItem {
         id: backend
         highlightWindows: Plasmoid.configuration.highlightWindows
 
-        onAddLauncher: {
+        onAddLauncher: url => {
             tasks.addLauncher(url);
         }
     }

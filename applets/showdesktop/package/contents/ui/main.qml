@@ -66,9 +66,11 @@ PlasmoidItem {
         activeFocusOnTab: true
         hoverEnabled: true
 
-        onClicked: Plasmoid.activated();
+        onClicked: mouse => {
+            Plasmoid.activated();
+        }
 
-        Keys.onPressed: {
+        Keys.onPressed: event => {
             switch (event.key) {
             case Qt.Key_Space:
             case Qt.Key_Enter:
@@ -101,7 +103,7 @@ PlasmoidItem {
         // also activate when dragging an item over the plasmoid so a user can easily drag data to the desktop
         DropArea {
             anchors.fill: parent
-            onEntered: activateTimer.start()
+            onEntered: drag => activateTimer.start()
             onExited: activateTimer.stop()
         }
 
@@ -183,7 +185,9 @@ PlasmoidItem {
             checked: minimizeAllController.active
             toolTip: minimizeAllController.description
             enabled: !peekController.active
-            onTriggered: minimizeAllController.toggle()
+            onTriggered: checked => {
+                minimizeAllController.toggle();
+            }
         },
         PlasmaCore.Action {
             text: peekController.titleInactive
@@ -191,7 +195,9 @@ PlasmoidItem {
             checked: peekController.active
             toolTip: peekController.description
             enabled: !minimizeAllController.active
-            onTriggered: peekController.toggle()
+            onTriggered: checked => {
+                peekController.toggle();
+            }
         }
     ]
 }

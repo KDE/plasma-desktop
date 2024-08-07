@@ -380,7 +380,7 @@ Kicker.DashboardWindow {
                         preloadAllAppsTimer.defer();
                     }
 
-                    onKeyNavRight: subGridIndex => {
+                    onKeyNavRight: {
                         mainColumn.tryActivate(currentRow(), 0);
                     }
 
