@@ -29,13 +29,16 @@ Kirigami.FormLayout {
 
         Kirigami.FormData.label: i18n("Audible bell:")
         text: i18nc("Enable the system bell", "Enable")
+        checked: kcm.bellSettings.systemBell
+        onToggled: kcm.bellSettings.systemBell = checked
         KCM.SettingStateBinding {
             configObject: kcm.bellSettings
             settingName: "SystemBell"
         }
 
-        checked: kcm.bellSettings.systemBell
-        onToggled: kcm.bellSettings.systemBell = checked
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: i18n("Enable audible bell")
+        Accessible.description: i18n("Emits a sound whenever certain keys are pressed")
     }
 
     RowLayout {
@@ -54,6 +57,9 @@ Kirigami.FormLayout {
 
             checked: kcm.bellSettings.customBell
             onToggled: kcm.bellSettings.customBell= checked
+
+            Accessible.role: Accessible.CheckBox
+            Accessible.name: i18n("Enable custom sound for the audible bell")
         }
 
         QQC2.TextField {
@@ -68,12 +74,14 @@ Kirigami.FormLayout {
             }
 
             onEditingFinished: kcm.bellSettings.customBellFile = textEdit.text
+
+            Accessible.role: Accessible.EditableText
+            Accessible.name: i18n("Text field containing the path for an audio file")
         }
         QQC2.Button {
             icon.name: "folder"
             QQC2.ToolTip.visible: down
             QQC2.ToolTip.text: i18n("Search audio file for the system bell")
-            Accessible.name: i18n("Button search audio file")
             KCM.SettingStateBinding {
                 configObject: kcm.bellSettings
                 settingName: "CustomBellFile"
@@ -81,6 +89,10 @@ Kirigami.FormLayout {
             }
 
             onClicked: fileDialog.open()
+
+            Accessible.role: Accessible.Button
+            Accessible.name: i18n("Button to search for an audio file")
+            Accessible.description: i18n("Opens a new dialog to search for an audio file")
         }
     }
     Item {
@@ -99,6 +111,10 @@ Kirigami.FormLayout {
 
         checked: kcm.bellSettings.visibleBell
         onToggled: kcm.bellSettings.visibleBell = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: i18n("Enable visual bell")
+        Accessible.description: i18n("Flashes the screen whenever certain keys are pressed")
     }
 
     QQC2.RadioButton {
@@ -114,6 +130,9 @@ Kirigami.FormLayout {
 
         checked: kcm.bellSettings.invertScreen
         onToggled: kcm.bellSettings.invertScreen = checked
+
+        Accessible.role: Accessible.RadioButton
+        Accessible.name: text
     }
     RowLayout {
         enabled: kcm.bellSettings.visibleBell
@@ -130,6 +149,10 @@ Kirigami.FormLayout {
 
             checked: !kcm.bellSettings.invertScreen
             onToggled: kcm.bellSettings.invertScreen = !checked
+
+            Accessible.role: Accessible.RadioButton
+            Accessible.name: text
+            Accessible.description: i18n("Briefly flashes the screen with the color selected using the color chooser next to this radio button")
         }
         KQuickAddons.ColorButton {
             text: i18nc("Color of the system bell","Color")
@@ -143,6 +166,10 @@ Kirigami.FormLayout {
 
             color: kcm.bellSettings.visibleBellColor
             onAccepted: color => kcm.bellSettings.visibleBellColor = color
+
+            Accessible.role: Accessible.ColorChooser
+            Accessible.name: i18n("Color of the visible bell")
+            Accessible.description: i18n("Color chooser for the flash screen color")
         }
     }
     QQC2.SpinBox {
@@ -161,5 +188,8 @@ Kirigami.FormLayout {
         onValueModified: kcm.bellSettings.visibleBellPause = value
         textFromValue: function(value) { return value + " ms"}
 
+        Accessible.role: Accessible.SpinBox
+        Accessible.name: i18n("Duration of the visible bell")
+        Accessible.description: i18n("Length of time the color will flash on the screen")
     }
 }
