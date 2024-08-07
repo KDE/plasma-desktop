@@ -43,12 +43,6 @@ Kirigami.FormLayout {
         }
     }
     Kirigami.InlineMessage {
-        text: i18n("You may have to log out or reboot for the screen reader to work properly.")
-        visible: screenReaderInstalled && enableScreenReader.checked
-        type: Kirigami.MessageType.Warning
-        Layout.fillWidth: true
-    }
-    Kirigami.InlineMessage {
         text: i18n("The Orca Screen Reader is not installed. Please install it before trying to use this feature, then log out or reboot.")
         visible: !screenReaderInstalled
         type: Kirigami.MessageType.Warning
