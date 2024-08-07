@@ -22,6 +22,7 @@ add_test(
     NAME emojiertest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/emojiertest.py --failfast
 )
+set_tests_properties(emojiertest PROPERTIES TIMEOUT 300 ENVIRONMENT "TEST_WITH_KWIN_WAYLAND=0")
 
 add_test(
     NAME kcm_plasmasearch_test
