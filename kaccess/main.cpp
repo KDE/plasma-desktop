@@ -13,6 +13,8 @@
 #include <QDebug>
 #include <QtGui/private/qtx11extras_p.h>
 
+#include <plasma_version.h>
+
 int main(int argc, char *argv[])
 {
     qunsetenv("SESSION_MANAGER");
@@ -33,7 +35,12 @@ int main(int argc, char *argv[])
     // we need an application object for QX11Info
     QApplication app(argc, argv);
 
-    KAboutData about(QStringLiteral("kaccess"), i18n("Accessibility"), QString(), {}, KAboutLicense::GPL_V2, i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
+    KAboutData about(QStringLiteral("kaccess"),
+                     i18n("Accessibility"),
+                     QStringLiteral(PLASMA_VERSION_STRING),
+                     {},
+                     KAboutLicense::GPL_V2,
+                     i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 
     about.addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author"), QStringLiteral("hoelzer@kde.org"));
     about.setDesktopFileName(QStringLiteral("kaccess"));
