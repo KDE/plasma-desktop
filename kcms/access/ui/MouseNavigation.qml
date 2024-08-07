@@ -39,6 +39,7 @@ Kirigami.FormLayout {
 
         value: kcm.mouseSettings.accelerationDelay
         onValueChanged: kcm.mouseSettings.accelerationDelay = value
+        textFromValue: function(value) { return value + " ms" }
     }
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Repeat interval:")
@@ -53,6 +54,7 @@ Kirigami.FormLayout {
 
         value: kcm.mouseSettings.repetitionInterval
         onValueChanged: kcm.mouseSettings.repetitionInterval = value
+        textFromValue: function(value) { return value + " ms" }
     }
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Acceleration time:")
@@ -67,6 +69,7 @@ Kirigami.FormLayout {
 
         value: kcm.mouseSettings.accelerationTime
         onValueChanged: kcm.mouseSettings.accelerationTime = value
+        textFromValue: function(value) { return value + " ms" }
     }
     QQC2.SpinBox {
         Kirigami.FormData.label:  i18n("Maximum speed:")
@@ -81,6 +84,7 @@ Kirigami.FormLayout {
 
         value: kcm.mouseSettings.maxSpeed
         onValueChanged: kcm.mouseSettings.maxSpeed = value
+        textFromValue: function(value) { return value + " ms" }
     }
     QQC2.SpinBox {
         Kirigami.FormData.label: i18n("Pointer acceleration:")
@@ -95,5 +99,6 @@ Kirigami.FormLayout {
 
         value: kcm.mouseSettings.profileCurve
         onValueChanged: kcm.mouseSettings.profileCurve = value
+        textFromValue: function(value) { return value + " ms" }
     }
 }

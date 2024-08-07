@@ -159,5 +159,7 @@ Kirigami.FormLayout {
 
         value: kcm.bellSettings.visibleBellPause
         onValueModified: kcm.bellSettings.visibleBellPause = value
+        textFromValue: function(value) { return value + " ms"}
+
     }
 }
