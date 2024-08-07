@@ -147,34 +147,13 @@ KCM.AbstractKCM {
                     width: contentScroll.width
                     currentIndex: listView.currentIndex
 
-                    Bell {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    ModifierKeys {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    KeyboardFilters {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    MouseNavigation {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    ActivationGestures {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    ScreenReader {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    ShakeCursor {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
+                    Bell {}
+                    ModifierKeys {}
+                    KeyboardFilters {}
+                    MouseNavigation {}
+                    ActivationGestures {}
+                    ScreenReader {}
+                    ShakeCursor {}
                 }
             }
         }
