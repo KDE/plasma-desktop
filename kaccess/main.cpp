@@ -8,7 +8,9 @@
 #include "kaccess.h"
 
 #include <KAboutData>
+#include <KCrash>
 #include <KLocalizedString>
+
 #include <QApplication>
 #include <QDebug>
 #include <QtGui/private/qtx11extras_p.h>
@@ -46,6 +48,8 @@ int main(int argc, char *argv[])
     about.setDesktopFileName(QStringLiteral("kaccess"));
     // set data as used for D-Bus by KAccessApp
     KAboutData::setApplicationData(about);
+
+    KCrash::initialize();
 
     KAccessApp acc;
     if (acc.isFailed()) {

@@ -17,6 +17,7 @@ target_link_libraries(kaccess
     KF6::WidgetsAddons
     KF6::WindowSystem
     KF6::DBusAddons
+    KF6::Crash
     X11::X11
     Canberra::Canberra
 )
