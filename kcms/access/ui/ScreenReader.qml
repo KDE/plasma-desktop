@@ -51,8 +51,8 @@ Kirigami.FormLayout {
     }
     Kirigami.PlaceholderMessage {
         icon.name: "preferences-desktop-text-to-speech"
-        text: i18n("The Orca Screen Reader is not installed.")
-        explanation: i18n("Please install it before trying to use this feature, then log out or reboot.")
+        text: i18n("The Orca Screen Reader is not installed")
+        explanation: i18n("Please install it, then close and reopen this window")
         visible: !screenReaderInstalled
 
         Accessible.role: Accessible.StaticText
