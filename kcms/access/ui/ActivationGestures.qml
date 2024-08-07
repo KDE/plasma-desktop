@@ -25,21 +25,23 @@ Kirigami.FormLayout {
         onToggled: kcm.activationGesturesSettings.gestures = checked
     }
 
-        QQC2.CheckBox {
-            text: i18n("Turn sticky keys and slow keys off after inactivity:")
+    QQC2.CheckBox {
+        text: i18n("Turn sticky keys and slow keys off after inactivity:")
 
-            KCM.SettingStateBinding {
-                configObject: kcm.activationGesturesSettings
-                settingName: "AccessXTimeout"
-            }
-
-            checked: kcm.activationGesturesSettings.accessXTimeout
-            onToggled: kcm.activationGesturesSettings.accessXTimeout = checked
-
+        KCM.SettingStateBinding {
+            configObject: kcm.activationGesturesSettings
+            settingName: "AccessXTimeout"
         }
+
+        checked: kcm.activationGesturesSettings.accessXTimeout
+        onToggled: kcm.activationGesturesSettings.accessXTimeout = checked
+
+    }
+    RowLayout {
         QQC2.SpinBox {
             id: spinbox
 
+            Layout.leftMargin: Kirigami.Units.smallSpacing * 5
             KCM.SettingStateBinding {
                 configObject: kcm.activationGesturesSettings
                 settingName: "AccessXTimeoutDelay"
@@ -65,6 +67,7 @@ Kirigami.FormLayout {
             value: kcm.activationGesturesSettings.accessXTimeoutDelay
             onValueChanged: kcm.activationGesturesSettings.accessXTimeoutDelay = value
         }
+    }
 
     QQC2.CheckBox {
         Kirigami.FormData.label: i18n("When a gesture is used:")
