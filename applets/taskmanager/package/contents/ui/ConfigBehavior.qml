@@ -228,7 +228,6 @@ KCMUtils.SimpleKCM {
                 }
             }
             QQC2.ButtonGroup.group: reverseModeRadioButtonGroup
-            visible: reverseMode.visible
         }
 
         QQC2.RadioButton {
@@ -247,6 +246,5 @@ KCMUtils.SimpleKCM {
             }
             QQC2.ButtonGroup.group: reverseModeRadioButtonGroup
         }
-
     }
 }
