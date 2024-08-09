@@ -51,23 +51,22 @@ Kirigami.FormLayout {
         font: Kirigami.Theme.smallFont
     }
 
-    QQC2.CheckBox {
-        text: i18n("Disable after inactivity:")
-
-        KCM.SettingStateBinding {
-            configObject: kcm.activationGesturesSettings
-            settingName: "AccessXTimeout"
-        }
-
-        checked: kcm.activationGesturesSettings.accessXTimeout
-        onToggled: kcm.activationGesturesSettings.accessXTimeout = checked
-
-    }
     RowLayout {
+        QQC2.CheckBox {
+            text: i18nc("Disable activation gestures after", "Disable after")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.activationGesturesSettings
+                settingName: "AccessXTimeout"
+            }
+
+            checked: kcm.activationGesturesSettings.accessXTimeout
+            onToggled: kcm.activationGesturesSettings.accessXTimeout = checked
+
+        }
         QQC2.SpinBox {
             id: spinbox
 
-            Layout.leftMargin: Kirigami.Units.smallSpacing * 5
             KCM.SettingStateBinding {
                 configObject: kcm.activationGesturesSettings
                 settingName: "AccessXTimeoutDelay"
