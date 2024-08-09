@@ -27,6 +27,9 @@ Kirigami.FormLayout {
 
             checked: kcm.mouseSettings.mouseKeys
             onToggled: kcm.mouseSettings.mouseKeys = checked
+
+            Accessible.role: Accessible.CheckBox
+            Accessible.name: i18n("Use the number pad to move the cursor")
         }
         Kirigami.ContextualHelpButton {
             toolTipText: xi18nc("@info:tooltip", "The numpad key <shortcut>5</shortcut> functions as a mouse click. The keys <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut>, and <shortcut>8</shortcut> allow for cardinal movement (down, left, right, and up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut>, and <shortcut>9</shortcut> allow for diagonal movement.")
@@ -112,6 +115,10 @@ Kirigami.FormLayout {
 
         value: kcm.mouseSettings.maxSpeed
         onValueChanged: kcm.mouseSettings.maxSpeed = value
+        textFromValue: function(value) { return value + " ms" }
+
+        Accessible.role: Accessible.SpinBox
+        Accessible.name: i18n("Maximum speed")
     }
     QQC2.SpinBox {
         Kirigami.FormData.label: i18nc("@label:spinbox", "Pointer acceleration:")

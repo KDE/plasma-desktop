@@ -24,6 +24,10 @@ Kirigami.FormLayout {
 
         checked: kcm.activationGesturesSettings.gestures
         onToggled: kcm.activationGesturesSettings.gestures = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: i18n("Enable activation gestures.")
+        Accessible.description: i18n("Press Shift + Num Lock to enable Mouse Navigation. Press Shift 5 times to enable Sticky Keys. Hold Shift for 8 seconds to enable Slow Keys")
     }
     QQC2.Label {
         leftPadding: activationShortcuts.indicator.width
@@ -53,6 +57,8 @@ Kirigami.FormLayout {
             checked: kcm.activationGesturesSettings.accessXTimeout
             onToggled: kcm.activationGesturesSettings.accessXTimeout = checked
 
+            Accessible.role: Accessible.CheckBox
+            Accessible.name: i18n("Disable the accessibility features enabled by activation shortcuts after a specified time")
         }
         QQC2.SpinBox {
             id: spinbox
@@ -81,6 +87,9 @@ Kirigami.FormLayout {
 
             value: kcm.activationGesturesSettings.accessXTimeoutDelay
             onValueChanged: kcm.activationGesturesSettings.accessXTimeoutDelay = value
+
+            Accessible.role: Accessible.SpinBox
+            Accessible.name: i18n("The time until the enabled accessibility settings are automatically disabled.")
         }
     }
 
@@ -95,6 +104,9 @@ Kirigami.FormLayout {
 
         checked: kcm.activationGesturesSettings.gestureConfirmation
         onToggled: kcm.activationGesturesSettings.gestureConfirmation = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: i18n("Display a confirmation dialog whenever a gesture is activated")
     }
     QQC2.CheckBox {
         text: i18n("Ring the system bell")
@@ -106,6 +118,9 @@ Kirigami.FormLayout {
 
         checked: kcm.activationGesturesSettings.accessXBeep
         onToggled: kcm.activationGesturesSettings.accessXBeep = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: i18n("Ring the system bell whenever a gesture is activated")
     }
     QQC2.CheckBox {
         text: i18n("Show a notification")
@@ -117,11 +132,18 @@ Kirigami.FormLayout {
 
         checked: kcm.activationGesturesSettings.keyboardNotifyAccess
         onToggled: kcm.activationGesturesSettings.keyboardNotifyAccess = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: i18n("Show a notification whenever a gesture is activated")
     }
     QQC2.Button {
         text: i18n("Configure Notifications…")
         icon.name: "preferences-desktop-notification"
 
         onClicked: kcm.configureKNotify()
+
+        Accessible.role: Accessible.Button
+        Accessible.name: text
+        Accessible.description: i18n("Opens a new dialog to configure notifications for most accessibility features.")
     }
 }
