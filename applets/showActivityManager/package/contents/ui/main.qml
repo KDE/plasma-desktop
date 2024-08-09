@@ -81,7 +81,7 @@ PlasmoidItem {
         Kirigami.Icon {
             id: icon
 
-            anchors.centerIn: parent
+            anchors.verticalCenter: parent.verticalCenter
 
             height: Math.min(parent.height,
                              parent.width,
