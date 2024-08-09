@@ -12,9 +12,11 @@ import org.kde.kirigami 2.3 as Kirigami
 
 Kirigami.FormLayout {
 
+    QQC2.ButtonGroup { id: gesturesGroup }
     QQC2.CheckBox {
-        Kirigami.FormData.label: i18n("Activation:")
-        text: i18n("Use gestures for activating sticky keys and slow keys")
+        id: activationGestures
+        Kirigami.FormData.label: i18n("Activation gestures:")
+        text: i18nc("Enable activation gestures", "Enable")
 
         KCM.SettingStateBinding {
             configObject: kcm.activationGesturesSettings
@@ -24,9 +26,33 @@ Kirigami.FormLayout {
         checked: kcm.activationGesturesSettings.gestures
         onToggled: kcm.activationGesturesSettings.gestures = checked
     }
+    QQC2.Label {
+        QQC2.ButtonGroup.group: gesturesGroup
+        leftPadding: activationGestures.indicator.width
+        text: i18n("Press Shift + Num Lock to enable Mouse Navigation")
+        textFormat: Text.PlainText
+        elide: Text.ElideRight
+        font: Kirigami.Theme.smallFont
+    }
+    QQC2.Label {
+        QQC2.ButtonGroup.group: gesturesGroup
+        leftPadding: activationGestures.indicator.width
+        text: i18n("Press Shift 5 times to enable Sticky Keys")
+        textFormat: Text.PlainText
+        elide: Text.ElideRight
+        font: Kirigami.Theme.smallFont
+    }
+    QQC2.Label {
+        QQC2.ButtonGroup.group: gesturesGroup
+        leftPadding: activationGestures.indicator.width
+        text: i18n("Hold Shift for 8 seconds to enable Slow Keys")
+        textFormat: Text.PlainText
+        elide: Text.ElideRight
+        font: Kirigami.Theme.smallFont
+    }
 
     QQC2.CheckBox {
-        text: i18n("Turn sticky keys and slow keys off after inactivity:")
+        text: i18n("Disable after inactivity:")
 
         KCM.SettingStateBinding {
             configObject: kcm.activationGesturesSettings
