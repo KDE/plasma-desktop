@@ -28,6 +28,9 @@ Kirigami.FormLayout {
 
             checked: kcm.keyboardSettings.stickyKeys
             onToggled: kcm.keyboardSettings.stickyKeys = checked
+
+            Accessible.role: Accessible.CheckBox
+            Accessible.name: i18n("Enable sticky keys")
         }
         Kirigami.ContextualHelpButton {
             toolTipText: i18nc("@info:tooltip", "Modifier keys like Ctrl, Shift, Alt, and the Meta/Super/Windows key act as though they “stick in place” and no longer need to be held down when typing a keyboard shortcut.")
@@ -64,6 +67,9 @@ Kirigami.FormLayout {
 
         checked: kcm.keyboardSettings.stickyKeysAutoOff
         onToggled: kcm.keyboardSettings.stickyKeysAutoOff = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: text
     }
     QQC2.CheckBox {
         Layout.fillWidth: true
@@ -77,6 +83,9 @@ Kirigami.FormLayout {
 
         checked: kcm.keyboardSettings.stickyKeysBeep
         onToggled: kcm.keyboardSettings.stickyKeysBeep = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: text
     }
 
     Item {
@@ -115,11 +124,18 @@ Kirigami.FormLayout {
 
         checked: kcm.keyboardSettings.keyboardNotifyModifiers
         onToggled: kcm.keyboardSettings.keyboardNotifyModifiers = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: text
     }
     QQC2.Button {
         text: i18nc("@action:button", "Configure Notifications…")
         icon.name: "preferences-desktop-notification"
 
         onClicked: kcm.configureKNotify()
+
+        Accessible.role: Accessible.Button
+        Accessible.name: text
+        Accessible.description: i18n("Opens a new dialog to configure notifications for most accessibility features.")
     }
 }
