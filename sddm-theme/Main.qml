@@ -116,7 +116,7 @@ Item {
             id: clockShadow
             anchors.fill: clock
             source: clock
-            visible: !softwareRendering
+            visible: !softwareRendering && config.showClock === "true"
             radius: 6
             samples: 14
             spread: 0.3
@@ -132,7 +132,7 @@ Item {
         Clock {
             id: clock
             property Item shadow: clockShadow
-            visible: y > 0
+            visible: y > 0 && config.showClock === "true"
             anchors.horizontalCenter: parent.horizontalCenter
             y: (userListComponent.userList.y + mainStack.y)/2 - height/2
             Layout.alignment: Qt.AlignBaseline

@@ -1,5 +1,6 @@
 [General]
 showlogo=hidden
+showClock=true
 logo=${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze/default-logo.svg
 type=image
 color=#1d99f3
