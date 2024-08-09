@@ -28,6 +28,9 @@ Kirigami.FormLayout {
 
             checked: kcm.keyboardFiltersSettings.slowKeys
             onToggled: kcm.keyboardFiltersSettings.slowKeys = checked
+
+            Accessible.role: Accessible.CheckBox
+            Accessible.name: i18n("Enable slow keys")
         }
         Kirigami.ContextualHelpButton {
             toolTipText: i18nc("@info:tooltip", "For a key to be accepted, it has to be held until the set amount of time. Useful if you accidentally type more than one key at a time or have difficulty pressing the key you want the first time.")
@@ -76,6 +79,9 @@ Kirigami.FormLayout {
 
         checked: kcm.keyboardFiltersSettings.slowKeysPressBeep
         onToggled: kcm.keyboardFiltersSettings.slowKeysPressBeep = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: i18n("Ring the system bell when a key is pressed")
     }
     QQC2.CheckBox {
         id: slowKeysAcceptBeep
@@ -90,6 +96,9 @@ Kirigami.FormLayout {
 
         checked: kcm.keyboardFiltersSettings.slowKeysAcceptBeep
         onToggled: kcm.keyboardFiltersSettings.slowKeysAcceptBeep = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: i18n("Ring the system bell when a key is accepted")
     }
     QQC2.CheckBox {
         id: slowKeysRejectBeep
@@ -104,6 +113,9 @@ Kirigami.FormLayout {
 
         checked: kcm.keyboardFiltersSettings.slowKeysRejectBeep
         onToggled: kcm.keyboardFiltersSettings.slowKeysRejectBeep = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: i18n("Ring the system bell when a key is rejected")
     }
     Item {
         Kirigami.FormData.isSection: true
@@ -124,6 +136,9 @@ Kirigami.FormLayout {
 
             checked: kcm.keyboardFiltersSettings.bounceKeys
             onToggled: kcm.keyboardFiltersSettings.bounceKeys = checked
+
+            Accessible.role: Accessible.CheckBox
+            Accessible.name: i18n("Enable bounce keys")
         }
         Kirigami.ContextualHelpButton {
             toolTipText: i18nc("@info:tooltip", "Ignore rapid, repeated keypresses of the same key. Useful if you have hand tremors that cause you to press a key multiple times when you only intend to press once.")
@@ -169,5 +184,8 @@ Kirigami.FormLayout {
 
         checked: kcm.keyboardFiltersSettings.bounceKeysRejectBeep
         onToggled: kcm.keyboardFiltersSettings.bounceKeysRejectBeep = checked
+
+        Accessible.role: Accessible.CheckBox
+        Accessible.name: text
     }
 }
