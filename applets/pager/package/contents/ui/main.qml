@@ -486,7 +486,7 @@ PlasmoidItem {
                             y: Math.round(geometry.y * pagerItemGrid.heightScaleFactor) - 1
                             width: Math.round(geometry.width * pagerItemGrid.widthScaleFactor)
                             height: Math.round(geometry.height * pagerItemGrid.heightScaleFactor)
-                            visible: model.IsMinimized !== true
+                            visible: Plasmoid.configuration.showWindowOutlines && model.IsMinimized !== true
                             color: {
                                 if (desktop.active) {
                                     if (model.IsActive === true)

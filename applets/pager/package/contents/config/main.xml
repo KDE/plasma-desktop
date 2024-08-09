@@ -15,6 +15,10 @@
         </choices>
         <default>2</default>
     </entry>
+    <entry name="showWindowOutlines" type="Bool">
+      <label>Whether to show window outlines.</label>
+      <default>true</default>
+    </entry>
     <entry name="showWindowIcons" type="Bool">
       <label>Whether to show window icons inside the window rectangles.</label>
       <default>false</default>

@@ -16,6 +16,7 @@ KCM.SimpleKCM {
     readonly property bool isActivityPager: Plasmoid.pluginName === "org.kde.plasma.activitypager"
 
     property int cfg_displayedText
+    property alias cfg_showWindowOutlines: showWindowOutlines.checked
     property alias cfg_showWindowIcons: showWindowIcons.checked
     property int cfg_currentDesktopSelected
     property alias cfg_pagerLayout: pagerLayout.currentIndex
@@ -31,13 +32,18 @@ KCM.SimpleKCM {
             id: currentDesktopSelectedGroup
         }
 
-
         QQC2.CheckBox {
-            id: showWindowIcons
+            id: showWindowOutlines
 
             Kirigami.FormData.label: i18n("General:")
 
+            text: i18n("Show window outlines")
+        }
+
+        QQC2.CheckBox {
+            id: showWindowIcons
             text: i18n("Show application icons on window outlines")
+            enabled: showWindowOutlines.checked
         }
 
         QQC2.CheckBox {
