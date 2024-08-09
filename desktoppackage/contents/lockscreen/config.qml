@@ -7,7 +7,7 @@ import org.kde.kcmutils as KCM
 Kirigami.FormLayout {
     property alias cfg_alwaysShowClock: alwaysClock.checked
     property alias cfg_showMediaControls: showMediaControls.checked
-    property bool cfg_alwaysShowClockDefault: false
+    property bool cfg_alwaysShowClockDefault: true
     property bool cfg_showMediaControlsDefault: false
 
     twinFormLayouts: parentLayout
@@ -19,7 +19,7 @@ Kirigami.FormLayout {
                                         "Clock:")
         text: i18ndc("plasma_shell_org.kde.plasma.desktop",
                      "@option:check",
-                     "Keep visible when unlocking prompt disappears")
+                     "Show clock")
 
         KCM.SettingHighlighter {
             highlight: cfg_alwaysShowClockDefault != cfg_alwaysShowClock
