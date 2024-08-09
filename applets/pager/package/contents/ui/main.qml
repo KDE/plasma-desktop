@@ -475,9 +475,10 @@ PlasmoidItem {
 
                             z: 1 + model.StackingOrder
 
-                            property rect geometry: model.Geometry
-                            property string visibleName: model.display
-                            property bool minimized: (model.IsMinimized === true)
+                            readonly property rect geometry: model.Geometry
+                            readonly property string visibleName: model.display
+                            readonly property bool minimized: model.IsMinimized
+
                             onMinimizedChanged: desktop.updateSubTextIfNeeded()
                             onVisibleNameChanged: desktop.updateSubTextIfNeeded()
 
@@ -486,24 +487,27 @@ PlasmoidItem {
                             y: Math.round(geometry.y * pagerItemGrid.heightScaleFactor) - 1
                             width: Math.round(geometry.width * pagerItemGrid.widthScaleFactor)
                             height: Math.round(geometry.height * pagerItemGrid.heightScaleFactor)
-                            visible: Plasmoid.configuration.showWindowOutlines && model.IsMinimized !== true
+                            visible: Plasmoid.configuration.showWindowOutlines && !model.IsMinimized
                             color: {
                                 if (desktop.active) {
-                                    if (model.IsActive === true)
-                                        return windowActiveOnActiveDesktopColor;
-                                    else
-                                        return windowInactiveOnActiveDesktopColor;
+                                    if (model.IsActive) {
+                                        return root.windowActiveOnActiveDesktopColor;
+                                    } else {
+                                        return root.windowInactiveOnActiveDesktopColor;
+                                    }
                                 } else {
-                                    if (model.IsActive === true)
-                                        return windowActiveColor;
-                                    else
-                                        return windowInactiveColor;
+                                    if (model.IsActive) {
+                                        return root.windowActiveColor;
+                                    } else {
+                                        return root.windowInactiveColor;
+                                    }
                                 }
                             }
 
                             border.width: 1
-                            border.color: (model.IsActive === true) ? windowActiveBorderColor
-                                                    : windowInactiveBorderColor
+                            border.color: model.IsActive
+                                ? root.windowActiveBorderColor
+                                : root.windowInactiveBorderColor
 
                             Behavior on width  { NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
                             Behavior on height { NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
