@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-08 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2024-04-28 17:39+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -684,8 +684,8 @@ msgstr "時計:"
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "アンロック画面が消えても表示し続ける"
+msgid "Show clock"
+msgstr ""
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
@@ -814,3 +814,7 @@ msgstr ""
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "パネルフォーカスインジケータ"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "アンロック画面が消えても表示し続ける"

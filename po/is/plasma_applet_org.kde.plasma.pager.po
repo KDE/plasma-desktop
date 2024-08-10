@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2022-12-11 13:50+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -32,87 +32,93 @@ msgid "General:"
 msgstr "Almennt:"
 
 #: package/contents/ui/configGeneral.qml:40
-#, kde-format
-msgid "Show application icons on window outlines"
+#, fuzzy, kde-format
+#| msgid "Show application icons on window outlines"
+msgid "Show window outlines"
 msgstr "Sýna forritatákn á útlínum glugga"
 
 #: package/contents/ui/configGeneral.qml:45
 #, kde-format
+msgid "Show application icons on window outlines"
+msgstr "Sýna forritatákn á útlínum glugga"
+
+#: package/contents/ui/configGeneral.qml:51
+#, kde-format
 msgid "Show only current screen"
 msgstr "Sýna aðeins núverandi skjá"
 
-#: package/contents/ui/configGeneral.qml:50
+#: package/contents/ui/configGeneral.qml:56
 #, kde-format
 msgid "Navigation wraps around"
 msgstr "Fletting í gegn fer hringinn"
 
-#: package/contents/ui/configGeneral.qml:62
+#: package/contents/ui/configGeneral.qml:68
 #, kde-format
 msgid "Layout:"
 msgstr "Framsetning:"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "Sjálfgefið"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Horizontal"
 msgstr "Lárétt"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Vertical"
 msgstr "Lóðrétt"
 
-#: package/contents/ui/configGeneral.qml:78
+#: package/contents/ui/configGeneral.qml:84
 #, kde-format
 msgid "Text display:"
 msgstr "Birting texta:"
 
-#: package/contents/ui/configGeneral.qml:81
+#: package/contents/ui/configGeneral.qml:87
 #, kde-format
 msgid "No text"
 msgstr "Enginn texti"
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Activity number"
 msgstr "Númer athafnar"
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Desktop number"
 msgstr "Númer skjáborðs"
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Activity name"
 msgstr "Heiti athafnar"
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Desktop name"
 msgstr "Heiti skjáborðs"
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, kde-format
 msgid "Selecting current Activity:"
 msgstr "Vel núverandi athöfn:"
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, kde-format
 msgid "Selecting current virtual desktop:"
 msgstr "Vel núverandi sýndarskjáborð:"
 
-#: package/contents/ui/configGeneral.qml:114
+#: package/contents/ui/configGeneral.qml:120
 #, kde-format
 msgid "Does nothing"
 msgstr "Gerir ekkert"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:128
 #, kde-format
 msgid "Shows the desktop"
 msgstr "Sýnir skjáborðið"
@@ -149,22 +155,22 @@ msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr "Skipta yfir í %1"
 
-#: package/contents/ui/main.qml:588
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgid "Show Activity Manager…"
 msgstr "Sýna athafnastjóra…"
 
-#: package/contents/ui/main.qml:594
+#: package/contents/ui/main.qml:598
 #, kde-format
 msgid "Add Virtual Desktop"
 msgstr "Bæta við sýndarskjáborði"
 
-#: package/contents/ui/main.qml:600
+#: package/contents/ui/main.qml:604
 #, kde-format
 msgid "Remove Virtual Desktop"
 msgstr "Fjarlægja sýndarskjáborð"
 
-#: package/contents/ui/main.qml:607
+#: package/contents/ui/main.qml:611
 #, kde-format
 msgid "Configure Virtual Desktops…"
 msgstr "Grunnstilla sýndarskjáborð…"

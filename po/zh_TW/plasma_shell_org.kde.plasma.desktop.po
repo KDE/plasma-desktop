@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-08 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2024-07-14 17:25+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -678,8 +678,8 @@ msgstr "時鐘："
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "解除鎖定對話框消失後維持可見"
+msgid "Show clock"
+msgstr ""
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
@@ -807,6 +807,10 @@ msgstr "離開編輯模式"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "面板焦點指示器"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "解除鎖定對話框消失後維持可見"
 
 #~ msgid "Height:"
 #~ msgstr "高度："

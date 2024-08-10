@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2023-02-09 00:47+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -36,87 +36,93 @@ msgid "General:"
 msgstr "一般："
 
 #: package/contents/ui/configGeneral.qml:40
-#, kde-format
-msgid "Show application icons on window outlines"
+#, fuzzy, kde-format
+#| msgid "Show application icons on window outlines"
+msgid "Show window outlines"
 msgstr "在視窗外框顯示應用程式圖示"
 
 #: package/contents/ui/configGeneral.qml:45
 #, kde-format
+msgid "Show application icons on window outlines"
+msgstr "在視窗外框顯示應用程式圖示"
+
+#: package/contents/ui/configGeneral.qml:51
+#, kde-format
 msgid "Show only current screen"
 msgstr "僅在目前螢幕顯示"
 
-#: package/contents/ui/configGeneral.qml:50
+#: package/contents/ui/configGeneral.qml:56
 #, kde-format
 msgid "Navigation wraps around"
 msgstr "環繞導航"
 
-#: package/contents/ui/configGeneral.qml:62
+#: package/contents/ui/configGeneral.qml:68
 #, kde-format
 msgid "Layout:"
 msgstr "佈局："
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "預設"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Horizontal"
 msgstr "水平"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Vertical"
 msgstr "垂直"
 
-#: package/contents/ui/configGeneral.qml:78
+#: package/contents/ui/configGeneral.qml:84
 #, kde-format
 msgid "Text display:"
 msgstr "文字顯示："
 
-#: package/contents/ui/configGeneral.qml:81
+#: package/contents/ui/configGeneral.qml:87
 #, kde-format
 msgid "No text"
 msgstr "沒有文字"
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Activity number"
 msgstr "活動編號"
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Desktop number"
 msgstr "桌面編號"
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Activity name"
 msgstr "活動名稱"
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Desktop name"
 msgstr "桌面名稱"
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, kde-format
 msgid "Selecting current Activity:"
 msgstr "選取目前活動："
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, kde-format
 msgid "Selecting current virtual desktop:"
 msgstr "選取目前虛擬桌面："
 
-#: package/contents/ui/configGeneral.qml:114
+#: package/contents/ui/configGeneral.qml:120
 #, kde-format
 msgid "Does nothing"
 msgstr "不做任何事"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:128
 #, kde-format
 msgid "Shows the desktop"
 msgstr "顯示桌面"
@@ -150,22 +156,22 @@ msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr "切換到 %1"
 
-#: package/contents/ui/main.qml:588
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgid "Show Activity Manager…"
 msgstr "顯示活動管理員..."
 
-#: package/contents/ui/main.qml:594
+#: package/contents/ui/main.qml:598
 #, kde-format
 msgid "Add Virtual Desktop"
 msgstr "新增虛擬桌面"
 
-#: package/contents/ui/main.qml:600
+#: package/contents/ui/main.qml:604
 #, kde-format
 msgid "Remove Virtual Desktop"
 msgstr "移除虛擬桌面"
 
-#: package/contents/ui/main.qml:607
+#: package/contents/ui/main.qml:611
 #, kde-format
 msgid "Configure Virtual Desktops…"
 msgstr "設定虛擬桌面…"

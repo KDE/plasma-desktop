@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-08 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2024-07-14 21:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -683,8 +683,8 @@ msgstr "Часовник:"
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Запазване видим, когато полето за отключване изчезне"
+msgid "Show clock"
+msgstr ""
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
@@ -812,3 +812,7 @@ msgstr "Излизане от режим на редактиране"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Индикатор за фокус на панела"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Запазване видим, когато полето за отключване изчезне"

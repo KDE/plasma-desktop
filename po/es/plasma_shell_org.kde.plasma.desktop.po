@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-08 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2024-07-13 04:14+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -688,8 +688,8 @@ msgstr "Reloj:"
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Mantener visible cuando desaparece el mensaje de desbloqueo"
+msgid "Show clock"
+msgstr ""
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
@@ -817,6 +817,10 @@ msgstr "Salir del modo de edición"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco del panel"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Mantener visible cuando desaparece el mensaje de desbloqueo"
 
 #~ msgid "Height:"
 #~ msgstr "Altura:"

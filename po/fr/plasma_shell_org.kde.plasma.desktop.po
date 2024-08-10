@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-08 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2024-07-13 10:37+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -696,8 +696,8 @@ msgstr "Horloge :"
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Restez visible lorsque l'invite de déverrouillage disparaît"
+msgid "Show clock"
+msgstr ""
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
@@ -825,6 +825,10 @@ msgstr "Quitter le mode d'édition"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicateur de focus pour les panneaux"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Restez visible lorsque l'invite de déverrouillage disparaît"
 
 #~ msgid "Height:"
 #~ msgstr "Hauteur :"

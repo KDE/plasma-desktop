@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2016-10-31 15:51+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -36,90 +36,95 @@ msgstr "Γενικά"
 
 #: package/contents/ui/configGeneral.qml:40
 #, kde-format
-msgid "Show application icons on window outlines"
+msgid "Show window outlines"
 msgstr ""
 
 #: package/contents/ui/configGeneral.qml:45
+#, kde-format
+msgid "Show application icons on window outlines"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:51
 #, fuzzy, kde-format
 #| msgid "Only the current screen"
 msgid "Show only current screen"
 msgstr "Τρέχουσα οθόνη μόνο"
 
-#: package/contents/ui/configGeneral.qml:50
+#: package/contents/ui/configGeneral.qml:56
 #, kde-format
 msgid "Navigation wraps around"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:62
+#: package/contents/ui/configGeneral.qml:68
 #, kde-format
 msgid "Layout:"
 msgstr "Διάταξη:"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "Προκαθορισμένη"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Horizontal"
 msgstr "Οριζόντια"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Vertical"
 msgstr "Κατακόρυφη"
 
-#: package/contents/ui/configGeneral.qml:78
+#: package/contents/ui/configGeneral.qml:84
 #, fuzzy, kde-format
 #| msgid "Display:"
 msgid "Text display:"
 msgstr "Εμφάνιση:"
 
-#: package/contents/ui/configGeneral.qml:81
+#: package/contents/ui/configGeneral.qml:87
 #, kde-format
 msgid "No text"
 msgstr "Χωρίς κείμενο"
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Activity number"
 msgstr "Αριθμός δραστηριότητας"
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Desktop number"
 msgstr "Αριθμός επιφάνειας εργασίας"
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Activity name"
 msgstr "Όνομα δραστηριότητας"
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Desktop name"
 msgstr "Όνομα επιφάνειας εργασίας"
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
 msgid "Selecting current Activity:"
 msgstr "Επιλογή τρέχουσας επιφάνειας:"
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
 msgid "Selecting current virtual desktop:"
 msgstr "Επιλογή τρέχουσας επιφάνειας:"
 
-#: package/contents/ui/configGeneral.qml:114
+#: package/contents/ui/configGeneral.qml:120
 #, kde-format
 msgid "Does nothing"
 msgstr "Καμία ενέργεια"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:128
 #, fuzzy, kde-format
 #| msgid "Shows desktop"
 msgid "Shows the desktop"
@@ -160,23 +165,23 @@ msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:588
+#: package/contents/ui/main.qml:592
 #, fuzzy, kde-format
 #| msgid "Show Activity Manager..."
 msgid "Show Activity Manager…"
 msgstr "Εμφάνιση διαχειριστή δραστηριοτήτων..."
 
-#: package/contents/ui/main.qml:594
+#: package/contents/ui/main.qml:598
 #, kde-format
 msgid "Add Virtual Desktop"
 msgstr "Προσθήκη εικονικής επιφάνειας εργασίας"
 
-#: package/contents/ui/main.qml:600
+#: package/contents/ui/main.qml:604
 #, kde-format
 msgid "Remove Virtual Desktop"
 msgstr "Αφαίρεση εικονικής επιφάνειας εργασίας"
 
-#: package/contents/ui/main.qml:607
+#: package/contents/ui/main.qml:611
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgid "Configure Virtual Desktops…"

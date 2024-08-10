@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-08 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2024-07-28 12:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -683,8 +683,8 @@ msgstr "الساعة:"
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "أبقها مرئية عندما تختفي محث فك القفل"
+msgid "Show clock"
+msgstr ""
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
@@ -812,6 +812,10 @@ msgstr "اخرج من نمط التحرير"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "مؤشر التركيز على اللوحة"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "أبقها مرئية عندما تختفي محث فك القفل"
 
 #~ msgid "Height:"
 #~ msgstr "الارتفاع:"

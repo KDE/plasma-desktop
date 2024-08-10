@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,87 +29,93 @@ msgid "General:"
 msgstr "常规："
 
 #: package/contents/ui/configGeneral.qml:40
-#, kde-format
-msgid "Show application icons on window outlines"
+#, fuzzy, kde-format
+#| msgid "Show application icons on window outlines"
+msgid "Show window outlines"
 msgstr "在窗口轮廓上显示应用程序图标"
 
 #: package/contents/ui/configGeneral.qml:45
 #, kde-format
+msgid "Show application icons on window outlines"
+msgstr "在窗口轮廓上显示应用程序图标"
+
+#: package/contents/ui/configGeneral.qml:51
+#, kde-format
 msgid "Show only current screen"
 msgstr "只显示当前屏幕"
 
-#: package/contents/ui/configGeneral.qml:50
+#: package/contents/ui/configGeneral.qml:56
 #, kde-format
 msgid "Navigation wraps around"
 msgstr "循环切换"
 
-#: package/contents/ui/configGeneral.qml:62
+#: package/contents/ui/configGeneral.qml:68
 #, kde-format
 msgid "Layout:"
 msgstr "布局："
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "默认"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Horizontal"
 msgstr "垂直"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Vertical"
 msgstr "水平"
 
-#: package/contents/ui/configGeneral.qml:78
+#: package/contents/ui/configGeneral.qml:84
 #, kde-format
 msgid "Text display:"
 msgstr "文本显示："
 
-#: package/contents/ui/configGeneral.qml:81
+#: package/contents/ui/configGeneral.qml:87
 #, kde-format
 msgid "No text"
 msgstr "无文本"
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Activity number"
 msgstr "活动编号"
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Desktop number"
 msgstr "桌面编号"
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Activity name"
 msgstr "活动名称"
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Desktop name"
 msgstr "桌面名称"
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, kde-format
 msgid "Selecting current Activity:"
 msgstr "选择当前活动："
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, kde-format
 msgid "Selecting current virtual desktop:"
 msgstr "选择当前虚拟桌面："
 
-#: package/contents/ui/configGeneral.qml:114
+#: package/contents/ui/configGeneral.qml:120
 #, kde-format
 msgid "Does nothing"
 msgstr "无操作"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:128
 #, kde-format
 msgid "Shows the desktop"
 msgstr "显示桌面"
@@ -143,22 +149,22 @@ msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr "切换到 %1"
 
-#: package/contents/ui/main.qml:588
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgid "Show Activity Manager…"
 msgstr "显示活动管理器…"
 
-#: package/contents/ui/main.qml:594
+#: package/contents/ui/main.qml:598
 #, kde-format
 msgid "Add Virtual Desktop"
 msgstr "添加虚拟桌面"
 
-#: package/contents/ui/main.qml:600
+#: package/contents/ui/main.qml:604
 #, kde-format
 msgid "Remove Virtual Desktop"
 msgstr "移除虚拟桌面"
 
-#: package/contents/ui/main.qml:607
+#: package/contents/ui/main.qml:611
 #, kde-format
 msgid "Configure Virtual Desktops…"
 msgstr "配置虚拟桌面…"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2016-11-28 01:33+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -31,101 +31,106 @@ msgstr "Opšte"
 
 #: package/contents/ui/configGeneral.qml:40
 #, kde-format
+msgid "Show window outlines"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:45
+#, kde-format
 msgid "Show application icons on window outlines"
 msgstr ""
 
 # >> @option:check
-#: package/contents/ui/configGeneral.qml:45
+#: package/contents/ui/configGeneral.qml:51
 #, fuzzy, kde-format
 #| msgid "Only the current screen"
 msgid "Show only current screen"
 msgstr "Samo tekući ekran"
 
-#: package/contents/ui/configGeneral.qml:50
+#: package/contents/ui/configGeneral.qml:56
 #, kde-format
 msgid "Navigation wraps around"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:62
+#: package/contents/ui/configGeneral.qml:68
 #, kde-format
 msgid "Layout:"
 msgstr "Raspored:"
 
 # >> @item:inlistbox Layout:
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "podrazumevani"
 
 # >> @item:inlistbox Layout:
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Horizontal"
 msgstr "vodoravni"
 
 # >> @item:inlistbox Layout:
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Vertical"
 msgstr "uspravni"
 
-#: package/contents/ui/configGeneral.qml:78
+#: package/contents/ui/configGeneral.qml:84
 #, fuzzy, kde-format
 #| msgid "Display:"
 msgid "Text display:"
 msgstr "Prikaz:"
 
 # >> @option:radio Display:
-#: package/contents/ui/configGeneral.qml:81
+#: package/contents/ui/configGeneral.qml:87
 #, kde-format
 msgid "No text"
 msgstr "bez teksta"
 
 # >> @option:radio Display:
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Activity number"
 msgstr "broj aktivnosti"
 
 # >> @option:radio Display:
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Desktop number"
 msgstr "broj površi"
 
 # >> @option:radio Display:
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Activity name"
 msgstr "ime aktivnosti"
 
 # >> @option:radio Display:
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Desktop name"
 msgstr "ime površi"
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
 msgid "Selecting current Activity:"
 msgstr "Biranje tekuće površi:"
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
 msgid "Selecting current virtual desktop:"
 msgstr "Biranje tekuće površi:"
 
 # >> @option:radio Selecting current desktop:
-#: package/contents/ui/configGeneral.qml:114
+#: package/contents/ui/configGeneral.qml:120
 #, kde-format
 msgid "Does nothing"
 msgstr "nema efekta"
 
 # >> @option:radio Selecting current desktop:
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:128
 #, fuzzy, kde-format
 #| msgid "Shows desktop"
 msgid "Shows the desktop"
@@ -173,23 +178,23 @@ msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:588
+#: package/contents/ui/main.qml:592
 #, fuzzy, kde-format
 #| msgid "Show Activity Manager..."
 msgid "Show Activity Manager…"
 msgstr "Prikaži menadžer aktivnosti..."
 
-#: package/contents/ui/main.qml:594
+#: package/contents/ui/main.qml:598
 #, kde-format
 msgid "Add Virtual Desktop"
 msgstr "Dodaj virtuelnu površi"
 
-#: package/contents/ui/main.qml:600
+#: package/contents/ui/main.qml:604
 #, kde-format
 msgid "Remove Virtual Desktop"
 msgstr "Ukloni virtuelnu površ"
 
-#: package/contents/ui/main.qml:607
+#: package/contents/ui/main.qml:611
 #, fuzzy, kde-format
 #| msgid "Configure Desktops..."
 msgid "Configure Virtual Desktops…"

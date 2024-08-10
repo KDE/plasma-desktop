@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2008-10-05 10:45+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -33,88 +33,93 @@ msgstr "Ahulnaje"
 
 #: package/contents/ui/configGeneral.qml:40
 #, kde-format
-msgid "Show application icons on window outlines"
+msgid "Show window outlines"
 msgstr ""
 
 #: package/contents/ui/configGeneral.qml:45
 #, kde-format
+msgid "Show application icons on window outlines"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:51
+#, kde-format
 msgid "Show only current screen"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:50
+#: package/contents/ui/configGeneral.qml:56
 #, kde-format
 msgid "Navigation wraps around"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:62
+#: package/contents/ui/configGeneral.qml:68
 #, kde-format
 msgid "Layout:"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Horizontal"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Vertical"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:78
+#: package/contents/ui/configGeneral.qml:84
 #, fuzzy, kde-format
 #| msgid "Display text:"
 msgid "Text display:"
 msgstr "Pakazvaj tekst:"
 
-#: package/contents/ui/configGeneral.qml:81
+#: package/contents/ui/configGeneral.qml:87
 #, kde-format
 msgid "No text"
 msgstr "Niama tekstu"
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Activity number"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Desktop number"
 msgstr "Numar stała"
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Activity name"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Desktop name"
 msgstr "Nazva stała"
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, kde-format
 msgid "Selecting current Activity:"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgid "Selecting current virtual desktop:"
 msgstr "&Naładź rabočyja stały..."
 
-#: package/contents/ui/configGeneral.qml:114
+#: package/contents/ui/configGeneral.qml:120
 #, kde-format
 msgid "Does nothing"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:128
 #, kde-format
 msgid "Shows the desktop"
 msgstr ""
@@ -159,24 +164,24 @@ msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:588
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgid "Show Activity Manager…"
 msgstr ""
 
-#: package/contents/ui/main.qml:594
+#: package/contents/ui/main.qml:598
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgid "Add Virtual Desktop"
 msgstr "&Naładź rabočyja stały..."
 
-#: package/contents/ui/main.qml:600
+#: package/contents/ui/main.qml:604
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgid "Remove Virtual Desktop"
 msgstr "&Naładź rabočyja stały..."
 
-#: package/contents/ui/main.qml:607
+#: package/contents/ui/main.qml:611
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgid "Configure Virtual Desktops…"

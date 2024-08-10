@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2022-10-12 15:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -32,87 +32,93 @@ msgid "General:"
 msgstr "Genel:"
 
 #: package/contents/ui/configGeneral.qml:40
-#, kde-format
-msgid "Show application icons on window outlines"
+#, fuzzy, kde-format
+#| msgid "Show application icons on window outlines"
+msgid "Show window outlines"
 msgstr "Pencere ana hatlarında uygulama simgelerini göster"
 
 #: package/contents/ui/configGeneral.qml:45
 #, kde-format
+msgid "Show application icons on window outlines"
+msgstr "Pencere ana hatlarında uygulama simgelerini göster"
+
+#: package/contents/ui/configGeneral.qml:51
+#, kde-format
 msgid "Show only current screen"
 msgstr "Yalnızca geçerli ekranı göster"
 
-#: package/contents/ui/configGeneral.qml:50
+#: package/contents/ui/configGeneral.qml:56
 #, kde-format
 msgid "Navigation wraps around"
 msgstr "Dolaşım sarmalı"
 
-#: package/contents/ui/configGeneral.qml:62
+#: package/contents/ui/configGeneral.qml:68
 #, kde-format
 msgid "Layout:"
 msgstr "Yerleşim:"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "Öntanımlı"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Horizontal"
 msgstr "Yatay"
 
-#: package/contents/ui/configGeneral.qml:64
+#: package/contents/ui/configGeneral.qml:70
 #, kde-format
 msgid "Vertical"
 msgstr "Dikey"
 
-#: package/contents/ui/configGeneral.qml:78
+#: package/contents/ui/configGeneral.qml:84
 #, kde-format
 msgid "Text display:"
 msgstr "Metin görüntüleme:"
 
-#: package/contents/ui/configGeneral.qml:81
+#: package/contents/ui/configGeneral.qml:87
 #, kde-format
 msgid "No text"
 msgstr "Metin yok"
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Activity number"
 msgstr "Etkinlik numarası"
 
-#: package/contents/ui/configGeneral.qml:89
+#: package/contents/ui/configGeneral.qml:95
 #, kde-format
 msgid "Desktop number"
 msgstr "Masaüstü numarası"
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Activity name"
 msgstr "Etkinlik adı"
 
-#: package/contents/ui/configGeneral.qml:97
+#: package/contents/ui/configGeneral.qml:103
 #, kde-format
 msgid "Desktop name"
 msgstr "Masaüstü adı"
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, kde-format
 msgid "Selecting current Activity:"
 msgstr "Geçerli Etkinlik seçildiğinde:"
 
-#: package/contents/ui/configGeneral.qml:111
+#: package/contents/ui/configGeneral.qml:117
 #, kde-format
 msgid "Selecting current virtual desktop:"
 msgstr "Geçerli sanal masaüstü seçilince:"
 
-#: package/contents/ui/configGeneral.qml:114
+#: package/contents/ui/configGeneral.qml:120
 #, kde-format
 msgid "Does nothing"
 msgstr "Hiçbir şey yapma"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:128
 #, kde-format
 msgid "Shows the desktop"
 msgstr "Masaüstünü gösterir"
@@ -149,22 +155,22 @@ msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr "Şuna Geç: %1"
 
-#: package/contents/ui/main.qml:588
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgid "Show Activity Manager…"
 msgstr "Etkinlik Yöneticisini Göster…"
 
-#: package/contents/ui/main.qml:594
+#: package/contents/ui/main.qml:598
 #, kde-format
 msgid "Add Virtual Desktop"
 msgstr "Sanal Masaüstü Ekle"
 
-#: package/contents/ui/main.qml:600
+#: package/contents/ui/main.qml:604
 #, kde-format
 msgid "Remove Virtual Desktop"
 msgstr "Sanal Masaüstünü Kaldır"
 
-#: package/contents/ui/main.qml:607
+#: package/contents/ui/main.qml:611
 #, kde-format
 msgid "Configure Virtual Desktops…"
 msgstr "Sanal Masaüstlerini Yapılandır…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-08 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:43+0000\n"
 "PO-Revision-Date: 2024-07-12 10:48+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -683,8 +683,8 @@ msgstr "Klok:"
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
-msgid "Keep visible when unlocking prompt disappears"
-msgstr "Zichtbaar houden wanneer prompt voor ont-sluiten verdwijnt"
+msgid "Show clock"
+msgstr ""
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
@@ -812,6 +812,10 @@ msgstr "Bewerkingsmodus sluiten"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Focusindicator van paneel"
+
+#~ msgctxt "@option:check"
+#~ msgid "Keep visible when unlocking prompt disappears"
+#~ msgstr "Zichtbaar houden wanneer prompt voor ont-sluiten verdwijnt"
 
 #~ msgid "Height:"
 #~ msgstr "Hoogte:"
