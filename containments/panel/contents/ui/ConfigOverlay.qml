@@ -313,7 +313,10 @@ MouseArea {
                     text: i18n("Show Alternatives…")
                     onClicked: {
                         configurationArea.currentApplet.applet.plasmoid.internalAction("alternatives").trigger();
-                        configurationArea.currentApplet = null;
+                        // We keep this popup open for a brief interval of time instead
+                        // of re-setting the currentApplet now so that the alternatives
+                        // popup has time to gain focus. The hideTimer will close this
+                        // dialog.
                     }
                 }
                 PlasmaComponents3.ToolButton {
