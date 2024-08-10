@@ -25,7 +25,7 @@ PlasmoidItem {
     Layout.maximumWidth: Infinity
     Layout.maximumHeight: Infinity
 
-    Layout.preferredWidth : height + (root.showActivityName ? name.implicitWidth + 2 * Kirigami.Units.smallSpacing : 0)
+    Layout.preferredWidth : Math.min(height, Kirigami.Units.iconSizes.huge) + (root.showActivityName ? nameLabel.implicitWidth + 3 * Kirigami.Units.smallSpacing : 0)
 
     Layout.minimumWidth: 0
     Layout.minimumHeight: 0
@@ -64,7 +64,7 @@ PlasmoidItem {
                     break;
                 }
             }
-            Accessible.name: name.text ? i18nc("@info:tooltip", "Current activity is %1", name.text) : ""
+            Accessible.name: nameLabel.text ? i18nc("@info:tooltip", "Current activity is %1", nameLabel.text) : ""
             Accessible.description: tooltip.subText
             Accessible.role: Accessible.Button
 
@@ -81,7 +81,12 @@ PlasmoidItem {
         Kirigami.Icon {
             id: icon
 
-            anchors.verticalCenter: parent.verticalCenter
+            anchors {
+                verticalCenter: parent.verticalCenter
+            }
+
+            x: nameLabel.visible ? Kirigami.Units.smallSpacing :
+               (parent.width - icon.width) / 2
 
             height: Math.min(parent.height,
                              parent.width,
@@ -94,15 +99,17 @@ PlasmoidItem {
         }
 
         PlasmaComponents3.Label {
-            id: name
+            id: nameLabel
 
             anchors {
                 left: icon.right
+                right: parent.right
+                top: parent.top
+                bottom: parent.bottom
                 leftMargin: Kirigami.Units.smallSpacing
                 rightMargin: Kirigami.Units.smallSpacing
             }
-            height: parent.height
-            width: parent.width - icon.width
+
             visible: root.showActivityName && !root.inVertical
             elide: Text.ElideRight
 
