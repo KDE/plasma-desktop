@@ -25,7 +25,7 @@ PlasmoidItem {
     Layout.maximumWidth: Infinity
     Layout.maximumHeight: Infinity
 
-    Layout.preferredWidth : Math.min(height, Kirigami.Units.iconSizes.huge) + (root.showActivityName ? nameLabel.implicitWidth + 3 * Kirigami.Units.smallSpacing : 0)
+    Layout.preferredWidth : Math.min(height, Kirigami.Units.iconSizes.huge) + (root.showActivityName ? nameLabel.implicitWidth + 4 * Kirigami.Units.smallSpacing : 0)
 
     Layout.minimumWidth: 0
     Layout.minimumHeight: 0
