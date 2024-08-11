@@ -40,8 +40,10 @@ public:
     Q_INVOKABLE QVariantList defaultSchemes() const;
 
     Q_INVOKABLE void addApplication(QQuickItem *ctx);
-    Q_INVOKABLE void addCommand(const QString &exec);
-    Q_INVOKABLE QString editCommand(const QString &componentName, const QString &newExec);
+    Q_INVOKABLE QString findBaseName(const QString &filePath) const;
+    Q_INVOKABLE QString getCommand(const QString component) const;
+    Q_INVOKABLE void addCommand(const QString &exec, const QString &name);
+    Q_INVOKABLE QString editCommand(const QString &componentName, const QString &name, const QString &newExec);
     Q_INVOKABLE QString quoteUrl(const QUrl &url);
 
     Q_INVOKABLE QString keySequenceToString(const QKeySequence &keySequence) const;

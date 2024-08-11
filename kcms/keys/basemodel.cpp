@@ -181,7 +181,7 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
         KDesktopFile desktopFile(component.id);
         KConfigGroup cg = desktopFile.desktopGroup();
         if (cg.readEntry<bool>("X-KDE-GlobalAccel-CommandShortcut", false)) {
-            return cg.readEntry("Exec");
+            return cg.readEntry("Name");
         }
         return component.displayName;
     }

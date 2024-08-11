@@ -189,8 +189,20 @@ void KCMKeys::addApplication(QQuickItem *ctx)
         dialog->deleteLater();
     });
 }
+QString KCMKeys::findBaseName(const QString &filePath) const
+{
+    QFileInfo fileInfo(filePath);
+    return fileInfo.baseName();
+}
 
-void KCMKeys::addCommand(const QString &exec)
+QString KCMKeys::getCommand(const QString component) const
+{
+    KDesktopFile desktopFile(component);
+    KConfigGroup cg = desktopFile.desktopGroup();
+    return cg.readEntry("Exec");
+}
+
+void KCMKeys::addCommand(const QString &exec, const QString &name)
 {
     // escape %'s in the exec with %%
     QString escapedExec = exec;
@@ -223,23 +235,23 @@ void KCMKeys::addCommand(const QString &exec)
     // arguments removed. This is done to more clearly communicate the
     // actual command used to the user and makes it easier to
     // distinguish things like "qdbus".
-    QString name = KIO::DesktopExecParser::executableName(finalExec);
+    QString exeName = KIO::DesktopExecParser::executableName(finalExec);
     auto view = QStringView{finalExec}.trimmed();
     int index = view.indexOf(QLatin1Char(' '));
     if (index > 0) {
-        name.append(view.mid(index));
+        exeName.append(view.mid(index));
     }
-    cg.writeEntry("Name", finalExec);
+    cg.writeEntry("Name", name);
     cg.writeEntry("Exec", finalExec);
     cg.writeEntry("NoDisplay", true);
     cg.writeEntry("StartupNotify", false);
     cg.writeEntry("X-KDE-GlobalAccel-CommandShortcut", true);
     cg.sync();
 
-    m_globalAccelModel->addApplication(newPath, name);
+    m_globalAccelModel->addApplication(newPath, exeName);
 }
 
-QString KCMKeys::editCommand(const QString &componentName, const QString &newExec)
+QString KCMKeys::editCommand(const QString &componentName, const QString &name, const QString &newExec)
 {
     QString finalExec = newExec;
 
@@ -254,10 +266,10 @@ QString KCMKeys::editCommand(const QString &componentName, const QString &newExe
     }
     KDesktopFile desktopFile(componentName);
     KConfigGroup cg = desktopFile.desktopGroup();
-    cg.writeEntry("Name", finalExec);
+    cg.writeEntry("Name", name);
     cg.writeEntry("Exec", finalExec);
     cg.sync();
-    return finalExec;
+    return name;
 }
 
 QString KCMKeys::quoteUrl(const QUrl &url)

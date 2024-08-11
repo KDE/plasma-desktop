@@ -241,8 +241,8 @@ KCM.AbstractKCM {
                                 onClicked: {
                                     addCommandDialog.editing = true;
                                     addCommandDialog.componentName = model.component;
-                                    // for commands, Name == Exec
-                                    addCommandDialog.oldExec = model.display;
+                                    addCommandDialog.name = model.display;
+                                    addCommandDialog.oldExec = kcm.getCommand(model.component);
                                     addCommandDialog.commandListItemDelegate = componentDelegate;
                                     addCommandDialog.open();
                                 }
@@ -401,6 +401,7 @@ KCM.AbstractKCM {
         property bool editing: false
         property string componentName: ""
         property string oldExec: ""
+        property string name: ""
         property Item commandListItemDelegate: null
 
         width: Math.max(root.width / 2, Kirigami.Units.gridUnit * 24)
@@ -411,9 +412,11 @@ KCM.AbstractKCM {
         onVisibleChanged: {
             if (visible) {
                 cmdField.clear();
+                nameField.clear();
                 cmdField.forceActiveFocus();
                 if (editing) {
                     cmdField.text = oldExec;
+                    nameField.text = name;
                     cmdField.selectAll();
                 }
             }
@@ -434,12 +437,12 @@ KCM.AbstractKCM {
             enabled: cmdField.length > 0
             onTriggered: {
                 if (addCommandDialog.editing) {
-                    const newLabel = kcm.editCommand(addCommandDialog.componentName, cmdField.text);
+                    const newLabel = kcm.editCommand(addCommandDialog.componentName, nameField.text, cmdField.text);
                     if (addCommandDialog.commandListItemDelegate) {
                         addCommandDialog.commandListItemDelegate.text = newLabel;
                     }
                 } else {
-                    kcm.addCommand(cmdField.text);
+                    kcm.addCommand(cmdField.text, nameField.text);
                 }
                 addCommandDialog.editing = false;
                 addCommandDialog.close();
@@ -457,24 +460,37 @@ KCM.AbstractKCM {
                 text: i18n("Enter a command or choose a script file:")
                 textFormat: Text.PlainText
             }
-            RowLayout {
-                Layout.fillWidth: true
-                spacing: Kirigami.Units.smallSpacing
 
-                QQC2.TextField {
-                    id: cmdField
+            Kirigami.FormLayout {
+
+                RowLayout {
                     Layout.fillWidth: true
-                    Accessible.name: i18nc("@label:textbox accessible", "Command")
-                    font.family: "monospace"
-                    onAccepted: addCommandDialog.addCommandAction.triggered()
-                }
-                QQC2.Button {
-                    icon.name: "document-open"
-                    text: i18nc("@action:button", "Choose…")
-                    Accessible.name: i18nc("@action:button accessible", "Choose script file")
-                    onClicked: {
-                        openScriptFileDialogLoader.active = true
+                    Kirigami.FormData.label: i18nc("@label:textbox A shell command", "Command:")
+                    spacing: Kirigami.Units.smallSpacing
+
+                    QQC2.TextField {
+                        id: cmdField
+                        Layout.fillWidth: true
+                        Accessible.name: i18nc("@label:textbox accessible", "Command")
+
+                        font.family: "monospace"
+                        onAccepted: addCommandDialog.addCommandAction.triggered()
                     }
+                    QQC2.Button {
+                        icon.name: "document-open"
+                        text: i18nc("@action:button", "Choose…")
+                        Accessible.name: i18nc("@action:button accessible", "Choose script file")
+                        onClicked: {
+                            openScriptFileDialogLoader.active = true
+                        }
+                    }
+                }
+                QQC2.TextField {
+                    id: nameField
+                    Kirigami.FormData.label: i18nc("@label:textfield Human-readable name given to a shell command", "Name:")
+                    placeholderText: i18nc("@info:placeholder", "Enter name here")
+
+                    onAccepted: addCommandDialog.addCommandAction.triggered()
                 }
             }
         }
@@ -491,6 +507,7 @@ KCM.AbstractKCM {
             onAccepted: {
                 cmdField.text = selectedFile
                 cmdField.text = kcm.quoteUrl(selectedFile)
+                nameField.text = kcm.findBaseName(cmdField.text)
                 openScriptFileDialogLoader.active = false
             }
             onRejected: openScriptFileDialogLoader.active = false
