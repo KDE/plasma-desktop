@@ -4,13 +4,13 @@
 #
 # Serdar Soytetir <tulliana@gmail.com>, 2007, 2008, 2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017, 2021, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-10 00:43+0000\n"
-"PO-Revision-Date: 2022-10-12 15:08+0300\n"
+"PO-Revision-Date: 2024-08-11 22:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 24.11.70\n"
 "X-POOTLE-MTIME: 1413102228.000000\n"
 
 #: package/contents/config/config.qml:13
@@ -32,10 +32,9 @@ msgid "General:"
 msgstr "Genel:"
 
 #: package/contents/ui/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgid "Show application icons on window outlines"
+#, kde-format
 msgid "Show window outlines"
-msgstr "Pencere ana hatlarında uygulama simgelerini göster"
+msgstr "Pencere ana hatlarını göster"
 
 #: package/contents/ui/configGeneral.qml:45
 #, kde-format

@@ -8,13 +8,13 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Nick Shaforostoff <shafff@ukr.net>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2016, 2017, 2019.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-10 00:43+0000\n"
-"PO-Revision-Date: 2022-09-23 22:08+0300\n"
+"PO-Revision-Date: 2024-08-11 07:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -39,10 +39,9 @@ msgid "General:"
 msgstr "Основные параметры:"
 
 #: package/contents/ui/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgid "Show application icons on window outlines"
+#, kde-format
 msgid "Show window outlines"
-msgstr "Показывать значки приложений на схемах окон"
+msgstr "Показывать схемы окон"
 
 #: package/contents/ui/configGeneral.qml:45
 #, kde-format
