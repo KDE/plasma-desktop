@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-10 00:43+0000\n"
-"PO-Revision-Date: 2022-09-19 12:36+0300\n"
+"PO-Revision-Date: 2024-08-12 15:24+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -32,10 +32,9 @@ msgid "General:"
 msgstr "Bendra:"
 
 #: package/contents/ui/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgid "Show application icons on window outlines"
+#, kde-format
 msgid "Show window outlines"
-msgstr "Langų kontūruose rodyti programų piktogramas"
+msgstr "Rodyti langų kontūrus"
 
 #: package/contents/ui/configGeneral.qml:45
 #, kde-format
