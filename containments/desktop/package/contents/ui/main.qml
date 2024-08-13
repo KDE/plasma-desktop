@@ -82,7 +82,8 @@ ContainmentItem {
         return iconName + symbolicSuffix;
     }
 
-    function addLauncher(desktopUrl) {
+    // Invoked from kicker/plugin/containmentinterface.cpp
+    function addLauncher(desktopUrl: url): void {
         if (!isFolder) {
             return;
         }
