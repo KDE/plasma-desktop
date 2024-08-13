@@ -449,6 +449,10 @@ PlasmoidItem {
                         case Qt.Key_Return:
                         case Qt.Key_Select:
                             pagerModel.changePage(index);
+                            event.accepted = true;
+                            break;
+                        default:
+                            event.accepted = false;
                             break;
                         }
                     }

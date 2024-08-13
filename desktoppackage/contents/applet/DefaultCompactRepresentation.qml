@@ -52,6 +52,9 @@ Kirigami.Icon {
             Plasmoid.activated();
             event.accepted = true; // BUG 481393: Prevent system tray from receiving the event
             break;
+        default:
+            event.accepted = false;
+            break;
         }
     }
 

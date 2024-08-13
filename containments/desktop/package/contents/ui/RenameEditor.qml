@@ -80,6 +80,7 @@ PlasmaComponents.ScrollView {
             case Qt.Key_Return:
             case Qt.Key_Enter:
                 root.commit();
+                event.accepted = false;
                 break;
             case Qt.Key_Escape:
                 if (targetItem) {
@@ -105,6 +106,7 @@ PlasmaComponents.ScrollView {
                 break;
             default:
                 adjustSize();
+                event.accepted = false;
                 break;
             }
         }

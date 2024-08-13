@@ -106,6 +106,10 @@ Item {
             case Qt.Key_Return:
             case Qt.Key_Select:
                 main.Plasmoid.internalAction("configure").trigger();
+                event.accepted = true;
+                break;
+            default:
+                event.accepted = false;
                 break;
             }
         }

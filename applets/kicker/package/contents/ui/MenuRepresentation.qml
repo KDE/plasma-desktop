@@ -422,6 +422,7 @@ FocusScope {
 
     Keys.onPressed: event => {
         if (event.key === Qt.Key_Escape) {
+            event.accepted = true;
             kicker.expanded = false;
         }
     }

@@ -25,9 +25,12 @@ Kirigami.ScrollablePage {
 
     Keys.onPressed: event => {
         if (event.key === Qt.Key_Escape) {
-            Qt.quit()
+            event.accepted = true;
+            Qt.quit();
+            return;
         }
         if (event.text.length > 0 && !view.showSearch && event.modifiers === Qt.NoModifier) {
+            event.accepted = true;
             // We want to prevent unprintable characters like backspace
             model = emoji
             searchText += /[\x00-\x1F\x7F]/.test(event.text) ? "" : event.text

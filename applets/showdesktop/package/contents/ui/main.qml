@@ -77,6 +77,10 @@ PlasmoidItem {
             case Qt.Key_Return:
             case Qt.Key_Select:
                 Plasmoid.activated();
+                event.accepted = true;
+                break;
+            default:
+                event.accepted = false;
                 break;
             }
         }

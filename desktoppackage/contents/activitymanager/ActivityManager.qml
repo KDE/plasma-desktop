@@ -43,22 +43,27 @@ FocusScope {
                 } else {
                     activityBrowser.closeRequested();
                 }
+                event.accepted = true;
 
             } else if (event.key === Qt.Key_Up) {
                 activityList.selectPrevious();
+                event.accepted = true;
 
             } else if (event.key === Qt.Key_Down) {
                 activityList.selectNext();
+                event.accepted = true;
 
             } else if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
                 activityList.openSelected();
+                event.accepted = true;
 
             } else if (event.key === Qt.Key_Tab) {
                 // console.log("TAB KEY");
+                event.accepted = false;
 
             } else {
                 // console.log("OTHER KEY");
-                // event.accepted = false;
+                event.accepted = false;
                 // heading.forceActiveFocus();
             }
         }

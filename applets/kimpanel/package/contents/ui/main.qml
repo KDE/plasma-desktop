@@ -107,9 +107,14 @@ PlasmoidItem {
                     case Qt.Key_Return:
                     case Qt.Key_Select:
                         statusIcon.triggered(Qt.LeftButton);
+                        event.accepted = true;
                         break;
                     case Qt.Key_Menu:
                         statusIcon.triggered(Qt.RightButton);
+                        event.accepted = true;
+                        break;
+                    default:
+                        event.accepted = false;
                         break;
                     }
                 }
