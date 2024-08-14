@@ -16,7 +16,15 @@ ecm_qt_declare_logging_category(kcm_tablet
     EXPORT
         kcm_tablet
 )
-qt6_generate_wayland_protocol_client_sources(kcm_tablet FILES ${WaylandProtocols_DATADIR}/unstable/tablet/tablet-unstable-v2.xml)
+
+if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
+    set(private_code_option  "PRIVATE_CODE")
+endif()
+qt6_generate_wayland_protocol_client_sources(kcm_tablet
+    ${private_code_option}
+    FILES ${WaylandProtocols_DATADIR}/unstable/tablet/tablet-unstable-v2.xml
+)
+
 ecm_qt_install_logging_categories(
     EXPORT kcm_tablet
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
