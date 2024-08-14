@@ -83,7 +83,7 @@ QtObject {
     // QtObject has no default property, hence adding the Instantiator to one explicitly.
     readonly property Instantiator instantiator: Instantiator {
         model: PulseObjectFilterModel {
-            filters: [ { role: "VirtualStream", value: false } ]
+            filters: [ makeFilter("VirtualStream", false) ]
             sourceModel: SinkInputModel {}
         }
 
