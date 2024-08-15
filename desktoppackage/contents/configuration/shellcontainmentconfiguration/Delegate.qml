@@ -154,6 +154,7 @@ QQC2.Control {
                     QQC2.Button {
                         id: moveButton
                         icon.name: "open-menu-symbolic"
+                        visible: contextMenuRepeater.anyActionAvailable || removeItem.itemVisible
                         checked: contextMenu.visible
                         anchors {
                             right: parent.right
@@ -173,7 +174,14 @@ QQC2.Control {
                             id: contextMenu
                             y: moveButton.height
                             Repeater {
+                                id: contextMenuRepeater
                                 model: ShellContainmentModel
+
+                                // There will always be at least one hidden action for the
+                                // current screen; if there's any other, then we should
+                                // display them.
+                                property bool anyActionAvailable: count > 1
+
                                 QQC2.MenuItem {
                                     text: edge == "floating"
                                         ? i18nd("plasma_shell_org.kde.plasma.desktop", "Swap with Desktop on Screen %1", model.screenName)
@@ -186,7 +194,7 @@ QQC2.Control {
                                 }
                             }
                             QQC2.MenuSeparator {
-                                visible: removeItem.visible
+                                visible: removeItem.visible && contextMenuRepeater.anyActionAvailable
                             }
                             QQC2.MenuItem {
                                 id: removeItem
@@ -201,7 +209,10 @@ QQC2.Control {
                                         containments.remove(containmentId);
                                     }
                                 }
-                                visible: contRect.state !== "floating" || !model.active
+                                // We read this variable elsewhere to know if this item
+                                // would be visible if the context menu were to be shown.
+                                property bool itemVisible: contRect.state !== "floating" || !model.active
+                                visible: itemVisible
                             }
                         }
                     }
