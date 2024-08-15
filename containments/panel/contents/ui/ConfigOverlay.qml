@@ -357,6 +357,16 @@ MouseArea {
                         configurationArea.currentApplet.applet.plasmoid.configuration.length = value
                     }
                 }
+
+                PlasmaComponents3.Switch {
+                    text: i18nc("@option:check Whether to allow a spacer widget to fill available space", "Flexible size")
+                    visible: configurationArea.currentApplet?.applet.plasmoid.pluginName === "org.kde.plasma.panelspacer"
+                    checked: configurationArea.currentApplet.applet.plasmoid.configuration.expanding
+                    onToggled: configurationArea.currentApplet.applet.plasmoid.configuration.expanding = checked
+                    Layout.fillWidth: true
+                    Layout.bottomMargin: Kirigami.Units.smallSpacing
+                }
+
             }
         }
     }
