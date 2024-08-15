@@ -385,6 +385,7 @@ PlasmaCore.ToolTipArea {
         id: menuTapHandler
         acceptedButtons: Qt.LeftButton
         acceptedDevices: PointerDevice.TouchScreen | PointerDevice.Stylus
+        gesturePolicy: TapHandler.ReleaseWithinBounds
         onLongPressed: {
             // When we're a launcher, there's no window controls, so we can show all
             // places without the menu getting super huge.
@@ -475,7 +476,7 @@ PlasmaCore.ToolTipArea {
         // Avoid repositioning delegate item after dragFinished
         DragHandler {
             id: dragHandler
-            grabPermissions: PointerHandler.TakeOverForbidden
+            grabPermissions: PointerHandler.CanTakeOverFromHandlersOfDifferentType
 
             function setRequestedInhibitDnd(value: bool): void {
                 // This is modifying the value in the panel containment that

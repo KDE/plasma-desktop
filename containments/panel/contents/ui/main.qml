@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.1
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 
@@ -114,6 +114,12 @@ ContainmentItem {
         component.destroy();
     }
 //END connections
+
+    TapHandler {
+        acceptedButtons: Qt.LeftButton
+        acceptedDevices: PointerDevice.TouchScreen | PointerDevice.Stylus
+        onLongPressed: Plasmoid.internalAction("configure").trigger()
+    }
 
     DragDrop.DropArea {
         id: dropArea
