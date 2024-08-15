@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-07-09 16:29+0200\n"
+"PO-Revision-Date: 2024-08-14 11:33+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -21,12 +21,11 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Zakázáno"
 
 # žádné parametry funkce v inspektoru funkcí
 #: inputsequence.cpp:138
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "Nic"
@@ -35,19 +34,19 @@ msgstr "Nic"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "Levé tlačítko myši"
 
 #: inputsequence.cpp:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "Pravé tlačítko myši"
 
 #: inputsequence.cpp:149
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "Prostřední tlačítko myši"
 
 #: inputsequence.cpp:155
 #, kde-format
@@ -115,7 +114,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "Vybrat činnost tlačítka"
 
 #: ui/ActionDialog.qml:70
 #, kde-format
@@ -145,7 +144,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Nedělat nic"
 
 #: ui/ActionDialog.qml:149
 #, kde-format
@@ -159,43 +158,43 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left Click"
-msgstr ""
+msgstr "Kliknutí levým tlačítkem myši"
 
 #: ui/ActionDialog.qml:178
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle Click"
-msgstr ""
+msgstr "Kliknutí prostředním tlačítkem myši"
 
 #: ui/ActionDialog.qml:179
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right Click"
-msgstr ""
+msgstr "Kliknutí pravým tlačítkem myši"
 
 #: ui/ActionDialog.qml:206
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:213
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:220
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:235
 #, kde-format
@@ -328,13 +327,12 @@ msgid "Pen button 1:"
 msgstr "Tlačítko pera 1:"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 1'"
 msgid "pen button 1"
-msgstr "Tlačítko pera 1:"
+msgstr "tlačítko pera 1"
 
 #: ui/main.qml:290
 #, kde-format
@@ -342,13 +340,12 @@ msgid "Pen button 2:"
 msgstr "Tlačítko pera 2:"
 
 #: ui/main.qml:291
-#, fuzzy, kde-format
-#| msgid "Pen button 2:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 2'"
 msgid "pen button 2"
-msgstr "Tlačítko pera 2:"
+msgstr "tlačítko pera 2"
 
 #: ui/main.qml:295
 #, kde-format
@@ -356,13 +353,12 @@ msgid "Pen button 3:"
 msgstr "Tlačítko pera 3:"
 
 #: ui/main.qml:296
-#, fuzzy, kde-format
-#| msgid "Pen button 3:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 3'"
 msgid "pen button 3"
-msgstr "Tlačítko pera 3:"
+msgstr "tlačítko pera 3"
 
 #: ui/main.qml:351
 #, kde-format
@@ -406,13 +402,12 @@ msgid "Pad button %1:"
 msgstr "Tlačítko tabletu %1:"
 
 #: ui/main.qml:432
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "Tlačítko tabletu %1:"
+msgstr "tlačítko tabletu %1"
 
 #: ui/Tester.qml:25
 #, kde-format
