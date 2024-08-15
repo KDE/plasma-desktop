@@ -41,6 +41,18 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
         id: frame
 
         anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: {
+            let heightDifference = Math.round((frame.height - overlay.height) / 2)
+            if (heightDifference > 0) {
+                if (heightDifference > overlay.topAvailableSpace) {
+                    return heightDifference - overlay.topAvailableSpace
+                }
+                if (heightDifference > overlay.bottomAvailableSpace) {
+                    return overlay.bottomAvailableSpace - heightDifference
+                }
+            }
+            return 0
+        }
         x: overlay.rightAvailableSpace > width + Kirigami.Units.gridUnit
             ? parent.width + Kirigami.Units.gridUnit
             : -width - Kirigami.Units.gridUnit
