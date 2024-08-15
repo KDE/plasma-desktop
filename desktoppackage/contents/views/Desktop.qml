@@ -86,7 +86,7 @@ Item {
         }
 
         if (sidePanel.visible) {
-            if (Qt.application.layoutDirection === Qt.RightToLeft) {
+            if (sidePanel.sideBarOnRightEdge) {
                 screenRect = Qt.rect(screenRect.x, screenRect.y, screenRect.width - sidePanel.width, screenRect.height);
             } else {
                 screenRect = Qt.rect(screenRect.x + sidePanel.width, screenRect.y, screenRect.width - sidePanel.width, screenRect.height);
@@ -96,6 +96,7 @@ Item {
     }
 
     MouseArea {
+        id: desktopMouseArea
         anchors.fill: parent
         onClicked: containment.plasmoid.corona.editMode = false
     }
@@ -191,11 +192,18 @@ Item {
 
     PlasmaCore.Dialog {
         id: sidePanel
-        location: Qt.application.layoutDirection === Qt.RightToLeft ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge
+        location: sideBarOnRightEdge ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge
         type: PlasmaCore.Dialog.Dock
         flags: Qt.WindowStaysOnTopHint
 
         hideOnWindowDeactivate: true
+
+        property bool rightEdgeParent: {
+            const item = sidePanelStack.item;
+            return (item?.containment && item.containment !== containment.plasmoid
+                && item.containment.location == PlasmaCore.Types.RightEdge)
+        }
+        property bool sideBarOnRightEdge: rightEdgeParent || Qt.application.layoutDirection === Qt.RightToLeft
 
         x: {
             let result = desktop.x;
@@ -206,7 +214,7 @@ Item {
             const rect = containment.plasmoid.availableScreenRect;
             result += rect.x;
 
-            if (Qt.application.layoutDirection === Qt.RightToLeft) {
+            if (sideBarOnRightEdge) {
                 result += rect.width - sidePanel.width;
             }
 
