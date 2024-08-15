@@ -99,6 +99,8 @@ Dtime::Dtime(QWidget *parent, bool haveTimeDated)
 
     kclock->setEnabled(false);
 
+    tabWidget->tabBar()->setExpanding(true);
+
     // Timezone
     connect(tzonelist, &K4TimeZoneWidget::itemSelectionChanged, this, &Dtime::configChanged);
     tzonesearch->setTreeWidget(tzonelist);
