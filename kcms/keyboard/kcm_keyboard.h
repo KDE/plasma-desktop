@@ -20,6 +20,18 @@ class LayoutModel;
 class UserLayoutModel;
 class XkbOptionsModel;
 
+namespace NumLockState
+{
+Q_NAMESPACE
+
+enum NumLockState {
+    NumLockOn,
+    NumLockOff,
+    NumLockUnchanged,
+};
+Q_ENUM_NS(NumLockState)
+};
+
 class KCMKeyboard final : public KQuickManagedConfigModule
 {
     Q_OBJECT

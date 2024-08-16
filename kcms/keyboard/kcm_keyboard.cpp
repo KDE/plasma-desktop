@@ -39,9 +39,11 @@ KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
     , m_shortcutHelper(new ShortcutHelper(this))
     , m_xkbOptionsModel(new XkbOptionsModel(this))
 {
-    qmlRegisterAnonymousType<WorkspaceOptions>("org.kde.plasma.keyboard.kcm", 0);
-    qmlRegisterAnonymousType<KeyboardMiscSettings>("org.kde.plasma.keyboard.kcm", 0);
-    qmlRegisterAnonymousType<KeyboardSettings>("org.kde.plasma.keyboard.kcm", 0);
+    const auto uri = "org.kde.plasma.private.kcm_keyboard";
+    qmlRegisterAnonymousType<WorkspaceOptions>(uri, 1);
+    qmlRegisterAnonymousType<KeyboardMiscSettings>(uri, 1);
+    qmlRegisterAnonymousType<KeyboardSettings>(uri, 1);
+    qmlRegisterUncreatableMetaObject(NumLockState::staticMetaObject, uri, 1, 0, "NumLockState", QString());
 
     connect(m_data->keyboardSettings(), &KeyboardSettings::configureLayoutsChanged, this, [this]() -> void {
         if (m_data->keyboardSettings()->configureLayouts()) {

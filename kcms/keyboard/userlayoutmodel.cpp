@@ -20,11 +20,6 @@ UserLayoutModel::UserLayoutModel(KeyboardConfig *config, QObject *parent) noexce
 {
 }
 
-QItemSelectionModel *UserLayoutModel::selectionModel() const
-{
-    return m_selectionModel;
-}
-
 int UserLayoutModel::rowCount(const QModelIndex &parent) const
 {
     return m_config->layouts().count();
@@ -114,8 +109,6 @@ QHash<int, QByteArray> UserLayoutModel::roleNames() const
 
 void UserLayoutModel::reset()
 {
-    m_selectionModel->clear();
-
     beginResetModel();
     endResetModel();
 }
@@ -126,41 +119,19 @@ void UserLayoutModel::clear()
     reset();
 }
 
-void UserLayoutModel::moveSelectedLayouts(int shift)
+void UserLayoutModel::move(int oldIndex, int newIndex)
 {
-    if (!m_selectionModel->hasSelection()) {
-        return;
+    if (beginMoveRows(QModelIndex(), oldIndex, oldIndex, QModelIndex(), oldIndex < newIndex ? newIndex + 1 : newIndex)) {
+        m_config->layouts().move(oldIndex, newIndex);
+        endMoveRows();
     }
+}
 
-    const QModelIndexList &selected = m_selectionModel->selectedRows();
-
-    QList<int> rows(selected.size());
-    std::transform(selected.cbegin(), selected.cend(), rows.begin(), [](const QModelIndex &index) -> int {
-        return index.row();
-    });
-
-    std::sort(rows.begin(), rows.end(), [shift](int left, int right) -> bool {
-        return shift < 0 ? left < right : left > right;
-    });
-
-    const int newFirstRow = (shift > 0 ? rows.first() : rows.last()) + shift;
-    const int newLastRow = (shift > 0 ? rows.last() : rows.first()) + shift;
-
-    if (newFirstRow < 0 || newLastRow >= m_config->layouts().size()) {
-        return;
-    }
-
-    m_selectionModel->clearSelection();
-    for (const int row : rows) {
-        const int destinationRow = row + shift;
-
-        if (beginMoveRows(QModelIndex(), row, row, QModelIndex(), row < destinationRow ? destinationRow + 1 : destinationRow)) {
-            m_config->layouts().move(row, destinationRow);
-            endMoveRows();
-        }
-
-        m_selectionModel->select(UserLayoutModel::index(destinationRow, 0), QItemSelectionModel::SelectionFlag::Select);
-    }
+void UserLayoutModel::remove(int index)
+{
+    beginRemoveRows(QModelIndex(), index, index);
+    m_config->layouts().removeAt(index);
+    endRemoveRows();
 }
 
 void UserLayoutModel::addLayout(const QString &layout, const QString &variant, const QKeySequence &shortcut, const QString &displayName)
@@ -175,30 +146,6 @@ void UserLayoutModel::addLayout(const QString &layout, const QString &variant, c
     beginInsertRows(QModelIndex(), m_config->layouts().count(), m_config->layouts().count());
     m_config->layouts().append(unit);
     endInsertRows();
-}
-
-void UserLayoutModel::removeSelected()
-{
-    if (!m_selectionModel->hasSelection()) {
-        return;
-    }
-
-    const QModelIndexList &selected = m_selectionModel->selectedRows();
-
-    QList<int> rows(selected.size());
-    std::transform(selected.cbegin(), selected.cend(), rows.begin(), [](const QModelIndex &index) -> int {
-        return index.row();
-    });
-
-    std::sort(rows.begin(), rows.end(), [](int left, int right) -> bool {
-        return left > right;
-    });
-
-    for (const int row : rows) {
-        beginRemoveRows(QModelIndex(), row, row);
-        m_config->layouts().removeAt(row);
-        endRemoveRows();
-    }
 }
 
 #include "moc_userlayoutmodel.cpp"
