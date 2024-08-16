@@ -22,6 +22,8 @@ RowLayout {
     property var osdValue
     // Maximum percent value
     property int osdMaxValue: 100
+    // Additional text if showingProgress is set to true
+    property string osdAdditionalText: ""
     // Icon name to display
     property string icon
     // Set to true if the value is meant for progress bar,
@@ -35,7 +37,7 @@ RowLayout {
     spacing: Kirigami.Units.largeSpacing
 
     Layout.preferredWidth: Math.max(Math.min(Screen.desktopAvailableWidth / 2, implicitWidth), Kirigami.Units.gridUnit * 15)
-    Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+    Layout.preferredHeight: Math.max(iconItem.Layout.preferredHeight, implicitHeight)
     Layout.minimumWidth: Layout.preferredWidth
     Layout.minimumHeight: Layout.preferredHeight
     Layout.maximumWidth: Layout.preferredWidth
@@ -53,71 +55,84 @@ RowLayout {
         visible: valid
     }
 
-    PlasmaComponents3.ProgressBar {
-        id: progressBar
-        Layout.leftMargin: iconItem.valid ? 0 : Kirigami.Units.smallSpacing // Left end spacing
+    ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
+
         Layout.fillWidth: true
-        Layout.alignment: Qt.AlignVCenter
-        // So it never exceeds the minimum popup size
-        Layout.minimumWidth: 0
-        Layout.rightMargin: Kirigami.Units.smallSpacing
-        visible: root.showingProgress
-        from: 0
-        to: root.osdMaxValue
-        value: Number(root.osdValue)
-    }
-
-    // Get the width of a three-digit number so we can size the label
-    // to the maximum width to avoid the progress bad resizing itself
-    TextMetrics {
-        id: widestLabelSize
-        text: formatPercent(root.osdMaxValue)
-        font: percentageLabel.font
-    }
-
-    // Numerical display of progress bar value
-    PlasmaExtras.Heading {
-        id: percentageLabel
-        Layout.rightMargin: Kirigami.Units.smallSpacing // Right end spacing
         Layout.fillHeight: true
-        Layout.preferredWidth: Math.ceil(widestLabelSize.advanceWidth)
+        Layout.topMargin: Kirigami.Units.smallSpacing
+        Layout.bottomMargin: Kirigami.Units.smallSpacing
         Layout.alignment: Qt.AlignVCenter
-        level: 3
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        text: formatPercent(progressBar.value)
-        textFormat: Text.PlainText
-        wrapMode: Text.NoWrap
-        visible: root.showingProgress
-        // Display a subtle visual indication that the volume might be
-        // dangerously high
-        // ------------------------------------------------
-        // Keep this in sync with the copies in plasma-pa:ListItemBase.qml
-        // and plasma-pa:VolumeSlider.qml
-        color: {
-            if (progressBar.value <= 100) {
-                return Kirigami.Theme.textColor
-            } else if (progressBar.value > 100 && progressBar.value <= 125) {
-                return Kirigami.Theme.neutralTextColor
-            } else {
-                return Kirigami.Theme.negativeTextColor
+
+        PlasmaExtras.Heading {
+            id: label
+            Layout.fillWidth: true
+            Layout.leftMargin: iconItem.valid ? 0 : Kirigami.Units.smallSpacing
+            Layout.rightMargin: Kirigami.Units.smallSpacing
+            level: 3
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            textFormat: Text.PlainText
+            wrapMode: Text.NoWrap
+            elide: Text.ElideRight
+            text: (root.showingProgress ? root.osdAdditionalText : root.osdValue) ?? ""
+            visible: text != ""
+        }
+
+        RowLayout {
+            visible: root.showingProgress
+            spacing: Kirigami.Units.smallSpacing
+
+            PlasmaComponents3.ProgressBar {
+                id: progressBar
+                Layout.leftMargin: iconItem.valid ? 0 : Kirigami.Units.smallSpacing // Left end spacing
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignVCenter
+                // So it never exceeds the minimum popup size
+                Layout.minimumWidth: 0
+                Layout.rightMargin: Kirigami.Units.smallSpacing
+                from: 0
+                to: root.osdMaxValue
+                value: Number(root.osdValue)
+            }
+
+            // Get the width of a three-digit number so we can size the label
+            // to the maximum width to avoid the progress bad resizing itself
+            TextMetrics {
+                id: widestLabelSize
+                text: formatPercent(root.osdMaxValue)
+                font: percentageLabel.font
+            }
+
+            // Numerical display of progress bar value
+            PlasmaExtras.Heading {
+                id: percentageLabel
+                Layout.rightMargin: Kirigami.Units.smallSpacing // Right end spacing
+                Layout.fillHeight: true
+                Layout.preferredWidth: Math.ceil(widestLabelSize.advanceWidth)
+                Layout.alignment: Qt.AlignVCenter
+                level: 3
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                text: formatPercent(progressBar.value)
+                textFormat: Text.PlainText
+                wrapMode: Text.NoWrap
+                visible: root.showingProgress
+                // Display a subtle visual indication that the volume might be
+                // dangerously high
+                // ------------------------------------------------
+                // Keep this in sync with the copies in plasma-pa:ListItemBase.qml
+                // and plasma-pa:VolumeSlider.qml
+                color: {
+                    if (progressBar.value <= 100) {
+                        return Kirigami.Theme.textColor
+                    } else if (progressBar.value > 100 && progressBar.value <= 125) {
+                        return Kirigami.Theme.neutralTextColor
+                    } else {
+                        return Kirigami.Theme.negativeTextColor
+                    }
+                }
             }
         }
-    }
-
-    PlasmaExtras.Heading {
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-        Layout.leftMargin: iconItem.valid ? 0 : Kirigami.Units.smallSpacing
-        Layout.rightMargin: Kirigami.Units.smallSpacing
-        Layout.alignment: Qt.AlignVCenter
-        level: 3
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        textFormat: Text.PlainText
-        wrapMode: Text.NoWrap
-        elide: Text.ElideRight
-        text: !root.showingProgress && root.osdValue ? root.osdValue : ""
-        visible: !root.showingProgress
     }
 }

@@ -15,6 +15,7 @@ PlasmaCore.Dialog {
     property alias timeout: osd.timeout
     property alias osdValue: osd.osdValue
     property alias osdMaxValue: osd.osdMaxValue
+    property alias osdAdditionalText: osd.osdAdditionalText
     property alias icon: osd.icon
     property alias showingProgress: osd.showingProgress
 
