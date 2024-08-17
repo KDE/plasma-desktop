@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"POT-Creation-Date: 2024-08-17 00:40+0000\n"
 "PO-Revision-Date: 2016-12-18 20:00+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -95,318 +95,420 @@ msgid ""
 "fine if applied"
 msgstr ""
 
-#: ui/Advanced.qml:40
+#: ui/KeyBindings.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Key Bindings"
+msgstr ""
+
+#: ui/KeyBindings.qml:37
 #, fuzzy, kde-format
 #| msgid "&Configure keyboard options"
-msgctxt "@option:checkbox"
+msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "&Διαμόρφωση επιλογών πληκτρολογίου"
 
-#: ui/Hardware.qml:34
-#, fuzzy, kde-format
-#| msgid "Keyboard &model:"
-msgctxt "@title:group"
-msgid "Keyboard model:"
-msgstr "&Μοντέλο πληκτρολογίου:"
-
-#: ui/Hardware.qml:68
-#, fuzzy, kde-format
-#| msgid "NumLock on Plasma Startup"
-msgctxt "@title:group"
-msgid "NumLock on Plasma Startup:"
-msgstr "NumLock στην εκκίνηση του Plasma"
-
-#: ui/Hardware.qml:73
-#, fuzzy, kde-format
-#| msgid "T&urn on"
-msgctxt "@option:radio"
-msgid "Turn On"
-msgstr "&Ενεργοποίηση"
-
-#: ui/Hardware.qml:77
-#, fuzzy, kde-format
-#| msgid "&Turn off"
-msgctxt "@option:radio"
-msgid "Turn Off"
-msgstr "&Απενεργοποίηση"
-
-#: ui/Hardware.qml:81
-#, fuzzy, kde-format
-#| msgid "&Leave unchanged"
-msgctxt "@option:radio"
-msgid "Leave unchanged"
-msgstr "Μένει ανεπη&ρέαστο"
-
-#: ui/Hardware.qml:114
-#, kde-format
-msgctxt "@title:group"
-msgid "When key is held:"
-msgstr ""
-
-#: ui/Hardware.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Repeat the key"
-msgstr ""
-
-#: ui/Hardware.qml:124
-#, kde-format
-msgctxt "@option:radio"
-msgid "Do nothing"
-msgstr ""
-
-#: ui/Hardware.qml:129
-#, kde-format
-msgctxt "@option:radio"
-msgid "Show accented and similar characters"
-msgstr ""
-
-#: ui/Hardware.qml:164
-#, fuzzy, kde-format
-#| msgid "&Delay:"
-msgctxt "@label:slider"
-msgid "Delay:"
-msgstr "&Καθυστέρηση:"
-
-#: ui/Hardware.qml:199
-#, fuzzy, kde-format
-#| msgid "&Rate:"
-msgctxt "@label:slider"
-msgid "Rate:"
-msgstr "&Ρυθμός:"
-
-#: ui/Hardware.qml:247
-#, fuzzy, kde-format
-#| msgid "Test area:"
-msgctxt "@label:textbox"
-msgid "Test area:"
-msgstr "Περιοχή δοκιμών:"
-
-#: ui/Hardware.qml:248
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Type here to test settings"
-msgstr ""
-
-#: ui/LayoutDialog.qml:21
+#: ui/LayoutDialog.qml:20
 #, fuzzy, kde-format
 #| msgid "Add Layout"
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Προσθήκη διάταξης"
 
-#: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
+#: ui/LayoutDialog.qml:177
 #, fuzzy, kde-format
-#| msgid "Preview"
-msgctxt "@action:button"
-msgid "Preview"
-msgstr "Προεπισκόπηση"
-
-#: ui/LayoutDialog.qml:124
-#, kde-format
+#| msgid "Show layout indicator"
 msgctxt "@label:textbox"
-msgid "Display text:"
+msgid "Short layout name"
+msgstr "Εμφάνιση ένδειξης διάταξης"
+
+#: ui/LayoutDialog.qml:187
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The abbreviated name of the selected layout, which will be displayed in the "
+"system tray. You can change this setting yourself."
 msgstr ""
 
-#: ui/LayoutDialog.qml:143
+#: ui/LayoutDialog.qml:195
 #, fuzzy, kde-format
 #| msgid "Shortcut:"
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Συντόμευση:"
 
-#: ui/Layouts.qml:28
+#: ui/LayoutDialog.qml:206 ui/main.qml:285
 #, fuzzy, kde-format
-#| msgid "Shortcuts for Switching Layout"
-msgctxt "@title:group"
-msgid "Shortcuts for Switching Layout"
-msgstr "Συντομεύσεις εναλλαγής διάταξης"
+#| msgid "Preview"
+msgctxt "@action:button"
+msgid "Preview"
+msgstr "Προεπισκόπηση"
 
-#: ui/Layouts.qml:34
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
-msgctxt "@option:textbox"
-msgid "Main shortcuts:"
-msgstr "Κύριες συντομεύσεις:"
-
-#: ui/Layouts.qml:61
-#, fuzzy, kde-format
-#| msgid "3rd level shortcuts:"
-msgctxt "@option:textbox"
-msgid "3rd level shortcuts:"
-msgstr "Συντομεύσεις 3ου επιπέδου:"
-
-#: ui/Layouts.qml:88
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
-msgctxt "@option:textbox"
-msgid "Alternative shortcut:"
-msgstr "Εναλλακτική συντόμευση:"
-
-#: ui/Layouts.qml:109
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
-msgctxt "@option:textbox"
-msgid "Last used shortcuts:"
-msgstr "Εναλλακτική συντόμευση:"
-
-#: ui/Layouts.qml:129
+#: ui/main.qml:37
 #, kde-format
-msgctxt "@option:checkbox"
-msgid "Show a popup on layout changes"
+msgctxt "@action:button"
+msgid "Configure Switching…"
 msgstr ""
 
-#: ui/Layouts.qml:145
-#, fuzzy, kde-format
-#| msgid "Switching Policy"
-msgctxt "@title:group"
-msgid "Switching Policy"
-msgstr "Πολιτική εναλλαγής"
-
-#: ui/Layouts.qml:152
-#, fuzzy, kde-format
-#| msgid "&Global"
-msgctxt "@option:radio"
-msgid "Global"
-msgstr "&Καθολική"
-
-#: ui/Layouts.qml:156
-#, fuzzy, kde-format
-#| msgid "&Desktop"
-msgctxt "@option:radio"
-msgid "Desktop"
-msgstr "&Επιφάνεια εργασίας"
-
-#: ui/Layouts.qml:160
-#, fuzzy, kde-format
-#| msgid "&Application"
-msgctxt "@option:radio"
-msgid "Application"
-msgstr "&Εφαρμογή"
-
-#: ui/Layouts.qml:164
-#, fuzzy, kde-format
-#| msgid "&Window"
-msgctxt "@option:radio"
-msgid "Window"
-msgstr "&Παράθυρο"
-
-#: ui/Layouts.qml:185
+#: ui/main.qml:38
 #, fuzzy, kde-format
 #| msgid "Configure layouts"
-msgctxt "@option:checkbox"
+msgctxt "@action:button accessible"
+msgid "Configure Switching"
+msgstr "Διαμόρφωση διατάξεων"
+
+#: ui/main.qml:44
+#, kde-format
+msgctxt "@action:button"
+msgid "Key Bindings"
+msgstr ""
+
+#: ui/main.qml:45
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Key Bindings"
+msgstr ""
+
+#: ui/main.qml:51
+#, kde-format
+msgctxt "@action:button Layout"
+msgid "Add…"
+msgstr ""
+
+#: ui/main.qml:52
+#, fuzzy, kde-format
+#| msgid "Add Layout"
+msgctxt "@action:button accessible"
+msgid "Add layout"
+msgstr "Προσθήκη διάταξης"
+
+#: ui/main.qml:59
+#, kde-format
+msgctxt "@label:checkbox configure layouts option"
+msgid "Enable"
+msgstr ""
+
+#: ui/main.qml:60
+#, fuzzy, kde-format
+#| msgid "Configure layouts"
+msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Διαμόρφωση διατάξεων"
 
-#: ui/Layouts.qml:200
-#, fuzzy, kde-format
-#| msgid "Add"
-msgctxt "@action:button"
-msgid "Add"
-msgstr "Προσθήκη"
+#: ui/main.qml:76
+#, kde-format
+msgctxt "@label:listbox Keyboard model"
+msgid "Model:"
+msgstr ""
 
-#: ui/Layouts.qml:206
+#: ui/main.qml:104
 #, fuzzy, kde-format
-#| msgid "Remove"
-msgctxt "@action:button"
-msgid "Remove"
-msgstr "Αφαίρεση"
+#| msgid "NumLock on Plasma Startup"
+msgctxt "@label:listbox"
+msgid "NumLock on startup:"
+msgstr "NumLock στην εκκίνηση του Plasma"
 
-#: ui/Layouts.qml:213
+#: ui/main.qml:112
+#, fuzzy, kde-format
+#| msgid "T&urn on"
+msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
+msgid "Turn on"
+msgstr "&Ενεργοποίηση"
+
+#: ui/main.qml:116
+#, fuzzy, kde-format
+#| msgid "Turn o&ff"
+msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
+msgid "Turn off"
+msgstr "&Απενεργοποίηση"
+
+#: ui/main.qml:120
+#, fuzzy, kde-format
+#| msgid "&Leave unchanged"
+msgctxt ""
+"@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
+"started up"
+msgid "Leave unchanged"
+msgstr "Μένει ανεπη&ρέαστο"
+
+#: ui/main.qml:146
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "@label:checkbox"
+msgid "Key repeat:"
+msgstr "Επανάληψη πληκτρολογίου"
+
+#: ui/main.qml:155
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "@label:checkbox accessible"
+msgid "Key repeat"
+msgstr "Επανάληψη πληκτρολογίου"
+
+#: ui/main.qml:166
+#, fuzzy, kde-format
+#| msgid "&Delay:"
+msgctxt "@label:textbox Key repeat delay"
+msgid "Delay:"
+msgstr "&Καθυστέρηση:"
+
+#: ui/main.qml:180
+#, kde-format
+msgctxt "@label:spinbox accessible"
+msgid "Key repeat delay %1"
+msgstr ""
+
+#: ui/main.qml:188
+#, kde-format
+msgctxt "@spinbox:value Repeat delay interval"
+msgid "%1 ms"
+msgstr ""
+
+#: ui/main.qml:192
+#, fuzzy, kde-format
+#| msgid " ms"
+msgctxt "@spinbox:value Repeat delay interval"
+msgid "ms"
+msgstr " ms"
+
+#: ui/main.qml:205
+#, fuzzy, kde-format
+#| msgid "&Rate:"
+msgctxt "@label:textbox Key repeat rate"
+msgid "Rate:"
+msgstr "&Ρυθμός:"
+
+#: ui/main.qml:219
+#, kde-format
+msgctxt "@label:spinbox accessible"
+msgid "Key repeat rate %1"
+msgstr ""
+
+#: ui/main.qml:227
+#, fuzzy, kde-format
+#| msgid " repeats/s"
+msgctxt "@spinbox:value  Key repeat rate"
+msgid "%1 repeats/s"
+msgstr " επαναλήψεις/s"
+
+#: ui/main.qml:231
+#, fuzzy, kde-format
+#| msgid " repeats/s"
+msgctxt "@spinbox:value  Key repeat rate"
+msgid "repeats/s"
+msgstr " επαναλήψεις/s"
+
+#: ui/main.qml:243
+#, fuzzy, kde-format
+#| msgid "Test area:"
+msgctxt "@label:textbox"
+msgid "Test area:"
+msgstr "Περιοχή δοκιμών:"
+
+#: ui/main.qml:245
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to test settings"
+msgstr ""
+
+#: ui/main.qml:256
+#, fuzzy, kde-format
+#| msgid "Layouts"
+msgctxt "@title:view"
+msgid "Layouts"
+msgstr "Διατάξεις"
+
+#: ui/main.qml:268
 #, fuzzy, kde-format
 #| msgid "Move Up"
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Μετακίνηση πάνω"
 
-#: ui/Layouts.qml:229
+#: ui/main.qml:269
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Move %1 layout up"
+msgstr ""
+
+#: ui/main.qml:275
 #, fuzzy, kde-format
 #| msgid "Move Down"
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Μετακίνηση κάτω"
 
-#: ui/Layouts.qml:316
+#: ui/main.qml:276
 #, fuzzy, kde-format
-#| msgctxt "layout map name"
-#| msgid "Map"
-msgctxt "@title:column"
-msgid "Map"
-msgstr "Αντιστοίχηση"
+#| msgid "Move Down"
+msgctxt "@action:button accessible"
+msgid "Move %1 layout Down"
+msgstr "Μετακίνηση κάτω"
 
-#: ui/Layouts.qml:323
+#: ui/main.qml:286
 #, fuzzy, kde-format
-#| msgid "Label"
-msgctxt "@title:column"
-msgid "Label"
-msgstr "Ετικέτα"
+#| msgid "Preview"
+msgctxt "@action:button accessible"
+msgid "Preview"
+msgstr "Προεπισκόπηση"
 
-#: ui/Layouts.qml:332
+#: ui/main.qml:294
 #, fuzzy, kde-format
-#| msgid "Layout"
-msgctxt "@title:column"
-msgid "Layout"
-msgstr "Διάταξη"
-
-#: ui/Layouts.qml:337
-#, fuzzy, kde-format
-#| msgid "Variant"
-msgctxt "@title:column"
-msgid "Variant"
-msgstr "Παραλλαγή"
-
-#: ui/Layouts.qml:342
-#, fuzzy, kde-format
-#| msgid "Shortcut"
-msgctxt "@title:column"
-msgid "Shortcut"
-msgstr "Συντόμευση"
-
-#: ui/Layouts.qml:388
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#| msgid "Remove"
 msgctxt "@action:button"
-msgid "Reassign shortcut"
-msgstr "Κύριες συντομεύσεις:"
+msgid "Remove"
+msgstr "Αφαίρεση"
 
-#: ui/Layouts.qml:404
+#: ui/main.qml:295
 #, kde-format
-msgctxt "@action:button"
-msgid "Cancel assignment"
+msgctxt "@action:button accessible"
+msgid "Remove layout %1"
 msgstr ""
 
-#: ui/Layouts.qml:417
+#: ui/main.qml:307
 #, fuzzy, kde-format
 #| msgid "Spare layouts"
-msgctxt "@option:checkbox"
-msgid "Spare layouts"
+msgctxt "@label:checkbox"
+msgid "Spare layouts:"
 msgstr "Εφεδρικές διατάξεις"
 
-#: ui/Layouts.qml:453
+#: ui/main.qml:344
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Number of spared main layouts"
+msgstr ""
+
+#: ui/main.qml:376
+#, fuzzy, kde-format
+#| msgid "Spare layouts"
+msgctxt "@label:textbox completes spinbox, x main layouts"
+msgid "main layouts"
+msgstr "Εφεδρικές διατάξεις"
+
+#: ui/main.qml:380
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You can have up to 4 main layouts, all other layouts are spare. Spare "
+"layouts are not included when cycling through the layouts, but can be "
+"accessed through the keyboard indicator applet or by setting a custom "
+"shortcut."
+msgstr ""
+
+#: ui/main.qml:385
 #, fuzzy, kde-format
 #| msgid "Main layout count:"
-msgctxt "@label:spinbox"
-msgid "Main layout count:"
+msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
+msgid "Change layout shortcut:"
 msgstr "Αρίθμηση κύριας διάταξης:"
 
-#: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Hardware"
-msgctxt "@title:tab"
-msgid "Hardware"
-msgstr "Υλικό"
-
-#: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Layouts"
-msgctxt "@title:tab"
-msgid "Layouts"
-msgstr "Διατάξεις"
-
-#: ui/main.qml:55
+#: ui/main.qml:408
 #, kde-format
-msgctxt "@title:tab"
-msgid "Key Bindings"
+msgctxt "@label Change layout shortcut or \"Configure Switching\""
+msgid "or"
+msgstr ""
+
+#: ui/Switching.qml:17
+#, fuzzy, kde-format
+#| msgid "Configure layouts"
+msgctxt "@title"
+msgid "Configure Switching"
+msgstr "Διαμόρφωση διατάξεων"
+
+#: ui/Switching.qml:23
+#, kde-format
+msgctxt "@title:group"
+msgid "Behavior"
+msgstr ""
+
+#: ui/Switching.qml:28
+#, fuzzy, kde-format
+#| msgid "Main layout count:"
+msgctxt "@label:listbox"
+msgid "Switching layout affects:"
+msgstr "Αρίθμηση κύριας διάταξης:"
+
+#: ui/Switching.qml:35
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "All windows"
+msgstr ""
+
+#: ui/Switching.qml:39
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "All windows on current desktop"
+msgstr ""
+
+#: ui/Switching.qml:43
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "All windows of current application"
+msgstr ""
+
+#: ui/Switching.qml:47
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Current window only"
+msgstr ""
+
+#: ui/Switching.qml:74
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Show notification on layout change"
+msgstr ""
+
+#: ui/Switching.qml:86
+#, fuzzy, kde-format
+#| msgid "Shortcut"
+msgctxt "@title:group"
+msgid "Shortcuts"
+msgstr "Συντόμευση"
+
+#: ui/Switching.qml:91 ui/Switching.qml:152
+#, fuzzy, kde-format
+#| msgid "Spare layouts"
+msgctxt "@option:textbox"
+msgid "Change layout:"
+msgstr "Εφεδρικές διατάξεις"
+
+#: ui/Switching.qml:111
+#, fuzzy, kde-format
+#| msgid "Switch to Next Keyboard Layout"
+msgctxt "@option:textbox"
+msgid "Switch to last used layout:"
+msgstr "Επιλογή επόμενης διάταξης πληκτρολογίου"
+
+#: ui/Switching.qml:132
+#, fuzzy, kde-format
+#| msgid "Shortcut"
+msgctxt "@title:group"
+msgid "Legacy Shortcuts"
+msgstr "Συντόμευση"
+
+#: ui/Switching.qml:140
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Legacy X11 shortcuts allow finer control of modifier-only shortcuts and have "
+"slightly better support on X11 in edge cases. They can also be used on "
+"Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
+"page."
+msgstr ""
+
+#: ui/Switching.qml:181
+#, fuzzy, kde-format
+#| msgid "Alternative shortcut:"
+msgctxt "@option:textbox"
+msgid "Alternative symbols:"
+msgstr "Εναλλακτική συντόμευση:"
+
+#: ui/Switching.qml:207
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Modifier keys can be used to type additional characters, symbols, and "
+"diacritical marks."
 msgstr ""
 
 #: xkboptionsmodel.cpp:160
@@ -421,6 +523,115 @@ msgstr[1] "%1 συντομεύσεις"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Καμία"
+
+#, fuzzy
+#~| msgid "Keyboard &model:"
+#~ msgctxt "@title:group"
+#~ msgid "Keyboard model:"
+#~ msgstr "&Μοντέλο πληκτρολογίου:"
+
+#, fuzzy
+#~| msgid "&Turn off"
+#~ msgctxt "@option:radio"
+#~ msgid "Turn Off"
+#~ msgstr "&Απενεργοποίηση"
+
+#, fuzzy
+#~| msgid "Shortcuts for Switching Layout"
+#~ msgctxt "@title:group"
+#~ msgid "Shortcuts for Switching Layout"
+#~ msgstr "Συντομεύσεις εναλλαγής διάταξης"
+
+#, fuzzy
+#~| msgid "Main shortcuts:"
+#~ msgctxt "@option:textbox"
+#~ msgid "Main shortcuts:"
+#~ msgstr "Κύριες συντομεύσεις:"
+
+#, fuzzy
+#~| msgid "3rd level shortcuts:"
+#~ msgctxt "@option:textbox"
+#~ msgid "3rd level shortcuts:"
+#~ msgstr "Συντομεύσεις 3ου επιπέδου:"
+
+#, fuzzy
+#~| msgid "Alternative shortcut:"
+#~ msgctxt "@option:textbox"
+#~ msgid "Last used shortcuts:"
+#~ msgstr "Εναλλακτική συντόμευση:"
+
+#, fuzzy
+#~| msgid "Switching Policy"
+#~ msgctxt "@title:group"
+#~ msgid "Switching Policy"
+#~ msgstr "Πολιτική εναλλαγής"
+
+#, fuzzy
+#~| msgid "&Global"
+#~ msgctxt "@option:radio"
+#~ msgid "Global"
+#~ msgstr "&Καθολική"
+
+#, fuzzy
+#~| msgid "&Desktop"
+#~ msgctxt "@option:radio"
+#~ msgid "Desktop"
+#~ msgstr "&Επιφάνεια εργασίας"
+
+#, fuzzy
+#~| msgid "&Application"
+#~ msgctxt "@option:radio"
+#~ msgid "Application"
+#~ msgstr "&Εφαρμογή"
+
+#, fuzzy
+#~| msgid "&Window"
+#~ msgctxt "@option:radio"
+#~ msgid "Window"
+#~ msgstr "&Παράθυρο"
+
+#, fuzzy
+#~| msgid "Add"
+#~ msgctxt "@action:button"
+#~ msgid "Add"
+#~ msgstr "Προσθήκη"
+
+#, fuzzy
+#~| msgctxt "layout map name"
+#~| msgid "Map"
+#~ msgctxt "@title:column"
+#~ msgid "Map"
+#~ msgstr "Αντιστοίχηση"
+
+#, fuzzy
+#~| msgid "Label"
+#~ msgctxt "@title:column"
+#~ msgid "Label"
+#~ msgstr "Ετικέτα"
+
+#, fuzzy
+#~| msgid "Layout"
+#~ msgctxt "@title:column"
+#~ msgid "Layout"
+#~ msgstr "Διάταξη"
+
+#, fuzzy
+#~| msgid "Variant"
+#~ msgctxt "@title:column"
+#~ msgid "Variant"
+#~ msgstr "Παραλλαγή"
+
+#, fuzzy
+#~| msgid "Main shortcuts:"
+#~ msgctxt "@action:button"
+#~ msgid "Reassign shortcut"
+#~ msgstr "Κύριες συντομεύσεις:"
+
+#, fuzzy
+#~| msgid "Hardware"
+#~ msgctxt "@title:tab"
+#~ msgid "Hardware"
+#~ msgstr "Υλικό"
 
 #~ msgctxt "layout - variant"
 #~ msgid "%1 - %2"
@@ -531,12 +742,6 @@ msgstr "Καμία"
 #~ "Αν υποστηρίζεται, αυτή η επιλογή θα σας επιτρέψει να ορίσετε το ρυθμό με "
 #~ "τον οποίο στέλνονται κωδικοί μόλις πατηθεί ένα πλήκτρο."
 
-#~ msgid " repeats/s"
-#~ msgstr " επαναλήψεις/s"
-
-#~ msgid " ms"
-#~ msgstr " ms"
-
 #~ msgid "KDE Keyboard Control Module"
 #~ msgstr "Άρθρωμα ελέγχου πληκτρολογίου του KDE"
 
@@ -580,9 +785,6 @@ msgstr "Καμία"
 #~ msgid "Layout Indicator"
 #~ msgstr "Ένδειξη διάταξης"
 
-#~ msgid "Show layout indicator"
-#~ msgstr "Εμφάνιση ένδειξης διάταξης"
-
 #~ msgid "Show for single layout"
 #~ msgstr "Εμφάνιση για απλή διάταξη"
 
@@ -601,12 +803,6 @@ msgstr "Καμία"
 
 #~ msgid "Configure Layouts..."
 #~ msgstr "Διαμόρφωση διατάξεων..."
-
-#~ msgid "Keyboard Repeat"
-#~ msgstr "Επανάληψη πληκτρολογίου"
-
-#~ msgid "Turn o&ff"
-#~ msgstr "&Απενεργοποίηση"
 
 #~ msgid "Configure..."
 #~ msgstr "Διαμόρφωση..."

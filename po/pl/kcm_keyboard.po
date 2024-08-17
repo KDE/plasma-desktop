@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"POT-Creation-Date: 2024-08-17 00:40+0000\n"
 "PO-Revision-Date: 2024-04-28 12:12+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -92,282 +92,443 @@ msgstr ""
 "jest obsługiwane i także spowoduje pojawienie się tej wiadomości. Po "
 "zastosowaniu tego może to nadal działać dobrze"
 
-#: ui/Advanced.qml:40
-#, kde-format
-msgctxt "@option:checkbox"
+#: ui/KeyBindings.qml:16
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Key Bindings"
+msgctxt "@title"
+msgid "Key Bindings"
+msgstr "Skróty klawiszowe"
+
+#: ui/KeyBindings.qml:37
+#, fuzzy, kde-format
+#| msgctxt "@option:checkbox"
+#| msgid "Configure keyboard options"
+msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "Dodatkowe ustawienia klawiatury"
 
-#: ui/Hardware.qml:34
-#, kde-format
-msgctxt "@title:group"
-msgid "Keyboard model:"
-msgstr "Model klawiatury:"
-
-#: ui/Hardware.qml:68
-#, kde-format
-msgctxt "@title:group"
-msgid "NumLock on Plasma Startup:"
-msgstr "NumLock po uruchomieniu Plazmy:"
-
-#: ui/Hardware.qml:73
-#, kde-format
-msgctxt "@option:radio"
-msgid "Turn On"
-msgstr "Włącz"
-
-#: ui/Hardware.qml:77
-#, kde-format
-msgctxt "@option:radio"
-msgid "Turn Off"
-msgstr "Wyłącz"
-
-#: ui/Hardware.qml:81
-#, kde-format
-msgctxt "@option:radio"
-msgid "Leave unchanged"
-msgstr "Pozostaw bez zmian"
-
-#: ui/Hardware.qml:114
-#, kde-format
-msgctxt "@title:group"
-msgid "When key is held:"
-msgstr "Gdy klawisz jest przytrzymywany:"
-
-#: ui/Hardware.qml:119
-#, kde-format
-msgctxt "@option:radio"
-msgid "Repeat the key"
-msgstr "Powtórz klawisz"
-
-#: ui/Hardware.qml:124
-#, kde-format
-msgctxt "@option:radio"
-msgid "Do nothing"
-msgstr "Nic nie rób"
-
-#: ui/Hardware.qml:129
-#, kde-format
-msgctxt "@option:radio"
-msgid "Show accented and similar characters"
-msgstr "Pokaż znaki podobne i z akcentem"
-
-#: ui/Hardware.qml:164
-#, kde-format
-msgctxt "@label:slider"
-msgid "Delay:"
-msgstr "Opóźnienie:"
-
-#: ui/Hardware.qml:199
-#, kde-format
-msgctxt "@label:slider"
-msgid "Rate:"
-msgstr "Szybkość:"
-
-#: ui/Hardware.qml:247
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Test area:"
-msgstr "Obszar próbny:"
-
-#: ui/Hardware.qml:248
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Type here to test settings"
-msgstr "Pisz tutaj, aby wypróbować ustawienia"
-
-#: ui/LayoutDialog.qml:21
+#: ui/LayoutDialog.qml:20
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Dodaj układ"
 
-#: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
-#, kde-format
-msgctxt "@action:button"
-msgid "Preview"
-msgstr "Podgląd"
-
-#: ui/LayoutDialog.qml:124
-#, kde-format
+#: ui/LayoutDialog.qml:177
+#, fuzzy, kde-format
+#| msgid "Show layout indicator"
 msgctxt "@label:textbox"
-msgid "Display text:"
-msgstr "Wyświetl tekst:"
+msgid "Short layout name"
+msgstr "Pokaż wskaźnik układu klawiatury"
 
-#: ui/LayoutDialog.qml:143
+#: ui/LayoutDialog.qml:187
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The abbreviated name of the selected layout, which will be displayed in the "
+"system tray. You can change this setting yourself."
+msgstr ""
+
+#: ui/LayoutDialog.qml:195
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Skrót:"
 
-#: ui/Layouts.qml:28
+#: ui/LayoutDialog.qml:206 ui/main.qml:285
 #, kde-format
-msgctxt "@title:group"
-msgid "Shortcuts for Switching Layout"
-msgstr "Skróty do przełączania układów"
+msgctxt "@action:button"
+msgid "Preview"
+msgstr "Podgląd"
 
-#: ui/Layouts.qml:34
+#: ui/main.qml:37
 #, kde-format
-msgctxt "@option:textbox"
-msgid "Main shortcuts:"
-msgstr "Główne skróty:"
+msgctxt "@action:button"
+msgid "Configure Switching…"
+msgstr ""
 
-#: ui/Layouts.qml:61
-#, kde-format
-msgctxt "@option:textbox"
-msgid "3rd level shortcuts:"
-msgstr "Skróty 3-ciego poziomu:"
+#: ui/main.qml:38
+#, fuzzy, kde-format
+#| msgctxt "@option:checkbox"
+#| msgid "Configure Layouts"
+msgctxt "@action:button accessible"
+msgid "Configure Switching"
+msgstr "Ustawienia układów"
 
-#: ui/Layouts.qml:88
-#, kde-format
-msgctxt "@option:textbox"
-msgid "Alternative shortcut:"
-msgstr "Zamienny skrót:"
+#: ui/main.qml:44
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Key Bindings"
+msgctxt "@action:button"
+msgid "Key Bindings"
+msgstr "Skróty klawiszowe"
 
-#: ui/Layouts.qml:109
-#, kde-format
-msgctxt "@option:textbox"
-msgid "Last used shortcuts:"
-msgstr "Skrót ostatnio używanego:"
+#: ui/main.qml:45
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Key Bindings"
+msgctxt "@action:button accessible"
+msgid "Key Bindings"
+msgstr "Skróty klawiszowe"
 
-#: ui/Layouts.qml:129
+#: ui/main.qml:51
 #, kde-format
-msgctxt "@option:checkbox"
-msgid "Show a popup on layout changes"
-msgstr "Pokaż okno wysuwne przy zmianie układu"
+msgctxt "@action:button Layout"
+msgid "Add…"
+msgstr ""
 
-#: ui/Layouts.qml:145
-#, kde-format
-msgctxt "@title:group"
-msgid "Switching Policy"
-msgstr "Zasady przełączania"
+#: ui/main.qml:52
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Layout"
+msgctxt "@action:button accessible"
+msgid "Add layout"
+msgstr "Dodaj układ"
 
-#: ui/Layouts.qml:152
+#: ui/main.qml:59
 #, kde-format
-msgctxt "@option:radio"
-msgid "Global"
-msgstr "Globalna"
+msgctxt "@label:checkbox configure layouts option"
+msgid "Enable"
+msgstr ""
 
-#: ui/Layouts.qml:156
-#, kde-format
-msgctxt "@option:radio"
-msgid "Desktop"
-msgstr "Pulpit"
-
-# dałem tutaj aplikacja zamiast program bo do sktótu pasuje;-0
-#: ui/Layouts.qml:160
-#, kde-format
-msgctxt "@option:radio"
-msgid "Application"
-msgstr "Program"
-
-#: ui/Layouts.qml:164
-#, kde-format
-msgctxt "@option:radio"
-msgid "Window"
-msgstr "Okno"
-
-#: ui/Layouts.qml:185
-#, kde-format
-msgctxt "@option:checkbox"
+#: ui/main.qml:60
+#, fuzzy, kde-format
+#| msgctxt "@option:checkbox"
+#| msgid "Configure Layouts"
+msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Ustawienia układów"
 
-#: ui/Layouts.qml:200
+#: ui/main.qml:76
 #, kde-format
-msgctxt "@action:button"
-msgid "Add"
-msgstr "Dodaj"
+msgctxt "@label:listbox Keyboard model"
+msgid "Model:"
+msgstr ""
 
-#: ui/Layouts.qml:206
+#: ui/main.qml:104
+#, fuzzy, kde-format
+#| msgctxt "@title:group"
+#| msgid "NumLock on Plasma Startup:"
+msgctxt "@label:listbox"
+msgid "NumLock on startup:"
+msgstr "NumLock po uruchomieniu Plazmy:"
+
+#: ui/main.qml:112
+#, fuzzy, kde-format
+#| msgctxt "@option:radio"
+#| msgid "Turn On"
+msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
+msgid "Turn on"
+msgstr "Włącz"
+
+#: ui/main.qml:116
+#, fuzzy, kde-format
+#| msgid "Turn o&ff"
+msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
+msgid "Turn off"
+msgstr "W&yłącz"
+
+#: ui/main.qml:120
+#, fuzzy, kde-format
+#| msgctxt "@option:radio"
+#| msgid "Leave unchanged"
+msgctxt ""
+"@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
+"started up"
+msgid "Leave unchanged"
+msgstr "Pozostaw bez zmian"
+
+#: ui/main.qml:146
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "@label:checkbox"
+msgid "Key repeat:"
+msgstr "Powtarzanie klawiszy"
+
+#: ui/main.qml:155
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "@label:checkbox accessible"
+msgid "Key repeat"
+msgstr "Powtarzanie klawiszy"
+
+#: ui/main.qml:166
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Delay:"
+msgctxt "@label:textbox Key repeat delay"
+msgid "Delay:"
+msgstr "Opóźnienie:"
+
+#: ui/main.qml:180
 #, kde-format
-msgctxt "@action:button"
-msgid "Remove"
-msgstr "Usuń"
+msgctxt "@label:spinbox accessible"
+msgid "Key repeat delay %1"
+msgstr ""
 
-#: ui/Layouts.qml:213
+#: ui/main.qml:188
+#, kde-format
+msgctxt "@spinbox:value Repeat delay interval"
+msgid "%1 ms"
+msgstr ""
+
+#: ui/main.qml:192
+#, fuzzy, kde-format
+#| msgid " ms"
+msgctxt "@spinbox:value Repeat delay interval"
+msgid "ms"
+msgstr " ms"
+
+#: ui/main.qml:205
+#, fuzzy, kde-format
+#| msgctxt "@label:slider"
+#| msgid "Rate:"
+msgctxt "@label:textbox Key repeat rate"
+msgid "Rate:"
+msgstr "Szybkość:"
+
+#: ui/main.qml:219
+#, kde-format
+msgctxt "@label:spinbox accessible"
+msgid "Key repeat rate %1"
+msgstr ""
+
+#: ui/main.qml:227
+#, fuzzy, kde-format
+#| msgid " repeats/s"
+msgctxt "@spinbox:value  Key repeat rate"
+msgid "%1 repeats/s"
+msgstr " powtórzeń/s"
+
+#: ui/main.qml:231
+#, fuzzy, kde-format
+#| msgid " repeats/s"
+msgctxt "@spinbox:value  Key repeat rate"
+msgid "repeats/s"
+msgstr " powtórzeń/s"
+
+#: ui/main.qml:243
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Test area:"
+msgstr "Obszar próbny:"
+
+#: ui/main.qml:245
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to test settings"
+msgstr "Pisz tutaj, aby wypróbować ustawienia"
+
+#: ui/main.qml:256
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Layouts"
+msgctxt "@title:view"
+msgid "Layouts"
+msgstr "Układy"
+
+#: ui/main.qml:268
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Przesuń w górę"
 
-#: ui/Layouts.qml:229
+#: ui/main.qml:269
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Move %1 layout up"
+msgstr ""
+
+#: ui/main.qml:275
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Przesuń w dół"
 
-#: ui/Layouts.qml:316
-#, kde-format
-msgctxt "@title:column"
-msgid "Map"
-msgstr "Mapa"
+#: ui/main.qml:276
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Move Down"
+msgctxt "@action:button accessible"
+msgid "Move %1 layout Down"
+msgstr "Przesuń w dół"
 
-#: ui/Layouts.qml:323
-#, kde-format
-msgctxt "@title:column"
-msgid "Label"
-msgstr "Etykieta"
+#: ui/main.qml:286
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Preview"
+msgctxt "@action:button accessible"
+msgid "Preview"
+msgstr "Podgląd"
 
-#: ui/Layouts.qml:332
-#, kde-format
-msgctxt "@title:column"
-msgid "Layout"
-msgstr "Układ"
-
-#: ui/Layouts.qml:337
-#, kde-format
-msgctxt "@title:column"
-msgid "Variant"
-msgstr "Wariant"
-
-#: ui/Layouts.qml:342
-#, kde-format
-msgctxt "@title:column"
-msgid "Shortcut"
-msgstr "Skrót"
-
-#: ui/Layouts.qml:388
+#: ui/main.qml:294
 #, kde-format
 msgctxt "@action:button"
-msgid "Reassign shortcut"
-msgstr "Przypisz skrót ponownie"
+msgid "Remove"
+msgstr "Usuń"
 
-#: ui/Layouts.qml:404
+#: ui/main.qml:295
 #, kde-format
-msgctxt "@action:button"
-msgid "Cancel assignment"
-msgstr "Wycofaj przypisanie"
+msgctxt "@action:button accessible"
+msgid "Remove layout %1"
+msgstr ""
 
-#: ui/Layouts.qml:417
-#, kde-format
-msgctxt "@option:checkbox"
-msgid "Spare layouts"
+#: ui/main.qml:307
+#, fuzzy, kde-format
+#| msgctxt "@option:checkbox"
+#| msgid "Spare layouts"
+msgctxt "@label:checkbox"
+msgid "Spare layouts:"
 msgstr "Zapasowe układy"
 
-#: ui/Layouts.qml:453
+#: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
-msgid "Main layout count:"
+msgid "Number of spared main layouts"
+msgstr ""
+
+#: ui/main.qml:376
+#, fuzzy, kde-format
+#| msgctxt "@option:checkbox"
+#| msgid "Spare layouts"
+msgctxt "@label:textbox completes spinbox, x main layouts"
+msgid "main layouts"
+msgstr "Zapasowe układy"
+
+#: ui/main.qml:380
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You can have up to 4 main layouts, all other layouts are spare. Spare "
+"layouts are not included when cycling through the layouts, but can be "
+"accessed through the keyboard indicator applet or by setting a custom "
+"shortcut."
+msgstr ""
+
+#: ui/main.qml:385
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox"
+#| msgid "Main layout count:"
+msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
+msgid "Change layout shortcut:"
 msgstr "Liczba głównych układów:"
 
-#: ui/main.qml:43
+#: ui/main.qml:408
 #, kde-format
-msgctxt "@title:tab"
-msgid "Hardware"
-msgstr "Sprzęt"
+msgctxt "@label Change layout shortcut or \"Configure Switching\""
+msgid "or"
+msgstr ""
 
-#: ui/main.qml:49
-#, kde-format
-msgctxt "@title:tab"
-msgid "Layouts"
-msgstr "Układy"
+#: ui/Switching.qml:17
+#, fuzzy, kde-format
+#| msgctxt "@option:checkbox"
+#| msgid "Configure Layouts"
+msgctxt "@title"
+msgid "Configure Switching"
+msgstr "Ustawienia układów"
 
-#: ui/main.qml:55
+#: ui/Switching.qml:23
 #, kde-format
-msgctxt "@title:tab"
-msgid "Key Bindings"
-msgstr "Skróty klawiszowe"
+msgctxt "@title:group"
+msgid "Behavior"
+msgstr ""
+
+#: ui/Switching.qml:28
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox"
+#| msgid "Main layout count:"
+msgctxt "@label:listbox"
+msgid "Switching layout affects:"
+msgstr "Liczba głównych układów:"
+
+#: ui/Switching.qml:35
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "All windows"
+msgstr ""
+
+#: ui/Switching.qml:39
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "All windows on current desktop"
+msgstr ""
+
+#: ui/Switching.qml:43
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "All windows of current application"
+msgstr ""
+
+#: ui/Switching.qml:47
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Current window only"
+msgstr ""
+
+#: ui/Switching.qml:74
+#, fuzzy, kde-format
+#| msgctxt "@option:checkbox"
+#| msgid "Show a popup on layout changes"
+msgctxt "@label:checkbox"
+msgid "Show notification on layout change"
+msgstr "Pokaż okno wysuwne przy zmianie układu"
+
+#: ui/Switching.qml:86
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Shortcut"
+msgctxt "@title:group"
+msgid "Shortcuts"
+msgstr "Skrót"
+
+#: ui/Switching.qml:91 ui/Switching.qml:152
+#, fuzzy, kde-format
+#| msgctxt "@option:checkbox"
+#| msgid "Spare layouts"
+msgctxt "@option:textbox"
+msgid "Change layout:"
+msgstr "Zapasowe układy"
+
+#: ui/Switching.qml:111
+#, fuzzy, kde-format
+#| msgid "Switch to Last-Used Keyboard Layout"
+msgctxt "@option:textbox"
+msgid "Switch to last used layout:"
+msgstr "Przełącz na ostatnio używany układ klawiatury"
+
+#: ui/Switching.qml:132
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Shortcut"
+msgctxt "@title:group"
+msgid "Legacy Shortcuts"
+msgstr "Skrót"
+
+#: ui/Switching.qml:140
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Legacy X11 shortcuts allow finer control of modifier-only shortcuts and have "
+"slightly better support on X11 in edge cases. They can also be used on "
+"Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
+"page."
+msgstr ""
+
+#: ui/Switching.qml:181
+#, fuzzy, kde-format
+#| msgctxt "@option:textbox"
+#| msgid "Alternative shortcut:"
+msgctxt "@option:textbox"
+msgid "Alternative symbols:"
+msgstr "Zamienny skrót:"
+
+#: ui/Switching.qml:207
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Modifier keys can be used to type additional characters, symbols, and "
+"diacritical marks."
+msgstr ""
 
 #: xkboptionsmodel.cpp:160
 #, kde-format
@@ -382,6 +543,103 @@ msgstr[2] "%1 skrótów"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Brak"
+
+#~ msgctxt "@title:group"
+#~ msgid "Keyboard model:"
+#~ msgstr "Model klawiatury:"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Turn Off"
+#~ msgstr "Wyłącz"
+
+#~ msgctxt "@title:group"
+#~ msgid "When key is held:"
+#~ msgstr "Gdy klawisz jest przytrzymywany:"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Repeat the key"
+#~ msgstr "Powtórz klawisz"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Do nothing"
+#~ msgstr "Nic nie rób"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Show accented and similar characters"
+#~ msgstr "Pokaż znaki podobne i z akcentem"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Display text:"
+#~ msgstr "Wyświetl tekst:"
+
+#~ msgctxt "@title:group"
+#~ msgid "Shortcuts for Switching Layout"
+#~ msgstr "Skróty do przełączania układów"
+
+#~ msgctxt "@option:textbox"
+#~ msgid "Main shortcuts:"
+#~ msgstr "Główne skróty:"
+
+#~ msgctxt "@option:textbox"
+#~ msgid "3rd level shortcuts:"
+#~ msgstr "Skróty 3-ciego poziomu:"
+
+#~ msgctxt "@option:textbox"
+#~ msgid "Last used shortcuts:"
+#~ msgstr "Skrót ostatnio używanego:"
+
+#~ msgctxt "@title:group"
+#~ msgid "Switching Policy"
+#~ msgstr "Zasady przełączania"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Global"
+#~ msgstr "Globalna"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Desktop"
+#~ msgstr "Pulpit"
+
+# dałem tutaj aplikacja zamiast program bo do sktótu pasuje;-0
+#~ msgctxt "@option:radio"
+#~ msgid "Application"
+#~ msgstr "Program"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Window"
+#~ msgstr "Okno"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add"
+#~ msgstr "Dodaj"
+
+#~ msgctxt "@title:column"
+#~ msgid "Map"
+#~ msgstr "Mapa"
+
+#~ msgctxt "@title:column"
+#~ msgid "Label"
+#~ msgstr "Etykieta"
+
+#~ msgctxt "@title:column"
+#~ msgid "Layout"
+#~ msgstr "Układ"
+
+#~ msgctxt "@title:column"
+#~ msgid "Variant"
+#~ msgstr "Wariant"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reassign shortcut"
+#~ msgstr "Przypisz skrót ponownie"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel assignment"
+#~ msgstr "Wycofaj przypisanie"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Hardware"
+#~ msgstr "Sprzęt"
 
 #~ msgctxt "layout - variant"
 #~ msgid "%1 - %2"
@@ -499,12 +757,6 @@ msgstr "Brak"
 #~ "Jeśli obsługiwana, ta opcja pozwala ustawić częstość, z jaką są "
 #~ "generowane kody klawisza, kiedy jest on wciśnięty."
 
-#~ msgid " repeats/s"
-#~ msgstr " powtórzeń/s"
-
-#~ msgid " ms"
-#~ msgstr " ms"
-
 #~ msgid "KDE Keyboard Control Module"
 #~ msgstr "Moduł sterowania klawiaturą KDE"
 
@@ -549,9 +801,6 @@ msgstr "Brak"
 #~ msgid "Layout Indicator"
 #~ msgstr "Wskaźnik układu klawiatury"
 
-#~ msgid "Show layout indicator"
-#~ msgstr "Pokaż wskaźnik układu klawiatury"
-
 #~ msgid "Show for single layout"
 #~ msgstr "Pokaż przy pojedynczym układzie"
 
@@ -570,12 +819,6 @@ msgstr "Brak"
 
 #~ msgid "Configure Layouts..."
 #~ msgstr "Ustawienia układów..."
-
-#~ msgid "Keyboard Repeat"
-#~ msgstr "Powtarzanie klawiszy"
-
-#~ msgid "Turn o&ff"
-#~ msgstr "W&yłącz"
 
 #~ msgid "Configure..."
 #~ msgstr "Ustawienia..."
