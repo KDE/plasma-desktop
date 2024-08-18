@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-17 00:40+0000\n"
-"PO-Revision-Date: 2024-04-14 14:54+0200\n"
+"PO-Revision-Date: 2024-08-17 04:19+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -93,17 +93,13 @@ msgstr ""
 "კიდევ იმუშაონ, თუ გამოიყენებთ"
 
 #: ui/KeyBindings.qml:16
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
-msgstr "კლავიატურის ბმები"
+msgstr "ღილაკების ასახვა"
 
 #: ui/KeyBindings.qml:37
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "კლავიატურის პარამეტრების მორგება"
@@ -118,7 +114,7 @@ msgstr "განლაგების დამატება"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr ""
+msgstr "მოკლე განლაგების სახელი"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -127,6 +123,8 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"მონიშნული განლაგების შემოკლებული სახელი, რომელიც სისტემურ საათთან "
+"გამოჩნდება. ამ პარამეტრის შეცვლა, თვითონ შეგიძლიათ."
 
 #: ui/LayoutDialog.qml:195
 #, kde-format
@@ -144,42 +142,34 @@ msgstr "მინიატურა"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "გადართვის მორგება…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "განლაგებების მორგება"
+msgstr "გადართვის მორგება"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr "კლავიატურის ბმები"
+msgstr "ღილაკების ასახვა"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr "კლავიატურის ბმები"
+msgstr "ღილაკების ასახვა"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "დამატება…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "განლაგების დამატება"
@@ -188,12 +178,10 @@ msgstr "განლაგების დამატება"
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "ჩართვა"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "განლაგებების მორგება"
@@ -202,36 +190,28 @@ msgstr "განლაგებების მორგება"
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "მოდელი:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "NumLock on Plasma Startup:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "NumLock Plasma-ის გაშვებისას:"
+msgstr "NumLock გაშვებისას:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Turn On"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
 msgstr "ჩართვა"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Turn Off"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
 msgstr "გამორთვა"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Leave unchanged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
@@ -239,23 +219,19 @@ msgid "Leave unchanged"
 msgstr "უცვლელად დატოვება"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr " გამეორება/წმ"
+msgstr "ღილაკის გამეორება:"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
-msgstr " გამეორება/წმ"
+msgstr "ღილაკის გამეორება"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "დაყოვნება:"
@@ -264,25 +240,22 @@ msgstr "დაყოვნება:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "ღილაკის გამეორების დაყოვნება %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 მწმ"
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr " მწმ"
+msgstr "მწმ"
 
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "სიხშირე:"
@@ -291,21 +264,19 @@ msgstr "სიხშირე:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "ღილაკის გამეორების სიხშირე %1"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr " გამეორება/წმ"
+msgstr "%1 გამეორება/წმ"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr " გამეორება/წმ"
+msgstr "გამეორება/წმ"
 
 #: ui/main.qml:243
 #, kde-format
@@ -320,9 +291,7 @@ msgid "Type here to test settings"
 msgstr "პარამეტრების შესამოწმებლად აკრიფეთ აქ"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "განლაგებები"
@@ -337,7 +306,7 @@ msgstr "აწევა"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "%1 განლაგების აწევა"
 
 #: ui/main.qml:275
 #, kde-format
@@ -346,17 +315,13 @@ msgid "Move Down"
 msgstr "ჩამოწევა"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "ჩამოწევა"
+msgstr "%1 განლაგების ჩამოწევა"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "მინიატურა"
@@ -371,29 +336,25 @@ msgstr "წაშლა"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "%1 განლაგების წაშლა"
 
 #: ui/main.qml:307
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "ზედმეტი განლაგებები"
+msgstr "ზედმეტი განლაგებები:"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "ზედმეტი მთავარი განლაგებების რაოდენობა"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "ზედმეტი განლაგებები"
+msgstr "მთავარი განლაგებები"
 
 #: ui/main.qml:380
 #, kde-format
@@ -404,105 +365,94 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"შეგიძლიათ, გქონდეთ 4-მდე მთავარი განლაგება. ყველა დანარჩენი განლაგება "
+"დამატებითია. დამატებითი განლაგებები არ გამოიყენება, როცა მათ გადართავთ. "
+"მათთან წვდომა კლავიატურის მაჩვენებლის აპლეტით ან მორგებული მალსახმობით "
+"შეგიძლიათ."
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "მთავარი განლაგების რიცხვი:"
+msgstr "განლაგების შეცვლის მალსახმობი:"
 
 #: ui/main.qml:408
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "ან"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "განლაგებების მორგება"
+msgstr "გადართვის მორგება"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "ქცევა"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "მთავარი განლაგების რიცხვი:"
+msgstr "განლაგების გადართვა ეხება:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "ყველა ფანჯარა"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "ყველა ფანჯარა მიმდინარე სამუშაო მაგიდაზე"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "მიმდინარე აპლიკაციის ყველა ფანჯარა"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "მხოლოდ, მიმდინარე ფანჯარა"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr "მხტუნარას ჩვენება განლაგების შეცვლისას"
+msgstr "გაფრთხილების ჩვენება განლაგების შეცვლისას"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
 msgstr "მალსახმობი"
 
 #: ui/Switching.qml:91 ui/Switching.qml:152
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "ზედმეტი განლაგებები"
+msgstr "განლაგების შეცვლა:"
 
 #: ui/Switching.qml:111
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "ბოლოს გამოყენებულ კლავიატურის განლაგებაზე გადართვა"
+msgstr "ბოლოს გამოყენებულ განლაგებაზე გადართვა:"
 
 #: ui/Switching.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "მალსახმობი"
+msgstr "მოძველებული მალსახმობები"
 
 #: ui/Switching.qml:140
 #, kde-kuit-format
@@ -513,14 +463,16 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"მოძველებული X11 მალსახმობები მხოლოდ-მოდიფიკატორების მქონე მალსახმობების უფრო "
+"დაწვრილებით მართვას გთავაზობთ და X11-ზე უკეთესი მხარდაჭერა გააჩნია. ისინი "
+"ასევე შეგიძლიათ, Wayland-ზეც გამოიყენოთ.<nl/><nl/>ამ მალსახმობების დაყენება "
+"ღილაკების ასახვის გვერდზე გადაგიყვანთ."
 
 #: ui/Switching.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "ალტერნატიული მალსახმობი:"
+msgstr "ალტერნატიული სიმბოლოები:"
 
 #: ui/Switching.qml:207
 #, kde-format
@@ -529,6 +481,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"დამატებითი სიმბოლოები და დიაკრიტიკული ნიშნების ჩასასმელად მოდიფიკატორი "
+"ღილაკების გამოყენება შეგიძლიათ."
 
 #: xkboptionsmodel.cpp:160
 #, kde-format
