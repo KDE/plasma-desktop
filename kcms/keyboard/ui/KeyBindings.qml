@@ -29,18 +29,46 @@ KCM.ScrollViewKCM {
     KItemModels.KSortFilterProxyModel {
         id: xkbOptionsProxy
         sourceModel: kcm?.xkbOptionsModel ?? undefined
-        sortRoleName: "display"
         sortOrder: Qt.AscendingOrder
+        recursiveFilteringEnabled: true
+        autoAcceptChildRows: true
+        filterRoleName: "display"
+
+        filterRegularExpression: {
+            function escapeRegex(string) {
+                // https://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
+                return string.replace(/[/\-\\^$*+?.()|[\]{}]/g, '\\$&');
+            }
+
+            return new RegExp(searchField.text.split(/\s+/).map(escapeRegex).join(".*"), "i");
+        }
+
+        onCountChanged: {
+            if (searchField.text.length > 0) {
+                treeView.expandRecursively();
+            } else {
+                treeView.collapseRecursively();
+            }
+        }
     }
 
-    header: QQC2.CheckBox {
-        text: i18nc("@label:checkbox", "Configure keyboard options")
-        checked: kcm.keyboardSettings.resetOldXkbOptions
-        onToggled: kcm.keyboardSettings.resetOldXkbOptions = checked
+    header: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
 
-        KCM.SettingStateBinding {
-            configObject: kcm.keyboardSettings
-            settingName: "resetOldXkbOptions"
+        QQC2.CheckBox {
+            text: i18nc("@label:checkbox", "Configure keyboard options")
+            checked: kcm.keyboardSettings.resetOldXkbOptions
+            onToggled: kcm.keyboardSettings.resetOldXkbOptions = checked
+
+            KCM.SettingStateBinding {
+                configObject: kcm.keyboardSettings
+                settingName: "resetOldXkbOptions"
+            }
+        }
+
+        Kirigami.SearchField {
+            id: searchField
+            Layout.fillWidth: true
         }
     }
 
