@@ -92,13 +92,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
-msgstr ""
+msgstr "键位绑定"
 
 #: ui/KeyBindings.qml:37
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
-msgstr ""
+msgstr "配置键盘选项"
 
 #: ui/LayoutDialog.qml:20
 #, kde-format
@@ -110,7 +110,7 @@ msgstr "添加布局"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr ""
+msgstr "布局缩写名称"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -118,7 +118,7 @@ msgctxt "@info"
 msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
-msgstr ""
+msgstr "所选布局的缩写名称，它将被显示在系统托盘中。您可以自行更改此设置。"
 
 #: ui/LayoutDialog.qml:195
 #, kde-format
@@ -136,73 +136,73 @@ msgstr "预览"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "配置切换方式…"
 
 #: ui/main.qml:38
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr ""
+msgstr "配置切换方式"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr ""
+msgstr "键位绑定"
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr ""
+msgstr "键位绑定"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "添加…"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
-msgstr ""
+msgstr "添加布局"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "启用"
 
 #: ui/main.qml:60
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
-msgstr ""
+msgstr "配置布局"
 
 #: ui/main.qml:76
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "型号："
 
 #: ui/main.qml:104
 #, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr ""
+msgstr "NumLock 在开机时的状态："
 
 #: ui/main.qml:112
 #, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
-msgstr ""
+msgstr "打开"
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr ""
+msgstr "关闭"
 
 #: ui/main.qml:120
 #, kde-format
@@ -210,67 +210,67 @@ msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
 msgid "Leave unchanged"
-msgstr ""
+msgstr "保持不变"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr ""
+msgstr "按键重复"
 
 #: ui/main.qml:155
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
-msgstr ""
+msgstr "按键重复"
 
 #: ui/main.qml:166
 #, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
-msgstr ""
+msgstr "延迟："
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "按键重复延迟 %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 毫秒"
 
 #: ui/main.qml:192
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr ""
+msgstr "毫秒"
 
 #: ui/main.qml:205
 #, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
-msgstr ""
+msgstr "频率："
 
 #: ui/main.qml:219
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "按键重复频率 %1"
 
 #: ui/main.qml:227
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr ""
+msgstr "%1 次重复/秒"
 
 #: ui/main.qml:231
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr ""
+msgstr "次重复/秒"
 
 #: ui/main.qml:243
 #, kde-format
@@ -288,7 +288,7 @@ msgstr "在此打字以测试设置效果"
 #, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
-msgstr ""
+msgstr "布局"
 
 #: ui/main.qml:268
 #, kde-format
@@ -300,7 +300,7 @@ msgstr "上移"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "上移 %1 布局"
 
 #: ui/main.qml:275
 #, kde-format
@@ -312,13 +312,13 @@ msgstr "下移"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr ""
+msgstr "下移 %1 布局"
 
 #: ui/main.qml:286
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
-msgstr ""
+msgstr "预览"
 
 #: ui/main.qml:294
 #, kde-format
@@ -330,25 +330,25 @@ msgstr "移除"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "移除布局 %1"
 
 #: ui/main.qml:307
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr ""
+msgstr "不常用布局："
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "不常用主要布局数量"
 
 #: ui/main.qml:376
 #, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr ""
+msgstr "主要布局数量"
 
 #: ui/main.qml:380
 #, kde-format
@@ -359,90 +359,92 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"您可以配置最多 4 个主要布局，所有其他布局则被视作不常用布局。不常用布局不被包"
+"含在循环切换的布局中，但可以通过键盘指示器小程序或者自定义快捷键访问。"
 
 #: ui/main.qml:385
 #, kde-format
 msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr ""
+msgstr "更改布局的快捷键："
 
 #: ui/main.qml:408
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "或者"
 
 #: ui/Switching.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr ""
+msgstr "配置切换方式"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "行为"
 
 #: ui/Switching.qml:28
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr ""
+msgstr "切换布局影响："
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "所有窗口"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "当前桌面上的所有窗口"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "当前应用程序的所有窗口"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "仅当前窗口"
 
 #: ui/Switching.qml:74
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr ""
+msgstr "布局更改时显示通知"
 
 #: ui/Switching.qml:86
 #, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr ""
+msgstr "快捷键"
 
 #: ui/Switching.qml:91 ui/Switching.qml:152
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr ""
+msgstr "更改布局："
 
 #: ui/Switching.qml:111
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr ""
+msgstr "切换到上次使用的布局："
 
 #: ui/Switching.qml:132
 #, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr ""
+msgstr "旧式快捷键"
 
 #: ui/Switching.qml:140
 #, kde-kuit-format
@@ -453,12 +455,15 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"旧式的 X11 快捷键允许更精确地控制仅包含修饰键的快捷键，并在在 X11 环境的极端"
+"情况下兼容性略好。这些快捷键也可以在 Wayland 环境中使用。<nl/><nl/>设置这些快"
+"捷键将打开键位绑定设置页面。"
 
 #: ui/Switching.qml:181
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr ""
+msgstr "特殊符号："
 
 #: ui/Switching.qml:207
 #, kde-format
@@ -466,7 +471,7 @@ msgctxt "@info"
 msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
-msgstr ""
+msgstr "修饰符键可以用于输入额外字符、符号和变音符。"
 
 #: xkboptionsmodel.cpp:160
 #, kde-format
