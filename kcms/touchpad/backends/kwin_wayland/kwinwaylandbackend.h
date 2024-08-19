@@ -31,11 +31,11 @@ public:
         return m_errorString;
     }
 
-    virtual int touchpadCount() const override
+    int touchpadCount() const override
     {
         return m_devices.count();
     }
-    virtual QList<QObject *> getDevices() const override
+    QList<QObject *> getDevices() const override
     {
         return m_devices;
     }

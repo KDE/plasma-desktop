@@ -26,7 +26,7 @@ class ServerConfigModule : public KQuickManagedConfigModule
 
 public:
     ServerConfigModule(QObject *parent, const KPluginMetaData &metaData);
-    virtual ~ServerConfigModule() override;
+    ~ServerConfigModule() override;
 
     BalooSettings *balooSettings() const;
     FilteredFolderModel *filteredModel() const;
