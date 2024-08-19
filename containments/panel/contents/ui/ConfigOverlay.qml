@@ -272,12 +272,16 @@ MouseArea {
                 PlasmaExtras.PlasmoidHeading {
                     leftPadding: Kirigami.Units.smallSpacing * 2
                     rightPadding: Kirigami.Units.smallSpacing * 2
+                    Layout.maximumWidth: Kirigami.Units.gridUnit * 15
 
                     contentItem: Kirigami.Heading {
                         id: label
                         level: 3
                         horizontalAlignment: Text.AlignHCenter
                         textFormat: Text.PlainText
+                        elide: Text.ElideRight
+                        wrapMode: Text.Wrap
+                        maximumLineCount: 3
                     }
                 }
 
