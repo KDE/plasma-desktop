@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2024 Ismael Asensio <isma.af@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
@@ -36,38 +37,15 @@ ShapeCanvas {
             return;
         }
 
+        const siblings = parent.children.filter(item => item !== this);
         if (parent.row.orientation === Qt.Horizontal) {
-            x = 0
-
-            for (var i in parent.children) {
-                // find the furthest sibling -> it is our nearst one
-                var sibling = parent.children[i]
-                if (sibling === this) {
-                    continue
-                }
-                x = Math.max(x, sibling.x + sibling.width)
-            }
-            if (x > 0) {
-                x += key.gap // found a sibling, gap us from it
-            }
-
-            y = shape.bounds.y
+            const previousX = Math.max(...siblings.map(item => item.x + item.width),  0);
+            x = previousX + key.gap;
+            y = shape.bounds.y;
         } else {
-            y = 0
-
-            for (var i in parent.children) {
-                // find the furthest sibling -> it is our nearst one
-                var sibling = parent.children[i]
-                if (sibling === this) {
-                    continue
-                }
-                y = Math.max(y, sibling.y + sibling.height)
-            }
-            if (y > 0) {
-                y += key.gap // found a sibling, gap us from it
-            }
-
-            x = shape.bounds.x
+            const previousY = Math.max(...siblings.map(item => item.y + item.height), 0);
+            y = previousY + key.gap;
+            x = shape.bounds.y;
         }
     }
 }

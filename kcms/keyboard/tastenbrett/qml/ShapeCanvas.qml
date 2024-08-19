@@ -70,8 +70,9 @@ Canvas {
                 var topLeftPoint = outline.points[0]
                 var bottomRightPoint = outline.points[1]
 
+                // roundedRect() takes position and size
                 ctx.roundedRect(topLeftPoint.x, topLeftPoint.y,
-                                bottomRightPoint.x, bottomRightPoint.y,
+                                bottomRightPoint.x - topLeftPoint.x, bottomRightPoint.y - topLeftPoint.y,
                                 outline.corner_radius, outline.corner_radius)
             } else { // polygon point to point draw (used for doodads and non-rect keys such as Enter)
                 // Move to the start of the first arc
