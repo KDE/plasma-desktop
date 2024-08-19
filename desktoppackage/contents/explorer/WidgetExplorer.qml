@@ -238,17 +238,20 @@ PC3.Page {
     }
 
     PC3.ScrollView {
+        id: widgetsScrollView
         anchors.fill: parent
         anchors.rightMargin: - main.sidePanel.margins.right
 
         // hide the flickering by fading in nicely
-        opacity: setModelTimer.running ? 0 : 1
+        opacity: setModelTimer.running || list.count == 0 ? 0 : 1
         Behavior on opacity {
             OpacityAnimator {
                 duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
+
+        QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOn
 
         GridView {
             id: list
