@@ -22,7 +22,7 @@ import org.kde.plasma.private.shell 2.0
 PC3.Page {
     id: main
 
-    width: Math.max(heading.paintedWidth, Kirigami.Units.iconSizes.enormous * 3 + Kirigami.Units.smallSpacing * 4 + Kirigami.Units.gridUnit * 2)
+    width: Math.max(heading.paintedWidth, Kirigami.Units.iconSizes.enormous * 3 + Kirigami.Units.smallSpacing * 4 + Kirigami.Units.gridUnit * 5)
     height: 800//Screen.height
 
     opacity: draggingWidget ? 0.3 : 1
@@ -257,7 +257,7 @@ PC3.Page {
 
             activeFocusOnTab: true
             cellWidth: Math.floor(width / 3)
-            cellHeight: cellWidth + Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing * 2
+            cellHeight: cellWidth + Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing * 3
 
             delegate: AppletDelegate {}
             highlight: PlasmaExtras.Highlight {

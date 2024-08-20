@@ -225,7 +225,7 @@ Item {
             textFormat: Text.PlainText
             elide: Text.ElideRight
             wrapMode: Text.WordWrap
-            maximumLineCount: 2
+            maximumLineCount: 3
             lineHeight: 0.95
             horizontalAlignment: Text.AlignHCenter
             color: mainLayout.textColor
@@ -239,7 +239,7 @@ Item {
             font: Kirigami.Theme.smallFont
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
-            maximumLineCount: heading.lineCount === 1 ? 3 : 2
+            maximumLineCount: 5 - heading.lineCount
             horizontalAlignment: Text.AlignHCenter
             color: mainLayout.textColor
         }
