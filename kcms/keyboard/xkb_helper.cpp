@@ -165,10 +165,11 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig &config)
     }
 
     if (!setxkbmapCommandArguments.isEmpty()) {
-        return runConfigLayoutCommand(setxkbmapCommandArguments);
         if (config.keyboardSettings()->configureLayouts()) {
             X11Helper::setDefaultLayout();
         }
+
+        return runConfigLayoutCommand(setxkbmapCommandArguments);
     }
     return false;
 }
