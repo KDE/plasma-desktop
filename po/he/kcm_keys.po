@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:40+0000\n"
+"POT-Creation-Date: 2024-08-20 00:42+0000\n"
 "PO-Revision-Date: 2024-07-23 08:50+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -47,7 +47,7 @@ msgstr "שגיאה בהתקשרות עם שירות קיצורי המקשים ה
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "התקשורת מול סוכן קיצורי המקשים הכללי נכשלה"
 
-#: kcm_keys.cpp:315
+#: kcm_keys.cpp:327
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -58,7 +58,7 @@ msgstr ""
 "קיצור המקשים <shortcut>%1</shortcut> כבר משויך לפעולה המשותפת %2 <interface>"
 "%3</interface>.<nl/><nl/>להקצות אותו מחדש אל %4?"
 
-#: kcm_keys.cpp:321
+#: kcm_keys.cpp:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -70,13 +70,13 @@ msgstr ""
 "interface> של <application>%3</application>.<nl/><nl/>להקצות אותו מחדש "
 "לפעולה <interface>%4</interface> של <application>%5</application>?"
 
-#: kcm_keys.cpp:330
+#: kcm_keys.cpp:342
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "פתרון סתירת מקשי קיצור"
 
-#: kcm_keys.cpp:340
+#: kcm_keys.cpp:352
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -243,7 +243,7 @@ msgstr "נא לבחור פריט מהרשימה כדי לצפות כאן בקי�
 msgid "Export Shortcut Scheme"
 msgstr "ייצוא סכמת קיצורי מקשים"
 
-#: ui/main.qml:378 ui/main.qml:503
+#: ui/main.qml:378 ui/main.qml:520
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "ייבוא סכמת קיצורי מקשים"
@@ -254,77 +254,97 @@ msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "סכמת קיצורי מקשים (‎*.kksrc)"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Edit Command"
 msgstr "עריכת פקודה"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Add Command"
 msgstr "הוספת פקודה"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Save"
 msgstr "שמירה"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Add"
 msgstr "הוספה"
 
-#: ui/main.qml:457
+#: ui/main.qml:460
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "נא למלא פקודה או לבחור בקובץ סקריפט:"
 
-#: ui/main.qml:467
+#: ui/main.qml:468
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox accessible"
+#| msgid "Command"
+msgctxt "@label:textbox A shell command"
+msgid "Command:"
+msgstr "פקודה"
+
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "פקודה"
 
-#: ui/main.qml:473
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "בחירה…"
 
-#: ui/main.qml:474
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "בחירת קובץ סקריפט"
 
-#: ui/main.qml:487
+#: ui/main.qml:490
+#, kde-format
+msgctxt "@label:textfield Human-readable name given to a shell command"
+msgid "Name:"
+msgstr ""
+
+#: ui/main.qml:491
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Enter name here"
+msgstr ""
+
+#: ui/main.qml:503
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "בחירת קובץ סקריפט"
 
-#: ui/main.qml:489
+#: ui/main.qml:505
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "קובץ סקריפט (‎*.*sh)"
 
-#: ui/main.qml:511
+#: ui/main.qml:528
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "נא לבחור סכמה לייבוא:"
 
-#: ui/main.qml:530
+#: ui/main.qml:547
 #, kde-format
 msgid "Custom Scheme"
 msgstr "סכמה מותאמת אישית"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Select File…"
 msgstr "בחירת קובץ…"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Import"
 msgstr "ייבוא"

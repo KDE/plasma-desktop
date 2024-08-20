@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:40+0000\n"
+"POT-Creation-Date: 2024-08-20 00:42+0000\n"
 "PO-Revision-Date: 2023-02-19 16:39+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "Qlobal qısayolu xidməti ilə əlaqə zamanı xəta"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Qlobal qısayollar xidməti ilə əlaqə qurula bilmədi"
 
-#: kcm_keys.cpp:315
+#: kcm_keys.cpp:327
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 "%1 qısayolu artıq ümumi %2 əməliyyatına '%3' təyin edilib.\n"
 "Bunu yenidən təyin etmək istəyirsiniz?"
 
-#: kcm_keys.cpp:321
+#: kcm_keys.cpp:333
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -76,13 +76,13 @@ msgstr ""
 "%1 qısayolu artıq ümumi %2 əməliyyatına '%3' təyin edilib.\n"
 "Bunu yenidən təyin etmək istəyirsiniz?"
 
-#: kcm_keys.cpp:330
+#: kcm_keys.cpp:342
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr ""
 
-#: kcm_keys.cpp:340
+#: kcm_keys.cpp:352
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -266,7 +266,7 @@ msgstr ""
 msgid "Export Shortcut Scheme"
 msgstr "Qısayollar sxemini ixrac etmək"
 
-#: ui/main.qml:378 ui/main.qml:503
+#: ui/main.qml:378 ui/main.qml:520
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Qısayol sxemi idxal edin"
@@ -277,45 +277,52 @@ msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Qısayollar sxemi (*.kksrc)"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Edit Command"
 msgstr "Əmrə düzəliş et"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Add Command"
 msgstr "Əmr əlavə et"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Save"
 msgstr "Saxla"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Add"
 msgstr "Əlavə et"
 
-#: ui/main.qml:457
+#: ui/main.qml:460
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Bir əmr əlavə et və ya bir əmr faylı seç:"
 
-#: ui/main.qml:467
+#: ui/main.qml:468
+#, fuzzy, kde-format
+#| msgid "Commands"
+msgctxt "@label:textbox A shell command"
+msgid "Command:"
+msgstr "Əmrlər"
+
+#: ui/main.qml:474
 #, fuzzy, kde-format
 #| msgid "Commands"
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Əmrlər"
 
-#: ui/main.qml:473
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Seç..."
 
-#: ui/main.qml:474
+#: ui/main.qml:482
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Choose Script File"
@@ -323,34 +330,46 @@ msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Əmr faylı seç..."
 
-#: ui/main.qml:487
+#: ui/main.qml:490
+#, kde-format
+msgctxt "@label:textfield Human-readable name given to a shell command"
+msgid "Name:"
+msgstr ""
+
+#: ui/main.qml:491
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Enter name here"
+msgstr ""
+
+#: ui/main.qml:503
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Əmr faylı seç..."
 
-#: ui/main.qml:489
+#: ui/main.qml:505
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Əmr faylı (*.*sh)"
 
-#: ui/main.qml:511
+#: ui/main.qml:528
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "İdxal etmək üçün sxem seçin:"
 
-#: ui/main.qml:530
+#: ui/main.qml:547
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Fərdi sxem"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Select File…"
 msgstr "Faylı seçmək…"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Import"
 msgstr "İdxal"

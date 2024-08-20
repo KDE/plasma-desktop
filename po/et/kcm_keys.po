@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:40+0000\n"
+"POT-Creation-Date: 2024-08-20 00:42+0000\n"
 "PO-Revision-Date: 2020-10-07 22:52+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -47,7 +47,7 @@ msgstr "Tõrge suhtlemisel globaalsete kiirklahvide teenusega"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Suhtlemine globaalsete kiirklahvide deemoniga nurjus"
 
-#: kcm_keys.cpp:315
+#: kcm_keys.cpp:327
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -62,7 +62,7 @@ msgstr ""
 "Kiirklahv %1 on juba omistatud tüüpilisele menüükäsule \"%2 -> %3\".\n"
 "Kas soovid loovutada selle valitud toimingule?"
 
-#: kcm_keys.cpp:321
+#: kcm_keys.cpp:333
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -77,13 +77,13 @@ msgstr ""
 "Kiirklahv %1 on juba omistatud tüüpilisele menüükäsule \"%2 -> %3\".\n"
 "Kas soovid loovutada selle valitud toimingule?"
 
-#: kcm_keys.cpp:330
+#: kcm_keys.cpp:342
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr ""
 
-#: kcm_keys.cpp:340
+#: kcm_keys.cpp:352
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -261,7 +261,7 @@ msgstr "Vali loendis element selle kiirklahvide nägemiseks"
 msgid "Export Shortcut Scheme"
 msgstr "Kiirklahviskeemi eksport"
 
-#: ui/main.qml:378 ui/main.qml:503
+#: ui/main.qml:378 ui/main.qml:520
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Kiirklahviskeemi import"
@@ -272,78 +272,96 @@ msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Kiirklahviskeem (*.kksrc)"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Edit Command"
 msgstr ""
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Add Command"
 msgstr ""
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Save"
 msgstr ""
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Add"
 msgstr ""
 
-#: ui/main.qml:457
+#: ui/main.qml:460
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr ""
 
-#: ui/main.qml:467
+#: ui/main.qml:468
+#, kde-format
+msgctxt "@label:textbox A shell command"
+msgid "Command:"
+msgstr ""
+
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr ""
 
-#: ui/main.qml:473
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr ""
 
-#: ui/main.qml:474
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr ""
 
-#: ui/main.qml:487
+#: ui/main.qml:490
+#, kde-format
+msgctxt "@label:textfield Human-readable name given to a shell command"
+msgid "Name:"
+msgstr ""
+
+#: ui/main.qml:491
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Enter name here"
+msgstr ""
+
+#: ui/main.qml:503
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr ""
 
-#: ui/main.qml:489
+#: ui/main.qml:505
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr ""
 
-#: ui/main.qml:511
+#: ui/main.qml:528
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Imporditav skeem:"
 
-#: ui/main.qml:530
+#: ui/main.qml:547
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Kohandatud skeem"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, fuzzy, kde-format
 #| msgid "Select File..."
 msgid "Select File…"
 msgstr "Vali fail ..."
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Import"
 msgstr "Impordi"

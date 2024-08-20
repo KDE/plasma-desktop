@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:40+0000\n"
+"POT-Creation-Date: 2024-08-20 00:42+0000\n"
 "PO-Revision-Date: 2024-07-20 23:38-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "Erro ao comunicar o serviço de atalhos globais"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Falha ao comunicar com o daemon dos atalhos globais"
 
-#: kcm_keys.cpp:315
+#: kcm_keys.cpp:327
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -58,7 +58,7 @@ msgstr ""
 "O atalho <shortcut>%1</shortcut> já está atribuído para a ação comum %2 "
 "<interface>%3</interface>.<nl/><nl/>Deseja reatribuí-lo a %4?"
 
-#: kcm_keys.cpp:321
+#: kcm_keys.cpp:333
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -75,13 +75,13 @@ msgstr ""
 "%2</interface> de <application>%3</application>.<nl/><nl/>Deseja reatribuí-"
 "lo para a ação <interface> %4</interface> de <application>%4</application>?"
 
-#: kcm_keys.cpp:330
+#: kcm_keys.cpp:342
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Resolver conflito de atalho"
 
-#: kcm_keys.cpp:340
+#: kcm_keys.cpp:352
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -264,7 +264,7 @@ msgstr "Selecione um item da lista para visualizar seus atalhos aqui"
 msgid "Export Shortcut Scheme"
 msgstr "Exportar esquema de atalhos"
 
-#: ui/main.qml:378 ui/main.qml:503
+#: ui/main.qml:378 ui/main.qml:520
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importar esquema de atalhos"
@@ -275,45 +275,52 @@ msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Esquema de atalhos (*.kksrc)"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Edit Command"
 msgstr "Editar comando"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Add Command"
 msgstr "Adicionar comando"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Save"
 msgstr "Salvar"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Add"
 msgstr "Adicionar"
 
-#: ui/main.qml:457
+#: ui/main.qml:460
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Digitar um comando ou escolher um arquivo de script:"
 
-#: ui/main.qml:467
+#: ui/main.qml:468
+#, fuzzy, kde-format
+#| msgid "Commands"
+msgctxt "@label:textbox A shell command"
+msgid "Command:"
+msgstr "Comandos"
+
+#: ui/main.qml:474
 #, fuzzy, kde-format
 #| msgid "Commands"
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Comandos"
 
-#: ui/main.qml:473
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Escolher..."
 
-#: ui/main.qml:474
+#: ui/main.qml:482
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Choose Script File"
@@ -321,34 +328,46 @@ msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Escolher arquivo de script"
 
-#: ui/main.qml:487
+#: ui/main.qml:490
+#, kde-format
+msgctxt "@label:textfield Human-readable name given to a shell command"
+msgid "Name:"
+msgstr ""
+
+#: ui/main.qml:491
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Enter name here"
+msgstr ""
+
+#: ui/main.qml:503
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Escolher arquivo de script"
 
-#: ui/main.qml:489
+#: ui/main.qml:505
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Arquivo de script (*.*sh)"
 
-#: ui/main.qml:511
+#: ui/main.qml:528
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Selecione o esquema a importar:"
 
-#: ui/main.qml:530
+#: ui/main.qml:547
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Esquema personalizado"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Select File…"
 msgstr "Selecionar arquivo..."
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Import"
 msgstr "Importar"

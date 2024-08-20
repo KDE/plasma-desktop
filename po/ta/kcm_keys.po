@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:40+0000\n"
+"POT-Creation-Date: 2024-08-20 00:42+0000\n"
 "PO-Revision-Date: 2024-07-06 21:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "பொது சுருக்குவழி சேவையை தொ
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "பொது சுருக்குவழி பின்னணி சேவையை தொடர்பு கொள்ளுதல் தோல்வியடைந்தது"
 
-#: kcm_keys.cpp:315
+#: kcm_keys.cpp:327
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 "%1 என்ற சுருக்குவழி, '%3' என்ற பொதுவான %2 செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.\n"
 "நியமனத்தை மாற்ற விரும்புகிறீர்களா?"
 
-#: kcm_keys.cpp:321
+#: kcm_keys.cpp:333
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -76,13 +76,13 @@ msgstr ""
 "%1 என்ற சுருக்குவழி, '%3' என்ற பொதுவான %2 செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.\n"
 "நியமனத்தை மாற்ற விரும்புகிறீர்களா?"
 
-#: kcm_keys.cpp:330
+#: kcm_keys.cpp:342
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr ""
 
-#: kcm_keys.cpp:340
+#: kcm_keys.cpp:352
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -263,7 +263,7 @@ msgstr "ஒன்றன் சுருக்குவழிகளை இங்�
 msgid "Export Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை ஏற்றுமதி செய்"
 
-#: ui/main.qml:378 ui/main.qml:503
+#: ui/main.qml:378 ui/main.qml:520
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை இறக்குமதி செய்"
@@ -274,45 +274,52 @@ msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "சுருக்குவழி திட்டம் (*.kksrc)"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Edit Command"
 msgstr "கட்டளையைத் திருத்து"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Add Command"
 msgstr "கட்டளையை சேர்"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Save"
 msgstr "சேமி"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Add"
 msgstr "சேர்"
 
-#: ui/main.qml:457
+#: ui/main.qml:460
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "கட்டளையையோ சிறுநிரல்கோப்பையோ தேர்ந்தெடுக்கவும்:"
 
-#: ui/main.qml:467
+#: ui/main.qml:468
+#, fuzzy, kde-format
+#| msgid "Commands"
+msgctxt "@label:textbox A shell command"
+msgid "Command:"
+msgstr "கட்டளைகள்"
+
+#: ui/main.qml:474
 #, fuzzy, kde-format
 #| msgid "Commands"
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "கட்டளைகள்"
 
-#: ui/main.qml:473
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "தேர்ந்தெடு…"
 
-#: ui/main.qml:474
+#: ui/main.qml:482
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Choose Script File"
@@ -320,34 +327,46 @@ msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "சிறுநிரல் கோப்பைத் தேர்ந்தெடுப்பது"
 
-#: ui/main.qml:487
+#: ui/main.qml:490
+#, kde-format
+msgctxt "@label:textfield Human-readable name given to a shell command"
+msgid "Name:"
+msgstr ""
+
+#: ui/main.qml:491
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Enter name here"
+msgstr ""
+
+#: ui/main.qml:503
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "சிறுநிரல் கோப்பைத் தேர்ந்தெடுப்பது"
 
-#: ui/main.qml:489
+#: ui/main.qml:505
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "சிறுநிரல் கோப்பு (*.*sh)"
 
-#: ui/main.qml:511
+#: ui/main.qml:528
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "இறக்குமதி செய்யவேண்டியதை தேர்வு செய்யவும்:"
 
-#: ui/main.qml:530
+#: ui/main.qml:547
 #, kde-format
 msgid "Custom Scheme"
 msgstr "தனிப்பட்ட திட்டம்"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Select File…"
 msgstr "கோப்பை தேர்ந்தெடு…"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Import"
 msgstr "இறக்குமதி"

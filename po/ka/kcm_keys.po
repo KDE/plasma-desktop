@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:40+0000\n"
+"POT-Creation-Date: 2024-08-20 00:42+0000\n"
 "PO-Revision-Date: 2024-07-23 05:30+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "გლობალური მალსახმობის სერ�
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "გლობალური მალსახმობის სერვისთან დაკავშირების შეცდომა"
 
-#: kcm_keys.cpp:315
+#: kcm_keys.cpp:327
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -58,7 +58,7 @@ msgstr ""
 "მალსახმობი <shortcut>%1</shortcut> უკვე მინიჭებულია ჩვეულებრივ %2 ქმედებაზე "
 "<interface>%3</interface>.<nl/><nl/>გნებავთ მისი თავიდან მინიჭება %4-ზე?"
 
-#: kcm_keys.cpp:321
+#: kcm_keys.cpp:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -71,13 +71,13 @@ msgstr ""
 "მივანიჭო ის ქმედებას <interface>%4</interface> აპლიკაციისთვის <application>"
 "%5</application>?"
 
-#: kcm_keys.cpp:330
+#: kcm_keys.cpp:342
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "მალსახმობის კონფლიქტის გადაჭრა"
 
-#: kcm_keys.cpp:340
+#: kcm_keys.cpp:352
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -246,7 +246,7 @@ msgstr "აირჩიეთ სიის ჩანაწერები, რ�
 msgid "Export Shortcut Scheme"
 msgstr "მალსახმობების სქემის გატანა"
 
-#: ui/main.qml:378 ui/main.qml:503
+#: ui/main.qml:378 ui/main.qml:520
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "მალსახმობების სქემის შემოტანა"
@@ -257,77 +257,97 @@ msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "მალსახმობების სქემა(*.kksrc)"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Edit Command"
 msgstr "ბრძანების ჩასწორება"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Add Command"
 msgstr "ბრძანების დამატება"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Save"
 msgstr "შენახვა"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Add"
 msgstr "დამატება"
 
-#: ui/main.qml:457
+#: ui/main.qml:460
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "შეიყვანეთ ბრძანება ან აირჩიეთ სკრიპტის ფაილი:"
 
-#: ui/main.qml:467
+#: ui/main.qml:468
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox accessible"
+#| msgid "Command"
+msgctxt "@label:textbox A shell command"
+msgid "Command:"
+msgstr "ბრძანება"
+
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "ბრძანება"
 
-#: ui/main.qml:473
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "არჩევა…"
 
-#: ui/main.qml:474
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "აირჩიეთ სკრიპტის ფაილი"
 
-#: ui/main.qml:487
+#: ui/main.qml:490
+#, kde-format
+msgctxt "@label:textfield Human-readable name given to a shell command"
+msgid "Name:"
+msgstr ""
+
+#: ui/main.qml:491
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Enter name here"
+msgstr ""
+
+#: ui/main.qml:503
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "აირჩიეთ სკრიპტის ფაილი"
 
-#: ui/main.qml:489
+#: ui/main.qml:505
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "სკრიპტის ფაილი (*.*sh)"
 
-#: ui/main.qml:511
+#: ui/main.qml:528
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "არჩიეთ შემოსატანი სქემა:"
 
-#: ui/main.qml:530
+#: ui/main.qml:547
 #, kde-format
 msgid "Custom Scheme"
 msgstr "ხელით მითითებული სქემა"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Select File…"
 msgstr "აირჩიეთ ფაილი…"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Import"
 msgstr "შემოტანა"

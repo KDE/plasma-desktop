@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:40+0000\n"
+"POT-Creation-Date: 2024-08-20 00:42+0000\n"
 "PO-Revision-Date: 2024-06-11 20:15\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -51,7 +51,7 @@ msgstr "Не ўдалося звязацца з глабальнай служб�
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Не ўдалося звязацца з дэманам спалучэнняў клавіш"
 
-#: kcm_keys.cpp:315
+#: kcm_keys.cpp:327
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -66,7 +66,7 @@ msgstr ""
 "Спалучэнне клавіш %1 ужо прызначана для глабальнага %2 дзеяння \"%3\".\n"
 "Хочаце перапрызначыць?"
 
-#: kcm_keys.cpp:321
+#: kcm_keys.cpp:333
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -81,13 +81,13 @@ msgstr ""
 "Спалучэнне клавіш %1 ужо прызначана для глабальнага %2 дзеяння \"%3\".\n"
 "Хочаце перапрызначыць?"
 
-#: kcm_keys.cpp:330
+#: kcm_keys.cpp:342
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr ""
 
-#: kcm_keys.cpp:340
+#: kcm_keys.cpp:352
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -269,7 +269,7 @@ msgstr "Абярыце элемент са спіса, каб убачыць т�
 msgid "Export Shortcut Scheme"
 msgstr "Экспартаванне схемы спалучэнняў клавіш"
 
-#: ui/main.qml:378 ui/main.qml:503
+#: ui/main.qml:378 ui/main.qml:520
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Імпартаванне схемы спалучэнняў клавіш"
@@ -280,45 +280,52 @@ msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Схема спалучэнняў клавіш (*.kksrc)"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Edit Command"
 msgstr "Рэдагаваць каманду"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Add Command"
 msgstr "Дадаць каманду"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Save"
 msgstr "Захаваць"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Add"
 msgstr "Дадаць"
 
-#: ui/main.qml:457
+#: ui/main.qml:460
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Увядзіце каманду або абярыце файл скрыпта:"
 
-#: ui/main.qml:467
+#: ui/main.qml:468
+#, fuzzy, kde-format
+#| msgid "Commands"
+msgctxt "@label:textbox A shell command"
+msgid "Command:"
+msgstr "Каманды"
+
+#: ui/main.qml:474
 #, fuzzy, kde-format
 #| msgid "Commands"
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Каманды"
 
-#: ui/main.qml:473
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Абраць…"
 
-#: ui/main.qml:474
+#: ui/main.qml:482
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Choose Script File"
@@ -326,34 +333,46 @@ msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Абраць файл скрыпта"
 
-#: ui/main.qml:487
+#: ui/main.qml:490
+#, kde-format
+msgctxt "@label:textfield Human-readable name given to a shell command"
+msgid "Name:"
+msgstr ""
+
+#: ui/main.qml:491
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Enter name here"
+msgstr ""
+
+#: ui/main.qml:503
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Абраць файл скрыпта"
 
-#: ui/main.qml:489
+#: ui/main.qml:505
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Файл скрыпта (*.*sh)"
 
-#: ui/main.qml:511
+#: ui/main.qml:528
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Абярыце схему для імпартавання:"
 
-#: ui/main.qml:530
+#: ui/main.qml:547
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Адвольная схема"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Select File…"
 msgstr "Абраць файл…"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Import"
 msgstr "Імпартаванне"

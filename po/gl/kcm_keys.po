@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:40+0000\n"
+"POT-Creation-Date: 2024-08-20 00:42+0000\n"
 "PO-Revision-Date: 2024-07-23 18:26+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -46,7 +46,7 @@ msgstr "Erro ao comunicar co servizo de atallos globais."
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Non foi posíbel comunicar co servizo de atallos globais."
 
-#: kcm_keys.cpp:315
+#: kcm_keys.cpp:327
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -57,7 +57,7 @@ msgstr ""
 "O atallo <shortcut>%1</shortcut> xa está asignado á acción común <interface>"
 "%3</interface> de %2.<nl/> <nl/>Quere reasignalo a %4?"
 
-#: kcm_keys.cpp:321
+#: kcm_keys.cpp:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -69,13 +69,13 @@ msgstr ""
 "interface> de <application>%3</application>.<nl/> <nl/>Quere reasignalo á "
 "acción <interface>%4</interface> de <application>%5</application>?"
 
-#: kcm_keys.cpp:330
+#: kcm_keys.cpp:342
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Resolver un conflito de atallos"
 
-#: kcm_keys.cpp:340
+#: kcm_keys.cpp:352
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -242,7 +242,7 @@ msgstr "Seleccione un elemento da lista para ver aquí os seus atallos."
 msgid "Export Shortcut Scheme"
 msgstr "Exportar o esquema de atallos"
 
-#: ui/main.qml:378 ui/main.qml:503
+#: ui/main.qml:378 ui/main.qml:520
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importar o esquema de atallos"
@@ -253,77 +253,97 @@ msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Esquema de atallos (*.kksrc)"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Edit Command"
 msgstr "Editar a orde"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgid "Add Command"
 msgstr "Engadir unha orde"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Save"
 msgstr "Gardar"
 
-#: ui/main.qml:428
+#: ui/main.qml:431
 #, kde-format
 msgid "Add"
 msgstr "Engadir"
 
-#: ui/main.qml:457
+#: ui/main.qml:460
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Introduza unha orde ou escolla un ficheiro de guión:"
 
-#: ui/main.qml:467
+#: ui/main.qml:468
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox accessible"
+#| msgid "Command"
+msgctxt "@label:textbox A shell command"
+msgid "Command:"
+msgstr "Orde"
+
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Orde"
 
-#: ui/main.qml:473
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Escoller…"
 
-#: ui/main.qml:474
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Escolla un ficheiro de guión"
 
-#: ui/main.qml:487
+#: ui/main.qml:490
+#, kde-format
+msgctxt "@label:textfield Human-readable name given to a shell command"
+msgid "Name:"
+msgstr ""
+
+#: ui/main.qml:491
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Enter name here"
+msgstr ""
+
+#: ui/main.qml:503
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Escolla un ficheiro de guión"
 
-#: ui/main.qml:489
+#: ui/main.qml:505
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Script file (*.*sh)"
 msgstr "Ficheiro de guión (*.*sh)"
 
-#: ui/main.qml:511
+#: ui/main.qml:528
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Seleccione o esquema a importar:"
 
-#: ui/main.qml:530
+#: ui/main.qml:547
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Esquema personalizado"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Select File…"
 msgstr "Seleccionar un ficheiro…"
 
-#: ui/main.qml:538
+#: ui/main.qml:555
 #, kde-format
 msgid "Import"
 msgstr "Importar"

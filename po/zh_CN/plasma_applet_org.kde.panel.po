@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:40+0000\n"
+"POT-Creation-Date: 2024-08-20 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -38,12 +38,19 @@ msgstr "显示替代方案…"
 msgid "Spacer width"
 msgstr "空隔宽度"
 
-#: contents/ui/main.qml:432
+#: contents/ui/ConfigOverlay.qml:362
+#, kde-format
+msgctxt ""
+"@option:check Whether to allow a spacer widget to fill available space"
+msgid "Flexible size"
+msgstr ""
+
+#: contents/ui/main.qml:438
 #, kde-format
 msgid "Open Panel configuration ui"
 msgstr "打开面板配置界面"
 
-#: contents/ui/main.qml:439
+#: contents/ui/main.qml:445
 #, kde-format
 msgid "Add Widgets…"
 msgstr "添加挂件…"
