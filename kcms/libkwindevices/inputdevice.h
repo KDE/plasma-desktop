@@ -168,7 +168,7 @@ private:
         bool changed() const;
         void set(const Prop<T> &p)
         {
-            set(p.value);
+            set(p.value());
         }
 
         bool isSupported() const
