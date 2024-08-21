@@ -90,6 +90,7 @@ KCM.AbstractKCM {
             id: alternativeShortcut
             Kirigami.FormData.label: i18nc("@option:textbox", "Change layout:")
             modifierlessAllowed: false
+            modifierOnlyAllowed: true
 
             keySequence: kcm.shortcutHelper.alternativeShortcut
             onKeySequenceModified: kcm.shortcutHelper.alternativeShortcut = keySequence

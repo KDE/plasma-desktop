@@ -74,6 +74,7 @@ Item {
             KQuickControls.KeySequenceItem {
                 showCancelButton: true
                 modifierlessAllowed: false
+                modifierOnlyAllowed: true
                 keySequence: itemDelegate.shortcut
                 onCaptureFinished: itemDelegate.model.shortcut = keySequence
             }

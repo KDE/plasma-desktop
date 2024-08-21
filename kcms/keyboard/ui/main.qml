@@ -388,6 +388,7 @@ KCM.ScrollViewKCM {
             KQuickControls.KeySequenceItem {
                 id: alternativeShortcut
                 modifierlessAllowed: false
+                modifierOnlyAllowed: true
 
                 keySequence: kcm.shortcutHelper.alternativeShortcut
                 onKeySequenceModified: kcm.shortcutHelper.alternativeShortcut = keySequence
