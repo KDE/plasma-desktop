@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-20 00:42+0000\n"
-"PO-Revision-Date: 2024-07-28 23:51+0300\n"
+"PO-Revision-Date: 2024-08-20 09:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: basemodel.cpp:157
 #, kde-format
@@ -284,12 +284,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Bir komut gir veya bir betik dosyası seç:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Komut"
+msgstr "Komut:"
 
 #: ui/main.qml:474
 #, kde-format
@@ -313,13 +311,13 @@ msgstr "Betik dosyası seç"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Ad:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Buraya ad gir"
 
 #: ui/main.qml:503
 #, kde-format

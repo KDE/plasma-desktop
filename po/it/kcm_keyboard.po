@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-17 00:40+0000\n"
-"PO-Revision-Date: 2024-04-15 18:08+0200\n"
+"PO-Revision-Date: 2024-08-17 19:10+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -33,7 +33,7 @@ msgstr "federico.zenith@member.fsf.org"
 #: bindings.cpp:24
 #, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "Cambiatastiera"
+msgstr "Selettore di mappature della tastiera"
 
 #: bindings.cpp:26
 #, kde-format
@@ -96,17 +96,13 @@ msgstr ""
 "correttamente, se applicate."
 
 #: ui/KeyBindings.qml:16
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr "Associazioni dei tasti"
 
 #: ui/KeyBindings.qml:37
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "Configura le opzioni della tastiera"
@@ -118,11 +114,10 @@ msgid "Add Layout"
 msgstr "Aggiungi mappatura"
 
 #: ui/LayoutDialog.qml:177
-#, fuzzy, kde-format
-#| msgid "Show layout indicator"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr "Mostra indicatore di mappatura"
+msgstr "Nome abbreviato della mappatura"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -131,6 +126,8 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"Il nome abbreviato della mappatura selezionata, che sarà visualizzato nel "
+"vassoio di sistema. Puoi modificare tu stesso questa impostazione."
 
 #: ui/LayoutDialog.qml:195
 #, kde-format
@@ -148,28 +145,22 @@ msgstr "Anteprima"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "Configura lo scambio…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "Configura le mappature"
+msgstr "Configura lo scambio"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
 msgstr "Associazioni dei tasti"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
 msgstr "Associazioni dei tasti"
@@ -178,12 +169,10 @@ msgstr "Associazioni dei tasti"
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "Aggiungi…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "Aggiungi mappatura"
@@ -192,12 +181,10 @@ msgstr "Aggiungi mappatura"
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "Abilita"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Configura le mappature"
@@ -206,35 +193,28 @@ msgstr "Configura le mappature"
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "Modello:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "NumLock on Plasma Startup:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "Bloc Num all'avvio di Plasma:"
+msgstr "Bloc Num all'avvio:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Turn On"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
 msgstr "Acceso"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "&Spento"
+msgstr "Spento"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Leave unchanged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
@@ -242,23 +222,19 @@ msgid "Leave unchanged"
 msgstr "Lascia invariato"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr "Ripetizione dei tasti"
+msgstr "Ripetizione dei tasti:"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "Ripetizione dei tasti"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "Ritardo:"
@@ -273,19 +249,16 @@ msgstr ""
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr " ms"
+msgstr "ms"
 
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "Velocità:"
@@ -297,18 +270,16 @@ msgid "Key repeat rate %1"
 msgstr ""
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr " ripetizioni/s"
+msgstr "%1 ripetizioni/s"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr " ripetizioni/s"
+msgstr "ripetizioni/s"
 
 #: ui/main.qml:243
 #, kde-format
@@ -323,9 +294,7 @@ msgid "Type here to test settings"
 msgstr "Digita qui per provare le impostazioni"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Mappature"
@@ -340,7 +309,7 @@ msgstr "Sposta in su"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "Sposta la mappatura %1 in su"
 
 #: ui/main.qml:275
 #, kde-format
@@ -349,17 +318,13 @@ msgid "Move Down"
 msgstr "Sposta in giù"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "Sposta in giù"
+msgstr "Sposta la mappatura %1 in giù"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Anteprima"
@@ -374,29 +339,25 @@ msgstr "Rimuovi"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "Rimuovi la mappatura %1"
 
 #: ui/main.qml:307
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "Mappature di riserva"
+msgstr "Mappature di riserva:"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Il numero di mappature di riserva"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "Mappature di riserva"
+msgstr "mappature principali"
 
 #: ui/main.qml:380
 #, kde-format
@@ -407,97 +368,89 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Puoi avere fino a 4 mappature principali, mentre tutte le altre sono "
+"considerate di riserva. Queste ultime non sono incluse quando passi "
+"ciclicamente tra le mappature: puoi però avere l'accesso a queste "
+"dall'applet dell'indicatore della tastiera, oppure impostando una "
+"scorciatoia personalizzata."
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Conto delle mappature principali:"
+msgstr "Modifica la scorciatoia della mappatura:"
 
 #: ui/main.qml:408
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "o"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "Configura le mappature"
+msgstr "Configura lo scambio"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "Comportamento"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "Conto delle mappature principali:"
+msgstr "Lo scambio della mappatura influenza:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "Tutte le finestre"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "Tutte le finestre nel desktop corrente"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "Tutte le finestre dell'applicazione corrente"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "Solo l'applicazione corrente"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr "Mostra una finestra a comparsa alla modifica della mappatura"
+msgstr "Mostra una notifica alla modifica della mappatura"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "Scorciatoia"
+msgstr "Scorciatoie"
 
 #: ui/Switching.qml:91 ui/Switching.qml:152
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Mappature di riserva"
+msgstr "Modifica mappatura:"
 
 #: ui/Switching.qml:111
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Passa all'ultima mappatura di tastiera utilizzata"
+msgstr "Passa all'ultima mappatura utilizzata:"
 
 #: ui/Switching.qml:132
 #, fuzzy, kde-format
@@ -518,12 +471,10 @@ msgid ""
 msgstr ""
 
 #: ui/Switching.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Scorciatoia alternativa:"
+msgstr "Simboli alternativi:"
 
 #: ui/Switching.qml:207
 #, kde-format
@@ -532,6 +483,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"I tasti modificatori possono essere utilizzati per digitare dei caratteri "
+"aggiuntivi, dei simboli, e dei segni diacritici."
 
 #: xkboptionsmodel.cpp:160
 #, kde-format

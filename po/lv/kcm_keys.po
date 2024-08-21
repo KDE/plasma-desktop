@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-20 00:42+0000\n"
-"PO-Revision-Date: 2024-03-27 18:44+0200\n"
+"PO-Revision-Date: 2024-08-15 22:20+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,13 +16,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: basemodel.cpp:157
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "Palaist"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -48,46 +48,41 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Neizdevās komunicēt ar globālo saīšņu dēmonu"
 
 #: kcm_keys.cpp:327
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"Saīsne %1 jau ir piešķirta darbībai „%2“, ko sniedz „%3“.\n"
-"Vai vēlaties tai piešķirt jaunu darbību?"
+"Saīsnei „<shortcut>%1</shortcut>“ jau ir piešķirta sistēmas darbībai „%2“, "
+"ko nodrošina „<interface>%3</interface>“.\n"
+"Vai vēlaties to piešķirt „%4“?"
 
 #: kcm_keys.cpp:333
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%5</application>?"
 msgstr ""
-"Saīsne %1 jau ir piešķirta darbībai „%2“, ko sniedz „%3“.\n"
-"Vai vēlaties tai piešķirt jaunu darbību?"
+"Saīsnei „<shortcut>%1</shortcut>“ jau ir piešķirta darbība „<interface>%2</"
+"interface>“, ko nodrošina „<application>%3</application>“.\n"
+"Vai to piešķirt programmas „<application>%5</application>“ darbībai "
+"„<interface>%4</interface>“?"
 
 #: kcm_keys.cpp:342
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Atrisināt saīsnes konfliktu"
 
 #: kcm_keys.cpp:352
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Piešķirt jaunu"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -140,12 +135,10 @@ msgid "Common Actions"
 msgstr "Noklusējuma darbības"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@action: button Import shortcut scheme"
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
-msgstr "Importēt..."
+msgstr "Importēt…"
 
 #: ui/main.qml:50
 #, kde-format
@@ -157,7 +150,7 @@ msgstr "Atcelt eksportu"
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr "Eksportēt..."
+msgstr "Eksportēt…"
 
 #: ui/main.qml:83
 #, kde-format
@@ -171,12 +164,10 @@ msgid ""
 msgstr "Izvēlieties komponentu, kas ir iekļaujams eksportēšanas shēmā"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr "Eksportēt..."
+msgstr "Eksportēt"
 
 #: ui/main.qml:173
 #, kde-format
@@ -188,63 +179,53 @@ msgstr "Pievienot jaunu"
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr "Programmu..."
+msgstr "Programmu…"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr "Komandu vai skriptu..."
+msgstr "Komandu vai skriptu…"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "Eksportēt..."
+msgstr "Eksportēt „%1“"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Rediģēt „%1“ komandu"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Rediģēt „%1“ komandu"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Noņemt visas „%1“ saīsnes"
 
 #: ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Noņemt visas „%1“ saīsnes"
 
 #: ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Atsaukt dzēšanu"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Atsaukt dzēšanu"
@@ -302,28 +283,26 @@ msgstr "Ievadiet komandu vai izvēlieties skripta datni:"
 
 #: ui/main.qml:468
 #, fuzzy, kde-format
-#| msgid "Commands"
+#| msgctxt "@label:textbox accessible"
+#| msgid "Command"
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Komandas"
+msgstr "Komanda"
 
 #: ui/main.qml:474
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr "Komandas"
+msgstr "Komanda"
 
 #: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr "Izvēlēties..."
+msgstr "Izvēlēties…"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Choose Script File"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Izvēlieties skripta datni"
@@ -365,7 +344,7 @@ msgstr "Pielāgota shēma"
 #: ui/main.qml:555
 #, kde-format
 msgid "Select File…"
-msgstr "Izvēlieties datni..."
+msgstr "Atlasīt datni…"
 
 #: ui/main.qml:555
 #, kde-format
@@ -420,15 +399,13 @@ msgid "Custom shortcuts"
 msgstr "Pielāgotas saīsnes"
 
 #: ui/ShortcutActionDelegate.qml:180
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr "Dzēst šo saīsni"
+msgstr "Dzēst saīsni"
 
 #: ui/ShortcutActionDelegate.qml:184
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Dzēst šo saīsni"
@@ -437,25 +414,22 @@ msgstr "Dzēst šo saīsni"
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
-msgstr ""
+msgstr "Pievienot…"
 
 #: ui/ShortcutActionDelegate.qml:191
-#, fuzzy, kde-format
-#| msgid "Add custom shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Pievienot pielāgotu saīsni"
 
 #: ui/ShortcutActionDelegate.qml:226
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr "Atcelt jaunas saīsnes uztveršanu"
+msgstr "Atcelt saīsnes uztveršanu"
 
 #: ui/ShortcutActionDelegate.qml:230
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Atcelt jaunas saīsnes uztveršanu"

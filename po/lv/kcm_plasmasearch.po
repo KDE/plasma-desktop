@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-01-23 17:09+0200\n"
+"PO-Revision-Date: 2024-08-15 22:10+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: plasmasearch/kcm.h:70
 #, kde-format
@@ -31,19 +31,15 @@ msgstr "Pieejamie spraudņi"
 #: plasmasearch/ui/main.qml:25
 #, kde-format
 msgid "Configure KRunner…"
-msgstr "Konfigurēt „KRunner“..."
+msgstr "Konfigurēt „KRunner“…"
 
 #: plasmasearch/ui/main.qml:29
 #, kde-format
 msgid "Get New Plugins…"
-msgstr "Iegūt jaunus spraudņus..."
+msgstr "Iegūt jaunus spraudņus…"
 
 #: plasmasearch/ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to see them."
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -51,7 +47,7 @@ msgid ""
 msgstr ""
 "Ieslēgt vai izslēgt spraudņus (izmantoti „KRunner“, programmu palaidējā un "
 "pārskata efektā). Atzīmējiet spraudņus kā iecienītos un izkārtojiet tādā "
-"secībā, kādā vēlaties, lai tie parādās."
+"secībā, kādā vēlaties tos prioritizēt."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
@@ -100,18 +96,16 @@ msgid "KRunner plugin installation failed"
 msgstr "„KRunner“ spraudņa instalācija neizdevās"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Izpildāmā komanda: instalēt vai atinstalēt."
+msgstr "Izpildāmā komanda: instalēt vai atinstalēt"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Ceļš uz arhīvu vai atspiesto mapi"
 
 #: plugininstaller/main.cpp:50
 #, kde-format

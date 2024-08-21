@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-20 00:42+0000\n"
-"PO-Revision-Date: 2024-07-23 18:26+0200\n"
+"PO-Revision-Date: 2024-08-20 16:21+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -279,12 +279,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Introduza unha orde ou escolla un ficheiro de guión:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Orde"
+msgstr "Orde:"
 
 #: ui/main.qml:474
 #, kde-format
@@ -308,13 +306,13 @@ msgstr "Escolla un ficheiro de guión"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Nome:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Insira aquí o nome."
 
 #: ui/main.qml:503
 #, kde-format

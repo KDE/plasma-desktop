@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-20 00:42+0000\n"
-"PO-Revision-Date: 2024-07-23 05:30+0200\n"
+"PO-Revision-Date: 2024-08-20 06:09+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -283,12 +283,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "შეიყვანეთ ბრძანება ან აირჩიეთ სკრიპტის ფაილი:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "ბრძანება"
+msgstr "ბრძანება:"
 
 #: ui/main.qml:474
 #, kde-format
@@ -312,13 +310,13 @@ msgstr "აირჩიეთ სკრიპტის ფაილი"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "სახელი:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "შეიყვანეთ აქ სახელი"
 
 #: ui/main.qml:503
 #, kde-format

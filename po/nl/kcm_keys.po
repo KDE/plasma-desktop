@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-20 00:42+0000\n"
-"PO-Revision-Date: 2024-07-23 11:35+0200\n"
+"PO-Revision-Date: 2024-08-20 17:26+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -282,12 +282,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Voer een commando in of kies een scriptbestand:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Opdracht"
+msgstr "Commando:"
 
 #: ui/main.qml:474
 #, kde-format
@@ -311,13 +309,13 @@ msgstr "Kies een scriptbestand"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Naam:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Naam hier invoeren"
 
 #: ui/main.qml:503
 #, kde-format

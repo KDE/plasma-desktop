@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-01 00:40+0000\n"
-"PO-Revision-Date: 2024-03-27 18:44+0200\n"
+"PO-Revision-Date: 2024-08-15 19:28+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -303,10 +303,9 @@ msgid "Magnification"
 msgstr "Tuvinājums"
 
 #: ui/ActivationGestures.qml:16
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation:"
-msgstr "Aktivācijas žesti"
+msgstr "Aktivācija:"
 
 #: ui/ActivationGestures.qml:17
 #, kde-format
@@ -314,27 +313,23 @@ msgid "Use gestures for activating sticky keys and slow keys"
 msgstr "Lietot žestus, lai aktivētu slēdža režīmu un lēnos taustiņus"
 
 #: ui/ActivationGestures.qml:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgid "Turn sticky keys and slow keys off after inactivity:"
 msgstr ""
-"Izslēgt slēdža režīmu un lēnos taustiņus pēc noteikta bezdarbības laika."
+"Izslēgt lipīgos taustiņus un lēnos taustiņus pēc noteikta bezdarbības laika:"
 
 #: ui/ActivationGestures.qml:58
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " min"
-msgstr[1] " min"
-msgstr[2] " min"
+msgstr[0] "%1 min"
+msgstr[1] "%1 min"
+msgstr[2] "%1 min"
 
 #: ui/ActivationGestures.qml:62
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "min"
-msgstr " min"
+msgstr "min"
 
 #: ui/ActivationGestures.qml:70
 #, kde-format
@@ -359,7 +354,7 @@ msgstr "Parādīt paziņojumu"
 #: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
 #, kde-format
 msgid "Configure Notifications…"
-msgstr "Konfigurēt paziņošanu..."
+msgstr "Konfigurēt paziņošanu…"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -367,12 +362,10 @@ msgid "Please choose an audio file"
 msgstr "Izvēlieties skaņas datni"
 
 #: ui/Bell.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Name filters in a file dialog"
-#| msgid "Audio Files (*.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
-msgstr "Skaņas datnes (*.ogg *.wav)"
+msgstr "ogg, oga un wav skaņas datnes (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
 #, kde-format
@@ -534,8 +527,7 @@ msgid "Mouse Navigation"
 msgstr "Navigācijas ar peli"
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Gestures"
 msgstr "Aktivācijas žesti"
 
@@ -634,7 +626,7 @@ msgstr "Peles rādītāja paātrinājums:"
 #: ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr "Atvērt „Orca“ ekrāna lasītāja konfigurāciju..."
+msgstr "Atvērt „Orca“ ekrāna lasītāja konfigurāciju…"
 
 #: ui/ScreenReader.qml:42
 #, kde-format

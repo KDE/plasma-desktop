@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-17 00:40+0000\n"
-"PO-Revision-Date: 2024-04-05 10:04+0300\n"
+"PO-Revision-Date: 2024-08-15 20:27+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -59,7 +59,7 @@ msgstr "Apturētās aktivitātes:"
 #: contents/activitymanager/ActivityManager.qml:122
 #, kde-format
 msgid "Create activity…"
-msgstr "Izveidot aktivitāti..."
+msgstr "Izveidot aktivitāti…"
 
 #: contents/activitymanager/Heading.qml:59
 #, kde-format
@@ -84,7 +84,7 @@ msgstr "Kopēt starpliktuvē"
 #: contents/applet/AppletError.qml:187
 #, kde-format
 msgid "View Error Details…"
-msgstr "Skatīt kļūdas informāciju..."
+msgstr "Skatīt kļūdas informāciju…"
 
 #: contents/applet/CompactApplet.qml:76
 #, kde-format
@@ -142,7 +142,7 @@ msgstr "Tulkotāji"
 #: contents/configuration/AboutPlugin.qml:220
 #, kde-format
 msgid "Report a Bug…"
-msgstr "Ziņot par kļūdu..."
+msgstr "Ziņot par kļūdu…"
 
 #: contents/configuration/AppletConfiguration.qml:76
 #, kde-format
@@ -274,7 +274,7 @@ msgstr "Darbvirsmas tapetes veids:"
 #: contents/configuration/ConfigurationContainmentAppearance.qml:119
 #, kde-format
 msgid "Get New Plugins…"
-msgstr "Iegūt jaunus spraudņus..."
+msgstr "Iegūt jaunus spraudņus…"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:193
 #, kde-format
@@ -329,7 +329,7 @@ msgstr "Pievienot panelim atdalītāja logdaļu"
 #: contents/configuration/PanelConfiguration.qml:114
 #, kde-format
 msgid "Add Widgets…"
-msgstr "Pievienot logdaļas..."
+msgstr "Pievienot logdaļas…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -368,7 +368,7 @@ msgstr "Apakša"
 #: contents/configuration/PanelConfiguration.qml:174
 #, kde-format
 msgid "Set Position…"
-msgstr "Iestatīt novietojumu..."
+msgstr "Iestatīt novietojumu…"
 
 #: contents/configuration/PanelConfiguration.qml:201
 #, kde-format
@@ -470,7 +470,7 @@ msgstr "Stils"
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
-msgstr ""
+msgstr "Salabot"
 
 #: contents/configuration/PanelConfiguration.qml:564
 #, kde-format
@@ -478,10 +478,9 @@ msgid "Panel Width:"
 msgstr "Paneļa platums:"
 
 #: contents/configuration/PanelConfiguration.qml:565
-#, fuzzy, kde-format
-#| msgid "Panel Width:"
+#, kde-format
 msgid "Panel Height:"
-msgstr "Paneļa platums:"
+msgstr "Paneļa augstums:"
 
 #: contents/configuration/PanelConfiguration.qml:588
 #, kde-format
@@ -508,12 +507,12 @@ msgstr "Noņem paneli. Šo darbību ir iespējams atsaukt"
 #, kde-format
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr ""
+msgstr "Pabeigts"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "Aizvērt paneļa iestatījumu logu un iziet no rediģēšanas režīma"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 #, kde-format
@@ -639,18 +638,16 @@ msgid "Widgets"
 msgstr "Logdaļas"
 
 #: contents/explorer/WidgetExplorer.qml:164
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "Iegūt jaunus spraudņus..."
+msgstr "Iegūt jaunas…"
 
 #: contents/explorer/WidgetExplorer.qml:165
-#, fuzzy, kde-format
-#| msgid "Get New Widgets…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
-msgstr "Iegūt jaunas logdaļas..."
+msgstr "Iegūt jaunas logdaļas…"
 
 #: contents/explorer/WidgetExplorer.qml:217
 #, kde-format
@@ -685,7 +682,7 @@ msgstr "Pulkstenis:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Rādīt pulksteni"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
@@ -786,34 +783,33 @@ msgstr "Nākamais celiņš"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: contents/views/DesktopEditMode.qml:115
 #, kde-format
 msgid "Global Themes"
-msgstr ""
+msgstr "Globālie motīvi"
 
 #: contents/views/DesktopEditMode.qml:122
-#, fuzzy, kde-format
-#| msgid "Open configuration page"
+#, kde-format
 msgid "Display Configuration"
-msgstr "Atvērt konfigurēšanas lapu"
+msgstr "Displeja konfigurācija"
 
 #: contents/views/DesktopEditMode.qml:143
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "Vairāk"
 
 #: contents/views/DesktopEditMode.qml:152
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Iziet no rediģēšanas režīma"
 
 #: contents/views/Panel.qml:302
 #, kde-format
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Paneļa fokusa indikators"
 
 #~ msgctxt "@option:check"
 #~ msgid "Keep visible when unlocking prompt disappears"

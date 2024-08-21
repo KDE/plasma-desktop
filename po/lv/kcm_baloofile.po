@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2024-01-22 20:49+0200\n"
+"PO-Revision-Date: 2024-08-15 19:28+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -105,13 +105,13 @@ msgstr "Atrašanās vietas"
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
-msgstr "Sākt mapes indeksāciju..."
+msgstr "Sākt mapes indeksāciju…"
 
 #: ui/main.qml:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
-msgstr "Apturēt mapes indeksāciju..."
+msgstr "Apturēt mapes indeksāciju…"
 
 #: ui/main.qml:210
 #, kde-format
@@ -120,12 +120,10 @@ msgid "%1, %2% complete"
 msgstr "%1, %2% pabeigts"
 
 #: ui/main.qml:217
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info Currently Indexing"
-#| msgid "<filename>%1</filename>"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr "<filename>%1</filename>"
+msgstr "Šobrīd indeksē: <filename>%1</filename>"
 
 #: ui/main.qml:270
 #, kde-format

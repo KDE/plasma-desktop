@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-20 00:42+0000\n"
-"PO-Revision-Date: 2024-07-23 08:50+0300\n"
+"PO-Revision-Date: 2024-08-20 08:49+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -280,12 +280,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "נא למלא פקודה או לבחור בקובץ סקריפט:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "פקודה"
+msgstr "פקודה:"
 
 #: ui/main.qml:474
 #, kde-format
@@ -309,13 +307,13 @@ msgstr "בחירת קובץ סקריפט"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "שם:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "נא למלא כאן שם"
 
 #: ui/main.qml:503
 #, kde-format

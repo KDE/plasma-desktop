@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-01-22 21:18+0200\n"
+"PO-Revision-Date: 2024-08-15 22:10+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -56,11 +56,10 @@ msgid "Theme:"
 msgstr "Motīvs:"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "More Appearance Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr "Vairāk izskata iestatījumu..."
+msgstr "Vairāk izskata iestatījumu:"
 
 #: ui/main.qml:120
 #, kde-format
@@ -109,11 +108,10 @@ msgid "Select by clicking on item's selection marker"
 msgstr "Atlasa, klikšķinot uz vienības atlasīšanas marķiera"
 
 #: ui/main.qml:216
-#, fuzzy, kde-format
-#| msgid "More Behavior Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr "Vairāk uzvedības iestatījumu..."
+msgstr "Vairāk uzvedības iestatījumu:"
 
 #: ui/main.qml:229
 #, kde-format

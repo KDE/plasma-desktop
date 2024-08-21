@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-01-23 08:20+0200\n"
-"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2024-08-15 21:55+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -24,8 +24,8 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
-"Pirms izmaiņu piemērošanas saistībā ar vidējā klikšķa ielīmēšanu, sistēma ir "
-"jāpārstartē."
+"Pirms izmaiņu pielietošanas saistībā ar vidējā klikšķa ielīmēšanu, sistēma "
+"ir jāpārstartē."
 
 #: ui/main.qml:29
 #, kde-format
@@ -70,13 +70,13 @@ msgstr "Tūlītējas"
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "Ritināšana:"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "Dot priekšroku gludai ritināšanai"
 
 #: ui/main.qml:133
 #, kde-format
@@ -87,6 +87,10 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Šis iestatījums ieslēdz vai izslēdz pārejas animāciju, kad ritināt ar peles "
+"rullīti vai tastatūru. Dažas programmas šo iestatījumu var ignorēt, jo "
+"neatbalsta gludo ritināšanu vai tām ir savi iestatījumi šīs funkcijas "
+"ieslēgšanai vai izslēgšanai."
 
 #: ui/main.qml:146
 #, kde-format
@@ -244,7 +248,7 @@ msgstr "Animāciju ātrums"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "Gludā ritināšana"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

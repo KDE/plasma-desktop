@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-03-27 18:45+0200\n"
+"PO-Revision-Date: 2024-08-15 22:07+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,17 +16,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: inputsequence.cpp:135
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Izslēgts"
 
 #: inputsequence.cpp:138
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "Nav"
@@ -35,30 +34,30 @@ msgstr "Nav"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "Kreisā peles poga"
 
 #: inputsequence.cpp:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "Labā peles poga"
 
 #: inputsequence.cpp:149
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "Vidējā peles poga"
 
 #: inputsequence.cpp:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "Nosaka programma"
 
 #: kcmtablet.cpp:34
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Noklusējums"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -81,15 +80,14 @@ msgid "Inverted Landscape"
 msgstr "Apgrieztas ainavas"
 
 #: kcmtablet.cpp:88
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Sekot aktīvajam ekrānam"
+msgstr "Sekot pašreizējam ekrānam"
 
 #: kcmtablet.cpp:93
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Visi ekrāni"
 
 #: kcmtablet.cpp:102
 #, kde-format
@@ -100,53 +98,53 @@ msgstr "%1 — (%2,%3 %4×%5)"
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Ietilpināt ekrānā"
 
 #: kcmtablet.cpp:163
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Paturēt malu attiecību un ietilpināt ekrānā"
 
 #: kcmtablet.cpp:164
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Kartēt uz ekrāna daļu"
 
 #: ui/ActionDialog.qml:24
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "Atlasīt pogas darbību"
 
 #: ui/ActionDialog.qml:70
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "Izvēlieties darbību, nospiežot „%1“:"
 
 #: ui/ActionDialog.qml:84
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "Nodot programmai"
 
 #: ui/ActionDialog.qml:99
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "Nosūtīt tastatūras taustiņu"
 
 #: ui/ActionDialog.qml:113
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "Nosūtīt peles klikšķi"
 
 #: ui/ActionDialog.qml:129
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Nedarīt neko"
 
 #: ui/ActionDialog.qml:149
 #, kde-format
@@ -155,60 +153,62 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"Šī grafiskās planšetes poga tiek nosūtīta uz fokusā esošo programmu, kas "
+"izlems tās apstrādi."
 
 #: ui/ActionDialog.qml:177
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left Click"
-msgstr ""
+msgstr "Kreisais klikšķis"
 
 #: ui/ActionDialog.qml:178
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle Click"
-msgstr ""
+msgstr "Vidējais klikšķis"
 
 #: ui/ActionDialog.qml:179
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right Click"
-msgstr ""
+msgstr "Labais klikšķis"
 
 #: ui/ActionDialog.qml:206
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:213
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:220
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:235
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "Šī poga ir izslēgta un neveiks nekādu darbību."
 
 #: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Zīmuļa kalibrācija"
 
 #: ui/Calibration.qml:85
 #, kde-kuit-format
@@ -217,6 +217,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Kalibrācijas ir pabeigta un saglabāta.<nl/><nl/>Turpiniet kalibrāciju vai "
+"aizveriet logu."
 
 #: ui/Calibration.qml:86
 #, kde-kuit-format
@@ -225,30 +227,32 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Uzsitiet katram mērķim centrā.<nl/><nl/>Mērķējiet uz vietu, kur piezemējas "
+"zīmuļa gals, bet ignorējiet kursora pozīciju ekrānā."
 
 #: ui/Calibration.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Uzlabot esošo kalibrāciju"
 
 #: ui/Calibration.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Kalibrēt no nulles"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Aizvērt"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Atcelt"
 
 #: ui/main.qml:32
 #, kde-format
@@ -264,7 +268,7 @@ msgstr "Pievienojiet zīmēšanas planšeti"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Pārbaudīt zīmēšanas planšeti…"
 
 #: ui/main.qml:67
 #, kde-format
@@ -275,7 +279,7 @@ msgstr "Ierīce:"
 #: ui/main.qml:105
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Kartēt uz ekrānu:"
 
 #: ui/main.qml:125
 #, kde-format
@@ -285,11 +289,10 @@ msgstr "Orientācija:"
 #: ui/main.qml:131
 #, kde-format
 msgid "Not Supported"
-msgstr ""
+msgstr "Nav atbalstīts"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Kreisās rokas režīms:"
 
@@ -301,11 +304,14 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Liek ierīcei darboties labāk ar kreisās rokas lietotājiem. Šī iestatījuma "
+"efekts mainās atkarībā no ierīces, bet bieži tas ietver paliktņa pogu "
+"funkcionalitātes samainīšanu pusēm, lai planšeti varētu turēt otrādi."
 
 #: ui/main.qml:155
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Kartētā zona:"
 
 #: ui/main.qml:242
 #, kde-format
@@ -325,73 +331,67 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 — %3×%4"
 
 #: ui/main.qml:285
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgid "Pen button 1:"
-msgstr "Zīmuļa poga 2"
+msgstr "Zīmuļa poga 1:"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 1'"
 msgid "pen button 1"
-msgstr "Zīmuļa poga 2"
+msgstr "zīmuļa poga 1"
 
 #: ui/main.qml:290
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgid "Pen button 2:"
-msgstr "Zīmuļa poga 2"
+msgstr "zīmuļa poga 2:"
 
 #: ui/main.qml:291
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 2'"
 msgid "pen button 2"
-msgstr "Zīmuļa poga 2"
+msgstr "zīmuļa poga 2"
 
 #: ui/main.qml:295
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgid "Pen button 3:"
-msgstr "Zīmuļa poga 3"
+msgstr "zīmuļa poga 3:"
 
 #: ui/main.qml:296
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 3'"
 msgid "pen button 3"
-msgstr "Zīmuļa poga 3"
+msgstr "zīmuļa poga 3"
 
 #: ui/main.qml:351
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Notiek kalibrēšana"
 
 #: ui/main.qml:353
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Kalibrēt"
 
 #: ui/main.qml:356
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Kalibrēšana nav atbalstīta"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "Kalibrēšana vairākos ekrānos nav atbalstīta."
 
 #: ui/main.qml:393
 #, kde-format
@@ -405,40 +405,38 @@ msgid "None"
 msgstr "Nav"
 
 #: ui/main.qml:429
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
-msgstr "Poga %1:"
+msgstr "Planšetes poga %1:"
 
 #: ui/main.qml:432
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "Poga %1:"
+msgstr "planšetes poga %1"
 
 #: ui/Tester.qml:25
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "Planšetes testētājs"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Zīmuļa spiediens X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Zīmuļa atlaišana X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Zīmuļa pārvietošana X=%1 Y=%2"
 
 #: ui/Tester.qml:199
 #, kde-format
@@ -446,12 +444,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Apzīmējumi:\n"
+"# X, Y — notikuma koordināte\n"
 
 #: ui/Tester.qml:206
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Notīrīt"
 
 #~ msgid "Primary (default)"
 #~ msgstr "Primārais (noklusējums)"
