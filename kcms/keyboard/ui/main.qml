@@ -382,7 +382,7 @@ KCM.ScrollViewKCM {
         }
 
         RowLayout {
-            Kirigami.FormData.label: i18nc("@label:group Shotcut to change the keyboard layout. Keep it short", "Change layout shortcut:")
+            Kirigami.FormData.label: i18nc("@label:group Shortcut to change the keyboard layout. Keep it short", "Change layout shortcut:")
             spacing: Kirigami.Units.smallSpacing
 
             KQuickControls.KeySequenceItem {
