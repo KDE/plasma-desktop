@@ -502,7 +502,7 @@ KCM.AbstractKCM {
         sourceComponent: FileDialog {
             title: i18nc("@title:window", "Choose Script File")
             currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
-            nameFilters: [ i18nc("Template for file dialog","Script file (*.*sh)") ]
+            nameFilters: [ i18nc("Filename filters for file dialog. Do not translate any of the filename extensions","Script files (.sh, .bash, .zsh, etc.) (*.*sh)") ]
             Component.onCompleted: open()
             onAccepted: {
                 cmdField.text = selectedFile
