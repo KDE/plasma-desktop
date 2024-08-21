@@ -1,7 +1,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
-# SPDX-FileCopyrightText: 2010, 2011, 2017, 2018, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2011, 2017, 2018, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 00:51+0000\n"
-"PO-Revision-Date: 2023-06-14 14:59+0200\n"
+"PO-Revision-Date: 2024-08-20 15:07+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/ui/main.qml:27
 #, kde-format
@@ -220,10 +220,10 @@ msgstr ""
 #: workspaceoptions_plasmasettings.kcfg:20
 #, kde-format
 msgid "OSD on layout change"
-msgstr "OSD při změně rozložení"
+msgstr "OSD při změně rozvržení"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr "Zobrazit vyskakovací okno při změně rozložení"
+msgstr "Zobrazit vyskakovací okno při změně rozvržení"

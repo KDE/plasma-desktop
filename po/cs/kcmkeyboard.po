@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2011, 2013, 2014, 2016, 2017, 2020, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2011, 2013, 2014, 2016, 2017, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010, 2011.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2021, 2024 Vit Pelcak <vit@pelcak.org>
@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-05 00:46+0000\n"
-"PO-Revision-Date: 2021-06-10 17:48+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2024-08-20 15:12+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -99,7 +99,7 @@ msgid ""
 "parameters and layouts."
 msgstr ""
 "<h1>Klávesnice</h1> Tento ovládací modul slouží k nastavení parametrů a "
-"rozložení klávesnice."
+"rozvržení klávesnice."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
@@ -144,7 +144,7 @@ msgid ""
 "If you select \"Application\" or \"Window\" switching policy, changing the "
 "keyboard layout will only affect the current application or window."
 msgstr ""
-"Pokud zvolíte chování typu \"Aplikace\" nebo \"Okno\", změna rozložení se "
+"Pokud zvolíte chování typu \"Aplikace\" nebo \"Okno\", změna rozvržení se "
 "projeví pouze v současné aplikace resp. okně."
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
@@ -181,7 +181,7 @@ msgstr "O&kno"
 #: kcm_keyboard.ui:157
 #, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "Zkratky pro přepínání rozložení"
+msgstr "Zkratky pro přepínání rozvržení"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:163
@@ -196,7 +196,7 @@ msgid ""
 "This is a shortcut for switching layouts which is handled by X.org. It "
 "allows modifier-only shortcuts."
 msgstr ""
-"Toto je zkratka pro přepnutí aktivního rozložení, které je spravováno x.org. "
+"Toto je zkratka pro přepnutí aktivního rozvržení, které je spravováno x.org. "
 "Umožňuje pouze modifikační zkratky."
 
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
@@ -227,7 +227,7 @@ msgid ""
 "This is a shortcut for switching to a third level of the active layout (if "
 "it has one) which is handled by X.org. It allows modifier-only shortcuts."
 msgstr ""
-"Toto je zkratka pro přepnutí na 3. úroveň aktivního rozložení (pokud "
+"Toto je zkratka pro přepnutí na 3. úroveň aktivního rozvržení (pokud "
 "existuje), které je spravováno x.org. Umožňuje pouze modifikační zkratky."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -244,7 +244,7 @@ msgid ""
 "shortcuts and also may not work in some situations (e.g. if popup is active "
 "or from screensaver)."
 msgstr ""
-"Toto je zkratka pro přepnutí aktivního rozložení. Nepodporuje modifikátorové "
+"Toto je zkratka pro přepnutí aktivního rozvržení. Nepodporuje modifikátorové "
 "zkratky a nemusí fungovat za všech okolností (např. při aktivním "
 "vyskakovacím okně nebo ze spořiče obrazovky)."
 
