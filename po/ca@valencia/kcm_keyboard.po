@@ -3,22 +3,22 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2010, 2011, 2012, 2014, 2015, 2016, 2020, 2021, 2023, 2024.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2016, 2017, 2020.
+# SPDX-FileCopyrightText: 2007, 2008, 2010, 2011, 2012, 2014, 2015, 2016, 2020, 2021, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2016, 2017, 2020, 2024 Antoni Bella Pérez <antonibella5@yahoo.com>
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:40+0000\n"
-"PO-Revision-Date: 2024-04-14 09:34+0200\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"PO-Revision-Date: 2024-08-21 18:32+0200\n"
+"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -97,17 +97,13 @@ msgstr ""
 "funcionar bé si s'apliquen"
 
 #: ui/KeyBindings.qml:16
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr "Lligams de tecla"
 
 #: ui/KeyBindings.qml:37
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "Configura les opcions del teclat"
@@ -122,7 +118,7 @@ msgstr "Afig una disposició"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr ""
+msgstr "Nom curt de la disposició"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -131,6 +127,8 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"El nom abreujat de la disposició seleccionada, que es mostrarà a la safata "
+"del sistema. Podeu canviar esta configuració."
 
 #: ui/LayoutDialog.qml:195
 #, kde-format
@@ -148,28 +146,22 @@ msgstr "Vista prèvia"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "Configura el canvi…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "Configura les disposicions"
+msgstr "Configura el canvi"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
 msgstr "Lligams de tecla"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
 msgstr "Lligams de tecla"
@@ -178,12 +170,10 @@ msgstr "Lligams de tecla"
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "Afig…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "Afig una disposició"
@@ -192,12 +182,10 @@ msgstr "Afig una disposició"
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "Activa"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Configura les disposicions"
@@ -206,36 +194,28 @@ msgstr "Configura les disposicions"
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "Model:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "NumLock on Plasma Startup:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "«Bloq Núm» en iniciar Plasma:"
+msgstr "«Bloq Núm» en iniciar:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Turn On"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
-msgstr "Activat"
+msgstr "Activa"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Turn Off"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "Desactivat"
+msgstr "Desactiva"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Leave unchanged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
@@ -246,18 +226,16 @@ msgstr "Deixa sense canviar"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr ""
+msgstr "Repetició de tecles:"
 
 #: ui/main.qml:155
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
-msgstr ""
+msgstr "Repetició de tecles"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "Retard:"
@@ -266,24 +244,22 @@ msgstr "Retard:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "Retard de repetició de tecles %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "Velocitat:"
@@ -292,19 +268,19 @@ msgstr "Velocitat:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "Velocitat de repetició de tecles %1"
 
 #: ui/main.qml:227
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr ""
+msgstr "%1 repeticions"
 
 #: ui/main.qml:231
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr ""
+msgstr "repeticions"
 
 #: ui/main.qml:243
 #, kde-format
@@ -319,9 +295,7 @@ msgid "Type here to test settings"
 msgstr "Teclegeu ací per a provar la configuració"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Disposicions"
@@ -336,7 +310,7 @@ msgstr "Mou cap amunt"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "Mou la disposició %1 cap amunt"
 
 #: ui/main.qml:275
 #, kde-format
@@ -345,17 +319,13 @@ msgid "Move Down"
 msgstr "Mou cap avall"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "Mou cap avall"
+msgstr "Mou la disposició %1 cap avall"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Vista prèvia"
@@ -370,29 +340,25 @@ msgstr "Elimina"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "Elimina la disposició %1"
 
 #: ui/main.qml:307
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "Disposicions alternatives"
+msgstr "Disposicions alternatives:"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Nombre de disposicions principals de reserva"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "Disposicions alternatives"
+msgstr "disposicions principals"
 
 #: ui/main.qml:380
 #, kde-format
@@ -403,107 +369,98 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Podreu tindre fins a 4 disposicions principals, totes les altres "
+"disposicions són de reserva. Les disposicions alternatives no s'inclouen "
+"quan es recorren les disposicions, però s'hi pot accedir a través de la "
+"miniaplicació d'indicadors de teclat o establint una drecera personalitzada."
 
 #: ui/main.qml:385
 #, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
-msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
+#| msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
+#| msgid "Change layout shortcut:"
+msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Nombre de disposicions principals:"
+msgstr "Drecera de canvi de disposició:"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "o"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "Configura les disposicions"
+msgstr "Configura el canvi"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "Comportament"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "Nombre de disposicions principals:"
+msgstr "La commutació de disposició afecta:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "Totes les finestres"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "Totes les finestres de l'escriptori actual"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "Totes les finestres de l'aplicació actual"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "Només la finestra actual"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr "Mostra un missatge emergent en els canvis de disposició"
+msgstr "Mostra una notificació en el canvi de disposició"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "Drecera"
+msgstr "Dreceres"
 
-#: ui/Switching.qml:91 ui/Switching.qml:152
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#: ui/Switching.qml:91 ui/Switching.qml:153
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Disposicions alternatives"
+msgstr "Canvi de disposició:"
 
-#: ui/Switching.qml:111
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#: ui/Switching.qml:112
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Canvia a la disposició del teclat utilitzada per última vegada"
+msgstr "Canvia a l'última disposició utilitzada:"
 
-#: ui/Switching.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#: ui/Switching.qml:133
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "Drecera"
+msgstr "Dreceres antigues"
 
-#: ui/Switching.qml:140
+#: ui/Switching.qml:141
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -512,22 +469,26 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Les dreceres antigues de X11 permeten un control més fi de les dreceres de "
+"només modificador i tenen un suport lleugerament millor en X11 en casos "
+"especials. També es poden utilitzar a Wayland.<nl/><nl/>Establir estes "
+"dreceres vos portarà a la pàgina de lligams de tecla."
 
-#: ui/Switching.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Alternative shortcut:"
+#: ui/Switching.qml:182
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Drecera alternativa:"
+msgstr "Símbols alternatius:"
 
-#: ui/Switching.qml:207
+#: ui/Switching.qml:208
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"Les tecles modificadores es poden utilitzar per a teclejar caràcters, "
+"símbols i signes diacrítics addicionals."
 
 #: xkboptionsmodel.cpp:160
 #, kde-format
@@ -541,99 +502,3 @@ msgstr[1] "%1 dreceres"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Cap"
-
-#~ msgctxt "@title:group"
-#~ msgid "Keyboard model:"
-#~ msgstr "Model de teclat:"
-
-#~ msgctxt "@title:group"
-#~ msgid "When key is held:"
-#~ msgstr "Quan es manté premuda una tecla:"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Repeat the key"
-#~ msgstr "Repetix la tecla"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Do nothing"
-#~ msgstr "No faces res"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Show accented and similar characters"
-#~ msgstr "Mostra els caràcters accentuats i similars"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Display text:"
-#~ msgstr "Mostra el text:"
-
-#~ msgctxt "@title:group"
-#~ msgid "Shortcuts for Switching Layout"
-#~ msgstr "Dreceres per a canviar la disposició"
-
-#~ msgctxt "@option:textbox"
-#~ msgid "Main shortcuts:"
-#~ msgstr "Dreceres principals:"
-
-#~ msgctxt "@option:textbox"
-#~ msgid "3rd level shortcuts:"
-#~ msgstr "Dreceres de 3r nivell:"
-
-#~ msgctxt "@option:textbox"
-#~ msgid "Last used shortcuts:"
-#~ msgstr "Dreceres utilitzades per última vegada:"
-
-#~ msgctxt "@title:group"
-#~ msgid "Switching Policy"
-#~ msgstr "Política de canvi"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Global"
-#~ msgstr "Global"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Desktop"
-#~ msgstr "Escriptori"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Application"
-#~ msgstr "Aplicació"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Window"
-#~ msgstr "Finestra"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add"
-#~ msgstr "Afig"
-
-#~ msgctxt "@title:column"
-#~ msgid "Map"
-#~ msgstr "Mapa"
-
-#~ msgctxt "@title:column"
-#~ msgid "Label"
-#~ msgstr "Etiqueta"
-
-#~ msgctxt "@title:column"
-#~ msgid "Layout"
-#~ msgstr "Disposició"
-
-#~ msgctxt "@title:column"
-#~ msgid "Variant"
-#~ msgstr "Variant"
-
-#~ msgctxt "@action:button"
-#~ msgid "Reassign shortcut"
-#~ msgstr "Torna a assignar la drecera"
-
-#~ msgctxt "@action:button"
-#~ msgid "Cancel assignment"
-#~ msgstr "Cancel·la l'assignació"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Hardware"
-#~ msgstr "Maquinari"
-
-#~ msgctxt "layout - variant"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"

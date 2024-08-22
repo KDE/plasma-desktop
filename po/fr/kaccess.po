@@ -5,7 +5,7 @@
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2004, 2005.
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2005, 2007, 2008, 2010.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
-# Xavier Besnard <xavier.besnard@kde.org>, 2013.
+# SPDX-FileCopyrightText: 2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Vincent Pinon <vpinon@kde.org>, 2016.
 # Xavier Besnard <xavier.besnard@kde.org>, 2020.
 #
@@ -14,15 +14,15 @@ msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-09 00:41+0000\n"
-"PO-Revision-Date: 2020-11-05 09:43+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2024-08-14 20:09+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.08.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -183,11 +183,11 @@ msgstr "La touche « Ver. Maj. » est maintenant désactivée."
 
 #: kaccess.cpp:112
 msgid "The Scroll Lock key has been activated."
-msgstr "La touche « Arrêt défil. » a été activée."
+msgstr "La touche « Arrêt défilement » a été activée."
 
 #: kaccess.cpp:112
 msgid "The Scroll Lock key is now inactive."
-msgstr "La touche « Arrêt défil. » est maintenant désactivée."
+msgstr "La touche « Arrêt défilement. » est maintenant désactivée."
 
 #: kaccess.cpp:311
 #, kde-format
@@ -243,7 +243,7 @@ msgstr "Afficher cette fenêtre de confirmation"
 #: kaccess.cpp:705
 #, kde-format
 msgid "Deactivate All AccessX Features & Gestures"
-msgstr "Désactiver tous les gestes et fonctionnalités d'AccessX"
+msgstr "Désactiver tous les gestes et fonctionnalités de AccessX"
 
 #: kaccess.cpp:748 kaccess.cpp:750
 #, kde-format
@@ -402,13 +402,13 @@ msgid ""
 "If you do not need them, you can select \"Deactivate all AccessX features "
 "and gestures\"."
 msgstr ""
-"Ces réglages AccessX sont nécessaires pour certains utilisateurs ayant des "
-"difficultés de mouvements. Ils peuvent être définis dans la configuration "
-"système de KDE. Vous pouvez également les activer ou les désactiver avec les "
-"claviers à gestes standards.\n"
+"Ces réglages pour AccessX sont nécessaires pour certains utilisateurs ayant "
+"des difficultés de mouvements. Ils peuvent être définis dans la "
+"configuration système de KDE. Vous pouvez également les activer ou les "
+"désactiver avec les claviers à gestes standards.\n"
 "\n"
 "Si vous n'avez pas besoin de ces fonctionnalités, vous pouvez choisir "
-"l'option « Désactiver tous les gestes et fonctionnalités d'AccessX »."
+"l'option « Désactiver tous les gestes et fonctionnalités pour AccessX »."
 
 #: kaccess.cpp:900
 #, kde-format

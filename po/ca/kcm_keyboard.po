@@ -4,21 +4,21 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2007, 2008, 2010, 2011, 2012, 2014, 2015, 2016, 2020, 2021, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2016, 2017, 2020.
+# SPDX-FileCopyrightText: 2014, 2016, 2017, 2020, 2024 Antoni Bella Pérez <antonibella5@yahoo.com>
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:40+0000\n"
-"PO-Revision-Date: 2024-08-17 18:25+0200\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"PO-Revision-Date: 2024-08-21 18:32+0200\n"
+"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -369,18 +369,20 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
-"Podreu tenir fins a 4 disposicions principals, tots els altres dissenys són "
-"de reserva. Les disposicions de reserva no s'inclouen quan es recorren les "
-"disposicions, però s'hi pot accedir a través de la miniaplicació "
+"Podreu tenir fins a 4 disposicions principals, totes les altres disposicions "
+"són de reserva. Les disposicions de reserva no s'inclouen quan es recorren "
+"les disposicions, però s'hi pot accedir a través de la miniaplicació "
 "d'indicadors de teclat o establint una drecera personalitzada."
 
 #: ui/main.qml:385
-#, kde-format
-msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
+#, fuzzy, kde-format
+#| msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
+#| msgid "Change layout shortcut:"
+msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "Drecera de canvi de disposició:"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
@@ -440,25 +442,25 @@ msgctxt "@title:group"
 msgid "Shortcuts"
 msgstr "Dreceres"
 
-#: ui/Switching.qml:91 ui/Switching.qml:152
+#: ui/Switching.qml:91 ui/Switching.qml:153
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
 msgstr "Canvi de disposició:"
 
-#: ui/Switching.qml:111
+#: ui/Switching.qml:112
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
 msgstr "Commuta a l'última disposició utilitzada:"
 
-#: ui/Switching.qml:132
+#: ui/Switching.qml:133
 #, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
 msgstr "Dreceres antigues"
 
-#: ui/Switching.qml:140
+#: ui/Switching.qml:141
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -472,13 +474,13 @@ msgstr ""
 "especials. També es poden utilitzar al Wayland.<nl/><nl/>Establir aquestes "
 "dreceres us portarà a la pàgina de lligams de tecla."
 
-#: ui/Switching.qml:181
+#: ui/Switching.qml:182
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
 msgstr "Símbols alternatius:"
 
-#: ui/Switching.qml:207
+#: ui/Switching.qml:208
 #, kde-format
 msgctxt "@info"
 msgid ""

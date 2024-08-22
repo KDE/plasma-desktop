@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:40+0000\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
 "PO-Revision-Date: 2024-08-18 08:25+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -371,12 +371,14 @@ msgstr ""
 "על ידי הגדרת צירוף מקשים בהתאמה אישית."
 
 #: ui/main.qml:385
-#, kde-format
-msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
+#, fuzzy, kde-format
+#| msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
+#| msgid "Change layout shortcut:"
+msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "החלפת קיצור המקשים של הפריסה:"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
@@ -436,25 +438,25 @@ msgctxt "@title:group"
 msgid "Shortcuts"
 msgstr "מקשי קיצור"
 
-#: ui/Switching.qml:91 ui/Switching.qml:152
+#: ui/Switching.qml:91 ui/Switching.qml:153
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
 msgstr "החלפת פריסה:"
 
-#: ui/Switching.qml:111
+#: ui/Switching.qml:112
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
 msgstr "החלפה לפריסה האחרונה שהייתה בשימוש:"
 
-#: ui/Switching.qml:132
+#: ui/Switching.qml:133
 #, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
 msgstr "מקשי קיצור מיושנים"
 
-#: ui/Switching.qml:140
+#: ui/Switching.qml:141
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -467,13 +469,13 @@ msgstr ""
 "החלפה בלבד ויש להם תמיכה מעט טובה יותר ב־X11 במקרי קצה. אפשר גם להשתמש בהם ב־"
 "Wayland.<nl/><nl/>הגדרת צירופי המקשים האלה תוביל אותך לעמוד איגודי המקשים."
 
-#: ui/Switching.qml:181
+#: ui/Switching.qml:182
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
 msgstr "סמלים חלופיים:"
 
-#: ui/Switching.qml:207
+#: ui/Switching.qml:208
 #, kde-format
 msgctxt "@info"
 msgid ""

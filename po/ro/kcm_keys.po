@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-20 00:42+0000\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
 "PO-Revision-Date: 2024-01-07 18:23+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -349,9 +349,11 @@ msgstr "Alege fișier cu script"
 
 #: ui/main.qml:505
 #, kde-format
-msgctxt "Template for file dialog"
-msgid "Script file (*.*sh)"
-msgstr "Fișier cu script (*.*sh)"
+msgctxt ""
+"Filename filters for file dialog. Do not translate any of the filename "
+"extensions"
+msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
+msgstr ""
 
 #: ui/main.qml:528
 #, kde-format
@@ -460,6 +462,10 @@ msgstr "Anulează capturarea noii scurtături"
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Anulează capturarea noii scurtături"
+
+#~ msgctxt "Template for file dialog"
+#~ msgid "Script file (*.*sh)"
+#~ msgstr "Fișier cu script (*.*sh)"
 
 #~ msgctxt "@action:button Save shortcut scheme"
 #~ msgid "Save Scheme"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-20 00:42+0000\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
 "PO-Revision-Date: 2024-08-20 06:09+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -326,9 +326,11 @@ msgstr "აირჩიეთ სკრიპტის ფაილი"
 
 #: ui/main.qml:505
 #, kde-format
-msgctxt "Template for file dialog"
-msgid "Script file (*.*sh)"
-msgstr "სკრიპტის ფაილი (*.*sh)"
+msgctxt ""
+"Filename filters for file dialog. Do not translate any of the filename "
+"extensions"
+msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
+msgstr ""
 
 #: ui/main.qml:528
 #, kde-format
@@ -431,6 +433,10 @@ msgstr "მალსახმობის ჩაჭერის გაუქმ�
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "ახალი მალსახმობის ჩაჭერის გაუქმება"
+
+#~ msgctxt "Template for file dialog"
+#~ msgid "Script file (*.*sh)"
+#~ msgstr "სკრიპტის ფაილი (*.*sh)"
 
 #~ msgctxt "@action:button Save shortcut scheme"
 #~ msgid "Save Scheme"

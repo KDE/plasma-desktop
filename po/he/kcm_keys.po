@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-20 00:42+0000\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
 "PO-Revision-Date: 2024-08-20 08:49+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -323,9 +323,11 @@ msgstr "בחירת קובץ סקריפט"
 
 #: ui/main.qml:505
 #, kde-format
-msgctxt "Template for file dialog"
-msgid "Script file (*.*sh)"
-msgstr "קובץ סקריפט (‎*.*sh)"
+msgctxt ""
+"Filename filters for file dialog. Do not translate any of the filename "
+"extensions"
+msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
+msgstr ""
 
 #: ui/main.qml:528
 #, kde-format
@@ -430,6 +432,10 @@ msgstr "ביטול לכידת קיצור מקשים"
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "ביטול לכידת קיצור מקשים חדש"
+
+#~ msgctxt "Template for file dialog"
+#~ msgid "Script file (*.*sh)"
+#~ msgstr "קובץ סקריפט (‎*.*sh)"
 
 #~ msgctxt "@action:button Save shortcut scheme"
 #~ msgid "Save Scheme"

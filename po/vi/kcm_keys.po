@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-20 00:42+0000\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
 "PO-Revision-Date: 2023-01-08 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -349,8 +349,10 @@ msgstr ""
 
 #: ui/main.qml:505
 #, kde-format
-msgctxt "Template for file dialog"
-msgid "Script file (*.*sh)"
+msgctxt ""
+"Filename filters for file dialog. Do not translate any of the filename "
+"extensions"
+msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr ""
 
 #: ui/main.qml:528

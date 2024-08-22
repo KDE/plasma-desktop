@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-20 00:42+0000\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
 "PO-Revision-Date: 2024-06-11 20:15\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -353,9 +353,11 @@ msgstr "Абраць файл скрыпта"
 
 #: ui/main.qml:505
 #, kde-format
-msgctxt "Template for file dialog"
-msgid "Script file (*.*sh)"
-msgstr "Файл скрыпта (*.*sh)"
+msgctxt ""
+"Filename filters for file dialog. Do not translate any of the filename "
+"extensions"
+msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
+msgstr ""
 
 #: ui/main.qml:528
 #, kde-format
@@ -465,6 +467,10 @@ msgstr "Скасаваць захопліванне новага спалучэ�
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Скасаваць захопліванне новага спалучэння клавіш"
+
+#~ msgctxt "Template for file dialog"
+#~ msgid "Script file (*.*sh)"
+#~ msgstr "Файл скрыпта (*.*sh)"
 
 #~ msgctxt "@action:button Save shortcut scheme"
 #~ msgid "Save Scheme"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:40+0000\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
 "PO-Revision-Date: 2024-07-26 12:31-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -416,11 +416,11 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "@label:spinbox"
 #| msgid "Main layout count:"
-msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
+msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "Número de layouts principais:"
 
-#: ui/main.qml:408
+#: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
@@ -488,7 +488,7 @@ msgctxt "@title:group"
 msgid "Shortcuts"
 msgstr "Atalho"
 
-#: ui/Switching.qml:91 ui/Switching.qml:152
+#: ui/Switching.qml:91 ui/Switching.qml:153
 #, fuzzy, kde-format
 #| msgctxt "@option:checkbox"
 #| msgid "Spare layouts"
@@ -496,14 +496,14 @@ msgctxt "@option:textbox"
 msgid "Change layout:"
 msgstr "Layouts adicionais"
 
-#: ui/Switching.qml:111
+#: ui/Switching.qml:112
 #, fuzzy, kde-format
 #| msgid "Switch to Last-Used Keyboard Layout"
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
 msgstr "Mudar para o layout de teclado usado por último"
 
-#: ui/Switching.qml:132
+#: ui/Switching.qml:133
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Shortcut"
@@ -511,7 +511,7 @@ msgctxt "@title:group"
 msgid "Legacy Shortcuts"
 msgstr "Atalho"
 
-#: ui/Switching.qml:140
+#: ui/Switching.qml:141
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -521,7 +521,7 @@ msgid ""
 "page."
 msgstr ""
 
-#: ui/Switching.qml:181
+#: ui/Switching.qml:182
 #, fuzzy, kde-format
 #| msgctxt "@option:textbox"
 #| msgid "Alternative shortcut:"
@@ -529,7 +529,7 @@ msgctxt "@option:textbox"
 msgid "Alternative symbols:"
 msgstr "Atalho alternativo:"
 
-#: ui/Switching.qml:207
+#: ui/Switching.qml:208
 #, kde-format
 msgctxt "@info"
 msgid ""

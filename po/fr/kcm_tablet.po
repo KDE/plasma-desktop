@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-07-09 13:46+0200\n"
+"PO-Revision-Date: 2024-08-14 18:23+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -18,11 +18,10 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Désactivé"
 
 #: inputsequence.cpp:138
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "Aucun"
@@ -31,25 +30,25 @@ msgstr "Aucun"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "Bouton gauche de la souris"
 
 #: inputsequence.cpp:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "Bouton droit de souris"
 
 #: inputsequence.cpp:149
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "Bouton central de souris"
 
 #: inputsequence.cpp:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "Défini par l'application"
 
 #: kcmtablet.cpp:34
 #, kde-format
@@ -95,7 +94,7 @@ msgstr "%1 - (%2, %3 %4 × %5)"
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Fit to Screen"
-msgstr "S'adapter à la taille de l’écran"
+msgstr "S'adapter à la taille de l'écran"
 
 #: kcmtablet.cpp:163
 #, kde-format
@@ -111,37 +110,37 @@ msgstr "Faire correspondre à une partie de l'écran"
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "Sélectionner une action de bouton"
 
 #: ui/ActionDialog.qml:70
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "Sélectionnez l'action qui sera prise lors d'un appui sur %1 :"
 
 #: ui/ActionDialog.qml:84
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "Se reporter à l'application"
 
 #: ui/ActionDialog.qml:99
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "Envoyer une touche de clavier"
 
 #: ui/ActionDialog.qml:113
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "Envoyer un clic du bouton de la souris"
 
 #: ui/ActionDialog.qml:129
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Ne rien faire"
 
 #: ui/ActionDialog.qml:149
 #, kde-format
@@ -150,54 +149,56 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"Ce bouton de tablette est transmis à l'application ciblée, qui peut décider "
+"comment le gérer."
 
 #: ui/ActionDialog.qml:177
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left Click"
-msgstr ""
+msgstr "Clic gauche"
 
 #: ui/ActionDialog.qml:178
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle Click"
-msgstr ""
+msgstr "Clic central"
 
 #: ui/ActionDialog.qml:179
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right Click"
-msgstr ""
+msgstr "Clic droit"
 
 #: ui/ActionDialog.qml:206
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "CTRL"
 
 #: ui/ActionDialog.qml:213
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "ALT"
 
 #: ui/ActionDialog.qml:220
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Maj"
 
 #: ui/ActionDialog.qml:235
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "Ce bouton est désactivé et ne fera rien."
 
 #: ui/Calibration.qml:31
 #, kde-format
@@ -282,11 +283,9 @@ msgid "Orientation:"
 msgstr "Orientation :"
 
 #: ui/main.qml:131
-#, fuzzy, kde-format
-#| msgctxt "@action:button Pen display doesn't support calibration"
-#| msgid "Calibration Not Supported"
+#, kde-format
 msgid "Not Supported"
-msgstr "Calibration non prise en charge"
+msgstr "Non pris en charge"
 
 #: ui/main.qml:138
 #, kde-format
@@ -334,13 +333,12 @@ msgid "Pen button 1:"
 msgstr "Bouton 1 du stylet :"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 1'"
 msgid "pen button 1"
-msgstr "Bouton 1 du stylet :"
+msgstr "Bouton 1 du stylet"
 
 #: ui/main.qml:290
 #, kde-format
@@ -348,13 +346,12 @@ msgid "Pen button 2:"
 msgstr "Bouton 2 du stylet :"
 
 #: ui/main.qml:291
-#, fuzzy, kde-format
-#| msgid "Pen button 2:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 2'"
 msgid "pen button 2"
-msgstr "Bouton 2 du stylet :"
+msgstr "Bouton 2 du stylet"
 
 #: ui/main.qml:295
 #, kde-format
@@ -362,13 +359,12 @@ msgid "Pen button 3:"
 msgstr "Bouton 3 du stylet :"
 
 #: ui/main.qml:296
-#, fuzzy, kde-format
-#| msgid "Pen button 3:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 3'"
 msgid "pen button 3"
-msgstr "Bouton 3 du stylet :"
+msgstr "Bouton 3 du stylet"
 
 #: ui/main.qml:351
 #, kde-format
@@ -411,13 +407,12 @@ msgid "Pad button %1:"
 msgstr "Bouton %1 du pavé tactile :"
 
 #: ui/main.qml:432
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "Bouton %1 du pavé tactile :"
+msgstr "Bouton %1 du pavé tactile"
 
 #: ui/Tester.qml:25
 #, kde-format

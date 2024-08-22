@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-20 00:42+0000\n"
-"PO-Revision-Date: 2024-07-23 11:58+0200\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"PO-Revision-Date: 2024-08-21 12:33+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -285,12 +285,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Sartu komando bat edo hautatu gidoi-fitxategi bat:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Komandoa"
+msgstr "Komandoa:"
 
 #: ui/main.qml:474
 #, kde-format
@@ -314,13 +312,13 @@ msgstr "Hautatu gidoi-fitxategia"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Izena:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Izena hemen sartu"
 
 #: ui/main.qml:503
 #, kde-format
@@ -330,9 +328,11 @@ msgstr "Hautatu gidoi-fitxategia"
 
 #: ui/main.qml:505
 #, kde-format
-msgctxt "Template for file dialog"
-msgid "Script file (*.*sh)"
-msgstr "Gidoi fitxategia (*.*sh)"
+msgctxt ""
+"Filename filters for file dialog. Do not translate any of the filename "
+"extensions"
+msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
+msgstr ""
 
 #: ui/main.qml:528
 #, kde-format
@@ -435,6 +435,10 @@ msgstr "Utzi lasterbidea atzematea"
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Utzi lasterbide berriaren atzematea"
+
+#~ msgctxt "Template for file dialog"
+#~ msgid "Script file (*.*sh)"
+#~ msgstr "Gidoi fitxategia (*.*sh)"
 
 #~ msgctxt "@action:button Save shortcut scheme"
 #~ msgid "Save Scheme"
