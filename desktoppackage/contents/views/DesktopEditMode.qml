@@ -88,7 +88,7 @@ Item {
                         id: addWidgetButton
                         property QtObject qAction: containment?.plasmoid.internalAction("add widgets") || null
                         text: qAction?.text
-                        icon.name: "list-add"
+                        icon.name: "view-group-symbolic"
                         onClicked: qAction.trigger()
                     }
 

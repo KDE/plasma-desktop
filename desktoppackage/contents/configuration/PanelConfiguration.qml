@@ -111,8 +111,8 @@ ColumnLayout {
             }
 
             PC3.ToolButton {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…")
-                icon.name: "list-add"
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Add or Manage Widgets…")
+                icon.name: "view-group-symbolic"
 
                 PC3.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Open the widget selector to drag and drop widgets to the panel")
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
