@@ -133,8 +133,8 @@ Item {
                 Rectangle {
                     x: Math.round(-Kirigami.Units.smallSpacing * 1.5 / 2)
                     y: x
-                    width: runningBadge.width + Math.round(Kirigami.Units.smallSpacing * 1.5)
-                    height: width
+                    width: overlayedBadge.width + Math.round(Kirigami.Units.smallSpacing * 1.5)
+                    height: overlayedBadge.height + Math.round(Kirigami.Units.smallSpacing * 1.5)
                     radius: height
                     visible: running && delegate.GridView.isCurrentItem
                 }
@@ -156,20 +156,20 @@ Item {
             }
 
             Rectangle {
-                id: runningBadge
-                width: height
+                id: overlayedBadge
+                width: countLabel.width + height
                 height: Math.round(Kirigami.Units.iconSizes.sizeForLabels * 1.3)
                 radius: height
-                color: Kirigami.Theme.highlightColor
-                visible: running && delegate.GridView.isCurrentItem
+                color: (running && delegate.GridView.isCurrentItem) ? Kirigami.Theme.highlightColor : Kirigami.Theme.positiveTextColor
+                visible: (running && delegate.GridView.isCurrentItem) || model.recent
                 onVisibleChanged: maskShaderSource.scheduleUpdate()
 
                 PlasmaComponents.Label {
                     id: countLabel
-                    anchors.fill: parent
-                    horizontalAlignment: Text.AlignHCenter
+                    height: parent.height
                     verticalAlignment: Text.AlignVCenter
-                    text: running
+                    anchors.centerIn: parent
+                    text: (running && delegate.GridView.isCurrentItem) ? running : i18ndc("plasma_shell_org.kde.plasma.desktop", "Text displayed on top of newly installed widgets", "New!")
                     textFormat: Text.PlainText
                 }
             }
