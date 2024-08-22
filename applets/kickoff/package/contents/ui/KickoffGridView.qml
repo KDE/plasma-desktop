@@ -76,8 +76,8 @@ EmptyPage {
             return height - topMargin - bottomMargin;
         }
 
-        readonly property int columns: Math.floor(availableWidth / cellWidth)
-        readonly property int rows: Math.floor(availableHeight / cellHeight)
+        readonly property int columns: Math.floor(availableWidth() / cellWidth)
+        readonly property int rows: Math.floor(availableHeight() / cellHeight)
         property bool movedWithKeyboard: false
         property bool movedWithWheel: false
 
