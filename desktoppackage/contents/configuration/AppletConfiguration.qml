@@ -113,7 +113,7 @@ Rectangle {
         if (item.source) {
             app.isAboutPage = item.source === Qt.resolvedUrl("AboutPlugin.qml");
 
-            if (isContainment) {
+            if (isContainment && (item.source == "ConfigurationContainmentAppearance.qml" || item.source == "ConfigurationContainmentActions.qml")) {
                 pushReplace(Qt.resolvedUrl("ConfigurationAppletPage.qml"), {configItem: item});
             } else {
 
