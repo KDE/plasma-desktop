@@ -206,6 +206,9 @@ PC3.Page {
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "All Widgets")
                     icon.name: "view-filter"
 
+                    Accessible.role: Accessible.ButtonMenu
+                    down: categoriesDialog.status == PlasmaExtras.ModelContextMenu.Open || pressed
+
                     KeyNavigation.down: list
 
                     onClicked: {
