@@ -292,7 +292,7 @@ MouseArea {
                     // a top panel
                     visible: tooltip.location !== PlasmaCore.Types.TopEdge
                              && (configurationArea.currentApplet?.applet.plasmoid.internalAction("remove")?.enabled ?? false)
-                    icon.name: "delete"
+                    icon.name: "edit-delete-remove-symbolic"
                     text: i18n("Remove")
                     onClicked: {
                         configurationArea.currentApplet.applet.plasmoid.internalAction("remove").trigger();
