@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:40+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2023-01-15 13:12+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -332,8 +332,9 @@ msgid "Add spacer widget to the panel"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, kde-format
-msgid "Add Widgets…"
+#, fuzzy, kde-format
+#| msgid "Add Widgets…"
+msgid "Add or Manage Widgets…"
 msgstr "Tambah Widget..."
 
 #: contents/configuration/PanelConfiguration.qml:117
@@ -669,24 +670,24 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Dapatkan Widget Baru..."
 
-#: contents/explorer/WidgetExplorer.qml:217
+#: contents/explorer/WidgetExplorer.qml:220
 #, kde-format
 msgid "Categories"
 msgstr "Kategori"
 
-#: contents/explorer/WidgetExplorer.qml:228
+#: contents/explorer/WidgetExplorer.qml:231
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Tidak ada widget yang cocok dengan butir yang dicari"
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets available"
 msgstr "Tidak ada widget yang tersedia"
@@ -800,7 +801,7 @@ msgstr ""
 msgid "Next track"
 msgstr ""
 
-#: contents/osd/OsdItem.qml:32
+#: contents/osd/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

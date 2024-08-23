@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:40+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2023-11-14 14:07-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -331,8 +331,9 @@ msgid "Add spacer widget to the panel"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, kde-format
-msgid "Add Widgets…"
+#, fuzzy, kde-format
+#| msgid "Add Widgets…"
+msgid "Add or Manage Widgets…"
 msgstr "Adicionar widgets..."
 
 #: contents/configuration/PanelConfiguration.qml:117
@@ -664,24 +665,24 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Baixar novos widgets..."
 
-#: contents/explorer/WidgetExplorer.qml:217
+#: contents/explorer/WidgetExplorer.qml:220
 #, kde-format
 msgid "Categories"
 msgstr "Categorias"
 
-#: contents/explorer/WidgetExplorer.qml:228
+#: contents/explorer/WidgetExplorer.qml:231
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Nenhum widget corresponde aos termos da pesquisa"
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets available"
 msgstr "Nenhum widget disponível"
@@ -795,7 +796,7 @@ msgstr ""
 msgid "Next track"
 msgstr ""
 
-#: contents/osd/OsdItem.qml:32
+#: contents/osd/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:40+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2023-12-21 18:14+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -330,8 +330,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Abstandhalter-Miniprogramm zur Kontrollleiste hinzufügen"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, kde-format
-msgid "Add Widgets…"
+#, fuzzy, kde-format
+#| msgid "Add Widgets…"
+msgid "Add or Manage Widgets…"
 msgstr "Miniprogramme hinzufügen ..."
 
 #: contents/configuration/PanelConfiguration.qml:117
@@ -663,24 +664,24 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Neue Miniprogramme holen ..."
 
-#: contents/explorer/WidgetExplorer.qml:217
+#: contents/explorer/WidgetExplorer.qml:220
 #, kde-format
 msgid "Categories"
 msgstr "Kategorien"
 
-#: contents/explorer/WidgetExplorer.qml:228
+#: contents/explorer/WidgetExplorer.qml:231
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Keine Bedienelemente passen zum Suchbegriff"
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets available"
 msgstr "Keine Miniprogramme verfügbar"
@@ -794,7 +795,7 @@ msgstr ""
 msgid "Next track"
 msgstr ""
 
-#: contents/osd/OsdItem.qml:32
+#: contents/osd/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-04-14 23:12+0100\n"
+"PO-Revision-Date: 2024-08-22 17:49+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -95,17 +95,13 @@ msgstr ""
 "funkcii bone se aplikitaj"
 
 #: ui/KeyBindings.qml:16
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr "Klavkombinoj"
 
 #: ui/KeyBindings.qml:37
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "Agordi klavarajn elekteblojn"
@@ -120,7 +116,7 @@ msgstr "Aldoni Aranĝon"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr ""
+msgstr "Mallonga aranĝonomo"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -146,28 +142,22 @@ msgstr "Antaŭrigardo"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "Agordi Ŝanĝadon…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "Agordi Aranĝojn"
+msgstr "Agordi Ŝanĝadon"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
 msgstr "Klavkombinoj"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
 msgstr "Klavkombinoj"
@@ -176,26 +166,22 @@ msgstr "Klavkombinoj"
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "Aldoni…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
-msgstr "Aldoni Aranĝon"
+msgstr "Aldoni aranĝon"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "Ebligi"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Agordi Aranĝojn"
@@ -204,36 +190,28 @@ msgstr "Agordi Aranĝojn"
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "Modelo:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "NumLock on Plasma Startup:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "NumLock dum Plasma-Lanĉo:"
+msgstr "NumLock dum lanĉo:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Turn On"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
 msgstr "Aktivigi"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Turn Off"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
 msgstr "Malaktivigi"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Leave unchanged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
@@ -244,18 +222,16 @@ msgstr "Lasi senŝanĝe"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr ""
+msgstr "Klavripeto:"
 
 #: ui/main.qml:155
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
-msgstr ""
+msgstr "Klavripeto"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "Prokrasto:"
@@ -264,24 +240,22 @@ msgstr "Prokrasto:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "Klavripeta prokrasto %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "Frekvenco:"
@@ -290,19 +264,19 @@ msgstr "Frekvenco:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "Klavripeta ofecto %1"
 
 #: ui/main.qml:227
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr ""
+msgstr "%1 ripetoj/s"
 
 #: ui/main.qml:231
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr ""
+msgstr "ripetoj/s"
 
 #: ui/main.qml:243
 #, kde-format
@@ -317,9 +291,7 @@ msgid "Type here to test settings"
 msgstr "Tajpu ĉi tie por testi metojn"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Aranĝoj"
@@ -334,7 +306,7 @@ msgstr "Movi Supren"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "Movi aranĝon %1 supren"
 
 #: ui/main.qml:275
 #, kde-format
@@ -343,17 +315,13 @@ msgid "Move Down"
 msgstr "Movi Malsupren"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "Movi Malsupren"
+msgstr "Movi aranĝon %1 malsupren"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Antaŭrigardo"
@@ -368,29 +336,25 @@ msgstr "Forigi"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "Forigi aranĝon %1"
 
 #: ui/main.qml:307
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "Kromaranĝoj"
+msgstr "Kromaranĝoj:"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Nombro da kromaj ĉefaranĝoj"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "Kromaranĝoj"
+msgstr "ĉefaranĝoj"
 
 #: ui/main.qml:380
 #, kde-format
@@ -403,103 +367,88 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Nombro de ĉefaj aranĝoj:"
+msgstr "Ŝanĝi ŝparvojon de aranĝo:"
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "aŭ"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "Agordi Aranĝojn"
+msgstr "Agordi Ŝanĝadon"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "Konduto"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "Nombro de ĉefaj aranĝoj:"
+msgstr "Ŝanĝo de aranĝo influas:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "Ĉiujn fenestrojn"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "Ĉiujn fenestrojn en aktuala labortablo"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "Ĉiujn fenestrojn de aktuala aplikaĵo"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "Nur aktualan fenestron"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr "Montri ŝprucfenestron je aranĝoŝanĝoj"
+msgstr "Montri sciigon je aranĝoŝanĝo"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "Fulmoklavo"
+msgstr "Ŝparvojoj"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Kromaranĝoj"
+msgstr "Ŝanĝi aranĝon:"
 
 #: ui/Switching.qml:112
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Ŝalti al Laste-Uzita Klavararanĝo"
+msgstr "Ŝanĝi al laste uzita araranĝo:"
 
 #: ui/Switching.qml:133
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "Fulmoklavo"
+msgstr "Heredaĵaj Ŝparvojoj"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -512,12 +461,10 @@ msgid ""
 msgstr ""
 
 #: ui/Switching.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Alternativa fulmoklavo:"
+msgstr "Alternativaj simboloj:"
 
 #: ui/Switching.qml:208
 #, kde-format
@@ -539,99 +486,3 @@ msgstr[1] "%1 fulmoklavoj"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Neniu"
-
-#~ msgctxt "@title:group"
-#~ msgid "Keyboard model:"
-#~ msgstr "Klavara modelo:"
-
-#~ msgctxt "@title:group"
-#~ msgid "When key is held:"
-#~ msgstr "Kiam klavo estas tenata:"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Repeat the key"
-#~ msgstr "Ripeti la klavon"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Do nothing"
-#~ msgstr "Fari nenion"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Show accented and similar characters"
-#~ msgstr "Montri supersignitajn kaj similajn signojn"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Display text:"
-#~ msgstr "Montri tekston:"
-
-#~ msgctxt "@title:group"
-#~ msgid "Shortcuts for Switching Layout"
-#~ msgstr "Fulmoklavoj por Ŝanĝi Klavararanĝon"
-
-#~ msgctxt "@option:textbox"
-#~ msgid "Main shortcuts:"
-#~ msgstr "Ĉefaj fulmoklavoj:"
-
-#~ msgctxt "@option:textbox"
-#~ msgid "3rd level shortcuts:"
-#~ msgstr "Fulmoklavoj de la 3a nivelo:"
-
-#~ msgctxt "@option:textbox"
-#~ msgid "Last used shortcuts:"
-#~ msgstr "Laste uzita fulmoklavo:"
-
-#~ msgctxt "@title:group"
-#~ msgid "Switching Policy"
-#~ msgstr "Ŝanĝpolitiko"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Global"
-#~ msgstr "Ĉiea"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Desktop"
-#~ msgstr "Labortablo"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Application"
-#~ msgstr "Aplikaĵo"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Window"
-#~ msgstr "Fenestro"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add"
-#~ msgstr "Aldoni"
-
-#~ msgctxt "@title:column"
-#~ msgid "Map"
-#~ msgstr "Klavomapo"
-
-#~ msgctxt "@title:column"
-#~ msgid "Label"
-#~ msgstr "Etikedo"
-
-#~ msgctxt "@title:column"
-#~ msgid "Layout"
-#~ msgstr "Aranĝo"
-
-#~ msgctxt "@title:column"
-#~ msgid "Variant"
-#~ msgstr "Devio"
-
-#~ msgctxt "@action:button"
-#~ msgid "Reassign shortcut"
-#~ msgstr "Ĉefaj fulmoklavoj:"
-
-#~ msgctxt "@action:button"
-#~ msgid "Cancel assignment"
-#~ msgstr "Nuligi asignadon"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Hardware"
-#~ msgstr "Aparataro"
-
-#~ msgctxt "layout - variant"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"

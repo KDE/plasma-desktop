@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:40+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2024-08-13 13:18+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -331,8 +331,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Gehitu trepeta bereizlea panelean"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, kde-format
-msgid "Add Widgets…"
+#, fuzzy, kde-format
+#| msgid "Add Widgets…"
+msgid "Add or Manage Widgets…"
 msgstr "Gehitu trepetak..."
 
 #: contents/configuration/PanelConfiguration.qml:117
@@ -654,24 +655,24 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Lortu trepeta berriak..."
 
-#: contents/explorer/WidgetExplorer.qml:217
+#: contents/explorer/WidgetExplorer.qml:220
 #, kde-format
 msgid "Categories"
 msgstr "Kategoriak"
 
-#: contents/explorer/WidgetExplorer.qml:228
+#: contents/explorer/WidgetExplorer.qml:231
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
 msgstr[0] "Baieztatu trepeta bat kentzea"
 msgstr[1] "Baieztatu %1 trepeta kentzea"
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Ez dago bilatutako terminoekin bat datorren trepetarik"
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets available"
 msgstr "Ez dago trepeta erabilgarririk"
@@ -783,7 +784,7 @@ msgstr "Hedabidea jotzea edo etetea"
 msgid "Next track"
 msgstr "Hurrengo pista"
 
-#: contents/osd/OsdItem.qml:32
+#: contents/osd/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

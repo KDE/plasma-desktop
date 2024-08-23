@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:40+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2024-08-15 05:45+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -327,8 +327,9 @@ msgid "Add spacer widget to the panel"
 msgstr "新增間隔器元件到面板中"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, kde-format
-msgid "Add Widgets…"
+#, fuzzy, kde-format
+#| msgid "Add Widgets…"
+msgid "Add or Manage Widgets…"
 msgstr "新增元件..."
 
 #: contents/configuration/PanelConfiguration.qml:117
@@ -648,23 +649,23 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "取得新元件…"
 
-#: contents/explorer/WidgetExplorer.qml:217
+#: contents/explorer/WidgetExplorer.qml:220
 #, kde-format
 msgid "Categories"
 msgstr "類別"
 
-#: contents/explorer/WidgetExplorer.qml:228
+#: contents/explorer/WidgetExplorer.qml:231
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
 msgstr[0] "確認移除 %1 個元件"
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "沒有元件符合搜尋字詞"
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets available"
 msgstr "沒有可用元件"
@@ -776,7 +777,7 @@ msgstr "播放或暫停媒體"
 msgid "Next track"
 msgstr "下一個音軌"
 
-#: contents/osd/OsdItem.qml:32
+#: contents/osd/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

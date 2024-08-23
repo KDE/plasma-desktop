@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:40+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2024-06-22 11:48+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -340,8 +340,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Добавить виджет "
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, kde-format
-msgid "Add Widgets…"
+#, fuzzy, kde-format
+#| msgid "Add Widgets…"
+msgid "Add or Manage Widgets…"
 msgstr "Добавить виджеты..."
 
 #: contents/configuration/PanelConfiguration.qml:117
@@ -666,12 +667,12 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Пополнить список виджетов..."
 
-#: contents/explorer/WidgetExplorer.qml:217
+#: contents/explorer/WidgetExplorer.qml:220
 #, kde-format
 msgid "Categories"
 msgstr "Категории"
 
-#: contents/explorer/WidgetExplorer.qml:228
+#: contents/explorer/WidgetExplorer.qml:231
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
@@ -680,12 +681,12 @@ msgstr[1] "Подтверждение удаления %1 виджетов"
 msgstr[2] "Подтверждение удаления %1 виджетов"
 msgstr[3] "Подтверждение удаления %1 виджета"
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Не найдено ни одного виджета, удовлетворяющего критериям поиска"
 
-#: contents/explorer/WidgetExplorer.qml:312
+#: contents/explorer/WidgetExplorer.qml:315
 #, kde-format
 msgid "No widgets available"
 msgstr "Виджеты не найдены"
@@ -797,7 +798,7 @@ msgstr "Начать или приостановить воспроизведе�
 msgid "Next track"
 msgstr "Следующая дорожка"
 
-#: contents/osd/OsdItem.qml:32
+#: contents/osd/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
