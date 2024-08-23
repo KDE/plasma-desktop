@@ -218,10 +218,6 @@ FocusScope {
         function onIconSizeChanged() {
             viewPropertiesMenu.iconSize = Plasmoid.configuration.iconSize;
         }
-
-        function onPositionsChanged() {
-            folderView.positions = getPositions();
-        }
     }
 
     FolderView {
