@@ -83,7 +83,11 @@ PlasmoidItem {
 
         PlasmaComponents3.Label {
             id: countryCode
-            anchors.fill: parent
+
+            anchors.centerIn: parent
+            width: Math.min(switcher.width, switcher.height)
+            height: width
+
             visible: Plasmoid.configuration.displayStyle === 0 || !flag.valid
 
             font.pointSize: height
