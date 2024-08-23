@@ -37,6 +37,7 @@ public:
 
 Q_SIGNALS:
     void errorOccured(const QString &);
+    void applicationAdded(const Component &);
 
 private:
     Component loadComponent(const QList<KGlobalShortcutInfo> &info);

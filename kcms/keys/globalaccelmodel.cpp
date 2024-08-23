@@ -351,6 +351,7 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
             auto c = loadComponent(infoReply.value());
             m_components.insert(pos, c);
             endInsertRows();
+            Q_EMIT applicationAdded(c);
         });
     });
 }

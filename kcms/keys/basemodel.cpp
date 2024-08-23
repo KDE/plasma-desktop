@@ -148,7 +148,7 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
         const Action &action = m_components[index.parent().row()].actions[index.row()];
         switch (role) {
         case Qt::DisplayRole: {
-            KDesktopFile desktopFile(action.id);
+            KDesktopFile desktopFile(m_components[index.parent().row()].id);
             KConfigGroup cg = desktopFile.desktopGroup();
             if (cg.readEntry<bool>("X-KDE-GlobalAccel-CommandShortcut", false)) {
                 return cg.readEntry("Exec");

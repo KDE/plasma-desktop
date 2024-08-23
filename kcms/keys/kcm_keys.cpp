@@ -138,6 +138,15 @@ void KCMKeys::writeScheme(const QUrl &url)
     KConfig file(url.toLocalFile(), KConfig::SimpleConfig);
     m_globalAccelModel->exportToConfig(file);
     m_standardShortcutsModel->exportToConfig(file);
+    KConfigGroup group(&file, QStringLiteral("Custom Commands"));
+    for (int i = 0; i < m_globalAccelModel->rowCount(); ++i) {
+        const QModelIndex componentIndex = m_shortcutsModel->index(i, 0);
+        if (componentIndex.data(BaseModel::SectionRole).value<ComponentType>() == Command && componentIndex.data(BaseModel::CheckedRole).toBool()) {
+            const QString component = componentIndex.data(BaseModel::ComponentRole).toString();
+            group.group(component).writeEntry(QStringLiteral("Exec"), KDesktopFile(component).desktopGroup().readEntry("Exec"));
+            group.group(component).writeEntry(QStringLiteral("Name"), KDesktopFile(component).desktopGroup().readEntry("Name"));
+        }
+    }
     file.sync();
 }
 
@@ -145,8 +154,48 @@ void KCMKeys::loadScheme(const QUrl &url)
 {
     qCDebug(KCMKEYS) << "Loading scheme" << url.toLocalFile();
     KConfig file(url.toLocalFile(), KConfig::SimpleConfig);
-    m_globalAccelModel->importConfig(file);
     m_standardShortcutsModel->importConfig(file);
+
+    auto migrateGroup = [](KConfigGroup &parentGroup, const QString &oldGroup, const QString &newGroup) {
+        if (newGroup == oldGroup) {
+            qCDebug(KCMKEYS) << "Already have command id " << oldGroup;
+        } else {
+            qCDebug(KCMKEYS) << "Have command at" << newGroup << "moving from" << oldGroup;
+            KConfigGroup n(&parentGroup, newGroup);
+            parentGroup.group(oldGroup).copyTo(&n);
+            parentGroup.deleteGroup(oldGroup);
+        }
+    };
+
+    KConfig copy(QString(), KConfig::SimpleConfig);
+    file.copyTo(QString(), &copy);
+    KConfigGroup commandsGroup(&copy, QStringLiteral("Custom Commands"));
+    // Importing Custom Commmands:
+    // - check if the command already exists
+    // - if yes, and its the same component, there is nothing to do
+    // - otherwise need to add command and/or migrate config
+    connect(m_globalAccelModel, &GlobalAccelModel::applicationAdded, this, [this, url]() {
+        // Now that components have been added, we can reimport the file to add the shortcuts to
+        // entries that were still being added during an async operation in addCommand()
+        KConfig file(url.toLocalFile(), KConfig::SimpleConfig);
+        m_globalAccelModel->importConfig(file);
+    });
+    for (const auto &savedComponent : commandsGroup.groupList()) {
+        const KConfigGroup command = commandsGroup.group(savedComponent);
+        const QString exec = command.readEntry(QStringLiteral("Exec"));
+        const QString name = command.readEntry(QStringLiteral("Name"));
+        const auto match = m_globalAccelModel->match(m_globalAccelModel->index(0, 0), Qt::DisplayRole, exec, 1, Qt::MatchExactly);
+        if (match.count() && match.back().data(BaseModel::SectionRole).value<ComponentType>() == Command) {
+            const QString component = match.back().data(BaseModel::ComponentRole).toString();
+            migrateGroup(commandsGroup, savedComponent, component);
+        } else {
+            // we dont have this command yet, add it
+            const QString newId = addCommand(exec, name);
+            migrateGroup(commandsGroup, savedComponent, newId);
+        }
+    }
+
+    m_globalAccelModel->importConfig(copy);
 }
 
 QVariantList KCMKeys::defaultSchemes() const
@@ -202,7 +251,7 @@ QString KCMKeys::getCommand(const QString component) const
     return cg.readEntry("Exec");
 }
 
-void KCMKeys::addCommand(const QString &exec, const QString &name)
+QString KCMKeys::addCommand(const QString &exec, const QString &name)
 {
     // escape %'s in the exec with %%
     QString escapedExec = exec;
@@ -249,6 +298,8 @@ void KCMKeys::addCommand(const QString &exec, const QString &name)
     cg.sync();
 
     m_globalAccelModel->addApplication(newPath, exeName);
+
+    return menuId;
 }
 
 QString KCMKeys::editCommand(const QString &componentName, const QString &name, const QString &newExec)
