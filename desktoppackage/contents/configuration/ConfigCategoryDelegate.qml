@@ -27,6 +27,8 @@ QQC2.ItemDelegate {
     Accessible.description: i18nd("plasma_shell_org.kde.plasma.desktop", "Open configuration page")
     Accessible.onPressAction: delegate.clicked()
 
+    focus: highlighted // need to actually focus highlighted items for the screen reader to see them
+
     property var item
 //END properties
 
