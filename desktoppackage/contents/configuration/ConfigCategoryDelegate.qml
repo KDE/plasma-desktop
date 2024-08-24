@@ -22,7 +22,7 @@ QQC2.ItemDelegate {
     Layout.fillWidth: true
     hoverEnabled: true
 
-    Accessible.role: Accessible.MenuItem
+    Accessible.role: Accessible.PageTab
     Accessible.name: model.name
     Accessible.description: i18nd("plasma_shell_org.kde.plasma.desktop", "Open configuration page")
     Accessible.onPressAction: delegate.clicked()

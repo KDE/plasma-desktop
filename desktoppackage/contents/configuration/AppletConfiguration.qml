@@ -197,7 +197,7 @@ Rectangle {
         Kirigami.Theme.inherit: false
         activeFocusOnTab: true
         focus: true
-        Accessible.role: Accessible.MenuBar
+        Accessible.role: Accessible.PageTabList
         background: Rectangle {
             color: Kirigami.Theme.backgroundColor
         }
