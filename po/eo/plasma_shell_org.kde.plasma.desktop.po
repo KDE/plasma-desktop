@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-23 00:41+0000\n"
-"PO-Revision-Date: 2024-07-12 22:08+0200\n"
+"PO-Revision-Date: 2024-08-23 21:45+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -328,10 +328,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Aldoni interspacan fenestraĵon al la panelo"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Aldoni Fenestraĵojn…"
+msgstr "Aldoni aŭ Mastrumi Fenestraĵojn…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -685,7 +684,7 @@ msgstr "Horloĝo:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Montri horloĝon"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
@@ -813,7 +812,3 @@ msgstr "Eliri Redaktan Reĝimon"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelfokusa Indikilo"
-
-#~ msgctxt "@option:check"
-#~ msgid "Keep visible when unlocking prompt disappears"
-#~ msgstr "Teni videbla kiam malŝlos-instigilo malaperas"

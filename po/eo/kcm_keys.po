@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-07-27 14:20+0200\n"
+"POT-Creation-Date: 2024-08-24 00:41+0000\n"
+"PO-Revision-Date: 2024-08-23 21:45+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -37,7 +37,7 @@ msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Eraro dum aldono de %1, ŝajnas, ke ĝi ne havas agojn."
 
-#: globalaccelmodel.cpp:397
+#: globalaccelmodel.cpp:398
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Eraro dum komunikado kun la ĉiea ŝparvoja servo"
@@ -47,7 +47,7 @@ msgstr "Eraro dum komunikado kun la ĉiea ŝparvoja servo"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Malsukcesis komuniki kun demono por ĉieaj ŝparvojoj"
 
-#: kcm_keys.cpp:327
+#: kcm_keys.cpp:378
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -58,7 +58,7 @@ msgstr ""
 "Ŝparvojo <shortcut>%1</shortcut> jam estas asignita al la komuna %2-ago "
 "<interface>%3</interface>.<nl/><nl/>.Ĉu reasigni ĝin al %4?"
 
-#: kcm_keys.cpp:333
+#: kcm_keys.cpp:384
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -70,13 +70,13 @@ msgstr ""
 "interface> de <application>%3</application>.<nl/><nl/>.Ĉu reasigni ĝin al "
 "ago <interface>%4</interface> de <application>%5</application>?"
 
-#: kcm_keys.cpp:342
+#: kcm_keys.cpp:393
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Solvi Ŝparvojan Konflikton"
 
-#: kcm_keys.cpp:352
+#: kcm_keys.cpp:403
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -282,12 +282,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Enigu komandon aŭ elektu skriptodosieron:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Komando"
+msgstr "Komando:"
 
 #: ui/main.qml:474
 #, kde-format
@@ -311,13 +309,13 @@ msgstr "Elekti skriptodosieron"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Nomo:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Enigu nomon tie ĉi"
 
 #: ui/main.qml:503
 #, kde-format
@@ -331,7 +329,7 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "Skriptodosieroj (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:528
 #, kde-format
@@ -434,7 +432,3 @@ msgstr "Nuligi kapton de ŝparvojo"
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Nuligi kapton de nova ŝparvojo"
-
-#~ msgctxt "Template for file dialog"
-#~ msgid "Script file (*.*sh)"
-#~ msgstr "Skriptdosiero (*.*sh)"

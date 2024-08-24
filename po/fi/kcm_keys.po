@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-08-24 00:41+0000\n"
 "PO-Revision-Date: 2023-11-19 20:51+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -36,7 +36,7 @@ msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Virhe lisättäessä sovellusta %1: vaikuttaa ettei sillä ole toimintoja."
 
-#: globalaccelmodel.cpp:397
+#: globalaccelmodel.cpp:398
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Virhe viestittäessä yleisen pikanäppäinpalvelun kanssa"
@@ -46,7 +46,7 @@ msgstr "Virhe viestittäessä yleisen pikanäppäinpalvelun kanssa"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Viestintä yleisen pikanäppäinpalvelun kanssa epäonnistui"
 
-#: kcm_keys.cpp:327
+#: kcm_keys.cpp:378
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 "Pikanäppäin %1 on jo kytketty luokan %2 yleiseen toimintoon ”%3“.\n"
 "Haluatko muuttaa kytköstä?"
 
-#: kcm_keys.cpp:333
+#: kcm_keys.cpp:384
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -76,13 +76,13 @@ msgstr ""
 "Pikanäppäin %1 on jo kytketty luokan %2 yleiseen toimintoon ”%3“.\n"
 "Haluatko muuttaa kytköstä?"
 
-#: kcm_keys.cpp:342
+#: kcm_keys.cpp:393
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr ""
 
-#: kcm_keys.cpp:352
+#: kcm_keys.cpp:403
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

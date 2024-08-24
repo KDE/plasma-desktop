@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-07-24 09:16+0200\n"
+"POT-Creation-Date: 2024-08-24 00:41+0000\n"
+"PO-Revision-Date: 2024-08-21 09:17+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -34,7 +34,7 @@ msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Erreur durant l'ajout de %1. Il semble n'y avoir aucune action."
 
-#: globalaccelmodel.cpp:397
+#: globalaccelmodel.cpp:398
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Erreur durant la communication avec le service des raccourcis globaux"
@@ -44,7 +44,7 @@ msgstr "Erreur durant la communication avec le service des raccourcis globaux"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Impossible de communiquer avec le démon des raccourcis généraux"
 
-#: kcm_keys.cpp:327
+#: kcm_keys.cpp:378
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -59,7 +59,7 @@ msgstr ""
 "Le raccourci %1 est déjà assigné à l'action commune %2 « %3 »\n"
 "Voulez-vous vraiment le ré-assigner ?"
 
-#: kcm_keys.cpp:333
+#: kcm_keys.cpp:384
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -72,13 +72,13 @@ msgstr ""
 "vraiment le réaffecter à l'action <interface>%4</interface> de <application>"
 "%5</application> ?"
 
-#: kcm_keys.cpp:342
+#: kcm_keys.cpp:393
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Résoudre le conflit de raccourci"
 
-#: kcm_keys.cpp:352
+#: kcm_keys.cpp:403
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -286,11 +286,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Saisir une commande ou sélectionner un fichier de script :"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Commandes"
+msgstr "Commande :"
 
 #: ui/main.qml:474
 #, kde-format
@@ -314,13 +313,13 @@ msgstr "Sélectionner un fichier de scripts"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Nom :"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Saisir un nom ici"
 
 #: ui/main.qml:503
 #, kde-format

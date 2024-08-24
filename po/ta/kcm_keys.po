@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-08-24 00:41+0000\n"
 "PO-Revision-Date: 2024-07-06 21:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -36,7 +36,7 @@ msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "%1 தனை சேர்ப்பதில் சிக்கல்; அதற்கான எந்த செயல்களும் இல்லை."
 
-#: globalaccelmodel.cpp:397
+#: globalaccelmodel.cpp:398
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "பொது சுருக்குவழி சேவையை தொடர்பு கொள்வதில் சிக்கல்"
@@ -46,7 +46,7 @@ msgstr "பொது சுருக்குவழி சேவையை தொ
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "பொது சுருக்குவழி பின்னணி சேவையை தொடர்பு கொள்ளுதல் தோல்வியடைந்தது"
 
-#: kcm_keys.cpp:327
+#: kcm_keys.cpp:378
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 "%1 என்ற சுருக்குவழி, '%3' என்ற பொதுவான %2 செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.\n"
 "நியமனத்தை மாற்ற விரும்புகிறீர்களா?"
 
-#: kcm_keys.cpp:333
+#: kcm_keys.cpp:384
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -76,13 +76,13 @@ msgstr ""
 "%1 என்ற சுருக்குவழி, '%3' என்ற பொதுவான %2 செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.\n"
 "நியமனத்தை மாற்ற விரும்புகிறீர்களா?"
 
-#: kcm_keys.cpp:342
+#: kcm_keys.cpp:393
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr ""
 
-#: kcm_keys.cpp:352
+#: kcm_keys.cpp:403
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

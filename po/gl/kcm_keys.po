@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-08-24 00:41+0000\n"
 "PO-Revision-Date: 2024-08-22 19:04+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -36,7 +36,7 @@ msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Erro ao engadir %1, non parece ter accións."
 
-#: globalaccelmodel.cpp:397
+#: globalaccelmodel.cpp:398
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Erro ao comunicar co servizo de atallos globais."
@@ -46,7 +46,7 @@ msgstr "Erro ao comunicar co servizo de atallos globais."
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Non foi posíbel comunicar co servizo de atallos globais."
 
-#: kcm_keys.cpp:327
+#: kcm_keys.cpp:378
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -57,7 +57,7 @@ msgstr ""
 "O atallo <shortcut>%1</shortcut> xa está asignado á acción común <interface>"
 "%3</interface> de %2.<nl/> <nl/>Quere reasignalo a %4?"
 
-#: kcm_keys.cpp:333
+#: kcm_keys.cpp:384
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -69,13 +69,13 @@ msgstr ""
 "interface> de <application>%3</application>.<nl/> <nl/>Quere reasignalo á "
 "acción <interface>%4</interface> de <application>%5</application>?"
 
-#: kcm_keys.cpp:342
+#: kcm_keys.cpp:393
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Resolver un conflito de atallos"
 
-#: kcm_keys.cpp:352
+#: kcm_keys.cpp:403
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

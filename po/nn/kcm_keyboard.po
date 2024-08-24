@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-07-07 14:58+0200\n"
+"PO-Revision-Date: 2024-08-19 20:49+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.11.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -94,17 +94,13 @@ msgstr ""
 "likevel vil fungera."
 
 #: ui/KeyBindings.qml:16
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr "Tastebindingar"
 
 #: ui/KeyBindings.qml:37
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "Definer tilpassingar av tastatur"
@@ -119,7 +115,7 @@ msgstr "Legg til tastaturoppsett"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr ""
+msgstr "Kort oppsettnamn"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -128,6 +124,8 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"Forkorta namn på det valde tastatur­oppsettet, som vert vist i systemtrauet. "
+"Du kan endra dette sjølv."
 
 #: ui/LayoutDialog.qml:195
 #, kde-format
@@ -175,12 +173,10 @@ msgstr "Tastebindingar"
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "Legg til …"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "Legg til tastaturoppsett"
@@ -189,12 +185,10 @@ msgstr "Legg til tastaturoppsett"
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "Ta i bruk"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Definer tastaturoppsett"
@@ -316,9 +310,7 @@ msgid "Type here to test settings"
 msgstr "Skriv her for å prøva innstillingane"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Oppsett"
@@ -367,15 +359,13 @@ msgstr "Fjern"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "Fjern oppsett %1"
 
 #: ui/main.qml:307
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "Reserveoppsett"
+msgstr "Reserveoppsett:"
 
 #: ui/main.qml:344
 #, kde-format
@@ -400,6 +390,9 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Du kan ha fire hovudoppsett, og resten vert reserveoppsett. Reserve­oppsetta "
+"vert ikkje tekne med når du blar gjennom tastaturoppsetta, men du får "
+"tilgang til dei via tastaturoppsett-ikonet eller via ein sjølvvalt snøggtast."
 
 #: ui/main.qml:385
 #, fuzzy, kde-format
@@ -413,7 +406,7 @@ msgstr "Tal på hovudoppsett:"
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "eller"
 
 #: ui/Switching.qml:17
 #, fuzzy, kde-format
@@ -462,12 +455,10 @@ msgid "Current window only"
 msgstr ""
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr "Vis sprettopp ved endring av oppsett"
+msgstr "Vis varsling ved byte av tastaturoppsett"
 
 #: ui/Switching.qml:86
 #, fuzzy, kde-format
@@ -478,19 +469,16 @@ msgid "Shortcuts"
 msgstr "Snarveg"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Reserveoppsett"
+msgstr "Byt oppsett:"
 
 #: ui/Switching.qml:112
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Byt til sist brukte tastaturoppsett"
+msgstr "Byt til sist brukte oppsett:"
 
 #: ui/Switching.qml:133
 #, fuzzy, kde-format
@@ -511,12 +499,10 @@ msgid ""
 msgstr ""
 
 #: ui/Switching.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Alternativ snarveg:"
+msgstr "Alternative symbol:"
 
 #: ui/Switching.qml:208
 #, kde-format
