@@ -383,7 +383,6 @@ Rectangle {
                     icon.name: "dialog-ok"
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "OK")
                     onClicked: acceptAction.trigger()
-                    KeyNavigation.tab: categories
                 }
                 QQC2.Button {
                     id: applyButton
@@ -398,6 +397,7 @@ Rectangle {
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel")
                     onClicked: cancelAction.trigger()
                     visible: !app.isAboutPage
+                    KeyNavigation.tab: categories
                 }
             }
             background: Item {
