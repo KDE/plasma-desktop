@@ -43,18 +43,18 @@ KCMUtils.SimpleKCM {
     Kirigami.FormLayout {
         QQC2.CheckBox {
             id: showToolTips
-            Kirigami.FormData.label: i18n("General:")
+            Kirigami.FormData.label: i18nc("@label for several checkboxes", "General:")
             text: i18nc("@option:check section General", "Show small window previews when hovering over tasks")
         }
 
         QQC2.CheckBox {
             id: highlightWindows
-            text: i18n("Hide other windows when hovering over previews")
+            text: i18nc("@option:check section General", "Hide other windows when hovering over previews")
         }
 
         QQC2.CheckBox {
             id: indicateAudioStreams
-            text: i18n("Mark applications that play audio")
+            text: i18nc("@option:check section General", "Mark applications that play audio")
             checked: cfg_indicateAudioStreams && plasmaPaAvailable
             onToggled: cfg_indicateAudioStreams = checked
             enabled: plasmaPaAvailable
@@ -74,7 +74,7 @@ KCMUtils.SimpleKCM {
             id: taskMaxWidth
             visible: !iconOnly && !plasmoidVertical
 
-            Kirigami.FormData.label: i18n("Maximum task width:")
+            Kirigami.FormData.label: i18nc("@label:listbox", "Maximum task width:")
 
             model: [
                 i18nc("@item:inlistbox how wide a task item should be", "Narrow"),
@@ -89,13 +89,15 @@ KCMUtils.SimpleKCM {
 
         QQC2.RadioButton {
             id: forbidStripes
-            Kirigami.FormData.label: plasmoidVertical ? i18nc("@option: radio", "Use multi-column view:") : i18nc("@option:radio", "Use multi-row view:")
+            Kirigami.FormData.label: plasmoidVertical
+                ? i18nc("@label for radio button group, completes sentence: … when panel is low on space etc.", "Use multi-column view:")
+                : i18nc("@label for radio button group, completes sentence: … when panel is low on space etc.", "Use multi-row view:")
             onToggled: {
                 if (checked) {
                     maxStripes.value = 1
                 }
             }
-            text: i18nc("Never use multi-column view for Task Manager", "Never")
+            text: i18nc("@option:radio Never use multi-column view for Task Manager", "Never")
         }
 
         QQC2.RadioButton {
@@ -121,7 +123,9 @@ KCMUtils.SimpleKCM {
         QQC2.SpinBox {
             id: maxStripes
             enabled: maxStripes.value > 1
-            Kirigami.FormData.label: plasmoidVertical ? i18nc("@label:spinbox", "Maximum columns:") : i18nc("@label:spinbox", "Maximum rows:")
+            Kirigami.FormData.label: plasmoidVertical
+            ? i18nc("@label:spinbox maximum number of columns for tasks", "Maximum columns:")
+            : i18nc("@label:spinbox maximum number of rows for tasks", "Maximum rows:")
             from: 1
         }
 
@@ -131,7 +135,7 @@ KCMUtils.SimpleKCM {
 
         QQC2.ComboBox {
             visible: iconOnly
-            Kirigami.FormData.label: i18n("Spacing between icons:")
+            Kirigami.FormData.label: i18nc("@label:listbox", "Spacing between icons:")
 
             model: [
                 {
@@ -169,7 +173,7 @@ KCMUtils.SimpleKCM {
 
         QQC2.Label {
             visible: Kirigami.Settings.tabletMode
-            text: i18nc("@info:usagetip under a set of radio buttons when Touch Mode is on", "Automatically set to Large when in Touch Mode")
+            text: i18nc("@info:usagetip under a set of radio buttons when Touch Mode is on", "Automatically set to Large when in Touch mode")
             font: Kirigami.Theme.smallFont
         }
     }
