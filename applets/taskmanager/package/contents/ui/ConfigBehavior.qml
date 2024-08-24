@@ -235,7 +235,7 @@ KCMUtils.SimpleKCM {
             checked: Plasmoid.configuration.reverseMode === true
             text: {
                 if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-                    return i18n("On the Top")
+                    return i18nc("@option:check completes sentence: New tasks appear", "On the top")
                 }
                 // horizontal
                 if (Qt.application.layoutDirection === Qt.LeftToRight) {

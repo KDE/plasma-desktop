@@ -44,7 +44,7 @@ KCMUtils.SimpleKCM {
         QQC2.CheckBox {
             id: showToolTips
             Kirigami.FormData.label: i18n("General:")
-            text: i18n("Show small window previews when hovering over Tasks")
+            text: i18nc("@option:check section General", "Show small window previews when hovering over tasks")
         }
 
         QQC2.CheckBox {
@@ -62,7 +62,7 @@ KCMUtils.SimpleKCM {
 
         QQC2.CheckBox {
             id: fill
-            text: i18nc("@option:check", "Fill free space on Panel")
+            text: i18nc("@option:check section General", "Fill free space on panel")
         }
 
         Item {
@@ -105,7 +105,7 @@ KCMUtils.SimpleKCM {
                     maxStripes.value = Math.max(2, maxStripes.value)
                 }
             }
-            text: i18nc("When to use multi-row view in Task Manager", "When Panel is low on space and thick enough")
+            text: i18nc("@option:radio completes sentence: Use multi-column/row view", "When panel is low on space and thick enough")
         }
 
         QQC2.RadioButton {
@@ -115,7 +115,7 @@ KCMUtils.SimpleKCM {
                     maxStripes.value = Math.max(2, maxStripes.value)
                 }
             }
-            text: i18nc("When to use multi-row view in Task Manager", "Always when Panel is thick enough")
+            text: i18nc("@option:radio completes sentence: Use multi-column/row view", "Always when panel is thick enough")
         }
 
         QQC2.SpinBox {
