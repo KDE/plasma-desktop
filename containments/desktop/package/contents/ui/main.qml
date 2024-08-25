@@ -167,10 +167,10 @@ ContainmentItem {
     KSvg.Svg {
         id: toolBoxSvg
         imagePath: "widgets/toolbox"
-        property int rightBorder: elementSize("right").width
-        property int topBorder: elementSize("top").height
-        property int bottomBorder: elementSize("bottom").height
-        property int leftBorder: elementSize("left").width
+        readonly property int rightBorder: elements.size("right").width
+        readonly property int topBorder: elements.size("top").height
+        readonly property int bottomBorder: elements.size("bottom").height
+        readonly property int leftBorder: elements.size("left").width
     }
 
     // FIXME: the use and existence of this property is a workaround

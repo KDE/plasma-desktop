@@ -336,7 +336,7 @@ Item {
                 default:
                     prefix = "south-active-tab";
             }
-            if (!hasElementPrefix(prefix)) {
+            if (!elements.hasPrefix(prefix)) {
                 prefix = "active-tab";
             }
             return prefix;

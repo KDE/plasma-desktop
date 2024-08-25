@@ -53,11 +53,6 @@ PlasmoidItem {
         processRunner.runMenuEditor();
     }
 
-    function updateSvgMetrics() {
-        lineSvg.horLineHeight = lineSvg.elementSize("horizontal-line").height;
-        lineSvg.vertLineWidth = lineSvg.elementSize("vertical-line").width;
-    }
-
     Component {
         id: compactRepresentationComponent
         CompactRepresentation {}
@@ -197,9 +192,8 @@ PlasmoidItem {
     KSvg.Svg {
         id: lineSvg
         imagePath: "widgets/line"
-
-        property int horLineHeight
-        property int vertLineWidth
+        readonly property int horLineHeight: elements.size("horizontal-line").height
+        readonly property int vertLineWidth: elements.size("vertical-line").width
     }
 
     PlasmaComponents3.Label {
@@ -258,9 +252,6 @@ PlasmoidItem {
 
         windowSystem.focusIn.connect(enableHideOnWindowDeactivate);
         kicker.hideOnWindowDeactivate = true;
-
-        updateSvgMetrics();
-        PlasmaCore.Theme.themeChanged.connect(updateSvgMetrics);
 
         rootModel.refreshed.connect(reset);
 

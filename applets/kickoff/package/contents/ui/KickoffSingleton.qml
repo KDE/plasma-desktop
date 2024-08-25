@@ -35,8 +35,8 @@ Item {
     //BEGIN Reusable Objects
     readonly property KSvg.Svg lineSvg: KSvg.Svg {
         imagePath: "widgets/line"
-        property int horLineHeight: lineSvg.elementSize("horizontal-line").height
-        property int vertLineWidth: lineSvg.elementSize("vertical-line").width
+        readonly property int horLineHeight: elements.size("horizontal-line").height
+        readonly property int vertLineWidth: elements.size("vertical-line").width
     }
     //END
 
