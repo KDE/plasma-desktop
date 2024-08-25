@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-24 00:41+0000\n"
-"PO-Revision-Date: 2024-07-27 09:14+0200\n"
+"PO-Revision-Date: 2024-08-24 11:50+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -282,12 +282,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Wpisz polecenie lub wybierz plik skryptu:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Polecenie"
+msgstr "Polecenie:"
 
 #: ui/main.qml:474
 #, kde-format
@@ -311,13 +309,13 @@ msgstr "Wybierz plik skryptu"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Nazwa:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Tutaj wpisz nazwę"
 
 #: ui/main.qml:503
 #, kde-format
@@ -331,7 +329,7 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "Pliki skryptowe (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:528
 #, kde-format
