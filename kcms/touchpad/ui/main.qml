@@ -201,7 +201,7 @@ KCM.SimpleKCM {
 
         QQC2.CheckBox {
             id: leftHanded
-            text: i18nd("kcm_touchpad", "Left handed mode")
+            text: i18nd("kcm_touchpad", "Left-handed mode")
 
             hoverEnabled: true
             QQC2.ToolTip {
