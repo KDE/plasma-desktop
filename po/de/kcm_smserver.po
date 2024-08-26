@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2023, 2024 Alois Spitzbart <spitz234@hotmail.com>
 # Thomas Diehl <thd@kde.org>, 2002, 2003, 2004.
 # Stephan Johach <hunsum@gmx.de>, 2005.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2009.
@@ -9,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-26 00:38+0000\n"
-"PO-Revision-Date: 2023-02-27 22:30+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2024-07-29 22:23+0200\n"
+"Last-Translator: Alois.spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -136,6 +137,11 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Eine <interface>Sitzung speichern</interface>-Schaltfläche erscheint im "
+"<interface>Anwendungsstarter</interface>-Menü. Wenn Sie darauf klicken, "
+"merkt sich Plasma die geöffneten Anwendungen und stellt sie bei der nächsten "
+"Anmeldung wieder her. Klicken Sie erneut darauf, um den Satz der "
+"gespeicherten Anwendungen zu ersetzen."
 
 #: ui/main.qml:131
 #, kde-format
@@ -158,6 +164,10 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Schreiben Sie hier die Namen der ausführbaren Anwendungen (getrennt durch "
+"Kommas oder Doppelpunkte, z. B. 'xterm:konsole' oder 'xterm,konsole'), um zu "
+"verhindern, dass sie zusammen mit anderen wiederhergestellten Anwendungen "
+"automatisch gestartet werden."
 
 #: ui/main.qml:175
 #, kde-format

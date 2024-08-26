@@ -41,7 +41,6 @@ msgstr "Bytt til neste tastaturoppsett"
 
 #: bindings.cpp:30
 #, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
 msgid "Switch to Last-Used Keyboard Layout"
 msgstr "Bytt til neste tastaturoppsett"
 
@@ -95,14 +94,12 @@ msgstr ""
 
 #: ui/Advanced.qml:40
 #, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
 msgctxt "@option:checkbox"
 msgid "Configure keyboard options"
 msgstr "&Sett opp tastaturinnstillinger"
 
 #: ui/Hardware.qml:34
 #, fuzzy, kde-format
-#| msgid "Keyboard &model:"
 msgctxt "@title:group"
 msgid "Keyboard model:"
 msgstr "Tastatur&modell:"
@@ -115,21 +112,18 @@ msgstr ""
 
 #: ui/Hardware.qml:73
 #, fuzzy, kde-format
-#| msgid "T&urn on"
 msgctxt "@option:radio"
 msgid "Turn On"
 msgstr "Slå &på"
 
 #: ui/Hardware.qml:77
 #, fuzzy, kde-format
-#| msgid "&Turn off"
 msgctxt "@option:radio"
 msgid "Turn Off"
 msgstr "Slå &av"
 
 #: ui/Hardware.qml:81
 #, fuzzy, kde-format
-#| msgid "Leave unchan&ged"
 msgctxt "@option:radio"
 msgid "Leave unchanged"
 msgstr "La være &uendret"
@@ -160,21 +154,18 @@ msgstr ""
 
 #: ui/Hardware.qml:164
 #, fuzzy, kde-format
-#| msgid "&Delay:"
 msgctxt "@label:slider"
 msgid "Delay:"
 msgstr "&Forsinkelse:"
 
 #: ui/Hardware.qml:199
 #, fuzzy, kde-format
-#| msgid "&Rate:"
 msgctxt "@label:slider"
 msgid "Rate:"
 msgstr "Fa&rt:"
 
 #: ui/Hardware.qml:247
 #, fuzzy, kde-format
-#| msgid "Test area:"
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr "Testområde:"
@@ -187,14 +178,12 @@ msgstr ""
 
 #: ui/LayoutDialog.qml:21
 #, fuzzy, kde-format
-#| msgid "Add Layout"
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Legg til tastaturoppsett"
 
 #: ui/LayoutDialog.qml:106 ui/Layouts.qml:245
 #, fuzzy, kde-format
-#| msgid "Preview"
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Forhåndsvisning"
@@ -207,42 +196,36 @@ msgstr ""
 
 #: ui/LayoutDialog.qml:143
 #, fuzzy, kde-format
-#| msgid "Shortcut:"
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Snarvei:"
 
 #: ui/Layouts.qml:28
 #, fuzzy, kde-format
-#| msgid "Shortcuts for Switching Layout"
 msgctxt "@title:group"
 msgid "Shortcuts for Switching Layout"
 msgstr "Snarveier for å bytte tastaturoppsett"
 
 #: ui/Layouts.qml:34
 #, fuzzy, kde-format
-#| msgid "Main shortcuts:"
 msgctxt "@option:textbox"
 msgid "Main shortcuts:"
 msgstr "Hovedsnarveier:"
 
 #: ui/Layouts.qml:61
 #, fuzzy, kde-format
-#| msgid "3rd level shortcuts:"
 msgctxt "@option:textbox"
 msgid "3rd level shortcuts:"
 msgstr "Snarveier for tredje nivå:"
 
 #: ui/Layouts.qml:88
 #, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
 msgctxt "@option:textbox"
 msgid "Alternative shortcut:"
 msgstr "Alternativ snarvei:"
 
 #: ui/Layouts.qml:109
 #, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
 msgctxt "@option:textbox"
 msgid "Last used shortcuts:"
 msgstr "Alternativ snarvei:"
@@ -255,113 +238,96 @@ msgstr ""
 
 #: ui/Layouts.qml:145
 #, fuzzy, kde-format
-#| msgid "Switching Policy"
 msgctxt "@title:group"
 msgid "Switching Policy"
 msgstr "Byttepraksis"
 
 #: ui/Layouts.qml:152
 #, fuzzy, kde-format
-#| msgid "&Global"
 msgctxt "@option:radio"
 msgid "Global"
 msgstr "&Global"
 
 #: ui/Layouts.qml:156
 #, fuzzy, kde-format
-#| msgid "&Desktop"
 msgctxt "@option:radio"
 msgid "Desktop"
 msgstr "&Skrivebord"
 
 #: ui/Layouts.qml:160
 #, fuzzy, kde-format
-#| msgid "&Application"
 msgctxt "@option:radio"
 msgid "Application"
 msgstr "&Program"
 
 #: ui/Layouts.qml:164
 #, fuzzy, kde-format
-#| msgid "&Window"
 msgctxt "@option:radio"
 msgid "Window"
 msgstr "&Vindu"
 
 #: ui/Layouts.qml:185
 #, fuzzy, kde-format
-#| msgid "Configure layouts"
 msgctxt "@option:checkbox"
 msgid "Configure Layouts"
 msgstr "Still inn oppsett"
 
 #: ui/Layouts.qml:200
 #, fuzzy, kde-format
-#| msgid "Add"
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Legg til"
 
 #: ui/Layouts.qml:206
 #, fuzzy, kde-format
-#| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Fjern"
 
 #: ui/Layouts.qml:213
 #, fuzzy, kde-format
-#| msgid "Move Up"
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Flytt opp"
 
 #: ui/Layouts.qml:229
 #, fuzzy, kde-format
-#| msgid "Move Down"
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Flytt ned"
 
 #: ui/Layouts.qml:316
 #, fuzzy, kde-format
-#| msgctxt "layout map name"
-#| msgid "Map"
 msgctxt "@title:column"
 msgid "Map"
 msgstr "Kart"
 
 #: ui/Layouts.qml:323
 #, fuzzy, kde-format
-#| msgid "Label"
 msgctxt "@title:column"
 msgid "Label"
 msgstr "Etikett"
 
 #: ui/Layouts.qml:332
 #, fuzzy, kde-format
-#| msgid "Layout"
 msgctxt "@title:column"
 msgid "Layout"
 msgstr "Tastaturutforming"
 
 #: ui/Layouts.qml:337
 #, fuzzy, kde-format
-#| msgid "Variant"
 msgctxt "@title:column"
 msgid "Variant"
 msgstr "Variant"
 
 #: ui/Layouts.qml:342
 #, fuzzy, kde-format
-#| msgid "Shortcut"
 msgctxt "@title:column"
 msgid "Shortcut"
 msgstr "Snarvei"
 
 #: ui/Layouts.qml:388
 #, fuzzy, kde-format
-#| msgid "Main shortcuts:"
 msgctxt "@action:button"
 msgid "Reassign shortcut"
 msgstr "Hovedsnarveier:"
@@ -374,28 +340,24 @@ msgstr ""
 
 #: ui/Layouts.qml:417
 #, fuzzy, kde-format
-#| msgid "Spare layouts"
 msgctxt "@option:checkbox"
 msgid "Spare layouts"
 msgstr "Reserveoppsett"
 
 #: ui/Layouts.qml:453
 #, fuzzy, kde-format
-#| msgid "Main layout count:"
 msgctxt "@label:spinbox"
 msgid "Main layout count:"
 msgstr "Antall hovedoppsett:"
 
 #: ui/main.qml:41
 #, fuzzy, kde-format
-#| msgid "Hardware"
 msgctxt "@title:tab"
 msgid "Hardware"
 msgstr "Maskinvare"
 
 #: ui/main.qml:47
 #, fuzzy, kde-format
-#| msgid "Layouts"
 msgctxt "@title:tab"
 msgid "Layouts"
 msgstr "Oppsett"

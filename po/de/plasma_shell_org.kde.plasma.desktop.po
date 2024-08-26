@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2020, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-08 02:33+0000\n"
-"PO-Revision-Date: 2023-12-21 18:14+0100\n"
+"PO-Revision-Date: 2024-08-20 20:45+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 msgid "Currently being used"
@@ -304,8 +304,6 @@ msgid "Bottom"
 msgstr "Unten"
 
 #: contents/configuration/PanelConfiguration.qml:174
-#, fuzzy
-#| msgid "Set Position..."
 msgid "Set Position…"
 msgstr "Position festlegen …"
 
@@ -318,10 +316,8 @@ msgid "Center"
 msgstr "Zentriert"
 
 #: contents/configuration/PanelConfiguration.qml:290
-#, fuzzy
-#| msgid "Height:"
 msgid "Height"
-msgstr "Höhe:"
+msgstr "Höhe"
 
 #: contents/configuration/PanelConfiguration.qml:291
 msgid "Width"
@@ -357,7 +353,7 @@ msgstr "Automatisch ausblenden"
 
 #: contents/configuration/PanelConfiguration.qml:353
 msgid "Dodge windows"
-msgstr ""
+msgstr "Fenstern ausweichen"
 
 #: contents/configuration/PanelConfiguration.qml:354
 msgid "Windows Go Below"
@@ -392,16 +388,12 @@ msgid "Panel Width:"
 msgstr "Breite der Kontrollleiste:"
 
 #: contents/configuration/PanelConfiguration.qml:533
-#, fuzzy
-#| msgid "Panel Width:"
 msgid "Panel Height:"
-msgstr "Breite der Kontrollleiste:"
+msgstr "Höhe der Kontrollleiste:"
 
 #: contents/configuration/PanelConfiguration.qml:556
-#, fuzzy
-#| msgid "Shortcut"
 msgid "Focus shortcut:"
-msgstr "Kurzbefehl"
+msgstr "Kurzbefehl sichtbar machen:"
 
 #: contents/configuration/PanelConfiguration.qml:567
 msgid "Press this keyboard shortcut to move focus to the Panel"
@@ -422,11 +414,12 @@ msgstr ""
 #: contents/configuration/PanelConfiguration.qml:610
 msgctxt "@action:button Done configuring the panel"
 msgid "Done"
-msgstr ""
+msgstr "Fertig"
 
 #: contents/configuration/PanelConfiguration.qml:613
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
+"Kontrollleisteneinstellungsfenster schließen und Bearbeitungsmodus verlassen"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:30
 msgid "Drag to change maximum height."
@@ -458,8 +451,6 @@ msgstr ""
 "Doppelklick zum Zurücksetzen."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy
-#| msgid "Panels and Desktops Management"
 msgid "Panel and Desktop Management"
 msgstr "Verwaltung der Kontrollleisten und Arbeitsflächen"
 
@@ -542,8 +533,8 @@ msgstr "Kategorien"
 #: contents/explorer/WidgetExplorer.qml:226
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Entfernen eines Miniprogramms bestätigen"
+msgstr[1] "Entfernen von %1 Miniprogrammen bestätigen"
 
 #: contents/explorer/WidgetExplorer.qml:310
 msgid "No widgets matched the search terms"
@@ -556,121 +547,115 @@ msgstr "Keine Miniprogramme verfügbar"
 #: contents/lockscreen/config.qml:19
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Uhr:"
 
 #: contents/lockscreen/config.qml:22
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Sichtbar halten, wenn die Entsperr-Aufforderung verschwindet"
 
 #: contents/lockscreen/config.qml:33
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Mediensteuerung:"
 
 #: contents/lockscreen/config.qml:36
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Unter Entsperr-Aufforderung anzeigen"
 
 #: contents/lockscreen/LockScreenUi.qml:48
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Aufheben der Sperre fehlgeschlagen"
 
 #: contents/lockscreen/LockScreenUi.qml:271
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Feststelltaste ist aktiviert"
 
 #: contents/lockscreen/LockScreenUi.qml:285
 msgid "Sleep"
-msgstr ""
+msgstr "Standby-Modus"
 
 #: contents/lockscreen/LockScreenUi.qml:291
 msgid "Hibernate"
-msgstr ""
+msgstr "Ruhezustand"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy
-#| msgid "Switch"
 msgid "Switch User"
-msgstr "Wechseln"
+msgstr "Benutzer wechseln"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Virtuelle Tastatur"
 
 #: contents/lockscreen/LockScreenUi.qml:382
-#, fuzzy
-#| msgid "Switch"
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Wechseln"
+msgstr "Belegung wechseln"
 
 #: contents/lockscreen/MainBlock.qml:64
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 msgid "Unlock"
-msgstr ""
+msgstr "Entsperren"
 
 #: contents/lockscreen/MainBlock.qml:156
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(oder Fingerabdruck vom -scanner einlesen)"
 
 #: contents/lockscreen/MainBlock.qml:160
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(oder Smartcard einlesen)"
 
 #: contents/lockscreen/MediaControls.qml:59
 msgid "No title"
-msgstr ""
+msgstr "Kein Titel"
 
 #: contents/lockscreen/MediaControls.qml:60
 msgid "No media playing"
-msgstr ""
+msgstr "Es werden keine Medien wiedergegeben"
 
 #: contents/lockscreen/MediaControls.qml:88
 msgid "Previous track"
-msgstr ""
+msgstr "Vorheriges Stück"
 
 #: contents/lockscreen/MediaControls.qml:100
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Medien wiedergeben oder anhalten"
 
 #: contents/lockscreen/MediaControls.qml:110
 msgid "Next track"
-msgstr ""
+msgstr "Nächstes Stück"
 
 #: contents/osd/OsdItem.qml:32
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: contents/views/DesktopEditMode.qml:113
 msgid "Global Themes"
-msgstr ""
+msgstr "Globale Designs"
 
 #: contents/views/DesktopEditMode.qml:120
-#, fuzzy
-#| msgid "Open configuration page"
 msgid "Display Configuration"
-msgstr "Einrichtungsseite öffnen"
+msgstr "Anzeige-Einrichtung"
 
 #: contents/views/DesktopEditMode.qml:141
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "Mehr"
 
 #: contents/views/DesktopEditMode.qml:150
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Bearbeitungsmodus beenden"
 
 #: contents/views/Panel.qml:314
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Fokus der Kontrollleiste sichtbar machen"
 
 #~ msgid "Height:"
 #~ msgstr "Höhe:"
