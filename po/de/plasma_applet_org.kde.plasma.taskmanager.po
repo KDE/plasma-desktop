@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2007, 2008, 2009, 2010.
 # Markus Slopianka <markus.s@kdemail.net>, 2010.
 # Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
@@ -10,15 +11,15 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-15 00:41+0000\n"
-"PO-Revision-Date: 2023-02-27 20:14+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2024-05-11 16:07+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -120,42 +121,40 @@ msgstr ""
 #, kde-format
 msgctxt "@option: radio"
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "Mehrspaltige Ansicht verwenden:"
 
 #: package/contents/ui/ConfigAppearance.qml:92
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "Mehrzeilige Ansicht verwenden:"
 
 #: package/contents/ui/ConfigAppearance.qml:98
 #, kde-format
 msgctxt "Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "Niemals"
 
 #: package/contents/ui/ConfigAppearance.qml:108
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "When Panel is low on space and thick enough"
-msgstr ""
+msgstr "Wenn die Kontrollleiste wenig Platz hat und dick genug ist"
 
 #: package/contents/ui/ConfigAppearance.qml:118
 #, kde-format
 msgctxt "When to use multi-row view in Task Manager"
 msgid "Always when Panel is thick enough"
-msgstr ""
+msgstr "Immer, wenn die Kontrollleiste dick genug ist"
 
 #: package/contents/ui/ConfigAppearance.qml:124
-#, fuzzy, kde-format
-#| msgid "Maximum columns:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum columns:"
 msgstr "Maximale Anzahl Spalten:"
 
 #: package/contents/ui/ConfigAppearance.qml:124
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum rows:"
 msgstr "Maximale Anzahl Zeilen:"

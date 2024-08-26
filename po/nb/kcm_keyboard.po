@@ -41,7 +41,6 @@ msgstr "Bytt til neste tastaturoppsett"
 
 #: bindings.cpp:30
 #, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
 msgid "Switch to Last-Used Keyboard Layout"
 msgstr "Bytt til neste tastaturoppsett"
 
@@ -95,14 +94,12 @@ msgstr ""
 
 #: ui/KeyBindings.qml:37
 #, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "&Sett opp tastaturinnstillinger"
 
 #: ui/LayoutDialog.qml:20
 #, fuzzy, kde-format
-#| msgid "Add Layout"
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Legg til tastaturoppsett"
@@ -123,14 +120,12 @@ msgstr ""
 
 #: ui/LayoutDialog.qml:195
 #, fuzzy, kde-format
-#| msgid "Shortcut:"
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Snarvei:"
 
 #: ui/LayoutDialog.qml:206 ui/main.qml:285
 #, fuzzy, kde-format
-#| msgid "Preview"
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Forhåndsvisning"
@@ -143,7 +138,6 @@ msgstr ""
 
 #: ui/main.qml:38
 #, fuzzy, kde-format
-#| msgid "Configure layouts"
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
 msgstr "Still inn oppsett"
@@ -168,7 +162,6 @@ msgstr ""
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
-#| msgid "Add Layout"
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "Legg til tastaturoppsett"
@@ -181,7 +174,6 @@ msgstr ""
 
 #: ui/main.qml:60
 #, fuzzy, kde-format
-#| msgid "Configure layouts"
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Still inn oppsett"
@@ -200,21 +192,18 @@ msgstr ""
 
 #: ui/main.qml:112
 #, fuzzy, kde-format
-#| msgid "T&urn on"
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
 msgstr "Slå &på"
 
 #: ui/main.qml:116
 #, fuzzy, kde-format
-#| msgid "&Turn off"
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
 msgstr "Slå &av"
 
 #: ui/main.qml:120
 #, fuzzy, kde-format
-#| msgid "Leave unchan&ged"
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
@@ -235,7 +224,6 @@ msgstr ""
 
 #: ui/main.qml:166
 #, fuzzy, kde-format
-#| msgid "&Delay:"
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "&Forsinkelse:"
@@ -260,7 +248,6 @@ msgstr ""
 
 #: ui/main.qml:205
 #, fuzzy, kde-format
-#| msgid "&Rate:"
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "Fa&rt:"
@@ -285,7 +272,6 @@ msgstr ""
 
 #: ui/main.qml:243
 #, fuzzy, kde-format
-#| msgid "Test area:"
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr "Testområde:"
@@ -298,14 +284,12 @@ msgstr ""
 
 #: ui/main.qml:256
 #, fuzzy, kde-format
-#| msgid "Layouts"
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Oppsett"
 
 #: ui/main.qml:268
 #, fuzzy, kde-format
-#| msgid "Move Up"
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Flytt opp"
@@ -318,28 +302,24 @@ msgstr ""
 
 #: ui/main.qml:275
 #, fuzzy, kde-format
-#| msgid "Move Down"
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Flytt ned"
 
 #: ui/main.qml:276
 #, fuzzy, kde-format
-#| msgid "Move Down"
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
 msgstr "Flytt ned"
 
 #: ui/main.qml:286
 #, fuzzy, kde-format
-#| msgid "Preview"
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Forhåndsvisning"
 
 #: ui/main.qml:294
 #, fuzzy, kde-format
-#| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Fjern"
@@ -352,7 +332,6 @@ msgstr ""
 
 #: ui/main.qml:307
 #, fuzzy, kde-format
-#| msgid "Spare layouts"
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
 msgstr "Reserveoppsett"
@@ -365,7 +344,6 @@ msgstr ""
 
 #: ui/main.qml:376
 #, fuzzy, kde-format
-#| msgid "Spare layouts"
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
 msgstr "Reserveoppsett"
@@ -382,7 +360,6 @@ msgstr ""
 
 #: ui/main.qml:385
 #, fuzzy, kde-format
-#| msgid "Main layout count:"
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "Antall hovedoppsett:"
@@ -395,7 +372,6 @@ msgstr ""
 
 #: ui/Switching.qml:17
 #, fuzzy, kde-format
-#| msgid "Configure layouts"
 msgctxt "@title"
 msgid "Configure Switching"
 msgstr "Still inn oppsett"
@@ -408,7 +384,6 @@ msgstr ""
 
 #: ui/Switching.qml:28
 #, fuzzy, kde-format
-#| msgid "Main layout count:"
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
 msgstr "Antall hovedoppsett:"
@@ -445,28 +420,24 @@ msgstr ""
 
 #: ui/Switching.qml:86
 #, fuzzy, kde-format
-#| msgid "Shortcut"
 msgctxt "@title:group"
 msgid "Shortcuts"
 msgstr "Snarvei"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
 #, fuzzy, kde-format
-#| msgid "Spare layouts"
 msgctxt "@option:textbox"
 msgid "Change layout:"
 msgstr "Reserveoppsett"
 
 #: ui/Switching.qml:112
 #, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
 msgstr "Bytt til neste tastaturoppsett"
 
 #: ui/Switching.qml:133
 #, fuzzy, kde-format
-#| msgid "Shortcut"
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
 msgstr "Snarvei"
@@ -483,7 +454,6 @@ msgstr ""
 
 #: ui/Switching.qml:182
 #, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
 msgstr "Alternativ snarvei:"
