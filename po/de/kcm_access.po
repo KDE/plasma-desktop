@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 # Thomas Diehl <thd@kde.org>, 2002, 2003.
 # Stephan Johach <hunsum@gmx.de>, 2005.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2010.
@@ -10,15 +11,15 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:45+0000\n"
-"PO-Revision-Date: 2023-03-24 19:43+0100\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2024-05-30 22:06+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -172,10 +173,9 @@ msgstr "Verzögerung verwenden"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:37
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
+#, kde-format
 msgid "Delay for timeout"
-msgstr "Verzögerung für die Mausbewegung"
+msgstr "Verzögerung für die Zeitüberschreitung"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
