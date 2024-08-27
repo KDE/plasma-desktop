@@ -19,30 +19,45 @@ Controller {
 
     descriptionActive: i18nc("@info:tooltip", "Restores the previously minimized windows")
     descriptionInactive: i18nc("@info:tooltip", "Shows the Desktop by minimizing all windows")
+    
+    active: Boolean(activeByActivityDesktop[activityDesktopId])
 
+    readonly property QtObject virtualDesktopInfo: TaskManager.VirtualDesktopInfo {
+        id: virtualDesktopInfo
+    }
+    
+    readonly property QtObject activityInfo: TaskManager.ActivityInfo {
+        id: activityInfo
+    }
+    
     readonly property QtObject tasksModel: TaskManager.TasksModel {
         id: tasksModel
         sortMode: TaskManager.TasksModel.SortDisabled
         groupMode: TaskManager.TasksModel.GroupDisabled
     }
 
+    readonly property string activityDesktopId: activityInfo.currentActivity + "_" + virtualDesktopInfo.currentDesktop
+    
+    readonly property var activeByActivityDesktop: ({})
+    
     readonly property Connections activeTaskChangedConnection: Connections {
         target: tasksModel
         enabled: controller.active
 
         function onActiveTaskChanged() {
+            
+            /** QML bindings are not updated yet if the activity or desktop was 
+             * changed; we need to take the info from the TaskManager instead
+             * of reading activityDesktopId
+             */
+            var aDId = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.Activities) + "_" +
+                tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.VirtualDesktops)
             if (tasksModel.activeTask.valid) { // to suppress changing focus to non windows, such as the desktop
-                controller.active = false;
-                controller.minimizedClients = [];
+                activeByActivityDesktop[aDId] = false;
+                activeByActivityDesktopChanged();
+                
+                controller.minimizedClients[aDId] = [];
             }
-        }
-
-        function onVirtualDesktopChanged() {
-            controller.deactivate();
-        }
-
-        function onActivityChanged() {
-            controller.deactivate();
         }
     }
 
@@ -50,25 +65,30 @@ Controller {
      * List of persistent model indexes from task manager model of
      * clients minimized by us
      */
-    property var minimizedClients: []
+    property var minimizedClients: ({})
 
     function activate() {
         const clients = [];
         for (let i = 0; i < tasksModel.count; i++) {
             const idx = tasksModel.makeModelIndex(i);
-            if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden)) {
+            if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden) &
+                tasksModel.data(idx, TaskManager.AbstractTasksModel.Activities).includes(activityInfo.currentActivity) &
+                tasksModel.data(idx, TaskManager.AbstractTasksModel.VirtualDesktops).includes(virtualDesktopInfo.currentDesktop)
+            ) {
                 tasksModel.requestToggleMinimized(idx);
                 clients.push(tasksModel.makePersistentModelIndex(i));
             }
         }
-        minimizedClients = clients;
-        active = true;
+        minimizedClients[activityDesktopId] = clients;
+        activeByActivityDesktop[activityDesktopId] = true;
+        activeByActivityDesktopChanged()
     }
 
     function deactivate() {
-        active = false;
-        for (let i = 0; i < minimizedClients.length; i++) {
-            const idx = minimizedClients[i];
+        activeByActivityDesktop[activityDesktopId] = false;
+        activeByActivityDesktopChanged()
+        for (let i = 0; i < minimizedClients[activityDesktopId].length; i++) {
+            const idx = minimizedClients[activityDesktopId][i];
             // client deleted, do nothing
             if (!idx.valid) {
                 continue;
@@ -79,7 +99,7 @@ Controller {
             }
             tasksModel.requestToggleMinimized(idx);
         }
-        minimizedClients = [];
+        minimizedClients[activityDesktopId] = [];
     }
 
     // override
