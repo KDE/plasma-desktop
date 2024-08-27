@@ -3,19 +3,18 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
-import QtQuick 2.9
-import QtQuick.Layouts 1.12
-import QtQuick.Window 2.2
-import QtQuick.Controls as QQC2
-import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kirigami.delegates as KD
-import org.kde.kcmutils as KCM
-import org.kde.kwindowsystem
-
 pragma ComponentBehavior: Bound
 
-KCM.AbstractKCM {
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Window
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
+import org.kde.kirigami.delegates as KD
+import org.kde.kcmutils as KCMUtils
+import org.kde.kwindowsystem
+
+KCMUtils.AbstractKCM {
     id: root
 
     implicitWidth: Kirigami.Units.gridUnit * 45
@@ -26,7 +25,7 @@ KCM.AbstractKCM {
     property var elements: [
         {
             icon: "notifications",
-            title: i18nc("System Bell", "Bell"),
+            title: i18nc("@title Category name in sidebar", "System Bell"),
             defaultnessKey: "bellIsDefaults"
         },
         {
@@ -46,7 +45,7 @@ KCM.AbstractKCM {
         },
         {
             icon: "input-caps-on",
-            title: i18n("Activation Gestures"),
+            title: i18n("Activation Shortcuts"),
             defaultnessKey: "activationGesturesIsDefaults"
         },
         {
@@ -83,14 +82,14 @@ KCM.AbstractKCM {
                 model: root.elements
 
                 delegate: QQC2.ItemDelegate {
+                    id: baseDelegate
+
                     required property int index
                     required property var modelData
 
-                    id: baseDelegate
-
                     width: listView.width
 
-                    highlighted: listView.currentIndex == index
+                    highlighted: listView.currentIndex === index
 
                     icon.name: modelData.icon
                     text: modelData.title
@@ -139,42 +138,23 @@ KCM.AbstractKCM {
                 anchors {
                     fill: parent
                     leftMargin: Kirigami.Units.largeSpacing
+                    topMargin: Kirigami.Units.largeSpacing
                 }
                 contentWidth: availableWidth - contentItem.leftMargin - contentItem.rightMargin
 
                 StackLayout {
                     id: stackView
                     width: contentScroll.width
+                    height: contentScroll.height
                     currentIndex: listView.currentIndex
 
-                    Bell {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    ModifierKeys {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    KeyboardFilters {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    MouseNavigation {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    ActivationGestures {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    ScreenReader {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
-                    ShakeCursor {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                    }
+                    Bell {}
+                    ModifierKeys {}
+                    KeyboardFilters {}
+                    MouseNavigation {}
+                    ActivationShortcuts {}
+                    ScreenReader {}
+                    ShakeCursor {}
                 }
             }
         }

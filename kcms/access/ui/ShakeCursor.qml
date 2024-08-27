@@ -7,7 +7,7 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
-import org.kde.kcmutils as KCM
+import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
@@ -15,7 +15,7 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18nc("@label", "Shake cursor to find it:")
         text: i18nc("@option check, Enable shake cursor effect", "Enable")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.shakeCursorSettings
             settingName: "ShakeCursor"
         }
@@ -34,7 +34,7 @@ Kirigami.FormLayout {
 
             Layout.preferredWidth: Kirigami.Units.gridUnit * 15
 
-            KCM.SettingStateBinding {
+            KCMUtils.SettingStateBinding {
                 configObject: kcm.shakeCursorSettings
                 settingName: "ShakeCursorMagnification"
                 extraEnabledConditions: kcm.shakeCursorSettings.shakeCursor

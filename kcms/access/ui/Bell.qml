@@ -4,13 +4,13 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.12 as QQC2
-import QtQuick.Dialogs 6.3 as Dialogs
-import org.kde.kcmutils as KCM
-import org.kde.kquickcontrols 2.0 as KQuickAddons
-import org.kde.kirigami 2.3 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import QtQuick.Dialogs as Dialogs
+import org.kde.kcmutils as KCMUtils
+import org.kde.kquickcontrols as KQuickAddons
+import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
 
@@ -29,13 +29,21 @@ Kirigami.FormLayout {
 
         Kirigami.FormData.label: i18n("Audible bell:")
         text: i18nc("Enable the system bell", "Enable")
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.bellSettings
             settingName: "SystemBell"
         }
 
         checked: kcm.bellSettings.systemBell
         onToggled: kcm.bellSettings.systemBell = checked
+    }
+    QQC2.Label {
+        Layout.fillWidth: true
+        text: i18nc("@label", "Emits a sound whenever certain keys are pressed")
+        leftPadding: systemBell.indicator.width
+        textFormat: Text.PlainText
+        elide: Text.ElideRight
+        font: Kirigami.Theme.smallFont
     }
 
     RowLayout {
@@ -46,7 +54,7 @@ Kirigami.FormLayout {
             id: customBell
             Layout.alignment: Qt.AlignVCenter
 
-            KCM.SettingStateBinding {
+            KCMUtils.SettingStateBinding {
                 configObject: kcm.bellSettings
                 settingName: "CustomBell"
                 extraEnabledConditions: kcm.bellSettings.systemBell
@@ -61,7 +69,7 @@ Kirigami.FormLayout {
 
             text: kcm.bellSettings.customBellFile
 
-            KCM.SettingStateBinding {
+            KCMUtils.SettingStateBinding {
                 configObject: kcm.bellSettings
                 settingName: "CustomBellFile"
                 extraEnabledConditions: kcm.bellSettings.customBell
@@ -74,7 +82,7 @@ Kirigami.FormLayout {
             QQC2.ToolTip.visible: down
             QQC2.ToolTip.text: i18n("Search audio file for the system bell")
             Accessible.name: i18n("Button search audio file")
-            KCM.SettingStateBinding {
+            KCMUtils.SettingStateBinding {
                 configObject: kcm.bellSettings
                 settingName: "CustomBellFile"
                 extraEnabledConditions: kcm.bellSettings.customBell
@@ -92,7 +100,7 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18n("Visual bell:")
         text: i18nc("Enable visual bell", "Enable")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.bellSettings
             settingName: "VisibleBell"
         }
@@ -100,13 +108,21 @@ Kirigami.FormLayout {
         checked: kcm.bellSettings.visibleBell
         onToggled: kcm.bellSettings.visibleBell = checked
     }
+    QQC2.Label {
+        Layout.fillWidth: true
+        text: i18nc("@label", "Flashes the screen whenever certain keys are pressed")
+        leftPadding: visibleBell.indicator.width
+        textFormat: Text.PlainText
+        elide: Text.ElideRight
+        font: Kirigami.Theme.smallFont
+    }
 
     QQC2.RadioButton {
         id: invertScreen
 
-        text: i18nc("Invert screen on a system bell", "Invert Screen")
+        text: i18nc("@option:radio Invert screen colors when a system bell is rung", "Invert screen colors")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.bellSettings
             settingName: "InvertScreen"
             extraEnabledConditions: kcm.bellSettings.visibleBell
@@ -116,14 +132,15 @@ Kirigami.FormLayout {
         onToggled: kcm.bellSettings.invertScreen = checked
     }
     RowLayout {
+        spacing: Kirigami.Units.smallSpacing
         enabled: kcm.bellSettings.visibleBell
 
         QQC2.RadioButton {
             id: flashScreen
 
-            text: i18nc("Flash screen on a system bell", "Flash")
+            text: i18nc("@option:radio Flash screen when a system bell is rung", "Flash screen")
 
-            KCM.SettingStateBinding {
+            KCMUtils.SettingStateBinding {
                 configObject: kcm.bellSettings
                 settingName: "InvertScreen"
             }
@@ -136,7 +153,7 @@ Kirigami.FormLayout {
             // avoid to show text outside button
             display: QQC2.AbstractButton.IconOnly
 
-            KCM.SettingStateBinding {
+            KCMUtils.SettingStateBinding {
                 configObject: kcm.bellSettings
                 settingName: "VisibleBellColor"
             }
@@ -151,7 +168,7 @@ Kirigami.FormLayout {
         from: 100
         to: 2000
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.bellSettings
             settingName: "VisibleBellPause"
             extraEnabledConditions: kcm.bellSettings.visibleBell
@@ -159,5 +176,13 @@ Kirigami.FormLayout {
 
         value: kcm.bellSettings.visibleBellPause
         onValueModified: kcm.bellSettings.visibleBellPause = value
+
+        textFromValue: function(value, locale) {
+            return i18np("%1 ms", "%1 ms", value)
+        }
+
+        valueFromText: (text, locale) => {
+            return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
+        }
     }
 }

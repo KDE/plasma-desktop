@@ -4,31 +4,34 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.12 as QQC2
-import org.kde.kcmutils as KCM
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import org.kde.kcmutils as KCMUtils
 
-import org.kde.kirigami 2.3 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
-    QQC2.CheckBox {
-        id: slowKeys
-
+    RowLayout {
+        spacing: Kirigami.Units.smallSpacing
         Kirigami.FormData.label: i18n("Slow keys:")
-        text: i18nc("Enable slow keys", "Enable")
-        
-        QQC2.ToolTip {
-            text: i18n("For a key to be accepted, it has to be held until the set amount of time")
-        }
+        Kirigami.FormData.buddyFor: slowKeys
+        QQC2.CheckBox {
+            id: slowKeys
 
-        KCM.SettingStateBinding {
-            configObject: kcm.keyboardFiltersSettings
-            settingName: "SlowKeys"
-        }
+            text: i18nc("Enable slow keys", "Enable")
 
-        checked: kcm.keyboardFiltersSettings.slowKeys
-        onToggled: kcm.keyboardFiltersSettings.slowKeys = checked
+            KCMUtils.SettingStateBinding {
+                configObject: kcm.keyboardFiltersSettings
+                settingName: "SlowKeys"
+            }
+
+            checked: kcm.keyboardFiltersSettings.slowKeys
+            onToggled: kcm.keyboardFiltersSettings.slowKeys = checked
+        }
+        Kirigami.ContextualHelpButton {
+            toolTipText: i18nc("@info:tooltip", "For a key to be accepted, it has to be held until the set amount of time. Useful if you accidentally type more than one key at a time or have difficulty pressing the key you want the first time.")
+        }
     }
 
     QQC2.SpinBox {
@@ -36,7 +39,7 @@ Kirigami.FormLayout {
 
         Kirigami.FormData.label: i18nc("Slow keys Delay", "Delay:")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
             settingName: "SlowKeysDelay"
             extraEnabledConditions: kcm.keyboardFiltersSettings.slowKeys
@@ -47,6 +50,14 @@ Kirigami.FormLayout {
 
         value: kcm.keyboardFiltersSettings.slowKeysDelay
         onValueModified: kcm.keyboardFiltersSettings.slowKeysDelay = value
+
+        textFromValue: function(value, locale) {
+            return i18np("%1 ms", "%1 ms", value)
+        }
+
+        valueFromText: (text, locale) => {
+            return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
+        }
     }
     Item {
         Kirigami.FormData.isSection: true
@@ -57,7 +68,7 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18n("Ring system bell:")
         text: i18nc("Use system bell when a key is pressed", "when any key is &pressed")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
             settingName: "SlowKeysPressBeep"
             extraEnabledConditions: kcm.keyboardFiltersSettings.slowKeys
@@ -71,7 +82,7 @@ Kirigami.FormLayout {
 
         text: i18nc("Use system bell when a key is accepted", "when any key is &accepted")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
             settingName: "SlowKeysAcceptBeep"
             extraEnabledConditions: kcm.keyboardFiltersSettings.slowKeys
@@ -85,7 +96,7 @@ Kirigami.FormLayout {
 
         text: i18nc("Use system bell when a key is rejected", "when any key is &rejected")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
             settingName: "SlowKeysRejectBeep"
             extraEnabledConditions: kcm.keyboardFiltersSettings.slowKeys
@@ -97,23 +108,26 @@ Kirigami.FormLayout {
     Item {
         Kirigami.FormData.isSection: true
     }
-    QQC2.CheckBox {
-        id: bounceKeys
-
+    RowLayout {
+        spacing: Kirigami.Units.smallSpacing
         Kirigami.FormData.label: i18n("Bounce keys:")
-        text: i18nc("Bounce keys enable", "Enable");
+        Kirigami.FormData.buddyFor: bounceKeys
+        QQC2.CheckBox {
+            id: bounceKeys
 
-        QQC2.ToolTip {
-            text: i18n("Ignore rapid, repeated keypresses of the same key")
+            text: i18nc("Bounce keys enable", "Enable");
+
+            KCMUtils.SettingStateBinding {
+                configObject: kcm.keyboardFiltersSettings
+                settingName: "BounceKeys"
+            }
+
+            checked: kcm.keyboardFiltersSettings.bounceKeys
+            onToggled: kcm.keyboardFiltersSettings.bounceKeys = checked
         }
-
-        KCM.SettingStateBinding {
-            configObject: kcm.keyboardFiltersSettings
-            settingName: "BounceKeys"
+        Kirigami.ContextualHelpButton {
+            toolTipText: i18nc("@info:tooltip", "Ignore rapid, repeated keypresses of the same key. Useful if you have hand tremors that cause you to press a key multiple times when you only intend to press once.")
         }
-
-        checked: kcm.keyboardFiltersSettings.bounceKeys
-        onToggled: kcm.keyboardFiltersSettings.bounceKeys = checked
     }
 
     QQC2.SpinBox {
@@ -121,7 +135,7 @@ Kirigami.FormLayout {
 
         Kirigami.FormData.label: i18nc("Bounce keys delay", "Delay:")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
             settingName: "BounceKeysDelay"
             extraEnabledConditions: kcm.keyboardFiltersSettings.bounceKeys
@@ -132,6 +146,14 @@ Kirigami.FormLayout {
 
         value: kcm.keyboardFiltersSettings.bounceKeysDelay
         onValueModified: kcm.keyboardFiltersSettings.bounceKeysDelay = value
+
+        textFromValue: function(value, locale) {
+            return i18np("%1 ms", "%1 ms", value)
+        }
+
+        valueFromText: (text, locale) => {
+            return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
+        }
     }
 
     QQC2.CheckBox {
@@ -139,7 +161,7 @@ Kirigami.FormLayout {
 
         text: i18n("Ring system bell when rejected")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
             settingName: "BounceKeysRejectBeep"
             extraEnabledConditions: kcm.keyboardFiltersSettings.bounceKeys

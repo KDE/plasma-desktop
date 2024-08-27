@@ -4,19 +4,20 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.12
-import QtQuick.Controls 2.12 as QQC2
-import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.3 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import org.kde.kcmutils as KCMUtils
+import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
 
     QQC2.CheckBox {
-        Kirigami.FormData.label: i18n("Activation:")
-        text: i18n("Use gestures for activating sticky keys and slow keys")
+        id: activationShortcuts
+        Kirigami.FormData.label: i18nc("@option:check", "Activation shortcuts:")
+        text: i18nc("Enable activation shortcuts", "Enable")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.activationGesturesSettings
             settingName: "Gestures"
         }
@@ -24,11 +25,27 @@ Kirigami.FormLayout {
         checked: kcm.activationGesturesSettings.gestures
         onToggled: kcm.activationGesturesSettings.gestures = checked
     }
+    QQC2.Label {
+        leftPadding: activationShortcuts.indicator.width
+        text: i18nc("@label", "Press Shift 5 times to enable Sticky Keys")
+        textFormat: Text.PlainText
+        elide: Text.ElideRight
+        font: Kirigami.Theme.smallFont
+    }
+    QQC2.Label {
+        leftPadding: activationShortcuts.indicator.width
+        text: i18nc("@label", "Hold Shift for 8 seconds to enable Slow Keys")
+        textFormat: Text.PlainText
+        elide: Text.ElideRight
+        font: Kirigami.Theme.smallFont
+    }
 
+    RowLayout {
+        spacing: Kirigami.Units.smallSpacing
         QQC2.CheckBox {
-            text: i18n("Turn sticky keys and slow keys off after inactivity:")
+            text: i18nc("@option:check", "Disable sticky and slow keys after:")
 
-            KCM.SettingStateBinding {
+            KCMUtils.SettingStateBinding {
                 configObject: kcm.activationGesturesSettings
                 settingName: "AccessXTimeout"
             }
@@ -40,7 +57,7 @@ Kirigami.FormLayout {
         QQC2.SpinBox {
             id: spinbox
 
-            KCM.SettingStateBinding {
+            KCMUtils.SettingStateBinding {
                 configObject: kcm.activationGesturesSettings
                 settingName: "AccessXTimeoutDelay"
                 extraEnabledConditions: kcm.activationGesturesSettings.accessXTimeout
@@ -59,18 +76,19 @@ Kirigami.FormLayout {
             }
 
             valueFromText: (text, locale) => {
-                return Number.fromLocaleString(locale, text.replace(i18n("min"), ""))
+                return Number.fromLocaleString(locale, text.replace(i18ncp("short for minute(s)", "min", "min"), ""))
             }
 
             value: kcm.activationGesturesSettings.accessXTimeoutDelay
             onValueChanged: kcm.activationGesturesSettings.accessXTimeoutDelay = value
         }
+    }
 
     QQC2.CheckBox {
-        Kirigami.FormData.label: i18n("When a gesture is used:")
+        Kirigami.FormData.label: i18n("When a shortcut is used:")
         text: i18n("Display a confirmation dialog")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.activationGesturesSettings
             settingName: "GestureConfirmation"
         }
@@ -79,9 +97,9 @@ Kirigami.FormLayout {
         onToggled: kcm.activationGesturesSettings.gestureConfirmation = checked
     }
     QQC2.CheckBox {
-        text: i18n("Ring the System Bell")
+        text: i18n("Ring the system bell")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.activationGesturesSettings
             settingName: "AccessXBeep"
         }
@@ -92,7 +110,7 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         text: i18n("Show a notification")
 
-        KCM.SettingStateBinding {
+        KCMUtils.SettingStateBinding {
             configObject: kcm.activationGesturesSettings
             settingName: "KeyboardNotifyAccess"
         }
