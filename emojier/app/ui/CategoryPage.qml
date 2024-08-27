@@ -149,19 +149,22 @@ Kirigami.ScrollablePage {
         currentIndex: -1
         reuseItems: true
 
-        delegate: QQC2.Label {
+        delegate: QQC2.ItemDelegate {
             id: emojiLabel
-
             width: emojiView.cellWidth
             height: emojiView.cellHeight
 
-            font.pointSize: 25
-            font.family: 'emoji' // Avoid monochrome fonts like DejaVu Sans
-            fontSizeMode: model.display.length > 5 ? Text.Fit : Text.FixedSize
-            minimumPointSize: 10
-            text: model.display
-            textFormat: Text.PlainText
-            horizontalAlignment: Text.AlignHCenter
+            highlighted: GridView.isCurrentItem
+            contentItem: QQC2.Label {
+                font.pointSize: 25
+                font.family: 'emoji' // Avoid monochrome fonts like DejaVu Sans
+                fontSizeMode: model.display.length > 5 ? Text.Fit : Text.FixedSize
+                minimumPointSize: 10
+                text: model.display
+                textFormat: Text.PlainText
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
 
             Accessible.name: model.toolTip
             Accessible.onPressAction: tapHandler.action()
@@ -169,9 +172,6 @@ Kirigami.ScrollablePage {
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
             QQC2.ToolTip.text: model.toolTip
             QQC2.ToolTip.visible: hoverHandler.hovered
-
-            opacity: hoverHandler.hovered ? 0.7 : 1
-            scale: tapHandler.pressed ? 0.6 : 1
 
             Keys.onMenuPressed: event => contextMenuHandler.action()
             Keys.onReturnPressed: event => tapHandler.action()
@@ -204,18 +204,6 @@ Kirigami.ScrollablePage {
                     menu.popup();
                 }
                 onTapped: (eventPoint, button) => action()
-            }
-
-            Behavior on opacity {
-                OpacityAnimator {
-                    duration: Kirigami.Units.longDuration
-                }
-            }
-
-            Behavior on scale {
-                NumberAnimation {
-                    duration: Kirigami.Units.longDuration
-                }
             }
         }
 
