@@ -293,12 +293,12 @@ KCM.ScrollViewKCM {
                 QQC2.ToolButton {
                     enabled: model.deletable
 
-                    icon.name: "edit-delete"
+                    icon.name: "edit-delete-remove"
 
                     onClicked: kcm.filteredModel.removeFolder(index)
 
                     QQC2.ToolTip {
-                        text: i18n("Delete entry")
+                        text: i18nc("Remove the list item for this filesystem path", "Remove entry")
                     }
                 }
             }
