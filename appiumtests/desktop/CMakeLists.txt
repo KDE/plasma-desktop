@@ -24,13 +24,13 @@ add_test(
 )
 
 add_test(
-    NAME bug477220test
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/bug477220.py --failfast
+    NAME bug477220test_long_press_edit_mode
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/bug477220test_long_press_edit_mode.py --failfast
 )
 set_tests_properties(
     bug472909test_wayland
     bug476968test
-    bug477220test
+    bug477220test_long_press_edit_mode
     PROPERTIES TIMEOUT 600 ENVIRONMENT "CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR};KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd;GDK_BACKEND=wayland")
 
 add_test(

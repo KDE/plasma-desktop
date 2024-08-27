@@ -117,6 +117,36 @@ class Bug477220Test(unittest.TestCase):
         action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).click()
         action.perform()
 
+    def test_3_touch_long_press_on_panel(self) -> None:
+        """
+        Long press on the panel to enter the edit mode
+        """
+        time.sleep(3)  # Wait until the menu disappears
+        screen_geometry = Gtk.Window().get_display().get_monitors()[0].get_geometry()
+        long_press_time_ms: int = Gtk.Settings.get_default().get_property("gtk-long-press-time") * 2 + 5000
+        self.assertGreater(screen_geometry.width, 100)
+        self.assertGreater(screen_geometry.height, 100)
+
+        # Click "More" to open the desktop context menu
+        wait = WebDriverWait(self.driver, 5)
+        success = False
+        for _ in range(20):
+            try:
+                # Work around "no target window"
+                action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+                action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height - 20)).click()
+                action.perform()
+                # Press on the panel
+                action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+                action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height - 20)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
+                action.perform()
+                wait.until(EC.presence_of_element_located((AppiumBy.NAME, "More")))
+                success = True
+                break
+            except TimeoutException:
+                continue
+        self.assertTrue(success)
+
 
 if __name__ == '__main__':
     unittest.main()
