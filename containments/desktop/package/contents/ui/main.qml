@@ -198,8 +198,8 @@ ContainmentItem {
         property alias folderViewLayer: folderViewLayer
         property alias appletsLayout: appletsLayout
 
-        Layout.minimumWidth: preferredWidth(!isPopup)
-        Layout.minimumHeight: preferredHeight(!isPopup)
+        Layout.minimumWidth: preferredWidth(isPopup)
+        Layout.minimumHeight: preferredHeight(isPopup)
 
         Layout.preferredWidth: preferredWidth(false)
         Layout.preferredHeight: preferredHeight(false)
