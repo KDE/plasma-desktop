@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-24 00:41+0000\n"
-"PO-Revision-Date: 2024-07-23 22:45+0900\n"
+"PO-Revision-Date: 2024-08-25 02:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -281,12 +281,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "輸入命令或選擇一個文稿檔案："
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "命令"
+msgstr "命令："
 
 #: ui/main.qml:474
 #, kde-format
@@ -310,13 +308,13 @@ msgstr "選擇文稿檔案"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "名稱："
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "在這裡輸入名稱"
 
 #: ui/main.qml:503
 #, kde-format
@@ -330,7 +328,7 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "文稿檔案（.sh、.bash、.zsh 等等）(*.*sh)"
 
 #: ui/main.qml:528
 #, kde-format
