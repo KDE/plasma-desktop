@@ -54,12 +54,6 @@ Kirigami.ScrollablePage {
             visible: view.showSearch
             inputMethodHints: Qt.ImhNoPredictiveText
 
-            Keys.onEnterPressed: event => Keys.returnPressed(event)
-            Keys.onReturnPressed: event => {
-                if (emojiView.count > 0) {
-                    emojiView.itemAtIndex(0).Keys.returnPressed(event);
-                }
-            }
             onTextChanged: {
                 forceActiveFocus()
                 emojiModel.search = text
@@ -67,6 +61,9 @@ Kirigami.ScrollablePage {
                     Qt.callLater(function() {
                         emojiView.currentIndex = 0
                     })
+                }
+                else {
+                    emojiView.currentIndex = 0
                 }
             }
             Component.onCompleted: {
